@@ -14,6 +14,6 @@ Auch beim längst totgeglaubten Community-OS LOST gibt es Fortschritte. Seitdem 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1418; parent 0; 2006-08-15T15:23:16Z -->
+<!-- MediaWiki page 1409; revision 1419; parent 1418; 2006-08-15T15:23:33Z -->
