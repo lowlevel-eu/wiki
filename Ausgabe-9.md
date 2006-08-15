@@ -87,47 +87,49 @@ Bei El-Torito CD-ROM wird im Grunde nichts anderes gemacht als eine Diskette emu
 Das bedeutet im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volume. Dieses hat einen Zeiger auf den Boot-Catalog, und sieht folgendermaßen aus:  
   
 
-        Offset * Type  * Description
-        ****************************
-        0      * Byte  * Boot Record Indicator
-        1-5    * Byte  * ISO-9660 Identifier, must be 'CD001'
-        6      * Byte  * Version of the descriptor, must be 1
-        7-26   * Byte  * Boot System Identifier, must be 'EL TORITO SPECIFICATION" 
-                         padded with 0's.
-        27-46  * Byte  * Unused, must be 0.
-        47-4A  * DWord * Absolute pointer to first sector of Boot Catalog.
-        4A-7FF * Byte  * Unused, must be 0.
+|  |  |  |
+| -------- | ------- | ---------------------------------------------------------------------------- |
+| Offset | Type | Description |
+| 0 | Byte | Boot Record Indicator |
+| 1-5 | Byte | ISO-9660 Identifier, must be 'CD001' |
+| 6 | Byte | Version of the descriptor, must be 1 |
+| 7-26 | Byte | Boot System Identifier, must be 'EL TORITO SPECIFICATION" padded with 0's. |
+| 27-46 | Byte | Unused, must be 0. |
+| 47-4A | DWord | Absolute pointer to first sector of Boot Catalog. |
+| 4A-7FF | Byte | Unused, must be 0. |
 
   
   
 Wie wir hier deutlich erkennen können, ist an der Adresse 0x47-0x4A im 17. CD-ROM Sektor der Pointer zum Boot-Catalog. Wir folgen nun diesem Pointer und sehen uns den Boot Catalog an:  
   
 
-        Offset * Type  * Description
-        ****************************
-        0      * Byte  * Header ID, must be 01.
-        1      * Byte  * Platform ID.
-        2-3    * Word  * Reserved, must be 0.
-        4-1B   * Char  * ID-String.
-        1C-1D  * Int   * Checksum Word.
-        1E     * Byte  * Key Byte, must be 55.
-        1F     * Byte  * Key Byte, must be AA.
+|  |  |  |
+| -------- | ------ | ------------------------ |
+| Offset | Type | Description |
+| 0 | Byte | Header ID, must be 01. |
+| 1 | Byte | Platform ID. |
+| 2-3 | Word | Reserved, must be 0. |
+| 4-1B | Char | ID-String. |
+| 1C-1D | Int | Checksum Word. |
+| 1E | Byte | Key Byte, must be 55. |
+| 1F | Byte | Key Byte, must be AA. |
 
   
   
 Hier sehen wir zuerst einige Standart-Strings und Zeichen ("0x55, 0xAA" sollten wir schon kennen). 0x20 Byte weiter (also 32 Bytes weiter) im selben Sektor befindet sich dann der "Initial/Default Entry", der auch den Pointer zu unserem Boot-Image beinhaltet:  
   
 
-        Offset * Type  * Description
-        ****************************
-        0      * Byte  * Boot Indicator (88=bootable | 00=not bootable)
-        1      * Byte  * Boot media Type
-        2-3    * Word  * Load segment (standart is 0x7C0)
-        4      * Byte  * System Type.
-        5      * Byte  * Unused, must be 0.
-        6-7    * Word  * Sector count.
-        8-0B   * DWord * Load RBA. This is the start address of the virtual disk.
-        0C-1F  * Byte  * Unused, must be 0.
+|  |  |  |
+| -------- | ------- | ---------------------------------------------------------- |
+| Offset | Type | Description |
+| 0 | Byte | 00=not bootable) |
+| 1 | Byte | Boot media Type |
+| 2-3 | Word | Load segment (standart is 0x7C0) |
+| 4 | Byte | System Type. |
+| 5 | Byte | Unused, must be 0. |
+| 6-7 | Word | Sector count. |
+| 8-0B | DWord | Load RBA. This is the start address of the virtual disk. |
+| 0C-1F | Byte | Unused, must be 0. |
 
   
   
@@ -145,7 +147,8 @@ Das wars auch schon wieder - ich hoffe man konnte einige nützliche Informatione
 
 ## Dateisystemvergleiche
 
-Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder planst dies in näherer Zukunft zu tun. Da nicht jeder Lust hat sein eigenes System zu entwerfen, hier mal einige Infos über verschiedene Dateisysteme, für einen schnellen Vergleich ordentlich in einer Tabelle dargestellt. Ich hoffe ich erleichtere euch eure Arbeit hiermit ein bisschen, und verkompliziere sie nicht noch eher weil es so viele interessante Systeme gibt \*g\*. Viel Spaß, stultus/N00b
+Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder planst dies in näherer Zukunft zu tun. Da nicht jeder Lust hat sein eigenes System zu entwerfen, hier mal einige Infos über verschiedene Dateisysteme, für einen schnellen Vergleich ordentlich in einer Tabelle dargestellt. Ich hoffe ich erleichtere euch eure Arbeit hiermit ein bisschen, und verkompliziere sie nicht noch eher weil es so viele interessante Systeme gibt \*g\*. Viel Spaß, stultus/N00b  
+  
 
 |  |  |  |  |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -159,12 +162,14 @@ Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder
 | Max. Dateien gesamt | ? | 2^32 – 3 (4.294.967.293) | ? |
 | Besonderheiten | Erweiterbar ohne dass das System ein bestimmtes Feature zwingend können MUSS, möglich wird dis durch die COMPAT, RO_COMPAT und INCOMAT – Felder im Superblock Journaling-Erweiterung (ext3)<br> | Erstes Journaling-Dateisystem das unter Linux komplett unterstützt wurde. | Kann von allen gängigen Systemen (Linux, Mac OS, Windows) gelesen und geschrieben werden. |
 
+  
+
 - Anmerkung: Größen jenseits 2 Terabyte (TB) sind nicht möglich, da die maximale Länge einer Partition bei aktuellen Partitionstabellen 2 TB nicht übersteigen kann (und das Laufwerk maximal 4 TB groß sein kann).
 
 Quellen: [Wikipedia](http://de.wikipedia.org/wiki/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1423; parent 1422; 2006-08-15T16:13:02Z -->
+<!-- MediaWiki page 1409; revision 1424; parent 1423; 2006-08-15T16:31:21Z -->
