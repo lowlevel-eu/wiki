@@ -166,10 +166,87 @@ Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder
 
 - Anmerkung: Größen jenseits 2 Terabyte (TB) sind nicht möglich, da die maximale Länge einer Partition bei aktuellen Partitionstabellen 2 TB nicht übersteigen kann (und das Laufwerk maximal 4 TB groß sein kann).
 
+  
+  
 Quellen: [Wikipedia](http://de.wikipedia.org/wiki/)
+
+## ext2
+
+  
+Worum geht es in diesem Tutorial?  
+Es geht hier um den Aufbau von ext2! Hier werdet ihr KEINEN Code bekommen!  
+  
+Was ist ext2?  
+ext2 ist das Standarddateisystem von Linux. Es gehört zu den stabilsten am Markt, wenn auch nicht zu den schnellsten. Leider bietet es noch kein Journaling-Funktion. Es ist, logischerweise, der Nachfolger von ext1 (bzw. ext).  
+  
+Wie ist ext2 aufgebaut?  
+Einige Daten:
+
+|  |  |
+| --------------------------- | ------------------------------ |
+| Maximale Dateigröße | 2 GB (im 62-Bit-Modus 16 GB) |
+| Maximale Dateinamenslänge | 255 Zeichen |
+
+  
+In ext2 besteht eine Datei aus zwei Teilen: Kopf (I-node) und Rumpf. In der I-Node-Table ist die Information über die physikalische Position einer Datei. Im Rumpf die eigentliche Datei.  
+  
+Sehen Sie sich folgende Abbildung an:
+
+- TODO
+
+Die kleinste adressierbare Einheit ist ein Block. Er ist bei ext2 immer 4096 Byte groß. Eigentlich kann man sie anpassen, aber das sollte man nicht. Jeder Block erhält eine eindeutige Nummer. Der I-node ist bei jeder Datei vorhanden, die I-Node-Table ist mit der FAT zu vergleichen.  
+  
+
+### Blöcke
+
+Solange eine Datei nicht größer als 10 Blöcke ist, kann sie in ext2 noch mit dem I-node adressiert werden. Wenn sie größer ist, wird ein Indirektionsblock angelegt, der im I-node steht und in diesen werden wieder weitere Blocks adressiert. Man könnte also mit dem Indirektionsblock weitere Indirektionsblöcke adressieren und so weiter, bis die Datei 2 GB groß ist.  
+  
+
+### Zugriffsrechte
+
+Wen ihr euch in der Abbildung die I-Node-Table angesehen habt, werdet ihr euch gedacht haben, was das bedeutet. Das Beispiel ober war unvollstängig! Nehmen wir ein richtigen mit mehreren Einträgen:
+
+       -rwx-rw-r 1root root Jun 11 12:45 Text1
+       drw-x 1root root Jun 11 12:46 Programm3
+       cx 1root root Jun 11 12:46 Device5
+       bx 1root root Jun 11 12:47 Device8
+       l 1root root Jun 11 12:48 ..
+       p 1root root Jun 11 12:59 test5
+
+  
+So: In der 1. Zeile das erste Zeichen, hier -, heißt in diesem Fall, dass es eine Normale Datei ist. Das erste Zeichen gibt immer den Typ an:  
+
+|  |  |
+| -------------------------------- | ----------- |
+| Zeichen | Bedeutung |
+| Normale Datei | \- |
+| Verzeichniss | d |
+| Zeichenorientierte Gerätedatei | c |
+| Blockorientierte Gerätedatei | b |
+| Link | l |
+| Pipe | p |
+
+  
+Was was ist, dürfte klar sein, wenn man diese Tutorial ließt.  
+Nun, die weiteren Zeichen bis zur ersten Leerstelle sind die Zugriffsrechte. Im Beispiel: rwx-rw-r = Dateibesitzer darf Lesen(r), schreiben(w) und ausführen(x), die Gruppe der der Besitzer angehört, darf lesen und schreiben und alle anderen Benutzer dürfen nur lesen. Der root darf selbstverständlich alles. Also heißt beispielsweise in Beispiel 3 wo steht: cx = Datei ist eine zeichenorientierte Gerätedatei und darf nur vom Besitzer ausgeführt werden.  
+  
+Zugriffsrechttabelle:  
+
+|  |  |  |  |  |  |
+| --------- | ----------- | ----- | ----------- | ----- | ----------- |
+| Zeichen | Bedeutung |  |  |  |  |
+| r | Lesen | w | Schreiben | x | Ausführen |
+
+  
+Der nächste String, 1root, ist der Dateibesitzer. Der nächste ist dann die Gruppe, der der Besitzer angehört. Danach kommt das Datum, hier 11. Juni und dann die Uhrzeit der Erstellung. Zum Schluss noch der Dateiname.  
+  
+In ext2 wird das FS in Gruppen eingeteilt. Jede Gruppe ist 8192 Blöcke groß. Jede Gruppe enthält eine Kopie das Superblocks und einen Gruppenblock. Der Superblock ist der I-Node-Table und der Gruppenblock behandelt die Gruppe wie eine eigene Partition.  
+  
+Beim Anbinden von Dateisystemen löscht ext2 im Superblock einen für jede verschiedene Partition die vorhanden ist angelegten valid-Flag. Wenn das FS die Partition wieder Aushängt setzt ext2 den valid-Flag wieder.  
+So sollte der Kernel erkennen, dass das System nicht ordnungsgemäß heruntergefahren wurde und das Dateisystem prüfen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1425/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1425; parent 1424; 2006-08-15T16:32:08Z -->
+<!-- MediaWiki page 1409; revision 1426; parent 1425; 2006-08-15T17:08:50Z -->
