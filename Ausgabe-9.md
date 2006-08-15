@@ -232,10 +232,12 @@ Nun, die weiteren Zeichen bis zur ersten Leerstelle sind die Zugriffsrechte. Im 
   
 Zugriffsrechttabelle:  
 
-|  |  |  |  |  |  |
-| --------- | ----------- | ----- | ----------- | ----- | ----------- |
-| Zeichen | Bedeutung |  |  |  |  |
-| r | Lesen | w | Schreiben | x | Ausführen |
+|  |  |
+| --------- | ----------- |
+| Zeichen | Bedeutung |
+| r | Lesen |
+| w | Schreiben |
+| x | Ausführen |
 
   
 Der nächste String, 1root, ist der Dateibesitzer. Der nächste ist dann die Gruppe, der der Besitzer angehört. Danach kommt das Datum, hier 11. Juni und dann die Uhrzeit der Erstellung. Zum Schluss noch der Dateiname.  
@@ -247,6 +249,6 @@ So sollte der Kernel erkennen, dass das System nicht ordnungsgemäß heruntergef
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1427/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1426; parent 1425; 2006-08-15T17:08:50Z -->
+<!-- MediaWiki page 1409; revision 1427; parent 1426; 2006-08-15T17:09:19Z -->
