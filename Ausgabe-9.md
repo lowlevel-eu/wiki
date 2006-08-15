@@ -143,8 +143,28 @@ Wer mehr wissen möchte, sollte folgende Dokumente lesen:
 
 Das wars auch schon wieder - ich hoffe man konnte einige nützliche Informationen im Artikel finden. Falls nicht, mir egal - ich bin endlich müde und kann vielleicht weiterschlafen ;). Also, schön weiterprogrammieren, lernen, Ideen entwickeln und so weiter. Und: Von nichts und niemandem vom Kurs abbringen lassen ;)
 
+## Dateisystemvergleiche
+
+Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder planst dies in näherer Zukunft zu tun. Da nicht jeder Lust hat sein eigenes System zu entwerfen, hier mal einige Infos über verschiedene Dateisysteme, für einen schnellen Vergleich ordentlich in einer Tabelle dargestellt. Ich hoffe ich erleichtere euch eure Arbeit hiermit ein bisschen, und verkompliziere sie nicht noch eher weil es so viele interessante Systeme gibt \*g\*. Viel Spaß, stultus/N00b
+
+|  |  |  |  |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+|  | ext2 | ReiserFS | Fat32 |
+| Zugriffskontrolle | chmod | ? | keine |
+| Blockgröße | 2 kB - 8 kB | 4 kB | 4 kB (Standard) |
+| Max. Dateigröße | Je nach Blockgröße 16 GB bis 2 TB | 2 GB – 1 Byte (Allerdings 1 Exabyte bei Version 3.6) \* | 4 GB – 1 Byte |
+| Max. Dateisystemgröße | Je nach Blockgröße 2 TB bis 32 TB \* | 16 TB \* | 8 TB (unter Windows XP maximal 32 GB formatierbar, aber unbegrenzt lesbar) |
+| Max. Unterverzeichnisse | 32.768 | ? | 268435456 (inkl. Dateien im Verzeichniss) |
+| Max. Dateien je Verzeichnisse | Ca. 130 Trillionen (10^18), Warnungen ab 10.000 Dateien in einem Verzeichnis | 518701895 (limitiert durch eine Hash-Funktion) | 268435456 (inkl. Unterverzeichnissen) |
+| Max. Dateien gesamt | ? | 2^32 – 3 (4.294.967.293) | ? |
+| Besonderheiten | Erweiterbar ohne dass das System ein bestimmtes Feature zwingend können MUSS, möglich wird dis durch die COMPAT, RO_COMPAT und INCOMAT – Felder im Superblock Journaling-Erweiterung (ext3)<br> | Erstes Journaling-Dateisystem das unter Linux komplett unterstützt wurde. | Kann von allen gängigen Systemen (Linux, Mac OS, Windows) gelesen und geschrieben werden. |
+
+- Anmerkung: Größen jenseits 2 Terabyte (TB) sind nicht möglich, da die maximale Länge einer Partition bei aktuellen Partitionstabellen 2 TB nicht übersteigen kann (und das Laufwerk maximal 4 TB groß sein kann).
+
+Quellen: [Wikipedia](http://de.wikipedia.org/wiki/)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1422; parent 1419; 2006-08-15T15:44:56Z -->
+<!-- MediaWiki page 1409; revision 1423; parent 1422; 2006-08-15T16:13:02Z -->
