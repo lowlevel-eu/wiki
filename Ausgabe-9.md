@@ -2,7 +2,8 @@
 
 ## Einleitung
 
-Hi, wie ihr sicher auch schon gemerkt habt, ist das Weiterführen vom Magazin nicht immer unproblematisch. Deshalb haben N00B und ich vor, einige Änderungen durchzuführen. Im Wesentlichen betrifft das das Kategoriesystem. Es wird keine 10 Kategorien mehr geben, die in allen Ausgaben vorhanden sind. Stattdessen hat jede Ausgabe einen Thmenschwepunkt. Das könnten z.B. Protected Mode Features sein, mit Tutorials über Paging, Hardware MT, usw. Natürlich gibt es trotzdem noch einige Standard Kategorien, nämlich die News, das OS-Showcase, usw. In dieser Ausgabe wird der Schwerpunkt bei Speichergeräten liegen, wir haben dazu eine IDE-Übersicht, ein ext2-Tutorial, und noch einiges mehr.  
+Hi,  
+wie ihr sicher auch schon gemerkt habt, ist das Weiterführen vom Magazin nicht immer unproblematisch. Deshalb haben N00B und ich vor, einige Änderungen durchzuführen. Im Wesentlichen betrifft das das Kategoriesystem. Es wird keine 10 Kategorien mehr geben, die in allen Ausgaben vorhanden sind. Stattdessen hat jede Ausgabe einen Thmenschwepunkt. Das könnten z.B. Protected Mode Features sein, mit Tutorials über Paging, Hardware MT, usw. Natürlich gibt es trotzdem noch einige Standard Kategorien, nämlich die News, das OS-Showcase, usw. In dieser Ausgabe wird der Schwerpunkt bei Speichergeräten liegen, wir haben dazu eine IDE-Übersicht, ein ext2-Tutorial, und noch einiges mehr.  
 Dies wird außerdem die erste Ausgabe sein, die nicht nur als PDF File sondern auch im Wiki erscheint. Das hat natürlich den Vorteil, dass Fehler schnell verbessert werden können.  
 Wir wünschen euch viel Spaß mit der neuen Ausgabe!
 
@@ -283,6 +284,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1429; parent 1428; 2006-08-15T17:53:28Z -->
+<!-- MediaWiki page 1409; revision 1430; parent 1429; 2006-08-15T17:53:57Z -->
