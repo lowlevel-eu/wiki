@@ -172,14 +172,16 @@ Quellen: [Wikipedia](http://de.wikipedia.org/wiki/)
 
 ## ext2
 
-  
-Worum geht es in diesem Tutorial?  
-Es geht hier um den Aufbau von ext2! Hier werdet ihr KEINEN Code bekommen!  
-  
-Was ist ext2?  
-ext2 ist das Standarddateisystem von Linux. Es gehört zu den stabilsten am Markt, wenn auch nicht zu den schnellsten. Leider bietet es noch kein Journaling-Funktion. Es ist, logischerweise, der Nachfolger von ext1 (bzw. ext).  
-  
-Wie ist ext2 aufgebaut?  
+### Worum geht es in diesem Tutorial?
+
+Es geht hier um den Aufbau von ext2! Hier werdet ihr KEINEN Code bekommen!
+
+### Was ist ext2?
+
+ext2 ist das Standarddateisystem von Linux. Es gehört zu den stabilsten am Markt, wenn auch nicht zu den schnellsten. Leider bietet es noch kein Journaling-Funktion. Es ist, logischerweise, der Nachfolger von ext1 (bzw. ext).
+
+### Wie ist ext2 aufgebaut?
+
 Einige Daten:
 
 |  |  |
@@ -190,10 +192,8 @@ Einige Daten:
   
 In ext2 besteht eine Datei aus zwei Teilen: Kopf (I-node) und Rumpf. In der I-Node-Table ist die Information über die physikalische Position einer Datei. Im Rumpf die eigentliche Datei.  
   
-Sehen Sie sich folgende Abbildung an:
-
-- TODO
-
+Sehen Sie sich folgende Abbildung an:  
+[ext2 Aufbau](http://myemu.masen-inhabitants.com/lowlevel_temp/ext2_pic1.png)  
 Die kleinste adressierbare Einheit ist ein Block. Er ist bei ext2 immer 4096 Byte groß. Eigentlich kann man sie anpassen, aber das sollte man nicht. Jeder Block erhält eine eindeutige Nummer. Der I-node ist bei jeder Datei vorhanden, die I-Node-Table ist mit der FAT zu vergleichen.  
   
 
@@ -283,6 +283,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1428; parent 1427; 2006-08-15T17:31:56Z -->
+<!-- MediaWiki page 1409; revision 1429; parent 1428; 2006-08-15T17:53:28Z -->
