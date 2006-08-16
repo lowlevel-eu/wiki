@@ -53,11 +53,11 @@ Wenn all dies so funktioniert, wie es sollte, dann kann die Anwendungssoftware g
 
 ### Unser Bootloader
 
-Zuerst einmal sucht das BIOS auf dem ersten Sektor von Diskette und Festplatte nach einer Bin�rdatei, die genau 512 Bytes (1 Sector) lang ist und am Ende das Wort 0x0AA55 enthält. Jetzt lädt das BIOS unseren Bootloader, wenn es ihn denn gefunden hat, an die Adresse 0x7C00. Damit alles so läuft, wie wir es uns gedacht haben, enth�lt die erste Zeile unseres Assemblercodes also den Code:
+Zuerst einmal sucht das BIOS auf dem ersten Sektor von Diskette und Festplatte nach einer Binärdatei, die genau 512 Bytes (1 Sector) lang ist und am Ende das Wort 0x0AA55 enthält. Jetzt lädt das BIOS unseren Bootloader, wenn es ihn denn gefunden hat, an die Adresse 0x7C00. Damit alles so läuft, wie wir es uns gedacht haben, enthält die erste Zeile unseres Assemblercodes also den Code:
 
        ORG 0x7C00
 
-Diese Zeile regelt, dass all unsere Adressierungen richtig sind usw. Jetzt basteln wir einen Stack. Er sitzt an Adresse 0x9000. Den Stackpointer setzen wir auf null. Während wir das alles tun, sind übrigens keine Interrupts zugelassen. Nun schreiben wir die Information über das Bootlaufwerk aus DL in eine Variable, rufen die Funktion "load" auf und springen zum geladenen Programm, unserem Kernel rüber (das seht ihr im vollst�ndigen Code weiter unten).  
+Diese Zeile regelt, dass all unsere Adressierungen richtig sind usw. Jetzt basteln wir einen Stack. Er sitzt an Adresse 0x9000. Den Stackpointer setzen wir auf null. Während wir das alles tun, sind übrigens keine Interrupts zugelassen. Nun schreiben wir die Information über das Bootlaufwerk aus DL in eine Variable, rufen die Funktion "load" auf und springen zum geladenen Programm, unserem Kernel rüber (das seht ihr im vollständigen Code weiter unten).  
   
 Zum Schluss des Codes seht ihr noch folgende Zeilen:
 
@@ -66,7 +66,7 @@ Zum Schluss des Codes seht ihr noch folgende Zeilen:
 
 Sie sind für die Länge von 512 Bytes und das Wort 0x0AA55 am Ende zuständig.  
   
-Hmmm... Das war jetzt noch nicht schwer - aber damit es funktioniert, brauchen wir noch diese Ladefunktion. Sie benutzt den BIOS-Interrupt 0x13, um auf das Laufwerk zuzugreifen und wenn das gelang, unser Binary vom 2. Sektor zu lesen. Dann gibt sie noch eine Meldung aus, damit wir im Fall eines Fehlers (bei einem sp�teren Kernel) wissen, ob das Laden wenigstens geklappt hat.  
+Hmmm... Das war jetzt noch nicht schwer - aber damit es funktioniert, brauchen wir noch diese Ladefunktion. Sie benutzt den BIOS-Interrupt 0x13, um auf das Laufwerk zuzugreifen und wenn das gelang, unser Binary vom 2. Sektor zu lesen. Dann gibt sie noch eine Meldung aus, damit wir im Fall eines Fehlers (bei einem späteren Kernel) wissen, ob das Laden wenigstens geklappt hat.  
 Der Code am Stück
 
        org 0x7C00 ; Unsere Startadresse
@@ -190,7 +190,7 @@ Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu lade
        ; Warte auf einen Tastendruck
        getkey:
        mov ah, 0 ; Funktion 0
-       int 016h  ; Ausf�hren
+       int 016h  ; Ausführen
        ret
        
        ; Rebooten (HEX Dump).
@@ -214,7 +214,7 @@ Und zum Schluss schreiben wir das Image mit Rawrite auf die Diskette:
        C:StupidOS> rawrite
        (den Anweisungen folgen, myOS.raw auf "a" schreiben)
 
-Jetzt rebootet ihr ganz einfach euren Rechner mit unserer neuen bootf�higen Diskette im Laufwerk... TÄDÄÄÄÄÄÄH!!!  
+Jetzt rebootet ihr ganz einfach euren Rechner mit unserer neuen bootfähigen Diskette im Laufwerk... TÄDÄÄÄÄÄÄÄH!!!  
   
 **Anmerkung:** Wer sein OS mit Qemu testen will, sollte dafür sorgen, dass auch die Größes des Kernels durch 512 teilbar ist, da Qemu nur ganze Sektoren lädt.
 
@@ -232,7 +232,7 @@ Die Register können grob in allgemeine Register, Segmentregister, Pointer- bzw.
 
 #### Allgemeine Register
 
-Die allgemeinen Register sind 16 Bit breit, k�nnen aber jeweils in zwei 8 Bit breite Register aufgeteilt werden. Das niederwertige Register wird mit dem Buchstaben L, das höherwertige Register mit dem Buchstaben H gekennzeichnet. In Verbindung mit dem Buchstaben A, B, C oder D ergibt sich ein vollst�ndiger Registername. Zum Beispiel wird aus AX (16 Bit breit) das Register AL (8 Bit) und das Register AH (8 Bit). Änderungen an AL oder AH schlagen sich immer auch auf AX nieder.  
+Die allgemeinen Register sind 16 Bit breit, können aber jeweils in zwei 8 Bit breite Register aufgeteilt werden. Das niederwertige Register wird mit dem Buchstaben L, das höherwertige Register mit dem Buchstaben H gekennzeichnet. In Verbindung mit dem Buchstaben A, B, C oder D ergibt sich ein vollständiger Registername. Zum Beispiel wird aus AX (16 Bit breit) das Register AL (8 Bit) und das Register AH (8 Bit). Änderungen an AL oder AH schlagen sich immer auch auf AX nieder.  
   
 Und hier die einzelnen Register:
 
@@ -264,7 +264,7 @@ An welchen Adressen beginnen nun Segmente? Dividieren wir die maximale Größe d
 
        Segmentnummer * 16 Bytes
 
-Bis jetzt können wir nur auf Segmente oder besser Segmentgrenzen zugreifen. Um den Zugriff auf einzelne Bytes innerhalb der Segmente zu ermöglichen, wird ein zweites Register verwendet. Dieses enthält einen Zeiger auf ein bestimmtes Byte, letzlich auch nur eine Zahl. Um also das 4. Byte im 6. Segment ansprechen zu k�nnen, muss ins Segmentregister der Wert 6 und in das zweite Register der Wert 4 eingetragen werden. Eine vollständige Adresse errechnet sich folgenderma�en:
+Bis jetzt können wir nur auf Segmente oder besser Segmentgrenzen zugreifen. Um den Zugriff auf einzelne Bytes innerhalb der Segmente zu ermöglichen, wird ein zweites Register verwendet. Dieses enthält einen Zeiger auf ein bestimmtes Byte, letzlich auch nur eine Zahl. Um also das 4. Byte im 6. Segment ansprechen zu können, muss ins Segmentregister der Wert 6 und in das zweite Register der Wert 4 eingetragen werden. Eine vollständige Adresse errechnet sich folgendermaßen:
 
        Segmentnummer * 16 + Offset (Abstand zum Segmentanfang)
 
@@ -291,9 +291,14 @@ Der Überhang über ein MB wird unter DOS als High Memory Area (HMA) bezeichnet.
   
 Ein Segmentregister ist immer 16 Bit breit und lässt sich im Gegensatz zu den allgemeinen Register nicht in einen nieder- und einen höherwertigen Teil zergliedern.  
 
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ----- | ------------- | --------------------------------------------------------------------------------------------------------- | ----- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | -------------- | ---------------------------------------------------------------------------------------------------------- | ----- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------------------- | -------------------------------------------------------------------------------------------- | ----- | ------------------- | -------------------------------------------------------------------------------------------- |
-| CS | Codesegment | Enthält die Nummer des Segmentes, das den aktuellen Code enthält - siehe Informationen zum Register IP. | DS | Datensegment | Enthält die Nummer des Segmentes, das die Daten enthält. Der Offset kann in verschiedenen Registern stehen oder als Konstante übergeben werden. | ES | Extrasegment | Findet vor allem bei den Stringoperationen Verwendung, in diesen Fällen steht der Offset im Register DI. | SS | Stacksegment | Enthält die Nummer des Segmentes, das den Stack enthält. Offsets stehen in den Register BP oder SP. Die Bedeutung des Stack wird später geklärt. | FS | Erst ab dem 80386 | Dient vor allem als Zusatzsegmentregister, wird hauptsächlich im Protected Mode verwendet. | GS | Erst ab dem 80386 | Dient vor allem als Zusatzsegmentregister, wird hauptsächlich im Protected Mode verwendet. |
+|  |  |  |
+| ----- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CS | Codesegment | Enthält die Nummer des Segmentes, das den aktuellen Code enthält - siehe Informationen zum Register IP. |
+| DS | Datensegment | Enthält die Nummer des Segmentes, das die Daten enthält. Der Offset kann in verschiedenen Registern stehen oder als Konstante übergeben werden. |
+| ES | Extrasegment | Findet vor allem bei den Stringoperationen Verwendung, in diesen Fällen steht der Offset im Register DI. |
+| SS | Stacksegment | Enthält die Nummer des Segmentes, das den Stack enthält. Offsets stehen in den Register BP oder SP. Die Bedeutung des Stack wird später geklärt. |
+| FS | Erst ab dem 80386 | Dient vor allem als Zusatzsegmentregister, wird hauptsächlich im Protected Mode verwendet. |
+| GS | Erst ab dem 80386 | Dient vor allem als Zusatzsegmentregister, wird hauptsächlich im Protected Mode verwendet. |
 
 #### Indexregister
 
@@ -353,7 +358,7 @@ Dieses Register wird auch Prozessorzustandsregister genannt. Es ist 16 Bit breit
   
 Meistens sollen abhängig von diesem Zustand bestimmte Aktionen durchgeführt werden. Eine Verzweigung in einem Assemblerprogramm ist nur über Sprünge realisierbar. Im Befehlssatz des 8086 befinden sich die so genannten bedingten Sprungbefehle, die die Flags auswerten und entsprechend zu anderen Programmstellen verzweigen.  
   
-Beim 8086 sieht es folgenderma�en aus ("\_" bedeutet: reserviertes oder noch nicht belegtes Bit):
+Beim 8086 sieht es folgendermaßen aus ("\_" bedeutet: reserviertes oder noch nicht belegtes Bit):
 
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | ----- | ----- | ----- | ----- | ---------- | ----------- | ------------------ | -------------------- | ------ | ------ | ----- | ----------- | ----- | -------- | ----- | ------- |
@@ -362,7 +367,7 @@ Beim 8086 sieht es folgenderma�en aus ("\_" bedeutet: reserviertes oder noch n
 
 #### IP - Instruction Pointer
 
-Dies ist eines der wichtigsten Register des Prozessors. Es enthält einen Zeiger auf die Adresse im Codesegment, an der der n�chste auszuführende Befehl steht (CS:IP).  
+Dies ist eines der wichtigsten Register des Prozessors. Es enthält einen Zeiger auf die Adresse im Codesegment, an der der nächste auszuführende Befehl steht (CS:IP).  
   
 Der Programmierer kann dieses Register nicht direkt beeinflussen. Eine Einflussnahme ist nur über die Sprungbefehle oder den Aufruf eines Unterprogramms oder einem Rücksprung aus einem solchen möglich.
 
@@ -399,7 +404,7 @@ Des Weiteren wurden die Unterstützung für den Umgang mit virtuellem Speicher u
 
 #### 80386 DX/SX
 
-Die allgemeinen Register, die Index- und Pointerregister, das Flagregister und IP wurden auf 32 Bit erweitert. Ansprechbar werden die vollen 32 Bit durch Voranstellen eines "E" vor den ursprünglichen Registernamen, also z.B. EAX, ESI, EBP. Die niederwertigen 16 Bit entsprechen dem urspr�nglichen 16-Bit-Register. Auf die oberen 16 Bit kann man nur über einen Umweg zugreifen. Ebenso wurden die meisten Befehle so erweitert, dass sie mit 32-Bit-Operanden arbeiten k�nnen.  
+Die allgemeinen Register, die Index- und Pointerregister, das Flagregister und IP wurden auf 32 Bit erweitert. Ansprechbar werden die vollen 32 Bit durch Voranstellen eines "E" vor den ursprünglichen Registernamen, also z.B. EAX, ESI, EBP. Die niederwertigen 16 Bit entsprechen dem urspränglichen 16-Bit-Register. Auf die oberen 16 Bit kann man nur über einen Umweg zugreifen. Ebenso wurden die meisten Befehle so erweitert, dass sie mit 32-Bit-Operanden arbeiten können.  
   
 Die SX-Variante wurde gegenüber der DX-Variante in ihren Kontaktmöglichkeiten mit der Außenwelt eingeschränkt. Statt 32 Datenleitungen (DX) erhielt sie nur 24, d.h. auch hier waren mehr Zugriffe nötig, was aber für den Programmierer ohne Belang ist.  
   
@@ -413,7 +418,7 @@ Dieser Prozessor war der erste in der Reihe, der einen Ansatz von Parallelverarb
 
 #### 80486 DX/SX
 
-Die Möglichkeit der parallelen Befehlsverarbeitung wurde verbessert indem die Befehlsdecodierungseinheit und die Ausführungseinheit zu 5 in einer Pipeline angeordneten Stufen erweitert wurden. Zus�tzlich wurde noch ein 8 KB First-Level-Cache auf dem Prozessor untergebracht der vor allem den Zugriff auf Speicheroperanden drastisch erhöhte wenn sie sich bereits im Cache befanden. Beim 486 DX gelang Intel endlich die Vereinigung des normalen Prozessors mit einem numerischen Coprozessor. Unterstützung für Second Level Cache und Multiprozessorsysteme wurde ebenfalls eingebaut.
+Die Möglichkeit der parallelen Befehlsverarbeitung wurde verbessert indem die Befehlsdecodierungseinheit und die Ausführungseinheit zu 5 in einer Pipeline angeordneten Stufen erweitert wurden. Zusätzlich wurde noch ein 8 KB First-Level-Cache auf dem Prozessor untergebracht der vor allem den Zugriff auf Speicheroperanden drastisch erhöhte wenn sie sich bereits im Cache befanden. Beim 486 DX gelang Intel endlich die Vereinigung des normalen Prozessors mit einem numerischen Coprozessor. Unterstützung für Second Level Cache und Multiprozessorsysteme wurde ebenfalls eingebaut.
 
 #### Pentium
 
@@ -423,7 +428,7 @@ Bislang war es für einen Programmierer recht schwer, herauszufinden, mit was f�
   
 Beim Pentium endlich legte Intel einen Befehl bei, der nicht nur einen herstellerspezifischen String zurückgab (GenuineIntel, AuthenticAMD bei AMD-Prozessoren), sondern auch Informationen über verschiedene Prozessorfähigkeiten zu liefern vermochte. Das sind natürlich Fähigkeiten, die sich viele Programmierer schon viel früher gewünscht hätten, die jetzt aber umso mehr genutzt werden.  
   
-Der Pentium enthielt eine zweite Ausführungseinheit was die Ausführung von theoretisch zwei Befehlen je Takt ermöglichte. Der First-Level-Cache wurde auf 16 KB erweitert (je 8 KB für Code und Daten). Beim Paging konnte die Größe einer Page auf 4 MB erh�ht werden. Sprungvorhersage konnte die Performance in Schleifenkonstrukten steigern. Neben neuen Befehlen erhielt der Pentium einen weiteren Betriebsmodus (SMM).  
+Der Pentium enthielt eine zweite Ausführungseinheit was die Ausführung von theoretisch zwei Befehlen je Takt ermöglichte. Der First-Level-Cache wurde auf 16 KB erweitert (je 8 KB für Code und Daten). Beim Paging konnte die Größe einer Page auf 4 MB erhöht werden. Sprungvorhersage konnte die Performance in Schleifenkonstrukten steigern. Neben neuen Befehlen erhielt der Pentium einen weiteren Betriebsmodus (SMM).  
   
 Mit einer späteren Version des Pentium führte Intel die MMX-Technologie ein. Dabei kommt das SIMD-Modell (Single Instruction, Multiple Data) zur parallelen Berechnung von Werten in den MMX-Registern. MMX sollte vor allem der Leistungssteigerung im Multimediabereich (Bild/Film-und Tonbearbeitung) dienen. Tatsächlich handelt es sich bei den MMX-Registern nicht um neue Register. Stattdessen werden die Register der FPU verwendet. Deswegen ist bei der Arbeit mit der FPU zu beachten, dass nicht auch gleichzeitig MMX-Befehle abgearbeitet werden (und umgekehrt).
 
@@ -449,7 +454,7 @@ Der Pentium III besaß als erster die Streaming SIMD Extensions (SSE), die vor a
 
 Der P4 enthält eine ganze Reihe von Neuerungen. Zum einen basiert er auf der Intel NetBurst Mikro-Architektur, zum anderen bietet er SSE2, die MMX und SSE um 144 neue Befehle erweitern (Berechnungen mit 128-Bit-Operanden, Cache- und Speichermanagement) und Multimediaanwendungen weiter beschleunigen.  
   
-Des Weiteren arbeitet er mit dem neuen 400 MHz Intel NetBurst Bus und ist dabei immer noch kompatibel zu allen Anwendungen die f�r die 32-Bit-Intel Prozessoren geschrieben wurden.  
+Des Weiteren arbeitet er mit dem neuen 400 MHz Intel NetBurst Bus und ist dabei immer noch kompatibel zu allen Anwendungen die für die 32-Bit-Intel Prozessoren geschrieben wurden.  
   
 
 ### Prozessormodi
@@ -561,6 +566,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1431; parent 0; 2006-08-15T19:30:52Z -->
+<!-- MediaWiki page 1412; revision 1432; parent 1431; 2006-08-16T04:24:25Z -->
