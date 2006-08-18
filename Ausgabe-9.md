@@ -267,7 +267,7 @@ Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt 
 
 - alpha
 - amd64
-- i384
+- i386
 - ia64
 - pc98
 - sparc64
@@ -284,6 +284,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1434; parent 1433; 2006-08-18T12:39:42Z -->
+<!-- MediaWiki page 1409; revision 1435; parent 1434; 2006-08-18T12:40:10Z -->
