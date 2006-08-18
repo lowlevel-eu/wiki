@@ -125,7 +125,7 @@ Hier sehen wir zuerst einige Standard-Strings und Zeichen ("0x55, 0xAA" sollten 
 | Offset | Type | Description |
 | 0 | Byte | 00=not bootable) |
 | 1 | Byte | Boot media Type |
-| 2-3 | Word | Load segment (standart is 0x7C0) |
+| 2-3 | Word | Load segment (standard is 0x7C0) |
 | 4 | Byte | System Type. |
 | 5 | Byte | Unused, must be 0. |
 | 6-7 | Word | Sector count. |
@@ -284,6 +284,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1433; parent 1430; 2006-08-18T12:38:25Z -->
+<!-- MediaWiki page 1409; revision 1434; parent 1433; 2006-08-18T12:39:42Z -->
