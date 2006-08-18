@@ -11,7 +11,7 @@ Wir wünschen euch viel Spaß mit der neuen Ausgabe!
 
 Viel neues ist passiert seit der letzten Ausgabe - auch nicht weiter verwunderlich, wenn man bedenkt wieviel Zeit ins Land gegangen ist ;) . Vor wenigen Wochen, am 22.7 ist QEMU 0.8.2 herausgekommen. Als einer der wenigen Emulatoren verfügt er über ein Kernelmodul um die Ausführung der ganzen VM erheblich zu beschleunigen - mir fällt sonst nur VMWare ein, dass diese Möglichkeit nutzt. Neu in der aktuellen Version sind u.a. ACPI Support und einige Verbesserungen der USB-Fähigkeiten.  
   
-Auch beim längst totgeglaubten Community-OS LOST gibt es Fortschritte. Seitdem taljeth die Projektleitung übernommen hat, sind einige Fortschritte zu beobachten. Mittlerweile funktioniert sogar eine erste Form des Multitasking, welche Jidder/PorkChicken zusammen mit dem Phys. Speichermanagment entwickelt hat. Es fehlt also nicht mehr viel bis die ersten Treiberprogramme (FÜr die die es nicht wissen, LOST ist ein Microkernel) geschrieben werden können.
+Auch beim längst totgeglaubten Community-OS LOST gibt es Fortschritte. Seitdem taljeth die Projektleitung übernommen hat, sind einige Fortschritte zu beobachten. Mittlerweile funktioniert sogar eine erste Form des Multitasking, welche Jidder/PorkChicken zusammen mit dem Phys. Speichermanagment entwickelt hat. Es fehlt also nicht mehr viel bis die ersten Treiberprogramme (Für die die es nicht wissen, LOST ist ein Microkernel) geschrieben werden können.
 
 ## Ein OS auf einer CD-ROM
 
@@ -52,7 +52,7 @@ Wenn wir nun den Computer neu starten, und im BIOS die Option "von CD-ROM Booten
 
 ### Theorie: Das ISO El-Torito Format
 
-Eine bootfähige CD-ROM hat in den meisten Fällen ein Dateisystem namens "ISO El-Torito". Das ist der gängige Standart für bootfähige CD-ROMs, die fast alle BIOS-Systeme erkennen.  
+Eine bootfähige CD-ROM hat in den meisten Fällen ein Dateisystem namens "ISO El-Torito". Das ist der gängige Standard für bootfähige CD-ROMs, die fast alle BIOS-Systeme erkennen.  
   
 Zuerst ist wichtig: Ein Sektor auf einem ISO-Datenträger ist 0x800 Byte groß (im Gegensatz zu Sektoren auf FAT Systemen, die grundsätzlic 0x200 Byte groß sind).  
   
@@ -117,7 +117,7 @@ Wie wir hier deutlich erkennen können, ist an der Adresse 0x47-0x4A im 17. CD-R
 
   
   
-Hier sehen wir zuerst einige Standart-Strings und Zeichen ("0x55, 0xAA" sollten wir schon kennen). 0x20 Byte weiter (also 32 Bytes weiter) im selben Sektor befindet sich dann der "Initial/Default Entry", der auch den Pointer zu unserem Boot-Image beinhaltet:  
+Hier sehen wir zuerst einige Standard-Strings und Zeichen ("0x55, 0xAA" sollten wir schon kennen). 0x20 Byte weiter (also 32 Bytes weiter) im selben Sektor befindet sich dann der "Initial/Default Entry", der auch den Pointer zu unserem Boot-Image beinhaltet:  
   
 
 |  |  |  |
@@ -284,6 +284,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1430; parent 1429; 2006-08-15T17:53:57Z -->
+<!-- MediaWiki page 1409; revision 1433; parent 1430; 2006-08-18T12:38:25Z -->
