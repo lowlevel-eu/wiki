@@ -141,7 +141,7 @@ Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder
 | Blockgröße | 2 kB - 8 kB | 4 kB | 4 kB (Standard) |
 | Max. Dateigröße | Je nach Blockgröße 16 GB bis 2 TB | 2 GB – 1 Byte (Allerdings 1 Exabyte bei Version 3.6) \* | 4 GB – 1 Byte |
 | Max. Dateisystemgröße | Je nach Blockgröße 2 TB bis 32 TB \* | 16 TB \* | 8 TB (unter Windows XP maximal 32 GB formatierbar, aber unbegrenzt lesbar) |
-| Max. Unterverzeichnisse | 32.768 | ? | 268435456 (inkl. Dateien im Verzeichniss) |
+| Max. Unterverzeichnisse | 32.768 | ? | 2^28 = 268435456 (inkl. Dateien im Verzeichniss), 2^28 da 4 Bit reserviert sind. |
 | Max. Dateien je Verzeichnisse | Ca. 130 Trillionen (10^18), Warnungen ab 10.000 Dateien in einem Verzeichnis | 518701895 (limitiert durch eine Hash-Funktion) | 268435456 (inkl. Unterverzeichnissen) |
 | Max. Dateien gesamt | ? | 2^32 – 3 (4.294.967.293) | ? |
 | Besonderheiten | Erweiterbar ohne dass das System ein bestimmtes Feature zwingend können MUSS, möglich wird dis durch die COMPAT, RO_COMPAT und INCOMAT – Felder im Superblock Journaling-Erweiterung (ext3)<br> | Erstes Journaling-Dateisystem das unter Linux komplett unterstützt wurde. | Kann von allen gängigen Systemen (Linux, Mac OS, Windows) gelesen und geschrieben werden. |
@@ -268,6 +268,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1436; parent 1435; 2006-08-18T12:52:09Z -->
+<!-- MediaWiki page 1409; revision 1438; parent 1436; 2006-08-29T16:37:54Z -->
