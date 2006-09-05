@@ -129,6 +129,8 @@ Das wars auch schon wieder - ich hoffe man konnte einige nützliche Informatione
 
 Also, schön weiterprogrammieren, lernen, Ideen entwickeln und so weiter. Und: Von nichts und niemandem vom Kurs abbringen lassen ;)
 
+SPTH Second Part To Hell
+
 ## Dateisystemvergleiche
 
 Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder planst dies in näherer Zukunft zu tun. Da nicht jeder Lust hat sein eigenes System zu entwerfen, hier mal einige Infos über verschiedene Dateisysteme, für einen schnellen Vergleich ordentlich in einer Tabelle dargestellt. Ich hoffe ich erleichtere euch eure Arbeit hiermit ein bisschen, und verkompliziere sie nicht noch eher weil es so viele interessante Systeme gibt \*g\*. Viel Spaß, stultus/N00b  
@@ -268,6 +270,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1444/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1444; parent 1443; 2006-09-05T19:25:02Z -->
+<!-- MediaWiki page 1409; revision 1445; parent 1444; 2006-09-05T19:41:14Z -->
