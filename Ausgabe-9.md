@@ -166,7 +166,7 @@ Es geht hier um den Aufbau von ext2! Hier werdet ihr KEINEN Code bekommen!
 
 ### Was ist ext2?
 
-ext2 ist das Standarddateisystem von Linux. Es gehört zu den stabilsten am Markt, wenn auch nicht zu den schnellsten. Leider bietet es noch kein Journaling-Funktion. Es ist, logischerweise, der Nachfolger von ext1 (bzw. ext).
+ext2 ist das Standarddateisystem von Linux. Es gehört zu den stabilsten am Markt, wenn auch nicht zu den schnellsten. Leider bietet es noch kein Journaling-Funktion (Hierzu existiert allerdings die Erweiterung ext3, wobei jede Partition die mit ext3 verwendet wird auch ohne weiteres mit ext2-Treibern betrieben werden kann - es fehlt halt lediglich die Journaling-Funktionalität). Es ist, logischerweise, der Nachfolger von ext1 (bzw. ext).
 
 ### Wie ist ext2 aufgebaut?
 
@@ -272,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1447/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1446; parent 1445; 2006-09-05T19:41:27Z -->
+<!-- MediaWiki page 1409; revision 1447; parent 1446; 2006-09-05T19:42:48Z -->
