@@ -31,13 +31,13 @@ Irgendwie ist es halb drei Uhr in der Früh und ich kann nicht mehr schlafen, da
 
 ### Praxis: Ahead Nero
 
-Wenn wir unser Betriebssystem geschrieben haben und in einer .IMG Datei compiliert haben, schreiben wir es normalerweise mit RaWrite (oder einem ähnlichen Programm) 1 zu 1 auf eine Diskette. Da aber in unserer 'modernen' Welt selbst PCs existieren, die keine Diskettenlaufwerke mehr haben (tja, scheisse :D) haben wir Pech gehabt. Oder? Anstatt das Betriebssystem auf einer Diskette anzubieten, können wir es auch auf eine CD-ROM schreiben (ein CD-ROM Laufwerk hat beinahe jeder PC/Laptop), und wir sind dieses Problem los. Wie schreibt man nun ein Betriebssystem auf eine CD-ROM. Ich werde das nun versuchen Schritt für Schritt zu erklären:
+Wenn wir unser Betriebssystem geschrieben haben und in einer .IMG Datei compiliert haben, schreiben wir es normalerweise mit RaWrite (oder einem ähnlichen Programm) 1 zu 1 auf eine Diskette. Da aber in unserer 'modernen' Welt selbst PCs existieren, die keine Diskettenlaufwerke mehr haben (tja, scheisse :D) haben wir Pech gehabt. Oder? Anstatt das Betriebssystem auf einer Diskette anzubieten, können wir es auch auf eine CD-ROM schreiben (ein CD-ROM Laufwerk hat beinahe jeder PC/Laptop), und wir sind dieses Problem los. Doch wie schreibt man nun ein Betriebssystem auf eine CD-ROM? Ich werde das nun versuchen Schritt für Schritt zu erklären:
 
-1.  Man compiliert sein Betriebssystem ganz normal, und erstellt eine .IMG Datei - wie es auch für Disketten-Betriebssysteme gemacht wird.
-2.  Man öffnet 'Ahead Nero Burning ROM' (btw: ich finde den Namen sehr gelungen :D).
+1.  Man compiliert sein Betriebssystem ganz normal, und erstellt eine .IMG Datei - wie es auch für Disketten-Betriebssysteme gemacht wird
+2.  Man öffnet 'Ahead Nero Burning ROM' (btw: ich finde den Namen sehr gelungen :D)
 3.  Neue Zusammenstellung -\> 'CD-ROM (Boot)'
-4.  Das Options-Feld 'Image-Datei' anklicken und den Pfad zum Image des Betriebssystems eingeben. 'Neu' klicken.
-5.  Dann, schlussendlich, das Dialogfeld 'CD Brennen' klicken und die CD-ROM brennen.
+4.  Das Options-Feld 'Image-Datei' anklicken und den Pfad zum Image des Betriebssystems eingeben. 'Neu' klicken
+5.  Dann, schlussendlich, das Dialogfeld 'CD Brennen' klicken und die CD-ROM brennen
 
 Wenn wir nun den Computer neu starten, und im BIOS die Option "von CD-ROM Booten" auswählen, startet unser Betriebssystem als wäre es eine Diskette. OK, wir wissen nun, wie es gemacht wird, aber nicht, warum es das macht.
 
@@ -73,47 +73,47 @@ Bei El-Torito CD-ROM wird im Grunde nichts anderes gemacht als eine Diskette emu
                    |      CD-ROM Image       |
                    +-------------------------+
 
-Das bedeutet im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volume. Dieses hat einen Zeiger auf den Boot-Catalog, und sieht folgendermaßen aus:
+Das bedeutet, im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volume. Dieses hat einen Zeiger auf den Boot-Catalog, und sieht folgendermaßen aus:
 
   
 
 |  |  |  |
-| -------- | ------- | ---------------------------------------------------------------------------- |
+| -------- | ------- | ----------------------------------------------------------------------------------------------------- |
 | Offset | Type | Description |
 | 0 | Byte | Boot Record Indicator |
-| 1-5 | Byte | ISO-9660 Identifier, must be 'CD001' |
-| 6 | Byte | Version of the descriptor, must be 1 |
-| 7-26 | Byte | Boot System Identifier, must be 'EL TORITO SPECIFICATION" padded with 0's. |
-| 27-46 | Byte | Unused, must be 0. |
-| 47-4A | DWord | Absolute pointer to first sector of Boot Catalog. |
-| 4A-7FF | Byte | Unused, must be 0. |
+| 1-5 | Byte | ISO-9660 Identifier, muss 'CD001' sein |
+| 6 | Byte | Version des Descriptor, muss '1' sein |
+| 7-26 | Byte | Boot System Identifier, immer 'EL TORITO SPECIFICATION" und mit 0en auf die richtige Größe gebracht |
+| 27-46 | Byte | Unbenutzt, immer 0 |
+| 47-4A | DWord | Absolute pointer to first sector of Boot Catalog |
+| 4A-7FF | Byte | Unbenutzt, 0 |
 
 Wie wir hier deutlich erkennen können, ist an der Adresse 0x47-0x4A im 17. CD-ROM Sektor der Pointer zum Boot-Catalog. Wir folgen nun diesem Pointer und sehen uns den Boot Catalog an:
 
 |  |  |  |
 | -------- | ------ | ------------------------ |
 | Offset | Type | Description |
-| 0 | Byte | Header ID, must be 01. |
-| 1 | Byte | Platform ID. |
-| 2-3 | Word | Reserved, must be 0. |
-| 4-1B | Char | ID-String. |
-| 1C-1D | Int | Checksum Word. |
-| 1E | Byte | Key Byte, must be 55. |
-| 1F | Byte | Key Byte, must be AA. |
+| 0 | Byte | Header ID, immer 01 |
+| 1 | Byte | Platform ID |
+| 2-3 | Word | Reserviert, immer 0 |
+| 4-1B | Char | ID-String |
+| 1C-1D | Int | Checksum Word |
+| 1E | Byte | Key Byte, muss 55 sein |
+| 1F | Byte | Key Byte, muss AA sein |
 
 Hier sehen wir zuerst einige Standard-Strings und Zeichen ("0x55, 0xAA" sollten wir schon kennen). 0x20 Byte weiter (also 32 Bytes weiter) im selben Sektor befindet sich dann der "Initial/Default Entry", der auch den Pointer zu unserem Boot-Image beinhaltet:
 
 |  |  |  |
-| -------- | ------- | ---------------------------------------------------------- |
+| -------- | ------- | --------------------------------------------------------- |
 | Offset | Type | Description |
 | 0 | Byte | 00=not bootable) |
 | 1 | Byte | Boot media Type |
 | 2-3 | Word | Load segment (standard is 0x7C0) |
-| 4 | Byte | System Type. |
-| 5 | Byte | Unused, must be 0. |
-| 6-7 | Word | Sector count. |
-| 8-0B | DWord | Load RBA. This is the start address of the virtual disk. |
-| 0C-1F | Byte | Unused, must be 0. |
+| 4 | Byte | System Type |
+| 5 | Byte | Unbenutzt, 0 |
+| 6-7 | Word | Sector count |
+| 8-0B | DWord | Load RBA. This is the start address of the virtual disk |
+| 0C-1F | Byte | Unbenutzt, 0 |
 
 An der Adresse 0x08-0x0B befindet sich schließlich der Pointer zum Image unseres Betriebssystems. Hier befindet sich also das Image - und wir wissen nun auch ein bisschen, wie unser Betriebssystem auf einer CD-ROM gespeichert ist.
 
@@ -268,6 +268,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1439; parent 1438; 2006-08-29T16:40:56Z -->
+<!-- MediaWiki page 1409; revision 1443; parent 1439; 2006-09-05T19:22:40Z -->
