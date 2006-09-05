@@ -174,7 +174,7 @@ Einige Daten:
 
 |  |  |
 | --------------------------- | ------------------------------ |
-| Maximale Dateigröße | 2 GB (im 62-Bit-Modus 16 GB) |
+| Maximale Dateigröße | 2 GB (im 32-Bit-Modus 16 GB) |
 | Maximale Dateinamenslänge | 255 Zeichen |
 
   
@@ -272,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1447/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1447; parent 1446; 2006-09-05T19:42:48Z -->
+<!-- MediaWiki page 1409; revision 1448; parent 1447; 2006-09-05T20:24:48Z -->
