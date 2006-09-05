@@ -78,12 +78,12 @@ Das bedeutet, im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volu
   
 
 |  |  |  |
-| -------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| -------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Offset | Type | Description |
 | 0 | Byte | Boot Record Indicator |
 | 1-5 | Byte | ISO-9660 Identifier, muss 'CD001' sein |
 | 6 | Byte | Version des Descriptor, muss '1' sein |
-| 7-26 | Byte | Boot System Identifier, immer 'EL TORITO SPECIFICATION" und mit 0en auf die richtige Größe gebracht |
+| 7-26 | Byte | Boot System Identifier, immer 'EL TORITO SPECIFICATION", wird mit Nullen aufgefüllt um die Korrekte Größe zu erhalten |
 | 27-46 | Byte | Unbenutzt, immer 0 |
 | 47-4A | DWord | Absolute pointer to first sector of Boot Catalog |
 | 4A-7FF | Byte | Unbenutzt, 0 |
@@ -272,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1449/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1449; parent 1448; 2006-09-05T20:29:03Z -->
+<!-- MediaWiki page 1409; revision 1450; parent 1449; 2006-09-05T20:46:54Z -->
