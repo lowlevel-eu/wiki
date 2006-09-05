@@ -129,7 +129,9 @@ Das wars auch schon wieder - ich hoffe man konnte einige nützliche Informatione
 
 Also, schön weiterprogrammieren, lernen, Ideen entwickeln und so weiter. Und: Von nichts und niemandem vom Kurs abbringen lassen ;)
 
-SPTH Second Part To Hell
+SPTH
+
+Second Part To Hell
 
 ## Dateisystemvergleiche
 
@@ -270,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1445; parent 1444; 2006-09-05T19:41:14Z -->
+<!-- MediaWiki page 1409; revision 1446; parent 1445; 2006-09-05T19:41:27Z -->
