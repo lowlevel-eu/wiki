@@ -121,7 +121,7 @@ Wer mehr wissen möchte, sollte folgende Dokumente lesen:
 
 - FAT: Gerneral Overview of On-Disk Formation by Microsoft Corporation
 - Volume and File Structure of CDROM for Information Interchange
-- "El Torito" Bootable CD-ROM Format Specification
+- ["El Torito" Bootable CD-ROM Format Specification](http://www.phoenix.com/NR/rdonlyres/98D3219C-9CC9-4DF5-B496-A286D893E36A/0/specscdrom.pdf)
 
 ### Nachwort
 
@@ -272,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1450; parent 1449; 2006-09-05T20:46:54Z -->
+<!-- MediaWiki page 1409; revision 1451; parent 1450; 2006-09-06T15:04:31Z -->
