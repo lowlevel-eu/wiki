@@ -240,8 +240,8 @@ So sollte der Kernel erkennen, dass das System nicht ordnungsgemäß heruntergef
 ### Screenshots
 
 |  |  |
-| --------- | --------- |
-| \* TODO | \* TODO |
+| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [Screenshot 1](http://shadowmage.plinkomedia.com/images/screenshots/FreeBSD-2002-Feb-07.jpg) | [Screenshot 2](http://www.fuka.info.waseda.ac.jp/~oota/mateR/software/freebsd/freebsd.gif) |
 
 ### Geschichte
 
@@ -272,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1451; parent 1450; 2006-09-06T15:04:31Z -->
+<!-- MediaWiki page 1409; revision 1452; parent 1451; 2006-09-06T15:08:32Z -->
