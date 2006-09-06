@@ -78,42 +78,42 @@ Das bedeutet, im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volu
   
 
 |  |  |  |
-| -------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Offset | Type | Description |
-| 0 | Byte | Boot Record Indicator |
-| 1-5 | Byte | ISO-9660 Identifier, muss 'CD001' sein |
-| 6 | Byte | Version des Descriptor, muss '1' sein |
-| 7-26 | Byte | Boot System Identifier, immer 'EL TORITO SPECIFICATION", wird mit Nullen aufgefüllt um die Korrekte Größe zu erhalten |
-| 27-46 | Byte | Unbenutzt, immer 0 |
-| 47-4A | DWord | Absolute pointer to first sector of Boot Catalog |
-| 4A-7FF | Byte | Unbenutzt, 0 |
+| 0x0 | Byte | Boot Record Indicator |
+| 0x1-0x5 | Byte | ISO-9660 Identifier, muss 'CD001' sein |
+| 0x6 | Byte | Version des Descriptor, muss '1' sein |
+| 0x7-0x26 | Byte | Boot System Identifier, immer 'EL TORITO SPECIFICATION", wird mit Nullen aufgefüllt um die Korrekte Größe zu erhalten |
+| 0x27-0x46 | Byte | Unbenutzt, immer 0 |
+| 0x47-0x4A | DWord | Absolute pointer to first sector of Boot Catalog |
+| 0x4A-0x7FF | Byte | Unbenutzt, 0 |
 
 Wie wir hier deutlich erkennen können, ist an der Adresse 0x47-0x4A im 17. CD-ROM Sektor der Pointer zum Boot-Catalog. Wir folgen nun diesem Pointer und sehen uns den Boot Catalog an:
 
 |  |  |  |
-| -------- | ------ | ------------------------ |
+| ----------- | ------ | ------------------------ |
 | Offset | Type | Description |
-| 0 | Byte | Header ID, immer 01 |
-| 1 | Byte | Platform ID |
-| 2-3 | Word | Reserviert, immer 0 |
-| 4-1B | Char | ID-String |
-| 1C-1D | Int | Checksum Word |
-| 1E | Byte | Key Byte, muss 55 sein |
-| 1F | Byte | Key Byte, muss AA sein |
+| 0x0 | Byte | Header ID, immer 01 |
+| 0x1 | Byte | Platform ID |
+| 0x2-0x3 | Word | Reserviert, immer 0 |
+| 0x 4-0x1B | Char | ID-String |
+| 0x1C-0x1D | Int | Checksum Word |
+| 0x1E | Byte | Key Byte, muss 55 sein |
+| 0x1F | Byte | Key Byte, muss AA sein |
 
 Hier sehen wir zuerst einige Standard-Strings und Zeichen ("0x55, 0xAA" sollten wir schon kennen). 0x20 Byte weiter (also 32 Bytes weiter) im selben Sektor befindet sich dann der "Initial/Default Entry", der auch den Pointer zu unserem Boot-Image beinhaltet:
 
 |  |  |  |
-| -------- | ------- | --------------------------------------------------------- |
+| ----------- | ------- | --------------------------------------------------------- |
 | Offset | Type | Description |
-| 0 | Byte | Boot Indicator ( 88 = bootable, 00 = not bootable ) |
-| 1 | Byte | Boot media Type |
-| 2-3 | Word | Load segment (standard is 0x7C0) |
-| 4 | Byte | System Type |
-| 5 | Byte | Unbenutzt, 0 |
-| 6-7 | Word | Sector count |
-| 8-0B | DWord | Load RBA. This is the start address of the virtual disk |
-| 0C-1F | Byte | Unbenutzt, 0 |
+| 0x0 | Byte | Boot Indicator ( 88 = bootable, 00 = not bootable ) |
+| 0x1 | Byte | Boot media Type |
+| 0x2-0x3 | Word | Load segment (standard is 0x7C0) |
+| 0x4 | Byte | System Type |
+| 0x5 | Byte | Unbenutzt, 0 |
+| 0x6-0x7 | Word | Sector count |
+| 0x8-0x0B | DWord | Load RBA. This is the start address of the virtual disk |
+| 0x0C-0x1F | Byte | Unbenutzt, 0 |
 
 An der Adresse 0x08-0x0B befindet sich schließlich der Pointer zum Image unseres Betriebssystems. Hier befindet sich also das Image - und wir wissen nun auch ein bisschen, wie unser Betriebssystem auf einer CD-ROM gespeichert ist.
 
@@ -272,6 +272,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1452; parent 1451; 2006-09-06T15:08:32Z -->
+<!-- MediaWiki page 1409; revision 1454; parent 1452; 2006-09-06T15:25:54Z -->
