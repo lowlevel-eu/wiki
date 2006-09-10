@@ -86,16 +86,42 @@ Leider ist diese Methode sehr ineffizient, da sie sehr viel Rechenkapazität in 
 
 ### Interrupts
 
-Eine sehr viel bessere Methode ist die Methode der Interrupts. Bei diesem Konzept bekommt jedes Gerät, das mit der CPU kommuniziert, eine Art "Signalgeber", mit der es der CPU signalisieren kann, dass Daten gesendet wurden und die CPU nun die Daten verarbeiten muss. Die CPU unterbricht (interrupts) nun das Programm und verarbeitet die Daten mit einer Routine, die vorher festgelegt wurde. Wie diese System genau funktioniert, werden wir uns später anschauen.
+Eine sehr viel bessere Methode ist die Methode der Interrupts. Bei diesem Konzept bekommt jedes Gerät, das mit der CPU kommuniziert, eine Art "Signalgeber", mit der es der CPU signalisieren kann, dass Daten gesendet wurden und die CPU nun die Daten verarbeiten muss. Die CPU unterbricht (**interrupts**) nun das Programm und verarbeitet die Daten mit einer Routine, die vorher festgelegt wurde. Wie diese System genau funktioniert, werden wir uns später anschauen.
 
 Diese Methode hat einige Vorteile. Zum Beispiel kann die CPU das Programm, das geladen ist, permanent ausführen, und das Programm wird nur dann unterbrochen, wenn es wirklich sein muss.
 
 So, Schluss jetzt mit dem theoretischen Gelaber. Schauen wir uns an, wie das genau funktioniert und wie das auf dem IBM-PC implementiert ist ;-)
 
-Datei:Ausgabe1/irq2.gif
+Datei:Ausgabe1/irq2.gif Implementierung auf dem IBM-PC
+
+Intel hat für diese Zwecke extra einen neuen Chip gebaut, den **8259 Interrupt Controller** (auch **PIC** genannt, **Programmable Interrupt Controller**). Dieser Chip hat 8 Leitungen (IRQ 0 - 7) für jedes einzelne Gerät, das der CPU etwas mitteilen muss. Die einzelnen Leitungen nennt man **IRQ Lines** (Interrupt ReQuest). Da jedoch 8 IRQs zuwenig waren, baute Intel einen zweiten Interrupt Controller in den IBM-PC, der über IRQ 2 mit dem ersten verbunden war.
+
+Wie man sieht, ist IRQ 2 nicht als solches verwendbar, sondern dient lediglich zur Kommunikation. Aus Kompatibilitätsgründen wurde deshalb IRQ 2 mit IRQ 9 des 2. Controllers verbunden.
+
+Zu kompliziert? Ganz einfach: wenn ein Gerät IRQ 2 benutzt, dann benutzt es in Wirklichkeit IRQ 9.
+
+Datei:Ausgabe1/irq3.gif
+
+Was passiert nun, wenn ein Gerät einen Interrupt Request über eine IRQ Line sendet? Als erstes gelangt das Signal ins Interrupt **Mask Register (IMR)**. Hier wird festgestellt, ob der IRQ überhaupt verarbeitet werden muss oder nicht (Masking, darauf werde ich allerdings nicht näher eingehen).
+
+Als nächstes gelangt das Signal in den **Priority Resolver**. Dieser findet heraus, welche IRQs zuerst, bzw. welche zuletzt verarbeitet werden müssen. Je niedriger die IRQ-Nummer, desto mehr Priorität hat das Signal (IRQ 0 hat also am meisten Priorität, gefolgt von IRQ 1 usw.)
+
+Nun ist der Interrupt Controller mit allen Vorarbeiten fertig und muss der CPU sagen, dass ein Interrupt ausgelöst wurde. Dies geschieht durch ein **INT-Signal** (Interrupt-Signal), das durch die Interrupt-Leitung des Prozessors gesendet wird. Der Prozessor wird die Anweisung beenden, die er gerade ausführt, und anschließend ein **INTA (Interrupt Acknowledge)** zurücksenden, das den Erhalt des IRQs bestätigt.
+
+Wenn der PIC das INTA-Signal bekommt, wird die Nummer des IRQs im **In Service Register (ISR)** gespeichert, welches also zeigt, welcher IRQ gerade aktiv ist. Außerdem wird es aus dem Interrupt Request Register gelöscht, weil der Prozessor sich ja schon um den IRQ kümmert.
+
+Der Prozessor wird nun ein weiteres INTA-Signal an den PIC senden, um ihm zu sagen, dass er einen 8 Bit-Pointer mit der Nummer des ausgelösten IRQs in den Daten-Bus stellen soll. Die CPU muss schließlich wissen, welcher Interrupt ausgelöst wurde.
+
+Anschließend wird der Prozessor den Interrupt Handler (auch **ISR, Interrupt Service Routine** genannt, aber nicht mit dem In Service Register verwechseln!) aufrufen, der zum jeweiligen Interrupt dazugehört.
+
+Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
+
+### Interrupt Vector Table
+
+8086-Prozessoren benötigen eine so genannte **Interrupt Vector Table**, an der Adresse 0000:0000, die 1024 Bytes lang ist. Diese Tabelle beinhaltet die Adressen der Interrupt Handler, die aufgerufen werden, wenn ein Interrupt ausgelöst wird. Jede dieser Adressen ist 4 Bytes lang, deshalb kommen wir auf 1024 / 4 = 256 Interrupts, die in der Tabelle sein können.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1461; parent 0; 2006-09-10T17:25:07Z -->
+<!-- MediaWiki page 1415; revision 1462; parent 1461; 2006-09-10T18:54:14Z -->
