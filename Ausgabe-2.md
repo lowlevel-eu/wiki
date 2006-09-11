@@ -54,7 +54,7 @@ Das hat den Vorteil, dass man den Microkernel in Supercomputern genauso wie in k
 
 Da also Kernel und die verschiedenen Treiber/Server getrennt laufen, ist ein Microkernel sehr viel stabiler als ein monolithischer Kernel, weil ein Fehler in einem Modul lediglich das Modul zum Absturz bringt, aber nicht gleich den ganzen Kernel.
 
-Ein Beispiel für einen Microkernel ist **QNX RTOS**, das man als Privatanwender kostenlos downloaden kann. Für kommerzielle Entwickler kostet es, soweit ich weiß, 3000 â‚¬.
+Ein Beispiel für einen Microkernel ist **QNX RTOS**, das man als Privatanwender kostenlos downloaden kann. Für kommerzielle Entwickler kostet es, soweit ich weiß, 3000 €.
 
 <http://www.qnx.com>
 
@@ -122,6 +122,6 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1462; parent 1461; 2006-09-10T18:54:14Z -->
+<!-- MediaWiki page 1415; revision 1463; parent 1462; 2006-09-11T18:30:21Z -->
