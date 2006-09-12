@@ -119,8 +119,33 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 
 8086-Prozessoren benötigen eine so genannte **Interrupt Vector Table**, an der Adresse 0000:0000, die 1024 Bytes lang ist. Diese Tabelle beinhaltet die Adressen der Interrupt Handler, die aufgerufen werden, wenn ein Interrupt ausgelöst wird. Jede dieser Adressen ist 4 Bytes lang, deshalb kommen wir auf 1024 / 4 = 256 Interrupts, die in der Tabelle sein können.
 
+|  |  |  |
+| ----------- | --------------------- | --------------------------------------- |
+| INT (Hex) | IRQ | Bedeutung |
+| 00 - 01 | Exception Handlers | Exceptions werden später behandelt |
+| 02 | Non-Maskable IRQ | Non-Maskable IRQ (Parity Fehler) |
+| 03 - 07 | Exception Handlers | \- |
+| 08 | Hardware IRQ0 | System-Timer |
+| 09 | Hardware IRQ1 | Keyboard |
+| 0A | Hardware IRQ2 | Umgeleitet zu IRQ 9 |
+| 0B | Hardware IRQ3 | Serielle Schnittstellen COM2/COM4 |
+| 0C | Hardware IRQ4 | Serielle Schnittstellen COM1/COM3 |
+| 0D | Hardware IRQ5 | meistens Soundkarte |
+| 0E | Hardware IRQ6 | Diskettenlaufwerk-Controller |
+| 0F | Hardware IRQ7 | Parallel-Port |
+| 10 - RF | Software Interrupts | Software INTs werden später behandelt |
+| 70 | Hardware IRQ8 | Realt Time Clock |
+| 71 | Hardware IRQ9 | umgeleiteter IRQ2 |
+| 72 | Hardware IRQ10 | \- |
+| 73 | Hardware IRQ11 | \- |
+| 74 | Hardware IRQ12 | PS/2 Maus |
+| 75 | Hardware IRQ13 | Mathematischer Co-Prozessor |
+| 76 | Hardware IRQ14 | Festplatte |
+| 77 | Hardware IRQ15 | \- |
+| 78 - FF | Software Interrupts | \- |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1465; parent 1463; 2006-09-12T16:31:17Z -->
+<!-- MediaWiki page 1415; revision 1467; parent 1465; 2006-09-12T16:44:08Z -->
