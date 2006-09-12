@@ -16,15 +16,14 @@ Sorry, keine News diesmal... leider keine Zeit. Wer Newsredakteur bei Lowlevel w
 
 ## Leserbriefe
 
-Hallo, ich habe gerade auf www.coder-area.de deine Werbung zu deiner Zeitschrift gelesen und gleich einmal reingeschnuppert. Da ich bisher wenig Ahnung vom Aufbau eines Betriebssystems habe, kommt mir diese Gelegenheit gerade recht, um mein Wissen in dieser Beziehung ein wenig aufzufrischen. Weiter so! \[...\]
+**Hallo, ich habe gerade auf www.coder-area.de deine Werbung zu deiner Zeitschrift gelesen und gleich einmal reingeschnuppert. Da ich bisher wenig Ahnung vom Aufbau eines Betriebssystems habe, kommt mir diese Gelegenheit gerade recht, um mein Wissen in dieser Beziehung ein wenig aufzufrischen. Weiter so! \[...\]**
 
 Freut mich, dass es dir gefallen hat! Ich werde auf jeden Fall weitermachen!
 
-\[...\] Sehr schönes Magazin. Die erste Ausgabe hat mich sehr begeistert. Leider beherrsche ich noch nicht all zu Viel Grundlagen von Assembler, um ganz durchzusteigen, hast du mir da nicht ein Paar Adressen die sich mit Assembler-Programmierung beschäftigen? \[...\]
+  
+**\[...\] Sehr schönes Magazin. Die erste Ausgabe hat mich sehr begeistert. Leider beherrsche ich noch nicht all zu Viel Grundlagen von Assembler, um ganz durchzusteigen, hast du mir da nicht ein Paar Adressen die sich mit Assembler-Programmierung beschäftigen? \[...\]**
 
 Tja... da wäre zum Beispiel Snakebytes berühmtes Assembler-Tutorial: <http://kryptocrew.de/archiv/coding/asm/Asmtut.html>, hier eine Art "Referenz":<http://webster.cs.ucr.edu/> und Andre Müllers Tutorial, von dem wir auch Teile hier abdrucken: <http://andremueller.gmxhome.de/toc.html>
-
-  
 
 ## OS-Dev-Tutorial, Teil 2
 
@@ -122,6 +121,6 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1463; parent 1462; 2006-09-11T18:30:21Z -->
+<!-- MediaWiki page 1415; revision 1465; parent 1463; 2006-09-12T16:31:17Z -->
