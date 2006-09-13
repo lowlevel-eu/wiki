@@ -144,8 +144,206 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 | 77 | Hardware IRQ15 | \- |
 | 78 - FF | Software Interrupts | \- |
 
+  
+
+### Software Interrupts
+
+Wenn Sie jemals in Assembler unter DOS programmiert haben, dann wissen Sie wahrscheinlich, dass die meisten DOS-Funktionen über INT 21h abgewickelt werden. Wenn man zum Beispiel eine Datei über eine DOS-Funktion öffnen wollen, dann müssen Sie nur INT 21h mit dem richtigen Parameter aufrufen.
+
+Das BIOS benutzt ein ähnliches Interface, um dem Betriebssystem Zugriff auf BIOS-Funktionen zu geben. Die Interrupts 10h, 13h und 16h sind BIOS-Interrupts, die die Hardware kontrollieren. Moderne Betriebssystem wie Windows und Linux verzichten auf das BIOS und kommunizieren mit der Hardware direkt durch Treiber (im Übrigen geht das gar nicht anders, aber das ist ein anderes Thema).
+
+### Exceptions
+
+Exceptions sind besondere Interrupts, die automatisch ausgelöst werden, wenn etwas mit dem Code, der gerade ausgeführt wird, schief läuft, wie zum Beispiel eine Division durch Null.
+
+|  |  |
+| ----- | ----------------------------------------- |
+| 0 | Divide Error |
+| 1 | Debug Exceptions |
+| 2 | reserved |
+| 3 | Breakpoint |
+| 4 | Overflow |
+| 5 | Bounds Check |
+| 6 | Invalid Opcode |
+| 7 | Coprocessor Not Available |
+| 8 | Double Fault |
+| 9 | Coprocessor Segment Overrun |
+| 10 | Invalid TSS |
+| 11 | Segment Not Present |
+| 12 | Stack Exception |
+| 13 | General Protection Fault (Triple Fault) |
+| 14 | Page Fault |
+| 15 | reserved |
+| 16 | Coprocessor Error |
+
+  
+
+### Nächstes Mal...
+
+Ich glaube, es wird langsam Zeit, ein wenig Code anzufassen... aber dann in der nächsten Ausgabe - da werden wir uns dann anschauen, wie man eigene Interrupt Handler schreibt.
+
+## Code Corner
+
+### Delay-Funktion
+
+       ; delay processing for amount of clock ticks
+       ; SI = ticks to wait
+       DELAY:
+       XOR AH,AH
+       INT 0x1A
+       ADD DX,SI
+       MOV BX,DX
+       .WL:
+       INT 0x1A
+       CMP DX,BX
+       JNE .WL
+       RET
+
+### String-Funktionen
+
+       ; YaOS v0.1 STRING.INC file, programmed by Zero Design
+       
+       ; Routines in this file-
+       ; UCASE_STRING: turn a string into uppercase letters
+       ; RTRIM_STRING: right space trim a string
+       ; LTRIM_STRING: left space trim a string
+       ; STRLEN: get strings length
+       
+       
+       UCASE_STRING: ; ES:SI = offset of string
+       CALL STRLEN
+       MOV CX,BX
+       .UCASE:
+       DEC CX
+       MOV BX,CX
+       MOV AL,[SI+BX]
+       CMP AL,123
+       JB .NOTABOVE
+       INC CX
+       JMP .NOTLOWCASE
+       .NOTABOVE:
+       CMP AL,97
+       JNB .LOWCASE
+       INC CX
+       JMP .NOTLOWCASE
+       .LOWCASE:
+       SUB AL,32
+       MOV [SI+BX],AL
+       INC CX
+       .NOTLOWCASE:
+       LOOP .UCASE
+       RET
+       
+       RTRIM_STRING: ; right space trim a string, ES:SI = offset of string
+       CALL STRLEN
+       MOV CX,BX
+       DEC CX
+       .RTRIM:
+       MOV BX,CX
+       MOV AL,[SI+BX]
+       CMP AL,32
+       JNE .DONE
+       MOV BYTE [SI+BX],0
+       LOOP .RTRIM
+       .DONE:
+       RET
+       
+       LTRIM_STRING: ; left space trim a string, ES:SI = offset of string
+       CALL STRLEN
+       PUSH SI
+       MOV CX,BX
+       XOR BX,BX
+       .LT1:
+       MOV AL,[SI+BX]
+       CMP AL,32
+       JNE .LT2
+       CMP AL,0
+       JE .EOS
+       INC BX
+       JMP .LT1
+       .LT2:
+       MOV DI,SI
+       ADD SI,BX
+       REP MOVSB
+       .EOS:
+       POP SI
+       RET
+       
+       STRLEN: ; get strings length, ES:SI = offset of string, BX returns length
+       XOR BX,BX
+       .STRLEN:
+       MOV AL,[SI+BX]
+       CMP AL,0
+       JE .STRDONE
+       INC BX
+       JMP .STRLEN
+       .STRDONE:
+       RET
+
+## OS Projekte: V2_OS
+
+Ein Betriebssystem, komplett in 32bit-Assembler geschrieben! Kann das gut gehen? V2_Lab demonstriert eindrucksvoll, dass es möglich ist!
+
+### OS Design
+
+Einige sehr innovative Features. Zum Beispiel gibt es mehrere Konsolen, für die verschiedensten Zwecke:
+
+- Terminal-Konsole (zum Arbeiten)
+- Modul-Konsole (Übersicht aller laufenden Module)
+- Boot-Konsole (Bootinformationen)
+- Debug-Konsole (Debuggen)
+- Crash-Konsole (wenn der Kernel eine Panic auslöst)
+
+### Funktionalität
+
+Eingeschränkt. Der Kernel alleine kann nur sehr wenig. Erst durch verschiedene Module und Programme wird die Funktionalität Stück für Stück erweitert. Obwohl die V2_OS-Community recht groß ist, sind leider diese Module Mangelware...
+
+Nichtsdestotrotz gibt es Module für:
+
+- VESA
+- Maus (seriell / PS2)
+- TCP/IP
+- Ramdisk
+
+Als kleine Besonderheit lässt sich V2_OS auch auf einer mit V2_FS formatierten Festplatte installieren.
+
+### Stabilität / Kompatibilität
+
+Sehr gut. V2_OS ist extrem schnell und läuft stabil. Abstürze haben wir nur erlebt, wenn ein Programm versucht hat, auf ein Modul zuzugreifen und dieses Modul nicht geladen war.
+
+Anscheinend soll V2_OS auch unter Bochs laufen, aber Bochs stürzte bei den Tests immer ab (auch nachdem der Kernel Bochs-konform kompiliert wurde). Wenn jemand V2_OS unter Bochs zum Laufen gekriegt hat, sollte sich derjenige bei mir per Mail melden und mir sagen, wie er das hingekriegt hat :-)
+
+### Dokumentation
+
+Nicht gut. Die DOCs sind zwar ausführlich, aber schon veraltet. Und wenn man versucht, auf die Seite des neuen DOC-Projekts zu kommen, kommt ein \#404-Error...
+
+### Fazit
+
+V2_OS ist eines der besseren Betriebssysteme! Leider sieht es so aus, also ob nicht mehr viele Leute an V2_OS arbeiten... das ist wirklich schade.
+
+## Phils Kolumne
+
+**Hauptsache Deutsch...** Auf einen Nenner gebracht könnte man sagen: "Je Deutsch desto DAU".... zu blöd um einige Worte Englisch zu lernen, aber mit einem PC rumspielen wollen. Und solche Leute müllen einem als Programmierer dann noch den Mail-Eingang zu, mit Forderungen nach einer "endlich deutschen Version".
+
+Ja, ich bin genervt. Ich rege mich auf. Da hat man eine neue Technik und nun endlich die einmalige Chance, weltweit einheitliche Begriffe zu entwickeln - und was passiert? Einige unverbesserliche Deutschtümmler beharren auf die Entwicklung typisch deutscher Begriffe - mit dem Ergebnis dass keiner keinen mehr versteht, langsam sogar alte Hasen Probleme damit haben, zu verstehen, was eigentlich gemeint ist und irgendwie nichts mehr wirklich einen Sinn ergibt.. Aber Hauptsache Deutsch....
+
+Hier 2 Beispiele die mir besonders gut gefallen:
+
+- "Konvertiert Frequenzen und Bits pro Beispiel aus PCM-Audiodaten." - gemeint ist damit sicher "per sample" ..
+- "Vorgänge beim Öffnen von Dateien und Starten von Dateianhängen zulassen" .. oooops???
+
+Nein, ich würde den Umstand, dass der Command-Interpreter, unsere Shell, neuerdings "Eingabeaufforderung" heißt und Exceptions mit "Unterbrechungen" betitelt werden, nicht so einfach hinnehmen... ja wäre da nicht die Tatsache, dass durch Massenproduktion (jeder Dösdaddel glaubt doch, er bräuchte einen Rechner) alles richtig günstig geworden ist....
+
+**phil**
+
+## Nachwort
+
+Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwohl recht viele Leute mir Material gesendet haben... aber egal, es kommt schließlich auf Qualität und nicht auf Quantität an!
+
+**Mastermesh**
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1467; parent 1465; 2006-09-12T16:44:08Z -->
+<!-- MediaWiki page 1415; revision 1470; parent 1467; 2006-09-13T17:02:02Z -->
