@@ -304,7 +304,7 @@ Zum Beispiel, stellt euch so ein Script vor, um auf Newsgroups zuzugreifen:
 
 Oder auf einen anderen Rechner zugreifen (A la Windows UNC):
 
-       copy Networkfredpublicprojects38main.c Home:
+       copy Network/fred/public/projects/38main.c Home:
 
 Ein kleines GUI-Programm:
 
@@ -347,6 +347,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 1497; parent 1486; 2006-09-20T13:57:18Z -->
+<!-- MediaWiki page 1424; revision 1498; parent 1497; 2006-09-20T13:58:06Z -->
