@@ -180,8 +180,10 @@ Einige Daten:
   
 In ext2 besteht eine Datei aus zwei Teilen: Kopf (I-node) und Rumpf. In der I-Node-Table ist die Information über die physikalische Position einer Datei. Im Rumpf die eigentliche Datei.  
   
-Sehen Sie sich folgende Abbildung an:  
-[ext2 Aufbau](http://myemu.masen-inhabitants.com/lowlevel_temp/ext2_pic1.png)  
+Sehen Sie sich folgende Abbildung an:
+
+ext2 Aufbau
+
 Die kleinste adressierbare Einheit ist ein Block. Er ist bei ext2 immer 4096 Byte groß. Eigentlich kann man sie anpassen, aber das sollte man nicht. Jeder Block erhält eine eindeutige Nummer. Der I-node ist bei jeder Datei vorhanden, die I-Node-Table ist mit der FAT zu vergleichen.  
   
 
@@ -274,6 +276,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1459; parent 1454; 2006-09-08T12:41:56Z -->
+<!-- MediaWiki page 1409; revision 1502; parent 1459; 2006-09-27T13:02:25Z -->
