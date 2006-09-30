@@ -18,8 +18,26 @@ Die Aufgabe des MBR ist es, die Partitionen zu definieren, den [Boot Record](htt
 | 0x01BE-0x01FD | Paritions Tabelle |
 | 0x01FE-0x01FF | Bootsignatur 0xAA55 |
 
+## Partitions Tabelle
+
+Die Partitions Tabelle besteht aus 4 Einträgen á 16Byte in folgendem Format:
+
+|  |  |  |
+| ------------ | ----- | ------------------------------------------------------------------------------ |
+| **Offset** |  |  |
+| 0x0 | DB | Bootflag<br>• 0x00 nicht bootbar<br>• 0x80 bootpare Partition<br> |
+| 0x1 | DB | Kopf an dem die Partiton anfängt |
+| 0x2 | DB | \*Bit 0-5 -\> Anfangs Sector • Bit 6-7 -\> Bit 8-9 des Anfangs-Zylinders<br> |
+| 0x3 | DB | Bit 0-7 des Anfangs-Zylinders |
+| 0x4 | DB | Gibt den Partitions Typ an |
+| 0x5 | DB | Kopf an dem die Partition endet |
+| 0x6 | DB | \*Bit 0-5 -\> Anfangs Sector • Bit 6-7 -\> Bit 8-9 des Anfangs-Zylinders<br> |
+| 0x7 | DB | Bit 0-7 des Anfangs-Zylinders |
+| 0x8 | DD | LBA(Logical Block Addressing) Nummer des Ersten Sektors |
+| 0xC | DD | Länge der Partition in Sektoren |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1507/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 1507; parent 0; 2006-09-30T16:46:26Z -->
+<!-- MediaWiki page 1431; revision 1508; parent 1507; 2006-09-30T17:07:53Z -->
