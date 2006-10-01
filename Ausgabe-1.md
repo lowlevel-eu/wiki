@@ -550,7 +550,7 @@ MenuetOS ist ein Betriebssystem, bei dem man auf mehr hoffen kann. Die Entwickle
 
 ## Nächste Ausgabe
 
-Für die nächste Ausgabe sind folgende Themen geplant:
+Für die [nächste Ausgabe](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") sind folgende Themen geplant:
 
 - Design von Kernels
 - Lowlevel Teil 2: Interrupts, IO-Ports, Speicheradressen
@@ -566,6 +566,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1432; parent 1431; 2006-08-16T04:24:25Z -->
+<!-- MediaWiki page 1412; revision 1512; parent 1432; 2006-10-01T14:32:12Z -->
