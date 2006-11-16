@@ -35,8 +35,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 - [FAT 12](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=8) - TeeJay
 - [FAT 12 Dateizugriff](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=17) - SPTH
 - [LowFS Beschreibung](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=27) - joachim_neu
-- [TBFS - Datenzugriff](http://lowlevel.brainsware.org/index.php?pagename=tutorials&shotut_id=49) - Toaster
-- [TBFS - Official Release](http://lowlevel.brainsware.org/index.php?pagename=tutorials&shotut_id=48) - Toaster
 
 ### Grafik
 
@@ -48,6 +46,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1537/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1535; parent 0; 2006-11-15T16:07:47Z -->
+<!-- MediaWiki page 1437; revision 1537; parent 1535; 2006-11-16T09:56:30Z -->
