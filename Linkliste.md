@@ -26,7 +26,7 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 - [OS developing Referenz II](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=66) - Toaster
 - [OS developing Theorie I](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=70) - Toaster
 
-  
+### Toaster's genuine Reihe
 
 - [Programming the A20Gate genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20A20Gate%20genuine.pdf) - Toaster
 - [Programming the ATA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATA%20genuine.pdf) - Toaster
@@ -71,6 +71,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1540; parent 1539; 2006-11-16T10:17:04Z -->
+<!-- MediaWiki page 1437; revision 1543; parent 1540; 2006-11-16T13:54:22Z -->
