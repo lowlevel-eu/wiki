@@ -26,14 +26,18 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 - [OS developing Referenz II](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=66) - Toaster
 - [OS developing Theorie I](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=70) - Toaster
 
-<!-- -->
+  
 
+- [Programming the A20Gate genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20A20Gate%20genuine.pdf) - Toaster
+- [Programming the ATA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATA%20genuine.pdf) - Toaster
+- [Programming the ATAPI genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATAPI%20genuine.pdf) - Toaster
 - [Programming the Keyboard genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Keyboard%20genuine%20(III).pdf) - Toaster
 - [Programming the Mouse genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Mouse%20genuine.pdf) - Toaster
 - [Programming the PIC genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20PIC%20genuine.pdf) - Toaster
 - [Programming the PIT genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20PIT%20genuine.pdf) - Toaster
 - [Programming the Bootable CD ROM genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Bootable%20CD%20ROM%20genuine%20(Technical%20Refresh).pdf) - Toaster
 - [Programming the Real Mode genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Real%20Mode%20genuine.pdf) - Toaster
+- [Programming the Real Mode genuine (ungekürzte Fassung)](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Real%20Mode%20genuine%20with%20all%20CRs.doc) - Toaster
 - [Programming the DMA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20DMA%20genuine.pdf) - Toaster
 - [Programming the Floppy genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Floppy%20genuine.pdf) - Toaster
 - [Programming the CMOS genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20CMOS%20genuine.pdf) - Toaster
@@ -45,9 +49,7 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 - [Programming the EIDE devices genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20EIDE%20devices%20genuine.pdf) - Toaster
 - [Programming the Packet Interface genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Packet%20Interface%20genuine.pdf) - Toaster
 - [Programming the Protected Mode genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Protected%20Mode%20genuine.pdf) - Toaster
-- [Programming the A20Gate genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20A20Gate%20genuine.pdf) - Toaster
-- [Programming the ATA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATA%20genuine.pdf) - Toaster
-- [Programming the ATAPI genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATAPI%20genuine.pdf) - Toaster
+- [Programming the Protected Mode genuine (ungekürzte Fassung)](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Protected%20Mode%20genuine%20#long.pdf) - Toaster
 
 ## Hardware
 
@@ -69,6 +71,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1538/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1538; parent 1537; 2006-11-16T10:08:47Z -->
+<!-- MediaWiki page 1437; revision 1539; parent 1538; 2006-11-16T10:13:45Z -->
