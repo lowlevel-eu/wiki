@@ -56,7 +56,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 ### Festplatte/Dateisysteme
 
 - [Partitionen](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=63) - Toaster
-- [CHS - , LSN - und LBA Format](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=45) - Toaster
 - [FAT 12](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=8) - TeeJay
 - [FAT 12 Dateizugriff](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=17) - SPTH
 - [LowFS Beschreibung](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=27) - joachim_neu
@@ -71,6 +70,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1548/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1543; parent 1540; 2006-11-16T13:54:22Z -->
+<!-- MediaWiki page 1437; revision 1548; parent 1543; 2006-11-20T11:14:01Z -->
