@@ -35,12 +35,13 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 - [Programming the Bootable CD ROM genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Bootable%20CD%20ROM%20genuine%20(Technical%20Refresh).pdf) - Toaster
 - [Programming the CMOS genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20CMOS%20genuine.pdf) - Toaster
 - [Programming the DMA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20DMA%20genuine.pdf) - Toaster
-- [Programming the EIDE devices genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20EIDE%20devices%20genuine.pdf) - Toaster
+
+<!-- -->
+
 - [Programming the Floppy genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Floppy%20genuine.pdf) - Toaster
 - [Programming the Joystick genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Joystick%20genuine.pdf) - Toaster
 - [Programming the Keyboard genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Keyboard%20genuine%20(III).pdf) - Toaster
 - [Programming the Mouse genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Mouse%20genuine.pdf) - Toaster
-- [Programming the Packet Interface genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Packet%20Interface%20genuine.pdf) - Toaster
 - [Programming the PIC genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20PIC%20genuine.pdf) - Toaster
 - [Programming the PIT genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20PIT%20genuine.pdf) - Toaster
 - [Programming the Printer genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Printer%20genuine.pdf) - Toaster
@@ -70,6 +71,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1548/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1548; parent 1543; 2006-11-20T11:14:01Z -->
+<!-- MediaWiki page 1437; revision 1553; parent 1548; 2006-11-24T23:45:15Z -->
