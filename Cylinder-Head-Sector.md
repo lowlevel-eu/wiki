@@ -6,17 +6,18 @@ Bei der Angabe des Sektors wird immer bei 1 begonnen. Der erste Sektor wird also
 
 Umrechnung von CHS nach LBA:
 
-       LBA = (C*mH*mS) + (H*mS) + S - 1
-       
-       S = Sektor
-       H = Kopf
-       C = Zylinder
+       S  = Sektor
+       H  = Kopf
+       C  = Zylinder
        
        mS = maximale Anzahl Sektoren (auf einem Zylinder)
        mH = maximale Anzahl Köpfe
+       
+       
+       LBA = (C*mH*mS) + (H*mS) + S - 1
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1557/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1440/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1440/index.html)
 
-<!-- MediaWiki page 1440; revision 1557; parent 1556; 2006-11-25T16:39:17Z -->
+<!-- MediaWiki page 1440; revision 1558; parent 1557; 2006-11-25T16:41:37Z -->
