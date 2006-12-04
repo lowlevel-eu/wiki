@@ -1,5 +1,7 @@
 # Linkliste
 
+Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer noch welche kennt, darf gerne etwas hinzufügen, sollte aber das begonnene Menüsystem bewahrn.
+
 ## Das Magazin
 
 Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
@@ -71,6 +73,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1572/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1553; parent 1548; 2006-11-24T23:45:15Z -->
+<!-- MediaWiki page 1437; revision 1572; parent 1553; 2006-12-04T08:30:52Z -->
