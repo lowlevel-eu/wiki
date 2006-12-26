@@ -113,8 +113,16 @@ Aus \#lost (30. September 2006)
     <JimPanic> Ist guenstiger :D
     <Jidder> jo _seeker_. und mehr für mich übrig ;)
 
+------------------------------------------------------------------------
+
+Aus \#lost (26. Dezember 2006)
+
+    <hazelnoot> so ein 2ter bildschirm is schon was schoenes
+    <stultus> ^^ kann ich mir vorstellen *g*
+    <stultus> 2 IRC-Channels gleichzeitig *träum*
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1527; parent 0; 2006-10-13T18:44:47Z -->
+<!-- MediaWiki page 1435; revision 1574; parent 1527; 2006-12-26T13:53:15Z -->
