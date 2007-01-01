@@ -26,22 +26,6 @@ bitmaster in <http://lowlevel.brainsware.org/forum/index.php?topic=1651.0>:
 
 ------------------------------------------------------------------------
 
-Aus \#lost (2. Juli 2006):
-
-    <Toaster> wie kopiere ich einen ftp ordner?
-    ...
-    <Toaster> http://homix.ho.funpic.de/Source/0.0.x/
-    <Toaster> z.B.
-    <Toaster> funkt im ie perfekt
-    <Toaster> nur wie komm ich da unter dos oder wasweißich hin???
-    <taljeth> Das ist ja auch HTTP und nicht FTP...
-    <Toaster> na und
-    <Toaster> die dateien kann ich ja trotzdem anschauen
-    <taljeth> Jo. Aber nicht mit einem FTP-Programm...
-    <Toaster> gibts dafür auch ein http program?
-
-------------------------------------------------------------------------
-
 Aus \#lost (1. August 2006)
 
     <Toaster> j
@@ -123,6 +107,6 @@ Aus \#lost (26. Dezember 2006)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1575/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1574; parent 1527; 2006-12-26T13:53:15Z -->
+<!-- MediaWiki page 1435; revision 1575; parent 1574; 2007-01-01T16:11:16Z -->
