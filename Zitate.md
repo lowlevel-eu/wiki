@@ -4,7 +4,7 @@ Zitat aus dem Wiki:
 
     ÜBERTRAGEN SIE OHNE GENEHMIGUNG KEINE URHEBERRECHTLICH GESCHÜTZEN INHALTE!
 
----
+------------------------------------------------------------------------
 
 bitmaster in <http://lowlevel.brainsware.org/forum/index.php?topic=1651.0>:
 
@@ -94,6 +94,6 @@ Aus \#lost (26. Dezember 2006)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1577/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1576; parent 1575; 2007-01-03T10:18:53Z -->
+<!-- MediaWiki page 1435; revision 1577; parent 1576; 2007-01-03T10:19:06Z -->
