@@ -1,23 +1,10 @@
 # Zitate
 
-Toaster in der ursprünglichen Fassung des Nachworts von "Programming the Keyboard genuine":
+Zitat aus dem Wiki:
 
-    Diese Dokument wurde diesmal anspruchsvoller geschrieben. 
-    Es ist part of the genuine Reihe.
+    ÜBERTRAGEN SIE OHNE GENEHMIGUNG KEINE URHEBERRECHTLICH GESCHÜTZEN INHALTE!
 
-    Ich bezweifle das auch nur irgend jemand dieses Dokument voll 
-    (ausgenommen dem Nachwort) verstanden hat.
-
-    Und in genau diesem Punkt unterscheide ich mit dem Rest der Welt 
-    OS developer, für mich ist es mein Leben, nicht nur bloß ein Hobby.
-
-    Mit diesem Dokument wollte ich zeigen was ich kann. Was ich drauf 
-    hab. Mein know how.
-
-    Dieses Dokument wurde vom größten OS developer aller Zeiten 
-    geschrieben. Ever. Toaster.
-
-------------------------------------------------------------------------
+---
 
 bitmaster in <http://lowlevel.brainsware.org/forum/index.php?topic=1651.0>:
 
@@ -107,6 +94,6 @@ Aus \#lost (26. Dezember 2006)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1575/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1575; parent 1574; 2007-01-01T16:11:16Z -->
+<!-- MediaWiki page 1435; revision 1576; parent 1575; 2007-01-03T10:18:53Z -->
