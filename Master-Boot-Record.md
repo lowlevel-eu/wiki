@@ -38,6 +38,6 @@ Die Partitions Tabelle besteht aus 4 Einträgen á 16Byte in folgendem Format:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1589/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 1589; parent 1510; 2007-01-06T16:27:59Z -->
+<!-- MediaWiki page 1431; revision 1598; parent 1589; 2007-01-06T16:41:14Z -->
