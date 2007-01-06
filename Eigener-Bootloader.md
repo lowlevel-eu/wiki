@@ -215,6 +215,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1585/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 1585; parent 1583; 2007-01-06T16:13:18Z -->
+<!-- MediaWiki page 1427; revision 1593; parent 1585; 2007-01-06T16:38:37Z -->
