@@ -1,7 +1,5 @@
 # Zitate
 
-Zitat aus dem Wiki:
-
 bitmaster in <http://lowlevel.brainsware.org/forum/index.php?topic=1651.0>:
 
     Dann wandelte ich den Spaghetti Code (in C/C++ geschrieben) von 
@@ -144,6 +142,6 @@ Aus \#lost (6. Januar 2007)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1603; parent 1602; 2007-01-06T17:40:21Z -->
+<!-- MediaWiki page 1435; revision 1604; parent 1603; 2007-01-06T17:51:51Z -->
