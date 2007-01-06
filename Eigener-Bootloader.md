@@ -130,7 +130,7 @@ Die Sicherung der Register auf dem Stack erfolgt mit dem Befehl pusha. Danach wi
 
 Danachfolgt die Schleife. Das Label .DisplayLoop kennzeichnet den Anfang der Schleife. Es wird solange angesprungen bis der komplette Text ausgegeben wurde.
 
-Der Befehl lodsb lädt das durch DS:SI angegebene Byte in AL und erhöt dabei gleichzeitig SI um eins. Danach zeigt DS:SI auf das nächste Zeichen, das ausgegeben werden soll. Mit dem nächsten beiden Befhlen wird überprüft, ob das Zeichen das Textende kennzeichnet oder nicht. Der Befehl test fürt einen „Test“ durch, der einige Flags im Statusreigster setzt. Wurde das Zero flag gesetzt, sprich in AL befindet sich 0x00, dann wird mit dem Befehl JZ (Jump if Zero) die Schleife verlassen und an das Label .DONE gesprungen, wenn nicht, werden die nachfolgenden befehle ausgeführt. Handelte es sich um ein druckbares Zeichen, das Zero Flag wurde somit beim test nicht gesetzt, wird int 0x10 aufgefufen. Dieser BIOS Interrupt mit den vorher gesetzten Funktionsnummer in AH gibt das Zeichen auf dem Monitor aus. Das Zeichen muss sich in AL befinden, die Farbangaben in BX. Anschliesend wird mit JMP wieder zum anfang der Schleife gesprungen.
+Der Befehl lodsb lädt das durch DS:SI angegebene Byte in AL und erhöt dabei gleichzeitig SI um eins. Danach zeigt DS:SI auf das nächste Zeichen, das ausgegeben werden soll. Mit dem nächsten beiden Befehlen wird überprüft, ob das Zeichen das Textende kennzeichnet oder nicht. Der Befehl test fürt einen „Test“ durch, der einige Flags im Statusreigster setzt. Wurde das Zero flag gesetzt, sprich in AL befindet sich 0x00, dann wird mit dem Befehl JZ (Jump if Zero) die Schleife verlassen und an das Label .DONE gesprungen, wenn nicht, werden die nachfolgenden befehle ausgeführt. Handelte es sich um ein druckbares Zeichen, das Zero Flag wurde somit beim test nicht gesetzt, wird int 0x10 aufgefufen. Dieser BIOS Interrupt mit den vorher gesetzten Funktionsnummer in AH gibt das Zeichen auf dem Monitor aus. Das Zeichen muss sich in AL befinden, die Farbangaben in BX. Anschliesend wird mit JMP wieder zum anfang der Schleife gesprungen.
 
 Wird das Label .DONE angesprungen, werden mit dem Befehl POPA die Register wieder in den urspurngszustand gebracht. Danach wird mit dem Befehl RET die Procedure verlassen.
 
@@ -215,6 +215,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 1582; parent 1496; 2007-01-06T16:06:01Z -->
+<!-- MediaWiki page 1427; revision 1583; parent 1582; 2007-01-06T16:07:43Z -->
