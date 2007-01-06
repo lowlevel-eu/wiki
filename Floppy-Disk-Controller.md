@@ -4,6 +4,6 @@ Der Floppy Disk Controller (Diskettenlaufwerk Kontroller) kurz FDC, dient der An
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1562/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1595/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 1562; parent 0; 2006-11-25T17:22:11Z -->
+<!-- MediaWiki page 1443; revision 1595; parent 1562; 2007-01-06T16:39:50Z -->
