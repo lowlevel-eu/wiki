@@ -6,12 +6,12 @@ Der Befehl 'make', welcher auf den meisten UNIX oder UNIX ähnlichen Systemen ve
 
 ## Links
 
-- [\[1\]](http://de.wikipedia.org/wiki/Makefile) *deutsch*
+- [Wikipedia](http://de.wikipedia.org/wiki/Makefile) *deutsch*
 - [Tutorial](http://www.ijon.de/comp/tutorials/makefile.html) *deutsch*
 - [GNU Make Manual](http://www.gnu.org/software/make/manual/) *english*
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
 
-<!-- MediaWiki page 1436; revision 1587; parent 1533; 2007-01-06T16:26:02Z -->
+<!-- MediaWiki page 1436; revision 1588; parent 1587; 2007-01-06T16:26:40Z -->
