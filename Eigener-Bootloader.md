@@ -126,7 +126,7 @@ DisplayMessage ist eine Procedur die den Text der durch DS:SI angegeben ist auf 
 
 Die Procedure benötigt intern einige Register für Zähler und Funktionsparameter. Daher sind wir gezwungen diese Register zu sichern, bevor wir sie verwenden. Danach müssen wir logischerweise das gesicherte wieder zurücksichern. Würden wir das nicht tun, müssten wir überall dort, wo wir unsere Procedure aufrufen erst eimal all diejenigen Register sichern die die Procedure verwendet, und nach dem Aufruf rücksichern. Also machen wir das gleich in der Procedure und wir müssen uns beim Aufruf nicht mehr drum kümmern.
 
-Die Sicherung der Register auf dem Stack erfolgt mit dem Befehl pusha. Danach wird AH auf 0x0E und BX auf 0x0007 gesetzt. AH enthält die Funktionsnummer für den BIOS Interrupt 0x10. BX enthält Parameter für die Entsprechende Funktion 14. In diesem Fall Fordergrund, Hintergrundfarbe und die numer des DisplayPuffers.
+Die Sicherung der Register auf dem Stack erfolgt mit dem Befehl pusha. Danach wird AH auf 0x0E und BX auf 0x0007 gesetzt. AH enthält die Funktionsnummer für den BIOS Interrupt 0x10. BX enthält Parameter für die Entsprechende Funktion 14. In diesem Fall Vorder-/Hintergrundfarbe und die numer des DisplayPuffers.
 
 Danachfolgt die Schleife. Das Label .DisplayLoop kennzeichnet den Anfang der Schleife. Es wird solange angesprungen bis der komplette Text ausgegeben wurde.
 
@@ -215,6 +215,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 1496; parent 1492; 2006-09-18T16:02:38Z -->
+<!-- MediaWiki page 1427; revision 1582; parent 1496; 2007-01-06T16:06:01Z -->
