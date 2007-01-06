@@ -92,8 +92,62 @@ Aus \#lost (26. Dezember 2006)
     <stultus> ^^ kann ich mir vorstellen *g*
     <stultus> 2 IRC-Channels gleichzeitig *träum*
 
+------------------------------------------------------------------------
+
+Aus \#lost (6. Januar 2007)
+
+    taljeth> Seit wann ist _seeker_denn auf sid?
+    stultus> KA
+    _seeker_> sid?
+    _seeker_> ich bin auf crack :D
+    _seeker_> was ist sid?
+    taljeth> *g* Ja, was sollte man von Holländern anderes erwarten? ;-)
+    stultus> Sid ist ne Spielfigur ^^
+    _seeker_> ich bin sid, du bist Manfred.
+    _seeker_> und wie heißt diesen anderen Tier?
+    _seeker_> Diese löwe
+    _seeker_> Er heißt DIEGO
+    stultus> Nein....
+    _seeker_> Und alle zusammen sind wir IceAge
+    stultus> eigtl. isses nen anderer Film.
+    _seeker_> und Toaster ist dieses kleines Kind
+    stultus> er ist WIRKLICH auf crack
+    taljeth> Toaster ist genuine.
+    taljeth> Ich sag doch, Holländer.
+    _seeker_>Stultus => Manny, Damian=> Sid, taljeth=> DIEGO, Henour=> Scrat
+    _seeker_>Toaster => Baby
+    taljeth> Aber wenn wir das ganze mal auf den richtigen Film Übertragen, ist Toaster Sid.
+    _seeker_> und ich das Baby?
+    _seeker_> Einer muss ja das Baby sein :D
+    stultus> Ice Age - Jetzt #lost's^^
+    stultus> Du wirst das Baby 
+    _seeker_>.... :P
+    _seeker_> Oky
+    _seeker_> Weil Sid ja schon vergeben ist :D
+    _seeker_> Guest261684:  du bist Scrat
+    Guest261684> scrat? ich bin maumo -.-
+    _seeker_> nein du bist jetzt scrat
+    Guest261684[~chatzilla@euirc-d0cf1fd0.dip0.t-ipconnect.de] heißt nun maumo
+    _seeker_> also Guest261684 ist kein scrat mehr.
+    _seeker_> sondern maumo ist nun scrat
+    _seeker_> :D
+    maumo> scrat?
+    _seeker_> jah von iceage
+    maumo> xD omfg
+    maumo> nö
+    maumo> ich bin... eine lebewesen ...
+    _seeker_> okay denn bin ich scrat
+    _seeker_> rolle Baby ist frei geworden, 
+    _seeker_> Denn ist maumo das Baby 
+    maumo> Oä
+    maumo> watt für ein krankes spiel spielst du grad?
+    _seeker_> :D
+    stultus> er ist auf.... hm 
+    taljeth> Das sollte eigentlich alles erklÃ€ren.
+    stultus> Eiszeit-Crack triffts wohl am besten ^^
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1577/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1578/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1577; parent 1576; 2007-01-03T10:19:06Z -->
+<!-- MediaWiki page 1435; revision 1578; parent 1577; 2007-01-06T00:33:16Z -->
