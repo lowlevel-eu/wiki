@@ -19,6 +19,6 @@ Umrechnung von LBA zu CHS:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1597/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
 
-<!-- MediaWiki page 1442; revision 1561; parent 1559; 2006-11-25T16:54:29Z -->
+<!-- MediaWiki page 1442; revision 1597; parent 1561; 2007-01-06T16:40:42Z -->
