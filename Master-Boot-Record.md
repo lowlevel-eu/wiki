@@ -25,7 +25,7 @@ Die Partitions Tabelle besteht aus 4 Einträgen á 16Byte in folgendem Format:
 |  |  |  |
 | ------------ | ----- | --------------------------------------------------------------------------------- |
 | **Offset** |  |  |
-| 0x0 | DB | Bootflag<br>• 0x00 nicht bootbar<br>• 0x80 bootpare Partition<br> |
+| 0x0 | DB | Bootflag<br>• 0x00 nicht bootbar<br>• 0x80 bootbare Partition<br> |
 | 0x1 | DB | Kopf an dem die Partiton anfängt |
 | 0x2 | DB | • Bit 0-5 -\> Anfangs Sector<br>• Bit 6-7 -\> Bit 8-9 des Anfangs-Zylinders<br> |
 | 0x3 | DB | Bit 0-7 des Anfangs-Zylinders |
@@ -38,6 +38,6 @@ Die Partitions Tabelle besteht aus 4 Einträgen á 16Byte in folgendem Format:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1510/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1589/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 1510; parent 1509; 2006-09-30T17:09:19Z -->
+<!-- MediaWiki page 1431; revision 1589; parent 1510; 2007-01-06T16:27:59Z -->
