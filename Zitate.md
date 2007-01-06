@@ -140,8 +140,22 @@ Aus \#lost (6. Januar 2007)
     taljeth> Das sollte eigentlich alles erklÃ€ren.
     stultus> Eiszeit-Crack triffts wohl am besten ^^
 
+------------------------------------------------------------------------
+
+Aus \#lost (7. Januar 2007)
+
+    (00:48:38) bluecode [~bluecode@euirc-76984cbd.dip.t-dialin.net] hat den Raum betreten.
+    (00:48:38) Modus (+o bluecode) von ChanServ
+    (00:49:11) FreakyPenguin: wb bluecode
+    (00:49:13) taljeth: wb bluecode
+    (00:49:21) _seeker_: wb bluecode
+    (00:49:29) stultus: wb bluecode
+    (00:49:34) bluecode: thx, tach leute
+    ...
+    (00:50:00) taljeth: stultus: Tja, so ist das halt mit dem Gruppenzwang.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1605/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1604; parent 1603; 2007-01-06T17:51:51Z -->
+<!-- MediaWiki page 1435; revision 1605; parent 1604; 2007-01-06T23:55:06Z -->
