@@ -110,8 +110,13 @@ Aus \#lost (6. Januar 2007)
     stultus> Nein....
     _seeker_> Und alle zusammen sind wir IceAge
     stultus> eigtl. isses nen anderer Film.
+    _seeker_> und Toaster ist dieses kleines Kind
+    stultus> er ist WIRKLICH auf crack
+    taljeth> Toaster ist genuine.
     taljeth> Ich sag doch, Holländer.
     _seeker_>Stultus => Manny, Damian=> Sid, taljeth=> DIEGO, Henour=> Scrat
+    _seeker_>Toaster => Baby
+    taljeth> Aber wenn wir das ganze mal auf den richtigen Film Übertragen, ist Toaster Sid.
     _seeker_> und ich das Baby?
     _seeker_> Einer muss ja das Baby sein :D
     stultus> Ice Age - Jetzt #lost's^^
@@ -138,11 +143,11 @@ Aus \#lost (6. Januar 2007)
     maumo> watt für ein krankes spiel spielst du grad?
     _seeker_> :D
     stultus> er ist auf.... hm 
-    taljeth> Das sollte eigentlich alles erklären.
+    taljeth> Das sollte eigentlich alles erklÃ€ren.
     stultus> Eiszeit-Crack triffts wohl am besten ^^
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1600; parent 1579; 2007-01-06T16:42:43Z -->
+<!-- MediaWiki page 1435; revision 1602; parent 1600; 2007-01-06T16:59:57Z -->
