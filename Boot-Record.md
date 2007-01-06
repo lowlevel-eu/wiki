@@ -6,7 +6,7 @@ Der Boot Record ist in der Regel 512 Byte groß. Und endet mit der Magic Number 
 
 Der erste Sektor einer Festplatte hingegen heißt [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record").
 
-  
+Der Bot Record wird oft auch **Bootsektor** genannt.
 
 ## Boot Record Tutorials
 
@@ -16,6 +16,6 @@ Boot Record I
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1580/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1426/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1581/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1426/index.html)
 
-<!-- MediaWiki page 1426; revision 1580; parent 1511; 2007-01-06T15:49:47Z -->
+<!-- MediaWiki page 1426; revision 1581; parent 1580; 2007-01-06T15:51:50Z -->
