@@ -137,7 +137,7 @@ Aus \#lost (6. Januar 2007)
     maumo> watt für ein krankes spiel spielst du grad?
     _seeker_> :D
     stultus> er ist auf.... hm 
-    taljeth> Das sollte eigentlich alles erklÃ€ren.
+    taljeth> Das sollte eigentlich alles erklären.
     stultus> Eiszeit-Crack triffts wohl am besten ^^
 
 ------------------------------------------------------------------------
@@ -156,6 +156,6 @@ Aus \#lost (7. Januar 2007)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1605/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1605; parent 1604; 2007-01-06T23:55:06Z -->
+<!-- MediaWiki page 1435; revision 1606; parent 1605; 2007-01-07T00:01:41Z -->
