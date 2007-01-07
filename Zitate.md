@@ -158,21 +158,21 @@ Aus \#lost (7. Januar 2007)
 
 Aus \#lost (7. Januar 2007)
 
-    [00:59:06] <@stultus>wie geht das nu? ^^
-    [00:59:18] <%_seeker_> was?
-    [00:59:27] <@stultus> 9 Tage stabiles Windows.
-    [00:59:30] <@bluecode> PC ausschalten, stultus
-    [00:59:30] <@bluecode> ;)
-    [00:59:34] <%_seeker_> :D
-    [00:59:37] <%_seeker_> achso :D
-    [00:59:46] <%_seeker_> naja ich hatte dar nur TASM drauf
+    [00:57] <stultus> btw, _seeker_, du schuldest mir noch ne Erklärung.
+    [00:58] <_seeker_> wozu?
+    [00:58] <stultus> <_seeker_> boah windows wollte, dass ich nach 9 tage mich activiere 
+            <_seeker_> aber das kann man umgehen <stultus> a) umgehen ist illegal 
+            <stultus> b) wie zur hölle schaffst es 9 tage nen stabiles system zu haben? oO
+    [00:58] <stultus> dazu :D wie geht das nu? ^^
+    [00:58] <_seeker_> was?
+    [00:58] <stultus> 9 Tage stabiles Windows.
+    [00:58] <bluecode> PC ausschalten, stultus
     ...
-    [01:00:03] <@taljeth> *lol*
-    [01:00:03] <@stultus> _seeker_: Toaster Assembler? *würg*
-    [01:00:08] <%_seeker_> nein :D
+    [00:58] <_seeker_> naja ich hatte dar nur TASM drauf
+    [00:59] <stultus> _seeker_: Toaster Assembler? *würg*
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1610/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1611/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1610; parent 1609; 2007-01-07T00:32:25Z -->
+<!-- MediaWiki page 1435; revision 1611; parent 1610; 2007-01-07T00:35:39Z -->
