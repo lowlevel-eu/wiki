@@ -159,7 +159,7 @@ Aus \#lost (7. Januar 2007)
 Aus \#lost (7. Januar 2007)
 
     [00:59:06] <@stultus>wie geht das nu? ^^
-    ...
+    [00:59:18] <%_seeker_> was?
     [00:59:27] <@stultus> 9 Tage stabiles Windows.
     [00:59:30] <@bluecode> PC ausschalten, stultus
     [00:59:30] <@bluecode> ;)
@@ -173,6 +173,6 @@ Aus \#lost (7. Januar 2007)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1609/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1610/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1609; parent 1608; 2007-01-07T00:28:41Z -->
+<!-- MediaWiki page 1435; revision 1610; parent 1609; 2007-01-07T00:32:25Z -->
