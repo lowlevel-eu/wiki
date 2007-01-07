@@ -154,8 +154,23 @@ Aus \#lost (7. Januar 2007)
     ...
     (00:50:00) taljeth: stultus: Tja, so ist das halt mit dem Gruppenzwang.
 
+------------------------------------------------------------------------
+
+Aus \#lost (7. Januar 2007)
+
+    [00:59:27] <@stultus> 9 Tage stabiles Windows.
+    [00:59:30] <@bluecode> PC ausschalten, stultus
+    [00:59:30] <@bluecode> ;)
+    [00:59:34] <%_seeker_> :D
+    [00:59:37] <%_seeker_> achso :D
+    [00:59:46] <%_seeker_> naja ich hatte dar nur TASM drauf
+    [00:59:48] <@stultus> bluecode: 1 zu 0 f??r dich ^^
+    [01:00:03] <@taljeth> *lol*
+    [01:00:03] <@stultus> _seeker_: Toaster Assembler? *w??rg*
+    [01:00:08] <%_seeker_> nein :D
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1606; parent 1605; 2007-01-07T00:01:41Z -->
+<!-- MediaWiki page 1435; revision 1607; parent 1606; 2007-01-07T00:13:21Z -->
