@@ -32,26 +32,26 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ### OS Allgemein
 
-- [Newbie Theorie](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=47) - Aios
-- [OS developing Einführung I](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=52) - Toaster
-- [OS developing Einführung II](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=53) - Toaster
-- [OS developing Einführung III](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=54) - Toaster
-- [OS developing programming I](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=57) - Toaster
-- [OS developing programming I Part II](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=67) - Toaster
-- [OS developing Referenz I](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=55) - Toaster
-- [OS developing Referenz II](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=66) - Toaster
-- [OS developing Theorie I](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=70) - Toaster
+- [Newbie Theorie](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=47) - Aios
+- [OS developing Einführung I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=52) - Toaster
+- [OS developing Einführung II](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=53) - Toaster
+- [OS developing Einführung III](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=54) - Toaster
+- [OS developing programming I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=57) - Toaster
+- [OS developing programming I Part II](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=67) - Toaster
+- [OS developing Referenz I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=55) - Toaster
+- [OS developing Referenz II](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=66) - Toaster
+- [OS developing Theorie I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=70) - Toaster
 
 ### Festplatte/Dateisysteme
 
-- [Partitionen](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=63) - Toaster
-- [FAT 12](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=8) - TeeJay
-- [FAT 12 Dateizugriff](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=17) - SPTH
-- [LowFS Beschreibung](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=27) - joachim_neu
+- [Partitionen](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=63) - Toaster
+- [FAT 12](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=8) - TeeJay
+- [FAT 12 Dateizugriff](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=17) - SPTH
+- [LowFS Beschreibung](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=27) - joachim_neu
 
 ### Grafik
 
-- [VGA Mode 13h](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=41) - elfish_rider
+- [VGA Mode 13h](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=41) - elfish_rider
 
 ### Protected Mode
 
@@ -61,7 +61,7 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ### Sound
 
-- [PC Lautsprecher](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=24) - joachim_neu
+- [PC Lautsprecher](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=24) - joachim_neu
 
 ### Toasters genuine Reihe
 
@@ -88,6 +88,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1627; parent 1626; 2007-01-13T19:12:20Z -->
+<!-- MediaWiki page 1437; revision 1628; parent 1627; 2007-01-13T19:13:02Z -->
