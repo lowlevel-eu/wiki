@@ -1,6 +1,6 @@
 # Linkliste
 
-Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer noch welche kennt, darf gerne etwas hinzufügen, sollte aber das begonnene Menüsystem bewahrn.
+Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer noch welche kennt, darf gerne etwas hinzufügen, sollte aber das begonnene Menüsystem bewahren.
 
 ## Das Magazin
 
@@ -18,11 +18,11 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ## Externe Seiten zur Betriebssystemprogrammierung
 
-- [Mode Tutorial (FH Zwickau)](http://www.fh-zwickau.de/doc/prmo/start.htm%7CProtected) - Sehr gute Einführung in die Möglichkeiten des Protected Mode. Ebenso Erläuterungen zur MMX-Erweiterung.
-- [The Operating System Resource Center](http://www.nondot.org/sabre/os/articles%7COSRC:) - Gut gegliederte Links zu vielen Dingen, die wichtig für das OS-Dev sind, so zum Beispiel Dateisysteme, Tastatur und vieles mehr.
-- [Fide OSDev](http://www.osdever.net/%7CBona) - Viele, gut sortierte, Tutorials
-- [\[1\]](http://www.sandpile.org/%7CSandpile) - DIE Seite wenn es um die Architekturen des IA-32 und des AA-64 geht. Ein absolutes Muss für alle OS-Dever.
-- [Browns Interruptliste](http://www.ctyme.com/intr/int.htm%7CRalf) - Eine sehr ausführliche Liste mit Beschreibungen zu vielen Interrupts. Sei es BIOS, VGA/VESA-BIOS oder DOS, nahezu alles wichtige zu den Interrupts ist hier zu finden.
+- [Protected Mode Tutorial (FH Zwickau)](http://www.fh-zwickau.de/doc/prmo/start.htm) - Sehr gute Einführung in die Möglichkeiten des Protected Mode. Ebenso Erläuterungen zur MMX-Erweiterung.
+- [OSRC: The Operating System Resource Center](http://www.nondot.org/sabre/os/articles) - Gut gegliederte Links zu vielen Dingen, die wichtig für das OS-Dev sind, so zum Beispiel Dateisysteme, Tastatur und vieles mehr.
+- [Bona Fide OSDev](http://www.osdever.net) - Viele, gut sortierte, Tutorials
+- [Sandpile](http://www.sandpile.org) - DIE Seite wenn es um die Architekturen des IA-32 und des AA-64 geht. Ein absolutes Muss für alle OS-Dever.
+- [Ralf Browns Interruptliste](http://www.ctyme.com/intr/int.htm) - Eine sehr ausführliche Liste mit Beschreibungen zu vielen Interrupts. Sei es BIOS, VGA/VESA-BIOS oder DOS, nahezu alles wichtige zu den Interrupts ist hier zu finden.
 
 ## Lowlevel-Tutorials
 
@@ -78,6 +78,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1619; parent 1572; 2007-01-13T17:47:37Z -->
+<!-- MediaWiki page 1437; revision 1620; parent 1619; 2007-01-13T17:49:52Z -->
