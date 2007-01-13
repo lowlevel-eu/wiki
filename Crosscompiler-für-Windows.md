@@ -45,10 +45,8 @@ Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. We
 
 Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libexec\gcc\i586-elf\4.1.1\cc1.exe nach i586-elf\bin zu kopieren.
 
-\[\[Category::Tutorials\]\]
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 1616; parent 0; 2007-01-13T17:20:38Z -->
+<!-- MediaWiki page 1450; revision 1617; parent 1616; 2007-01-13T17:21:00Z -->
