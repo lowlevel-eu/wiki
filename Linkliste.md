@@ -26,6 +26,10 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ## Lowlevel-Tutorials
 
+### Alte Tutorialseite
+
+- [\[1\]](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials)
+
 ### OS Allgemein
 
 - [Newbie Theorie](http://lowlevel.brainsware.org/index.php?pagename=tutorials&showtut_id=47) - Aios
@@ -84,6 +88,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1621; parent 1620; 2007-01-13T18:04:22Z -->
+<!-- MediaWiki page 1437; revision 1626; parent 1621; 2007-01-13T19:11:53Z -->
