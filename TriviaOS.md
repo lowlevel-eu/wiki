@@ -8,6 +8,6 @@ Als weitere Besonderheit ist der ausschliesslich in Assembler geschreibene Quell
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 1624; parent 1623; 2007-01-13T19:00:01Z -->
+<!-- MediaWiki page 1448; revision 1625; parent 1624; 2007-01-13T19:02:02Z -->
