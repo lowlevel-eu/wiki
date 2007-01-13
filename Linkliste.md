@@ -28,7 +28,7 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ### Alte Tutorialseite
 
-- [\[1\]](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials)
+- [LowLevel](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials)
 
 ### OS Allgemein
 
@@ -88,6 +88,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1626; parent 1621; 2007-01-13T19:11:53Z -->
+<!-- MediaWiki page 1437; revision 1627; parent 1626; 2007-01-13T19:12:20Z -->
