@@ -64,6 +64,6 @@ Hier eine Vorsichtig gestaltete Road Map, die sich jedoch sicherlich noch änder
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1631/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 1630; parent 1629; 2007-01-13T20:24:55Z -->
+<!-- MediaWiki page 1451; revision 1631; parent 1630; 2007-01-13T20:25:57Z -->
