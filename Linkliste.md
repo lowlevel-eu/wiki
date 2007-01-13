@@ -49,6 +49,12 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 - [VGA Mode 13h](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=41) - elfish_rider
 
+### Protected Mode
+
+- [PM-Grundlagen](http://www.jay-code.de/scripts/htmlgenerator.php?page=pmode&directory=tutorials) - TeeJay
+- [Kernel in C](http://www.jay-code.de/scripts/htmlgenerator.php?page=ckernel&directory=tutorials) - TeeJay
+- [Kernel in C++](http://www.jay-code.de/scripts/htmlgenerator.php?page=ckernel2&directory=tutorials) - TeeJay
+
 ### Sound
 
 - [PC Lautsprecher](http://lowlevel.brainsware.org/index.php?pagename=tutorials&tutextern=24) - joachim_neu
@@ -78,6 +84,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1620; parent 1619; 2007-01-13T17:49:52Z -->
+<!-- MediaWiki page 1437; revision 1621; parent 1620; 2007-01-13T18:04:22Z -->
