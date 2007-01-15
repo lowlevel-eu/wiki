@@ -59,11 +59,9 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 **HomixOS 0.1.0 Beta:**
 
 - Kernel-Protection und Stabilitätssicherungen
-- Netwzerk/Internet
+- Netzwerk/Internet
 - RTL8139 Netzwerkkartentreiber
 - Netzwerkprotokolle: ARP,IPv4,UDP,TCP/IP
-
-  
 
 ## Offizielle Webseite
 
@@ -72,6 +70,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1642; parent 1639; 2007-01-15T08:29:21Z -->
+<!-- MediaWiki page 1453; revision 1652; parent 1642; 2007-01-15T18:56:06Z -->
