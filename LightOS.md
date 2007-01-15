@@ -4,17 +4,17 @@ lightOS ist ein weiteres Betriebssystem, welches auf einem Mikrokernel basiert. 
 
   
 
-# Ziele
+## Ziele
 
 Das Hauptziel ist ein möglichst modernes Betriebssystem mit ausgeklügelter API zu schreiben.
 
-# Entwickler
+## Entwickler
 
 - bluecode
 - FreakyPenguin
 - \_seeker\_ (aka Damian)
 
-# Features
+## Features
 
 In der 64-Bit version sind wir noch im Anfangsstaduim. Im Moment sind die folgenden Features implementiert:
 
@@ -24,6 +24,6 @@ In der 64-Bit version sind wir noch im Anfangsstaduim. Im Moment sind die folgen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1643/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 1641; parent 1640; 2007-01-15T08:09:00Z -->
+<!-- MediaWiki page 1454; revision 1643; parent 1641; 2007-01-15T18:09:24Z -->
