@@ -33,14 +33,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 ### OS Allgemein
 
 - [Newbie Theorie](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=47) - Aios
-- [OS developing Einführung I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=52) - Toaster
-- [OS developing Einführung II](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=53) - Toaster
-- [OS developing Einführung III](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=54) - Toaster
-- [OS developing programming I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=57) - Toaster
-- [OS developing programming I Part II](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=67) - Toaster
-- [OS developing Referenz I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=55) - Toaster
-- [OS developing Referenz II](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=66) - Toaster
-- [OS developing Theorie I](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=70) - Toaster
 
 ### Festplatte/Dateisysteme
 
@@ -64,6 +56,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1651; parent 1644; 2007-01-15T18:45:28Z -->
+<!-- MediaWiki page 1437; revision 1653; parent 1651; 2007-01-15T19:20:07Z -->
