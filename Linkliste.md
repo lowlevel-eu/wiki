@@ -63,31 +63,8 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 - [PC Lautsprecher](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=24) - joachim_neu
 
-### Toasters genuine Reihe
-
-- [Programming the A20Gate genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20A20Gate%20genuine.pdf) - Toaster
-- [Programming the ATA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATA%20genuine.pdf) - Toaster
-- [Programming the ATAPI genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20ATAPI%20genuine.pdf) - Toaster
-- [Programming the BIOS Data genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20BIOS%20Data%20genuine.pdf) - Toaster
-- [Programming the Bootable CD ROM genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Bootable%20CD%20ROM%20genuine%20(Technical%20Refresh).pdf) - Toaster
-- [Programming the CMOS genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20CMOS%20genuine.pdf) - Toaster
-- [Programming the DMA genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20DMA%20genuine.pdf) - Toaster
-- [Programming the Floppy genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Floppy%20genuine.pdf) - Toaster
-- [Programming the Joystick genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Joystick%20genuine.pdf) - Toaster
-- [Programming the Keyboard genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Keyboard%20genuine%20(III).pdf) - Toaster
-- [Programming the Mouse genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Mouse%20genuine.pdf) - Toaster
-- [Programming the PIC genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20PIC%20genuine.pdf) - Toaster
-- [Programming the PIT genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20PIT%20genuine.pdf) - Toaster
-- [Programming the Printer genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Printer%20genuine.pdf) - Toaster
-- [Programming the Protected Mode genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Protected%20Mode%20genuine.pdf) - Toaster
-- [Programming the Protected Mode genuine (ungekürzte Fassung)](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Protected%20Mode%20genuine%20#long.pdf) - Toaster
-- [Programming the Real Mode genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Real%20Mode%20genuine.pdf) - Toaster
-- [Programming the Real Mode genuine (ungekürzte Fassung)](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Real%20Mode%20genuine%20with%20all%20CRs.doc) - Toaster
-- [Programming the Real Time Clock genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Real%20Time%20Clock%20genuine.pdf) - Toaster
-- [Programming the Speaker genuine](http://t0ast3r.t0.ohost.de/sites/tutorials/Programming%20the%20Speaker%20genuine.pdf) - Toaster
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1628; parent 1627; 2007-01-13T19:13:02Z -->
+<!-- MediaWiki page 1437; revision 1644; parent 1628; 2007-01-15T18:27:51Z -->
