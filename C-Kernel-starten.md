@@ -268,6 +268,6 @@ Hier noch das Packet an Tools und Quelltexten:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1665/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 1664; parent 0; 2007-01-15T20:27:48Z -->
+<!-- MediaWiki page 1458; revision 1665; parent 1664; 2007-01-15T20:34:42Z -->
