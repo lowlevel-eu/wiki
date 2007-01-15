@@ -276,6 +276,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1647/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1647; parent 1646; 2007-01-15T18:39:42Z -->
+<!-- MediaWiki page 1409; revision 1649; parent 1647; 2007-01-15T18:42:45Z -->
