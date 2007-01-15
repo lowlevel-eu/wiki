@@ -68,10 +68,8 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 [HomixOS Projekt-Webseite](http://www.homix-online.de/HomixOS/)  
 [Homix-Online](http://www.homix-online.de/)
 
-\<script src="<http://counter.multistats.de/counter.php?id=125&js=1&design=3&color=blue>"\>\</script\> \<noscript\>\<a href="<http://www.multistats.de/>"\>\<img border="0" src="<http://www.multistats.de/counter.php?id=125&js=0&design=3&color=blue>"\>\</img\>\</a\>\</noscript\>
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1662; parent 1652; 2007-01-15T20:23:01Z -->
+<!-- MediaWiki page 1453; revision 1663; parent 1662; 2007-01-15T20:23:31Z -->
