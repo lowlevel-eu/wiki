@@ -17,12 +17,53 @@ Einen Überblick über die bereits integrierten, der sich in Entwicklung befindl
     05.01.2007 : HomixOS 0.0.6 Alpha
     28.09.2006 : HomixOS 0.0.5 Alpha
 
+Die Veränderungen bei den derzeitigen Versionen:
+
+**HomixOS 0.0.6 Alpha:**
+
+- FAT-Dateisystemtreiber integriert
+- Erweiterte Shell (u.a. mit Dateibefehlen)
+- Textmodus und Grafikmodus
+- Ändern der Bildschirmauflösung
+- Herunterfahren und Neustarten von HomixOS möglich
+
+**HomixOS 0.0.5 Alpha:**
+
+- Kleine Shell
+- Lauffähiger 32-Bit Kernel
+- Textmodus
+
 ## Roadmap
 
 Folgende Versionen sind geplant:
 
     30.01.2007 : HomixOS 0.0.7 Alpha
-    23.02.2007 : HomixOS 0.1.0 Alpha
+    24.02.2007 : HomixOS 0.0.8 Alpha
+    14.04.2007 : HomixOS 0.1.0 Beta
+
+Die geplanten Neuheiten in den zukünftigen Versionen:
+
+**HomixOS 0.0.7 Alpha:**
+
+- Multitasking und Multithreading integriert
+- Kernel komplett Multitasking-fähig
+- Erweiterte GUI (Bugfixes, mehr Controls, ...)
+
+**HomixOS 0.0.8 Alpha:**
+
+- Festplattentreiber (ATA)
+- CD-ROM/DVD-ROM Laufwerkstreiber (ATAPI)
+- VGA-Grafiktreiber
+- VFAT Unterstützung
+
+**HomixOS 0.1.0 Beta:**
+
+- Kernel-Protection und Stabilitätssicherungen
+- Netwzerk/Internet
+- RTL8139 Netzwerkkartentreiber
+- Netzwerkprotokolle: ARP,IPv4,UDP,TCP/IP
+
+  
 
 ## Offizielle Webseite
 
@@ -31,6 +72,6 @@ Folgende Versionen sind geplant:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1639; parent 1638; 2007-01-14T22:10:46Z -->
+<!-- MediaWiki page 1453; revision 1642; parent 1639; 2007-01-15T08:29:21Z -->
