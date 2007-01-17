@@ -2,7 +2,11 @@
 
 Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Probleme.
 
-  
+## Schnell-Zugriff per link
+
+Es ist durch aus möglich das diese Möglichkeit bei Ihnen nicht funktioniert da es auf den Browser und das genutzte IRC-Client Programm ankommt, versuchen Sie es dann werden Sie sehen ob es bei Ihnen erfolgreich geht oder nicht.
+
+irc://irc.euirc.net/#lost
 
 ## Schnell-Zugriff zum Channel per Java-Applet
 
@@ -56,6 +60,6 @@ Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Pro
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1698; parent 1697; 2007-01-17T14:07:49Z -->
+<!-- MediaWiki page 1463; revision 1701; parent 1698; 2007-01-17T15:33:02Z -->
