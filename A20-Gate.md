@@ -1,7 +1,5 @@
 # A20-Gate
 
-## Vorwort
-
 Auch wenn in diesem Tutorial der Keyboard-Controller teilweise angesprochen wird, ist dies KEIN ausführliches Tutorial über den Keyboard-Controller selbst, sondern bezieht sich lediglich auf das A20 Gate.
 
 ## Was ist das A20 Gate und warum muß es extra eingeschaltet werden?
@@ -131,6 +129,6 @@ Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1683/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1684/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 1683; parent 0; 2007-01-17T08:48:11Z -->
+<!-- MediaWiki page 1462; revision 1684; parent 1683; 2007-01-17T08:48:37Z -->
