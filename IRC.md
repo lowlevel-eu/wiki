@@ -46,7 +46,33 @@ irc://irc.euirc.net/lost
 
 - Weiter Konfiguartionen usw. findet man unter "Einstellungen" / "KVIrc konfigurieren"
 
-  
+## IRC Start mit KVIRC unter Debian
+
+Ich beschreibe hier für die Distrubutionen „Debian“ und „Suse“
+
+-Suse Unter Suse 10.0 werdet ihr die aktuelle version im Packet-verwaltung finden, ansonsten schaut beim manuel von Debian.
+
+-Debian Wenn mann Debian frisch installiert hat, mit die sourcelist vom Standardinstallation, wird man KVIRC Im Packetmanager installieren können. Jedoch ist diese Version ziemlich Alt. Deshalb beschreibe ich, wie mann eine neue Version kompilieren tut.
+
+Zuerst gehen wir zum Website um die Sourcen downzuloaden. ftp://ftp.kvirc.net/pub/kvirc/3.2.0/source/kvirc-3.2.0.tar.bz2
+
+Nachdem wir es gedownloadet haben, entpacken wir es und gehen mit der Konsole ins Verzeichnis vom KVIRC.
+
+    fabian@fabian:~$ cd Desktop/kvirc-3.2.0/kvirc-3.2.0/
+
+wenn wir da sind, geben wir configure ein.
+
+    fabian@fabian:~/Desktop/kvirc-3.2.0/kvirc-3.2.0$ ./configure
+
+Nun wird das System überprüft, ob auch alle benötige Packete installiert sind. Die häufigste Fehler ist, dass QT nicht installiert ist, auch die dev´s packete müssen Installiert sein.
+
+Nachdem das Überprüfen von das System abgeschlossen ist. Müssen wir es Kompilieren. Dies geschieht mit „make“
+
+    fabian@fabian:~/Desktop/kvirc-3.2.0/kvirc-3.2.0$ make
+
+Nun Kompiliert er alles. Danach „make install“ als root. Denn wird er das programm ausführbar machen. Einfach danach \[ALT\]+\[F2\] da denn „kvirc“ eingeben und KVIRC startet.
+
+Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel.brainsware.org/wiki/index.php?title=IRC&action=submit#IRC_Start_mit_KVirc_unter_Windows)
 
 ## Verhaltensregeln im Channel
 
@@ -60,6 +86,6 @@ irc://irc.euirc.net/lost
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1704/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1708/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1704; parent 1702; 2007-01-17T15:51:27Z -->
+<!-- MediaWiki page 1463; revision 1708; parent 1704; 2007-01-17T16:41:49Z -->
