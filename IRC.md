@@ -1,18 +1,18 @@
 # IRC
 
-Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Probleme.
+Im IRC-Channel \#lost auf irc.euirc.net bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich [LOST](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "LOST") im speziellen führen.
 
-## Schnell-Zugriff per link
+## Schnell-Zugriff per Link
 
-Es ist durch aus möglich das diese Möglichkeit bei Ihnen nicht funktioniert da es auf den Browser und das genutzte IRC-Client Programm ankommt, versuchen Sie es, Sie sehen dann ob es geht.
+Es ist durchaus möglich, dass diese Möglichkeit bei Dir nicht funktioniert, da es auf den Browser und das genutzte IRC-Client Programm ankommt. Versuch es einfach, du wirst dann sehen, ob es geht.
 
 irc://irc.euirc.net/lost
 
 ## Schnell-Zugriff zum Channel per Java-Applet
 
-## IRC Start mit KVirc unter Windows
+## IRC-Start mit KVirc unter Windows
 
-- Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases&platform=win32) hat man auf den Eintrag bei "Latest Release" klicken. Nun nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
+- Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases&platform=win32) hat man auf den Eintrag bei "Latest Release" zu klicken. Nun nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
 
 <!-- -->
 
@@ -20,15 +20,15 @@ irc://irc.euirc.net/lost
 
 <!-- -->
 
-- Jetzt öffnet sich automatisch ein Dialog für die Einrichtung. Bei Spitznamen kann man sich einen Namen geben, welcher dann später auch im Chat verwendet wird. Die restlichen Einstellung sind von geringerer Bedeutung, sodass man sie bedenkenlos einfach bei den Standerteinstellungen belassen kann. Am Schluss klickt man auf "Abschliessen" und KVIrc öffnet sich.
+- Jetzt öffnet sich automatisch ein Dialog für die Einrichtung. Bei Spitznamen kann man sich einen Namen geben, welcher dann später auch im Chat verwendet wird. Die restlichen Einstellung sind von geringerer Bedeutung, sodass man sie bedenkenlos einfach bei den Standardeinstellungen belassen kann. Am Schluss klickt man auf "Abschließen" und KVIrc öffnet sich.
 
 <!-- -->
 
-- Im geöffneten Unterfenster "Server", sucht man den Eintrag euIRC und wählt den Unterpunkt irc.euirc.net aus. Nach einem Klick auf "Jetzt Verbinden" beginnt sich der Client mit einem Server zu verbinden. Sollte eine Sicherheitsmeldung von WinXP erscheinen, kann kann man bedenkenlos "Nicht mehr blocken" anklicken um KVIrc überhaupt auszuführen können.
+- Im geöffneten Unterfenster "Server" sucht man den Eintrag euIRC und wählt den Unterpunkt irc.euirc.net aus. Nach einem Klick auf "Jetzt Verbinden" beginnt sich der Client mit einem Server zu verbinden. Sollte eine Sicherheitsmeldung von WinXP erscheinen, kann kann man bedenkenlos "Nicht mehr blocken" anklicken um KVIrc überhaupt auszuführen können.
 
 <!-- -->
 
-- Jetzt kann man das Fenster "Server" mit einem Klick auf "OK" wegmachen. Im Fenster "Kanäle betreten" gibt man unter Name "#lost" (Um in den Chat-Raum der Lowlwevel-Gemeinde zu kommen) ein, das Passwort-Feld lässt man leer. Nachdem man also den Raum betreten hat, kann man auch "Kanäle betreten" mittels "Schliessen" wegmachen. Geht ebenfalls mit der join befehl
+- Jetzt kann man das Fenster "Server" mit einem Klick auf "OK" wegmachen. Im Fenster "Kanäle betreten" gibt man unter Name "#lost" (Um in den Chat-Raum der Lowlevel-Gemeinde zu kommen) ein, das Passwort-Feld lässt man leer. Nachdem man also den Raum betreten hat, kann man auch "Kanäle betreten" mittels "Schliessen" wegmachen. Geht ebenfalls mit dem join-Befehl
 
       /join #lost
 
@@ -46,37 +46,35 @@ irc://irc.euirc.net/lost
 
 <!-- -->
 
-- Weiter Konfiguartionen usw. findet man unter "Einstellungen" / "KVIrc konfigurieren"
+- Weiter Konfigurationen usw. findet man unter "Einstellungen" / "KVIrc konfigurieren"
 
-## IRC Start mit KVIRC unter Debian
+## IRC-Start mit KVIRC unter Linux
 
 Ich beschreibe hier für die Distrubutionen „Debian“ und „Suse“
 
 - Suse
 
-Unter Suse 10.0 werdet ihr die aktuelle version im Packet-verwaltung finden, ansonsten schaut beim manuel von Debian.
+Unter Suse 10.0 werdet ihr die aktuelle Version in der Paketverwaltung (z.B. über YAST) finden. Die Benutzung gestaltet sich dann gleich wie im Folgenden für Debian beschrieben.
 
-- Debian
+- Debian Sarge
 
-Wenn mann Debian frisch installiert hat, mit die sourcelist vom Standardinstallation, wird man KVIRC Im Packetmanager installieren können. Jedoch ist diese Version ziemlich Alt. Deshalb beschreibe ich, wie mann eine neue Version kompilieren tut.
+Wenn man Debian frisch installiert hat (mit der sources.list der Standardinstallation), wird man KVIRC im Paketmanager installieren können. Jedoch ist diese Version in Sarge ziemlich alt (Benutzer von Etch oder Sid können einfach "aptitude install kvirc" benutzen). Deshalb beschreibe ich, wie man eine neue Version kompiliert.
 
-Zuerst gehen wir zum Website um die Sourcen downzuloaden. ftp://ftp.kvirc.net/pub/kvirc/3.2.0/source/kvirc-3.2.0.tar.bz2
-
-Nachdem wir es gedownloadet haben, entpacken wir es und gehen mit der Konsole ins Verzeichnis vom KVIRC.
+Zuerst gehen wir zur Website, um die Sourcen herunterzuladen: ftp://ftp.kvirc.net/pub/kvirc/3.2.0/source/kvirc-3.2.0.tar.bz2 Nachdem wir den Quellcode heruntergeladen haben, entpacken wir ihn und gehen mit der Konsole ins Verzeichnis vom KVIRC.
 
     fabian@fabian:~$ cd Desktop/kvirc-3.2.0/kvirc-3.2.0/
 
-wenn wir da sind, geben wir configure ein.
+Wenn wir da sind, geben wir configure ein.
 
     fabian@fabian:~/Desktop/kvirc-3.2.0/kvirc-3.2.0$ ./configure
 
-Nun wird das System überprüft, ob auch alle benötige Packete installiert sind. Die häufigste Fehler ist, dass QT nicht installiert ist, auch die dev´s packete müssen Installiert sein.
+Nun wird das System überprüft, ob auch alle benötige Pakete installiert sind. Der häufigste Fehler ist, dass QT nicht installiert ist, auch die dev-Pakete müssen installiert sein.
 
-Nachdem das Überprüfen von das System abgeschlossen ist. Müssen wir es Kompilieren. Dies geschieht mit „make“
+Nachdem das Überprüfen des Systems abgeschlossen ist, müssen wir es kompilieren. Dies geschieht mit „make“
 
     fabian@fabian:~/Desktop/kvirc-3.2.0/kvirc-3.2.0$ make
 
-Nun Kompiliert er alles. Danach „make install“ als root. Denn wird er das programm ausführbar machen. Einfach danach \[ALT\]+\[F2\] da denn „kvirc“ eingeben und KVIRC startet.
+Nun kompiliert er alles. Danach „make install“ als root. Denn wird er das Programm ausführbar machen. Einfach danach \[ALT\]+\[F2\] da denn „kvirc“ eingeben und KVIRC startet.
 
 Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel.brainsware.org/wiki/index.php?title=IRC&action=submit#IRC_Start_mit_KVirc_unter_Windows)
 
@@ -86,12 +84,12 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 - Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben.
 - Flooden, also sinnloses aneinanderreihen von sinnlosen Buchstabenfolgen ist verboten
 - Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
-- Sollte das passieren ist Autorejoin verboten.
+- Sollte das passieren, ist Autorejoin verboten.
 - Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
-- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anders zu nerven!!
+- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anders zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1711/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1711; parent 1710; 2007-01-17T16:45:50Z -->
+<!-- MediaWiki page 1463; revision 1714; parent 1711; 2007-01-17T18:37:13Z -->
