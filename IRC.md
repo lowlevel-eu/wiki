@@ -30,7 +30,9 @@ irc://irc.euirc.net/lost
 
 - Jetzt kann man das Fenster "Server" mit einem Klick auf "OK" wegmachen. Im Fenster "Kanäle betreten" gibt man unter Name "#lost" (Um in den Chat-Raum der Lowlwevel-Gemeinde zu kommen) ein, das Passwort-Feld lässt man leer. Nachdem man also den Raum betreten hat, kann man auch "Kanäle betreten" mittels "Schliessen" wegmachen.
 
-<!-- -->
+geht ebenfalls mit der join befehl
+
+    /join #lost
 
 - Das oberste Fenster in KVIrc namens "#lost" kann man maximieren. Nun kann man unten rechts eine Nachricht eingeben und mit Enter abschicken.
 
@@ -90,6 +92,6 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1709/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1710/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1709; parent 1708; 2007-01-17T16:44:13Z -->
+<!-- MediaWiki page 1463; revision 1710; parent 1709; 2007-01-17T16:45:10Z -->
