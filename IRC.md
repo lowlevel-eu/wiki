@@ -6,9 +6,9 @@ Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Pro
 
 ## Schnell-Zugriff zum Channel per Java-Applet
 
-## IRC-Hilfe für KVirc
+## IRC Start mit KVirc unter Windows
 
-- Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases) muss man zuerst sein OS auswählen und dann auf den Eintrag unter "Latest Release" klicken. Nun muss man nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
+- Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases&platform=win32) hat man auf den Eintrag bei "Latest Release" klicken. Nun nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
 
 <!-- -->
 
@@ -56,6 +56,6 @@ Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Pro
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1697; parent 1695; 2007-01-17T14:05:32Z -->
+<!-- MediaWiki page 1463; revision 1698; parent 1697; 2007-01-17T14:07:49Z -->
