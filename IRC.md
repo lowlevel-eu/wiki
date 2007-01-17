@@ -90,10 +90,10 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 
 ## Channel-Logs
 
-Aufzeichnungen der Channelgespräche sind 10-minütig aktualisiert unter [\[2\]](http://62.141.55.81/irc.php?channel=lost%7C1) zu haben.
+Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http://62.141.55.81/irc.php?channel=lost) zu haben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1715; parent 1714; 2007-01-17T21:09:26Z -->
+<!-- MediaWiki page 1463; revision 1716; parent 1715; 2007-01-17T21:49:11Z -->
