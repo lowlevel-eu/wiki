@@ -50,9 +50,13 @@ irc://irc.euirc.net/lost
 
 Ich beschreibe hier für die Distrubutionen „Debian“ und „Suse“
 
--Suse Unter Suse 10.0 werdet ihr die aktuelle version im Packet-verwaltung finden, ansonsten schaut beim manuel von Debian.
+- Suse
 
--Debian Wenn mann Debian frisch installiert hat, mit die sourcelist vom Standardinstallation, wird man KVIRC Im Packetmanager installieren können. Jedoch ist diese Version ziemlich Alt. Deshalb beschreibe ich, wie mann eine neue Version kompilieren tut.
+Unter Suse 10.0 werdet ihr die aktuelle version im Packet-verwaltung finden, ansonsten schaut beim manuel von Debian.
+
+- Debian
+
+Wenn mann Debian frisch installiert hat, mit die sourcelist vom Standardinstallation, wird man KVIRC Im Packetmanager installieren können. Jedoch ist diese Version ziemlich Alt. Deshalb beschreibe ich, wie mann eine neue Version kompilieren tut.
 
 Zuerst gehen wir zum Website um die Sourcen downzuloaden. ftp://ftp.kvirc.net/pub/kvirc/3.2.0/source/kvirc-3.2.0.tar.bz2
 
@@ -86,6 +90,6 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1708/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1709/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1708; parent 1704; 2007-01-17T16:41:49Z -->
+<!-- MediaWiki page 1463; revision 1709; parent 1708; 2007-01-17T16:44:13Z -->
