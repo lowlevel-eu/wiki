@@ -80,16 +80,20 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 
 ## Verhaltensregeln im Channel
 
-- Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt
+- Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt.
 - Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben.
-- Flooden, also sinnloses aneinanderreihen von sinnlosen Buchstabenfolgen ist verboten
+- Flooden, also sinnloses aneinanderreihen von sinnlosen Buchstabenfolgen ist verboten.
 - Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
 - Sollte das passieren, ist Autorejoin verboten.
 - Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
-- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anders zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
+- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anderswertig zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
+
+## Channel-Logs
+
+Aufzeichnungen der Channelgespräche sind 10-minütig aktualisiert unter [\[2\]](http://62.141.55.81/irc.php?channel=lost%7C1) zu haben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1714; parent 1711; 2007-01-17T18:37:13Z -->
+<!-- MediaWiki page 1463; revision 1715; parent 1714; 2007-01-17T21:09:26Z -->
