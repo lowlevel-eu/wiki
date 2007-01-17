@@ -42,8 +42,20 @@ Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Pro
 
 - Weiter Konfiguartionen usw. findet man unter "Einstellungen" / "KVIrc konfigurieren"
 
+  
+
+## Verhaltensregeln im Channel
+
+- Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt
+- Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben.
+- Flooden, also sinnloses aneinanderreihen von sinnlosen Buchstabenfolgen ist verboten
+- Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
+- Sollte das passieren ist Autorejoin verboten.
+- Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
+- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anders zu nerven!!
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1695; parent 1693; 2007-01-17T13:58:46Z -->
+<!-- MediaWiki page 1463; revision 1697; parent 1695; 2007-01-17T14:05:32Z -->
