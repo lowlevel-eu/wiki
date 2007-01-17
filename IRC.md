@@ -6,7 +6,7 @@ Im IRC-Channel \#lost auf irc.euirc.net kriegt man schnelle Hilfe auf kleine Pro
 
 Es ist durch aus möglich das diese Möglichkeit bei Ihnen nicht funktioniert da es auf den Browser und das genutzte IRC-Client Programm ankommt, versuchen Sie es dann werden Sie sehen ob es bei Ihnen erfolgreich geht oder nicht.
 
-irc://irc.euirc.net/#lost
+irc://irc.euirc.net/lost
 
 ## Schnell-Zugriff zum Channel per Java-Applet
 
@@ -60,6 +60,6 @@ irc://irc.euirc.net/#lost
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1701; parent 1698; 2007-01-17T15:33:02Z -->
+<!-- MediaWiki page 1463; revision 1702; parent 1701; 2007-01-17T15:36:15Z -->
