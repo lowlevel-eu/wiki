@@ -11,6 +11,6 @@ Der Bootloader wird vom BIOS oder einem Bootsektor in den Speicher geladen und a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
 
-<!-- MediaWiki page 1477; revision 1736; parent 0; 2007-01-18T20:07:11Z -->
+<!-- MediaWiki page 1477; revision 1737; parent 1736; 2007-01-18T20:07:58Z -->
