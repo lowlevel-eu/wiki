@@ -14,6 +14,6 @@ Die HAL beinhaltet somit folgende Aufgaben:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 1744; parent 1743; 2007-01-18T21:36:38Z -->
+<!-- MediaWiki page 1480; revision 1746; parent 1744; 2007-01-18T21:37:46Z -->
