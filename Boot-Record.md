@@ -16,6 +16,6 @@ Boot Record I
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1724/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1426/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1728/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1426/index.html)
 
-<!-- MediaWiki page 1426; revision 1724; parent 1672; 2007-01-18T19:34:41Z -->
+<!-- MediaWiki page 1426; revision 1728; parent 1724; 2007-01-18T19:36:54Z -->
