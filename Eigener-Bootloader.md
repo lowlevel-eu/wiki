@@ -206,6 +206,39 @@ Unter Linux verwenden wir anstelle von NASMW NASM
     nasm src/HelloWorld.asm -o bin/HelloWorld.bin -l bin/HelloWorld.lst
     nasm src/HelloWorld.asm -o img/HelloWorld.img -dIMAGE
 
+#### Der Test
+
+Jetzt können wir das erstelle Image mit Bochs testen. Ich gehe einmal davon aus das ihr es schon installiert habt. Hier mal eine kleine bochsrc.txt:
+
+    # small bochsrc.txt
+    # by muuh
+
+    ### Hier den Pfad anpassen für dein disk-image
+    floppya: 1_44=C:\NASM\HelloWorld.img, status=inserted
+    ####
+    romimage: file=$BXSHARE/BIOS-bochs-latest, address=0xf0000
+    cpu: count=1, ips=10000000, reset_on_triple_fault=1
+    megs: 32
+    vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+    vga: extension=vbe
+    boot: floppy
+    floppy_bootsig_check: disabled=0
+    log: bochsout.txt
+    panic: action=ask
+    error: action=report
+    info: action=report
+    debug: action=ignore
+    debugger_log: -
+    parport1: enabled=1, file="parport.out"
+    vga_update_interval: 300000
+    keyboard_serial_delay: 250
+    keyboard_paste_delay: 100000
+    private_colormap: enabled=0
+    keyboard_mapping: enabled=0, map=
+    i440fxsupport: enabled=1
+
+Einfach die Datei bochsrc.txt im Installationsordner von Bochs anlegen, Pfad zum erstellen Image anpassen, Bochs.exe starten und in dem Menü die Option 6 (Simulation) wählen.
+
 ## Nachwort
 
 Wenn alles gutgegangen ist haben wir jetzt ein Diskettenimage mit unserem HelloWorld Programm. Im nachvolgenden Teil 2 wollen wir diesen BootRecord so weit umbauen, und erweitern, das wir damit auch andere Programme von einem Datenträger laden und ausführen können.
@@ -215,6 +248,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 1593; parent 1585; 2007-01-06T16:38:37Z -->
+<!-- MediaWiki page 1427; revision 1740; parent 1593; 2007-01-18T21:14:52Z -->
