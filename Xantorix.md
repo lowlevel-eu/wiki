@@ -1,10 +1,10 @@
 # Xantorix
 
-HomixOS (Homix Operating System) ist ein kostenloses Betriebssystem, das vollständig mit Assembler (Bootloader) und Pascal (Kernel, Programme) programmiert wird. Das Betriebssystem ist modular aufgebaut, was bedeutet, dass man einfach und bequem verschiedene Module oder Treiber hinzufügen oder entfernen kann. Der Kernel unterstützt außerdem 32-Bit Protected-Mode, Multitasking und Paging.
+**HomixOS** (Homix Operating System) ist ein kostenloses [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit Assembler (Bootloader) und Pascal ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Programme) programmiert wird. Das Betriebssystem ist modular aufgebaut, was bedeutet, dass man einfach und bequem verschiedene Module oder Treiber hinzufügen oder entfernen kann. Der Kernel unterstützt außerdem 32-Bit Protected-Mode, [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging").
 
 Das Betriebssystem ist derzeit noch in Entwicklung und befindet sich in der Alpha-Phase. Es ist im Laufe des Jahres geplant, den Alpha-Status abzuschließen und eine 64-Bit Version für HomixOS zu veröffentlichen. Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
 
-HomixOS wird als Install-Disk, mit der HomixOS auf einem PC installiert werden kann, und als Live-Disk, mit der HomixOS problemlos direkt von Diskette gestartet werden kann, zur Verfügung gestellt. Die Alpha- und Beta-Versionen stehen nur als Live-Disk zur Verfügung. Bei speziellen Bochs-Paketen wird ein Emulator inkl. Konfiguration mitgeliefert. Dadurch kann das Betriebssystem einfach per Doppelklick auf die Start-BAT-Datei mit dem Emulator getestet werden, ohne Windows beenden zu müssen.
+HomixOS wird als Install-Disk, mit der HomixOS auf einem PC installiert werden kann, und als Live-Disk, mit der HomixOS problemlos direkt von Diskette gestartet werden kann, zur Verfügung gestellt. Die Alpha- und Beta-Versionen stehen nur als Live-Disk zur Verfügung. Bei speziellen Bochs-Paketen wird ein Emulator inkl. Konfiguration mitgeliefert. Dadurch kann das Betriebssystem einfach per Doppelklick auf die Start-BAT-Datei mit dem Emulator getestet werden, ohne [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") beenden zu müssen.
 
 ## Features
 
@@ -70,6 +70,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1663; parent 1662; 2007-01-15T20:23:31Z -->
+<!-- MediaWiki page 1453; revision 1742; parent 1663; 2007-01-18T21:25:43Z -->
