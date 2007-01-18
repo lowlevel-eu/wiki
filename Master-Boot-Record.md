@@ -1,26 +1,24 @@
 # Master Boot Record
 
-Der MBR (Master Boot Record) ist der erste Sektor einer Festplatte
+Der MBR (Master Boot Record) ist der erste Sektor einer Festplatte. Die Aufgabe des MBR ist es, die Partitionen zu definieren, den [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") einer bootbaren Pation zu laden und zu starten.
 
-    LBA -> 0x00000000
-    CHS -> Cilinder: 0, Head: 0, Sector: 1
+Die Sektorennummer anhand der zwei Addressierungsmöglichkeiten:
 
-## Aufgabe
-
-Die Aufgabe des MBR ist es, die Partitionen zu definieren, den [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record") einer bootbaren Pation zu laden und zu starten.
+    LBA : 0x00000000
+    CHS : Cilinder: 0, Head: 0, Sector: 1
 
 ## Aufbau
 
 |  |  |
 | --------------- | ------------------------------------ |
 | Offset |  |
-| 0x0000-0x01BD | Code zum laden der einer Partition |
-| 0x01BE-0x01FD | Paritions Tabelle |
+| 0x0000-0x01BD | Code zum Laden der einer Partition |
+| 0x01BE-0x01FD | Partitionstabelle |
 | 0x01FE-0x01FF | Bootsignatur 0xAA55 |
 
-## Partitions Tabelle
+## Partitionstabelle
 
-Die Partitions Tabelle besteht aus 4 Einträgen á 16Byte in folgendem Format:
+Die Partitionstabelle besteht aus 4 Einträgen á 16 Byte in folgendem Format:
 
 |  |  |  |
 | ------------ | ----- | --------------------------------------------------------------------------------- |
@@ -38,6 +36,6 @@ Die Partitions Tabelle besteht aus 4 Einträgen á 16Byte in folgendem Format:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1734/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 1679; parent 1598; 2007-01-15T22:50:39Z -->
+<!-- MediaWiki page 1431; revision 1734; parent 1679; 2007-01-18T19:53:52Z -->
