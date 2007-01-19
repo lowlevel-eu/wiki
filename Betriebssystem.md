@@ -4,16 +4,13 @@ Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, d
 
 ## Liste mit Betriebssystemen
 
-- [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS")
-- [FreeDOS](https://github.com/lowlevel-eu/wiki/wiki/FreeDOS "FreeDOS")
 - [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
-- [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")
 - [Linux-Distributionen](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
-- [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS")
-- [HomixOS](https://github.com/lowlevel-eu/wiki/wiki/Xantorix "HomixOS")
+- [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")
+- Weitere siehe Kategorie Betriebssysteme
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1754/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
 
-<!-- MediaWiki page 1479; revision 1747; parent 1741; 2007-01-18T21:38:46Z -->
+<!-- MediaWiki page 1479; revision 1754; parent 1747; 2007-01-19T16:36:23Z -->
