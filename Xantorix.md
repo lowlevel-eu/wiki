@@ -47,6 +47,7 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 - Multitasking und Multithreading integriert
 - Kernel komplett Multitasking-fähig
+- Neues verbessertes Nachrichtensystem
 - Erweiterte GUI (Bugfixes, mehr Controls, ...)
 
 **HomixOS 0.0.8 Alpha:**
@@ -55,13 +56,17 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 - CD-ROM/DVD-ROM Laufwerkstreiber (ATAPI)
 - VGA-Grafiktreiber
 - VFAT Unterstützung
+- ISO9660 Dateisystemtreiber
+- UDF Dateisystemtreiber
 
 **HomixOS 0.1.0 Beta:**
 
-- Kernel-Protection und Stabilitätssicherungen
-- Netzwerk/Internet
-- RTL8139 Netzwerkkartentreiber
+- Kernel-Protection
+- Stabilitätssicherungen
+- Multiprozessor (SMP) Unterstützung
+- Netzwerk/Internet Unterstützung
 - Netzwerkprotokolle: ARP,IPv4,UDP,TCP/IP
+- RTL8139 Netzwerkkartentreiber
 
 ## Offizielle Webseite
 
@@ -70,6 +75,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1742; parent 1663; 2007-01-18T21:25:43Z -->
+<!-- MediaWiki page 1453; revision 1766; parent 1742; 2007-01-20T23:27:22Z -->
