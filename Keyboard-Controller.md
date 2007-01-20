@@ -2,14 +2,14 @@
 
 Der Keyboard Controller (KBC) sitzt auf dem Mainboard und dient, wie der Name vermuten lässt, unter anderem der Tastaturansteuerung. Er hat jedoch noch viele weitere Funktionen.
 
-Funktionen des KBC:  
--Ansteuerung der Tastatur  
--Ansteuerung des PSAUX-Ports (z.B. PS/2-Maus)  
--ein-/ausschalten der 21-Adressleitung (a20-Gate)  
--CPU-Reset auslösen  
--ein-/ausschalten des Systemlautsprechers  
--Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt  
-  
+Funktionen des KBC:
+
+- Ansteuerung der Tastatur
+- Ansteuerung des PSAUX-Ports (z.B. PS/2-Maus)
+- ein-/ausschalten der 21-Adressleitung (a20-Gate)
+- CPU-Reset auslösen
+- ein-/ausschalten des Systemlautsprechers
+- Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt
 
 Zur Komunikation mit dem KBC werden die Ports 0x60, 0x61 und 0x64 verwendet.  
 
@@ -61,6 +61,6 @@ inputport
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 1763; parent 1705; 2007-01-20T13:05:56Z -->
+<!-- MediaWiki page 1468; revision 1764; parent 1763; 2007-01-20T16:29:47Z -->
