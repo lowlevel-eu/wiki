@@ -8,7 +8,7 @@ HomixOS wird als Install-Disk, mit der HomixOS auf einem PC installiert werden k
 
 ## Features
 
-Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der offiziellen Webseite.
+Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der [offiziellen Webseite](http://www.homix-online.de/HomixOS/Features.php).
 
 ## Versionen
 
@@ -75,6 +75,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1766; parent 1742; 2007-01-20T23:27:22Z -->
+<!-- MediaWiki page 1453; revision 1767; parent 1766; 2007-01-20T23:30:40Z -->
