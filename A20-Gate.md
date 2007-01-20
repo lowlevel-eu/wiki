@@ -129,6 +129,6 @@ Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1684/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1765/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 1684; parent 1683; 2007-01-17T08:48:37Z -->
+<!-- MediaWiki page 1462; revision 1765; parent 1684; 2007-01-20T16:32:08Z -->
