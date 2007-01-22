@@ -171,8 +171,18 @@ Aus \#lost (7. Januar 2007)
     [00:58] <_seeker_> naja ich hatte dar nur TASM drauf
     [00:59] <stultus> _seeker_: Toaster Assembler? *würg*
 
+------------------------------------------------------------------------
+
+Aus \#lost (22. Januar 2007)
+
+    [22:42] <Homix> na ja ich hab sozusagen einen mon. kernel, der in dateien aufgeteilt ist ;)
+    [22:42] <taljeth> Was linuxartiges?
+    [22:42] <Homix> WIndows-artiges ;)
+    [22:43] <taljeth> Wie Windows funktioniert, hab ich keine Ahnung. ;-)
+    [22:43] <bluecode> windows funktioniert nicht ^^
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1611/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1611; parent 1610; 2007-01-07T00:35:39Z -->
+<!-- MediaWiki page 1435; revision 1774; parent 1611; 2007-01-22T21:48:19Z -->
