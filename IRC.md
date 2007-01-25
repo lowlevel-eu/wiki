@@ -90,10 +90,22 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 
 ## Channel-Logs
 
-Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http://62.141.55.81/irc.php?channel=lost) zu haben.
+Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http://62.141.55.81/irc/irc.php) zu haben.
+
+## Die Statistiken
+
+\- Deutsch: <http://62.141.55.81/irc/pisg/lost.htm>
+
+\- Niederländisch: <http://62.141.55.81/irc/pisg/lost_nl.htm>
+
+\- Schwäbisch: <http://62.141.55.81/irc/pisg/lost_swab.htm> (vielen Dank taljeth)
+
+\- Schweizer deutsch (Emmentaler Dialekt \*g\*): <http://62.141.55.81/irc/pisg/lost_ch.htm>
+
+\- Schweizer deutsch (Appezölle-Dialäkt(vielen Dank Noooooooooos)) <http://62.141.55.81/pisg/lost_ch_ap.htm>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1716; parent 1715; 2007-01-17T21:49:11Z -->
+<!-- MediaWiki page 1463; revision 1775; parent 1716; 2007-01-25T18:09:11Z -->
