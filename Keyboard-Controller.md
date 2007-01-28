@@ -152,7 +152,7 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
 
     0xF2   Diesen Befhel sendet man zum identifiziren der Tastatur. Es gibt folgende Rückgabewerte:
 
-           XT Tastatur    :  Timeout (Port[0x64].Bit[6]=1)
+           XT Tastatur    :  Timeout (leider NICHT Port[0x64].Bit[6]=1, sondern selbst zu messender Zweitwert)
            AT Tastatur    :  Rückgabewert 0xFA
            MF II Tastatur :  Rückgabewert 0xFA 0xAB 0x41
 
@@ -220,6 +220,6 @@ Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1777/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1779/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 1777; parent 1769; 2007-01-28T12:19:24Z -->
+<!-- MediaWiki page 1468; revision 1779; parent 1777; 2007-01-28T12:40:09Z -->
