@@ -1,25 +1,39 @@
 # Keyboard Controller
 
-Der Keyboard Controller (KBC) sitzt auf dem Mainboard und dient, wie der Name vermuten lässt, unter anderem der Tastaturansteuerung. Er hat jedoch noch viele weitere Funktionen.
+Der Keyboard Controller (KBC) sitzt auf dem Mainboard und dient, wie der Name vermuten lässt, unter anderem der Tastaturansteuerung. Aus historischen Gründen und da er eng mit dem Programmable Peripheral Interface (PPI) verbunden ist hat er noch viele weitere Funktionen.
 
 Funktionen des KBC:
 
 - Ansteuerung der Tastatur
-- Ansteuerung des PSAUX-Ports (z.B. PS/2-Maus)
-- ein-/ausschalten der 21-Adressleitung (a20-Gate)
-- CPU-Reset auslösen
-- ein-/ausschalten des Systemlautsprechers
+- Ansteuerung des Auxiliary Port (z.B. PS/2-Maus)
+- ein-/ausschalten der 21-Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"))
+- CPU-Reset auslösen, also neustarten des Systems
 - Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt
 
-Zur Komunikation mit dem KBC werden die Ports 0x60, 0x61 und 0x64 verwendet.  
-
-![kbcnr6.png](http://img241.imageshack.us/img241/5692/kbcnr6.png)  
-Statusregister  
-
   
 
+## KBC-Typen
+
+Es gibt mehrere KBC-Typen. Grob kann man alle diese Typen jedoch in zwei Arten einteilen.
+
+### XT-KBC
+
+In alten XT-Systemen wurde nur über das Programmable Peripheral Interface (PPI) mit der Tastatur kommuniziert. Alle Scancodes der gedrückten Tasten konnten über Port 0x60 gelesen werden. Über die Bits 6-7 von Port 0x61 wird die Tastatur ein und aus geschaltete.  
   
-Statusregister (lesen von Port 0x64)
+![xtkbcaa3.png](http://img252.imageshack.us/img252/545/xtkbcaa3.png)
+
+### AT-KBC
+
+In den nachfolgenden AT-Systemen wird über Port 0x64 die direkte Kommunikation mit der Tastatur ermöglicht. Außerdem wurde mit dem Auxiliary Port die Unterstüzung für ein weiteres Gerät hinzugefürgt.  
+  
+![atkbcml3.png](http://img252.imageshack.us/img252/6256/atkbcml3.png)  
+  
+
+## Programmieren des KBC
+
+### Statusregister
+
+lesen von Port 0x64
 
     Bit 76543210
         │││││││└─ Status des Ausgabepuffers (KBC -> CPU) :  0=leer;  1=voll (es kann von Port 0x60 gelesen werden)
@@ -33,7 +47,9 @@ Statusregister (lesen von Port 0x64)
 
   
 
-Inputport (Lesen über KBC-Befehl 0xC0)
+### Inputport
+
+Lesen über KBC-Befehl 0xC0
 
     Bit 76543210
         │││││││└─ Keyboard data in pin?
@@ -47,7 +63,10 @@ Inputport (Lesen über KBC-Befehl 0xC0)
 
   
 
-Outputport (Lesen über KBC-Befehl 0xD0, schreiben über KBC-Befehl 0xD1)
+### Outputport
+
+Lesen über KBC-Befehl 0xD0  
+schreiben über KBC-Befehl 0xD1
 
     Bit 76543210
         │││││││└─ 1=CPU-Reset
@@ -62,7 +81,10 @@ Outputport (Lesen über KBC-Befehl 0xD0, schreiben über KBC-Befehl 0xD1)
   
 
   
-Port 0x61 (lesen und schreiben)
+
+### Port 0x61
+
+lesen und schreiben
 
     Bit 76543210
         │││││││└─ PPI \
@@ -76,8 +98,9 @@ Port 0x61 (lesen und schreiben)
 
   
 
-KBC-Befehle (schreiben auf Port 0x64)  
-Bevor man auf Port 0x64 schreibt, müssen Port\[0x60\].Bit\[1\]==0 und Port\[0x60\].Bit\[2\]==1 sein!
+### KBC-Befehle
+
+schreiben auf Port 0x64 (Bevor man auf Port 0x64 schreibt, muss der Ausgabepuffer leer sein (Port\[0x64\].Bit\[1\]==0) und die Tastatur darf sich nicht mehr im Resetmodus befinden (Port\[0x64\].Bit\[2\]==1))
 
     0xAA   Tastatur-Selbsttest. Sollte 0x55 auf Port 0x60 zurückgeben.
 
@@ -110,8 +133,9 @@ Bevor man auf Port 0x64 schreibt, müssen Port\[0x60\].Bit\[1\]==0 und Port\[0x6
 
   
 
-Tastatur-Befehle (schreiben auf Port 0x60)  
-Bevor man auf Port 0x60 schreibt, müssen Port\[0x60\].Bit\[1\]==0 und Port\[0x60\].Bit\[2\]==1 sein!
+### Tastatur-Befehle
+
+schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffer leer sein (Port\[0x64\].Bit\[1\]==0) und die Tastatur darf sich nicht mehr im Resetmodus befinden (Port\[0x64\].Bit\[2\]==1))
 
     0xED   Setzen der LEDs auf der Tastatur. Ein zweites Byte wird über Port 0x60 gesendet:
 
@@ -164,8 +188,38 @@ Bevor man auf Port 0x60 schreibt, müssen Port\[0x60\].Bit\[1\]==0 und Port\[0x6
 
     0xFF   ?
 
+## Beispiele zur benutzen der KBC Funktionen
+
+### Ein einfacher Tastatur Handler
+
+... kommt noch ;)
+
+### CPU-reset
+
+Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben wird.
+
+    ;Warten bis der Eingabepuffer lehr ist
+    wait:
+    in   al, x064
+    test al, 00000010b
+    jne  wait
+
+    ;Befehl 0xD1 zum schreiben des Inputports an den KBC senden
+    mov  al, 0xD1
+    out  0x64, al
+
+    ;Wieder warten bis der Eingabepuffer lehr ist
+    wait2:
+    in   al, x064
+    test al, 00000010b
+    jne  wait2
+
+    ;Den neuen Wert für das Inputport über Port 0x60 senden
+    mov  al, 0xFE
+    out  0x60, al
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1769/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1777/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 1769; parent 1768; 2007-01-21T13:46:34Z -->
+<!-- MediaWiki page 1468; revision 1777; parent 1769; 2007-01-28T12:19:24Z -->
