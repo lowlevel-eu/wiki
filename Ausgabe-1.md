@@ -207,12 +207,12 @@ So! Gleich ist es soweit! Wir müssen nur noch unsere Dateien assemblieren:
 
 Dann legen wir ein Diskimage an, indem wir die Dateien zusammenkopieren:
 
-       C:\StupidOS>copy /b boot.bin + kernel.bin myOS.raw
+       C:\StupidOS>copy /b boot.bin + kernel.bin myOS.img
 
 Und zum Schluss schreiben wir das Image mit Rawrite auf die Diskette:
 
        C:StupidOS> rawwritewin
-       (den Anweisungen folgen, myOS.raw auf "a" schreiben)
+       (den Anweisungen folgen, myOS.img auf "a" schreiben)
 
 Jetzt rebootet ihr ganz einfach euren Rechner mit unserer neuen bootfähigen Diskette im Laufwerk... TÄDÄÄÄÄÄÄÄH!!!  
   
@@ -566,6 +566,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1781; parent 1780; 2007-01-29T16:52:02Z -->
+<!-- MediaWiki page 1412; revision 1782; parent 1781; 2007-01-29T16:57:36Z -->
