@@ -37,7 +37,7 @@ Wir werden unseren Kernel (und unseren Bootsektor) in Assembler schreiben. Ganz 
 Also. Wir brauchen:
 
 - NASM [\[2\]](http://nasm.sourceforge.net)
-- Rawrite oder ein anderes Diskettenimageschreibeprogramm.
+- Rawwrite [\[3\]](http://www.chrysocome.net/rawwrite) oder ein anderes Diskettenimageschreibeprogramm.
 - Grundkenntnisse in Assembler
 - 1 Diskette
 
@@ -566,6 +566,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1512; parent 1432; 2006-10-01T14:32:12Z -->
+<!-- MediaWiki page 1412; revision 1780; parent 1512; 2007-01-29T16:34:10Z -->
