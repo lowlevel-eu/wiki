@@ -1,6 +1,6 @@
 # C\+\+
 
-Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilffunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
+Da C++ eine Weiterentwicklung von C ist, sollte man sich auch den Wikiartikel zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen. Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilffunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
 
 - Startup-Code
 - rein virtuelle Funktionen
@@ -106,6 +106,6 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1789/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1790/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1789; parent 1785; 2007-01-30T18:26:57Z -->
+<!-- MediaWiki page 1486; revision 1790; parent 1789; 2007-01-30T18:30:37Z -->
