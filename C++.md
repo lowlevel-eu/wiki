@@ -100,12 +100,12 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 # Links
 
-- [g++ ABI](http://www.codesourcery.com/cxx-abi/abi.html)
-- [g++ ABI: Exception Handlin](http://www.codesourcery.com/cxx-abi/abi-eh.html)
+- [g++ ABI](http://www.codesourcery.com/cxx-abi/abi.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
+- [g++ ABI: Exception Handling](http://www.codesourcery.com/cxx-abi/abi-eh.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [OSDev.org wiki](http://www.osdev.org/wiki/C_PlusPlus)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1789/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1785; parent 1783; 2007-01-30T18:18:15Z -->
+<!-- MediaWiki page 1486; revision 1789; parent 1785; 2007-01-30T18:26:57Z -->
