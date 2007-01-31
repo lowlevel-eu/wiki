@@ -14,10 +14,18 @@ Einen Überblick über die bereits integrierten, der sich in Entwicklung befindl
 
 Überblick der verschiedenen Versionen:
 
+    30.01.2007 : HomixOS 0.0.7 Alpha
     05.01.2007 : HomixOS 0.0.6 Alpha
     28.09.2006 : HomixOS 0.0.5 Alpha
 
 Die Veränderungen bei den derzeitigen Versionen:
+
+**HomixOS 0.0.7 Alpha:**
+
+- Viele Bugfixes
+- Erweiterte Shell (u.a. Befehl für das Ausführen von Prozessen)
+- GUI-Zeichenfunktionen
+- Demo-programme: Minesweeper und TicTacToe
 
 **HomixOS 0.0.6 Alpha:**
 
@@ -37,18 +45,10 @@ Die Veränderungen bei den derzeitigen Versionen:
 
 Folgende Versionen sind geplant:
 
-    30.01.2007 : HomixOS 0.0.7 Alpha
     24.02.2007 : HomixOS 0.0.8 Alpha
     14.04.2007 : HomixOS 0.1.0 Beta
 
 Die geplanten Neuheiten in den zukünftigen Versionen:
-
-**HomixOS 0.0.7 Alpha:**
-
-- Multitasking und Multithreading integriert
-- Kernel komplett Multitasking-fähig
-- Neues verbessertes Nachrichtensystem
-- Erweiterte GUI (Bugfixes, mehr Controls, ...)
 
 **HomixOS 0.0.8 Alpha:**
 
@@ -75,6 +75,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1767; parent 1766; 2007-01-20T23:30:40Z -->
+<!-- MediaWiki page 1453; revision 1798; parent 1767; 2007-01-31T18:12:24Z -->
