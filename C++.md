@@ -33,17 +33,17 @@ Da diese vor dem Eintritt in die main-Funktion initialisiert sein sollen, müsse
 
 ## g++
 
+Die Konstruktion der globalen/statischen Objekte ist unter g++ immer gleich. Nur die Destruktion der selben hängt von der Verwendung des configure-flags --enable-\_\_cxa_atexit ab.
+
 ### Konstruktoren
 
 G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. Diese Funktionszeiger zeigen jeweils auf einen Konstruktor. Man muss nun nur dieses Array durchgehen und alle Funktionen aufrufen und schon hat man alle globalen/statischen Objekte initialisiert.
 
-### Destruktoren
-
-TODO: Finde das verwendete configure Flag
+### Destruktoren (ohne --enable-\_\_cxa_atexit)
 
 G++ erstellt eine "dtors\*" Sektion, analog zur "ctors\*" Sektion und speicher dort wiederum ein Array aus Funktionszeigern. Diesmal zeigen diese Funktionszeiger aber auf Destruktoren.
 
-### Destruktoren
+### Destruktoren (mit --enable-\_\_cxa_atexit)
 
 Im Konstruktor eines globalen/statischen Objekts wird die folgende Funktion aufgerufen:
 
@@ -106,6 +106,6 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1790/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1790; parent 1789; 2007-01-30T18:30:37Z -->
+<!-- MediaWiki page 1486; revision 1794; parent 1790; 2007-01-31T15:05:39Z -->
