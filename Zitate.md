@@ -181,8 +181,14 @@ Aus \#lost (22. Januar 2007)
     [22:43] <taljeth> Wie Windows funktioniert, hab ich keine Ahnung. ;-)
     [22:43] <bluecode> windows funktioniert nicht ^^
 
+------------------------------------------------------------------------
+
+Aus \#lost (3. Februar 2007)
+
+    [01:07:31] <taljeth> Eigentlich ist es ja ein Wunder, daß wir beide überhaupt noch einen Rest von Selbstvertrauen haben. ;-)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1800/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1774; parent 1611; 2007-01-22T21:48:19Z -->
+<!-- MediaWiki page 1435; revision 1800; parent 1774; 2007-02-03T00:17:15Z -->
