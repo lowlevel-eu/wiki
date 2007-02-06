@@ -175,7 +175,6 @@ Hier eine Erläuterung wie ein solcher Eintrag aufgebaut ist:
 | Bezeichnung | Offset | Bytes | Bezeichnung |
 | DIR_Name | 0 | 11 | Der Name der Datei / des Verzeichnisses. Hier gilt die alte 8+3 Konvention. 8 Zeichnen für den Namen; 3 Zeichen für die Extension. Die beiden werden aber ohne Punkt hintereinandergeschrieben. Zeichen die bei den 8 oder 3 Zeichen NICHT belegt sind, müssen mit Leezeichen (0x20) aufgefüllt werden. |
 | DIR_Attribute | 11 | 1 | Hier können einzelne BITs oder Kombinationen aus BITs gesetzt werden, um Attribute festzulegen.<br>ATTR_READ_ONLY: 0x01<br>ATTR_HIDDEN: 0x02<br>ATTR_SYSTEM: 0x04<br>ATTR_VOLUME_ID: 0x08<br>ATTR_DIRECTORY: 0x10<br>ATTR_ARCHIVE: 0x20<br>Ein Verzeichnis unterscheidet sich also nur von einer Datei, indem das ATTR_DIRECTORY BIT gesetzt ist.<br> |
-| DIR_Name | 0 | 11 | Der Name der Datei / des Verzeichnisses. Hier gilt die alte 8+3 Konvention. 8 Zeichnen für den Namen; 3 Zeichen für die Extension. Die beiden werden aber OHNE Punkt hintereinandergeschrieben. Zeichen die bei den 8 oder 3 Zeichen nicht belegt sind, müssen mit Leezeichen (0x20) aufgefüllt werden. |
 | DIR_NTRes | 12 | 1 | Dieses Byte ist für Windows NT reserviert und sollte immer mit 0 initalisiert werden. |
 | DIR_CrtTimeTenth | 13 | 1 | Hier werden die Millisekunden der Zeit gespeichert, an dem der Eintrag erstellt wurde. Der Wert, der hier eingetragen wird, muss man allerdings noch mit 10 multiplizieren, um den korrekten Wert der Millisekunden zu erhalten. Zulässige Werte sind 0 - 199. Also so gesehen von 0 bis 1990 Millisekunden. |
 | DIR_LstAccDate | 16 | 2 | Datum der Erstellung der Datei / des Verzeichnisses. Siehe oben für Speicherweise von Datum in 16 BITs. |
@@ -347,6 +346,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 1498; parent 1497; 2006-09-20T13:58:06Z -->
+<!-- MediaWiki page 1424; revision 1805; parent 1498; 2007-02-06T16:04:23Z -->
