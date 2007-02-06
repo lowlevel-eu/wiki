@@ -192,9 +192,11 @@ Bei dem Feld DIR_Name gibt es ein paar Besonderheiten, die man beachten sollte.
 
 Und auch müssen die unbenutzten Zwischenräume mit Leerzeichen aufgefüllt werden. Beispiel:
 
-- "FOO BAR" -\> FOO.BAR
-- "FOO B " -\> FOO.B
+- "FOO-----BAR" -\> FOO.BAR
+- "FOO-----B--" -\> FOO.B
 - "PRETTYBIG" -\> PRETTY.BIG
+
+Die Leerzeichen sind hier zur Verdeutlichung als "-" dargestellt
 
 Alle Einträge müssen in Großbuchstaben sein. Daher gibt es auch keine Unterscheidung zwischen Groß- und Kleinschreibung. Es kann also nicht die beiden Dateien Foo.bar und FOO.bar geben!
 
@@ -346,6 +348,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 1805; parent 1498; 2007-02-06T16:04:23Z -->
+<!-- MediaWiki page 1424; revision 1806; parent 1805; 2007-02-06T16:16:10Z -->
