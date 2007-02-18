@@ -194,8 +194,19 @@ Aus \#lost (16. Februar 2007)
     [23:28] <FreakyPenguin> btw taljeth wie wärs wenn du mal deine "imaginäre todo-Liste" mal zu Wiki bringen würdest?
     [23:30] <taljeth> Dann hieße, aus der imaginären Todo-Liste eine reale zu machen. Diese Aufgabe ist mir zu komplex. ;-)
 
+------------------------------------------------------------------------
+
+Aus \#lost (18. Feburar 2007)
+
+    [16:38] <Homix> da kommen grad so Features wie "NoCompleteRedrawOnOnePixelChange"
+    [16:39] <taljeth> Homix: "Windows has detected your mouse cursor has moved. Please restart the computer 
+            for these changes to take effect". ;-)
+    [16:39] <bluecode> ^^
+    [16:40] <Homix> taljeth: WIndows 98 ? ;)
+    [16:41] <bluecode> für einige war es ein Witz, für andere harte Realität ^^
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1811; parent 1810; 2007-02-18T12:22:53Z -->
+<!-- MediaWiki page 1435; revision 1812; parent 1811; 2007-02-18T15:43:57Z -->
