@@ -191,10 +191,11 @@ Aus \#lost (3. Februar 2007)
 
 Aus \#lost (16. Februar 2007)
 
-\[23:28\] \<FreakyPenguin\> btw taljeth wie wärs wenn du mal deine "imaginäre todo-Liste" mal zu Wiki bringen würdest? \[23:30\] \<taljeth\> Dann hieße, aus der imaginären Todo-Liste eine reale zu machen. Diese Aufgabe ist mir zu komplex. ;-)
+    [23:28] <FreakyPenguin> btw taljeth wie wärs wenn du mal deine "imaginäre todo-Liste" mal zu Wiki bringen würdest?
+    [23:30] <taljeth> Dann hieße, aus der imaginären Todo-Liste eine reale zu machen. Diese Aufgabe ist mir zu komplex. ;-)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1810; parent 1800; 2007-02-16T22:36:54Z -->
+<!-- MediaWiki page 1435; revision 1811; parent 1810; 2007-02-18T12:22:53Z -->
