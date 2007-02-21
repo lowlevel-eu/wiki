@@ -78,6 +78,9 @@ Der Code am Stück
        start:
                        ; Erst brauchen wir einen Stack.
        cli             ; Keine Interrupts!
+       xor ax, ax
+       mov ds, ax      ;ds und es nicht bei allen
+       mov es, ax      ;PCs automatisch gleich Null
        mov ax, 0x9000  ; Stackadresse
        mov ss, ax      ; SS = 9000 (unser Stack)
        mov sp, 0       ; SP = 0000  (der Stackpointer)
@@ -566,6 +569,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1782; parent 1781; 2007-01-29T16:57:36Z -->
+<!-- MediaWiki page 1412; revision 1813; parent 1782; 2007-02-21T22:09:59Z -->
