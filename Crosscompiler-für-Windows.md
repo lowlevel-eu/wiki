@@ -37,7 +37,7 @@ Wer lieber den Compiler tiefer in das System verankern will, kann die Pfade in d
 
 ## Erstellung eines eigenen Cross Compilers
 
-Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. Weil das zur Zeit den Rahmen dieses Artikels sprengen würde, verweise ich auf die [Anleitung](http://www.mega-tokyo.com/osfaq2/index.php/GCC%20Cross-Compiler) im OS-FAQ Wiki auf Mega-Tokyo. Mein Cross Compiler ist auch in etwa nach dieser Anleitung entstanden.
+Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. Weil das zur Zeit den Rahmen dieses Artikels sprengen würde, verweise ich auf die [Anleitung](http://www.osdev.org/osfaq2/index.php/GCC%20Cross-Compiler) im OS-FAQ Wiki auf Mega-Tokyo. Mein Cross Compiler ist auch in etwa nach dieser Anleitung entstanden.
 
 ## Probleme
 
@@ -47,6 +47,6 @@ Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libex
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 1617; parent 1616; 2007-01-13T17:21:00Z -->
+<!-- MediaWiki page 1450; revision 1815; parent 1617; 2007-02-22T19:03:53Z -->
