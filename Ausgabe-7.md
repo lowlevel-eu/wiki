@@ -468,7 +468,7 @@ haben. Meine Kontaktdaten zum Melden bei Problemen finden sich im Impressum.
 
 ### Einleitung
 
-Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch machen, und man hat einen Bootloader und einen simplen Kernel, der einen Text ausgibt, geschrieben, wird man schnell zum nächsten Problem kommen: Dateien! 'Wie/wo/was mache ich?' sind wohl die ersten Fragen. Mit diesem Tutorial möchte ich hier ein bisschen helfen. Wichtig: Ich gehe davon aus, dass ihr 'OS Dev-Tutorial' (\[Ausgabe 1\]) und 'Das FAT12 Dateisystem' (\[Ausgabe 4\]) gelesen und verstanden habt. OK, blabla, let's go!
+Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch machen, und man hat einen Bootloader und einen simplen Kernel, der einen Text ausgibt, geschrieben, wird man schnell zum nächsten Problem kommen: Dateien! 'Wie/wo/was mache ich?' sind wohl die ersten Fragen. Mit diesem Tutorial möchte ich hier ein bisschen helfen. Wichtig: Ich gehe davon aus, dass ihr 'OS Dev-Tutorial' ([Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1")) und 'Das FAT12 Dateisystem' ([Ausgabe 4](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4 "Ausgabe 4")) gelesen und verstanden habt. OK, blabla, let's go!
 
 ### Dateien finden
 
@@ -994,8 +994,7 @@ spth@priest.com
 
 geschrieben im Dezember 2004  
 Österreich  
-
-\- - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - -
 
 ## Tipps & Tricks: INC und DEC
 
@@ -1081,13 +1080,15 @@ Was sieht die Zukunft für ReactOS vor? Nun, keiner kann dies bestimmen oder vor
 
 Was kann ReactOS? Genaue Auflistungen sind schwer zu bekommen, vielmehr bekommt man auf der Homepage einen Gesamteindruck und eine Übersicht, was funktioniert und was nicht, allerdings keine kongrete Liste von Features.  
 
-Es gibt mittlerweile einige Funktionsbibliotheken für Konsolenanwendungen von ReactOS. Ein Programm für die Konsole von ReactOS ist ein GCC-Compiler. Dadruch wird ReactOS freestanding, sprich es kann von sich selber aus weiter entwickelt werden. Außerdem gibt es noch den GNU Midnight Commander, einen zeilenbasierten Explorer.  
-Im Bereich grafische Oberfläche sieht es bei ReactOS im Gegenteil zu MenuetOS noch weniger gut aus. Beide Betriebssysteme gehen vollständig andere Wege. Während MenuetOS sich mehr um sein äußeres Erscheinungsbild und die GUI sorgt, scheinen die Programmierer von ReactOS es mehr auf die inneren Fähigkeiten abgesehen zu haben.  
+Es gibt mittlerweile einige Funktionsbibliotheken für Konsolenanwendungen von ReactOS. Ein Programm für die Konsole von ReactOS ist ein GCC-Compiler. Dadruch wird ReactOS freestanding, sprich es kann von sich selber aus weiter entwickelt werden.Außerdem gibt es noch den GNU Midnight Commander, einen zeilenbasierten Explorer.
+
+Im Bereich grafische Oberfläche sieht es bei ReactOS im Gegenteil zu MenuetOS noch weniger gut aus. Beide Betriebssysteme gehen vollständig andere Wege. Während MenuetOS sich mehr um sein äußeres Erscheinungsbild und die GUI sorgt, scheinen die Programmierer von ReactOS es mehr auf die inneren Fähigkeiten abgesehen zu haben.
+
 Genauso sieht es beim Treiber Support aus. Während ReactOS auf möglichst viel Modularität baut, sind bei MenuetOS noch viele Treiber fest in den Kernel eingecodet. Im Moment wird daran gearbeitet, auch Treiber dritter (zum Beispiel von Microsoft) zum Laufen zu bringen und benutzbar zu machen.
 
 ### Daten/Kontakt zum Projekt:
 
-Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seid 1997. Erreichbar ist ReactOS über \<a href="www.reactos.com"\>www.ReactOS.com\</a\>. Dort findet man auch sehr viele Informationen für Programmierer und Benutzer von ReactOS. Die Seite macht einen gepflegten Eindruck.
+Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seid 1997. Erreichbar ist ReactOS über [www.ReactOS.com](http://www.reactos.com). Dort findet man auch sehr viele Informationen für Programmierer und Benutzer von ReactOS. Die Seite macht einen gepflegten Eindruck.
 
 ## Interview: Legend von LegendOS
 
@@ -1112,31 +1113,21 @@ Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seid 1997. Erreic
 
 ## Kolumne: Technischer Fortschritt
 
-Neulich war ich mal wieder (wie in meinem Alter üblich) beim McDonalds im nächsten Kaff. Neben dem Eingang prangert da seit kurzem ein Schild mit der Aufschrift ?WLan Hotspot? von T-Online. Das macht mich irgendwie nachdenklich. Letztes Jahr hatte
+Neulich war ich mal wieder (wie in meinem Alter üblich) beim McDonalds im nächsten Kaff. Neben dem Eingang prangert da seit kurzem ein Schild mit der Aufschrift *WLan Hotspot* von T-Online. Das macht mich irgendwie nachdenklich. Letztes Jahr hatte ich in der Chip schon drüber gelesen dass McDonalds plant in den nächsten Jahren in Filialen in größeren Städten Hotspots einzurichten, aber Kaufbeuren (da wohne ich) ist alles andere als eine größere Stadt. Überhaupt ist der technische Fortschritt kaum mehr aufzuhalten. Letztes Jahr habe ich mir einen Palm gekauft, mit einer Wlan SD Karte könnte ich jetzt beim McChicken essen im Internet surfen (nicht dass ich das wollen würde, da ist das INet ausnahmsweise mal Nebensache ^^).
 
-    ich in der Chip schon drüber gelesen dass McDonalds plant in den nächsten Jahren in Filialen in größeren Städten Hotspots 
+Meinen ersten Kontakt mit Computer hatte ich vor etwas mehr als 10 Jahren. Mein Vater arbeitete damals auf einem 386 mit AutoCAD unter DOS. Das war dann knapp 2 Jahre später mein erster Computer, darauf lief sogar recht flüssig Windows 95. Wieder 2 Jahre später hab ich dann einen Pentium mit 166 Mhz, 48 MB Ram zu Weihnachten gekriegt (Auch gebraucht). Die sind nicht besonders alt, aber trotzdem ist mein Palm mit 400 Mhz wesentlich schneller (und kompakter). Unser ISDN Anschluss war mit 64 k/bit damals der absolute Renner, heute bringt ein Handy mit GPRS fast dieselbe Geschwindigkeit, mit UMTS sogar noch schneller.
 
-einzurichten, aber Kaufbeuren (da wohne ich) ist alles andere als eine ?größere Stadt?. Überhaupt ist der technische Fortschritt kaum mehr aufzuhalten. Letztes Jahr habe ich mir einen Palm gekauft, mit einer Wlan SD Karte könnte ich jetzt beim McChicken essen im Internet surfen (nicht dass ich das wollen würde, da ist das INet ausnahmsweise mal Nebensache ^^).
-
-    Meinen ersten Kontakt mit Computer hatte ich vor etwas mehr als 10 Jahren. Mein Vater arbeitete damals auf einem 386 mit
-    AutoCAD unter DOS. Das war dann knapp 2 Jahre später mein erster Computer, darauf lief sogar recht flüssig Windows 95. 
-
-Wieder 2 Jahre später hab ich dann einen Pentium mit 166 Mhz, 48 MB Ram zu Weihnachten gekriegt (Auch gebraucht). Die sind nicht besonders alt, aber trotzdem ist mein Palm mit 400 Mhz wesentlich schneller (und kompakter). Unser ISDN Anschluss
-
-    war mit 64 k/bit damals der absolute Renner, heute bringt ein Handy mit GPRS fast dieselbe Geschwindigkeit, mit UMTS sogar
-    noch schneller. Der Fortschritt ist nicht aufzuhalten, Computer nehmen eine immer größere Bedeutung in unserem Leben 
-
-ein, ohne sie wären wir heutzutage fast verloren, ich würde fast sagen dass sie uns beinahe kontrollieren. Eins sollten wir dabei nicht vergessen: Unsere Identität und das Real Life, also steht nach dem Genuss dieser Lowlevel Ausgabe auf (Natürlich nachdem Ihr das Schlusswort gelesen habt) und macht einen langen Spaziergang. Vielleicht hilft die frische
-
-Luft bei der Lösungsfindung zu einem Problem ^-^.
+Der Fortschritt ist nicht aufzuhalten, Computer nehmen eine immer größere Bedeutung in unserem Leben ein, ohne sie wären wir heutzutage fast verloren, ich würde fast sagen dass sie uns beinahe kontrollieren. Eins sollten wir dabei nicht vergessen: Unsere Identität und das Real Life, also steht nach dem Genuss dieser Lowlevel Ausgabe auf (Natürlich nachdem Ihr das Schlusswort gelesen habt) und macht einen langen Spaziergang. Vielleicht hilft die frische Luft bei der Lösungsfindung zu einem Problem ^-^.
 
 ## Bericht ausm Forum
 
-Die Frage, die uns seid längerem beschätigt ist die, wie es nun weiter geht mit dem Lowlevel-Magazin. Dieses Thema wird schon seid einiger Zeit im Forum heftig diskuttiert und man ist zu der Meinung gekommen das man ein Team bildet, welches sich nur zur Aufgabe macht Lowlevel-Magazin Folgen herauszubringen, die qualitativ hochwertig sind und aber auch nicht all zu lange auf sich warten lassen. Ein Mitglied (joachim_neu) hat deswegen schonmal einen Konzept auf die Beine gestellt, welches meiner Meinung doch schon ein recht gutes ist. Zudem denke ich auch, dass es den meisten Mitgliedern im Grossen und Ganzen gefallen hat. Sicherlich lassen sich da noch einige Ã„nderung machen lassen trotzdem ich denke dieses Mitglied hat doch schonmal den Stoss in die richtige Richtung gemacht.
+Die Frage, die uns seit längerem beschätigt ist die, wie es nun weiter geht mit dem Lowlevel-Magazin. Dieses Thema wird schon seid einiger Zeit im Forum heftig diskuttiert und man ist zu der Meinung gekommen das man ein Team bildet, welches sich nur zur Aufgabe macht Lowlevel-Magazin Folgen herauszubringen, die qualitativ hochwertig sind und aber auch nicht all zu lange auf sich warten lassen. Ein Mitglied (joachim_neu) hat deswegen schonmal einen Konzept auf die Beine gestellt, welches meiner Meinung doch schon ein recht gutes ist. Zudem denke ich auch, dass es den meisten Mitgliedern im Grossen und Ganzen gefallen hat. Sicherlich lassen sich da noch einige Ã„nderung machen lassen trotzdem ich denke dieses Mitglied hat doch schonmal den Stoss in die richtige Richtung gemacht.
 
-Während diesen Diskussionen kam man auf die Idee ein Projekt zu machen, in dem Teil für Teil ein Betriebssystem entsteht. Es soll sowohl Neulinge den Weg des OS-Developing zeigen als auch erfahrenen Programmierern vielleicht die ein oder andere Idee für sein eigenes OS geben. Dieses Projekt nannte man "commOS". Natürlich gab es dazu verschiedene Meinungen. Die einen sind hell auf begeistert und wollen sich auch gerne daran beteiligen, die anderen gehen diesem Projekt eher mit Skepsis entgegen, weil sie befürchten, dass die Anfänger nicht direkt draus lernen sondern einfach den dazugehörigen Quellcode einfach bei sich zu einem OS zusammenstellen aber dabei nichts über die eigentliche Sache lernen und verstehen. Dabei ist nun auch die Frage entstanden, ob man diese Projekt in das eigentliche Lowlevel-Magazin einfliessen lassen sollte. Ich persönlich denke, dass man dieses Projekt als eine Einzelkategorie in das Magazin mit einfliessen lassen sollte. Meiner Meinung nach bekommt man dadurch einen zusätzlichen Ansporn das Magazin weiter zu führen und das Magazin bekommt einen neuen Touch und reizt auch viele Leser zum Lesen auf. Nun ja, urteilt selber und schreibt eure Meinungen dazu, wie es
+Während diesen Diskussionen kam man auf die Idee ein Projekt zu machen, in dem Teil für Teil ein Betriebssystem entsteht. Es soll sowohl Neulinge den Weg des OS-Developing zeigen als auch erfahrenen Programmierern vielleicht die ein oder andere Idee für sein eigenes OS geben. Dieses Projekt nannte man "commOS".
 
-mit dem Magazin und den "CommOS" weitergehen sollte.
+Natürlich gab es dazu verschiedene Meinungen. Die einen sind hell auf begeistert und wollen sich auch gerne daran beteiligen, die anderen gehen diesem Projekt eher mit Skepsis entgegen, weil sie befürchten, dass die Anfänger nicht direkt draus lernen sondern einfach den dazugehörigen Quellcode einfach bei sich zu einem OS zusammenstellen aber dabei nichts über die eigentliche Sache lernen und verstehen. Dabei ist nun auch die Frage entstanden, ob man diese Projekt in das eigentliche Lowlevel-Magazin einfliessen lassen sollte.
+
+Ich persönlich denke, dass man dieses Projekt als eine Einzelkategorie in das Magazin mit einfliessen lassen sollte. Meiner Meinung nach bekommt man dadurch einen zusätzlichen Ansporn das Magazin weiter zu führen und das Magazin bekommt einen neuen Touch und reizt auch viele Leser zum Lesen auf. Nun ja, urteilt selber und schreibt eure Meinungen dazu, wie es mit dem Magazin und den "CommOS" weitergehen sollte.
 
 ## Vermischtes: Meilensteine in der Geschichte von DOS/Windows
 
@@ -1162,9 +1153,7 @@ So, das war die 7. Ausgabe des Magazins. Sie ist meiner Meinung nach relativ umf
 
 ### Impressum
 
-Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spiegeln nicht unbedingt die Meinung der Redaktion wieder. Jeder Redakteur ist für seinen eigenen Beitrag verantwortlich. Zugehörigkeiten entnehmen Sie bitte der Tabelle. Wir bemühen uns nach bestem Wissen unserem Leser nur richtige Informationen zu bieten, jedoch können wir dies nicht garantieren. Jeder in dieser Ausgabe aufgeführte Code ist unter eigener Gefahr zu benutzen und der Ersteller kann nicht für entstehende Schäden zur Haftung gebracht werden. Jede mit diesem Schriftstück verlinkte Seite wird von uns ausgesucht und eingesehen, jedoch haben wir auf sie keinen Einfluss, und somit distanzieren wir uns hiermit von allen
-
-rechtswidrigen Schriften auf verlinkten Seiten.
+Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spiegeln nicht unbedingt die Meinung der Redaktion wieder. Jeder Redakteur ist für seinen eigenen Beitrag verantwortlich. Zugehörigkeiten entnehmen Sie bitte der Tabelle. Wir bemühen uns nach bestem Wissen unserem Leser nur richtige Informationen zu bieten, jedoch können wir dies nicht garantieren. Jeder in dieser Ausgabe aufgeführte Code ist unter eigener Gefahr zu benutzen und der Ersteller kann nicht für entstehende Schäden zur Haftung gebracht werden. Jede mit diesem Schriftstück verlinkte Seite wird von uns ausgesucht und eingesehen, jedoch haben wir auf sie keinen Einfluss, und somit distanzieren wir uns hiermit von allen rechtswidrigen Schriften auf verlinkten Seiten.
 
 **Artikel:**
 
@@ -1202,6 +1191,6 @@ rechtswidrigen Schriften auf verlinkten Seiten.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1819; parent 1818; 2007-02-25T12:28:51Z -->
+<!-- MediaWiki page 1494; revision 1820; parent 1819; 2007-02-25T12:37:56Z -->
