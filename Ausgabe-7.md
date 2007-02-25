@@ -32,7 +32,7 @@ In diesem Tutorial möchte ich jedem, der gewillt ist, Multitasking in seinem Be
 
 In diesem Tutorial werde ich zuerst auf die verschiedenen Formen von Multitasking und einen Teil der Theorie, und danach auf TSS-Multitasking speziell eingehen. Ich hoffe es macht Spaß und wünsche nun viel Verknügen.
 
-### 2. Überblick
+### Überblick
 
 Bei Multitasking gibt es 2 wichtige Teile, die man immer braucht. Der erste Teil ist eine Tabelle, in der alle Tasks aufgelistet sind. Im zweiten Teil wird der aktuelle Taskzustand gespeichert. Es ist wichtig, dass der Computer alle Inhalte der CPU-Register speichert, sodass das Programm vom Taskwechsel nichts merkt und davon nicht beeinflusst wird.  
 Und genau hier setzten die Unterschiede ein. Bei hardwarebasiertem Multitasking speichert die CPU den Registerzustand automatisch in einer anderen Tabelle, dem TSS genannten TaskStateSegment. Beim softwarebasierenden Multitasking wird dieses Speichern vom Betriebssystem vorgenommen und erfolgt meist auf dem programmeigenen Stack. Daraus resultierend entstehen auch Unterschiede der ersten Tabelle.
@@ -45,11 +45,9 @@ Es gibt zwei verschiedene Versionen von Multitasking, kooperatives und preemtive
 
 Da wir uns jedoch um Multitasking auf Hardwareebene kümmern wollen, werde ich hier den Aufbau eines TaskStateSegments schildern. Den Aufbau werde ich später noch in einer Tabelle verdeutlichen, jedoch werde ich davor noch wichtige Informationen erleutern. Dadurch, dass es äußerst unsicher währe, den Stack im Userbereich zu belassen, wenn man ein Systeminterrupt oder Systemcall aufruft, da später diese Informationen ausgelesen werden könnten und sowieso Daten im Privileglevel 3 nicht sonderbar geschützt sind, wurden im TaskStateSegment Datenbereiche für Stackdaten eingerichtet. Da der Protected Mode über 4 Privileglevel (0-3) verfügt, Level-3-Daten jedoch sowieso ungeschützt sind, braucht man dafür keinen eigenen Stack, sondern kann den User-Stack benutzen. Es existieren also 3 zusätzliche Stacks, für Privileglevel 0,1 und 2, für die man auch Speicherplatz für die SS-Register und ESP-Register braucht, welcher als SS0, SS1, SS2, ESP0, ESP1 und ESP2 bezeichnet wird. Nun hier aber der Aufbau:
 
-\<img src="![3_1.png](http://www.joachim-neu.de/public/lowlevel/7/3_1.png)" alt="TSS-Aufbau"\>  
+![3_1.png](http://www.joachim-neu.de/public/lowlevel/7/3_1.png)
 
-  
-
-So. Nun werde ich den Aufbau genauer Erklären. Die gelb hinterlegten Einträge beizeichnen das Offset des Eintrags zum Beginn der Tabelle. Alle rot hinterlegten Einträge haben den Wert â€ž0â€œ und sollten den auch beinhalten. Alle blau hinterlegten Einträge bezeichnen vom Programm beeinflussbare Einträge. Alle lila hinterlegten Einträge müssen vom Betriebssystem gesetzt werden und sind nicht vom Programm beeinflussbar. Alle grün hinterlegten Bereiche werden automatisch gesetzt. Alle orange
+So. Nun werde ich den Aufbau genauer Erklären. Die gelb hinterlegten Einträge beizeichnen das Offset des Eintrags zum Beginn der Tabelle. Alle rot hinterlegten Einträge haben den Wert 0 und sollten den auch beinhalten. Alle blau hinterlegten Einträge bezeichnen vom Programm beeinflussbare Einträge. Alle lila hinterlegten Einträge müssen vom Betriebssystem gesetzt werden und sind nicht vom Programm beeinflussbar. Alle grün hinterlegten Bereiche werden automatisch gesetzt. Alle orange
 
 hinterlegten Bereiche stehen frei zur Verfügung. Jetzt werde ich die warscheinlich noch unklaren Bereiche erklären. ESPn und SSn hab ich vorher schon erleutert. In BackLink speichert die CPU bei einem Interruptaufruf, bei dem ein TaskGate in der IDT angegeben wurde, die Deskriptornummer des Auslösertasks. Zu diesem kehrt sie bei gesetztem NT-Flag im Flagregister mit einem IRET zurück. Die Bereiche, die die Namen der Register tragen dürften klar sein. Beim Eintrag *I/O Port Bitmap Base* wird das Offset einer Tabelle angegeben, die angibt, auf welche Portadressen der Task Zugriff hat. Bei dem Wert 0 ist diese deaktiviert, sodass der Zugriff alleine durch das IOPL im Flagregister gesteuert ist. Dann ist da noch das T-Flag. Ist dieses gesetzt, so wird nach jedem Taskwechsel zu diesem Task ein Interrupt 1 ausgelöst. Der Bereich nach der Adresse 0x68 steht dem Systemprogrammierer frei zur Verfügung. Das Limit eines TSS muss also mindestens 0x68 betragen. Nach der eigendlichen TSS-Tabelle ist dann Platz für die I/O-Port-Tabelle oder Werte, die das System vom Task noch braucht und nicht in der Task-Tabelle speichern will. Wie ich schon sagte braucht jeder Task ein TSS und dies muss in der GDT eingetragen werden. Ein TSS hat als die 4 Typ-Bits den Wert 1001 als Binärzahl. Dies ist der Aufbau eines TSS-Deskriptors:
 
@@ -83,17 +81,20 @@ Wenn ein Task aktiviert wird, so wird sein *Typ*-Feld mit dem Wert *1011* als Bi
 
 Desweiteren braucht man noch, wie besprochen, eine Tabelle, die die Deskriptornummern und TaskIDs speichert. Auch der Status wird dort oft gespeichert, da das System ihn braucht, um zum Beispiel pausierte Tasks zu übergehen, und es umständlich währe, diesen Wert erst aus dem TSS zu lesen, zumal dies nicht als Daten- Segment lesbar ist, was heißt, dass man erst den Platz im Speicher finden und dann über ein anderes Segment auslesen müsste. Außerdem beinhaltet er oft noch eine TaskID, damit man den Task nicht über seine TSS-Nummer identifizieren muss. Da man maximal 8192 TSSs haben kann (maximale Größe der GDT ist 0x10000), allerdings aber noch ein paar Einträge fürs System abgehen, reicht ein Word zum Speichern der TaskID und TSS-Nummer. Als Statusbereich dürfte auch ein Word (16 Bits) reichen. Auch in dieser Tabelle ist eine Zeile ein Word.
 
-\<img src="![3_3.png](http://www.joachim-neu.de/public/lowlevel/7/3_3.png)" alt="Task-Tabelle"\>
+![3_3.png](http://www.joachim-neu.de/public/lowlevel/7/3_3.png)
 
-Es gibt 2 Möglichkeiten, das Ende dieser Tabelle aus Task-Tabellen-Einträgen zu finden. 1. Man speichert in einer Variable, wie viele Einträge man hat und überprüft das aktuelle und das maximale Offset, um einen WrapArround (beim Anfang anfangen) zu vollziehen. 2. Man gibt am Ende der Tabelle dem nächsten leeren Eintrag die ID 0xFFFF oder ein sonstiges "Endezeichen" und führt einen WrapAround aus, sobald man als ID den Wert des Endezeichens gefunden hat.
+Es gibt 2 Möglichkeiten, das Ende dieser Tabelle aus Task-Tabellen-Einträgen zu finden.
 
-Das war eigendlich schon das Wichtigste über die Task-Tabelle.
+1.  Man speichert in einer Variable, wie viele Einträge man hat und überprüft das aktuelle und das maximale Offset, um einen WrapArround (beim Anfang anfangen) zu vollziehen.
+2.  Man gibt am Ende der Tabelle dem nächsten leeren Eintrag die ID 0xFFFF oder ein sonstiges "Endezeichen" und führt einen WrapAround aus, sobald man als ID den Wert des Endezeichens gefunden hat.
+
+Das war eigentlich schon das Wichtigste über die Task-Tabelle.
 
 ### TaskGates
 
 Außerdem gehören zu TSS-Multitasking noch TaskGates. TaskGates kann man sowohl in der GDT als auch in der IDT eintragen. Wenn man sie an erste Stelle stellt, so wird der durch das TaskGate angegebene Task bei der 0. Exception gestartet. Ebenso ist es bei allen anderen Interrupts und/oder Exceptions. Ein TaskGate ist wie folgt aufgebaut: (wieder ist jede Zeile ein Word)
 
-\<img src="![3_4.png](http://www.joachim-neu.de/public/lowlevel/7/3_4.png)" alt="Taskgate"\>
+![3_4.png](http://www.joachim-neu.de/public/lowlevel/7/3_4.png)
 
 Alle Bereiche, die *Reserviert* sind, sollten den Wert 0 beinhalten. Im Bereich *TSS-Deskriptor-Nummer* wird der Deskriptor festgehalten, auf den das TaskGate verweist.
 
@@ -115,11 +116,15 @@ Und hier setzt auch schon der Scheduler an. Während der Dispatcher nur die Task
 
 Dies ist einer der umfangreichsten Punkte und der schwierigste, so meinen Experten. Das Problem sei ihrer Meinung nach nicht das Wechseln der Tasks sondern das Auswählen des Tasks, welcher als nächstes zu bearbeiten ist. Ich bin allerdings der Meinung, dass das Problem anfangs eher das Wechseln an sich ist, weshalb man sich nicht mit warscheinlichkeitsberechnenden Algorithmen rumschlagen sollte, sondern sich anfangs mit dem einfachsten Verfahren abgeben sollte, einfach den nächsten Task zu nehmen, der in der Tabelle kommt. Allgemein werden an eine Scheduling Strategie folgende Anforderungen gestellt:
 
-1\. Sie muss fair sein, was heißt, dass alle Tasks von Grund auf gleich zu behandeln sind, sodass kein Task ständig dran kommt und kein Task nie dran kommt. 2. Sie darf nicht zu komplex sein, sodass siche die CPU mehr mit dieser als mit den Tasks beschäftigen würde. 3. Sie muss unabhängig sein, das heißt, sie darf nicht mit der Anzahl der Tasks zusammenhängen, zum Beispiel nur bei 5 laufenden Tasks funktionieren. 4. Sie sollte berechenbar sein, also nicht auf Zufallswerten basieren oder auf jedem System anderst funktionieren. 5. Sie darf nicht beeinflussbar oder manipulierbar sein.
+1.  Sie muss fair sein, was heißt, dass alle Tasks von Grund auf gleich zu behandeln sind, sodass kein Task ständig dran kommt und kein Task nie dran kommt.
+2.  Sie darf nicht zu komplex sein, sodass siche die CPU mehr mit dieser als mit den Tasks beschäftigen würde.
+3.  Sie muss unabhängig sein, das heißt, sie darf nicht mit der Anzahl der Tasks zusammenhängen, zum Beispiel nur bei 5 laufenden Tasks funktionieren.
+4.  Sie sollte berechenbar sein, also nicht auf Zufallswerten basieren oder auf jedem System anderst funktionieren.
+5.  Sie darf nicht beeinflussbar oder manipulierbar sein.
 
-Es gibt viele verschiedene Strategien. Die einen benutzen Prioritätsstufen zum Einteilen der Tasks, andere benutzen die Länge der Tasks. Bei Prioritätseinteilungen gibt es entweder die Möglichkeit, den Tasks die Prioritäten nach ihrem Einsatzbereich (Treiber, Programm,...) zu geben, und dadurch zum Beispiel den Treibern mehr Rechenzeit zuzuteilen, oder aber das Privileglevel zu erhöhen, wenn der Task sich selber pausiert und damit anderen den Vortritt lässt, wenn er gerade keine Rechenzeit benötigt. Sehr häufige Scheduling Strategien sind *Round Robin*, *First Task First* und *Shortest* Time Left*. Diese und einige andere werde ich nun ein bisschen erleutern:*
+Es gibt viele verschiedene Strategien. Die einen benutzen Prioritätsstufen zum Einteilen der Tasks, andere benutzen die Länge der Tasks. Bei Prioritätseinteilungen gibt es entweder die Möglichkeit, den Tasks die Prioritäten nach ihrem Einsatzbereich (Treiber, Programm,...) zu geben, und dadurch zum Beispiel den Treibern mehr Rechenzeit zuzuteilen, oder aber das Privileglevel zu erhöhen, wenn der Task sich selber pausiert und damit anderen den Vortritt lässt, wenn er gerade keine Rechenzeit benötigt. Sehr häufige Scheduling Strategien sind *Round Robin*, *First Task First* und *Shortest* Time Left*. Diese und einige andere werde ich nun ein bisschen erläutern:*
 
-### =Round Robin
+### Round Robin
 
 Bei Round Robin werden alle Tasks in einer Kette hintereinander abgearbeitet und jeder bekommt die gleiche Rechenzeit. Wenn man Prioritäten benutzt, so hat man mehrere Task-Tabellen nach denen man die Tasks aussucht. Die andere Möglichkeit ist, dass es jedes Prioritätlevel nur einmal gibt und ein Task beim Erhöhen seines Levels einfach mit seinem direkten oberen Nachbarn tauscht, und dadruch nach oben kommt.
 
@@ -141,7 +146,9 @@ Das waren auch schon die meiner Meinung nach wichtigsten. Es steht jedem frei, w
 
 Nun aber zum meiner Meinung kompliziertesten Punkt der Praxis, dem Wechsel selber. Das Implementieren eines Round-Robin-Schedulers sollte nicht alzu schwer gewesen sein, aber der Wechsel hat es in sich, er ist der schwierigste Teil, den ich zu bewältigen hatte, als ich TSS für mein Betriebssystem implementierte. Zuerst möchte ich schildern, wodurch ein Taskwechsel an sich ausgelöst wird. Es gibt mehrere Möglichkeiten:
 
-1\. Ein Far-Jump oder Far-Call bei dem als Selektor ein TSS angegeben wird. Der Offsetteil wird hierbei ignoriert. 2. Ein IRET nachdem ein Task durch ein TaskGate in der IDT aufgerufen wird, also das NT-Flag gesetzt ist. 3. Ein Far-Jump oder Far-Call auf ein Task-Gate. Auch hier wird der Offsetteil ignoriert.
+1.  Ein Far-Jump oder Far-Call bei dem als Selektor ein TSS angegeben wird. Der Offsetteil wird hierbei ignoriert.
+2.  Ein IRET nachdem ein Task durch ein TaskGate in der IDT aufgerufen wird, also das NT-Flag gesetzt ist.
+3.  Ein Far-Jump oder Far-Call auf ein Task-Gate. Auch hier wird der Offsetteil ignoriert.
 
 Es gibt also 2 Möglichkeiten:
 
@@ -276,11 +283,15 @@ Damit dieser Code richtig geht brauchen wir aber auch einen Task, der gerade lä
 
 Jetzt habe ich zu Schluss noch ein paar Tipps zum Programmieren von Multitasking und zum Programmieren allgemein.
 
-1\. Programmiere auf Sicherheit! Es geht nicht um einen Geschwindigkeitsrekord, sondern um ein stabiles Betriebssystem. Deswegen beachte und bedenke jeden Fehler, der auftreten könnte und richte Fehlerbehandlungen ein. Du musst sie nicht gleich rein Implementieren, aber schaffe (wenn auch nur leere) Funktionen dafür, die du später erweitern kannst. Somit hast du ein sicheres Gerüst und gerätst nicht in die Falle, dass ein Code nicht geht, weil ein unerwarteter Fehler aufgetreten ist.  
-2. Schreibe nicht alles ab! Code den Code selber. Es wird dir helfen, das Zeug zu verstehen und eigener Code lässt sich besser ins System integrieren.  
-3. Entscheide dich fest für ein System und mach keine Abstriche. Versuche deine Gedanken durchzusetzen und gib' nicht auf, blos, weil was nicht klappt.  
-4. Achte auch die Optimierung deines Codes. Schon kleine Teile könnte vieles verschnellern und dein System sollte das Minimum an Leistung verbrauchen.  
-5. Halte alles Modular, sprich baue auch für deinen Scheduler eine Funktion. Das wird es später erleichtern, die Funktion auszutauschen, wenn du eine andere Strategie verwenden willst. 6. Und als letztes: Kommentiere deinen Code gut. Gerade in Assembler ist das sehr wichtig.
+1.  Programmiere auf Sicherheit! Es geht nicht um einen Geschwindigkeitsrekord, sondern um ein stabiles Betriebssystem. Deswegen beachte und bedenke jeden Fehler, der auftreten könnte und richte Fehlerbehandlungen ein. Du musst sie nicht gleich rein Implementieren, aber schaffe (wenn auch nur leere) Funktionen dafür, die
+
+du später erweitern kannst. Somit hast du ein sicheres Gerüst und gerätst nicht in die Falle, dass ein Code nicht geht, weil ein unerwarteter Fehler aufgetreten ist.
+
+1.  Schreibe nicht alles ab! Code den Code selber. Es wird dir helfen, das Zeug zu verstehen und eigener Code lässt sich besser ins System integrieren.
+2.  Entscheide dich fest für ein System und mach keine Abstriche. Versuche deine Gedanken durchzusetzen und gib nicht auf, bloß, weil was nicht klappt.
+3.  Achte auch die Optimierung deines Codes. Schon kleine Teile könnte vieles verschnellern und dein System sollte das Minimum an Leistung verbrauchen.
+4.  Halte alles Modular, sprich baue auch für deinen Scheduler eine Funktion. Das wird es später erleichtern, die Funktion auszutauschen, wenn du eine andere Strategie verwenden willst.
+5.  Und als letztes: Kommentiere deinen Code gut. Gerade in Assembler ist das sehr wichtig.
 
 Tja, das waren auch schon meine Tipps.
 
@@ -290,137 +301,133 @@ Wir sind nun schon am Ende dieses Tutorials angelangt. Es ist etwas lang geworde
 
 ermuntern, sich bei mir zu melden. Ich helfe, so gut ich kann. Meine Kontaktdaten gibt es im Impressum.
 
-## \<a name="Designtechnisches"\>\</a\>Designtechnisches
+## Designtechnisches: Multitasking
 
-Multitasking
+### Einleitung
 
-  
-**0.Inhaltsangabe**  
-0.Inhaltsangabe 1.Einleitung 2.Grundlagen 3.Softwaretasking 4.Hardwaretasking 5.Schluss  
-**1.Einleitung**  
-Dies ist eine Abwägung zwischen zwe Designideen. Ich will die beiden verschiedenen Möglichkeiten von Multitasking (hardwarebasierendes und softwarebasierendes) miteinander abwiegen. Dieser Text soll keine Antwort auf die Frage geben, welches Multitasking besser oder schlechter sei, sondern lediglich die verschiedenen Vor- und Nachteile aufzeigen und abwiegen.  
-**2.Grundlagen**  
-Was ist Multitasking? Dieser Text soll sich zwar darum nicht kümmern, trotzdem werde ich die grundlegendsten Grundlagen aufzeigen. Multitasking ist die Fähigkeit eines Betriebssystems, mehrere Programme, sogenannte Tasks gleichzeitig/parallel laufen zu lassen. Dies ist auf einem mehrprozessorigen System leicht zu verstehen, jeder Prozessor bekommt einen Task zugewiesen, was aber, wenn nur ein Prozessor vorhanden ist? Dann muss man diesen unter den verschiedenen Tasks aufteilen, de gerade bereit sind, ausgeführt zu werden. Man muss also den aktuellen Prozessorzustand speichern und den des nächsten Tasks laden. Wichtig dabei ist, dass alle Werte gespeichert werden, die einen Task beschreiben, also Registerinhalte, Flags, aktuelle Position im Code und so weiter. Der Task an sich darf davon nix merken, er darf nicht bemerken, dass er unterbrochen wurde oder, dass etwaige Register nicht die selben Werte wie vorher haben.  
-Es gibt zwei Verschiedene Methoden, Multitasking durchzuführen, kooperativ oder preemptiv. Kooperatives Multitasking besagt, dass das Programm die Kontrolle über den PC von alleine wieder an das Betriebssystem zurück gibt, welches diese dann neu verteilt, preemptives Multitasking besagt, dass dem Task die Kontrolle in bestimmten Zeitabständen vom System entzogen und neu verteilt wird. Meist wird heutzutage preemptives Multitasking verwendet, welches der Meinung aller nach das sicherste ist, weil es im heutigen Zeitalter der Viren und Trojaner sehr unsicher ist, einem Programm die Kontrolle zu übergeben, bis dieses sie selber zurück gibt. Zum regelmäßigen Entzug der CPU braucht man ein immer wiederkehrendes Ereigniss, welches die CPU auslöst und man ungestört nutzen kann. Dazu nimmt man den ersten Timer des PIC, der standartmäßig 18,2 mal pro Sekunde einen Takt auslöst, aber auch auf höhere Frequenzen programmiert werden kann. Dieser Timer löst immer IRQ 0 aus, welches das System umbiegen kann, und somit in regelmäßigen Abständen die Kontrolle über das System zurück erlangt.  
-Es gibt auch Mischformen zwischen preemptivem und kooperativem Multitasking, in welchen das System darauf setzt, dass das Programm die Kontrolle von alleine abgibt, dies aber über den Timer überwacht und notfalls einschreitet.  
-Ein Multitaskingsystem benötigt immer einen Interrupt, das die Kontrolle entzieht, einen Dispatcher, der den Status speichert und beim neuen wieder läd und einen Scheduler, der den Task auswählt, der als nächstes zu starten ist. Der Scheduler wählt diesen Task anhand der Scheduling Strategie aus.  
+Dies ist eine Abwägung zwischen zwe Designideen. Ich will die beiden verschiedenen Möglichkeiten von Multitasking (hardwarebasierendes und softwarebasierendes) miteinander abwiegen. Dieser Text soll keine Antwort auf die Frage geben, welches Multitasking besser oder schlechter sei, sondern lediglich die verschiedenen Vor- und Nachteile aufzeigen und abwiegen.
+
+### Grundlagen
+
+Was ist Multitasking? Dieser Text soll sich zwar darum nicht kümmern, trotzdem werde ich die grundlegendsten Grundlagen aufzeigen. Multitasking ist die Fähigkeit eines Betriebssystems, mehrere Programme, sogenannte Tasks gleichzeitig/parallel laufen zu lassen. Dies ist auf einem mehrprozessorigen System leicht zu verstehen, jeder Prozessor bekommt einen Task zugewiesen, was aber, wenn nur ein Prozessor vorhanden ist? Dann muss man diesen unter den verschiedenen Tasks aufteilen, de gerade bereit sind, ausgeführt zu werden. Man muss also den aktuellen Prozessorzustand speichern und den des nächsten Tasks laden. Wichtig dabei ist, dass alle Werte gespeichert werden, die einen Task beschreiben, also Registerinhalte, Flags, aktuelle Position im Code und so weiter. Der Task an sich darf davon nix merken, er darf nicht bemerken, dass er unterbrochen wurde oder, dass etwaige Register nicht die selben Werte wie vorher haben.
+
+Es gibt zwei verschiedene Methoden, Multitasking durchzuführen, kooperativ oder preemptiv. Kooperatives Multitasking besagt, dass das Programm die Kontrolle über den PC von alleine wieder an das Betriebssystem zurück gibt, welches diese dann neu verteilt, preemptives Multitasking besagt, dass dem Task die Kontrolle in bestimmten Zeitabständen vom System entzogen und neu verteilt wird. Meist wird heutzutage preemptives Multitasking verwendet, welches der Meinung aller nach das sicherste ist, weil es im heutigen Zeitalter der Viren und Trojaner sehr unsicher ist, einem Programm die Kontrolle zu übergeben, bis dieses sie selber zurück gibt. Zum regelmäßigen Entzug der CPU braucht man ein immer wiederkehrendes Ereigniss, welches die CPU auslöst und man ungestört nutzen kann. Dazu nimmt man den ersten Timer des PIC, der standartmäßig 18,2 mal pro Sekunde einen Takt auslöst, aber auch auf höhere Frequenzen programmiert werden kann. Dieser Timer löst immer IRQ 0 aus, welches das System umbiegen kann, und somit in regelmäßigen Abständen die Kontrolle über das System zurück erlangt.  
+Es gibt auch Mischformen zwischen preemptivem und kooperativem Multitasking, in welchen das System darauf setzt, dass das Programm die Kontrolle von alleine abgibt, dies aber über den Timer überwacht und notfalls einschreitet.
+
+Ein Multitaskingsystem benötigt immer einen Interrupt, das die Kontrolle entzieht, einen Dispatcher, der den Status speichert und beim neuen wieder läd und einen Scheduler, der den Task auswählt, der als nächstes zu starten ist. Der Scheduler wählt diesen Task anhand der Scheduling Strategie aus.
+
 Die Unterschiede zwischen Softwaretasking und Hardwaretasking liegen lediglich im Dispatcher.
 
-  
-**3.Softwaretasking**  
-So, nun an die echte Arbeit. Softwaretasking. Beim softwarebasierenden Tasking setzt der Dispatcher darauf, den aktuellen Taskstatus auf dem taskeigenen Stack, dem Stapelspeicher zu speichern und später wieder von diesem zu laden. Verfechter dieser Methode behaupten, dass Softwaretasking 300% schneller im Vergleich zu Hardwaretasking sei, was sicherlich ein großer Vorteil ist. Obgleich muss jeder zugeben, dass dies in der heutigen Zeit von immer weiter wachsender Rechenleistung kein sehr großer Vorteil mehr ist, und trotzdem werde ich ihn als einen solchen einordnen. Ein weiterer Vorteil ist ebenfalls, dass man sich wenig um die Positionen der Daten im Speicher kümmern muss, da diese sich immer auf den Stacks befinden. Einen großen Nachteil hingegen sehe ich ebenfalls darin. Sollte man beispielsweise beabsichtigen, für Programme auch den freien Zugriff auf die FPU zu gestatten, so müsste man deren Status auf dem Stack sichern, wozu man allerdings die exakte Position und Größe kennen müsste, damit man dann dort drauf den Status der FPU speichern könnte, was allerdings zu Verwirrungen mit (E)SP und SS führen würde. Ein weiteres Manko besteht darin, dass man SS und (E)SP ständig kennen muss, und es dem Programm damit also nicht frei steht, seinen eigenen Stack festzulegen. Alles in allem ist Softwaretasking ein einfaches System, mit dem man schnell die Grundlagen von Multitasking erfüllen kann. Kompliziert wird es allerdings, wenn man das Konzept ausbauen und verfeinern will. Außerdem kommt man nie ganz um TSS rum, auch bei Softwaretasking braucht man mindestens ein TaskStateSegment.  
-Auch stehen viele Funktionen des Protected Mode erst mit TSS richtig zur Verfügung, man denke an das explizite Sperren von Ports zum Beispiel. Aber auch deshalb verbraucht das Softwaretasking relativ wenig Speicher. Die Stacks können ausgelagert werden, sodass der Speicherverbrauch im RAM auf das Minimum reduziert wird und man kann auswählen, welche Informationen man speichern will, und welche nicht.  
+### Softwaretasking
 
+So, nun an die echte Arbeit. Softwaretasking. Beim softwarebasierenden Tasking setzt der Dispatcher darauf, den aktuellen Taskstatus auf dem taskeigenen Stack, dem Stapelspeicher zu speichern und später wieder von diesem zu laden. Verfechter dieser Methode behaupten, dass Softwaretasking 300% schneller im Vergleich zu Hardwaretasking sei, was sicherlich ein großer Vorteil ist. Obgleich muss jeder zugeben, dass dies in der heutigen Zeit von immer weiter wachsender Rechenleistung kein sehr großer Vorteil mehr ist, und trotzdem werde ich ihn als einen solchen einordnen. Ein weiterer Vorteil ist ebenfalls, dass man sich wenig um die Positionen der Daten im Speicher kümmern muss, da diese sich immer auf den Stacks befinden. Einen großen Nachteil hingegen sehe ich ebenfalls darin. Sollte man beispielsweise beabsichtigen, für Programme auch den freien Zugriff auf die FPU zu gestatten, so müsste man deren Status auf dem Stack sichern, wozu man allerdings die exakte Position und Größe kennen müsste, damit man dann dort drauf den Status der FPU speichern könnte, was allerdings zu Verwirrungen mit (E)SP und SS führen würde. Ein weiteres Manko besteht darin, dass man SS und (E)SP ständig kennen muss, und es dem Programm damit also nicht frei steht, seinen eigenen Stack festzulegen. Alles in allem ist Softwaretasking ein einfaches System, mit dem man schnell die Grundlagen von Multitasking erfüllen kann. Kompliziert wird es allerdings, wenn man das Konzept ausbauen und verfeinern will. Außerdem kommt man nie ganz um TSS rum, auch bei Softwaretasking braucht man mindestens ein TaskStateSegment.
+
+Auch stehen viele Funktionen des Protected Mode erst mit TSS richtig zur Verfügung, man denke an das explizite Sperren von Ports zum Beispiel. Aber auch deshalb verbraucht das Softwaretasking relativ wenig Speicher. Die Stacks können ausgelagert werden, sodass der Speicherverbrauch im RAM auf das Minimum reduziert wird und man kann auswählen, welche Informationen man speichern will, und welche nicht.
+
+|  |  |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | \+ | \- |
-| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Hohe Geschwindigkeit beim Taskwechsel.<br>Sehr einfach zu implementieren.<br>Wenig Platzverbraucht.<br><br> | Verwirrend wegen TSS.<br>Schwer zu erweitern.<br>Nicht alle Möglichkeiten des Protected Mode benutzbar.<br><br> |
+| • Hohe Geschwindigkeit beim Taskwechsel<br>• Sehr einfach zu implementieren<br>• Wenig Platzverbrauch<br> | • Verwirrend wegen TSS<br>• Schwer zu erweitern<br>• Nicht alle Möglichkeiten des Protected Mode benutzbar<br> |
 
-  
+### Hardwaretasking
 
-  
-**4.Hardwaretasking**  
-Hardwaretasking. Wie der Name schon sagt setzt das hardwarebasierende Multitasking auf die Möglichkeiten der CPU zum Speichern des aktuellen Taskzustandes. Dazu gibt es ab jedem 286er ein sogenanntes TaskStateSegment, in welchem die CPU den aktuellen Taskzustand speichert. Diese Methode nimmt dem Entwickler des Systems viel Arbeit ab, welche die CPU übernimmt. Die Aufgabe des Dispatchers beschränkt sich bei Hardwaretasking darauf, einen Sprung ins andere TSS zu machen, wodurch die CPU veranlasst wird, den aktuellen Status zu sichern und den neuen zu laden. Dies passiert alles automatisch und ohne Mithilfe des Programmierers, was sicherlich einer der Vorteile ist. Trotzdem ist genau dieser Sprung relativ komplex, da man sich mit den Opcodes auskennen muss und ihn mit einer eigenen Routine immer wieder zu ändern hat, da man für gewöhlich keinen variablen Sprung machen kann. Ebenso dauert das Wechseln etwas länger. Die CPU an sich sichert alle Register und wichtigen Inhalte, sodass ein TSS mindestens 104 Bytes an Speicher braucht. Außerdem gibt es in einem TSS viele Bereiche, die ungenutzt, reserviert sind. Dies ist sicher ein Manko an Hardwaretasking, da es immer unpraktisch ist, viel Speicher fest zu verbrauchen, den man nicht auslagern kann. Allerdings lässt sich ein TSS beliebig in die Länge ziehen wodurch man erreicht, dass man auch hinter die Registerinformationen zum Beispiel noch den FPU-Status sichern kann. Auch ist alles das gleiche, man braucht also nicht wie bei Softwaretasking noch irgendein Segment oder ähnliches, wobei man aber mindestens zwei Tasks braucht, die gerade laufen, da man sonst nicht wechseln kann, weil TSS-Tasks nicht reentrant sind, sprich man einen aktiven Task nicht wieder aktivieren kann.  
+Hardwaretasking. Wie der Name schon sagt setzt das hardwarebasierende Multitasking auf die Möglichkeiten der CPU zum Speichern des aktuellen Taskzustandes. Dazu gibt es ab jedem 286er ein sogenanntes TaskStateSegment, in welchem die CPU den aktuellen Taskzustand speichert. Diese Methode nimmt dem Entwickler des Systems viel Arbeit ab, welche die CPU übernimmt. Die Aufgabe des Dispatchers beschränkt sich bei Hardwaretasking darauf, einen Sprung ins andere TSS zu machen, wodurch die CPU veranlasst wird, den aktuellen Status zu sichern und den neuen zu laden. Dies passiert alles automatisch und ohne Mithilfe des Programmierers, was sicherlich einer der Vorteile ist. Trotzdem ist genau dieser Sprung relativ komplex, da man sich mit den Opcodes auskennen muss und ihn mit einer eigenen Routine immer wieder zu ändern hat, da man für gewöhlich keinen variablen Sprung machen kann. Ebenso dauert das Wechseln etwas länger. Die CPU an sich sichert alle Register und wichtigen Inhalte, sodass ein TSS mindestens 104 Bytes an Speicher braucht. Außerdem gibt es in einem TSS viele Bereiche, die ungenutzt, reserviert sind. Dies ist sicher ein Manko an Hardwaretasking, da es immer unpraktisch ist, viel Speicher fest zu verbrauchen, den man nicht auslagern kann. Allerdings lässt sich ein TSS beliebig in die Länge ziehen wodurch man erreicht, dass man auch hinter die Registerinformationen zum Beispiel noch den FPU-Status sichern kann. Auch ist alles das gleiche, man braucht also nicht wie bei Softwaretasking noch irgendein Segment oder ähnliches, wobei man aber mindestens zwei Tasks braucht, die gerade laufen, da man sonst nicht wechseln kann, weil TSS-Tasks nicht reentrant sind, sprich man einen aktiven Task nicht wieder aktivieren kann.
 
+- Verbraucht viel Platz
+- Taskwechsel dauert relativ lange
+- Komplizierter Taskwechsel mit Opcodes
+
+|  |  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ----- |
 | \+ | \- |
-| ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Die CPU nimmt viele Aufgaben ab.<br>Man kann alle Möglichkeiten des PM ausschöpfen.<br>Lässt sich leicht erweitern.<br><br> | Verbraucht viel Platz.<br>Taskwechsel dauert relativ lange.<br>Komplizierter Taskwechsel mit Opcodes.<br><br> |
+| • Die CPU nimmt viele Aufgaben ab<br>• Man kann alle Möglichkeiten des PM ausschöpfen<br>• Lässt sich leicht erweitern<br> |  |
 
-  
+### Schluss
 
-  
-**5.Schluss**  
+So, ich hoffe, ich hab mit dem Text hier einigen die Entscheidung zwischen Software- und Hardwaretasking erleichtert. Letztendlich liegt es nur am Programmierer selber, was er am liebsten mag. Bei Fragen bin ich auch wieder durch meine Kontaktdaten im Impressum erreichbar.
 
-So, ich hoffe, ich hab mit dem Text hier einigen die Entscheidung zwischen Software- und Hardwaretasking erleichtert. Letztendlich liegt es nur am Programmierer selber, was er am liebsten mag. Bei Fragen bin ich auch wieder durch meine
+## Architekturtechnisches: Datenveränderungen im RAM
 
-Kontaktdaten im Impressum erreichbar.
+### Einleitung
 
-## \<a name="Architekturtechnisches"\>\</a\>Architekturtechnisches
-
-Datenveränderungen im RAM
-
-**I.Einleitung**  
 Ich schreibe dieses Tutorial für Leute, die wie ich anfangs das Prinzip des Speicherns von Daten im RAM nicht verstehen. Dabei geht es nicht um Programmiersprachenbefehle, sondern viel mehr darum, was mit den Daten im RAM gemacht wird.
 
-    Dieses â€žPhänomenâ€œ kann man besonderst gut sehen, wenn man mal das DWORD 0x12345678 byteweise ausließt. Man erhält 
+    Dieses "Phänomen" kann man besonders gut sehen, wenn man mal das DWORD 0x12345678 byteweise ausließt. Man erhält 
 
-das hier: 0x78,0x56,0x34 und 0x12. Man stellt sich nun die Frage, warum dies so ist. Nun, vielleicht sind Ihnen BigEndian und LittleEndian ein Begriff. Falls nicht, werde ich dies erstmal erklären.  
-**II.BigEndian**  
-BigEndian ist eine Form, eine Zahl zu speichern. Bei dieser Form speichert man das wichtigste Bit (also das, das bei einer Veränderung die Zahl am meisten beeinflussen würde) an erster Stelle und danach die anderen, also das zweitwichtigste und so weiter. Dies ist das System, nach welchem auch wir unsere Zahlen darstellen. Die höchstwertigste Stelle als erstes.  
-**III.LittleEndian**  
+das hier: 0x78,0x56,0x34 und 0x12. Man stellt sich nun die Frage, warum dies so ist. Nun, vielleicht sind Ihnen BigEndian und LittleEndian ein Begriff. Falls nicht, werde ich dies erstmal erklären.
 
-LittleEndian ist das genaue Gegenteil von BigEndian. Es beginnt mit dem â€žlast significantâ€œ Bit, also dem unwichtigsten im Gegensatz zu dem â€žmost significantâ€œ Bit bei BigEndian. Das System von LittleEndian wird in der normalen Zahlenwelt der Menschen nicht benutzt. Jedoch benutzt es der Computer, da diese Art von Datenspeicherung ermöglicht, dass der Computer Zahlenwerte aus dem RAM lesen kann, ohne vorher deren Anzahl von Stellen zu kennen. Bei LittleEndian muss der PC nur Bit für Bit lesen und die Zahl, welche er davor hat mit 2 multiplizieren, um dann das neue Bit zu addieren. Bei BigEndian müsste der Computer wissen, wie viele Stellen die Zahl hat, um dem 1. Bit mit dem passenden Stellenwert zu multiplizieren.  
-**IV.Auflösung**  
-Da wir nun also geklärt haben, was Big- und LittleEndian sind und deren Aufbau, sowie deren Benutzung geklärt haben, können wir mit einem Beispiel fortfahren. Gegeben ist eine Zahl von der Größe WORD, also 16 Bit. Diese sieht so aus: 0001001000110100. In Hex besitzt sie den Wert 0x1234. Der Computer würde diese Zahl in dieser Bitfolge ablegen: 0010110001001000. Dies ergibt in Hex 0x2C48. Da wir nun aber als kleinste Einheit Byts lesen können würden wir diese Bytes erhalten: 0x34 und 0x12. Die beiden Bytes währen also vertauscht. Wenn man ein DWORD schreibt, und dies in Bytes ausließt, erhält man zuerst das letzte, dann das vorletzte, dann das zweite und dann das erste Byte.  
-**V.Einsatz**  
-Wichtig ist diese Kenntniss, wenn wir Tabellen, die wir sehr oft aus Tutorials bekommen in anderen Datentypen belegen und benutzen wollen, als vorgegeben. Wir müssen diese Phönomene erkennen und uns danach richten, damit wir immer die richtigen Stellen in einem Speicherteil benutzen.  
-**VI.Schluss**  
-So, das war auch schon alles, was ich dazu zu sagen hab. Ich hoffe, alles is klar geworden, falls nicht bin ich immer unter
+### BigEndian / LittleEndian
 
-meinen Kontaktdaten erreichbar. Diese stehen im Impressum.
+BigEndian ist eine Form, eine Zahl zu speichern. Bei dieser Form speichert man das wichtigste Bit (also das, das bei einer Veränderung die Zahl am meisten beeinflussen würde) an erster Stelle und danach die anderen, also das zweitwichtigste und so weiter. Dies ist das System, nach welchem auch wir unsere Zahlen darstellen. Die höchstwertigste Stelle als erstes.
 
-## \<a name="Hardwaretechnisches"\>\</a\>Hardwaretechnisches
+LittleEndian ist das genaue Gegenteil von BigEndian. Es beginnt mit dem â€žlast significantâ€œ Bit, also dem unwichtigsten im Gegensatz zu dem *most significant* Bit bei BigEndian. Das System von LittleEndian wird in der normalen Zahlenwelt der Menschen nicht benutzt. Jedoch benutzt es der Computer, da diese Art von Datenspeicherung ermöglicht, dass der Computer Zahlenwerte aus dem RAM lesen kann, ohne vorher deren Anzahl von Stellen zu kennen. Bei LittleEndian muss der PC nur Bit für Bit lesen und die Zahl, welche er davor hat mit 2 multiplizieren, um dann das neue Bit zu addieren. Bei BigEndian müsste der Computer wissen, wie viele Stellen die Zahl hat, um dem 1. Bit mit dem passenden Stellenwert zu multiplizieren.
 
-Der PC-Lautsprecher
+### Auflösung
 
-**1. Theorie:**  
+Da wir nun also geklärt haben, was Big- und LittleEndian sind und deren Aufbau, sowie deren Benutzung geklärt haben, können wir mit einem Beispiel fortfahren. Gegeben ist eine Zahl von der Größe WORD, also 16 Bit. Diese sieht so aus: 0001001000110100. In Hex besitzt sie den Wert 0x1234. Der Computer würde diese Zahl in dieser Bitfolge ablegen: 0010110001001000. Dies ergibt in Hex 0x2C48. Da wir nun aber als kleinste Einheit Byts lesen können würden wir diese Bytes erhalten: 0x34 und 0x12. Die beiden Bytes währen also vertauscht. Wenn man ein DWORD schreibt, und dies in Bytes ausließt, erhält man zuerst das letzte, dann das vorletzte, dann das zweite und dann das erste Byte.
+
+### Einsatz
+
+Wichtig ist diese Kenntnis, wenn wir Tabellen, die wir sehr oft aus Tutorials bekommen in anderen Datentypen belegen und benutzen wollen, als vorgegeben. Wir müssen diese Phönomene erkennen und uns danach richten, damit wir immer die richtigen Stellen in einem Speicherteil benutzen.
+
+### Schluss
+
+So, das war auch schon alles, was ich dazu zu sagen hab. Ich hoffe, alles is klar geworden, falls nicht bin ich immer unter meinen Kontaktdaten erreichbar. Diese stehen im Impressum.
+
+## Hardwaretechnisches: Der PC-Lautsprecher
+
+### Theorie
+
 Wir werden jetzt zuerst ein bisschen Theorie machen und uns danach mit der Praxis beschäftigen. Der PC Lautsprecher wird über den Timer-Baustein angesteuert, der als Zeitgeber und Zähler fungiert. Der Timer-Baustein besteht intern aus 3 verschiedenen unabhängigen Timerkanälen, deren I/O-Ports die Adressen 40h (64d), 41h (65d) und 42h (66d) besitzen, sowie einem Kommandoregister mit der Adresse 43h (67d). Die I/O-Ports sind 8 Bit breit. Die ersten beiden Kanäle werden für die Systemzeit und für das Refreshing des RAMs verwendet. Der dritte Kanal ist mit dem PC-Lautsprecher verbunden. Veränderungen an den ersten beiden Kanälen könnten verhängnissvolle Folgen haben, weshalb im Code immer exakt geprüft werden sollte, ob die Port-Adressen stimmen.  
-Jeder dieser 3 Kanäle besitzt ein Latch-Register und ein Counter-Register, die beide 16 Bit breit sind, zwei Signaleingänge (CLOCK und GATE) sowie einen Signalausgang (OUT).  
-Jetzt zur Funktionsweise: Am Eingang CLOCK liegt eine konstante Frequenz von 1,19318 Mhz an. (Das heißt, dass vom Timer 1193180 mal pro Sekunde eins an den Eingang geschickt wird.) In das Latch-Register wird eine Zahl, der so genannte Teiler, geschrieben. Dieser Wert wird in das Counterregister übertragen und mit jedem Impuls am Eingang CLOCK um 1 dekrementiert. Wenn das Counter-Register den Wert 0 erreicht, wird ein Puls über Ausgang OUT geschickt. Nacheinander entsteht so bei Wiederholung eine Frequenz von 1193180/Teiler, die beim Lautsprecher ankommt, der das ganze dann in einen Ton umwandelt.  
-Das Kommandoregister wird zum Seuern dieses Bausteins mit dem Kommandobyte geladen, welches z.B. einstellt, welche Betriebsart gewählt wurde. Das Kommandobyte ist so aufgebaut:  
+Jeder dieser 3 Kanäle besitzt ein Latch-Register und ein Counter-Register, die beide 16 Bit breit sind, zwei Signaleingänge (CLOCK und GATE) sowie einen Signalausgang (OUT).
 
-\<img src="![6_1.png](http://www.joachim-neu.de/public/lowlevel/7/6_1.png)" alt="Kommandobyte"\>  
+Jetzt zur Funktionsweise: Am Eingang CLOCK liegt eine konstante Frequenz von 1,19318 Mhz an. (Das heißt, dass vom Timer 1193180 mal pro Sekunde eins an den Eingang geschickt wird.) In das Latch-Register wird eine Zahl, der so genannte Teiler, geschrieben. Dieser Wert wird in das Counterregister übertragen und mit jedem Impuls am Eingang CLOCK um 1 dekrementiert. Wenn das Counter-Register den Wert 0 erreicht, wird ein Puls über Ausgang OUT geschickt. Nacheinander entsteht so bei Wiederholung eine Frequenz von 1193180/Teiler, die beim Lautsprecher ankommt, der das ganze dann in einen Ton umwandelt.
 
-  
+Das Kommandoregister wird zum Seuern dieses Bausteins mit dem Kommandobyte geladen, welches z.B. einstellt, welche Betriebsart gewählt wurde. Das Kommandobyte ist so aufgebaut:
 
-Die Betriebsart bestimmt die Länge der Pulsfolge und, ob sie sich automatisch wiederholt usw. Der Code 011 bestimmt, dass eine Pulsfolge erzeugt wird, die zum Erzeugen von Tönen nützlich ist. Da die Ports ja nur 8 Bit breit sind, das Latch-Register aber 16 Bit, wird im Kommandobyte auch noch festgelegt, ob nur das High-Byte, nur das Low-Byte oder beide hintereinander (zuerst das Low-Byte, dann das High-Byte) bearbeitet werden sollen. Das 0.Bit legt fest, ob die Zahl im Kommandobyte binär- oder BCD-codiert lesen soll.  
-Hier ein Beispiel:  
+![6_1.png](http://www.joachim-neu.de/public/lowlevel/7/6_1.png)
 
-Das Kommandobyte 0xB6 = 10110110 stellt ein, dass:  
-â€“ der Timer-Kanal 2 programmiert werden soll,  
-â€“ erst das Low-und dann das High-Byte bearbeitet werden soll  
-â€“ eine symetrische Pulsfolge erzeugt werden soll,  
-â€“ das Kommandobyte binär zu interpretieren ist.  
-Die Programmierung des Timer-Bausteins erfolgt in 2 Schritten:  
-1. Kommandobyte in den Kommandoport schreiben, und dadurch die Anweisungen verteilen.  
-2. Teiler in den Port des augewählten Timer-Kanals schreiben.  
+Die Betriebsart bestimmt die Länge der Pulsfolge und, ob sie sich automatisch wiederholt usw. Der Code 011 bestimmt, dass eine Pulsfolge erzeugt wird, die zum Erzeugen von Tönen nützlich ist. Da die Ports ja nur 8 Bit breit sind, das Latch-Register aber 16 Bit, wird im Kommandobyte auch noch festgelegt, ob nur das High-Byte, nur das Low-Byte oder beide hintereinander (zuerst das Low-Byte, dann das High-Byte) bearbeitet werden sollen. Das 0.Bit legt fest, ob die Zahl im Kommandobyte binär- oder BCD-codiert lesen soll.
+
+Hier ein Beispiel: Das Kommandobyte 0xB6 = 10110110 stellt ein, dass...
+
+- der Timer-Kanal 2 programmiert werden soll,
+- erst das Low-und dann das High-Byte bearbeitet werden soll
+- eine symetrische Pulsfolge erzeugt werden soll,
+- das Kommandobyte binär zu interpretieren ist.
+
+Die Programmierung des Timer-Bausteins erfolgt in 2 Schritten:
+
+1.  Kommandobyte in den Kommandoport schreiben, und dadurch die Anweisungen verteilen.
+2.  Teiler in den Port des augewählten Timer-Kanals schreiben.
+
 So jetzt könnten wir zwar Töne ausgeben, aber wir müssen dazu zuerst noch den Lautsprecher anstellen (und später wieder ausstellen). Das ist ganz schlau geregelt. Der Lautsprecher ist über ein UND-Gatter, das heißt, dass am Ende nur 1 raus kommt, wenn beide Eingänge 1 haben, mit dem OUT-Ausgang des 2. Timer-Kanals und dem Ausgang des 1. Bits des Port B (0x61) im PPI (=Programmable Peripherical Interface) verbunden. Bit 0 des Port B im PPI ist mir dem GATEEingang des PPI-Ports B verbunden. Das heißt, es wird nur etwas ausgegeben, wenn das 1. Bit des Port B im PPI auf 1 und das 0. Bit auf 0 steht. Wenn beide Bits gelöscht sind, wird der Lautsprecher wieder ausgeschaltet. Das ist eigendlich schon die gesamte Theorie, kommen wir jetzt zur Praxis!
 
-  
-**2. Praxis:**  
+### Praxis
+
 Wir werden jetzt ein paar Funktionen für die Programmiersprache C zusammen entwickeln. Nebenher schreiben wir die Funktionen dann auch noch in Assembler. Also, fangen wir an, ich denke in C dürfte jeder die Funktionen â€žinp()â€œ und â€žoutp()â€œ schon für sein OS implementiert haben, weshalb ich darauf baue. Wir wissen, wir schalten den Lautsprecher an, indem die letzten 2 Bits in Port 0x61 auf 11b stehen. Daraus machen wir schnell eine Funktion:
 
-    <div id="title"><br></div>
     void switch_on()
     {
     outp(0x61,inp(0x61) | 3);
     }
 
-  
-
 Okay. In Assembler baue ich das schon alles mit in die \_sound-Funktion ein. So, an können wir ihn machen, nur aus noch nicht, aber wir wissen, wenn die beiden letzten Bits in Port 0x61 auf 00b stehen, dann ist der Lautsprecher aus. Das geht also ganz leicht:
 
-    <div id="title"><br></div>
     void switch_off()
     {
     outp(0x61,inp(0x61) &~3);
     }
 
-  
-
 Und in Assembler:
 
-    <div id="title"><br></div>
     _switch_off:
     IN AL,61h
     AND AL,11111100b
     OUT 61h,AL
     RET
 
-  
-
 Fertig. An und aus können wir ihn schon machen, aber das Herzstückt kommt noch! Einen Ton ausgeben. Das geht mit folgendem, diesmal zuerst in Assembler ;-):
-
-    <div id="title"><br></div>
 
     _sound:
     MOV AX,34DDH ;Die Frequenz wird in BX übergeben.
@@ -444,11 +451,8 @@ Fertig. An und aus können wir ihn schon machen, aber das Herzstückt kommt noch
     DONE1:
     RET
 
-  
-
 So, jetzt in C:
 
-    <div id="title"><br></div>
     void sound(unsigned frequenz)
     {
     unsigned teiler;
@@ -461,9 +465,8 @@ So, jetzt in C:
     //switch_off aufgerufen werden.
     }
 
-  
+### Schluss
 
-**3. Schluss:**  
 So, geschafft! Das waren die Geheimnisse des PC-Lautsprechers! Zwei Sachen muss beim Nachmachen noch beachtet werden: 1. Es muss zwischen den Tönen eine Funktion benutzt werden, die das Programm anhält, denn sonst werden die Töne viel zu schnell abgespielt, und man hört nichts. 2. Die Assembler-Funktionen kann man nicht so in C übernehmen. Dazu muss man sich noch um die C-Calling-Convention kümmern, und die Funktionen ein bisschen umbauen. Ich hoffe ich konnte alles so erklären, dass es verständlich war. Und die ein oder anderen Unklarheiten durch den letzten Praxisteil klären. Ich bedanke mich bei meinem C-Buch, aus dem ich die Informationen hab, bei ASHLEY4 aus dem FlatAssemblerForum (<http://board.flatassembler.net/>) für die Hilfe beim Code und bei allen anderen, die mir geholfen
 
 haben. Meine Kontaktdaten zum Melden bei Problemen finden sich im Impressum.
@@ -1228,6 +1231,6 @@ rechtswidrigen Schriften auf verlinkten Seiten.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1817; parent 1816; 2007-02-25T11:51:14Z -->
+<!-- MediaWiki page 1494; revision 1818; parent 1817; 2007-02-25T12:15:57Z -->
