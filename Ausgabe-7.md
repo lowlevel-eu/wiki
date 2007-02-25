@@ -283,15 +283,12 @@ Damit dieser Code richtig geht brauchen wir aber auch einen Task, der gerade lä
 
 Jetzt habe ich zu Schluss noch ein paar Tipps zum Programmieren von Multitasking und zum Programmieren allgemein.
 
-1.  Programmiere auf Sicherheit! Es geht nicht um einen Geschwindigkeitsrekord, sondern um ein stabiles Betriebssystem. Deswegen beachte und bedenke jeden Fehler, der auftreten könnte und richte Fehlerbehandlungen ein. Du musst sie nicht gleich rein Implementieren, aber schaffe (wenn auch nur leere) Funktionen dafür, die
-
-du später erweitern kannst. Somit hast du ein sicheres Gerüst und gerätst nicht in die Falle, dass ein Code nicht geht, weil ein unerwarteter Fehler aufgetreten ist.
-
-1.  Schreibe nicht alles ab! Code den Code selber. Es wird dir helfen, das Zeug zu verstehen und eigener Code lässt sich besser ins System integrieren.
-2.  Entscheide dich fest für ein System und mach keine Abstriche. Versuche deine Gedanken durchzusetzen und gib nicht auf, bloß, weil was nicht klappt.
-3.  Achte auch die Optimierung deines Codes. Schon kleine Teile könnte vieles verschnellern und dein System sollte das Minimum an Leistung verbrauchen.
-4.  Halte alles Modular, sprich baue auch für deinen Scheduler eine Funktion. Das wird es später erleichtern, die Funktion auszutauschen, wenn du eine andere Strategie verwenden willst.
-5.  Und als letztes: Kommentiere deinen Code gut. Gerade in Assembler ist das sehr wichtig.
+1.  Programmiere auf Sicherheit! Es geht nicht um einen Geschwindigkeitsrekord, sondern um ein stabiles Betriebssystem. Deswegen beachte und bedenke jeden Fehler, der auftreten könnte und richte Fehlerbehandlungen ein. Du musst sie nicht gleich rein implementieren, aber schaffe (wenn auch nur leere) Funktionen dafür, die du später erweitern kannst. Somit hast du ein sicheres Gerüst und gerätst nicht in die Falle, dass ein Code nicht geht, weil ein unerwarteter Fehler aufgetreten ist.
+2.  Schreibe nicht alles ab! Code den Code selber. Es wird dir helfen, das Zeug zu verstehen und eigener Code lässt sich besser ins System integrieren.
+3.  Entscheide dich fest für ein System und mach keine Abstriche. Versuche deine Gedanken durchzusetzen und gib nicht auf, bloß, weil was nicht klappt.
+4.  Achte auch die Optimierung deines Codes. Schon kleine Teile könnte vieles verschnellern und dein System sollte das Minimum an Leistung verbrauchen.
+5.  Halte alles Modular, sprich baue auch für deinen Scheduler eine Funktion. Das wird es später erleichtern, die Funktion auszutauschen, wenn du eine andere Strategie verwenden willst.
+6.  Und als letztes: Kommentiere deinen Code gut. Gerade in Assembler ist das sehr wichtig.
 
 Tja, das waren auch schon meine Tipps.
 
@@ -326,21 +323,17 @@ Auch stehen viele Funktionen des Protected Mode erst mit TSS richtig zur Verfüg
 
 |  |  |
 | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| \+ | \- |
+| Vorteile | Nachteile |
 | • Hohe Geschwindigkeit beim Taskwechsel<br>• Sehr einfach zu implementieren<br>• Wenig Platzverbrauch<br> | • Verwirrend wegen TSS<br>• Schwer zu erweitern<br>• Nicht alle Möglichkeiten des Protected Mode benutzbar<br> |
 
 ### Hardwaretasking
 
 Hardwaretasking. Wie der Name schon sagt setzt das hardwarebasierende Multitasking auf die Möglichkeiten der CPU zum Speichern des aktuellen Taskzustandes. Dazu gibt es ab jedem 286er ein sogenanntes TaskStateSegment, in welchem die CPU den aktuellen Taskzustand speichert. Diese Methode nimmt dem Entwickler des Systems viel Arbeit ab, welche die CPU übernimmt. Die Aufgabe des Dispatchers beschränkt sich bei Hardwaretasking darauf, einen Sprung ins andere TSS zu machen, wodurch die CPU veranlasst wird, den aktuellen Status zu sichern und den neuen zu laden. Dies passiert alles automatisch und ohne Mithilfe des Programmierers, was sicherlich einer der Vorteile ist. Trotzdem ist genau dieser Sprung relativ komplex, da man sich mit den Opcodes auskennen muss und ihn mit einer eigenen Routine immer wieder zu ändern hat, da man für gewöhlich keinen variablen Sprung machen kann. Ebenso dauert das Wechseln etwas länger. Die CPU an sich sichert alle Register und wichtigen Inhalte, sodass ein TSS mindestens 104 Bytes an Speicher braucht. Außerdem gibt es in einem TSS viele Bereiche, die ungenutzt, reserviert sind. Dies ist sicher ein Manko an Hardwaretasking, da es immer unpraktisch ist, viel Speicher fest zu verbrauchen, den man nicht auslagern kann. Allerdings lässt sich ein TSS beliebig in die Länge ziehen wodurch man erreicht, dass man auch hinter die Registerinformationen zum Beispiel noch den FPU-Status sichern kann. Auch ist alles das gleiche, man braucht also nicht wie bei Softwaretasking noch irgendein Segment oder ähnliches, wobei man aber mindestens zwei Tasks braucht, die gerade laufen, da man sonst nicht wechseln kann, weil TSS-Tasks nicht reentrant sind, sprich man einen aktiven Task nicht wieder aktivieren kann.
 
-- Verbraucht viel Platz
-- Taskwechsel dauert relativ lange
-- Komplizierter Taskwechsel mit Opcodes
-
 |  |  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ----- |
-| \+ | \- |
-| • Die CPU nimmt viele Aufgaben ab<br>• Man kann alle Möglichkeiten des PM ausschöpfen<br>• Lässt sich leicht erweitern<br> |  |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Vorteile | Nachteile |
+| • Die CPU nimmt viele Aufgaben ab<br>• Man kann alle Möglichkeiten des PM ausschöpfen<br>• Lässt sich leicht erweitern<br> | • Verbraucht viel Platz<br>• Taskwechsel dauert relativ lange<br>• Komplizierter Taskwechsel mit Opcodes<br> |
 
 ### Schluss
 
@@ -471,26 +464,16 @@ So, geschafft! Das waren die Geheimnisse des PC-Lautsprechers! Zwei Sachen muss 
 
 haben. Meine Kontaktdaten zum Melden bei Problemen finden sich im Impressum.
 
-## \<a name="Software- & Treibertechnisches"\>\</a\>Software- & Treibertechnisches
+## Software- & Treibertechnisches: FAT12 Dateizugriff
 
-FAT12 Dateizugriff
+### Einleitung
 
-**Index:**  
-0) Einleitung  
-1) Dateien finden  
-2) Dateien erstellen  
-3) Dateien lesen  
-4) Dateien schreiben  
-5) Nachwort  
-  
-**0) Einleitung**  
-Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch machen, und man hat einen Bootloader und einen simplen Kernel, der einen Text ausgibt, geschrieben, wird man schnell zum nächsten Problem kommen: Dateien! 'Wie/wo/was mache ich?' sind wohl die ersten Fragen. Mit diesem Tutorial möchte ich hier ein bisschen helfen. Wichtig: Ich gehe davon aus, dass ihr 'OS Dev-Tutorial' (LowLevel \#1) und 'Das FAT12 Dateisystem' (LowLevel \#4) gelesen und verstanden habt. OK, blabla, let's go!
+Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch machen, und man hat einen Bootloader und einen simplen Kernel, der einen Text ausgibt, geschrieben, wird man schnell zum nächsten Problem kommen: Dateien! 'Wie/wo/was mache ich?' sind wohl die ersten Fragen. Mit diesem Tutorial möchte ich hier ein bisschen helfen. Wichtig: Ich gehe davon aus, dass ihr 'OS Dev-Tutorial' (\[Ausgabe 1\]) und 'Das FAT12 Dateisystem' (\[Ausgabe 4\]) gelesen und verstanden habt. OK, blabla, let's go!
 
-  
-**1) Dateien finden**  
+### Dateien finden
+
 Der erste Schritt, wenn man Dateizugriff machen will, ist natürlich die Dateien finden. Und wie? Hier brauchen wir das 'Root-Directory' (=RD). Kurz: Das RD startet im 19. Sektor. Ein Dateieintrag ist 0x20 (32) Bytes lang, und der Dateiname ist 12 Zeichen lang: Byte 0 - 11. OK, jetzt haben wir keine Probleme mehr. Naja, fast: Wenn eine Datei gelöscht oder umbenannt wird, bleibt der alte Eintrag, nur wird das erste Byte des Namens auf 0xE5 gesetzt. Außerdem gibt es noch etwas seltsame Einträge, hab aber nicht herausgefunden was es für welche sind. Auf alle Fälle ist das 3. Byte dieser Einträge immer 0x00, und so werden sie auch ignoriert. OK, jetzt verstehen wir, wie man theoretisch Dateien finden kann. Und praktisch? Keine Angst, hier ist der Code (Der Code ist der Kernel, den Bootloader müsste man dann schon selber machen. Danke an mastermesh für das Tutorial in LL#1 - Für den Grund hab ich den Code verwendet.):
 
-    <div id="title"><br></div>
     ;     - - - - - [ Dateien finden - CODE ] - - - - -
          start:
              mov    ax, 0x2000  ; eax=0x2000
@@ -592,14 +575,13 @@ Der erste Schritt, wenn man Dateizugriff machen will, ist natürlich die Dateien
              dw     0xFFFF
     ;     - - - - - [ Dateien finden - CODE ] - - - - -
 
-  
+Der Code tut, wie es sein sollte, das, was man von ihm erwartet: Er schreibt alle Dateinamen im Root der Diskette untereinander auf. Also: Passt!
 
-Der Code tut, wie es sein sollte, das, was man von ihm erwartet: Er schreibt alle Dateinamen im Root der Diskette untereinander auf. Also: Passt!  
-**2) Dateien erstellen**  
+### Dateien erstellen
+
 Nachdem wir jetzt die Dateien gelesen haben, dürften wir kein Problem mehr haben, eine neue Datei zu erstellen. Was ist wichtig? Zuerst müssen wir einen leeren Platz im Root-Directory für den Dateieintrag finden. Haben wir den gefunden, müssen wir den Sektor für die Daten suchen. Hier nehmen wir einfachheitshalber den Sektor des letzten Eintrags+1. Natürlich könnten so nur 512 Byte Dateien gespeichert werden, weil sonst Fehler auftreten können. Aber da ich nicht hunderte von Zeilen schreiben will, um alles zu perfektionieren, hab ich nur die Einfachlösung hier.  
 Wenn man größere Dateien speichern möchte, muss man die Dateigröße des letzten Eintrags in Sektoren umrechnen, und dann ist diese Zahl plus die Sektornummer des Eintrags die neue Adresse für den neuen Eintrag. Also, hier ist der Code, wie es funktioniert, eine neue Datei anzulegen.
 
-    <div id="title"><br></div>
     ;     - - - - - [ Dateien erstellen - CODE ] - - - - -
          start:
              mov    ax, 0x2000  ; ax=0x2000
@@ -745,16 +727,16 @@ Wenn man größere Dateien speichern möchte, muss man die Dateigröße des letz
              dw     0xFFFF
     ;     - - - - - [ Dateien erstellen - CODE ] - - - - -
 
-  
+Es ist alles so einfach und klein wie möglich gehalten. Es fehlen einige JumpCarry, um sich vor Abstürzen zu schützen. Da ich hier aber kein vollständiges OS schreiben will, sondern nur die Infos, wie man so etwas machen kann, hab ich es nicht perfektioniert. Trotzdem: Der Code macht genau was er soll.
 
-Es ist alles so einfach und klein wie möglich gehalten. Es fehlen einige JumpCarry, um sich vor Abstürzen zu schützen. Da ich hier aber kein vollständiges OS schreiben will, sondern nur die Infos, wie man so etwas machen kann, hab ich es nicht perfektioniert. Trotzdem: Der Code macht genau was er soll.  
-**3) Dateien lesen**  
+### Dateien lesen
 
-Nachdem wir wissen, wie man Dateien im Root-Directory finden kann und neu erstellen kann, kommt jetzt endlich das zum Spiel, wofür Dateien eigentlich gut sind: Daten. Ich habe hier davon abgesehen, nocheinmal die Root-Directory auszulesen, und so weiter, deswegen habe ich einfach einen Eintrag der RootDirectory als Daten in den Code geschrieben. Der Code kann natürlich trotzdem verwendet werden, muss nur Root_Entry in die echte gefundene Adresse geändert werden. Außerdem ist es noch einfacher, da nicht immer zwischen Code (ES=0x1000) und dem gelesenen Sektoren Daten (ES=0x2000) geändert werden.  
-Der Code ließt die Daten einer Datei, aber höchstens 512 Bytes. Das kann aber einfach geändert werden, habs hier nicht gemacht, weil es eigentlich nichts mit dem zu tun hat, was ich vermitteln möchte: Dateien lesen.  
+Nachdem wir wissen, wie man Dateien im Root-Directory finden kann und neu erstellen kann, kommt jetzt endlich das zum Spiel, wofür Dateien eigentlich gut sind: Daten. Ich habe hier davon abgesehen, nocheinmal die Root-Directory auszulesen, und so weiter, deswegen habe ich einfach einen Eintrag der RootDirectory als Daten in den Code geschrieben. Der Code kann natürlich trotzdem verwendet werden, muss nur Root_Entry in die echte gefundene Adresse geändert werden. Außerdem ist es noch einfacher, da nicht immer zwischen Code (ES=0x1000) und dem gelesenen Sektoren Daten (ES=0x2000) geändert werden.
+
+Der Code ließt die Daten einer Datei, aber höchstens 512 Bytes. Das kann aber einfach geändert werden, habs hier nicht gemacht, weil es eigentlich nichts mit dem zu tun hat, was ich vermitteln möchte: Dateien lesen.
+
 Wie gesagt, der Code ist ganz kurz, bis aufs äußerste reduziert und so weiter. Funktioniert trotzdem :)
 
-    <div id="title"><br></div>
     ;     - - - - - [ Dateien lesen - CODE ] - - - - -
          start:
              mov    ax, 0x2000  ; ax=0x2000
@@ -861,14 +843,13 @@ Wie gesagt, der Code ist ganz kurz, bis aufs äußerste reduziert und so weiter.
              dw     0xFFFF
     ;     - - - - - [ Dateien lesen - CODE ] - - - - -
 
-  
+Kurz - macht aber, was er soll. Man sollte natürlich, wenn man ein ersthaftes Projekt hat, auch Dateien, die größer sind als 1 Sektor lesen. Das ist aber nicht schwer. Man muss die Sektoren bekommen (shr dateigröße, 9 \| inc), und auf die Cylinder/Head aufpassen. Wenn man es ganz toll machen möchte, könnte man natürlich auch die Schrift in einer schönen Farbe ausgeben lassen. Sieht sicher besonders gut aus ;)
 
-Kurz - macht aber, was er soll. Man sollte natürlich, wenn man ein ersthaftes Projekt hat, auch Dateien, die größer sind als 1 Sektor lesen. Das ist aber nicht schwer. Man muss die Sektoren bekommen (shr dateigröße, 9 \| inc), und auf die Cylinder/Head aufpassen. Wenn man es ganz toll machen möchte, könnte man natürlich auch die Schrift in einer schönen Farbe ausgeben lassen. Sieht sicher besonders gut aus ;)  
-**4) Dateien schreiben**  
+### Dateien schreiben
+
 Was bringt ein Betriebssystem, dass keine Dateien schreiben kann? Nichts. Darum hier der Beispielcode, wie man in eine Datei schreibt. Dieser Code ähnelt sehr dem Lese-Code. Wenn man nun ein OS macht, dann kann man die gleichen Sachen einfach rausnehmen, und spart damit sehr viele Bytes, und es wird wahrscheinlich (kommt drauf an, wie mans macht) viel übersichtlicher.  
 Also, der Code ist natürlich wieder beschrieben, darum muss ich hier nichts mehr erklären.
 
-    <div id="title"><br></div>
     ;     - - - - - [ Dateien schreiben - CODE ] - - - - -
          start:
              mov    ax, 0x2000  ; ax=0x2000
@@ -999,30 +980,29 @@ Also, der Code ist natürlich wieder beschrieben, darum muss ich hier nichts meh
              dw     0xFFFF
     ;     - - - - - [ Dateien schreiben - CODE ] - - - - -
 
-  
+Macht genau was er soll, darum: Passt :)
 
-Macht genau was er soll, darum: Passt :)  
-**5) Nachwort**  
+### Nachwort
+
 Mit diesem Tutorial sollte man in der Lage sein, ein Betriebssystem zu schreiben, das mit Dateien kein Problem hat. Ich hoffe, du hast damit etwas gelernt, und fandest es interessant zu lesen. Wenn nicht, mach es besser oder schick mir Geld, dann mach ichs besser. (verstehst, worauf ich hinaus will?) Egal, ich hatte Spaß beim schreiben und programmieren, und hab natürlich selber auch das ganze dazugelernt (hab vor dem Schreiben keinen Schimmer gehabt, wie ich auf Dateien zugreife - dann hab ich es mir einfach als Ziel gesetzt, das zu schreiben).  
-Nun, danke fürs Lesen & versuch es einfach mal mit Dateizugriff! :)  
-- - - - - - - - - - - - - -  
+Nun, danke fürs Lesen & versuch es einfach mal mit Dateizugriff! :)
+
+\- - - - - - - - - - - - - -  
 Second Part To Hell/\[rRlf\]  
 www.spth.de.vu  
 spth@priest.com  
 
 geschrieben im Dezember 2004  
-Ã–sterreich  
+Österreich  
 
 \- - - - - - - - - - - - - - -
 
-## \<a name="Tipps & Tricks"\>\</a\>Tipps & Tricks
-
-INC und DEC
+## Tipps & Tricks: INC und DEC
 
 **Vorgeschichte:**  
-In diesem Tipp geht um die Sprache Assembler. Oft muss man in Assembler Zahlen um den numerischen Wert eins erhöhen oder erniedrigen. Dieser Tipp ist zwar hauptsächlich für Assembler gedacht, da man nur dort die Codes direkt eingibt, man weiß ja nie, was der C-Compiler alles baut, aber ich denke, dass es auch bei C nicht schadet, diesen Tipp zu verwenden.  
-**Tipp:**  
+In diesem Tipp geht um die Sprache Assembler. Oft muss man in Assembler Zahlen um den numerischen Wert eins erhöhen oder erniedrigen. Dieser Tipp ist zwar hauptsächlich für Assembler gedacht, da man nur dort die Codes direkt eingibt, man weiß ja nie, was der C-Compiler alles baut, aber ich denke, dass es auch bei C nicht schadet, diesen Tipp zu verwenden.
 
+**Tipp:**  
 Benutze für dies lieber INC und DEC als ADD X,1 oder SUB X,1. Das erste Befehlspaar wird schneller ausgeführt und erzeugt nur ein Byte Opcodes im Vergleich zu den drei Bytes an Maschinencode die durch ADD X,1 und SUB X,1 erzeugt werden.  
 
 **Hintergrund:**  
@@ -1030,11 +1010,8 @@ Der Prozessor stellt zwei speziell für diese Bereiche gefertigte Funktionen/Bef
 
 von drei Bytes lesen muss.
 
-## \<a name="Codeschnippsel"\>\</a\>Codeschnippsel
+## Codeschnippsel: Sprung in den Protected Mode
 
-Sprung in den Protected Mode
-
-    <div id="title"><br></div>
     ;;;  Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
     ;;;  Bei Fragen kann man sich einfach an stefan.marcik@web.de oder
     ;;;  an die ICQ-Nummer 338417614 wenden.
@@ -1085,39 +1062,34 @@ Sprung in den Protected Mode
        db 0x00          ; Segmentadresse 24..31
     gdt_end
 
-  
+## OS-Showcase: ReactOS
 
-## \<a name="OS-Showcase"\>\</a\>OS-Showcase
+### Screenshots
 
-ReactOS
+![10_1.png](http://www.joachim-neu.de/public/lowlevel/7/10_1.png) ![10_2.png](http://www.joachim-neu.de/public/lowlevel/7/10_2.png)
 
-**Screenshots:**  
+### Geschichte
 
-|  |  |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| \<img src="![10_1.png](http://www.joachim-neu.de/public/lowlevel/7/10_1.png)" alt="Screenshot 1"\><br> | \<img src="![10_2.png](http://www.joachim-neu.de/public/lowlevel/7/10_2.png)" alt="Screenshot 2"\><br> |
+Nun, ReactOS ist schon eines der älteren Betriebssystemprojekte. Die Entwickler haben schon sehr viel erreicht. Das Betriebssystem ist seit 1996 in Entwicklung. Aber wie es halt meistens so ist (man sieht es an unserem Comm-OS) funktioniert das nicht so leicht. Ursprünglich kam das System als "FreeWin95". Es sollte die Aufgabe eines Windows-Clones erfüllen, aber die Mitglieder verliefen und verstrickten sich in tiefen Design-Theoretischem-Gerede. Es kam nix zustande. 1997 griff Jason Filby das ganze wieder auf und nannte das Projekt um zu "ReactOS", was von dem damals wie heute tief verwurzelten Unbehagen gegen Microsofts Monopolstellung kam.
 
-  
+Im Februar 1998 beginnt also der steinige Aufstieg von ReactOS. Langsam aber sicher erstellen die Programmierer massig Kernelcode, jedoch war es nur wenigen möglich, wirklich am Kernel zu arbeiten. Nachdem der Kernel nach einiger Zeit stabil lief wurde das Schreiben von IDE- und anderen Treibern unerlässlich. Von nun an war es mehr Leuten möglich, in die Entwicklung von ReactOS einbezogen zu werden.
 
-**Geschichte:**  
-Nun, ReactOS ist schon eines der älteren Betriebssystemprojekte. Die Entwickler haben schon sehr viel erreicht. Das Betriebssystem ist seit 1996 in Entwicklung. Aber wie es halt meistens so ist (man sieht es an unserem Comm-OS) funktioniert das nicht so leicht. Ursprünglich kam das System als "FreeWin95". Es sollte die Aufgabe eines Windows-Clones erfüllen, aber die Mitglieder verliefen und verstrickten sich in tiefen Design-Theoretischem-Gerede. Es kam nix zustande. 1997 griff Jason Filby das ganze wieder auf und nannte das Projekt um zu "ReactOS", was von dem damals wie heute tief verwurzelten Unbehagen gegen Microsofts Monopolstellung kam.  
-Im Februar 1998 beginnt also der steinige Aufstieg von ReactOS. Langsam aber sicher erstellen die Programmierer massig Kernelcode, jedoch war es nur wenigen möglich, wirklich am Kernel zu arbeiten. Nachdem der Kernel nach einiger Zeit stabil lief wurde das Schreiben von IDE- und anderen Treibern unerlässlich. Von nun an war es mehr Leuten möglich, in die Entwicklung von ReactOS einbezogen zu werden.  
 Heute ist ReactOS mit einem stabilen Kernel versehen und die API ist soweit ausgebaut, Möglichkeiten für eine höhere Programmierung von Programmen freizugeben. Heute schreiben viele Leute an Programmen und Funktionsbibliotheken für ReactOS und ihre Zahl ist steigend. Die Entwicklung einfacher Grafiktreiber ebnen den Weg für eine GUI, eine grafische Bedienoberfläche. Aber immernoch sieht man auch anhand dieser GUI das Ziel, für das ReactOS bestimmt war: Ein Clone von Windows zu werden. Die Oberfläche sieht der der Microsoft-Produkte sehr ähnlich.  
-Was sieht die Zukunft für ReactOS vor? Nun, keiner kann dies bestimmen oder vorhersagen, aber die Leiter des Projektes sehen die Nahe Zukunft in der Installation von Subsystemen für Java, OS/2 und DOS. ReactOS steht also ein gewaltiges Wachstum bevor, auf das wir alle gespannt sein dürfen.  
-**Features:**  
+Was sieht die Zukunft für ReactOS vor? Nun, keiner kann dies bestimmen oder vorhersagen, aber die Leiter des Projektes sehen die Nahe Zukunft in der Installation von Subsystemen für Java, OS/2 und DOS. ReactOS steht also ein gewaltiges Wachstum bevor, auf das wir alle gespannt sein dürfen.
+
+### Features
+
 Was kann ReactOS? Genaue Auflistungen sind schwer zu bekommen, vielmehr bekommt man auf der Homepage einen Gesamteindruck und eine Übersicht, was funktioniert und was nicht, allerdings keine kongrete Liste von Features.  
 
 Es gibt mittlerweile einige Funktionsbibliotheken für Konsolenanwendungen von ReactOS. Ein Programm für die Konsole von ReactOS ist ein GCC-Compiler. Dadruch wird ReactOS freestanding, sprich es kann von sich selber aus weiter entwickelt werden. Außerdem gibt es noch den GNU Midnight Commander, einen zeilenbasierten Explorer.  
 Im Bereich grafische Oberfläche sieht es bei ReactOS im Gegenteil zu MenuetOS noch weniger gut aus. Beide Betriebssysteme gehen vollständig andere Wege. Während MenuetOS sich mehr um sein äußeres Erscheinungsbild und die GUI sorgt, scheinen die Programmierer von ReactOS es mehr auf die inneren Fähigkeiten abgesehen zu haben.  
-Genauso sieht es beim Treiber Support aus. Während ReactOS auf möglichst viel Modularität baut, sind bei MenuetOS noch viele Treiber fest in den Kernel eingecodet. Im Moment wird daran gearbeitet, auch Treiber dritter (zum Beispiel von Microsoft) zum Laufen zu bringen und benutzbar zu machen.  
-**Daten/Kontakt zum Projekt:**  
-Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seid 1997. Erreichbar ist ReactOS über \<a href="www.reactos.com"\>www.ReactOS.com\</a\>. Dort findet man auch sehr viele Informationen für Programmierer und Benutzer
+Genauso sieht es beim Treiber Support aus. Während ReactOS auf möglichst viel Modularität baut, sind bei MenuetOS noch viele Treiber fest in den Kernel eingecodet. Im Moment wird daran gearbeitet, auch Treiber dritter (zum Beispiel von Microsoft) zum Laufen zu bringen und benutzbar zu machen.
 
-von ReactOS. Die Seite macht einen gepflegten Eindruck.
+### Daten/Kontakt zum Projekt:
 
-## \<a name="Interview"\>\</a\>Interview
+Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seid 1997. Erreichbar ist ReactOS über \<a href="www.reactos.com"\>www.ReactOS.com\</a\>. Dort findet man auch sehr viele Informationen für Programmierer und Benutzer von ReactOS. Die Seite macht einen gepflegten Eindruck.
 
-Legend von LegendOS
+## Interview: Legend von LegendOS
 
 | Person | Text |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1138,11 +1110,7 @@ Legend von LegendOS
 | sz | Wann kann man nächste Releases erwarten? |
 | L. | Ich habe vor, die Virtual Machines für Java und eine CLR zu implementieren. Dann geht die Entwicklung richtig los, dem würde ich aber noch ein bis zwei Monate geben, da ich<br>noch Techniken wie z.B. Corba umsetzen muss. |
 
-  
-
-## \<a name="Kolumne"\>\</a\>Kolumne
-
-Technischer Fortschritt
+## Kolumne: Technischer Fortschritt
 
 Neulich war ich mal wieder (wie in meinem Alter üblich) beim McDonalds im nächsten Kaff. Neben dem Eingang prangert da seit kurzem ein Schild mit der Aufschrift ?WLan Hotspot? von T-Online. Das macht mich irgendwie nachdenklich. Letztes Jahr hatte
 
@@ -1162,7 +1130,7 @@ ein, ohne sie wären wir heutzutage fast verloren, ich würde fast sagen dass si
 
 Luft bei der Lösungsfindung zu einem Problem ^-^.
 
-## \<a name="Bericht ausm Forum"\>\</a\>Bericht ausm Forum
+## Bericht ausm Forum
 
 Die Frage, die uns seid längerem beschätigt ist die, wie es nun weiter geht mit dem Lowlevel-Magazin. Dieses Thema wird schon seid einiger Zeit im Forum heftig diskuttiert und man ist zu der Meinung gekommen das man ein Team bildet, welches sich nur zur Aufgabe macht Lowlevel-Magazin Folgen herauszubringen, die qualitativ hochwertig sind und aber auch nicht all zu lange auf sich warten lassen. Ein Mitglied (joachim_neu) hat deswegen schonmal einen Konzept auf die Beine gestellt, welches meiner Meinung doch schon ein recht gutes ist. Zudem denke ich auch, dass es den meisten Mitgliedern im Grossen und Ganzen gefallen hat. Sicherlich lassen sich da noch einige Ã„nderung machen lassen trotzdem ich denke dieses Mitglied hat doch schonmal den Stoss in die richtige Richtung gemacht.
 
@@ -1170,27 +1138,30 @@ Während diesen Diskussionen kam man auf die Idee ein Projekt zu machen, in dem 
 
 mit dem Magazin und den "CommOS" weitergehen sollte.
 
-## \<a name="Vermischtes"\>\</a\>Vermischtes
+## Vermischtes: Meilensteine in der Geschichte von DOS/Windows
 
-Meilensteine in der Geschichte von DOS/Windows
+Diese Geschichte beginnt mit schon viel früher, als es überhaupt das erste DOS gab. Sie beginnt, mit dem damals sehr jungen Bill Gates, der die noch heute sehr beliebte Programmiersprache BASIC entwickelte. Etwas später entwickelte dann die Firma Digital Research die erste Version von Micro Control Program (CP/M) , das vor allem im Hobby-Sektor genutzt wurde.
 
-Diese Geschichte beginnt mit schon viel früher, als es überhaupt das erste DOS gab. Sie beginnt, mit dem damals sehr jungen Bill Gates, der die noch heute sehr beliebte Programmiersprache BASIC entwickelte. Etwas später entwickelte dann die Firma Digital Research die erste Version von Micro Control Program (CP/M) , das vor allem im Hobby-Sektor genutzt wurde.  
 Um seine Produkte besser zu vermarkten, gründete Bill Gates zu dieser Zeit die Firma Microsoft, die vor allem BASIC-Produkte und Unix-Systeme verkaufte. 1980 entschied sich dann auch IBM in die Computer-Branche einzutreten. IBM hatte gerade erst den 8086 und seine abgespeckte 8-Bit Version 8088 herausgebracht. Nun fehlte nur noch die Software, die aus Kostengründen für den 8088 entwickelt werden sollte. Da IBM weder Erfahrung noch Entwickler für ein Betriebssystem hatten, wurde der Manager Philip Estridge beauftragt eines zu kaufen.  
 Erstriger versuchte es auch bei Gates, der aber ablehnen musste, da die Unix-System, die er vertrieb, für PCs zu umfangreich waren. IBM sprach auch mit Digital Research über ein CP/M, die auch einwilligten. Als Digital Research aber weit hinter dem verabredeten Zeitplan war, sprang IBM ab und wand sich wieder zu Bill Gates. Gates kannte auch das benachbarte Unternehmen Seattle Computer Products, das das CP/M-ähnliche Betriebssystem 86-DOS vetrieb.  
-Im April 1981 kaufte dann Microsoft 86-DOS und übernahm seinen Autor Tim Paterson gleich mit. Tim Paterson sollte noch einige Verbesserungen anbringen, um dann das Betriebssytem als MS-DOS (Microsoft Disk Operation System) an IBM zu übergeben. Der Grunstein für den Erfolg war gelegt, da IBM jetzt Hardware und Software als ein Paket anbieten konnte. DOS wurde bis zur Version 4 nur von IBM und Microsoft entwickelt. Später kamen dann PC-DOS von IBM, Der Klone DR-DOS von Digital Research, das dann von der Firma Novell übernommen wurde, sodass Novell-DOS endstand und das MS-DOS der Firma Microsoft.  
+Im April 1981 kaufte dann Microsoft 86-DOS und übernahm seinen Autor Tim Paterson gleich mit. Tim Paterson sollte noch einige Verbesserungen anbringen, um dann das Betriebssytem als MS-DOS (Microsoft Disk Operation System) an IBM zu übergeben. Der Grunstein für den Erfolg war gelegt, da IBM jetzt Hardware und Software als ein Paket anbieten konnte. DOS wurde bis zur Version 4 nur von IBM und Microsoft entwickelt. Später kamen dann PC-DOS von IBM, Der Klone DR-DOS von Digital Research, das dann von der Firma Novell übernommen wurde, sodass Novell-DOS endstand und das MS-DOS der Firma Microsoft.
+
 Schon bald gab es die ersten Firmen, wie Xerox und Apple, die die ersten grafischen Benutzeroberflächen mit Maus-Bedienug entwickelten. Microsoft fühlte sich unter Druck gesetzt und versuchte auch ein solches Betriebssystem zu entwickeln. Daraus entstand mit IBM zusammen das OS/2. Da Microsoft aber nicht der alleinige Inhaber der Lizenzen war musste schnell ein grafischer Aufsatz für das MS-DOS her. So entstand bereits 1983 das System "Interface Manager", das auf Druck des PR-Managers zu Windows umbenannt wurde. Dieses System wurde aber schon lange vor seiner Serienreife vorgestellt, sodass Fehler über Fehler erst spät danach bemerkt wurden. Bill Gates sah zu dieser Zeit das Windows-Projekt als Reinfall, und wollte es erst ganz einstellen, um mit IBM das OS/2 weiter zu entwickeln. Da aber zur gleichen Zeit auch noch Exel entwickelt wurde und man dafür ein halbwegs funktionierendes Betriebsystem brauchte, korrigierten eine handvoll Entwickler die gröbsten Fehler.  
 Das Ergebnis war Windows 2.03, das eigenlich stabil lief. Einen gravierenden Fehler gab es jedoch. Windows lief im Real-Mode, was zu Folge hatte, das nur 1 MB Arbeitsspeicher zu Verfügung stand. Es kam dann oft dazu, dass Daten im Arbeitsspeicher überschrieben wurden und man dann nur nuch den "Blue-Screen" sah. Es gab zu dieser Zeit auch schon den 80286, der den Protected Mode brachte, da Bill Gates aber auf OS/2 setzte ließ er den Code nicht neu schreiben.  
-Und wieder kam der Zufall zu Hilfe. Microsoft stellte einen neuen Mitarbeiter, wegen eines von ihm selbst geschriebenen Debuggers ein, der prüfen konnte, ob der Code auch im Protected Mode funktioniert. So mussten nur die problematischen Stellen in Windows 2.03 korrigiert werden. Und still und heimlich wurde das Windows 3.00 über Nacht entwickelt, welches im Juni 1990 zum ersten Mal vorgestellt wurde. Dieses Windows wurde zum Verkaufsschlager. Windows war außer Konkurenz.  
+Und wieder kam der Zufall zu Hilfe. Microsoft stellte einen neuen Mitarbeiter, wegen eines von ihm selbst geschriebenen Debuggers ein, der prüfen konnte, ob der Code auch im Protected Mode funktioniert. So mussten nur die problematischen Stellen in Windows 2.03 korrigiert werden. Und still und heimlich wurde das Windows 3.00 über Nacht entwickelt, welches im Juni 1990 zum ersten Mal vorgestellt wurde. Dieses Windows wurde zum Verkaufsschlager. Windows war außer Konkurrenz.
 
 Die folgenden Windows-Systeme ähnelten sich sehr, bis im August 1995 Windows 95 vorgestellt wurde. Windows 95 ist bis jetzt immer noch das am meisten verkaufte Betriebssystem. Es fuktionierte problemlos auf allen "neueren" Rechnern, unterstütze 32Bit-Modus und brachte viele sinnvolle Anwendungen zum laufen.  
 Das nächste Windows (Windows 98) setzte immer noch auf den Untersatz DOS. Neben den Windows-Versionen für den Heimanwender, wurde auch die Windows NT Reihe entwickelt, die schon ab Version 3.51 DOS nicht mehr brauchte. So wurde Windows 2000 als Verschmelzung von Windows NT und der Heimanwender-Versionen entwickelt.  
 Die neusten Versionen von Windows (windows XP) basieren auch heute noch auf Windows 2000 und sind 32Bit-Systeme. Es sollen aber in Zukunft Windows Versionen entwickelt werden, die 64Bit-Systeme sind.
 
-## \<a name="Schluss & Impressum"\>\</a\>Schluss & Impressum
+## Schluss & Impressum
 
-**Schluss**  
-So, das war die 7. Ausgabe des Magazins. Sie ist meiner Meinung nach relativ umfangreich geworden und auch die Beiträge gefallen mir. Die Ausgabe habe ich nach dem Erscheinen noch auf Rechtschreibfehler geprüft, dies hier hinzugefügt und geschaut, dass die Seitenabstände stimmen. Zu meiner "Verteidigung" will ich sagen, dass ich euch einfach nichtmehr warten lassen wollte, und dadurch die Ausgabe eben in relativer Rohfassung abgegeben habe. Entschuldigen will ich mich für den Augenkrebs den einige durch meinen Artikel im "Thema der Ausgabe" aufgrund der Farben bekommen haben, aber es ging nunmal nicht anderst :). Bedanken will ich mich bei Roshl für das Vertrauen und bei allen Redakteuren, die bereit waren, ihre Zeit für die Artikel zu opfern. Ich hoffe, an der nächsten Ausgabe arbeiten wieder so viele Leute mit, sodass auch die wieder gut und lang wird. Bis dahin möchte ich mich verabschieden und alle bitten, sich auch zu beteiligen an diesem grandiosen Projekt!  
-**Impressum**  
+### Schluss
+
+So, das war die 7. Ausgabe des Magazins. Sie ist meiner Meinung nach relativ umfangreich geworden und auch die Beiträge gefallen mir. Die Ausgabe habe ich nach dem Erscheinen noch auf Rechtschreibfehler geprüft, dies hier hinzugefügt und geschaut, dass die Seitenabstände stimmen. Zu meiner "Verteidigung" will ich sagen, dass ich euch einfach nichtmehr warten lassen wollte, und dadurch die Ausgabe eben in relativer Rohfassung abgegeben habe. Entschuldigen will ich mich für den Augenkrebs den einige durch meinen Artikel im "Thema der Ausgabe" aufgrund der Farben bekommen haben, aber es ging nunmal nicht anderst :). Bedanken will ich mich bei Roshl für das Vertrauen und bei allen Redakteuren, die bereit waren, ihre Zeit für die Artikel zu opfern. Ich hoffe, an der nächsten Ausgabe arbeiten wieder so viele Leute mit, sodass auch die wieder gut und lang wird. Bis dahin möchte ich mich verabschieden und alle bitten, sich auch zu beteiligen an diesem grandiosen Projekt!
+
+### Impressum
+
 Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spiegeln nicht unbedingt die Meinung der Redaktion wieder. Jeder Redakteur ist für seinen eigenen Beitrag verantwortlich. Zugehörigkeiten entnehmen Sie bitte der Tabelle. Wir bemühen uns nach bestem Wissen unserem Leser nur richtige Informationen zu bieten, jedoch können wir dies nicht garantieren. Jeder in dieser Ausgabe aufgeführte Code ist unter eigener Gefahr zu benutzen und der Ersteller kann nicht für entstehende Schäden zur Haftung gebracht werden. Jede mit diesem Schriftstück verlinkte Seite wird von uns ausgesucht und eingesehen, jedoch haben wir auf sie keinen Einfluss, und somit distanzieren wir uns hiermit von allen
 
 rechtswidrigen Schriften auf verlinkten Seiten.
@@ -1231,6 +1202,6 @@ rechtswidrigen Schriften auf verlinkten Seiten.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1818; parent 1817; 2007-02-25T12:15:57Z -->
+<!-- MediaWiki page 1494; revision 1819; parent 1818; 2007-02-25T12:28:51Z -->
