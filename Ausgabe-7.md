@@ -1088,7 +1088,7 @@ Genauso sieht es beim Treiber Support aus. Während ReactOS auf möglichst viel 
 
 ### Daten/Kontakt zum Projekt:
 
-Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seid 1997. Erreichbar ist ReactOS über [www.ReactOS.com](http://www.reactos.com). Dort findet man auch sehr viele Informationen für Programmierer und Benutzer von ReactOS. Die Seite macht einen gepflegten Eindruck.
+Das Projekt läuft seit 1996. Der Leiter ist Jason Filby schon seit 1997. Erreichbar ist ReactOS über [www.ReactOS.com](http://www.reactos.com). Dort findet man auch sehr viele Informationen für Programmierer und Benutzer von ReactOS. Die Seite macht einen gepflegten Eindruck.
 
 ## Interview: Legend von LegendOS
 
@@ -1191,6 +1191,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1821; parent 1820; 2007-02-25T12:39:38Z -->
+<!-- MediaWiki page 1494; revision 1822; parent 1821; 2007-02-25T12:41:26Z -->
