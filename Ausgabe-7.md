@@ -51,7 +51,7 @@ So. Nun werde ich den Aufbau genauer Erklären. Die gelb hinterlegten Einträge 
 
 hinterlegten Bereiche stehen frei zur Verfügung. Jetzt werde ich die warscheinlich noch unklaren Bereiche erklären. ESPn und SSn hab ich vorher schon erleutert. In BackLink speichert die CPU bei einem Interruptaufruf, bei dem ein TaskGate in der IDT angegeben wurde, die Deskriptornummer des Auslösertasks. Zu diesem kehrt sie bei gesetztem NT-Flag im Flagregister mit einem IRET zurück. Die Bereiche, die die Namen der Register tragen dürften klar sein. Beim Eintrag *I/O Port Bitmap Base* wird das Offset einer Tabelle angegeben, die angibt, auf welche Portadressen der Task Zugriff hat. Bei dem Wert 0 ist diese deaktiviert, sodass der Zugriff alleine durch das IOPL im Flagregister gesteuert ist. Dann ist da noch das T-Flag. Ist dieses gesetzt, so wird nach jedem Taskwechsel zu diesem Task ein Interrupt 1 ausgelöst. Der Bereich nach der Adresse 0x68 steht dem Systemprogrammierer frei zur Verfügung. Das Limit eines TSS muss also mindestens 0x68 betragen. Nach der eigendlichen TSS-Tabelle ist dann Platz für die I/O-Port-Tabelle oder Werte, die das System vom Task noch braucht und nicht in der Task-Tabelle speichern will. Wie ich schon sagte braucht jeder Task ein TSS und dies muss in der GDT eingetragen werden. Ein TSS hat als die 4 Typ-Bits den Wert 1001 als Binärzahl. Dies ist der Aufbau eines TSS-Deskriptors:
 
-\<img src="![3_2.png](http://www.joachim-neu.de/public/lowlevel/7/3_2.png)" alt="TSS-Deskriptor"\>
+![3_2.png](http://www.joachim-neu.de/public/lowlevel/7/3_2.png)
 
 Jede Zeile der Tabelle gibt ein Word wieder, eine 16 Bit lange Zahl. Eigentlich gibt es nichts, was unterschiedlich zu dem normalen Aufbau eines Deskriptors wäre, deswegen erkläre ich nur kurz alle Felder.
 
@@ -294,9 +294,7 @@ Tja, das waren auch schon meine Tipps.
 
 ### Schluss
 
-Wir sind nun schon am Ende dieses Tutorials angelangt. Es ist etwas lang geworden, warscheinlich deshalb, dass Multitasking nunmal ein komplexes Thema ist, dass man nicht so einfach erklären kann. Ich hoffe es hat Spaß gemacht, ein bisschen in die Welt des Multitasking einzutauchen und davon zu hören. Bei Fragen kann ich nur wieder
-
-ermuntern, sich bei mir zu melden. Ich helfe, so gut ich kann. Meine Kontaktdaten gibt es im Impressum.
+Wir sind nun schon am Ende dieses Tutorials angelangt. Es ist etwas lang geworden, warscheinlich deshalb, dass Multitasking nunmal ein komplexes Thema ist, dass man nicht so einfach erklären kann. Ich hoffe es hat Spaß gemacht, ein bisschen in die Welt des Multitasking einzutauchen und davon zu hören. Bei Fragen kann ich nur wieder ermuntern, sich bei mir zu melden. Ich helfe, so gut ich kann. Meine Kontaktdaten gibt es im Impressum.
 
 ## Designtechnisches: Multitasking
 
@@ -1191,6 +1189,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1822; parent 1821; 2007-02-25T12:41:26Z -->
+<!-- MediaWiki page 1494; revision 1823; parent 1822; 2007-02-26T15:26:55Z -->
