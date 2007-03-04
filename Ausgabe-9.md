@@ -194,7 +194,7 @@ Solange eine Datei nicht größer als 10 Blöcke ist, kann sie in ext2 noch mit 
 
 ### Zugriffsrechte
 
-Wen ihr euch in der Abbildung die I-Node-Table angesehen habt, werdet ihr euch gedacht haben, was das bedeutet. Das Beispiel ober war unvollstängig! Nehmen wir ein richtigen mit mehreren Einträgen:
+Wenn ihr euch in der Abbildung die I-Node-Table angesehen habt, werdet ihr euch gedacht haben, was das bedeutet. Das Beispiel oben war unvollstängig! Nehmen wir ein Richtiges mit mehreren Einträgen:
 
        -rwx-rw-r 1root root Jun 11 12:45 Text1
        drw-x 1root root Jun 11 12:46 Programm3
@@ -204,7 +204,7 @@ Wen ihr euch in der Abbildung die I-Node-Table angesehen habt, werdet ihr euch g
        p 1root root Jun 11 12:59 test5
 
   
-So: In der 1. Zeile das erste Zeichen, hier -, heißt in diesem Fall, dass es eine Normale Datei ist. Das erste Zeichen gibt immer den Typ an:  
+So: In der 1. Zeile das erste Zeichen, hier -, heißt in diesem Fall, dass es eine normale Datei ist. Das erste Zeichen gibt immer den Typ an:  
 
 |  |  |
 | -------------------------------- | ----------- |
@@ -217,7 +217,7 @@ So: In der 1. Zeile das erste Zeichen, hier -, heißt in diesem Fall, dass es ei
 | Pipe | p |
 
   
-Was was ist, dürfte klar sein, wenn man diese Tutorial ließt.  
+Was was ist, dürfte klar sein, wenn man diese Tutorial liest.  
 Nun, die weiteren Zeichen bis zur ersten Leerstelle sind die Zugriffsrechte. Im Beispiel: rwx-rw-r = Dateibesitzer darf Lesen(r), schreiben(w) und ausführen(x), die Gruppe der der Besitzer angehört, darf lesen und schreiben und alle anderen Benutzer dürfen nur lesen. Der root darf selbstverständlich alles. Also heißt beispielsweise in Beispiel 3 wo steht: cx = Datei ist eine zeichenorientierte Gerätedatei und darf nur vom Besitzer ausgeführt werden.  
   
 Zugriffsrechttabelle:  
@@ -234,7 +234,7 @@ Der nächste String, 1root, ist der Dateibesitzer. Der nächste ist dann die Gru
   
 In ext2 wird das FS in Gruppen eingeteilt. Jede Gruppe ist 8192 Blöcke groß. Jede Gruppe enthält eine Kopie das Superblocks und einen Gruppenblock. Der Superblock ist der I-Node-Table und der Gruppenblock behandelt die Gruppe wie eine eigene Partition.  
   
-Beim Anbinden von Dateisystemen löscht ext2 im Superblock einen für jede verschiedene Partition die vorhanden ist angelegten valid-Flag. Wenn das FS die Partition wieder Aushängt setzt ext2 den valid-Flag wieder.  
+Beim Anbinden von Dateisystemen löscht ext2 im Superblock einen für jede verschiedene Partition die vorhanden ist angelegten valid-Flag. Wenn das FS die Partition wieder aushängt, setzt ext2 den valid-Flag wieder.  
 So sollte der Kernel erkennen, dass das System nicht ordnungsgemäß heruntergefahren wurde und das Dateisystem prüfen.
 
 ## OS-Showcase: FreeBSD
@@ -276,6 +276,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1827/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1650; parent 1649; 2007-01-15T18:43:02Z -->
+<!-- MediaWiki page 1409; revision 1827; parent 1650; 2007-03-04T17:57:01Z -->
