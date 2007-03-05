@@ -205,8 +205,19 @@ Aus \#lost (18. Feburar 2007)
     [16:40] <Homix> taljeth: WIndows 98 ? ;)
     [16:41] <bluecode> für einige war es ein Witz, für andere harte Realität ^^
 
+------------------------------------------------------------------------
+
+Aus \#lost (06. März 2007)
+
+    [17:57] <FreakyPenguin> nicht gut...
+    [17:57] <taljeth> Da scheine ich selbst in Assembler besser zu runden als du in C. ;-)
+    [17:58] <Jidder> for(rounded_data_size = data_size; rounded_data_size & 3; rounded_data_size++);
+    [17:59] <Jidder> :D
+    [17:59] <taljeth> Jidder löst das also brav iterativ, nur daß man dann Fortran nimmt, muß er noch lernen.
+    [17:59] <Jidder> fortran(rounded_data_size = data_size; rounded_data_size & 3; rounded_data_size++);
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1812; parent 1811; 2007-02-18T15:43:57Z -->
+<!-- MediaWiki page 1435; revision 1833; parent 1812; 2007-03-05T23:13:11Z -->
