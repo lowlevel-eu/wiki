@@ -207,7 +207,7 @@ Aus \#lost (18. Feburar 2007)
 
 ------------------------------------------------------------------------
 
-Aus \#lost (06. März 2007)
+Aus \#lost (05. März 2007)
 
     [17:57] <FreakyPenguin> nicht gut...
     [17:57] <taljeth> Da scheine ich selbst in Assembler besser zu runden als du in C. ;-)
@@ -216,8 +216,15 @@ Aus \#lost (06. März 2007)
     [17:59] <taljeth> Jidder löst das also brav iterativ, nur daß man dann Fortran nimmt, muß er noch lernen.
     [17:59] <Jidder> fortran(rounded_data_size = data_size; rounded_data_size & 3; rounded_data_size++);
 
+------------------------------------------------------------------------
+
+Aus \#lost (06. März 2007)
+
+    [10:26] <schnippi\code> seit wann codest du an lost?
+    [10:26] <FreakyPenguin> Moment, mal die svn-logs durch ein "grep PF" jagen ;)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1834/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1833; parent 1812; 2007-03-05T23:13:11Z -->
+<!-- MediaWiki page 1435; revision 1834; parent 1833; 2007-03-06T09:41:15Z -->
