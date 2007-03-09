@@ -27,7 +27,7 @@ Die Typendatenbank beinhaltet die sogenannten Typehandles. Darin sind Pointer au
 - seek
 - close.
 
-Nun zur Bedeutung der einzelnen Aktionen. *read* und *write* werden, wie unschwer zu erkennen, aufgerufen, wenn versucht wird von einem Knoten dieses Typs zu lesen, beziehungsweise auf ihn zu schreiben. Dass *close* beim schliessen einer Datei aufgerufen wird ist auch ersichtlich. Etwas schwieriger ist seek. Der *seek*-Handler wird angesprungen, wenn die aktuelle Position des Zeigers in der Datei mit *fseek* verschoben wird.
+Nun zur Bedeutung der einzelnen Aktionen. *read* und *write* werden, wie unschwer zu erkennen, aufgerufen, wenn versucht wird von einem Knoten dieses Typs zu lesen, beziehungsweise auf ihn zu schreiben. Dass *close* beim schliessen einer Datei aufgerufen wird, ist auch ersichtlich. Etwas schwieriger ist seek. Der *seek*-Handler wird angesprungen, wenn die aktuelle Position des Zeigers in der Datei mit *fseek* verschoben wird.
 
 ### pre_open und post_open
 
@@ -39,9 +39,24 @@ Bei “echten” Dateisystemen wie zum Beispiel auf Disketten hat *pre_open* noc
 
 In einem Typehandle müssen nicht alle Handler eingetragen werden. Wenn ein oder mehrere Handles nicht benutzt werden, müssen die entsprechenden Pointer auf NULL gesetzt werden.
 
-Um das ganze ein wenig zu vereinfachen existieren vordefinierte Handles, die mit nur einem Funktionsaufruf eingebunden werden können. Im Moment existieren nur directory und ramfile. Directory ist dabei für einfache Verzeichnise gedacht, die dann von den Anwendungen mit Hilfe von *directory_open*, *directory_read* und noch ein paar anderen Bibliotheksfunktionen ausgelesen werden können.
+Ein Typehandle ist folgendermassen aufgebaut: \<c\> typedef struct {
 
-Ramfile ist für einfache Dinge wie zum Beispiel Versionsinformationen, die nur als String im Arbeitspeicher liegen, und zum Zugreifen keine speziellen Massnahmen benötigen, gedacht.
+       typeid_t        id;
+
+       bool            (*pre_open)(char*, byte, pid_t);
+       void            (*post_open)(lostio_filehandle_t*);
+       read_hdl_reply  (*read)(lostio_filehandle_t*,size_t,size_t);
+       size_t          (*write)(lostio_filehandle_t*,size_t,size_t,void*);
+       int             (*seek)(lostio_filehandle_t*,int,int);
+       int             (*close)(lostio_filehandle_t*);
+
+} typehandle_t; \</c\> Der erste Eintrag in der Struktur ist die Typen-ID, sie muss bei allen Typen eindeutig sein, damit keine Anderen überschrieben werden. Danach kommen die Pointer auf die Handler. Der Struct sieht man auch gerade an, wie die Prototypen der Handler aussehen sollten. Dafür können einfach die Klammern um und die der Stern vor dem Member-Namen entfernt werden. Ein Beispiel: \<c\>int (\*seek)(lostio_filehandle_t\*,int,int);\</c\> wird zu \<c\>int seek_handler (lostio_filehandle_t\* filehandle,int offset,int origin);\</c\>
+
+Wenn das Typehandle erstellt wurde, wird es noch nicht automatisch verwendet. Damit es von LostIO auch benutz wird muss es erst mit *lostio_register_typehandle(typehandle);* (typehandle ist vom typ typehandle_t **\***) registiert werden.
+
+Um das ganze ein wenig zu vereinfachen existieren vordefinierte Handles, die mit nur einem Funktionsaufruf eingebunden werden können. Im Moment existieren nur directory und ramfile. Directory ist dabei für einfache Verzeichnise gedacht, die dann von den Anwendungen mit Hilfe von *directory_open*, *directory_read* und noch ein paar anderen Bibliotheksfunktionen ausgelesen werden können. Der Verzeichnis-Typ kann mit *lostio_type_directory_use();* eingebunden werden.
+
+Ramfile ist für einfache Dinge wie zum Beispiel Versionsinformationen, die nur als String im Arbeitspeicher liegen, und zum Zugreifen keine speziellen Massnahmen benötigen, gedacht. Die Ramfiles können mit *lostio_type_ramfile_use();* benutzbar gemacht werden.
 
 # Funktionen
 
@@ -118,6 +133,6 @@ Hier folgen Ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1853/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1853; parent 1852; 2007-03-09T22:45:09Z -->
+<!-- MediaWiki page 1498; revision 1855; parent 1853; 2007-03-09T23:36:42Z -->
