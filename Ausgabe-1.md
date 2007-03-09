@@ -55,19 +55,29 @@ Wenn all dies so funktioniert, wie es sollte, dann kann die Anwendungssoftware g
 
 Zuerst einmal sucht das BIOS auf dem ersten Sektor von Diskette und Festplatte nach einer Binärdatei, die genau 512 Bytes (1 Sector) lang ist und am Ende das Wort 0x0AA55 enthält. Jetzt lädt das BIOS unseren Bootloader, wenn es ihn denn gefunden hat, an die Adresse 0x7C00. Damit alles so läuft, wie wir es uns gedacht haben, enthält die erste Zeile unseres Assemblercodes also den Code:
 
+\<asm\>
+
        ORG 0x7C00
+
+\</asm\>
 
 Diese Zeile regelt, dass all unsere Adressierungen richtig sind usw. Jetzt basteln wir einen Stack. Er sitzt an Adresse 0x9000. Den Stackpointer setzen wir auf null. Während wir das alles tun, sind übrigens keine Interrupts zugelassen. Nun schreiben wir die Information über das Bootlaufwerk aus DL in eine Variable, rufen die Funktion "load" auf und springen zum geladenen Programm, unserem Kernel rüber (das seht ihr im vollständigen Code weiter unten).  
   
 Zum Schluss des Codes seht ihr noch folgende Zeilen:
 
+\<asm\>
+
        times 512-($-$$)-2 db 0
        dw 0x0AA55
+
+\</asm\>
 
 Sie sind für die Länge von 512 Bytes und das Wort 0x0AA55 am Ende zuständig.  
   
 Hmmm... Das war jetzt noch nicht schwer - aber damit es funktioniert, brauchen wir noch diese Ladefunktion. Sie benutzt den BIOS-Interrupt 0x13, um auf das Laufwerk zuzugreifen und wenn das gelang, unser Binary vom 2. Sektor zu lesen. Dann gibt sie noch eine Meldung aus, damit wir im Fall eines Fehlers (bei einem späteren Kernel) wissen, ob das Laden wenigstens geklappt hat.  
 Der Code am Stück
+
+\<asm\>
 
        org 0x7C00 ; Unsere Startadresse
        
@@ -150,8 +160,12 @@ Der Code am Stück
        times 512-($-$$)-2 db 0   ; Dateilänge: 512 Bytes
        dw 0AA55h                 ; Bootsignatur
 
+\</asm\>
+
 Ein kleiner Kernel zum Testen...  
 Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu laden hat.
+
+\<asm\>
 
        ; ---------------------------------------------------
        ; Unser Kernel
@@ -201,6 +215,8 @@ Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu lade
        db 0EAh
        dw 0000h
        dw 0FFFFh
+
+\</asm\>
 
 Kompilieren und Testen  
 So! Gleich ist es soweit! Wir müssen nur noch unsere Dateien assemblieren:
@@ -490,6 +506,8 @@ Dieser Stromsparmodus wurde mit dem Pentium eingeführt. In ihn wird gewechselt,
 
 ### CPU \>= 386
 
+\<asm\>
+
        ; determine CPU type. Code from Freedows 98 ldr_asm.asm
        ; Copyright (C) 1997 Joachim Breitsprecher 
        cpu_check:
@@ -516,6 +534,8 @@ Dieser Stromsparmodus wurde mit dem Pentium eingeführt. In ihn wird gewechselt,
            jne is_386plus
            
            not_386:
+
+\</asm\>
 
 ## OS-Showcase: MenuetOS
 
@@ -569,6 +589,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1847/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1814; parent 1813; 2007-02-21T22:11:47Z -->
+<!-- MediaWiki page 1412; revision 1847; parent 1814; 2007-03-09T20:22:25Z -->
