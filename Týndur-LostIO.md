@@ -12,6 +12,12 @@ LostIO ist der Name der Hauptschnittstelle, die LOST den Treibern zur Verfügung
 
 ## VFS-Baum
 
+## Typen
+
+### Verzeichnis
+
+### Ramfile
+
 # Beispiel
 
 Hier folgen ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen fuer den Laufwerkszugriff werden hier nicht gezeigt).
@@ -75,6 +81,6 @@ Hier folgen ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1845/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1845; parent 1844; 2007-03-09T19:22:47Z -->
+<!-- MediaWiki page 1498; revision 1849; parent 1845; 2007-03-09T21:02:13Z -->
