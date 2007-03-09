@@ -62,6 +62,24 @@ Ramfile ist für einfache Dinge wie zum Beispiel Versionsinformationen, die nur 
 
 ## LostIO
 
+### lostio_init
+
+**Prototyp:** \<c\>void lostio_init();\</c\> **Beschreibung:**
+
+Initialisiert die LostIO Schnittstelle. Wenn diese Funktion nicht aufgerufen wurde funktioniert LostIO NICHT. Darin werden unter anderem die RPC-Handler registriert und der Root-Knoten wird Vorbereitet.
+
+  
+
+### lostio_register_typehandle
+
+**Prototyp:** \<c\>void lostio_register_typehandle(typehandle_t\* typehandle);\</c\> **Parameter:**
+
+- typehandle: Pointer auf das zu Registrierende Typehandle
+
+**Beschreibung:**
+
+Trägt ein Typehandle in der Typendatenbank ein. Danach kann es bei den Knoten verwendet werden.
+
 ## VFS-Baum
 
 ## Typen
@@ -133,6 +151,6 @@ Hier folgen Ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1855; parent 1853; 2007-03-09T23:36:42Z -->
+<!-- MediaWiki page 1498; revision 1856; parent 1855; 2007-03-09T23:50:45Z -->
