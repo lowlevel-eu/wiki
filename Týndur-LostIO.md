@@ -6,6 +6,12 @@ LostIO ist der Name der Hauptschnittstelle, die LOST den Treibern zur Verfügung
 
 # Aufbau
 
+Also, damit wir das gleich geklärt haben: Bei Fragen wendet ihr euch am besten an den \#lost Kanal im euIRC (Server: irc.euirc.net, Kanal: \#lost). Alternativ könnt ihr auch hier im Forum in der Lost-Kategorie fragen. Falls Bugs gefunden werden, sollten sie über unser [Bugzilla](http://lost.famkaufmann.info/bugzilla) gemeldet werden.
+
+LostIO ist wie oben schon gesagt eine abstrakte Schnittstelle für Treiber. Intern basiert sie auf RPC (Remote Procedure Call = das Aufrufen von Funktionen in anderen Prozessen), was sie sehr flexibel einsetzbar macht (Zum Beispiel können damit später (hoffentlich) Treiber auf anderen Computern angesprochen werden).
+
+Der Zugriff auf Treiber mit einer LostIO Schnittstelle erfolgt über die Standard-Dateifunktionen (fopen, fread, fwrite usw.). Das heisst aber keineswegs, dass nur Treiber, die etwas mit Dateien zu tun haben, diese Schnittstelle verwenden können. Dabei wird das bewährte “alles ist eine Datei”-Konzept von Unix/Linux eingesetzt. Wir versuchen es allerdings noch ein wenig konsequenter umzusetzen.
+
 # Funktionen
 
 ## LostIO
@@ -81,6 +87,6 @@ Hier folgen ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1850; parent 1849; 2007-03-09T21:05:16Z -->
+<!-- MediaWiki page 1498; revision 1851; parent 1850; 2007-03-09T22:09:22Z -->
