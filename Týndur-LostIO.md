@@ -65,7 +65,8 @@ Hier folgen ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
        vfstree_create_node("/devices/fd0", 255, 1440 * 1024, (void*)0);
        vfstree_create_node("/devices/fd1", 255, 1440 * 1024, (void*)1);
 
-       //Diese Schleife sorgt dafuer, dass der Treiber 
+       //Diese Schleife sorgt dafuer, dass der Treiber nicht sofort nach
+       //dem Initialisieren wieder geschlossen wird.
        while(TRUE) yield();
        
        return 0;
@@ -74,6 +75,6 @@ Hier folgen ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1844/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1845/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1844; parent 1840; 2007-03-09T18:11:36Z -->
+<!-- MediaWiki page 1498; revision 1845; parent 1844; 2007-03-09T19:22:47Z -->
