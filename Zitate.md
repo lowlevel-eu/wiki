@@ -223,8 +223,20 @@ Aus \#lost (06. März 2007)
     [10:26] <schnippi\code> seit wann codest du an lost?
     [10:26] <FreakyPenguin> Moment, mal die svn-logs durch ein "grep PF" jagen ;)
 
+------------------------------------------------------------------------
+
+Aus \#lost (09. März 2007)
+
+    [15:29] <stultus> Weiß jemand wo meine Etch netinst hin is?
+    [15:29] <TheMelkor> die liegt bei mir...
+    [15:30] <TheMelkor> steht Debian drauf
+    [15:30] <stultus> DIEB!
+    [15:30] <TheMelkor> sry
+    [15:30] <TheMelkor> ich brauchte die
+    [15:30] <stultus> echo 110 >> /dev/telephone
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1834/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1842/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1834; parent 1833; 2007-03-06T09:41:15Z -->
+<!-- MediaWiki page 1435; revision 1842; parent 1834; 2007-03-09T15:11:30Z -->
