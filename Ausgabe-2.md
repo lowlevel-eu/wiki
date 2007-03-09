@@ -186,7 +186,8 @@ Ich glaube, es wird langsam Zeit, ein wenig Code anzufassen... aber dann in der 
 
 ### Delay-Funktion
 
-       ; delay processing for amount of clock ticks
+\<asm\>  ; delay processing for amount of clock ticks
+
        ; SI = ticks to wait
        DELAY:
        XOR AH,AH
@@ -197,12 +198,12 @@ Ich glaube, es wird langsam Zeit, ein wenig Code anzufassen... aber dann in der 
        INT 0x1A
        CMP DX,BX
        JNE .WL
-       RET
+       RET</asm>
 
 ### String-Funktionen
 
-       ; YaOS v0.1 STRING.INC file, programmed by Zero Design
-       
+\<asm\>  ; YaOS v0.1 STRING.INC file, programmed by Zero Design
+
        ; Routines in this file-
        ; UCASE_STRING: turn a string into uppercase letters
        ; RTRIM_STRING: right space trim a string
@@ -278,7 +279,7 @@ Ich glaube, es wird langsam Zeit, ein wenig Code anzufassen... aber dann in der 
        INC BX
        JMP .STRLEN
        .STRDONE:
-       RET
+       RET</asm>
 
 ## OS Projekte: V2_OS
 
@@ -344,6 +345,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1472; parent 1470; 2006-09-13T17:04:01Z -->
+<!-- MediaWiki page 1415; revision 1848; parent 1472; 2007-03-09T20:25:29Z -->
