@@ -60,9 +60,8 @@ Unix ELF und Windows PE neigen dazu, am populärsten unter den Betriebssystement
 
 Ein Nachteil sämtlicher etablierter IA-32-Compiler ist, dass sie von einem flachen 32-Bit-Adressraum ausgehen, in dem CS, DS, ES und SS eine gemeinsame Basisadresse haben. Da sie keine far-Pointer (48-Bit seg16:ofs32) benutzen, erschweren sie das Schreiben von Code für ein segmentiertes Betriebssystem. Programme in einem segmentierten Betriebssystem, welches in C geschrieben wurde, sind auf sehr viel Assemblercode angewiesen und wären sehr viel weniger effizient als Programme, die für ein "flaches" Betriebssystem geschrieben worden sind. Nun, während des Schreibens, stellte Watcom in Aussicht, ihren Watcom-Compiler zu veröffentlichen, der angeblich far-Pointer im 32-Bit Protected Mode unterstützen würde.
 
-Hier sind einige weitere Warnungen zum Gebrauch von gcc und ld (obwohl das potentiell für jeden anderen Compiler / Linker zutrifft). Erstens setzt gcc gern die Stringliterale (Konstanten vom Stringtyp), die von Funktionen genutzt werden, einfach vor den Funktionscode. Normalerweise ist das kein Problem, aber ein paar Leute verheddern sich bei dem Versuch ihre Kernel "Hello, world" ausgeben zu lassen. Beachtet dieses Beispiel:
+Hier sind einige weitere Warnungen zum Gebrauch von gcc und ld (obwohl das potentiell für jeden anderen Compiler / Linker zutrifft). Erstens setzt gcc gern die Stringliterale (Konstanten vom Stringtyp), die von Funktionen genutzt werden, einfach vor den Funktionscode. Normalerweise ist das kein Problem, aber ein paar Leute verheddern sich bei dem Versuch ihre Kernel "Hello, world" ausgeben zu lassen. Beachtet dieses Beispiel: \<c\> int main(void)
 
-       int main(void)
        {
            char *str = "Hello, world", *ch;
            unsigned short *vidmem = (unsigned short*) 0xb8000;
@@ -73,7 +72,7 @@ Hier sind einige weitere Warnungen zum Gebrauch von gcc und ld (obwohl das poten
            
            for (;;)
                ;
-       }
+       }</c>
 
 Dieser Quelltext soll die Zeichenkette "Hello, World" in den Videospeicher schreiben, in weißem Text auf schwarzem Hintergrund, in der oberen liken Ecke des Bildschirms. Jedoch wird gcc, wenn es kompiliert ist, den Literalstring "Hello, world!" genau vor dem Code für main ausgeben. Wenn das nun als flaches Bnärformat gelinkt und ausgeführt wird, dann beginnt die Ausführung dort, wo sich der String befindet und die Maschine wird wahrscheinlich abstürzen. Es gibt ein paar Möglichkeiten, das zu umgehen:
 
@@ -155,7 +154,7 @@ Hier noch eine kurze Übersicht über die Flags.
 
 Die Information, die vom Loader angefordert wird, wird in einer Struktur gespeichert, welche wiederum irgendwo im Speicher abgelegt wird. Die Adresse wird vom Loader in EBX gespeichert. Das ist allerdings nur für Leute von Interesse, die vorhaben, ihrem C-Kernel noch ein Assembler-Script voranzustellen. Sie könnten dann einfach EBX \`pushen\` und den Pointer in main() übernehmen, etwa mit dem Funktionskopf
 
-       int main(multiboot_info *mbi) { ... }; 
+\<c\> int main(multiboot_info \*mbi) { ... };\</c\>
 
 Die Struktur \`multiboot_info\` ist in multiboot.h definiert, welche GRUB beiliegen sollte.
 
@@ -165,11 +164,12 @@ Nun zu den wirklich wichtigen Dingen. Damit der Bootloader den Header auch finde
 
 Zunächst einmal brauchen wir einen Prototyp von main(), da wir ja deren Offset in den Header schreiben wollen.
 
-       void main(void); 
+\<c\> void main(void);\</c\>
 
 Wunderbar. Jetzt zum Header.
 
-       const unsigned MultibootHeader[12] = {
+\<c\> const unsigned MultibootHeader\[12\] = {
+
          0x1BADB002, // der magische Wert
          0x00000000, // die Flags
          0xE4524FFE, // die Checksumme
@@ -182,7 +182,7 @@ Wunderbar. Jetzt zum Header.
          0x00000050, // 80 Spalten
          0x00000019, // 25 Zeilen
          0x00000000 // 0 BPP, wir sind im Text-Modus
-       };
+       };</c>
 
 Da hätten wir unseren Multiboot Header. So lange der Kernel nicht zu groß wird, sollte alles funktionieren.
 
@@ -195,8 +195,9 @@ Anmerkung: Ich erstelle den Kernel immer mit folgenden Befehlen:
 
 Ja, und wenn der Kernel doch mal zu groß wird, lässt sich der Header ganz einfach am Anfang halten, indem man ihn folgendermaßen erstellt:
 
-       const unsigned  MultibootHeader[12] __attribute__ 
-             ((section(".text"))) = { /* Header Information */ };
+\<c\> const unsigned MultibootHeader\[12\] \_\_attribute\_\_
+
+             ((section(".text"))) = { /* Header Information */ };</c>
 
 Nach der entsprechenden Änderung meldet mbchk (das Multiboot Header Checksum Check Programm, boah!) den Header konstant bei 4096. (Danke an den hilfreichen Mensch vom BuHaBoard, der mir diesen Trick gezeigt hat. Leider fällt mir der Name nicht mehr ein...)
 
@@ -279,7 +280,8 @@ Natürlich ist der Code nicht komplett, aber er dient ja auch nur Anschauungszwe
 
 **Jonas Kramer** lizer@gmx.net
 
-       /*
+\<c\> /\*
+
          Memory Printing Example
          Written 2003 by Jonas Kramer
          eMail: lizer@gmx.net
@@ -332,7 +334,7 @@ Natürlich ist der Code nicht komplett, aber er dient ja auch nur Anschauungszwe
          while(*s)
            putchar(*(s++));
          return;
-       }; 
+       };</c> 
 
 ## Icy Wolf\`s Kolumne
 
@@ -358,6 +360,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1862/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 1717; parent 0; 2007-01-18T13:23:35Z -->
+<!-- MediaWiki page 1470; revision 1862; parent 1717; 2007-03-10T15:09:37Z -->
