@@ -92,7 +92,19 @@ Trägt ein Typehandle in der Typendatenbank ein. Danach kann es bei den Knoten v
 
 Hier folgen Ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen fuer den Laufwerkszugriff werden hier nicht gezeigt).
 
-\<c\> int main(int argc, char\* argv\[\]) {
+Der Diskettentreiber soll die folgende Verzeichnistruktur zur Verfügung stellen:
+
+| Pfad | Typ | Beschreibung |
+| -------------- | ----------- | --------------------------------------- |
+| / | directory | Oberste Ebene im Verzeichnisbaum |
+| /version | ramfile | Beinhaltet die Version des Treibers |
+| /devices | directory | Hier drin liegen die Laufwerks-Knoten |
+| /devices/fd0 | floppy | Knoten fuer das erste Laufwerk. |
+| /devices/fd1 | floppy | Knoten fuer das zweite Laufwerk. |
+
+*directory* und *ramfile* sind, wie weiter oben schon erwähnt, eingebaute Typen, die mit nur einem Funktionsaufruf aktiviert werden. *floppy* hingegen ist ein eigener Typ, der vom Modul selbst erstellt wird.
+
+Hier folgt nun der Code der Main-Funktion. Diese sorgt eigenlich nur fuer die Initialisierung und wartet danach in einer Endlosschleife auf RPCs von anderen Prozessen. \<c\> int main(int argc, char\* argv\[\]) {
 
        //Beim Init unter dem Namen "floppy" registrieren, damit die anderen
        //Prozesse den Treiber finden.
@@ -149,8 +161,150 @@ Hier folgen Ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen f
 
 } \</c\>
 
+Dieser Code reicht noch nicht ganz. Nun müssen noch die Handler, die oben schon ins Typehandle eingetragen wurden definiert werden:
+
+\<c\> read_hdl_reply floppy_read_handler(lostio_filehandle_t\* filehandle, size_t blocksize, size_t blockcount) {
+
+       //Dient als Rückgabewert
+       read_hdl_reply reply;
+
+       //Die übergebenen Grössen in Bytes umrechen
+       size_t size = blocksize * blockcount;
+
+       //Überprüfen ob nicht über die Diskette heraus gelesen werden soll.
+       if(size + filehandle->pos > filehandle->node->size)
+       {
+           //Falls dem so ist, nur soviel lesen wie möglich
+           size = filehandle->node->size - filehandle->pos;
+       }
+
+       //Startsektor berechnen
+       dword sector_start = filehandle->pos / 512;
+       if(filehandle->pos % 512 != 0)
+       {
+           sector_start++;
+       }
+
+       //Sektorenanzahl berechnen
+       dword sector_count = size / 512;
+       if(size % 512 != 0)
+       {
+           sector_count++;
+       }
+
+       //Buffer allokieren
+       static byte* buffer = NULL;
+       buffer = realloc(buffer, sector_count * 512);
+
+  
+
+       int i;
+       //Sektoren in den Buffer einlesen
+       for(i = 0; i < sector_count; i++)
+       {
+           floppy_read_sector(sector_start + i, (void*)((dword)buffer + 512 * i));
+       }
+
+       //Die Antwort-Struktur befüllen
+       reply.data = buffer;
+       reply.size = size;
+
+       //Antwort zurückgeben
+       return reply;
+
+}
+
+  
+size_t floppy_write_handler(lostio_filehandle_t\* filehandle, size_t blocksize, size_t blockcount, void\* data) {
+
+       //Die übergebenen Grössen in Bytes umrechen
+       size_t size = blocksize * blockcount;
+
+       //Überprüfen ob nicht über die Diskette heraus geschrieben werden soll.
+       if(size + filehandle->pos > filehandle->node->size)
+       {
+           size = filehandle->node->size - filehandle->pos;
+       }
+
+       //Wenn die Groesse 0 ist, dann ist hier Endstation
+       if(size == 0)
+       {
+           return 0;
+       }
+
+       //Startsektor berechnen
+       dword sector_start = filehandle->pos / 512;
+
+       //Sektorenanzahl berechnen
+       dword sector_count = size / 512;
+       if(size % 512 != 0)
+       {
+           sector_count++;
+       }
+
+  
+
+       int i;
+       //Die Sektoren auf die Diskette schreiben
+       for(i = 0; i < sector_count; i++)
+       {
+           floppy_write_sector(sector_start + i, data);
+       }
+
+       //Die Anzahl der geschriebenen Bytes zurückgeben
+       return size;
+
+}
+
+  
+int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origin) {
+
+       //Die neue Position des Cursors muss je nach angegebenem Bezugspunkt 
+       //unterscheidlich berechnet werden
+       switch(origin)
+       {
+           //Absolute Angabe der neuen Position
+           case SEEK_SET:
+           {
+               //Die neue Cursorposition liegt ausserhalb der Datei
+               if(offset > filehandle->node->size)
+               {
+                   //Abbrechen
+                   return -1;
+               }
+
+               //Neue Position setzen
+               filehandle->pos = offset;
+               break;
+           }
+
+           //Neue Position relativ zur aktuellen Position
+           case SEEK_CUR:
+           {
+               //Die neue Cursorposition liegt ausserhalb der Datei
+               if((offset + filehandle->pos) > filehandle->node->size)
+               {
+                   //Abbrechen
+                   return -1;
+               }
+               filehandle->pos += offset;
+               break;
+           }
+
+           //Der Cursor soll ans Dateiende gesetzt werden
+           case SEEK_END:
+           {
+               filehandle->pos = filehandle->node->size;
+               break;
+           }
+       }
+
+       return 0;
+
+} \</c\>
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1856; parent 1855; 2007-03-09T23:50:45Z -->
+<!-- MediaWiki page 1498; revision 1858; parent 1856; 2007-03-10T13:18:15Z -->
