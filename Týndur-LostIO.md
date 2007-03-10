@@ -178,25 +178,11 @@ Dieser Code reicht noch nicht ganz. Nun müssen noch die Handler, die oben schon
            size = filehandle->node->size - filehandle->pos;
        }
 
-       //Startsektor berechnen
-       dword sector_start = filehandle->pos / 512;
-       if(filehandle->pos % 512 != 0)
-       {
-           sector_start++;
-       }
-
-       //Sektorenanzahl berechnen
-       dword sector_count = size / 512;
-       if(size % 512 != 0)
-       {
-           sector_count++;
-       }
+       //...
 
        //Buffer allokieren
        static byte* buffer = NULL;
        buffer = realloc(buffer, sector_count * 512);
-
-  
 
        int i;
        //Sektoren in den Buffer einlesen
@@ -232,17 +218,7 @@ size_t floppy_write_handler(lostio_filehandle_t\* filehandle, size_t blocksize, 
            return 0;
        }
 
-       //Startsektor berechnen
-       dword sector_start = filehandle->pos / 512;
-
-       //Sektorenanzahl berechnen
-       dword sector_count = size / 512;
-       if(size % 512 != 0)
-       {
-           sector_count++;
-       }
-
-  
+       //...
 
        int i;
        //Die Sektoren auf die Diskette schreiben
@@ -305,6 +281,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1858; parent 1856; 2007-03-10T13:18:15Z -->
+<!-- MediaWiki page 1498; revision 1859; parent 1858; 2007-03-10T13:25:20Z -->
