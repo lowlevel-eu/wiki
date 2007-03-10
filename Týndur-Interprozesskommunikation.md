@@ -18,6 +18,6 @@ Umgesetzt wird dieses Konzept durch folgende Syscalls:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1500/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1500/index.html)
 
-<!-- MediaWiki page 1500; revision 1843; parent 0; 2007-03-09T15:49:19Z -->
+<!-- MediaWiki page 1500; revision 1863; parent 1843; 2007-03-10T17:07:18Z -->
