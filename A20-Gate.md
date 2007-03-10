@@ -50,10 +50,11 @@ Zuersteinmal müssen wir überprüfen ob der Tastatur-Controller empfangsbereit 
 
 Hier der Code um abzufragen ob der Tastatur-Controller Input Buffer frei ist:
 
-    .1:
-        in  al, 0x64    ;Tastatur-Controller-Statusbyte lesen
+\<asm\> .1:
+
+        in   al, 0x64    ;Tastatur-Controller-Statusbyte lesen
         test    al, 00000010b   ;Ist das Bit1 gesetzt?
-        jnz     .1  ;Wenn ja, dann wiederhole den Vorgang
+        jnz     .1  ;Wenn ja, dann wiederhole den Vorgang</asm>
 
 Wenn die Schleife nun beendet wird, wenn also das Bit1 NICHT MEHR gesetzt ist, dann können wir dem Tastatur-Controller einen Befehl senden. Und zwar möchten wir das Statusbyte des Tastatur-Chips Output Ports lesen.
 
@@ -61,54 +62,61 @@ Dazu schicken wir den Befehl 0xD0 an den Tastatur-Controller.
 
 Das geschieht mit folgendem Code:
 
-        mov  al, 0xD0    ;Befehl zum lesen des Output Port Statusbytes in AL speichern
-        out     0x64, al    ;Befehl an den Tastatur-Controller senden
+\<asm\> mov al, 0xD0 ;Befehl zum lesen des Output Port Statusbytes in AL speichern
+
+        out  0x64, al    ;Befehl an den Tastatur-Controller senden</asm>
 
   
 Nun wird der Tastatur-Controller mit dem Tastatur-Chip kommunizieren und ihm mitteilen, das er sein Output Port Statusbyte auf den Port 0x60 legen soll, damit wir es von dort lesen können. Da das ganze aber auch seine Zeit braucht, bis das Byte bereit steht, brauchen wir wieder eine kleine Endlosschleife die uns EBENFALLS von Port 0x64 das Statusbyte des Tastatur-Controllers liest und das Bit0 prüft. Das Bit0 wird nämlich auf 1 gesetzt, sobald Daten vom Tastatur-Chip abrufbar sind. Man sieht also, das die beiden Controller sehr eng miteinander verknüpft sind.
 
 Hier der Code zum warten auf das Byte:
 
-    .2:
-        in  al, 0x64    ;Tastatur-Controller Statusbyte lesen
+\<asm\> .2:
+
+        in   al, 0x64    ;Tastatur-Controller Statusbyte lesen
         test    al, 00000001b   ;Bit0 testen ob es gesetzt ist
-        jz  .2  ;Wenn es NOCH NICHT gesetzt ist, wiederhole den Vorgang
+        jz  .2  ;Wenn es NOCH NICHT gesetzt ist, wiederhole den Vorgang</asm>
 
   
 Wenn nun die Schleife verlassen wird, steht das Byte abrufbereit. Wir werden es uns dann nun abholen und gleich etwas modifizieren. Es ist das selbe Prinzip wir beim schalten in den Protected Mode. Zuerst wird das Original-Statusbyte gelesen. Dann wird das betreffende Bit (hier Bit1) gesetzt und das Byte wieder zurückgeschrieben.
 
 Mit folgendem Code holen wir uns das Byte, setzen das Bit1 auf 1 und speichern das Byte (befindet sich nach dem lesen in AL bzw. EAX) auf dem Stack zwischen. Das müssen wir tun, da wir Al bzw. EAX noch für ein paar Zwischenschritte benötigen, bevor wir das Statusbyte wieder zurückschreiben können. Man könnte EAX auch in einem anderen Register zwischenspeichern. Das ist dann einfach Ansichtssache.
 
-        in   al, 0x60    ;Output Port Statusbyte von Tastatur-Chip lesen
-        or  al, 00000010b   ;Bit1 auf 1 setzen. A20Gate Enable Bit
-        push    eax     ;EAX zwischenspeichern
+\<asm\> in al, 0x60 ;Output Port Statusbyte von Tastatur-Chip lesen
+
+        or   al, 00000010b   ;Bit1 auf 1 setzen. A20Gate Enable Bit
+        push    eax     ;EAX zwischenspeichern</asm>
 
 So nun geht das Spielchen nochmal von vorne los. Wir müssen nun erst wieder warten das wir einen Befehl an den Tastatur-Controller schicken können. Dazu der folgende Code, welcher identisch mit bereits oben genannten ist:
 
-    .3:
-        in  al, 0x64    ;Tastatur-Controller-Statusbyte lesen
+\<asm\> .3:
+
+        in   al, 0x64    ;Tastatur-Controller-Statusbyte lesen
         test    al, 00000010b   ;Ist das Bit1 gesetzt?
-        jnz     .3  ;Wenn ja, dann wiederhole den Vorgang
+        jnz     .3  ;Wenn ja, dann wiederhole den Vorgang</asm>
 
 Nun können wir wieder einen Befehl senden und tun dies auch gleich. Diesmal jedoch senden wir den Befehl der dem Tastatur-Controller mitteilt, das wir das Statusbyte des Output Ports wieder zurückschreiben möchten.
 
 Dazu dient folgender Code:
 
-        mov  al, 0xD1    ;Befehl zum schreiben des Statusbytes des Output Ports in AL schreiben
-        out     0x64, al    ;Befehl an den Tastatur-Controller senden
+\<asm\> mov al, 0xD1 ;Befehl zum schreiben des Statusbytes des Output Ports in AL schreiben
+
+        out  0x64, al    ;Befehl an den Tastatur-Controller senden</asm>
 
   
 Und wie so üblich müssen wir WIEDER warten das wir Daten senden können. Also nochmal:
 
-    .4:
-        in  al, 0x64    ;Tastatur-Controller-Statusbyte lesen
+\<asm\> .4:
+
+        in   al, 0x64    ;Tastatur-Controller-Statusbyte lesen
         test    al, 00000010b   ;Ist das Bit1 gesetzt?
-        jnz     .4  ;Wenn ja, dann wiederhole den Vorgang
+        jnz     .4  ;Wenn ja, dann wiederhole den Vorgang</asm>
 
 Und nun holen wir uns das Statusbyte wieder vom Stack und senden es an den Tastatur-Chip.
 
-        pop  eax     ;Statusbyte vom Stack holen
-        out     0x60, al    ;An Tastatur-Chip senden
+\<asm\> pop eax ;Statusbyte vom Stack holen
+
+        out  0x60, al    ;An Tastatur-Chip senden</asm>
 
   
 Nun sollte das A20 Gate eingeschaltet sein. Um das zu prüfen, lesen wir das Output Port Statusbyte ERNEUT aus und schauen ob das Bit1 (A20 Gate Enable Bit) IMMER NOCH gesetzt ist. Da hier aber nichts neues mehr kommt, sondern im Endeffekt nur nochmal die ersten paar Befehlsfolgen, kürze ich das an dieser Stelle ab. Wer gerne etwas basteln möchte, der reimt sich diese Überprüfung selbst zusammen. Und für die faulen stelle ich den ganzen Code auf in einer feinen Funktion zu Download bereit.
@@ -117,7 +125,7 @@ Die Funktion kann vom C-Kernel (möglichst am Anfang natürlich) aufgerufen werd
 
 Der Prototyp der Funktion für C lautet wie folgt:
 
-    unsigned int EnableA20Gate();
+\<c\> unsigned int EnableA20Gate();\</c\>
 
 Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann diese Funktion am besten in die kernel32.asm Datei packen.
 
@@ -129,6 +137,6 @@ Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1765/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1860/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 1765; parent 1684; 2007-01-20T16:32:08Z -->
+<!-- MediaWiki page 1462; revision 1860; parent 1765; 2007-03-10T14:58:17Z -->
