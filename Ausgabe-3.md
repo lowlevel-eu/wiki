@@ -51,7 +51,8 @@ Ich schlage vor, wir benutzen Interrupt 0x21. DOS benutzt für die meisten Calls
 
 Unsere erste Routine - 0x01 von Interrupt 0x21 - wird ein Ersatz für die putstr-Funktion sein. Unsere Routine wird also den String nehmen, auf den SI zeigt und ihn über BIOS Teletype auf den Bildschirm schreiben (String muss Null-terminiert sein!).
 
-       _int0x21:
+\<asm\> \_int0x21:
+
         _int0x21_ser0x01:       ; funktion 0x01
         cmp al, 0x01            ; funktion 0x01 angefragt?
         jne _int0x21_end        ; nächste Routine checken
@@ -69,13 +70,14 @@ Unsere erste Routine - 0x01 von Interrupt 0x21 - wird ein Ersatz für die putstr
         jmp _int0x21_end
         
         _int0x21_end:
-        iret  
+        iret</asm>
 
 Jetzt gehen wir den Code Stück für Stück durch. Jede Funktion hat ein Label in der Form "\_int0x21_ser0x01". Der erste Teil ist die Interrupt-Nummer, der Zweite die Funkionsnummer. Zu beginn jeder Funktion wird geprüft, ob in AL die Nummer der Funktion drinsteht. Wenn ja, geht der Code normal weiter und die Routine wird ausgeführt. Wenn nicht, wird zur nächsten Funktion gesprungen. In diesem Beispiel haben wir nur eine Routine, deshalb wäre dann die ISR gleich zu Ende.
 
 Nun haben wir also unseren Interrupt Handler. Dieser ist aber noch nicht in der Interrupt Vector Table registriert. Bevor wir den Interrupt aufrufen, müssen wir also ein paar Pointer umbiegen, damit der PC auch unseren Interrupt Handler benutzt.
 
-       push dx
+\<asm\> push dx
+
        push es
        xor ax, ax
        mov es, ax
@@ -84,7 +86,7 @@ Nun haben wir also unseren Interrupt Handler. Dieser ist aber noch nicht in der 
        mov [es:0x21*4+2], cs           ; Pointer auf CS
        sti
        pop es
-       pop dx
+       pop dx</asm>
 
 Als erstes speichern wir DX und ES. Danach leeren wir das AX-Register und schreiben den Wert von AX in ES rein (keine Panik, das ist die schnellste Möglichkeit!). Als nächstes schalten wir Interrupts aus, da wir ja selbst mit Interrupts arbeiten.
 
@@ -94,9 +96,10 @@ Manch einer wird sich wundern, warum wir den jetztigen CS-Wert nehmen: der Inter
 
 Wie benutzen wir also unsere schöne neue Funktion zur Textausgabe?
 
-       mov si, Message ; der String
+\<asm\> mov si, Message ; der String
+
        mov al, 0x01    ; wir brauchen Funktion 0x01
-       int 0x21        ; unser Interrupt!!!
+       int 0x21        ; unser Interrupt!!!</asm>
 
 So, das wars auch schon. Jeder kann jetzt mit wenig Aufwand neue Funktionen hinzufügen und so seine API Stück für Stück erweitern. War doch einfach, oder?
 
@@ -112,7 +115,8 @@ Das ist ganz einfach. Es gibt eine sogenannte Interrupt Vector Tabelle, die dire
 
 Nun wird auch ersichtlicher was im folgenden Code passiert:
 
-       push dx
+\<asm\> push dx
+
        push es
        xor ax, ax
        mov es, ax
@@ -121,7 +125,7 @@ Nun wird auch ersichtlicher was im folgenden Code passiert:
        mov [es:0x21*4+2], cs           ; Pointer auf CS
        sti
        pop es
-       pop dx
+       pop dx</asm>
 
 Entscheiden sind hier die Zeilen zwischen "cli" und "sti".
 
@@ -202,7 +206,8 @@ Beim Schreiben des Bootloaders sollte man unbedingt beachten, dass außer in den
 
 ### APM Powerdown
 
-       ; SYSTEM POWERDOWN 
+\<asm\>  ; SYSTEM POWERDOWN
+
        ; WARNING - DO NOT RUN UNDER WIN! (IT WORKS!)
        ; (C) 1999 BY VINNY  
        
@@ -218,7 +223,7 @@ Beim Schreiben des Bootloaders sollte man unbedingt beachten, dass außer in den
        MOV AX,0x5307
        MOV BX,1
        MOV CX,3
-       INT 0x15 ; powerdown system
+       INT 0x15 ; powerdown system</asm>
 
 ## OS Projekte: SkyOS
 
@@ -282,21 +287,23 @@ SkyOS beeindruckt durch die extreme umfangreiche Funktionalität und die ausgere
 
 Für Leute, die hauptsächlich mit Hochsprachen (C / C++) arbeiten, wird Assembler ein wenig gewöhnungsbedürftig sein. Nehmen wir zum Beispiel unseren Interrupt, den wir in dieser Ausgabe geschrieben haben. Um einen String auszugeben, schreiben wir:
 
-       mov al, 0x01
+\<asm\> mov al, 0x01
+
        mov si, Meldung
-       int 0x21
+       int 0x21</asm>
 
 Umständlich, oder? Mit einem Makro können wir uns sehr viel Arbeit ersparen!
 
-       %macro PrintText 1 
+\<asm\>  %macro PrintText 1
+
        mov al, 0x01
        mov si, %1 
        int 0x21
-       %endmacro  
+       %endmacro</asm>
 
 Jetzt reicht es, wenn wir im Code schreiben:
 
-       PrintText Meldung
+\<asm\> PrintText Meldung\</asm\>
 
 Das ist die einzige Zeile, die man sich einfach merken muss.
 
@@ -334,6 +341,6 @@ Nun die Frage an euch: sollen wir weiterhin mit Assembler programmieren - eben L
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
 
-<!-- MediaWiki page 1419; revision 1473; parent 0; 2006-09-13T17:33:49Z -->
+<!-- MediaWiki page 1419; revision 1861; parent 1473; 2007-03-10T15:01:43Z -->
