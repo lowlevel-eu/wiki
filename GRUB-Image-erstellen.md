@@ -61,7 +61,7 @@ Anschließend ein Skript update_lost.sh (oder so ähnlich) mit sinngemäß folge
     #!/bin/bash
 
     mount /mnt
-    cp /home/lost/trunk/build/kernel /mnt
+    cp /home/lost/trunk/build/*.krn /home/lost/trunk/build/*.mod /mnt
     umount /mnt
 
 Ausführbar machen und ausprobieren:
@@ -71,6 +71,6 @@ Ausführbar machen und ausprobieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1615/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1866/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
 
-<!-- MediaWiki page 1449; revision 1615; parent 0; 2007-01-13T17:15:20Z -->
+<!-- MediaWiki page 1449; revision 1866; parent 1615; 2007-03-10T23:01:38Z -->
