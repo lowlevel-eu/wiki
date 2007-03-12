@@ -43,7 +43,7 @@ Ein Typehandle ist folgendermassen aufgebaut: \<c\> typedef struct {
 
        typeid_t        id;
 
-       bool            (*pre_open)(char*, byte, pid_t);
+       bool            (*pre_open)(char**, byte, pid_t,io_resource_t);
        void            (*post_open)(lostio_filehandle_t*);
        read_hdl_reply  (*read)(lostio_filehandle_t*,size_t,size_t);
        size_t          (*write)(lostio_filehandle_t*,size_t,size_t,void*);
@@ -281,6 +281,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1867/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1859; parent 1858; 2007-03-10T13:25:20Z -->
+<!-- MediaWiki page 1498; revision 1867; parent 1859; 2007-03-12T09:00:51Z -->
