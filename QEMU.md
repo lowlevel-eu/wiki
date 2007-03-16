@@ -6,7 +6,7 @@ Qemu ist ein Emulator unter anderem für die Systeme Linux, Windows, MacOS, Free
 QEMU emuliert x86-, x86-64 bzw. AMD64-, PowerPC- und Sparc32/64-Hardware.
 
   
-Auf einem x86Prozessor werden neben dem Hauptprozessor folgende Komponenten emuliert:
+Auf einem x86 Prozessor werden neben dem Hauptprozessor folgende Komponenten emuliert:
 
 - CD-ROM/DVD-Laufwerk über ISO-Abbild oder reales Laufwerk
 - Diskettenlaufwerk
@@ -27,6 +27,6 @@ Auf einem x86Prozessor werden neben dem Hauptprozessor folgende Komponenten emul
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 1877; parent 1876; 2007-03-16T09:03:30Z -->
+<!-- MediaWiki page 1505; revision 1878; parent 1877; 2007-03-16T09:04:05Z -->
