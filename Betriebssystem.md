@@ -12,6 +12,6 @@ Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
 
-<!-- MediaWiki page 1479; revision 1890; parent 1754; 2007-03-18T23:32:46Z -->
+<!-- MediaWiki page 1479; revision 1891; parent 1890; 2007-03-18T23:35:16Z -->
