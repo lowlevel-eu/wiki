@@ -18,7 +18,7 @@ Der Zugriff auf Treiber mit einer LostIO-Schnittstelle erfolgt über die Standar
 
 Auf der Treiberseite baut LostIO auf einem Dateisystem-Baum (Intern als vfstree benannt) im Speicher auf. Dieser Baum besteht aus sogenannten Knoten(engl. nodes), die alle wieder Kinderknoten haben können. Jeder dieser Knoten hat einen bestimmten Typ, der für die Handhabung dessen eine zentrale Rolle spielt. Dabei ist ein Verzeichnis vom Prizip her genau das selbe wie jede andere Datei. werden muss. In den Knoten wird dabei nur eine Typen-ID abgespeichert. Wird nun von einem Prozess versucht irgend eine Datei oder ein Verzeichnis zu öffnen und auszulesen, wird intern in der Typendatenbank nach dem Typen des zu öffnenden Knotens gesucht, um herauszufinden, wie die Aktion gehandhabt.
 
-Die Typendatenbank beinhaltet die sogenannten Typehandles. Darin sind Pointer auf die Funktionen, die ausgeführt werden, wenn ein Prozess zum Beispiel versucht Daten von einem Knoten dieses Typs zu lesen. Moment können Handler(eben diese Funktionen) für die folgenden Aktionen eingetragen werden:
+Die Typendatenbank beinhaltet die sogenannten Typehandles. Darin sind Pointer auf die Funktionen, die ausgeführt werden, wenn ein Prozess zum Beispiel versucht Daten von einem Knoten dieses Typs zu lesen. Momentan können Handler (eben diese Funktionen) für die folgenden Aktionen eingetragen werden:
 
 - pre_open
 - post_open
@@ -31,7 +31,7 @@ Nun zur Bedeutung der einzelnen Aktionen. *read* und *write* werden, wie unschwe
 
 ### pre_open und post_open
 
-Als unklar und nicht unbedingt sinnvoll könnte *pre_open* und *post_open* aufgefasst werden. Warum 2 Funktionen für Open? Nun zuerst zur Funktionsweise: *pre_open* wird, wie der Name schon ahnen lässt, vor dem eigentlichen Öffnugs-Vorgang aufgerufen. Das geschieht auch, wenn der Knoten mit dem angegebenen Pfad nicht existiert. *post_open* wird erst nach dem Öffnen gestartet. Von *post_open* aus kann der Vorgang nicht mehr einfach so gestoppt werden, was aus *pre_open* problemlos möglich ist.
+Als unklar und nicht unbedingt sinnvoll könnte *pre_open* und *post_open* aufgefasst werden. Warum 2 Funktionen für Open? Nun zuerst zur Funktionsweise: *pre_open* wird, wie der Name schon ahnen lässt, vor dem eigentlichen Öffnungs-Vorgang aufgerufen. Das geschieht auch, wenn der Knoten mit dem angegebenen Pfad nicht existiert. *post_open* wird erst nach dem Öffnen gestartet. Von *post_open* aus kann der Vorgang nicht mehr einfach so gestoppt werden, was aus *pre_open* problemlos möglich ist.
 
 Bei “echten” Dateisystemen wie zum Beispiel auf Disketten hat *pre_open* noch eine spezielle Aufgabe. Da die Verzeichnisbäume von physikalischen Dateisystemen extreme Ausmasse annehmen können, sodass es belastend, oder sogar unmöglich wäre, diese vollständig im Arbeitsspeicher zu haben, besteht die Möglichkeit nur einen Teil davon im Arbeitsspeicher zu haben, und andere Teile nach gebrauch wieder zu entfernen. Und genau hier kommt *pre_open* wieder ins Spiel. Da er angesprungen wird, egal ob der Pfad existiert oder nicht, kann daraus bei Bedarf ein Teil des Verzeichnisbaumes geladen werden.
 
@@ -281,6 +281,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1867/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1867; parent 1859; 2007-03-12T09:00:51Z -->
+<!-- MediaWiki page 1498; revision 1892; parent 1867; 2007-03-19T18:03:32Z -->
