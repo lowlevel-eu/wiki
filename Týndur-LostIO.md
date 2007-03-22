@@ -106,11 +106,7 @@ Der Diskettentreiber soll die folgende Verzeichnistruktur zur Verfügung stellen
 
 Hier folgt nun der Code der Main-Funktion. Diese sorgt eigenlich nur fuer die Initialisierung und wartet danach in einer Endlosschleife auf RPCs von anderen Prozessen. \<c\> int main(int argc, char\* argv\[\]) {
 
-       //Beim Init unter dem Namen "floppy" registrieren, damit die anderen
-       //Prozesse den Treiber finden.
-       init_service_register("floppy");
-       
-       //LostIO initialisieren(Ist nur bei den Treibern notwendig. Bei 
+       //LostIO initialisieren(Ist nur bei den Treibern notwendig. Bei  
        //Anwendungen, die nur auf andere Treiber zugreifen wollen sollte
        //das weggelassen werden.
        lostio_init();
@@ -152,6 +148,11 @@ Hier folgt nun der Code der Main-Funktion. Diese sorgt eigenlich nur fuer die In
        //Die beiden Nodes fuer die beiden Diskettenlaufwerke erstellt
        vfstree_create_node("/devices/fd0", 255, 1440 * 1024, (void*)0);
        vfstree_create_node("/devices/fd1", 255, 1440 * 1024, (void*)1);
+           
+       //Beim Init unter dem Namen "floppy" registrieren, damit die anderen
+       //Prozesse den Treiber finden. Darf erst geschehen, sobald wir bereit 
+       //sind.
+       init_service_register("floppy");
 
        //Diese Schleife sorgt dafuer, dass der Treiber nicht sofort nach
        //dem Initialisieren wieder geschlossen wird.
@@ -281,6 +282,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 1892; parent 1867; 2007-03-19T18:03:32Z -->
+<!-- MediaWiki page 1498; revision 1894; parent 1892; 2007-03-22T18:14:19Z -->
