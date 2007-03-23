@@ -198,7 +198,7 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
 
 Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben wird.
 
-    ;Warten bis der Eingabepuffer lehr ist
+    ;Warten bis der Eingabepuffer leer ist
     wait:
     in   al, x064
     test al, 00000010b
@@ -208,7 +208,7 @@ Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben 
     mov  al, 0xD1
     out  0x64, al
 
-    ;Wieder warten bis der Eingabepuffer lehr ist
+    ;Wieder warten bis der Eingabepuffer leer ist
     wait2:
     in   al, x064
     test al, 00000010b
@@ -220,6 +220,6 @@ Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1779/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1895/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 1779; parent 1777; 2007-01-28T12:40:09Z -->
+<!-- MediaWiki page 1468; revision 1895; parent 1779; 2007-03-23T17:56:30Z -->
