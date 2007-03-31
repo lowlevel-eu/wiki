@@ -24,7 +24,7 @@ Die Veränderungen bei den derzeitigen Versionen:
 
 - Viele Bugfixes
 - Erweiterte Shell (u.a. Befehl für das Ausführen von Prozessen)
-- GUI-Zeichenfunktionen
+- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")-Zeichenfunktionen
 - Demo-programme: Minesweeper und TicTacToe
 
 **HomixOS 0.0.6 Alpha:**
@@ -54,7 +54,7 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 - Festplattentreiber (ATA)
 - CD-ROM/DVD-ROM Laufwerkstreiber (ATAPI)
-- VGA-Grafiktreiber
+- [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Grafiktreiber
 - VFAT Unterstützung
 - ISO9660 Dateisystemtreiber
 - UDF Dateisystemtreiber
@@ -75,6 +75,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1911/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1825; parent 1798; 2007-02-28T14:48:00Z -->
+<!-- MediaWiki page 1453; revision 1911; parent 1825; 2007-03-31T18:56:17Z -->
