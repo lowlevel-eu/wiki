@@ -33,7 +33,7 @@ Da diese vor dem Eintritt in die main-Funktion initialisiert sein sollen, müsse
 
 ## g++
 
-Die Konstruktion der globalen/statischen Objekte ist unter g++ immer gleich. Nur die Destruktion der selben hängt von der Verwendung des configure-flags --enable-\_\_cxa_atexit und vom Kommandozeilenparameter -fuse-cxa-atexit ab.
+Die Konstruktion der globalen/statischen Objekte ist unter g++ immer gleich. Nur die Destruktion der selben hängt von der Verwendung des configure-flags --enable-\_\_cxa_atexit und vom Kommandozeilenparameter -fuse-cxa-atexit / -fno-use-cxa-atexit ab.
 
 ### Konstruktoren
 
@@ -106,6 +106,6 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1897; parent 1794; 2007-03-27T18:50:42Z -->
+<!-- MediaWiki page 1486; revision 1904; parent 1897; 2007-03-31T12:03:11Z -->
