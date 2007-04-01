@@ -2,7 +2,7 @@
 
 # Version 0.1
 
-**Release Termin:** Wie immer: When it's done.
+**Release Termin:** Wie immer: When it's done. Voraussichltich Mitte April.
 
 ## Features
 
@@ -13,8 +13,15 @@
 - Konsole
 - Einfache Shell
 
+  
+
+## Noch zu tun bis zum Realease
+
+- Konsole
+- Bugfixes
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 1906; parent 1905; 2007-03-31T15:27:53Z -->
+<!-- MediaWiki page 1510; revision 1913; parent 1906; 2007-04-01T14:22:35Z -->
