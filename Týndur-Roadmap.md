@@ -1,27 +1,38 @@
 # Týndur/Roadmap
 
-# Version 0.1
+# Version 0.1.x (Morgoth)
 
-**Release Termin:** Wie immer: When it's done. Voraussichltich Mitte April.
+## Version 0.1.0
 
-## Features
+- **Feature Freeze**: voraussichtlich 09.04.2007
+- **Release Termin:** Wie immer: When it's done. Voraussichtlich Mitte April.
 
+Features:
+
+- Speicherverwaltung
 - Multitasking
+- Einfache Interprozeßkommunikation
+- [LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO") soweit für einfache Dateioperationen nötig
 - DMA & Diskettenlaufwerk
-- FAT12 Lesen und Schreiben
+- FAT12:
+  - Anlegen von Dateien und Verzeichnissen
+  - Lesen und Schreiben in Dateien
 - Tastatur
 - Konsole
 - Einfache Shell
 
-  
+# Version 0.2.x (Saruman)
 
-## Noch zu tun bis zum Realease
-
-- Konsole
-- Bugfixes
+- Optimierte RPC-Funktionen
+- Virtuelle Terminals
+- FAT:
+  - Löschen von Dateien und Verzeichnissen
+  - Umbenennen von Dateien und Verzeichnissen
+  - Lange Dateinamen
+- ...
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 1913; parent 1906; 2007-04-01T14:22:35Z -->
+<!-- MediaWiki page 1510; revision 1917; parent 1913; 2007-04-06T21:47:24Z -->
