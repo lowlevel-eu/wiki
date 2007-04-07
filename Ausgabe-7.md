@@ -130,7 +130,7 @@ Bei Round Robin werden alle Tasks in einer Kette hintereinander abgearbeitet und
 
 #### First Task First
 
-Dieses Verfahren ist eigendlich mehr für Batchbetrieb, also dem Abarbeiten der Tasks nacheinander als gleichzeitig gedacht. Es folgt dem Sprichwort *wer zuerst* kommt mahlt zuerst*, sodass ein Programm also den ersten Task ausführt und aber* derzeit auch noch andere annimmt. Und nach Beendigung dieses Tasks wird der nächste genommen. Das Verfahren ist unbrauchbar für Systeme mit Mikrokerneln, bei denen Treiber und Module auch Tasks darstellen, da diese nicht aufgerufen werden können. Desweiteren scheiden sich die Geister, ob diese Methode überhaupt den Namen "Multitasking" verdient, da die Tasks nicht gleichzeitig ausgeführt werden, jedoch aber hintereinander.
+Dieses Verfahren ist eigendlich mehr für Batchbetrieb, also dem Abarbeiten der Tasks nacheinander als gleichzeitig gedacht. Es folgt dem Sprichwort *wer zuerst kommt mahlt zuerst*, sodass ein Programm also den ersten Task ausführt und aber derzeit auch noch andere annimmt. Und nach Beendigung dieses Tasks wird der nächste genommen. Das Verfahren ist unbrauchbar für Systeme mit Mikrokerneln, bei denen Treiber und Module auch Tasks darstellen, da diese nicht aufgerufen werden können. Desweiteren scheiden sich die Geister, ob diese Methode überhaupt den Namen "Multitasking" verdient, da die Tasks nicht gleichzeitig ausgeführt werden, jedoch aber hintereinander.
 
 #### Shortest Time Left
 
@@ -1189,6 +1189,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1920/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1921/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1920; parent 1823; 2007-04-07T16:49:58Z -->
+<!-- MediaWiki page 1494; revision 1921; parent 1920; 2007-04-07T16:52:22Z -->
