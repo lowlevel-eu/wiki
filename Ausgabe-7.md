@@ -122,7 +122,7 @@ Dies ist einer der umfangreichsten Punkte und der schwierigste, so meinen Expert
 4.  Sie sollte berechenbar sein, also nicht auf Zufallswerten basieren oder auf jedem System anderst funktionieren.
 5.  Sie darf nicht beeinflussbar oder manipulierbar sein.
 
-Es gibt viele verschiedene Strategien. Die einen benutzen Prioritätsstufen zum Einteilen der Tasks, andere benutzen die Länge der Tasks. Bei Prioritätseinteilungen gibt es entweder die Möglichkeit, den Tasks die Prioritäten nach ihrem Einsatzbereich (Treiber, Programm,...) zu geben, und dadurch zum Beispiel den Treibern mehr Rechenzeit zuzuteilen, oder aber das Privileglevel zu erhöhen, wenn der Task sich selber pausiert und damit anderen den Vortritt lässt, wenn er gerade keine Rechenzeit benötigt. Sehr häufige Scheduling Strategien sind *Round Robin*, *First Task First* und *Shortest* Time Left*. Diese und einige andere werde ich nun ein bisschen erläutern:*
+Es gibt viele verschiedene Strategien. Die einen benutzen Prioritätsstufen zum Einteilen der Tasks, andere benutzen die Länge der Tasks. Bei Prioritätseinteilungen gibt es entweder die Möglichkeit, den Tasks die Prioritäten nach ihrem Einsatzbereich (Treiber, Programm,...) zu geben, und dadurch zum Beispiel den Treibern mehr Rechenzeit zuzuteilen, oder aber das Privileglevel zu erhöhen, wenn der Task sich selber pausiert und damit anderen den Vortritt lässt, wenn er gerade keine Rechenzeit benötigt. Sehr häufige Scheduling Strategien sind *Round Robin*, *First Task First* und *Shortest Time Left*. Diese und einige andere werde ich nun ein bisschen erläutern:
 
 ### Round Robin
 
@@ -1189,6 +1189,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1920/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1823; parent 1822; 2007-02-26T15:26:55Z -->
+<!-- MediaWiki page 1494; revision 1920; parent 1823; 2007-04-07T16:49:58Z -->
