@@ -124,7 +124,7 @@ Dies ist einer der umfangreichsten Punkte und der schwierigste, so meinen Expert
 
 Es gibt viele verschiedene Strategien. Die einen benutzen Prioritätsstufen zum Einteilen der Tasks, andere benutzen die Länge der Tasks. Bei Prioritätseinteilungen gibt es entweder die Möglichkeit, den Tasks die Prioritäten nach ihrem Einsatzbereich (Treiber, Programm,...) zu geben, und dadurch zum Beispiel den Treibern mehr Rechenzeit zuzuteilen, oder aber das Privileglevel zu erhöhen, wenn der Task sich selber pausiert und damit anderen den Vortritt lässt, wenn er gerade keine Rechenzeit benötigt. Sehr häufige Scheduling Strategien sind *Round Robin*, *First Task First* und *Shortest Time Left*. Diese und einige andere werde ich nun ein bisschen erläutern:
 
-### Round Robin
+#### Round Robin
 
 Bei Round Robin werden alle Tasks in einer Kette hintereinander abgearbeitet und jeder bekommt die gleiche Rechenzeit. Wenn man Prioritäten benutzt, so hat man mehrere Task-Tabellen nach denen man die Tasks aussucht. Die andere Möglichkeit ist, dass es jedes Prioritätlevel nur einmal gibt und ein Task beim Erhöhen seines Levels einfach mit seinem direkten oberen Nachbarn tauscht, und dadruch nach oben kommt.
 
@@ -1189,6 +1189,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1921/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1922/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1921; parent 1920; 2007-04-07T16:52:22Z -->
+<!-- MediaWiki page 1494; revision 1922; parent 1921; 2007-04-07T16:57:54Z -->
