@@ -107,7 +107,7 @@ Menuets ausführbare haben keine Dateiendung wie zum Beispiel DOS (\*.com), Wind
        Header
        Executable Code
 
-Die viele Programme Speichern nach dem Header ihre Daten, um sie im Code nicht überspringen zu müssen. Das Program wird im Speicher an die Adresse 0x0 (org 0x0) geladen, im Gegensatz zu DOS, welches Dateien aud der Adresse 0x100 läd.
+Viele Programme Speichern nach dem Header ihre Daten, um sie im Code nicht überspringen zu müssen. Das Program wird im Speicher an die Adresse 0x0 (org 0x0) geladen, im Gegensatz zu DOS, welches Dateien aud der Adresse 0x100 läd.
 
 ### Der Header
 
@@ -368,6 +368,6 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
 
-<!-- MediaWiki page 1471; revision 1719; parent 0; 2007-01-18T14:06:48Z -->
+<!-- MediaWiki page 1471; revision 1919; parent 1719; 2007-04-07T16:31:41Z -->
