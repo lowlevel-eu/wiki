@@ -29,10 +29,13 @@ Features:
   - Löschen von Dateien und Verzeichnissen
   - Umbenennen von Dateien und Verzeichnissen
   - Lange Dateinamen
+- buildmk.sh durch bake ersetzen
+- Kernelseitige Kontrolle der IO-Ports
+- Festplatte (IDE) (?)
 - ...
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 1917; parent 1913; 2007-04-06T21:47:24Z -->
+<!-- MediaWiki page 1510; revision 1918; parent 1917; 2007-04-07T12:35:32Z -->
