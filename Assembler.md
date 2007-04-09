@@ -22,6 +22,8 @@ Beispielcode:
 
     movb $0x10, %al
 
+Diese Syntax wird vor allem im Zusammenhang mit gcc verwendet, unter \[Inline-Assembler mit GCC\] defindet sich ein kleines Tutorial hierzu.
+
 ## Liste bekannter Assemlber
 
 ### Assemlber für x86
@@ -33,6 +35,6 @@ TASM (Turbo Assembler) [\[4\]](http://info.borland.com/borlandcpp/cppcomp/tasmfa
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 1923; parent 0; 2007-04-08T09:11:33Z -->
+<!-- MediaWiki page 1514; revision 1924; parent 1923; 2007-04-09T13:29:34Z -->
