@@ -8,7 +8,7 @@ Es gibt für die x86 Prozessorfamilie verschiedene Syntax.
 
 ### Intel
 
-Der Intel Syntax wird meistens verwendet wenn man Assembler von hand schreibt. Er ist  
+Der Intel Syntax wird meistens verwendet wenn man Assembler von hand schreibt.  
 
 Beispielcode:
 
@@ -36,6 +36,6 @@ YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](htt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1928/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1929/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 1928; parent 1926; 2007-04-10T16:05:02Z -->
+<!-- MediaWiki page 1514; revision 1929; parent 1928; 2007-04-10T16:05:39Z -->
