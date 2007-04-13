@@ -4,8 +4,8 @@
 
 ## Version 0.1.0
 
-- **Feature Freeze**: voraussichtlich 09.04.2007
-- **Release Termin:** Wie immer: When it's done. Voraussichtlich Mitte April.
+- **Feature Freeze**: 09.04.2007
+- **Release Termin:** Wie immer: When it's done. Voraussichtlich Ende April.
 
 Features:
 
@@ -32,10 +32,12 @@ Features:
 - buildmk.sh durch bake ersetzen
 - Kernelseitige Kontrolle der IO-Ports
 - Festplatte (IDE) (?)
+- Shutdown
+- Pufferung in LostIO
 - ...
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 1918; parent 1917; 2007-04-07T12:35:32Z -->
+<!-- MediaWiki page 1510; revision 1930; parent 1918; 2007-04-13T21:45:34Z -->
