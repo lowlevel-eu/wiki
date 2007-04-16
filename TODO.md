@@ -18,8 +18,10 @@
 
 - Hier kommt dein Wunsch hin ;)
 
+Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 1933; parent 0; 2007-04-16T13:22:30Z -->
+<!-- MediaWiki page 1518; revision 1935; parent 1933; 2007-04-16T15:36:39Z -->
