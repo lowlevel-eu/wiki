@@ -3,7 +3,12 @@
 **Alte News Meldungen hier einfügen**
 
 |  |  |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **12.03.2007 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.1 erscheint und kann nun als Image heruntergeladen werden. Der [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.1) ist ziemlich umfangreich. [Website](http://www.reactos.org/) |
+| **02.03.2007 :** | @Heise: [Bundespatentgericht erklärt FAT-Patent von Microsoft für nichtig](http://www.heise.de/newsticker/meldung/86102) |
+| **05.02.2007 :** | Qemu 0.9 erscheint. Gleichzeitig wird der Qemu Accelerator unter die GPL gestellt. [Website](http://fabrice.bellard.free.fr/qemu/) |
+| **01.02.2007 :** | Version 0.66 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. Es wurden größtenteils nur Bugs behoben. |
+| **18.01.2007 :** | Die Version 0.57 der 64-Bit Variante des Betriebsystems MenuetOS wurde veröffentlicht. Die neue Version enthält nun einen FTP-Client. [menuetos.net](http://www.menuetos.net) |
 | **30.11.2006 :** | Der Linux Kernel 2.6.19 wird veröffentlicht. Neu ist u.a. die Unterstützung der Dateisysteme ext4, GFS2 und eCryptfs. [kernel.org](http://www.kernel.org) |
 | **11.11.2006 :** | MyEmu 0.2 erscheint [Website](http://myemu.masen-inhabitants.com/) |
 | **25.10.2006 :** | Version 0.64 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. |
@@ -17,6 +22,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 1722; parent 1686; 2007-01-18T17:06:49Z -->
+<!-- MediaWiki page 1416; revision 1942; parent 1722; 2007-04-17T17:38:51Z -->
