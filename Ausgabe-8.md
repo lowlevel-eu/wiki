@@ -592,7 +592,7 @@ StormOS ist ein OS Projekt, das sich noch früh in der Entwicklung befindet. Äh
 
 ### Entstehung von StormOS:
 
-Mit 16 Jahren hatte Thunder aus Litauen (eine Republik in der ehemaligen UdSSR, auch da werden OS’es gecodet ;) ) die Idee, ein eigenes OS zu bauen. Nach einigem Suchen startete er indem er Assembler und C lernte und viele Tech Docs las. Er schrieb das OS GOOS, das noch komplett im Textmodus lief. Die nächste Version hatte bereits den Namen StormOS und lieg im Protected Mode. Nur eine Version später kam die GUI und ersetzte die Shell völlig. Mit StormOS belegte Thunder den dritten Platz eines Computerwettbewerbs in der Kaunas University, bei der er zur Zeit studiert.
+Mit 16 Jahren hatte Thunder aus Litauen (eine Republik in der ehemaligen UdSSR, auch da werden OS’es gecodet ;) ) die Idee, ein eigenes OS zu bauen. Nach einigem Suchen startete er indem er Assembler und C lernte und viele Tech Docs las. Er schrieb das OS GOOS, das noch komplett im Textmodus lief. Die nächste Version hatte bereits den Namen StormOS und lief im Protected Mode. Nur eine Version später kam die GUI und ersetzte die Shell völlig. Mit StormOS belegte Thunder den dritten Platz eines Computerwettbewerbs in der Kaunas University, bei der er zur Zeit studiert.
 
 #### Features:
 
@@ -769,6 +769,6 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1945/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 1945; parent 1939; 2007-04-17T17:57:21Z -->
+<!-- MediaWiki page 1521; revision 1948; parent 1945; 2007-04-17T18:36:31Z -->
