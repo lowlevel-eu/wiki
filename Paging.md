@@ -14,10 +14,11 @@ Zum einschalten des Paging-Mechanismus muss man Bit-31 im CR0 register setzen. D
 
 ## Links
 
-<http://osdever.net/tutorials/pdf/basic_paging.pdf>
+- [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8#paging "Ausgabe 8")
+- <http://osdever.net/tutorials/pdf/basic_paging.pdf>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1946/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 1912; parent 1832; 2007-04-01T14:07:35Z -->
+<!-- MediaWiki page 1496; revision 1946; parent 1912; 2007-04-17T18:15:22Z -->
