@@ -75,7 +75,7 @@ So wird einem Segment beispielsweise eine Privilegstufe zugeordnet. So kann ein 
 
 Hier werde ich nun nochmal im Detail auf Deskriptoren eingehen. Dabei werde ich genauer beschreiben, wie diese Aufgebaut sind und welche Aufgaben die einzelnen Attribute die dort eingetragen werden haben. Dazu schauen wir uns zuerst einmal den allgemeinen Aufbau eines Deskriptoren an.
 
-Datei:Http://www.jay-code.de/pics/deskriptor.gif
+![deskriptor.gif](http://www.jay-code.de/pics/deskriptor.gif)
 
 Hier fällt gleich auf, das die Segmentgröße und die Segmentbasisadresse etwas wild verstreut auf die 4 WORDs verteilt sind. Das kommt daher, weil man den Deskriptor zum 286-Prozessor möglichst kompatibel halten wollte.
 
@@ -357,6 +357,6 @@ Gibt die Bits 15 bis 0 des 32-Bit Offsets innerhalb des Codesegmentes an, in dem
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1947/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 1696; parent 0; 2007-01-17T14:03:28Z -->
+<!-- MediaWiki page 1464; revision 1947; parent 1696; 2007-04-17T18:18:40Z -->
