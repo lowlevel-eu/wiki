@@ -188,104 +188,107 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
 
     0xFF   ?
 
-## Beispiele zur benutzen der KBC Funktionen
+## Beispiele zur Benutzung der KBC Funktionen
 
 ### Ein einfacher Tastatur Handler in Form eines Bootsektors
 
 Dieses Beispiel zeigt, wie man die Tastatur im Realmode benutzen kann. Dabei wird bei jedem Tastendruck oder loslassen einer Taste der scancode ausgegeben. Der Quellcode kann mit NASM oder FASM assembliert werden. Die erzeugte Datei auf den Bootsektor einer Diskette kopieren oder direkt mit einem Emulator benutzen.
 
-    use16
-    org 0x7C00
+\<asm\> use16 org 0x7C00
 
-    cli
+cli
 
-    xor  ax, ax
-    push ax
-    pop  ds
+xor ax, ax push ax pop ds
 
-    ;Standardmäßig ist der IRQ1 im Realmode auf dem Interrupt 9 gemapt
-    mov word[ds:(9*4)  ], keyboard_handler  ;Offset
-    mov word[ds:(9*4)+2], 0                 ;Segment
+Standardmäßig ist der IRQ1 im Realmode auf dem Interrupt 9 gemapt
 
-    sti
+mov word\[ds:(9\*4) \], keyboard_handler  ;Offset mov word\[ds:(9\*4)+2\], 0  ;Segment
 
-    jmp $
+sti
 
+jmp \$
 
-    keyboard_handler:
-      pusha
+  
+keyboard_handler:
 
-      ;scancode lesen
-      in  al, 0x60
+     pusha
 
-      ;Hier kann man mit dem Scancode machen was man will :)
-      call write_byte_as_hex
-      mov  al, '|'
-      call bios.write_char
+     ;scancode lesen
+     in  al, 0x60
 
-      ;dem PIC1 sagen, dass wir den IRQ verarbeitet haben
-      mov al, 0x20
-      out 0x20, al
+     ;Hier kann man mit dem Scancode machen was man will :)
+     call write_byte_as_hex
+     mov  al, '|'
+     call bios.write_char
 
-      popa
-    iret
+     ;dem PIC1 sagen, dass wir den IRQ verarbeitet haben
+     mov al, 0x20
+     out 0x20, al
 
+     popa
 
-    ;Input: al = char
-    bios.write_char:
-      pusha
-      mov  ah, 0x0E
-      int  0x10
-      popa
-    ret
+iret
 
-    hex_chars: db '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
+  
 
-    ;Input: al = byte
-    write_byte_as_hex:
-      pusha
-      and  ax, 0xFF
-      push ax
-      mov  bx, ax
-      shr  bx, 4
-      mov  al, [hex_chars+bx]
-      call bios.write_char
-      pop  bx
-      and  bx, 0xF
-      mov  al, [hex_chars+bx]
-      call bios.write_char
-      popa
-    ret
+Input  
+al = char
 
-    times 510-($-$$) db 0
-    dw 0xAA55
+bios.write_char:
+
+     pusha
+     mov  ah, 0x0E
+     int  0x10
+     popa
+
+ret
+
+hex_chars: db '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
+
+Input  
+al = byte
+
+write_byte_as_hex:
+
+     pusha
+     and  ax, 0xFF
+     push ax
+     mov  bx, ax
+     shr  bx, 4
+     mov  al, [hex_chars+bx]
+     call bios.write_char
+     pop  bx
+     and  bx, 0xF
+     mov  al, [hex_chars+bx]
+     call bios.write_char
+     popa
+
+ret
+
+times 510-(\$-\$\$) db 0 dw 0xAA55 \</asm\>
 
 ### CPU-reset
 
-Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben wird.
+Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben wird. \<asm\>
 
-    ;Warten bis der Eingabepuffer leer ist
-    wait:
-    in   al, x064
-    test al, 00000010b
-    jne  wait
+Warten bis der Eingabepuffer leer ist
 
-    ;Befehl 0xD1 zum schreiben des Inputports an den KBC senden
-    mov  al, 0xD1
-    out  0x64, al
+wait: in al, x064 test al, 00000010b jne wait
 
-    ;Wieder warten bis der Eingabepuffer leer ist
-    wait2:
-    in   al, x064
-    test al, 00000010b
-    jne  wait2
+Befehl 0xD1 zum schreiben des Inputports an den KBC senden
 
-    ;Den neuen Wert für das Inputport über Port 0x60 senden
-    mov  al, 0xFE
-    out  0x60, al
+mov al, 0xD1 out 0x64, al
+
+Wieder warten bis der Eingabepuffer leer ist
+
+wait2: in al, x064 test al, 00000010b jne wait2
+
+Den neuen Wert für das Inputport über Port 0x60 senden
+
+mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1950/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 1896; parent 1895; 2007-03-23T19:03:31Z -->
+<!-- MediaWiki page 1468; revision 1950; parent 1896; 2007-04-17T18:42:59Z -->
