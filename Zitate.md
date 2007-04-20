@@ -235,21 +235,8 @@ Aus \#lost (09. März 2007)
     [15:30] <TheMelkor> ich brauchte die
     [15:30] <stultus> echo 110 >> /dev/telephone
 
-------------------------------------------------------------------------
-
-Aus \#lost (20. Mai 2007)
-
-    [22:37:04] <%FreakyPenguin> Morgen wirds ernst, da komm ich am Abend deprimiert nach Hause *g*
-    [22:37:43] <~taljeth> Hm, wieso das?
-    [22:38:26] <%FreakyPenguin> Also, wenn du da mehr als einmal raten musst, dann enttäuschst du mich aber �:P
-    ...
-    [22:39:02] <~taljeth> FreakyPenguin: Nein, du bist derjenige, der enttäuscht. �;-)
-    [22:39:30] <%FreakyPenguin> Danach kann ich aber wieder 2 Jahre lang unabgelenkt coden �:P
-    [22:39:54] <~taljeth> Ne, sag mal, was ist morgen?
-    [22:40:10] <+Jidder> samstag
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1951/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1952/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1951; parent 1842; 2007-04-20T20:45:54Z -->
+<!-- MediaWiki page 1435; revision 1952; parent 1951; 2007-04-20T21:27:13Z -->
