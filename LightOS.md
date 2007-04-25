@@ -12,7 +12,7 @@ lightOS ist ein weiteres Betriebssystem, welches auf einem Mikrokernel basiert. 
 
 ## Features
 
-In der 64-Bit version sind wir noch im Anfangsstaduim. Im Moment sind die folgenden Features implementiert:
+In der 64-Bit Version sind wir noch im Anfangsstadium. Im Moment sind die folgenden Features implementiert:
 
 - Longmode-Switch
 - Speicherverwaltung
@@ -28,6 +28,6 @@ Das Hauptziel ist es einen möglichst performanten Mikrokernel mit Unterstützun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1773/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 1773; parent 1643; 2007-01-21T23:24:19Z -->
+<!-- MediaWiki page 1454; revision 1954; parent 1773; 2007-04-25T11:51:49Z -->
