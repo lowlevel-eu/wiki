@@ -1,6 +1,6 @@
 # LightOS
 
-lightOS ist ein weiteres Betriebssystem, welches auf einem Mikrokernel basiert. Die entwicklung der 32-Bit Version wurde im Dezember 2006 gestoppt, da wir uns nun auf 64-Bit Platformen konzentrieren möchten, da wir das für zukunftssicherer halten.
+lightOS ist ein weiteres Betriebssystem, welches auf einem Mikrokernel basiert. Die Entwicklung der 32-Bit Version wurde im Dezember 2006 gestoppt, da wir uns nun auf 64-Bit Plattformen konzentrieren möchten, die wir für zukunftssicherer halten.
 
 # Überblick
 
@@ -28,6 +28,6 @@ Das Hauptziel ist es einen möglichst performanten Mikrokernel mit Unterstützun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1955/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 1954; parent 1773; 2007-04-25T11:51:49Z -->
+<!-- MediaWiki page 1454; revision 1955; parent 1954; 2007-04-25T11:53:13Z -->
