@@ -45,8 +45,12 @@ Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. We
 
 Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libexec\gcc\i586-elf\4.1.1\cc1.exe nach i586-elf\bin zu kopieren.
 
+### Keine Unterstützung für C++
+
+Als ich den Crosscompiler erstellt habe, enthielt LOST noch keinen C++-Code, deswegen gibt es mit den neueren Versionen Abbrüche beim Kompilieren. Die einfachste Lösung ist das Verzeichnis src/modules/cpp zu löschen und gegebenenfalls make clean auszuführen. Alternativ kann man sich einen Crosscompiler mit C++-Unterstützung bauen.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1957/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 1815; parent 1617; 2007-02-22T19:03:53Z -->
+<!-- MediaWiki page 1450; revision 1957; parent 1815; 2007-04-27T19:49:57Z -->
