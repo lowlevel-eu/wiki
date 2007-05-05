@@ -5,7 +5,7 @@
 ## Version 0.1.0
 
 - **Feature Freeze:** 09.04.2007
-- **Release Termin:** 03.06.2007
+- **Release Termin:** 03.05.2007
 
 Features:
 
@@ -38,6 +38,6 @@ Features:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1965/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 1963; parent 1930; 2007-05-03T18:07:29Z -->
+<!-- MediaWiki page 1510; revision 1965; parent 1963; 2007-05-05T08:05:31Z -->
