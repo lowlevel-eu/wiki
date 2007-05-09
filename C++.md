@@ -106,7 +106,7 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 - [g++ ABI: Exception Handling](http://www.codesourcery.com/cxx-abi/abi-eh.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [OSDev.org wiki](http://www.osdev.org/wiki/C_PlusPlus)
 
-# C++0x Links
+## C++0x
 
 - [New Features in the Next C++ Standard](http://video.google.de/videoplay?docid=2768126766555555011&q=c%2B%2B0x) (video)
 - [Initialization Lists](http://video.google.de/videoplay?docid=5262479012306588324&q=c%2B%2B0x) (video)
@@ -114,6 +114,6 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1972/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1973/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1972; parent 1904; 2007-05-09T07:48:12Z -->
+<!-- MediaWiki page 1486; revision 1973; parent 1972; 2007-05-09T07:51:13Z -->
