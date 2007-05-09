@@ -100,12 +100,20 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 # Links
 
+- [Draft des C++ Standards](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2006/n2135.pdf)
+- [Draft des TR1 (=Technical Report 1)](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n1836.pdf)
 - [g++ ABI](http://www.codesourcery.com/cxx-abi/abi.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [g++ ABI: Exception Handling](http://www.codesourcery.com/cxx-abi/abi-eh.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [OSDev.org wiki](http://www.osdev.org/wiki/C_PlusPlus)
 
+# C++0x Links
+
+- [New Features in the Next C++ Standard](http://video.google.de/videoplay?docid=2768126766555555011&q=c%2B%2B0x) (video)
+- [Initialization Lists](http://video.google.de/videoplay?docid=5262479012306588324&q=c%2B%2B0x) (video)
+- [Concepts Extending C++ Templates For Generic Programming](http://video.google.de/videoplay?docid=-1790714981047186825&q=c%2B%2B0x) (video)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1972/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1904; parent 1897; 2007-03-31T12:03:11Z -->
+<!-- MediaWiki page 1486; revision 1972; parent 1904; 2007-05-09T07:48:12Z -->
