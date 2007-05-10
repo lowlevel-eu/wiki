@@ -1,6 +1,6 @@
 # Týndur/Interprozesskommunikation
 
-Als [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") (IPC) bezeichnet man den Datenaustausch zwischen unterschiedlichen Prozessen, die grundsätzlich getrennte Adressräume besitzen. Gerade für ein Microkernelsystem ist die IPC ein zentrales Merkmal, das dem System überhaupt erst erlaubt, sinnvolle Dinge -- Programme müssen beispielsweise auf einen Tastaturtreiber-Prozess zugreifen können, da ein solcher Treiber nicht in einem Microkernel enthalten ist.
+Dieser Artikel bezieht sich ausschließlich auf die Interprozesskommunikation unter LOST. Eine allgemeingültige Erklärung findet sich unter [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
 
 ## Kernelseitiges RPC
 
@@ -18,6 +18,6 @@ Umgesetzt wird dieses Konzept durch folgende Syscalls:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1500/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1986/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1500/index.html)
 
-<!-- MediaWiki page 1500; revision 1863; parent 1843; 2007-03-10T17:07:18Z -->
+<!-- MediaWiki page 1500; revision 1986; parent 1863; 2007-05-10T18:50:28Z -->
