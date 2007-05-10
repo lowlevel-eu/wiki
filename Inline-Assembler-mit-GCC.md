@@ -90,7 +90,7 @@ Außerdem bietet gcc noch Möglichkeiten, die Übergabe nur grob zu spezifiziere
 
 ## Beispiele
 
-Die folgenden Beispiele sind dem Community-Projekt von Lowlevel, [LOST](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "LOST"), entnommen und unterliegen dessen Lizenz (4-Klausel-BSD-Lizenz). Diese Lizenz ist beim Kopieren von Code aus den Beispielen einzuhalten.
+Die folgenden Beispiele sind dem Community-Projekt von Lowlevel, LOST, entnommen und unterliegen dessen Lizenz (4-Klausel-BSD-Lizenz). Diese Lizenz ist beim Kopieren von Code aus den Beispielen einzuhalten.
 
 Aufruf des sleep-Syscalls in LOST:
 
@@ -135,6 +135,6 @@ Senden einer IPC-Nachricht in LOST:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1723/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1981/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 1723; parent 0; 2007-01-18T18:05:20Z -->
+<!-- MediaWiki page 1472; revision 1981; parent 1723; 2007-05-10T18:28:05Z -->
