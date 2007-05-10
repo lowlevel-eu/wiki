@@ -1,6 +1,6 @@
 # IRC
 
-Im IRC-Channel \#lost auf irc.euirc.net bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich [LOST](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "LOST") im speziellen führen.
+Im IRC-Channel \#lost auf irc.euirc.net bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich LOST im speziellen führen.
 
 ## Schnell-Zugriff per Link
 
@@ -106,6 +106,6 @@ Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1980/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 1775; parent 1716; 2007-01-25T18:09:11Z -->
+<!-- MediaWiki page 1463; revision 1980; parent 1775; 2007-05-10T18:27:39Z -->
