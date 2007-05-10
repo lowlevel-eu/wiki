@@ -14,6 +14,6 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 1916; parent 0; 2007-04-01T21:53:25Z -->
+<!-- MediaWiki page 1513; revision 1977; parent 1916; 2007-05-10T18:12:02Z -->
