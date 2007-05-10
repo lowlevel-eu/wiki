@@ -10,10 +10,10 @@ Als Interprozesskommunikation (IPC, engl. inter-process communication) bezeichne
 
 # Links
 
-- \[[Forumsthread über die Implementation von RPC](http://lowlevel.brainsware.org/forum/index.php?topic=1787.0)\]
+- [Forumsthread über die Implementation von RPC](http://lowlevel.brainsware.org/forum/index.php?topic=1787.0)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1984/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 1984; parent 0; 2007-05-10T18:49:14Z -->
+<!-- MediaWiki page 1530; revision 1985; parent 1984; 2007-05-10T18:49:31Z -->
