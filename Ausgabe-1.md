@@ -92,8 +92,8 @@ Der Code am Stück
        mov ds, ax      ; ds und es nicht bei allen
        mov es, ax      ; PCs automatisch gleich Null
        mov ax, 0x9000  ; Stackadresse
-       mov ss, ax      ; SS = 9000 (unser Stack)
-       mov sp, 0       ; SP = 0000  (der Stackpointer)
+       mov ss, ax      ; SS = 0x9000 (unser Stack)
+       mov sp, 0       ; SP = 0x0000  (der Stackpointer)
        sti             ; Interrupts zulassen
        
        ; Bootlaufwerk aus DL speichern
@@ -142,7 +142,7 @@ Der Code am Stück
        jc load            ; Geht nicht? -> Noch mal!
        
        load1:
-       mov ax,0x1000      ; ES:BX = 10000
+       mov ax,0x1000      ; ES:BX = 0x10000
        mov es,ax
        mov bx, 0
        
@@ -171,7 +171,7 @@ Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu lade
        ; Unser Kernel
        ; ---------------------------------------------------
        
-       mov ax, 1000h ; Segmentregister updaten
+       mov ax, 0x1000 ; Segmentregister updaten
        mov ds, ax
        mov es, ax
        
@@ -207,14 +207,14 @@ Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu lade
        ; Warte auf einen Tastendruck
        getkey:
        mov ah, 0 ; Funktion 0
-       int 016h  ; Ausführen
+       int 0x16  ; Ausführen
        ret
        
        ; Rebooten (HEX Dump).
        reboot:
-       db 0EAh
-       dw 0000h
-       dw 0FFFFh
+       db 0xEA
+       dw 0x0000
+       dw 0xFFFF
 
 \</asm\>
 
@@ -589,6 +589,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1847/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1996/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1847; parent 1814; 2007-03-09T20:22:25Z -->
+<!-- MediaWiki page 1412; revision 1996; parent 1847; 2007-05-17T13:43:54Z -->
