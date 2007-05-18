@@ -36,7 +36,7 @@ Um den "Schaden" so gering wie möglich zu halten, haben die IBM Entwickler nich
 
 ## Einschalten
 
-Nachdem wir dir Ursache und Notwendigkeit des A20 Gates geklärt haben, widmen wir uns num dem Einschalten des Gates zu. Dazu ist ein lediglich minimales Wissen über den Tastatur-Controller notwendig, welches ich natürlich nicht für mich behalten werde :)
+Nachdem wir dir Ursache und Notwendigkeit des A20 Gates geklärt haben, wenden wir uns nun dem Einschalten des Gates zu. Dazu ist ein lediglich minimales Wissen über den Tastatur-Controller notwendig, welches ich natürlich nicht für mich behalten werde :)
 
 Zuersteinmal sollte klar sein, das es ZWEI Controller gibt, die für die Tastatur zuständig sind. Zum einen der eigentliche Controller auf dem Mainboard und einen weietern der direkt in der Tastatur integriert ist. Um die beiden besser auseinander halten zu können, nennen wir den Tastatur-Controller auf dem Mainboard auch einfach Tastatur-Controller und den Controller in der Tastatur selbst betiteln wir einfach mal als Tastatur-Chip.
 
@@ -137,6 +137,6 @@ Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 1898; parent 1860; 2007-03-27T18:52:06Z -->
+<!-- MediaWiki page 1462; revision 1997; parent 1898; 2007-05-18T22:07:19Z -->
