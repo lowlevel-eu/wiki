@@ -50,20 +50,22 @@ Zurzeit sind folgende Feautures integriert:
 
 Hier eine Vorsichtig gestaltete Road Map, die sich jedoch sicherlich noch änder wird, hoffentlich zum guten ^^
 
-1\. Halbjahr 2007: 1. Alpha Release (Build 1000) mit der integration von allem ein bisschen ;)
+Update 21.5.2007: Da ich leider in den letzten zwei Wochen an einer Krankheit leidete, werde ich wohl die (zu) eng geplante Roadmap etwas umändern müssen, alles hat sich jetzt um ein Halbjahr verschoben.
 
-2\. Halbjahr 2007: 2. Alpha Release (Build 1500) mit der erweiterten Integration von allem
+2\. Halbjahr 2007: 1. Alpha Release (Build 1000) mit der integration von allem ein bisschen ;)
 
-1\. Halbjahr 2008: 1. Beta Release (Build 2000) mit der Integration von allem ausser GUI
+1\. Halbjahr 2008: 2. Alpha Release (Build 1500) mit der erweiterten Integration von allem
 
-2\. Halbjahr 2008: 2. Beta Release (Build 2500) mit der ent-buggten Integration von allem ausser GUI
+2\. Halbjahr 2008: 1. Beta Release (Build 2000) mit der Integration von allem ausser GUI
 
-1\. Halbjahr 2009: 1. Release Candidat (Build 3000)
+1\. Halbjahr 2009: 2. Beta Release (Build 2500) mit der ent-buggten Integration von allem ausser GUI
 
-2\. Halbjahr 2009: Final Release
+2\. Halbjahr 2009: 1. Release Candidat (Build 3000)
+
+1\. Halbjahr 2010: Final Release
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 1797; parent 1634; 2007-01-31T18:00:14Z -->
+<!-- MediaWiki page 1451; revision 1999; parent 1797; 2007-05-21T17:16:10Z -->
