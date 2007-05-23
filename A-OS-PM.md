@@ -24,7 +24,7 @@ Das Betriebsystem wird den Protected Mode in seinem vollen Umfang unterstützen.
 
 ### Multi Tasking
 
-Es werden mehrere Programme gleichzeitig ausgeführt werden können, um genau zu sein laut jetzigem Stand 65335. Das ganze wird reines Software-Multitasking, und ist somit für die Zukunft (Long Mode) gerüstet.
+Es werden mehrere Programme gleichzeitig ausgeführt werden können, um genau zu sein laut jetzigem Stand 65335. Das ganze wird reines Software-Multitasking, und ist somit für die Zukunft (Long Mode) gerüstet. In der finalen Version soll auch ein Prioritätenmodell zur Verfügung stehen.
 
 ### Notkonsole
 
@@ -66,6 +66,6 @@ Update 21.5.2007: Da ich leider in den letzten zwei Wochen an einer Krankheit le
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2000/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 1999; parent 1797; 2007-05-21T17:16:10Z -->
+<!-- MediaWiki page 1451; revision 2000; parent 1999; 2007-05-23T17:36:59Z -->
