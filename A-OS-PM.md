@@ -40,7 +40,7 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 - Multi Tasking: jedoch ohne Prioritäten
 - Treibersystem: sollte vollständig implementiert sein
-- A / IO (die IPC Schnittstelle): sollt vollständig implementiert sein
+- A / IO (die IPC Schnittstelle): sollte vollständig implementiert sein
 - Text - Console
 - Keyboard - Treiber
 - Graphik - Treiber: Textmodus
@@ -66,6 +66,6 @@ Update 21.5.2007: Da ich leider in den letzten zwei Wochen an einer Krankheit le
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2001; parent 2000; 2007-05-23T17:41:58Z -->
+<!-- MediaWiki page 1451; revision 2002; parent 2001; 2007-05-23T17:42:29Z -->
