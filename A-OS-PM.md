@@ -34,17 +34,17 @@ Sie wird per Ctrl + Alt + Del aufgerufen und dient dazu, das System während der
 
 Die GUI wird komplett vom Rest des Systems getrennt sein, die Kommunikation mit den Programmen verläuft über s.g. Terminals. Sie werden vom Kernel verwaltet. Die GUI bietet zusätzlich noch ein paar Call Gates, die jedoch beim Start über API Funktionen registriert werden müssen.
 
-## Derzeitiger Stand
+## Version 0.1 (1. Alpha Release)
 
-Zurzeit sind folgende Feautures integriert:
+Hier einmal die geplanten Features für diese Version von A / OS PM:
 
-- Protected Mode / Paging / Flat Memory Model - 40%
-- Umfangreiches Treibersystem - 10%
-- Multi User - 0%
-- Multi Tasking - 0%
-- Microkernel - 100% (der Kernel ist zurzeit zu 30% fertig)
-- Notkonsole - 30% (sie existiert bereits, jedoch nur wenige Befehle)
-- GUI - 10% (eine provisorische Text - Konsole)
+- Multi Tasking: jedoch ohne Prioritäten
+- Treibersystem: sollte vollständig implementiert sein
+- A / IO (die IPC Schnittstelle): sollt vollständig implementiert sein
+- Text - Console
+- Keyboard - Treiber
+- Graphik - Treiber: Textmodus
+- Floppy - Treiber
 
 ## Road Map
 
@@ -66,6 +66,6 @@ Update 21.5.2007: Da ich leider in den letzten zwei Wochen an einer Krankheit le
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2000/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2000; parent 1999; 2007-05-23T17:36:59Z -->
+<!-- MediaWiki page 1451; revision 2001; parent 2000; 2007-05-23T17:41:58Z -->
