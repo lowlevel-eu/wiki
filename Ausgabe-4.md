@@ -111,6 +111,16 @@ Formatieren heißt eigentlich nichts anderes, als diesen Boot Sektor neu zu schr
 
 Hier jetzt ein paar Beschreibungen zu Dingen die offen geblieben sind.
 
+MONvampire:
+
+Habe ein Buch wo beschrieben ist wie man Device Treiber für DOS erstellt: MS-DOS Device Treiber von Robert S. Lai (Addison Wesley) Da steht drin ,dass Hidden Sectors für Partitionen zuständig sind.
+
+Das Funktioniert etwa so: Eine Partiion muss immer am Anfang einer Track plaziert sein, dabei muss beachtet sein, dass die 1.Partition auf der 2 Track liegen muss wegen dem Partition Sector welcher die Information über die Partitionen enthält!
+
+Unter MS - DOS ist der Standartwert für eine Festplatte 17 weil viele Festplatten 17 Sektoren pro Track hatten.
+
+MfG
+
 ### Cluster
 
 Die FAT-Tabelle verwaltet nicht die einzelnen Sektoren eines Datenträgers, sondern sogenannte Cluster. Bei einer Diskette ist dies aber irrelevant, da ein Cluster nur einen Sektor beinhaltet. Man könnte jedoch mehrer Sektoren zu einem Cluster zusammenfassen. Das Ganze hat folgenden Hintergrund:
@@ -348,6 +358,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2003/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 1806; parent 1805; 2007-02-06T16:16:10Z -->
+<!-- MediaWiki page 1424; revision 2003; parent 1806; 2007-05-25T15:45:00Z -->
