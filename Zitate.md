@@ -235,8 +235,12 @@ Aus \#lost (09. März 2007)
     [15:30] <TheMelkor> ich brauchte die
     [15:30] <stultus> echo 110 >> /dev/telephone
 
+------------------------------------------------------------------------
+
+Aus \#lost (03. Juni 2007) \[16:26\] \<stultus\> for ( i = 1; i \< screen_width \* screen_height \* 2; i = i + 2) VidMem\[i\] = '\0'; \[16:26\] \<stultus\> ca. \[16:27\] \<taljeth\> i = 0 \[16:27\] \<stultus\> Wieso? \[16:28\] \<stultus\> ich dachte Word gliedert sich in Color Text in der Reihenfolge, net umgekehrt. \[16:28\] \<taljeth\> Nein, erst das Zeichen, dann Attribut. \[16:29\] \<stultus\> Ah, ok. \[16:30\] \<Nils\> so ? for ( i = 1; i \< 80 \* 25 \* 2; i = 0) VideoMem\[i\] = '\0';
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1952/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2009/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 1952; parent 1951; 2007-04-20T21:27:13Z -->
+<!-- MediaWiki page 1435; revision 2009; parent 1952; 2007-06-03T14:38:21Z -->
