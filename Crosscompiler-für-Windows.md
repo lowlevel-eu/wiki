@@ -27,7 +27,7 @@ Damit der Compiler und der Assembler auch gefunden werden, muss die PATH-Variabl
     set path=C:\lostdev\msys\bin;C:\lostdev\lostcc\i586-elf\bin;C:\lostdev\nasm;%path%
     cmd /k cls
 
-Diese Datei kopiere ich mir dann in immer das Wurzelverzeichnis des Quelltextbaums von LOST und starte sie. Durch die Eingabe von make sollte dann LOST vollständig kompilieren.
+Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von LOST und starte sie. Durch die Eingabe von make sollte dann LOST vollständig kompilieren.
 
 Wer lieber den Compiler tiefer in das System verankern will, kann die Pfade in die globale PATH-Variable schreiben. Diese Pfade sind dann überall verfügbar und können unter Umständen Konflikte mit anderen Compilern und Umgebungen verursachen. Unter Windows geht das in der Systemsteuerung (klassische Ansicht) -\> System -\> Erweitert -\> Umgebungsvariablen und dort eine PATH-Variable editieren.
 
@@ -55,6 +55,6 @@ Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.1
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 2013; parent 2012; 2007-06-04T23:55:01Z -->
+<!-- MediaWiki page 1450; revision 2014; parent 2013; 2007-06-04T23:59:17Z -->
