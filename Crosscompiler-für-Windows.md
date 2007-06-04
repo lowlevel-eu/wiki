@@ -16,7 +16,7 @@ MinGW ist ein Port des GCC nach Windows. Der mitgelieferte Compiler von MinGW ka
 
 Einen Cross-Compiler, den ich selbst aus den ungeänderten Sourcen für mein eigenes Frickel-OS namens IncOS kompiliert habe, gibt es unter [\[1\]](http://jidder.de/lost/files/incoscc-with-cpp-and-with-without-i18n.rar). Darin enthalten ist der GCC 4.2.0 mit dem Target ELF und die Binutils 2.17. Außerdem benötigen wir die POSIX-Umgebung für MinGW [MSYS](http://mingw.org/download.shtml) (aktuelle Version: MSYS-1.0.10.exe) und [NASM](http://sourceforge.net/project/showfiles.php?group_id=6208&package_id=47034) (aktuelle Version: nasm-0.98.39-win32.zip).
 
-Wenn iht die drei Dateien runtergeladen habt, erstellt ein Verzeichnis namens C:\lostdev. (Wer seine Werkzeuge woanders platzieren möchte, kann das natürlich auch tun. Im folgenden werde ich dennoch von diesem Pfad ausgehen.) Startet den Setup von MSYS und klickt euch bis zur Angabe des Pfads durch. Gebt da C:\lostdev\msys an. Dann weiter bis zum Ende durchklicken. Wenn eine Eingabeaufforderung auftaucht, die etwas von "This is a post install process" erzählt, brecht das durch die Eingabe von "n" ab.
+Wenn ihr die drei Dateien runtergeladen habt, erstellt ein Verzeichnis namens C:\lostdev. (Wer seine Werkzeuge wo anders platzieren möchte, kann das natürlich auch tun. Im folgenden werde ich dennoch von diesem Pfad ausgehen.) Startet den Setup von MSYS und klickt euch bis zur Angabe des Pfads durch. Gebt da C:\lostdev\msys an. Dann weiter bis zum Ende durchklicken. Wenn eine Eingabeaufforderung auftaucht, die etwas von "This is a post install process" erzählt, brecht das durch die Eingabe von "n" ab.
 
 Entpacke danach NASM in das Verzeichnis C:\lostdev\nasm. Achte dabei darauf, dass die Datei nasmw.exe direkt in dem Verzeichnis C:\lostdev\nasm liegt und nicht in irgendwelchen Unterverzeichnissen. Benenne außerdem die Datei nasmw.exe in nasm.exe um, damit NASM von dem build-Skript erkannt wird.
 
@@ -51,10 +51,10 @@ Als ich den Crosscompiler erstellt habe, enthielt LOST noch keinen C++-Code, des
 
 ## Ältere Crosscompiler
 
-Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.17 online gelassen. Den gibt es unter [\[2\]](http://jidder.de/lost/files/lostcc.rar). Dieser Crosscompiler hat keinen C++ Support, weil zu dessen Zeiten kein C++ unter LOST verwendet wurde. (Workaround: Einfach betroffene Verzeichnisse löschen.) Die Originalanleitung dazu findet man unter [\[3\]](http://lowlevel.brainsware.org/wiki/index.php?title=Crosscompiler_f%C3%BCr_Windows&oldid=1957), der einzige unterschied ist allerdings das Entpacken des RAR-Archivs. ;)
+Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.17 online gelassen. Den gibt es unter [\[2\]](http://jidder.de/lost/files/lostcc.rar). Dieser Crosscompiler hat keinen C++-Support, weil zu dessen Zeiten kein C++ unter LOST verwendet wurde. (Workaround: Einfach das Verzeichnis src/modules/cpp löschen.) Die Originalanleitung, wie man diesen Crosscompiler einrichtet, findet man unter [\[3\]](http://lowlevel.brainsware.org/wiki/index.php?title=Crosscompiler_f%C3%BCr_Windows&oldid=1957), der einzige Unterschied zu dieser Anleitung ist allerdings nur das Entpacken des RAR-Archivs. ;)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2012/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 2012; parent 2011; 2007-06-04T23:50:37Z -->
+<!-- MediaWiki page 1450; revision 2013; parent 2012; 2007-06-04T23:55:01Z -->
