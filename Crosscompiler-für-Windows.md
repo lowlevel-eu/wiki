@@ -51,10 +51,10 @@ Als ich den Crosscompiler erstellt habe, enthielt LOST noch keinen C++-Code, des
 
 ## Ältere Crosscompiler
 
-Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.17 online gelassen. Den gibt es unter [\[2\]](http://jidder.de/lost/files/lostcc.rar). (Workaround: Einfach betroffene Verzeichnisse löschen.) Dieser Crosscompiler hat keinen C++ Support, weil zu dessen Zeiten kein C++ unter LOST verwendet wurde. Originalanleitung dazu findet man unter [\[3\]](http://lowlevel.brainsware.org/wiki/index.php?title=Crosscompiler_f%C3%BCr_Windows&oldid=1957), der einzige unterschied ist allerdings das Entpacken des RAR-Archivs. ;)
+Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.17 online gelassen. Den gibt es unter [\[2\]](http://jidder.de/lost/files/lostcc.rar). Dieser Crosscompiler hat keinen C++ Support, weil zu dessen Zeiten kein C++ unter LOST verwendet wurde. (Workaround: Einfach betroffene Verzeichnisse löschen.) Die Originalanleitung dazu findet man unter [\[3\]](http://lowlevel.brainsware.org/wiki/index.php?title=Crosscompiler_f%C3%BCr_Windows&oldid=1957), der einzige unterschied ist allerdings das Entpacken des RAR-Archivs. ;)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2012/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 2011; parent 1957; 2007-06-04T23:49:24Z -->
+<!-- MediaWiki page 1450; revision 2012; parent 2011; 2007-06-04T23:50:37Z -->
