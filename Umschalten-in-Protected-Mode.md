@@ -51,6 +51,6 @@ gdt_end\</asm\> © by Stefan Marcik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2027; parent 2026; 2007-06-18T19:11:39Z -->
+<!-- MediaWiki page 1537; revision 2028; parent 2027; 2007-06-18T19:14:32Z -->
