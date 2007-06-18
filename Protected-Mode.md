@@ -459,8 +459,15 @@ jmp 0x9000:0x0
 
 times 510-(\$-\$\$) db 0 dw 0aa55h\</asm\>© by PMTheQuick
 
+  
+Dann die Dateien assemblieren + zusammenkopieren um ein funktionierendes Image zu erhalten:
+
+    nasm -f bin -o kernel16.bin kernel16.asm
+    nasm -f bin -o bootsec.bin bootsec.asm
+    copy /B bootsec.bin + /B kernel16.bin PM_OS.img
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 2030; parent 2029; 2007-06-18T19:58:30Z -->
+<!-- MediaWiki page 1464; revision 2031; parent 2030; 2007-06-18T20:06:35Z -->
