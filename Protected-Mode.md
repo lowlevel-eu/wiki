@@ -355,8 +355,10 @@ Hier wird der Selektor des Code Segmentes eingetragen in dem sich der Code befin
 
 Gibt die Bits 15 bis 0 des 32-Bit Offsets innerhalb des Codesegmentes an, in dem sich der Code befindet, zu dem über das Interrupt Gate gesprungen werden soll.
 
+## Beispielcode:
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1947/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 1947; parent 1696; 2007-04-17T18:18:40Z -->
+<!-- MediaWiki page 1464; revision 2029; parent 1947; 2007-06-18T19:19:18Z -->
