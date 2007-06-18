@@ -1,5 +1,7 @@
 # Umschalten in Protected Mode
 
+So einfach ist das! In der GDT wird ein Daten, sowie Code-Deskriptor auf die ganzen 4 möglichen GByte Arbeitsspeicher eingerichtet. Heutzutage verwenden dank Paging alle OS ein solches, genannt flaches, Speichermodell. Das heisst von nun an muss man nur noch mit 32-Bit Offsets hantieren und sich nicht mehr mit Segmenten herumschlagen.
+
 \<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
 
 Bei Fragen kann man sich einfach an stefan.marcik@web.de oder
@@ -49,6 +51,6 @@ gdt_end\</asm\> © by Stefan Marcik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2026; parent 0; 2007-06-18T19:03:30Z -->
+<!-- MediaWiki page 1537; revision 2027; parent 2026; 2007-06-18T19:11:39Z -->
