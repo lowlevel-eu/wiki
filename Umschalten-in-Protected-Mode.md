@@ -5,15 +5,13 @@ So einfach ist das! In der GDT wird ein Daten, sowie Code-Deskriptor auf die gan
 Mehr [Infos](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und eine [zweite Art](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode#beispielcode "Protected Mode") in den Protected Mode umzuschalten findet man im Protected Mode Tutorial von Tee Jay, sowie dem, schon etwas älteren, [Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm).
 
   
-**Wichtig** bei diesem Code ist es, selbst noch eine passende org-Anweisung an den Anfang zu stellen.
-
-\<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
+**Wichtig** bei diesem Code ist es, selbst noch die org-Anweisung auf die Startadresse des Codes anzupassen!! \<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
 
 Bei Fragen kann man sich einfach an stefan.marcik@web.de oder
 
 an die ICQ-Nummer 338417614 wenden.
 
-\[BITS 16\] org 0x0000 ; Addiert zu allen Offsetes die Adresse dieses Codes
+\[BITS 16\] org 0x0000 ; Addiert zu allen Offsetes die Start-Adresse dieses Codes
 
 cli ; Interrupts ausschalten lgdt \[gdtr\] ; GDT Pointer laden
 
@@ -60,6 +58,6 @@ gdt_end\</asm\> © by Stefan Marcik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2032; parent 2028; 2007-06-19T20:30:40Z -->
+<!-- MediaWiki page 1537; revision 2035; parent 2032; 2007-06-19T20:51:14Z -->
