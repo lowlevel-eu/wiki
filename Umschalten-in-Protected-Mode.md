@@ -2,19 +2,28 @@
 
 So einfach ist das! In der GDT wird ein Daten, sowie Code-Deskriptor auf die ganzen 4 möglichen GByte Arbeitsspeicher eingerichtet. Heutzutage verwenden dank Paging alle OS ein solches, genannt flaches, Speichermodell. Das heisst von nun an muss man nur noch mit 32-Bit Offsets hantieren und sich nicht mehr mit Segmenten herumschlagen.
 
+Mehr [Infos](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und eine [zweite Art](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode#beispielcode "Protected Mode") in den Protected Mode umzuschalten findet man im Protected Mode Tutorial von Tee Jay, sowie dem, schon etwas älteren, [Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm).
+
+  
+**Wichtig** bei diesem Code ist es, selbst noch eine passende org-Anweisung an den Anfang zu stellen.
+
 \<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
 
 Bei Fragen kann man sich einfach an stefan.marcik@web.de oder
 
 an die ICQ-Nummer 338417614 wenden.
 
-\[BITS 16\] cli ; Interrupts ausschalten lgdt \[gdtr\] ; GDT Pointer laden
+\[BITS 16\] org 0x0000 ; Addiert zu allen Offsetes die Adresse dieses Codes
+
+cli ; Interrupts ausschalten lgdt \[gdtr\] ; GDT Pointer laden
 
 mov eax,cr0 ; In PMode wechseln, indem das niedrigste or al,1 ; Steuerungsbit von cr0 geändert wird mov cr0,eax ; muss über Umweg über ein anderes Register gemacht werden
 
 jmp codesel:PMode ; FarJump zu einer 32-Bit PMode Funktion
 
 \[BITS 32\] PMode: mov ax,datasel ; Segmentregister laden mov ds,ax mov ss,ax mov esp,0x90000 ; Stack aufsetzen
+
+jmp \$ ; Endlosschleife, wird durch weiteren Code ersetzt
 
   
 
@@ -51,6 +60,6 @@ gdt_end\</asm\> © by Stefan Marcik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2028; parent 2027; 2007-06-18T19:14:32Z -->
+<!-- MediaWiki page 1537; revision 2032; parent 2028; 2007-06-19T20:30:40Z -->
