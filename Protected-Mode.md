@@ -447,27 +447,29 @@ Hier nun auch noch der Beispielcode und das Programm CalcDesc zum runterladen. D
 
   
 
-**Anmerkung:** Da der Code davon ausgeht, dass er am Anfang eines Segmentes steht, sollte man ihn mit einem geeigeneten Bootloader laden, der dies beachtet. Ein schlankes Beispiel wäre:
+  
+**Anmerkung 1:** Da der Code davon ausgeht, dass er am Anfang eines Segmentes steht, sollte man ihn mit einem geeigeneten Bootloader laden, der dies beachtet. Ein schlankes Beispiel wäre:
 
 \<asm\>mov ax,cs mov ds,ax mov es,ax
 
 cli mov ss,ax mov sp,0x20000 sti
 
-mov ax,0x9000 mov es,ax mov bx,0x0 mov ah,02h mov al,1 mov cl,2 mov ch,0 mov dl,0 mov dh,0 int 13h
+mov ax,**0x9000** mov es,ax mov bx,0x0 mov ah,02h mov al,1 mov cl,2 mov ch,0 mov dl,0 mov dh,0 int 13h
 
-jmp 0x9000:0x0
+jmp **0x9000**:0x0
 
 times 510-(\$-\$\$) db 0 dw 0aa55h\</asm\>© by PMTheQuick
 
-  
-Dann die Dateien assemblieren + zusammenkopieren um ein funktionierendes Image zu erhalten:
+Die beiden fett gedruckten 0x9000 können natürlich durch irgendeine andere Adresse ersetzt werden, jenachdem wohin man seinen Kernel laden will. Dann kann man die Dateien assemblieren + zusammenkopieren um ein funktionierendes Image zu erhalten:
 
     nasm -f bin -o kernel16.bin kernel16.asm
     nasm -f bin -o bootsec.bin bootsec.asm
     copy /B bootsec.bin + /B kernel16.bin PM_OS.img
 
+**Anmerkung 2:** Eine weitere, etwas weniger komplizierte Variante in den Protected Mode zu schalten wird [hier](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode") erklärt.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 2031; parent 2030; 2007-06-18T20:06:35Z -->
+<!-- MediaWiki page 1464; revision 2033; parent 2031; 2007-06-19T20:44:21Z -->
