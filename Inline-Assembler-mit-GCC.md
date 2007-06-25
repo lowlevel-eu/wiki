@@ -28,7 +28,7 @@ Viele Assembler-Programmierer sind die Intel-Syntax gewohnt. gcc (oder genauer g
 
       movb $123, %al
 
-- Speicherzugriffe erfolgen im Format "displacement(register)", wobei das Displacement optional ist:
+- Speicherzugriffe erfolgen im Format "segment:displacement(base, index, scale)", wobei das Displacement als auch Index und Scale optional sind:
 
       pushl (%eax)
 
@@ -135,6 +135,6 @@ Senden einer IPC-Nachricht in LOST:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1981/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 1981; parent 1723; 2007-05-10T18:28:05Z -->
+<!-- MediaWiki page 1472; revision 2037; parent 1981; 2007-06-25T21:27:54Z -->
