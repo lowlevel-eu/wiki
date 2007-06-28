@@ -15,6 +15,7 @@
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
 - Longmode
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
+- [VM86](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "VM86") (evtl. <http://osdev.berlios.de/v86.html> verlinken)
 
 ## Wünsche für Artikel
 
@@ -24,6 +25,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1983/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 1983; parent 1935; 2007-05-10T18:31:35Z -->
+<!-- MediaWiki page 1518; revision 2039; parent 1983; 2007-06-28T10:23:25Z -->
