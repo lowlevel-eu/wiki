@@ -248,8 +248,15 @@ Aus \#lost (03. Juni 2007)
     [16:29] <stultus> Ah, ok.
     [16:30] <Nils> so ? for ( i = 1; i < 80 * 25 * 2; i = 0) VideoMem[i] = '\0';
 
+------------------------------------------------------------------------
+
+Aus \#lost (29. Juni 2007)
+
+    [13:18] <Homix> hmm kwolf, kommt deine TCP/IP/RTL8139 Netzwerkimplementierung auch nicht auf melr als paar KB pro sekunde ?
+    [13:19] <phoenix64> Hmmm... dann ist dein Netzwerktreiber in etwa so schnell wie mein erster VGA-Treiber :)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2010/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 2010; parent 2009; 2007-06-03T14:41:01Z -->
+<!-- MediaWiki page 1435; revision 2042; parent 2010; 2007-06-29T11:26:26Z -->
