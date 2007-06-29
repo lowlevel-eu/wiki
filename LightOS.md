@@ -23,11 +23,12 @@ Das Hauptziel ist es einen möglichst performanten Mikrokernel mit Unterstützun
 
 # Links
 
-- [lightOS Projektseite](https://lightos.bountysource.com/)
-- [lightOS Subversion Repository](https://lightos.bountysource.com/svn)
+- [Projektseite](https://lightos.bountysource.com/)
+- [Websvn](https://lightos.bountysource.com/svn)
+- [Subversion Repository](https://svn.bountysource.com/lightos/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 2038; parent 1955; 2007-06-28T09:43:39Z -->
+<!-- MediaWiki page 1454; revision 2043; parent 2038; 2007-06-29T20:39:33Z -->
