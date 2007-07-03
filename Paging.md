@@ -14,11 +14,12 @@ Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 i
 
 ## Links
 
+- [Paging Tutorial](http://www.homix-online.de/Tutorials/32PMode-Paging.php)
 - [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8#paging "Ausgabe 8")
 - <http://osdever.net/tutorials/pdf/basic_paging.pdf>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2019/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2019; parent 1946; 2007-06-10T06:55:35Z -->
+<!-- MediaWiki page 1496; revision 2044; parent 2019; 2007-07-03T16:21:45Z -->
