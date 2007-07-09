@@ -16,6 +16,7 @@
 - Longmode
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
 - [VM86](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "VM86") (evtl. <http://osdev.berlios.de/v86.html> verlinken)
+- Informationen zur AMD PCNet Netzwerkkarte
 
 ## Wünsche für Artikel
 
@@ -25,6 +26,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2039; parent 1983; 2007-06-28T10:23:25Z -->
+<!-- MediaWiki page 1518; revision 2051; parent 2039; 2007-07-09T21:08:40Z -->
