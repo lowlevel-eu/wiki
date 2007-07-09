@@ -7,7 +7,7 @@ Bochs ist ein portabler [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"
 Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde, folgende Hardware emulieren:
 
 - einen (oder mehrere) 386, 486, Pentium, Pentium Pro oder AMD64 Prozessor(en)
-- Standardgeräte: [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"), [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [IO-APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")-Controller, serielle und parallele Schnittstelle
+- Standardgeräte: [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"), [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [I/O-APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")-Controller, serielle und parallele Schnittstelle
 - NE2000 Netzwerkkarte
 - PS/2 Maus und Tastatur
 - CD-ROM Laufwerk
@@ -27,6 +27,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 2048; parent 0; 2007-07-09T20:44:41Z -->
+<!-- MediaWiki page 1538; revision 2049; parent 2048; 2007-07-09T20:45:49Z -->
