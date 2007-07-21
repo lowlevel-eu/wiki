@@ -20,6 +20,6 @@ Nach dem Start des Computers wird die IVT automatisch geschrieben. Die Addressen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2063/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 2061; parent 2060; 2007-07-21T20:31:28Z -->
+<!-- MediaWiki page 1540; revision 2063; parent 2061; 2007-07-21T20:43:49Z -->
