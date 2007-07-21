@@ -15,11 +15,11 @@ Nach dem Start des Computers wird die IVT automatisch geschrieben. Die Addressen
 
 ## Quellen
 
-- \[[\[1\]](http://lowlevel.brainsware.org/wiki/index.php/Ausgabe_2)\]
-- \[[\[2\]](http://lowlevel.brainsware.org/wiki/index.php/Ausgabe_2)\]
+- <http://lowlevel.brainsware.org/wiki/index.php/Ausgabe_2> - Ausgabe 2 des Lowlevel Magazins
+- <http://lowlevel.brainsware.org/wiki/index.php/Ausgabe_3> - Ausgabe 3 des Lowlevel Magazins
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 2060; parent 0; 2007-07-21T20:27:42Z -->
+<!-- MediaWiki page 1540; revision 2061; parent 2060; 2007-07-21T20:31:28Z -->
