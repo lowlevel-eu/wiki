@@ -24,12 +24,7 @@ Nach dem Start des Computers wird die IVT automatisch vom [BIOS](https://github.
 
 Beispielsweise will man wahrscheinlich eine "Division durch 0" (Interrupt 0) anders als das BIOS behandeln (z.B. den momentanen Prozess beenden und zur Shell zurückkehren):
 
-    xor ax, ax
-    mov es, ax
-    cli                             ; IRQs deaktivieren: Dies ist nur notwendig, wenn man einen Eintrag für einen IRQ verändert
-    mov WORD [es:0], __int0x00      ; Offset: Die Adresse unserer Interrupt Service Routine
-    mov WORD [es:0+2], cs           ; Segment: Wir geben hier das momentane Codesegment an
-    sti                             ; IRQs aktivieren
+\<asm\> xor ax, ax mov es, ax cli  ; IRQs deaktivieren: Dies ist nur notwendig, wenn man einen Eintrag für einen IRQ verändert mov WORD \[es:0\], \_\_int0x00  ; Offset: Die Adresse unserer Interrupt Service Routine mov WORD \[es:0+2\], cs  ; Segment: Wir geben hier das momentane Codesegment an sti  ; IRQs aktivieren \</asm\>
 
 ## Links
 
@@ -38,6 +33,6 @@ Beispielsweise will man wahrscheinlich eine "Division durch 0" (Interrupt 0) and
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2070/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 2070; parent 2069; 2007-07-22T19:09:34Z -->
+<!-- MediaWiki page 1540; revision 2071; parent 2070; 2007-07-22T19:10:50Z -->
