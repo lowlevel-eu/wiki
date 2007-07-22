@@ -26,10 +26,10 @@ Beispielsweise will man wahrscheinlich eine "Division durch 0" (Interrupt 0) and
 
     xor ax, ax
     mov es, ax
-    ;cli                            ; IRQs deaktivieren: Dies ist nur notwendig, wenn man einen Eintrag für einen IRQ verändert
+    cli                            ; IRQs deaktivieren: Dies ist nur notwendig, wenn man einen Eintrag für einen IRQ verändert
     mov WORD [es:0], __int0x00      ; Offset: Die Adresse unserer Interrupt Service Routine
     mov WORD [es:0+2], cs           ; Segment: Wir geben hier das momentane Codesegment an
-    ;sti                            ; IRQs aktivieren
+    sti                            ; IRQs aktivieren
 
 ## Links
 
@@ -38,6 +38,6 @@ Beispielsweise will man wahrscheinlich eine "Division durch 0" (Interrupt 0) and
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 2068; parent 2065; 2007-07-22T11:17:49Z -->
+<!-- MediaWiki page 1540; revision 2069; parent 2068; 2007-07-22T19:09:13Z -->
