@@ -26,14 +26,31 @@ Beispielsweise will man wahrscheinlich eine "Division durch 0" (Interrupt 0) and
 
 \<asm\> xor ax, ax mov es, ax
 
-cli  ; IRQs deaktivieren  
-Dies ist nur notwendig, wenn man einen Eintrag für einen IRQ verändert
+IRQs deaktivieren
 
-mov WORD \[es:0\], \_\_int0x00  ; Offset: Die Adresse unserer Interrupt Service Routine mov WORD \[es:0+2\], cs  ; Segment: Wir geben hier das momentane Codesegment an
+Dies ist nur notwendig, damit nicht während des Anpassens der IVT ein IRQ auftritt, welcher für den Fall, dass
 
-sti  ; IRQs aktivieren
+a\) wir hier den Interruptvektor des IRQ verändern
 
-\</asm\>
+b\) der IRQ-Handler seinerseits den hier veränderten Interruptvektor aufruft
+
+zu undefiniertem Verhalten führen kann.
+
+cli
+
+Offset  
+Die Adresse unserer Interrupt Service Routine
+
+mov WORD \[es:0\], \_\_int0x00
+
+Segment  
+Wir geben hier das momentane Codesegment an
+
+mov WORD \[es:0+2\], cs
+
+IRQs wieder aktivieren
+
+sti \</asm\>
 
 ## Links
 
@@ -42,6 +59,6 @@ sti  ; IRQs aktivieren
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2072/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 2072; parent 2071; 2007-07-22T19:55:44Z -->
+<!-- MediaWiki page 1540; revision 2073; parent 2072; 2007-07-23T15:09:34Z -->
