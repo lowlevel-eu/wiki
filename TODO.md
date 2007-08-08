@@ -18,15 +18,13 @@
 - [VM86](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "VM86") (evtl. <http://osdev.berlios.de/v86.html> verlinken)
 - Informationen zur AMD PCNet Netzwerkkarte
 - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
-
-## Wünsche für Artikel
-
+- [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") wie (L)GPL (v2, v3), 3/4-clause BSD, etc...
 - Hier kommt dein Wunsch hin ;)
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2067/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2067; parent 2066; 2007-07-22T05:59:54Z -->
+<!-- MediaWiki page 1518; revision 2077; parent 2067; 2007-08-08T21:48:16Z -->
