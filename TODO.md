@@ -4,6 +4,7 @@
 
 - A20 Gate
 - C++
+- [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"): Die Links zu den Logs und Statistiken sind down
 
 ## Neu erstellen
 
@@ -25,6 +26,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2078/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2077; parent 2067; 2007-08-08T21:48:16Z -->
+<!-- MediaWiki page 1518; revision 2078; parent 2077; 2007-08-09T15:01:16Z -->
