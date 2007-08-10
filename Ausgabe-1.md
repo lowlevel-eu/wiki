@@ -61,7 +61,7 @@ Zuerst einmal sucht das BIOS auf dem ersten Sektor von Diskette und Festplatte n
 
 \</asm\>
 
-Diese Zeile regelt, dass all unsere Adressierungen richtig sind usw. Jetzt basteln wir einen Stack. Er sitzt an Adresse 0x9000. Den Stackpointer setzen wir auf null. Während wir das alles tun, sind übrigens keine Interrupts zugelassen. Nun schreiben wir die Information über das Bootlaufwerk aus DL in eine Variable, rufen die Funktion "load" auf und springen zum geladenen Programm, unserem Kernel rüber (das seht ihr im vollständigen Code weiter unten).  
+Diese Zeile regelt, dass all unsere Adressierungen richtig sind usw. Jetzt basteln wir einen Stack. Er sitzt im Segment 0x9000. Den Stackpointer setzen wir auf null. Während wir das alles tun, sind übrigens keine Interrupts zugelassen. Nun schreiben wir die Information über das Bootlaufwerk aus DL in eine Variable, rufen die Funktion "load" auf und springen zum geladenen Programm, unserem Kernel rüber (das seht ihr im vollständigen Code weiter unten).  
   
 Zum Schluss des Codes seht ihr noch folgende Zeilen:
 
@@ -85,6 +85,7 @@ Der Code am Stück
        ; Unser Bootloader
        ; -----------------------------------------
        
+       jmp 0x0000:start
        start:
                        ; Erst brauchen wir einen Stack.
        cli             ; Keine Interrupts!
@@ -106,10 +107,7 @@ Der Code am Stück
        mov ax, 0x1000 ; Die Adresse des Programms
        mov es, ax     ; Segmentregister updaten
        mov ds, ax
-       push ax
-       mov ax, 0
-       push ax
-       retf
+       jmp 0x1000:0x0000
        
        ; ----------------------------------------------
        ; Funktionen und Variablen
@@ -134,11 +132,9 @@ Der Code am Stück
        ; Lade den Kernel vom Bootlaufwerk
        load:
        ; Diskdrive reset (Interrupt 13h, 0)
-       push ds            ; Sichere DS
        mov ax, 0          ; Die gewünschte Funktion (reset)
        mov dl, [bootdrv]  ; Dieses Laufwerk ist gewünscht
        int 13h            ; Den Interrupt ausführen
-       pop ds             ; DS wiederherstellen
        jc load            ; Geht nicht? -> Noch mal!
        
        load1:
@@ -210,11 +206,9 @@ Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu lade
        int 0x16  ; Ausführen
        ret
        
-       ; Rebooten (HEX Dump).
+       ; Rebooten.
        reboot:
-       db 0xEA
-       dw 0x0000
-       dw 0xFFFF
+       jmp 0xffff:0x0000
 
 \</asm\>
 
@@ -589,6 +583,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1996/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2080/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 1996; parent 1847; 2007-05-17T13:43:54Z -->
+<!-- MediaWiki page 1412; revision 2080; parent 1996; 2007-08-10T21:37:06Z -->
