@@ -38,15 +38,15 @@ Um den "Schaden" so gering wie möglich zu halten, haben die IBM Entwickler nich
 
 Nachdem wir dir Ursache und Notwendigkeit des A20 Gates geklärt haben, wenden wir uns nun dem Einschalten des Gates zu. Dazu ist ein lediglich minimales Wissen über den Tastatur-Controller notwendig, welches ich natürlich nicht für mich behalten werde :)
 
-Zuersteinmal sollte klar sein, das es ZWEI Controller gibt, die für die Tastatur zuständig sind. Zum einen der eigentliche Controller auf dem Mainboard und einen weietern der direkt in der Tastatur integriert ist. Um die beiden besser auseinander halten zu können, nennen wir den Tastatur-Controller auf dem Mainboard auch einfach Tastatur-Controller und den Controller in der Tastatur selbst betiteln wir einfach mal als Tastatur-Chip.
+Zuerst einmal sollte klar sein, das es ZWEI Controller gibt, die für die Tastatur zuständig sind. Zum einen der eigentliche Controller auf dem Mainboard und einen weiteren der direkt in der Tastatur integriert ist. Um die beiden besser auseinander halten zu können, nennen wir den Tastatur-Controller auf dem Mainboard auch einfach Tastatur-Controller und den Controller in der Tastatur selbst betiteln wir einfach mal als Tastatur-Chip.
 
-Das erste was man wissen muß, ist das der Tastatur-Controller über Port 0x64 und der Tastatur-Chip über Port 0x60 angesprochen wird. Der Tastatur-Controller übernimmt dabei die Hauptaufgaben und nimmt in erster Linie die Befehle entgegen. Der Tastatur-Chip liefert meistens nur Daten oder empfäng solche.
+Das erste was man wissen muss, ist das der Tastatur-Controller über Port 0x64 und der Tastatur-Chip über Port 0x60 angesprochen wird. Der Tastatur-Controller übernimmt dabei die Hauptaufgaben und nimmt in erster Linie die Befehle entgegen. Der Tastatur-Chip liefert meistens nur Daten oder empfängt solche.
 
-Als nächste wäre zu wissen, das das einschalten des A20 Gates mit dem einfachen setzen eines bestimmten Bits geschieht. Nämlich dem Bit0 im Tastatur-Chip Output Port. Die Bezeichnung Port soll hier nicht irreführend sein. DIESEN Port können wir nämlich nicht direkt ansteuern, sondern nur über einen kleinen Umweg.
+Als nächstes wäre zu wissen, dass das Einschalten des A20 Gates mit dem einfachen setzen eines bestimmten Bits geschieht. Nämlich dem Bit0 im Tastatur-Chip Output Port. Die Bezeichnung Port soll hier nicht irreführend sein. DIESEN Port können wir nämlich nicht direkt ansteuern, sondern nur über einen kleinen Umweg.
 
 Und diesen Umweg will ich nun beschreiben.
 
-Zuersteinmal müssen wir überprüfen ob der Tastatur-Controller empfangsbereit ist. Dies ist er, sobald sein "Input Buffer" leer ist. Und das können wir testen, indem wir ein Byte vom Port 0x64 lesen und schauen ob das Bit1 gesetzt ist. Wenn es NICHT gesetzt ist, dann ist der Input Buffer leer und wir können einen Befehl an den Tastatur-Controller schicken. Wenn dieser NICHT leer ist, dann lassen wir einfach eine endlosschleife laufen, die immer wieder überprüft ob der Buffer nun leer ist.
+Zuerst einmal müssen wir überprüfen ob der Tastatur-Controller empfangsbereit ist. Dies ist er, sobald sein "Input Buffer" leer ist. Und das können wir testen, indem wir ein Byte vom Port 0x64 lesen und schauen ob das Bit1 gesetzt ist. Wenn es NICHT gesetzt ist, dann ist der Input Buffer leer und wir können einen Befehl an den Tastatur-Controller schicken. Wenn dieser NICHT leer ist, dann lassen wir einfach eine Endlosschleife laufen, die immer wieder überprüft ob der Buffer nun leer ist.
 
 Hier der Code um abzufragen ob der Tastatur-Controller Input Buffer frei ist:
 
@@ -137,6 +137,6 @@ Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 1997; parent 1898; 2007-05-18T22:07:19Z -->
+<!-- MediaWiki page 1462; revision 2079; parent 1997; 2007-08-10T09:03:09Z -->
