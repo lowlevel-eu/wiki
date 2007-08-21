@@ -6,8 +6,8 @@
 
 Die derzeit aktuellen Versionen sind:
 
-- MenuetOS 32 v0.84
-- MenuetOS 64 v0.62
+- MenuetOS 32 v0.85
+- MenuetOS 64 v0.66b
 
 ## Features
 
@@ -29,6 +29,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 2006; parent 1751; 2007-05-27T08:31:52Z -->
+<!-- MediaWiki page 1481; revision 2081; parent 2006; 2007-08-21T21:22:27Z -->
