@@ -1,80 +1,58 @@
 # Xantorix
 
-**HomixOS** (Homix Operating System) ist ein kostenloses [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit Assembler (Bootloader) und Pascal ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Programme) programmiert wird. Das Betriebssystem ist modular aufgebaut, was bedeutet, dass man einfach und bequem verschiedene Module oder Treiber hinzufügen oder entfernen kann. Der Kernel unterstützt außerdem 32-Bit Protected-Mode, [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging").
+**HomixOS** (Homix Operating System) ist ein kostenloses [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Das Betriebssystem ist modular aufgebaut, daher ist es möglich einfach und bequem verschiedene Module oder Treiber zur Laufzeit hinzuzufügen oder zu entfernen. Der Kernel unterstützt alle modernen Technologien wie Protected-Mode, [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit Variante existiert seit neuestem auch eine noch nicht ausführlich getestete 64-Bit Version.
 
-Das Betriebssystem ist derzeit noch in Entwicklung und befindet sich in der Alpha-Phase. Es ist im Laufe des Jahres geplant, den Alpha-Status abzuschließen und eine 64-Bit Version für HomixOS zu veröffentlichen. Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
-
-HomixOS wird als Install-Disk, mit der HomixOS auf einem PC installiert werden kann, und als Live-Disk, mit der HomixOS problemlos direkt von Diskette gestartet werden kann, zur Verfügung gestellt. Die Alpha- und Beta-Versionen stehen nur als Live-Disk zur Verfügung. Bei speziellen Bochs-Paketen wird ein Emulator inkl. Konfiguration mitgeliefert. Dadurch kann das Betriebssystem einfach per Doppelklick auf die Start-BAT-Datei mit dem Emulator getestet werden, ohne [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") beenden zu müssen.
+In unregelmäßigen Zeitabständen, meistens jedoch ungefähr alle 2 bis 3 Wochen, wird neben dem finalen Release auch eine Alpha-/Beta-/RC-Variante der sich derzeit in Entwicklung befindlichen Version veröffentlicht. Hierbei handelt es sich um keine stabile Version, sondern nur um den derzeitigen Entwicklungsstand. Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
 
 ## Features
 
-Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der [offiziellen Webseite](http://www.homix-online.de/HomixOS/Features.php).
+Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der [offiziellen Webseite](http://www.homix-online.de/homixos/features.php).
 
 ## Versionen
 
 Überblick der verschiedenen Versionen:
 
-    30.01.2007 : HomixOS 0.0.7 Alpha
-    05.01.2007 : HomixOS 0.0.6 Alpha
-    28.09.2006 : HomixOS 0.0.5 Alpha
+    09.09.2007 : HomixOS 0.1.0
 
 Die Veränderungen bei den derzeitigen Versionen:
 
-**HomixOS 0.0.7 Alpha:**
+**HomixOS 0.1.0:**
 
-- Viele Bugfixes
-- Erweiterte Shell (u.a. Befehl für das Ausführen von Prozessen)
-- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")-Zeichenfunktionen
-- Demo-programme: Minesweeper und TicTacToe
-
-**HomixOS 0.0.6 Alpha:**
-
-- FAT-Dateisystemtreiber integriert
-- Erweiterte Shell (u.a. mit Dateibefehlen)
-- Textmodus und Grafikmodus
-- Ändern der Bildschirmauflösung
-- Herunterfahren und Neustarten von HomixOS möglich
-
-**HomixOS 0.0.5 Alpha:**
-
-- Kleine Shell
-- Lauffähiger 32-Bit Kernel
-- Textmodus
+- Multiboot-kompatibler Kernel
+- 32-Bit ProtectedMode Kernel
+- 64-Bit LongMode Kernel
+- Multitasking (Prozesse und Threads)
+- moderne Speicherverwaltung (Paging)
+- Diskettenlaufwerkstreiber
+- FAT-Dateisystemtreiber
+- Tastaturtreiber
+- PE-Unterstützung
 
 ## Roadmap
 
 Folgende Versionen sind geplant:
 
-    ??.??.2007 : HomixOS 0.0.8 Alpha
-    14.04.2007 : HomixOS 0.1.0 Beta
+    30.09.2007 : HomixOS 0.1.1
 
 Die geplanten Neuheiten in den zukünftigen Versionen:
 
-**HomixOS 0.0.8 Alpha:**
+**HomixOS 0.1.1:**
 
-- Festplattentreiber (ATA)
-- CD-ROM/DVD-ROM Laufwerkstreiber (ATAPI)
-- [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Grafiktreiber
-- VFAT Unterstützung
-- ISO9660 Dateisystemtreiber
-- UDF Dateisystemtreiber
-
-**HomixOS 0.1.0 Beta:**
-
-- Kernel-Protection
-- Stabilitätssicherungen
-- Multiprozessor (SMP) Unterstützung
-- Netzwerk/Internet Unterstützung
-- Netzwerkprotokolle: ARP,IPv4,UDP,TCP/IP
-- RTL8139 Netzwerkkartentreiber
+- verbesserte Prozessverwaltung
+- Exception-Handling
+- eine Art Registry
+- Benutzerverwaltung
+- Festplattentreiber (P-ATA)
+- erweiterte Shell
+- Texteditor
 
 ## Offizielle Webseite
 
-[HomixOS Projekt-Webseite](http://www.homix-online.de/HomixOS/)  
+[HomixOS Projekt-Webseite](http://www.homix-online.de/homixos/)  
 [Homix-Online](http://www.homix-online.de/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1911/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 1911; parent 1825; 2007-03-31T18:56:17Z -->
+<!-- MediaWiki page 1453; revision 2089; parent 1911; 2007-09-11T10:02:31Z -->
