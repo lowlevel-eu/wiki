@@ -23,6 +23,7 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 - [Bona Fide OSDev](http://www.osdever.net) - Viele, gut sortierte, Tutorials
 - [Sandpile](http://www.sandpile.org) - DIE Seite wenn es um die Architekturen des IA-32 und des AA-64 geht. Ein absolutes Muss für alle OS-Dever.
 - [Ralf Browns Interruptliste](http://www.ctyme.com/intr/int.htm) - Eine sehr ausführliche Liste mit Beschreibungen zu vielen Interrupts. Sei es BIOS, VGA/VESA-BIOS oder DOS, nahezu alles wichtige zu den Interrupts ist hier zu finden.
+- [Undocumented Windows 2000 Secrets](http://www.rawol.com/?topic=77) (PDF Version)
 
 ## Lowlevel-Tutorials
 
@@ -56,6 +57,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 1653; parent 1651; 2007-01-15T19:20:07Z -->
+<!-- MediaWiki page 1437; revision 2088; parent 1653; 2007-09-11T07:42:19Z -->
