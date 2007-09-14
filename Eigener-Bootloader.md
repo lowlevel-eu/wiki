@@ -26,9 +26,9 @@ Als Assembler verwenden wir den Netwide Assembler kurz NASM. Er ist für das was
 
 ### Die Testumgebung
 
-Zum Testen unseres Images werden wir Bochs verwenden. Bochs ist ein PC – Emulator. Er emuliert einen vollständigen PC inclusieve Prozessor. Nicht wie z.B. VM-Ware oder Virtau PC. Diese Programme Simmulieren auch einen PC, hier wird jedoch das Programm auf dem Host Prozessor ausgeführt, um mehr geschwindigkeit heraus zu hohlen. Bochs hingegen hat für uns den Vorteil, das er einen Integrierten Debugger besitzt. Er wird uns noch viele nützliche informationen über unser Programm und dessen Fehler liefern.
+Zum Testen unseres Images werden wir Bochs verwenden. Bochs ist ein PC–Emulator. Er emuliert einen vollständigen PC inklusive Prozessor. Nicht wie z.B. VM-Ware oder Virtual PC; diese Programme simulieren auch einen PC. Hier wird jedoch das Programm auf dem Hostprozessor ausgeführt, um mehr Geschwindigkeit heraus zu hohlen. Bochs hingegen hat für uns den Vorteil, das er einen integrierten Debugger besitzt. Er wird uns noch viele nützliche Informationen über unser Programm und dessen Fehler liefern.
 
-Auch Bochs unterligt der LGPL, und ist auf Sourceforge.net erhältlich. Nachstehend die URL zu dem Projekt.
+Auch Bochs unterliegt der LGPL, und ist auf Sourceforge.net erhältlich. Nachstehend die URL zu dem Projekt.
 
 <http://bochs.sourceforge.net>
 
@@ -248,6 +248,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2094/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 1740; parent 1593; 2007-01-18T21:14:52Z -->
+<!-- MediaWiki page 1427; revision 2094; parent 1740; 2007-09-14T19:21:17Z -->
