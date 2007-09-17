@@ -46,26 +46,8 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 - Graphik - Treiber: Textmodus
 - Floppy - Treiber
 
-## Road Map
-
-Hier eine Vorsichtig gestaltete Road Map, die sich jedoch sicherlich noch änder wird, hoffentlich zum guten ^^
-
-Update 21.5.2007: Da ich leider in den letzten zwei Wochen an einer Krankheit leidete, werde ich wohl die (zu) eng geplante Roadmap etwas umändern müssen, alles hat sich jetzt um ein Halbjahr verschoben.
-
-2\. Halbjahr 2007: 1. Alpha Release (Build 1000) mit der integration von allem ein bisschen ;)
-
-1\. Halbjahr 2008: 2. Alpha Release (Build 1500) mit der erweiterten Integration von allem
-
-2\. Halbjahr 2008: 1. Beta Release (Build 2000) mit der Integration von allem ausser GUI
-
-1\. Halbjahr 2009: 2. Beta Release (Build 2500) mit der ent-buggten Integration von allem ausser GUI
-
-2\. Halbjahr 2009: 1. Release Candidat (Build 3000)
-
-1\. Halbjahr 2010: Final Release
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2095/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2002; parent 2001; 2007-05-23T17:42:29Z -->
+<!-- MediaWiki page 1451; revision 2095; parent 2002; 2007-09-17T15:38:56Z -->
