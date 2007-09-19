@@ -7,9 +7,7 @@ Mehr [Infos](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected 
   
 **Wichtig** bei diesem Code ist es, selbst noch die org-Anweisung auf die Startadresse des Codes anzupassen!! \<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
 
-Bei Fragen kann man sich einfach an stefan.marcik@web.de oder
-
-an die ICQ-Nummer 338417614 wenden.
+Bei Fragen kann man sich einfach an die ICQ-Nummer 338-417-614 wenden.
 
 \[BITS 16\] org 0x0000 ; Addiert zu allen Offsetes die Start-Adresse dieses Codes
 
@@ -54,10 +52,10 @@ datasel equ \$-gdt
       db 0xCF           ; Zusatzinformationen und Segmentgrösse 16...19
       db 0x00           ; Segmentadresse 24..31
 
-gdt_end\</asm\> © by Stefan Marcik
+gdt_end\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2035; parent 2032; 2007-06-19T20:51:14Z -->
+<!-- MediaWiki page 1537; revision 2097; parent 2035; 2007-09-19T15:58:27Z -->
