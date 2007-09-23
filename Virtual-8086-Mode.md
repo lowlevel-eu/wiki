@@ -10,8 +10,13 @@ Der VM86-Modus wird aktiviert, indem für den entsprechenden Task das VM-Bit (0x
 
 Da bestimmte Befehle im VM86-Task das restliche Betriebssystem blockieren oder sonstiges Unheil anrichten können, werden sie vom Prozessor blockiert und lösen einen GPF aus. Die Aufgabe des Betriebssystems ist jetzt, diese Befehle im Exceptionhandler abzufangen und zu emulieren. Befehle, die emuliert werden müssen, sind: pushf/popf cli/sti int/iret in/out (falls der Task die nötigen Berechtigungen nicht hat) Ich persönlich benutze den VM86-Mode nur, um Interrupts aufzurufen und missbrauche so das iret zusätzlich dazu, um herauszufinden, ob der Interrupt beendet wurde.
 
+# Links
+
+- <http://osdev.berlios.de/v86.html> - Sehr gutes Tutorial von Tim Robinson (englisch)
+- <http://lost.famkaufmann.info/websvn/filedetails.php?repname=Lost&path=%2Ftrunk%2Fsrc%2Fkernel%2Fsrc%2Fvm86.c> - Code aus LOST für VM86-Tasks (nur für RM-Interrupts)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 2106; parent 2105; 2007-09-23T13:02:51Z -->
+<!-- MediaWiki page 1546; revision 2107; parent 2106; 2007-09-23T13:05:43Z -->
