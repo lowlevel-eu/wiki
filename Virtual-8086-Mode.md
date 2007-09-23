@@ -1,10 +1,22 @@
 # Virtual 8086 Mode
 
-VM86 ist der Kompatibilitätsmodus vonx86-Prozessoren, um 16bit-RealMode-Code auszuführen. Er ist vor allem praktisch, um Realmode-Interrupts wie den int 0x10 (VGA/VESA) aufzurufen.
+VM86 ist der Kompatibilitätsmodus von x86-Prozessoren, um 16bit-RealMode-Code auszuführen. Er ist vor allem praktisch, um Realmode-Interrupts wie den int 0x10 (VGA/VESA) aufzurufen.
 
 # Einrichtung
 
-Der VM86-Modus wird aktiviert, indem für den entsprechenden Task das VM-Bit (0x20000) gesetzt wird. Zusätzlich werden während einem iret aus dem Kernel in den Task vier Realmode-Segmentregister geladen, die vorher auf den Kernel-Stack gepusht werden müssen. Da für den Task Realmode-Addressierung benutzt wird, müssen auch cs:ip und ss:sp so gesetzt werden, dass sie im Realmode auf die entsprechende Addresse zeigen. VM86-Tasks laufen grundsätzlich im Ring 3. Der große Vorteil des VM86 ist, dass Paging unterstützt wird, so können die entsprechenden physikalischen Addressen von Kernel belegt werden und sogar mehrere VM86-Tasks gleichzeitig laufen, indem Speicher aus anderen Bereichen in das erste Megabyte gemappt wird. Hier kann es allerdings Probleme geben, wenn der Kernel in diesem Bereich Speicher benutzt, bei einem entsprechend niedrig geladenen Kernel muss man halt entsprechend aufpassen.
+Der VM86-Modus wird aktiviert, indem für den entsprechenden Task in EFLAGS das VM-Bit (0x20000) gesetzt wird. Zusätzlich werden während einem iret aus dem Kernel in den Task vier Realmode-Segmentregister geladen, die vorher auf den Kernel-Stack gepusht werden müssen. Da für den Task Realmode-Addressierung benutzt wird, müssen auch cs:ip und ss:sp so gesetzt werden, dass sie im Realmode auf die entsprechende Addresse zeigen. VM86-Tasks laufen grundsätzlich im Ring 3. Der große Vorteil des VM86 ist, dass Paging unterstützt wird, so können die entsprechenden physikalischen Addressen von Kernel belegt werden und sogar mehrere VM86-Tasks gleichzeitig laufen, indem Speicher aus anderen Bereichen in das erste Megabyte gemappt wird. Hier kann es allerdings Probleme geben, wenn der Kernel in diesem Bereich Speicher benutzt, bei einem entsprechend niedrig geladenen Kernel muss man halt entsprechend aufpassen.
+
+# Beispiel
+
+Aufbau eines Stacks direkt vor dem iret zu einem VM86-Task:
+
+(Alle Werte, auch die 16-Bit-Register, sind 32 bit groß, alle Segment-Register sind mit Realmode-Werten gefüllt
+
+**Wert**
+
+gs fs es ds ss sp eflags cs ip
+
+Darunter kommen je nach OS noch andere Werte, unter anderem die General Purpose Register des Tasks.
 
 # VM86-Monitor
 
@@ -17,6 +29,6 @@ Da bestimmte Befehle im VM86-Task das restliche Betriebssystem blockieren oder s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 2107; parent 2106; 2007-09-23T13:05:43Z -->
+<!-- MediaWiki page 1546; revision 2109; parent 2107; 2007-09-23T13:25:59Z -->
