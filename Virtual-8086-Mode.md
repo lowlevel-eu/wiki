@@ -10,7 +10,7 @@ Der VM86-Modus wird aktiviert, indem für den entsprechenden Task in EFLAGS das 
 
 Aufbau eines Stacks direkt vor dem iret zu einem VM86-Task:
 
-(Alle Werte, auch die 16-Bit-Register, sind 32 bit groß, alle Segment-Register sind mit Realmode-Werten gefüllt
+(Alle Werte, auch die 16-Bit-Register, sind auf dem Stack 32 bit groß, alle Segment-Register sind mit Realmode-Werten gefüllt)
 
 **Wert**
 
@@ -29,6 +29,6 @@ Da bestimmte Befehle im VM86-Task das restliche Betriebssystem blockieren oder s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2110/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 2109; parent 2107; 2007-09-23T13:25:59Z -->
+<!-- MediaWiki page 1546; revision 2110; parent 2109; 2007-09-23T13:35:55Z -->
