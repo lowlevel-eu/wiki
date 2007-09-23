@@ -16,7 +16,6 @@
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
 - Longmode
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
-- [VM86](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "VM86") (evtl. <http://osdev.berlios.de/v86.html> verlinken)
 - Informationen zur AMD PCNet Netzwerkkarte
 - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
 - [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") wie (L)GPL (v2, v3), 3/4-clause BSD, etc...
@@ -26,6 +25,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2078/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2078; parent 2077; 2007-08-09T15:01:16Z -->
+<!-- MediaWiki page 1518; revision 2108; parent 2078; 2007-09-23T13:08:34Z -->
