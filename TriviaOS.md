@@ -1,6 +1,6 @@
 # TriviaOS
 
-TriviaOS ist ein kleines Einmann-Hobby OS. Es wird von Nooooooooos entwickelt.
+TriviaOS ist ein kleines Einmann-Hobby OS. Es wird von [Nooooooooos](https://lowlevel-eu.github.io/wiki/pages/1457/index.html "Benutzer:Nooooooooos") entwickelt.
 
 TriviaOS hat einen Mikrokernel und arbeitet nur mit einer GUI. Allerdings werden da statt Fenstern Felder verwendet. Erstens soll damit die Bedinung einfacher sein und zweitens natürlich auch die Programmierung. Zudem ist geplant, dass das alle Daten im Internet gespeichert ist. Das hat den Vorteil, dass man sich von überallher einloggen kann und dass man so Dateien ganz einfach unter verschiedenen Usern teilen kann. Auch muss man sich dann wegen Datencrashs weniger Sorgen machen. Von der Geschwindigkeit her ist das sicher waghalsig - Jedoch bis das System so weit ist, sind hoffentlich auch die Internet-Verbindungen schnell genug geworden.
 
@@ -24,6 +24,6 @@ Somit wäre es ab diesem Moment möglich Software fürs Betriebsystem zu entwick
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2117; parent 1625; 2007-09-29T10:30:20Z -->
+<!-- MediaWiki page 1448; revision 2118; parent 2117; 2007-09-29T10:32:32Z -->
