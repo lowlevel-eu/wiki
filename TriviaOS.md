@@ -11,19 +11,20 @@ Programme, können in beliebig viele Tasks unterteilt werden. Somit bekommen auf
 Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Release vorzustellen können. Dieses wird in etwa die Folgenden "Features" beinhalten:
 
 - einen vollständigen Mikrokernel
-- Tastaturtreiber
 - SMP-Unterstützung
+- Task und Speicherverwaltung
 - Dateisystemtreiber
+- Tastaturtreiber
 - Vesatreiber
 - GUI
-- Maustreiber
+- ev. Maustreiber
 - Ausführliche Dokumentation des IPC und der Ansprechung dieser Treibermodule
 
   
-Somit wäre es ab diesem Moment möglich Software fürs Betriebsystem zu entwickeln.
+Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2119/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2119; parent 2118; 2007-09-29T10:51:33Z -->
+<!-- MediaWiki page 1448; revision 2120; parent 2119; 2007-09-29T11:35:56Z -->
