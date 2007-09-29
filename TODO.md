@@ -19,12 +19,13 @@
 - Informationen zur AMD PCNet Netzwerkkarte
 - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
 - [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") wie (L)GPL (v2, v3), 3/4-clause BSD, etc...
+- Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
 - Hier kommt dein Wunsch hin ;)
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2122/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2108; parent 2078; 2007-09-23T13:08:34Z -->
+<!-- MediaWiki page 1518; revision 2122; parent 2108; 2007-09-29T16:07:53Z -->
