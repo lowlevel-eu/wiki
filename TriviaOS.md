@@ -6,7 +6,7 @@ TriviaOS hat einen Mikrokernel und arbeitet nur mit einer GUI. Allerdings werden
 
 Als weitere Besonderheit ist der ausschließlich in Assembler geschriebene Quellcode. Das hat einen enormen Geschwindigkeits- und Speichervorteil.
 
-Programme, können in beliebig viele Tasks unterteilt werden. Somit bekommen aufwendige Programme automatisch mehr Rechenzeit und die Aufteilung auf mehrere Prozessoren wird so auch ganz einfach vollzogen. TriviaOS wird also mit mehreren Prozessoren umgehen können, aber eine 64-Bit Version ist vorläufig nicht geplant, da ich den Erfolg und Verbreitung von Mehrkern-Prozessoren innerhalb kürzerer Zeit viel größer, als der der 64 Prozessoren ansehe.
+Programme, können in beliebig viele Tasks unterteilt werden. Somit bekommen aufwendige Programme automatisch mehr Rechenzeit und die Aufteilung auf mehrere Prozessoren wird so auch ganz einfach vollzogen. TriviaOS wird also mit mehreren Prozessoren umgehen können, aber eine 64-Bit Version ist vorläufig nicht geplant, da ich es wichtiger finde, dass die gesamte Rechenpower genutzt wird, anstatt von etwas mehr Speicher, welchen ich momentan sowieso nicht brauche...
 
 Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Release vorstellen zu können. Dieses wird in etwa die Folgenden "Features" beinhalten:
 
@@ -25,6 +25,6 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2121/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2121; parent 2120; 2007-09-29T13:28:43Z -->
+<!-- MediaWiki page 1448; revision 2123; parent 2121; 2007-09-30T07:07:59Z -->
