@@ -32,7 +32,7 @@ Die Veränderungen bei den derzeitigen Versionen:
 
 Folgende Versionen sind geplant:
 
-    30.09.2007 : HomixOS 0.1.1
+    14.10.2007 : HomixOS 0.1.1
 
 Die geplanten Neuheiten in den zukünftigen Versionen:
 
@@ -53,6 +53,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 2089; parent 1911; 2007-09-11T10:02:31Z -->
+<!-- MediaWiki page 1453; revision 2124; parent 2089; 2007-09-30T21:01:31Z -->
