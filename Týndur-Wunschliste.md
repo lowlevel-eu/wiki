@@ -16,8 +16,18 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 - Hinzufügen von Applikationen, wie z.B. einen Editor.
 
+  
+
+## LostIO
+
+- Berechtigungen setzen und abfragen
+
+<!-- -->
+
+- ioctl um kompatibler zu bestehenden Systemen und Anwendungen zu werden (und um alternativ weitere files im vfs einzusparen)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1998/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2125/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 1998; parent 1977; 2007-05-19T11:50:04Z -->
+<!-- MediaWiki page 1513; revision 2125; parent 1998; 2007-10-02T12:59:34Z -->
