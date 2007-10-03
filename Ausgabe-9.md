@@ -173,8 +173,8 @@ ext2 ist das Standarddateisystem von Linux. Es gehört zu den stabilsten am Mark
 Einige Daten:
 
 |  |  |
-| --------------------------- | ------------------------------ |
-| Maximale Dateigröße | 2 GB (im 64-Bit-Modus 16 GB) |
+| --------------------------- | ----------------------------------- |
+| Maximale Dateigröße | Je nach Blockgröße 16 GB bis 2 TB |
 | Maximale Dateinamenslänge | 255 Zeichen |
 
   
@@ -276,6 +276,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1827/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2134/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 1827; parent 1650; 2007-03-04T17:57:01Z -->
+<!-- MediaWiki page 1409; revision 2134; parent 1827; 2007-10-03T12:21:25Z -->
