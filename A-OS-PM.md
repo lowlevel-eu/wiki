@@ -48,6 +48,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2095/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2095; parent 2002; 2007-09-17T15:38:56Z -->
+<!-- MediaWiki page 1451; revision 2129; parent 2095; 2007-10-03T09:12:38Z -->
