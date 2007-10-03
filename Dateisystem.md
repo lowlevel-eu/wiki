@@ -10,6 +10,6 @@ Liste bekannter Dateisysteme
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 2127; parent 0; 2007-10-03T06:02:44Z -->
+<!-- MediaWiki page 1548; revision 2132; parent 2127; 2007-10-03T09:14:32Z -->
