@@ -32,6 +32,6 @@ Im Gegensatz zum Software-Multitasking, wird hier die meiste Arbeit vom Prozesso
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2131/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
 
-<!-- MediaWiki page 1495; revision 1841; parent 1831; 2007-03-09T13:48:44Z -->
+<!-- MediaWiki page 1495; revision 2131; parent 1841; 2007-10-03T09:13:50Z -->
