@@ -16,6 +16,6 @@ Ein GUI (Graphical User Interface) ist eine grafische Oberfläche, die zumeist m
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1910/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2130/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 1910; parent 1909; 2007-03-31T18:54:37Z -->
+<!-- MediaWiki page 1511; revision 2130; parent 1910; 2007-10-03T09:13:29Z -->
