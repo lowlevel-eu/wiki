@@ -10,7 +10,7 @@ Programme, können in beliebig viele Tasks unterteilt werden. Somit bekommen auf
 
 Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Release vorstellen zu können. Dieses wird in etwa die Folgenden "Features" beinhalten:
 
-- einen vollständigen [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
+- einen vollständigen [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung
 - Task und Speicherverwaltung
 - Dateisystemtreiber
@@ -18,6 +18,7 @@ Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Re
 - Vesatreiber
 - GUI
 - evtl. Maustreiber
+- Test-Tool
 - Ausführliche Dokumentation der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") und der Ansprechung dieser Treibermodule
 
   
@@ -25,6 +26,6 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2135/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2123; parent 2121; 2007-09-30T07:07:59Z -->
+<!-- MediaWiki page 1448; revision 2135; parent 2123; 2007-10-04T16:32:12Z -->
