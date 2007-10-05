@@ -22,7 +22,7 @@ Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht n
 
 - **Mikrokernel:**
 
-Der Mikrokernel hat meist deutlich weniger Funktionen wie ein monolithischer Kernel, da er nur die wesentlichen Funktionen bereitstellt. Treiber und weitere Funktionen werden über zusätzliche Module hinzugefügt, welche auch als eigenständige Prozesse laufen können und gegenüber dem Kernel sicher abgeschottet werden können. Somit kann ein fehlerhafter Treiber nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und einfach neu gestartet werden.
+Der Mikrokernel hat meist deutlich weniger Funktionen als ein monolithischer Kernel, da er nur die wesentlichen Funktionen bereitstellt. Treiber und weitere Funktionen werden über zusätzliche Module hinzugefügt, welche auch als eigenständige Prozesse laufen können und gegenüber dem Kernel sicher abgeschottet sind. Somit kann ein fehlerhafter Treiber nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und einfach neu gestartet werden.
 
 - **Makrokernel:**
 
@@ -30,6 +30,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1762/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 1762; parent 1745; 2007-01-20T12:28:34Z -->
+<!-- MediaWiki page 1478; revision 2136; parent 1762; 2007-10-05T10:54:40Z -->
