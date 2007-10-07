@@ -61,6 +61,30 @@ Nochmal eine Veranschaulichung der Oder-Verknüpfung:
 
 Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2. Zeile zur 1. Zeile kopieren und die letzte Zeile löschen, also auf 0 oder irgendwas setzen. Wenn man eine memcpy- und eine memset-Funktion hat, geht das in ein paar Zeilen.
 
+## Cursor
+
+Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Understrich ist, wo keiner sein sollte. Also zumindestens wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der von BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem seine eigene Entscheidung.
+
+Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden)
+
+    void displaycursor(u8 col,u8 row) {
+      u16 tmp;
+      tmp = row*VIDEOTEXT_WIDTH+col;
+      outb(0x3D4,14);
+      outb(0x3D5,tmp>>8);
+      outb(0x3D4,15);
+      outb(0x3D5,tmp);
+    }
+
+Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach in die 26. Zeile setzen (diese gibt es nämlich nicht). Das geht natürlich genau so wie in der eben genannten Funktion, aber dies hier ist die direkte Variante:
+
+    void removecursor() {
+      outb(0x3D4,14);
+      outb(0x3D5,0xD1);
+      outb(0x3D4,15);
+      outb(0x3D5,0x07);
+    }
+
 ## Weblinks
 
 - [Artikel aus der OSDevWiki](http://www.osdev.org/wiki/Text_UI)
@@ -70,6 +94,6 @@ Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2147; parent 2146; 2007-10-07T12:55:26Z -->
+<!-- MediaWiki page 1549; revision 2152; parent 2147; 2007-10-07T16:03:45Z -->
