@@ -4,7 +4,7 @@ TriviaOS ist ein kleines Einmann-Hobby OS und wird von [Nooooooooos](https://low
 
 ## Konzept und Ideen
 
-TriviaOS hat einen Mikrokernel und arbeitet nur mit einer GUI. Allerdings werden da nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche nicht überlappen können. Erstens soll damit die Bedinung einfacher sein und zweitens auch die Programmierung. Zudem ist geplant, dass alle Daten eines Benutzers auch im Internet gespeichert werden. Das hat den Vorteil, dass man sich von überallher mit seinem Account einloggen kann und sofort mit seinen Daten arbeiten kann. So kann man auch Dateien ganz einfach unter verschiedenen Usern teilen. Man muss sich dann auch vor Datencrashs weniger Sorgen machen und sich nicht um Backups kümmern. Von der Geschwindigkeit her ist das sicher waghalsig - Jedoch bis das System so weit ist, sind hoffentlich auch die Internet-Verbindungen schnell genug geworden.
+TriviaOS hat einen Mikrokernel und arbeitet nur mit einer GUI. Allerdings werden da nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche sich nicht überlappen können. Erstens soll damit die Bedinung einfacher sein und zweitens auch die Programmierung. Zudem ist geplant, dass alle Daten eines Benutzers auch im Internet gespeichert werden. Das hat den Vorteil, dass man sich von überallher mit seinem Account einloggen kann und sofort mit seinen Daten arbeiten kann. So kann man auch Dateien ganz einfach unter verschiedenen Usern teilen. Man muss sich dann auch vor Datencrashs weniger Sorgen machen und sich nicht um Backups kümmern. Von der Geschwindigkeit her ist das sicher waghalsig - Jedoch bis das System so weit ist, sind hoffentlich auch die Internet-Verbindungen schnell genug geworden.
 
 Ein weiteres Merkmal ist der ausschließlich in Assembler geschriebene Quellcode. Das bringt dem System sicher den einen oder anderen Geschwindigkeits- und Speichervorteil.
 
@@ -32,6 +32,6 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2141; parent 2140; 2007-10-07T10:57:12Z -->
+<!-- MediaWiki page 1448; revision 2142; parent 2141; 2007-10-07T10:57:45Z -->
