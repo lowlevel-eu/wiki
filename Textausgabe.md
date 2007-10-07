@@ -70,6 +70,6 @@ Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2146; parent 2145; 2007-10-07T12:52:02Z -->
+<!-- MediaWiki page 1549; revision 2147; parent 2146; 2007-10-07T12:55:26Z -->
