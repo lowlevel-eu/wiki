@@ -50,7 +50,7 @@ Nun folgt die Erklärung: Mit der 1. Zeile wird ein Pointer auf den Textspeicher
 
 Achtung: Das Attributebyte kommt zwar immer nach dem Zeichenbyte, aber wir benutzen hier ein Word und arbeiten ja auf einem [Little-Endian](http://de.wikipedia.org/wiki/Byte-Reihenfolge)-System)
 
-Nochmal eine Veranschaulichung der Order-Verknüpfung:
+Nochmal eine Veranschaulichung der Oder-Verknüpfung:
 
     attr     char
     0x07     0x41
@@ -70,6 +70,6 @@ Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2145; parent 2144; 2007-10-07T12:51:40Z -->
+<!-- MediaWiki page 1549; revision 2146; parent 2145; 2007-10-07T12:52:02Z -->
