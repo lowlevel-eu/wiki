@@ -20,18 +20,18 @@ Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Re
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung
 - Task und Speicherverwaltung
 - I/O-Verwaltung
-- Dateisystemtreiber
-- Tastaturtreiber
-- Vesatreiber
-- GUI
-- evtl. Maustreiber
+- [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")
+- [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur")
+- [Vesatreiber](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "Vesa")
+- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")
+- evtl. [Maustreiber](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
 - Test-Tool
-- Ausführliche Dokumentation der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") und der Ansprechung dieser Treibermodule
+- Ausführliche Dokumentation der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") und der Ansprechung dieser [Treibermodule](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
 
 Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2142; parent 2141; 2007-10-07T10:57:45Z -->
+<!-- MediaWiki page 1448; revision 2143; parent 2142; 2007-10-07T11:08:11Z -->
