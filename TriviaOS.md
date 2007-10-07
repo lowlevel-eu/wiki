@@ -13,6 +13,7 @@ Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Re
 - einen vollständigen [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung
 - Task und Speicherverwaltung
+- I/O-Verwaltung
 - Dateisystemtreiber
 - Tastaturtreiber
 - Vesatreiber
@@ -26,6 +27,6 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2135/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2138/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2135; parent 2123; 2007-10-04T16:32:12Z -->
+<!-- MediaWiki page 1448; revision 2138; parent 2135; 2007-10-07T08:06:11Z -->
