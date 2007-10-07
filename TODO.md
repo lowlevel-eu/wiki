@@ -9,7 +9,6 @@
 ## Neu erstellen
 
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") erstellen und Ideen für RPC aus dem Thread im Forum
-- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"), erklären wie man im Protected-Mode text ausgeben kann
 - eine Liste der reservierten [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche")
 - C/C++ [Aufrufkonventionen](https://github.com/lowlevel-eu/wiki/wiki/Aufrufkonventionen "Aufrufkonventionen") für x86 und x86-64
 - das [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")-, Elf- & Elf64-Dateiformat erklären
@@ -26,6 +25,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2122/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2122; parent 2108; 2007-09-29T16:07:53Z -->
+<!-- MediaWiki page 1518; revision 2148; parent 2122; 2007-10-07T12:58:24Z -->
