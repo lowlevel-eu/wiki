@@ -2,7 +2,7 @@
 
 ## Vorwort
 
-In diesem Artikel geht es nur darum wie im Textmode 0 Schrift (und nur Schrift, keine Grafiken) auf dem Bildschirm ausgegeben werden kann. Normalerweise geht das über einen BIOS-Interrupt, aber man will ja auch im Protected Mode Text auf dem Bildschirm schreiben können.
+In diesem Artikel geht es nur darum wie im Textmode Schrift (und nur Schrift, keine Grafiken) auf dem Bildschirm ausgegeben werden kann. Normalerweise geht das über einen BIOS-Interrupt, aber man will ja auch im Protected Mode Text auf dem Bildschirm schreiben können.
 
 ## Textspeicher
 
@@ -32,7 +32,7 @@ Das Attribute-Byte ist wie folgt gestaltet:
 | 0x6 | Braun | 0xE | Hellbraun |
 | 0x7 | Hellgrau | 0xF | Weiß |
 
-Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Weiß.
+Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Schwarz.
 
 ## Beispiel
 
@@ -57,6 +57,10 @@ Nochmal eine Veranschaulichung der Order-Verknüpfung:
     <<8       "
     0x0700 | 0x41 = 0x0741
 
+## Bildschirm scrollen
+
+Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2. Zeile zur 1. Zeile kopieren und die letzte Zeile löschen, also auf 0 oder irgendwas setzen. Wenn man eine memcpy- und eine memset-Funktion hat, geht das in ein paar Zeilen.
+
 ## Weblinks
 
 - [Artikel aus der OSDevWiki](http://www.osdev.org/wiki/Text_UI)
@@ -66,6 +70,6 @@ Nochmal eine Veranschaulichung der Order-Verknüpfung:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2144; parent 0; 2007-10-07T12:40:11Z -->
+<!-- MediaWiki page 1549; revision 2145; parent 2144; 2007-10-07T12:51:40Z -->
