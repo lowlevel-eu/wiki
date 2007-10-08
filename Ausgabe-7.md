@@ -161,13 +161,7 @@ Die zweite Methode habe ich noch nie erfolgreich zum Laufen gebracht und sie ist
 
 Nun, man möchte sich nun denken "nichts leichter als das" und schreibt munter in seinen Code `JMP AX,0x00000000`, wobei man gedenkt, AX mit der Deskriptornummer zu beladen. Spätestens beim Versuch zu Assemblieren wird man feststellen: das geht nicht. Man muss sich also was anderes ausdenken. Erstmal möchte ich sicherheitshalber das ganze zu diesem ausbauen: `JMP DWORD AX:0x12345678`. So wird erzwungen, dass der Assembler auch den kompletten Offsetteil mit übersetzt und nicht Teile durch Abkürzen unter den Tisch kehrt. Das Offset habe ich zu dieser Zahlenfolge gemacht, da ich es für noch ein Schritt sicherer halte, dass das ganze nicht gekürzt wird. Noch haben wir aber das Problem mit dem AX nicht geklärt. Da dies auf jeden Fall nicht geht wandeln wir auch das um: `JMP DWORD 0x1234:0x12345678` Dies wird der Assembler zwar problemlos schlucken, aber leider bringt es uns nicht viel. Wie man vielleicht schon merkt setze ich viel darauf, dass der Assembler dies vollständig und ungekürzt in die Opcodes umwandelt, denn das ist unser Angriffspunkt: HexDump. Wir manipulieren einfach den vom Assembler erstellten Maschinencode während der Ausführung. Ein paar Versuche haben ergeben: `JMP DWORD 0x1234:0x12345678` wird vom Assembler in die Bytes 0xED, 0x78, 0x56, 0x34, 0x12, 0x34 und 0x12 umgewandelt. Wir sehen also, dass die letzten zwei Bytes den Selektor angeben. Wir bleiben also weiterhin dabei, in AX unsere TSS-Deskriptornummer zu haben und bauen uns dann also eine Routine, die die Opcodes manipuliert. Da wir die Bytes in anderen Datentypen auslesen als sie normalerweise abgelegt sind kommt es zu derartigen Verdrehungen, da die CPU andere Zahlendarstellungsverfahren benutzt, als der Mensch und die Zahlen konvertiert werden (näheres in meinem Tutorial *Datenveränderungen im RAM*). Wir können also getrost einfach ein Word an die Stelle mit dem Selektor schreiben, der sich 5 Bytes hinter Befehlbeginn befindet. Den Befehlsbeginn finden wir anhand eines Labels und schon haben wir alles zusammen um folgenden Code zu bauen:
 
-    PUSH EDI
-    MOV EDI, tss_switch_label ; Offset laden
-    ADD EDI,0x00000005 ; zum Operanten navigieren
-    STOSW ; neuen Wert eintragen
-    tss_switch_label:
-    JMP DWORD 0x1234:0x12345678 ; springen!
-    POP EDI
+\<asm\> PUSH EDI MOV EDI, tss_switch_label ; Offset laden ADD EDI,0x00000005 ; zum Operanten navigieren STOSW ; neuen Wert eintragen tss_switch_label: JMP DWORD 0x1234:0x12345678 ; springen! POP EDI \</asm\>
 
 Der Code verlangt lediglich, dass sich in AX die TSS-Deskriptornummer des Tasks befindet, zu dem gewechselt werden soll. Alles andere macht die CPU. Somit dürfte das Wechseln auch kein Problem mehr sein.
 
@@ -1189,6 +1183,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1922/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 1922; parent 1921; 2007-04-07T16:57:54Z -->
+<!-- MediaWiki page 1494; revision 2158; parent 1922; 2007-10-08T11:22:41Z -->
