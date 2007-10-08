@@ -157,11 +157,13 @@ Man kann genau erkennen, wie das Programm funktioniert. Zuerst wird das Fenster 
 
 ### System Calls
 
-Mit System Calls ruft man in MenuetOS APIs auf, das heißt, Funktionen wie \`WAIT FOR EVENT\` oder \`SYSTEM TREE ACCESS\`. In DOS ruft man Funktionen meistens mit INT 0x21 auf, und in Windows direkt mit CALL. In Menuet funktioniert das folgendermaßen:
+Mit System Calls ruft man in MenuetOS APIs auf, das heißt, Funktionen wie \`WAIT FOR EVENT\` oder \`SYSTEM TREE ACCESS\`. In DOS ruft man Funktionen meistens mit INT 0x21 auf, und in Windows direkt mit CALL. In Menuet funktioniert das folgendermaßen: \<asm\>
 
        mov eax, FUNKTIONSNUMMER
        ebx, ecx, edx, esi, edi, ebp = Parameters
        INT 0x40 - SYSTEM CALL
+
+\</asm\>
 
 Die Funktionen, die bis jetzt 68 an der Zahl sind, findet man in der Datei SYSFUNCS.TXT. Ein Beispiel - SYSFUNCS.TXT enthält folgende Informationen:
 
@@ -170,11 +172,13 @@ Die Funktionen, die bis jetzt 68 an der Zahl sind, findet man in der Datei SYSFU
            ebx delay in 1/100 secs
            ret: nothing changed
 
-Wenn wir jetzt in unserem Programm eine 0.5 Sekunden lange Wartezeit wollen, müssen wir es folgendermaßen benützen:
+Wenn wir jetzt in unserem Programm eine 0.5 Sekunden lange Wartezeit wollen, müssen wir es folgendermaßen benützen: \<asm\>
 
        mov  eax, 5             ; Function number: DELAY X/100 SECS
        mov  ebx, 50          ; 50/100 sek = 0.5 Sekunden
        int  0x40             ; System call
+
+\</asm\>
 
 Wir setzen die Funktionsnummer (die hier 5 ist) in eax, setzten ebx die gewünschten ?\*0.01 Sekunden und rufen die Funktion auf - ganz einfach.
 
@@ -368,6 +372,6 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
 
-<!-- MediaWiki page 1471; revision 1919; parent 1719; 2007-04-07T16:31:41Z -->
+<!-- MediaWiki page 1471; revision 2156; parent 1919; 2007-10-08T11:19:50Z -->
