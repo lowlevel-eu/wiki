@@ -408,63 +408,19 @@ So jetzt könnten wir zwar Töne ausgeben, aber wir müssen dazu zuerst noch den
 
 Wir werden jetzt ein paar Funktionen für die Programmiersprache C zusammen entwickeln. Nebenher schreiben wir die Funktionen dann auch noch in Assembler. Also, fangen wir an, ich denke in C dürfte jeder die Funktionen â€žinp()â€œ und â€žoutp()â€œ schon für sein OS implementiert haben, weshalb ich darauf baue. Wir wissen, wir schalten den Lautsprecher an, indem die letzten 2 Bits in Port 0x61 auf 11b stehen. Daraus machen wir schnell eine Funktion:
 
-    void switch_on()
-    {
-    outp(0x61,inp(0x61) | 3);
-    }
+\<c\> void switch_on() { outp(0x61,inp(0x61) \| 3); } \</c\>
 
 Okay. In Assembler baue ich das schon alles mit in die \_sound-Funktion ein. So, an können wir ihn machen, nur aus noch nicht, aber wir wissen, wenn die beiden letzten Bits in Port 0x61 auf 00b stehen, dann ist der Lautsprecher aus. Das geht also ganz leicht:
 
-    void switch_off()
-    {
-    outp(0x61,inp(0x61) &~3);
-    }
+\<c\> void switch_off() { outp(0x61,inp(0x61) &~3); } \</c\>
 
-Und in Assembler:
-
-    _switch_off:
-    IN AL,61h
-    AND AL,11111100b
-    OUT 61h,AL
-    RET
+Und in Assembler: \<asm\> \_switch_off: IN AL,61h AND AL,11111100b OUT 61h,AL RET \</asm\>
 
 Fertig. An und aus können wir ihn schon machen, aber das Herzstückt kommt noch! Einen Ton ausgeben. Das geht mit folgendem, diesmal zuerst in Assembler ;-):
 
-    _sound:
-    MOV AX,34DDH ;Die Frequenz wird in BX übergeben.
-    MOV DX,0012H
-    CMP DX,BX
-    JNC DONE1
-    DIV BX
-    MOV BX,AX
-    IN AL,61H
-    TEST AL,3
-    JNZ A99
-    OR AL,3
-    OUT 61H,AL
-    MOV AL,0B6H
-    OUT 43H,AL
-    A99:
-    MOV AL,BL
-    OUT 42H,AL
-    MOV AL,BH
-    OUT 42H,AL
-    DONE1:
-    RET
+\<asm\> \_sound: MOV AX,34DDH ;Die Frequenz wird in BX übergeben. MOV DX,0012H CMP DX,BX JNC DONE1 DIV BX MOV BX,AX IN AL,61H TEST AL,3 JNZ A99 OR AL,3 OUT 61H,AL MOV AL,0B6H OUT 43H,AL A99: MOV AL,BL OUT 42H,AL MOV AL,BH OUT 42H,AL DONE1: RET \</asm\>
 
-So, jetzt in C:
-
-    void sound(unsigned frequenz)
-    {
-    unsigned teiler;
-    teiler = 1193180L/frequenz;
-    outp(0x43,0xB6);
-    outp(0x42,teiler&0xFF);
-    outp(0x42,teiler >> 8);
-    switch_on()
-    //wenn der Sound aufhören soll, muss die Funktion
-    //switch_off aufgerufen werden.
-    }
+So, jetzt in C: \<c\> void sound(unsigned frequenz) { unsigned teiler; teiler = 1193180L/frequenz; outp(0x43,0xB6); outp(0x42,teiler&0xFF); outp(0x42,teiler \>\> 8); switch_on() //wenn der Sound aufhören soll, muss die Funktion //switch_off aufgerufen werden. } \</c\>
 
 ### Schluss
 
@@ -1199,6 +1155,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2159; parent 2158; 2007-10-08T11:22:57Z -->
+<!-- MediaWiki page 1494; revision 2160; parent 2159; 2007-10-08T11:23:44Z -->
