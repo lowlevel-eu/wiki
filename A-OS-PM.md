@@ -6,16 +6,16 @@ A / OS PM ist ein Betriebsystem, das von Blitzmaster entwickelt wird. Zurzeit be
 
 ### Übersicht
 
-- Protected Mode
+- [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
 - Flat Memory Model
-- Paging
+- [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
 - Umfangreiches Treibersystem
 - Multi User
-- Multi Tasking
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
 - Microkernel
 - Notkonsole
-- GUI komplett vom System getrennt
-- Eigenes File System (A / FS)
+- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") komplett vom System getrennt
+- Eigenes [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (A / FS)
 - Support von FAT 16/32
 
 ### Protected Mode / Flat Memory Model / Paging
@@ -40,14 +40,14 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 - Multi Tasking: jedoch ohne Prioritäten
 - Treibersystem: sollte vollständig implementiert sein
-- A / IO (die IPC Schnittstelle): sollte vollständig implementiert sein
+- A / IO (die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") Schnittstelle): sollte vollständig implementiert sein
 - Text - Console
 - Keyboard - Treiber
-- Graphik - Treiber: Textmodus
+- Grafik - Treiber: Textmodus
 - Floppy - Treiber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2129; parent 2095; 2007-10-03T09:12:38Z -->
+<!-- MediaWiki page 1451; revision 2153; parent 2129; 2007-10-08T11:06:35Z -->
