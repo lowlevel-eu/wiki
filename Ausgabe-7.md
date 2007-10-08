@@ -499,150 +499,77 @@ Der Code tut, wie es sein sollte, das, was man von ihm erwartet: Er schreibt all
 Nachdem wir jetzt die Dateien gelesen haben, dürften wir kein Problem mehr haben, eine neue Datei zu erstellen. Was ist wichtig? Zuerst müssen wir einen leeren Platz im Root-Directory für den Dateieintrag finden. Haben wir den gefunden, müssen wir den Sektor für die Daten suchen. Hier nehmen wir einfachheitshalber den Sektor des letzten Eintrags+1. Natürlich könnten so nur 512 Byte Dateien gespeichert werden, weil sonst Fehler auftreten können. Aber da ich nicht hunderte von Zeilen schreiben will, um alles zu perfektionieren, hab ich nur die Einfachlösung hier.  
 Wenn man größere Dateien speichern möchte, muss man die Dateigröße des letzten Eintrags in Sektoren umrechnen, und dann ist diese Zahl plus die Sektornummer des Eintrags die neue Adresse für den neuen Eintrag. Also, hier ist der Code, wie es funktioniert, eine neue Datei anzulegen.
 
-    ;     - - - - - [ Dateien erstellen - CODE ] - - - - -
-         start:
-             mov    ax, 0x2000  ; ax=0x2000
-             mov    es, ax      ; Daten werden nach ES:BX geschrieben, ES=0x2000
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+\<asm\>
 
-         loadk:
-             mov    ah, 0x2     ; ah=2: Sektoren lesen
-             mov    al, 0x12    ; Wie viele Sektoren wir lesen (18)
-             mov    ch, 0       ; Cylinder 0
-             mov    cl, 1       ; Starten bei Sektor 1
-             xor    dx, dx      ; dx=0
-             inc    dh      ; Head 1:
-                        ; Soweit ich das mitbekommen hab, besteht ein 
-                        ; Cylinder aus 2 Teilen Head0 und Head1. Head0 
-                        ; sind die ersten 18 Bytes (0-17) und Head1 sind
-                        ; die zweiten 18 Bytes (18-36). Da Root Entry auf 
-                        ; Sektor 19 liegt, brauchen wir head1.
-             int    0x13        ; Interupt 13
-             jc loadk           ; Wenn Fehler: Nochmal
+\- - - - - \[ Dateien erstellen - CODE \] - - - - -
 
-             mov    bx, 0x200-0x20  ; bx=Adresse des 2. Sektors, den wir in den Speicher
-                        ; gelesen haben, -0x20 deshalb, weil wir den ersten
-                        ; Eintrag auch checken müssen, und da bx am Anfang 
-                        ; des loops um 0x20 erhöht wird, müssen wir es verkleinern
-         fat12emptyentry:
-             add    bx, 0x20    ; Nächster Eintrag
-             mov    al, [bx]    ; al=Erstes Zeichen des Eintrags
-             test   al, al      ; Checken ob null
-         jnz     fat12emptyentry        ; Wenn Eintrag besetzt ist, dann suche weiter
+        start:
 
-             mov    ax, [bx-6]  ; ax enthält jetzt den Sektor des letzten Eintrags
-             inc    ax      ; und wir nehmen den nächsten. ACHTUNG: Ich gehe
-                        ; davon aus, dass keine Datei größer ist als 
-                        ; 512 Bytes ist. Wenn man es professionell
-                        ; machen will, muss man die Größe der vorherigen 
-                        ; Datei checken.
+mov ax, 0x2000 ; ax=0x2000 mov es, ax ; Daten werden nach ES:BX geschrieben, ES=0x2000 mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    ax, 0x1000  ; Code im Speicher
-             mov    es, ax
-             mov    ds, ax
+        loadk:
 
-             mov    [FAT12Sector], ax   ; ax in den vorbestimmten Bereich schreiben
+mov ah, 0x2 ; ah=2: Sektoren lesen mov al, 0x12 ; Wie viele Sektoren wir lesen (18) mov ch, 0 ; Cylinder 0 mov cl, 1 ; Starten bei Sektor 1 xor dx, dx ; dx=0 inc dh ; Head 1: ; Soweit ich das mitbekommen hab, besteht ein ; Cylinder aus 2 Teilen Head0 und Head1. Head0 ; sind die ersten 18 Bytes (0-17) und Head1 sind ; die zweiten 18 Bytes (18-36). Da Root Entry auf ; Sektor 19 liegt, brauchen wir head1. int 0x13 ; Interupt 13 jc loadk ; Wenn Fehler: Nochmal
 
-             mov    di, bx      ; di=unser Teil des Sektors
-             mov    bx, NewEntry    ; bx=Offset vom neuen Eintrag
+mov bx, 0x200-0x20 ; bx=Adresse des 2. Sektors, den wir in den Speicher ; gelesen haben, -0x20 deshalb, weil wir den ersten ; Eintrag auch checken müssen, und da bx am Anfang ; des loops um 0x20 erhöht wird, müssen wir es verkleinern
 
-        Data2Mem:
-             mov    ax, 0x1000  ; Code im Speicher
-             mov    es, ax
-             mov    ds, ax
+        fat12emptyentry:
 
-             mov    al, byte [bx]   ; al=Byte zu schreiben
-             
-             mov    cx, 0x2000  ; Sektor im Speicher
-             mov    es, cx
-             mov    ds, cx
+add bx, 0x20 ; Nächster Eintrag mov al, \[bx\] ; al=Erstes Zeichen des Eintrags test al, al ; Checken ob null
 
-             stosb          ; AL -> ES:DI
-             inc    bx      ; Nächstes Byte
-             cmp    bx, 0x20+NewEntry   ; Check ob wir alle haben
-        jne  Data2Mem           ; Wenn nicht, nochmal
+        jnz     fat12emptyentry      ; Wenn Eintrag besetzt ist, dann suche weiter
 
-             mov    bx, 0x0     ; ES:BX -> Databuffer
-        Mem2Disk:
-             mov    ah, 0x3     ; AH=3: Schreibe Sektor(en)
-             mov    al, 0x12    ; Wir schreiben 18 Sektor
-             mov    ch, 0x0     ; Cylinder 0
-             mov    cl, 0x1     ; Sektor 1
-             xor    dx,dx       ; dx=0
-             inc    dh      ; Head 1!
-             int    0x13        ; Interrupt 13
+mov ax, \[bx-6\] ; ax enthält jetzt den Sektor des letzten Eintrags inc ax ; und wir nehmen den nächsten. ACHTUNG: Ich gehe ; davon aus, dass keine Datei größer ist als ; 512 Bytes ist. Wenn man es professionell ; machen will, muss man die Größe der vorherigen ; Datei checken.
 
-             mov    ax, 0x1000  ; es und ds aktualisieren, da wir jetzt wieder
-                        ; im Speicher auf 0x1000 arbeiten.
-             mov    es, ax
-             mov    ds, ax
+mov ax, 0x1000 ; Code im Speicher mov es, ax mov ds, ax
 
-    string:
-             mov    cx, 0xFFFF  ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber zu 
-                        ; faul war, die Zeichenlänge zu überprüfen, hab ichs
-                        ; auf das höchste gestellt. Weil
-                        ; ein String aber mit 0x0 beendet wird, ist es egal
-             mov    si, msg     ; si=Adresse des Strings
-             call   putstr      ; Schreib String
-             mov    cx, 0xFFFF  ; Nochmal das Gleiche
-             mov    si, m_boot  ; Nochmal das Gleiche
-             call   putstr      ; Nochmal das Gleiche
-             call   getkey      ; Call zu GetKey
-             jmp    reboot      ; Springe zu reboot
+mov \[FAT12Sector\], ax ; ax in den vorbestimmten Bereich schreiben
 
-             msg    db 'Welcome to SPTH-OS 1.1',0   ; String 1
-             m_boot db 'Press any key...',0     ; String 2
+mov di, bx ; di=unser Teil des Sektors mov bx, NewEntry ; bx=Offset vom neuen Eintrag
 
-         NewEntry:      db 'FILE    TXT'    ; DIR_NAME
-                db 0x20         ; DIR_Attribute: Archiv
-                db 0x0          ; DIR_NTRes: Reserviert
-                db 0x0          ; DIR_CrtTimeTenth: Millisekunden des Speicherns
-                            ; - ist mir egal :)
-                db 0x6F,0x3E        ; Wahrscheinlich Erstellungsdatum, 
-                            ; ist hier aber egal
-                db 0x9C,0x2B,0x9C,0x2B  ; Wahrscheinlich: Letzter Zugriff, letzte Ã„nderung
-                            ; - ist hier auch egal
-                db 0x0,0x0      ; Reserviert
-                dd 0x733E9C2B       ; Wieder 2 mal Datum - das ist in diesem Tutorial
-                            ; aber egal
-        FAT12Sector dw 0x0000       ; Das hier ist wichtig: Der Sektor, in dem die
-                            ; Daten liegen
-                dd 0x00000000       ; Dateigröße
+Data2Mem: mov ax, 0x1000 ; Code im Speicher mov es, ax mov ds, ax
 
+mov al, byte \[bx\] ; al=Byte zu schreiben
 
+mov cx, 0x2000 ; Sektor im Speicher mov es, cx mov ds, cx
 
-         putstr:                ; Schreib-Funktion
-             lodsb          ; [si]->al
-             or al, al          ; Teste al auf 0x0 (=Ende)
-             jz putstrd         ; Wenn Ende des Strings, dann
-             mov    ah, 0xE     ; ah=0xE: Schreib Zeichen
-             mov    bx, 0x7     ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer
-                        ; Hintergrund
-             int    0x10        ; call
-             loop   putstr      ; Nächstes Zeichen
-         putstrd:
-             mov    al, 13      ; Schreibe  ASCII 13
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
+stosb ; AL -\> ES:DI inc bx ; Nächstes Byte cmp bx, 0x20+NewEntry ; Check ob wir alle haben jne Data2Mem ; Wenn nicht, nochmal
 
-             mov    al, 10      ; Schreibe ASCII 10 (13,10=Zeilenumbruch)
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
-             retn
+mov bx, 0x0 ; ES:BX -\> Databuffer Mem2Disk: mov ah, 0x3 ; AH=3: Schreibe Sektor(en) mov al, 0x12 ; Wir schreiben 18 Sektor mov ch, 0x0 ; Cylinder 0 mov cl, 0x1 ; Sektor 1 xor dx,dx ; dx=0 inc dh ; Head 1! int 0x13 ; Interrupt 13
 
-         getkey:
-             mov    ah, 0       ; ah=0: Get Key BIOS Funktion
-             int    0x16        ; Call
-             ret
+mov ax, 0x1000 ; es und ds aktualisieren, da wir jetzt wieder ; im Speicher auf 0x1000 arbeiten. mov es, ax mov ds, ax
 
-         reboot:
-             db     0xEA        ; Hexdump für Reboot: jmp 00FF:FF00
-             dw     0x0
-             dw     0xFFFF
-    ;     - - - - - [ Dateien erstellen - CODE ] - - - - -
+string: mov cx, 0xFFFF ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber zu ; faul war, die Zeichenlänge zu überprüfen, hab ichs ; auf das höchste gestellt. Weil ; ein String aber mit 0x0 beendet wird, ist es egal mov si, msg ; si=Adresse des Strings call putstr ; Schreib String mov cx, 0xFFFF ; Nochmal das Gleiche mov si, m_boot ; Nochmal das Gleiche call putstr ; Nochmal das Gleiche call getkey ; Call zu GetKey jmp reboot ; Springe zu reboot
+
+msg db 'Welcome to SPTH-OS 1.1',0 ; String 1 m_boot db 'Press any key...',0 ; String 2
+
+        NewEntry:        db 'FILE    TXT'    ; DIR_NAME
+
+db 0x20 ; DIR_Attribute: Archiv db 0x0 ; DIR_NTRes: Reserviert db 0x0 ; DIR_CrtTimeTenth: Millisekunden des Speicherns ; - ist mir egal :) db 0x6F,0x3E ; Wahrscheinlich Erstellungsdatum, ; ist hier aber egal db 0x9C,0x2B,0x9C,0x2B ; Wahrscheinlich: Letzter Zugriff, letzte Ã„nderung ; - ist hier auch egal db 0x0,0x0 ; Reserviert dd 0x733E9C2B ; Wieder 2 mal Datum - das ist in diesem Tutorial ; aber egal FAT12Sector dw 0x0000 ; Das hier ist wichtig: Der Sektor, in dem die ; Daten liegen dd 0x00000000 ; Dateigröße
+
+  
+
+        putstr:              ; Schreib-Funktion
+
+lodsb ; \[si\]-\>al or al, al ; Teste al auf 0x0 (=Ende) jz putstrd ; Wenn Ende des Strings, dann mov ah, 0xE ; ah=0xE: Schreib Zeichen mov bx, 0x7 ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer ; Hintergrund int 0x10 ; call loop putstr ; Nächstes Zeichen
+
+        putstrd:
+
+mov al, 13 ; Schreibe ASCII 13 mov ah, 0xE mov bx, 0x7 int 0x10
+
+mov al, 10 ; Schreibe ASCII 10 (13,10=Zeilenumbruch) mov ah, 0xE mov bx, 0x7 int 0x10 retn
+
+        getkey:
+
+mov ah, 0 ; ah=0: Get Key BIOS Funktion int 0x16 ; Call ret
+
+        reboot:
+
+db 0xEA ; Hexdump für Reboot: jmp 00FF:FF00 dw 0x0 dw 0xFFFF
+
+\- - - - - \[ Dateien erstellen - CODE \] - - - - -
+
+\</asm\>
 
 Es ist alles so einfach und klein wie möglich gehalten. Es fehlen einige JumpCarry, um sich vor Abstürzen zu schützen. Da ich hier aber kein vollständiges OS schreiben will, sondern nur die Infos, wie man so etwas machen kann, hab ich es nicht perfektioniert. Trotzdem: Der Code macht genau was er soll.
 
@@ -652,113 +579,62 @@ Nachdem wir wissen, wie man Dateien im Root-Directory finden kann und neu erstel
 
 Der Code ließt die Daten einer Datei, aber höchstens 512 Bytes. Das kann aber einfach geändert werden, habs hier nicht gemacht, weil es eigentlich nichts mit dem zu tun hat, was ich vermitteln möchte: Dateien lesen.
 
-Wie gesagt, der Code ist ganz kurz, bis aufs äußerste reduziert und so weiter. Funktioniert trotzdem :)
+Wie gesagt, der Code ist ganz kurz, bis aufs äußerste reduziert und so weiter. Funktioniert trotzdem :) \<asm\>
 
-    ;     - - - - - [ Dateien lesen - CODE ] - - - - -
-         start:
-             mov    ax, 0x2000  ; ax=0x2000
-             mov    es, ax
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+\- - - - - \[ Dateien lesen - CODE \] - - - - -
 
-         loadk:
-             mov    ah, 0x2     ; ah=2: Sektoren lesen
-             mov    al, 0x12    ; Wie viele Sektoren wir lesen (18)
-             mov    ch, 0       ; Cylinder 0
-             mov    cl, 1       ; Starten bei Sektor 1
-             xor    dx, dx      ; dx=0
-             inc    dh      ; Head 1
-             int    0x13        ; Interupt 13
+        start:
 
-             mov    ax, 0x1000  ; ax=0x1000
-             mov    es, ax
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+mov ax, 0x2000 ; ax=0x2000 mov es, ax mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    cl, byte [Root_entry+26]    ; Der Sektor, in dem unsre Daten liegen
-             add    cl, 13      ; Der erste Datensektor ist anscheinend immer 
-                        ; Sektor 31: -18, weil Head1
-             mov    ax, 0x200   ; 0x200=512: Ein Sektor
-             xor    ch, ch      ; ch=0
-             mul    cx      ; cx*ax: Sektornummer*Sektorgröße: Adresse, wo wir lesen
-             mov    si, ax      ; Resultat der Multiplikation in ax, und jetzt in si
+        loadk:
 
+mov ah, 0x2 ; ah=2: Sektoren lesen mov al, 0x12 ; Wie viele Sektoren wir lesen (18) mov ch, 0 ; Cylinder 0 mov cl, 1 ; Starten bei Sektor 1 xor dx, dx ; dx=0 inc dh ; Head 1 int 0x13 ; Interupt 13
 
-             mov    ax, 0x2000  ; ax=0x2000
-             mov    es, ax
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+mov ax, 0x1000 ; ax=0x1000 mov es, ax mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    cx, 512     ; 512 Bytes schreiben, wenn ein 0x0 ist, wird abgebrochen
-             call   putstr      ; Schreibe!      
+mov cl, byte \[Root_entry+26\] ; Der Sektor, in dem unsre Daten liegen add cl, 13 ; Der erste Datensektor ist anscheinend immer ; Sektor 31: -18, weil Head1 mov ax, 0x200 ; 0x200=512: Ein Sektor xor ch, ch ; ch=0 mul cx ; cx\*ax: Sektornummer\*Sektorgröße: Adresse, wo wir lesen mov si, ax ; Resultat der Multiplikation in ax, und jetzt in si
 
-             mov    ax, 0x1000  ; ax=0x1000
-             mov    es, ax
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+  
+mov ax, 0x2000 ; ax=0x2000 mov es, ax mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    cx, 0xFFFF  ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber zu
-                        ; faul war, die Zeichenlänge zu überprüfen, hab ichs
-                        ; auf das höchste gestellt. Weil ein String aber mit
-                        ; 0x0 beendet wird, ist es egal
-             mov    si, msg     ; si=Adresse des Strings
-             call   putstr      ; Schreib String
-             mov    cx, 0xFFFF  ; Nochmal das Gleiche
-             mov    si, m_boot  ; Nochmal das Gleiche
-             call   putstr      ; Nochmal das Gleiche
-             call   getkey      ; Call zu GetKey
-             jmp    reboot      ; Springe zu reboot
+mov cx, 512 ; 512 Bytes schreiben, wenn ein 0x0 ist, wird abgebrochen call putstr ; Schreibe!
 
-             msg    db 'Welcome to SPTH-OS 1.1',0   ; String 1
-             m_boot db 'Press any key...',0     ; String 2
-             big_file   db 'Die Datei ist größer als 512 Bytes...',0
+mov ax, 0x1000 ; ax=0x1000 mov es, ax mov ds, ax mov bx, 0 ; BX=0x0
 
-             Root_entry db 0x53,0x50,0x54,0x48      ; Das ist ein Root_Entry
-                db 0x20,0x20,0x20,0x20      ; Wie man den bekommt, sieht man
-                db 0x54,0x58,0x54,0x20      ; Oben schon
-                db 0x18,0x9F,0x5D,0x2B
-                db 0x9D,0x2B,0x9D,0x2B
-                db 0x00,0x00,0xC7,0xA0
-                db 0x9C,0x2B,0x02,0x00
-                db 0x0D,0x00,0x00,0x00
+mov cx, 0xFFFF ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber zu ; faul war, die Zeichenlänge zu überprüfen, hab ichs ; auf das höchste gestellt. Weil ein String aber mit ; 0x0 beendet wird, ist es egal mov si, msg ; si=Adresse des Strings call putstr ; Schreib String mov cx, 0xFFFF ; Nochmal das Gleiche mov si, m_boot ; Nochmal das Gleiche call putstr ; Nochmal das Gleiche call getkey ; Call zu GetKey jmp reboot ; Springe zu reboot
 
+msg db 'Welcome to SPTH-OS 1.1',0 ; String 1 m_boot db 'Press any key...',0 ; String 2 big_file db 'Die Datei ist größer als 512 Bytes...',0
 
-         putstr:                ; Schreib-Funktion
-             lodsb          ; [si]->al
-             or al, al          ; Teste al auf 0x0 (=Ende)
-             jz putstrd         ; Wenn Ende des Strings, dann
-             mov    ah, 0xE     ; ah=0xE: Schreib Zeichen
-             mov    bx, 0x7     ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer
-                        ; Hintergrund
-             int    0x10        ; call
-             loop   putstr      ; Nächstes Zeichen
-         putstrd:
-             mov    al, 13      ; Schreibe  ASCII 13
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
+Root_entry db 0x53,0x50,0x54,0x48 ; Das ist ein Root_Entry db 0x20,0x20,0x20,0x20 ; Wie man den bekommt, sieht man db 0x54,0x58,0x54,0x20 ; Oben schon db 0x18,0x9F,0x5D,0x2B db 0x9D,0x2B,0x9D,0x2B db 0x00,0x00,0xC7,0xA0 db 0x9C,0x2B,0x02,0x00 db 0x0D,0x00,0x00,0x00
 
-             mov    al, 10      ; Schreibe ASCII 10 (13,10=Zeilenumbruch)
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
-             retn
+  
 
-         too_big:
-             mov    si, big_file
-             mov    cx, 0xFFFF
-             call   putstr
+        putstr:              ; Schreib-Funktion
 
-         getkey:
-             mov    ah, 0       ; ah=0: Get Key BIOS Funktion
-             int    0x16        ; Call
-             ret
+lodsb ; \[si\]-\>al or al, al ; Teste al auf 0x0 (=Ende) jz putstrd ; Wenn Ende des Strings, dann mov ah, 0xE ; ah=0xE: Schreib Zeichen mov bx, 0x7 ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer ; Hintergrund int 0x10 ; call loop putstr ; Nächstes Zeichen
 
-         reboot:
-             db     0xEA        ; Hexdump für Reboot: jmp 00FF:FF00
-             dw     0x0
-             dw     0xFFFF
-    ;     - - - - - [ Dateien lesen - CODE ] - - - - -
+        putstrd:
+
+mov al, 13 ; Schreibe ASCII 13 mov ah, 0xE mov bx, 0x7 int 0x10
+
+mov al, 10 ; Schreibe ASCII 10 (13,10=Zeilenumbruch) mov ah, 0xE mov bx, 0x7 int 0x10 retn
+
+        too_big:
+
+mov si, big_file mov cx, 0xFFFF call putstr
+
+        getkey:
+
+mov ah, 0 ; ah=0: Get Key BIOS Funktion int 0x16 ; Call ret
+
+        reboot:
+
+db 0xEA ; Hexdump für Reboot: jmp 00FF:FF00 dw 0x0 dw 0xFFFF
+
+\- - - - - \[ Dateien lesen - CODE \] - - - - -
+
+\</asm\>
 
 Kurz - macht aber, was er soll. Man sollte natürlich, wenn man ein ersthaftes Projekt hat, auch Dateien, die größer sind als 1 Sektor lesen. Das ist aber nicht schwer. Man muss die Sektoren bekommen (shr dateigröße, 9 \| inc), und auf die Cylinder/Head aufpassen. Wenn man es ganz toll machen möchte, könnte man natürlich auch die Schrift in einer schönen Farbe ausgeben lassen. Sieht sicher besonders gut aus ;)
 
@@ -767,137 +643,74 @@ Kurz - macht aber, was er soll. Man sollte natürlich, wenn man ein ersthaftes P
 Was bringt ein Betriebssystem, dass keine Dateien schreiben kann? Nichts. Darum hier der Beispielcode, wie man in eine Datei schreibt. Dieser Code ähnelt sehr dem Lese-Code. Wenn man nun ein OS macht, dann kann man die gleichen Sachen einfach rausnehmen, und spart damit sehr viele Bytes, und es wird wahrscheinlich (kommt drauf an, wie mans macht) viel übersichtlicher.  
 Also, der Code ist natürlich wieder beschrieben, darum muss ich hier nichts mehr erklären.
 
-    ;     - - - - - [ Dateien schreiben - CODE ] - - - - -
-         start:
-             mov    ax, 0x2000  ; ax=0x2000
-             mov    es, ax
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+\<asm\>
 
-         loadk:
-    ;        mov    ax, contentend-content  ; ax=Länge des Strings zu schreiben
-    ;        mov    [Root_entry+28], ax ; In den Root_Dir_entry schreiben
-    ;
-    ; Hier das neue Root_Directory schreiben. Wird oben schon erklärt wie!
-    ;
+\- - - - - \[ Dateien schreiben - CODE \] - - - - -
 
-             
-             mov    ah, 0x2     ; ah=2: Sektoren lesen
-             mov    al, 0x12    ; Wieviele Sektoren wir lesen (18)
-             mov    ch, 0       ; Cylinder 0
-             mov    cl, 1       ; Starten bei Sektor 1
-             xor    dx, dx      ; dx=0
-             inc    dh      ; Head 1
-             int    0x13        ; Interupt 13
+        start:
 
-             mov    ax, 0x1000  ; ax=0x1000
-             mov    es, ax
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+mov ax, 0x2000 ; ax=0x2000 mov es, ax mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    cl, byte [Root_entry+26]    ; Der Sektor, in den wir schreiben
-             add    cl, 13      ; Der erste Datensektor ist anscheinend immer 
-                        ; Sektor 31: -18, weil Head1
-             mov    ax, 0x200   ; 0x200=512: Ein Sektor
-             xor    ch, ch      ; ch=0
-             mul    cx      ; cx*ax: Sektornummer*Sektorgröße: Adresse,
-                        ; wo wir lesen
-             mov    di, ax      ; Wo wir schreiben
+        loadk:
 
-             mov    bx, content ; bx zeigt auf den String, den wir schrieben werden
+mov ax, contentend-content ; ax=Länge des Strings zu schreiben
 
-        Data2Mem:
-             mov    ax, 0x1000  ; Code im Speicher
-             mov    es, ax
-             mov    ds, ax
+mov \[Root_entry+28\], ax ; In den Root_Dir_entry schreiben
 
-             mov    al, byte [bx]   ; al=Byte zu schreiben
-             
-             mov    cx, 0x2000  ; Sektor im Speicher
-             mov    es, cx
-             mov    ds, cx
+Hier das neue Root_Directory schreiben. Wird oben schon erklärt wie!
 
-             stosb          ; AL -> ES:DI
-             inc    bx      ; Nächstes Byte
-             cmp    bx, contentend  ; Check ob wir alles haben
-        jne  Data2Mem           ; Wenn nicht, nochmal
+  
+mov ah, 0x2 ; ah=2: Sektoren lesen mov al, 0x12 ; Wieviele Sektoren wir lesen (18) mov ch, 0 ; Cylinder 0 mov cl, 1 ; Starten bei Sektor 1 xor dx, dx ; dx=0 inc dh ; Head 1 int 0x13 ; Interupt 13
 
-             xor    bx, bx      ; bx=0
+mov ax, 0x1000 ; ax=0x1000 mov es, ax mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    ah, 0x3     ; AH=3: Schreibe Sektor(en)
-             mov    al, 0x12    ; Wir schreiben 1 Sektor
-             mov    ch, 0x0     ; Cylinder 0
-             mov    cl, [Root_entry+26] ; Wo wir schreiben, aus Root_entry
-             add    cl, 1       ; Jetzt haben wir ihn!
-             mov    cl, 0x1     ; Sektor 1
-             xor    dx,dx       ; dx=0
-             inc    dh      ; Head 1!
-             int    0x13        ; Interrupt 13
+mov cl, byte \[Root_entry+26\] ; Der Sektor, in den wir schreiben add cl, 13 ; Der erste Datensektor ist anscheinend immer ; Sektor 31: -18, weil Head1 mov ax, 0x200 ; 0x200=512: Ein Sektor xor ch, ch ; ch=0 mul cx ; cx\*ax: Sektornummer\*Sektorgröße: Adresse, ; wo wir lesen mov di, ax ; Wo wir schreiben
 
-             mov    cx, 0x1000  ; Sektor im Speicher
-             mov    es, cx
-             mov    ds, cx
+mov bx, content ; bx zeigt auf den String, den wir schrieben werden
 
-             mov    cx, 0xFFFF  ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber zu
-                        ; faul war, die Zeichenlänge zu überprüfen, hab ichs 
-                        ; auf das höchste gestellt. Weil ein String aber mit 
-                        ; 0x0 beendet wird, ist es egal
-             mov    si, msg     ; si=Adresse des Strings
-             call   putstr      ; Schreib String
-             mov    cx, 0xFFFF  ; Nochmal das Gleiche
-             mov    si, m_boot  ; Nochmal das Gleiche
-             call   putstr      ; Nochmal das Gleiche
-             call   getkey      ; Call zu GetKey
-             jmp    reboot      ; Springe zu reboot
+Data2Mem: mov ax, 0x1000 ; Code im Speicher mov es, ax mov ds, ax
 
-             msg    db 'Welcome to SPTH-OS 1.1',0   ; String 1
-             m_boot db 'Press any key...',0     ; String 2
-             content    db 'Das habe ich mit meinem Betriebssystem geschrieben!',0
-            contentend:
+mov al, byte \[bx\] ; al=Byte zu schreiben
 
-             Root_entry db 0x53,0x50,0x54,0x48  ; Root Entry von einer Datei mit einem Byte
-                db 0x20,0x20,0x20,0x20
-                db 0x54,0x58,0x54,0x20
-                db 0x18,0x34,0xBA,0xB5
-                db 0x9D,0x2B,0x9D,0x2B
-                db 0x00,0x00,0x0F,0xB6
-                db 0x9D,0x2B,0x02,0x00
-                db 0x01,0x00,0x00,0x00
+mov cx, 0x2000 ; Sektor im Speicher mov es, cx mov ds, cx
 
+stosb ; AL -\> ES:DI inc bx ; Nächstes Byte cmp bx, contentend ; Check ob wir alles haben jne Data2Mem ; Wenn nicht, nochmal
 
-         putstr:                ; Schreib-Funktion
-             lodsb          ; [si]->al
-             or al, al          ; Teste al auf 0x0 (=Ende)
-             jz putstrd         ; Wenn Ende des Strings, dann
-             mov    ah, 0xE     ; ah=0xE: Schreib Zeichen
-             mov    bx, 0x7     ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer
-                        ; Hintergrund
-             int    0x10        ; call
-             loop   putstr      ; Nächstes Zeichen
-         putstrd:
-             mov    al, 13      ; Schreibe  ASCII 13
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
+xor bx, bx ; bx=0
 
-             mov    al, 10      ; Schreibe ASCII 10 (13,10=Zeilenumbruch)
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
-             retn
+mov ah, 0x3 ; AH=3: Schreibe Sektor(en) mov al, 0x12 ; Wir schreiben 1 Sektor mov ch, 0x0 ; Cylinder 0 mov cl, \[Root_entry+26\] ; Wo wir schreiben, aus Root_entry add cl, 1 ; Jetzt haben wir ihn! mov cl, 0x1 ; Sektor 1 xor dx,dx ; dx=0 inc dh ; Head 1! int 0x13 ; Interrupt 13
 
-         getkey:
-             mov    ah, 0       ; ah=0: Get Key BIOS Funktion
-             int    0x16        ; Call
-             ret
+mov cx, 0x1000 ; Sektor im Speicher mov es, cx mov ds, cx
 
-         reboot:
-             db     0xEA        ; Hexdump für Reboot: jmp 00FF:FF00
-             dw     0x0
-             dw     0xFFFF
-    ;     - - - - - [ Dateien schreiben - CODE ] - - - - -
+mov cx, 0xFFFF ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber zu ; faul war, die Zeichenlänge zu überprüfen, hab ichs ; auf das höchste gestellt. Weil ein String aber mit ; 0x0 beendet wird, ist es egal mov si, msg ; si=Adresse des Strings call putstr ; Schreib String mov cx, 0xFFFF ; Nochmal das Gleiche mov si, m_boot ; Nochmal das Gleiche call putstr ; Nochmal das Gleiche call getkey ; Call zu GetKey jmp reboot ; Springe zu reboot
 
-Macht genau was er soll, darum: Passt :)
+msg db 'Welcome to SPTH-OS 1.1',0 ; String 1 m_boot db 'Press any key...',0 ; String 2 content db 'Das habe ich mit meinem Betriebssystem geschrieben!',0 contentend:
+
+Root_entry db 0x53,0x50,0x54,0x48 ; Root Entry von einer Datei mit einem Byte db 0x20,0x20,0x20,0x20 db 0x54,0x58,0x54,0x20 db 0x18,0x34,0xBA,0xB5 db 0x9D,0x2B,0x9D,0x2B db 0x00,0x00,0x0F,0xB6 db 0x9D,0x2B,0x02,0x00 db 0x01,0x00,0x00,0x00
+
+  
+
+        putstr:              ; Schreib-Funktion
+
+lodsb ; \[si\]-\>al or al, al ; Teste al auf 0x0 (=Ende) jz putstrd ; Wenn Ende des Strings, dann mov ah, 0xE ; ah=0xE: Schreib Zeichen mov bx, 0x7 ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer ; Hintergrund int 0x10 ; call loop putstr ; Nächstes Zeichen
+
+        putstrd:
+
+mov al, 13 ; Schreibe ASCII 13 mov ah, 0xE mov bx, 0x7 int 0x10
+
+mov al, 10 ; Schreibe ASCII 10 (13,10=Zeilenumbruch) mov ah, 0xE mov bx, 0x7 int 0x10 retn
+
+        getkey:
+
+mov ah, 0 ; ah=0: Get Key BIOS Funktion int 0x16 ; Call ret
+
+        reboot:
+
+db 0xEA ; Hexdump für Reboot: jmp 00FF:FF00 dw 0x0 dw 0xFFFF
+
+\- - - - - \[ Dateien schreiben - CODE \] - - - - -
+
+\</asm\> Macht genau was er soll, darum: Passt :)
 
 ### Nachwort
 
@@ -1108,6 +921,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2161/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2161; parent 2160; 2007-10-08T11:24:06Z -->
+<!-- MediaWiki page 1494; revision 2162; parent 2161; 2007-10-08T11:25:17Z -->
