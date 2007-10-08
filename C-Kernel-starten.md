@@ -2,13 +2,13 @@
 
 ## Vorwort
 
-Da im letzten Tutorial (Protected Mode) es leider nicht mehr ganz geklappt hat schiebe ich dieses Tutorial noch nach. Hier werde ich zeigen wie man einen eigenen Kernel der in C geschrieben ist starten kann. Auch dazu ist etwas arbeit nötig und meine Methode ist vielleicht nicht die bequemste, jedoch funktioniert sie und ich werde auch wieder selbst geschriebene Tools bereitstellen umd die Arbeit möglichst zu erleichtern.
+Da im letzten Tutorial ([Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")) es leider nicht mehr ganz geklappt hat schiebe ich dieses Tutorial noch nach. Hier werde ich zeigen wie man einen eigenen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") der in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben ist starten kann. Auch dazu ist etwas arbeit nötig und meine Methode ist vielleicht nicht die bequemste, jedoch funktioniert sie und ich werde auch wieder selbst geschriebene Tools bereitstellen umd die Arbeit möglichst zu erleichtern.
 
   
 
 ## Booten
 
-Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig Bootloader die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader läd eine binäre Datei aus dem Root-Directory einer Diskette, welche mit dem FAT12 Dateisystem arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
+Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader läd eine binäre Datei aus dem Root-Directory einer Diskette, welche mit dem FAT12 [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
 
   
 
@@ -16,7 +16,7 @@ Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits f
 
 Es mag komisch klingen, aber man benötigt, zumindest für meine Version, zwei Kernel. Streng genommen sind es sogar drei. Dabei bestehen zwei Kernel aus reinem Assembler und der andere ist dann der eigentliche, in C geschriebene Kernel, auf den wir hinaus wollen.
 
-Der erste Kernel dient lediglich dazu eine kleine Global Deskriptor Table(GDT) einzurichten und in den Protected Mode zu schalten. Das ist nämlich Grundvorraussetzung, wenn wir im weiteren mit einem C-Kernel arbeiten möchten.
+Der erste Kernel dient lediglich dazu eine kleine Global Deskriptor Table ([GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")) einzurichten und in den Protected Mode zu schalten. Das ist nämlich Grundvorraussetzung, wenn wir im weiteren mit einem C-Kernel arbeiten möchten.
 
 Der zweite Kernel (wenn man das so bezeichnen kann) ist ein kleiner Zwang den mit der Linker aus den GNU Binutils auferzwungen hat. Dieser erklärte mir nämlich ganz höflich das er sich nicht dazu überreden lässt eine Objektdatei zu linken, die teilweise 16-Bit Code enthält. Und diesen 16-Bit Code benötigen wir in dem ersten Kernel, welcher in den Protected Mode schaltet. Dort sind wir nämlich, solange wir den Protected Mode noch nicht entgültig aktiviert haben, im Real-Mode und haben somit auch 16-bit Code.
 
@@ -54,6 +54,8 @@ Das wird nun der zweite "Mini"-Kernel, welcher lediglich die Main-Funktion des C
 
 Dazu wird folgender Assemblercode benötigt:
 
+\<asm\>
+
     [Bits 32]
         extern  _main
         global  start
@@ -62,7 +64,8 @@ Dazu wird folgender Assemblercode benötigt:
     Stop:
         jmp     stop
 
-  
+\</asm\>
+
 Auch hier wieder eine Erläuterung:
 
 "\[Bits 32\]" teilt NASM mit, das wir 32-Bit Code erstellt haben möchten.
@@ -105,10 +108,14 @@ Die Gründe können eigentlich völlig wurst sein. In C arbeitet es sich einfach
 
 Der C-Kernel kann Anfangs erstmal sehr einfach aussehen. Daher genügt erstmal folgender Code:
 
+\<c\>
+
     int main()
     {
         return(0);
     }
+
+\</c\>
 
 Es gibt viele Leute die sich darum streiten ob die Funktion nun "void" oder "int" als Returnwert haben soll oder muß. Laut Standard soll es "int" sein, was auch Sinn macht, da darüber ein Return-Wert an das Betriebssystem zurückgegeben werden kann, anhand dessen das Betriebssystem feststellen kann, ob die Anwendung korrekt oder mit einem Fehler beendet wurde.
 
@@ -128,6 +135,8 @@ Bytes lang.
 
 Erweitern wir nun also wie folgt den C-Code:
 
+\<c\>
+
     int main()
     {
         char *Text = "Welcome to Protected Mode";
@@ -142,6 +151,8 @@ Erweitern wir nun also wie folgt den C-Code:
         }
         return(0);
     }
+
+\</c\>
 
 Eigentlich sollte ich erwarten, das man C kann, wenn man schon das Tutorial liest. Dennoch will ich nicht so sein und erkläre auch hier kurz was passiert:
 
@@ -268,6 +279,6 @@ Hier noch das Packet an Tools und Quelltexten:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 1681; parent 1665; 2007-01-16T13:51:05Z -->
+<!-- MediaWiki page 1458; revision 2155; parent 1681; 2007-10-08T11:13:25Z -->
