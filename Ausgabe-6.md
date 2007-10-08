@@ -184,9 +184,9 @@ Wir setzen die Funktionsnummer (die hier 5 ist) in eax, setzten ebx die gewünsc
 
 ### Hello World
 
-Es ist schon zur Tradition geworden, im ersten Programm ein \`Hello World\` ausgeben zu lassen, darum das auch hier: Unser Ziel: Ein Programm, das \`Hello World\` ausgibt, und hier ist der Code, und jede Zeile wird genau erklärt.
+Es ist schon zur Tradition geworden, im ersten Programm ein \`Hello World\` ausgeben zu lassen, darum das auch hier: Unser Ziel: Ein Programm, das \`Hello World\` ausgibt, und hier ist der Code, und jede Zeile wird genau erklärt. \<asm\>
 
-       use32                        ; Sagt FASM (unserem Compiler), 
+       use32                        ; Sagt FASM (unserem Assembler), 
                                     ; dass wir 32bit Code generieren wollen
        
        org 0x0                      ; Die Anwendung wird auf diese Adresse geladen
@@ -340,6 +340,8 @@ Es ist schon zur Tradition geworden, im ersten Programm ein \`Hello World\` ausg
        labellen:
        I_END:                              ; Das ENDE-Label
 
+\</asm\>
+
 ### Nachwort / Quellenangabe
 
 Dieser Artikel ist eine Informationssammlung über MenuetOS, einem sehr interessanten Betriebssystem. Ich danke jedem Leser, dass er sich Zeit genommen hat, um diesen Text zu lesen, und für das Interesse an MenuetOS oder an der Assembler-Sprache. Ich hoffe, ich habe niemanden gelangweilt. :) Jetzt wünsche ich noch jedem viel Spaß mit MenuetOS!
@@ -372,6 +374,6 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
 
-<!-- MediaWiki page 1471; revision 2156; parent 1919; 2007-10-08T11:19:50Z -->
+<!-- MediaWiki page 1471; revision 2157; parent 2156; 2007-10-08T11:20:33Z -->
