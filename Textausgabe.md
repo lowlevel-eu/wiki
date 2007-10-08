@@ -38,6 +38,8 @@ Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Schwarz.
 
 Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet, bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](http://de.wikipedia.org/wiki/Codepage_437)).
 
+\<c\>
+
     void printchar(u8 chr,u8 color,u8 x,u8 y) {
       u16 *off = (u16*)0xB8000;
       // berechnen der Adresse
@@ -45,6 +47,8 @@ Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe co
       // setzen des zeichens + attributebyte
       *off = (((u16)color)<<8)|chr;
     }
+
+\</c\>
 
 Nun folgt die Erklärung: Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist u16, also 2byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin u8 benutzt müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischen Oder mit dem Zeichenbyte verknüpfen.
 
@@ -67,6 +71,8 @@ Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Understrich ist
 
 Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden)
 
+\<c\>
+
     void displaycursor(u8 col,u8 row) {
       u16 tmp;
       tmp = row*VIDEOTEXT_WIDTH+col;
@@ -76,7 +82,11 @@ Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02
       outb(0x3D5,tmp);
     }
 
+\</c\>
+
 Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach in die 26. Zeile setzen (diese gibt es nämlich nicht). Das geht natürlich genau so wie in der eben genannten Funktion, aber dies hier ist die direkte Variante:
+
+\<c\>
 
     void removecursor() {
       outb(0x3D4,14);
@@ -84,6 +94,8 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
       outb(0x3D4,15);
       outb(0x3D5,0x07);
     }
+
+\</c\>
 
 ## Weblinks
 
@@ -94,6 +106,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2152; parent 2147; 2007-10-07T16:03:45Z -->
+<!-- MediaWiki page 1549; revision 2165; parent 2152; 2007-10-08T11:34:08Z -->
