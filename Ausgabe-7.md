@@ -173,101 +173,117 @@ In unserem Code bauen wir reines Round Robin, wir brauchen also Task-Tabellen- E
 
 Coden wir nun einfach mal den Scheduler. Da wir am Anfang des IRQs keinen Dispatcher brauchen, können wir gleich mit dem Scheduler anfangen.
 
-    ADD DWORD [tasking_current],0x00000006 ;Werte des
-    ; aktuellen Tasks überspringen
-    MOV ESI,[tasking_end] ; ask-Tabellen-Ende laden
-    CMP ESI,[tasking_current] ;mit Position des zu ladenden
-    ; Tasks vergleichen
-    JNE scheduler_no_resetting ;falls nicht gleich, also
-    ; das Ende noch nicht erreicht ist spingen
-    MOV DWORD [tasking_current],0x00005000 ;sonst auf den
-    ; Anfang zurücksetzen
-    scheduler_no_resetting:
-    ; hier haben wir in â€žtasking_currentâ€œ die Adresse der
-    ; Daten des zu ladenden Tasks
-    Da wir in diesem Scheduler einige Register verändern und dies natürlich nicht sein darf,
-    müssen wir diese (nur ESI) noch auf dem Stack sichern:
-    PUSH ESI
-    ADD DWORD [tasking_current],0x00000006 ;Werte des
-    ; aktuellen Tasks überspringen
-    MOV ESI,[tasking_end] ; ask-Tabellen-Ende laden
-    CMP ESI,[tasking_current] ;mit Position des zu ladenden
-    ; Tasks vergleichen
-    JNE scheduler_no_resetting ;falls nicht gleich, also
-    ; das Ende noch nicht erreicht ist spingen
-    MOV DWORD [tasking_current],0x00005000 ;sonst auf den
-    ; Anfang zurücksetzen
-    scheduler_no_resetting:
-    POP ESI
-    ; hier haben wir in â€žtasking_currentâ€œ die Adresse der
-    ; Daten des zu ladenden Tasks
-    Nun müssen wir aus der Tasktabelle die TSS-Deskriptornummer des zu landenden
-    Tasks raussuchen und in AX bekommen:
-    PUSH ESI
-    ADD DWORD [tasking_current],0x00000006 ;Werte des
-    ; aktuellen Tasks überspringen
-    MOV ESI,[tasking_end] ; ask-Tabellen-Ende laden
-    CMP ESI,[tasking_current] ;mit Position des zu ladenden
-    ; Tasks vergleichen
-    JNE scheduler_no_resetting ;falls nicht gleich, also
-    ; das Ende noch nicht erreicht ist spingen
-    MOV DWORD [tasking_current],0x00005000 ;sonst auf den
-    ; Anfang zurücksetzen
-    scheduler_no_resetting:
-    POP ESI
-    ; hier haben wir in â€žtasking_currentâ€œ die Adresse der
-    ; Daten des zu ladenden Tasks
-    MOV ESI,[tasking_current] ; Offset laden
-    ADD ESI,0x00000002 ; zur Deskriptornummer navigieren
-    LODSW ; Nummer in AX laden
-    Da wir wieder die Register verändern müssen wir auch das Stacksichern verändern:
-    PUSH EAX
-    PUSH ESI
-    ADD DWORD [tasking_current],0x00000006 ;Werte des
-    ; aktuellen Tasks überspringen
-    MOV ESI,[tasking_end] ; ask-Tabellen-Ende laden
-    CMP ESI,[tasking_current] ;mit Position des zu ladenden
-    ; Tasks vergleichen
-    JNE scheduler_no_resetting ;falls nicht gleich, also
-    ; das Ende noch nicht erreicht ist spingen
-    MOV DWORD [tasking_current],0x00005000 ;sonst auf den
-    ; Anfang zurücksetzen
-    scheduler_no_resetting:
-    ; hier haben wir in â€žtasking_currentâ€œ die Adresse der
-    ; Daten des zu ladenden Tasks
-    MOV ESI,[tasking_current] ; Offset laden
-    ADD ESI,0x00000002 ; zur Deskriptornummer navigieren
-    LODSW ; Nummer in AX laden
-    POP ESI
-    POP EAX
-    Nun müssen wir nurnoch unseren Dispatcher dahinter hängen und die Stacksicherung
-    wieder verschieben und schon ist der Code fertig:
-    PUSH EAX
-    PUSH ESI
-    ADD DWORD [tasking_current],0x00000006 ;Werte des
-    ; aktuellen Tasks überspringen
-    MOV ESI,[tasking_end] ; ask-Tabellen-Ende laden
-    CMP ESI,[tasking_current] ;mit Position des zu ladenden
-    ; Tasks vergleichen
-    JNE scheduler_no_resetting ;falls nicht gleich, also
-    ; das Ende noch nicht erreicht ist spingen
-    MOV DWORD [tasking_current],0x00005000 ;sonst auf den
-    ; Anfang zurücksetzen
-    scheduler_no_resetting:
-    ; hier haben wir in â€žtasking_currentâ€œ die Adresse der
-    ; Daten des zu ladenden Tasks
-    MOV ESI,[tasking_current] ; Offset laden
-    ADD ESI,0x00000002 ; zur Deskriptornummer navigieren
-    LODSW ; Nummer in AX laden
-    POP ESI
-    PUSH EDI
-    MOV EDI, tss_switch_label ; Offset laden
-    ADD EDI,0x00000005 ; zum Operanten navigieren
-    STOSW ; neuen Wert eintragen
-    tss_switch_label:
-    JMP DWORD 0x1234:0x12345678 ; springen!
-    POP EDI
-    POP EAX
+\<asm\> ADD DWORD \[tasking_current\],0x00000006 ;Werte des
+
+aktuellen Tasks überspringen
+
+MOV ESI,\[tasking_end\] ; ask-Tabellen-Ende laden CMP ESI,\[tasking_current\] ;mit Position des zu ladenden
+
+Tasks vergleichen
+
+JNE scheduler_no_resetting ;falls nicht gleich, also
+
+das Ende noch nicht erreicht ist spingen
+
+MOV DWORD \[tasking_current\],0x00005000 ;sonst auf den
+
+Anfang zurücksetzen
+
+scheduler_no_resetting:
+
+hier haben wir in â€žtasking_currentâ€œ die Adresse der
+
+Daten des zu ladenden Tasks
+
+Da wir in diesem Scheduler einige Register verändern und dies natürlich nicht sein darf, müssen wir diese (nur ESI) noch auf dem Stack sichern: PUSH ESI ADD DWORD \[tasking_current\],0x00000006 ;Werte des
+
+aktuellen Tasks überspringen
+
+MOV ESI,\[tasking_end\] ; ask-Tabellen-Ende laden CMP ESI,\[tasking_current\] ;mit Position des zu ladenden
+
+Tasks vergleichen
+
+JNE scheduler_no_resetting ;falls nicht gleich, also
+
+das Ende noch nicht erreicht ist spingen
+
+MOV DWORD \[tasking_current\],0x00005000 ;sonst auf den
+
+Anfang zurücksetzen
+
+scheduler_no_resetting: POP ESI
+
+hier haben wir in â€žtasking_currentâ€œ die Adresse der
+
+Daten des zu ladenden Tasks
+
+Nun müssen wir aus der Tasktabelle die TSS-Deskriptornummer des zu landenden Tasks raussuchen und in AX bekommen: PUSH ESI ADD DWORD \[tasking_current\],0x00000006 ;Werte des
+
+aktuellen Tasks überspringen
+
+MOV ESI,\[tasking_end\] ; ask-Tabellen-Ende laden CMP ESI,\[tasking_current\] ;mit Position des zu ladenden
+
+Tasks vergleichen
+
+JNE scheduler_no_resetting ;falls nicht gleich, also
+
+das Ende noch nicht erreicht ist spingen
+
+MOV DWORD \[tasking_current\],0x00005000 ;sonst auf den
+
+Anfang zurücksetzen
+
+scheduler_no_resetting: POP ESI
+
+hier haben wir in â€žtasking_currentâ€œ die Adresse der
+
+Daten des zu ladenden Tasks
+
+MOV ESI,\[tasking_current\] ; Offset laden ADD ESI,0x00000002 ; zur Deskriptornummer navigieren LODSW ; Nummer in AX laden Da wir wieder die Register verändern müssen wir auch das Stacksichern verändern: PUSH EAX PUSH ESI ADD DWORD \[tasking_current\],0x00000006 ;Werte des
+
+aktuellen Tasks überspringen
+
+MOV ESI,\[tasking_end\] ; ask-Tabellen-Ende laden CMP ESI,\[tasking_current\] ;mit Position des zu ladenden
+
+Tasks vergleichen
+
+JNE scheduler_no_resetting ;falls nicht gleich, also
+
+das Ende noch nicht erreicht ist spingen
+
+MOV DWORD \[tasking_current\],0x00005000 ;sonst auf den
+
+Anfang zurücksetzen
+
+scheduler_no_resetting:
+
+hier haben wir in â€žtasking_currentâ€œ die Adresse der
+
+Daten des zu ladenden Tasks
+
+MOV ESI,\[tasking_current\] ; Offset laden ADD ESI,0x00000002 ; zur Deskriptornummer navigieren LODSW ; Nummer in AX laden POP ESI POP EAX Nun müssen wir nurnoch unseren Dispatcher dahinter hängen und die Stacksicherung wieder verschieben und schon ist der Code fertig: PUSH EAX PUSH ESI ADD DWORD \[tasking_current\],0x00000006 ;Werte des
+
+aktuellen Tasks überspringen
+
+MOV ESI,\[tasking_end\] ; ask-Tabellen-Ende laden CMP ESI,\[tasking_current\] ;mit Position des zu ladenden
+
+Tasks vergleichen
+
+JNE scheduler_no_resetting ;falls nicht gleich, also
+
+das Ende noch nicht erreicht ist spingen
+
+MOV DWORD \[tasking_current\],0x00005000 ;sonst auf den
+
+Anfang zurücksetzen
+
+scheduler_no_resetting:
+
+hier haben wir in â€žtasking_currentâ€œ die Adresse der
+
+Daten des zu ladenden Tasks
+
+MOV ESI,\[tasking_current\] ; Offset laden ADD ESI,0x00000002 ; zur Deskriptornummer navigieren LODSW ; Nummer in AX laden POP ESI PUSH EDI MOV EDI, tss_switch_label ; Offset laden ADD EDI,0x00000005 ; zum Operanten navigieren STOSW ; neuen Wert eintragen tss_switch_label: JMP DWORD 0x1234:0x12345678 ; springen! POP EDI POP EAX \</asm\>
 
 So, fertig ist der Praxisteil. Ich bitte alle Leser, diesen Code nicht einfach nur blind zu kopieren, denn er lässt sich sicher nicht fehlerlos in das System integrieren, und so schwer ist das Implementieren nicht. Also selber versuchen und bei Fragen mich einfach kontaktieren.
 
@@ -1183,6 +1199,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2158; parent 1922; 2007-10-08T11:22:41Z -->
+<!-- MediaWiki page 1494; revision 2159; parent 2158; 2007-10-08T11:22:57Z -->
