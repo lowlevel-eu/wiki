@@ -438,106 +438,59 @@ Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch m
 
 Der erste Schritt, wenn man Dateizugriff machen will, ist natürlich die Dateien finden. Und wie? Hier brauchen wir das 'Root-Directory' (=RD). Kurz: Das RD startet im 19. Sektor. Ein Dateieintrag ist 0x20 (32) Bytes lang, und der Dateiname ist 12 Zeichen lang: Byte 0 - 11. OK, jetzt haben wir keine Probleme mehr. Naja, fast: Wenn eine Datei gelöscht oder umbenannt wird, bleibt der alte Eintrag, nur wird das erste Byte des Namens auf 0xE5 gesetzt. Außerdem gibt es noch etwas seltsame Einträge, hab aber nicht herausgefunden was es für welche sind. Auf alle Fälle ist das 3. Byte dieser Einträge immer 0x00, und so werden sie auch ignoriert. OK, jetzt verstehen wir, wie man theoretisch Dateien finden kann. Und praktisch? Keine Angst, hier ist der Code (Der Code ist der Kernel, den Bootloader müsste man dann schon selber machen. Danke an mastermesh für das Tutorial in LL#1 - Für den Grund hab ich den Code verwendet.):
 
-    ;     - - - - - [ Dateien finden - CODE ] - - - - -
-         start:
-             mov    ax, 0x2000  ; eax=0x2000
-             mov    es, ax      ; Daten werden nach ES:BX geschrieben, ES=0x2000
-             mov    ds, ax
-             mov    bx, 0       ; BX=0x0
+\<asm\>
 
-         loadk:
-             mov    ah, 0x2     ; ah=2: Sektoren lesen
-             mov    al, 0x12    ; Wie viele Sektoren wir lesen (18)
-             mov    ch, 0       ; Cylinder 0
-             mov    cl, 1       ; Starten bei Sektor 1
-             xor    dx, dx      ; dx=0
-             inc    dh      ; Head 1:
-                        ; Soweit ich das mitbekommen habe, besteht ein 
-                        ; Cylinder aus 2 Teilen Head0 und Head1. Head0 
-                        ; sind die ersten 18 Bytes (0-17) und Head1 sind
-                        ; die zweiten 18 Bytes (18-36). Da Root Entry 
-                        ; auf Sektor 19 liegt, brauchen wir head1.
-             int    0x13        ; BIOS-Call
-             jc loadk           ; Wenn Fehler: Nochmal
+\- - - - - \[ Dateien finden - CODE \] - - - - -
 
-             mov    bx, 0x200   ; bx=Adresse des 2. Sektors, den wir in den 
-                        ; Speicher gelesen haben
+        start:
 
-         fat12read:
-             mov    ah, [bx]    ; ah=erstes Byte des Dateinamen
-             cmp    ah, 0x0     ; Checken ob das Byte 0 ist: Ende der Einträge
-             je endfat12read        ; Wenn es das Ende ist, aufhören zum Lesen
-             cmp    ah, 0xE5    ; Checken ob das Byte 0xE5 ist: Gelöschte Datei
-             je fat12next       ; Wenn es eine gelöschte Datei ist: Nächster Eintrag
-             push   bx      ; Speicher bx am Stack, weil es durch 'call putstr'
-                        ; geändert wird
+mov ax, 0x2000 ; eax=0x2000 mov es, ax ; Daten werden nach ES:BX geschrieben, ES=0x2000 mov ds, ax mov bx, 0 ; BX=0x0
 
-             mov    al, [bx+2]  ; al=3. Buchstabe des Namens
-             test   al, al      ; Testen ob null
-             jz     fat12next   ; Wenn null, dann nächster Eintrag
+        loadk:
 
-             mov    cx, 11      ; cx=11, weil ein Dateiname aus 11 Zeichen besteht
-             mov    si, bx      ; si=Adresse des Dateinamens im Speicher
-             call   putstr      ; Schreibe Dateiname
+mov ah, 0x2 ; ah=2: Sektoren lesen mov al, 0x12 ; Wie viele Sektoren wir lesen (18) mov ch, 0 ; Cylinder 0 mov cl, 1 ; Starten bei Sektor 1 xor dx, dx ; dx=0 inc dh ; Head 1: ; Soweit ich das mitbekommen habe, besteht ein ; Cylinder aus 2 Teilen Head0 und Head1. Head0 ; sind die ersten 18 Bytes (0-17) und Head1 sind ; die zweiten 18 Bytes (18-36). Da Root Entry ; auf Sektor 19 liegt, brauchen wir head1. int 0x13 ; BIOS-Call jc loadk ; Wenn Fehler: Nochmal
 
-             pop    bx      ; Stellt bx wieder her
-        fat12next:
-             add    bx, 0x20    ; Nächster Eintrag
-        jmp  fat12read
+mov bx, 0x200 ; bx=Adresse des 2. Sektors, den wir in den ; Speicher gelesen haben
 
-         endfat12read:
+        fat12read:
 
-             mov    ax, 0x1000  ; es und ds aktualisieren, da wir jetzt wieder
-                        ; im Speicher auf 0x1000 arbeiten.
-             mov    es, ax
-             mov    ds, ax
+mov ah, \[bx\] ; ah=erstes Byte des Dateinamen cmp ah, 0x0 ; Checken ob das Byte 0 ist: Ende der Einträge je endfat12read ; Wenn es das Ende ist, aufhören zum Lesen cmp ah, 0xE5 ; Checken ob das Byte 0xE5 ist: Gelöschte Datei je fat12next ; Wenn es eine gelöschte Datei ist: Nächster Eintrag push bx ; Speicher bx am Stack, weil es durch 'call putstr' ; geändert wird
 
-             mov    cx, 0xFFFF  ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber
-                        ; zu faul war, die Zeichenlänge zu überprüfen, 
-                        ; hab ichs auf das höchste gestellt. Weil
-                        ; ein String aber mit 0x00 beendet wird, ist es egal
-             mov    si, msg     ; si=Adresse des Strings
-             call   putstr      ; Schreib String
-             mov    cx, 0xFFFF  ; Nochmal das Gleiche
-             mov    si, m_boot  ; Nochmal das Gleiche
-             call   putstr      ; Nochmal das Gleiche
-             call   getkey      ; Call zu GetKey
-             jmp    reboot      ; Springe zu reboot
+mov al, \[bx+2\] ; al=3. Buchstabe des Namens test al, al ; Testen ob null jz fat12next ; Wenn null, dann nächster Eintrag
 
-             msg    db 'Welcome to SPTH-OS 1.1',0   ; String 1
-             m_boot db 'Press any key...',0     ; String 2
+mov cx, 11 ; cx=11, weil ein Dateiname aus 11 Zeichen besteht mov si, bx ; si=Adresse des Dateinamens im Speicher call putstr ; Schreibe Dateiname
 
-         putstr:                ; Schreib-Funktion
-             lodsb          ; [si]->al
-             or al, al          ; Teste al auf 0x0 (=Ende)
-             jz putstrd         ; Wenn Ende des Strings, dann
-             mov    ah, 0xE     ; ah=0xE: Schreibe Zeichen
-             mov    bx, 0x7     ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer
-                        ; Hintergrund
-             int    0x10        ; call
-             loop   putstr      ; Nächstes Zeichen
-         putstrd:
-             mov    al, 13      ; Schreibe 13
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
+pop bx ; Stellt bx wieder her fat12next: add bx, 0x20 ; Nächster Eintrag jmp fat12read
 
-             mov    al, 10      ; Schreibe 10 (13,10=Zeilenumbruch)
-             mov    ah, 0xE
-             mov    bx, 0x7
-             int    0x10
-             retn
+        endfat12read:
 
-         getkey:
-             mov    ah, 0       ; ah=0: Get Key BIOS Funktion
-             int    0x16        ; Call
-             ret
+mov ax, 0x1000 ; es und ds aktualisieren, da wir jetzt wieder ; im Speicher auf 0x1000 arbeiten. mov es, ax mov ds, ax
 
-         reboot:
-             db     0xEA        ; Hexdump für Reboot: jmp 00FF:FF00
-             dw     0x0
-             dw     0xFFFF
-    ;     - - - - - [ Dateien finden - CODE ] - - - - -
+mov cx, 0xFFFF ; cx=0xFFFF: Gibt die Stringlänge an, weil ich aber ; zu faul war, die Zeichenlänge zu überprüfen, ; hab ichs auf das höchste gestellt. Weil ; ein String aber mit 0x00 beendet wird, ist es egal mov si, msg ; si=Adresse des Strings call putstr ; Schreib String mov cx, 0xFFFF ; Nochmal das Gleiche mov si, m_boot ; Nochmal das Gleiche call putstr ; Nochmal das Gleiche call getkey ; Call zu GetKey jmp reboot ; Springe zu reboot
+
+msg db 'Welcome to SPTH-OS 1.1',0 ; String 1 m_boot db 'Press any key...',0 ; String 2
+
+        putstr:              ; Schreib-Funktion
+
+lodsb ; \[si\]-\>al or al, al ; Teste al auf 0x0 (=Ende) jz putstrd ; Wenn Ende des Strings, dann mov ah, 0xE ; ah=0xE: Schreibe Zeichen mov bx, 0x7 ; Zeichenfarbe: 0x7 = weißes Zeichen/schwarzer ; Hintergrund int 0x10 ; call loop putstr ; Nächstes Zeichen
+
+        putstrd:
+
+mov al, 13 ; Schreibe 13 mov ah, 0xE mov bx, 0x7 int 0x10
+
+mov al, 10 ; Schreibe 10 (13,10=Zeilenumbruch) mov ah, 0xE mov bx, 0x7 int 0x10 retn
+
+        getkey:
+
+mov ah, 0 ; ah=0: Get Key BIOS Funktion int 0x16 ; Call ret
+
+        reboot:
+
+db 0xEA ; Hexdump für Reboot: jmp 00FF:FF00 dw 0x0 dw 0xFFFF
+
+\- - - - - \[ Dateien finden - CODE \] - - - - -
+
+\</asm\>
 
 Der Code tut, wie es sein sollte, das, was man von ihm erwartet: Er schreibt alle Dateinamen im Root der Diskette untereinander auf. Also: Passt!
 
@@ -1155,6 +1108,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2161/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2160; parent 2159; 2007-10-08T11:23:44Z -->
+<!-- MediaWiki page 1494; revision 2161; parent 2160; 2007-10-08T11:24:06Z -->
