@@ -1,6 +1,6 @@
 # A / OS PM
 
-A / OS PM ist ein Betriebsystem, das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mir hier noch nicht festlegen möchte, wann es getestet werden kann.
+A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mir hier noch nicht festlegen möchte, wann es getestet werden kann.
 
 ## Geplante Feautures
 
@@ -48,6 +48,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2153; parent 2129; 2007-10-08T11:06:35Z -->
+<!-- MediaWiki page 1451; revision 2154; parent 2153; 2007-10-08T11:06:49Z -->
