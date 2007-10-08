@@ -42,6 +42,8 @@ Bevor wir anfagen sind noch ein paar Informatioen wichtig. Unser Programm wird i
 
 So nun zu unserem Programm. Das Programm beginnt mit folgenden Zeilen.
 
+\<asm\>
+
     ;*************************************************************************
     ; File:  HelloWorld.asm                     Version: 0.1 
     ; Autor: Michael Graf                       Date:    10.09.2006
@@ -53,11 +55,15 @@ So nun zu unserem Programm. Das Programm beginnt mit folgenden Zeilen.
     [BITS 16]                             ; 16bit realmode code
     [ORG 0x0000]                          ; start Organisation at position
 
+\</asm\>
+
 Die ersten Zeilen beginnen mit einem Semikolon, und sind somit Kommentarzeilen. Alles was nach einem Semikolon steht wird vom Assembler nachher beim Übersetzen (assemblieren) nicht berücksichtigt.
 
 Die darauffolgenden beiden Zeilen enthalten Anweisungen an den Assembler selber (Assembler Direktiven). Die Zeile \[BITS 16\] gibt an, das es sich bei diesem Programm um eine 16 Bit Programm handelt. Dadurch wird die Addressierung für den Realmode festgelegt. Die Zeile \[ORG 0x0000\] ist für die Speicherorganisation zuständig. Im Realmode lässt sich damit der Offset festlegen, ab dem die Addressierung beginnen soll. In unseremfalle 0.
 
 ### Start Code
+
+\<asm\>
 
        START:                             ; Initalize segmentregisters and
                                           ; create Stack
@@ -73,6 +79,8 @@ Die darauffolgenden beiden Zeilen enthalten Anweisungen an den Assembler selber 
           jmp     WORD 07C0h:MAIN         ; jump into main to configure 
                                           ; CodeSegment and InstructionPointer
 
+\</asm\>
+
 Die Erste Zeile enthlält ein Label. Die Befehle die nach dem Label START folgen, sind für die initallisierung des Stacks, der Segmentregister und des Instruktion Pointers. Wie bereits erwähnt, ist die abbsolute Addresse an die unser Programm vom BIOS kopiert wird zwar gleich. Kann aber von BIOS Hersteller zu Hersteller unterschiedlich realisiert werden. Daher bringen wir sie erst einmal in einen definierten zustand, mit dem wir weiterarbeiten können.
 
 Data Segment, Extra Segment Code Segment und Stack Segment werden alle auf das gleiche Segment gelegt. Hört sich jetzt erst einaml gefährlich an, Code- und Stack Segment in den gleichen Speicher zu legen. Da der Stack aber von oben nach unten wächst, und unser Programm um unteren Ende des Segements liegt ist da genug Platz dazwischen.
@@ -81,6 +89,8 @@ Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, mac
 
 ### Hauptprogramm
 
+\<asm\>
+
        MAIN:
           mov     si, msgText             ; set SorceIndex to msgText
           call    DisplayMessage          ; Display the message
@@ -88,6 +98,8 @@ Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, mac
           mov     ah, 0x00                ; 
           int     0x16                    ; await keypress
           int     0x19                    ; reboot computer
+
+\</asm\>
 
 Nach dem Label MAIN folgt das Hauptprogramm. Es besteht im ganzen aus nur 5 Anweisungen. 2 mov Befehlen, einem call und 2 Interrupt Aufrufen. Die ersten beiden kümmern sich um die Textausgabe. Die Darauffolgenden beiden um das Warten auf die Tastatur. Der Letzte um den Reset. Aber erst mal der reihe nach.
 
@@ -98,6 +110,8 @@ Danach folgt ein mov, mit dem das Register AH auf 0x00 gesetzt wird. Anschliesse
 Als letztes folgt ein INT 0x19. Diese ISR startet das BIOS neu und generiert somit einen Neustart des Rechners.
 
 ### Procedure DisplayMessage
+
+\<asm\>
 
        ;********************************************************************
        ; PROCEDURE DisplayMessage
@@ -122,6 +136,8 @@ Als letztes folgt ein INT 0x19. Diese ISR startet das BIOS neu und generiert som
           popa                            ; load all saved registers from stack         
           ret                             ; exit function
 
+\</asm\>
+
 DisplayMessage ist eine Procedur die den Text der durch DS:SI angegeben ist auf dem Monitor ausgibt. Die Textausgabe erfolgt Zeichenweise mit der Funktion 14 des BIOS Interupts 0x10. Wir benötigen daher eine Schleife die die BIOS Funktion für jedes einzelne Zeichen aufruft. Die Schleife wird verlassen, wenn das darzustellende Zeichen den Wert 0 aufweist. Wier geben mit dieser Procedure somit einen Nullterminierten String aus, so wie er z.B. in C verwendet wird.
 
 Die Procedure benötigt intern einige Register für Zähler und Funktionsparameter. Daher sind wir gezwungen diese Register zu sichern, bevor wir sie verwenden. Danach müssen wir logischerweise das gesicherte wieder zurücksichern. Würden wir das nicht tun, müssten wir überall dort, wo wir unsere Procedure aufrufen erst eimal all diejenigen Register sichern die die Procedure verwendet, und nach dem Aufruf rücksichern. Also machen wir das gleich in der Procedure und wir müssen uns beim Aufruf nicht mehr drum kümmern.
@@ -136,6 +152,8 @@ Wird das Label .DONE angesprungen, werden mit dem Befehl POPA die Register wiede
 
 ### Datenbereich
 
+\<asm\>
+
        ; Data area
        msgText  db 0x0D, 0x0A, "HELLO World!", 
                 db 0x0D, 0x0A, "This is no OS. Press any key to reboot.", 
@@ -147,6 +165,8 @@ Wird das Label .DONE angesprungen, werden mit dem Befehl POPA die Register wiede
        %ifdef IMAGE                                ;
                 TIMES 1474048 DB 0x00              ; Empty Disk Image 1.44MB
        %endif                                      ;
+
+\</asm\>
 
 Nach der Procedure folgt der Datenteil unseres Programmes. Hier befindet sich unser Text, den wir ausgeben wollen. Das Label msgText Kennzeichnet die Addresse, an der sich unser Text befindet. Wir erinnern uns, im Hauptprogramm haben wir es bei der Textausgabe verwendet. Nach dem Label folgt ein db, es kennzeichnet eine Datenbereich der aus Bytes besteht. Danach folgt entweder durch kommas getrennt die einzelnen Zeichen als Hexzahl, oder in Hochkommas ganz normaler Text. 0x0D, 0x0A sind Steuerzeichen, die dafür sorgen, das unser Text in einer neuen Zeile ausgegeben wird.
 
@@ -241,13 +261,13 @@ Einfach die Datei bochsrc.txt im Installationsordner von Bochs anlegen, Pfad zum
 
 ## Nachwort
 
-Wenn alles gutgegangen ist haben wir jetzt ein Diskettenimage mit unserem HelloWorld Programm. Im nachvolgenden Teil 2 wollen wir diesen BootRecord so weit umbauen, und erweitern, das wir damit auch andere Programme von einem Datenträger laden und ausführen können.
+Wenn alles gutgegangen ist haben wir jetzt ein Diskettenimage mit unserem HelloWorld Programm. Im nachfolgenden Teil 2 wollen wir diesen BootRecord so weit umbauen, und erweitern, das wir damit auch andere Programme von einem Datenträger laden und ausführen können.
 
   
 Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2094/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 2094; parent 1740; 2007-09-14T19:21:17Z -->
+<!-- MediaWiki page 1427; revision 2164; parent 2094; 2007-10-08T11:31:08Z -->
