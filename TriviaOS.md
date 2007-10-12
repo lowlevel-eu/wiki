@@ -19,7 +19,7 @@ Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Re
 - einen vollständigen [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung
 - Task und Speicherverwaltung
-- I/O-Verwaltung mit APIC und IO-Permission-Map Unterstützung
+- I/O-Verwaltung mit [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
 - [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")
 - [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur")
 - [Vesatreiber](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "Vesa")
@@ -32,6 +32,6 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2167/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2168/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2167; parent 2143; 2007-10-12T20:19:23Z -->
+<!-- MediaWiki page 1448; revision 2168; parent 2167; 2007-10-12T20:20:20Z -->
