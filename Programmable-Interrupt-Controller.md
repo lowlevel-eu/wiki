@@ -7,6 +7,8 @@ Heutzutage werden keine echten PICs verwendet und es gibt eine verbesserte Varia
 
 Die Verwendung der einzelnen IRQ-Kanäle wurde früher fest vorgegeben, da sie direkt mit der Hardware verdrahtet waren. Die restlichen, freigebliebenen IRQs werden heutzutage dynamisch vergeben. (etwa über PnP)
 
+Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen Interrupt an die CPU meldet und erst dannach bemerkt, dass er eigentlich gar kein Interrupt ausglösen hätte dürfen. Darum ruft die CPU den Spurious Interrupt auf, welcher sich je nach Konfiguration am letzten Eingang des Master oder Slave PIC befindet. Um ihn von den "normalen" Interrupts (LPT oder ATA) zu unterscheiden kann man im ISR Register des jeweiligen PICs schauen, ob dieser gerade einen "normalen" Interrupt bearbeitet oder eben nicht. Ein Spurious Interrupt kann einfach mit einem iret beendet werden ohne dass anderer Code nötig ist.
+
     IRQ  Hardware/Funktion
 
     PIC1
@@ -31,6 +33,6 @@ Die Verwendung der einzelnen IRQ-Kanäle wurde früher fest vorgegeben, da sie d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2170/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 2169; parent 1949; 2007-10-12T20:21:52Z -->
+<!-- MediaWiki page 1465; revision 2170; parent 2169; 2007-10-12T20:28:49Z -->
