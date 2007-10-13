@@ -12,6 +12,10 @@ Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 i
 
 ## Page-Tables
 
+## Translation Lookaside Buffer
+
+Zu beachten ist, dass bei einer Änderung des Page-Directory oder einer Page-Table, der TLB (Translation Lookaside Buffer) invalidiert werden muss, sonst können unerwartete Ereignisse auftreten. Man invalidiert den TLB mit "invlpg \<address\>". Wobei \<address\> eine beliebige Adresse im RAM ist, der TLB, der zugehörigen Page, wird dann invalidiert.
+
 ## Links
 
 - [Paging Tutorial](http://www.homix-online.de/Tutorials/32PMode-Paging.php)
@@ -20,6 +24,6 @@ Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2171/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2044; parent 2019; 2007-07-03T16:21:45Z -->
+<!-- MediaWiki page 1496; revision 2171; parent 2044; 2007-10-13T00:09:40Z -->
