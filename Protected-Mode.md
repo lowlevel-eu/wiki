@@ -234,9 +234,9 @@ Dies ist ebenfalls ein Speicherabschnitt der Daten beinhaltet um das Multitaskin
 **Task State Segment Deskriptor (BITs) Teil 1**
 
 |  |  |  |  |  |  |  |  |  |  |
-| -------------------- | -------- | ------------- | -------- | ------------- | -------- | ------------- | -------- | ------------ | ----------- |
+| -------------------- | -------- | ------------- | -------- | ------------- | -------- | ------------- | -------- | ------------ | -------------------- |
 | **31 - 24** | **23** | **21 - 22** | **20** | **19 - 16** | **15** | **13 - 14** | **12** | **11 - 8** | **0 - 7** |
-| Basisadresse 31-24 | G | 0 | AVL | Größe 19-16 | P | DPL | 0 | Type |  |
+| Basisadresse 31-24 | G | 0 | AVL | Größe 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
 
 **Task State Segment Deskriptor (BITs) Teil 2**
 
@@ -470,6 +470,6 @@ Die beiden 0x9000 können natürlich durch irgendeine andere Adresse ersetzt wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2174/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 2059; parent 2034; 2007-07-16T10:58:17Z -->
+<!-- MediaWiki page 1464; revision 2174; parent 2059; 2007-10-15T12:35:17Z -->
