@@ -90,9 +90,9 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
     void removecursor() {
       outb(0x3D4,14);
-      outb(0x3D5,0xD1);
-      outb(0x3D4,15);
       outb(0x3D5,0x07);
+      outb(0x3D4,15);
+      outb(0x3D5,0xD0);
     }
 
 \</c\>
@@ -106,6 +106,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2183/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2165; parent 2152; 2007-10-08T11:34:08Z -->
+<!-- MediaWiki page 1549; revision 2183; parent 2165; 2007-10-16T23:20:01Z -->
