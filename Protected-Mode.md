@@ -312,7 +312,7 @@ Diese haben in etwa den selben Sinn und Zweck eines Call Gates. Jedoch werden di
 |  |  |  |  |  |  |  |  |
 | ---------------- | -------- | ------------- | -------- | -------- | ------------ | ----------- | ----------- |
 | **31 - 16** | **15** | **14 - 13** | **12** | **11** | **10 - 8** | **7 - 5** | **4 - 0** |
-| Offset 31 - 16 | P | DPL | 0 | D | Type | 0 | Param |
+| Offset 31 - 16 | P | DPL | 0 | D | Type | 0 |  |
 
 **Interrupt Gate (BITs) Teil 2**
 
@@ -470,6 +470,6 @@ Die beiden 0x9000 können natürlich durch irgendeine andere Adresse ersetzt wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2174/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 2174; parent 2059; 2007-10-15T12:35:17Z -->
+<!-- MediaWiki page 1464; revision 2175; parent 2174; 2007-10-16T00:58:19Z -->
