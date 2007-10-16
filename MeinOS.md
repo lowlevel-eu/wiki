@@ -18,7 +18,7 @@ meinOS ist noch in einer sehr frühen Entwicklungsphase, es wird aber schon fast
 
 - Init-Task (Initialisierung aller Treiber und des login-Programms)
 - Filesystem
-- devfd (FS-Treiber für /dev)
+- devfs (FS-Treiber für /dev)
 - Console-Treiber (Keyboard und Textdisplay)
 - Floppy-Treiber
 - FAT12-Treiber
@@ -32,6 +32,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2179/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2178; parent 0; 2007-10-16T17:14:15Z -->
+<!-- MediaWiki page 1551; revision 2179; parent 2178; 2007-10-16T18:39:16Z -->
