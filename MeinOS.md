@@ -26,12 +26,16 @@ meinOS ist noch in einer sehr frühen Entwicklungsphase, es wird aber schon fast
 
 Wie man sieht, ist noch eine Menge zu tun.
 
+## Screenshot
+
+![screen.gif](http://wonsheimlan.wo.funpic.de/meinos/screen.gif)
+
 ## Links
 
 - [meinOS-Website](http://wonsheimlan.wo.funpic.de/meinos/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2179/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2180/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2179; parent 2178; 2007-10-16T18:39:16Z -->
+<!-- MediaWiki page 1551; revision 2180; parent 2179; 2007-10-16T18:54:10Z -->
