@@ -5,6 +5,7 @@
 - A20 Gate
 - C++
 - [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"): Die Links zu den Logs und Statistiken sind down
+- [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): Bitte mal nachprüfen
 
 ## Neu erstellen
 
@@ -17,7 +18,6 @@
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
 - Informationen zur AMD PCNet Netzwerkkarte
 - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
-- [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") wie (L)GPL (v2, v3), 3/4-clause BSD, etc...
 - Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
 - Hier kommt dein Wunsch hin ;)
 
@@ -25,6 +25,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2148; parent 2122; 2007-10-07T12:58:24Z -->
+<!-- MediaWiki page 1518; revision 2185; parent 2148; 2007-10-17T17:14:11Z -->
