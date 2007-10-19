@@ -6,13 +6,14 @@
 - C++
 - [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"): Die Links zu den Logs und Statistiken sind down
 - [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): Bitte mal nachprüfen
+- Elf: überarbeiten
 
 ## Neu erstellen
 
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") erstellen und Ideen für RPC aus dem Thread im Forum
 - eine Liste der reservierten [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche")
 - C/C++ [Aufrufkonventionen](https://github.com/lowlevel-eu/wiki/wiki/Aufrufkonventionen "Aufrufkonventionen") für x86 und x86-64
-- das [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")-, Elf- & Elf64-Dateiformat erklären
+- das [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")-Dateiformat erklären
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
 - Longmode
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
@@ -25,6 +26,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2192/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2185; parent 2148; 2007-10-17T17:14:11Z -->
+<!-- MediaWiki page 1518; revision 2192; parent 2185; 2007-10-19T17:42:40Z -->
