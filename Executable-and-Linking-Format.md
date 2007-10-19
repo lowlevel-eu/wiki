@@ -1,6 +1,6 @@
 # Executable and Linking Format
 
-Es gibt 3 verschiedene Arten von Elf-Dateien:
+Elf ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten von Elf-Dateien:
 
 - executable
 - relocatable
@@ -263,6 +263,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2190; parent 1975; 2007-10-19T17:36:57Z -->
+<!-- MediaWiki page 1528; revision 2191; parent 2190; 2007-10-19T17:38:24Z -->
