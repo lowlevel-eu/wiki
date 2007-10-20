@@ -10,7 +10,7 @@ Zur Ausgabe von Text gibt es einen 4kB großen Speicher an der Adresse 0xB8000. 
 
 ## Schreiben in den Textspeicher
 
-Um nun auf dem Bildschirm ein Zeichen zu haben, muss man erstmal das Offset ausrechnen, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s Wobei hier o das Offset ist, z die Zeile und s die Spalte. Wenn man in Mathe aufgepasst hat, sollte das ken Problem sein.
+Um nun auf dem Bildschirm ein Zeichen zu haben, muss man erstmal das Offset ausrechnen, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s Wobei hier o das Offset ist, z die Zeile und s die Spalte. Wenn man in Mathe aufgepasst hat, sollte das kein Problem sein.
 
 Nun war die Rede, dass 2 Bytes pro Zeichen verwendet werden. Also woher kommt das 2. Byte? Ganz einfach: In dem 2. Byte wird das Attribut, also eigentlich nur die Farbe gespeichert. Im ersten wird einfach nur das Zeichen gespeichert. Als Code wird [Codepage 437](http://de.wikipedia.org/wiki/Codepage_437) verwendet, welche nichts anderes als [7bit-ASCII](http://de.wikipedia.org/wiki/ASCII) plus noch ein paar Zeichen Erweiterung, ist.
 
@@ -106,6 +106,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2183/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2194/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2183; parent 2165; 2007-10-16T23:20:01Z -->
+<!-- MediaWiki page 1549; revision 2194; parent 2183; 2007-10-20T21:18:38Z -->
