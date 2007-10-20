@@ -43,7 +43,7 @@ Das Feld e_ident ist 16 Byte groß und enthält Werte zur Identifikation der Elf
 | [EI_DATA](#ei_data) | 5 | Prozessorspezifische Datenkodierung |
 | [EI_VERSION](#ei_version) | 6 | Datei-Version |
 | [EI_PAD](#ei_pad) | 7 | Letztes genutztes Byte in e_ident |
-| [EI_NIDENT](#) | 16 | Anzahl an Bytes in e_ident |
+| EI_NIDENT | 16 | Anzahl an Bytes in e_ident |
 
 ##### EI_MAG0 bis EI_MAG3
 
@@ -263,6 +263,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2191; parent 2190; 2007-10-19T17:38:24Z -->
+<!-- MediaWiki page 1528; revision 2193; parent 2191; 2007-10-20T17:34:25Z -->
