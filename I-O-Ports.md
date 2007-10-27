@@ -4,7 +4,7 @@ Dies ist eine Liste der Standard I/O Portbereiche.
 
 Diese Liste ist nicht vollständig!!!
 
-  
+## Liste
 
 |  |  |  |
 | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,8 +34,16 @@ Diese Liste ist nicht vollständig!!!
 | 0xCF8 | 0xCF8 | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") |
 | 0xCFC | 0xCFC | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") |
 
+## Links
+
+- Ralf Brown's Interrupt List (RBIL) ist nicht nur eine Liste aller erdenklichen Software Interrupts, sondern bietet auch eine sehr große(!) Liste mit Port-Nummern und entsprechenden Beschreibungen. Die Liste ist ist in 3 Dateien aufgeteilt (PORTS.A, PORTS.B und PORTS.C). Diese Dateien findet man in folgendem Zip-Archiv: [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)
+
+<!-- -->
+
+- [Eine Liste der Universität Magdeburg](http://mudlist.eorbit.net/~adam/pickey/ports.html) (Letzte Aktualisierung 26.03.1995) Zwar veraltet, aber dafür recht übersichtlich.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 2198; parent 2076; 2007-10-21T19:00:54Z -->
+<!-- MediaWiki page 1543; revision 2203; parent 2198; 2007-10-27T17:41:22Z -->
