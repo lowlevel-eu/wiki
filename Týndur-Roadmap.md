@@ -13,7 +13,7 @@ Features:
 
 - Speicherverwaltung
 - Multitasking
-- Einfache Interprozeßkommunikation
+- Einfache Interprozesskommunikation
 - [LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO") soweit für einfache Dateioperationen nötig
 - DMA & Diskettenlaufwerk
 - FAT12:
@@ -45,6 +45,6 @@ Features:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1967/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 1967; parent 1965; 2007-05-09T07:29:33Z -->
+<!-- MediaWiki page 1510; revision 2211; parent 1967; 2007-10-27T23:04:40Z -->
