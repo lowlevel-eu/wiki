@@ -32,10 +32,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
   IO Ports: Diese Informationen befinden sich in 3 Dateien (PORTS.A, PORTS.B und PORTS.C) in diesem Zip Archiv [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)  
     
 
-<!-- -->
-
-- [Undocumented Windows 2000 Secrets](http://www.rawol.com/?topic=77) (PDF Version)
-
 ## Lowlevel-Tutorials
 
 ### Alte Tutorialseite
@@ -68,6 +64,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2205/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 2205; parent 2088; 2007-10-27T18:01:47Z -->
+<!-- MediaWiki page 1437; revision 2208; parent 2205; 2007-10-27T21:02:29Z -->
