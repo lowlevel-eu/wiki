@@ -21,7 +21,7 @@ meinOS ist noch in einer sehr frühen Entwicklungsphase, es wird aber schon fast
 - devfs (FS-Treiber für /dev)
 - Console-Treiber (Keyboard und Textdisplay)
 - Floppy-Treiber
-- FAT12-Treiber
+- Ext2-Treiber
 - eventuell pipefs (Für Named Pipes ohne "richtiges" FS, dass Named Pipes unterstützt)
 
 Wie man sieht, ist noch eine Menge zu tun.
@@ -36,6 +36,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2182/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2182; parent 2181; 2007-10-16T21:01:45Z -->
+<!-- MediaWiki page 1551; revision 2214; parent 2182; 2007-10-29T18:54:48Z -->
