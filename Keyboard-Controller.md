@@ -1,30 +1,23 @@
 # Keyboard Controller
 
-Der Keyboard Controller (KBC) sitzt auf dem Mainboard und dient, wie der Name vermuten lässt, unter anderem der Tastaturansteuerung. Aus historischen Gründen und da er eng mit dem Programmable Peripheral Interface (PPI) verbunden ist hat er noch viele weitere Funktionen.
+Der Keyboard Controller (KBC) sitzt auf dem Mainboard und dient, wie der Name vermuten lässt, unter anderem der Tastaturansteuerung. Da IBM ihn nach seiner Einführung stark erweitert hat, kann man ihn in heutigen Systemen eher als Kontroller "für alles mögliche" ansehen.
 
-Funktionen des KBC:
+Der KBC wurde mit dem AT System (286) eingeführt. In dem Vorgängersystem XT wurde für vergleichbare Aufgaben das Programmable Peripheral Interface (PPI) genutzt.
+
+## Funktionen des KBC
 
 - Ansteuerung der Tastatur
 - Ansteuerung des Auxiliary Port (z.B. PS/2-Maus)
-- ein-/ausschalten der 21-Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"))
+- ein-/ausschalten der 21-Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"))  
+  Sollte aus Performance-Gründen in aktuellen Systemen direkt über die CPU aktiviert werden.
 - CPU-Reset auslösen, also neustarten des Systems
 - Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt
 
   
 
-## KBC-Typen
+## Kommunikationswege
 
-Es gibt mehrere KBC-Typen. Grob kann man alle diese Typen jedoch in zwei Arten einteilen.
-
-### XT-KBC
-
-In alten XT-Systemen wurde nur über das Programmable Peripheral Interface (PPI) mit der Tastatur kommuniziert. Alle Scancodes der gedrückten Tasten konnten über Port 0x60 gelesen werden. Über die Bits 6-7 von Port 0x61 wird die Tastatur ein und aus geschaltete.  
-  
-![xtkbcaa3.png](http://img252.imageshack.us/img252/545/xtkbcaa3.png)
-
-### AT-KBC
-
-In den nachfolgenden AT-Systemen wird über Port 0x64 die direkte Kommunikation mit der Tastatur ermöglicht. Außerdem wurde mit dem Auxiliary Port die Unterstüzung für ein weiteres Gerät hinzugefürgt.  
+Der KBC Verwendet die Ports 0x60, 0x61 und 0x64.  
   
 ![atkbcml3.png](http://img252.imageshack.us/img252/6256/atkbcml3.png)  
   
@@ -150,7 +143,7 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
     0xF0   Auswählen des Scancodes. Als Parameter den Scancode 1, 2(standard) oder 3 auf Port 0x60 senden.
            (Anmerkung: Kann man mit dem Wert 0 als Parameter den aktuellen Scancode auslesen?)
 
-    0xF2   Diesen Befhel sendet man zum identifiziren der Tastatur. Es gibt folgende Rückgabewerte:
+    0xF2   Diesen Befehl sendet man zum identifiziren der Tastatur. Es gibt folgende Rückgabewerte:
 
            XT Tastatur    :  Timeout (leider NICHT Port[0x64].Bit[6]=1, sondern selbst zu messender Zweitwert)
            AT Tastatur    :  Rückgabewert 0xFA
@@ -192,7 +185,7 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
 
 ### Ein einfacher Tastatur Handler in Form eines Bootsektors
 
-Dieses Beispiel zeigt, wie man die Tastatur im Realmode benutzen kann. Dabei wird bei jedem Tastendruck oder loslassen einer Taste der scancode ausgegeben. Der Quellcode kann mit NASM oder FASM assembliert werden. Die erzeugte Datei auf den Bootsektor einer Diskette kopieren oder direkt mit einem Emulator benutzen.
+Dieses Beispiel zeigt, wie man die Tastatur im Realmode benutzen kann. Dabei wird bei jedem Tastendruck oder loslassen einer Taste der Scancode ausgegeben. Der Quellcode kann mit NASM oder FASM assembliert werden. Die erzeugte Datei auf den Bootsektor einer Diskette kopieren oder direkt mit einem Emulator benutzen.
 
 \<asm\> use16 org 0x7C00
 
@@ -289,6 +282,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1950/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 1950; parent 1896; 2007-04-17T18:42:59Z -->
+<!-- MediaWiki page 1468; revision 2215; parent 1950; 2007-10-30T21:30:47Z -->
