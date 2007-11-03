@@ -6,21 +6,36 @@ Der KBC wurde mit dem AT System (286) eingeführt. In dem Vorgängersystem XT wu
 
 ## Funktionen des KBC
 
-- Ansteuerung der Tastatur
-- Ansteuerung des Auxiliary Port (z.B. PS/2-Maus)
-- ein-/ausschalten der 21-Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"))  
-  Sollte aus Performance-Gründen in aktuellen Systemen direkt über die CPU aktiviert werden.
+- Ansteuerung eines oder zweier Auxiliary Port(s) (Tastatur, Maus)
+
+<!-- -->
+
+- ein-/ausschalten der 21-Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"); Sollte aus Performance-Gründen in aktuellen Systemen direkt über die CPU aktiviert werden.)
+
+<!-- -->
+
 - CPU-Reset auslösen, also neustarten des Systems
+
+<!-- -->
+
+- Zusammen mit dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") steuern.
+
+<!-- -->
+
 - Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt
 
   
 
 ## Kommunikationswege
 
-Der KBC Verwendet die Ports 0x60, 0x61 und 0x64.  
   
-![atkbcml3.png](http://img252.imageshack.us/img252/6256/atkbcml3.png)  
+![kbclogic20071103ev6.png](http://img229.imageshack.us/img229/3005/kbclogic20071103ev6.png)  
   
+Programmiert wird der KBC über die 3 Ports 0x60, 0x61 und 0x64.  
+
+Normalerweise wird das erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an das zweite (PSAUX1\*) ein Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z.B. von Linux unterstützt, nicht jedoch von Windows.  
+
+(\*Anmerkung zu PSAUX0 und PSAUX1: Diese Begriffe habe ich mir "ausgedacht", da ich keine vernünftige offizielle Bezeichnung kenne. Man wird diese Begriffe also in keiner anderen Referenz finden. Außer es wurde hier abgeschrieben.)  
 
 ## Programmieren des KBC
 
@@ -282,6 +297,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 2215; parent 1950; 2007-10-30T21:30:47Z -->
+<!-- MediaWiki page 1468; revision 2216; parent 2215; 2007-11-03T14:53:33Z -->
