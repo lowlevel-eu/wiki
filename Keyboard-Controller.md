@@ -18,7 +18,7 @@ Der KBC wurde mit dem AT System (286) eingeführt. In dem Vorgängersystem XT wu
 
 <!-- -->
 
-- Zusammen mit dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") steuern.
+- Zusammen mit dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") ansteuern.
 
 <!-- -->
 
@@ -36,6 +36,22 @@ Programmiert wird der KBC über die 3 Ports 0x60, 0x61 und 0x64.
 Normalerweise wird das erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an das zweite (PSAUX1\*) ein Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z.B. von Linux unterstützt, nicht jedoch von Windows.  
 
 (\*Anmerkung zu PSAUX0 und PSAUX1: Diese Begriffe habe ich mir "ausgedacht", da ich keine vernünftige offizielle Bezeichnung kenne. Man wird diese Begriffe also in keiner anderen Referenz finden. Außer es wurde hier abgeschrieben.)  
+
+## USB Legacy Support
+
+Diese von vielen Mainboards bereitgestellt Funktion simuliert angeschlossene USB-Geräte wie Maus und Tastatur als PS/2 Geräte.  
+  
+Dies hat für Programmierer Vor- und Nachteile. Einerseits muss man für die Unterstützung solcher Eingabegeräte keine eigenen USB Treiber programmieren. Andererseits ergeben sich damit einige der hier aufgelisteten Probleme:  
+
+- Auf manchen Systemen Läuft IMMER eine Abstraktionsschicht mit, auch wenn keine USB Geräte angeschlossen sind. Dies kann zur folge haben, dass die Intellimaus-Extension nicht funktioniert. Oder dass man nicht, wie weiter oben beschrieben, beliebige Geräte an ein PSAUX Port anschließen kann. (wird nicht erkannt)
+- Das SMM BIOS, über welches die USB zu PS/2 Abstraktion stattfindet, unterstützen nicht immer den Betrieb über 32Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") kann das System daher zum Abstürzen bringen!
+
+  
+Diese Probleme sind nicht mehr vorhanden wenn der Legacy-Modus ausgeschaltet wurde.  
+  
+Nach meinen Informationen wird der Legacy-Modus ausgeschaltet sobald der USB-Chip initialisiert wird. Also die Hardware weiß, dass die Software die USB Geräte direkt ansteuern kann. (Ist diese Information korrekt?)
+
+  
 
 ## Programmieren des KBC
 
@@ -281,7 +297,7 @@ Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben 
 
 Warten bis der Eingabepuffer leer ist
 
-wait: in al, x064 test al, 00000010b jne wait
+wait1: in al, x064 test al, 00000010b jne wait1
 
 Befehl 0xD1 zum schreiben des Inputports an den KBC senden
 
@@ -297,6 +313,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2220/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 2216; parent 2215; 2007-11-03T14:53:33Z -->
+<!-- MediaWiki page 1468; revision 2220; parent 2216; 2007-11-04T17:51:11Z -->
