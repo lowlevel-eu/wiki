@@ -22,16 +22,15 @@ Der KBC wurde mit dem AT System (286) eingeführt. In dem Vorgängersystem XT wu
 
 <!-- -->
 
-- Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt
+- Information ob das System eine Monochrom- oder Farbgrafikkarte benutzt (Irrelevant: Farbgrafik wurde mit XT Systemen als Standard eingeführt!)
 
   
 
 ## Kommunikationswege
 
   
-![kbclogic20071103ev6.png](http://img229.imageshack.us/img229/3005/kbclogic20071103ev6.png)  
+![kbclogic20071105bt5.png](http://img441.imageshack.us/img441/636/kbclogic20071105bt5.png)  
   
-Programmiert wird der KBC über die 3 Ports 0x60, 0x61 und 0x64.  
 
 Normalerweise wird das erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an das zweite (PSAUX1\*) ein Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z.B. von Linux unterstützt, nicht jedoch von Windows.  
 
@@ -55,6 +54,15 @@ Nach meinen Informationen wird der Legacy-Modus ausgeschaltet sobald der USB-Chi
 
 ## Programmieren des KBC
 
+Programmiert wird der KBC über die 2 Ports 0x60 und 0x64. Dabei werden auf den Ports nur Bytes gesendet und empfangen.  
+  
+Über das Port 0x64 kann man das Statusregister auslesen und KBC-Befehle senden.  
+  
+Das Port 0x60 dient als Ein-/Ausgabe Puffer. Parameter oder Rückgabewerte für einen Befehl werden über dieses Port geschrieben bzw. gelesen. Wenn keine Befehlsparameter erwartet werden und man auf das Port 0x60 schreibt, wird direkt an PSAUX0 weitergeleitet.  
+
+- Vor dem Schreiben auf Port 0x60 oder 0x64 muss der Eingabepuffers leer sein. (Port\[0x64\].Bit\[1\] == 0)
+- Vor dem Lesen von Port 0x60 muss der Ausgabepuffers voll sein (Port\[0x64\].Bit\[0\] == 1)
+
 ### Statusregister
 
 lesen von Port 0x64
@@ -62,27 +70,30 @@ lesen von Port 0x64
     Bit 76543210
         │││││││└─ Status des Ausgabepuffers (KBC -> CPU) :  0=leer;  1=voll (es kann von Port 0x60 gelesen werden)
         ││││││└── Status des Eingabepuffers (KBC <- CPU) :  0=leer (Schreiben auf 0x60 oder 0x64 möglich);  1=voll
-        │││││└─── Systemstatus? :  0=Reset/Selbsttest wird gerade ausgeführt;  1=Selbsttest OK
+        │││││└─── 1=Erfolgreicher Selbsttest (Wie Controller_Command_Byte.Bit[3]; sollte immer 1 sein)
         ││││└──── zuletzt benutztes Port : 0=0x60;  1=0x61 oder 0x64?
         │││└───── Tastatursperre : 0=Tastatur gesperrt; 1=Tastatur nicht gesperrt
         ││└────── PSAUX?
         │└─────── Timeout : 1=Tastatur oder PSAUX-Gerät ragiert nicht?
-        └──────── Paritätsfehler : 1=Beim letzten Senden/Empfangen trat ein Paritätsfehler auf
+        └──────── Paritätsfehler : 1=Beim letzten Byte Senden/Empfangen trat ein Paritätsfehler auf
 
   
 
-### Inputport
+### Input Port P1
 
-Lesen über KBC-Befehl 0xC0
+Nur aus Vollständigkeitsgründen hier aufgeführt!!! Wie man mit einem kurzen Blick erkennen kann heute nicht mehr relevant! Lesen über KBC-Befehl 0xC0
 
     Bit 76543210
         │││││││└─ Keyboard data in pin?
         ││││││└── PS/2 mouse in pin?
-        │││││└─── Reserviert
-        ││││└──── Reserviert
-        │││└───── Reserviert
-        ││└────── Reserviert
-        │└─────── Wether you have a color or mono screen?
+        │││││└─── Unused in ISA, EISA, PS/2 systems, Can be configured for clock switching
+        ││││└──── Unused in ISA, EISA, PS/2 systems, Can be configured for clock switching
+        │││└───── Speicher auf dem Mainboard:  0= 512 KB, 1= 256 KB
+        │││       
+        ││└────── Manufacturing jumper 0= installed, 1= not installed
+        ││        with jumper the BIOS runs an infinite diagnostic loop
+        │└─────── Grafikkarte: 0=Color Graphics Adapter (CGA), 1=Monochrome Display Adapter (MDA)
+        │         Kleiner Tip: CGA wurde mit den XT System eingeführt. ;)
         └──────── Tastatursperre : 0=Tastatur gesperrt;  1=Tastatur nicht gesperrt
 
   
@@ -104,21 +115,27 @@ schreiben über KBC-Befehl 0xD1
 
   
 
-  
+### Controller Command Byte
 
-### Port 0x61
-
-lesen und schreiben
+Lesen über KBC-Befehl 0x20  
+Schreiben über KBC-Befehl 0x60
 
     Bit 76543210
-        │││││││└─ PPI \
-        ││││││└── PPI  \
-        │││││└─── PPI   |Dieser Teil ist vom Programmable Peripheral Interface
-        ││││└──── PPI   |nicht überschreiben!
-        │││└───── PPI  /
-        ││└────── PPI /
-        │└─────── Setzt die "clock"-Leitung auf low, so dass die Tastatur keine Daten an den PC senden kann
-        └──────── 0=Tastatur eingeschaltet;  1=Tastatur ausgeschaltet
+        │││││││└─ 1=Erzeuge einen IRQ1 wenn PSAUX0 daten auf Port 0x60 ausgibt
+        ││││││└── 1=Erzeuge einen IRQ12 wenn PSAUX1 daten auf Port 0x60 ausgibt
+        │││││└─── 1=Erfolgreicher Selbsttest (Wie Statusregister.Bit[3]; sollte immer 1 sein)
+        ││││└──── AT  : 1=Tastatursperre Ignorieren (Statusregister Bit4 immer 1)
+        ││││      PS/2: 0 (unbenutzt)
+        │││└───── 1 = Die Taktleitung zu PSAUX0 auf low halten und damit das Senden/Empfangen unterbinden
+        ││└────── EISA, PS/2 : 1 = Die Taktleitung zu PSAUX1 auf low halten und damit das Senden/Empfangen unterbinden
+        ││        ISA : 0 = Benutze 11 Bit Übertragung, Paritätsüberprüfung und konvertiere PSAUX0 Bytes*
+        ││              1 = Benutze 8086 Übertragung, keine Paritätsüberprüfung oder Konvertierung 
+        │└─────── ? 1=Der KBC übersetzt von PSAUX eingehenden Bytes*
+        └──────── 0 (reserviert)
+
+  
+
+- KBC Scancode-Übersetzung: <http://www.win.tue.nl/~aeb/linux/kbd/scancodes-10.html#translationtable>
 
   
 
@@ -313,6 +330,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2220/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2222/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 2220; parent 2216; 2007-11-04T17:51:11Z -->
+<!-- MediaWiki page 1468; revision 2222; parent 2220; 2007-11-05T21:38:52Z -->
