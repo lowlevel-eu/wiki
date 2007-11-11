@@ -13,34 +13,166 @@ Ich empfehle den meisten erst einmal die Spezifikationen nur zu überfliegen und
 ## Spezifikationen
 
 |  |  |  |
-| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Port** | **Zugriff** | **Beschreibung** |
 | **60h** | *Lesezugriff* | Der Port 60h ist zweiseitig, er kann als Keyboard-Controller(64h)-Daten-Port oder als Keyboard-In-/Output-Buffer dienen. An diesen Port werden die Scancodes der gedrückten Tasten gesendet, die dann der Keyboard-Treiber per "in al,60h" auslesen kann. Deaktiviert man bevor man aus diesem Port etwas ausliest das Keybord per Befehl ADh, so erhält man die Daten aus dem Maus-Output-Buffer! Zum auslesen sei gesagt, dass die nur geschehen sollte, wenn entweder das Bit 1 im Keyboard-Controller-Output-Status-Byte, welches anzeigt, dass das Keyboard am 60h Daten hat, oder das Bit 5 in diesem Status-Byte des 64h gesetzt ist, welches anzeigt, dass im Maus-Output-Buffer Daten liegen! Um das zu realisieren habe ich in meinem Programm ein Schleife genutzt, die eine Zeit lang abfragt, ob Daten da sind.<br> |
-|  | *Schreibzugriff* | Wenn an diesen Port geschrieben werden, fungiert dieser entweder als Keyboard-Controller-Daten-Port, oder als Input-Buffer des Keyboards. Zweiteres geschieht, wenn man einfach einen der Befehle, die weiter unten für diesen Port aufgelistet sind, an diesen Port sendet. Dies sind überwiegend Befehle zu adjustierung des Keyboards, wie z.b. das Einstellen der Typematic-Rate. Als Ersteres, also als Daten-Port des KC, wird dieser Port nur genutzt, wenn es Befehle des 64h verlangen. So muss an z.b. den Befehl "60h" für das Senden eines neuen Commado-Bytes zwar an den Port 64h senden, doch das Commando-Byte, was dann nach korrekter Annahme des Befehls gesendet werden muss, muss an den Port 60h gesendet werden!<br>Für die möglichen Befehle, die an das Keyboard gesendet werden können, siehe [hier](#). Für die möglichen Mausbefehle, die an diesen Port geschickt werden können, jedoch den Befehl "D4h" auf Port 64h voraussetzen, siehe [hier](#spezifikationen). Für die KC-Befehle, die ein zweites Daten-Byte an diesen Port geschickt verlangen, sie auch [hier](#spezifikationen).<br> |
+|  | *Schreibzugriff* | Wenn an diesen Port geschrieben werden, fungiert dieser entweder als Keyboard-Controller-Daten-Port, oder als Input-Buffer des Keyboards. Zweiteres geschieht, wenn man einfach einen der Befehle, die weiter unten für diesen Port aufgelistet sind, an diesen Port sendet. Dies sind überwiegend Befehle zu adjustierung des Keyboards, wie z.b. das Einstellen der Typematic-Rate. Als Ersteres, also als Daten-Port des KC, wird dieser Port nur genutzt, wenn es Befehle des 64h verlangen. So muss an z.b. den Befehl "60h" für das Senden eines neuen Commado-Bytes zwar an den Port 64h senden, doch das Commando-Byte, was dann nach korrekter Annahme des Befehls gesendet werden muss, muss an den Port 60h gesendet werden!<br>Für die möglichen Befehle, die an das Keyboard gesendet werden können, siehe [hier](#spezifikationen). Für die möglichen Mausbefehle, die an diesen Port geschickt werden können, jedoch den Befehl "D4h" auf Port 64h voraussetzen, siehe [hier](#spezifikationen). Für die KC-Befehle, die ein zweites Daten-Byte an diesen Port geschickt verlangen, sie auch [hier](#spezifikationen).<br> |
 | **64h** | *Lesezugriff* | Das Lesen für diesen Port ist sehr wichtig, wenn man den Keyboard-Controller programmieren will, da man beim Lesen das Status-Byte des KC bekommt, welches z.b. anzeigt, ob gerade Daten zum abholen verfügbar sind, oder ob der letzte Befehl SCHON vollständig verarbeitet wurde! Für die Bitfields des Statusbytes siehe [hier](#spezifikationen)<br> |
 |  | *Schreibzugriff* | Beim Schreibzugriff an diesen Port fungiert dieser als Keyboard-Controller-Input-Buffe, sodass eine Reihe von Byte-großen Befehlen gesendet werden können, die zumeist das System des Keyboards beeinflussen, so muss man auch an diese Port den Befehl "D4h" senden, um den nächsten Befehl, der zum Keyboard-Port(60h) geht, an die Maus senden zu lassen. Eine Reihe von Befehlen ist [hier](#spezifikationen) aufgelistet.<br> |
 
-Werden 2 Bytes verlangt, wird das zweite auch an den Port 60h gesendet.
+Werden 2 Bytes verlangt, wird das zweite auch an den Port 60h gesendet. **BefehlGrößeBeschreibung**
 
-|  |  |  |
-| ------------ | ----------- | ------------------ |
-| **Befehl** | **Größe** | **Beschreibung** |
+------------------------------------------------------------------------
+
+*EEh*1 ByteDieser Befehl sendet zur Diagnostik EEh an den Port 60h.
+
+------------------------------------------------------------------------
+
+*F0h*2 BytesMit diesem Befehl kann abhängig vom zweiten Byte das Scancode Set entweder gesetzt oder abgerufen werden
+
+Das Format des zweiten Byte: 00h - holt den aktuellen Scancode Set ab, sodass dieser an den Port 60h gesendet wird 01h - scancode set 1 (PCs and PS/2 mod 30, except Type 2 ctrlr) 02h - scancode set 2 (ATs, PS/2, default) 03h - scancode set 3
+
+------------------------------------------------------------------------
+
+*F2h*1 ByteKeyboard ID auslesen -\> AT Keyboards liefern als Wert FAh (ACK) zurück
+
+                                      -> MF2 Keyboards liefern ABh + 41h oder aber auch ABh 83h an den Port 60h 
+
+------------------------------------------------------------------------
+
+*F3h*2 BytesSetze die typematic rate/delay. Der Typematic-Delay gibt an, ab wann der Scancode der gedrückten Taste wiederholt an 60h gesendet wird,
+
+die Typematic-Rate dagegen gibt an, wie oft dann der Scancode pro Sekunde gesendet wird. Das Format des zweiten Byte: Bit 7  : 0 (reserved) Bit 6-5 : geben die Typematic Delay an
+
+                   00 = 250ms                01 = 500ms
+                   10 = 750ms                11 = 1000ms
+
+Bit 4-0 : diese beiden geben die Typematic-Rate an, die sich wie folgt zusammen stellt: 1/( (8+A) \* 2^B \* 0,00417 ) pro Sekunde A-\>Bits 2-0 B-\>Bits 4-3
+
+       die Formel ein wenig umgestellt:
+
+240/( (8+A) \* 2^B ) pro Sekunde -\> denn ~0,00417 = 1/240
+
+Bei 00000b würde das dann so aussehen:
+
+     1/ ( (8+0) * 2^0 * 0,00417 )    ->    1/(8*0.00417)    ->    ~30 Widerholungen pro Sekunde
+
+Bei 11111b würde es dagegen so aussehen:
+
+     1/ ( (8+7) * 2^3 * 0,00417 )    ->    1/(120*0,00417) ->    ~2 Wiederholungen pro Sekunde
+
+------------------------------------------------------------------------
+
+*F4h*1 ByteAktivieren des Keyboards
+
+------------------------------------------------------------------------
+
+*F5h*1 ByteDeaktivieren des Keyboards. Wird auch genutzt, wenn etwas aus dem Maus-Output-Buffer gelesen werden soll
+
+------------------------------------------------------------------------
+
+*F6h*1 Byteset default parameters
+
+------------------------------------------------------------------------
+
+*F7h*1 Byteset all keys to typematic (scancode set 3)
+
+------------------------------------------------------------------------
+
+*F8h*1 Byteset all keys to make/release
+
+------------------------------------------------------------------------
+
+*F9h*1 Byteset all keys to make only
+
+------------------------------------------------------------------------
+
+*FAh*1 Byteset all keys to typematic/make/release
+
+------------------------------------------------------------------------
+
+*FBh*1 Byteset all keys to typematic
+
+------------------------------------------------------------------------
+
+*FCh*2 Bytesset specific key to make/release
+
+------------------------------------------------------------------------
+
+*FDh*2 Bytesset specific key to make only
+
+------------------------------------------------------------------------
+
+*FEh*1 Byteresend last scancode
+
+------------------------------------------------------------------------
+
+*FFh*1 Byteperform internal power-on reset function
+
+------------------------------------------------------------------------
+
+Note: Jeder Befehl wird durch das senden von FAh (ACK) an den Port 60h bestätigt, und achtung, denn bei Befehlen, die aus 2 Bytes bestehen, wird jedes  
+
+Byte einzeln bestätigt, für andere SpecialCodes siehe hier
 
 \<
 
-Werden 2 Bytes verlangt, wird das zweite auch an den Port 60h gesendet.
+"D4h" an den Port 64h, dem Controller gesagt werden, dass das nächste Byte, also eins aus dieser Liste, auch an die Maus gesendet wird. Wir "D4h" nicht  
+zuvor verwendet würde der Befehl an die Tastatur und nicht die Maus gehen.  
+ACHTUNG: Bei 2 Byte großen Befehlen muss auch vor dem senden des 2. Bytes dies mit "D4h" initiiert werden.
 
 |  |  |  |
-| ------------ | ----------- | ------------------ |
+| ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Befehl** | **Größe** | **Beschreibung** |
+| *E6h* | 1 Byte | Setze Maus-Scaling auf 1:1 |
+| *E7h* | 1 Byte | Setze Maus-Scaling auf 2:1 |
+| *E8h* | 2 Bytes | Setze Maus-Auflösung. Das zweite Byte sieht dabei wie folgt aus:<br>00h=1/mm<br>01h=2/mm<br>02h=4/mm<br>03h=8/mm |
+| *E9h* | 1 Byte | Hole Status-Information -\> liest 2 Bytes aus, die wie folgt aufgebaut sind<br>Byte 0 - Bitmaske (Beschreibung gilt, wenn Bit=1 ist, ansonsten gilt das logische ander):<br>7 = Reserved (0)<br>6 = Remote rather than Stream mode<br>5 = Maus ist aktiviert<br>4 = Scaling auf 2:1 gesetzt<br>3 = Reserved (0)<br>2 = Linke Maustaste ist gedrückt<br>1 = Reserved (0)<br>0 = Rechte Maustaste ist gedrückt<br>Byte 1 = Auflösung (siehe Befehl E8h) |
+| *EAh* | 1 Byte | Versetze Maus in den Stream-Modus. In diesem aktiviert die Maus bei jeder Änderung den IRQ12, sodass dieser die Daten auslesen kann |
+| *EBh* | 1 Byte | Hole Maus-Data-Paket. sollte nur genutzt werden, wenn der Remote-Modus gesetzt ist. Für eine Beschreibung des Pakets, siehe [hier](#das-maus-daten-packet) |
+| *ECh* | 1 Byte | Versetze Maus aus den Wrap-Modus wieder in den normlen. Der Wrap-Modus ist zur Fehleranalyse gedacht und echoet jeden Befehl, statt ihn mit FAh zu bestätigen.<br> |
+| *EEh* | 1 Byte | Betrete Wrap-Mouds |
+| *F0h* | 1 Byte | Versetze Maus in den Remote-Modus statt ihn den Stream-Modus. In diesem Modus sendet die Maus die Daten nur beim Befehl EBh |
+| *F2h* | 1 Byte | Lese MausID. Returns 00h (siehe auch bei den [SpecialCodes](#spezifikationen)) |
+| *F3h* | 2 Bytes | Setze die Maus-Sample-Rate, also wie oft die Maus Daten abfragen soll. Das zweite Byte kann dann so aussehen:<br>0Ah=10/s 50h= 80/s<br>14h=20/s 64h=100/s<br>28h=40/s C8h=200/s<br>3Ch=60/s |
+| *F4h* | 1 Byte | Aktiviere die Maus und setze den Modus auf Stream. (in diesem Modus wird bei jeder Veränderung der IRQ12 aufgerufen) |
+| *F5h* | 1 Byte | Deaktivier die Maus im Stream-Modus und setze die vorgegebenen Parameter |
+| *F6h* | 1 Byte | Stelle alles auf die Vorgaben zurück -\> StramMode, 4/mm-Maus-Resolution, Scaling 1:1, 100/s-Sample-Rate |
+| *FEh* | 1 Byte | Sende nocheinmal das letzte Maus-Data-Paket (für Beschreibung des Pakets siehe [hier](#das-maus-daten-packet)) |
+| *FFh* | 1 Byte | Reset Maus |
+
+Notiz: Um es zur Sicherheit wiederholen, vor jeden diser Befehle muss "D4h" an den Port 64h geschickt werden. Alle Befehle werden entweder per FAh(ACK)
+
+oder FEh(Resend) aktzeptiert. Ausnahmen hierbei sind ECh, F2h, FFh. Obowhl das mit den Ausnahmen anscheinend nicht stimmt(entnommen ralf Browns interrupt list), denn bei mir hat F2h erst FAh und dann EXTRA noch 00h gesendet!
 
 |  |  |  |
-| ------------ | ----------- | ------------------ |
-| **Befehl** | **Größe** | **Beschreibung** |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **Code** | **Beschreibung** |  |
+| *00h* | (Maus) ID |  |
+| *9Ch* | Dieser Code wurde MIR geschickt, als ich die maus in den Streaminig-Mode geschickt habe, bevor ich den IRQ12-INT-Vektor auf meinen IntHandler gesetzt hatte. ich schlussfolgere daraus mal, dass dieser Code gesendet wird, wenn am IRQ12-Interrupt ein ungültiger Vektor angegeben ist, den die Maus anpingen könnte(im streaming Modus sendet die Maus ja bei jeder veränderung die Veränderung an den IRQ12, wenn dies im Command Byte aktiviert ist)<br> |  |
+| *AAh* | BAT completion code (sent after errorfree Basic Assurance Test) |  |
+| *ABh* | \- | *F2h)* |
+| *EEh* | Wird als Echo bei der Selbstdiagnostik zurückgegeben (siehe Befehl EEh) |  |
+| *F0h* | Keyboard Break Code |  |
+| *FAh* | Acknowledge (ACK) - wird nach jedem Befehl an den Port 60 außer dem Resend und Echo bei der Tastatur und ECh, F2h, FFh bei der Maus gesendet<br> |  |
+| *FCh* | bei MF2-Keyboards wird dies bei einen BAT-Fehler, also einem Fehler in der zweiten Hälfte des Power on self test, geliefert |  |
+| *FDh* | das selbe wie FCh nur bei AT-Keyboards (AT ist der derzeitige Standard) |  |
+| *FEh* | dieser Befehl sagt, dass letzte Befehl nocheinmal gesendet werden soll |  |
 
-|  |  |  |
-| ------------ | ----------- | ------------------ |
-| **Befehl** | **Größe** | **Beschreibung** |
+Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem selftest auf und wartet auf den nächsten Befehl
+
+|  |  |  |  |  |  |  |  |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitfelder des Statusbytes, das beim Lesen des 64h's gelisfert wird |  |  |  |  |  |  |  |
+| **7** | **6** | **5** | **4** | **3** | **2** | **1** | **0** |
+| 1 = Parity-Error bei der letzten Übertragung vom Keyboard |  |  |  |  |  |  |  |
+|  | 1 = Ein Time-Out-Error ist aufgetreten, das heißt, dass die Maus oder die Tastatur nicht reagiert hat. Sollte dieser Fehler auftreten sollte mann den Resend-Befehl nutzen. |  |  |  |  |  |  |
+|  |  | 1 = Die Maus hat Daten für uns im Maus-Output-Buffer bereit leigen und sollten nun abgeholt werden<br>0 = es liegen keine Daten für uns bereit<br> |  |  |  |  |  |
+|  |  |  | 1 = Keyboard gesperrt<br>0 = Keyboard verfügbar<br> |  |  |  |  |
+|  |  |  |  | 1 = Das letzte geschrieben Byte war ein Befehl und ging somit an den Port 64h<br>0 = Das letzte geschriebene Byte waren Daten und gingnen an den Port 60h<br> |  |  |  |
+|  |  |  |  |  | 1 = Selftest OK<br>0 = power up or reset<br> |  |  |
+|  |  |  |  |  |  | 1 = Der Input-Buffer hat noch Daten, also es liegt noch der zuletzt gesendete Befehl in 60h/64h und wartet auf seine Verarbeitung<br>0 = Der Input-Buffer ist leer und alle Befehle sind verarbeitet, nun können wir einen Befehl senden<br> |  |
+|  |  |  |  |  |  |  | 1 = Im OutputBuffer befinden sich Daten für den User. Im Sourcecode wird dies genutzt um auf das Ergebnis einer Operation zu warten<br>0 = Es liegen keine Daten bereit und es sollte somit auch noch nichts aus dem Port 60h ausgelesen werden<br> |
 
 Werden 2 Bytes verlangt, wird das zweite an den Port 60h gesendet!
 
@@ -645,6 +777,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/inde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2232/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2232; parent 2231; 2007-11-11T19:34:07Z -->
+<!-- MediaWiki page 1559; revision 2233; parent 2232; 2007-11-11T19:52:03Z -->
