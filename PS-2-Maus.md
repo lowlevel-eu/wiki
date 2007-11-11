@@ -643,6 +643,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/inde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2229/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2229; parent 2228; 2007-11-11T19:23:38Z -->
+<!-- MediaWiki page 1559; revision 2230; parent 2229; 2007-11-11T19:28:24Z -->
