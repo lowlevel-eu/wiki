@@ -276,17 +276,31 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
 <td colspan="8">Y Movement seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
-      141 ;***************************************************************************************************************
-      142 ;dies ist der IRQ12, der immer angesprungen wird, wenn sich die Daten der Maus verändert habe (sofern der Stream-Mode benutzt wird)
-      143 ;da der IRQ12 immer nur aufgerufen wird, wenn ein Byte im Mouse-Buffer liegt, holen wie auch immer nur ein Byte ab, zählen jedoch mit,
-      144 ;welches Byte des Mouse-data-packets das ist. Unter VirtualBox ging es zwar auch, wenn man alle 3 Byte hintereinander beim Aufrufen
-      145 ;abgeholt hat, doch bei meinem alten PC kam es dabei zu disinformation, sodass ich das so ändern musste.
-      146 ;***************************************************************************************************************
-      147 irq12:
+Die Overflow-Bits geben an, ob die Maus auf der jeweiligen Achse zu schnell bewegt wurden. Die Sign-Bits geben an, ob die jeweiligen Movements negativ sind. Und die Button-Bits geben an, ob die jeweilige Taste gedrückt ist. Der Beispiel-Code, der das Daten-Paket der Maus abholt ist beim Code für den [IRQ12-Handler](#handler-code) in der Rubrik Anwendung zu finden.
+
+      147 irq12-handler:
+       . zum Anschauend des Codes gehe bitte zum IRQ12-Handler in der Rubrik Anwendung (Link in Text oben)
        .
-       . zum Anschauend des Codes gehe bitte zum <wiki>[[#Handler-Code|IRQ12-Handler]]</wiki> in der Rubrik Anwendung
        .
-      234     iret            ;und verlasse den Interrupt
+       .
+      286 .read.mouse:
+      287     push cx             ;cx sichern
+      288     mov cx,0FFFFh       ;auf cx die Höchstmögliche Zahl schieben, damit getmb nicht alles aufhält, nur da es auf ein Byte wartet
+      289     .waitforbytes:      ;und da loop zuerst dekremntiert und dann vergleicht, obs 0 ist, ist 0 die höchste Zahl für cx
+      290         in al,64h           ;nach al das Statusregister vom Keyboard-Contoller holen
+      291         test al,20h         ;und schauen, ob Bit5 gesetzt ist, ob im Mouse-Output-Buffer Daten warten
+      292         jnz .byte_ready     ;wenn ja, dann springe aus dem loop heruas
+      293     loop .waitforbytes  ;ansonsten führe loop-schleife fort, spätestens bis cx 0 ist
+      294         pop cx              ;stelle cx wieder her
+      295         mov ah,1            ;zeroflag löschen, indem 1 auf ah gemoved wird, damit dies dem anwender gegeben werden kann
+      296         or ah,ah            ;und setze ggf. das zeroflag, damit der user gleich danach jz o.ä. schreiben kann
+      297         ret                 ;und springe zum Aufrufsort zurück
+      298     .byte_ready:        ;wenn IP hier ist, dann wartet ein Byte darauf abgeholt zu werden
+      299     in al,60h           ;jetzt holen wir vom Mouse-Output-Buffer das lang ersehnte Byte :)
+      300     pop cx              ;und cx wiederherstellen
+      301     xor ah,ah           ;und lösche ah, da bei fehler auf ah der errorcode ist; setze ggf. zeroflag (macht xor...)
+      302     ret                 ;zum Abschluss springen wir zum Aufrufsort zurück; das Byte liegt dabei in al und ZF zeigt Erfolg bei 1 an
+      303 ;************************* wartet eine Weile ob Daten kommen und speichert diese ggf. in al ab *************************
 
 Besonders interessant ist eig. nur die Prozedur kb.read.mouse, die vom irq12 3x angesprungen wird, um die einzelnen Bytes des Maus-Pakets abzurufen. Der Rest des Codes des IRQ12's speichert diese Bytes, untersucht diese Bytes und verändert die xy-Coordinate des Mauszeigers in den Variablen \[x\] und \[y\] entsprechend der Movement- und Sign-Bits.
 
@@ -811,10 +825,10 @@ Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.
 Zum erstellen des "bunten" Codes habe ich [Andres Highlighter 2.6.5](http://www.andre-simon.de/) genutzt.  
 Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/index2.php?site=http://maxinator.meugster.net/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
 
---[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 21:57, 11. Nov 2007 (CET)
+--[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 22:02, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2241; parent 2240; 2007-11-11T20:57:29Z -->
+<!-- MediaWiki page 1559; revision 2242; parent 2241; 2007-11-11T21:02:25Z -->
