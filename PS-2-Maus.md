@@ -284,7 +284,7 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
       146 ;***************************************************************************************************************
       147 irq12:
        .
-       . zum Anschauend des Codes gehe bitte zum [[#Handler-Code|IRQ12-Handler]] in der Rubrik Anwendung
+       . zum Anschauend des Codes gehe bitte zum <wiki>[[#Handler-Code|IRQ12-Handler]]</wiki> in der Rubrik Anwendung
        .
       234     iret            ;und verlasse den Interrupt
 
@@ -811,10 +811,10 @@ Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.
 Zum erstellen des "bunten" Codes habe ich [Andres Highlighter 2.6.5](http://www.andre-simon.de/) genutzt.  
 Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/index2.php?site=http://maxinator.meugster.net/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
 
---[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 21:55, 11. Nov 2007 (CET)
+--[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 21:57, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2240; parent 2239; 2007-11-11T20:55:13Z -->
+<!-- MediaWiki page 1559; revision 2241; parent 2240; 2007-11-11T20:57:29Z -->
