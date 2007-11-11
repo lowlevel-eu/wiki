@@ -800,7 +800,29 @@ Diese Zeile würde an die Stelle 0;50 auf den Bildschirm eine grüne 4 auf blaue
       369 ;***************************************************************************************
       370 ;Display-Mouse -> eine ganz spezifische Prozedur, die die Daten des Mouse-Packets vernaschaulicht
       371 ;***************************************************************************************
-
+      372 x_pos_mouse_pic db 30   ;obere linke x-position des mausbildes
+      373 y_pos_mouse_pic db 7    ;obere linke y-position des mausbildes
+      374 picw            equ 17  ;Länge einer Zeile des Bildes
+      375 ;                 |-y_pos_mouse_pic
+      376 ;<---x_pos_mouse_pic--->|
+      377 ;                 <---------pic_width-------->
+      378 mouse_pic   db  "   ___________   " ;16 Bytes per line
+      379             db  "  /   |   |   \  "
+      380             db  " |    |   |    | "
+      381             db  " |    |   |    | "
+      382             db  " |-------------| "
+      383             db  " | xmov=       | "
+      384             db  " | ymov=       | "
+      385             db  " |  x=         | "
+      386             db  " |  y=         | "
+      387             db  " |  z=         | "
+      388             db  "  \___________/  "
+      389 
+      390 display_mouse:
+      391     pusha           ;Register sichern
+       .  aus Gründen der Größe dieses Artikels musste ich leider diesen CodeTeil aus dem Artikel entfernen.
+       .  bitte schaut im Sourcecode selber nach, was hier stehen müsste. Die Zeilen-Angaben sind ja gegeben.
+      584     popad           ;dann stelle die Register wieder her
       585     ret             ;und kehre zum Aufrufsort zurück
 
 Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den Code extra stark kommentiert habe. Am Anfang des Dokuments ist der Downloadlink dessen, viel Spaß damit und viel Glück bei eurem OS xD. Wer sich noch tiefer in das Thema einlesen will, dem empfehle ich folgendes [Dokument](http://maxinator.meugster.net/programming/ps2mouse/tp-intf2-4.PDF) über das Synaptic-Touchpad, in dem auch das PS/2-Protokoll gut beschrieben ist. Das ganze Programm kann auch gleich auf meinem [OS](http://maxinator.meugster.net/programme/downloads.html) getestet werden, indem ihr in die Shell als Befehl einfach "ps2mouse" oder "run ps2mouse" eingebt.
@@ -809,10 +831,10 @@ Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.
 Zum erstellen des "bunten" Codes habe ich [Andres Highlighter 2.6.5](http://www.andre-simon.de/) genutzt.  
 Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/index2.php?site=http://maxinator.meugster.net/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
 
---[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 20:23, 11. Nov 2007 (CET)
+--[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 21:13, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2236; parent 2235; 2007-11-11T20:10:44Z -->
+<!-- MediaWiki page 1559; revision 2237; parent 2236; 2007-11-11T20:13:56Z -->
