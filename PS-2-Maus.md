@@ -14,43 +14,17 @@ Ich empfehle den meisten erst einmal die Spezifikationen nur zu überfliegen und
 
 ### Der PS/2-Port und der KBC
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Port</strong></td>
-<td><strong>Zugriff</strong></td>
-<td><strong>Beschreibung</strong></td>
-</tr>
-<tr class="even">
-<td><strong>60h</strong></td>
-<td><em>Lesezugriff</em></td>
-<td>Der Port 60h ist zweiseitig, er kann als Keyboard-Controller(64h)-Daten-Port oder als Keyboard-In-/Output-Buffer dienen. An diesen Port werden die Scancodes der gedrückten Tasten gesendet, die dann der Keyboard-Treiber per "in al,60h" auslesen kann. Deaktiviert man bevor man aus diesem Port etwas ausliest das Keybord per Befehl ADh, so erhält man die Daten aus dem Maus-Output-Buffer! Zum auslesen sei gesagt, dass die nur geschehen sollte, wenn entweder das Bit 1 im Keyboard-Controller-Output-Status-Byte, welches anzeigt, dass das Keyboard am 60h Daten hat, oder das Bit 5 in diesem Status-Byte des 64h gesetzt ist, welches anzeigt, dass im Maus-Output-Buffer Daten liegen! Um das zu realisieren habe ich in meinem Programm ein Schleife genutzt, die eine Zeit lang abfragt, ob Daten da sind.<br></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><em>Schreibzugriff</em></td>
-<td>Wenn an diesen Port geschrieben werden, fungiert dieser entweder als Keyboard-Controller-Daten-Port, oder als Input-Buffer des Keyboards. Zweiteres geschieht, wenn man einfach einen der Befehle, die weiter unten für diesen Port aufgelistet sind, an diesen Port sendet. Dies sind überwiegend Befehle zu adjustierung des Keyboards, wie z.b. das Einstellen der Typematic-Rate. Als Ersteres, also als Daten-Port des KC, wird dieser Port nur genutzt, wenn es Befehle des 64h verlangen. So muss an z.b. den Befehl "60h" für das Senden eines neuen Commado-Bytes zwar an den Port 64h senden, doch das Commando-Byte, was dann nach korrekter Annahme des Befehls gesendet werden muss, muss an den Port 60h gesendet werden!<br>Für die möglichen Befehle, die an das Keyboard gesendet werden können, siehe <a href="#tastatur-befehle-60h">hier</a>. Für die möglichen Mausbefehle, die an diesen Port geschickt werden können, jedoch den Befehl "D4h" auf Port 64h voraussetzen, siehe <a href="#maus-befehle-60h">hier</a>. Für die KC-Befehle, die ein zweites Daten-Byte an diesen Port geschickt verlangen, sie auch <a href="#keyboard-controller-befehle-64h">hier</a>.<br></td>
-</tr>
-<tr class="even">
-<td><strong>64h</strong></td>
-<td><em>Lesezugriff</em></td>
-<td>Das Lesen für diesen Port ist sehr wichtig, wenn man den Keyboard-Controller programmieren will, da man beim Lesen das Status-Byte des KC bekommt, welches z.b. anzeigt, ob gerade Daten zum abholen verfügbar sind, oder ob der letzte Befehl SCHON vollständig verarbeitet wurde! Für die Bitfields des Statusbytes siehe <a href="#kbc-status-byte-64h">hier</a><br></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><em>Schreibzugriff</em></td>
-<td>Beim Schreibzugriff an diesen Port fungiert dieser als Keyboard-Controller-Input-Buffe, sodass eine Reihe von Byte-großen Befehlen gesendet werden können, die zumeist das System des Keyboards beeinflussen, so muss man auch an diese Port den Befehl "D4h" senden, um den nächsten Befehl, der zum Keyboard-Port(60h) geht, an die Maus senden zu lassen.
-<h3 id="tastatur-befehle-60h">Tastatur-Befehle (60h)</h3>
-Eine Reihe von Befehlen ist <a href="#keyboard-controller-befehle-64h">hier</a> aufgelistet.<br />
-</td>
-</tr>
-</tbody>
-</table>
+|  |  |  |
+| ---------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Port** | **Zugriff** | **Beschreibung** |
+| **60h** | *Lesezugriff* | Der Port 60h ist zweiseitig, er kann als Keyboard-Controller(64h)-Daten-Port oder als Keyboard-In-/Output-Buffer dienen. An diesen Port werden die Scancodes der gedrückten Tasten gesendet, die dann der Keyboard-Treiber per "in al,60h" auslesen kann. Deaktiviert man bevor man aus diesem Port etwas ausliest das Keybord per Befehl ADh, so erhält man die Daten aus dem Maus-Output-Buffer! Zum auslesen sei gesagt, dass die nur geschehen sollte, wenn entweder das Bit 1 im Keyboard-Controller-Output-Status-Byte, welches anzeigt, dass das Keyboard am 60h Daten hat, oder das Bit 5 in diesem Status-Byte des 64h gesetzt ist, welches anzeigt, dass im Maus-Output-Buffer Daten liegen! Um das zu realisieren habe ich in meinem Programm ein Schleife genutzt, die eine Zeit lang abfragt, ob Daten da sind.<br> |
+|  | *Schreibzugriff* | Wenn an diesen Port geschrieben werden, fungiert dieser entweder als Keyboard-Controller-Daten-Port, oder als Input-Buffer des Keyboards. Zweiteres geschieht, wenn man einfach einen der Befehle, die weiter unten für diesen Port aufgelistet sind, an diesen Port sendet. Dies sind überwiegend Befehle zu adjustierung des Keyboards, wie z.b. das Einstellen der Typematic-Rate. Als Ersteres, also als Daten-Port des KC, wird dieser Port nur genutzt, wenn es Befehle des 64h verlangen. So muss an z.b. den Befehl "60h" für das Senden eines neuen Commado-Bytes zwar an den Port 64h senden, doch das Commando-Byte, was dann nach korrekter Annahme des Befehls gesendet werden muss, muss an den Port 60h gesendet werden!<br>Für die möglichen Befehle, die an das Keyboard gesendet werden können, siehe [hier](#tastatur-befehle-60h). Für die möglichen Mausbefehle, die an diesen Port geschickt werden können, jedoch den Befehl "D4h" auf Port 64h voraussetzen, siehe [hier](#maus-befehle-60h). Für die KC-Befehle, die ein zweites Daten-Byte an diesen Port geschickt verlangen, sie auch [hier](#keyboard-controller-befehle-64h).<br> |
+| **64h** | *Lesezugriff* | Das Lesen für diesen Port ist sehr wichtig, wenn man den Keyboard-Controller programmieren will, da man beim Lesen das Status-Byte des KC bekommt, welches z.b. anzeigt, ob gerade Daten zum abholen verfügbar sind, oder ob der letzte Befehl SCHON vollständig verarbeitet wurde! Für die Bitfields des Statusbytes siehe [hier](#kbc-status-byte-64h)<br> |
+|  | *Schreibzugriff* | Beim Schreibzugriff an diesen Port fungiert dieser als Keyboard-Controller-Input-Buffe, sodass eine Reihe von Byte-großen Befehlen gesendet werden können, die zumeist das System des Keyboards beeinflussen, so muss man auch an diese Port den Befehl "D4h" senden, um den nächsten Befehl, der zum Keyboard-Port(60h) geht, an die Maus senden zu lassen. Eine Reihe von Befehlen ist [hier](#keyboard-controller-befehle-64h) aufgelistet.<br> |
+
+  
+
+### Tastatur-Befehle (60h)
 
 Dies ist die Liste der Befehle, die an den Keyboard-Input-Buffer (60h) gesendet werden können.
 
@@ -169,6 +143,8 @@ Note: Jeder Befehl wird durch das senden von FAh (ACK) an den Port 60h bestätig
 
 Byte einzeln bestätigt, für andere SpecialCodes siehe hier
 
+  
+
 ### Maus-Befehle (60h)
 
 |  |  |  |
@@ -196,6 +172,8 @@ Notiz: Um es zur Sicherheit wiederholen, vor jeden diser Befehle muss "D4h" an d
 
 oder FEh(Resend) aktzeptiert. Ausnahmen hierbei sind ECh, F2h, FFh. Obowhl das mit den Ausnahmen anscheinend nicht stimmt(entnommen ralf Browns interrupt list), denn bei mir hat F2h erst FAh und dann EXTRA noch 00h gesendet!
 
+  
+
 #### SpecialCodes als Rückgabe von Befehlen (60h)
 
 |  |  |
@@ -215,6 +193,8 @@ oder FEh(Resend) aktzeptiert. Ausnahmen hierbei sind ECh, F2h, FFh. Obowhl das m
 
 Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem selftest auf und wartet auf den nächsten Befehl
 
+  
+
 ### KBC-Status-Byte (64h)
 
 |  |  |  |  |  |  |  |  |
@@ -229,6 +209,8 @@ Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem 
 |  |  |  |  |  | 1 = Selftest OK<br>0 = power up or reset<br> |  |  |
 |  |  |  |  |  |  | 1 = Der Input-Buffer hat noch Daten, also es liegt noch der zuletzt gesendete Befehl in 60h/64h und wartet auf seine Verarbeitung<br>0 = Der Input-Buffer ist leer und alle Befehle sind verarbeitet, nun können wir einen Befehl senden<br> |  |
 |  |  |  |  |  |  |  | 1 = Im OutputBuffer befinden sich Daten für den User. Im Sourcecode wird dies genutzt um auf das Ergebnis einer Operation zu warten<br>0 = Es liegen keine Daten bereit und es sollte somit auch noch nichts aus dem Port 60h ausgelesen werden<br> |
+
+  
 
 ### Keyboard-Controller-Befehle (64h)
 
@@ -255,8 +237,6 @@ Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem 
 | *D3h* | 2 Bytes | Dieser hingegen schreibt das zweite Byte in den Output-Buffer der Maus (auch 60h, aber zum auslesen muss die Tastatur deaktiviert sein) |
 | *D4h* | 1 Byte | Dies ist der wichtigstste Befehl, den wir für unsere Mau benötigen, denn mit diesen Befehl wird der Tastatur gesagt, dass das nächste Byte, was an den Port 60h gesendet wird nicht an den Tastatur-Controller sondern an die Maus gesendet werden soll. Für eine Liste der möglichen Mausbefehle siehe hier.<br> |
 | *EDh* | 2 Bytes | Dieser Befehl ist zum löschen und anschalten der LEDs der Tastatur. Wenn das entsprechende Bit 1 ist, ist die LED an, ansonsten aus.<br>Bit 7-3  : 0 = reserved<br>Bit 2  : 0 = Caps Lock LED off -\> 1 = on<br>Bit 3  : 0 = Num Lock LED off -\> 1 = on<br>Bit 4  : 0 = Scroll Lock LED off -\> 1 = on |
-
-die Tabellen sind noch unvollständig... muss noch gemacht werden.. so'n schrott..
 
 ## Das Maus-Daten-Packet
 
@@ -303,112 +283,10 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
       145 ;abgeholt hat, doch bei meinem alten PC kam es dabei zu disinformation, sodass ich das so ändern musste.
       146 ;***************************************************************************************************************
       147 irq12:
-      148     pusha       ;Register sichern
-      149     push ds     ;Datensegment sichern
-      150     push es     ;es-Segment sichern
-      151     mov ax,cs   ;dann auf ax das codesegment, also das segment, wo das Programm ist, holen
-      152     mov ds,ax   ;um dies auf ds zu kopieren
-      153     mov es,ax   ;und um auch es zu updaten
-      154 
-      155 .start:
-      156 cmp byte[actualb],0     ;überprüfe, ob der Counter 0 ist (Zähler beginnt mit 0!)
-      157 jne .not_first_byte     ;wenn nicht, hole schoneinmal Byte 1 nicht ab und springe somit darüber
-      158 
-      159     call kb.read.mouse          ;Byte #1 nach al holen 
-      160         jnz .end                ;wenn dabei was schief ging, beende den irq
-      161     mov [status],al             ;das Byte in Status speichern, damit es die Prozeduren von int33h nutzen können
-      162     jmp short .end_part_packet  ;beende den Interrupt, da beim nächsten Byte dieser IRQ sowieso nocheinmal aufgerufen wird
-      163 
-      164 .not_first_byte:    
-      165 cmp byte[actualb],1         ;teste ob der Counter 1 ist (Zähler beginnt mit 0!)
-      166 jne .not_second_byte        ;wenn nicht, dann ist es auch nicht das zweite Byte, was wir jetzt holen müssen
-      167 
-      168     call kb.read.mouse          ;Byte #2 aus dem Output-Buffer der Maus holen
-      169         jnz .end                ;wenn dabei was schief ging, beende den irq
-      170     mov [xcoord],al             ;ansonsten zwischenspeichere den x-movement
-      171     test byte[status],00010000b ;dann teste ob das SignBit von x gesetzt ist, wenn ja, ist das movement negativ
-      172     jnz .sign_bit_x             ;und springe zu dem Teil, der subtrahiert statt addiert
-      173         add [x],ax              ;ansonsten addiere zur aktuellen Position die Bewegung -> da ah ja 0 sein muss, wenn der 
-      174                                 ;Programmzeiger hierhergekommen ist, ist das möglich
-      175         jmp short .sign_x       ;und überspringe das Abziehen
-      176     .sign_bit_x:
-      177         not al                  ;negiere x-coord, damit der overflow aufgehoben wird, der ensteht, wenn man 0-1 rechnet
-      178         inc al                  ;da aber -1 = FFh was genoted 0 wäre, addiere nocheinmal 1
-      179         sub [x],ax              ;und ziehe den Betrag des Movements der aktuellen Position ab -> da ah ja 0 sein muss, wenn
-      180                                 ;der Programmzeiger hierhergekommen ist, ist das möglich
-      181     .sign_x:
-      182     jmp short .end_part_packet  ;beende den Interrupt, da beim nächsten Byte dieser IRQ sowieso nocheinmal aufgerufen wird
-      183 
-      184 .not_second_byte:
-      185 cmp byte[actualb],2         ;teste ob der Byte-Counter 2 ist (Zähler beginnt mit 0!)
-      186 jne .not_third_byte         ;wenn nicht, dann muss es das 4. Byte sein, was wir abholen müssen also springe dahin
-      187 
-      188     call kb.read.mouse          ;Byte #3 aus dem Output-Buffer der Maus holen
-      189         jnz .end                ;wenn dabei was schief ging, beende den irq
-      190     mov [ycoord],al             ;ansonsten zwischenspeichere den y-movement
-      191     test byte[status],00100000b ;dann teste ob das SignBit von y gesetzt ist, wenn ja, ist das movement negativ
-      192     jnz .sign_bit_y             ;und springe zu dem Teil, der subtrahiert statt addiert
-      193         add [y],ax              ;ansonsten addiere zur aktuellen Position die Bewegung -> da ah ja 0 sein muss, wenn der
-      194                                 ;Programmzeiger hierhergekommen ist, ist das möglich
-      195         jmp short .sign_y       ;und überspringe das Abziehen
-      196     .sign_bit_y:
-      197         not al                  ;negiere y-coord, damit der overflow aufgehoben wird, der ensteht, wenn man 0-1 rechnet
-      198         inc al                  ;da aber -1 = FFh was genoted 0 wäre, addiere nocheinmal 1
-      199         sub [y],ax              ;und ziehe den Betrag des Movements der aktuellen Position ab -> da ah ja 0 sein muss, wenn
-      200                                 ;der Programmzeiger hierhergekommen ist, ist das möglich
-      201     .sign_y:
-      202     
-      203     cmp byte[mouseid],0         ;prüfe ob die MouseID 0 ist, falls nicht, werden 4 Bytes gesendet, egal ob mouseid 3 oder 4 ist
-      204         jz short .end_packet    ;beende nun den Interrupt, code setzt actualb auf 0 und gibt paket aus
-      205     jmp short .end_part_packet  ;beende den Interrupt, da beim nächsten Byte dieser IRQ sowieso nocheinmal aufgerufen wird
-      206 
-      207 .not_third_byte:
-      208 
-      209     call kb.read.mouse      ;hole Byte #4 aus dem Output-Buffer der Maus
-      210         jnz .end            ;wenn dabei was schief ging, beende den irq
-      211     mov [zbtn45],al         ;sonst speichere es für spätere Benutzung
-      212     test al,00000001b       ;teste ob überhaupt ein z-movement vorliegt, da es nur 1111b und 0001b gibt und dabei bit1 immer 1 ist
-      213         jz .end_packet      ;falls kein z-movment vorhanden sit, überspringe das berechnen eines diesen
-      214     test al,00000010b       ;ansonsten teste, ob es 1111b ist und somit z incrementiert wird, oder es 0001b ist und z dec wird
-      215     jnz .z_mov_plus_1       ;wenn 1111b, dann springe zu code, der [z] incrementiert
-      216         dec byte[z]             ;ansonsten decrementiere [z]
-      217         jmp short .end_packet   ;überspringe den code, der [z] inkrementieren würde
-      218     .z_mov_plus_1:
-      219         inc byte[z]             ;incrementiere [z]
-      220 
-      221 .end_packet:
-      222     mov byte[actualb],-1;setze Byte-Counter auf -1(da es bei .end_.. um 1 incrementiert wird), da Paketbytes abgeholt worden
-      223     call display_mouse  ;dies ist eine sehr umfangreiche Prozedur zur Veranschaulichung der Daten
-      224 .end_part_packet:
-      225     inc byte[actualb]   ;incrementiere den Byte counter um 1, damit beim der irq12-handler weiß, welches byte er bearbeitet
-      226 
-      227 .end:
-      228     mov al,20h      ;schiebe das OCW1/EOI auf al
-      229     out 20h,al      ;und sende den EOI an den Master
-      230     out 0A0h,al     ;und den Slave, da beide ihn benötigen, da Slave am IRQ2 hängt
-      231     pop es          ;es wiederherstellen
-      232     pop ds          ;stelle ds wieder her
-      233     popa            ;stelle auch die anderen Register wieder her
+       .
+       . zum Anschauend des Codes gehe bitte zum [[#Handler-Code|IRQ12-Handler]] in der Rubrik Anwendung
+       .
       234     iret            ;und verlasse den Interrupt
-
-      286 .read.mouse:
-      287     push cx             ;cx sichern
-      288     mov cx,0FFFFh       ;auf cx die Höchstmögliche Zahl schieben, damit getmb nicht alles aufhält, nur da es auf ein Byte wartet
-      289     .waitforbytes:      ;und da loop zuerst dekremntiert und dann vergleicht, obs 0 ist, ist 0 die höchste Zahl für cx
-      290         in al,64h           ;nach al das Statusregister vom Keyboard-Contoller holen
-      291         test al,20h         ;und schauen, ob Bit5 gesetzt ist, ob im Mouse-Output-Buffer Daten warten
-      292         jnz .byte_ready     ;wenn ja, dann springe aus dem loop heruas
-      293     loop .waitforbytes  ;ansonsten führe loop-schleife fort, spätestens bis cx 0 ist
-      294         pop cx              ;stelle cx wieder her
-      295         mov ah,1            ;zeroflag löschen, indem 1 auf ah gemoved wird, damit dies dem anwender gegeben werden kann
-      296         or ah,ah            ;und setze ggf. das zeroflag, damit der user gleich danach jz o.ä. schreiben kann
-      297         ret                 ;und springe zum Aufrufsort zurück
-      298     .byte_ready:        ;wenn IP hier ist, dann wartet ein Byte darauf abgeholt zu werden
-      299     in al,60h           ;jetzt holen wir vom Mouse-Output-Buffer das lang ersehnte Byte :)
-      300     pop cx              ;und cx wiederherstellen
-      301     xor ah,ah           ;und lösche ah, da bei fehler auf ah der errorcode ist; setze ggf. zeroflag (macht xor...)
-      302     ret                 ;zum Abschluss springen wir zum Aufrufsort zurück; das Byte liegt dabei in al und ZF zeigt Erfolg bei 1 an
-      303 ;************************* wartet eine Weile ob Daten kommen und speichert diese ggf. in al ab *************************
 
 Besonders interessant ist eig. nur die Prozedur kb.read.mouse, die vom irq12 3x angesprungen wird, um die einzelnen Bytes des Maus-Pakets abzurufen. Der Rest des Codes des IRQ12's speichert diese Bytes, untersucht diese Bytes und verändert die xy-Coordinate des Mauszeigers in den Variablen \[x\] und \[y\] entsprechend der Movement- und Sign-Bits.
 
@@ -735,7 +613,9 @@ IRQ12 im PIC maskieren/deaktivieren
 
 Programm beenden
 
-### IRQ12-Handler + Konzept
+### IRQ12-Handler
+
+#### Konzept
 
 Doch wie sieht nun unser Herz der IRQ12-Handler aus? Der Handler wird aufgerufen, sobald Daten in der Maus vorhanden sind, wird der IRQ12 angesprungen, an dem unser Handler gehakt ist. Dieser holt zuerst das vorhandene Byte ab und schaut dann nach, welches Byte im Daten-Paket das nun ist (1,2,3 oder 4). Dieses Nachschauen geschieht, indem der Handler bei jedem erhaltenen Byte einen Counter incrementiert, je nachdem, wie hoch der Counter ist, weiß der Handler welches Byte er momentan abgeholt hat. Ist der Handler dann bei dem Bearbeiten und Interpretieren von Byte 3, prüft dieser per der bei der Aktivierungsequenz gespeicherten MausID, ob ein 4.Byte folgen wird, oder nicht, wenn nicht, setzt er den Byte-Counter auf 0, sodass beim nächsten Erhalten von Daten der IRQ12-Handler das Byte als erstes Byte des Maus-Data-Packets interpretiert. Je nachdem, was für Daten gesendet werden, wird auch die momentan virtuelle x-Position, z-Position(Mausrad), sowie die y-Postion ausgerichtet und in jeweiligen Variablen gespeichert. Hierfür würde das Konzept wie folgt aussehen:
 
@@ -779,7 +659,9 @@ Rufe Prozedur auf, die Daten-Paket visualisert
 
 Beende Handler mit iret
 
-Joa und in Assembler würde das wie folgt aussehen (selbe Code wie weiter oben, wo per Beispiel gezeigt wird, wie man das Maus-Daten-Paket abholt):
+#### Handler-Code
+
+Joa und in Assembler würde das wie folgt aussehen:
 
       141 ;***************************************************************************************************************
       142 ;dies ist der IRQ12, der immer angesprungen wird, wenn sich die Daten der Maus verändert habe (sofern der Stream-Mode benutzt wird)
@@ -798,10 +680,70 @@ Joa und in Assembler würde das wie folgt aussehen (selbe Code wie weiter oben, 
       155 .start:
       156 call kb.read.mouse      ;Byte #1,#2,#3 oder #4 nach al holen
       157     jnz .end            ;wenn dabei was schief ging, beende den irq
-       .
-       .  aus Gründen der Größe dieses Artikels musste ich leider diesen CodeTeil aus dem Artikel entfernen.
-       .  bitte schaut im Sourcecode selber nach, was hier stehen müsste. Die Zeilen-Angaben sind ja gegeben.
-       .
+      158 
+      159 cmp byte[actualb],0     ;überprüfe, ob der Counter 0 ist (Zähler beginnt mit 0!)
+      160 jne .not_first_byte     ;wenn nicht, hole schoneinmal Byte 1 nicht ab und springe somit darüber
+      161 
+      162     mov [status],al             ;das Byte in Status speichern, damit es die Prozeduren von int33h nutzen können
+      163     jmp short .end_part_packet  ;beende den Interrupt, da beim nächsten Byte dieser IRQ sowieso nocheinmal aufgerufen wird
+      164 
+      165 .not_first_byte:    
+      166 cmp byte[actualb],1         ;teste ob der Counter 1 ist (Zähler beginnt mit 0!)
+      167 jne .not_second_byte        ;wenn nicht, dann ist es auch nicht das zweite Byte, was wir jetzt holen müssen
+      168 
+      169     mov [xcoord],al             ;ansonsten zwischenspeichere den x-movement
+      170     test byte[status],00010000b ;dann teste ob das SignBit von x gesetzt ist, wenn ja, ist das movement negativ
+      171     jnz .sign_bit_x             ;und springe zu dem Teil, der subtrahiert statt addiert
+      172         add [x],ax              ;ansonsten addiere zur aktuellen Position die Bewegung -> da ah ja 0 sein muss, wenn der 
+      173                                 ;Programmzeiger hierhergekommen ist, ist das möglich
+      174         jmp short .sign_x       ;und überspringe das Abziehen
+      175     .sign_bit_x:
+      176         not al                  ;negiere x-coord, damit der overflow aufgehoben wird, der ensteht, wenn man 0-1 rechnet
+      177         inc al                  ;da aber -1 = FFh was genoted 0 wäre, addiere nocheinmal 1
+      178         sub [x],ax              ;und ziehe den Betrag des Movements der aktuellen Position ab -> da ah ja 0 sein muss, wenn
+      179                                 ;der Programmzeiger hierhergekommen ist, ist das möglich
+      180     .sign_x:
+      181     jmp short .end_part_packet  ;beende den Interrupt, da beim nächsten Byte dieser IRQ sowieso nocheinmal aufgerufen wird
+      182 
+      183 .not_second_byte:
+      184 cmp byte[actualb],2         ;teste ob der Byte-Counter 2 ist (Zähler beginnt mit 0!)
+      185 jne .not_third_byte         ;wenn nicht, dann muss es das 4. Byte sein, was wir abholen müssen also springe dahin
+      186 
+      187     mov [ycoord],al             ;ansonsten zwischenspeichere den y-movement
+      188     test byte[status],00100000b ;dann teste ob das SignBit von y gesetzt ist, wenn ja, ist das movement negativ
+      189     jnz .sign_bit_y             ;und springe zu dem Teil, der subtrahiert statt addiert
+      190         add [y],ax              ;ansonsten addiere zur aktuellen Position die Bewegung -> da ah ja 0 sein muss, wenn der
+      191                                 ;Programmzeiger hierhergekommen ist, ist das möglich
+      192         jmp short .sign_y       ;und überspringe das Abziehen
+      193     .sign_bit_y:
+      194         not al                  ;negiere y-coord, damit der overflow aufgehoben wird, der ensteht, wenn man 0-1 rechnet
+      195         inc al                  ;da aber -1 = FFh was genoted 0 wäre, addiere nocheinmal 1
+      196         sub [y],ax              ;und ziehe den Betrag des Movements der aktuellen Position ab -> da ah ja 0 sein muss, wenn
+      197                                 ;der Programmzeiger hierhergekommen ist, ist das möglich
+      198     .sign_y:
+      199     
+      200     cmp byte[mouseid],0         ;prüfe ob die MouseID 0 ist, falls nicht, werden 4 Bytes gesendet, egal ob mouseid 3 oder 4 ist
+      201         jz short .end_packet    ;beende nun den Interrupt, code setzt actualb auf 0 und gibt paket aus
+      202     jmp short .end_part_packet  ;beende den Interrupt, da beim nächsten Byte dieser IRQ sowieso nocheinmal aufgerufen wird
+      203 
+      204 .not_third_byte:
+      205 
+      206     mov [zbtn45],al         ;sonst speichere es für spätere Benutzung
+      207     test al,00000001b       ;teste ob überhaupt ein z-movement vorliegt, da es nur 1111b und 0001b gibt und dabei bit1 immer 1 ist
+      208         jz .end_packet      ;falls kein z-movment vorhanden sit, überspringe das berechnen eines diesen
+      209     test al,00000010b       ;ansonsten teste, ob es 1111b ist und somit z incrementiert wird, oder es 0001b ist und z dec wird
+      210     jnz .z_mov_plus_1       ;wenn 1111b, dann springe zu code, der [z] incrementiert
+      211         dec byte[z]             ;ansonsten decrementiere [z]
+      212         jmp short .end_packet   ;überspringe den code, der [z] inkrementieren würde
+      213     .z_mov_plus_1:
+      214         inc byte[z]             ;incrementiere [z]
+      215 
+      216 .end_packet:
+      217     mov byte[actualb],-1;setze Byte-Counter auf -1(da es bei .end_.. um 1 incrementiert wird), da Paketbytes abgeholt worden
+      218     call display_mouse  ;dies ist eine sehr umfangreiche Prozedur zur Veranschaulichung der Daten
+      219 .end_part_packet:
+      220     inc byte[actualb]   ;incrementiere den Byte counter um 1, damit beim der irq12-handler weiß, welches byte er bearbeitet
+      221 
       222 .end:
       223     mov al,20h      ;schiebe das OCW1/EOI auf al
       224     out 20h,al      ;und sende den EOI an den Master
@@ -869,10 +811,10 @@ Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.
 Zum erstellen des "bunten" Codes habe ich [Andres Highlighter 2.6.5](http://www.andre-simon.de/) genutzt.  
 Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/index2.php?site=http://maxinator.meugster.net/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
 
---[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 21:48, 11. Nov 2007 (CET)
+--[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 21:55, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2239/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2239; parent 2238; 2007-11-11T20:48:12Z -->
+<!-- MediaWiki page 1559; revision 2240; parent 2239; 2007-11-11T20:55:13Z -->
