@@ -439,6 +439,8 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 <td colspan="4">Z Movement seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
+  
+
 ## Anwendung
 
 ### IRQ12-Handler installieren
@@ -825,10 +827,10 @@ Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.
 Zum erstellen des "bunten" Codes habe ich [Andres Highlighter 2.6.5](http://www.andre-simon.de/) genutzt.  
 Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/index2.php?site=http://maxinator.meugster.net/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
 
---[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 22:02, 11. Nov 2007 (CET)
+--[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 22:03, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2243/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2242; parent 2241; 2007-11-11T21:02:25Z -->
+<!-- MediaWiki page 1559; revision 2243; parent 2242; 2007-11-11T21:03:54Z -->
