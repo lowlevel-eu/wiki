@@ -20,7 +20,13 @@ Ich empfehle den meisten erst einmal die Spezifikationen nur zu überfliegen und
 | **64h** | *Lesezugriff* | Das Lesen für diesen Port ist sehr wichtig, wenn man den Keyboard-Controller programmieren will, da man beim Lesen das Status-Byte des KC bekommt, welches z.b. anzeigt, ob gerade Daten zum abholen verfügbar sind, oder ob der letzte Befehl SCHON vollständig verarbeitet wurde! Für die Bitfields des Statusbytes siehe [hier](#spezifikationen)<br> |
 |  | *Schreibzugriff* | Beim Schreibzugriff an diesen Port fungiert dieser als Keyboard-Controller-Input-Buffe, sodass eine Reihe von Byte-großen Befehlen gesendet werden können, die zumeist das System des Keyboards beeinflussen, so muss man auch an diese Port den Befehl "D4h" senden, um den nächsten Befehl, der zum Keyboard-Port(60h) geht, an die Maus senden zu lassen. Eine Reihe von Befehlen ist [hier](#spezifikationen) aufgelistet.<br> |
 
-Werden 2 Bytes verlangt, wird das zweite auch an den Port 60h gesendet. **BefehlGrößeBeschreibung**
+Dies ist die Liste der Befehle, die an den Keyboard-Input-Buffer (60h) gesendet werden können.
+
+Werden 2 Bytes verlangt, wird das zweite auch an den Port 60h gesendet.
+
+------------------------------------------------------------------------
+
+**BefehlGrößeBeschreibung**
 
 ------------------------------------------------------------------------
 
@@ -117,12 +123,9 @@ Byte einzeln bestätigt, für andere SpecialCodes siehe hier
 
 \<
 
-"D4h" an den Port 64h, dem Controller gesagt werden, dass das nächste Byte, also eins aus dieser Liste, auch an die Maus gesendet wird. Wir "D4h" nicht  
-zuvor verwendet würde der Befehl an die Tastatur und nicht die Maus gehen.  
-ACHTUNG: Bei 2 Byte großen Befehlen muss auch vor dem senden des 2. Bytes dies mit "D4h" initiiert werden.
-
 |  |  |  |
-| ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dies ist die Liste der Befehle, die zur Adjustierung der Maus dienen. Bevor einer dieser Befehle an den Port 60h gesendet werden kann, muss zuerst per<br>"D4h" an den Port 64h, dem Controller gesagt werden, dass das nächste Byte, also eins aus dieser Liste, auch an die Maus gesendet wird. Wir "D4h" nicht<br>zuvor verwendet würde der Befehl an die Tastatur und nicht die Maus gehen.<br>ACHTUNG: Bei 2 Byte großen Befehlen muss auch vor dem senden des 2. Bytes dies mit "D4h" initiiert werden.<br> |  |  |
 | **Befehl** | **Größe** | **Beschreibung** |
 | *E6h* | 1 Byte | Setze Maus-Scaling auf 1:1 |
 | *E7h* | 1 Byte | Setze Maus-Scaling auf 2:1 |
@@ -146,7 +149,8 @@ Notiz: Um es zur Sicherheit wiederholen, vor jeden diser Befehle muss "D4h" an d
 oder FEh(Resend) aktzeptiert. Ausnahmen hierbei sind ECh, F2h, FFh. Obowhl das mit den Ausnahmen anscheinend nicht stimmt(entnommen ralf Browns interrupt list), denn bei mir hat F2h erst FAh und dann EXTRA noch 00h gesendet!
 
 |  |  |  |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| SpecialCode Liste - SpecialCodes werden an den Port 60h nach Befehlen geschickt |  |  |
 | **Code** | **Beschreibung** |  |
 | *00h* | (Maus) ID |  |
 | *9Ch* | Dieser Code wurde MIR geschickt, als ich die maus in den Streaminig-Mode geschickt habe, bevor ich den IRQ12-INT-Vektor auf meinen IntHandler gesetzt hatte. ich schlussfolgere daraus mal, dass dieser Code gesendet wird, wenn am IRQ12-Interrupt ein ungültiger Vektor angegeben ist, den die Maus anpingen könnte(im streaming Modus sendet die Maus ja bei jeder veränderung die Veränderung an den IRQ12, wenn dies im Command Byte aktiviert ist)<br> |  |
@@ -174,11 +178,177 @@ Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem 
 |  |  |  |  |  |  | 1 = Der Input-Buffer hat noch Daten, also es liegt noch der zuletzt gesendete Befehl in 60h/64h und wartet auf seine Verarbeitung<br>0 = Der Input-Buffer ist leer und alle Befehle sind verarbeitet, nun können wir einen Befehl senden<br> |  |
 |  |  |  |  |  |  |  | 1 = Im OutputBuffer befinden sich Daten für den User. Im Sourcecode wird dies genutzt um auf das Ergebnis einer Operation zu warten<br>0 = Es liegen keine Daten bereit und es sollte somit auch noch nichts aus dem Port 60h ausgelesen werden<br> |
 
+Dies ist die Liste der Befehle, die an den Keyboard-Controller (64h) gesendet werden können.  
+
 Werden 2 Bytes verlangt, wird das zweite an den Port 60h gesendet!
 
-|  |  |  |
-| ------------ | ----------- | ------------------ |
-| **Befehl** | **Größe** | **Beschreibung** |
+------------------------------------------------------------------------
+
+**BefehlGrößeBeschreibung**
+
+------------------------------------------------------------------------
+
+*20h*1 ByteDieser Befehl sendet das derzeitige Commando-Byte an den Port 60h, wo es vom User abgeholt werden muss.
+
+Der Aufbau des Commando-Bytes ist folgendermaßen (Beschr. gilt, wenn Bit=1 ist, ansonsten gilt das Gegenteil):
+
+7 - reserved (0)
+
+6 - IBM PC Kompatibilitäts-Modus - Auch XLAT, konvertiert wie der Befehl, alle Scancodes zu Set 1, ansonsten werden Roh-Daten
+
+        geliefert. -> dieses Bit muss gelöscht sein, bevor man die Scancode-Sets per F0h wechselt, denn sonst nur Kauderwelsch ensteht :)
+
+5 - IBM PC Kompatibilitäts-Modus - 0 - use 11-bit codes, 1 - use 8086 codes
+
+4 - deaktiviere Keyboard
+
+3 - ignoriere Sicherheitsverschluss-Status
+
+2 - System Flag
+
+1 - Aktiviert die Aktivierung des IRQ12, wenn Mausdaten, wie das MouseDataPacket, im Buffer vorhanden sind (Bit5 bei 64h gesetzt)
+
+0 - Aktiviert die Aktivierung des IRQ1, wenn Tastaturdaten, wie Scancodes, im Buffer vorhanden sind (Bit1 bei 64h gesetzt)
+
+Notiz: Eigentlich sind bloß Bit 0 und 1 und evtl. noch Bit 4 für uns interessant!
+
+------------------------------------------------------------------------
+
+*60h*2 BytesDieser Befehl sendet das 2.Byte, Commando-Byte an den Keyboard-Controller. Commando-Byte-Bechreibung siehe 20h
+
+------------------------------------------------------------------------
+
+*A4h*1 BytePrüfe, ob ein Passwort installiert ist, wenn ja gibt es FAh und wenn nicht F1h an den Port 60h aus
+
+------------------------------------------------------------------------
+
+*A5h 1 Byte Lade das Passwort. Das Passwort wird als Byte-Stream an den Port 60h gesendet und endet mit einem Byte=00h*
+
+------------------------------------------------------------------------
+
+*A6h*1 BytePrüfe Passwort
+
+------------------------------------------------------------------------
+
+*A7h*1 ByteDeaktiviere den Maus-Port, sodass die Maus wir deaktiviert
+
+------------------------------------------------------------------------
+
+*A8h*1 ByteAktiviere die Maus
+
+------------------------------------------------------------------------
+
+*A9h*1 Byte Teste Mausport, das Ergebnis wird an 60h geschickt und kann folgendermaßen aussehen:
+
+00h - no error
+
+01h - keyboard clock line stuck low
+
+02h - keyboard clock line stuck high
+
+03h - keyboard data line is stuck low
+
+04h - keyboard data line stuck high
+
+05h - (Compaq only) diagnostic feature
+
+------------------------------------------------------------------------
+
+*FFh - Total error*
+
+------------------------------------------------------------------------
+
+*AAh*1 ByteInitiiert Selftest und sendet bei erfolgreichen Test 55h an 60h, bei Fehler jedoch FCh an 60h
+
+------------------------------------------------------------------------
+
+*ABh*1 ByteTestet das Interface, für mögliche Ergebnisse siehe Befehl A9h
+
+------------------------------------------------------------------------
+
+*ADh*1 ByteDeaktiviere Keyboard (Bit 4 in Commando-Byte).
+
+------------------------------------------------------------------------
+
+*AEh*1 ByteAktiviere Keyboard wieder (Bit 4 in commando-Byte)
+
+------------------------------------------------------------------------
+
+*C0h*1 ByteLese Inputport-Byte nach 60h aus. Dieses ist wie folgt aufgebaut
+
+7 - Keyboard aktiviert/nicht gesperrt
+
+6 - 0 - Video ist CGA (Farbe)
+
+         1 - Video ist MDA (schwarz/weiß)
+
+5 - 0 - Manufaktur-jumper ist installiert (Manufaktor-Testmodus)
+
+         1 - normal
+
+4 - war früher dafür da um die Größe des Ram zu symbolisieren, wir aber nciht mehr genutzt
+
+3 - reserved
+
+2 - Keyboard hat kein Strom
+
+1 - current mouse serial data input state
+
+0 - current keyboard serial input state
+
+------------------------------------------------------------------------
+
+*D0h*1 ByteLese das Ouputport-Byte und platziere in auf Port 60h um ihn odrt abholen lassen zu können.
+
+Das Byte sieht folgendermaßen aus(Beschr. gilt, wenn Bit=1 ist):
+
+7 - keyboard data (output)
+
+6 - keyboard clock (output/signal)
+
+5 - In OutputBuffer ist ein Mausbyte (sobald dies gesetzt ist wird IRQ12 aufgerufen, sofern Bit1 im Commando-Byte gesetzt ist)
+
+4 - In OutputBuffer sind Daten der Tastatur byte (aktiviert IRQ1, sofern Bit0 im Commando-Byte gesetzt ist)
+
+3 - mouse data (output)
+
+2 - mouse clock (output)
+
+1 - Aktiviere die A20-Gate
+
+0 - System reset/Reset processor
+
+Notiz: Bit 0 sollte immer gesetzt sein, wenn man per D1h das Outputport-Byte schreibt :)
+
+------------------------------------------------------------------------
+
+*D1h*2 BytesDas zweite Byte ist das Outpuport-Byte, welches somit das Outputport-Byte neu setzt. siehe auch Befehl D0h
+
+------------------------------------------------------------------------
+
+*D2h*2 BytesDieser Befehl schreibt das zweite Byte in den Output-Buffer des Keyboards (60h)
+
+------------------------------------------------------------------------
+
+*D3h*2 BytesDieser hingegen schreibt das zweite Byte in den Output-Buffer der Maus (auch 60h, aber zum auslesen muss die Tastatur deaktiviert sein)
+
+------------------------------------------------------------------------
+
+*D4h*1 ByteDies ist der wichtigstste Befehl, den wir für unsere Mau benötigen, denn mit diesen Befehl wird der Tastatur gesagt, dass das nächste Byte,
+
+was an den Port 60h gesendet wird nicht an den Tastatur-Controller sondern an die Maus gesendet werden soll. Für eine Liste der möglichen Mausbefehle siehe hier.
+
+------------------------------------------------------------------------
+
+*EDh*2 BytesDieser Befehl ist zum löschen und anschalten der LEDs der Tastatur. Wenn das entsprechende Bit 1 ist, ist die LED an, ansonsten aus.
+
+Bit 7-3  : 0 = reserved
+
+Bit 2  : 0 = Caps Lock LED off -\> 1 = on
+
+Bit 3  : 0 = Num Lock LED off -\> 1 = on
+
+Bit 4  : 0 = Scroll Lock LED off -\> 1 = on
 
 die Tabellen sind noch unvollständig... muss noch gemacht werden.. so'n schrott..
 
@@ -777,6 +947,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/inde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2233; parent 2232; 2007-11-11T19:52:03Z -->
+<!-- MediaWiki page 1559; revision 2234; parent 2233; 2007-11-11T20:00:03Z -->
