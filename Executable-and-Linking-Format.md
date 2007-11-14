@@ -207,6 +207,15 @@ Dieses Feld gibt den Typ des Segments an, für eine ausführbare Elf-Datei ist v
 | PT_LOPROC | 0x70000000 | Reserviert |
 | PT_HIPROC | 0x7fffffff | Reserviert |
 
+Außerdem habe ich noch diese (anscheinend unoffiziellen) Werte in Linux-Header-Dateien (<http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/include/linux/elf.h#L35>) gefunden.
+
+| Name | Wert |
+| ----------------- | ------------------- |
+| PT_LOOS | 0x60000000 |
+| PT_HIOS | 0x6fffffff |
+| PT_GNU_EH_FRAME | 0x6474e550 |
+| PT_GNU_STACK | PT_LOOS+0x474e551 |
+
 #### p_offset
 
 Offset in der Datei, an dem das Segment beginnt.
@@ -263,6 +272,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2248/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2193; parent 2191; 2007-10-20T17:34:25Z -->
+<!-- MediaWiki page 1528; revision 2248; parent 2193; 2007-11-14T21:04:43Z -->
