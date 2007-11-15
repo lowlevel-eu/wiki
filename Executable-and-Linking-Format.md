@@ -211,6 +211,7 @@ Außerdem habe ich noch diese (anscheinend unoffiziellen) Werte in Linux-Header-
 
 | Name | Wert |
 | ----------------- | ------------------- |
+| PT_TLS | 7 |
 | PT_LOOS | 0x60000000 |
 | PT_HIOS | 0x6fffffff |
 | PT_GNU_EH_FRAME | 0x6474e550 |
@@ -272,6 +273,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2249/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2249; parent 2248; 2007-11-15T11:37:45Z -->
+<!-- MediaWiki page 1528; revision 2250; parent 2249; 2007-11-15T17:58:34Z -->
