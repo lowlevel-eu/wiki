@@ -10,7 +10,7 @@ Elf ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten 
 
 ### Elf-Header
 
-Der Elf-Header ist wie folg aufgebaut
+Der Elf-Header ist wie folgt aufgebaut.
 
 | Name | Offset | Größe | Beschreibung |
 | ----------------------------- | -------- | ------- | ------------------------------------------------------------------- |
@@ -272,6 +272,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2248/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2249/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2248; parent 2193; 2007-11-14T21:04:43Z -->
+<!-- MediaWiki page 1528; revision 2249; parent 2248; 2007-11-15T11:37:45Z -->
