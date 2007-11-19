@@ -4,25 +4,44 @@ meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#
 
 ## Entwicklung
 
-meinOS ist noch in einer sehr frühen Entwicklungsphase, es wird aber schon fast komplettes Memorymanagement, Taskmanagement und IPC unterstützt. Da meinOS ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2") ist und noch keine Programme für es entwickelt wurden, gibt es auch noch überhaupt keine Treiber.
+Im Moment werden einige Kernel-Funktionen noch vollendet und es müssen noch viele Treiber geschrieben werden. Außerdem muss noch sehr viel getestet werden, da bis jetzt z.B noch keine Möglichkeit besteht Server oder Bibliotheken auf Logik-Fehler zu überprüfen.
 
-## Komplett
+### Komplett (oder noch in Arbeit)
 
-- Memorymanagement (Speicherzuweisungs-Routinen nicht komplett)
-- Taskmanagement (Routine zum erzeugen eines neuen Tasks und Dispatcher nicht komplett)
-- IPC (Jeder Prozess hat für jeden Anderen 1 Byte Buffer; asynchrones IPC; Zuteilung über Ports)
-- (Kernel-)Timer (100Hz) - zeitversetztes Aufrufen von Funktionen (z.B für Beep)
-- (Kernel-)Textausgabe - die meisten Steuerzeichen werden unterstützt.
+- Kernel
+  - Taskmanagement (Pagesuchalgorithmus muss erneuert werden)
+  - IPC (Message Passing)
+  - (Kernel-)Timer (100Hz) - zeitversetztes Aufrufen von Funktionen (z.B für Beep)
+  - (Kernel-)Textausgabe - die meisten Steuerzeichen werden unterstützt.
 
-## Planung
+<!-- -->
 
-- Init-Task (Initialisierung aller Treiber und des login-Programms)
-- Filesystem
+- Server
+  - Keyboard-Server
+  - Console-Server
+  - COM-Server
+  - Floppy-Server (noch in Arbeit)
+  - Filesystem-Server (noch in Arbeit)
+
+<!-- -->
+
+- Bibliotheken
+  - ScreenIO-Bibliothek
+  - System-Bibliothek (wird bestimmt noch größer)
+  - IPC-Bibliothek
+  - DevFS-Bibliothek
+
+(Server und Bibliotheken sind noch nicht vollständig getestet, da Programme noch nicht richtig geladen werden.)
+
+### Planung
+
+- Init-Task (Initialisierung aller Treiber und des Login-Programms)
+- Shell (eventuell Portierung einer vorhandenen Shell)
 - devfs (FS-Treiber für /dev)
-- Console-Treiber (Keyboard und Textdisplay)
 - Floppy-Treiber
 - Ext2-Treiber
 - eventuell pipefs (Für Named Pipes ohne "richtiges" FS, dass Named Pipes unterstützt)
+- Einige kleine Programme (cp, mv, rm, mkfile, cat, echo, usw.)
 
 Wie man sieht, ist noch eine Menge zu tun.
 
@@ -36,6 +55,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2214; parent 2182; 2007-10-29T18:54:48Z -->
+<!-- MediaWiki page 1551; revision 2255; parent 2214; 2007-11-19T19:35:48Z -->
