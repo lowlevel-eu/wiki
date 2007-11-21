@@ -255,8 +255,25 @@ Aus \#lost (29. Juni 2007)
     [13:18] <Homix> hmm kwolf, kommt deine TCP/IP/RTL8139 Netzwerkimplementierung auch nicht auf melr als paar KB pro sekunde ?
     [13:19] <phoenix64> Hmmm... dann ist dein Netzwerktreiber in etwa so schnell wie mein erster VGA-Treiber :)
 
+  
+
+------------------------------------------------------------------------
+
+  
+Aus \#lost (21. November 2007)
+
+    21:04:24 < VerrueckterPinguin> Hm wenn du grad schon am Definitionen suchen bist... Wie könnte man das bezeichen, was LostIO macht? ;-)
+    21:05:30 < VerrueckterPinguin> Ich muss mir nämlich langsam Gedanken machen, wie ich das den potentiellen Betreuern für meine Maturaarbeit erklären könnte. ;-)
+    21:07:16 <*taljeth> Virtuelles Dateisystem? ;-)
+    21:08:58 < VerrueckterPinguin> Hm hat was... aber das ist doch viel zu einfach *g*
+    21:09:28 <*taljeth> Im bin im Managersprech aber nicht so gut. ;-)
+    21:09:45 < VerrueckterPinguin> ;-)
+    21:19:40 <*taljeth> VerrueckterPinguin: Es handelt sich bei LostIO um eine innovative Managementsoftware, um durch eine serviceorientierte Abwicklung und proaktivem virtuellem Outsourcing zeitnah eine dynamische Kommunikation arbeitsteilig arbeitender Ressourcen zu erreichen und durch deren Output Kundennutzen zu generieren.
+    21:20:01 < VerrueckterPinguin> omfg *g*
+    21:20:07 <*taljeth> Sorry, mußte zwischendurch noch telefonieren, deswegen hat's länger gedauert. ;-)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 2042; parent 2010; 2007-06-29T11:26:26Z -->
+<!-- MediaWiki page 1435; revision 2257; parent 2042; 2007-11-21T21:39:15Z -->
