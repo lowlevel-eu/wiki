@@ -24,6 +24,6 @@ Als Interprozesskommunikation (IPC, engl. inter-process communication) bezeichne
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 1990; parent 1985; 2007-05-12T18:41:41Z -->
+<!-- MediaWiki page 1530; revision 2272; parent 1990; 2007-11-25T21:12:15Z -->
