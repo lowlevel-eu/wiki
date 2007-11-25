@@ -45,16 +45,18 @@ Im Moment werden einige Kernel-Funktionen noch vollendet und es müssen noch vie
 
 Wie man sieht, ist noch eine Menge zu tun.
 
-## Screenshot
+## Download
+
+- Unoffizielles Release vom 19.11.07:
+  - Floppy-Image: [floppy.img.gz](http://wonsheimlan.wo.funpic.de/meinos/floppy.img.gz) (76,5kB)
+  - Sourcecode: [meinos.tar.gz](http://wonsheimlan.wo.funpic.de/meinos/meinos.tar.gz) (218,6kB)
+
+## Screenshot (Unoffizielles Release vom 19.11.07)
 
 ![screen.gif](http://wonsheimlan.wo.funpic.de/meinos/screen.gif)
 
-## Links
-
-- [meinOS-Website](http://wonsheimlan.wo.funpic.de/meinos/)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2255; parent 2214; 2007-11-19T19:35:48Z -->
+<!-- MediaWiki page 1551; revision 2276; parent 2255; 2007-11-25T21:20:03Z -->
