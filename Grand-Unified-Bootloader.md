@@ -20,9 +20,10 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich wenn man keinen ei
 ## Weblinks
 
 - <http://de.wikipedia.org/wiki/GRUB>
+- <http://www.gnu.org/software/grub/>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2265/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 2264; parent 0; 2007-11-25T15:03:57Z -->
+<!-- MediaWiki page 1567; revision 2265; parent 2264; 2007-11-25T18:38:02Z -->
