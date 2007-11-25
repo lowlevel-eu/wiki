@@ -65,6 +65,6 @@ Die 2. BIOS Data Area befindet sich im Sektor 0xFFFF also an der Adresse 0xFFFF0
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2260; parent 0; 2007-11-24T16:07:41Z -->
+<!-- MediaWiki page 1564; revision 2269; parent 2260; 2007-11-25T21:08:16Z -->
