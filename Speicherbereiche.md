@@ -28,6 +28,6 @@ Es gibt unter der 1MB-Grenze einige reservierte Speicherbereiche, die von BIOS b
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2259/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
 
-<!-- MediaWiki page 1563; revision 2259; parent 0; 2007-11-24T15:45:33Z -->
+<!-- MediaWiki page 1563; revision 2270; parent 2259; 2007-11-25T21:08:23Z -->
