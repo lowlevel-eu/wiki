@@ -24,6 +24,6 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich wenn man keinen ei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 2267; parent 2265; 2007-11-25T20:59:44Z -->
+<!-- MediaWiki page 1567; revision 2268; parent 2267; 2007-11-25T21:05:01Z -->
