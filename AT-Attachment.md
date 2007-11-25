@@ -10,6 +10,6 @@ Working-Drafts der aktuellen Spezifikationen zu ATA(PI) können hier bezogen wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1960/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 1960; parent 0; 2007-05-01T23:38:09Z -->
+<!-- MediaWiki page 1522; revision 2271; parent 1960; 2007-11-25T21:09:39Z -->
