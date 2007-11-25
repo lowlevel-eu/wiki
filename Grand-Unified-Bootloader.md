@@ -1,0 +1,28 @@
+# Grand Unified Bootloader
+
+Grub ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer Bootloader aus dem GNU Hurd Projekt. Grub wird unter der [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") vertrieben.
+
+Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich wenn man keinen eigenen Bootloader entwickeln will.
+
+## Funktionen
+
+- Liest [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), UFS, UFS2, [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), JFS, [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), FFS, XFS
+- Auswahlmenü für etwa verschiedene Betriebssysteme zu laden.
+- Bootet von Floppies, Festplatten, CDs, DVDs und Flashdisks.
+- beinhaltet eine Shell
+- kann mit einem Passwort gesichert werden
+- Kann von einem TFTP-Server booten
+
+## Siehe auch
+
+- [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
+
+## Weblinks
+
+- <http://de.wikipedia.org/wiki/GRUB>
+
+---
+
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+
+<!-- MediaWiki page 1567; revision 2264; parent 0; 2007-11-25T15:03:57Z -->
