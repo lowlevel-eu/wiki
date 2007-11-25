@@ -4,6 +4,6 @@ Direct Memory Access (DMA) ist eine Methode um einfache Kopiervorgänge, von Ger
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2199/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 2199; parent 2197; 2007-10-22T14:17:16Z -->
+<!-- MediaWiki page 1555; revision 2273; parent 2199; 2007-11-25T21:12:39Z -->
