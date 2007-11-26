@@ -47,6 +47,6 @@ Die Funktionen *inb()* und *outb()* sollten vorhanden sein, außerdem noch sowas
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1570/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1570/index.html)
 
-<!-- MediaWiki page 1570; revision 2281; parent 0; 2007-11-26T14:09:09Z -->
+<!-- MediaWiki page 1570; revision 2282; parent 2281; 2007-11-26T14:57:48Z -->
