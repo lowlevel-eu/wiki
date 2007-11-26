@@ -1,30 +1,23 @@
 # Serielle Schnittstelle
 
-Die serielle Schnittstelle (Abkürzung: COM) scheint veraltet ist aber sehr nützlich um z.B den Kernel im frühen Entwicklungstand zu debuggen, denn der Bildschirm kann nur begrenzt Text anzeigen und wie in Qemu oder Bochs kann man kein Copy 'n' Paste vom Bildschirm machen. Außerdem sollte bei keinem Betriebssystem ein COM-Port fehlen, da er heute auch noch oft Anwendung findet und leicht zu programmieren ist.
+Die serielle Schnittstelle (Abkürzung: COM) scheint veraltet ist aber sehr nützlich um z.B. den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") im frühen Entwicklungstand zu [debuggen](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"), denn der Bildschirm kann nur begrenzt Text anzeigen und in keinem der Emulatoren kann man mittels Copy'n'Paste den Bildschirminhalt kopieren. Außerdem sollte bei keinem Betriebssystem ein Treiber für die serielle Schnittstelle fehlen, da sie heute auch noch oft Anwendung findet und leicht zu programmieren ist.
 
-## COM-Ports finden
+## Basis-I/O-Ports finden
 
-Normalerweise haben die COM-Ports folgende IO-Ports:
+Normalerweise haben die COM-Ports folgende Basis-I/O-Ports:
 
-| Name | IO-Port | IRQ |
-| ------ | --------- | ----- |
+| Name | I/O-Port | IRQ |
+| ------ | ---------- | ----- |
 | COM1 | 0x3F8 | 4 |
 | COM2 | 0x2F8 | 3 |
 | COM3 | 0x3E8 | 4 |
 | COM4 | 0x2E8 | 3 |
 
-Man kann aber auch die IO-Ports aus der BIOS-Data-Area lesen
+Man sollte die Basis-I/O-Ports aber aus der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area") auslesen.
 
-| Adresse | Größe | Beschreibung |
-| --------- | ------- | ------------------------- |
-| 0x400 | 2 | IO-Port des COM-Ports 1 |
-| 0x402 | 2 | IO-Port des COM-Ports 2 |
-| 0x404 | 2 | IO-Port des COM-Ports 3 |
-| 0x406 | 2 | IO-Port des COM-Ports 4 |
+## Offsets der einzelnen Register
 
-## IO-Ports der einzelnen Register
-
-Da ein COM-Port mehrere Register benutzt, braucht er auch mehrere IO-Ports. Die oben angegebenen IO-Ports sind nur die Basis-IO-Ports. Man muss also nachher noch das Offset der einzelnen Register addieren. Die Offsets sind in dieser Liste:
+Da ein COM-Port mehrere Register benutzt, braucht er auch mehrere I/O-Ports. Die oben angegebenen I/O-Ports sind nur die Basis-I/O-Ports. Man muss also nachher noch das Offset der einzelnen Register addieren. Folgende Register verbergen sich hinter den Offsets:
 
 | Offset | Lesen/Schreiben | Name |
 | -------- | ----------------- | ---------------------------------- |
@@ -46,9 +39,9 @@ Ich werde hier ein wenig drauf eingehen, wie man verschiedene Optionen setzt und
 
 ### Baudrate einstellen
 
-Um die Baudrate einzustellen muss man erstmal das DLAB-Bit setzen, es ist eine Art Umschaltbit um 12 Register über 8 IO-Port-Adressen zu benutzen. Dafür muss man im LineControl-Register das 8. Bit setzen.
+Um die Baudrate einzustellen muss man erstmal das DLAB-Bit setzen, es ist eine Art Umschaltbit um 12 Register über 8 I/O-Port-Adressen zu benutzen. Dafür muss man im LineControl-Register das 8. Bit setzen.
 
-Die Baudrate wird aber nicht direkt gespeichert. Es wird immer nur ein Teiler gespeichert. Diesen kann man sich so berechnen:\\ *t = 115200/b*\\ Wobei *t* der Teiler und *b* die Baudrate ist.
+Die Baudrate wird aber nicht direkt gespeichert. Es wird immer nur ein Teiler gespeichert. Diesen kann man wie folgt berechnen:\\ *t = 115200/b*\\ Wobei *t* der Teiler und *b* die Baudrate ist.
 
 Nun kann man in den Transmitting-Buffer das Lowbyte des Teilers und in das InterruptEnable-Register das Highbyte.
 
@@ -70,9 +63,9 @@ Es gibt 4 verschiedene Paritäten: Odd, Even, High Parity und Low Parity. Diese 
 
 Die Bytelänge bestimmt wie viel Bits ein Byte ergeben. Heutzutage werden eigentlich immer 8 Bits zu einem Byte zusammengefasst. Ein Byte kann 5 bis 8 Bits haben. Zum Setzen der Anzahl wird das 1. und 2. Byte im LineControl-Register benutzt. 00b entspricht 5 Bits 01b 6 usw. Also einfach die Anzahl an Bits minus 5 und in einen zwei-Bit-Wert wandeln.
 
-### Anzahl Stopbits setzen
+### Anzahl Stoppbits setzen
 
-Die Anzahl an Stopbits wird im 3 Bit des LineControl-Registers gesetzt. 0b entspricht einem Stopbit und 1b zwei Stopbits (für Bytes mit 5 Bits 1.5 Stopbits).
+Die Anzahl an Stoppbits wird im 3 Bit des LineControl-Registers gesetzt. 0b entspricht einem Stoppbit und 1b zwei Stoppbits (für Bytes mit 5 Bits 1.5 Stoppbits).
 
 ### Senden
 
@@ -95,47 +88,53 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
     #define LSR 5
     #define MSR 6
 
-    // IO-Ports der COM-Ports
-    u16 com_base[4] = { 0x3F8,0x2F8,0x3E8,0x2E8 };
-
     // Funktion zum initialisieren eines COM-Ports
-    void init_com(u16 base,u32 baud,u8 parity,u8 bits) {
+    void init_com(uint16_t base, uint32_t baud, uint8_t parity, uint8_t bits) {
       // Teiler berechnen
       union {
-        u8 b[2];
-        u16 w;
+        uint8_t b[2];
+        uint16_t w;
       } divisor;
       divisor.w = 115200/baud;;
 
       // Interrupt ausschalten
       outb(base+IER,0x00);
+      
       // DLAB-Bit setzen
       outb(base+LCR,0x80);
+      
       // Teiler (low) setzen
       outb(base+0,divisor.b[0]);
+      
       // Teiler (high) setzen
       outb(base+1,divisor.b[1]);
+      
       // Anzahl Bits, Parität, usw setzen (DLAB zurücksetzen)
       outb(base+LCR,((parity&0x7)<<3)|((bits-5)&0x3));
+      
       // Initialisierung abschließen
       outb(base+FCR,0xC7);
       outb(base+MCR,0x0B);
     }
+
     // Ob man schreiben kann
-    u32 is_transmit_empty(u16 base) {
+    uint8_t is_transmit_empty(u16 base) {
       return inb(base+LSR)&0x20;
     }
+
     // Byte senden
-    void write_com(u16 base,u8 chr) {
+    void write_com(uint16_t base, uint8_t chr) {
       while (is_transmit_empty(base)==0);
       outb(base,chr);
     }
+
     // Ob man lesen kann
-    u32 serial_received(u16 base) {
+    uint8_t serial_received(uint16_t base) {
       return inb(base+LSR)&1;
     }
+
     // Byte empfangen
-    u8 read_serial(u16 base) {
+    uint8_t read_serial(uint16_t base) {
       while (!serial_received(base));
       return inb(base);
     }
@@ -148,6 +147,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2256/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2286/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 2256; parent 2253; 2007-11-20T19:18:29Z -->
+<!-- MediaWiki page 1561; revision 2286; parent 2256; 2007-11-26T18:02:22Z -->
