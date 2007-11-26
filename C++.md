@@ -114,6 +114,6 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1973/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 1973; parent 1972; 2007-05-09T07:51:13Z -->
+<!-- MediaWiki page 1486; revision 2277; parent 1973; 2007-11-26T01:13:21Z -->
