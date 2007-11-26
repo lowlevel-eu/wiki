@@ -1,0 +1,9 @@
+# BDA
+
+Weiterleitung: [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area)
+
+---
+
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2287/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1571/index.html)
+
+<!-- MediaWiki page 1571; revision 2287; parent 0; 2007-11-26T18:06:32Z -->
