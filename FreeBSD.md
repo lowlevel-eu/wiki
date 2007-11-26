@@ -4,9 +4,7 @@
 
 ### Screenshots
 
-|  |  |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Screenshot 1](http://shadowmage.plinkomedia.com/images/screenshots/FreeBSD-2002-Feb-07.jpg) | [Screenshot 2](http://www.fuka.info.waseda.ac.jp/~oota/mateR/software/freebsd/freebsd.gif) |
+![FreeBSD-2002-Feb-07.jpg](http://shadowmage.plinkomedia.com/images/screenshots/FreeBSD-2002-Feb-07.jpg) ![freebsd.gif](http://www.fuka.info.waseda.ac.jp/~oota/mateR/software/freebsd/freebsd.gif)
 
 *Anmerkung: FreeBSD ist genau wie Unix oder Linux ein textbasiertes OS. Erst nach der Installation eines Desktops, gibt es eine GUI wie man sie auf den Screenshots sieht.*
 
@@ -39,6 +37,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2295/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
 
-<!-- MediaWiki page 1455; revision 1648; parent 0; 2007-01-15T18:42:17Z -->
+<!-- MediaWiki page 1455; revision 2295; parent 1648; 2007-11-26T18:51:49Z -->
