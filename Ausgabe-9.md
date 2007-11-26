@@ -241,9 +241,7 @@ So sollte der Kernel erkennen, dass das System nicht ordnungsgemäß heruntergef
 
 ### Screenshots
 
-|  |  |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Screenshot 1](http://shadowmage.plinkomedia.com/images/screenshots/FreeBSD-2002-Feb-07.jpg) | [Screenshot 2](http://www.fuka.info.waseda.ac.jp/~oota/mateR/software/freebsd/freebsd.gif) |
+![FreeBSD-2002-Feb-07.jpg](http://shadowmage.plinkomedia.com/images/screenshots/FreeBSD-2002-Feb-07.jpg) ![freebsd.gif](http://www.fuka.info.waseda.ac.jp/~oota/mateR/software/freebsd/freebsd.gif)
 
 *Anmerkung: FreeBSD ist genau wie Unix oder Linux ein textbasiertes OS. Erst nach der Installation eines Desktops, gibt es eine GUI wie man sie auf den Screenshots sieht.*
 
@@ -276,6 +274,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2134/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 2134; parent 1827; 2007-10-03T12:21:25Z -->
+<!-- MediaWiki page 1409; revision 2285; parent 2134; 2007-11-26T17:15:31Z -->
