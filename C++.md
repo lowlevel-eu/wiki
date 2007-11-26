@@ -21,11 +21,12 @@ Wenn eine Klasse eine rein virtuelle Funktion nicht implementiert hat und diese 
 
 ## g++
 
-    extern "C" void __cxa_pure_virtual()
-    {
-        // Fehlermeldung anzeigen
-        // Programm/Kernel beenden
-    }
+\<cpp\> extern "C" void \_\_cxa_pure_virtual() {
+
+       // Fehlermeldung anzeigen
+       // Programm/Kernel beenden
+
+} \</cpp\>
 
 # globale/statische Objekte
 
@@ -47,50 +48,60 @@ G++ erstellt eine "dtors\*" Sektion, analog zur "ctors\*" Sektion und speicher d
 
 Im Konstruktor eines globalen/statischen Objekts wird die folgende Funktion aufgerufen:
 
+\<cpp\>
+
     int __cxa_atexit(void (* f)(void *), void *p, void *d);
+
+\</cpp\>
 
 f ist ein Funktionszeiger zu einem Destruktor, p der Parameter, der dem Destruktor übergeben werden soll und d ist das sog. "home DSO" (DSO = dynamic shared object). Diese Funktion sollte alle drei Parameter speichern und bei Erfolg 0, andernfalls nicht 0 zurückgeben. Wenn der Kernel/das Programm dann beendet wird, sollte man die Funktion
 
+\<cpp\>
+
     void __cxa_finalize(void *d);
+
+\</cpp\>
 
 mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit passenden Paramtern aufzurufen. Die registrierten Funktionen müssen in umgekehrter Reihenfolge aufgerugen werden. Außerdem muss man ein Symbol namens \_\_dso_handle bereitstellen. Es wird allerdings nur die Adresse des Symbols verwendet um ein DSO zu identifizieren und um \_\_cxa_atexit aufzurufen.
 
-    extern "C"
-            {
-            int __cxa_atexit(void (*f)(void *), void *p, void *d);
-            void __cxa_finalize(void *d);
-            };
+\<cpp\> extern "C"
 
-    void *__dso_handle;
+           {
+           int __cxa_atexit(void (*f)(void *), void *p, void *d);
+           void __cxa_finalize(void *d);
+           };
 
-    struct object
-    {
-            void (*f)(void*);
-            void *p;
-            void *d;
-    } object[32] = {0};
-    unsigned int iObject = 0;
+void \*\_\_dso_handle;
 
-    int __cxa_atexit(void (*f)(void *), void *p, void *d)
-    {
-            if (iObject >= 32) return -1;
-            object[iObject].f = f;
-            object[iObject].p = p;
-            object[iObject].d = d;
-            ++iObject;
-            return 0;
-    }
+struct object {
 
-    /* Zerstört momentan unabhängig von d alle Objekte */
-    void __cxa_finalize(void *d)
-    {
-            unsigned int i = iObject;
-            for (; i > 0; --i)
-            {
-                    --iObject;
-                    object[iObject].f(object[iObject].p);
-            }
-    }
+           void (*f)(void*);
+           void *p;
+           void *d;
+
+} object\[32\] = {0}; unsigned int iObject = 0;
+
+int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
+
+           if (iObject >= 32) return -1;
+           object[iObject].f = f;
+           object[iObject].p = p;
+           object[iObject].d = d;
+           ++iObject;
+           return 0;
+
+}
+
+/\* NOTE: Zerstört momentan unabhängig von d alle Objekte \*/ void \_\_cxa_finalize(void \*d) {
+
+           unsigned int i = iObject;
+           for (; i > 0; --i)
+           {
+                   --iObject;
+                   object[iObject].f(object[iObject].p);
+           }
+
+} \</cpp\>
 
 # new/delete
 
@@ -114,6 +125,6 @@ mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit pass
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2277; parent 1973; 2007-11-26T01:13:21Z -->
+<!-- MediaWiki page 1486; revision 2296; parent 2277; 2007-11-26T18:54:22Z -->
