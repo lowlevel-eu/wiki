@@ -1,21 +1,21 @@
 # BIOS Data Area
 
-In der BIOS Data Area werden wichtige Informationen über Hardware und andere Systemkomponenten gespeichert.
+In der BIOS Data Area (Abkürzung: BDA) werden wichtige Informationen über Hardware und andere Systemkomponenten gespeichert.
 
-## BIOS Data Area 1
+## Aufbau der BIOS Data Area
 
-Der erste BIOS-Speicher beginnt im Segment 0x0040, also ab der Adresse 0x0400.
+Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x0400. Die folgende Tabelle zeigt den Aufbau dieses Segments:
 
 | Offset | Größe (Bytes) | Beschreibung |
-| -------- | --------------- | ------------------------------------------ |
-| 0x00 | 2 | IO-Port von COM1 |
-| 0x02 | 2 | IO-Port von COM2 |
-| 0x04 | 2 | IO-Port von COM3 |
-| 0x06 | 2 | IO-Port von COM4 |
-| 0x08 | 2 | IO-Port von LP1 |
-| 0x0A | 2 | IO-Port von LP2 |
-| 0x0C | 2 | IO-Port von LP3 |
-| 0x0E | 2 | IO-Port von LP4 |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 2 | I/O-Port von [COM1](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
+| 0x02 | 2 | I/O-Port von [COM2](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
+| 0x04 | 2 | I/O-Port von [COM3](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
+| 0x06 | 2 | I/O-Port von [COM4](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
+| 0x08 | 2 | I/O-Port von LP1 |
+| 0x0A | 2 | I/O-Port von LP2 |
+| 0x0C | 2 | I/O-Port von LP3 |
+| 0x0E | 2 | I/O-Port von LP4 |
 | 0x10 | 2 | Equipment word |
 | 0x12 | 1 | Manufacturing test data |
 | 0x13 | 2 | Speichergröße (in kB) |
@@ -48,23 +48,12 @@ Der erste BIOS-Speicher beginnt im Segment 0x0040, also ab der Adresse 0x0400.
 | 0xAC | 68 | Reserviert |
 | 0xF0 | 16 | Inter-Application-Kommunikations-Bereich |
 
-## BIOS Data Area 2
-
-Die 2. BIOS Data Area befindet sich im Sektor 0xFFFF also an der Adresse 0xFFFF0.
-
-| Offset | Größe (Bytes) | Beschreibung |
-| -------- | --------------- | -------------------------------------------- |
-| 0x00 | 5 | Farjump-Instruktion zum Ausführen des POST |
-| 0x05 | 8 | ROM-BIOS-Datum als String |
-| 0x0C | 2 | Unbenutzt |
-| 0x0E | 1 | IBM-Computer-Typ-Code |
-
 ## Weblinks
 
 - <http://www.geocities.com/riskyfriends/x86/os/bios.html>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2291/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2269; parent 2260; 2007-11-25T21:08:16Z -->
+<!-- MediaWiki page 1564; revision 2291; parent 2269; 2007-11-26T18:16:16Z -->
