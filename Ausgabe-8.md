@@ -66,7 +66,7 @@ Bit PCD: Das PCD Bit ist wie das PWT Bit nur im 486er definiert. Falls das Bit g
 
 Bit A: Steht für „accessed“. Dieses Bit wird vom Prozessor selber gesetzt, wenn irgendein Speicherzugriff auf diese Page geschieht (Lese-/Schreibaktion, Programmausführung).
 
-Bit D: Dieses Bit steht für „dirty“ und wird wiederum vom CPU selbst gesetzt. Das Bit wird jedoch nur dann gesetzt, wenn ein Schreibzugriff auf die entsprechende Page stattfindet. Dadurch wird der Speicherverwaltung signalisiert, da� diese Seite nicht ohne zusätzliche Massnahmen aus dem Speicher entfernt werden kann.
+Bit D: Dieses Bit steht für „dirty“ und wird wiederum vom CPU selbst gesetzt. Das Bit wird jedoch nur dann gesetzt, wenn ein Schreibzugriff auf die entsprechende Page stattfindet. Dadurch wird der Speicherverwaltung signalisiert, dass diese Seite nicht ohne zusätzliche Massnahmen aus dem Speicher entfernt werden kann.
 
   
 
@@ -76,7 +76,7 @@ Die Betriebssysteme von heute, daruter verstehe ich Windows oder Linux, verwende
 
 #### Kleines Beispiel zu Paging:
 
-Im folgenden soll nun anhand eines kleinen Beispieles die Wirkungsweise gezeigt werden, wie man Paging benutzt. Dieses Programm soll ein 512 Byte gro�er Bootsektor werden, der komplett in Assembler mit NASM Syntax geschrieben wird und der zuerst in den Proteced Mode schalten, danach PageDirectory und PageTables initialisiert und Paging aktiviert. In diesem Beispiel werde ich den Videotextspeicher, der normalerweise an der Position 0xB8000 startet, an die Position 0xC0000000 ( 3 GB ) mappen und darauf zugreifen.
+Im folgenden soll nun anhand eines kleinen Beispieles die Wirkungsweise gezeigt werden, wie man Paging benutzt. Dieses Programm soll ein 512 Byte großer Bootsektor werden, der komplett in Assembler mit NASM Syntax geschrieben wird und der zuerst in den Proteced Mode schalten, danach PageDirectory und PageTables initialisiert und Paging aktiviert. In diesem Beispiel werde ich den Videotextspeicher, der normalerweise an der Position 0xB8000 startet, an die Position 0xC0000000 ( 3 GB ) mappen und darauf zugreifen.
 
 ##### Vorbereitungen:
 
@@ -313,7 +313,7 @@ Nach dem Umschalten in Modus 13h sollte die Standardfarbpalette geladen sein. Si
 
 Diese 256 Standardfarben sind zum Glück nicht konstant. Man kann sich nähmlich aus genau 262'143 Farben eine eigene 256-Farben-Palette zusammenstellen. Das passiert über die VGA-Register, ist aber auch kinderleicht. Um eine einzelne Farbe der 256er-Palette zu ändern, geht man folgendermassen vor:
 
-\<asm\>MOV AL, 193  ; hier soll die Farbe 193 festgelegt werden MOV DX, 03C8h OUT DX, AL  ; an Port 3C8h senden INC DX  ; folgendes an Port 3C9h senden MOV AL, 40h  ; ROT-Anteil OUT DX, AL MOV AL, 2Eh  ; GR�N-Anteil OUT DX, AL MOV AL, 02h  ; BLAU-Anteil OUT DX, AL\</asm\>
+\<asm\>MOV AL, 193  ; hier soll die Farbe 193 festgelegt werden MOV DX, 03C8h OUT DX, AL  ; an Port 3C8h senden INC DX  ; folgendes an Port 3C9h senden MOV AL, 40h  ; ROT-Anteil OUT DX, AL MOV AL, 2Eh  ; GRÜN-Anteil OUT DX, AL MOV AL, 02h  ; BLAU-Anteil OUT DX, AL\</asm\>
 
 Zuerst sendet man die zu ändernde Farbe an Port 3C8h, dann je ein Byte Rot, Grün und Blau (RGB-Farben). Achtung: Nur Bits 0-6 sind für die Farbanteile signifikant, d.h. höhere Werte als 4Fh sind ungültig.
 
@@ -337,11 +337,11 @@ Nur eine ganz kurze Einleitung: Da Assembler die Maschinensprache ist und damit 
 
 ### 1) MOV reg, 0
 
-Hier ist ein h�ufig benutzter Befehl, der unnötig lange ist: Einen Register Null zu setzen. Hier im Beispiel ax.
+Hier ist ein häufig benutzter Befehl, der unnötig lange ist: Einen Register Null zu setzen. Hier im Beispiel ax.
 
 \<asm\>mov ax, 0 ; 0xB8, 0x00, 0x00\</asm\>
 
-Also ist dieser Befehl 3 Bytes gross�. Das gleiche kann mit XOR oder SUB erreict werden, nur eben kleiner:
+Also ist dieser Befehl 3 Bytes groß. Das gleiche kann mit XOR oder SUB erreict werden, nur eben kleiner:
 
 \<asm\>sub ax, ax ; 0x29, 0xC0 xor ax, ax ; 0x31, 0xC0\</asm\>
 
@@ -412,7 +412,7 @@ Wir müssen ja oft das selbe einige Male ausführen. Meistens sieht der Code daf
 jne schleife ; 0x75, 0xFA\</asm\>
 
   
-Relativ gross�, hmm? 8 Bytes nur für die Schleife. Dann machen wir das mal kleiner:
+Relativ groß, hmm? 8 Bytes nur für die Schleife. Dann machen wir das mal kleiner:
 
 \<asm\>mov cx, 8 ; 0xB9, 0x08, 0x00 schleife:
 
@@ -448,8 +448,8 @@ Das ist ein kleines Tutorial, das aber hilfreich sein kann. Ich muss jetzt den G
        lgdt [gdtr] ; GDT Pointer laden
 
        mov eax,cr0 ; In PMode wechseln, indem das niedrigste
-       or al,1; Steuerungsbit von cr0 ge�ndert wird
-       mov cr0,eax ; muss �ber Umweg �ber ein anderes Register gemacht werden
+       or al,1; Steuerungsbit von cr0 geändert wird
+       mov cr0,eax ; muss über Umweg über ein anderes Register gemacht werden
 
        jmp codesel:PMode; FarJump zu einer 32-Bit PMode Funktion
 
@@ -476,7 +476,7 @@ PageDirectory an Adresse 0x8000 initialisieren ;;
 InitPageDirectoryAndPageTables:
 
        mov eax,0
-       mov ecx,4096*3   ; PageDirectory und 2 PageTables mit 0en f�llen
+       mov ecx,4096*3   ; PageDirectory und 2 PageTables mit 0en füllen
        mov edi,0x8000
        rep stosd
 
@@ -562,20 +562,20 @@ gdt:
 
 codesel equ \$-gdt
 
-       dw 0xFFFF; Segmentgr��e 0..15
+       dw 0xFFFF; Segmentgröße 0..15
        dw 0x0000; Segmentadresse 0..15
        db 0x00  ; Segmentadresse 16..23
        db 0x9A  ; Zugriffsberechtigung und Typ
-       db 0xCF  ; Zusatzinformationen und Segmentgr��e 16...19
+       db 0xCF  ; Zusatzinformationen und Segmentgröße 16...19
        db 0x00  ; Segmentadresse 24..31
 
 datasel equ \$-gdt
 
-       dw 0xFFFF; Segmentgr��e 0..15
+       dw 0xFFFF; Segmentgröße 0..15
        dw 0x0000; Segmentadresse 0..15
        db 0x00  ; Segmentadresse 16..23
        db 0x92  ; Zugriffsberechtigung und Typ
-       db 0xCF  ; Zusatzinformationen und Segmentgr��e 16...19
+       db 0xCF  ; Zusatzinformationen und Segmentgröße 16...19
        db 0x00  ; Segmentadresse 24..31
 
 gdt_end
@@ -769,6 +769,6 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 1948; parent 1945; 2007-04-17T18:36:31Z -->
+<!-- MediaWiki page 1521; revision 2292; parent 1948; 2007-11-26T18:23:29Z -->
