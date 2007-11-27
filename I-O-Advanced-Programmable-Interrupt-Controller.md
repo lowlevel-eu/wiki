@@ -9,6 +9,6 @@ Die I/O APIC (= Advanced Programmable Interrupt Controller) löst den [Programma
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2293/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2304/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 2293; parent 0; 2007-11-26T18:39:24Z -->
+<!-- MediaWiki page 1574; revision 2304; parent 2293; 2007-11-27T17:01:51Z -->
