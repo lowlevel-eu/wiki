@@ -386,7 +386,7 @@ Jetzt zur Funktionsweise: Am Eingang CLOCK liegt eine konstante Frequenz von 1,1
 
 Das Kommandoregister wird zum Seuern dieses Bausteins mit dem Kommandobyte geladen, welches z.B. einstellt, welche Betriebsart gewählt wurde. Das Kommandobyte ist so aufgebaut:
 
-![6_1.png](http://www.joachim-neu.de/public/lowlevel/7/6_1.png)
+![pcspeaker.png](http://lowlevel.brainsware.org/wiki/images/pcspeaker.png)
 
 Die Betriebsart bestimmt die Länge der Pulsfolge und, ob sie sich automatisch wiederholt usw. Der Code 011 bestimmt, dass eine Pulsfolge erzeugt wird, die zum Erzeugen von Tönen nützlich ist. Da die Ports ja nur 8 Bit breit sind, das Latch-Register aber 16 Bit, wird im Kommandobyte auch noch festgelegt, ob nur das High-Byte, nur das Low-Byte oder beide hintereinander (zuerst das Low-Byte, dann das High-Byte) bearbeitet werden sollen. Das 0.Bit legt fest, ob die Zahl im Kommandobyte binär- oder BCD-codiert lesen soll.
 
@@ -918,6 +918,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2163; parent 2162; 2007-10-08T11:25:47Z -->
+<!-- MediaWiki page 1494; revision 2319; parent 2163; 2007-11-27T21:53:10Z -->
