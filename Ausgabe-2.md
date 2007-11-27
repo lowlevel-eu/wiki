@@ -91,7 +91,7 @@ Diese Methode hat einige Vorteile. Zum Beispiel kann die CPU das Programm, das g
 
 So, Schluss jetzt mit dem theoretischen Gelaber. Schauen wir uns an, wie das genau funktioniert und wie das auf dem IBM-PC implementiert ist ;-)
 
-Datei:Ausgabe1/irq2.gif Implementierung auf dem IBM-PC
+![irq2.gif](http://lowlevel.brainsware.org/wiki/images/irq2.gif)
 
 Intel hat für diese Zwecke extra einen neuen Chip gebaut, den **8259 Interrupt Controller** (auch **PIC** genannt, **Programmable Interrupt Controller**). Dieser Chip hat 8 Leitungen (IRQ 0 - 7) für jedes einzelne Gerät, das der CPU etwas mitteilen muss. Die einzelnen Leitungen nennt man **IRQ Lines** (Interrupt ReQuest). Da jedoch 8 IRQs zuwenig waren, baute Intel einen zweiten Interrupt Controller in den IBM-PC, der über IRQ 2 mit dem ersten verbunden war.
 
@@ -99,7 +99,7 @@ Wie man sieht, ist IRQ 2 nicht als solches verwendbar, sondern dient lediglich z
 
 Zu kompliziert? Ganz einfach: wenn ein Gerät IRQ 2 benutzt, dann benutzt es in Wirklichkeit IRQ 9.
 
-Datei:Ausgabe1/irq3.gif
+![irq3.gif](http://lowlevel.brainsware.org/wiki/images/irq3.gif)
 
 Was passiert nun, wenn ein Gerät einen Interrupt Request über eine IRQ Line sendet? Als erstes gelangt das Signal ins Interrupt **Mask Register (IMR)**. Hier wird festgestellt, ob der IRQ überhaupt verarbeitet werden muss oder nicht (Masking, darauf werde ich allerdings nicht näher eingehen).
 
@@ -345,6 +345,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 1848; parent 1472; 2007-03-09T20:25:29Z -->
+<!-- MediaWiki page 1415; revision 2317; parent 1848; 2007-11-27T21:46:12Z -->
