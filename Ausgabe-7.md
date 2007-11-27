@@ -792,7 +792,7 @@ gdt_end \</asm\>
 
 ### Screenshots
 
-![10_1.png](http://www.joachim-neu.de/public/lowlevel/7/10_1.png) ![10_2.png](http://www.joachim-neu.de/public/lowlevel/7/10_2.png)
+![ReactOS1.png](http://lowlevel.brainsware.org/wiki/images/ReactOS1.png) ![ReactOS2.png](http://lowlevel.brainsware.org/wiki/images/ReactOS2.png)
 
 ### Geschichte
 
@@ -918,6 +918,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2319; parent 2163; 2007-11-27T21:53:10Z -->
+<!-- MediaWiki page 1494; revision 2320; parent 2319; 2007-11-27T21:54:41Z -->
