@@ -22,15 +22,17 @@ Diese Liste ist nicht vollständig!!!
 | 0x1F0 | 0x1F7 | 1\. [Festplatten Kontroller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x278 | 0x27F | 2\. Parallel Port (3. mit MDA) |
 | 0x2C0 | 0x2DF | 2\. EGA |
-| 0x2F8 | 0x2FF | 2\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (Comport) |
+| 0x2E8 | 0x2EF | 4\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
+| 0x2F8 | 0x2FF | 2\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
 | 0x370 | 0x375 | 2\. [Diskettenlaufwerk Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x376 | 0x377 | 2\. [Festplatten Kontroller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x3B0 | 0x3DF | [Video Graphics Array](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array") (VGA) |
 | 0x3C0 | 0x3CF | 1\. EGA |
 | 0x3D0 | 0x3DF | CGA and EGA/VGA |
+| 0x3E8 | 0x3EF | 3\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
 | 0x3F0 | 0x3F5 | 1\. [Diskettenlaufwerk Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x3F6 | 0x3F7 | 1\. [Festplattencontroller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
-| 0x3F8 | 0x3FF | 1\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (Comport) |
+| 0x3F8 | 0x3FF | 1\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
 | 0xCF8 | 0xCF8 | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") |
 | 0xCFC | 0xCFC | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") |
 
@@ -44,6 +46,6 @@ Diese Liste ist nicht vollständig!!!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 2203; parent 2198; 2007-10-27T17:41:22Z -->
+<!-- MediaWiki page 1543; revision 2301; parent 2203; 2007-11-27T07:24:24Z -->
