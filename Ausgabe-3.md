@@ -227,6 +227,8 @@ Beim Schreiben des Bootloaders sollte man unbedingt beachten, dass außer in den
 
 ## OS Projekte: SkyOS
 
+![skyos1.jpg](http://lowlevel.brainsware.org/wiki/images/skyos1.jpg) ![skyos2.jpg](http://lowlevel.brainsware.org/wiki/images/skyos2.jpg) ![skyos3.jpg](http://lowlevel.brainsware.org/wiki/images/skyos3.jpg)
+
 ### OS Design
 
 SkyOS ist ein reines Desktop-OS. Das bedeutet, dass man eine sehr schöne GUI zu sehen kriegt und fast alles mit der Maus bedient. Über Vorzüge und Nachteile von so einem System möchte ich jetzt nicht reden, allerdings muss gesagt werden, dass SkyOS dies sehr gut hinbekommt.
@@ -341,6 +343,6 @@ Nun die Frage an euch: sollen wir weiterhin mit Assembler programmieren - eben L
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
 
-<!-- MediaWiki page 1419; revision 1861; parent 1473; 2007-03-10T15:01:43Z -->
+<!-- MediaWiki page 1419; revision 2318; parent 1861; 2007-11-27T21:48:45Z -->
