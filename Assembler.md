@@ -10,17 +10,13 @@ Es gibt für die x86 Prozessorfamilie verschiedene Syntax.
 
 Der Intel Syntax wird meistens verwendet wenn man Assembler von hand schreibt.  
 
-Beispielcode:
-
-    mov al, 0x10
+Beispielcode: \<asm\> mov al, 0x10 \</asm\>
 
 ### AT&T
 
 Dieser Syntax wurde speziel für das schnelle Assemblieren entwickelt um ihn beim Kompilieren von Hochsprachenquellcode als Zwischenschritt zu verwenden.
 
-Beispielcode:
-
-    movb $0x10, %al
+Beispielcode: \<asm\> movb \$0x10, %al \</asm\>
 
 Diese Syntax wird vor allem im Zusammenhang mit gcc verwendet. Unter [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") befindet sich ein kleines Tutorial hierzu.
 
@@ -36,6 +32,6 @@ YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](htt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 2116; parent 1929; 2007-09-29T10:14:26Z -->
+<!-- MediaWiki page 1514; revision 2310; parent 2116; 2007-11-27T20:28:40Z -->
