@@ -9,6 +9,6 @@ Multiboot ist ein Standard um Betriebssystemen eine einheitliche Startumgebung z
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2247/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2305/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2247; parent 0; 2007-11-14T16:44:56Z -->
+<!-- MediaWiki page 1560; revision 2305; parent 2247; 2007-11-27T17:02:21Z -->
