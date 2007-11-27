@@ -182,7 +182,7 @@ In ext2 besteht eine Datei aus zwei Teilen: Kopf (I-node) und Rumpf. In der I-No
   
 Sehen Sie sich folgende Abbildung an:
 
-ext2 Aufbau
+![Ext2_aufbau1.png](http://lowlevel.brainsware.org/wiki/images/Ext2_aufbau1.png)
 
 Die kleinste adressierbare Einheit ist ein Block. Er ist bei ext2 immer 4096 Byte groß. Eigentlich kann man sie anpassen, aber das sollte man nicht. Jeder Block erhält eine eindeutige Nummer. Der I-node ist bei jeder Datei vorhanden, die I-Node-Table ist mit der FAT zu vergleichen.  
   
@@ -274,6 +274,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 2285; parent 2134; 2007-11-26T17:15:31Z -->
+<!-- MediaWiki page 1409; revision 2312; parent 2285; 2007-11-27T21:28:19Z -->
