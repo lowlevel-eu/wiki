@@ -2,11 +2,11 @@
 
 lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel.
 
-# Entwickler
+## Entwickler
 
 - [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode")
 
-# Features
+## Features
 
 Im Moment sind die folgenden Features implementiert:
 
@@ -17,9 +17,9 @@ Im Moment sind die folgenden Features implementiert:
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-kompatibles System wird erkannt und alle Prozessoren gestartet
 - kleine Shell
 
-# Ziele
+## Ziele
 
-Das Hauptziel ist es einen möglichst performanten Mikrokernel mit Unterstützung für [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- und evtl. auch [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen zu entwickeln. Außerdem soll die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") so gestaltet werden, dass Prozesse, welche auf verschiedenen Computer laufen, ohne zusätzlichen Aufwand miteinander kommunizieren können.
+Das Hauptziel ist es einen möglichst performanten [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit Unterstützung für [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- und evtl. auch [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen zu entwickeln. Außerdem soll die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") so gestaltet werden, dass Prozesse, welche auf verschiedenen Computer laufen, ohne zusätzlichen Aufwand miteinander kommunizieren können.
 
 # Links
 
@@ -29,6 +29,6 @@ Das Hauptziel ist es einen möglichst performanten Mikrokernel mit Unterstützun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 2043; parent 2038; 2007-06-29T20:39:33Z -->
+<!-- MediaWiki page 1454; revision 2311; parent 2043; 2007-11-27T20:36:48Z -->
