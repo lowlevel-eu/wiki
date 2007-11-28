@@ -4,7 +4,6 @@
 
 - A20 Gate
 - C++
-- [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"): Die Links zu den Logs und Statistiken sind down
 - [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): Bitte mal nachprüfen
 - Elf: überarbeiten
 
@@ -26,6 +25,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2321; parent 2261; 2007-11-28T19:52:49Z -->
+<!-- MediaWiki page 1518; revision 2323; parent 2321; 2007-11-28T20:21:05Z -->
