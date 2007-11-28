@@ -19,12 +19,13 @@
 - Informationen zur AMD PCNet Netzwerkkarte
 - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
 - Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
+- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - Hier kommt dein Wunsch hin ;)
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2261/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2261; parent 2192; 2007-11-24T22:00:15Z -->
+<!-- MediaWiki page 1518; revision 2321; parent 2261; 2007-11-28T19:52:49Z -->
