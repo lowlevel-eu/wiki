@@ -4,6 +4,6 @@ Ein **IPI** (= **Interprocessor Interrupt**) ist ein [Interrupt](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1582/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2331/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1582/index.html)
 
-<!-- MediaWiki page 1582; revision 2330; parent 0; 2007-11-29T17:13:28Z -->
+<!-- MediaWiki page 1582; revision 2331; parent 2330; 2007-11-29T17:14:26Z -->
