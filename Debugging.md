@@ -10,6 +10,10 @@ Das ist die primitivste Methode der Fehlersuche und sie wird meist nur am Anfang
 
 Diese Methode ist schon etwas praktischer als die letzte. Debug-Ausgaben werden eigentlich in jedem Stadium der Entwicklung immer wieder gebraucht. Man platziert an den relevanten Stellen im Code Text-Ausgaben um beispielsweise zu sehen, welche Funktion aufgerufen wurde oder wie oft eine Schleife durchläuft usw.
 
+# RS232
+
+Ähnlich wie bei der print(f)/cout - Methode kann man auch Daten/ASCII-Strings über die Seriell Schnittstelle geben verschicken. Das hat den Vorteil, dass man mehr als nur 25 oder 50 Zeilen zeitgleich betrachten kann. Bei bochs werden die an die serielle Schnittstelle gegebenen Daten in eine Text-datei gegeben, diese kann später ggf auch von weiteren tools (z.B. grep) weiterverarbeitet werden. Zudem ist ein rs232-Treiber sowohl im RM als auch im PM relativ einfach zu schreiben. Intrupts müssen hierfür nicht verarbeitet werden können.
+
 # bochs / qemu
 
 Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist es wichtig, dass man die Registerinhalte vor der Exception kennt. Um an diese zu kommen sind Debug-Funktionen in den Emulatoren ein wertvolles Werkzeug. Bei bochs kann dazu der integrierte Debugger benutzt werden. qemu stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit. Oft braucht man aber in Verbindung mit qemu gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse rankommen muss, wo eine Exception auftritt. Denn qemu bietet den -d Parameter um verschiedene Dinge zu loggen. Meist benötigt man ein -d int um alle Interrupts aufzuzeichnen. Dabei muss man aber ein wenig aufpassen, da qemu keinen Reset ausführt bei einem Triplefault, das heisst er schreibt dann lauter GPFs in die LOG und diese wird dabei SEHR gross. Man sollte den qemu also möglichst schnell schliessen, sobald ein Triplefault aufgetreten ist.
@@ -24,6 +28,6 @@ Sobald man die Adresse hat, muss man daraus irgendwie auf die Codestelle schlies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2084/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2325/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 2084; parent 2083; 2007-08-30T10:04:49Z -->
+<!-- MediaWiki page 1544; revision 2325; parent 2084; 2007-11-29T10:26:48Z -->
