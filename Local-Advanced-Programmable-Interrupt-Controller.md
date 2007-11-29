@@ -1,6 +1,6 @@
 # Local Advanced Programmable Interrupt Controller
 
-Die **Local APIC** (LAPIC) nimmt [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") von der [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (oder auch von der [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) und anderen prozessorinternen Einheiten an und leitet diese an den Prozessorkern zum Abarbeiten weiter. Außerdem ist es nur über die LAPIC möglich [IPIs](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "IPI") zu senden und zu empfangen.
+Die **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Controller**) nimmt [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") von der [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (oder auch von der [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) und anderen prozessorinternen Einheiten an und leitet diese an den Prozessorkern zum Abarbeiten weiter. Außerdem ist es nur über die LAPIC möglich [IPIs](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "IPI") zu senden und zu empfangen.
 
 ## Weblinks
 
@@ -8,6 +8,6 @@ Die **Local APIC** (LAPIC) nimmt [Interrupts](https://github.com/lowlevel-eu/wik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2328/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2334/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2328; parent 0; 2007-11-29T17:06:29Z -->
+<!-- MediaWiki page 1581; revision 2334; parent 2328; 2007-11-29T17:21:55Z -->
