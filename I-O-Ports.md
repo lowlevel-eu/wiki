@@ -6,6 +6,8 @@ Diese Liste ist nicht vollständig!!!
 
 ## Liste
 
+0x378 \|\| 0x37F \|\| 1. Parallel Port
+
 |  |  |  |
 | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Begin | Ende | Gerät |
@@ -46,6 +48,6 @@ Diese Liste ist nicht vollständig!!!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 2301; parent 2203; 2007-11-27T07:24:24Z -->
+<!-- MediaWiki page 1543; revision 2343; parent 2301; 2007-12-03T16:29:04Z -->
