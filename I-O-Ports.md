@@ -6,8 +6,6 @@ Diese Liste ist nicht vollständig!!!
 
 ## Liste
 
-0x378 \|\| 0x37F \|\| 1. Parallel Port
-
 |  |  |  |
 | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Begin | Ende | Gerät |
@@ -28,6 +26,7 @@ Diese Liste ist nicht vollständig!!!
 | 0x2F8 | 0x2FF | 2\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
 | 0x370 | 0x375 | 2\. [Diskettenlaufwerk Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x376 | 0x377 | 2\. [Festplatten Kontroller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
+| 0x378 | 0x37F | 1\. Parallel Port |
 | 0x3B0 | 0x3DF | [Video Graphics Array](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array") (VGA) |
 | 0x3C0 | 0x3CF | 1\. EGA |
 | 0x3D0 | 0x3DF | CGA and EGA/VGA |
@@ -48,6 +47,6 @@ Diese Liste ist nicht vollständig!!!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 2343; parent 2301; 2007-12-03T16:29:04Z -->
+<!-- MediaWiki page 1543; revision 2344; parent 2343; 2007-12-03T16:29:39Z -->
