@@ -1,6 +1,6 @@
 # MeinOS
 
-meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
+meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Außerdem unterstützt meinOS Mehrprozessor-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
 
 ## Entwicklung
 
@@ -9,10 +9,12 @@ Im Moment werden einige Kernel-Funktionen noch vollendet und es müssen noch vie
 ### Komplett (oder noch in Arbeit)
 
 - Kernel
-  - Taskmanagement (Pagesuchalgorithmus muss erneuert werden)
+  - Memorymanagement
+  - Multiprocessor-Kompatibilität (noch nicht vollständig)
+  - Taskmanagement (Taskwechsel-Algorithmus fehlt noch)
   - IPC (Message Passing)
   - (Kernel-)Timer (100Hz) - zeitversetztes Aufrufen von Funktionen (z.B für Beep)
-  - (Kernel-)Textausgabe - die meisten Steuerzeichen werden unterstützt.
+  - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Kompatibilität
 
 <!-- -->
 
@@ -57,6 +59,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2276; parent 2255; 2007-11-25T21:20:03Z -->
+<!-- MediaWiki page 1551; revision 2342; parent 2276; 2007-12-03T15:18:33Z -->
