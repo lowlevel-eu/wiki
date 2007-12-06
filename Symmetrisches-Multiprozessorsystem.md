@@ -22,7 +22,7 @@ Der erste Schritt dahingehend ist das Auffinden der *Floating Pointer Structure*
 Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksumme identifiziert. Die Checksumme wird berechnet indem man alle Bytes der Struktur aufaddiert. Das Ergebnis dieser Berechnung muss 0x00 sein. Die Struktur befindet sich in mindestens einem der folgenden Speicherbereiche:
 
 - In dem ersten Kilobyte der [Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area")
-- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MB Marke
+- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area"))
 - Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF)
 
 Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen. Zu beachten ist außerdem, dass die Struktur an einer 16-byte Grenze beginnen muss.
@@ -41,6 +41,6 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen. Zu beachte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 2347; parent 2346; 2007-12-06T20:57:29Z -->
+<!-- MediaWiki page 1490; revision 2352; parent 2347; 2007-12-06T21:24:08Z -->
