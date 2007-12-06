@@ -1,13 +1,13 @@
 # BIOS Data Area
 
-In der BIOS Data Area (Abkürzung: BDA) werden wichtige Informationen über Hardware und andere Systemkomponenten gespeichert.
+In der **BIOS Data Area** (Abkürzung: **BDA**) werden wichtige Informationen über Hardware und andere Systemkomponenten gespeichert.
 
 ## Aufbau der BIOS Data Area
 
 Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x0400. Die folgende Tabelle zeigt den Aufbau dieses Segments:
 
 | Offset | Größe (Bytes) | Beschreibung |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------- |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 2 | I/O-Port von [COM1](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
 | 0x02 | 2 | I/O-Port von [COM2](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
 | 0x04 | 2 | I/O-Port von [COM3](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
@@ -15,7 +15,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x08 | 2 | I/O-Port von LP1 |
 | 0x0A | 2 | I/O-Port von LP2 |
 | 0x0C | 2 | I/O-Port von LP3 |
-| 0x0E | 2 | I/O-Port von LP4 |
+| 0x0E | 2 | I/O-Port von LP4 oder<br>Segment der [EBDA](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "EBDA") (bei PS/2) |
 | 0x10 | 2 | Equipment word |
 | 0x12 | 1 | Manufacturing test data |
 | 0x13 | 2 | Speichergröße (in kB) |
@@ -54,6 +54,6 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2291/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2291; parent 2269; 2007-11-26T18:16:16Z -->
+<!-- MediaWiki page 1564; revision 2351; parent 2291; 2007-12-06T21:22:16Z -->
