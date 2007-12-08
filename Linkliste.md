@@ -62,8 +62,15 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 - [PC Lautsprecher](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=24) - joachim_neu
 
+## Offizielle Spezifikationen
+
+### Intel
+
+- [I/O APIC](http://www.intel.com/design/chipsets/datashts/290566.htm)
+- [Intel Architecture Software Developer's Manual Volume 3: System Programming](http://www.intel.com/design/pentiumii/manuals/243192.htm)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 2208; parent 2205; 2007-10-27T21:02:29Z -->
+<!-- MediaWiki page 1437; revision 2366; parent 2208; 2007-12-08T19:35:20Z -->
