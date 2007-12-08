@@ -1,6 +1,6 @@
 # QEMU
 
-Qemu ist ein Emulator unter anderem für die Systeme Linux, Windows, MacOS, FreeBSD, OpenBsd und NetBSD.
+QEMU ist ein Emulator unter anderem für die Systeme Linux, Windows, MacOS, FreeBSD, OpenBsd und NetBSD.
 
   
 QEMU emuliert x86-, x86-64 bzw. AMD64-, PowerPC- und Sparc32/64-Hardware.
@@ -21,12 +21,17 @@ Auf einem x86 Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - Soundkarte (Soundblaster 16, ES1370 PCI)
 - USB-Controller (Intel SB82371, UHCI)
 
+# Siehe Auch
+
+- GNU Project Debugger und QEMU
+
 # Links
 
-- [Homepage](http://www.qemu.org.Qemu)
+- [QEMU Homepage](http://www.qemu.org)
+- [QEMU unter Windows](http://www.h7.dion.ne.jp/~qemu-win)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1966/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 1966; parent 1879; 2007-05-09T07:26:08Z -->
+<!-- MediaWiki page 1505; revision 2365; parent 1966; 2007-12-08T18:46:52Z -->
