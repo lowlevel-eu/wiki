@@ -8,7 +8,7 @@ Das ist die primitivste Methode der Fehlersuche und sie wird meist nur am Anfang
 
 # print(f)/cout
 
-Diese Methode ist schon etwas praktischer als die letzte. Debug-Ausgaben werden eigentlich in jedem Stadium der Entwicklung immer wieder gebraucht. Man platziert an den relevanten Stellen im Code Text-Ausgaben um beispielsweise zu sehen, welche Funktion aufgerufen wurde oder wie oft eine Schleife durchläuft usw.
+Diese Methode ist schon etwas praktischer als die letzte. Debug-Ausgaben werden eigentlich in jedem Stadium der Entwicklung immer wieder gebraucht. Man platziert an den relevanten Stellen im Code [Text-Ausgaben](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") um beispielsweise zu sehen, welche Funktion aufgerufen wurde oder wie oft eine Schleife durchläuft usw.
 
 # RS232
 
@@ -20,7 +20,7 @@ Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist 
 
 # Exception-Meldungen
 
-Wenn der Kernel schon ein wenig weiter ausgebaut ist, und Exceptions abfängt, können diese Meldungen so ausgebaut werden, damit sie alle nötigen Informationen ausgeben. Um die Registerinhalte auszugeben empfiehlt es sich, diese in der ISR für die Exceptions auf den Stack zu legen, und dem Exception-Handler einen Pointer auf das zuletzt gepushte Register zu übergeben. Dabei sollte man darauf, dass nichts anderes zwischen dem Interrupt-Stack-Frame und den Registern liegt, da der Handler sonst nicht mehr wirklich an eip und esp aus dem Interrupt-Stack-Frame ran kommen kann. Der Exception-Handler kann dann eine nette Meldung mit allen nötigen Infos ausgeben.
+Wenn der Kernel schon ein wenig weiter ausgebaut ist, und [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#exceptions "Ausgabe 2") abfängt, können diese Meldungen so ausgebaut werden, damit sie alle nötigen Informationen ausgeben. Um die Registerinhalte auszugeben empfiehlt es sich, diese in der [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") für die Exceptions auf den Stack zu legen, und dem Exception-Handler einen Pointer auf das zuletzt gepushte Register zu übergeben. Dabei sollte man darauf, dass nichts anderes zwischen dem Interrupt-Stack-Frame und den Registern liegt, da der Handler sonst nicht mehr wirklich an eip und esp aus dem Interrupt-Stack-Frame ran kommen kann. Der Exception-Handler kann dann eine nette Meldung mit allen nötigen Infos ausgeben.
 
 # objdump
 
@@ -28,6 +28,6 @@ Sobald man die Adresse hat, muss man daraus irgendwie auf die Codestelle schlies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2362/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 2362; parent 2325; 2007-12-08T18:18:17Z -->
+<!-- MediaWiki page 1544; revision 2363; parent 2362; 2007-12-08T18:30:12Z -->
