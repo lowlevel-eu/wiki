@@ -43,7 +43,7 @@ Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe co
     void printchar(u8 chr,u8 color,u8 x,u8 y) {
       u16 *off = (u16*)0xB8000;
       // berechnen der Adresse
-      off += ( y*80+x ) * 2; //*2, da 2 Byte pro Zeichen
+      off += y*80+x;  // eine Multiplikation mit 2 darf hier nicht erfolgen, da off vom type u16 ist
       // setzen des zeichens + attributebyte
       *off = (((u16)color)<<8)|chr;
     }
@@ -106,6 +106,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2361/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2360; parent 2359; 2007-12-08T17:14:04Z -->
+<!-- MediaWiki page 1549; revision 2361; parent 2360; 2007-12-08T17:37:43Z -->
