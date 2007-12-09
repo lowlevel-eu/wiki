@@ -39,7 +39,7 @@ Ich werde hier ein wenig drauf eingehen, wie man verschiedene Optionen setzt und
 
 ### Baudrate einstellen
 
-Um die Baudrate einzustellen muss man erstmal das DLAB-Bit setzen, es ist eine Art Umschaltbit um 12 Register über 8 I/O-Port-Adressen zu benutzen. Dafür muss man im LineControl-Register das 8. Bit setzen.
+Um die Baudrate einzustellen muss man erstmal das DLAB-Bit setzen, es ist eine Art Umschaltbit um 12 Register über 8 I/O-Port-Adressen zu benutzen. Dafür muss man im LineControl-Register Bit 7 setzen.
 
 Die Baudrate wird aber nicht direkt gespeichert. Es wird immer nur ein Teiler gespeichert. Diesen kann man wie folgt berechnen:\\ *t = 115200/b*\\ Wobei *t* der Teiler und *b* die Baudrate ist.
 
@@ -49,9 +49,9 @@ Danach sollte man das DLAB-Bit wieder zurücksetzen.
 
 ### Parität setzen
 
-Es gibt 4 verschiedene Paritäten: Odd, Even, High Parity und Low Parity. Diese setzt man mithilfe von 3 Bits, es sind die Bits 4-6 des LineControl-Registers.
+Es gibt 4 verschiedene Paritäten: Odd, Even, High Parity und Low Parity. Diese setzt man mithilfe von 3 Bits, es sind die Bits 3-5 des LineControl-Registers.
 
-| Parität | Bit 4 | Bit 5 | Bit 6 |
+| Parität | Bit 3 | Bit 4 | Bit 5 |
 | ------------- | ------- | ------- | ------- |
 | Keine | 0 | X | X |
 | Odd | 1 | 0 | 0 |
@@ -61,19 +61,19 @@ Es gibt 4 verschiedene Paritäten: Odd, Even, High Parity und Low Parity. Diese 
 
 ### Bytelänge setzen
 
-Die Bytelänge bestimmt wie viel Bits ein Byte ergeben. Heutzutage werden eigentlich immer 8 Bits zu einem Byte zusammengefasst. Ein Byte kann 5 bis 8 Bits haben. Zum Setzen der Anzahl wird das 1. und 2. Byte im LineControl-Register benutzt. 00b entspricht 5 Bits 01b 6 usw. Also einfach die Anzahl an Bits minus 5 und in einen zwei-Bit-Wert wandeln.
+Die Bytelänge bestimmt wie viel Bits ein Byte ergeben. Heutzutage werden eigentlich immer 8 Bits zu einem Byte zusammengefasst. Ein Byte kann 5 bis 8 Bits haben. Zum Setzen der Anzahl werden Bits 0 und 1 im LineControl-Register benutzt. 00b entspricht 5 Bits 01b 6 usw. Also einfach die Anzahl an Bits minus 5 und in einen zwei-Bit-Wert wandeln.
 
 ### Anzahl Stoppbits setzen
 
-Die Anzahl an Stoppbits wird im 3 Bit des LineControl-Registers gesetzt. 0b entspricht einem Stoppbit und 1b zwei Stoppbits (für Bytes mit 5 Bits 1.5 Stoppbits).
+Die Anzahl an Stoppbits wird mit Bit 2 des LineControl-Registers gesetzt. 0b entspricht einem Stoppbit und 1b zwei Stoppbits (für Bytes mit 5 Bits 1.5 Stoppbits).
 
 ### Senden
 
-Zum Senden muss man erstmal nachschauen ob man senden darf. Wenn das 6. Bit des LineStatus-Registers gesetzt ist darf man Senden. Dafür schreibt man einfach das zu sendende Byte in Transmitting-Buffer.
+Zum Senden muss man erstmal nachschauen ob man senden darf. Wenn Bit 5 des LineStatus-Registers gesetzt ist darf man Senden. Dafür schreibt man einfach das zu sendende Byte in Transmitting-Buffer.
 
 ### Empfangen
 
-Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Interrupt bekommt. Welche Bits für was stehen wird hier nicht besprochen, doch wenn man 0x00 in das InterruptControl-Register schreibt, wird man nie einen Interrupt bekommen. So wollen wir vorgehen und einfach Lesen ohne vorher auf einen Interrupt zu warten. Das Prinzip des Lesens ist allerdings gleich, auch wenn man vorher auf einen Interrupt wartet. Im 1. Bit des LineStatus-Registers sieht man ob ein Byte empfangen wurde. Man kann es dann einfach aus dem Transmitting-Buffer lesen.
+Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Interrupt bekommt. Welche Bits für was stehen wird hier nicht besprochen, doch wenn man 0x00 in das InterruptControl-Register schreibt, wird man nie einen Interrupt bekommen. So wollen wir vorgehen und einfach Lesen ohne vorher auf einen Interrupt zu warten. Das Prinzip des Lesens ist allerdings gleich, auch wenn man vorher auf einen Interrupt wartet. In Bit 0 des LineStatus-Registers sieht man ob ein Byte empfangen wurde. Man kann es dann einfach aus dem Transmitting-Buffer lesen.
 
 ## Beispiel
 
@@ -147,6 +147,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2286/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2368/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 2286; parent 2256; 2007-11-26T18:02:22Z -->
+<!-- MediaWiki page 1561; revision 2368; parent 2286; 2007-12-09T20:02:36Z -->
