@@ -12,7 +12,7 @@ Zur Ausgabe von Text gibt es einen 4kB großen Speicher an der Adresse 0xB8000. 
 
 Um nun auf dem Bildschirm ein Zeichen zu haben, muss man erstmal das Offset ausrechnen, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s Wobei hier o das Offset ist, z die Zeile und s die Spalte. Wenn man in Mathe aufgepasst hat, sollte das kein Problem sein.
 
-Nun war die Rede, dass 2 Bytes pro Zeichen verwendet werden. Also woher kommt das 2. Byte? Ganz einfach: In dem 2. Byte wird das Attribut, also eigentlich nur die Farbe gespeichert. Im ersten wird einfach nur das Zeichen gespeichert. Als Code wird [Codepage 437](http://de.wikipedia.org/wiki/Codepage_437) verwendet, welche nichts anderes als [7bit-ASCII](http://de.wikipedia.org/wiki/ASCII) plus noch ein paar Zeichen Erweiterung, ist.
+Nun war die Rede, dass 2 Bytes pro Zeichen verwendet werden. Also woher kommt das 2. Byte? Ganz einfach: In dem 2. Byte wird das Attribut, also eigentlich nur die Farbe gespeichert. Im ersten wird einfach nur das Zeichen gespeichert. Als Code wird [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437") verwendet, welche nichts anderes als [7bit-ASCII](http://de.wikipedia.org/wiki/ASCII) plus noch ein paar Zeichen Erweiterung, ist.
 
 ## Attribut-Byte
 
@@ -36,7 +36,7 @@ Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Schwarz.
 
 ## Beispiel
 
-Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet, bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](http://de.wikipedia.org/wiki/Codepage_437)).
+Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet, bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
 
 \<c\>
 
@@ -102,10 +102,9 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 - [Artikel aus der OSDevWiki](http://www.osdev.org/wiki/Text_UI)
 - ["Printing to the Screen" Bran's Kernel Development Tutorial](http://osdever.net/bkerndev/Docs/printing.htm)
 - [ASCII-Tabelle](http://de.wikipedia.org/wiki/ASCII-Tabelle)
-- [Codepage 437](http://de.wikipedia.org/wiki/Codepage_437)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2361/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2371/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2361; parent 2360; 2007-12-08T17:37:43Z -->
+<!-- MediaWiki page 1549; revision 2371; parent 2361; 2007-12-09T21:21:16Z -->
