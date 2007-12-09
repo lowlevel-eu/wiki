@@ -33,18 +33,23 @@ Die Veränderungen bei den derzeitigen Versionen:
 Folgende Versionen sind geplant:
 
     4.Quartal 2007 : HomixOS 0.1.1
+    Anfang 2008 : HomixOS 0.1.2
 
 Die geplanten Neuheiten in den zukünftigen Versionen:
 
 **HomixOS 0.1.1:**
 
 - verbesserte Prozessverwaltung
-- Exception-Handling
-- eine Art Registry
-- Benutzerverwaltung
-- Festplattentreiber (P-ATA)
+- einfache Benutzerverwaltung
 - erweiterte Shell
 - Texteditor
+
+**HomixOS 0.1.2:**
+
+- Optimierter Binary-Loader
+- erweiterte Benutzerverwaltung
+- Exception-Handling
+- SMP / Multiprocessor-Support
 
 ## Offizielle Webseite
 
@@ -53,6 +58,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2202/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 2202; parent 2173; 2007-10-27T13:38:50Z -->
+<!-- MediaWiki page 1453; revision 2369; parent 2202; 2007-12-09T20:47:07Z -->
