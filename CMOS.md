@@ -40,7 +40,7 @@ Im CMOS werden folgende jeweils 1Byte große Felder gespeichert:
 
   
 
-## 0x0A - Statusregister A
+### 0x0A - Statusregister A
 
 **Bit:**
 
@@ -79,7 +79,7 @@ Auswahl-Bits für Interrupts
 
   
 
-## 0x0B - Statusregister B
+### 0x0B - Statusregister B
 
 | Bit | Beschreibung |
 | ----- | -------------------------------------------------------------------- |
@@ -106,6 +106,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die fünf niederwertigen Bits d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2374; parent 2373; 2007-12-11T21:22:28Z -->
+<!-- MediaWiki page 1562; revision 2375; parent 2374; 2007-12-11T21:23:19Z -->
