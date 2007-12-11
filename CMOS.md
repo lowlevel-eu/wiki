@@ -1,6 +1,6 @@
 # CMOS
 
-Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein elektonischer Baustein, aber im Bereich der Betriebssystemprogrammierung ist damit meistens der batterie-gepufferter SRAM eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Computers gemeint. In diesem speichert das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") Informationen beispielsweise über die angeschlossene Hardware. Außerdem wird darin die momentane Uhrzeit und das Datum gespeichert und von einer Echtzeituhr aktualisiert.
+Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein elektronischer Baustein, aber im Bereich der Betriebssystemprogrammierung ist damit meistens der Batterie-gepufferte SRAM eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Computers gemeint. In diesem speichert das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") Informationen beispielsweise über die angeschlossene Hardware. Außerdem wird darin die momentane Uhrzeit und das Datum gespeichert und von einer Echtzeituhr aktualisiert.
 
 ## Aufbau
 
@@ -51,6 +51,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die fünf niederwertigen Bits d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2356; parent 2266; 2007-12-07T13:40:49Z -->
+<!-- MediaWiki page 1562; revision 2372; parent 2356; 2007-12-11T20:30:26Z -->
