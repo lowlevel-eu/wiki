@@ -48,9 +48,10 @@ Die Programmierung des CMOS ist denkbar einfach: Die fünf niederwertigen Bits d
 
 - [Wikipedia: CMOS](http://de.wikipedia.org/wiki/Complementary_Metal_Oxide_Semiconductor) (*deutsch*)
 - [Real Time Clock / CMOS Setup Reference](http://www.nondot.org/sabre/os/files/MiscHW/RealtimeClockFAQ.txt) (*englisch*)
+- [CMOS-Aufbau](http://www.bioscentral.com/misc/cmosmap.htm) (*englisch*)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2372; parent 2356; 2007-12-11T20:30:26Z -->
+<!-- MediaWiki page 1562; revision 2373; parent 2372; 2007-12-11T20:33:49Z -->
