@@ -48,7 +48,7 @@ Im CMOS werden folgende jeweils 1Byte große Felder gespeichert:
 
 **Beschreibung:**
 
-Zeit-Update-Zyklus (1 = Update läuft, Zeitangaben undefiniert)
+Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert)
 
 ------------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ Zeit-Update-Zyklus (1 = Update läuft, Zeitangaben undefiniert)
 
 **Beschreibung:**
 
-Zeit-teiler (Standard = 010b = 32.768 kHz)
+Zeit-Basis (Standard = 010b = 32768 Hz)
 
 ------------------------------------------------------------------------
 
@@ -68,7 +68,7 @@ Zeit-teiler (Standard = 010b = 32.768 kHz)
 
 **Beschreibung:**
 
-Auswahl-Bits für Interrupts
+Auswahl-Bits für Interrupt-Rate
 
                 0000b = kein Interrupt
                 0011b = alle 122 Mikrosekunden (minimum)
@@ -82,21 +82,46 @@ Auswahl-Bits für Interrupts
 ### 0x0B - Statusregister B
 
 | Bit | Beschreibung |
-| ----- | -------------------------------------------------------------------- |
-| 7 | Zeit-Update (0 = normales Update, 1 = Update läuft) |
-| 6 | Periodischer Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
-| 5 | Alarm Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
-| 4 | Update-Ende-Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
-| 3 | Rechtecks-Frequenz (0 = deaktiviert (Standard), 1 = aktiviert) |
-| 2 | Daten Modus (0 = BCD, 1 = Binary) |
-| 1 | 24/12 Stunden Wahl (0 = 24 Stunden (Standard), 1 = 12 Stunden) |
+| ----- | ------------------------------------------------------------------------------------------------------- |
+| 7 | Zeit-Update (0 = Zeit aktualisieren, 1 = Zeit-update anhalten) |
+| 6 | Periodischer Interrupt mit Rate aus Statusregister A (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 5 | Alarm Interrupt wenn Uhrzeit = Alarmzeit (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 4 | Update-Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 3 | Rechtecks-Frequenz mit Rate aus Statusregister A erzeugen (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 2 | Daten Modus (0 = BCD, 1 = Binär) |
+| 1 | 24 Stundenformat (0 = 12 Stunden, 1 = 24 Stunden (Standard)) |
 | 0 | Sommerzeit (0 = deaktiviert (Standard), 1 = aktiviert) |
+
+  
+
+  
+
+### 0x0C - Statusregister C
+
+| Bit | Beschreibung |
+| ----- | ---------------------------------------------------------- |
+| 7 | Interrupt-Request (1 = RTC hat Interrupt angefordert) |
+| 6 | IRQ-Quelle ist periodischer Interrupt (0 = nein, 1 = ja) |
+| 5 | IRQ-Quelle ist Alarm-Interrupt (0 = nein, 1 = ja) |
+| 4 | IRQ-Interrupt ist Update-Interrupt (0 = nein, 1 = ja) |
+| 3-0 | Reserviert |
+
+  
+
+  
+
+### 0x0D - Statusregister D
+
+| Bit | Beschreibung |
+| ----- | -------------------------------------------------------------------- |
+| 7 | Gültigkeit der Daten im CMOS (0 = ungültig, 1 = Daten sind gültig) |
+| 6-0 | Reserviert |
 
   
 
 ## Programmierung
 
-Die Programmierung des CMOS ist denkbar einfach: Die fünf niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
+Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als NMI-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
 
 ## Weblinks
 
@@ -106,6 +131,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die fünf niederwertigen Bits d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2376/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2375; parent 2374; 2007-12-11T21:23:19Z -->
+<!-- MediaWiki page 1562; revision 2376; parent 2375; 2007-12-11T21:51:43Z -->
