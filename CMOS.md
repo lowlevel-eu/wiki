@@ -10,20 +10,20 @@ Im CMOS werden folgende jeweils 1Byte große Felder gespeichert:
 
 | Offset | Beschreibung |
 | -------- | ----------------------------------------------------------------------------------------------------- |
-| 0x00 | Sekunde |
-| 0x01 | Alarmsekunde |
-| 0x02 | Minute |
-| 0x03 | Alarmminute |
-| 0x04 | Stunde |
-| 0x05 | Alarmstunde |
-| 0x06 | Wochentag |
-| 0x07 | Tag des Monats |
-| 0x08 | Monat |
-| 0x09 | Jahr (letzten zwei Stellen) |
+| 0x00 | Sekunde (BCD) |
+| 0x01 | Alarmsekunde (BCD) |
+| 0x02 | Minute (BCD) |
+| 0x03 | Alarmminute (BCD) |
+| 0x04 | Stunde (BCD) |
+| 0x05 | Alarmstunde (BCD) |
+| 0x06 | Wochentag (BCD) |
+| 0x07 | Tag des Monats (BCD) |
+| 0x08 | Monat (BCD) |
+| 0x09 | Jahr (letzten zwei Stellen) (BCD) |
 | 0x0A | Statusregister A |
 | 0x0B | Statusregister B |
-| 0x0C | Statusregister C |
-| 0x0D | Statusregister D |
+| 0x0C | Statusregister C (schreibgeschützt) |
+| 0x0D | Statusregister D (schreibgeschützt) |
 | 0x0E | [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST")-Diagnosestatusbyte |
 | 0x0F | Shutdown-Statusbyte |
 | 0x10 | Typ der [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") |
@@ -36,7 +36,61 @@ Im CMOS werden folgende jeweils 1Byte große Felder gespeichert:
 | 0x18 | Größe des Erweiterungsspeichers in kB (höherwertiges Byte) |
 | 0x2E | CMOS-Prüfsumme (niederwertiges Byte) |
 | 0x2F | CMOS-Prüfsumme (höherwertiges Byte) |
-| 0x32 | Jahrhundert |
+| 0x32 | Jahrhundert (BCD) |
+
+  
+
+## 0x0A - Statusregister A
+
+**Bit:**
+
+7
+
+**Beschreibung:**
+
+Zeit-Update-Zyklus (1 = Update läuft, Zeitangaben undefiniert)
+
+------------------------------------------------------------------------
+
+**Bit:**
+
+6-4
+
+**Beschreibung:**
+
+Zeit-teiler (Standard = 010b = 32.768 kHz)
+
+------------------------------------------------------------------------
+
+**Bit:**
+
+3-0
+
+**Beschreibung:**
+
+Auswahl-Bits für Interrupts
+
+                0000b = kein Interrupt
+                0011b = alle 122 Mikrosekunden (minimum)
+                0110b = 976.562 Mikrosekunden (Standard)
+                1111b = 500 Millisekunden
+
+  
+
+  
+
+## 0x0B - Statusregister B
+
+| Bit | Beschreibung |
+| ----- | -------------------------------------------------------------------- |
+| 7 | Zeit-Update (0 = normales Update, 1 = Update läuft) |
+| 6 | Periodischer Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 5 | Alarm Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 4 | Update-Ende-Interrupt (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 3 | Rechtecks-Frequenz (0 = deaktiviert (Standard), 1 = aktiviert) |
+| 2 | Daten Modus (0 = BCD, 1 = Binary) |
+| 1 | 24/12 Stunden Wahl (0 = 24 Stunden (Standard), 1 = 12 Stunden) |
+| 0 | Sommerzeit (0 = deaktiviert (Standard), 1 = aktiviert) |
 
   
 
@@ -52,6 +106,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die fünf niederwertigen Bits d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2373; parent 2372; 2007-12-11T20:33:49Z -->
+<!-- MediaWiki page 1562; revision 2374; parent 2373; 2007-12-11T21:22:28Z -->
