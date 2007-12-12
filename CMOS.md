@@ -128,7 +128,7 @@ Auswahl-Bits für Interrupt-Rate
 | 7 | Stromversorgung (0 = OK, 1 = Stromversorgung war unterbrochen) |
 | 6 | CMOS-Prüfsumme (0 = OK, 1 = Prüfsumme falsch) |
 | 5 | Konfiguration im CMOS stimmt mit ermittelten Werten überein (0 = OK, 1 = nein) |
-| 4 | Speichergrösse im CMOS == ermittelte Speichergrösse (0 = ja, 1 = nein) |
+| 4 | Speichergröße im CMOS == ermittelte Speichergröße (0 = ja, 1 = nein) |
 | 3 | Laufwerk bzw Controllerfehler (0 = OK, 1 = Fehler) |
 | 2 | Uhrzeit gültig (0 = OK, 1 = Fehler) |
 | 1 | Fehler bei Adapterinitialisierung (0 = OK, 1 = Fehler) |
@@ -148,6 +148,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2378; parent 2377; 2007-12-12T19:17:26Z -->
+<!-- MediaWiki page 1562; revision 2379; parent 2378; 2007-12-12T19:45:14Z -->
