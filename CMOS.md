@@ -119,6 +119,23 @@ Auswahl-Bits für Interrupt-Rate
 
   
 
+  
+
+### 0x0E [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST")-Diagnosestatusbyte
+
+| Bit | Beschreibung |
+| ----- | -------------------------------------------------------------------------------- |
+| 7 | Stromversorgung (0 = OK, 1 = Stromversorgung war unterbrochen) |
+| 6 | CMOS-Prüfsumme (0 = OK, 1 = Prüfsumme falsch) |
+| 5 | Konfiguration im CMOS stimmt mit ermittelten Werten überein (0 = OK, 1 = nein) |
+| 4 | Seichergrösse im CMOS == ermittelte Speichergrösse (0 = ja, 1 = nein) |
+| 3 | Laufwerk bzw Controllerfehler (0 = OK, 1 = Fehler) |
+| 2 | Uhrzeit gültig (0 = OK, 1 = Fehler) |
+| 1 | Fehler bei Adapterinitialisierung (0 = OK, 1 = Fehler) |
+| 0 | Timeout beim Adapter-ID lesen |
+
+  
+
 ## Programmierung
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als NMI-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
@@ -131,6 +148,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2376/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2376; parent 2375; 2007-12-11T21:51:43Z -->
+<!-- MediaWiki page 1562; revision 2377; parent 2376; 2007-12-12T17:34:09Z -->
