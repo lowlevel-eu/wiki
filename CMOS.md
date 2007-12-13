@@ -27,6 +27,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert:
 | 0x0E | [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST")-Diagnosestatusbyte |
 | 0x0F | Shutdown-Statusbyte |
 | 0x10 | Typ der [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") |
+| 0x11 | reserviert |
 | 0x12 | Typ der Festplattenlaufwerke |
 | 0x13 | reserviert |
 | 0x14 | Gerätebyte |
@@ -156,6 +157,31 @@ Werte des Bytes:
 
   
 
+### 0x10 - Typ der [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")
+
+In diesem Byte wird der Typ der Diskettenlaufwerke gespeichert, wobei in den Bits 4-7 der Typ des ersten Laufwerks gespeichert ist und in den Bits 0-3 der Typ des zweiten Laufwerks. Die Typen sind wie folgt kodiert:
+
+    0000b = Laufwerk nicht vorhanden
+    0001b = 5 1/4 - 360 kB
+    0010b = 5 1/4 - 1.2 MB
+    0011b = 3 1/2 - 720 kB
+    0100b = 2 1/2 - 1.44 MB (sollte eigentlich heutzutage der Standard sein)
+    0101b - 1111b sind unbenutzt
+
+  
+
+  
+
+### 0x12 - Typ der Festplattenlaufwerke
+
+In diesem Byte wird der Typ der Festplattenlaufwerke gespeichert, wobei in den Bits 4-7 der Typ des ersten Laufwerks gespeichert ist und in den Bits 0-3 der Typ des zweiten Laufwerks. Die Typen sind wie folgt kodiert:
+
+    0000b = Laufwerk nicht vorhanden
+    0001b - 1110b = Typen 1-14
+    1111b = Typ laut Erweiterungsbyte der Festplatte
+
+  
+
 ## Programmierung
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als NMI-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
@@ -168,6 +194,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2381; parent 2379; 2007-12-13T19:16:41Z -->
+<!-- MediaWiki page 1562; revision 2382; parent 2381; 2007-12-13T19:33:59Z -->
