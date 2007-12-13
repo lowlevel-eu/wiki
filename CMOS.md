@@ -9,7 +9,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert:
   
 
 | Offset | Beschreibung |
-| -------- | ----------------------------------------------------------------------------------------------------- |
+| -------- | ---------------------------------------------------------------------- |
 | 0x00 | Sekunde (BCD) |
 | 0x01 | Alarmsekunde (BCD) |
 | 0x02 | Minute (BCD) |
@@ -20,17 +20,17 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert:
 | 0x07 | Tag des Monats (BCD) |
 | 0x08 | Monat (BCD) |
 | 0x09 | Jahr (letzten zwei Stellen) (BCD) |
-| 0x0A | Statusregister A |
-| 0x0B | Statusregister B |
-| 0x0C | Statusregister C (schreibgeschützt) |
-| 0x0D | Statusregister D (schreibgeschützt) |
-| 0x0E | [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST")-Diagnosestatusbyte |
-| 0x0F | Shutdown-Statusbyte |
-| 0x10 | Typ der [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") |
+| 0x0A | [Statusregister A](#0x0a---statusregister-a) |
+| 0x0B | [Statusregister B](#0x0b---statusregister-b) |
+| 0x0C | [Statusregister C](#0x0c---statusregister-c) (schreibgeschützt) |
+| 0x0D | [Statusregister D](#0x0d---statusregister-d) (schreibgeschützt) |
+| 0x0E | [POST-Diagnosestatusbyte](#) |
+| 0x0F | [Shutdown-Statusbyte](#0x0f---shutdown-statusbyte) |
+| 0x10 | [Typ der Diskettenlaufwerke](#0x10---typ-der-diskettenlaufwerke) |
 | 0x11 | reserviert |
-| 0x12 | Typ der Festplattenlaufwerke |
+| 0x12 | [Typ der Festplattenlaufwerke](#0x12---typ-der-festplattenlaufwerke) |
 | 0x13 | reserviert |
-| 0x14 | Gerätebyte |
+| 0x14 | [Gerätebyte](#0x14---ger%C3%A4tebyte) |
 | 0x15 | Größe des Basisspeichers in kB (niederwertiges Byte) |
 | 0x16 | Größe des Basisspeichers in kB (höherwertiges Byte) |
 | 0x17 | Größe des Erweiterungsspeichers in kB (niederwertiges Byte) |
@@ -159,7 +159,7 @@ Werte des Bytes:
 
 ### 0x10 - Typ der [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")
 
-In diesem Byte wird der Typ der Diskettenlaufwerke gespeichert, wobei in den Bits 4-7 der Typ des ersten Laufwerks gespeichert ist und in den Bits 0-3 der Typ des zweiten Laufwerks. Die Typen sind wie folgt kodiert:
+In diesem Byte wird der Typ der [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") gespeichert, wobei in den Bits 4-7 der Typ des ersten Laufwerks gespeichert ist und in den Bits 0-3 der Typ des zweiten Laufwerks. Die Typen sind wie folgt kodiert:
 
     0000b = Laufwerk nicht vorhanden
     0001b = 5 1/4 - 360 kB
@@ -182,6 +182,26 @@ In diesem Byte wird der Typ der Festplattenlaufwerke gespeichert, wobei in den B
 
   
 
+### 0x14 - Gerätebyte
+
+Hier werden Informationen über die allgemeine Hardwarekonfiguration des PCs gespeichert.
+
+| Bits | 7-6 | 5-4 | 3 | 2 | 1 | 0 |
+| ------ | -------- | ------------- | -------------------- | --------------------- | --------------------------------------- | --------- |
+|  | Floppy | Display-Typ | Display vorhanden? | Keyboard vorhanden? | Mathematischer Koprozessor vorhanden? | immer 1 |
+
+**Floppy**
+
+    00b  1 Floppy-Laufwerk
+    01b  2 Floppy-Laufwerke
+
+**Display-Typ**
+
+    00b  BIOS-Display-Adapter
+    01b  CGA (40 Spalten)
+    10b  CGA (80 Spalten)
+    11b  Monochrom
+
 ## Programmierung
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als NMI-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
@@ -194,6 +214,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2382; parent 2381; 2007-12-13T19:33:59Z -->
+<!-- MediaWiki page 1562; revision 2383; parent 2382; 2007-12-13T20:58:57Z -->
