@@ -4,7 +4,7 @@ Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein 
 
 ## Aufbau
 
-Im CMOS werden folgende jeweils 1Byte große Felder gespeichert:
+Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert:
 
   
 
@@ -121,7 +121,7 @@ Auswahl-Bits für Interrupt-Rate
 
   
 
-### 0x0E [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST")-Diagnosestatusbyte
+### 0x0E - [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST")-Diagnosestatusbyte
 
 | Bit | Beschreibung |
 | ----- | -------------------------------------------------------------------------------- |
@@ -133,6 +133,26 @@ Auswahl-Bits für Interrupt-Rate
 | 2 | Uhrzeit gültig (0 = OK, 1 = Fehler) |
 | 1 | Fehler bei Adapterinitialisierung (0 = OK, 1 = Fehler) |
 | 0 | Timeout beim Adapter-ID lesen |
+
+  
+
+  
+
+### 0x0F - Shutdown-Statusbyte
+
+Prozessoren können nicht vom [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") in den Realmode zurückgeschaltet werden. Zu diesem Zweck ist ein Prozessor-Reset nötig. Das Shutdown-Statusbyte dient dazu dem BIOS anzuzeigen ob der PC neu gebootet oder der Prozessor nur im Realmode neu gestartet werden soll.
+
+Werte des Bytes:
+
+    0x00 - 0x03:  Power-On Reset durchführen
+    0x04:  int 0x19-reboot
+    0x05:  EOI an PIC ausgeben, Tastatur resetten, Sprung zur Addresse [0x0040:0x0067]
+    0x09:  zurück zu int 0x15, Funktion 0x87 (Block im Extenden Memory verschieben)
+    0x0A:  JMP zu [0x0040:0x0067]
+    0x0B:  IRET zu [0x0040:0x0067]
+    0x0C:  RET zu [0x0040:0x0067]
+
+  
 
   
 
@@ -148,6 +168,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2379; parent 2378; 2007-12-12T19:45:14Z -->
+<!-- MediaWiki page 1562; revision 2381; parent 2379; 2007-12-13T19:16:41Z -->
