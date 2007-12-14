@@ -187,10 +187,10 @@ In diesem Byte wird der Typ der Festplattenlaufwerke gespeichert, wobei in den B
 Hier werden Informationen über die allgemeine Hardwarekonfiguration des PCs gespeichert.
 
 | Bits | 7-6 | 5-4 | 3 | 2 | 1 | 0 |
-| ------ | -------- | ------------- | -------------------- | --------------------- | --------------------------------------- | --------- |
-|  | Floppy | Display-Typ | Display vorhanden? | Keyboard vorhanden? | Mathematischer Koprozessor vorhanden? | immer 1 |
+| ------ | ---------------- | ------------- | -------------------- | --------------------- | --------------------------------------- | -------- |
+|  | Anzahl Floppys | Display-Typ | Display vorhanden? | Keyboard vorhanden? | Mathematischer Koprozessor vorhanden? | Floppy |
 
-**Floppy**
+**Anzahl Floppys** Auf diesen Wert nur verlassen wenn Floppy=1
 
     00b  1 Floppy-Laufwerk
     01b  2 Floppy-Laufwerke
@@ -214,6 +214,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2383; parent 2382; 2007-12-13T20:58:57Z -->
+<!-- MediaWiki page 1562; revision 2384; parent 2383; 2007-12-14T15:04:24Z -->
