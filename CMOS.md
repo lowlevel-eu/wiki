@@ -4,12 +4,12 @@ Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein 
 
 ## Aufbau
 
-Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert:
+Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* markierten Einträge sind standardmässig im [BCD-Format](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") kodiert.
 
   
 
 | Offset | Beschreibung |
-| -------- | ---------------------------------------------------------------------- |
+| ------------- | ---------------------------------------------------------------------- |
 | 0x00 | Sekunde (BCD) |
 | 0x01 | Alarmsekunde (BCD) |
 | 0x02 | Minute (BCD) |
@@ -35,9 +35,17 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert:
 | 0x16 | Größe des Basisspeichers in kB (höherwertiges Byte) |
 | 0x17 | Größe des Erweiterungsspeichers in kB (niederwertiges Byte) |
 | 0x18 | Größe des Erweiterungsspeichers in kB (höherwertiges Byte) |
+| 0x19 | Erweiterungsbyte 1. Festplatte |
+| 0x1A | Erweiterungsbyte 2. Festplatte |
+| 0x1B - 0x1F | Reserviert |
+| 0x20 - 0x27 | Parameter vom 1. benutzerdefinierten Festplattentyp |
+| 0x28 - 0x2D | Reserviert |
 | 0x2E | CMOS-Prüfsumme (niederwertiges Byte) |
 | 0x2F | CMOS-Prüfsumme (höherwertiges Byte) |
+| 0x30 | Erweiterter Speicher (niederwertiges Byte) |
+| 0x31 | Erweiterter Speicher (höherwertiges Byte) |
 | 0x32 | Jahrhundert (BCD) |
+| 0x35 - 0x3C | Parameter vom 2. benutzerdefinierten Festplattentyp |
 
   
 
@@ -215,6 +223,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2386/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2385; parent 2384; 2007-12-14T15:05:12Z -->
+<!-- MediaWiki page 1562; revision 2386; parent 2385; 2007-12-14T17:27:56Z -->
