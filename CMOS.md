@@ -190,7 +190,8 @@ Hier werden Informationen über die allgemeine Hardwarekonfiguration des PCs ges
 | ------ | ---------------- | ------------- | -------------------- | --------------------- | --------------------------------------- | -------- |
 |  | Anzahl Floppys | Display-Typ | Display vorhanden? | Keyboard vorhanden? | Mathematischer Koprozessor vorhanden? | Floppy |
 
-**Anzahl Floppys** Auf diesen Wert nur verlassen wenn Floppy=1
+**Anzahl Floppys**  
+Auf diesen Wert nur verlassen wenn Floppy=1  
 
     00b  1 Floppy-Laufwerk
     01b  2 Floppy-Laufwerke
@@ -214,6 +215,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2384; parent 2383; 2007-12-14T15:04:24Z -->
+<!-- MediaWiki page 1562; revision 2385; parent 2384; 2007-12-14T15:05:12Z -->
