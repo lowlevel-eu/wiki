@@ -8,6 +8,8 @@
 - Elf: überarbeiten
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"): Aufbau des Statusregister A/B/C/D, Disketten-/Festplattenlaufwerkstypen, POST/Shutdown Statusbyte, Gerätebyte, evtl. BCD-kodierte Einträge markieren
+- [Memory Management](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Memory Management"): Bitte auf Fehler überprüfen.
+- Memory Managment bitte löschen. Hab den Titel zuerst falsch geschrieben
 
 ## Neu erstellen
 
@@ -32,6 +34,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2396/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2357; parent 2354; 2007-12-07T13:43:07Z -->
+<!-- MediaWiki page 1518; revision 2396; parent 2357; 2007-12-15T21:52:08Z -->
