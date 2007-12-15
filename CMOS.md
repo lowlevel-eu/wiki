@@ -221,6 +221,24 @@ Die CMOS-Prüfsumme ist eine 16 Bit grosse, byteweise Summe der Werte der Bytes 
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
 
+\<asm\>
+
+Ein Makro um ein Byte aus dem CMOS auszulesen
+
+Der einzige Parameter ist das Offset des Bytes welches gelesen werden soll
+
+Rückgabe ist das gelesene Byte in AL
+
+%macro read_byte 1
+
+     in al, 0x70         ;Bit 7 des Ports sichern
+     and al, 10000000b
+     or al, %1           ;Offset (Parameter 1) dazumixen
+     out 0x70, al        ;Offset setzen
+     in al, 0x71         ;Byte lesen
+
+%endmacro \</asm\>
+
 ## Weblinks
 
 - [Wikipedia: CMOS](http://de.wikipedia.org/wiki/Complementary_Metal_Oxide_Semiconductor) (*deutsch*)
@@ -229,6 +247,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2403/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2404/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2403; parent 2401; 2007-12-15T23:49:50Z -->
+<!-- MediaWiki page 1562; revision 2404; parent 2403; 2007-12-15T23:57:02Z -->
