@@ -9,7 +9,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
   
 
 | Offset | Beschreibung |
-| ------------- | ---------------------------------------------------------------------- |
+| ------------- | --------------------------------------------------------------------------- |
 | 0x00 | Sekunde (BCD) |
 | 0x01 | Alarmsekunde (BCD) |
 | 0x02 | Minute (BCD) |
@@ -40,8 +40,8 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 | 0x1B - 0x1F | Reserviert |
 | 0x20 - 0x27 | Parameter vom 1. benutzerdefinierten Festplattentyp |
 | 0x28 - 0x2D | Reserviert |
-| 0x2E | CMOS-Prüfsumme (niederwertiges Byte) |
-| 0x2F | CMOS-Prüfsumme (höherwertiges Byte) |
+| 0x2E | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (niederwertiges Byte) |
+| 0x2F | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (höherwertiges Byte) |
 | 0x30 | Erweiterter Speicher (niederwertiges Byte) |
 | 0x31 | Erweiterter Speicher (höherwertiges Byte) |
 | 0x32 | Jahrhundert (BCD) |
@@ -211,6 +211,12 @@ Auf diesen Wert nur verlassen wenn Floppy=1
     10b  CGA (80 Spalten)
     11b  Monochrom
 
+  
+
+### 0x2E & 0x2F - CMOS-Prüfsumme
+
+Die CMOS-Prüfsumme ist eine 16 Bit grosse, byteweise Summe der Werte der Bytes von 0x10 bis 0x2D.
+
 ## Programmierung
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
@@ -223,6 +229,6 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2403/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2401; parent 2386; 2007-12-15T23:38:17Z -->
+<!-- MediaWiki page 1562; revision 2403; parent 2401; 2007-12-15T23:49:50Z -->
