@@ -48,6 +48,6 @@ Der virtuelle Memorymanager ist dafür zuständig die einzelnen Speicherbereiche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2393/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 2393; parent 0; 2007-12-15T21:48:24Z -->
+<!-- MediaWiki page 1591; revision 2394; parent 2393; 2007-12-15T21:50:39Z -->
