@@ -39,6 +39,6 @@ Der Vorteil hierbei ist, dass durch eine einfache **or**-Verknüpfung mit 0x30 e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2391/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
 
-<!-- MediaWiki page 1589; revision 2390; parent 2389; 2007-12-15T21:03:55Z -->
+<!-- MediaWiki page 1589; revision 2391; parent 2390; 2007-12-15T21:04:37Z -->
