@@ -8,6 +8,8 @@ Wenn ein Interrupt ausgelöst wird, werden *eip*,*cs* und *eip* auf dem Stack ge
 
 Aus einem Interrupt wird zurückgekehrt mit der Instruktion *iret*
 
+Interrupts können mithilfe von *sti* und *cli* eingeschaltet bzw. ausgeschaltet werden. Dabei wird das 9. Bit im Register *eflags* gesetzt bzw. zurückgesetzt.
+
 ## Siehe auch
 
 - [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller")
@@ -17,6 +19,6 @@ Aus einem Interrupt wird zurückgekehrt mit der Instruktion *iret*
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 2412; parent 0; 2007-12-16T11:49:41Z -->
+<!-- MediaWiki page 1596; revision 2417; parent 2412; 2007-12-16T13:10:42Z -->
