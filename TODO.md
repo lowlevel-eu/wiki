@@ -8,7 +8,6 @@
 - Elf: überarbeiten
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"): Aufbau des Statusregister A/B/C/D, Disketten-/Festplattenlaufwerkstypen, POST/Shutdown Statusbyte, Gerätebyte, evtl. BCD-kodierte Einträge markieren
-- [Memory Management](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Memory Management"): Bitte auf Fehler überprüfen.
 
 ## Neu erstellen
 
@@ -24,6 +23,7 @@
 
 ## [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") arbeitet "momentan" an
 
+- [Speicherverwaltung#virtuelle Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung#virtuelle-speicherverwaltung "Speicherverwaltung") überarbeiten und unter [Speicherverwaltung#physikalische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") weitere mögliche Datenstruktur hinzufügen.
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
@@ -33,6 +33,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2407/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2397; parent 2396; 2007-12-15T22:04:30Z -->
+<!-- MediaWiki page 1518; revision 2407; parent 2397; 2007-12-16T01:22:18Z -->
