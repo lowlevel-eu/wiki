@@ -62,6 +62,6 @@ Das wird im Grunde so gemacht: Jeder Prozess bekommt beim Erzeugen mindestens ei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 2405; parent 2400; 2007-12-16T01:19:30Z -->
+<!-- MediaWiki page 1591; revision 2406; parent 2405; 2007-12-16T01:20:26Z -->
