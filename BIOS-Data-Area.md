@@ -16,7 +16,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x0A | 2 | I/O-Port von LP2 |
 | 0x0C | 2 | I/O-Port von LP3 |
 | 0x0E | 2 | I/O-Port von LP4 oder<br>Segment der [EBDA](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "EBDA") (bei PS/2) |
-| 0x10 | 2 | Equipment word |
+| 0x10 | 2 | [Equipment word](#equipment-word) |
 | 0x12 | 1 | Manufacturing test data |
 | 0x13 | 2 | Speichergröße (in kB) |
 | 0x15 | 2 | Manufacturing test data |
@@ -48,12 +48,28 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0xAC | 68 | Reserviert |
 | 0xF0 | 16 | Inter-Application-Kommunikations-Bereich |
 
+### Equipment word
+
+| Bits | Beschreibung |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 15-14 | 00b = 1 Parallelport vorhanden<br>01b = 2 Parallelports vorhanden<br>03b = 3 Parallelports vorhanden |
+| 13-12 | Reserviert |
+| 11-9 | Anzahl der vorhandenen [COM-Ports](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") 0-4 |
+| 8 | Reserviert |
+| 7-6 | 00b = 1 Floppylaufwerk vorhanden<br>01b = 2 Floppylaufwerke vorhanden |
+| 5-4 | 00b = EGA oder älter<br>01b = Farbe 40x25<br>10b = Farbe 80x25<br>11b = Monochrom 80x25 |
+| 3 | Reserviert |
+| 2 | Ob eine PS/2-Maus vorhanden ist |
+| 1 | Ob ein [mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") vorhanden ist |
+| 0 | Ob ein Bootfloppy-Laufwerk vorhanden ist |
+
 ## Weblinks
 
+- <http://bioscentral.com/misc/bda.htm>
 - <http://www.geocities.com/riskyfriends/x86/os/bios.html>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2351; parent 2291; 2007-12-06T21:22:16Z -->
+<!-- MediaWiki page 1564; revision 2422; parent 2351; 2007-12-16T17:02:11Z -->
