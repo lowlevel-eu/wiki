@@ -9,7 +9,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
   
 
 | Offset | Beschreibung |
-| ------------- | --------------------------------------------------------------------------- |
+| ------------- | ------------------------------------------------------------------------------------------------------------ |
 | 0x00 | Sekunde (BCD) |
 | 0x01 | Alarmsekunde (BCD) |
 | 0x02 | Minute (BCD) |
@@ -38,14 +38,14 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 | 0x19 | Erweiterungsbyte 1. Festplatte |
 | 0x1A | Erweiterungsbyte 2. Festplatte |
 | 0x1B - 0x1F | Reserviert |
-| 0x20 - 0x27 | Parameter vom 1. benutzerdefinierten Festplattentyp |
+| 0x20 - 0x27 | [Parameter vom 1. benutzerdefinierten Festplattentyp](#0x20--0x35-benutzerdefinierte-festplattenparameter) |
 | 0x28 - 0x2D | Reserviert |
 | 0x2E | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (niederwertiges Byte) |
 | 0x2F | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (höherwertiges Byte) |
 | 0x30 | Erweiterter Speicher (niederwertiges Byte) |
 | 0x31 | Erweiterter Speicher (höherwertiges Byte) |
 | 0x32 | Jahrhundert (BCD) |
-| 0x35 - 0x3C | Parameter vom 2. benutzerdefinierten Festplattentyp |
+| 0x35 - 0x3C | [Parameter vom 1. benutzerdefinierten Festplattentyp](#0x20--0x35-benutzerdefinierte-festplattenparameter) |
 
   
 
@@ -217,6 +217,23 @@ Auf diesen Wert nur verlassen wenn Floppy=1
 
 Die CMOS-Prüfsumme ist eine 16 Bit grosse, byteweise Summe der Werte der Bytes von 0x10 bis 0x2D.
 
+  
+
+### 0x20 & 0x35 benutzerdefinierte Festplattenparameter
+
+Die Offsets 0x20 und 0x35 sind die ersten Offsets der zwei Parameterblöcke der benutzerdefinierten Festplattentypen. Der Aufbau ist bei beiden der gleiche:
+
+| Byte | Beschreibung |
+| ----------- | --------------------------------------------- |
+| 0x20/0x35 | Zylinder (niederwertiges Byte) |
+| 0x21/0x36 | Zylinder (höherwertiges Byte) |
+| 0x22/0x37 | Köpfe |
+| 0x23/0x38 | Write-Precompensation (niederwertiges Byte) |
+| 0x24/0x39 | Write-Precompensation (höherwertiges Byte) |
+| 0x25/0x3A | Landezone (niederwertiges Byte) |
+| 0x26/0x3B | Landezone (höherwertiges Byte) |
+| 0x27/0x3C | Sektoren pro Spur |
+
 ## Programmierung
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")-Markierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
@@ -280,6 +297,6 @@ void cmos_write(u8 offset,u8 val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2411; parent 2404; 2007-12-16T10:14:00Z -->
+<!-- MediaWiki page 1562; revision 2419; parent 2411; 2007-12-16T16:35:13Z -->
