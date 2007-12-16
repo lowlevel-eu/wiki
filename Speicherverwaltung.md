@@ -12,7 +12,7 @@ Die **physische Speicherverwaltung** bildet die unterste Ebene und ermöglicht d
 
 ### Bitmap
 
-Dabei wird eine Bitmap der Größe *Speichergröße / (Größe einer Speicherseite \* 8)* erstellt. Das x-te Bit dieser Bitmap gibt an ob die x-te Speicherseite (bzw. die Speicherseite an Adresse *Größe einer Speicherseite \* x*) frei oder belegt ist. Bei 4GB RAM benötigt man dafür eine 128kB große Bitmap.  
+Dabei wird eine Bitmap der Größe *Speichergröße / (Größe einer Speicherseite \* 8)* erstellt. Das x-te Bit dieser Bitmap gibt an ob die x-te Speicherseite (bzw. die Speicherseite an Adresse *Größe einer Speicherseite \* x*) frei oder belegt ist. Bei 4GB RAM und einer Speicherseiten-Größe von 4kB benötigt man dafür eine 128kB große Bitmap.  
 
 #### Allokation & Freigabe von Speicherseiten
 
@@ -62,6 +62,6 @@ Das wird im Grunde so gemacht: Jeder Prozess bekommt beim Erzeugen mindestens ei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 2406; parent 2405; 2007-12-16T01:20:26Z -->
+<!-- MediaWiki page 1591; revision 2413; parent 2406; 2007-12-16T12:00:27Z -->
