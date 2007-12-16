@@ -7,7 +7,6 @@
 - [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): Bitte mal nachprüfen
 - Elf: überarbeiten
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
-- [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"): Aufbau des Statusregister A/B/C/D, Disketten-/Festplattenlaufwerkstypen, POST/Shutdown Statusbyte, Gerätebyte, evtl. BCD-kodierte Einträge markieren
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 
 ## Neu erstellen
@@ -34,6 +33,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2420/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2409; parent 2408; 2007-12-16T01:29:44Z -->
+<!-- MediaWiki page 1518; revision 2420; parent 2409; 2007-12-16T16:37:30Z -->
