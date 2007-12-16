@@ -239,6 +239,39 @@ Rückgabe ist das gelesene Byte in AL
 
 %endmacro \</asm\>
 
+\<c\>
+
+1.  define CMOS_PORT_ADDRESS 0x70
+2.  define CMOS_PORT_DATA 0x71
+
+/\*\*
+
+    * Liest ein Byte aus den CMOS
+    *  @param offset Offset im CMOS
+    *  @return Gelesener Wert
+    */
+
+u8 cmos_read(u8 offset) {
+
+     outb(CMOS_PORT_ADDRESS,offset&0x7F);
+     return inb(CMOS_PORT_DATA);
+
+}
+
+/\*\*
+
+    * Schreibt ein Byte in das CMOS
+    *  @param offset Offset im CMOS
+    *  @param val Zu schreibender Wert
+    */
+
+void cmos_write(u8 offset,u8 val) {
+
+     outb(CMOS_PORT_ADDRESS,offset&0x7F);
+     outb(CMOS_PORT_DATA,val);
+
+} \</c\>
+
 ## Weblinks
 
 - [Wikipedia: CMOS](http://de.wikipedia.org/wiki/Complementary_Metal_Oxide_Semiconductor) (*deutsch*)
@@ -247,6 +280,6 @@ Rückgabe ist das gelesene Byte in AL
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2404/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2404; parent 2403; 2007-12-15T23:57:02Z -->
+<!-- MediaWiki page 1562; revision 2411; parent 2404; 2007-12-16T10:14:00Z -->
