@@ -199,35 +199,36 @@ Dieses Segment stellt einen Speicherabschnitt dar, der eine Local Deskriptor Tab
 
 Dies ist ebenfalls ein Speicherabschnitt der Daten beinhaltet um das Multitasking zu realisieren. Bei einem Task-Wechsel müssen alle Register des gerade laufenden Task gesichert werden, um diese später wiederherstellen zu können, damit der Task wieder gestartet werden kann. Das TSS beinhaltet alle Daten die für einen Task gespeichert werden. Daher ist es notwendig, das jeder Task ein eigenes TSS bekommt. Das TSS hat eine Größe von 104 Bytes. Sollte bei dem Deskriptor als Größe ein kleinerer Wert eingetragen werden, so wird beim Versuch den Deskriptor zu laden eine Exception ausgelöst.
 
-|  |  |
-| ---------------------- | ---------------------- |
-| **31 - 16** | **15 - 0** |
-| I/O Map Base Address |  |
-|  | LDT Segment Selektor |
-|  | GS |
-|  | FS |
-|  | DS |
-|  | SS |
-|  | CS |
-|  | ES |
-| EDI |  |
-| ESI |  |
-| EBP |  |
-| ESP |  |
-| EBX |  |
-| EDX |  |
-| ECX |  |
-| EAX |  |
-| EFLAGS |  |
-| EIP |  |
-| CR3 |  |
-|  | SS2 |
-| ESP2 |  |
-|  | SS1 |
-| ESP1 |  |
-|  | SS0 |
-| ESP0 |  |
-|  | Previous Task Link |
+  
+
+| Offset | 31-16 | 0-15 |
+| -------- | ---------------------- | ---------------------- |
+| 0x00 |  | Previous Task Link |
+| 0x04 | ESP0 |  |
+| 0x08 |  | SS0 |
+| 0x0C | ESP1 |  |
+| 0x10 |  | SS1 |
+| 0x14 | ESP2 |  |
+| 0x18 |  | SS2 |
+| 0x1C | CR3 |  |
+| 0x20 | EIP |  |
+| 0x24 | EFLAGS |  |
+| 0x28 | EAX |  |
+| 0x2C | ECX |  |
+| 0x30 | EDX |  |
+| 0x34 | EBX |  |
+| 0x38 | ESP |  |
+| 0x3C | EBP |  |
+| 0x40 | ESI |  |
+| 0x44 | EDI |  |
+| 0x48 |  | ES |
+| 0x4C |  | CS |
+| 0x50 |  | SS |
+| 0x54 |  | DS |
+| 0x58 |  | FS |
+| 0x5C |  | GS |
+| 0x60 |  | LDT Segment Selektor |
+| 0x64 | I/O Map Base Address |  |
 
   
 
@@ -470,6 +471,6 @@ Die beiden 0x9000 können natürlich durch irgendeine andere Adresse ersetzt wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2254/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2427/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 2254; parent 2176; 2007-11-17T23:10:36Z -->
+<!-- MediaWiki page 1464; revision 2427; parent 2254; 2007-12-17T14:10:14Z -->
