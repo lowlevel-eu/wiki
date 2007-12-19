@@ -32,13 +32,13 @@ Der KBC wurde mit dem AT System (286) eingeführt. In dem Vorgängersystem XT wu
 ![kbclogic20071105bt5.png](http://img441.imageshack.us/img441/636/kbclogic20071105bt5.png)  
   
 
-Normalerweise wird das erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an das zweite (PSAUX1\*) ein Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z.B. von Linux unterstützt, nicht jedoch von Windows.  
+Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) ein Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z.B. von Linux unterstützt, nicht jedoch von Windows.  
 
 (\*Anmerkung zu PSAUX0 und PSAUX1: Diese Begriffe habe ich mir "ausgedacht", da ich keine vernünftige offizielle Bezeichnung kenne. Man wird diese Begriffe also in keiner anderen Referenz finden. Außer es wurde hier abgeschrieben.)  
 
 ## USB Legacy Support
 
-Diese von vielen Mainboards bereitgestellt Funktion simuliert angeschlossene USB-Geräte wie Maus und Tastatur als PS/2 Geräte.  
+Diese von vielen Mainboards bereitgestellte Funktion simuliert angeschlossene USB-Geräte wie Maus und Tastatur als PS/2 Geräte.  
   
 Dies hat für Programmierer Vor- und Nachteile. Einerseits muss man für die Unterstützung solcher Eingabegeräte keine eigenen USB Treiber programmieren. Andererseits ergeben sich damit einige der hier aufgelisteten Probleme:  
 
@@ -56,12 +56,12 @@ Nach meinen Informationen wird der Legacy-Modus ausgeschaltet sobald der USB-Chi
 
 Programmiert wird der KBC über die 2 Ports 0x60 und 0x64. Dabei werden auf den Ports nur Bytes gesendet und empfangen.  
   
-Über das Port 0x64 kann man das Statusregister auslesen und KBC-Befehle senden.  
+Über den Port 0x64 kann man das Statusregister auslesen und KBC-Befehle senden.  
   
-Das Port 0x60 dient als Ein-/Ausgabe Puffer. Parameter oder Rückgabewerte für einen Befehl werden über dieses Port geschrieben bzw. gelesen. Wenn keine Befehlsparameter erwartet werden und man auf das Port 0x60 schreibt, wird direkt an PSAUX0 weitergeleitet.  
+Der Port 0x60 dient als Ein-/Ausgabe Puffer. Parameter oder Rückgabewerte für einen Befehl werden über diesen Port geschrieben bzw. gelesen. Wenn keine Befehlsparameter erwartet werden und man auf den Port 0x60 schreibt, wird direkt an PSAUX0 weitergeleitet.  
 
-- Vor dem Schreiben auf Port 0x60 oder 0x64 muss der Eingabepuffers leer sein. (Port\[0x64\].Bit\[1\] == 0)
-- Vor dem Lesen von Port 0x60 muss der Ausgabepuffers voll sein (Port\[0x64\].Bit\[0\] == 1)
+- Vor dem Schreiben auf Port 0x60 oder 0x64 muss der Eingabepuffer leer sein. (Port\[0x64\].Bit\[1\] == 0)
+- Vor dem Lesen von Port 0x60 muss der Ausgabepuffer voll sein (Port\[0x64\].Bit\[0\] == 1)
 
 ### Statusregister
 
@@ -71,7 +71,7 @@ lesen von Port 0x64
         │││││││└─ Status des Ausgabepuffers (KBC -> CPU) :  0=leer;  1=voll (es kann von Port 0x60 gelesen werden)
         ││││││└── Status des Eingabepuffers (KBC <- CPU) :  0=leer (Schreiben auf 0x60 oder 0x64 möglich);  1=voll
         │││││└─── 1=Erfolgreicher Selbsttest (Wie Controller_Command_Byte.Bit[3]; sollte immer 1 sein)
-        ││││└──── zuletzt benutztes Port : 0=0x60;  1=0x61 oder 0x64?
+        ││││└──── zuletzt benutzter Port : 0=0x60;  1=0x61 oder 0x64?
         │││└───── Tastatursperre : 0=Tastatur gesperrt; 1=Tastatur nicht gesperrt
         ││└────── PSAUX?
         │└─────── Timeout : 1=Tastatur oder PSAUX-Gerät ragiert nicht?
@@ -333,12 +333,12 @@ Wieder warten bis der Eingabepuffer leer ist
 
 wait2: in al, x064 test al, 00000010b jne wait2
 
-Den neuen Wert für das Inputport über Port 0x60 senden
+Den neuen Wert für den Inputport über Port 0x60 senden
 
 mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 2435; parent 2222; 2007-12-19T15:54:16Z -->
+<!-- MediaWiki page 1468; revision 2440; parent 2435; 2007-12-19T20:32:24Z -->
