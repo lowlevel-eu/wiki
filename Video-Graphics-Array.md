@@ -8,14 +8,18 @@ Die Grafikdarstellung von VGA kann grob in Text- und Grafikmodus unterteilen wer
 
 ### Textmodus
 
-Im Textmodus werden meistens 80\*25 Zeichen verwendet. Diese Aufösung wird z.B. fast immer beim starten eines PCs benutzt. Eine auch offt benutzte Zeichendarstellungen ist 80\*50.
+Im Textmodus werden meistens 80\*25 Zeichen verwendet. Diese Aufösung wird z.B. fast immer beim starten eines PCs benutzt. Eine andere oft benutzte Zeichendarstellung ist 80\*50.
 
 ### Grafikmodus
 
 Im Grafikmodus werden die Werte der einzelnen Pixel direkt verändert. Ein Modus besteht aus vertikaler und horizontaler Pixelanzahl und der Anzahl darstellbarer Farben.
 
+## Weblinks
+
+- [Wikipedia: VGA](http://de.wikipedia.org/wiki/Video_Graphics_Array)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 1931; parent 0; 2007-04-14T11:24:24Z -->
+<!-- MediaWiki page 1516; revision 2434; parent 1931; 2007-12-19T15:34:46Z -->
