@@ -189,9 +189,9 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
     0xEE   Dieser Befehl ist zum testen der Tastatur. Die Tastatur sollte mit 0xEE antworten.
 
     0xF0   Auswählen des Scancodes. Als Parameter den Scancode 1, 2(standard) oder 3 auf Port 0x60 senden.
-           (Anmerkung: Kann man mit dem Wert 0 als Parameter den aktuellen Scancode auslesen?)
+           Mit dem Wert 0 als Parameter kann man den aktuellen Scancode auslesen
 
-    0xF2   Diesen Befehl sendet man zum identifiziren der Tastatur. Es gibt folgende Rückgabewerte:
+    0xF2   Diesen Befehl sendet man zum identifizieren der Tastatur. Es gibt folgende Rückgabewerte:
 
            XT Tastatur    :  Timeout (leider NICHT Port[0x64].Bit[6]=1, sondern selbst zu messender Zweitwert)
            AT Tastatur    :  Rückgabewert 0xFA
@@ -221,13 +221,22 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
                │
                └──────── 0
 
-    0xF4   ?
-    0xF5   ?
-    0xF6   ?
+    0xF4   Aktivieren der Tastatur. Wenn ein Übertragungsfehler aufgetreten ist, muss           
+           die Tastatur mit diesem Kommando neu aktiviert werden, der interne Puffer
+           wird dabei gelöscht.
 
-    0xFE   ?
+    0xF5   Tastatur deaktivieren und Standardwerte setzen. Der Puffer wird gelöscht, 
+           die LEDs werden abgeschaltet, Wiederholrate und Wartezeit werden auf 
+           Standardwerte zurückgesetz und die Tastatur wird deaktiviert (es werden 
+           keine Tastenanschläge mehr übertragen)
 
-    0xFF   ?
+    0xF6   Standardwerte setzen
+
+    0xFE   Wird nur intern vom Keyboardcontroller an die Tastatur gesendet. Ist nicht
+           für die Nutzung mit der CPU gedacht.
+
+    0xFF   Tastatur-Reset und Selbst-test. Rückgabe 0xAA wenn Test erfolgreich, sonst 
+           0xFC
 
 ## Beispiele zur Benutzung der KBC Funktionen
 
@@ -330,6 +339,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2222/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 2222; parent 2220; 2007-11-05T21:38:52Z -->
+<!-- MediaWiki page 1468; revision 2435; parent 2222; 2007-12-19T15:54:16Z -->
