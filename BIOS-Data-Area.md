@@ -25,7 +25,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x1A | 2 | Zeiger auf nächsten Buchstaben im Tastatur-Ringpuffer |
 | 0x1C | 2 | Zeiger auf letzten Buchstaben im Tastatur-Ringpuffer |
 | 0x1E | 32 | Tastatur-Ringpuffer |
-| 0x3E | 11 | Disk-Kontroller-Informationen |
+| 0x3E | 11 | [Disk-Kontroller-Informationen](#disk-kontroller-informationen) |
 | 0x49 | 30 | Grafik-Adapter-Informationen |
 | 0x67 | 5 | Unbekannt |
 | 0x6C | 4 | Zähler für Interrupt 0x1A |
@@ -101,6 +101,42 @@ Byte 2 (0x18):
 
   
 
+### Disk-Kontroller-Informationen
+
+Byte 1 (0x3E): Floppy-Kalibrations-Status
+
+| Bits | Beschreibung |
+| ------ | ---------------------------------------------- |
+| 7-4 | Reserviert |
+| 3 | Ob Floppy-Laufwerk 4 kalibriert ist (PC, XT) |
+| 2 | Ob Floppy-Laufwerk 3 kalibriert ist (PC, XT) |
+| 1 | Ob Floppy-Laufwerk 2 kalibriert ist |
+| 0 | Ob Floppy-Laufwerk 1 kalibriert ist |
+
+  
+Byte 2 (0x3F): Floppy-Motor-Status
+
+| Bits | Beschreibung |
+| ------ | ------------------------------------------------------------------------------------------------ |
+| 7 | 0b = Read- oder Verify-Operation<br>1b Write- oder Format-Operation |
+| 6 | Unbenutzt |
+| 5-4 | 00b = Laufwerk 1<br>01b = Laufwerk 2<br>10b = Laufwerk 3 (PC, XT)<br>11b = Laufwerk 4 (PC, XT) |
+| 3 | Ob der Motor des Laufwerks 1 eingeschaltet ist |
+| 2 | Ob der Motor des Laufwerks 2 eingeschaltet ist |
+| 1 | Ob der Motor des Laufwerks 3 eingeschaltet ist |
+| 0 | Ob der Motor des Laufwerks 4 eingeschaltet ist |
+
+  
+Byte 3 (0x40): Floppy-Motor-Timeout  
+Byte 4 (0x41): Floppy-Laufwerk-Status
+
+| Bit | Beschreibung |
+| ----- | ------------------------------------------- |
+| 7 | Ob Laufwerk bereit ist |
+| 6 | Ob ein Seek-Fehler aufgetreten ist |
+| 5 | Ob Floppy-Controller-Test erfolgreich war |
+| 4-0 | Error-Code |
+
 ## Weblinks
 
 - <http://bioscentral.com/misc/bda.htm>
@@ -108,6 +144,6 @@ Byte 2 (0x18):
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2445; parent 2444; 2007-12-20T11:34:09Z -->
+<!-- MediaWiki page 1564; revision 2446; parent 2445; 2007-12-20T12:04:32Z -->
