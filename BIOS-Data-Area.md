@@ -22,15 +22,15 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x15 | 2 | Manufacturing test data |
 | 0x17 | 2 | [Tastatur-Status-Flags](#tastatur-status-flags) |
 | 0x19 | 1 | Alt+Numpad-Data |
-| 0x1A | 2 | Keyboard buffer head |
-| 0x1C | 2 | Keyboard buffer tail |
-| 0x1E | 32 | Keyboard buffer |
+| 0x1A | 2 | Zeiger auf nächsten Buchstaben im Tastatur-Ringpuffer |
+| 0x1C | 2 | Zeiger auf letzten Buchstaben im Tastatur-Ringpuffer |
+| 0x1E | 32 | Tastatur-Ringpuffer |
 | 0x3E | 11 | Disk-Kontroller-Informationen |
 | 0x49 | 30 | Grafik-Adapter-Informationen |
 | 0x67 | 5 | Unbekannt |
-| 0x6C | 4 | Zähler |
+| 0x6C | 4 | Zähler für Interrupt 0x1A |
 | 0x70 | 1 | Zähler 24h Überlauf |
-| 0x71 | 1 | Keyboard-Control-Flag |
+| 0x71 | 1 | Keyboard-Control-Break-Flag |
 | 0x72 | 2 | Soft-Reset-Flag |
 | 0x74 | 4 | Disk-Kontroller-Informationen |
 | 0x78 | 4 | LP-Timout-Werte |
@@ -108,6 +108,6 @@ Byte 2 (0x18):
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2444/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2444; parent 2443; 2007-12-20T11:27:30Z -->
+<!-- MediaWiki page 1564; revision 2445; parent 2444; 2007-12-20T11:34:09Z -->
