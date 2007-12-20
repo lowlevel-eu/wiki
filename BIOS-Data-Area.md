@@ -127,7 +127,9 @@ Byte 2 (0x3F): Floppy-Motor-Status
 | 0 | Ob der Motor des Laufwerks 4 eingeschaltet ist |
 
   
-Byte 3 (0x40): Floppy-Motor-Timeout  
+Byte 3 (0x40): Floppy-Motor-Timeout
+
+  
 Byte 4 (0x41): Floppy-Laufwerk-Status
 
 | Bit | Beschreibung |
@@ -137,6 +139,82 @@ Byte 4 (0x41): Floppy-Laufwerk-Status
 | 5 | Ob Floppy-Controller-Test erfolgreich war |
 | 4-0 | Error-Code |
 
+Error-Codes
+
+| Binär | Hexadezimal | Beschreibung |
+| -------- | ------------- | ------------------------------ |
+| 00000b | 0x00 | Kein Fehler |
+| 00001b | 0x01 | Ungültige Funktion |
+| 00010b | 0x02 | Adresszeichen nicht gefunden |
+| 00011b | 0x03 | Schreibschutzfehler |
+| 00100b | 0x04 | Sektor nicht gefunden |
+| 00110b | 0x06 | Disketten-Changelink aktiv |
+| 01000b | 0x08 | DMA-Überlauf |
+| 01001b | 0x09 | DMA-Boundary-Fehler |
+| 01100b | 0x0C | Unbekannter Medientyp |
+| 10000b | 0x10 | CRC-Fehler während Lesen |
+
+  
+
+Byte 5 (0x42): Festplatten- und Floppystatus
+
+| Bits | Beschreibung |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 7-6 | Interrupt-Code<br>00b = Befehl normal abgeschlossen<br>01b = Befehl unnormal beendet<br>10b = Unnormales Beenden, Readline aktiv oder Diskette verändert<br>11b = Seek-Befehl nicht abgeschlossen |
+| 5 | Ob Seek abgeschlossen wurde |
+| 4 | Drive-Fault |
+| 3 | Ob das Laufwerk bereit ist |
+| 2 | Kopf-Status |
+| 1-0 | 00b = Laufwerk 1<br>01b = Laufwerk 2<br>10b = Laufwerk 3<br>11b = Laufwerk 4 |
+
+  
+
+Byte 6 (0x43): Floppy Statusregister 1
+
+| Bits | Beschreibung |
+| ------ | ------------------------------------------------------------------ |
+| 7 | Versuchter Zugriff jenseits des letzten Zylinders |
+| 6 | Unbenutzt |
+| 5 | CRC-Fehler während Lesen |
+| 4 | DMA-Überlauf |
+| 3 | Unbenutzt |
+| 2 | Sektor nicht gefunden oder lesen der Disketten-ID fehlgeschlagen |
+| 1 | Medium schreibgeschützt |
+| 0 | fehlendes Adresszeichen |
+
+  
+
+Byte 7 (0x44): Floppy Statusregister 2
+
+| Bits | Beschreibung |
+| ------ | -------------------------------------------- |
+| 7 | Unbenutzt |
+| 6 | gelöschtes Daten-Adresszeichen |
+| 5 | CRC-Fehler festgestellt |
+| 4 | Falsche Zylinder |
+| 3 | Gleichheitsbedingungen während Verify |
+| 2 | Sektor nicht gefunden während Verify |
+| 1 | Ungültiger Zylinder |
+| 0 | Adresszeichen nicht gefunden während Lesen |
+
+  
+
+Byte 8 (0x45): Floppy Zylindernummer
+
+  
+
+Byte 9 (0x46): Floppy Kopfnummer
+
+  
+
+Byte 10 (0x47): Floppy Sektornummer
+
+  
+
+Byte 11 (0x48): Anzahl geschriebener Bytes
+
+  
+
 ## Weblinks
 
 - <http://bioscentral.com/misc/bda.htm>
@@ -144,6 +222,6 @@ Byte 4 (0x41): Floppy-Laufwerk-Status
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2447/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2446; parent 2445; 2007-12-20T12:04:32Z -->
+<!-- MediaWiki page 1564; revision 2447; parent 2446; 2007-12-20T14:23:42Z -->
