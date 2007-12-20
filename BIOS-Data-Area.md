@@ -20,7 +20,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x12 | 1 | Manufacturing test data |
 | 0x13 | 2 | Speichergröße (in kB) |
 | 0x15 | 2 | Manufacturing test data |
-| 0x17 | 2 | Keyboard-Status-Flag |
+| 0x17 | 2 | [Tastatur-Status-Flags](#tastatur-status-flags) |
 | 0x19 | 1 | Alt+Numpad-Data |
 | 0x1A | 2 | Keyboard buffer head |
 | 0x1C | 2 | Keyboard buffer tail |
@@ -66,6 +66,25 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 1 | Ob ein [mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") vorhanden ist |
 | 0 | Ob ein Bootfloppy-Laufwerk vorhanden ist |
 
+  
+
+### Tastatur-Status-Flags
+
+Hier werden die Tastatur-Flags gespeichert welche vom Interrupt 0x16 verwendet werden.  
+
+| Bits | Beschreibung |
+| ------ | --------------------------------------------------------- |
+| 7 | 0 = Einfügen ausgeschaltet<br>1 = Einfügen angeschaltet |
+| 6 | 0 = CapsLock aus<br>1 = CapsLock an |
+| 5 | 0 = NumLock aus<br>1 = NumLock an |
+| 4 | 0 = ScrollLock aus<br>1 = ScrollLock an |
+| 3 | 0 = Alt nicht gedrückt<br>1 = Alt gedrückt |
+| 2 | 0 = Strg nicht gedrückt<br>1 = Strg gedrückt |
+| 1 | 0 = LShift nicht gedrückt<br>1 = LShift gedrückt |
+| 0 | 0 = RShift nicht gedrückt<br>1 = RShift gedrückt |
+
+  
+
 ## Weblinks
 
 - <http://bioscentral.com/misc/bda.htm>
@@ -73,6 +92,6 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2442; parent 2441; 2007-12-20T11:08:49Z -->
+<!-- MediaWiki page 1564; revision 2443; parent 2442; 2007-12-20T11:20:50Z -->
