@@ -71,6 +71,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 ### Tastatur-Status-Flags
 
 Hier werden die Tastatur-Flags gespeichert welche vom Interrupt 0x16 verwendet werden.  
+Byte 1 (0x17):
 
 | Bits | Beschreibung |
 | ------ | --------------------------------------------------------- |
@@ -85,6 +86,21 @@ Hier werden die Tastatur-Flags gespeichert welche vom Interrupt 0x16 verwendet w
 
   
 
+Byte 2 (0x18):
+
+| Bits | Beschreibung |
+| ------ | -------------------------------------------------------------- |
+| 7 | 0 = Einfügen nicht gedrückt<br>1 = Einfügen gedrückt |
+| 6 | 0 = CapsLock nicht gedrückt<br>1 = CapsLock gedrückt |
+| 5 | 0 = NumLock nicht gedrückt<br>1 = NumLock gedrückt |
+| 4 | 0 = ScrollLock nicht gedrückt<br>1 = ScrollLock gedrückt |
+| 3 | 0 = Pause-Taste inaktiv<br>1 = Pause-Taste aktiv |
+| 2 | 0 = SysReg-Key (?) nicht gedrückt<br>1 = SysReg-Key gedrückt |
+| 1 | 0 = Linkes Alt nicht gedrückt<br>1 = Linkes Alt gedrückt |
+| 0 | 0 = Rechtes Alt nicht gedrückt<br>1 = Rechtes Alt gedrückt |
+
+  
+
 ## Weblinks
 
 - <http://bioscentral.com/misc/bda.htm>
@@ -92,6 +108,6 @@ Hier werden die Tastatur-Flags gespeichert welche vom Interrupt 0x16 verwendet w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2444/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2443; parent 2442; 2007-12-20T11:20:50Z -->
+<!-- MediaWiki page 1564; revision 2444; parent 2443; 2007-12-20T11:27:30Z -->
