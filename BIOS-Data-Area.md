@@ -53,9 +53,10 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | Bits | Beschreibung |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 15-14 | 00b = 1 Parallelport vorhanden<br>01b = 2 Parallelports vorhanden<br>03b = 3 Parallelports vorhanden |
-| 13-12 | Reserviert |
+| 13 | 1 = internes Modem vorhanden |
+| 12 | 1 = Joystick vorhanden |
 | 11-9 | Anzahl der vorhandenen [COM-Ports](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") 0-4 |
-| 8 | Reserviert |
+| 8 | [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")-Controller vorhanden (PC-junior) |
 | 7-6 | 00b = 1 Floppylaufwerk vorhanden<br>01b = 2 Floppylaufwerke vorhanden |
 | 5-4 | 00b = EGA oder älter<br>01b = Farbe 40x25<br>10b = Farbe 80x25<br>11b = Monochrom 80x25 |
 | 3 | Reserviert |
@@ -70,6 +71,6 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2441/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2422; parent 2351; 2007-12-16T17:02:11Z -->
+<!-- MediaWiki page 1564; revision 2441; parent 2422; 2007-12-20T11:07:51Z -->
