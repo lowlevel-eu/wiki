@@ -1,8 +1,8 @@
 # A / OS PM
 
-A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mir hier noch nicht festlegen möchte, wann es getestet werden kann.
+A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann.
 
-## Geplante Feautures
+## Geplante Features
 
 ### Übersicht
 
@@ -10,9 +10,9 @@ A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 - Flat Memory Model
 - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
 - Umfangreiches Treibersystem
-- Multi User
+- Multiuser
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
-- Microkernel
+- [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
 - Notkonsole
 - [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") komplett vom System getrennt
 - Eigenes [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (A / FS)
@@ -20,9 +20,9 @@ A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
 ### Protected Mode / Flat Memory Model / Paging
 
-Das Betriebsystem wird den Protected Mode in seinem vollen Umfang unterstützen. Angewandt wird das Flat Memory Model, das heißt es gibt nur wenige Deskriptoren für den Gesamten Hauptspeicher. Die Unterteilung wird mit Paging realisiert. Jedes Programm hat zur Laufzeit 3GB Speicher zur Verfügung.
+Das Betriebsystem wird den Protected Mode in seinem vollen Umfang unterstützen. Angewandt wird das Flat Memory Model, das heißt es gibt nur wenige Deskriptoren für den gesamten Hauptspeicher. Die Unterteilung wird mit Paging realisiert. Jedes Programm hat zur Laufzeit 3GB Speicher zur Verfügung.
 
-### Multi Tasking
+### Multitasking
 
 Es werden mehrere Programme gleichzeitig ausgeführt werden können, um genau zu sein laut jetzigem Stand 65335. Das ganze wird reines Software-Multitasking, und ist somit für die Zukunft (Long Mode) gerüstet. In der finalen Version soll auch ein Prioritätenmodell zur Verfügung stehen.
 
@@ -32,13 +32,13 @@ Sie wird per Ctrl + Alt + Del aufgerufen und dient dazu, das System während der
 
 ### GUI
 
-Die GUI wird komplett vom Rest des Systems getrennt sein, die Kommunikation mit den Programmen verläuft über s.g. Terminals. Sie werden vom Kernel verwaltet. Die GUI bietet zusätzlich noch ein paar Call Gates, die jedoch beim Start über API Funktionen registriert werden müssen.
+Die GUI wird komplett vom Rest des Systems getrennt sein, die Kommunikation mit den Programmen verläuft über sogenannte Terminals. Sie werden vom Kernel verwaltet. Die GUI bietet zusätzlich noch ein paar Call Gates, die jedoch beim Start über API Funktionen registriert werden müssen.
 
 ## Version 0.1 (1. Alpha Release)
 
 Hier einmal die geplanten Features für diese Version von A / OS PM:
 
-- Multi Tasking: jedoch ohne Prioritäten
+- Multitasking: jedoch ohne Prioritäten
 - Treibersystem: sollte vollständig implementiert sein
 - A / IO (die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") Schnittstelle): sollte vollständig implementiert sein
 - Text - Console
@@ -48,6 +48,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2154; parent 2153; 2007-10-08T11:06:49Z -->
+<!-- MediaWiki page 1451; revision 2452; parent 2154; 2007-12-20T21:17:31Z -->
