@@ -1,6 +1,6 @@
 # Interrupt Descriptor Table
 
-**IDT** steht für **I**interrupt **D**escriptor **T**able. Sie wird verwendet um Interrupts [ISRs](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") zuzuordnen. Die Einträge heißen Interrupt Gates
+**IDT** steht für **I**nterrupt **D**escriptor **T**able. Sie wird verwendet um Interrupts [ISRs](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") zuzuordnen. Die Einträge heißen Interrupt Gates
 
 ## Aufbau
 
@@ -44,6 +44,6 @@ Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse eines Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2449/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 2449; parent 0; 2007-12-20T18:29:04Z -->
+<!-- MediaWiki page 1603; revision 2450; parent 2449; 2007-12-20T18:45:36Z -->
