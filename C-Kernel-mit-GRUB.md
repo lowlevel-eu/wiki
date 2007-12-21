@@ -8,7 +8,7 @@ Ich werde hier beschreiben, wie ich es unter Linux mache, unter Windows wird es 
 
 ## Kernel
 
-Der eigentlich Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss aber immernoch in Assembler sein.
+Der eigentliche Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss aber immernoch in Assembler sein.
 
 ### Kernel - C
 
@@ -67,7 +67,7 @@ Nun müssen wir den Kernel "zusammenbauen". Dafür müssen wir den Assembler-Cod
 
 ### Assemblieren
 
-Dies geschiet ganz einfach mit diesem Befehl:
+Dies geschieht ganz einfach mit diesem Befehl:
 
     $ nasm -f elf -o kernel_asm.o kernel.asm
 
@@ -83,7 +83,7 @@ Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. E
 
 ### Linken
 
-Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wir z.B dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei für *ld*:
+Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z.B dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei für *ld*:
 
     ENTRY (loader)
 
@@ -200,6 +200,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 2459; parent 2458; 2007-12-21T13:33:22Z -->
+<!-- MediaWiki page 1604; revision 2461; parent 2459; 2007-12-21T15:23:15Z -->
