@@ -91,7 +91,7 @@ Pointer auf die erste Modulstruktur. Eine Modulstruktur sieht folgendermaßen au
 
 ### mbs_syms
 
-Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabeööe einer a.out-Datei
+Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabelle einer a.out-Datei.
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ---------- | --------------------------- |
@@ -100,7 +100,7 @@ Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offse
 | 0x24 | 4 | addr | Pointer zur Symboltabelle |
 | 0x28 | 4 | reserved | Reserviert (0) |
 
-Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Information zur Symboltabelle einer Elf-Datei
+Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabelle einer Elf-Datei.
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ------- | --------------------------- |
@@ -131,6 +131,6 @@ Pointer zur Memorymap. Ein Eintrag in der Memorymap sieht folgendermaßen aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2462; parent 2460; 2007-12-21T15:26:17Z -->
+<!-- MediaWiki page 1560; revision 2465; parent 2462; 2007-12-21T16:59:22Z -->
