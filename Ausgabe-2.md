@@ -134,7 +134,7 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 | 0E | Hardware IRQ6 | Diskettenlaufwerk-Controller |
 | 0F | Hardware IRQ7 | Parallel-Port |
 | 10 - RF | Software Interrupts | Software INTs werden später behandelt |
-| 70 | Hardware IRQ8 | Realt Time Clock |
+| 70 | Hardware IRQ8 | [Real Time Clock](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock "Real Time Clock") |
 | 71 | Hardware IRQ9 | umgeleiteter IRQ2 |
 | 72 | Hardware IRQ10 | \- |
 | 73 | Hardware IRQ11 | \- |
@@ -343,6 +343,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 2471; parent 2317; 2007-12-21T20:17:53Z -->
+<!-- MediaWiki page 1415; revision 2472; parent 2471; 2007-12-21T20:20:03Z -->
