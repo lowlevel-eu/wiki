@@ -12,6 +12,6 @@ Der Befehl 'make', welcher auf den meisten UNIX oder UNIX ähnlichen Systemen ve
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
 
-<!-- MediaWiki page 1436; revision 2355; parent 1588; 2007-12-07T12:44:04Z -->
+<!-- MediaWiki page 1436; revision 2463; parent 2355; 2007-12-21T15:29:22Z -->
