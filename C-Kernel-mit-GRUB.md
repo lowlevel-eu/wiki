@@ -24,6 +24,7 @@ Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den h
        *video = 0x07;
        video++;
        *video = *hello;
+       video++;
        hello++;
      }
 
@@ -200,6 +201,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 2461; parent 2459; 2007-12-21T15:23:15Z -->
+<!-- MediaWiki page 1604; revision 2466; parent 2461; 2007-12-21T17:04:53Z -->
