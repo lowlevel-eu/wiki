@@ -80,7 +80,14 @@ Gibt an wie viele Module von Grub geladen wurden
 
 ### mbs_mods_addr
 
-Pointer auf die erste Modulstruktur. Eine Modulstruktur sieht folgendermaßen aus: {! border="1" ! Offset \|\| Größe \|\| Name \|\| Beschreibung \|- \| 0x00 \|\| 4 \|\| mod_start \|\| Adresse an der das Modul liegt \|- \| 0x04 \|\| 4 \|\| mod_end \|\| Adresse an der das Modul endet \|- \| 0x08 \|\| 4 \|\| string \|\| Pointer zu einem 0-term. ASCII-String, der den Namen des Moduls enthält \|- \| 0x0C \|\| 4 \|\| reserved \|\| Reserviert (0) \|}
+Pointer auf die erste Modulstruktur. Eine Modulstruktur sieht folgendermaßen aus:
+
+| Offset | Größe | Name | Beschreibung |
+| -------- | ------- | ----------- | ------------------------------------------------------------------------- |
+| 0x00 | 4 | mod_start | Adresse an der das Modul liegt |
+| 0x04 | 4 | mod_end | Adresse an der das Modul endet |
+| 0x08 | 4 | string | Pointer zu einem 0-term. ASCII-String, der den Namen des Moduls enthält |
+| 0x0C | 4 | reserved | Reserviert (0) |
 
 ### mbs_syms
 
@@ -124,6 +131,6 @@ Pointer zur Memorymap. Ein Eintrag in der Memorymap sieht folgendermaßen aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2460; parent 2305; 2007-12-21T15:02:33Z -->
+<!-- MediaWiki page 1560; revision 2462; parent 2460; 2007-12-21T15:26:17Z -->
