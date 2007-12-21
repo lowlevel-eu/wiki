@@ -1,6 +1,6 @@
 # Hardware Abstraction Layer
 
-Die **HAL** (Hardware Abstraction Layer) bezeichnet eine Softwareschicht, die zwischen der Hardware dem [Betriebssystemkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") liegt. Sie hat die Aufgabe, hardwarespezifische Funktionen auszulagern, um eine spätere Portierbarkeit zu erleichtern, da im besten Fall nur die HAL angepasst werden muss. Auch [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") hat eine eigene HAL, die als Datei hall.dll vorliegt.
+Die **HAL** (**H**ardware **A**bstraction **L**ayer) bezeichnet eine Softwareschicht, die zwischen der Hardware und dem [Betriebssystemkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") liegt. Sie hat die Aufgabe, hardwarespezifische Funktionen auszulagern, um eine spätere Portierbarkeit zu erleichtern, da im besten Fall nur die HAL angepasst werden muss. Auch [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") hat eine eigene HAL, die als Datei hal.dll vorliegt.
 
 ## Aufgaben
 
@@ -14,6 +14,6 @@ Die HAL beinhaltet somit folgende Aufgaben:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 1746; parent 1744; 2007-01-18T21:37:46Z -->
+<!-- MediaWiki page 1480; revision 2464; parent 1746; 2007-12-21T15:31:42Z -->
