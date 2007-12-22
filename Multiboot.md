@@ -41,7 +41,7 @@ Der Multiboot-Header sollte in den ersten 8192 Bytes des OS-Images liegen. Der M
 
 ### mbh_magic
 
-Dient Grub zum Finden des Multiboot-Headers. Sollte immer 0x1BADB002 sein.
+Dient Grub zum Finden des Multiboot-Headers. Muss 0x1BADB002 sein.
 
 ### mbh_flags
 
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2474/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2473; parent 2465; 2007-12-21T21:37:26Z -->
+<!-- MediaWiki page 1560; revision 2474; parent 2473; 2007-12-22T12:23:57Z -->
