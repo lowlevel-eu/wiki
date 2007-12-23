@@ -7,7 +7,7 @@ Die **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Con
 Die Register liegen normalerweise an der Adresse 0xFEE00000, es ist allerdings sicherer diesen Wert z.B aus dem MP-Header zu entnehmen. Außerdem können sie auch umplatziert werden. Alle Register sind 32bit groß und sind 128bit-aligned.
 
 | Offset | Name |
-| -------- | ------------------------------------------------------------- |
+| -------- | ------------------------------------------------------------------------------------- |
 | 0x20 | [Local APIC ID Register](#local-apic-id-register) |
 | 0x30 | [Local APIC Version Register](#local-apic-version-register) |
 | 0x80 | Task Priority Register (TPR) |
@@ -42,8 +42,8 @@ Die Register liegen normalerweise an der Adresse 0xFEE00000, es ist allerdings s
 | 0x260 | Interrupt Request Register (IRR) (192-223) |
 | 0x270 | Interrupt Request Register (IRR) (224-255) |
 | 0x280 | Error Status Register |
-| 0x300 | Interrupt Command Register (ICR) (0-31) |
-| 0x310 | Interrupt Command Register (ICR) (32-63) |
+| 0x300 | [Interrupt Command Register (ICR) (0-31)](#interrupt-command-register-icr) |
+| 0x310 | \[\[#Interrupt Command Register (ICR) \| Interrupt Command Register (ICR) (32-63)}} |
 | 0x320 | LVT Timer Register |
 | 0x330 | LVT Thermal Register² |
 | 0x340 | LVT Performance Register³ |
@@ -82,6 +82,24 @@ Wenn beim Version-Byte das HighNibble 1 ist, ist es ein Local APIC. Andernfalls 
 
 Das Feld "Max. LVT-Einträge" gibt die Anzahl an maximalen LVT-Einträgen minus 1 an. Das Feld muss bei Pentium 4 und Intel Xeon also auf 5 gesetzt sein, da es maximal 6 LVT-Einträge gibt. Bei der P6-Familie gibt es maximal 5 LVT-Einträge. Pentium-Prozessoren haben nur 4 LVT-Einträge.  
 
+### Interrupt Command Register (ICR)
+
+Das Interrupt Command Register wird verwendet um IPIs zu versenden.
+
+| Bits | Beschreibung |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 63-56 | Destination Field |
+| 55-20 | Reserviert |
+| 19-18 | Destination Shorthand<br>00b = No shorthand<br>01b = Self<br>10b = All Including Self<br>11b = All excluding Selg |
+| 17-16 | Reserviert |
+| 15 | Trigger Mode<br>0b = Edge<br>1b = Level |
+| 14 | Level<br>0b = De-Assert<br>1b = Assert |
+| 13 | Reserviert |
+| 12 | Delivery Status<br>0b = Idle<br>1b = Send Pending |
+| 11 | Destination Mode<br>0b = Physical<br>1b = Logical |
+| 10-8 | Delivery Mode<br>000b = Fixed<br>001b = Lowest Priority<br>010b = SMI<br>011b = Reserviert<br>100b = NMI<br>101b = INIT<br>110b = Startup<br>111b = Reserviert |
+| 7-0 | Vector |
+
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
@@ -89,6 +107,6 @@ Das Feld "Max. LVT-Einträge" gibt die Anzahl an maximalen LVT-Einträgen minus 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2476; parent 2475; 2007-12-23T15:46:13Z -->
+<!-- MediaWiki page 1581; revision 2477; parent 2476; 2007-12-23T16:04:14Z -->
