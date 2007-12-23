@@ -4,6 +4,6 @@ Die **Machine Specific Register**s bzw. **Model Specific Register**s (**MSR**) s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2481/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 2481; parent 0; 2007-12-23T17:21:33Z -->
+<!-- MediaWiki page 1607; revision 2482; parent 2481; 2007-12-23T17:23:52Z -->
