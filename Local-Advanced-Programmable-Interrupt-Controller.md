@@ -4,57 +4,42 @@ Die **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Con
 
 ## Register
 
-Die Register liegen normalerweise an der Adresse 0xFEE00000, es ist allerdings sicherer diesen Wert z.B aus dem MP-Header zu entnehmen. Außerdem können sie auch umplatziert werden. Alle Register sind 32bit groß und sind 128bit-aligned.
+### Aufbau
 
-| Offset | Name |
-| -------- | ------------------------------------------------------------------------------------- |
-| 0x20 | [Local APIC ID Register](#local-apic-id-register) |
-| 0x30 | [Local APIC Version Register](#local-apic-version-register) |
-| 0x80 | Task Priority Register (TPR) |
-| 0x90 | Arbitration Priority Register¹ (APR) |
-| 0xA0 | Processor Priority Register (PPR) |
-| 0xB0 | EOI Register |
-| 0xD0 | Logical Destination Register |
-| 0xE0 | Destination Format Register |
-| 0xF0 | Spurious Interrupt Vector Register |
-| 0x100 | In-Service Register (ISR) (0-31) |
-| 0x110 | In-Service Register (ISR) (32-63) |
-| 0x120 | In-Service Register (ISR) (64-95) |
-| 0x130 | In-Service Register (ISR) (96:-27) |
-| 0x140 | In-Service Register (ISR) (128-159) |
-| 0x150 | In-Service Register (ISR) (160-191) |
-| 0x160 | In-Service Register (ISR) (192-223) |
-| 0x170 | In-Service Register (ISR) (224-255) |
-| 0x180 | Trigger Mode Register (TMR) (0-31) |
-| 0x190 | Trigger Mode Register (TMR) (32-63) |
-| 0x1A0 | Trigger Mode Register (TMR) (64-95) |
-| 0x1B0 | Trigger Mode Register (TMR) (96-127) |
-| 0x1C0 | Trigger Mode Register (TMR) (128-159) |
-| 0x1D0 | Trigger Mode Register (TMR) (160-191) |
-| 0x1E0 | Trigger Mode Register (TMR) (192-223) |
-| 0x1F0 | Trigger Mode Register (TMR) (224-255) |
-| 0x200 | Interrupt Request Register (IRR) (0-31) |
-| 0x210 | Interrupt Request Register (IRR) (32-63) |
-| 0x220 | Interrupt Request Register (IRR) (64-95) |
-| 0x230 | Interrupt Request Register (IRR) (96-127) |
-| 0x240 | Interrupt Request Register (IRR) (128-159) |
-| 0x250 | Interrupt Request Register (IRR) (160-191) |
-| 0x260 | Interrupt Request Register (IRR) (192-223) |
-| 0x270 | Interrupt Request Register (IRR) (224-255) |
-| 0x280 | Error Status Register |
-| 0x300 | [Interrupt Command Register (ICR) (0-31)](#interrupt-command-register-icr) |
-| 0x310 | \[\[#Interrupt Command Register (ICR) \| Interrupt Command Register (ICR) (32-63)}} |
-| 0x320 | LVT Timer Register |
-| 0x330 | LVT Thermal Register² |
-| 0x340 | LVT Performance Register³ |
-| 0x350 | LVT LINT0 Register |
-| 0x360 | LVT LINT1 Register |
-| 0x370 | LVT Error Register |
-| 0x380 | Initial Count Register (für Timer) |
-| 0x390 | Current Count Register (für Timer) |
-| 0x3E0 | Divide Configuration Register (für Timer) |
+Die Register der *Local APIC* sind in den physischen Speicher eingeblendet. Jedes der Register beginnt an einer 16 Byte Grenze, erstreckt sich aber nur über die ersten 32 Bit. Falls das Register größer als 32 Bit ist, befinden sich die nächst höheren 32 Bit an der nächst höheren 16 Byte Grenze. Die *Local APIC* stellt folgende Register zur Programmierung bereit:
 
-1\) Nicht unterstützt in Pentium 4 und Intel Xeon Prozessoren 2) Eingeführt mit dem Pentium 4 und Intel Xeon Prozessoren. Dieses Register ist implementations-abhängig und muss in Zukunft nicht mehr vorhanden sein. 3) Eingeführt mit dem Pentium Pro Prozessor. Dieses Register ist implementations-abhängig und muss in Zukunft nicht mehr vorhanden sein.  
+  
+
+| Offset | r/w | Größe (Bit) | Abkürzung | Name des Registers |
+| ------------------ | ----- | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x0020 | r/w | 32 |  | [Local APIC ID Register](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller#local-apic-id-register "LAPIC") |
+| 0x0030 | r | 32 |  | [Local APIC Version Register](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller#local-apic-version-register "LAPIC") |
+| 0x0080 | r/w | 32 | TPR | Task Priority Register |
+| 0x0090 | r | 32 | APR | Arbitration Priority Register ¹ |
+| 0x00A0 | r | 32 | PPR | Processor Priority Register |
+| 0x00B0 | w | 32 |  | EOI Register |
+| 0x00D0 | r/w | 32 |  | Logical Destination Register |
+| 0x00E0 | r/w | 32 |  | Destination Format Register |
+| 0x00F0 | r/w | 32 |  | Spurious Interrupt Vector Register |
+| 0x0100<br>0x0170 | r | 256 | ISR | In-Service Register |
+| 0x0180<br>0x01F0 | r | 256 | TMR | Trigger Mode Register |
+| 0x0200<br>0x0270 | r | 256 | IRR | Interrupt Request Register |
+| 0x0280 | r | 32 |  | Error Status Register |
+| 0x0300<br>0x0310 | r/w | 64 | ICR | [Interrupt Command Register](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "LAPIC") |
+| 0x0320 | r/w | 32 |  | LVT Timer Register |
+| 0x0330 | r/w | 32 |  | LVT Thermal Sensor Register ² |
+| 0x0340 | r/w | 32 |  | LVT Performance Monitoring Counters Register ³ |
+| 0x0350 | r/w | 32 |  | LVT LINT0 Register |
+| 0x0360 | r/w | 32 |  | LVT LINT1 Register |
+| 0x0370 | r/w | 32 |  | LVT Error Register |
+| 0x0380 | r/w | 32 |  | Initial Count Register |
+| 0x0390 | r/w | 32 |  | Current Count Register |
+| 0x03E0 | r/w | 32 |  | Divide Configuration Register |
+
+  
+¹ Nicht unterstützt in Pentium 4 und Intel Xeon Prozessoren  
+² Eingeführt mit dem Pentium 4 und Intel Xeon Prozessoren. Dieses Register ist implementationsabhängig und muss in Zukunft nicht mehr vorhanden sein.  
+³ Eingeführt mit dem Pentium Pro Prozessor. Dieses Register ist implementationsabhängig und muss in Zukunft nicht mehr vorhanden sein.  
 
 ### Local APIC ID Register
 
@@ -100,6 +85,29 @@ Das Interrupt Command Register wird verwendet um IPIs zu versenden.
 | 10-8 | Delivery Mode<br>000b = Fixed<br>001b = Lowest Priority<br>010b = SMI<br>011b = Reserviert<br>100b = NMI<br>101b = INIT<br>110b = Startup<br>111b = Reserviert |
 | 7-0 | Vector |
 
+## Programmierung
+
+### physische Adresse
+
+Die physische Adresse der Register kann entweder aus der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") der *Intel Multiprocessor Specification* ausgelesen werden oder über das [MSR](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register "MSR") 0x001B ausgelesen werden.
+
+### Initialisierung
+
+In folgender Reihenfolge sollten die Register der Local APIC initialisiert werden:
+
+- *Task Priority Register*
+- *LVT Timer Register*
+- *LVT Thermal Sensor Register*
+- *LVT Performance Counter Register*
+- *LVT LINT0 Register*
+- *LVT LINT1 Register*
+- *LVT Error Register*
+- *Spurious Interrupt Vector Register*
+
+### End of Interrupt
+
+Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in das *EOI Register* den Wert 0 schreibt.
+
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
@@ -107,6 +115,6 @@ Das Interrupt Command Register wird verwendet um IPIs zu versenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2479/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2477; parent 2476; 2007-12-23T16:04:14Z -->
+<!-- MediaWiki page 1581; revision 2479; parent 2477; 2007-12-23T17:08:16Z -->
