@@ -89,11 +89,11 @@ Das Interrupt Command Register wird verwendet um IPIs zu versenden.
 
 ### physische Adresse
 
-Die physische Adresse der Register kann entweder aus der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") der *Intel Multiprocessor Specification* ausgelesen werden oder über das [MSR](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register "MSR") 0x001B ausgelesen werden.
+Die physische Adresse der Register kann entweder aus der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") der *Intel Multiprocessor Specification* oder über das [MSR](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register "MSR") 0x001B ausgelesen werden.
 
 ### Initialisierung
 
-In folgender Reihenfolge sollten die Register der Local APIC initialisiert werden:
+Zuerstmal muss man die *Local APIC* über das *Spurious Interrupt Vector Register* aktivieren (und natürlich den Spurious Interrupt Vector setzten). Anschließend sind noch folgende Register zu initialisieren
 
 - *Task Priority Register*
 - *LVT Timer Register*
@@ -102,7 +102,6 @@ In folgender Reihenfolge sollten die Register der Local APIC initialisiert werde
 - *LVT LINT0 Register*
 - *LVT LINT1 Register*
 - *LVT Error Register*
-- *Spurious Interrupt Vector Register*
 
 ### End of Interrupt
 
@@ -115,6 +114,6 @@ Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2479/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2479; parent 2477; 2007-12-23T17:08:16Z -->
+<!-- MediaWiki page 1581; revision 2488; parent 2479; 2007-12-24T15:10:31Z -->
