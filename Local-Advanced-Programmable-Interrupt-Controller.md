@@ -93,7 +93,7 @@ Die physische Adresse der Register kann entweder aus der [Configuration Table](h
 
 ### Initialisierung
 
-Zuerstmal muss man die *Local APIC* über das *Spurious Interrupt Vector Register* aktivieren (und natürlich den Spurious Interrupt Vector setzten). Anschließend sind noch folgende Register zu initialisieren
+Zuerstmal muss man die *Local APIC* über das *Spurious Interrupt Vector Register* aktivieren (und natürlich den Spurious Interrupt Vector setzten). Anschließend sind noch folgende Register zu initialisieren:
 
 - *Task Priority Register*
 - *LVT Timer Register*
@@ -114,6 +114,6 @@ Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2489/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2488; parent 2479; 2007-12-24T15:10:31Z -->
+<!-- MediaWiki page 1581; revision 2489; parent 2488; 2007-12-24T15:11:16Z -->
