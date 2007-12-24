@@ -45,6 +45,6 @@ Enthält noch einem Page-Fault die lineare Adresse, die den Fehler verursacht ha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2490/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 2487; parent 0; 2007-12-24T01:00:24Z -->
+<!-- MediaWiki page 1610; revision 2490; parent 2487; 2007-12-24T15:13:24Z -->
