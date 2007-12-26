@@ -105,7 +105,7 @@ Zuerstmal muss man die *Local APIC* über das *Spurious Interrupt Vector Registe
 
 ### Bug beim Beschreiben der Regsiter
 
-Bei Pentium Prozessoren mit einer Geschwindigkeit über 75 MHz aus der Prozessor-Familie 5 mit der Modellnummer 2 und der Revisionsnummer (Stepping)1,2,3,4 oder 11 wird jegliches einfache Schreiben in LAPIC Register ignoriert. Um dies zu verhindern, muss vor Schreiben auf den APIC zuerst etwas daraus ausgelesen werden.
+Bei Pentium Prozessoren mit einer Geschwindigkeit über 75 MHz aus der Prozessor-Familie 5 mit der Modellnummer 2 und der Revisionsnummer (Stepping) 1,2,3,4 oder 11 wird jegliches einfache Schreiben in LAPIC Register ignoriert. Um dies zu verhindern, muss vor einem Schreibzugriff auf den APIC zuerst etwas daraus ausgelesen werden.
 
 ### End of Interrupt
 
@@ -118,6 +118,6 @@ Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2496; parent 2489; 2007-12-26T10:11:32Z -->
+<!-- MediaWiki page 1581; revision 2497; parent 2496; 2007-12-26T10:12:30Z -->
