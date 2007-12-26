@@ -142,7 +142,7 @@ Wenn man zum Divide Value eine Eins addiert, erhält man den Exponenten der Zwei
 
 Der Wert im Current Count Regsiter wird in der Frequenz des Timers immer um Eins dekrementiert. Sobald der Wert Null erreicht, wird ein Interrupt ausgelöst, das Current Count Register wird, sofern mehr als ein Interrupt generiert werden soll, wieder mit dem Wert des Initial Count Register gefüllt und beginnt somit wieder mit dem stufenweisen dekrementieren.
 
-## Aktivierung
+### Aktivierung
 
 Der Timer wird durch setzen des Divide Configuration Regsisters, des LVT-Timer Registers und des Initial Count Registers aktiviert. Das muss genau in dieser Reihenfolge geschehen. Auch wenn der Timer schon aktiviert ist und der Wert eines der Register geändert werden soll, sollte man immer alle 3 Register in der richtigen Reihenfolge beschreiben, wenn man will, dass die Änderungen wirksam werden.
 
@@ -197,6 +197,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2505/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2504; parent 2503; 2007-12-26T15:03:38Z -->
+<!-- MediaWiki page 1581; revision 2505; parent 2504; 2007-12-26T15:04:42Z -->
