@@ -12,9 +12,19 @@ Einen Überblick über die bereits integrierten, der sich in Entwicklung befindl
 
 Überblick der verschiedenen Versionen:
 
+    26.12.2007 : HomixOS 0.1.1
     09.09.2007 : HomixOS 0.1.0
 
-Die Veränderungen bei den derzeitigen Versionen:
+Die Veränderungen bei den verschiedenen Versionen:
+
+**HomixOS 0.1.1:**
+
+- Bugfixes
+- kleine Benutzerverwaltung
+- verbesserte Prozessverwaltung
+- Exception-Handling
+- erweiterte Shell
+- Konsole verbessert
 
 **HomixOS 0.1.0:**
 
@@ -32,24 +42,27 @@ Die Veränderungen bei den derzeitigen Versionen:
 
 Folgende Versionen sind geplant:
 
-    4.Quartal 2007 : HomixOS 0.1.1
     Anfang 2008 : HomixOS 0.1.2
+    2. Quartal 2008 : HomixOS 0.2.0
 
 Die geplanten Neuheiten in den zukünftigen Versionen:
 
-**HomixOS 0.1.1:**
-
-- verbesserte Prozessverwaltung
-- einfache Benutzerverwaltung
-- erweiterte Shell
-- Texteditor
-
 **HomixOS 0.1.2:**
 
-- Optimierter Binary-Loader
-- erweiterte Benutzerverwaltung
-- Exception-Handling
 - SMP / Multiprocessor-Support
+- Optimierter Binary-Loader
+- vollständige Benutzerverwaltung
+- Festplattentreiber (P-ATA)
+- Texteditor
+
+**HomixOS 0.2.0:**
+
+- Viele Kernelverbesserungen
+- 100%-ige Stabilität
+- Netzwerkunterstützung
+- ARP, IPv4, UDP, TCP, DNS Netzwerkprotokolle
+- RTL8139 Netzwerkkartentreiber
+- AMD PCnet Netzwerkkartentreiber
 
 ## Offizielle Webseite
 
@@ -58,6 +71,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2500/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 2369; parent 2202; 2007-12-09T20:47:07Z -->
+<!-- MediaWiki page 1453; revision 2500; parent 2369; 2007-12-26T12:44:14Z -->
