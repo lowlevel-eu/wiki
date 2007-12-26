@@ -146,7 +146,7 @@ Der Wert im Current Count Regsiter wird in der Frequenz des Timers immer um Eins
 
 Der Timer wird durch setzen des Divide Configuration Regsisters, des LVT-Timer Registers und des Initial Count Registers aktiviert. Das muss genau in dieser Reihenfolge geschehen. Auch wenn der Timer schon aktiviert ist und der Wert eines der Register geändert werden soll, sollte man immer alle 3 Register in der richtigen Reihenfolge beschreiben, wenn man will, dass die Änderungen wirksam werden.
 
-## Frequenz
+### Frequenz
 
 Der Timer des LAPIC läuft jedoch nicht auf allen Systemen mit der selben Frequenz, da diese abhängig vom CPU Bus ist. Deshalb muss man die Frequenz des Timers mit Hilfe der anderen Timer bestimmen. Je mehr man davon verwendet, desto besser kann man die Frequenz des LAPIC Timer bestimmen und hat einen extrem genauen Timer. Am einfachsten ist es jedoch ohne zuerst die Frequenz und damit dann wieder einen Initial Count Value auszurechnen nur durch Auslesen des Current Count Value einen passenden Initial Count Value zu bestimmen. Das heisst, man kann den APIC Timer zusammen mit dem PIT laufen lassen. Sobald dann der PIT den nächsten Interrupt produziert, kann man nur noch den Current Count Value des APIC Timers auslesen und weiss dann, wie man den Initial Count Value einstellen muss.
 
@@ -188,8 +188,6 @@ schlussKalib: mov al,20h ;EOI senden an den PIC, da dieser verwendet wurde zum K
 
 iret\</asm\>
 
-  
-
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
@@ -197,6 +195,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2505/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2505; parent 2504; 2007-12-26T15:04:42Z -->
+<!-- MediaWiki page 1581; revision 2506; parent 2505; 2007-12-26T15:06:05Z -->
