@@ -197,6 +197,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2501/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2501; parent 2497; 2007-12-26T14:16:53Z -->
+<!-- MediaWiki page 1581; revision 2503; parent 2501; 2007-12-26T14:58:16Z -->
