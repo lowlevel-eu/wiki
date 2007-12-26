@@ -113,7 +113,7 @@ Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in d
 
 ## Timer
 
-Der locale APIC besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem PIT oder der RealTimeClock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (SMP) oder mit dem IO APIC (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dme PIC verbunden und damit nur an den BSP angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
+Der locale APIC besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") oder der Real-time Clock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")) oder mit dem [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dem PIC verbunden und damit nur an den BSP angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
 
 ### Register
 
@@ -126,9 +126,9 @@ Der Timer des APIC wird über das LVT Timer Register (0x320), das Initial Count 
 | Reserviert | Timer Modus | Maskierung | Reserviert | Zustellung | Reserviert | Vektor |
 
 - Wenn das Timer Modus Bit gesetzt ist, arbeitet der Timer periodisch. Ansonsten wird der Interrupt nur ein einzige Mal aufgerufen.
-- Das Maskierungs Bit ist standardmässig gesetzt und verhindert somit das Erzeugen eines Interrupts.
-- Auf das Zustellungs Bit kann nur lesend zugegriffen werden. Wenn es gesetzt ist, wird gerade ein Interrupt gesendet, ansonsten wird nicht gearbeitet.
-- Der Vektor beinhaltet die Interruptnummer, mit welcher der Timer-Interrupt zur CPU gesendet werden soll. Dort wird der Interrupt dann zu einer ISR geleitet, welche durch disen Vektor in der IDT ausgewählt wird.
+- Das Maskierungsbit ist standardmäßig gesetzt und verhindert somit das Erzeugen eines Interrupts.
+- Auf das Zustellungsbit kann nur lesend zugegriffen werden. Wenn es gesetzt ist, wird gerade ein Interrupt gesendet, ansonsten wird nicht gearbeitet.
+- Der Vektor beinhaltet die Interruptnummer, mit welcher der Timer-Interrupt zur CPU gesendet werden soll. Dort wird der Interrupt dann zu einer ISR geleitet, welche durch diesen Vektor in der IDT ausgewählt wird.
 
 #### Das Divide Configuration Register:
 
@@ -140,7 +140,7 @@ Wenn man zum Divide Value eine Eins addiert, erhält man den Exponenten der Zwei
 
 #### Initial und Current Count Regsiter:
 
-Der Wert im Current Count Regsiter wird in der Frequenz des Timers immer um Eins Dekrementiert. Sobald der Wert Null erreicht, wird ein Interrupt ausgelöst, das Current Count Register wird, sofern mehr als ein Interrupt generiert werden soll, wieder mit dem Wert des Initial Count Register gefüllt und beginnt somit wieder mit dem stufenweisen Dekrementieren.
+Der Wert im Current Count Regsiter wird in der Frequenz des Timers immer um Eins dekrementiert. Sobald der Wert Null erreicht, wird ein Interrupt ausgelöst, das Current Count Register wird, sofern mehr als ein Interrupt generiert werden soll, wieder mit dem Wert des Initial Count Register gefüllt und beginnt somit wieder mit dem stufenweisen dekrementieren.
 
 ## Aktivierung
 
@@ -197,6 +197,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2503; parent 2501; 2007-12-26T14:58:16Z -->
+<!-- MediaWiki page 1581; revision 2504; parent 2503; 2007-12-26T15:03:38Z -->
