@@ -8,7 +8,7 @@ Generell ist die Speicherverwaltung dafür zuständig nachfragenden Prozessen fr
 
 ## physische Speicherverwaltung
 
-Die **physische Speicherverwaltung** bildet die unterste Ebene und ermöglicht das Allozieren und Freigeben von physischen Speicherbereichen. Meist sind diese Speicherbereiche gleich groß und richten sich nach der Seitengröße der jeweiligen Architektur. Intern speichert die physische Speicherverwaltung welche Speicherbereiche im physischen Speicher frei sind. Dies könnte folgendermaßen implementiert werden:
+Die **physische Speicherverwaltung** bildet die unterste Ebene und ermöglicht das Allozieren und Freigeben von physischen Speicherbereichen. Meist sind diese Speicherbereiche gleich groß und richten sich nach der Seitengröße der jeweiligen Architektur. Die Seitengröße beträgt normalerweise bei der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Architektur 4kB. Es sind dort auch 4 ([x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")) bzw. 2MB ([x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")) möglich. Intern speichert die physische Speicherverwaltung welche Speicherbereiche im physischen Speicher frei sind. Dies könnte folgendermaßen implementiert werden:
 
 ### Bitmap
 
@@ -57,11 +57,12 @@ Zusammenfassend lässt sich festhalten, dass eine Kombination aus den oben erkl�
 
 ## virtuelle Speicherverwaltung
 
-Die **virtuelle Speicherverwaltung** befindet sich eine Schicht über der [physischen Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") und ist für die Organisation der Speicherbereiche im virtuellen Adressraum eines Prozesses zuständig. Dies bedeutet auch, dass sie das Ein- und Ausblenden von physischen Speicherseiten in den virtuellen Adressraum eines Prozesses übernimmt.  
-Das wird im Grunde so gemacht: Jeder Prozess bekommt beim Erzeugen mindestens ein Pagedirectory und ein Pagetable. Pagedirectory und Pagetable sind jeweils 4kB groß, die Pages können mithilfe der physischen Speicherverwaltung leicht und dynamisch angefordert werden. Wann immer man ein neues Pagedirectory oder Pagetable braucht, muss man einfach nur eine physische Speicherseite von der physischen Speicherverwaltung anfordern. Natürlich braucht der Prozess auch noch Speicher den er benutzen kann, dieser wird auch mithilfe der physischen Speicherverwaltung angefordert und kann dann leicht in die Pagetables eingetragen werden. Beim Prozesswechsel muss man nur noch CR3 mit dem richtigen Pagedir laden. Man sollte natürlich auf keinen Fall vergessen den Kernel in jeden der Pagedirectories/Pagetables der Prozesse einzutragen.
+Die **virtuelle Speicherverwaltung** befindet sich eine Schicht über der [physischen Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") und ist für die Organisation der Speicherbereiche im virtuellen Adressraum eines Prozesses zuständig. Unter [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") beispielsweise wird ein virtueller Adressraum über den [Paging-Mechanismus](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") (siehe dort für eine genauere Erklärung) realisiert. Dieser virtuelle Adressraum hat erstmal nichts mit dem physischen Adressraum gemeinsam. Erst die virtuelle Speicherverwaltung stellt durch Ein- und Ausblenden von physischen Speicherseiten in den virtuellen Adressraum diese Verbindung her und blendet die Segmente des Prozessimage (Code, Daten, nicht initialisierte Daten, ...), den Heap, den Stack, benötigte shared-libraries, [shared-memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "IPC"), auch den Kernel, etc. in den virtuellen Adressraum ein oder aus. Die dafür benötigten physischen Speicherseiten werden der physischen Speicherverwaltung entnommen.
+
+Die virtuelle Speicherverwaltung übernimmt in einem Multiprozessorsystem auch die Aufgabe die virtuellen Adressräume über mehrere Prozessoren hinweg konsistent zu halten (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")).
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2414/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 2414; parent 2413; 2007-12-16T12:07:17Z -->
+<!-- MediaWiki page 1591; revision 2493; parent 2414; 2007-12-26T07:59:32Z -->
