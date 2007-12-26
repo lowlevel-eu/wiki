@@ -255,11 +255,8 @@ Aus \#lost (29. Juni 2007)
     [13:18] <Homix> hmm kwolf, kommt deine TCP/IP/RTL8139 Netzwerkimplementierung auch nicht auf melr als paar KB pro sekunde ?
     [13:19] <phoenix64> Hmmm... dann ist dein Netzwerktreiber in etwa so schnell wie mein erster VGA-Treiber :)
 
-  
-
 ------------------------------------------------------------------------
 
-  
 Aus \#lost (21. November 2007)
 
     21:04:24 < VerrueckterPinguin> Hm wenn du grad schon am Definitionen suchen bist... Wie könnte man das bezeichen, was LostIO macht? ;-)
@@ -272,8 +269,21 @@ Aus \#lost (21. November 2007)
     21:20:01 < VerrueckterPinguin> omfg *g*
     21:20:07 <*taljeth> Sorry, mußte zwischendurch noch telefonieren, deswegen hat's länger gedauert. ;-)
 
+------------------------------------------------------------------------
+
+Aus \#lost (26. Dezember 2007)
+
+    <taljeth> stultus: Fängst du jetzt auch schon damit an, dich alt zu fühlen? ;-)
+    <stultus> jo
+    <FreakyPenguin> Ach was, das ist erst dann der Fall, wenn die Kerzen am Geburtstag teurer sind als der Kuchen, das kann man heute ja lange herauszögern. *g*
+    <stultus> hm, dann alter ich ja garnicht. ^^
+    <FreakyPenguin> Jo ich auch nicht. Wer braucht schon Kuchen. *g
+    <stultus> wer braucht schon kerzen.
+    <stultus> Kuchen uss sein
+    <stultus> (im zweifelsfall Googlehupf :D)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 2257; parent 2042; 2007-11-21T21:39:15Z -->
+<!-- MediaWiki page 1435; revision 2502; parent 2257; 2007-12-26T14:23:02Z -->
