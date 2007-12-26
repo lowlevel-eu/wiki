@@ -111,6 +111,85 @@ Bei Pentium Prozessoren mit einer Geschwindigkeit über 75 MHz aus der Prozessor
 
 Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in das *EOI Register* den Wert 0 schreibt.
 
+## Timer
+
+Der locale APIC besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem PIT oder der RealTimeClock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (SMP) oder mit dem IO APIC (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dme PIC verbunden und damit nur an den BSP angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
+
+### Register
+
+Der Timer des APIC wird über das LVT Timer Register (0x320), das Initial Count Register (0x380), das Current Count Register (0x390 - nur Lesezugriff) sowie das Divide Configuration Register (0x3E0) angesprochen.
+
+#### Das LVT Timer Register:
+
+| 31-18 | 17 | 16 | 15-13 | 12 | 11-8 | 7-0 |
+| ------------ | ------------- | ------------ | ------------ | ------------ | ------------ | -------- |
+| Reserviert | Timer Modus | Maskierung | Reserviert | Zustellung | Reserviert | Vektor |
+
+- Wenn das Timer Modus Bit gesetzt ist, arbeitet der Timer periodisch. Ansonsten wird der Interrupt nur ein einzige Mal aufgerufen.
+- Das Maskierungs Bit ist standardmässig gesetzt und verhindert somit das Erzeugen eines Interrupts.
+- Auf das Zustellungs Bit kann nur lesend zugegriffen werden. Wenn es gesetzt ist, wird gerade ein Interrupt gesendet, ansonsten wird nicht gearbeitet.
+- Der Vektor beinhaltet die Interruptnummer, mit welcher der Timer-Interrupt zur CPU gesendet werden soll. Dort wird der Interrupt dann zu einer ISR geleitet, welche durch disen Vektor in der IDT ausgewählt wird.
+
+#### Das Divide Configuration Register:
+
+| 31-4 | 3 | 2 | 1-0 |
+| ------------ | ------------------------------- | ----- | ---------------------------------- |
+| Reserviert | höchstes Bit des Divide Value | 0 | niedrige 2 Bits des Divide Value |
+
+Wenn man zum Divide Value eine Eins addiert, erhält man den Exponenten der Zweierpotenz, welche dann den Divisor bildet. Ausnahme: Sind alle 3 Bits gesetzt ist der Divisor 1. Da die Funktion dieser Division nicht spezifiziert ist, sollte man sie auch nicht verwenden und einfach durch 1 dividieren. Das gäbe demnach eine Wertzuweisung von 0xb in das Divide Configuration Register (Man beachte die Teilung des Divide Value im Register).
+
+#### Initial und Current Count Regsiter:
+
+Der Wert im Current Count Regsiter wird in der Frequenz des Timers immer um Eins Dekrementiert. Sobald der Wert Null erreicht, wird ein Interrupt ausgelöst, das Current Count Register wird, sofern mehr als ein Interrupt generiert werden soll, wieder mit dem Wert des Initial Count Register gefüllt und beginnt somit wieder mit dem stufenweisen Dekrementieren.
+
+## Aktivierung
+
+Der Timer wird durch setzen des Divide Configuration Regsisters, des LVT-Timer Registers und des Initial Count Registers aktiviert. Das muss genau in dieser Reihenfolge geschehen. Auch wenn der Timer schon aktiviert ist und der Wert eines der Register geändert werden soll, sollte man immer alle 3 Register in der richtigen Reihenfolge beschreiben, wenn man will, dass die Änderungen wirksam werden.
+
+## Frequenz
+
+Der Timer des LAPIC läuft jedoch nicht auf allen Systemen mit der selben Frequenz, da diese abhängig vom CPU Bus ist. Deshalb muss man die Frequenz des Timers mit Hilfe der anderen Timer bestimmen. Je mehr man davon verwendet, desto besser kann man die Frequenz des LAPIC Timer bestimmen und hat einen extrem genauen Timer. Am einfachsten ist es jedoch ohne zuerst die Frequenz und damit dann wieder einen Initial Count Value auszurechnen nur durch Auslesen des Current Count Value einen passenden Initial Count Value zu bestimmen. Das heisst, man kann den APIC Timer zusammen mit dem PIT laufen lassen. Sobald dann der PIT den nächsten Interrupt produziert, kann man nur noch den Current Count Value des APIC Timers auslesen und weiss dann, wie man den Initial Count Value einstellen muss.
+
+#### Codebeispiel:
+
+Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> mov al,00110110b ;den PIT auf den gewünschten Wert (hier 10ms) einstellen out 43h,al
+
+mov ax,11931 out 40h,al mov al,ah out 40h,al
+
+sti ;IRQs freigeben timerschleife: ;Solange Warten, bis das Einschalten und Messen des APIC Timers fertig ist cmp ebp,0x2 ;Die Zählvariable hat dann den Wert 2 jne timerschleife cli
+
+mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden mov ecx,DWORD\[apiczähler\] ;Den Gemessenen Wert für den Initial Count des APIC Timers nach ECX laden
+
+mov ebp,\[eax+0x3e0\] ;Alle Register des APIC Timers neu schreiben, um den neuen Initial Count einzustellen mov DWORD\[eax+0x3e0\],0xb
+
+mov ebp,\[eax+0x3200\] ;Zuerst irgendein Register lesen, wegen Bug in manchem APICS mov DWORD\[eax+0x320\],0x20031
+
+mov ebp,\[eax+0x380\] ;Nach Lesen eines Wertes, den neuen Wert des Zählers aus ECX ins Initial Count Register schreiben mov \[eax+0x380\],ecx\</asm\>
+
+  
+Dieser Code muss als ISR des PITs eingetragen sein. Er kümmert sich zuerst um das Starten des APIC Timers und in einem zweiten Durchgang das Ablesen des heruntergezählten Wertes im Current Count Register. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\>APICkalibrieren: inc ebp ;Variable um zwischen Einschalten und Messen (des Current Count) des APIC Timers zu unterscheiden mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden
+
+cmp ebp,0x1 jne ApicSchonGestartet
+
+mov edx,\[eax+0x3e0\] ;Zuerst irgendein Wert auslesen, dannach Divide Configuration Register auf Divide Value = 1 setzen mov DWORD\[eax+0x3e0\],0xb
+
+mov edx,\[eax+0x320\] ;Zuerst Wert auslesen, dannach LVT-Timer Register setzen (peridischer Timer auf Vektor 31) mov DWORD\[eax+0x320\],0x20031
+
+mov edx,\[eax+0x380\] ;Initial Count Register auf das Maximum setzen --\> möglichst viel Werte zum Kalibrieren möglich mov DWORD\[eax+0x380\],0xFFFFFFFF
+
+jmp schlussKalib
+
+  
+ApicSchonGestartet: ;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen mov ecx,0xFFFFFFFF ;Unterschied des Current Count in der Zeit des PITs ausrechnen sub ecx,\[eax+0x390\]\< mov DWORD\[apiczähler\],ecx
+
+schlussKalib: mov al,20h ;EOI senden an den PIC, da dieser verwendet wurde zum Kalibrieren
+
+             out 20h,al
+
+iret\</asm\>
+
+  
+
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
@@ -118,6 +197,6 @@ Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2501/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2497; parent 2496; 2007-12-26T10:12:30Z -->
+<!-- MediaWiki page 1581; revision 2501; parent 2497; 2007-12-26T14:16:53Z -->
