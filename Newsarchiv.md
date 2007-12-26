@@ -3,7 +3,11 @@
 **Alte News Meldungen hier einfügen**
 
 |  |  |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **09.09.2007 :** | Die Version 0.1.0 von [HomixOS](https://github.com/lowlevel-eu/wiki/wiki/Xantorix "HomixOS") wurde freigegeben. Erstmals gibt es eine x86 und eine x86-64 Version des Betriebssystems. Die offizielle Homepage ist [hier](http://www.homix-online.de/homixos/). |
+| **03.05.2007 :** | Die erste LOST-Version 0.1.0 wurde freigegeben. Mehr dazu gibts [hier](http://lowlevel.brainsware.org/forum/index.php?topic=1798.0). |
+| **25.04.2007 :** | Linux 2.6.21 wurde freigegeben. Die größten Änderungen betreffen den Timer, um Tickless-Systeme zu unterstützen und Stromsparmodi besser zu nutzen. Außerdem sind einige Erweiterung im Bereich Virtualisierung (KVM) vorgenommen worden. [kernel.org](http://www.kernel.org) |
+| **21.04.2007 :** | Der erste Releasekandidat für Version 0.1.0 des Lowlevel-Community-Betriebssystems LOST wird im [Forum](http://lowlevel.brainsware.org/forum/index.php?topic=1792.0) vorgestellt. |
 | **12.03.2007 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.1 erscheint und kann nun als Image heruntergeladen werden. Der [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.1) ist ziemlich umfangreich. [Website](http://www.reactos.org/) |
 | **02.03.2007 :** | @Heise: [Bundespatentgericht erklärt FAT-Patent von Microsoft für nichtig](http://www.heise.de/newsticker/meldung/86102) |
 | **05.02.2007 :** | Qemu 0.9 erscheint. Gleichzeitig wird der Qemu Accelerator unter die GPL gestellt. [Website](http://fabrice.bellard.free.fr/qemu/) |
@@ -22,6 +26,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 1942; parent 1722; 2007-04-17T17:38:51Z -->
+<!-- MediaWiki page 1416; revision 2508; parent 1942; 2007-12-26T18:50:41Z -->
