@@ -54,9 +54,10 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 ## Weblinks
 
 - [Intel Multiprocessor Specification](http://www.intel.com/design/pentium/datashts/242016.htm)
+- Kapitel 7 von [Intel® 64 and IA-32 Architectures Software Developer’s Manual](http://www.intel.com/design/processor/manuals/253668.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 2353; parent 2352; 2007-12-07T11:57:00Z -->
+<!-- MediaWiki page 1490; revision 2512; parent 2353; 2007-12-27T18:57:49Z -->
