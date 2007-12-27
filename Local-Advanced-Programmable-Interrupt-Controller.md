@@ -192,9 +192,10 @@ iret\</asm\>
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
 - [AMD64 Architecture Programmer's Manual Volume 2: System Programming](http://www.amd.com/us-en/Processors/DevelopWithAMD/0,,30_2252_739_7044,00.html) (Kapitel 16)
+- [Advanced Programmable Interrupt Controller](http://osdev.berlios.de/pic.html) (Tutorial von Mike Rieker)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2510/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2506; parent 2505; 2007-12-26T15:06:05Z -->
+<!-- MediaWiki page 1581; revision 2510; parent 2506; 2007-12-27T08:33:06Z -->
