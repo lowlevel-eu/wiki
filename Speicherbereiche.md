@@ -1,25 +1,33 @@
 # Speicherbereiche
 
-Es gibt unter der 1MB-Grenze einige reservierte Speicherbereiche, die von BIOS benutzt werden oder z.B zur Ansteuerung von Videospeicher dienen.
+Es gibt unter der 1MB-Grenze einige reservierte Speicherbereiche, die von [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") benutzt werden oder z.B. der Ansteuerung des Videospeichers dienen.
 
 ## Speicherbereiche als Grafik
 
+  
+
 ![id90g15_t.png](http://cgi.zdnet.de/glossar/i/small/id90g15_t.png)
+
+  
 
 ## Speicherbereiche als Tabelle
 
+  
+
 | Name | Adresse | Größe |
-| -------------------------------------------------------------------------------------------------------------------- | ---------- | ------- |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ------- |
 | [Interrupt Vector Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "Interrupt Vector Table") | 0x000000 | 1kB |
 | [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area") | 0x000400 | 256B |
-| Base Memory | 0x000500 | 639kB |
-| [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA") RAM | 0x0A0000 | 64kB |
+| Base Memory und<br>[Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area") | 0x000500 | 639kB |
+| [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA") RAM | 0x0A0000 | 128kB |
 | Video ROM | 0x0C0000 | 32kB |
 | [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), ROM, UMA | 0x0C8000 | 32kB |
 | ROM, UMA oder Page Frame | 0x0D0000 | 64kB |
 | UMA oder Page Frame | 0x0E0000 | 64kB |
 | Motherboard [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") | 0x0F0000 | 64kB |
 | Extended Memory | 0x100000 | ... |
+
+  
 
 ## Weblinks
 
@@ -28,6 +36,6 @@ Es gibt unter der 1MB-Grenze einige reservierte Speicherbereiche, die von BIOS b
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
 
-<!-- MediaWiki page 1563; revision 2270; parent 2259; 2007-11-25T21:08:23Z -->
+<!-- MediaWiki page 1563; revision 2513; parent 2270; 2007-12-28T07:23:42Z -->
