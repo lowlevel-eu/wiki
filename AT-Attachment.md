@@ -4,7 +4,7 @@
 
 Eine der größten Hürden zu Beginn beim Schreiben eines ATA-Treibers ist das Erkennen der angeschlossenen Geräte. Hierzu gibt es keinen von der Spezifikation vorgeschriebenen Weg. Viele Methoden funktionieren zwar in einigen Emulatoren aber auf echter Hardware nicht und umgekehrt.
 
-Beim Schreiben des ATA-Treibers für habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in qemu und vmware, und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (4 Rechner von P1 bis zum P4).
+Beim Schreiben des ATA-Treibers für LOST habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in qemu und vmware, und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (4 Rechner von P1 bis zum P4).
 
 ### HOB-Bit löschen
 
@@ -42,6 +42,6 @@ Working-Drafts der aktuellen Spezifikationen zu ATA(PI) können hier bezogen wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2520/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 2519; parent 2518; 2007-12-30T14:19:07Z -->
+<!-- MediaWiki page 1522; revision 2520; parent 2519; 2007-12-30T14:23:20Z -->
