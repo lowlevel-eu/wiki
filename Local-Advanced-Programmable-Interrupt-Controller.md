@@ -193,14 +193,17 @@ schlussKalib: mov al,20h ;EOI senden an den PIC, da dieser verwendet wurde zum K
 
 iret\</asm\>
 
+## Siehe auch
+
+- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
+
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
 - [AMD64 Architecture Programmer's Manual Volume 2: System Programming](http://www.amd.com/us-en/Processors/DevelopWithAMD/0,,30_2252_739_7044,00.html) (Kapitel 16)
-- [Advanced Programmable Interrupt Controller](http://osdev.berlios.de/pic.html) (Tutorial von Mike Rieker)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2523; parent 2522; 2007-12-30T15:04:35Z -->
+<!-- MediaWiki page 1581; revision 2525; parent 2523; 2007-12-30T20:26:30Z -->
