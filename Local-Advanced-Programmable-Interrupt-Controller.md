@@ -158,7 +158,7 @@ mov al,00110110b ;den PIT auf den gewünschten Wert (hier 10ms) einstellen out 4
 
 mov ax,11931 out 40h,al mov al,ah out 40h,al
 
-sti ;IRQs freigeben timerschleife: ;Solange Warten, bis das Einschalten und Messen des APIC Timers fertig ist cmp ebp,0x2 ;Die Zählvariable hat dann den Wert 2 jne timerschleife cli
+sti ;IRQs freigeben timerschleife: ;Solange Warten, bis das Einschalten und Messen des APIC Timers sicher fertig ist cmp ebp,0x3 ;Die Zählvariable hat dann den Wert 3 jne timerschleife cli
 
 mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden mov ecx,DWORD\[apiczähler\] ;Den Gemessenen Wert für den Initial Count des APIC Timers nach ECX laden
 
@@ -182,7 +182,9 @@ mov edx,\[eax+0x380\] ;Initial Count Register auf das Maximum setzen --\> mögli
 jmp schlussKalib
 
   
-ApicSchonGestartet: ;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen mov ecx,0xFFFFFFFF ;Unterschied des Current Count in der Zeit des PITs ausrechnen sub ecx,\[eax+0x390\]\< mov DWORD\[apiczähler\],ecx
+ApicSchonGestartet: cmp ebp,0x3 ;Wenn der Timer schon zum 3. Mal ausgelöst, muss nichts mehr getan werden je schlussKalib
+
+;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen mov ecx,0xFFFFFFFF ;Unterschied des Current Count in der Zeit des PITs ausrechnen sub ecx,\[eax+0x390\] mov DWORD\[apiczähler\],ecx
 
 schlussKalib: mov al,20h ;EOI senden an den PIC, da dieser verwendet wurde zum Kalibrieren
 
@@ -198,6 +200,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2521; parent 2510; 2007-12-30T14:56:54Z -->
+<!-- MediaWiki page 1581; revision 2522; parent 2521; 2007-12-30T15:02:39Z -->
