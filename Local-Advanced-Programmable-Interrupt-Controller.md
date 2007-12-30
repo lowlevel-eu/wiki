@@ -152,7 +152,9 @@ Der Timer des LAPIC läuft jedoch nicht auf allen Systemen mit der selben Freque
 
 #### Codebeispiel:
 
-Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> mov al,00110110b ;den PIT auf den gewünschten Wert (hier 10ms) einstellen out 43h,al
+Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> xor ebp,ebp ;EBP nullen, damit nachher in PIT-ISR erkenbar, wie oft der Timer-Interrupt aufgerufen wurde
+
+mov al,00110110b ;den PIT auf den gewünschten Wert (hier 10ms) einstellen out 43h,al
 
 mov ax,11931 out 40h,al mov al,ah out 40h,al
 
@@ -162,7 +164,7 @@ mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden mov ec
 
 mov ebp,\[eax+0x3e0\] ;Alle Register des APIC Timers neu schreiben, um den neuen Initial Count einzustellen mov DWORD\[eax+0x3e0\],0xb
 
-mov ebp,\[eax+0x3200\] ;Zuerst irgendein Register lesen, wegen Bug in manchem APICS mov DWORD\[eax+0x320\],0x20031
+mov ebp,\[eax+0x320\] ;Zuerst irgendein Register lesen, wegen Bug in manchem APICS mov DWORD\[eax+0x320\],0x20031
 
 mov ebp,\[eax+0x380\] ;Nach Lesen eines Wertes, den neuen Wert des Zählers aus ECX ins Initial Count Register schreiben mov \[eax+0x380\],ecx\</asm\>
 
@@ -196,6 +198,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2510/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2510; parent 2506; 2007-12-27T08:33:06Z -->
+<!-- MediaWiki page 1581; revision 2521; parent 2510; 2007-12-30T14:56:54Z -->
