@@ -173,6 +173,7 @@ Dieser Code muss als ISR des PITs eingetragen sein. Er kümmert sich zuerst um d
 
 cmp ebp,0x1 jne ApicSchonGestartet
 
+  
 mov edx,\[eax+0x3e0\] ;Zuerst irgendein Wert auslesen, dannach Divide Configuration Register auf Divide Value = 1 setzen mov DWORD\[eax+0x3e0\],0xb
 
 mov edx,\[eax+0x320\] ;Zuerst Wert auslesen, dannach LVT-Timer Register setzen (peridischer Timer auf Vektor 31) mov DWORD\[eax+0x320\],0x20031
@@ -200,6 +201,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2522; parent 2521; 2007-12-30T15:02:39Z -->
+<!-- MediaWiki page 1581; revision 2523; parent 2522; 2007-12-30T15:04:35Z -->
