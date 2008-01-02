@@ -19,6 +19,7 @@
 - Informationen zur AMD PCNet Netzwerkkarte
 - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
 - Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
+- [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"): Programmierung, etc...
 - Hier kommt dein Wunsch hin ;)
 
 ## [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") arbeitet "momentan" an
@@ -33,6 +34,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2495/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2495; parent 2420; 2007-12-26T08:01:27Z -->
+<!-- MediaWiki page 1518; revision 2529; parent 2495; 2008-01-02T03:00:03Z -->
