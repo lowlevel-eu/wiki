@@ -35,10 +35,11 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ## siehe auch
 
+- [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 2527; parent 2429; 2008-01-02T02:54:54Z -->
+<!-- MediaWiki page 1465; revision 2528; parent 2527; 2008-01-02T02:59:02Z -->
