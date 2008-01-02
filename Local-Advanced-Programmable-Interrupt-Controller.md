@@ -152,42 +152,58 @@ Der Timer des LAPIC läuft jedoch nicht auf allen Systemen mit der selben Freque
 
 #### Codebeispiel:
 
-Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> xor ebp,ebp ;EBP nullen, damit nachher in PIT-ISR erkenbar, wie oft der Timer-Interrupt aufgerufen wurde
+Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> ;EBP nullen, damit nachher in PIT-ISR erkenbar, wie oft der Timer-Interrupt aufgerufen wurde xor ebp,ebp
 
-mov al,00110110b ;den PIT auf den gewünschten Wert (hier 10ms) einstellen out 43h,al
+;den PIT auf den gewünschten Wert (hier 10ms) einstellen mov al,00110110b out 43h,al
 
 mov ax,11931 out 40h,al mov al,ah out 40h,al
 
-sti ;IRQs freigeben timerschleife: ;Solange Warten, bis das Einschalten und Messen des APIC Timers sicher fertig ist cmp ebp,0x3 ;Die Zählvariable hat dann den Wert 3 jne timerschleife cli
+;IRQs freigeben sti
 
-mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden mov ecx,DWORD\[apiczähler\] ;Den Gemessenen Wert für den Initial Count des APIC Timers nach ECX laden
+Solange Warten, bis das Einschalten und Messen des APIC Timers sicher fertig ist
 
-mov ebp,\[eax+0x3e0\] ;Alle Register des APIC Timers neu schreiben, um den neuen Initial Count einzustellen mov DWORD\[eax+0x3e0\],0xb
+timerschleife:
 
-mov ebp,\[eax+0x320\] ;Zuerst irgendein Register lesen, wegen Bug in manchem APICS mov DWORD\[eax+0x320\],0x20031
+;Die Zählvariable hat dann den Wert 3 cmp ebp,0x3 jne timerschleife cli
 
-mov ebp,\[eax+0x380\] ;Nach Lesen eines Wertes, den neuen Wert des Zählers aus ECX ins Initial Count Register schreiben mov \[eax+0x380\],ecx\</asm\>
+;Den zuvor ermittelten Platz der APIC Register laden mov eax,\[apicregs\]
+
+;Den Gemessenen Wert für den Initial Count des APIC Timers nach ECX laden mov ecx,DWORD\[apiczähler\]
+
+;Alle Register des APIC Timers neu schreiben, um den neuen Initial Count einzustellen mov ebp,\[eax+0x3e0\] mov DWORD\[eax+0x3e0\],0xb
+
+;Zuerst irgendein Register lesen, wegen Bug in manchem APICs mov ebp,\[eax+0x320\] mov DWORD\[eax+0x320\],0x20031
+
+;Nach Lesen eines Wertes, den neuen Wert des Zählers aus ECX ins Initial Count Register schreiben mov ebp,\[eax+0x380\] mov \[eax+0x380\],ecx\</asm\>
 
   
-Dieser Code muss als ISR des PITs eingetragen sein. Er kümmert sich zuerst um das Starten des APIC Timers und in einem zweiten Durchgang das Ablesen des heruntergezählten Wertes im Current Count Register. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\>APICkalibrieren: inc ebp ;Variable um zwischen Einschalten und Messen (des Current Count) des APIC Timers zu unterscheiden mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden
+Dieser Code muss als ISR des PITs eingetragen sein. Er kümmert sich zuerst um das Starten des APIC Timers und in einem zweiten Durchgang das Ablesen des heruntergezählten Wertes im Current Count Register. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\>APICkalibrieren:
+
+;Variable um zwischen Einschalten und Messen (des Current Count) des APIC Timers zu unterscheiden inc ebp
+
+;Den zuvor ermittelten Platz der APIC Register laden mov eax,\[apicregs\]
 
 cmp ebp,0x1 jne ApicSchonGestartet
 
   
-mov edx,\[eax+0x3e0\] ;Zuerst irgendein Wert auslesen, dannach Divide Configuration Register auf Divide Value = 1 setzen mov DWORD\[eax+0x3e0\],0xb
+;Zuerst irgendein Wert auslesen, dannach Divide Configuration Register auf Divide Value = 1 setzen mov edx,\[eax+0x3e0\] mov DWORD\[eax+0x3e0\],0xb
 
-mov edx,\[eax+0x320\] ;Zuerst Wert auslesen, dannach LVT-Timer Register setzen (peridischer Timer auf Vektor 31) mov DWORD\[eax+0x320\],0x20031
+;Zuerst Wert auslesen, dannach LVT-Timer Register setzen (periodischer Timer auf Vektor 31) mov edx,\[eax+0x320\] mov DWORD\[eax+0x320\],0x20031
 
-mov edx,\[eax+0x380\] ;Initial Count Register auf das Maximum setzen --\> möglichst viel Werte zum Kalibrieren möglich mov DWORD\[eax+0x380\],0xFFFFFFFF
+;Initial Count Register auf das Maximum setzen --\> möglichst viel Werte zum Kalibrieren möglich mov edx,\[eax+0x380\] mov DWORD\[eax+0x380\],0xFFFFFFFF
 
 jmp schlussKalib
 
   
-ApicSchonGestartet: cmp ebp,0x3 ;Wenn der Timer schon zum 3. Mal ausgelöst, muss nichts mehr getan werden je schlussKalib
+ApicSchonGestartet:
 
-;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen mov ecx,0xFFFFFFFF ;Unterschied des Current Count in der Zeit des PITs ausrechnen sub ecx,\[eax+0x390\] mov DWORD\[apiczähler\],ecx
+;Wenn der Timer schon zum 3. Mal ausgelöst, muss nichts mehr getan werden cmp ebp,0x3 je schlussKalib
 
-schlussKalib: mov al,20h ;EOI senden an den PIC, da dieser verwendet wurde zum Kalibrieren
+;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen ;Unterschied des Current Count in der Zeit des PITs ausrechnen mov ecx,0xFFFFFFFF sub ecx,\[eax+0x390\] mov DWORD\[apiczähler\],ecx
+
+schlussKalib:
+
+;EOI senden an den PIC, da dieser verwendet wurde zum Kalibrieren mov al,20h
 
              out 20h,al
 
@@ -204,6 +220,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2526; parent 2525; 2008-01-02T02:05:10Z -->
+<!-- MediaWiki page 1581; revision 2530; parent 2526; 2008-01-02T03:40:07Z -->
