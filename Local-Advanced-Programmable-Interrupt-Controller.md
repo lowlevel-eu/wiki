@@ -33,7 +33,7 @@ Die Register der *Local APIC* sind in den physischen Speicher eingeblendet. Jede
 | 0x0360 | r/w | 32 |  | LVT LINT1 Register |
 | 0x0370 | r/w | 32 |  | LVT Error Register |
 | 0x0380 | r/w | 32 |  | Initial Count Register |
-| 0x0390 | r/w | 32 |  | Current Count Register |
+| 0x0390 | r | 32 |  | Current Count Register |
 | 0x03E0 | r/w | 32 |  | Divide Configuration Register |
 
   
@@ -204,6 +204,6 @@ iret\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2525; parent 2523; 2007-12-30T20:26:30Z -->
+<!-- MediaWiki page 1581; revision 2526; parent 2525; 2008-01-02T02:05:10Z -->
