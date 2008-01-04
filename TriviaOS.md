@@ -14,24 +14,32 @@ In weiter Ferne ist noch geplant, für das OS eine grafische Programmiersprache 
 
 ## Release
 
-Ich hoffe in der Zeit zwischen Weihnachten und Sport-/Winterferien ein erstes Release vorstellen zu können. Dieses wird in etwa die Folgenden "Features" beinhalten:
+Ich hoffe nach den Sportferien ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
 
 - den vollständigen TriviaOS-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")1.0 mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
-- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung
+- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen
 - Task und Speicherverwaltung
-- I/O-Verwaltung mit [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
 - [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")
+- Diskettentreiber
 - [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur")
 - [Vesatreiber](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "Vesa")
-- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")
-- evtl. [Maustreiber](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
+- einfache [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")
+- [Maustreiber](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
 - Test-Tool
-- Ausführliche Dokumentation der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") und der Ansprechung der ersten [Treibermodule](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
+- Dokumentation der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") und der Ansprechung der ersten [Treibermodule](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
 
 Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
+  
+Frühstens im Sommer wird dann das nächste Release kommen. Mit Sicherheit wird es die folgenden Features beinhalten:
+
+- I/O-Verwaltung mit [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
+- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")
+- Fesplattenfähigkeit
+- CD Unterstützung
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2172/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2532/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2172; parent 2168; 2007-10-13T18:04:17Z -->
+<!-- MediaWiki page 1448; revision 2532; parent 2172; 2008-01-04T11:17:44Z -->
