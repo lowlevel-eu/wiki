@@ -17,7 +17,7 @@ In weiter Ferne ist noch geplant, für das OS eine grafische Programmiersprache 
 Ich hoffe nach den Sportferien ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
 
 - den vollständigen TriviaOS-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")1.0 mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
-- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen
+- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen ---\> vollständig implementiert
 - Task und Speicherverwaltung
 - [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")
 - Diskettentreiber
@@ -40,6 +40,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Mit Sicherheit wird 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2538/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2533; parent 2532; 2008-01-04T11:18:09Z -->
+<!-- MediaWiki page 1448; revision 2538; parent 2533; 2008-01-04T22:32:13Z -->
