@@ -12,7 +12,7 @@ Programme können in beliebig viele Tasks unterteilt werden. Somit bekommen aufw
 
 In weiter Ferne ist noch geplant, für das OS eine grafische Programmiersprache bereitzustellen, welche einerseits dazu dient, auf einfache Weise Tools zu programmieren und andererseits helfen kann, bestimmte Systemfunktionen zu automatisieren. Man könnte dann Befehlsfunktionen realisieren wie: Such mir alle E-Mails, welche zum selben Thema wie das von Datei XY, vom Autor dieser Datei XZ geschrieben wurden.
 
-## Release
+## Releases
 
 Ich hoffe nach den Sportferien ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
 
@@ -40,6 +40,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Mit Sicherheit wird 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2532/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2532; parent 2172; 2008-01-04T11:17:44Z -->
+<!-- MediaWiki page 1448; revision 2533; parent 2532; 2008-01-04T11:18:09Z -->
