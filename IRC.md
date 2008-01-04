@@ -90,7 +90,7 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 
 ## Channel-Logs
 
-Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http://lost.famkaufmann.info/irc/irc.php) zu haben.
+Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu haben.
 
 ## Die Statistiken
 
@@ -98,6 +98,6 @@ Momentan nicht verfügbar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 2322; parent 1980; 2007-11-28T20:09:42Z -->
+<!-- MediaWiki page 1463; revision 2536; parent 2322; 2008-01-04T17:50:27Z -->
