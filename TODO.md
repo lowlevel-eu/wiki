@@ -4,8 +4,6 @@
 
 - A20 Gate
 - [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
-- [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): Bitte mal nachprüfen
-- Elf: überarbeiten
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 
@@ -34,6 +32,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2529; parent 2495; 2008-01-02T03:00:03Z -->
+<!-- MediaWiki page 1518; revision 2546; parent 2529; 2008-01-13T16:41:58Z -->
