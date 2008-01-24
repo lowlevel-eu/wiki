@@ -20,6 +20,8 @@
 - [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"): Programmierung, etc...
 - Hier kommt dein Wunsch hin ;)
 
+Verlinkte Seiten, welche noch nicht angelegt sind : Spezial:Gewünschte_Seiten
+
 ## [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") arbeitet "momentan" an
 
 - Unter [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung#physische-speicherverwaltung "Speicherverwaltung") weitere mögliche Datenstruktur hinzufügen.
@@ -32,6 +34,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2546; parent 2529; 2008-01-13T16:41:58Z -->
+<!-- MediaWiki page 1518; revision 2550; parent 2546; 2008-01-24T16:37:40Z -->
