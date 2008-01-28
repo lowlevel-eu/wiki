@@ -10,6 +10,6 @@ Das BIOS (**B**asic **I**nput/**O**utput **S**ystem) ist die Firmware eines Comp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2549/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2555/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 2549; parent 2548; 2008-01-24T16:33:34Z -->
+<!-- MediaWiki page 1616; revision 2555; parent 2549; 2008-01-28T12:51:27Z -->
