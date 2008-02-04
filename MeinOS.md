@@ -47,8 +47,8 @@ Wie man sieht, ist noch eine Menge zu tun.
 ## Download
 
 - Unoffizielles Release vom 20.12.07:
-  - Floppy-Image: [floppy.img.gz](http://wonsheimlan.wo.funpic.de/meinos/downloads/floppy.img.gz) (195,4kB)
-  - Sourcecode: [meinos.tar.gz](http://wonsheimlan.wo.funpic.de/meinos/downloads/meinos.tar.gz) (460kB)
+  - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy.img.gz) (195,4kB)
+  - Sourcecode: [meinos.tar.gz](http://jgraef.bplaced.net/meinos/downloads/meinos.tar.gz) (460kB)
 
 ## Screenshot (Unoffizielles Release vom 20.12.07)
 
@@ -56,10 +56,10 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ## Weblinks
 
-- [Website von meinOS](http://wonsheimlan.wo.funpic.de/meinos/)
+- [Website von meinOS](http://jgraef.bplaced.net/meinos/index.php)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2547/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2556/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2547; parent 2451; 2008-01-17T17:38:15Z -->
+<!-- MediaWiki page 1551; revision 2556; parent 2547; 2008-02-04T22:02:27Z -->
