@@ -52,7 +52,7 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ## Screenshot (Unoffizielles Release vom 20.12.07)
 
-![screen.gif](http://wonsheimlan.wo.funpic.de/meinos/screenshots/screen.gif)
+![screen.gif](http://jgraef.bplaced.net/meinos/screenshots/screen.gif)
 
 ## Weblinks
 
@@ -60,6 +60,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2556/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2557/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2556; parent 2547; 2008-02-04T22:02:27Z -->
+<!-- MediaWiki page 1551; revision 2557; parent 2556; 2008-02-06T16:59:06Z -->
