@@ -14,7 +14,7 @@ In weiter Ferne ist noch geplant, für das OS eine grafische Programmiersprache 
 
 ## Releases
 
-Ich hoffe nach den Sportferien ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
+Ich hoffe im Frühling ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
 
 - den vollständigen TriviaOS-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")1.0 mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen ---\> vollständig implementiert
@@ -43,6 +43,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Mit Sicherheit wird 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2558; parent 2538; 2008-02-08T15:08:38Z -->
+<!-- MediaWiki page 1448; revision 2559; parent 2558; 2008-02-08T15:08:56Z -->
