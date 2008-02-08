@@ -2,15 +2,27 @@
 
 TriviaOS ist ein kleines Einmann-Hobby OS und wird von [Nooooooooos](https://lowlevel-eu.github.io/wiki/pages/1457/index.html "Benutzer:Nooooooooos") entwickelt.
 
-## Konzept und Ideen
+## Äusseres Erscheinen
 
-TriviaOS hat einen Mikrokernel und arbeitet nur mit einer GUI. Allerdings werden da nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche sich nicht überlappen können. Erstens soll damit die Bedinung einfacher sein und zweitens auch die Programmierung. Zudem ist geplant, dass alle Daten eines Benutzers auch im Internet gespeichert werden. Das hat den Vorteil, dass man sich von überallher mit seinem Account einloggen kann und sofort mit seinen Daten arbeiten kann. So kann man auch Dateien ganz einfach unter verschiedenen Usern teilen. Man muss sich dann auch vor Datencrashs weniger Sorgen machen und sich nicht um Backups kümmern. Von der Geschwindigkeit her ist das sicher waghalsig - Jedoch bis das System so weit ist, sind hoffentlich auch die Internet-Verbindungen schnell genug geworden.
+TriviaOS arbeitet nur mit einer GUI, die allerdings nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche sich nicht überlappen können, jedoch in ihrer Grösse sehr flexibel sind. Das wird nicht nur die Bedinung sondern auch die Programmierung vereinfachen.
 
-Ein weiteres Merkmal ist der ausschließlich in Assembler geschriebene Quellcode. Das bringt dem System sicher den einen oder anderen Geschwindigkeits- und Speichervorteil.
-
-Programme können in beliebig viele Tasks unterteilt werden. Somit bekommen aufwendige Programme automatisch mehr Rechenzeit und eine Aufteilung in Threads für mehrere Prozessoren wird so ganz einfach. Damit ist auch die Möglichkeit geschaffen für Programme verschiedene Module desselben Zwecks anzubieten. Bestimmte Module könnten dann von mehreren Programmen genutzt werden, was im Idealfall zur Verflechtung aller laufenden Programme führt. TriviaOS wird also mit mehreren Prozessoren umgehen können, aber eine 64-Bit Version ist vorläufig nicht geplant, da ich es wichtiger finde, dass die gesamte Rechenpower genutzt wird, anstatt von etwas mehr virtuellem Speicher der wegen meinem Konzept sowieso nicht benötigt wird. Sollten aber einmal alle System weit mehr Arbeitsspeicher als 4GB haben, kann ich immer noch mit gerigem Aufwand PAE implementieren.
+Auch ist geplant, dass alle Daten eines Benutzers zusätzlich zur Festplatte auch im Internet gespeichert werden. Das hat den Vorteil, dass man sich von überallher mit seinem Account einloggen kann und sofort mit seinen Daten arbeiten kann. So kann man auch Dateien ganz einfach unter verschiedenen Usern teilen. Man muss sich dann auch vor Datencrashs weniger Sorgen machen und sich nicht um Backups kümmern. Von der Geschwindigkeit her ist das sicher waghalsig - Jedoch bis das System so weit ist, sind hoffentlich auch die Internet-Verbindungen schnell genug geworden.
 
 In weiter Ferne ist noch geplant, für das OS eine grafische Programmiersprache bereitzustellen, welche einerseits dazu dient, auf einfache Weise Tools zu programmieren und andererseits helfen kann, bestimmte Systemfunktionen zu automatisieren. Man könnte dann Befehlsfunktionen realisieren wie: Such mir alle E-Mails, welche zum selben Thema wie das von Datei XY, vom Autor dieser Datei XZ geschrieben wurden.
+
+## Inneres Design
+
+Der Mikrokernel von TriviaOS ist sehr klein und beinhaltet nur die Funktionen fürs Message Passing, den Scheduler und die Weiterleitung von Hardware Interrupts an die entsprechenden Module.
+
+Der Quellcode von TriviaOS ist ausschließlich in Assembler geschrieben. Das bringt dem System sicher den einen oder anderen Geschwindigkeits- und Speichervorteil und gleicht den Performance-Verlust durch das schon extreme Microkernel-Design etwas aus.
+
+Die Tasks in meinem System sind Module eines Programms, die in einem Programm einer Funktion entsprechen. Sie werden höchstens 8 KB Platz für Code und 4 MB für Daten haben. Sie kommunizieren untereinander in erster Linie über Message Passing. Dabei arbeitet ein Task jeweils eine Nachricht die er gekriegt hat ab und kann weiteren Tasks synchron oder asynchron Nachrichten mit begrenzter Parameteranzahl schicken. Für grössere Datenmengen können die Tasks Shared Memory benutzen. Da Programme in beliebig viele Tasks unterteilt werden können, bekommen aufwendige Programme automatisch mehr Rechenzeit und eine Aufteilung in Threads für mehrere Prozessoren wird so ganz einfach. Damit ist zudem auch die Möglichkeit geschaffen, dass alle Programme für die selbe Funktion das selbe Modul benutzen. Dadurch könnten Programme nicht nur einfacher gewartet werden sondern auch die Entwicklung wird erleichtert und speziell für OpenSource-Entwickler interessant.
+
+TriviaOS wird mit mehreren CPUs, Cores und logischen Prozessoren umgehen können, aber eine 64-Bit Version ist vorläufig nicht geplant, da schon jetzt wegen dem Konzept der extrem kleinen Module nur ein Bruchteil des möglichen virtuellen Speichers genutzt wird. Sollten aber einmal alle System weit mehr Arbeitsspeicher als 4GB haben und mein OS diese Ressorcen auch benötigen, kann ich immer noch mit relativ gerigem Aufwand PAE implementieren.
+
+## Lizenzierung
+
+Die Sourcen des Kernels und der inneren Module meines Systemes werden sobald sie fertiggestellt sind veröffentlicht und jeder darf sie gerne lesen und sich davon inspirieren lassen. Allerings werde ich alle Rechte bei mir behalten, also darf niemand die Sorucen kopieren, oder verändern. Die äusseren Module des Systemes sowie Module von Programmen für mein OS, werde ich unter die GPL stellen, damit daran alle weiter arbeiten können oder auf einigen Modulen aufbauen können.
 
 ## Releases
 
@@ -43,6 +55,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Es wird in etwa die 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2562/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2561; parent 2559; 2008-02-08T16:08:54Z -->
+<!-- MediaWiki page 1448; revision 2562; parent 2561; 2008-02-08T17:12:22Z -->
