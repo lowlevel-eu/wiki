@@ -22,7 +22,7 @@ TriviaOS wird mit mehreren CPUs, Cores und logischen Prozessoren umgehen können
 
 ## Lizenzierung
 
-Die Sourcen des Kernels und der inneren Module meines Systemes werden sobald sie fertiggestellt sind veröffentlicht und jeder darf sie gerne lesen und sich davon inspirieren lassen. Allerings werde ich alle Rechte bei mir behalten, also darf niemand die Sorucen kopieren, oder verändern. Die äusseren Module des Systemes sowie Module von Programmen für mein OS, werde ich unter die GPL stellen, damit daran alle weiter arbeiten können oder auf einigen Modulen aufbauen können.
+Die Sourcen des Kernels und der inneren Module meines Systemes werden sobald sie fertiggestellt sind veröffentlicht und jeder darf sie gerne lesen und sich davon inspirieren lassen. Allerings werde ich alle Rechte bei mir behalten, also darf niemand die Sorucen kopieren, oder verändern. Die äusseren Module (evtl. Tastaturbelegungen, Speicherdevices, Dateisysteme...; evtl. Druckertreiber, Grafikkartentreiber, Treiber für Devices wie Webcams...) des Systemes sowie Module von Programmen für mein OS, werde ich unter die GPL stellen, damit daran alle weiter arbeiten können oder auf einigen Modulen aufbauen können.
 
 ## Releases
 
@@ -55,6 +55,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Es wird in etwa die 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2562/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2562; parent 2561; 2008-02-08T17:12:22Z -->
+<!-- MediaWiki page 1448; revision 2563; parent 2562; 2008-02-08T17:18:21Z -->
