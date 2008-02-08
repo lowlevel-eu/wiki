@@ -34,12 +34,15 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 Frühstens im Sommer wird dann das nächste Release kommen. Mit Sicherheit wird es die folgenden Features beinhalten:
 
 - I/O-Verwaltung mit [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
+- Prozessverwaltung
+- EFI Unterstützung
+- differenziertere Exception Handler
 - [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")
 - Fesplattenfähigkeit
 - CD Unterstützung
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2538/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2538; parent 2533; 2008-01-04T22:32:13Z -->
+<!-- MediaWiki page 1448; revision 2558; parent 2538; 2008-02-08T15:08:38Z -->
