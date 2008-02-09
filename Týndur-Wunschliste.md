@@ -12,22 +12,31 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 - Entfernen der COM1-Ausgabe aus putc, stattdessen wäre ein komplettes Modul für serielle Ausgänge (inkl. Eingabe, nicht nur Ausgabe) wünschenswert.
 
-<!-- -->
+  
 
-- Hinzufügen von Applikationen, wie z.B. einen Editor.
+## Module
+
+- serial (ttyS\* / COM\*), schreiben/lesen von den Ports, Konfiguration, ggf. auch Handshaking hierher verlegen.
+
+  
+
+## Anwendungen
+
+- Texteditor
+- fdisk-äquivalent (Partitionsverwaltung)
+- FTP-Client
+- Hilfesystem
+- Setup (Installation & Konfiguration)
 
   
 
 ## LostIO
 
 - Berechtigungen setzen und abfragen
-
-<!-- -->
-
 - ioctl um kompatibler zu bestehenden Systemen und Anwendungen zu werden (und um alternativ weitere files im vfs einzusparen)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2125/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2565/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 2125; parent 1998; 2007-10-02T12:59:34Z -->
+<!-- MediaWiki page 1513; revision 2565; parent 2125; 2008-02-09T11:36:10Z -->
