@@ -19,11 +19,12 @@ Zu beachten ist, dass bei einer Änderung des Page-Directory oder einer Page-Tab
 ## Links
 
 - [Paging Tutorial](http://www.homix-online.de/Tutorials/32PMode-Paging.php)
+- [Paging im PM-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/p_spez1.htm)
 - [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8#paging "Ausgabe 8")
 - <http://osdever.net/tutorials/pdf/basic_paging.pdf>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2171/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2564/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2171; parent 2044; 2007-10-13T00:09:40Z -->
+<!-- MediaWiki page 1496; revision 2564; parent 2171; 2008-02-09T08:44:42Z -->
