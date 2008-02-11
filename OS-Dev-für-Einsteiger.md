@@ -31,7 +31,20 @@ Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu C sind beispiels
 
 ### Entwicklungsumgebung und Tools
 
-Hier könnte man irgendwann was dazu hinschreiben. ;-)
+Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein.
+
+Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natürlich strenggenommen keinen PC. Aber es wäre geschickt, denn ich nehme an, Du willst ein x86-Betriebssystem schreiben. Wenn Du wider Erwarten für eine andere Plattform entwickeln möchtest, teil Dich im Forum mit, das wird auch andere interessieren - allerdings bist dann Du derjenige, der erklären darf. Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten sind für den Anfang das handlichste. Und ein 386er oder höher sollte es schon sein - aber das sollte heutzutage machbar sein.
+
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein Linux installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch Windows nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung. Unter Windows wirst du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das...
+
+Dann brauchst du Editor und Compiler. Als Editor hast du sicher schon Deinen eigenen Favoriten (nämlich vim) und auch beim Compiler ist die Sache relativ klar: Wenn du C nimmst, wird der Compiler im Allgemeinen gcc sein und unter Linux ist damit alles geklärt. Wenn du gcc unter Windows benutzt, solltest du dir überlegen, ob du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach. (Oder natürlich einfach ein Linux)
+
+- [Crosscompiler_für_Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+
+Schließlich brauchst Du auch noch eine Möglichkeit, Dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm qemu oder bochs - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
+
+- <http://www.qemu.org>
+- <http://bochs.sourceforge.net>
 
 ## Wo anfangen?
 
@@ -50,6 +63,6 @@ Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2566/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2566; parent 0; 2008-02-10T22:13:50Z -->
+<!-- MediaWiki page 1619; revision 2573; parent 2566; 2008-02-11T22:32:59Z -->
