@@ -51,6 +51,18 @@ Der Speicher, der für den Stack benutzt wird, wird aus den Speicherseiten, die 
 o Das Freigeben einer Speicherseite ist in konstanter Zeit möglich. (konstante Komplexität)  
 - Das Allozieren physisch kontinuierlicher Speicherseiten ist unmöglich.  
 
+### Buddy
+
+#### Allokation & Freigabe von Speicherseiten
+
+#### Implementationsvorschlag
+
+#### Eigenschaften
+
+\+ Schnelle Reservierung von Speicherseiten  
++ Schnelle Freigabe von Speicherseiten  
+- Recht komplizierte Implementation  
+
 ### Fazit
 
 Zusammenfassend lässt sich festhalten, dass eine Kombination aus den oben erklärten Datenstrukturen das Beste sein wird. Die Bitmap hat den Vorteil, dass man physisch kontinuierlichen Speicher allozieren kann. Dies benötigt man vor allem für [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"). Das heißt es macht Sinn bei der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Architektur die unteren 1/16MB mit einer Bitmap zu verwalten. Der Stack hingegen hat einen unschlagbaren Geschwindigkeits- und Speichervorteil und kann für den Rest des Speichers verwendet werden.
@@ -67,6 +79,6 @@ Die virtuelle Speicherverwaltung übernimmt in einem Multiprozessorsystem auch d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2509/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2571/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 2509; parent 2493; 2007-12-26T20:46:51Z -->
+<!-- MediaWiki page 1591; revision 2571; parent 2509; 2008-02-11T14:53:30Z -->
