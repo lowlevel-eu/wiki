@@ -46,11 +46,15 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ## Download
 
+## Download
+
+- Unoffizielles Release vom 12.02.08 (Build 415):
+  - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy_build415.img.gz) (335,4kB)
 - Unoffizielles Release vom 20.12.07:
   - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy.img.gz) (195,4kB)
   - Sourcecode: [meinos.tar.gz](http://jgraef.bplaced.net/meinos/downloads/meinos.tar.gz) (460kB)
 
-## Screenshot (Unoffizielles Release vom 20.12.07)
+## Screenshot (Unoffizielles Release vom 12.02.08 (Build 415))
 
 ![screen.gif](http://jgraef.bplaced.net/meinos/screenshots/screen.gif)
 
@@ -60,6 +64,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2557/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2557; parent 2556; 2008-02-06T16:59:06Z -->
+<!-- MediaWiki page 1551; revision 2574; parent 2557; 2008-02-12T19:58:27Z -->
