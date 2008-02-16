@@ -76,6 +76,6 @@ Anschließend müssen diese drei Dateien kompiliert/assembliert und gelinkt werd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2577/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2578/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 2577; parent 0; 2008-02-16T12:23:36Z -->
+<!-- MediaWiki page 1623; revision 2578; parent 2577; 2008-02-16T12:26:59Z -->
