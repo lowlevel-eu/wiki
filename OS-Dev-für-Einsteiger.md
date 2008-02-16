@@ -20,14 +20,14 @@ Wer sich nicht mit Hardware herumschlagen möchte, kann sich ein DOS oder ein ab
 
 ### Die Programmiersprache
 
-Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in Assembler schreiben muss. Quatsch. Man kann, wenn man es möchte, aber man muss nicht. Wahr ist, dass man um einige wenige Zeilen Assembler nicht herumkommen wird. Ein grundlegendes Verständnis der Sprache wäre daher hilfreich, jahrelange Erfahrung ist aber nicht nötig.
+Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") schreiben muss. Quatsch. Man kann, wenn man es möchte, aber man muss nicht. Wahr ist, dass man um einige wenige Zeilen Assembler nicht herumkommen wird. Ein grundlegendes Verständnis der Sprache wäre daher hilfreich, jahrelange Erfahrung ist aber nicht nötig.
 
 Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im großen und ganzen zwei Alternativen:
 
 - Du nimmst C. Fast jeder spricht diese Sprache und Du bekommst Unmengen an Beispielcode in C. Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können.
 - Du nimmst nicht C. Du wirst Dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst Dich möglicherweise öfter selbst durchschlagen - gerade wenn es um Besonderheiten deiner Sprache oder Deines Compilers geht.
 
-Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu C sind beispielsweise C++ oder Pascal (mit FreePascal oder mit Tricks auch Delphi als Compiler). Theoretisch würde auch FreeBASIC funktionieren. Andere Sprachen hat hier meines Wissens noch niemand versucht, könnten natürlich aber trotzdem funktionieren.
+Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") sind beispielsweise [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") oder [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") (mit FreePascal oder mit Tricks auch Delphi als Compiler). Theoretisch würde auch [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") funktionieren. Andere Sprachen hat hier meines Wissens noch niemand versucht, könnten natürlich aber trotzdem funktionieren.
 
 ### Entwicklungsumgebung und Tools
 
@@ -59,10 +59,34 @@ Die folgenden beiden Artikel werden Dir bei den ersten Schritten mit GRUB helfen
 - C-Kernel mit Grub
 - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
 
-Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schreiben - so sei es. In den ersten Ausgaben des [Magazins](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin") findest Du die dazu nötigen Informationen.
+Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schreiben - so sei es. In den ersten Ausgaben des [Magazins](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin") findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass GRUB benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst - insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
+
+### Hello World und weiter
+
+Die allererste Aufgabe für ein neues Betriebssystem ist es selbstverständlich, ein "Hello world!" auf den Bildschirm auszugeben. Wenn Du nach dem oben genannten Artikel vorgegangen bist, hast Du diesen Schritt schon erreicht. Wenn nicht: Text gibst du aus, indem Du in der Videospeicher schreibst. Er beginnt für den Textmodus an der Adresse 0xB8000 und enthält für jedes Zeichen (insgesamt 80x25) auf dem Bildschirm je zwei Bytes. Das erste enthält den ASCII-Code des Zeichens selbst, das zweite Attribute wie Farbe. Experimentiere am besten ein bisschen damit herum.
+
+Hey, mein Kernel läuft und gibt was aus, vielleicht wäre jetzt der Grafikmodus...? Nein! Ein wesentlicher Grund dafür ist, dass Du in der nächsten Zeit viele kritische Änderungen und dabei auch viele Fehler machen wirst. Du wirst daher um [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") nicht herumkommen. Am einfachsten geht das über Textausgaben, die leider im Grafikmodus nicht mehr ganz so leicht gehen.
+
+Aber mit dieser Erkenntnis hast du auch schon eine schöne Aufgabe für den nächsten Schritt: Du brauchst Ausgaberoutinen, in C wäre das beispielsweise ein printf (die meistens etwas weniger mächtige Variante im Kernel wird übrigens gern printk oder kprintf genannt).
+
+### Protected Mode
+
+Wenn Du GRUB benutzt, bist Du zwar bereits am Anfang im Protected Mode, allerdings mit einem Standardsatz von Deskriptortabellen. Es wäre jetzt an der Zeit, das zu ändern.
+
+Oh, Du hast keine Ahnung, was Du Dir unter Deskriptortabellen vorzustellen hast? Lies Dir am besten den Artikel zum Protected Mode durch. Wenn Du Deinen Bootloader selbst schreibst, findest Du dort auch Informationen, wie Du selbst in den Protected Mode umschaltest. Außerdem ist das Protected-Mode-Tutorial auf den Seiten der FH Zwickau zu empfehlen.
+
+- [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
+- [Umschalten in Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode")
+- [Protected-Mode-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm)
+
+Was Du zunächst machen musst, ist, eine GDT im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut - das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
+
+Wenn Du die GDT aufgebaut hast, kannst Du sie anschließend laden. Das ist einer der wenigen Fälle, wo Du tatsächlich Assembler brauchst. Wenn Du C benutzt, könnte dir der Artikel über [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") helfen. Ansonsten schlag in der Dokumentation deines Compilers nach, wie es dort funktioniert.
+
+Anschließend musst du die Segmentregister neu laden, damit die GDT auch benutzt wird. An dieser Stelle zeigt sich dann, ob Du es richtig gemacht hast. Wenn die Einträge in deiner GDT falsch sind, und beispielsweise das Codesegment nicht korrekt ist, wirst du mit höchster Wahrscheinlichkeit einen GPF auslösen. GPF steht übrigens für *General Protection Fault* und ist Dir vielleicht als *Allgemeine Schutzverletzung* besser bekannt. Weil Du noch keine [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") verarbeitest, wird das zu einem *Triple Fault* führen, was auf einem echten PC einen Reset bewirkt, qemu wird sich mit einer Fehlermeldung beenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2573; parent 2566; 2008-02-11T22:32:59Z -->
+<!-- MediaWiki page 1619; revision 2576; parent 2573; 2008-02-16T10:55:55Z -->
