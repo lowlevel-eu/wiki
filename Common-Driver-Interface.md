@@ -1,6 +1,6 @@
 # Common Driver Interface
 
-Common Driver Interface (oder kurz CDI) ist ein Standard, der es ermöglichen soll Betriebssystemunabhängige Treiber zu schreiben. Dies funktioniert mithilfe einer Bibliothek, die einmal für ein Betriebssystem implementiert werden muss. Dann können CDI-komforme Treiber einfach mit dieser Bibliothek kompiliert werden. Der CDI-Standard gibt lediglich vor, wie die Funktionsprototypen aussehen müssen, aber nicht wie diese implementiert werden, denn das ist ja von Betriebssystem zu Betriebssystem unterschiedlich.
+Common Driver Interface (oder kurz CDI) ist ein Standard, der es ermöglichen soll betriebssystemunabhängige Treiber zu schreiben. Dies funktioniert mithilfe einer Bibliothek, die einmal für ein Betriebssystem implementiert werden muss. Dann können CDI-komforme Treiber einfach mit dieser Bibliothek kompiliert werden. Der CDI-Standard gibt lediglich vor, wie die Funktionsprototypen aussehen müssen, aber nicht wie diese implementiert werden, denn das ist ja von Betriebssystem zu Betriebssystem unterschiedlich.
 
 CDI funktioniert nach dem Prinzip, dass jedes Programm einen oder mehrere Treiber mit einem oder mehreren Geräten anmeldet. Jeder Treiber registriert dabei verschiedene Callback-Funktionen um nachher mit dem System interagieren zu können. Am Ende wird eine Funktion aufgerufen um der CDI-Bibliothek die volle Kontrolle zu geben.
 
@@ -18,6 +18,6 @@ Ein Link zur Dokumentation der Funktionsprototypen, Strukturen, Enumerationen, u
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2572/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 2572; parent 0; 2008-02-11T16:23:16Z -->
+<!-- MediaWiki page 1622; revision 2582; parent 2572; 2008-02-17T16:59:55Z -->
