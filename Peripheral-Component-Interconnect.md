@@ -88,7 +88,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | ----------- | ------------------------------------------------------------------------------------------------ |
 | 0x00 | [Alle Geräte die gebaut wurden bevor Classcodes eingeführt wurden](#subclasses---pre-20) |
 | 0x01 | [Massenspeicher](#subclasses---massenspeicher) |
-| 0x02 | \[\[#Subclasses\_-\_Netzwerk-Controller \| Netzwerk-Controller}} |
+| 0x02 | [Netzwerk-Controller](#subclasses---netzwerk-controller) |
 | 0x03 | [Bildschirm-Controller](#subclasses---bildschirm-controller) |
 | 0x04 | [Multimedia-Geräte](#subclasses---multimedia-ger%C3%A4te) |
 | 0x05 | [Speicher-Controller](#subclasses---speicher-controller) |
@@ -250,14 +250,12 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-  
-
 ## Weblinks
 
 - [Linux PCI ID Repositorium](http://pci-ids.ucw.cz/iii/) - Enthält viele VendorIDs und die dazugehörigen DeviceIDs
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2591/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2592/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 2591; parent 2585; 2008-02-19T15:28:04Z -->
+<!-- MediaWiki page 1626; revision 2592; parent 2591; 2008-02-19T17:01:50Z -->
