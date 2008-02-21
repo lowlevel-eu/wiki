@@ -8,7 +8,7 @@ Um einen Cross-Compiler zu bauen, werden die üblichen GNU-Tools benötigt. Dazu
 
 ## Linux
 
-Auf vielen Linux-Distributionen sind diese Programme standardmässig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere debian-Derivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev).
+Auf vielen Linux-Distributionen sind diese Programme standardmässig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere debian-Derivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev und texinfo).
 
 ## Windows
 
@@ -102,6 +102,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2597/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 2596; parent 2586; 2008-02-21T16:59:53Z -->
+<!-- MediaWiki page 1628; revision 2597; parent 2596; 2008-02-21T17:46:17Z -->
