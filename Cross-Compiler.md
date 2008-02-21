@@ -31,7 +31,7 @@ TODO
 
 # binutils
 
-Die GNU-binutils beinhalten unter anderem den Linker ld, den Assembler as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind strenggenommen auch Bestandteil des Crosscompilers, da die auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.18 ausgegangen. Er müsste aber auch für jüngere und ältere Versionen funktionieren. Nach dem Herunterladen muss das Archiv entpackt werden:
+Die GNU-binutils beinhalten unter anderem den Linker ld, den Assembler as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind strengn genommen auch Bestandteil des Cross-Compilers, da sie auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.18 ausgegangen. Er müsste aber auch für jüngere und ältere Versionen funktionieren. Nach dem Herunterladen muss das Archiv entpackt werden:
 
     $ tar -xjf binutils-2.18.tar.bz2
 
@@ -42,15 +42,15 @@ Der nächste Schritt ist das Konfigurieren. Die Dokumentation empfiehlt binutils
     $ mkdir binutils-build
     $ cd binutils-build
 
-Beim Konfigurieren muss auch das Verzeichnis festgelegt werden, in das die binutils installiert werden sollen. Hier wird jetzt /usr/local/crosstools benutzt. Folgender Befehl wird zum Konfigurieren beunutzt:
+Beim Konfigurieren muss auch das Verzeichnis festgelegt werden, in das die binutils installiert werden sollen. Hier wird jetzt `/usr/local/crosstools` benutzt. Folgender Befehl wird zum Konfigurieren beunutzt:
 
     $ ../binutils-2.18/configure --prefix=/usr/local/crosstools --target=i386-elf --disable-nls
 
-Als Zielplattform wird hier i386-elf benutzt, da dies wohl die Meistbenutzte im Zusammenhang mit Betriebssystementwicklung. Der letzte Schalter --disable-nls dient dazu, sämtliche Übersetzungen zu deaktivieren, da die meist mehr verwirren als nützt.
+Als Zielplattform wird hier i386-elf benutzt, da dies wohl die Meistbenutzte im Zusammenhang mit Betriebssystementwicklung ist. Der letzte Schalter `--disable-nls` dient dazu, sämtliche Übersetzungen zu deaktivieren, da die meist mehr verwirren als nützen.
 
 ## Kompilieren
 
-Nach dem Konfigurieren ist der nächste Schritt das kompilieren:
+Nach dem Konfigurieren ist der nächste Schritt das Kompilieren:
 
     $ make all
 
@@ -102,6 +102,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 2586; parent 0; 2008-02-19T11:19:48Z -->
+<!-- MediaWiki page 1628; revision 2596; parent 2586; 2008-02-21T16:59:53Z -->
