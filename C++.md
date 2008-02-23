@@ -122,9 +122,10 @@ int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
 - [New Features in the Next C++ Standard](http://video.google.de/videoplay?docid=2768126766555555011&q=c%2B%2B0x) (video)
 - [Initialization Lists](http://video.google.de/videoplay?docid=5262479012306588324&q=c%2B%2B0x) (video)
 - [Concepts Extending C++ Templates For Generic Programming](http://video.google.de/videoplay?docid=-1790714981047186825&q=c%2B%2B0x) (video)
+- [C++09 (Teil 1) - Ein Überblick: Sprachfeatures](http://www.c-plusplus.de/forum/viewtopic-var-t-is-204654.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2296; parent 2277; 2007-11-26T18:54:22Z -->
+<!-- MediaWiki page 1486; revision 2598; parent 2296; 2008-02-23T15:37:25Z -->
