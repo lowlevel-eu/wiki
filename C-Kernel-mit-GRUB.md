@@ -21,9 +21,9 @@ Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den h
 
      // String ausgeben
      while (*hello) {
-       *video = 0x07;
-       video++;
        *video = *hello;
+       video++;
+       *video = 0x07;
        video++;
        hello++;
      }
@@ -201,6 +201,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 2467; parent 2466; 2007-12-21T17:06:02Z -->
+<!-- MediaWiki page 1604; revision 2599; parent 2467; 2008-02-26T16:34:44Z -->
