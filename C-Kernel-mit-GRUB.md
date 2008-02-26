@@ -19,6 +19,7 @@ Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den h
      // String zum Ausgeben
      char *hello = "Hello World";
 
+     // Zuerst den Speicher leeren
      for(video+=4000; video != 0xB8000;video--)
         *video=0;
 
@@ -204,6 +205,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 2600; parent 2599; 2008-02-26T16:38:20Z -->
+<!-- MediaWiki page 1604; revision 2601; parent 2600; 2008-02-26T16:39:43Z -->
