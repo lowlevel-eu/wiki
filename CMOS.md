@@ -248,9 +248,10 @@ Rückgabe ist das gelesene Byte in AL
     *  @return Gelesener Wert
     */
 
-u8 cmos_read(u8 offset) {
+uint8_t cmos_read(uint8_t offset) {
 
-     outb(CMOS_PORT_ADDRESS,offset&0x7F);
+     uint8_t tmp = inb(CMOS_PORT_ADDRESS);
+     outb(CMOS_PORT_ADDRESS, (tmp & 0x80) | (offset & 0x7F));
      return inb(CMOS_PORT_DATA);
 
 }
@@ -262,9 +263,10 @@ u8 cmos_read(u8 offset) {
     *  @param val Zu schreibender Wert
     */
 
-void cmos_write(u8 offset,u8 val) {
+void cmos_write(uint8_t offset,uint8_t val) {
 
-     outb(CMOS_PORT_ADDRESS,offset&0x7F);
+     uint8_t tmp = inb(CMOS_PORT_ADDRESS);
+     outb(CMOS_PORT_ADDRESS, (tmp & 0x80) | (offset & 0x7F));
      outb(CMOS_PORT_DATA,val);
 
 } \</c\>
@@ -277,6 +279,6 @@ void cmos_write(u8 offset,u8 val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2421/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2421; parent 2419; 2007-12-16T17:00:27Z -->
+<!-- MediaWiki page 1562; revision 2603; parent 2421; 2008-03-01T17:31:49Z -->
