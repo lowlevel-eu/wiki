@@ -1,20 +1,20 @@
 # Assembler
 
-Bei einem Assembler handel es sich um eine einfach Programmiersprache. Sie wird direkt für einen bestimmten Prozessortyp verwendet und stellt die einzelnen Prozessorbefehle als Wörter mit eventuellen Parametern da. Zusäzlich vereinfach der Assembler die Adressberrechnung und ermöglicht das Berrechnen von Konstanten, die sich aus Formeln zusammensetzen.
+Als **Assembler** wird einerseits eine einfache Programmiersprache andererseits auch der Übersetzer dieser Programmiersprache in Maschinencode bezeichnet. Die Programmiersprache ist auf einen bestimmten Prozessortyp zugeschnitten und stellt die einzelnen Prozessorbefehle als Wörter mit eventuellen Parametern da. Damit ist die Sprache kaum portabel. Zusätzlich vereinfacht der Übersetzer der Programmiersprache die Adressberrechnung (unter anderem durch Labels) und ermöglicht das Berrechnen von Konstanten, die sich aus Formeln zusammensetzen.
 
 ## Syntax
 
-Es gibt für die x86 Prozessorfamilie verschiedene Syntax.  
+Es gibt für die x86 Prozessorfamilie verschiedene Syntaxen.  
 
 ### Intel
 
-Der Intel Syntax wird meistens verwendet wenn man Assembler von hand schreibt.  
+Die Intel Syntax wird meistens verwendet wenn man Assembler von Hand schreibt.  
 
 Beispielcode: \<asm\> mov al, 0x10 \</asm\>
 
 ### AT&T
 
-Dieser Syntax wurde speziel für das schnelle Assemblieren entwickelt um ihn beim Kompilieren von Hochsprachenquellcode als Zwischenschritt zu verwenden.
+Diese Syntax wurde speziell für das schnelle Assemblieren entwickelt um ihn beim Kompilieren von Hochsprachenquellcode als Zwischenschritt zu verwenden.
 
 Beispielcode: \<asm\> movb \$0x10, %al \</asm\>
 
@@ -32,6 +32,6 @@ YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](htt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 2310; parent 2116; 2007-11-27T20:28:40Z -->
+<!-- MediaWiki page 1514; revision 2604; parent 2310; 2008-03-01T17:49:28Z -->
