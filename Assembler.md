@@ -1,6 +1,6 @@
 # Assembler
 
-Als **Assembler** wird einerseits eine einfache Programmiersprache andererseits auch der Übersetzer dieser Programmiersprache in Maschinencode bezeichnet. Die Programmiersprache ist auf einen bestimmten Prozessortyp zugeschnitten und stellt die einzelnen Prozessorbefehle als Wörter(Mnemoniks) mit eventuellen Parametern da. Damit ist die Sprache kaum portabel. Zusätzlich vereinfacht der Übersetzer der Programmiersprache die Adressberrechnung (unter anderem durch Labels) und ermöglicht das Berrechnen von Konstanten, die sich aus Formeln zusammensetzen.
+Als **Assembler** wird einerseits eine einfache Programmiersprache andererseits auch der Übersetzer dieser Programmiersprache in Maschinencode bezeichnet. Die Programmiersprache ist auf einen bestimmten Prozessortyp zugeschnitten und stellt die einzelnen Prozessorbefehle als Wörter (Mnemoniks bzw. engl. Mnemonics) mit eventuellen Parametern da. Damit ist die Sprache kaum portabel. Zusätzlich vereinfacht der Übersetzer der Programmiersprache die Adressberrechnung (unter anderem durch Labels) und ermöglicht das Berechnen von Konstanten, die sich aus Formeln zusammensetzen.
 
 ## Syntax
 
@@ -32,6 +32,6 @@ YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](htt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2605/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 2605; parent 2604; 2008-03-01T18:47:14Z -->
+<!-- MediaWiki page 1514; revision 2606; parent 2605; 2008-03-03T07:43:30Z -->
