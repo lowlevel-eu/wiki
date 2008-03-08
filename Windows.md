@@ -1,6 +1,6 @@
 # Windows
 
-Windows ist ein kommerzielles Betriebsystem, dass am Häufigsten verbreitet ist.
+Windows ist ein kommerzielles Betriebsystem, dass weit verbreitet ist.
 
 ## Links
 
@@ -8,6 +8,6 @@ Windows ist ein kommerzielles Betriebsystem, dass am Häufigsten verbreitet ist.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2612/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2615/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2612; parent 2275; 2008-03-08T13:26:40Z -->
+<!-- MediaWiki page 1558; revision 2615; parent 2612; 2008-03-08T13:54:11Z -->
