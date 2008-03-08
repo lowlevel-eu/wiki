@@ -1,6 +1,6 @@
 # Syscall
 
-**Syscalls** werden verwendet um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren.
+Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es unmöglich für das Programm bestimmte Aktionen wie [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") selbstständig auszuführen.
 
 ## Parameterübergabe
 
@@ -12,7 +12,7 @@ Anschließend [löst der Prozess einen Syscall aus](https://github.com/lowlevel-
 
 Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere x86 AMD Prozessoren die *syscall* Instruktion. Im Unterschied dazu unterstützen neuere Intel Prozessoren die *sysenter* Instruktion.
 
-Anschließend befindet sich der Prozessor im Kernelmodus (d.h. auf x86 Ring 0) und der Kernel übernimmt [die Behandlung des Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall#behandlung-des-syscalls "Syscall").
+Anschließend befindet sich der Prozessor im Kernelmodus und der Kernel übernimmt [die Behandlung des Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall#behandlung-des-syscalls "Syscall").
 
 ## Behandlung des Syscalls
 
@@ -20,6 +20,6 @@ Im Kernel wird dann ein Syscallhandler verwendet um die Funktion aufzulösen und
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 2617; parent 2587; 2008-03-08T14:40:29Z -->
+<!-- MediaWiki page 1629; revision 2618; parent 2617; 2008-03-08T14:44:27Z -->
