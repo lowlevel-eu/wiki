@@ -1,6 +1,10 @@
 # C\+\+
 
-Da C++ eine Weiterentwicklung von C ist, sollte man sich auch den Wikiartikel zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen. Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilffunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
+Da C++ eine Weiterentwicklung von C ist, sollte man sich auch den Wikiartikel zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
+
+# Kernelprogrammierung in C++
+
+    Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilffunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
 
 - Startup-Code
 - rein virtuelle Funktionen
@@ -126,6 +130,6 @@ int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2598; parent 2296; 2008-02-23T15:37:25Z -->
+<!-- MediaWiki page 1486; revision 2607; parent 2598; 2008-03-08T13:02:20Z -->
