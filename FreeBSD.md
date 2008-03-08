@@ -35,10 +35,10 @@ Da unter FreeBSD viele Anwendungen laufen, ist es eine gute Alternative zu komme
 
 ### Daten/Kontakt zum Projekt
 
-Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.freebsd.org. Die Seite ist in vielen Sprachen erhältlich und hat ein gutes Design, durch welches man sich recht schnell auf der Seite fortbewegen kann.
+Wer weitere Informationen über das Projekt benötigt, erhält diese auf <http://www.freebsd.org>. Die Seite ist in vielen Sprachen erhältlich und hat ein gutes Design, durch welches man sich recht schnell auf der Seite fortbewegen kann.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2611/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
 
-<!-- MediaWiki page 1455; revision 2315; parent 2295; 2007-11-27T21:38:13Z -->
+<!-- MediaWiki page 1455; revision 2611; parent 2315; 2008-03-08T13:24:38Z -->
