@@ -19,7 +19,7 @@ Im Moment sind die folgenden Features implementiert:
 
 ## Ziele
 
-Das Hauptziel ist es einen möglichst performanten [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit Unterstützung für [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- und evtl. auch [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen zu entwickeln. Außerdem soll die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") so gestaltet werden, dass Prozesse, welche auf verschiedenen Computer laufen, ohne zusätzlichen Aufwand miteinander kommunizieren können.
+Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit Unterstützung für [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- und evtl. auch [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen zu entwickeln. Außerdem soll die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") so gestaltet werden, dass Prozesse, welche auf verschiedenen Computer laufen, ohne zusätzlichen Aufwand miteinander kommunizieren können.
 
 # Links
 
@@ -29,6 +29,6 @@ Das Hauptziel ist es einen möglichst performanten [Mikrokernel](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2609/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 2311; parent 2043; 2007-11-27T20:36:48Z -->
+<!-- MediaWiki page 1454; revision 2609; parent 2311; 2008-03-08T13:05:20Z -->
