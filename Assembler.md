@@ -14,7 +14,7 @@ Beispielcode: \<asm\> mov al, 0x10 \</asm\>
 
 ### AT&T
 
-Diese Syntax wurde speziell für das schnelle Assemblieren entwickelt um ihn beim Kompilieren von Hochsprachenquellcode als Zwischenschritt zu verwenden.
+Diese Syntax wurde speziell für das schnelle Assemblieren entwickelt, um ihn beim Kompilieren von Hochsprachenquellcode als Zwischenschritt zu verwenden.
 
 Beispielcode: \<asm\> movb \$0x10, %al \</asm\>
 
@@ -32,6 +32,6 @@ YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](htt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2614/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 2606; parent 2605; 2008-03-03T07:43:30Z -->
+<!-- MediaWiki page 1514; revision 2614; parent 2606; 2008-03-08T13:31:33Z -->
