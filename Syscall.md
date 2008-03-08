@@ -18,8 +18,12 @@ Anschließend befindet sich der Prozessor im Kernelmodus und der Kernel übernim
 
 Im Kernel wird dann ein Syscallhandler verwendet um die Funktion aufzulösen und die Parameter zu übergeben. Diese Funktion führt dann die vom Programm gewünschte Aktion aus (falls das Programm die benötigten Rechte dazu hat). Anschließend kehrt die Funktion zurück zu dem Programm (und gibt möglicherweise einen oder mehrere Rückgabewerte über Prozessorregister oder Stack zurück. Alternativ dazu kann das Programm auch geblockt werden, falls beispielsweise die Anfrage nach Daten von der Festplatte nicht sofort (über Caches) beantwortet werden kann, oder das Programm wird terminiert.
 
+## siehe auch
+
+- [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 2618; parent 2617; 2008-03-08T14:44:27Z -->
+<!-- MediaWiki page 1629; revision 2619; parent 2618; 2008-03-08T14:45:25Z -->
