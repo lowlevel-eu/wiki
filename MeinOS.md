@@ -46,8 +46,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ## Download
 
-## Download
-
 - Unoffizielles Release vom 12.02.08 (Build 415):
   - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy_build415.img.gz) (335,4kB)
 - Unoffizielles Release vom 20.12.07:
@@ -64,6 +62,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2574; parent 2557; 2008-02-12T19:58:27Z -->
+<!-- MediaWiki page 1551; revision 2627; parent 2574; 2008-03-11T21:06:36Z -->
