@@ -130,7 +130,7 @@ void \*operator new\[\]( size_t size ) {
 
 }
 
-void operator delete( void \*ojb ) {
+void operator delete( void \*obj ) {
 
            kfree( obj );
 
@@ -163,6 +163,6 @@ void operator delete\[\]( void \*obj ) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2629/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2629; parent 2608; 2008-03-17T16:56:08Z -->
+<!-- MediaWiki page 1486; revision 2630; parent 2629; 2008-03-17T18:07:40Z -->
