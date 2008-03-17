@@ -109,6 +109,39 @@ int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
 
 # new/delete
 
+Um dynamisch Objekte mit new erstellen bzw. mit delete zerstören zu können muss man die vier Operatoren
+
+- new
+- new\[\]
+- delete
+- delete\[\]
+
+implementieren.
+
+Eine einfache Implementation ist z.B.: \<cpp\> void \*operator new( size_t size ) {
+
+           return kcalloc( size );
+
+}
+
+void \*operator new\[\]( size_t size ) {
+
+           return kcalloc( size );
+
+}
+
+void operator delete( void \*ojb ) {
+
+           kfree( obj );
+
+}
+
+void operator delete\[\]( void \*obj ) {
+
+           kfree( obj );
+
+} \</cpp\>
+
 # RTTI
 
 # Exceptions
@@ -130,6 +163,6 @@ int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2608/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2629/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2608; parent 2607; 2008-03-08T13:04:22Z -->
+<!-- MediaWiki page 1486; revision 2629; parent 2608; 2008-03-17T16:56:08Z -->
