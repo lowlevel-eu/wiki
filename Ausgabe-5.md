@@ -128,7 +128,7 @@ Gut, das waren auch schon die wichtigsten Komponenten des Headers. Nun noch etwa
 1.  Die **Adresse des Headers**, also der Offset von der Variable \`magic\`, welche die magische Zahl enthält.
 2.  **Offset des Code Segments** (auch bekannt als Text Segment).
 3.  **Offset des Endes des Data Segments** Diese Adresse minus der Adresse des Code Segments ergibt die Anzahl der insgesamt zu ladenden Bytes.
-4.  **Offset des Endes des BSS-Segments** Hab ich noch nie benutzt, daher auch keine genauere Erklärung.
+4.  **Offset des Endes des BSS-Segments** Hab ich noch nie benutzt, daher auch keine genauere Erklärung. *(Anmerkung von Blitzmaster: Das BSS Segment gibt einen Bereich an, der von GRUB mit 0 initialisiert wird und nicht für Boot-Module oder Boot-Informationen Strukturen verwendet wird. Das BSS Segment kann dem Kernel für noch nicht initialisierte Daten dienen, also einfach ein Reservierter Bereich nach dem eigentlichen Kernel wo er seine eigenen Daten/Strukturen ablegen darf)*
 5.  **Entry Point** Die Adresse, an die der Loader nach dem Laden springen soll. Bei einem C-Kernel (was ja bei uns der Fall ist), wäre das die Adresse von main(). (Anmerkung: Da der Loader zu der gegebenen Adresse springt, egal, ob es die von main() ist, oder nicht, können wir auch eine andere Funktion als Startroutine wählen bzw. main() einen beliebigen Namen geben. Na ja, wollte ich nur mal anmerken.)
 
 Und weiter. Die folgenden Optionen werden nur berücksichtigt, wenn Flag zwei (2) gesetzt wurde. Sie geben dem Loader auskunft darüber, welcher Grafik-Modus erwünscht ist. Leider hat es bei mir noch nie geklappt; ich schreibe die Felder trotzdem dazu, vielleicht hat jemand anders mehr Glück.
@@ -360,6 +360,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1862/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2631/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 1862; parent 1717; 2007-03-10T15:09:37Z -->
+<!-- MediaWiki page 1470; revision 2631; parent 1862; 2008-03-19T12:38:23Z -->
