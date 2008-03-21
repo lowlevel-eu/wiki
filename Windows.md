@@ -1,6 +1,6 @@
 # Windows
 
-Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt.
+Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt.
 
 ## OS-Dev unter Windows
 
@@ -9,6 +9,8 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 //TODO
 
 ### Contra
+
+- gcc ist nicht sofort enthalten. Es muss extra gedownloaded werden.
 
 //TODO
 
@@ -22,6 +24,6 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2624; parent 2623; 2008-03-10T16:22:31Z -->
+<!-- MediaWiki page 1558; revision 2633; parent 2624; 2008-03-21T19:00:08Z -->
