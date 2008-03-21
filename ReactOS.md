@@ -1,8 +1,10 @@
 # ReactOS
 
+ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT-Klon im Alphastadium.
+
 ## Über ReactOS
 
-Bei ReactOS handelt es sich um einen freien Windows NT-Clone. Das Ziel ist es ein komplett eigenes Betriebssystem zu schreiben, das aber kompatibel zu Windows ist. Dies soll es ermöglichen Windows-kompatible Treiber und Software unverändert unter ReactOS zu verwenden.
+Das Ziel ist es ein komplett eigenes Betriebssystem zu schreiben, das aber kompatibel zu Windows ist. Dies soll es ermöglichen Windows-kompatible Treiber und Software unverändert unter ReactOS zu verwenden.
 
 Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Projekt. Andersrum verwendet das Captive-Projekt Teile des ReactOS Source Codes.
 
@@ -25,6 +27,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1590/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 1590; parent 1476; 2007-01-06T16:34:16Z -->
+<!-- MediaWiki page 1421; revision 2635; parent 1590; 2008-03-21T19:10:17Z -->
