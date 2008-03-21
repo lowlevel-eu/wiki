@@ -67,7 +67,7 @@ Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2.
 
 ## Cursor
 
-Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindestens wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der von BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jeden seine eigene Entscheidung.
+Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindestens wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der von BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem selbst überlassen.
 
 Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden)
 
@@ -105,6 +105,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2575/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2575; parent 2371; 2008-02-15T08:40:43Z -->
+<!-- MediaWiki page 1549; revision 2632; parent 2575; 2008-03-21T17:39:13Z -->
