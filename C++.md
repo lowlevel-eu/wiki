@@ -163,6 +163,6 @@ void operator delete\[\]( void \*obj ) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2630; parent 2629; 2008-03-17T18:07:40Z -->
+<!-- MediaWiki page 1486; revision 2686; parent 2630; 2008-03-22T16:32:34Z -->
