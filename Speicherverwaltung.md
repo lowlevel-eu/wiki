@@ -88,6 +88,6 @@ Man kann auch eine der freien malloc()/free() Implementationen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2730/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 2662; parent 2590; 2008-03-22T13:04:23Z -->
+<!-- MediaWiki page 1591; revision 2730; parent 2662; 2008-03-22T17:14:12Z -->
