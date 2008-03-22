@@ -1,6 +1,6 @@
 # Graphical User Interface
 
-Ein GUI (Graphical User Interface) ist eine grafische Oberfläche, die zumeist mit der Maus bedienbar ist. Ein Windowsdesktop ist ein typisches Beispiel für eine grafische Oberfläche. Linux z.B. bietet zwar grafische Oberflächen an, das Grundsystem ist jedoch eine Kommandozeile, und ein GUI ist nur optional (aber für viele Nutzer unentbehrlich).
+Ein GUI (**G**raphical **U**ser **I**nterface) ist eine grafische Oberfläche, die zumeist mit der Maus bedienbar ist. Ein [Windowsdesktop](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") ist ein typisches Beispiel für eine grafische Oberfläche. Linux z.B. bietet zwar grafische Oberflächen an, das Grundsystem ist jedoch eine Kommandozeile, und ein GUI ist nur optional (aber für viele Nutzer unentbehrlich).
 
 ## Vorteile eines GUI
 
@@ -16,6 +16,6 @@ Ein GUI (Graphical User Interface) ist eine grafische Oberfläche, die zumeist m
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2645; parent 2130; 2008-03-22T10:56:50Z -->
+<!-- MediaWiki page 1511; revision 2646; parent 2645; 2008-03-22T10:58:03Z -->
