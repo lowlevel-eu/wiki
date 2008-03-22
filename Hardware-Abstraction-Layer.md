@@ -12,8 +12,12 @@ Die HAL beinhaltet somit folgende Aufgaben:
 - [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")
 - ...
 
+## Exokernel
+
+Eine besondere Rolle hat der Exokernel. Dieser hat normalerweiße kein HAL.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 2653; parent 2651; 2008-03-22T11:05:45Z -->
+<!-- MediaWiki page 1480; revision 2655; parent 2653; 2008-03-22T11:07:05Z -->
