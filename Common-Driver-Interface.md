@@ -18,6 +18,6 @@ Ein Link zur Dokumentation der Funktionsprototypen, Strukturen, Enumerationen, u
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 2582; parent 2572; 2008-02-17T16:59:55Z -->
+<!-- MediaWiki page 1622; revision 2688; parent 2582; 2008-03-22T16:33:55Z -->
