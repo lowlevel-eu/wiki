@@ -24,6 +24,6 @@ Min: 1193180 Hz / 65536 = ~18.206 Hz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 2470; parent 2433; 2007-12-21T17:51:12Z -->
+<!-- MediaWiki page 1432; revision 2737; parent 2470; 2008-03-22T17:20:36Z -->
