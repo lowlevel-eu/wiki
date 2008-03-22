@@ -13,6 +13,6 @@ Rot: Nicht eindeutig konvertierbare Zeichen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1588/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1588/index.html)
 
-<!-- MediaWiki page 1588; revision 2691; parent 2370; 2008-03-22T16:35:15Z -->
+<!-- MediaWiki page 1588; revision 2756; parent 2691; 2008-03-22T17:51:56Z -->
