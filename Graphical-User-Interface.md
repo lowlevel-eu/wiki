@@ -11,11 +11,11 @@ Ein GUI (Graphical User Interface) ist eine grafische Oberfläche, die zumeist m
 ## Vorteile einer Kommandozeile
 
 - Man hat mehr Kontrolle über das System. Im File Explorer von Windows kann man Rechtsklick\>Löschen auswählen. Eine genauere Spezifizierung der Anweisung, zum Beispiel, ob rekursiv alle Unterordner mit gelöscht werden sollen, oder nicht, ist nicht möglich. In der Kommandozeile können an einen Befehl aber problemlos beliebige Parameter angehängt werden, und damit die gewünschte Wirkung genauer angegeben werden
-- Eine Kommandozeilendarstellung verbraucht viel weniger Ressourcen. Gerade auf langsamen Rechnern empfiehlt sich daher eine Kommandozeile, um dafür mehr Ressourcen für die eigentlichen Programme zu haben. Auch auf Servern ist ein GUI reine Ressourcenverschwendung, da man an diesen nicht wie an gewöhnlichen Arbeitscomputern arbeitet, sondern sie fast nur zur Programmausführung verwendet, und man sich damit den Luxus eines GUIs zugunsten der Performance sparen sollte
+- Eine Kommandozeilendarstellung verbraucht viel weniger Ressourcen. Auf Servern ist ein GUI reine Ressourcenverschwendung, da man an diesen nicht wie an gewöhnlichen Arbeitscomputern arbeitet, sondern sie fast nur zur Programmausführung verwendet, und man sich damit den Luxus eines GUIs zugunsten der Performance sparen sollte
 - Ein GUI ist für Programmieranfänger im OS-Entwicklungsbereich viel anspruchsvoller (Grafiktreiber bzw. Nutzung von [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA")/[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA") oder Ähnlichem, Anzeigen aller Fenster in der richtigen Ordnung, Zugriff auf die Maus, etc.), und es empfiehlt sich für das Erstprojekt ein System, das erst einmal nur eine Kommandozeile bietet
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2130/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2130; parent 1910; 2007-10-03T09:13:29Z -->
+<!-- MediaWiki page 1511; revision 2645; parent 2130; 2008-03-22T10:56:50Z -->
