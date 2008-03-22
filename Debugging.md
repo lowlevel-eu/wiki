@@ -28,6 +28,6 @@ Sobald man die Adresse hat, muss man daraus irgendwie auf die Codestelle schlie�
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 2455; parent 2363; 2007-12-20T21:55:40Z -->
+<!-- MediaWiki page 1544; revision 2695; parent 2455; 2008-03-22T16:38:25Z -->
