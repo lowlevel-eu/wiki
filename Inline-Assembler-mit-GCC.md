@@ -135,6 +135,6 @@ Senden einer IPC-Nachricht in LOST:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 2037; parent 1981; 2007-06-25T21:27:54Z -->
+<!-- MediaWiki page 1472; revision 2714; parent 2037; 2008-03-22T16:51:32Z -->
