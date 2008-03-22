@@ -55,6 +55,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Es wird in etwa die 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2745/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2663; parent 2563; 2008-03-22T14:08:15Z -->
+<!-- MediaWiki page 1448; revision 2745; parent 2663; 2008-03-22T17:30:02Z -->
