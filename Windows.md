@@ -24,6 +24,6 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2633; parent 2624; 2008-03-21T19:00:08Z -->
+<!-- MediaWiki page 1558; revision 2750; parent 2633; 2008-03-22T17:34:08Z -->
