@@ -59,6 +59,6 @@ sti \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2713/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 2073; parent 2072; 2007-07-23T15:09:34Z -->
+<!-- MediaWiki page 1540; revision 2713; parent 2073; 2008-03-22T16:51:08Z -->
