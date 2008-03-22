@@ -21,6 +21,6 @@ Im Grafikmodus werden die Werte der einzelnen Pixel direkt verändert. Ein Modus
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 2515; parent 2434; 2007-12-28T07:32:13Z -->
+<!-- MediaWiki page 1516; revision 2748; parent 2515; 2008-03-22T17:33:14Z -->
