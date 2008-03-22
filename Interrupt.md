@@ -4,7 +4,7 @@ Ein Interrupt ist eine Unterbrechung der CPU. Er kann durch eine [Exception](htt
 
 Wenn ein Interrupt ausgelöst wird, werden *eip*,*cs* und *eip* auf dem Stack gesichert.
 
-![int_stack.png](http://lowlevel.brainsware.org/wiki/images/int_stack.png)
+![int_stack.png](http://wonsheimlan.wo.funpic.de/int_stack.png)
 
 Aus einem Interrupt wird zurückgekehrt mit der Instruktion *iret*
 
@@ -19,6 +19,6 @@ Interrupts können mithilfe von *sti* und *cli* eingeschaltet bzw. ausgeschaltet
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 2715; parent 2418; 2008-03-22T16:52:12Z -->
+<!-- MediaWiki page 1596; revision 2764; parent 2715; 2008-03-22T18:01:15Z -->
