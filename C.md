@@ -9,9 +9,10 @@ Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Pr
 # Links
 
 - [Draft des C Standards](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1124.pdf)
+- [Tutorial](http://www.c-howto.de/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 2616; parent 2610; 2008-03-08T14:14:04Z -->
+<!-- MediaWiki page 1526; revision 2658; parent 2616; 2008-03-22T11:35:05Z -->
