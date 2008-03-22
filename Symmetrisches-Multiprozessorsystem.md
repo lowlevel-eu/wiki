@@ -58,6 +58,6 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2743/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 2512; parent 2353; 2007-12-27T18:57:49Z -->
+<!-- MediaWiki page 1490; revision 2743; parent 2512; 2008-03-22T17:26:36Z -->
