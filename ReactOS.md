@@ -12,7 +12,7 @@ ReactOS steht unter der GNU GPL, ist also Open Source.
 
 ## Kompatibilität
 
-Da sich ReactOS noch in einer relativ frühen Version befindet, ist eine 100%ige Kompatibilität natürlich nicht gewährleistet. Dennoch laufen bereit etliche Anwendungen unter ReactOS, darunter OpenOffice, MS Office, Firefox, Photoshop, das Visual Studio, einige OpenGL Spiele, usw.
+Da sich ReactOS noch in einer relativ frühen Version befindet, ist eine 100%ige Kompatibilität natürlich nicht gewährleistet. Dennoch laufen bereits etliche Anwendungen unter ReactOS, darunter OpenOffice, MS Office, Firefox, Photoshop, das Visual Studio, einige OpenGL Spiele, usw.
 
 ## Audit
 
@@ -27,6 +27,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2636/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 2635; parent 1590; 2008-03-21T19:10:17Z -->
+<!-- MediaWiki page 1421; revision 2636; parent 2635; 2008-03-22T09:40:14Z -->
