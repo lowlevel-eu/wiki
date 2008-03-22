@@ -98,6 +98,6 @@ Momentan nicht verfügbar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 2536; parent 2322; 2008-01-04T17:50:27Z -->
+<!-- MediaWiki page 1463; revision 2712; parent 2536; 2008-03-22T16:50:41Z -->
