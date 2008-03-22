@@ -38,14 +38,16 @@ Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor alle
 
 ## Links
 
-- [General Public License](http://de.wikipedia.org/wiki/GNU_General_Public_License)
-- [Lesser General Public License](http://de.wikipedia.org/wiki/GNU_Lesser_General_Public_License)
-- [BSD-Lizenz](http://de.wikipedia.org/wiki/BSD_Lizenz)
-- [Zlib-Lizenz](http://de.wikipedia.org/wiki/ZLib_License)
-- [GPL Linking Exception](http://en.wikipedia.org/wiki/GPL_linking_exception)
+- [Text der GPL Version 3](http://www.gnu.org/licenses/gpl-3.0.html) (englisch)
+- [inoffizielle deutsche Übersetzung der GPL](http://www.gnu.de/gpl-ger.html)
+- [Wikipediaartikel von der General Public License](http://de.wikipedia.org/wiki/GNU_General_Public_License)
+- [Wikipediaartikel von der Lesser General Public License](http://de.wikipedia.org/wiki/GNU_Lesser_General_Public_License)
+- [Wikipediaartikel von der BSD-Lizenz](http://de.wikipedia.org/wiki/BSD_Lizenz)
+- [Wikipediaartikel von der Zlib-Lizenz](http://de.wikipedia.org/wiki/ZLib_License)
+- [Wikipediaartikel von der GPL Linking Exception](http://en.wikipedia.org/wiki/GPL_linking_exception)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2637/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 2189; parent 2184; 2007-10-19T15:56:11Z -->
+<!-- MediaWiki page 1552; revision 2637; parent 2189; 2008-03-22T10:33:10Z -->
