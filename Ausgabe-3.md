@@ -343,6 +343,6 @@ Nun die Frage an euch: sollen wir weiterhin mit Assembler programmieren - eben L
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2671/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
 
-<!-- MediaWiki page 1419; revision 2318; parent 1861; 2007-11-27T21:48:45Z -->
+<!-- MediaWiki page 1419; revision 2671; parent 2318; 2008-03-22T16:11:37Z -->
