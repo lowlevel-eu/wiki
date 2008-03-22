@@ -769,6 +769,6 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 2292; parent 1948; 2007-11-26T18:23:29Z -->
+<!-- MediaWiki page 1521; revision 2676; parent 2292; 2008-03-22T16:12:20Z -->
