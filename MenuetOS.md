@@ -29,6 +29,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2613/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 2613; parent 2341; 2008-03-08T13:30:46Z -->
+<!-- MediaWiki page 1481; revision 2731; parent 2613; 2008-03-22T17:14:53Z -->
