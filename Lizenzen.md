@@ -50,6 +50,6 @@ Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor alle
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2703/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 2659; parent 2637; 2008-03-22T11:58:13Z -->
+<!-- MediaWiki page 1552; revision 2703; parent 2659; 2008-03-22T16:45:28Z -->
