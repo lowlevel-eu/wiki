@@ -25,6 +25,6 @@ Zu beachten ist, dass bei einer Änderung des Page-Directory oder einer Page-Tab
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2564/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2564; parent 2171; 2008-02-09T08:44:42Z -->
+<!-- MediaWiki page 1496; revision 2739; parent 2564; 2008-03-22T17:21:33Z -->
