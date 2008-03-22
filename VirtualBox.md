@@ -11,6 +11,6 @@ VirtualBox verfügt über eine grafische Benutzeroberfläche. Was die Software i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2188/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 2188; parent 2187; 2007-10-19T09:57:14Z -->
+<!-- MediaWiki page 1553; revision 2749; parent 2188; 2008-03-22T17:33:52Z -->
