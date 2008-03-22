@@ -2,7 +2,9 @@
 
 Wenn man sein Betriebssystem veröffentlicht, sollte man sich auch Gedanken über die Lizenz machen. Vor allen Dingen, auch dann, wenn man fremden Code benutzt. Hier werden ein paar OpenSource-Lizenzen vorgestellt.
 
-## General Public License
+## Open Source Lizenzen
+
+### General Public License
 
 Die vier Hauptpunkte der General Public License sind:
 
@@ -16,11 +18,11 @@ Die vier Hauptpunkte der General Public License sind:
 
 Manche Libraries (z.B. libgcc) besitzen in ihrer Lizenz einen Zusatz, der das Linken der Library mit Programmen, egal, unter welcher Lizenz diese stehen, erlaubt (Auch GPL Runtime Exception genannt).
 
-## LGPL
+### LGPL
 
 Die Lesser General Public License besagt, dass ein Programm genau so verbreitet werden darf wie unter der GPL, mit Ausnahme, dass Programme, welche das LGPL-Programm extern benutzen (z.B in Form einer Bibliothek) unter ihrer eigenen Lizenz veröffentlicht werden dürfen. Wenn aber LGPL-Code in ein Programm eingefügt wird, muss dieses unter der LGPL veröffentlicht werden.
 
-## BSD-Lizenz
+### BSD-Lizenz
 
 Die BSD-Lizenz erlaubt die freie Benutzung, Veränderung und Weiterverbeitung eines Programms. Sie ähnelt hierin der GPL. Allerdings ist der Entwickler der Software nicht verpflichtet den Quellcode mitzuveröffentlichen. Außerdem darf der Copyright eines unter die BSD-Lizenz gestellten Programmes nicht entfernt werden.
 
@@ -28,7 +30,7 @@ Die BSD-Lizenz erlaubt die freie Benutzung, Veränderung und Weiterverbeitung ei
 
 Der dritte Absatz der BSD-Lizenz besagt, dass beim Bewerben eines Programms der Name des ursprünglichen Autors genannt werden muss (Mit dieser Klausel ist die Lizenz nicht mehr GPL-kompatibel!).
 
-## Zlib/Libpng-Lizenz
+### Zlib/Libpng-Lizenz
 
 Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor allem folgende Bestimmungen setzt:
 
@@ -48,6 +50,6 @@ Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor alle
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2637/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 2637; parent 2189; 2008-03-22T10:33:10Z -->
+<!-- MediaWiki page 1552; revision 2659; parent 2637; 2008-03-22T11:58:13Z -->
