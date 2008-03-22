@@ -1,6 +1,8 @@
 # ReactOS
 
-ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT-Klon im Alphastadium. ReactOS-Logo
+ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT-Klon im Alphastadium.
+
+Datei:Http://www.reactos.org/media/pictures/2005/logo final 01.png ReactOS-Logo
 
 ## Über ReactOS
 
@@ -27,6 +29,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 2641; parent 2636; 2008-03-22T10:50:49Z -->
+<!-- MediaWiki page 1421; revision 2642; parent 2641; 2008-03-22T10:51:37Z -->
