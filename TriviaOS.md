@@ -4,7 +4,7 @@ TriviaOS ist ein kleines Einmann-Hobby OS und wird von [Nooooooooos](https://low
 
 ## Äusseres Erscheinen
 
-TriviaOS arbeitet nur mit einer GUI, die allerdings nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche sich nicht überlappen können, jedoch in ihrer Grösse sehr flexibel sind. Das wird nicht nur die Bedinung sondern auch die Programmierung vereinfachen.
+TriviaOS arbeitet nur mit einer GUI, die allerdings nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche sich nicht überlappen können, jedoch in ihrer Grösse sehr flexibel sind. Das wird nicht nur die Bedienung sondern auch die Programmierung vereinfachen.
 
 Auch ist geplant, dass alle Daten eines Benutzers zusätzlich zur Festplatte auch im Internet gespeichert werden. Das hat den Vorteil, dass man sich von überallher mit seinem Account einloggen kann und sofort mit seinen Daten arbeiten kann. So kann man auch Dateien ganz einfach unter verschiedenen Usern teilen. Man muss sich dann auch vor Datencrashs weniger Sorgen machen und sich nicht um Backups kümmern. Von der Geschwindigkeit her ist das sicher waghalsig - Jedoch bis das System so weit ist, sind hoffentlich auch die Internet-Verbindungen schnell genug geworden.
 
@@ -55,6 +55,6 @@ Frühstens im Sommer wird dann das nächste Release kommen. Es wird in etwa die 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 2563; parent 2562; 2008-02-08T17:18:21Z -->
+<!-- MediaWiki page 1448; revision 2663; parent 2563; 2008-03-22T14:08:15Z -->
