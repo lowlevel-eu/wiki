@@ -8,6 +8,6 @@ Der POST (**P**ower **O**n **S**elf-**T**est) ist ein Selbsttest der nach dem ei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1598/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2738/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1598/index.html)
 
-<!-- MediaWiki page 1598; revision 2423; parent 0; 2007-12-16T17:53:33Z -->
+<!-- MediaWiki page 1598; revision 2738; parent 2423; 2008-03-22T17:20:59Z -->
