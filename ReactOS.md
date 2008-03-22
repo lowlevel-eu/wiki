@@ -29,6 +29,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 2644; parent 2643; 2008-03-22T10:52:11Z -->
+<!-- MediaWiki page 1421; revision 2742; parent 2644; 2008-03-22T17:25:14Z -->
