@@ -40,6 +40,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 2528; parent 2527; 2008-01-02T02:59:02Z -->
+<!-- MediaWiki page 1465; revision 2736; parent 2528; 2008-03-22T17:20:17Z -->
