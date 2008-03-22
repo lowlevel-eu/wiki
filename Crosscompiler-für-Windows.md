@@ -55,6 +55,6 @@ Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.1
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 2014; parent 2013; 2007-06-04T23:59:17Z -->
+<!-- MediaWiki page 1450; revision 2692; parent 2014; 2008-03-22T16:36:31Z -->
