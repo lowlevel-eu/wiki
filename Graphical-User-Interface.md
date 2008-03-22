@@ -20,6 +20,6 @@ Eine GUI ist es empfelenswert, erst nach den [Kernel](https://github.com/lowleve
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2647/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2647; parent 2646; 2008-03-22T11:00:03Z -->
+<!-- MediaWiki page 1511; revision 2656; parent 2647; 2008-03-22T11:08:45Z -->
