@@ -8,6 +8,6 @@ Wenn meistens von Linux gesprochen wird, dann meint die Distrubiton von Linux. E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 2791; parent 0; 2008-03-23T14:10:55Z -->
+<!-- MediaWiki page 1641; revision 2792; parent 2791; 2008-03-23T14:11:12Z -->
