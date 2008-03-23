@@ -1,6 +1,6 @@
 # LightOS
 
-lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel.
+lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. Das Projekt wurde zugunsten von [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree") eingestellt.
 
 ## Entwickler
 
@@ -13,9 +13,24 @@ Im Moment sind die folgenden Features implementiert:
 - Microkernel
 - x86 und x86-64
 - Multitasking/-threading
+- Shared libraries
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Messages, Shared-Memory
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-kompatibles System wird erkannt und alle Prozessoren gestartet
+- Netzwerkkartentreiber:
+  - [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
+  - [Realtek RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")
+- TCP/IP Stack: Ethernet, ARP, IP (teilweise), UDP, DNS, DHCP
 - kleine Shell
+- Portierte Anwendungen:
+  - yasm 0.6.1
+  - nano 2.0.6
+  - nasm 0.99.02
+  - binutils 2.18
+- Portierte Bibliotheken:
+  - zlib 1.2.3
+  - libbzip2 1.0.4
+  - freetype 2.3.5
+  - libpng 1.2.20
 
 ## Ziele
 
@@ -29,6 +44,6 @@ Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](https://github
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2723/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2788/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 2723; parent 2609; 2008-03-22T17:08:06Z -->
+<!-- MediaWiki page 1454; revision 2788; parent 2723; 2008-03-23T11:12:54Z -->
