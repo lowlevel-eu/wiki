@@ -33,7 +33,7 @@ Die Register der *Local APIC* sind in den physischen Speicher eingeblendet. Jede
 | 0x0360 | r/w | 32 |  | LVT LINT1 Register |
 | 0x0370 | r/w | 32 |  | LVT Error Register |
 | 0x0380 | r/w | 32 |  | Initial Count Register |
-| 0x0390 | r | 32 |  | Current Count Register |
+| 0x0390 | r/w | 32 |  | Current Count Register |
 | 0x03E0 | r/w | 32 |  | Divide Configuration Register |
 
   
@@ -152,74 +152,55 @@ Der Timer des LAPIC läuft jedoch nicht auf allen Systemen mit der selben Freque
 
 #### Codebeispiel:
 
-Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> ;EBP nullen, damit nachher in PIT-ISR erkenbar, wie oft der Timer-Interrupt aufgerufen wurde xor ebp,ebp
+Dieser Code gehört in den anderen Init-Code für den APIC / Symmetric Mode. Er stellt den PIT auf den gewünschten Wert für den APIC Timer ein (hier 10ms), lässt die ISR des PITs den nötigen Wert für den Initial Count Value des APIC Timers berechnen und stellt diesen dann zugleich ein. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\> xor ebp,ebp ;EBP nullen, damit nachher in PIT-ISR erkenbar, wie oft der Timer-Interrupt aufgerufen wurde
 
-;den PIT auf den gewünschten Wert (hier 10ms) einstellen mov al,00110110b out 43h,al
+mov al,00110110b ;den PIT auf den gewünschten Wert (hier 10ms) einstellen out 43h,al
 
 mov ax,11931 out 40h,al mov al,ah out 40h,al
 
-;IRQs freigeben sti
+sti ;IRQs freigeben timerschleife: ;Solange Warten, bis das Einschalten und Messen des APIC Timers sicher fertig ist cmp ebp,0x3 ;Die Zählvariable hat dann den Wert 3 jne timerschleife cli
 
-Solange Warten, bis das Einschalten und Messen des APIC Timers sicher fertig ist
+mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden mov ecx,DWORD\[apiczähler\] ;Den Gemessenen Wert für den Initial Count des APIC Timers nach ECX laden
 
-timerschleife:
+mov ebp,\[eax+0x3e0\] ;Alle Register des APIC Timers neu schreiben, um den neuen Initial Count einzustellen mov DWORD\[eax+0x3e0\],0xb
 
-;Die Zählvariable hat dann den Wert 3 cmp ebp,0x3 jne timerschleife cli
+mov ebp,\[eax+0x320\] ;Zuerst irgendein Register lesen, wegen Bug in manchem APICS mov DWORD\[eax+0x320\],0x20031
 
-;Den zuvor ermittelten Platz der APIC Register laden mov eax,\[apicregs\]
-
-;Den Gemessenen Wert für den Initial Count des APIC Timers nach ECX laden mov ecx,DWORD\[apiczähler\]
-
-;Alle Register des APIC Timers neu schreiben, um den neuen Initial Count einzustellen mov ebp,\[eax+0x3e0\] mov DWORD\[eax+0x3e0\],0xb
-
-;Zuerst irgendein Register lesen, wegen Bug in manchem APICs mov ebp,\[eax+0x320\] mov DWORD\[eax+0x320\],0x20031
-
-;Nach Lesen eines Wertes, den neuen Wert des Zählers aus ECX ins Initial Count Register schreiben mov ebp,\[eax+0x380\] mov \[eax+0x380\],ecx\</asm\>
+mov ebp,\[eax+0x380\] ;Nach Lesen eines Wertes, den neuen Wert des Zählers aus ECX ins Initial Count Register schreiben mov \[eax+0x380\],ecx\</asm\>
 
   
-Dieser Code muss als ISR des PITs eingetragen sein. Er kümmert sich zuerst um das Starten des APIC Timers und in einem zweiten Durchgang das Ablesen des heruntergezählten Wertes im Current Count Register. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\>APICkalibrieren:
-
-;Variable um zwischen Einschalten und Messen (des Current Count) des APIC Timers zu unterscheiden inc ebp
-
-;Den zuvor ermittelten Platz der APIC Register laden mov eax,\[apicregs\]
+Dieser Code muss als ISR des PITs eingetragen sein. Er kümmert sich zuerst um das Starten des APIC Timers und in einem zweiten Durchgang das Ablesen des heruntergezählten Wertes im Current Count Register. Er setzt voraus, dass in der Variable \[apicregs\] die Adresse der APIC Register gespeichert ist. \<asm\>APICkalibrieren: inc ebp ;Variable um zwischen Einschalten und Messen (des Current Count) des APIC Timers zu unterscheiden mov eax,\[apicregs\] ;Den zuvor ermittelten Platz der APIC Register laden
 
 cmp ebp,0x1 jne ApicSchonGestartet
 
   
-;Zuerst irgendein Wert auslesen, dannach Divide Configuration Register auf Divide Value = 1 setzen mov edx,\[eax+0x3e0\] mov DWORD\[eax+0x3e0\],0xb
+mov edx,\[eax+0x3e0\] ;Zuerst irgendein Wert auslesen, dannach Divide Configuration Register auf Divide Value = 1 setzen mov DWORD\[eax+0x3e0\],0xb
 
-;Zuerst Wert auslesen, dannach LVT-Timer Register setzen (periodischer Timer auf Vektor 31) mov edx,\[eax+0x320\] mov DWORD\[eax+0x320\],0x20031
+mov edx,\[eax+0x320\] ;Zuerst Wert auslesen, dannach LVT-Timer Register setzen (peridischer Timer auf Vektor 31) mov DWORD\[eax+0x320\],0x20031
 
-;Initial Count Register auf das Maximum setzen --\> möglichst viel Werte zum Kalibrieren möglich mov edx,\[eax+0x380\] mov DWORD\[eax+0x380\],0xFFFFFFFF
+mov edx,\[eax+0x380\] ;Initial Count Register auf das Maximum setzen --\> möglichst viel Werte zum Kalibrieren möglich mov DWORD\[eax+0x380\],0xFFFFFFFF
 
 jmp schlussKalib
 
   
-ApicSchonGestartet:
+ApicSchonGestartet: cmp ebp,0x3 ;Wenn der Timer schon zum 3. Mal ausgelöst, muss nichts mehr getan werden je schlussKalib
 
-;Wenn der Timer schon zum 3. Mal ausgelöst, muss nichts mehr getan werden cmp ebp,0x3 je schlussKalib
+;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen mov ecx,0xFFFFFFFF ;Unterschied des Current Count in der Zeit des PITs ausrechnen sub ecx,\[eax+0x390\] mov DWORD\[apiczähler\],ecx
 
-;Wenn Timer schon gestartet wurde, dann wird jetzt das Current Count Register gemessen ;Unterschied des Current Count in der Zeit des PITs ausrechnen mov ecx,0xFFFFFFFF sub ecx,\[eax+0x390\] mov DWORD\[apiczähler\],ecx
-
-schlussKalib:
-
-;EOI senden an den PIC, da dieser verwendet wurde zum Kalibrieren mov al,20h
+schlussKalib: mov al,20h ;EOI senden an den PIC, da dieser verwendet wurde zum Kalibrieren
 
              out 20h,al
 
 iret\</asm\>
 
-## Siehe auch
-
-- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
-
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 8)
 - [AMD64 Architecture Programmer's Manual Volume 2: System Programming](http://www.amd.com/us-en/Processors/DevelopWithAMD/0,,30_2252_739_7044,00.html) (Kapitel 16)
+- [Advanced Programmable Interrupt Controller](http://osdev.berlios.de/pic.html) (Tutorial von Mike Rieker)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 2720; parent 2530; 2008-03-22T16:56:00Z -->
+<!-- MediaWiki page 1581; revision 2780; parent 2720; 2008-03-23T01:19:43Z -->
