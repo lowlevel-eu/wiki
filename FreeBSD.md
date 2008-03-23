@@ -39,6 +39,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf <http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2778/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
 
-<!-- MediaWiki page 1455; revision 2701; parent 2611; 2008-03-22T16:44:54Z -->
+<!-- MediaWiki page 1455; revision 2778; parent 2701; 2008-03-23T01:17:15Z -->
