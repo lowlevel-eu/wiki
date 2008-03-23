@@ -4,10 +4,10 @@ Linux ist ein freies Betriebsystem und steht in Konkurenz zu [Windows](https://g
 
 ## Bezeichnung von Linux
 
-Wenn meistens von Linux gesprochen wird, dann meint die Distrubiton von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel").
+Wenn meistens von Linux gesprochen wird, dann meint man eine Distrubiton von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel").
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 2792; parent 2791; 2008-03-23T14:11:12Z -->
+<!-- MediaWiki page 1641; revision 2793; parent 2792; 2008-03-23T17:25:01Z -->
