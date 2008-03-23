@@ -56,6 +56,6 @@ gdt_end\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2747; parent 2097; 2008-03-22T17:33:03Z -->
+<!-- MediaWiki page 1537; revision 2782; parent 2747; 2008-03-23T01:21:51Z -->
