@@ -3,7 +3,7 @@
 | Linux |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Linus Torvalds und andere |
+| Entwickler: | Linus Torvalds et al. |
 | Akt. Version: | 2.6.24 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
@@ -12,7 +12,7 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | *Kein Mikrokernel* |
 | Homepage |  |
 
 <http://www.kernel.org>
@@ -26,6 +26,6 @@ Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 2803; parent 2799; 2008-03-24T20:47:25Z -->
+<!-- MediaWiki page 1641; revision 2806; parent 2803; 2008-03-24T21:02:27Z -->
