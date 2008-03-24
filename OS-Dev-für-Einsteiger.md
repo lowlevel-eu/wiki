@@ -39,7 +39,7 @@ Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem 
 
 Dann brauchst du Editor und Compiler. Als Editor hast du sicher schon Deinen eigenen Favoriten (nämlich vim) und auch beim Compiler ist die Sache relativ klar: Wenn du C nimmst, wird der Compiler im Allgemeinen gcc sein und unter Linux ist damit alles geklärt. Wenn du gcc unter Windows benutzt, solltest du dir überlegen, ob du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach. (Oder natürlich einfach ein Linux)
 
-- [Crosscompiler_für_Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+- [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 
 Schließlich brauchst Du auch noch eine Möglichkeit, Dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm qemu oder bochs - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
 
@@ -79,14 +79,28 @@ Oh, Du hast keine Ahnung, was Du Dir unter Deskriptortabellen vorzustellen hast?
 - [Umschalten in Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode")
 - [Protected-Mode-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm)
 
-Was Du zunächst machen musst, ist, eine GDT im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut - das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
+Was Du zunächst machen musst, ist, eine [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut - das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
 
 Wenn Du die GDT aufgebaut hast, kannst Du sie anschließend laden. Das ist einer der wenigen Fälle, wo Du tatsächlich Assembler brauchst. Wenn Du C benutzt, könnte dir der Artikel über [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") helfen. Ansonsten schlag in der Dokumentation deines Compilers nach, wie es dort funktioniert.
 
 Anschließend musst du die Segmentregister neu laden, damit die GDT auch benutzt wird. An dieser Stelle zeigt sich dann, ob Du es richtig gemacht hast. Wenn die Einträge in deiner GDT falsch sind, und beispielsweise das Codesegment nicht korrekt ist, wirst du mit höchster Wahrscheinlichkeit einen GPF auslösen. GPF steht übrigens für *General Protection Fault* und ist Dir vielleicht als *Allgemeine Schutzverletzung* besser bekannt. Weil Du noch keine [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") verarbeitest, wird das zu einem *Triple Fault* führen, was auf einem echten PC einen Reset bewirkt, qemu wird sich mit einer Fehlermeldung beenden.
 
+### Interrupts
+
+Hast Du die GDT gemeistert? Glückwunsch. Aber freu Dich nicht zu früh, wir haben noch mehr Tabellen im Angebot. Die zweite Tabelle, die Du unbedingt benötigst, ist die Interrupt Descriptor Table ([IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT")). Wenn irgendein Stück Hardware melden möchte, dass irgendetwas passiert ist (z.B. eine Taste gedrückt wurde), schickt es im Allgemeinen einen [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") mit einer mehr oder weniger eindeutigen Nummer. In der IDT weist du jedem Interrupt eine Funktion in deinem Kernel zu, die aufgerufen wird, wenn der Interrupt ankommt.
+
+Auch zur IDT kannst Du die im vorigen Abschnitt verlinkten Seiten befragen.
+
+Neben den genannten Hardwareinterrupts gibt es noch weitere. Die wichtigsten davon sind [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception"), die aufgerufen werden, wenn etwas schiefgeht (z.B. Division durch Null oder ein Speicherzugriff ohne Berechtigung) und Softwareinterrupts, die von einem Programm ausgelöst werden, z.B. um Funktionen des Kernels aufzurufen.
+
+Wenn Du die IDT fertig eingerichtet hast, kannst du sie am besten testen, indem du entweder eine Exception provozierst oder einen Softwareinterrupt auslöst. Bevor Du die Hardwareinterrupts mit dem Assemblerbefehl sti anschaltest, solltest Du nämlich erst noch den [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") programmieren, so dass die IRQs (das sind genau die Hardwareinterrupts) beispielsweise auf die Interrupts 0x20 bis 0x2f legst (bis 0x1f liegen schon die Exceptions und Du willst IRQs ja von Exceptions unterscheiden können).
+
+- [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller")
+
+Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürden genommen. Für diejenigen unter uns, die gerne etwas sehen und irgendwas zum Spielen brauchen, wäre das ein guter Zeitpunkt, einfach mal einen Tastaturtreiber zu schreiben und ein bisschen was auszuprobieren. Es kommen noch genug schwere Sachen, bis Dein Produkt sich zurecht ein Betriebssystem nennen kann, aber hey, wenn ich zwei Zahlen eingeben kann und die werden addiert - das ist doch schonmal ein Erfolgserlebnis, oder? Mich hat das jedenfalls motiviert.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2795/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2576; parent 2573; 2008-02-16T10:55:55Z -->
+<!-- MediaWiki page 1619; revision 2795; parent 2576; 2008-03-24T19:34:35Z -->
