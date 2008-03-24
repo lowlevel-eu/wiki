@@ -1,7 +1,5 @@
 # Windows
 
-Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt.
-
 | Windows |  |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------- |
 |  |  |
@@ -16,6 +14,8 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 | Binärformat: | Portable Exuctable |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
+
+Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt.
 
 ## OS-Dev unter Windows
 
@@ -39,6 +39,6 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2809/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2809; parent 2783; 2008-03-24T21:12:01Z -->
+<!-- MediaWiki page 1558; revision 2810; parent 2809; 2008-03-24T21:14:35Z -->
