@@ -1,5 +1,23 @@
 # LightOS
 
+| lightOS |  |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+|  |  |
+| Entwickler: | [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") |
+| Akt. Version: | 0.2pre2 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| OS-Eigenschaften |  |
+| Plattform: | i386, x86_64 |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") & teilweise [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| API: | Nativ & teilweise [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
+| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message passing & shared-memory |
+| Homepage |  |
+
+<https://lightos.bountysource.com/>
+
+  
 lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. Das Projekt wurde zugunsten von [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree") eingestellt.
 
 ## Entwickler
@@ -44,6 +62,6 @@ Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](https://github
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2788/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 2788; parent 2723; 2008-03-23T11:12:54Z -->
+<!-- MediaWiki page 1454; revision 2811; parent 2788; 2008-03-24T21:21:04Z -->
