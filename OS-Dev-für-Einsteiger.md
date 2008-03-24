@@ -24,8 +24,8 @@ Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in [As
 
 Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im großen und ganzen zwei Alternativen:
 
-- Du nimmst C. Fast jeder spricht diese Sprache und Du bekommst Unmengen an Beispielcode in C. Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können.
-- Du nimmst nicht C. Du wirst Dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst Dich möglicherweise öfter selbst durchschlagen - gerade wenn es um Besonderheiten deiner Sprache oder Deines Compilers geht.
+- Du nimmst [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Fast jeder spricht diese Sprache und Du bekommst Unmengen an Beispielcode in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können.
+- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst Dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst Dich möglicherweise öfter selbst durchschlagen - gerade wenn es um Besonderheiten deiner Sprache oder Deines Compilers geht.
 
 Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") sind beispielsweise [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") oder [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") (mit FreePascal oder mit Tricks auch Delphi als Compiler). Theoretisch würde auch [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") funktionieren. Andere Sprachen hat hier meines Wissens noch niemand versucht, könnten natürlich aber trotzdem funktionieren.
 
@@ -101,6 +101,6 @@ Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2795/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2795; parent 2576; 2008-03-24T19:34:35Z -->
+<!-- MediaWiki page 1619; revision 2812; parent 2795; 2008-03-24T21:21:28Z -->
