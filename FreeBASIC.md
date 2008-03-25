@@ -44,6 +44,6 @@ Gebaut wird das ganze mit den folgenden Befehlen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2580/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 2580; parent 2579; 2008-02-16T13:57:32Z -->
+<!-- MediaWiki page 1624; revision 2832; parent 2580; 2008-03-25T03:38:53Z -->
