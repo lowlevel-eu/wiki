@@ -10,6 +10,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 2820; parent 0; 2008-03-25T03:29:37Z -->
+<!-- MediaWiki page 1643; revision 2822; parent 2820; 2008-03-25T03:30:56Z -->
