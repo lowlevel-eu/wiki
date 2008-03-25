@@ -10,10 +10,11 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 # Links
 
-[Design and Implementation of the Second Extended Filesystem](http://web.mit.edu/tytso/www/linux/ext2intro.html) [The Second Extended File System](http://www.nongnu.org/ext2-doc/ext2.html)
+- [Design and Implementation of the Second Extended Filesystem](http://web.mit.edu/tytso/www/linux/ext2intro.html)
+- [The Second Extended File System](http://www.nongnu.org/ext2-doc/ext2.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
 
-<!-- MediaWiki page 1617; revision 2818; parent 2777; 2008-03-25T03:24:42Z -->
+<!-- MediaWiki page 1617; revision 2819; parent 2818; 2008-03-25T03:25:00Z -->
