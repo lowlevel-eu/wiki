@@ -2,18 +2,18 @@
 
 Da C++ eine Weiterentwicklung von C ist, sollte man sich auch den Wikiartikel zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
-# Kernelprogrammierung in C++
+# Überblick
 
 Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilffunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
 
-- Startup-Code
-- rein virtuelle Funktionen
-- globale/statische Objekte
-- new/delete
-- RTTI (= Runtime type information)
-- Exceptions
+- [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++")
+- [rein virtuelle Funktionen](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#rein-virtuelle-funktionen "C++")
+- [globale/statische Objekte](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")
+- [new/delete](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#newdelete "C++")
+- [RTTI (= Runtime type information)](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#rtti "C++")
+- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#exceptions "C++")
 
-Da jeder Compilerhersteller eine eigene ABI (= Application Binary Interface) zur Verfügung stellt sind auch die Namen und der Funktionsumfang von Compiler zu Compiler verschieden.
+Da jeder Compilerhersteller eine eigene ABI (= Application Binary Interface) zur Verfügung stellt sind auch die Funktionsnamen und der Funktionsumfang von Compiler zu Compiler verschieden.
 
 # Startup-Code
 
@@ -25,10 +25,12 @@ Wenn eine Klasse eine rein virtuelle Funktion nicht implementiert hat und diese 
 
 ## g++
 
-\<cpp\> extern "C" void \_\_cxa_pure_virtual() {
+\<cpp\> // Lizenz: public domain
 
-       // Fehlermeldung anzeigen
-       // Programm/Kernel beenden
+extern "C" void \_\_cxa_pure_virtual() {
+
+     // Fehlermeldung anzeigen
+     // Programm/Kernel beenden
 
 } \</cpp\>
 
@@ -43,6 +45,24 @@ Die Konstruktion der globalen/statischen Objekte ist unter g++ immer gleich. Nur
 ### Konstruktoren
 
 G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. Diese Funktionszeiger zeigen jeweils auf einen Konstruktor. Man muss nun nur dieses Array durchgehen und alle Funktionen aufrufen und schon hat man alle globalen/statischen Objekte initialisiert.
+
+\<cpp\> // Lizenz: public domain
+
+// Im Linkerskript definiert uintptr_t start_ctors; uintptr_t end_ctors;
+
+// Ruft die Konstruktoren für globale/statische Objekte auf void initialiseConstructors() {
+
+     uintptr_t *iterator = reinterpret_cast<uintptr_t*>(&start_ctors);
+     while (iterator < reinterpret_cast<uintptr_t*>(&end_ctors))
+     {
+       void (*fp)(void) = reinterpret_cast<void (*)(void)>(*iterator);
+       fp();
+       iterator++;
+     }
+
+} \</cpp\>
+
+Diese Funktion muss explizit aufgerufen werden bevor globale/statische Objekte verwendet werden. Dies kann beispielsweise im [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++") geschehen.
 
 ### Destruktoren (ohne --enable-\_\_cxa_atexit und ohne -fuse-cxa-atexit)
 
@@ -68,42 +88,44 @@ f ist ein Funktionszeiger zu einem Destruktor, p der Parameter, der dem Destrukt
 
 mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit passenden Paramtern aufzurufen. Die registrierten Funktionen müssen in umgekehrter Reihenfolge aufgerugen werden. Außerdem muss man ein Symbol namens \_\_dso_handle bereitstellen. Es wird allerdings nur die Adresse des Symbols verwendet um ein DSO zu identifizieren und um \_\_cxa_atexit aufzurufen.
 
-\<cpp\> extern "C"
+\<cpp\> // Lizenz: public domain
 
-           {
-           int __cxa_atexit(void (*f)(void *), void *p, void *d);
-           void __cxa_finalize(void *d);
-           };
+extern "C" {
+
+     int __cxa_atexit(void (*f)(void *), void *p, void *d);
+     void __cxa_finalize(void *d);
+
+};
 
 void \*\_\_dso_handle;
 
 struct object {
 
-           void (*f)(void*);
-           void *p;
-           void *d;
+     void (*f)(void*);
+     void *p;
+     void *d;
 
 } object\[32\] = {0}; unsigned int iObject = 0;
 
 int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
 
-           if (iObject >= 32) return -1;
-           object[iObject].f = f;
-           object[iObject].p = p;
-           object[iObject].d = d;
-           ++iObject;
-           return 0;
+     if (iObject >= 32) return -1;
+     object[iObject].f = f;
+     object[iObject].p = p;
+     object[iObject].d = d;
+     ++iObject;
+     return 0;
 
 }
 
 /\* NOTE: Zerstört momentan unabhängig von d alle Objekte \*/ void \_\_cxa_finalize(void \*d) {
 
-           unsigned int i = iObject;
-           for (; i > 0; --i)
-           {
-                   --iObject;
-                   object[iObject].f(object[iObject].p);
-           }
+     unsigned int i = iObject;
+     for (; i > 0; --i)
+     {
+       --iObject;
+       object[iObject].f(object[iObject].p);
+     }
 
 } \</cpp\>
 
@@ -120,31 +142,35 @@ implementieren.
 
 Eine einfache Implementation ist z.B.: \<cpp\> void \*operator new( size_t size ) {
 
-           return kcalloc( size );
+     return kcalloc( size );
 
 }
 
 void \*operator new\[\]( size_t size ) {
 
-           return kcalloc( size );
+     return kcalloc( size );
 
 }
 
 void operator delete( void \*ojb ) {
 
-           kfree( obj );
+     kfree( obj );
 
 }
 
 void operator delete\[\]( void \*obj ) {
 
-           kfree( obj );
+     kfree( obj );
 
 } \</cpp\>
 
 # RTTI
 
+RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett deaktiviert. Mit g++ geschieht dies mittels des Kommandozeilenparameter *-fno-rtti*.
+
 # Exceptions
+
+Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit g++ können Exceptions über den Kommandozeilenparameter *-fno-exceptions* deaktiviert werden.
 
 # Links
 
@@ -163,6 +189,6 @@ void operator delete\[\]( void \*obj ) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2775; parent 2686; 2008-03-23T01:14:21Z -->
+<!-- MediaWiki page 1486; revision 2814; parent 2775; 2008-03-25T02:59:28Z -->
