@@ -13,6 +13,6 @@ Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Pr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2830/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 2774; parent 2685; 2008-03-23T01:14:03Z -->
+<!-- MediaWiki page 1526; revision 2830; parent 2774; 2008-03-25T03:38:46Z -->
