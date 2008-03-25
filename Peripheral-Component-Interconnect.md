@@ -256,6 +256,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2592/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2854/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 2592; parent 2591; 2008-02-19T17:01:50Z -->
+<!-- MediaWiki page 1626; revision 2854; parent 2592; 2008-03-25T03:54:30Z -->
