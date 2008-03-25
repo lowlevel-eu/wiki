@@ -8,10 +8,10 @@ Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, d
 - [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
 - [Linux-Distributionen](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")
-- Weitere siehe Kategorie Betriebssysteme
+- Weitere siehe [Kategorie Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
 
-<!-- MediaWiki page 1479; revision 1891; parent 1890; 2007-03-18T23:35:16Z -->
+<!-- MediaWiki page 1479; revision 2852; parent 1891; 2008-03-25T03:51:14Z -->
