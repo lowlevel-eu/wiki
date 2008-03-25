@@ -1,6 +1,6 @@
 # Executable and Linking Format
 
-Elf ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten von Elf-Dateien:
+Das Executable and Linking Format(kurz ELF) ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten von ELF-Dateien:
 
 - executable
 - relocatable
@@ -8,21 +8,21 @@ Elf ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten 
 
 ## Aufbau
 
-### Elf-Header
+### ELF-Header
 
-Der Elf-Header ist wie folgt aufgebaut.
+Der ELF-Header ist wie folgt aufgebaut.
 
 | Name | Offset | Größe | Beschreibung |
 | ----------------------------- | -------- | ------- | ------------------------------------------------------------------- |
 | [e_ident](#e_ident) | 0x00 | 16 | Enthält Daten zur Identifikation |
-| [e_type](#e_type) | 0x10 | 2 | Enthält den Elf-Typ |
+| [e_type](#e_type) | 0x10 | 2 | Enthält den ELF-Typ |
 | [e_machine](#e_machine) | 0x12 | 2 | Beschreibt die benötigte Architektur |
 | [e_version](#e_version) | 0x14 | 4 | Version |
 | [e_entry](#e_entry) | 0x18 | 4 | Entrypoint |
 | [e_phoff](#e_phoff) | 0x1C | 4 | Das Offset des Programm-Headers |
 | [e_shoff](#e_shoff) | 0x20 | 4 | Das Offset des Section-Headers |
 | [e_flags](#e_flags) | 0x24 | 4 | Verschiedene Flags |
-| [e_ehsize](#e_ehsize) | 0x28 | 2 | Größe des Elf-Headers |
+| [e_ehsize](#e_ehsize) | 0x28 | 2 | Größe des ELF-Headers |
 | [e_phentsize](#e_phentsize) | 0x2A | 2 | Größe eines Eintrags im Programm-Header |
 | [e_phnum](#e_phnum) | 0x2C | 2 | Anzahl an Einträgen im Programm-Header |
 | [e_shentsize](#e_shentsize) | 0x2E | 2 | Größe eines Eintrags im Section-Header |
@@ -31,7 +31,7 @@ Der Elf-Header ist wie folgt aufgebaut.
 
 #### e_ident
 
-Das Feld e_ident ist 16 Byte groß und enthält Werte zur Identifikation der Elf-Datei. Dies sind die Indexes:
+Das Feld e_ident ist 16 Byte groß und enthält Werte zur Identifikation der ELF-Datei. Dies sind die Indexes:
 
 | Name | Wert | Beschreibung |
 | --------------------------- | ------ | ------------------------------------- |
@@ -98,7 +98,7 @@ Für einen 32bit Intel-Prozessor sollten folgende Felder folgende Werte haben:
 
 #### e_type
 
-Dieses Feld beschreibt, welches Elf-Format benutzt wird:
+Dieses Feld beschreibt, welches ELF-Format benutzt wird:
 
 | Name | Wert | Beschreibung |
 | ----------- | -------- | -------------- |
@@ -110,7 +110,7 @@ Dieses Feld beschreibt, welches Elf-Format benutzt wird:
 | ET_LOPROC | 0xff00 | Kein Typ |
 | ET_HIPROC | 0x00ff | Kein Typ |
 
-Für eine ausführbare Elf-Datei, müsste hier ET_EXEC stehen.
+Für eine ausführbare ELF-Datei, müsste hier ET_EXEC stehen.
 
 #### e_machine
 
@@ -129,7 +129,7 @@ Wie oben schonmal erwähnt, steht hier der Prozessor-Typ drin.
 
 #### e_version
 
-Beschreibt die Aktuelle Elf-Version
+Beschreibt die Aktuelle ELF-Version
 
 | Name | Wert | Beschreibung |
 | ------------ | ------ | ------------------- |
@@ -154,7 +154,7 @@ Dieses Feld enthält Prozessorspezifische Flags.
 
 #### e_ehsize
 
-Größe des Elf-Headers.
+Größe des ELF-Headers.
 
 #### e_phentsize
 
@@ -193,7 +193,7 @@ Der Programm-Header besteht aus e_phnum Einträgen, wobei jeder e_phentsize gro�
 
 #### p_type
 
-Dieses Feld gibt den Typ des Segments an, für eine ausführbare Elf-Datei ist vor allem PT_LOAD relevant. Die folgenden Beschreibungen sind auf PT_LOAD bezogen (es kann sein, dass sie auch auf andere Typen zutreffen).
+Dieses Feld gibt den Typ des Segments an, für eine ausführbare ELF-Datei ist vor allem PT_LOAD relevant. Die folgenden Beschreibungen sind auf PT_LOAD bezogen (es kann sein, dass sie auch auf andere Typen zutreffen).
 
 | Name | Wert | Beschreibung |
 | ------------ | ------------ | -------------------------------------------------------------------- |
@@ -269,10 +269,10 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 # Links
 
-- [Elf für x86](http://www.acm.uiuc.edu/sigops/rsrc/pfmt11.pdf)
+- [ELF für x86](http://www.acm.uiuc.edu/sigops/rsrc/pfmt11.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2856; parent 2827; 2008-03-25T23:21:46Z -->
+<!-- MediaWiki page 1528; revision 2858; parent 2856; 2008-03-25T23:38:43Z -->
