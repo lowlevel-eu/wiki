@@ -32,6 +32,6 @@ YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](htt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 2667; parent 2614; 2008-03-22T16:09:11Z -->
+<!-- MediaWiki page 1514; revision 2829; parent 2667; 2008-03-25T03:38:42Z -->
