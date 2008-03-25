@@ -71,6 +71,6 @@ Die geplanten Neuheiten in den zukünftigen Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2708/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 2708; parent 2500; 2008-03-22T16:48:09Z -->
+<!-- MediaWiki page 1453; revision 2839; parent 2708; 2008-03-25T03:44:16Z -->
