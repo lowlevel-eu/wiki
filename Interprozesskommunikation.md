@@ -26,6 +26,6 @@ Der Begriff **shared-Memory** bezeichnet einen Speicherbereich, welcher in mehre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 2816; parent 2787; 2008-03-25T03:16:30Z -->
+<!-- MediaWiki page 1530; revision 2817; parent 2816; 2008-03-25T03:19:31Z -->
