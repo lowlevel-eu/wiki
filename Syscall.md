@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet um die Funktion aufzulösen und
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 2619; parent 2618; 2008-03-08T14:45:25Z -->
+<!-- MediaWiki page 1629; revision 2855; parent 2619; 2008-03-25T03:55:00Z -->
