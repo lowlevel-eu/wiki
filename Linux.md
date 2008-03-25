@@ -26,6 +26,6 @@ Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 2806; parent 2803; 2008-03-24T21:02:27Z -->
+<!-- MediaWiki page 1641; revision 2841; parent 2806; 2008-03-25T03:44:34Z -->
