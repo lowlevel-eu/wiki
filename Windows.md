@@ -1,11 +1,13 @@
 # Windows
 
+Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt.
+
 | Windows |  |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------- |
 |  |  |
 | Entwickler: | Microsoft |
 | Akt. Version: | NT 6.0/Vista |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Propietär |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
 | Plattform: | x86, x64 und Intel-MAC(BootCamp) |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
@@ -14,8 +16,6 @@
 | Binärformat: | Portable Exuctable |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
-
-Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt.
 
 ## OS-Dev unter Windows
 
@@ -39,6 +39,6 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2848; parent 2810; 2008-03-25T03:45:56Z -->
+<!-- MediaWiki page 1558; revision 2865; parent 2848; 2008-03-26T19:42:02Z -->
