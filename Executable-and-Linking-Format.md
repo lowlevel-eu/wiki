@@ -1,6 +1,6 @@
 # Executable and Linking Format
 
-Das Executable and Linking Format(kurz ELF) ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten von ELF-Dateien:
+Das Executable and Linking Format (kurz ELF) ist ein Dateiformat für ausführbare Dateien. Es gibt 3 verschiedene Arten von ELF-Dateien:
 
 - executable
 - relocatable
@@ -273,6 +273,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2858; parent 2856; 2008-03-25T23:38:43Z -->
+<!-- MediaWiki page 1528; revision 2859; parent 2858; 2008-03-26T09:29:28Z -->
