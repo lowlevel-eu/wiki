@@ -6,7 +6,7 @@ Datei:Http://www.reactos.org/media/pictures/2005/logo final 01.png ReactOS-Logo
 
 ## Über ReactOS
 
-Das Ziel ist es ein komplett eigenes Betriebssystem zu schreiben, das aber kompatibel zu Windows ist. Dies soll es ermöglichen Windows-kompatible Treiber und Software unverändert unter ReactOS zu verwenden.
+Das Ziel ist es ein komplett eigenes Betriebssystem zu schreiben, das aber kompatibel zu [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") ist. Dies soll es ermöglichen [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")-kompatible Treiber und Software unverändert unter ReactOS zu verwenden.
 
 Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Projekt. Andersrum verwendet das Captive-Projekt Teile des ReactOS Source Codes.
 
@@ -22,6 +22,24 @@ Nachdem vermehrt Hinweise aufkamen, die besagten, dass Teile des Codes durch Rev
 
 Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
+## Versionen
+
+### Pre-Alpha
+
+- 0.0.1 1996
+- 0.0.2 2002
+- 0.1 2003
+- 0.2 2004
+
+### Alpa
+
+- 0.3 2006\[Aktuelle Version 26.03.2008\]
+- 0.4 2007(geplant)
+
+### Beta
+
+- 0.5 2007/2008(geplant)
+
 ## Links
 
 - [Offizielle Website](http://www.reactos.org/de/index.html) *deutsch*
@@ -29,6 +47,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2845/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 2845; parent 2742; 2008-03-25T03:45:17Z -->
+<!-- MediaWiki page 1421; revision 2863; parent 2845; 2008-03-26T12:58:53Z -->
