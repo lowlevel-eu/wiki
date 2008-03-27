@@ -2,6 +2,23 @@
 
 ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT-Klon im Alphastadium.
 
+| ReactOS |  |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+|  |  |
+| Entwickler: | [Mehrere](http://www.reactos.org/wiki/index.php/People_of_ReactOS#Project_Roles) |
+| Akt. Version: | 0.3.4 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| OS-Eigenschaften |  |
+| Plattform: |  |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): |  |
+| API: | WinAPI |
+| Binärformat: |  |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Homepage |  |
+
+[www.reactos.org](http://www.reactos.org)
+
 Datei:Http://www.reactos.org/media/pictures/2005/logo final 01.png ReactOS-Logo
 
 ## Über ReactOS
@@ -47,6 +64,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2866/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 2863; parent 2845; 2008-03-26T12:58:53Z -->
+<!-- MediaWiki page 1421; revision 2866; parent 2863; 2008-03-27T17:29:52Z -->
