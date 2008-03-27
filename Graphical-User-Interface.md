@@ -32,6 +32,6 @@ Bei Drag and Drop wird ein Bild verschoben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2862/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2867/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2862; parent 2860; 2008-03-26T12:50:01Z -->
+<!-- MediaWiki page 1511; revision 2867; parent 2862; 2008-03-27T19:41:55Z -->
