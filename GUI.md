@@ -1,9 +1,9 @@
 # GUI
 
-Weiterleitung: Graphics User Interface
+Weiterleitung: [Graphical User Interface](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1651/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2869/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1651/index.html)
 
-<!-- MediaWiki page 1651; revision 2861; parent 0; 2008-03-26T12:43:26Z -->
+<!-- MediaWiki page 1651; revision 2869; parent 2861; 2008-03-28T06:01:41Z -->
