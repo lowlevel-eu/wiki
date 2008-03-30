@@ -31,14 +31,14 @@ Der ELF-Header ist wie folgt aufgebaut.
 
 #### e_ident
 
-Das Feld e_ident ist 16 Byte groß und enthält Werte zur Identifikation der ELF-Datei. Dies sind die Indexes:
+Das Feld e_ident ist 16 Byte groß und enthält Werte zur Identifikation der ELF-Datei. Dies sind die Indizes:
 
 | Name | Wert | Beschreibung |
-| --------------------------- | ------ | ------------------------------------- |
-| [EO_MAG0 bis EI_MAG3](#) | 0 | Datei-Identifikation |
-| [EI_MAG0 bis EI_MAG3](#) | 1 | Datei-Identifikation |
-| [EI_MAG0 bis EI_MAG3](#) | 2 | Datei-Identifikation |
-| [EI_MAG0 bis EI_MAG3](#) | 3 | Datei-Identifikation |
+| --------------------------------- | ------ | ------------------------------------- |
+| [EI_MAG0](#ei_mag0-bis-ei_mag3) | 0 | Datei-Identifikation |
+| [EI_MAG1](#ei_mag0-bis-ei_mag3) | 1 | Datei-Identifikation |
+| [EI_MAG2](#ei_mag0-bis-ei_mag3) | 2 | Datei-Identifikation |
+| [EI_MAG3](#ei_mag0-bis-ei_mag3) | 3 | Datei-Identifikation |
 | [EI_CLASS](#ei_class) | 4 | Datei-Klasse |
 | [EI_DATA](#ei_data) | 5 | Prozessorspezifische Datenkodierung |
 | [EI_VERSION](#ei_version) | 6 | Datei-Version |
@@ -93,8 +93,6 @@ Für einen 32bit Intel-Prozessor sollten folgende Felder folgende Werte haben:
 | e_ident\[EI_CLASS\] | ELFCLASS32 |
 | e_ident\[EI_DATA\] | ELFDATA2LSB |
 | e_machine | EM_386 |
-
-  
 
 #### e_type
 
@@ -273,6 +271,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2875/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2859; parent 2858; 2008-03-26T09:29:28Z -->
+<!-- MediaWiki page 1528; revision 2875; parent 2859; 2008-03-30T16:02:32Z -->
