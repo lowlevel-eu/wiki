@@ -21,7 +21,7 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ### Pro
 
-//TODO
+Für Leute die noch nie mit Linux gearbeitet haben ist der Einstieg sicher etwas schwerer, vor allem wenn man gleich micht OS-Programmierung anfängt. Wer gewohnt ist mit Windows zu arbeiten der wird sich nicht bemühen bash oder sonstiges zu lernen, wenn er mit \*.bat Dateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen ihr eigenes Betriebsystem zu entwickeln. Und die Programme, die benötigt werden (Compiler,...) existieren mitlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden. (Binutils, Crosscompiler, MingGW CygWin,...)
 
 ### Contra
 
@@ -39,6 +39,6 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2870/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2876/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2870; parent 2865; 2008-03-28T13:32:49Z -->
+<!-- MediaWiki page 1558; revision 2876; parent 2870; 2008-03-31T14:12:35Z -->
