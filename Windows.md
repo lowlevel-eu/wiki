@@ -25,11 +25,7 @@ Für Leute die noch nie mit Linux gearbeitet haben ist der Einstieg sicher etwas
 
 ### Contra
 
-- gcc ist nicht sofort enthalten. Es muss extra gedownloaded werden.
-
-//TODO
-
-  
+Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebsysteme ist wohl, dass viele Programme erst heruntergeladen werden müssen, damit man mit dem Programieren anfangen kann. (gcc, make, ...) Außerdem fehlen Windows noch ein paar Kommandozeilen-Programme, die die OS-Programmierung erleichtern. (dd, ...) Sicherlich ist auch der Funktionsumfang von Batch-Dateien eher gering, was aber in diesem Einsatzgebiet wohl eher nicht so wichtig ist.
 
 ## Links
 
@@ -39,6 +35,6 @@ Für Leute die noch nie mit Linux gearbeitet haben ist der Einstieg sicher etwas
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2876/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2876; parent 2870; 2008-03-31T14:12:35Z -->
+<!-- MediaWiki page 1558; revision 2877; parent 2876; 2008-03-31T14:17:20Z -->
