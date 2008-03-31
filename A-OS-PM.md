@@ -1,6 +1,21 @@
 # A / OS PM
 
-A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann.
+A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann. Es gab einen Vorgänger (A / OS RM) der im RealMode lief und nur zu testzwecken diente.
+
+| A / OS PM |  |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------- |
+|  |  |
+| Entwickler: | Blitzmaster |
+| Akt. Version: | 0.0.1 (Pre Alpha I) |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | (Vorerst) Proprietär |
+| OS-Eigenschaften |  |
+| Plattform: | x86 |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembly, C/C++ |
+| API: | A / API |
+| Binärformat: | ELF |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message passing, pipes, shared memory |
+| Homepage |  |
 
 ## Geplante Features
 
@@ -34,20 +49,19 @@ Sie wird per Ctrl + Alt + Del aufgerufen und dient dazu, das System während der
 
 Die GUI wird komplett vom Rest des Systems getrennt sein, die Kommunikation mit den Programmen verläuft über sogenannte Terminals. Sie werden vom Kernel verwaltet. Die GUI bietet zusätzlich noch ein paar Call Gates, die jedoch beim Start über API Funktionen registriert werden müssen.
 
-## Version 0.1 (1. Alpha Release)
+## Version 0.0.2 (1. Alpha Release)
 
 Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 - Multitasking: jedoch ohne Prioritäten
-- Treibersystem: sollte vollständig implementiert sein
-- A / IO (die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") Schnittstelle): sollte vollständig implementiert sein
+- Treibersystem
+- A / IO (die [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") Schnittstelle)
 - Text - Console
 - Keyboard - Treiber
 - Grafik - Treiber: Textmodus
-- Floppy - Treiber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2881/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2837; parent 2666; 2008-03-25T03:43:51Z -->
+<!-- MediaWiki page 1451; revision 2881; parent 2837; 2008-03-31T15:02:15Z -->
