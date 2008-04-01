@@ -275,10 +275,8 @@ Hier noch das Packet an Tools und Quelltexten:
 
 [\[1\]](http://www.jay-code.de/files/ckernel.zip)
 
-© Copyright by TeeJay (teejay@jay-code.de)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2885/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 2687; parent 2155; 2008-03-22T16:33:19Z -->
+<!-- MediaWiki page 1458; revision 2885; parent 2687; 2008-04-01T19:25:01Z -->
