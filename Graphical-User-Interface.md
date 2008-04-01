@@ -14,7 +14,7 @@ Ein GUI (**G**raphical **U**ser **I**nterface) ist eine grafische Oberfläche, d
 - Eine Kommandozeilendarstellung verbraucht viel weniger Ressourcen. Auf Servern ist ein GUI reine Ressourcenverschwendung, da man an diesen nicht wie an gewöhnlichen Arbeitscomputern arbeitet, sondern sie fast nur zur Programmausführung verwendet, und man sich damit den Luxus eines GUIs zugunsten der Performance sparen sollte
 - Ein GUI ist für Programmieranfänger im OS-Entwicklungsbereich viel anspruchsvoller (Grafiktreiber bzw. Nutzung von [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA")/[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA") oder Ähnlichem, Anzeigen aller Fenster in der richtigen Ordnung, Zugriff auf die Maus, etc.), und es empfiehlt sich für das Erstprojekt ein System, das erst einmal nur eine Kommandozeile bietet
 
-## OS-Entwicklung
+## GUI-Entwicklung
 
 Mit der Entwicklung einer GUI sollte erst begonnen werden, wenn man bereits einen grundlegenden, robusten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit einer hinreichenden [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") und dergleichen hat.
 
@@ -32,6 +32,6 @@ Bei Drag and Drop wird ein Bild verschoben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2882/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2883/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2882; parent 2867; 2008-04-01T15:59:16Z -->
+<!-- MediaWiki page 1511; revision 2883; parent 2882; 2008-04-01T16:01:22Z -->
