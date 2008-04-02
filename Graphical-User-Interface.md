@@ -30,8 +30,12 @@ Meistens ist ein Fenster ein Rechteck. Dieser kann verschoben werden. Ein Fenste
 
 Bei Drag and Drop wird ein Bild verschoben.
 
+### Maus
+
+Die Maus wird meistens als Zeiger dargestellt und wird mit ein speziellen Gerät bedient. Diese Technik hat sich zum defacto von GUIs gemausert.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2883/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2883; parent 2882; 2008-04-01T16:01:22Z -->
+<!-- MediaWiki page 1511; revision 2890; parent 2883; 2008-04-02T13:42:35Z -->
