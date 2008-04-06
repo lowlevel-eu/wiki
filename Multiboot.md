@@ -133,7 +133,7 @@ Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offse
 | 0x24 | 4 | addr | Pointer zur Symboltabelle |
 | 0x28 | 4 | reserved | Reserviert (0) |
 
-Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabelle einer Elf-Datei.
+Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabelle einer [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei.
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ------- | --------------------------- |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2732; parent 2474; 2008-03-22T17:16:39Z -->
+<!-- MediaWiki page 1560; revision 2898; parent 2732; 2008-04-06T15:02:28Z -->
