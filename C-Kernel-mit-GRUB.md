@@ -76,7 +76,7 @@ Dies geschieht ganz einfach mit diesem Befehl:
 
     $ nasm -f elf -o kernel_asm.o kernel.asm
 
-Damit wird eine Elf-Datei erzeugt, die wir später noch linken können.
+Damit wird eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei erzeugt, die wir später noch linken können.
 
 ### Kompilieren
 
@@ -205,6 +205,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2727/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 2727; parent 2602; 2008-03-22T17:10:49Z -->
+<!-- MediaWiki page 1604; revision 2899; parent 2727; 2008-04-06T15:03:40Z -->
