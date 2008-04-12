@@ -99,8 +99,29 @@ Wenn Du die IDT fertig eingerichtet hast, kannst du sie am besten testen, indem 
 
 Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürden genommen. Für diejenigen unter uns, die gerne etwas sehen und irgendwas zum Spielen brauchen, wäre das ein guter Zeitpunkt, einfach mal einen Tastaturtreiber zu schreiben und ein bisschen was auszuprobieren. Es kommen noch genug schwere Sachen, bis Dein Produkt sich zurecht ein Betriebssystem nennen kann, aber hey, wenn ich zwei Zahlen eingeben kann und die werden addiert - das ist doch schonmal ein Erfolgserlebnis, oder? Mich hat das jedenfalls motiviert.
 
+## Der eigentliche Kernel
+
+Wenn Du bis hierhin gekommen bist, hast Du mittlerweile etwas, was sich Kernel nennt. In Wirklichkeit hast Du aber noch nicht besonders viel von den ganzen Funktionen, die ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") bieten muss. Du hast die Initialisierung geschafft, bei der Du noch nicht besonders viel Auswahl hast. Richtig interessant wird es jetzt, denn jetzt kannst Du viele verschiedene Wege wählen, die eigentliche Funktionalität Deines Kernels umzusetzen.
+
+### Die Aufgaben des Kernels
+
+Was sind nun die Funktionen, die ein Kernel im Allgemeinen bietet?
+
+- [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung"): Programme und höchstwahrscheinlich auch der Kernel selbst müssen zur Laufzeit dynamisch Speicher reservieren können. Die Speicherverwaltung im Kernel arbeitet üblicherweise nicht mit beliebigen anforderbaren Größen, sondern mit Blöcken von 4 Kilobytes, sogenannten *Speicherseiten* (engl. *Pages*). Man unterscheidet dabei zwischen physischer und [virtueller](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") Speicherverwaltung.
+- [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung"): Ein Betriebssystem hat diese Bezeichnung nur verdient, wenn es Programme ausführen kann. Zur Prozessverwaltung gehören Funktionen wie das Starten und Beenden von Prozessen, aber im weiteren Sinne auch [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), also das Umschalten zwischen den einzelnen Prozessen. Neben [Prozessen](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess") möchtest Du eventuell auch [Threads](https://github.com/lowlevel-eu/wiki/wiki/Prozess#threads "Thread") unterstützen.
+- [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation"): Je nach Architektur des Betriebssystem extrem wichtig bis erstmal völlig nebensächlich. Es geht dabei darum, dass zwei Programme Informationen austauschen können, z.B. durch Senden von Nachrichten oder Aufruf von Funktionen des anderen Programms.
+- [Hardwaretreiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"): Jeder Kernel enthält auch Hardwaretreiber. Je nach Architektur gehören dabei alle, manche oder so gut wie keine Treiber zum Kernel.
+
+### Architekturen
+
+Unter der *Architektur* Deines Betriebssystem ist die Art und Weise zu verstehen, wie die Komponenten Deines Systems zusammenspielen. Bevor Du anfängst, Code für die eigentliche Funktionalität des Kernels geht, solltest Du Dir klar sein, in welche Richtung die Reise gehen soll.
+
+- Die allerwichtigste Entscheidung, die das Aussehen Deines Betriebssystems am schwerwiegendsten beeinflussen wird, ist die Entscheidung zwischen [monolithischem Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") und [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") (oder natürlich beliebiger Mischformen davon, z.B. ein modularisierter Monolith wie Linux).
+- Besonders beim Microkernel ist eine zentrale Frage, wie die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") aussehen soll. Acuh bei einem monolithischen Kernel ist es kein Fehler, sich diese Frage zu stellen, auch wenn sie eher nachrangig ist.
+- Wie soll die Schnittstelle der Programme zum Kernel aussehen?
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2812; parent 2795; 2008-03-24T21:21:28Z -->
+<!-- MediaWiki page 1619; revision 2906; parent 2812; 2008-04-12T21:12:01Z -->
