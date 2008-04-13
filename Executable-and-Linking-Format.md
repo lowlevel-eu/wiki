@@ -99,14 +99,14 @@ Für einen 32bit Intel-Prozessor sollten folgende Felder folgende Werte haben:
 Dieses Feld beschreibt, welches ELF-Format benutzt wird:
 
 | Name | Wert | Beschreibung |
-| ----------- | -------- | -------------- |
+| ----------- | -------- | ---------------------- |
 | ET_NONE | 0 | Kein Typ |
-| ET_REL | 1 | Kein Typ |
-| ET_EXEC | 2 | Kein Typ |
-| ET_DYN | 3 | Kein Typ |
-| ET_CORE | 4 | Kein Typ |
-| ET_LOPROC | 0xff00 | Kein Typ |
-| ET_HIPROC | 0x00ff | Kein Typ |
+| ET_REL | 1 | Relocatable Datei |
+| ET_EXEC | 2 | Ausführbare Datei |
+| ET_DYN | 3 | Shared-Object-Datei |
+| ET_CORE | 4 | Kerndatei |
+| ET_LOPROC | 0xff00 | Prozessor-spezifisch |
+| ET_HIPROC | 0x00ff | Prozessor-spezifisch |
 
 Für eine ausführbare ELF-Datei, müsste hier ET_EXEC stehen.
 
@@ -271,6 +271,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2875/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2909/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2875; parent 2859; 2008-03-30T16:02:32Z -->
+<!-- MediaWiki page 1528; revision 2909; parent 2875; 2008-04-13T19:20:50Z -->
