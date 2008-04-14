@@ -38,8 +38,8 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 | 0x19 | Erweiterungsbyte 1. Festplatte |
 | 0x1A | Erweiterungsbyte 2. Festplatte |
 | 0x1B - 0x2D | Reserviert / vom BIOS abhängig |
-| 0x2E | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (niederwertiges Byte) |
-| 0x2F | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (höherwertiges Byte) |
+| 0x2E | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (höherwertiges Byte) |
+| 0x2F | [CMOS-Prüfsumme](#0x2e--0x2f---cmos-pr%C3%BCfsumme) (niederwertiges Byte) |
 | 0x30 | Erweiterter Speicher (niederwertiges Byte) |
 | 0x31 | Erweiterter Speicher (höherwertiges Byte) |
 | 0x32 | Jahrhundert (BCD) |
@@ -279,6 +279,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2910/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2690; parent 2603; 2008-03-22T16:34:31Z -->
+<!-- MediaWiki page 1562; revision 2910; parent 2690; 2008-04-14T14:31:10Z -->
