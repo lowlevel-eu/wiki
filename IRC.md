@@ -8,7 +8,9 @@ Es ist durchaus möglich, dass diese Möglichkeit bei Dir nicht funktioniert, da
 
 irc://irc.euirc.net/lost
 
-## Schnell-Zugriff zum Channel per Java-Applet
+## Schnell-Zugriff zum Channel per CGIIRC
+
+Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, ist der Zugang über CGIIRC eine Alternative. Dieser arbeitet nur über HTTP und funktioniert somit auch hinter Firewalls und Proxies (also zum Beispiel etwas für in der Schule ;-)). Eine CGIIRC-Installation speziell für den \#LOST-Channel kann [hier](http://cgiirc.tyndur.org/) gefunden werden. Es wird aber empfohlen, wenn möglich einen normalen IRC-Client zu empfehlen, da die Anzahl der möglichen CGIIRC-Verbindungen von Seiten Euirc beschränkt sind.
 
 ## IRC-Start mit KVirc unter Windows
 
@@ -98,6 +100,6 @@ Momentan nicht verfügbar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2911/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 2712; parent 2536; 2008-03-22T16:50:41Z -->
+<!-- MediaWiki page 1463; revision 2911; parent 2712; 2008-04-14T17:40:59Z -->
