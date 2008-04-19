@@ -103,25 +103,32 @@ Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürd
 
 Wenn Du bis hierhin gekommen bist, hast Du mittlerweile etwas, was sich Kernel nennt. In Wirklichkeit hast Du aber noch nicht besonders viel von den ganzen Funktionen, die ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") bieten muss. Du hast die Initialisierung geschafft, bei der Du noch nicht besonders viel Auswahl hast. Richtig interessant wird es jetzt, denn jetzt kannst Du viele verschiedene Wege wählen, die eigentliche Funktionalität Deines Kernels umzusetzen.
 
+### Architekturen
+
+Unter der *Architektur* Deines Betriebssystem ist die Art und Weise zu verstehen, wie die Komponenten Deines Systems zusammenspielen. Bevor Du anfängst, Code für die eigentliche Funktionalität des Kernels zu schreiben, solltest Du Dir klar sein, in welche Richtung die Reise gehen soll.
+
+- Die allerwichtigste Entscheidung, die das Aussehen Deines Betriebssystems am schwerwiegendsten beeinflussen wird, ist die Entscheidung zwischen [monolithischem Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") (die Hardwaretreiber sind alle im Kernel) und [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") (der Kernel macht nur das notwendigste, Treiber sind eigenständige [Userspace](https://github.com/lowlevel-eu/wiki/wiki/Userspace "Userspace")-Prozesse) - oder natürlich beliebiger Mischformen davon, z.B. ein modularisierter Monolith wie [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux").
+- Besonders beim Microkernel ist eine zentrale Frage, wie die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") aussehen soll. Auch bei einem monolithischen Kernel ist es kein Fehler, sich diese Frage zu stellen, auch wenn sie eher nachrangig ist.
+- Wie soll die Schnittstelle der Programme zum Kernel aussehen? (z.B. [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"))
+
 ### Die Aufgaben des Kernels
 
-Was sind nun die Funktionen, die ein Kernel im Allgemeinen bietet?
+Bevor Du Dir anschaust, welche Funktionen Dein Kernel bieten soll, versichere Dich, dass Du weißt, was ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") überhaupt ist. Ja, klar, er ist der Kern des Betriebssystems. Und weiter? Seine zentrale Aufgabe ist es, die Ressourcen des Systems zu verwalten - z.B. den laufenden Programmen Speicher zuzuteilen.
+
+Im Allgemeinen wird für Betriebssysteme im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") ein Modell verwendet, in dem der Kernel in [Ring](https://github.com/lowlevel-eu/wiki/wiki/Ring "Ring") 0 (Kernel Mode) und alle Programme in Ring 3 (User Mode) laufen. Als grobe Richtung kannst Du Dir merken, dass der Kernel alles das ist, was in Ring 0 läuft. Wenn ein User-Mode-Programm Betriebssystemfunktionen benötigt (z.B. mehr Speicher), ruft es den Kernel auf.
+
+Was sind nun also die Funktionen, die ein Kernel im Allgemeinen bietet?
 
 - [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung"): Programme und höchstwahrscheinlich auch der Kernel selbst müssen zur Laufzeit dynamisch Speicher reservieren können. Die Speicherverwaltung im Kernel arbeitet üblicherweise nicht mit beliebigen anforderbaren Größen, sondern mit Blöcken von 4 Kilobytes, sogenannten *Speicherseiten* (engl. *Pages*). Man unterscheidet dabei zwischen physischer und [virtueller](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") Speicherverwaltung.
 - [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung"): Ein Betriebssystem hat diese Bezeichnung nur verdient, wenn es Programme ausführen kann. Zur Prozessverwaltung gehören Funktionen wie das Starten und Beenden von Prozessen, aber im weiteren Sinne auch [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), also das Umschalten zwischen den einzelnen Prozessen. Neben [Prozessen](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess") möchtest Du eventuell auch [Threads](https://github.com/lowlevel-eu/wiki/wiki/Prozess#threads "Thread") unterstützen.
 - [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation"): Je nach Architektur des Betriebssystem extrem wichtig bis erstmal völlig nebensächlich. Es geht dabei darum, dass zwei Programme Informationen austauschen können, z.B. durch Senden von Nachrichten oder Aufruf von Funktionen des anderen Programms.
 - [Hardwaretreiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"): Jeder Kernel enthält auch Hardwaretreiber. Je nach Architektur gehören dabei alle, manche oder so gut wie keine Treiber zum Kernel.
+- Den Bootprozess anstoßen. Nachdem der Kernel sich selbst initialisiert hat, lädt er in irgendeiner Form ein erstes Programm (unter Linux *init*) und startet es.
 
-### Architekturen
-
-Unter der *Architektur* Deines Betriebssystem ist die Art und Weise zu verstehen, wie die Komponenten Deines Systems zusammenspielen. Bevor Du anfängst, Code für die eigentliche Funktionalität des Kernels geht, solltest Du Dir klar sein, in welche Richtung die Reise gehen soll.
-
-- Die allerwichtigste Entscheidung, die das Aussehen Deines Betriebssystems am schwerwiegendsten beeinflussen wird, ist die Entscheidung zwischen [monolithischem Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") und [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") (oder natürlich beliebiger Mischformen davon, z.B. ein modularisierter Monolith wie Linux).
-- Besonders beim Microkernel ist eine zentrale Frage, wie die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") aussehen soll. Auch bei einem monolithischen Kernel ist es kein Fehler, sich diese Frage zu stellen, auch wenn sie eher nachrangig ist.
-- Wie soll die Schnittstelle der Programme zum Kernel aussehen?
+Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell"), [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") oder sonstige Anwendungsprogramme **nicht** in den Kernel! Eine Shell im Kernel ist vielleicht akzeptabel für eine frühe Testphase, um überhaupt einmal etwas laufen zu sehen, aber es ist auf Dauer kein tragfähiges Konzept. (Einer der Gründe dafür: Erinnerst Du Dich an den Absatz über die Ringe oben? Was im Kernel liegt, hat Kernel-Mode-Privilegien, und ein Grundsatz für sichere Software ist, nie Privilegien zu haben, die man nicht braucht)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2908/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2908; parent 2906; 2008-04-12T21:59:56Z -->
+<!-- MediaWiki page 1619; revision 2913; parent 2908; 2008-04-19T08:50:37Z -->
