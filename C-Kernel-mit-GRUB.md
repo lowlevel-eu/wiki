@@ -33,7 +33,7 @@ Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den h
      }
 
      // jetzt wo wir schon im Kernel drin sind, wollen wir auch nicht mehr raus ;)
-     while (true);
+     while (1);
      return 0;
 
 } \</c\>
@@ -205,6 +205,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2914/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 2899; parent 2727; 2008-04-06T15:03:40Z -->
+<!-- MediaWiki page 1604; revision 2914; parent 2899; 2008-04-19T13:53:40Z -->
