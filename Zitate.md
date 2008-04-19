@@ -282,8 +282,14 @@ Aus \#lost (26. Dezember 2007)
     <stultus> Kuchen uss sein
     <stultus> (im zweifelsfall Googlehupf :D)
 
+------------------------------------------------------------------------
+
+Aus \#lost (20. April 2008)
+
+    <FreakyPenguin> Hm md$((4+1))sum aufzurufen, nur weil die Tastatur kaputt ist, ist ja schon d00f. *g*
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 2502; parent 2257; 2007-12-26T14:23:02Z -->
+<!-- MediaWiki page 1435; revision 2918; parent 2502; 2008-04-19T22:36:58Z -->
