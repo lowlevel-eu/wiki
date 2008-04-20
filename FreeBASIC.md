@@ -42,8 +42,13 @@ Gebaut wird das ganze mit den folgenden Befehlen:
     fbc -c kernel.bas
     ld -Ttext=0x100000 kernel.o -o basic.krn
 
+## Weblinks
+
+- <http://www.freebasic.net> - Offizielle englischsprachige Website der FreeBASIC-Entwickler
+- <http://www.freebasic-portal.de> - deutschsprachiges Portal zu FreeBASIC mit Tutorials und Code-Beispielen
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 2832; parent 2580; 2008-03-25T03:38:53Z -->
+<!-- MediaWiki page 1624; revision 2919; parent 2832; 2008-04-20T11:17:52Z -->
