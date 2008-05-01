@@ -114,7 +114,7 @@ Der Code am Stück
        ; ----------------------------------------------
        
        bootdrv db 0 ;Das Bootlaufwerk
-       loadmsg db "Loading...",13,10,0
+       loadmsg db "Laden...",13,10,0
        
        ; Einen String ausgeben:
        putstr:
@@ -185,8 +185,8 @@ Nun kneten wir uns einen kleinen Kernel, damit unser Bootloader auch was zu lade
        ; Funktionen und Variablen
        ; -------------------------------------------------
        
-       msg db "Welcome to StupidOS 1.0",13,10,0
-       msg_boot db "Press any key...",10,0
+       msg db "Herzlich Willkommen zu StupidOS 0.1",13,10,0
+       msg_boot db "Beliebige Taste drücken...",10,0
        
        ; Stringausgabe
        putstr:
@@ -583,6 +583,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2668/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 2668; parent 2316; 2008-03-22T16:10:24Z -->
+<!-- MediaWiki page 1412; revision 2923; parent 2668; 2008-05-01T11:00:07Z -->
