@@ -34,9 +34,10 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 - Berechtigungen setzen und abfragen
 - ioctl um kompatibler zu bestehenden Systemen und Anwendungen zu werden (und um alternativ weitere files im vfs einzusparen)
+- Dokumentation/SDK
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 2722; parent 2565; 2008-03-22T17:02:37Z -->
+<!-- MediaWiki page 1513; revision 2930; parent 2722; 2008-05-07T13:19:17Z -->
