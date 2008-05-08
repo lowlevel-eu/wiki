@@ -2,7 +2,7 @@
 
 ## Vorwort
 
-Der weg zum eigenen Betriebsystem ist lang und steinig. Viele versuchen als erstes einen eigenen [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record"), auch Bootsektor genannt, zu entwickeln. Einem Programm das man in einem bestimmten Sektor einer Diskette oder Partition liegt, und vom PC direkt nach der Ausführung des BIOS geladen und ausgeführt wird.
+Der Weg zum eigenen Betriebsystem ist lang und steinig. Viele versuchen als erstes einen eigenen [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record"), auch Bootsektor genannt, zu entwickeln. Einem Programm das man in einem bestimmten Sektor einer Diskette oder Partition liegt, und vom PC direkt nach der Ausführung des BIOS geladen und ausgeführt wird.
 
 In diesem Tutorial wollen wir so ein Programm entwickeln und testen. Dieses Programm wird nicht viel können, außer etwas Text auszugeben, auf eine Tastatureingabe zu warten und anschliessend das System neu zu starten.
 
@@ -268,6 +268,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 2696; parent 2380; 2008-03-22T16:40:13Z -->
+<!-- MediaWiki page 1427; revision 2931; parent 2696; 2008-05-08T11:55:13Z -->
