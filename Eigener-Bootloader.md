@@ -14,13 +14,13 @@ Was brauchen wir um unser erstes Programm zu realisieren. Einen Editor , einen A
 
 ### Der Editor
 
-Fürs erste reicht jeder beliebige Text Editor. Unter Windows z.B. Notepad. Von Vorteil ist es, wenn der Editor Syntaxhighlighting für Assembler Dateien unterstützt wie z.B. Notepad 2, Ultraedit, Proton ... Für LINUX gilt das gleiche hier gibt es auch jede menge brauchbarer Editoren die unseren Ansprüchen genügen.
+Fürs erste reicht jeder beliebige Text Editor. Unter Windows z.B. Notepad. Von Vorteil ist es, wenn der Editor Syntaxhighlighting für Assembler Dateien unterstützt wie z.B. Notepad 2, Ultraedit, Proton ... Für LINUX gilt das gleiche hier gibt es auch jede Menge brauchbarer Editoren die unseren Ansprüchen genügen.
 
 ### Der Assembler
 
-Der Assembler ist das Tool, mit dem wir unseren Quelltext in eine dem PC verständliche Sprache übersetzen. Der Assemblerquelltext ist für viele Menschen zwar auch nicht gerade verständlich. Der PC kann damit aber auch noch nichts anfangen. Daher übersetzt der Assembler unser geschriebenes in einen von Maschinen ausführbaren Programmcode.
+Der Assembler ist das Tool, mit dem wir unseren Quelltext in eine dem PC verständliche Sprache übersetzen. Der Assemblerquelltext ist für viele Menschen zwar auch nicht gerade verständlich. Der PC kann damit aber auch noch nichts anfangen. Daher übersetzt der Assembler unser Geschriebenes in einen von Maschinen ausführbaren Programmcode.
 
-Als Assembler verwenden wir den Netwide Assembler kurz NASM. Er ist für dass was wir vorhaben eine gute Wahl. Außerdem existiert er sowohl für Windows als auch für Linux und steht unter der LGPL. NASM ist ein Sourceforge Projekt und kann unter der untenstehenden URL bezogen werden.
+Als Assembler verwenden wir den Netwide Assembler kurz NASM. Er ist für das, was wir vorhaben, eine gute Wahl. Außerdem existiert er sowohl für Windows als auch für Linux und steht unter der LGPL. NASM ist ein Sourceforge Projekt und kann unter der untenstehenden URL bezogen werden.
 
 <http://sourceforge.net/projects/nasm>
 
@@ -34,9 +34,9 @@ Auch Bochs unterliegt der LGPL, und ist auf Sourceforge.net erhältlich. Nachste
 
 ## Hello World
 
-Wie bereits erwähnt, unser ersters Programm wird nicht viel anderes machen, als einen Text auszugeben, danach auf eine beliebige Taste zu warten, um dann das System neu zu Starten.
+Wie bereits erwähnt, unser erstes Programm wird nicht viel Anderes machen, als einen Text auszugeben, danach auf eine beliebige Taste zu warten, um dann das System neu zu starten.
 
-Bevor wir anfangen sind noch ein paar Informatioen wichtig. Unser Programm wird im [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record") liegen. Daher muss unser Programm im ersten Sektor einer Parition oder Diskette liegen. Weiter braucht unser Programm eine besondere Kennzeichnung, die Magicnumber (0xAA55). diese muss am Ende des Sektors stehen. Ein Sektor ist übrigens nur 512 Byte gross. Abzüglich der Magicnumber bleiben uns noch 510 Byte für unser Programm. Das ist nich wirklich viel. Und auch mit einer der Gründe wieso wir das Programm in Assembler schreiben und nicht in einer Hochsprache wie z.B. C. Der nächste wichtige Punkt ist, dass das BIOS unseren Sektor an die Absolute Addresse 0x07C00 kopiert und ausführt. Je nach BIOS-Hersteller, kann die Zusammensetzung der Absoluten Addresse aber unterschiedlich aussehen.
+Bevor wir anfangen sind noch ein paar Informatioen wichtig. Unser Programm wird im [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record") liegen. Daher muss unser Programm im ersten Sektor einer Parition oder Diskette liegen. Weiter braucht unser Programm eine besondere Kennzeichnung, die Magicnumber (0xAA55). Diese muss am Ende des Sektors stehen. Ein Sektor ist übrigens nur 512 Byte groß. Abzüglich der Magicnumber bleiben uns noch 510 Byte für unser Programm. Das ist nicht wirklich viel. Und auch mit einer der Gründe wieso wir das Programm in Assembler schreiben und nicht in einer Hochsprache wie z.B. C. Der nächste wichtige Punkt ist, dass das BIOS unseren Sektor an die absolute Addresse 0x07C00 kopiert und ausführt. Je nach BIOS-Hersteller kann die Zusammensetzung der absoluten Addresse aber unterschiedlich aussehen.
 
 ### Assembler Direktiven
 
@@ -57,9 +57,9 @@ So nun zu unserem Programm. Das Programm beginnt mit folgenden Zeilen.
 
 \</asm\>
 
-Die ersten Zeilen beginnen mit einem Semikolon, und sind somit Kommentarzeilen. Alles was nach einem Semikolon steht wird vom Assembler nachher beim Übersetzen (assemblieren) nicht berücksichtigt.
+Die ersten Zeilen beginnen mit einem Semikolon, und sind somit Kommentarzeilen. Alles was nach einem Semikolon steht wird vom Assembler nachher beim Übersetzen (Assemblieren) nicht berücksichtigt.
 
-Die darauffolgenden beiden Zeilen enthalten Anweisungen an den Assembler selber (Assembler Direktiven). Die Zeile \[BITS 16\] gibt an, das es sich bei diesem Programm um eine 16 Bit Programm handelt. Dadurch wird die Addressierung für den Realmode festgelegt. Die Zeile \[ORG 0x0000\] ist für die Speicherorganisation zuständig. Im Realmode lässt sich damit der Offset festlegen, ab dem die Addressierung beginnen soll. In unseremfalle 0.
+Die darauffolgenden beiden Zeilen enthalten Anweisungen an den Assembler selber (Assembler Direktiven). Die Zeile \[BITS 16\] gibt an, das es sich bei diesem Programm um ein 16 Bit Programm handelt. Dadurch wird die Addressierung für den Realmode festgelegt. Die Zeile \[ORG 0x0000\] ist für die Speicherorganisation zuständig. Im Realmode lässt sich damit der Offset festlegen, ab dem die Addressierung beginnen soll. In unseremfalle 0.
 
 ### Start Code
 
@@ -81,11 +81,11 @@ Die darauffolgenden beiden Zeilen enthalten Anweisungen an den Assembler selber 
 
 \</asm\>
 
-Die Erste Zeile enthlält ein Label. Die Befehle die nach dem Label START folgen, sind für die Initialisierung des Stacks, der Segmentregister und des Instruktion Pointers. Wie bereits erwähnt, ist die absolute Addresse an die unser Programm vom BIOS kopiert wird zwar gleich, kann aber von BIOS Hersteller zu Hersteller unterschiedlich realisiert werden. Daher bringen wir sie erst einmal in einen definierten Zustand, mit dem wir weiterarbeiten können.
+Die erste Zeile enthält ein Label. Die Befehle, die nach dem Label START folgen, sind für die Initialisierung des Stacks, der Segmentregister und des Instruktion Pointers. Wie bereits erwähnt, ist die absolute Addresse an die unser Programm vom BIOS kopiert wird zwar gleich, kann aber von BIOS Hersteller zu Hersteller unterschiedlich realisiert werden. Daher bringen wir sie erst einmal in einen definierten Zustand, mit dem wir weiterarbeiten können.
 
 Data Segment, Extra Segment Code Segment und Stack Segment werden alle auf das gleiche Segment gelegt. Hört sich jetzt erst einmal gefährlich an, Code- und Stack Segment in den gleichen Speicher zu legen. Da der Stack aber von oben nach unten wächst, und unser Programm um unteren Ende des Segements liegt ist da genug Platz dazwischen.
 
-Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, machen wir den Umweg über AX. Mit dem ersten MOV Befehl wird AX mit der Segmentadresse 0x07C0 Initallisiert, die anschliessend mit den nächsten 3 MOV Befehlen den einzelnen Segmentregistern DS, ES und SS zugewiesen wird. Der Stackpointer wird anschliessend mit dem letzten MOV auf den höchst möglichen Wert gesetzt, damit dieser von oben nach unten wachsen kann. Der letzte Befehl ist ein Absoluter Sprung (JMP für jump), mit dem DS und IP neu gesetzt werden. DS wird dabei auf 0x07C0 gesetzt, IP auf die Addresse die dem Label Main vom Assembler zugewiesen wird. Wir kennen den absoluten Wert nicht, nur den Platzhalter dafür. Aber das ist nicht schlimm, der Assembler ersetzt beim assemblieren die Platzhalter durch die zugehörigen Addressen.
+Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, machen wir den Umweg über AX. Mit dem ersten MOV Befehl wird AX mit der Segmentadresse 0x07C0 initallisiert, die anschliessend mit den nächsten 3 MOV Befehlen den einzelnen Segmentregistern DS, ES und SS zugewiesen wird. Der Stackpointer wird anschliessend mit dem letzten MOV auf den höchst möglichen Wert gesetzt, damit dieser von oben nach unten wachsen kann. Der letzte Befehl ist ein absoluter Sprung (JMP für jump), mit dem DS und IP neu gesetzt werden. DS wird dabei auf 0x07C0 gesetzt, IP auf die Addresse die dem Label Main vom Assembler zugewiesen wird. Wir kennen den absoluten Wert nicht, nur den Platzhalter dafür. Aber das ist nicht schlimm, der Assembler ersetzt beim Assemblieren die Platzhalter durch die zugehörigen Addressen.
 
 ### Hauptprogramm
 
@@ -268,6 +268,6 @@ Termite 18:11, 16. Sep 2006 (CEST)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 2931; parent 2696; 2008-05-08T11:55:13Z -->
+<!-- MediaWiki page 1427; revision 2932; parent 2931; 2008-05-09T11:20:10Z -->
