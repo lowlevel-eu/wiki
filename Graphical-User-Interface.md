@@ -24,7 +24,7 @@ Hier wird erklärt, was eine GUI ausmacht
 
 ### Fenster
 
-Meistens ist ein Fenster ein Rechteck. Dieser kann verschoben werden. Ein Fenster kann geschlossen, minimiert oder die Größe kann verändert werden. Meistens stellt ein Fenster ein Programm dar. Es können mehrere Fenster von Programm abstammen.
+Meistens ist ein Fenster ein Rechteck. Dieses kann verschoben werden. Ein Fenster kann geschlossen, minimiert oder die Größe kann verändert werden. Meistens stellt ein Fenster ein Programm dar. Es können mehrere Fenster von einem Programm abstammen.
 
 ### Drag and Drop
 
@@ -32,10 +32,10 @@ Bei Drag and Drop wird ein Bild verschoben.
 
 ### Maus
 
-Die Maus wird meistens als Zeiger dargestellt und wird mit ein speziellen Gerät bedient. Diese Technik hat sich zum defacto von GUIs gemausert.
+Die Maus wird meistens als Zeiger dargestellt und wird mit ein speziellen Gerät bedient. Diese Technik hat sich zum defacto Standart von GUIs gemausert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2890; parent 2883; 2008-04-02T13:42:35Z -->
+<!-- MediaWiki page 1511; revision 2933; parent 2890; 2008-05-10T11:31:20Z -->
