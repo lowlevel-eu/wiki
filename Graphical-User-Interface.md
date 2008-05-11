@@ -32,10 +32,10 @@ Bei Drag and Drop wird ein Bild verschoben.
 
 ### Maus
 
-Die Maus wird meistens als Zeiger dargestellt und wird mit ein speziellen Gerät bedient. Diese Technik hat sich zum defacto Standart von GUIs gemausert.
+Die Maus wird meistens als Zeiger dargestellt und wird mit einem speziellen Gerät bedient. Diese Technik hat sich zum De-facto-Standard von GUIs gemausert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2934/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2933; parent 2890; 2008-05-10T11:31:20Z -->
+<!-- MediaWiki page 1511; revision 2934; parent 2933; 2008-05-11T11:36:02Z -->
