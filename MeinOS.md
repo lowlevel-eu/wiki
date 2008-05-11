@@ -10,9 +10,9 @@
 | Plattform: | x86 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
+| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), Nativ |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing (syncron/asyncron), RPC (synchron) |
 | Homepage |  |
 
 <http://jgraef.bplaced.net/meinos/>
@@ -22,40 +22,47 @@ meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#
 
 ## Entwicklung
 
-Im Moment werden einige Kernel-Funktionen noch vollendet und es müssen noch viele Treiber geschrieben werden. Einige Programme/Bibliotheken müssen auch noch getestet werden
+Im Moment arbeite ich am [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Dort müssen noch ein paar Fehler gefixt werden. Dann müssen die Treiber von DMA, PCI und CMOS noch so umprogrammiert werden, dass sie mithilfe eines Servers arbeiten. Danach werde ich die CDI-Implementation (bis auf cdi.net) vervollständigen und Ext2 portieren.
 
-### Komplett (oder noch in Arbeit)
+### Komplett (oder so gut wie komplett)
 
 - Kernel
-  - Memorymanagement (todo: noch nicht ganz fertig)
+  - Memorymanagement
   - Multiprocessor-Kompatibilität (todo: noch nicht vollständig)
   - Taskmanagement
   - IPC (Message Passing)
   - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Kompatibilität
   - Signals (todo: Kernel-Schnittstelle)
-  - Timer-Schnittstelle
+  - Timer/IRQ-Schnittstelle
 
 <!-- -->
 
 - Server
-  - Keyboard-Server
-  - Console-Server
+  - Keyboard-Server (todo: an neues RPC anpassen)
+  - Console-Server (todo: an neues DevFS anpassen)
   - COM-Server
   - Floppy-Server (mit CDI ist das ja kein Problem mehr)
-  - Filesystem-Server (noch in Arbeit)
+  - Filesystem-Server
+  - DevFS
 
 <!-- -->
 
 - Bibliotheken
-  - libmeinos (enthält cmos, devfs, DMA, IPC, PCI
-  - stdlibc (natürlich noch nicht komplett)
+  - libmeinos
+    - CMOS
+    - DevFS
+    - DMA
+    - FS
+    - IPC
+    - Linked List
+    - PCI
+  - stdlibc (noch nicht komplett)
   - libcdi (cdi.net noch nicht implementiert; testen wäre angebracht)
 
 ### Planung
 
 - Init-Task (Initialisierung aller Treiber und des Login-Programms)
 - Shell (eventuell Portierung einer vorhandenen Shell)
-- devfs (FS-Treiber für /dev)
 - Ext2-Treiber
 - eventuell pipefs (Für Named Pipes ohne "richtiges" FS, dass Named Pipes unterstützt)
 - Einige kleine Programme (cp, mv, rm, mkfile, cat, echo, usw.)
@@ -83,6 +90,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2897; parent 2842; 2008-04-06T15:01:07Z -->
+<!-- MediaWiki page 1551; revision 2935; parent 2897; 2008-05-11T14:28:19Z -->
