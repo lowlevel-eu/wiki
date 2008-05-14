@@ -20,6 +20,7 @@ Die Installation von Cygwin gestaltet sich recht einfach. Bei der Installation m
 
 - Devel -\> gcc
 - Devel -\> make
+- Web -\> wget
 
   
 
@@ -31,7 +32,11 @@ TODO
 
 # binutils
 
-Die GNU-binutils beinhalten unter anderem den Linker ld, den Assembler as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind strengn genommen auch Bestandteil des Cross-Compilers, da sie auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.18 ausgegangen. Er müsste aber auch für jüngere und ältere Versionen funktionieren. Nach dem Herunterladen muss das Archiv entpackt werden:
+Die GNU-binutils beinhalten unter anderem den Linker ld, den Assembler as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind streng genommen auch Bestandteil des Cross-Compilers, da sie auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.18 ausgegangen:
+
+    $ wget http://ftp.gnu.org/gnu/binutils/binutils-2.18.tar.bz2
+
+Er müsste aber auch für jüngere und ältere Versionen funktionieren. Nach dem Herunterladen muss das Archiv entpackt werden:
 
     $ tar -xjf binutils-2.18.tar.bz2
 
@@ -102,6 +107,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2597/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2937/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 2597; parent 2596; 2008-02-21T17:46:17Z -->
+<!-- MediaWiki page 1628; revision 2937; parent 2597; 2008-05-14T11:24:21Z -->
