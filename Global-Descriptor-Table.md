@@ -39,8 +39,15 @@ Der Access-Byte:
 | 6 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
 | 7 | Accessed bit | Sollte 0 gesetzt werden, wird dann vom Prozessor bei Zugriff gesetzt. |
 
+Die Flags:
+
+| Bit | Name | Bedeutung |
+| ----- | ----------------- | ---------------------------------------------------------------------------- |
+| 0 | Granularity bit | Bei 0 wird als Einheit bei Limit ein Byte benutzt, bei 1 stattdessen 4 KiB |
+| 1 | Size bit | 0 bedeuted 16 bit protected mode, bei 1 32 bit protected mode. |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 2940; parent 0; 2008-05-15T17:38:41Z -->
+<!-- MediaWiki page 1661; revision 2942; parent 2940; 2008-05-15T17:44:36Z -->
