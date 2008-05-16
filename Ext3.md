@@ -15,6 +15,6 @@ Ein ext3-Dateisystem ist eigentlich ein ext2-Dateisystem mit einer Erweiterung. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1660/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2946/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1660/index.html)
 
-<!-- MediaWiki page 1660; revision 2939; parent 0; 2008-05-15T16:53:29Z -->
+<!-- MediaWiki page 1660; revision 2946; parent 2939; 2008-05-16T17:39:04Z -->
