@@ -10,7 +10,6 @@ Ein Link zur Dokumentation der Funktionsprototypen, Strukturen, Enumerationen, u
 
 - [LOST](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "LOST")
 - [meinOS](https://github.com/lowlevel-eu/wiki/wiki/MeinOS "MeinOS")
-- [lightOS](https://github.com/lowlevel-eu/wiki/wiki/LightOS "LightOS")
 
 ## Weblinks
 
@@ -18,6 +17,6 @@ Ein Link zur Dokumentation der Funktionsprototypen, Strukturen, Enumerationen, u
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2757/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2947/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 2757; parent 2688; 2008-03-22T17:54:13Z -->
+<!-- MediaWiki page 1622; revision 2947; parent 2757; 2008-05-18T18:18:33Z -->
