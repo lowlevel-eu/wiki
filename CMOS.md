@@ -279,6 +279,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2910/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2949/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 2910; parent 2690; 2008-04-14T14:31:10Z -->
+<!-- MediaWiki page 1562; revision 2949; parent 2910; 2008-05-24T15:00:04Z -->
