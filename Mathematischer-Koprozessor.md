@@ -8,6 +8,6 @@ Ein mathematischer Koprozessor (oder FPU (**F**loating **P**oint **U**nit)ist ei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2700/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1601/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2951/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1601/index.html)
 
-<!-- MediaWiki page 1601; revision 2700; parent 2428; 2008-03-22T16:44:05Z -->
+<!-- MediaWiki page 1601; revision 2951; parent 2700; 2008-05-24T15:09:39Z -->
