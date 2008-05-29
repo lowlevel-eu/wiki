@@ -1,6 +1,6 @@
 # Ext2
 
-Das ext2-Dateisystem (ext steht für extended) war bis vor ein paar Jahren das Standarddateisystem unter Linux und anderen Unix-Derivaten, bis es durch ext3 oder andere Journaling-Dateisysteme ersetzt wurde.
+Das ext2-Dateisystem (ext steht für extended) war bis vor ein paar Jahren das Standarddateisystem unter Linux und anderen Unix-Derivaten, bis es durch [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder andere Journaling-Dateisysteme ersetzt wurde.
 
 # Aufbau
 
@@ -15,6 +15,6 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2960/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
 
-<!-- MediaWiki page 1617; revision 2823; parent 2819; 2008-03-25T03:31:25Z -->
+<!-- MediaWiki page 1617; revision 2960; parent 2823; 2008-05-29T16:31:55Z -->
