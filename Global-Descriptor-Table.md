@@ -48,6 +48,6 @@ Die Flags:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 2942; parent 2940; 2008-05-15T17:44:36Z -->
+<!-- MediaWiki page 1661; revision 2962; parent 2942; 2008-05-29T18:26:21Z -->
