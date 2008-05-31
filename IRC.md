@@ -89,6 +89,7 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 - Sollte das passieren, ist Autorejoin verboten.
 - Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
 - Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anderswertig zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
+- Bei der Codierung des Clients ist darauf zu achten, dass UTF8 benutzt wird, da nicht alle Clients sauber umgehen können, mit mehreren Codierungen
 
 ## Channel-Logs
 
@@ -100,6 +101,6 @@ Momentan nicht verfügbar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2965/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 2912; parent 2911; 2008-04-14T18:12:34Z -->
+<!-- MediaWiki page 1463; revision 2965; parent 2912; 2008-05-31T19:31:01Z -->
