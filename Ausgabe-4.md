@@ -269,6 +269,70 @@ Warum genau man die Einträge des Root-Directorys im Bootsektor genau festlegen 
 
 Bis hier her ist es wohl eine Menge Zeug, das man sich einpauken musste. Jedoch ist es nicht ganz so kompliziert. Da wir aber dennoch ein bisschen Mathematik benötigen, um die Startsektoren von FAT-Tabelle, Root-Directory und den eigentlichen Datensektoren ausfindig zu machen, stelle ich hier noch schnell die wichtigsten Formeln bereit, wie man diese berechnen kann.
 
+### Lange Dateinamen
+
+Ein langer Dateiname (also mehr als nur 8+3 Zeichen) wird realisiert indem man VOR dem Eintrag des kurzen Namens (8.3) ein oder mehrere Spezialeinträge macht. Diese sind wie folgt aufgebaut:
+
+OffsetBytesBezeichnung
+
+------------------------------------------------------------------------
+
+0x001 ByteFortlaufende Nummer
+
+    Bit 0-5 = Nummer  (von n bis 1)
+    Bit 6   = Erster Eintrag
+
+------------------------------------------------------------------------
+
+0x0110 ByteDie ersten 5 Zeichen des Namens (Unicode)
+
+------------------------------------------------------------------------
+
+0x0B1 Byte0x0F (Attribute)
+
+------------------------------------------------------------------------
+
+0x0C1 Byte0x00
+
+------------------------------------------------------------------------
+
+0x0D1 ByteChecksumme des kurzen Dateinamens
+
+------------------------------------------------------------------------
+
+0x0E12 ByteDie nächsten 6 Zeichen (Unicode)
+
+------------------------------------------------------------------------
+
+0x1A2 Byte0x00
+
+------------------------------------------------------------------------
+
+0x1C4 ByteWeitere 2 Namenszeichen (Unicode)
+
+Die **Fortlaufende Nummer** beginnt bei den Eintrag vor dem kurzen Namen mit 1. Anhand des ersten Eintrages ist also abzulesen, wie viele Spezialeinträge noch kommen, bis der eigentliche Eintrag kommt. Der 1. Spezialeintrag ist daran zu erkennen, dass das 6.Bit gesetzt ist, und das Attribute-byte 0x0F ist.
+
+Beispiel:
+
+|  |  |  |  |  |  |  |  |
+| --------------- | --------- | ------ | ------ | ---------------- | ---------- | ------ | ------ |
+| 0x42 | "ng na" | 0x0F | 0x00 | \*checksumme\* | "me 1.t" | 0x00 | "xt" |
+| 0x01 | "file " | 0x0F | 0x00 | \*checksumme\* | "with a" | 0x00 | "lo" |
+| "FILEWI~1TXT" | ... |  |  |  |  |  |  |
+
+Hier hat die Datei FILEWI~1TXT den langen Namen "file with a long name 1.txt" Zu beachten ist, das bei dem langen Dateinamen der Punkt mitgeschrieben werden muss
+
+Die **Checksumme** wird wie folgt errechnet:
+
+    uint_8 checksum(const char *shortfilename)
+    {
+     uint_8 i=0;
+     uint_8 s=0;
+     
+     for(; i<8+3; i++) s = ((s & 1) << 7) + (s >> 1) + shortfilename[i];
+     return s;
+    }
+
 ## Cool OS Features
 
 Dies ist eine Übersetzung des Artikels "Cool OS Features" von Tim Robinson, gefunden in der Newsgroup alt.os.development.
@@ -346,6 +410,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2968/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 2672; parent 2005; 2008-03-22T16:11:50Z -->
+<!-- MediaWiki page 1424; revision 2968; parent 2672; 2008-06-02T13:10:47Z -->
