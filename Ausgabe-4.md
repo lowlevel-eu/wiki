@@ -186,7 +186,8 @@ Bei dem Feld DIR_Name gibt es ein paar Besonderheiten, die man beachten sollte.
 
 1.  Ist das erste Zeichen des Namens ein 0x0E, dann ist dieser Eintrag noch frei und kann benutzt werden.
 2.  Ist das erste Zeichen des Namens ein 0x00, dann ist dieser und die folgenden Einträge frei und können genutzt werde. Dabei kann man sich dann im Falle des Durchsuchens des Verzeichnisses sparen, die nächsten Einträge ebenfalls noch durchzuschauen.
-3.  Wie oben schon erwähnt, wird hier der 8+3 Dateiname gespeichert. Der Punkt wird jedoch nicht mitgespeichert, sondern wird von dem Programm, das die Einträge auflistet, bei der Ausgabe selbst mit eingefügt.
+3.  Ist das erste Zeichen des Namens ein 0xE5, dann ist dieser Eintrag gelöscht worden (bzw zum überschreiben freigegeben worden).
+4.  Wie oben schon erwähnt, wird hier der 8+3 Dateiname gespeichert. Der Punkt wird jedoch nicht mitgespeichert, sondern wird von dem Programm, das die Einträge auflistet, bei der Ausgabe selbst mit eingefügt.
 
 Und auch müssen die unbenutzten Zwischenräume mit Leerzeichen aufgefüllt werden. Beispiel:
 
@@ -410,6 +411,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2968/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 2968; parent 2672; 2008-06-02T13:10:47Z -->
+<!-- MediaWiki page 1424; revision 2969; parent 2968; 2008-06-02T13:15:03Z -->
