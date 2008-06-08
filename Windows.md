@@ -13,7 +13,7 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid Kernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): |  |
 | API: | WinAPI |
-| Binärformat: | Portable Exuctable |
+| Binärformat: | Portable Executable |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
 | Homepage |  |
 
@@ -47,6 +47,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2974/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2891; parent 2878; 2008-04-05T15:34:04Z -->
+<!-- MediaWiki page 1558; revision 2974; parent 2891; 2008-06-08T14:24:47Z -->
