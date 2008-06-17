@@ -31,6 +31,7 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
     
   IO Ports: Diese Informationen befinden sich in 3 Dateien (PORTS.A, PORTS.B und PORTS.C) in diesem Zip Archiv [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)  
     
+- [FAT12/16](http://members.inode.at/anton.zechner/az/FatFormat.htm) - Das FAT12/16 Kurz und verständlich.
 
 ## ARM
 
@@ -79,6 +80,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2986/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 2985; parent 2724; 2008-06-17T16:08:26Z -->
+<!-- MediaWiki page 1437; revision 2986; parent 2985; 2008-06-17T21:12:45Z -->
