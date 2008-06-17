@@ -272,10 +272,10 @@ Wenn man es soweit geschafft hat und man ein "Welcome to Protected Mode" auf dem
 Wie üblich kann dieser Text frei kopiert, gedruckt und weitergegeben werden, solange wenigstens mein Name, sowei E-Mail Adresse mitgereicht werden.
 
   
-Hier noch das Packet an Tools und Quelltexten: [cKernel.zip](http://www.jay-code.de/files/ckernel.zip)
+Hier noch das Packet an Tools und Quelltexten: [ckernel.zip](http://lowlevel.brainsware.org/wiki/images/ckernel.zip)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2980/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2984/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 2980; parent 2885; 2008-06-09T17:50:53Z -->
+<!-- MediaWiki page 1458; revision 2984; parent 2980; 2008-06-17T06:27:12Z -->
