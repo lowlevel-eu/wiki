@@ -32,6 +32,14 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
   IO Ports: Diese Informationen befinden sich in 3 Dateien (PORTS.A, PORTS.B und PORTS.C) in diesem Zip Archiv [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)  
     
 
+## ARM
+
+- [ARM Architecture Reference Manual](http://www.arm.com/miscPDFs/14128.pdf)
+- [\[1\]](http://infocenter.arm.com/help/index.jsp)
+- [Building Bare-Metal ARM Systems with GNU](http://www.embedded.com/design/opensource/200000632?_requestid=64661)
+- [ARM PrimeCell Color LCD Controller (PL110)](http://www.kmcguire.org/doku.php?id=arm:arm_primecell_color_lcd_controller_pl110)
+- [\[2\]](http://www.kmcguire.org/doku.php?id=arm:tinkering)
+
 ## Lowlevel-Tutorials
 
 ### Alte Tutorialseite
@@ -71,6 +79,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2724/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 2724; parent 2366; 2008-03-22T17:08:34Z -->
+<!-- MediaWiki page 1437; revision 2985; parent 2724; 2008-06-17T16:08:26Z -->
