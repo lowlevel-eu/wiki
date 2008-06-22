@@ -8,7 +8,7 @@ Unmittelbar nachdem die Kontrolle von Grub an den Kernel übergeben wurde, sind 
 
 |  |  |
 | ---------- | -------------------------------------------------------------------------------------------- |
-| EAX | Beinhaltet magicnumber 0x1BADB002 |
+| EAX | Beinhaltet magicnumber 0x2BADB002 |
 | EBX | Pointer zur Multiboot-Structure |
 | CS | Ein Codesegment mit der Basisadresse 0 und der Größe 0xFFFFFFFF |
 | DS | Ein Datensegment mit der Basisaddresse 0 und der Größe 0xFFFFFFFF |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2952/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2952; parent 2898; 2008-05-24T15:10:18Z -->
+<!-- MediaWiki page 1560; revision 2987; parent 2952; 2008-06-22T13:04:06Z -->
