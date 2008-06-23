@@ -16,7 +16,7 @@ Ein Pagedirectory enthält 1024 Eintrage a 4 Byte. Ein Pagedirectory-Eintrag kan
 | ----------- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Pagetable | Verf. | G | S | 0 | A | C | W | U | R | P |
 
-Verf.: Diese Bits sind frei verfügbar. Sie können z.B genutzt werden um Pages zu markieren die zwar nicht im Speicher liegen, aber auf einen Swapmedium existieren.
+Verf.: Diese Bits sind frei verfügbar. Sie können z.B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswaped werden können, und/oder um Pages zu makieren, die nicht ausgelagert werden dürfen.
 
 G: Wird ignoriert
 
@@ -32,7 +32,7 @@ U: Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur
 
 R: Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann nur die Page nur gelesen werden.
 
-P: Gibt an ob die Page im Speicher liegt.
+P: Gibt an ob die Page im Speicher liegt. Ist das Bit gelöscht(Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden.
 
 ## Page-Tables
 
@@ -80,6 +80,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physikalischen Sp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2988/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2988; parent 2739; 2008-06-23T01:01:20Z -->
+<!-- MediaWiki page 1496; revision 2989; parent 2988; 2008-06-23T10:03:03Z -->
