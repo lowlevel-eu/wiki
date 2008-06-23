@@ -27,7 +27,7 @@ Der **Programmable Interrupt Controller** (**PIC**) empfängt Unterbrechungsanfo
 
   
 ¹ IRQ ist die eigentliche IRQ-Nummer. IRQ0-IRQ7 gehören zur ersten PIC, IRQ8-IRQ15 zur zweiten.  
-² IVT ist die Standard Interrupt Nummer auf der [Interrupt Vector Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "Interrupt Vector Table") des real mode nach dem booten.
+² IVT ist die Standard Interrupt Nummer auf der [Interrupt Vector Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "Interrupt Vector Table") des [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") nach dem booten.
 
 ## Spurious Interrupt
 
@@ -40,6 +40,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 2736; parent 2528; 2008-03-22T17:20:17Z -->
+<!-- MediaWiki page 1465; revision 2991; parent 2736; 2008-06-23T13:04:47Z -->
