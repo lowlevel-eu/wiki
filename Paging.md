@@ -54,16 +54,12 @@ Zu beachten ist, dass bei einer Änderung des Page-Directory oder einer Page-Tab
 
 ## Speicher mappen
 
-Um nun eine beliebige physikalische Adresse auf eine beliebige virtuelle Adresse zu mappen muss man erst den richtigen Eintrag im Pagedirectory und dann den richtigen Eintrag im Pagetable. Dann setze ich die physikalische Page im Pagetable-Eintrag. Es wird immer von virtuell nach physikalisch zugeordnet, d.h wenn ich 0xB8000(phys.) auf 0x123000(virt.) mappen will, muss ich erst den Pagedirectory- und Pagetable-Eintrag von 0x123000 berechnen. Das geht am besten so:
+Um eine beliebige physikalische Adresse auf eine beliebige virtuelle Adresse zu mappen, muss man erst den richtigen Eintrag im Pagedirectory und den in der Pagetable berechnen um schließlich die physikalische Page(mit den passenden Flags) in der Pagetable eintragen zu können. Es wird immer von virtuell nach physikalisch zugeordnet, d.h wenn man 0xB8000(phys.) auf 0x12345000(virt.) mappen will, muss man erst den Pagedirectory- und Pagetable-Eintrag von 0x12345000 berechnen. Das geht am besten so:
 
-    page ist die virtuelle Page
-    pde ist der Pagedirectory-Eintrag
-    pte ist der Pagetable-Eintrag
+    Pagedirectory_Eintrag =  virtuelle_adresse >> 22           (= 0x48)
+    Pagetable_Eintrag     = (virtuelle_adresse >> 12) % 1024   (= 0x345)
 
-    pde = page/1024
-    pte = page%1024
-
-Nun suche ich erst die Adresse des Pagetables (im Pagedirectory an der Stelle *pde* schauen. Jetzt habe ich die Adresse des Pagetables. Nun muss ich nur noch an der Stelle *pte* im Pagetable meine physikalische Adresse eintragen und schon ist die Page gemappt.
+Nun suche man erst die Adresse der Pagetable (im eben berechneten *Pagedirectory_Eintrag* schauen). **Achtung:** Es handelt sich hier um die physikalische adresse. Mit der Adresse der Pagetable kann man jetzt in den *Pagetable_Eintrag* die physikalische Adresse eintragen, die passenden Flags setzen und schon ist die Page gemappt.
 
 ## In physikalischen Speicher schreiben
 
@@ -80,6 +76,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physikalischen Sp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2989; parent 2988; 2008-06-23T10:03:03Z -->
+<!-- MediaWiki page 1496; revision 2990; parent 2989; 2008-06-23T10:45:53Z -->
