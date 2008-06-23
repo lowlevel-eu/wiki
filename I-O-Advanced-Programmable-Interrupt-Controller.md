@@ -4,7 +4,9 @@ Die **I/O APIC** (= **I/O Advanced Programmable Interrupt Controller**) löst de
 
 ## Programmierung
 
-Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) und ein Datenregister (*I/O Window* bzw. *IOWIN*). Das Indexregister befindet sich an Offset 0x0000 im Speicherbereich der I/O APIC und das Datenregister an Offset 0x0010. Beide sind les- und schreibbar. Mit dem Indexregister wählt man ein internes Register der I/O APIC aus und kann dann über das Datenregister das interne Register auslesen bzw. beschreiben.
+Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) und ein Datenregister (*I/O Window* bzw. *IOWIN*). Das Indexregister befindet sich an Offset 0x00 und das Datenregister an Offset 0x10 im Speicherbereich des I/O APIC, der bei 0xfec00xy00¹ beginnt. Beide sind les- und schreibbar. Mit dem Indexregister wählt man ein internes Register der I/O APIC aus und kann dann über das Datenregister das interne Register auslesen bzw. beschreiben.
+
+¹x und y werden mit dem APICBASE Register im PIIX3 festgelegt.
 
 ## Weblinks
 
@@ -13,6 +15,6 @@ Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) u
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2531/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2992/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 2531; parent 2333; 2008-01-02T18:12:52Z -->
+<!-- MediaWiki page 1574; revision 2992; parent 2531; 2008-06-23T13:19:45Z -->
