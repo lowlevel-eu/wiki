@@ -20,19 +20,19 @@ Verf.: Diese Bits sind frei verfügbar. Sie können z.B. genutzt werden um Pages
 
 G: Wird ignoriert
 
-S: Gibt die Größe der Page an. 0 steht für 4kB, 1 für 4MB.
+S: Gibt die Größe der Page an. 0 steht für 4kB, 1 für 4MB (oder 2MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4MB-Pages) oder PAE-Bit (2MB-Pages) gesetzt ist.
 
 A: Wird von der CPU gesetzt, wenn das Pagetable benutzt wurde. Diese Bit wird allerdings nicht von der CPU zurückgesetzt.
 
-C: Wenn dieses Bit gesetzt ist, wird die Page nicht gecachet.
+C: Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt.
 
 W: Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt.
 
-U: Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0
+U: Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0.
 
 R: Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann nur die Page nur gelesen werden.
 
-P: Gibt an ob die Page im Speicher liegt. Ist das Bit gelöscht(Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden.
+P: Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden.
 
 ## Page-Tables
 
@@ -50,11 +50,15 @@ D: Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Die
 
 ## Translation Lookaside Buffer
 
-Zu beachten ist, dass bei einer Änderung des Page-Directory oder einer Page-Table, der TLB (Translation Lookaside Buffer) invalidiert werden muss, sonst können unerwartete Ereignisse auftreten. Man invalidiert den TLB mit "invlpg \<address\>". Wobei \<address\> eine beliebige Adresse im RAM ist, der TLB, der zugehörigen Page, wird dann invalidiert.
+Der Prozessor benutzt für das Auflösen der virtuellen Adressen eine Art Cache für die zuletzt benutzten Pages, den sogenannten *Translation Lookaside Buffer* oder TLB. Für den Programmierer spielt dieser TLB dann eine Rolle, wenn das Mapping einer Page geändert wird, aber der Prozessor möglicherweise noch die alte physische Adresse im TLB behalten hat.
+
+Daher ist zu beachten, dass bei einer Änderung des Page Directory oder einer Page Table der TLB *invalidiert* werden muss (d.h. der entsprechende Eintrag wird aus dem TLB gelöscht). Versäumt man diese Invalidierung, äußert sich das im Allgemeinen erst später durch völlig unerwartete Ereignisse. Diese Fehler sind extrem schwer zu debuggen, da scheinbar auf die richtige Speicheradresse zugegriffen wird, aber in Wirklichkeit mit falschen Werten gearbeitet wird.
+
+Man invalidiert den TLB mit "invlpg \<address\>". Wobei \<address\> eine virtuelle Adresse innerhalb der von der Änderung betroffenen Page ist. invlpg ist ab dem 486 vorhanden. Beim Neuladen des [Steuerregisters](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR3 wird der TLB ebenfalls komplett geleert (Achtung, das geht natürlich auf die Performance).
 
 ## Speicher mappen
 
-Um eine beliebige physikalische Adresse auf eine beliebige virtuelle Adresse zu mappen, muss man erst den richtigen Eintrag im Pagedirectory und den in der Pagetable berechnen um schließlich die physikalische Page(mit den passenden Flags) in der Pagetable eintragen zu können. Es wird immer von virtuell nach physikalisch zugeordnet, d.h wenn man 0xB8000(phys.) auf 0x12345000(virt.) mappen will, muss man erst den Pagedirectory- und Pagetable-Eintrag von 0x12345000 berechnen. Das geht am besten so:
+Um eine beliebige virtuelle Adresse auf eine beliebige physische Adresse zu mappen, muss man erst den richtigen Eintrag im Page Directory und in der Page Table berechnen um schließlich die physikalische Page(mit den passenden Flags) in der Pagetable eintragen zu können. Es wird immer von virtuell nach physikalisch zugeordnet, d.h wenn man 0xB8000(phys.) auf 0x12345000(virt.) mappen will, muss man erst den Pagedirectory- und Pagetable-Eintrag von 0x12345000 berechnen. Das geht am besten so:
 
     Pagedirectory_Eintrag =  virtuelle_adresse >> 22           (= 0x48)
     Pagetable_Eintrag     = (virtuelle_adresse >> 12) % 1024   (= 0x345)
@@ -76,6 +80,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physikalischen Sp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2990; parent 2989; 2008-06-23T10:45:53Z -->
+<!-- MediaWiki page 1496; revision 2997; parent 2990; 2008-06-24T17:41:51Z -->
