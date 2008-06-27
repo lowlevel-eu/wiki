@@ -30,6 +30,6 @@ Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Gra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2889/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 2889; parent 2841; 2008-04-02T13:37:07Z -->
+<!-- MediaWiki page 1641; revision 3002; parent 2889; 2008-06-27T17:42:50Z -->
