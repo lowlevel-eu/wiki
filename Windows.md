@@ -31,13 +31,15 @@ Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssy
 
 ## Design
 
-### Kernel
+=== NT-Linie
 
-Über das Design von Windows (ich beziehe mich hier ausschließlich auf die Windows NT Linie) ist relativ wenig bekannt, da von Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den Kernel von Windows betrifft. Ursprünglich war Windows als Mikrokernel geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der GUI als Ring-0 Applikationen ausgeführt, genauso wie andere Teile. (mittlerweile - in Vista - werden die Grafiktreiber wieder als Ring-3 Prozesse angesehen) Deshalb entspricht Windows nicht mehr den Kriterien von Mikrokernel-Systemen. Daher wird Windows gemeinhin als Hybridkernel betrachtet.
+#### Kernel
 
-### API
+Über das Design von Windows ist relativ wenig bekannt, da von Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") als Ring-0 Applikationen ausgeführt, genauso wie andere Teile. (mittlerweile - in Vista - werden die Grafiktreiber wieder als Ring-3 Prozesse angesehen) Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als Hybridkernel betrachtet.
 
-Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert ist, und der WinAPI(kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, das .NET Framework. .NET Framework war usrprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr Managed Code ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt.
+#### API
+
+Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert ist, und der WinAPI(kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, das .NET Framework. .NET Framework war ursprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr Managed Code ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt. === MS-DOS Linie
 
 ## Links
 
@@ -47,6 +49,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2974/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 2974; parent 2891; 2008-06-08T14:24:47Z -->
+<!-- MediaWiki page 1558; revision 3011; parent 2974; 2008-06-28T15:57:27Z -->
