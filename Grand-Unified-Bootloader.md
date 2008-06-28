@@ -1,8 +1,8 @@
 # Grand Unified Bootloader
 
-Grub ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer Bootloader aus dem GNU Hurd Projekt. Grub wird unter der [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") vertrieben.
+Grub ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") aus dem GNU Hurd Projekt. Grub wird unter der [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") vertrieben.
 
-Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich wenn man keinen eigenen Bootloader entwickeln will.
+Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich wenn man keinen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") entwickeln will.
 
 ## Funktionen
 
@@ -24,6 +24,6 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich wenn man keinen ei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3016/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 2763; parent 2704; 2008-03-22T17:59:55Z -->
+<!-- MediaWiki page 1567; revision 3016; parent 2763; 2008-06-28T16:18:20Z -->
