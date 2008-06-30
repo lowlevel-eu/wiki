@@ -39,7 +39,7 @@ Das Betriebsystem wird den Protected Mode in seinem vollen Umfang unterstützen.
 
 ### Multitasking
 
-Es werden mehrere Programme gleichzeitig ausgeführt werden können, um genau zu sein laut jetzigem Stand 65335. Das ganze wird reines Software-Multitasking, und ist somit für die Zukunft (Long Mode) gerüstet. In der finalen Version soll auch ein Prioritätenmodell zur Verfügung stehen.
+Es werden mehrere Programme gleichzeitig ausgeführt werden können. Das ganze wird reines Software-Multitasking, und ist somit für die Zukunft (Long Mode) gerüstet. In späteren Versionen soll auch ein Prioritätenmodell zur Verfügung stehen.
 
 ### Notkonsole
 
@@ -62,6 +62,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2884/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 2884; parent 2881; 2008-04-01T18:03:27Z -->
+<!-- MediaWiki page 1451; revision 3018; parent 2884; 2008-06-30T10:27:45Z -->
