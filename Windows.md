@@ -31,7 +31,7 @@ Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssy
 
 ## Design
 
-=== NT-Linie
+### NT-Linie
 
 #### Kernel
 
@@ -39,7 +39,7 @@ Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssy
 
 #### API
 
-Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert ist, und der WinAPI(kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, das .NET Framework. .NET Framework war ursprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr Managed Code ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt. === MS-DOS Linie
+Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert ist, und der WinAPI(kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, das .NET Framework. .NET Framework war ursprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr Managed Code ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt.
 
 ## Links
 
@@ -49,6 +49,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3017/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3011; parent 2974; 2008-06-28T15:57:27Z -->
+<!-- MediaWiki page 1558; revision 3017; parent 3011; 2008-06-30T10:25:21Z -->
