@@ -6,10 +6,10 @@ ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Window
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Mehrere](http://www.reactos.org/wiki/index.php/People_of_ReactOS#Project_Roles) |
-| Akt. Version: | 0.3.4 |
+| Akt. Version: | 0.3.5 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: |  |
+| Plattform: | x86 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") komformer Hybridkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 | API: | WinAPI |
@@ -64,6 +64,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 3001; parent 2880; 2008-06-27T17:41:55Z -->
+<!-- MediaWiki page 1421; revision 3024; parent 3001; 2008-07-08T18:06:38Z -->
