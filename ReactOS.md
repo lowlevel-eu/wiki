@@ -29,6 +29,8 @@ Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Proje
 
 ReactOS steht unter der GNU GPL, ist also Open Source.
 
+Aktuell wird der Produktiveinsatz von den Entwickeln nicht empfohlen, da ReactOS sehr instabil ist. Zwar ist die neueste Version(0.3.5) viel stabiler als die Vorgängerversion (0.3.4), aber immernoch sehr absturzgefährded.
+
 ## Kompatibilität
 
 Da sich ReactOS noch in einer relativ frühen Version befindet, ist eine 100%ige Kompatibilität natürlich nicht gewährleistet. Dennoch laufen bereits etliche Anwendungen unter ReactOS, darunter OpenOffice, MS Office, Firefox, Photoshop, das Visual Studio, einige OpenGL Spiele, usw.
@@ -64,6 +66,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 3024; parent 3001; 2008-07-08T18:06:38Z -->
+<!-- MediaWiki page 1421; revision 3026; parent 3024; 2008-07-09T11:11:08Z -->
