@@ -12,11 +12,11 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 | ------ | ------------ | ------------------- |
 | 0 | Limit | 0-7 |
 | 1 | Limit | 8-15 |
-| 3 | Base | 0-7 |
-| 4 | Base | 8-15 |
-| 5 | Base | 16-23 |
-| 6 | Accessbyte | 0-7 (vollständig) |
-| 7 | Flags | 0-3 (vollständig) |
+| 2 | Base | 0-7 |
+| 3 | Base | 8-15 |
+| 4 | Base | 16-23 |
+| 5 | Accessbyte | 0-7 (vollständig) |
+| 6 | Flags | 0-3 (vollständig) |
 | 7 | Limit | 16-19 |
 | 8 | Base | 24-31 |
 
@@ -48,6 +48,6 @@ Die Flags:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 2962; parent 2942; 2008-05-29T18:26:21Z -->
+<!-- MediaWiki page 1661; revision 3027; parent 2962; 2008-07-09T12:51:08Z -->
