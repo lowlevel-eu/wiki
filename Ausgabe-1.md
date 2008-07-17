@@ -140,14 +140,15 @@ Der Code am Stück
        mov bx, 0
        
        ; Sektoren lesen (Interrupt 13h, 2)
-       mov ah, 2       ; Funktion 2 (Lesen)
-       mov al, 5       ; Lese 5 Sektoren
-       mov cx, 2       ; Cylinder=0, Sector=2
-       mov dx, 0       ; Head=0, Laufwerk=0
-       int 13h         ; ES:BX =  Daten vom Laufwerk
-       jc load1        ; Fehler? Noch mal!
+       mov ah, 2         ; Funktion 2 (Lesen)
+       mov al, 5         ; Lese 5 Sektoren
+       mov cx, 2         ; Cylinder=0, Sector=2
+       mov dh, 0         ; Head=0
+       mov dl, [bootdrv] ; Laufwerk aus Vorgabe
+       int 13h           ; ES:BX =  Daten vom Laufwerk
+       jc load1          ; Fehler? Noch mal!
        mov si,loadmsg
-       call putstr     ; Meldung ausgeben
+       call putstr       ; Meldung ausgeben
        retn
        
        times 512-($-$$)-2 db 0   ; Dateilänge: 512 Bytes
@@ -580,6 +581,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 2956; parent 2925; 2008-05-27T20:19:40Z -->
+<!-- MediaWiki page 1412; revision 3028; parent 2956; 2008-07-17T16:12:59Z -->
