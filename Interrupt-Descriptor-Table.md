@@ -6,7 +6,7 @@
 
 Die IDT kann maximal 256 Interruptgates beinhalten, da es nur 256 Interrupts gibt. Ein Interruptgate in der IDT ist 8 Byte groß und sieht folgendermaßen aus:
 
-| 63-48 | 47 | 46-45 | 44 | 43 | 42-40 | 39-32 | 31-24 | 16-0 |
+| 63-48 | 47 | 46-45 | 44 | 43 | 42-40 | 39-32 | 31-16 | 15-0 |
 | -------------- | --------- | ------- | ----- | ----- | ------------- | ------- | ---------- | ------------- |
 | Offset 31-16 | Present | DPL | 0 | D | Type (110b) | 0 | Selektor | Offset 0-15 |
 
@@ -44,6 +44,6 @@ Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse eines Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 2796; parent 2779; 2008-03-24T19:35:48Z -->
+<!-- MediaWiki page 1603; revision 3029; parent 2796; 2008-07-18T12:35:35Z -->
