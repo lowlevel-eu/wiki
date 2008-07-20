@@ -52,10 +52,10 @@ datasel equ \$-gdt
       db 0xCF           ; Zusatzinformationen und Segmentgrösse 16...19
       db 0x00           ; Segmentadresse 24..31
 
-gdt_end\</asm\>
+gdt_end:\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 2782; parent 2747; 2008-03-23T01:21:51Z -->
+<!-- MediaWiki page 1537; revision 3030; parent 2782; 2008-07-20T06:13:34Z -->
