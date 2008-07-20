@@ -94,7 +94,7 @@ Hier folgt nun der Aufbau des Boot Sectors. Dieser wird in einer Tabelle dargest
 | TotSec | 19 | 2 | Die Anzahl aller Sektoren, die auf der Diskette vorhanden sind. Bei einer 3,5" 1,44 MB-Diskette sind das 2880 Sektoren. 1,44 MB sind 1440 KB (die Hersteller multiplizieren immer mit 1000 und nicht 1024). 1440 KB sind 1474560 Bytes (diesmal mal 1024). 147560 Bytes geteilt durch 512 Bytes (1 Sektor) ergibt 2880 Sektoren. |
 | MediaType | 21 | 1 | Hier wird der Wert eingetragen, anhand dem erkannt wird, um was für einen Typ es sich bei diesem Datenträger handelt. 0xF0 ist der Wert für Diskette. |
 | FATSize | 22 | 2 | Hier steht die Anzahl der Sektoren, die eine FAT-Tabelle belegt (man erinnere, es gibt meistens ZWEI). Der Wert bei einer 1,44 MB-Diskette ist 9. Wie man auf den Wert kommt, erläutere ich im Abschnitt über die FAT-Tabelle.<br> |
-| SecPerTrack | 24 | 2 | Die Anzahl der Sektoren pro Track. Track wird auch als Cylinder bezeichnet. Dieser Wert ist für den Interrupt 13h wichtig, da dieser die Sektoren über CHS adressiert. Der Wert für eine 1,44 MB Diskette ist \*\*\* (N/A). |
+| SecPerTrack | 24 | 2 | Die Anzahl der Sektoren pro Track. Track wird auch als Cylinder bezeichnet. Dieser Wert ist für den Interrupt 13h wichtig, da dieser die Sektoren über CHS adressiert. Der Wert für eine 1,44 MB Diskette ist 18. |
 | NumHeads | 26 | 2 | Die Anzahl der Köpfe. Auch diese Angabe wird vom Interrupt 13h benötigt, um die Sektoren nach CHS adressieren zu können. Bei einer 1,44 MB-Diskette ist der Wert 2. |
 | HiddenSec | 28 | 4 | Die Anzahl der versteckten Sektoren. Wozu es nützlich wäre, versteckte Sektoren zu haben, weiß ich im Moment nicht, weshalb man hier den Wert 0 eintragen sollte. |
 | TotSec32 | 32 | 4 | Dieser Eintrag ist nur für einen FAT32-formatierten Datenträger wichtig. Da wir uns aber auf FAT12 konzentrieren, tragen wir hier 0 ein. |
@@ -411,6 +411,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 2969; parent 2968; 2008-06-02T13:15:03Z -->
+<!-- MediaWiki page 1424; revision 3031; parent 2969; 2008-07-20T18:04:24Z -->
