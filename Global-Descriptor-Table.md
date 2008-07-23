@@ -31,13 +31,13 @@ Der Access-Byte:
 
 | Bit | Name | Bedeutung |
 | -------- | ------------------------------ | --------------------------------------------------------------------------------------------- |
-| 0 | present bit | Muss 1 für einen aktiven Eintrag sein |
-| 1 u. 2 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
-| 3 | 1 | Ist 1 |
-| 4 | Executable bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
-| 5 | Direction bit/Conforming bit | Abhängig vom Executable bit |
-| 6 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
-| 7 | Accessed bit | Sollte 0 gesetzt werden, wird dann vom Prozessor bei Zugriff gesetzt. |
+| 7 | present bit | Muss 1 für einen aktiven Eintrag sein |
+| 6 u. 5 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
+| 4 | 1 | Ist 1 |
+| 3 | Executable bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
+| 2 | Direction bit/Conforming bit | Abhängig vom Executable bit |
+| 1 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
+| 0 | Accessed bit | Sollte 0 gesetzt werden, wird dann vom Prozessor bei Zugriff gesetzt. |
 
 Die Flags:
 
@@ -48,6 +48,6 @@ Die Flags:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 3027; parent 2962; 2008-07-09T12:51:08Z -->
+<!-- MediaWiki page 1661; revision 3033; parent 3027; 2008-07-23T15:12:54Z -->
