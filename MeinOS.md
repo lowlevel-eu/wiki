@@ -12,7 +12,7 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), Nativ |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing (syncron/asyncron), RPC (synchron) |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | RPC (synchron), Message Queues (SysV), Semaphores (SysV), Shared Memory (SysV), Signale |
 | Homepage |  |
 
 <http://jgraef.bplaced.net/meinos/>
@@ -22,7 +22,7 @@ meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#
 
 ## Entwicklung
 
-Im Moment arbeite ich am [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Dort müssen noch ein paar Fehler gefixt werden. Dann müssen die Treiber von DMA, PCI und CMOS noch so umprogrammiert werden, dass sie mithilfe eines Servers arbeiten. Danach werde ich die CDI-Implementation (bis auf cdi.net) vervollständigen und Ext2 portieren.
+Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Bereichen Speicherverwaltung (u.a. dynamischerer Speicherallokator für den Kernel, wodurch nun Linked Lists im Kernel benutzt werden können), Prozessverwaltung und IPC. Kernel2 unterstützt nun die SysV-IPC-Methoden, RPC und Signale. Im Moment werden die Bibliotheken an die neuen Systemfunktion angepasst.
 
 ### Komplett (oder so gut wie komplett)
 
@@ -90,6 +90,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 2935; parent 2897; 2008-05-11T14:28:19Z -->
+<!-- MediaWiki page 1551; revision 3034; parent 2935; 2008-07-27T19:54:59Z -->
