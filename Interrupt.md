@@ -17,8 +17,12 @@ Interrupts können mithilfe von *sti* und *cli* eingeschaltet bzw. ausgeschaltet
 - [Interprocessor Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "Interprocessor Interrupt")
 - [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")
 
+## Links
+
+[Liste von BIOS-Interupts](http://www.cs.cmu.edu/afs/cs/user/ralf/pub/WWW/files.html)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 2797; parent 2764; 2008-03-24T19:36:02Z -->
+<!-- MediaWiki page 1596; revision 3040; parent 2797; 2008-08-04T20:41:15Z -->
