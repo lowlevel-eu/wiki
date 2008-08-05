@@ -1,6 +1,6 @@
 # Kernel
 
-Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentraler Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt. Bekannte Betriebssystemkernel sind u.a. der Linux-Kernel oder NTOSKRNL ([Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT Kernel).
+Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentraler Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt. Bekannte Betriebssystemkernel sind u.a. der [Linux-Kernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") oder NTOSKRNL ([Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT Kernel).
 
 ## Aufgaben eines Kernels
 
@@ -34,6 +34,6 @@ Beim Exokernel gibt es keine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hard
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 3044; parent 3043; 2008-08-05T16:06:56Z -->
+<!-- MediaWiki page 1478; revision 3045; parent 3044; 2008-08-05T16:07:53Z -->
