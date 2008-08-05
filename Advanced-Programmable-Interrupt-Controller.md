@@ -13,6 +13,6 @@ Der APIC(**A**dvanced **P**rogrammable **I**nterupt **C**ontroller) sorgt für d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
 
-<!-- MediaWiki page 1584; revision 3049; parent 2524; 2008-08-05T20:21:04Z -->
+<!-- MediaWiki page 1584; revision 3050; parent 3049; 2008-08-05T20:21:35Z -->
