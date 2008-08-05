@@ -1,6 +1,6 @@
 # Advanced Programmable Interrupt Controller
 
-Der APIC(**A**dvanced **P**rogrammable **I**nterupt **C**ontroller) sorgt für die Verteilung der Interupts auf x86-Systemen und aus zwei Teilen:
+Der APIC(**A**dvanced **P**rogrammable **I**nterrupt **C**ontroller) sorgt für die Verteilung der Interupts auf x86-Systemen und aus zwei Teilen:
 
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
 - [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
@@ -13,6 +13,6 @@ Der APIC(**A**dvanced **P**rogrammable **I**nterupt **C**ontroller) sorgt für d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
 
-<!-- MediaWiki page 1584; revision 3050; parent 3049; 2008-08-05T20:21:35Z -->
+<!-- MediaWiki page 1584; revision 3052; parent 3050; 2008-08-05T20:22:12Z -->
