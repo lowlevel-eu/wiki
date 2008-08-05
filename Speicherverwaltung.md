@@ -19,7 +19,7 @@ Dabei wird eine Bitmap der Größe *Speichergröße / (Größe einer Speichersei
 Um eine Speicherseite zu allozieren wird die Bitmap solange durchsucht, bis man ein Bit mit dem Wert 0 gefunden hat. Dieses Bit setzt man dann auf 1, um anzuzeigen, dass diese Speicherseite ab jetzt belegt ist. Dann errechnet man anhand der Position dieses Bits in der Bitmap die Adresse der Speicherseite. Anschließend kann man die Adresse an die aufrufende Funktion zurückgeben.  
 Zum Freigeben einer Speicherseite muss nur die Bitposition aus der physischen Adresse berechnet werden und anschließend das Bit an der errechneten Position auf 0 gesetzt werden.
 
-#### Implementationsvorschläge
+#### Implementierungsvorschläge
 
 - Wenn man sich die Bitposition der zuletzt allozierten/freigegebenen Speicherseite merkt, kann man zumindest im Normalfall das Allozieren von Speicherseiten beschleunigen.
 - Wenn man beim Allozieren gleich 32 bzw 64 Bit mit dem Wert 0xFFFFFFFF bzw. 0xFFFFFFFFFFFFFFFF vergleicht, kann man mit einem Vergleich gleich 32 bzw. 64 Speicherseiten ausschließen.
@@ -40,7 +40,7 @@ Die Adressen der Speicherseiten werden hierbei auf einen Stack gelegt.
 Zum Allozieren einer Speicherseite wird einfach die Adresse, die ganz oben auf dem Stack liegt, genommen. Anschließend wird der Zeiger auf das Stackende angepasst.  
 Das Freigeben einer Speicherseite exakt umgekehrt zur Allokation.
 
-#### Implementationsvorschlag
+#### Implementierungsvorschlag
 
 Der Speicher, der für den Stack benutzt wird, wird aus den Speicherseiten, die auf den Stack gelegt werden sollen, erstellt. Dies kann folgendermaßen implementiert werden: Beim Start des Kernels ist der Stack erstmal leer. Desweiteren ist nur ein virtueller und kein physikalischer Speicherbereich für den Stack reserviert. Anschließend geht man die freien Speicherbereiche durch und legt jede freie Speicherseite auf den Stack. Da der Stack bei der ersten Speicherseite noch keinen Speicherbereich hat, nimmt man einfach diese Seite und blendet in den virtuellen Adressraum an der Adresse des Stacks ein. Anschließend können die Adressen einiger Speicherseiten auf den Stack gelegt werden, solange bis wieder kein Speicher vorhanden ist. Dann wird einfach die nächste Speicherseite, die auf den Stack gelegt werden soll, in den virtuellen Adressraum ein. Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten, die in den virtuellen Adressraum engeblendet waren, wieder freigeben, falls dieser Speicherbereich nicht mehr vom Stack selbst benötigt wird. Somit verbraucht der Stack im Prinzip "keinen" Speicher.
 
@@ -61,13 +61,13 @@ Wenn keine so große Page mehr frei ist, wird sofort der nächste Eintrag ausgew
 
 #### Allokation & Freigabe von Speicherseiten
 
-#### Implementationsvorschlag
+#### Implementierungsvorschlag
 
 #### Eigenschaften
 
 \+ Schnelle Reservierung von Speicherseiten  
 + Schnelle Freigabe von Speicherseiten  
-- Recht komplizierte Implementation  
+- Recht komplizierte Implementierung  
 
 ### Fazit
 
@@ -79,11 +79,11 @@ Die **virtuelle Speicherverwaltung** befindet sich eine Schicht über der [physi
 
 Die virtuelle Speicherverwaltung übernimmt in einem Multiprozessorsystem auch die Aufgabe die virtuellen Adressräume über mehrere Prozessoren hinweg konsistent zu halten (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")).
 
-### Implementation von malloc()/free()
+### Implementierung von malloc()/free()
 
 Es gibt verschiedene Möglichkeiten malloc() bzw. free() zu implementieren. Eine Möglichkeit ist es vor den Speicherblöcken Header anzulegen, die die Länge, Flags (wie z.B ob der Block frei ist) und gegenfalls einen Pointer auf den nächsten freien Block beinhalten. Zum Anfang sind keine freien Blöcke vorhanden. Es wird vom Kernel eine Page angefordert. Nun wird ein Header an den Anfang der Page gesetzt. Wenn nun malloc() aufgerufen wird, wird der Block aufgeteilt und ein Teilblock als benutzt markiert. Bei einem Aufruf von free() wird der Block als frei markiert und in die Liste der freien Blöcke eingefügt. Wenn benachbarte Blöcke auch frei sind, werden diese zusammengefügt. Wenn man nun eine ganze Page hat, die als frei markiert ist, kann sie vom Kernel freigegeben werden oder aufgehoben werden, bis sie wieder gebraucht wird.
 
-Man kann auch eine der freien malloc()/free() Implementationen portieren:
+Man kann auch eine der freien malloc()/free() Implementierungen portieren:
 
 - [The HOARD Memory Allocator](http://www.hoard.org/) ([GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"))
 - [Doug Lea's Malloc (dlmalloc)](http://g.oswego.edu/dl/html/malloc.html) ([Public Domain](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"))
@@ -94,6 +94,6 @@ Man kann auch eine der freien malloc()/free() Implementationen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 3035; parent 2982; 2008-07-30T14:39:03Z -->
+<!-- MediaWiki page 1591; revision 3041; parent 3035; 2008-08-05T07:41:51Z -->
