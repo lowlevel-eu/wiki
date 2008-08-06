@@ -131,8 +131,27 @@ Wer seinen C-Kernel nach meiner Methode (Siehe C-Kernel Tut) startet, der kann d
 
 [Download](http://www.jay-code.de/files/a20gate.asm)
 
+## Einschalten mittel System Control Port A
+
+Es gibt noch eine zweite Möglichkeit das A20 Gate zu aktivieren. Sie wurde erst später eingeführt, ist dementsprechend nicht auf jedem System verfügbar. Man benutzt dafür Port 0x92. Der Code dafür lautet: \<asm\>in al, 0x92 or al, 02 out 0x92, al \</asm\> Bei dieser Variante sei allerdings gesagt, dass sie immer wieder zu Problemen führt. Oft treten Bildprobleme auf oder es kommt zu Systemabstürzen. Sie ist allerdings bei weitem schneller als die Variante mittels KBC.
+
+## Einschalten über das BIOS
+
+Es gibt sogar noch eine dritte Möglichkeit das A20 Gate zu aktiveren. Vorallem neuere Bios besitzen diese Möglichkeit. Dafür benutzt man INT 15h und AX=2401. Hier eine Kleine Tabelle:
+
+INT 15h AX=2400 --\> A20 auschalten  
+INT 15h AX=2401 --\> A20 einschalten  
+INT 15h AX=2402 --\> Status abfragen (AL: 0 --\> aus; AL: 1 --\> an)  
+INT 15h AX=2403 --\> Support abfragen (BX bit 0: kbc; bit 1: Port 0x92)  
+
+Wenn Erfolgreich: CF nicht gesetzt, AH = 00h  
+Bei Fehler: CF gesetzt, AH=Status  
+
+Status: 01h Keyboard im Secure Mode  
+86h Funktion wird nicht unterstützt
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2886/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 2886; parent 2665; 2008-04-01T19:28:14Z -->
+<!-- MediaWiki page 1462; revision 3054; parent 2886; 2008-08-06T15:29:15Z -->
