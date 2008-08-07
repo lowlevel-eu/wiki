@@ -19,10 +19,10 @@ Interrupts können mithilfe von *sti* und *cli* eingeschaltet bzw. ausgeschaltet
 
 ## Links
 
-[Liste von BIOS-Interupts](http://www.cs.cmu.edu/afs/cs/user/ralf/pub/WWW/files.html)
+[Liste von BIOS-Interrupts](http://www.cs.cmu.edu/afs/cs/user/ralf/pub/WWW/files.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 3040; parent 2797; 2008-08-04T20:41:15Z -->
+<!-- MediaWiki page 1596; revision 3055; parent 3040; 2008-08-07T18:59:55Z -->
