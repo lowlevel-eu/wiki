@@ -101,6 +101,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physischen Speich
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3065/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 2999; parent 2998; 2008-06-24T18:47:19Z -->
+<!-- MediaWiki page 1496; revision 3065; parent 2999; 2008-08-10T12:15:44Z -->
