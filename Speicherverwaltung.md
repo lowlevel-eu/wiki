@@ -53,11 +53,7 @@ o Das Freigeben einer Speicherseite ist in konstanter Zeit möglich. (konstante 
 
 ### Buddy
 
-Beim Buddy Verfahren wird der Speicher unterteilt in einzelnen Bitmaps.  
-In diesen Bitmaps wird dann nach einer passenden Page durchsucht. Typische Größen einer Page sind 4 KB, 2 MB und 4 MB.  
-Der Vorteil, den dieses Verfahren mit sich bringt ist eindeutig die Geschwindigkeit.  
-So werden immer einzelne Einträge geprüft, ob irgendwo dort der benötigte Speicher, z.B. 4MB, frei ist.  
-Wenn keine so große Page mehr frei ist, wird sofort der nächste Eintrag ausgewählt und geprüft.  
+Beim Buddy Verfahren wird der Speicher unterteilt in einzelnen Bitmaps. In diesen Bitmaps wird dann nach einer passenden Page durchsucht. Typische Größen einer Page sind 4 KB, 2 MB und 4 MB. Der Vorteil, den dieses Verfahren mit sich bringt ist eindeutig die Geschwindigkeit. So werden immer einzelne Einträge geprüft, ob irgendwo dort der benötigte Speicher, z.B. 4MB, frei ist. Wenn keine so große Page mehr frei ist, wird sofort der nächste Eintrag ausgewählt und geprüft.
 
 #### Allokation & Freigabe von Speicherseiten
 
@@ -94,6 +90,6 @@ Man kann auch eine der freien malloc()/free() Implementierungen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 3041; parent 3035; 2008-08-05T07:41:51Z -->
+<!-- MediaWiki page 1591; revision 3071; parent 3041; 2008-08-14T14:09:54Z -->
