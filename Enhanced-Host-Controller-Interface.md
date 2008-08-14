@@ -6,6 +6,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2303/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1577/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1577/index.html)
 
-<!-- MediaWiki page 1577; revision 2303; parent 2300; 2007-11-27T16:59:55Z -->
+<!-- MediaWiki page 1577; revision 3124; parent 2303; 2008-08-14T20:45:26Z -->
