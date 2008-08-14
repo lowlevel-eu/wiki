@@ -1,9 +1,17 @@
 # System Management Mode
 
-Dieser Stromsparmodus wurde mit dem Pentium eingeführt. In ihn wird gewechselt, wenn der Prozessor ein bestimmtes Signal über eine seiner vielen Leitungen erhält, es gibt also keinen direkten Befehl für die Umschaltung. Dafür hält der Pentium-Befehlsvorrat einen Befehl bereit, der den Prozessor aus seinem Schlafmodus erweckt.
+Der System Management Mode (SMM) ist ein Betriebsmodus der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessoren, der Systemfunktionen wie das Energie Management verwaltet, um zum Beispiel den Computer in einen Ruhezustand zu versetzen. Er wurde mit Versionen der 386er- und 486er-Prozessoren für Laptops (i386SL bzw. i486SL) eingeführt und steht hinsichtlich der Privilegien der Betriebsmodi über dem [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") und dem [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").
+
+## Wechsel in den SMM
+
+In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den Long Mode gesprungen werden. Die CPU wechselt in den SMM ausschließlich dann, wenn ein System Management Interrupt (SMI) über den SMI#-Pin ausgelöst wird. Das bedeutet, dass dies nicht nur für Anwendungen sondern auch für das Betriebssystem transparent geschieht; beide bekommen davon also nichts mit, ähnlich wie Programme nichts von [Hardware Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") mitbekommen. Wenn ein SMI ausgelöst wird, wird zunächst der Zustand der CPU gespeichert, und dann ein spezieller Interrupt Handler ausgeführt. Dieser befindet sich in einem Adressraum, der in der Regel außerhalb des Zugriffs der anderen Betriebsmodi liegt. Der Rücksprung aus dem Interrupt Handler, geschieht über eine spezielle Instruktion, die analog zu IRET funktioniert.
+
+## Links
+
+[Intel® 64 and IA-32 Architectures Software Developer's Manual, Volume 3B: System Programming Guide - Chapter 24 System Management](http://www.intel.com/products/processor/manuals/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
 
-<!-- MediaWiki page 1699; revision 3146; parent 0; 2008-08-14T21:59:00Z -->
+<!-- MediaWiki page 1699; revision 3158; parent 3146; 2008-08-14T23:49:03Z -->
