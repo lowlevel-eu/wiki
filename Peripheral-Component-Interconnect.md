@@ -1,6 +1,6 @@
 # Peripheral Component Interconnect
 
-**Peripheral Component Interconnect** (kurz **PCI**) ist ein Bus zur leichten Verbindung von Peripheriegeräten mit der CPU.
+**Peripheral Component Interconnect** (kurz **PCI**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur leichten Verbindung von Peripheriegeräten mit der CPU.
 
 ## Konfigurations-Register
 
@@ -256,6 +256,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3070/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3126/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3070; parent 2854; 2008-08-14T14:03:17Z -->
+<!-- MediaWiki page 1626; revision 3126; parent 3070; 2008-08-14T20:47:47Z -->
