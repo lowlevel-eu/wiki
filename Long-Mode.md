@@ -23,6 +23,6 @@ Um in den Long Mode umschalten zu können muss erst einmal der [Protected Mode](
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2979/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 2979; parent 0; 2008-06-09T17:36:40Z -->
+<!-- MediaWiki page 1666; revision 3099; parent 2979; 2008-08-14T18:45:47Z -->
