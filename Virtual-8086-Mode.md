@@ -29,6 +29,6 @@ Da bestimmte Befehle im VM86-Task das restliche Betriebssystem blockieren oder s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2112/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 2112; parent 2111; 2007-09-23T15:10:19Z -->
+<!-- MediaWiki page 1546; revision 3144; parent 2112; 2008-08-14T21:57:49Z -->
