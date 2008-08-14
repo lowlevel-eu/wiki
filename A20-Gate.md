@@ -148,10 +148,14 @@ Wenn Erfolgreich: CF nicht gesetzt, AH = 00h
 Bei Fehler: CF gesetzt, AH=Status  
 
 Status: 01h Keyboard im Secure Mode  
-86h Funktion wird nicht unterstützt
+86h Funktion wird nicht unterstützt  
+
+## Links
+
+- [Wikipedia: A20-Gate](http://de.wikipedia.org/wiki/A20-Gate)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 3152; parent 3054; 2008-08-14T22:17:35Z -->
+<!-- MediaWiki page 1462; revision 3157; parent 3152; 2008-08-14T22:20:00Z -->
