@@ -4,6 +4,11 @@
 
 |  |  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **24.12.2007 :** | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.3.6 ist erschienen. Weitere Informationen gibts auf der [Bochs Homepage](http://bochs.sourceforge.net/). |
+| **29.11.2007 :** | NASM ist in Version 2.00 erschienen. Weitere Informationen gibts auf der [NASM Homepage](http://nasm.sourceforge.net/). |
+| **27.10.2007 :** | Die NASM-Entwicklung geht weiter. Aktueller Entwickler-Stand ist 0.99.05 (17.10.2007). Weiter Informationen gibts auf [SourceForge](http://nasm.sourceforge.net/). |
+| **09.10.2007 :** | Der Linux Kernel 2.6.23 wurde freigegeben. Genaueres über die Änderungen findet sich im [OSNews Artikel](http://osnews.com/story.php/18751/Linux-Kernel-2.6.23-Released/). |
+| **24.09.2007 :** | Die heute freigegebene Version 0.69 des open-source Betriessystems [Visopsys](http://visopsys.org/index.html) behebt laut dem [Changelog](http://visopsys.org/download/changelog.html) viele Bugs, erweitert das USB Subsystem um Maus-, Tastatur- und USB-Hubunterstützung und unterstützt das erkennen von OHCI (=Open Host Controller Interface) USB Controllern. |
 | **16.09.2007 :** | Der Emulator [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") wurde in Version 2.3.5 freigeben. Das Changelog gibt es [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_3_5_FINAL). |
 | **12.09.2007 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.3 wurde zum Download freigeben. Die [ReactOS Newsseite](http://www.reactos.org/en/news_page_37.html) gibt einen groben Überblick über die Änderungen. Genaueres steht im [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.3). |
 | **12.09.2007 :** | QNX hat den Quellcode von ihrem Neutrino Microkernel freigegeben. [Hier](http://community.qnx.com/sf/sfmain/do/home) kann man den Quellcode runterladen. |
@@ -30,6 +35,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 3069; parent 2508; 2008-08-14T13:41:48Z -->
+<!-- MediaWiki page 1416; revision 3129; parent 3069; 2008-08-14T21:06:12Z -->
