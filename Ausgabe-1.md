@@ -500,8 +500,6 @@ Weitere Informationen gibt es im Artikel [Protected Mode](https://github.com/low
 
   
 
-  
-
 #### V86-Mode
 
 Der V86-Mode ist eine Sonderform des Protected Mode. Hier wird der vorhandene Speicher so eingeteilt, dass dem darin laufenden Programm vorgegaukelt wird, es befände sich auf einem 8086, d. h. das Programm kann maximal 1 MB Speicher ansprechen. Tatsächlich können in diesem Modus aber auch Befehle von Prozessoren \> 8086/88 verwendet werden.  
@@ -611,6 +609,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 3147; parent 3137; 2008-08-14T21:59:40Z -->
+<!-- MediaWiki page 1412; revision 3148; parent 3147; 2008-08-14T22:00:31Z -->
