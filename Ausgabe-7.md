@@ -848,7 +848,7 @@ Der Fortschritt ist nicht aufzuhalten, Computer nehmen eine immer größere Bede
 
 ## Bericht ausm Forum
 
-Die Frage, die uns seit längerem beschätigt ist die, wie es nun weiter geht mit dem Lowlevel-Magazin. Dieses Thema wird schon seid einiger Zeit im Forum heftig diskuttiert und man ist zu der Meinung gekommen das man ein Team bildet, welches sich nur zur Aufgabe macht Lowlevel-Magazin Folgen herauszubringen, die qualitativ hochwertig sind und aber auch nicht all zu lange auf sich warten lassen. Ein Mitglied (joachim_neu) hat deswegen schonmal einen Konzept auf die Beine gestellt, welches meiner Meinung doch schon ein recht gutes ist. Zudem denke ich auch, dass es den meisten Mitgliedern im Grossen und Ganzen gefallen hat. Sicherlich lassen sich da noch einige Ã„nderung machen lassen trotzdem ich denke dieses Mitglied hat doch schonmal den Stoss in die richtige Richtung gemacht.
+Die Frage, die uns seit längerem beschäftigt ist die, wie es nun weiter geht mit dem Lowlevel-Magazin. Dieses Thema wird schon seid einiger Zeit im Forum heftig diskutiert und man ist zu der Meinung gekommen das man ein Team bildet, welches sich nur zur Aufgabe macht Lowlevel-Magazin Folgen herauszubringen, die qualitativ hochwertig sind und aber auch nicht all zu lange auf sich warten lassen. Ein Mitglied (joachim_neu) hat deswegen schonmal einen Konzept auf die Beine gestellt, welches meiner Meinung doch schon ein recht gutes ist. Zudem denke ich auch, dass es den meisten Mitgliedern im Grossen und Ganzen gefallen hat. Sicherlich lassen sich da noch einige Änderung machen lassen trotzdem ich denke dieses Mitglied hat doch schonmal den Stoss in die richtige Richtung gemacht.
 
 Während diesen Diskussionen kam man auf die Idee ein Projekt zu machen, in dem Teil für Teil ein Betriebssystem entsteht. Es soll sowohl Neulinge den Weg des OS-Developing zeigen als auch erfahrenen Programmierern vielleicht die ein oder andere Idee für sein eigenes OS geben. Dieses Projekt nannte man "commOS".
 
@@ -918,6 +918,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2771/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 2771; parent 2680; 2008-03-22T19:29:40Z -->
+<!-- MediaWiki page 1494; revision 3140; parent 2771; 2008-08-14T21:43:11Z -->
