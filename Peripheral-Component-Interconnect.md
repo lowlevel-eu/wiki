@@ -1,6 +1,6 @@
 # Peripheral Component Interconnect
 
-Peripheral Component Interconnect (kurz PCI) ist ein Bus zur leichten Verbindung von Peripheriegeräten mit mit der CPU.
+**Peripheral Component Interconnect** (kurz **PCI**) ist ein Bus zur leichten Verbindung von Peripheriegeräten mit der CPU.
 
 ## Konfigurations-Register
 
@@ -256,6 +256,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2854/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3070/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 2854; parent 2592; 2008-03-25T03:54:30Z -->
+<!-- MediaWiki page 1626; revision 3070; parent 2854; 2008-08-14T14:03:17Z -->
