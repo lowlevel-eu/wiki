@@ -152,6 +152,6 @@ Status: 01h Keyboard im Secure Mode
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 3054; parent 2886; 2008-08-06T15:29:15Z -->
+<!-- MediaWiki page 1462; revision 3152; parent 3054; 2008-08-14T22:17:35Z -->
