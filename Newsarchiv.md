@@ -3,7 +3,11 @@
 **Alte News Meldungen hier einfügen**
 
 |  |  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **16.09.2007 :** | Der Emulator [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") wurde in Version 2.3.5 freigeben. Das Changelog gibt es [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_3_5_FINAL). |
+| **12.09.2007 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.3 wurde zum Download freigeben. Die [ReactOS Newsseite](http://www.reactos.org/en/news_page_37.html) gibt einen groben Überblick über die Änderungen. Genaueres steht im [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.3). |
+| **12.09.2007 :** | QNX hat den Quellcode von ihrem Neutrino Microkernel freigegeben. [Hier](http://community.qnx.com/sf/sfmain/do/home) kann man den Quellcode runterladen. |
+| **12.09.2007 :** | AMD hat heute Spezifikationen zu den GPUs RV630 und M56 veröffentlicht. Es sind aber leider "nur" Register Reference Guides, d.h. man findet nur eine insgesamt ungefähr 900 Seiten lange Liste mit Informationen zu den Registern. Unter [\[1\]](http://www.x.org/docs/AMD/) kann man beide Dokumente runterladen. AMD hat auch angekündigt einen open-source Treiber für R500/600 Anfang nächster Woche freizugeben. |
 | **09.09.2007 :** | Die Version 0.1.0 von [HomixOS](https://github.com/lowlevel-eu/wiki/wiki/Xantorix "HomixOS") wurde freigegeben. Erstmals gibt es eine x86 und eine x86-64 Version des Betriebssystems. Die offizielle Homepage ist [hier](http://www.homix-online.de/homixos/). |
 | **03.05.2007 :** | Die erste LOST-Version 0.1.0 wurde freigegeben. Mehr dazu gibts [hier](http://lowlevel.brainsware.org/forum/index.php?topic=1798.0). |
 | **25.04.2007 :** | Linux 2.6.21 wurde freigegeben. Die größten Änderungen betreffen den Timer, um Tickless-Systeme zu unterstützen und Stromsparmodi besser zu nutzen. Außerdem sind einige Erweiterung im Bereich Virtualisierung (KVM) vorgenommen worden. [kernel.org](http://www.kernel.org) |
@@ -17,7 +21,7 @@
 | **11.11.2006 :** | MyEmu 0.2 erscheint [Website](http://myemu.masen-inhabitants.com/) |
 | **25.10.2006 :** | Version 0.64 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. |
 | **22.10.2006 :** | Version 0.52B des 64bit OS [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS") wird veröffentlicht. Einzige Neuerungen sind kleine Verbesserungen am eigenen Browser. [Website](http://www.menuetos.net/) |
-| **20.09.2006 :** | Linus Torvalds gibt den Kernel 2.6.18 frei. Neben etlichen kleinen Änderungen, wurde der Scheduler und die Locking-Mechanismen überarbeitet. [\[1\]](http://www.kernel.org) |
+| **20.09.2006 :** | Linus Torvalds gibt den Kernel 2.6.18 frei. Neben etlichen kleinen Änderungen, wurde der Scheduler und die Locking-Mechanismen überarbeitet. [\[2\]](http://www.kernel.org) |
 | **06.09.2006 :** | [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9") des Lowlevel Magazins erscheint |
 | **03.09.2006 :** | Nach 12 Jahren ist FreeDOS in der Version 1.0 fertig. Es ist fast komplett MS-DOS kompatibel, kennt aber trotzdem Features wie FAT32. [Website](http://www.freedos.org/) |
 | **28.08.2006 :** | Version 0.3.0 des freien Windows Klon [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") ist erschienen [Website](http://www.reactos.org) |
@@ -26,6 +30,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 2508; parent 1942; 2007-12-26T18:50:41Z -->
+<!-- MediaWiki page 1416; revision 3069; parent 2508; 2008-08-14T13:41:48Z -->
