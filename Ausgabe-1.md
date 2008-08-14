@@ -53,7 +53,9 @@ Wenn all dies so funktioniert, wie es sollte, dann kann die Anwendungssoftware g
 
 ### Unser Bootloader
 
-**Warnung: Die meisten aktiven Forenmitglieder raten davon ab einen eigenen Bootloader zu schreiben. Stattdessen wird geraten Grub (relevante Artikel: C-Kernel mit Grub, [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen"), [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5#programmierung-eines-grub-kompatiblen-kernels "Ausgabe 5"), [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")) zu benutzen.**
+**Warnung**
+
+Die meisten aktiven Forenmitglieder raten davon ab einen eigenen Bootloader zu schreiben, da es relativ sinnlos und extrem fehleranfällig ist. Vor allem Neulinge sollten stattdessen lieber zu Grub (relevante Artikel: C-Kernel mit Grub, [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen"), [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5#programmierung-eines-grub-kompatiblen-kernels "Ausgabe 5"), [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")) greifen.
 
 Zuerst einmal sucht das BIOS auf dem ersten Sektor von Diskette und Festplatte nach einer Binärdatei, die genau 512 Bytes (1 Sector) lang ist und am Ende das Wort 0x0AA55 enthält. Jetzt lädt das BIOS unseren Bootloader, wenn es ihn denn gefunden hat, an die Adresse 0x7C00. Damit alles so läuft, wie wir es uns gedacht haben, enthält die erste Zeile unseres Assemblercodes also den Code:
 
@@ -583,6 +585,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 3132; parent 3028; 2008-08-14T21:20:19Z -->
+<!-- MediaWiki page 1412; revision 3137; parent 3132; 2008-08-14T21:31:14Z -->
