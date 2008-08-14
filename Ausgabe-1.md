@@ -480,6 +480,12 @@ In diesem Modus befindet sich der Prozessor nach Einschalten des Rechners oder n
   
 Nach dem Willen von Intel sollte dieser Modus seit dem 80286 nur noch als Sprungbrett für den Protected Mode dienen. Auch wenn ein Pentium III im Real Mode betrieben wird, ist er eigentlich nicht anderes als ein um zusätzliche Register und Befehle erweiterter, dafür aber sehr schneller 8086. Beibehalten wurde dieser Modus also hauptsächlich aus Kompatibilitätsgründen.
 
+**Hinweis:**
+
+Weitere Informationen gibt es im Artikel [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")
+
+  
+
 #### Protected Mode
 
 Der Protected Mode (PM) wurde mit dem 80286 eingeführt und mit dem 80386 das Fundament heutiger moderner Betriebssysteme wie Windows 9x/NT, OS/2 und Linux geschaffen. Erst im PM kann der Prozessor Multitasking, Multihreading, Speicherschutz, Privilegebenen und vieles weitere ermöglichen.  
@@ -488,15 +494,35 @@ Im Gegensatz zum Real Mode sind für die Adressierung völlig andere Speicherstr
   
 An den bisher eingeführten Befehlen ändert sich nichts, dafür sind jede Menge Register und weitere Befehle hinzugekommen, die teilweise nur im PM funktionieren, teilweise nur den Wechsel von Real Mode zu PM vorbereiten.
 
+**Hinweis:**
+
+Weitere Informationen gibt es im Artikel [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
+
+  
+
+  
+
 #### V86-Mode
 
 Der V86-Mode ist eine Sonderform des Protected Mode. Hier wird der vorhandene Speicher so eingeteilt, dass dem darin laufenden Programm vorgegaukelt wird, es befände sich auf einem 8086, d. h. das Programm kann maximal 1 MB Speicher ansprechen. Tatsächlich können in diesem Modus aber auch Befehle von Prozessoren \> 8086/88 verwendet werden.  
   
 Ein gutes Beispiel ist der Treiber EMM386.EXE. Sobald dieser geladen ist, versetzt er den Prozessor in den V86-Mode, mit der Konsequenz, dass das in diesem einen MB laufende Programm DOS selbst ist. Anders wäre die Speicherkontrolle unter Wahrung der Kompatibilität zu älteren Prozessoren nicht zu erreichen. Im Gegensatz zum reinen PM können in diesem Modus also normale Real Mode-Programme laufen.
 
+**Hinweis:**
+
+Weitere Informationen gibt es im Artikel [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode")
+
+  
+
 #### SMM - System Management Mode
 
 Dieser Stromsparmodus wurde mit dem Pentium eingeführt. In ihn wird gewechselt, wenn der Prozessor ein bestimmtes Signal über eine seiner vielen Leitungen erhält, es gibt also keinen direkten Befehl für die Umschaltung. Dafür hält der Pentium-Befehlsvorrat einen Befehl bereit, der den Prozessor aus seinem Schlafmodus erweckt.
+
+**Hinweis:**
+
+Weitere Informationen gibt es im Artikel [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
+
+  
 
 ## Code Corner
 
@@ -585,6 +611,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 3137; parent 3132; 2008-08-14T21:31:14Z -->
+<!-- MediaWiki page 1412; revision 3147; parent 3137; 2008-08-14T21:59:40Z -->
