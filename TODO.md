@@ -12,7 +12,7 @@
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") erstellen und Ideen für RPC aus dem Thread im Forum
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
 - das [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")-Dateiformat erklären
-- Longmode
+- [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
 - Informationen zur AMD PCNet Netzwerkkarte
 - Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
 - [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"): Programmierung, etc...
@@ -30,6 +30,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3138/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 2821; parent 2815; 2008-03-25T03:30:32Z -->
+<!-- MediaWiki page 1518; revision 3138; parent 2821; 2008-08-14T21:37:37Z -->
