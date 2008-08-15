@@ -1,10 +1,10 @@
 # CMOS
 
-Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein elektronischer Baustein, aber im Bereich der Betriebssystemprogrammierung ist damit meistens der Batterie-gepufferte SRAM eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Computers gemeint. In diesem speichert das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") Informationen beispielsweise über die angeschlossene Hardware. Außerdem wird darin die momentane Uhrzeit und das Datum gespeichert und von einer Echtzeituhr aktualisiert.
+Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein elektronischer Baustein, aber im Bereich der Betriebssystemprogrammierung ist damit meistens der Batterie-gepufferte SRAM eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Computers gemeint. In diesem speichert das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") Informationen beispielsweise über die angeschlossene Hardware. Außerdem wird darin die momentane Uhrzeit und das Datum gespeichert und von einer [Echtzeituhr](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock "RTC") aktualisiert.
 
 ## Aufbau
 
-Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* markierten Einträge sind standardmässig im [BCD-Format](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") kodiert.
+Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* markierten Einträge sind standardmässig im [BCD-Format](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") kodiert. Die Kodierung kann aber auch im [Statusregister B](https://github.com/lowlevel-eu/wiki/wiki/CMOS#0x0b---statusregister-b "CMOS") (Bit 2) geändert werden. Dabei ist allerdings zu beachten, dass die momentanen Werte im Register an die neue Kodierung angepasst werden müssen und dies nicht von selbst geschieht.
 
   
 
@@ -218,6 +218,8 @@ Die CMOS-Prüfsumme ist eine 16 Bit grosse, byteweise Summe der Werte der Bytes 
 
 Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")-Maskierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
 
+### Assembler Beispielcode
+
 \<asm\>
 
 Ein Makro um ein Byte aus dem CMOS auszulesen
@@ -235,6 +237,8 @@ Rückgabe ist das gelesene Byte in AL
      in al, 0x71         ;Byte lesen
 
 %endmacro \</asm\>
+
+### C/C++ Beispielcode
 
 \<c\>
 
@@ -279,6 +283,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3201/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3202/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 3201; parent 2949; 2008-08-15T21:26:24Z -->
+<!-- MediaWiki page 1562; revision 3202; parent 3201; 2008-08-15T21:40:37Z -->
