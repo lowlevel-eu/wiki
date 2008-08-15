@@ -1,14 +1,16 @@
 # Hauptseite
 
-****Herzlich willkommen auf dem Wiki der Lowlevel Community!****
+**Herzlich willkommen auf dem Wiki der Lowlevel Community!**
 
   
 
-Hier können angehende und fortgeschrittene Betriebssystementwickler Informationen finden, die sie unterstützen sollen. Der Artikel [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") ist speziell an Neulinge gerichtet und gibt einen kleinen Einblick in die steinige Welt der Betriebssystementwicklung. Ansonsten ist hier vom ersten [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") im Kernel bis zum [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")/[OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS")-Design alles zu finden. Eine strukturierte Übersicht über das Wiki gibt es unter [Portal](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal"). Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](http://lowlevel.brainsware.org/forum/) / [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kund tust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick was noch zu tun ist, bietet die [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit Wünsche/Anregungen für Artikel los zu werden. Dieses Wiki enthält momentan 348 Artikel.
+Hier können angehende und fortgeschrittene Betriebssystementwickler Informationen finden, die sie unterstützen sollen. Der Artikel [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") ist speziell an Neulinge gerichtet und gibt einen kleinen Einblick in die steinige Welt der Betriebssystementwicklung. Ansonsten ist hier vom ersten [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") im Kernel bis zum [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")/[OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS")-Design alles zu finden. Eine strukturierte Übersicht über das Wiki gibt es unter [Portal](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal"). Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](http://lowlevel.brainsware.org/forum/) / [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kund tust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick was noch zu tun ist, bietet die [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit Wünsche und Anregungen für Artikel los zu werden. Dieses Wiki enthält momentan 348 Artikel.
 
 **ACHTUNG**: Es wurde eine Lizenz für die Texte des Wikis vorgeschlagen. Mehr Informationen dazu gibt es hier.
 
-**News**
+  
+
+**News ( [Archiv](https://github.com/lowlevel-eu/wiki/wiki/Newsarchiv "Newsarchiv"))**
 
 |  |  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,42 +37,132 @@ Hier können angehende und fortgeschrittene Betriebssystementwickler Information
 | **14.04.2010 :** | Die Version 4.5 der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") wurde freigegeben. In dieser Version sind erstmals Optimierungen zur Linkzeit (LTO, über die Kommandozeilenoption -flto) enthalten. Außerdem wurde die Unterstützung für Features aus dem nächsten C++-Standard erweitert. Eine detaillierte Übersicht über die Änderungen findet sich [hier](http://gcc.gnu.org/gcc-4.5/changes.html). |
 | **06.03.2010 :** | GRUB 1.98 ist erschienen. [Hier](http://grub.enbug.org/FrontPage?action=show&redirect=StartSeite) gibt es den Sourcecode und mehr Informationen zu GRUB2. |
 
-Ältere Meldungen sind im [Newsarchiv](https://github.com/lowlevel-eu/wiki/wiki/Newsarchiv "Newsarchiv") zu finden.
-
-**Magazin**
-
-- [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2")
-- [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5")
-- [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7")
-- [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8")
-- [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9")
-- [Alle Ausgaben](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")
-
   
 
-**Zentrale Seiten**
+**Übersicht**
 
-- [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger")
-- [Portal](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal")
-- [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials")
+**[OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger")**
+
+- [Grobüberblick](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger")
+- [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")
+- [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")
+- [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen")
+- [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")
+- [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")
+- [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking")
+- [Teil 7 - Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung")
+- [Teil 8 - Ein erstes Programm](https://github.com/lowlevel-eu/wiki/wiki/Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm")
+- [Teil 9 - Paging](https://github.com/lowlevel-eu/wiki/wiki/Teil-9-Paging "Teil 9 - Paging")
+
+**Prozessor**
+
+- [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
+- [Multithreading](https://github.com/lowlevel-eu/wiki/wiki/Multithreading "Multithreading")
+- [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
+  - [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU")
+  - [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")
+    - [IVT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "IVT")
+    - [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")
+  - [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
+    - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")
+    - [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT")
+    - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") & [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS")
+    - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
+    - [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode")
+  - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
+- [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")
+  - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
+- [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")
+
+**[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")**
+
+- [Hardwareabstraktionsschicht](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "Hardware Abstraction Layer")
+- [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
+- [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung")
+- [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
+
+**Für Spaß im Userspace**
+
+- [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
+- [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung")
+- [Systemaufrufe (Syscalls)](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemaufruf")
+- [Virtuelles Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "Virtuelles Dateisystem")
+- [Standardbibliothek](https://github.com/lowlevel-eu/wiki/wiki/Standardbibliothek "Standardbibliothek")
+- [Threads](https://github.com/lowlevel-eu/wiki/wiki/Prozess#threads "Thread") (auch: [pthreads](https://github.com/lowlevel-eu/wiki/wiki/POSIX-Threads "Pthread"))
+- [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")
+- [Software portieren](https://github.com/lowlevel-eu/wiki/wiki/Portieren-von-Programmen-und-Bibliotheken "Portieren von Programmen und Bibliotheken")
+
+**[Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware")**
+
+- [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA")
+- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
+- [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle")
+- [parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle")
+- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")
+- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte")
+  - [Realtek RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")
+  - [AMD PCnet-FAST III](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
+- Grafikkarten
+  - [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")
+  - [Cirrus Logic](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic "Cirrus Logic")
+- [Soundkarten](https://lowlevel-eu.github.io/wiki/pages/1827/index.html "Kategorie:Soundkarte")
+  - [Gameport](https://github.com/lowlevel-eu/wiki/wiki/Gameport "Gameport")
+- IBM PC-spezifisch
+  - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
+  - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
+  - [Diskettenlaufwerk](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")
+  - [PS/2 Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC")
+  - [PS/2 Maus](https://github.com/lowlevel-eu/wiki/wiki/PS-2-Maus "Programmierung der PS/2-Maus")
+  - [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")
+  - [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT")
+  - [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher")
+
+**[Bussysteme](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus")**
+
+- [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")
+- [EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")
+- [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+- [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")
+
+**Hobby-[OS](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")**
+
+- [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota")
+- [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
+- [Xantorix](https://github.com/lowlevel-eu/wiki/wiki/Xantorix "Xantorix")
+- [LF OS](https://github.com/lowlevel-eu/wiki/wiki/LF-OS "LF OS")
+- Weitere: [Kategorie Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
+
+**[Dateisysteme](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")**
+
+- [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")
+- [Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3")
+- [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
+- [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
+- [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS")
+- weitere: [Kategorie:Dateisystem](https://lowlevel-eu.github.io/wiki/pages/1659/index.html "Kategorie:Dateisystem")
+
+**[Sprachen](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache")**
+
+- [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")
+- [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
+- [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
+- [D](https://github.com/lowlevel-eu/wiki/wiki/D "D")
+- [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC")
+- [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal")
+- weitere: [Kategorie:Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache")
+
+**Verschiedenes**
+
 - [Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar")
-- LOST
-- [Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
 - [Linkliste](https://github.com/lowlevel-eu/wiki/wiki/Linkliste "Linkliste")
+- [TODO](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO")
+- [Zitate](https://github.com/lowlevel-eu/wiki/wiki/Zitate "Zitate")
+- [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials")
+- [Literatur](https://github.com/lowlevel-eu/wiki/wiki/Literatur "Literatur")
 - Alle Kategorien
-- [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO")
-
-  
-
-**Community**
-
-- [Lowlevel-Forum](http://lowlevel.brainsware.org/forum)
-- [irc.euirc.net, \#lost](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")
-
-**[Zum Portal des Lowlevel-Wikis](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal")**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3179/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 3178; parent 0; 2008-08-15T12:31:58Z -->
+<!-- MediaWiki page 1712; revision 3179; parent 3178; 2008-08-15T13:05:49Z -->
