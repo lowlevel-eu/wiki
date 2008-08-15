@@ -8,9 +8,12 @@
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
 
-## Stuff and such
+## Magazin ausschlachten
 
-- [Ausgabe 1#Lowlevel-Grundlagen, Teil 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#lowlevel-grundlagen-teil-1 "Ausgabe 1") könnte man bestimmt irgendwie in einem Artikel verwurschteln
+- [Ausgabe 1#Lowlevel-Grundlagen, Teil 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#lowlevel-grundlagen-teil-1 "Ausgabe 1")
+- [Ausgabe 2#OS-Dev-Tutorial, Teil 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#os-dev-tutorial-teil-2 "Ausgabe 2") in [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") einarbeiten
+- [Ausgabe 2#Lowlevel-Grundlagen, Teil 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
+- [Ausgabe 1#Etwas Systemtheorie](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#etwas-systemtheorie "Ausgabe 1") -\> [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") oder so
 
 ## Neu erstellen
 
@@ -35,6 +38,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3151/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3151; parent 3138; 2008-08-14T22:06:33Z -->
+<!-- MediaWiki page 1518; revision 3191; parent 3151; 2008-08-15T14:33:56Z -->
