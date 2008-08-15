@@ -23,12 +23,16 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 - Echtzeit Datenverarbeitung
 - Passt unkomprimiert auf eine einzelne Diskette
 
+## siehe auch
+
+- [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#os-showcase-menuetos "Ausgabe 1")
+
 ## Links
 
 [Offizielle Website](http://www.menuetos.net/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2887/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 2887; parent 2843; 2008-04-01T19:35:13Z -->
+<!-- MediaWiki page 1481; revision 3165; parent 2887; 2008-08-15T09:15:13Z -->
