@@ -2,6 +2,23 @@
 
 TriviaOS ist ein kleines Einmann-Hobby OS und wird von [Nooooooooos](https://lowlevel-eu.github.io/wiki/pages/1457/index.html "Benutzer:Nooooooooos") entwickelt.
 
+| TriviaOS |  |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+|  |  |
+| Entwickler: | [Nooooooooos](https://lowlevel-eu.github.io/wiki/pages/1457/index.html "Benutzer:Nooooooooos") |
+| Akt. Version: | momentan keine |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | momentan keine |
+| OS-Eigenschaften |  |
+| Plattform: | x86 |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler |
+| API: | WinAPI |
+| Binärformat: | eigenes |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing, Shared Memory |
+| Homepage |  |
+
+momentan keine
+
 ## Äusseres Erscheinen
 
 TriviaOS arbeitet nur mit einer GUI, die allerdings nicht Fenster im Sinne von Windows verwendet, sondern nur "Felder" welche sich nicht überlappen können, jedoch in ihrer Grösse sehr flexibel sind. Das wird nicht nur die Bedienung sondern vor allem, auch die Programmierung einfach halten.
@@ -56,6 +73,6 @@ Das nächste Release wird in etwa die folgenden Features beinhalten:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 3197; parent 2888; 2008-08-15T17:32:22Z -->
+<!-- MediaWiki page 1448; revision 3198; parent 3197; 2008-08-15T17:44:10Z -->
