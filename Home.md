@@ -163,6 +163,6 @@ Hier können angehende und fortgeschrittene Betriebssystementwickler Information
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3180/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 3180; parent 3179; 2008-08-15T13:09:52Z -->
+<!-- MediaWiki page 1712; revision 3181; parent 3180; 2008-08-15T13:11:13Z -->
