@@ -24,7 +24,7 @@ DO : LOOP
 
 CONST mb_magic = &H1BADB002 CONST mb_flags = 3
 
-ASM \_start:
+ASM .global \_start \_start:
 
        call fb_ctor__kernel
        jmp $
@@ -54,6 +54,6 @@ Gebaut wird das ganze mit den folgenden Befehlen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 3207; parent 2919; 2008-08-15T23:13:26Z -->
+<!-- MediaWiki page 1624; revision 3208; parent 3207; 2008-08-15T23:36:06Z -->
