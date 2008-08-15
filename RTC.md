@@ -1,9 +1,9 @@
 # RTC
 
-1.  REDIRECT Real Time Clock
+Weiterleitung: [Real Time Clock](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1714/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3204/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1714/index.html)
 
-<!-- MediaWiki page 1714; revision 3203; parent 0; 2008-08-15T21:41:24Z -->
+<!-- MediaWiki page 1714; revision 3204; parent 3203; 2008-08-15T21:41:41Z -->
