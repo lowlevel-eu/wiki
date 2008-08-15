@@ -153,9 +153,10 @@ Status: 01h Keyboard im Secure Mode
 ## Links
 
 - [Wikipedia: A20-Gate](http://de.wikipedia.org/wiki/A20-Gate)
+- [Englisches Tutorial](http://www.win.tue.nl/~aeb/linux/kbd/A20.html:)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 3157; parent 3152; 2008-08-14T22:20:00Z -->
+<!-- MediaWiki page 1462; revision 3196; parent 3157; 2008-08-15T17:24:23Z -->
