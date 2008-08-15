@@ -8,7 +8,7 @@ Der Vollständigkeit halber: Es geht. Ich habe dazu FreeBASIC als Compiler benut
 
 \<freebasic\>DIM video AS BYTE POINTER DIM hello AS BYTE POINTER
 
-video = &Hb8000
+video = CAST(BYTE POINTER, &Hb8000)
 
 hello = strptr("Hello world")
 
@@ -24,7 +24,12 @@ DO : LOOP
 
 CONST mb_magic = &H1BADB002 CONST mb_flags = 3
 
-ASM fb_RtInit:
+ASM \_start:
+
+       call fb_ctor__kernel
+       jmp $
+
+fb_RtInit:
 
        ret
 
@@ -40,7 +45,7 @@ END ASM\</freebasic\>
 Gebaut wird das ganze mit den folgenden Befehlen:
 
     fbc -c kernel.bas
-    ld -Ttext=0x100000 kernel.o -o basic.krn
+    ld -Ttext=0x100000 kernel.o -melf_i386 -o basic.krn
 
 ## Weblinks
 
@@ -49,6 +54,6 @@ Gebaut wird das ganze mit den folgenden Befehlen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 2919; parent 2832; 2008-04-20T11:17:52Z -->
+<!-- MediaWiki page 1624; revision 3207; parent 2919; 2008-08-15T23:13:26Z -->
