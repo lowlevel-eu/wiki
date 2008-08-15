@@ -1,0 +1,76 @@
+# Hauptseite
+
+****Herzlich willkommen auf dem Wiki der Lowlevel Community!****
+
+  
+
+Hier können angehende und fortgeschrittene Betriebssystementwickler Informationen finden, die sie unterstützen sollen. Der Artikel [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") ist speziell an Neulinge gerichtet und gibt einen kleinen Einblick in die steinige Welt der Betriebssystementwicklung. Ansonsten ist hier vom ersten [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") im Kernel bis zum [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")/[OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS")-Design alles zu finden. Eine strukturierte Übersicht über das Wiki gibt es unter [Portal](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal"). Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](http://lowlevel.brainsware.org/forum/) / [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kund tust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick was noch zu tun ist, bietet die [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit Wünsche/Anregungen für Artikel los zu werden. Dieses Wiki enthält momentan 348 Artikel.
+
+**ACHTUNG**: Es wurde eine Lizenz für die Texte des Wikis vorgeschlagen. Mehr Informationen dazu gibt es hier.
+
+**News**
+
+|  |  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Wiki tot?** | Nix los hier? Keine Sorge - wir sind noch da, aktuell aber meist nur im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") aktiv (Achtung: IRC ist asynchron: rein kommen, schreiben und 'ne Weile Online bleiben und warten). Komm im IRC vorbei, stell Fragen, lerne Dinge und erweitere das Wiki! :) |
+| **01.04.2014 :** | Nach langer Zeit regt sich endlich wieder etwas bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur"). Es wurde in einem gemeinsamen IRC-Treffen beschlossen týndur komplett neu zu entwickeln - diesmal als Nanokernel auf Basis der Google-Programmiersprache [Go](http://golang.org/) und einem vollkommen reimplementierten IPC-Mechanismus ([XML-RPC](http://de.wikipedia.org/wiki/XML-RPC)). Ziel ist nicht nur ein Neuanfang (Zitat taljeth: "Den Driss sollten wir neu machen") sondern auch die Auslegung auf "moderne" Beduerfnisse; dies schliesst insbesondere die Nutzung von týndur als Host-OS fuer etwaige Web-Services ein (darum auch die Implementierung von XML-RPC; RPC von Web-Clients mit OS-Prozessen). Angestrebt wird auch eine Zusammenarbeit mit [Pedigree](http://www.pedigree-project.org/), hier wurde schon Kontakt aufgenommen. Fuer weitere Infos koennt ihr den [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#tyndurofthefuture im euIRC joinen. |
+| **23.05.2013 :** | Der Sommer kommt (mancherorts) in die Städte - allerdings nicht gerade zuverlässig. Zuverlässig dagegen ist das Team rund um [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") - erst kürzlich wurde die Version [1.5 freigegeben](http://article.gmane.org/gmane.comp.emulators.qemu/212062). Die neue Version unterstützt die Virtualisierung mit KVM auf ARM-Kernen. Mit dem Linux-Kernel 3.6 lassen sich ohne viel Overhead nun SCSI-Geräte an KVM-Gäste durchreichen, mit dem neuen QMP-Kommando *cpu-add* lässt sich die Anzahl der CPU-Kerne im Gast zur Laufzeit erhöhen. Diese und viele weitere Änderungen lassen sich dem [ChangeLog](http://wiki.qemu.org/ChangeLog/1.5#ARM) entnehmen. |
+| **26.03.2013 :** | Der Frühling lässt noch ein wenig auf sich warten, der [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") in der nun erhältlichen Version 4.8.0 nicht. Einer der größten Änderungen sind infrastrukturell, GCC ist nun vollständig in C++ implementiert und man benötigt fortan nun einen C++-Compiler, um GCC selbst zu bauen. Diese und viele weitere wichtige Änderungen lassen sich im [Changelog](http://gcc.gnu.org/gcc-4.8/changes.html) einsehen. |
+| **05.09.2012 :** | [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") 1.2 ist fertig. In dieser Version unterstützt AHCI auch CD-ROM-Laufwerke, und einige neue SCSI-Hostadapter sowieso USB-Attached SCSI wurden hinzugefügt. Die Grafikkarten mit *-vga std/qxl* haben jetzt 16 MB statt 8 MB Grafikspeicher. Außerdem speichert der neue Monitorbefehl *dump-guest-memory* den kompletten Arbeitsspeicher in einen ELF-Dump. Wie immer ist eine Aufzählung weiterer Neuerungen im [Changelog](http://wiki.qemu.org/ChangeLog/1.2) zu finden. |
+| **29.06.2012 :** | Nach gefühlten 50 und tatsächlichen knapp zehn Jahren haben die Entwickler des [Grand Unified Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"), besser bekannt als GRUB, die Version 2.00 herausgegeben. Neben Spielereien wie einem neuen Standard-Theme bringt GRUB 2 nun einen EHCI-Treiber mit und ist als Itanium- und SGI-Port vorhanden. Alle Änderungen lassen sich in der [Ankündigung](https://lists.gnu.org/archive/html/grub-devel/2012-06/msg00093.html) nachlesen. |
+| **01.06.2012 :** | Der Emulator [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") ist am 1. Juni in der Version 1.1 freigegeben worden. Für die OS-Entwicklung am interessantesten dürfte die experimentelle Unterstützung für xHCI-Controller (USB 3.0) sein. Es sind außerdem einige Fehlerkorrekturen für das emulierte Diskettenlaufwerk enthalten, vor allem in Bezug auf Medienwechsel. Eine Aufzählung weiterer Neuerungen ist wie gewohnt im [Changelog](http://wiki.qemu.org/ChangeLog/1.1) zu finden. |
+| **22.03.2012 :** | Genau 25 Jahre nach dem ersten Release ist die neue Version 4.7.0 der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") erschienen ([Ankündigung](http://gcc.gnu.org/ml/gcc/2012-03/msg00347.html)). Wichtige Neuerungen sind eine nochmals verbesserte Unterstützung der beiden neuen Standards C11 und C++11 (bei letzterem unter anderen die Möglichkeit der Benutzung des atomic-Konstrukts und des neuen Speichermodells). Auf einigen Architekturen wurde die Unterstützung für Software Transactional Memory (STM) eingeführt. Alle Änderungen lassen sich [hier](http://gcc.gnu.org/gcc-4.7/changes.html) nachlesen. Happy Birthday GCC! |
+| **01.03.2012 :** | Das von Andrew S. Tanenbaum als Lehrsystem gestartete Betriebssystem [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix") ist in der Version 3.2 erschienen. Wichtige Neuerungen sind experimenteller [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Support sowie die Portierung von [FUSE](http://de.wikipedia.org/wiki/Filesystem_in_Userspace) (Filesystem in Userspace) und weiteren Werkzeugen. [Hier](http://wiki.minix3.org/en/MinixReleases) findet sich ein Überblick über alle Neuerungen, Download des ISOs ist von [hier](http://www.minix3.org/download/) möglich. |
+| **23.02.2012 :** | Schon etwas länger her ist der Release der Version 9.0 von [FreeBSD](http://www.freebsd.org/releases/9.0R/announce.html). Neuerungen sind unter anderem ein neuer Installer und AHCI-Support für ATA/SATA-Laufwerke. Jüngst erschienen ist auch die Version 3.0 des FreeBSD-Derivats [DragonFlyBSD](http://www.dragonflybsd.org/). Hier sind die Neuerungen verbesserter Multiprozessor-Support sowie die Unterstützung von verschlüsselten Dateisystemen. |
+| **02.01.2012 :** | Version 1.1 des DOS-kompatiblen Betriebssystems [FreeDOS](https://github.com/lowlevel-eu/wiki/wiki/FreeDOS "FreeDOS") wurde [heute veröffentlicht](http://sourceforge.net/news/?group_id=5109&id=305444). Gegenüber dem letzten Release wird nun standardmäßig ein TCP/IP-Stack mitgeliefert. Außerdem wird nun USB dank eines UHCI-Treibers unterstützt. Weitere Änderungen können der [Ankündigung](http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.1/announce.txt) entnommen werden. |
+| **01.12.2011 :** | Nach 8 Jahren Entwicklung hat sich [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") von der führenden Null in der Version getrennt und wurde heute als Version 1.0 freigegeben. Einen Überblick über die Änderungen kann man sich im [Changelog](http://wiki.qemu.org/ChangeLog/1.0) verschaffen. |
+| **30.08.2011 :** | Mittlerweile ist die Version 4.6.1 der beliebten und im OS-Dev-Bereich vorherrschenden [GNU Compiler Collection](http://gcc.gnu.org/gcc-4.6/) erschienen. Diese bietet neben üblichen Optimierungen auch experimentelle Unterstützung für den zukünftigen neuen C-Standard *C1X*. Eine Liste aller Änderungen ist [hier](http://gcc.gnu.org/gcc-4.6/changes.html) einsehbar. |
+| **09.08.2011 :** | Es ist zwar Dienstag, aber jetzt ist die Version 0.15.0 von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") erschienen. Sie enthält Untstützung für [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")-USB-Hostcontroller und etliche andere USB-bezogene Verbesserungen. Ab Linux 3.0 funktionieren jetzt auch Ping-Pakete mit dem Usermode-Netzwerkstack. Weitere Details sind im [Changelog](http://wiki.qemu.org/ChangeLog/0.15) nachzulesen. |
+| **05.08.2011 :** | Jidder hat eine OS-Dev-technisch hochinteressante Frage in den Raum gestellt, nämlich was man mal in die News schreiben könnte, damit am Montag nicht zweimal QEMU oben steht. |
+| **22.03.2011 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") wurde in der Version 0.3.13 veröffentlicht. Im ReactOS Wiki gibt es wie üblich den [Changelog](http://www.reactos.org/wiki/ChangeLog-0.3.13). |
+| **18.02.2011 :** | [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") wurde in der Version 0.14.0 veröffentlicht. Unter anderem sind eine Emulation für AHCI- und HD-Audio-Geräte dazugekommen. Verbessert wurde die Implementierung von PCI (Express), neu ist hier z. B. Unterstützung für [MSI](https://github.com/lowlevel-eu/wiki/wiki/Message-Signaled-Interrupt "MSI"). Weitere Details sind im [Changelog](http://wiki.qemu.org/Changelog/0.14) nachzulesen. |
+| **20.10.2010 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") wurde in der Version 0.3.12 veröffentlicht. Im ReactOS Wiki gibt es wie üblich den [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.12). |
+| **18.10.2010 :** | [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") hat die Version 0.13.0 erreicht. Aus Sicht eines OS-Entwicklers für x86 enthält das Release vor allem viele kleinere Verbesserungen und Fehlerkorrekturen in der Hardwareemulation. Das neue Gerät *isa-debugcon* unterstützt jetzt den von bochs bekannten Debugport 0xe9. Der OHCI-Controller *pci-ohci* wird jetzt standardmäßig gebaut und ist damit zukünftig auch in Binärpaketen enthalten. |
+| **25.04.2010 :** | [bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") ist in Version 2.4.5 erschienen. Die Änderungen – die es [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_4_5_FINAL) gibt – sind abgesehen von der Implementierung der x2APIC, des Intel-VMXx2-Instruktionensatzes und einer Geräteemulation für einen USB-HP-DeskJet-920C-Drucker nur Bugfixes. |
+| **14.04.2010 :** | Die Version 4.5 der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") wurde freigegeben. In dieser Version sind erstmals Optimierungen zur Linkzeit (LTO, über die Kommandozeilenoption -flto) enthalten. Außerdem wurde die Unterstützung für Features aus dem nächsten C++-Standard erweitert. Eine detaillierte Übersicht über die Änderungen findet sich [hier](http://gcc.gnu.org/gcc-4.5/changes.html). |
+| **06.03.2010 :** | GRUB 1.98 ist erschienen. [Hier](http://grub.enbug.org/FrontPage?action=show&redirect=StartSeite) gibt es den Sourcecode und mehr Informationen zu GRUB2. |
+
+Ältere Meldungen sind im [Newsarchiv](https://github.com/lowlevel-eu/wiki/wiki/Newsarchiv "Newsarchiv") zu finden.
+
+**Magazin**
+
+- [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2")
+- [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5")
+- [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7")
+- [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8")
+- [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9")
+- [Alle Ausgaben](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")
+
+  
+
+**Zentrale Seiten**
+
+- [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger")
+- [Portal](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal")
+- [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials")
+- [Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar")
+- LOST
+- [Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
+- [Linkliste](https://github.com/lowlevel-eu/wiki/wiki/Linkliste "Linkliste")
+- Alle Kategorien
+- [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO")
+
+  
+
+**Community**
+
+- [Lowlevel-Forum](http://lowlevel.brainsware.org/forum)
+- [irc.euirc.net, \#lost](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")
+
+**[Zum Portal des Lowlevel-Wikis](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal")**
+
+---
+
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+
+<!-- MediaWiki page 1712; revision 3178; parent 0; 2008-08-15T12:31:58Z -->
