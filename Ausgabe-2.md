@@ -27,6 +27,10 @@ Tja... da wäre zum Beispiel Snakebytes berühmtes Assembler-Tutorial: <http://k
 
 ## OS-Dev-Tutorial, Teil 2
 
+**Hinweis:**
+
+Siehe auch: [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
+
 Bevor man ein Betriebssystem programmiert, sollte man sich überlegen, wie das Ganze aufgebaut werden soll. Die zur Zeit wichtigsten Modelle sind:
 
       1. Monolithischer Kernel
@@ -70,8 +74,6 @@ Soweit ich weiß, ist das bisher einzige Exo OS für den PC **"xok/ExOS"**, das 
 Leute, die sich ernsthaft mit OS Dev beschäftigen, sollten dieses wichtige Kapitel - nämlich das Design des Kernels - auf keinen Fall überspringen. Ich kann aus Erfahrung sagen, dass ein OS umso stabiler, sicherer und schneller läuft, je mehr man sich vor der eigentlichen Implementierung Gedanken über den Kernel macht.
 
 Denn wenn man einfach so drauflos programmiert, kommt man vielleicht am Anfang schnell weiter, doch irgendwann steht man vor einem riesigen Designproblem und man weißt nicht, wo man anpacken soll. Deshalb befolgt meinen Ratschlag und plant eure Software genau aus.
-
-  
 
 ## Lowlevel-Grundlagen, Teil 2
 
@@ -343,6 +345,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2670/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 2670; parent 2472; 2008-03-22T16:11:29Z -->
+<!-- MediaWiki page 1415; revision 3190; parent 2670; 2008-08-15T14:22:27Z -->
