@@ -39,7 +39,7 @@ Hier können angehende und fortgeschrittene Betriebssystementwickler Information
 
   
 
-**[Übersicht](https://lowlevel-eu.github.io/wiki/pages/1688/index.html "Lowlevel:Portal")**
+**Übersicht**
 
 **[OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger")**
 
@@ -163,6 +163,6 @@ Hier können angehende und fortgeschrittene Betriebssystementwickler Information
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3182/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3192/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 3182; parent 3181; 2008-08-15T13:11:28Z -->
+<!-- MediaWiki page 1712; revision 3192; parent 3182; 2008-08-15T14:36:14Z -->
