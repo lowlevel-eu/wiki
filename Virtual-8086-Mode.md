@@ -24,11 +24,11 @@ Da bestimmte Befehle im VM86-Task das restliche Betriebssystem blockieren oder s
 
 # Links
 
-- <http://osdev.berlios.de/v86.html> - Sehr gutes Tutorial von Tim Robinson (englisch)
-- <http://lost.famkaufmann.info/websvn/filedetails.php?repname=Lost&path=%2Ftrunk%2Fsrc%2Fkernel%2Fsrc%2Fvm86.c> - Code aus LOST für VM86-Tasks (nur für RM-Interrupts)
+- [Sehr gutes Tutorial von Tim Robinson (englisch)](http://osdev.berlios.de/v86.html)
+- [Code aus LOST für VM86-Tasks (nur für RM-Interrupts)](http://svn.tyndur.org/filedetails.php?repname=Lost&path=%2Ftrunk%2Fsrc%2Fkernel%2Fsrc%2Fvm86.c)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 3144; parent 2112; 2008-08-14T21:57:49Z -->
+<!-- MediaWiki page 1546; revision 3175; parent 3144; 2008-08-15T11:18:34Z -->
