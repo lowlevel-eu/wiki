@@ -1,5 +1,23 @@
 # MenuetOS
 
+| MenuetOS |  |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+|  |  |
+| Entwickler: | Ville Turjanmaa |
+| Akt. Version: | i386: 0.85<br>x86_64: 0.87B |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
+| OS-Eigenschaften |  |
+| Plattform: | i386, x86_64 |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch? |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| API: | Nativ |
+| Binärformat: | ? |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | ? |
+| Homepage |  |
+
+<http://www.menuetos.net/>
+
+  
 **MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und unter der [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") freigegeben wird. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder Posix, sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt.
 
 ## Releases
@@ -27,12 +45,8 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 - [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#os-showcase-menuetos "Ausgabe 1")
 
-## Links
-
-[Offizielle Website](http://www.menuetos.net/)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 3165; parent 2887; 2008-08-15T09:15:13Z -->
+<!-- MediaWiki page 1481; revision 3176; parent 3165; 2008-08-15T11:22:20Z -->
