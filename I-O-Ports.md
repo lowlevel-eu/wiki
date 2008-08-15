@@ -1,8 +1,6 @@
 # I/O Ports
 
-Dies ist eine Liste der Standard I/O Portbereiche.
-
-Diese Liste ist nicht vollständig!!!
+Dies ist eine kleine Liste der Standard I/O Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste nicht vollständig, da beispielsweise bei Geräten die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind sondern ausgelesen und konfiguriert werden können. Hier sind also Geräte aufgelistet die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die die I/O Portbereiche für viele Geräte standardisiert wurde, da es im Allgemeinen keine Möglichkeit gab diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
 
 ## Liste
 
@@ -47,6 +45,6 @@ Diese Liste ist nicht vollständig!!!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2709/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 2709; parent 2344; 2008-03-22T16:48:32Z -->
+<!-- MediaWiki page 1543; revision 3189; parent 2709; 2008-08-15T14:18:21Z -->
