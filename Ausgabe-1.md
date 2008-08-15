@@ -559,7 +559,17 @@ Weitere Informationen gibt es im Artikel [System Management Mode](https://github
 
 ## OS-Showcase: MenuetOS
 
+  
+
+**Hinweis:**
+
+Es existiert ein Wikiartikel zu [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS").
+
+  
+
 ![menuet1.gif](http://lowlevel.brainsware.org/wiki/images/menuet1.gif) ![menuet2.gif](http://lowlevel.brainsware.org/wiki/images/menuet2.gif) ![menuet3.gif](http://lowlevel.brainsware.org/wiki/images/menuet3.gif)
+
+  
 
 ### OS Design
 
@@ -609,6 +619,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 3148; parent 3147; 2008-08-14T22:00:31Z -->
+<!-- MediaWiki page 1412; revision 3164; parent 3148; 2008-08-15T09:13:56Z -->
