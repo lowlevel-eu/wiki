@@ -47,6 +47,38 @@ Gebaut wird das ganze mit den folgenden Befehlen:
     fbc -c kernel.bas
     ld -Ttext=0x100000 kernel.o -melf_i386 -o basic.krn
 
+## Anfang einer kleinen RTLib
+
+Möchte man FB-Funktionen wie IN oder OUT benutzen, muss erstmal eine Runtime-Lib her, die die Funktionen zur Verfügung stellt. Die ist normalerweise in C geschrieben, aber das geht (zumindest für einfache Dinge) auch in FREEBASIC. Hier Beispiele für IN und OUT:
+
+\<freebasic\> SUB fb_Out CDECL ALIAS "fb_Out" (port as USHORT, value as UBYTE)
+
+       ASM
+           movw dx, [port]
+           movb al, [value]
+           outb dx, al
+       END ASM
+
+END SUB
+
+FUNCTION fb_In CDECL ALIAS "fb_In" (port as USHORT) AS UBYTE
+
+       DIM value AS UBYTE
+
+       ASM
+          movw dx, [port]
+          inb al, dx
+          mov [value], al
+       END ASM
+
+       RETURN value
+
+END FUNCTION \</freebasic\>
+
+Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompiliert. Zum linken muss jetzt der folgende Befehl benutzt werden:
+
+    ld -Ttext=0x100000 kernel.o rtlib.o -melf_i386 -o basic.krn
+
 ## Weblinks
 
 - <http://www.freebasic.net> - Offizielle englischsprachige Website der FreeBASIC-Entwickler
@@ -54,6 +86,6 @@ Gebaut wird das ganze mit den folgenden Befehlen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 3208; parent 3207; 2008-08-15T23:36:06Z -->
+<!-- MediaWiki page 1624; revision 3211; parent 3208; 2008-08-16T14:41:31Z -->
