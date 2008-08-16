@@ -24,10 +24,18 @@ Wenn der Kernel schon ein wenig weiter ausgebaut ist, und [Exceptions](https://g
 
 # objdump
 
-Sobald man die Adresse hat, muss man daraus irgendwie auf die Codestelle schliessen können. Dabei kann das GNU-Tool objdump eine grosse Hilfe sein. Dies ist aber nur möglich, wenn man ein Binärformat wie [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") benutzt, bei flachen Binaries fehlen dem Tool nötige Informationen. objdump kann dabei mit dem Parameter -d Assembler-Code mit Adresse vor jeder Instruktion generieren. Wenn man den Code mit Debug-Infos (bei gcc mit dem Parameter -g) kompiliert und linkt kann objdump mit dem Parameter -S sogar den zugehörigen Quelltext der ursprünglichen Sprache anzeigen. Dieses Feature macht aber scheinbar in den aktuellen Versionen vorallem bei grossen Dateien noch Probleme. Dabei wird der Source am Anfang oft noch angezeigt, dann aber irgendwann wird nur noch der Assembler-Code angezeigt. Das kann man am besten umgehen, indem man den Abstand der gesuchten Speicherstelle zum Funktionsanfang berechnet, und danach nur den Dump der entsprechenden Objektdateien ansieht.
+Sobald man die Adresse hat, muss man daraus irgendwie auf die Codestelle schliessen können. Dabei kann das GNU-Tool objdump eine grosse Hilfe sein. Dies ist aber nur möglich, wenn man ein Binärformat wie [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") benutzt, bei flachen Binaries fehlen dem Tool nötige Informationen. objdump kann dabei mit dem Parameter -d Assembler-Code mit Adresse vor jeder Instruktion generieren.
+
+## Debuginformationen
+
+Wenn man den Code mit Debug-Infos (bei gcc mit dem Parameter -g) kompiliert und linkt kann objdump mit dem Parameter -S sogar den zugehörigen Quelltext der ursprünglichen Sprache anzeigen. Dieses Feature macht aber anscheinend in den aktuellen Versionen vorallem bei grossen Dateien noch Probleme. Dabei wird der Source am Anfang oft noch angezeigt, dann aber irgendwann wird nur noch der Assembler-Code angezeigt. Das kann man am besten umgehen, indem man den Abstand der gesuchten Speicherstelle zum Funktionsanfang berechnet, und danach nur den Dump der entsprechenden Objektdateien ansieht.
+
+## Optimierungen
+
+Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind diese aktiviert, ist der Code oft wesentlich schwieriger zu verstehen, und ein objdump mit den Debuginformationen wird erst recht unverständlich. Es kann aber natürlich auch sein, dass Probleme erst durch das Aktivieren der Optimierungen auftauchen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 2896; parent 2776; 2008-04-06T14:58:32Z -->
+<!-- MediaWiki page 1544; revision 3209; parent 2896; 2008-08-16T09:06:15Z -->
