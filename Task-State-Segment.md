@@ -1,8 +1,8 @@
 # Task State Segment
 
-Das TaskStateSegment (kurz TSS) wird von der CPU benötigt um bei einen Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Man kann das TSS auch benutzen um Hardware-[Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu realisieren. Dafür wird der TSS-Deskriptor mit einem Longjump angesprungen. Dabei werden auch andere Register (wie EIP) geladen. Um ein TSS für den Ringwechsel benutzen zu können, muss es vorher mit *ltr \<Selektor\>* geladen werden.
+Das Task State Segment (kurz TSS) wird von der CPU benötigt um bei einen Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Man kann das TSS auch benutzen um Hardware-[Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu realisieren. Dafür wird der TSS-Deskriptor mit einem Longjump angesprungen. Dabei werden auch andere Register (wie EIP) geladen. Um ein TSS für den Ringwechsel benutzen zu können, muss es vorher mit *ltr \<Selektor\>* geladen werden.
 
-## Aufbau - TaskStateSegment
+## Aufbau - Task State Segment
 
 | Offset | 31-16 | 0-15 |
 | -------- | ---------------------- | ---------------------- |
@@ -55,6 +55,6 @@ Hier muß als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3220/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3221/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 3220; parent 2425; 2008-08-18T14:19:42Z -->
+<!-- MediaWiki page 1599; revision 3221; parent 3220; 2008-08-18T14:20:53Z -->
