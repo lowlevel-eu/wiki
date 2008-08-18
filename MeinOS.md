@@ -1,7 +1,7 @@
 # MeinOS
 
 | meinOS |  |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Janosch Gräf](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") |
 | Akt. Version: | noch keine |
@@ -12,7 +12,7 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), Nativ |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | RPC (synchron), Message Queues (SysV), Semaphores (SysV), Shared Memory (SysV), Signale |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), Message Queues (SysV), [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale") |
 | Homepage |  |
 
 <http://jgraef.bplaced.net/meinos/>
@@ -24,22 +24,22 @@ meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#
 
 Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Bereichen Speicherverwaltung (u.a. dynamischerer Speicherallokator für den Kernel, wodurch nun Linked Lists im Kernel benutzt werden können), Prozessverwaltung und IPC. Kernel2 unterstützt nun die SysV-IPC-Methoden, RPC und Signale. Außerdem wurde FUSE auf das VFS von meinOS portiert. Im Moment wird das DevFS auf Fuse portiert.
 
-### Komplett (oder so gut wie komplett)
+### Komplett
 
-- Kernel
+- [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
   - [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
   - [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung")
   - IPC
-    - Message Queues (SysV)
+    - [Message Queues](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#message-queues "Message Queue") (SysV)
     - [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV)
-    - Semaphores (SysV)
+    - [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV)
     - [Remote Procedure Call](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call")
     - [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale")
   - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Kompatibilität
 
 <!-- -->
 
-- Server
+- Server (Treiber)
   - Console-Server (umfasst Keyboard-Treiber und Screen-Treiber)
   - [COM](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "COM")-Server
   - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Server ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"))
@@ -50,24 +50,30 @@ Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Ber
 
 - Bibliotheken
   - libmeinos
-    - CMOS
+    - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
     - DevFS
-    - DMA
-    - RPC
+    - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
+    - [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC")
     - Linked List
-    - PCI
+    - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
   - stdlibc (großer Teil schon portiert)
-  - libcdi (ohne cdi.net)
+  - \[\[libcdi\|CDI\] (ohne cdi.net)
+  - libfuse
 
 ### Planung
 
 - Init-Task (Initialisierung aller Treiber und des Login-Programms)
-- Shell (eventuell Portierung einer vorhandenen Shell)
-- Ext2-Treiber
-- eventuell pipefs (Für Named Pipes ohne "richtiges" FS, dass Named Pipes unterstützt)
-- Einige kleine Programme (cp, mv, rm, mkfile, cat, echo, usw.)
+- [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") (eventuell Portierung einer vorhandenen Shell)
+- [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")-Treiber (Fuse)
+- VFAT-Treiber (Fuse)
+- [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS")-Treiber (Fuse)
+- Standard-Unix-Toolchain: echo,cat,mv,cp,... und GCC-Toolchain
 
 Wie man sieht, ist noch eine Menge zu tun.
+
+## Crosscompiler
+
+Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das Portieren größerer Applikationen zu vereinfachen.
 
 ## Download
 
@@ -90,6 +96,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3219/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3217; parent 3034; 2008-08-18T09:27:19Z -->
+<!-- MediaWiki page 1551; revision 3219; parent 3217; 2008-08-18T14:09:57Z -->
