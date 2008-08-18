@@ -18,7 +18,7 @@
 <http://jgraef.bplaced.net/meinos/>
 
   
-meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Außerdem unterstützt meinOS Mehrprozessor-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
+meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
 
 ## Entwicklung
 
@@ -57,7 +57,7 @@ Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Ber
     - Linked List
     - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
   - stdlibc (großer Teil schon portiert)
-  - \[\[libcdi\|CDI\] (ohne cdi.net)
+  - [libcdi](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") (ohne cdi.net)
   - libfuse
 
 ### Planung
@@ -96,6 +96,6 @@ Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3219/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3222/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3219; parent 3217; 2008-08-18T14:09:57Z -->
+<!-- MediaWiki page 1551; revision 3222; parent 3219; 2008-08-18T15:43:43Z -->
