@@ -22,27 +22,28 @@ meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#
 
 ## Entwicklung
 
-Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Bereichen Speicherverwaltung (u.a. dynamischerer Speicherallokator für den Kernel, wodurch nun Linked Lists im Kernel benutzt werden können), Prozessverwaltung und IPC. Kernel2 unterstützt nun die SysV-IPC-Methoden, RPC und Signale. Im Moment werden die Bibliotheken an die neuen Systemfunktion angepasst.
+Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Bereichen Speicherverwaltung (u.a. dynamischerer Speicherallokator für den Kernel, wodurch nun Linked Lists im Kernel benutzt werden können), Prozessverwaltung und IPC. Kernel2 unterstützt nun die SysV-IPC-Methoden, RPC und Signale. Außerdem wurde FUSE auf das VFS von meinOS portiert. Im Moment wird das DevFS auf Fuse portiert.
 
 ### Komplett (oder so gut wie komplett)
 
 - Kernel
-  - Memorymanagement
-  - Multiprocessor-Kompatibilität (todo: noch nicht vollständig)
-  - Taskmanagement
-  - IPC (Message Passing)
+  - [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
+  - [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung")
+  - IPC
+    - Message Queues (SysV)
+    - [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV)
+    - Semaphores (SysV)
+    - [Remote Procedure Call](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call")
+    - [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale")
   - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Kompatibilität
-  - Signals (todo: Kernel-Schnittstelle)
-  - Timer/IRQ-Schnittstelle
 
 <!-- -->
 
 - Server
-  - Keyboard-Server (todo: an neues RPC anpassen)
-  - Console-Server (todo: an neues DevFS anpassen)
-  - COM-Server
-  - Floppy-Server (mit CDI ist das ja kein Problem mehr)
-  - Filesystem-Server
+  - Console-Server (umfasst Keyboard-Treiber und Screen-Treiber)
+  - [COM](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "COM")-Server
+  - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Server ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"))
+  - [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")-Server
   - DevFS
 
 <!-- -->
@@ -52,12 +53,11 @@ Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Ber
     - CMOS
     - DevFS
     - DMA
-    - FS
-    - IPC
+    - RPC
     - Linked List
     - PCI
-  - stdlibc (noch nicht komplett)
-  - libcdi (cdi.net noch nicht implementiert; testen wäre angebracht)
+  - stdlibc (großer Teil schon portiert)
+  - libcdi (ohne cdi.net)
 
 ### Planung
 
@@ -90,6 +90,6 @@ Wie man sieht, ist noch eine Menge zu tun.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3034; parent 2935; 2008-07-27T19:54:59Z -->
+<!-- MediaWiki page 1551; revision 3217; parent 3034; 2008-08-18T09:27:19Z -->
