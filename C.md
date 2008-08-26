@@ -10,9 +10,11 @@ Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Pr
 
 ## Inline Assembler
 
+[Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC")
+
 ## Funktionen auslagern
 
-Manchmal ist es einfacher und übersichtlicher eine Funktion, oder ein ganzen Teil des Kernels komplett in Assembly zu schreiben, anstatt häufig vom inlie-assembler gebrauch zu machen. Um zwischen einen in Assembly geschriebenen Teil, und einem in C geschriebenen Teil zu interagieren sind folgende Punkte zu beachten:
+Manchmal ist es einfacher und übersichtlicher eine Funktion, oder ein ganzen Teil des Kernels komplett in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu schreiben, anstatt häufig vom inline-assembler gebrauch zu machen. Um zwischen einen in Assembly geschriebenen Teil, und einem in C geschriebenen Teil zu interagieren sind folgende Punkte zu beachten:
 
 1.  Name der Funktion
 2.  Argumente
@@ -42,6 +44,6 @@ Das asm-file und das C-file müssen nun jeweils zu einem object-file assembliert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3243/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3243; parent 2830; 2008-08-26T00:20:07Z -->
+<!-- MediaWiki page 1526; revision 3244; parent 3243; 2008-08-26T00:23:05Z -->
