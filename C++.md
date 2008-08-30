@@ -1,10 +1,10 @@
 # C\+\+
 
-Da C++ eine Weiterentwicklung von C ist, sollte man sich auch den Wikiartikel zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
+Da C++ eine Weiterentwicklung von C ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
 # Überblick
 
-Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilffunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
+Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilfsfunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
 
 - [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++")
 - [rein virtuelle Funktionen](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#rein-virtuelle-funktionen "C++")
@@ -13,7 +13,7 @@ Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur 
 - [RTTI (= Runtime type information)](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#rtti "C++")
 - [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#exceptions "C++")
 
-Da jeder Compilerhersteller eine eigene ABI (= Application Binary Interface) zur Verfügung stellt sind auch die Funktionsnamen und der Funktionsumfang von Compiler zu Compiler verschieden.
+Da jeder Compilerhersteller eine eigene ABI (= Application Binary Interface) zur Verfügung stellt sind auch die Funktionsnamen sowie auch der Funktionsumfang, von Compiler zu Compiler verschieden.
 
 # Startup-Code
 
@@ -189,6 +189,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 2831; parent 2814; 2008-03-25T03:38:51Z -->
+<!-- MediaWiki page 1486; revision 3257; parent 2831; 2008-08-30T07:55:24Z -->
