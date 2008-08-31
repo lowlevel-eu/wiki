@@ -29,7 +29,7 @@ Das Attribute-Byte ist wie folgt gestaltet:
 | 0x3 | Cyan | 0xB | Hellcyan |
 | 0x4 | Rot | 0xC | Hellrot |
 | 0x5 | Magenta | 0xD | Hellmagenta |
-| 0x6 | Braun | 0xE | Hellbraun |
+| 0x6 | Braun | 0xE | Gelb |
 | 0x7 | Hellgrau | 0xF | Weiß |
 
 Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Schwarz.
@@ -105,6 +105,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 2746; parent 2632; 2008-03-22T17:32:42Z -->
+<!-- MediaWiki page 1549; revision 3276; parent 2746; 2008-08-31T13:20:54Z -->
