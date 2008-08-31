@@ -249,19 +249,19 @@ Der Video-Speicher ist ein bestimmter Bereich im Arbeitsspeicher, der - befindet
 Wie bereits erwähnt stehen die Attribute im zweiten Byte eines jeden Zeichen-Words. Der Einfachheit halber stellen wir sie (im Beispiel-Code) als vierstellige Hexadezimal-Zahlen dar (0x0000) und OR\`en sie einfach mit dem Zeichen-Word zusammen. Da wir im Textmodus nur 16 Farben haben, ist der Vorgang denkbar einfach. Die höchste Stelle im der HEX-Zahl (0x1000) stellt die Hintergrundfarbe dar, die zweite Stelle (0x0100) die Vordergrundfarbe.
 
 - 0x0 Schwarz
-- 0x1 Dunkelblau
-- 0x2 Dunkelgrün
+- 0x1 Blau
+- 0x2 Grün
 - 0x3 Türkis
-- 0x4 Dunkelrot
-- 0x5 Lila
-- 0x6 Orange
-- 0x7 Hellgrau (Standard-Textfarbe unter DOS, Linux, etc.)
+- 0x4 Rot
+- 0x5 Magenta
+- 0x6 Braun
+- 0x7 Hellgrau
 - 0x8 Dunkelgrau
 - 0x9 Hellblau
 - 0xA Hellgrün
-- 0xB Cyan
+- 0xB Helltürkis (Cyan)
 - 0xC Hellrot
-- 0xD Pink
+- 0xD Hellmagenta
 - 0xE Gelb
 - 0xF Weiß
 
@@ -360,6 +360,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3261/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 3261; parent 2673; 2008-08-31T02:08:36Z -->
+<!-- MediaWiki page 1470; revision 3262; parent 3261; 2008-08-31T03:05:33Z -->
