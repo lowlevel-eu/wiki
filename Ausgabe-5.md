@@ -246,7 +246,7 @@ Nachdem wir wissen, wie wir kompilieren, können wir uns jetzt mit einigen Infor
 
 Der Video-Speicher ist ein bestimmter Bereich im Arbeitsspeicher, der - befindet sich der PC im Textmodus - ein Word, also zwei Bytes für jedes Zeichen auf dem Bildschirm bereithält. Das erste Byte ist hierbei ein ganz normales ASCII-Zeichen (wie etwa \`A\`, \`x\` oder \`?\`), das zweite Byte stellt die Attribute dar, wie etwa die Textfarbe, die Hintergrundfarbe und ob der Text bzw. das Zeichen blinken soll. Auf \`normalen\` Architekturen beginnt der Video-Speicher an der Adresse 0xB8000 und ist 4000 Bytes (80 \* 25 Zeichen \* 2 Bytes pro Zeichen) lang bzw. groß. Auf Schwarz-Weiß-Monitoren beginnt der Speicher - soviel ich weiß - an der Adresse 0xB0000. Ich habe mir jetzt aber nicht die Mühe gemacht, das zu überprüfen, da ich nicht davon ausgehe, dass noch jemand so ein Teil besitzt (und benutzt).
 
-Wie bereits erwähnt stehen die Attribute im zweiten Byte eines jeden Zeichen-Words. Der Einfachheit halber stellen wir sie (im Beispiel-Code) als vierstellige Hexadezimal-Zahlen dar (0x0000) und OR\`en sie einfach mit dem Zeichen-Word zusammen. Da wir im Textmodus nur 16 Farben haben, ist der Vorgang denkbar einfach. Die höchste Stelle im der HEX-Zahl (0x1000) stellt die Hintergrundfarbe dar, die zweite Stelle (0x0100) die Vordergrundfarbe. Leider Gottes kenne ich die exakten Farbbezeichnungen nicht (auswendig), aber ich denke, dass ihr wisst, was ich meine.
+Wie bereits erwähnt stehen die Attribute im zweiten Byte eines jeden Zeichen-Words. Der Einfachheit halber stellen wir sie (im Beispiel-Code) als vierstellige Hexadezimal-Zahlen dar (0x0000) und OR\`en sie einfach mit dem Zeichen-Word zusammen. Da wir im Textmodus nur 16 Farben haben, ist der Vorgang denkbar einfach. Die höchste Stelle im der HEX-Zahl (0x1000) stellt die Hintergrundfarbe dar, die zweite Stelle (0x0100) die Vordergrundfarbe.
 
 - 0x0 Schwarz
 - 0x1 Dunkelblau
@@ -254,12 +254,12 @@ Wie bereits erwähnt stehen die Attribute im zweiten Byte eines jeden Zeichen-Wo
 - 0x3 Türkis
 - 0x4 Dunkelrot
 - 0x5 Lila
-- 0x6 Braun
+- 0x6 Orange
 - 0x7 Hellgrau (Standard-Textfarbe unter DOS, Linux, etc.)
 - 0x8 Dunkelgrau
 - 0x9 Hellblau
 - 0xA Hellgrün
-- 0xB (sehr) helles Blau (?), keine Ahnung, wie das heißt
+- 0xB Cyan
 - 0xC Hellrot
 - 0xD Pink
 - 0xE Gelb
@@ -334,7 +334,7 @@ Natürlich ist der Code nicht komplett, aber er dient ja auch nur Anschauungszwe
          while(*s)
            putchar(*(s++));
          return;
-       };</c> 
+       };</c>
 
 ## Icy Wolf\`s Kolumne
 
@@ -360,6 +360,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3261/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 2673; parent 2631; 2008-03-22T16:12:07Z -->
+<!-- MediaWiki page 1470; revision 3261; parent 2673; 2008-08-31T02:08:36Z -->
