@@ -44,7 +44,7 @@ Dieser Code macht eigentlich nichts anderes als in die main-Funktion unseres C-K
 
 FLAGS equ 0 MAGIC equ 0x1BADB002  ; Magicnumber - Erkennungsmerkmal für Grub CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
-section .text align 4 align 4 MultiBootHeader:
+section .text align 4 MultiBootHeader:
 
      dd MAGIC       ; Magic number
      dd FLAGS       ; Flags
@@ -211,6 +211,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 3260; parent 3259; 2008-08-31T01:37:27Z -->
+<!-- MediaWiki page 1604; revision 3281; parent 3260; 2008-08-31T19:05:00Z -->
