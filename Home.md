@@ -161,6 +161,6 @@ Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Communi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 3230; parent 3229; 2008-08-21T20:48:33Z -->
+<!-- MediaWiki page 1712; revision 3273; parent 3230; 2008-08-31T13:03:39Z -->
