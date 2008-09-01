@@ -88,7 +88,7 @@ Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das 
 
 ## Screenshot (Unoffizielles Release vom 14.03.08 - Build 1781)
 
-![screen.gif](http://jgraef.bplaced.net/meinos/screenshots/screen.gif)
+![meinos.gif](http://jgraef.bplaced.net/meinos/screenshots/meinos.gif)
 
 ## Weblinks
 
@@ -96,6 +96,6 @@ Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3222/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3222; parent 3219; 2008-08-18T15:43:43Z -->
+<!-- MediaWiki page 1551; revision 3282; parent 3222; 2008-09-01T08:56:04Z -->
