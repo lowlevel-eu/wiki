@@ -24,7 +24,8 @@ qemu stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbin
 
 # Exception-Meldungen
 
-Wenn der Kernel schon ein wenig weiter ausgebaut ist, und [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#exceptions "Ausgabe 2") abfängt, können diese Meldungen so ausgebaut werden, dass sie alle nötigen Informationen ausgeben. Um die Registerinhalte auszugeben empfiehlt es sich, diese in der [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") für die Exceptions auf den Stack zu legen, und dem Exception-Handler einen Pointer auf das zuletzt gepushte Register zu übergeben. Der Exception-Handler kann dann eine nette Meldung mit allen nötigen Informationen ausgeben.
+Wenn der Kernel schon ein wenig weiter ausgebaut ist, und [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#exceptions "Ausgabe 2") abfängt, können diese Meldungen so ausgebaut werden, dass sie alle nötigen Informationen ausgeben. Um die Registerinhalte auszugeben empfiehlt es sich, diese in der [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") für die Exceptions auf den Stack zu legen, und dem Exception-Handler einen Pointer auf das zuletzt gepushte Register zu übergeben. Der Exception-Handler kann dann eine nette Meldung mit allen nötigen Informationen ausgeben.  
+Es können auch breakpoints gesetzt werden: \<c\>asm("int \$3");\</c\>
 
 # objdump
 
@@ -40,6 +41,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3297/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 3210; parent 3209; 2008-08-16T09:20:21Z -->
+<!-- MediaWiki page 1544; revision 3297; parent 3210; 2008-09-05T15:14:58Z -->
