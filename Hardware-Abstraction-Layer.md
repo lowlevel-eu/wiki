@@ -14,14 +14,14 @@ Die HAL beinhaltet somit folgende Aufgaben:
 
 ## Exokernel
 
-Eine besondere Rolle hat der Exokernel. Dieser hat normalerweiße kein HAL.
+Eine besondere Rolle hat der Exokernel. Dieser hat normalerweise keine HAL.
 
 ## Ältere Betriebsysteme
 
-[MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") hatte kein HAL, zumindest wenn es nicht mit Windows aufgerüstet worden war.
+[MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") hatte keine HAL, zumindest wenn es nicht mit Windows aufgerüstet worden war.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3005/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3304/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 3005; parent 2707; 2008-06-27T17:53:23Z -->
+<!-- MediaWiki page 1480; revision 3304; parent 3005; 2008-09-07T22:03:38Z -->
