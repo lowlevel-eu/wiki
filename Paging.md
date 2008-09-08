@@ -94,6 +94,8 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physischen Speich
 
 ## Kopieren einer physikalischen Page
 
+## Kopieren (Klonen) des Page-Directory
+
 ## Links
 
 - [Paging-Tutorial](http://www.homix-online.de/Tutorials/32PMode-Paging.php)
@@ -103,6 +105,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physischen Speich
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 3253; parent 3065; 2008-08-26T11:13:54Z -->
+<!-- MediaWiki page 1496; revision 3312; parent 3253; 2008-09-08T06:18:45Z -->
