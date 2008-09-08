@@ -10,10 +10,10 @@
 
 ## Magazin ausschlachten
 
-- [Ausgabe 1#Lowlevel-Grundlagen, Teil 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#lowlevel-grundlagen-teil-1 "Ausgabe 1")
-- [Ausgabe 2#OS-Dev-Tutorial, Teil 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#os-dev-tutorial-teil-2 "Ausgabe 2") in [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") einarbeiten
-- [Ausgabe 2#Lowlevel-Grundlagen, Teil 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
-- [Ausgabe 1#Etwas Systemtheorie](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#etwas-systemtheorie "Ausgabe 1") -\> [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") oder so
+- [Ausgabe 1: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#lowlevel-grundlagen-teil-1 "Ausgabe 1")
+- [Ausgabe 2: OS-Dev-Tutorial](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#os-dev-tutorial-teil-2 "Ausgabe 2") in [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") einarbeiten
+- [Ausgabe 2: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
+- [Ausgabe 1: Etwas Systemtheorie](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#etwas-systemtheorie "Ausgabe 1") -\> [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") oder so
 
 ## Erweitern
 
@@ -41,6 +41,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3310; parent 3301; 2008-09-07T22:38:41Z -->
+<!-- MediaWiki page 1518; revision 3313; parent 3310; 2008-09-08T14:08:07Z -->
