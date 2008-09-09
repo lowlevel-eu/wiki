@@ -92,10 +92,6 @@ Wenn nun Paging eingeschaltet ist, kann man nicht mehr in den physischen Speiche
 
 Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physischen Speicher zu haben, ohne das man ihn direkt mappt. Erstmal braucht man eine Möglichkeit das Page Directory und die Page Tables noch zu ändern, nachdem Paging eingeschaltet wurde. Wenn man dies kann, kann man sich einfach immer die gerade gebrauchte physische Page auf eine festgelegte virtuelle Page mappen und voila. Um nun Zugriff auf das Page Directory und die Page Tables zu haben, kann man einfach z.B. als letzte Page Table das Page Directory selbst eintragen. Das Page Directory wird dann als Page Table interpretiert und alle Page Tables als Pages in den Speicher gemappt. Somit enthalten die letzten 4 MB des virtuellen Speichers die Page Tables, wobei die letzten 4kB das Page Directory enthalten.
 
-## Kopieren einer physikalischen Page
-
-## Kopieren (Klonen) des Page-Directory
-
 ## Links
 
 - [Paging-Tutorial](http://www.homix-online.de/Tutorials/32PMode-Paging.php)
@@ -105,6 +101,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physischen Speich
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 3312; parent 3253; 2008-09-08T06:18:45Z -->
+<!-- MediaWiki page 1496; revision 3319; parent 3312; 2008-09-09T10:14:26Z -->
