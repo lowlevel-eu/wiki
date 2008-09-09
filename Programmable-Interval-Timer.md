@@ -17,6 +17,8 @@ Der Minimal- und Maximalwert des Teilers bestimmt die möglichen Auslöse-Freque
 Max: 1193180 Hz / 1 = 1193180 Hz  
 Min: 1193180 Hz / 65536 = ~18.206 Hz  
 
+Ports: 40h bis 43h
+
 ## Links
 
 - [Intel 8253 Chip auf Wikipedia](http://en.wikipedia.org/wiki/Intel_8253)  
@@ -24,6 +26,6 @@ Min: 1193180 Hz / 65536 = ~18.206 Hz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 2737; parent 2470; 2008-03-22T17:20:36Z -->
+<!-- MediaWiki page 1432; revision 3320; parent 2737; 2008-09-09T13:15:28Z -->
