@@ -34,8 +34,12 @@ Bei Drag and Drop wird ein Bild verschoben.
 
 Die Maus wird meistens als Zeiger dargestellt und wird mit einem speziellen Gerät bedient. Diese Technik hat sich zum De-facto-Standard von GUIs gemausert.
 
+## Links
+
+- [Common Usability Terms](http://osnews.com/story/20287/Common_Usability_Terms_part_IX_the_Menu)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2934/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 2934; parent 2933; 2008-05-11T11:36:02Z -->
+<!-- MediaWiki page 1511; revision 3340; parent 2934; 2008-09-14T14:15:33Z -->
