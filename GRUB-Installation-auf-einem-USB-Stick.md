@@ -1,18 +1,18 @@
 # GRUB Installation auf einem USB-Stick
 
-## Vorbemerkung
+# Vorbemerkung
 
 Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick GRUB zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
 
-## Der USB-Stick
+# Der USB-Stick
 
 **ACHTUNG: Sichert vorher alle Daten von dem Stick, denn spätestens nach dem überschreiben des Stick-Inhalts mit Null-Bytes werden diese nicht wiederherstellbar sein!**
 
-### Löschen der Dateien
+## Löschen der Dateien
 
 In diesem Abschnitt werden der Inhalt des USB-Sticks mit Null-Bytes überschrieben, damit überhaupt nichts mehr darauf vorhanden ist.
 
-#### Löschen der Daten unter Linux/Unix
+### Löschen der Daten unter Linux/Unix
 
 Zuerst sollte man nachschauen, wo der USB-Stick hin gemountet wurde, falls das automatisch geschehen ist. Dies kann man mit dem Befehl mount machen:
 
@@ -31,7 +31,7 @@ Ein anderer Weg, den Stick von den Daten zu befreien, wäre der folgende:
     dd if=/dev/zero of=/dev/sda1
     cat: write error: No space left on device
 
-#### Löschen der Daten unter Windows
+### Löschen der Daten unter Windows
 
 dd wurde nach Windows portiert und ist hier erhältlich: <http://www.chrysocome.net/dd>  
 Um zu schauen, welches Laufwerk der USB-Stick ist, muss dd mit dem Parameter --list aufgerufen werden. Dieser existiert allerdings nur in der Version für Windows
@@ -44,11 +44,11 @@ In der Auflistung muss man nun nach dem Laufwerksbuchstabe schauen, an dem der S
 
 *Anmerkung: Diese Aktion kann je nach größe des USB-Sticks einige Zeit in Anspruch nehmen.*  
 
-### Formatieren des Sticks
+## Formatieren des Sticks
 
 In diesem zweiten Abschnitt bekommt der USB-Stick ein neues Dateisystem. Das Dateisystem meiner Wahl ist ext2, kann aber durchaus auch ein anderes, wie FAT32 oder so sein.
 
-#### Formatieren des Sticks unter Linux/Unix
+### Formatieren des Sticks unter Linux/Unix
 
 Im nächsten Schritt muss der Stick nun mit einem Dateisystem "formatiert" werden.
 
@@ -56,11 +56,13 @@ Im nächsten Schritt muss der Stick nun mit einem Dateisystem "formatiert" werde
 
 Hier wird der Stick, nach drücken der Return-Taste, mit dem Ext2 Dateisystem formatiert.  
 
-#### Formatieren des Sticks unter Windows
+### Formatieren des Sticks unter Windows
 
 *ToDo*
 
-### Installieren von GRUB
+## Installieren von GRUB
+
+### Installation unter Linux
 
 Nun muss der Formatierte Stick wieder gemountet werden:
 
@@ -86,6 +88,11 @@ Als letzter Schritt muss nun nur noch GRUB auf dem Stick installiert werden, was
 
     /sbin/grub-install --root-directory=/media/usb/ /dev/sda1
 
+### Installation unter Linux
+
+*ToDo*
+
+  
 Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werden.  
 **Anmerkung:** Jeder USB-Stick kann bootbar gemacht werden. Im Internet herrscht der irrglaube, dass nur einige wenige Sticks bootbar sind, und zwar diese, wo das draufsteht. Das ist jedoch einfach gesagt Schwachsinn, da ein USB-Stick ein Speichermedium ist und solange das BIOS mit dem booten von USB-Sticks klar kommt wird das funktionieren.
 
@@ -94,6 +101,6 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3343; parent 3341; 2008-09-14T18:57:36Z -->
+<!-- MediaWiki page 1737; revision 3344; parent 3343; 2008-09-14T18:59:00Z -->
