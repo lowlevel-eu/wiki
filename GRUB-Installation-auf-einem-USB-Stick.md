@@ -1,7 +1,5 @@
 # GRUB Installation auf einem USB-Stick
 
-# GRUB Installation auf einem USB-Stick
-
 ## Vorbemerkung
 
 Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick GRUB zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
@@ -96,6 +94,6 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3341; parent 0; 2008-09-14T18:57:15Z -->
+<!-- MediaWiki page 1737; revision 3343; parent 3341; 2008-09-14T18:57:36Z -->
