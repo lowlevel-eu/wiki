@@ -33,7 +33,6 @@
 
 ## Neu erstellen
 
-- [Diese Dateisysteme](https://lowlevel-eu.github.io/wiki/pages/1659/index.html "Kategorie:Dateisystem") in die Übersicht auf der Hauptseite bringen und nach [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") verlinken
 - Informationen zur AMD PCNet Netzwerkkarte
 - Hier kommt dein Wunsch hin ;)
 
@@ -41,6 +40,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3339/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3313; parent 3310; 2008-09-08T14:08:07Z -->
+<!-- MediaWiki page 1518; revision 3339; parent 3313; 2008-09-14T03:20:09Z -->
