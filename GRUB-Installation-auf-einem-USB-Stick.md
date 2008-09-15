@@ -88,19 +88,50 @@ Als letzter Schritt muss nun nur noch GRUB auf dem Stick installiert werden, was
 
     /sbin/grub-install --root-directory=/media/usb/ /dev/sda1
 
+Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werden.  
+**Anmerkung:** Jeder USB-Stick kann bootbar gemacht werden. Im Internet herrscht der irrglaube, dass nur einige wenige Sticks bootbar sind, und zwar diese, wo das draufsteht. Das ist jedoch einfach gesagt Schwachsinn, da ein USB-Stick ein Speichermedium ist und solange das BIOS mit dem booten von USB-Sticks klar kommt wird das funktionieren.
+
 ### Installation unter Linux
 
 *ToDo*
 
-  
-Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werden.  
-**Anmerkung:** Jeder USB-Stick kann bootbar gemacht werden. Im Internet herrscht der irrglaube, dass nur einige wenige Sticks bootbar sind, und zwar diese, wo das draufsteht. Das ist jedoch einfach gesagt Schwachsinn, da ein USB-Stick ein Speichermedium ist und solange das BIOS mit dem booten von USB-Sticks klar kommt wird das funktionieren.
+## Testen des USB-Sticks
+
+*ToDo*
+
+### Testen mit Bochs
+
+*ToDo*
+
+#### Testen unter Linux
+
+*ToDo*
+
+#### Testen unter Windows
+
+*ToDo*
+
+### Testen mit qemu
+
+*ToDo*
+
+#### Testen unter Linux
+
+*ToDo*
+
+#### Testen unter Windows
+
+*ToDo*
+
+### Testen auf einer realen Maschine
+
+*ToDo*
 
   
 ***Dieser Artikel ist unvollständig, wird noch erweitert und muss nochmals korrekturgelesen werden***
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3344; parent 3343; 2008-09-14T18:59:00Z -->
+<!-- MediaWiki page 1737; revision 3352; parent 3344; 2008-09-15T18:16:57Z -->
