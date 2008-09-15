@@ -17,8 +17,7 @@ In diesem Abschnitt werden der Inhalt des USB-Sticks mit Null-Bytes überschrieb
 Zuerst sollte man nachschauen, wo der USB-Stick hin gemountet wurde, falls das automatisch geschehen ist. Dies kann man mit dem Befehl mount machen:
 
     mount
-
-    ''Beispielausgabe einfügen''
+    /dev/sda1 on /mnt type vfat (rw)
 
 Zumeist liegt der Stick an der Stelle /dev/sda1 o.ä. zumindest war es bei mir so. Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt gemacht:
 
@@ -132,6 +131,6 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3352; parent 3344; 2008-09-15T18:16:57Z -->
+<!-- MediaWiki page 1737; revision 3353; parent 3352; 2008-09-15T18:25:14Z -->
