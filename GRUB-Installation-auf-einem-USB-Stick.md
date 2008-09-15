@@ -131,6 +131,6 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3353; parent 3352; 2008-09-15T18:25:14Z -->
+<!-- MediaWiki page 1737; revision 3355; parent 3353; 2008-09-15T18:42:40Z -->
