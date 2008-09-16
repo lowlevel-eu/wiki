@@ -147,12 +147,12 @@ Um unter qemu von dem USB-Stick booten zu lassen, muss der Stick als Festplatte 
 
     Start->Ausführen
 
-Hier wird dann "diskmgmt.msc" eingegeben und mittels Klick auf "OK" geöffnet. Hier muss nun der USB-Stick gesucht werden. Dieser sollte als Wechselmedium eingetragen sein. Dieser hat den Titel "Datenträger" und dann noch eine Nummer, in meinem Falle die 5. Diese Nummer wird für qemu gebraucht, damit das richtige Gerät angesprochen werden kann. Der Aufruf von qemu könnte dann so aussehen:
+Hier wird dann "diskmgmt.msc" eingegeben und mittels Klick auf "OK" geöffnet. Hier muss nun der USB-Stick herausgesucht werden. Dieser hat den Titel "Datenträger" und dann noch eine Nummer, in diesem Fall die 5. Diese Nummer wird für qemu gebraucht, damit das richtige Gerät angesprochen werden kann. Welcher Eintrag nun der USB-Stick ist, kann mit mehreren Kriterien herausgefunden werden. Zum einen wäre da der Mountpunkt, also der buchstabe, z.B. "D:", zum anderen wird der Stick von Windows als Wechselmedium gespeichert, wodurch man einige Einträge ausschließen kann, wie z.B. interne Festplatten oder CD/DVD-Laufwerke. Der Aufruf von qemu könnte dann wie folgt aussehen:
 
     qemu -L . -m 32 -localtime -boot c -hda \\\\.\\PhysicalDrive5
 
-**Anmerkung:** Der Stick wird mit "PhysicalDrive" und der entsprechenden Nummer dahinter angesprochen. Die vielen \\ sind aus dem Grund, da eben jenes Zeichen für die Verwendung mit qemu escaped werden muss.  
-Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, GRUB geladen werden.
+**Anmerkung:** Der Stick wird mit "PhysicalDrive" und der entsprechenden Nummer dahinter angesprochen. PhysicalDrive ist einfach nur der Englische Name für "Datenträger". Die vielen \\ sind aus dem Grund, da eben dieses Zeichen für die Verwendung mit qemu escaped werden muss.  
+Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, unter qemu dann GRUB vom USB-Stick geladen werden.
 
 ### Testen auf einer realen Maschine
 
@@ -163,6 +163,6 @@ Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, GRUB geladen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3356; parent 3355; 2008-09-16T14:08:02Z -->
+<!-- MediaWiki page 1737; revision 3357; parent 3356; 2008-09-16T14:12:42Z -->
