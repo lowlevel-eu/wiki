@@ -129,7 +129,7 @@ Wie auch bei der Installation unter Linux/Unix werden hier die GRUB Binarys ben�
 
 Das booten des USB-Sticks unter Linux ist im Gegensatz zu der Vorgehensweise unter Windows viel einfacher. Es wird einfach das Devicenode, das vom Kernel vergeben wird, benötigt. In diesem Beispiel ist das /dev/sda, da /dev/sda1 die Partition auf dem USB-Stick ist! Der Aufruf von qemu würde dann also so aussehen:
 
-    qemu -L . -m 32 -localtime -boot c -hda /dev/sda
+    qemu -L . -m 32 -localtime -boot c -hda /dev/sda1
 
 **Anmerkung:** Die obige Befehls-Zeile muss noch von mir getestet werden, sollte allerdings funktionieren.
 
@@ -158,6 +158,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3363; parent 3362; 2008-09-16T17:03:33Z -->
+<!-- MediaWiki page 1737; revision 3364; parent 3363; 2008-09-16T17:08:53Z -->
