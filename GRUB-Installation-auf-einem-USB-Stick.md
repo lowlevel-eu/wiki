@@ -162,13 +162,14 @@ Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, unter qemu d
 
 Der Test auf einer realen Maschine sollte nicht unbedingt so schwer sein.  
 Die einzige Vorraussetzung ist, dass das BIOS von einer USB-Festplatte booten können muss. Das heißt, man muss um dies zu aktivieren im BIOS bei den Geräten von denen gebootet werden soll den Eintrag "USB-HDD" einfügen, insofern dieser vorhanden ist. Andere Einstellungen, wie z.B. "USB-FDD" oder "USB-CDROM" funktionieren leider nicht.  
-Das heißt dann, wenn der BIOS-Eintrag "USB-HDD" nicht vorhanden ist, muss eventuell ein BIOS-Update vorgenommen werden.
+Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen werden, wo dieser dann hoffentlich vorhanden ist.  
+**Anmerkung:** Dieser Part steht hier unter vorbehalt, da ich schauen muss, ob nicht eventuell irgendwo noch eine Option vorhanden ist, mit der man das bootem von USB Festplatten verbieten kann. Dieser Part sollte dem zufolge also erst einmal \_**IGNORIERT**\_ werden
 
   
 ***Dieser Artikel ist unvollständig, wird noch erweitert und korrigiert***
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3361/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3362/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3361; parent 3360; 2008-09-16T16:29:52Z -->
+<!-- MediaWiki page 1737; revision 3362; parent 3361; 2008-09-16T16:34:02Z -->
