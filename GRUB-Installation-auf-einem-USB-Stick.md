@@ -36,7 +36,7 @@ Ein anderer Weg, den Stick von den Daten zu befreien, wäre der folgende:
 
 ### Löschen der Daten unter Windows
 
-dd wurde nach Windows portiert und ist hier erhältlich: <http://www.chrysocome.net/dd>  
+dd wurde nach Windows portiert und ist hier erhältlich: [DD für Windows](http://www.chrysocome.net/dd)  
 Um zu schauen, welches Laufwerk der USB-Stick ist, muss dd mit dem Parameter --list aufgerufen werden. Dieser existiert allerdings nur in der Version für Windows
 
     dd --list
@@ -47,32 +47,19 @@ In der Auflistung muss man nun nach dem Laufwerksbuchstabe schauen, an dem der S
 
 *Anmerkung: Diese Aktion kann je nach größe des USB-Sticks einige Zeit in Anspruch nehmen.*  
 
-## Partitionieren des Sticks
-
-Um auf dem Stick den Bootloader GRUB zu installieren, muss vor dem Formatieren des Sticks eine Partition angelegt werden. Dies ist möglich, da es sich bei dem USB-Stick um eine kleine externe Festplatte handelt.
-
-### Partitionieren unter Linux/Unix
-
-Um den USB-Stick zu partitionieren, muss einfach nur cfdisk oder fdisk mit der Stelle angeben, unter der der Stick von der jeweiligen Maschine verwaltet wird, was in dieser Anleitung /dev/sda1 ist. Also lautet der Aufruf wie folgt:
-
-    cfdisk /dev/sda
-    .... oder ....
-    fdisk /dev/sda
-
-**Anmerkung:** /dev/sda stellt den Stick dar, /dev/sda1 die erste Partition.  
-Nun muss mit dem jeweiligen Programm eine Partition erstellt werden. Nach dem Schreiben der Partitions-Tabelle, wird eben jene neu eingelesen. Beim neuen Einlesen der Partitions-Tabelle kann unter umständen der Fehler auftreten, das der Stick nicht wieder eingelesen werden konnte, was allerdings vernachlässigt werden kann.
-
-### Partitionieren unter Windows
-
-*ToDo*
-
 ## Formatieren des Sticks
 
 In diesem zweiten Abschnitt bekommt der USB-Stick ein neues Dateisystem. Das Dateisystem meiner Wahl ist ext2, kann aber durchaus auch ein anderes, wie FAT32 oder so sein.
 
 ### Formatieren der Partition des Sticks unter Linux/Unix
 
-Im nächsten Schritt muss der Stick nun mit einem Dateisystem "formatiert" werden.
+Bevor der Stick formatiert wird, sollte eben jener zuerst partitioniert werden, da die Partition ja durch Null-Bytes ersetzt wurde. Um den USB-Stick zu partitionieren, muss einfach nur cfdisk oder fdisk mit der Stelle angeben, unter der der Stick von der jeweiligen Maschine verwaltet wird, was in dieser Anleitung /dev/sda1 ist. Also lautet der Aufruf wie folgt:
+
+    cfdisk /dev/sda1
+    .... oder ....
+    fdisk /dev/sda1
+
+Nun muss mit dem jeweiligen Programm eine Partition erstellt werden, was in meinem Falle ext2 ist. Nach dem Schreiben der Partitions-Tabelle, wird eben jene neu eingelesen. Jedoch kann beim neuen Einlesen der Partitions-Tabelle unter umständen der Fehler auftreten, das der Stick nicht wieder eingelesen werden kann, was allerdings vernachlässigt werden kann. Im nächsten Schritt muss der Stick nun mit einem Dateisystem formatiert werden. Dies wird wie folgt gemacht:
 
     mkfs.ext2 /dev/sda1
 
@@ -80,7 +67,7 @@ Hier wird der Stick, nach drücken der Return-Taste, mit dem Ext2 Dateisystem fo
 
 ### Formatieren der Partition des Sticks unter Windows
 
-*ToDo*
+Unter Windows reicht es, den USB-Stick einfach formatieren zu lassen, da hier gleichzeitig dann auch eine Partition angelegt wird. Formatieren kann man den Stick im Arbeitsplatz. Hierzu muss das Kontext-Menü mit einem Rechtsklick auf den Laufwerksbuchstaben geöffnet werden. In diesem Menü kann dann über den Eintrag "Formatieren..." den Stick mit dem Dateisystem FAT32 formatieren.
 
 ## Installieren von GRUB
 
@@ -115,7 +102,8 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ### Installation unter Windows
 
-***Bis jetzt habe ich noch keine Möglichkeit gefunden, GRUB vernünftig unter Windows zu installieren.***
+Wie auch bei der Installation unter Linux/Unix werden hier die GRUB Binarys benötigt, welche auf dem ftp-Server des Projekts zu finden sind: GRUB Legacy. Zur Benutzung empfehle ich die Version 0.97! GRUB Legacy wird zwar nicht mehr weiterentwickelt, da an GRUB2 gearbeitet wird, doch GRUB2 ist noch nicht ganz stabil.  
+***Bis jetzt habe ich allerdings noch keine Möglichkeit gefunden, GRUB vernünftig unter Windows zu installieren.***
 
 ## Testen des USB-Sticks
 
@@ -170,6 +158,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3362/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3362; parent 3361; 2008-09-16T16:34:02Z -->
+<!-- MediaWiki page 1737; revision 3363; parent 3362; 2008-09-16T17:03:33Z -->
