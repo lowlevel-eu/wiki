@@ -19,7 +19,11 @@ Zuerst sollte man nachschauen, wo der USB-Stick hin gemountet wurde, falls das a
     mount
     /dev/sda1 on /mnt type vfat (rw)
 
-Zumeist liegt der Stick an der Stelle /dev/sda1 o.ä. zumindest war es bei mir so. Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt gemacht:
+Zumeist liegt der Stick an der Stelle /dev/sda1 o.ä. zumindest war es bei mir so. Bevor der Inhalt des Sticks allerdings überschrieben werden kann, sollte er ausgehängt werden, damit kein Programm auf diesen zugreifen kann. Dies geschieht wie folgt:
+
+    umount /dev/sda1
+
+Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt gemacht:
 
     cat /dev/zero > /dev/sda1
     cat: write error: No space left on device
@@ -42,6 +46,25 @@ In der Auflistung muss man nun nach dem Laufwerksbuchstabe schauen, an dem der S
     dd if=/dev/zero of=\\.\g: -count=1G -bs=1M --progress
 
 *Anmerkung: Diese Aktion kann je nach größe des USB-Sticks einige Zeit in Anspruch nehmen.*  
+
+## Partitionieren des Sticks
+
+Um auf dem Stick den Bootloader GRUB zu installieren, muss vor dem Formatieren des Sticks eine Partition angelegt werden. Dies ist möglich, da es sich bei dem USB-Stick um eine kleine externe Festplatte handelt.
+
+### Partitionieren unter Linux/Unix
+
+Um den USB-Stick zu partitionieren, muss einfach nur cfdisk oder fdisk mit der Stelle angeben, unter der der Stick von der jeweiligen Maschine verwaltet wird, was in dieser Anleitung /dev/sda1 ist. Also lautet der Aufruf wie folgt:
+
+    cfdisk /dev/sda
+    .... oder ....
+    fdisk /dev/sda
+
+**Anmerkung:** /dev/sda stellt den Stick dar, /dev/sda1 die erste Partition.  
+Nun muss mit dem jeweiligen Programm eine Partition erstellt werden. Nach dem Schreiben der Partitions-Tabelle, wird eben jene neu eingelesen. Beim neuen Einlesen der Partitions-Tabelle kann unter umständen der Fehler auftreten, das der Stick nicht wieder eingelesen werden konnte, was allerdings vernachlässigt werden kann.
+
+### Partitionieren unter Windows
+
+*ToDo*
 
 ## Formatieren des Sticks
 
@@ -120,7 +143,16 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 #### Testen unter Windows
 
-*ToDo*
+Um unter qemu von dem USB-Stick booten zu lassen, muss der Stick als Festplatte angegeben werden. Dazu wird jedoch allerdings der Name des Geräts benötigt. Dieser ist wie folgt zu finden:
+
+    Start->Ausführen
+
+Hier wird dann "diskmgmt.msc" eingegeben und mittels Klick auf "OK" geöffnet. Hier muss nun der USB-Stick gesucht werden. Dieser sollte als Wechselmedium eingetragen sein. Dieser hat den Titel "Datenträger" und dann noch eine Nummer, in meinem Falle die 5. Diese Nummer wird für qemu gebraucht, damit das richtige Gerät angesprochen werden kann. Der Aufruf von qemu könnte dann so aussehen:
+
+    qemu -L . -m 32 -localtime -boot c -hda \\\\.\\PhysicalDrive5
+
+**Anmerkung:** Der Stick wird mit "PhysicalDrive" und der entsprechenden Nummer dahinter angesprochen. Die vielen \\ sind aus dem Grund, da eben jenes Zeichen für die Verwendung mit qemu escaped werden muss.  
+Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, GRUB geladen werden.
 
 ### Testen auf einer realen Maschine
 
@@ -131,6 +163,6 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3355; parent 3353; 2008-09-15T18:42:40Z -->
+<!-- MediaWiki page 1737; revision 3356; parent 3355; 2008-09-16T14:08:02Z -->
