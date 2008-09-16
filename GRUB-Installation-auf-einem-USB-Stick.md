@@ -70,7 +70,7 @@ Nun muss mit dem jeweiligen Programm eine Partition erstellt werden. Nach dem Sc
 
 In diesem zweiten Abschnitt bekommt der USB-Stick ein neues Dateisystem. Das Dateisystem meiner Wahl ist ext2, kann aber durchaus auch ein anderes, wie FAT32 oder so sein.
 
-### Formatieren des Sticks unter Linux/Unix
+### Formatieren der Partition des Sticks unter Linux/Unix
 
 Im nächsten Schritt muss der Stick nun mit einem Dateisystem "formatiert" werden.
 
@@ -78,7 +78,7 @@ Im nächsten Schritt muss der Stick nun mit einem Dateisystem "formatiert" werde
 
 Hier wird der Stick, nach drücken der Return-Taste, mit dem Ext2 Dateisystem formatiert.  
 
-### Formatieren des Sticks unter Windows
+### Formatieren der Partition des Sticks unter Windows
 
 *ToDo*
 
@@ -163,6 +163,6 @@ Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, unter qemu d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3357; parent 3356; 2008-09-16T14:12:42Z -->
+<!-- MediaWiki page 1737; revision 3358; parent 3357; 2008-09-16T14:13:37Z -->
