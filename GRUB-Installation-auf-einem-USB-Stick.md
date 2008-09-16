@@ -160,13 +160,15 @@ Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, unter qemu d
 
 ### Testen auf einer realen Maschine
 
-*ToDo*
+Der Test auf einer realen Maschine sollte nicht unbedingt so schwer sein.  
+Die einzige Vorraussetzung ist, dass das BIOS von einer USB-Festplatte booten können muss. Das heißt, man muss um dies zu aktivieren im BIOS bei den Geräten von denen gebootet werden soll den Eintrag "USB-HDD" einfügen, insofern dieser vorhanden ist. Andere Einstellungen, wie z.B. "USB-FDD" oder "USB-CDROM" funktionieren leider nicht.  
+Das heißt dann, wenn der BIOS-Eintrag "USB-HDD" nicht vorhanden ist, muss eventuell ein BIOS-Update vorgenommen werden.
 
   
-***Dieser Artikel ist unvollständig, wird noch erweitert und muss nochmals korrekturgelesen werden***
+***Dieser Artikel ist unvollständig, wird noch erweitert und korrigiert***
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3361/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3360; parent 3358; 2008-09-16T16:25:07Z -->
+<!-- MediaWiki page 1737; revision 3361; parent 3360; 2008-09-16T16:29:52Z -->
