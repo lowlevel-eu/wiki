@@ -84,7 +84,7 @@ Hier wird der Stick, nach drücken der Return-Taste, mit dem Ext2 Dateisystem fo
 
 ## Installieren von GRUB
 
-### Installation unter Linux
+### Installation unter Linux/Unix
 
 Nun muss der Formatierte Stick wieder gemountet werden:
 
@@ -113,9 +113,9 @@ Als letzter Schritt muss nun nur noch GRUB auf dem Stick installiert werden, was
 Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werden.  
 **Anmerkung:** Jeder USB-Stick kann bootbar gemacht werden. Im Internet herrscht der irrglaube, dass nur einige wenige Sticks bootbar sind, und zwar diese, wo das draufsteht. Das ist jedoch einfach gesagt Schwachsinn, da ein USB-Stick ein Speichermedium ist und solange das BIOS mit dem booten von USB-Sticks klar kommt wird das funktionieren.
 
-### Installation unter Linux
+### Installation unter Windows
 
-*ToDo*
+***Bis jetzt habe ich noch keine Möglichkeit gefunden, GRUB vernünftig unter Windows zu installieren.***
 
 ## Testen des USB-Sticks
 
@@ -125,7 +125,7 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 *ToDo*
 
-#### Testen unter Linux
+#### Testen unter Linux/Unix
 
 *ToDo*
 
@@ -137,9 +137,13 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 *ToDo*
 
-#### Testen unter Linux
+#### Testen unter Linux/Unix
 
-*ToDo*
+Das booten des USB-Sticks unter Linux ist im Gegensatz zu der Vorgehensweise unter Windows viel einfacher. Es wird einfach das Devicenode, das vom Kernel vergeben wird, benötigt. In diesem Beispiel ist das /dev/sda, da /dev/sda1 die Partition auf dem USB-Stick ist! Der Aufruf von qemu würde dann also so aussehen:
+
+    qemu -L . -m 32 -localtime -boot c -hda /dev/sda
+
+**Anmerkung:** Die obige Befehls-Zeile muss noch von mir getestet werden, sollte allerdings funktionieren.
 
 #### Testen unter Windows
 
@@ -163,6 +167,6 @@ Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, unter qemu d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3358; parent 3357; 2008-09-16T14:13:37Z -->
+<!-- MediaWiki page 1737; revision 3360; parent 3358; 2008-09-16T16:25:07Z -->
