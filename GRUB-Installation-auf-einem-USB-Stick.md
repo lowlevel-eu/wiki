@@ -28,6 +28,10 @@ Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt 
     cat /dev/zero > /dev/sda1
     cat: write error: No space left on device
 
+**Warnung**
+
+**/dev/sda** kann durchaus auch deine Festplatte sein. Falls du dir also nicht sicher bist: ***nicht*** einfach ausprobieren
+
 Wird die untere Fehlermeldung ausgegeben, so heißt das, dass der USB-Stick komplett überschrieben wurde. Ab hier gibt es denke ich mal keine Möglichkeit mehr noch eventuelle Daten zu sichern, da alles überschrieben wurde.  
 Ein anderer Weg, den Stick von den Daten zu befreien, wäre der folgende:
 
@@ -158,6 +162,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3364; parent 3363; 2008-09-16T17:08:53Z -->
+<!-- MediaWiki page 1737; revision 3366; parent 3364; 2008-09-17T17:33:42Z -->
