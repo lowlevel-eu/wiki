@@ -16,16 +16,19 @@ In diesem Abschnitt werden der Inhalt des USB-Sticks mit Null-Bytes überschrieb
 
 Zuerst sollte man nachschauen, wo der USB-Stick hin gemountet wurde, falls das automatisch geschehen ist. Dies kann man mit dem Befehl mount machen:
 
-    mount
-    /dev/sda1 on /mnt type vfat (rw)
+    $ mount
+    /dev/hda1 on / type ext3 (rw,errors=remount-ro)
+    proc on /proc type proc (rw,noexec,nosuid,nodev)
+    sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+    /dev/sda1 on /mnt type vfat (rw)                    <-- diese Zeile ist relevant
 
 Zumeist liegt der Stick an der Stelle /dev/sda1 o.ä. zumindest war es bei mir so. Bevor der Inhalt des Sticks allerdings überschrieben werden kann, sollte er ausgehängt werden, damit kein Programm auf diesen zugreifen kann. Dies geschieht wie folgt:
 
-    umount /dev/sda1
+    $ umount /dev/sda1
 
 Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt gemacht:
 
-    cat /dev/zero > /dev/sda1
+    $ cat /dev/zero > /dev/sda1
     cat: write error: No space left on device
 
 **Warnung**
@@ -35,7 +38,7 @@ Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt 
 Wird die untere Fehlermeldung ausgegeben, so heißt das, dass der USB-Stick komplett überschrieben wurde. Ab hier gibt es denke ich mal keine Möglichkeit mehr noch eventuelle Daten zu sichern, da alles überschrieben wurde.  
 Ein anderer Weg, den Stick von den Daten zu befreien, wäre der folgende:
 
-    dd if=/dev/zero of=/dev/sda1
+    $ dd if=/dev/zero of=/dev/sda1
     cat: write error: No space left on device
 
 ### Löschen der Daten unter Windows
@@ -162,6 +165,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3366; parent 3364; 2008-09-17T17:33:42Z -->
+<!-- MediaWiki page 1737; revision 3367; parent 3366; 2008-09-17T17:44:00Z -->
