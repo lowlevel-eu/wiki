@@ -1,6 +1,6 @@
 # CPUID
 
-Der CPUID Befehl wird benutzt, um informationen über die Fähigkeiten eines PC´s zu erhalten. (Wie zum Beispiel den Herstellernamen, Modelnummer, die Größe des Cache ...)
+Der CPUID Befehl wird benutzt, um Informationen über die Fähigkeiten eines PC´s zu erhalten. (Wie zum Beispiel den Herstellernamen, Modelnummer, die Größe des Cache ...)
 
   
 
@@ -19,7 +19,7 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ## Siehe auch
 
-[englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID)
+[Englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID)
 
 [Intels CPUID-Spezifikation](http://bochs.sourceforge.net/techspec/24161821.pdf)
 
@@ -27,6 +27,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3375; parent 3374; 2008-09-19T12:47:43Z -->
+<!-- MediaWiki page 1739; revision 3377; parent 3375; 2008-09-19T20:16:25Z -->
