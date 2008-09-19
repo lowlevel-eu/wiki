@@ -2,8 +2,6 @@
 
 Der CPUID Befehl wird benutzt, um Informationen über die Fähigkeiten eines PC´s zu erhalten. (Wie zum Beispiel den Herstellernamen, Modelnummer, die Größe des Cache ...)
 
-  
-
 ## Wie man CPUID benutzt
 
 Um den CPUID-Befehl auszuführen, schreibt man einfach den ASM-Befehl CPUID in den Code. Die Parameter werden dabei im Register EAX angegeben. Um z.B. den Vendor-ID-String (Herstellername) zu bekommen, ruft man CPUID mit dem Parameter 0x0 in EAX auf.
@@ -27,6 +25,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3377; parent 3375; 2008-09-19T20:16:25Z -->
+<!-- MediaWiki page 1739; revision 3378; parent 3377; 2008-09-19T20:16:38Z -->
