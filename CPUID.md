@@ -27,6 +27,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3374; parent 3373; 2008-09-19T12:14:34Z -->
+<!-- MediaWiki page 1739; revision 3375; parent 3374; 2008-09-19T12:47:43Z -->
