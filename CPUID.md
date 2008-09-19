@@ -19,10 +19,10 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ## Siehe auch
 
-[\[1\]](http://wiki.osdev.org/CPUID) englischer Artikel über den CPUID-Befehl [\[2\]](http://bochs.sourceforge.net/techspec/24161821.pdf) Intels CPUID-Spezifikation [\[3\]](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf) AMDs CPUID-Spezifikation
+[englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID) [Intels CPUID-Spezifikation](http://bochs.sourceforge.net/techspec/24161821.pdf) \[<http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf> AMDs CPUID-Spezifikation \]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3371/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3371; parent 0; 2008-09-19T12:12:49Z -->
+<!-- MediaWiki page 1739; revision 3372; parent 3371; 2008-09-19T12:13:46Z -->
