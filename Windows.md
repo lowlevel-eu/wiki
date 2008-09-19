@@ -1,6 +1,6 @@
 # Windows
 
-Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt. Es gibt einen "Windows Klon" - [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS"). Das Open Source Projekt versucht eine komplette Windows Nachbildung zu schaffen, auf der mittlerweile auch schon eineige Programme gut und stabil laufen.
+Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt. Als freie Alternative zu Windows gibt es [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") .
 
 | Windows |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -23,7 +23,7 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 
 ### Pro
 
-Für Leute die noch nie mit Linux gearbeitet haben ist der Einstieg sicher etwas schwerer, vor allem wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist mit Windows zu arbeiten der wird sich nicht bemühen bash oder Sonstiges zu lernen, wenn er mit \*.bat Dateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen ihr eigenes Betriebssystem zu entwickeln. Und die Programme, die benötigt werden (Compiler,...) existieren mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden. (Binutils, Crosscompiler, MingGW CygWin,...)
+Für Leute, die noch nie mit Linux gearbeitet haben ist der Einstieg sicher etwas schwerer, vor allem wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist, mit Windows zu arbeiten, der wird sich nicht bemühen, Bash oder Sonstiges zu lernen, wenn er mit \*.bat Dateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen, ihr eigenes Betriebssystem zu entwickeln. Und die Programme, die benötigt werden (Compiler,...) existieren mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden. (Binutils, Crosscompiler, MingGW CygWin,...)
 
 ### Contra
 
@@ -49,6 +49,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3025/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3025; parent 3017; 2008-07-09T11:07:51Z -->
+<!-- MediaWiki page 1558; revision 3379; parent 3025; 2008-09-19T20:45:47Z -->
