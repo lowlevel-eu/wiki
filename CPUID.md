@@ -23,10 +23,10 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 [Intels CPUID-Spezifikation](http://bochs.sourceforge.net/techspec/24161821.pdf)
 
-\[<http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf> AMDs CPUID-Spezifikation \]
+[AMDs CPUID-Spezifikation](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3373; parent 3372; 2008-09-19T12:14:03Z -->
+<!-- MediaWiki page 1739; revision 3374; parent 3373; 2008-09-19T12:14:34Z -->
