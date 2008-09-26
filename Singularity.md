@@ -4,10 +4,11 @@
 
 ## Links
 
-[Microsoft Research: Singularity Homepage](http://research.microsoft.com/os/singularity/) [Singularity Quellcode](http://www.codeplex.com/singularity)
+- [Microsoft Research: Singularity Homepage](http://research.microsoft.com/os/singularity/)
+- [Singularity Quellcode](http://www.codeplex.com/singularity)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1492/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1492/index.html)
 
-<!-- MediaWiki page 1492; revision 3382; parent 3000; 2008-09-26T21:09:11Z -->
+<!-- MediaWiki page 1492; revision 3383; parent 3382; 2008-09-26T21:09:27Z -->
