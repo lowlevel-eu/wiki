@@ -43,14 +43,12 @@ Diese von vielen Mainboards bereitgestellte Funktion simuliert angeschlossene US
 Dies hat für Programmierer Vor- und Nachteile. Einerseits muss man für die Unterstützung solcher Eingabegeräte keine eigenen USB Treiber programmieren. Andererseits ergeben sich damit einige der hier aufgelisteten Probleme:  
 
 - Auf manchen Systemen Läuft IMMER eine Abstraktionsschicht mit, auch wenn keine USB Geräte angeschlossen sind. Dies kann zur folge haben, dass die Intellimaus-Extension nicht funktioniert. Oder dass man nicht, wie weiter oben beschrieben, beliebige Geräte an ein PSAUX Port anschließen kann. (wird nicht erkannt)
-- Das SMM BIOS, über welches die USB zu PS/2 Abstraktion stattfindet, unterstützen nicht immer den Betrieb über 32Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des Long mode kann das System daher zum Abstürzen bringen!
+- Das [SMM BIOS](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "SMM"), über welches die USB zu PS/2 Abstraktion stattfindet, unterstützen nicht immer den Betrieb über 32Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") kann das System daher zum Abstürzen bringen!
 
   
 Diese Probleme sind nicht mehr vorhanden wenn der Legacy-Modus ausgeschaltet wurde.  
   
 Nach meinen Informationen wird der Legacy-Modus ausgeschaltet sobald der USB-Chip initialisiert wird. Also die Hardware weiß, dass die Software die USB Geräte direkt ansteuern kann. (Ist diese Information korrekt?)
-
-  
 
 ## Programmieren des KBC
 
@@ -339,6 +337,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2964/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 2964; parent 2716; 2008-05-30T18:26:45Z -->
+<!-- MediaWiki page 1468; revision 3384; parent 2964; 2008-09-27T22:42:13Z -->
