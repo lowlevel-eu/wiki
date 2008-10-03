@@ -25,10 +25,11 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 # Links
 
 - [Draft des C Standards](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1124.pdf)
-- [Tutorial](http://www.c-howto.de/)
+- [C-Tutorial](http://www.c-howto.de/)
+- [C-Kernel-Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3389/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3389; parent 3300; 2008-10-03T15:45:06Z -->
+<!-- MediaWiki page 1526; revision 3390; parent 3389; 2008-10-03T15:46:23Z -->
