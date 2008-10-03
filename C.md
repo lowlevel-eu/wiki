@@ -4,7 +4,7 @@ C ist eine bekannte ältere Programmiersprache. Sie verfolgt das Ziel bei vergle
 
 # Kernelprogrammierung mit C
 
-Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für andere Bereiche ist C jedoch nicht sonderlich geeignet: beispielsweise für einen Bootsektor. Empfehlenswert ist - wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll - ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc").
+Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für andere Bereiche ist C jedoch nicht sonderlich geeignet: beispielsweise für einen Bootsektor. Empfehlenswert ist - wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll - ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"). Für Einsteiger gibt es ein [Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf), welches beschreibt, wie man in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") schaltet und in C geschriebenen Code ausführt.
 
 # Bekannte C-Compiler
 
@@ -29,6 +29,6 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3389/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3300; parent 3291; 2008-09-06T08:41:10Z -->
+<!-- MediaWiki page 1526; revision 3389; parent 3300; 2008-10-03T15:45:06Z -->
