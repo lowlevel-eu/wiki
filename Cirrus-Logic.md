@@ -91,7 +91,7 @@ Zuerst muss das Zeichnen von Rechtecken mit der gewünschten Farbe und dem gewü
 
 \</c\>
 
-## Kopieren von Teilen des Bildschirms und des Offscreen Buffers
+### Kopieren von Teilen des Bildschirms und des Offscreen Buffers
 
 \<c\> set_rop(3); // Als erstes muss für Quelle und Ziel der Pitch eingestellt werden. Wir nehmen für beides die Bildschirmbreite // Alternativ kann man hier die Breite eines Bitmaps einstellen, wenn es im Offscreen-Buffer liegt. int pitch = screenwidth \* bitsPerPixel / 8; // Ziel outw(VGA_GRAPH_INDEX, ((pitch \<\< 8) & 0xff00) \| 0x24); outw(VGA_GRAPH_INDEX, ((pitch) & 0x1f00) \| 0x25); // Quelle outw(VGA_GRAPH_INDEX, ((pitch \<\< 8) & 0xff00) \| 0x26); outw(VGA_GRAPH_INDEX, ((pitch) & 0x1f00) \| 0x27);
 
@@ -113,14 +113,21 @@ if (!autostart)
 
 \</c\>
 
+### Text zeichnen
+
+Zur Anwendung der verschiedenen Raster Ops noch ein kleines Beispiel: Wir wollen einen Buchstaben auf den Bildschirm zeichnen, dabei wollen wir \*nicht\* die Grafik zerstören, die unter dem Buchstaben liegt, sondern ihn mit Transparenz zeichnen. Dazu erstellen wir eine invertierte Maske (Buchstabe schwarz) und ein Bitmap mit dem Buchstaben in der gewünschten Farbe.
+
+Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Bereiche (der Buchstabe selbst) im Framebuffer ebenfalls schwarz werden. Im zweiten Schritt zeichnen wir das farbige Bitmap mit dem Rop "or", sodass die vorher geschwärzten Bereiche mit der Farbe gefüllt werden. Wichtig ist, dass Maske und Bitmap von der Form her natürlich übereinstimmen. ^^
+
 ## Hardware-Cursor
 
 ## Links
 
-<http://www.koders.com/c/fidC2D0E7B95D33763B17521DF3EA7B68C81D500CAD.aspx> Code aus Qemu <http://cgit.freedesktop.org/xorg/driver/xf86-video-cirrus/> Xorg-Treiber
+- <http://www.koders.com/c/fidC2D0E7B95D33763B17521DF3EA7B68C81D500CAD.aspx> Code aus Qemu
+- <http://cgit.freedesktop.org/xorg/driver/xf86-video-cirrus/> Xorg-Treiber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3399/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 3398; parent 3395; 2008-10-09T15:47:17Z -->
+<!-- MediaWiki page 1743; revision 3399; parent 3398; 2008-10-09T15:54:38Z -->
