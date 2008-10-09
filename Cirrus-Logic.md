@@ -68,7 +68,7 @@ void set_rop(int rop) {
 
 } \</c\>
 
-Nach jeder Zeichenoperation muss zum Starten des Zeichnens entweder 0x02 in das Graph-Register 0x31 geschrieben werden oder die Karte nach der Initialisierung in den Autostart-Modus versetzt werden: \<c\> outw(VGA_GRAPH_INDEX, 0x8031); \</c\>
+Nach jeder Zeichenoperation muss zum Starten des Zeichnens entweder 0x02 in das Graph-Register 0x31 geschrieben werden oder die Karte nach der Initialisierung in den Autostart-Modus versetzt werden: \<c\> // Autostart aktivieren outw(VGA_GRAPH_INDEX, 0x8031); \</c\>
 
 ### Zeichnen von gefüllten Rechtecken
 
@@ -101,6 +101,6 @@ Zuerst muss das Zeichnen von Rechtecken mit der gewünschten Farbe und dem gewü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3395/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 3394; parent 3393; 2008-10-09T14:27:25Z -->
+<!-- MediaWiki page 1743; revision 3395; parent 3394; 2008-10-09T14:40:58Z -->
