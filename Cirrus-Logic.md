@@ -91,7 +91,27 @@ Zuerst muss das Zeichnen von Rechtecken mit der gewünschten Farbe und dem gewü
 
 \</c\>
 
-  
+## Kopieren von Teilen des Bildschirms und des Offscreen Buffers
+
+\<c\> set_rop(3); // Als erstes muss für Quelle und Ziel der Pitch eingestellt werden. Wir nehmen für beides die Bildschirmbreite // Alternativ kann man hier die Breite eines Bitmaps einstellen, wenn es im Offscreen-Buffer liegt. int pitch = screenwidth \* bitsPerPixel / 8; // Ziel outw(VGA_GRAPH_INDEX, ((pitch \<\< 8) & 0xff00) \| 0x24); outw(VGA_GRAPH_INDEX, ((pitch) & 0x1f00) \| 0x25); // Quelle outw(VGA_GRAPH_INDEX, ((pitch \<\< 8) & 0xff00) \| 0x26); outw(VGA_GRAPH_INDEX, ((pitch) & 0x1f00) \| 0x27);
+
+// Breiten/Höhenangaben des zu kopierenden Bereichs umrechnen int ww = (width \* 3) - 1; int hh = height - 1;
+
+// Wenn man nach unten verschiebt, muss auch unten angefangen werden mit kopieren int decrement = 0; // src und dest sind die Adressen der Bereiche im Framebuffer int src = pitch\*y1 + x1 \* 3; int dest = pitch\*y2 + x2 \* 3; if (dest \> src) { decrement = 1 \<\< 8; dest += hh \* pitch + ww; src += hh \* pitch + ww; }
+
+outw(VGA_GRAPH_INDEX, decrement \| 0x30);
+
+// Breite outw(VGA_GRAPH_INDEX, ((ww \<\< 8) & 0xff00) \| 0x20); outw(VGA_GRAPH_INDEX, ((ww) & 0x1f00) \| 0x21); // Höhe outw(VGA_GRAPH_INDEX, ((hh \<\< 8) & 0xff00) \| 0x22); outw(VGA_GRAPH_INDEX, ((hh) & 0x0700) \| 0x23);
+
+// Quelle outw(VGA_GRAPH_INDEX, ((src \<\< 8) & 0xff00) \| 0x2C); outw(VGA_GRAPH_INDEX, ((src) & 0xff00) \| 0x2D); outw(VGA_GRAPH_INDEX, ((src \>\> 8) & 0x3f00)\| 0x2E);
+
+// Ziel outw(VGA_GRAPH_INDEX, ((dest \<\< 8) & 0xff00) \| 0x28); outw(VGA_GRAPH_INDEX, ((dest) & 0xff00) \| 0x29); outw(VGA_GRAPH_INDEX, ((dest \>\> 8) & 0x3f00) \| 0x2A);
+
+if (!autostart)
+
+       outw(port, 0x0231);
+
+\</c\>
 
 ## Hardware-Cursor
 
@@ -101,6 +121,6 @@ Zuerst muss das Zeichnen von Rechtecken mit der gewünschten Farbe und dem gewü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3395/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 3395; parent 3394; 2008-10-09T14:40:58Z -->
+<!-- MediaWiki page 1743; revision 3398; parent 3395; 2008-10-09T15:47:17Z -->
