@@ -20,14 +20,14 @@ Die Programmierung über die VGA-Register ist recht kompliziert, ich habe es nic
 
 Über VESA lässt sich die Karte dagegen sehr einfach einrichten, es reicht aus, über den int10 (entweder mit vm86, einem Emulator oder im Realmode bei Betriebssystemstart) eine größere Auflösung zu wählen.
 
-Ist die Karte einmal in dem Videomodus, muss noch die Beschleunigung aktiviert werden. Dies geschieht durch Schreiben in das Graph-Register 33:
+Ist die Karte einmal in dem Videomodus, muss noch die Beschleunigung aktiviert werden. Dies geschieht durch Schreiben in das Graph-Register 0E:
 
 \<c\>
 
 1.  define VGA_GRAPH_INDEX 0x3CE
 2.  define VGA_GRAPH_DATA 0x3CF
 
-outb(VGA_GRAPH_INDEX, 0x33); outb(VGA_GRAPH_DATA, 0x04); // Oder outw(VGA_GRAPH_INDEX, 0x0433); \</c\>
+outb(VGA_GRAPH_INDEX, 0x0E); outb(VGA_GRAPH_DATA, 0x20); // Oder outw(VGA_GRAPH_INDEX, 0x200E); \</c\>
 
 Ich habe diese Methode jedoch nur in Qemu getestet. Ich bin mir ziemlich sicher, dass das in der echten Welt da draußen nicht so einfach tut, aber wer hat schon eine Cirrus Logic. :)
 
@@ -128,6 +128,6 @@ Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Berei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3399/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 3399; parent 3398; 2008-10-09T15:54:38Z -->
+<!-- MediaWiki page 1743; revision 3402; parent 3399; 2008-10-11T21:09:17Z -->
