@@ -9,7 +9,7 @@ Windows ist ein kommerzielles Betriebsystem der Firma Microsoft, das auf einer s
 | Akt. Version: | NT 6.0 (=Vista) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | x86, x64 und Intel-MAC(BootCamp) |
+| Plattform: | x86, x64 und Intel-MAC(BootCamp), ältere Versionen auch andere |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid Kernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Umbekannt, da nicht Open-Source(vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | WinAPI |
@@ -39,16 +39,17 @@ Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssy
 
 #### API
 
-Bei der API wird unterschieden zwischen der "nativen NT-API", die undokumentiert ist, und der WinAPI(kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, das .NET Framework. .NET Framework war ursprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr Managed Code ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt.
+Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undokumentiert ist (Syscalls, obwohl sich auch hier bereits einiges an Dokumentation zB in ReactOS findet), größtenteils durch das Treiberinterface (Windows WDK bzw DDK) jedoch sogar gut dokumentiert ist, und der WinAPI(kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, das .NET Framework. .NET Framework war ursprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr Managed Code ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt.
 
 ## Links
 
 - [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 - [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") - OpenSource Windows Clone
+- [WindowsNT-API für Treiber und Subsystems](http://msdn.microsoft.com/en-us/library/ms795146.aspx)
 - [Undocumented Windows 2000 Secrets](http://www.rawol.com/?topic=77)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3379; parent 3025; 2008-09-19T20:45:47Z -->
+<!-- MediaWiki page 1558; revision 3408; parent 3379; 2008-10-18T19:34:33Z -->
