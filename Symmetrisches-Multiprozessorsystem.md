@@ -37,7 +37,7 @@ Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksu
 
 - In dem ersten Kilobyte der [Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area")
 - In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area"))
-- Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF)
+- Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF), wenn die Addresse der Extended BIOS Data Area nicht definiert ist
 
 Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
@@ -58,6 +58,6 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 2781; parent 2743; 2008-03-23T01:21:35Z -->
+<!-- MediaWiki page 1490; revision 3423; parent 2781; 2008-10-21T19:16:25Z -->
