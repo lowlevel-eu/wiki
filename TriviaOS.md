@@ -10,7 +10,7 @@
 | Plattform: | x86 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler |
-| API: | WinAPI |
+| API: | Zugriff auf laufenden Module |
 | Binärformat: | eigenes |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing, Shared Memory |
 | Homepage |  |
@@ -71,6 +71,6 @@ Das nächste Release wird in etwa die folgenden Features beinhalten:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3199/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 3199; parent 3198; 2008-08-15T17:44:48Z -->
+<!-- MediaWiki page 1448; revision 3426; parent 3199; 2008-10-22T15:34:11Z -->
