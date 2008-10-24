@@ -22,7 +22,7 @@ Linux ist ein freies Betriebsystem und steht in Konkurrenz zu [Windows](https://
 
 ## Bezeichnung von Linux
 
-Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel").
+Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Wenn man von einer Linux-Distribution spricht, ist die korrekte Systembezeichnung eigentlich GNU/Linux, da der großteil des Userlands aus dem GNU-Projekt stammt.
 
 ## Graphical User Interface
 
@@ -30,6 +30,6 @@ Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Gra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 3002; parent 2889; 2008-06-27T17:42:50Z -->
+<!-- MediaWiki page 1641; revision 3431; parent 3002; 2008-10-24T18:46:49Z -->
