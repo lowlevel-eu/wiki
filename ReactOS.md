@@ -62,10 +62,10 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 ## Links
 
 - [Offizielle Website](http://www.reactos.org/de/index.html) *deutsch*
-- [Wiki des Projekts](http://www.reactos.org/wiki/index.php/De/Hauptseite) *deutsch*
+- [Hauptseite Wiki des Projekts](http://www.reactos.org/wiki/index.php) *Englisch*
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 3432; parent 3061; 2008-10-26T12:31:45Z -->
+<!-- MediaWiki page 1421; revision 3433; parent 3432; 2008-10-26T12:33:44Z -->
