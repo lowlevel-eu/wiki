@@ -321,7 +321,7 @@ Der CPU-Reset wird ausgelöst indem der Wert 0xFE in das Outputport geschrieben 
 
 Warten bis der Eingabepuffer leer ist
 
-wait1: in al, x064 test al, 00000010b jne wait1
+wait1: in al, 0x64 test al, 00000010b jne wait1
 
 Befehl 0xD1 zum schreiben des Inputports an den KBC senden
 
@@ -329,7 +329,7 @@ mov al, 0xD1 out 0x64, al
 
 Wieder warten bis der Eingabepuffer leer ist
 
-wait2: in al, x064 test al, 00000010b jne wait2
+wait2: in al, 0x64 test al, 00000010b jne wait2
 
 Den neuen Wert für den Inputport über Port 0x60 senden
 
@@ -337,6 +337,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 3384; parent 2964; 2008-09-27T22:42:13Z -->
+<!-- MediaWiki page 1468; revision 3434; parent 3384; 2008-10-27T12:15:49Z -->
