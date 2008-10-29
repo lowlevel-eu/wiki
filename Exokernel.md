@@ -4,7 +4,7 @@ Der Exokernel ist eine Unterart des [Mikrokernels](https://github.com/lowlevel-e
 
 ## Motivation für den Exokernel
 
-Eine HAL kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wird bei jedem traeitionellen Betriebsystem versucht, alle Anforderungen zu erfüllen. Die HAL wird dadurch aufgebläht und unperfom. Die Idee des Exokernel ist, dass die Abstraktion der Hardware nicht auf Kernelebene, sondern auf Anwendungsebene passiert.
+Eine HAL kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wird bei jedem traditionellen Betriebsystem versucht, alle Anforderungen zu erfüllen. Die HAL wird dadurch aufgebläht und unperfom. Die Idee des Exokernel ist, dass die Abstraktion der Hardware nicht auf Kernelebene, sondern auf Anwendungsebene passiert.
 
 ## Vorteile
 
@@ -12,6 +12,6 @@ Eine HAL kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
 
-<!-- MediaWiki page 1678; revision 3270; parent 3242; 2008-08-31T12:33:56Z -->
+<!-- MediaWiki page 1678; revision 3437; parent 3270; 2008-10-29T12:27:32Z -->
