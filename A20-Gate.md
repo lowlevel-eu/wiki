@@ -137,18 +137,18 @@ Es gibt noch eine zweite Möglichkeit das A20 Gate zu aktivieren. Sie wurde erst
 
 ## Einschalten über das BIOS
 
-Es gibt sogar noch eine dritte Möglichkeit das A20 Gate zu aktiveren. Vorallem neuere Bios besitzen diese Möglichkeit. Dafür benutzt man INT 15h und AX=2401. Hier eine Kleine Tabelle:
+Es gibt sogar noch eine dritte Möglichkeit das A20 Gate zu aktiveren. Vor allem neuere [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") besitzen diese Möglichkeit. Dafür benutzt man den Interrupt 0x15 mit AX=0x2401. Hier eine Kleine Tabelle:
 
-INT 15h AX=2400 --\> A20 auschalten  
-INT 15h AX=2401 --\> A20 einschalten  
-INT 15h AX=2402 --\> Status abfragen (AL: 0 --\> aus; AL: 1 --\> an)  
-INT 15h AX=2403 --\> Support abfragen (BX bit 0: kbc; bit 1: Port 0x92)  
+INT 0x15 AX=0x2400 --\> A20 auschalten  
+INT 0x15 AX=0x2401 --\> A20 einschalten  
+INT 0x15 AX=0x2402 --\> Status abfragen (AL: 0 --\> aus; AL: 1 --\> an)  
+INT 0x15 AX=0x2403 --\> Support abfragen (BX bit 0: kbc; bit 1: Port 0x92)  
 
-Wenn Erfolgreich: CF nicht gesetzt, AH = 00h  
+Wenn erfolgreich: CF nicht gesetzt, AH = 0x00  
 Bei Fehler: CF gesetzt, AH=Status  
 
-Status: 01h Keyboard im Secure Mode  
-86h Funktion wird nicht unterstützt  
+Status: 0x01 Keyboard im Secure Mode  
+0x86 Funktion wird nicht unterstützt  
 
 ## Links
 
@@ -157,6 +157,6 @@ Status: 01h Keyboard im Secure Mode
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3441/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 3196; parent 3157; 2008-08-15T17:24:23Z -->
+<!-- MediaWiki page 1462; revision 3441; parent 3196; 2008-10-30T18:20:14Z -->
