@@ -3,7 +3,7 @@
 Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt. Als freie Alternative zu Windows gibt es [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") .
 
 | Windows |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Microsoft |
 | Akt. Version: | NT 6.0 (=Vista) |
@@ -11,7 +11,7 @@ Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer 
 | OS-Eigenschaften |  |
 | Plattform: | x86, x64 und Intel-MAC(BootCamp), ältere Versionen auch andere |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Unbekannt, da nicht Open-Source(vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Unbekannt, da nicht Open-Source(vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) |
 | API: | WinAPI |
 | Binärformat: | Portable Executable |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
@@ -50,6 +50,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3439; parent 3408; 2008-10-30T17:36:07Z -->
+<!-- MediaWiki page 1558; revision 3440; parent 3439; 2008-10-30T17:40:43Z -->
