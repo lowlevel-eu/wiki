@@ -152,11 +152,11 @@ Status: 0x01 Keyboard im Secure Mode
 
 ## Links
 
-- [Wikipedia: A20-Gate](http://de.wikipedia.org/wiki/A20-Gate)
-- [Englisches Tutorial](http://www.win.tue.nl/~aeb/linux/kbd/A20.html:)
+- [Wikipedia A20-Gate](http://de.wikipedia.org/wiki/A20-Gate)
+- [A20-Gate - a pain from the past (Englisches Tutorial)](http://www.win.tue.nl/~aeb/linux/kbd/A20.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3441/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 3441; parent 3196; 2008-10-30T18:20:14Z -->
+<!-- MediaWiki page 1462; revision 3442; parent 3441; 2008-10-30T18:23:14Z -->
