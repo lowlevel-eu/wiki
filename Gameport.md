@@ -25,8 +25,14 @@ Um den Status eines Buttons zu lesen, muss man nur das jeweilige Bit auslesen. 0
 
 Um die Achsen auszulesen, muss man erst ein beliebigen Wert in den [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Port") schreiben. Dadurch werden alle Achsen-Bits auf 1b gesetzt. Nun muss man die Zeit messen bis das jeweilige Bit wieder 0b wird. Da die Werte von Treiber zu Treiber abweichen ist meistens eine Kalibrierung erforderlich.
 
+### Kalibrierung
+
+Da der Joystick keine linearen Werte zurückgibt ist es sinnvoll nicht nur die Ecken als Bezugspunkte bei der Kalibrierung zu benutzen. Ansonsten würde sich die Mitte in Richtung einer Ecke verschieben. Man muss also auch die Mitte als Bezugspunkt nehmen. Jenachdem ob der eingelesene Wert über der Mitte oder unter der Mitte liegt, wird dann ein anderer Skalierungsfaktor benutzt.
+
+Es ist außerdem sinnvoll in der Mitte eine kleine Deadzone einzurichten, bei der dann sofort der Mittelwert zurückgegeben wird, da viele Joysticks beim Zurückschnappen nicht genau in der Mitte halten.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3046/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1674/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1674/index.html)
 
-<!-- MediaWiki page 1674; revision 3046; parent 0; 2008-08-05T16:26:17Z -->
+<!-- MediaWiki page 1674; revision 3438; parent 3046; 2008-10-30T17:07:21Z -->
