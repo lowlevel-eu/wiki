@@ -35,12 +35,13 @@
 ## Neu erstellen
 
 - Informationen zur AMD PCNet Netzwerkkarte
+- Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen)
 - Hier kommt dein Wunsch hin ;)
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3345; parent 3339; 2008-09-14T19:00:04Z -->
+<!-- MediaWiki page 1518; revision 3445; parent 3345; 2008-10-31T15:37:53Z -->
