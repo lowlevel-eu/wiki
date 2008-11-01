@@ -1,6 +1,6 @@
 # Bochs
 
-Bochs ist ein portabler [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-[Emulator](https://lowlevel-eu.github.io/wiki/pages/1938/index.html "Emulator"), der in C++ geschrieben ist. Da bochs ein "reiner" Emulator ist, wird abgesehen von Tastatur, Maus, Grafikkarte, Festplatten, etc. auch der bzw. die Prozessoren vollständig emuliert und nicht Maschinencode teilweise auf dem Hostsystem ausgeführt. Das führt zum einen dazu, dass bochs um Größenordnungen langsamer ist als beispielsweise Qemu oder [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare"), andererseits sind die [Debuggingmöglichkeiten](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") von bochs (im Bereich OSDev) um einiges besser.
+Bochs ist ein portabler [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-[Emulator](https://lowlevel-eu.github.io/wiki/pages/1938/index.html "Emulator"), der in C++ geschrieben ist. Da Bochs ein "reiner" Emulator ist, wird abgesehen von Tastatur, Maus, Grafikkarte, Festplatten, etc. auch der bzw. die Prozessoren vollständig emuliert und nicht Maschinencode teilweise auf dem Hostsystem ausgeführt. Das führt zum einen dazu, dass Bochs um Größenordnungen langsamer ist als beispielsweise Qemu oder [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare"), andererseits sind die [Debuggingmöglichkeiten](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") von Bochs (im Bereich OSDev) um einiges besser.
 
 ## Emulierte Hardware
 
@@ -27,6 +27,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 2050; parent 2049; 2007-07-09T20:47:47Z -->
+<!-- MediaWiki page 1538; revision 3446; parent 2050; 2008-11-01T01:46:22Z -->
