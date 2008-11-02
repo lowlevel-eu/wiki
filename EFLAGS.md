@@ -7,7 +7,7 @@ Das EFLAGS (Programmstatus und Kontrollregister) Register ist 32 Bit groß, wobe
 Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Controlflag
 
 | Bit | Beschreibung |
-| --------- | ------------------------------------------------------------------- |
+| --------- | -------------------------------------------------------------------- |
 | 22-31 | Reserviert, nicht verändern |
 | 21 | ID - ID Flag (X) |
 | 20 | VIP - **V**irtual **I**nterrupt **P**ending (X) |
@@ -19,7 +19,7 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 14 | NT - **N**ested **T**ask Flag (X) |
 | 13 - 12 | IOPL - **I**/**O** **P**rivilege **L**evel (X) |
 | 11 | [OF - **O**verflow **F**lag](#of---overflow-flag-bit-11) (S) |
-| 10 | \[\[DF - Direction Flag (Bit 10)\|DF - **D**irection **F**lag (C) |
+| 10 | \[\[#DF - Direction Flag (Bit 10)\|DF - **D**irection **F**lag (C) |
 | 9 | IF - **I**nterrupt **E**nable Flag (X) |
 | 8 | TF - **T**rap **F**lag (X) |
 | 7 | [SF - **S**ign **F**lag](#sf---sign-flag-bit-7) (S) |
@@ -87,6 +87,6 @@ Wenn 0 wird der Zeiger inkrementiert, bei 1 dekrementiert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3460; parent 3458; 2008-11-02T18:50:43Z -->
+<!-- MediaWiki page 1751; revision 3461; parent 3460; 2008-11-02T18:51:12Z -->
