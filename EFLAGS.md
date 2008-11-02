@@ -31,6 +31,8 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 1 | Reserviert, nicht ändern |
 | 0 | [CF - **C**arry **F**lag](#cf---carry-flag-bit-0) (S) |
 
+  
+
 ### Statusflags
 
 Die Statusflags (Bits 0,2,4,6,7,11) geben das Ergebnis einer Arithmetischen Operation an (z. B.: ADD, SUB, MUL, DIV). Verwendet werden sie normalerweise in Verbindung mit bedingten Sprüngen, sets, movs, und loops (Jcc, SETcc, MOVcc, LOOPcc; cc = conditional code).
@@ -45,7 +47,8 @@ Gesetzt wenn das niederwertige Byte des Ergebnisses eine gerade Anzahl an 1er Bi
 
 #### AF - Adjust Flag (Bit 4)
 
-Gesetzt wenn ein Übertrag von Bit 3 stattgefunden hat. Wird hauptsächlich für [BCD](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") Berechnungen verwendet.
+Gesetzt wenn ein Übertrag von Bit 3 stattgefunden hat.  
+Wird hauptsächlich für [BCD](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") Berechnungen verwendet.
 
 #### ZF - Zero Flag (Bit 6)
 
@@ -53,11 +56,15 @@ Gesetzt wenn das Ergebnis 0 ist.
 
 #### SF - Sign Flag (Bit 7)
 
-Entspricht dem höherwertigsten Bit des Ergebnisses, also dem Vorzeichenbit bei signed-Berechnungen. 0 steht für einen positiven Wert und 1 für einen negativen.
+Entspricht dem höherwertigsten Bit des Ergebnisses, also dem Vorzeichenbit bei signed-Berechnungen.  
+0 steht für einen positiven Wert und 1 für einen negativen.
 
 #### OF - Overflow Flag (Bit 11)
 
 Gesetzt wenn ein Overflow bei einer signed-Zahl stattgefunden hat.
+
+  
+  
 
 ### Controlflags
 
@@ -74,6 +81,6 @@ Gesetzt wenn ein Overflow bei einer signed-Zahl stattgefunden hat.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3457; parent 3456; 2008-11-02T13:25:34Z -->
+<!-- MediaWiki page 1751; revision 3458; parent 3457; 2008-11-02T13:26:38Z -->
