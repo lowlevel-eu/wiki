@@ -7,7 +7,7 @@ Das EFLAGS (Programmstatus und Kontrollregister) Register ist 32 Bit groß, wobe
 Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Controlflag
 
 | Bit | Beschreibung |
-| --------- | ------------------------------------------------------------------ |
+| --------- | --------------------------------------------------------------------------------------------- |
 | 22-31 | Reserviert, nicht verändern |
 | 21 | ID - ID Flag (X) |
 | 20 | VIP - **V**irtual **I**nterrupt **P**ending (X) |
@@ -17,11 +17,11 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 16 | RF - **R**esume **F**lag (X) |
 | 15 | Reserviert, nicht ändern |
 | 14 | NT - **N**ested **T**ask Flag (X) |
-| 13 - 12 | IOPL - **I**/**O** **P**rivilege **L**evel (X) |
+| 13 - 12 | [IOPL - **I**/**O** **P**rivilege **L**evel](#iopl---io-privilege-field-bits-12-und-13) (X) |
 | 11 | [OF - **O**verflow **F**lag](#of---overflow-flag-bit-11) (S) |
 | 10 | [DF - **D**irection **F**lag](#df---direction-flag-bit-10) (C) |
-| 9 | IF - **I**nterrupt **E**nable Flag (X) |
-| 8 | TF - **T**rap **F**lag (X) |
+| 9 | [IF - **I**nterrupt **E**nable Flag](#if---interrupt-enable-flag-bit-9) (X) |
+| 8 | [TF - **T**rap **F**lag](#tf---trap-flag-bit-8) (X) |
 | 7 | [SF - **S**ign **F**lag](#sf---sign-flag-bit-7) (S) |
 | 6 | [ZF - **Z**ero **F**lag](#zf---zero-flag-bit-6) (S) |
 | 5 | Reserviert, nicht ändern |
@@ -74,7 +74,20 @@ Wenn 0 wird der Zeiger inkrementiert, bei 1 dekrementiert.
 
 ### Systemflags
 
-  
+#### TF - Trap Flag (Bit 8)
+
+Für single-step debugging.
+
+#### IF - Interrupt Enable Flag (Bit 9)
+
+Wenn gesetzt wird auf Interrupts reagiert, wenn gelöscht werden diese ignoriert (Ausnahme: [Non Maskable Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI")).  
+Kann mit CLI (Clear Interruptflag) und STI (Set Interruptflag) geändert werden.
+
+#### IOPL - I/O Privilege Field (Bits 12 und 13)
+
+I/O Privilegien des laufenden Programms.
+
+. . .  
 
 ## Befehle zum direkten Verändern
 
@@ -87,6 +100,6 @@ Wenn 0 wird der Zeiger inkrementiert, bei 1 dekrementiert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3462; parent 3461; 2008-11-02T18:51:33Z -->
+<!-- MediaWiki page 1751; revision 3465; parent 3462; 2008-11-02T22:10:15Z -->
