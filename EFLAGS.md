@@ -7,7 +7,7 @@ Das EFLAGS (Programmstatus und Kontrollregister) Register ist 32 Bit groß, wobe
 Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Controlflag
 
 | Bit | Beschreibung |
-| --------- | ------------------------------------------------------- |
+| --------- | ------------------------------------------------------------------ |
 | 22-31 | Reserviert, nicht verändern |
 | 21 | ID - ID Flag (X) |
 | 20 | VIP - **V**irtual **I**nterrupt **P**ending (X) |
@@ -18,28 +18,46 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 15 | Reserviert, nicht ändern |
 | 14 | NT - **N**ested **T**ask Flag (X) |
 | 13 - 12 | IOPL - **I**/**O** **P**rivilege **L**evel (X) |
-| 11 | OF - **O**verflow **F**lag (S) |
+| 11 | [OF - **O**verflow **F**lag](#of---overflow-flag-bit-11) (S) |
 | 10 | DF - **D**irection **F**lag (C) |
 | 9 | IF - **I**nterrupt **E**nable Flag (X) |
 | 8 | TF - **T**rap **F**lag (X) |
-| 7 | SF - **S**ign **F**lag (S) |
-| 6 | ZF - **Z**ero **F**lag (S) |
+| 7 | [SF - **S**ign **F**lag](#sf---sign-flag-bit-7) (S) |
+| 6 | [ZF - **Z**ero **F**lag](#zf---zero-flag-bit-6) (S) |
 | 5 | Reserviert, nicht ändern |
-| 4 | AF - **A**uxiliary Carry **F**lag (S) |
+| 4 | [AF - **A**uxiliary Carry **F**lag](#af---adjust-flag-bit-4) (S) |
 | 3 | Reserviert, nicht ändern |
-| 2 | PF - **P**arity **F**lag (S) |
+| 2 | [PF - **P**arity **F**lag](#pf---parity-flag-bit-2) (S) |
 | 1 | Reserviert, nicht ändern |
 | 0 | [CF - **C**arry **F**lag](#cf---carry-flag-bit-0) (S) |
 
 ### Statusflags
 
-Die Statusflags (Bits 0,2,4,6,7,11) geben das Ergebnis einer Arithmetischen Operation an (z. B.: ADD, SUB, MUL, DIV).
+Die Statusflags (Bits 0,2,4,6,7,11) geben das Ergebnis einer Arithmetischen Operation an (z. B.: ADD, SUB, MUL, DIV). Verwendet werden sie normalerweise in Verbindung mit bedingten Sprüngen, sets, movs, und loops (Jcc, SETcc, MOVcc, LOOPcc; cc = conditional code).
 
 #### CF - Carry Flag (Bit 0)
 
 Zeigt einen Overflow bei unsigned-Arithmetik an
 
-  
+#### PF - Parity Flag (Bit 2)
+
+Gesetzt wenn das niederwertige Byte des Ergebnisses eine gerade Anzahl an 1er Bits enthält.
+
+#### AF - Adjust Flag (Bit 4)
+
+Gesetzt wenn ein Übertrag von Bit 3 stattgefunden hat. Wird hauptsächlich für [BCD](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") Berechnungen verwendet.
+
+#### ZF - Zero Flag (Bit 6)
+
+Gesetzt wenn das Ergebnis 0 ist.
+
+#### SF - Sign Flag (Bit 7)
+
+Entspricht dem höherwertigsten Bit des Ergebnisses, also dem Vorzeichenbit bei signed-Berechnungen. 0 steht für einen positiven Wert und 1 für einen negativen.
+
+#### OF - Overflow Flag (Bit 11)
+
+Gesetzt wenn ein Overflow bei einer signed-Zahl stattgefunden hat.
 
 ### Controlflags
 
@@ -56,6 +74,6 @@ Zeigt einen Overflow bei unsigned-Arithmetik an
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3456; parent 3455; 2008-11-02T13:09:47Z -->
+<!-- MediaWiki page 1751; revision 3457; parent 3456; 2008-11-02T13:25:34Z -->
