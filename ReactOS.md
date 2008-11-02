@@ -10,7 +10,7 @@ ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Window
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") komformer Hybridkernel |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") konformer Hybridkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 | API: | WinAPI |
 | Binärformat: | Portable Executable |
@@ -29,7 +29,7 @@ Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Proje
 
 ReactOS steht unter der GNU GPL, ist also Open Source.
 
-Aktuell wird der Produktiveinsatz von den Entwickeln nicht empfohlen, da ReactOS sehr instabil ist. Zwar ist die neueste Version(0.3.5) viel stabiler als die Vorgängerversion (0.3.4), aber immernoch sehr absturzgefährded.
+Aktuell wird der Produktiveinsatz von den Entwicklern nicht empfohlen, da ReactOS sehr instabil ist. Zwar ist die neueste Version(0.3.5) viel stabiler als die Vorgängerversion (0.3.4), aber immer noch sehr absturzgefährdet.
 
 ## Kompatibilität
 
@@ -66,6 +66,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 3433; parent 3432; 2008-10-26T12:33:44Z -->
+<!-- MediaWiki page 1421; revision 3459; parent 3433; 2008-11-02T18:37:44Z -->
