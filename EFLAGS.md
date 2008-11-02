@@ -31,8 +31,6 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 1 | Reserviert, nicht ändern |
 | 0 | CF - **C**arry **F**lag (S) |
 
-  
-
 ## Befehle zum direkten Verändern
 
 - PUSHF
@@ -44,6 +42,6 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3453/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3453; parent 0; 2008-11-02T12:52:36Z -->
+<!-- MediaWiki page 1751; revision 3454; parent 3453; 2008-11-02T12:53:21Z -->
