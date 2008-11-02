@@ -7,7 +7,7 @@ Das EFLAGS (Programmstatus und Kontrollregister) Register ist 32 Bit groß, wobe
 Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Controlflag
 
 | Bit | Beschreibung |
-| --------- | ------------------------------------------------- |
+| --------- | ------------------------------------------------------- |
 | 22-31 | Reserviert, nicht verändern |
 | 21 | ID - ID Flag (X) |
 | 20 | VIP - **V**irtual **I**nterrupt **P**ending (X) |
@@ -29,9 +29,17 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 3 | Reserviert, nicht ändern |
 | 2 | PF - **P**arity **F**lag (S) |
 | 1 | Reserviert, nicht ändern |
-| 0 | CF - **C**arry **F**lag (S) |
+| 0 | [CF - **C**arry **F**lag](#cf---carry-flag-bit-0) (S) |
 
 ### Statusflags
+
+Die Statusflags (Bits 0,2,4,6,7,11) geben das Ergebnis einer Arithmetischen Operation an (z. B.: ADD, SUB, MUL, DIV).
+
+#### CF - Carry Flag (Bit 0)
+
+Zeigt einen Overflow bei unsigned-Arithmetik an
+
+  
 
 ### Controlflags
 
@@ -48,6 +56,6 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3455; parent 3454; 2008-11-02T12:54:58Z -->
+<!-- MediaWiki page 1751; revision 3456; parent 3455; 2008-11-02T13:09:47Z -->
