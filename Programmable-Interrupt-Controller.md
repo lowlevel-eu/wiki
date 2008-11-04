@@ -2,6 +2,34 @@
 
 Der **Programmable Interrupt Controller** (**PIC**) empfängt Unterbrechungsanforderungen (Interrupt Requests, kurz IRQs) von Hardwarekomponenten und gibt sie an die CPU weiter. In den ersten PCs gab es ursprünglich nur einen PIC mit 8 IRQ-Kanälen. Da diese nicht genügten, wurde ein zweiter PIC hinzugefügt. Dieser ist an den zweiten IRQ-Anschluss des ersten PIC angeschlossen. Man erhält so 15 IRQ-Kanäle. Die Verwendung der einzelnen IRQ-Kanäle wurde früher fest vorgegeben, da sie direkt mit der Hardware verdrahtet waren. Die restlichen, frei gebliebenen IRQs werden heutzutage dynamisch vergeben z.B. über PnP.
 
+## Programmierung
+
+Jeder der beiden PICs hat jeweils zwei IO-Ports, über die er programmiert wird: Einen Befehlsport (0x20 für den Master und 0xA0 für den Slave) und einen Datenport (0x21 bzw. 0xA1).
+
+### Initialisierung
+
+Nach dem Booten beginnen die IRQs standardmäßig beim Interrupt 0. An dieser Stelle liegen sie aber denkbar ungünstig, weil dieselben Interruptnummern bereits von der CPU für [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") verwendet werden. Beim Start des Kernels müssen daher die IRQs auf andere Interruptnummern gelegt werden.
+
+Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und die nächsten gesendeten Datenbytes als Parameter für die Initialisierung gedacht sind. Anschließend werden bis zu vier Bytes nacheinander auf den Datenport geschrieben. Insgesamt werden folgende Operationen durchgeführt:
+
+| Port | Name | Erklärung |  |
+| -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Befehl | ICW1 | Einleitung der Initialisierung |  |
+| Befehl | ICW1 | 0x01 | Gesetzt, wenn anschließend ICW4 gesendet wird |
+| Befehl | ICW1 | 0x02 | Single Mode, es gibt keinen Slave. Wenn dieses Bit gesetzt ist, entfällt ICW3 |
+| Befehl | ICW1 | 0x10 | Initialisierung einleiten (eigentliches Befehlsbit) |
+| Daten | ICW2 | Interruptnummer für IRQ 0 |  |
+| Daten | ICW3 | Master: IRQs, auf denen Slaves gemappt sind (Bitmaske, normal 0x04)<br>Slave: IRQ, über den der Slave am Master angeschlossen ist (normal 2) |  |
+| Daten | ICW4 | Flags<br> |  |
+| Daten | ICW4 | 0x01 | Für PCs gesetzt |
+| Daten | ICW4 | 0x02 | Automatisches EOI |
+
+### Maskieren von Interrupts
+
+Der PIC bietet außerdem noch die Möglichkeit, bestimmte IRQs zu maskieren, d.h. für diese IRQs keine Interrupts auszulösen, solange sie maskiert sind. Wenn auf den Datenport geschrieben wird, ohne dass vorher ein Befehl gesendet wurde, der auf dem Datenport Parameter erwartet, wird dieser Wert als IRQ-Maske benutzt.
+
+In diesem Wert steht jedes Bit für einen Interrupt (IRQ 0 ist Bit 0 usw.). Gesetztes Bit bedeutet, dass der Interrupt maskiert ist (d.h. nicht an die CPU weitergeleitet wird); gelöschtes Bit bedeutet, dass der Interrupt aktiv ist.
+
 ## IRQ Tabelle
 
   
@@ -40,6 +68,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 2991; parent 2736; 2008-06-23T13:04:47Z -->
+<!-- MediaWiki page 1465; revision 3470; parent 2991; 2008-11-04T20:41:36Z -->
