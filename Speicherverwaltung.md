@@ -69,6 +69,19 @@ Beim Buddy Verfahren wird der Speicher unterteilt in einzelnen Bitmaps. In diese
 
 Zusammenfassend lässt sich festhalten, dass eine Kombination aus den oben erklärten Datenstrukturen das Beste sein wird. Die Bitmap hat den Vorteil, dass man physisch kontinuierlichen Speicher allozieren kann. Dies benötigt man vor allem für [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"). Das heißt es macht Sinn bei der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Architektur die unteren 1/16MB mit einer Bitmap zu verwalten. Der Stack hingegen hat einen unschlagbaren Geschwindigkeits- und Speichervorteil und kann für den Rest des Speichers verwendet werden.
 
+### Initialisierung
+
+Unabhängig von der Wahl der Speicherstruktur muss diese relativ früh im Kernel initialisiert werden, d.h. alle beim Start verfügbaren Bereiche müssen als frei und alle anderen als besetzt markiert werden. Außerdem möchte man unter Umständen noch einen freien Platz für die Bitmap/den Stack suchen, bevor man die freien und reservierten Bereiche überhaupt eintragen kann. (Wenn man nicht so penibel ist, tut es im Allgemeinen aber auch ein fest vordefinierter Platz im Speicher.)
+
+Die einfachste, intuitiv oft gewählte und falsche Methode zur Initialisierung ist, die Speichergröße (vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") oder der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Struktur) herzunehmen und genau soviel Speicher als frei zu markieren. Stattdessen sollte man die Informationen aus der Memory Map des BIOS bevorzugen, die unter anderem alle freien Speicherbereiche mit Startadresse und Länge aufzählt. Die Memory Map wird auch von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") in der Multiboot-Struktur übergeben, siehe dazu die Felder [mbs_mmap\_\*](https://github.com/lowlevel-eu/wiki/wiki/Multiboot#mbs_mmap_length "Multiboot").
+
+Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu markieren, die z.B. bereits vom Kernel selbst genutzt werden und nicht überschrieben werden sollten. Typischerweise sind das:
+
+- Der Kernel
+- Die Multiboot-Struktur
+- Von GRUB geladene Kernelmodule und ihre Kommandozeile
+- Die Speicherverwaltungsstrukturen selbst, also z.B. der Platz, den die Bitmap einnimmt
+
 ## virtuelle Speicherverwaltung
 
 Die **virtuelle Speicherverwaltung** befindet sich eine Schicht über der [physischen Speicherverwaltung](#physische-speicherverwaltung) und ist für die Organisation der Speicherbereiche im virtuellen Adressraum eines Prozesses zuständig. Unter [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") beispielsweise wird ein virtueller Adressraum über den [Paging-Mechanismus](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") (siehe dort für eine genauere Erklärung) realisiert. Dieser virtuelle Adressraum hat erstmal nichts mit dem physischen Adressraum gemeinsam. Erst die virtuelle Speicherverwaltung stellt durch Ein- und Ausblenden von physischen Speicherseiten in den virtuellen Adressraum diese Verbindung her und blendet die Segmente des Prozessimage (Code, Daten, nicht initialisierte Daten, ...), den Heap, den Stack, benötigte shared-libraries, [shared-memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "IPC"), auch den Kernel, etc. in den virtuellen Adressraum ein oder aus. Die dafür benötigten physischen Speicherseiten werden der physischen Speicherverwaltung entnommen.
@@ -90,6 +103,6 @@ Man kann auch eine der freien malloc()/free() Implementierungen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 3071; parent 3041; 2008-08-14T14:09:54Z -->
+<!-- MediaWiki page 1591; revision 3468; parent 3071; 2008-11-04T19:18:23Z -->
