@@ -38,10 +38,10 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ## Spezifikationen
 
-Working-Drafts der aktuellen Spezifikationen zu ATA(PI) können hier bezogen werden: [Technical Committee T13](http://www.t13.org/) [\[1\]](http://t13.org/Documents/UploadedDocuments/project/d1321r3-ATA-ATAPI-5.pdf)
+Working-Drafts der aktuellen Spezifikationen zu ATA(PI) können hier bezogen werden: [Technical Committee T13](http://www.t13.org/) [Direkt-Link](http://t13.org/Documents/UploadedDocuments/project/d1321r3-ATA-ATAPI-5.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 3472; parent 2520; 2008-11-05T13:54:47Z -->
+<!-- MediaWiki page 1522; revision 3473; parent 3472; 2008-11-05T13:55:42Z -->
