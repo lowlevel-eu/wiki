@@ -109,8 +109,8 @@ Virtualmode-gegensatz zum IF-Flag
 
 #### VIP - Virtual Interrupt Pending Flag (Bit 20)
 
-*Set to indicate that an interrupt is pending;* clear when no interrupt is pending. (Software sets and clears this flag; the processor only reads it.) Used in conjunction with the VIF flag.*  
-* **Kann das jemand ordentlich übersetzen? Ich kanns nicht o.O**
+*Set to indicate that an interrupt is pending; clear when no interrupt is pending. (Software sets and clears this flag; the processor only reads it.) Used in conjunction with the VIF flag.*  
+**Kann das jemand ordentlich übersetzen? Ich kanns nicht o.O**
 
 #### ID - Identification Flag (Bit 21)
 
@@ -127,6 +127,6 @@ Gesetzt wenn der Prozessor [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUI
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3477; parent 3465; 2008-11-06T09:04:29Z -->
+<!-- MediaWiki page 1751; revision 3478; parent 3477; 2008-11-06T09:06:28Z -->
