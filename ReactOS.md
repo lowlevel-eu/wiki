@@ -29,7 +29,7 @@ Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Proje
 
 ReactOS steht unter der GNU GPL, ist also Open Source.
 
-Aktuell wird der Produktiveinsatz von den Entwicklern nicht empfohlen, da ReactOS sehr instabil ist. Zwar ist die neueste Version(0.3.5) viel stabiler als die Vorgängerversion (0.3.4), aber immer noch sehr absturzgefährdet.
+Das Installieren wird auch von den Entwicklern nicht empfohlen. Jedoch ist die Stabilität im Vergleich zu den vorherigen Versionen relativ hoch, welches Erfahrungsberichte zeigen. Trotzdem läuft es nicht auf jede Hardware.[\[1\]](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7C1)[\[2\]](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C2)
 
 ## Kompatibilität
 
@@ -64,8 +64,13 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 - [Offizielle Website](http://www.reactos.org/de/index.html) *deutsch*
 - [Hauptseite Wiki des Projekts](http://www.reactos.org/wiki/index.php) *Englisch*
 
+## Quellen
+
+[Positiver Bericht. (Etwas versteckt)](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7C1.)  
+[Negativer Bericht.](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C2.)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3483/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 3483; parent 3459; 2008-11-06T15:36:33Z -->
+<!-- MediaWiki page 1421; revision 3485; parent 3483; 2008-11-06T20:44:11Z -->
