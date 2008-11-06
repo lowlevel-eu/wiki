@@ -26,10 +26,10 @@ Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Li
 
 ## Graphical User Interface
 
-Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die unternannder konkurieren. Am meisten verbreitet ist KDE und Gnome
+Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die unternannder konkurieren. Am meisten verbreitet sind KDE und Gnome
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 3431; parent 3002; 2008-10-24T18:46:49Z -->
+<!-- MediaWiki page 1641; revision 3488; parent 3431; 2008-11-06T21:01:56Z -->
