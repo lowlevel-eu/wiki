@@ -1,6 +1,6 @@
 # CPUID
 
-Der CPUID Befehl wird benutzt, um Informationen über die Fähigkeiten eines PC´s zu erhalten. (Wie zum Beispiel den Herstellernamen, Modelnummer, die Größe des Cache ...)
+Der CPUID Befehl wird benutzt, um Informationen über die Fähigkeiten eines Prozessors zu erhalten. (Wie zum Beispiel den Herstellernamen, Modelnummer, die Größe des Cache ...)
 
 ## Wie man CPUID benutzt
 
@@ -9,7 +9,8 @@ Um den CPUID-Befehl auszuführen, schreibt man einfach den ASM-Befehl CPUID in d
     mov eax, 0x0
     cpuid
 
-Natürlich gibt der CPUID-Befehl auch ein Ergebnis zurück. In diesem Fall gibt er einen String zurück, dessen ASCII-Werte in EBX, EDX und ECX liegen. Wenn man den Inhalt dieser drei Register (in dieser Reihenfolge!) hintereinander in den Speicher schreibt, erhält man einen String. (Wenn der Prozessor von Intel hergestellt wurde, erhält man den String "GenuineIntel")
+Natürlich gibt der CPUID-Befehl auch ein Ergebnis zurück. In diesem Fall gibt er einen String zurück, dessen ASCII-Werte in EBX, EDX und ECX liegen. Wenn man den Inhalt dieser drei Register (in dieser Reihenfolge!) hintereinander in den Speicher schreibt, erhält man einen String. (Wenn der Prozessor von Intel hergestellt wurde, erhält man den String "GenuineIntel")  
+**Achtung: Der String ist nicht nullterminiert !**
 
 ## Hinweise
 
@@ -25,6 +26,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3475/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3378; parent 3377; 2008-09-19T20:16:38Z -->
+<!-- MediaWiki page 1739; revision 3475; parent 3378; 2008-11-06T07:48:28Z -->
