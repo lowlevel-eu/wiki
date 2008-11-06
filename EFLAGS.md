@@ -7,16 +7,16 @@ Das EFLAGS (Programmstatus und Kontrollregister) Register ist 32 Bit groß, wobe
 Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Controlflag
 
 | Bit | Beschreibung |
-| --------- | --------------------------------------------------------------------------------------------- |
+| --------- | ------------------------------------------------------------------------------------------------- |
 | 22-31 | Reserviert, nicht verändern |
-| 21 | ID - ID Flag (X) |
-| 20 | VIP - **V**irtual **I**nterrupt **P**ending (X) |
-| 19 | VIF - **V**irtual **I**nterrupt **F**lag (X) |
-| 18 | AC - **A**lignment **C**heck (X) |
-| 17 | VM - **V**irtual 8086 **M**ode (X) |
-| 16 | RF - **R**esume **F**lag (X) |
+| 21 | [ID - ID Flag](#id---identification-flag-bit-21) (X) |
+| 20 | [VIP - **V**irtual **I**nterrupt **P**ending](#vip---virtual-interrupt-pending-flag-bit-20) (X) |
+| 19 | [VIF - **V**irtual **I**nterrupt **F**lag](#vif---virtual-interrupt-flag-bit-19) (X) |
+| 18 | [AC - **A**lignment **C**heck](#ac---alignment-check-flag-bit-18) (X) |
+| 17 | [VM - **V**irtual 8086 **M**ode](#vm---virtual-8086-mode-flag-bit-17) (X) |
+| 16 | [RF - **R**esume **F**lag](#rf---resume-flag-bit-16) (X) |
 | 15 | Reserviert, nicht ändern |
-| 14 | NT - **N**ested **T**ask Flag (X) |
+| 14 | [NT - **N**ested **T**ask Flag](#nt---nested-task-flag-bit-14) (X) |
 | 13 - 12 | [IOPL - **I**/**O** **P**rivilege **L**evel](#iopl---io-privilege-field-bits-12-und-13) (X) |
 | 11 | [OF - **O**verflow **F**lag](#of---overflow-flag-bit-11) (S) |
 | 10 | [DF - **D**irection **F**lag](#df---direction-flag-bit-10) (C) |
@@ -87,7 +87,34 @@ Kann mit CLI (Clear Interruptflag) und STI (Set Interruptflag) geändert werden.
 
 I/O Privilegien des laufenden Programms.
 
-. . .  
+#### NT - Nested Task Flag (Bit 14)
+
+Gesetzt wenn der akuelle Task eine Verbindung zum vorherigen hat.
+
+#### RF - Resume Flag (Bit 16)
+
+Steuert die Reaktion des Prozessors auf eine Debug Exception.
+
+#### VM - Virtual-8086 Mode Flag (Bit 17)
+
+Gesetzt um im Virtual-8086 Modus zu arbeiten.
+
+#### AC - Alignment Check Flag (Bit 18)
+
+Wenn dieses Flag un das AM-Bit im [CR0-Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") gesetzt ist wird auf Speicherausrichtung geprüft.
+
+#### VIF - Virtual Interrupt Flag (Bit 19)
+
+Virtualmode-gegensatz zum IF-Flag
+
+#### VIP - Virtual Interrupt Pending Flag (Bit 20)
+
+*Set to indicate that an interrupt is pending;* clear when no interrupt is pending. (Software sets and clears this flag; the processor only reads it.) Used in conjunction with the VIF flag.*  
+* **Kann das jemand ordentlich übersetzen? Ich kanns nicht o.O**
+
+#### ID - Identification Flag (Bit 21)
+
+Gesetzt wenn der Prozessor [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") unterstützt.  
 
 ## Befehle zum direkten Verändern
 
@@ -100,6 +127,6 @@ I/O Privilegien des laufenden Programms.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3465; parent 3462; 2008-11-02T22:10:15Z -->
+<!-- MediaWiki page 1751; revision 3477; parent 3465; 2008-11-06T09:04:29Z -->
