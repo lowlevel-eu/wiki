@@ -66,11 +66,11 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ## Quellen
 
-[Positiver Bericht. (Etwas versteckt)](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7C1.)  
-[Negativer Bericht.](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C2.)
+1.[Bericht. (Etwas versteckt)](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7CPositiver)  
+2.[Negativer Bericht.](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 3485; parent 3483; 2008-11-06T20:44:11Z -->
+<!-- MediaWiki page 1421; revision 3486; parent 3485; 2008-11-06T20:44:50Z -->
