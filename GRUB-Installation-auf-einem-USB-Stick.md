@@ -3,6 +3,8 @@
 # Vorbemerkung
 
 Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick GRUB zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
+Der Stick sowie das BIOS/EFI müssen allerdings einige Bedingungen erfüllen. Das heißt, es geht mit dem USB-Stick, auf dem "Bootable Device" o.ä. darauf steht. Dies steht nicht überall, weil nicht jeder Hersteller sich an die Spezifikation für das verhalten der Sticks beim booten hält. Genauere Informationen sind [hier](http://www.usb.org/developers/devclass_docs/usb_msc_boot_1.0.pdf) zu finden. Es kann aber durchaus sein, dass man von dem Stick booten kann, obwohl dieser nicht als Bootable gekennzeichnet ist.  
+Des Weiteren muss im BIOS/EFI die Möglichkeit gegeben sein, ein USB Speichermedium in der Bootreihenfolge auszuwählen. Dies ist, falls es unterstützt wird zumeist als USB-HDD angegeben. Ist nur ein USB-FDD zu finden, so funktioniert dies nicht, da USB-FDD ein Eintrag für externe USB-Diskettenlaufwerke ist.
 
 # Der USB-Stick
 
@@ -166,6 +168,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 3369; parent 3367; 2008-09-18T16:06:25Z -->
+<!-- MediaWiki page 1737; revision 3492; parent 3369; 2008-11-07T14:53:07Z -->
