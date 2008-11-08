@@ -93,9 +93,10 @@ Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das 
 ## Weblinks
 
 - [Website von meinOS](http://jgraef.bplaced.net/meinos/index.php)
+- [GIT-Repository](http://repo.or.cz/w/meinos.git)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3282; parent 3222; 2008-09-01T08:56:04Z -->
+<!-- MediaWiki page 1551; revision 3494; parent 3282; 2008-11-08T20:46:11Z -->
