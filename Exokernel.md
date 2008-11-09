@@ -6,12 +6,16 @@ Der Exokernel ist eine Unterart des [Mikrokernels](https://github.com/lowlevel-e
 
 Eine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wird bei jedem traditionellen Betriebsystem versucht, alle Anforderungen zu erfüllen. Die [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") wird dadurch aufgebläht und unperfom. Die Idee des Exokernel ist, dass die Abstraktion der [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") nicht auf [Kernelebene](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), sondern auf Anwendungsebene passiert.
 
+## Besonderheiten eines Exokernels
+
+Wie erwähnt, ist die HAL nicht zwingend, sondern optimal. Ein Programm kann entscheiden, ob sie denn Hardwarezugriff braucht. Bei den meisten Programmen wird dies nicht nötig sein. Bei rechenintisiven oder systemveränderen Programmen wird dies jedoch nötig. Folgendes Diagramm veranschaulich dies. ![exokernel.png](http://be59.be.funpic.de/Lowlevel/exokernel.png)
+
 ## Vorteile
 
 - Bessere Flexibilität: Ein Entwickler kann seine Anwendung besser optimieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3484/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
 
-<!-- MediaWiki page 1678; revision 3484; parent 3437; 2008-11-06T16:33:30Z -->
+<!-- MediaWiki page 1678; revision 3508; parent 3484; 2008-11-09T16:45:37Z -->
