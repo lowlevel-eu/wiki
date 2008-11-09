@@ -24,6 +24,11 @@ Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht n
 
 Der Mikrokernel hat meist deutlich weniger Funktionen als ein monolithischer Kernel, da er nur die wesentlichen Funktionen bereitstellt. [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") und weitere Funktionen werden über zusätzliche Module hinzugefügt, welche auch als eigenständige Prozesse laufen können und gegenüber dem Kernel sicher abgeschottet sind. Somit kann ein fehlerhafter [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und einfach neu gestartet werden. Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum.
 
+#### Diagramm zum Veranschaulichen
+
+Dieses Diagramm zeigt den groben Aufbau eines Mikrokernels.  
+![mikrokernel_klein.png](http://be59.be.funpic.de/Lowlevel/mikrokernel_klein.png)
+
 #### [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel")
 
 Der Exokernel ist eine Unterart des Mikrokernel. Bei ein Exokernel kann jedes Programm auf die Hardware zugreifen, da es keine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") gibt. Da nicht jedes Programm Hardwarezugriff braucht, sind auch Bibliotheken da, die die Hardware abstraktieren.
@@ -38,6 +43,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3509/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 3503; parent 3501; 2008-11-09T12:51:01Z -->
+<!-- MediaWiki page 1478; revision 3509; parent 3503; 2008-11-09T16:58:02Z -->
