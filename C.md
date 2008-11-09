@@ -1,5 +1,7 @@
 # C
 
+C ist eine bekannte ältere Programmiersprache. Sie verfolgt das Ziel bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
+
 | Allgemeines |  |
 | -------------------------------- | ------------------------------------------------------------------------------- |
 | Name: | C |
@@ -10,14 +12,7 @@
 | Beispielkernel in der Sprache: |  |
 | Homepage |  |
 
-{{{Homepage}}}
-
   
-
-  
-
-  
-C ist eine bekannte ältere Programmiersprache. Sie verfolgt das Ziel bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
 
 # Kernelprogrammierung mit C
 
@@ -47,6 +42,6 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3496; parent 3390; 2008-11-09T12:18:00Z -->
+<!-- MediaWiki page 1526; revision 3498; parent 3496; 2008-11-09T12:19:13Z -->
