@@ -1,6 +1,6 @@
 # Hardware Abstraction Layer
 
-Die **HAL** (**H**ardware **A**bstraction **L**ayer) bezeichnet eine Softwareschicht, die zwischen der Hardware und dem [Betriebssystemkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") liegt. Sie hat die Aufgabe, hardwarespezifische Funktionen auszulagern, um eine spätere Portierung zu erleichtern, da im besten Fall nur die HAL angepasst werden muss. Auch [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") hat eine eigene HAL, die als Datei hal.dll vorliegt.
+Die **HAL** (**H**ardware **A**bstraction **L**ayer) bezeichnet eine Softwareschicht, die zwischen der Hardware und dem [Betriebssystemkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") liegt. Sie hat die Aufgabe, hardwarespezifische Funktionen auszulagern, um eine spätere Portierung zu erleichtern, da im besten Fall nur die HAL angepasst werden muss. Die verbreitesten Betriebsysteme haben eine HAL.
 
 ## Aufgaben
 
@@ -13,9 +13,9 @@ Die HAL beinhaltet somit folgende Aufgaben:
 - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
 - ...
 
-## Exokernel
+## [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel")
 
-Eine besondere Rolle hat der Exokernel. Dieser hat normalerweise keine HAL.
+Eine besondere Rolle hat der [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel"). Dieser hat normalerweise keine HAL.
 
 ## Ältere Betriebsysteme
 
@@ -23,6 +23,6 @@ Eine besondere Rolle hat der Exokernel. Dieser hat normalerweise keine HAL.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 3311; parent 3304; 2008-09-08T06:15:44Z -->
+<!-- MediaWiki page 1480; revision 3502; parent 3311; 2008-11-09T12:36:50Z -->
