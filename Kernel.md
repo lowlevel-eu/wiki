@@ -32,8 +32,12 @@ Der Exokernel ist eine Unterart des Mikrokernel. Bei ein Exokernel kann jedes Pr
 
 Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen einem monolithischem Kernel und Mikrokernel, die jedoch nicht genau definiert ist. Damit will man die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") als Hybridkernel.
 
+## Links
+
+[Erklärung zum Mikro- und L4Kernel](http://www.weihenstephan.org/~michaste/down/steil-l4.pdf)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3501/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 3501; parent 3500; 2008-11-09T12:35:27Z -->
+<!-- MediaWiki page 1478; revision 3503; parent 3501; 2008-11-09T12:51:01Z -->
