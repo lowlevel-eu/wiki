@@ -20,6 +20,11 @@ Folgenden Kernelarten exirstieren:
 
 Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") und andere Funktionen mit sich bringt. Dadurch müssen nicht erst [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Module nachgeladen werden und auch eine Schnittstelle ist nicht erforderlich, was einen deutlichen Geschwindigkeitsvorteil mit sich bringt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module können nicht ohne weiteres neu gestartet werden. Der [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist ein Monolithischer Kernel.
 
+#### Diagramm zum Veranschaulichen
+
+Dieses Diagramm zeigt den groben Aufbau eines monolitschen Kernels.  
+![makro_kelin.png](http://be59.be.funpic.de/Lowlevel/makro_kelin.png)
+
 ### Mikrokernel
 
 Der Mikrokernel hat meist deutlich weniger Funktionen als ein monolithischer Kernel, da er nur die wesentlichen Funktionen bereitstellt. [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") und weitere Funktionen werden über zusätzliche Module hinzugefügt, welche auch als eigenständige Prozesse laufen können und gegenüber dem Kernel sicher abgeschottet sind. Somit kann ein fehlerhafter [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und einfach neu gestartet werden. Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum.
@@ -43,6 +48,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3509/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3510/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 3509; parent 3503; 2008-11-09T16:58:02Z -->
+<!-- MediaWiki page 1478; revision 3510; parent 3509; 2008-11-09T17:01:35Z -->
