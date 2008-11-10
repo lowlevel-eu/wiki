@@ -10,7 +10,7 @@ Der **NOT**-Operator ist ein unärer Operator, d. h. er arbeitet mit nur einem 
 
     NOT ( 11011010b ) = 00100101b
 
-C-Code: \<c\>int a = !0xda; // a = 0x25\</c\>
+C-Code: \<c\>int a = ~0xda; // a = 0x25\</c\>
 
 ASM-Code: \<asm\>mov al, 11011010b not al  ; al = 00100101b\</asm\>
 
@@ -95,6 +95,6 @@ Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdin
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 3515; parent 0; 2008-11-10T18:22:38Z -->
+<!-- MediaWiki page 1757; revision 3516; parent 3515; 2008-11-10T18:36:12Z -->
