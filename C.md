@@ -9,7 +9,7 @@ C ist eine bekannte ältere Programmiersprache. Sie verfolgt das Ziel bei vergle
 | Compiler: | [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc") |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | C-Kernel_mit_Grub |
+| Beispielkernel in der Sprache: | C-Kernel mit Grub |
 | Homepage |  |
 
   
@@ -42,6 +42,6 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3524; parent 3498; 2008-11-13T20:28:18Z -->
+<!-- MediaWiki page 1526; revision 3525; parent 3524; 2008-11-13T20:28:46Z -->
