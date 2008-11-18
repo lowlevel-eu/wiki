@@ -30,6 +30,6 @@ FiKe kann keine Module laden und besitzt nur einen einzigen Treiber, der des Key
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
 
-<!-- MediaWiki page 1762; revision 3533; parent 3532; 2008-11-18T18:49:07Z -->
+<!-- MediaWiki page 1762; revision 3534; parent 3533; 2008-11-18T18:49:30Z -->
