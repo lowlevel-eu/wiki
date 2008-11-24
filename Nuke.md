@@ -18,7 +18,7 @@
 <http://nuke.asxsoft.de>
 
   
-Nuke ist mein Hobby OS, welches zur Zeit noch im Real Mode läuft. Hauptziel von Nuke ist es, dem Benutzer eine schnelle Arbeit am Computer zu gewährleisten.
+Nuke ist mein Hobby OS, welches im Protected Mode läuft. Hauptziel von Nuke ist es, dem Benutzer eine schnelle Arbeit am Computer zu gewährleisten.
 
 ## Entwickler
 
@@ -63,6 +63,6 @@ Ver 00000
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3551/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 3550; parent 3549; 2008-11-24T07:33:57Z -->
+<!-- MediaWiki page 1750; revision 3551; parent 3550; 2008-11-24T20:50:53Z -->
