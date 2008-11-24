@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
-| Akt. Version: | 00001 |
+| Akt. Version: | 00002 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | *AVOL* |
 | OS-Eigenschaften |  |
 | Plattform: | x86 (x64 geplant) |
@@ -63,6 +63,6 @@ Ver 00000
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3551/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 3551; parent 3550; 2008-11-24T20:50:53Z -->
+<!-- MediaWiki page 1750; revision 3552; parent 3551; 2008-11-24T20:51:22Z -->
