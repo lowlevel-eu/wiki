@@ -32,7 +32,17 @@ Nuke ist mein Hobby OS, welches zur Zeit noch im Real Mode läuft. Hauptziel von
 
 ## Historie
 
-Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 0x127 - 0x12B ausgelesen werden.
+Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 0x127 - 0x12B ausgelesen werden. *Kursiver Text* zeigt noch nicht implementierte Features an.
+
+  
+Ver 00002
+
+- GDT wird geladen // Muss noch angepasst werden
+- *IDT*
+- *Exception Handling & IRQs*
+- Protected Mode
+- *FAT12*
+- *NukeFS*
 
 Ver 00001
 
@@ -52,6 +62,6 @@ Ver 00000
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3549/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 3450; parent 3449; 2008-11-02T11:29:51Z -->
+<!-- MediaWiki page 1750; revision 3549; parent 3450; 2008-11-24T07:32:35Z -->
