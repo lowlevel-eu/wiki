@@ -59,9 +59,10 @@ Ver 00000
 - Tastatur-Layout anpassen
 - Dateisystem-Entwurf fertigstellen
 - Festplatte beschreiben/lesen
+- AMD Processor Optimization Module
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3549/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 3549; parent 3450; 2008-11-24T07:32:35Z -->
+<!-- MediaWiki page 1750; revision 3550; parent 3549; 2008-11-24T07:33:57Z -->
