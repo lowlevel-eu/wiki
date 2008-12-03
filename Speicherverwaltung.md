@@ -42,7 +42,7 @@ Das Freigeben einer Speicherseite exakt umgekehrt zur Allokation.
 
 #### Implementierungsvorschlag
 
-Der Speicher, der für den Stack benutzt wird, wird aus den Speicherseiten, die auf den Stack gelegt werden sollen, erstellt. Dies kann folgendermaßen implementiert werden: Beim Start des Kernels ist der Stack erstmal leer. Desweiteren ist nur ein virtueller und kein physikalischer Speicherbereich für den Stack reserviert. Anschließend geht man die freien Speicherbereiche durch und legt jede freie Speicherseite auf den Stack. Da der Stack bei der ersten Speicherseite noch keinen Speicherbereich hat, nimmt man einfach diese Seite und blendet in den virtuellen Adressraum an der Adresse des Stacks ein. Anschließend können die Adressen einiger Speicherseiten auf den Stack gelegt werden, solange bis wieder kein Speicher vorhanden ist. Dann wird einfach die nächste Speicherseite, die auf den Stack gelegt werden soll, in den virtuellen Adressraum ein. Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten, die in den virtuellen Adressraum engeblendet waren, wieder freigeben, falls dieser Speicherbereich nicht mehr vom Stack selbst benötigt wird. Somit verbraucht der Stack im Prinzip "keinen" Speicher.
+Der Speicher, der für den Stack benutzt wird, wird aus den Speicherseiten, die auf den Stack gelegt werden sollen, erstellt. Dies kann folgendermaßen implementiert werden: Beim Start des Kernels ist der Stack erstmal leer. Desweiteren ist nur ein virtueller und kein physischer Speicherbereich für den Stack reserviert. Anschließend geht man die freien Speicherbereiche durch und legt jede freie Speicherseite auf den Stack. Da der Stack bei der ersten Speicherseite noch keinen Speicherbereich hat, nimmt man einfach diese Seite und blendet in den virtuellen Adressraum an der Adresse des Stacks ein. Anschließend können die Adressen einiger Speicherseiten auf den Stack gelegt werden, solange bis wieder kein Speicher vorhanden ist. Dann wird einfach die nächste Speicherseite, die auf den Stack gelegt werden soll, in den virtuellen Adressraum ein. Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten, die in den virtuellen Adressraum engeblendet waren, wieder freigeben, falls dieser Speicherbereich nicht mehr vom Stack selbst benötigt wird. Somit verbraucht der Stack im Prinzip "keinen" Speicher.
 
 #### Eigenschaften
 
@@ -103,6 +103,6 @@ Man kann auch eine der freien malloc()/free() Implementierungen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 3468; parent 3071; 2008-11-04T19:18:23Z -->
+<!-- MediaWiki page 1591; revision 3573; parent 3468; 2008-12-03T19:47:28Z -->
