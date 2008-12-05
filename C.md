@@ -34,7 +34,7 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 - **Externe Assemblerdatei**: Der Assemblercode wird in eine eigene Datei ausgelagert und vom C-Code als eigenständige Funktion aufgerufen. Die Übergabe von Parametern und des Rückgabewerts wird im Artikel [Aufrufkonventionen](https://github.com/lowlevel-eu/wiki/wiki/Aufrufkonventionen "Aufrufkonventionen") beschrieben
 
-# = Weblinks
+## Weblinks
 
 - [Algemeines C-Tutorial](http://openbook.galileocomputing.de/c_von_a_bis_z/c_000Vorwort_000.htm#Xxx999266)
 - [Draft des C Standards](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1124.pdf)
@@ -43,6 +43,6 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3578/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3579/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3578; parent 3525; 2008-12-05T19:11:40Z -->
+<!-- MediaWiki page 1526; revision 3579; parent 3578; 2008-12-05T19:12:03Z -->
