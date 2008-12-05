@@ -14,13 +14,16 @@ Im Textmodus werden meistens 80\*25 Zeichen verwendet. Diese Aufösung wird z.B.
 
 Im Grafikmodus werden die Werte der einzelnen Pixel direkt verändert. Ein Modus besteht aus vertikaler und horizontaler Pixelanzahl und der Anzahl darstellbarer Farben.
 
-## Weblinks
+## Siehe auch
 
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")
+
+## Weblinks
+
 - [Wikipedia: VGA](http://de.wikipedia.org/wiki/Video_Graphics_Array)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2928/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 2928; parent 2748; 2008-05-07T11:27:29Z -->
+<!-- MediaWiki page 1516; revision 3576; parent 2928; 2008-12-05T16:31:51Z -->
