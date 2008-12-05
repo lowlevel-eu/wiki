@@ -14,17 +14,17 @@ C ist eine bekannte ältere Programmiersprache. Sie verfolgt das Ziel bei vergle
 
   
 
-# Kernelprogrammierung mit C
+## Kernelprogrammierung mit C
 
 Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für andere Bereiche ist C jedoch nicht sonderlich geeignet: beispielsweise für einen Bootsektor. Empfehlenswert ist - wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll - ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"). Für Einsteiger gibt es ein [Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf), welches beschreibt, wie man in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") schaltet und in C geschriebenen Code ausführt.
 
-# Bekannte C-Compiler
+## Bekannte C-Compiler
 
 - gcc aus der [GNU Compiler Collection](http://gcc.gnu.org/)
 - [tcc](http://bellard.org/tcc/) (Tiny C Compiler)
 - Borland [Turbo C](http://dn.codegear.com/article/20841) für DOS (16 Bit/Real Mode)
 
-# Assemblercode in C
+## Assemblercode in C
 
 Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben, sind für einige wenige Aufgaben nach wie vor einige Zeilen Assemblercode notwendig. Es gibt dabei im Wesentlichen zwei Ansätze:
 
@@ -34,14 +34,15 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 - **Externe Assemblerdatei**: Der Assemblercode wird in eine eigene Datei ausgelagert und vom C-Code als eigenständige Funktion aufgerufen. Die Übergabe von Parametern und des Rückgabewerts wird im Artikel [Aufrufkonventionen](https://github.com/lowlevel-eu/wiki/wiki/Aufrufkonventionen "Aufrufkonventionen") beschrieben
 
-# Links
+# = Weblinks
 
+- [Algemeines C-Tutorial](http://openbook.galileocomputing.de/c_von_a_bis_z/c_000Vorwort_000.htm#Xxx999266)
 - [Draft des C Standards](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1124.pdf)
 - [C-Tutorial](http://www.c-howto.de/)
 - [C-Kernel-Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3578/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3525; parent 3524; 2008-11-13T20:28:46Z -->
+<!-- MediaWiki page 1526; revision 3578; parent 3525; 2008-12-05T19:11:40Z -->
