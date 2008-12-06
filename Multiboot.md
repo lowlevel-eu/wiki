@@ -151,11 +151,11 @@ Gibt die Länge der Memorymap an
 Pointer zur Memorymap. Ein Eintrag in der Memorymap sieht folgendermaßen aus:
 
 | Offset | Größe | Name | Beschreibung |
-| -------- | ------- | ---------- | ----------------------------------- |
+| -------- | ------- | ---------- | ----------------------------------------------------- |
 | -0x04 | 4 | size | Gibt die Größe des Eintrags an |
 | 0x00 | 8 | BaseAddr | Basisadresse des Speicherbereichs |
 | 0x08 | 8 | Length | Länge des Speicherbereichs |
-| 0x10 | 4 | Type | Typ des Speicherbereichs |
+| 0x10 | 4 | Type | Typ des Speicherbereichs (1=frei, ansonsten belegt) |
 
 ### mbs_drives_length
 
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 2987; parent 2952; 2008-06-22T13:04:06Z -->
+<!-- MediaWiki page 1560; revision 3583; parent 2987; 2008-12-06T17:49:59Z -->
