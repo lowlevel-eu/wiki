@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [Janosch Gräf](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") |
 | Akt. Version: | noch keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPL, LGPL, BSD |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
@@ -96,30 +96,26 @@ Dank zweier 12h-Programmier-Sessions ist meinOS ein ganzes Stück weiter. Fork()
 
 ## Crosscompiler
 
-Zum Bauen von meinOS wird der meinOS-Crosscompiler benötigt. Die Patches können hier gedownloadet werden: [gcc-4.2.2](http://repo.or.cz/w/meinos.git?a=blob;f=gcc-4.2.2-meinos.patch) [binutils-2.18](http://repo.or.cz/w/meinos.git?a=blob;f=binutils-2.18-meinos.patch)
+Zum Bauen von meinOS wird der meinOS-Crosscompiler benötigt. Die Patches können hier gedownloadet werden:
+
+- [gcc-4.2.2](http://repo.or.cz/w/meinos.git?a=blob;f=gcc-4.2.2-meinos.patch)
+- [binutils-2.18](http://repo.or.cz/w/meinos.git?a=blob;f=binutils-2.18-meinos.patch)
 
 ## Download
 
-- Unoffizielles Release vom 14.03.08 (Build 1872):
-  - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy_build1872.img.gz) (406,1kB)  
-    Note: VFS oder DevFS pagefaultet manchmal, der Fehler wird natürlich noch behoben. Diese Version soll nur das virtuelle Dateisystem demonstrieren.
-- Unoffizielles Release vom 12.02.08 (Build 415):
-  - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy_build415.img.gz) (335,4kB)
-- Unoffizielles Release vom 20.12.07:
-  - Floppy-Image: [floppy.img.gz](http://jgraef.bplaced.net/meinos/downloads/floppy.img.gz) (195,4kB)
-  - Sourcecode: [meinos.tar.gz](http://jgraef.bplaced.net/meinos/downloads/meinos.tar.gz) (460kB)
+Das aktuelle CD-Image kann hier gedownloadet werden: [meinos_cd_20081207.iso.gz](http://jgraef.bplaced.net/meinos/downloads/meinos_cd_20081207.iso.gz)
 
-## Screenshot (Unoffizielles Release vom 14.03.08 - Build 1781)
+## Screenshot (07.12.2008)
 
 ![meinos.gif](http://jgraef.bplaced.net/meinos/screenshots/meinos.gif)
 
 ## Weblinks
 
-- [Website von meinOS](http://jgraef.bplaced.net/meinos/index.php)
+- [Website von meinOS](http://jgraef.bplaced.net/meinos/)
 - [GIT-Repository](http://repo.or.cz/w/meinos.git)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3585/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3585; parent 3494; 2008-12-07T01:44:26Z -->
+<!-- MediaWiki page 1551; revision 3586; parent 3585; 2008-12-07T01:51:40Z -->
