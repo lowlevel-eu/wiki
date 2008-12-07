@@ -1,0 +1,58 @@
+# AiCOS
+
+| AiCOS |  |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+|  |  |
+| Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
+| Akt. Version: | n/a |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
+| OS-Eigenschaften |  |
+| Plattform: | x86 |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Voraussichtlich Hybrid |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler, C/C++ |
+| API: | n/a |
+| Binärformat: | n/a |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | n/a |
+| Homepage |  |
+
+In Planung
+
+  
+AiCOS ist als ein Betriebssystem geplant, welches Anfangs für Aufgaben im Netzwerkbereich fungieren soll, unter anderem auch als Storage-System. AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln) in der Computertechnik bringen, unter anderem ein eigenes FS, eigenes Netzwerkprotokoll und eine eigene Programmiersprache ... wenn klappt.
+
+  
+
+# Entwicklungsumgebung
+
+- Intel Core 2 Quad mit 4 GiB RAM
+- Microsoft Windows XP Pro
+- Microsoft Visual Studio 2008 Express
+- Microsoft Virtual PC 2007
+
+  
+
+# Stand der Dinge
+
+Fertig:
+
+- Bootsector für Floppy (Raw)
+
+In Arbeit:
+
+- Bootloader
+
+Geplant:
+
+- Kernel-Debug
+
+  
+
+# Ziele
+
+Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkbereich behaupten kann.
+
+---
+
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3591/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+
+<!-- MediaWiki page 1766; revision 3591; parent 0; 2008-12-07T18:14:45Z -->
