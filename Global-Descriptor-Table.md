@@ -8,6 +8,8 @@ Der Ort der GDT wird mit dem Befehl lgdt mitgeteilt.
 
 Jeder Eintrag in den GDT besteht aus acht Bytes.
 
+### Struktur eines Eintrages
+
 | Byte | Name | Bits |
 | ------ | ------------ | ------------------- |
 | 0 | Limit | 0-7 |
@@ -20,6 +22,8 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 | 7 | Limit | 16-19 |
 | 8 | Base | 24-31 |
 
+### Bedeutung
+
 | Name | Bedeutung |
 | ------------ | --------------------------------------------------------------------------------- |
 | Limit | Größe des Segments - 1 (entweder in Bytes oder in 4KiB-Einheiten - siehe Flags) |
@@ -27,7 +31,7 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 | Accessbyte | Zugriffsinformationen (Ring, executable, etc.) |
 | Flags | Definiert die Segmentgrößeneinheit und 16/32 Bit. |
 
-Der Access-Byte:
+### Das Access-Byte
 
 | Bit | Name | Bedeutung |
 | -------- | ------------------------------ | --------------------------------------------------------------------------------------------- |
@@ -39,7 +43,43 @@ Der Access-Byte:
 | 1 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
 | 0 | Accessed bit | Sollte 0 gesetzt werden, wird dann vom Prozessor bei Zugriff gesetzt. |
 
-Die Flags:
+#### Beispielcode
+
+    char Set_Accessbyte(char enable, char privilege, char code, char read_write){
+        char Bitmaske = 0x00;
+        /** enable geht von 0 bis 1
+
+0x01 ist in Bits 00000001b\*/
+
+     if (enable = 1){
+            Bitmaske = (Bitmaske | 0x01);
+        }
+        /* privilege geht von 0 bis 3
+
+0x02 ist in Bits 00000010b 0x04 ist in Bits 00000100b 0x06 ist in Bits 00000110b\*/
+
+     if (privilege = 1) {
+            Bitmaske = (Bitmaske | 0x02);
+        }
+        else if (privilege = 2){
+            Bitmaske = (Bitmaske | 0x04);
+        }
+        else if(privilege = 3){
+            Bitmaske = (Bitmaske | 0x06);
+        }
+        Bitmaske = (Bitmaske | 0x08);
+        /* code 0 bis 1 */
+        if (code = 1){
+            Bitmaske = (Bitmaske | 0x0f);
+        }
+        /* read_write geht von 0 bis 1 */
+        if (read_write = 1){
+            Bitmaske = (Bitmaske | 0x40);
+        }
+        Return(Bitmaske);
+    }
+
+### Die Flags
 
 | Bit | Name | Bedeutung |
 | ----- | ----------------- | ---------------------------------------------------------------------------- |
@@ -48,6 +88,6 @@ Die Flags:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 3033; parent 3027; 2008-07-23T15:12:54Z -->
+<!-- MediaWiki page 1661; revision 3588; parent 3033; 2008-12-07T15:28:01Z -->
