@@ -48,17 +48,15 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
     char Set_Accessbyte(char enable, char privilege, char code, char read_write){
         char Bitmaske = 0x00;
         /** enable geht von 0 bis 1
-
-0x01 ist in Bits 00000001b\*/
-
-     if (enable = 1){
+        0x01 ist in Bits 00000001b*/
+        if (enable = 1){
             Bitmaske = (Bitmaske | 0x01);
         }
         /* privilege geht von 0 bis 3
-
-0x02 ist in Bits 00000010b 0x04 ist in Bits 00000100b 0x06 ist in Bits 00000110b\*/
-
-     if (privilege = 1) {
+        0x02 ist in Bits 00000010b
+        0x04 ist in Bits 00000100b
+        0x06 ist in Bits 00000110b*/
+        if (privilege = 1) {
             Bitmaske = (Bitmaske | 0x02);
         }
         else if (privilege = 2){
@@ -88,6 +86,6 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 3588; parent 3033; 2008-12-07T15:28:01Z -->
+<!-- MediaWiki page 1661; revision 3593; parent 3588; 2008-12-07T18:23:04Z -->
