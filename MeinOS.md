@@ -22,7 +22,7 @@ meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#
 
 ## Entwicklung
 
-Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Bereichen Speicherverwaltung (u.a. dynamischerer Speicherallokator für den Kernel, wodurch nun Linked Lists im Kernel benutzt werden können), Prozessverwaltung und IPC. Kernel2 unterstützt nun die SysV-IPC-Methoden, RPC und Signale. Außerdem wurde FUSE auf das VFS von meinOS portiert. Im Moment wird das DevFS auf Fuse portiert.
+Dank zweier 12h-Programmier-Sessions ist meinOS ein ganzes Stück weiter. Fork() und execute() funktionieren. Init startet alle Treiber und sonstige Programme (/etc/init.d). Stdin, stdout ud stderr werden nicht mehr zum Kernel geleitet, sondern über Unnamed Pipes zum Elternprozess. Außerdem läuft jetzt eine Shell. Leider funktionieren die Unnamed Pipes aber noch nicht so gut und der Keyboard-Treiber macht auch Probleme. Deswegen kann ich niemanden empfehlen andere Programme als "true" und "false" in der Shell zu starten.
 
 ### Komplett
 
@@ -41,10 +41,20 @@ Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Ber
 
 - Server (Treiber)
   - Console-Server (umfasst Keyboard-Treiber und Screen-Treiber)
-  - [COM](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "COM")-Server
-  - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Server ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"))
-  - [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")-Server
+  - [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") (mit ATAPI)
+  - CDROM
+  - [Cirrus Logic](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic "Cirrus Logic")
+  - [COM](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "COM")
+  - Console ( [Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller")
   - DevFS
+  - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
+  - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
+  - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")
+  - [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
+  - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+  - Pseudo-Geräte (/dev/null, /dev/zero/ und /dev/urandom)
+  - Ramdisk
+  - VFS
 
 <!-- -->
 
@@ -55,25 +65,38 @@ Der neue Kernel ist soweit fertig. Die größten Verbesserungen waren in den Ber
     - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
     - [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC")
     - Linked List
+    - Lock (Spinlock)
+    - Path (zum parsen von Dateipfaden)
     - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+    - Process (Kontrolle über Prozesse)
   - stdlibc (großer Teil schon portiert)
-  - [libcdi](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") (ohne cdi.net)
+  - [libcdi](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")
+    - [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")
+    - Cache
+    - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
+    - FS
+    - Generic (noch kein Standard)
+    - Net
+    - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+    - SCSI
+    - Storage
+    - Video
   - libfuse
+- Nenneswerte Programme
+  - init
+  - login
+  - shell (noch in Arbeit)
+  - gzip
+  - mount
 
 ### Planung
 
-- Init-Task (Initialisierung aller Treiber und des Login-Programms)
-- [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") (eventuell Portierung einer vorhandenen Shell)
-- [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")-Treiber (Fuse)
-- VFAT-Treiber (Fuse)
-- [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS")-Treiber (Fuse)
+- NTFS-Treiber
 - Standard-Unix-Toolchain: echo,cat,mv,cp,... und GCC-Toolchain
-
-Wie man sieht, ist noch eine Menge zu tun.
 
 ## Crosscompiler
 
-Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das Portieren größerer Applikationen zu vereinfachen.
+Zum Bauen von meinOS wird der meinOS-Crosscompiler benötigt. Die Patches können hier gedownloadet werden: [gcc-4.2.2](http://repo.or.cz/w/meinos.git?a=blob;f=gcc-4.2.2-meinos.patch) [binutils-2.18](http://repo.or.cz/w/meinos.git?a=blob;f=binutils-2.18-meinos.patch)
 
 ## Download
 
@@ -97,6 +120,6 @@ Im Moment wird für meinOS noch ein Crosscompiler plus Toolchain gebaut, um das 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3585/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3494; parent 3282; 2008-11-08T20:46:11Z -->
+<!-- MediaWiki page 1551; revision 3585; parent 3494; 2008-12-07T01:44:26Z -->
