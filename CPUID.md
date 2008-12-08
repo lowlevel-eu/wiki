@@ -73,6 +73,16 @@ Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
 | 25 | Der Prozessor kann SSE. |
 | 24 | Der Prozessor unterstützt FXSAVE und FXSTOR, womit er einen Floatzusammenhang(?) speichern und wiederherstellen kann. |
 | 23 | Der Prozessor kann MMX. |
+| 22 | Der Prozessor kann die Temperatur und den Prozessortakt durch eine Software verändert und überwacht werden. |
+| 21 | Der Prozessor hat die Fähigkeit, die Entwicklung eines Ablegers in eine Adresse zu schreiben. |
+| 20 | Reserviert |
+| 19 | Der Prozessor kann CSFLUSH. |
+| 18 | Der 12-Byte ProzessorID ist aktiviert und vorhanden |
+| 17 | Der Prozessor kann im Protected Mode mehr als 4 GByte adressieren. (Fachbegriff bitte ergänzen) |
+| 16 | Der Prozessor unterstützt die Page Atribut Table |
+| 15 | Der Prozessor untersützt CMOVcc, und wenn Bit 0 gesetzt ist, dann kann er FCMOVCC und FCOMI. |
+| 14 | Der Prozessor unterstützt die Machine Check Archikture und MCG_CAP Register |
+| 13 | Der Prozessor unterstützt die Page Entry Table, die Page Directonery Table und das TLB muss nicht erneuert werden. |
 
 WIrd noch erweiter
 
@@ -92,6 +102,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3618; parent 3616; 2008-12-08T18:46:43Z -->
+<!-- MediaWiki page 1739; revision 3620; parent 3618; 2008-12-08T19:06:19Z -->
