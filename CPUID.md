@@ -25,6 +25,44 @@ Natürlich gibt der CPUID-Befehl auch ein Ergebnis zurück. In diesem Fall gibt 
 - NSC: "Geode by NSC"
 - Rise: "RiseRiseRise"
 
+## Spezifische CPUID-Befehle
+
+### Intelbefehle
+
+#### EAX-Inhalt ist eins
+
+Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren in EAX folgendes ausgegeben:
+
+##### EAX
+
+| Byte | Funktion |
+| --------- | ------------------------------------ |
+| 31 - 28 | Reserviert |
+| 27 - 20 | Erweiterte Familie |
+| 19 - 16 | Erweitertes Modell |
+| 15 - 14 | Reserviert |
+| 13 - 12 | Prozessortyp |
+| 11 - 8 | Familienkennzeichen / Familiencode |
+| 7 - 4 | Model |
+| 4 - 0 | Stepping |
+
+##### EBX
+
+| Byte | Funktion |
+| --------- | -------------------------------------------------------------------------------------------------------------------- |
+| 31 - 24 | [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") ID (Reserviert) |
+| 23 - 16 | Zähler(?) (Reserviert) |
+| 15 - 8 | Stücke/Einheiten(?) (Reserviert) |
+| 7 - 0 | Brand ID (Reserviert) |
+
+##### ECX
+
+Hier soll ein Bytearray sein, aber es wird nicht empfohlen, was daraus zu lesen. Dieses Feld ist ein kommendes Feature. Zudem ist es reserviert.
+
+##### EDX
+
+Featuresflags, wird noch erweitert.
+
 ## Hinweise
 
 Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche Befehle sollte man nicht ausführen, wenn man nicht weiß von welchem Hersteller die CPU ist! Z.B. sollten CPUID-Befehle, die nur für Intel-CPU´s gelten, nicht auf einer AMD-CPU ausgeführt werden.
@@ -41,6 +79,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3523; parent 3499; 2008-11-13T09:17:19Z -->
+<!-- MediaWiki page 1739; revision 3616; parent 3523; 2008-12-08T18:29:03Z -->
