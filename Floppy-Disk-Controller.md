@@ -2,6 +2,10 @@
 
 Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ansteuerung von bis zu 2 (selten auch 4) Floppy-Laufwerken.
 
+## Siehe auch
+
+[Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h")
+
 ## Weblinks
 
 - [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](http://lowlevel.brainsware.org/wiki/images/82077AA_FloppyControllerDatasheet.pdf)
@@ -9,6 +13,6 @@ Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ans
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 2699; parent 2544; 2008-03-22T16:43:43Z -->
+<!-- MediaWiki page 1443; revision 3606; parent 2699; 2008-12-08T14:34:28Z -->
