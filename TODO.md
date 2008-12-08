@@ -38,7 +38,6 @@
 
 ## Neu erstellen
 
-- Informationen zum zugriff auf Festplatte/Floppy (Int 13h)
 - Informationen zur AMD PCNet Netzwerkkarte
 - Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen)
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut!
@@ -51,6 +50,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3595/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3595; parent 3526; 2008-12-07T19:33:22Z -->
+<!-- MediaWiki page 1518; revision 3607; parent 3595; 2008-12-08T14:38:09Z -->
