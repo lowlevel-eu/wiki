@@ -56,6 +56,13 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
   
 
+# History
+
+- 07.12.2008 Bootsektor für Raw-Floppy fertig.
+- 06.12.2008 Bootsektor-Programm, das den Inhalt der Register der CPU beim Einsprung in den Bootcode anzeigt.
+
+  
+
 # Stand der Dinge
 
 ### Fertig:
@@ -79,7 +86,8 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
 # Meine OpenSource-Ecke
 
-- Verschiedenes zur Bootsektor-Programmierung (demnächst)
+- **Bootsektor-Programmierung**
+  - [ShowReg_32.asm](http://aicos.amazing-fx.de/opensource/ShowReg_32.asm) :: Zeigt den Inhalt der CPU-Register beim Einprung in den Bootcode.
 
   
 
@@ -89,6 +97,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3619; parent 3599; 2008-12-08T19:02:53Z -->
+<!-- MediaWiki page 1766; revision 3621; parent 3619; 2008-12-08T19:28:20Z -->
