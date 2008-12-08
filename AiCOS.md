@@ -31,8 +31,6 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 - Microsoft Windows-Debugger x86/x64 für Kernel-Debug
 - Microsoft Virtual PC 2007
 
-  
-
 # Konzept
 
 ### Bootsektor
@@ -96,6 +94,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3622/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3623/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3622; parent 3621; 2008-12-08T19:45:48Z -->
+<!-- MediaWiki page 1766; revision 3623; parent 3622; 2008-12-08T19:46:48Z -->
