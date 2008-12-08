@@ -61,7 +61,20 @@ Hier soll ein Bytearray sein, aber es wird nicht empfohlen, was daraus zu lesen.
 
 ##### EDX
 
-Featuresflags, wird noch erweitert.
+Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
+
+| Bit | Funktion |
+| --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 31 - 30 | Reserviert |
+| 29 | Wenn eins, dann wird das Thermal Monitor unterstützt. |
+| 28 | Der Prozessor könnte Hyper-Threading. Wenn in EBX ein Wert größer als 1 ist, dann wird Hyper-Threading unterstützt. |
+| 27 | Der Prozessor unterstützt Self-Snoop. |
+| 26 | Der Prozessor kann SSE2. |
+| 25 | Der Prozessor kann SSE. |
+| 24 | Der Prozessor unterstützt FXSAVE und FXSTOR, womit er einen Floatzusammenhang(?) speichern und wiederherstellen kann. |
+| 23 | Der Prozessor kann MMX. |
+
+WIrd noch erweiter
 
 ## Hinweise
 
@@ -79,6 +92,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3616; parent 3523; 2008-12-08T18:29:03Z -->
+<!-- MediaWiki page 1739; revision 3618; parent 3616; 2008-12-08T18:46:43Z -->
