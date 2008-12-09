@@ -31,7 +31,7 @@ Natürlich gibt der CPUID-Befehl auch ein Ergebnis zurück. In diesem Fall gibt 
 
 #### EAX-Inhalt ist eins
 
-Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren dann wird bei den Prozesorren stattdessen folgendes ausgegeben:
+Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren stattdessen folgendes ausgegeben:
 
 ##### EAX
 
@@ -97,6 +97,32 @@ Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
 | 1 | Der Prozessor unterstützt Erweiterungen für den Virtual-8086-Modus. |
 | 0 | Der Prozessor unterstützt die Intel857-Gleitkommeoperationen. |
 
+#### Wenn EAX 2 ist
+
+Wenn im EAX statt Null eine Zwei vorkommt, dann wird bei Intelprozessoren Informationen über den Cache und die TLB-Deskriptoren ausgegeben.
+
+#### Wenn EAX 3 ist
+
+Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren
+
+    stattdessen folgendes ausgegeben:
+
+##### EAX
+
+Reserviert
+
+##### EBX
+
+Reserviert
+
+##### ECX
+
+Die Bytes 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Intelprozessoren, wo das im Featureflag steht. (Tabelle siehe oben)**
+
+##### EDX
+
+Die Bytes 63 bis 32 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Intelprozessoren, wo das im Featureflag steht. (Tabelle siehe oben)**
+
 ## Hinweise
 
 Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche Befehle sollte man nicht ausführen, wenn man nicht weiß von welchem Hersteller die CPU ist! Z.B. sollten CPUID-Befehle, die nur für Intel-CPU´s gelten, nicht auf einer AMD-CPU ausgeführt werden.
@@ -113,6 +139,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3627; parent 3626; 2008-12-09T15:05:06Z -->
+<!-- MediaWiki page 1739; revision 3628; parent 3627; 2008-12-09T15:12:14Z -->
