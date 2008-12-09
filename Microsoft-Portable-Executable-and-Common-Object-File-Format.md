@@ -87,12 +87,24 @@ Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) be
 | 28/24 | 68/88 | Windows spezifische Informationen. |
 | 96/112 | Variabel | Sind Adressen oder Teile von Tabellen, die für das Betriebsystem wichtig sind. |
 
+Der erste Abschnitt wird wieder in folgende unterteilt:
+
+| Offset | Größe | Beschreibung |  |  |  |
+| -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----- | --------- | -------------------------------------------------------------------------- |
+| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10Bh) oder PE32+(0x20Bh) handelt. Bei PE32+ wird ein 64-Bit-Namesraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GigaByte. Möglich ist es auch, die Datei als ROM Image( 0x107h) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |  |  |  |
+| 2 | 1 Byte | Hauptversion des Linkers |  |  |  |
+| 3 | 1 Byte | Nebenversion des Linkers |  |  |  |
+| 4 | 4 Bytes | Hier soll die Größe des Quellcodes hin |  |  |  |
+| 8 | 4 Bytes | Die Summe aller initialisierten Datensektionen. |  |  |  |
+| 12 | 4 Bytes | Die Summe aller nicht initialisierten Datensektionen.(BSS) |  |  |  |
+| 16 | 4 Bytes | Unmissverständlich. Bitte übersetzen: The address of the entry point relative to the image base when the executable file is loaded into memory. For program images, this is the starting address. For device drivers, this is the address of the initialization function. An entry point is optional for DLLs. When no entry point is present, this field must be zero | 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht. |
+
 ## Links
 
 - [Microsoft Portable Executable and Common Object File Format Specification](http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3643/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3643; parent 3642; 2008-12-09T17:00:32Z -->
+<!-- MediaWiki page 1644; revision 3644; parent 3643; 2008-12-09T17:18:02Z -->
