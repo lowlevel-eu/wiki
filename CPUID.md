@@ -103,7 +103,7 @@ Wenn im EAX statt Null eine Zwei vorkommt, dann wird bei Intelprozessoren Inform
 
 #### Wenn EAX 3 ist
 
-Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren
+Wenn im EAX statt Null eine Drei vorkommt, dann wird bei Intelprozessoren
 
     stattdessen folgendes ausgegeben:
 
@@ -139,6 +139,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3628; parent 3627; 2008-12-09T15:12:14Z -->
+<!-- MediaWiki page 1739; revision 3632; parent 3628; 2008-12-09T15:37:00Z -->
