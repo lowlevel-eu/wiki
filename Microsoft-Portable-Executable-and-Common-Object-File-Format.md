@@ -1,6 +1,6 @@
 # Microsoft Portable Executable and Common Object File Format
 
-## Grober Aufbau
+## Aufbau
 
 ### MS-DOS Header
 
@@ -21,7 +21,7 @@ Hier ist der Common Object File Format Header:
 | Offset | Größe | Beschreibung |
 | -------- | --------- | ----------------------------------------------------------------------------------------------- |
 | 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
-| 0x02 | 2 Bytes | Die Anzahl der Sections |
+| 0x02 | 2 Bytes | Die Anzahl der Sektoren |
 | 0x04 | 4 Bytes | Die ersten 32bits von der Sekundenanzahl von 1.Januar 1970 00:00 bis zur Erstellung der Datei |
 | 0x08 | 4 Bytes | Der Dateioffset dieser COFF-Datei. Wenn Null, dann ist keiner vorhanden |
 | 0x0B | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle (?) |
@@ -108,7 +108,17 @@ Im dritten Teil können Strings oder Tabellen angegeben werden, damit sie das Be
 - Die Adresse der Tabelle relativ zum ersten Sektor der ausführbaren Datei zum Zeitpunkt des Laden der Tabelle
 - Ihre Größe in Bytes
 
-  
+### Sektorentabelle
+
+Die Sektorentabelle kommt immer nach dem optimalen Header. Die Headergröße wird im COFF-Header festgelegt. Ebenfalls wird die Größe der Tabelle im COFF-Header festgelegt. Jeder Sektor besteht aus folgenden Abschnitten:
+
+| Offset | Größe | Beschreibung |
+| -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | 8 | Ist ein 8-Byte-String auf UTF-8 Basis. Wenn genau 8-Bytes verwendet wird, dann ist kein Nullbyte nötig. Bei Objektdateien darf dieser länger sein, bei ausführbaren Dateien ist dies verboten.<br> |
+| 8 | 4 | Die entgültige Größe eines Sektors, wenn es geladen wird. Bei Objektdateien ist dieser Abschnitt voller Nullen. |
+| 12 | 4 | Für ausführbare Dateien die Adresse des ersten Bytes der Sektion relativ zum Image Basis(?). Bei Objektdateien ist die Adresse des ersten angelegten Bytes, bevor die Verlagerung abgeschlossen ist.<br> |
+
+Wird noch erweitert-
 
 ## Links
 
@@ -116,6 +126,6 @@ Im dritten Teil können Strings oder Tabellen angegeben werden, damit sie das Be
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3657; parent 3656; 2008-12-09T19:47:56Z -->
+<!-- MediaWiki page 1644; revision 3658; parent 3657; 2008-12-09T20:25:35Z -->
