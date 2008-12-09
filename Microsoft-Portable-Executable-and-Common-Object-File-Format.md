@@ -20,13 +20,13 @@ Hier ist der Common Object File Format Header:
 
 | Offset | Größe | Beschreibung |
 | -------- | --------- | ----------------------------------------------------------------------------------------------- |
-| 0x00h | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
-| 0x02h | 2 Bytes | Die Anzahl der Sections |
-| 0x04h | 4 Bytes | Die ersten 32bits von der Sekundenanzahl von 1.Januar 1970 00:00 bis zur Erstellung der Datei |
-| 0x08h | 4 Bytes | Die Dateioffset dieser COFF-Datei. Wenn Null, dann ist gar keine vorhanden |
-| 0x0Bh | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle (?) |
-| 0x0Fh | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
-| 0x12h | 2 Bytes | Flags für Eigenschaften der Datei |
+| 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
+| 0x02 | 2 Bytes | Die Anzahl der Sections |
+| 0x04 | 4 Bytes | Die ersten 32bits von der Sekundenanzahl von 1.Januar 1970 00:00 bis zur Erstellung der Datei |
+| 0x08 | 4 Bytes | Die Dateioffset dieser COFF-Datei. Wenn Null, dann ist gar keine vorhanden |
+| 0x0B | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle (?) |
+| 0x0F | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
+| 0x12 | 2 Bytes | Flags für Eigenschaften der Datei |
 
 ## Weitergehende Informationen
 
@@ -35,27 +35,27 @@ Hier ist der Common Object File Format Header:
 In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers erläutert.
 
 | Wert | Plattform |
-| --------- | ---------------------------------------------------------------------------------- |
-| 0x00h | Nicht bekannt oder auf jeder Plattform lauffähig. |
-| 0x1D3h | Matsushita AM33 |
-| 0x8664h | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
-| 0x1C0h | ARM little endian |
-| 0xEBCh | EFI Bytecode |
-| 0x14Ch | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") kompatible Prozessoren |
-| 0x200h | Intel Itanium Prozessorfamilie |
-| 0x9041h | Mitsubishi M32R little endian |
-| 0x266h | MIPS16 |
-| 0x366h | MIPS mit FPU |
-| 0x466h | MIPS16 mit FPU |
-| 0x1f0h | Power PC little endian |
-| 0xf1h | Power PC mit Floating Point Support |
-| 0x166h | MIPS little endian |
-| 0x1A2h | Hitachi SH3 |
-| 0x1A3h | Hitachi SH3 DSP |
-| 0x1A6h | Hitachi SH4 |
-| 0x1A8h | Hitachi SH5 |
-| 0x1C2h | Thumb |
-| 0x169h | MIPS little endian WCE v2 |
+| -------- | ---------------------------------------------------------------------------------- |
+| 0x00 | Nicht bekannt oder auf jeder Plattform lauffähig. |
+| 0x1D3 | Matsushita AM33 |
+| 0x8664 | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
+| 0x1C0 | ARM little endian |
+| 0xEBC | EFI Bytecode |
+| 0x14C | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") kompatible Prozessoren |
+| 0x200 | Intel Itanium Prozessorfamilie |
+| 0x9041 | Mitsubishi M32R little endian |
+| 0x266 | MIPS16 |
+| 0x366 | MIPS mit FPU |
+| 0x466 | MIPS16 mit FPU |
+| 0x1f0 | Power PC little endian |
+| 0xf1 | Power PC mit Floating Point Support |
+| 0x166 | MIPS little endian |
+| 0x1A2 | Hitachi SH3 |
+| 0x1A3 | Hitachi SH3 DSP |
+| 0x1A6 | Hitachi SH4 |
+| 0x1A8 | Hitachi SH5 |
+| 0x1C2 | Thumb |
+| 0x169 | MIPS little endian WCE v2 |
 
 ### Flags des COFF-Headers
 
@@ -91,7 +91,7 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 | Offset | Größe | Beschreibung |  |  |  |
 | -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | --------- | ------------------------------------------------------------------------- |
-| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10Bh) oder PE32+(0x20Bh) handelt. Bei PE32+ wird ein 64-Bit-Namensraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GiB. Möglich ist es auch, die Datei als ROM Image( 0x107h) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |  |  |  |
+| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10B) oder PE32+(0x20B) handelt. Bei PE32+ wird ein 64-Bit-Namensraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GiB. Möglich ist es auch, die Datei als ROM Image( 0x107) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |  |  |  |
 | 2 | 1 Byte | Hauptversion des Linkers |  |  |  |
 | 3 | 1 Byte | Nebenversion des Linkers |  |  |  |
 | 4 | 4 Bytes | Hier soll die Größe des Quellcodes hin |  |  |  |
@@ -105,6 +105,6 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3645; parent 3644; 2008-12-09T17:31:54Z -->
+<!-- MediaWiki page 1644; revision 3646; parent 3645; 2008-12-09T17:37:42Z -->
