@@ -25,7 +25,7 @@ Hier ist der Common Object File Format Header:
 | 0x04h | 4 Bytes | Die ersten 32-Bytes von der Sekundenanzahl ab 1.Januar 1970 00:00, wann die Datei hergestellt wurde. |
 | 0x08h | 4 Bytes | Die Dateioffset dieser COFF-Datei. Wenn Null, dann ist garkeine vorhanden. |
 | 0x0Bh | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle.(?) |
-| 0x0Fh | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei. *Achtung, ist nicht für die Objektdatei* |
+| 0x0Fh | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei. **Achtung, ist nicht für die Objektdatei** |
 | 0x12h | 2 Bytes | Flags für Eigenschaften der Datei. |
 
 ## Links
@@ -34,6 +34,6 @@ Hier ist der Common Object File Format Header:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3637/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3638/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3637; parent 3635; 2008-12-09T16:04:15Z -->
+<!-- MediaWiki page 1644; revision 3638; parent 3637; 2008-12-09T16:05:13Z -->
