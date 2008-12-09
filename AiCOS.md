@@ -18,7 +18,7 @@
 In Planung
 
   
-AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") geplant, welches Anfangs für Aufgaben im Netzwerkbereich fungieren soll, unter anderem auch als Storage-System. AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln) in der Computertechnik bringen, unter anderem ein eigenes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), eigenes Netzwerkprotokoll und eine eigene Programmiersprache ... wenn es klappt.
+AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") geplant, welches Anfangs für Aufgaben im Netzwerkbereich fungieren soll, unter anderem auch als Storage-System. AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln) in die Computertechnik bringen, unter anderem ein eigenes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), eigenes Netzwerkprotokoll und eine eigene Programmiersprache ... wenn es klappt.
 
   
 
@@ -37,12 +37,12 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
 ### Bootsektor
 
-- Sollte die gängigsten [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") unterstützen, meist FAT für FDD, FAT32 für HDD und ISO9660 für CD.
-- Kann an jeder Adresse ausgeführt werden, akzeptiert aber zum Laden des Bootloader nur 0x00007C00.
+- Der Bootsektor wird so geschrieben, dass es im Prinzip egal ist, an welcher Adresse dieser geladen und ausgeführt wird. Derzeit wird noch ein Fehlercode ausgeben und die Ausführung angehalten, wenn sich der Bootcode nicht an der Adresse 0x00007C00 befindet.
+- Für jedes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (RAW, FAT, FAT32 und ISO9660)auf dem AiCOS zum Einsatz kommen soll, wird es einen Bootcode geben.
 
 ### Bootloader
 
-- Kernel-Debug muss möglich sein.
+- Soll erste Möglichkeiten des Kernel-Debugging ermöglichen.
 - Einrichten des MKS und laden bedingter Treiber.
 - Startup des MKS.
 
@@ -53,6 +53,7 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
   - CPU-Kernel, jeder Kern hat seinen eigenen.
   - IO-Kernel.
   - Subsystem-Kernel, für weitere Treiber, Filter und und und ...
+- Soll insich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
 
   
 
@@ -65,20 +66,18 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
 # Stand der Dinge
 
-### Fertig:
+**Fertig:**
 
 - Bootsector für Floppy (Raw)
 
   
-
-### In Arbeit:
+**In Arbeit:**
 
 - Bootloader
 - Kernel-Debug-Unterstützung
 
   
-
-### Geplant:
+**Geplant:**
 
 - Bootsektor für CD
 
@@ -98,6 +97,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3659; parent 3624; 2008-12-09T20:38:41Z -->
+<!-- MediaWiki page 1766; revision 3660; parent 3659; 2008-12-09T20:56:58Z -->
