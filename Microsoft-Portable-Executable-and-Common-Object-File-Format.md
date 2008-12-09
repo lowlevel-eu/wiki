@@ -43,8 +43,19 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 0xEBCh | EFI Bytecode |
 | 0x14Ch | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") kompatible Prozessoren |
 | 0x200h | Intel Itanium Prozessorfamilie |
-
-Wird noch erweitert
+| 0x9041h | Mitsubishi M32R little endian |
+| 0x266h | MIPS16 |
+| 0x366h | MIPS mit FPU |
+| 0x466h | MIPS16 mit FPU |
+| 0x1f0h | Power PC little endian |
+| 0xf1h | Power PC mit Floating Point Support |
+| 0x166h | MIPS little endian |
+| 0x1A2h | Hitachi SH3 |
+| 0x1A3h | Hitachi SH3 DSP |
+| 0x1A6h | Hitachi SH4 |
+| 0x1A8h | Hitachi SH5 |
+| 0x1C2h | Thumb |
+| 0x169h | MIPS little endian WCE v2 |
 
 ## Links
 
@@ -52,6 +63,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3640/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3639; parent 3638; 2008-12-09T16:14:50Z -->
+<!-- MediaWiki page 1644; revision 3640; parent 3639; 2008-12-09T16:24:53Z -->
