@@ -64,7 +64,7 @@ Hier soll ein Bytearray sein, aber es wird nicht empfohlen, was daraus zu lesen.
 Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
 
 | Bit | Funktion |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 31 - 30 | Reserviert |
 | 29 | Wenn eins, dann wird das Thermal Monitor unterstützt. |
 | 28 | Der Prozessor könnte Hyper-Threading. Wenn in EBX ein Wert größer als 1 ist, dann wird Hyper-Threading unterstützt. |
@@ -86,13 +86,16 @@ Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
 | 12 | Der Prozessor unterstützt die Memory Type Range Register, spezielle das MTRR_CAP Register. |
 | 11 | Der Prozessor unterstützt die Fast System Call Befehle, den SYSENTER Befehl und SYSEXIT Befehl |
 | 10 | Reserviert |
-| 9 | Der Prozessor beinhaltet ein per Softwareansprechbaren Local-[APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") |
+| 9 | Der Prozessor beinhaltet ein per Softwareansprechbaren [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") |
 | 8 | Der Prozessor unterstützt das Vergleichen und Verändern von 8-Byte-Befehle |
 | 7 | Der Prozessor unterstützt die Machine Check Exception. |
 | 6 | Der Prozessor unterstützt Physical Adress Extension. |
-| 5 | Der Prozessor unterstützt die Model Specific Register, den RDMSR Befehl und den WRMSR Befehl |
-
-WIrd noch erweiter
+| 5 | Der Prozessor unterstützt die Model Specific Register, den RDMSR Befehl und den WRMSR Befehl. |
+| 4 | Der Prozessor unterstützt den RDTSC Befehl, zudem den CR4.TSD-Bit für Rechtekontrolle. |
+| 3 | Der Prozessor unterstützt 4-Byte-Pages. |
+| 2 | Der Prozessor unterstützt I/O-Breakpoints, das CR4.DE Bit und die DR4 und DR5 Register. |
+| 1 | Der Prozessor unterstützt Erweiterungen für den Virtual-8086-Modus. |
+| 0 | Der Prozessor unterstützt die Intel857-Gleitkommeoperationen. |
 
 ## Hinweise
 
@@ -110,6 +113,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3625; parent 3620; 2008-12-09T14:57:34Z -->
+<!-- MediaWiki page 1739; revision 3626; parent 3625; 2008-12-09T15:04:00Z -->
