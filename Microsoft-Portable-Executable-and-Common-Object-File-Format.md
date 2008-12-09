@@ -28,9 +28,7 @@ Hier ist der Common Object File Format Header:
 | 0x0F | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
 | 0x12 | 2 Bytes | Flags für Eigenschaften der Datei |
 
-## Weitergehende Informationen
-
-### Plattformtypen für den COFF-Header
+#### Plattformtypen für den COFF-Header
 
 In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers erläutert.
 
@@ -57,7 +55,7 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 0x1C2 | Thumb |
 | 0x169 | MIPS little endian WCE v2 |
 
-### Flags des COFF-Headers
+#### Flags des COFF-Headers
 
 | Bit | Funktion |
 | ----- | ----------------------------------------------------------------------------------------------- |
@@ -77,7 +75,9 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 14 | Diese Datei sollte auf einem Einprozessor-System laufen |
 | 15 | Obsolet. Sollte Null sein |
 
-### Informationen zum optimalen Header
+  
+
+#### Informationen zum optimalen Header
 
 Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweise nicht verwendet, außer um seine Größe zu erhöhen. Der optimale Header wird in drei Abschnitte unterteilt (Zu PE32 und PE32+ siehe unten):
 
@@ -107,6 +107,6 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3654/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3654; parent 3652; 2008-12-09T18:46:47Z -->
+<!-- MediaWiki page 1644; revision 3655; parent 3654; 2008-12-09T18:54:56Z -->
