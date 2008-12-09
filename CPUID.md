@@ -64,7 +64,7 @@ Hier soll ein Bytearray sein, aber es wird nicht empfohlen, was daraus zu lesen.
 Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
 
 | Bit | Funktion |
-| --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 31 - 30 | Reserviert |
 | 29 | Wenn eins, dann wird das Thermal Monitor unterstützt. |
 | 28 | Der Prozessor könnte Hyper-Threading. Wenn in EBX ein Wert größer als 1 ist, dann wird Hyper-Threading unterstützt. |
@@ -83,6 +83,14 @@ Dies sind Featureflags. Wenn das Bit eins, wird das Feature unterstüzt.
 | 15 | Der Prozessor untersützt CMOVcc, und wenn Bit 0 gesetzt ist, dann kann er FCMOVCC und FCOMI. |
 | 14 | Der Prozessor unterstützt die Machine Check Archikture und MCG_CAP Register |
 | 13 | Der Prozessor unterstützt die Page Entry Table, die Page Directonery Table und das TLB muss nicht erneuert werden. |
+| 12 | Der Prozessor unterstützt die Memory Type Range Register, spezielle das MTRR_CAP Register. |
+| 11 | Der Prozessor unterstützt die Fast System Call Befehle, den SYSENTER Befehl und SYSEXIT Befehl |
+| 10 | Reserviert |
+| 9 | Der Prozessor beinhaltet ein per Softwareansprechbaren Local-[APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") |
+| 8 | Der Prozessor unterstützt das Vergleichen und Verändern von 8-Byte-Befehle |
+| 7 | Der Prozessor unterstützt die Machine Check Exception. |
+| 6 | Der Prozessor unterstützt Physical Adress Extension. |
+| 5 | Der Prozessor unterstützt die Model Specific Register, den RDMSR Befehl und den WRMSR Befehl |
 
 WIrd noch erweiter
 
@@ -102,6 +110,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3620; parent 3618; 2008-12-08T19:06:19Z -->
+<!-- MediaWiki page 1739; revision 3625; parent 3620; 2008-12-09T14:57:34Z -->
