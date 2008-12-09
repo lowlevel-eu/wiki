@@ -79,7 +79,7 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 
 ### Informationen zum optimalen Header
 
-Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweise nicht verwendet, außer seine Größe zu erhöhen. Der optimale Header wird in drei Abschnitte unterteilt (Zu PE32 und PE32+ siehe unten):
+Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweise nicht verwendet, außer um seine Größe zu erhöhen. Der optimale Header wird in drei Abschnitte unterteilt (Zu PE32 und PE32+ siehe unten):
 
 | Offset PE32/PE32+ | Größe | Beschreibung |
 | ------------------- | ---------- | ------------------------------------------------------------------------------- |
@@ -107,6 +107,6 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3654/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3652; parent 3648; 2008-12-09T18:44:44Z -->
+<!-- MediaWiki page 1644; revision 3654; parent 3652; 2008-12-09T18:46:47Z -->
