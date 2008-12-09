@@ -89,15 +89,16 @@ Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) be
 
 Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
-| Offset | Größe | Beschreibung |  |  |  |
-| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | --------- | ------------------------------------------------------------------------- |
-| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10B) oder PE32+(0x20B) handelt. Bei PE32+ wird ein 64-Bit-Namensraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GiB. Möglich ist es auch, die Datei als ROM Image( 0x107) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |  |  |  |
-| 2 | 1 Byte | Hauptversion des Linkers |  |  |  |
-| 3 | 1 Byte | Nebenversion des Linkers |  |  |  |
-| 4 | 4 Bytes | Hier soll die Größe des Quellcodes hin |  |  |  |
-| 8 | 4 Bytes | Die Summe aller initialisierten Datensektionen |  |  |  |
-| 12 | 4 Bytes | Die Summe aller nicht initialisierten Datensektionen (BSS) |  |  |  |
-| 16 | 4 Bytes | Die Adresse des Entry Points (Einsprungpunktes) bezogen auf den Anfang der Datei. Im Fall einer Anwengung ist dies die Position des ersten Befehls, bei Gerätetreibern die Adresse der Initialisierungsfunktion. Für DLL-Dateien ist der Entrypoint optional; sollte keiner erwünscht sein, muss dieser Wert 0 sein. | 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht |
+| Offset | Größe | Beschreibung |
+| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10B) oder PE32+(0x20B) handelt. Bei PE32+ wird ein 64-Bit-Namensraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GiB. Möglich ist es auch, die Datei als ROM Image( 0x107) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |
+| 2 | 1 Byte | Hauptversion des Linkers |
+| 3 | 1 Byte | Nebenversion des Linkers |
+| 4 | 4 Bytes | Hier soll die Größe des Quellcodes hin |
+| 8 | 4 Bytes | Die Summe aller initialisierten Datensektionen |
+| 12 | 4 Bytes | Die Summe aller nicht initialisierten Datensektionen (BSS) |
+| 16 | 4 Bytes | Die Adresse des Entry Points (Einsprungpunktes) bezogen auf den Anfang der Datei. Im Fall einer Anwengung ist dies die Position des ersten Befehls, bei Gerätetreibern die Adresse der Initialisierungsfunktion. Für DLL-Dateien ist der Entrypoint optional; sollte keiner erwünscht sein, muss dieser Wert 0 sein. |
+| 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht |
 
 ## Links
 
@@ -105,6 +106,6 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3647/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3647; parent 3646; 2008-12-09T17:38:25Z -->
+<!-- MediaWiki page 1644; revision 3648; parent 3647; 2008-12-09T17:41:39Z -->
