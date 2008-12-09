@@ -108,9 +108,7 @@ Im dritten Teil können Strings oder Tabellen angegeben werden, damit sie das Be
 - Die Adresse der Tabelle relativ zum ersten Sektor der ausführbaren Datei zum Zeitpunkt des Laden der Tabelle
 - Ihre Größe in Bytes
 
-##### Mögliche Tabellen
-
-In Bearbeitung
+  
 
 ## Links
 
@@ -118,6 +116,6 @@ In Bearbeitung
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3656; parent 3655; 2008-12-09T19:06:03Z -->
+<!-- MediaWiki page 1644; revision 3657; parent 3656; 2008-12-09T19:47:56Z -->
