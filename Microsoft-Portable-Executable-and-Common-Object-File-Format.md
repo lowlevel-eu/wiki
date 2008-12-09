@@ -101,12 +101,23 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 | 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht |
 | 24 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht. (Nur bei PE32 nötig). |
 
+  
+Den Windows spezifischen Teil wird hier nicht erklärt, weil dies für lowlevel nicht wichtig ist. Der geneigte Leser kann die Spezifikation ab Seite 12 durchlesen.  
+Im dritten Teil können Strings oder Tabellen angegeben werden, damit sie das Betriebsystem verwenden kann. Es können beliebig viele Resourcen angegeben werden. Jede Resourcenangabe besteht aus zwei Feldern, die jede beide 4-Byte groß sind:
+
+- Die Adresse der Tabelle relativ zum ersten Sektor der ausführbaren Datei zum Zeitpunkt des Laden der Tabelle
+- Ihre Größe in Bytes
+
+##### Mögliche Tabellen
+
+In Bearbeitung
+
 ## Links
 
 - [Microsoft Portable Executable and Common Object File Format Specification](http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3655; parent 3654; 2008-12-09T18:54:56Z -->
+<!-- MediaWiki page 1644; revision 3656; parent 3655; 2008-12-09T19:06:03Z -->
