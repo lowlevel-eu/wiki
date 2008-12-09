@@ -87,7 +87,7 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 # Meine OpenSource-Ecke
 
 - **Bootsektor-Programmierung**
-  - [ShowReg_32.asm](http://aicos.amazing-fx.de/opensource/ShowReg_32.asm) :: Zeigt den Inhalt der CPU-Register beim Einprung in den Bootcode.
+  - [ShowReg_32.asm](http://aicos.amazing-fx.de/opensource/ShowReg_32.asm) :: Zeigt den Inhalt der CPU-Register beim Einprung in den Bootcode. [Screenshot hier!](http://aicos.amazing-fx.de/images/screenshots/ShowReg_32.asm.gif)
   - [All_Bootsector_Images.zip](http://aicos.amazing-fx.de/downloads/All_Bootsector_Images.zip) :: Alle Bootsektor-Beispiele als Raw-Image für die Floppy.
 
   
@@ -98,6 +98,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3624; parent 3623; 2008-12-08T19:47:19Z -->
+<!-- MediaWiki page 1766; revision 3659; parent 3624; 2008-12-09T20:38:41Z -->
