@@ -31,7 +31,7 @@ Natürlich gibt der CPUID-Befehl auch ein Ergebnis zurück. In diesem Fall gibt 
 
 #### EAX-Inhalt ist eins
 
-Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren in EAX folgendes ausgegeben:
+Wenn im EAX statt Null eine Eins vorkommt, dann wird bei Intelprozessoren dann wird bei den Prozesorren stattdessen folgendes ausgegeben:
 
 ##### EAX
 
@@ -113,6 +113,6 @@ Es gibt Befehle, die nur für Intel bzw. AMD Prozessoren verfügbar sind. Solche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3626; parent 3625; 2008-12-09T15:04:00Z -->
+<!-- MediaWiki page 1739; revision 3627; parent 3626; 2008-12-09T15:05:06Z -->
