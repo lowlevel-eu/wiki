@@ -4,29 +4,29 @@
 
 ### MS-DOS Header
 
-Diese Header ist ein Kompabilitätsheader, womit im MS-DOS ausgedrückt werden kann, dass das Programm darunter nicht läuft.  
-Für lowlevel kann dieser Bereich getrost ausgelassen werden, weil
+Dieser Header ist ein Kompatibilitätsheader, der unter MS-DOS ausgeführt wird und meist eine Fehlermeldung anzeigt, die besagt, dass das Programm Windows benötigt.  
+Für Lowlevel-Zwecke kann dieser Bereich getrost ausgelassen werden, weil
 
-- Programme eines Nicht-Windowssystem brauchen nicht unter MS-DOS zu laufen
-- Fast niemand hat noch MS-DOS
+- Programme eines Nicht-Windowssystem brauchen keine MS-DOS-Kompatibilität
+- Fast niemand verwendet noch MS-DOS
 
 ### PE Kennzeichnung
 
-An der Stelle 0x3c kommt das Kennzeichnen des PE-Formates. Dieser ist 4-Byte groß und sieht so aus: "PE\0\0". (Zwei Nullbytes am Ende) Das ist wiederum ein Kennzeichen von Windows und sollte verändert(nicht weggelassen) werden.
+An der Stelle 0x3c kommt das Kennzeichnen des PE-Formates. Dieser ist 4-Byte groß und sieht so aus: "PE\0\0". (Zwei Nullbytes am Ende) Das ist wiederum ein Kennzeichen von Windows und sollte verändert (nicht weggelassen) werden.
 
 ### COFF Dateiheader
 
 Hier ist der Common Object File Format Header:
 
 | Offset | Größe | Beschreibung |
-| -------- | --------- | ------------------------------------------------------------------------------------------------------ |
-| 0x00h | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist. |
-| 0x02h | 2 Bytes | Die Anzahl der Sections. |
-| 0x04h | 4 Bytes | Die ersten 32-Bytes von der Sekundenanzahl ab 1.Januar 1970 00:00, wann die Datei hergestellt wurde. |
-| 0x08h | 4 Bytes | Die Dateioffset dieser COFF-Datei. Wenn Null, dann ist garkeine vorhanden. |
-| 0x0Bh | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle.(?) |
-| 0x0Fh | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei. **Achtung, ist nicht für die Objektdatei** |
-| 0x12h | 2 Bytes | Flags für Eigenschaften der Datei. |
+| -------- | --------- | ----------------------------------------------------------------------------------------------- |
+| 0x00h | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
+| 0x02h | 2 Bytes | Die Anzahl der Sections |
+| 0x04h | 4 Bytes | Die ersten 32bits von der Sekundenanzahl von 1.Januar 1970 00:00 bis zur Erstellung der Datei |
+| 0x08h | 4 Bytes | Die Dateioffset dieser COFF-Datei. Wenn Null, dann ist gar keine vorhanden |
+| 0x0Bh | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle (?) |
+| 0x0Fh | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
+| 0x12h | 2 Bytes | Flags für Eigenschaften der Datei |
 
 ## Weitergehende Informationen
 
@@ -60,44 +60,44 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 ### Flags des COFF-Headers
 
 | Bit | Funktion |
-| ----- | ----------------------------------------------------------------------------------------- |
-| 1 | Nur für Windows wichtig. |
-| 2 | Muss Eins sein. Wenn nicht, dann hat der Linker ein Fehler. |
-| 3 | Obsulot. Sollte Null sein. |
-| 4 | Obsulot. Sollte Null sein. |
-| 5 | Obsulot. Sollte Null sein. |
-| 6 | Das Programm kann mit mehr als 2GB was anfangen. In naher Zukunft wird es obsulot sein. |
-| 7 | Reserviert. |
-| 8 | Obsulot. Sollte Null sein. |
-| 9 | Plattform bassiert auf 32-Bit-Ausdrücke. |
-| 10 | Debuginformationen wurden entfernt. |
-| 11 | Diese Datei wurde irgendwie vom Internet oder von einen Wechselmedium kopiert. |
-| 12 | Diese Datei ist eine Systemdatei und keine Userprogramm |
-| 13 | Diese Datei ist eine DLL. |
-| 14 | Diese Datei sollte auf einen Einprozessor System laufen. |
-| 15 | Obsulot. Sollte Null sein. |
+| ----- | ----------------------------------------------------------------------------------------------- |
+| 1 | Nur für Windows wichtig |
+| 2 | Muss Eins sein. Wenn nicht, dann hat der Linker einen Fehler |
+| 3 | Obsolet. Sollte Null sein |
+| 4 | Obsolet. Sollte Null sein |
+| 5 | Obsolet. Sollte Null sein |
+| 6 | Das Programm kann mit mehr als 2GB umgehen. In naher Zukunft wird dieser Eintrag obsulet sein |
+| 7 | Reserviert |
+| 8 | Obsolet. Sollte Null sein |
+| 9 | Plattform basiert auf 32-Bit-Ausdrücken |
+| 10 | Debuginformationen wurden entfernt |
+| 11 | Diese Datei stammt aus dem Internet oder von einem Wechselmedium |
+| 12 | Diese Datei ist eine Systemdatei und kein Anwendungsprogramm |
+| 13 | Diese Datei ist eine DLL |
+| 14 | Diese Datei sollte auf einem Einprozessor-System laufen |
+| 15 | Obsolet. Sollte Null sein |
 
 ### Informationen zum optimalen Header
 
-Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweiße nicht verwendet, ausser seine Größe zu erhöhen. Der optimale Header wird in drei Abschnitte unterteilt. (Zu PE32 und PE32+ siehe unten)
+Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweise nicht verwendet, außer seine Größe zu erhöhen. Der optimale Header wird in drei Abschnitte unterteilt (Zu PE32 und PE32+ siehe unten):
 
 | Offset PE32/PE32+ | Größe | Beschreibung |
-| ------------------- | ---------- | -------------------------------------------------------------------------------- |
-| 0 | 28/24 | Zeigt algemeine Informationen an. |
-| 28/24 | 68/88 | Windows spezifische Informationen. |
-| 96/112 | Variabel | Sind Adressen oder Teile von Tabellen, die für das Betriebsystem wichtig sind. |
+| ------------------- | ---------- | ------------------------------------------------------------------------------- |
+| 0 | 28/24 | Zeigt allgemeine Informationen an |
+| 28/24 | 68/88 | Windows-spezifische Informationen |
+| 96/112 | Variabel | Sind Adressen oder Teile von Tabellen, die für das Betriebsystem wichtig sind |
 
-Der erste Abschnitt wird wieder in folgende unterteilt:
+Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 | Offset | Größe | Beschreibung |  |  |  |
-| -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----- | --------- | -------------------------------------------------------------------------- |
-| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10Bh) oder PE32+(0x20Bh) handelt. Bei PE32+ wird ein 64-Bit-Namesraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GigaByte. Möglich ist es auch, die Datei als ROM Image( 0x107h) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |  |  |  |
+| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | --------- | ------------------------------------------------------------------------- |
+| 0 | 2 Bytes | Hier wird angegeben, ob es sich um PE32(0x10Bh) oder PE32+(0x20Bh) handelt. Bei PE32+ wird ein 64-Bit-Namensraum verwendet. Unter Windows gibt es trotzdem eine Beschränkung auf 2 GiB. Möglich ist es auch, die Datei als ROM Image( 0x107h) zu kennzeichen, aber es geht nicht hervor, was die Unterschiede sind. |  |  |  |
 | 2 | 1 Byte | Hauptversion des Linkers |  |  |  |
 | 3 | 1 Byte | Nebenversion des Linkers |  |  |  |
 | 4 | 4 Bytes | Hier soll die Größe des Quellcodes hin |  |  |  |
-| 8 | 4 Bytes | Die Summe aller initialisierten Datensektionen. |  |  |  |
-| 12 | 4 Bytes | Die Summe aller nicht initialisierten Datensektionen.(BSS) |  |  |  |
-| 16 | 4 Bytes | Unmissverständlich. Bitte übersetzen: The address of the entry point relative to the image base when the executable file is loaded into memory. For program images, this is the starting address. For device drivers, this is the address of the initialization function. An entry point is optional for DLLs. When no entry point is present, this field must be zero | 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht. |
+| 8 | 4 Bytes | Die Summe aller initialisierten Datensektionen |  |  |  |
+| 12 | 4 Bytes | Die Summe aller nicht initialisierten Datensektionen (BSS) |  |  |  |
+| 16 | 4 Bytes | Die Adresse des Entry Points (Einsprungpunktes) bezogen auf den Anfang der Datei. Im Fall einer Anwengung ist dies die Position des ersten Befehls, bei Gerätetreibern die Adresse der Initialisierungsfunktion. Für DLL-Dateien ist der Entrypoint optional; sollte keiner erwünscht sein, muss dieser Wert 0 sein. | 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht |
 
 ## Links
 
@@ -105,6 +105,6 @@ Der erste Abschnitt wird wieder in folgende unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3644; parent 3643; 2008-12-09T17:18:02Z -->
+<!-- MediaWiki page 1644; revision 3645; parent 3644; 2008-12-09T17:31:54Z -->
