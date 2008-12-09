@@ -28,12 +28,30 @@ Hier ist der Common Object File Format Header:
 | 0x0Fh | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei. **Achtung, ist nicht für die Objektdatei** |
 | 0x12h | 2 Bytes | Flags für Eigenschaften der Datei. |
 
+## Weitergehende Informationen
+
+### Plattformtypen für den COFF-Header
+
+In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers erläutert.
+
+| Wert | Plattform |
+| --------- | ---------------------------------------------------------------------------------- |
+| 0x00h | Nicht bekannt oder auf jeder Plattform lauffähig. |
+| 0x1D3h | Matsushita AM33 |
+| 0x8664h | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
+| 0x1C0h | ARM little endian |
+| 0xEBCh | EFI Bytecode |
+| 0x14Ch | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") kompatible Prozessoren |
+| 0x200h | Intel Itanium Prozessorfamilie |
+
+Wird noch erweitert
+
 ## Links
 
 - [Microsoft Portable Executable and Common Object File Format Specification](http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3638/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3638; parent 3637; 2008-12-09T16:05:13Z -->
+<!-- MediaWiki page 1644; revision 3639; parent 3638; 2008-12-09T16:14:50Z -->
