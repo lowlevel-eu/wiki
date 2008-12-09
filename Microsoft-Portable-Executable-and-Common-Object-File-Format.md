@@ -57,12 +57,27 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 0x1C2h | Thumb |
 | 0x169h | MIPS little endian WCE v2 |
 
+### Flags des COFF-Headers
+
+| Bit | Funktion |
+| ----- | ----------------------------------------------------------------------------------------- |
+| 1 | Nur für Windows wichtig. |
+| 2 | Muss Eins sein. Wenn nicht, dann hat der Linker ein Fehler. |
+| 3 | Obsulot. Sollte Null sein. |
+| 4 | Obsulot. Sollte Null sein. |
+| 5 | Obsulot. Sollte Null sein. |
+| 6 | Das Programm kann mit mehr als 2GB was anfangen. In naher Zukunft wird es obsulot sein. |
+| 7 | Reserviert. |
+| 8 | Obsulot. Sollte Null sein. |
+
+Wird noch erweitert.
+
 ## Links
 
 - [Microsoft Portable Executable and Common Object File Format Specification](http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3640/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3640; parent 3639; 2008-12-09T16:24:53Z -->
+<!-- MediaWiki page 1644; revision 3641; parent 3640; 2008-12-09T16:38:04Z -->
