@@ -77,12 +77,22 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 14 | Diese Datei sollte auf einen Einprozessor System laufen. |
 | 15 | Obsulot. Sollte Null sein. |
 
+### Informationen zum optimalen Header
+
+Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweiße nicht verwendet, ausser seine Größe zu erhöhen. Der optimale Header wird in drei Abschnitte unterteilt. (Zu PE32 und PE32+ siehe unten)
+
+| Offset PE32/PE32+ | Größe | Beschreibung |
+| ------------------- | ---------- | -------------------------------------------------------------------------------- |
+| 0 | 28/24 | Zeigt algemeine Informationen an. |
+| 28/24 | 68/88 | Windows spezifische Informationen. |
+| 96/112 | Variabel | Sind Adressen oder Teile von Tabellen, die für das Betriebsystem wichtig sind. |
+
 ## Links
 
 - [Microsoft Portable Executable and Common Object File Format Specification](http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3643/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3642; parent 3641; 2008-12-09T16:45:53Z -->
+<!-- MediaWiki page 1644; revision 3643; parent 3642; 2008-12-09T17:00:32Z -->
