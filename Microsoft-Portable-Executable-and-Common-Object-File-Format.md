@@ -69,8 +69,13 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 6 | Das Programm kann mit mehr als 2GB was anfangen. In naher Zukunft wird es obsulot sein. |
 | 7 | Reserviert. |
 | 8 | Obsulot. Sollte Null sein. |
-
-Wird noch erweitert.
+| 9 | Plattform bassiert auf 32-Bit-Ausdrücke. |
+| 10 | Debuginformationen wurden entfernt. |
+| 11 | Diese Datei wurde irgendwie vom Internet oder von einen Wechselmedium kopiert. |
+| 12 | Diese Datei ist eine Systemdatei und keine Userprogramm |
+| 13 | Diese Datei ist eine DLL. |
+| 14 | Diese Datei sollte auf einen Einprozessor System laufen. |
+| 15 | Obsulot. Sollte Null sein. |
 
 ## Links
 
@@ -78,6 +83,6 @@ Wird noch erweitert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3641; parent 3640; 2008-12-09T16:38:04Z -->
+<!-- MediaWiki page 1644; revision 3642; parent 3641; 2008-12-09T16:45:53Z -->
