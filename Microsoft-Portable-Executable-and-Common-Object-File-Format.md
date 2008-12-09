@@ -99,6 +99,7 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 | 12 | 4 Bytes | Die Summe aller nicht initialisierten Datensektionen (BSS) |
 | 16 | 4 Bytes | Die Adresse des Entry Points (Einsprungpunktes) bezogen auf den Anfang der Datei. Im Fall einer Anwengung ist dies die Position des ersten Befehls, bei Gerätetreibern die Adresse der Initialisierungsfunktion. Für DLL-Dateien ist der Entrypoint optional; sollte keiner erwünscht sein, muss dieser Wert 0 sein. |
 | 20 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht |
+| 24 | 4 Bytes | Die Adresse, die relativ zum ersten Sektor der ausführbaren Datei steht. (Nur bei PE32 nötig). |
 
 ## Links
 
@@ -106,6 +107,6 @@ Der erste Abschnitt wird wiederum in folgendermaßen unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3648; parent 3647; 2008-12-09T17:41:39Z -->
+<!-- MediaWiki page 1644; revision 3652; parent 3648; 2008-12-09T18:44:44Z -->
