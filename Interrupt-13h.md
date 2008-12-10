@@ -1,6 +1,6 @@
 # Interrupt 13h
 
-Der BIOS Interrupt 13h dient dem Einfachen Zugriff auf Festplatten und Diskettenlaufwerke.
+Der BIOS Interrupt 13h dient dem einfachen Zugriff auf Festplatten und Diskettenlaufwerke.
 
 ## Die Wichtigsten Funktionen
 
@@ -75,6 +75,6 @@ Der BIOS Interrupt 13h dient dem Einfachen Zugriff auf Festplatten und Disketten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3608/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1768/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1768/index.html)
 
-<!-- MediaWiki page 1768; revision 3608; parent 3605; 2008-12-08T14:38:18Z -->
+<!-- MediaWiki page 1768; revision 3663; parent 3608; 2008-12-10T15:45:43Z -->
