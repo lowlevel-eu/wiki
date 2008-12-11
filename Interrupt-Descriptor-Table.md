@@ -50,6 +50,6 @@ Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse eines Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3670/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 3670; parent 3233; 2008-12-11T14:54:37Z -->
+<!-- MediaWiki page 1603; revision 3673; parent 3670; 2008-12-11T16:18:08Z -->
