@@ -4,15 +4,17 @@
 
 ## Physikalischer Aufbau
 
-Für DMA-Transfere wurde in früheren PCs ein Chip mit der Bezeichnung 8237A verwendet. Im Laufe der Zeit wurde ein weiterer Controller hinzugefügt und die Hardware in den Chipsatz integriert.
+Für DMA-Transfere wurde in früheren PCs ein Chip mit der Bezeichnung 8237A verwendet. Im Laufe der Zeit wurde ein weiterer Controller hinzugefügt und die Hardware in den Chipsatz integriert. Die beiden Controller sind miteinander verbunden, einer von ihnen arbeitet als Master, der andere als Slave. Jeder der beiden Controller stellt vier sog. **Channel**, also Kanäle, zur Verfügung. Dadurch sind parallele und unabhängige Übertragungen möglich.
 
-Die beiden Controller sind miteinander verbunden, einer von ihnen arbeitet als Master, der andere als Slave.
+Vor einer Datenübertragung muss der Controller richtig programmiert bzw. initialisiert werden. Die meisten Einstellungen, die hierfür nötig sind, können für jeden Channel einzeln geändert werden; das heißt, dass alle Channel unabhängig voneinander programmiert werden müssen und unabhängig voneinander die Daten übertragen.
+
+Der eigentliche Transfer wird in der Regel von dem mit diesem Channel verbundenen Stück Hardware gestartet. Dafür hat jeder Controller vier Leitungen mit den Namen DREQ0 bis DREQ3, die den Transfer über den entsprechenden Channel starten. Alternativ kann dieses Signal auch per Software emuliert werden, um die Datenübertragung manuell zu starten. Dazu wird das Requestregister benötigt, das weiter unten beschrieben wird. Die Übertragung wird beendet, wenn die vorab definierte Datenmenge übertragen wurde oder wenn ein Signal auf der EOP-Leitung des Controllers ankommt, d.h. die Übertragung von der Hardware aus beendet wird.
 
 ## Programmierung der Controller
 
 ### Übersicht
 
-Die folgende Tabelle ist eine Übersicht über alle [Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass pro Controller **vier sog. Channel**, also Kanäle, zur Verfügung stehen; sie ermöglichen parallele und unabhängige Datenübertragung. Jeder Channel verwendet dabei wiederum eigene Ports, wodurch eine vergleichsweise hohe Zahl an Ports zusammenkommt.
+Die folgende Tabelle ist eine Übersicht über alle [Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
 
 Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") gemeint, mit dem auf den Port zugegriffen werden kann. Diese Spalte gibt an, ob lesend oder schreibend zugegriffen wird. Die Spalte "Größe" gibt an, wieviele Bits das entsprechende Register umfasst. Auch wenn hier 16 stehen sollte, wird nur byteweise mit den DMA-Controllern kommuniziert - siehe dazu die Beschreibung des Flip-Flop-Registers.
 
@@ -49,11 +51,28 @@ Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki
 | Maskierung mehrerer Channel | 0x0F | 0xDE | out | 8 | Dieses Register hat die gleiche Funktion wie das Maskierungsregister oben, aber mit dem Unterschied, dass mit Hilfe dieses Registers der Zustand meherer Channel gleichzeitig geändert werden kann. Bit 0 bis 3 geben dabei an, ob der entsprechende Channel (0-3) aktiviert (0) oder deaktiviert (1) werden soll. Hierbei muss aufgepasst werden, dass nicht aus Versehen ein Channel irrtümlicherweise (de)aktiviert wird, dessen Status eigentlich unverändert bleiben soll. |
 | Request | 0x09 | 0xD2 | out | 8 | Dieses Register ermöglicht es, einen Transfer mittels Software auszulösen. Für den Aufbau des zu sendenen Bytes siehe unten |
 
+  
+
 ### Aufbau der zusammengesetzten Bytes
 
 #### Statusregister
 
-**TODO**
+Das Statusregister enthält einige Informationen über die Channel des jeweiligen Controllers. Es ist ein Byte groß und ist folgendermaßen zusammengesetzt:
+
+| Bit | Beschreibung bei gesetztem Bit |
+| ----- | --------------------------------------- |
+| 0 | Terminal Count bei Channel 0 erreicht |
+| 1 | Terminal Count bei Channel 1 erreicht |
+| 2 | Terminal Count bei Channel 2 erreicht |
+| 3 | Terminal Count bei Channel 3 erreicht |
+| 4 | DMA-Request für Channel 0 |
+| 5 | DMA-Request für Channel 1 |
+| 6 | DMA-Request für Channel 2 |
+| 7 | DMA-Request für Channel 3 |
+
+Mit Terminal Count ist das Umspringen des Zählers von 0x0000 auf 0xFFFF bzw. von 0xFFFF auf 0x0000 - je nach Zählrichtung - gemeint. Wenn dies der Fall ist wird die Übertragung beendet.
+
+Die DMA-Request-Bits sind auf Eins gesetzt, wenn das dem Channel zugehörige Gerät eine Übertragung per Hardwaresignal starten möchte.
 
 #### Befehlsregister
 
@@ -61,11 +80,39 @@ Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki
 
 #### Transfermodusregister
 
-**TODO**
+Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem Channel bearbeiten. Dazu wird ein Byte nach dem folgenden Schema zusammengesetzt und an den entsprechenden Port geschickt.
+
+| Bit | Beschreibung |
+| ----- | ----------------------------------------------------------------- |
+| 0-1 | Channelnummer |
+| 2-3 | Transferrichtung: |
+|  | 00 = Verifizieren: Selbsttest des Controllers |
+|  | 01 = Schreiben: Vom Gerät zum RAM |
+|  | 10 = Lesen: Von RAM zum Gerät |
+|  | 11 = undefiniert |
+| 4 | Autoinitialisierung |
+| 5 | Zählrichtung: |
+|  | 0 = Adressregister wird inkrementiert, es wird aufwärts gezählt |
+|  | 1 = Adressregister wird swkrementiert, es wird abwärts gezählt |
+| 6-7 | Transfermodus: |
+|  | 00 = Demand-Transfer |
+|  | 01 = Einzel-Transfer |
+|  | 10 = Block-Transfer |
+|  | 11 = Kaskadierung |
+
+Autonitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Buffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
 
 #### Requestregister
 
-**TODO**
+Das Requestregister wird verwendet, um einen Transfer manuell per Software auszulösen. Dazu wird ein Byte an den entsprechenden Port geschickt, das so aufgebaut ist:
+
+| Bit | Beschreibung |
+| ----- | ---------------------------------------------------------------- |
+| 0-1 | Channelnummer |
+| 2 | Request-Bit: |
+|  | 0 = Kein Request |
+|  | 1 = Request; das ist das, was wohl in allen Fällen gewollt ist |
+| 3-7 | ungenutzt, sollte Null sein |
 
   
 
@@ -79,6 +126,6 @@ Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 3667; parent 2693; 2008-12-10T18:00:33Z -->
+<!-- MediaWiki page 1555; revision 3675; parent 3667; 2008-12-11T17:34:33Z -->
