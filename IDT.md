@@ -1,9 +1,9 @@
 # IDT
 
-Weiterleitung: Interupt Descriptor Table
+Weiterleitung: [Interrupt Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3671/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1777/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1777/index.html)
 
-<!-- MediaWiki page 1777; revision 3671; parent 0; 2008-12-11T14:54:37Z -->
+<!-- MediaWiki page 1777; revision 3672; parent 3671; 2008-12-11T16:17:55Z -->
