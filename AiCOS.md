@@ -55,7 +55,7 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
   - Subsystem-Kernel, für weitere Treiber, Filter und und und ...
 - Soll insich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
 
-**Notiz:** Zur besseren Verständnis meines Konzept ist eine visuelle Darstellung meines OS in Planung. Sie beinhaltet den Bootprozess und den Aufbau des MKS.
+**Notiz:** Zum besseren Verständnis meines Konzept ist eine visuelle Darstellung meines OS in Planung. Sie beinhaltet den Bootprozess und den Aufbau des MKS.
 
   
 
@@ -99,6 +99,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3680; parent 3660; 2008-12-11T20:49:44Z -->
+<!-- MediaWiki page 1766; revision 3681; parent 3680; 2008-12-11T20:50:30Z -->
