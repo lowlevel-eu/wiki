@@ -133,8 +133,14 @@ Senden einer IPC-Nachricht in LOST:
         : : "g" (pid), "g" (len+8), "g"(function), "g" (correlation_id), "g" (data) , "g" (len) : "eax", "ecx");
     }
 
+  
+
+## Weblinks
+
+[gcc-Manual: Constraints](http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gcc/Constraints.html)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 2714; parent 2037; 2008-03-22T16:51:32Z -->
+<!-- MediaWiki page 1472; revision 3692; parent 2714; 2008-12-13T23:32:13Z -->
