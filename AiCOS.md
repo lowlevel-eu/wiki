@@ -80,11 +80,15 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 **In Arbeit:**
 
 - Bootloader
-- Kernel-Debug-Unterstützung für WinDbg
+  - Entry16: 16-Bit-Einsprung
 
   
 **Geplant:**
 
+- Bootloader
+  - Entry32: 32-Bit-PM-Einsprung
+  - COM-Treiber: für Kernel-Debug benötigt
+  - Kernel-Debug
 - Bootsektor für CD
 
   
@@ -103,6 +107,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3686; parent 3685; 2008-12-13T11:17:31Z -->
+<!-- MediaWiki page 1766; revision 3687; parent 3686; 2008-12-13T11:24:10Z -->
