@@ -31,6 +31,8 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 - Microsoft Windows-Debugger x86/x64 für Kernel-Debug
 - Microsoft Virtual PC 2007
 
+**Testumgebung:** Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da ein P2 mit müden 400 MHz.
+
   
 
 # Konzept
@@ -99,6 +101,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3682/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3682; parent 3681; 2008-12-11T20:51:42Z -->
+<!-- MediaWiki page 1766; revision 3685; parent 3682; 2008-12-13T11:06:36Z -->
