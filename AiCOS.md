@@ -65,6 +65,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 # History
 
+- 15.15.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig.
 - 07.12.2008 Bootsektor für Raw-Floppy fertig.
 - 06.12.2008 Bootsektor-Programm, das den Inhalt der Register der CPU beim Einsprung in den Bootcode anzeigt.
 
@@ -74,7 +75,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 **Fertig:**
 
-- Bootsector für Floppy (Raw)
+- Bootsector für ROFS, FDD-Version.
 
   
 **In Arbeit:**
@@ -108,6 +109,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3694/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3688; parent 3687; 2008-12-13T12:20:08Z -->
+<!-- MediaWiki page 1766; revision 3694; parent 3688; 2008-12-15T17:25:35Z -->
