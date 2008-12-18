@@ -335,8 +335,12 @@ Den neuen Wert für den Inputport über Port 0x60 senden
 
 mov al, 0xFE out 0x60, al \</asm\>
 
+# Links
+
+- <http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html>
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 3434; parent 3384; 2008-10-27T12:15:49Z -->
+<!-- MediaWiki page 1468; revision 3696; parent 3434; 2008-12-18T21:02:25Z -->
