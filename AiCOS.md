@@ -1,10 +1,10 @@
 # AiCOS
 
-| AiCOS |  |
+| ![AiCOS-Logo-small.png](http://aicos.amazing-fx.de/images/AiCOS-Logo-small.png) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase |
+| Akt. Version: | Research Phase (0.00.11) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -33,7 +33,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 - Microsoft Windows-Debugger x86/x64 für Kernel-Debug
 - Microsoft Virtual PC 2007
 
-**Testumgebung:** Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da ein P2 mit müden 400 MHz.
+**Testumgebung:** Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da einmal ein P2 mit müden 400 MHz als Single-Core, um vor allem die Boot-Phasen zu testen. Versehentlich auch mal Tests auf meinem Quad-Core, wenn ich vergessen habe die Diskette nach dem Testen rauszunehmen. Aber da zeigt sich schon, dass auf der realen Maschine alles genauso läuft wie bisher in der VM.
 
   
 
@@ -43,12 +43,18 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 - Der Bootsektor wird so geschrieben, dass es im Prinzip egal ist, an welcher Adresse dieser geladen und ausgeführt wird. Derzeit wird noch ein Fehlercode ausgeben und die Ausführung angehalten, wenn sich der Bootcode nicht an der Adresse 0x00007C00 befindet.
 - Für jedes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (RAW, FAT, FAT32 und ISO9660) auf dem AiCOS zum Einsatz kommen wird, wird es einen entsprechenden Bootcode geben.
+- Die Aufgabe des Bootsektors sollte wohl ja klar sein, nämlich unabhängig vom Medium den Bootloader zu laden und auszuführen.
 
 ### Bootloader
 
 - Soll erste Möglichkeiten des Kernel-Debugging ermöglichen.
 - Einrichten des MKS und laden bedingter Treiber.
-- Startup des MKS.
+  - Kernel für BSP (Boot Strap Processor).
+  - Kernel für APs (Application Processors) ... nur bei MultiCore-Systemen.
+  - Management-Kernel.
+  - I/O-Kernel.
+- Startup des MKS und Channel-System.
+  - Den BSP in den 32-Bit PM schalten und die Kontrolle über den Management-Kernel geben.
 
 ### Kernel
 
@@ -59,13 +65,13 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
   - Subsystem-Kernel, für weitere Treiber, Filter und und und ...
 - Soll insich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
 
-**Notiz:** Zum besseren Verständnis meines Konzept ist eine visuelle Darstellung meines OS in Planung. Sie beinhaltet den Bootprozess und den Aufbau des MKS.
+**Notiz:** Zum besseren Verständnis meines Konzept ist eine visuelle Darstellung meines OS in Planung. Sie beinhaltet den Bootprozess und den Aufbau des MKS. Diese Visualisierungen werden überwiegend auf der Homepage von AiCOS zu finden sein, die sich derzeit noch im Aufbau befindet.
 
   
 
 # History
 
-- 15.15.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig.
+- 15.15.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
 - 07.12.2008 Bootsektor für Raw-Floppy fertig.
 - 06.12.2008 Bootsektor-Programm, das den Inhalt der Register der CPU beim Einsprung in den Bootcode anzeigt.
 
@@ -82,6 +88,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 - Bootloader
   - Entry16: 16-Bit-Einsprung
+- Homepage für AiCOS
 
   
 **Geplant:**
@@ -109,6 +116,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3694/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3694; parent 3688; 2008-12-15T17:25:35Z -->
+<!-- MediaWiki page 1766; revision 3697; parent 3694; 2008-12-19T14:09:07Z -->
