@@ -1,76 +1,52 @@
 # Xantorix
 
-**HomixOS** (Homix Operating System) ist ein kostenloses [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Das Betriebssystem ist modular aufgebaut, daher ist es möglich einfach und bequem verschiedene Module oder Treiber zur Laufzeit hinzuzufügen oder zu entfernen. Der Kernel unterstützt alle modernen Technologien wie Protected-Mode, [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit Variante existiert seit neuestem auch eine noch nicht ausführlich getestete 64-Bit Version.
+**Xantorix** ist ein kleines, kostenloses [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Das Betriebssystem ist modular aufgebaut, daher ist es möglich einfach und bequem verschiedene Module oder Treiber zur Laufzeit hinzuzufügen oder zu entfernen. Der Kernel unterstützt alle modernen Technologien wie Protected-Mode, [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit Variante existiert seit neuestem auch eine noch nicht ausführlich getestete 64-Bit Version.
 
-In unregelmäßigen Zeitabständen, meistens jedoch ungefähr alle 2 bis 3 Wochen, wird neben dem finalen Release auch eine Alpha-/Beta-/RC-Variante der sich derzeit in Entwicklung befindlichen Version veröffentlicht. Hierbei handelt es sich um keine stabile Version, sondern nur um den derzeitigen Entwicklungsstand. Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
+Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
 
 ## Features
 
-Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der [offiziellen Webseite](http://www.homix-online.de/homixos/features.php).
+Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der [offiziellen Webseite](http://www.xantorix.de/features.php).
 
 ## Versionen
 
-Überblick der verschiedenen Versionen:
+Überblick der verschiedenen Versionen seit Umbenennung:
 
-    26.12.2007 : HomixOS 0.1.1
-    09.09.2007 : HomixOS 0.1.0
+    20.12.2008 : Xantorix 0.1.2
 
 Die Veränderungen bei den verschiedenen Versionen:
 
-**HomixOS 0.1.1:**
-
-- Bugfixes
-- kleine Benutzerverwaltung
-- verbesserte Prozessverwaltung
-- Exception-Handling
-- erweiterte Shell
-- Konsole verbessert
-
-**HomixOS 0.1.0:**
+**Xantorix 0.1.2:**
 
 - Multiboot-kompatibler Kernel
 - 32-Bit ProtectedMode Kernel
 - 64-Bit LongMode Kernel
 - Multitasking (Prozesse und Threads)
 - moderne Speicherverwaltung (Paging)
+- Benutzerverwaltung
+- Exception-Handling
 - Diskettenlaufwerkstreiber
 - FAT-Dateisystemtreiber
 - Tastaturtreiber
 - PE-Unterstützung
+- Shell
+- Texteditor
 
 ## Roadmap
 
 Folgende Versionen sind geplant:
 
-    September 2008 : HomixOS 0.1.2
-    2008/2009/2010 : HomixOS 0.2.0
+    Januar 2009    : Xantorix 0.1.3
+    September 2009 : Xantorix 0.2.0
 
-Die geplanten Neuheiten in den zukünftigen Versionen:
-
-**HomixOS 0.1.2:**
-
-- SMP / Multiprocessor-Support
-- Optimierter Binary-Loader
-- vollständige Benutzerverwaltung
-- Festplattentreiber (P-ATA)
-- Texteditor
-
-**HomixOS 0.2.0:**
-
-- Viele Kernelverbesserungen
-- 100%-ige Stabilität
-- Netzwerkunterstützung
-- ARP, IPv4, UDP, TCP, DNS Netzwerkprotokolle
-- RTL8139 Netzwerkkartentreiber
-- AMD PCnet Netzwerkkartentreiber
+Derzeit stehen noch keine offiziellen Features für die zukünftigen Versionen fest.
 
 ## Offizielle Webseite
 
-[HomixOS Projekt-Webseite](http://www.homix-online.de/homixos/)  
-[Homix-Online](http://www.homix-online.de/)
+[Xantorix Projekt-Webseite](http://www.xantorix.de/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3700/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3703/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 3700; parent 3212; 2008-12-20T14:42:23Z -->
+<!-- MediaWiki page 1453; revision 3703; parent 3700; 2008-12-20T14:53:16Z -->
