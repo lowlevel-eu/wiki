@@ -33,7 +33,7 @@ Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 i
 
 Ein Pagedirectory enthält 1024 Eintrage a 4 Byte. Ein Pagedirectory-Eintrag kann jeweils auf ein Pagetable zeigen. Pagedirectories (wie auch Pagetables) müssen immer 4k-aligned sein, d.h sie füllen genau eine Page aus.
 
-| 31..10 | 11..9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| 31..12 | 11..9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | ----------- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Pagetable | Verf. | G | S | 0 | A | C | W | U | R | P |
 
@@ -59,7 +59,7 @@ P: Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page n
 
 Ein Page Table enthält 1024 Einträge a 4 Byte. Jeder Eintrag zeigt auf eine physische Page. Page Tables müssen 4k-aligned sein und füllen somit eine ganze Page.
 
-| 31..10 | 11..9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| 31..12 | 11..9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | -------------- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Page (phys.) | Verf. | G | 0 | D | A | C | W | U | R | P |
 
@@ -101,6 +101,6 @@ Es besteht aber auch die Möglichkeit Zugriff auf den gesamten physischen Speich
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3713/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 3319; parent 3312; 2008-09-09T10:14:26Z -->
+<!-- MediaWiki page 1496; revision 3713; parent 3319; 2008-12-21T17:26:19Z -->
