@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
 | Akt. Version: | 00002 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | *AVOL* |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.com) |
 | OS-Eigenschaften |  |
 | Plattform: | x86 (x64 geplant) |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Exokernel |
@@ -28,7 +28,7 @@ Nuke ist mein Hobby OS, welches im Protected Mode läuft. Hauptziel von Nuke ist
 
 - Textausgabe
 - Register Debugging
-- 320x200x8 VGA
+- 640x480x4 VGA
 
 ## Historie
 
@@ -37,9 +37,9 @@ Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 
   
 Ver 00002
 
-- GDT wird geladen // Muss noch angepasst werden
+- GDT wird geladen
 - *IDT*
-- *Exception Handling & IRQs*
+- *Exception Handling & IRQs* //Schreitet voran
 - Protected Mode
 - *FAT12*
 - *NukeFS*
@@ -56,6 +56,7 @@ Ver 00000
 
 ## TODO
 
+- Long Mode
 - Tastatur-Layout anpassen
 - Dateisystem-Entwurf fertigstellen
 - Festplatte beschreiben/lesen
@@ -63,6 +64,6 @@ Ver 00000
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 3552; parent 3551; 2008-11-24T20:51:22Z -->
+<!-- MediaWiki page 1750; revision 3720; parent 3552; 2008-12-23T20:57:21Z -->
