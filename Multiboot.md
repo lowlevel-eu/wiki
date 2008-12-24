@@ -167,7 +167,7 @@ Pointer zur ersten Drive-Struktur. Eine Drive-Struktur sieht folgendermaßen aus
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ----------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0x00 | 4 | size | Größe des dieser Drive-Struktur |
+| 0x00 | 4 | size | Größe dieser Drive-Struktur |
 | 0x04 | 4 | driver_number | BIOS-Driver-Number |
 | 0x08 | 4 | drive_mode | 0 = [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS")<br>1 = [LBA](https://github.com/lowlevel-eu/wiki/wiki/Logical-Block-Addressing "LBA") |
 | 0x0C | 4 | drive_cylinders | Anzahl an Zylinder, die das Gerät hat |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3725/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 3583; parent 2987; 2008-12-06T17:49:59Z -->
+<!-- MediaWiki page 1560; revision 3725; parent 3583; 2008-12-24T15:31:45Z -->
