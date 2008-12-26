@@ -11,6 +11,6 @@ Der **Bootloader** wird vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2684/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
 
-<!-- MediaWiki page 1477; revision 2684; parent 2650; 2008-03-22T16:31:01Z -->
+<!-- MediaWiki page 1477; revision 3732; parent 2684; 2008-12-26T12:34:48Z -->
