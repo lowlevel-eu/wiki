@@ -19,8 +19,8 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 | 4 | Base | 16-23 |
 | 5 | Accessbyte | 0-7 (vollständig) |
 | 6 | Flags | 0-3 (vollständig) |
-| 7 | Limit | 16-19 |
-| 8 | Base | 24-31 |
+| 6 | Limit | 16-19 |
+| 7 | Base | 24-31 |
 
 ### Bedeutung
 
@@ -86,6 +86,6 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 3593; parent 3588; 2008-12-07T18:23:04Z -->
+<!-- MediaWiki page 1661; revision 3749; parent 3593; 2008-12-26T13:13:40Z -->
