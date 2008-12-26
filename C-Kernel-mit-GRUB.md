@@ -211,6 +211,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 3281; parent 3260; 2008-08-31T19:05:00Z -->
+<!-- MediaWiki page 1604; revision 3748; parent 3281; 2008-12-26T12:53:21Z -->
