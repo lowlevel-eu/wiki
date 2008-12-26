@@ -471,6 +471,6 @@ Die beiden 0x9000 können natürlich durch irgendeine andere Adresse ersetzt wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 2741; parent 2427; 2008-03-22T17:24:44Z -->
+<!-- MediaWiki page 1464; revision 3742; parent 2741; 2008-12-26T12:48:28Z -->
