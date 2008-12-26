@@ -47,6 +47,6 @@ Derzeit stehen noch keine offiziellen Features für die zukünftigen Versionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3704/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 3704; parent 3703; 2008-12-20T15:10:06Z -->
+<!-- MediaWiki page 1453; revision 3746; parent 3704; 2008-12-26T12:51:30Z -->
