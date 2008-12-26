@@ -23,6 +23,6 @@ Eine besondere Rolle hat der [Exokernel](https://github.com/lowlevel-eu/wiki/wik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 3502; parent 3311; 2008-11-09T12:36:50Z -->
+<!-- MediaWiki page 1480; revision 3733; parent 3502; 2008-12-26T12:40:16Z -->
