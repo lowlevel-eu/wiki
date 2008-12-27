@@ -6,7 +6,7 @@ Das [ext4-Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Ext4 "Ext4") ist
 
 ## Erkennen eines ext3 Dateisystems
 
-Ein ext3-Dateisystem ist eigentlich ein ext2-Dateisystem mit einer Erweiterung. Deshalb kann ein ext2-Treiber theoretisch auch ein ext3-Dateisystem benutzen. Deshalb ist sowohl die Kennung in der [Partitionstabelle](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "MBR") (0x83) als auch die Magic number (0xEF53) im Superblock identisch. Man kann ein ext3-Dateisystem allerdings an den Compatible Features Flags (Bytes 92-95 im Superblock) erkennen. 0x0004 bedeutet dort, dass es sich um ein ext3-Dateisystem handelt.
+Ein ext3-Dateisystem ist eigentlich ein ext2-Dateisystem mit einer Erweiterung. Deshalb kann ein ext2-Treiber theoretisch auch ein ext3-Dateisystem benutzen. Deshalb ist sowohl die Kennung in der [Partitionstabelle](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record#partitionstabelle "MBR") (0x83) als auch die Magic number (0xEF53) im Superblock identisch. Man kann ein ext3-Dateisystem allerdings an den Compatible Features Flags (Bytes 92-95 im Superblock) erkennen. 0x0004 bedeutet dort, dass es sich um ein ext3-Dateisystem handelt.
 
 ## Siehe auch
 
@@ -15,6 +15,6 @@ Ein ext3-Dateisystem ist eigentlich ein ext2-Dateisystem mit einer Erweiterung. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3755/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1660/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1660/index.html)
 
-<!-- MediaWiki page 1660; revision 3755; parent 2946; 2008-12-27T15:00:30Z -->
+<!-- MediaWiki page 1660; revision 3756; parent 3755; 2008-12-27T15:02:48Z -->
