@@ -80,12 +80,14 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 ### Die Flags
 
 | Bit | Name | Bedeutung |
-| ----- | ----------------- | ---------------------------------------------------------------------------- |
+| ----- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | Granularity bit | Bei 0 wird als Einheit bei Limit ein Byte benutzt, bei 1 stattdessen 4 KiB |
 | 1 | Size bit | 0 bedeuted 16 bit protected mode, bei 1 32 bit protected mode. |
+| 2 | Long Mode bit | 0 bedeuted Protected Mode, 1 bedeutet Long Mode. Bei gesetztem Long Mode Bit **muss** das Size Bit 0 sein! Ist das Long Mode Bit 0, so gibt das Size Bit die Größe des Protected Mode Segments an. |
+| 3 | Available Bit | Dieses Bit steht dem Programmierer zur freien Verfügung. |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3753/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 3749; parent 3593; 2008-12-26T13:13:40Z -->
+<!-- MediaWiki page 1661; revision 3753; parent 3749; 2008-12-27T14:50:42Z -->
