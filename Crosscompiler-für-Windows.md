@@ -41,9 +41,9 @@ Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. We
 
 ## Probleme
 
-### gcc.exe: \_spawnvp: No such file or directory
+### gcc.exe: \_spawnvp: No such file or directory und CreateProcess: No such file or directory
 
-Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libexec\gcc\i586-elf\4.1.1\cc1.exe nach i586-elf\bin zu kopieren.
+Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libexec\gcc\i586-elf\4.2.0\cc1.exe nach i586-elf\bin zu kopieren.
 
 ### Keine Unterstützung für C++
 
@@ -55,6 +55,6 @@ Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.1
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2786/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3759/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 2786; parent 2692; 2008-03-23T10:46:01Z -->
+<!-- MediaWiki page 1450; revision 3759; parent 2786; 2008-12-28T19:42:33Z -->
