@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase (0.00.11) |
+| Akt. Version: | Research Phase (0.00.20.5) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -71,6 +71,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 # History
 
+- 31.12.2008 Bootsektor: Umadressierung, da Probleme mit dem PM. (0.00.20.5)
 - 15.15.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
 - 07.12.2008 Bootsektor für Raw-Floppy fertig.
 - 06.12.2008 Bootsektor-Programm, das den Inhalt der Register der CPU beim Einsprung in den Bootcode anzeigt.
@@ -116,6 +117,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3697; parent 3694; 2008-12-19T14:09:07Z -->
+<!-- MediaWiki page 1766; revision 3761; parent 3697; 2008-12-31T20:07:38Z -->
