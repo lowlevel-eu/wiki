@@ -6,11 +6,11 @@ Im IRC-Channel \#lost auf irc.euirc.net bekommt man einerseits schnelle Hilfe au
 
 Es ist durchaus möglich, dass diese Möglichkeit bei Dir nicht funktioniert, da es auf den Browser und das genutzte IRC-Client Programm ankommt. Versuch es einfach, du wirst dann sehen, ob es geht.
 
-irc://irc.euirc.net/lost
+irc://irc.euirc.net/tyndur (tyndur ist der neue IRC-Channel, laut meinen Informationen bleibt lost fürs erste noch online)
 
 ## Schnell-Zugriff zum Channel per CGIIRC
 
-Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, ist der Zugang über CGIIRC eine Alternative. Dieser arbeitet nur über HTTP und funktioniert somit auch hinter Firewalls und Proxies (also zum Beispiel etwas für in der Schule ;-)). Eine CGIIRC-Installation speziell für den \#LOST-Channel kann [hier](http://cgiirc.tyndur.org/) gefunden werden. Es wird aber empfohlen, wenn möglich einen normalen IRC-Client zu verwenden, da die Anzahl der möglichen CGIIRC-Verbindungen von Seiten Euirc beschränkt sind.
+Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, ist der Zugang über CGIIRC eine Alternative. Dieser arbeitet nur über HTTP und funktioniert somit auch hinter Firewalls und Proxies (also zum Beispiel etwas für in der Schule ;-)). Eine CGIIRC-Installation speziell für den \#tyndur-Channel kann [hier](http://cgiirc.tyndur.org/) gefunden werden. Es wird aber empfohlen, wenn möglich einen normalen IRC-Client zu verwenden, da die Anzahl der möglichen CGIIRC-Verbindungen von Seiten Euirc beschränkt sind.
 
 ## IRC-Start mit KVirc unter Windows
 
@@ -30,13 +30,13 @@ Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, 
 
 <!-- -->
 
-- Jetzt kann man das Fenster "Server" mit einem Klick auf "OK" wegmachen. Im Fenster "Kanäle betreten" gibt man unter Name "#lost" (Um in den Chat-Raum der Lowlevel-Gemeinde zu kommen) ein, das Passwort-Feld lässt man leer. Nachdem man also den Raum betreten hat, kann man auch "Kanäle betreten" mittels "Schliessen" wegmachen. Geht ebenfalls mit dem join-Befehl
+- Jetzt kann man das Fenster "Server" mit einem Klick auf "OK" wegmachen. Im Fenster "Kanäle betreten" gibt man unter Name "#tyndur" (Um in den Chat-Raum der Lowlevel-Gemeinde zu kommen) ein, das Passwort-Feld lässt man leer. Nachdem man also den Raum betreten hat, kann man auch "Kanäle betreten" mittels "Schliessen" wegmachen. Geht ebenfalls mit dem join-Befehl
 
-      /join #lost
+      /join #tyndur
 
 <!-- -->
 
-- Das oberste Fenster in KVIrc namens "#lost" kann man maximieren. Nun kann man unten rechts eine Nachricht eingeben und mit Enter abschicken.
+- Das oberste Fenster in KVIrc namens "#tyndur" kann man maximieren. Nun kann man unten rechts eine Nachricht eingeben und mit Enter abschicken.
 
 <!-- -->
 
@@ -101,6 +101,6 @@ Momentan nicht verfügbar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 3747; parent 2965; 2008-12-26T12:51:51Z -->
+<!-- MediaWiki page 1463; revision 3793; parent 3747; 2009-01-01T21:31:49Z -->
