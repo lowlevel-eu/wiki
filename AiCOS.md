@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase (0.00.21.6) |
+| Akt. Version: | Research Phase (0.00.22.16) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -71,6 +71,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 # History
 
+- 01.01.2009 Bug im Bootcode behoben; Bootloader gibt Meldung aus. (0.00.22.16)
 - 01.01.2009 Fehler beim Sprung in den PM behoben, FDD-Motor wird nun auch abgeschaltet. (0.00.21.6)
 - 31.12.2008 Bootsektor: Umadressierung, da Probleme mit dem PM. (0.00.20.5)
 - 15.15.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
@@ -83,7 +84,7 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 **Fertig:**
 
-- Bootsector für ROFS, FDD-Version. (0.00.21.6)
+- Bootsector für ROFS, FDD-Version. (0.00.22.16)
 - Bootloader
   - Entry16: 16-Bit-Einsprung
 
@@ -104,6 +105,12 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
   
 
+# Screenshot
+
+![bootloader_001.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_001.gif)
+
+  
+
 # Meine OpenSource-Ecke
 
 - **Bootsektor-Programmierung**
@@ -119,6 +126,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3762/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3762; parent 3761; 2008-12-31T23:25:14Z -->
+<!-- MediaWiki page 1766; revision 3787; parent 3762; 2009-01-01T16:42:18Z -->
