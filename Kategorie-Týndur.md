@@ -59,7 +59,7 @@ Das Release im Jahr 2008 (genauer: am 24.12.2008), und außerdem erste Version u
 - Treiber für ata und ext2
 - Paketverwaltung lpt
 - Pakete wie binutils, fpc (FreePascal), gcc und nano
-- Netzwerkunterstützung mit Treiber für rtl8139 und sis900
+- Netzwerkunterstützung mit Treiber für [RTL8139](RTL8139 "RTL8139") und sis900
 - Tab-Completion und andere neue Möglichkeiten zum editieren der Kommandozeile in der Shell
 - Editor kedit verbessert; neu ist unter anderem das Syntax-Highlighting für C (einschalten mit F8)
 - Virtuelle Terminals (umschaltbar via Alt+Fx, Standardmäßig gibt es 4 Terminals)
@@ -75,6 +75,6 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1795/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1795/index.html)
 
-<!-- MediaWiki page 1795; revision 3791; parent 3790; 2009-01-01T20:01:46Z -->
+<!-- MediaWiki page 1795; revision 3792; parent 3791; 2009-01-01T20:06:36Z -->
