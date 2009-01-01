@@ -54,7 +54,7 @@ Diese Version enthält Überarbeitungen und Bugfixes für Features der 0.1.0-Ver
 
   
 **0.2.0, Codename Gothmog**  
-Das Release im Jahr 2008, und außerdem erste Version unter dem neuen Namen týndur. Offizielle Features:
+Das Release im Jahr 2008 (genauer: am 24.12.2008), und außerdem erste Version unter dem neuen Namen týndur. Offizielle Features:
 
 - Treiber für ata und ext2
 - Paketverwaltung lpt
@@ -75,6 +75,6 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3790/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1795/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1795/index.html)
 
-<!-- MediaWiki page 1795; revision 3790; parent 3780; 2009-01-01T19:59:06Z -->
+<!-- MediaWiki page 1795; revision 3791; parent 3790; 2009-01-01T20:01:46Z -->
