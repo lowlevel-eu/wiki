@@ -6,7 +6,7 @@ Im IRC-Channel \#lost auf irc.euirc.net bekommt man einerseits schnelle Hilfe au
 
 Es ist durchaus möglich, dass diese Möglichkeit bei Dir nicht funktioniert, da es auf den Browser und das genutzte IRC-Client Programm ankommt. Versuch es einfach, du wirst dann sehen, ob es geht.
 
-irc://irc.euirc.net/tyndur (tyndur ist der neue IRC-Channel, laut meinen Informationen bleibt lost fürs erste noch online)
+irc://irc.euirc.net/tyndur (tyndur ist der neue IRC-Channel, laut meinen Informationen bleibt \#lost fürs erste noch online)
 
 ## Schnell-Zugriff zum Channel per CGIIRC
 
@@ -101,6 +101,6 @@ Momentan nicht verfügbar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 3793; parent 3747; 2009-01-01T21:31:49Z -->
+<!-- MediaWiki page 1463; revision 3794; parent 3793; 2009-01-01T21:32:54Z -->
