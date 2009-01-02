@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase (0.00.23.20) |
+| Akt. Version: | Research Phase (0.00.24.23) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -82,6 +82,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # History
 
+- 02.01.2009 Paging mit PAE implementiert. (0.00.24.23)
 - 01.01.2009 Bootloader prüft die CPU, da mindestens ein 586er benötigt wird. (0.00.23.20)
 - 01.01.2009 Bug im Bootcode behoben; Bootloader gibt Meldung aus. (0.00.22.16)
 - 01.01.2009 Fehler beim Sprung in den PM behoben, FDD-Motor wird nun auch abgeschaltet. (0.00.21.6)
@@ -105,7 +106,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 **In Arbeit:**
 
 - Bootloader
-  - Paging mit PAE
+  - Paging mit PAE (bisher nur 2 MiB gemappt, sollte erstmal für Bootloader-Spielereien reichen)
 - Homepage für AiCOS
 
   
@@ -146,6 +147,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3796; parent 3789; 2009-01-02T01:49:42Z -->
+<!-- MediaWiki page 1766; revision 3798; parent 3796; 2009-01-02T02:44:47Z -->
