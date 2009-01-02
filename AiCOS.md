@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Modulares Kernel System (MKS) |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 | API: | n/a |
-| Binärformat: | bisher RAW |
+| Binärformat: | BIN, (event. EXE) |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Channels |
 | Homepage |  |
 
@@ -26,14 +26,23 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 # Entwicklungsumgebung
 
-- Intel Core 2 Quad mit 4 GiB RAM
-- Microsoft [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") XP Pro
-- Microsoft Visual Studio 2008 Express
-- Mircosoft .NET Framework v3.5
-- Microsoft Windows-Debugger x86/x64 für Kernel-Debug
-- Microsoft Virtual PC 2007
+- **Hardware**
+  - Intel Core 2 Quad mit 8 GiB RAM
+- **Software**
+  - [Microsoft XP Pro](http://www.microsoft.com/germany/windows/windows-xp/) \>\>\> [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
+  - [Microsoft Visual Studio 2008 Express](http://www.microsoft.com/germany/express/)
+  - [Mircosoft .NET Framework v3.5](http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6&DisplayLang=de)
+  - [Microsoft Windows-Debugger x86/x64 für Kernel-Debug](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
+  - [Microsoft Virtual PC 2007 inkl. SP 1](http://www.microsoft.com/downloads/details.aspx?FamilyID=28c97d22-6eb8-4a09-a7f7-f6c7a1f000b5&DisplayLang=de)
+- **Referenzmaterial**
+  - [Microsoft Singularity RDK 2.0](http://www.codeplex.com/singularity)
+  - [Protected Mode Tutorials](http://www.fh-zwickau.de/doc/prmo/start.htm)
+  - [Paging verschiedener CPUs](http://ra.ziti.uni-heidelberg.de/pages/student_work/seminar/ws0304/frank_lemke/praesentation.pdf)
 
-**Testumgebung:** Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da einmal ein P2 mit müden 400 MHz als Single-Core, um vor allem die Boot-Phasen zu testen. OK, derzeit benutze ich einen Laptop mit P3 mit 1 GHz und satten 256 MiB RAM. Versehentlich auch mal Tests auf meinem Quad-Core, wenn ich vergessen habe die Diskette nach dem Testen rauszunehmen. Aber da zeigt sich schon, dass auf der realen Maschine alles genauso läuft wie bisher in der VM.
+  
+**Testumgebung:**
+
+Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da einmal ein P2 mit müden 400 MHz als Single-Core, um vor allem die Boot-Phasen zu testen. OK, derzeit benutze ich einen Laptop mit P3 mit 1 GHz und satten 256 MiB RAM. Versehentlich auch mal Tests auf meinem Quad-Core, wenn ich vergessen habe die Diskette nach dem Testen rauszunehmen. Aber da zeigt sich schon, dass auf der realen Maschine alles genauso läuft wie bisher in der VM.
 
   
 
@@ -47,6 +56,8 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 ### Bootloader
 
+- Protected-Mode
+- Paging mit Physical-Address-Extension (PAE), max. 64 GiByte
 - Soll erste Möglichkeiten des Kernel-Debugging ermöglichen.
 - Einrichten des MKS und laden bedingter Treiber.
   - Kernel für BSP (Boot Strap Processor).
@@ -86,14 +97,15 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 **Fertig:**
 
 - Bootsector für ROFS, FDD-Version. (0.00.22.16)
-- Bootloader
-  - Entry16: 16-Bit-Einsprung
+- Bootloader (0.00.23.20)
+  - Entry16: 16-Bit-Einsprung (0.00.23.20)
+  - Entry32: 32-Bit-PM-Einsprung (0.00.23.20)
 
   
 **In Arbeit:**
 
 - Bootloader
-  - Entry32: 32-Bit-PM-Einsprung
+  - Paging mit PAE
 - Homepage für AiCOS
 
   
@@ -106,16 +118,16 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
   
 
-# Screenshot
+# Aktueller Screenshot
 
-![bootloader_001.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_001.gif)
+![bootloader_002.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_002.gif)
 
   
 
 # Böse Falle
 
 - Ständig kackte meine VM ab, als mein Bootloader ins den PM-Segment prang. Man kann sich echt todsuchen, wenn man Hexzahlen und Dezimalzahlen nicht unterscheiden kann. 20d != 20h
-- Und wieder einmal stellte meine VM ihren Dienst beim Sprung ins PM-Segment ein und wieder suchte ich mich blöd. War letztenendes auch logisch, wenn der Bootsektor nur ein Sektor (512 Bytes) des Bootloaders lädt, aber der Sprung in PM-Segment aber an Offset 0x0200 sich befinden.
+- Und wieder einmal stellte meine VM ihren Dienst beim Sprung ins PM-Segment ein und wieder suchte ich mich blöd. War letztenendes auch logisch, wenn der Bootsektor nur ein Sektor (512 Bytes) des Bootloaders lädt, aber der Sprung in PM-Segment aber an Offset 0x0200 sich befinden. **Böse Falle**
 
   
 
@@ -134,6 +146,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3789/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3789; parent 3787; 2009-01-01T19:15:23Z -->
+<!-- MediaWiki page 1766; revision 3796; parent 3789; 2009-01-02T01:49:42Z -->
