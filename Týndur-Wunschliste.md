@@ -18,13 +18,9 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ## Anwendungen
 
-- Texteditor
-- fdisk-äquivalent (Partitionsverwaltung)
 - FTP-Client
 - Hilfesystem
 - Setup (Installation & Konfiguration)
-
-  
 
 ## LostIO
 
@@ -34,6 +30,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 3802; parent 3801; 2009-01-02T13:39:33Z -->
+<!-- MediaWiki page 1513; revision 3803; parent 3802; 2009-01-02T14:33:40Z -->
