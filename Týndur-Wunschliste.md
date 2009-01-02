@@ -16,10 +16,6 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 ## Module
 
-- serial (ttyS\* / COM\*), schreiben/lesen von den Ports, Konfiguration, ggf. auch Handshaking hierher verlegen.
-
-  
-
 ## Anwendungen
 
 - Texteditor
@@ -38,6 +34,6 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3801/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 3767; parent 3765; 2009-01-01T16:30:42Z -->
+<!-- MediaWiki page 1513; revision 3801; parent 3767; 2009-01-02T13:37:34Z -->
