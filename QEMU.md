@@ -1,5 +1,20 @@
 # QEMU
 
+| Allgemeines |  |
+| ------------------------ | -------------------------------------------------------------- |
+| Name: | QEMU |
+| Entwickler: | Fabrice Bellard u. a. |
+| Akt. Version: | 0.9.1<br>(Stand 02.01.2009) |
+| Lizenz: | GPL |
+| Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
+| Virtualisiertes System |  |
+| Plattform: | x86, x86-64, PowerPC, Sparc32/64 |
+| SMP: | bis zu 255 Prozessoren |
+| Mechanismus: | dynamische Übersetzung, KVM (nur Linux), Kernelunterstützung |
+| Homepage |  |
+
+[http://bellard.org/qemu/](http://bellard.org/qemu/index.html)
+
 QEMU ist ein Emulator unter anderem für die Systeme [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), MacOS, FreeBSD, OpenBsd und NetBSD.
 
   
@@ -32,6 +47,6 @@ Auf einem x86 Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2871/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 2871; parent 2365; 2008-03-28T20:00:56Z -->
+<!-- MediaWiki page 1505; revision 3816; parent 2871; 2009-01-02T20:14:03Z -->
