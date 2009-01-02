@@ -1,6 +1,6 @@
 # Týndur/Wunschliste
 
-Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) eintragen.
+Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebiet) eintragen.
 
 ## Kernel
 
@@ -34,6 +34,6 @@ Hier bitte alle Wünsche für LOST (nach Möglichkeit sortiert nach Zielgebiet) 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3801/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 3801; parent 3767; 2009-01-02T13:37:34Z -->
+<!-- MediaWiki page 1513; revision 3802; parent 3801; 2009-01-02T13:39:33Z -->
