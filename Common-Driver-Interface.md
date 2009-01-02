@@ -13,10 +13,10 @@ Ein Link zur Dokumentation der Funktionsprototypen, Strukturen, Enumerationen, u
 
 ## Weblinks
 
-- [Aktuell-gehaltene Dokumentation der CDI-Header-Files von LOST](http://lost-os.ath.cx/cdi/)
+- [Aktuell-gehaltene Dokumentation der CDI-Header-Files von LOST](http://lpt.tyndur.org/cdi)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2947/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 2947; parent 2757; 2008-05-18T18:18:33Z -->
+<!-- MediaWiki page 1622; revision 3805; parent 2947; 2009-01-02T16:11:16Z -->
