@@ -1,9 +1,36 @@
 # VirtualBox
 
+| Allgemeines |  |
+| ------------------------ | ----------------------------------------------- |
+| Name: | VirtualBox |
+| Entwickler: | Innotek |
+| Akt. Version: | 2.1.0<br>(Stand 02.01.2009) |
+| Lizenz: | Proprietär, GPL 2 (2 Versionen) |
+| Betriebssystem(e): | Linux, Windows, OS X, Solaris |
+| Virtualisiertes System |  |
+| Plattform: | x86, x86-64 |
+| SMP: | bis zu 255 Prozessoren |
+| Mechanismus: | dynamische Übersetzung, Hardwareunterstützung |
+| Homepage |  |
+
+<http://www.virtualbox.org/>
+
 VirtualBox ist ein x86 Emulator der Firma innotek. Es gibt zwei Versionen der Software, wobei eine unter Open Source Lizenz steht.  
 Die Software kann unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), und Unix ([Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), Mac OS X, etc...) eingesetzt werden.  
   
 VirtualBox verfügt über eine [grafische Benutzeroberfläche](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"). Was die Software im Gegensatz zu anderen Emulatoren sehr viel benutzerfreudlicher macht.
+
+Besondere Features:
+
+- iSCSI für Blockgeräte
+- Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
+- Gastunsterstützung um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
+
+Virtualisierte Hardware:
+
+- Siehe QEMU (VirtualBox stammte anfangs von QEMU ab)
+- ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
+- I/O APIC
 
 ## Links
 
@@ -11,6 +38,6 @@ VirtualBox verfügt über eine [grafische Benutzeroberfläche](https://github.co
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2873/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 2873; parent 2872; 2008-03-28T20:04:52Z -->
+<!-- MediaWiki page 1553; revision 3817; parent 2873; 2009-01-02T20:58:09Z -->
