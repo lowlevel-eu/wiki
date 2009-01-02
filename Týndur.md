@@ -75,6 +75,6 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 3808; parent 3785; 2009-01-02T19:15:15Z -->
+<!-- MediaWiki page 1796; revision 3813; parent 3808; 2009-01-02T19:36:43Z -->
