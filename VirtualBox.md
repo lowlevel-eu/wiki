@@ -26,11 +26,28 @@ Besondere Features:
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
 - Gastunsterstützung um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
 
-Virtualisierte Hardware:
+Befehlssatzerweiterungen für Gäste:
 
-- Siehe QEMU (VirtualBox stammte anfangs von QEMU ab)
+- PAE/NX (falls vom Host unterstützt)
+
+Emulierte Hardware:
+
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
 - I/O APIC
+- Floppy
+- IDE Controller:
+  - PIIX3
+  - PIIX4
+- SATA AHCI Controller Intel ICH8M/ICH8M-E
+- AC'97 Audio (Intel)
+- Netzwerkkarten:
+  - PCnet FAST III
+  - PCnet-PCI II
+  - Intel PRO/1000 MT Desktop
+  - Intel PRO/1000 T Server
+- USB-Controller:
+  - eHCI (USB 2.0)
+- Serielle Schnittstellen (max. 2)
 
 ## Links
 
@@ -38,6 +55,6 @@ Virtualisierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 3817; parent 2873; 2009-01-02T20:58:09Z -->
+<!-- MediaWiki page 1553; revision 3822; parent 3817; 2009-01-03T13:31:17Z -->
