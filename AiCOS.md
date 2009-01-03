@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase 0 (0.00.31.40) |
+| Akt. Version: | Research Phase 0 (0.00.34.45) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -82,6 +82,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # History
 
+- 03.01.2009 Printf implementiert (0.00.34.45)
 - 03.01.2009 C++ Testdummy, um Einsprung zu testen; Test OK (0.00.31.40)
 - 02.01.2009 Paging mit PAE implementiert. (0.00.24.23)
 - 01.01.2009 Bootloader prüft die CPU, da mindestens ein 586er benötigt wird. (0.00.23.20)
@@ -98,25 +99,25 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Fertig:**
 
-- Bootsector für ROFS, FDD-Version. (0.00.31.40)
-- Bootloader (0.00.31.40)
+- Bootsector für ROFS, FDD-Version. (0.00.34.45)
+- Bootloader (0.00.34.45)
   - Entry16: 16-Bit-Einsprung in Assembler (0.00.23.20)
   - Entry32: 32-Bit-PM-Einsprung in Assembler (0.00.31.40)
-  - Entry: C++ Part (0.00.31.40)
+  - Entry: C++ Part (0.00.34.45)
+  - Routinen für Textausgabe, darunter auch mit printf() (0.00.34.45)
 
   
 **In Arbeit:**
 
 - Bootloader
   - Paging mit PAE (bisher nur 2 MiB gemappt, sollte erstmal für Bootloader-Spielereien reichen)
-  - Routinen für Textausgabe, darunter auch mit printf()
+  - COM-Treiber: für Kernel-Debug benötigt
 - Homepage für AiCOS
 
   
 **Geplant:**
 
 - Bootloader
-  - COM-Treiber: für Kernel-Debug benötigt
   - Kernel-Debug
 - Bootsektor für CD
 
@@ -142,9 +143,9 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # Aktueller Screenshot
 
-**Version: 0.00.31.40**
+**Version: 0.00.34.45**
 
-![bootloader_003.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_003.gif)
+![bootloader_004.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_004.gif)
 
   
 
@@ -170,6 +171,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3821; parent 3819; 2009-01-03T13:09:19Z -->
+<!-- MediaWiki page 1766; revision 3831; parent 3821; 2009-01-03T20:00:34Z -->
