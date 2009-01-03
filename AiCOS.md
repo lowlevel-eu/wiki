@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase (0.00.24.23) |
+| Akt. Version: | Research Phase 0 (0.00.31.40) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -82,6 +82,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # History
 
+- 03.01.2009 C++ Testdummy, um Einsprung zu testen; Test OK (0.00.31.40)
 - 02.01.2009 Paging mit PAE implementiert. (0.00.24.23)
 - 01.01.2009 Bootloader prüft die CPU, da mindestens ein 586er benötigt wird. (0.00.23.20)
 - 01.01.2009 Bug im Bootcode behoben; Bootloader gibt Meldung aus. (0.00.22.16)
@@ -97,16 +98,18 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Fertig:**
 
-- Bootsector für ROFS, FDD-Version. (0.00.22.16)
-- Bootloader (0.00.23.20)
-  - Entry16: 16-Bit-Einsprung (0.00.23.20)
-  - Entry32: 32-Bit-PM-Einsprung (0.00.23.20)
+- Bootsector für ROFS, FDD-Version. (0.00.31.40)
+- Bootloader (0.00.31.40)
+  - Entry16: 16-Bit-Einsprung in Assembler (0.00.23.20)
+  - Entry32: 32-Bit-PM-Einsprung in Assembler (0.00.31.40)
+  - Entry: C++ Part (0.00.31.40)
 
   
 **In Arbeit:**
 
 - Bootloader
   - Paging mit PAE (bisher nur 2 MiB gemappt, sollte erstmal für Bootloader-Spielereien reichen)
+  - Routinen für Textausgabe, darunter auch mit printf()
 - Homepage für AiCOS
 
   
@@ -119,9 +122,29 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
   
 
+# Roadmap
+
+**Research Phase 0 (Version 0.00)**
+
+- Single-CPU
+- Funtionierender Bootsektor für Floppy
+- Funktionierender Bootloader
+- Kernel-Debug-Interface für [Microsoft Windows-Debugger x86/x64](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
+
+  
+**Research Phase 1 (Version 0.01)**
+
+- Differenzierung des Kernelgrundsystem in Management-Kernel, CPU-Kernel & I/O-Kernel
+- Channel-System als IPC implementieren
+- Hello-World-Prozess
+
+  
+
 # Aktueller Screenshot
 
-![bootloader_002.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_002.gif)
+**Version: 0.00.31.40**
+
+![bootloader_003.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_003.gif)
 
   
 
@@ -147,6 +170,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3798; parent 3796; 2009-01-02T02:44:47Z -->
+<!-- MediaWiki page 1766; revision 3819; parent 3798; 2009-01-03T00:51:26Z -->
