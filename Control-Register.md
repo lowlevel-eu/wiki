@@ -39,12 +39,27 @@ Enthält noch einem Page-Fault die lineare Adresse, die den Fehler verursacht ha
 
 ## CR4
 
+| Bit | Funktion |
+| ----------- | ----------------------------------------------------------------------- |
+| Bit 0 | **VME** *Virtual 8086 Mode Extension* |
+| Bit 1 | **PVI** *Protected Mode Virtual Interrupt* |
+| Bit 2 | **TSD** *Time Stamp Disable* |
+| Bit 3 | **DE** *Debugging Extension* |
+| Bit 4 | **PSE** *Page Size Extension* |
+| Bit 5 | **PAE** *Physical Address Extension* |
+| Bit 6 | **MCE** *Machine Check Enable* |
+| Bit 7 | **PGE** *Page Global Enable* |
+| Bit 8 | **PCE** *Performance Monitoring Counter Enable* |
+| Bit 9 | **OSFXSR** *Operating System Support for FXSAVE and FXSTOR* |
+| Bit 10 | **OSXMMEXCPT** *Operating System Support for Unmasked SIMD Exception* |
+| Bit 11-31 | *Reserviert* |
+
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 2.5)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2490/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 2490; parent 2487; 2007-12-24T15:13:24Z -->
+<!-- MediaWiki page 1610; revision 3833; parent 2490; 2009-01-03T21:11:43Z -->
