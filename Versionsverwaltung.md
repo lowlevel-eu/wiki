@@ -7,7 +7,7 @@ Versionsverwaltungen machen das Leben einfacher. Nicht nur für Betriebssystemen
 Eine Versionsverwaltung erfüllt eine handvoll nützliche Aufgaben, die Entwicklern das Leben leichter machen.
 
 - Protokollierung der Änderung. Jede Änderung am Quelltext kann nachvollzogen werden, egal von wem, an was, oder wieso.
-- Wiederherstellung und Archivierung von Entwicklungsständen. So ist es möglich, bestimmte Versionen von Dateien oder ganzen Verzeichnisbäumen wiederherzustellen, oder auf anhieb einem Namen einen bestimmten Zustand zuzuordnen (siehe [Tagging](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung")).
+- Wiederherstellung und Archivierung von Entwicklungsständen. So ist es möglich, bestimmte Versionen von Dateien oder ganzen Verzeichnisbäumen wiederherzustellen, oder auf anhieb einem Namen einen bestimmten Zustand zuzuordnen (siehe [Tagging](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung#branching-und-tagging "Versionsverwaltung")).
 - Koordinieren von gemeinsamen Zugriffen. Gleichzeitige Änderungen von mehreren Entwicklern werden verhindert, oder erleichtert.
 - Koordinieren von Entwicklungszweigen, z.B. wenn eine alte Funktionalität komplett ersetzt werden soll, aber der Hauptzweig während dieser Änderung weiterhin ungestört funktionieren soll.
 
@@ -44,6 +44,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im OpenSource-Bere
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3826/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3827/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 3826; parent 0; 2009-01-03T18:48:53Z -->
+<!-- MediaWiki page 1801; revision 3827; parent 3826; 2009-01-03T18:53:42Z -->
