@@ -1,14 +1,14 @@
 # QEMU
 
 | Allgemeines |  |
-| ------------------------ | -------------------------------------------------------------- |
+| ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
 | Akt. Version: | 0.9.1<br>(Stand 02.01.2009) |
-| Lizenz: | GPL |
+| Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
-| Plattform: | x86, x86-64, PowerPC, Sparc32/64 |
+| Plattform: | x86, x86-64, ARM, CRIS, MIPS(64)(el), M68000, PowerPC(64), SH4, Sparc32/64 |
 | SMP: | bis zu 255 Prozessoren |
 | Mechanismus: | dynamische Übersetzung, KVM (nur Linux), Kernelunterstützung |
 | Homepage |  |
@@ -18,23 +18,41 @@
 QEMU ist ein Emulator unter anderem für die Systeme [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), MacOS, FreeBSD, OpenBsd und NetBSD.
 
   
-QEMU emuliert x86-, x86-64 bzw. AMD64-, PowerPC- und Sparc32/64-Hardware.
+QEMU emuliert eine Vielzahl von Architekturen.
 
   
-Auf einem x86 Prozessor werden neben dem Hauptprozessor folgende Komponenten emuliert:
 
-- CD-ROM/DVD-Laufwerk über ISO-Abbild oder reales Laufwerk
-- Diskettenlaufwerk
-- Grafikkarte (Cirrus CLGD 5446 PCI VGA-Karte oder Standard-VGA-Grafikkarte mit Bochs-VESA-BIOS-Extensions (Hardware Level, inklusive aller Nichtstandardmodi, über einen experimentellen Patch auch mit einer vereinfachten 3D-Beschleunigung per OpenGL)
-- Netzwerkkarte (NE2000-PCI-Netzwerkadapter) und ein DHCP-Server
-- Parallelele Schnittstelle
-- Systemlautsprecher
-- zwei PCI-ATA-Schnittstellen mit Unterstützung für maximal vier Festplatten-Images im eigenen Format oder im Format von VMware, VirtualPC, Bochs, Knoppix (cloop) und dd
+## Emulierte Hardware
+
+Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emuliert:
+
 - PCI und ISA-System (i440FX host PCI bridge und PIIX3 PCI to ISA bridge)
 - PS/2-Maus und -Tastatur
 - Serielle Schnittstelle
-- Soundkarte (Soundblaster 16, ES1370 PCI)
-- USB-Controller (Intel SB82371, UHCI)
+- Parallelele Schnittstelle
+- Massenspeicher:
+  - Zwei PCI-ATA-Schnittstellen mit Unterstützung für maximal vier Festplatten-Images
+  - CD-ROM/DVD-Laufwerk über ISO-Abbild oder reales Laufwerk
+  - Diskettenlaufwerk
+  - Unterstützte Dateiformate für Images: Raw, das qemu-eigene Format qcow/qcow2, die Formate von VMware, Parallels, VirtualPC, Bochs, Knoppix (cloop). Außerdem das Pseudoformat vvfat, das ein Verzeichnis auf dem Hostsystem als FAT-Image im Gast abbildet.
+- Grafikkarte
+  - Cirrus CLGD 5446 PCI VGA-Karte
+  - Standard-VGA-Grafikkarte mit Bochs-VESA-BIOS-Extensions (Hardware Level, inklusive aller Nichtstandardmodi, über einen experimentellen Patch auch mit einer vereinfachten 3D-Beschleunigung per OpenGL)
+- Netzwerkkarte und ein DHCP-Server
+  - NE2000-Netzwerkadapter sowohl für ISA als auch PCI
+  - Realtek 8139
+  - Intel eepro100 und e1000
+  - AMD PCnet
+  - virtio (Paravirtualisiertes Netzwerk)
+- Sound:
+  - Systemlautsprecher
+  - Soundblaster 16
+  - ES1370 PCI
+- USB:
+  - UHCI- und OHCI-Controller
+  - HID-Geräte: Tastatur, Maus und Grafiktablett
+  - USB-Massenspeicher
+  - Durchleitung von USB-Geräten des Hosts
 
 # Siehe Auch
 
@@ -47,6 +65,6 @@ Auf einem x86 Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 3816; parent 2871; 2009-01-02T20:14:03Z -->
+<!-- MediaWiki page 1505; revision 3820; parent 3816; 2009-01-03T12:24:23Z -->
