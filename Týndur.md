@@ -66,6 +66,8 @@ Das Release im Jahr 2008 (genauer: am 24.12.2008), und außerdem erste Version u
 
 Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetzt auf der Betriebssystemunabhängigen Schnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI").
 
+[Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screenshots "Týndur/Screenshots")
+
 ## Links
 
 - [Die Webseite von týndur](http://www.tyndur.org/)
@@ -75,6 +77,6 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 3813; parent 3808; 2009-01-02T19:36:43Z -->
+<!-- MediaWiki page 1796; revision 3836; parent 3813; 2009-01-04T12:46:30Z -->
