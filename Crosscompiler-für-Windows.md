@@ -45,14 +45,8 @@ Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. We
 
 Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libexec\gcc\i586-elf\4.2.0\cc1.exe nach i586-elf\bin zu kopieren.
 
-  
-
-## Ältere Crosscompiler
-
-Aus sentimentalen Gründen hab ich mal einen älteren GCC 4.1.1 mit Binutils 2.17 online gelassen. Den gibt es unter [\[2\]](http://jidder.de/lost/files/lostcc.rar). Dieser Crosscompiler hat keinen C++-Support, weil zu dessen Zeiten kein C++ unter LOST verwendet wurde. (Workaround: Einfach das Verzeichnis src/modules/cpp löschen.) Die Originalanleitung, wie man diesen Crosscompiler einrichtet, findet man unter [\[3\]](http://lowlevel.brainsware.org/wiki/index.php?title=Crosscompiler_f%C3%BCr_Windows&oldid=1957), der einzige Unterschied zu dieser Anleitung ist allerdings nur das Entpacken des RAR-Archivs. ;)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 3840; parent 3759; 2009-01-04T16:53:50Z -->
+<!-- MediaWiki page 1450; revision 3841; parent 3840; 2009-01-04T16:54:36Z -->
