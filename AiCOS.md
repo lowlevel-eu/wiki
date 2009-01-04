@@ -82,6 +82,8 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # History
 
+**Die letzten 10 Änderungen:**
+
 - 04.01.2009 Bug im Bootcode behoben; Kernel-Debug implementiert (0.00.35.47)
 - 03.01.2009 Printf implementiert (0.00.34.45)
 - 03.01.2009 C++ Testdummy, um Einsprung zu testen; Test OK (0.00.31.40)
@@ -90,9 +92,10 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 - 01.01.2009 Bug im Bootcode behoben; Bootloader gibt Meldung aus. (0.00.22.16)
 - 01.01.2009 Fehler beim Sprung in den PM behoben, FDD-Motor wird nun auch abgeschaltet. (0.00.21.6)
 - 31.12.2008 Bootsektor: Umadressierung, da Probleme mit dem PM. (0.00.20.5)
-- 15.15.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
+- 15.12.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
 - 07.12.2008 Bootsektor für Raw-Floppy fertig.
-- 06.12.2008 Bootsektor-Programm, das den Inhalt der Register der CPU beim Einsprung in den Bootcode anzeigt.
+
+**Komplette History:** <http://aicos.amazing-fx.de/history.txt>
 
   
 
@@ -175,6 +178,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3834/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3834; parent 3831; 2009-01-04T06:52:12Z -->
+<!-- MediaWiki page 1766; revision 3839; parent 3834; 2009-01-04T14:59:27Z -->
