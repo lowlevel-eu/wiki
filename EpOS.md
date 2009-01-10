@@ -7,7 +7,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 | Allgemeines |  |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | epOS |
-| Logo: Datei:Http://epOS.kilu.de/data/logo.png |  |
+| Logo: :http://epOS.kilu.de/data/logo.png |  |
 | Entwickler: | [Dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") (gern auch DesL) |
 | Akt. Version: | 0.01 |
 | OS-Eigenschaften |  |
@@ -47,12 +47,12 @@ Naja, ich sitze an v0.01, so viel History is da nit...
 
 ## Sonstiges
 
-Für Newsletter (Release&co) Mail an \<a href"[mailto:epOS@gmx.de](mailto:epOS@gmx.de)"\>epOS@gmx.de\</a\> Wer mit machen will, nur zu, Schick mir ne Mail. Ich weiss, ist Beides doch Rcht Unwahrscheinlich, aber egal :P
+Für Newsletter (Release&co) Mail an \<a href"[mailto:epOS@gmx.de](mailto:epOS@gmx.de)"\>epOS@gmx.de\</a\> Wer mit machen will, nur zu, Schick mir ne Mail. Ich weiss, ist Beides doch recht Unwahrscheinlich, aber egal :P
 
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 3857; parent 3856; 2009-01-10T13:27:55Z -->
+<!-- MediaWiki page 1771; revision 3858; parent 3857; 2009-01-10T13:30:44Z -->
