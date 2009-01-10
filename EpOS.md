@@ -1,6 +1,6 @@
 # EpOS
 
-Hi, [ich dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") ^\_^  
+Hi, ich bin [dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") ^\_^  
 und dass hier ist eben epOS.  
 Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating **S**ystem!  
 
@@ -16,7 +16,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 | Sprache: | C/C++ |
 | Homepage |  |
 
-\[[\[1\]](http://epOS.kilu.de%7CepOS.kilu.de)\]
+\[[\| epOS.kilu.de](http://epOS.kilu.de)\]
 
 ## Features
 
@@ -53,6 +53,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 3662; parent 3661; 2008-12-10T08:14:23Z -->
+<!-- MediaWiki page 1771; revision 3856; parent 3662; 2009-01-10T13:25:15Z -->
