@@ -7,7 +7,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 | Allgemeines |  |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | epOS |
-| Logo: ![logo.png](http://epOS.kilu.de/data/logo.png) |  |
+| Logo: Datei:Http://epOS.kilu.de/data/logo.png |  |
 | Entwickler: | [Dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") (gern auch DesL) |
 | Akt. Version: | 0.01 |
 | OS-Eigenschaften |  |
@@ -53,6 +53,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 3856; parent 3662; 2009-01-10T13:25:15Z -->
+<!-- MediaWiki page 1771; revision 3857; parent 3856; 2009-01-10T13:27:55Z -->
