@@ -22,6 +22,8 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
 AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln) in die Computertechnik bringen, unter anderem ein eigenes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), eigenes Netzwerkprotokoll und eine eigene Programmiersprache ... wenn es klappt.
 
+AiCOS Wurzel liegen weder in der Linux/Unix-Welt, weder in der Windows-Welt, sondern in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity").
+
   
 
 # Entwicklungsumgebung
@@ -151,7 +153,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Version: 0.00.37.52**
 
-![bootloader_006.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_006.gif)
+![bootloader_007.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_007.gif)
 
 [Screenshot mit Windows-Debug](http://aicos.amazing-fx.de/images/screenshots/Dev_20090104_0730.png)
 
@@ -179,6 +181,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3860/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3860; parent 3839; 2009-01-11T00:53:34Z -->
+<!-- MediaWiki page 1766; revision 3861; parent 3860; 2009-01-11T10:34:16Z -->
