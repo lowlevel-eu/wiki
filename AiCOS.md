@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase 0 (0.00.35.47) |
+| Akt. Version: | Research Phase 0 (0.00.37.52) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -84,6 +84,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Die letzten 10 Änderungen:**
 
+- 11.01.2009 SMAP hinzugefügt.
 - 04.01.2009 Bug im Bootcode behoben; Kernel-Debug implementiert (0.00.35.47)
 - 03.01.2009 Printf implementiert (0.00.34.45)
 - 03.01.2009 C++ Testdummy, um Einsprung zu testen; Test OK (0.00.31.40)
@@ -93,7 +94,6 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 - 01.01.2009 Fehler beim Sprung in den PM behoben, FDD-Motor wird nun auch abgeschaltet. (0.00.21.6)
 - 31.12.2008 Bootsektor: Umadressierung, da Probleme mit dem PM. (0.00.20.5)
 - 15.12.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
-- 07.12.2008 Bootsektor für Raw-Floppy fertig.
 
 **Komplette History:** <http://aicos.amazing-fx.de/history.txt>
 
@@ -110,6 +110,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
   - Entry: C++ Part (0.00.35.47)
   - Routinen für Textausgabe, darunter auch mit printf() (0.00.34.45)
   - COM-Treiber: für Kernel-Debug benötigt (0.00.35.47)
+  - SMAP (System Memory Map) (0.00.37.52)
   - Kernel-Debug (0.00.35.47)
 
   
@@ -133,7 +134,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 **Research Phase 0 (Version 0.00)**
 
 - Single-CPU
-- Funtionierender Bootsektor für Floppy
+- Funtionierender Bootsektor für Floppy und CD
 - Funktionierender Bootloader
 - Kernel-Debug-Interface für [Microsoft Windows-Debugger x86/x64](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
 
@@ -148,9 +149,9 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # Aktueller Screenshot
 
-**Version: 0.00.35.47**
+**Version: 0.00.37.52**
 
-![bootloader_005.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_005.gif)
+![bootloader_006.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_006.gif)
 
 [Screenshot mit Windows-Debug](http://aicos.amazing-fx.de/images/screenshots/Dev_20090104_0730.png)
 
@@ -178,6 +179,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3860/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3839; parent 3834; 2009-01-04T14:59:27Z -->
+<!-- MediaWiki page 1766; revision 3860; parent 3839; 2009-01-11T00:53:34Z -->
