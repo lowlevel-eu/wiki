@@ -25,8 +25,6 @@ Die Kernfunktionalität umfasst die folgenden Punkte:
 - PCI
 - Verkettete Listen
 
-  
-
 ### Net
 
 Ein Neztwerktreiber muss nur eine Funktion bereitstellen um Pakete über eine Karte zu versenden:
@@ -77,6 +75,6 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 3863; parent 3862; 2009-01-12T11:25:11Z -->
+<!-- MediaWiki page 1622; revision 3864; parent 3863; 2009-01-12T11:28:03Z -->
