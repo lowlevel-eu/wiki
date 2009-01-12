@@ -36,8 +36,8 @@ Die Veränderungen bei den verschiedenen Versionen:
 
 Folgende Versionen sind geplant:
 
-    Januar 2009    : Xantorix 0.1.3
-    September 2009 : Xantorix 0.2.0
+    Februar 2009 : Xantorix 0.1.3
+    August 2009  : Xantorix 0.2.0
 
 Derzeit stehen noch keine offiziellen Features für die zukünftigen Versionen fest.
 
@@ -47,6 +47,6 @@ Derzeit stehen noch keine offiziellen Features für die zukünftigen Versionen f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3867/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 3746; parent 3704; 2008-12-26T12:51:30Z -->
+<!-- MediaWiki page 1453; revision 3867; parent 3746; 2009-01-12T15:05:47Z -->
