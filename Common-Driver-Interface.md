@@ -15,6 +15,18 @@ CDI definiert in seinen Modulen Schnittstellen für unterschiedliche Geräteklas
 
 Ein Betriebssystem muss dabei nicht zwingend die Schnittstellen aller Module implementieren. Alle Treiber benutzen Funktionen aus *core*, aber es ist ohne weiteres möglich, z.B. neben *core* nur die Schnittstelle für Netzwerktreiber zu implementieren.
 
+### Core
+
+Die Kernfunktionalität umfasst die folgenden Punkte:
+
+- Verwaltung der Treiber und Geräte
+- Zugriff auf I/O-Ports
+- Zugriff auf Physischen Speicher
+- PCI
+- Verkettete Listen
+
+  
+
 ### Net
 
 Ein Neztwerktreiber muss nur eine Funktion bereitstellen um Pakete über eine Karte zu versenden:
@@ -65,6 +77,6 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3862/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 3862; parent 3806; 2009-01-12T11:16:10Z -->
+<!-- MediaWiki page 1622; revision 3863; parent 3862; 2009-01-12T11:25:11Z -->
