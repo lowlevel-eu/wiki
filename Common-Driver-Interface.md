@@ -71,10 +71,11 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 
 ## Weblinks
 
-- [Aktuell-gehaltene Dokumentation der CDI-Header-Files von tyndur](http://lpt.tyndur.org/cdi)
+- [Aktuell-gehaltene Dokumentation der CDI-Header-Files von týndur](http://lpt.tyndur.org/cdi)
+- [CDI-Treiber von týndur](http://git.tyndur.org/?p=tyndur.git;a=tree;f=src/modules/cdi)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 3864; parent 3863; 2009-01-12T11:28:03Z -->
+<!-- MediaWiki page 1622; revision 3865; parent 3864; 2009-01-12T11:30:29Z -->
