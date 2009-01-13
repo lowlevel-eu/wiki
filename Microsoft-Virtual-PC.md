@@ -9,7 +9,7 @@
 | Betriebssystem(e): | Microsoft Windows,<br>Apple Mac OS X |
 | Virtualisiertes System |  |
 | Plattform: | x86, x86-64 |
-| SMP: | n/a |
+| SMP: | Nicht vorhanden |
 | Mechanismus: | virtualisiert bzw. emuliert |
 | Homepage |  |
 
@@ -21,26 +21,66 @@
 
 # Emulierte Hardware
 
-Die derzeitige Version unterstützt auch die Visualisierung von Hardware.
+### Windows 7
+
+**VPC**
+
+- Andere Geräte
+  - Audiocontroller für Multimedia
+- Anschlüsse (COM & LPT)
+  - Druckeranschluss (LPT1)
+  - Kommunikationsanschluss (COM1)
+  - Kommunikationsanschluss (COM2)
+- Computer
+  - ACPI-PI (Advanced Configuration and Power Interface)
+- Diskettenlaufwerkcontroller
+  - Standard-Diskettenlaufwerkcontroller
+- Diskettenlaufwerk
+  - Diskettenlaufwerk
+- DVD/CD-ROM-Laufwerke
+  - MS C/DVD-ROM ATA Device
+- Grafikkarte
+  - Standard-VGA-Grafikkarte
+- IDE ATA/ATAPI-Controller
+  - ATA Channel 0
+  - ATA Channel 1
+  - Intel(R) 82371AB/EB PCI-Bus-Master-IDE-Controller
+- Laufwerke
+  - Virtual HD ATA Device
+- Mäuse und andere Zeigergeräte
+  - Microsoft PS/2-Maus
+- Monitore
+  - Nicht-PnP-Monitor (Standard)
+- Netzwerkadapter
+  - Intel 21140-basierter PCI Fast-Ethernet-Adapter (emuliert)
+- Systemgeräte
+  - ACPI-Schalter
+  - DMA-Controller
+  - Enumerator-Treiber für Microsoft Virtual Drive
+  - Intel 82371AB/EB PCI-zu-ISA-Brücke (ISA-Modus)
+  - Intel 82443BX Pentium(R) II Prozessor-zu-PCI-Brücke
+  - Microsoft ACPI-konformes System
+  - Microsoft-Systemverwaltungs-BIOS-Treiber
+  - Numerischer Coprozessor
+  - PCI-Bus
+  - PnP-Softwaregeräte-Enumerator
+  - Programmierbarer Interruptcontroller
+  - System CMOS/Echtzeituhr
+  - Systemlautsprecher
+  - Systemzeitgeber
+  - Terminal Server Device Redirector Bus
+  - UMBus-Enumerator
+  - UMBus.Stamm-Bus-Enumerator
+  - Zusammengesetzter Bus-Enumerator
+- Tastaturen
+  - Standardtastatur (PS/2)
 
   
-**Emuliert wird vor allem:**
-
-- x86-Plattform
-- Bis zu 3 Virtuelle Festplatten, Änderungen können rückgangig gemacht werden
-- CD/DVD (Wahl zwischen Primären und sekundären Controller)
-- Floppy
-- COM1, COM2 (physikalisch Anschluss, Pipe)
-- LPT1 (nur physikalischer Anschluss
-- Netzwerk (Kann direkt oder NAT eingekoppelt werden)
-- Sound
-
-  
-*Genauere Details über die emulierte Hardware folgen in kürze, da diese erst noch ermittelt werden müssen.*
+*Dies kann jedoch von anderen Gast-Systemen abweichen!*
 
   
 
-# Siehe auch
+# Andere Emulations- / Virtualisierungs-Software
 
 - [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")
 - MyEmu
@@ -58,6 +98,6 @@ Die derzeitige Version unterstützt auch die Visualisierung von Hardware.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3869/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
 
-<!-- MediaWiki page 1799; revision 3823; parent 0; 2009-01-03T13:53:54Z -->
+<!-- MediaWiki page 1799; revision 3869; parent 3823; 2009-01-13T13:14:19Z -->
