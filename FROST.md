@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | darkinsanity aka TheThing |
 | Akt. Version: | 0.1.5a |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | TheThing |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
@@ -22,6 +22,6 @@ FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben wir
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3853/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3870/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 3853; parent 3852; 2009-01-08T17:03:06Z -->
+<!-- MediaWiki page 1754; revision 3870; parent 3853; 2009-01-14T11:27:04Z -->
