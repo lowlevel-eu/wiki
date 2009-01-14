@@ -108,11 +108,23 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # Statistik
 
-- **Gesamtzeilen:** 5211  
+**Die folgende Statistik zählte folgende Datei-Typen:**
+
+- Build-System-Dateien *(.cmd, .vbs)*
+- MSBuild-Projekt-Dateien *(.proj, .targets)*
+- Assembler-Dateien *(.asm, .inc)*
+- C/C++ Dateien *(.cpp, .h)*
+
+  
+
+- **Gesamtzeilen:** 10022  
     
-- **Codezeilen:** 2847 *(55%)*
-- **Leerzeilen:** 1575 *(30%)*
-- **Kommentar:** 789 *(15%)*
+- **Codezeilen:** 5504 *(55%)*
+- **Leerzeilen:** 1985 *(20%)*
+- **Kommentar:** 2533 *(25%)*
+
+  
+Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andreas-berl.de/linesofcodewichtel/)**
 
   
 
@@ -201,6 +213,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3871/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3872/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3871; parent 3861; 2009-01-14T12:50:43Z -->
+<!-- MediaWiki page 1766; revision 3872; parent 3871; 2009-01-14T14:37:21Z -->
