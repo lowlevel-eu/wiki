@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase 0 (0.00.37.52) |
+| Akt. Version: | Research Phase 0 (0.00.38.57) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch x64) |
@@ -86,6 +86,12 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Die letzten 10 Änderungen:**
 
+- 14.01.2009: Version 0.00.38.57
+  - Grundfunktionen des Memory-Management
+  - Suchen und auslesen des PCI-BIOS.
+  - Suchen und auslesen des PnP-BIOS.
+  - Suchen und auslesen von ACPI.
+  - Problematische unerklärbarer Bug im Bootsektor-Code (ROFS) behoben.
 - 11.01.2009 SMAP hinzugefügt.
 - 04.01.2009 Bug im Bootcode behoben; Kernel-Debug implementiert (0.00.35.47)
 - 03.01.2009 Printf implementiert (0.00.34.45)
@@ -95,9 +101,18 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 - 01.01.2009 Bug im Bootcode behoben; Bootloader gibt Meldung aus. (0.00.22.16)
 - 01.01.2009 Fehler beim Sprung in den PM behoben, FDD-Motor wird nun auch abgeschaltet. (0.00.21.6)
 - 31.12.2008 Bootsektor: Umadressierung, da Probleme mit dem PM. (0.00.20.5)
-- 15.12.2008 Bootsektor für ROFS ((simple) Read-Only-File-System) FDD-Version fertig. (0.00.11)
 
 **Komplette History:** <http://aicos.amazing-fx.de/history.txt>
+
+  
+
+# Statistik
+
+- **Gesamtzeilen:** 5211  
+    
+- **Codezeilen:** 2847 *(55%)*
+- **Leerzeilen:** 1575 *(30%)*
+- **Kommentar:** 789 *(15%)*
 
   
 
@@ -105,28 +120,33 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Fertig:**
 
-- Bootsector für ROFS, FDD-Version. (0.00.35.47)
-- Bootloader (0.00.35.47)
-  - Entry16: 16-Bit-Einsprung in Assembler (0.00.23.20)
-  - Entry32: 32-Bit-PM-Einsprung in Assembler (0.00.31.40)
-  - Entry: C++ Part (0.00.35.47)
-  - Routinen für Textausgabe, darunter auch mit printf() (0.00.34.45)
-  - COM-Treiber: für Kernel-Debug benötigt (0.00.35.47)
-  - SMAP (System Memory Map) (0.00.37.52)
-  - Kernel-Debug (0.00.35.47)
+- Bootsector für ROFS, FDD-Version.
+- Bootloader
+  - Entry16: 16-Bit-Einsprung in Assembler
+  - Entry32: 32-Bit-PM-Einsprung in Assembler
+  - Entry: C++ Part
+  - Routinen für Textausgabe, darunter auch mit printf()
+  - COM-Treiber: für Kernel-Debug benötigt
+  - Kernel-Debug
+  - SMAP (System Memory Map)
 
   
 **In Arbeit:**
 
 - Bootloader
-  - Paging mit PAE (bisher nur 2 MiB gemappt, sollte erstmal für Bootloader-Spielereien reichen)
-- Homepage für AiCOS
+  - Paging mit PAE (bisher nur 2 MiB gemappt, sollte erstmal für Bootloader-Spielereien reichen).
+  - Memory Management.
+  - PCI Suuport.
+  - PnP Support.
+  - ACPI Support.
+  - ACPI (Um Anzahl der Cores zu ermitteln).
+- Homepage für AiCOS.
 
   
 **Geplant:**
 
 - Bootloader
-  - Memory Management
+  - System-Shell (Kernel-Ersatz, dient zum Anzeigen wichtiger System-Informationen und wird als CLI \[Command Line Interface\] aufgesetzt.
 - Bootsektor für CD
 
   
@@ -151,9 +171,9 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 # Aktueller Screenshot
 
-**Version: 0.00.37.52**
+**Version: 0.00.38.57**
 
-![bootloader_007.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_007.gif)
+![bootloader_008.gif](http://aicos.amazing-fx.de/images/screenshots/bootloader_008.gif)
 
 [Screenshot mit Windows-Debug](http://aicos.amazing-fx.de/images/screenshots/Dev_20090104_0730.png)
 
@@ -166,7 +186,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
   
 
-# Meine OpenSource-Ecke
+# Meine SourceCode-Ecke
 
 - **Bootsektor-Programmierung**
   - [ShowReg_32.asm](http://aicos.amazing-fx.de/opensource/ShowReg_32.asm) :: Zeigt den Inhalt der CPU-Register beim Einprung in den Bootcode. [Screenshot hier!](http://aicos.amazing-fx.de/images/screenshots/ShowReg_32.asm.gif)
@@ -181,6 +201,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3871/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3861; parent 3860; 2009-01-11T10:34:16Z -->
+<!-- MediaWiki page 1766; revision 3871; parent 3861; 2009-01-14T12:50:43Z -->
