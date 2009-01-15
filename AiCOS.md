@@ -165,15 +165,17 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
 
 # Roadmap
 
-**Research Phase 0 (Version 0.00)**
+**Ziele für Sprung in Research Phase 1 (Version 0.01)**
 
 - Single-CPU
-- Funtionierender Bootsektor für Floppy und CD
-- Funktionierender Bootloader
-- Kernel-Debug-Interface für [Microsoft Windows-Debugger x86/x64](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
+- Funtionierender Bootsektor für Floppy (ROFS) und CD (ISO9660) - (Einheitlicher Code, bis auf die unterschiedliche Sektorgröße).
+- Funktionierender Bootloader, der System-Vorab-Checks durchführt, bevor gewissen Funktionen wie Protected Mode oder Paging benutzt werden.
+- Ausführliche Comments in Bootsektoren und Bootloader.
+- AiCOS-Source-Tree, Hardwarebedingter Code wird von System-Code getrennt, damit soll später eine bessere Portierbarkeit erreicht werden, wodurch nur der Hardwarebedingte Code (überwiegend Assembler) ausgetauscht werden muss.
+- AiCOS-Startup-Dummy.
 
   
-**Research Phase 1 (Version 0.01)**
+**Ziele für Sprung in Research Phase 2 (Version 0.02)**
 
 - Differenzierung des Kernelgrundsystem in Management-Kernel, CPU-Kernel & I/O-Kernel
 - Channel-System als IPC implementieren
@@ -213,6 +215,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3872/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3873/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3872; parent 3871; 2009-01-14T14:37:21Z -->
+<!-- MediaWiki page 1766; revision 3873; parent 3872; 2009-01-15T16:11:58Z -->
