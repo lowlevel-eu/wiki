@@ -28,6 +28,12 @@ In MS-DOS war kein BPB vorhanden. Stattdessen gab es zwei Typen von FAT:
 
 Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verbreitung von MS-DOS 1.0 ist sehr gering. Deswegen wird nicht empfohlen, auf diese MS-DOS Version acht zu nehmen) Ursprünglich waren im BPB weniger als 65.536 Sektoren, womit insgesamt 32 MB bei 512-Byte Sektoren benutzt werden konnten. Ab Windows 95 mit den OEM Service Pack 2 wurde FAT32 verwendet. Während FAT16 nur 2 GB adressieren konnte, galt dies für FAT32 nicht.
 
+| Offset | Name | Boot Sector oder BPB? | Funktion | Größe |
+| -------- | --------- | ----------------------- | ------------------------------------------------------- | ------- |
+| 0 | jmpBoot | Boot Sector | Enthält Instruktion zum Überspringen des Bootsektors. | 2 |
+
+(*Wird noch erweitert*)
+
 ## Siehe auch
 
 - FAT12
@@ -38,6 +44,6 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3882/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3883/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 3882; parent 3881; 2009-01-16T18:36:07Z -->
+<!-- MediaWiki page 1643; revision 3883; parent 3882; 2009-01-16T18:44:13Z -->
