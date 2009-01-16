@@ -13,11 +13,18 @@ Der einzige Unterschied zwischen diesen Dateisystemen ist die aufnehmbare Größ
 FAT wird in 4 Bereiche unterteilt:
 
 - Reserved Region
-- \`FAT Region
+- FAT Region
 - Root Directory Region (Exirstiert nicht unter FAT32)
 - File and Directory Data Region
 
-  
+### Reserved Region
+
+#### Boot Sector und der BIOS Parameter Block(BPB)
+
+In MS-DOS war kein BPB vorhanden. Stattdessen gab es zwei Typen von FAT:
+
+- Single-Sided: Dieser Typ war für einseitige Disketten da
+- Double-Sided: Dieser Typ war dagegen für doppelseitige Disketten da.
 
 ## siehe auch
 
@@ -29,6 +36,6 @@ FAT wird in 4 Bereiche unterteilt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3879/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3880/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 3879; parent 3877; 2009-01-16T18:15:55Z -->
+<!-- MediaWiki page 1643; revision 3880; parent 3879; 2009-01-16T18:24:30Z -->
