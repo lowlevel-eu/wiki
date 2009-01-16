@@ -44,12 +44,12 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 ## Links
 
 - [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
-- [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") - OpenSource Windows Clone
-- [WindowsNT-API für Treiber und Subsystems](http://msdn.microsoft.com/en-us/library/ms795146.aspx)
+- [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") - OpenSource Windowsklon
+- [Windows NT-API für Treiber und Subsystems](http://msdn.microsoft.com/en-us/library/ms795146.aspx)
 - [Undocumented Windows 2000 Secrets](http://www.rawol.com/?topic=77)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3875/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3440; parent 3439; 2008-10-30T17:40:43Z -->
+<!-- MediaWiki page 1558; revision 3875; parent 3440; 2009-01-16T16:31:28Z -->
