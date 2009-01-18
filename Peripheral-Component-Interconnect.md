@@ -86,25 +86,26 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 | Class | Beschreibung |
 | ----------- | ------------------------------------------------------------------------------------------------ |
-| 0x00 | [Alle Geräte die gebaut wurden bevor Classcodes eingeführt wurden](#subclasses---pre-20) |
-| 0x01 | [Massenspeicher](#subclasses---massenspeicher) |
-| 0x02 | [Netzwerk-Controller](#subclasses---netzwerk-controller) |
-| 0x03 | [Bildschirm-Controller](#subclasses---bildschirm-controller) |
-| 0x04 | [Multimedia-Geräte](#subclasses---multimedia-ger%C3%A4te) |
-| 0x05 | [Speicher-Controller](#subclasses---speicher-controller) |
-| 0x06 | [Bridge-Geräte](#subclasses---bridge-ger%C3%A4te) |
-| 0x07 | [Controller zur einfachen Kommunikation](#subclasses---controller-zur-einfachen-kommunikation) |
-| 0x08 | [System-Peripherie](#subclasses---system-peripherie) |
-| 0x09 | [Input-Geräte](#subclasses---input-ger%C3%A4te) |
-| 0x0A | [Docking-Stationen](#subclasses---docking-stationen) |
+| 0x00 | [Alle Geräte die gebaut wurden bevor Classcodes eingeführt wurden](#class-0x00---pre-20) |
+| 0x01 | [Massenspeicher](#class-0x01---massenspeicher) |
+| 0x02 | [Netzwerk-Controller](#class-0x02---netzwerk-controller) |
+| 0x03 | [Bildschirm-Controller](#class-0x03---bildschirm-controller) |
+| 0x04 | [Multimedia-Geräte](#class-0x04---multimedia-ger%C3%A4te) |
+| 0x05 | [Speicher-Controller](#class-0x05---speicher-controller) |
+| 0x06 | [Bridge-Geräte](#class-0x06---bridge-ger%C3%A4te) |
+| 0x07 | [Controller zur einfachen Kommunikation](#class-0x07---controller-zur-einfachen-kommunikation) |
+| 0x08 | [System-Peripherie](#class-0x08---system-peripherie) |
+| 0x09 | [Input-Geräte](#class-0x09---input-ger%C3%A4te) |
+| 0x0A | [Docking-Stationen](#class-0x0a---docking-stationen) |
 | 0x0B | [Prozessoren](#) |
-| 0x0C | [Seriell-Bus-Controller](#subclasses---seriell-bus-controller) |
-| 0x0D-0xFE | Reserviert |
+| 0x0C | [Seriell-Bus-Controller](#class-0x0c---seriell-bus-controller) |
+| 0x0D | [Wireless-Controller](#class-0x0d---wireless-controller) |
+| 0x0E-0xFE | *Reserviert* |
 | 0xFF | Sonstige |
 
   
 
-### Subclasses - Pre 2.0
+### Class 0x00 - Pre 2.0
 
 | Subclass | Beschreibung |
 | ---------- | ----------------------- |
@@ -113,20 +114,21 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Massenspeicher
+### Class 0x01 - Massenspeicher
 
 | Subclass | Beschreibung |
-| ---------- | ------------------------ |
+| ---------- | -------------------------- |
 | 0x00 | SCSI |
 | 0x01 | IDE |
 | 0x02 | Floppy |
 | 0x03 | IPI |
 | 0x04 | RAID |
+| 0x05 | ATA Controller (mit DMA) |
 | 0x80 | Anderer Massenspeicher |
 
   
 
-### Subclasses - Netzwerk-Controller
+### Class 0x02 - Netzwerk-Controller
 
 | Subclass | Beschreibung |
 | ---------- | ----------------------------- |
@@ -138,7 +140,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Bildschirm-Controller
+### Class 0x03 - Bildschirm-Controller
 
 | Subclass | Beschreibung |
 | ---------- | ------------------------------- |
@@ -148,7 +150,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Multimedia-Geräte
+### Class 0x04 - Multimedia-Geräte
 
 | Subclass | Beschreibung |
 | ---------- | -------------------------- |
@@ -158,7 +160,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Speicher-Controller
+### Class 0x05 - Speicher-Controller
 
 | Subclass | Beschreibung |
 | ---------- | ------------------ |
@@ -168,10 +170,10 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Bridge-Geräte
+### Class 0x06 - Bridge-Geräte
 
 | Subclass | Beschreibung |
-| ---------- | ------------------------- |
+| ---------- | --------------------------------- |
 | 0x00 | Host/PCI-Bridge |
 | 0x01 | PCI/ISA-Bridge |
 | 0x02 | PCI/EISA-Bridge |
@@ -180,21 +182,25 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x05 | PCI/PCMCIA-Bridge |
 | 0x06 | PCI/NuBus-Bridge |
 | 0x07 | PCI/CardBus-Bridge |
+| 0x09 | Semitransparente PCI/PCI-Bridge |
+| 0x0A | InfiniBand/PCI-Brige |
 | 0x80 | Anderer Bridge-Typ |
 
   
 
-### Subclasses - Controller zur einfachen Kommunikation
+### Class 0x07 - Controller zur einfachen Kommunikation
 
 | Subclass | Beschreibung |
-| ---------- | ------------------------ |
+| ---------- | ------------------------------- |
 | 0x00 | Serielle Schnittstelle |
 | 0x01 | Parallelport |
+| 0x04 | GPIB (IEEE488.1/2) Controller |
+| 0x05 | SmartCard |
 | 0x80 | Andere |
 
   
 
-### Subclasses - System-Peripherie
+### Class 0x08 - System-Peripherie
 
 | Subclass | Beschreibung |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -206,7 +212,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Input-Geräte
+### Class 0x09 - Input-Geräte
 
 | Subclass | Beschreibung |
 | ---------- | --------------------- |
@@ -217,7 +223,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Docking-Stationen
+### Class 0x0A - Docking-Stationen
 
 | Subclass | Beschreibung |
 | ---------- | ------------------------- |
@@ -226,7 +232,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Processors
+### Class 0x0B - Processors
 
 | Subclass | Beschreibung |
 | ---------- | -------------- |
@@ -239,7 +245,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Subclasses - Seriell-Bus-Controller
+### Class 0x0C - Seriell-Bus-Controller
 
 | Subclass | Beschreibung |
 | ---------- | --------------------------------------------------------------------------------------------------- |
@@ -250,12 +256,21 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
+### Class 0x0D - Wireless-Controller
+
+| Subclass | Beschreibung |
+| ---------- | -------------- |
+| 0x11 | Bluetooth |
+| 0x12 | Broadband |
+
+  
+
 ## Weblinks
 
 - [Linux PCI ID Repositorium](http://pci-ids.ucw.cz/) - Enthält viele VendorIDs und die dazugehörigen DeviceIDs
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3788/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3887/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3788; parent 3126; 2009-01-01T19:13:52Z -->
+<!-- MediaWiki page 1626; revision 3887; parent 3788; 2009-01-18T13:45:58Z -->
