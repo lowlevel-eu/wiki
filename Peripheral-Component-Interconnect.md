@@ -55,8 +55,8 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------------------- | ------------------- | -------------------------- | ---------------------- |
-| 0x10 | Base address |  |  |  |
-| 0x14 | Base address |  |  |  |
+| 0x10 | Base address 0 |  |  |  |
+| 0x14 | Base address 1 |  |  |  |
 | 0x18 | Secondary latency timer | Subordinate bus № | Secondary bus № | Primary bus № |
 | 0x1C | Secondary Status |  | I/O Limit | I/O base |
 | 0x20 | Memory limit |  | Memory base |  |
@@ -302,6 +302,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3904; parent 3903; 2009-01-18T18:48:11Z -->
+<!-- MediaWiki page 1626; revision 3905; parent 3904; 2009-01-18T18:58:14Z -->
