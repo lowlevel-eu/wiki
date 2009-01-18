@@ -25,7 +25,7 @@ Jedes PCI-Gerät besitzt ein Konfigurations-Register, welches 256 Byte groß ist
 
 Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 
-- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Haput*-Klasse. Die mittleren 8 Bit stehen für die Subclass und die unter 8 Bit für das *Programming Interface*.
+- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Base Class*. Die mittleren 8 Bit stehen für die *Subclass* und die unter 8 Bit für das *Programming Interface*.
 - *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
 
 | Header Type | Kurze Beschreibung |
@@ -33,8 +33,6 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 | 0x00 | [Standard](#header-type-0x00) |
 | 0x01 | [PCI/PCI-Bridge](#header-type-0x01) |
 | 0x02 | CardBus-Bridge |
-
-  
 
 #### Header Type 0x00
 
@@ -52,8 +50,6 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 | 0x34 | Reserviert |  |  |  |
 | 0x38 | Reserviert |  |  |  |
 | 0x3C | Max Latency | Min Grant | Interrupt Pin | Interrupt Line |
-
-  
 
 #### Header Type 0x01
 
@@ -306,6 +302,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3903/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3900; parent 3899; 2009-01-18T18:09:55Z -->
+<!-- MediaWiki page 1626; revision 3903; parent 3900; 2009-01-18T18:20:54Z -->
