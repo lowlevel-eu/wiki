@@ -55,6 +55,23 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 
   
 
+#### Header Type 0x01
+
+| Register | 31-24 | 23-16 | 15-8 | 7-0 |
+| ---------- | ---------------------------------- | ------------------- | -------------------------- | ---------------------- |
+| 0x10 | Reserviert |  |  |  |
+| 0x14 | Reserviert |  |  |  |
+| 0x18 | Secondary latency timer | Subordinate bus № | Secondary bus № | Primary bus № |
+| 0x1C | Secondary Status |  | I/O Limit | I/O base |
+| 0x20 | Memory limit |  | Memory base |  |
+| 0x24 | Prefetchable memory limit |  | Prefetchable memory base |  |
+| 0x28 | Prefetchable base upper 32 bits |  |  |  |
+| 0x2C | Prefetchable limit upper 32 bits |  |  |  |
+| 0x30 | I/O limit upper 16 bits |  | I/O base upper 16 bits |  |
+| 0x34 | Reserviert |  |  | Capabilities pointer |
+| 0x38 | Reserviert |  |  |  |
+| 0x3C | Bridge control |  | Interrupt pin | Interrupt line |
+
 ### Codebeispiel
 
 \<c\>
@@ -289,6 +306,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3892; parent 3891; 2009-01-18T15:22:02Z -->
+<!-- MediaWiki page 1626; revision 3899; parent 3892; 2009-01-18T18:08:52Z -->
