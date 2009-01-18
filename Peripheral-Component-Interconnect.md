@@ -14,14 +14,32 @@ Jedes PCI-Gerät besitzt ein Konfigurations-Register, welches 256 Byte groß ist
 
   
 
-### Aufbau des Konfigurations-Register
+### Aufbau des Konfigurations-Adressraum
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
-| ---------- | ---------------------------- | ------------- | --------------------- | ----------------- |
-| 00 | Device ID |  | Vendor ID |  |
-| 04 | Status |  | Command |  |
-| 08 | Classcode | Subclass | Revision ID |  |
+| ---------- | ----------- | ------------- | --------------- | ----------------- |
+| 0x00 | Device ID |  | Vendor ID |  |
+| 0x04 | Status |  | Command |  |
+| 0x08 | Classcode |  |  | Revision ID |
 | 0x0C | BIST | Header Type | Latency Timer | Cache Line Size |
+
+Die ersten 16 Byte sind für alle PCI-Geräte gleich.
+
+- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Haput*-Klasse. Die mittleren 8 Bit stehen für die Subclass und die unter 8 Bit für das *Programming Interface*.
+- *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
+
+| Header Type | Kurze Beschreibung |
+| ------------- | ------------------------------- |
+| 0x00 | [Standard](#header-type-0x00) |
+| 0x01 | PCI/PCI-Bridge |
+| 0x02 | CardBus-Bridge |
+
+  
+
+#### Header Type 0x00
+
+| Register | 31-24 | 23-16 | 15-8 | 7-0 |
+| ---------- | ---------------------------- | ----------- | --------------------- | ---------------- |
 | 0x10 | Base Address 0 (BAR0) |  |  |  |
 | 0x14 | Base Address 1 (BAR1) |  |  |  |
 | 0x18 | Base Address 2 (BAR2) |  |  |  |
@@ -271,6 +289,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3887/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3887; parent 3788; 2009-01-18T13:45:58Z -->
+<!-- MediaWiki page 1626; revision 3891; parent 3887; 2009-01-18T15:09:31Z -->
