@@ -10,8 +10,19 @@ Die GCC wird nicht direkt unterstützt, sondern nur durch die Portierung MinGW.
 
 Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie im Terminal mit den Befehle *gcc \[Kompilierte Datei\]*.
 
+## Zusätzliche Parameter
+
+| Parameter | Beschreibung |
+| ----------- | -------------------------------------------------------------------------------------------- |
+| -o | Name (und Typ) der Ausgabedatei. Bei .bin-Endung wird auch nur eine binäre Datei erstellt. |
+| -c | Kein Linken des Quellcodes. |
+| -O | Optimieren des Quellcodes. Grad kann von 1 - 3 angegeben werden. |
+| -l | Bindet weiter Bibliotheken ein |
+| -Wall | Aktiviert sinnvolle Warnungen. |
+| -pedantic | Gibt alle Warnungen aus. |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3889/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 3889; parent 0; 2009-01-18T15:03:22Z -->
+<!-- MediaWiki page 1805; revision 3893; parent 3889; 2009-01-18T15:24:31Z -->
