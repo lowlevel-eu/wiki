@@ -29,9 +29,9 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 - *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
 
 | Header Type | Kurze Beschreibung |
-| ------------- | ------------------------------- |
+| ------------- | ------------------------------------- |
 | 0x00 | [Standard](#header-type-0x00) |
-| 0x01 | PCI/PCI-Bridge |
+| 0x01 | [PCI/PCI-Bridge](#header-type-0x01) |
 | 0x02 | CardBus-Bridge |
 
   
@@ -306,6 +306,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3899; parent 3892; 2009-01-18T18:08:52Z -->
+<!-- MediaWiki page 1626; revision 3900; parent 3899; 2009-01-18T18:09:55Z -->
