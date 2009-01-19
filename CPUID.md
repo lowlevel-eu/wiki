@@ -35,6 +35,8 @@ CPUID-Funktion Nr. 0x00 gibt wie bereits genannt die größte vom Prozessor unte
 - NSC: "Geode by NSC"
 - Rise: "RiseRiseRise"
 
+## Intelbefehle
+
 ### EAX = 0x00000001
 
 Das Ergebnis der diser Funktion ist folgendes:
@@ -147,6 +149,6 @@ Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur fü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3916; parent 3650; 2009-01-19T17:13:59Z -->
+<!-- MediaWiki page 1739; revision 3919; parent 3916; 2009-01-19T18:50:15Z -->
