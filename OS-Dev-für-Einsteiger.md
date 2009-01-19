@@ -33,15 +33,38 @@ Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://gith
 
 Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein.
 
+#### Dein Computer
+
 Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natürlich strenggenommen keinen PC. Aber es wäre geschickt, denn ich nehme an, Du willst ein x86-Betriebssystem schreiben. Wenn Du wider Erwarten für eine andere Plattform entwickeln möchtest, teil Dich im Forum mit, das wird auch andere interessieren - allerdings bist dann Du derjenige, der erklären darf. Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten sind für den Anfang das handlichste. Und ein 386er oder höher sollte es schon sein - aber das sollte heutzutage machbar sein.
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein Linux installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch Windows nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung. Unter Windows wirst du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das...
+#### Dein Betriebsystem
 
-Dann brauchst du Editor und Compiler. Als Editor hast du sicher schon Deinen eigenen Favoriten (nämlich vim) und auch beim Compiler ist die Sache relativ klar: Wenn du C nimmst, wird der Compiler im Allgemeinen gcc sein und unter Linux ist damit alles geklärt. Wenn du gcc unter Windows benutzt, solltest du dir überlegen, ob du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach. (Oder natürlich einfach ein Linux)
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") wirst du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das... Falls du nicht [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installieren willst( Zu wenig Speicherplatz etc.), kein Bock hast, bei Windows eine geignete Umgebung herstellen, nehme einfach Knoppix. Dies ist auf Dauer keine richtige Lösung, deswegen empfehle ich dir, Linux richtig zu installieren.
+
+#### Deine Tools
+
+Dann brauchst du Editor und Compiler. Als Editor hast du sicher schon Deinen eigenen Favoriten und auch beim Compiler ist die Sache relativ klar: Wenn du [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") nimmst, wird der Compiler im Allgemeinen gcc sein und unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist damit alles geklärt. Wenn du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzt, solltest du dir überlegen, ob du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach. (Oder natürlich einfach ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"))
 
 - [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 
-Schließlich brauchst Du auch noch eine Möglichkeit, Dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm qemu oder bochs - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
+##### Editoren für Linux
+
+Hier eine kleine Vorauswahl von Editoren für [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") oder [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
+
+- Kate
+- KText
+- Vim
+
+##### Editoren für Windows
+
+Das Windows-Pendant der obigen Liste.
+
+- Editor (Nicht mal geignet für erste Gehversuche)
+- Notepad++
+
+#### Dein Emulator
+
+Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
 
 - <http://www.qemu.org>
 - <http://bochs.sourceforge.net>
@@ -129,6 +152,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3908/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 2913; parent 2908; 2008-04-19T08:50:37Z -->
+<!-- MediaWiki page 1619; revision 3908; parent 2913; 2009-01-19T14:46:26Z -->
