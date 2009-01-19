@@ -33,7 +33,7 @@
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
 - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
 - [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"): Gescheites Diagramm zur Registerarchitektur, Ergänzungen zur Handhabung von Interrupts, Eingehen auf verschiedene Befehlssätze, Verweis auf [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") zur Identifizierung.
-- [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID"): Die wichtigsten Kommandos (0x0 - 0x2, evtl, auch die Erweiterten für AMD&Intel) erläutern.
+- [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID"): Die wichtigsten Kommandos (0x0 - 0x2, evtl, auch die Erweiterten von AMD) erläutern.
 - [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
 
 ## Neu erstellen
@@ -50,6 +50,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3907/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3607; parent 3595; 2008-12-08T14:38:09Z -->
+<!-- MediaWiki page 1518; revision 3907; parent 3607; 2009-01-19T14:35:54Z -->
