@@ -39,7 +39,7 @@ Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natür
 
 #### Dein Betriebsystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") wirst du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das... Falls du nicht [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installieren willst( Zu wenig Speicherplatz etc.), kein Bock hast, bei Windows eine geignete Umgebung herstellen, nehme einfach Knoppix. Dies ist auf Dauer keine richtige Lösung, deswegen empfehle ich dir, Linux richtig zu installieren.
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") wirst du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das... Falls du nicht [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installieren willst( Zu wenig Speicherplatz etc.), kein Bock hast, bei Windows eine geignete Umgebung herstellen, nehme einfach Knoppix. Dies ist auf Dauer keine richtige Lösung, deswegen empfehle ich dir, Linux richtig zu installieren. Du kannst das Linux-System ja auch auf einer virtuellen Maschiene wie [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
 
 #### Deine Tools
 
@@ -156,6 +156,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3920/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3920; parent 3909; 2009-01-19T18:54:26Z -->
+<!-- MediaWiki page 1619; revision 3924; parent 3920; 2009-01-19T19:14:37Z -->
