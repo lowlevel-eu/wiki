@@ -39,32 +39,20 @@ Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natür
 
 #### Dein Betriebsystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") wirst du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das... Falls du nicht [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installieren willst( Zu wenig Speicherplatz etc.), kein Bock hast, bei Windows eine geignete Umgebung herstellen, nehme einfach Knoppix. Dies ist auf Dauer keine richtige Lösung, deswegen empfehle ich dir, Linux richtig zu installieren. Du kannst das Linux-System ja auch auf einer virtuellen Maschiene wie [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung (jedenfalls wenn man GRUB und daher ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das...
+
+Falls Du kein Linux auf deinem Rechner installieren willst und auch keinen Bock hast, unter Windows eine geignete Umgebung herstellen, nimm einfach Knoppix. Das ist allerdings auf Dauer keine richtige Lösung. Deswegen empfehle ich Dir, Linux richtig zu installieren. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
 
 #### Deine Tools
 
-Dann brauchst du Editor und Compiler. Als Editor hast du sicher schon Deinen eigenen Favoriten und auch beim Compiler ist die Sache relativ klar: Wenn du [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") nimmst, wird der Compiler im Allgemeinen gcc sein und unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist damit alles geklärt. Wenn du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzt, solltest du dir überlegen, ob du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach. (Oder natürlich einfach ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"))
+Dann brauchst Du Editor und Compiler. Als Editor hast Du sicher schon Deinen eigenen Favoriten (nämlich vim), aber wenn nicht, dann findest Du vielleicht in der folgenden Liste einen für Dich passenden. Häufig benutzt werden:
+
+- Unter Linux: vim, Kate, gedit, KDevelop, Eclipse
+- Unter Windows: Notepad++, Eclipse
+
+Auch beim Compiler ist die Sache relativ klar: Wenn Du [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") nimmst, wird der Compiler im Allgemeinen gcc sein und unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist damit alles geklärt. Wenn Du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzt, solltest du dir überlegen, ob Du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach.
 
 - [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
-
-##### Editoren für Linux
-
-Hier eine kleine Vorauswahl von Editoren für [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") oder [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
-
-- Kate
-- KText
-- Vim
-
-##### Editoren für Windows
-
-Das Windows-Pendant der obigen Liste.
-
-- Editor (Nicht mal geignet für erste Gehversuche)
-- Notepad++
-
-#### IDE
-
-- eclipse (Für Windows und Linux)
 
 #### Dein Emulator
 
@@ -156,6 +144,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3924; parent 3920; 2009-01-19T19:14:37Z -->
+<!-- MediaWiki page 1619; revision 3925; parent 3924; 2009-01-19T19:24:32Z -->
