@@ -25,8 +25,9 @@ Jedes PCI-Gerät besitzt ein Konfigurations-Register, welches 256 Byte groß ist
 
 Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 
+- Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist.
+- Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
 - *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Base Class*. Die mittleren 8 Bit stehen für die *Subclass* und die unter 8 Bit für das *Programming Interface*.
-- *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
 
 | Header Type | Kurze Beschreibung |
 | ------------- | ------------------------------------- |
@@ -34,10 +35,12 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 | 0x01 | [PCI/PCI-Bridge](#header-type-0x01) |
 | 0x02 | CardBus-Bridge |
 
+- *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
+
 #### Header Type 0x00
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
-| ---------- | ---------------------------- | ----------- | --------------------- | ---------------- |
+| ---------- | ---------------------------- | ----------- | --------------------- | ---------------------- |
 | 0x10 | Base Address 0 (BAR0) |  |  |  |
 | 0x14 | Base Address 1 (BAR1) |  |  |  |
 | 0x18 | Base Address 2 (BAR2) |  |  |  |
@@ -47,7 +50,7 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 | 0x28 | Cardbus CIS Pointer |  |  |  |
 | 0x2C | Subsystem ID |  | Subsystem Vendor ID |  |
 | 0x30 | Expansion ROM base address |  |  |  |
-| 0x34 | Reserviert |  |  |  |
+| 0x34 | Reserviert |  |  | Capabilities Pointer |
 | 0x38 | Reserviert |  |  |  |
 | 0x3C | Max Latency | Min Grant | Interrupt Pin | Interrupt Line |
 
@@ -302,6 +305,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 3905; parent 3904; 2009-01-18T18:58:14Z -->
+<!-- MediaWiki page 1626; revision 3906; parent 3905; 2009-01-19T12:32:32Z -->
