@@ -21,8 +21,12 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 | -Wall | Aktiviert sinnvolle Warnungen. |
 | -pedantic | Gibt alle Warnungen aus. |
 
+## Siehe auch
+
+[Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3914/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 3893; parent 3889; 2009-01-18T15:24:31Z -->
+<!-- MediaWiki page 1805; revision 3914; parent 3893; 2009-01-19T16:36:39Z -->
