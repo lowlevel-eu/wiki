@@ -65,16 +65,16 @@ Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, i
 
 ### Der Bootloader
 
-Dein eigenes Betriebssystem möchte am Anfang irgendwie von der Festplatte oder Diskette in den Speicher geladen werden, bevor es irgendwas macht. Daher brauchst du einen Bootloader.
+Dein eigenes Betriebssystem möchte am Anfang irgendwie von der Festplatte oder Diskette in den Speicher geladen werden, bevor es irgendwas macht. Daher brauchst Du einen Bootloader.
 
 Hier gibt es die großen zwei Möglichkeiten, etwas fertiges zu nehmen oder selbst einen Bootloader zu schreiben. Ein guter Bootloader ist ein Projekt für sich, daher empfehle ich grundsätzlich, [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") zu benutzen und sich auf das eigentliche Betriebssystem zu konzentrieren. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") lädt Dir deinen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und möglicherweise weitere Module vom Dateisystem auf der Platte oder Diskette, initialisiert Dir den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"), bietet ein Bootmenü und einiges mehr.
 
 Die folgenden beiden Artikel werden Dir bei den ersten Schritten mit [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") helfen:
 
 - C-Kernel mit Grub
-- [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
+- [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen") (Falls Du Windows benutzt, ist es vermutlich einfacher, ein vorhandenes GRUB-Image z.B. von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") zu nehmen und den Kernel durch den eigenen zu ersetzen)
 
-Zuden sollte erwähnt werden, dass es bisjetzt Wege gibt, GRUB-Images auf Linux zu erstellen. Falls du wider der Vernunft nicht auf Linux umgestiegen bist, kannst du nicht [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzen. Wenn Du trotz diesen Vorteilen darauf bestehst oder musst, deinen Bootloader selbst zu schreiben - so sei es. In den ersten Ausgaben dess findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst - insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
+Wenn Du trotz diesen Vorteilen darauf bestehst oder musst, deinen Bootloader selbst zu schreiben - so sei es. In den ersten Ausgaben des findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst - insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
 
 ### Hello World und weiter
 
@@ -144,6 +144,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3926/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3925; parent 3924; 2009-01-19T19:24:32Z -->
+<!-- MediaWiki page 1619; revision 3926; parent 3925; 2009-01-19T19:30:17Z -->
