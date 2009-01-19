@@ -40,7 +40,7 @@
 
 - Informationen zur AMD PCNet Netzwerkkarte
 - Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen)
-- Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut!
+- Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
 - Versionsverwaltung - Pro&Kontra, welche Systeme gibt es...
 - Interne Darstellung der Zahlen, Darstellungsmöglichkeiten negativer Zahlen, Aufbau von Gleitkommazahlen (IEEE)
 - Hier kommt dein Wunsch hin ;)
@@ -50,6 +50,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3907/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3907; parent 3607; 2009-01-19T14:35:54Z -->
+<!-- MediaWiki page 1518; revision 3930; parent 3907; 2009-01-19T23:09:48Z -->
