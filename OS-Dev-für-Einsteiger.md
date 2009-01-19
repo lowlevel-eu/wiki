@@ -62,6 +62,10 @@ Das Windows-Pendant der obigen Liste.
 - Editor (Nicht mal geignet für erste Gehversuche)
 - Notepad++
 
+#### IDE
+
+- eclipse (Für Windows und Linux)
+
 #### Dein Emulator
 
 Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
@@ -152,6 +156,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3909/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3920/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3909; parent 3908; 2009-01-19T14:51:10Z -->
+<!-- MediaWiki page 1619; revision 3920; parent 3909; 2009-01-19T18:54:26Z -->
