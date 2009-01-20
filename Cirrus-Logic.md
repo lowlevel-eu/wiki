@@ -125,10 +125,10 @@ Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Berei
 
 - <http://www.koders.com/c/fidC2D0E7B95D33763B17521DF3EA7B68C81D500CAD.aspx> Code aus Qemu
 - <http://cgit.freedesktop.org/xorg/driver/xf86-video-cirrus/> Xorg-Treiber
-- [Datenblatt von Cirrus Logic](http://www.datasheetcatalog.org/datasheets/restul/102357_DS.pdf)
+- [Datenblatt von Cirrus Logic](http://www.tjd.phlegethon.org/gd5446trm.pdf.gz)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 3917; parent 3911; 2009-01-19T17:26:12Z -->
+<!-- MediaWiki page 1743; revision 3936; parent 3917; 2009-01-20T16:39:10Z -->
