@@ -31,7 +31,7 @@ Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://gith
 
 ### Entwicklungsumgebung und Tools
 
-Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein. Wie man sich eine [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") einrichtet, welche Tools man für sein Vorhaben benötigt und auf welchen Plattformen (Linux, Window, ...) dies möglich ist, wird im Artikel [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") genauer erläutert.
+Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein. Wie man sich eine [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") einrichtet, welche Tools man für sein Vorhaben benötigt und auf welchen Plattformen (Linux, Windows, ...) dies möglich ist, wird im Artikel [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") genauer erläutert.
 
 #### Dein Computer
 
@@ -144,6 +144,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3932; parent 3928; 2009-01-20T13:20:56Z -->
+<!-- MediaWiki page 1619; revision 3933; parent 3932; 2009-01-20T13:22:30Z -->
