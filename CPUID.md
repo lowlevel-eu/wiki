@@ -143,12 +143,12 @@ Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur fü
 
 [Englische Doku von CPUID; mit AMD/INTEL und anderen Prozessoren](http://sandpile.org/ia32/cpuid.htm)
 
-[Intels CPUID-Spezifikation](http://bochs.sourceforge.net/techspec/24161821.pdf)
+[Intels CPUID-Spezifikation](http://support.intel.com/Assets/PDF/appnote/241618.pdf)
 
 [AMDs CPUID-Spezifikation](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3945/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3919; parent 3916; 2009-01-19T18:50:15Z -->
+<!-- MediaWiki page 1739; revision 3945; parent 3919; 2009-01-21T01:01:15Z -->
