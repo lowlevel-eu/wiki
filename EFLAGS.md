@@ -2,9 +2,7 @@
 
 Das EFLAGS (Programmstatus und Kontrollregister) Register ist 32 Bit groß, wobei jedes Bit ein Flag repräsentiert. Es beinhaltet Status-Informationen über das laufende Programm und erlaubt anwendungsbasierte Prozessorkontrolle. Das Register kann nicht komplett verändert werden, es können nur die einzelnen Flags gesetzt oder gelöscht werden, meistens auch nur indirekt, in der Form das ein aufgerufener Befehl ein Flag als nebeneffekt ändert.
 
-## Aufbau des EFLAGS-Registers
-
-Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Controlflag
+**eFLAGS-Register**
 
 | Bit | Beschreibung |
 | --------- | ------------------------------------------------------------------------------------------------- |
@@ -25,13 +23,13 @@ Im folgenden steht (X) für Systemflag, (S) für Statusflag und (C) für Control
 | 7 | [SF - **S**ign **F**lag](#sf---sign-flag-bit-7) (S) |
 | 6 | [ZF - **Z**ero **F**lag](#zf---zero-flag-bit-6) (S) |
 | 5 | Reserviert, nicht ändern |
-| 4 | [AF - **A**uxiliary Carry **F**lag](#af---adjust-flag-bit-4) (S) |
+| 4 | [AF - **A**uxiliary Carry **F**lag](#af---auxiliary-carry-flag-bit-4) (S) |
 | 3 | Reserviert, nicht ändern |
 | 2 | [PF - **P**arity **F**lag](#pf---parity-flag-bit-2) (S) |
 | 1 | Reserviert, nicht ändern |
 | 0 | [CF - **C**arry **F**lag](#cf---carry-flag-bit-0) (S) |
 
-  
+*(X) Systemflag, (S) Statusflag, (C) Controlflag*
 
 ### Statusflags
 
@@ -45,9 +43,9 @@ Zeigt einen Overflow bei unsigned-Arithmetik an
 
 Gesetzt wenn das niederwertige Byte des Ergebnisses eine gerade Anzahl an 1er Bits enthält.
 
-#### AF - Adjust Flag (Bit 4)
+#### AF - Auxiliary Carry Flag (Bit 4)
 
-Gesetzt wenn ein Übertrag von Bit 3 stattgefunden hat.  
+Gesetzt wenn ein Übertrag von Bit 3 auf Bit 4 stattgefunden hat.  
 Wird hauptsächlich für [BCD](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") Berechnungen verwendet.
 
 #### ZF - Zero Flag (Bit 6)
@@ -63,14 +61,12 @@ Entspricht dem höherwertigsten Bit des Ergebnisses, also dem Vorzeichenbit bei 
 
 Gesetzt wenn ein Overflow bei einer signed-Zahl stattgefunden hat.
 
-  
-
 ### Controlflags
 
 #### DF - Direction Flag (Bit 10)
 
-Gibt die Richtung bei Stringoperationen an.  
-Wenn 0 wird der Zeiger inkrementiert, bei 1 dekrementiert.  
+Gibt die Richtung bei Stringoperationen an. Wenn 0 wird der Zeiger inkrementiert, bei 1 dekrementiert.  
+Dieses Flag kann mit **CLD**(Clear Direction Flag) und **STD**(Set Direction Flag) verändert werden.
 
 ### Systemflags
 
@@ -81,7 +77,7 @@ Für single-step debugging.
 #### IF - Interrupt Enable Flag (Bit 9)
 
 Wenn gesetzt wird auf Interrupts reagiert, wenn gelöscht werden diese ignoriert (Ausnahme: [Non Maskable Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI")).  
-Kann mit CLI (Clear Interruptflag) und STI (Set Interruptflag) geändert werden.
+Kann mit **CLI**(Clear Interruptflag) und **STI**(Set Interruptflag) geändert werden.
 
 #### IOPL - I/O Privilege Field (Bits 12 und 13)
 
@@ -101,7 +97,7 @@ Gesetzt um im Virtual-8086 Modus zu arbeiten.
 
 #### AC - Alignment Check Flag (Bit 18)
 
-Wenn dieses Flag un das AM-Bit im [CR0-Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") gesetzt ist wird auf Speicherausrichtung geprüft.
+Wenn dieses Flag und das AM-Bit im [CR0-Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") gesetzt ist wird auf Speicherausrichtung geprüft.
 
 #### VIF - Virtual Interrupt Flag (Bit 19)
 
@@ -114,7 +110,7 @@ Virtualmode-gegensatz zum IF-Flag
 
 #### ID - Identification Flag (Bit 21)
 
-Gesetzt wenn der Prozessor [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") unterstützt.  
+Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Prozessor den [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")-Befehel
 
 ## Befehle zum direkten Verändern
 
@@ -127,6 +123,6 @@ Gesetzt wenn der Prozessor [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUI
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3949/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 3478; parent 3477; 2008-11-06T09:06:28Z -->
+<!-- MediaWiki page 1751; revision 3949; parent 3478; 2009-01-21T15:27:25Z -->
