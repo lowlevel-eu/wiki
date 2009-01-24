@@ -27,7 +27,9 @@ Für Leute, die noch nie mit Linux gearbeitet haben ist der Einstieg sicher etwa
 
 ### Contra
 
-Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssysteme ist wohl, dass viele Programme erst heruntergeladen werden müssen, damit man mit dem Programmieren anfangen kann. (gcc, make, ...) Außerdem fehlen Windows noch ein paar Kommandozeilen-Programme, welche die OS-Programmierung erleichtern. (dd, ...) Sicherlich ist auch der Funktionsumfang von Batch-Dateien eher gering, was aber in diesem Einsatzgebiet wohl eher nicht so wichtig ist.
+Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssysteme ist wohl, dass viele Programme erst heruntergeladen werden müssen, damit man mit dem Programmieren anfangen kann. (gcc, make, ...) Außerdem fehlen Windows noch ein paar Kommandozeilen-Programme, welche die OS-Programmierung erleichtern. (dd, ...) Sicherlich ist auch der Funktionsumfang von Batch-Dateien eher gering, was aber in diesem Einsatzgebiet wohl eher nicht so wichtig ist.  
+  
+Es gab über dieses Thema eine Diskussion, siehe [Diskussion:OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1654/index.html "Diskussion:OS-Dev für Einsteiger").
 
 ## Design
 
@@ -50,6 +52,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3875/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3875; parent 3440; 2009-01-16T16:31:28Z -->
+<!-- MediaWiki page 1558; revision 3962; parent 3875; 2009-01-24T19:50:21Z -->
