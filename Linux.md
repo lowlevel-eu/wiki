@@ -1,10 +1,10 @@
 # Linux
 
-| Linux |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ![150px-Tux.svg.png](http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/150px-Tux.svg.png) Linux |  |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Linus Torvalds et al. |
-| Akt. Version: | 2.6.24 |
+| Akt. Version: | 2.6.28 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | i386, x86_64, ppc, uvm. |
@@ -30,6 +30,6 @@ Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Gra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3960/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 3488; parent 3431; 2008-11-06T21:01:56Z -->
+<!-- MediaWiki page 1641; revision 3960; parent 3488; 2009-01-24T19:43:13Z -->
