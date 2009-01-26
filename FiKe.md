@@ -1,6 +1,6 @@
 # FiKe
 
-FiKe ist ein monolithischer Kernel mit integrierter Shell. FiKe steht dabei für First Kernel und meint damit meinem ersten Kernel.
+FiKe ist ein monolithischer Kernel mit integrierter Shell. FiKe steht dabei für First Kernel und meint damit meinen ersten Kernel.
 
 | FiKe |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -30,6 +30,6 @@ FiKe kann keine Module laden und besitzt nur einen einzigen Treiber, der des Key
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
 
-<!-- MediaWiki page 1762; revision 3961; parent 3885; 2009-01-24T19:44:16Z -->
+<!-- MediaWiki page 1762; revision 3970; parent 3961; 2009-01-26T20:11:49Z -->
