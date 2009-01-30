@@ -39,7 +39,7 @@ Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natür
 
 #### Dein Betriebsystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Ich möchte hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung (jedenfalls wenn man GRUB und daher ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das...
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung (jedenfalls wenn man GRUB und daher ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das...
 
 Falls Du kein Linux auf deinem Rechner installieren willst und auch keinen Bock hast, unter Windows eine geignete Umgebung herstellen, nimm einfach Knoppix. Das ist allerdings auf Dauer keine richtige Lösung. Deswegen empfehle ich Dir, Linux richtig zu installieren. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
 
@@ -144,6 +144,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3933; parent 3932; 2009-01-20T13:22:30Z -->
+<!-- MediaWiki page 1619; revision 3977; parent 3933; 2009-01-30T18:26:59Z -->
