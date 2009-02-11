@@ -69,8 +69,12 @@ Ausführbar machen und ausprobieren:
     chmod 755 update_lost.sh
     ./update_lost.sh
 
+## Siehe auch
+
+- Grub auf CD
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/1866/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
 
-<!-- MediaWiki page 1449; revision 1866; parent 1615; 2007-03-10T23:01:38Z -->
+<!-- MediaWiki page 1449; revision 4014; parent 1866; 2009-02-11T11:05:16Z -->
