@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | rizor |
 | Akt. Version: | 0.1-Alpha Build 0002 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
@@ -18,7 +18,7 @@
 In Planung
 
   
-rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmierung lernen möchte.
+rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmierung lernen möchte. Das OS soll später als Projektarbeit und Referenzen für und nach dem Studium gelten.
 
 ## Entwickler
 
@@ -45,12 +45,12 @@ Folgende Features sind implementiert
 
 ## Roadmap
 
-- rizor-OS-0.1:
+- rizor-OS-0.1 (Release: März/April 2009):
   - Multitasking (einfaches Round-Robin)
   - Speicherverwaltung mit einfachem First-Fit
   - libc (fast komplette Implementierung)
   - Treiber für das Display und die Tastatur im Userspace
-- rizor-OS-0.2:
+- rizor-OS-0.2 (Release: August-Oktober 2009):
   - Speicherverwaltung optimieren
   - Multitasking erweitern
     - Round-Robin mit Prioritätem
@@ -58,7 +58,7 @@ Folgende Features sind implementiert
   - Shell-Integration
   - Dateisystem
   - vollständige libc
-- rizor-OS-0.3:
+- rizor-OS-0.3 (Release: 2010):
   - Netzwerktreiber
   - kleiner konsolenbasierter Browser
   - kleinen Dateimanager
@@ -69,6 +69,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4023/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4022; parent 4021; 2009-02-17T20:48:37Z -->
+<!-- MediaWiki page 1816; revision 4023; parent 4022; 2009-02-17T20:51:44Z -->
