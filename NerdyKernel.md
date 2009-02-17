@@ -53,7 +53,7 @@ Folgende Features sind implementiert
 - rizor-OS-0.2 (Release: August-Oktober 2009):
   - Speicherverwaltung optimieren
   - Multitasking erweitern
-    - Round-Robin mit Prioritätem
+    - Round-Robin mit Prioritäten
     - Multi-Level-Feedback
   - Shell-Integration
   - Dateisystem
@@ -69,6 +69,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4025/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4024; parent 4023; 2009-02-17T20:53:49Z -->
+<!-- MediaWiki page 1816; revision 4025; parent 4024; 2009-02-17T20:54:43Z -->
