@@ -1,10 +1,10 @@
 # NerdyKernel
 
-|  |  |
+| rizor-OS |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: |  |
+| Akt. Version: | 0.1-Alpha Build 0002 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -24,6 +24,14 @@ rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmie
 
 - rizor
 
+## Build-Status
+
+- Kernel
+  - rizor-0.3.0.0002-Alpha
+    - Einbau der ISR
+    - Planung zum Multitasking
+    - Erweiterung der ISR
+
 ## Features
 
 Folgende Features sind implementiert
@@ -38,10 +46,15 @@ Folgende Features sind implementiert
 ## Roadmap
 
 - rizor-OS-0.1:
-  - Multitasking
+  - Multitasking (einfaches Round-Robin)
+  - Speicherverwaltung mit einfachem First-Fit
   - libc (fast komplette Implementierung)
   - Treiber für das Display und die Tastatur im Userspace
 - rizor-OS-0.2:
+  - Speicherverwaltung optimieren
+  - Multitasking erweitern
+    - Round-Robin mit Prioritätem
+    - Multi-Level-Feedback
   - Shell-Integration
   - Dateisystem
   - vollständige libc
@@ -56,6 +69,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4021; parent 4020; 2009-02-17T20:43:47Z -->
+<!-- MediaWiki page 1816; revision 4022; parent 4021; 2009-02-17T20:48:37Z -->
