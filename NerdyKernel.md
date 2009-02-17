@@ -68,9 +68,10 @@ Folgende Features sind implementiert
   - Teile der Treiber sollen in den Kernel verlagert werden um ein optimales Leistungs-Stabilitätsverhältnis zu gewährleisten
   - Portierung auf x86-64
   - guter Treibersupport (unter Umständen ein Einbau der CDI)
+  - Unter Umständen der Lizenz auf GPL
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4029; parent 4028; 2009-02-17T21:11:51Z -->
+<!-- MediaWiki page 1816; revision 4030; parent 4029; 2009-02-17T21:12:54Z -->
