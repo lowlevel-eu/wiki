@@ -36,12 +36,13 @@ rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmie
 
 Folgende Features sind implementiert
 
-- nicht-kommunikationsfähiger Microkernel
 - x86
-- GDT
-- IDT
-- CPUID
-- teile der libc
+- nicht-kommunikationsfähiger Microkernel
+  - GDT
+  - IDT
+  - CPUID
+  - ISR
+  - teile der libc
 
 ## Roadmap
 
@@ -71,6 +72,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4033; parent 4032; 2009-02-17T23:21:41Z -->
+<!-- MediaWiki page 1816; revision 4034; parent 4033; 2009-02-17T23:22:06Z -->
