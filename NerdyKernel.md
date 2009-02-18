@@ -24,6 +24,14 @@ rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmie
 
 - rizor
 
+## Userinterface
+
+Zur Interaktion mit dem User sind einfache Terminals geplant. Später soll es dann auch ein Kernel-Terminal geben, dass genau angibt, was geschieht und wie die momentante Situation im Kernelspace aussieht. Der User hat dann auch die Möglichkeit den Kernelspace bedingt zu verändern um Probleme zu beheben. Es soll aber nur eingeschränkten Zugriff geben, damit der Kernel nicht zerstört wird.
+
+## OS-Design
+
+Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch ist eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und wird automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, dass ihm sagt, dass sie ihre Informationen noch einmal schicken sollen. Es sei denn, die Informationen befinden sich noch in einer Liste (oder ähnliches) die abgearbeitet wird.
+
 ## Entwicklungsstatus
 
 - Kernel
@@ -79,6 +87,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4039; parent 4037; 2009-02-18T20:25:23Z -->
+<!-- MediaWiki page 1816; revision 4040; parent 4039; 2009-02-18T20:34:11Z -->
