@@ -65,6 +65,10 @@ Folgende Features sind implementiert
   - Netzwerktreiber
   - kleiner konsolenbasierter Browser
   - kleinen Dateimanager
+  - Multitasking erweitern
+    - shortest-job-next
+    - longest-job-next
+    - Wechsel des Scheduling-Verfahrens zur Laufzeit
 - Entfernte Planung:
   - Teile der Treiber sollen in den Kernel verlagert werden um ein optimales Leistungs-Stabilitätsverhältnis zu gewährleisten
   - Portierung auf x86-64
@@ -72,6 +76,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4035; parent 4034; 2009-02-18T07:57:31Z -->
+<!-- MediaWiki page 1816; revision 4036; parent 4035; 2009-02-18T08:00:02Z -->
