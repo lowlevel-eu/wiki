@@ -58,13 +58,14 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 - GNU Project Debugger und QEMU
 
-# Links
+# Weblinks
 
 - [QEMU Homepage](http://www.qemu.org)
 - [QEMU unter Windows](http://www.h7.dion.ne.jp/~qemu-win)
+- [Einführung in QEMU](http://qemu-buch.de/de/index.php/Hauptseite)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 3820; parent 3816; 2009-01-03T12:24:23Z -->
+<!-- MediaWiki page 1505; revision 4038; parent 3820; 2009-02-18T15:23:49Z -->
