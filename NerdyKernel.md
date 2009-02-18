@@ -42,7 +42,7 @@ Folgende Features sind implementiert
   - IDT
   - CPUID
   - ISR
-  - teile der libc
+- teile der libc
 
 ## Roadmap
 
@@ -72,6 +72,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4034; parent 4033; 2009-02-17T23:22:06Z -->
+<!-- MediaWiki page 1816; revision 4035; parent 4034; 2009-02-18T07:57:31Z -->
