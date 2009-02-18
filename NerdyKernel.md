@@ -28,6 +28,7 @@ rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmie
 
 - Kernel
   - rizor-0.3.0.0003-Alpha
+    - Syscalls
     - Treiber für den PIC einbauen
     - Entwickeln der IRQ
     - Planung zum Multitasking
@@ -78,6 +79,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4037; parent 4036; 2009-02-18T08:02:54Z -->
+<!-- MediaWiki page 1816; revision 4039; parent 4037; 2009-02-18T20:25:23Z -->
