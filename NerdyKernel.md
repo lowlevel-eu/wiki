@@ -61,6 +61,8 @@ Folgende Features sind implementiert
   - Shell-Integration
   - Dateisystem
   - vollständige libc
+  - Portierung des GCC
+  - Einbau eines kleinen Texteditors
 - rizor-OS-0.3 (Release: 2010):
   - Netzwerktreiber
   - kleiner konsolenbasierter Browser
@@ -76,6 +78,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4036; parent 4035; 2009-02-18T08:00:02Z -->
+<!-- MediaWiki page 1816; revision 4037; parent 4036; 2009-02-18T08:02:54Z -->
