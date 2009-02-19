@@ -24,41 +24,53 @@ QEMU emuliert eine Vielzahl von Architekturen.
 
 ## Emulierte Hardware
 
+## = x86
+
 Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emuliert:
 
 - PCI und ISA-System (i440FX host PCI bridge und PIIX3 PCI to ISA bridge)
 - PS/2-Maus und -Tastatur
 - Serielle Schnittstelle
 - Parallelele Schnittstelle
-- Massenspeicher:
-  - Zwei PCI-ATA-Schnittstellen mit Unterstützung für maximal vier Festplatten-Images
-  - CD-ROM/DVD-Laufwerk über ISO-Abbild oder reales Laufwerk
-  - Diskettenlaufwerk
-  - Unterstützte Dateiformate für Images: Raw, das qemu-eigene Format qcow/qcow2, die Formate von VMware, Parallels, VirtualPC, Bochs, Knoppix (cloop). Außerdem das Pseudoformat vvfat, das ein Verzeichnis auf dem Hostsystem als FAT-Image im Gast abbildet.
-- Grafikkarte
-  - Cirrus CLGD 5446 PCI VGA-Karte
-  - Standard-VGA-Grafikkarte mit Bochs-VESA-BIOS-Extensions (Hardware Level, inklusive aller Nichtstandardmodi, über einen experimentellen Patch auch mit einer vereinfachten 3D-Beschleunigung per OpenGL)
-- Netzwerkkarte und ein DHCP-Server
-  - NE2000-Netzwerkadapter sowohl für ISA als auch PCI
-  - Realtek 8139
-  - Intel eepro100 und e1000
-  - AMD PCnet
-  - virtio (Paravirtualisiertes Netzwerk)
-- Sound:
-  - Systemlautsprecher
-  - Soundblaster 16
-  - ES1370 PCI
-- USB:
-  - UHCI- und OHCI-Controller
-  - HID-Geräte: Tastatur, Maus und Grafiktablett
-  - USB-Massenspeicher
-  - Durchleitung von USB-Geräten des Hosts
 
-# Siehe Auch
+#### Massenspeicher
+
+- Zwei PCI-ATA-Schnittstellen mit Unterstützung für maximal vier Festplatten-Images
+- CD-ROM/DVD-Laufwerk über ISO-Abbild oder reales Laufwerk
+- Diskettenlaufwerk
+- Unterstützte Dateiformate für Images: Raw, das qemu-eigene Format qcow/qcow2, die Formate von VMware, Parallels, VirtualPC, Bochs, Knoppix (cloop). Außerdem das Pseudoformat vvfat, das ein Verzeichnis auf dem Hostsystem als FAT-Image im Gast abbildet.
+
+#### Grafikkarte
+
+- Cirrus CLGD 5446 PCI VGA-Karte
+- Standard-VGA-Grafikkarte mit Bochs-VESA-BIOS-Extensions (Hardware Level, inklusive aller Nichtstandardmodi, über einen experimentellen Patch auch mit einer vereinfachten 3D-Beschleunigung per OpenGL)
+
+#### Netzwerkkarte und ein DHCP-Server
+
+- NE2000-Netzwerkadapter sowohl für ISA als auch PCI
+- Realtek 8139
+- Intel eepro100 und e1000
+- AMD PCnet
+- virtio (Paravirtualisiertes Netzwerk)
+
+#### Sound
+
+- Systemlautsprecher
+- Soundblaster 16
+- ES1370 PCI
+
+#### USB
+
+- UHCI- und OHCI-Controller
+- HID-Geräte: Tastatur, Maus und Grafiktablett
+- USB-Massenspeicher
+- Durchleitung von USB-Geräten des Hosts
+
+## Siehe Auch
 
 - GNU Project Debugger und QEMU
 
-# Weblinks
+## Weblinks
 
 - [QEMU Homepage](http://www.qemu.org)
 - [QEMU unter Windows](http://www.h7.dion.ne.jp/~qemu-win)
@@ -66,6 +78,6 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 4038; parent 3820; 2009-02-18T15:23:49Z -->
+<!-- MediaWiki page 1505; revision 4042; parent 4038; 2009-02-19T13:37:55Z -->
