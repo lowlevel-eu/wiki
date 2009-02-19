@@ -24,7 +24,7 @@ QEMU emuliert eine Vielzahl von Architekturen.
 
 ## Emulierte Hardware
 
-## = x86
+### x86
 
 Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emuliert:
 
@@ -78,6 +78,6 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 4043; parent 4042; 2009-02-19T13:38:19Z -->
+<!-- MediaWiki page 1505; revision 4044; parent 4043; 2009-02-19T13:38:32Z -->
