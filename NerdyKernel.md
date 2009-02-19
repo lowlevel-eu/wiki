@@ -32,6 +32,18 @@ Zur Interaktion mit dem User sind einfache Terminals geplant. Später soll es da
 
 Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch ist eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und wird automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, dass ihm sagt, dass sie ihre Informationen noch einmal schicken sollen. Es sei denn, die Informationen befinden sich noch in einer Liste (oder ähnliches) die abgearbeitet wird.
 
+## OS-Statistiken
+
+- Version: rizor-OS-0.1 Build 0001-Alpha
+  - Kernel: 803 LOC
+  - Libc: 186 LOC
+- Version: rizor-OS-0.1 Build 0002-Alpha
+  - Kernel: 1044 LOC
+  - Libc: 186 LOC
+- Version: rizor-OS-0.1 Build 0003-Alpha
+  - Kernel: 1649 LOC
+  - Libc: 186 LOC
+
 ## Entwicklungsstatus
 
 - Kernel
@@ -88,6 +100,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4049; parent 4048; 2009-02-19T18:36:18Z -->
+<!-- MediaWiki page 1816; revision 4050; parent 4049; 2009-02-19T18:43:56Z -->
