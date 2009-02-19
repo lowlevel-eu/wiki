@@ -49,7 +49,10 @@ Folgende Features sind implementiert
   - IDT
   - CPUID
   - ISR
-- teile der libc
+  - PIC
+  - IRQ
+  - Teile der Syscalls
+- Teile der libc
 
 ## Roadmap
 
@@ -85,6 +88,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4046/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4046; parent 4040; 2009-02-19T15:37:41Z -->
+<!-- MediaWiki page 1816; revision 4047; parent 4046; 2009-02-19T15:38:12Z -->
