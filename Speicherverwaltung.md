@@ -6,9 +6,9 @@ Die **Speicherverwaltung** (= **Memory Management**) ist ein wichtiger Teil des 
 
 Generell ist die Speicherverwaltung dafür zuständig nachfragenden Prozessen freien Speicher zuzuteilen bzw. freizugebenden Speicher wieder zurückzunehmen. Dazu muss natürlich gespeichert werden, welche Speicherbereiche belegt bzw. frei sind. Es ist wichtig zu verstehen, dass die Speicherverwaltung normalerweise auf 2 Ebenen aufgeteilt wird: Zum einen die [physische Speicherverwaltung](#physische-speicherverwaltung) und darauf aufbauend die [virtuelle Speicherverwaltung](#virtuelle-speicherverwaltung).
 
-## physische Speicherverwaltung
+## Physische Speicherverwaltung
 
-Die **physische Speicherverwaltung** bildet die unterste Ebene und ermöglicht das Allozieren und Freigeben von physischen Speicherbereichen. Meist sind diese Speicherbereiche gleich groß und richten sich nach der Seitengröße der jeweiligen Architektur. Die Seitengröße beträgt normalerweise bei der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Architektur 4kB. Es sind dort auch 4 ([x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")) bzw. 2MB ([x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")) möglich. Intern speichert die physische Speicherverwaltung welche Speicherbereiche im physischen Speicher frei sind. Dies könnte folgendermaßen implementiert werden:
+Die **Physische Speicherverwaltung** bildet die unterste Ebene und ermöglicht das Allozieren und Freigeben von physischen Speicherbereichen. Meist sind diese Speicherbereiche gleich groß und richten sich nach der Seitengröße der jeweiligen Architektur. Die Seitengröße beträgt normalerweise bei der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Architektur 4kB. Es sind dort auch 4 ([x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")) bzw. 2MB ([x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")) möglich. Intern speichert die physische Speicherverwaltung welche Speicherbereiche im physischen Speicher frei sind. Dies könnte folgendermaßen implementiert werden:
 
 ### Bitmap
 
@@ -103,6 +103,6 @@ Man kann auch eine der freien malloc()/free() Implementierungen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 3744; parent 3573; 2008-12-26T12:49:59Z -->
+<!-- MediaWiki page 1591; revision 4045; parent 3744; 2009-02-19T13:43:12Z -->
