@@ -35,7 +35,7 @@ Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein eleme
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.0.0003-Alpha
+  - rizor-0.3.0.0004-Alpha
     - Syscalls
     - Planung zum Multitasking
 
@@ -88,6 +88,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4047; parent 4046; 2009-02-19T15:38:12Z -->
+<!-- MediaWiki page 1816; revision 4048; parent 4047; 2009-02-19T18:35:00Z -->
