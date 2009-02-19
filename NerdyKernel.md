@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: | 0.1-Alpha Build 0002 |
+| Akt. Version: | 0.1-Alpha Build 0003 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -36,7 +36,7 @@ Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein eleme
 
 - Kernel
   - rizor-0.3.0.0004-Alpha
-    - Syscalls
+    - physikalische Speicherverwaltung ohne DMA
     - Planung zum Multitasking
 
 ## Features
@@ -88,6 +88,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4048; parent 4047; 2009-02-19T18:35:00Z -->
+<!-- MediaWiki page 1816; revision 4049; parent 4048; 2009-02-19T18:36:18Z -->
