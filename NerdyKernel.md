@@ -37,8 +37,6 @@ Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein eleme
 - Kernel
   - rizor-0.3.0.0003-Alpha
     - Syscalls
-    - Treiber für den PIC einbauen
-    - Entwickeln der IRQ
     - Planung zum Multitasking
 
 ## Features
@@ -87,6 +85,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4046/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4040; parent 4039; 2009-02-18T20:34:11Z -->
+<!-- MediaWiki page 1816; revision 4046; parent 4040; 2009-02-19T15:37:41Z -->
