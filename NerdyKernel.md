@@ -69,7 +69,7 @@ Folgende Features sind implementiert
 ## Roadmap
 
 - rizor-OS-0.1 (Release: März/April 2009):
-  - Multitasking (einfaches Round-Robin kein Thread-Support)
+  - Multitasking (einfaches Round-Robin ohne Thread-Support)
   - einfachste Shell (Starten/Stoppen von Prozessen)
   - Speicherverwaltung mit einfachem First-Fit
   - libc (fast komplette Implementierung)
@@ -100,6 +100,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4051; parent 4050; 2009-02-22T10:22:02Z -->
+<!-- MediaWiki page 1816; revision 4052; parent 4051; 2009-02-22T10:22:38Z -->
