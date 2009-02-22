@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: | 0.1-Alpha Build 0003 |
+| Akt. Version: | 0.1-Alpha Build 0004 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -34,21 +34,20 @@ Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein eleme
 
 ## OS-Statistiken
 
-- Version: rizor-OS-0.1 Build 0001-Alpha
-  - Kernel: 803 LOC
-  - Libc: 186 LOC
-- Version: rizor-OS-0.1 Build 0002-Alpha
-  - Kernel: 1044 LOC
-  - Libc: 186 LOC
 - Version: rizor-OS-0.1 Build 0003-Alpha
   - Kernel: 1649 LOC
+  - Libc: 186 LOC
+- Version: rizor-OS-0.1 Build 0004-Alpha
+  - Kernel: 1839 LOC
   - Libc: 186 LOC
 
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.0.0004-Alpha
-    - physikalische Speicherverwaltung ohne DMA
+  - rizor-0.3.0.0005-Alpha
+    - Einbau des Pagings
+    - Entwicklung einer Speicherverwaltung für den Kernel
+    - Bessere Parameterübergabe für die Syscalls
     - Planung zum Multitasking
 
 ## Features
@@ -63,6 +62,7 @@ Folgende Features sind implementiert
   - ISR
   - PIC
   - IRQ
+  - Physikalische Speicherverwaltung
   - Teile der Syscalls
 - Teile der libc
 
@@ -100,6 +100,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4050; parent 4049; 2009-02-19T18:43:56Z -->
+<!-- MediaWiki page 1816; revision 4051; parent 4050; 2009-02-22T10:22:02Z -->
