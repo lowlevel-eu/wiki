@@ -1,5 +1,9 @@
 # Floppy Disk Controller
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ansteuerung von bis zu 2 (selten auch 4) Floppy-Laufwerken.
 
 ## Siehe auch
@@ -13,6 +17,6 @@ Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ans
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4056/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 3606; parent 2699; 2008-12-08T14:34:28Z -->
+<!-- MediaWiki page 1443; revision 4056; parent 3606; 2009-02-26T18:47:11Z -->
