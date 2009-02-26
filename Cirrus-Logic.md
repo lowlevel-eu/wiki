@@ -1,12 +1,12 @@
 # Cirrus Logic
 
-Qemu emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es sehr einfach, mit einem eigenen OS in den Genuss hardwarebeschleunigter¹ 2D-Grafik zu kommen.
+Qemu emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es sehr einfach, mit einem eigenen [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS") in den Genuss hardwarebeschleunigter¹ 2D-Grafik zu kommen.
 
 ¹So weit ich es gesehen habe, werden die Grundoperationen hardwarebeschleunigt dargestellt. Alle Angaben ohne Gewähr.
 
 ## Resourcen
 
-Die Grafikkarte ist eine PCI-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle Qemus an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
+Die Grafikkarte ist eine [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle Qemus an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
 
 In diesen zweiten Bereich sind sämtliche VGA-Ports gemappt, wobei man von der Adresse 0x3C0 abziehen muss, um den Offset in den MMIO-Bereich zu erhalten. So befindet sich das Register VGA_MISC_OUT_W (0x3C2) an der Speicheradresse 0xF2000002.
 
@@ -129,6 +129,6 @@ Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Berei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4080/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 3936; parent 3917; 2009-01-20T16:39:10Z -->
+<!-- MediaWiki page 1743; revision 4080; parent 3936; 2009-02-26T19:08:05Z -->
