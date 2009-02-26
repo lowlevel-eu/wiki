@@ -38,7 +38,7 @@ Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor alle
 - Wenn der Quellcode geändert wird, muss dies gekennzeichnet werden, die Lizenz darf nicht vom Sourcecode entfernt werden.
 - Darüber hinaus erlaubt die Lizenz explizit jede Nutzungsmöglichkeit, ob kommerziell oder nicht.
 
-## Links
+## Weblinks
 
 - [Text der GPL Version 3](http://www.gnu.org/licenses/gpl-3.0.html) (englisch)
 - [inoffizielle deutsche Übersetzung der GPL](http://www.gnu.de/gpl-ger.html)
@@ -50,6 +50,6 @@ Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor alle
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4082/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 4081; parent 3739; 2009-02-26T19:12:27Z -->
+<!-- MediaWiki page 1552; revision 4082; parent 4081; 2009-02-26T19:12:55Z -->
