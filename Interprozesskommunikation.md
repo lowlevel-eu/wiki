@@ -1,10 +1,8 @@
 # Interprozesskommunikation
 
-Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
 
-*Dieser Artikel soll erweitert werden*
-
-Hilf Lowlevel, den Artikel zu verbessern.
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
 Als **Interprozesskommunikation** (**IPC**, engl. **inter-process communication**) bezeichnet man den Datenaustausch und die Synchronisation zwischen mehreren Prozessen. Da Prozesse normalerweise in unterschiedlichen Adressräumen laufen und eigene Kopien der Prozessorregister besitzen, kann dieser Datenaustausch so ohne Weiteres nicht über den Hauptspeicher oder die Prozessorregister geschehen. Vor allem in einem [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ist dieser Datenaustausch essentiell, da jeder Treiber ein eigener Prozess ist und natürlich normale Anwendungen mit dem Treiber kommunizieren müssen, um beispielsweise Tastatureingaben zu erhalten oder um vom Dateisystem zu lesen.
 
@@ -45,6 +43,6 @@ Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4087/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 4087; parent 4086; 2009-02-26T19:29:33Z -->
+<!-- MediaWiki page 1530; revision 4093; parent 4087; 2009-02-26T20:37:17Z -->
