@@ -1,5 +1,9 @@
 # System Management Mode
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 Der System Management Mode (SMM) ist ein Betriebsmodus der [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessoren, der Systemfunktionen wie das Energie Management verwaltet, um zum Beispiel den Computer in einen Ruhezustand zu versetzen. Er wurde mit Versionen der 386er- und 486er-Prozessoren für Laptops (i386SL bzw. i486SL) eingeführt und steht hinsichtlich der Privilegien der Betriebsmodi über dem [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") und dem [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").
 
 ## Wechsel in den SMM
@@ -12,6 +16,6 @@ In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
 
-<!-- MediaWiki page 1699; revision 3158; parent 3146; 2008-08-14T23:49:03Z -->
+<!-- MediaWiki page 1699; revision 4076; parent 3158; 2009-02-26T19:01:10Z -->
