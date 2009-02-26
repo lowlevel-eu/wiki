@@ -1,5 +1,9 @@
 # Microsoft Portable Executable and Common Object File Format
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 ## Aufbau
 
 ### MS-DOS Header
@@ -126,6 +130,6 @@ Wird noch erweitert-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 3664; parent 3658; 2008-12-10T16:27:16Z -->
+<!-- MediaWiki page 1644; revision 4071; parent 3664; 2009-02-26T18:57:29Z -->
