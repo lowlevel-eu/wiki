@@ -36,14 +36,12 @@ In der ATA-Spezifikation wird beschrieben, unter welchen Umständen ein Gerät s
 
 Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass das NIEN-Bit dort nicht wirkt. Trotz gesetztem NIEN-Bit hat der Controller frisch fröhlich IRQs losgeschickt. Hier sollte also sichergestellt werden, dass der IRQ verarbeitet wird, ohne dass etwas Unerwünschtes passiert.
 
-## Spezifikationen
+## Weblinks
 
-Working-Drafts der aktuellen Spezifikationen zu ATA(PI) können hier bezogen werden: [Technical Committee T13](http://www.t13.org/)
-
-[Direkt-Link](http://t13.org/Documents/UploadedDocuments/project/d1321r3-ATA-ATAPI-5.pdf)
+- [Working-Drafts der aktuellen Spezifikationen zu ATA(PI)](http://t13.org/Documents/UploadedDocuments/project/d1321r3-ATA-ATAPI-5.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3474/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 3474; parent 3473; 2008-11-05T13:56:36Z -->
+<!-- MediaWiki page 1522; revision 4079; parent 3474; 2009-02-26T19:05:37Z -->
