@@ -1,10 +1,14 @@
 # Ext2
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 Das ext2-Dateisystem (ext steht für extended) war bis vor ein paar Jahren das Standarddateisystem unter Linux und anderen Unix-Derivaten, bis es durch [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder andere Journaling-Dateisysteme ersetzt wurde.
 
-# Aufbau
+## Aufbau
 
-## Superblock
+### Superblock
 
 An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Informationen, die das ganze Dateisystem betreffen, wie zum Beispiel die Anzahl der Blocks die verfügbar und reserviert sind. Weiter ist auch ein Feld für eine Magic-Number um festzustellen, ob es sich wirklich um ein ext2-Dateisystem und wenn ja, um welche Version es sich handelt.
 
@@ -16,6 +20,6 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4063/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
 
-<!-- MediaWiki page 1617; revision 3843; parent 2960; 2009-01-05T10:29:16Z -->
+<!-- MediaWiki page 1617; revision 4063; parent 3843; 2009-02-26T18:52:59Z -->
