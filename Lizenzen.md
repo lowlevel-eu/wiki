@@ -24,7 +24,7 @@ Die Lesser General Public License besagt, dass ein Programm genau so verbreitet 
 
 ### BSD-Lizenz
 
-Die BSD-Lizenz erlaubt die freie Benutzung, Veränderung und Weiterverbeitung eines Programms. Sie ähnelt hierin der GPL. Allerdings ist der Entwickler der Software nicht verpflichtet den Quellcode mitzuveröffentlichen. Außerdem darf der Copyright eines unter die BSD-Lizenz gestellten Programmes nicht entfernt werden.
+Die BSD-Lizenz erlaubt die freie Benutzung, Veränderung und Weiterverbeitung eines Programms. Sie ähnelt hierin der GPL. Allerdings ist der Entwickler der Software nicht verpflichtet den Quellcode mitzuveröffentlichen. Jedorf muss der ursprüngliche Entwickler genannt werden.
 
 #### Werbe-Klausel
 
@@ -50,6 +50,6 @@ Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor alle
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 3739; parent 2703; 2008-12-26T12:43:53Z -->
+<!-- MediaWiki page 1552; revision 4081; parent 3739; 2009-02-26T19:12:27Z -->
