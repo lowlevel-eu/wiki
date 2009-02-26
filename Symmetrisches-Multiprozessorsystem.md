@@ -1,5 +1,11 @@
 # Symmetrisches Multiprozessorsystem
 
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+*Dieser Artikel soll erweitert werden*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
 Ein **Symmetrisches Multiprozessorsystem** (=**SMP**) ist ein System mit einem oder mehreren identischen Prozessoren. Im Gegensatz zu [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen sind alle Prozessoren auf gleiche Art & Weise mit dem Hauptspeicher verbunden, d.h. es gibt für keinen Prozessor einen von der Geschwindigkeit her bevorzugten/benachteiligten Speicherbereich im Hauptspeicher.
 
 ## Intel Multiprocessor Specification
@@ -58,6 +64,6 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 3518; parent 3424; 2008-11-10T19:10:35Z -->
+<!-- MediaWiki page 1490; revision 4088; parent 3518; 2009-02-26T19:31:03Z -->
