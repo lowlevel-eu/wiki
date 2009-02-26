@@ -1,5 +1,11 @@
 # Direct Memory Access
 
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+*Diesen Artikel erweitern*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
 **Direct Memory Access** (Abkürzung: **DMA**) ist eine Methode um einfache Kopiervorgänge, von Geräten zum Speicher oder umgekehrt, mit einem extra Chip anstelle der CPU zu vollziehen. Dadurch ist die CPU während des Kopierens nicht ausgelastet und kann anderweitig verwendet werden. Dies ist insbesondere bei Betriebssystemen wichtig, die [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") verwenden, da sonst der Prozesswechsel beispielsweise bei Festplattenzugriffen verzögert werden müsste.
 
 ## Physikalischer Aufbau
@@ -126,6 +132,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3678/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 3678; parent 3675; 2008-12-11T17:48:39Z -->
+<!-- MediaWiki page 1555; revision 4089; parent 3678; 2009-02-26T19:31:59Z -->
