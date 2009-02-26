@@ -1,5 +1,9 @@
 # Real Mode
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 Als Real Mode wird der 16-Bit-Modus der x86-Prozessoren bezeichnet. Der Real Mode existiert seit dem 8086 (damals allerdings nicht unter diesem Namen, weil die CPU keinen anderen Modus hatte) und ist auch auf neuen x86-Prozessoren noch kompatibel zu diesem. Der 286 führte den 16-Bit- und der 386 schliesslich den 32-Bit-[Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") ein, die den Real Mode abgelöst haben.
 
 ## Speicheradressierung
@@ -12,6 +16,6 @@ Als Beispiel kann die Adresse des Video-RAM dienen: Die physische Adresse des Vi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2978/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
 
-<!-- MediaWiki page 1665; revision 2978; parent 0; 2008-06-09T16:17:16Z -->
+<!-- MediaWiki page 1665; revision 4075; parent 2978; 2009-02-26T19:00:47Z -->
