@@ -1,5 +1,11 @@
 # Programmable Interrupt Controller
 
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+*TeeJays Tutorial (Link siehe Diskussion:Programmable Interrupt Controller) in diesen Artikel einarbeiten*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
 Der **Programmable Interrupt Controller** (**PIC**) empfängt Unterbrechungsanforderungen (Interrupt Requests, kurz IRQs) von Hardwarekomponenten und gibt sie an die CPU weiter. In den ersten PCs gab es ursprünglich nur einen PIC mit 8 IRQ-Kanälen. Da diese nicht genügten, wurde ein zweiter PIC hinzugefügt. Dieser ist an den zweiten IRQ-Anschluss des ersten PIC angeschlossen. Man erhält so 15 IRQ-Kanäle. Die Verwendung der einzelnen IRQ-Kanäle wurde früher fest vorgegeben, da sie direkt mit der Hardware verdrahtet waren. Die restlichen, frei gebliebenen IRQs werden heutzutage dynamisch vergeben z.B. über PnP.
 
 ## Programmierung
@@ -68,6 +74,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4085/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 3470; parent 2991; 2008-11-04T20:41:36Z -->
+<!-- MediaWiki page 1465; revision 4085; parent 3470; 2009-02-26T19:28:10Z -->
