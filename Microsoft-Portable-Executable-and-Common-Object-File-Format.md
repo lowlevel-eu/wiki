@@ -117,12 +117,14 @@ Im dritten Teil können Strings oder Tabellen angegeben werden, damit sie das Be
 Die Sektorentabelle kommt immer nach dem optimalen Header. Die Headergröße wird im COFF-Header festgelegt. Ebenfalls wird die Größe der Tabelle im COFF-Header festgelegt. Jeder Sektor besteht aus folgenden Abschnitten:
 
 | Offset | Größe | Beschreibung |
-| -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | 8 | Ist ein 8-Byte-String auf UTF-8 Basis. Wenn genau 8-Bytes verwendet wird, dann ist kein Nullbyte nötig. Bei Objektdateien darf dieser länger sein, bei ausführbaren Dateien ist dies verboten.<br> |
 | 8 | 4 | Die entgültige Größe eines Sektors, wenn es geladen wird. Bei Objektdateien ist dieser Abschnitt voller Nullen. |
 | 12 | 4 | Für ausführbare Dateien die Adresse des ersten Bytes der Sektion relativ zum Image Basis(?). Bei Objektdateien ist die Adresse des ersten angelegten Bytes, bevor die Verlagerung abgeschlossen ist.<br> |
+| 16 | 4 | Dies Feld ist gerundet. Entweder die Größe des Sektors(Objektdateien) oder die Größe des initialisierten Daten auf der Festplatte(Bei Imagedateien) Ist dieser Teil kleiner als das Offset 8, dann sind der Rest der Sektorentabelle Nullen. Wenn diese Sektion nur unintialisierte Daten enthält, dann ist dieser Teil Null. |
+| 20 | 4 | Der Dateipointer zur ersten Sektion innerhalb des COFF-Headers. Für Objektdateien sollte dieser Teil an einer 4-Byte-Grenze ausgerichtet sein. Enthält die Sektion nur unitiliasierte Daten, dann ist dieser Teil Null. |
 
-Wird noch erweitert-
+Wird noch erweitert
 
 ## Links
 
@@ -130,6 +132,6 @@ Wird noch erweitert-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4071; parent 3664; 2009-02-26T18:57:29Z -->
+<!-- MediaWiki page 1644; revision 4099; parent 4071; 2009-03-01T14:55:37Z -->
