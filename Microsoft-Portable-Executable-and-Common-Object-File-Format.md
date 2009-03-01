@@ -126,12 +126,12 @@ Die Sektorentabelle kommt immer nach dem optimalen Header. Die Headergröße wir
 
 Wird noch erweitert
 
-## Links
+## Weblinks
 
 - [Microsoft Portable Executable and Common Object File Format Specification](http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4099; parent 4071; 2009-03-01T14:55:37Z -->
+<!-- MediaWiki page 1644; revision 4102; parent 4099; 2009-03-01T15:26:37Z -->
