@@ -14,6 +14,14 @@ Im Textmodus werden meistens 80\*25 Zeichen verwendet. Diese Aufösung wird z.B.
 
 Im Grafikmodus werden die Werte der einzelnen Pixel direkt verändert. Ein Modus besteht aus vertikaler und horizontaler Pixelanzahl und der Anzahl darstellbarer Farben.
 
+#### Modus 13h
+
+320x200 Punkte bei 256 Farben
+
+Speicheradresse: 0xA0000
+
+Speichergröße: 64000 Bytes
+
 ## Siehe auch
 
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")
@@ -24,6 +32,6 @@ Im Grafikmodus werden die Werte der einzelnen Pixel direkt verändert. Ein Modus
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 3576; parent 2928; 2008-12-05T16:31:51Z -->
+<!-- MediaWiki page 1516; revision 4118; parent 3576; 2009-03-06T12:20:49Z -->
