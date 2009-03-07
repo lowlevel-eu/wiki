@@ -32,8 +32,12 @@ Es existieren folgende Standards für USB Host-Controller:
 - [Offizielle USB Spezifikationen](http://www.usb.org/developers/docs/)
 - [USB in a nutshell](http://www.beyondlogic.org/usbnutshell/usb1.htm)
 
+## Literatur
+
+- Udo Eberhardt, Hans-Joachim Kelm: *USB 2.0.* Franzis, Poing 2001, [ISBN 3-7723-7965-6](http://books.google.com/books?as_isbn=3772379656)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4078/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 4078; parent 3976; 2009-02-26T19:02:01Z -->
+<!-- MediaWiki page 1690; revision 4120; parent 4078; 2009-03-07T13:06:49Z -->
