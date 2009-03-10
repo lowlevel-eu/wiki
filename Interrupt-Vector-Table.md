@@ -14,6 +14,11 @@ Insgesamt stehen 256 Interrupts zur Verfügung, deshalb muss die IVT auch 256 Ei
        2   |            Segment            |
            +---------------+---------------+
 
+| Byte |  |
+| ------ | --------- |
+| 0 | Offset |
+| 2 | Segment |
+
 Die IVT belegt somit genau 256 \* 4 = 1024 Byte. Die genaue Verwendung dieser Einträge bei Auftreten eines Interrupts wird im Artikel [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") erklärt.
 
 ## Während des Bootvorgangs
@@ -59,6 +64,6 @@ sti \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 3142; parent 2950; 2008-08-14T21:46:45Z -->
+<!-- MediaWiki page 1540; revision 4123; parent 3142; 2009-03-10T20:04:52Z -->
