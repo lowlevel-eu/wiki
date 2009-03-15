@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: | 0.1-Alpha Build 0004 |
+| Akt. Version: | 0.1-Alpha Build 0005 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -34,21 +34,20 @@ Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein eleme
 
 ## OS-Statistiken
 
-- Version: rizor-OS-0.1 Build 0003-Alpha
-  - Kernel: 1649 LOC
-  - Libc: 186 LOC
 - Version: rizor-OS-0.1 Build 0004-Alpha
   - Kernel: 1839 LOC
+  - Libc: 186 LOC
+- Version: rizor-OS-0.1 Build 0005-Alpha
+  - Kernel: 2443 LOC
   - Libc: 186 LOC
 
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.0.0005-Alpha
-    - Einbau des Pagings
+  - rizor-0.3.0.0006-Alpha
     - Entwicklung einer Speicherverwaltung für den Kernel
     - Bessere Parameterübergabe für die Syscalls
-    - Planung zum Multitasking
+    - Entwicklung zum Multitasking
 
 ## Features
 
@@ -64,6 +63,7 @@ Folgende Features sind implementiert
   - IRQ
   - Physikalische Speicherverwaltung
   - Teile der Syscalls
+  - Paging mit automatischer Flagwahl
 - Teile der libc
 
 ## Roadmap
@@ -100,6 +100,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4119/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4130/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4119; parent 4052; 2009-03-07T12:50:41Z -->
+<!-- MediaWiki page 1816; revision 4130; parent 4119; 2009-03-15T16:25:25Z -->
