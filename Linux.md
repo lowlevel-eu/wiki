@@ -28,8 +28,12 @@ Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Li
 
 Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die unternannder konkurieren. Am meisten verbreitet sind KDE und Gnome
 
+## Das UNIX-Prinzip
+
+Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskettenlaufwerk zum Beispiel würd über /dev/fd0 angesprochen. Linux besitzt keine Laufwerksbuchstaben wie MS-DOS und Windows, die erste Festplatte (bei IDE) findet man unter /dev/hda.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3960/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4125/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 3960; parent 3488; 2009-01-24T19:43:13Z -->
+<!-- MediaWiki page 1641; revision 4125; parent 3960; 2009-03-15T13:49:28Z -->
