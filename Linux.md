@@ -22,7 +22,7 @@ Linux ist ein freies Betriebsystem und steht in Konkurrenz zu [Windows](https://
 
 ## Die Entstehung
 
-Linux entstand 1991 durch den damaligen Informatikstudent Linus Torvalds an der Universität von Helsinki unter dem Namen "Freax". Linux Torvalds besaß damals einen 386er mit installiertem Minix, und schrieb darauf einen Terminalemulator. Er fügte weitere Funktionen hinzu, wie Multitasking, Zugriff auf das Diskettenlaufwerk usw. Schließlich baute er das ganze zu einem Kernel aus, den er auf dem FTP-Server von xxx hochlud. Der Besitzer war mit dem Namen "Freax", den Linus für seinen Kernel gewählt hatte, nicht einverstanden, und legte den Kernel in das Verzeichnis "Linux".
+Linux entstand 1991 durch den damaligen Informatikstudent Linus Torvalds an der Universität von Helsinki unter dem Namen "Freax". Linus Torvalds besaß damals einen 386er mit installiertem Minix, und schrieb darauf einen Terminalemulator. Er fügte weitere Funktionen hinzu, wie Multitasking, Zugriff auf das Diskettenlaufwerk usw. Schließlich baute er das ganze zu einem Kernel aus, den er auf dem FTP-Server von xxx hochlud. Der Besitzer war mit dem Namen "Freax", den Linus für seinen Kernel gewählt hatte, nicht einverstanden, und legte den Kernel in das Verzeichnis "Linux".
 
 ## Bezeichnung von Linux
 
@@ -38,6 +38,6 @@ Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4126/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 4126; parent 4125; 2009-03-15T13:56:54Z -->
+<!-- MediaWiki page 1641; revision 4129; parent 4126; 2009-03-15T15:03:24Z -->
