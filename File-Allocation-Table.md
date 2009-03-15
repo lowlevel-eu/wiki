@@ -53,6 +53,8 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 | VolumeID | 39 | 4 | Hier kann man eine Seriennummer angeben anhand deren man die Diskette beim Einlesen erkennen kann. Dieser Wert wird meistens aus der Zusammenfassung der beiden 16-BIT-Werte von Datum und Zeit gemacht. Wie man Datum und Zeit in 16 BIT speichert, erkläre ich weiter unten. |
 | FileSysType | 54 | 8 | Dämlicherweise soll man hier angeben, welches FAT-Dateisystem man auf dem Datenträger verwendet. Dämlicherweise deshalb, weil dieser Eintrag nicht dazu verwendet wird, um festzustellen welches FAT-System man nun benutzt hat. Aus Gründen der Kompatibilität sollte man hier einfach "FAT12" eintragen und die restlichen Bytes mit 0x20 (Leerzeichen) füllen. Wie man exakt bestimmt, welches FAT-System denn nun auf dem Datenträger verwendet wird erläutere ich weiter unten. |
 
+#### FAT-Tabelle
+
 (*Wird noch erweitert*)
 
 ## Siehe auch
@@ -65,6 +67,6 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4127; parent 4066; 2009-03-15T14:15:13Z -->
+<!-- MediaWiki page 1643; revision 4128; parent 4127; 2009-03-15T14:15:56Z -->
