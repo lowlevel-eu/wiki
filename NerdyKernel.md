@@ -30,31 +30,33 @@ Zur Interaktion mit dem User sind einfache Terminals geplant. Später soll es da
 
 ## OS-Design
 
-Es soll ein elementarer Microkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch ist eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und wird automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, dass ihm sagt, dass sie ihre Informationen noch einmal schicken sollen. Es sei denn, die Informationen befinden sich noch in einer Liste (oder ähnliches) die abgearbeitet wird.
+Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch ist eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und wird automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, dass ihm sagt, dass sie ihre Informationen noch einmal schicken sollen. Es sei denn, die Informationen befinden sich noch in einer Liste (oder ähnliches) die abgearbeitet wird.
 
 ## OS-Statistiken
 
-- Version: rizor-OS-0.1 Build 0004-Alpha
-  - Kernel: 1839 LOC
-  - Libc: 186 LOC
 - Version: rizor-OS-0.1 Build 0005-Alpha
   - Kernel: 2443 LOC
   - Libc: 186 LOC
+- Version: rizor-OS-0.1 Build 0006-Alpha
+  - Kernel: 2545 LOC
+  - Libc: 316 LOC
 
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.0.0006-Alpha
-    - Entwicklung einer Speicherverwaltung für den Kernel
+  - rizor-0.3.0.0007-Alpha
     - Bessere Parameterübergabe für die Syscalls
     - Entwicklung zum Multitasking
+    - Entwicklung der KBD und des Keyboard-Treibers
+    - Entwicklung des Shared-Memory-Handlers
+    - Planung der IPC/RPC
 
 ## Features
 
 Folgende Features sind implementiert
 
 - x86
-- nicht-kommunikationsfähiger Microkernel
+- nicht-kommunikationsfähiger Hybrid-Kernel
   - CPUID
   - ISR
   - PIC
@@ -62,6 +64,8 @@ Folgende Features sind implementiert
   - Physikalische Speicherverwaltung
   - Teile der Syscalls
   - Paging mit automatischer Flagwahl
+  - Speicherverwaltung für Kernel- und User-Space
+  - Spinlocks
 - Teile der libc
 
 ## Roadmap
@@ -98,6 +102,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4136; parent 4130; 2009-03-15T21:03:35Z -->
+<!-- MediaWiki page 1816; revision 4137; parent 4136; 2009-03-16T13:12:15Z -->
