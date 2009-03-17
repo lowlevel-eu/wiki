@@ -10,7 +10,7 @@ FAT ist das Filesystem, welches MS-DOS benutzt. Ursprünglich war es für Disket
 - FAT16
 - FAT32
 
-Der einzige Unterschied zwischen diesen Dateisystemen ist die aufnehmbare Größe.
+FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2^12 Cluster adressierbar, mit FAT16 2^16 und mit FAT32 2^32.
 
 ## Aufbau von FAT
 
@@ -67,6 +67,6 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4128; parent 4127; 2009-03-15T14:15:56Z -->
+<!-- MediaWiki page 1643; revision 4140; parent 4128; 2009-03-17T13:01:12Z -->
