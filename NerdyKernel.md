@@ -45,7 +45,6 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 
 - Kernel
   - rizor-0.3.0.0007-Alpha
-    - Bessere Parameterübergabe für die Syscalls
     - Entwicklung zum Multitasking
     - Entwicklung der KBD und des Keyboard-Treibers
     - Entwicklung des Shared-Memory-Handlers
@@ -104,6 +103,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4139; parent 4138; 2009-03-16T13:15:10Z -->
+<!-- MediaWiki page 1816; revision 4141; parent 4139; 2009-03-18T00:05:31Z -->
