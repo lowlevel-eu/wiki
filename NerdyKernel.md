@@ -61,11 +61,12 @@ Folgende Features sind implementiert
   - PIC
   - IRQ
   - Physikalische Speicherverwaltung
-  - Teile der Syscalls
+  - Syscalls
   - Paging mit automatischer Flagwahl
   - Speicherverwaltung für Kernel- und User-Space
   - Spinlocks
 - Teile der libc
+- Eine Kernel-Library
 
 ## Roadmap
 
@@ -103,6 +104,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4141; parent 4139; 2009-03-18T00:05:31Z -->
+<!-- MediaWiki page 1816; revision 4142; parent 4141; 2009-03-18T00:06:02Z -->
