@@ -6,17 +6,25 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC, und wird von jedem modernen Computer unterstützt.
 
+## Einsatzgebiete
+
+USB ist sehr vielseitig verwendbar, es eignet sich für externe Festplatten und Laufwerke, externen Flashspeicher, Drucker, Kartenleser und vile Geräte mehr, wo es (mehr oder weniger) auf schnelle Datenübertragung ankommt.
+
 ## USB 3.0 (SuperSpeed USB)
 
-USB 3.0 ist noch nicht verfügbar.
+USB 3.0 ist noch nicht verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 4,8 GBit/s
 
 ## USB 2.0 (Hi-Speed USB)
 
-Wird erweitert.
+USB 2.0 wurde im Jahr 2000 veröffentlicht und hob die Übertragungsrate auf 480 MBit/s an.
 
 ## USB 1.1
 
-Wird erweitert.
+USB 1.1 wurde 1998 veröffentlicht und behob einige Fehler und Unklarheiten
+
+## USB 1.0
+
+USB 1.0 wurde 1996 von Intel veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. Es eignete sich wegen der langsamen Datenübertragung von 12 MBit/s nicht zum Anschluss von Festplatten.
 
 ## USB-Controller
 
@@ -38,6 +46,6 @@ Es existieren folgende Standards für USB Host-Controller:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 4120; parent 4078; 2009-03-07T13:06:49Z -->
+<!-- MediaWiki page 1690; revision 4144; parent 4120; 2009-03-19T16:13:55Z -->
