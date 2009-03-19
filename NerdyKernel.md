@@ -4,11 +4,11 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: | 0.1-Alpha Build 0006 |
+| Akt. Version: | 0.1-Alpha Build 0007 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") & [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Noch nicht näher geplant |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
@@ -34,17 +34,16 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 
 ## OS-Statistiken
 
-- Version: rizor-OS-0.1 Build 0005-Alpha
-  - Kernel: 2443 LOC
-  - Libc: 186 LOC
-- Version: rizor-OS-0.1 Build 0006-Alpha
-  - Kernel: 2545 LOC
+- Version: rizor-OS-0.1 Build 0007-Alpha
+  - Kernel: 3136 LOC
   - Libc: 316 LOC
+  - Kernel-Library: 66 LOC
+  - Collection: 7 LOC
 
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.0.0007-Alpha
+  - rizor-0.3.1.0008-Alpha
     - Entwicklung zum Multitasking
     - Entwicklung der KBD und des Keyboard-Treibers
     - Entwicklung des Shared-Memory-Handlers
@@ -55,7 +54,7 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 Folgende Features sind implementiert
 
 - x86
-- nicht-kommunikationsfähiger Hybrid-Kernel
+- kommunikationsfähiger Hybrid-Kernel
   - CPUID
   - ISR
   - PIC
@@ -67,6 +66,7 @@ Folgende Features sind implementiert
   - Spinlocks
 - Teile der libc
 - Eine Kernel-Library
+- Eine Collection an Datenstrukturen
 
 ## Roadmap
 
@@ -104,6 +104,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4142; parent 4141; 2009-03-18T00:06:02Z -->
+<!-- MediaWiki page 1816; revision 4143; parent 4142; 2009-03-19T15:42:40Z -->
