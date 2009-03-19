@@ -8,7 +8,7 @@ Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ans
 
 ## Siehe auch
 
-[Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h")
+[Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h") - Diaketten- und Festplattenzugriff
 
 ## Weblinks
 
@@ -17,6 +17,6 @@ Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ans
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4056/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4056; parent 3606; 2009-02-26T18:47:11Z -->
+<!-- MediaWiki page 1443; revision 4145; parent 4056; 2009-03-19T19:03:26Z -->
