@@ -18,7 +18,7 @@
 In Planung
 
   
-rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmierung lernen möchte. Das OS soll später als Projektarbeit und Referenzen für und nach dem Studium gelten. Unter Umständen wechsele ich das Projekt zu einem OpenSource-Projekt, das dann unter der GPL-Lizenz laufen würde.
+rizor-OS ist ein kleines Hobby-OS, bei dem ich viel über die LowLevel-Programmierung lernen möchte. Das OS soll später als Projektarbeit und Referenz für und nach dem Studium gelten. Unter Umständen wechsele ich das Projekt zu einem OpenSource-Projekt, das dann unter der GPL-Lizenz laufen würde.
 
 ## Entwickler
 
@@ -26,11 +26,11 @@ rizor-OS ist ein kleines Hobby-OS bei dem ich viel über die LowLevel-Programmie
 
 ## Userinterface
 
-Zur Interaktion mit dem User sind einfache Terminals geplant. Später soll es dann auch ein Kernel-Terminal geben, dass genau angibt, was geschieht und wie die momentante Situation im Kernelspace aussieht. Der User hat dann auch die Möglichkeit den Kernelspace bedingt zu verändern um Probleme zu beheben. Es soll aber nur eingeschränkten Zugriff geben, damit der Kernel nicht zerstört wird.
+Zur Interaktion mit dem User sind einfache Terminals geplant. Später soll es dann auch ein Kernel-Terminal geben, das genau angibt, was geschieht und wie die momentane Situation im Kernelspace aussieht. Der User hat dann auch die Möglichkeit, den Kernelspace bedingt zu verändern um Probleme zu beheben. Es soll aber nur eingeschränkten Zugriff geben, damit der Kernel nicht zerstört wird.
 
 ## OS-Design
 
-Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch ist eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und wird automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, dass ihm sagt, dass sie ihre Informationen noch einmal schicken sollen. Es sei denn, die Informationen befinden sich noch in einer Liste (oder ähnliches) die abgearbeitet wird.
+Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch soll eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter Erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, das ihm sagt, dass er seine Informationen noch einmal schicken soll. Es sei denn, die Informationen befinden sich noch in einer Liste o. ä., die abgearbeitet wird.
 
 ## OS-Statistiken
 
@@ -102,6 +102,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4152; parent 4151; 2009-03-20T00:42:40Z -->
+<!-- MediaWiki page 1816; revision 4155; parent 4152; 2009-03-20T10:32:30Z -->
