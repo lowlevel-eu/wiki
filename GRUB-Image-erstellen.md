@@ -48,7 +48,7 @@ Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand 
 
 ### Ein Update-Skript
 
-Ich persönlich benutze ein Shellskript, um den jeweils neuesten Kernel bequem auf das Image zu kopieren. Damit spare ich mir das Eintippen eines langen mount-Befehls, eines ebenso langen cp-Befehls und die Eingabe des Root-Paßworts.
+Ich persönlich benutze ein Shellskript, um den jeweils neuesten Kernel bequem auf das Image zu kopieren. Damit spare ich mir das Eintippen eines langen mount-Befehls, eines ebenso langen cp-Befehls und die Eingabe des Root-Passworts.
 
 Zunächst muß das Image in die /etc/fstab eingetragen sein. Dazu ist eine Zeile wie die folgende einzutragen:
 
@@ -75,6 +75,6 @@ Ausführbar machen und ausprobieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
 
-<!-- MediaWiki page 1449; revision 4158; parent 4014; 2009-03-20T13:19:45Z -->
+<!-- MediaWiki page 1449; revision 4159; parent 4158; 2009-03-20T13:22:37Z -->
