@@ -201,7 +201,7 @@ Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem 
 
 |  |  |  |  |  |  |  |  |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bitfelder des Statusbytes, das beim Lesen des 64h's gelisfert wird |  |  |  |  |  |  |  |
+| Bitfelder des Statusbytes, das beim Lesen des 64h's geliefert wird |  |  |  |  |  |  |  |
 | **7** | **6** | **5** | **4** | **3** | **2** | **1** | **0** |
 | 1 = Parity-Error bei der letzten Übertragung vom Keyboard |  |  |  |  |  |  |  |
 |  | 1 = Ein Time-Out-Error ist aufgetreten, das heißt, dass die Maus oder die Tastatur nicht reagiert hat. Sollte dieser Fehler auftreten sollte mann den Resend-Befehl nutzen. |  |  |  |  |  |  |
@@ -211,8 +211,6 @@ Notiz: Bei den SpecialCodes FCh und FDh hört das Keayboard erstneinmal mit dem 
 |  |  |  |  |  | 1 = Selftest OK<br>0 = power up or reset<br> |  |  |
 |  |  |  |  |  |  | 1 = Der Input-Buffer hat noch Daten, also es liegt noch der zuletzt gesendete Befehl in 60h/64h und wartet auf seine Verarbeitung<br>0 = Der Input-Buffer ist leer und alle Befehle sind verarbeitet, nun können wir einen Befehl senden<br> |  |
 |  |  |  |  |  |  |  | 1 = Im OutputBuffer befinden sich Daten für den User. Im Sourcecode wird dies genutzt um auf das Ergebnis einer Operation zu warten<br>0 = Es liegen keine Daten bereit und es sollte somit auch noch nichts aus dem Port 60h ausgelesen werden<br> |
-
-  
 
 ### Keyboard-Controller-Befehle (64h)
 
@@ -884,6 +882,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/inde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 2740; parent 2284; 2008-03-22T17:23:46Z -->
+<!-- MediaWiki page 1559; revision 4160; parent 2740; 2009-03-20T13:32:39Z -->
