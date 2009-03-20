@@ -4,7 +4,7 @@
 
 Da die Frage immer wieder aufkommt, möchte ich hier kurz eine Methode vorstellen, ein Floppy-Image mit GRUB und LOST zu erstellen. Außer einer Linux-Installation mit GRUB dürfte nichts besonderes nötig sein, auch kein echtes Diskettenlaufwerk.
 
-In meinen Beispielen werde ich alles in /tmp machen, erstens weil ich es da zum Ausprobieren wirklich gemacht habe, und zweitens, weil es so schön kurz ist. Außerdem gehe ich davon aus, daß alle Schritte als root ausgeführt werden. Nötig ist es eigentlich nur, um das Image mounten zu können. Wer weiß, was er tut, kann davon abweichen, alle anderen nehmen einfach root für den gesamten Prozeß.
+In meinen Beispielen werde ich alles in /tmp machen, erstens weil ich es da zum Ausprobieren wirklich gemacht habe, und zweitens, weil es so schön kurz ist. Außerdem gehe ich davon aus, daß alle Schritte als root ausgeführt werden. Nötig ist es eigentlich nur, um das Image mounten zu können. Wer weiß, was er tut, kann davon abweichen, alle anderen nehmen einfach root für den gesamten Prozess.
 
 ## Die Minimal-Floppy
 
@@ -75,6 +75,6 @@ Ausführbar machen und ausprobieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
 
-<!-- MediaWiki page 1449; revision 4014; parent 1866; 2009-02-11T11:05:16Z -->
+<!-- MediaWiki page 1449; revision 4158; parent 4014; 2009-03-20T13:19:45Z -->
