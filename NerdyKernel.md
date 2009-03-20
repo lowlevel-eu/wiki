@@ -54,10 +54,6 @@ Folgende Features sind implementiert
 
 - x86
 - kommunikationsfähiger Hybrid-Kernel
-  - CPUID
-  - ISR
-  - PIC
-  - IRQ
   - Physikalische Speicherverwaltung
   - Syscalls
   - Paging mit automatischer Flagwahl
@@ -105,6 +101,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4149/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4150/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4149; parent 4143; 2009-03-20T00:41:58Z -->
+<!-- MediaWiki page 1816; revision 4150; parent 4149; 2009-03-20T00:42:13Z -->
