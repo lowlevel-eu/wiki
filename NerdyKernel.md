@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: | 0.1-Alpha Build 0007 |
+| Akt. Version: | 0.1-Alpha Build 0008 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -34,8 +34,8 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 
 ## OS-Statistiken
 
-- Version: rizor-OS-0.1 Build 0007-Alpha
-  - Kernel: 3136 LOC
+- Version: rizor-OS-0.1 Build 0008-Alpha
+  - Kernel: 3524 LOC
   - Libc: 316 LOC
   - Kernel-Library: 66 LOC
   - Collection: 7 LOC
@@ -43,9 +43,8 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.1.0008-Alpha
+  - rizor-0.3.1.0009-Alpha
     - Entwicklung zum Multitasking
-    - Entwicklung der KBD und des Keyboard-Treibers
     - Entwicklung des Shared-Memory-Handlers
     - Planung der IPC/RPC
 
@@ -64,6 +63,8 @@ Folgende Features sind implementiert
   - Paging mit automatischer Flagwahl
   - Speicherverwaltung für Kernel- und User-Space
   - Spinlocks
+  - voller Funktionsumfang des KBC
+  - einfache Ausgabe des Keyboards
 - Teile der libc
 - Eine Kernel-Library
 - Eine Collection an Datenstrukturen
@@ -104,6 +105,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4149/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4143; parent 4142; 2009-03-19T15:42:40Z -->
+<!-- MediaWiki page 1816; revision 4149; parent 4143; 2009-03-20T00:41:58Z -->
