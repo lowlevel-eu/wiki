@@ -70,7 +70,7 @@ Folgende Features sind implementiert
 
 - rizor-OS-0.1 (Release: März/April 2009):
   - **Feature Freeze**: 31.03.2009
-  - **Geplanter Release**: 15.04.2009
+  - **Geplanter Release**: Ende April/Anfang Mai
   - Multitasking (einfaches Round-Robin ohne Thread-Support)
   - Speicherverwaltung mit einfachem First-Fit
   - libc (nötigste Implementierung)
@@ -102,6 +102,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4151/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4151; parent 4150; 2009-03-20T00:42:22Z -->
+<!-- MediaWiki page 1816; revision 4152; parent 4151; 2009-03-20T00:42:40Z -->
