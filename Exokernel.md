@@ -4,7 +4,7 @@ Der Exokernel ist eine Unterart des [Mikrokernels](https://github.com/lowlevel-e
 
 ## Motivation für den Exokernel
 
-Eine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wird bei jedem traditionellen Betriebsystem versucht, alle Anforderungen zu erfüllen. Die [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") wird dadurch aufgebläht und unperfom. Die Idee des Exokernel ist, dass die Abstraktion der [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") nicht auf [Kernelebene](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), sondern auf Anwendungsebene passiert.
+Eine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wird bei jedem traditionellen [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") versucht, alle Anforderungen zu erfüllen. Die [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") wird dadurch aufgebläht und unperfom. Die Idee des Exokernel ist, dass die Abstraktion der [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") nicht auf [Kernelebene](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), sondern auf Anwendungsebene passiert.
 
 ## Besonderheiten eines Exokernels
 
@@ -16,6 +16,6 @@ Wie erwähnt, ist die HAL nicht zwingend, sondern optimal. Ein Programm kann ent
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
 
-<!-- MediaWiki page 1678; revision 3508; parent 3484; 2008-11-09T16:45:37Z -->
+<!-- MediaWiki page 1678; revision 4166; parent 3508; 2009-03-21T08:25:51Z -->
