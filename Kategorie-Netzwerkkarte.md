@@ -8,10 +8,12 @@ Es gibt verschiedene Arten von Netzwerkkarten, wie zum Beispiel die PCI-Lösung.
 
 ## Netzwerkstandards
 
-Wird noch geschrieben.
+# Übertragungsraten
+
+Definition Maximale Übertragungsrate IEEE 802.11 2 Mbps IEEE 802.11a 54 Mbps IEEE 802.11b 11 Mbps IEEE 802.11g 54 Mbps IEEE 802.11h 54 Mbps IEEE 802.11n 589 Mbps
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1826/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1826/index.html)
 
-<!-- MediaWiki page 1826; revision 4156; parent 4153; 2009-03-20T11:03:37Z -->
+<!-- MediaWiki page 1826; revision 4162; parent 4156; 2009-03-21T01:32:03Z -->
