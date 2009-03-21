@@ -80,7 +80,7 @@ Damit wird eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Li
 
 ### Kompilieren
 
-Der C-Kernel wir mit diesem Befehl kompiliert:
+Der C-Kernel wird mit diesem Befehl kompiliert:
 
     $ gcc -ffreestanding -o kernel_c.o -c kernel.c -Wall -Werror -nostdlib -nostartfiles -nodefaultlibs
 
@@ -211,6 +211,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 3748; parent 3281; 2008-12-26T12:53:21Z -->
+<!-- MediaWiki page 1604; revision 4164; parent 3748; 2009-03-21T02:56:22Z -->
