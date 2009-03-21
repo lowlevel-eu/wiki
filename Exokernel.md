@@ -8,7 +8,7 @@ Eine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "
 
 ## Besonderheiten eines Exokernels
 
-Wie erwähnt, ist die HAL nicht zwingend, sondern optimal. Ein Programm kann entscheiden, ob sie denn Hardwarezugriff braucht. Bei den meisten Programmen wird dies nicht nötig sein. Bei rechenintisiven oder systemveränderen Programmen wird dies jedoch nötig. Folgendes Diagramm veranschaulich dies. ![exokernel.png](http://be59.be.funpic.de/Lowlevel/exokernel.png)
+Wie erwähnt, ist die HAL nicht zwingend, sondern optional. Ein Programm kann entscheiden, ob sie denn Hardwarezugriff braucht. Bei den meisten Programmen wird dies nicht nötig sein. Bei rechenintisiven oder systemveränderen Programmen wird dies jedoch nötig. Folgendes Diagramm veranschaulich dies. ![exokernel.png](http://be59.be.funpic.de/Lowlevel/exokernel.png)
 
 ## Vorteile
 
@@ -16,6 +16,6 @@ Wie erwähnt, ist die HAL nicht zwingend, sondern optimal. Ein Programm kann ent
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
 
-<!-- MediaWiki page 1678; revision 4166; parent 3508; 2009-03-21T08:25:51Z -->
+<!-- MediaWiki page 1678; revision 4169; parent 4166; 2009-03-21T11:30:05Z -->
