@@ -43,7 +43,7 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.1.0009-Alpha
+  - rizor-0.3.1.0010-Alpha
     - Entwicklung zum Multitasking
     - Entwicklung des Shared-Memory-Handlers
     - Planung der IPC/RPC
@@ -102,6 +102,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4185; parent 4155; 2009-03-24T21:06:54Z -->
+<!-- MediaWiki page 1816; revision 4186; parent 4185; 2009-03-24T21:07:59Z -->
