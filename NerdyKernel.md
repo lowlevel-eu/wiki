@@ -61,7 +61,7 @@ Folgende Features sind implementiert
   - Speicherverwaltung für Kernel- und User-Space
   - Spinlocks
   - voller Funktionsumfang des KBC
-  - einfache Ausgabe des Keyboards
+  - kompletter Keyboardhandler mit einem eigenen Keycode
 - Teile der libc
 - Eine Kernel-Library
 - Eine Collection an Datenstrukturen
@@ -102,6 +102,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4155; parent 4152; 2009-03-20T10:32:30Z -->
+<!-- MediaWiki page 1816; revision 4185; parent 4155; 2009-03-24T21:06:54Z -->
