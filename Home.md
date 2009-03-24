@@ -10,7 +10,9 @@ Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Communi
 
 ## Zum Stöbern:
 
-Zufällige Seite Spezialseiten
+Zufällige Seite
+
+Spezialseiten
 
 ****News****
 
@@ -165,6 +167,6 @@ Zufällige Seite Spezialseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4183/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 4183; parent 4182; 2009-03-24T19:29:02Z -->
+<!-- MediaWiki page 1712; revision 4184; parent 4183; 2009-03-24T19:29:40Z -->
