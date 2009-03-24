@@ -8,7 +8,9 @@ Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Communi
 
 **ACHTUNG**: Es wurde eine Lizenz für die Texte des Wikis vorgeschlagen. Mehr Informationen dazu gibt es hier.
 
-**Zum Stöbern:** Zufällige Seite
+### Zum Stöbern:
+
+Zufällige Seite
 
 ****News****
 
@@ -163,6 +165,6 @@ Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Communi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4182/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 4181; parent 4180; 2009-03-24T19:26:51Z -->
+<!-- MediaWiki page 1712; revision 4182; parent 4181; 2009-03-24T19:27:44Z -->
