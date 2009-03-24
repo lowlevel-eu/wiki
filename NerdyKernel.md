@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
-| Akt. Version: | 0.1-Alpha Build 0008 |
+| Akt. Version: | 0.1-Alpha Build 0009 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -34,8 +34,8 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
 
 ## OS-Statistiken
 
-- Version: rizor-OS-0.1 Build 0008-Alpha
-  - Kernel: 3524 LOC
+- Version: rizor-OS-0.1 Build 0009-Alpha
+  - Kernel: 3819 LOC
   - Libc: 316 LOC
   - Kernel-Library: 66 LOC
   - Collection: 7 LOC
@@ -102,6 +102,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4186; parent 4185; 2009-03-24T21:07:59Z -->
+<!-- MediaWiki page 1816; revision 4187; parent 4186; 2009-03-24T21:09:58Z -->
