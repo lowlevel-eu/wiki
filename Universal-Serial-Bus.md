@@ -8,7 +8,7 @@ Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.gi
 
 ## Einsatzgebiete
 
-USB ist sehr vielseitig verwendbar, es eignet sich für externe Festplatten und Laufwerke, externen Flashspeicher, Drucker, Kartenleser und vile Geräte mehr, wo es (mehr oder weniger) auf schnelle Datenübertragung ankommt.
+USB ist sehr vielseitig verwendbar, es eignet sich für externe Festplatten und Laufwerke, externen Flashspeicher, Drucker, Kartenleser und viele Geräte mehr, wo es (mehr oder weniger) auf schnelle Datenübertragung ankommt.
 
 ## USB 3.0 (SuperSpeed USB)
 
@@ -46,6 +46,6 @@ Es existieren folgende Standards für USB Host-Controller:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 4144; parent 4120; 2009-03-19T16:13:55Z -->
+<!-- MediaWiki page 1690; revision 4178; parent 4144; 2009-03-24T06:20:37Z -->
