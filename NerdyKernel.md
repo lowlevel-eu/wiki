@@ -12,7 +12,7 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") & [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Noch nicht näher geplant |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Noch nicht näher geplant |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message-Passing, Message-Queues, RPC |
 | Homepage |  |
 
 In Planung
@@ -32,6 +32,14 @@ Zur Interaktion mit dem User sind einfache Terminals geplant. Später soll es da
 
 Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elementares Filesystem haben, damit er die Boot-Files lesen und die entsprechenden Module laden kann. Manche Module sollen dabei direkt in den Kernelspace geladen werden (z.B. PIC, erweiterte Speicherverwaltung). Alle anderen Module sollen dann im Userspace arbeiten. Dadurch soll eine größtmögliche Portierbarkeit auf andere Architekturen ermöglicht werden. Außerdem sind dann leichter Erweiterungen und Updates möglich. Jeder Task, der einen Syscall anbietet, muss außerdem einen Broadcast-Handler anbieten, damit der Kernel in regelmäßigen Abständen die Funktion der einzelnen Tasks gewährleisten kann. Wenn der Task nach einer bestimmten Zeit nicht reagiert, wird dieser beendet und automatisch vom Kernel neu gestartet. Falls dieser Task zur Interaktion mit anderen Tasks verwendet wurde, wird jedem Task ein Signal geschickt, das ihm sagt, dass er seine Informationen noch einmal schicken soll. Es sei denn, die Informationen befinden sich noch in einer Liste o. ä., die abgearbeitet wird.
 
+## Modulkommunikation
+
+Ein Modul registriert sich im Kernel als Modul an gibt eine Beschreibung ab (meistens den Namen der Hardware die es verwaltet). Außerdem muss das Modul einen Speicherbereich angeben den es für Broadcasts vorsieht. Ein Modul kann beliebig viele Methoden registrieren; es muss nur eine Beschreibung und die Anzahl an Parametern angeben. Wenn es Rückgabewerte gibt, geschieht das über das normale Message-Passing des Kernels. Es kann außerdem entschieden werden, ob der Prozess eine Benachrichtigung erhalten möchte, dass sein Auftrag erfolgreich umgesetzt wurde. Das funktioniert aber nur, wenn das Modul solch eine Möglichkeit bietet. Dadurch ist es möglich, dass die Softwareentwickler zwischen synchroner und asynchroner Kommunikation entscheiden können-
+
+## Interprozesskommunikation
+
+Es wird mehrere Möglichkeiten der Kommunikation geben. Zum einen gibt es Shared-Memory, Message-Passing und dann noch Message-Queues. Beim Shared-Memory, müssen sich die kooperierenden Prozesse selbst um die Synchronisation kümmern. Beim Message-Passing bekommt der Emfänger ein Signal, dass eine Nachricht für ihn bereit liegt. Diese kann er sich dann in seinen Speicher laden. Bei den Message-Queues geschieht es auch nur über Methoden. Jede Nachricht wird in einen Puffer in den Kernel geladen. Wenn der Sender eine größere Nachricht sendet, dann wird das über mehrere Puffer zwischengelagert. Außerdem werden diese großen Nachrichten nur nach und nach in den Kernel geladen. Dadurch muss der Prozess länger warten, aber der Kernel bleibt vom Speicheraufwand her gering.
+
 ## OS-Statistiken
 
 - Version: rizor-OS-0.1 Build 0009-Alpha
@@ -46,7 +54,9 @@ Es soll ein elementarer Hybridkernel angeboten werden. Dieser soll auch ein elem
   - rizor-0.3.1.0010-Alpha
     - Entwicklung zum Multitasking
     - Entwicklung des Shared-Memory-Handlers
-    - Planung der IPC/RPC
+    - Entwicklung der Module-RPC
+    - Planung des Messagepassings
+    - Planung der Messagequeues
 
 ## Features
 
@@ -102,6 +112,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4195/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4187; parent 4186; 2009-03-24T21:09:58Z -->
+<!-- MediaWiki page 1816; revision 4195; parent 4187; 2009-03-26T13:20:11Z -->
