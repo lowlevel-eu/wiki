@@ -4,6 +4,6 @@ MS-DOS , kurz für Microsoft Disk Operating System, ist eines der ersten Betrieb
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4192/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
 
-<!-- MediaWiki page 1829; revision 4190; parent 0; 2009-03-25T20:00:27Z -->
+<!-- MediaWiki page 1829; revision 4192; parent 4190; 2009-03-26T12:08:54Z -->
