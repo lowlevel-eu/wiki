@@ -4,7 +4,7 @@
 
 In diesem Tutorial werde ich beschreiben wie man einen in C programmierten Kernel mithilfe von Grub bootet.
 
-Ich werde hier beschreiben, wie ich es unter Linux mache, unter Windows wird es sicher auch gehen (nur etwas anders).
+Ich werde hier beschreiben, wie ich es unter Linux mache. Unter Windows geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt - das heißt, du solltest dir erst den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
 
 ## Kernel
 
@@ -212,6 +212,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4199/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4189; parent 4164; 2009-03-25T06:26:52Z -->
+<!-- MediaWiki page 1604; revision 4199; parent 4189; 2009-03-27T20:57:55Z -->
