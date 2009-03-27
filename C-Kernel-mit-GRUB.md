@@ -1,18 +1,18 @@
 # C-Kernel mit GRUB
 
-## Vorwort
+In diesem Tutorial werde ich beschreiben wie man einen in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmierten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mithilfe von Grub bootet.
 
-In diesem Tutorial werde ich beschreiben wie man einen in C programmierten Kernel mithilfe von Grub bootet.
+## Hinweis für Windowsianer
 
-Ich werde hier beschreiben, wie ich es unter Linux mache. Unter Windows geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt - das heißt, du solltest dir erst den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
+Ich werde hier beschreiben, wie ich es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") mache. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt - das heißt, du solltest dir erst den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
 
 ## Kernel
 
-Der eigentliche Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss aber immernoch in Assembler sein.
+Der eigentliche Kernel soll ja in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmiert sein. Ein Teil des [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") muss aber immernoch in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sein.
 
 ### Kernel - C
 
-Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den hier benutzen: \<c\> int main() {
+Als erstes kannst du dir einen kleinen Test-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ausdenken, oder einfach den hier benutzen: \<c\> int main() {
 
      // Pointer zum Videospeicher
      char *video = (char*)0xB8000;
@@ -68,7 +68,7 @@ loader:
 
 ## Zusammenbauen
 
-Nun müssen wir den Kernel "zusammenbauen". Dafür müssen wir den Assembler-Code assemblieren, den C-Code kompilieren und am Ende beides linken.
+Nun müssen wir den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") "zusammenbauen". Dafür müssen wir den [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")-Code assemblieren, den [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")-Code kompilieren und am Ende beides linken.
 
 ### Assemblieren
 
@@ -130,11 +130,11 @@ Wenn man später mehr Dateien hat, können diese natürlich auch dazugelinkt wer
 
 ## Grub-Image erstellen
 
-Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann Grub und unseren Kernel draufladen.
+Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann Grub und unseren [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") draufladen.
 
 ### Floppy-Image erstellen
 
-Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit ext2. Es können auch andere Dateisysteme benutzt werden, z.B FAT, man muss nur drauf achten, dass Grub dieses Dateisystem unterstützt.
+Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere Dateisysteme benutzt werden, z.B [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass Grub dieses [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") unterstützt.
 
 Mit *dd* erzeugen wir ein 1,44MB großes Floppy-Image:
 
@@ -212,6 +212,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4199/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4200/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4199; parent 4189; 2009-03-27T20:57:55Z -->
+<!-- MediaWiki page 1604; revision 4200; parent 4199; 2009-03-27T21:20:13Z -->
