@@ -1,5 +1,9 @@
 # POSIX
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 POSIX (**P**ortable **O**perating **S**ystem **I**nterface) ist ein Standard, der festlegt, wie Anwendungen mit dem Betriebssystem kommunizieren. Der Name wurde von Richard Stallman vorgeschlagen, als IEEE einen einprägsamen Namen suchte.
 
 ## Spezifikation
@@ -14,6 +18,6 @@ Die Spezifikation der Benutzer- und Software-Schnittstelle ist in vier Teile unt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
 
-<!-- MediaWiki page 1775; revision 3923; parent 3921; 2009-01-19T18:57:02Z -->
+<!-- MediaWiki page 1775; revision 4197; parent 3923; 2009-03-27T16:35:38Z -->
