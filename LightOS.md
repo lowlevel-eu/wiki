@@ -18,7 +18,7 @@
 <https://lightos.bountysource.com/>
 
   
-lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. Das Projekt wurde zugunsten von [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree") eingestellt.
+lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. ~~Das Projekt wurde zugunsten von [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree") eingestellt~~. Das Projekt wird seit Anfang 2009 wieder weiterentwickelt.
 
 ## Entwickler
 
@@ -62,6 +62,6 @@ Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](https://github
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 3737; parent 2840; 2008-12-26T12:43:08Z -->
+<!-- MediaWiki page 1454; revision 4207; parent 3737; 2009-03-28T11:21:23Z -->
