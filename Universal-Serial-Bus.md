@@ -24,7 +24,9 @@ USB 1.1 wurde 1998 veröffentlicht und behob einige Fehler und Unklarheiten
 
 ## USB 1.0
 
-USB 1.0 wurde 1996 von Intel veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. Es eignete sich wegen der langsamen Datenübertragung von 12 MBit/s nicht zum Anschluss von Festplatten. **Für alle USB-Spezifikationen gilt**: -Spannung: 5V -Stromstärke: 500 mA
+USB 1.0 wurde 1996 von Intel veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. Es eignete sich wegen der langsamen Datenübertragung von 12 MBit/s nicht zum Anschluss von Festplatten.
+
+**Für alle USB-Spezifikationen gilt**: Spannung: 5V ; Stromstärke: 500 mA (USB 3.0 liefert 900mA)
 
 ## USB-Controller
 
@@ -46,6 +48,6 @@ Es existieren folgende Standards für USB Host-Controller:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 4214; parent 4213; 2009-03-30T09:05:13Z -->
+<!-- MediaWiki page 1690; revision 4215; parent 4214; 2009-03-30T09:06:44Z -->
