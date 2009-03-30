@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC, und wird von jedem modernen Computer unterstützt.
+Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC, und wird von jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d.h., dass man lagsame USB 1.0-Geräte an den schnelleren USB 2.0 anschließen kann und umgekehrt.
 
 ## Einsatzgebiete
 
@@ -48,6 +48,6 @@ Es existieren folgende Standards für USB Host-Controller:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 4215; parent 4214; 2009-03-30T09:06:44Z -->
+<!-- MediaWiki page 1690; revision 4216; parent 4215; 2009-03-30T09:09:05Z -->
