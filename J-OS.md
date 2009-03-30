@@ -1,6 +1,6 @@
 # J-OS
 
-Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren angefangen Visual Basic zu programmieren. Mit ca. 10 Jahren kam dann HTML dazu. Seit ich 12 bin, programmiere ich ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") namens **[J-Tech OS](#)** in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Ich spreche folgende (Programmier-)Sprachen:
+Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren angefangen Visual Basic zu programmieren. Mit ca. 10 Jahren kam dann HTML dazu. Seit ich 12 bin, programmiere ich ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") namens **[J-Tech OS](#j-tech-os)** in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Ich spreche folgende (Programmier-)Sprachen:
 
 - Visual Basic
 - [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")
@@ -9,8 +9,16 @@ Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren an
 - ein bisschen JavaScript und PHP
 - Deutsch und Englisch :)
 
+  
+
+### J-Tech OS
+
+J-Tech OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe. Da es sich nicht lohnen würde, J-Tech OS in der Kategorie Betriebssysteme zu verewigen, habe ich das auch nicht vor.
+
+J-Tech OS ist in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Es wird einen Microkernel und eine native API haben.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4224/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4225/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 4224; parent 4223; 2009-03-30T18:13:09Z -->
+<!-- MediaWiki page 1828; revision 4225; parent 4224; 2009-03-30T19:21:42Z -->
