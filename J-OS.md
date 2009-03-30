@@ -11,7 +11,7 @@ Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren an
 
   
 
-### J-Tech OS
+## J-Tech OS
 
 J-Tech OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe. Da es sich nicht lohnen würde, J-Tech OS in der Kategorie Betriebssysteme zu verewigen, habe ich das auch nicht vor.
 
@@ -19,6 +19,6 @@ J-Tech OS ist in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4225/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4226/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 4225; parent 4224; 2009-03-30T19:21:42Z -->
+<!-- MediaWiki page 1828; revision 4226; parent 4225; 2009-03-30T19:25:18Z -->
