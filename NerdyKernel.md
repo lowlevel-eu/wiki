@@ -64,6 +64,13 @@ Es wird mehrere Möglichkeiten der Kommunikation geben. Zum einen gibt es Shared
     - Module-RPC
     - Messagepassings
     - Messagequeues
+- System
+  - rizor-os-0.1
+    - Testmethoden
+      - physikalische Speicherverwaltung
+      - Paging
+      - virtuelle Speicherverwaltung
+      - Multitasking
 
 ## Features
 
@@ -119,6 +126,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4229/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4229; parent 4228; 2009-03-31T20:39:56Z -->
+<!-- MediaWiki page 1816; revision 4230; parent 4229; 2009-03-31T20:42:03Z -->
