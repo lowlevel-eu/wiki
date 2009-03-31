@@ -51,12 +51,19 @@ Es wird mehrere Möglichkeiten der Kommunikation geben. Zum einen gibt es Shared
 ## Entwicklungsstatus
 
 - Kernel
-  - rizor-0.3.1.0010-Alpha
-    - Entwicklung zum Multitasking
-    - Entwicklung des Shared-Memory-Handlers
-    - Entwicklung der Module-RPC
-    - Planung des Messagepassings
-    - Planung der Messagequeues
+  - rizor-0.3.2-Alpha
+    - Fertigstellung der Elf-Loader
+    - Fertigstellung des Multitaskings
+  - rizor-0.3.3
+    - Optimierung des Kernels
+    - Auslagerung der Module
+  - rizor-0.3.4 (Kernel für rizor-os-0.1)
+    - letze Optimierungnen
+  - rizor-0.4.0-Alpha (Kernel für rizor-os-0.2)
+    - Shared-Memory-Handlers
+    - Module-RPC
+    - Messagepassings
+    - Messagequeues
 
 ## Features
 
@@ -112,6 +119,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4195/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4228/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4195; parent 4187; 2009-03-26T13:20:11Z -->
+<!-- MediaWiki page 1816; revision 4228; parent 4195; 2009-03-31T20:39:39Z -->
