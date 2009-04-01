@@ -20,7 +20,7 @@ Mich hat das OS-Programmieren eigentlich erst so richtig gepackt vor etwa einem 
 
 ### Windows Longhorn
 
-MS mit seinem Windows Longhorn, das angeblich Ende 2005 auf den Markt kommen soll. Leider hab ich bei MS nur diese deutschsprachige Seite zu Longhorn gefunden, wer weiteres über Longhorn weiß, bitte mir Mailen: remokessler@gmx.ch
+MS mit seinem Windows Longhorn, das angeblich Ende 2005 auf den Markt kommen soll.
 
 [Hier](http://www.microsoft.com/germany/ms/msdnbiblio/pdc2003/longhorn.htm) werden schnell die wichtigsten Neuerungen von Longhorn angekratzt, wie das User Interface (Avalon), die Kommunikation (Indigo) und das revolutionäre Dateisystem WinFS.
 
@@ -360,6 +360,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 3521; parent 3262; 2008-11-10T19:24:00Z -->
+<!-- MediaWiki page 1470; revision 4241; parent 3521; 2009-04-01T16:34:10Z -->
