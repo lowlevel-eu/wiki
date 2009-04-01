@@ -8,7 +8,7 @@ Als Real Mode wird der 16-Bit-Modus der x86-Prozessoren bezeichnet. Der Real Mod
 
 ## Speicheradressierung
 
-Im Real Mode wird eine Speicheraddresse über ein Paar von 16-Bit-Werten adressiert. Die beiden Werte nennt man Segment und Offset. Dies wurde so implementiert, da man nur 16-Bit-Register zur Verfügung hatte, aber 20bit Speicheradressen erzeugen wollte. Die CPU berechnet dann aus der Segment:Offset Kombination die "richtige" physische Adresse (die dann auf den Bus gelegt wird, um sie wirklich vom RAM auszulesen/zu schreiben). Dies macht die CPU anhand folgender Formel:
+Im Real Mode wird eine Speicheraddresse über ein Paar von 16-Bit-Werten adressiert. Die beiden Werte nennt man Segment und Offset. Dies wurde so implementiert, da man nur 16-Bit-Register zur Verfügung hatte, aber 20-Bit-Speicheradressen erzeugen wollte. Die CPU berechnet dann aus der Segment:Offset Kombination die "richtige" physische Adresse (die dann auf den Bus gelegt wird, um sie wirklich vom RAM auszulesen/zu schreiben). Dies macht die CPU anhand folgender Formel:
 
 physische Adresse = (Segment \* 16) + Offset
 
@@ -16,6 +16,6 @@ Als Beispiel kann die Adresse des Video-RAM dienen: Die physische Adresse des Vi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
 
-<!-- MediaWiki page 1665; revision 4238; parent 4075; 2009-04-01T14:29:15Z -->
+<!-- MediaWiki page 1665; revision 4240; parent 4238; 2009-04-01T14:36:56Z -->
