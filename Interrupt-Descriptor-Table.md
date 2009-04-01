@@ -39,10 +39,8 @@ Gibt den Selektor an.
 Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse eines Selektors geladen werden. Dieser Selektor sind folgendermaßen aus:
 
 | 47-32 | 31-0 |
-| ---------------- | ----------------- |
-| Größer der IDT | Adresse der IDT |
-
-  
+| --------------- | ----------------- |
+| Größe der IDT | Adresse der IDT |
 
 ## Weitere Informationen
 
@@ -50,6 +48,6 @@ Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse eines Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4239/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 3673; parent 3670; 2008-12-11T16:18:08Z -->
+<!-- MediaWiki page 1603; revision 4239; parent 3673; 2009-04-01T14:29:39Z -->
