@@ -8,14 +8,14 @@ Als Real Mode wird der 16-Bit-Modus der x86-Prozessoren bezeichnet. Der Real Mod
 
 ## Speicheradressierung
 
-Im Realmode wird eine Speicheraddresse über ein Paar von 16bit Werten adressiert. Die beiden Werte nennt man Segment und Offset. Dies wurde so implementiert, da man nur 16bit Register zur Verfügung hatte, aber 20bit Speicheradressen erzeugen wollte. Die CPU berechnet dann aus der Segment:Offset Kombination die "richtige" physische Adresse (die dann auf den Bus gelegt wird, um sie wirklich vom RAM auszulesen/zu schreiben). Dies macht die CPU anhand folgender Formel:
+Im Real Mode wird eine Speicheraddresse über ein Paar von 16-Bit-Werten adressiert. Die beiden Werte nennt man Segment und Offset. Dies wurde so implementiert, da man nur 16-Bit-Register zur Verfügung hatte, aber 20bit Speicheradressen erzeugen wollte. Die CPU berechnet dann aus der Segment:Offset Kombination die "richtige" physische Adresse (die dann auf den Bus gelegt wird, um sie wirklich vom RAM auszulesen/zu schreiben). Dies macht die CPU anhand folgender Formel:
 
 physische Adresse = (Segment \* 16) + Offset
 
-Als Beispiel kann die Adresse des Video-RAM dienen: Die physische Adresse des Video-RAM ist 0xB8000. Das kann man beispielsweise in 0xB800:0x0000 zerlegen (Da dieses Zerlegen nicht eindeutig ist, gibt es natürlich noch einige andere Segment:Offset-Kombinationen, die auf die gleiche physische Adresse zeigen), d.h. 0xB800 ist nur das (Realmode-) Segment und nicht die eigentlich dahinter stehende physische Adresse.
+Als Beispiel kann die Adresse des Video-RAM dienen: Die physische Adresse des Video-RAM ist 0xB8000. Das kann man beispielsweise in 0xB800:0x0000 zerlegen (Da dieses Zerlegen nicht eindeutig ist, gibt es natürlich noch einige andere Segment:Offset-Kombinationen, die auf die gleiche physische Adresse zeigen), d.h. 0xB800 ist nur das (Real-Mode-) Segment und nicht die eigentlich dahinter stehende physische Adresse.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
 
-<!-- MediaWiki page 1665; revision 4075; parent 2978; 2009-02-26T19:00:47Z -->
+<!-- MediaWiki page 1665; revision 4238; parent 4075; 2009-04-01T14:29:15Z -->
