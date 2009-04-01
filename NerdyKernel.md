@@ -58,7 +58,7 @@ Es wird mehrere Möglichkeiten der Kommunikation geben. Zum einen gibt es Shared
     - Optimierung des Kernels
     - Auslagerung der Module
   - rizor-0.3.4 (Kernel für rizor-os-0.1)
-    - letze Optimierungen
+    - letzte Optimierungen
   - rizor-0.4.0-Alpha (Kernel für rizor-os-0.2)
     - Shared-Memory-Handlers
     - Module-RPC
@@ -126,6 +126,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4231/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4230; parent 4229; 2009-03-31T20:42:03Z -->
+<!-- MediaWiki page 1816; revision 4231; parent 4230; 2009-04-01T08:57:28Z -->
