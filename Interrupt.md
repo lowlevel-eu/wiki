@@ -16,6 +16,7 @@ Interrupts können mithilfe von *sti* und *cli* eingeschaltet bzw. ausgeschaltet
 - [Interrupt Vector Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "Interrupt Vector Table")
 - [Interprocessor Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "Interprocessor Interrupt")
 - [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")
+- [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h")
 
 ## Links
 
@@ -23,6 +24,6 @@ Interrupts können mithilfe von *sti* und *cli* eingeschaltet bzw. ausgeschaltet
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4243/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 3055; parent 3040; 2008-08-07T18:59:55Z -->
+<!-- MediaWiki page 1596; revision 4243; parent 3055; 2009-04-01T19:23:21Z -->
