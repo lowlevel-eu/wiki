@@ -1,13 +1,12 @@
 # J-OS
 
-Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren angefangen Visual Basic zu programmieren. Mit ca. 10 Jahren kam dann HTML dazu. Seit ich 12 bin, programmiere ich ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") namens **[J-Tech OS](#j-tech-os)** in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Ich spreche folgende (Programmier-)Sprachen:
+Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren angefangen Visual Basic zu programmieren. Mit ca. 10 Jahren kam dann HTML dazu. Seit ich 12 bin, programmiere ich ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") namens **[J-Tech OS](#j-tech-os)** in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Ich spreche folgende:
 
 - Visual Basic
 - [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")
 - [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
 - HTML
 - ein bisschen JavaScript und PHP
-- Deutsch und Englisch :)
 
   
 
@@ -20,6 +19,6 @@ Geplant ist ein Microkernel, eine native API, Treiber für Tastatur und Festplat
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4227/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4245/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 4227; parent 4226; 2009-03-30T19:43:43Z -->
+<!-- MediaWiki page 1828; revision 4245; parent 4227; 2009-04-02T09:34:37Z -->
