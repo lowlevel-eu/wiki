@@ -4,7 +4,7 @@
 | ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
-| Akt. Version: | 0.9.1<br>(Stand 02.01.2009) |
+| Akt. Version: | 0.10.1<br>(Stand 03.04.2009) |
 | Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
@@ -78,6 +78,6 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 4044; parent 4043; 2009-02-19T13:38:32Z -->
+<!-- MediaWiki page 1505; revision 4250; parent 4044; 2009-04-03T12:30:19Z -->
