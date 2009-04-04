@@ -14,59 +14,147 @@ FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Ei
 
 ## Aufbau von FAT
 
-FAT wird in 4 Bereiche unterteilt:
+FAT wird in 5 Bereiche unterteilt:
 
-- Reserved Region
-- FAT Region
-- Root Directory Region (Exirstiert nicht unter FAT32)
-- File and Directory Data Region
+- [Bootsektor](#bootsektor)
+- [Reservierte Sektoren](#reservierte-sektoren)
+- [File Allocation Table](#file-allocation-table-1)
+- [Wurzelverzeichnis](#) (bei FAT32 nicht vorhanden)
+- [Datei- and Verzeichnis-Datenregion](#datei--and-verzeichnis-datenregion)
 
-### Reserved Region
+### Bootsektor
 
-#### Boot Sector und der BIOS Parameter Block(BPB)
+Der Bootsektor enthält den BIOS Parameter Block, den Bootloader und die Bootsignatur. Damit dier BIOS Parameter Block nicht ausgeführt wird, sind seine ersten 2 Bytes eine JMP-Anweisung. Hinter dem BIOS Parameter Block folgt der Bootloader. Dieser ist **zwingend** unter FAT notwendig. Der Bootloader der von Windows für FAT benutzt wird, zeigt meistens nur eine Nachricht an, dass man die Diskette entfernen und den Computer neustarten solle.
 
 In MS-DOS 1.0 war kein BPB vorhanden. Stattdessen gab es zwei Typen von FAT:
 
 - Single-Sided: Dieser Typ war für einseitige Disketten da
 - Double-Sided: Dieser Typ war dagegen für doppelseitige Disketten da.
 
-Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verbreitung von MS-DOS 1.0 ist sehr gering. Deswegen wird nicht empfohlen, auf diese MS-DOS Version acht zu nehmen) Ursprünglich waren im BPB weniger als 65.536 Sektoren, womit insgesamt 32 MB bei 512-Byte Sektoren benutzt werden konnten. Ab Windows 95 mit den OEM Service Pack 2 wurde FAT32 verwendet. Während FAT16 nur 2 GB adressieren konnte, galt dies für FAT32 nicht.
+Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verbreitung von MS-DOS 1.0 ist sehr gering. Deswegen wird nicht empfohlen, auf diese MS-DOS Version acht zu nehmen)
 
-| Bezeichnung | Offset | Bytes | Erklärung |
-| ------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| JmpBoot | 0 | 3 | Hier steht ein JMP-Befehl zum Ende der Tabelle. |
-| OSName | 3 | 8 | Hier steht ein 8-Buchstaben-String, der angibt, unter welchen Betriebssystem die Diskette formatiert wurde. Unter Windows sollte dort "MSWIN4.1" stehen. Man kann hier aber eigentlich schreiben, was man möchte. Es hat auf das Dateisystem keinen Einfluss. |
-| BytesPerSec | 11 | 2 | Die Anzahl Bytes, die in einem Sektor vorhanden sind. Bei einer Diskette entspricht dies 512. Dieser Wert ist fest und kann ohne weiteres auch nicht geändert werden und sollte daher auch immer hier eingetragen werden. |
-| SecPerClus | 13 | 1 | Die Anzahl Sektoren, die zu einem Cluster zusammengefasst werden. Was ein Cluster ist, erkläre ich weiter unten. Hier sei vorerst nur wichtig, das auf einer Diskette exakt EIN Sektor in einem Cluster ist. Also hier den Wert 1 eintragen. |
-| RsvdSecCnt | 14 | 2 | Die Anzahl der Reservierten Sektoren. Der Boot Sector, in dem wir uns gerade befinden, ist ein reservierter Sektor. Da man in der Regel nur diesen reservierten Sektor benötigt, trägt man hier 1 ein. |
-| NumFATs | 16 | 1 | Die Anzahl der FAT-Tabellen. Aus Redundanzgründen speichert man meistens 2 FAT-Tabellen auf der Diskette, im Falle, dass eine davon beschädigt sein sollte. Daher hier den Wert 2 eintragen. |
-| RootEntCnt | 17 | 2 | Die Anzahl der möglichen Einträge ins Root-Directory. Wozu dieser Wert genau dient, erkläre ich im Abschnitt über das Root-Directory. Der Standartwert hier ist 224. |
-| TotSec | 19 | 2 | Die Anzahl aller Sektoren, die auf der Diskette vorhanden sind. Bei einer 3,5" 1,44 MB-Diskette sind das 2880 Sektoren. 1,44 MB sind 1440 KB (die Hersteller multiplizieren immer mit 1000 und nicht 1024). 1440 KB sind 1474560 Bytes (diesmal mal 1024). 147560 Bytes geteilt durch 512 Bytes (1 Sektor) ergibt 2880 Sektoren. |
-| MediaType | 21 | 1 | Hier wird der Wert eingetragen, anhand dem erkannt wird, um was für einen Typ es sich bei diesem Datenträger handelt. 0xF0 ist der Wert für Diskette. |
-| FATSize | 22 | 2 | Hier steht die Anzahl der Sektoren, die eine FAT-Tabelle belegt (man erinnere, es gibt meistens ZWEI). Der Wert bei einer 1,44 MB-Diskette ist 9. Wie man auf den Wert kommt, erläutere ich im Abschnitt über die FAT-Tabelle.<br> |
-| SecPerTrack | 24 | 2 | Die Anzahl der Sektoren pro Track. Track wird auch als Cylinder bezeichnet. Dieser Wert ist für den Interrupt 13h wichtig, da dieser die Sektoren über CHS adressiert. Der Wert für eine 1,44 MB Diskette ist 18. |
-| NumHeads | 26 | 2 | Die Anzahl der Köpfe. Auch diese Angabe wird vom Interrupt 13h benötigt, um die Sektoren nach CHS adressieren zu können. Bei einer 1,44 MB-Diskette ist der Wert 2. |
-| HiddenSec | 28 | 4 | Die Anzahl der versteckten Sektoren. Wozu es nützlich wäre, versteckte Sektoren zu haben, weiß ich im Moment nicht, weshalb man hier den Wert 0 eintragen sollte. |
-| TotSec32 | 32 | 4 | Dieser Eintrag ist nur für einen FAT32-formatierten Datenträger wichtig. Da wir uns aber auf FAT12 konzentrieren, tragen wir hier 0 ein. |
-| DrvNum | 36 | 1 | Dieser Wert wird ebenfalls von Interrupt 13h benötigt und gibt Auskunft darüber um welches Laufwerk es sich handelt. Für Diskette tragen wir hier 0x00 ein. |
-| Reserved | 37 | 1 | Dieser Eintrag ist für Windows NT reserviert und sollte mit dem Wert 0 beschrieben werden (auch wenn man WindowsNT/2000/XP benutzt). |
-| VolumeID | 39 | 4 | Hier kann man eine Seriennummer angeben anhand deren man die Diskette beim Einlesen erkennen kann. Dieser Wert wird meistens aus der Zusammenfassung der beiden 16-BIT-Werte von Datum und Zeit gemacht. Wie man Datum und Zeit in 16 BIT speichert, erkläre ich weiter unten. |
-| FileSysType | 54 | 8 | Dämlicherweise soll man hier angeben, welches FAT-Dateisystem man auf dem Datenträger verwendet. Dämlicherweise deshalb, weil dieser Eintrag nicht dazu verwendet wird, um festzustellen welches FAT-System man nun benutzt hat. Aus Gründen der Kompatibilität sollte man hier einfach "FAT12" eintragen und die restlichen Bytes mit 0x20 (Leerzeichen) füllen. Wie man exakt bestimmt, welches FAT-System denn nun auf dem Datenträger verwendet wird erläutere ich weiter unten. |
+| Offset | Größe | Beschreibung |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 3 | Instruktion die den BIOS Parameter Block überspringt |
+| 0x03 | 8 | OEM-Name. Der Name, der Software, die das FAT erstellt hat. Dieses Feld hat keinen Einfluss auf eigentliche Dateisystem. |
+| 0x0B | 2 | Sektor-Größe in Bytes. Gültig: 512, 1024, 2048 und 4096. Normal wird 512 verwendet. |
+| 0x0D | 1 | Cluster-Größe in Sektoren. Gültig: Zweierpotenz zwischen 1 und 64. |
+| 0x0E | 2 | Anzahl reservierter Sektoren inkl. Bootsektor. |
+| 0x10 | 1 | Anzahl an File Allocation Tables. Normal gibt es immer 2 FATs |
+| 0x11 | 2 | Maximale Anzahl an Einträgen im Wurzelverzeichnis (nur gültig für FAT16 und FAT32) |
+| 0x13 | 2 | Anzahl an Sektoren. Wenn hier 0 steht, wird das Feld am Offset 0x20 benutzt. |
+| 0x15 | 1 | Media-Descriptor: • 0xF0: Double sided, 80 Spuren, 18/36 Sektoren pro Spur<br>• 0xF8: Festplatte<br>• 0xF9: Double sided, 80 Spuren, 9/15 Sektoren pro Spur<br>• 0xFA: Single sided, 80 Spuren, 8 Sektoren pro Spur (eventuell auch Ramdisk)<br>• 0xFB: Double sided, 80 Spuren, 8 Sektoren pro Spur<br>• 0xFC: Single sided, 40 Spuren, 9 Sektoren pro Spur<br>• 0xFD: Double sided, 40 Spuren, 9 Sektoren pro Spur oder Double Sided, 77 Spuren, 26 Sektoren pro Spur<br>• 0xFE: Single sided, 40 Spuren, 8 Sektoren pro Spur, Single Sided, 77 Spuren, 26 Sektoren pro Spur oder Double Sided, 77 Spuren, 8 Sektoren pro Spur<br>• 0xFF: Double sided, 40 Spuren, 8 Sektoren pro Spur<br>Dieses Byte gilt als veraltet.<br> |
+| 0x16 | 2 | FAT-Größe in Sektoren. Bei FAT32 steht hier 0 und es wird das Feld bei Offset 0x24 benutzt. |
+| 0x18 | 2 | Spur-Größe in Sektoren. |
+| 0x1A | 2 | Anzahl der Schreib-Lese-Köpfe. |
+| 0x1C | 4 | Anzahl an Sektoren vor dem Bootsektor (z.B wenn das FAT auf einer Partition liegt) |
+| 0x20 | 4 | Anzahl an Sektoren. |
 
-#### FAT-Tabelle
+Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 
-(*Wird noch erweitert*)
+**FAT12 und FAT16**
+
+| Offset | Größe | Beschreibung |
+| -------- | ------- | --------------------------------------------------------------------------------------- |
+| 0x24 | 1 | Nummer des BIOS-Laufwerks |
+| 0x25 | 1 | Reserviert |
+| 0x26 | 1 | Erweiterte Bootsignatur |
+| 0x27 | 4 | Dateisystem-ID |
+| 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
+| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). z.B.: "FAT12 " oder "FAT16 ". |
+| 0x3E | 448 | Bootloader |
+| 0x36 | 2 | Bootsignatur: 0xAA55 |
+
+**FAT32**
+
+| Offset | Größe | Beschreibung |
+| -------- | ------- | --------------------------------------------------------------------------------------- |
+| 0x24 | 4 | FAT-Größe in Sektoren |
+| 0x28 | 2 | FAT-Flags |
+| 0x2A | 2 | FAT32-Version |
+| 0x2C | 4 | Erstes Cluster des Wurzelverzeichnis |
+| 0x30 | 2 | Info-Sektor. Sektor der Informationen über das Dateisystem enthält. |
+| 0x32 | 2 | Sektor der Bootsektorkopie. (Microsoft empfiehlt nur 6 zu verwenden) |
+| 0x34 | 12 | Reserviert |
+| 0x40 | 1 | Nummer des BIOS-Laufwerks |
+| 0x41 | 1 | Reserviert |
+| 0x42 | 1 | Erweiterte Bootsignatur |
+| 0x43 | 4 | Dateisystem-ID |
+| 0x47 | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
+| 0x52 | 8 | FAT-Variante (mit Leerzeichen gefüllt). Immer "FAT32 ". |
+| 0x5A | 420 | Bootloader |
+| 0x1FE | 2 | Bootsignatur: 0xAA55 |
+
+### Reservierte Sektoren
+
+Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren kann z.B ein Bootloader untergebracht werden, wenn der Platz im Bootsektor nicht reicht. Der Bootsektor wird von FAT zu den reservierten Sektoren dazugezählt.
+
+### File Allocation Table
+
+In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man das erste Cluster einer Datei hat, kann man es in der FAT nachschlagen und somit das nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z.B eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters, kann dieses in der FAT auch als defekt markiert werden. Es wird dann nicht mehr zum Speichern von Daten verwendet.
+
+| Bedeutung | FAT12 | FAT16 | FAT32 |
+| ------------------------------------- | ------------- | --------------- | ----------------------- |
+| Freies Cluster | 0x000 | 0x0000 | 0x00000000 |
+| Defektes Cluster | 0xFF7 | 0xFFF7 | 0x0FFFFFF7 |
+| letztes Cluster einer Clusterkette | 0xFF8-0xFFF | 0xFFF8-0xFFFF | 0x0FFFFFF8-0x0FFFFFFF |
+| normales Cluster einer Clusterkette | \- | \- | \- |
+
+Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT das nächste Cluster +2 an. Man muss also den Wert aus der FAT nehmen, 2 subtrahieren und kann das nächste Cluster nachschlagen.
+
+### Wurzelverzeichnis
+
+Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter Bereich auf dem Volume. Es bildet eine Tabelle aus Verzeichnis-Einträgen. Bei FAT32 wird das Wurzelverzeichnis wie jedes andere Verzeichnis auch behandelt und hat deshalb keinen festen Platz auf dem Volume.
+
+### Datei- and Verzeichnis-Datenregion
+
+In der Datei- and Verzeichnis-Datenregion liegen die Datei- und Verzeichnis-Daten. Diese sind in Cluster verteilt. Um eine Datei Clustern zuzuordnen benutzt man die FAT.
+
+## Verzeichnis-Eintrag
+
+Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverzeichnis). Ein Verzeichnis-Eintrag enthält außerdem die Nummer des ersten Sektors.
+
+**Offset**
+
+**Größe**
+
+**Beschreibung**
+
+0x008Dateiname ohne Erweiterung (mit Leerzeichen aufgefüllt). Der Dateiname darf nur aus Großbuchstaben bestehen und darf folgende Zeichen nicht enthalten: 0x22, 0x2A, 0x2B, 0x2C, 0x2E, 0x2F, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F, 0x5B, 0x5C, 0x5D, 0x7C. 0x083Dateierweiterung (mit Leerzeichen aufgefüllt). Erlaubte Zeichen siehe Dateiname. 0x0B1Dateiattribute
+
+**Bedeutung**
+
+Schreibschutz Versteckt Systemdatei Volume-Label Verzeichnis Archiv Ungenutzt
+
+Wenn die ersten 4 Bits gesetzt sind, handelt es sich um einen VFAT-Eintrag
+
+0x0C1Reserviert 0x0D5Erstellungsdatum
+
+**Bedeutung**
+
+Dekasekunde (1 Dekasekunde entspricht 10 Sekunden) Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x122Datum des letzten Zugriffs
+
+**Bedeutung**
+
+Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 bit des ersten Clusters (für FAT32) 0x164Datum des letzten Schreibzugriffs
+
+**Bedeutung**
+
+Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster +2 (man muss 2 subtrahieren um die eigentliche Clusternummer zu erhalten) 0x1C4Dateigröße in Bytes
+
+## VFAT
 
 ## Siehe auch
 
 - FAT12
 
-## Links
+## Weblinks
 
 - [FAT32 File System Specification](http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx)
+- [Wikipedia-Artikel zu FAT](http://de.wikipedia.org/wiki/File_Allocation_Table)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4140; parent 4128; 2009-03-17T13:01:12Z -->
+<!-- MediaWiki page 1643; revision 4252; parent 4140; 2009-04-04T15:24:07Z -->
