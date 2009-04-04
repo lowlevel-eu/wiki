@@ -71,10 +71,10 @@ Ausführbar machen und ausprobieren:
 
 ## Siehe auch
 
-- Grub auf CD
+- GRUB auf CD
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
 
-<!-- MediaWiki page 1449; revision 4159; parent 4158; 2009-03-20T13:22:37Z -->
+<!-- MediaWiki page 1449; revision 4271; parent 4159; 2009-04-04T17:05:34Z -->
