@@ -1,6 +1,6 @@
 # C-Kernel mit GRUB
 
-In diesem Tutorial werde ich beschreiben wie man einen in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmierten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mithilfe von Grub bootet.
+In diesem Tutorial werde ich beschreiben wie man einen in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmierten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mithilfe von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") bootet.
 
 ## Hinweis für Windowsianer
 
@@ -42,7 +42,7 @@ Als erstes kannst du dir einen kleinen Test-[Kernel](https://github.com/lowlevel
 
 Dieser Code macht eigentlich nichts anderes als in die main-Funktion unseres C-Kernels zu springen. \<asm\> global loader ; loader für Linker sichtbar machen extern main  ; main-Funktion des C-Kernels
 
-FLAGS equ 0 MAGIC equ 0x1BADB002  ; Magicnumber - Erkennungsmerkmal für Grub CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
+FLAGS equ 0 MAGIC equ 0x1BADB002  ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
 section .text align 4 MultiBootHeader:
 
@@ -64,7 +64,7 @@ loader:
 
 - Die Flags können geändert werden, am besten schaut man sich die [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Spezifikation an.
 - Den Stack kann man natürlich an eine beliebige Stelle setzen, aber an der 2MB-Grenze wird er uns nicht stören.
-- Es wird die Adresse der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Structure steht z.B wie viel Speicher der Rechner hat, oder welche Module von Grub mitgeladen wurden.
+- Es wird die Adresse der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Structure steht z.B wie viel Speicher der Rechner hat, oder welche Module von GRUB mitgeladen wurden.
 
 ## Zusammenbauen
 
@@ -128,13 +128,13 @@ Nun wird gelinkt:
 
 Wenn man später mehr Dateien hat, können diese natürlich auch dazugelinkt werden. Man sollte den fertigen Kernel jetzt in einer Datei namens *kernel.bin* haben.
 
-## Grub-Image erstellen
+## GRUB-Image erstellen
 
-Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann Grub und unseren [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") draufladen.
+Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") und unseren [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") draufladen.
 
 ### Floppy-Image erstellen
 
-Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere Dateisysteme benutzt werden, z.B [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass Grub dieses [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") unterstützt.
+Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere Dateisysteme benutzt werden, z.B [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") dieses [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") unterstützt.
 
 Mit *dd* erzeugen wir ein 1,44MB großes Floppy-Image:
 
@@ -154,13 +154,13 @@ und kopieren unseren Kernel drauf
 
     $ cp kernel.bin floppy/
 
-Grub muss auch noch drauf. Hierzu legen wir einen Ordner namens *grub* auf der Diskette an und kopieren *stage1* und *stage2* aus */boot/grub* auf die Diskette.
+[GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") muss auch noch drauf. Hierzu legen wir einen Ordner namens *grub* auf der Diskette an und kopieren *stage1* und *stage2* aus */boot/grub* auf die Diskette.
 
     $ mkdir floppy/grub
     $ cp /boot/grub/stage1 floppy/grub
     $ cp /boot/grub/stage2 floppy/grub
 
-Wir brauchen natürlich noch eine Grub-Konfigurationsdatei. Diese sollte folgendermaßen aussehen:
+Wir brauchen natürlich noch eine GRUB-Konfigurationsdatei. Diese sollte folgendermaßen aussehen:
 
     default 0
     timeout 10
@@ -175,7 +175,7 @@ Jetzt können wir das Floppy-Image schon wieder unmounten
 
     $ umount floppy/
 
-aber Grub muss noch in den Bootsektor
+aber GRUB muss noch in den Bootsektor
 
     $ /usr/sbin/grub
 
@@ -186,7 +186,7 @@ Und dann folgendes eingeben:
     setup (fd0)
     quit
 
-Fertig ist unser Grub-Image! Man kann es jetzt noch mit
+Fertig ist unser GRUB-Image! Man kann es jetzt noch mit
 
     $ dd if=floppy.img of=/dev/fd0
 
@@ -207,11 +207,11 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 - [C-Kernel starten](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-starten "C-Kernel starten")
 - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
-- Grub
-- Grub auf CD
+- [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
+- GRUB auf CD
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4258/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4258; parent 4200; 2009-04-04T16:58:07Z -->
+<!-- MediaWiki page 1604; revision 4262; parent 4258; 2009-04-04T16:59:06Z -->
