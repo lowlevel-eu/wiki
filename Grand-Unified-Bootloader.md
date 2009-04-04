@@ -1,6 +1,6 @@
 # Grand Unified Bootloader
 
-Grub ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") aus dem GNU Hurd Projekt. GRUB wird unter der [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") vertrieben.
+GRUB ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") aus dem GNU Hurd Projekt. GRUB wird unter der [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") vertrieben.
 
 Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") entwickeln will. Wie man einen Kernel erstellt, der mit GRUB gebootet werden kann, wird im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") beschrieben.
 
@@ -17,7 +17,7 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 
 - [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB")
 - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
-- Grub auf CD
+- GRUB auf CD
 
 ## Weblinks
 
@@ -26,6 +26,6 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 4257; parent 4255; 2009-04-04T16:57:33Z -->
+<!-- MediaWiki page 1567; revision 4270; parent 4257; 2009-04-04T17:05:10Z -->
