@@ -126,7 +126,7 @@ Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverz
 
 Schreibschutz Versteckt Systemdatei Volume-Label Verzeichnis Archiv Ungenutzt
 
-Wenn die ersten 4 Bits gesetzt sind, handelt es sich um einen VFAT-Eintrag
+Wenn die ersten 4 Bits (Bitmaske: 0x0F) gesetzt sind, handelt es sich um einen VFAT-Eintrag
 
 0x0C1Reserviert 0x0D5Erstellungsdatum
 
@@ -155,6 +155,6 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4252; parent 4140; 2009-04-04T15:24:07Z -->
+<!-- MediaWiki page 1643; revision 4253; parent 4252; 2009-04-04T15:37:53Z -->
