@@ -1,10 +1,10 @@
 # Multiboot
 
-Multiboot ist ein Standard um Betriebssystemen eine einheitliche Startumgebung zu gewährleisten. Ein sehr bekannter Multiboot-Bootloader ist Grub.
+Multiboot ist ein Standard um Betriebssystemen eine einheitliche Startumgebung zu gewährleisten. Ein sehr bekannter Multiboot-Bootloader ist [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
 
 ## Ausgangsstatus
 
-Unmittelbar nachdem die Kontrolle von Grub an den Kernel übergeben wurde, sind folgende Zustände festgesetzt:
+Unmittelbar nachdem die Kontrolle von GRUB an den Kernel übergeben wurde, sind folgende Zustände festgesetzt:
 
 |  |  |
 | ---------- | -------------------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Der Multiboot-Header sollte in den ersten 8192 Bytes des OS-Images liegen. Der M
 
 ### mbh_magic
 
-Dient Grub zum Finden des Multiboot-Headers. Muss 0x1BADB002 sein.
+Dient GRUB zum Finden des Multiboot-Headers. Muss 0x1BADB002 sein.
 
 ### mbh_flags
 
@@ -109,7 +109,7 @@ Pointer zu einem 0-terminated ASCII-String, der die Kommandos enthält, die an d
 
 ### mbs_mods_count
 
-Gibt an wie viele Module von Grub geladen wurden
+Gibt an wie viele Module von GRUB geladen wurden
 
 ### mbs_mods_addr
 
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4072/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 4072; parent 3725; 2009-02-26T18:58:32Z -->
+<!-- MediaWiki page 1560; revision 4267; parent 4072; 2009-04-04T17:00:57Z -->
