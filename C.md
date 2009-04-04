@@ -3,13 +3,13 @@
 C ist eine bekannte ältere Programmiersprache. Sie verfolgt das Ziel bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
 
 | Allgemeines |  |
-| -------------------------------- | ------------------------------------------------------------------------------- |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Name: | C |
 | Inlineassembler: | Ja |
 | Compiler: | [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc") |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | C-Kernel mit Grub |
+| Beispielkernel in der Sprache: | [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") |
 | Homepage |  |
 
   
@@ -85,6 +85,6 @@ Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3580/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 3580; parent 3579; 2008-12-05T19:26:39Z -->
+<!-- MediaWiki page 1526; revision 4269; parent 3580; 2009-04-04T17:03:09Z -->
