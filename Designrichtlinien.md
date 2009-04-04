@@ -19,13 +19,13 @@ Aufgrund der Tatsache, dass die Artikel manchmal doof wirken, finde ich, sollten
 
 ## Artikelaussehen
 
-- Möglichst viel verlinken
+- Sinnvoll verlinken, das heißt nur auf Artikel verlinken die zum Thema beitragen/weiterhelfen
 - Wo zwei Artikelnamen in ein Wort stecken, garnichts verlinken. Zum Beispiel C-Kernel, *nicht* mittels \[\[C\]\]-\[\[Kernel\]\] auf C und Kernel verlinken.
 - *Siehe auch*-Kapitel für interne interessante Wikilinks
 - *Weblinks*-Kapitel für Weblinks
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4206/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4251/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 4206; parent 4204; 2009-03-27T21:56:08Z -->
+<!-- MediaWiki page 1832; revision 4251; parent 4206; 2009-04-04T14:41:34Z -->
