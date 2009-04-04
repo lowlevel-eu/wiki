@@ -71,7 +71,7 @@ Hier gibt es die großen zwei Möglichkeiten, etwas fertiges zu nehmen oder selb
 
 Die folgenden beiden Artikel werden Dir bei den ersten Schritten mit [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") helfen:
 
-- C-Kernel mit Grub
+- [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB")
 - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen") (Falls Du Windows benutzt, ist es vermutlich einfacher, ein vorhandenes GRUB-Image z.B. von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") zu nehmen und den Kernel durch den eigenen zu ersetzen)
 
 Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schreiben - so sei es. In den ersten Ausgaben des findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst - insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
@@ -144,6 +144,6 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 3977; parent 3933; 2009-01-30T18:26:59Z -->
+<!-- MediaWiki page 1619; revision 4268; parent 3977; 2009-04-04T17:02:29Z -->
