@@ -873,15 +873,15 @@ Diese Zeile würde an die Stelle 0;50 auf den Bildschirm eine grüne 4 auf blaue
 
 ## Schlusswort
 
-Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den Code extra stark kommentiert habe. Am Anfang des Dokuments ist der Downloadlink dessen, viel Spaß damit und viel Glück bei eurem OS xD. Wer sich noch tiefer in das Thema einlesen will, dem empfehle ich folgendes [Dokument](http://maxinator.meugster.net/programming/ps2mouse/tp-intf2-4.PDF) über das Synaptic-Touchpad, in dem auch das PS/2-Protokoll gut beschrieben ist. Das ganze Programm kann auch gleich auf meinem [OS](http://maxinator.meugster.net/programme/downloads.html) getestet werden, indem ihr in die Shell als Befehl einfach "ps2mouse" oder "run ps2mouse" eingebt.
+Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den Code extra stark kommentiert habe. Am Anfang des Dokuments ist der Downloadlink dessen, viel Spaß damit und viel Glück bei eurem OS xD. Wer sich noch tiefer in das Thema einlesen will, dem empfehle ich folgendes [Dokument](http://maxinator.freehoster.ch/Programming/programming/ps2mouse/tp-intf2-4.PDF) über das Synaptic-Touchpad, in dem auch das PS/2-Protokoll gut beschrieben ist. Das ganze Programm kann auch gleich auf meinem [OS](http://maxinator.freehoster.ch/layout.php?menu=programming_downloads&site=Programming/programme/kaos.html) getestet werden, indem ihr in die Shell als Befehl einfach "ps2mouse" oder "run ps2mouse" eingebt.
 
 Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.  
-Das Original dieses Dokuments ist auch [hier](http://maxinator.meugster.net/index2.php?site=http://maxinator.meugster.net/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
+Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/layout.php?menu=programming_tutorials&site=Programming/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
 
 --[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 22:03, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4274/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 4160; parent 2740; 2009-03-20T13:32:39Z -->
+<!-- MediaWiki page 1559; revision 4274; parent 4160; 2009-04-09T07:56:58Z -->
