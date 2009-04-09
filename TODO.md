@@ -18,6 +18,7 @@
 
 ## Erweitern
 
+- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"): bitte-blinken-Bit bei den Attributen fehlt, iirc kann man sogar zwischen ich-will-blink-bit und normaler Farbpalette wechseln?
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
@@ -50,6 +51,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 3930; parent 3907; 2009-01-19T23:09:48Z -->
+<!-- MediaWiki page 1518; revision 4281; parent 3930; 2009-04-09T16:27:51Z -->
