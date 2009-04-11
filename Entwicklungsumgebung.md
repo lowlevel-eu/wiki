@@ -14,23 +14,36 @@ Das schwierigste ist wohl nun, aus dieser recht hohen Anzahl an Möglichkeiten v
 
 # Unter Windows
 
-### Zielsetzung
+Unser Ziel in diesem Abschnitt ist es, eine Entwicklungsumgebung unter Windows (vorzugsweise XP, da ich auch kein Freund des UserControl von Vista bin) zu schaffen, in der wir unser OS entwickeln können. Abgesehen davon was wir an Tools (Editor, Assembler, Compiler, Linker und Co) benötigen, gibt es auch verschiedene Vorgehensweisen, besser gesagt verschiedene Entwicklungsumgebungen unter Windows.
 
-Unser Ziel in diesem Abschnitt ist es, eine Entwicklungsumgebung unter Windows (XP) zu schaffen, in der wir unser OS entwickeln können. Wir gehen daher mal davon aus, dass wir die Bootsektoren und Teile des Bootloader (und eventuell auch Teile unserer Treiber) in Assembler programmieren werden und wir daher einen Assembler bnötigen. Desweiteren gehen wir noch davon aus, das der Rest unseres OS in C/C++ geschrieben sein wird. Also fassen wir mal zusammen, was wir unbedingt benötigen:
+Wofür wir diese Entwicklungsumgebung brauchen, sollte wohl dieses Wiki schon klar gestellt haben, nämlich die Entwicklung eines Betriebssystem. Um gleich zu Anfang nicht zu kleckern, schaffen wir uns eine Umgebung, mit der wir das gesamte OS von der ersten zeile Code bis zu einem fertigen CD-Image erstellen können.
 
-- Editor
-- Assembler
-- Compiler
-- Linker
+Aber welche Umgebungen kann man sich nun unter Windows aufbauen?
 
-  
-Nun gut, schauen wir mal was Windows da zu bieten hat. OK, die Reaktion war vorherzusehen, mir ging es nicht anders. Windows hinkt leider hinterher, was Entwicklungstools-OnBoard betrifft. Uns fehlt erstens ein Editor mit Highlighs, zweites das komplette Sortiment an Assembler, Comiler und Linker. Das alles soll aber kein Beinbruch sein und legen unser Taschentuch mal ganz schnell beiseite. Laden wir und erstmal schnell alles aus dem Internet herunter, was wir benötigen werden.
+- Singularity-Modell
+- .NET-Framework-Modell
+- Microsoft Visual Studio (IDE)
+- [Eclipse (IDE)](http://de.wikipedia.org/wiki/Eclipse_(IDE))
+- Sonstige, eine auf GCC-Basis
 
-- [Microsoft .NET Framework](http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6&DisplayLang=de) (falls noch nicht vorhanden)
-- [Visual C++ 2008 Express](http://www.microsoft.com/germany/express/product/visualcplusplusexpress.aspx)
+Nun gut, schauen wir mal was Windows da zu bieten hat. OK, die Reaktion war vorherzusehen, mir ging es nicht anders. Windows hinkt leider hinterher, was Entwicklungstools-OnBoard betrifft. Uns fehlt erstens ein guter Editor mit Highlighs, zweites das komplette Sortiment an Assembler, Comiler und Linker. Das alles soll aber kein Beinbruch sein, weshalb wir unser Taschentuch mal ganz schnell wieder beiseite legen. Welche Tools für welche Umgebung benötigt werden, wird in den nun gleich folgenden Unterpunkten genauer erklärt.
+
+### Singularity-Modell
+
+"In Bearbeitung!"
+
+### .NET-Framework-Modell
+
+"In Bearbeitung!"
+
+### Microsoft Visual Studio (IDE)
+
+### Eclipse (IDE)
+
+### Sonstige, eine auf GCC-Basis
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
 
-<!-- MediaWiki page 1810; revision 4124; parent 3955; 2009-03-12T16:18:02Z -->
+<!-- MediaWiki page 1810; revision 4282; parent 4124; 2009-04-11T11:20:54Z -->
