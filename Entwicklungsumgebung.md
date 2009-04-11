@@ -30,7 +30,20 @@ Nun gut, schauen wir mal was Windows da zu bieten hat. OK, die Reaktion war vorh
 
 ### Singularity-Modell
 
-"In Bearbeitung!"
+Eine Umgebung wie diese macht nur Sinn, wenn mein sein OS wie Singularity mit Managed-Code (wie C#) entwickeln möchte. Hierfür ist Singularity ein gutes Modell, an dem man sich gut orientieren kann, sofern man einmal richtig durchgeblickt hat. Sich die Dokus von Singularity anzuschauen kann keineswegs verkehrt sein. Doch wenn man sich Singularity mal genauer anschaut, ist das eher ein Sprachenwirrwarr, Assembler, C (glaube auch C++), C# und Sing#/Spec#.
+
+Lassen wir uns nicht davon beirren, was wir brauchen sind eher die Build-Tools. Ja ja, hab ich auch gesehen, kein Editor. Naja, ein echter Hardcore-Freak kommt auch mit einem Highlight-losen Editor zurecht ... ich eher weniger. Aber hier kann man ja entweder auf Microsoft Visual Studio Express oder auf Notepad++ setzen, beiden natürlich kostenlos. Notepad++ wird zwar von vielen empfohlen, wer aber zu denen gehört, die gerne ihr Listing ausdrucken, dem empfehle ich die Visual Studio IDE, da Notepad++ meinen Geschmack nach zu verschwenderisch mit Papier um geht. Aber es soll jeder selbst entscheiden, welchen Editor er nutzen möchte.
+
+Auf die Frage, ob wir noch einen Assembler, Compiler oder Linker benötigen ... nöööö, ist alles in den Build-Tools von Singularity zu finden, egal ob 16, 32 oder 64 Bit. Was uns aber fehlt, ist die eigentliche .NET-Framework Build-Umgebung, welche aber Bestandteil des .NET-Frameworks ist. Aktuell ist derzeit die Version 3.5 SP1, welche zwar schon bei Windows 7 mit bei ist, jedoch bei den Vorgängerversionen nachinstalliert werden müsste. Version 2.0 würde zwar auch ausreichen, da wir ja eigentlich ja nur den Builder (MSBuild.exe) brauchen.
+
+OK, was benötigen wir nun alles. Die folgende Liste enthält alle nützlichen Links:
+
+- [Microsoft Singularity RDK 2.0](http://www.codeplex.com/singularity/)
+- [Microsoft .NET-Framework v3.5](http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6&DisplayLang=de)
+- [Microsoft Visual Studio 2008 Express](http://www.microsoft.com/germany/express/)
+- [Notepad++](http://notepad-plus.sourceforge.net/de/site.htm)
+- [Microsoft Windows-Debugger x86/x64 für Kernel-Debug](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
+- [Microsoft Virtual PC 2007 inkl. SP 1](http://www.microsoft.com/downloads/details.aspx?FamilyID=28c97d22-6eb8-4a09-a7f7-f6c7a1f000b5&DisplayLang=de)
 
 ### .NET-Framework-Modell
 
@@ -44,6 +57,6 @@ Nun gut, schauen wir mal was Windows da zu bieten hat. OK, die Reaktion war vorh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4283/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
 
-<!-- MediaWiki page 1810; revision 4282; parent 4124; 2009-04-11T11:20:54Z -->
+<!-- MediaWiki page 1810; revision 4283; parent 4282; 2009-04-11T12:08:33Z -->
