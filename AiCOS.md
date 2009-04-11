@@ -24,6 +24,8 @@ AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln
 
 AiCOS Wurzel liegen weder in der Linux/Unix-Welt, weder in der Windows-Welt, sondern in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity").
 
+**Dieses Projekt ist zur Zeit wegen eines anderen höher priorisierten Projekt angehalten. Dieses Projekt wird jedoch später fortgesetzt.**
+
   
 
 # Entwicklungsumgebung
@@ -215,6 +217,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3873/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 3873; parent 3872; 2009-01-15T16:11:58Z -->
+<!-- MediaWiki page 1766; revision 4284; parent 3873; 2009-04-11T13:09:15Z -->
