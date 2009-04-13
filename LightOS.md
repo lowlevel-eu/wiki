@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message passing & shared-memory |
 | Homepage |  |
 
-<https://lightos.bountysource.com/>
+<http://repo.or.cz/w/lightOS.git>
 
   
 lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. ~~Das Projekt wurde zugunsten von [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree") eingestellt~~. Das Projekt wird seit Anfang 2009 wieder weiterentwickelt.
@@ -56,12 +56,10 @@ Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](https://github
 
 # Links
 
-- [Projektseite](https://lightos.bountysource.com/)
-- [Websvn](https://lightos.bountysource.com/svn)
-- [Subversion Repository](https://svn.bountysource.com/lightos/)
+- [Projektseite](http://repo.or.cz/w/lightOS.git)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1454/index.html)
 
-<!-- MediaWiki page 1454; revision 4207; parent 3737; 2009-03-28T11:21:23Z -->
+<!-- MediaWiki page 1454; revision 4285; parent 4207; 2009-04-13T08:44:31Z -->
