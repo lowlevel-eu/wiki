@@ -183,7 +183,7 @@ Der Programm-Header besteht aus e_phnum Einträgen, wobei jeder e_phentsize gro�
 | [p_type](#p_type) | 0x00 | 4 | Typ des Segments |
 | [p_offset](#p_offset) | 0x04 | 4 | Dateioffset, an dem das Segment steht |
 | [p_vaddr](#p_vaddr) | 0x08 | 4 | Virtuelle Adresse, an die das Segment kopiert werden soll |
-| [p_paddr](#p_paddr) | 0x0C | 4 | Physikalische Adress (unrelevant) |
+| [p_paddr](#p_paddr) | 0x0C | 4 | Physikalische Adresse (unrelevant) |
 | [p_filesz](#p_filesz) | 0x10 | 4 | Größe des Segments in der Datei |
 | [p_memsz](#p_memsz) | 0x14 | 4 | Größe des Segments, das es im Speicher haben soll |
 | [p_flags](#p_flags) | 0x18 | 4 | Flags |
@@ -271,6 +271,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2909/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 2909; parent 2875; 2008-04-13T19:20:50Z -->
+<!-- MediaWiki page 1528; revision 4292; parent 2909; 2009-04-16T16:30:21Z -->
