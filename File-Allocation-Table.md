@@ -4,7 +4,9 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-FAT ist das Filesystem, welches MS-DOS benutzt. Ursprünglich war es für Disketten entwickelt worden. Es gibt drei Varianten:
+FAT ist ein [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), das mit [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") eingeführt wurde. Da PCs Ende der 70er Jahre meist noch keine Festplatten sondern nur Diskettenlaufwerke hatten, war dieses Dateisystem zunächst nur für die Kapazitäten von Disketten ausgelegt.
+
+Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Datentragergröße unterscheiden:
 
 - FAT12
 - FAT16
@@ -155,6 +157,6 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4310; parent 4253; 2009-04-23T15:48:49Z -->
+<!-- MediaWiki page 1643; revision 4311; parent 4310; 2009-04-23T21:46:07Z -->
