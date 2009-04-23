@@ -27,7 +27,7 @@ Dieser dient nur noch dazu, um unter DOS nur die Meldung auszugeben, dass dieses
 
 ### PE Kennzeichnung
 
-An der Stelle 0x3c kommt das Kennzeichnen des PE-Formates. Dieser ist 4-Byte groß und sieht so aus: "PE\0\0". (Zwei Nullbytes am Ende) Das ist wiederum ein Kennzeichen von Windows und sollte verändert (nicht weggelassen) werden.
+Durch die an Offset 0x3c im EXE-Header angegebene Offsetadresse ist der PE/COFF-Header zu finden, welcher mit der Signature "PE\0\0" (4 Bytes, davon zwei Nullbytes am Ende) eingeleitet wird. Direkt im Anschluss folgt dann der COFF-Header. Das ist wiederum ein Kennzeichen von Windows und sollte verändert (nicht weggelassen) werden.
 
 ### COFF Dateiheader
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4307/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4306; parent 4305; 2009-04-23T13:38:16Z -->
+<!-- MediaWiki page 1644; revision 4307; parent 4306; 2009-04-23T13:48:50Z -->
