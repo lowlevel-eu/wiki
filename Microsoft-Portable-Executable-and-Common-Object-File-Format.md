@@ -18,7 +18,7 @@ Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 | 0x02 | 6 Bytes | *Unbedeutend* |
 | 0x08 | 2 Bytes | Größe des EXE-Header in 16-Byte-Paragraphen (Wert: 0x0004) |
 | 0x0A | 50 Bytes | *Unbedeutend* |
-| 0x3C | 2 Bytes | Offset des PE/COFF-Header |
+| 0x3C | 2 Bytes | Dateioffset des PE/COFF-Header |
 | 0x3E | 2 Bytes | *Unbedeutend* |
 
 ### MS-DOS-Stub
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4308; parent 4307; 2009-04-23T13:49:43Z -->
+<!-- MediaWiki page 1644; revision 4309; parent 4308; 2009-04-23T13:51:44Z -->
