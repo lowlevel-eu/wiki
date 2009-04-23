@@ -6,13 +6,20 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Aufbau
 
-### MS-DOS Header
+### EXE Header
 
-Dieser Header ist ein Kompatibilitätsheader, der unter MS-DOS ausgeführt wird und meist eine Fehlermeldung anzeigt, die besagt, dass das Programm Windows benötigt.  
-Für Lowlevel-Zwecke kann dieser Bereich getrost ausgelassen werden, weil
+Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich das PE/COFF-Format aufbaut. Da aber PE/COFF-Dateien all ihre Informationen im PE- bzw. COFF-Header ablegen, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE/COFF-Header enthält.
 
-- Programme eines Nicht-Windowssystem brauchen keine MS-DOS-Kompatibilität
-- Fast niemand verwendet noch MS-DOS
+Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
+
+| Offset | Größe | Beschreibung |
+| -------- | ---------- | ------------------------------------------------------------ |
+| 0x00 | 2 Bytes | EXE-Datei Signatur ("MZ") |
+| 0x02 | 6 Bytes | *Unbedeutend* |
+| 0x08 | 2 Bytes | Größe des EXE-Header in 16-Byte-Paragraphen (Wert: 0x0004) |
+| 0x0A | 50 Bytes | *Unbedeutend* |
+| 0x3C | 2 Bytes | Offset des PE/COFF-Header |
+| 0x3E | 4 Bytes | *Unbedeutend* |
 
 ### PE Kennzeichnung
 
@@ -132,6 +139,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4304/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4102; parent 4099; 2009-03-01T15:26:37Z -->
+<!-- MediaWiki page 1644; revision 4304; parent 4102; 2009-04-23T13:26:14Z -->
