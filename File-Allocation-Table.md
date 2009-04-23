@@ -6,7 +6,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 FAT ist ein [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), das mit [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") eingeführt wurde. Da PCs Ende der 70er Jahre meist noch keine Festplatten sondern nur Diskettenlaufwerke hatten, war dieses Dateisystem zunächst nur für die Kapazitäten von Disketten ausgelegt.
 
-Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Datentragergröße unterscheiden:
+Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Datenträgergröße unterscheiden:
 
 - FAT12
 - FAT16
@@ -26,7 +26,7 @@ FAT wird in 5 Bereiche unterteilt:
 
 ### Bootsektor
 
-Der Bootsektor enthält den BIOS Parameter Block, den Bootloader und die Bootsignatur. Damit dier BIOS Parameter Block nicht ausgeführt wird, sind seine ersten 2 Bytes eine JMP-Anweisung. Hinter dem BIOS Parameter Block folgt der Bootloader. Dieser ist **zwingend** unter FAT notwendig. Der Bootloader der von Windows für FAT benutzt wird, zeigt meistens nur eine Nachricht an, dass man die Diskette entfernen und den Computer neustarten solle.
+Der Bootsektor enthält den BIOS Parameter Block, den Bootloader und die Bootsignatur. Damit der BIOS Parameter Block nicht ausgeführt wird, sind seine ersten 2 Bytes eine JMP-Anweisung. Hinter dem BIOS Parameter Block folgt der Bootloader. Dieser ist **zwingend** unter FAT notwendig. Der Bootloader der von Windows für FAT benutzt wird, zeigt meistens nur eine Nachricht an, dass man die Diskette entfernen und den Computer neustarten solle.
 
 In MS-DOS 1.0 war kein BPB vorhanden. Stattdessen gab es zwei Typen von FAT:
 
@@ -157,6 +157,6 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4311; parent 4310; 2009-04-23T21:46:07Z -->
+<!-- MediaWiki page 1643; revision 4312; parent 4311; 2009-04-23T21:51:33Z -->
