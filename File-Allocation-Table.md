@@ -63,7 +63,7 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 | 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
 | 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). z.B.: "FAT12 " oder "FAT16 ". |
 | 0x3E | 448 | Bootloader |
-| 0x36 | 2 | Bootsignatur: 0xAA55 |
+| 0x1FE | 2 | Bootsignatur: 0xAA55 |
 
 **FAT32**
 
@@ -155,6 +155,6 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 4253; parent 4252; 2009-04-04T15:37:53Z -->
+<!-- MediaWiki page 1643; revision 4310; parent 4253; 2009-04-23T15:48:49Z -->
