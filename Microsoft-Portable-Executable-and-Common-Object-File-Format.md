@@ -8,7 +8,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ### EXE Header
 
-Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich der PE-Header aufbaut. Da aber die Informationen für solche Dateien nicht mehr im EXE.Header abgelegt werden, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE-Header enthält.
+Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich der PE/COFF-Header aufbaut. Da aber die Informationen für solche Dateien nicht mehr im EXE.Header abgelegt werden, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE/COFF-Header enthält.
 
 Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 
@@ -18,8 +18,12 @@ Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 | 0x02 | 6 Bytes | *Unbedeutend* |
 | 0x08 | 2 Bytes | Größe des EXE-Header in 16-Byte-Paragraphen (Wert: 0x0004) |
 | 0x0A | 50 Bytes | *Unbedeutend* |
-| 0x3C | 2 Bytes | Offset des PE-Header |
+| 0x3C | 2 Bytes | Offset des PE/COFF-Header |
 | 0x3E | 4 Bytes | *Unbedeutend* |
+
+### MS-DOS-Stub
+
+Dieser dient nur noch dazu, um unter DOS nur die Meldung auszugeben, dass dieses Programm Windows benötigt.
 
 ### PE Kennzeichnung
 
@@ -139,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4305/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4305; parent 4304; 2009-04-23T13:30:16Z -->
+<!-- MediaWiki page 1644; revision 4306; parent 4305; 2009-04-23T13:38:16Z -->
