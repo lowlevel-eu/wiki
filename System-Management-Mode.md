@@ -12,10 +12,10 @@ In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den 
 
 ## Links
 
-[Intel® 64 and IA-32 Architectures Software Developer's Manual, Volume 3B: System Programming Guide - Chapter 24 System Management](http://www.intel.com/products/processor/manuals/)
+[Intels Manual, Volume 3B: System Programming Guide - System Management](http://www.intel.com/products/processor/manuals/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
 
-<!-- MediaWiki page 1699; revision 4076; parent 3158; 2009-02-26T19:01:10Z -->
+<!-- MediaWiki page 1699; revision 4315; parent 4076; 2009-04-23T21:55:48Z -->
