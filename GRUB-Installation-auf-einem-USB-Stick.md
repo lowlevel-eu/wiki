@@ -116,7 +116,7 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 Wie auch bei der Installation unter Linux/Unix werden hier die GRUB Binarys benötigt, welche auf dem ftp-Server des Projekts zu finden sind: GRUB Legacy. Zur Benutzung empfehle ich die Version 0.97! GRUB Legacy wird zwar nicht mehr weiterentwickelt, aber GRUB2 ist noch nicht als stable freigegeben ist.  
   
-Für die Installation von GRUB unter Windows gibt es ein kleines Tool, das sich "grubinstall.exe" nennt. Hiermit sollte es möglich sein, GRUB auf dem USB-Stick zu installieren.
+Für die Installation von GRUB unter Windows gibt es ein kleines Tool, das sich "grubinstall.exe" nennt. Hiermit sollte es möglich sein, GRUB auf dem USB-Stick zu installieren. Man kann dieses kleine Tool [hier](http://www.geocities.com/lode_leroy/grubinstall/) herunterladen.
 
 ## Testen des USB-Sticks
 
@@ -169,6 +169,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 4317; parent 3492; 2009-04-24T12:02:07Z -->
+<!-- MediaWiki page 1737; revision 4318; parent 4317; 2009-04-24T12:06:23Z -->
