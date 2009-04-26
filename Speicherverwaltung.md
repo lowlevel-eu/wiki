@@ -4,7 +4,11 @@ Die **Speicherverwaltung** (= **Memory Management**) ist ein wichtiger Teil des 
 
 ## Einleitung
 
-Generell ist die Speicherverwaltung dafür zuständig nachfragenden Prozessen freien Speicher zuzuteilen bzw. freizugebenden Speicher wieder zurückzunehmen. Dazu muss natürlich gespeichert werden, welche Speicherbereiche belegt bzw. frei sind. Es ist wichtig zu verstehen, dass die Speicherverwaltung normalerweise auf 2 Ebenen aufgeteilt wird: Zum einen die [physische Speicherverwaltung](#physische-speicherverwaltung) und darauf aufbauend die [virtuelle Speicherverwaltung](#virtuelle-speicherverwaltung).
+Generell ist die Speicherverwaltung dafür zuständig nachfragenden Prozessen freien Speicher zuzuteilen bzw. freizugebenden Speicher wieder zurückzunehmen. Dazu muss natürlich gespeichert werden, welche Speicherbereiche belegt bzw. frei sind. Es ist wichtig zu verstehen, dass die Speicherverwaltung normalerweise auf drei Ebenen aufgeteilt wird:
+
+- Die [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung") verwaltet Speicherblöcke (physische Seiten) im tatsächlich verfügbaren RAM
+- Die [virtuelle Speicherverwaltung](#virtuelle-speicherverwaltung) baut auf der physischen Speicherverwaltung auf. Sie verwaltet Seiten im virtuellen Adressraum und deren Zuordnung zu physischen Seiten.
+- malloc/free verwalten den Heap. Im Gegensatz zu den unterliegenden Schichten, die nur in Blöcken gleicher Größe arbeiten, sind malloc/free dafür zuständig, Speicher für unterschiedlich große Objekte bereitzustellen.
 
 ## Physische Speicherverwaltung
 
@@ -18,7 +22,13 @@ Die **virtuelle Speicherverwaltung** befindet sich eine Schicht über der [physi
 
 Die virtuelle Speicherverwaltung übernimmt in einem Multiprozessorsystem auch die Aufgabe die virtuellen Adressräume über mehrere Prozessoren hinweg konsistent zu halten (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")).
 
-### Implementierung von malloc()/free()
+Hauptartikel: [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
+
+## Implementierung von malloc()/free()
+
+Im Gegensatz zur oben beschriebenen physischen und virtuellen Speicherverwaltung, die fast immer Teil des Kernels sind, sind malloc() und free() Funktionen, die zur Standardbibliothek gehören. Sie laufen üblicherweise im Userspace und benutzen [Systemaufrufe](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemaufruf") nur, um virtuelle Seiten anzufordern, wenn mehr Speicher benötigt wird.
+
+Gelegentlich werden die beiden Funktionen auch als Bestandteil der virtuellen Speicherverwaltung bezeichnet, da sie ebenfalls mit virtuellen Adressen arbeiten. Sie sind aber nicht mit [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") zu verwechseln.
 
 Es gibt verschiedene Möglichkeiten malloc() bzw. free() zu implementieren. Eine Möglichkeit ist es vor den Speicherblöcken Header anzulegen, die die Länge, Flags (wie z.B ob der Block frei ist) und gegenfalls einen Pointer auf den nächsten freien Block beinhalten. Zum Anfang sind keine freien Blöcke vorhanden. Es wird vom Kernel eine Page angefordert. Nun wird ein Header an den Anfang der Page gesetzt. Wenn nun malloc() aufgerufen wird, wird der Block aufgeteilt und ein Teilblock als benutzt markiert. Bei einem Aufruf von free() wird der Block als frei markiert und in die Liste der freien Blöcke eingefügt. Wenn benachbarte Blöcke auch frei sind, werden diese zusammengefügt. Wenn man nun eine ganze Page hat, die als frei markiert ist, kann sie vom Kernel freigegeben werden oder aufgehoben werden, bis sie wieder gebraucht wird.
 
@@ -33,6 +43,6 @@ Man kann auch eine der freien malloc()/free() Implementierungen portieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4325/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 4325; parent 4045; 2009-04-26T19:22:29Z -->
+<!-- MediaWiki page 1591; revision 4326; parent 4325; 2009-04-26T19:34:04Z -->
