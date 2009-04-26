@@ -16,8 +16,8 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 | ----------- | -------------------------------------------------------------------------------------------- |
 | -o | Name (und Typ) der Ausgabedatei. Bei .bin-Endung wird auch nur eine binäre Datei erstellt. |
 | -c | Kein Linken des Quellcodes. |
-| -O | Optimieren des Quellcodes. Grad kann von 1 - 3 angegeben werden. |
-| -l | Bindet weiter Bibliotheken ein |
+| -O | Optimieren des Quellcodes. Grad kann von 0 - 3 angegeben werden. |
+| -l | Bindet weitere Bibliotheken ein |
 | -Wall | Aktiviert sinnvolle Warnungen. |
 | -pedantic | Gibt alle Warnungen aus. |
 
@@ -31,6 +31,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3959/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 3959; parent 3914; 2009-01-24T19:37:56Z -->
+<!-- MediaWiki page 1805; revision 4322; parent 3959; 2009-04-26T08:54:12Z -->
