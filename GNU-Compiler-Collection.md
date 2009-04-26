@@ -19,6 +19,7 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 | -O | Optimieren des Quellcodes. Grad kann von 0 - 3 angegeben werden. |
 | -l | Bindet weitere Bibliotheken ein |
 | -Wall | Aktiviert sinnvolle Warnungen. |
+| -Werror | Behandelt alle Warnungen wie Fehler |
 | -pedantic | Gibt alle Warnungen aus. |
 
 ## Siehe auch
@@ -31,6 +32,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 4322; parent 3959; 2009-04-26T08:54:12Z -->
+<!-- MediaWiki page 1805; revision 4323; parent 4322; 2009-04-26T13:12:45Z -->
