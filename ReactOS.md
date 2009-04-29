@@ -6,7 +6,7 @@ ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Window
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Mehrere](http://www.reactos.org/wiki/index.php/People_of_ReactOS#Project_Roles) |
-| Akt. Version: | 0.3.8 |
+| Akt. Version: | 0.3.9 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
@@ -69,6 +69,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4334/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 4097; parent 3743; 2009-03-01T13:49:00Z -->
+<!-- MediaWiki page 1421; revision 4334; parent 4097; 2009-04-29T05:57:36Z -->
