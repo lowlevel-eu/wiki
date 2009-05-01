@@ -1,5 +1,7 @@
 # Control Register
 
+Die Control Register sind spezielle Register der Intel Architektur (x86 und x86-64), die den Betriebsmodus und einige Eigenschaften der CPU festlegen.
+
 ## CR0
 
 | Bit | Funktion |
@@ -29,13 +31,15 @@ Enthält noch einem Page-Fault die lineare Adresse, die den Fehler verursacht ha
 
 ## CR3
 
-| Bit | Funktion |
-| ----------- | --------------------------------------------------------------- |
-| Bit 0-2 | *Reserviert* |
-| Bit 3 | **PWT** *Page-level Writes Transparant* |
-| Bit 4 | **PCD** *Page-level Cache Disable* |
-| Bit 5-11 | *Reserviert* |
-| Bit 12-31 | **Page-Directory Base** Basis Adresse des Page-Directorys<br> |
+Das CR3-Register enthält primär die Adresse des Page Directorys, sowie 2 Flags, die das interne Caching innerhalb der CPU (nicht im TLB) steuern. Wenn [Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension") (PAE) aktiviert ist, wird die Adresse des Page Directorys ersetzt durch die um 7 Bits größere Adresse zur Page-Directory Pointer Table.
+
+| Bit | Funktion | Funktion mit aktivierter [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") |
+| ----------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Bit 0-2 | *Reserviert* |  |
+| Bit 3 | **PWT** *Page-level Writes Transparant* |  |
+| Bit 4 | **PCD** *Page-level Cache Disable* |  |
+| Bit 5-11 | *Reserviert* | **Page-Directory-Pointer-Table Base** Basis-Adresse der PDPT<br> |
+| Bit 12-31 | **Page-Directory Base** Basis Adresse des Page-Directorys<br> | **Page-Directory-Pointer-Table Base** Basis-Adresse der PDPT<br> |
 
 ## CR4
 
@@ -60,6 +64,6 @@ Enthält noch einem Page-Fault die lineare Adresse, die den Fehler verursacht ha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4061; parent 3833; 2009-02-26T18:51:51Z -->
+<!-- MediaWiki page 1610; revision 4345; parent 4061; 2009-05-01T23:01:58Z -->
