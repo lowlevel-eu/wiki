@@ -18,6 +18,7 @@
 
 ## Erweitern
 
+- Screenshots von V2_OS für Ausgabe 2? siehe Diskussionsseite zu Ausgabe 2
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"): bitte-blinken-Bit bei den Attributen fehlt, iirc kann man sogar zwischen ich-will-blink-bit und normaler Farbpalette wechseln?
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
@@ -51,6 +52,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 4314; parent 4281; 2009-04-23T21:53:24Z -->
+<!-- MediaWiki page 1518; revision 4340; parent 4314; 2009-05-01T14:05:21Z -->
