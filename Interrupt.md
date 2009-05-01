@@ -20,7 +20,7 @@ Synchrone Interrupts werden bei der Intel Architektur in 3 Klassen aufgeteilt:
 
 ### Asynchrone Interrupts
 
-Asynchrone Interrupts treten bei Ereignissen auf, die nicht vom Programm gezielt hervorgerufen wurden. Darunter fallen [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"), die von Peripheriegeräten ausgelöst werden, sowie z.B. Page Faults, die die Folge einer Auslagerung von Seiten aus dem RAM auf die Festplatte sind.
+Asynchrone Interrupts treten bei Ereignissen auf, die nicht vom Programm gezielt hervorgerufen wurden. Darunter fallen [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"), die von Peripheriegeräten ausgelöst werden, und z.B. (aus Sicht eines Programms) Page Faults in Folge einer Auslagerung von Seiten aus dem RAM auf die Festplatte durch das Betriebssystem.
 
 ## Interrupt-Behandlung
 
@@ -51,6 +51,6 @@ Interrupts können mit Hilfe der Instruktionen *sti* und *cli* ein- bzw. ausgesc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 4344; parent 4243; 2009-05-01T22:40:32Z -->
+<!-- MediaWiki page 1596; revision 4348; parent 4344; 2009-05-01T23:48:55Z -->
