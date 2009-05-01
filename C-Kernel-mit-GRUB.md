@@ -8,11 +8,11 @@ Ich werde hier beschreiben, wie ich es unter [Linux](https://github.com/lowlevel
 
 ## Kernel
 
-Der eigentliche Kernel soll ja in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmiert sein. Ein Teil des [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") muss aber immernoch in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sein.
+Der eigentliche Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss aber immernoch in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sein.
 
 ### Kernel - C
 
-Als erstes kannst du dir einen kleinen Test-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ausdenken, oder einfach den hier benutzen: \<c\> int main() {
+Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den hier benutzen: \<c\> int main() {
 
      // Pointer zum Videospeicher
      char *video = (char*)0xB8000;
@@ -64,11 +64,11 @@ loader:
 
 - Die Flags können geändert werden, am besten schaut man sich die [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Spezifikation an.
 - Den Stack kann man natürlich an eine beliebige Stelle setzen, aber an der 2MB-Grenze wird er uns nicht stören.
-- Es wird die Adresse der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Structure steht z.B wie viel Speicher der Rechner hat, oder welche Module von GRUB mitgeladen wurden.
+- Es wird die Adresse der Multiboot-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der Multiboot-Structure steht z.B wie viel Speicher der Rechner hat, oder welche Module von GRUB mitgeladen wurden.
 
 ## Zusammenbauen
 
-Nun müssen wir den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") "zusammenbauen". Dafür müssen wir den [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")-Code assemblieren, den [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")-Code kompilieren und am Ende beides linken.
+Nun müssen wir den Kernel "zusammenbauen". Dafür müssen wir den Assembler-Code assemblieren, den C-Code kompilieren und am Ende beides linken.
 
 ### Assemblieren
 
@@ -130,11 +130,11 @@ Wenn man später mehr Dateien hat, können diese natürlich auch dazugelinkt wer
 
 ## GRUB-Image erstellen
 
-Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") und unseren [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") draufladen.
+Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann GRUB und unseren Kernel draufladen.
 
 ### Floppy-Image erstellen
 
-Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere Dateisysteme benutzt werden, z.B [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") dieses [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") unterstützt.
+Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") benutzt werden, z.B [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass GRUB dieses Dateisystem unterstützt.
 
 Mit *dd* erzeugen wir ein 1,44MB großes Floppy-Image:
 
@@ -212,6 +212,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4262; parent 4258; 2009-04-04T16:59:06Z -->
+<!-- MediaWiki page 1604; revision 4347; parent 4262; 2009-05-01T23:05:55Z -->
