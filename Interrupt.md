@@ -26,7 +26,7 @@ Asynchrone Interrupts treten bei Ereignissen auf, die nicht vom Programm gezielt
 
 Wenn ein Interrupt ausgelöst wird, sichert die CPU die Register [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS"), CS und EIP auf dem Stack. Danach wird eine Behandlungsroutine angesprungen, die in der [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") (Protected Mode) bzw. in der [IVT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "IVT") (Real Mode) angegeben ist. Diese kehrt nach ihrer Ausführung im Allgemeinen mit dem Befehl *iret* zur Stelle, an der unterbrochen wurde, zurück.
 
-In Interrupt-Behandlungsroutinen sollte je nach Art des Interrupts reagieren:
+In Interrupt-Behandlungsroutinen sollte je nach Art des Interrupts reagiert werden:
 
 - In IRQs muss in der Regel das entsprechende Gerät ausgelesen werden. Außerdem muss der Erhalt der IRQs beim [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") quittiert werden.
 - Bei Software Interrupts sollte z.B. eine Systemfunktion im Kernel ausgeführt werden
@@ -51,6 +51,6 @@ Interrupts können mit Hilfe der Instruktionen *sti* und *cli* ein- bzw. ausgesc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4349/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 4349; parent 4348; 2009-05-02T06:39:12Z -->
+<!-- MediaWiki page 1596; revision 4350; parent 4349; 2009-05-02T08:58:40Z -->
