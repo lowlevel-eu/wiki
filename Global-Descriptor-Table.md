@@ -33,15 +33,15 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 
 ### Das Access-Byte
 
-| Bit | Name | Bedeutung |
-| -------- | ------------------------------ | --------------------------------------------------------------------------------------------- |
-| 7 | present bit | Muss 1 für einen aktiven Eintrag sein |
-| 6 u. 5 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
-| 4 | 1 | Ist 1 |
-| 3 | Executable bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
-| 2 | Direction bit/Conforming bit | Abhängig vom Executable bit |
-| 1 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
-| 0 | Accessed bit | Sollte 0 gesetzt werden, wird dann vom Prozessor bei Zugriff gesetzt. |
+| Bit | Wert | Name | Bedeutung |
+| -------- | ------ | ------------------------------ | --------------------------------------------------------------------------------------------- |
+| 7 | 0x80 | present bit | Muss 1 für einen aktiven Eintrag sein |
+| 6 u. 5 | 0x20 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
+| 4 | 0x10 | 1 | Ist 1 |
+| 3 | 0x08 | Executable bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
+| 2 | 0x04 | Direction bit/Conforming bit | Abhängig vom Executable bit |
+| 1 | 0x02 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
+| 0 | 0x01 | Accessed bit | Sollte 0 gesetzt werden, wird dann vom Prozessor bei Zugriff gesetzt. |
 
 #### Beispielcode
 
@@ -79,15 +79,15 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 
 ### Die Flags
 
-| Bit | Name | Bedeutung |
-| ----- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | Granularity bit | Bei 0 wird als Einheit bei Limit ein Byte benutzt, bei 1 stattdessen 4 KiB |
-| 1 | Size bit | 0 bedeuted 16 bit protected mode, bei 1 32 bit protected mode. |
-| 2 | Long Mode bit | 0 bedeuted Protected Mode, 1 bedeutet Long Mode. Bei gesetztem Long Mode Bit **muss** das Size Bit 0 sein! Ist das Long Mode Bit 0, so gibt das Size Bit die Bit-Größe des Protected Mode Segments an. *Dieses Bit sollte nur bei einem Code Segment gesetzt werden, bei anderen Segment-Typen sollte es auf 0 gesetzt sein.* |
-| 3 | Available Bit | Dieses Bit steht dem Programmierer zur freien Verfügung. |
+| Bit | Wert | Name | Bedeutung |
+| ----- | ------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 | 0x8 | Granularity bit | Bei 0 wird als Einheit bei Limit ein Byte benutzt, bei 1 stattdessen 4 KiB |
+| 2 | 0x4 | Size bit | 0 bedeuted 16 bit protected mode, bei 1 32 bit protected mode. |
+| 1 | 0x2 | Long Mode bit | 0 bedeuted Protected Mode, 1 bedeutet Long Mode. Bei gesetztem Long Mode Bit **muss** das Size Bit 0 sein! Ist das Long Mode Bit 0, so gibt das Size Bit die Bit-Größe des Protected Mode Segments an. *Dieses Bit sollte nur bei einem Code Segment gesetzt werden, bei anderen Segment-Typen sollte es auf 0 gesetzt sein.* |
+| 0 | 0x1 | Available Bit | Dieses Bit steht dem Programmierer zur freien Verfügung. |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3754/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 3754; parent 3753; 2008-12-27T14:55:10Z -->
+<!-- MediaWiki page 1661; revision 4356; parent 3754; 2009-05-09T07:52:05Z -->
