@@ -1,8 +1,31 @@
 # Global Descriptor Table
 
-Der Global Descriptor Table (auch GDT) ist eine i386 spezifische Struktur, welche Informationen über Speicherabschnitte enthält.
+Der Global Descriptor Table (auch GDT) ist eine i386 spezifische Struktur, welche Informationen über Speicherabschnitte (Segmente) enthält.
 
 Der Ort der GDT wird mit dem Befehl lgdt mitgeteilt.
+
+## Segmentierung
+
+### Real Mode
+
+Der 8086 war ein 16-Bit-Prozessor. Das bedeutet, dass seine Register 16 Bit breit waren und somit Werte bis 2^16 - 1 = 65535 aufnehmen konnten. Nun müssen aber auch Zeiger in dieser Register passen und 64 Kilobytes sind nicht gerade ein großzügiger Adressraum.
+
+Aus diesem Grund wurde im Real Mode eine einfache Art von Segmentierung eingeführt. Zu jedem Speicherzugriff wird noch eine Basisadresse addiert, die durch den Inhalt des entsprechenden Segmentregisters (cs für Code, ds für Daten, ss für den Stack) bestimmt ist. Dadurch wurden 20 Bit (also 1 Megabyte) zugänglich gemacht, wobei beim Zugriff auf mehr als 64 Kilobytes das Segmentregister gewechselt werden musste.
+
+Die Berechnung einer effektiven Adresse - im Beispiel ein Zugriff auf \[ds:ax\] - läuft wie folgt ab:
+
+    0x  1234   Adresse in ax
+    0x 4321    Segmentregister ds 
+    ========
+    0x 44444   Tatsächlich zugegriffene Adresse
+
+### Protected Mode
+
+Auch im Protected Mode des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GB Speicher ohne Segmentierung ansprechen.
+
+Zum einen kann die Basisadresse aber auch weiterhin nützlich sein - sie erlaubt es, Code an beliebigen Stellen im Speicher auszuführen, auch wenn er von festen Adressen ausgeht (dieser Mechanismus wird aber nur selten benutzt). Zum anderen sind die Segmente erweitert worden, so dass sie nicht nur einfach aus einer Basisadresse bestehen, sondern zusätzliche Speicherschutzfunktionalität bieten wie Schreibschutz oder Zugriff erst ab einem bestimmten Privileglevel. Außerdem hat ein Segment nicht mehr eine starre Länge von 64 Kilobytes, sondern die Länge kann vom Betriebssystem für jedes Segment einzeln festgelegt werden.
+
+Die Segmentregister sind aber nach wie vor nur 16 Bit breit und somit wird der Platz etwas knapp für diese ganzen Informationen. Aus diesem Grund enthalten die Segmentregister im Protected Mode nur noch sogenannte Selektoren, d.h. die Nummer eines Segments und einige wenige Flags. Die eigentliche Beschreibung der Segmente liegt in Form einer Tabelle im Speicher, der GDT. Die GDT besteht aus mehreren Einträgen (Segmentdeskriptoren) zu je 64 Bit, die direkt hintereinander liegen. Der erste Eintrag kann nicht benutzt werden, er ist der sogenannte Nulldeskriptor.
 
 ## Struktur
 
@@ -88,6 +111,6 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 4356; parent 3754; 2009-05-09T07:52:05Z -->
+<!-- MediaWiki page 1661; revision 4357; parent 4356; 2009-05-09T08:56:17Z -->
