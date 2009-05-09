@@ -1,6 +1,6 @@
 # GNU Compiler Collection
 
-Die **Gnu Compiler Collection** ist eine Sammlung von Compilern. Unterstützt werden die Sprachen C, C++, Java, Objective-C, Fortran 95, Treelang und Ada und demnächst auch D. Zusätzlich werden die Plattformen x86, AMD64 (x86_64), Alpha, Arm, IA-64, PowerPC und viele weitere unterstützt.
+Die **GNU Compiler Collection** ist eine Sammlung von Compilern. Unterstützt werden die Sprachen C, C++, Java, Objective-C, Fortran 95, Treelang und Ada und demnächst auch D. Zusätzlich werden die Plattformen x86, AMD64 (x86_64), Alpha, Arm, IA-64, PowerPC und viele weitere unterstützt.
 
 ## GCC unter Windows
 
@@ -32,6 +32,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 4364; parent 4323; 2009-05-09T13:39:54Z -->
+<!-- MediaWiki page 1805; revision 4366; parent 4364; 2009-05-09T13:41:52Z -->
