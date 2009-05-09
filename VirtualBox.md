@@ -4,7 +4,7 @@
 | ------------------------ | ----------------------------------------------- |
 | Name: | VirtualBox |
 | Entwickler: | Innotek |
-| Akt. Version: | 2.1.0<br>(Stand 02.01.2009) |
+| Akt. Version: | 2.2.2<br>(Stand 28.04.2009) |
 | Lizenz: | Proprietär, GPL 2 (2 Versionen) |
 | Betriebssystem(e): | Linux, Windows, OS X, Solaris |
 | Virtualisiertes System |  |
@@ -25,6 +25,7 @@ Besondere Features:
 - iSCSI für Blockgeräte
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
 - Gastunsterstützung um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
+- OpenGL-Unterstützung (derzeit nur für die 32-Bit-Versionen von Windows XP und Windows Vista sowie Linux und Solaris)
 
 Befehlssatzerweiterungen für Gäste:
 
@@ -55,6 +56,6 @@ Emulierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 3822; parent 3817; 2009-01-03T13:31:17Z -->
+<!-- MediaWiki page 1553; revision 4358; parent 3822; 2009-05-09T08:56:54Z -->
