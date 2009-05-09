@@ -75,8 +75,32 @@ Jeder Eintrag in den GDT besteht aus acht Bytes.
 | 1 | 0x2 | Long Mode bit | 0 bedeuted Protected Mode, 1 bedeutet Long Mode. Bei gesetztem Long Mode Bit **muss** das Size Bit 0 sein! Ist das Long Mode Bit 0, so gibt das Size Bit die Bit-Größe des Protected Mode Segments an. *Dieses Bit sollte nur bei einem Code Segment gesetzt werden, bei anderen Segment-Typen sollte es auf 0 gesetzt sein.* |
 | 0 | 0x1 | Available Bit | Dieses Bit steht dem Programmierer zur freien Verfügung. |
 
+## Laden der GDT
+
+Nachdem der Kernel eine GDT im Speicher liegen hat, die er für seine Segmente verwenden möchte, muss er das Register GDTR ändern. Dieses Register enthält die Adresse und Länge der GDT und wird über den Befehl **lgdt** geladen. Da das Register 6 Bytes breit ist, kann dieser Befehl den neuen Wert nicht direkt als Operand entgegennehmen, sondern erwartet einen Pointer auf eine Speicherstelle, die diese 6 Bytes enthält:
+
+\<c\>static long long unsigned int gdt\[GDT_ENTRIES\];
+
+// ...
+
+struct {
+
+       unsigned short int length;
+       void* pointer;
+
+} \_\_attribute\_\_((packed)) gdtp = {
+
+       .length = GDT_ENTRIES * 8,
+       .pointer = gdt,
+
+}; asm volatile("lgdt %0" : : "m" (gdtp));\</c\>
+
+Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche Auswirkungen hat die Änderung noch nicht. Auf die Tabelle wird nur zugegriffen, wenn ein Segmentregister neu geladen wird. Daher müssen jetzt noch alle Segmentregister neu geladen werden:
+
+\<asm\> mov \$0x10, %eax mov %eax, %ds mov %eax, %es mov %eax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 4359; parent 4357; 2009-05-09T09:25:24Z -->
+<!-- MediaWiki page 1661; revision 4360; parent 4359; 2009-05-09T09:36:58Z -->
