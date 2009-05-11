@@ -82,7 +82,7 @@ Damit wird eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Li
 
 Der C-Kernel wird mit diesem Befehl kompiliert:
 
-    $ gcc -ffreestanding -o kernel_c.o -c kernel.c -Wall -Werror -nostdlib -nostartfiles -nodefaultlibs
+    $ gcc -m32 -ffreestanding -o kernel_c.o -c kernel.c -Wall -Werror -nostdlib -nostartfiles -nodefaultlibs
 
 Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. Es ist wichtig, dass keine Standardbibliotheken benutzt werden.
 
@@ -212,6 +212,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4347; parent 4262; 2009-05-01T23:05:55Z -->
+<!-- MediaWiki page 1604; revision 4367; parent 4347; 2009-05-11T08:59:20Z -->
