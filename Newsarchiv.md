@@ -4,6 +4,9 @@
 
 |  |  |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **01.05.2009 :** | Mit Version 0.10.3 ist ein weiteres Bugfix-Release des stabilen Qemu-Zweigs erschienen. Die neu dazugekommenen Bugfixes sind wie üblich im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **07.04.2009 :** | Version 0.10.2 von Qemu wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **21.03.2009 :** | Version 0.10.1 von Qemu wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
 | **06.08.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") wird in der Version 0.3.6 veröffentlicht. Changlog findet man [hier](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.6). |
 | **30.06.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.5 wird zum Download freigeben. Die [ReactOS Newsseite](http://www.reactos.org/de/news_page_44.html) gibt einen groben Überblick über die Änderungen. Genaueres steht im [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.5). |
 | **06.06.2008 :** | Bochs steht seit ein paar Tagen in der Version 2.3.7 zum Donwload bereit. Changelogs findet man [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_3_7_FINAL). |
@@ -44,6 +47,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 4342; parent 3129; 2009-05-01T22:33:01Z -->
+<!-- MediaWiki page 1416; revision 4369; parent 4342; 2009-05-12T15:33:39Z -->
