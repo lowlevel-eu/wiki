@@ -4,11 +4,11 @@ Die **GNU Compiler Collection** ist eine Sammlung von Compilern. Unterstützt we
 
 ## GCC unter Windows
 
-Die GCC wird nicht direkt unterstützt, sondern nur durch die Portierung MinGW.
+Die GCC wird nicht direkt unterstützt, sondern nur durch die Portierung MinGW und die Arbeitsumgebung Cygwin.
 
 ## GCC unter Linux
 
-Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie im Terminal mit den Befehle *gcc \[Kompilierte Datei\]*.
+Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie im Terminal mit dem Befehl *gcc \[Zu kompilierende Datei\]*.
 
 ## Zusätzliche Parameter
 
@@ -32,6 +32,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4371/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 4366; parent 4364; 2009-05-09T13:41:52Z -->
+<!-- MediaWiki page 1805; revision 4371; parent 4366; 2009-05-13T19:59:47Z -->
