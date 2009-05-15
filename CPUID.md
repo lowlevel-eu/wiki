@@ -15,11 +15,11 @@ Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, zu bekommen, ruf
 
 ## Standard Funktionen
 
-Die Standard Funktionsnummern beginnen bei 0. Der größt mögliche Funktionsnummer, die von der jeweiligen CPU unterstützt wird befindet sich nach dem aufrufen von *Function 0* im *EAX*-Register. Die Standard Funktionen sind nicht Hersteller spezifisch, sondern sollen für alle CPUs gleich sein.
+Die Standard Funktionsnummern beginnen bei 0. Der größtmögliche Funktionsnummer, die von der jeweiligen CPU unterstützt wird befindet sich nach dem Aufruf von *Function 0* im *EAX*-Register. Die Standard Funktionen sind nicht Hersteller spezifisch, sondern sollen für alle CPUs gleich sein.
 
 ### EAX = 0x00000000
 
-CPUID-Funktion Nr. 0x00 gibt wie bereits genannt die größte vom Prozessor unterstützte Funktionsnummer im *EAX*-Register und die Vendor-ID in den Registern *EBX*, *EDX* und *ECX*(in dieser Reihenfolge) an. **Auchtung: Der String ist nicht nullterminiert!**
+CPUID-Funktion Nr. 0x00 gibt wie bereits genannt die größte vom Prozessor unterstützte Funktionsnummer im *EAX*-Register und die Vendor-ID in den Registern *EBX*, *EDX* und *ECX*(in dieser Reihenfolge) an. **Achtung: Der String ist nicht nullterminiert!**
 
 #### Vendor-ID der einzelnen Hersteller
 
@@ -37,7 +37,7 @@ CPUID-Funktion Nr. 0x00 gibt wie bereits genannt die größte vom Prozessor unte
 
 ### EAX = 0x00000001
 
-Das Ergebnis der diser Funktion ist folgendes:
+Das Ergebnis dieser Funktion ist folgendes:
 
 #### EAX
 
@@ -67,7 +67,7 @@ Das Ergebnis der diser Funktion ist folgendes:
 
 #### ECX
 
-Hier soll ein Bytearray sein, es wird aber nicht empfohlen, daraus zu lesen. Dieses Feld ist ein kommendes Feature. Es zählt also zu den reservierten Feldern.
+Hier soll ein Byte-Array sein, es wird aber nicht empfohlen, daraus zu lesen. Dieses Feld ist ein kommendes Feature. Es zählt also zu den reservierten Feldern.
 
 #### EDX - Featureflags
 
@@ -147,6 +147,6 @@ Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur fü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 3954; parent 3945; 2009-01-23T14:34:32Z -->
+<!-- MediaWiki page 1739; revision 4374; parent 3954; 2009-05-15T21:34:08Z -->
