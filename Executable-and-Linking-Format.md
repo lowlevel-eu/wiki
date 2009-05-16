@@ -268,9 +268,10 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 # Links
 
 - [ELF für x86](http://www.acm.uiuc.edu/sigops/rsrc/pfmt11.pdf)
+- [wikipedia: ELF](http://en.wikipedia.org/wiki/Executable_and_Linkable_Format) (sehr gute Sammlung von Links)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 4292; parent 2909; 2009-04-16T16:30:21Z -->
+<!-- MediaWiki page 1528; revision 4375; parent 4292; 2009-05-16T09:27:24Z -->
