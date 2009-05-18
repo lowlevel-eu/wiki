@@ -146,8 +146,14 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 Auch der tollste Kernel mit [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")-Unterstützung bringt Dir natürlich herzlich wenig, wenn die laufenden Programme nicht mit dem Benutzer interagieren können. Um den Programmen, die ja in einem eigenen Adressraum laufen und meist keinen direkten Zugriff auf die Hardware haben, diese Möglichkeit zu bieten, muss der Kernel eine entsprechende Schnittstelle, üblicherweise in Form von [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"), anbieten. Wie diese Schnittstelle genau aussieht, hängt von Deiner gewählten Architektur ab. Bei einem Monolithen wird die Schnittstelle eher breit ausfallen, und beispielsweise Funktionen für das Arbeiten mit Dateien mitbringen, während bei einem Mikrokernel vor allem die Funktionen für die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") im Zentrum stehen werden.
 
+  
+
+### Treiber
+
+Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") oder [Festplatte](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") lesen zu wollen. Dafür werden zwei Treiber benötigt: einer für das [Diskettenlaufwerk](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")/die [Festplatte](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") und ein [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Wie sich die Treiber in Dein System einfügen sollen, hast Du bei der Wahl Deiner Architektur ja schon grob entschieden. Jetzt ist es an der Zeit die Details festzulegen. Für die Treiber musst Du auch erstmal eine Schnittstelle definieren und Dir genau überlegen wie die Kommunikation zwischen Clients und den Treibern ablaufen soll. Dabei ist es sicher keine schlechte Idee, ein bisschen in den Schnittstellen von anderen zu stöbern. Weiter könntest Du Dir auch überlegen dir [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), das von der Lowlevel-Community entwickelt wird, genauer anzusehen, denn damit sparst du unter Umständen viel Zeit und Ärger.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 4377; parent 4362; 2009-05-18T10:42:03Z -->
+<!-- MediaWiki page 1619; revision 4378; parent 4377; 2009-05-18T11:31:34Z -->
