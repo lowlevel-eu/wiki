@@ -142,8 +142,12 @@ Was sind nun also die Funktionen, die ein Kernel im Allgemeinen bietet?
 
 Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell"), [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") oder sonstige Anwendungsprogramme **nicht** in den Kernel! Eine Shell im Kernel ist vielleicht akzeptabel für eine frühe Testphase, um überhaupt einmal etwas laufen zu sehen, aber es ist auf Dauer kein tragfähiges Konzept. (Einer der Gründe dafür: Erinnerst Du Dich an den Absatz über die Ringe oben? Was im Kernel liegt, hat Kernel-Mode-Privilegien, und ein Grundsatz für sichere Software ist, nie Privilegien zu haben, die man nicht braucht)
 
+### Schnittstelle zum Userspace
+
+Auch der tollste Kernel mit [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")-Unterstützung bringt Dir natürlich herzlich wenig, wenn die laufenden Programme nicht mit dem Benutzer interagieren können. Um den Programmen, die ja in einem eigenen Adressraum laufen und meist keinen direkten Zugriff auf die Hardware haben, diese Möglichkeit zu bieten, muss der Kernel eine entsprechende Schnittstelle, üblicherweise in Form von [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"), anbieten. Wie diese Schnittstelle genau aussieht, hängt von Deiner gewählten Architektur ab. Bei einem Monolithen wird die Schnittstelle eher breit ausfallen, und beispielsweise Funktionen für das Arbeiten mit Dateien mitbringen, während bei einem Mikrokernel vor allem die Funktionen für die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") im Zentrum stehen werden.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4362/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 4362; parent 4268; 2009-05-09T13:31:51Z -->
+<!-- MediaWiki page 1619; revision 4377; parent 4362; 2009-05-18T10:42:03Z -->
