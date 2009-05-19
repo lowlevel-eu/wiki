@@ -12,6 +12,10 @@ Ein **Symmetrisches Multiprozessorsystem** (=**SMP**) ist ein System mit einem o
 
 Die *Intel Multiprocessor Specification* ist ein Standard für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")-basierte, symmetrische Multiprozessorsysteme und ist abwärtskompatibel mit existierenden [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Uniprozessorsystemen. Die Spezifikation beschreibt einerseits die Anforderungen an die Hardware und das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") und andererseits die Schritte die notwendig sind, um mit einem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") den Geschwindigkeitsvorteil mehrerer Prozessoren nutzbar zu machen.
 
+### Unterteilung der Prozessoren
+
+Beim Start eines Intel-basierten Rechners ist ein Prozessor dafür zuständig, alle Initialisierungen vorzunehmen und schließlich ein Betriebssystem zu booten, wie es auch auf Intel-Uniprozessorsystemen der Fall ist. Dieser Prozessor wird *Bootstrap Processor* (BSP) genannt, alle anderen Prozessoren heißen *Application Processors* (AP). Die letzteren werden erst aktiviert, wenn das Betriebssystem startet. Das bedeutet, dass die Unterstützung für SMP im Betriebssystem programmiert sein muss, weil die APs sonst im Ruhezustand bleiben und der Rechner somit nur wie ein Uniprozessor-System genutzt werden kann.
+
 ### Floating Pointer Structure
 
 Der erste Schritt dahingehend ist das Auffinden der *Floating Pointer Structure*. Diese Struktur wird vom BIOS erstellt und falls sie existiert ist dieses System zur *Intel Multiprocessor Specification* kompatibel.
@@ -64,6 +68,6 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 4088; parent 3518; 2009-02-26T19:31:03Z -->
+<!-- MediaWiki page 1490; revision 4380; parent 4088; 2009-05-19T21:13:29Z -->
