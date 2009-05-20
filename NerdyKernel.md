@@ -56,10 +56,10 @@ Es wird mehrere Möglichkeiten der Kommunikation geben. Zum einen gibt es Shared
     - Fertigstellung des Multitaskings
   - rizor-0.3.3
     - Optimierung des Kernels
-    - Auslagerung der Module
   - rizor-0.3.4 (Kernel für rizor-os-0.1)
     - letzte Optimierungen
   - rizor-0.4.0-Alpha (Kernel für rizor-os-0.2)
+    - Auslagerung der Module
     - Shared-Memory-Handlers
     - Module-RPC
     - Messagepassings
@@ -126,6 +126,6 @@ Folgende Features sind implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4231/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 4231; parent 4230; 2009-04-01T08:57:28Z -->
+<!-- MediaWiki page 1816; revision 4383; parent 4231; 2009-05-20T20:15:53Z -->
