@@ -74,13 +74,11 @@ Nun ist eine [Race Condition](https://github.com/lowlevel-eu/wiki/wiki/Race-Cond
 
 Um die TSL-Instruktion auf Multiprozessorsystemen wieder atomar zu machen, haben sich die [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Hersteller den *lock*-Präfix einfallen lassen. Er kann dem Opcode bestimmter Instruktionen vorausgestellt werden und sorgt dafür, dass der Speicherbus während der folgenden Instruktion für andere CPU's gesperrt ist.
 
-``` asm
-; Uniprozessorsysteme
-xchg eax, [speicheradresse]
+\<asm\>; Uniprozessorsysteme xchg eax, \[speicheradresse\]
 
-; SMP-Systeme
-lock xchg eax, [speicheradresse]
-```
+SMP-Systeme
+
+lock xchg eax, \[speicheradresse\]\</asm\>
 
 ## siehe auch
 
@@ -95,6 +93,6 @@ lock xchg eax, [speicheradresse]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4391/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4392/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 4391; parent 4380; 2009-05-22T19:01:57Z -->
+<!-- MediaWiki page 1490; revision 4392; parent 4391; 2009-05-22T19:31:11Z -->
