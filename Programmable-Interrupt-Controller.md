@@ -60,7 +60,7 @@ In diesem Wert steht jedes Bit für einen Interrupt (IRQ 0 ist Bit 0 usw.). Gese
 | 15 | 0x77 | sekundärer [ATA/ATAPI/(E)IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") und [Spurious Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#spurious-interrupt "PIC") |
 
   
-¹ IRQ ist die eigentliche IRQ-Nummer. IRQ0-IRQ7 gehören zur ersten PIC, IRQ8-IRQ15 zur zweiten.  
+¹ IRQ ist die eigentliche IRQ-Nummer. IRQ0-IRQ7 gehören zum ersten PIC, IRQ8-IRQ15 zum zweiten.  
 ² IVT ist die Standard Interrupt Nummer auf der [Interrupt Vector Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "Interrupt Vector Table") des [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") nach dem bBoten.
 
 ## Spurious Interrupt
@@ -79,6 +79,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4388/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 4384; parent 4279; 2009-05-20T21:49:28Z -->
+<!-- MediaWiki page 1465; revision 4388; parent 4384; 2009-05-22T16:53:26Z -->
