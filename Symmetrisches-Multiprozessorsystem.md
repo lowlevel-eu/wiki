@@ -55,6 +55,33 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ### Default Configuration
 
+## Besonderheiten bei der Programmierung
+
+### Multiprozessorsynchronisation (TSL-Instruktion und Lock-Prefix)
+
+Um auf Uniprozessorsystemen effizient wechselseitigen Ausschluss (Mutex) zu implementieren, wird üblicherweise die *xchg*-Instruktion verwendet (oder passende API-Funktionen wie [InterlockedExchange](http://msdn.microsoft.com/en-us/library/ms683590(VS.85).aspx) unter Windows). Architekturübergreifend wird diese Instruktion als *TSL* (Test and Set Lock) oder auch *TSTS* (Test and Set) bezeichnet. Dabei liest man mit der Instruktion den alten Wert z.B. in ein Register und schreibt den neuen Wert in den Speicher (z.B. 0 = Mutex verfügbar, 1 = Mutex gelockt). Die Instruktion ist atomar, d.h. kann nicht unterbrochen werden (CPU führt immer ganze Instruktionen aus!).
+
+Auf Multiprozessorsystemen ergibt sich allerdings das Problem, dass Instruktionen *echt* gleichzeitig ausgeführt werden können (anstatt hintereinander bei Uniprozessorsystemen). Da die TSL-Instruktion mindestens zwei Speicherbuszyklen benötigt (eine für Lesen, eine für Schreiben), könnte folgender Ablauf auftreten (Reihenfolge ist wichtig):
+
+- Der Mutex sei freigegeben (= 0), es kann also ein Prozess in den kritischen Abschnitt eintreten, wenn er den Mutex lockt (d.h. auf 1 setzt)
+- Nun wollen zwei Threads/Prozesse, die auf verschiedenen CPU's ausgeführt werden, etwa gleichzeitig den Mutex für sich locken
+- CPU \#1 liest die Speicherstelle = 0
+- CPU \#2 liest ebenfalls die Speicherstelle = 0
+- CPU \#1 überschreibt den Speicher mit 1 und gibt als alten Wert die gelesene 0 zurück
+- CPU \#2 überschreibt den Speicher nochmals mit 1 und gibt als alten Wert die gelesene 0 zurück
+
+Nun ist eine [Race Condition](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") aufgetreten: Beide Threads/Prozesse denken nun, dass der Mutex vorher nicht gelockt war und sie nun als einziger Thread/Prozess im kritischen Bereich arbeiten werden. Ganz offensichtlich arbeiten aber in diesem Beispiel nun beide in dem kritischen Abschnitt.
+
+Um die TSL-Instruktion auf Multiprozessorsystemen wieder atomar zu machen, haben sich die [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Hersteller den *lock*-Präfix einfallen lassen. Er kann dem Opcode bestimmter Instruktionen vorausgestellt werden und sorgt dafür, dass der Speicherbus während der folgenden Instruktion für andere CPU's gesperrt ist.
+
+``` asm
+; Uniprozessorsysteme
+xchg eax, [speicheradresse]
+
+; SMP-Systeme
+lock xchg eax, [speicheradresse]
+```
+
 ## siehe auch
 
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
@@ -68,6 +95,6 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4391/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 4380; parent 4088; 2009-05-19T21:13:29Z -->
+<!-- MediaWiki page 1490; revision 4391; parent 4380; 2009-05-22T19:01:57Z -->
