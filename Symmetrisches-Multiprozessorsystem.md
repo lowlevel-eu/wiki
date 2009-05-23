@@ -57,28 +57,31 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ## Besonderheiten bei der Programmierung
 
-### Multiprozessorsynchronisation (TSL-Instruktion und Lock-Prefix)
+### Multiprozessorsynchronisation (TSL-Instruktion)
 
-Um auf Uniprozessorsystemen effizient wechselseitigen Ausschluss (Mutex) zu implementieren, wird üblicherweise die *xchg*-Instruktion verwendet (oder passende API-Funktionen wie [InterlockedExchange](http://msdn.microsoft.com/en-us/library/ms683590(VS.85).aspx) unter Windows). Architekturübergreifend wird diese Instruktion als *TSL* (Test and Set Lock) oder auch *TSTS* (Test and Set) bezeichnet. Dabei liest man mit der Instruktion den alten Wert z.B. in ein Register und schreibt den neuen Wert in den Speicher (z.B. 0 = Mutex verfügbar, 1 = Mutex gelockt). Die Instruktion ist atomar, d.h. kann nicht unterbrochen werden (CPU führt immer ganze Instruktionen aus!).
+Um auf Uniprozessorsystemen effizient wechselseitigen Ausschluss (Mutex) zu implementieren, wird üblicherweise die *xchg*-Instruktion verwendet (oder passende API-Funktionen wie [InterlockedExchange](http://msdn.microsoft.com/en-us/library/ms683590(VS.85).aspx) unter Windows). Architekturübergreifend wird diese Instruktion als *TSL* (Test and Set Lock) oder auch *TSTS* (Test and Set) bzw. *TAS* (Test and Set) bezeichnet. Dabei liest man mit der Instruktion den alten Wert z.B. in ein Register und schreibt den neuen Wert in den Speicher (z.B. 0 = Mutex verfügbar, 1 = Mutex gelockt). Die Instruktion ist atomar, d.h. kann nicht unterbrochen werden (CPU führt immer ganze Instruktionen aus!). Da Instruktionen *echt* gleichzeitig ausgeführt werden können (anstatt hintereinander bei Uniprozessorsystemen), muss diese Instruktion auf Multiprozessorsystemen ebenfalls atomar sein.
 
-Auf Multiprozessorsystemen ergibt sich allerdings das Problem, dass Instruktionen *echt* gleichzeitig ausgeführt werden können (anstatt hintereinander bei Uniprozessorsystemen). Da die TSL-Instruktion mindestens zwei Speicherbuszyklen benötigt (eine für Lesen, eine für Schreiben), könnte folgender Ablauf auftreten (Reihenfolge ist wichtig):
+Eine fehlerhafte Mutex-Implementierung mit nicht-atomaren Operationen könnte z.B. so aussehen:
 
 - Der Mutex sei freigegeben (= 0), es kann also ein Prozess in den kritischen Abschnitt eintreten, wenn er den Mutex lockt (d.h. auf 1 setzt)
 - Nun wollen zwei Threads/Prozesse, die auf verschiedenen CPU's ausgeführt werden, etwa gleichzeitig den Mutex für sich locken
-- CPU \#1 liest die Speicherstelle = 0
-- CPU \#2 liest ebenfalls die Speicherstelle = 0
-- CPU \#1 überschreibt den Speicher mit 1 und gibt als alten Wert die gelesene 0 zurück
-- CPU \#2 überschreibt den Speicher nochmals mit 1 und gibt als alten Wert die gelesene 0 zurück
+- Thread \#1 auf CPU \#1 liest die Speicherstelle = 0
+- Thread \#2 auf CPU \#2 liest ebenfalls die Speicherstelle = 0
+- Thread \#1 auf CPU \#1 überschreibt den Speicher mit 1 und gibt als alten Wert die gelesene 0 zurück
+- Thread \#2 auf CPU \#2 überschreibt den Speicher nochmals mit 1 und gibt als alten Wert die gelesene 0 zurück
 
 Nun ist eine [Race Condition](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") aufgetreten: Beide Threads/Prozesse denken nun, dass der Mutex vorher nicht gelockt war und sie nun als einziger Thread/Prozess im kritischen Bereich arbeiten werden. Ganz offensichtlich arbeiten aber in diesem Beispiel nun beide in dem kritischen Abschnitt.
 
-Um die TSL-Instruktion auf Multiprozessorsystemen wieder atomar zu machen, haben sich die [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Hersteller den *lock*-Präfix einfallen lassen. Er kann dem Opcode bestimmter Instruktionen vorausgestellt werden und sorgt dafür, dass der Speicherbus während der folgenden Instruktion für andere CPU's gesperrt ist.
+Aus diesem Grund wird zur Implementierung die TSL-Instruktion verwendet. Sie ist auch auf SMP-Systemen atomar (vgl. [Intel Spezifikation](http://www.intel.com/design/intarch/manuals/243191.htm), S. 3-714), d.h. der sogenannte *lock*-Präfix wird implizit angenommen, wenn bei der *xchg*-Instruktion eine Speicherstelle verwendet wird. Der Präfix kann auch explizit angegeben werden - er bewirkt, dass der Speicherbus während der nächsten Instruktion gesperrt wird.
 
-\<asm\>; Uniprozessorsysteme xchg eax, \[speicheradresse\]
+Ein Beispiel für eine simple 32-bit TSL-Funktion: \<asm\>; uint32_t tsl(uint32_t \*ptr, uint32_t newValue) \_tsl:
 
-SMP-Systeme
-
-lock xchg eax, \[speicheradresse\]\</asm\>
+       push ebx
+       mov eax, [esp+12]
+       mov ebx, [esp+8]
+       xchg eax, [ebx]
+       pop ebx
+       ret</asm>
 
 ## siehe auch
 
@@ -93,6 +96,6 @@ lock xchg eax, \[speicheradresse\]\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4392/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 4392; parent 4391; 2009-05-22T19:31:11Z -->
+<!-- MediaWiki page 1490; revision 4402; parent 4392; 2009-05-23T21:33:53Z -->
