@@ -191,10 +191,10 @@ Happy Coding, TheThing
 
 ## Links
 
-[Protected-Mode Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/)
+[Protected-Mode Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/) [Software-Multitasking Tutorial auf google code](http://code.google.com/p/onyxkernel/wiki/SoftwareMultitasking)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1849/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4407/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1849/index.html)
 
-<!-- MediaWiki page 1849; revision 4405; parent 0; 2009-05-25T10:36:04Z -->
+<!-- MediaWiki page 1849; revision 4407; parent 4405; 2009-05-25T19:35:27Z -->
