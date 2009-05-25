@@ -1,6 +1,6 @@
 # Software Multitasking Tutorial
 
-Diese Tutorial ist für alle gedacht, die in ihrem Betriebssystem Multitasking auf Softwarebasis implementieren wollen. Ich bin am Anfang an diesem Thema fast verzweifelt, daher schreibe ich dieses Tutorial, damit andere einen leichten Einstieg in diese Thema haben. Ich werde hier nicht "alles" erklären, aber danach sollte einfache Tests mit zwei Tasks möglich sein.
+Dieses Tutorial ist für alle gedacht, die in ihrem Betriebssystem Multitasking auf Softwarebasis implementieren wollen. Ich bin am Anfang an diesem Thema fast verzweifelt, daher schreibe ich dieses Tutorial, damit andere einen leichten Einstieg in diese Thema haben. Ich werde hier nicht "alles" erklären, aber danach sollte einfache Tests mit zwei Tasks möglich sein.
 
 ## Bevor wir anfangen...
 
@@ -197,6 +197,6 @@ Happy Coding, TheThing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1849/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1849/index.html)
 
-<!-- MediaWiki page 1849; revision 4408; parent 4407; 2009-05-25T19:36:59Z -->
+<!-- MediaWiki page 1849; revision 4409; parent 4408; 2009-05-25T19:37:48Z -->
