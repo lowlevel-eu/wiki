@@ -1,27 +1,39 @@
 # FROST
 
-| FROST |  |
+| NerdPole |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | darkinsanity aka TheThing |
-| Akt. Version: | 0.1.5a |
+| Akt. Version: | 0.1 (Codename: Jason) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") und [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: |  |
-| Binärformat: |  |
+| Binärformat: | ELF |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-<http://frostkernel.sourceforge.net>
+[NerdPole-Homepage](http://http://darkinsanity.netne.net/nerdpole/)
 
   
-FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben wird. Das Projekt ist noch nicht sehr weit fortgeschritten, da die Entwicklung in FreeBASIC einige Steine in den Weg legt. FROST ist kein komplettes Betriebssystem, sondern bezeichnet lediglich den Kernel. Ein Betriebssystem auf Basis von FROST wird mit dem NorthPole-Project entwickelt.
+NerdPole ist ein OS, das FROST als Kernel nutzt. Ziel ist es, ein nutzbares Betriebssystem mit FreeBASIC zu schreiben, auf dem der FreeBASIC-compiler ausgeführt werden kann. Jeder Teil des Systems soll nur die Aufgaben übernehmen, für die er geschrieben wurde.
+
+## V0.1 (Codename: Jason)
+
+Die Version 0.1 von NerdPole soll am 22. Juli 2009 erscheinen. Wir sind noch nicht sicher ob wir den Termin halten können.
+
+Der Codename Jason wurde der Version 0.1 zu Ehren von Jason Becker gegeben, einem der größten Komponisten/Gitarristen den die Welt je gesehen hat. Er wird am Erscheinungstermin 40 Jahre alt.
+
+## Der Kernel
+
+FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben wird. Der Kernel enthät bereits Multitaking und Paging. Er ist Multiboot-kompatibel, als Bootloader wird GRUB empfohlen. FROST ist kein komplettes Betriebssystem, sondern bezeichnet lediglich den Kernel.
+
+Seite des Kernels: <http://frostkernel.sourceforge.net>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4410/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 4410; parent 3870; 2009-05-27T14:06:42Z -->
+<!-- MediaWiki page 1754; revision 4412; parent 4410; 2009-05-27T14:21:15Z -->
