@@ -1,52 +1,50 @@
 # Crosscompiler für Windows
 
-Dieser Artikel soll eine kleine Anleitung sein, wie man einen [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") unter Windows so aufsetzt, dass man damit [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") kompilieren kann. Wer sein eigenes OS damit kompilieren will, kann das natürlich auch tun. Den GCC habe ich bereits kompiliert, aber wer mir nicht traut, kann sich mit der [Cross-Compiler-Anleitung](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") selbst einen bauen.
+Für Windows wird ein [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benötigt, um [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Dateien zu erstellen, denn die MinGW- und cygwin-Compiler unterstützen dieses Format nicht. Das ELF-Format bietet gegenüber dem PE-Format von Windows den Vorteil, dass es weniger Sonderbehandlung und Workarounds für bei der Entwicklung eines Betriebssystems benötigt. Die Verwendung eines Cross-Compilers bietet darüberhinaus mehr Kontrolle über den Ablauf des Kompiliervorgangs.
 
-## Benötigte Werkzeuge
+Dieser Artikel soll eine kleine Anleitung sein, wie man einen vorkompilierten [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") unter Windows so installiert, dass man damit [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") kompilieren kann. Allerdings ist der verwendete Compiler nicht auf ein bestimmtes System beschränkt, sondern erzeugt Dateien für das allgemeine Target *i586-elf*. Es sollte also kein Problem sein, diesen Compiler für ein anderes OS einzusetzen.
 
-Die Anforderungen von týndur sind relativ gering und auf allen unterstützten Plattformen gleich:
+## Download
 
-- Eine POSIX-Umgebung (wir brauchen unter anderem Bash, sed und make)
-- NASM
-- GCC und binutils
+Der Compiler ist verfügbar unter <http://jidder.de/lost/files/crosstools-complete.rar>. Darin enthalten sind
 
-## MinGW-basierte Umgebung
+- GCC 4.4.0 (C- und C++-Compiler)
+- binutils 2.19.1
+- newlib 1.17.0 und libstdc++ (C- bzw. C++-Standardbibliothek)
 
-MinGW ist ein Port des GCC nach Windows. Der mitgelieferte Compiler von MinGW kann keine ELF-Dateien erzeugen und ist deswegen nicht geeignet, um týndur zu kompilieren. Darum muss ein Cross-Compiler benutzt werden.
+## Installation
 
-Einen Cross-Compiler, den ich selbst aus den ungeänderten Sourcen für mein eigenes Frickel-OS namens IncOS kompiliert habe, gibt es unter [\[1\]](http://jidder.de/lost/files/incoscc-with-cpp-and-with-without-i18n.rar). Darin enthalten ist der GCC 4.2.0 mit dem Target ELF und die Binutils 2.17. Außerdem benötigen wir die POSIX-Umgebung für MinGW [MSYS](http://mingw.org/download.shtml) und [NASM](http://sourceforge.net/project/showfiles.php?group_id=6208&package_id=47034).
+Im Prinzip reicht es das Archiv zu entpacken (z.B. nach C:\crosstools), und in die PATH-Variable das Verzeichnis C:\crosstools\bin einzutragen. Alle Programme haben dann das Präfix "i586-elf-". Zum Beispiel der C-Compiler kann mit *i586-elf-gcc* aufgerufen werden.
 
-Wenn ihr die drei Dateien runtergeladen habt, erstellt ein Verzeichnis namens C:\lostdev. (Wer seine Werkzeuge wo anders platzieren möchte, kann das natürlich auch tun. Im folgenden werde ich dennoch von diesem Pfad ausgehen.) Startet den Setup von MSYS und klickt euch bis zur Angabe des Pfads durch. Gebt da C:\lostdev\msys an. Dann weiter bis zum Ende durchklicken. Wenn eine Eingabeaufforderung auftaucht, die etwas von "This is a post install process" erzählt, brecht das durch die Eingabe von "n" ab.
+týndur erwartet, dass dieses Präfix in der *config.sh* eingetragen wird, damit die Makefiles den Compiler finden. Dazu muss die Variable *COMPILER_PREFIX_I386* in Zeile 3 mittels *COMPILER_PREFIX_I386=i586-elf-* entsprechend gesetzt werden.
 
-Entpacke danach NASM in das Verzeichnis C:\lostdev\nasm. Achte dabei darauf, dass die Datei nasmw.exe direkt in dem Verzeichnis C:\lostdev\nasm liegt und nicht in irgendwelchen Unterverzeichnissen. Benenne außerdem die Datei nasmw.exe in nasm.exe um, damit NASM von dem build-Skript erkannt wird.
+Alternativ kann man statt C:\crosstools\bin auch C:\crosstools\i586-elf\bin in die PATH-Variable eintragen. Dann haben die Programme kein Präfix und heißen einfach *gcc*, *ld*, etc. Das kann allerdings unter Umständen zu Problemen führen, wenn noch mehr Compiler in der PATH-Variable eingetragen sind.
 
-Entpacke dann die Datei incoscc-with-cpp-and-with-without-i18n.rar in dem lostdev-Verzeichnis, sodass z.B. in c:\lostdev\bin die Datei i586-elf-addr2line.exe liegt.
+### MSYS einrichten
 
-Damit der Compiler und der Assembler auch gefunden werden, muss die PATH-Variable entsprechend geändert werden. Ich bevorzuge für jede Compilerumgebung auf meinem Computer eine Batch-Datei, die die Umgebung einrichtet. Für týndur sieht sie so aus:
+Für weitere Werkzeuge wie make, bash, und so weiter, wird wie bei MinGW die MSYS-Umgebung benötigt. Wenn MSYS bereits installiert ist, kann es problemlos weiter verwendet werden. In der Regel bedeutet das, dass das MSYS-Verzeichnis (Standard C:\msys\bin) ebenfalls in die PATH-Variable eingetragen werden muss.
 
-    set path=C:\lostdev\msys\bin;C:\lostdev\lostcc\i586-elf\bin;C:\lostdev\nasm;%path%
+Wenn bisher noch kein MinGW installiert war, ist vermutlich auch MSYS noch nicht eingerichtet. MSYS kann auf der [SourceForge-Seite von MinGW](http://sourceforge.net/project/showfiles.php?group_id=2435&package_id=24963) heruntergeladen werden. Die Setup-Datei hat einen Namen in der Form MSYS-1.0.xx.exe, und muss nach dem Download einfach abgearbeitet werden. Um MSYS zu verwenden, muss dann das bin-Verzeichnis ebenfalls in die PATH-Umgebungsvariable eingetragen werden.
+
+### NASM
+
+Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf SourceForge zum [Download](http://sourceforge.net/project/showfiles.php?group_id=6208&package_id=47034) gibt. Diesen auch einfach installieren.
+
+## Cross-Compiler Kommandozeile
+
+Ich verwende für týndur eine Batch-Datei, die mir Umgebung einrichtet. Sie richtet die PATH-Variable ein, und startet die Kommandozeile. Zum Beispiel kann sie so aussehen:
+
+    SET PATH=C:\msys\bin;C:\crosstools\i586-elf\bin;C:\Programme\NASM;%PATH%
     cmd /k cls
 
 Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týndur und starte sie. Durch die Eingabe von make sollte dann týndur vollständig kompilieren.
 
-Wer lieber den Compiler tiefer in das System verankern will, kann die Pfade in die globale PATH-Variable schreiben. Diese Pfade sind dann allerdings überall verfügbar und können unter Umständen Konflikte mit anderen Compilern und Umgebungen verursachen. Unter Windows geht das in der Systemsteuerung (klassische Ansicht) -\> System -\> Erweitert -\> Umgebungsvariablen und dort eine PATH-Variable editieren.
+## Feedback
 
-## Cygwin
-
-(todo)
-
-## Erstellung eines eigenen Cross Compilers
-
-Wer nicht meinen Cross Compiler nutzen möchte, kann sich selbst einen bauen. Weil das zur Zeit den Rahmen dieses Artikels sprengen würde, verweise ich auf die [Anleitung](http://wiki.osdev.org/GCC%20Cross-Compiler) im OS-FAQ Wiki auf Mega-Tokyo. Mein Cross Compiler ist auch in etwa nach dieser Anleitung entstanden.
-
-## Probleme
-
-### gcc.exe: \_spawnvp: No such file or directory und CreateProcess: No such file or directory
-
-Die genaue Ursache kenne ich auch nicht, aber es könnte helfen, die Datei libexec\gcc\i586-elf\4.2.0\cc1.exe nach i586-elf\bin zu kopieren.
+Feedback im Forum, im IRC oder auf der Diskussionsseite ist erwünscht. Besonders, wenn irgendwas nicht funktioniert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4414/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 3942; parent 3842; 2009-01-20T20:04:25Z -->
+<!-- MediaWiki page 1450; revision 4414; parent 3942; 2009-05-27T21:12:13Z -->
