@@ -22,6 +22,6 @@ FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben wir
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3870/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4410/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 3870; parent 3853; 2009-01-14T11:27:04Z -->
+<!-- MediaWiki page 1754; revision 4410; parent 3870; 2009-05-27T14:06:42Z -->
