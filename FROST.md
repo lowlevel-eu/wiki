@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[NerdPole-Homepage](http://http://darkinsanity.netne.net/nerdpole/)
+[NerdPole-Homepage](http://darkinsanity.netne.net/nerdpole/)
 
   
 NerdPole ist ein OS, das FROST als Kernel nutzt. Ziel ist es, ein nutzbares Betriebssystem mit FreeBASIC zu schreiben, auf dem der FreeBASIC-compiler ausgeführt werden kann. Jeder Teil des Systems soll nur die Aufgaben übernehmen, für die er geschrieben wurde.
@@ -34,6 +34,6 @@ Seite des Kernels: <http://frostkernel.sourceforge.net>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 4412; parent 4410; 2009-05-27T14:21:15Z -->
+<!-- MediaWiki page 1754; revision 4413; parent 4412; 2009-05-27T14:25:01Z -->
