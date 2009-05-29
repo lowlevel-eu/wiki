@@ -176,6 +176,6 @@ Happy Coding, TheThing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
 
-<!-- MediaWiki page 1850; revision 4406; parent 0; 2009-05-25T10:37:14Z -->
+<!-- MediaWiki page 1850; revision 4418; parent 4406; 2009-05-29T18:47:56Z -->
