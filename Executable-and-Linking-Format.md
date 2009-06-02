@@ -202,16 +202,16 @@ Dieses Feld gibt den Typ des Segments an, für eine ausführbare ELF-Datei ist v
 | PT_NOTE | 4 | Universelles Segment |
 | PT_SHLIB | 5 | Shared Lib |
 | PT_PHDIR | 6 | Gibt Position und Größe des Programm-Headers an. |
-| PT_LOPROC | 0x70000000 | Reserviert |
-| PT_HIPROC | 0x7fffffff | Reserviert |
+| PT_TLS | 7 | Thread-Local Storage |
+| PT_LOOS | 0x60000000 | Reserviert für Betriebssystem spezifische Erweiterungen |
+| PT_HIOS | 0x6fffffff | Reserviert für Betriebssystem spezifische Erweiterungen |
+| PT_LOPROC | 0x70000000 | Reserviert für Prozessor spezifische Erweiterungen |
+| PT_HIPROC | 0x7fffffff | Reserviert für Prozessor spezifische Erweiterungen |
 
-Außerdem habe ich noch diese (anscheinend unoffiziellen) Werte in Linux-Header-Dateien (<http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/include/linux/elf.h#L35>) gefunden.
+Außerdem habe ich noch diese (anscheinend inoffiziellen) Werte in Linux-Header-Dateien (<http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/include/linux/elf.h#L35>) gefunden.
 
 | Name | Wert |
 | ----------------- | ------------------- |
-| PT_TLS | 7 |
-| PT_LOOS | 0x60000000 |
-| PT_HIOS | 0x6fffffff |
 | PT_GNU_EH_FRAME | 0x6474e550 |
 | PT_GNU_STACK | PT_LOOS+0x474e551 |
 
@@ -272,6 +272,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 4375; parent 4292; 2009-05-16T09:27:24Z -->
+<!-- MediaWiki page 1528; revision 4423; parent 4375; 2009-06-02T14:53:29Z -->
