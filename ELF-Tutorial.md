@@ -248,12 +248,14 @@ Happy Coding, The Thing
 
 [Beschreibung des ELF-Formats (PDF)](http://www.linux-kernel.de/appendix/ap05.pdf)
 
+[ELF-Spezifikation](http://www.skyfree.org/linux/references/ELF_Format.pdf)
+
 [Tool Interface Standard (TIS) Executable and Linking Format (ELF) Specification Version 1.2 (PDF)](http://refspecs.freestandards.org/elf/elf.pdf)
 
 [Tool Interface Standard (TIS) Executable and Linking Format (ELF) Specification Version 1.2 (PDF)](http://www.acm.uiuc.edu/sigops/rsrc/pfmt11.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4427/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 4426; parent 4425; 2009-06-05T09:43:45Z -->
+<!-- MediaWiki page 1854; revision 4427; parent 4426; 2009-06-05T09:45:33Z -->
