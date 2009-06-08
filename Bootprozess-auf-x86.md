@@ -4,7 +4,7 @@ Am Anfang ist das nichts. So könnte man wohl den Zustand vor einem Bootvorgang 
 
 ## Nach dem Einschalten
 
-Zuerst ist nichts geladen. Keine Software, kein Treiber, kein sonstiger Code, selbst die CPU-Register sind leer. In dem Moment wird CS (Codesegment) der Wert 0xFFFF geladen - hier befindet sich der Einsprung für das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), welches grundlegende Initialisierungen durchführt.
+Zuerst ist nichts geladen. Keine Software, kein Treiber, kein sonstiger Code, denn der Inhalt das RAMs ist undefiniert. Die CPU-Register sind leer, und die CPU befindet sich im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"). In dem Moment wird in CS (Codesegment) der Wert 0xF000, und in EIP 0xFFF0 geladen - hier befindet sich der Einsprung für das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), welches grundlegende Initialisierungen durchführt. Das BIOS befindet sich nicht im RAM, sondern in einem ROM, das in den Adressraum eingeblendet ist, und kann deswegen bereits von der CPU ausgeführt werden.
 
 ## Im BIOS
 
@@ -34,6 +34,6 @@ Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
 
-<!-- MediaWiki page 1852; revision 4424; parent 4415; 2009-06-02T19:35:24Z -->
+<!-- MediaWiki page 1852; revision 4429; parent 4424; 2009-06-08T10:05:56Z -->
