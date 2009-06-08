@@ -8,7 +8,7 @@ Zuerst ist nichts geladen. Keine Software, kein Treiber, kein sonstiger Code, de
 
 ## Im BIOS
 
-Wenn das BIOS die Kontrolle erhält, wird (bei neueren zumindest) zuerst ein kleiner CPU-Check durchgeführt - in erster Linie um die Frage zu beantworten, was denn genau verbaut ist. Dannach wird der Speicher gezählt, und im folgenden weitere Hardware erkannt und gegebenenfalls initialisert. (dieser Vorgang beruht mitunter schon auf eigenen Einstellungen). Sobald zuletzt die vorhandenen Massenspeichergeräte erkannt werden, werden diese in (konfigurierter) Reihenfolge auf gültige [Bootsektoren](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") durchsucht. Hierzu wird der erste Sektor jedes Gerätes nach 0x7C00 geladen und die letzten 2 Bytes mit der Magic Number 0x0AA55 verglichen. Ist diese korrekt wird zum Start des Bootsektors gesprungen.
+Wenn das BIOS die Kontrolle erhält, wird (bei neueren zumindest) zuerst ein kleiner CPU-Check durchgeführt - in erster Linie um die Frage zu beantworten, was denn genau verbaut ist. Danach wird der Speicher gezählt, und im folgenden weitere Hardware erkannt und gegebenenfalls initialisiert. (dieser Vorgang beruht mitunter schon auf eigenen Einstellungen). Sobald zuletzt die vorhandenen Massenspeichergeräte erkannt wurden, werden diese in (konfigurierter) Reihenfolge auf gültige [Bootsektoren](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") durchsucht. Hierzu wird der erste Sektor jedes Gerätes nach 0x7C00 geladen und die letzten 2 Bytes mit der Magic Number 0x0AA55 verglichen. Ist diese korrekt wird zum Start des Bootsektors gesprungen.
 
 ## Der Bootsektor
 
@@ -34,6 +34,6 @@ Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
 
-<!-- MediaWiki page 1852; revision 4429; parent 4424; 2009-06-08T10:05:56Z -->
+<!-- MediaWiki page 1852; revision 4430; parent 4429; 2009-06-08T10:07:00Z -->
