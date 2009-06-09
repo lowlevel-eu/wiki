@@ -33,6 +33,10 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
     
 - [FAT12/16](http://members.inode.at/anton.zechner/az/FatFormat.htm) - Das FAT12/16 Kurz und verständlich.
 
+<!-- -->
+
+- [OS Dev Wiki](http://wiki.osdev.org) - (English) Wiki der OSDev.org
+
 ## ARM
 
 - [ARM Architecture Reference Manual](http://www.arm.com/miscPDFs/14128.pdf)
@@ -80,6 +84,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3738/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 3738; parent 2986; 2008-12-26T12:43:26Z -->
+<!-- MediaWiki page 1437; revision 4431; parent 3738; 2009-06-09T03:39:54Z -->
