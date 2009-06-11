@@ -144,10 +144,10 @@ Erweitern wir nun also wie folgt den C-Code:
         while(*Text)
         {
             *VideoMem = *Text;
-            *VideoMem++;
+            VideoMem++;
             *VideoMem = 7;
-            *VideoMem++;
-            *Text++;
+            VideoMem++;
+            Text++;
         }
         return(0);
     }
@@ -276,6 +276,6 @@ Hier noch das Packet an Tools und Quelltexten: [ckernel.zip](http://lowlevel.bra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2984/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 2984; parent 2980; 2008-06-17T06:27:12Z -->
+<!-- MediaWiki page 1458; revision 4432; parent 2984; 2009-06-11T11:40:50Z -->
