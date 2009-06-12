@@ -8,7 +8,7 @@ Der System Management Mode (SMM) ist ein Betriebsmodus der [x86](https://github.
 
 ## Wechsel in den SMM
 
-In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den Long Mode gesprungen werden. Die CPU wechselt in den SMM ausschließlich dann, wenn ein System Management Interrupt (SMI) über den SMI#-Pin ausgelöst wird. Das bedeutet, dass dies nicht nur für Anwendungen sondern auch für das Betriebssystem transparent geschieht; beide bekommen davon also nichts mit, ähnlich wie Programme nichts von [Hardware Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") mitbekommen. Wenn ein SMI ausgelöst wird, wird zunächst der Zustand der CPU gespeichert, und dann ein spezieller Interrupt Handler ausgeführt. Dieser befindet sich in einem Adressraum, der in der Regel außerhalb des Zugriffs der anderen Betriebsmodi liegt. Der Rücksprung aus dem Interrupt Handler, geschieht über eine spezielle Instruktion, die analog zu IRET funktioniert.
+In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den Long Mode gesprungen werden. Die CPU wechselt in den SMM ausschließlich dann, wenn ein System Management Interrupt (SMI) über den SMI#-Pin ausgelöst wird. Das bedeutet, dass dies nicht nur für Anwendungen sondern auch für das Betriebssystem transparent geschieht; beide bekommen davon also nichts mit, ähnlich wie Programme nichts von [Hardware Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") mitbekommen. Wenn ein SMI ausgelöst wird, wird zunächst der Zustand der CPU gespeichert, und dann ein spezieller Interrupt Handler ausgeführt. Dieser befindet sich in einem Adressraum, der in der Regel außerhalb des Zugriffs der anderen Betriebsmodi liegt. Der Rücksprung aus dem Interrupt Handler, geschieht über die spezielle Instruktion RSM, die analog zu IRET funktioniert.
 
 ## Links
 
@@ -16,6 +16,6 @@ In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
 
-<!-- MediaWiki page 1699; revision 4315; parent 4076; 2009-04-23T21:55:48Z -->
+<!-- MediaWiki page 1699; revision 4434; parent 4315; 2009-06-12T13:43:47Z -->
