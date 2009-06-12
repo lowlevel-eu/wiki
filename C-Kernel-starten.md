@@ -38,15 +38,13 @@ Dieser Kernel muß zu einer binären Datei compiliert werden. Und das beqerkstel
 
 Zur Erläuterung:
 
-"nasmw" ist der Name des Netwide Assemblers. Dieser Name bezieht sich auf die Windows-Version. Unter Linux heißt es möglicherweise nur "nasm".
+"nasmw" ist der Name des Netwide Assemblers. Dieser Name bezieht sich auf die Windows-Version. Unter Linux und DOS heißt es nur "nasm".
 
 "-f bin" gibt an, das wir als Ausgabeformat eine binäre Datei haben möchten. Das heisst das der Quelltext so wie er ist in Maschinencode umgewandelt wird und ohne irgendwelcher Zusatzinformationen gespeichert wird.
 
 "-o kernel16.bin" gibt an, das wir als Ausgabe gerne die Datei mit dem Namen "kernel16.bin" erstellt haben möchten.
 
 "kernel16.asm" ist schließlich der Name der Quellcode-Datei die wir gerne assembliert haben möchten.
-
-  
 
 ## Aufruf der Main-Funktion
 
@@ -276,6 +274,6 @@ Hier noch das Packet an Tools und Quelltexten: [ckernel.zip](http://lowlevel.bra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 4432; parent 2984; 2009-06-11T11:40:50Z -->
+<!-- MediaWiki page 1458; revision 4435; parent 4432; 2009-06-12T13:51:19Z -->
