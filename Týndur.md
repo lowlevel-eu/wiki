@@ -70,13 +70,15 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ## Links
 
-- [Die Webseite von týndur](http://www.tyndur.org/)
 - [Builds von jeder Revision](http://nightlies.tyndur.org/)
 - [WebSVN](http://svn.tyndur.org/)
-- [Mailingliste](http://list.tyndur.org/mailman/listinfo) ([Archiv](http://list.tyndur.org/pipermail/tyndur-devel/))
+- [WebGit](http://git.tyndur.org/)
+- [Mailingliste](http://list.tyndur.org/mailman/listinfo/tyndur-devel) ([Archiv](http://list.tyndur.org/pipermail/tyndur-devel/))
+- [Revisionsaktuelle Dokumentation von CDI](http://lpt.tyndur.org/cdi/)
+- [Downloads](http://download.tyndur.org/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 3836; parent 3813; 2009-01-04T12:46:30Z -->
+<!-- MediaWiki page 1796; revision 4433; parent 3836; 2009-06-12T10:46:56Z -->
