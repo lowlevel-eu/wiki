@@ -82,13 +82,17 @@ Damit wird eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Li
 
 Der C-Kernel wird mit diesem Befehl kompiliert:
 
-    $ gcc -m32 -ffreestanding -o kernel_c.o -c kernel.c -Wall -Werror -nostdlib -nostartfiles -nodefaultlibs
+    $ gcc -m32 -ffreestanding -o kernel_c.o -c kernel.c -Wall -Werror -nostdinc
 
-Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. Es ist wichtig, dass keine Standardbibliotheken benutzt werden.
+Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. Es ist wichtig, dass keine Includes und damit auch keine Funktionen aus der Standardbibliothek des Hostsystems benutzt werden. Diese müssen erst selbst implementiert werden. Eine genau Beschreibung der einzelnen Kommandozeilenparameter findet sich im [GCC Handbuch (englisch)](http://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html#Invoking-GCC). An dieser Stelle nur so viel:
+
+- -m32 weißt gcc an den Code für den 32Bit Protected-Mode (im Gegensatz zu -m64) zu erstellen
+- -ffreestanding weißt gcc an nicht davon auszugehen, dass eine Standardbibliothek zur Verfügung steht
+- -nostdinc weißt gcc an keine Header aus der Standardbibliothek des Hostsystems bereitzustellen
 
 ### Linken
 
-Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z.B dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei für *ld*:
+Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z.B dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei/[Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript") für *ld*:
 
     ENTRY (loader)
 
@@ -120,13 +124,19 @@ Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Li
       }
     }
 
-Ich bin mir nicht 100%ig sicher ob dies die optimalste Linkerfile ist, aber sie funktioniert ;)
-
 Nun wird gelinkt:
 
     $ ld -T <LD-Konfigurationsdatei> -o kernel.bin kernel_asm.o kernel_c.o
 
 Wenn man später mehr Dateien hat, können diese natürlich auch dazugelinkt werden. Man sollte den fertigen Kernel jetzt in einer Datei namens *kernel.bin* haben.
+
+Mehr Informationen was genau dieses Linkerscript genau macht und warum es notwendig bzw. sinnvoll ist findet ihr im Artikel [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript"). An dieser Stelle nur so viel:
+
+Mit "ENTRY(loader)" wird ld mitgeteilt, dass der Kernel bei der Funktion loader (siehe Assemblerteil des Kernels) beginnt. Dies wird in einem Datenfeld in der ELF-Header der "kernel.bin" festgehalten und von GRUB benötigt um zur richtigen Adresse zu springen.
+
+Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche welche man in Assembler mittels des ".section .text" beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei "kernel.bin" bzw. nach dem Laden im Speicher landen. Das ". = 0x00100000;" gibt an, dass die "kernel.bin" an Adresse 1MB gelinkt wird, d.h. sich nach dem Laden durch GRUB an Adresse 1MB und folgende im (physischen) Speicher befindet.
+
+TODO: Rest
 
 ## GRUB-Image erstellen
 
@@ -212,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4367; parent 4347; 2009-05-11T08:59:20Z -->
+<!-- MediaWiki page 1604; revision 4438; parent 4367; 2009-06-14T14:38:50Z -->
