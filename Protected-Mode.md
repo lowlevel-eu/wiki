@@ -197,7 +197,7 @@ Dieses Segment stellt einen Speicherabschnitt dar, der eine Local Deskriptor Tab
 
 ### Task State Segment (TSS)
 
-Dies ist ebenfalls ein Speicherabschnitt der Daten beinhaltet um das Multitasking zu realisieren. Bei einem Task-Wechsel müssen alle Register des gerade laufenden Task gesichert werden, um diese später wiederherstellen zu können, damit der Task wieder gestartet werden kann. Das TSS beinhaltet alle Daten die für einen Task gespeichert werden. Daher ist es notwendig, das jeder Task ein eigenes TSS bekommt. Das TSS hat eine Größe von 104 Bytes. Sollte bei dem Deskriptor als Größe ein kleinerer Wert eingetragen werden, so wird beim Versuch den Deskriptor zu laden eine Exception ausgelöst.
+(Seite: [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment")) Dies ist ebenfalls ein Speicherabschnitt der Daten beinhaltet um das Multitasking zu realisieren. Bei einem Task-Wechsel müssen alle Register des gerade laufenden Task gesichert werden, um diese später wiederherstellen zu können, damit der Task wieder gestartet werden kann. Das TSS beinhaltet alle Daten die für einen Task gespeichert werden. Daher ist es notwendig, das jeder Task ein eigenes TSS bekommt. Das TSS hat eine Größe von 104 Bytes. Sollte bei dem Deskriptor als Größe ein kleinerer Wert eingetragen werden, so wird beim Versuch den Deskriptor zu laden eine Exception ausgelöst.
 
   
 
@@ -362,6 +362,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 4387; parent 3742; 2009-05-21T21:53:45Z -->
+<!-- MediaWiki page 1464; revision 4439; parent 4387; 2009-06-14T18:22:12Z -->
