@@ -1,10 +1,10 @@
 # Bochs
 
 | Allgemeines |  |
-| ------------------------ | ---------------------------- |
+| ------------------------ | ----------------------------- |
 | Name: | Bochs |
 | Entwickler: | The Bochs Project |
-| Akt. Version: | 2.4<br>(Stand 03.05.2009) |
+| Akt. Version: | 2.4.1<br>(Stand 15.06.2009) |
 | Lizenz: | LGPL |
 | Betriebssystem(e): | Linux, Windows, und andere |
 | Virtualisiertes System |  |
@@ -42,6 +42,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4354/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4441/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 4354; parent 3818; 2009-05-03T20:39:41Z -->
+<!-- MediaWiki page 1538; revision 4441; parent 4354; 2009-06-15T13:33:35Z -->
