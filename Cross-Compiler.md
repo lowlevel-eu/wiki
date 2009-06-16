@@ -109,12 +109,12 @@ Nachdem gcc fertig kompiliert ist, kann er installiert werden. Das geschieht mit
 
     $ make install-gcc install-target-libgcc
 
-## Benutzung
+# Benutzung
 
-Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht werden, dass dieser nur zum Kompilieren und nicht zum Linken benutzt werden kann, denn dafür fehlt eine installierte Libc. Deshalb muss der gcc mit dem -c Flag aufgerufen wird, damit er nur den Präprozessor aufruft und den Quellcode kompiliert aber nicht linkt.
+Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht werden, dass dieser nur zum Kompilieren und nicht zum Linken benutzt werden kann, denn dafür fehlt eine installierte Libc. Deshalb muss der gcc mit dem -c Flag aufgerufen wird, damit er nur den Präprozessor aufruft und den Quellcode kompiliert aber nicht linkt. Außerdem muss beachtet werden, dass der cross-kompilierte gcc nicht über das Kommando 'gcc' sondern über '/user/local/crosstools/bin/i386-elf-gcc' erreichbar ist. Dies gilt auch für g++ und alle Tools aus den binutils.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4444/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 4443; parent 2937; 2009-06-16T11:20:37Z -->
+<!-- MediaWiki page 1628; revision 4444; parent 4443; 2009-06-16T11:25:08Z -->
