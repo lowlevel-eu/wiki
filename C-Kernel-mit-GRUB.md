@@ -4,7 +4,7 @@ In diesem Tutorial werde ich beschreiben wie man einen in [C](https://github.com
 
 ## Hinweis für Windowsianer
 
-Ich werde hier beschreiben, wie ich es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") mache. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt - das heißt, du solltest dir erst den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
+Ich werde hier beschreiben, wie ich es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") mache. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt - das heißt, du solltest dir erst entweder den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") (Verwenden von Jidders Crosscompiler) oder [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") (Erstellen eines eigenen Crosscompilers) durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
 
 ## Kernel
 
@@ -222,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4438; parent 4367; 2009-06-14T14:38:50Z -->
+<!-- MediaWiki page 1604; revision 4442; parent 4438; 2009-06-16T09:54:21Z -->
