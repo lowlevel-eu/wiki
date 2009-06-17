@@ -1,14 +1,20 @@
 # C-Kernel starten
 
+**Warnung**
+
+Es wird davon abgeraten dieses Tutorial zu verwenden. Empfohlen wird von unserer Seite aus [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") und das dort gelinkte Tutorial [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB").
+
+  
+
 ## Vorwort
 
-Da im letzten Tutorial ([Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")) es leider nicht mehr ganz geklappt hat schiebe ich dieses Tutorial noch nach. Hier werde ich zeigen wie man einen eigenen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") der in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben ist starten kann. Auch dazu ist etwas arbeit nötig und meine Methode ist vielleicht nicht die bequemste, jedoch funktioniert sie und ich werde auch wieder selbst geschriebene Tools bereitstellen umd die Arbeit möglichst zu erleichtern.
+Da im letzten Tutorial ([Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")) es leider nicht mehr ganz geklappt hat schiebe ich dieses Tutorial noch nach. Hier werde ich zeigen wie man einen eigenen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") der in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben ist starten kann. Auch dazu ist etwas Arbeit nötig und meine Methode ist vielleicht nicht die bequemste, jedoch funktioniert sie und ich werde auch wieder selbst geschriebene Tools bereitstellen, um die Arbeit möglichst zu erleichtern.
 
   
 
 ## Booten
 
-Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader läd eine binäre Datei aus dem Root-Directory einer Diskette, welche mit dem FAT12 [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
+Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader lädt eine binäre Datei aus dem Hauptverzeichnis einer Diskette, welche mit dem FAT12 [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
 
   
 
@@ -16,11 +22,11 @@ Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits f
 
 Es mag komisch klingen, aber man benötigt, zumindest für meine Version, zwei Kernel. Streng genommen sind es sogar drei. Dabei bestehen zwei Kernel aus reinem Assembler und der andere ist dann der eigentliche, in C geschriebene Kernel, auf den wir hinaus wollen.
 
-Der erste Kernel dient lediglich dazu eine kleine Global Deskriptor Table ([GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")) einzurichten und in den Protected Mode zu schalten. Das ist nämlich Grundvorraussetzung, wenn wir im weiteren mit einem C-Kernel arbeiten möchten.
+Der erste Kernel dient lediglich dazu eine kleine [Global Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") einzurichten und in den Protected Mode zu schalten. Das ist nämlich Grundvoraussetzung, wenn wir im weiteren mit einem C-Kernel arbeiten möchten.
 
-Der zweite Kernel (wenn man das so bezeichnen kann) ist ein kleiner Zwang den mit der Linker aus den GNU Binutils auferzwungen hat. Dieser erklärte mir nämlich ganz höflich das er sich nicht dazu überreden lässt eine Objektdatei zu linken, die teilweise 16-Bit Code enthält. Und diesen 16-Bit Code benötigen wir in dem ersten Kernel, welcher in den Protected Mode schaltet. Dort sind wir nämlich, solange wir den Protected Mode noch nicht entgültig aktiviert haben, im Real-Mode und haben somit auch 16-bit Code.
+Der zweite Kernel (wenn man das so bezeichnen kann) ist ein kleiner Zwang den mit der Linker aus den GNU Binutils auferzwungen hat. Dieser erklärte mir nämlich ganz höflich das er sich nicht dazu überreden lässt eine Objektdatei zu linken, die teilweise 16-Bit Code enthält. Und diesen 16-Bit Code benötigen wir in dem ersten Kernel, welcher in den Protected Mode schaltet. Dort sind wir nämlich, solange wir den Protected Mode noch nicht endgültig aktiviert haben, im Real-Mode und haben somit auch 16-bit Code.
 
-Daher also brauchen wir diesen zweiten Kernel. Dieser beinhaltet eigenlich nur einen JUMP-Befehl. Und zwar den Jump zur Main-Funktion des C-Kernels.
+Daher also brauchen wir diesen zweiten Kernel. Dieser beinhaltet eigentlich nur einen JUMP-Befehl. Und zwar den Jump zur Main-Funktion des C-Kernels.
 
 Die klingt banal, hat aber einen Grund. Wenn wir im C-Kernel arbeiten, haben wir auch bestimmt mit Strings (char \*Text = "hallo") zu tun. Und C-Compiler haben die Angewohnheit solche Strings die ja fest im Programmcode stehen an den Anfang der compilierten Datei zu schreiben. Und um diese Strings zu überspringen benötigen wir den zweiten Kernel, der einen Jump direkt (über die Strings hinweg) zur Main-Funktion macht.
 
@@ -32,7 +38,7 @@ So und dann haben wir natürlich noch den dritten, eigentlichen Kernel, der in C
 
 Kommen wir also gleich zum Kernel nummer Eins. Dieser wurde ziemlich eingehend im Protected Mode Tutorial behandelt. Deshalb gibts auch hier nur am Ende wieder den Quellcode zum runterladen.
 
-Dieser Kernel muß zu einer binären Datei compiliert werden. Und das beqerkstelligen wir mit der folgenden Befehlszeile:
+Dieser Kernel muß zu einer binären Datei compiliert werden. Und das bewerkstelligen wir mit der folgenden Befehlszeile:
 
     nasmw -f bin -o kernel16.bin kernel16.asm
 
@@ -70,11 +76,11 @@ Auch hier wieder eine Erläuterung:
 
 "extern \_main" teilt NASM mit, das er sich keine Sorgen machen muß, wenn er das Label "\_main" nicht in dem Quelltext finden kann, da dieses Label extern, also in einer anderen Datei definiert wird.
 
-Der Unterstrich bei "\_main" ist nötig, da C-Compiler den Funktionsnamen beim compilen immer einen Unterstrich voranstellen.
+Der Unterstrich bei "\_main" ist nötig, da C-Compiler den Funktionsnamen beim kompilieren immer einen Unterstrich voranstellen.
 
-"global start" ist praktisch das Gegenstück zu "extern \_main". NASM wird einen Vermerk beim compilen in die Datei machen, das das Label "start" für andere Datein verfügbar gemacht wird. Das bedeutet, das eine weitere Datei, welche das Label "start" als "extern" gekennzeichnet hat, dieses Label beim Linken hier finden kann.
+"global start" ist praktisch das Gegenstück zu "extern \_main". NASM wird einen Vermerk beim kompilieren in die Datei machen, das das Label "start" für andere Datein verfügbar gemacht wird. Das bedeutet, das eine weitere Datei, welche das Label "start" als "extern" gekennzeichnet hat, dieses Label beim Linken hier finden kann.
 
-Dieses Label muß aber nur vom Linker selbst gefunden werden, da dieser beim Linken gerne ein Label angegeben haben möchte, das an welchem er sich ausrichten kann. Dazu jedoch später mehr.
+Dieses Label muss aber nur vom Linker selbst gefunden werden, da dieser beim Linken gerne ein Label angegeben haben möchte, das an welchem er sich ausrichten kann. Dazu jedoch später mehr.
 
 Das Label "Stop" und der Befehl "jmp Stop" definieren eine Endlosschleife. Sollte unsere Main-Methode aus dem C-Kernel nämlich beenden, dann springt der Prozessor nämlich wieder in diesen Code zurück und führt die Befehle nach dem "call \_main" aus. Und damit dann nichts unkontrolliertes passiert, lassen wir eine Endlosschleife laufen.
 
@@ -87,7 +93,7 @@ Erläuterung:
 
 Hier fällt auf das wir nun anstatt "-f bin" die Angabe "-f aout" machen. Das bewirkt, das wir nun nichtmehr eine binäre Datei erhalten, sondern eine sog. Objektdatei. Diese Objektdatei enthält nun nicht nur den reinen übersetzen Maschinencode, sondern auch Zusatzinformationen. Und zwar Informationen über externe Labels die in dieser Datei noch nicht aufgelöst wurden.
 
-Das bedeutet das in diesem Code ein Sprung oder ein Call zu einer Funktion gemacht wird, die aber in dieser Datei nicht bekannt ist. Daher wird ein entsprechender Vermerkt in die Objektdatei getätigt. Wenn wir dann später den C-Kernel, welcher die gesuchte Main-Funktion beinhaltet, und den hier aufgeführten Kernel zusammen Linken, dann werden die beiden Datein förmlich aneinanderkopiert und die Adressen der Funktionen und Labels dort eingesetzt, wo sie noch nicht eingetragen werden konnte, weil sie noch nicht bekannt waren. Das nennt man Auflösen von Funktionen oder Labeln.
+Das bedeutet das in diesem Code ein Sprung oder ein Call zu einer Funktion gemacht wird, die aber in dieser Datei nicht bekannt ist. Daher wird ein entsprechender Vermerkt in die Objektdatei getätigt. Wenn wir dann später den C-Kernel, welcher die gesuchte Main-Funktion beinhaltet, und den hier aufgeführten Kernel zusammen Linken, dann werden die beiden Dateien förmlich aneinanderkopiert und die Adressen der Funktionen und Labels dort eingesetzt, wo sie noch nicht eingetragen werden konnte, weil sie noch nicht bekannt waren. Das nennt man Auflösen von Funktionen oder Labeln.
 
 Wir haben also nun schonmal zwei Dateien. Eine binäre Datei (kernel16.bin) und eine Objektdatei (kernel32.obj).
 
@@ -115,13 +121,13 @@ Der C-Kernel kann Anfangs erstmal sehr einfach aussehen. Daher genügt erstmal f
 
 \</c\>
 
-Es gibt viele Leute die sich darum streiten ob die Funktion nun "void" oder "int" als Returnwert haben soll oder muß. Laut Standard soll es "int" sein, was auch Sinn macht, da darüber ein Return-Wert an das Betriebssystem zurückgegeben werden kann, anhand dessen das Betriebssystem feststellen kann, ob die Anwendung korrekt oder mit einem Fehler beendet wurde.
+Es gibt viele Leute die sich darum streiten ob die Funktion nun "void" oder "int" als Returnwert haben soll oder muss. Laut Standard soll es "int" sein, was auch Sinn macht, da darüber ein Return-Wert an das Betriebssystem zurückgegeben werden kann, anhand dessen das Betriebssystem feststellen kann, ob die Anwendung korrekt oder mit einem Fehler beendet wurde.
 
 Hier sind WIR aber das Betriebssystem und wir brauchen auch keinen Returnwert. Daher würde es genügen wenn man "void" nimmt. Da aber in diesem Fall der GCC-Compiler meckert, hab ich es beim "int" belassen.
 
 Damit wir aber auch einen Beweis haben, das das mit unserem C-Kernel geklappt hat, erweitern wir die Main-Funktion um ein klein wenig Code um uns zumindest mal eine kleine Meldung auf den Monitor auszugeben.
 
-Dazu müßte man nun nachschlagen, das man direkt in den Videospeicher schreiben kann. Dieser beginnt im 25x80 Modus an der Adresse 0xB8000.
+Dazu müsste man nun nachschlagen, das man direkt in den Videospeicher schreiben kann. Dieser beginnt im 25x80 Modus an der Adresse 0xB8000.
 
 25x80 bedeutet das wir im Textmodus sind und wir hier 80 Zeichen pro Zeile und 25 Zeilen auf einer Bildschirmseite haben. Da wir für jeden Buchstaben 2 Bytes benötigen (eins für den ASCII-Code des Zeichens und eins für den Farbwert) ist der Bildspeicher für eine Seite genau
 
@@ -202,7 +208,7 @@ So nun haben wir schon drei Dateien. Die "kernel16.bin", die "kernel32.obj" und 
 
 Damit das ganze auch Gestalt annimmt, müssen wir das ganze noch zusammen durch einen Linker jagen. Dieser kopiert uns die Objektdateien zu einer zusammen und löst die verbleibenden Funktionen und Label auf. Damit erhalten wir dann schon "fast" unseren fertigen Kernel.
 
-Fast nur deshalb, weil wir die "kernel16.bin" nicht mit durch den Linker jagen können, da es sich hier nur um eine binäre Datei handelt. Diese muß aber auch untergebracht werden. Und dabei müssen wir sicherstellen das der Code der darin enthalten ist zu allererst ausgeführt werden muss. Das erreichen wir ganz einfach, indem wir den "verlinkten" Kernel und die "kernel16.bin" zusammenkopieren. Dabei muß so kopiert werden, das die "kernel16.bin" am Anfang der neuen Datei steht. Für dieses Zusammenkopieren könnte man ganz gewöhnlich den Copy-Befehl (für Linux "cp) benutzen. Da ich dem aber nicht so ganz traue, habe ich auch hier ein kleines Tool geschrieben, das diesen Schritt erledigt. Auch dieses kann am Ende heruntergeladen werden.
+Fast nur deshalb, weil wir die "kernel16.bin" nicht mit durch den Linker jagen können, da es sich hier nur um eine binäre Datei handelt. Diese muß aber auch untergebracht werden. Und dabei müssen wir sicherstellen das der Code der darin enthalten ist zu allererst ausgeführt werden muss. Das erreichen wir ganz einfach, indem wir den "verlinkten" Kernel und die "kernel16.bin" zusammenkopieren. Dabei muss so kopiert werden, das die "kernel16.bin" am Anfang der neuen Datei steht. Für dieses Zusammenkopieren könnte man ganz gewöhnlich den Copy-Befehl (für Linux "cp) benutzen. Da ich dem aber nicht so ganz traue, habe ich auch hier ein kleines Tool geschrieben, das diesen Schritt erledigt. Auch dieses kann am Ende heruntergeladen werden.
 
 So nun aber zum verlinken der beiden Dateien "kernel32.obj" und "ckernel.obj". Dazu benutzen wir den Linker "ld" der ebenfalls bei DJGPP enthalten ist. Für diesen erstellt man sich am besten eine "Linkerfile". Diese enthält die nötigen Angaben und Einstellungen die der Linker benötigt. Auch diese Datei wird zur Verfügung gestellt. Trotzdem erkläre ich hier noch ein paar kleine Einzelheiten zu dieser Datei, da diese evtl. später mal geändert werden müssen.
 
@@ -216,9 +222,9 @@ Dann hätten wir da noch folgende Zeile:
 
     .text 0x10200 : {
 
-Die genaue Bedeutung ist ansich unrelevant. Wissenswert ist lediglich das die Zahl "0x10200" (Dezimal: 66048) angibt an welcher Adresse der Kernel im Speicher beginnt. Das muß der Kernel wissen, da er nur mit dieser Angabe die Adressen für Funktionen und Variablen korrekt berrechnen kann.
+Die genaue Bedeutung ist ansich unrelevant. Wissenswert ist lediglich das die Zahl "0x10200" (Dezimal: 66048) angibt an welcher Adresse der Kernel im Speicher beginnt. Das muß der Kernel wissen, da er nur mit dieser Angabe die Adressen für Funktionen und Variablen korrekt berechnen kann.
 
-Hier ist allerdings die Adresse anzugeben, welcher der Kernel innerhalb des Codesegmentes ist. Unser Kernel beginnt an der Adresse 0 im Code-Segment. Da wir jedoch die Datei "kernel16.bin" noch VOR den hier zu verlinkenden Kernel kopieren müssen. Mit der Anweisnung "times" innerhalb der Datei "kernel16.asm" habe ich dafür gesorgt das die erstellte Datei "kernel16.bin" 512 Bytes groß wird. Das mag nach Verschwendung klingen, hat aber einen Grund. Beim Linken versucht der Linker immer ein Alignment zu erzeugen. Sprich er beginnt ungern an ungeraden Adressen. Und daher könnte es leicht passieren, das wir vielleicht im Nachhinein nochmal etwas an der Datei "kernel16.asm" ändern möchten und somit Gefahr laufen das das Ergebnis (kernel16.bin) eine ungerade Bytezahl annimmt. Wenn wir das nicht bemerken und versuchen das ganze zusammenzufügen werden wir wohl Überraschungen erleben, weil der Linker dann noch ein paar Nullen einfügt die da nicht hinsollen. Daher sorgen wir also dafür das die Datei "kernel16.bin" 512 Byte größe hat und das der Linker den restlichen Kernel so linkt, das er an der Adresse 0x10200 (Dezimal: 66048) beginnt.
+Hier ist allerdings die Adresse anzugeben, welcher der Kernel innerhalb des Codesegmentes ist. Unser Kernel beginnt an der Adresse 0 im Code-Segment. Da wir jedoch die Datei "kernel16.bin" noch VOR den hier zu verlinkenden Kernel kopieren müssen. Mit der Anweisung "times" innerhalb der Datei "kernel16.asm" habe ich dafür gesorgt das die erstellte Datei "kernel16.bin" 512 Bytes groß wird. Das mag nach Verschwendung klingen, hat aber einen Grund. Beim Linken versucht der Linker immer ein Alignment zu erzeugen. Sprich er beginnt ungern an ungeraden Adressen. Und daher könnte es leicht passieren, das wir vielleicht im Nachhinein nochmal etwas an der Datei "kernel16.asm" ändern möchten und somit Gefahr laufen das das Ergebnis (kernel16.bin) eine ungerade Bytezahl annimmt. Wenn wir das nicht bemerken und versuchen das ganze zusammenzufügen werden wir wohl Überraschungen erleben, weil der Linker dann noch ein paar Nullen einfügt die da nicht hinsollen. Daher sorgen wir also dafür das die Datei "kernel16.bin" 512 Byte größe hat und das der Linker den restlichen Kernel so linkt, das er an der Adresse 0x10200 (Dezimal: 66048) beginnt.
 
 Und auch hier wieder die Befehlszeile für den Linker:
 
@@ -255,7 +261,7 @@ Nun haben wir den fertigen Kernel(kernel.bin).
 
 Damit wir diesen auch starten können müssen wir zunächst meine Bootloader auf eine Diskette bekommen. Dazu benutzt man am besten das Tool Rawrite. Ich persöhnlich habe es mit dem Programm HexWorks erledigt. Damit kann man nämlich Datenträger Sektorweise öffnen und beschreiben.
 
-Wenn wir das nun haben, kopieren wir einfach die "kernel.bin" in das Root-Directory der Diskette und booten entweder einen PC damit, oder wir starten den Emulator "Bochs" mit der Angabe das er vom realen Diskettenlaufwerk booten soll.
+Wenn wir das nun haben, kopieren wir einfach die "kernel.bin" in das Hauptverzeichnis der Diskette und booten entweder einen PC damit, oder wir starten den Emulator "Bochs" mit der Angabe das er vom realen Diskettenlaufwerk booten soll.
 
   
 
@@ -267,13 +273,13 @@ Wenn man es soweit geschafft hat und man ein "Welcome to Protected Mode" auf dem
 
 ## Nachwort
 
-Wie üblich kann dieser Text frei kopiert, gedruckt und weitergegeben werden, solange wenigstens mein Name, sowei E-Mail Adresse mitgereicht werden.
+Wie üblich kann dieser Text frei kopiert, gedruckt und weitergegeben werden, solange wenigstens mein Name, sowie E-Mail Adresse mitgereicht werden.
 
   
 Hier noch das Packet an Tools und Quelltexten: [ckernel.zip](http://lowlevel.brainsware.org/wiki/images/ckernel.zip)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 4435; parent 4432; 2009-06-12T13:51:19Z -->
+<!-- MediaWiki page 1458; revision 4451; parent 4435; 2009-06-17T13:17:55Z -->
