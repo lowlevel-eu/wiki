@@ -82,8 +82,8 @@ Nachdem nun die binutils kompiliert und installiert wurden, kann mit gcc weiterg
 
 Wichtig ist hier, dass der eigene Pfad vor den originalen Pfaden steht, damit sicher die vorhin kompilierten binutils benutzt werden. Der Pfad /usr/local/crosstools muss auch hier wieder angepasst werden, wenn für den Präfix bei Binutils ein anderer benutzt wurde. Als nächstes muss der Quellcode von gcc heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/gcc> bezogen werden. Während dem Schreiben dieses Artikels wurde die Version 4.4.0 benutzt. Aber auch hier gilt wieder, dass das auf andere Versionen übertragen werden kann. Das Archiv mit Namen gcc-core-\<VERSION\>.tar.bz2 muss auf jeden Fall heruntergeladen werden. Falls auch ein C++ Compiler gewünscht wird, ist auch gcc-g++-\<VERSION\>.tar.bz2 notwendig. Nach dem Download des einen oder der beiden Archive müssen diese wieder entpackt werden:
 
-    $ wget ftp://ftp.fu-berlin.de/unix/languages/gcc/releases/gcc-4.4.0/gcc-core-4.4.0.tar.bz2
-    $ wget ftp://ftp.fu-berlin.de/unix/languages/gcc/releases/gcc-4.4.0/gcc-g++-4.4.0.tar.bz2
+    $ wget http://ftp.gnu.org/gnu/gcc/gcc-4.4.0/gcc-core-4.4.0.tar.bz2
+    $ wget http://ftp.gnu.org/gnu/gcc/gcc-4.4.0/gcc-g++-4.4.0.tar.bz2
     $ tar -xjf gcc-core-4.4.0.tar.bz2
     $ tar -xjf gcc-g++-4.4.0.tar.bz2
 
@@ -115,6 +115,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4444/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 4444; parent 4443; 2009-06-16T11:25:08Z -->
+<!-- MediaWiki page 1628; revision 4452; parent 4444; 2009-06-17T13:31:06Z -->
