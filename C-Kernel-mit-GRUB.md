@@ -134,7 +134,7 @@ Mehr Informationen was genau dieses Linkerscript genau macht und warum es notwen
 
 Mit "ENTRY(loader)" wird ld mitgeteilt, dass der Kernel bei der Funktion loader (siehe Assemblerteil des Kernels) beginnt. Dies wird in einem Datenfeld in der ELF-Header der "kernel.bin" festgehalten und von GRUB benötigt um zur richtigen Adresse zu springen.
 
-Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche welche man in Assembler mittels des ".section .text" beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei "kernel.bin" bzw. nach dem Laden im Speicher landen. Das ". = 0x00100000;" gibt an, dass die "kernel.bin" an Adresse 1MB gelinkt wird, d.h. sich nach dem Laden durch GRUB an Adresse 1MB und folgende im (physischen) Speicher befindet.
+Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche welche man in Assembler mittels des ".section .text" beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei "kernel.bin" bzw. nach dem Laden im Speicher landen. Das ". = 0x00100000;" gibt an, dass die "kernel.bin" an Adresse 1MB gelinkt wird, d.h. sich nach dem Laden durch GRUB an Adresse 1MB und folgende im (physischen) Speicher befindet. 1MB ist als Adresse gewählt, da GRUB keine Dateien unter diese Adresse lädt, der Grund dafür ist das der Speicherbereich zwischen 0 und 1MB durch das BIOS, den Bootloader selbst und verschiedene Hardware belegt ist. Siehe dazu auch den Artikel über [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche").
 
 ## GRUB-Image erstellen
 
@@ -220,6 +220,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4449/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4446; parent 4442; 2009-06-17T12:40:29Z -->
+<!-- MediaWiki page 1604; revision 4449; parent 4446; 2009-06-17T12:49:28Z -->
