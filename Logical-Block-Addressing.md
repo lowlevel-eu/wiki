@@ -2,7 +2,7 @@
 
 Bei Logical Block Addressing (Logische Block Adressierung) werden Sektoren von Massenspeichern von 0 aufsteigend adressiert. Das Gegenstück zu LBA ist das ältere [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "Cylinder Head Sector").
 
-Umrechnung von LBA zu CHS:
+Umrechnung von LBA zu [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS"):
 
        Abkürung Bedeutung
        
@@ -19,6 +19,6 @@ Umrechnung von LBA zu CHS:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
 
-<!-- MediaWiki page 1442; revision 2719; parent 1675; 2008-03-22T16:55:51Z -->
+<!-- MediaWiki page 1442; revision 4445; parent 2719; 2009-06-17T12:09:58Z -->
