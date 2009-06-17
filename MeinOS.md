@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), Message Queues (SysV), [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale") |
 | Homepage |  |
 
-<http://jgraef.bplaced.net/meinos/>
+<http://jgraef.dyndns.org/meinos/>
 
   
 meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
@@ -111,11 +111,11 @@ Das aktuelle CD-Image kann hier gedownloadet werden: [meinos_cd_20081207.iso.gz]
 
 ## Weblinks
 
-- [Website von meinOS](http://jgraef.bplaced.net/meinos/)
+- [Website von meinOS](http://jgraef.dyndns.org/meinos)
 - [GIT-Repository](http://repo.or.cz/w/meinos.git)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 3586; parent 3585; 2008-12-07T01:51:40Z -->
+<!-- MediaWiki page 1551; revision 4454; parent 3586; 2009-06-17T14:55:32Z -->
