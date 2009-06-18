@@ -107,12 +107,12 @@ Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Li
         *(.text)
       }
         
-      .rodata ALIGN (0x1000) :
+      .rodata :
       {
         *(.rodata)
       }
 
-      .data ALIGN (0x1000): 
+      .data : 
       {
         *(.data)
       }
@@ -222,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4457; parent 4456; 2009-06-18T09:46:56Z -->
+<!-- MediaWiki page 1604; revision 4458; parent 4457; 2009-06-18T09:55:21Z -->
