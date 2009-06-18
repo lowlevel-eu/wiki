@@ -95,6 +95,8 @@ Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. E
 Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z.B dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei/[Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript") für *ld*:
 
     ENTRY (loader)
+    OUTPUT_FORMAT(elf32-i386)
+    OUTPUT_ARCH(i386:i386)
 
     SECTIONS
     {
@@ -220,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4456; parent 4449; 2009-06-18T09:29:56Z -->
+<!-- MediaWiki page 1604; revision 4457; parent 4456; 2009-06-18T09:46:56Z -->
