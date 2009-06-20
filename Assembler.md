@@ -1,37 +1,57 @@
 # Assembler
 
-Als **Assembler** wird einerseits eine einfache Programmiersprache andererseits auch der Übersetzer dieser Programmiersprache in Maschinencode bezeichnet. Die Programmiersprache ist auf einen bestimmten Prozessortyp zugeschnitten und stellt die einzelnen Prozessorbefehle als Wörter (Mnemoniks bzw. engl. Mnemonics) mit eventuellen Parametern da. Damit ist die Sprache kaum portabel. Zusätzlich vereinfacht der Übersetzer der Programmiersprache die Adressberrechnung (unter anderem durch Labels) und ermöglicht das Berechnen von Konstanten, die sich aus Formeln zusammensetzen.
+Als Assembler wird sowohl die Assemblersprache, als auch das Programm zur Übersetzung von Quelltexten in Assemblersprache in Maschinensprache bezeichnet. Die CPU führt ausschließlich Maschinenbefehle aus, die als Folge von Bytes im Speicher vorliegen. Jedem Maschinenbefehl ist genau ein Assemblerbefehl (Mnemonic) zugeordnet. Diese 1:1 Abbildung auf die CPU-Befehle hat zur Folge, dass in der Regel Assemblerprogramme nicht zwischen verschiedenen Prozessortypen übertragbar sind. Außerdem werden in Assembler geschriebene Programme schnell sehr lang und erfordern, dass der Programmierer sich wenig zielführend mit vielen Details der Architektur auseinandersetzen muss.
 
-## Syntax
+Der sinnvolle Einsatz von Assembler beschränkt sich darauf, eine Umgebung für eine Hochsprache aufzubauen, sowie kurze, plattformabhängige Hilfsfunktionen und Einsprungsstellen für z.B. [Interrupt-Behandlungsroutinen](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") bereitzustellen.
 
-Es gibt für die x86 Prozessorfamilie verschiedene Syntaxen.  
+## Aufgaben eines Assemblers
 
-### Intel
+- Übersetzung von Assembler in Maschinencode
+- Auflösen der symbolischen Namen (z.B. von Labels) in numerische Konstanten, soweit möglich
+- Erzeugung von Objektcode, der in der Regel noch [gelinkt](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker") werden muss
 
-Die Intel Syntax wird meistens verwendet wenn man Assembler von Hand schreibt.  
+## Aufbau von Assemblerbefehlen
 
-Beispielcode: \<asm\> mov al, 0x10 \</asm\>
+Die direkte Abbildung von Assemblerbefehlen auf Maschinenbefehle hat zur Folge, dass Assemblerbefehle immer den selben Aufbau haben. Ein Maschinenbefehl besteht aus einem Opcode, meist gefolgt von einem oder mehreren Operanden. Dieses spiegelt sich auch in Assemblerbefehlen wieder, die immer den gleichen Aufbau haben:
 
-### AT&T
+    mnemonic operand1, operand2
 
-Diese Syntax wurde speziell für das schnelle Assemblieren entwickelt, um ihn beim Kompilieren von Hochsprachenquellcode als Zwischenschritt zu verwenden.
+Bei der x86-Architektur ist bei zweistelligen Operationen (Addition, Subtraktion, bitweise Operationen, etc.), immer einer der beiden Operanden sowohl Quelle als auch Ziel. Es existiert also z.B. ein Befehl, um das Register eax zu ebx zu addieren, und das Ergebnis in ebx zu speichern. Aber es existiert kein Befehl, um das Ergebnis in einem dritten Register zu speichern.
 
-Beispielcode: \<asm\> movb \$0x10, %al \</asm\>
+### Syntax
 
-Diese Syntax wird vor allem im Zusammenhang mit gcc verwendet. Unter [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") befindet sich ein kleines Tutorial hierzu.
+Man unterscheidet bei Assembler grob zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf Intel-Syntax aufbaut, gehören FASM, NASM, MASM, TASM und YASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und YASM verarbeitet werden.
 
-## Liste bekannter Assembler
+#### Intel-Syntax
 
-### Assembler für x86
+Zu den Hauptmerkmalen der Intel-Syntax gehört die Reihenfolge der Operanden, bei Befehlen mit zwei Operanden oder mehr. Das Ziel einer derartigen Operation steht immer als erstes in der Operandenliste. Die Addition von eax zu ebx sieht dann z.B. so aus, wobei das Ergebnis in ebx ist: \<asm\>add ebx, eax\</asm\>
 
-FASM (flat assembler) [\[1\]](http://flatassembler.net/)  
-MASM (Microsoft Macro Assembler) [\[2\]](http://msdn2.microsoft.com/de-de/library/afzk3475(VS.80).aspx)  
-NASM (The Netwide Assembler) [\[3\]](http://nasm.sourceforge.net/)  
-TASM (Turbo Assembler) [\[4\]](http://info.borland.com/borlandcpp/cppcomp/tasmfact.html)  
-YASM (Diese Buchstabenkombination besitzt keine offizielle Langform) [\[5\]](http://www.tortall.net/projects/yasm/)
+#### AT&T-Syntax
+
+In der AT&T-Syntax werden die Register mit einem % als Präfix versehen, und der Zieloperand ist der letzte Operand. Das Beispiel von eben sieht dann so aus: \<asm\>add %eax, %ebx\</asm\>
+
+## Inline-Assembler
+
+Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quelltext eines Hochsprachenprogramms. Dieses erweist sich als nützlich, wenn man nicht den Umweg über einen Funktionsaufruf gehen will, um Assemblercode auszuführen. Siehe auch [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC").
+
+## Weblinks
+
+### Assembler
+
+- [NASM (Netwide Assembler)](http://www.nasm.us/)
+- [MASM (Microsoft Macro Assembler)](http://msdn.microsoft.com/en-us/library/afzk3475.aspx)
+- [FASM (Flat Assembler)](http://www.flatassembler.net/)
+- [YASM](http://www.tortall.net/projects/yasm/)
+- [GAS (GNU Assembler)](http://sourceware.org/binutils/docs-2.19/as/GNU-Assembler.html)
+
+### Befehlsübersichten
+
+- [Intel Manual Volume 2A/B: Instruction Set Reference](http://www.intel.com/products/processor/manuals/)
+- [AMD Manual Volume 3: General-Purpose and System Instructions](http://www.amd.com/us-en/Processors/DevelopWithAMD/0,,30_2252_875_7044,00.html)
+- [ASM86FAQ](http://www.pbhq.de/asm86faq/) (10 Jahre alt, aber auf Deutsch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 2829; parent 2667; 2008-03-25T03:38:42Z -->
+<!-- MediaWiki page 1514; revision 4465; parent 2829; 2009-06-20T14:43:58Z -->
