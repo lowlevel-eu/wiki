@@ -145,9 +145,7 @@ Im Folgenden soll nun erläutert werden, wie man der CPU mitteilt, dass diese un
 
 ## Installation
 
-Im Protected Mode muss der Zeiger für ein ISR in die [Interrupt Descriptor Table (IDT)](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") eingetragen werden. Das Format ist im dazugehörigen Artikel erklärt. Dabei ist zu beachten, dass die Flags richtig gesetzt werden.
-
-  
+Im Protected Mode muss der Zeiger für ein ISR in die [Interrupt Descriptor Table (IDT)](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") eingetragen werden. Das Format ist im dazugehörigen Artikel erklärt. Dabei ist zu beachten, dass die Flags richtig gesetzt werden. TODO
 
 ## Nachteile der einfachen Implementierung
 
@@ -221,6 +219,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4466; parent 0; 2009-06-20T18:22:23Z -->
+<!-- MediaWiki page 1857; revision 4467; parent 4466; 2009-06-20T18:25:13Z -->
