@@ -4,7 +4,7 @@ Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, d
 
 ## Liste mit Betriebssystemen
 
-- LOST
+- [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
 - [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
 - [Linux-Distributionen](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")
@@ -12,6 +12,6 @@ Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1479/index.html)
 
-<!-- MediaWiki page 1479; revision 2852; parent 1891; 2008-03-25T03:51:14Z -->
+<!-- MediaWiki page 1479; revision 4464; parent 2852; 2009-06-20T12:07:08Z -->
