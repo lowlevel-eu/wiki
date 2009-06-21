@@ -58,12 +58,19 @@ Das CR3-Register enthält primär die Adresse des Page Directorys, sowie 2 Flags
 | Bit 10 | **OSXMMEXCPT** *Operating System Support for Unmasked SIMD Exception* |
 | Bit 11-31 | *Reserviert* |
 
+## CR8
+
+| Bit | Funktion |
+| ---------- | ------------------------------- |
+| Bit 0-3 | **TPL** *Task Priority Level* |
+| Bit 3-31 | *n/a* |
+
 ## Weblinks
 
 - [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3A: System Programming Guide](http://www.intel.com/products/processor/manuals/index.htm) (Kapitel 2.5)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4469/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4345; parent 4061; 2009-05-01T23:01:58Z -->
+<!-- MediaWiki page 1610; revision 4469; parent 4345; 2009-06-21T22:29:45Z -->
