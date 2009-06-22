@@ -193,18 +193,192 @@ Das ganze müsste man dann mindestens für die 16 IRQs, die 32 CPU-Exceptions (b
 
 Deswegen arbeiten wir im Folgenden an einer Generalisierung und Vereinfachung des gesamten Aufbaus unserer ISRs.
 
-## Allgemeiner Interruptstub
+## Allgemeine Interrupthandler
 
-*So langsam wird das hier ne ganze Menge Text. Deswegen erstmal ein Päuschen und -\>* TODO
+Wir wollen wie bereits angedeutet folgende Ziele erfüllen:
 
-- Interruptnummer auf den Stack
-- Makros
-- Zeiger auf den Stackframe als Parameter und Rückgabewert von *behandlung*.
+- pro Interrupt jeweils ein Handler, damit wir die Interrupts auseinander halten können
+- möglichst viel gemeinsamer Code für alle Interruptroutinen, um uns Schreibarbeit zu sparen
+- eine Möglichkeit im Handler den Stack zu wechseln
 
-Aber wer schon mal sehen will, worauf das ganze hinauslaufen soll, kann sich die Implementierung in tyndur anschauen:
+Unser Ansatz besteht dabei aus folgenden Änderungen:
 
-- <http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel/src/stubs.asm;hb=HEAD> (kernel)
-- <http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel2/src/arch/i386/interrupts/int_stubs.S;hb=HEAD> (kernel2)
+- Für Interrupts, die keinen Fehlercode auf den Stack legen, legen wir am Anfang der ISR, noch vor den anderen *push*s einfach eine 0 auf den Stack. Damit erreichen wir, dass der Stack für alle Interrupts gleich aussieht.
+- Ein kurzer (3- bis 4-zeiliger) Interrupt Stub, der die Nummer des Interrupts auf den Stack legt, und dann zum gemeinsamen Code springt:
+
+\<asm\>exception_0:
+
+       push dword 0       ; Der Ersatz für den Fehlercode
+       push dword 0       ; Nummer des Interrupts
+       jmp isr_common     ; zum gemeinsamen Teil springen
+
+exception_1:
+
+       push dword 0       ; Der Ersatz für den Fehlercode
+       push dword 1       ; Nummer des Interrupts
+       jmp isr_common     ; zum gemeinsamen Teil springen
+
+...
+
+exception_255:
+
+       push dword 0       ; Der Ersatz für den Fehlercode
+       push dword 255     ; Nummer des Interrupts
+       jmp isr_common     ; zum gemeinsamen Teil springen</asm>
+
+Daraus machen wir uns gleich mal ein Makro: \<asm\>; NASM Code %macro interrupt_stub 1 global interrupt_stub\_%1 interrupt_stub\_%1:
+
+       push dword 0
+       push dword %1
+       jmp isr_common
+
+%endmacro\</asm\>
+
+- Die Interrupts, die einen Fehlercode auf den Stack legen, sind nur die Exceptions 8, 10, 11, 12, 13, 14, und 17. Der Rest legt keinen Fehlercode auf den Stack. Für die Exceptions mit Fehlercode, müssen wir ein gesondertes Makro erstellen, das diesen Ersatz nicht pusht:
+
+\<asm\>%macro interrupt_stub_error_code 1 global interrupt_stub_error_code\_%1 interrupt_stub_error_code\_%1:
+
+       push dword %1
+       jmp isr_common
+
+%endmacro\</asm\>
+
+- Diese Makros instanzieren wir dann folgendermaßen:
+
+\<asm\>; Exceptions interrupt_stub 0 interrupt_stub 1 interrupt_stub 2 interrupt_stub 3 interrupt_stub 4 interrupt_stub 5 interrupt_stub 6 interrupt_stub 7 interrupt_stub_error_code 8 interrupt_stub 9 interrupt_stub_error_code 10 interrupt_stub_error_code 11 interrupt_stub_error_code 12 interrupt_stub_error_code 13 interrupt_stub_error_code 14 interrupt_stub 16 interrupt_stub_error_code 17 interrupt_stub 18 interrupt_stub 19
+
+IRQs (vorausgesetzt diese sind nach 0x20 bis 0x2f gemappt)
+
+interrupt_stub 32 interrupt_stub 33 interrupt_stub 34 interrupt_stub 35 interrupt_stub 36 interrupt_stub 37 interrupt_stub 38 interrupt_stub 39 interrupt_stub 40 interrupt_stub 41 interrupt_stub 42 interrupt_stub 43 interrupt_stub 44 interrupt_stub 45 interrupt_stub 46 interrupt_stub 47
+
+Systemaufruf
+
+interrupt_stub 48
+
+Wer seine Assemblerdatei gerne voll hat, kann natürlich die
+
+Stubs für die restlichen Interrupts auch noch hierhin schreiben.\</asm\>
+
+- Das Stack-Layout sieht jetzt für alle Interrupts so aus. Der einzige Unterschied sind der Fehlercode und die Interruptnummer:
+
+`:  : hohe Adressen `
+
+ :
+
++-----------+ \| USER SS \| (nur bei Interrupt in Ring 1-3) +-----------+ \| USER ESP \| (nur bei Interrupt in Ring 1-3) +-----------+ \| EFLAGS \| +-----------+ \| CS \| +-----------+ \| EIP \| +-----------+ \| error \| Fehlercode (oder Ersatz dafür) +-----------+ \| interrupt \| Nummer des Interrupts +-----------+ \| EAX \| +-----------+ \| ECX \| +-----------+ \| EDX \| +-----------+ \| EBX \| +-----------+ \| ESP \| (das ESP das im letzten Bildchen auf EIP gezeigt hat) +-----------+ \| EBP \| +-----------+ \| ESI \| +-----------+ \| EDI \| +-----------+ \| DS \| +-----------+ \| ES \| +-----------+ \| FS \| +-----------+ \| GS \| \<---- ESP zeigt hier hin +-----------+
+
+ :
+
+` : niedrige Adressen`
+
+- Als nächstes müssen wir den gemeinsamen Teil der Interruptbehandlung anpassen. Das geht recht leicht, denn wir haben ja im Unterschied zu früher nur zwei weitere Werte auf den Stack gelegt. Diese müssen wir also nur entfernen, bevor wir *iret* ausführen. Allerdings sollten wir dafür nicht *pop* nehmen, weil das immer ein Ziel haben muss. Wir wollen aber nichts überschreiben, deswegen passen wir einfach den Stack Pointer an. Der Fehlercode und die Interruptnummer sind 32-Bit-Worte (dword), also jeweils 4 Bytes groß, und zusammen 8 Bytes. Wenn wir zu esp 8 addieren, wandern wir in unserem Stack Layout zwei Einträge nach oben, und haben diese Werte übersprungen. Das sieht so aus:
+
+\<asm\>; Gemeinsamer Code aller ISRs isr_common:
+
+       ; Alle Register sichern
+       pusha
+       push ds
+
+       ...
+
+       pop ds
+       popa
+
+       ; Fehlercode und Interruptnummer vom Stack holen
+       add esp, 8
+
+       ; Rücksprung
+       iret</asm>
+
+- Die Definition unserer C-Struktur ändert sich ebenfalls mit dem Stack Layout:
+
+\<c\>struct stack_frame {
+
+       unsigned int gs, fs, es, ds;
+       unsigned int edi, esi, ebp, _esp, ebx, edx, ecx, eax;
+       unsigned int interrupt, error;
+       unsigned int eip, cs, eflags, esp, ss;
+
+}\</c\>
+
+- Wenn wir den Stack in der C-Routine wechseln wollen, bietet es sich an, einen Zeiger auf den Stack als Parameter zu übergeben, und den neuen Stack zurückzugeben:
+
+\<c\>unsigned int behandlung(unsigned int esp) {
+
+       struct stack_frame * sf = (struct stack_frame *)esp;
+
+       /* hier esp verändern. Zum Beispiel so: */
+       if (sf->interrupt >= 0 && sf->interrupt <= 0x1f) {
+           /* Exceptions */
+           switch (sf->interrupt) {
+               /* jede Exception einzeln behandeln ... */
+           }
+       } else if (sf->interrupt >= 0x20 && sf->interrupt <= 0x2f) {
+           /* IRQ */
+
+           if (sf->interrupt == 0x20) {
+               /* Timer*/
+               esp = schedule(esp);
+           }
+           /* die anderen IRQs auch ... */
+
+           /* Die Bearbeitung des IRQs beim PIC bestätigen */
+           pic_ack(); 
+       } else if (sf->interrupt == 0x30) {
+           /* Systemaufruf */
+           switch (sf->eax) {
+               case 0: /* ... was auch immer Systemaufruf 0 ist */ break;
+               /* und so weiter */
+           }
+       }
+
+       return esp;
+
+}\</c\> Der Assemblerteil wird angepasst, dass er ESP vorm Aufruf von *behandlung* auf den Stack legt, und nach dem Aufruf den Rückgabewert wieder nach ESP lädt: \<asm\>isr_common:
+
+       ; Alle Register sichern
+       pusha
+       push ds
+       push es
+       push fs
+       push gs
+
+       ; In die Datensegmente einen Kernelselektor laden, damit wir 
+       ; garantiert mit Kernelprivilegien auf den Speicher zugreifen
+       mov ax, KERNEL_DS
+       mov ds, ax
+       mov es, ax
+       mov fs, ax
+       mov gs, ax
+
+       ; ESP übergeben
+       push esp
+       ; Aufruf der eigentlichen Behandlung
+       call behandlung
+       ; Rückgabewert in EAX nach ESP schreiben
+       ; -> Stack Wechsel geschieht hier
+       mov esp, eax
+
+       ; Alte Registerwerte in umgekehrter Reihenfolge wiederherstellen
+       pop gs
+       pop fs
+       pop es
+       pop ds
+       popa
+
+       ; Fehlercode und Interruptnummer vom Stack holen
+       add esp, 8
+
+       ; Rücksprung
+       iret</asm>
+
+  
+
+### Beispiele
+
+- Der Code in [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") ist so wie hier beschrieben aufgebaut. Für *kernel* befindet er sich in [src/kernel/src/stubs.asm](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel/src/stubs.asm;hb=HEAD) und die *kernel2*-Version (AT&T Syntax) befindet sich in [src/kernel2/src/arch/i386/interrupts/int_stubs.S](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel2/src/arch/i386/interrupts/int_stubs.S;hb=HEAD).
+- Im [Software Multitasking Tutorial für Freebasic](https://github.com/lowlevel-eu/wiki/wiki/Software-Multitasking-Tutorial "Software Multitasking Tutorial") wird ein ähnliches Stack Layout verwendet, allerdings wird dort von den hier besprochenen Punkten nur der Stack Wechsel implementiert
+- In FreeBSD werden die CPU-Exceptions in [i386/i386/exception.s](http://fxr.watson.org/fxr/source/i386/i386/exception.s) ähnlich wie hier beschrieben behandelt.
 
 ## Task Gates
 
@@ -220,6 +394,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4471; parent 4467; 2009-06-22T21:13:20Z -->
+<!-- MediaWiki page 1857; revision 4472; parent 4471; 2009-06-22T22:12:58Z -->
