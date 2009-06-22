@@ -204,7 +204,7 @@ Wir wollen wie bereits angedeutet folgende Ziele erfüllen:
 Unser Ansatz besteht dabei aus folgenden Änderungen:
 
 - Für Interrupts, die keinen Fehlercode auf den Stack legen, legen wir am Anfang der ISR, noch vor den anderen *push*s einfach eine 0 auf den Stack. Damit erreichen wir, dass der Stack für alle Interrupts gleich aussieht.
-- Ein kurzer (3- bis 4-zeiliger) Interrupt Stub, der die Nummer des Interrupts auf den Stack legt, und dann zum gemeinsamen Code springt:
+- Ein kurzer (3- bis 4-zeiliger) Interrupt Stub, der die Nummer des Interrupts auf den Stack legt und dann zum gemeinsamen Code springt:
 
 \<asm\>exception_0:
 
@@ -307,7 +307,8 @@ Stubs für die restlichen Interrupts auch noch hierhin schreiben.\</asm\>
 
        struct stack_frame * sf = (struct stack_frame *)esp;
 
-       /* hier esp verändern. Zum Beispiel so: */
+       /* Hier ESP verändern. Der ganze Apparat sollte über mehrere 
+          Funktionen verteilt werden, aber könnte zum Beispiel so aussehen: */
        if (sf->interrupt >= 0 && sf->interrupt <= 0x1f) {
            /* Exceptions */
            switch (sf->interrupt) {
@@ -317,17 +318,19 @@ Stubs für die restlichen Interrupts auch noch hierhin schreiben.\</asm\>
            /* IRQ */
 
            if (sf->interrupt == 0x20) {
-               /* Timer*/
-               esp = schedule(esp);
+               /* Timer */
+               /* Den Scheduler aufrufen. Der ist jemand, der ESP
+                  ändern will, um einen Taskwechsel zu veranlassen. */
+               esp = schedule(esp); 
            }
-           /* die anderen IRQs auch ... */
+           /* die anderen IRQs auch behandeln ... */
 
            /* Die Bearbeitung des IRQs beim PIC bestätigen */
            pic_ack(); 
        } else if (sf->interrupt == 0x30) {
            /* Systemaufruf */
            switch (sf->eax) {
-               case 0: /* ... was auch immer Systemaufruf 0 ist */ break;
+               case 0: /* ... tun, was auch immer Systemaufruf 0 tut */ break;
                /* und so weiter */
            }
        }
@@ -394,6 +397,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4472; parent 4471; 2009-06-22T22:12:58Z -->
+<!-- MediaWiki page 1857; revision 4473; parent 4472; 2009-06-22T22:21:18Z -->
