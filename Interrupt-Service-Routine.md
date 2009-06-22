@@ -185,12 +185,13 @@ Das ganze müsste man dann mindestens für die 16 IRQs, die 32 CPU-Exceptions (b
 
 ### Weitere Nachteile
 
-TODO
+- Einige Exceptions legen zusätzlich einen Fehlercode auf den Stack, nachdem sie EIP auf den Stack gelegt haben. Dieser Fehlercode enthält weitere Informationen zur Ursache des Fehlers. Genaueres steht dazu im Intel Manual.
 
-- Diese Stubs nur für Exceptions geeignet die keinen Fehlercode auf den Stack legen.
-- Es ist kein Stackwechsel möglich
+<!-- -->
 
-Deswegen arbeiten wir im Folgenden an einer Generalisierung und Vereinfachung der Gesamtstruktur.
+- Um präemptives oder kooperatives Software-[Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu implementieren, muss man den Stack Pointer wechseln. Zwar legt unsere Variante mit dem *pusha* einen Stack Pointer (\_esp) auf den Stack, aber das *popa* ignoriert den immer. Dieser Stack Pointer zeigt übrigens auf den Kernel Stack, denn entweder wurde er aus dem TSS geladen, wenn der Interrupt im Ring 3 auftrat, oder wir haben uns die ganze Zeit schon im Kernel Mode (Ring 0) befunden. Der Stack Pointer, der zusätzlich auf den Stack gelegt wird, wenn ein Interrupt im Ring 3 aufgetreten ist (esp), nützt uns wenig. Wenn wir diesen austauschen, dann tauschen wir maximal die Stacks von zwei Tasks aus, aber dann ist es bereits zu spät für einen kompletten Kontextwechsel: Die General Purpose Register, sowie EIP und EFLAGS wurden noch vom alten Stack geladen. Das heißt wir müssen den Stack irgendwie anders wechseln.
+
+Deswegen arbeiten wir im Folgenden an einer Generalisierung und Vereinfachung des gesamten Aufbaus unserer ISRs.
 
 ## Allgemeiner Interruptstub
 
@@ -219,6 +220,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4467; parent 4466; 2009-06-20T18:25:13Z -->
+<!-- MediaWiki page 1857; revision 4471; parent 4467; 2009-06-22T21:13:20Z -->
