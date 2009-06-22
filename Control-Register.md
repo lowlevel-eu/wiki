@@ -27,11 +27,11 @@ Die Control Register sind spezielle Register der Intel Architektur (x86 und x86-
 
 ## CR2
 
-Enthält noch einem Page-Fault die lineare Adresse, die den Fehler verursacht hat.
+Enthält nach einem Page-Fault die lineare Adresse, die den Fehler verursacht hat.
 
 ## CR3
 
-Das CR3-Register enthält primär die Adresse des Page Directorys, sowie 2 Flags, die das interne Caching innerhalb der CPU (nicht im TLB) steuern. Wenn [Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension") (PAE) aktiviert ist, wird die Adresse des Page Directorys ersetzt durch die um 7 Bits größere Adresse zur Page-Directory Pointer Table.
+Das CR3-Register enthält primär die Adresse des Page Directories, sowie 2 Flags, die das interne Caching innerhalb der CPU (nicht im TLB) steuern. Wenn [Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension") (PAE) aktiviert ist, wird die Adresse des Page Directories ersetzt durch die um 7 Bits größere Adresse zur Page-Directory Pointer Table.
 
 | Bit | Funktion | Funktion mit aktivierter [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") |
 | ----------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -71,6 +71,6 @@ Das CR3-Register enthält primär die Adresse des Page Directorys, sowie 2 Flags
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4469/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4469; parent 4345; 2009-06-21T22:29:45Z -->
+<!-- MediaWiki page 1610; revision 4470; parent 4469; 2009-06-22T15:43:55Z -->
