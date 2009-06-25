@@ -273,15 +273,29 @@ Stubs für die restlichen Interrupts auch noch hierhin schreiben.\</asm\>
 
 - Das Stack-Layout sieht jetzt für alle Interrupts so aus. Der einzige Unterschied sind der Fehlercode und die Interruptnummer:
 
-`:  : hohe Adressen `
-
- :
-
-+-----------+ \| USER SS \| (nur bei Interrupt in Ring 1-3) +-----------+ \| USER ESP \| (nur bei Interrupt in Ring 1-3) +-----------+ \| EFLAGS \| +-----------+ \| CS \| +-----------+ \| EIP \| +-----------+ \| error \| Fehlercode (oder Ersatz dafür) +-----------+ \| interrupt \| Nummer des Interrupts +-----------+ \| EAX \| +-----------+ \| ECX \| +-----------+ \| EDX \| +-----------+ \| EBX \| +-----------+ \| ESP \| (das ESP das im letzten Bildchen auf EIP gezeigt hat) +-----------+ \| EBP \| +-----------+ \| ESI \| +-----------+ \| EDI \| +-----------+ \| DS \| +-----------+ \| ES \| +-----------+ \| FS \| +-----------+ \| GS \| \<---- ESP zeigt hier hin +-----------+
-
- :
-
-` : niedrige Adressen`
+| Wert | Kommentar |
+| ----------- | -------------------------------------------------------- |
+| : | hohe Adressen |
+| USER SS | nur bei Interrupt in Ring 1-3 |
+| USER ESP | nur bei Interrupt in Ring 1-3 |
+| EFLAGS |  |
+| CS |  |
+| EIP |  |
+| error | Fehlercode (oder Ersatz dafür) |
+| interrupt | Nummer des Interrupts |
+| EAX |  |
+| ECX |  |
+| EDX |  |
+| EBX |  |
+| ESP | das ESP, das in der ersten Tabelle auf EIP gezeigt hat |
+| EBP |  |
+| ESI |  |
+| EDI |  |
+| DS |  |
+| ES |  |
+| FS |  |
+| GS | ESP zeigt hier hin |
+| : | niedrige Adressen |
 
 - Als nächstes müssen wir den gemeinsamen Teil der Interruptbehandlung anpassen. Das geht recht leicht, denn wir haben ja im Unterschied zu früher nur zwei weitere Werte auf den Stack gelegt. Diese müssen wir also nur entfernen, bevor wir *iret* ausführen. Allerdings sollten wir dafür nicht *pop* nehmen, weil das immer ein Ziel haben muss. Wir wollen aber nichts überschreiben, deswegen passen wir einfach den Stack Pointer an. Der Fehlercode und die Interruptnummer sind 32-Bit-Worte (dword), also jeweils 4 Bytes groß, und zusammen 8 Bytes. Wenn wir zu esp 8 addieren, wandern wir in unserem Stack Layout zwei Einträge nach oben, und haben diese Werte übersprungen. Das sieht so aus:
 
@@ -409,6 +423,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4483/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4484/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4483; parent 4473; 2009-06-25T17:57:04Z -->
+<!-- MediaWiki page 1857; revision 4484; parent 4483; 2009-06-25T18:05:34Z -->
