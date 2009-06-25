@@ -60,17 +60,17 @@ Wenn die CPU zu dieser Interrupt-Behandlung gesprungen ist, dann hat sie bereits
 
 An der Speicherstelle \[ESP\] befindet sich somit der alte EIP-Wert, an \[ESP + 4\] der alte CS-Wert und so weiter. Es ergibt sich also folgendes Bild für den Stackframe, zu dem Zeitpunkt, wenn die CPU sich bei dem Label *interrupt_stub* befindet:
 
-`(Erinnerung: Der Stack wächst nach unten, also in Richtung der niedrigen Adressen) `
+(Erinnerung: Der Stack wächst nach unten, also in Richtung der niedrigen Adressen)
 
- : hohe Adressen
-
- :
-
-+-----------+ \| USER SS \| (nur bei Interrupt in Ring 1-3) +-----------+ \| USER ESP \| (nur bei Interrupt in Ring 1-3) +-----------+ \| EFLAGS \| +-----------+ \| CS \| +-----------+ \| EIP \| \<---- ESP zeigt hier hin +-----------+
-
- :
-
-` : niedrige Adressen`
+| Wert | Kommentar |
+| ---------- | ------------------------------- |
+| : | hohe Adressen |
+| USER SS | nur bei Interrupt in Ring 1-3 |
+| USER ESP | nur bei Interrupt in Ring 1-3 |
+| EFLAGS |  |
+| CS |  |
+| EIP | ESP zeigt hier hin |
+| : | niedrige Adressen |
 
 Diese 3 bzw. 5 Werte, die sich auf dem Stack befinden müssen wir also nicht noch einmal sichern. Allerdings müssen wir noch die General Purpose Register und die 4 Segment Register retten. Dies geschieht mit dem *pusha*, sowie den 4 *push*s. Zum Schluss werden mittels *pop* und *popa* die alten Werte dieser Register wiederhergestellt, bevor zum Aufrufer zurückgesprungen wird. Dies ist notwendig, um unsere weiter oben formulierte Forderung, dass wir den Zustand des Programms nicht ändern, zu erfüllen. Diese pauschale Sicherung aller Register erlaubt es uns im folgenden Code frei über alle Register zu verfügen.
 
@@ -78,17 +78,29 @@ Kleiner Einschub: Dies hat allerdings auch Folgen für die Wertrückgabe von ein
 
 Der Stack-Frame sieht nach dem *push gs* wie folgt aus:
 
-`(Erinnerung: Der Stack wächst nach unten, also in Richtung der niedrigen Adressen) `
+(Erinnerung: Der Stack wächst nach unten, also in Richtung der niedrigen Adressen)
 
- : hohe Adressen
-
- :
-
-+-----------+ \| USER SS \| (nur bei Interrupt in Ring 1-3) +-----------+ \| USER ESP \| (nur bei Interrupt in Ring 1-3) +-----------+ \| EFLAGS \| +-----------+ \| CS \| +-----------+ \| EIP \| +-----------+ \| EAX \| +-----------+ \| ECX \| +-----------+ \| EDX \| +-----------+ \| EBX \| +-----------+ \| ESP \| (das ESP das im letzten Bildchen auf EIP gezeigt hat) +-----------+ \| EBP \| +-----------+ \| ESI \| +-----------+ \| EDI \| +-----------+ \| DS \| +-----------+ \| ES \| +-----------+ \| FS \| +-----------+ \| GS \| \<---- ESP zeigt hier hin +-----------+
-
- :
-
-` : niedrige Adressen`
+| Wert | Kommentar |
+| ---------- | -------------------------------------------------------- |
+| : | hohe Adressen |
+| USER SS | nur bei Interrupt in Ring 1-3 |
+| USER ESP | nur bei Interrupt in Ring 1-3 |
+| EFLAGS |  |
+| CS |  |
+| EIP |  |
+| EAX |  |
+| ECX |  |
+| EDX |  |
+| EBX |  |
+| ESP | das ESP, das in der obigen Tabelle auf EIP gezeigt hat |
+| EBP |  |
+| ESI |  |
+| EDI |  |
+| DS |  |
+| ES |  |
+| FS |  |
+| GS | ESP zeigt hier hin |
+| : | niedrige Adressen |
 
 ### Kernel-Bedingungen
 
@@ -397,6 +409,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4483/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4473; parent 4472; 2009-06-22T22:21:18Z -->
+<!-- MediaWiki page 1857; revision 4483; parent 4473; 2009-06-25T17:57:04Z -->
