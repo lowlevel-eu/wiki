@@ -24,7 +24,7 @@ D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lä
 
 ### Konstruktoren/Destruktoren
 
-Wer in D seinen Kernel programmiert, möchte vielleicht den Vorteil der Objektorientierung nicht missen. Dazu muss allerdings, wie in C auch, Code geschrieben werden, welcher die Konstruktoren/Destruktoren aufruft.
+Wer in D seinen Kernel programmiert, möchte vielleicht den Vorteil der Objektorientierung nicht missen. Dazu muss allerdings, wie in C++ auch, Code geschrieben werden, welcher die Konstruktoren/Destruktoren aufruft.
 
 Für die Konstruktoren:
 
@@ -226,6 +226,6 @@ ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4495/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4495; parent 4494; 2009-06-27T16:48:16Z -->
+<!-- MediaWiki page 1863; revision 4496; parent 4495; 2009-06-27T16:49:32Z -->
