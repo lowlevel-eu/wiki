@@ -52,7 +52,7 @@ Für die Destruktoren:
        cmp ebx, end_dtors
        jb .body
 
-end_dtors ist hier auf im Linker-Script angegeben.
+end_dtors ist hier auch im Linker-Script angegeben.
 
 Das passende Linker-Script dazu:
 
@@ -226,6 +226,6 @@ ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4496; parent 4495; 2009-06-27T16:49:32Z -->
+<!-- MediaWiki page 1863; revision 4497; parent 4496; 2009-06-27T16:50:10Z -->
