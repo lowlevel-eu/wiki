@@ -42,7 +42,6 @@ start_ctors ist dabei im Linker-Script angegeben.
 
 Für die Destruktoren:
 
-    <code>
     static_dtors_loop:
        mov ebx, start_dtors
        jmp .test
@@ -52,7 +51,6 @@ Für die Destruktoren:
     .test:
        cmp ebx, end_dtors
        jb .body
-    </code>
 
 end_dtors ist hier auf im Linker-Script angegeben.
 
@@ -93,8 +91,6 @@ Das passende Linker-Script dazu:
         }
         end = .; _end = .; __end = .;
     }
-
-  
 
 ### Runtime
 
@@ -230,6 +226,6 @@ ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4495/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4494; parent 0; 2009-06-27T16:41:38Z -->
+<!-- MediaWiki page 1863; revision 4495; parent 4494; 2009-06-27T16:48:16Z -->
