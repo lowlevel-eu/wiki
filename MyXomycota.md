@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
-| Akt. Version: | 0.003-1 (pre-alpha) |
+| Akt. Version: | 0.004 (pre-alpha) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
@@ -61,6 +61,6 @@ Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4482; parent 4481; 2009-06-25T17:38:06Z -->
+<!-- MediaWiki page 1861; revision 4492; parent 4482; 2009-06-27T08:56:45Z -->
