@@ -1,0 +1,235 @@
+# D
+
+D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von C++ und der Nähe zum System von C zu vereinen.
+
+| Allgemeines |  |
+| -------------------------------- | ------------------------------- |
+| Name: | D |
+| Inlineassembler: | Ja (Intel-Syntax) |
+| Compiler: | dmd (Digital Mars), gdc (GNU) |
+| Spracheneigenschaften |  |
+| Plattformen: | Alle |
+| Beispielkernel in der Sprache: | {{{Kernel}}} |
+| Homepage |  |
+
+<http://www.digitalmars.com/d>
+
+  
+
+## D als Sprache für ein Betriebssystem
+
+D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr system-nah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-Assembler (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den Kernel) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
+
+## Kernel in D
+
+### Konstruktoren/Destruktoren
+
+Wer in D seinen Kernel programmiert, möchte vielleicht den Vorteil der Objektorientierung nicht missen. Dazu muss allerdings, wie in C auch, Code geschrieben werden, welcher die Konstruktoren/Destruktoren aufruft.
+
+Für die Konstruktoren:
+
+    static_ctors_loop:
+       mov ebx, start_ctors
+       jmp .test
+    .body:
+       call [ebx]
+       add ebx,4
+    .test:
+       cmp ebx, end_ctors
+       jb .body
+
+start_ctors ist dabei im Linker-Script angegeben.
+
+Für die Destruktoren:
+
+    <code>
+    static_dtors_loop:
+       mov ebx, start_dtors
+       jmp .test
+    .body:
+       call [ebx]
+       add ebx,4
+    .test:
+       cmp ebx, end_dtors
+       jb .body
+    </code>
+
+end_dtors ist hier auf im Linker-Script angegeben.
+
+Das passende Linker-Script dazu:
+
+#### link.ld
+
+    OUTPUT_FORMAT(elf32-i386)
+    ENTRY (start)
+
+    SECTIONS{
+        . = 0x00100000;
+
+        .text :{
+            code = .; _code = .; __code = .;
+            *(.text)
+            *(.rodata)
+        }
+
+        .rodata ALIGN (0x1000) : {
+            *(.rodata)
+        }
+
+        .data ALIGN (0x1000) : {
+            data = .; _data = .; __data = .;
+            *(.data)
+            start_ctors = .; *(.ctors)   end_ctors = .;
+            start_dtors = .; *(.dtors)   end_dtors = .;
+        }
+        
+
+        .bss :{
+            sbss = .;
+            bss = .; _bss = .; __bss = .;
+            *(COMMON)
+            *(.bss)
+            ebss = .;
+        }
+        end = .; _end = .; __end = .;
+    }
+
+  
+
+### Runtime
+
+Wer in D einen Kernel schreibt wird bei der Benutzung von Arrays beim Linken schnell folgenden Fehler zu sehen bekommen:
+
+undefined refernce to \_d_array_bounds
+
+\_d_array_bounds ist dabei nicht anderes, als eine Funktion im D-Runtime, welche überprüft, ob Array-Grenzen eingehalten werden. Um diesen Fehler vorzubeugen, sollte also zumindest eine Stub-Funktion erstellt werden:
+
+    extern(C) void _d_array_bounds(char filename, uint line) {}
+
+Zu Debugging-Zwecken kann hier natürlich auch eine echt Überprüfung gemacht werden.
+
+  
+
+### Der eigentliche Kernel
+
+Nichts weltbewegendes, wir geben ein einfaches 'D' auf dem Bildschirm aus:
+
+    module kernel.main;
+     
+    extern(C) void main(uint magic, uint addr) 
+    {
+        int ypos = 0; 
+        int xpos = 0;
+        const uint COLUMNS = 80; 
+        const uint LINES = 24;
+     
+        ubyte* vidmem = cast(ubyte*)0xFFFF8000000B8000; 
+     
+        for (int i = 0; i < COLUMNS * LINES * 2; i++) { 
+            volatile *(vidmem + i) = 0;
+        }
+     
+        volatile *(vidmem + (xpos + ypos * COLUMNS) * 2) = 'D' & 0xFF; 
+        volatile *(vidmem + (xpos + ypos * COLUMNS) * 2 + 1) = 0x07; 
+     
+        for (;;) { 
+        }
+    }
+
+Man beachte das 'module kernel.main', wobei kernel der Name des Verzeichnisses ist, wo sich die Datei befindet.
+
+  
+
+### start.asm
+
+Und hier der Start-Code mit Multiboot-Signatur und dem Konstruktor/Destruktor-Code von oben:
+
+    global start
+    extern main        
+    extern start_ctors, end_ctors, start_dtors, end_dtors
+     
+    MODULEALIGN        equ        1<<0
+    MEMINFO            equ        1<<1
+    FLAGS              equ        MODULEALIGN | MEMINFO
+    MAGIC              equ        0x1BADB002
+    CHECKSUM           equ        -(MAGIC + FLAGS)
+     
+    section .text      
+     
+    align 4
+    MultiBootHeader:
+           dd MAGIC
+           dd FLAGS
+           dd CHECKSUM
+     
+    STACKSIZE equ 0x4000 
+     
+    static_ctors_loop:
+       mov ebx, start_ctors
+       jmp .test
+    .body:
+       call [ebx]
+       add ebx,4
+    .test:
+       cmp ebx, end_ctors
+       jb .body
+     
+    start:
+           mov esp, STACKSIZE+stack
+     
+           push eax
+           push ebx
+     
+           call main
+     
+    static_dtors_loop:
+       mov ebx, start_dtors
+       jmp .test
+    .body:
+       call [ebx]
+       add ebx,4
+    .test:
+       cmp ebx, end_dtors
+       jb .body
+     
+     
+    cpuhalt:
+           hlt
+           jmp cpuhalt
+     
+    section .bss
+    align 32
+     
+    stack:
+          resb      STACKSIZE
+
+### Erstellung
+
+Erstellt wird das Ganze per
+
+nasm -f elf -o ./obj/start.o ./src/kernel/start.asm
+
+und
+
+gdc -nostdlib -nodefaultlibs -g -c -o ./obj/kernel.main.o ./src/kernel/kernel.main.d
+
+gelinkt wird's so:
+
+ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
+
+  
+
+## D-Compiler
+
+- gdc aus der [GNU Compiler Collection](http://gdc.gnu.org/)
+- [dmd](http://www.digitalmars.com/d) Digital-Mars-D-Compiler
+
+## Weblinks
+
+- [Alles rund um die Sprache D](http://bwww.digitalmars.com/d)
+
+---
+
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+
+<!-- MediaWiki page 1863; revision 4494; parent 0; 2009-06-27T16:41:38Z -->
