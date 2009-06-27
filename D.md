@@ -26,31 +26,41 @@ D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lä
 
 Wer in D seinen Kernel programmiert, möchte vielleicht den Vorteil der Objektorientierung nicht missen. Dazu muss allerdings, wie in C++ auch, Code geschrieben werden, welcher die Konstruktoren/Destruktoren aufruft.
 
-Für die Konstruktoren:
+Für die Konstruktoren: \<asm\> static_ctors_loop:
 
-    static_ctors_loop:
-       mov ebx, start_ctors
-       jmp .test
-    .body:
-       call [ebx]
-       add ebx,4
-    .test:
-       cmp ebx, end_ctors
-       jb .body
+      mov ebx, start_ctors
+      jmp .test
+
+.body:
+
+      call [ebx]
+      add ebx,4
+
+.test:
+
+      cmp ebx, end_ctors
+      jb .body
+
+\</asm\>
 
 start_ctors ist dabei im Linker-Script angegeben.
 
-Für die Destruktoren:
+Für die Destruktoren: \<asm\> static_dtors_loop:
 
-    static_dtors_loop:
-       mov ebx, start_dtors
-       jmp .test
-    .body:
-       call [ebx]
-       add ebx,4
-    .test:
-       cmp ebx, end_dtors
-       jb .body
+      mov ebx, start_dtors
+      jmp .test
+
+.body:
+
+      call [ebx]
+      add ebx,4
+
+.test:
+
+      cmp ebx, end_dtors
+      jb .body
+
+\</asm\>
 
 end_dtors ist hier auch im Linker-Script angegeben.
 
@@ -100,7 +110,7 @@ undefined refernce to \_d_array_bounds
 
 \_d_array_bounds ist dabei nicht anderes, als eine Funktion im D-Runtime, welche überprüft, ob Array-Grenzen eingehalten werden. Um diesen Fehler vorzubeugen, sollte also zumindest eine Stub-Funktion erstellt werden:
 
-    extern(C) void _d_array_bounds(char filename, uint line) {}
+\<c\> extern(C) void \_d_array_bounds(char filename, uint line) {} \</c\>
 
 Zu Debugging-Zwecken kann hier natürlich auch eine echt Überprüfung gemacht werden.
 
@@ -110,27 +120,28 @@ Zu Debugging-Zwecken kann hier natürlich auch eine echt Überprüfung gemacht w
 
 Nichts weltbewegendes, wir geben ein einfaches 'D' auf dem Bildschirm aus:
 
-    module kernel.main;
-     
-    extern(C) void main(uint magic, uint addr) 
-    {
-        int ypos = 0; 
-        int xpos = 0;
-        const uint COLUMNS = 80; 
-        const uint LINES = 24;
-     
-        ubyte* vidmem = cast(ubyte*)0xFFFF8000000B8000; 
-     
-        for (int i = 0; i < COLUMNS * LINES * 2; i++) { 
-            volatile *(vidmem + i) = 0;
-        }
-     
-        volatile *(vidmem + (xpos + ypos * COLUMNS) * 2) = 'D' & 0xFF; 
-        volatile *(vidmem + (xpos + ypos * COLUMNS) * 2 + 1) = 0x07; 
-     
-        for (;;) { 
-        }
-    }
+\<c\> module kernel.main;
+
+extern(C) void main(uint magic, uint addr) {
+
+       int ypos = 0; 
+       int xpos = 0;
+       const uint COLUMNS = 80; 
+       const uint LINES = 24;
+
+       ubyte* vidmem = cast(ubyte*)0xFFFF8000000B8000; 
+
+       for (int i = 0; i < COLUMNS * LINES * 2; i++) { 
+           volatile *(vidmem + i) = 0;
+       }
+
+       volatile *(vidmem + (xpos + ypos * COLUMNS) * 2) = 'D' & 0xFF; 
+       volatile *(vidmem + (xpos + ypos * COLUMNS) * 2 + 1) = 0x07; 
+
+       for (;;) { 
+       }
+
+} \</c\>
 
 Man beachte das 'module kernel.main', wobei kernel der Name des Verzeichnisses ist, wo sich die Datei befindet.
 
@@ -140,78 +151,85 @@ Man beachte das 'module kernel.main', wobei kernel der Name des Verzeichnisses i
 
 Und hier der Start-Code mit Multiboot-Signatur und dem Konstruktor/Destruktor-Code von oben:
 
-    global start
-    extern main        
-    extern start_ctors, end_ctors, start_dtors, end_dtors
-     
-    MODULEALIGN        equ        1<<0
-    MEMINFO            equ        1<<1
-    FLAGS              equ        MODULEALIGN | MEMINFO
-    MAGIC              equ        0x1BADB002
-    CHECKSUM           equ        -(MAGIC + FLAGS)
-     
-    section .text      
-     
-    align 4
-    MultiBootHeader:
-           dd MAGIC
-           dd FLAGS
-           dd CHECKSUM
-     
-    STACKSIZE equ 0x4000 
-     
-    static_ctors_loop:
-       mov ebx, start_ctors
-       jmp .test
-    .body:
-       call [ebx]
-       add ebx,4
-    .test:
-       cmp ebx, end_ctors
-       jb .body
-     
-    start:
-           mov esp, STACKSIZE+stack
-     
-           push eax
-           push ebx
-     
-           call main
-     
-    static_dtors_loop:
-       mov ebx, start_dtors
-       jmp .test
-    .body:
-       call [ebx]
-       add ebx,4
-    .test:
-       cmp ebx, end_dtors
-       jb .body
-     
-     
-    cpuhalt:
-           hlt
-           jmp cpuhalt
-     
-    section .bss
-    align 32
-     
-    stack:
-          resb      STACKSIZE
+\<asm\> global start extern main extern start_ctors, end_ctors, start_dtors, end_dtors
+
+MODULEALIGN equ 1\<\<0 MEMINFO equ 1\<\<1 FLAGS equ MODULEALIGN \| MEMINFO MAGIC equ 0x1BADB002 CHECKSUM equ -(MAGIC + FLAGS)
+
+section .text
+
+align 4 MultiBootHeader:
+
+          dd MAGIC
+          dd FLAGS
+          dd CHECKSUM
+
+STACKSIZE equ 0x4000
+
+static_ctors_loop:
+
+      mov ebx, start_ctors
+      jmp .test
+
+.body:
+
+      call [ebx]
+      add ebx,4
+
+.test:
+
+      cmp ebx, end_ctors
+      jb .body
+
+start:
+
+          mov esp, STACKSIZE+stack
+
+          push eax
+          push ebx
+
+          call main
+
+static_dtors_loop:
+
+      mov ebx, start_dtors
+      jmp .test
+
+.body:
+
+      call [ebx]
+      add ebx,4
+
+.test:
+
+      cmp ebx, end_dtors
+      jb .body
+
+cpuhalt:
+
+          hlt
+          jmp cpuhalt
+
+section .bss align 32
+
+stack:
+
+         resb      STACKSIZE
+
+\</asm\>
 
 ### Erstellung
 
 Erstellt wird das Ganze per
 
-nasm -f elf -o ./obj/start.o ./src/kernel/start.asm
+    $ nasm -f elf -o ./obj/start.o ./src/kernel/start.asm
 
 und
 
-gdc -nostdlib -nodefaultlibs -g -c -o ./obj/kernel.main.o ./src/kernel/kernel.main.d
+    $ gdc -nostdlib -nodefaultlibs -g -c -o ./obj/kernel.main.o ./src/kernel/kernel.main.d
 
 gelinkt wird's so:
 
-ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
+    $ ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
 
   
 
@@ -226,6 +244,6 @@ ld -T link.d -o dkernel ./obj/start.o ./obj/kernel.main.o
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4497; parent 4496; 2009-06-27T16:50:10Z -->
+<!-- MediaWiki page 1863; revision 4498; parent 4497; 2009-06-27T18:34:57Z -->
