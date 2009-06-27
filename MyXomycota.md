@@ -34,7 +34,7 @@ Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS 
 - Präemptives Multitasking
 - Einfache StdCLib (myxlib) mit etwas POSIX
 - Dateisystem: SMXFFS (Small MyXomycota Floppy FS), experimentell FAT32 (beide read-only); MRFS als VFS
-- AC'97-Treiber (zumindest ICH0)
+- AC'97-Treiber (zumindest ICH)
 - Paging (2 GB pro Prozess)
 - ELF-Programme
 
@@ -61,6 +61,6 @@ Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4492; parent 4482; 2009-06-27T08:56:45Z -->
+<!-- MediaWiki page 1861; revision 4493; parent 4492; 2009-06-27T08:57:41Z -->
