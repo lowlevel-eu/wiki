@@ -114,7 +114,9 @@ undefined refernce to \_d_array_bounds
 
 Zu Debugging-Zwecken kann hier natürlich auch eine echt Überprüfung gemacht werden.
 
-  
+Wer allerdings keine Runtime-Überprüfung im Kernel braucht, der kann den Compiler auch so aufrufen:
+
+    $ gdc -no-bounds-check
 
 ### Der eigentliche Kernel
 
@@ -244,6 +246,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4498; parent 4497; 2009-06-27T18:34:57Z -->
+<!-- MediaWiki page 1863; revision 4504; parent 4498; 2009-06-28T01:16:54Z -->
