@@ -1,6 +1,6 @@
 # Control Register
 
-Die Control Register sind spezielle Register der IA32 und [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64") Architekturen, die den Betriebsmodus und einige Eigenschaften der CPU festlegen. In der AMD64-Architektur haben sie eine Breite von 64 Bit, wobei die unteren 32 Bit, den der IA32 Architektur entsprechen. Der Zugriff auf diese Register ist wie bei den Segment Registern auch nur mit einem Umweg über Allzweckregister möglich.
+Die Control Register sind spezielle Register der [IA-32](https://github.com/lowlevel-eu/wiki/wiki/X86 "IA-32") und [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64") Architekturen, die den Betriebsmodus und einige Eigenschaften der CPU festlegen. In der AMD64-Architektur haben sie eine Breite von 64 Bit, wobei die unteren 32 Bit, den der IA-32 Architektur entsprechen. Der Zugriff auf diese Register ist wie bei den Segment Registern auch nur mit einem Umweg über Allzweckregister möglich.
 
 ## CR0
 
@@ -75,6 +75,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4513; parent 4470; 2009-06-29T17:09:20Z -->
+<!-- MediaWiki page 1610; revision 4515; parent 4513; 2009-06-29T17:13:39Z -->
