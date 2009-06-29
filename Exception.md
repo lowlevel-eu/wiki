@@ -20,8 +20,34 @@ Das typische Beispiel für solche Exceptions ist der Page Fault. Wenn bei aktivi
 
 Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wenn ganze Pages kopiert werden - z.B. bei unixoiden Systemen bei fork(), dem Klonen von Prozessen. Dabei werden alle zu kopierenden Seiten zunächst nicht wirklich kopiert, sondern sowohl im alten als auch neuen Prozess als schreibgeschützt markiert. Erst bei Bedarf, also wenn sich die Originalpage und Kopie zum ersten Mal unterscheiden, wird wirklich kopiert: Beim ersten Schreibzugriff auf eine solche Seite wird ein Page Fault abgefangen (der ausgelöst wird, weil der Bereich schreibgeschützt ist) und eine zweite Page für die Kopie alloziert.
 
+## Liste der Exceptions
+
+| Vektor | Bezeichnung |
+| ----------- | ----------------------------- |
+| 0x00 | \#DE - Divide by Zero |
+| 0x01 | \#DB - Debug |
+| 0x02 | NMI |
+| 0x03 | \#BP - Break Point |
+| 0x04 | \#OF - Over Flow |
+| 0x05 | \#BR - Bound Range |
+| 0x06 | \#UD - Invalid Upcode |
+| 0x07 | \#NM - Device Not Available |
+| 0x08 | \#DF - Double Fault |
+| 0x09 | Coprocessor Segment Overrun |
+| 0x0a | \#TS - Invalid TSS |
+| 0x0b | \#NP - Segment not Present |
+| 0x0c | \#SS - Stack |
+| 0x0d | \#GP - General Protection |
+| 0x0e | \#PF - Page Fault |
+| 0x0f | *Reserviert* |
+| 0x10 | \#MF - x87 Floating Point |
+| 0x11 | \#AC - Alignment Check |
+| 0x12 | \#MC - Machine Check |
+| 0x13 | \#XF - SIMD Floating Point |
+| 0x14-0x1f | *Reserviert* |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4168/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 4168; parent 4146; 2009-03-21T10:31:27Z -->
+<!-- MediaWiki page 1824; revision 4518; parent 4168; 2009-06-29T18:16:33Z -->
