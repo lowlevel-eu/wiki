@@ -18,11 +18,11 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 - TS - Das *Task Switched* Flag wird bei einem [Hardware-Taskswitch](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") von der CPU gesetzt und kann für Software Multitasking auch von Hand gesetzt werden. Wenn bei gesetztem TS-Flage versucht wird eine FPU- oder Multimedia-Instruktion auszuführen, dann löst die CPU eine \#NM-Exception aus. Dadurch können die FPU- bzw. Multimedia-Register, die bei normalen Taskswitchs nicht beachtet werden, entsprechend gesichert und geladen werden bevor sie verwendet werden.
 - ET - *Extension Type*
 - NE - *Numeric Error*
-- WP - *Write Protect*
+- WP - Mittels *Write Protect* Flag kann festgelegt werden ob Schreibgeschützte Pages auch vor dem Kernel(Ring0) geschützt sind (bei gesetztem WP-Flag sind die Pages auch vor dem Kernel sicher).
 - AM - *Alignment Mask*
 - NW - *Not Write-throgh*
 - CD - *Cache Disable*
-- PG - *Paging* schaltet den Paging-Meschanismus Ein/Aus
+- PG - Mit dem *Paging* Flag kann der [Paging-Meschanismus](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") ein- bzw. ausgeschaltet werden.
 
 ## CR2
 
@@ -75,6 +75,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4515; parent 4513; 2009-06-29T17:13:39Z -->
+<!-- MediaWiki page 1610; revision 4517; parent 4515; 2009-06-29T17:42:02Z -->
