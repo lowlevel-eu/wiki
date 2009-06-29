@@ -6,6 +6,15 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ansteuerung von bis zu 2 (selten auch 4) Floppy-Laufwerken.
 
+## Register
+
+| Name | Port | Beschreibung |
+| ------ | ------- | ---------------------- |
+| MSR | 0x3F4 | Main Status Register |
+| DR | 0x3F5 | Data Register |
+
+wird fortgesetzt!
+
 ## Siehe auch
 
 [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h") - Disketten- und Festplattenzugriff
@@ -17,6 +26,6 @@ Der Floppy Disk Controller (Diskettenlaufwerk-Kontroller) kurz FDC dient der Ans
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4161/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4161; parent 4145; 2009-03-20T18:54:46Z -->
+<!-- MediaWiki page 1443; revision 4508; parent 4161; 2009-06-29T12:31:22Z -->
