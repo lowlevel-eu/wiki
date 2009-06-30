@@ -1,15 +1,29 @@
 # Floppy Disk Controller
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke ansteuern kann.
 
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+## Eigenschaften
+
+- DMA-Channel: 2
+- IRQ: 6
 
 ## Register
 
-| Name | Port | Beschreibung |
-| ------ | ------- | ---------------------- |
-| MSR | 0x3F4 | Main Status Register |
-| DR | 0x3F5 | Data Register |
+### Übersicht
+
+| Name | Port | Beschreibung | lesen/schreiben |
+| ------ | ------- | ------------------------- | ----------------- |
+| MSR | 0x3F4 | Main Status Register | lesen |
+| DR | 0x3F5 | Data Register | lesen/schreiben |
+| DOR | 0x3F2 | Digital Output Register | schreiben |
+
+### Aufbau
+
+#### MSR
+
+#### DR
+
+#### DOR
 
 wird fortgesetzt!
 
@@ -24,6 +38,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4520/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4520; parent 4508; 2009-06-30T09:59:55Z -->
+<!-- MediaWiki page 1443; revision 4521; parent 4520; 2009-06-30T10:53:54Z -->
