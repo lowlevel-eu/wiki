@@ -1,10 +1,8 @@
 # Video Graphics Array
 
-Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
 
-*Diesen Artikel erweitern*
-
-Hilf Lowlevel, den Artikel zu verbessern.
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
 **Video Graphics Array** (**VGA**) ist ein Grafikstandard der seit 1987 benutzt wird. Heutige PC-Grafikkarten sind noch immer zum VGA Standard kompatibel.
 
@@ -38,6 +36,6 @@ Speichergröße: 64000 Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4511/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4511; parent 4118; 2009-06-29T13:56:59Z -->
+<!-- MediaWiki page 1516; revision 4519; parent 4511; 2009-06-30T09:53:50Z -->
