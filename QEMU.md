@@ -4,7 +4,7 @@
 | ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
-| Akt. Version: | 0.10.3<br>(Stand 03.05.2009) |
+| Akt. Version: | 0.10.5<br>(Stand 01.07.2009) |
 | Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
@@ -58,6 +58,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - Systemlautsprecher
 - Soundblaster 16
 - ES1370 PCI
+- [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")
 
 #### USB
 
@@ -78,6 +79,6 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 4355; parent 4250; 2009-05-03T20:40:06Z -->
+<!-- MediaWiki page 1505; revision 4524; parent 4355; 2009-07-01T10:27:24Z -->
