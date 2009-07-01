@@ -48,7 +48,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 #### Netzwerkkarte und ein DHCP-Server
 
 - NE2000-Netzwerkadapter sowohl für ISA als auch PCI
-- Realtek 8139
+- [Realtek 8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")
 - Intel eepro100 und e1000
 - AMD PCnet
 - virtio (Paravirtualisiertes Netzwerk)
@@ -79,6 +79,6 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 4524; parent 4355; 2009-07-01T10:27:24Z -->
+<!-- MediaWiki page 1505; revision 4525; parent 4524; 2009-07-01T13:11:59Z -->
