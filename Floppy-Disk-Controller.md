@@ -7,9 +7,9 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke anste
 - DMA-Channel: 2
 - IRQ: 6
 
-## Register
+# Register
 
-### Übersicht
+## Übersicht
 
 | Name | Port | Beschreibung | lesen/schreiben |
 | ------ | ------- | ------------------------- | ----------------- |
@@ -17,13 +17,34 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke anste
 | DR | 0x3F5 | Data Register | lesen/schreiben |
 | DOR | 0x3F2 | Digital Output Register | schreiben |
 
-### Aufbau
+## Aufbau
 
-#### MSR
+### MSR
 
-#### DR
+|  |  |  |  |  |  |  |  |  |
+| ------ | ----- | ----- | ------ | ------ | ------ | ------ | ------ | ------ |
+| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| Name | MRQ | DIO | NDMA | BUSY | ACTD | ACTC | ACTB | ACTA |
 
-#### DOR
+MRQ
+
+DIO
+
+NDMA
+
+### DR
+
+|  |  |  |  |  |  |  |
+| ------ | ----- | ----- | ----- | ----- | ----- | ----- |
+| Bit | 7-6 | 5 | 4 | 3 | 2 | 1-0 |
+| Name | IC | SE | UC | NR | HD | US |
+
+### DOR
+
+|  |  |  |  |  |  |  |  |
+| ------ | ------ | ------ | ------ | ------ | ----- | ------- | ------- |
+| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
+| Name | MOTD | MOTC | MOTB | MOTA | DMA | RESET | DRIVE |
 
 wird fortgesetzt!
 
@@ -38,6 +59,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4521; parent 4520; 2009-06-30T10:53:54Z -->
+<!-- MediaWiki page 1443; revision 4527; parent 4521; 2009-07-02T06:23:26Z -->
