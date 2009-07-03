@@ -109,6 +109,48 @@ In das Data-Register werden die Befehle geschrieben, die jeweils aus mehreren By
 | Bit | 7-6 | 5 | 4 | 3 | 2 | 1-0 |
 | Name | IC | SE | UC | NR | HD | US |
 
+IC  
+Interrupt Code
+
+00: der Befehl wurde ohne Fehler ausgeführt
+
+01: der Befehl wurde gestartet, aber nicht richtig beendet
+
+10: invalid Command
+
+11: Controller war nicht bereit (Polling)
+
+SE  
+Seek end
+
+der Controller hat einen Befehl mit inplizitem Seek erfolgreich ausgeführt
+
+UC  
+unit check
+
+gesetzt bei Fehler
+
+NR  
+drive not ready
+
+HD  
+aktiver head
+
+0: Head 0
+
+1: Head 1
+
+US  
+aktives Laufwerk
+
+00: A
+
+01: B
+
+10: C
+
+11: D
+
 #### ST1
 
 |  |  |  |  |  |  |  |  |  |
@@ -143,6 +185,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4532/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4532; parent 4531; 2009-07-03T14:15:35Z -->
+<!-- MediaWiki page 1443; revision 4533; parent 4532; 2009-07-03T14:25:27Z -->
