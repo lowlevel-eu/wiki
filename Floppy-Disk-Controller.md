@@ -111,9 +111,24 @@ Nach manchen Befehlen werden die Status-Register im DR zurückgegeben.
 
 #### ST1
 
+|  |  |  |  |  |  |  |  |  |
+| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| Name | IC | SE | UC | NR | HD | US |  |  |
+
 #### ST2
 
+|  |  |  |  |  |  |  |  |  |
+| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| Name | IC | SE | UC | NR | HD | US |  |  |
+
 #### ST3
+
+|  |  |  |  |  |  |  |  |
+| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
+| Name | IC | SE | UC | NR | HD | US |  |
 
 wird fortgesetzt!
 
@@ -128,6 +143,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4531/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4530; parent 4529; 2009-07-03T08:22:16Z -->
+<!-- MediaWiki page 1443; revision 4531; parent 4530; 2009-07-03T09:03:30Z -->
