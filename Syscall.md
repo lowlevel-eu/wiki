@@ -16,7 +16,7 @@ Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel überni
 
 ## Behandlung des Syscalls
 
-Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen Nummer die Funktion aufzulösen und die Parameter zu übergeben. Die von diesem Handler selektierte Funktion führt die vom Programm gewünschte Aktion aus, falls das Programm die benötigten Rechte dazu hat. Anschließend kehrt die Funktion zurück zu dem Programm und gibt möglicherweise einen oder mehrere Rückgabewerte über Prozessorregister oder Stack zurück. Alternativ kann das Programm auch geblockt werden, falls beispielsweise die Anfrage nach Daten von der Festplatte nicht sofort (über Caches) beantwortet werden kann, oder das Programm wird terminiert.
+Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen Nummer die Funktion aufzurufen und die Parameter zu übergeben. Die von diesem Handler selektierte Funktion führt die vom Programm gewünschte Aktion aus, falls das Programm die benötigten Rechte dazu hat. Anschließend kehrt die Funktion zurück zu dem Programm und gibt möglicherweise einen oder mehrere Rückgabewerte über Prozessorregister oder Stack zurück. Alternativ kann das Programm auch geblockt werden, falls beispielsweise die Anfrage nach Daten von der Festplatte nicht sofort (über Caches) beantwortet werden kann, oder das Programm wird terminiert.
 
 ## siehe auch
 
@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4538/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 4538; parent 4537; 2009-07-03T18:05:24Z -->
+<!-- MediaWiki page 1629; revision 4539; parent 4538; 2009-07-03T18:08:02Z -->
