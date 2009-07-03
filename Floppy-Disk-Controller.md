@@ -19,6 +19,8 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke anste
 
 ## Aufbau
 
+Wenn nichts dasteht, gilt das Flag bei gesetztem Bit.
+
 ### MSR
 
 |  |  |  |  |  |  |  |  |  |
@@ -26,18 +28,36 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke anste
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | Name | MRQ | DIO | NDMA | BUSY | ACTD | ACTC | ACTB | ACTA |
 
-MRQ
+MRQ  
+Status
 
-DIO
+0: DR nicht bereit
 
-NDMA
+1: DR bereit
 
-### DR
+DIO  
+Daten I/O
 
-|  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ----- | ----- | ----- | ----- |
-| Bit | 7-6 | 5 | 4 | 3 | 2 | 1-0 |
-| Name | IC | SE | UC | NR | HD | US |
+0: CPU -\> FDC
+
+1: FDC -\> CPU
+
+NDMA  
+DMA-Modus
+
+0: DMA-Modus aktiviert
+
+1: DMA-Modus deaktiviert
+
+BUSY  
+BUSY (Befehl wird ausgeführt)
+
+0: nicht busy
+
+1: busy
+
+ACTD-ACTA  
+Laufwerk D-A ist im Positionierungs-Modus
 
 ### DOR
 
@@ -45,6 +65,27 @@ NDMA
 | ------ | ------ | ------ | ------ | ------ | ----- | ------- | ------- |
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
 | Name | MOTD | MOTC | MOTB | MOTA | DMA | RESET | DRIVE |
+
+MOTD-A  
+Motorsteuerung
+
+0: Motor ausschalten
+
+1: Motor anschalten
+
+DMA  
+DMA und IRQ-Channel
+
+0: aus
+
+1: an
+
+### DR
+
+|  |  |  |  |  |  |  |
+| ------ | ----- | ----- | ----- | ----- | ----- | ----- |
+| Bit | 7-6 | 5 | 4 | 3 | 2 | 1-0 |
+| Name | IC | SE | UC | NR | HD | US |
 
 wird fortgesetzt!
 
@@ -59,6 +100,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4527; parent 4521; 2009-07-02T06:23:26Z -->
+<!-- MediaWiki page 1443; revision 4528; parent 4527; 2009-07-03T07:04:04Z -->
