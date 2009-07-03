@@ -1,22 +1,22 @@
 # Syscall
 
-Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es unmöglich für das Programm bestimmte Aktionen wie [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") selbstständig auszuführen.
+Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es unmöglich, für das Programm bestimmte Aktionen wie zum Beispiel [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") selbstständig auszuführen.
 
 ## Parameterübergabe
 
-Der aufrufende Prozess füllt entweder die Syscall-Parameter in Prozessorregister oder legt sie auf den Stack. Meistens wird der Syscall, den der Prozess aufrufen will über eine Nummer als Parameter übergeben.
+Der aufrufende Prozess füllt entweder die Syscall-Parameter in Prozessorregister oder legt sie auf den Stack. Meistens wird der Syscall, den der Prozess aufrufen will, über eine Nummer als Parameter, z.B. über das Register eax, übergeben.
 
 Anschließend [löst der Prozess einen Syscall aus](https://github.com/lowlevel-eu/wiki/wiki/Syscall#ausl%C3%B6sen-des-syscalls "Syscall").
 
 ## Auslösen des Syscalls
 
-Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere x86 AMD Prozessoren die *syscall* Instruktion. Im Unterschied dazu unterstützen neuere Intel Prozessoren die *sysenter* Instruktion.
+Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere x86 AMD Prozessoren die *syscall* Instruktion und neuere Intel Prozessoren die *sysenter* Instruktion.
 
-Anschließend befindet sich der Prozessor im Kernelmodus und der Kernel übernimmt [die Behandlung des Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall#behandlung-des-syscalls "Syscall").
+Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel übernimmt [die Behandlung des Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall#behandlung-des-syscalls "Syscall").
 
 ## Behandlung des Syscalls
 
-Im Kernel wird dann ein Syscallhandler verwendet um die Funktion aufzulösen und die Parameter zu übergeben. Diese Funktion führt dann die vom Programm gewünschte Aktion aus (falls das Programm die benötigten Rechte dazu hat). Anschließend kehrt die Funktion zurück zu dem Programm (und gibt möglicherweise einen oder mehrere Rückgabewerte über Prozessorregister oder Stack zurück. Alternativ dazu kann das Programm auch geblockt werden, falls beispielsweise die Anfrage nach Daten von der Festplatte nicht sofort (über Caches) beantwortet werden kann, oder das Programm wird terminiert.
+Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen Nummer die Funktion aufzulösen und die Parameter zu übergeben. Die von diesem Handler selektierte Funktion führt die vom Programm gewünschte Aktion aus, falls das Programm die benötigten Rechte dazu hat. Anschließend kehrt die Funktion zurück zu dem Programm und gibt möglicherweise einen oder mehrere Rückgabewerte über Prozessorregister oder Stack zurück. Alternativ kann das Programm auch geblockt werden, falls beispielsweise die Anfrage nach Daten von der Festplatte nicht sofort (über Caches) beantwortet werden kann, oder das Programm wird terminiert.
 
 ## siehe auch
 
@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet um die Funktion aufzulösen und
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4537/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 2855; parent 2619; 2008-03-25T03:55:00Z -->
+<!-- MediaWiki page 1629; revision 4537; parent 2855; 2009-07-03T18:04:20Z -->
