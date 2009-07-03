@@ -100,10 +100,20 @@ Laufwärk auswählen
 
 ### DR
 
+Nach manchen Befehlen werden die Status-Register im DR zurückgegeben.
+
+#### ST0
+
 |  |  |  |  |  |  |  |
 | ------ | ----- | ----- | ----- | ----- | ----- | ----- |
 | Bit | 7-6 | 5 | 4 | 3 | 2 | 1-0 |
 | Name | IC | SE | UC | NR | HD | US |
+
+#### ST1
+
+#### ST2
+
+#### ST3
 
 wird fortgesetzt!
 
@@ -118,6 +128,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4529; parent 4528; 2009-07-03T08:20:22Z -->
+<!-- MediaWiki page 1443; revision 4530; parent 4529; 2009-07-03T08:22:16Z -->
