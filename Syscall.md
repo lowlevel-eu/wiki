@@ -1,6 +1,6 @@
 # Syscall
 
-Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es unmöglich, für das Programm bestimmte Aktionen wie zum Beispiel [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") selbstständig auszuführen.
+Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es für das Programm unmöglich, bestimmte Aktionen wie zum Beispiel [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") selbstständig auszuführen.
 
 ## Parameterübergabe
 
@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4537/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4538/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 4537; parent 2855; 2009-07-03T18:04:20Z -->
+<!-- MediaWiki page 1629; revision 4538; parent 4537; 2009-07-03T18:05:24Z -->
