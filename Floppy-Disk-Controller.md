@@ -80,6 +80,24 @@ DMA und IRQ-Channel
 
 1: an
 
+RESET  
+Controller Reset
+
+0: Reset ausführen (!!!)
+
+1: Controller aktiviert (Reset ausgeführt)
+
+DRIVE  
+Laufwärk auswählen
+
+00: Drive 0
+
+01: Drive 1
+
+10: Drive 2
+
+11: Drive 3
+
 ### DR
 
 |  |  |  |  |  |  |  |
@@ -100,6 +118,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4528; parent 4527; 2009-07-03T07:04:04Z -->
+<!-- MediaWiki page 1443; revision 4529; parent 4528; 2009-07-03T08:20:22Z -->
