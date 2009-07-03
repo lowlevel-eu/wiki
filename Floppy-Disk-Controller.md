@@ -249,17 +249,23 @@ DS
 
 wird fortgesetzt!
 
-## Siehe auch
+# Befehle
+
+# Infos
+
+## Data Address Mark
+
+# Siehe auch
 
 [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h") - Disketten- und Festplattenzugriff
 
-## Weblinks
+# Weblinks
 
 - [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](http://lowlevel.brainsware.org/wiki/images/82077AA_FloppyControllerDatasheet.pdf)
 - <http://www.isdaman.com/alsos/hardware/fdc/floppy.htm>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4535; parent 4534; 2009-07-03T15:56:14Z -->
+<!-- MediaWiki page 1443; revision 4536; parent 4535; 2009-07-03T15:59:32Z -->
