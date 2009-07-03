@@ -158,25 +158,37 @@ aktives Laufwerk
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | Name | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
 
+EN  
 End of Cylinder
 
 gesetzt wenn die geforderte Sektoranzahl die Anzahl der Sektoren auf einer Spur überschreitet
 
-data error
+DE  
+Data Error
 
 gesetzt bei einem Fehler im ID Addressfield oder im Datafield
 
-time-out
+TO  
+Time-out
 
-gesetzt, wenn der FDC keine Signale von CPU oder DMA empfängt
+gesetzt wenn der FDC keine Signale von CPU oder DMA empfängt
 
-no data
+NDAT  
+No Data
 
-not writeable
+gesetzt wenn bei einem read sektor Befehl der Sektor nicht gefunden wurde
+
+oder wenn der FDC nach einem read ID Befehl die ID nicht lesen konnte
+
+NW  
+Not Writeable
 
 gesetzt wenn die Floppy schreibgeschützt ist
 
-no address mark
+NID  
+Ao Address Mark
+
+gesetzt wenn die ID Address mark nicht gefunden wurde
 
 #### ST2
 
@@ -185,12 +197,55 @@ no address mark
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | Name | 0 | DADM | CRCE | WCYL | SEQ | SERR | BCYL | NDAM |
 
+DADM  
+Deleted Address Mark
+
+Bei einem read Sector Befehl:
+
+eine gelöschte Data Address Mark wurde gefunden
+
+Bei einem read deleted Sector Befehl:
+
+eine gesetzte Data Address Mark wurde gefunden
+
+CRCE  
+CRC error in data field
+
+WCYL  
+wrong cylinder
+
+SEQ  
+seek equal
+
+SERR  
+seek error
+
+BCYL  
+bad cylinder
+
+NDAM  
+not data address mark DAM
+
 #### ST3
 
 |  |  |  |  |  |  |  |  |
 | ------ | ------ | ------ | ----- | ------ | ------ | ------ | ----- |
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
 | Name | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
+
+ESIG
+
+WPDR
+
+RDY
+
+TRKO
+
+DSDR
+
+HDDR
+
+DS
 
 wird fortgesetzt!
 
@@ -205,6 +260,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4534; parent 4533; 2009-07-03T14:30:17Z -->
+<!-- MediaWiki page 1443; revision 4535; parent 4534; 2009-07-03T15:56:14Z -->
