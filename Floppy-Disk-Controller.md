@@ -158,6 +158,26 @@ aktives Laufwerk
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | Name | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
 
+End of Cylinder
+
+gesetzt wenn die geforderte Sektoranzahl die Anzahl der Sektoren auf einer Spur überschreitet
+
+data error
+
+gesetzt bei einem Fehler im ID Addressfield oder im Datafield
+
+time-out
+
+gesetzt, wenn der FDC keine Signale von CPU oder DMA empfängt
+
+no data
+
+not writeable
+
+gesetzt wenn die Floppy schreibgeschützt ist
+
+no address mark
+
 #### ST2
 
 |  |  |  |  |  |  |  |  |  |
@@ -185,6 +205,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4533; parent 4532; 2009-07-03T14:25:27Z -->
+<!-- MediaWiki page 1443; revision 4534; parent 4533; 2009-07-03T14:30:17Z -->
