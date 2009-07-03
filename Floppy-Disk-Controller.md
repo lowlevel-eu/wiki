@@ -100,7 +100,7 @@ Laufwärk auswählen
 
 ### DR
 
-Nach manchen Befehlen werden die Status-Register im DR zurückgegeben.
+In das Data-Register werden die Befehle geschrieben, die jeweils aus mehreren Bytes bestehen. Nach manchen Befehlen werden die Status-Register im DR zurückgegeben.
 
 #### ST0
 
@@ -112,23 +112,23 @@ Nach manchen Befehlen werden die Status-Register im DR zurückgegeben.
 #### ST1
 
 |  |  |  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| ------ | ----- | ----- | ----- | ----- | ----- | ------ | ----- | ----- |
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| Name | IC | SE | UC | NR | HD | US |  |  |
+| Name | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
 
 #### ST2
 
 |  |  |  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| ------ | ----- | ------ | ------ | ------ | ----- | ------ | ------ | ------ |
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| Name | IC | SE | UC | NR | HD | US |  |  |
+| Name | 0 | DADM | CRCE | WCYL | SEQ | SERR | BCYL | NDAM |
 
 #### ST3
 
 |  |  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| ------ | ------ | ------ | ----- | ------ | ------ | ------ | ----- |
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
-| Name | IC | SE | UC | NR | HD | US |  |
+| Name | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
 
 wird fortgesetzt!
 
@@ -143,6 +143,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4531/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4532/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4531; parent 4530; 2009-07-03T09:03:30Z -->
+<!-- MediaWiki page 1443; revision 4532; parent 4531; 2009-07-03T14:15:35Z -->
