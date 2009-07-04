@@ -8,7 +8,7 @@ Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl "CP
 
 Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, zu bekommen, ruft man CPUID mit der Funktionsnummer 0x00 auf. \<asm\>
 
-    mov eax, 0x00
+    mov eax, 0x00; xor eax, eax bewirkt das selbe und ist schneller
     cpuid
 
 \</asm\> Ein AMD-Prozessor hätte jetzt folgende Register Werte: EBX="**Auth**", EDX="**enti**", ECX="**cAMD**"
@@ -67,7 +67,14 @@ Das Ergebnis dieser Funktion ist folgendes:
 
 #### ECX
 
-Hier soll ein Byte-Array sein, es wird aber nicht empfohlen, daraus zu lesen. Dieses Feld ist ein kommendes Feature. Es zählt also zu den reservierten Feldern.
+Dieses Register gibt erweiterte Informationen über den Prozessor:
+
+| Bits | Funktion |
+| ------ | ---------------------------------------------------- |
+| 9 | Verfügbarkeit von SSSE3 |
+| 5 | Verfügbarkeit von Virtual Machine Extensions (VMX) |
+| 3 | Die Befehle MONITOR und MWAIT sind verfügbar |
+| 0 | Verfügbarkeit von SSE3 |
 
 #### EDX - Featureflags
 
@@ -135,6 +142,100 @@ Die Bytes 63 bis 32 der Prozessor-ID sind darin hinterlegt. *(siehe oben)*
 
 Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur für Intel- bzw. nur für AMD Prozessoren. Solche Befehle sollte man nicht ausführen, wenn man nicht weiß von welchem Hersteller die CPU ist! Zum Beispiel sollten CPUID-Befehle, die nur für Intel-CPUs gelten, nicht auf einer AMD-CPU ausgeführt werden. Diese Funktionen beginnen bei 0x80000000.
 
+Erweiterte Funktionen von Intel:
+
+### EAX = 0x80000000
+
+#### EAX
+
+Enthält maximale erweiterte Funktionsnummer.
+
+#### EBX
+
+Reserviert
+
+#### ECX
+
+Reserviert
+
+#### EDX
+
+Reserviert
+
+### EAX = 0x80000001
+
+#### EAX
+
+Reserviert
+
+#### EBX
+
+Reserviert
+
+#### ECX
+
+Reserviert
+
+#### EDX
+
+Wenn Bit 29 gesetzt, dann ist Intel64-Technologie verfügbar
+
+### EAX = 0x80000002
+
+#### EAX
+
+Eingebrannter String
+
+#### EBX
+
+Eingebrannter String (Fortsetzung)
+
+#### ECX
+
+Eingebrannter String (Fortsetzung)
+
+#### EDX
+
+Eingebrannter String (Fortsetzung)
+
+### EAX = 0x80000003
+
+#### EAX
+
+Eingebrannter String (Fortsetzung)
+
+#### EBX
+
+Eingebrannter String (Fortsetzung)
+
+#### ECX
+
+Eingebrannter String (Fortsetzung)
+
+#### EDX
+
+Eingebrannter String (Fortsetzung)
+
+### EAX = 0x80000004
+
+#### EAX
+
+Eingebrannter String (Fortsetzung)
+
+#### EBX
+
+Eingebrannter String (Fortsetzung)
+
+#### ECX
+
+Eingebrannter String (Fortsetzung)
+
+#### EDX
+
+Eingebrannter String (Fortsetzung)
+
+  
+
 ## Siehe auch
 
 [Englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID)
@@ -147,6 +248,6 @@ Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur fü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4548/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 4374; parent 3954; 2009-05-15T21:34:08Z -->
+<!-- MediaWiki page 1739; revision 4548; parent 4374; 2009-07-04T19:02:38Z -->
