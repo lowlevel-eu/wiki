@@ -58,9 +58,31 @@ Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS 
 - Diskettentreiber
 - Treiber im Usermode laden können
 - StdCLib vervollständigen, POSIX-Kompatibilität stark verbessern
+- sysenter-Unterstützung
+
+## Syscalls (Auszug)
+
+Syscalls geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
+
+| Nummer (eax) | Funktion | Beschreibung |
+| -------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00000000 | \<c\>FILE \*eax = fopen(const char \*ebx, const char \*esi)\</c\> | StdCLib (öffnet eine Datei) |
+| 0x00000001 | \<c\>fclose(FILE \*edx)\</c\> | StdCLib (schließt eine Datei) |
+| 0x00000002 | \<c\>size_t eax = fread(void \*edi, size_t ebx, size_t ecx, FILE \*edx)\</c\> | StdCLib (liest Daten aus einer Datei) |
+| 0x00000003 | \<c\>size_t eax = fwrite(void \*esi, size_t ebx, size_t ecx, FILE \*edx)\</c\> | StdCLib (schreibt Daten in eine Datei) |
+| 0x00000100 | \<c\>void \*eax = malloc(size_t ecx)\</c\> | StdCLib (reserviert einen Speicherbereich) |
+| 0x00000101 | \<c\>free(void \*ebx)\</c\> | StdCLib (gibt einen Speicherbereich frei) |
+| 0x00000200 | \<c\>exit(int edx)\</c\> | StdCLib (beendet das Programm) |
+| 0x00000202 | \<c\>pid_t eax = exec(char \*ebx, char \*\*esi)\</c\> | Erstellt einen neuen Prozess und führt darin das Programm ebx mit der Parameterliste esi aus. |
+| 0x0000020A | \<c\>sleep(int ecx)\</c\> | Legt den Prozess für (mindestens) ecx Millisekunden schlafen. |
+| 0x00000300 | \<c\>int eax = mount(const char \*esi, const char \*edi, const char \*ebx)\</c\> | Hängt die Gerätedatei esi in den Ordner edi ein. ebx gibt das Dateisystem an, wenn ebx==NULL, dann wird versucht, ein passendes Dateisystem zu finden. |
+| 0xFFFFFF00 | \<c\>int eax = rand()\</c\> | StdCLib (Liefert eine Zufallszahl) |
+| 0xFFFFFFFF | \<c\>reboot()\</c\> | Startet das System neu, funktioniert nur, wenn der aufrufende Prozess zum Benutzer root gehört. |
+
+Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00) geben den Typ an: 0x000000xx sind Dateifunktionen, 0x000001xx sind Speicherfunktionen, 0x000002xx sind Prozessfunktionen, 0x000003xx sind Gerätefunktionen und 0xFFFFFFxx sind andere Funktionen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4493; parent 4492; 2009-06-27T08:57:41Z -->
+<!-- MediaWiki page 1861; revision 4543; parent 4493; 2009-07-04T11:10:14Z -->
