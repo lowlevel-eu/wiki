@@ -1,6 +1,6 @@
 # Floppy Disk Controller
 
-Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke ansteuern kann.
+Der Floppy Disk Controller ist ein Chip, der ein bis vier Floppy-Laufwerke ansteuern kann.
 
 ## Eigenschaften
 
@@ -12,10 +12,16 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier FLoppy-Laufwerke anste
 ## Übersicht
 
 | Name | Port | Beschreibung | lesen/schreiben |
-| ------ | ------- | ------------------------- | ----------------- |
-| MSR | 0x3F4 | Main Status Register | lesen |
-| DR | 0x3F5 | Data Register | lesen/schreiben |
+| ------ | ------- | -------------------------------- | ----------------- |
+| SRA | 0x3F0 | Status Register A | lesen |
+| SRB | 0x3F1 | Status Register B | lesen |
 | DOR | 0x3F2 | Digital Output Register | schreiben |
+| TDR | 0x3F3 | Tape Drive Register | lesen/schreiben |
+| MSR | 0x3F4 | Main Status Register | lesen |
+| DRSR | 0x3F4 | Data Rate Select Register | schreiben |
+| DR | 0x3F5 | Data Register | lesen/schreiben |
+| DIR | 0x3F7 | Digital Input Register | lesen |
+| CCR | 0x3F7 | Configuration Control Register | schreiben |
 
 ## Aufbau
 
@@ -24,9 +30,9 @@ Wenn nichts dasteht, gilt das Flag bei gesetztem Bit.
 ### MSR
 
 |  |  |  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ------ | ------ | ------ | ------ | ------ | ------ |
-| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| Name | MRQ | DIO | NDMA | BUSY | ACTD | ACTC | ACTB | ACTA |
+| ---------- | ----- | ----- | ------ | ------ | ------ | ------ | ------ | ------ |
+| **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| **Name** | MRQ | DIO | NDMA | BUSY | ACTD | ACTC | ACTB | ACTA |
 
 MRQ  
 Status
@@ -38,9 +44,9 @@ Status
 DIO  
 Daten I/O
 
-0: CPU -\> FDC
+0: CPU -\> FDC (Daten schreiben)
 
-1: FDC -\> CPU
+1: FDC -\> CPU (Daten lesen)
 
 NDMA  
 DMA-Modus
@@ -62,9 +68,9 @@ Laufwerk D-A ist im Positionierungs-Modus
 ### DOR
 
 |  |  |  |  |  |  |  |  |
-| ------ | ------ | ------ | ------ | ------ | ----- | ------- | ------- |
-| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
-| Name | MOTD | MOTC | MOTB | MOTA | DMA | RESET | DRIVE |
+| ---------- | ------ | ------ | ------ | ------ | ----- | ------- | ------------ |
+| **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 &#150; 0 |
+| **Name** | MOTD | MOTC | MOTB | MOTA | DMA | RESET | DRIVE |
 
 MOTD-A  
 Motorsteuerung
@@ -74,11 +80,11 @@ Motorsteuerung
 1: Motor anschalten
 
 DMA  
-DMA und IRQ-Channel
+DMA und IRQ
 
-0: aus
+0: deaktiviert
 
-1: an
+1: aktiviert
 
 RESET  
 Controller Reset
@@ -105,9 +111,9 @@ In das Data-Register werden die Befehle geschrieben, die jeweils aus mehreren By
 #### ST0
 
 |  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ----- | ----- | ----- | ----- |
-| Bit | 7-6 | 5 | 4 | 3 | 2 | 1-0 |
-| Name | IC | SE | UC | NR | HD | US |
+| ---------- | ------------ | ----- | ----- | ----- | ----- | ------------ |
+| **Bit** | 7 &#150; 6 | 5 | 4 | 3 | 2 | 1 &#150; 0 |
+| **Name** | IC | SE | UC | NR | HD | US |
 
 IC  
 Interrupt Code
@@ -154,9 +160,9 @@ aktives Laufwerk
 #### ST1
 
 |  |  |  |  |  |  |  |  |  |
-| ------ | ----- | ----- | ----- | ----- | ----- | ------ | ----- | ----- |
-| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| Name | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
+| ---------- | ----- | ----- | ----- | ----- | ----- | ------ | ----- | ----- |
+| **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| **Name** | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
 
 EN  
 End of Cylinder
@@ -193,9 +199,9 @@ gesetzt wenn die ID Address mark nicht gefunden wurde
 #### ST2
 
 |  |  |  |  |  |  |  |  |  |
-| ------ | ----- | ------ | ------ | ------ | ----- | ------ | ------ | ------ |
-| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| Name | 0 | DADM | CRCE | WCYL | SEQ | SERR | BCYL | NDAM |
+| ---------- | ----- | ------ | ------ | ------ | ----- | ------ | ------ | ------ |
+| **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| **Name** | 0 | DADM | CRCE | WCYL | SEQ | SERR | BCYL | NDAM |
 
 DADM  
 Deleted Address Mark
@@ -229,9 +235,9 @@ not data address mark DAM
 #### ST3
 
 |  |  |  |  |  |  |  |  |
-| ------ | ------ | ------ | ----- | ------ | ------ | ------ | ----- |
-| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
-| Name | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
+| ---------- | ------ | ------ | ----- | ------ | ------ | ------ | ------------ |
+| **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 &#150; 0 |
+| **Name** | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
 
 ESIG  
 Error
@@ -295,6 +301,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4541/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4541; parent 4536; 2009-07-04T08:35:10Z -->
+<!-- MediaWiki page 1443; revision 4545; parent 4541; 2009-07-04T12:48:20Z -->
