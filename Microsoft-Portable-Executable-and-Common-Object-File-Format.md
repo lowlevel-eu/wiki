@@ -8,7 +8,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ### EXE Header
 
-Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich der PE/COFF-Header aufbaut. Da aber die Informationen für solche Dateien nicht mehr im EXE.Header abgelegt werden, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE/COFF-Header enthält.
+Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich der PE/COFF-Header aufbaut. Da aber die Informationen für solche Dateien nicht mehr im EXE-Header abgelegt werden, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE/COFF-Header enthält.
 
 Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 
@@ -37,7 +37,7 @@ Hier ist der Common Object File Format Header:
 | -------- | --------- | ----------------------------------------------------------------------------------------------- |
 | 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
 | 0x02 | 2 Bytes | Die Anzahl der Sektoren |
-| 0x04 | 4 Bytes | Die ersten 32bits von der Sekundenanzahl von 1.Januar 1970 00:00 bis zur Erstellung der Datei |
+| 0x04 | 4 Bytes | Die ersten 32 Bits der Sekundenanzahl vom 1. Januar 1970 00:00 bis zur Erstellung der Datei |
 | 0x08 | 4 Bytes | Der Dateioffset dieser COFF-Datei. Wenn Null, dann ist keiner vorhanden |
 | 0x0B | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle (?) |
 | 0x0F | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
@@ -79,7 +79,7 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | 3 | Obsolet. Sollte Null sein |
 | 4 | Obsolet. Sollte Null sein |
 | 5 | Obsolet. Sollte Null sein |
-| 6 | Das Programm kann mit mehr als 2GB umgehen. In naher Zukunft wird dieser Eintrag obsulet sein |
+| 6 | Das Programm kann mit mehr als 2GB umgehen. In naher Zukunft wird dieser Eintrag obsolet sein |
 | 7 | Reserviert |
 | 8 | Obsolet. Sollte Null sein |
 | 9 | Plattform basiert auf 32-Bit-Ausdrücken |
@@ -128,12 +128,12 @@ Im dritten Teil können Strings oder Tabellen angegeben werden, damit sie das Be
 Die Sektorentabelle kommt immer nach dem optimalen Header. Die Headergröße wird im COFF-Header festgelegt. Ebenfalls wird die Größe der Tabelle im COFF-Header festgelegt. Jeder Sektor besteht aus folgenden Abschnitten:
 
 | Offset | Größe | Beschreibung |
-| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | 8 | Ist ein 8-Byte-String auf UTF-8 Basis. Wenn genau 8-Bytes verwendet wird, dann ist kein Nullbyte nötig. Bei Objektdateien darf dieser länger sein, bei ausführbaren Dateien ist dies verboten.<br> |
-| 8 | 4 | Die entgültige Größe eines Sektors, wenn es geladen wird. Bei Objektdateien ist dieser Abschnitt voller Nullen. |
+| 8 | 4 | Die endgültige Größe eines Sektors, wenn es geladen wird. Bei Objektdateien ist dieser Abschnitt voller Nullen. |
 | 12 | 4 | Für ausführbare Dateien die Adresse des ersten Bytes der Sektion relativ zum Image Basis(?). Bei Objektdateien ist die Adresse des ersten angelegten Bytes, bevor die Verlagerung abgeschlossen ist.<br> |
-| 16 | 4 | Dies Feld ist gerundet. Entweder die Größe des Sektors(Objektdateien) oder die Größe des initialisierten Daten auf der Festplatte(Bei Imagedateien) Ist dieser Teil kleiner als das Offset 8, dann sind der Rest der Sektorentabelle Nullen. Wenn diese Sektion nur unintialisierte Daten enthält, dann ist dieser Teil Null. |
-| 20 | 4 | Der Dateipointer zur ersten Sektion innerhalb des COFF-Headers. Für Objektdateien sollte dieser Teil an einer 4-Byte-Grenze ausgerichtet sein. Enthält die Sektion nur unitiliasierte Daten, dann ist dieser Teil Null. |
+| 16 | 4 | Dies Feld ist gerundet. Entweder die Größe des Sektors(Objektdateien) oder die Größe des initialisierten Daten auf der Festplatte(Bei Imagedateien) Ist dieser Teil kleiner als das Offset 8, dann sind der Rest der Sektorentabelle Nullen. Wenn diese Sektion nur uninitialisierte Daten enthält, dann ist dieser Teil Null. |
+| 20 | 4 | Der Dateipointer zur ersten Sektion innerhalb des COFF-Headers. Für Objektdateien sollte dieser Teil an einer 4-Byte-Grenze ausgerichtet sein. Enthält die Sektion nur uninitialisierte Daten, dann ist dieser Teil Null. |
 
 Wird noch erweitert
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4551/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 4309; parent 4308; 2009-04-23T13:51:44Z -->
+<!-- MediaWiki page 1644; revision 4551; parent 4309; 2009-07-04T20:44:32Z -->
