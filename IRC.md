@@ -91,16 +91,12 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel
 - Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anderswertig zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
 - Bei der Codierung des Clients ist darauf zu achten, dass UTF8 benutzt wird, da nicht alle Clients sauber umgehen können, mit mehreren Codierungen
 
-## Channel-Logs
+## Channel-Logs und Statistiken
 
-Aufzeichnungen der Channelgespräche sind immer aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu haben.
-
-## Die Statistiken
-
-Momentan nicht verfügbar
+Aufzeichnungen der Channelgespräche und Statistiken sind immer aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu haben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4173/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 4173; parent 3973; 2009-03-23T17:25:39Z -->
+<!-- MediaWiki page 1463; revision 4550; parent 4173; 2009-07-04T20:28:36Z -->
