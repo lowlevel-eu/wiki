@@ -16,8 +16,12 @@ Die Spezifikation der Benutzer- und Software-Schnittstelle ist in vier Teile unt
 - Thread-Erweiterungen (POSIX.4a/IEEE 1003.1c-1994)
 - System-Schnittstelle: eine Liste der C-Systemaufrufe, die unterstützt werden müssen
 
+## Weblinks
+
+[Die Basis-Definitionen der Open Group](http://www.opengroup.org/onlinepubs/009695399/)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
 
-<!-- MediaWiki page 1775; revision 4197; parent 3923; 2009-03-27T16:35:38Z -->
+<!-- MediaWiki page 1775; revision 4552; parent 4197; 2009-07-04T20:47:00Z -->
