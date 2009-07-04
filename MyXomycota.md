@@ -1,7 +1,7 @@
 # MyXomycota
 
 | MyXomycota |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.004 (pre-alpha) |
@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | Int 0x80 |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
+| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")-Scripts |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Keine (bis jetzt) |
 | Homepage |  |
 
@@ -27,6 +27,26 @@ Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - 
 ## Das Mountsystem
 
 Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem Kernel, wenn sie nicht über int 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von Dateisystemen ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
+
+### Zugriff auf Netzwerkfunktionen
+
+Noch gibt es kein offizielles Release mit Netzwerkfunktionalität, das soll im nächsten Release anders sein. Zugriff darauf erhält man dann mit den Spezialdateisystemen ipfs und tcpfs. Diese werden unter "/net/ip" bzw. "/net/tcp" eingehängt.
+
+#### /net/ip
+
+Um eine IP-"Verbindung" aufzubauen, öffnet man eine Datei mit Lese- und Schreibzugriff ("r+") in /net/ip. Der Dateiname lautet "interface:IP". Um eine Verbindung zu www.google.de (74.125.39.106) über das Interface "eth0" aufzubauen, geht man folgendermaßen vor:
+
+\<c\>FILE \*ipcon; ipcon = fopen("/net/ip/eth0:74.125.39.106", "r+")\</c\>
+
+Danach kann man einfach Daten empfangen ("fread") und senden ("fwrite") sowie die Verbindung wieder beenden ("fclose").
+
+#### /net/tcp
+
+Bei TCP geht man ähnlich vor, nur dass man den Port an den Dateinamen anhängt. Eine Verbindung zum Webserver (Port 80) unter www.google.de (74.125.39.106) über eth0 sieht dann so aus:
+
+\<c\>FILE \*tcpcon; tcpcon = fopen("/net/tcp/eth0:74.125.39.106:80", "r+")\</c\>
+
+Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und natürlich auch die Verbindung beenden ("fclose").
 
 ## Aktuelle Features
 
@@ -50,6 +70,7 @@ Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS 
 
 ## TODO
 
+- Netzwerkfunktionen
 - HD-Audio-Treiber
 - Bei "großen" Festplatten funktionierender Festplattentreiber
 - Funktionierender FAT32-Treiber
@@ -83,6 +104,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4543; parent 4493; 2009-07-04T11:10:14Z -->
+<!-- MediaWiki page 1861; revision 4544; parent 4543; 2009-07-04T11:27:59Z -->
