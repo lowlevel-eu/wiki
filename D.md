@@ -237,15 +237,15 @@ gelinkt wird's so:
 
 ## D-Compiler
 
-- gdc aus der [GNU Compiler Collection](http://gdc.gnu.org/)
+- [gdc](http://dgcc.sourceforge.net/gdc) aus der GNU Compiler Collection
 - [dmd](http://www.digitalmars.com/d) Digital-Mars-D-Compiler
 
 ## Weblinks
 
-- [Alles rund um die Sprache D](http://bwww.digitalmars.com/d)
+- [Alles rund um die Sprache D](http://www.digitalmars.com/d)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4504; parent 4498; 2009-06-28T01:16:54Z -->
+<!-- MediaWiki page 1863; revision 4553; parent 4504; 2009-07-04T20:54:23Z -->
