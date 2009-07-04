@@ -233,19 +233,48 @@ not data address mark DAM
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1-0 |
 | Name | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
 
-ESIG
+ESIG  
+Error
 
-WPDR
+gesetzt nach einem Fehler
 
-RDY
+WPDR  
+Write Protection
 
-TRKO
+gesetzt wenn die Disc schreibgeschützt ist
 
-DSDR
+RDY  
+Ready
 
-HDDR
+gesetzt wenn die Drive ready ist
 
-DS
+TRKO  
+Track 0
+
+der Head ist über Track 0 (?)
+
+DSDR  
+Double sided drive
+
+gesetzt wenn die Floppy doppelseitig ist
+
+HDDR  
+Head
+
+0: Head 0
+
+1: Head 1
+
+DS  
+Drive select
+
+00: A
+
+01: B
+
+10: C
+
+11: D
 
 wird fortgesetzt!
 
@@ -266,6 +295,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4541/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4536; parent 4535; 2009-07-03T15:59:32Z -->
+<!-- MediaWiki page 1443; revision 4541; parent 4536; 2009-07-04T08:35:10Z -->
