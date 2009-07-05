@@ -288,8 +288,16 @@ Aus \#lost (20. April 2008)
 
     <FreakyPenguin> Hm md$((4+1))sum aufzurufen, nur weil die Tastatur kaputt ist, ist ja schon d00f. *g*
 
+------------------------------------------------------------------------
+
+Aus \#lost (6. April 2009)
+
+    <chris12> naja bei mir läuft vista und läuft und läuft und läuft und ....
+    <FreakyPenguin> Ist es zu langsam zum abstürzen, oder was? *g*
+    <chris12> nene der bluescreen ist zu instabiel zum aufrufen ;)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 2918; parent 2502; 2008-04-19T22:36:58Z -->
+<!-- MediaWiki page 1435; revision 4559; parent 2918; 2009-07-05T12:25:08Z -->
