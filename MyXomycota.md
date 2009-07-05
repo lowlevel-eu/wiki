@@ -30,7 +30,11 @@ Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS 
 
 ### Zugriff auf Netzwerkfunktionen
 
-Noch gibt es kein offizielles Release mit Netzwerkfunktionalität, das soll im nächsten Release anders sein. Zugriff darauf erhält man dann mit den Spezialdateisystemen ipfs und tcpfs. Diese werden unter "/net/ip" bzw. "/net/tcp" eingehängt.
+Noch gibt es kein offizielles Release mit Netzwerkfunktionalität, das soll im nächsten Release anders sein. Zugriff darauf erhält man dann mit folgenden Spezialdateisystemen unter den ebenfalls folgenden Mountpoints:
+
+- "ipfs" - "/net/ip"
+- "tcpfs" - "/net/tcp"
+- "udpfs" - "/net/udp"
 
 #### /net/ip
 
@@ -38,7 +42,7 @@ Um eine IP-"Verbindung" aufzubauen, öffnet man eine Datei mit Lese- und Schreib
 
 \<c\>FILE \*ipcon; ipcon = fopen("/net/ip/eth0:74.125.39.106", "r+")\</c\>
 
-Danach kann man einfach Daten empfangen ("fread") und senden ("fwrite") sowie die Verbindung wieder beenden ("fclose").
+Danach kann man einfach Daten empfangen ("fread") und senden ("fwrite") sowie die Verbindung wieder beenden ("fclose"). Zu beachten ist, dass nur ganze Pakete gesendet und empfangen werden können (ca. 1500 Bytes).
 
 #### /net/tcp
 
@@ -47,6 +51,10 @@ Bei TCP geht man ähnlich vor, nur dass man den Port an den Dateinamen anhängt.
 \<c\>FILE \*tcpcon; tcpcon = fopen("/net/tcp/eth0:74.125.39.106:80", "r+")\</c\>
 
 Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und natürlich auch die Verbindung beenden ("fclose").
+
+#### Weitere /net-Dateisysteme
+
+- /net/udp - Verbindung ähnlich wie bei /net/tcp, es können aber nur ganze Pakete empfangen/gesendet werden
 
 ## Aktuelle Features
 
@@ -60,6 +68,8 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Wichtigste Programme
 
+### Im offiziellen Release (0.004-pa-0)
+
 - µsh: Die Shell
 - FASM 1.67.26: Der Flatassembler
 - Aargh: Interpreter für eine esoterische Programmiersprache
@@ -68,8 +78,14 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 - Brainfuck 0.1: Compiler
 - Maumau: Mau-Mau spielen, Regeln unter "maumau --help" oder "/mnt/fda/home/Mau-Mau-Regeln.txt"; benutzt die libmaumau-0.3 (#lost am 22. März 2009)
 
+### Noch "unter Verschluss"
+
+- dig 0.001: Wandelt einen Hostnamen in eine IP-Adresse um
+- myxirc: Ein (einfacher) IRC-Client
+
 ## TODO
 
+- TODO-Liste abarbeiten
 - Netzwerkfunktionen
 - HD-Audio-Treiber
 - Bei "großen" Festplatten funktionierender Festplattentreiber
@@ -104,6 +120,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4565/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4544; parent 4543; 2009-07-04T11:27:59Z -->
+<!-- MediaWiki page 1861; revision 4565; parent 4544; 2009-07-05T18:12:40Z -->
