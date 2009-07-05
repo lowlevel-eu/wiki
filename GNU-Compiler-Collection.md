@@ -28,11 +28,11 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ## Weblinks
 
-- [Website des GCC](http://gcc.gnu.org/install/binaries.html)
+- [Website des GCC](http://gcc.gnu.org)
 - [TDM's GCC/mingw32 Builds](http://www.tdragon.net/recentgcc/) (experimentelle Builds von GCC 4.x für Windows)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 4390; parent 4371; 2009-05-22T18:59:59Z -->
+<!-- MediaWiki page 1805; revision 4561; parent 4390; 2009-07-05T13:05:14Z -->
