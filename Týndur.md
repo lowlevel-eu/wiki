@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Lowlevel-Community](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Team "Týndur/Team") |
-| Akt. Version: | 0.2.0 |
+| Akt. Version: | 0.2.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: | i386 |
@@ -79,6 +79,6 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 4433; parent 3836; 2009-06-12T10:46:56Z -->
+<!-- MediaWiki page 1796; revision 4567; parent 4433; 2009-07-06T09:01:13Z -->
