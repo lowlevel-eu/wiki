@@ -1,12 +1,12 @@
 # Lizenzen
 
-Wenn man sein Betriebssystem veröffentlicht, sollte man sich auch Gedanken über die Lizenz machen. Vor allen Dingen, auch dann, wenn man fremden Code benutzt. Hier werden ein paar OpenSource-Lizenzen vorgestellt.
+Wenn man sein Betriebssystem veröffentlicht, sollte man sich auch Gedanken über die Lizenz machen. Vor allen Dingen, auch dann, wenn man fremden Code benutzt. Hier werden ein paar Open-Source-Lizenzen vorgestellt. Da diese Seite von Nicht-Juristen bearbeitet wurde, kann für Fehlerfreiheit nicht garantiert werden. Jeder, der eine Lizenz für sein Projekt sucht, sollte darum selbst die Lizenztexte lesen und sich ein eigenes Bild machen!
 
 ## Open Source Lizenzen
 
-### General Public License
+### GNU General Public License
 
-Die vier Hauptpunkte der General Public License sind:
+Die vier Hauptpunkte der GNU General Public License (GPL) sind:
 
 - Das Programm darf für alle Zwecke, ohne Einschränkung genutzt werden, auch für kommerziellen Nutzen.
 - Das Programm darf kostenlos, aber auch gegen Geld, weiterverteilt werden. Der Empfänger hat das Recht den Quellcode zu erhalten, ohne zusätzliche Gebühren. Der Empfänger darf das Programm unter genau den gleichen Bedingungen weiterverteilen - gegen Geld, aber auch kostenfrei. Es dürfen keine Lizenzgebühren verlangt werden. Niemand ist verpflichtet, das Programm weiterzuverteilen.
@@ -18,9 +18,20 @@ Die vier Hauptpunkte der General Public License sind:
 
 Manche Libraries (z.B. libgcc) besitzen in ihrer Lizenz einen Zusatz, der das Linken der Library mit Programmen, egal, unter welcher Lizenz diese stehen, erlaubt (Auch GPL Runtime Exception genannt).
 
-### LGPL
+- [Wikipediaartikel zur GPL](http://de.wikipedia.org/wiki/GNU_General_Public_License)
+- [Text der GPL Version 3](http://www.gnu.org/licenses/gpl-3.0.html) (englisch)
+- [inoffizielle deutsche Übersetzung der GPL](http://www.gnu.de/gpl-ger.html)
+- [Wikipediaartikel zur GPL Linking Exception](http://en.wikipedia.org/wiki/GPL_linking_exception)
+
+  
+
+### GNU LGPL
 
 Die Lesser General Public License besagt, dass ein Programm genau so verbreitet werden darf wie unter der GPL, mit Ausnahme, dass Programme, welche das LGPL-Programm extern benutzen (z.B in Form einer Bibliothek) unter ihrer eigenen Lizenz veröffentlicht werden dürfen. Wenn aber LGPL-Code in ein Programm eingefügt wird, muss dieses unter der LGPL veröffentlicht werden.
+
+- [Wikipediaartikel zur Lesser General Public License](http://de.wikipedia.org/wiki/GNU_Lesser_General_Public_License)
+
+  
 
 ### BSD-Lizenz
 
@@ -30,26 +41,48 @@ Die BSD-Lizenz erlaubt die freie Benutzung, Veränderung und Weiterverbeitung ei
 
 Der dritte Absatz der BSD-Lizenz besagt, dass beim Bewerben eines Programms der Name des ursprünglichen Autors genannt werden muss (Mit dieser Klausel ist die Lizenz nicht mehr GPL-kompatibel!).
 
+- [Wikipediaartikel zur BSD-Lizenz](http://de.wikipedia.org/wiki/BSD_Lizenz)
+
+  
+
 ### Zlib/Libpng-Lizenz
 
-Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor allem folgende Bestimmungen setzt:
+Die zLib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor allem folgende Bestimmungen setzt:
 
 - Wenn man den Code weiterverbreitet, darf man nicht behaupten selber der Autor zu sein. Das Nennen des Autors ist außerdem erwünscht, aber nicht zwingend notwendig.
 - Wenn der Quellcode geändert wird, muss dies gekennzeichnet werden, die Lizenz darf nicht vom Sourcecode entfernt werden.
 - Darüber hinaus erlaubt die Lizenz explizit jede Nutzungsmöglichkeit, ob kommerziell oder nicht.
 
-## Weblinks
+<!-- -->
 
-- [Text der GPL Version 3](http://www.gnu.org/licenses/gpl-3.0.html) (englisch)
-- [inoffizielle deutsche Übersetzung der GPL](http://www.gnu.de/gpl-ger.html)
-- [Wikipediaartikel von der General Public License](http://de.wikipedia.org/wiki/GNU_General_Public_License)
-- [Wikipediaartikel von der Lesser General Public License](http://de.wikipedia.org/wiki/GNU_Lesser_General_Public_License)
-- [Wikipediaartikel von der BSD-Lizenz](http://de.wikipedia.org/wiki/BSD_Lizenz)
-- [Wikipediaartikel von der Zlib-Lizenz](http://de.wikipedia.org/wiki/ZLib_License)
-- [Wikipediaartikel von der GPL Linking Exception](http://en.wikipedia.org/wiki/GPL_linking_exception)
+- [Wikipediaartikel der zLib-Lizenz](http://de.wikipedia.org/wiki/ZLib_License)
+
+  
+
+### X11-Lizenz
+
+Die X11-Lizenz (nach ihrer Herkunft auch MIT-Lizenz genannt) ist eine sehr permissive Lienz, welche zur GPL kompatibel ist.
+
+Sie erlaubt die Nutung, Veränderung und Weitergabe des Programms, sowie den Verkauf, und die Integration von Quelltext in Closed-Source-Software. Allerdings müssen der Copyrighthinweis und der Lizenztext in alles Kopien der Software verbleiben. Die MIT-Lizenz eignet sich also für Leute, die eine Lizenz suchen, die viele Freiheiten bietet, aber dennoch nicht auf Namensnennung verzichten wollen.
+
+In ihrer Funktion ähnlich zur X11-Lizenz ist die ISC-Lizenz, welche jedoch kürzer ist.
+
+- [Wikipediaartikel zur MIT-Lizenz](http://de.wikipedia.org/wiki/MIT-Lizenz)
+- [Wikipediaartikel zur ISC-Lizenz](http://de.wikipedia.org/wiki/ISC-Lizenz)
+
+  
+
+### WTFPL und Creative Commons Zero
+
+Diese Lizenzen ermöglichen es, alle Rechte an seinem Werk abzugeben (bis auf die unveräußerlichen Urheberrechte, die von Staat zu Staat unterschiedlich sind). Natürlich sind diese Lizenzen somit auch zu der GPL kompatibel.
+
+WTFPL und Creative Commons Zero sind in etwa funktionsgleich: Man gibt Anderen explizit alle Rechte an der Software, die man auch abgeben kann. Jedoch besteht die Gefahr, dass die WTFPL aufgrund ihres "provokativen" Lizenztextes eventuell Interessenten verunsichern kann, weil sie nicht wissen, ob man die Lizenz ernstnehmen kann. Daher ist die formaler gestaltete CC Zero Lizenz eventuell vorzuziehen.
+
+- [Wikipediaartikel zur WTFPL](http://de.wikipedia.org/wiki/WTFPL)
+- [Die Creative Commons Zero License Deed](http://creativecommons.org/publicdomain/zero/1.0/deed.de)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4091/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 4091; parent 4082; 2009-02-26T20:24:06Z -->
+<!-- MediaWiki page 1552; revision 4569; parent 4091; 2009-07-06T23:11:03Z -->
