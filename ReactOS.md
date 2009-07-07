@@ -6,7 +6,7 @@ ReactOS ist ein freier [Windows](https://github.com/lowlevel-eu/wiki/wiki/Window
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Mehrere](http://www.reactos.org/wiki/index.php/People_of_ReactOS#Project_Roles) |
-| Akt. Version: | 0.3.9 |
+| Akt. Version: | 0.3.10 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
@@ -37,7 +37,7 @@ Da sich ReactOS noch in einer relativ frühen Version befindet, ist eine 100%ige
 
 Nachdem vermehrt Hinweise aufkamen, die besagten, dass Teile des Codes durch Reverse Engineering entstanden sind, wurde der Audit-Prozess eingeleitet. Dabei soll der komplette Source Code überprüft und ggf. ausgebessert werden, um mögliche rechtliche Probleme zu vermeiden. Version 0.4 soll nur geprüften Code beinhalten.
 
-Der Stand dieses Prozesses liegt bei momentan ca. 95%.
+Der Audit-Prozess wurde im Dezember 2007 erfolgreich abgeschlossen.
 
 ## Versionen
 
@@ -50,12 +50,12 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ### Alpha
 
-- 0.3 2006\[Aktuelle Version 26.03.2008\]
-- 0.4 2007(geplant)
+- 0.3 2006
+- 0.4 (geplant)
 
 ### Beta
 
-- 0.5 2007/2008(geplant)
+- 0.5 (geplant)
 
 ## Links
 
@@ -69,6 +69,6 @@ Der Stand dieses Prozesses liegt bei momentan ca. 95%.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4334/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 4334; parent 4097; 2009-04-29T05:57:36Z -->
+<!-- MediaWiki page 1421; revision 4573; parent 4334; 2009-07-07T11:56:11Z -->
