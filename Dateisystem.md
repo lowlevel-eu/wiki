@@ -37,6 +37,6 @@ Neben den eigentlichen Daten der Dateien werden oft auch Zusatzinformationen wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4578/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 3308; parent 2694; 2008-09-07T22:17:55Z -->
+<!-- MediaWiki page 1548; revision 4578; parent 3308; 2009-07-07T17:12:05Z -->
