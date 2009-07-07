@@ -37,6 +37,6 @@ Allerdings war seit jeher die "Windows-Shell" nicht halb so mächtig wie deren \
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4499/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
 
-<!-- MediaWiki page 1864; revision 4499; parent 0; 2009-06-27T22:52:40Z -->
+<!-- MediaWiki page 1864; revision 4582; parent 4499; 2009-07-07T17:17:45Z -->
