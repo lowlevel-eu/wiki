@@ -64,11 +64,11 @@ Der Audit-Prozess wurde im Dezember 2007 erfolgreich abgeschlossen.
 
 ## Quellen
 
-1.[Bericht. (Etwas versteckt)](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7CPositiver)  
-2.[Negativer Bericht.](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C)
+1.[Positiver Bericht. (Etwas versteckt)](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106)  
+2.[Negativer Bericht.](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 4573; parent 4334; 2009-07-07T11:56:11Z -->
+<!-- MediaWiki page 1421; revision 4574; parent 4573; 2009-07-07T12:08:20Z -->
