@@ -1,45 +1,39 @@
 # Graphical User Interface
 
-Ein GUI (**G**raphical **U**ser **I**nterface) ist eine grafische Oberfläche, die zumeist mit der Maus bedienbar ist. Ein [Windowsdesktop](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") ist ein typisches Beispiel für eine grafische Oberfläche. [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") z.B. bietet zwar grafische Oberflächen an, das Grundsystem ist jedoch eine Kommandozeile, und ein GUI ist nur optional (aber für viele Nutzer unentbehrlich).
+Ein **Graphical User Interface** (GUI, dt.: grafische Benutzeroberfläche) zeichnet sich im Gegensatz zum [CLI](https://github.com/lowlevel-eu/wiki/wiki/Shell "Command Line Interface") dadurch aus, dass der Benutzer seine Befehle nicht durch Texteingabe, sondern durch Aktionen mit grafischen Elementen gibt. Besonders im Desktop-Bereich haben sich GUIs durchgesetzt, und daher unterstützt auch fast jedes große Betriebssystem die Bedienung über ein GUI. Es ist also verständlich, wenn sich auch beim Hobby-OS-Entwickler der Wunsch entwickelt, eine GUI anzubieten.
 
-## Vorteile eines GUI
+## Merkmale
 
-- Für die meisten [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")-gewöhnten Nutzer ist ein GUI bequemer zu bedienen als eine Commandline (Kommandozeile). Man klickt einfach auf das Browsericon, anstatt irgendeinen Textbefehl einzutippen, der den Textbrowser aufruft
-- Es ist bei mehreren, auf einmal laufenden Programmen übersichtlicher. In der Kommandozeile sind rein vom Aufbau her mehrere Fenster, zwischen denen man per simplem Klick wechselt, nicht möglich. Man kann in der Kommandozeile eigentlich nur ein Programm gleichzeitig laufen haben, das konkret Eingaben vom Benutzer entgegennimmt
-- Die Darstellung von Bildern ist möglich
+Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus") als primäres Eingabegerät und die Nutzung von Fenstern, welche sich auf einer oder mehreren Arbeitsflächen befinden (Stichwort: Virtuelle Desktops). Weitere (beinah) allgegenwärtige Features von GUIs sind Drag'n'Drop und eine Zwischenablage, um zu vermeiden, dass jedes Fenster von den anderen abgeschottet ist.
 
-## Vorteile einer Kommandozeile
+## Vorteile
 
-- Man hat mehr Kontrolle über das System. Im File Explorer von [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") kann man Rechtsklick\>Löschen auswählen. Eine genauere Spezifizierung der Anweisung, zum Beispiel, ob rekursiv alle Unterordner mit gelöscht werden sollen, oder nicht, ist nicht möglich. In der Kommandozeile können an einen Befehl aber problemlos beliebige Parameter angehängt werden, und damit die gewünschte Wirkung genauer angegeben werden
-- Eine Kommandozeilendarstellung verbraucht viel weniger Ressourcen. Auf Servern ist ein GUI reine Ressourcenverschwendung, da man an diesen nicht wie an gewöhnlichen Arbeitscomputern arbeitet, sondern sie fast nur zur Programmausführung verwendet, und man sich damit den Luxus eines GUIs zugunsten der Performance sparen sollte
-- Ein GUI ist für Programmieranfänger im OS-Entwicklungsbereich viel anspruchsvoller (Grafiktreiber bzw. Nutzung von [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA")/[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA") oder Ähnlichem, Anzeigen aller Fenster in der richtigen Ordnung, Zugriff auf die Maus, etc.), und es empfiehlt sich für das Erstprojekt ein System, das erst einmal nur eine Kommandozeile bietet
+- Auch vollkommen unerfahrene Benutzer können mithilfe eines GUI oftmals Funktionen "erraten", sei es durch das Design der Icons oder auch durch Tooltips. Die Lernkurve durch "Learning-by-doing" verläuft viel steiler als bei Einsteigern in die Konsole.
+- Die Bedienung erfolgt durch konkrete, sichtbare Objekte intuitver, der Benutzer muss sich weniger Gedanken machen.
 
-## GUI-Entwicklung
+<!-- -->
 
-Mit der Entwicklung einer GUI sollte erst begonnen werden, wenn man bereits einen grundlegenden, robusten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mit einer hinreichenden [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") und dergleichen hat.
+- *Beispiel: Auf zwei virtuellen Konsolen laufen unterschiedliche Programme. Um zwischen diesen zu wechseln muss der Benutzer wissen, auf welchem tty das Programm läuft und dann per Tastenkombination wechseln. Bei einem GUI kann der Benutzer das zweite Programm in der Fensterleiste, oder direkt unter dem ersten, sehen, und muss es einfach nur anklicken.*
 
-## Techniken
+## Nachteile
 
-Hier wird erklärt, was eine GUI ausmacht
+- Das Hinzufügen neuer Programmfunktionen erhöht unweigerlich die Komplexität des GUI. Daher ist das Design eines komplexen GUI allein schon ein enormer Aufwand.
 
-### Fenster
+<!-- -->
 
-Meistens ist ein Fenster ein Rechteck. Dieses kann verschoben werden. Ein Fenster kann geschlossen, minimiert oder die Größe kann verändert werden. Meistens stellt ein Fenster ein Programm dar. Es können mehrere Fenster von einem Programm abstammen.
+- *Beispiel: In einem Dateimanager können alle Funktionen zu einer Datei in einem Kontextmenü untergebracht werden. Jedoch braucht jede Funktion auch einen eigenen Eintrag. Bei ausreichend vielen Einträgen wird das Menü vielleicht zu groß oder zu unübersichtlich. Bei einer Konsole ist es egal, wie viele Befehle verfügbar sind, da jeder Befehl direkt eingegeben werden kann.*
 
-### Drag and Drop
+<!-- -->
 
-Bei Drag and Drop wird ein Bild verschoben.
-
-### Maus
-
-Die Maus wird meistens als Zeiger dargestellt und wird mit einem speziellen Gerät bedient. Diese Technik hat sich zum De-facto-Standard von GUIs gemausert.
+- GUIs verbrauchen viele Ressourcen. Daher wird insbesondere auf Servern nur ein einfaches GUI eingesetzt oder oft auch ganz auf ein GUI verzichtet.
+- Last but not least ist der Aufwand der Entwicklung oder Portierung eines GUI enorm. Desweiteren braucht eine GUI besonders viel Infrastruktur, wie z.B. Grafik- oder Maustreiber. Von der Entwicklung eines GUI ohne einen stabilen und relativ ausgereiften [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ist also abzuraten.
 
 ## Links
 
-- [Common Usability Terms](http://osnews.com/story/20287/Common_Usability_Terms_part_IX_the_Menu)
+[Common Usability Terms](http://osnews.com/story/20287/Common_Usability_Terms_part_IX_the_Menu)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4575/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 3340; parent 2934; 2008-09-14T14:15:33Z -->
+<!-- MediaWiki page 1511; revision 4575; parent 3340; 2009-07-07T17:08:53Z -->
