@@ -47,23 +47,23 @@ Der dritte Absatz der BSD-Lizenz besagt, dass beim Bewerben eines Programms der 
 
 ### Zlib/Libpng-Lizenz
 
-Die zLib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor allem folgende Bestimmungen setzt:
+Die zlib-Lizenz ist eine GPL-kompatible, sehr unrestriktive Lizenz, die vor allem folgende Bestimmungen setzt:
 
-- Wenn man den Code weiterverbreitet, darf man nicht behaupten selber der Autor zu sein. Das Nennen des Autors ist außerdem erwünscht, aber nicht zwingend notwendig.
+- Wenn man den Code weiterverbreitet, darf man nicht behaupten, selber der Autor zu sein. Das Nennen des Autors ist außerdem erwünscht, aber nicht zwingend notwendig.
 - Wenn der Quellcode geändert wird, muss dies gekennzeichnet werden, die Lizenz darf nicht vom Sourcecode entfernt werden.
 - Darüber hinaus erlaubt die Lizenz explizit jede Nutzungsmöglichkeit, ob kommerziell oder nicht.
 
 <!-- -->
 
-- [Wikipediaartikel der zLib-Lizenz](http://de.wikipedia.org/wiki/ZLib_License)
+- [Wikipediaartikel der zlib-Lizenz](http://de.wikipedia.org/wiki/ZLib_License)
 
   
 
 ### X11-Lizenz
 
-Die X11-Lizenz (nach ihrer Herkunft auch MIT-Lizenz genannt) ist eine sehr permissive Lienz, welche zur GPL kompatibel ist.
+Die X11-Lizenz (nach ihrer Herkunft auch MIT-Lizenz genannt) ist eine sehr liberale Lizenz, welche zur GPL kompatibel ist.
 
-Sie erlaubt die Nutung, Veränderung und Weitergabe des Programms, sowie den Verkauf, und die Integration von Quelltext in Closed-Source-Software. Allerdings müssen der Copyrighthinweis und der Lizenztext in alles Kopien der Software verbleiben. Die MIT-Lizenz eignet sich also für Leute, die eine Lizenz suchen, die viele Freiheiten bietet, aber dennoch nicht auf Namensnennung verzichten wollen.
+Sie erlaubt die Nutzung, Veränderung und Weitergabe des Programms, sowie den Verkauf, und die Integration von Quelltext in Closed-Source-Software. Allerdings müssen der Copyrighthinweis und der Lizenztext in alles Kopien der Software verbleiben. Die MIT-Lizenz eignet sich also für Leute, die eine Lizenz suchen, die viele Freiheiten bietet, aber dennoch nicht auf Namensnennung verzichten wollen.
 
 In ihrer Funktion ähnlich zur X11-Lizenz ist die ISC-Lizenz, welche jedoch kürzer ist.
 
@@ -83,6 +83,6 @@ WTFPL und Creative Commons Zero sind in etwa funktionsgleich: Man gibt Anderen e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4570/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 4569; parent 4091; 2009-07-06T23:11:03Z -->
+<!-- MediaWiki page 1552; revision 4570; parent 4569; 2009-07-07T11:17:38Z -->
