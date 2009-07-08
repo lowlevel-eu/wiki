@@ -24,6 +24,8 @@ Bei SkyOS bestimmen zur Zeit Updates und Bugfixes die Neuerungen. SkyOS besticht
 
 ### Paging
 
+(Hauptartikel: [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"))
+
 #### Ein besonderes PMode Feature
 
 Jeder, der auf niedrigster Ebene oder ein eigenes Betriebssystem programmieren will, wird feststellen, wie viele Features man unter dem Protected Mode einer x86-32 CPU verwenden kann. Einer der wichtigsten dieser Features ist Paging, obwohl es erst mit dem 486er eingeführt wurde und die erste Intel 32-Bit PMode CPU, der 386er, diese Technik noch nicht kannte. Dies dürfte aber heutzutage in der Regel nicht mehr allzusehr ins Gewicht fallen. Im folgenden möchte ich nun diese ganz wichtige Technologie kurz beschreiben und euch einen kleinen Überblick bieten.
@@ -769,6 +771,6 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4590/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 2676; parent 2292; 2008-03-22T16:12:20Z -->
+<!-- MediaWiki page 1521; revision 4590; parent 2676; 2009-07-08T15:01:54Z -->
