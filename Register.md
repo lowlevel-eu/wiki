@@ -2,8 +2,6 @@
 
 ## x86 CPU Register
 
-Register
-
 | Bits | Register |
 | ------ | -------------------------------------------------------- |
 | 8 | AL, BL, CL, DL, AH, BH, CH, DH |
@@ -23,6 +21,6 @@ Register
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4599; parent 0; 2009-07-09T20:21:19Z -->
+<!-- MediaWiki page 1881; revision 4600; parent 4599; 2009-07-09T20:28:47Z -->
