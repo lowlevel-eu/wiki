@@ -31,6 +31,8 @@ Die Segmentregister sind aber nach wie vor nur 16 Bit breit und somit wird der P
 
 Jeder Eintrag in den GDT besteht aus acht Bytes.
 
+Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannte Nulldeskriptor ist. Er ist grundsätzlich ungültig und der Eintrag kann komplett auf 0 gelassen werden. Erst ab dem zweiten Eintrag fangen die tatsächlich benutzten Deskriptoren an.
+
 ### Struktur eines Eintrages
 
 | Byte | Name | Bits |
@@ -101,6 +103,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4594/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 4594; parent 4360; 2009-07-09T19:38:08Z -->
+<!-- MediaWiki page 1661; revision 4598; parent 4594; 2009-07-09T19:55:12Z -->
