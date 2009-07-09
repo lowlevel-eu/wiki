@@ -423,6 +423,6 @@ Im Real Mode sind im Prinzip die selben Schritte wie im Protected Mode erforderl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4611/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1857/index.html)
 
-<!-- MediaWiki page 1857; revision 4607; parent 4484; 2009-07-09T23:38:07Z -->
+<!-- MediaWiki page 1857; revision 4611; parent 4607; 2009-07-09T23:41:52Z -->
