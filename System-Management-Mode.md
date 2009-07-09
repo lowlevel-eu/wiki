@@ -16,6 +16,6 @@ In den SMM kann nicht auf eine Art und Weise wie in den Protected Mode oder den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
 
-<!-- MediaWiki page 1699; revision 4434; parent 4315; 2009-06-12T13:43:47Z -->
+<!-- MediaWiki page 1699; revision 4596; parent 4434; 2009-07-09T19:45:08Z -->
