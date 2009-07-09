@@ -130,6 +130,8 @@
 |  |  |  |  |  |  | SP |  |
 |  |  |  |  |  |  |  | SPL |
 
+  
+
 | Bits | Register |
 | ------ | ------------------------------------------------------------------------------------------------------ |
 | 8 | AL, BL, CL, DL, DIL, SIL, BPL, SPL, R8L, R9L, R10L, R11L, R12L, R13L, R14L, R15L |
@@ -146,6 +148,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4602; parent 4600; 2009-07-09T20:58:56Z -->
+<!-- MediaWiki page 1881; revision 4603; parent 4602; 2009-07-09T21:03:42Z -->
