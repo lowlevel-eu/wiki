@@ -88,13 +88,14 @@ Aber mit dieser Erkenntnis hast du auch schon eine schöne Aufgabe für den näc
 
 Wenn Du GRUB benutzt, bist Du zwar bereits am Anfang im Protected Mode, allerdings mit einem Standardsatz von Deskriptortabellen. Es wäre jetzt an der Zeit, das zu ändern.
 
-Oh, Du hast keine Ahnung, was Du Dir unter Deskriptortabellen vorzustellen hast? Lies Dir am besten den Artikel zum Protected Mode durch. Wenn Du Deinen Bootloader selbst schreibst, findest Du dort auch Informationen, wie Du selbst in den Protected Mode umschaltest. Außerdem ist das Protected-Mode-Tutorial auf den Seiten der FH Zwickau zu empfehlen.
+Oh, Du hast keine Ahnung, was Du Dir unter Deskriptortabellen vorzustellen hast? Lies Dir am besten den Artikel zum Protected Mode durch - oder wenn Du einen groben Überblick hast, kannst Du auch direkt zum Artikel über die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") übergehen. Wenn Du Deinen Bootloader selbst schreibst, findest Du dort auch Informationen, wie Du selbst in den Protected Mode umschaltest. Außerdem ist das Protected-Mode-Tutorial auf den Seiten der FH Zwickau zu empfehlen.
 
 - [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
 - [Umschalten in Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode")
+- [Global Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "Global Descriptor Table") (GDT)
 - [Protected-Mode-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm)
 
-Was Du zunächst machen musst, ist, eine [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut - das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
+Was Du zunächst machen musst, ist, eine GDT im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut - das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
 
 Wenn Du die GDT aufgebaut hast, kannst Du sie anschließend laden. Das ist einer der wenigen Fälle, wo Du tatsächlich Assembler brauchst. Wenn Du C benutzt, könnte dir der Artikel über [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") helfen. Ansonsten schlag in der Dokumentation deines Compilers nach, wie es dort funktioniert.
 
@@ -154,6 +155,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 4461; parent 4378; 2009-06-18T10:03:54Z -->
+<!-- MediaWiki page 1619; revision 4593; parent 4461; 2009-07-09T19:34:52Z -->
