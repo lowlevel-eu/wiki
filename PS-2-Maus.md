@@ -882,6 +882,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/lay
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4274/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4592/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 4274; parent 4160; 2009-04-09T07:56:58Z -->
+<!-- MediaWiki page 1559; revision 4592; parent 4274; 2009-07-09T08:48:31Z -->
