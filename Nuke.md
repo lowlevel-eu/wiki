@@ -4,10 +4,10 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
-| Akt. Version: | 00002 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.com) |
+| Akt. Version: | 00003 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
 | OS-Eigenschaften |  |
-| Plattform: | x86 (x64 geplant) |
+| Plattform: | x64 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Exokernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | *noch nicht vorhanden* |
@@ -18,7 +18,7 @@
 <http://nuke.asxsoft.de>
 
   
-Nuke ist mein Hobby OS, welches im Protected Mode läuft. Hauptziel von Nuke ist es, dem Benutzer eine schnelle Arbeit am Computer zu gewährleisten.
+Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, dem Benutzer eine schnelle Arbeit am Computer zu gewährleisten.
 
 ## Entwickler
 
@@ -26,44 +26,52 @@ Nuke ist mein Hobby OS, welches im Protected Mode läuft. Hauptziel von Nuke ist
 
 ## Aktuelle Features
 
-- Textausgabe
-- Register Debugging
+- Textausgabe (mit Farbe)
+- Registerinhalte ausgeben
 - 640x480x4 VGA
+- Vorhanden Arbeitsspeicher anzeigen
+
+## Geplante Features
+
+- *NukeFS*
+- *AVOP* (Interpreter-Sprache)
+- *HAL-Lib*
+- *angepasstes Tastatur-Layout*
+- *Festplatte beschreiben/lesen* (RAW)
+- *AMD Processor Optimization Module*
 
 ## Historie
 
-Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 0x127 - 0x12B ausgelesen werden. *Kursiver Text* zeigt noch nicht implementierte Features an.
+Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 0x127 - 0x12B ausgelesen werden. (Nur für andere OS wichtig :D)
 
   
-Ver 00002
+Ver **00003**
+
+- IDT & GDT für Long Mode
+- Exceptions & IRQs werden durch einen Stub-Handler abgefangen
+- Long Mode
+- Arbeitsspeicher wird erkannt
+
+  
+Ver **00002**
 
 - GDT wird geladen
-- *IDT*
-- *Exception Handling & IRQs* //Schreitet voran
 - Protected Mode
-- *FAT12*
-- *NukeFS*
 
-Ver 00001
+  
+Ver **00001**
 
 - Werte der Register auslesbar
 - VGA
 - Kernel wird von Floppy gelesen
 
-Ver 00000
+  
+Ver **00000**
 
 - Bootloader gibt *Hallo Welt* aus und rebootet nach Tastendruck
 
-## TODO
-
-- Long Mode
-- Tastatur-Layout anpassen
-- Dateisystem-Entwurf fertigstellen
-- Festplatte beschreiben/lesen
-- AMD Processor Optimization Module
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4614/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 3720; parent 3552; 2008-12-23T20:57:21Z -->
+<!-- MediaWiki page 1750; revision 4614; parent 3720; 2009-07-10T15:15:34Z -->
