@@ -24,7 +24,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | R?X |  |  |  |  |  |  |  |
 |  |  |  |  | E?X |  |  |  |
 |  |  |  |  |  |  | ?X |  |
-|  |  |  |  |  |  |  | ?L |
+|  |  |  |  |  |  | ?H | ?L |
 
 ? = A, B, C, D
 
@@ -322,6 +322,6 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4605/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4613/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4605; parent 4604; 2009-07-09T21:55:26Z -->
+<!-- MediaWiki page 1881; revision 4613; parent 4605; 2009-07-10T13:14:31Z -->
