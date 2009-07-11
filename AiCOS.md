@@ -64,8 +64,8 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 - Paging mit Physical-Address-Extension (PAE), max. 64 GiByte
 - Soll erste Möglichkeiten des Kernel-Debugging ermöglichen.
 - Einrichten des MKS und laden bedingter Treiber.
-  - Kernel für BSP (Boot Strap Processor).
-  - Kernel für APs (Application Processors) ... nur bei MultiCore-Systemen.
+  - Mikrokernel für den BSP (Boot Strap Processor).
+  - Mikrokernel für jeden APs (Application Processors) ... nur bei MultiCore-Systemen.
   - Management-Kernel.
   - I/O-Kernel.
 - Startup des MKS und Channel-System.
@@ -75,10 +75,10 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 - MKS = Modulares Kernel System, unterteilt in:
   - Managemant-Kernel, verwaltet RAM und koordiniert die anderen Kernels für CPU, IO und Subsysteme.
-  - CPU-Kernel, jeder Kern hat seinen eigenen.
+  - CPU-Kernel, jeder Kern hat seinen eigenen Mikrokernel.
   - IO-Kernel.
   - Subsystem-Kernel, für weitere Treiber, Filter und und und ...
-- Soll insich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
+- Soll in sich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
 
 **Notiz:** Zum besseren Verständnis meines Konzept ist eine visuelle Darstellung meines OS in Planung. Sie beinhaltet den Bootprozess und den Aufbau des MKS. Diese Visualisierungen werden überwiegend auf der Homepage von AiCOS zu finden sein, die sich derzeit noch im Aufbau befindet.
 
@@ -88,6 +88,9 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Die letzten 10 Änderungen:**
 
+- 15.01.2009: Version 0.00.??.??
+  - ROFS-Bootsektor-Code finalisiert, es kann nun auch eine Datei grö´ßer 64KiB geladen werden. Der Bootloader selbst wurde wegen seiner PM-Funktionalität auf 256 KiB beschränkt.
+  - Suchen und Auslesen von MPS (FPS).
 - 14.01.2009: Version 0.00.38.57
   - Grundfunktionen des Memory-Management
   - Suchen und auslesen des PCI-BIOS.
@@ -213,10 +216,10 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
 
 # Ziele
 
-Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkbereich behaupten kann. Dabei wird keinerlei Code von anderen OS verwendet, vorallem keine Bootloader wie z.B. Grub!
+Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkbereich behaupten kann. Dabei wird keinster Weise direkt Code von anderen OS verwendet, vorallem keine Bootloader wie z.B. Grub! Vielmehr wird deren Funktionsweise analysiert. Der Kernel, besser gesagt das Kernel-System von AiCOS wird keines im Sinnes der Definition eines Kernels sein, sondern vielmehr ein Systemkern aus einer modularen Ansammlung mehrere Mikrokernels.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 4284; parent 3873; 2009-04-11T13:09:15Z -->
+<!-- MediaWiki page 1766; revision 4617; parent 4284; 2009-07-11T00:51:28Z -->
