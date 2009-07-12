@@ -18,7 +18,7 @@
 [Sourceforge](http://sourceforge.net/projects/myxomycota)
 
   
-Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem Betriebssystem um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple Kommandozeile verfügt.
+Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") verfügt.
 
 ## Entwickler
 
@@ -26,7 +26,7 @@ Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - 
 
 ## Das Mountsystem
 
-Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem Kernel, wenn sie nicht über int 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von Dateisystemen ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
+Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), wenn sie nicht über [int](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von [Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
 
 ### Zugriff auf Netzwerkfunktionen
 
@@ -58,15 +58,15 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Aktuelle Features
 
-- Multibootkernel
-- Präemptives Multitasking
-- Einfache StdCLib (myxlib) mit etwas POSIX
+- [Multibootkernel](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
+- Präemptives [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
+- Einfache StdCLib (myxlib) mit etwas [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX")
 - Dateisystem: SMXFFS (Small MyXomycota Floppy FS), experimentell FAT32 (beide read-only); MRFS als VFS
-- AC'97-Treiber (zumindest ICH)
+- [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treiber (zumindest ICH)
 - Paging (2 GB pro Prozess)
-- ELF-Programme
-- Netzwerkstack: Ethernet, ARP, IP, UDP, TCP
-- CDI-Interfaces: core, net
+- [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Programme
+- Netzwerkstack: [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), ARP, IP, UDP, TCP
+- [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Interfaces: core, net
 
 ## Wichtigste Programme
 
@@ -103,7 +103,7 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Syscalls (Auszug)
 
-Syscalls geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
+[Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
 
 | Nummer (eax) | Funktion | Beschreibung |
 | -------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -124,6 +124,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4625; parent 4565; 2009-07-12T17:14:30Z -->
+<!-- MediaWiki page 1861; revision 4626; parent 4625; 2009-07-12T17:20:50Z -->
