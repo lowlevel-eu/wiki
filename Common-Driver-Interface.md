@@ -66,6 +66,7 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 ## Betriebssysteme welche CDI benutzen
 
 - [meinOS](https://github.com/lowlevel-eu/wiki/wiki/MeinOS "MeinOS")
+- [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota")
 - [planlOS](https://github.com/lowlevel-eu/wiki/wiki/PlanlOS "PlanlOS")
 - [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur")
 
@@ -76,6 +77,6 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 3865; parent 3864; 2009-01-12T11:30:29Z -->
+<!-- MediaWiki page 1622; revision 4624; parent 3865; 2009-07-12T17:10:48Z -->
