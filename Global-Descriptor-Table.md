@@ -2,8 +2,6 @@
 
 Der Global Descriptor Table (auch GDT) ist eine i386 spezifische Struktur, welche Informationen über Speicherabschnitte (Segmente) enthält.
 
-Der Ort der GDT wird mit dem Befehl lgdt mitgeteilt.
-
 ## Segmentierung
 
 ### Real Mode
@@ -59,10 +57,10 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 ### Das Access-Byte
 
 | Bit | Wert | Name | Bedeutung |
-| -------- | ------ | ------------------------------ | --------------------------------------------------------------------------------------------- |
+| -------- | ------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 7 | 0x80 | present bit | Muss 1 für einen aktiven Eintrag sein |
 | 6 u. 5 | 0x20 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
-| 4 | 0x10 | 1 | Ist 1 |
+| 4 | 0x10 | Segment bit | Ist 1 für Code-/Datensegmente; 0 für Gates und [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS"). Bits 0 bis 3 in dieser Tabelle gelten nur für Code-/Datensegmente, ansonsten enthalten sie den genauen Segmenttyp (z.B. 0x9 für 386-TSS) |
 | 3 | 0x08 | Executable bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
 | 2 | 0x04 | Direction bit/Conforming bit | Abhängig vom Executable bit |
 | 1 | 0x02 | Readable bit/Writable bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
@@ -76,6 +74,35 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 | 2 | 0x4 | Size bit | 0 bedeuted 16 bit protected mode, bei 1 32 bit protected mode. |
 | 1 | 0x2 | Long Mode bit | 0 bedeuted Protected Mode, 1 bedeutet Long Mode. Bei gesetztem Long Mode Bit **muss** das Size Bit 0 sein! Ist das Long Mode Bit 0, so gibt das Size Bit die Bit-Größe des Protected Mode Segments an. *Dieses Bit sollte nur bei einem Code Segment gesetzt werden, bei anderen Segment-Typen sollte es auf 0 gesetzt sein.* |
 | 0 | 0x1 | Available Bit | Dieses Bit steht dem Programmierer zur freien Verfügung. |
+
+## Einrichten der GDT
+
+Bevor wir überlegen, welche Segmente wir in unserer GDT definieren wollen, brauchen wir zunächst eine Funktion, um GDT-Einträge in halbwegs lesbarer Form anzulegen. Angenommen die GDT wird als Array von 64-Bit-Integern dargestellt, könnte das wie folgt aussehen. Der Code macht nichts anderes, als die Parameter an die richtige Position gemäß den oben angegebenen Tabellen zu schieben:
+
+\<c\>static void set_entry(int i, unsigned int base, unsigned int limit, int flags) {
+
+       gdt[i] = limit & 0xffffLL;
+       gdt[i] |= (base & 0xffffffLL) << 16;
+       gdt[i] |= (flags & 0xffLL) << 40;
+       gdt[i] |= ((limit >> 16) & 0xfLL) << 48;
+       gdt[i] |= ((flags >> 8 )& 0xffLL) << 52;
+       gdt[i] |= ((base >> 24) & 0xffLL) << 56;
+
+}\</c\>
+
+Welche Segmente Du anlegen willst, hängt natürlich von der Architektur Deines Kernels ab. Mein Vorschlag ist nicht die absolute und einzige Wahrheit, aber er ist ein guter Anfang, wenn Du Dir unsicher bist. Grundlage ist die GDT, wie [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") sie verwendet und wie sie in den meisten anderen Betriebssystemen anzutreffen ist. Speicherschutz wird dabei über [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") erledigt, so dass nur ein Minimalsatz von Segmenten übrigbleibt:
+
+- Ein Nulldeskriptor (gdt\[0\] = 0)
+- Ein Codesegment für den Kernel (Present, Ring 0, Executable, 32 Bit; Basis 0, Limit 4 GB)
+- Ein Datensegment für den Kernel (Present, Ring 0, Non-Executable, 32 Bit; Basis 0, Limit 4 GB)
+- Ein Codesegment für den Userspace (Present, Ring 3, Executable, 32 Bit; Basis 0, Limit 4 GB)
+- Ein Datensegment für den Userspace (Present, Ring 3, Non-Executable, 32 Bit; Basis 0, Limit 4 GB)
+- Ein [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment") für Multitasking (Present, Ring 3, 386-TSS)
+- Ein [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment") zur Behandlung von Double Faults (Present, Ring 3, 386-TSS)
+
+Absolut nötig sind dabei nur Nulldeskriptor und Code-/Datensegment für den Kernel. Sobald Multitasking ins Spiel kommen soll, ist das TSS fällig und mit Userspace-Prozessen braucht es dann die Code-/Datensegmente für Ring 3.
+
+Das zweite TSS für Double Faults ist komplett optional. Double Faults entstehen oft dadurch, dass z.B. die Pagingstrukturen überschrieben worden sind und der Handler für einen Page Fault selbst nicht mehr funktioniert. Ein TSS bietet hier die Möglichkeit, in einen sauberen Prozessorzustand zu springen und wenigstens noch eine sinnvolle Fehlermeldung auszugeben.
 
 ## Laden der GDT
 
@@ -101,8 +128,12 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 \<asm\> mov \$0x10, %eax mov %eax, %ds mov %eax, %es mov %eax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
 
+## Web-Links
+
+[Protected-Mode-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4622/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 4598; parent 4594; 2009-07-09T19:55:12Z -->
+<!-- MediaWiki page 1661; revision 4622; parent 4598; 2009-07-12T11:58:56Z -->
