@@ -78,7 +78,7 @@ Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schr
 
 ### Hello World und weiter
 
-Die allererste Aufgabe für ein neues Betriebssystem ist es selbstverständlich, ein "Hello world!" auf den Bildschirm auszugeben. Wenn Du nach dem oben genannten Artikel vorgegangen bist, hast Du diesen Schritt schon erreicht. Wenn nicht: Text gibst du aus, indem Du in der Videospeicher schreibst. Er beginnt für den Textmodus an der Adresse 0xB8000 und enthält für jedes Zeichen (insgesamt 80x25) auf dem Bildschirm je zwei Bytes. Das erste enthält den ASCII-Code des Zeichens selbst, das zweite Attribute wie Farbe. Experimentiere am besten ein bisschen damit herum. (Ausführlicher steht es im Artiekl [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"))
+Die allererste Aufgabe für ein neues Betriebssystem ist es selbstverständlich, ein "Hello world!" auf den Bildschirm auszugeben. Wenn Du nach dem oben genannten Artikel vorgegangen bist, hast Du diesen Schritt schon erreicht. Wenn nicht: Text gibst du aus, indem Du in der Videospeicher schreibst. Er beginnt für den Textmodus an der Adresse 0xB8000 und enthält für jedes Zeichen (insgesamt 80x25) auf dem Bildschirm je zwei Bytes. Das erste enthält den ASCII-Code des Zeichens selbst, das zweite Attribute wie Farbe. Experimentiere am besten ein bisschen damit herum. (Ausführlicher steht es im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"))
 
 Hey, mein Kernel läuft und gibt was aus, vielleicht wäre jetzt der Grafikmodus...? Nein! Ein wesentlicher Grund dafür ist, dass Du in der nächsten Zeit viele kritische Änderungen und dabei auch viele Fehler machen wirst. Du wirst daher um [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") nicht herumkommen. Am einfachsten geht das über Textausgaben, die leider im Grafikmodus nicht mehr ganz so leicht gehen.
 
@@ -153,6 +153,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 4620; parent 4606; 2009-07-12T11:19:29Z -->
+<!-- MediaWiki page 1619; revision 4621; parent 4620; 2009-07-12T11:50:02Z -->
