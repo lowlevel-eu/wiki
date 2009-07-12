@@ -65,6 +65,8 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 - AC'97-Treiber (zumindest ICH)
 - Paging (2 GB pro Prozess)
 - ELF-Programme
+- Netzwerkstack: Ethernet, ARP, IP, UDP, TCP
+- CDI-Interfaces: core, net
 
 ## Wichtigste Programme
 
@@ -82,11 +84,13 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 - dig 0.001: Wandelt einen Hostnamen in eine IP-Adresse um
 - myxirc: Ein (einfacher) IRC-Client
+- ftp: Ein (kaputter) FTP-Client
+- http: Lädt eine Datei via HTTP (maximal 64 kB)
+- html: Zeigt ein bisschen was aus einer HTML-Datei an
 
 ## TODO
 
 - TODO-Liste abarbeiten
-- Netzwerkfunktionen
 - HD-Audio-Treiber
 - Bei "großen" Festplatten funktionierender Festplattentreiber
 - Funktionierender FAT32-Treiber
@@ -120,6 +124,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4565/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4565; parent 4544; 2009-07-05T18:12:40Z -->
+<!-- MediaWiki page 1861; revision 4625; parent 4565; 2009-07-12T17:14:30Z -->
