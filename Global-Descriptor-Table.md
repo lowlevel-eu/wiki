@@ -108,13 +108,13 @@ Das zweite TSS für Double Faults ist komplett optional. Double Faults entstehen
 
 Nachdem der Kernel eine GDT im Speicher liegen hat, die er für seine Segmente verwenden möchte, muss er das Register GDTR ändern. Dieses Register enthält die Adresse und Länge der GDT und wird über den Befehl **lgdt** geladen. Da das Register 6 Bytes breit ist, kann dieser Befehl den neuen Wert nicht direkt als Operand entgegennehmen, sondern erwartet einen Pointer auf eine Speicherstelle, die diese 6 Bytes enthält:
 
-\<c\>static long long unsigned int gdt\[GDT_ENTRIES\];
+\<c\>static uint64_t gdt\[GDT_ENTRIES\];
 
 // ...
 
 struct {
 
-       unsigned short int length;
+       uint16_t length;
        void* pointer;
 
 } \_\_attribute\_\_((packed)) gdtp = {
@@ -126,7 +126,7 @@ struct {
 
 Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche Auswirkungen hat die Änderung noch nicht. Auf die Tabelle wird nur zugegriffen, wenn ein Segmentregister neu geladen wird. Daher müssen jetzt noch alle Segmentregister neu geladen werden:
 
-\<asm\> mov \$0x10, %eax mov %eax, %ds mov %eax, %es mov %eax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
+\<asm\> mov \$0x10, %ax mov %ax, %ds mov %ax, %es mov %ax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
 
 ## Web-Links
 
@@ -134,6 +134,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4622/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4623/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 4622; parent 4598; 2009-07-12T11:58:56Z -->
+<!-- MediaWiki page 1661; revision 4623; parent 4622; 2009-07-12T12:49:54Z -->
