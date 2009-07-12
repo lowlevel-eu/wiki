@@ -282,8 +282,6 @@ Drive select
 
 11: D
 
-wird fortgesetzt!
-
 # Befehle
 
 # Infos
@@ -301,6 +299,6 @@ wird fortgesetzt!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4545; parent 4541; 2009-07-04T12:48:20Z -->
+<!-- MediaWiki page 1443; revision 4627; parent 4545; 2009-07-12T18:30:41Z -->
