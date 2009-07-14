@@ -68,7 +68,7 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 - Paging (2 GB pro Prozess)
 - [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Programme
 - Netzwerkstack: [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), ARP, IP, UDP, TCP
-- [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Interfaces: core, net, storage
+- [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Interfaces: core, fs, net, storage
 
 ## Wichtigste Programme
 
@@ -126,6 +126,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4639; parent 4630; 2009-07-14T15:15:01Z -->
+<!-- MediaWiki page 1861; revision 4641; parent 4639; 2009-07-14T17:25:47Z -->
