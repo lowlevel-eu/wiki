@@ -43,6 +43,6 @@ An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4572/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
 
-<!-- MediaWiki page 1876; revision 4572; parent 0; 2009-07-07T11:50:44Z -->
+<!-- MediaWiki page 1876; revision 4644; parent 4572; 2009-07-14T18:45:42Z -->
