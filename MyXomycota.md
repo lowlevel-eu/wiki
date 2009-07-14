@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.004 (pre-alpha) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") / BSD (CDI-Treiber) |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
@@ -19,6 +19,8 @@
 
   
 Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") verfügt.
+
+**This product includes software developed by the tyndur Project and its contributors.** (CDI-Treiber)
 
 ## Entwickler
 
@@ -124,6 +126,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4630; parent 4626; 2009-07-13T17:13:17Z -->
+<!-- MediaWiki page 1861; revision 4639; parent 4630; 2009-07-14T15:15:01Z -->
