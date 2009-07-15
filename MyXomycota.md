@@ -94,7 +94,6 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 - TODO-Liste abarbeiten
 - HD-Audio-Treiber
-- Bei "großen" Festplatten funktionierender Festplattentreiber
 - Funktionierender FAT32-Treiber
 - Schreibzugriff auf SMXFFS-Dateisysteme
 - PipeFS fertigstellen
@@ -126,6 +125,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4641; parent 4639; 2009-07-14T17:25:47Z -->
+<!-- MediaWiki page 1861; revision 4651; parent 4641; 2009-07-15T16:24:08Z -->
