@@ -8,7 +8,7 @@
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") / BSD (CDI-Treiber) |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | Int 0x80 |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")-Scripts |
@@ -98,7 +98,6 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 - Schreibzugriff auf SMXFFS-Dateisysteme
 - PipeFS fertigstellen
 - Diskettentreiber
-- Treiber im Usermode laden können
 - StdCLib vervollständigen, POSIX-Kompatibilität stark verbessern
 - sysenter-Unterstützung
 
@@ -125,6 +124,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4654/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4651; parent 4641; 2009-07-15T16:24:08Z -->
+<!-- MediaWiki page 1861; revision 4654; parent 4651; 2009-07-15T19:14:33Z -->
