@@ -124,7 +124,7 @@ Pointer auf die erste Modulstruktur. Eine Modulstruktur sieht folgendermaßen au
 
 ### mbs_syms
 
-Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabelle einer a.out-Datei.
+Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Sektionstabelle einer a.out-Datei.
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ---------- | --------------------------- |
@@ -133,7 +133,7 @@ Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offse
 | 0x24 | 4 | addr | Pointer zur Symboltabelle |
 | 0x28 | 4 | reserved | Reserviert (0) |
 
-Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Symboltabelle einer [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei.
+Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Sektionstabelle einer [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei.
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ------- | --------------------------- |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 4267; parent 4072; 2009-04-04T17:00:57Z -->
+<!-- MediaWiki page 1560; revision 4649; parent 4267; 2009-07-15T14:46:00Z -->
