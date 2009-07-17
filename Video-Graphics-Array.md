@@ -32,7 +32,7 @@ Irgendwann ist man an einem Punkt angelangt, an dem man nicht nur den voreingest
 
 Man könnte für jede Grafikkarte einen eigenen Treiber schreiben. Dann hätte man natürlich die volle Kontrolle über alles. Allerdings hat wahrscheinlich keiner die Zeit dazu, noch den Zugriff auf die Dokumentationen, die die Hersteller wie einen Schatz hüten, aus Angst man konnte daraus Rückschlüsse auf das Design des Grafikchips schließen. Und die wenigsten könnten auch alle Treiber testen, da man dazu ja jede Grafikkarte bräuchte. ;)
 
-Die zweite Möglichkeit wären die VESA BIOS Extensions (VBE). Diese unterstützen viel höhere Auflösungen und Farbtiefen wie VGA mit seinen popeligen 640 mal 480 Pixeln bei 4 Bit (16 Farben) als Maximum. Der Nachteil dabei ist, dass man auf die Video-BIOS Routinen angewiesen ist, und damit deb 16 Bit Modus benötigt. Die meisten von Ihnen haben wahrscheinlich so schon den Protected Mode initialisiert (oder von Grub initialisieren lassen), Interrupts zum arbeiten gebracht und vielleicht sogar einen Speichermanager geschrieben. Der Wechsel in den Real Mode würde da vieles durcheinander bringen. Viel einfacher sind die VBE auch nicht zu benutzen, sodass man erst mal mit VGA anfangen kann.
+Die zweite Möglichkeit wären die VESA BIOS Extensions (VBE). Diese unterstützen viel höhere Auflösungen und Farbtiefen wie VGA mit seinen popeligen 640 mal 480 Pixeln bei 4 Bit (16 Farben) als Maximum. Der Nachteil dabei ist, dass man auf die Video-BIOS Routinen angewiesen ist, und damit deb 16 Bit Modus benötigt. Die meisten von Ihnen haben wahrscheinlich schon den Protected Mode initialisiert (oder von Grub initialisieren lassen), Interrupts zum arbeiten gebracht und vielleicht sogar einen Speichermanager geschrieben. Der Wechsel in den Real Mode würde da vieles durcheinander bringen und viel einfacher sind die VBEs auch nicht zu benutzen, sodass man erst mal mit VGA anfangen kann.
 
 VGA wird von fast allen Grafikkarten unterstützt (Mir ist keine bekannt die VGA nicht unterstützt, aber ich denke Grafikkarten vor der Einführung von VGA dürften da Probleme haben... ;) ), bietet 256KByte Speicher auf der Karte (Kein direkter Zugriff, Nur Memory Mapped IO (MMIO), später mehr dazu) und kann im Textmodus und dem Grafikmodus betrieben werden. Folgende Modi sind vom Standard vorgeschrieben: 720x400 Textmodus (80x25 Zeichen, ein Zeichen 9x16), 640x480 Textmodi (80x30 Zeichen, ein Zeichen 8x16), 320x200 bei 8 Bit Farbtiefe (Paletten basiert), 320x200 bei 16 Bit Farbtiefe, 640x480 mit 4 Bit Farbtiefe.
 
@@ -55,6 +55,6 @@ Wenn Sie die Timings des CRTC (später mehr dazu) ändern und Ihr Monitor diese 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4662; parent 4661; 2009-07-17T08:17:22Z -->
+<!-- MediaWiki page 1516; revision 4663; parent 4662; 2009-07-17T08:18:34Z -->
