@@ -40,6 +40,18 @@ VGA wird von fast allen Grafikkarten unterstützt (Mir ist keine bekannt die VGA
 
 Wenn Sie die Timings des CRTC (später mehr dazu) ändern und Ihr Monitor diese Frequenzen nicht unterstützt, besteht die Chance auf einen Defekt an ihm. Testen Sie am besten alle Änderungen vorher auf einem Emulator Ihrer Wahl (Bochs, QEmu, ...) und rechnen Sie besser zweimal nach. Normalerweise haben Heute die meisten Monitore einen Schutzmechanismus intus und zeigen bei Fehlerhaften Timings etwa "Modus wird nicht unterstützt" oder so ähnlich an. Versprechen kann ich Ihnen aber nichts. Die Benutzung des Wissens und der Codebeispiele geschieht auf eigene Gefahr. Weder der Autor noch die Lowlevel Community und auch nicht die Betreiber dieser Webseite Haften für entstandene Schäden.
 
+## Voraussetzungen
+
+Generell wird nur je eine Routine zum Lesen und Schreiben von einem Byte auf IO-Ports benötigt. Diese Routinen sollten auch noch eine Verzögerung beinhalten, damit die Hardware auf Änderungen reagieren kann. Bevor man sich aber ernsthaft mit VGA beschäftigt wäre es hilfreich in den Protected Mode zu wechseln. Sämtliche Speicheradressen die ich hier aufzähle sind sofern nichts anderes dabei steht physisch.
+
+## Aufbau
+
+Ein VGA Adapter besteht aus folgenden Komponenten: Dem Grafikcontroller, Speicher (256KByte aufgeteilt auf Ebene 0 bis Ebene 3 mit jeweils 64KByte), dem Sequenzer, dem CRT Controller (CRT - Cathode Ray Tube, technische Bezeichnung für Röhrenmonitor), dem Attribut Controller und dem DAC (Palette). Der Grafikcontroller regelt wie genau in den Videospeicher geschrieben und der Sequenzer wie die Daten weiter an den CRT Controller geschickt werden. Der CRT Controller kümmert sich um das Timing der Daten, die zum Monitor gehen und der Attribute Controller regelt ein paar wenige Dinge wie zum Beispiel das aktivieren oder deaktivieren des Monitors, etc. Mit dem DAC kann man die Palette anpassen, wenn man sich im 8 Bit Modus befindet.
+
+### Attribut Controller
+
+Der Attribut Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer übernimmt dabei den Index und die zu schreibenden Daten und letzterer enthält die zu lesenden Daten. Wie? Über nur zwei Ports hat man Zugriff auf mehrere Register? Und über ein und denselben Port werden Index und Daten geschrieben? Wie geht denn das?
+
 ## Siehe auch
 
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")
@@ -55,6 +67,6 @@ Wenn Sie die Timings des CRTC (später mehr dazu) ändern und Ihr Monitor diese 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4663; parent 4662; 2009-07-17T08:18:34Z -->
+<!-- MediaWiki page 1516; revision 4664; parent 4663; 2009-07-17T09:20:11Z -->
