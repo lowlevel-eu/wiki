@@ -48,8 +48,13 @@ Wenn Sie die Timings des CRTC (später mehr dazu) ändern und Ihr Monitor diese 
 
 - [Wikipedia: VGA](http://de.wikipedia.org/wiki/Video_Graphics_Array)
 
+## Quellen
+
+- [\[1\]](http://wiki.osdev.org/VGA_Hardware)
+- [\[2\]](http://www.osdever.net/FreeVGA/vga/vga.htm)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4661/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4660; parent 4659; 2009-07-17T08:09:15Z -->
+<!-- MediaWiki page 1516; revision 4661; parent 4660; 2009-07-17T08:16:32Z -->
