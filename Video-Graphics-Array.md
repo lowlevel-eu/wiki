@@ -50,7 +50,7 @@ Ein VGA Adapter besteht aus folgenden Komponenten: Dem Grafikcontroller, Speiche
 
 ### Attribut Controller
 
-Der Attribut Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer übernimmt dabei den Index und die zu schreibenden Daten und letzterer enthält die zu lesenden Daten. Wie? Über nur zwei Ports hat man Zugriff auf mehrere Register? Und über ein und denselben Port werden Index und Daten geschrieben? Wie geht denn das? Nun, die Register werden durchnummeriert. Möchte man Daten ins Register 1 schreiben oder lesen, dann schreibt man zuerst die 1 das Index Register 0x3C0 und kann anschließend über denselben Port Daten senden oder über Port 0x3C1 das Register lesen. Dabei merkt sich der Controller, ob als nächstes ein Index oder Daten anstehen. Leider ist zu beginn nicht definiert was erwartet wird. Glücklicherweise kann man durch Lesen eines Bytes von Port 0x3DA (Das ist das externe Status Register 1) die Logik zurücksetzen, sodass als nächstes ein Index erwartet wird.
+Der Attribut Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer übernimmt dabei den Index und die zu schreibenden Daten und letzterer enthält die zu lesenden Daten. Wie? Über nur zwei Ports hat man Zugriff auf mehrere Register? Und über ein und denselben Port werden Index und Daten geschrieben? Wie geht denn das? Nun, die Register werden durchnummeriert. Möchte man Daten ins Register 1 schreiben oder lesen, dann schreibt man zuerst die 1 das Index Register 0x3C0 und kann anschließend über denselben Port Daten senden oder über Port 0x3C1 das Register lesen. Dabei merkt sich der Controller, ob als nächstes ein Index oder Daten anstehen. Leider ist zu beginn nicht definiert was erwartet wird. Glücklicherweise kann man durch Lesen eines Bytes von Port 0x3DA (Das ist das externe Status Register 1) die Logik zurücksetzen, sodass als nächstes ein Index erwartet wird. Man sollte also vor jedem Zugriff zuerst mal Port 0x3DA lesen, dann den Index schreiben und anschließend die Daten lesen/schreiben.
 
 ## Siehe auch
 
@@ -67,6 +67,6 @@ Der Attribut Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4666/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4666; parent 4665; 2009-07-17T09:26:21Z -->
+<!-- MediaWiki page 1516; revision 4667; parent 4666; 2009-07-17T09:27:29Z -->
