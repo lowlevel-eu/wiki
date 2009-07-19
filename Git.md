@@ -24,7 +24,7 @@ Um schnell in git einsteigen zu können, sind hier die allerwichtigsten Befehle 
 
 ### Archiv herunterladen (clone)
 
-Um mit der Entwicklung zu beginnen, muss man zunächst natürlich seine eigene Kopie des Repositorys haben. Diese bekommt man mit dem `clone`-Befehl. Der Befehl ist das git-Äquivalent zum Subversion-Befehl `checkout`.
+Um mit der Entwicklung zu beginnen, muss man zunächst natürlich seine eigene Kopie des Repositorys haben. Diese bekommt man mit dem `clone`-Befehl. Der Befehl ist das git-Äquivalent zum Subversion-Befehl `checkout`. (Achtung: Dieser Befehl existiert zwar auch in git, hat aber eine andere Aufgabe)
 
 Da die gesamte Versionsgeschichte des Projektes heruntergeladen wird, kann dieser Befehl je nach Verbindungsgeschwindigkeit sehr lange dauern.
 
@@ -34,7 +34,7 @@ Beispiel (Kopie des offiziellen týndur-Archives anfordern):
 
 ### Archiv aktualisieren (pull)
 
-Der Befehl `pull` berechnet die Änderungen zwischen dem eigenen Archiv und dem Remote-Archiv und fordert die Änderungen vom Server an. `pull` bezieht die Änderungen standardmäßig von dem origin-Archiv, das ist normalerweise das Archiv von dem ursprünglich geclonet wurde.
+Der Befehl `pull` berechnet die Änderungen zwischen dem eigenen Archiv und dem Remote-Archiv und fordert die Änderungen vom Server an. `pull` bezieht die Änderungen standardmäßig von dem origin-Archiv, das ist normalerweise das Archiv von dem ursprünglich geclonet wurde. Unter Subversion funktioniert der `update`-Befehl ähnlich.
 
 Wenn eigene commits vorliegen, die nicht auf dem Server ist (wie es bei git eigentlich typisch ist), dann kann `pull` angewiesen werden, versuchen, die Änderungen in den eigenen Tree zu übernehmen, sodass nachher sowohl die lokalen, als auch die remote-commits vorliegen. Dies geht mit dem `--rebase`-Parameter.
 
@@ -52,6 +52,8 @@ Will man seine Änderungen am Code in einen commit packen, so muss man git zunä
 
 Sobald man alle Dateien hinzugefügt hat, ruft man `git commit` auf. Es öffnet sich ein Editor, in dem man die commit-Nachricht eingibt. Man kann jedoch auch mit dem Parameter `-m` direkt eine Nachricht angeben.
 
+Im Gegensatz zu den gleichbenannten Subversion-Befehlen laufen beide Befehle bei git nur lokal ab.
+
 Beispiel:
 
     # Geänderte Dateien hinzufügen
@@ -68,6 +70,8 @@ Sobald commits vorliegen, möchte man diese sicherlich an den Hauptserver übert
 
 Zum erfolgreichen push muss der tree jedoch ein wenig mit dem auf dem Hauptserver abgestimmt sein. Vorher ist also ein `git pull --rebase` zu empfehlen, um Konflikte zu vermeiden.
 
+Da bei Subversion alle Commits direkt auf den Server kommen, gibt es hier keinen vergleichbaren Befehl. Der SVN-Befehl `commit` vereint sozusagen die Funktionalität von Gits `commit` und `push`
+
 Beispiel:
 
     # Änderungen des Servers übertragen
@@ -75,6 +79,18 @@ Beispiel:
 
     # Eigene Änderungen auf den Server übertragen
     git push
+
+### Ausblick
+
+Oben werden nur sehr grundlegende Befehle genannt, die nur ein sehr begrenztes Arbeiten ermöglichen. Hier werden auch solche genannt, die oben aus Platzgründen nicht erwähnt werden, aber trotzdem sehr wichtig sind. Dieser Absatz soll ein Anreiz sein, die Befehle in der Git-Dokumentation oder mit Hilfe von `man` nachzuschlagen. Bei `man` findet man diese Befehle unter dem Namen `git-<BEFEHL>`.
+
+Um erstmal ein eigenes Archiv anzulegen, sollte man den Befehl `init` kennen. Außerdem wird man sicherlich oft die Git-Befehle `diff`, `log` und `status` brauchen. Um Fehler in der History zu korrigieren muss man sicher auch einmal die Befehle `reset` oder `revert` anwenden.
+
+Sehr wichtig sind die Branching-Mechanismen. Mit den oben genannten Befehlen wäre es nur möglich auf einem Branch zu arbeiten. Davon ist grundsätzlich abzuraten; viele Projekte verbieten sogar das Arbeiten im Hauptzweig (*master*). Wichtige Branching-Befehle sind `branch`, `merge`, `rebase` und `checkout`.
+
+Äußerst wichtig für das Aktualisieren des Trees während der täglichen Arbeit ist `stash`, das es ermöglicht, die Änderungen an seiner Arbeitskopie zwischenzuspeichern und einen saubere Arbeitskopie zum `pull`en zu bekommen.
+
+Aber auch die bereits oben erklärten Befehle sollte man in der Dokumentation nachschauen, da alle noch interessante Parameter haben, die sicherlich zur Anwendung kommen.
 
 ## Vergleich zu Subversion
 
@@ -130,6 +146,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 4653; parent 4652; 2009-07-15T18:34:17Z -->
+<!-- MediaWiki page 1889; revision 4675; parent 4653; 2009-07-19T23:20:14Z -->
