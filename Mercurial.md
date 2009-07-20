@@ -103,6 +103,6 @@ Eine liste mit weitern Hostern gibt es [hier](http://mercurial.selenic.com/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4677/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4678/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 4677; parent 0; 2009-07-20T14:38:03Z -->
+<!-- MediaWiki page 1891; revision 4678; parent 4677; 2009-07-20T14:40:21Z -->
