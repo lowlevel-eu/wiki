@@ -51,8 +51,12 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im OpenSource-Bere
 | GCC | Subversion |
 | Bochs | CVS |
 
+# Weblinks
+
+- [Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/) *(english)*
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 4645; parent 3827; 2009-07-14T20:42:46Z -->
+<!-- MediaWiki page 1801; revision 4676; parent 4645; 2009-07-20T12:52:05Z -->
