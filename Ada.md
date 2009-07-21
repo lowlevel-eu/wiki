@@ -1,8 +1,26 @@
 # Ada
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+**Ada** ist eine nach Ada Loveleace, der ersten Programmiererin, in den 1970er Jahren von Jean Ichbiah entwickelte strukturierte und stark Typsierte Programmiersprache, deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
 
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+| Allgemeines |  |
+| -------------------------------- | ------------------------- |
+| Name: | Ada |
+| Inlineassembler: | Nein |
+| Compiler: | GNAT (GNU Ada Compiler) |
+| Spracheneigenschaften |  |
+| Plattformen: | Linux, Windows |
+| Beispielkernel in der Sprache: | {{{Kernel}}} |
+| Homepage |  |
+
+[ISO-Norm](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
+
+  
+
+## Ada als Sprache für ein Betriebssystem
+
+Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem Kernel) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
+
+Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
 ## Testkernel in Ada
 
@@ -34,8 +52,15 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
     strip -dR .eh_frame test.o
     ld -melf_i386 -Ttext=0x100000 -e "_ada_test" -o test.krn test.o
 
+  
+
+## Weblinks
+
+- GNU Ada Compiler [\[1\]](https://libre2.adacore.com/)
+- ISO-Norm Ada 2005 [\[2\]](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4057/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
 
-<!-- MediaWiki page 1742; revision 4057; parent 3392; 2009-02-26T18:48:11Z -->
+<!-- MediaWiki page 1742; revision 4681; parent 4057; 2009-07-21T02:25:11Z -->
