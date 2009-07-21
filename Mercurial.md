@@ -2,15 +2,15 @@
 
 Mercurial ist ein in Python entwickeltes Version Control System, das wie die meisten in erster Line über die Shell gesteuert wird. Wobei alle Kommandos mit hg, dem Elementsymbol für Quecksilber(engl. Mercury), beginnen. Es gibt aber auch eine Explorer Erweiterung(TortoiseHg) mit Hilfe derer Mercurial über das Kontext-Menu gesteuert werden kann und IDEs wie zum Beispiel NetBeans und KDevelop die Mercurial unterstützen.
 
-# Eigenschaften
+## Eigenschaften
 
 Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d.h. es benötigt keinen zentralen Server um die Repositories vieler Entwickler miteinander zu synchronisieren.
 
-## Besonderheiten
+### Besonderheiten
 
 Eine Besonderheit an Mercurial ist, dass alle Befehle sich auf das Wurzelverzeichnis des Repositories beziehen, wenn nicht anders angegeben, und nicht wie bei den meisten anderen Systemen nur auf das aktuelle Verzeichnis.
 
-# hg - Shell Kommandos
+## hg - Shell Kommandos
 
 Dies ist eine kurze Einführung in ein paar nützliche Befehle. Für weitere Informationen ist der *help*-Befehl recht hilfreich.
 
@@ -18,7 +18,7 @@ Dies ist eine kurze Einführung in ein paar nützliche Befehle. Für weitere Inf
 
 Er liefert sowohl nützliche Informationen zur Benutzung als auch mögliche Alias-Namen für die Befehle. So lässt sich der *update*-Befehl beispielsweise auch durch *up*, *checkout* und *co* ansprechen.
 
-## Repository erstellen
+### Repository erstellen
 
 Ein neues hg-Repository zu erstellen ist ganz einfach. Mittels *init*-Befehl lässt sich das aktuelle Verzeichnis oder optional ein beliebiges anderes Verzeichnis in ein Repository verwandeln.
 
@@ -26,7 +26,7 @@ Ein neues hg-Repository zu erstellen ist ganz einfach. Mittels *init*-Befehl lä
 
 Dabei ist es egal ob sich in dem betreffenden Verzeichnis bereits Quellcodes befinden oder nicht. Das Repository wird zunächst noch kein der möglicherweise vorhandenen Dateien unter Versionkontrolle haben.
 
-## Repository Clonen
+### Repository Clonen
 
 Wenn bereits ein Repository für das gewünschte Projekt existiert, muss kein neues Repository erstellt werden. Es reicht das existierende für die eigenen Arbeit zu Clonen.
 
@@ -34,7 +34,7 @@ Wenn bereits ein Repository für das gewünschte Projekt existiert, muss kein ne
 
 Dabei wird der *default-path* automatisch auf die angegebene URI gesetzt, so dass alle *push*- und *pull*-Befehle ohne URI auf diese Adresse zugreifen.
 
-## Dateien hinzufügen/entferen
+### Dateien hinzufügen/entferen
 
 Um Dateien in die Obhut des Repositories zu geben. Müssen sie zunächst einmal hinzugefügt werden.
 
@@ -50,7 +50,7 @@ Zusätzlich werden dabei alle Dateien, die manuell aus der Verzeichnisstruktur g
 
 Damit diese Änderungen wirksam werden müssen sie commited werden.
 
-## Änderungen übernehmen
+### Änderungen übernehmen
 
 Wurden Änderungen gemacht müssen sie mit *commit*-Befehl übernommen werden.
 
@@ -58,7 +58,7 @@ Wurden Änderungen gemacht müssen sie mit *commit*-Befehl übernommen werden.
 
 Mercurial erstellt jetzt eine neue Revision des Projekts und gibt die Möglichkeit die Änderungen mit einer Commit-Message zu kommentieren.
 
-## Arbeitsverzeichnis aktualisieren
+### Arbeitsverzeichnis aktualisieren
 
 Mit dem *update*-Befehl lässt sich das Arbeitsverzeichnis auf den stand jeder beliebigen Revision des Repositories bringen.
 
@@ -66,7 +66,7 @@ Mit dem *update*-Befehl lässt sich das Arbeitsverzeichnis auf den stand jeder b
 
 Wird keine keine Revision angegeben aktualisiert Mercurial automatisch auf die letzte.
 
-## Änderungen holen/importieren
+### Änderungen holen/importieren
 
 Um Änderungen aus anderen Repositories zu übernehmen gibt es verschiedene Möglichkeiten. Eine davon ist der *pull*-Befehl. Er übernimmt alle Änderungen aus dem Quellrepository die im aktuellen noch Fehlen.
 
@@ -76,7 +76,7 @@ Anders als beispielsweise [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Gi
 
 Weitere Möglichkeiten fremde Änderungen zu übernehmen sind das importieren von Patches oder Änderungs-Bündeln mit den Befehlen *import* bzw. *unbundle*.
 
-## Änderungen übertragen/exportieren
+### Änderungen übertragen/exportieren
 
 Natürlich können die eigenen Änderungen auf verschieden Arten anderen zugänglich gemacht werden. Äquivalent zum *pull*-Befehl existiert ein *push*
 
@@ -84,25 +84,25 @@ Natürlich können die eigenen Änderungen auf verschieden Arten anderen zugäng
 
 Damit lassen sich Änderungen (entsprechende Rechte vorausgesetzt) direkt in fremde Repositories übertragen. Es lassen sich aber auch Patches exportieren *(export)* oder Änderungen in Bündel zusammen fassen *(bundle)*.
 
-## Weiter nützliche Befehle
+### Weitere nützliche Befehle
 
 - *tag(s)* - Zum Benennen von Revisionen
 - *branch(s)* - Zum Benennen von Entwicklungszweigen
 - *status*, *diff*, *log* und *help*
 
-# Kostenlose Repository Hoster
+## Kostenlose Repository Hoster
 
 Auch wenn Mercurial ohne zentralen Server auskommt, kann ein solcher für zum Beispiel die Veröffentlichung nützlich sein. Kostenlose Hoster sind unter anderem [SourceForge](http://sourceforge.net) und [Google Code](http://code.google.com).
 
-Eine liste mit weitern Hostern gibt es [hier](http://mercurial.selenic.com/wiki/MercurialHosting).
+Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki/MercurialHosting).
 
-# Weblinks
+## Weblinks
 
 - [Mercurial Buch](http://hgbook.red-bean.com/read/) *(english)*
 - [Deutschsprachiges Tutorial auf der offiziellen Mercurial Website](http://mercurial.selenic.com/wiki/GermanTutorial)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 4679; parent 4678; 2009-07-21T01:40:29Z -->
+<!-- MediaWiki page 1891; revision 4686; parent 4679; 2009-07-21T22:20:55Z -->
