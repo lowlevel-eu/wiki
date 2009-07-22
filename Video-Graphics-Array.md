@@ -26,6 +26,10 @@ Generell wird nur je eine Routine zum Lesen und Schreiben von einem Byte auf IO-
 
 Ein VGA Adapter besteht aus folgenden Komponenten: Dem Grafikcontroller, Speicher (256KByte aufgeteilt auf Ebene 0 bis Ebene 3 mit jeweils 64KByte), dem Sequenzer, dem CRT Controller (CRT - Cathode Ray Tube, technische Bezeichnung für Röhrenmonitor), dem Attribut Controller und dem DAC (Palette). Der Grafikcontroller regelt wie genau in den Videospeicher geschrieben und der Sequenzer wie die Daten weiter an den CRT Controller geschickt werden. Der CRT Controller kümmert sich um das Timing der Daten, die zum Monitor gehen und der Attribute Controller regelt ein paar wenige Dinge wie zum Beispiel das aktivieren oder deaktivieren des Monitors, etc. Mit dem DAC kann man die Palette anpassen, wenn man sich im 8 Bit Modus befindet.
 
+### Externe Register
+
+Die externen Register stellen nützliche Informationen bereit und steuern allgemeine Dinge, wie Beispielsweise die polarität (Positiv oder Negativ) der Synchronisationsimpulse, welche vom CRT Controller an den Monitor gesendet werden. Das Ausgabe Register wird über Port 0x3C2 beschrieben und über 0x3CC gelesen. Das Status Register 0 wird über Port 0x3C2 und das Status Register 1 entweder über Port 0x3BA oder 0x3DA gelesen. (Später mehr dazu)
+
 ### Attribut Controller
 
 Der Attribut Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer übernimmt dabei den Index und die zu schreibenden Daten und letzterer enthält die zu lesenden Daten. Wie? Über nur zwei Ports hat man Zugriff auf mehrere Register? Und über ein und denselben Port werden Index und Daten geschrieben? Wie geht denn das? Nun, die Register werden durchnummeriert. Möchte man Daten ins Register 1 schreiben oder lesen, dann schreibt man zuerst die 1 das Index Register 0x3C0 und kann anschließend über denselben Port Daten senden oder über Port 0x3C1 das Register lesen. Dabei merkt sich der Controller, ob als nächstes ein Index oder Daten anstehen. Leider ist zu Beginn nicht definiert was erwartet wird. Glücklicherweise kann man durch Lesen eines Bytes von Port 0x3DA (Das ist das externe Status Register 1) die Logik zurücksetzen, sodass als nächstes ein Index erwartet wird. Man sollte also vor jedem Zugriff zuerst mal Port 0x3DA lesen, dann den Index schreiben und anschließend die Daten lesen/schreiben.
@@ -57,6 +61,6 @@ Speichergröße: 64000 Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4692; parent 4691; 2009-07-22T15:46:44Z -->
+<!-- MediaWiki page 1516; revision 4693; parent 4692; 2009-07-22T15:56:57Z -->
