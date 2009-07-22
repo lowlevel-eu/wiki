@@ -98,7 +98,7 @@ Wie bei so vielen konkurrierenden Projekten gibt es auch viele Meinungen, Diskus
 
 ### Vorteile von git
 
-Das dezentrale System von git bietet viel Komfort für Programmierer. Anders als bei Subversion kann auch jeder, der nicht zum Kernentwicklerteam gehört, und keinen Schreibzugriff auf das Archiv hat, jedereit alle Möglichkeiten, die das SCM bietet, ausnutzen. Niemand hindert den Entwickler daran, in seinem Archiv commits zu machen. So wird ein Programmierer viel eher ordentliche, atomare commits machen, auch wenn diese instabil und ungetestet sind, als bei zentralen Systemen, wo ein ungetesteter commit bedeuten würde, dass jeder Entwickler nun eine instabile Version zum arbeiten bekommt. Außerdem wird so den Entwicklern das Erstellen von Patches, die früher oder später zur Mailingliste müssen, komfortabler gemacht.
+Das dezentrale System von git bietet viel Komfort für Programmierer. Anders als bei Subversion kann auch jeder, der nicht zum Kernentwicklerteam gehört, und keinen Schreibzugriff auf das Archiv hat, jederzeit alle Möglichkeiten, die das SCM bietet, ausnutzen. Niemand hindert den Entwickler daran, in seinem Archiv commits zu machen. So wird ein Programmierer viel eher ordentliche, atomare commits machen, auch wenn diese instabil und ungetestet sind, als bei zentralen Systemen, wo ein ungetesteter commit bedeuten würde, dass jeder Entwickler nun eine instabile Version zum arbeiten bekommt. Außerdem wird so den Entwicklern das Erstellen von Patches, die früher oder später zur Mailingliste müssen, komfortabler gemacht.
 
 ### Nachteile von git
 
@@ -146,6 +146,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 4675; parent 4653; 2009-07-19T23:20:14Z -->
+<!-- MediaWiki page 1889; revision 4690; parent 4675; 2009-07-22T14:28:36Z -->
