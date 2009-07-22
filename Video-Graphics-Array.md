@@ -16,7 +16,7 @@ VGA wird von fast allen Grafikkarten unterstützt (Mir ist keine bekannt die VGA
 
 ## Warnung!
 
-Wenn Sie die Timings des CRTC (später mehr dazu) ändern und Ihr Monitor diese Frequenzen nicht unterstützt, besteht die Chance auf einen Defekt an ihm. Testen Sie am besten alle Änderungen vorher auf einem Emulator Ihrer Wahl (Bochs, QEmu, ...) und rechnen Sie besser zweimal nach. Normalerweise haben Heute die meisten Monitore einen Schutzmechanismus intus und zeigen bei fehlerhaften Timings etwa "Modus wird nicht unterstützt" oder so ähnlich an. Versprechen kann ich Ihnen aber nichts. Die Benutzung des Wissens und der Codebeispiele geschieht auf eigene Gefahr. Weder der Autor noch die Lowlevel Community und auch nicht die Betreiber dieser Webseite haften für entstandene Schäden.
+Wenn Du die Timings des CRTC (später mehr dazu) änderst und Dein Monitor diese Frequenzen nicht unterstützt, besteht die Chance auf einen Defekt an ihm. Teste am besten alle Änderungen vorher auf einem Emulator deiner Wahl (Bochs, QEmu, ...) und rechne besser zweimal nach. Normalerweise haben Heute die meisten Monitore einen Schutzmechanismus intus und zeigen bei fehlerhaften Timings "Modus wird nicht unterstützt" oder so ähnlich an. Versprechen kann ich aber nichts. Die Benutzung des Wissens und der Codebeispiele geschieht auf eigene Gefahr. Weder der Autor noch die Lowlevel Community und auch nicht die Betreiber dieser Webseite haften für entstandene Schäden.
 
 ## Voraussetzungen
 
@@ -57,6 +57,6 @@ Speichergröße: 64000 Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4691; parent 4671; 2009-07-22T15:45:22Z -->
+<!-- MediaWiki page 1516; revision 4692; parent 4691; 2009-07-22T15:46:44Z -->
