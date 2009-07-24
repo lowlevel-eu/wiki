@@ -6,12 +6,19 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Die **Real Time Clock** (= **RTC**) bzw. **Echtzeituhr** eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- bzw. [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Computers gehört zum [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") und aktualisiert die darin gespeicherte Uhrzeit und das Datum.
 
+## Programmierung
+
+Die RTC wird über die Statusregister im CMOS programmiert. Wenn Bit 6 im [Statusregister B](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") gesetzt ist, kann die RTC kann periodisch den [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 8 auslösen. Die Frequenz lässt sich mit dem [Statusregister A](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") einstellen. \<c\>void rtc_init() { cmos_write(0x0B, cmos_read(0x0B) \| 0x40); // IRQ aktivieren cmos_write(0x0A, (cmos_read(0x0A) & 0xF0) \| 0x0F); // Interrupt alle 500ms }\</c\>
+
+Im IRQ-Handler muss dann das [Statusregister C](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") ausgelesen werden, das die Informationen über die Ursache des Interrupts liefert. Man kann den Wert nach dem Lesen allerdings auch einfach ignorieren.
+
 ## Siehe auch
 
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
+- [Artikel im osdev.org-Wiki](http://wiki.osdev.org/RTC)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1715/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4705/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1715/index.html)
 
-<!-- MediaWiki page 1715; revision 4198; parent 3205; 2009-03-27T16:37:48Z -->
+<!-- MediaWiki page 1715; revision 4705; parent 4198; 2009-07-24T13:58:35Z -->
