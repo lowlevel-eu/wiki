@@ -63,7 +63,7 @@ struct {
 
 } \_\_attribute\_\_((packed)) idtp = {
 
-       .length = IDT_ENTRIES * 8 - 1,
+       .limit = IDT_ENTRIES * 8 - 1,
        .pointer = idt,
 
 }; asm volatile("lidt %0" : : "m" (idtp));\</c\>
@@ -90,6 +90,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4703/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 4701; parent 4699; 2009-07-24T11:36:32Z -->
+<!-- MediaWiki page 1603; revision 4703; parent 4701; 2009-07-24T12:39:47Z -->
