@@ -66,6 +66,17 @@ Das Release im Jahr 2008 (genauer: am 24.12.2008), und außerdem erste Version u
 
 Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetzt auf der Betriebssystemunabhängigen Schnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI").
 
+  
+**0.2.1**  
+Release am 05.07.2009
+
+- lpt-Pakete: lynx ist als Browser neu dazugekommen, die e2fstools erlauben das Anlegen neuer Dateisysteme und Free Pascal wurde auf 2.3.1 aktualisiert. Außerdem sind dropbear als SSH-Client und der Subversion-Client portiert worden.
+- Ein neues Hilfesystem wurde integriert, das den alten help-Befehl ersetzt (nur auf dem Festplattenimage)
+- CD-ROM-Unterstützung
+- UTF-8-Unterstützung (und damit endlich auch Umlaute in Shell, Editor und IRC-Client)
+- Neues Tool build, das einen Quellcode-Verzeichnisbaum baut (braucht einen installierten Compiler)
+- Ein Haufen Fehlerkorrekturen
+
 [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screenshots "Týndur/Screenshots")
 
 ## Links
@@ -79,6 +90,6 @@ Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4700/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 4567; parent 4433; 2009-07-06T09:01:13Z -->
+<!-- MediaWiki page 1796; revision 4700; parent 4567; 2009-07-24T11:33:02Z -->
