@@ -10,7 +10,7 @@ Die **Real Time Clock** (= **RTC**) bzw. **Echtzeituhr** eines [x86](https://git
 
 Die RTC wird über die Statusregister im CMOS programmiert. Wenn Bit 6 im [Statusregister B](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") gesetzt ist, kann die RTC kann periodisch den [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 8 auslösen. Die Frequenz lässt sich mit dem [Statusregister A](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") einstellen. \<c\>void rtc_init() { cmos_write(0x0B, cmos_read(0x0B) \| 0x40); // IRQ aktivieren cmos_write(0x0A, (cmos_read(0x0A) & 0xF0) \| 0x0F); // Interrupt alle 500ms }\</c\>
 
-Im IRQ-Handler muss dann das [Statusregister C](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") ausgelesen werden, sonst löst der RTC keine Interrupts mehr aus. Das Statusregister enthält Informationen über die Ursache des Interrupts liefert, allerdings man kann den Wert nach dem Lesen auch einfach ignorieren.
+Im IRQ-Handler muss dann das [Statusregister C](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") ausgelesen werden, sonst löst der RTC keine Interrupts mehr aus. Das Statusregister enthält Informationen über die Ursache des Interrupts, allerdings man kann den Wert nach dem Lesen auch einfach ignorieren.
 
 ## Siehe auch
 
@@ -19,6 +19,6 @@ Im IRQ-Handler muss dann das [Statusregister C](https://github.com/lowlevel-eu/w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4706/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1715/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4707/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1715/index.html)
 
-<!-- MediaWiki page 1715; revision 4706; parent 4705; 2009-07-24T16:27:03Z -->
+<!-- MediaWiki page 1715; revision 4707; parent 4706; 2009-07-24T16:27:20Z -->
