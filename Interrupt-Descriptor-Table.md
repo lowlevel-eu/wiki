@@ -44,9 +44,9 @@ Gibt den Selektor des Codesegments an, in das beim Auftreten des Interrupts gewe
 
 Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse einer 6 Bytes großen Datenstruktur aufgerufen werden. Die Datenstruktur sieht folgendermaßen aus:
 
-| 47-32 | 31-0 |
-| --------------- | ------------------------ |
-| Größe der IDT | Anfangsadresse der IDT |
+| 47-16 | 15-0 |
+| ------------------------ | --------------- |
+| Anfangsadresse der IDT | Größe der IDT |
 
 Damit kann eine IDT beispielsweise mit Code wie dem folgenden geladen werden:
 
@@ -61,10 +61,23 @@ struct {
 
 } \_\_attribute\_\_((packed)) idtp = {
 
-       .length = IDT_ENTRIES * 8,
+       .length = IDT_ENTRIES * 8 - 1,
        .pointer = idt,
 
 }; asm volatile("lidt %0" : : "m" (idtp));\</c\>
+
+Oder in Assembler: \<asm\>lidt \[idtr\]
+
+...
+
+idtr:
+
+       dw IDT_ENTRIES * 8 - 1,
+       dd idt
+
+idt:
+
+       ...</asm>
 
 ## Siehe auch
 
@@ -75,6 +88,6 @@ struct {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 4601; parent 4239; 2009-07-09T20:32:38Z -->
+<!-- MediaWiki page 1603; revision 4699; parent 4601; 2009-07-24T11:30:38Z -->
