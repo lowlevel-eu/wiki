@@ -78,7 +78,7 @@ Nachdem das Überprüfen des Systems abgeschlossen ist, müssen wir es kompilier
 
 Nun kompiliert er alles. Danach „make install“ als root. Denn wird er das Programm ausführbar machen. Einfach danach \[ALT\]+\[F2\] da denn „kvirc“ eingeben und KVIRC startet.
 
-Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://http://lowlevel.brainsware.org/wiki/index.php?title=IRC&action=submit#IRC_Start_mit_KVirc_unter_Windows)
+Alles weitere Funktioniert wie beim [KVIRC unter Windows](http://lowlevel.brainsware.org/wiki/index.php?title=IRC&action=submit#IRC_Start_mit_KVirc_unter_Windows)
 
 ## Verhaltensregeln im Channel
 
@@ -97,6 +97,6 @@ Aufzeichnungen der Channelgespräche und Statistiken sind immer aktualisiert unt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 4550; parent 4173; 2009-07-04T20:28:36Z -->
+<!-- MediaWiki page 1463; revision 4695; parent 4550; 2009-07-24T07:31:29Z -->
