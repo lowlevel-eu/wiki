@@ -46,7 +46,9 @@ Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse einer 6 By
 
 | 47-16 | 15-0 |
 | ------------------------ | --------------- |
-| Anfangsadresse der IDT | Größe der IDT |
+| Anfangsadresse der IDT | Limit der IDT |
+
+Die Anfangsadresse (Basis) ist die [lineare Adresse](https://github.com/lowlevel-eu/wiki/wiki/Paging "Lineare Adresse") des ersten Eintrags in der IDT und das Limit ist die Größe der IDT verringert um 1.
 
 Damit kann eine IDT beispielsweise mit Code wie dem folgenden geladen werden:
 
@@ -56,7 +58,7 @@ Damit kann eine IDT beispielsweise mit Code wie dem folgenden geladen werden:
 
 struct {
 
-       unsigned short int length;
+       unsigned short int limit;
        void* pointer;
 
 } \_\_attribute\_\_((packed)) idtp = {
@@ -88,6 +90,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 4699; parent 4601; 2009-07-24T11:30:38Z -->
+<!-- MediaWiki page 1603; revision 4701; parent 4699; 2009-07-24T11:36:32Z -->
