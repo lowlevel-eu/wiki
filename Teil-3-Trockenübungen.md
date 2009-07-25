@@ -68,7 +68,7 @@ Die wesentlichen Schritte darin sind:
 
 - **Kompilieren**: Zum einen ist da der Aufruf von *cc1*. cc1 ist der eigentliche Compiler, er übersetzt C-Code in Assemblercode. Wenn man *gcc -S hello.c* aufruft, ruft gcc nur den Compiler auf und lässt die Assemblerdatei als *hello.s* liegen.
 - **Assemblieren**: Der Assembler wandelt den Assemblercode in eine Objektdatei um. Er heißt üblicherweise *as*, wenn betont werden soll, dass es sich um den GNU-Assembler handelt (z.B. auf anderen Systemen, wo andere Assembler üblich sind), wird er auch *gas* genannt. Wenn man *gcc -c hello.c* aufruft, wird bis an dieser Stelle gebaut und die Objektdatei *hello.o* bleibt übrig. Eine Objektdatei enthält zwar schon Maschinencode, aber er ist noch nicht in seiner endgültigen Form. Externe "Symbole" (d.h. Funkions- oder Variablennamen) sind noch als Verweise (*Referenzen*) vorhanden - printf selbst existiert in der Objektdatei nicht.
-- **Linken**: Der Linker *ld* (in meinem Fall indirekt über collect2 aufgerufen) nimmt mehrere Objektdateien (oder Bibliotheken, die im Prinzip auch nur eine Sammlung von Objektdateien sind) und produziert daraus die endgültige ausführbare Datei. An dieser Stelle muss der Linker dann auch print *auflösen* können, d.h. die Adresse einsetzen, an der printf am Ende tatsächlich liegt. Mit *-lc* wird die Standardbibliothek *libc* eingebunden, die unter anderem diese Funktion enthält.
+- **Linken**: Der Linker *ld* (in meinem Fall indirekt über collect2 aufgerufen) nimmt mehrere Objektdateien (oder Bibliotheken, die im Prinzip auch nur eine Sammlung von Objektdateien sind) und produziert daraus die endgültige ausführbare Datei. An dieser Stelle muss der Linker dann auch printf *auflösen* können, d.h. die Adresse einsetzen, an der printf am Ende tatsächlich liegt. Mit *-lc* wird die Standardbibliothek *libc* eingebunden, die unter anderem diese Funktion enthält.
 
 Genaugenommen habe ich beim Linker nicht ganz die Wahrheit gesagt - was ich beschrieben habe ist *statisches Linken* (das ist auch, was wir vorerst brauchen, wenn wir unser Betriebssystem schreiben). In Wirklichkeit werden Linuxprogramme normal dynamisch gelinkt, d.h. auch die ausführbare Datei enthält noch nicht die endgültigen Adressen, sondern nur Referenzen. Das Programm wird dann erst direkt bei der Ausführung vom Betriebssystem mit den Bibliotheken (Shared Libraries; \*.so unter Linux oder \*.dll unter Windows) gelinkt. Statisches Linken kann man mit *gcc -static* erzwingen, aber das macht die erzeugte Datei nur unübersichtlich, also lassen wir das erst einmal bleiben.
 
@@ -133,7 +133,7 @@ Man kann sich vorstellen, dass das mit einer etwas größerern Funktion schnell 
 
 Man sieht, dass jetzt immer zuerst die C-Zeile angezeigt wird und dann der Assemblercode, mit dem sie umgesetzt worden ist. In der Betriebssystementwicklung passiert es einem oft, dass man bei einem Absturz nur die Adresse weiß, an der etwas schiefgegangen ist. Durch diese objdump-Ausgabe findet man dann sehr schnell den zugehörigen C-Befehl, und möglicherweise ist der zugehörige Assemblercode klein genug, dass man ihn nachvollziehen und dann sogar genau sagen kann, welcher Teil der C-Zeile schiefgeht.
 
-Die zweite Neuerung ist, dass die Referenzen aufgelöst werden. Wir haben hier zum einen eine Referenz auf irgendwelche Daten in .rodata (das ist unser String "Hello World") und zum zweiten auf eine externe Funktion, nämlich puts. Huch, wollten wir nicht printf? Ja, aber der Compiler hat hier ein wenig optimiert, weil wir die Komplexität von printf hier nicht brauchen (man kann das übrigens auch abschalten). Dumm nur, wenn das eigene Betriebssystem zwar schon printf hat, aber noch kein puts... Gut, dass wir jetzt eine Methode haben, dem Compiler auf die Finger zu schauen und solche Dinge zu erkennen.
+Die zweite Neuerung ist, dass die Referenzen aufgelöst werden. Wir haben hier zum einen eine Referenz auf irgendwelche Daten in .rodata (das ist unser String "Hello World") und zum zweiten auf eine externe Funktion, nämlich puts. Huch, wollten wir nicht printf? Ja, aber der Compiler hat hier ein wenig optimiert, weil wir die Komplexität von printf hier nicht brauchen (man kann das übrigens über die Kommandozeilenoption -fno-builtin abschalten). Dumm nur, wenn das eigene Betriebssystem zwar schon printf hat, aber noch kein puts... Gut, dass wir jetzt eine Methode haben, dem Compiler auf die Finger zu schauen und solche Dinge zu erkennen.
 
 Nachdem ich jetzt erklärt habe, wie toll -g ist, möchte ich auch den Nachteil nicht verschweigen:
 
@@ -203,6 +203,6 @@ Aber genug der Vorrede, es wird Zeit für den Kernel.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
 
-<!-- MediaWiki page 1896; revision 4714; parent 0; 2009-07-25T12:14:33Z -->
+<!-- MediaWiki page 1896; revision 4715; parent 4714; 2009-07-25T14:44:10Z -->
