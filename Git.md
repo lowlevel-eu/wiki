@@ -8,6 +8,17 @@ Nachdem das alte Versionsverwaltungssystem des Linux-Kernels seine Lizenz änder
 
 Designziel von git war es insbesondere, ein sehr schnelles Zusammenführen von Entwicklungszweigen (Merging) zu ermöglichen. Des Weiteren musste das System eine Korruption der Versionsgeschichte, zum Beispiel durch einen Festplattenschaden oder bösartigen Angriff, selbstständig erkennen. Außerdem musste es möglich sein, dass Entwickler unabhängig voneinander arbeiten. Alle diese Ziele wurden durch git verwirklicht.
 
+## Installation
+
+Die meisten Linuxdistributoren bieten git bereits in ihren Software-Archiven an. Bei einigen Distributoren steht "git" jedoch als Abkürzung für die bereits länger existierenden GNU Interactive Tools, daher kann es sein, dass das Paket "git" nicht das Versionsverwaltungssystem installiert.
+
+- Benutzer von Ubuntu oder Debian installieren das Paket *git-core*.
+- Fedora-User können einfach das Paket *git* nehmen.
+
+### Windows
+
+Für Windowsbenutzer existiert ein Port von git, der sich msysgit nennt und unter [\[1\]](http://code.google.com/p/msysgit/) heruntergeladen werden kann. Msysgit kommt komplett mit einer Konsole (GitBash), die sich auch in Kontextmenüs integriert, und ermöglicht so auch dem Windowsnutzer komfortables Arbeiten mit git.
+
 ## Aufbau von git
 
 *TODO: Eventuell näher auf das Architekturdesign eingehen.*
@@ -146,6 +157,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4725/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 4690; parent 4675; 2009-07-22T14:28:36Z -->
+<!-- MediaWiki page 1889; revision 4725; parent 4690; 2009-07-25T22:24:24Z -->
