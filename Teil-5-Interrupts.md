@@ -70,13 +70,13 @@ Dummerweise liegen auf den ersten paar Interruptnummern sowohl einige Exceptions
 
 Ein übliches Modell ist es, auf den Interrupts 0 bis 0x1f die Exceptions zu haben, direkt anschließend von 0x20 bis 0x2f die IRQs und ab 0x30 die Software-Interrupts, z.B. Syscalls. In diesem Fall müssten wir den beiden PICs also mitteilen, sie sollen die IRQs ab 0x20 bzw. 0x28 anfangen lassen:
 
-\<c\>// Master-PIC initialisieren outl(0x20, 0x11); // Initialisierungsbefehl fuer den PIC outl(0x21, 0x20); // Interruptnummer fuer IRQ 0 outl(0x21, 0x04); // An IRQ 2 haengt der Slave outl(0x21, 0x01); // ICW 4
+\<c\>// Master-PIC initialisieren outb(0x20, 0x11); // Initialisierungsbefehl fuer den PIC outb(0x21, 0x20); // Interruptnummer fuer IRQ 0 outb(0x21, 0x04); // An IRQ 2 haengt der Slave outb(0x21, 0x01); // ICW 4
 
-// Slave-PIC initialisieren outl(0xa0, 0x11); // Initialisierungsbefehl fuer den PIC outl(0xa1, 0x28); // Interruptnummer fuer IRQ 8 outl(0xa1, 0x02); // An IRQ 2 haengt der Slave outl(0xa1, 0x01); // ICW 4
+// Slave-PIC initialisieren outb(0xa0, 0x11); // Initialisierungsbefehl fuer den PIC outb(0xa1, 0x28); // Interruptnummer fuer IRQ 8 outb(0xa1, 0x02); // An IRQ 2 haengt der Slave outb(0xa1, 0x01); // ICW 4
 
 // Alle IRQs aktivieren (demaskieren) outl(0x20, 0x0); outl(0xa0, 0x0);\</c\>
 
-Dabei ist *outl* eine Funktion, um einen 32-Bit-Wert an einen IO-Port zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb_wait(unsigned short port, unsigned char data) {
+Dabei ist *outl* eine Funktion, um einen 32-Bit-Wert an einen IO-Port zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb(unsigned short port, unsigned char data) {
 
        asm volatile ("outb %0, %1" : : "a" (data), "Nd" (port));
 
@@ -122,24 +122,17 @@ Das lässt sich einfach genug erreichen, dazu nehmen wir zur Abwechslung wieder 
 
 .endm
 
-Exceptions
+// Exceptions intr_stub 0 intr_stub 1 intr_stub 2 intr_stub 3 intr_stub 4 intr_stub 5 intr_stub 6 intr_stub 7 intr_stub_error_code 8 intr_stub 9 intr_stub_error_code 10 intr_stub_error_code 11 intr_stub_error_code 12 intr_stub_error_code 13 intr_stub_error_code 14 intr_stub 15 intr_stub 16 intr_stub_error_code 17 intr_stub 18
 
-intr_stub 0 intr_stub 1 intr_stub 2 intr_stub 3 intr_stub 4 intr_stub 5 intr_stub 6 intr_stub 7 intr_stub_error_code 8 intr_stub 9 intr_stub_error_code 10 intr_stub_error_code 11 intr_stub_error_code 12 intr_stub_error_code 13 intr_stub_error_code 14 intr_stub 15 intr_stub 16 intr_stub_error_code 17 intr_stub 18
+// IRQs intr_stub 32 // usw. bis 47
 
-IRQs
-
-intr_stub 32
-
-usw. bis 47
-
-Syscall
-
-intr_stub 48\</asm\>
+// Syscall intr_stub 48\</asm\>
 
 Im zweiten Teil müssen wir jetzt den *intr_common_handler* definieren. Er soll den CPU-Zustand auf den Stack speichern und dann die oben genannte Funktion *handle_interrupt* aufrufen. Nachdem der Interrupt fertig behandelt ist, stellen wir den CPU-Zustand wieder her und springen zurück in das unterbrochene Programm. Das könnte ungefähr so aussehen:
 
 \<asm\>.extern handle_interrupt intr_common_handler:
 
+       // CPU-Zustand sichern
        push %ebp
        push %edi
        push %esi
@@ -148,10 +141,12 @@ Im zweiten Teil müssen wir jetzt den *intr_common_handler* definieren. Er soll 
        push %ebx
        push %eax
 
+       // Handler aufrufen
        push %esp
        call handle_interrupt
        add $4, %esp
 
+       // CPU-Zustand wiederherstellen
        pop %eax
        pop %ebx
        pop %ecx
@@ -160,6 +155,10 @@ Im zweiten Teil müssen wir jetzt den *intr_common_handler* definieren. Er soll 
        pop %edi
        pop %ebp
 
+       // Fehlercode und Interruptnummer vom Stack nehmen
+       add $8, %esp
+
+       // Ruecksprung zum unterbrochenen Code
        iret</asm>
 
 Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass sie einfach die auf den Stack gepushten Werte enthält. Zur Erinnerung, der Stack wächst nach unten, daher fängt die Struktur mit dem zuletzt gepushten (also eax) an: \<c\>struct task_state {
@@ -188,9 +187,9 @@ Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass 
 Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene Fehlermeldung mit anschließendem Anhalten des Systems (später könnte man das aktuell ausgeführte Programm beenden, aber wir haben so etwas ja noch nicht). Für Hardware-Interrupts muss zumindest ein EOI an den PIC gesendet werden, damit der gleich Interrupt beim nächsten Mal wieder gemeldet wird und nicht noch vom letzten Aufruf blockiert ist: \<c\>if (cpu-\>intr \>= 0x20 && cpu-\>intr \<= 0x2f) {
 
        if (cpu->intr >= 0x28) {
-           outl(0xa0, 0x20);
+           outb(0xa0, 0x20);
        }
-       outl(0x20, 0x20);
+       outb(0x20, 0x20);
 
 }\</c\>
 
@@ -203,6 +202,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 4720; parent 0; 2009-07-25T19:46:00Z -->
+<!-- MediaWiki page 1898; revision 4722; parent 4720; 2009-07-25T20:31:47Z -->
