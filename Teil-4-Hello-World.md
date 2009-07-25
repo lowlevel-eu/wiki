@@ -4,7 +4,7 @@
 
 Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernel könnte dieer Abschnitt den Titel "was bisher geschah" tragen.
 
-Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt as BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7c000 (z.B. 7c00:0000) und springt an diese Adresse.
+Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt as BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7c00 (z.B. 07c0:0000) und springt an diese Adresse.
 
 Der Bootloader ist anschließend dafür zuständig, den Kernel des Betriebssystems in den Speicher zu laden und an dessen Einsprungspunkt zu springen.
 
@@ -201,6 +201,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4724/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4719; parent 4717; 2009-07-25T19:40:17Z -->
+<!-- MediaWiki page 1897; revision 4724; parent 4719; 2009-07-25T21:45:29Z -->
