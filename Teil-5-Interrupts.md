@@ -161,7 +161,7 @@ Im zweiten Teil müssen wir jetzt den *intr_common_handler* definieren. Er soll 
        // Ruecksprung zum unterbrochenen Code
        iret</asm>
 
-Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass sie einfach die auf den Stack gepushten Werte enthält. Zur Erinnerung, der Stack wächst nach unten, daher fängt die Struktur mit dem zuletzt gepushten (also eax) an: \<c\>struct task_state {
+Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass sie einfach die auf den Stack gepushten Werte enthält. Zur Erinnerung, der Stack wächst nach unten, daher fängt die Struktur mit dem zuletzt gepushten (also eax) an: \<c\>struct cpu_state {
 
        // Von Hand gesicherte Register
        unsigned long   eax;
@@ -202,6 +202,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4723/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 4722; parent 4720; 2009-07-25T20:31:47Z -->
+<!-- MediaWiki page 1898; revision 4723; parent 4722; 2009-07-25T20:32:46Z -->
