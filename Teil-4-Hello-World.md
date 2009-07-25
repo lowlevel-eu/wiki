@@ -197,10 +197,10 @@ void init(void) {
 ## Navigation
 
 - Voriger Artikel [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen")
-- Nächster Artikel Teil 5 - Deskriptortabellen
+- Nächster Artikel [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4717; parent 0; 2009-07-25T16:54:17Z -->
+<!-- MediaWiki page 1897; revision 4719; parent 4717; 2009-07-25T19:40:17Z -->
