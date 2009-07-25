@@ -30,7 +30,7 @@ Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wen
 | 0x03 | \#BP - Break Point |
 | 0x04 | \#OF - Over Flow |
 | 0x05 | \#BR - Bound Range |
-| 0x06 | \#UD - Invalid Upcode |
+| 0x06 | \#UD - Invalid Opcode |
 | 0x07 | \#NM - Device Not Available |
 | 0x08 | \#DF - Double Fault |
 | 0x09 | Coprocessor Segment Overrun |
@@ -48,6 +48,6 @@ Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4718/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 4518; parent 4168; 2009-06-29T18:16:33Z -->
+<!-- MediaWiki page 1824; revision 4718; parent 4518; 2009-07-25T17:12:10Z -->
