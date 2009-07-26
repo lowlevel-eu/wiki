@@ -75,7 +75,7 @@ struct cpu_state\* init_task(char\* stack, void\* entry) {
            //.ss  = unbenutzt (kein Ring-Wechsel)
 
            /* IRQs einschalten (IF = 1) */
-           .eflags = 0x200,
+           .eflags = 0x202,
        };
 
        /*
@@ -223,6 +223,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 4731; parent 4729; 2009-07-26T15:07:30Z -->
+<!-- MediaWiki page 1899; revision 4732; parent 4731; 2009-07-26T15:17:58Z -->
