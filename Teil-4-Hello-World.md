@@ -2,7 +2,7 @@
 
 ## Der Bootprozess
 
-Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernel könnte dieer Abschnitt den Titel "was bisher geschah" tragen.
+Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernel könnte dieser Abschnitt den Titel "was bisher geschah" tragen.
 
 Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt as BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7c00 (z.B. 07c0:0000) und springt an diese Adresse.
 
@@ -176,7 +176,7 @@ Nach sehr viel sehr detailliert besprochenem Code kommen wir zu einigen Aufgaben
 
 In den folgenden Teilen gehe ich davon aus, dass die unteren drei Aufgaben von einer Funktion kprintf() übernommen werden, die für die genannten Fälle genau so funktioniert, wie die normale printf()-Funktion. Die Funktionen kommen am besten in ihre eigene Quellcodedatei (z.B. console.c) und werden in den Beispielen in der Headerdatei *console.h* erwartet.
 
-Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Parameterliste auszuwerten. gcc bietet dafür bereits Builtins an, so dass die Headerdatei nur folgendes enthalten muss: \<c\> typedef \_\_builtin_va_list va_list;
+Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Parameterliste auszuwerten. gcc bietet dafür bereits Builtins an (bzw. eine komplette *stdarg.h* Header, wenn man einen [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benutzt), so dass die Headerdatei nur folgendes enthalten muss: \<c\> typedef \_\_builtin_va_list va_list;
 
 1.  define va_start(ap, X) \_\_builtin_va_start(ap, X)
 2.  define va_arg(ap, type) \_\_builtin_va_arg(ap, type)
@@ -184,7 +184,7 @@ Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Pa
 
 \</c\>
 
-Außerdem könnte es eine gute Idee sein, alle Ausgaben auch auf der seriellen Schnittstelle auszugeben. Die Emulatoren können eigentlich alle die Ausgaben auf der seriellen Schnittstelle auf der Konsole anzeigen oder in eine Datei schreiben. Das macht es unnötig, Dinge aus dem Emulator abzuschreiben (z.B. Adressen in Fehlermeldungen).
+Außerdem könnte es eine gute Idee sein, alle Ausgaben auch auf der [seriellen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") auszugeben. Die Emulatoren können eigentlich alle die Ausgaben auf der seriellen Schnittstelle auf der Konsole anzeigen oder in eine Datei schreiben. Das macht es unnötig, Dinge aus dem Emulator abzuschreiben (z.B. Adressen in Fehlermeldungen).
 
 Die Datei init.c sollte hinterher nur noch so aussehen (abgesehen vielleicht von einem Aufruf, um den Bildschirm zu löschen): \<c\>#include "console.h"
 
@@ -201,6 +201,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4724/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4726/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4724; parent 4719; 2009-07-25T21:45:29Z -->
+<!-- MediaWiki page 1897; revision 4726; parent 4724; 2009-07-26T10:30:33Z -->
