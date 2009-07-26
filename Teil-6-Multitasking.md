@@ -26,24 +26,11 @@ void task_b(void) {
 
 Nachdem diese Vorbereitungen getroffen sind, können wir an das eigentliche Multitasking denken. Unser nächster Schritt ist es, in einen Task hineinzuspringen. Teil zwei ist das Herausspringen, aber das heben wir uns erst einmal für später auf.
 
-Was macht jetzt einen Task aus? Was sich zwischen den einzelnen Tasks unterscheidet, ist der Prozessorzustand - also der Inhalt der Register. Wenn wir einen Task unterbrechen, müssen wir seine Registerbelegung speichern und bevor wir in einen Tasks hineinspringen müssen wir den Zustand wiederherstellen (bzw. beim ersten Einsprung einen vernünftigen Anfangszustand herstellen). Gießen wir also in Code, was wir an Informationen brauchen: \<c\>struct cpu_state {
+Was macht jetzt einen Task aus? Was sich zwischen den einzelnen Tasks unterscheidet, ist der Prozessorzustand - also der Inhalt der Register. Wenn wir einen Task unterbrechen, müssen wir seine Registerbelegung speichern und bevor wir in einen Tasks hineinspringen müssen wir den Zustand wiederherstellen (bzw. beim ersten Einsprung einen vernünftigen Anfangszustand herstellen).
 
-       unsigned long   eax;
-       unsigned long   ebx;
-       unsigned long   ecx;
-       unsigned long   edx;
-       unsigned long   esp;
-       unsigned long   ebp;
-       unsigned long   esi;
-       unsigned long   edi;
-       unsigned long   eip;
-       unsigned long   eflags;
+Eine "Struktur für den Prozessorzustand" kommt irgendwie bekannt vor. In der Tat haben wir bei der Interruptbehandlung schon eine *struct cpu_state* definiert, die wir direkt weiterverwenden können. Die Struktur, wie wir sie in Teil 5 definiert haben, sollte vorerst reichen, denn mehr als die Allzweckregister und eflags benutzen unsere Tasks im Moment nicht. Wenn man es richtig macht, könnten beispielsweise noch die Segmentregister dazukommen.
 
-};\</c\> Uns sollte das vorerst reichen, denn mehr benutzen unsere Tasks im Moment nicht. In Wirklichkeit könnten beispielsweise noch die Segmentregister dazukommen.
-
-Die Struktur kommt irgendwie bekannt vor. In der Tat haben wir bei der Interruptbehandlung schon eine *struct cpu_state* definiert, die wir direkt weiterverwenden können. Wir benutzen sie sogar schon an der richtigen Stelle: Ein Taskwechsel findet immer in einem Interrupthandler statt - das kann z.B. ein Timerinterrupt sein, der signalisiert, dass der Prozess seine Zeit aufgebraucht hat, oder ein Syscall, mit dem das Programm anzeigt, dass es vorzeitig abgeben möchte.
-
-Genau genommen findet der ganze Kernel nur noch in Interrupthandlern statt, sobald der erste Task gestartet ist.
+Wir benutzen die Struktur sogar schon an der richtigen Stelle: Ein Taskwechsel findet immer in einem Interrupthandler statt - das kann z.B. ein Timerinterrupt sein, der signalisiert, dass der Prozess seine Zeit aufgebraucht hat, oder ein Syscall, mit dem das Programm anzeigt, dass es vorzeitig abgeben möchte. Genau genommen findet sogar der ganze Kernel nur noch in Interrupthandlern statt, sobald der erste Task gestartet ist.
 
 Legen wir also einmal den Startzustand für die beiden Tasks fest, jeder bekommt seinen Stack und dort drin eine struct cpu_state: \<c\>static char stack_a\[4096\]; static char stack_b\[4096\];
 
@@ -223,6 +210,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 4733; parent 4732; 2009-07-26T15:26:26Z -->
+<!-- MediaWiki page 1899; revision 4736; parent 4733; 2009-07-26T19:26:05Z -->
