@@ -74,9 +74,9 @@ Ein übliches Modell ist es, auf den Interrupts 0 bis 0x1f die Exceptions zu hab
 
 // Slave-PIC initialisieren outb(0xa0, 0x11); // Initialisierungsbefehl fuer den PIC outb(0xa1, 0x28); // Interruptnummer fuer IRQ 8 outb(0xa1, 0x02); // An IRQ 2 haengt der Slave outb(0xa1, 0x01); // ICW 4
 
-// Alle IRQs aktivieren (demaskieren) outl(0x20, 0x0); outl(0xa0, 0x0);\</c\>
+// Alle IRQs aktivieren (demaskieren) outb(0x20, 0x0); outb(0xa0, 0x0);\</c\>
 
-Dabei ist *outl* eine Funktion, um einen 32-Bit-Wert an einen IO-Port zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb(unsigned short port, unsigned char data) {
+Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen IO-Port zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb(unsigned short port, unsigned char data) {
 
        asm volatile ("outb %0, %1" : : "a" (data), "Nd" (port));
 
@@ -202,6 +202,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4727/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4728/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 4727; parent 4723; 2009-07-26T11:33:14Z -->
+<!-- MediaWiki page 1898; revision 4728; parent 4727; 2009-07-26T12:07:21Z -->
