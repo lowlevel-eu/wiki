@@ -91,7 +91,7 @@ struct cpu_state\* init_task(char\* stack, void\* entry) {
 
 }\</c\>
 
-Wie im Code angedeutet, können wir ss und esp im Prozessorzustand erst einmal ignorieren. Wir haben sie schon in unsere strct cpu_state aufgenommen, weil sie bei einem Interrupt automatisch von der CPU gespeichert werden, wenn wir dazu von einem normalen unprivilegierten Programm (also aus Ring 3) in den Kernel (also Ring 0) wechseln. Wir lassen bisher aber alles mit vollen Privilegien laufen und bekommen daher bei Interrupts auch keinen Stackwechsel.
+Wie im Code angedeutet, können wir ss und esp im Prozessorzustand erst einmal ignorieren. Wir haben sie schon in unsere struct cpu_state aufgenommen, weil sie bei einem Interrupt automatisch von der CPU gespeichert werden, wenn wir dazu von einem normalen unprivilegierten Programm (also aus Ring 3) in den Kernel (also Ring 0) wechseln. Wir lassen bisher aber alles mit vollen Privilegien laufen und bekommen daher bei Interrupts auch keinen Stackwechsel.
 
 Als nächstes brauchen wir einen primitiven Scheduler, der uns sagt, welcher Task als nächstes dran ist. Ein Teil ist die Initialisierung, die die beiden Tasks startet und die Datenstrukturen bereitstellt. Dieser Teil muss aufgerufen werden, bevor Hardwareinterrupts aktiviert werden. Der zweite Teil ist der Scheduler selbst, der speichert, wo der alte Task gerade steht und den Zustand des nächsten Tasks zurückgibt.
 
@@ -162,7 +162,7 @@ So schön es ist, jetzt mehrere Programm gleichzeitig laufen lassen zu können, 
 
 Was ändert sich für uns mit Ring-3-Tasks? An sich ist es nicht viel. Wie oben schon angemerkt, kommt zum bereits bekannten nur noch ein Stackwechsel dazu. Wenn der Prozessor bei einem Interrupt in Ring 3 ist, also einen Ringwechsel durchführen muss, sichert er esp und ss auf den Stack (wie es in struct cpu_state schon vorgesehen ist). Beim Zurückspringen aus dem Interrupt mittels *iret* stellt er diese Register auch wieder her. Nachdem er die Register gesichert hat, lädt der Prozessor den Kernel-Stack (bestehend aus ss und esp). Diese beiden Werte kommen aus dem aktiven [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment") (TSS).
 
-Aber fangen wir beim leichten Teil an. Stellen wir den Taskzustand auf Ring 3 um. Dazu brauchen wir jetzt zusätzlich zum Kernelstack jedes Tasks, der für den Prozessorzustand und die Ausführung der Interrupt-Handler benutzt wird, einen zweiten getrennten Stack fuer jeden Task, auf dem dieser beliebig arbeiten kann. Außerdem benutzen wir jetzt die Ring-3-Segmente aus der GDT:
+Aber fangen wir beim leichten Teil an. Stellen wir den Taskzustand auf Ring 3 um. Dazu brauchen wir jetzt zusätzlich zum Kernelstack jedes Tasks, der für den Prozessorzustand und die Ausführung der Interrupt-Handler benutzt wird, einen zweiten getrennten Stack für jeden Task, auf dem dieser beliebig arbeiten kann. Außerdem benutzen wir jetzt die Ring-3-Segmente aus der GDT:
 
 \<c\>static char user_stack_a\[4096\]; static char user_stack_b\[4096\];
 
@@ -223,6 +223,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 4732; parent 4731; 2009-07-26T15:17:58Z -->
+<!-- MediaWiki page 1899; revision 4733; parent 4732; 2009-07-26T15:26:26Z -->
