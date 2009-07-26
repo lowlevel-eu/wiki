@@ -193,7 +193,7 @@ Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene
 
 }\</c\>
 
-Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon ein [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") schreibeno
+Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon ein [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") schreiben.
 
 ## Navigation
 
@@ -202,6 +202,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4723/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4727/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 4723; parent 4722; 2009-07-25T20:32:46Z -->
+<!-- MediaWiki page 1898; revision 4727; parent 4723; 2009-07-26T11:33:14Z -->
