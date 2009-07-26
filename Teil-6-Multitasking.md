@@ -36,6 +36,7 @@ Was macht jetzt einen Task aus? Was sich zwischen den einzelnen Tasks unterschei
        unsigned long   ebp;
        unsigned long   esi;
        unsigned long   edi;
+       unsigned long   eip;
        unsigned long   eflags;
 
 };\</c\> Uns sollte das vorerst reichen, denn mehr benutzen unsere Tasks im Moment nicht. In Wirklichkeit könnten beispielsweise noch die Segmentregister dazukommen.
@@ -222,6 +223,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4729/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 4729; parent 0; 2009-07-26T14:06:26Z -->
+<!-- MediaWiki page 1899; revision 4731; parent 4729; 2009-07-26T15:07:30Z -->
