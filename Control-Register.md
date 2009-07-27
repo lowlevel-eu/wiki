@@ -42,20 +42,25 @@ Das CR3-Register enthält primär die Adresse des Page Directories, sowie 2 Flag
 
 ## CR4
 
-| Bit | Funktion |
-| ----------- | ----------------------------------------------------------------------- |
-| Bit 0 | **VME** *Virtual 8086 Mode Extension* |
-| Bit 1 | **PVI** *Protected Mode Virtual Interrupt* |
-| Bit 2 | **TSD** *Time Stamp Disable* |
-| Bit 3 | **DE** *Debugging Extension* |
-| Bit 4 | **PSE** *Page Size Extension* |
-| Bit 5 | **PAE** *Physical Address Extension* |
-| Bit 6 | **MCE** *Machine Check Enable* |
-| Bit 7 | **PGE** *Page Global Enable* |
-| Bit 8 | **PCE** *Performance Monitoring Counter Enable* |
-| Bit 9 | **OSFXSR** *Operating System Support for FXSAVE and FXSTOR* |
-| Bit 10 | **OSXMMEXCPT** *Operating System Support for Unmasked SIMD Exception* |
-| Bit 11-31 | *Reserviert* |
+**63-32**
+
+*Reserviert*
+
+| 31-11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| -------------- | ------------ | -------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| *Reserviert* | OSXMMEXCPT | OSFXSR | PCE | PGE | MCE | PAE | PSE | DE | TSP | PVI | VME |
+
+- VME - *Virtual-8086 Mode Extension*
+- PVI - *Protected-Mode Virtual Interrupts*
+- TSD - *Time-Stamp Disable*
+- DE - *Debugging Extension*
+- PSE - *Page-Size Extension*
+- PAE - Das Flag schaltet *Physical-Address Extension* ein bzw. aus. (Genaueres siehe [hier](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension"))
+- MCE - *Machine-Check Enable*
+- PGE - Mit dem *Page-Global Enable* Flag kann die Unterstützung des Global-Flags in den [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") Strukturen ein bzw. aus geschaltet werden.
+- PCE - Ein gesetztes *Performance-Monitoring Counter Enable* Flag erlaubt die Verwendung der RDPMC-Instruktion auch aus Ring 3-1. Ist das Flag 0, ist die Verwendung nur aus Ring 0 gestattet.
+- OSFXSR - Mit dem Setzen des *FXSAVE/FXRSTORE Support* Flags versichert das Betriebssystem, dass es (mittels FXSAVE/FXRSTOR) zum Beispiel bei Taskswitches den Prozessorstatus für FPU- und Multimedia-Instruktionen sichert und wiederherstellt. Ohne diese „Versicherung“ ist die Unterstützung dieser Befehle von seiten der CPU deaktiviert, d.h. die CPU löst für jede dieser Instruktionen (mit Ausnahme der FXSAVE bzw. FXRSTORE Instruktionen) eine [\#UD-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus.
+- OSXMMEXCPT - Das *Unmasked Exception Support* Flag muss vom Betriebssystem gesetzt werden, wenn es einen Handler für [\#XF-Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") bereit stellt. Ist das nicht der Fall wird beim auftreten einer *«unmasked SIMD floating-point exception»* statt dessen eine \#UD-Exception ausgelöst.
 
 ## CR8
 
@@ -75,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4517; parent 4515; 2009-06-29T17:42:02Z -->
+<!-- MediaWiki page 1610; revision 4744; parent 4517; 2009-07-27T14:48:54Z -->
