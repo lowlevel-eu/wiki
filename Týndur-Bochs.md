@@ -24,7 +24,17 @@ Nun beziehen wir den Tyndur disketten Image. Diese Dateien, sind noch Komprimier
 
 ### Bochs Konfigurieren
 
-Es ist empfehlenswert nun unter Windows notepad++ hierbei zu verwenden. Wir kopieren aus den Verzeichnis, wo Bochs installiert wurde in der Regel unter "C:\Program Files\Bochs-2.4.1", die Datei "bochsrc-sample" in unseren Ordner wo unsere Tyndur image liegt. Also unter "C:\Tyndur\\ Wir öffnen die Datei mit ein Editor, ich verwende hierbei notepad++.
+Es ist empfehlenswert nun unter Windows notepad++ hierbei zu verwenden. Wir kopieren aus den Verzeichnis, wo Bochs installiert wurde
+
+in der Regel unter
+
+    C:\Program Files\Bochs-2.4.1
+
+die Datei "bochsrc-sample" in unserem Ordner wo die Tyndur Image datei liegt. Also unter
+
+    C:\Tyndur\
+
+Wir öffnen die Datei mit ein Editor, ich verwende hierbei notepad++.
 
 Dort müssen 3 sachen geändert werden.
 
@@ -32,7 +42,25 @@ Dort müssen 3 sachen geändert werden.
     Zeile 310 #ata0-master: type=disk, mode=flat, path="30M.sample" // Auskommentieren
     Zeile 330 boot: floppy
 
-Und speichern die Datei mit "Speichern unter" ab. Als namen habe ich hier: "Start_Tyndur" genommen. Damit man bequem Tyndur starten kann, empfehle ich diese Datei mit den Datei-erweiterung: "bxrc" zu speichern. Also praktisch Start_Tyndur.bxrc. Doppelt klick darauf und es startet sich Bochs mit Tyndur ;-)
+Und speichern die Datei mit
+
+    Speichern unter
+
+ab. Als namen habe ich hier:
+
+    Start_Tyndur
+
+genommen. Damit man bequem Tyndur starten kann, empfehle ich diese Datei mit den Datei-erweiterung:
+
+    .bxrc
+
+zu speichern. Also praktisch
+
+    Start_Tyndur.bxrc
+
+.
+
+Doppelt klick darauf und es startet sich Bochs mit Tyndur ;-)
 
 ## Anhang
 
@@ -917,6 +945,6 @@ Und speichern die Datei mit "Speichern unter" ab. Als namen habe ich hier: "Star
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4738/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 4737; parent 0; 2009-07-27T07:42:28Z -->
+<!-- MediaWiki page 1900; revision 4738; parent 4737; 2009-07-27T07:44:45Z -->
