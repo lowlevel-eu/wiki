@@ -20,7 +20,17 @@ Wir installieren Bochs, falls dies noch nicht geschehen ist. In der Regel kann m
 
 ### Image beziehen
 
-Nun beziehen wir den Tyndur disketten Image. Diese Dateien, sind noch Komprimiert zur bz2, also müssen sie erst entpackt werden. Ich Entpacke sie zum Testen einfach mal auf C:\Tyndur\\ Bei mir trägt das Image den Titel: "floppy-r1249.img" da ich den NightlyBuild version verwende.
+Nun beziehen wir den Tyndur disketten Image.
+
+Diese Dateien, sind noch Komprimiert zur bz2, also müssen sie erst entpackt werden. Ich Entpacke sie zum Testen einfach mal auf
+
+    C:\Tyndur\
+
+Bei mir trägt das Image den Titel:
+
+    floppy-r1249.img
+
+da ich den NightlyBuild version verwende.
 
 ### Bochs Konfigurieren
 
@@ -945,6 +955,6 @@ Doppelt klick darauf und es startet sich Bochs mit Tyndur ;-)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4738/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 4738; parent 4737; 2009-07-27T07:44:45Z -->
+<!-- MediaWiki page 1900; revision 4739; parent 4738; 2009-07-27T07:45:10Z -->
