@@ -10,7 +10,13 @@ Hallo ihr. Ich will euch in diesem Tutorial zeigen, wie man unter Windows mit de
 
 ## Was wird benötigt
 
-Zunächst einmal brauchen wir den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" und natürlich Tyndur. Es ist Dir überlassen welche Images du verwendest. Du kannst entweder die [nightly Builds](http://nightlies.tyndur.org/) nehmen oder auch [fertige Releases](http://download.tyndur.org/releases/0.2/). Bei den Releases bitte drauf achten, dass ihr den \*-floppy.img.bz2 bezieht, da dieses Tutorial sich darauf aubaut.
+Zunächst einmal brauchen wir den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" und natürlich Tyndur. Es ist Dir überlassen welche Images du verwendest. Du kannst entweder die [nightly Builds](http://nightlies.tyndur.org/) nehmen oder auch [fertige Releases](http://download.tyndur.org/releases/0.2/).
+
+Bei den Releases bitte drauf achten, dass ihr den
+
+    *-floppy.img.bz2
+
+bezieht, da dieses Tutorial sich darauf aubaut.
 
 ## Wie gehts nun weiter?
 
@@ -955,6 +961,6 @@ Doppelt klick darauf und es startet sich Bochs mit Tyndur ;-)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 4739; parent 4738; 2009-07-27T07:45:10Z -->
+<!-- MediaWiki page 1900; revision 4740; parent 4739; 2009-07-27T07:45:28Z -->
