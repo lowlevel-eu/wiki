@@ -28,7 +28,7 @@ Ein VGA Adapter besteht aus folgenden Komponenten: Dem Grafikcontroller, Speiche
 
 ### Externe Register
 
-Die externen Register stellen nützliche Informationen bereit und steuern allgemeine Dinge, wie Beispielsweise die polarität (Positiv oder Negativ) der Synchronisationsimpulse, welche vom CRT Controller an den Monitor gesendet werden. Das Ausgabe Register wird über Port 0x3C2 beschrieben und über 0x3CC gelesen. Das Status Register 0 wird über Port 0x3C2 und das Status Register 1 entweder über Port 0x3BA oder 0x3DA gelesen. (Später mehr dazu)
+Die externen Register stellen nützliche Informationen bereit und steuern allgemeine Dinge, wie beispielsweise die Polarität (positiv oder negativ) der Synchronisationsimpulse, welche vom CRT Controller an den Monitor gesendet werden. Das Ausgaberegister wird über Port 0x3C2 beschrieben und über 0x3CC gelesen. Das Statusregister 0 wird über Port 0x3C2 und das Statusregister 1 entweder über Port 0x3BA oder 0x3DA gelesen. (Später mehr dazu)
 
 ### Attribut Controller
 
@@ -61,6 +61,6 @@ Speichergröße: 64000 Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4743/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 4693; parent 4692; 2009-07-22T15:56:57Z -->
+<!-- MediaWiki page 1516; revision 4743; parent 4693; 2009-07-27T12:07:43Z -->
