@@ -1,5 +1,17 @@
 # GNU Compiler Collection
 
+| Allgemeines |  |
+| --------------- | ----------------------------------------------- |
+| Name: | GNU Compiler Collection |
+| Entwickler: | [Das GCC-Team](http://gcc.gnu.org/about.html) |
+| Akt. Version: | 4.4.1 |
+| Lizenz: | GNU GPL |
+| Plattform: | Linux, Unix<br>(inoffiziell: Windows) |
+| Homepage |  |
+
+[gcc.gnu.org](http://gcc.gnu.org/)
+
+  
 Die **GNU Compiler Collection** ist eine Sammlung von Compilern. Unterstützt werden die Sprachen C, C++, Java, Objective-C, Fortran 95, Treelang und Ada und demnächst auch D. Zusätzlich werden die Plattformen x86, AMD64 (x86_64), Alpha, Arm, IA-64, PowerPC und viele weitere unterstützt.
 
 ## GCC unter Windows
@@ -33,6 +45,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4753/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 4561; parent 4390; 2009-07-05T13:05:14Z -->
+<!-- MediaWiki page 1805; revision 4753; parent 4561; 2009-07-28T00:35:25Z -->
