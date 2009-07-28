@@ -27,10 +27,10 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
     REM ISA-based PC         : -M isapc
     REM -M isapc is added for NE2000 ISA card.
 
-    qemu.exe -L . -m 128 -fda tyndur.img -boot a -soundhw all -localtime -M isapc
+    qemu.exe -L . -m 128 -fda tyndur.img -boot a -soundhw all -localtime
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4760/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1907/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1907/index.html)
 
-<!-- MediaWiki page 1907; revision 4760; parent 4759; 2009-07-28T11:07:49Z -->
+<!-- MediaWiki page 1907; revision 4761; parent 4760; 2009-07-28T12:41:02Z -->
