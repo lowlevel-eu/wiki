@@ -43,8 +43,27 @@ Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týn
 
 Feedback im Forum, im IRC oder auf der Diskussionsseite ist erwünscht. Besonders, wenn irgendwas nicht funktioniert.
 
+## Probleme
+
+### gcc: CreateProcess: No such file or directory
+
+- Die beste Lösung dafür ist nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
+- Alternative: Dieser Fehler tritt auf, weil der gcc die Datei cc1.exe nicht finden kann. Man könnte diese (und cc1plus.exe und collect2.exe) als Workaround einfach von libexec\gcc\i586-elf\4.4.0 nach i586-elf\bin kopieren. Das sorgt allerdings unter Umständen für weitere Probleme, wenn man die mitgelieferte Bibliotheken nutzen will, siehe z.B. nächstes Problem.
+
+### error: no include path in which to search for stdio.h (oder andere .h)
+
+Eins vorweg: Die Verwendung der mitgelieferten Bibliotheken ist etwas tricky, weil dieser Compiler für das generische target i586-elf und nicht für ein bestimmtes Betriebssystem kompiliert wurde. Für alle Funktionen fehlen deswegen die Systemaufrufe, die die eigentliche Arbeit machen. Das heißt die meisten Standardfunktionen machen entweder nichts, oder bringen den Kernel/das Programm zum Absturz.
+
+- Die Lösung dafür ist nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
+
+### crt0.o: No such file or directory
+
+Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bestimmtes Betriebssystem kompiliert. Weil crt0.o für jedes Betriebssystem anders ist, ist diese nicht mitgeliefert.
+
+- Lösung: crt0.o im Linkerskript nicht erwähnen, oder selbst etwas gleichwertiges bereitstellen.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4757/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 4419; parent 4414; 2009-06-01T10:27:45Z -->
+<!-- MediaWiki page 1450; revision 4757; parent 4419; 2009-07-28T10:31:18Z -->
