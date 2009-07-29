@@ -1,6 +1,26 @@
 # Pascal
 
+Pascal ist eine strukturierte prozedurale und objektorientierte, nach Blaise Pascal und von Nikolaus Wirth im Jahre 1972 als Lehrsprache konzipierte Programmiersprache. Sie ist ähnlich mächtig wie C und wurde im Laufe der Jahre durch verschiedene Sprachkonstrukte erweitert und weiterentwickelt (Borlands Delphi, ObjectPascal).
+
+| Allgemeines |  |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name: | (Turbo/Object)Pascal |
+| Inlineassembler: | Ja (Intel-Syntax) |
+| Compiler: | FreePascal, Borland Delphi |
+| Spracheneigenschaften |  |
+| Plattformen: | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") (Hier vor allem Delphi), [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), u.a. |
+| Beispielkernel in der Sprache: | s.u. |
+| Homepage |  |
+
+[www.freepascal.net](http://www.freepascal.net/)
+
+  
+
+## Pascal in der Betriebssystementwicklung
+
 Anders als oft behauptet, ist Pascal eine Programmiersprache, die durchaus auch für die Lowlevel-Entwicklung geeignet ist. Allerdings stehen die Funktionen der Standardbibliothek nicht zur Verfügung. Als Daumenregel kann man festhalten, dass Pascal in diesem Zustand ähnlich mächtig wie C ist.
+
+  
 
 ## Beispielkernel in Pascal
 
@@ -76,6 +96,6 @@ Anschließend müssen diese drei Dateien kompiliert/assembliert und gelinkt werd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 2833; parent 2578; 2008-03-25T03:38:57Z -->
+<!-- MediaWiki page 1623; revision 4792; parent 2833; 2009-07-29T23:49:34Z -->
