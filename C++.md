@@ -2,6 +2,18 @@
 
 Da C++ eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
+| Allgemeines |  |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Name: | C++ |
+| Inlineassembler: | Ja |
+| Compiler: | g++ |
+| Spracheneigenschaften |  |
+| Plattformen: | Alle |
+| Beispielkernel in der Sprache: | [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB") |
+| Homepage |  |
+
+  
+
 # Überblick
 
 Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilfsfunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
@@ -189,6 +201,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4788/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 3380; parent 3257; 2008-09-19T20:48:04Z -->
+<!-- MediaWiki page 1486; revision 4788; parent 3380; 2009-07-29T23:25:51Z -->
