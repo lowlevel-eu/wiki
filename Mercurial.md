@@ -1,10 +1,10 @@
 # Mercurial
 
-Mercurial ist ein in Python entwickeltes Version Control System, das wie die meisten in erster Line über die Shell gesteuert wird. Wobei alle Kommandos mit hg, dem Elementsymbol für Quecksilber(engl. Mercury), beginnen. Es gibt aber auch eine Explorer Erweiterung(TortoiseHg) mit Hilfe derer Mercurial über das Kontext-Menu gesteuert werden kann und IDEs wie zum Beispiel NetBeans und KDevelop die Mercurial unterstützen.
+Mercurial ist ein in Python entwickeltes Version Control System, das wie die meisten in erster Linie über die Shell gesteuert wird. Wobei alle Kommandos mit hg, dem Elementsymbol für Quecksilber (engl. Mercury), beginnen. Es gibt aber auch eine Explorererweiterung (TortoiseHg) mit Hilfe derer Mercurial über das Kontextmenü gesteuert werden kann und IDEs, wie zum Beispiel NetBeans und KDevelop, die Mercurial unterstützen.
 
 ## Eigenschaften
 
-Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d.h. es benötigt keinen zentralen Server um die Repositories vieler Entwickler miteinander zu synchronisieren.
+Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d.h. es benötigt keinen zentralen Server, um die Repositories vieler Entwickler miteinander zu synchronisieren.
 
 ### Besonderheiten
 
@@ -24,11 +24,11 @@ Ein neues hg-Repository zu erstellen ist ganz einfach. Mittels *init*-Befehl lä
 
     $ hg init [dir]
 
-Dabei ist es egal ob sich in dem betreffenden Verzeichnis bereits Quellcodes befinden oder nicht. Das Repository wird zunächst noch kein der möglicherweise vorhandenen Dateien unter Versionkontrolle haben.
+Dabei ist es egal ob sich in dem betreffenden Verzeichnis bereits Quellcodes befinden oder nicht. Das Repository wird zunächst noch keine der möglicherweise vorhandenen Dateien unter Versionkontrolle haben.
 
-### Repository Clonen
+### Repository klonen
 
-Wenn bereits ein Repository für das gewünschte Projekt existiert, muss kein neues Repository erstellt werden. Es reicht das existierende für die eigenen Arbeit zu Clonen.
+Wenn bereits ein Repository für das gewünschte Projekt existiert, muss kein neues Repository erstellt werden. Es reicht, das existierende für die eigene Arbeit zu klonen.
 
     $ hg clone <URI>
 
@@ -36,19 +36,19 @@ Dabei wird der *default-path* automatisch auf die angegebene URI gesetzt, so das
 
 ### Dateien hinzufügen/entferen
 
-Um Dateien in die Obhut des Repositories zu geben. Müssen sie zunächst einmal hinzugefügt werden.
+Um Dateien in die Obhut des Repositories zu geben müssen sie zunächst einmal hinzugefügt werden.
 
     $ hg add <file>
 
-Wenn alle Dateien bislang nicht unter Versionkontrolle stehen dem Repository hinzugefügt werden sollen kann das auch mit dem *addremove*-Befehl geschehen.
+Wenn alle Dateien, die bislang nicht unter Versionkontrolle stehen, dem Repository hinzugefügt werden sollen, so kann das auch mit dem *addremove*-Befehl geschehen.
 
     $ hg addremove
 
-Zusätzlich werden dabei alle Dateien, die manuell aus der Verzeichnisstruktur gelöscht wurden, als aus dem Repository gelöscht markiert. Um einzelne Dateien aus dem Repository zu entfernen existiert der *remove*-Befehl
+Zusätzlich werden dabei alle Dateien, die manuell aus der Verzeichnisstruktur gelöscht wurden, als aus dem Repository gelöscht markiert. Um einzelne Dateien aus dem Repository zu entfernen existiert der *remove*-Befehl.
 
     $ hg remove <file>
 
-Damit diese Änderungen wirksam werden müssen sie commited werden.
+Damit diese Änderungen wirksam werden, müssen sie commited werden.
 
 ### Änderungen übernehmen
 
@@ -56,11 +56,11 @@ Wurden Änderungen gemacht müssen sie mit *commit*-Befehl übernommen werden.
 
     $ hg commit
 
-Mercurial erstellt jetzt eine neue Revision des Projekts und gibt die Möglichkeit die Änderungen mit einer Commit-Message zu kommentieren.
+Mercurial erstellt jetzt eine neue Revision des Projekts, und gibt die Möglichkeit die Änderungen mit einer Commit-Message zu kommentieren.
 
 ### Arbeitsverzeichnis aktualisieren
 
-Mit dem *update*-Befehl lässt sich das Arbeitsverzeichnis auf den stand jeder beliebigen Revision des Repositories bringen.
+Mit dem *update*-Befehl lässt sich das Arbeitsverzeichnis auf den Stand jeder beliebigen Revision des Repositories bringen.
 
     $ hg update [REV]
 
@@ -68,11 +68,11 @@ Wird keine keine Revision angegeben aktualisiert Mercurial automatisch auf die l
 
 ### Änderungen holen/importieren
 
-Um Änderungen aus anderen Repositories zu übernehmen gibt es verschiedene Möglichkeiten. Eine davon ist der *pull*-Befehl. Er übernimmt alle Änderungen aus dem Quellrepository die im aktuellen noch Fehlen.
+Um Änderungen aus anderen Repositories zu übernehmen gibt es verschiedene Möglichkeiten. Eine davon ist der *pull*-Befehl. Er übernimmt alle Änderungen aus dem Quellrepository, die im aktuellen noch fehlen.
 
     $ hg pull [<URI>]
 
-Anders als beispielsweise [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") wird dabei aber das Arbeitsverzeichnis nicht aktualisiert. Dem Entwickler wird also die Möglichkeit gegeben die seine Arbeit ungestört fortzusetzen bevor er sich entscheidet die fremden Änderungen zu inspizieren oder mit den eigenen zu vereinen *(merge)*.
+Anders als beispielsweise bei [gits](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") pull-Befehl wird dabei aber das Arbeitsverzeichnis nicht aktualisiert. Dem Entwickler wird also die Möglichkeit gegeben, seine Arbeit ungestört fortzusetzen, bevor er sich entscheidet, die fremden Änderungen zu inspizieren oder mit den eigenen zu vereinen *(merge)*.
 
 Weitere Möglichkeiten fremde Änderungen zu übernehmen sind das importieren von Patches oder Änderungs-Bündeln mit den Befehlen *import* bzw. *unbundle*.
 
@@ -103,6 +103,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 4686; parent 4679; 2009-07-21T22:20:55Z -->
+<!-- MediaWiki page 1891; revision 4774; parent 4686; 2009-07-29T21:59:15Z -->
