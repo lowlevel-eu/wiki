@@ -23,7 +23,7 @@ Die IVT belegt somit genau 256 \* 4 = 1024 Byte. Die genaue Verwendung dieser Ei
 
 ## Während des Bootvorgangs
 
-Nach dem Start des Computers wird die IVT automatisch vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") erstellt und die Adressen zeigen auf Funktionen, die entweder das BIOS einem Betriebssystem zur Verfügung stellt oder die benötigt werden, um mit der Hardware zu kommunizieren. Nach dem [Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") kann es für ein Betriebssystem sinnvoll sein einige Interrupts durch eigene Funktionen behandeln zu lassen. Dazu zählt vor allem die Exceptions.
+Nach dem Start des Computers wird die IVT automatisch vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") erstellt und die Adressen zeigen auf Funktionen, die entweder das BIOS einem Betriebssystem zur Verfügung stellt oder die benötigt werden, um mit der Hardware zu kommunizieren. Nach dem [Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") kann es für ein Betriebssystem sinnvoll sein einige Interrupts durch eigene Funktionen behandeln zu lassen. Dazu zählen vor allem die Exceptions.
 
 ## Beispiel
 
@@ -64,6 +64,6 @@ sti \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4784/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 4123; parent 3142; 2009-03-10T20:04:52Z -->
+<!-- MediaWiki page 1540; revision 4784; parent 4123; 2009-07-29T23:00:56Z -->
