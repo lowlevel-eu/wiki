@@ -6,17 +6,17 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Einleitung
 
-Hallo ihr. Ich will euch in diesem Tutorial zeigen, wie man unter Windows mit den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" Tyndur ausprobieren kann. Ich verwende als Betriebsystem den Windows 7 Beta.
+Hallo ihr. Ich will euch in diesem Tutorial zeigen, wie man unter Windows mit den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" Tyndur ausprobieren kann. Ich verwende als Betriebssystem die Windows 7 Beta.
 
 ## Was wird benötigt
 
-Zunächst einmal brauchen wir den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" und natürlich Tyndur. Es ist Dir überlassen welche Images du verwendest. Du kannst entweder die [nightly Builds](http://nightlies.tyndur.org/) nehmen oder auch [fertige Releases](http://download.tyndur.org/releases/0.2/).
+Zunächst einmal brauchen wir den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" und natürlich Týndur. Es ist Dir überlassen, welche Images du verwendest. Du kannst entweder die [Nightly Builds](http://nightlies.tyndur.org/) nehmen oder auch [fertige Releases](http://download.tyndur.org/releases/0.2/).
 
-Bei den Releases bitte drauf achten, dass ihr den
+Bei den Releases bitte drauf achten, dass ihr
 
     *-floppy.img.bz2
 
-bezieht, da dieses Tutorial sich darauf aubaut.
+bezieht, da dieses Tutorial sich darauf aufbaut.
 
 ## Wie gehts nun weiter?
 
@@ -26,57 +26,19 @@ Wir installieren Bochs, falls dies noch nicht geschehen ist. In der Regel kann m
 
 ### Image beziehen
 
-Nun beziehen wir den Tyndur disketten Image.
-
-Diese Dateien, sind noch Komprimiert zur bz2, also müssen sie erst entpackt werden. Ich Entpacke sie zum Testen einfach mal auf
-
-    C:\Tyndur\
-
-Bei mir trägt das Image den Titel:
-
-    floppy-r1249.img
-
-da ich den NightlyBuild version verwende.
+Nun beziehen wir das Týndur-Diskettenimage. Diese Dateien, sind noch komprimiert mit bz2, also müssen sie erst entpackt werden. Ich entpacke sie zum Testen einfach mal auf `C:\Tyndur\` Bei mir trägt das Image den Titel `floppy-r1249.img`, da ich die Nightly-Build-Version verwende.
 
 ### Bochs Konfigurieren
 
-Es ist empfehlenswert nun unter Windows notepad++ hierbei zu verwenden. Wir kopieren aus den Verzeichnis, wo Bochs installiert wurde
+Es ist empfehlenswert nun unter Windows Notepad++ hierbei zu verwenden. Wir kopieren aus den Verzeichnis, wo Bochs installiert wurde in der Regel unter `C:\Program Files\Bochs-2.4.1` die Datei "bochsrc-sample" in unserem Ordner wo die Týndur-Imagedatei liegt. Also unter `C:\Tyndur\` Wir öffnen die Datei mit einem Editor, ich verwende hierbei Notepad++.
 
-in der Regel unter
-
-    C:\Program Files\Bochs-2.4.1
-
-die Datei "bochsrc-sample" in unserem Ordner wo die Tyndur Image datei liegt. Also unter
-
-    C:\Tyndur\
-
-Wir öffnen die Datei mit ein Editor, ich verwende hierbei notepad++.
-
-Dort müssen 3 sachen geändert werden.
+Dort müssen drei Sachen geändert werden.
 
     Zeile 223 floppya: 1_44=C:\Tyndur\floppy-r1249.img, status=inserted
     Zeile 310 #ata0-master: type=disk, mode=flat, path="30M.sample" // Auskommentieren
     Zeile 330 boot: floppy
 
-Und speichern die Datei mit
-
-    Speichern unter
-
-ab. Als namen habe ich hier:
-
-    Start_Tyndur
-
-genommen. Damit man bequem Tyndur starten kann, empfehle ich diese Datei mit den Datei-erweiterung:
-
-    .bxrc
-
-zu speichern. Also praktisch
-
-    Start_Tyndur.bxrc
-
-.
-
-Doppelt klick darauf und es startet sich Bochs mit Tyndur ;-)
+Und speichern die Datei mit `Speichern unter` ab. Als Namen habe ich hier `Start_Tyndur` genommen. Damit man bequem Týndur starten kann, empfehle ich diese Datei mit den Dateierweiterung: `.bxrc` zu speichern. Also praktisch `Start_Tyndur.bxrc`. Doppelt klick darauf und es startet sich Bochs mit Týndur ;-)
 
 ## Anhang
 
@@ -961,6 +923,6 @@ Doppelt klick darauf und es startet sich Bochs mit Tyndur ;-)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 4740; parent 4739; 2009-07-27T07:45:28Z -->
+<!-- MediaWiki page 1900; revision 4785; parent 4740; 2009-07-29T23:10:55Z -->
