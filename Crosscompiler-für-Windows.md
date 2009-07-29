@@ -1,6 +1,6 @@
 # Crosscompiler für Windows
 
-Für Windows wird ein [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benötigt, um [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Dateien zu erstellen, denn die MinGW- und cygwin-Compiler unterstützen dieses Format nicht. Das ELF-Format bietet gegenüber dem PE-Format von Windows den Vorteil, dass es weniger Sonderbehandlung und Workarounds bei der Entwicklung eines Betriebssystems benötigt. Die Verwendung eines Cross-Compilers bietet darüberhinaus mehr Kontrolle über den Ablauf des Kompiliervorgangs.
+Für Windows wird ein [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benötigt, um [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Dateien zu erstellen, denn die MinGW- und cygwin-Compiler unterstützen dieses Format nicht. Das ELF-Format bietet gegenüber dem PE-Format von Windows den Vorteil, dass es weniger Sonderbehandlung und Workarounds bei der Entwicklung eines Betriebssystems benötigt. Die Verwendung eines Cross-Compilers bietet darüber hinaus mehr Kontrolle über den Ablauf des Kompiliervorgangs.
 
 Dieser Artikel soll eine kleine Anleitung sein, wie man einen vorkompilierten [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") unter Windows so installiert, dass man damit [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") kompilieren kann. Allerdings ist der verwendete Compiler nicht auf ein bestimmtes System beschränkt, sondern erzeugt Dateien für das allgemeine Target *i586-elf*. Es sollte also kein Problem sein, diesen Compiler für ein anderes OS einzusetzen.
 
@@ -14,7 +14,7 @@ Der Compiler ist verfügbar unter <http://jidder.de/lost/files/crosstools-comple
 
 ## Installation
 
-Im Prinzip reicht es das Archiv zu entpacken (z.B. nach C:\crosstools), und in die PATH-Variable das Verzeichnis C:\crosstools\bin einzutragen. Alle Programme haben dann das Präfix "i586-elf-". Zum Beispiel der C-Compiler kann mit *i586-elf-gcc* aufgerufen werden.
+Im Prinzip reicht es, das Archiv zu entpacken (z.B. nach C:\crosstools), und in die PATH-Variable das Verzeichnis C:\crosstools\bin einzutragen. Alle Programme haben dann das Präfix "i586-elf-". Zum Beispiel kann der C-Compiler mit *i586-elf-gcc* aufgerufen werden.
 
 týndur erwartet, dass dieses Präfix in der *config.sh* eingetragen wird, damit die Makefiles den Compiler finden. Dazu muss die Variable *COMPILER_PREFIX_I386* in Zeile 3 mittels *COMPILER_PREFIX_I386=i586-elf-* entsprechend gesetzt werden.
 
@@ -22,7 +22,7 @@ Alternativ kann man statt C:\crosstools\bin auch C:\crosstools\i586-elf\bin in d
 
 ### MSYS einrichten
 
-Für weitere Werkzeuge wie make, bash, und so weiter, wird wie bei MinGW die MSYS-Umgebung benötigt. Wenn MSYS bereits installiert ist, kann es problemlos weiter verwendet werden. In der Regel bedeutet das, dass das MSYS-Verzeichnis (Standard C:\msys\bin) ebenfalls in die PATH-Variable eingetragen werden muss.
+Für weitere Werkzeuge wie make, bash usw. wird wie bei MinGW die MSYS-Umgebung benötigt. Wenn MSYS bereits installiert ist, kann es problemlos weiter verwendet werden. In der Regel bedeutet das, dass das MSYS-Verzeichnis (Standard C:\msys\bin) ebenfalls in die PATH-Variable eingetragen werden muss.
 
 Wenn bisher noch kein MinGW installiert war, ist vermutlich auch MSYS noch nicht eingerichtet. MSYS kann auf der [SourceForge-Seite von MinGW](http://sourceforge.net/project/showfiles.php?group_id=2435&package_id=24963) heruntergeladen werden. Die Setup-Datei hat einen Namen in der Form MSYS-1.0.xx.exe, und muss nach dem Download einfach abgearbeitet werden. Um MSYS zu verwenden, muss dann das bin-Verzeichnis ebenfalls in die PATH-Umgebungsvariable eingetragen werden.
 
@@ -32,12 +32,12 @@ Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf Source
 
 ## Cross-Compiler Kommandozeile
 
-Ich verwende für týndur eine Batch-Datei, die mir Umgebung einrichtet. Sie richtet die PATH-Variable ein, und startet die Kommandozeile. Zum Beispiel kann sie so aussehen:
+Ich verwende für týndur eine Batch-Datei, die mir die Umgebung einrichtet. Sie richtet die PATH-Variable ein, und startet die Kommandozeile. Zum Beispiel kann sie so aussehen:
 
     SET PATH=C:\msys\bin;C:\crosstools\i586-elf\bin;C:\Programme\NASM;%PATH%
     cmd /k cls
 
-Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týndur und starte sie. Durch die Eingabe von make sollte dann týndur vollständig kompilieren.
+Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týndur und starte sie. Durch die Eingabe von *make* sollte dann týndur vollständig kompilieren.
 
 ## Feedback
 
@@ -47,14 +47,14 @@ Feedback im Forum, im IRC oder auf der Diskussionsseite ist erwünscht. Besonder
 
 ### gcc: CreateProcess: No such file or directory
 
-- Die beste Lösung dafür ist nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
+- Die beste Lösung dafür ist, nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
 - Alternative: Dieser Fehler tritt auf, weil der gcc die Datei cc1.exe nicht finden kann. Man könnte diese (und cc1plus.exe und collect2.exe) als Workaround einfach von libexec\gcc\i586-elf\4.4.0 nach i586-elf\bin kopieren. Das sorgt allerdings unter Umständen für weitere Probleme, wenn man die mitgelieferte Bibliotheken nutzen will, siehe z.B. nächstes Problem.
 
 ### error: no include path in which to search for stdio.h (oder andere .h)
 
 Eins vorweg: Die Verwendung der mitgelieferten Bibliotheken ist etwas tricky, weil dieser Compiler für das generische target i586-elf und nicht für ein bestimmtes Betriebssystem kompiliert wurde. Für alle Funktionen fehlen deswegen die Systemaufrufe, die die eigentliche Arbeit machen. Das heißt die meisten Standardfunktionen machen entweder nichts, oder bringen den Kernel/das Programm zum Absturz.
 
-- Die Lösung dafür ist nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
+- Die Lösung dafür ist, nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
 
 ### crt0.o: No such file or directory
 
@@ -64,6 +64,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4757/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4776/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 4757; parent 4419; 2009-07-28T10:31:18Z -->
+<!-- MediaWiki page 1450; revision 4776; parent 4757; 2009-07-29T22:13:41Z -->
