@@ -8,7 +8,9 @@ Des Weiteren muss im BIOS/EFI die Möglichkeit gegeben sein, ein USB Speichermed
 
 # Der USB-Stick
 
-**ACHTUNG: Sichert vorher alle Daten von dem Stick, denn spätestens nach dem überschreiben des Stick-Inhalts mit Null-Bytes werden diese nicht wiederherstellbar sein!**
+**Warnung**
+
+Sichert vorher alle Daten von dem Stick, denn spätestens nach dem überschreiben des Stick-Inhalts mit Null-Bytes werden diese **nicht wiederherstellbar** sein!
 
 ## Löschen der Dateien
 
@@ -169,6 +171,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 4318; parent 4317; 2009-04-24T12:06:23Z -->
+<!-- MediaWiki page 1737; revision 4763; parent 4318; 2009-07-29T00:12:26Z -->
