@@ -1,7 +1,5 @@
 # C\+\+
 
-Da C++ eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
-
 | Allgemeines |  |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Name: | C++ |
@@ -13,6 +11,7 @@ Da C++ eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C
 | Homepage |  |
 
   
+**C++** wurde 1983 von Bjarne Stroustoup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
 # Überblick
 
@@ -201,6 +200,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4788/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 4788; parent 3380; 2009-07-29T23:25:51Z -->
+<!-- MediaWiki page 1486; revision 4799; parent 4788; 2009-07-29T23:58:16Z -->
