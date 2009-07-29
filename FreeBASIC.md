@@ -3,7 +3,7 @@
 | Allgemeines |  |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | FreeBasic |
-| Inlineassembler: | Ja (GAS/AT&T-Syntax) |
+| Inlineassembler: | Ja (Intel-Syntax) |
 | Compiler: | FBC (arbeitet mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") zusammen) |
 | Spracheneigenschaften |  |
 | Plattformen: | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), u.a. |
@@ -99,6 +99,6 @@ Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompilier
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 4781; parent 3211; 2009-07-29T22:50:50Z -->
+<!-- MediaWiki page 1624; revision 4787; parent 4781; 2009-07-29T23:23:56Z -->
