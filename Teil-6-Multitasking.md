@@ -26,11 +26,11 @@ void task_b(void) {
 
 Nachdem diese Vorbereitungen getroffen sind, können wir an das eigentliche Multitasking denken. Unser nächster Schritt ist es, in einen Task hineinzuspringen. Teil zwei ist das Herausspringen, aber das heben wir uns erst einmal für später auf.
 
-Was macht jetzt einen Task aus? Was sich zwischen den einzelnen Tasks unterscheidet, ist der Prozessorzustand - also der Inhalt der Register. Wenn wir einen Task unterbrechen, müssen wir seine Registerbelegung speichern und bevor wir in einen Tasks hineinspringen müssen wir den Zustand wiederherstellen (bzw. beim ersten Einsprung einen vernünftigen Anfangszustand herstellen).
+Was macht jetzt einen Task aus? Was sich zwischen den einzelnen Tasks unterscheidet, ist der Prozessorzustand – also der Inhalt der Register. Wenn wir einen Task unterbrechen, müssen wir seine Registerbelegung speichern, und bevor wir in einen Tasks hineinspringen müssen wir den Zustand wiederherstellen (bzw. beim ersten Einsprung einen vernünftigen Anfangszustand herstellen).
 
 Eine "Struktur für den Prozessorzustand" kommt irgendwie bekannt vor. In der Tat haben wir bei der Interruptbehandlung schon eine *struct cpu_state* definiert, die wir direkt weiterverwenden können. Die Struktur, wie wir sie in Teil 5 definiert haben, sollte vorerst reichen, denn mehr als die Allzweckregister und eflags benutzen unsere Tasks im Moment nicht. Wenn man es richtig macht, könnten beispielsweise noch die Segmentregister dazukommen.
 
-Wir benutzen die Struktur sogar schon an der richtigen Stelle: Ein Taskwechsel findet immer in einem Interrupthandler statt - das kann z.B. ein Timerinterrupt sein, der signalisiert, dass der Prozess seine Zeit aufgebraucht hat, oder ein Syscall, mit dem das Programm anzeigt, dass es vorzeitig abgeben möchte. Genau genommen findet sogar der ganze Kernel nur noch in Interrupthandlern statt, sobald der erste Task gestartet ist.
+Wir benutzen die Struktur sogar schon an der richtigen Stelle: Ein Taskwechsel findet immer in einem Interrupthandler statt – das kann z.B. ein Timerinterrupt sein, der signalisiert, dass der Prozess seine Zeit aufgebraucht hat, oder ein Syscall, mit dem das Programm anzeigt, dass es vorzeitig den Prozessor abgeben möchte. Genau genommen findet sogar der ganze Kernel nur noch in Interrupthandlern statt, sobald der erste Task gestartet ist.
 
 Legen wir also einmal den Startzustand für die beiden Tasks fest, jeder bekommt seinen Stack und dort drin eine struct cpu_state: \<c\>static char stack_a\[4096\]; static char stack_b\[4096\];
 
@@ -141,13 +141,13 @@ Der Interrupt-Handler muss jetzt nur noch diesen Rückgabewert verarbeiten, d.h.
        // CPU-Zustand wiederherstellen
        ...</asm>
 
-Das war's. Beim nächsten Timerinterrupt fängt der Kernel fröhlich an Multitasking zu machen und abwechselnd As und Bs auf den Bildschirm zu schreiben. Wer nicht auf den Timerinterrupt warten möchte, kann auch den Interrupt 0x20 als Software-Interrupt auslösen.
+Das war's. Beim nächsten Timerinterrupt fängt der Kernel fröhlich an, Multitasking zu machen, und abwechselnd As und Bs auf den Bildschirm zu schreiben. Wer nicht auf den Timerinterrupt warten möchte kann auch den Interrupt 0x20 als Software-Interrupt auslösen.
 
 ## Userspace
 
 So schön es ist, jetzt mehrere Programm gleichzeitig laufen lassen zu können, perfekt ist das alles noch nicht. Die Tasks laufen alle in Ring 0, haben also alle Privilegien, die sie sich wünschen. Was, wenn ein Programm einfach Interrupts ausschaltet? Das System wäre dann lahmgelegt. Die Programme müssen also nach Ring 3.
 
-Was ändert sich für uns mit Ring-3-Tasks? An sich ist es nicht viel. Wie oben schon angemerkt, kommt zum bereits bekannten nur noch ein Stackwechsel dazu. Wenn der Prozessor bei einem Interrupt in Ring 3 ist, also einen Ringwechsel durchführen muss, sichert er esp und ss auf den Stack (wie es in struct cpu_state schon vorgesehen ist). Beim Zurückspringen aus dem Interrupt mittels *iret* stellt er diese Register auch wieder her. Nachdem er die Register gesichert hat, lädt der Prozessor den Kernel-Stack (bestehend aus ss und esp). Diese beiden Werte kommen aus dem aktiven [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment") (TSS).
+Was ändert sich für uns mit Ring-3-Tasks? An sich ist es nicht viel. Wie oben schon angemerkt, kommt zum bereits Bekannten nur noch ein Stackwechsel dazu. Wenn der Prozessor bei einem Interrupt in Ring 3 ist, also einen Ringwechsel durchführen muss, sichert er esp und ss auf den Stack (wie es in struct cpu_state schon vorgesehen ist). Beim Zurückspringen aus dem Interrupt mittels *iret* stellt er diese Register auch wieder her. Nachdem er die Register gesichert hat, lädt der Prozessor den Kernel-Stack (bestehend aus ss und esp). Diese beiden Werte kommen aus dem aktiven [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment") (TSS).
 
 Aber fangen wir beim leichten Teil an. Stellen wir den Taskzustand auf Ring 3 um. Dazu brauchen wir jetzt zusätzlich zum Kernelstack jedes Tasks, der für den Prozessorzustand und die Ausführung der Interrupt-Handler benutzt wird, einen zweiten getrennten Stack für jeden Task, auf dem dieser beliebig arbeiten kann. Außerdem benutzen wir jetzt die Ring-3-Segmente aus der GDT:
 
@@ -201,7 +201,7 @@ Außerdem müssen wir das TSS noch aktivieren. Dazu fügen wir der GDT einen zus
        // Taskregister neu laden
        asm volatile("ltr %%ax" : : "a" (5 << 3));</c>
 
-Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch ein *asm("cli; hlt");* in einem der Tasks ausprobieren. Bevor die Tasks nach Ring 3 verschoben worden sind, durften sie die Befehle ausführen und der Kernel kam zum Stillstand. Jetzt wird eine Exception ausgelöst (13 = \#GP = General Protection Fault) und der Kernel gibt eine Fehlermeldung aus (bevor er sich ebenfalls in eine Endlosschleife begibt - normal würde er hier stattdessen einfach den Task beenden).
+Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch ein *asm("cli; hlt");* in einem der Tasks ausprobieren. Bevor die Tasks nach Ring 3 verschoben worden sind, durften sie die Befehle ausführen und der Kernel kam zum Stillstand. Jetzt wird eine Exception ausgelöst (13 = \#GP = General Protection Fault) und der Kernel gibt eine Fehlermeldung aus (bevor er sich ebenfalls in eine Endlosschleife begibt – normal würde er hier stattdessen einfach den Task beenden).
 
 ## Navigation
 
@@ -210,6 +210,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4783/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 4736; parent 4733; 2009-07-26T19:26:05Z -->
+<!-- MediaWiki page 1899; revision 4783; parent 4736; 2009-07-29T23:00:28Z -->
