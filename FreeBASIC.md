@@ -1,5 +1,18 @@
 # FreeBASIC
 
+| Allgemeines |  |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name: | FreeBasic |
+| Inlineassembler: | Ja (GAS/AT&T-Syntax) |
+| Compiler: | FBC (arbeitet mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") zusammen) |
+| Spracheneigenschaften |  |
+| Plattformen: | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), u.a. |
+| Beispielkernel in der Sprache: | s.u. |
+| Homepage |  |
+
+[www.freebasic.net](http://www.freebasic.net/)
+
+  
 Ob man BASIC für einen Kernel benutzen kann, ist in erster Linie eine akademische Frage. Der typische BASIC-Programmierer hat nicht die Kenntnisse, ein OS zu schreiben, und die Fortgeschritteneren wollen mit BASIC in aller Regel nichts zu tun haben.
 
 Der Vollständigkeit halber: Es geht. Ich habe dazu FreeBASIC als Compiler benutzt.
@@ -75,7 +88,7 @@ FUNCTION fb_In CDECL ALIAS "fb_In" (port as USHORT) AS UBYTE
 
 END FUNCTION \</freebasic\>
 
-Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompiliert. Zum linken muss jetzt der folgende Befehl benutzt werden:
+Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompiliert. Zum Linken muss jetzt der folgende Befehl benutzt werden:
 
     ld -Ttext=0x100000 kernel.o rtlib.o -melf_i386 -o basic.krn
 
@@ -86,6 +99,6 @@ Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompilier
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 3211; parent 3208; 2008-08-16T14:41:31Z -->
+<!-- MediaWiki page 1624; revision 4781; parent 3211; 2009-07-29T22:50:50Z -->
