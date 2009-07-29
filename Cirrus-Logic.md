@@ -4,7 +4,7 @@ Qemu emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es se
 
 ¹So weit ich es gesehen habe, werden die Grundoperationen hardwarebeschleunigt dargestellt. Alle Angaben ohne Gewähr.
 
-## Resourcen
+## Ressourcen
 
 Die Grafikkarte ist eine [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle Qemus an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
 
@@ -129,6 +129,6 @@ Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Berei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4771/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4772/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 4771; parent 4080; 2009-07-29T20:33:42Z -->
+<!-- MediaWiki page 1743; revision 4772; parent 4771; 2009-07-29T21:46:18Z -->
