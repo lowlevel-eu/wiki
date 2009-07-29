@@ -73,7 +73,7 @@ An dieser Stelle wären wir mit dem Code fertig. Jetzt müssen wir ihn noch komp
     LD = ld
 
     ASFLAGS = -m32
-    CCFLAGS = -m32 -Wall -g
+    CCFLAGS = -m32 -Wall -g -nostdlib -nodefaultlibs
     LDFLAGS = -melf_i386 -Ttext=0x100000
 
     kernel: $(OBJS)
@@ -201,6 +201,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4726/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4726; parent 4724; 2009-07-26T10:30:33Z -->
+<!-- MediaWiki page 1897; revision 4764; parent 4726; 2009-07-29T00:24:52Z -->
