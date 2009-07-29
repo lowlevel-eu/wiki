@@ -1,7 +1,5 @@
 # D
 
-D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von C++ und der Nähe zum System von C zu vereinen.
-
 | Allgemeines |  |
 | -------------------------------- | ------------------------------- |
 | Name: | D |
@@ -15,6 +13,7 @@ D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1
 <http://www.digitalmars.com/d>
 
   
+D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von C++ und der Nähe zum System von C zu vereinen.
 
 ## D als Sprache für ein Betriebssystem
 
@@ -246,6 +245,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4553; parent 4504; 2009-07-04T20:54:23Z -->
+<!-- MediaWiki page 1863; revision 4796; parent 4553; 2009-07-29T23:54:00Z -->
