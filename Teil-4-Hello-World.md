@@ -111,7 +111,7 @@ Wenn wir nicht mit qemu 0.11 direkt booten, sondern ein Diskettenimage (bzw. ein
 
 Der Kernel scheint zwar wunderbar zu funktionieren, aber er enthält einen Fehler. Der Fehler ist im Moment nicht dramatisch, aber irgendwann wird er unerwartet zuschlagen - wir sollten es deshalb lieber gleich richtig machen.
 
-Wie bereits erwähnt muss der Multiboot-Header der Kernels in den ersten 8 kB der Datei liegen. Das funktioniert im Moment mehr oder weniger zufälligerweise. Die Sektion .text landet zwar am Anfang der Binary, aber in welcher Reihenfolge die Dateien hineingeschrieben werden, bleibt dem Linker überlassen. Wir können es aber erzwingen, dass .text mit dem Multiboot-Header anfängt: Wir legen ihn zunächst in seine eigenen Sektion und sagen dem Linker dann, wie er es zusammenbauen soll.
+Wie bereits erwähnt muss der Multiboot-Header des Kernels in den ersten 8 kB der Datei liegen. Das funktioniert im Moment mehr oder weniger zufälligerweise. Die Sektion .text landet zwar am Anfang der Binary, aber in welcher Reihenfolge die Dateien hineingeschrieben werden, bleibt dem Linker überlassen. Wir können es aber erzwingen, dass .text mit dem Multiboot-Header anfängt: Wir legen ihn zunächst in seine eigenen Sektion und sagen dem Linker dann, wie er es zusammenbauen soll.
 
 Dazu ändern wir den Anfang der start.S folgendermaßen ab: \<asm\>.section multiboot
 
@@ -176,7 +176,7 @@ Nach sehr viel sehr detailliert besprochenem Code kommen wir zu einigen Aufgaben
 
 In den folgenden Teilen gehe ich davon aus, dass die unteren drei Aufgaben von einer Funktion kprintf() übernommen werden, die für die genannten Fälle genau so funktioniert, wie die normale printf()-Funktion. Die Funktionen kommen am besten in ihre eigene Quellcodedatei (z.B. console.c) und werden in den Beispielen in der Headerdatei *console.h* erwartet.
 
-Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Parameterliste auszuwerten. gcc bietet dafür bereits Builtins an (bzw. eine komplette *stdarg.h* Header, wenn man einen [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benutzt), so dass die Headerdatei nur folgendes enthalten muss: \<c\> typedef \_\_builtin_va_list va_list;
+Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Parameterliste auszuwerten. gcc bietet dafür bereits Builtins an (bzw. eine komplette *stdarg.h*, wenn man einen [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benutzt), so dass die Headerdatei nur folgendes enthalten muss: \<c\> typedef \_\_builtin_va_list va_list;
 
 1.  define va_start(ap, X) \_\_builtin_va_start(ap, X)
 2.  define va_arg(ap, type) \_\_builtin_va_arg(ap, type)
@@ -201,6 +201,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4768/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4767; parent 4766; 2009-07-29T07:46:09Z -->
+<!-- MediaWiki page 1897; revision 4768; parent 4767; 2009-07-29T07:56:25Z -->
