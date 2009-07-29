@@ -1,7 +1,5 @@
 # Pascal
 
-Pascal ist eine strukturierte prozedurale und objektorientierte, nach Blaise Pascal und von Nikolaus Wirth im Jahre 1972 als Lehrsprache konzipierte Programmiersprache. Sie ist ähnlich mächtig wie C und wurde im Laufe der Jahre durch verschiedene Sprachkonstrukte erweitert und weiterentwickelt (Borlands Delphi, ObjectPascal).
-
 | Allgemeines |  |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | (Turbo/Object)Pascal |
@@ -15,6 +13,7 @@ Pascal ist eine strukturierte prozedurale und objektorientierte, nach Blaise Pas
 [www.freepascal.net](http://www.freepascal.net/)
 
   
+Pascal ist eine strukturierte, prozedurale, objektorientierte, nach Blaise Pascal benannte, und von Nikolaus Wirth im Jahre 1972 als Lehrsprache konzipierte Programmiersprache. Sie ist ähnlich mächtig wie C und wurde im Laufe der Jahre durch verschiedene Sprachkonstrukte erweitert und weiterentwickelt (Borlands Delphi, ObjectPascal).
 
 ## Pascal in der Betriebssystementwicklung
 
@@ -96,6 +95,6 @@ Anschließend müssen diese drei Dateien kompiliert/assembliert und gelinkt werd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 4792; parent 2833; 2009-07-29T23:49:34Z -->
+<!-- MediaWiki page 1623; revision 4794; parent 4792; 2009-07-29T23:52:09Z -->
