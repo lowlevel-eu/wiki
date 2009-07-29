@@ -1,25 +1,25 @@
 # BIOS Data Area
 
-In der **BIOS Data Area** (Abkürzung: **BDA**) werden wichtige Informationen über Hardware und andere Systemkomponenten gespeichert.
+In der **BIOS Data Area** (**BDA**) speichert das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") Informationen über Hardware und andere Systemkomponenten.
 
 ## Aufbau der BIOS Data Area
 
 Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x0400. Die folgende Tabelle zeigt den Aufbau dieses Segments:
 
 | Offset | Größe (Bytes) | Beschreibung |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 0x00 | 2 | I/O-Port von [COM1](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
-| 0x02 | 2 | I/O-Port von [COM2](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
-| 0x04 | 2 | I/O-Port von [COM3](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
-| 0x06 | 2 | I/O-Port von [COM4](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
-| 0x08 | 2 | I/O-Port von LP1 |
-| 0x0A | 2 | I/O-Port von LP2 |
-| 0x0C | 2 | I/O-Port von LP3 |
-| 0x0E | 2 | I/O-Port von LP4 oder<br>Segment der [EBDA](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "EBDA") (bei PS/2) |
-| 0x10 | 2 | [Equipment word](#equipment-word) |
-| 0x12 | 1 | Manufacturing test data |
-| 0x13 | 2 | Speichergröße (in kB) |
-| 0x15 | 2 | Manufacturing test data |
+| -------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 2 | Basisadresse des I/O-Ports von [COM1](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") |
+| 0x02 | 2 | Basisadresse des I/O-Ports von COM2 |
+| 0x04 | 2 | Basisadresse des I/O-Ports von COM3 |
+| 0x06 | 2 | Basisadresse des I/O-Ports von COM4 |
+| 0x08 | 2 | Basisadresse des I/O-Ports von [LPT1](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle") |
+| 0x0A | 2 | Basisadresse des I/O-Ports von LPT2 |
+| 0x0C | 2 | Basisadresse des I/O-Ports von LPT3 |
+| 0x0E | 2 | Basisadresse des I/O-Ports von LPT4 oder<br>Segment der [EBDA](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "EBDA") (bei PS/2) |
+| 0x10 | 2 | [Equipment Word](#equipment-word) |
+| 0x12 | 1 | POST Status |
+| 0x13 | 2 | Größe des konventionellen Speichers (in kB) |
+| 0x15 | 2 | POST System Flag |
 | 0x17 | 2 | [Tastatur-Status-Flags](#tastatur-status-flags) |
 | 0x19 | 1 | Alt+Numpad-Data |
 | 0x1A | 2 | Zeiger auf nächsten Buchstaben im Tastatur-Ringpuffer |
@@ -33,8 +33,8 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x71 | 1 | Keyboard-Control-Break-Flag |
 | 0x72 | 2 | Soft-Reset-Flag |
 | 0x74 | 4 | Disk-Kontroller-Informationen |
-| 0x78 | 4 | LP-Timout-Werte |
-| 0x7C | 4 | COM-Timout-Werte |
+| 0x78 | 4 | LPT-Timeout-Werte |
+| 0x7C | 4 | COM-Timeout-Werte |
 | 0x80 | 2 | Start des PS/2-Keyboard-Buffers |
 | 0x82 | 2 | Ende des PS/2-Keyboard-Buffers |
 | 0x84 | 7 | Grafik-Controller-Informationen |
@@ -50,7 +50,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 
   
 
-### Equipment word
+### Equipment Word
 
 | Bits | Beschreibung |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,11 +217,11 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ## Weblinks
 
-- <http://bioscentral.com/misc/bda.htm>
 - <http://www.geocities.com/riskyfriends/x86/os/bios.html>
+- <http://www.cs.cmu.edu/~ralf/files.html> (Part C -\> memory.lst)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4770/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 2948; parent 2682; 2008-05-24T14:57:55Z -->
+<!-- MediaWiki page 1564; revision 4770; parent 2948; 2009-07-29T18:25:33Z -->
