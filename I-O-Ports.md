@@ -1,12 +1,11 @@
 # I/O Ports
 
-Dies ist eine kleine Liste der Standard I/O Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste nicht vollständig, da beispielsweise bei Geräten die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind sondern ausgelesen und konfiguriert werden können. Hier sind also Geräte aufgelistet die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die die I/O Portbereiche für viele Geräte standardisiert wurde, da es im Allgemeinen keine Möglichkeit gab diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
+Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste nicht vollständig, da beispielsweise bei Geräten die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind, sondern ausgelesen und konfiguriert werden können. Hier sind also Geräte aufgelistet, die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die I/O-Portbereiche für viele Geräte standardisiert wurden, da es im Allgemeinen keine Möglichkeit gab, diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
 
 ## Liste
 
-|  |  |  |
-| ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Begin | Ende | Gerät |
+| ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x000 | 0x01F | [DMA Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access") (8237A-5) |
 | 0x020 | 0x021 | [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) |
 | 0x040 | 0x043 | [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) |
@@ -37,7 +36,7 @@ Dies ist eine kleine Liste der Standard I/O Portbereiche eines [x86](https://git
 
 ## Links
 
-- Ralf Brown's Interrupt List (RBIL) ist nicht nur eine Liste aller erdenklichen Software Interrupts, sondern bietet auch eine sehr große(!) Liste mit Port-Nummern und entsprechenden Beschreibungen. Die Liste ist ist in 3 Dateien aufgeteilt (PORTS.A, PORTS.B und PORTS.C). Diese Dateien findet man in folgendem Zip-Archiv: [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)
+- *Ralf Brown's Interrupt List* (RBIL) ist nicht nur eine Liste aller erdenklichen Software-Interrupts, sondern bietet auch eine sehr große (!) Liste mit Port-Nummern und entsprechenden Beschreibungen. Die Liste ist ist in 3 Dateien aufgeteilt (PORTS.A, PORTS.B und PORTS.C). Diese Dateien findet man in folgendem Zip-Archiv: [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)
 
 <!-- -->
 
@@ -45,6 +44,6 @@ Dies ist eine kleine Liste der Standard I/O Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4779/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 3189; parent 2709; 2008-08-15T14:18:21Z -->
+<!-- MediaWiki page 1543; revision 4779; parent 3189; 2009-07-29T22:41:27Z -->
