@@ -2,7 +2,7 @@
 
 ## Der Bootprozess
 
-Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernel könnte dieser Abschnitt den Titel "was bisher geschah" tragen.
+Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernels könnte dieser Abschnitt den Titel "was bisher geschah" tragen.
 
 Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt as BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7c00 (z.B. 07c0:0000) und springt an diese Adresse.
 
@@ -12,7 +12,7 @@ Der Bootloader ist anschließend dafür zuständig, den Kernel des Betriebssyste
 
 Für unser Betriebssystem werden wir [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Bootloader benutzen. GRUB ist einfach zu benutzen, weit verbreitet und hat einen großen Funktionsumfang.
 
-Es gibt Leute, die der Meinung sind, man sollte seinen Bootloader selbst schreiben, damit man die Sache wirklich selbst gemacht hat. Diese Leute benutzen dann in ihrem Bootloader die Funktionen des BIOS, fangen also nur an einer anderen Stelle an, auf den Code anderer aufzusetzen. Dazu müssen sie auf Dauer viel Zeit in die Funktionalität des Bootloaders investieren, wenn sie nich in ihrem Betriebssystem mit Einschränkungen leben wollen. Bootloader sind nette Projekte, aber wir konzentrieren uns hier auf das Betriebssystem.
+Es gibt Leute, die der Meinung sind, man sollte seinen Bootloader selbst schreiben, damit man die Sache wirklich selbst gemacht hat. Diese Leute benutzen dann in ihrem Bootloader die Funktionen des BIOS, fangen also nur an einer anderen Stelle an, auf den Code anderer aufzusetzen. Dazu müssen sie auf Dauer viel Zeit in die Funktionalität des Bootloaders investieren, wenn sie nicht in ihrem Betriebssystem mit Einschränkungen leben wollen. Bootloader sind nette Projekte, aber wir konzentrieren uns hier auf das Betriebssystem.
 
 [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot") ist der Name der Spezifikation, die ein Kernel einhalten muss, um von GRUB geladen werden zu können. Der verlinkte Artikel enthält dazu mehr Informationen.
 
@@ -73,14 +73,14 @@ An dieser Stelle wären wir mit dem Code fertig. Jetzt müssen wir ihn noch komp
     LD = ld
 
     ASFLAGS = -m32
-    CCFLAGS = -m32 -Wall -g -fno-stack-protector
+    CFLAGS = -m32 -Wall -g -fno-stack-protector -nostdinc
     LDFLAGS = -melf_i386 -Ttext=0x100000
 
     kernel: $(OBJS)
         $(LD) $(LDFLAGS) -o $@ $^
 
     %.o: %.c
-        $(CC) $(CCFLAGS) -c -o $@ $^
+        $(CC) $(CFLAGS) -c -o $@ $^
 
     %.o: %.S
         $(CC) $(ASFLAGS) -c -o $@ $^
@@ -201,6 +201,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4766; parent 4765; 2009-07-29T00:36:48Z -->
+<!-- MediaWiki page 1897; revision 4767; parent 4766; 2009-07-29T07:46:09Z -->
