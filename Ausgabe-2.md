@@ -121,9 +121,8 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 
 8086-Prozessoren benötigen eine so genannte **Interrupt Vector Table**, an der Adresse 0000:0000, die 1024 Bytes lang ist. Diese Tabelle beinhaltet die Adressen der Interrupt Handler, die aufgerufen werden, wenn ein Interrupt ausgelöst wird. Jede dieser Adressen ist 4 Bytes lang, deshalb kommen wir auf 1024 / 4 = 256 Interrupts, die in der Tabelle sein können.
 
-|  |  |  |
-| ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | INT (Hex) | IRQ | Bedeutung |
+| ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | 00 - 01 | Exception Handlers | Exceptions werden später behandelt |
 | 02 | Non-Maskable IRQ | Non-Maskable IRQ (Parity Fehler) |
 | 03 - 07 | Exception Handlers | \- |
@@ -156,7 +155,7 @@ Das BIOS benutzt ein ähnliches Interface, um dem Betriebssystem Zugriff auf BIO
 
 Exceptions sind besondere Interrupts, die automatisch ausgelöst werden, wenn etwas mit dem Code, der gerade ausgeführt wird, schief läuft, wie zum Beispiel eine Division durch Null.
 
-|  |  |
+| Nr. | Bedeutung |
 | ----- | ----------------------------------------- |
 | 0 | Divide Error |
 | 1 | Debug Exceptions |
@@ -345,6 +344,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 3190; parent 2670; 2008-08-15T14:22:27Z -->
+<!-- MediaWiki page 1415; revision 4802; parent 3190; 2009-07-30T00:05:59Z -->
