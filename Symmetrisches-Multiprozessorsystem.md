@@ -6,11 +6,11 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
-Ein **Symmetrisches Multiprozessorsystem** (=**SMP**) ist ein System mit einem oder mehreren identischen Prozessoren. Im Gegensatz zu [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen sind alle Prozessoren auf gleiche Art & Weise mit dem Hauptspeicher verbunden, d.h. es gibt für keinen Prozessor einen von der Geschwindigkeit her bevorzugten/benachteiligten Speicherbereich im Hauptspeicher.
+Ein **Symmetrisches Multiprozessorsystem** (**SMP**) ist ein System mit einem oder mehreren identischen Prozessoren. Im Gegensatz zu [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen sind alle Prozessoren auf gleiche Art und Weise mit dem Hauptspeicher verbunden, d.h. es gibt für keinen Prozessor einen von der Geschwindigkeit her bevorzugten/benachteiligten Speicherbereich im Hauptspeicher.
 
 ## Intel Multiprocessor Specification
 
-Die *Intel Multiprocessor Specification* ist ein Standard für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")-basierte, symmetrische Multiprozessorsysteme und ist abwärtskompatibel mit existierenden [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Uniprozessorsystemen. Die Spezifikation beschreibt einerseits die Anforderungen an die Hardware und das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") und andererseits die Schritte die notwendig sind, um mit einem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") den Geschwindigkeitsvorteil mehrerer Prozessoren nutzbar zu machen.
+Die *Intel Multiprocessor Specification* ist ein Standard für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")-basierte, symmetrische Multiprozessorsysteme und ist abwärtskompatibel mit existierenden [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Uniprozessorsystemen. Die Spezifikation beschreibt einerseits die Anforderungen an die Hardware und das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), und andererseits die Schritte, die notwendig sind, um mit einem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") den Geschwindigkeitsvorteil mehrerer Prozessoren nutzbar zu machen.
 
 ### Unterteilung der Prozessoren
 
@@ -43,10 +43,13 @@ Die *Floating Pointer Structure* liegt an einer 16-Byte Grenze im Speicher und s
 
 #### Auffinden der Struktur
 
-Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksumme identifiziert. Die Prüfsumme wird berechnet indem man alle Bytes (inklusive des Feldes *Checksum*) der Struktur aufaddiert. Das Ergebnis dieser Berechnung muss 0x00 sein. Die Struktur befindet sich in mindestens einem der folgenden Speicherbereiche:
+Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksumme identifiziert. Die Prüfsumme wird berechnet, indem man alle Bytes (inklusive des Feldes *Checksum*) der Struktur aufaddiert. Das Ergebnis dieser Berechnung muss 0x00 sein. Die Struktur befindet sich in mindestens einem der folgenden Speicherbereiche:
 
 - In dem ersten Kilobyte der [Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area")
-- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area")), wenn die Addresse der Extended BIOS Data Area nicht definiert ist
+- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area")), wenn die Addresse der Extended BIOS Data Area nicht definie
+
+rt ist
+
 - Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF)
 
 Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
@@ -64,7 +67,7 @@ Um auf Uniprozessorsystemen effizient wechselseitigen Ausschluss (Mutex) zu impl
 Eine fehlerhafte Mutex-Implementierung mit nicht-atomaren Operationen könnte z.B. so aussehen:
 
 - Der Mutex sei freigegeben (= 0), es kann also ein Prozess in den kritischen Abschnitt eintreten, wenn er den Mutex lockt (d.h. auf 1 setzt)
-- Nun wollen zwei Threads/Prozesse, die auf verschiedenen CPU's ausgeführt werden, etwa gleichzeitig den Mutex für sich locken
+- Nun wollen zwei Threads/Prozesse, die auf verschiedenen CPUs ausgeführt werden, etwa gleichzeitig den Mutex für sich locken
 - Thread \#1 auf CPU \#1 liest die Speicherstelle = 0
 - Thread \#2 auf CPU \#2 liest ebenfalls die Speicherstelle = 0
 - Thread \#1 auf CPU \#1 überschreibt den Speicher mit 1 und gibt als alten Wert die gelesene 0 zurück
@@ -74,7 +77,7 @@ Nun ist eine [Race Condition](https://github.com/lowlevel-eu/wiki/wiki/Race-Cond
 
 Aus diesem Grund wird zur Implementierung die TSL-Instruktion verwendet. Sie ist auch auf SMP-Systemen atomar (vgl. [Intel Spezifikation](http://www.intel.com/design/intarch/manuals/243191.htm), S. 3-714), d.h. der sogenannte *lock*-Präfix wird implizit angenommen, wenn bei der *xchg*-Instruktion eine Speicherstelle verwendet wird. Der Präfix kann auch explizit angegeben werden - er bewirkt, dass der Speicherbus während der nächsten Instruktion gesperrt wird.
 
-Ein Beispiel für eine simple 32-bit TSL-Funktion: \<asm\>; uint32_t tsl(uint32_t \*ptr, uint32_t newValue) \_tsl:
+Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_t \*ptr, uint32_t newValue) \_tsl:
 
        push ebx
        mov eax, [esp+12]
@@ -96,6 +99,6 @@ Ein Beispiel für eine simple 32-bit TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4870/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 4402; parent 4392; 2009-05-23T21:33:53Z -->
+<!-- MediaWiki page 1490; revision 4870; parent 4402; 2009-07-30T14:11:14Z -->
