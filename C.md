@@ -4,7 +4,7 @@
 | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Name: | C |
 | Inlineassembler: | Ja |
-| Compiler: | [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc") |
+| Compiler: | [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"), icc, ... |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
 | Beispielkernel in der Sprache: | [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") |
@@ -84,6 +84,6 @@ Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 4798; parent 4777; 2009-07-29T23:55:53Z -->
+<!-- MediaWiki page 1526; revision 4858; parent 4798; 2009-07-30T13:28:36Z -->
