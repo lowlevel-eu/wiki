@@ -22,6 +22,10 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 - [Notepad2](http://www.flos-freeware.ch/notepad2.html)
 
+<!-- -->
+
+- [ConTEXT](http://www.contexteditor.org/)
+
 ## Sowohl, als auch
 
 - [Gobby](http://gobby.0x539.de/) basiert auf GTK. Die Besonderheit dieses Editors ist, dass er mehreren Entwicklern ermöglicht, gleichzeitig über Netzwerk und Internet an einem Dokument zu arbeiten.
@@ -44,6 +48,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4889/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 4889; parent 4790; 2009-07-30T17:52:51Z -->
+<!-- MediaWiki page 1908; revision 4890; parent 4889; 2009-07-30T18:06:49Z -->
