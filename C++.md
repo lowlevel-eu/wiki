@@ -13,7 +13,7 @@
   
 **C++** wurde 1983 von Bjarne Stroustoup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
-# Überblick
+## Überblick
 
 Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilfsfunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
 
@@ -26,15 +26,15 @@ Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur 
 
 Da jeder Compilerhersteller eine eigene ABI (= Application Binary Interface) zur Verfügung stellt, sind auch die Funktionsnamen sowie auch der Funktionsumfang, von Compiler zu Compiler verschieden.
 
-# Startup-Code
+## Startup-Code
 
 Dieser Code wird ausgeführt, bevor die main-Funktion des Programmes/Kernels aufgerufen wird und muss zumindest die Kommandozeilenargumente, mit denen das Programm aufgerufen wurde, an die main-Funktion weiterreichen.
 
-# rein virtuelle Funktionen
+## rein virtuelle Funktionen
 
 Wenn eine Klasse eine rein virtuelle Funktion nicht implementiert hat und diese Funktion aufgerufen wird, wird zur Fehlerbehandlung eine Hilfsfunktion aufgerufen, welche im Normalfall das Programm beendet.
 
-## g++
+### g++
 
 \<cpp\> // Lizenz: public domain
 
@@ -45,15 +45,15 @@ extern "C" void \_\_cxa_pure_virtual() {
 
 } \</cpp\>
 
-# globale/statische Objekte
+## globale/statische Objekte
 
 Da diese vor dem Eintritt in die main-Funktion initialisiert sein sollen, müssen auch Konstruktoren und Destruktoren aufgerufen werden.
 
-## g++
+### g++
 
 Die Konstruktion der globalen/statischen Objekte ist unter g++ immer gleich. Nur die Destruktion der Selben hängt von der Verwendung des configure-flags --enable-\_\_cxa_atexit und vom Kommandozeilenparameter -fuse-cxa-atexit / -fno-use-cxa-atexit ab.
 
-### Konstruktoren
+#### Konstruktoren
 
 G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. Diese Funktionszeiger zeigen jeweils auf einen Konstruktor. Man muss nun nur dieses Array durchgehen und alle Funktionen aufrufen und schon hat man alle globalen/statischen Objekte initialisiert.
 
@@ -75,11 +75,11 @@ G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. 
 
 Diese Funktion muss explizit aufgerufen werden bevor globale/statische Objekte verwendet werden. Dies kann beispielsweise im [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++") geschehen.
 
-### Destruktoren (ohne --enable-\_\_cxa_atexit und ohne -fuse-cxa-atexit)
+#### Destruktoren (ohne --enable-\_\_cxa_atexit und ohne -fuse-cxa-atexit)
 
 G++ erstellt eine "dtors\*" Sektion, analog zur "ctors\*" Sektion und speicher dort wiederum ein Array aus Funktionszeigern. Diesmal zeigen diese Funktionszeiger aber auf Destruktoren.
 
-### Destruktoren (mit --enable-\_\_cxa_atexit oder mit -fuse-cxa-atexit)
+#### Destruktoren (mit --enable-\_\_cxa_atexit oder mit -fuse-cxa-atexit)
 
 Im Konstruktor eines globalen/statischen Objekts wird die folgende Funktion aufgerufen:
 
@@ -140,7 +140,7 @@ int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
 
 } \</cpp\>
 
-# new/delete
+## new/delete
 
 Um dynamisch Objekte mit new erstellen bzw. mit delete zerstören zu können muss man die vier Operatoren
 
@@ -175,15 +175,15 @@ void operator delete\[\]( void \*obj ) {
 
 } \</cpp\>
 
-# RTTI
+## RTTI
 
 RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett deaktiviert. Mit g++ geschieht dies mittels des Kommandozeilenparameter *-fno-rtti*.
 
-# Exceptions
+## Exceptions
 
 Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit g++ können Exceptions über den Kommandozeilenparameter *-fno-exceptions* deaktiviert werden.
 
-# Links
+## Links
 
 - [Draft des C++ Standards](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2006/n2135.pdf)
 - [Draft des TR1 (=Technical Report 1)](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n1836.pdf)
@@ -191,7 +191,7 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 - [g++ ABI: Exception Handling](http://www.codesourcery.com/cxx-abi/abi-eh.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [OSDev.org wiki](http://www.osdev.org/wiki/C_PlusPlus)
 
-## C++0x
+### C++0x
 
 - [New Features in the Next C++ Standard](http://video.google.de/videoplay?docid=2768126766555555011&q=c%2B%2B0x) (video)
 - [Initialization Lists](http://video.google.de/videoplay?docid=5262479012306588324&q=c%2B%2B0x) (video)
@@ -200,6 +200,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 4799; parent 4788; 2009-07-29T23:58:16Z -->
+<!-- MediaWiki page 1486; revision 4810; parent 4799; 2009-07-30T00:24:28Z -->
