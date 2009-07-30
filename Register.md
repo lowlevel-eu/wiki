@@ -7,12 +7,70 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 ## x86 CPU Register
 
 | Bits | Register |
-| ------ | -------------------------------------------------------- |
-| 8 | AL, BL, CL, DL, AH, BH, CH, DH |
-| 16 | AX, BX, CX, DX, DI, SI, BP, SP, CS, DS, ES, FS, GS, SS |
-| 32 | EAX, EBX, ECX, EDX, EDI, ESI, EBP, ESP, EIP, EFLAGS |
-| 80 |  |
-| 128 | XMM0, XMM1, XMM2, XMM3, XMM4, XMM5, XMM6, XMM7 |
+| --------- | -------------------------------------------------------- |
+| **8** | AL, BL, CL, DL, AH, BH, CH, DH |
+| **16** | AX, BX, CX, DX, DI, SI, BP, SP, CS, DS, ES, FS, GS, SS |
+| **32** | EAX, EBX, ECX, EDX, EDI, ESI, EBP, ESP, EIP, EFLAGS |
+| **80** |  |
+| **128** | XMM0, XMM1, XMM2, XMM3, XMM4, XMM5, XMM6, XMM7 |
+
+### Allzweckregister
+
+| Bytes |  |  |  |
+| ------- | ----- | ----- | ----- |
+| 3 | 2 | 1 | 0 |
+| E?X |  |  |  |
+|  |  | ?X |  |
+|  |  | ?H | ?L |
+
+? = A, B, C, D
+
+### Indexregister
+
+| Bytes |  |  |  |
+| ------- | ----- | ----- | ----- |
+| 3 | 2 | 1 | 0 |
+| E?I |  |  |  |
+|  |  | ?I |  |
+
+? = D, S
+
+### Zeigerregister
+
+| Bytes |  |  |  |
+| ------- | ----- | ----- | ----- |
+| 3 | 2 | 1 | 0 |
+| E?P |  |  |  |
+|  |  | ?P |  |
+
+? = B, S
+
+### Instruktionsregister
+
+| Bytes |  |  |  |
+| ------- | ----- | ----- | ----- |
+| 3 | 2 | 1 | 0 |
+| EIP |  |  |  |
+|  |  | IP |  |
+
+### Flagregister
+
+| Bytes |  |  |  |
+| ------- | ----- | ----- | ----- |
+| 3 | 2 | 1 | 0 |
+
+EFLAGS
+
+### Segmentregister
+
+| Bytes |  |
+| ------- | ----- |
+| 1 | 0 |
+| ?S |  |
+
+? = C, D, E, F, G, S
+
+  
 
 ## x86-64 CPU Register
 
@@ -38,7 +96,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ? = 8, 9, 10, 11, 12, 13, 14, 15
 
-Die ?H-Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen!
+**Die ?H-Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen!**
 
 ### Indexregister
 
@@ -52,7 +110,7 @@ Die ?H-Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen
 
 ? = D, S
 
-Die ?IL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!
+**Die ?IL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!**
 
 ### Zeigerregister
 
@@ -66,7 +124,7 @@ Die ?IL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen
 
 ? = B, S
 
-Die ?PL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!
+**Die ?PL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!**
 
 ### Instruktionsregister
 
@@ -328,6 +386,6 @@ Die ?PL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4896; parent 4894; 2009-07-30T20:10:07Z -->
+<!-- MediaWiki page 1881; revision 4898; parent 4896; 2009-07-30T20:46:38Z -->
