@@ -1,6 +1,6 @@
 # Interrupt
 
-Ein Interrupt ist ein Ereignis, das die CPU unterbricht, um eine andere Routine auszuführen. Die CPU kann durch verschiedene Ursachen unterbrochen werden:
+Ein Interrupt ist ein Ereignis, welches die Arbeit der CPU unterbricht, um eine andere Routine auszuführen. Die CPU kann durch verschiedene Ursachen unterbrochen werden:
 
 - ein Peripheriegerät fordert die Behandlung eines Interrupts ([IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"))
 - im Programmfluss wird mit der Instruktion *int \<n\>* ein Software-Interrupt ausgelöst
@@ -51,6 +51,6 @@ Interrupts können mit Hilfe der Instruktionen *sti* und *cli* ein- bzw. ausgesc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4801/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 4350; parent 4349; 2009-05-02T08:58:40Z -->
+<!-- MediaWiki page 1596; revision 4801; parent 4350; 2009-07-30T00:03:21Z -->
