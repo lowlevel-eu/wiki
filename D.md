@@ -7,7 +7,7 @@
 | Compiler: | dmd (Digital Mars), gdc (GNU) |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | {{{Kernel}}} |
+| Beispielkernel in der Sprache: | s.u. |
 | Homepage |  |
 
 <http://www.digitalmars.com/d>
@@ -245,6 +245,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 4796; parent 4553; 2009-07-29T23:54:00Z -->
+<!-- MediaWiki page 1863; revision 4877; parent 4796; 2009-07-30T16:50:18Z -->
