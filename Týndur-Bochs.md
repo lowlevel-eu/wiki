@@ -6,7 +6,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Einleitung
 
-Hallo ihr. Ich will euch in diesem Tutorial zeigen, wie man unter Windows mit den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" Tyndur ausprobieren kann. Ich verwende als Betriebssystem die Windows 7 Beta.
+Hallo ihr. Ich will euch in diesem Tutorial zeigen, wie man unter Windows mit den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" Týndur ausprobieren kann. Ich verwende als Betriebssystem die Windows 7 Beta.
 
 ## Was wird benötigt
 
@@ -917,12 +917,12 @@ Und speichern die Datei mit `Speichern unter` ab. Als Namen habe ich hier `Start
 ## Weblinks
 
 - [Bochs-Emulator](http://bochs.sourceforge.net/)
-- [Tyndur Releases](http://download.tyndur.org/releases/)
-- [Tyndur nightlies Builds](http://nightlies.tyndur.org/)
-- [Tyndur](http://www.tyndur.org)
+- [Týndur Releases](http://download.tyndur.org/releases/)
+- [Týndur-Nightly-Builds](http://nightlies.tyndur.org/)
+- [Týndur](http://www.tyndur.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 4785; parent 4740; 2009-07-29T23:10:55Z -->
+<!-- MediaWiki page 1900; revision 4904; parent 4785; 2009-07-30T21:29:06Z -->
