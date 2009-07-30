@@ -53,6 +53,6 @@ Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4830/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 4830; parent 3221; 2009-07-30T01:46:08Z -->
+<!-- MediaWiki page 1599; revision 4831; parent 4830; 2009-07-30T01:46:35Z -->
