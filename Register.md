@@ -19,14 +19,16 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 ### Allzweckregister
 
 | Bytes |  |  |  |  |  |  |  |
-| ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| ------- | ----- | ----- | ----- | ----- | ----- | ------ | ----- |
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | R?X |  |  |  |  |  |  |  |
 |  |  |  |  | E?X |  |  |  |
 |  |  |  |  |  |  | ?X |  |
-|  |  |  |  |  |  | ?H | ?L |
+|  |  |  |  |  |  | ?H\* | ?L |
 
 ? = A, B, C, D
+
+- Diese Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen!
 
 | Bytes |  |  |  |  |  |  |  |
 | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -322,6 +324,6 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4613/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4613; parent 4605; 2009-07-10T13:14:31Z -->
+<!-- MediaWiki page 1881; revision 4894; parent 4613; 2009-07-30T20:05:58Z -->
