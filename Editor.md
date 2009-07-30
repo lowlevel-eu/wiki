@@ -2,9 +2,9 @@
 
 Ein **Editor** ermöglicht das Bearbeiten von einfachen Textdateien. Im Gegensatz zu Textverarbeitungsprogrammen werden die Dokumente von einem Editor jedoch als reiner Text gespeichert, also völlig ohne z.B. Formatierungen (außer natürlich Tabs o.ä.).
 
-Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei Windows dabei ist, jedoch bevorzugen fast alle Programmierer einen Editor mit mehr Features. Einige Texteditoren bieten nur wenige Optionen mehr, wie zum Beispiel Syntax-Highlighting, andere lassen sich durch verschiedenste Plugins und Einstellungsmöglichkeiten mit einer leichtgewichtigen IDE vergleichen.
+Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei Windows dabei ist, jedoch bevorzugen fast alle Programmierer einen Editor mit mehr Features. Außerdem unterstützt Notepad keine Unix-Zeilenumbrüche, daher ist ein verbesserter Editor für das gemeinschaftliche Arbeiten unter Windows obligatorisch.
 
-Dieser Artikel listet verschiedene Texteditoren auf.
+Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Syntax-Highlighting, andere lassen sich durch verschiedenste Plugins und Einstellungsmöglichkeiten mit einer leichtgewichtigen IDE vergleichen. Dieser Artikel listet verschiedene Texteditoren auf.
 
 ## Linux
 
@@ -44,6 +44,6 @@ Dieser Artikel listet verschiedene Texteditoren auf.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4790/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4889/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 4790; parent 0; 2009-07-29T23:38:09Z -->
+<!-- MediaWiki page 1908; revision 4889; parent 4790; 2009-07-30T17:52:51Z -->
