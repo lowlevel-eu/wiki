@@ -1,15 +1,15 @@
 # Umschalten in Protected Mode
 
-So einfach ist das! In der GDT wird ein Daten, sowie Code-Deskriptor auf die ganzen 4 möglichen GByte Arbeitsspeicher eingerichtet. Heutzutage verwenden dank Paging alle OS ein solches, genannt flaches, Speichermodell. Das heisst von nun an muss man nur noch mit 32-Bit Offsets hantieren und sich nicht mehr mit Segmenten herumschlagen.
+So einfach ist das! In der GDT wird ein Daten-, sowie Code-Deskriptor auf die ganzen 4 möglichen GByte Arbeitsspeicher eingerichtet. Heutzutage verwenden dank Paging alle OS ein solches, sogenanntes flaches Speichermodell. Das heißt, dass man von nun an nur noch mit 32-Bit Offsets hantieren und sich nicht mehr mit Segmenten herumschlagen muss.
 
-Mehr [Infos](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und eine [zweite Art](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode#beispielcode "Protected Mode") in den Protected Mode umzuschalten findet man im Protected Mode Tutorial von Tee Jay, sowie dem, schon etwas älteren, [Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm).
+Mehr [Infos](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und eine zweite Art in den Protected Mode umzuschalten findet man im Protected Mode Tutorial von Tee Jay, sowie dem, schon etwas älteren, [Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm).
 
   
 **Wichtig** bei diesem Code ist es, selbst noch die org-Anweisung auf die Startadresse des Codes anzupassen!! \<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt
 
 Bei Fragen kann man sich einfach an die ICQ-Nummer 338-417-614 wenden.
 
-\[BITS 16\] org 0x0000 ; Addiert zu allen Offsetes die Start-Adresse dieses Codes
+\[BITS 16\] org 0x0000 ; Addiert zu allen Offsets die Start-Adresse dieses Codes
 
 cli ; Interrupts ausschalten lgdt \[gdtr\] ; GDT Pointer laden
 
@@ -56,6 +56,6 @@ gdt_end:\</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1537/index.html)
 
-<!-- MediaWiki page 1537; revision 3030; parent 2782; 2008-07-20T06:13:34Z -->
+<!-- MediaWiki page 1537; revision 4855; parent 3030; 2009-07-30T13:11:30Z -->
