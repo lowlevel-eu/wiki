@@ -1,6 +1,6 @@
 # Master Boot Record
 
-Der MBR (Master Boot Record) ist der erste Sektor einer Festplatte. Die Aufgabe des MBR ist es, die Partitionen zu definieren, den [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") einer bootbaren Partition zu laden und zu starten.
+Der **Master Boot Record** (MBR) ist der erste Sektor einer Festplatte. Die Aufgabe des MBR ist es, die Partitionen zu definieren und den [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") einer bootbaren Partition zu laden und zu starten.
 
 Die Sektorennummer des MBR anhand der zwei Addressierungsmöglichkeiten:
 
@@ -9,9 +9,8 @@ Die Sektorennummer des MBR anhand der zwei Addressierungsmöglichkeiten:
 
 ## Aufbau
 
-|  |  |
+| Offset | Bedeutung |
 | --------------- | -------------------------------- |
-| Offset |  |
 | 0x0000-0x01BD | Code zum Laden einer Partition |
 | 0x01BE-0x01FD | Partitionstabelle |
 | 0x01FE-0x01FF | Bootsignatur 0xAA55 |
@@ -20,9 +19,8 @@ Die Sektorennummer des MBR anhand der zwei Addressierungsmöglichkeiten:
 
 Die Partitionstabelle besteht aus 4 Einträgen à 16 Byte in folgendem Format:
 
-|  |  |  |
-| ------------ | ----- | --------------------------------------------------------------------------------- |
-| **Offset** |  |  |
+| Offset | Größe | Bedeutung |
+| -------- | ------- | --------------------------------------------------------------------------------- |
 | 0x0 | DB | Bootflag<br>• 0x00 nicht bootbar<br>• 0x80 bootbare Partition<br> |
 | 0x1 | DB | Kopf an dem die Partition anfängt |
 | 0x2 | DB | • Bit 0-5 -\> Anfangs Sektor<br>• Bit 6-7 -\> Bit 8-9 des Anfangs-Zylinders<br> |
@@ -36,6 +34,6 @@ Die Partitionstabelle besteht aus 4 Einträgen à 16 Byte in folgendem Format:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 3740; parent 2728; 2008-12-26T12:44:57Z -->
+<!-- MediaWiki page 1431; revision 4808; parent 3740; 2009-07-30T00:19:11Z -->
