@@ -329,18 +329,16 @@ So, nun an die echte Arbeit. Softwaretasking. Beim softwarebasierenden Tasking s
 
 Auch stehen viele Funktionen des Protected Mode erst mit TSS richtig zur Verfügung, man denke an das explizite Sperren von Ports zum Beispiel. Aber auch deshalb verbraucht das Softwaretasking relativ wenig Speicher. Die Stacks können ausgelagert werden, sodass der Speicherverbrauch im RAM auf das Minimum reduziert wird und man kann auswählen, welche Informationen man speichern will, und welche nicht.
 
-|  |  |
-| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Vorteile | Nachteile |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | • Hohe Geschwindigkeit beim Taskwechsel<br>• Sehr einfach zu implementieren<br>• Wenig Platzverbrauch<br> | • Verwirrend wegen TSS<br>• Schwer zu erweitern<br>• Nicht alle Möglichkeiten des Protected Mode benutzbar<br> |
 
 ### Hardwaretasking
 
 Hardwaretasking. Wie der Name schon sagt setzt das hardwarebasierende Multitasking auf die Möglichkeiten der CPU zum Speichern des aktuellen Taskzustandes. Dazu gibt es ab jedem 286er ein sogenanntes TaskStateSegment, in welchem die CPU den aktuellen Taskzustand speichert. Diese Methode nimmt dem Entwickler des Systems viel Arbeit ab, welche die CPU übernimmt. Die Aufgabe des Dispatchers beschränkt sich bei Hardwaretasking darauf, einen Sprung ins andere TSS zu machen, wodurch die CPU veranlasst wird, den aktuellen Status zu sichern und den neuen zu laden. Dies passiert alles automatisch und ohne Mithilfe des Programmierers, was sicherlich einer der Vorteile ist. Trotzdem ist genau dieser Sprung relativ komplex, da man sich mit den Opcodes auskennen muss und ihn mit einer eigenen Routine immer wieder zu ändern hat, da man für gewöhlich keinen variablen Sprung machen kann. Ebenso dauert das Wechseln etwas länger. Die CPU an sich sichert alle Register und wichtigen Inhalte, sodass ein TSS mindestens 104 Bytes an Speicher braucht. Außerdem gibt es in einem TSS viele Bereiche, die ungenutzt, reserviert sind. Dies ist sicher ein Manko an Hardwaretasking, da es immer unpraktisch ist, viel Speicher fest zu verbrauchen, den man nicht auslagern kann. Allerdings lässt sich ein TSS beliebig in die Länge ziehen wodurch man erreicht, dass man auch hinter die Registerinformationen zum Beispiel noch den FPU-Status sichern kann. Auch ist alles das gleiche, man braucht also nicht wie bei Softwaretasking noch irgendein Segment oder ähnliches, wobei man aber mindestens zwei Tasks braucht, die gerade laufen, da man sonst nicht wechseln kann, weil TSS-Tasks nicht reentrant sind, sprich man einen aktiven Task nicht wieder aktivieren kann.
 
-|  |  |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Vorteile | Nachteile |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | • Die CPU nimmt viele Aufgaben ab<br>• Man kann alle Möglichkeiten des PM ausschöpfen<br>• Lässt sich leicht erweitern<br> | • Verbraucht viel Platz<br>• Taskwechsel dauert relativ lange<br>• Komplizierter Taskwechsel mit Opcodes<br> |
 
 ### Schluss
@@ -918,6 +916,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4807/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 3140; parent 2771; 2008-08-14T21:43:11Z -->
+<!-- MediaWiki page 1494; revision 4807; parent 3140; 2009-07-30T00:14:40Z -->
