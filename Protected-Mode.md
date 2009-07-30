@@ -95,9 +95,8 @@ Hier wird festgelegt welcher Typ(Code,Daten,Stack,System) Segment vorliegt und w
 
 **Zugriff/Segmenttyp (BITs)**
 
-|  |  |  |  |  |  |  |  |
-| ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
 | **7** | **6** | **5** | **4** | **3** | **2** | **1** | **0** |
+| ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
 | P | DPL |  | S | Type |  |  | A |
 
   
@@ -128,9 +127,8 @@ Die Bits in diesem Feld geben ebenfalls Charakteristika für das Segment an.
 
 **Zusatz (BITs)**
 
-|  |  |  |  |
-| ------- | ------- | ------- | ------- |
 | **7** | **6** | **5** | **4** |
+| ------- | ------- | ------- | ------- |
 | G | D | 0 | AVL |
 
 #### G = Granular Bit
@@ -155,9 +153,8 @@ Dieses Bit kann vom Systemprogrammierer frei für eigenen Gebrauch benutzt werde
 
 Hier eine Tabelle der normalen Segmenttypen. Systemsegmente werden später erläutert.
 
-|  |  |
-| ---------------------- | ------------------------------------------------------- |
 | **TYPE-Feld (BITs)** | **Beschreibung** |
+| ---------------------- | ------------------------------------------------------- |
 | 000 | Datensegment (Schreibgeschützt) |
 | 001 | Datensegment (Beschreibbar, Lesbar) |
 | 010 | Reserviert (Nicht benutzen) |
@@ -199,8 +196,6 @@ Dieses Segment stellt einen Speicherabschnitt dar, der eine Local Deskriptor Tab
 
 (Seite: [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment")) Dies ist ebenfalls ein Speicherabschnitt der Daten beinhaltet um das Multitasking zu realisieren. Bei einem Task-Wechsel müssen alle Register des gerade laufenden Task gesichert werden, um diese später wiederherstellen zu können, damit der Task wieder gestartet werden kann. Das TSS beinhaltet alle Daten die für einen Task gespeichert werden. Daher ist es notwendig, das jeder Task ein eigenes TSS bekommt. Das TSS hat eine Größe von 104 Bytes. Sollte bei dem Deskriptor als Größe ein kleinerer Wert eingetragen werden, so wird beim Versuch den Deskriptor zu laden eine Exception ausgelöst.
 
-  
-
 | Offset | 31-16 | 0-15 |
 | -------- | ---------------------- | ---------------------- |
 | 0x00 |  | Previous Task Link |
@@ -230,20 +225,16 @@ Dieses Segment stellt einen Speicherabschnitt dar, der eine Local Deskriptor Tab
 | 0x60 |  | LDT Segment Selektor |
 | 0x64 | I/O Map Base Address |  |
 
-  
-
 **Task State Segment Deskriptor (BITs) Teil 1**
 
-|  |  |  |  |  |  |  |  |  |  |
-| -------------------- | -------- | ------------- | -------- | ------------- | -------- | ------------- | -------- | ------------ | -------------------- |
 | **31 - 24** | **23** | **21 - 22** | **20** | **19 - 16** | **15** | **13 - 14** | **12** | **11 - 8** | **0 - 7** |
+| -------------------- | -------- | ------------- | -------- | ------------- | -------- | ------------- | -------- | ------------ | -------------------- |
 | Basisadresse 31-24 | G | 0 | AVL | Größe 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
 
 **Task State Segment Deskriptor (BITs) Teil 2**
 
-|  |  |
-| --------------------- | -------------- |
 | **31 - 24** | **16 - 0** |
+| --------------------- | -------------- |
 | Basisadresse 15 - 0 | Größe 15 - 0 |
 
 #### Type = Deskriptor Typ
@@ -256,16 +247,14 @@ In der Regel ist es so, das lediglich das Betriebssystem das mit der Privilegstf
 
 **Call Gate (BITs) Teil 1**
 
-|  |  |  |  |  |  |  |
-| ---------------- | -------- | ------------- | -------- | ------------ | ----------- | ----------- |
 | **31 - 16** | **15** | **14 - 13** | **12** | **11 - 8** | **7 - 5** | **4 - 0** |
+| ---------------- | -------- | ------------- | -------- | ------------ | ----------- | ----------- |
 | Offset 31 - 16 | P | DPL | 0 | Type | 0 | Param |
 
 **Call Gate (BITs) Teil 2**
 
-|  |  |
-| ------------- | --------------- |
 | **31 - 24** | **16 - 0** |
+| ------------- | --------------- |
 | Selektor | Offset 15 - 0 |
 
   
@@ -306,20 +295,16 @@ Gibt die Bits 15 bis 0 des 32-Bit Offsets innerhalb des Codesegmentes an, in dem
 
 Diese haben in etwa den selben Sinn und Zweck eines Call Gates. Jedoch werden diese in der IDT abgelegt und ein Sprung zu einem Interrupt-Handler erfolgt mittels des Int Befehls. Zudem sind die Interrupt Gates hauptsächlich dazu gedacht Systemfunktionen bereitzustellen, mit der auf das Auftreten eines Hardware-Interrupts reagiert wird. Deshalb wird beim Aufurf eines Interrupt Gates auftomatisch das IF Flag im EFLAGS Register geändert, damit während der Abarbeitung des Interrupt Handlers kein weiterer Interrupt ausgelöst werden kann.
 
-  
-
 **Interrupt Gate (BITs) Teil 1**
 
-|  |  |  |  |  |  |  |
-| ---------------- | -------- | ------------- | -------- | -------- | ------------ | ----------- |
 | **31 - 16** | **15** | **14 - 13** | **12** | **11** | **10 - 8** | **7 - 0** |
+| ---------------- | -------- | ------------- | -------- | -------- | ------------ | ----------- |
 | Offset 31 - 16 | P | DPL | 0 | D | Type | 0 |
 
 **Interrupt Gate (BITs) Teil 2**
 
-|  |  |
-| ------------- | --------------- |
 | **31 - 24** | **16 - 0** |
+| ------------- | --------------- |
 | Selektor | Offset 15 - 0 |
 
   
@@ -362,6 +347,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4786/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 4786; parent 4439; 2009-07-29T23:12:56Z -->
+<!-- MediaWiki page 1464; revision 4835; parent 4786; 2009-07-30T01:58:16Z -->
