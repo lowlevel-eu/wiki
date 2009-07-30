@@ -15,11 +15,11 @@
 
 [Microsoft Virtual PC 2007 SP1](http://www.microsoft.com/downloads/details.aspx?FamilyID=28c97d22-6eb8-4a09-a7f7-f6c7a1f000b5&DisplayLang=de)
 
-**Microsoft Virtual PC** wurde als x86-Emulator für Mac-OS-PowerPC-basierte Systeme und als Virtualisierungssoftware für Windows entwickelt. Virtual PC for Mac war Bestandteil des Produktes Microsoft Office Professional für Mac OS und konnte auch separat erworben werden. Die Version für Mac OS wird nicht mehr weiterentwickelt, da aktuelle Apple Macs inzwischen einen Intel-Prozessor einsetzen. Virtual PC for Windows (nicht für Mac OS) ist inzwischen kostenlos von Microsofts Website herunterladbar.
+**Microsoft Virtual PC** wurde als x86-Emulator für Mac-OS-PowerPC-basierte Systeme und als Virtualisierungssoftware für Windows entwickelt. *Virtual PC for Mac* war Bestandteil des Produktes *Microsoft Office Professional* für Mac OS und konnte auch separat erworben werden. Die Version für Mac OS wird nicht mehr weiterentwickelt, da aktuelle Apple Macs inzwischen einen Intel-Prozessor einsetzen. *Virtual PC for Windows* (nicht für Mac OS) kann man inzwischen kostenlos von Microsofts Website herunterladen.
 
   
 
-# Emulierte Hardware
+## Emulierte Hardware
 
 ### Windows 7
 
@@ -32,7 +32,7 @@
   - Kommunikationsanschluss (COM1)
   - Kommunikationsanschluss (COM2)
 - Computer
-  - ACPI-PI (Advanced Configuration and Power Interface)
+  - [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")-PI (Advanced Configuration and Power Interface)
 - Diskettenlaufwerkcontroller
   - Standard-Diskettenlaufwerkcontroller
 - Diskettenlaufwerk
@@ -40,33 +40,33 @@
 - DVD/CD-ROM-Laufwerke
   - MS C/DVD-ROM ATA Device
 - Grafikkarte
-  - Standard-VGA-Grafikkarte
+  - Standard-[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Grafikkarte
 - IDE ATA/ATAPI-Controller
   - ATA Channel 0
   - ATA Channel 1
   - Intel(R) 82371AB/EB PCI-Bus-Master-IDE-Controller
 - Laufwerke
-  - Virtual HD ATA Device
+  - Virtual HD [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") Device
 - Mäuse und andere Zeigergeräte
-  - Microsoft PS/2-Maus
+  - Microsoft PS/2-[Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
 - Monitore
   - Nicht-PnP-Monitor (Standard)
 - Netzwerkadapter
   - Intel 21140-basierter PCI Fast-Ethernet-Adapter (emuliert)
 - Systemgeräte
   - ACPI-Schalter
-  - DMA-Controller
+  - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")-Controller
   - Enumerator-Treiber für Microsoft Virtual Drive
   - Intel 82371AB/EB PCI-zu-ISA-Brücke (ISA-Modus)
   - Intel 82443BX Pentium(R) II Prozessor-zu-PCI-Brücke
   - Microsoft ACPI-konformes System
   - Microsoft-Systemverwaltungs-BIOS-Treiber
   - Numerischer Coprozessor
-  - PCI-Bus
+  - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus
   - PnP-Softwaregeräte-Enumerator
   - Programmierbarer Interruptcontroller
-  - System CMOS/Echtzeituhr
-  - Systemlautsprecher
+  - System [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")/Echtzeituhr
+  - [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher")
   - Systemzeitgeber
   - Terminal Server Device Redirector Bus
   - UMBus-Enumerator
@@ -75,12 +75,11 @@
 - Tastaturen
   - Standardtastatur (PS/2)
 
-  
 *Dies kann jedoch von anderen Gast-Systemen abweichen!*
 
   
 
-# Andere Emulations- / Virtualisierungs-Software
+## Andere Emulations- / Virtualisierungs-Software
 
 - [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")
 - MyEmu
@@ -89,7 +88,7 @@
 
   
 
-# Links
+## Links
 
 - [Microsoft Virtual PC – Wikipedia (de)](http://de.wikipedia.org/wiki/Microsoft_Virtual_PC)
 - [Produktseite von Microsoft Virtual PC (english)](http://www.microsoft.com/germany/windows/products/default.aspx)
@@ -98,6 +97,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3869/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4853/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
 
-<!-- MediaWiki page 1799; revision 3869; parent 3823; 2009-01-13T13:14:19Z -->
+<!-- MediaWiki page 1799; revision 4853; parent 3869; 2009-07-30T12:57:46Z -->
