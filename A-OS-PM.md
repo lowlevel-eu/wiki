@@ -35,7 +35,7 @@ A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 
 ### Protected Mode / Flat Memory Model / Paging
 
-Das Betriebsystem wird den Protected Mode in seinem vollen Umfang unterstützen. Angewandt wird das Flat Memory Model, das heißt es gibt nur wenige Deskriptoren für den gesamten Hauptspeicher. Die Unterteilung wird mit Paging realisiert. Jedes Programm hat zur Laufzeit 3GB Speicher zur Verfügung.
+Das Betriebssystem wird den Protected Mode in seinem vollen Umfang unterstützen. Angewandt wird das Flat Memory Model, das heißt, es gibt nur wenige Deskriptoren für den gesamten Hauptspeicher. Die Unterteilung wird mit Paging realisiert. Jedes Programm hat zur Laufzeit 3 GB Speicher zur Verfügung.
 
 ### Multitasking
 
@@ -62,6 +62,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4884/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 3018; parent 2884; 2008-06-30T10:27:45Z -->
+<!-- MediaWiki page 1451; revision 4884; parent 3018; 2009-07-30T17:15:41Z -->
