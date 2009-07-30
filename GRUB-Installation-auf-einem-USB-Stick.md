@@ -1,20 +1,23 @@
 # GRUB Installation auf einem USB-Stick
 
-# Vorbemerkung
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
+*Tutorial fertigschreiben*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
+  
 Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick GRUB zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
 Der Stick sowie das BIOS/EFI müssen allerdings einige Bedingungen erfüllen. Das heißt, es geht mit dem USB-Stick, auf dem "Bootable Device" o.ä. darauf steht. Dies steht nicht überall, weil nicht jeder Hersteller sich an die Spezifikation für das verhalten der Sticks beim booten hält. Genauere Informationen sind [hier](http://www.usb.org/developers/devclass_docs/usb_msc_boot_1.0.pdf) zu finden. Es kann aber durchaus sein, dass man von dem Stick booten kann, obwohl dieser nicht als Bootable gekennzeichnet ist.  
 Des Weiteren muss im BIOS/EFI die Möglichkeit gegeben sein, ein USB Speichermedium in der Bootreihenfolge auszuwählen. Dies ist, falls es unterstützt wird zumeist als USB-HDD angegeben. Ist nur ein USB-FDD zu finden, so funktioniert dies nicht, da USB-FDD ein Eintrag für externe USB-Diskettenlaufwerke ist.
 
-# Der USB-Stick
+## Löschen der Dateien
+
+In diesem Abschnitt werden der Inhalt des USB-Sticks mit Null-Bytes überschrieben, damit überhaupt nichts mehr darauf vorhanden ist.
 
 **Warnung**
 
 Sichert vorher alle Daten von dem Stick, denn spätestens nach dem überschreiben des Stick-Inhalts mit Null-Bytes werden diese **nicht wiederherstellbar** sein!
-
-## Löschen der Dateien
-
-In diesem Abschnitt werden der Inhalt des USB-Sticks mit Null-Bytes überschrieben, damit überhaupt nichts mehr darauf vorhanden ist.
 
 ### Löschen der Daten unter Linux/Unix
 
@@ -171,6 +174,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4903/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 4763; parent 4318; 2009-07-29T00:12:26Z -->
+<!-- MediaWiki page 1737; revision 4903; parent 4763; 2009-07-30T21:26:57Z -->
