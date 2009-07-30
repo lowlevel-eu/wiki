@@ -4,7 +4,7 @@
 
 LostIO ist der Name der Hauptschnittstelle, die LOST den Treibern zur Verfügung stellt. Das ganze basiert auf einer VFS-ähnlichen Konstruktion. Darauf kann mit den normalen Dateifunktionen zugegriffen werden. Die Pfade sind dabei folgendermassen aufgebaut: Treibername:/Pfad/teil.
 
-# Aufbau
+## Aufbau
 
 Also, damit wir das gleich geklärt haben: Bei Fragen wendet ihr euch am besten an den \#lost Kanal im euIRC (Server: irc.euirc.net, Kanal: \#lost). Alternativ könnt ihr auch hier im Forum in der Lost-Kategorie fragen. Falls Bugs gefunden werden, sollten sie über unser [Bugzilla](http://lost.famkaufmann.info/bugzilla) gemeldet werden.
 
@@ -14,7 +14,7 @@ Der Zugriff auf Treiber mit einer LostIO-Schnittstelle erfolgt über die Standar
 
   
 
-## Treiber
+### Treiber
 
 Auf der Treiberseite baut LostIO auf einem Dateisystem-Baum (Intern als vfstree benannt) im Speicher auf. Dieser Baum besteht aus sogenannten Knoten(engl. nodes), die alle wieder Kinderknoten haben können. Jeder dieser Knoten hat einen bestimmten Typ, der für die Handhabung dessen eine zentrale Rolle spielt. Dabei ist ein Verzeichnis vom Prizip her genau das selbe wie jede andere Datei. werden muss. In den Knoten wird dabei nur eine Typen-ID abgespeichert. Wird nun von einem Prozess versucht irgend eine Datei oder ein Verzeichnis zu öffnen und auszulesen, wird intern in der Typendatenbank nach dem Typen des zu öffnenden Knotens gesucht, um herauszufinden, wie die Aktion gehandhabt.
 
@@ -29,13 +29,13 @@ Die Typendatenbank beinhaltet die sogenannten Typehandles. Darin sind Pointer au
 
 Nun zur Bedeutung der einzelnen Aktionen. *read* und *write* werden, wie unschwer zu erkennen, aufgerufen, wenn versucht wird von einem Knoten dieses Typs zu lesen, beziehungsweise auf ihn zu schreiben. Dass *close* beim schliessen einer Datei aufgerufen wird, ist auch ersichtlich. Etwas schwieriger ist seek. Der *seek*-Handler wird angesprungen, wenn die aktuelle Position des Zeigers in der Datei mit *fseek* verschoben wird.
 
-### pre_open und post_open
+#### pre_open und post_open
 
 Als unklar und nicht unbedingt sinnvoll könnte *pre_open* und *post_open* aufgefasst werden. Warum 2 Funktionen für Open? Nun zuerst zur Funktionsweise: *pre_open* wird, wie der Name schon ahnen lässt, vor dem eigentlichen Öffnungs-Vorgang aufgerufen. Das geschieht auch, wenn der Knoten mit dem angegebenen Pfad nicht existiert. *post_open* wird erst nach dem Öffnen gestartet. Von *post_open* aus kann der Vorgang nicht mehr einfach so gestoppt werden, was aus *pre_open* problemlos möglich ist.
 
 Bei “echten” Dateisystemen wie zum Beispiel auf Disketten hat *pre_open* noch eine spezielle Aufgabe. Da die Verzeichnisbäume von physikalischen Dateisystemen extreme Ausmasse annehmen können, sodass es belastend, oder sogar unmöglich wäre, diese vollständig im Arbeitsspeicher zu haben, besteht die Möglichkeit nur einen Teil davon im Arbeitsspeicher zu haben, und andere Teile nach gebrauch wieder zu entfernen. Und genau hier kommt *pre_open* wieder ins Spiel. Da er angesprungen wird, egal ob der Pfad existiert oder nicht, kann daraus bei Bedarf ein Teil des Verzeichnisbaumes geladen werden.
 
-### Typehandles
+#### Typehandles
 
 In einem Typehandle müssen nicht alle Handler eingetragen werden. Wenn ein oder mehrere Handles nicht benutzt werden, müssen die entsprechenden Pointer auf NULL gesetzt werden.
 
@@ -58,11 +58,11 @@ Um das ganze ein wenig zu vereinfachen existieren vordefinierte Handles, die mit
 
 Ramfile ist für einfache Dinge wie zum Beispiel Versionsinformationen, die nur als String im Arbeitspeicher liegen, und zum Zugreifen keine speziellen Massnahmen benötigen, gedacht. Die Ramfiles können mit *lostio_type_ramfile_use();* benutzbar gemacht werden.
 
-# Funktionen
+## Funktionen
 
-## LostIO
+### LostIO
 
-### lostio_init
+#### lostio_init
 
 **Prototyp:** \<c\>void lostio_init();\</c\> **Beschreibung:**
 
@@ -70,7 +70,7 @@ Initialisiert die LostIO Schnittstelle. Wenn diese Funktion nicht aufgerufen wur
 
   
 
-### lostio_register_typehandle
+#### lostio_register_typehandle
 
 **Prototyp:** \<c\>void lostio_register_typehandle(typehandle_t\* typehandle);\</c\> **Parameter:**
 
@@ -80,15 +80,15 @@ Initialisiert die LostIO Schnittstelle. Wenn diese Funktion nicht aufgerufen wur
 
 Trägt ein Typehandle in der Typendatenbank ein. Danach kann es bei den Knoten verwendet werden.
 
-## VFS-Baum
+### VFS-Baum
 
-## Typen
+### Typen
 
-### Verzeichnis
+#### Verzeichnis
 
-### Ramfile
+#### Ramfile
 
-# Beispiel
+## Beispiel
 
 Hier folgen Ausschnitte aus dem Quellcode des Diskettentreibers(Die Funktionen fuer den Laufwerkszugriff werden hier nicht gezeigt).
 
@@ -282,6 +282,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 3764; parent 1894; 2009-01-01T16:29:57Z -->
+<!-- MediaWiki page 1498; revision 4818; parent 3764; 2009-07-30T00:53:16Z -->
