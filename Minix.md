@@ -28,12 +28,23 @@ Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 
 
   
 
+## "Linux is obsolete"
+
+Minix ist bekanntlich älterem Datums als Linux (Minix 0.1.0: 1987, Linux 0.01: 1991). Linus Torvalds wollte mit Linux eigentlich einen Terminal-Emulator schreiben, fand aber immer mehr Gefallen daran, die Hardware seines x86 zu erforschen und so wurde aus einem Terminal-Emulator ein Betriebssystem, welches in Konkurrenz zu Minix stand. In einem bis dato beispiellosen Flamewar, angefangen von Andrew S. Tanenbaum persönlich, wurde jeweils gegen das andere System und mögliche Stärken/Schwächen gewettert.
+
+Ausgangspunkt waren hierbei die herbe Kritik an dem noch jungen Projekt Linux.
+
+Kritikpunkte waren hier der monolithische Kernel, der in Tanenbaums Augen unzeitgemäß wäre, die "Versteifung" auf die x86-Plattform durch Inline-Assembler, das liberale Entwicklungssystem sowie "unnötige" Features, wie das parallele Zugreifen auf das Dateisystem von mehreren Programmen aus.
+
+Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklung beider Systeme angefacht hat.
+
 ## Links
 
 - [minix3.org](http://minix3.org)
+- [Flamewar im Usenet](http://www.educ.umu.se/~bjorn/mhonarc-files/obsolete/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 4840; parent 4839; 2009-07-30T02:13:44Z -->
+<!-- MediaWiki page 1910; revision 4841; parent 4840; 2009-07-30T02:31:52Z -->
