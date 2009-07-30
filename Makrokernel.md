@@ -4,6 +4,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1841/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4869/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1841/index.html)
 
-<!-- MediaWiki page 1841; revision 4290; parent 4288; 2009-04-14T08:47:59Z -->
+<!-- MediaWiki page 1841; revision 4869; parent 4290; 2009-07-30T14:07:25Z -->
