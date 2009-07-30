@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4744; parent 4517; 2009-07-27T14:48:54Z -->
+<!-- MediaWiki page 1610; revision 4878; parent 4744; 2009-07-30T16:51:22Z -->
