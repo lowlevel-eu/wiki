@@ -31,6 +31,6 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1907/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4909/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1907/index.html)
 
-<!-- MediaWiki page 1907; revision 4761; parent 4760; 2009-07-28T12:41:02Z -->
+<!-- MediaWiki page 1907; revision 4909; parent 4761; 2009-07-30T21:31:51Z -->
