@@ -6,7 +6,7 @@ Bitweise Operatoren sind Operatoren die (Binär-)Zahlen Bit für Bit verarbeiten
 
 ### NOT
 
-Der **NOT**-Operator ist ein unärer Operator, d. h. er arbeitet mit nur einem Argument. Seine Funktion ist es einen Bit-String Bit für Bit umzudrehen( aus *1* wird *0* und aus *0* wird *1* ). Bsp.:
+Der **NOT**-Operator ist ein unärer Operator, d. h. er arbeitet mit nur einem Argument. Seine Funktion ist es, einen Bit-String Bit für Bit umzudrehen (aus *1* wird *0* und aus *0* wird *1*). Bsp.:
 
     NOT ( 11011010b ) = 00100101b
 
@@ -16,7 +16,7 @@ ASM-Code: \<asm\>mov al, 11011010b not al  ; al = 00100101b\</asm\>
 
 ### AND
 
-Der **AND**-Operator veknüpft zwei Bit-Strings miteinander über ein logisches *und*. Das bit im Zielstring wird genau dann gesetzt, wenn die beiden entsprechenden Bits der Quellstrings *1* sind.
+Der **AND**-Operator veknüpft zwei Bit-Strings miteinander über ein logisches *und*. Das Bit im Zielstring wird genau dann gesetzt, wenn die beiden entsprechenden Bits der Quellstrings *1* sind.
 
 Bsp.:
 
@@ -33,7 +33,7 @@ ASM-Code: \<asm\>mov al, 11001100b and al, 01100110b  ; al = 01000100b\</asm\>
 
 ### OR
 
-Der **OR**-Operator verknüpft zwei Bit-Strings über das logische *oder*. Im Zielstring wird das Bit gestezt, wenn mindesten eines der beiden Bits der Quellstrings *1* ist.
+Der **OR**-Operator verknüpft zwei Bit-Strings über das logische *oder*. Im Zielstring wird das Bit gesetzt, wenn mindestens eines der beiden Bits der Quellstrings *1* ist.
 
 Bsp.:
 
@@ -50,7 +50,7 @@ ASM-Code: \<asm\>mov al, 11001100b or al, 01100110b  ; al = 1110111b\</asm\>
 
 ### XOR
 
-Der **XOR**-Operator verknüpft zwei Bit-Strings über ein *e**x**clusives* logisches *oder*. Das Bit im Zielstring wird nur dann gesetzt, wenn genau eines der beiden entsprechenden Bits in den Quellstrings *1* ist.
+Der **XOR**-Operator verknüpft zwei Bit-Strings über ein *e**x**klusives* logisches *oder*. Das Bit im Zielstring wird nur dann gesetzt, wenn genau eines der beiden entsprechenden Bits in den Quellstrings *1* ist.
 
 Bsp.:
 
@@ -89,12 +89,12 @@ Ist das Ergebnis gleich 0 dann ist es das Bit auch, ist es ungleich 0 dann ist d
 
 ### Bits-Setzen
 
-Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdings gibt sie diesmal an Welches Bit gesetzt werden soll. Um z. B. die Bits 1,4,5 auf *1* zu setzen erstellt man sich als Maske: 00110010b Im Gegensatz zum Löschen wird jetzt allerdings mit einem einfachen OR verknüpft.
+Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdings gibt sie diesmal an, welches Bit gesetzt werden soll. Um z. B. die Bits 1,4,5 auf *1* zu setzen erstellt man sich als Maske: 00110010b Im Gegensatz zum Löschen wird jetzt allerdings mit einem einfachen OR verknüpft.
 
     (????????b OR 00110010b) = ??11??1?b
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4872/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 3522; parent 3516; 2008-11-10T19:32:02Z -->
+<!-- MediaWiki page 1757; revision 4872; parent 3522; 2009-07-30T14:15:46Z -->
