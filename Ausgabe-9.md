@@ -77,9 +77,8 @@ Das bedeutet, im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volu
 
   
 
-|  |  |  |
-| ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Offset | Type | Description |
+| ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
 | 0x0 | Byte | Boot Record Indicator |
 | 0x1-0x5 | Byte | ISO-9660 Identifier, muss 'CD001' sein |
 | 0x6 | Byte | Version des Descriptor, muss '1' sein |
@@ -90,9 +89,8 @@ Das bedeutet, im Sektor 17 (an der Adresse 17 \* 0x800) ist das Boot-Record Volu
 
 Wie wir hier deutlich erkennen können, ist an der Adresse 0x47-0x4A im 17. CD-ROM Sektor der Pointer zum Boot-Catalog. Wir folgen nun diesem Pointer und sehen uns den Boot Catalog an:
 
-|  |  |  |
-| ----------- | ------ | ------------------------ |
 | Offset | Type | Description |
+| ----------- | ------ | ------------------------ |
 | 0x0 | Byte | Header ID, immer 01 |
 | 0x1 | Byte | Platform ID |
 | 0x2-0x3 | Word | Reserviert, immer 0 |
@@ -103,9 +101,8 @@ Wie wir hier deutlich erkennen können, ist an der Adresse 0x47-0x4A im 17. CD-R
 
 Hier sehen wir zuerst einige Standard-Strings und Zeichen ("0x55, 0xAA" sollten wir schon kennen). 0x20 Byte weiter (also 32 Bytes weiter) im selben Sektor befindet sich dann der "Initial/Default Entry", der auch den Pointer zu unserem Boot-Image beinhaltet:
 
-|  |  |  |
-| ----------- | ------- | --------------------------------------------------------- |
 | Offset | Type | Description |
+| ----------- | ------- | --------------------------------------------------------- |
 | 0x0 | Byte | Boot Indicator ( 88 = bootable, 00 = not bootable ) |
 | 0x1 | Byte | Boot media Type |
 | 0x2-0x3 | Word | Load segment (standard is 0x7C0) |
@@ -138,9 +135,8 @@ Second Part To Hell
 Bestimmt hast du auch schon das eine oder andere Dateisystem implementiert, oder planst dies in näherer Zukunft zu tun. Da nicht jeder Lust hat sein eigenes System zu entwerfen, hier mal einige Infos über verschiedene Dateisysteme, für einen schnellen Vergleich ordentlich in einer Tabelle dargestellt. Ich hoffe ich erleichtere euch eure Arbeit hiermit ein bisschen, und verkompliziere sie nicht noch eher weil es so viele interessante Systeme gibt \*g\*. Viel Spaß, stultus/N00b  
   
 
-|  |  |  |  |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  | ext2 | ReiserFS | Fat32 |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Zugriffskontrolle | chmod | ? | keine |
 | Blockgröße | 2 kB - 8 kB | 4 kB | 4 kB (Standard) |
 | Max. Dateigröße | Je nach Blockgröße 16 GB bis 2 TB | 2 GB – 1 Byte (Allerdings 1 Exabyte bei Version 3.6) \* | 4 GB – 1 Byte |
@@ -222,9 +218,8 @@ Nun, die weiteren Zeichen bis zur ersten Leerstelle sind die Zugriffsrechte. Im 
   
 Zugriffsrechttabelle:  
 
-|  |  |
-| --------- | ----------- |
 | Zeichen | Bedeutung |
+| --------- | ----------- |
 | r | Lesen |
 | w | Schreiben |
 | x | Ausführen |
@@ -276,6 +271,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 4814; parent 2677; 2009-07-30T00:41:21Z -->
+<!-- MediaWiki page 1409; revision 4815; parent 4814; 2009-07-30T00:43:37Z -->
