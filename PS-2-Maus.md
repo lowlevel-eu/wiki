@@ -344,16 +344,10 @@ ACHTUNG: Bei 2 Byte großen Befehlen muss auch vor dem senden des 2. Bytes dies 
 
 **Bitfelder des Statusbytes, das beim Lesen des 64h's geliefert wird**
 
-| 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 = Parity-Error bei der letzten Übertragung vom Keyboard |  |  |  |  |  |  |  |
-|  | 1 = Ein Time-Out-Error ist aufgetreten, das heißt, dass die Maus oder die Tastatur nicht reagiert hat. Sollte dieser Fehler auftreten sollte mann den Resend-Befehl nutzen. |  |  |  |  |  |  |
-|  |  | 1 = Die Maus hat Daten für uns im Maus-Output-Buffer bereit leigen und sollten nun abgeholt werden<br>0 = es liegen keine Daten für uns bereit<br> |  |  |  |  |  |
-|  |  |  | 1 = Keyboard gesperrt<br>0 = Keyboard verfügbar<br> |  |  |  |  |
-|  |  |  |  | 1 = Das letzte geschrieben Byte war ein Befehl und ging somit an den Port 64h<br>0 = Das letzte geschriebene Byte waren Daten und gingnen an den Port 60h<br> |  |  |  |
-|  |  |  |  |  | 1 = Selftest OK<br>0 = power up or reset<br> |  |  |
-|  |  |  |  |  |  | 1 = Der Input-Buffer hat noch Daten, also es liegt noch der zuletzt gesendete Befehl in 60h/64h und wartet auf seine Verarbeitung<br>0 = Der Input-Buffer ist leer und alle Befehle sind verarbeitet, nun können wir einen Befehl senden<br> |  |
-|  |  |  |  |  |  |  | 1 = Im OutputBuffer befinden sich Daten für den User. Im Sourcecode wird dies genutzt um auf das Ergebnis einer Operation zu warten<br>0 = Es liegen keine Daten bereit und es sollte somit auch noch nichts aus dem Port 60h ausgelesen werden<br> |
+|  | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ----- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------- | --------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 0 |  |  | Es liegen keine Daten für uns bereit | Keyboard verfügbar | Das letzte geschriebene Byte waren Daten und gingnen an den Port 60h | power up or reset | Der Input-Buffer ist leer und alle Befehle sind verarbeitet, nun können wir einen Befehl senden | Es liegen keine Daten bereit und es sollte somit auch noch nichts aus dem Port 60h ausgelesen werden |
+| 1 | Parity-Error bei der letzten Übertragung vom Keyboard | Ein Time-Out-Error ist aufgetreten, das heißt, dass die Maus oder die Tastatur nicht reagiert hat. Sollte dieser Fehler auftreten sollte mann den Resend-Befehl nutzen. | Die Maus hat Daten für uns im Maus-Output-Buffer bereit leigen und sollten nun abgeholt werden | Keyboard gesperrt | Das letzte geschrieben Byte war ein Befehl und ging somit an den Port 64h | Selftest OK | Der Input-Buffer hat noch Daten, also es liegt noch der zuletzt gesendete Befehl in 60h/64h und wartet auf seine Verarbeitung | Im OutputBuffer befinden sich Daten für den User. Im Sourcecode wird dies genutzt um auf das Ergebnis einer Operation zu warten |
 
 ### Keyboard-Controller-Befehle (64h)
 
@@ -1026,6 +1020,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/lay
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 4891; parent 4592; 2009-07-30T18:07:50Z -->
+<!-- MediaWiki page 1559; revision 4893; parent 4891; 2009-07-30T20:02:18Z -->
