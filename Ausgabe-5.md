@@ -248,22 +248,24 @@ Der Video-Speicher ist ein bestimmter Bereich im Arbeitsspeicher, der - befindet
 
 Wie bereits erwähnt stehen die Attribute im zweiten Byte eines jeden Zeichen-Words. Der Einfachheit halber stellen wir sie (im Beispiel-Code) als vierstellige Hexadezimal-Zahlen dar (0x0000) und OR\`en sie einfach mit dem Zeichen-Word zusammen. Da wir im Textmodus nur 16 Farben haben, ist der Vorgang denkbar einfach. Die höchste Stelle im der HEX-Zahl (0x1000) stellt die Hintergrundfarbe dar, die zweite Stelle (0x0100) die Vordergrundfarbe.
 
-- 0x0 Schwarz
-- 0x1 Blau
-- 0x2 Grün
-- 0x3 Türkis
-- 0x4 Rot
-- 0x5 Magenta
-- 0x6 Braun
-- 0x7 Hellgrau
-- 0x8 Dunkelgrau
-- 0x9 Hellblau
-- 0xA Hellgrün
-- 0xB Helltürkis (Cyan)
-- 0xC Hellrot
-- 0xD Hellmagenta
-- 0xE Gelb
-- 0xF Weiß
+| Wert | Farbe |
+| ------ | ------------------- |
+| 0x0 | Schwarz |
+| 0x1 | Blau |
+| 0x2 | Grün |
+| 0x3 | Türkis |
+| 0x4 | Rot |
+| 0x5 | Magenta |
+| 0x6 | Braun |
+| 0x7 | Hellgrau |
+| 0x8 | Dunkelgrau |
+| 0x9 | Hellblau |
+| 0xA | Hellgrün |
+| 0xB | Helltürkis (Cyan) |
+| 0xC | Hellrot |
+| 0xD | Hellmagenta |
+| 0xE | Gelb |
+| 0xF | Weiß |
 
 Jetzt ein paar Beispiele. Das Attribut-Byte 0xC2 ergäbe dunkelgrüne Schrift auf hellrotem Hintergrund. 0x07(00) ist die Standardschrift der meisten Konsolen, nämlich hellgrauer Text auf schwarzem Hintergrund. Wir machen die Attribut-Bytes zu Words, damit wir sie bequemer or\`en können. Beispiel:
 
@@ -360,6 +362,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 4241; parent 3521; 2009-04-01T16:34:10Z -->
+<!-- MediaWiki page 1470; revision 4816; parent 4241; 2009-07-30T00:47:14Z -->
