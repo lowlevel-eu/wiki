@@ -8,16 +8,16 @@ Der **Netwide Assembler** oder kurz **NASM** ist ein unter der 2-Klausel-BSD ste
 
   
 
-# NASM in der Betriebssystementwicklung
+## NASM in der Betriebssystementwicklung
 
 Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und hat somit eine Art Vormachtsstellung eingenommen.
 
-# Weblinks
+## Weblinks
 
 - \[[NASM bei Sourceforge](http://nasm.sourceforge.net)\]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4847/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
 
-<!-- MediaWiki page 1909; revision 4847; parent 4812; 2009-07-30T12:04:24Z -->
+<!-- MediaWiki page 1909; revision 4857; parent 4847; 2009-07-30T13:26:22Z -->
