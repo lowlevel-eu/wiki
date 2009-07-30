@@ -27,7 +27,7 @@ Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Proje
 
 ReactOS steht unter der GNU GPL, ist also Open Source.
 
-Das Installieren wird auch von den Entwicklern noch nicht empfohlen. Jedoch ist die Stabilität im Vergleich zu den vorherigen Versionen relativ hoch, welches Erfahrungsberichte zeigen. Trotzdem läuft es nicht auf jeder Hardware. [\[1\]](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7C1)[\[2\]](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C2)
+Das Installieren wird auch von den Entwicklern noch nicht empfohlen. Jedoch ist die Stabilität, im Vergleich zu den vorherigen Versionen, laut Erfahrungsberichten relativ hoch. Trotzdem läuft es nicht auf jeder Hardware. [\[1\]](http://www.reactos.org/forum/viewtopic.php?f=6&t=6106%7C1)[\[2\]](http://www.reactos.org/forum/viewtopic.php?f=6&t=6205%7C2)
 
 ## Kompatibilität
 
@@ -69,6 +69,6 @@ Der Audit-Prozess wurde im Dezember 2007 erfolgreich abgeschlossen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 4574; parent 4573; 2009-07-07T12:08:20Z -->
+<!-- MediaWiki page 1421; revision 4912; parent 4574; 2009-07-30T21:32:48Z -->
