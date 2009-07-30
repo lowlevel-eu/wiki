@@ -7,9 +7,9 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier Floppy-Laufwerke anste
 - DMA-Channel: 2
 - IRQ: 6
 
-# Register
+## Register
 
-## Übersicht
+### Übersicht
 
 | Name | Port | Beschreibung | lesen/schreiben |
 | ------ | ------- | -------------------------------- | ----------------- |
@@ -23,11 +23,11 @@ Der Floppy Disk Controller ist ein Chip, der ein bis vier Floppy-Laufwerke anste
 | DIR | 0x3F7 | Digital Input Register | lesen |
 | CCR | 0x3F7 | Configuration Control Register | schreiben |
 
-## Aufbau
+### Aufbau
 
 Wenn nichts dasteht, gilt das Flag bei gesetztem Bit.
 
-### MSR
+#### MSR
 
 |  |  |  |  |  |  |  |  |  |
 | ---------- | ----- | ----- | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -65,7 +65,7 @@ BUSY (Befehl wird ausgeführt)
 ACTD-ACTA  
 Laufwerk D-A ist im Positionierungs-Modus
 
-### DOR
+#### DOR
 
 |  |  |  |  |  |  |  |  |
 | ---------- | ------ | ------ | ------ | ------ | ----- | ------- | ------------ |
@@ -104,11 +104,11 @@ Laufwärk auswählen
 
 11: Drive 3
 
-### DR
+#### DR
 
 In das Data-Register werden die Befehle geschrieben, die jeweils aus mehreren Bytes bestehen. Nach manchen Befehlen werden die Status-Register im DR zurückgegeben.
 
-#### ST0
+##### ST0
 
 |  |  |  |  |  |  |  |
 | ---------- | ------------ | ----- | ----- | ----- | ----- | ------------ |
@@ -157,7 +157,7 @@ aktives Laufwerk
 
 11: D
 
-#### ST1
+##### ST1
 
 |  |  |  |  |  |  |  |  |  |
 | ---------- | ----- | ----- | ----- | ----- | ----- | ------ | ----- | ----- |
@@ -196,7 +196,7 @@ Ao Address Mark
 
 gesetzt wenn die ID Address mark nicht gefunden wurde
 
-#### ST2
+##### ST2
 
 |  |  |  |  |  |  |  |  |  |
 | ---------- | ----- | ------ | ------ | ------ | ----- | ------ | ------ | ------ |
@@ -232,7 +232,7 @@ bad cylinder
 NDAM  
 not data address mark DAM
 
-#### ST3
+##### ST3
 
 |  |  |  |  |  |  |  |  |
 | ---------- | ------ | ------ | ----- | ------ | ------ | ------ | ------------ |
@@ -282,23 +282,23 @@ Drive select
 
 11: D
 
-# Befehle
+## Befehle
 
-# Infos
+## Infos
 
 ## Data Address Mark
 
-# Siehe auch
+## Siehe auch
 
 [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h") - Disketten- und Festplattenzugriff
 
-# Weblinks
+## Weblinks
 
 - [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](http://lowlevel.brainsware.org/wiki/images/82077AA_FloppyControllerDatasheet.pdf)
 - <http://www.isdaman.com/alsos/hardware/fdc/floppy.htm>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4628; parent 4627; 2009-07-12T18:31:02Z -->
+<!-- MediaWiki page 1443; revision 4918; parent 4628; 2009-07-30T21:49:42Z -->
