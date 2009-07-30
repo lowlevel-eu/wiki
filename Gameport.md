@@ -33,6 +33,6 @@ Es ist außerdem sinnvoll in der Mitte eine kleine Deadzone einzurichten, bei de
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1674/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1674/index.html)
 
-<!-- MediaWiki page 1674; revision 3438; parent 3046; 2008-10-30T17:07:21Z -->
+<!-- MediaWiki page 1674; revision 4849; parent 3438; 2009-07-30T12:44:51Z -->
