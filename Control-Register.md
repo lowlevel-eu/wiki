@@ -54,8 +54,8 @@ Das CR3-Register enthält primär die Adresse des Page Directories, sowie 2 Flag
 - PVI - *Protected-Mode Virtual Interrupts*
 - TSD - *Time-Stamp Disable*
 - DE - *Debugging Extension*
-- PSE - *Page-Size Extension*
-- PAE - Das Flag schaltet *Physical-Address Extension* ein bzw. aus. (Genaueres siehe [hier](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension"))
+- PSE - *Page-Size Extension* (Wird im Long Mode ignoriert)
+- PAE - Das Flag schaltet *Physical-Address Extension* ein bzw. aus. (Genaueres siehe [hier](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension")) (MUSS im Long Mode gesetzt sein)
 - MCE - *Machine-Check Enable*
 - PGE - Mit dem *Page-Global Enable* Flag kann die Unterstützung des Global-Flags in den [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") Strukturen ein bzw. aus geschaltet werden.
 - PCE - Ein gesetztes *Performance-Monitoring Counter Enable* Flag erlaubt die Verwendung der RDPMC-Instruktion auch aus Ring 3-1. Ist das Flag 0, ist die Verwendung nur aus Ring 0 gestattet.
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4888/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4878; parent 4744; 2009-07-30T16:51:22Z -->
+<!-- MediaWiki page 1610; revision 4888; parent 4878; 2009-07-30T17:46:52Z -->
