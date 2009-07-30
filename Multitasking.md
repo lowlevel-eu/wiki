@@ -1,6 +1,8 @@
 # Multitasking
 
-Multitasking ist die Bezeichnung für das (nahezu) gleichzeitige Abarbeiten von Aufgaben (Tasks). Dies wird realisiert, indem blitzschnell zwischen mehreren Prozessen hin und her geschaltet wird und so jedem Prozess für eine bestimmte Zeit die CPU zur Verfügung gestellt wird.
+Unter Multitasking versteht man die (subjektive) parallele Ausführung mehrerer Programme/Prozesse. Subjektiv deswegen, weil (zumindest bei einem Single-Prozessor-System) zwischen den verschiedenen Programmen/Prozessen hin- und hergeschaltet wird (die Zeit, die jeder Prozess zwischen dem Hin- und Herschalten bekommt bestimmt der [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")).
+
+  
 
 ## Prinzip
 
@@ -32,6 +34,6 @@ Im Gegensatz zum Software-Multitasking, wird hier die meiste Arbeit vom Prozesso
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4828/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
 
-<!-- MediaWiki page 1495; revision 2733; parent 2131; 2008-03-22T17:17:04Z -->
+<!-- MediaWiki page 1495; revision 4828; parent 2733; 2009-07-30T01:41:35Z -->
