@@ -147,6 +147,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3188/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 3188; parent 2368; 2008-08-15T14:16:41Z -->
+<!-- MediaWiki page 1561; revision 4850; parent 3188; 2009-07-30T12:45:39Z -->
