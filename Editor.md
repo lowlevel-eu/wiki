@@ -46,8 +46,12 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 - [Scite](http://www.scintilla.org/SciTE.html)
 
+<!-- -->
+
+- [Nano](http://www.nano-editor.org), freier Pico-Klon, kommandozeilenbasiert, mit Syntax-Highlighting
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 4890; parent 4889; 2009-07-30T18:06:49Z -->
+<!-- MediaWiki page 1908; revision 4892; parent 4890; 2009-07-30T18:22:07Z -->
