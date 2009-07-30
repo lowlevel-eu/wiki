@@ -1,10 +1,10 @@
 # Gameport
 
-Der Gameport ist ein ein 15-poliger Anschluss, meist auf Soundkarten anzufinden (da er auch für MIDI verwendet wird). Er eignet sich besonderst gut für Joysticks und Lenkräder, da die Daten vorher nicht vom jeweiligen Gerät bearbeitet werden müssen.
+Der Gameport ist ein ein 15-poliger Anschluss, meist auf Soundkarten anzufinden (da er auch für MIDI verwendet wird). Er eignet sich besonders gut für Joysticks und Lenkräder, da die Daten vorher nicht vom jeweiligen Gerät bearbeitet werden müssen.
 
 ## Programmierung
 
-Der Gameport wird über den [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Port") 0x201 angesprochen. In ihm sind 8 Bits auf 2 Eingabegeräte aufgeteilt und diese 4 Bits jeweils nochmal auf 2 Buttons und 2 Achsen geteilt.
+Der Gameport wird über den [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Ports") 0x201 angesprochen. In ihm sind 8 Bits auf 2 Eingabegeräte aufgeteilt, und diese 4 Bits sind jeweils nochmal auf 2 Buttons und 2 Achsen geteilt.
 
 | Bit | Beschreibung |
 | ------- | ---------------------- |
@@ -23,16 +23,16 @@ Um den Status eines Buttons zu lesen, muss man nur das jeweilige Bit auslesen. 0
 
 ### Achsen
 
-Um die Achsen auszulesen, muss man erst ein beliebigen Wert in den [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Port") schreiben. Dadurch werden alle Achsen-Bits auf 1b gesetzt. Nun muss man die Zeit messen bis das jeweilige Bit wieder 0b wird. Da die Werte von Treiber zu Treiber abweichen ist meistens eine Kalibrierung erforderlich.
+Um die Achsen auszulesen, muss man erst ein beliebigen Wert in den [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Ports") schreiben. Dadurch werden alle Achsen-Bits auf 1b gesetzt. Nun muss man die Zeit messen bis das jeweilige Bit wieder 0b wird. Da die Werte von Treiber zu Treiber abweichen, ist meistens eine Kalibrierung erforderlich.
 
 ### Kalibrierung
 
-Da der Joystick keine linearen Werte zurückgibt ist es sinnvoll nicht nur die Ecken als Bezugspunkte bei der Kalibrierung zu benutzen. Ansonsten würde sich die Mitte in Richtung einer Ecke verschieben. Man muss also auch die Mitte als Bezugspunkt nehmen. Jenachdem ob der eingelesene Wert über der Mitte oder unter der Mitte liegt, wird dann ein anderer Skalierungsfaktor benutzt.
+Da der Joystick keine linearen Werte zurückgibt, ist es sinnvoll nicht nur die Ecken als Bezugspunkte bei der Kalibrierung zu benutzen. Ansonsten würde sich die Mitte in Richtung einer Ecke verschieben. Man muss also auch die Mitte als Bezugspunkt nehmen. Je nachdem, ob der eingelesene Wert über der Mitte oder unter der Mitte liegt, wird dann ein anderer Skalierungsfaktor benutzt.
 
-Es ist außerdem sinnvoll in der Mitte eine kleine Deadzone einzurichten, bei der dann sofort der Mittelwert zurückgegeben wird, da viele Joysticks beim Zurückschnappen nicht genau in der Mitte halten.
+Es ist außerdem sinnvoll, in der Mitte eine kleine Deadzone einzurichten bei der dann sofort der Mittelwert zurückgegeben wird, da viele Joysticks beim Zurückschnappen nicht genau in der Mitte halten.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1674/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1674/index.html)
 
-<!-- MediaWiki page 1674; revision 4849; parent 3438; 2009-07-30T12:44:51Z -->
+<!-- MediaWiki page 1674; revision 4863; parent 4849; 2009-07-30T13:56:11Z -->
