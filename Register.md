@@ -26,6 +26,11 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ? = A, B, C, D
 
+Die Allzweckregister können, wie ihr Name schon andeutet eigentlich für fast jeden Zweck genutzt werden. Trotzdem gibt es einige gebräuchliche Nutzungen, zum Beispiel
+
+- **EAX** : Für Rechenoperatioen, als Rückgabewert in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
+- **ECX** : Als Zähler
+
 ### Indexregister
 
 | Bytes |  |  |  |
@@ -35,6 +40,11 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 |  |  | ?I |  |
 
 ? = D, S
+
+Die Indexregister werden oft als Indexe in Datenbereichen verwendet. Dabei zeigt
+
+- **ESI** : Auf den Quelloperanden
+- **EDI** : Auf den Zieloperanden
 
 ### Zeigerregister
 
@@ -46,6 +56,11 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ? = B, S
 
+Die Zeigerregister werden genutzt, um auf Stellen im Speicher zu zeigen.
+
+- **ESP** : Zeigt *immer* auf den aktuellen Stack
+- **EBP** : Wird meistens für Stackframes und lokale Variablen bei Funktionsaufrufen verwendet
+
 ### Instruktionsregister
 
 | Bytes |  |  |  |
@@ -53,6 +68,8 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | 3 | 2 | 1 | 0 |
 | EIP |  |  |  |
 |  |  | IP |  |
+
+Das Instruktionsregister **EIP** zeigt *immer* auf den nächsten auszuführenden Befehl. Es kann nicht direkt geändert werden, sondern nur über Funktion wie **jmp**, **call** oder **ret**
 
 ### Flagregister
 
@@ -62,6 +79,8 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 EFLAGS
 
+Das Flagregister **EFLAGS** speichert einige Konfigurationsmöglichkeiten und Systemzuständen, beispielweise, ob Interrupts gerade erlaubt sind oder ob ein Übertrag bei einer Addition stattfand.
+
 ### Segmentregister
 
 | Bytes |  |
@@ -70,6 +89,16 @@ EFLAGS
 | ?S |  |
 
 ? = C, D, E, F, G, S
+
+Die Segmentregister geben die Basisadresse des aktuellen Segments an. Dabei steht
+
+- **CS** für das *Code-Segment*
+- **DS** für das *Data-Segment*
+- **SS** für das *Stack-Segment*
+
+*ES*, *FS* und *GS* sind zusätzliche Daten-Segmente.
+
+Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") auch für die Segmentierung mit Hilfe der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") verantwortlich.
 
   
 
@@ -397,6 +426,6 @@ EFLAGS
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4901/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4899; parent 4898; 2009-07-30T20:50:17Z -->
+<!-- MediaWiki page 1881; revision 4901; parent 4899; 2009-07-30T21:09:07Z -->
