@@ -4,7 +4,7 @@
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Name: | C++ |
 | Inlineassembler: | Ja |
-| Compiler: | g++ |
+| Compiler: | g++, icc |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
 | Beispielkernel in der Sprache: | [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB") |
@@ -200,6 +200,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 4810; parent 4799; 2009-07-30T00:24:28Z -->
+<!-- MediaWiki page 1486; revision 4859; parent 4810; 2009-07-30T13:29:08Z -->
