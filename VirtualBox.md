@@ -15,10 +15,7 @@
 
 <http://www.virtualbox.org/>
 
-VirtualBox ist ein x86 Emulator der Firma innotek. Es gibt zwei Versionen der Software, wobei eine unter Open Source Lizenz steht.  
-Die Software kann unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), und Unix ([Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), Mac OS X, etc...) eingesetzt werden.  
-  
-VirtualBox verfügt über eine [grafische Benutzeroberfläche](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"). Was die Software im Gegensatz zu anderen Emulatoren sehr viel benutzerfreudlicher macht.
+**VirtualBox**, auch bekannt als **VirtuaBox** ist ein x86-Emulator für x86-Systeme. Original entwickelt von innotek, kaufte Sun das Programm auf, stelle zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
 
 Besondere Features:
 
@@ -57,6 +54,6 @@ Emulierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4914/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 4436; parent 4358; 2009-06-14T10:19:55Z -->
+<!-- MediaWiki page 1553; revision 4914; parent 4436; 2009-07-30T21:36:58Z -->
