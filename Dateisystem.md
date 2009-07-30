@@ -1,8 +1,8 @@
 # Dateisystem
 
-Das Dateisystem ist eine Struktur, welche Dateien (Datenmengen variabler Länge bzw. Streams) meist in einer Baumstruktur verwaltet und anhand von Namen adressiert. Dateisysteme werden auf Massenspeichern wie Festplatten, CD/DVD-ROMs, Disketten, aber auch im Arbeitsspeicher verwendet.
+Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Dateien auf einem Speichermedium. Die Art der Strukturierung kann dabei unterschiedlich sein, z.B. in Form eines AVL-Baumes. Moderne Dateisysteme speichern dazu noch weitere Informationen zu Dateien als den bloßen Namen ab, es werden auch Lese/Schreibzugriffe und Berechtigungen gespeichert. Ersteres ist vor allem bei Journaling-Dateisystemen wichtig.
 
-Neben den eigentlichen Daten der Dateien werden oft auch Zusatzinformationen wie Berechtigungen, Schreib- und Zugriffsdatum, usw. im Dateisystem gespeichert.
+  
 
 ## Liste bekannter Dateisysteme
 
@@ -37,6 +37,6 @@ Neben den eigentlichen Daten der Dateien werden oft auch Zusatzinformationen wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4578/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4824/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 4578; parent 3308; 2009-07-07T17:12:05Z -->
+<!-- MediaWiki page 1548; revision 4824; parent 4578; 2009-07-30T01:27:04Z -->
