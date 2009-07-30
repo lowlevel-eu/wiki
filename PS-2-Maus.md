@@ -384,6 +384,7 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
 
 <table>
 <tbody><tr>
+<th></th>
 <th>7</th>
 <th>6</th>
 <th>5</th>
@@ -391,8 +392,7 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
 <th>3</th>
 <th>2</th>
 <th>1</th>
-<th>0</th>
-<th>
+<th>0
 </th></tr>
 <tr>
 <td><i>Byte 1</i></td>
@@ -460,6 +460,7 @@ Wenn dies erfolgreich gesendet wurde und gleich danach mit F2h die MausID abgefr
 
 <table>
 <tbody><tr>
+<th></th>
 <th>7</th>
 <th>6</th>
 <th>5</th>
@@ -467,8 +468,7 @@ Wenn dies erfolgreich gesendet wurde und gleich danach mit F2h die MausID abgefr
 <th>3</th>
 <th>2</th>
 <th>1</th>
-<th>0</th>
-<th>
+<th>0
 </th></tr>
 <tr>
 <td><i>Byte 1</i></td>
@@ -551,6 +551,7 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 
 <table>
 <tbody><tr>
+<th></th>
 <th>7</th>
 <th>6</th>
 <th>5</th>
@@ -558,8 +559,7 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 <th>3</th>
 <th>2</th>
 <th>1</th>
-<th>0</th>
-<th>
+<th>0
 </th></tr>
 <tr>
 <td><i>Byte 1</i></td>
@@ -1020,6 +1020,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/lay
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4895/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 4893; parent 4891; 2009-07-30T20:02:18Z -->
+<!-- MediaWiki page 1559; revision 4895; parent 4893; 2009-07-30T20:07:53Z -->
