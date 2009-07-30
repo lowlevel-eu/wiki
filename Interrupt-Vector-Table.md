@@ -1,6 +1,6 @@
 # Interrupt Vector Table
 
-Die Interrupt Vector Table (kurz IVT) befindet sich im ersten Kilobyte des Arbeitsspeichers (siehe [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche")). Ihre Aufgabe besteht darin, die Adresse der [Interrupt Service Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") für jeden [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") bereitzustellen. Die IVT hat nur im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") Bedeutung und wird im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") durch die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") abgelöst.
+Die **Interrupt Vector Table** (kurz **IVT**) befindet sich im ersten Kilobyte des Arbeitsspeichers (siehe [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche")). Ihre Aufgabe besteht darin, die Adresse der [Interrupt Service Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") für jeden [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") bereitzustellen. Die IVT hat nur im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") Bedeutung und wird im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") durch die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") abgelöst.
 
 ## Aufbau
 
@@ -23,7 +23,9 @@ Die IVT belegt somit genau 256 \* 4 = 1024 Byte. Die genaue Verwendung dieser Ei
 
 ## Während des Bootvorgangs
 
-Nach dem Start des Computers wird die IVT automatisch vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") erstellt und die Adressen zeigen auf Funktionen, die entweder das BIOS einem Betriebssystem zur Verfügung stellt oder die benötigt werden, um mit der Hardware zu kommunizieren. Nach dem [Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") kann es für ein Betriebssystem sinnvoll sein einige Interrupts durch eigene Funktionen behandeln zu lassen. Dazu zählen vor allem die Exceptions.
+Nach dem Start des Computers wird die IVT automatisch vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") erstellt, und die Adressen zeigen auf Funktionen, die entweder das BIOS einem Betriebssystem zur Verfügung stellt, oder die benötigt werden, um mit der Hardware zu kommunizieren.
+
+Nach dem [Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") kann es für ein Betriebssystem sinnvoll sein, einige Interrupts durch eigene Funktionen behandeln zu lassen. Dazu zählen vor allem die Exceptions.
 
 ## Beispiel
 
@@ -64,6 +66,6 @@ sti \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4784/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 4784; parent 4123; 2009-07-29T23:00:56Z -->
+<!-- MediaWiki page 1540; revision 4865; parent 4784; 2009-07-30T14:02:16Z -->
