@@ -34,6 +34,6 @@ Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 4839; parent 4838; 2009-07-30T02:13:22Z -->
+<!-- MediaWiki page 1910; revision 4840; parent 4839; 2009-07-30T02:13:44Z -->
