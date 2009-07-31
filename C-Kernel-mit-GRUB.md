@@ -140,7 +140,7 @@ Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche welch
 
 ## GRUB-Image erstellen
 
-Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann GRUB und unseren Kernel draufladen.
+Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann GRUB und unseren Kernel draufladen. Dieser Abschnitt beschreibt das Vorgehen unter Linux, für Windows siehe GRUB-Image erstellen (Windows)
 
 ### Floppy-Image erstellen
 
@@ -222,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4926/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4458; parent 4457; 2009-06-18T09:55:21Z -->
+<!-- MediaWiki page 1604; revision 4926; parent 4458; 2009-07-31T13:32:18Z -->
