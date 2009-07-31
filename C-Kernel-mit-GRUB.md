@@ -176,8 +176,8 @@ Wir brauchen natürlich noch eine GRUB-Konfigurationsdatei. Diese sollte folgend
     timeout 10
 
     title Mein super tolles OS
-    kernel /kernel.bin
     root (fd0)
+    kernel /kernel.bin
 
 Die Konfigurationsdatei wird als *floppy/grub/menu.lst* gespeichert.
 
@@ -222,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4926/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4929/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4926; parent 4458; 2009-07-31T13:32:18Z -->
+<!-- MediaWiki page 1604; revision 4929; parent 4926; 2009-07-31T13:52:17Z -->
