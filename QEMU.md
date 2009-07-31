@@ -67,6 +67,10 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - USB-Massenspeicher
 - Durchleitung von USB-Geräten des Hosts
 
+## Aktueller Windows-Build
+
+Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeiten. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Eine einigermaßen aktuelle Version für Windows (git-Version von Ende Juni 2009) liegt auf unserem Server: [\[1\]](http://lowlevel.brainsware.org/download/qemu-0.10.50-i386.tar.bz2)
+
 ## Siehe Auch
 
 - GNU Project Debugger und QEMU
@@ -79,6 +83,6 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 4925; parent 4525; 2009-07-31T12:25:12Z -->
+<!-- MediaWiki page 1505; revision 4930; parent 4925; 2009-07-31T14:26:26Z -->
