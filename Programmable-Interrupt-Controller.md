@@ -52,8 +52,8 @@ In diesem Wert steht jedes Bit für einen Interrupt (IRQ 0 ist Bit 0 usw.). Gese
 | 7 | 0x0F | LPT 1 und [Spurious Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#spurious-interrupt "PIC") |
 | 8 | 0x70 | RTC ([CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") Real Time Clock) |
 | 9 | 0x71 | frei |
-| 10 | 0x72 | frei |
-| 11 | 0x73 | frei |
+| 10 | 0x72 | vierter [ATA/ATAPI/(E)IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
+| 11 | 0x73 | fünfter [ATA/ATAPI/(E)IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 12 | 0x74 | Zweiter PS/2 Port des [Keyboard Controller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") (meist PS/2 Maus) |
 | 13 | 0x75 | FPU |
 | 14 | 0x76 | primärer [ATA/ATAPI/(E)IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
@@ -78,6 +78,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4826/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 4826; parent 4389; 2009-07-30T01:35:10Z -->
+<!-- MediaWiki page 1465; revision 4932; parent 4826; 2009-07-31T18:10:24Z -->
