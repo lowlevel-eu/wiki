@@ -83,6 +83,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4934/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4934; parent 4775; 2009-07-31T19:05:24Z -->
+<!-- MediaWiki page 1522; revision 4935; parent 4934; 2009-07-31T19:06:10Z -->
