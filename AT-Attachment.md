@@ -22,7 +22,48 @@ Der nächste Schritt dient dazu, herauszufinden, ob auf dem Bus ein Gerät vorha
 
 Falls keine der vorherigen Prüfungen fehlgeschlagen ist, müsste jetzt mindestens ein Gerät am Bus vorhanden sein. Das wird jetzt sichergestellt und genauer ermittelt, welche Geräte wirklich vorhanden sind. Dies wird mit dem IDENTIFY DEVICE Befehl gemacht. Beim Senden dieses Befehls ist es sehr wichtig, dass man die ATA-Spezifikation genau befolgt, und sich an die dort erwähnten Protokolle hält. Wenn das korrekt gemacht wird, geht das Erkennen ohne ewig lange Timeouts und co. von statten. Falls das Identifizieren eines Gerätes fehlschlägt, heißt das noch nicht, dass kein Gerät vorhanden ist. Denn es könnte auch sein, dass es sich um ein Gerät mit PACKET Interface handelt. Diese Geräte lassen sich mit dem IDENTIFY PACKET DEVICE identifizieren.
 
-  
+## Register
+
+| Beschreibung | 1\. Kanal | 2\. Kanal | 3\. Kanal | 4\. Kanal |
+| ------------------------- | ----------- | ----------- | ----------- | ----------- |
+| Datenregister | 0x1F0 | 0x170 | 0x1E8 | 0x168 |
+| Fehlerregister | 0x1F1 | 0x171 | 0x1E9 | 0x169 |
+| Sektoranzahl | 0x1F2 | 0x172 | 0x1EA | 0x16A |
+| LBA niedrig | 0x1F3 | 0x173 | 0x1EB | 0x16B |
+| LBA mittel | 0x1F4 | 0x174 | 0x1EC | 0x16C |
+| LBA hoch | 0x1F5 | 0x175 | 0x1ED | 0x16D |
+| Geräteauswahl | 0x1F6 | 0x176 | 0x1EE | 0x16E |
+| Status/Kommandoregister | 0x1F7 | 0x177 | 0x1EF | 0x16F |
+| Status2/Steuerregister | 0x3F6 | 0x376 | 0x3EE | 0x36E |
+
+### Datenregister
+
+Das Datenregister dient zur Übermittlung der Lese/Schreib-Words(!).
+
+### Fehlerregister
+
+### Sektoranzahl
+
+### LBA niedrig
+
+### LBA mittel
+
+### LBA hoch
+
+### Geräteauswahl
+
+| 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ----- | ----- | ----- | ----- | ----- | ------ | ------ | ----- |
+| r | r | r | r | r | SRST | nIEN | 0 |
+
+- r: reserviert
+- SRST: Software Reset
+- nIEN: ???
+- 0: Immer 0
+
+### Status/Kommandoregister
+
+### Status2/Steuerregister
 
 ## Fehlerquellen
 
@@ -42,6 +83,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4934/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4775; parent 4079; 2009-07-29T22:06:32Z -->
+<!-- MediaWiki page 1522; revision 4934; parent 4775; 2009-07-31T19:05:24Z -->
