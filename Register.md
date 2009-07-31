@@ -424,8 +424,12 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 <td colspan="10">FOP
 </td></tr></tbody></table>
 
+## Siehe auch
+
+- [Control Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4902; parent 4901; 2009-07-30T21:10:27Z -->
+<!-- MediaWiki page 1881; revision 4924; parent 4902; 2009-07-31T11:36:34Z -->
