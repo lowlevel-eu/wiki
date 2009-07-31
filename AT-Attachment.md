@@ -54,11 +54,12 @@ Das Datenregister dient zur Übermittlung der Lese/Schreib-Words(!).
 
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | ----- | ----- | ----- | ----- | ----- | ------ | ------ | ----- |
-| r | r | r | r | r | SRST | nIEN | 0 |
+| HOB | r | r | r | r | SRST | nIEN | 0 |
 
 - r: reserviert
+- HOB: siehe [HOB-Bit](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment#hob-bit-l%C3%B6schen "AT Attachment")
 - SRST: Software Reset
-- nIEN: ???
+- nIEN: Wenn gesetzt, sendet der Controller keine PIC-Ints mehr
 - 0: Immer 0
 
 ### Status/Kommandoregister
@@ -83,6 +84,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4935; parent 4934; 2009-07-31T19:06:10Z -->
+<!-- MediaWiki page 1522; revision 4936; parent 4935; 2009-07-31T19:13:14Z -->
