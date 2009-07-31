@@ -395,7 +395,8 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
 <th>0
 </th></tr>
 <tr>
-<td><i>Byte 1</i></td>
+<th>Byte 1
+</th>
 <td>Y overflow</td>
 <td>X overflow</td>
 <td>Y sign bit</td>
@@ -406,11 +407,13 @@ Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12
 <td>Left Button pressed
 </td></tr>
 <tr>
-<td><i>Byte 2</i></td>
+<th>Byte 2
+</th>
 <td colspan="8">X Movement seit dem letztem Daten-Paket
 </td></tr>
 <tr>
-<td><i>Byte 3</i></td>
+<th>Byte 3
+</th>
 <td colspan="8">Y Movement seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
@@ -471,7 +474,8 @@ Wenn dies erfolgreich gesendet wurde und gleich danach mit F2h die MausID abgefr
 <th>0
 </th></tr>
 <tr>
-<td><i>Byte 1</i></td>
+<th>Byte 1
+</th>
 <td>Y overflow</td>
 <td>X overflow</td>
 <td>Y sign bit</td>
@@ -482,15 +486,18 @@ Wenn dies erfolgreich gesendet wurde und gleich danach mit F2h die MausID abgefr
 <td>Left Button pressed
 </td></tr>
 <tr>
-<td><i>Byte 2</i></td>
+<th>Byte 2
+</th>
 <td colspan="8">X Movement seit dem letztem Daten-Paket
 </td></tr>
 <tr>
-<td><i>Byte 3</i></td>
+<th>Byte 3
+</th>
 <td colspan="8">Y Movement seit dem letztem Daten-Paket
 </td></tr>
 <tr>
-<td><i>Byte 4</i></td>
+<th>Byte 4
+</th>
 <td colspan="8">Z Movement seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
@@ -562,7 +569,8 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 <th>0
 </th></tr>
 <tr>
-<td><i>Byte 1</i></td>
+<th>Byte 1
+</th>
 <td>Y overflow</td>
 <td>X overflow</td>
 <td>Y sign bit</td>
@@ -573,17 +581,19 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 <td>Left Button pressed
 </td></tr>
 <tr>
-<td><i>Byte 2</i></td>
+<th>Byte 2
+</th>
 <td colspan="8">X Movement seit dem letztem Daten-Paket
 </td></tr>
 <tr>
-<td><i>Byte 3</i></td>
+<th>Byte 3
+</th>
 <td colspan="8">Y Movement seit dem letztem Daten-Paket
 </td></tr>
 <tr>
-<td><i>Byte 4</i></td>
-<td>reserved (0)</td>
-<td>reserved (0)</td>
+<th>Byte 4
+</th>
+<td colspan="2">reserved (0)</td>
 <td>5th Maustaste</td>
 <td>4th Maustaste</td>
 <td colspan="4">Z Movement seit dem letztem Daten-Paket
@@ -1020,6 +1030,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/lay
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4895/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 4895; parent 4893; 2009-07-30T20:07:53Z -->
+<!-- MediaWiki page 1559; revision 4923; parent 4895; 2009-07-31T11:26:55Z -->
