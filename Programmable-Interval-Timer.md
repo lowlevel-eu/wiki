@@ -1,9 +1,15 @@
 # Programmable Interval Timer
 
-Der **Programmable Interval Timer** (= **PIT**) erzeugt ein Signal mit der Frequenz von 1193180Hz. Dieses Signal zählt 3 Register herunter, welche jeweils eine Aktion auslösen sobald sie 0 erreichen:
+Der **Programmable Interval Timer** oder kurz **PIT** ist ein Signal erzeugender Baustein auf dem Mainboard. Er erzeugt ein Signal in einer Frequenz von 1193180 Hz. Er wird u.a. für den sleep()-Befehl gebraucht oder sonstige zeitbedingte Aufgaben.
 
-- Zählregister 1: das auslösen des [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 0 (Dient Betriebssystemen zur Zeitmessung und wird oft für Multitasking genutzt)  
-- Zählregister 2: dient in alten XT-PCs, zusammen mit dem DMA-Kanal 0, der Speicherauffrischung  
+Der **Programmable Interval Timer** (= **PIT**) erzeugt ein Signal mit der Frequenz von 1193180Hz.
+
+## Funktionsweise
+
+Das Signal von dem die Rede ist, zählt drei Register herunter, welche jeweils eine Aktion auslösen sobald sie 0 erreichen:
+
+- Zählregister 1: Das Auslösen des [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 0 (dient Betriebssystemen zur Zeitmessung und wird oft für Multitasking genutzt)  
+- Zählregister 2: Dient in alten XT-PCs, zusammen mit dem DMA-Kanal 0, der Speicherauffrischung  
 - Zählregister 3: Signal für den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") (also die Tonfrequenz)  
 
 Die Frequenz für das Auslösen errechnet sich aus der Grundfrequenz und dem Wert im Register der heruntergezählt wird (Teiler).  
@@ -28,6 +34,6 @@ Ports: 40h bis 43h
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 4277; parent 3321; 2009-04-09T08:30:59Z -->
+<!-- MediaWiki page 1432; revision 4954; parent 4277; 2009-08-01T13:24:27Z -->
