@@ -1,5 +1,9 @@
 # Ausgabe 4
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") | **Navigation** | [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") » |
+
 ## Vorwort
 
 So, da wären wir mal wieder mit einer neuen Ausgabe von Lowlevel.
@@ -409,8 +413,12 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 **Mastermesh**
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") | **Navigation** | [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4993/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 4805; parent 3031; 2009-07-30T00:11:01Z -->
+<!-- MediaWiki page 1424; revision 4993; parent 4805; 2009-08-01T17:41:34Z -->
