@@ -1,22 +1,26 @@
 # EpOS
 
+| EpOS |  |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+|  |  |
+| Entwickler: | [dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
+| Akt. Version: | 0.01 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| OS-Eigenschaften |  |
+| Plattform: | x86 |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C/C++ |
+| API: |  |
+| Binärformat: |  |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Homepage |  |
+
+[epOS.kilu.de](http://epos.kilu.de/)
+
+  
 Hi, ich bin [dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") ^\_^  
 und dass hier ist eben epOS.  
 Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating **S**ystem!  
-
-| Allgemeines |  |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| Name: | epOS |
-| Logo: ![logo.png](http://epOS.kilu.de/data/logo.png) |  |
-| Entwickler: | [Dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") (gern auch DesL) |
-| Akt. Version: | 0.01 |
-| OS-Eigenschaften |  |
-| Plattform: | x86 |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
-| Sprache: | C/C++ |
-| Homepage |  |
-
-[epOS.kilu.de](http://epOS.kilu.de)
 
 ## Features
 
@@ -53,6 +57,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 3859; parent 3858; 2009-01-10T13:38:39Z -->
+<!-- MediaWiki page 1771; revision 5033; parent 3859; 2009-08-01T19:09:43Z -->
