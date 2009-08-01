@@ -1,6 +1,6 @@
 # Common Driver Interface
 
-Common Driver Interface (oder kurz CDI) ist ein Standard, der es ermöglichen soll betriebssystemunabhängige Treiber zu schreiben. Dies funktioniert mithilfe einer Bibliothek, die einmal für ein Betriebssystem implementiert werden muss. Dann können CDI-komforme Treiber einfach mit dieser Bibliothek kompiliert werden. Der CDI-Standard gibt lediglich vor, wie die Funktionsprototypen aussehen müssen, aber nicht wie diese implementiert werden, denn das ist ja von Betriebssystem zu Betriebssystem unterschiedlich.
+**Common Driver Interface** (oder kurz **CDI**) ist ein Standard, der vom Týndur-Team entwickelt wird, und der es ermöglichen soll, betriebssystemunabhängige Treiber zu schreiben. Dies funktioniert mithilfe einer Bibliothek, die einmal für ein Betriebssystem implementiert werden muss. Dann können CDI-komforme Treiber einfach mit dieser Bibliothek kompiliert werden. Der CDI-Standard gibt lediglich vor, wie die Funktionsprototypen aussehen müssen, aber nicht wie diese implementiert werden, denn das ist ja von Betriebssystem zu Betriebssystem unterschiedlich.
 
 Ein Link zur Dokumentation der Funktionsprototypen, Strukturen, Enumerationen, usw. ist in dem [Absatz Weblinks](#weblinks) zu finden.
 
@@ -77,6 +77,6 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5009/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 5001; parent 4624; 2009-08-01T17:59:32Z -->
+<!-- MediaWiki page 1622; revision 5009; parent 5001; 2009-08-01T18:26:48Z -->
