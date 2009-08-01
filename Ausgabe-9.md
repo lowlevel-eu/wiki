@@ -1,5 +1,9 @@
 # Ausgabe 9
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ----- |
+| « [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8") | **Navigation** |  |
+
 ## Einleitung
 
 Hi,
@@ -269,8 +273,12 @@ Da unter FreeBSD viele Anwendungen laufen, ist es eine gute Alternative zu komme
 
 Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.freebsd.org. Die Seite ist in vielen Sprachen erhältlich und hat ein gutes Design, durch welches man sich recht schnell auf der Seite fortbewegen kann.
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ----- |
+| « [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8") | **Navigation** |  |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4998/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 4815; parent 4814; 2009-07-30T00:43:37Z -->
+<!-- MediaWiki page 1409; revision 4998; parent 4815; 2009-08-01T17:44:21Z -->
