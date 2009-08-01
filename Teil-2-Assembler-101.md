@@ -1,5 +1,9 @@
 # Teil 2 - Assembler 101
 
+|  |  |  |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| « [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
+
 ## Ziel
 
 Dieser Artikel versucht, in aller Kürze zumindest die Grundlagen der Assemblerprogrammierung für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") zu vermitteln. Ganz ohne Assembler kommt man bei der Betriebssystemprogrammierung nicht aus, deswegen ist ein Grundverständnis dafür nötig.
@@ -227,13 +231,12 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
 [Intels Prozessordokumentation](http://www.intel.com/products/processor/manuals/)
 
-## Navigation
-
-- Voriger Artikel: [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")
-- Nächster Artikel: [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen")
+|  |  |  |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| « [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4972/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 4961; parent 4944; 2009-08-01T14:19:02Z -->
+<!-- MediaWiki page 1918; revision 4972; parent 4961; 2009-08-01T17:05:44Z -->
