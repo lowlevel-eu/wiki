@@ -14,10 +14,8 @@ Der Nachteil ist auch ein Vorteil, denn so kann LILO mit jedem unverschlüsselte
 
 - [LILO-Homepage](http://lilo.go.dyndns.org/)
 
-\[\[Kategorie:Glossar\]
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5025/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
 
-<!-- MediaWiki page 1776; revision 5025; parent 3669; 2009-08-01T19:00:49Z -->
+<!-- MediaWiki page 1776; revision 5026; parent 5025; 2009-08-01T19:01:02Z -->
