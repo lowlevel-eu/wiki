@@ -1,5 +1,9 @@
 # Teil 6 - Multitasking
 
+|  |  |  |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------- |
+| « [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | Teil 7 - Speicherverwaltung » |
+
 ## Ziel
 
 Wir wollen zwei Tasks erstellen, die wir durch unser Multitasking "gleichzeitig" laufen lassen. Um das ganze sichtbar zu machen, nehmen wir das klassische Multitasking-Beispiel her: Task 1 gibt in einer Endlosschleife A aus, Task 2 gibt B aus. Am Ende sollten abwechselnd As und Bs auf dem Bildschirm erscheinen.
@@ -203,13 +207,14 @@ Außerdem müssen wir das TSS noch aktivieren. Dazu fügen wir der GDT einen zus
 
 Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch ein *asm("cli; hlt");* in einem der Tasks ausprobieren. Bevor die Tasks nach Ring 3 verschoben worden sind, durften sie die Befehle ausführen und der Kernel kam zum Stillstand. Jetzt wird eine Exception ausgelöst (13 = \#GP = General Protection Fault) und der Kernel gibt eine Fehlermeldung aus (bevor er sich ebenfalls in eine Endlosschleife begibt – normal würde er hier stattdessen einfach den Task beenden).
 
-## Navigation
+  
 
-- Voriger Artikel: [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")
-- Nächster Artikel: Teil 7 - Speicherverwaltung
+|  |  |  |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------- |
+| « [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | Teil 7 - Speicherverwaltung » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4783/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 4783; parent 4736; 2009-07-29T23:00:28Z -->
+<!-- MediaWiki page 1899; revision 4976; parent 4783; 2009-08-01T17:10:11Z -->
