@@ -238,16 +238,13 @@ Eingebrannter String (Fortsetzung)
 
 ## Siehe auch
 
-[Englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID)
-
-[Englische Doku von CPUID; mit AMD/INTEL und anderen Prozessoren](http://sandpile.org/ia32/cpuid.htm)
-
-[Intels CPUID-Spezifikation](http://support.intel.com/Assets/PDF/appnote/241618.pdf)
-
-[AMDs CPUID-Spezifikation](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf)
+- [Englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID)
+- [Englische Doku von CPUID; mit AMD/INTEL und anderen Prozessoren](http://sandpile.org/ia32/cpuid.htm)
+- [Intels CPUID-Spezifikation](http://support.intel.com/Assets/PDF/appnote/241618.pdf)
+- [AMDs CPUID-Spezifikation](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5039; parent 4548; 2009-08-01T19:17:07Z -->
+<!-- MediaWiki page 1739; revision 5045; parent 5039; 2009-08-01T19:37:04Z -->
