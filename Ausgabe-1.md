@@ -1,5 +1,9 @@
 # Ausgabe 1
 
+|  |  |  |
+| ----- | ---------------- | ------------------------------------------------------------------------------- |
+|  | **Navigation** | [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") » |
+
 ## Vorwort
 
 Das ist sie, die erste Ausgabe von Lowlevel, dem ersten deutschen Magazin für Betriebssystem-Entwicklung – oder auf Englisch: Operating System Development (OS Dev). Ich bin Mastermesh, der Redakteur dieser Ausgabe und ich würde gerne etwas über mich selbst erzählen.
@@ -638,8 +642,12 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 **Mastermesh**
 
+|  |  |  |
+| ----- | ---------------- | ------------------------------------------------------------------------------- |
+|  | **Navigation** | [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4988/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 4820; parent 4803; 2009-07-30T01:13:05Z -->
+<!-- MediaWiki page 1412; revision 4988; parent 4820; 2009-08-01T17:39:52Z -->
