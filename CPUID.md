@@ -248,6 +248,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4548/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 4548; parent 4374; 2009-07-04T19:02:38Z -->
+<!-- MediaWiki page 1739; revision 5039; parent 4548; 2009-08-01T19:17:07Z -->
