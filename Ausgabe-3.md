@@ -1,8 +1,8 @@
 # Ausgabe 3
 
 |  |  |  |
-| ------------------------------------------------------------------------------- | ---------------- | ------------- |
-| « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | Ausgabe 3 » |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") | **Navigation** | [Ausgabe 4](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4 "Ausgabe 4") » |
 
 ## Vorwort
 
@@ -346,11 +346,11 @@ Nun die Frage an euch: sollen wir weiterhin mit Assembler programmieren - eben L
 **Mastermesh**
 
 |  |  |  |
-| ------------------------------------------------------------------------------- | ---------------- | ------------- |
-| « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | Ausgabe 3 » |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") | **Navigation** | [Ausgabe 4](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4 "Ausgabe 4") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
 
-<!-- MediaWiki page 1419; revision 4990; parent 4804; 2009-08-01T17:40:44Z -->
+<!-- MediaWiki page 1419; revision 4991; parent 4990; 2009-08-01T17:41:06Z -->
