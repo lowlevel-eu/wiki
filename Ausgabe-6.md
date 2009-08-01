@@ -1,5 +1,9 @@
 # Ausgabe 6
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") » |
+
 ## Vorwort
 
 Nach relativ langer Zeit gibt es nun doch endlich die neue, sechste, Ausgabe des LowLevel Magazins. Und das unter einen neuen Leitung, denn Mastermesh, der hochverehrte Schöpfer dieses Magazins und natürlich auch des dazugehörigen Forums, kann/will nicht mehr. Also bin ich (Roshl) ab sofort an allem Schuld was hier so steht oder nicht steht. Also schlagt mich in Zukunft wenn hier irgendwelcher Blödsinn steht.
@@ -372,8 +376,12 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 **Roshl**
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4995/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
 
-<!-- MediaWiki page 1471; revision 4806; parent 2674; 2009-07-30T00:12:07Z -->
+<!-- MediaWiki page 1471; revision 4995; parent 4806; 2009-08-01T17:42:39Z -->
