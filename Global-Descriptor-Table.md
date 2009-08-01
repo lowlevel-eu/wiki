@@ -90,7 +90,7 @@ Bevor wir überlegen, welche Segmente wir in unserer GDT definieren wollen, brau
 
 }\</c\>
 
-Welche Segmente Du anlegen willst, hängt natürlich von der Architektur Deines Kernels ab. Mein Vorschlag ist nicht die absolute und einzige Wahrheit, aber er ist ein guter Anfang, wenn Du Dir unsicher bist. Grundlage ist die GDT, wie [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") sie verwendet und wie sie in den meisten anderen Betriebssystemen anzutreffen ist. Speicherschutz wird dabei über [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") erledigt, so dass nur ein Minimalsatz von Segmenten übrigbleibt:
+Welche Segmente Du anlegen willst, hängt natürlich von der Architektur Deines Kernels ab. Mein Vorschlag ist nicht die absolute und einzige Wahrheit, aber er ist ein guter Anfang, wenn Du Dir unsicher bist. Grundlage ist die GDT, wie [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") sie verwendet und wie sie in den meisten anderen Betriebssystemen anzutreffen ist. Speicherschutz wird dabei über [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") erledigt, so dass nur ein Minimalsatz von Segmenten übrigbleibt:
 
 - Ein Nulldeskriptor (gdt\[0\] = 0)
 - Ein Codesegment für den Kernel (Present, Ring 0, Executable, 32 Bit; Basis 0, Limit 4 GB)
@@ -134,6 +134,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5003/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 4915; parent 4623; 2009-07-30T21:39:16Z -->
+<!-- MediaWiki page 1661; revision 5003; parent 4915; 2009-08-01T18:02:09Z -->
