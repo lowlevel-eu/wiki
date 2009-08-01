@@ -231,12 +231,14 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
 [Intels Prozessordokumentation](http://www.intel.com/products/processor/manuals/)
 
+  
+
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | « [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 4985; parent 4983; 2009-08-01T17:36:06Z -->
+<!-- MediaWiki page 1918; revision 4987; parent 4985; 2009-08-01T17:38:58Z -->
