@@ -34,7 +34,7 @@ Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf Source
 
 Ich verwende für týndur eine Batch-Datei, die mir die Umgebung einrichtet. Sie richtet die PATH-Variable ein, und startet die Kommandozeile. Zum Beispiel kann sie so aussehen:
 
-    SET PATH=C:\msys\bin;C:\crosstools\i586-elf\bin;C:\Programme\NASM;%PATH%
+    SET PATH=C:\msys\bin;C:\crosstools\bin;C:\Programme\NASM;%PATH%
     cmd /k cls
 
 Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týndur und starte sie. Durch die Eingabe von *make* sollte dann týndur vollständig kompilieren.
@@ -64,6 +64,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4776/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 4776; parent 4757; 2009-07-29T22:13:41Z -->
+<!-- MediaWiki page 1450; revision 5007; parent 4776; 2009-08-01T18:25:30Z -->
