@@ -1,5 +1,9 @@
 # Ausgabe 7
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 6](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-6 "Ausgabe 6") | **Navigation** | [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8") » |
+
 ## Die Redaktion
 
 Hier ist sie also, die neue Ausgabe von "Lowlevel". Nachdem Roshl in letzter Zeit wegen seinem Abitur keine Zeit mehr für das Magazin hatte und die letzte Ausgabe schon fast ein halbes Jahr zurück liegt habe ich mich bereit erklärt, mein Glück zu versuchen und hier ist das Ergebniss, diese Ausgabe.
@@ -914,8 +918,12 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 | Zurfluh, Stefan | sz/elfish_rider | stefan@stefan-zurfluh.biz | elfish_rider@hotmail.com | 330-960-734 | --- |
 | Kienz, Peter | BlueB | peterkienz@web.de | --- | 250-161-210 | --- |
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 6](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-6 "Ausgabe 6") | **Navigation** | [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8") » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4807/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4996/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 4807; parent 3140; 2009-07-30T00:14:40Z -->
+<!-- MediaWiki page 1494; revision 4996; parent 4807; 2009-08-01T17:43:21Z -->
