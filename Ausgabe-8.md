@@ -1,5 +1,9 @@
 # Ausgabe 8
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") | **Navigation** | [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9") » |
+
 ## Vorwort
 
 Viel Zeit ist vergangen seit der letzten Ausgabe von Lowlevel. Einige Anstrengungen hat es die Redaktion gekostet, all die Artikel zu schreiben und zusammenzusammeln. Am anstrengendsten ist, die Erwartung der Leser auszuhalten. Ständige Fragen wie "Wann ist das Magazin fertig?" und "Wie weit seit ihr?" haben mich schon das ein oder andere Mal zur Weissglut getrieben. Wir sind keine D-Züge. Wir machen dieses Magazin nicht hauptberuflich, sondern haben nebenbei vorallem im "echten Leben" noch haufenweise andere Sachen zu tun. Wir machen dieses Magazin aus Spass, und den wollen wir uns nicht verderben lassen, weil andere Leute drängeln. Wer unter Druck steht, kann keine befriedigende Leistung abgeben. Ich hoffe, dass sich die entsprechenden Leute auch angesprochen fühlen und einfach auf unsere Statusberichte warten. Wir melden uns im Forum von alleine, wenn sich etwas an der Lage geändert hat. Wir haben es trotzdem versucht und wir hoffen, es hat sich gelohnt und ihr habt viel Spass mit dieser Ausgabe. Viel Spass beim Lesen der achten Ausgabe von Lowlevel diesmal wieder unter der Regie von mir,
@@ -767,10 +771,14 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 ------------------------------------------------------------------------
 
 **By [joachim_neu](mailto:joachim_neu@web.de). Alle Rechte vorbehalten**  
-**Eintrag ins Wiki: [PMTheQuick](mailto:pmthequick@gmail.com)**
+**Eintrag ins Wiki: [PMTheQuick](mailto:pmthequick@gmail.com)**  
+
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") | **Navigation** | [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4590/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 4590; parent 2676; 2009-07-08T15:01:54Z -->
+<!-- MediaWiki page 1521; revision 4997; parent 4590; 2009-08-01T17:43:52Z -->
