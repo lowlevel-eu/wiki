@@ -198,11 +198,11 @@ Aber genug der Vorrede, es wird Zeit für den Kernel.
 
 ## Navigation
 
-- Voriger Artikel: Teil 2 - Entwicklungsumgebung
+- Voriger Artikel: [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")
 - Nächster Artikel: [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4943/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
 
-<!-- MediaWiki page 1896; revision 4715; parent 4714; 2009-07-25T14:44:10Z -->
+<!-- MediaWiki page 1896; revision 4943; parent 4715; 2009-08-01T12:27:52Z -->
