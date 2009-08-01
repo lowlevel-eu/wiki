@@ -16,6 +16,6 @@ Der Nachteil ist auch ein Vorteil, denn so kann LILO mit jedem unverschlüsselte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5046/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
 
-<!-- MediaWiki page 1776; revision 5026; parent 5025; 2009-08-01T19:01:02Z -->
+<!-- MediaWiki page 1776; revision 5046; parent 5026; 2009-08-01T19:39:23Z -->
