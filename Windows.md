@@ -24,7 +24,7 @@ Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer 
 
 ### Pro
 
-Für Leute, die noch nie mit Linux gearbeitet haben, ist der Einstieg sicher etwas schwerer, vor allem, wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist, mit Windows zu arbeiten, der wird sich nicht bemühen, \[\[Bash}} oder Sonstiges zu lernen, wenn er mit \*.bat Dateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen, ihr eigenes Betriebssystem zu entwickeln. Außerdem existieren die Programme, die benötigt werden (Compiler,...) mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden. (Binutils, Crosscompiler, MingGW CygWin,...)
+Für Leute, die noch nie mit Linux gearbeitet haben, ist der Einstieg sicher etwas schwerer, vor allem, wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist, mit Windows zu arbeiten, der wird sich nicht bemühen, [Bash](https://github.com/lowlevel-eu/wiki/wiki/Shell#bash "Bash") oder Sonstiges zu lernen, wenn er mit \*.bat Dateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen, ihr eigenes Betriebssystem zu entwickeln. Außerdem existieren die Programme, die benötigt werden (Compiler,...) mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden. (Binutils, Crosscompiler, MingGW CygWin,...)
 
 ### Contra
 
@@ -56,6 +56,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5008/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 5006; parent 4958; 2009-08-01T18:22:45Z -->
+<!-- MediaWiki page 1558; revision 5008; parent 5006; 2009-08-01T18:25:33Z -->
