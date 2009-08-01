@@ -1,5 +1,9 @@
 # Teil 5 - Interrupts
 
+|  |  |  |
+| -------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| « [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") | **Navigation** | [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") » |
+
 ## Das Ziel
 
 In diesem Teil wollen wir unserern Kernel *Interrupts* behandeln lassen. Ein Interrupt ist eine Unterbrechnung des aktuell ausgeführten Code, um eine Kernelfunktion (den *Interrupt-Handler*) aufzurufen. Es gibt drei unterschiedliche interessante Arten von Interrupts und keine davon ist für ein Betriebssystem verzichtbar:
@@ -195,13 +199,14 @@ Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene
 
 Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon ein [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") schreiben.
 
-## Navigation
+  
 
-- Voriger Artikel: [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")
-- Nächster Artikel: [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking")
+|  |  |  |
+| -------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| « [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") | **Navigation** | [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4730/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4975/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 4730; parent 4728; 2009-07-26T14:59:43Z -->
+<!-- MediaWiki page 1898; revision 4975; parent 4730; 2009-08-01T17:09:24Z -->
