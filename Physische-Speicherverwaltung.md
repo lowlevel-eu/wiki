@@ -80,6 +80,6 @@ Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu mar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4328/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
 
-<!-- MediaWiki page 1843; revision 4328; parent 4324; 2009-04-27T12:15:04Z -->
+<!-- MediaWiki page 1843; revision 5029; parent 4328; 2009-08-01T19:02:45Z -->
