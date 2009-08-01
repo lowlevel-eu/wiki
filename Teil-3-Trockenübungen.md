@@ -1,5 +1,9 @@
 # Teil 3 - Trockenübungen
 
+|  |  |  |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------- |
+| « [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") | **Navigation** | [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") » |
+
 ## Überblick
 
 In diesem Teil geht es zunächst darum, ein paar Sachen anzuschauen, die nicht direkt mit der Betriebssystementwicklung zu tun haben. Sie haben mehr etwas damit zu tun, wie Programme bzw. die Buildchain allgemein funktionieren. Ein Grundverständnis dafür zu haben, ist für die Entwicklung eines Betriebssystems unverzichtbar. Wer sich mit all dem schon auskennt, möchte diesen Teil möglicherweise überspringen oder nur überfliegen.
@@ -196,13 +200,14 @@ Wenn wir irgendwann das erste Programm für unser System schreiben, wird es viel
 
 Aber genug der Vorrede, es wird Zeit für den Kernel.
 
-## Navigation
+  
 
-- Voriger Artikel: [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")
-- Nächster Artikel: [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")
+|  |  |  |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------- |
+| « [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") | **Navigation** | [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4943/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4973/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
 
-<!-- MediaWiki page 1896; revision 4943; parent 4715; 2009-08-01T12:27:52Z -->
+<!-- MediaWiki page 1896; revision 4973; parent 4943; 2009-08-01T17:07:22Z -->
