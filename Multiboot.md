@@ -204,8 +204,10 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 - <http://www.gnu.org/software/grub/manual/multiboot/multiboot.pdf>
 - <http://www.uruk.org/orig-grub/boot-proposal.html>
 
+\[\[Kategorie:Glossar\]
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 4650; parent 4649; 2009-07-15T16:07:02Z -->
+<!-- MediaWiki page 1560; revision 5030; parent 4650; 2009-08-01T19:04:29Z -->
