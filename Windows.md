@@ -6,11 +6,11 @@ Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer 
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Microsoft |
-| Akt. Version: | NT 6.0 (=Vista) |
+| Akt. Version: | NT 6.0 (= Vista) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
 | Plattform: | x86, x64 und Intel-MAC(BootCamp), ältere Versionen auch andere |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid Kernel |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Unbekannt, da nicht Open-Source(vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) |
 | API: | WinAPI |
 | Binärformat: | Portable Executable |
@@ -55,6 +55,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4955/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 3963; parent 3962; 2009-01-24T19:51:14Z -->
+<!-- MediaWiki page 1558; revision 4955; parent 3963; 2009-08-01T13:28:21Z -->
