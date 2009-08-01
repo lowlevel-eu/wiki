@@ -1,5 +1,9 @@
 # Teil 1 - Entwicklungsumgebung
 
+|  |  |  |
+| ----- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+|  | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
+
 ## Ziel
 
 Das Ziel dieses Artikels ist es, eine Entwicklungsumgebung aufzusetzen und zumindest ansatzweise zu verstehen, mit der Du sinnvoll in die OS-Entwicklung einsteigen kannst. Vor allem sollten damit alle Voraussetzungen abgedeckt sein, damit Du die Beispiele in den folgenden Kapiteln selbst nachvollziehen kannst.
@@ -65,12 +69,12 @@ Um ein größeres Stück Software zu entwickeln (erfahrenere Programmierer werde
 
 Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird.
 
-## Navigation
-
-- Nächster Artikel: [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")
+|  |  |  |
+| ----- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+|  | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4971/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 4962; parent 4945; 2009-08-01T14:45:34Z -->
+<!-- MediaWiki page 1919; revision 4971; parent 4962; 2009-08-01T17:04:11Z -->
