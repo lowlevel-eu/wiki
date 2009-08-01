@@ -48,29 +48,72 @@ Das Datenregister dient zur Übermittlung der Lese/Schreib-Words(!).
 
 Nach der Ausführung eines Kommandos kann man hier den Fehlercode auslesen. Der Fehlercode gilt aber nur, wenn im Statusregister das ERR-Bit gesetzt ist.
 
+| 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ------ | ----- | ----- | ------ | ----- | ------ | ----- | ----- |
+| ICRC | UNC | MC | IDNF | MCR | ABRT | NM | r |
+
+- ICRC: CRC-Vergleichsfehler bei Ultra-DMA-Übertragungen
+- UNC: Fehler im Datenfeld des Sektors
+- MC: Das Speichermedium(CD) wurde gewechselt
+- IDNF: Die Sektor-ID wurde nicht gefunden
+- MCR: Bei einem CD-Laufwerk wurde der Auswurf-Knopf gedrückt
+- ABRT: Command aborted (falsches Kommando oder Gerätefehler)
+- NM: No Media
+- r: reserviert
+
 ### Sektoranzahl
+
+Anzahl der zu lesenden/schreibenden Sektoren.
 
 ### LBA niedrig
 
+LBA Bit 0-7.
+
 ### LBA mittel
+
+LBA Bit 8-15.
 
 ### LBA hoch
 
+LBA Bit 16-23.
+
 ### Geräteauswahl
+
+| 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ----- | ----- | ----- | ----- | --------------- | ----- | ----- | ----- |
+| 1 | 1 | 1 | DR | LBA Bit 27-24 |  |  |  |
+
+- DR: Drive Master(0) / Slave(1)
+
+### Status/Kommandoregister
+
+Beim Lesen:
+
+| 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ----- | ------ | ----- | ----- | ----- | ----- | ----- | ----- |
+| BSY | DRDY | DF | \# | DRQ | r | r | ERR |
+
+- BSY: Busy
+- DRDY: Drive Ready. Gesetzt, wenn die Drive Kommandos annehmen kann.
+- DF: Device Fault. Betrifft Fehler, die nicht im Fehlerregister angezeigt werden.
+- \#: Kommando-abhängig
+- DRQ: Ein Zugriff auf das Datenregister wird erwartet
+- ERR: Error-Bit. Nach Fehler gesetzt, Beschreibung im Fehlerregister.
+
+Beim Schreiben: Hier wird der Befehl reingeschrieben.
+
+### Status2/Steuerregister
+
+Beim Lesen: Wie Statusregister. Beim Schreiben:
 
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | ----- | ----- | ----- | ----- | ----- | ------ | ------ | ----- |
 | HOB | r | r | r | r | SRST | nIEN | 0 |
 
-- r: reserviert
 - HOB: siehe [HOB-Bit](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment#hob-bit-l%C3%B6schen "AT Attachment")
 - SRST: Software Reset
 - nIEN: Wenn gesetzt, sendet der Controller keine PIC-Ints mehr
 - 0: Immer 0
-
-### Status/Kommandoregister
-
-### Status2/Steuerregister
 
 ## Fehlerquellen
 
@@ -91,6 +134,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4941/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4940; parent 4939; 2009-08-01T11:44:51Z -->
+<!-- MediaWiki page 1522; revision 4941; parent 4940; 2009-08-01T12:06:49Z -->
