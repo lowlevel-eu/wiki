@@ -206,9 +206,8 @@ Wenn ihr euch in der Abbildung die I-Node-Table angesehen habt, werdet ihr euch 
   
 So: In der 1. Zeile das erste Zeichen, hier -, heißt in diesem Fall, dass es eine normale Datei ist. Das erste Zeichen gibt immer den Typ an:  
 
-|  |  |
-| -------------------------------- | ----------- |
 | Zeichen | Bedeutung |
+| -------------------------------- | ----------- |
 | Normale Datei | \- |
 | Verzeichniss | d |
 | Zeichenorientierte Gerätedatei | c |
@@ -279,6 +278,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4998/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1409/index.html)
 
-<!-- MediaWiki page 1409; revision 4998; parent 4815; 2009-08-01T17:44:21Z -->
+<!-- MediaWiki page 1409; revision 4999; parent 4998; 2009-08-01T17:46:53Z -->
