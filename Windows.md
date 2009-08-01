@@ -37,7 +37,7 @@ Es gab über dieses Thema eine Diskussion, siehe [Diskussion:OS-Dev für Einstei
 
 #### Kernel
 
-Über das Design von Windows ist relativ wenig bekannt, da von Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") als Ring-0 Applikationen ausgeführt, genauso wie andere Teile. (mittlerweile - in Vista - werden die Grafiktreiber wieder als Ring-3 Prozesse angesehen) Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als Macrokernell betrachtet.
+Über das Design von Windows ist relativ wenig bekannt, da von Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") als Ring-0 Applikationen ausgeführt, genauso wie andere Teile. (mittlerweile - in Vista - werden die Grafiktreiber wieder als Ring-3 Prozesse angesehen) Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als Macrokernel betrachtet.
 
 #### API
 
@@ -55,6 +55,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4957/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 4956; parent 4955; 2009-08-01T13:29:21Z -->
+<!-- MediaWiki page 1558; revision 4957; parent 4956; 2009-08-01T13:29:35Z -->
