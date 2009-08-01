@@ -77,7 +77,7 @@ Beispiel:
 
 ### Änderungen übertragen (push)
 
-Sobald commits vorliegen, möchte man diese sicherlich an den Hauptserver übertragen und öffentlich machen. Dies macht man mit dem `push`-Befehl, vorausgesetzt, man hat auch Schreibzugriff. In anderen Fällen muss man meistens Patches an die Entwickler schicken (z.B. bei tyndur). Git bietet dafür ebenfalls komfortable Mechanismen, die in der git-Dokumentation zu finden sind.
+Sobald commits vorliegen, möchte man diese sicherlich an den Hauptserver übertragen und öffentlich machen. Dies macht man mit dem `push`-Befehl, vorausgesetzt, man hat auch Schreibzugriff. In anderen Fällen muss man meistens Patches an die Entwickler schicken (z.B. bei týndur). Git bietet dafür ebenfalls komfortable Mechanismen, die in der git-Dokumentation zu finden sind.
 
 Zum erfolgreichen push muss der tree jedoch ein wenig mit dem auf dem Hauptserver abgestimmt sein. Vorher ist also ein `git pull --rebase` zu empfehlen, um Konflikte zu vermeiden.
 
@@ -157,6 +157,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4725/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 4725; parent 4690; 2009-07-25T22:24:24Z -->
+<!-- MediaWiki page 1889; revision 5004; parent 4725; 2009-08-01T18:02:47Z -->
