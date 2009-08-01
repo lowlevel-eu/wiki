@@ -1,7 +1,8 @@
 # Keyboard Controller
 
-Der Keyboard Controller (KBC) sitzt auf dem Mainboard und dient, wie der Name vermuten lässt, unter anderem der Tastaturansteuerung. Da IBM ihn nach seiner Einführung stark erweitert hat, kann man ihn in heutigen Systemen eher als Kontroller "für alles mögliche" ansehen.
+Der **Keyboard-Controller** oder auch **KBC** ist ein Baustein auf dem Mainboard und dient (unter anderem) der Tastaturansteuerung. Von IBM ursprünglich entwickelt, wurde der Keyboard-Controller in seiner Funktion stark erweitert, wodurch sich heutzutage viele Aufgaben über seligem erledigen lassen.
 
+  
 Der KBC wurde mit dem AT System (286) eingeführt. In dem Vorgängersystem XT wurde für vergleichbare Aufgaben das Programmable Peripheral Interface (PPI) genutzt.
 
 ## Funktionen des KBC
@@ -341,6 +342,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4953/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 3696; parent 3434; 2008-12-18T21:02:25Z -->
+<!-- MediaWiki page 1468; revision 4953; parent 3696; 2009-08-01T13:18:12Z -->
