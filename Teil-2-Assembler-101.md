@@ -180,6 +180,7 @@ Das folgende Programm, bestehend aus einem Assembler- und einem C-Teil berechnet
        mov 8(%ebp), %eax
 
        // Die Fakultät von 0 ist 1 (Rückgabewert kommt nach eax)
+       or %eax, %eax
        jnz recurse
        mov $1, %eax
        jmp out
@@ -233,6 +234,6 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4944/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 4944; parent 0; 2009-08-01T12:37:20Z -->
+<!-- MediaWiki page 1918; revision 4961; parent 4944; 2009-08-01T14:19:02Z -->
