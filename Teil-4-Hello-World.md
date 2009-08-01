@@ -1,5 +1,9 @@
 # Teil 4 - Hello World
 
+|  |  |  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| « [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") | **Navigation** | [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") » |
+
 ## Der Bootprozess
 
 Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernels könnte dieser Abschnitt den Titel "was bisher geschah" tragen.
@@ -194,13 +198,14 @@ void init(void) {
 
 }\</c\>
 
-## Navigation
+  
 
-- Voriger Artikel [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen")
-- Nächster Artikel [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")
+|  |  |  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| « [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") | **Navigation** | [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4768/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4974/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 4768; parent 4767; 2009-07-29T07:56:25Z -->
+<!-- MediaWiki page 1897; revision 4974; parent 4768; 2009-08-01T17:08:24Z -->
