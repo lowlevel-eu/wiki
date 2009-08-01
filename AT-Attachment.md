@@ -115,6 +115,13 @@ Beim Lesen: Wie Statusregister. Beim Schreiben:
 - nIEN: Wenn gesetzt, sendet der Controller keine PIC-Ints mehr
 - 0: Immer 0
 
+## Kommandos
+
+- LBA 28 Lesen: 0x20
+- LBA 28 Schreiben: 0x30
+- LBA 28 Lesen: 0x24
+- LBA 48 Schreiben: 0x34
+
 ## Fehlerquellen
 
 Hier ein paar Hinweise auf Fehler, die nicht sofort offensichtlich sind.
@@ -134,6 +141,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4941/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4941; parent 4940; 2009-08-01T12:06:49Z -->
+<!-- MediaWiki page 1522; revision 4942; parent 4941; 2009-08-01T12:14:21Z -->
