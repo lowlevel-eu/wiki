@@ -16,12 +16,12 @@ Wie viel Rechenzeit ein Prozess bekommt verwaltet hierbei der [Scheduler](https:
 
   
 
-## Weiterführende Links
+## Siehe auch
 
-- Artikel über [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") im Wiki
+- [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4966/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1921/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4967/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1921/index.html)
 
-<!-- MediaWiki page 1921; revision 4966; parent 4965; 2009-08-01T15:59:55Z -->
+<!-- MediaWiki page 1921; revision 4967; parent 4966; 2009-08-01T16:13:34Z -->
