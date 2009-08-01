@@ -1,5 +1,9 @@
 # Ausgabe 2
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") » |
+
 ## Vorwort
 
 Das ist nun die zweite Ausgabe von Lowlevel. Nach der doch sehr positiven Resonanz von Ausgabe 1 habe ich beschlossen, das Projekt fort zu führen. Und ich hoffe, dass ich es nicht umsonst mache...
@@ -342,8 +346,12 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 **Mastermesh**
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 4802; parent 3190; 2009-07-30T00:05:59Z -->
+<!-- MediaWiki page 1415; revision 4989; parent 4802; 2009-08-01T17:40:22Z -->
