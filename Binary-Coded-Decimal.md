@@ -21,7 +21,7 @@ Dies kann man mit der folgenden Tabelle verdeutlichen:
 
 ## gepackte BCD Zahlen
 
-Im gepackten BCD-Format befinden sich die Nibble der BCD-Zahl direkt hinter einander.
+Im gepackten BCD-Format befinden sich die Nibbles der BCD-Zahl direkt hintereinander.
 
 Beispiel:
 
@@ -30,7 +30,7 @@ Beispiel:
 
 ## ungepackte BCD Zahlen
 
-Im ungepackten BCD-Format steht jedem BCD-Nibble ein leeres Nibble voran, so das eine Dezimalstelle in einem Byte gespeichert wird. Dies wurde zur einfacheren Handhabung gemacht, da in den Systemen, für die BCD entwickelt wurde, ein Byte die kleinste Dateneinheit war, die man direkt ansprechen konnte.
+Im ungepackten BCD-Format steht jedem BCD-Nibble ein leeres Nibble voran, so dass eine Dezimalstelle in einem Byte gespeichert wird. Dies wurde zur einfacheren Handhabung gemacht, da in den Systemen, für die BCD entwickelt wurde, ein Byte die kleinste Dateneinheit war, die man direkt ansprechen konnte.
 
 Beispiel:
 
@@ -45,6 +45,6 @@ Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x3
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5010/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
 
-<!-- MediaWiki page 1589; revision 5010; parent 4823; 2009-08-01T18:31:21Z -->
+<!-- MediaWiki page 1589; revision 5011; parent 5010; 2009-08-01T18:33:42Z -->
