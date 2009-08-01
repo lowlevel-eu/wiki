@@ -46,6 +46,8 @@ Das Datenregister dient zur Übermittlung der Lese/Schreib-Words(!).
 
 ### Fehlerregister
 
+Nach der Ausführung eines Kommandos kann man hier den Fehlercode auslesen. Der Fehlercode gilt aber nur, wenn im Statusregister das ERR-Bit gesetzt ist.
+
 ### Sektoranzahl
 
 ### LBA niedrig
@@ -89,6 +91,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4939; parent 4938; 2009-08-01T11:41:18Z -->
+<!-- MediaWiki page 1522; revision 4940; parent 4939; 2009-08-01T11:44:51Z -->
