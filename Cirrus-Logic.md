@@ -129,6 +129,6 @@ Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Berei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4772/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 4772; parent 4771; 2009-07-29T21:46:18Z -->
+<!-- MediaWiki page 1743; revision 5043; parent 4772; 2009-08-01T19:22:34Z -->
