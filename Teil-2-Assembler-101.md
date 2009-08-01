@@ -4,6 +4,8 @@
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | « [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
 
+  
+
 ## Ziel
 
 Dieser Artikel versucht, in aller Kürze zumindest die Grundlagen der Assemblerprogrammierung für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") zu vermitteln. Ganz ohne Assembler kommt man bei der Betriebssystemprogrammierung nicht aus, deswegen ist ein Grundverständnis dafür nötig.
@@ -237,6 +239,6 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4982/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4983/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 4982; parent 4972; 2009-08-01T17:29:26Z -->
+<!-- MediaWiki page 1918; revision 4983; parent 4982; 2009-08-01T17:30:28Z -->
