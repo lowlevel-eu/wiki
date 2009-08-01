@@ -24,6 +24,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 4526; parent 4211; 2009-07-01T19:11:02Z -->
+<!-- MediaWiki page 1711; revision 5028; parent 4526; 2009-08-01T19:02:23Z -->
