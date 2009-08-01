@@ -28,17 +28,17 @@ Falls keine der vorherigen Prüfungen fehlgeschlagen ist, müsste jetzt mindeste
 
 ## Register
 
-| Beschreibung | 1\. Kanal | 2\. Kanal | 3\. Kanal | 4\. Kanal |
-| ------------------------- | ----------- | ----------- | ----------- | ----------- |
-| Datenregister | 0x1F0 | 0x170 | 0x1E8 | 0x168 |
-| Fehlerregister | 0x1F1 | 0x171 | 0x1E9 | 0x169 |
-| Sektoranzahl | 0x1F2 | 0x172 | 0x1EA | 0x16A |
-| LBA niedrig | 0x1F3 | 0x173 | 0x1EB | 0x16B |
-| LBA mittel | 0x1F4 | 0x174 | 0x1EC | 0x16C |
-| LBA hoch | 0x1F5 | 0x175 | 0x1ED | 0x16D |
-| Geräteauswahl | 0x1F6 | 0x176 | 0x1EE | 0x16E |
-| Status/Kommandoregister | 0x1F7 | 0x177 | 0x1EF | 0x16F |
-| Status2/Steuerregister | 0x3F6 | 0x376 | 0x3EE | 0x36E |
+| Beschreibung | 1\. Kanal | 2\. Kanal | 3\. Kanal | 4\. Kanal | Read/Write |
+| ------------------------- | ----------- | ----------- | ----------- | ----------- | ------------------------- |
+| Datenregister | 0x1F0 | 0x170 | 0x1E8 | 0x168 | R/W |
+| Fehlerregister | 0x1F1 | 0x171 | 0x1E9 | 0x169 | R |
+| Sektoranzahl | 0x1F2 | 0x172 | 0x1EA | 0x16A | R/W |
+| LBA niedrig | 0x1F3 | 0x173 | 0x1EB | 0x16B | R/W |
+| LBA mittel | 0x1F4 | 0x174 | 0x1EC | 0x16C | R/W |
+| LBA hoch | 0x1F5 | 0x175 | 0x1ED | 0x16D | R/W |
+| Geräteauswahl | 0x1F6 | 0x176 | 0x1EE | 0x16E | R/W |
+| Status/Kommandoregister | 0x1F7 | 0x177 | 0x1EF | 0x16F | R(Status) / W(Kommando) |
+| Status2/Steuerregister | 0x3F6 | 0x376 | 0x3EE | 0x36E | R(Status2) / W(Steuer) |
 
 ### Datenregister
 
@@ -89,6 +89,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4938/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 4938; parent 4937; 2009-08-01T11:34:29Z -->
+<!-- MediaWiki page 1522; revision 4939; parent 4938; 2009-08-01T11:41:18Z -->
