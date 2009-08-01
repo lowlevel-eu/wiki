@@ -57,7 +57,7 @@ Diese beiden Funktionen werden von der Implementierung dazu Benutzt Sektoren zu 
 
 ## Aufbau eines typischen Treibers
 
-Zunächst eine Vorbemerkung: CDI wurde erstmals in tyndur implementiert, das nach wie vor das Referenzsystem für CDI darstellt. tyndur ist ein Mikrokernelsystem und aus diesem Grund liegt gelegentlich in Erklärungen die Annahme vor, dass ein Treiber ein eigenständiges Programm ist. CDI funktioniert aber auch mit einem monolithischen Kernel, aus der main-Funktion wird dann eine gewöhnliche Funktion, die zur Initialisierung des Treibers aufgerufen wird.
+Zunächst eine Vorbemerkung: CDI wurde erstmals in týndur implementiert, das nach wie vor das Referenzsystem für CDI darstellt. týndur ist ein Mikrokernelsystem und aus diesem Grund liegt gelegentlich in Erklärungen die Annahme vor, dass ein Treiber ein eigenständiges Programm ist. CDI funktioniert aber auch mit einem monolithischen Kernel, aus der main-Funktion wird dann eine gewöhnliche Funktion, die zur Initialisierung des Treibers aufgerufen wird.
 
 Sobald diese Funktion aufgerufen wird, registriert sie Datenstrukturen zur Beschreibung des Treibers bei CDI und führt die Initialisierung des Treibers durch. Im Allgemeinen werden dabei Geräte erkannt (z.B. auf dem PCI-Bus) und wiederum bei CDI registriert. Anschließend wird als letzte Aktion im Hauptprogramm die Funktion *cdi_run_drivers* aufgerufen, die bei einem Mikrokernelkonzept die Kontrolle an CDI übergibt und bei einem Monolithen im Allgemeinen leer ist und damit zum Kernel zurückkehrt, der die Treiberinitialisierung aufgerufen hat.
 
@@ -68,7 +68,7 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 - [meinOS](https://github.com/lowlevel-eu/wiki/wiki/MeinOS "MeinOS")
 - [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota")
 - [planlOS](https://github.com/lowlevel-eu/wiki/wiki/PlanlOS "PlanlOS")
-- [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur")
+- [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
 
 ## Weblinks
 
@@ -77,6 +77,6 @@ Der Treiber kommt ab diesem Zeitpunkt nur noch über Callbacks ins Spiel. Die Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 4624; parent 3865; 2009-07-12T17:10:48Z -->
+<!-- MediaWiki page 1622; revision 5001; parent 4624; 2009-08-01T17:59:32Z -->
