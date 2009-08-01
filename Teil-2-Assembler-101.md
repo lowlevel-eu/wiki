@@ -237,6 +237,6 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4972/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4982/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 4972; parent 4961; 2009-08-01T17:05:44Z -->
+<!-- MediaWiki page 1918; revision 4982; parent 4972; 2009-08-01T17:29:26Z -->
