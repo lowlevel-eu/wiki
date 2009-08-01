@@ -1,5 +1,9 @@
 # Ausgabe 3
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------- |
+| « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | Ausgabe 3 » |
+
 ## Vorwort
 
 Nun, das ist also die dritte Ausgabe von Lowlevel. In den letzten Wochen habt ihr wenig von mir gehört, ganz einfach aus dem Grund, dass ich im Urlaub war und deshalb keine Zeit hatte, an Lowlevel zu arbeiten.
@@ -341,8 +345,12 @@ Nun die Frage an euch: sollen wir weiterhin mit Assembler programmieren - eben L
 
 **Mastermesh**
 
+|  |  |  |
+| ------------------------------------------------------------------------------- | ---------------- | ------------- |
+| « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | Ausgabe 3 » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1419/index.html)
 
-<!-- MediaWiki page 1419; revision 4804; parent 2671; 2009-07-30T00:09:22Z -->
+<!-- MediaWiki page 1419; revision 4990; parent 4804; 2009-08-01T17:40:44Z -->
