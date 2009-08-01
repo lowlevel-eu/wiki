@@ -1,8 +1,7 @@
 # Binary Coded Decimal
 
-**BCD** (**B**inary **C**oded **D**ecimal) ist ein Format zur binären Kodierung von Dezimalzahlen. Man unterscheidet zwischen gepackten- und ungepackten-BCD Zahlen.
+**Binary Coded Decimal** (kurz **BCD**) ist ein Format zur binären Kodierung von Dezimalzahlen. Man unterscheidet zwischen gepackten- und ungepackten BCD-Zahlen. Im BCD-Format werden die einzelnen Dezimalstellen einer Zahl in einem Byte, bzw. in gepackter Form in einem Nibble (4 Bit), gespeichert.
 
-Im **BCD** Format werden die einzelnen Dezimalstellen einer Zahl in einem Byte, bzw. in gepackter Form in einem Nibble(4Bit), gespeichert.  
 Dies kann man mit der folgenden Tabelle verdeutlichen:
 
 | Dezimal | BCD gepackt | BCD ungepackt |
@@ -22,19 +21,23 @@ Dies kann man mit der folgenden Tabelle verdeutlichen:
 
 ## gepackte BCD Zahlen
 
-Im gepackten BCD-Format befinden sich die Nibble der BCD-Zahl direkt hinter einander. Beispiel:
+Im gepackten BCD-Format befinden sich die Nibble der BCD-Zahl direkt hinter einander.
+
+Beispiel:
 
     Dezimal  : 42
     Gepacktes BCD-Format: 0100 0010b (0x42)
 
 ## ungepackte BCD Zahlen
 
-Im ungepackten BCD-Format steht jedem BCD-Nibbel ein leeres Nibbel voran, so das eine Dezimalstelle in einem Byte gespeichert wird. Dies wurde zur einfacheren Handhabung gemacht, da in den Systemen für die BCD entwickelt wurde ein Byte die kleinste Dateneinheit war, die man direkt ansprechen konnte. Beispiel:
+Im ungepackten BCD-Format steht jedem BCD-Nibble ein leeres Nibble voran, so das eine Dezimalstelle in einem Byte gespeichert wird. Dies wurde zur einfacheren Handhabung gemacht, da in den Systemen, für die BCD entwickelt wurde, ein Byte die kleinste Dateneinheit war, die man direkt ansprechen konnte.
+
+Beispiel:
 
      Dezimal  : 42
      Ungepacktes BCD-Format: 0000 0100b (0x04)  0000 0010b (0x02)
 
-Der Vorteil hierbei ist z.B. dass durch eine einfache **or**-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende ASCII-Zeichen umgewandelt werden kann.
+Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende ASCII-Zeichen umgewandelt werden kann.
 
 ## Weblinks
 
@@ -42,6 +45,6 @@ Der Vorteil hierbei ist z.B. dass durch eine einfache **or**-Verknüpfung mit 0x
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5010/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
 
-<!-- MediaWiki page 1589; revision 4823; parent 2681; 2009-07-30T01:26:55Z -->
+<!-- MediaWiki page 1589; revision 5010; parent 4823; 2009-08-01T18:31:21Z -->
