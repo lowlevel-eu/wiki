@@ -1,5 +1,9 @@
 # Entwicklungsumgebung
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 ## Vorwort
 
 Leider gibt es verschiedene Ansichten darüber, welche Plattform nun die bessere ist um eine Entwicklungsumgebung einzurichten. Jedoch soll keiner dieser Plattformen zwingend empfohlen werden, bzw. soll auch keine vernachlässigt werden. Daher wird in diesem Artikel zu jeder der in dieser Community verwendeten Plattform sehr nützliche Informationen preisgeben, wie man auf der jeweiligen Plattform am besten vorgeht.
@@ -60,6 +64,6 @@ OK, was benötigen wir nun alles. Die folgende Liste enthält alle nützlichen L
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
 
-<!-- MediaWiki page 1810; revision 5049; parent 5035; 2009-08-02T17:07:40Z -->
+<!-- MediaWiki page 1810; revision 5050; parent 5049; 2009-08-02T17:08:30Z -->
