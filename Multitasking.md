@@ -6,7 +6,7 @@ Unter Multitasking versteht man die (subjektive) parallele Ausführung mehrerer 
 
 ## Prinzip
 
-Beim Multitasking wird ein Prozess ausgeführt, und dann nach einer bestimmten Zeit zum nächsten Prozess geschaltet. Dabei gibt es verschieden Sheduling - Algorithmen, also bestimmte Methoden, wie der nächste Task ausgewählt wird. Das einfachste hierbei ist das Round Robin. Es wird einfach eine Liste geführt, in der jeder Task angeführt ist. Ausgewählt wird dann immer der nächste Task in der Liste. Eine Idee ist es auch, mit Prioritäten zu arbeiten, das heißt, dass verschiedene Prozesse unterschiedlich gewichtet werden. (z.B. mehr Prozessorzeit bekommen, oder öfters aufgerufen werden) Beim Umschalten muss folgendes erledigt werden:
+Beim Multitasking können mehrere Prozesse gestartet werden, d.h. sie werden ins RAM geladen. Nun werden die Prozesse nicht gleichzeitig ausgeführt (zumindest nicht auf Single-Core-Systemen), sondern es wird immer ein Prozess bearbeitet und dann zum Nächsten gewechselt. Um nun zu bestimmen, welcher Prozess als nächstes dran ist und wie viel Zeit er von der CPU bekommt, tritt der [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") in Aktion. Dieser implementiert einen oder mehrere Algorithmen, die ausrechnen, welcher Prozess wann dran ist. Der einfachste Algorithmus ist "Round Robin". Es wird einfach eine Liste geführt, in der jeder Prozess angeführt ist. Ausgewählt wird dann immer der nächste Task in der Liste. Eine Idee ist es auch, mit Prioritäten zu arbeiten, das heißt, dass verschiedene Prozesse unterschiedlich gewichtet werden. (z.B. mehr Prozessorzeit bekommen, oder öfters aufgerufen werden) Beim Umschalten muss folgendes erledigt werden:
 
 - ALLE Register speichern
 - Rücksprungadresse speichern (damit man weiß, wo man das Programm fortführen muss)
@@ -34,6 +34,6 @@ Im Gegensatz zum Software-Multitasking, wird hier die meiste Arbeit vom Prozesso
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
 
-<!-- MediaWiki page 1495; revision 4829; parent 4828; 2009-07-30T01:42:41Z -->
+<!-- MediaWiki page 1495; revision 5051; parent 4829; 2009-08-02T17:14:35Z -->
