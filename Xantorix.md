@@ -36,7 +36,7 @@ Die Veränderungen bei den verschiedenen Versionen:
 
 Folgende Versionen sind geplant:
 
-    August 2009  : Xantorix 0.2.0
+    Oktober 2009   : Xantorix 0.2.0
 
 Die Features der kommenden Versionen:
 
@@ -48,6 +48,7 @@ Die Features der kommenden Versionen:
 - Paketverwaltung
 - ATA-Treiber für Festplattenzugriffe
 - Unterstützung für mehrere Sprachen
+- noch einige weitere interessante Features :)
 
 ## Offizielle Webseite
 
@@ -55,6 +56,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 4523; parent 3867; 2009-07-01T10:21:45Z -->
+<!-- MediaWiki page 1453; revision 5055; parent 4523; 2009-08-02T20:58:07Z -->
