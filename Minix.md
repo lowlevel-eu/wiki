@@ -17,7 +17,6 @@
 
 <http://www.minix3.org>
 
-  
 **Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert.
 
   
@@ -45,6 +44,6 @@ Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4844/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 4844; parent 4841; 2009-07-30T10:39:41Z -->
+<!-- MediaWiki page 1910; revision 5054; parent 4844; 2009-08-02T18:27:56Z -->
