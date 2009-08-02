@@ -14,21 +14,24 @@ Das schwierigste ist wohl nun, aus dieser recht hohen Anzahl an Möglichkeiten v
 
 ## Unter Windows
 
-Unser Ziel in diesem Abschnitt ist es, eine Entwicklungsumgebung unter Windows (vorzugsweise XP, da ich auch kein Freund des UserControl von Vista bin) zu schaffen, in der wir unser OS entwickeln können. Abgesehen davon was wir an Tools (Editor, Assembler, Compiler, Linker und Co) benötigen, gibt es auch verschiedene Vorgehensweisen, besser gesagt verschiedene Entwicklungsumgebungen unter Windows.
+Auch Windows bietet eine Fülle an Entwicklungsumgebungen, mit denen sich hervorragend entwickeln lässt
 
-Wofür wir diese Entwicklungsumgebung brauchen, sollte wohl dieses Wiki schon klar gestellt haben, nämlich die Entwicklung eines Betriebssystem. Um gleich zu Anfang nicht zu kleckern, schaffen wir uns eine Umgebung, mit der wir das gesamte OS von der ersten zeile Code bis zu einem fertigen CD-Image erstellen können.
+Eine Auswahl:
 
-Aber welche Umgebungen kann man sich nun unter Windows aufbauen?
-
-- Singularity-Modell
-- .NET-Framework-Modell
 - Microsoft Visual Studio (IDE)
 - [Eclipse (IDE)](http://de.wikipedia.org/wiki/Eclipse_(IDE))
-- Sonstige, eine auf GCC-Basis
+- Code::Blocks
+- DevCpp
 
-Nun gut, schauen wir mal was Windows da zu bieten hat. OK, die Reaktion war vorherzusehen, mir ging es nicht anders. Windows hinkt leider hinterher, was Entwicklungstools-OnBoard betrifft. Uns fehlt erstens ein guter Editor mit Highlighs, zweites das komplette Sortiment an Assembler, Comiler und Linker. Das alles soll aber kein Beinbruch sein, weshalb wir unser Taschentuch mal ganz schnell wieder beiseite legen. Welche Tools für welche Umgebung benötigt werden, wird in den nun gleich folgenden Unterpunkten genauer erklärt.
+Da das Hauptklientiel von Windows nicht der Programmierer, sondern der "Otto-Normal-User" ist, bietet Windows dementsprechend keine bzw. nur wenige Entwicklungstools von sich aus mit. Dem neuen OS-Developer stehen am Anfang nichts weiter als der gute alte Notepad zur Verfügung. Zum Glück sieht die Situation heute besser aus als vor Jahren: Viele wichtige Tools wurden portiert oder für Windows neu entwickelt:
 
-### Singularity-Modell
+- [DJGPP](http://delorie.com) (Windows-Port von gcc)
+- MinGw
+- Cygwin
+
+Mitsamt den Tools hat man fast die gleichen Voraussetzungen wie unter Linux.
+
+## Singularity-Modell
 
 Eine Umgebung wie diese macht nur Sinn, wenn mein sein OS wie Singularity mit Managed-Code (wie C#) entwickeln möchte. Hierfür ist Singularity ein gutes Modell, an dem man sich gut orientieren kann, sofern man einmal richtig durchgeblickt hat. Sich die Dokus von Singularity anzuschauen kann keineswegs verkehrt sein. Doch wenn man sich Singularity mal genauer anschaut, ist das eher ein Sprachenwirrwarr, Assembler, C (glaube auch C++), C# und Sing#/Spec#.
 
@@ -57,6 +60,6 @@ OK, was benötigen wir nun alles. Die folgende Liste enthält alle nützlichen L
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
 
-<!-- MediaWiki page 1810; revision 5035; parent 4283; 2009-08-01T19:11:58Z -->
+<!-- MediaWiki page 1810; revision 5049; parent 5035; 2009-08-02T17:07:40Z -->
