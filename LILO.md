@@ -1,14 +1,20 @@
 # LILO
 
-LILO, der **Li**nux **Lo**ader, ist ein englischsprachiger [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") für [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der jedoch auch andere Betriebssysteme starten kann. Er steht in Konkurrenz zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
+LILO, der **Li**nux **Lo**ader, ist ein englischsprachiger [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") für [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der jedoch auch andere Betriebssysteme starten kann. Er war lange der Standard-Bootloader unter Linux, ehe er allmählich von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") abgelöst wurde.
+
+## Technik
+
+LILO ermittelt die zu ladenen Blöcke eines Kernels und lädt genau diese darauf beim Booten in den Arbeitsspeicher.
+
+## Vorteile
+
+Der Vorteil von LILO ist genau das ermitteln der benötigten Blöcke: Es werden keine Dateisystemtreiber oder Sonstiges benötigt, sodass der Bootloader einfach und klein gehalten werden kann.
 
 ## Nachteile
 
 Nach dem Erstellen eines neuen Linux-Kernels muss zuerst der Befehl *lilo* ausgeführt werden, da LILO erst die zu ladenden Blöcke ermitteln muss.
 
-## Vorteile
-
-Der Nachteil ist auch ein Vorteil, denn so kann LILO mit jedem unverschlüsselten, unkomprimierten [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") umgehen und benötigt keine eigenen [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") wie z.B. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
+  
 
 ## Weblinks
 
@@ -16,6 +22,6 @@ Der Nachteil ist auch ein Vorteil, denn so kann LILO mit jedem unverschlüsselte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5046/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
 
-<!-- MediaWiki page 1776; revision 5046; parent 5026; 2009-08-01T19:39:23Z -->
+<!-- MediaWiki page 1776; revision 5047; parent 5046; 2009-08-02T07:32:06Z -->
