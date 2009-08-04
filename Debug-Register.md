@@ -72,6 +72,6 @@ Qemu 0.10 und [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
 
-<!-- MediaWiki page 1928; revision 5059; parent 5058; 2009-08-04T00:17:55Z -->
+<!-- MediaWiki page 1928; revision 5061; parent 5059; 2009-08-04T10:49:41Z -->
