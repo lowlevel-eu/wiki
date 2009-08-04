@@ -265,6 +265,10 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 - Daten-Format (Little-/Big-Endian) überprüfen
 - Version überprüfen
 
+# Siehe auch
+
+[ELF Tutorial](https://github.com/lowlevel-eu/wiki/wiki/ELF-Tutorial "ELF Tutorial")
+
 # Links
 
 - [ELF für x86](http://www.acm.uiuc.edu/sigops/rsrc/pfmt11.pdf)
@@ -272,6 +276,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 4423; parent 4375; 2009-06-02T14:53:29Z -->
+<!-- MediaWiki page 1528; revision 5069; parent 4423; 2009-08-04T19:35:38Z -->
