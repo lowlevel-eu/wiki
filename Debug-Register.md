@@ -1,12 +1,12 @@
 # Debug Register
 
-Die **Debug Register** ermöglichen es eine Debug [Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") *\#DB* (Int 1) auszulösen, wenn bestimmte Ereignisse eintreten. Die Register *DR0* bis *DR3* enthalten dabei die [lineare Adresse](https://github.com/lowlevel-eu/wiki/wiki/Paging "Lineare Adresse") der Breakpoints. Dies kann ein Befehl, ein Datenbereich oder ein [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Ports") sein. Zu jedem dieser Register gehören mehrere Flags im *DR7*, die die Art des Breakpoints festlegen. Die CPU setzt beim Auslösen einer Debug Exception im Register *DR6* bestimmte Flags, die anzeigen welche Breakpoints erreicht wurden.
+Die **Debug Register** ermöglichen es eine Debug [Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") *\#DB* (Int 1) auszulösen, wenn bestimmte Ereignisse eintreten. Die Register *DR0* bis *DR3* enthalten dabei jeweils die [lineare Adresse](https://github.com/lowlevel-eu/wiki/wiki/Paging "Lineare Adresse") eines Breakpoints. Dies kann ein Befehl, ein Datenbereich oder ein [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Ports") sein. Zu jedem dieser Register gehören mehrere Flags im Register *DR7*, die die Art des Breakpoints festlegen. Die CPU setzt beim Auslösen einer Debug Exception im Register *DR6* bestimmte Flags, die anzeigen welche Breakpoints erreicht wurden.
 
 ## Verwendung
 
-Um einen Breakpoint zu setzen lädt man eines der Register *DR0* bis *DR3* mit der Adresse und setzt die entsprechenden Flags in *DR7*. Beim Erreichen des Breakpoints wird der Interrupt 1 (*\#DB*) ausgelöst. Bei der Behandlung sollte man das DR6 Register auswerten, und danach auf 0 setzen, da die CPU möglicherweise nicht automatisch alle Flags zurücksetzt. Um zu verhindern, dass dieser Breakpoint bei der Rückkehr aus der ISR direkt wieder ausgelöst wird, sollte das Resume Flag (*RF*) im [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS")-Register (auf dem Stack) gesetzt werden.
+Um einen Breakpoint zu setzen, lädt man eines der Register *DR0* bis *DR3* mit der Adresse und setzt die entsprechenden Flags in *DR7*. Beim Erreichen des Breakpoints wird der Interrupt 1 (*\#DB*) ausgelöst. Bei der Behandlung sollte man das DR6 Register auswerten, und danach auf 0 setzen, da die CPU möglicherweise nicht automatisch alle Flags vor der nächsten Exception zurücksetzt. Um zu verhindern, dass dieser Breakpoint bei der Rückkehr aus der ISR direkt wieder ausgelöst wird, sollte das Resume Flag (*RF*) im [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS")-Register (auf dem Stack) gesetzt werden.
 
-Kapitel 18 des Intel Manuals sollte vor der Implementierung von Debugfunktionen gelesen werden. Im folgenden ein grober Überblick über die wichtigsten Flags der Register *DR6* und *DR7*.
+Kapitel 18 des Intel Manuals sollte vor der Implementierung von Debugfunktionen gelesen werden. Im Folgenden ein grober Überblick über die wichtigsten Flags der Register *DR6* und *DR7*.
 
 ### DR7
 
@@ -36,7 +36,7 @@ Breakpoints auf Instruktionen müssen immer mit der Länge 1 Byte (LEN0 = 00) er
 
 ### DR6
 
-DR6 zeigt an, welcher Bedingung einen Breakpoint ausgelöst hat.
+DR6 zeigt an, welche Bedingung einen Breakpoint ausgelöst hat.
 
 | 31-16 | 15 | 14 | 13 | 12 | 11-4 | 3 | 2 | 1 | 0 |
 | ------- | ----- | ----- | ----- | ----- | ------ | ----- | ----- | ----- | ----- |
@@ -72,6 +72,6 @@ Qemu 0.10 und [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
 
-<!-- MediaWiki page 1928; revision 5058; parent 5057; 2009-08-04T00:15:05Z -->
+<!-- MediaWiki page 1928; revision 5059; parent 5058; 2009-08-04T00:17:55Z -->
