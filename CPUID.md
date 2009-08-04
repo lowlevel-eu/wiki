@@ -90,7 +90,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 | 25 | Der Prozessor kann SSE |
 | 24 | Der Prozessor unterstützt FXSAVE und FXSTOR, womit er einen Floatzusammenhang(?) speichern und wiederherstellen kann |
 | 23 | Der Prozessor kann MMX |
-| 22 | Der Prozessor kann die Temperatur und den Prozessortakt durch eine Software verändert und überwacht werden |
+| 22 | Die Temperatur und der Prozessortakt kann durch eine Software verändert und überwacht werden |
 | 21 | Der Prozessor hat die Fähigkeit, die Entwicklung eines Ablegers in eine Adresse zu schreiben |
 | 20 | Reserviert |
 | 19 | Der Prozessor kann CSFLUSH |
@@ -245,6 +245,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5067/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5045; parent 5039; 2009-08-01T19:37:04Z -->
+<!-- MediaWiki page 1739; revision 5067; parent 5045; 2009-08-04T19:30:26Z -->
