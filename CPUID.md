@@ -136,7 +136,7 @@ Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei
 
 #### EDX
 
-Die Bytes 63 bis 32 der Prozessor-ID sind darin hinterlegt. *(siehe oben)*
+Die Bits 63 bis 32 der Prozessor-ID sind darin hinterlegt. *(siehe oben)*
 
 ## Erweiterte Funktionen
 
@@ -245,6 +245,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5067/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5067; parent 5045; 2009-08-04T19:30:26Z -->
+<!-- MediaWiki page 1739; revision 5068; parent 5067; 2009-08-04T19:31:49Z -->
