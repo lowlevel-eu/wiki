@@ -10,7 +10,7 @@ Kapitel 18 des Intel Manuals sollte vor der Implementierung von Debugfunktionen 
 
 ### DR7
 
-DR7 legt fest wann welcher Breakpoint ausgelöst wurde.
+DR7 legt fest, wann welcher Breakpoint ausgelöst werden soll.
 
 | 31-30 | 29-28 | 27-26 | 25-24 | 23-22 | 21-20 | 19-18 | 17-16 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -72,6 +72,6 @@ Qemu 0.10 und [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5057/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
 
-<!-- MediaWiki page 1928; revision 5057; parent 0; 2009-08-04T00:09:42Z -->
+<!-- MediaWiki page 1928; revision 5058; parent 5057; 2009-08-04T00:15:05Z -->
