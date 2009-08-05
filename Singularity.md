@@ -18,7 +18,7 @@
 <http://research.microsoft.com/os/singularity/>
 
   
-**Singularity** ist ein Betriebssystem von Microsoft Research, das fast ausschließlich in C# bzw. einem eigens entwickelten C# Dialekt namens Sing# bzw. Spec# geschrieben. Durch die Verwendung dieser auf .NET basierenden Sprachen ist es möglich, preemptives Multitasking und Speicherschutz in einem einzigen Adressraum zu verwirklichen, da parallel laufenden Programmen einfach keine Pointer auf Objekte besitzen, die ihnen nicht gehören. Microsoft Research möchte durch den Zwang, alle Anwendungen in dieser Sprache zu schreiben ein Sicherheitsplus erreichen, welches nicht nur für den Kernel, sondern auch für die Applikationen gilt, da diese aufgrund der Sprache in der sie entstanden sind gar nicht abstürzen können. Außerdem behauptet Microsoft, einen enormen Performancegewinn gegenüber Windows XP und [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") zu erreichen. Der Quellcode ist frei verfügbar und veränderbar, verbietet jedoch die kommerziele Nutzung.
+**Singularity** ist ein Betriebssystem von Microsoft Research, das fast ausschließlich in C# bzw. einem eigens entwickelten C# Dialekt namens Sing# bzw. Spec# geschrieben. Durch die Verwendung dieser auf .NET basierenden Sprachen ist es möglich, preemptives Multitasking und Speicherschutz in einem einzigen Adressraum zu verwirklichen, da parallel laufenden Programmen einfach keine Pointer auf Objekte besitzen, die ihnen nicht gehören. Microsoft Research möchte durch den Zwang, alle Anwendungen in dieser Sprache zu schreiben ein Sicherheitsplus erreichen, welches nicht nur für den Kernel, sondern auch für die Applikationen gilt, da diese aufgrund der Sprache in der sie entstanden sind gar nicht abstürzen können. Außerdem behauptet Microsoft, einen enormen Performancegewinn gegenüber [Windows XP](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") und [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") zu erreichen. Der Quellcode ist frei verfügbar und veränderbar, verbietet jedoch die kommerziele Nutzung.
 
 ## Links
 
@@ -27,6 +27,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1492/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1492/index.html)
 
-<!-- MediaWiki page 1492; revision 4916; parent 3383; 2009-07-30T21:45:15Z -->
+<!-- MediaWiki page 1492; revision 5073; parent 4916; 2009-08-05T16:24:33Z -->
