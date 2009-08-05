@@ -7,7 +7,7 @@ Die **HAL** (**H**ardware **A**bstraction **L**ayer) bezeichnet eine Softwaresch
 Die HAL beinhaltet somit folgende Aufgaben:
 
 - [I/O Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports")-Zugriffe
-- [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Interrupt Service Routines
+- [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), [Interrupt Service Routines](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "Interrupt Service Routine")
 - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), ...
 - [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")
 - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
@@ -30,6 +30,6 @@ Eine besondere Rolle hat der [Exokernel](https://github.com/lowlevel-eu/wiki/wik
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4577/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5074/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 4577; parent 3854; 2009-07-07T17:11:56Z -->
+<!-- MediaWiki page 1480; revision 5074; parent 4577; 2009-08-05T16:45:00Z -->
