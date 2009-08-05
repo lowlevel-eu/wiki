@@ -12,7 +12,10 @@ Es gibt so gut wie keinen Menschen, der alles kann. Auch nicht im OS-Development
 
 Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mächtig sein. Natürlich muss man hier und da nachlesen, wie denn nun z.B. nen Pointer dereferenziert wird oder was denn eigentlich 16 \<\< 8 bedeutet. Deshalb eine kleine Liste empfehlenswerter Bücher zum Einstieg und als Nachschlagewerk in die Programmierung:
 
-  
+### C/C++
+
+- ["C/C++ GE-PACK" von Herbert Schildt](http://www.amazon.de/ge-packt-Schneller-kompletten-Zahlreiche-Produktivität/dp/3826617282/ref=sr_1_1?ie=UTF8&s=books&qid=1249511226&sr=1-1): Eine kurze Übersicht über die Features von C, C++ und den Standard-Bibliotheken.
+- ["C++ Objektorientiertes Programmieren von Anfang an" von Helmut Erlenkötter](http://www.amazon.de/C-Objektorientiertes-Programmieren-von-Anfang/dp/3499600773): Das Buch ist optimal, wenn man bereits Programmieren kann, und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen die bereits C++ können ist es ein nettes Nachschlagewerg. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
 
 ## Bücher: OS-Development
 
@@ -40,6 +43,6 @@ Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5078/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5078; parent 0; 2009-08-05T22:03:55Z -->
+<!-- MediaWiki page 1930; revision 5079; parent 5078; 2009-08-05T22:38:35Z -->
