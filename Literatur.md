@@ -33,18 +33,12 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ------------------------------------------------------------------------
 
-**Das Addison-Wesley Handbuch der Hardwareprogrammierung**
-
-ISBN: 978-3-8273-2687-4 Preis: 18 € bis 199,99 €
+- ["Das Addison-Wesley Handbuch der Hardwareprogrammierung"](http://www.amazon.de/Das-Addison-Wesley-Handbuch-Hardwareprogrammierung/dp/3827323053)  
 
 Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
 
-**Tipp**: Ursprünglich kostete das Buch 199,99 €. Doch mittlerweile ist es als Verlagsremittende sehr güsntig zu erhalten. Hierfür mal auf ebay.de danach suchen, dort werden die beiden Bände für um die 20 € angeboten.
-
-------------------------------------------------------------------------
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5080/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5080; parent 5079; 2009-08-05T22:43:03Z -->
+<!-- MediaWiki page 1930; revision 5081; parent 5080; 2009-08-05T22:44:34Z -->
