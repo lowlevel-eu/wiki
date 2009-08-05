@@ -12,12 +12,25 @@ Es gibt so gut wie keinen Menschen, der alles kann. Auch nicht im OS-Development
 
 Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mächtig sein. Natürlich muss man hier und da nachlesen, wie denn nun z.B. nen Pointer dereferenziert wird oder was denn eigentlich 16 \<\< 8 bedeutet. Deshalb eine kleine Liste empfehlenswerter Bücher zum Einstieg und als Nachschlagewerk in die Programmierung:
 
+### Assembler
+
+- ["Assembler: Maschinennahes Programmieren von Anfang an von Reiner Backer](http://www.amazon.de/Assembler-Maschinennahes-Programmieren-Anfang-Windows-Programmierung/dp/3499612240)  
+  Klasse Buch für den Einstieg in die x86-Programmierung. Es wird die Arbeitsweise eines Prozessors sowie das Zusammenspiel zwischen CPU, RAM, MMU und ALU erklärt. Das Buch ist gut strukturiert und bietet ausführliche Beispiele zu jedem wichtigen Assemblerbefehl. Der Windows-Teil ist allerdings nur mittelmäßig, ist aber für unser Klientel eh nicht von Bedeutung.
+
+  
+
 ### C/C++
 
 - ["C/C++ GE-PACK" von Herbert Schildt](http://www.amazon.de/ge-packt-Schneller-kompletten-Zahlreiche-Produktivität/dp/3826617282/ref=sr_1_1?ie=UTF8&s=books&qid=1249511226&sr=1-1)  
   Eine kurze Übersicht über die Features von C, C++ und den Standard-Bibliotheken.
 - ["C++ Objektorientiertes Programmieren von Anfang an" von Helmut Erlenkötter](http://www.amazon.de/C-Objektorientiertes-Programmieren-von-Anfang/dp/3499600773)  
   Das Buch ist optimal, wenn man bereits Programmieren kann, und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen die bereits C++ können ist es ein nettes Nachschlagewerg. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
+- ["C: Bibliotheksfunktionen sicher anwenden" von Helmut Erlenkötter](http://www.amazon.de/Bibliotheksfunktionen-sicher-anwenden-Helmut-Erlenk%C3%B6tter/dp/3499612232)  
+  Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kennitnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
+- ["C++ von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/von-bis-CD-ROM-umfassende-Handbuch/dp/3898428168)  
+  Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert.
+
+  
 
 ## Bücher: OS-Development
 
@@ -31,14 +44,17 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 
 Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zugriff darauf usw.. Nur die wenigsten wissen, an welchem Port man ein bestimmtes PCI-Gerät anspricht oder wie sich die Soundkarte dazu überreden lässt, einen Ton auszugeben. Hier eine Liste empfehlenswerter Büche:
 
-------------------------------------------------------------------------
+- ["Das Addison-Wesley Handbuch der Hardwareprogrammierung" von Klaus Dembowski](http://www.amazon.de/Das-Addison-Wesley-Handbuch-Hardwareprogrammierung/dp/3827323053)  
+  Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
+- ["PC-Hardwarebuch" von Klaus Dembowski et.al.](http://www.amazon.de/PC-Hardwarebuch-Aufbau-Funktionsweise-Programmierung/dp/3827314615)  
+  Das Standardwerk wenn es um Hardwareprogrammierung geht.
 
-- ["Das Addison-Wesley Handbuch der Hardwareprogrammierung"](http://www.amazon.de/Das-Addison-Wesley-Handbuch-Hardwareprogrammierung/dp/3827323053)  
+  
 
-Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
+## Linkliste
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5082/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5081; parent 5080; 2009-08-05T22:44:34Z -->
+<!-- MediaWiki page 1930; revision 5082; parent 5081; 2009-08-05T22:55:06Z -->
