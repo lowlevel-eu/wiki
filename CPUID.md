@@ -871,7 +871,7 @@ Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei
 
 Die Bits 63 bis 32 der Prozessor-ID sind darin hinterlegt. *(siehe oben)*
 
-## Erweiterte Funktionen
+# Erweiterte Funktionen
 
 Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur für Intel- bzw. nur für AMD Prozessoren. Solche Befehle sollte man nicht ausführen, wenn man nicht weiß von welchem Hersteller die CPU ist! Zum Beispiel sollten CPUID-Befehle, die nur für Intel-CPUs gelten, nicht auf einer AMD-CPU ausgeführt werden. Diese Funktionen beginnen bei 0x80000000.
 
@@ -978,6 +978,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5237; parent 5234; 2009-08-06T13:33:54Z -->
+<!-- MediaWiki page 1739; revision 5238; parent 5237; 2009-08-06T13:40:57Z -->
