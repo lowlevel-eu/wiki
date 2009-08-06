@@ -12,9 +12,9 @@ Blau: Blockgrafikzeichen
 Violett: Die Sonderzeichen ÄÖÜäöüß  
 Rot: Nicht eindeutig konvertierbare Zeichen  
 
-## Darstellung in [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU")
+## Darstellung in QEMU
 
-![Codepage-437.png](http://upload.wikimedia.org/wikipedia/en/f/f8/Codepage-437.png)
+Hier eine Darstellung der Zeichen mit \| QEMU (aus der englischen Wikipedia): ![Codepage-437.png](http://upload.wikimedia.org/wikipedia/en/f/f8/Codepage-437.png)
 
 ## Links
 
@@ -22,6 +22,6 @@ Rot: Nicht eindeutig konvertierbare Zeichen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1588/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1588/index.html)
 
-<!-- MediaWiki page 1588; revision 5160; parent 5133; 2009-08-06T11:04:52Z -->
+<!-- MediaWiki page 1588; revision 5178; parent 5160; 2009-08-06T11:27:45Z -->
