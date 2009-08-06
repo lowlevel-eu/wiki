@@ -167,7 +167,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Class 0x02 - Netzwerk-Controller
+### Class 0x02 - [Netzwerk](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk")-Controller
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | -------------------------------------------------------------------------- |
@@ -408,6 +408,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 5107; parent 5066; 2009-08-06T08:57:40Z -->
+<!-- MediaWiki page 1626; revision 5108; parent 5107; 2009-08-06T09:01:09Z -->
