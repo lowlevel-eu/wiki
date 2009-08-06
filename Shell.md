@@ -27,6 +27,12 @@ eingegeben, von gefolgtem ENTER. Die Shell ermittelt nun:
 
 Bei manchen Shells kann durch heranstellen eines '&' auch ein neuer Prozess gestartet werden, in dem das Programm dann abläuft und somit die Shell weiterbenutzen.
 
+### Oft genutzte Shells unter Linux
+
+### = bash
+
+Die **Bourne-again Shell**, oder kurz **bash** ist die Standard-Shell für GNU-Systeme und die mit Abstand am meistgenutzte Shell unter Linux. Sie ist eine Weiterentwicklung der sh, die lange Zeit Standard war.
+
 ### Windows
 
 Die Shell unter Windows wurde seit MS-DOS-Zeiten Befehlsinterpreter, bzw. Kommandozeileninterpreter genannt. Während der Windows-9x-Zeit hieß sie dann 'Eingabeaufforderung' oder auch "DOS-Box", wurde dann unter Windows 2000/XP nur "Eingabeaufforderung" genannt.
@@ -35,6 +41,6 @@ Allerdings war seit jeher die "Windows-Shell" nicht halb so mächtig wie deren \
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
 
-<!-- MediaWiki page 1864; revision 4791; parent 4582; 2009-07-29T23:48:22Z -->
+<!-- MediaWiki page 1864; revision 5096; parent 4791; 2009-08-06T08:44:22Z -->
