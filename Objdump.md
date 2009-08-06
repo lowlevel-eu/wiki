@@ -1,6 +1,6 @@
 # Objdump
 
-**objdump** ist ein mächtiges Werkzeug aus den binutils für Linux. Es ermöglicht, (Objekt)-Code zu disassemblieren und verschiedenste Informationen zu der Datei zu bekommen.
+**objdump** ist ein mächtiges Werkzeug aus den binutils für Unix. Es ermöglicht, (Objekt)-Code zu disassemblieren und verschiedenste Informationen zu einer Objektdatei zu erhalten.
 
   
 
@@ -38,6 +38,8 @@ Um eine Datei komplett zu disassemblieren, nutzt man
 
 ` objdump -D DATEI `
 
+Mit dem Schalter -S versucht objdump, originalen Sourcecode herauszufinden und diesen mit dem disassemblierten Code zu vermischen. Der Schalter -l gibt zusätzlich Zeilennummern aus dem ursprünglichen Sourcecode aus (wenn dies möglich ist).
+
   
 
 ## Weblinks
@@ -47,6 +49,6 @@ Um eine Datei komplett zu disassemblieren, nutzt man
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5362/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1998/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1998/index.html)
 
-<!-- MediaWiki page 1998; revision 5362; parent 5355; 2009-08-06T18:00:25Z -->
+<!-- MediaWiki page 1998; revision 5365; parent 5362; 2009-08-06T18:04:28Z -->
