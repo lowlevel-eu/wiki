@@ -168,8 +168,6 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
   - System-Shell (Kernel-Ersatz, dient zum Anzeigen wichtiger System-Informationen und wird als CLI \[Command Line Interface\] aufgesetzt.
 - Bootsektor für CD
 
-  
-
 # Roadmap
 
 **Ziele für Sprung in Research Phase 1 (Version 0.01)**
@@ -222,6 +220,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 5379; parent 5272; 2009-08-06T19:38:20Z -->
+<!-- MediaWiki page 1766; revision 5394; parent 5379; 2009-08-06T20:33:47Z -->
