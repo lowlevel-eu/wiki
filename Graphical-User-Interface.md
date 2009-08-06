@@ -6,6 +6,29 @@ Ein **Graphical User Interface** (GUI, dt.: grafische Benutzeroberfläche) zeich
 
 Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus") als primäres Eingabegerät und die Nutzung von Fenstern, welche sich auf einer oder mehreren Arbeitsflächen befinden (Stichwort: Virtuelle Desktops). Weitere (beinah) allgegenwärtige Features von GUIs sind Drag'n'Drop und eine Zwischenablage, um zu vermeiden, dass jedes Fenster von den anderen abgeschottet ist.
 
+## Entwickeln einer GUI für das eigene OS
+
+Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwäht wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des Kernels! Auch die GUI von Windows gehört nicht zum Kernel, wie angenommen (allerdings sind GUI und Kernel über die WinAPI und verschiedenste Syscalls eng miteinander verzahnt). Wer eine GUI für sein OS entwickeln möchte braucht folgendes in seinem Kernel:
+
+- Vollständiges Memory-Management
+- Multitasking
+
+Dazu werden noch
+
+- Grafiktreiber
+- libc
+- Sonstige Libs
+
+benötigt. Multitasking vor allem, weil die GUI, wenn sie als einziger Prozess ausgeführt werden würde, sich nicht mehr bedienen lassen würde, wenn ein anderes Programm gestartet wird (und auch dieses im Grunde nicht ausgeführt werden kann, weil es sich der Elemente der GUI bedient).
+
+### Portieren oder selbst schreiben?
+
+KDE, Gnome, IceWM...bei der Fülle an (Linux-)GUIs fragt man sich sicherlich, warum man nicht einfach eine bestehende portieren kann. Kann man, allerdings ist dazu fast immer die Portierung von Libs (Qt bei KDE, GTK bei Gnome) vonnöten, was mitunter ein ebenso großes Projekt ist. Außerdem brauchen GUIs auch Windows-Manager.
+
+Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster Ebene (lowlevel ;)) arbeiten: Man hat keine Libs im Hintergrund, die eine Fenster mit "createWindow();" erstellen, man muss alles von Hand machen.
+
+  
+
 ## Vorteile
 
 - Auch vollkommen unerfahrene Benutzer können mithilfe eines GUI oftmals Funktionen "erraten", sei es durch das Design der Icons oder auch durch Tooltips. Die Lernkurve durch "Learning-by-doing" verläuft viel steiler als bei Einsteigern in die Konsole.
@@ -34,6 +57,6 @@ Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](https://github
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4575/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 4575; parent 3340; 2009-07-07T17:08:53Z -->
+<!-- MediaWiki page 1511; revision 5083; parent 4575; 2009-08-06T00:19:43Z -->
