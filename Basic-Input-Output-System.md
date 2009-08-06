@@ -16,14 +16,12 @@ Nach dem POST versucht es von einer Liste von Laufwerken einen Bootloader zu lad
 
 Allerdings ist das BIOS (zumindest im Real-Mode) noch immer aktiv: Es stellt eine Menge an Intrerupts zur Kommunikation mit den verschiedenen Peripheriegeräten bereit.
 
-  
-
 ## Weblinks
 
 - [BIOS Central](http://bioscentral.com/) (*englisch*)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5114/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5115/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 5114; parent 4867; 2009-08-06T09:24:31Z -->
+<!-- MediaWiki page 1616; revision 5115; parent 5114; 2009-08-06T09:25:05Z -->
