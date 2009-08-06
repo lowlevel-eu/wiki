@@ -7,9 +7,9 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick GRUB zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
+Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
 Der Stick sowie das BIOS/EFI müssen allerdings einige Bedingungen erfüllen. Das heißt, es geht mit dem USB-Stick, auf dem "Bootable Device" o.ä. darauf steht. Dies steht nicht überall, weil nicht jeder Hersteller sich an die Spezifikation für das verhalten der Sticks beim booten hält. Genauere Informationen sind [hier](http://www.usb.org/developers/devclass_docs/usb_msc_boot_1.0.pdf) zu finden. Es kann aber durchaus sein, dass man von dem Stick booten kann, obwohl dieser nicht als Bootable gekennzeichnet ist.  
-Des Weiteren muss im BIOS/EFI die Möglichkeit gegeben sein, ein USB Speichermedium in der Bootreihenfolge auszuwählen. Dies ist, falls es unterstützt wird zumeist als USB-HDD angegeben. Ist nur ein USB-FDD zu finden, so funktioniert dies nicht, da USB-FDD ein Eintrag für externe USB-Diskettenlaufwerke ist.
+Des Weiteren muss im [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")/EFI die Möglichkeit gegeben sein, ein USB Speichermedium in der Bootreihenfolge auszuwählen. Dies ist, falls es unterstützt wird zumeist als USB-HDD angegeben. Ist nur ein USB-FDD zu finden, so funktioniert dies nicht, da USB-FDD ein Eintrag für externe USB-Diskettenlaufwerke ist.
 
 ## Löschen der Dateien
 
@@ -53,7 +53,7 @@ Ein anderer Weg, den Stick von den Daten zu befreien, wäre der folgende:
 
 ### Löschen der Daten unter Windows
 
-dd wurde nach Windows portiert und ist hier erhältlich: [DD für Windows](http://www.chrysocome.net/dd)  
+dd wurde nach [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") portiert und ist hier erhältlich: [DD für Windows](http://www.chrysocome.net/dd)  
 Um zu schauen, welches Laufwerk der USB-Stick ist, muss dd mit dem Parameter --list aufgerufen werden. Dieser existiert allerdings nur in der Version für Windows
 
     > dd --list
@@ -66,7 +66,7 @@ In der Auflistung muss man nun nach dem Laufwerksbuchstabe schauen, an dem der S
 
 ## Formatieren des Sticks
 
-In diesem zweiten Abschnitt bekommt der USB-Stick ein neues Dateisystem. Das Dateisystem meiner Wahl ist ext2, kann aber durchaus auch ein anderes, wie FAT32 oder so sein.
+In diesem zweiten Abschnitt bekommt der USB-Stick ein neues [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Das Dateisystem meiner Wahl ist ext2, kann aber durchaus auch ein anderes, wie FAT32 oder so sein.
 
 ### Formatieren der Partition des Sticks unter Linux/Unix
 
@@ -119,7 +119,7 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ### Installation unter Windows
 
-Wie auch bei der Installation unter Linux/Unix werden hier die GRUB Binarys benötigt, welche auf dem ftp-Server des Projekts zu finden sind: GRUB Legacy. Zur Benutzung empfehle ich die Version 0.97! GRUB Legacy wird zwar nicht mehr weiterentwickelt, aber GRUB2 ist noch nicht als stable freigegeben ist.  
+Wie auch bei der Installation unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")/Unix werden hier die GRUB Binarys benötigt, welche auf dem ftp-Server des Projekts zu finden sind: GRUB Legacy. Zur Benutzung empfehle ich die Version 0.97! GRUB Legacy wird zwar nicht mehr weiterentwickelt, aber GRUB2 ist noch nicht als stable freigegeben ist.  
   
 Für die Installation von GRUB unter Windows gibt es ein kleines Tool, das sich "grubinstall.exe" nennt. Hiermit sollte es möglich sein, GRUB auf dem USB-Stick zu installieren. Man kann dieses kleine Tool [hier](http://www.geocities.com/lode_leroy/grubinstall/) herunterladen.
 
@@ -174,6 +174,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4903/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 4903; parent 4763; 2009-07-30T21:26:57Z -->
+<!-- MediaWiki page 1737; revision 5198; parent 4903; 2009-08-06T11:50:00Z -->
