@@ -7,7 +7,7 @@
 | Akt. Version: | 00003 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
 | OS-Eigenschaften |  |
-| Plattform: | x64 |
+| Plattform: | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Exokernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | *noch nicht vorhanden* |
@@ -72,6 +72,6 @@ Ver **00000**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4614/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5288/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 4614; parent 3720; 2009-07-10T15:15:34Z -->
+<!-- MediaWiki page 1750; revision 5288; parent 4614; 2009-08-06T15:31:04Z -->
