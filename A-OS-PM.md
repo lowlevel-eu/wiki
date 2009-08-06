@@ -3,13 +3,13 @@
 A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann. Es gab einen Vorgänger (A / OS RM) der im RealMode lief und nur zu testzwecken diente.
 
 | A / OS PM |  |
-| ----------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 |  |  |
 | Entwickler: | Blitzmaster |
 | Akt. Version: | 0.0.1 (Pre Alpha I) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | (Vorerst) Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | x86 |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembly, C/C++ |
 | API: | A / API |
@@ -62,6 +62,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4884/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 4884; parent 3018; 2009-07-30T17:15:41Z -->
+<!-- MediaWiki page 1451; revision 5271; parent 4884; 2009-08-06T15:26:14Z -->
