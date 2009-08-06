@@ -40,7 +40,7 @@
 
 ## Neu erstellen
 
-- Informationen zur AMD PCNet Netzwerkkarte
+- Informationen zur [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
 - Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen)
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
 - Versionsverwaltung - Pro&Kontra, welche Systeme gibt es...
@@ -55,6 +55,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5327/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 4632; parent 4373; 2009-07-13T21:48:28Z -->
+<!-- MediaWiki page 1518; revision 5327; parent 4632; 2009-08-06T16:09:53Z -->
