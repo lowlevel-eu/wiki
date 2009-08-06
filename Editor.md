@@ -2,11 +2,11 @@
 
 Ein **Editor** ermöglicht das Bearbeiten von einfachen Textdateien. Im Gegensatz zu Textverarbeitungsprogrammen werden die Dokumente von einem Editor jedoch als reiner Text gespeichert, also völlig ohne z.B. Formatierungen (außer natürlich Tabs o.ä.).
 
-Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei Windows dabei ist, jedoch bevorzugen fast alle Programmierer einen Editor mit mehr Features. Außerdem unterstützt Notepad keine Unix-Zeilenumbrüche, daher ist ein verbesserter Editor für das gemeinschaftliche Arbeiten unter Windows obligatorisch.
+Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") dabei ist, jedoch bevorzugen fast alle Programmierer einen Editor mit mehr Features. Außerdem unterstützt Notepad keine Unix-Zeilenumbrüche, daher ist ein verbesserter Editor für das gemeinschaftliche Arbeiten unter Windows obligatorisch.
 
 Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Syntax-Highlighting, andere lassen sich durch verschiedenste Plugins und Einstellungsmöglichkeiten mit einer leichtgewichtigen IDE vergleichen. Dieser Artikel listet verschiedene Texteditoren auf.
 
-## Linux
+## [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 
 - [Kate](http://kate-editor.org/) ist ein komfortabler Editor, der bei KDE mitgeliefert wird.
 
@@ -52,6 +52,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5173/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 4892; parent 4890; 2009-07-30T18:22:07Z -->
+<!-- MediaWiki page 1908; revision 5173; parent 4892; 2009-08-06T11:23:09Z -->
