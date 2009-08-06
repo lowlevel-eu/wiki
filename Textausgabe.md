@@ -10,9 +10,9 @@ Zur Ausgabe von Text gibt es einen 4kB großen Speicher an der Adresse 0xB8000. 
 
 ## Schreiben in den Textspeicher
 
-Um nun auf dem Bildschirm ein Zeichen zu haben, muss man erstmal das Offset ausrechnen, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s Wobei hier o das Offset ist, z die Zeile und s die Spalte. Wenn man in Mathe aufgepasst hat, sollte das kein Problem sein.
+Um nun auf dem Bildschirm ein Zeichen zu haben, muss man erstmal das Offset ausrechnen, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s Wobei hier o das Offset ist, z die Zeile und s die Spalte ist.
 
-Nun war die Rede, dass 2 Bytes pro Zeichen verwendet werden. Also woher kommt das 2. Byte? Ganz einfach: In dem 2. Byte wird das Attribut, also eigentlich nur die Farbe gespeichert. Im ersten wird einfach nur das Zeichen gespeichert. Als Code wird [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437") verwendet, welche nichts anderes als [7bit-ASCII](http://de.wikipedia.org/wiki/ASCII) plus noch ein paar Zeichen Erweiterung, ist.
+In dem ersten Byte wird der Buchstabe selbst, in dem 2. Byte wird das Attribut, also die Vorder- und Hintergrundfarbe gespeichert. Als Code wird [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437") verwendet, welche eine Erweiterung von [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII") darstelt.
 
 ## Attribut-Byte
 
@@ -105,6 +105,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3745/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5354/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 3745; parent 3276; 2008-12-26T12:50:46Z -->
+<!-- MediaWiki page 1549; revision 5354; parent 3745; 2009-08-06T17:44:20Z -->
