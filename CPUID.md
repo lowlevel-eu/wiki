@@ -721,12 +721,12 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">20
 </th>
-<td colspan="1">Unterstützt SSE4.2
+<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE4.2</a>
 </td></tr>
 <tr>
 <th colspan="1">19
 </th>
-<td colspan="1">Unterstützt SSE4.1
+<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE4.1</a>
 </td></tr>
 <tr>
 <th colspan="1">18
@@ -772,7 +772,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">9
 </th>
-<td colspan="1">Unterstützt SSSE3
+<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSSE3</a>
 </td></tr>
 <tr>
 <th colspan="1">8
@@ -792,7 +792,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">5
 </th>
-<td colspan="1">Unterstützt <a title="Virtualisierung (Seite nicht vorhanden)">VMX</a>
+<td colspan="1">Unterstützt VMX
 </td></tr>
 <tr>
 <th colspan="1">4
@@ -817,7 +817,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">0
 </th>
-<td colspan="1">Unterstützt SSE3
+<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE3</a>
 </td></tr></tbody></table>
 
 #### EDX - Featureflags
@@ -2989,6 +2989,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5373; parent 5360; 2009-08-06T19:00:24Z -->
+<!-- MediaWiki page 1739; revision 5374; parent 5373; 2009-08-06T19:02:10Z -->
