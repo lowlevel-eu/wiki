@@ -1018,7 +1018,7 @@ Gibt Bits 63 - 0 der Prozessorsignatur zurück. Um die gesamte 96-Bit Prozessors
 
 **Achtung!**
 
-Funktioniert nur bei Prozessoren, die das entsprechende **[Featureflag(Bit 18)](#edx---featureflags)** gesetzt haben.
+Funktioniert nur bei Prozessoren, die das entsprechende **[Featureflag (Bit 18)](#edx---featureflags)** gesetzt haben.
 
 #### EAX - Reserviert
 
@@ -1427,6 +1427,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5339/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5339; parent 5337; 2009-08-06T16:29:44Z -->
+<!-- MediaWiki page 1739; revision 5341; parent 5339; 2009-08-06T16:30:17Z -->
