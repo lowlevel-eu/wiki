@@ -23,6 +23,6 @@ Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Frage
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
 
-<!-- MediaWiki page 2004; revision 5380; parent 0; 2009-08-06T19:39:55Z -->
+<!-- MediaWiki page 2004; revision 5381; parent 5380; 2009-08-06T19:42:35Z -->
