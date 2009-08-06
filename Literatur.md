@@ -55,6 +55,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5082/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5085/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5082; parent 5081; 2009-08-05T22:55:06Z -->
+<!-- MediaWiki page 1930; revision 5085; parent 5082; 2009-08-06T00:21:34Z -->
