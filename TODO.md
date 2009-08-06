@@ -37,6 +37,8 @@
 - [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"): Gescheites Diagramm zur Registerarchitektur, Ergänzungen zur Handhabung von Interrupts, Eingehen auf verschiedene Befehlssätze, Verweis auf [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") zur Identifizierung.
 - [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID"): Die wichtigsten Kommandos (0x0 - 0x2, evtl, auch die Erweiterten von AMD) erläutern.
 - [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
+- [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register")
+- [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID"): Vervollständigen
 
 ## Neu erstellen
 
@@ -55,6 +57,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5327/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 5327; parent 4632; 2009-08-06T16:09:53Z -->
+<!-- MediaWiki page 1518; revision 5367; parent 5327; 2009-08-06T18:14:47Z -->
