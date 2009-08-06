@@ -2,20 +2,25 @@
 
 **Achtung!**
 
-Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! \~~ [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
+Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! ~[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
 
-Der CPUID-Befehl wird benutzt, um Informationen über die Fähigkeiten eines Prozessors zu erhalten, wie zum Beispiel den Herstellernamen, die Modellnummer, die Größe des Caches, usw.
+Der **CPUID**-Befehl liefert, sofern er denn von der CPU unterstützt wird, Informationen zu zahlreichen Fähigkeiten der CPU, wie zum Beispiel den Herstellernamen, die Modellnummer oder die Größe des Caches.
 
 ## Wie man CPUID benutzt
 
-Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl "CPUID". Die nötigen Parameter(Funktionsnummer) werden dabei im Register EAX angegeben. Die Rückgabewerte werden in den Registern *EAX*, *EBX*, *EDX* und *ECX* abgelegt.
+Bevor man munter versucht, mit dem CPUID Befehl Informationen auszulesen, sollte man ersteinmal prüfen, ob die CPU den Befehl überhaupt unterstützt. Dazu testet man, ob das ID-Flag gesetzt und gelöscht werden kann.
 
-Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, zu bekommen, ruft man CPUID mit der Funktionsnummer 0x00 auf. \<asm\>
+Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pushfd  ; Sichere Flags pop ecx  ; Lade Flags in EXC mov eax, ecx  ; Schiebe Flags in EAX xor eax, 0x200000  ; Vertausche das ID-Flag push eax  ; Sichere neue Flags popfd  ; Lade neue Flags in EFLAGS
 
-    mov eax, 0x00; xor eax, eax bewirkt das selbe und ist schneller
-    cpuid
+                          ; Wenn CPUID unterstützt wird, wird das geänderte ID-Flag übernommen
+                          ; Ansonsten wird bleibt das alte ID-Flag bestehen
 
-\</asm\> Ein AMD-Prozessor hätte jetzt folgende Register Werte: EBX="**Auth**", EDX="**enti**", ECX="**cAMD**"
+pushfd  ; Sichere Flags pop eax  ; Lade Flags in EAX xor eax, ecx  ; Vergleiche EAX und ECX popfd  ; Stelle Original Flags wieder her je cpuid_unsupported  ; EAX und ECX sind gleich, CPUID wird nicht unterstütz! jmp cpu_supported  ; EAX und ECX sind verschieden, CPUID wird unterstützt! \</asm\>
+
+Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl **cpuid**. Die Funktionsnummer der CPUID-Funktion wird dabei im **EAX**-Register übergeben. Die Rückgabewerte werden in den Registern **EAX**, **EBX**, **EDX** und **ECX** abgelegt.
+
+Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, auszulesen, ruft man CPUID mit der Funktionsnummer 0x00000000 auf. \<asm\> mov eax, 0x00000000  ; xor eax, eax bewirkt das selbe und ist schneller cpuid  ; Der Vendor-ID-String befindet sich nun in (in dieser Reihenfolge), EBX, EDX, ECX \</asm\> Ein **AMD**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Auth**", **EDX**="**enti**", **ECX**="**cAMD**"  
+Ein **Intel**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Genu**", **EDX**="**ineI**", **ECX**="**ntel**"
 
 ## Standard Funktionen
 
@@ -249,6 +254,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5106; parent 5068; 2009-08-06T08:55:22Z -->
+<!-- MediaWiki page 1739; revision 5116; parent 5106; 2009-08-06T09:31:44Z -->
