@@ -3,7 +3,7 @@
 | Allgemeines |  |
 | -------------------------------- | ------------------------------- |
 | Name: | D |
-| Inlineassembler: | {{{Inlineassembler}}} |
+| Inlineassembler: | Ja (Intel-Syntax) |
 | Compiler: | dmd (Digital Mars), gdc (GNU) |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
@@ -16,7 +16,7 @@ D ist eine prozedurale sowie objekorientierte und wird seit 1999 von Walter Brig
 
 ## D als Sprache für ein Betriebssystem
 
-D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-Assembler (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
+D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
 
 ## Kernel in D
 
@@ -244,6 +244,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 5176; parent 5166; 2009-08-06T11:26:09Z -->
+<!-- MediaWiki page 1863; revision 5191; parent 5176; 2009-08-06T11:44:33Z -->
