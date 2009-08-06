@@ -6,7 +6,7 @@ Unser Lowlevel-Wiki wird von [Bluecode](https://lowlevel-eu.github.io/wiki/pages
 Das Team umfasst:
 
 - [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"), der Mann für die Typo's und Redirects
-- SHyx0rmz, ist zur Stelle wenn es um CPUID und x86-64 geht und steht auf Prettytables
+- SHyx0rmZ, ist zur Stelle wenn es um CPUID und x86-64 geht und steht auf Prettytables
 - [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"), der legändere Erfinder der Prettytables
 - [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), findet falsche Grammatik und formuliert sie anders und vergisst, den Button "Nur Kleinigkeiten" anzukreuzen sehr gerne
 
@@ -23,6 +23,6 @@ Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Frage
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
 
-<!-- MediaWiki page 2004; revision 5382; parent 5381; 2009-08-06T19:42:58Z -->
+<!-- MediaWiki page 2004; revision 5383; parent 5382; 2009-08-06T19:44:10Z -->
