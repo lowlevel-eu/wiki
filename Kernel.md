@@ -18,7 +18,7 @@ Folgenden Kernelarten exirstieren:
 
 ### Monolithischer Kernel
 
-Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") und andere Funktionen mit sich bringt. Dadurch müssen nicht erst [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Module nachgeladen werden und auch eine Schnittstelle ist nicht erforderlich, was einen deutlichen Geschwindigkeitsvorteil mit sich bringt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module können nicht ohne weiteres neu gestartet werden. Der [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist ein Monolithischer Kernel.
+Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für und andere Funktionen mit sich bringt. Dadurch müssen nicht erst [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Module nachgeladen werden und auch eine Schnittstelle ist nicht erforderlich, was einen deutlichen Geschwindigkeitsvorteil mit sich bringt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module können nicht ohne weiteres neu gestartet werden. Der [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist ein Monolithischer Kernel.
 
 #### Diagramm zum Veranschaulichen
 
@@ -48,6 +48,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5112/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 4583; parent 4576; 2009-07-07T17:54:36Z -->
+<!-- MediaWiki page 1478; revision 5112; parent 4583; 2009-08-06T09:15:38Z -->
