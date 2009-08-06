@@ -1821,7 +1821,7 @@ Erweiterte Funktionen von Intel:
 
 **PCKTYP** ist nur gültig, wenn [EAX\[7:0\]](https://github.com/lowlevel-eu/wiki/wiki/CPUID#eax---prozessor "CPUID") von [Funktion 0x0000_0001](https://github.com/lowlevel-eu/wiki/wiki/CPUID#funktion-0x0000_0001 "CPUID") mindestens **0x10** ist. Wenn EAX\[7:0\] von Funktion 0x0000_0001 niedriger ist als **0x10** ist dieses Feld **reserviert**!
 
-#### ECX
+#### ECX - Erweiterte Featureflags
 
 <table>
 <tbody><tr>
@@ -1924,9 +1924,148 @@ Erweiterte Funktionen von Intel:
 <td colspan="1">LahfSahf
 </td></tr></tbody></table>
 
-#### EDX
+**Hinweis:**
 
-Wenn Bit 29 gesetzt, dann ist Intel64-Technologie verfügbar
+Hier fehlt eine Erklärung!
+
+#### EDX - Erweiterte Featureflags
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="1">3DNow
+</td>
+<td colspan="1">3DNowExt
+</td>
+<td colspan="1">LM
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">RDTSCP
+</td>
+<td colspan="1">Page1GB
+</td>
+<td colspan="1">FFXSR
+</td>
+<td colspan="1">FXSR
+</td>
+<td colspan="1">MMX
+</td>
+<td colspan="1">MmxExt
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">XD
+</td>
+<td colspan="2">
+</td>
+<td colspan="1">PSE36
+</td>
+<td colspan="1">PAT
+</td>
+<td colspan="1">CMOV
+</td>
+<td colspan="1">MCA
+</td>
+<td colspan="1">PGE
+</td>
+<td colspan="1">MTRR
+</td>
+<td colspan="1">SYSCALL
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">APIC
+</td>
+<td colspan="1">CMPXCHG8B
+</td>
+<td colspan="1">MCE
+</td>
+<td colspan="1">PAE
+</td>
+<td colspan="1">MSR
+</td>
+<td colspan="1">TSC
+</td>
+<td colspan="1">PSE
+</td>
+<td colspan="1">DE
+</td>
+<td colspan="1">VME
+</td>
+<td colspan="1">FPU
+</td></tr></tbody></table>
+
+**Hinweis:**
+
+Hier fehlt eine Erklärung!
 
 ## Funktion 0x8000_0002
 
@@ -2859,6 +2998,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5348; parent 5341; 2009-08-06T17:19:58Z -->
+<!-- MediaWiki page 1739; revision 5357; parent 5348; 2009-08-06T17:53:48Z -->
