@@ -2,7 +2,18 @@
 
 **Achtung!**
 
-Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! ~[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
+Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! (Der Artikel könnte zwischenzeitlich ein wenig komisch anmuten ;-) ~[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
+
+Vorlage:Hinweiss
+
+So sehen die herstellerspezifischen Tabellenzellen aus:
+
+| Farbe | Bedeutung |
+| ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Blau | Dieser Eintrag gilt **ausschließlich** für **Intel**-Prozessoren. Auf AMD-Prozessoren ist dieser Eintrag **reserviert**!. |
+| Grün | Dieser Eintrag gilt **ausschließlich** für **AMD**-Prozessoren. Auf Intel-Prozessoren ist dieser Eintrag **reserviert**!. |
+
+Vorlage:Hinweiss
 
 Der **CPUID**-Befehl liefert, sofern er denn von der CPU unterstützt wird, Informationen zu zahlreichen Fähigkeiten der CPU, wie zum Beispiel den Herstellernamen, die Modellnummer oder die Größe des Caches.
 
@@ -338,49 +349,320 @@ Der String ist nicht nullterminiert!
 
 | Vendor-ID-String | Hersteller |
 | ------------------ | ------------------------ |
-| "AuthenticAMD" | AMD |
-| "CentaurHauls" | Centaur |
-| "CyrixInstead" | Cyrix |
-| "GenuineIntel" | Intel |
-| "NexGenDriven" | NexGen |
-| "Geode by NSC" | National Semiconductor |
-| "RiseRiseRise" | Rise |
-| "SiS SiS SiS " | SiS |
-| "GenuineTMx86" | Transmeta |
-| "UMC UMC UMC " | UMC |
-| "VIA VIA VIA " | VIA |
+| `"AuthenticAMD"` | AMD |
+| `"CentaurHauls"` | Centaur |
+| `"CyrixInstead"` | Cyrix |
+| `"GenuineIntel"` | Intel |
+| `"NexGenDriven"` | NexGen |
+| `"Geode by NSC"` | National Semiconductor |
+| `"RiseRiseRise"` | Rise |
+| `"SiS SiS SiS "` | SiS |
+| `"GenuineTMx86"` | Transmeta |
+| `"UMC UMC UMC "` | UMC |
+| `"VIA VIA VIA "` | VIA |
 
-### EAX = 0x00000001
-
-Das Ergebnis dieser Funktion ist folgendes:
+## Funktion 0x0000_0001
 
 #### EAX
 
-| Bits | Funktion |
-| --------- | ------------------------------------ |
-| 31 - 28 | Reserviert |
-| 27 - 20 | Erweiterte Familie |
-| 19 - 16 | Erweitertes Modell |
-| 15 - 14 | Reserviert |
-| 13 - 12 | Prozessortyp |
-| 11 - 8 | Familienkennzeichen / Familiencode |
-| 7 - 4 | Model |
-| 4 - 0 | Stepping |
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="4">
+</td>
+<td colspan="8">Erweiterte Familie
+</td>
+<td colspan="4">Erweitertes Modell
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">Typ
+</td>
+<td colspan="4">Familie
+</td>
+<td colspan="4">Modell
+</td>
+<td colspan="4">Stepping
+</td></tr></tbody></table>
 
 #### EBX
 
-| Bits | Funktion |
-| --------- | ------------------------------------------------------------------------------------------------------- |
-| 31 - 24 | [APIC ID](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") |
-| 23 - 16 | Count |
-| 15 - 8 | Chunks |
-| 7 - 0 | Brand ID |
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="8"><a href="https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller" title="APIC">APIC ID</a>
+</td>
+<td colspan="8">Anzahl logischer Prozessoren
+</td>
+<td colspan="8">CLFLUSH Size
+</td>
+<td colspan="8">Brand ID
+</td></tr></tbody></table>
 
-- *APIC ID* ist nur gültig wenn das *[APIC-Flag](#edx---featureflags)* gesetzt ist.
-- *Count* ist die Anzahl der logischen Prozessoren und ist nur mit gesetztem *[Hyper-Threading-Flag](#edx---featureflags)* gültig.
-- *Chunks* gibt die Größe einer Cache line in 8 Byte Blocken an. Das Feld ist ebenfalls nur gültig in Verbindung mit einem gesetzten *[CFLUSH-Flag](#edx---featureflags)*.
+**Achtung!**
+
+**APIC ID** ist nur gültig wenn das **[APIC-Flag](#)** gesetzt ist.  
+Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Flag](#)** gültig.  
+**CLFLUSH Size** gibt die Größe einer Cache line in 8 Byte Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#)**.
 
 #### ECX
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="1">RAZ
+</td>
+<td colspan="3">
+</td>
+<td colspan="1">OSXSAVE
+</td>
+<td colspan="1">XSAVE
+</td>
+<td colspan="2">
+</td>
+<td colspan="1">POPCNT
+</td>
+<td colspan="1">MOVBE
+</td>
+<td colspan="1">x2APIC
+</td>
+<td colspan="1">SSE4.2
+</td>
+<td colspan="1">SSE4.1
+</td>
+<td colspan="1">DCA
+</td>
+<td colspan="2">
+</td>
+<td colspan="1">PDCM
+</td>
+<td colspan="1">xTPR
+</td>
+<td colspan="1">CX16
+</td>
+<td colspan="2">
+</td>
+<td colspan="{{{1}}}">CNXT-ID
+</td>
+<td colspan="1">SSSE3
+</td>
+<td colspan="1">TM2
+</td>
+<td colspan="1">EST
+</td>
+<td colspan="1">SMX
+</td>
+<td colspan="1">DS-CPL
+</td>
+<td colspan="1">MONITOR
+</td>
+<td colspan="1">DTES64
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">SSE3
+</td></tr></tbody></table>
 
 Dieses Register gibt erweiterte Informationen über den Prozessor:
 
@@ -391,7 +673,142 @@ Dieses Register gibt erweiterte Informationen über den Prozessor:
 | 3 | Die Befehle MONITOR und MWAIT sind verfügbar |
 | 0 | Verfügbarkeit von SSE3 |
 
-#### EDX - Featureflags
+#### EDX
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="1">PBE
+</td>
+<td colspan="1">IA64
+</td>
+<td colspan="1">TM
+</td>
+<td colspan="1">HTT
+</td>
+<td colspan="1">SS
+</td>
+<td colspan="1">SSE2
+</td>
+<td colspan="1">SSE
+</td>
+<td colspan="1">FXSR
+</td>
+<td colspan="1">MMX
+</td>
+<td colspan="1">ACPI
+</td>
+<td colspan="1">DS
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">CLFLSH
+</td>
+<td colspan="1">PSN
+</td>
+<td colspan="1">PSE-36
+</td>
+<td colspan="1">PAT
+</td>
+<td colspan="1">CMOV
+</td>
+<td colspan="1">MCA
+</td>
+<td colspan="1">PGE
+</td>
+<td colspan="1">MTRR
+</td>
+<td colspan="1">SEP
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">APIC
+</td>
+<td colspan="1">CX8
+</td>
+<td colspan="1">MCE
+</td>
+<td colspan="1">PAE
+</td>
+<td colspan="1">MSR
+</td>
+<td colspan="1">TSC
+</td>
+<td colspan="1">PSE
+</td>
+<td colspan="1">DE
+</td>
+<td colspan="1">VME
+</td>
+<td colspan="1">FPU
+</td></tr></tbody></table>
 
 Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
 
@@ -447,7 +864,7 @@ Reserviert
 
 #### ECX
 
-Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Prozessoren, bei denen das entsprechende *[Featureflag(Bit 18)](#edx---featureflags)* gesetzt ist.**
+Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Prozessoren, bei denen das entsprechende *[Featureflag(Bit 18)](#)* gesetzt ist.**
 
 #### EDX
 
@@ -560,6 +977,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5144; parent 5116; 2009-08-06T10:12:24Z -->
+<!-- MediaWiki page 1739; revision 5203; parent 5144; 2009-08-06T11:57:19Z -->
