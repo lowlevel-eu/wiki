@@ -6,7 +6,7 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 
 ## Funktionen
 
-- Liest [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), UFS, UFS2, [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), NTFS, [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), JFS, Minix, FFS, XFS
+- Liest [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), UFS, UFS2, ReiserFS, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), NTFS, [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), JFS, Minix, FFS, XFS
 - Auswahlmenü um verschiedene Betriebssysteme zu laden.
 - Bootet von Disketten, Festplatten, CDs, DVDs und Flashdisks.
 - Beinhaltet eine Shell
@@ -27,6 +27,6 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 5312; parent 5194; 2009-08-06T15:44:06Z -->
+<!-- MediaWiki page 1567; revision 5409; parent 5312; 2009-08-06T21:25:27Z -->
