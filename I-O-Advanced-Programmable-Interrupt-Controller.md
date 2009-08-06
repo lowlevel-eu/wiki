@@ -17,6 +17,6 @@ Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) u
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 5340; parent 4109; 2009-08-06T16:30:03Z -->
+<!-- MediaWiki page 1574; revision 5366; parent 5340; 2009-08-06T18:07:51Z -->
