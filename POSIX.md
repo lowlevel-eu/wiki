@@ -14,7 +14,7 @@ Die Spezifikation der Benutzer- und Software-Schnittstelle ist in vier Teile unt
 - Kommandozeileninterpreter und Hilfsprogramme (POSIX.2/IEEE 1003.1-2001): Eine Liste der Hilfsprogramme und der [Kommandozeileninterpreter](https://github.com/lowlevel-eu/wiki/wiki/Shell "Kommandozeileninterpreter")
 - Echtzeiterweiterungen (POSIX.4/IEEE 1003.1b-1993/IEEE 1003.1d-1999)
 - Thread-Erweiterungen (POSIX.4a/IEEE 1003.1c-1994)
-- System-Schnittstelle: eine Liste der C-Systemaufrufe, die unterstützt werden müssen
+- System-Schnittstelle: eine Liste der C-[Systemaufrufe](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"), die unterstützt werden müssen
 
 ## Weblinks
 
@@ -22,6 +22,6 @@ Die Spezifikation der Benutzer- und Software-Schnittstelle ist in vier Teile unt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5392/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
 
-<!-- MediaWiki page 1775; revision 4552; parent 4197; 2009-07-04T20:47:00Z -->
+<!-- MediaWiki page 1775; revision 5392; parent 4552; 2009-08-06T20:30:19Z -->
