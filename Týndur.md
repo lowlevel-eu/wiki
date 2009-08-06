@@ -37,7 +37,7 @@ Seit dem 27. Mai 2007 ist ein neuer Kernel (kernel2 genannt) in Arbeit, welcher 
 **0.1.0, Codename Morgoth**  
 Die erste Version des Community-OS. Der Feature-Freeze für die Version war am 09.04.2007, das Release erfolgte am 03.05.2007. Features waren:
 
-- Speicher&Prozessverwaltung
+- Speicher & Prozessverwaltung
 - einfache Interprozesskommunikation
 - Treiber für [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"), [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") und [Tastaturen](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC")
 - Einfache Textkonsolen
@@ -90,6 +90,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4700/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 4700; parent 4567; 2009-07-24T11:33:02Z -->
+<!-- MediaWiki page 1796; revision 5124; parent 4700; 2009-08-06T09:42:53Z -->
