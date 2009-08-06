@@ -1,6 +1,6 @@
 # Kernel
 
-Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentraler Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt. Bekannte Betriebssystemkernel sind u.a. der [Linux-Kernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") oder NTOSKRNL ([Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT Kernel).
+Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentraler Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt. Bekannte Betriebssystemkernel sind u.a. der [Linux-Kernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") oder der [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")-Kernel.
 
 ## Aufgaben eines Kernels
 
@@ -48,6 +48,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5112/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5135/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 5112; parent 4583; 2009-08-06T09:15:38Z -->
+<!-- MediaWiki page 1478; revision 5135; parent 5112; 2009-08-06T10:01:12Z -->
