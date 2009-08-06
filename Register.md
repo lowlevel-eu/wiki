@@ -96,7 +96,7 @@ Die Segmentregister geben die Basisadresse des aktuellen Segments an. Dabei steh
 - **DS** für das *Data-Segment*
 - **SS** für das *Stack-Segment*
 
-*ES*, *FS* und *GS* sind zusätzliche Daten-Segmente.
+**ES**, **FS** und **GS** sind zusätzliche Daten-Segmente.
 
 Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") auch für die Segmentierung mit Hilfe der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") verantwortlich.
 
@@ -132,11 +132,19 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 | R? |  |  |  |  |  |  |  |
 |  |  |  |  | R?D |  |  |  |
 |  |  |  |  |  |  | R?W |  |
-|  |  |  |  |  |  |  | R?L |
+|  |  |  |  |  |  |  | R?B |
 
 ? = 8, 9, 10, 11, 12, 13, 14, 15
 
-**Die ?H-Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen!**
+**Achtung!**
+
+*Die **?H**-Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen!*  
+*Die **R?B** Register heißen in manchen Compilern oder Assemblern **R?L***
+
+Die Allzweckregister können, wie ihr Name schon andeutet eigentlich für fast jeden Zweck genutzt werden. Trotzdem gibt es einige gebräuchliche Nutzungen, zum Beispiel
+
+- **RAX** : Für Rechenoperatioen, als Rückgabewert in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
+- **RCX** : Als Zähler
 
 ### Indexregister
 
@@ -150,7 +158,14 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 
 ? = D, S
 
-**Die ?IL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!**
+**Achtung!**
+
+*Die **?IL**-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!*
+
+Die Indexregister werden oft als Indexe in Datenbereichen verwendet. Dabei zeigt
+
+- **RSI** : Auf den Quelloperanden
+- **RDI** : Auf den Zieloperanden
 
 ### Zeigerregister
 
@@ -164,7 +179,14 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 
 ? = B, S
 
-**Die ?PL-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!**
+**Achtung!**
+
+*Die **?PL**-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!*
+
+Die Zeigerregister werden genutzt, um auf Stellen im Speicher zu zeigen.
+
+- **RSP** : Zeigt *immer* auf den aktuellen Stack
+- **RBP** : Wird meistens für Stackframes und lokale Variablen bei Funktionsaufrufen verwendet
 
 ### Instruktionsregister
 
@@ -175,6 +197,8 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 |  |  |  |  | EIP |  |  |  |
 |  |  |  |  |  |  | IP |  |
 
+Das Instruktionsregister **RIP** zeigt *immer* auf den nächsten auszuführenden Befehl. Es kann nicht direkt geändert werden, sondern nur über Funktion wie **jmp**, **call** oder **ret**
+
 ### Flagregister
 
 | Bytes |  |  |  |  |  |  |  |
@@ -182,6 +206,8 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | RFLAGS |  |  |  |  |  |  |  |
 |  |  |  |  | EFLAGS |  |  |  |
+
+Das Flagregister **RFLAGS** speichert einige Konfigurationsmöglichkeiten und Systemzuständen, beispielweise, ob Interrupts gerade erlaubt sind oder ob ein Übertrag bei einer Addition stattfand.
 
 ### Segmentregister
 
@@ -191,6 +217,21 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 | ?S |  |
 
 ? = C, D, E, F, G, S
+
+  
+Die Segmentregister geben die Basisadresse des aktuellen Segments an. Dabei steht
+
+- **CS** für das *Code-Segment*
+- **DS** für das *Data-Segment*
+- **SS** für das *Stack-Segment*
+
+**ES**, **FS** und **GS** sind zusätzliche Daten-Segmente.
+
+Die Segmentregister sind im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") auch für die Segmentierung mit Hilfe der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") verantwortlich.
+
+**Achtung!**
+
+Im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") werden viele Bits der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")-Einträge **ignoriert**!
 
 ### SSE-Register
 
@@ -430,6 +471,6 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 4924; parent 4902; 2009-07-31T11:36:34Z -->
+<!-- MediaWiki page 1881; revision 5098; parent 4924; 2009-08-06T08:45:21Z -->
