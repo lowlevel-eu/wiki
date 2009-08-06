@@ -4,7 +4,7 @@ Eine Race Condition (auf Deutsch "kritischer Wettlauf", wörtlich "Wettlaufsitua
 
 ## Beispiel
 
-Wie könnte eine Race Condition aussehen? Meistens handelt es sich um zwei Prozesse, die die gleiche Funktion ausführen. Nehmen wir also eine hypothetische Funktion namens I_want_the_printer_now(), die den Drucker für den aktuellen Prozess reserviert, damit kein anderer Prozess darauf zugreifen kann. Außerdem gibt es eine Funktion, die den Drucker wieder freigibt, release_printer(). Der Code könnte zum Beispiel so aussehen: \<c\>static int printer_reserved = 0;
+Wie könnte eine Race Condition aussehen? Meistens handelt es sich um zwei [Prozesse](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess"), die die gleiche Funktion ausführen. Nehmen wir also eine hypothetische Funktion namens I_want_the_printer_now(), die den Drucker für den aktuellen Prozess reserviert, damit kein anderer Prozess darauf zugreifen kann. Außerdem gibt es eine Funktion, die den Drucker wieder freigibt, release_printer(). Der Code könnte zum Beispiel so aussehen: \<c\>static int printer_reserved = 0;
 
 void I_want_the_printer_now() {
 
@@ -68,6 +68,6 @@ Das Problem ist klar: Prozess A hat die Überprüfung nicht korrekt durchgesetzt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5399/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5400/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
 
-<!-- MediaWiki page 2013; revision 5399; parent 0; 2009-08-06T21:09:12Z -->
+<!-- MediaWiki page 2013; revision 5400; parent 5399; 2009-08-06T21:09:48Z -->
