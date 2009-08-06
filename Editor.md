@@ -6,7 +6,7 @@ Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei [Windows
 
 Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Syntax-Highlighting, andere lassen sich durch verschiedenste Plugins und Einstellungsmöglichkeiten mit einer leichtgewichtigen IDE vergleichen. Dieser Artikel listet verschiedene Texteditoren auf.
 
-## [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
+## Linux
 
 - [Kate](http://kate-editor.org/) ist ein komfortabler Editor, der bei KDE mitgeliefert wird.
 
@@ -52,6 +52,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5173/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 5173; parent 4892; 2009-08-06T11:23:09Z -->
+<!-- MediaWiki page 1908; revision 5175; parent 5173; 2009-08-06T11:24:59Z -->
