@@ -1924,9 +1924,7 @@ Erweiterte Funktionen von Intel:
 <td colspan="1">LahfSahf
 </td></tr></tbody></table>
 
-**Hinweis:**
-
-Hier fehlt eine Erklärung!
+Vorlage:Hinweiss
 
 #### EDX - Erweiterte Featureflags
 
@@ -2063,9 +2061,7 @@ Hier fehlt eine Erklärung!
 <td colspan="1">FPU
 </td></tr></tbody></table>
 
-**Hinweis:**
-
-Hier fehlt eine Erklärung!
+Vorlage:Hinweiss
 
 ## Funktion 0x8000_0002
 
@@ -2998,6 +2994,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5357; parent 5348; 2009-08-06T17:53:48Z -->
+<!-- MediaWiki page 1739; revision 5359; parent 5357; 2009-08-06T17:54:14Z -->
