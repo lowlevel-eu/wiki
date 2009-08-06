@@ -6,13 +6,13 @@ Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1
 
 Um einen Cross-Compiler zu bauen, werden die üblichen GNU-Tools benötigt. Dazu gehören binutils, [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und [make](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Make").
 
-### [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
+### Linux
 
-Auf vielen Linux-Distributionen sind diese Programme standardmäßig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere Debianderivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev und texinfo).
+Auf vielen [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")-Distributionen sind diese Programme standardmäßig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere Debianderivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev und texinfo).
 
-### [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
+### Windows
 
-Wer Windows einsetzt, hat grundsätzlich zwei Möglichkeiten an diese Tools zu kommen. Entweder [Cygwin](http://www.cygwin.com/) ([Direktlink zum Installer](http://www.cygwin.com/setup.exe)) oder [mingw](http://www.mingw.org/)
+Wer [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") einsetzt, hat grundsätzlich zwei Möglichkeiten an diese Tools zu kommen. Entweder [Cygwin](http://www.cygwin.com/) ([Direktlink zum Installer](http://www.cygwin.com/setup.exe)) oder [mingw](http://www.mingw.org/)
 
 #### Cygwin
 
@@ -115,6 +115,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5177/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 5163; parent 5014; 2009-08-06T11:14:05Z -->
+<!-- MediaWiki page 1628; revision 5177; parent 5163; 2009-08-06T11:26:53Z -->
