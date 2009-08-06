@@ -19,33 +19,33 @@ Der **CPUID**-Befehl liefert, sofern er denn von der CPU unterstützt wird, Info
 
 ## Wie man CPUID benutzt
 
-Bevor man munter versucht, mit dem CPUID Befehl Informationen auszulesen, sollte man ersteinmal prüfen, ob die CPU den Befehl überhaupt unterstützt. Dazu testet man, ob das ID-Flag gesetzt und gelöscht werden kann.
+Bevor man munter versucht, mit dem CPUID-Befehl Informationen auszulesen, sollte man ersteinmal prüfen, ob die CPU den Befehl überhaupt unterstützt. Dazu testet man, ob das ID-Flag gesetzt und gelöscht werden kann.
 
-Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pushfd  ; Sichere Flags pop ecx  ; Lade Flags in EXC mov eax, ecx  ; Schiebe Flags in EAX xor eax, 0x200000  ; Vertausche das ID-Flag push eax  ; Sichere neue Flags popfd  ; Lade neue Flags in EFLAGS
+Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pushfd  ; Sichere Flags pop ecx  ; Lade Flags in ECX mov eax, ecx  ; Schiebe Flags in EAX xor eax, 0x200000  ; Vertausche das ID-Flag push eax  ; Sichere neue Flags popfd  ; Lade neue Flags in EFLAGS
 
                           ; Wenn CPUID unterstützt wird, wird das geänderte ID-Flag übernommen
                           ; Ansonsten wird bleibt das alte ID-Flag bestehen
 
-pushfd  ; Sichere Flags pop eax  ; Lade Flags in EAX xor eax, ecx  ; Vergleiche EAX und ECX popfd  ; Stelle Original Flags wieder her je cpuid_unsupported  ; EAX und ECX sind gleich, CPUID wird nicht unterstütz! jmp cpu_supported  ; EAX und ECX sind verschieden, CPUID wird unterstützt! \</asm\>
+pushfd  ; Sichere Flags pop eax  ; Lade Flags in EAX xor eax, ecx  ; Vergleiche EAX und ECX popfd  ; Stelle Original Flags wieder her je cpuid_unsupported  ; EAX und ECX sind gleich, CPUID wird nicht unterstützt! jmp cpu_supported  ; EAX und ECX sind verschieden, CPUID wird unterstützt! \</asm\>
 
-Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl **CPUID**. Die Funktionsnummer der CPUID-Funktion wird dabei im **EAX**-Register übergeben. Die Rückgabewerte werden in den Registern **EAX**, **EBX**, **EDX** und **ECX** abgelegt.
+Um den CPUID-Befehl auszuführen, verwendet man einfach den Assemblerbefehl **CPUID**. Die Funktionsnummer der CPUID-Funktion wird dabei im **EAX**-Register übergeben. Die Rückgabewerte werden in den Registern **EAX**, **EBX**, **EDX** und **ECX** abgelegt.
 
-Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, auszulesen, ruft man CPUID mit der Funktionsnummer 0x00000000 auf. \<asm\> mov eax, 0x00000000  ; xor eax, eax bewirkt das selbe und ist schneller cpuid  ; Der Vendor-ID-String befindet sich nun in (in dieser Reihenfolge), EBX, EDX, ECX \</asm\> Ein **AMD**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Auth**", **EDX**="**enti**", **ECX**="**cAMD**"  
-Ein **Intel**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Genu**", **EDX**="**ineI**", **ECX**="**ntel**"
+Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, auszulesen, ruft man CPUID mit der Funktionsnummer 0x00000000 auf. \<asm\> mov eax, 0x00000000  ; xor eax, eax bewirkt das selbe und ist schneller cpuid  ; Der Vendor-ID-String befindet sich nun in (in dieser Reihenfolge), EBX, EDX, ECX \</asm\> Ein **AMD**-Prozessor hätte jetzt folgende Registerwerte: **EBX**="**Auth**", **EDX**="**enti**", **ECX**="**cAMD**"  
+Ein **Intel**-Prozessor hätte jetzt folgende Registerwerte: **EBX**="**Genu**", **EDX**="**ineI**", **ECX**="**ntel**"
 
-# Standard Funktionen
+# Standardfunktionen
 
-Die Standard Funktionsnummern beginnen bei 0. Der größtmögliche Funktionsnummer, die von der jeweiligen CPU unterstützt wird befindet sich nach dem Aufruf von Funktion 0 im *EAX*-Register. Die Standard Funktionen sind nicht Hersteller spezifisch, sondern sollen für alle CPUs gleich sein.
+Die Standardfunktionsnummern beginnen bei 0. Die größtmögliche Funktionsnummer, die von der jeweiligen CPU unterstützt wird, befindet sich nach dem Aufruf von Funktion 0 im *EAX*-Register. Die Standardfunktionen sind nicht herstellerspezifisch, sondern sollen für alle CPUs gleich sein.
 
 ## Funktion 0x0000_0000
 
-CPUID-Funktion Nr. 0x00 gibt höchste vom Prozessor unterstützte Funktionsnummer im **EAX**-Register und die [Vendor-ID](https://github.com/lowlevel-eu/wiki/wiki/CPUID#vendor-id-strings "CPUID") in den Registern **EBX**, **EDX** und **ECX**(in dieser Reihenfolge) an.
+CPUID-Funktion Nr. 0x00 gibt die höchste vom Prozessor unterstützte Funktionsnummer im **EAX**-Register und die [Vendor-ID](https://github.com/lowlevel-eu/wiki/wiki/CPUID#vendor-id-strings "CPUID") in den Registern **EBX**, **EDX** und **ECX**(in dieser Reihenfolge) zurück.
 
 **Achtung!**
 
 Der String ist nicht nullterminiert!
 
-#### EAX - Höchste Standard-Funktion
+#### EAX - Höchste Standardfunktion
 
 <table>
 <tbody><tr>
@@ -117,7 +117,7 @@ Der String ist nicht nullterminiert!
 <th>0
 </th></tr>
 <tr>
-<td colspan="32">Höchste, unterstützte Standard-Funktion
+<td colspan="32">Höchste unterstützte Standardfunktion
 </td></tr></tbody></table>
 
 #### EBX - Vendor
@@ -530,7 +530,7 @@ Eine Liste der möglichen Vendor-ID-Strings
 </td>
 <td colspan="8">Anzahl logischer Prozessoren
 </td>
-<td colspan="8">CLFLUSH Size
+<td colspan="8">CLFLUSH-Size
 </td>
 <td colspan="8">Brand ID
 </td></tr></tbody></table>
@@ -539,11 +539,11 @@ Eine Liste der möglichen Vendor-ID-Strings
 
 **APIC ID** ist nur gültig wenn das **[APIC-Flag](#edx---featureflags)** gesetzt ist.  
 Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Flag](#edx---featureflags)** gültig.  
-**CLFLUSH Size** gibt die Größe einer Cache line in 8 Byte Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#edx---featureflags)**.
+**CLFLUSH-Size** gibt die Größe einer Cache line in 8-Byte-Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#edx---featureflags)**.
 
 #### ECX - Featureflags
 
-Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
+Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entsprechende Feature unterstützt.
 
 <table>
 <tbody><tr>
@@ -783,7 +783,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 <tr>
 <th colspan="1">7
 </th>
-<td colspan="1">Unterstützt Enhanced Intel SpeedStep und implementiert das <b>IA32_PERF_STS</b> Register und das <b>IA32_PERF_CTL</b> Register
+<td colspan="1">Unterstützt Enhanced Intel SpeedStep und implementiert das <b>IA32_PERF_STS</b>-Register und das <b>IA32_PERF_CTL</b>-Register
 </td></tr>
 <tr>
 <th colspan="1">6
@@ -798,7 +798,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 <tr>
 <th colspan="1">4
 </th>
-<td colspan="1">Unterstützt die Erweiterungen des Debug Speicher Features um durch CPL qualifizierten Branch Message Speicher zu nutzen
+<td colspan="1">Unterstützt die Erweiterungen des Debug-Speicher-Features um durch CPL qualifizierten Branch-Message-Speicher zu nutzen
 </td></tr>
 <tr>
 <th colspan="1">3
@@ -808,7 +808,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 <tr>
 <th colspan="1">2
 </th>
-<td colspan="1">Kann den Verlauf der 64-Bit Branch in/von Adressen in einen Buffer schreiben
+<td colspan="1">Kann den Verlauf der 64-Bit-Branch in/von Adressen in einen Buffer schreiben
 </td></tr>
 <tr>
 <th colspan="1">1
@@ -823,7 +823,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 
 #### EDX - Featureflags
 
-Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
+Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entsprechende Feature unterstützt.
 
 <table>
 <tbody><tr>
@@ -972,17 +972,17 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 | 24 | Unterstützt die **FXSAVE** und **FXRSTOR** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
 | 23 | Unterstützt [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") |
 | 22 | Unterstützt Überwachung der Prozessortemperatur und Änderung des Prozessortaktes |
-| 21 | Kann Debug Informationen in im Hauptspeicher präsente Buffer schreiben |
+| 21 | Kann Debuginformationen in im Hauptspeicher vorhandene Buffer schreiben |
 | 20 |  |
-| 19 | Unterstützt den **CLFLUSH** Befehl |
+| 19 | Unterstützt den **CLFLUSH**-Befehl |
 | 18 | Besitzt eine 96-Bit Prozessor-Seriennummer (Nur verfügbar auf Prozessoren, die neuer als Pentium 4 sind) |
 | 17 | Unterstützt [36-Bit Page Size Extensions](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension") (4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) |
 | 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
-| 15 | Unterstützt den **CMOVcc** Befehl, mit dem Bedingte Verschiebungen vorgenommen werden können |
-| 14 | Unterstützt die Machine-Check Architektur (Besonders das **MTRR_CAP**-Register) |
+| 15 | Unterstützt den **CMOVcc** Befehl, mit dem bedingte Verschiebungen vorgenommen werden können |
+| 14 | Unterstützt die Machine-Check-Architektur (Besonders das **MTRR_CAP**-Register) |
 | 13 | Unterstützt das [Page-Global-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 12 | Unterstützt MTRR-Register (Besonders das **MTRR_CAP**-Register) |
-| 11 | Unterstützt schnelle [Systemcalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemcall") durch die Befehle **SYSENTER** und **SYSEXIT** |
+| 11 | Unterstützt schnelle [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") durch die Befehle **SYSENTER** und **SYSEXIT** |
 | 10 |  |
 | 9 | Besitzt einen lokalen [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") |
 | 8 | Unterstützt den **CMPXCHG8B** Befehl |
@@ -997,11 +997,11 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 
 ## EAX = 0x00000002
 
-Wenn in EAX statt Null Zwei steht, dann werden bei Intelprozessoren Informationen über den Cache und die TLB-Deskriptoren ausgegeben.
+Wenn in EAX statt null zwei steht, dann werden bei Intelprozessoren Informationen über den Cache und die TLB-Deskriptoren ausgegeben.
 
 ## EAX = 0x00000003
 
-Wenn in EAX statt Null Drei steht, wird bei Intelprozessoren stattdessen folgendes ausgegeben:
+Wenn in EAX statt null drei steht, wird bei Intelprozessoren stattdessen folgendes ausgegeben:
 
 #### EAX
 
@@ -1021,7 +1021,7 @@ Die Bits 63 bis 32 der Prozessor-ID sind darin hinterlegt. *(siehe oben)*
 
 # Erweiterte Funktionen
 
-Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur für Intel- bzw. nur für AMD Prozessoren. Solche Befehle sollte man nicht ausführen, wenn man nicht weiß von welchem Hersteller die CPU ist! Zum Beispiel sollten CPUID-Befehle, die nur für Intel-CPUs gelten, nicht auf einer AMD-CPU ausgeführt werden. Diese Funktionen beginnen bei 0x80000000.
+Es gibt Funktionen, die herstellerspezifisch sind, d.h. sie gelten nur nur für Intel- bzw. nur für AMD-Prozessoren. Solche Befehle sollte man nicht ausführen, wenn man nicht weiß, von welchem Hersteller die CPU ist! Zum Beispiel sollten CPUID-Befehle, die nur für Intel-CPUs gelten, nicht auf einer AMD-CPU ausgeführt werden. Diese Funktionen beginnen bei 0x80000000.
 
 Erweiterte Funktionen von Intel:
 
@@ -1126,6 +1126,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5242; parent 5241; 2009-08-06T14:44:00Z -->
+<!-- MediaWiki page 1739; revision 5244; parent 5242; 2009-08-06T15:03:51Z -->
