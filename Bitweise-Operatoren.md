@@ -10,9 +10,9 @@ Der **NOT**-Operator ist ein unärer Operator, d. h. er arbeitet mit nur einem 
 
     NOT ( 11011010b ) = 00100101b
 
-C-Code: \<c\>int a = ~0xda; // a = 0x25\</c\>
+[C](https://github.com/lowlevel-eu/wiki/wiki/C "C")-Code: \<c\>int a = ~0xda; // a = 0x25\</c\>
 
-ASM-Code: \<asm\>mov al, 11011010b not al  ; al = 00100101b\</asm\>
+[ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")-Code: \<asm\>mov al, 11011010b not al  ; al = 00100101b\</asm\>
 
 ### AND
 
@@ -67,7 +67,7 @@ ASM-Code \<asm\>mov al, 11001100b xor al, 01100110b  ; al = 10101010b\</asm\>
 
 ## Anwendung
 
-Besonders bei hardwarenaher Programmierung kann man auf die Bit-Operatoren kaum verzichten. Sie sind nötig, da in Hardware einzelnen Bits oft dazu dienen einen Zustand der Hardware wiederzuspiegeln: Sie dienen als Flags. Da Software über die CPU aber immer nur auf Bytes zugreifen kann, und so den Zustand einzelner Bits nicht überprüfen kann verwendet man die Bit-Operatoren, um z. B. irrelevante Bits zu löschen oder bestimmte Bits zu setzen ohne den Zustand der anderen Bits zu beeinflussen.
+Besonders bei hardwarenaher Programmierung kann man auf die Bit-Operatoren kaum verzichten. Sie sind nötig, da in [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") einzelnen Bits oft dazu dienen einen Zustand der Hardware wiederzuspiegeln: Sie dienen als Flags. Da Software über die CPU aber immer nur auf Bytes zugreifen kann, und so den Zustand einzelner Bits nicht überprüfen kann verwendet man die Bit-Operatoren, um z. B. irrelevante Bits zu löschen oder bestimmte Bits zu setzen ohne den Zustand der anderen Bits zu beeinflussen.
 
 ### Bits-Löschen
 
@@ -95,6 +95,6 @@ Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdin
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4872/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 4872; parent 3522; 2009-07-30T14:15:46Z -->
+<!-- MediaWiki page 1757; revision 5157; parent 4872; 2009-08-06T11:03:33Z -->
