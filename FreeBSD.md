@@ -8,11 +8,11 @@ FreeBSD ist vor allem bei Internet-Providern weit verbreitet. So setzt auch das 
 
 ## Features
 
-Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt es schon die Version 5.3, welche sehr viel Funktionen hat, die ich jetzt nicht alle aufzählen will. Nähere Informationen bekommt man auf der Homepage. Das OS läuft auf neun verschiedenen Plattformen:
+Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt es schon die Version 5.3, welche sehr viel Funktionen hat, die ich jetzt nicht alle aufzählen will. Nähere Informationen bekommt man auf der Homepage. Das [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") läuft auf neun verschiedenen Plattformen:
 
 - alpha
-- amd64
-- i386
+- [amd64](https://lowlevel-eu.github.io/wiki/pages/1913/index.html "Kategorie:X86-64")
+- [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
 - ia64
 - pc98
 - sparc64
@@ -20,7 +20,7 @@ Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt 
 - ppc
 - ARM
 
-FreeBSD besitzt heute schon Funktionen im Bereich Netzwerk, Leistungsfähigkeit, Sicherheit und Kompatibilität, die andere Systeme, auch kommerzielle, nicht besitzen. So kann man zum Beispiel durch Kompatibilitäts-Module Programme von anderen Systemen, wie zum Beispiel Linux, SCO UNIX und System V Release 4, auf FreeBSD laufen lassen. Aber auch für die Sicherheit im Netzwerk ist gesorgt, da IPsec und IPv6 unterstützt werden.
+FreeBSD besitzt heute schon Funktionen im Bereich Netzwerk, Leistungsfähigkeit, Sicherheit und Kompatibilität, die andere Systeme, auch kommerzielle, nicht besitzen. So kann man zum Beispiel durch Kompatibilitäts-Module Programme von anderen Systemen, wie zum Beispiel [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), SCO UNIX und System V Release 4, auf FreeBSD laufen lassen. Aber auch für die Sicherheit im Netzwerk ist gesorgt, da IPsec und IPv6 unterstützt werden.
 
 Da unter FreeBSD viele Anwendungen laufen, ist es eine gute Alternative zu kommerziellen UNIX® Workstations und kann sowohl für Arbeitsplätze wie auch als Server benutzt werden.
 
@@ -38,6 +38,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf <http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
 
-<!-- MediaWiki page 1455; revision 4821; parent 2838; 2009-07-30T01:17:56Z -->
+<!-- MediaWiki page 1455; revision 5193; parent 4821; 2009-08-06T11:46:46Z -->
