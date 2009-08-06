@@ -1,6 +1,10 @@
 # Parallele Schnittstelle
 
-Die **parallele Schnitstelle** (nach früheren Spezifikationen auch Centronics) ist eine Schnitstelle am PC zur Übertragung von Daten an Peripheriegeräte.
+**Achtung!**
+
+Dieser Artikel wird gerade bearbeitet, bitte **keine** Änderungen vornehmen! ~[Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 19:40, 6. Aug. 2009 (CEST)
+
+Die **parallele Schnitstelle** ist eine Schnitstelle am PC zur Übertragung von Daten an Peripheriegeräte.
 
   
 
@@ -33,17 +37,7 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | \- | 15, 16 | GND oder NC | \- | Masse oder nicht benutzt |
 | \- | 17 | Chassis-GND | \- | Gehäuse-Masse |
 
-Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommunizieren. Nachfolgender Codeausschnitt testen das zum PC gesendete Status-Byte des Druckers per BIOS-Interrupt:
-
-` mov ah, 02h xor dx, dx int 17h `
-
-`test ah, 10000000b ; Bit 7 -> Drucker bereit? je error `
-
-`test ah, 00100000b ; Bit 5 -> Kein Papier mehr? jne error `
-
-`error: `
-
-       jmp error
+Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommunizieren.
 
   
 
@@ -70,8 +64,46 @@ Das Statusregister hat gegenüber der Basisadresse einen Offset von 1 und das St
 
 In das Datenregister werden die zu sendenden Daten geschrieben. Wird eine Centronics-Schnitstelle verwendet, können Daten auch empfangen werden, welche sich dann ebenfalls im Datenregister befinden.
 
+Die Datenregister sind D0 bis D7 und werden auf den Leitungen von D1 bis D8 übertragen.
+
+  
+
+### Statusregister
+
+Vom Statusregister aus kann nur gelesen werden. Dort wird der Zustand der Peripherie gespeichert.
+
+Die Statusregister sind D0 bis D7. Nachfolgen ein kleines Programm, um die Bits zu testen:
+
+` mov ah, 02h xor dx, dx int 17h `
+
+`test ah, 10000000b ; Bit 7 -> Drucker bereit? je error `
+
+`test ah, 00100000b ; Bit 5 -> Kein Papier mehr? jne error `
+
+`error: `
+
+       jmp error
+
+  
+
+### Steuerregister
+
+Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das 4. Bit gesetzt, wird ein Interrupt ausgelöst. Wird das 5. Bit gesetzt, ist eine Art bidirektionaler Übertragung möglich.
+
+  
+
+## Sicher auch
+
+- [Serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle")
+
+  
+
+## Weblinks
+
+- [IEEE_1284-Spezifikation](http://de.wikipedia.org/wiki/IEEE_1284)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5349/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5349; parent 0; 2009-08-06T17:25:06Z -->
+<!-- MediaWiki page 1996; revision 5352; parent 5349; 2009-08-06T17:40:44Z -->
