@@ -2,7 +2,7 @@
 
 **Achtung!**
 
-Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! (Der Artikel könnte zwischenzeitlich ein wenig komisch anmuten ;-) ~[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
+Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! (Der Artikel könnte zwischenzeitlich ein wenig komisch anmuten ;-) ~[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST) Zur Zeit können Änderungen vorgenommen werden! ~ [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 16:44, 6. Aug. 2009 (CEST)
 
 Vorlage:Hinweiss
 
@@ -1126,6 +1126,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5241; parent 5238; 2009-08-06T14:37:51Z -->
+<!-- MediaWiki page 1739; revision 5242; parent 5241; 2009-08-06T14:44:00Z -->
