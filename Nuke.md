@@ -34,6 +34,7 @@ Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, 
 ## Geplante Features
 
 - *NukeFS*
+- *Initial Ramdisk*
 - *AVOP* (Interpreter-Sprache)
 - *HAL-Lib*
 - *angepasstes Tastatur-Layout*
@@ -44,7 +45,12 @@ Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, 
 
 Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 0x127 - 0x12B ausgelesen werden. (Nur für andere OS wichtig :D)
 
-  
+Ver **00004**
+
+- Rudimentäre Speicherverwaltung
+- Rudimentäres Paging
+- Multitasking
+
 Ver **00003**
 
 - IDT & GDT für Long Mode
@@ -72,6 +78,6 @@ Ver **00000**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5288/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 5288; parent 4614; 2009-08-06T15:31:04Z -->
+<!-- MediaWiki page 1750; revision 5387; parent 5288; 2009-08-06T19:49:33Z -->
