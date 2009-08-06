@@ -3,13 +3,13 @@
 FiKe ist ein monolithischer Kernel mit integrierter Shell. FiKe steht dabei für First Kernel und meint damit meinen ersten Kernel.
 
 | FiKe |  |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 |  |  |
 | Entwickler: | Be59 |
 | Akt. Version: | Build 1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | x86 |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | In Planung |
@@ -30,6 +30,6 @@ FiKe kann keine Module laden und besitzt nur einen einzigen Treiber, der des Key
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
 
-<!-- MediaWiki page 1762; revision 3970; parent 3961; 2009-01-26T20:11:49Z -->
+<!-- MediaWiki page 1762; revision 5277; parent 3970; 2009-08-06T15:28:02Z -->
