@@ -10,7 +10,6 @@
 | Beispielkernel in der Sprache: | [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") |
 | Homepage |  |
 
-  
 C ist eine bekannte, ältere Programmiersprache. Sie verfolgt das Ziel, bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
 
 ## Kernelprogrammierung mit C
@@ -84,6 +83,6 @@ Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 5139; parent 4858; 2009-08-06T10:03:07Z -->
+<!-- MediaWiki page 1526; revision 5140; parent 5139; 2009-08-06T10:03:23Z -->
