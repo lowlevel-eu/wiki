@@ -17,7 +17,7 @@
 
 <http://www.kernel.org>
 
-Linux ist ein freies Betriebsystem und steht in Konkurrenz zu [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") .
+Linux ist ein freies Betriebsystem.
 
 ## Die Entstehung
 
@@ -37,6 +37,6 @@ Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5371/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 5300; parent 5279; 2009-08-06T15:34:12Z -->
+<!-- MediaWiki page 1641; revision 5371; parent 5300; 2009-08-06T18:47:50Z -->
