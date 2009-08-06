@@ -28,7 +28,7 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 - CD-ROM Laufwerk
 - Festplatte
 - Diskettenlaufwerk
-- Soundblaster 16
+- [Soundblaster 16](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")
 - eingeschränkte Unterstützung für eine Cirrus CLGD 5446 PCI VGA-Karte
 - eingeschränkte Unterstützung von [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")
 
@@ -42,6 +42,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5017/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 5017; parent 4441; 2009-08-01T18:56:06Z -->
+<!-- MediaWiki page 1538; revision 5318; parent 5017; 2009-08-06T15:49:08Z -->
