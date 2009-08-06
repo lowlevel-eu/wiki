@@ -22,27 +22,333 @@ Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl **c
 Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, auszulesen, ruft man CPUID mit der Funktionsnummer 0x00000000 auf. \<asm\> mov eax, 0x00000000  ; xor eax, eax bewirkt das selbe und ist schneller cpuid  ; Der Vendor-ID-String befindet sich nun in (in dieser Reihenfolge), EBX, EDX, ECX \</asm\> Ein **AMD**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Auth**", **EDX**="**enti**", **ECX**="**cAMD**"  
 Ein **Intel**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Genu**", **EDX**="**ineI**", **ECX**="**ntel**"
 
-## Standard Funktionen
+# Standard Funktionen
 
-Die Standard Funktionsnummern beginnen bei 0. Der größtmögliche Funktionsnummer, die von der jeweiligen CPU unterstützt wird befindet sich nach dem Aufruf von *Function 0* im *EAX*-Register. Die Standard Funktionen sind nicht Hersteller spezifisch, sondern sollen für alle CPUs gleich sein.
+Die Standard Funktionsnummern beginnen bei 0. Der größtmögliche Funktionsnummer, die von der jeweiligen CPU unterstützt wird befindet sich nach dem Aufruf von Funktion 0 im *EAX*-Register. Die Standard Funktionen sind nicht Hersteller spezifisch, sondern sollen für alle CPUs gleich sein.
 
-### EAX = 0x00000000
+## Funktion 0x0000_0000
 
-CPUID-Funktion Nr. 0x00 gibt wie bereits genannt die größte vom Prozessor unterstützte Funktionsnummer im *EAX*-Register und die Vendor-ID in den Registern *EBX*, *EDX* und *ECX*(in dieser Reihenfolge) an. **Achtung: Der String ist nicht nullterminiert!**
+CPUID-Funktion Nr. 0x00 gibt höchste vom Prozessor unterstützte Funktionsnummer im **EAX**-Register und die [Vendor-ID](https://github.com/lowlevel-eu/wiki/wiki/CPUID#vendor-id-strings "CPUID") in den Registern **EBX**, **EDX** und **ECX**(in dieser Reihenfolge) an.
 
-#### Vendor-ID der einzelnen Hersteller
+**Achtung!**
 
-- AMD: "AuthenticAMD"
-- Intel: "GenuineIntel"
-- VIA: "CentaurHauls"
-- Transmeta: "GenuineTMx86"
-- Cyrix: "CyrixInstead"
-- Centaur: "CentaurHauls"
-- NexGen: "NexGenDriven"
-- UMC: "UMC UMC UMC "
-- SiS: "SiS SiS SiS "
-- NSC: "Geode by NSC"
-- Rise: "RiseRiseRise"
+Der String ist nicht nullterminiert!
+
+#### EAX
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Höchste, unterstützte Standard-Funktion
+</td></tr></tbody></table>
+
+#### EBX
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Bytes 0 - 3 des Vendor-ID-Strings
+</td></tr></tbody></table>
+
+#### ECX
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Bytes 8 - 11 des Vendor-ID-Strings
+</td></tr></tbody></table>
+
+#### EDX
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Bytes 4 - 7 des Vendor ID-Strings
+</td></tr></tbody></table>
+
+#### Vendor-ID-Strings
+
+| Vendor-ID-String | Hersteller |
+| ------------------ | ------------------------ |
+| "AuthenticAMD" | AMD |
+| "CentaurHauls" | Centaur |
+| "CyrixInstead" | Cyrix |
+| "GenuineIntel" | Intel |
+| "NexGenDriven" | NexGen |
+| "Geode by NSC" | National Semiconductor |
+| "RiseRiseRise" | Rise |
+| "SiS SiS SiS " | SiS |
+| "GenuineTMx86" | Transmeta |
+| "UMC UMC UMC " | UMC |
+| "VIA VIA VIA " | VIA |
 
 ### EAX = 0x00000001
 
@@ -254,6 +560,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5116; parent 5106; 2009-08-06T09:31:44Z -->
+<!-- MediaWiki page 1739; revision 5144; parent 5116; 2009-08-06T10:12:24Z -->
