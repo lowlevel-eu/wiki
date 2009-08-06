@@ -24,7 +24,7 @@ Der Begriff **shared-Memory** bezeichnet einen Speicherbereich, welcher in mehre
 
 ## Pipes
 
-Es gibt 2 Arten Pipes:  
+(Hauptseite: [Pipe](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe")) Es gibt 2 Arten Pipes:  
 
 - **Unbenannte:** Unbenannte Pipes werden normalerweise zur Kommunikation von Vater- zu Kind-Prozess genutzt. Dabei werden die Daten, die von dem Kind-Prozess auf die Ausgabe geschrieben werden, von dem Vater-Prozess als Eingabe gelesen.
 - **Benannte:** Benannte Pipes sind ein Dateityp. Sie können mittels Fileopen/Fileclose geöffnet und geschlossen werden und mit Fileread/Filewrite kann von ihnen gelesen werden, bzw. auf sie geschrieben werden.
@@ -43,6 +43,6 @@ Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5346/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 4093; parent 4087; 2009-02-26T20:37:17Z -->
+<!-- MediaWiki page 1530; revision 5346; parent 4093; 2009-08-06T17:18:55Z -->
