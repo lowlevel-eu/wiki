@@ -810,6 +810,41 @@ Dieses Register gibt erweiterte Informationen über den Prozessor:
 <td colspan="1">FPU
 </td></tr></tbody></table>
 
+| Bit | Funktion |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 31 | Unterstützt die Benutzung des FERR#-Pins und des PBE#-Pins um dem Prozessor im Stop Clock State (STPCLK#) zu signalisieren, dass er einen wartenden Interrupt bearbeiten und dann zur normalen Ausführung zurückkehren soll. |
+| 30 | Gehört zur Intel Intanium Familie und läuft gerade im IA32-Emulationsmodus |
+| 29 | Implementiert den "Thermal Monitor aumatic thermal control circuitry" (TCC) |
+| 28 | Kann mehr als einen logischen Prozessor verwalten |
+| 27 | Unterstützt die Verwaltung von miteinander in Konflikt stehenden Speichertypen |
+| 26 | Unterstützt SSE2 |
+| 25 | Unterstütz [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") |
+| 24 | Unterstützt die **fxsave** und **fxstor** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
+| 23 | Unterstützt [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") |
+| 22 | Unterstützt Überwachung der Prozessortemperatur und Änderung des Prozessortaktes |
+| 21 | Kann Debug Informationen in im Hauptspeicher präsente Buffer schreiben |
+| 20 |  |
+| 19 | Unterstützt den **clflush** Befehl |
+| 18 | Besitzt eine 96-Bit Prozessor-Seriennummer (Nur verfügbar auf Prozessoren, die neuer als Pentium 4 sind) |
+| 17 | Unterstützt [36-Bit Page Size Extensions](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension") (4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) |
+| 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
+| 15 | Unterstützt den **cmov** |
+| 14 |  |
+| 13 |  |
+| 12 |  |
+| 11 |  |
+| 10 |  |
+| 9 |  |
+| 8 |  |
+| 7 |  |
+| 6 |  |
+| 5 |  |
+| 4 |  |
+| 3 |  |
+| 2 |  |
+| 1 |  |
+| 0 |  |
+
 Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
 
 | Bit | Funktion |
@@ -977,6 +1012,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5203; parent 5144; 2009-08-06T11:57:19Z -->
+<!-- MediaWiki page 1739; revision 5233; parent 5203; 2009-08-06T13:12:45Z -->
