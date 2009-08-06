@@ -65,7 +65,7 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 - Einfache StdCLib (myxlib) mit etwas [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX")
 - Dateisystem: SMXFFS (Small MyXomycota Floppy FS), experimentell FAT32 (beide read-only); MRFS als VFS
 - [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treiber (zumindest ICH)
-- Paging (2 GB pro Prozess)
+- [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") (2 GB pro Prozess)
 - [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Programme
 - [Netzwerkstack](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk"): [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), [ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "Address Resolution Protocol"), [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol"), UDP, TCP
 - CDI-Interfaces: core, fs, net, storage
@@ -124,6 +124,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5287/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 5287; parent 5283; 2009-08-06T15:31:02Z -->
+<!-- MediaWiki page 1861; revision 5290; parent 5287; 2009-08-06T15:31:49Z -->
