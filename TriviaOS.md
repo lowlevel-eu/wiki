@@ -7,7 +7,7 @@
 | Akt. Version: | momentan keine |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | momentan keine |
 | OS-Eigenschaften |  |
-| Plattform: | x86 |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler |
 | API: | Zugriff auf laufenden Module |
@@ -71,6 +71,6 @@ Das nächste Release wird in etwa die folgenden Features beinhalten:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 3426; parent 3199; 2008-10-22T15:34:11Z -->
+<!-- MediaWiki page 1448; revision 5296; parent 3426; 2009-08-06T15:33:03Z -->
