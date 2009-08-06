@@ -535,11 +535,11 @@ Der String ist nicht nullterminiert!
 
 **Achtung!**
 
-**APIC ID** ist nur gültig wenn das **[APIC-Flag](#edx-1)** gesetzt ist.  
-Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Flag](#edx-1)** gültig.  
-**CLFLUSH Size** gibt die Größe einer Cache line in 8 Byte Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#edx-1)**.
+**APIC ID** ist nur gültig wenn das **[APIC-Flag](#edx---featureflags)** gesetzt ist.  
+Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Flag](#edx---featureflags)** gültig.  
+**CLFLUSH Size** gibt die Größe einer Cache line in 8 Byte Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#edx---featureflags)**.
 
-#### ECX
+#### ECX - Featureflags
 
 <table>
 <tbody><tr>
@@ -673,7 +673,9 @@ Dieses Register gibt erweiterte Informationen über den Prozessor:
 | 3 | Die Befehle MONITOR und MWAIT sind verfügbar |
 | 0 | Verfügbarkeit von SSE3 |
 
-#### EDX
+#### EDX - Featureflags
+
+Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
 
 <table>
 <tbody><tr>
@@ -829,63 +831,27 @@ Dieses Register gibt erweiterte Informationen über den Prozessor:
 | 17 | Unterstützt [36-Bit Page Size Extensions](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension") (4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) |
 | 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 15 | Unterstützt den **CMOVcc** Befehl, mit dem Bedingte Verschiebungen vorgenommen werden können |
-| 14 |  |
-| 13 |  |
-| 12 |  |
-| 11 |  |
+| 14 | Unterstützt die Machine-Check Architektur (Besonders das **MTRR_CAP**-Register) |
+| 13 | Unterstützt das [Page-Global-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
+| 12 | Unterstützt MTRR-Register (Besonders das **MTRR_CAP**-Register) |
+| 11 | Unterstützt schnelle [Systemcalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemcall") durch die Befehle **SYSENTER** und **SYSEXIT** |
 | 10 |  |
-| 9 |  |
-| 8 |  |
-| 7 |  |
-| 6 |  |
-| 5 |  |
-| 4 |  |
-| 3 |  |
-| 2 |  |
-| 1 |  |
-| 0 |  |
+| 9 | Besitzt einen lokalen [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") |
+| 8 | Unterstützt den **CMPXCHG8B** Befehl |
+| 7 | Unterstützt Machine-Check-[Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") |
+| 6 | Unterstützt physische Adressen, die größer als 32-Bit sind |
+| 5 | Implementiert Modellspezifische Register über die Befehle **RDMSR** und **WRMSR** |
+| 4 | Unterstützt den **RDTSC** Befehl und CR4.TSD-Bit |
+| 3 | Unterstützt 4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
+| 2 | Unterstützt I/O-Breakpoints, das CR4.DE-Bit und die DR4- und DR5-Register |
+| 1 | Unterstützt den [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") |
+| 0 | Besitzt eine [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU"), die den x87-Befehlssatz implementiert |
 
-Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
-
-| Bit | Funktion |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 31 - 30 | Reserviert |
-| 29 | Wenn eins, dann wird das Thermal Monitor unterstützt |
-| 28 | Der Prozessor unterstützt Hyper-Threading. |
-| 27 | Der Prozessor unterstützt Self-Snoop |
-| 26 | Der Prozessor kann SSE2 |
-| 25 | Der Prozessor kann SSE |
-| 24 | Der Prozessor unterstützt FXSAVE und FXSTOR, womit er einen Floatzusammenhang(?) speichern und wiederherstellen kann |
-| 23 | Der Prozessor kann MMX |
-| 22 | Die Temperatur und der Prozessortakt kann durch eine Software verändert und überwacht werden |
-| 21 | Der Prozessor hat die Fähigkeit, die Entwicklung eines Ablegers in eine Adresse zu schreiben |
-| 20 | Reserviert |
-| 19 | Der Prozessor kann CSFLUSH |
-| 18 | Der 12-Byte ProzessorID ist aktiviert und vorhanden |
-| 17 | Der Prozessor kann im Protected Mode mehr als 4 GByte adressieren. (PSE) |
-| 16 | Der Prozessor unterstützt die Page Attribute Table |
-| 15 | Der Prozessor untersützt CMOVcc, und wenn Bit 0 gesetzt ist, dann kann er FCMOVCC und FCOMI |
-| 14 | Der Prozessor unterstützt die Machine Check Architecture und MCG_CAP Register |
-| 13 | Der Prozessor unterstützt die Page Entry Table, die Page Directory Table und das TLB muss nicht erneuert werden |
-| 12 | Der Prozessor unterstützt die Memory Type Range Register, speziell das MTRR_CAP Register |
-| 11 | Der Prozessor unterstützt die Fast System Call Befehle, den SYSENTER Befehl und SYSEXIT Befehl |
-| 10 | Reserviert |
-| 9 | Der Prozessor beinhaltet ein [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") |
-| 8 | Der Prozessor unterstützt den CMPXCHG8 Befehl |
-| 7 | Der Prozessor unterstützt die Machine Check Exception |
-| 6 | Der Prozessor unterstützt Physical Adress Extension |
-| 5 | Der Prozessor unterstützt die Model Specific Register, den RDMSR Befehl und den WRMSR Befehl |
-| 4 | Der Prozessor unterstützt den RDTSC Befehl, zudem den CR4.TSD-Bit für Rechtekontrolle |
-| 3 | Der Prozessor unterstützt 4-MByte-Pages |
-| 2 | Der Prozessor unterstützt I/O-Breakpoints, das CR4.DE Bit und die DR4 und DR5 Register |
-| 1 | Der Prozessor unterstützt Erweiterungen für den Virtual-8086-Modus |
-| 0 | Der Prozessor unterstützt die Intel857-Gleitkommeoperationen |
-
-### EAX = 0x00000002
+## EAX = 0x00000002
 
 Wenn in EAX statt Null Zwei steht, dann werden bei Intelprozessoren Informationen über den Cache und die TLB-Deskriptoren ausgegeben.
 
-### EAX = 0x00000003
+## EAX = 0x00000003
 
 Wenn in EAX statt Null Drei steht, wird bei Intelprozessoren stattdessen folgendes ausgegeben:
 
@@ -899,7 +865,7 @@ Reserviert
 
 #### ECX
 
-Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Prozessoren, bei denen das entsprechende *[Featureflag(Bit 18)](#)* gesetzt ist.**
+Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Prozessoren, bei denen das entsprechende *[Featureflag(Bit 18)](#edx---featureflags)* gesetzt ist.**
 
 #### EDX
 
@@ -911,7 +877,7 @@ Es gibt Funktionen, die Hersteller spezifisch sind, d.h. sieh gelten nur nur fü
 
 Erweiterte Funktionen von Intel:
 
-### EAX = 0x80000000
+## EAX = 0x80000000
 
 #### EAX
 
@@ -929,7 +895,7 @@ Reserviert
 
 Reserviert
 
-### EAX = 0x80000001
+## EAX = 0x80000001
 
 #### EAX
 
@@ -947,7 +913,7 @@ Reserviert
 
 Wenn Bit 29 gesetzt, dann ist Intel64-Technologie verfügbar
 
-### EAX = 0x80000002
+## EAX = 0x80000002
 
 #### EAX
 
@@ -965,7 +931,7 @@ Eingebrannter String (Fortsetzung)
 
 Eingebrannter String (Fortsetzung)
 
-### EAX = 0x80000003
+## EAX = 0x80000003
 
 #### EAX
 
@@ -983,7 +949,7 @@ Eingebrannter String (Fortsetzung)
 
 Eingebrannter String (Fortsetzung)
 
-### EAX = 0x80000004
+## EAX = 0x80000004
 
 #### EAX
 
@@ -1012,6 +978,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5234; parent 5233; 2009-08-06T13:15:01Z -->
+<!-- MediaWiki page 1739; revision 5237; parent 5234; 2009-08-06T13:33:54Z -->
