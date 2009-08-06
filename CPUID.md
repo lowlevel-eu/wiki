@@ -1326,95 +1326,1527 @@ Es gibt Funktionen, die herstellerspezifisch sind, d.h. sie gelten nur nur für 
 
 Erweiterte Funktionen von Intel:
 
-## EAX = 0x80000000
+## Funktion 0x8000_0000
 
 #### EAX
 
-Enthält maximale erweiterte Funktionsnummer.
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Höchste unterstütze Zusatzfunktion
+</td></tr></tbody></table>
 
-#### EBX
+#### EBX - "Auth"
 
-Reserviert
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="8"><i>h</i>
+</td>
+<td colspan="8"><i>t</i>
+</td>
+<td colspan="8"><i>u</i>
+</td>
+<td colspan="8"><i>A</i>
+</td></tr></tbody></table>
+
+#### ECX - "cAMD"
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="8"><i>D</i>
+</td>
+<td colspan="8"><i>M</i>
+</td>
+<td colspan="8"><i>A</i>
+</td>
+<td colspan="8"><i>c</i>
+</td></tr></tbody></table>
+
+#### EDX - "enti"
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="8"><i>i</i>
+</td>
+<td colspan="8"><i>t</i>
+</td>
+<td colspan="8"><i>n</i>
+</td>
+<td colspan="8"><i>e</i>
+</td></tr></tbody></table>
+
+## Funktion 0x80000001
+
+#### EAX - Familie
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="4">
+</td>
+<td colspan="8">Erweiterte Familie
+</td>
+<td colspan="4">Erweitertes Modell
+</td>
+<td colspan="4">
+</td>
+<td colspan="4">Familie
+</td>
+<td colspan="4">Modell
+</td>
+<td colspan="4">Stepping
+</td></tr></tbody></table>
+
+#### EBX - Brand ID
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="4">PCKTYP
+</td>
+<td colspan="12">
+</td>
+<td colspan="16">Brand ID
+</td></tr></tbody></table>
+
+**PCKTYP**: Package Type  
+**Brand ID**: Wird zusammen mit [EBX\[7:0\]](https://github.com/lowlevel-eu/wiki/wiki/CPUID#ebx---sonstiges "CPUID") von [Funktion 0x0000_0001](https://github.com/lowlevel-eu/wiki/wiki/CPUID#funktion-0x0000_0001 "CPUID") vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") genutzt, um den Prozessorstring zu bestimmen.
+
+**Achtung!**
+
+**PCKTYP** ist nur gültig, wenn [EAX\[7:0\]](https://github.com/lowlevel-eu/wiki/wiki/CPUID#eax---prozessor "CPUID") von [Funktion 0x0000_0001](https://github.com/lowlevel-eu/wiki/wiki/CPUID#funktion-0x0000_0001 "CPUID") mindestens **0x10** ist. Wenn EAX\[7:0\] von Funktion 0x0000_0001 niedriger ist als **0x10** ist dieses Feld **reserviert**!
 
 #### ECX
 
-Reserviert
-
-#### EDX
-
-Reserviert
-
-## EAX = 0x80000001
-
-#### EAX
-
-Reserviert
-
-#### EBX
-
-Reserviert
-
-#### ECX
-
-Reserviert
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="18">
+</td>
+<td colspan="1">WDT
+</td>
+<td colspan="1">SKINIT
+</td>
+<td colspan="1">SSE5
+</td>
+<td colspan="1">IBS
+</td>
+<td colspan="1">OSVW
+</td>
+<td colspan="1">3DNowPrefetch
+</td>
+<td colspan="1">MisAlignSse
+</td>
+<td colspan="1">SSE4A
+</td>
+<td colspan="1">ABM
+</td>
+<td colspan="1">AltMovCr8
+</td>
+<td colspan="1">ExtApicSpace
+</td>
+<td colspan="1">SVM
+</td>
+<td colspan="1">CmpLegay
+</td>
+<td colspan="1">LahfSahf
+</td></tr></tbody></table>
 
 #### EDX
 
 Wenn Bit 29 gesetzt, dann ist Intel64-Technologie verfügbar
 
-## EAX = 0x80000002
+## Funktion 0x8000_0002
 
-#### EAX
+Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
 
-Eingebrannter String
+Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
-#### EBX
+#### EAX - Prozessorname
 
-Eingebrannter String (Fortsetzung)
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 0 - 3 des Prozessornamens
+</td></tr></tbody></table>
 
-#### ECX
+#### EBX - Prozessorname
 
-Eingebrannter String (Fortsetzung)
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 4 - 7 des Prozessornamens
+</td></tr></tbody></table>
 
-#### EDX
+#### ECX - Prozessorname
 
-Eingebrannter String (Fortsetzung)
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 8 - 11 des Prozessornamens
+</td></tr></tbody></table>
 
-## EAX = 0x80000003
+#### EDX - Prozessorname
 
-#### EAX
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 12 - 15 des Prozessornamens
+</td></tr></tbody></table>
 
-Eingebrannter String (Fortsetzung)
+  
 
-#### EBX
+## Funktion 0x8000_0003
 
-Eingebrannter String (Fortsetzung)
+Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
 
-#### ECX
+Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
-Eingebrannter String (Fortsetzung)
+#### EAX - Prozessorname
 
-#### EDX
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 16 - 19 des Prozessornamens
+</td></tr></tbody></table>
 
-Eingebrannter String (Fortsetzung)
+#### EBX - Prozessorname
 
-## EAX = 0x80000004
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 20 - 23 des Prozessornamens
+</td></tr></tbody></table>
 
-#### EAX
+#### ECX - Prozessorname
 
-Eingebrannter String (Fortsetzung)
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 24 - 27 des Prozessornamens
+</td></tr></tbody></table>
 
-#### EBX
+#### EDX - Prozessorname
 
-Eingebrannter String (Fortsetzung)
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 28 - 31 des Prozessornamens
+</td></tr></tbody></table>
 
-#### ECX
+## Funktion 0x8000_0004
 
-Eingebrannter String (Fortsetzung)
+Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
 
-#### EDX
+Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
-Eingebrannter String (Fortsetzung)
+#### EAX - Prozessorname
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 32 - 35 des Prozessornamens
+</td></tr></tbody></table>
+
+#### EBX - Prozessorname
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 36 - 39 des Prozessornamens
+</td></tr></tbody></table>
+
+#### ECX - Prozessorname
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 40 - 43 des Prozessornamens
+</td></tr></tbody></table>
+
+#### EDX - Prozessorname
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Buchstaben 44 - 47 des Prozessornamens
+</td></tr></tbody></table>
 
   
 
@@ -1427,6 +2859,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5341; parent 5339; 2009-08-06T16:30:17Z -->
+<!-- MediaWiki page 1739; revision 5348; parent 5341; 2009-08-06T17:19:58Z -->
