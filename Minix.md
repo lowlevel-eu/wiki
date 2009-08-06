@@ -1,13 +1,13 @@
 # Minix
 
 | Minix |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Andrew S. Tanenbaum |
 | Akt. Version: | 3.1.2a |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
-| Plattform: | i386, Motorola 68000, Sun SPARC |
+| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), Motorola 68000, Sun SPARC |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") ab Version 3 |
@@ -44,6 +44,6 @@ Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 5054; parent 4844; 2009-08-02T18:27:56Z -->
+<!-- MediaWiki page 1910; revision 5284; parent 5054; 2009-08-06T15:30:14Z -->
