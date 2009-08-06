@@ -30,7 +30,7 @@ Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Li
 
 ## Graphical User Interface
 
-Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die unternannder konkurieren. Am meisten verbreitet sind KDE und Gnome
+Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die untereinander konkurieren. Am meisten verbreitet sind KDE und Gnome, es gibt aber auch viele "kleine" Window-Manager wie WindowMaker, IceWM usw..
 
 ## Das UNIX-Prinzip
 
@@ -38,6 +38,6 @@ Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5113/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 4616; parent 4129; 2009-07-11T00:18:36Z -->
+<!-- MediaWiki page 1641; revision 5113; parent 4616; 2009-08-06T09:17:37Z -->
