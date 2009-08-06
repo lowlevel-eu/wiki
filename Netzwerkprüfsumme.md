@@ -1,6 +1,6 @@
 # Netzwerkprüfsumme
 
-Bei [Netzwerkprotokollen](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk") wie IP, TCP und UDP wird eine Checksumme benötigt. Die Berechnung dieser Prüfsumme erfolgt bei allen diesen Protokollen auf die gleiche Art und Weise, wobei sie bei unterschiedlichen Protokollen über unterschiedliche Daten berechnet wird (z. B. bei IP nur über den Header, bei hingegen TCP über die Daten, den TCP-Header und einen Pseudo-IP-Header)
+Bei [Netzwerkprotokollen](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk") wie [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol"), TCP und UDP wird eine Checksumme benötigt. Die Berechnung dieser Prüfsumme erfolgt bei allen diesen Protokollen auf die gleiche Art und Weise, wobei sie bei unterschiedlichen Protokollen über unterschiedliche Daten berechnet wird (z. B. bei IP nur über den Header, bei hingegen TCP über die Daten, den TCP-Header und einen Pseudo-IP-Header)
 
 ## Schema
 
@@ -34,6 +34,6 @@ Zuerst wird das Prüfsummenfeld des Protokolls auf null (bzw. 0x0000) gesetzt. D
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5247/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1974/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5248/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1974/index.html)
 
-<!-- MediaWiki page 1974; revision 5247; parent 5245; 2009-08-06T15:07:29Z -->
+<!-- MediaWiki page 1974; revision 5248; parent 5247; 2009-08-06T15:07:51Z -->
