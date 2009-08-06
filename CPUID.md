@@ -1,5 +1,9 @@
 # CPUID
 
+**Achtung!**
+
+Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! \~~ [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
+
 Der CPUID-Befehl wird benutzt, um Informationen über die Fähigkeiten eines Prozessors zu erhalten, wie zum Beispiel den Herstellernamen, die Modellnummer, die Größe des Caches, usw.
 
 ## Wie man CPUID benutzt
@@ -245,6 +249,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5068; parent 5067; 2009-08-04T19:31:49Z -->
+<!-- MediaWiki page 1739; revision 5106; parent 5068; 2009-08-06T08:55:22Z -->
