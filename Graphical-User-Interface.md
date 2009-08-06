@@ -8,10 +8,10 @@ Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](https://github
 
 ## Entwickeln einer GUI für das eigene OS
 
-Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwäht wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des Kernels! Auch die GUI von Windows gehört nicht zum Kernel, wie angenommen oft (allerdings sind GUI und Kernel über die WinAPI und verschiedenste Syscalls eng miteinander verzahnt). Wer eine GUI für sein OS entwickeln möchte braucht folgendes in seinem Kernel:
+Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwähnt wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")! Auch die GUI von [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") gehört nicht zum Kernel, wie oft angenommen wird (allerdings sind GUI und Kernel über die WinAPI und verschiedenste [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") eng miteinander verzahnt). Wer eine GUI für sein OS entwickeln möchte, benötigt folgendes in seinem Kernel:
 
-- Vollständiges Memory-Management
-- Multitasking
+- Vollständige [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
 
 Dazu werden noch
 
@@ -23,7 +23,7 @@ benötigt. Multitasking vor allem, weil die GUI, wenn sie als einziger Prozess a
 
 ### Portieren oder selbst schreiben?
 
-KDE, Gnome, IceWM...bei der Fülle an (Linux-)GUIs fragt man sich sicherlich, warum man nicht einfach eine bestehende portieren kann. Kann man, allerdings ist dazu fast immer die Portierung von Libs (Qt bei KDE, GTK bei Gnome) vonnöten, was mitunter ein ebenso großes Projekt ist. Außerdem brauchen GUIs auch Windows-Manager.
+KDE, Gnome, IceWM... Bei der Fülle an (Linux-)GUIs fragt man sich sicherlich, warum man nicht einfach eine bestehende portieren kann. Kann man, allerdings ist dazu fast immer die Portierung von Libs (Qt bei KDE, GTK bei Gnome) vonnöten, was mitunter ein ebenso großes Projekt ist. Außerdem brauchen GUIs auch Window-Manager.
 
 Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster Ebene (lowlevel ;)) arbeiten: Man hat keine Libs im Hintergrund, die eine Fenster mit "createWindow();" erstellen, man muss alles von Hand machen.
 
@@ -55,6 +55,6 @@ Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5084/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 5084; parent 5083; 2009-08-06T00:20:13Z -->
+<!-- MediaWiki page 1511; revision 5276; parent 5084; 2009-08-06T15:27:59Z -->
