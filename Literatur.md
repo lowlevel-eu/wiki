@@ -36,7 +36,10 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mä
 
 Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwicklung bzw. auf die theoretischen Sachen eines Betriebssystems spezialisieren.
 
-------------------------------------------------------------------------
+### Bücher über existierende Kernel
+
+- ["Understanding the Linux Kernel - From I/O ports to process management" von Daniel P. Bovet und Marco Cesati](http://www.amazon.de/Understanding-Linux-Kernel-Process-Management/dp/0596000022/ref=sr_1_2?ie=UTF8&qid=1249546324&sr=8-2)  
+  Dieses Buch erklärt den [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") sehr detailliert, indem Grafiken Abläufe erklären und wichtige Strukturen sowie kurze Codeteile aufgelistet werden. Dabei handelt es unter anderem von [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") (mit Dateibuffering, Swapping und [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")), dem VFS von Linux, [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), Signalen, [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Synchronisation im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
 
   
 
@@ -46,8 +49,8 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 - ["Das Addison-Wesley Handbuch der Hardwareprogrammierung" von Klaus Dembowski](http://www.amazon.de/Das-Addison-Wesley-Handbuch-Hardwareprogrammierung/dp/3827323053)  
   Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
-- ["PC-Hardwarebuch" von Klaus Dembowski et.al.](http://www.amazon.de/PC-Hardwarebuch-Aufbau-Funktionsweise-Programmierung/dp/3827314615)  
-  Das Standardwerk wenn es um Hardwareprogrammierung geht.
+- ["PC-Hardwarebuch" von Hans-Peter Messmer und Klaus Dembowski](http://www.amazon.de/PC-Hardwarebuch-Aufbau-Funktionsweise-Programmierung/dp/3827314615)  
+  Das Standardwerk, wenn es um Hardwareprogrammierung geht.
 
   
 
@@ -55,6 +58,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5085/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5086/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5085; parent 5082; 2009-08-06T00:21:34Z -->
+<!-- MediaWiki page 1930; revision 5086; parent 5085; 2009-08-06T08:25:19Z -->
