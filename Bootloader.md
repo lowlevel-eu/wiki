@@ -5,12 +5,12 @@ Der **Bootloader** wird vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basi
 ## Bekannte Bootloader
 
 - [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") (vielseitiger OpenSource Loader)
-- [LILO](https://github.com/lowlevel-eu/wiki/wiki/LILO "LILO") (Linux Loader)
-- \[NTLDR (Windows NT Loader)
+- [LILO](https://github.com/lowlevel-eu/wiki/wiki/LILO "LILO") ([Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") Loader)
+- NTLDR ([Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT Loader)
 - BOOTMGR (Windows Vista Loader)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5275/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5280/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
 
-<!-- MediaWiki page 1477; revision 5275; parent 4793; 2009-08-06T15:27:30Z -->
+<!-- MediaWiki page 1477; revision 5280; parent 5275; 2009-08-06T15:29:16Z -->
