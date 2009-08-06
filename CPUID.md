@@ -1001,25 +1001,317 @@ Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschli
 
 Gibt verschiedene Informationen über den Cache und den TLB aus.
 
-## EAX = 0x00000003
+## Funktion 0x0000_0003
 
-Wenn in EAX statt null drei steht, wird bei Intelprozessoren stattdessen folgendes ausgegeben:
+Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
 
-#### EAX
+Gibt Bits 63 - 0 der Prozessorsignatur zurück. Um die gesamte 96-Bit Prozessorsignatur zu erhalten muss man noch **[EAX](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")** von [Funktion 0x0000_0001](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") hinzunehmen.
 
-Reserviert
+  
 
-#### EBX
+**Achtung!**
 
-Reserviert
+Funktioniert nur bei Prozessoren, die das entsprechende **[Featureflag(Bit 18)](#edx---featureflags)** gesetzt haben.
 
-#### ECX
+#### EAX - Reserviert
 
-Die Bits 31 bis 0 der Prozessor-ID sind darin hinterlegt. **Funktioniert nur bei Prozessoren, bei denen das entsprechende *[Featureflag(Bit 18)](#edx---featureflags)* gesetzt ist.**
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32"> 
+</td></tr></tbody></table>
 
-#### EDX
+#### EBX - Reserviert
 
-Die Bits 63 bis 32 der Prozessor-ID sind darin hinterlegt. *(siehe oben)*
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32"> 
+</td></tr></tbody></table>
+
+#### ECX - Signatur
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Bits 31 - 0 der Prozessorsignatur
+</td></tr></tbody></table>
+
+#### EDX -Signatur
+
+<table>
+<tbody><tr>
+<th colspan="32">Bit
+</th></tr>
+<tr>
+<th>31
+</th>
+<th>30
+</th>
+<th>29
+</th>
+<th>28
+</th>
+<th>27
+</th>
+<th>26
+</th>
+<th>25
+</th>
+<th>24
+</th>
+<th>23
+</th>
+<th>22
+</th>
+<th>21
+</th>
+<th>20
+</th>
+<th>19
+</th>
+<th>18
+</th>
+<th>17
+</th>
+<th>16
+</th>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="32">Bits 63 - 32 der Prozessorsignatur
+</td></tr></tbody></table>
 
 # Erweiterte Funktionen
 
@@ -1128,6 +1420,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5336/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5330; parent 5252; 2009-08-06T16:16:32Z -->
+<!-- MediaWiki page 1739; revision 5336; parent 5330; 2009-08-06T16:27:06Z -->
