@@ -3,7 +3,7 @@
 | Allgemeines |  |
 | -------------------------------- | ------------------------------- |
 | Name: | D |
-| Inlineassembler: | Ja (Intel-Syntax) |
+| Inlineassembler: | {{{Inlineassembler}}} |
 | Compiler: | dmd (Digital Mars), gdc (GNU) |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
@@ -12,11 +12,11 @@
 
 <http://www.digitalmars.com/d>
 
-D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von C++ und der Nähe zum System von C zu vereinen.
+D ist eine prozedurale sowie objekorientierte und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") und der Nähe zum System von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu vereinen.
 
-## D als Sprache für ein Betriebssystem
+## D als Sprache für ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem")
 
-D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr system-nah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-Assembler (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den Kernel) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
+D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr system-nah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-Assembler (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
 
 ## Kernel in D
 
@@ -41,7 +41,7 @@ Für die Konstruktoren: \<asm\> static_ctors_loop:
 
 \</asm\>
 
-start_ctors ist dabei im Linker-Script angegeben.
+start_ctors ist dabei im [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript") angegeben.
 
 Für die Destruktoren: \<asm\> static_dtors_loop:
 
@@ -60,9 +60,9 @@ Für die Destruktoren: \<asm\> static_dtors_loop:
 
 \</asm\>
 
-end_dtors ist hier auch im Linker-Script angegeben.
+end_dtors ist hier auch im Linkerscript angegeben.
 
-Das passende Linker-Script dazu:
+Das passende Linkerscript dazu:
 
 #### link.ld
 
@@ -104,13 +104,13 @@ Das passende Linker-Script dazu:
 
 Wer in D einen Kernel schreibt wird bei der Benutzung von Arrays beim Linken schnell folgenden Fehler zu sehen bekommen:
 
-undefined refernce to \_d_array_bounds
+`undefined reference to _d_array_bounds`
 
 \_d_array_bounds ist dabei nicht anderes, als eine Funktion im D-Runtime, welche überprüft, ob Array-Grenzen eingehalten werden. Um diesen Fehler vorzubeugen, sollte also zumindest eine Stub-Funktion erstellt werden:
 
 \<c\> extern(C) void \_d_array_bounds(char filename, uint line) {} \</c\>
 
-Zu Debugging-Zwecken kann hier natürlich auch eine echt Überprüfung gemacht werden.
+Zu Debugging-Zwecken kann hier natürlich auch eine echte Überprüfung gemacht werden.
 
 Wer allerdings keine Runtime-Überprüfung im Kernel braucht, der kann den Compiler auch so aufrufen:
 
@@ -235,7 +235,7 @@ gelinkt wird's so:
 
 ## D-Compiler
 
-- [gdc](http://dgcc.sourceforge.net/gdc) aus der GNU Compiler Collection
+- [gdc](http://dgcc.sourceforge.net/gdc) aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection")
 - [dmd](http://www.digitalmars.com/d) Digital-Mars-D-Compiler
 
 ## Weblinks
@@ -244,6 +244,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 5052; parent 4877; 2009-08-02T17:17:27Z -->
+<!-- MediaWiki page 1863; revision 5166; parent 5052; 2009-08-06T11:19:02Z -->
