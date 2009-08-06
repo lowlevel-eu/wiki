@@ -1,10 +1,10 @@
 # Paging Tutorial
 
-Willkommen zu meinem zweiten Tutorial hier auf lowlevel. Diesmal geht es um Paging, einem Protected-Mode Feature das mit dem 80386 eingeführt und im 80486 verbessert wurde.
+Willkommen zu meinem zweiten Tutorial hier auf lowlevel. Diesmal geht es um [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), einem [Protected-Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") Feature, das mit dem 80386 eingeführt und im 80486 verbessert wurde.
 
 ## Was ist Paging?
 
-Wenn ihr einen Kernel schreibt, habt ihr mit Sicherheit schon Einträge in der GDT gemacht. Dort konnte man Segmente festlegen, und hatte so schon ein wenig Speicherschutz. Allerdings hat das ganze auch noch einige Nachteile, weshalb schlaue Leute bei Intel Paging einführten. Bei Paging bekommen die Programme virtuellen Arbeitsspeicher (4 GB), der in 4kb-Blöcken mittels Tabellen verwaltet wird. Wenn Paging eingeschaltet wurde, kann jeder Task seinen eigenen Adressraum haben, und kann auch nur auf seinen eigenen zugreifen. Das interessante an Paging ist, dass der virtuelle Adressraum nicht komplett im physischen Speicher liegen muss, ungenutzte Teile können auf die Festplatte ausgelagert werden (swapping).
+Wenn ihr einen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") schreibt, habt ihr mit Sicherheit schon Einträge in der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "Global Descriptor Table") gemacht. Dort konnte man Segmente festlegen, und hatte so schon ein wenig Speicherschutz. Allerdings hat das ganze auch noch einige Nachteile, weshalb schlaue Leute bei Intel Paging einführten. Bei Paging bekommen die Programme virtuellen Arbeitsspeicher (4 GB), der in 4kb-Blöcken mittels Tabellen verwaltet wird. Wenn Paging eingeschaltet wurde, kann jeder Task seinen eigenen Adressraum haben, und kann auch nur auf seinen eigenen zugreifen. Das interessante an Paging ist, dass der virtuelle Adressraum nicht komplett im physischen Speicher liegen muss, ungenutzte Teile können auf die Festplatte ausgelagert werden (swapping).
 
 Die bereits erwähnten Tabellen heißen Page-Directory und Page-Table. Das Page-Directory enthält 1024 Einträge zu je 4 Byte (also 4kb), jeder Eintrag verweist auf eine Page-Table, die auch 1024 Einträge zu je 4 Byte hat (alle Page-Tables zusammen haben 4MB!). Die Einträge der Page-Table verweisen dann auf 4kb große Blöcke im physischen Speicher.
 
@@ -45,7 +45,7 @@ Auch beim Paging sollte man erst einmal genau darüber nachdenken, bevor man den
 <!-- -->
 
 - Page-Directory-Adresse setzen
-  - Eine sehr kleine Routine, die die Adresse des Page-Directory ins register cr3 einträgt, damit die CPU weiß wo unser Page-Directory liegt
+  - Eine sehr kleine Routine, die die Adresse des Page-Directory ins [Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") cr3 einträgt, damit die CPU weiß, wo unser Page-Directory liegt
 
 <!-- -->
 
@@ -143,7 +143,7 @@ Hier holen wir den Inhalt von cr0 nach eax, setzen das Paging-Bit und schreiben 
 
 ## Ein sehr kleines Beispiel
 
-Als Beispiel zeige ich hier einen Auszug aus meinem Kernel FROST:
+Als Beispiel zeige ich hier einen Auszug aus meinem Kernel [FROST](https://github.com/lowlevel-eu/wiki/wiki/FROST "FROST"):
 
     print "Initializing page-directory..."
     Paging_initDirectory
@@ -176,6 +176,6 @@ Happy Coding, TheThing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5204/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
 
-<!-- MediaWiki page 1850; revision 4418; parent 4406; 2009-05-29T18:47:56Z -->
+<!-- MediaWiki page 1850; revision 5204; parent 4418; 2009-08-06T12:00:51Z -->
