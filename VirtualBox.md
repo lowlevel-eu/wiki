@@ -32,19 +32,19 @@ Emulierte Hardware:
 
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
 - I/O APIC
-- Floppy
+- [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
 - IDE Controller:
   - PIIX3
   - PIIX4
 - SATA AHCI Controller Intel ICH8M/ICH8M-E
-- AC'97 Audio (Intel)
-- Netzwerkkarten:
+- [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97") Audio (Intel)
+- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"):
   - PCnet FAST III
   - PCnet-PCI II
   - Intel PRO/1000 MT Desktop
   - Intel PRO/1000 T Server
-- USB-Controller:
-  - eHCI (USB 2.0)
+- [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Controller:
+  - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0)
 - Serielle Schnittstellen (max. 2)
 
 ## Links
@@ -54,6 +54,6 @@ Emulierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 5021; parent 4914; 2009-08-01T18:56:47Z -->
+<!-- MediaWiki page 1553; revision 5208; parent 5021; 2009-08-06T12:10:22Z -->
