@@ -194,52 +194,7 @@ Dieses Segment stellt einen Speicherabschnitt dar, der eine Local Deskriptor Tab
 
 ### Task State Segment (TSS)
 
-(Seite: [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment")) Dies ist ebenfalls ein Speicherabschnitt der Daten beinhaltet um das Multitasking zu realisieren. Bei einem Task-Wechsel müssen alle Register des gerade laufenden Task gesichert werden, um diese später wiederherstellen zu können, damit der Task wieder gestartet werden kann. Das TSS beinhaltet alle Daten die für einen Task gespeichert werden. Daher ist es notwendig, das jeder Task ein eigenes TSS bekommt. Das TSS hat eine Größe von 104 Bytes. Sollte bei dem Deskriptor als Größe ein kleinerer Wert eingetragen werden, so wird beim Versuch den Deskriptor zu laden eine Exception ausgelöst.
-
-| Offset | 31-16 | 0-15 |
-| -------- | ---------------------- | ---------------------- |
-| 0x00 |  | Previous Task Link |
-| 0x04 | ESP0 |  |
-| 0x08 |  | SS0 |
-| 0x0C | ESP1 |  |
-| 0x10 |  | SS1 |
-| 0x14 | ESP2 |  |
-| 0x18 |  | SS2 |
-| 0x1C | CR3 |  |
-| 0x20 | EIP |  |
-| 0x24 | EFLAGS |  |
-| 0x28 | EAX |  |
-| 0x2C | ECX |  |
-| 0x30 | EDX |  |
-| 0x34 | EBX |  |
-| 0x38 | ESP |  |
-| 0x3C | EBP |  |
-| 0x40 | ESI |  |
-| 0x44 | EDI |  |
-| 0x48 |  | ES |
-| 0x4C |  | CS |
-| 0x50 |  | SS |
-| 0x54 |  | DS |
-| 0x58 |  | FS |
-| 0x5C |  | GS |
-| 0x60 |  | LDT Segment Selektor |
-| 0x64 | I/O Map Base Address |  |
-
-**Task State Segment Deskriptor (BITs) Teil 1**
-
-| **31 - 24** | **23** | **21 - 22** | **20** | **19 - 16** | **15** | **13 - 14** | **12** | **11 - 8** | **0 - 7** |
-| -------------------- | -------- | ------------- | -------- | ------------- | -------- | ------------- | -------- | ------------ | -------------------- |
-| Basisadresse 31-24 | G | 0 | AVL | Größe 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
-
-**Task State Segment Deskriptor (BITs) Teil 2**
-
-| **31 - 24** | **16 - 0** |
-| --------------------- | -------------- |
-| Basisadresse 15 - 0 | Größe 15 - 0 |
-
-#### Type = Deskriptor Typ
-
-Hier muß als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wir auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy Flag verhindert.
+Siehe: [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment")
 
 ### Call Gates
 
@@ -347,6 +302,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 4835; parent 4786; 2009-07-30T01:58:16Z -->
+<!-- MediaWiki page 1464; revision 5343; parent 4835; 2009-08-06T16:44:21Z -->
