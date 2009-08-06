@@ -4,7 +4,17 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Das **BIOS** (**B**asic **I**nput/**O**utput **S**ystem) ist die Firmware eines Computers. Es wird meistens auf einem Flash-Speicher auf dem Motherboard gespeichert. Die Einstellungen des BIOS werden im [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") gespeichert. Im Realmode werden vom BIOS außerdem Funktionen für das Ansprechen der Hardware bereitgestellt.
+Das **BIOS** (**B**asic **I**nput/**O**utput **S**ystem) ist die Firmware eines x86-PCs. Es wird meistens auf einem Flash-Speicher auf dem Motherboard gespeichert. Die Einstellungen des BIOS werden im [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") gespeichert. Im Realmode werden vom BIOS außerdem Funktionen für das Ansprechen der Hardware bereitgestellt.
+
+  
+
+## Aufgaben des BIOS
+
+Das BIOS ist das "Ur-Programm" eines x86-Rechners (im Nachfolgendem nur noch "PC" genannt). Es sitzt in einem beschreibbaren Flash-Speicher und wird direkt beim Starten des PCs ausgeführt. Es unternimmt nun den sogenannten **POST**, den **P**ower-**O**n **S**elf-**T**est, welcher den verfügbaren Arbeitsspeicher hochzählt und verschiedene Laufwerke anspricht sowie ihre Daten ausliest.
+
+Nach dem POST versucht es von einer Liste von Laufwerken einen Bootloader zu laden. Dieser wird an Adresse 0x7C00 geladen und dann ausgeführt; Ab da hat das Betriebssystem die volle Kontrolle über den PC.
+
+Allerdings ist das BIOS (zumindest im Real-Mode) noch immer aktiv: Es stellt eine Menge an Intrerupts zur Kommunikation mit den verschiedenen Peripheriegeräten bereit.
 
   
 
@@ -14,6 +24,6 @@ Das **BIOS** (**B**asic **I**nput/**O**utput **S**ystem) ist die Firmware eines 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4867/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5114/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 4867; parent 4060; 2009-07-30T14:03:34Z -->
+<!-- MediaWiki page 1616; revision 5114; parent 4867; 2009-08-06T09:24:31Z -->
