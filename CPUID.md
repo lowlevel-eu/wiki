@@ -995,9 +995,11 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 1 | Unterstützt den [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") |
 | 0 | Besitzt eine [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU"), die den x87-Befehlssatz implementiert |
 
-## EAX = 0x00000002
+## Funktion 0x0000_0002
 
-Wenn in EAX statt null zwei steht, dann werden bei Intelprozessoren Informationen über den Cache und die TLB-Deskriptoren ausgegeben.
+Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
+
+Gibt verschiedene Informationen über den Cache und den TLB aus.
 
 ## EAX = 0x00000003
 
@@ -1126,6 +1128,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5252; parent 5244; 2009-08-06T15:10:43Z -->
+<!-- MediaWiki page 1739; revision 5330; parent 5252; 2009-08-06T16:16:32Z -->
