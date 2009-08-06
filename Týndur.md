@@ -7,7 +7,7 @@
 | Akt. Version: | 0.2.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | i386 |
+| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") |
 | API: | Nativ, teilw. [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
@@ -90,6 +90,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5298/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 5124; parent 4700; 2009-08-06T09:42:53Z -->
+<!-- MediaWiki page 1796; revision 5298; parent 5124; 2009-08-06T15:33:19Z -->
