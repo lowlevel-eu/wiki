@@ -7,10 +7,10 @@
 | Akt. Version: | 0.004 (pre-alpha) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") / BSD (CDI-Treiber) |
 | OS-Eigenschaften |  |
-| Plattform: | x86 |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | Int 0x80 |
+| API: | [Int 0x80](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")-Scripts |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Keine (bis jetzt) |
 | Homepage |  |
@@ -124,6 +124,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4654/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5283/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 4654; parent 4651; 2009-07-15T19:14:33Z -->
+<!-- MediaWiki page 1861; revision 5283; parent 4654; 2009-08-06T15:29:51Z -->
