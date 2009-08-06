@@ -1,13 +1,13 @@
 # MenuetOS
 
 | MenuetOS |  |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Ville Turjanmaa |
 | Akt. Version: | i386: 0.85<br>x86_64: 0.90Q |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
-| Plattform: | i386, x86_64 |
+| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch? |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Nativ |
@@ -48,6 +48,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 5154; parent 3176; 2009-08-06T10:59:44Z -->
+<!-- MediaWiki page 1481; revision 5282; parent 5154; 2009-08-06T15:29:50Z -->
