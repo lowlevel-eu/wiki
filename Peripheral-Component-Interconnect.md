@@ -122,7 +122,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | ----------- | ------------------------------------------------------------------------------------------------------------------ |
 | 0x00 | [Alle Geräte die gebaut wurden bevor Classcodes eingeführt wurden](#class-0x00---pre-20) |
 | 0x01 | [Massenspeicher](#class-0x01---massenspeicher) |
-| 0x02 | [Netzwerk-Controller](#) |
+| 0x02 | [Netzwerk-Controller](#class-0x02---netzwerk-controller) |
 | 0x03 | [Bildschirm-Controller](#class-0x03---bildschirm-controller) |
 | 0x04 | [Multimedia-Geräte](#class-0x04---multimedia-ger%C3%A4te) |
 | 0x05 | [Speicher-Controller](#class-0x05---speicher-controller) |
@@ -167,7 +167,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
   
 
-### Class 0x02 --Controller
+### Class 0x02 - Netzwerk-Controller
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | -------------------------------------------------------------------------- |
@@ -408,6 +408,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5066/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 5066; parent 3906; 2009-08-04T18:57:52Z -->
+<!-- MediaWiki page 1626; revision 5107; parent 5066; 2009-08-06T08:57:40Z -->
