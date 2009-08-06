@@ -6,7 +6,7 @@ Eine **Shell** (deutsch wörtlich: Muschel, hier: Schale, Aufsatz) ist ein Progr
 
 ## Geschichte
 
-Die frühen Hardwaremonitore, wo noch jedes Bit einzeln gecodet werden musste, können schon als eine Art "Shell" angesehen werden. Shells an sich sind ein altes Konzept, um im direktem Kontakt mit dem Betriebssystem zu stehen. Die wohl älteste Shell ist die 'osh', auch 'Thompson Shell' für das Betriebssystem [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix") . Sie war von 1971 bis 1979 die Standard-Shell unter Unix und führte u.a. das mächtige Konzept der Pipes ein. Danach entwickelte Stephen R. Bourne die Bourne-Shell, sh, auf die fast alle heutigen Shell mehr oder weniger aufsetzen.
+Die frühen Hardwaremonitore, wo noch jedes Bit einzeln gecodet werden musste, können schon als eine Art "Shell" angesehen werden. Shells an sich sind ein altes Konzept, um im direktem Kontakt mit dem Betriebssystem zu stehen. Die wohl älteste Shell ist die 'osh', auch 'Thompson Shell' für das Betriebssystem [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix") . Sie war von 1971 bis 1979 die Standard-Shell unter Unix und führte u.a. das mächtige Konzept der [Pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") ein. Danach entwickelte Stephen R. Bourne die Bourne-Shell, sh, auf die fast alle heutigen Shell mehr oder weniger aufsetzen.
 
 ## Funktionsweise einer Shell
 
@@ -41,6 +41,6 @@ Allerdings war seit jeher die "Windows-Shell" nicht halb so mächtig wie deren \
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
 
-<!-- MediaWiki page 1864; revision 5099; parent 5097; 2009-08-06T08:45:59Z -->
+<!-- MediaWiki page 1864; revision 5344; parent 5099; 2009-08-06T17:00:05Z -->
