@@ -17,10 +17,10 @@
 
 <http://pedigree-project.org/r/>
 
-**Pedigree** ist ein Hobby-OS, welches seit Januaer 2008 von James Mollow und Jörg Pfähler, uns allen besser bekannt als [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode"), entwickelt wird. Es ist in C++ mit einer Prise Assembler geschrieben und befindet sich in einem fortgeschrittenerem Stadium.
+**Pedigree** ist ein Hobby-OS, welches seit Januaer 2008 von James Mollow und Jörg Pfähler, uns allen besser bekannt als [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode"), entwickelt wird. Es ist in C++ mit einer Prise Assembler geschrieben und befindet sich in einem fortgeschrittenen Stadium.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1973/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5256/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1973/index.html)
 
-<!-- MediaWiki page 1973; revision 5255; parent 5251; 2009-08-06T15:13:28Z -->
+<!-- MediaWiki page 1973; revision 5256; parent 5255; 2009-08-06T15:14:18Z -->
