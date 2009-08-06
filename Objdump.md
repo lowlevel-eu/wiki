@@ -1,12 +1,12 @@
 # Objdump
 
-**objdump** ist ein mächtiges Utility aus den binutils für Linux. Es ermöglicht, (Objekt)-Code zu disassemblieren und verschiedenste Informationen zu der Datei zu bekommen.
+**objdump** ist ein mächtiges Werkzeug aus den binutils für Linux. Es ermöglicht, (Objekt)-Code zu disassemblieren und verschiedenste Informationen zu der Datei zu bekommen.
 
   
 
 ## objdump in der OS-Entwicklung
 
-In der OS-Entwicklung ist objdump ein unentbehrlichs Werkzeug. Mit objdump lassen sich z.B. schnell und einfach Symbolnamen anzeigen.
+In der OS-Entwicklung ist objdump ein unentbehrliches Werkzeug. Mit objdump lassen sich z.B. schnell und einfach Symbolnamen anzeigen.
 
   
 
@@ -22,7 +22,7 @@ ein. Die Ausgabe sieht dann z.B. so aus bei einem einfachen "Hallo-Welt"-Program
 
 `SYMBOL TABLE: 00000000 l df *ABS* 00000000 hello.c 00000000 l d .text 00000000 .text 00000000 l d .data 00000000 .data 00000000 l d .bss 00000000 .bss 00000000 l d .rodata 00000000 .rodata 00000000 l d .note.GNU-stack 00000000 .note.GNU-stack 00000000 l d .comment 00000000 .comment 00000000 g F .text 0000002b main 00000000 *UND* 00000000 puts `
 
-Um die dynamische Symboltaballe zu bekommen, nutzt man
+Um die dynamische Symboltabelle zu bekommen, nutzt man
 
 ` objdump -T DATEI `
 
@@ -47,6 +47,6 @@ Um eine Datei komplett zu disassemblieren, nutzt man
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1998/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5362/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1998/index.html)
 
-<!-- MediaWiki page 1998; revision 5355; parent 0; 2009-08-06T17:53:01Z -->
+<!-- MediaWiki page 1998; revision 5362; parent 5355; 2009-08-06T18:00:25Z -->
