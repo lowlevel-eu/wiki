@@ -26,8 +26,43 @@ Hier sehen wir die Referenzen, die noch nicht in der Datei enthalten sind: puts 
 
 Erst durch das Zusammenlinken mit anderen Objektdateien (hier: die der libc) wird der nötige Code in die Datei eingelinkt und die Datei ausführbar gemacht:
 
+  
+
+## Linkerdatei
+
+Eine Linkerdatei definiert, wo welche Sektionen des Codes liegen.
+
+Hier ein Beispiel aus dem Betriebssystem Qultics:
+
+` OUTPUT_FORMAT(elf32-i386) OUTPUT_ARCH(i386:i386) ENTRY(start) phys = 0x00100000; SECTIONS { kernel_start = phys; `
+
+     .text phys : AT(phys) {
+       code = .;
+       *(.text)
+       *(.rodata)
+       . = ALIGN(4096);
+     }
+     .data : AT(phys + (data - code))
+     {
+       data = .;
+       *(.data)
+       . = ALIGN(4096);
+     }
+     .bss : AT(phys + (bss - code))
+     {
+       bss = .;
+       *(.bss)
+       . = ALIGN(4096);
+     }
+     end = .;
+
+     kernel_end = end;
+     kernel_size = kernel_end - kernel_start;
+
+`} `
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5090/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 5089; parent 0; 2009-08-06T08:34:12Z -->
+<!-- MediaWiki page 1932; revision 5090; parent 5089; 2009-08-06T08:35:31Z -->
