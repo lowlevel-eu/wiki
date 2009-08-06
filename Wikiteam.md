@@ -11,7 +11,7 @@ Das Team umfasst:
 - [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), findet falsche Grammatik und formuliert sie anders und vergisst, den Button "Nur Kleinigkeiten" anzukreuzen sehr gerne
 
   
-Natürlich bist aber **Du** aufgerufen, ebenfalls mitzuarbeiten:
+Natürlich bist aber **du** aufgerufen, ebenfalls mitzuarbeiten:
 
 - Dir gefällt ein Artikel nicht?
 - Du hast Rechtschreibfehler/Grammatikfehler entdeckt?
@@ -23,6 +23,6 @@ Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Frage
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
 
-<!-- MediaWiki page 2004; revision 5381; parent 5380; 2009-08-06T19:42:35Z -->
+<!-- MediaWiki page 2004; revision 5382; parent 5381; 2009-08-06T19:42:58Z -->
