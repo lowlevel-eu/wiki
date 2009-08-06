@@ -1,10 +1,5 @@
 # CPUID
 
-**Achtung!**
-
-Dieser Artikel wird gerade generalüberholt. Bitte nimm keine Änderungen an diesem Artikel vor! (Der Artikel könnte zwischenzeitlich ein wenig komisch anmuten ;-) ~[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 10:55, 6. Aug. 2009 (CEST)
-
-  
 Der **CPUID**-Befehl liefert, sofern er denn von der CPU unterstützt wird, Informationen zu zahlreichen Fähigkeiten der CPU, wie zum Beispiel den Herstellernamen, die Modellnummer oder die Größe des Caches.
 
   
@@ -2994,6 +2989,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5359; parent 5357; 2009-08-06T17:54:14Z -->
+<!-- MediaWiki page 1739; revision 5360; parent 5359; 2009-08-06T17:54:43Z -->
