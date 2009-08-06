@@ -22,7 +22,7 @@ Der eigentliche Transfer wird in der Regel von dem mit diesem Channel verbundene
 
 ### Übersicht
 
-Die folgende Tabelle ist eine Übersicht über alle Ports, die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
+Die folgende Tabelle ist eine Übersicht über alle [Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
 
 Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") gemeint, mit dem auf den Port zugegriffen werden kann. Diese Spalte gibt an, ob lesend oder schreibend zugegriffen wird. Die Spalte "Größe" gibt an, wieviele Bits das entsprechende Register umfasst. Auch wenn hier 16 stehen sollte, wird nur byteweise mit den DMA-Controllern kommuniziert - siehe dazu die Beschreibung des Flip-Flop-Registers.
 
@@ -134,6 +134,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 5314; parent 4836; 2009-08-06T15:46:40Z -->
+<!-- MediaWiki page 1555; revision 5315; parent 5314; 2009-08-06T15:48:08Z -->
