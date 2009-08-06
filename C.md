@@ -83,6 +83,6 @@ Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 5140; parent 5139; 2009-08-06T10:03:23Z -->
+<!-- MediaWiki page 1526; revision 5257; parent 5140; 2009-08-06T15:14:24Z -->
