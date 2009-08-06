@@ -36,6 +36,14 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | 14 | 14 | Auto Feed | PC-\>Gerät | Bei jedem CR (carriage return) ein LF (line feed) hinzufügen |
 | \- | 15, 16 | GND oder NC | \- | Masse oder nicht benutzt |
 | \- | 17 | Chassis-GND | \- | Gehäuse-Masse |
+| \- | 18 | Extern +5V | Gerät-\>PC | +5V extern |
+| 19-25 | 19-30 | GND | \- | Einzelne Signal-Messleitungen |
+| 16 | 31 | Reset oder Init | PC-\>Gerät | Geräte-Initialisierung |
+| 15 | 32 | Error or Fault | Gerät-\>PC | Drucker-Störung |
+| 18 | 33 | Extern GND oder NC | Gerät-\>PC | Masse oder nicht belegt |
+| \- | 34 | NC | \- | Keine Verbindung |
+| \- | 35 | \#5V oder NC | \- | \#5V oder nicht belegt |
+| 17 | 36 | Select In | PC-\>Gerät | Online schalten |
 
 Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommunizieren.
 
@@ -92,6 +100,12 @@ Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das
 
   
 
+## IEEE 1284
+
+Da der Centronics-Stecker kein Standard war, implementierten viele Druckerhersteller ihre eigenen Funktionen und belegten die Datenleitungen nach eigenen Vorlieben. Dadurch wurden schnell Inkompatibilitäten erreicht. Seit dem Jahr 1994 wird die parallele Schnittstelle um Funktionen erweitert, die unter anderem die bidirektionale Übertragung einführt. Diese Funktionen werden unter der IEEE Norm 1284 standardisiert.
+
+  
+
 ## Siehe auch
 
 - [Serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle")
@@ -102,6 +116,6 @@ Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5353; parent 5352; 2009-08-06T17:41:36Z -->
+<!-- MediaWiki page 1996; revision 5378; parent 5353; 2009-08-06T19:25:43Z -->
