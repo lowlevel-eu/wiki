@@ -37,7 +37,7 @@ Beispiel:
      Dezimal  : 42
      Ungepacktes BCD-Format: 0000 0100b (0x04)  0000 0010b (0x02)
 
-Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende ASCII-Zeichen umgewandelt werden kann.
+Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII")-Zeichen umgewandelt werden kann.
 
 ## Weblinks
 
@@ -45,6 +45,6 @@ Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x3
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
 
-<!-- MediaWiki page 1589; revision 5011; parent 5010; 2009-08-01T18:33:42Z -->
+<!-- MediaWiki page 1589; revision 5155; parent 5011; 2009-08-06T11:01:16Z -->
