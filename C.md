@@ -15,7 +15,7 @@ C ist eine bekannte, ältere Programmiersprache. Sie verfolgt das Ziel, bei verg
 
 ## Kernelprogrammierung mit C
 
-Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"). Für Einsteiger gibt es ein [Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf), welches beschreibt, wie man in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") schaltet und in C geschriebenen Code ausführt.
+Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"). Für Einsteiger gibt es ein [Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf), welches beschreibt, wie man in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") schaltet und in C geschriebenen Code ausführt.
 
 ## Eigenschaften von C
 
@@ -84,6 +84,6 @@ Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 4858; parent 4798; 2009-07-30T13:28:36Z -->
+<!-- MediaWiki page 1526; revision 5139; parent 4858; 2009-08-06T10:03:07Z -->
