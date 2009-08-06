@@ -28,7 +28,7 @@ Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pushfd  ; S
 
 pushfd  ; Sichere Flags pop eax  ; Lade Flags in EAX xor eax, ecx  ; Vergleiche EAX und ECX popfd  ; Stelle Original Flags wieder her je cpuid_unsupported  ; EAX und ECX sind gleich, CPUID wird nicht unterstütz! jmp cpu_supported  ; EAX und ECX sind verschieden, CPUID wird unterstützt! \</asm\>
 
-Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl **cpuid**. Die Funktionsnummer der CPUID-Funktion wird dabei im **EAX**-Register übergeben. Die Rückgabewerte werden in den Registern **EAX**, **EBX**, **EDX** und **ECX** abgelegt.
+Um den CPUID-Befehl auszuführen, verwendet man einfach den Assembler-Befehl **CPUID**. Die Funktionsnummer der CPUID-Funktion wird dabei im **EAX**-Register übergeben. Die Rückgabewerte werden in den Registern **EAX**, **EBX**, **EDX** und **ECX** abgelegt.
 
 Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, auszulesen, ruft man CPUID mit der Funktionsnummer 0x00000000 auf. \<asm\> mov eax, 0x00000000  ; xor eax, eax bewirkt das selbe und ist schneller cpuid  ; Der Vendor-ID-String befindet sich nun in (in dieser Reihenfolge), EBX, EDX, ECX \</asm\> Ein **AMD**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Auth**", **EDX**="**enti**", **ECX**="**cAMD**"  
 Ein **Intel**-Prozessor hätte jetzt folgende Register Werte: **EBX**="**Genu**", **EDX**="**ineI**", **ECX**="**ntel**"
@@ -535,9 +535,9 @@ Der String ist nicht nullterminiert!
 
 **Achtung!**
 
-**APIC ID** ist nur gültig wenn das **[APIC-Flag](#)** gesetzt ist.  
-Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Flag](#)** gültig.  
-**CLFLUSH Size** gibt die Größe einer Cache line in 8 Byte Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#)**.
+**APIC ID** ist nur gültig wenn das **[APIC-Flag](#edx-1)** gesetzt ist.  
+Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Flag](#edx-1)** gültig.  
+**CLFLUSH Size** gibt die Größe einer Cache line in 8 Byte Blöcken an. Das Feld ist nur gültig in Verbindung mit einem gesetzten **[CFLUSH-Flag](#edx-1)**.
 
 #### ECX
 
@@ -819,16 +819,16 @@ Dieses Register gibt erweiterte Informationen über den Prozessor:
 | 27 | Unterstützt die Verwaltung von miteinander in Konflikt stehenden Speichertypen |
 | 26 | Unterstützt SSE2 |
 | 25 | Unterstütz [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") |
-| 24 | Unterstützt die **fxsave** und **fxstor** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
+| 24 | Unterstützt die **FXSAVE** und **FXSTOR** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
 | 23 | Unterstützt [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") |
 | 22 | Unterstützt Überwachung der Prozessortemperatur und Änderung des Prozessortaktes |
 | 21 | Kann Debug Informationen in im Hauptspeicher präsente Buffer schreiben |
 | 20 |  |
-| 19 | Unterstützt den **clflush** Befehl |
+| 19 | Unterstützt den **CLFLUSH** Befehl |
 | 18 | Besitzt eine 96-Bit Prozessor-Seriennummer (Nur verfügbar auf Prozessoren, die neuer als Pentium 4 sind) |
 | 17 | Unterstützt [36-Bit Page Size Extensions](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension") (4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) |
 | 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
-| 15 | Unterstützt den **cmov** |
+| 15 | Unterstützt den **CMOVcc** Befehl, mit dem Bedingte Verschiebungen vorgenommen werden können |
 | 14 |  |
 | 13 |  |
 | 12 |  |
@@ -1012,6 +1012,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5233; parent 5203; 2009-08-06T13:12:45Z -->
+<!-- MediaWiki page 1739; revision 5234; parent 5233; 2009-08-06T13:15:01Z -->
