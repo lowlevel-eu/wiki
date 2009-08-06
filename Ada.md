@@ -13,11 +13,11 @@
 [ISO-Norm](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
 
   
-**Ada** ist eine nach Ada Loveleace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte Programmiersprache, deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
+**Ada** ist eine nach Ada Loveleace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte [Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"), deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
 
-## Ada als Sprache für ein Betriebssystem
+## Ada als Sprache für ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem")
 
-Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem Kernel) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
+Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
 
 Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
@@ -60,6 +60,6 @@ Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
 
-<!-- MediaWiki page 1742; revision 4797; parent 4709; 2009-07-29T23:54:44Z -->
+<!-- MediaWiki page 1742; revision 5136; parent 4797; 2009-08-06T10:01:25Z -->
