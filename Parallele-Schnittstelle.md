@@ -92,11 +92,9 @@ Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das
 
   
 
-## Sicher auch
+## Siehe auch
 
 - [Serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle")
-
-  
 
 ## Weblinks
 
@@ -104,6 +102,6 @@ Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5352; parent 5349; 2009-08-06T17:40:44Z -->
+<!-- MediaWiki page 1996; revision 5353; parent 5352; 2009-08-06T17:41:36Z -->
