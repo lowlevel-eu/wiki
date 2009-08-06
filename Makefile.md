@@ -18,6 +18,6 @@ Da Makefiles zum Erstellen von Dateien direkte Compilerbefehle angeben, sind Mak
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
 
-<!-- MediaWiki page 1436; revision 5253; parent 4586; 2009-08-06T15:11:25Z -->
+<!-- MediaWiki page 1436; revision 5390; parent 5253; 2009-08-06T20:16:04Z -->
