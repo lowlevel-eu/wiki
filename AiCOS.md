@@ -1,5 +1,9 @@
 # AiCOS
 
+Vorlage:Hinweiss
+
+  
+
 | ![AiCOS-Logo-small.png](http://aicos.amazing-fx.de/images/AiCOS-Logo-small.png) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
@@ -23,8 +27,6 @@ AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betr
 AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln) in die Computertechnik bringen, unter anderem ein eigenes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), eigenes Netzwerkprotokoll und eine eigene Programmiersprache ... wenn es klappt.
 
 AiCOS Wurzel liegen weder in der Linux/Unix-Welt, weder in der Windows-Welt, sondern in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity").
-
-**Dieses Projekt ist zur Zeit wegen eines anderen höher priorisierten Projekt angehalten. Dieses Projekt wird jedoch später fortgesetzt.**
 
   
 
@@ -220,6 +222,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 5272; parent 4617; 2009-08-06T15:26:39Z -->
+<!-- MediaWiki page 1766; revision 5379; parent 5272; 2009-08-06T19:38:20Z -->
