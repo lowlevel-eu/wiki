@@ -104,7 +104,17 @@ Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das
 
 Da der Centronics-Stecker kein Standard war, implementierten viele Druckerhersteller ihre eigenen Funktionen und belegten die Datenleitungen nach eigenen Vorlieben. Dadurch wurden schnell Inkompatibilitäten erreicht. Seit dem Jahr 1994 wird die parallele Schnittstelle um Funktionen erweitert, die unter anderem die bidirektionale Übertragung einführt. Diese Funktionen werden unter der IEEE Norm 1284 standardisiert.
 
-  
+Unter anderem gibt es nun neue Modi zur Dateiübertragung.
+
+### Compatible Mode
+
+### Nibble Mode
+
+### Byte Mode
+
+### Enhanced Parallel Port Mode
+
+### Enhanced Capability Mode
 
 ## Siehe auch
 
@@ -116,6 +126,6 @@ Da der Centronics-Stecker kein Standard war, implementierten viele Druckerherste
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5378; parent 5353; 2009-08-06T19:25:43Z -->
+<!-- MediaWiki page 1996; revision 5385; parent 5378; 2009-08-06T19:47:28Z -->
