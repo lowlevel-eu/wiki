@@ -1,13 +1,13 @@
 # Singularity
 
 | Singularity |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | Microsoft Research |
 | Akt. Version: | 2.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Microsoft Research Lizenz (OpenSource) |
 | OS-Eigenschaften |  |
-| Plattform: | i386, x86_64, |
+| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Sing# (C#-Dialekt) |
 | API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
@@ -27,6 +27,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1492/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5295/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1492/index.html)
 
-<!-- MediaWiki page 1492; revision 5073; parent 4916; 2009-08-05T16:24:33Z -->
+<!-- MediaWiki page 1492; revision 5295; parent 5073; 2009-08-06T15:32:48Z -->
