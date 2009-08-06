@@ -1,8 +1,6 @@
 # Task State Segment
 
-Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einen Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Man kann das TSS auch benutzen, um Hardware-[Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu realisieren. Dafür wird der TSS-Deskriptor mit einem Longjump angesprungen. Dabei werden auch andere Register (wie EIP) geladen. Um ein TSS für den Ringwechsel benutzen zu können, muss es vorher mit *ltr \<Selektor\>* geladen werden.
-
-## Aufbau - Task State Segment
+**Aufbau - Task State Segment**
 
 | Offset | 31-16 | 0-15 |
 | -------- | ---------------------- | ---------------------- |
@@ -33,26 +31,26 @@ Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einen R
 | 0x60 |  | LDT Segment Selektor |
 | 0x64 | I/O Map Base Address |  |
 
-## Aufbau - TSS-Deskriptor
+Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einem Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Man kann das TSS auch benutzen, um [Hardware-Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu realisieren. Dafür wird der TSS-Deskriptor mit einem Longjump angesprungen. Dabei werden auch andere Register (wie EIP) geladen. Um ein TSS für den Ringwechsel benutzen zu können, muss es vorher mit *ltr \<Selektor\>* geladen werden.
 
-**Task State Segment Deskriptor (BITs) Teil 1**
+  
 
-| **31 - 24** | **23** | **21 - 22** | **20** | **19 - 16** | **15** | **13 - 14** | **12** | **11 - 8** | **0 - 7** |
-| -------------------- | -------- | ------------- | -------- | ------------- | -------- | ------------- | -------- | ------------ | -------------------- |
-| Basisadresse 31-24 | G | 0 | AVL | Größe 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
+### Aufbau - TSS-Deskriptor
 
-**Task State Segment Deskriptor (BITs) Teil 2**
+**Task State Segment Deskriptor**
 
-| **31 - 24** | **16 - 0** |
-| --------------------- | -------------- |
-| Basisadresse 15 - 0 | Größe 15 - 0 |
+| 31-24 | 23 | 21-22 | 20 | 19-16 | 15 | 14-13 | 12 | 11-8 | 7-0 |
+| -------------------- | ----- | ------- | ----- | ------------- | ----- | ------- | ----- | ------ | -------------------- |
+| Basisadresse 31-24 | G | 0 | AVL | Limit 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
 
-### Type = Deskriptor Typ
+| 31-16 | 15-0 |
+| ------------------- | ------------ |
+| Basisadresse 15-0 | Limit 15-0 |
 
-Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
+- *Type* - Deskriptor Typ - Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5338/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 4831; parent 4830; 2009-07-30T01:46:35Z -->
+<!-- MediaWiki page 1599; revision 5338; parent 4831; 2009-08-06T16:29:17Z -->
