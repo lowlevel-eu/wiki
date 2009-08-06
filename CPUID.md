@@ -45,7 +45,7 @@ CPUID-Funktion Nr. 0x00 gibt höchste vom Prozessor unterstützte Funktionsnumme
 
 Der String ist nicht nullterminiert!
 
-#### EAX
+#### EAX - Höchste Standard-Funktion
 
 <table>
 <tbody><tr>
@@ -120,7 +120,7 @@ Der String ist nicht nullterminiert!
 <td colspan="32">Höchste, unterstützte Standard-Funktion
 </td></tr></tbody></table>
 
-#### EBX
+#### EBX - Vendor
 
 <table>
 <tbody><tr>
@@ -195,7 +195,7 @@ Der String ist nicht nullterminiert!
 <td colspan="32">Bytes 0 - 3 des Vendor-ID-Strings
 </td></tr></tbody></table>
 
-#### ECX
+#### ECX - Vendor
 
 <table>
 <tbody><tr>
@@ -270,7 +270,7 @@ Der String ist nicht nullterminiert!
 <td colspan="32">Bytes 8 - 11 des Vendor-ID-Strings
 </td></tr></tbody></table>
 
-#### EDX
+#### EDX - Vendor
 
 <table>
 <tbody><tr>
@@ -347,6 +347,8 @@ Der String ist nicht nullterminiert!
 
 #### Vendor-ID-Strings
 
+Eine Liste der möglichen Vendor-ID-Strings
+
 | Vendor-ID-String | Hersteller |
 | ------------------ | ------------------------ |
 | `"AuthenticAMD"` | AMD |
@@ -363,7 +365,7 @@ Der String ist nicht nullterminiert!
 
 ## Funktion 0x0000_0001
 
-#### EAX
+#### EAX - Prozessor
 
 <table>
 <tbody><tr>
@@ -452,7 +454,7 @@ Der String ist nicht nullterminiert!
 <td colspan="4">Stepping
 </td></tr></tbody></table>
 
-#### EBX
+#### EBX - Sonstiges
 
 <table>
 <tbody><tr>
@@ -541,6 +543,8 @@ Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Fl
 
 #### ECX - Featureflags
 
+Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprechende Feature unterstützt.
+
 <table>
 <tbody><tr>
 <th colspan="32">Bit
@@ -611,9 +615,7 @@ Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Fl
 <th>0
 </th></tr>
 <tr>
-<td colspan="1">RAZ
-</td>
-<td colspan="3">
+<td colspan="4">
 </td>
 <td colspan="1">OSXSAVE
 </td>
@@ -651,6 +653,8 @@ Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Fl
 </td>
 <td colspan="1">EST
 </td>
+<td colspan="1">VMX
+</td>
 <td colspan="1">SMX
 </td>
 <td colspan="1">DS-CPL
@@ -662,16 +666,160 @@ Die Anzahl der logischen Prozessoren ist nur bei gesetztem **[Hyper-Threading-Fl
 <td colspan="1">
 </td>
 <td colspan="1">SSE3
+</td></tr></tbody></table> <table>
+<tbody><tr>
+<th>Bit
+</th>
+<th>Funktion
+</th></tr>
+<tr>
+<th colspan="1">31
+</th>
+<td rowspan="4">
+</td></tr>
+<tr>
+<th colspan="1">30
+</th></tr>
+<tr>
+<th colspan="1">29
+</th></tr>
+<tr>
+<th colspan="1">28
+</th></tr>
+<tr>
+<th colspan="1">27
+</th>
+<td colspan="1">Zeigt an, dass das <a href="https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem" title="Betriebssystem">Betriebssystem</a> die Befehle <b>XSETBV</b> und <b>XGETBV</b> aktiviert hat, um auf das <b>XFEATURE_ENABLE_MASK</b> Register (<b>XCR0</b>) zuzugreifen und die erweiterten Zustandsfeatures <b>XSAVE</b> und <b>XRSTOR</b> zu nutzen
+</td></tr>
+<tr>
+<th colspan="1">26
+</th>
+<td colspan="1">Unterstützt die erweiterten Zustandsfeatures <b>XSAVE</b> und <b>XRSTOR</b>, die Befehle <b>XSETBV</b> und <b>XGETBV</b> und implementiert das <b>XFEATURE_ENABLE_MASK</b> Register (<b>XCR0</b>)
+</td></tr>
+<tr>
+<th colspan="1">25
+</th>
+<td rowspan="2">
+</td></tr>
+<tr>
+<th colspan="1">24
+</th></tr>
+<tr>
+<th colspan="1">23
+</th>
+<td colspan="1">Unterstützt den <b>POPCNT</b> Befehl
+</td></tr>
+<tr>
+<th colspan="1">22
+</th>
+<td colspan="1">Unterstützt den <b>MOVBE</b> Befehl
+</td></tr>
+<tr>
+<th colspan="1">21
+</th>
+<td colspan="1">Unterstützt x2APIC-Features
+</td></tr>
+<tr>
+<th colspan="1">20
+</th>
+<td colspan="1">Unterstützt SSE4.2
+</td></tr>
+<tr>
+<th colspan="1">19
+</th>
+<td colspan="1">Unterstützt SSE4.1
+</td></tr>
+<tr>
+<th colspan="1">18
+</th>
+<td colspan="1">Unterstützt das prefetchen von Daten von einem in den Speicher gemappten Gerät
+</td></tr>
+<tr>
+<th colspan="1">17
+</th>
+<td rowspan="2">
+</td></tr>
+<tr>
+<th colspan="1">16
+</th></tr>
+<tr>
+<th colspan="1">15
+</th>
+<td colspan="1">Unterstützt das Performance Capabilities MSR (<b>IA32_PERF_CAPABILITIES</b>, MSR 0x345)
+</td></tr>
+<tr>
+<th colspan="1">14
+</th>
+<td colspan="1">Unterstützt die Möglichkeit, das Senden von Task Priority Messages abzuschalten, indem Bit 23 im <b>IA32_MISC_ENABLE</b> MSR gesetzt wird
+</td></tr>
+<tr>
+<th colspan="1">13
+</th>
+<td colspan="1">Unterstützt den <b>CMPXCHG16B</b> Befehl
+</td></tr>
+<tr>
+<th colspan="1">12
+</th>
+<td rowspan="2">
+</td></tr>
+<tr>
+<th colspan="1">11
+</th></tr>
+<tr>
+<th colspan="1">10
+</th>
+<td colspan="{{{1}}}">Der L1-Cachemodus kann vom Bios entweder auf <b>adaptive</b> oder auf <b>shared</b> gesetzt werden
+</td></tr>
+<tr>
+<th colspan="1">9
+</th>
+<td colspan="1">Unterstützt SSSE3
+</td></tr>
+<tr>
+<th colspan="1">8
+</th>
+<td colspan="1">Implementiert den "Thermal Monitor 2 thermal control circuit" (TCC)
+</td></tr>
+<tr>
+<th colspan="1">7
+</th>
+<td colspan="1">Unterstützt Enhanced Intel SpeedStep und implementiert das <b>IA32_PERF_STS</b> Register und das <b>IA32_PERF_CTL</b> Register
+</td></tr>
+<tr>
+<th colspan="1">6
+</th>
+<td colspan="1">Unterstützt Intel Trusted Execution
+</td></tr>
+<tr>
+<th colspan="1">5
+</th>
+<td colspan="1">Unterstützt <a title="Virtualisierung (Seite nicht vorhanden)">VMX</a>
+</td></tr>
+<tr>
+<th colspan="1">4
+</th>
+<td colspan="1">Unterstützt die Erweiterungen des Debug Speicher Features um durch CPL qualifizierten Branch Message Speicher zu nutzen
+</td></tr>
+<tr>
+<th colspan="1">3
+</th>
+<td colspan="1">Unterstützt den <b>MONITOR</b> Befehl und den <b>MWAIT</b> Befehl
+</td></tr>
+<tr>
+<th colspan="1">2
+</th>
+<td colspan="1">Kann den Verlauf der 64-Bit Branch in/von Adressen in einen Buffer schreiben
+</td></tr>
+<tr>
+<th colspan="1">1
+</th>
+<td colspan="1">
+</td></tr>
+<tr>
+<th colspan="1">0
+</th>
+<td colspan="1">Unterstützt SSE3
 </td></tr></tbody></table>
-
-Dieses Register gibt erweiterte Informationen über den Prozessor:
-
-| Bits | Funktion |
-| ------ | ---------------------------------------------------- |
-| 9 | Verfügbarkeit von SSSE3 |
-| 5 | Verfügbarkeit von Virtual Machine Extensions (VMX) |
-| 3 | Die Befehle MONITOR und MWAIT sind verfügbar |
-| 0 | Verfügbarkeit von SSE3 |
 
 #### EDX - Featureflags
 
@@ -821,7 +969,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt(=1) ist, dann wird das entsprec
 | 27 | Unterstützt die Verwaltung von miteinander in Konflikt stehenden Speichertypen |
 | 26 | Unterstützt SSE2 |
 | 25 | Unterstütz [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") |
-| 24 | Unterstützt die **FXSAVE** und **FXSTOR** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
+| 24 | Unterstützt die **FXSAVE** und **FXRSTOR** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
 | 23 | Unterstützt [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") |
 | 22 | Unterstützt Überwachung der Prozessortemperatur und Änderung des Prozessortaktes |
 | 21 | Kann Debug Informationen in im Hauptspeicher präsente Buffer schreiben |
@@ -978,6 +1126,6 @@ Eingebrannter String (Fortsetzung)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5238; parent 5237; 2009-08-06T13:40:57Z -->
+<!-- MediaWiki page 1739; revision 5241; parent 5238; 2009-08-06T14:37:51Z -->
