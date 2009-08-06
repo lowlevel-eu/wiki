@@ -14,7 +14,7 @@ Das BIOS ist das "Ur-Programm" eines x86-Rechners (im Nachfolgendem nur noch "PC
 
 Nach dem POST versucht es von einer Liste von Laufwerken einen Bootloader zu laden. Dieser wird an Adresse 0x7C00 geladen und dann ausgeführt; Ab da hat das Betriebssystem die volle Kontrolle über den PC.
 
-Allerdings ist das BIOS (zumindest im Real-Mode) noch immer aktiv: Es stellt eine Menge an Intrerupts zur Kommunikation mit den verschiedenen Peripheriegeräten bereit.
+Allerdings ist das BIOS (zumindest im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")) noch immer aktiv: Es stellt eine Menge an Intrerupts zur Kommunikation mit den verschiedenen Peripheriegeräten bereit.
 
 ## Weblinks
 
@@ -22,6 +22,6 @@ Allerdings ist das BIOS (zumindest im Real-Mode) noch immer aktiv: Es stellt ein
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5167/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 5118; parent 5115; 2009-08-06T09:37:53Z -->
+<!-- MediaWiki page 1616; revision 5167; parent 5118; 2009-08-06T11:20:19Z -->
