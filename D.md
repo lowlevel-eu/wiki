@@ -14,9 +14,9 @@
 
 D ist eine prozedurale sowie objekorientierte und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") und der Nähe zum System von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu vereinen.
 
-## D als Sprache für ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem")
+## D als Sprache für ein Betriebssystem
 
-D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr system-nah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-Assembler (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
+D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-Assembler (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
 
 ## Kernel in D
 
@@ -244,6 +244,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 5166; parent 5052; 2009-08-06T11:19:02Z -->
+<!-- MediaWiki page 1863; revision 5176; parent 5166; 2009-08-06T11:26:09Z -->
