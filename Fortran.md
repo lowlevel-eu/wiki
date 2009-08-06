@@ -1,13 +1,13 @@
 # Fortran
 
 | Allgemeines |  |
-| -------------------------------- | ------------- |
+| -------------------------------- | ----------------------- |
 | Name: | Fortran |
-| Inlineassembler: | Nein |
+| Inlineassembler: | {{{Inlineassembler}}} |
 | Compiler: | g77 |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | Siehe Unten |
+| Beispielkernel in der Sprache: | {{{Kernel}}} |
 | Homepage |  |
 
   
@@ -95,6 +95,6 @@ Fortran ist eine prozedurale und objektorientierte [Programmiersprache](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5188/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1745/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1745/index.html)
 
-<!-- MediaWiki page 1745; revision 5188; parent 4795; 2009-08-06T11:42:55Z -->
+<!-- MediaWiki page 1745; revision 5189; parent 5188; 2009-08-06T11:43:22Z -->
