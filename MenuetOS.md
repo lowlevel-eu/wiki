@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Ville Turjanmaa |
-| Akt. Version: | i386: 0.85<br>x86_64: 0.87B |
+| Akt. Version: | i386: 0.85<br>x86_64: 0.90Q |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
 | Plattform: | i386, x86_64 |
@@ -18,14 +18,14 @@
 <http://www.menuetos.net/>
 
   
-**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und unter der [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") freigegeben wird. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder Posix, sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt.
+**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und unter der [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") freigegeben wird. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt.
 
 ## Releases
 
 Die derzeit aktuellen Versionen sind:
 
 - MenuetOS 32 v0.85
-- MenuetOS 64 v0.72
+- MenuetOS 64 v0.90Q
 
 ## Features
 
@@ -35,10 +35,11 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 - [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") (Graphical User Interface)
 - IDE: Editor/Makro Assembler um Kernel und Anwendungen zu erzeugen
 - TCP/IP Stack mit Loopback, PPP & Ethernettreibern
-- Netzwerkanwendungen inklusive FTP/HTTP/MP3/SMTP Server
-- IRC, HTTP, NNTP und TFTP Clients
+- Netzwerkanwendungen inklusive FTP-/HTTP-/MP3-/SMTP-Server
+- IRC-, HTTP-, NNTP-, E-Mail- und TFTP-Clients
 - Freigestaltbare Programmfenster
-- Echtzeit Datenverarbeitung
+- Echtzeitdatenverarbeitung
+- USB-2.0-Support für High-Speed-Storage, Webcams und Drucker
 - Passt unkomprimiert auf eine einzelne Diskette
 
 ## siehe auch
@@ -47,6 +48,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 3176; parent 3165; 2008-08-15T11:22:20Z -->
+<!-- MediaWiki page 1481; revision 5154; parent 3176; 2009-08-06T10:59:44Z -->
