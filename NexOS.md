@@ -7,7 +7,7 @@
 | Akt. Version: | 0.0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | x86 |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), NPL (NexOS Programming Language; für Programme) |
 | API: | Int 0xFF |
@@ -124,6 +124,6 @@ Project Nexos hat auch einen IRC-Channel, der auf dem Server irc.euirc.net unter
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4629/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1884/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5286/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1884/index.html)
 
-<!-- MediaWiki page 1884; revision 4629; parent 0; 2009-07-13T16:28:49Z -->
+<!-- MediaWiki page 1884; revision 5286; parent 4629; 2009-08-06T15:30:53Z -->
