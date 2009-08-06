@@ -966,10 +966,10 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 29 | Implementiert den "Thermal Monitor aumatic thermal control circuitry" (TCC) |
 | 28 | Kann mehr als einen logischen Prozessor verwalten |
 | 27 | Unterstützt die Verwaltung von miteinander in Konflikt stehenden Speichertypen |
-| 26 | Unterstützt SSE2 |
-| 25 | Unterstütz [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") |
+| 26 | Unterstützt [SSE2](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "Streaming SIMD Extensions") |
+| 25 | Unterstütz [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "Streaming SIMD Extensions") |
 | 24 | Unterstützt die **FXSAVE** und **FXRSTOR** Befehle, mit denen die [Floatingpointregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") schnell gesichert werden können |
-| 23 | Unterstützt [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") |
+| 23 | Unterstützt MMX |
 | 22 | Unterstützt Überwachung der Prozessortemperatur und Änderung des Prozessortaktes |
 | 21 | Kann Debuginformationen in im Hauptspeicher vorhandene Buffer schreiben |
 | 20 |  |
@@ -2989,6 +2989,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5360; parent 5359; 2009-08-06T17:54:43Z -->
+<!-- MediaWiki page 1739; revision 5373; parent 5360; 2009-08-06T19:00:24Z -->
