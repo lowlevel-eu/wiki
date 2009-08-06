@@ -1,12 +1,12 @@
 # Ada
 
 | Allgemeines |  |
-| -------------------------------- | ------------------------- |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | Ada |
 | Inlineassembler: | Nein |
 | Compiler: | GNAT (GNU Ada Compiler) |
 | Spracheneigenschaften |  |
-| Plattformen: | Linux, Windows |
+| Plattformen: | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") |
 | Beispielkernel in der Sprache: | {{{Kernel}}} |
 | Homepage |  |
 
@@ -60,6 +60,6 @@ Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
 
-<!-- MediaWiki page 1742; revision 5136; parent 4797; 2009-08-06T10:01:25Z -->
+<!-- MediaWiki page 1742; revision 5137; parent 5136; 2009-08-06T10:02:07Z -->
