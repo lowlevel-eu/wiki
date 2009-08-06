@@ -11,7 +11,7 @@ FreeBSD ist vor allem bei Internet-Providern weit verbreitet. So setzt auch das 
 Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt es schon die Version 5.3, welche sehr viel Funktionen hat, die ich jetzt nicht alle aufzählen will. Nähere Informationen bekommt man auf der Homepage. Das [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") läuft auf neun verschiedenen Plattformen:
 
 - alpha
-- [amd64](https://lowlevel-eu.github.io/wiki/pages/1913/index.html "Kategorie:X86-64")
+- [amd64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64")
 - [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
 - ia64
 - pc98
@@ -38,6 +38,6 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf <http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5278/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1455/index.html)
 
-<!-- MediaWiki page 1455; revision 5193; parent 4821; 2009-08-06T11:46:46Z -->
+<!-- MediaWiki page 1455; revision 5278; parent 5193; 2009-08-06T15:28:32Z -->
