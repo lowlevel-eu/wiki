@@ -1,18 +1,18 @@
 # Cross-Compiler
 
-Ein Cross-Compiler ist ein Compiler, der Objektdateien für eine andere Plattform (Zielplattform oder target) als die Verwendete (host) erzeugt. Die Zielplattform kann sich dabei sowohl beim Betriebssystem, als auch beim verwendeten Prozessor unterscheiden.
+Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die Verwendete (host) erzeugt. Die Zielplattform kann sich dabei sowohl beim [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), als auch beim verwendeten Prozessor unterscheiden.
 
 ## Anforderungen
 
-Um einen Cross-Compiler zu bauen, werden die üblichen GNU-Tools benötigt. Dazu gehören binutils, gcc und make.
+Um einen Cross-Compiler zu bauen, werden die üblichen GNU-Tools benötigt. Dazu gehören binutils, [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und [make](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Make").
 
-### Linux
+### [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 
-Auf vielen Linux-Distributionen sind diese Programme standardmässig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere debian-Derivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev und texinfo).
+Auf vielen Linux-Distributionen sind diese Programme standardmäßig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere Debianderivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev und texinfo).
 
-### Windows
+### [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
 
-Wer Windows einsetzt hat grundsätzlich zwei Möglichkeiten an diese Tools zu kommen. Entweder [cygwin](http://www.cygwin.com/) ([Direktlink zum Installer](http://www.cygwin.com/setup.exe)) oder [mingw](http://www.mingw.org/)
+Wer Windows einsetzt, hat grundsätzlich zwei Möglichkeiten an diese Tools zu kommen. Entweder [Cygwin](http://www.cygwin.com/) ([Direktlink zum Installer](http://www.cygwin.com/setup.exe)) oder [mingw](http://www.mingw.org/)
 
 #### Cygwin
 
@@ -26,9 +26,9 @@ Die Installation von Cygwin gestaltet sich recht einfach. Bei der Installation m
 
 optional:
 
-- Devel -\> nasm
+- Devel -\> [nasm](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "Netwide Assembler")
 
-Nach der Installtion müssen die Shellbefehle (siehe unten) in die cygwin Shell eingegeben werden.
+Nach der Installation müssen die Shellbefehle (siehe unten) in die Cygwin-[Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") eingegeben werden.
 
 #### mingw
 
@@ -38,7 +38,7 @@ TODO
 
 ## binutils
 
-Die GNU-binutils beinhalten unter anderem den Linker ld, den Assembler as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind streng genommen auch Bestandteil des Cross-Compilers, da sie auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.19.1 ausgegangen:
+Die GNU-binutils beinhalten unter anderem den [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker") ld, den [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind streng genommen auch Bestandteil des Cross-Compilers, da sie auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.19.1 ausgegangen:
 
     $ wget http://ftp.gnu.org/gnu/binutils/binutils-2.19.1.tar.bz2
 
@@ -48,7 +48,7 @@ Er müsste aber auch für jüngere und ältere Versionen funktionieren. Nach dem
 
 ### Konfigurieren
 
-Der nächste Schritt ist das Konfigurieren. Die Dokumentation empfiehlt binutils ausserhalb des Quellverzeichnisses zu konfigurieren und zu kompilieren:
+Der nächste Schritt ist das Konfigurieren. Die Dokumentation empfiehlt, binutils außerhalb des Quellverzeichnisses zu konfigurieren und zu kompilieren:
 
     $ mkdir binutils-build
     $ cd binutils-build
@@ -80,7 +80,7 @@ Nachdem nun die binutils kompiliert und installiert wurden, kann mit gcc weiterg
 
     $ export PATH="/usr/local/crosstools/bin:$PATH"
 
-Wichtig ist hier, dass der eigene Pfad vor den originalen Pfaden steht, damit sicher die vorhin kompilierten binutils benutzt werden. Der Pfad /usr/local/crosstools muss auch hier wieder angepasst werden, wenn für den Präfix bei Binutils ein anderer benutzt wurde. Als nächstes muss der Quellcode von gcc heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/gcc> bezogen werden. Während dem Schreiben dieses Artikels wurde die Version 4.4.0 benutzt. Aber auch hier gilt wieder, dass das auf andere Versionen übertragen werden kann. Das Archiv mit Namen gcc-core-\<VERSION\>.tar.bz2 muss auf jeden Fall heruntergeladen werden. Falls auch ein C++ Compiler gewünscht wird, ist auch gcc-g++-\<VERSION\>.tar.bz2 notwendig. Nach dem Download des einen oder der beiden Archive müssen diese wieder entpackt werden:
+Wichtig ist hier, dass der eigene Pfad vor den originalen Pfaden steht, damit sicher die vorhin kompilierten binutils benutzt werden. Der Pfad /usr/local/crosstools muss auch hier wieder angepasst werden, wenn für den Präfix bei Binutils ein anderer benutzt wurde. Als nächstes muss der Quellcode von gcc heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/gcc> bezogen werden. Während dem Schreiben dieses Artikels wurde die Version 4.4.0 benutzt. Aber auch hier gilt wieder, dass das auf andere Versionen übertragen werden kann. Das Archiv mit Namen gcc-core-\<VERSION\>.tar.bz2 muss auf jeden Fall heruntergeladen werden. Falls auch ein [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") Compiler gewünscht wird, ist auch gcc-g++-\<VERSION\>.tar.bz2 notwendig. Nach dem Download des einen oder der beiden Archive müssen diese wieder entpackt werden:
 
     $ wget http://ftp.gnu.org/gnu/gcc/gcc-4.4.0/gcc-core-4.4.0.tar.bz2
     $ wget http://ftp.gnu.org/gnu/gcc/gcc-4.4.0/gcc-g++-4.4.0.tar.bz2
@@ -99,7 +99,7 @@ Beim Konfigurieren von gcc muss unbedingt darauf geachtet werden, dass der selbe
 
 ### Kompilieren
 
-Auch hier ist der nächste Schritt nach dem Konfigurieren wieder das Kompilieren. Dieser Prozess dauert je nach Prozessorleistung recht lange. Hier kann auch wie bei binutils die Option -j3 benutzt werden. Gestartet wird das Kompilieren folgendermassen:
+Auch hier ist der nächste Schritt nach dem Konfigurieren wieder das Kompilieren. Dieser Prozess dauert je nach Prozessorleistung recht lange. Hier kann auch wie bei binutils die Option -j3 benutzt werden. Gestartet wird das Kompilieren folgendermaßen:
 
     $ make all-gcc all-target-libgcc
 
@@ -115,6 +115,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 5014; parent 4452; 2009-08-01T18:54:22Z -->
+<!-- MediaWiki page 1628; revision 5163; parent 5014; 2009-08-06T11:14:05Z -->
