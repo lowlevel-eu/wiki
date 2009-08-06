@@ -27,7 +27,7 @@ Dies ist die "Abbildung" eines Ethernet-I-Paketes. Den Teil, der aus den MAC-Adr
 
 ![ethernet2.png](http://freenet-homepage.de/xanclic/ethernet2.png)
 
-Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-Paket: Statt dem Längenfeld gibt es ein Typfeld, welches den Typ der Nutzdaten angibt. Der Wert im Typfeld ist stets größer als 0x0600 (1536), sodass zwischen Ethernet-I-Paketen (der Wert muss kleiner oder gleich 0x05DC (1500) sein) und zwischen Ethernet-II-Paketen unterschieden werden kann. Wichtige Typwerte sind 0x0800 (IP) und 0x0806 (ARP).
+Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-Paket: Statt dem Längenfeld gibt es ein Typfeld, welches den Typ der Nutzdaten angibt. Der Wert im Typfeld ist stets größer als 0x0600 (1536), sodass zwischen Ethernet-I-Paketen (der Wert muss kleiner oder gleich 0x05DC (1500) sein) und zwischen Ethernet-II-Paketen unterschieden werden kann. Wichtige Typwerte sind 0x0800 (IP) und 0x0806 ([ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "Address Resolution Protocol")).
 
 ## Was muss ich senden?
 
@@ -43,6 +43,6 @@ An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
 
-<!-- MediaWiki page 1876; revision 4644; parent 4572; 2009-07-14T18:45:42Z -->
+<!-- MediaWiki page 1876; revision 5214; parent 4644; 2009-08-06T12:17:00Z -->
