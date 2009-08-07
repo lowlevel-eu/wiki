@@ -6,7 +6,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Es gibt so gut wie keinen Menschen, der alles kann. Auch nicht im OS-Development. Deshalb sind gute Nachschlagewerke und Bücher zum Lernen eine gute Sache. Natürlich gibt es eine Fülle von Büchern, die einen besser, die einen schlechter. Um den Überblick zu wahren hier eine kleine Liste von emfehlenswerten Büchern und (Online-)Tutorials.
 
-  
+Leider sind die meisten hier genannten Bücher als Fach- oder Lehrbücher sehr teuer. Darum sei an dieser Stelle nochmal an die leider viel zu oft vergessenen Bibliotheken verwiesen. Zwar wird man bei seiner Stadtbibliothek oft kein Glück haben, jedoch sind viele Büchereien über Hinweise, welche Fachbücher angeschafft werden sollten, teilweise sehr dankbar. Wenn alle Stricke reißen, dann lohnt sich (auch für Schüler) fast immer eine Mitgliedschaft bei der Bibliothek der nächsten Universität, besonders wenn sie Informatikstudiengänge anbietet. Sollte diese gut erreichbar sein, so ist ein Besuch ein absolutes Muss.
 
 ## Bücher: Programmierung
 
@@ -62,6 +62,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5476; parent 5475; 2009-08-07T21:19:04Z -->
+<!-- MediaWiki page 1930; revision 5477; parent 5476; 2009-08-07T21:29:41Z -->
