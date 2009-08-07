@@ -70,6 +70,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5469/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 5469; parent 5465; 2009-08-07T20:17:15Z -->
+<!-- MediaWiki page 1518; revision 5470; parent 5469; 2009-08-07T20:17:42Z -->
