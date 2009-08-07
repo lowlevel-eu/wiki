@@ -26,7 +26,7 @@ Um in den Long Mode umschalten zu können, muss erst einmal der [Protected Mode]
 
 **Achtung!**
 
-Das Paging funktioniert im Long Mode ein wenig anders als im Protected Mode. Siehe auch: [Paging im Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
+Das Paging funktioniert im Long Mode ein wenig anders als im Protected Mode.
 
 ## Links
 
@@ -35,6 +35,6 @@ Das Paging funktioniert im Long Mode ein wenig anders als im Protected Mode. Sie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 5429; parent 5424; 2009-08-07T10:47:10Z -->
+<!-- MediaWiki page 1666; revision 5432; parent 5429; 2009-08-07T10:51:31Z -->
