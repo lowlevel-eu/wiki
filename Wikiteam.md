@@ -7,7 +7,7 @@ Das Team umfasst:
 
 - [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"), der Mann für die Typos und Redirects
 - [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ"), ist zur Stelle wenn es um CPUID und x86-64 geht und steht auf Prettytables
-- [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"), der legendäre Erfinder der Prettytables
+- [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"), der legendäre Prettytable-Supporter und ansonsten Wiki-Rechtschreibungshausmeister
 - [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), findet falsche Grammatik und formuliert sie anders und vergisst, den Button "Nur Kleinigkeiten" anzukreuzen sehr gerne
 
   
@@ -19,10 +19,10 @@ Natürlich bist aber **du** aufgerufen, ebenfalls mitzuarbeiten:
 - Du weißt etwas zu einem Thema, zu dem es noch gar keinen Artikel gibt?
 
   
-Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Fragen komm ins [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"), genauer im euIRC in den Channel \#lowlevelwiki oder stell eine Frage im [Forum](http://lowlevel.brainsware.org/forum/index.php?board=1.0) (Oder direkt [hier](http://lowlevel.brainsware.org/forum/index.php?topic=2240.0)).
+Dann melde dich an, falls du das noch nicht getan hast, und hilf mit! Für Fragen komm in den [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"), genauer im euIRC in den Channel \#lowlevelwiki oder stell eine Frage im [Forum](http://lowlevel.brainsware.org/forum/index.php?board=1.0) (Oder direkt [hier](http://lowlevel.brainsware.org/forum/index.php?topic=2240.0)).
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
 
-<!-- MediaWiki page 2004; revision 5451; parent 5441; 2009-08-07T15:02:33Z -->
+<!-- MediaWiki page 2004; revision 5455; parent 5451; 2009-08-07T18:55:31Z -->
