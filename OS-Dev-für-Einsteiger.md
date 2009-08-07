@@ -20,11 +20,11 @@ Wer sich nicht mit Hardware herumschlagen möchte, kann sich ein DOS oder ein ab
 
 ### Voraussetzungen
 
-Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie möglich machen will, ist Betriebssystementwicklung dennoch sehr komplex, und einige Fertigkeiten sind einfach nötig. Ich will nicht sagen, dass man die Fertigkeiten nicht durch "learning-by-doing" erwerben kann, jedoch wird das bei diesem Thema sehr frustrierend. Außerdem wärst Du dann allein, weil die meisten Supporter bei Erklärungen zu Betriebssystemtheorie nicht bei Adam und Eva anfangen können.
+Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie möglich machen will, ist Betriebssystementwicklung dennoch sehr komplex, und einige Fertigkeiten sind einfach nötig. Ich will nicht sagen, dass man die Fertigkeiten nicht durch "learning-by-doing" erwerben kann, jedoch wird das bei diesem Thema sehr frustrierend. Außerdem wärst Du dann allein, weil die meisten Forenmitglieder bei Erklärungen zu Betriebssystemtheorie nicht bei Adam und Eva anfangen können.
 
 #### Unverzichtbar
 
-- Programmiererfahrung. Wenn Du noch nie ein Programm geschrieben hast, bist Du hier ziemlich sicher falsch. Wenn Du einen Einstieg suchst, dann werden Dir die Lowlevel-Forenmitglieder sicher trotzdem dabei helfen, Tutorials und Ressourcen zum Anfang zu finden.
+- Programmiererfahrung. Wenn Du noch nie ein Programm geschrieben hast, bist Du hier ziemlich sicher falsch. Wenn Du einen Einstieg suchst, dann werden Dir die Lowlevel-Forenmitglieder sicher trotzdem dabei helfen, Tutorials und Ressourcen zum Einstieg zu finden.
 - Gute Kenntnis des Systems. Wenn Du regelmäßig mit der Bedienung Deines Betriebssystems kämpfst, dann ist es schwer, dabei Arbeit getan zu kriegen. Ein Windowsnutzer braucht eventuell sogar mehr Erfahrung als ein Linuxer, da sich manche Tools auf Windows zu Beginn recht zickig verhalten können.
 - Neugier und Geduld. Vermutlich die heimlichen Kernqualifikationen jedes Programmierers. Ohne Neugier und Geduld wird es schwer, die Frustrationen der Betriebssystementwicklung zu überstehen.
 
@@ -166,6 +166,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5479/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5480/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 5479; parent 4885; 2009-08-07T22:07:54Z -->
+<!-- MediaWiki page 1619; revision 5480; parent 5479; 2009-08-07T22:15:30Z -->
