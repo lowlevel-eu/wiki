@@ -19,17 +19,17 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 ## Anwendungen
 
 - FTP-Client
-- Hilfesystem
+- Mail-Client
 - Setup (Installation & Konfiguration)
 
 ## LostIO
 
 - Berechtigungen setzen und abfragen
-- ioctl um kompatibler zu bestehenden Systemen und Anwendungen zu werden (und um alternativ weitere files im vfs einzusparen)
+- ioctl/fcntl um kompatibler zu bestehenden Systemen und Anwendungen zu werden (und um alternativ weitere Files im vfs einzusparen)
 - Dokumentation/SDK
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5420/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 3803; parent 3802; 2009-01-02T14:33:40Z -->
+<!-- MediaWiki page 1513; revision 5420; parent 3803; 2009-08-07T02:31:44Z -->
