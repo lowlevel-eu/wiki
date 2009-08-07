@@ -15,9 +15,8 @@ Wenn der PC neu gestartet wird, so befindet er sich im sogenannten Real-Mode. In
     Hinweis:
     JEDER kompatible x86 Prozessor läuft beim Booten noch im 16-Bit Realmode. Dazu gehören auch Pentium 4,
     Athlon XP und sonstige in dieser Reihe. Für einen Athlon64 sollte dies ebenfalls zutreffen, da dessen Archtiektur
-    ledliglich auf 64-Bit Register und einen 64-Adressbuch erweitert wurde. Ob Intel Itanium 1/2 ebenfalls von
-    dieser Regel betroffen sind kann ich nicht mit Sicherheit sagen, da ich noch keine in den Fingern hatte, jedoch
-    gehe ich davon aus.
+    ledliglich auf 64-Bit Register und einen 64-Adressbuch erweitert wurde. Dagegen wurde er beim Intel Itanium 1/2 abgeschafft,
+    da diese nicht x86 kompatibel sind.
 
     (Kommentar: Das stimmt auch für die 64-Bit Prozessoren)
 
@@ -302,6 +301,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 5343; parent 4835; 2009-08-06T16:44:21Z -->
+<!-- MediaWiki page 1464; revision 5478; parent 5343; 2009-08-07T21:48:41Z -->
