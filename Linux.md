@@ -35,8 +35,15 @@ Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Gra
 
 Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskettenlaufwerk zum Beispiel wird über /dev/fd0 angesprochen. Linux besitzt keine Laufwerksbuchstaben wie MS-DOS und Windows, die erste Festplatte (bei IDE) findet man unter /dev/hda.
 
+## Weblinks
+
+- [Das Linux-Kernel-Archiv, sozusagen offizielle Seite von Linux](http://kernel.org)
+- [Linux-Crossreference, Sourcecode online anschauen und untersuchen](http://lxr.linux.no)
+- [Linus' Git-Tree, "offizieller" Hauptentwicklungszweig](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary)
+- [DistroWatch, Infos zu allen möglichen Distributionen von Linux (und BSD)](http://distrowatch.com)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5371/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 5371; parent 5300; 2009-08-06T18:47:50Z -->
+<!-- MediaWiki page 1641; revision 5440; parent 5371; 2009-08-07T14:37:24Z -->
