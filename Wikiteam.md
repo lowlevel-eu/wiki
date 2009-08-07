@@ -19,10 +19,10 @@ Natürlich bist aber **du** aufgerufen, ebenfalls mitzuarbeiten:
 - Du weißt etwas zu einem Thema, zu dem es noch gar keinen Artikel gibt?
 
   
-Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Fragen komm ins [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"), genauer im euIRC in den Channel \#lowlevelwiki.
+Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Fragen komm ins [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"), genauer im euIRC in den Channel \#lowlevelwiki oder stell die Frage im [Forum](http://lowlevel.brainsware.org/forum/index.php?topic=2240.0).
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
 
-<!-- MediaWiki page 2004; revision 5416; parent 5415; 2009-08-07T02:19:43Z -->
+<!-- MediaWiki page 2004; revision 5438; parent 5416; 2009-08-07T14:35:19Z -->
