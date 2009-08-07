@@ -9,7 +9,7 @@ Hilf Lowlevel, den Artikel zu verbessern.
   
 Unter **Prozess** (auch **Task** genannt) versteht ein sich in der Ausführung befindendes Programm, welches vom Betriebssystem in Form einer Prozessliste verwaltet wird.
 
-Um den Unterschied von Prozess und Programm deutlich zu machen, gibt es hier eine kleine Analogie von Andrew Tanenbaum: Wenn ein Koch (die CPU) einen Kuchen backt, dann benutzt er dazu Zutaten (die Daten) und ein Kochbuch (das Programm). Weder der Koch, noch die Zutaten oder das Kochbuch sind der Prozess des Kuchenbackens, alle sind nur Teil dieses abstrakten Vorgangs. <sup>\[ [1](https://github.com/lowlevel-eu/wiki/wiki/Prozess#quellen "Prozess") \]</sup>
+Um den Unterschied von Prozess und Programm deutlich zu machen, gibt es hier eine kleine Analogie von Andrew Tanenbaum: Wenn ein Koch (die CPU) einen Kuchen backt, dann benutzt er dazu Zutaten (die Daten) und ein Kochbuch (das Programm). Weder der Koch, noch die Zutaten oder das Kochbuch sind der Prozess des Kuchenbackens, alle sind nur Teil dieses abstrakten Vorgangs. <sup>\[[1](https://github.com/lowlevel-eu/wiki/wiki/Prozess#quellen "Prozess")\]</sup>
 
 ## Threads
 
@@ -35,6 +35,6 @@ Die Vorraussetzungen für Benutzerthreads sind in den Programmen selbst enthalte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5453/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 5453; parent 5452; 2009-08-07T18:37:33Z -->
+<!-- MediaWiki page 1993; revision 5454; parent 5453; 2009-08-07T18:40:36Z -->
