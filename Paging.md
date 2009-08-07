@@ -100,6 +100,6 @@ Es besteht aber auch die Möglichkeit, Zugriff auf den gesamten physischen Speic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 5431; parent 5126; 2009-08-07T10:51:09Z -->
+<!-- MediaWiki page 1496; revision 5443; parent 5431; 2009-08-07T14:57:11Z -->
