@@ -80,10 +80,10 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 ### Intel
 
 - [I/O APIC](http://www.intel.com/design/chipsets/datashts/290566.htm)
-- [Intel Architecture Software Developer's Manual Volume 3: System Programming](http://www.intel.com/design/pentiumii/manuals/243192.htm)
+- [Intel Architecture Software Developer's Manual Volume 3: System Programming](http://www.intel.com/products/processor/manuals/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 4431; parent 3738; 2009-06-09T03:39:54Z -->
+<!-- MediaWiki page 1437; revision 5426; parent 4431; 2009-08-07T10:22:33Z -->
