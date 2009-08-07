@@ -114,6 +114,6 @@ struct initialization_block {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 5463; parent 0; 2009-08-07T19:56:53Z -->
+<!-- MediaWiki page 2025; revision 5473; parent 5463; 2009-08-07T20:56:40Z -->
