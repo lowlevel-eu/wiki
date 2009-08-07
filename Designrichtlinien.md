@@ -26,6 +26,6 @@ Aufgrund der Tatsache, dass die Artikel manchmal doof wirken, finde ich, sollten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4251/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 4251; parent 4206; 2009-04-04T14:41:34Z -->
+<!-- MediaWiki page 1832; revision 5461; parent 4251; 2009-08-07T19:01:28Z -->
