@@ -8,6 +8,6 @@ Mithilfe der Physical Adress Extensions ist es möglich, beim [Paging](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1982/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5449/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1982/index.html)
 
-<!-- MediaWiki page 1982; revision 5309; parent 5308; 2009-08-06T15:42:14Z -->
+<!-- MediaWiki page 1982; revision 5449; parent 5309; 2009-08-07T15:01:17Z -->
