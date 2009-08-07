@@ -4,7 +4,7 @@
 
 Der Artikel wird zur Zeit bearbeitet. Bitte bearbeite diesen Artikel nicht! Es kann zu Darstellungsproblemen während des Betrachtens des Artikels kommen. [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 12:14, 7. Aug. 2009 (CEST)
 
-Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals 64-Bit-Allzweckregister zur Verfügung stehen. Wie auch beim [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") starten Prozessoren, die diesen Modus unterstützen, aus Kompatibilitätsgründen zunächst im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") mit deaktiviertem [A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate").
+Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals [64-Bit-Allzweckregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") zur Verfügung stehen. Wie auch beim [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") starten Prozessoren, die diesen Modus unterstützen, aus Kompatibilitätsgründen zunächst im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") mit deaktiviertem [A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate").
 
 ## Eigenschaften
 
@@ -12,7 +12,7 @@ Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals 64-Bit-Allzwec
 - Viele neue Register (z.B. R8-R15, CR8-CR15, ...)
 - ...
 
-## Wie überprüfe ich, ob die CPU den Long Mode unterstützt?
+## Überprüfung der Unterstützung
 
 CPUs, die den Long Mode unterstützen, setzen bei einem Aufruf der [CPUID Funktion 0x80000001](https://github.com/lowlevel-eu/wiki/wiki/CPUID#funktion-0x8000_0001 "CPUID") das [Long-Mode-Capable-Bit (Bit 29)](https://github.com/lowlevel-eu/wiki/wiki/CPUID#edx---erweiterte-featureflags "CPUID") im EDX-Register auf 1. Sicherheitshalber sollte man auch noch überprüfen, [Physical Address Extensions](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension") unterstützt werden.
 
@@ -20,13 +20,33 @@ CPUs, die den Long Mode unterstützen, setzen bei einem Aufruf der [CPUID Funkti
 
 mov eax, 0x00000001 cpuid  ; CPUID Funktion 0x0000_0001 aufrufen and edx, 0x00000040  ; PAE-Bit isolieren test edx, edx  ; Wenn EDX jetzt 0 ist, war das PAE-Bit nicht gesetzt jz long_unsupported  ; Long Mode nicht unterstützt! jmp long_supported  ; Long Mode unterstützt! \</asm\>
 
-## Wie schalte ich den Long Mode um?
+## Aktivierung des Long Mode
 
 Um in den Long Mode umschalten zu können, muss erst einmal der [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") aktiviert werden ([Es geht auch anders](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")). Eine weitere Voraussetzung ist, dass das **[Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension")**-Bit (Bit 5) im [CR4](https://github.com/lowlevel-eu/wiki/wiki/Control-Register#cr4 "Control Register") Register gesetzt und **[Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")** aktiviert ist. Jetzt kann der Long Mode mit dem Setzen des LME-Bits (Bit 8) im **MSR 0xC00000080** aktiviert werden. Im eigentlichen Long Mode befindet man sich aber erst, wenn man in ein 64-Bit-Code-Segment wechselt, das im Vergleich zu den 32-Bit-Code-Segmenten in seinem Descriptor das L-Bit (Bit 21) im 2. DWord gesetzt hat.
 
 **Achtung!**
 
 Das Paging funktioniert im Long Mode ein wenig anders als im Protected Mode.
+
+Sobald man diesen Beispielcode um ein paar Pagingstrukturen erweitert, aktiviert er den Long Mode.
+
+\<asm\> mov eax, cr4  ; CR4 einlesen or eax, 0x20  ; Physical Address Extension-Bit setzen mov cr4, eax  ; CR4 beschreiben
+
+\~\~\~\~\~\~\~\~~  ; Pagingstrukturen initialisieren
+
+mov eax, PML4_ADDRESS  ; Die Adresse des Page Map Level 4 hier eintragen mov cr3, eax
+
+mov ecx, 0xC0000080  ; Wir brauchen Zugriff aus das MSR-Register 0xC0000080 rdmsr  ; MSR-Register einlesen or eax, 0x00000100 ; Long Mode einschalten wrmsr  ; MSR-Register beschreiben
+
+mov eax, cr0  ; CR0 einlesen or eax, 0x80000000  ; Das Paging-Bit setzen mov cr0, eax  ; CR0 beschreiben, ab jetzt sind wir im Long Mode
+
+db 0xEA  ; Das ist ein far jmp, ich bekomms nit anders hin \>\< dd kernel.longmode  ; Die neue Adresse für EIP/RIP dw 0x30  ; Das 64-Bit Code Segment
+
+\[bits 64\] kernel.longmode: ; Jetzt führen wir auch endlich 64-Bit Code aus jmp \$  ; Endlosschleife xD \</asm\>
+
+## Es geht auch anders
+
+Vorlage:Hinweiss
 
 ## Links
 
@@ -35,6 +55,6 @@ Das Paging funktioniert im Long Mode ein wenig anders als im Protected Mode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 5432; parent 5429; 2009-08-07T10:51:31Z -->
+<!-- MediaWiki page 1666; revision 5436; parent 5432; 2009-08-07T13:09:35Z -->
