@@ -28,7 +28,11 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mä
 - ["C: Bibliotheksfunktionen sicher anwenden" von Helmut Erlenkötter](http://www.amazon.de/Bibliotheksfunktionen-sicher-anwenden-Helmut-Erlenk%C3%B6tter/dp/3499612232)  
   Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kennitnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
 - ["C++ von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/von-bis-CD-ROM-umfassende-Handbuch/dp/3898428168)  
-  Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert.
+  Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert. Dazu kommt noch eine CD mit der HTML-Version des untenstehenden Buches "C von A bis Z".
+- ["C von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/umfassende-Handbuch-Linux-Unix-Windows/dp/3898426432)  
+  Das passende C-Handbuch vom selben Autor, es ist beim Verlag auch als HTML-Version als [kostenloses Openbook](http://openbook.galileocomputing.de/c_von_a_bis_z/) verfügbar. Ist sehr gut zum Lernen, jedoch teilweise verwirrend geschrieben, und für den OS-Entwickler teilweise zu ungenau. Trotzdem insgesamt eine empfehlenswerte Referenz. (ACHTUNG: Im September 2009 erscheint eine neue Auflage. Eventuell lohnt es sich, um das neue, aktuellere Buch zu kaufen, oder das alte Buch eventuell billiger zu kriegen)
+
+  
 
 ## Bücher: OS-Development
 
@@ -56,6 +60,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5474/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5435; parent 5434; 2009-08-07T13:02:42Z -->
+<!-- MediaWiki page 1930; revision 5474; parent 5435; 2009-08-07T21:13:10Z -->
