@@ -1,9 +1,5 @@
 # Long Mode
 
-**Achtung!**
-
-Der Artikel wird zur Zeit bearbeitet. Bitte bearbeite diesen Artikel nicht! Es kann zu Darstellungsproblemen während des Betrachtens des Artikels kommen. [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") 12:14, 7. Aug. 2009 (CEST)
-
 Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals [64-Bit-Allzweckregister](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") zur Verfügung stehen. Wie auch beim [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") starten Prozessoren, die diesen Modus unterstützen, aus Kompatibilitätsgründen zunächst im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") mit deaktiviertem [A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate").
 
 ## Eigenschaften
@@ -55,6 +51,6 @@ Vorlage:Hinweiss
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 5436; parent 5432; 2009-08-07T13:09:35Z -->
+<!-- MediaWiki page 1666; revision 5437; parent 5436; 2009-08-07T13:55:48Z -->
