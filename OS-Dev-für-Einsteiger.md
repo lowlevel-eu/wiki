@@ -8,47 +8,60 @@ Auf der anderen Seite wird er sicher auch die eine oder andere Frage offen lasse
 
 ## Vor dem Start
 
-Frisch ans Werk, Editor und Compiler ausgepackt - aber halt! Bevor es wirklich losgeht, solltest Du Dir einige Fragen beantworten, damit Du weißt, was Du überhaupt entwickeln willst und worüber Du Informationen suchen musst.
+Frisch ans Werk, Editor und Compiler ausgepackt – aber halt! Bevor es wirklich losgeht, solltest Du Dir einige Fragen beantworten, damit Du weißt, was Du überhaupt entwickeln willst und worüber Du Informationen suchen musst.
 
 ### Willst Du wirklich ein OS schreiben?
 
 Die Frage klingt vielleicht seltsam, aber sie ist genau so gemeint, wie sie da steht. Willst Du wirklich ein OS entwickeln? Ist Dir klar, was ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") macht?
 
-Wenn Du in erster Linie an eine grafische Oberfläche denkst, bist Du hier womöglich falsch. Grafische Oberflächen sind ein interessantes Thema - aber eine vollkommen andere Baustelle. Ein OS ist die Schnittstelle zur Hardware. Das heißt, Du wirst eine Speicherverwaltung bauen, einen Scheduler, Treiber für störrische Hardware. Du wirst alles tun, nur keine bunten Pixel auf den Bildschirm bringen - oder falls doch, wird dir direkt anschließend die saubere Basis fehlen, damit man mit diesen Pixeln auch etwas sinnvolles anfangen kann.
+Wenn Du in erster Linie an eine grafische Oberfläche denkst, bist Du hier womöglich falsch. Grafische Oberflächen sind ein interessantes Thema – aber eine vollkommen andere Baustelle. Ein OS ist die Schnittstelle zur Hardware. Das heißt, Du wirst eine Speicherverwaltung bauen, einen Scheduler, Treiber für störrische Hardware. Du wirst alles tun, nur keine bunten Pixel auf den Bildschirm bringen – oder falls doch, wird dir direkt anschließend die saubere Basis fehlen, damit man mit diesen Pixeln auch etwas sinnvolles anfangen kann.
 
 Wer sich nicht mit Hardware herumschlagen möchte, kann sich ein DOS oder ein abgespecktes Linux als Grundlage nehmen und seine Oberfläche darauf aufbauen.
 
+### Voraussetzungen
+
+Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie möglich machen will, ist Betriebssystementwicklung dennoch sehr komplex, und einige Fertigkeiten sind einfach nötig. Ich will nicht sagen, dass man die Fertigkeiten nicht durch "learning-by-doing" erwerben kann, jedoch wird das bei diesem Thema sehr frustrierend. Außerdem wärst Du dann allein, weil die meisten Supporter bei Erklärungen zu Betriebssystemtheorie nicht bei Adam und Eva anfangen können.
+
+#### Unverzichtbar
+
+- Programmiererfahrung. Wenn Du noch nie ein Programm geschrieben hast, bist Du hier ziemlich sicher falsch. Wenn Du einen Einstieg suchst, dann werden Dir die Lowlevel-Forenmitglieder sicher trotzdem dabei helfen, Tutorials und Ressourcen zum Anfang zu finden.
+- Gute Kenntnis des Systems. Wenn Du regelmäßig mit der Bedienung Deines Betriebssystems kämpfst, dann ist es schwer, dabei Arbeit getan zu kriegen. Ein Windowsnutzer braucht eventuell sogar mehr Erfahrung als ein Linuxer, da sich manche Tools auf Windows zu Beginn recht zickig verhalten können.
+- Neugier und Geduld. Vermutlich die heimlichen Kernqualifikationen jedes Programmierers. Ohne Neugier und Geduld wird es schwer, die Frustrationen der Betriebssystementwicklung zu überstehen.
+
+#### Hilfreich, aber nicht unbedingt nötig
+
+- Unix-Kenntnisse.
+- Assembler. Zwar braucht man nur einige Zeilen Assembler (wenn man es richtig macht), und das nötige Stück Assembler sich haben viele durch "learning-by-doing" angeeignet, jedoch helfen Kenntnisse von Assembler enorm beim Verständnis. Es lohnt sich eigentlich bei jedem Projekt, eine Abstraktionsschicht tiefer schauen zu können.
+- Englisch. Handbücher und andere Dokumentation sind kaum auf Deutsch zu finden, und das, was man findet, ist häufig veraltet. Außerdem ist OSDev.org oft noch besser als das Lowlevel-Wiki. Wir arbeiten dran *\*g\**
+
 ### Die Programmiersprache
 
-Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") schreiben muss. Quatsch. Man kann, wenn man es möchte, aber man muss nicht. Wahr ist, dass man um einige wenige Zeilen Assembler nicht herumkommen wird. Ein grundlegendes Verständnis der Sprache wäre daher hilfreich, jahrelange Erfahrung ist aber nicht nötig.
+Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") schreiben muss, oder sogar erst einen Compiler entwickeln müsste. Quatsch. Man kann, wenn man es möchte, aber man muss nicht. Wahr ist, dass man um einige wenige Zeilen Assembler nicht herumkommen wird, aber es hält sich in Grenzen.
 
 Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im großen und ganzen zwei Alternativen:
 
 - Du nimmst [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Fast jeder spricht diese Sprache und Du bekommst Unmengen an Beispielcode in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können.
-- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst Dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst Dich möglicherweise öfter selbst durchschlagen - gerade wenn es um Besonderheiten deiner Sprache oder Deines Compilers geht.
+- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst Dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst Dich möglicherweise öfter selbst durchschlagen – gerade wenn es um Besonderheiten deiner Sprache oder Deines Compilers geht.
 
 Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") sind beispielsweise [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") oder [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") (mit FreePascal oder mit Tricks auch Delphi als Compiler). Theoretisch würde auch [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") funktionieren. Andere Sprachen hat hier meines Wissens noch niemand versucht, könnten natürlich aber trotzdem funktionieren.
 
 ### Entwicklungsumgebung und Tools
 
-Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein. Wie man sich eine [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") einrichtet, welche Tools man für sein Vorhaben benötigt und auf welchen Plattformen (Linux, Windows, ...) dies möglich ist, wird im Artikel [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") genauer erläutert.
+Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein. Wie man sich eine Entwicklungsumgebung einrichtet, welche Tools man für sein Vorhaben benötigt und auf welchen Plattformen (Linux, Windows, ...) dies möglich ist, wird im Artikel [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") genauer erläutert.
 
 #### Dein Computer
 
-Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natürlich strenggenommen keinen PC. Aber es wäre geschickt, denn ich nehme an, Du willst ein x86-Betriebssystem schreiben. Wenn Du wider Erwarten für eine andere Plattform entwickeln möchtest, teil Dich im Forum mit, das wird auch andere interessieren - allerdings bist dann Du derjenige, der erklären darf. Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten sind für den Anfang das handlichste. Und ein 386er oder höher sollte es schon sein - aber das sollte heutzutage machbar sein.
+Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natürlich strenggenommen keinen PC. Aber es wäre geschickt, denn ich nehme an, Du willst ein x86-Betriebssystem schreiben. Wenn Du wider Erwarten für eine andere Plattform entwickeln möchtest, teil Dich im Forum mit, das wird auch andere interessieren – allerdings bist dann Du derjenige, der erklären darf. Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten sind für den Anfang das handlichste. Und ein 386er oder höher sollte es schon sein – aber das sollte heutzutage machbar sein.
 
 #### Dein Betriebssystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung (jedenfalls wenn man GRUB und daher ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben - aber lassen wir das...
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung (jedenfalls wenn man GRUB und daher ELF benutzen möchte – und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben – aber lassen wir das...
 
 Falls Du kein Linux auf deinem Rechner installieren willst und auch keinen Bock hast, unter Windows eine geignete Umgebung herstellen, nimm einfach Knoppix. Das ist allerdings auf Dauer keine richtige Lösung. Deswegen empfehle ich Dir, Linux richtig zu installieren. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
 
 #### Deine Tools
 
-Dann brauchst Du Editor und Compiler. Als Editor hast Du sicher schon Deinen eigenen Favoriten (nämlich vim), aber wenn nicht, dann findest Du vielleicht in der folgenden Liste einen für Dich passenden. Häufig benutzt werden:
-
-- Unter Linux: vim, Kate, gedit, KDevelop, Eclipse
-- Unter Windows: Notepad++, Eclipse
+Dann brauchst Du Editor und Compiler. Als Editor hast Du sicher schon Deinen eigenen Favoriten (nämlich vim), aber wenn nicht, dann findest Du sicherlich im Artikel zu [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") einen passenden.
 
 Auch beim Compiler ist die Sache relativ klar: Wenn Du [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") nimmst, wird der Compiler im Allgemeinen gcc sein und unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist damit alles geklärt. Wenn Du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzt, solltest du dir überlegen, ob Du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach.
 
@@ -56,7 +69,7 @@ Auch beim Compiler ist die Sache relativ klar: Wenn Du [C](https://github.com/lo
 
 #### Dein Emulator
 
-Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
+Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") – oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
 
 - <http://www.qemu.org>
 - <http://bochs.sourceforge.net>
@@ -74,7 +87,7 @@ Die folgenden beiden Artikel werden Dir bei den ersten Schritten mit [GRUB](http
 - [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB")
 - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen") (Falls Du Windows benutzt, ist es vermutlich einfacher, ein vorhandenes GRUB-Image z.B. von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") zu nehmen und den Kernel durch den eigenen zu ersetzen)
 
-Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schreiben - so sei es. In den ersten Ausgaben des [Magazins](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin") findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst - insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
+Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schreiben – so sei es. In den ersten Ausgaben des [Magazins](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin") findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst – insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
 
 ### Hello World und weiter
 
@@ -88,14 +101,14 @@ Aber mit dieser Erkenntnis hast du auch schon eine schöne Aufgabe für den näc
 
 Wenn Du GRUB benutzt, bist Du zwar bereits am Anfang im Protected Mode, allerdings mit einem Standardsatz von Deskriptortabellen. Es wäre jetzt an der Zeit, das zu ändern.
 
-Oh, Du hast keine Ahnung, was Du Dir unter Deskriptortabellen vorzustellen hast? Lies Dir am besten den Artikel zum Protected Mode durch - oder wenn Du einen groben Überblick hast, kannst Du auch direkt zum Artikel über die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") übergehen. Wenn Du Deinen Bootloader selbst schreibst, findest Du dort auch Informationen, wie Du selbst in den Protected Mode umschaltest. Außerdem ist das Protected-Mode-Tutorial auf den Seiten der FH Zwickau zu empfehlen.
+Oh, Du hast keine Ahnung, was Du Dir unter Deskriptortabellen vorzustellen hast? Lies Dir am besten den Artikel zum Protected Mode durch – oder wenn Du einen groben Überblick hast, kannst Du auch direkt zum Artikel über die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") übergehen. Wenn Du Deinen Bootloader selbst schreibst, findest Du dort auch Informationen, wie Du selbst in den Protected Mode umschaltest. Außerdem ist das Protected-Mode-Tutorial auf den Seiten der FH Zwickau zu empfehlen.
 
 - [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
 - [Umschalten in Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode")
 - [Global Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "Global Descriptor Table") (GDT)
 - [Protected-Mode-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm)
 
-Was Du zunächst machen musst, ist, eine GDT im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut - das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
+Was Du zunächst machen musst, ist, eine GDT im Speicher aufzubauen. Mit der Beschreibung auf den genannten Seiten sollte das kein Problem darstellen (aber gräme Dich nicht, wenn es nicht im ersten Versuch hinhaut – das ist für viele die erste Stelle, wo sie erst einmal eine Weile hängen).
 
 Wenn Du die GDT aufgebaut hast, kannst Du sie anschließend laden. Das ist einer der wenigen Fälle, wo Du tatsächlich Assembler brauchst. Wenn Du C benutzt, könnte dir der Artikel über [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") helfen. Ansonsten schlag in der Dokumentation deines Compilers nach, wie es dort funktioniert.
 
@@ -113,7 +126,7 @@ Wenn Du die IDT fertig eingerichtet hast, kannst du sie am besten testen, indem 
 
 - [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller")
 
-Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürden genommen. Für diejenigen unter uns, die gerne etwas sehen und irgendwas zum Spielen brauchen, wäre das ein guter Zeitpunkt, einfach mal einen Tastaturtreiber zu schreiben und ein bisschen was auszuprobieren. Es kommen noch genug schwere Sachen, bis Dein Produkt sich zurecht ein Betriebssystem nennen kann, aber hey, wenn ich zwei Zahlen eingeben kann und die werden addiert - das ist doch schonmal ein Erfolgserlebnis, oder? Mich hat das jedenfalls motiviert.
+Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürden genommen. Für diejenigen unter uns, die gerne etwas sehen und irgendwas zum Spielen brauchen, wäre das ein guter Zeitpunkt, einfach mal einen Tastaturtreiber zu schreiben und ein bisschen was auszuprobieren. Es kommen noch genug schwere Sachen, bis Dein Produkt sich zurecht ein Betriebssystem nennen kann, aber hey, wenn ich zwei Zahlen eingeben kann und die werden addiert – das ist doch schonmal ein Erfolgserlebnis, oder? Mich hat das jedenfalls motiviert.
 
 ## Der eigentliche Kernel
 
@@ -123,13 +136,13 @@ Wenn Du bis hierhin gekommen bist, hast Du mittlerweile etwas, was sich Kernel n
 
 Unter der *Architektur* Deines Betriebssystem ist die Art und Weise zu verstehen, wie die Komponenten Deines Systems zusammenspielen. Bevor Du anfängst, Code für die eigentliche Funktionalität des Kernels zu schreiben, solltest Du Dir klar sein, in welche Richtung die Reise gehen soll.
 
-- Die allerwichtigste Entscheidung, die das Aussehen Deines Betriebssystems am schwerwiegendsten beeinflussen wird, ist die Entscheidung zwischen [monolithischem Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") (die Hardwaretreiber sind alle im Kernel) und [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") (der Kernel macht nur das notwendigste, Treiber sind eigenständige [Userspace](https://github.com/lowlevel-eu/wiki/wiki/Userspace "Userspace")-Prozesse) - oder natürlich beliebiger Mischformen davon, z.B. ein modularisierter Monolith wie [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux").
+- Die allerwichtigste Entscheidung, die das Aussehen Deines Betriebssystems am schwerwiegendsten beeinflussen wird, ist die Entscheidung zwischen [monolithischem Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") (die Hardwaretreiber sind alle im Kernel) und [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") (der Kernel macht nur das notwendigste, Treiber sind eigenständige [Userspace](https://github.com/lowlevel-eu/wiki/wiki/Userspace "Userspace")-Prozesse) – oder natürlich beliebiger Mischformen davon, z.B. ein modularisierter Monolith wie [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux").
 - Besonders beim Microkernel ist eine zentrale Frage, wie die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") aussehen soll. Auch bei einem monolithischen Kernel ist es kein Fehler, sich diese Frage zu stellen, auch wenn sie eher nachrangig ist.
 - Wie soll die Schnittstelle der Programme zum Kernel aussehen? (z.B. [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"))
 
 ### Die Aufgaben des Kernels
 
-Bevor Du Dir anschaust, welche Funktionen Dein Kernel bieten soll, versichere Dich, dass Du weißt, was ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") überhaupt ist. Ja, klar, er ist der Kern des Betriebssystems. Und weiter? Seine zentrale Aufgabe ist es, die Ressourcen des Systems zu verwalten - z.B. den laufenden Programmen Speicher zuzuteilen.
+Bevor Du Dir anschaust, welche Funktionen Dein Kernel bieten soll, versichere Dich, dass Du weißt, was ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") überhaupt ist. Ja, klar, er ist der Kern des Betriebssystems. Und weiter? Seine zentrale Aufgabe ist es, die Ressourcen des Systems zu verwalten – z.B. den laufenden Programmen Speicher zuzuteilen.
 
 Im Allgemeinen wird für Betriebssysteme im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") ein Modell verwendet, in dem der Kernel in [Ring](https://github.com/lowlevel-eu/wiki/wiki/Ring "Ring") 0 (Kernel Mode) und alle Programme in Ring 3 (User Mode) laufen. Als grobe Richtung kannst Du Dir merken, dass der Kernel alles das ist, was in Ring 0 läuft. Wenn ein User-Mode-Programm Betriebssystemfunktionen benötigt (z.B. mehr Speicher), ruft es den Kernel auf.
 
@@ -153,6 +166,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4885/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5479/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 4885; parent 4762; 2009-07-30T17:16:15Z -->
+<!-- MediaWiki page 1619; revision 5479; parent 4885; 2009-08-07T22:07:54Z -->
