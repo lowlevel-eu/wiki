@@ -10,27 +10,19 @@ Und für die Praxisleute werde ich am Ende auch noch etwas Code bereitstellen, w
 
 ## Der Protected Mode
 
-Wenn der PC neu gestartet wird, so befindet er sich im sogenannten Real-Mode. In diesem Modus wird nur 16-Bit Code benutzt, sowie der Speicher, der adressierbar ist, auf 1 MB begrenzt, da im Real-Mode nur 20 Bit Adressen zur Adressierung des Speichers benutzt werden dürfen (bzw. können).
+Wenn der PC neu gestartet wird, so befindet er sich im sogenannten [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"). In diesem Modus wird nur 16-Bit Code benutzt, sowie der Speicher, der adressierbar ist, auf 1 MiB begrenzt, da im Real Mode nur 20 Bit Adressen zur Adressierung des Speichers gebildet werden können.
 
-    Hinweis:
-    JEDER kompatible x86 Prozessor läuft beim Booten noch im 16-Bit Realmode. Dazu gehören auch Pentium 4,
-    Athlon XP und sonstige in dieser Reihe. Für einen Athlon64 sollte dies ebenfalls zutreffen, da dessen Archtiektur
-    ledliglich auf 64-Bit Register und einen 64-Adressbuch erweitert wurde. Dagegen wurde er beim Intel Itanium 1/2 abgeschafft,
-    da diese nicht x86 kompatibel sind.
-
-    (Kommentar: Das stimmt auch für die 64-Bit Prozessoren)
+Vorlage:Hinweiss
 
   
-Im Real-Mode gibt es entscheidende Nachteile. Die verschiedenen laufenden Programme werden alle gleich behandelt. Das heißt, jedes Programm kann ohne Einschränkung auf den kompletten Speicher zugreifen und diesen verändern. Auch der Kernel eines Betriebssystems ist nicht geschützt. Somit ist ein Betriebssystem das im Real-Mode läuft anfällig für jegliche Art von Viren und Programmierfehlern. Selbst ein einfacher Programmierfehler, welcher verursacht, dass an eine ungewollte Speicheradresse Daten verändert werden, kann dazu führen, dass das komplette System zum Absturz gebracht wird oder instabil läuft. Auch könnten Ergebnisse anderer Programme die im Speicher sind verändert werden, was den korrekten Ablauf jenes Programms erheblich stören kann.
+Im Real Mode gibt es entscheidende Nachteile. Die verschiedenen laufenden Programme werden alle gleich behandelt. Das heißt, jedes Programm kann ohne Einschränkung auf den kompletten Speicher zugreifen und diesen verändern. Auch der Kernel eines Betriebssystems ist nicht geschützt. Somit ist ein Betriebssystem das im Real Mode läuft anfällig für jegliche Art von Viren und Programmierfehlern. Selbst ein einfacher Programmierfehler, welcher verursacht, dass an eine ungewollte Speicheradresse Daten geschrieben werden, kann dazu führen, dass das komplette System zum Absturz gebracht wird oder instabil läuft. Auch könnten Ergebnisse anderer Programme die im Speicher sind verändert werden, was den korrekten Ablauf jenes Programms erheblich stören kann.
 
-Microsoft DOS ist ein Betriebssystem das im Real-Mode läuft. Da dieses System früher hauptsächlich von Privatpersonen als Single-User-System genutzt wurde, waren die eben aufgezeigten Sicherheitsrisiken zu vernachlässigen. Zudem kam noch hinzu, das das Internet noch sehr wenig verbeitet war und daher die Gefahr von Viren und dergleichen ebenfalls zu vernachlässigen war.
+Microsoft DOS ist ein Betriebssystem das im Real Mode läuft. Da dieses System früher hauptsächlich von Privatpersonen als Single-User-System genutzt wurde, waren die eben aufgezeigten Sicherheitsrisiken zu vernachlässigen. Zudem kam noch hinzu, dass das Internet noch sehr wenig verbreitet war und daher die Gefahr von Viren und dergleichen ebenfalls zu vernachlässigen war.
 
-    Hinweis:
-    Das "vernachlässigen" bezieht sich lediglich auf den Entwurf des Betriebssystems, jedoch nicht auf die Gefahren
-    die dennoch klar bestanden!
+Vorlage:Hinweiss
 
   
-Microsoft DOS ist ein gutes Beispiel um die Entwicklung bis hin zum Protected Mode aufzuführen. DOS ist eines der ersten Betriebssysteme die für den Heim-PC entworfen wurden. Dieses war im Gegensatz zu vielen Anderen sehr leicht bedienbar. An Sicherheitsrisiken war damals noch nicht zu denken, da es diese einfach noch nicht gab, mal abgesehen von Programmierfehlern. Zu jener Zeit als DOS erschien, dürfte der Intel 8086 mit 64? KB Speicher wohl gerade das Maß der Dinge gewesen sein. Da die Rechenleistung und der Arbeitsspeicher begrenzt waren, und es wohl eh kaum in Frage kam, dass mehrere Anwendungen "gleichzeitig" laufen würden, war der Entwurf von DOS als Single-Task Betriebssystem wohl ausreichend. Später erschien dann der 80186 und der 80286, welcher schon einen größeren Vorteil mit sich brachte. Zum einen war hier schon ein 20 Bit-Adressbus (dieser wurde soweit, ich mich Erinnern kann, bereits schon vor dem 286 eingeführt) mit welchem man einen 1 MB großen Arbeitsspeicher ansprechen konnte, sowie eine erste Version des Protected Mode. Da dieser Entwurf des Protected Mode wohl nicht sehr gut durchdacht war und auch (meines Wissens nach) nicht sehr oft genutzt wurde, wurde dieser nochmal kräftig überholt und im schließlich erscheinenden 386 eingeführt, welcher nun auch einen Adressbus von 32 Bit besaß, womit man einen 4 GB (zu dieser Zeit wohl utopisch) großen Arbeitsspeicher ansprechen konnte. Bevor ich nun jedoch aufzähle und im kurzen erkläre, wozu der Protected Mode dient und was er so kann, möchte ich jedoch noch einmal kurz auf einen oft hinterfragtem Umstand eingehen; Die Abwärtskompatibilität. Ja, wer hat diesen Begriff denn nicht schoneinmal gehört. Damit ist schlichtweg (in diesem Fall) gemeint, dass neue Hardware so entworfen wird, dass diese auch mit älterer Software zusammenarbeitet. Dies ist auch der hauptsächliche Grund, warum selbst ein Pentium 4 (der wohl üblich meist mit Windows2000 und "besser" ausgeliefert wird) heute immernoch im Real-Mode startet. Man könnte also selbst DOS noch auf einem Pentium 4 betreiben, was natürlich eine Verschwendung der Rechenleistung wäre, mal abgesehen von einem Arbeitsspeicher der heutzutage wohl standardmäßig um die 512 MB umfassen dürfte. Aus Gründen besagter Abwärtskompatibilität trifft man gerade als Programmierer immer wieder auf komische Software und vor allem Strukturkonstrukte, die etwas merkwürdig vom Aufbau und Inhalt erscheinen mögen. Dies hat SELTEN etwas mit Effizienz, sondern meist vielmehr mit Abwärtskompatibilität zu tun. Daher erscheint es auch meist mehr als witzig, wenn die Intel-Entwickler in einem Register das eine oder andere Bit als "reserved" ungenutzt lassen um evtl. später bei einem "kleinen" Prozessorupdate dieses auch noch zu nutzen. Witzig ist es gerade deshalb, weil es selten vorkommt, das ein neu entwickelter Prozessor nur so wenig Änderungen mit sich bringt, bei denen gerade dieses bisher ungenutzte Bit nun benutzt wird. Meistens werden gleich komplette neue Register erstellt. Aber soviel dazu.
+[Microsoft DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "Microsoft Disk Operating System") ist ein gutes Beispiel um die Entwicklung bis hin zum Protected Mode aufzuführen. DOS ist eines der ersten Betriebssysteme die für den Heim-PC entworfen wurden. Dieses war im Gegensatz zu vielen Anderen sehr leicht bedienbar. An Sicherheitsrisiken war damals noch nicht zu denken, da es diese einfach noch nicht gab, mal abgesehen von Programmierfehlern. Zu jener Zeit als DOS erschien, dürfte der Intel 8086 mit 64 KiB Speicher wohl gerade das Maß der Dinge gewesen sein. Da die Rechenleistung und der Arbeitsspeicher begrenzt waren, und es wohl eh kaum in Frage kam, dass mehrere Anwendungen „gleichzeitig“ laufen würden, war der Entwurf von DOS als Single-Task Betriebssystem wohl ausreichend. Später erschien dann der 80186 und der 80286, welcher schon einen größeren Vorteil mit sich brachte. Zum einen war hier schon ein 20 Bit-Adressbus (dieser wurde soweit, ich mich Erinnern kann, bereits schon vor dem 286 eingeführt) mit welchem man einen 1 MiB großen Arbeitsspeicher ansprechen konnte, sowie eine erste Version des Protected Mode. Da dieser Entwurf des Protected Mode wohl nicht sehr gut durchdacht war und auch (meines Wissens nach) nicht sehr oft genutzt wurde, wurde dieser nochmal kräftig überholt und im schließlich erscheinenden 386 eingeführt, welcher nun auch einen Adressbus von 32 Bit besaß, womit man einen 4 GiB (zu dieser Zeit wohl utopisch) großen Arbeitsspeicher ansprechen konnte. Bevor ich nun jedoch aufzähle und im kurzen erkläre, wozu der Protected Mode dient und was er so kann, möchte ich jedoch noch einmal kurz auf einen oft hinterfragtem Umstand eingehen; Die Abwärtskompatibilität. Ja, wer hat diesen Begriff denn nicht schon einmal gehört. Damit ist schlichtweg (in diesem Fall) gemeint, dass neue Hardware so entworfen wird, dass diese auch mit älterer Software zusammenarbeitet. Dies ist auch der hauptsächliche Grund, warum selbst ein Pentium 4 (der wohl üblich meist mit Windows2000 und „besser“ ausgeliefert wird) heute immer noch im Real Mode startet. Man könnte also selbst DOS noch auf einem Pentium 4 betreiben, was natürlich eine Verschwendung der Rechenleistung wäre, mal abgesehen von einem Arbeitsspeicher der heutzutage wohl standardmäßig um die 512 MiB umfassen dürfte. Aus Gründen besagter Abwärtskompatibilität trifft man gerade als Programmierer immer wieder auf komische Software und vor allem Strukturkonstrukte, die etwas merkwürdig vom Aufbau und Inhalt erscheinen mögen. Dies hat *selten* etwas mit Effizienz, sondern meist vielmehr mit Abwärtskompatibilität zu tun. Daher erscheint es auch meist mehr als witzig, wenn die Intel-Entwickler in einem Register das eine oder andere Bit als „reserved“ ungenutzt lassen um evtl. später bei einem „kleinen“ Prozessorupdate dieses auch noch zu nutzen. Witzig ist es gerade deshalb, weil es selten vorkommt, das ein neu entwickelter Prozessor nur so wenig Änderungen mit sich bringt, bei denen gerade dieses bisher ungenutzte Bit nun benutzt wird. Meistens werden gleich komplette neue Register erstellt. Aber soviel dazu.
 
 So, nun aber zu den Vorteilen die der Protected Mode mit sich bringt:
 
@@ -40,23 +32,23 @@ So, nun aber zu den Vorteilen die der Protected Mode mit sich bringt:
 
 <!-- -->
 
-- Nicht jedes Programm darf JEDEN Befehl, den der Prozessor zur Verfügung stellt, ausführen. Dazu gehören Befehle, die hauptsächlich vom Kernel benutzt werden, um den Arbeitsablauf des Prozessors zu steuern. Ein normales Anwenderprogramm benötigt diese Befehle meist auch garnicht. Jedoch ist es einfach SICHERER diese erst gar nicht zuzulassen. Man denke nur an Viren.
+- Nicht jedes Programm darf *jeden* Befehl, den der Prozessor zur Verfügung stellt, ausführen. Dazu gehören Befehle, die hauptsächlich vom Kernel benutzt werden, um den Arbeitsablauf des Prozessors zu steuern. Ein normales Anwenderprogramm benötigt diese Befehle meist auch gar nicht. Jedoch ist es einfach *sicherer* diese erst gar nicht zuzulassen. Man denke nur an Viren.
 
 <!-- -->
 
-- Auch wie im Real-Mode "kann" der Arbeitsspeicher in Segmente unterteilt werden. Dieses Unterteilen dient hier NICHT MEHR dazu, um den kompletten Arbeitsspeicher ansprechen zu können, sondern um Speicherbereiche voneinander abgrenzen zu können. Dazu jedoch später mehr.
+- Auch wie im Real Mode „kann“ der Arbeitsspeicher in Segmente unterteilt werden. Dieses Unterteilen dient hier *nicht mehr* dazu, um den kompletten Arbeitsspeicher ansprechen zu können, sondern um Speicherbereiche voneinander abgrenzen zu können. Dazu jedoch später mehr.
 
 <!-- -->
 
-- Multitasking wäre theoretisch auch schon im Real-Mode möglich gewesen, jedoch bietet der Protected-Mode wesentlich bessere Vorraussetzungen dafür.
+- Multitasking wäre theoretisch auch schon im Real Mode möglich gewesen, jedoch bietet der Protected Mode wesentlich bessere Voraussetzungen dafür.
 
 <!-- -->
 
-- Ein Programmfehler (sofern nicht im Kernel oder in den Treibern) bringt nun nichtmehr das komplette System zum Absturz. Dies KANN zwar auch im Protected Mode noch auftreten, jedoch nur wenn man diesen so einsetzt, das ALLE Programme (Anwendungen, Kernel, Teiber) mit den gleichen Privilegien ausgestattet sind.
+- Ein Programmfehler (sofern nicht im Kernel oder in den Treibern) bringt nun nicht mehr das komplette System zum Absturz. Dies *kann* zwar auch im Protected Mode noch auftreten, jedoch nur wenn man diesen so einsetzt, das *alle* Programme (Anwendungen, Kernel, Treiber) mit den gleichen Privilegien ausgestattet sind.
 
 <!-- -->
 
-- Ein Programm (sofern nicht der Kernel) kann nun nichtmehr in den Speicher eines anderen Programms schreiben. Auch dies gilt nur bei einer korrekten Anwendung des Protected Mode.
+- Ein Programm (sofern nicht der Kernel) kann nun nicht mehr in den Speicher eines anderen Programms schreiben. Auch dies gilt nur bei einer korrekten Anwendung des Protected Mode.
 
 Sicherlich gibt es auch noch weitere Vorteile die der Protected Mode mit sich bringt, jedoch würde es wohl den Rahmen dieses Tutorials sprengen, diese alle bis ins letzte Detail aufzuzählen.
 
@@ -301,6 +293,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 5478; parent 5343; 2009-08-07T21:48:41Z -->
+<!-- MediaWiki page 1464; revision 5482; parent 5478; 2009-08-07T23:22:28Z -->
