@@ -108,7 +108,15 @@ Unter anderem gibt es nun neue Modi zur Dateiübertragung.
 
 ### Compatible Mode
 
+Der Compatible Mode dient dazu, dass ältere Drucker an einer IEEE 1284-Schnitstelle benutzt werden können. Der Modus entspricht einer Centronics-Verbindung mit der oben genannten Registerbelegung
+
+  
+
 ### Nibble Mode
+
+Beim Nibble Mode arbeitet die Schnittstelle mir einer Breite von 4 Bit (einem Halbbyte, auch Nibble). Die restlichen 4 Bit werden gebraucht, damit Daten vom Gerät zum PC zurückgeschickt werden können, es sit also eine Art bidirektionaler Verbindung möglich.
+
+  
 
 ### Byte Mode
 
@@ -126,6 +134,6 @@ Unter anderem gibt es nun neue Modi zur Dateiübertragung.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5385; parent 5378; 2009-08-06T19:47:28Z -->
+<!-- MediaWiki page 1996; revision 5417; parent 5385; 2009-08-07T02:25:48Z -->
