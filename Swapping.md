@@ -8,6 +8,6 @@ Unter **Swapping** versteht man das Auslagern von Daten, die nicht mehr ins RAM 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2012/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2012/index.html)
 
-<!-- MediaWiki page 2012; revision 5442; parent 5401; 2009-08-07T14:51:16Z -->
+<!-- MediaWiki page 2012; revision 5445; parent 5442; 2009-08-07T14:57:48Z -->
