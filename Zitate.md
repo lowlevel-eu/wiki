@@ -298,6 +298,6 @@ Aus \#lost (6. April 2009)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 4559; parent 2918; 2009-07-05T12:25:08Z -->
+<!-- MediaWiki page 1435; revision 5459; parent 4559; 2009-08-07T18:58:27Z -->
