@@ -97,6 +97,6 @@ Aufzeichnungen der Channelgespräche und Statistiken sind immer aktualisiert unt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 4702; parent 4696; 2009-07-24T12:20:12Z -->
+<!-- MediaWiki page 1463; revision 5458; parent 4702; 2009-08-07T18:56:58Z -->
