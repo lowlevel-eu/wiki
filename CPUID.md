@@ -1641,7 +1641,7 @@ Erweiterte Funktionen von Intel:
 <td colspan="8"><i>e</i>
 </td></tr></tbody></table>
 
-## Funktion 0x80000001
+## Funktion 0x8000_0001
 
 #### EAX - Familie
 
@@ -2989,6 +2989,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5374; parent 5373; 2009-08-06T19:02:10Z -->
+<!-- MediaWiki page 1739; revision 5423; parent 5374; 2009-08-07T10:02:21Z -->
