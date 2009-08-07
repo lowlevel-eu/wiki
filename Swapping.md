@@ -4,10 +4,10 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Unter **Swapping** versteht man das Auslagern von Dateien, die nicht mehr ins RAM passen in eine externe Datei auf einer Festplatte o.ä.. Dabei wird das Swapfile genau angesprochen wie der Arbeitsspeicher, dementsprechend müssen die Filesystem-Informationen gemappt werden.
+Unter **Swapping** versteht man das Auslagern von Daten, die nicht mehr ins RAM passen in eine externe Datei oder Partition auf einen größeren Speicher, meistens die Festplatte oder ein SSD-Speicher. Im Gegensatz zu [Page-to-Disk](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), bei dem einige wenig benutze Speicherseiten eines Prozesses (sogar eines aktiven) ausgelagert werden, wird bei Swapping ein inaktiver Prozess komplett ausgelagert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2012/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2012/index.html)
 
-<!-- MediaWiki page 2012; revision 5401; parent 5397; 2009-08-06T21:11:17Z -->
+<!-- MediaWiki page 2012; revision 5442; parent 5401; 2009-08-07T14:51:16Z -->
