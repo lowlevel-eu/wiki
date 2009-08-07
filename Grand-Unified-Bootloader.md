@@ -19,6 +19,7 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
 - GRUB-Image erstellen (Windows)
 - GRUB auf CD
+- [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
 
 ## Weblinks
 
@@ -27,6 +28,6 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 5409; parent 5312; 2009-08-06T21:25:27Z -->
+<!-- MediaWiki page 1567; revision 5466; parent 5409; 2009-08-07T20:00:40Z -->
