@@ -17,23 +17,23 @@
 
 <http://www.kernel.org>
 
-Linux ist ein freies Betriebsystem.
+**Linux** ist ein großes freie Betriebssystem. Vermutlich sind Linux und seine Varianten sogar die erfolgreichste freie Betriebssystemfamilie, die im Moment existiert. Alle Textdateien im Linux-Kernel umfassen 11,9 Millionen Zeilen (Stand: 7.8.2009), die Anzahl der reinen Codezeilen liegt vermutlich zwischen 7 und 8 Millionen.
 
 ## Die Entstehung
 
-Linux entstand 1991 durch den damaligen Informatikstudent Linus Torvalds an der Universität von Helsinki unter dem Namen "Freax". Linus Torvalds besaß damals einen 386er mit installiertem Minix, und schrieb darauf einen Terminalemulator. Er fügte weitere Funktionen hinzu, wie Multitasking, Zugriff auf das Diskettenlaufwerk usw. Schließlich baute er das ganze zu einem Kernel aus, den er auf dem FTP-Server von xxx hochlud. Der Besitzer war mit dem Namen "Freax", den Linus für seinen Kernel gewählt hatte, nicht einverstanden, und legte den Kernel in das Verzeichnis "Linux".
+Linux entstand 1991 durch den damaligen Informatikstudent Linus Torvalds an der Universität von Helsinki unter dem Namen "Freax". Linus Torvalds besaß damals einen 386er mit installiertem [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), und schrieb darauf einen Terminalemulator. Er fügte weitere Funktionen hinzu, wie Multitasking, Zugriff auf das Diskettenlaufwerk usw. Schließlich baute er das ganze zu einem Kernel aus, den er auf dem FTP-Server der Universität Helsinki hochladen ließ. Der Administrator Ari Lemmke war mit dem Namen "Freax", den Linus für seinen Kernel gewählt hatte, nicht einverstanden und legte den Kernel in das Verzeichnis "Linux".
 
 ## Bezeichnung von Linux
 
-Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Wenn man von einer Linux-Distribution spricht, ist die korrekte Systembezeichnung eigentlich GNU/Linux, da der Großteil des Userlands aus dem GNU-Projekt stammt.
+Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Wenn man von einer Linux-Distribution spricht, ist in den Augen mancher die korrekte Systembezeichnung eigentlich GNU/Linux, da der Großteil des Userlands aus dem GNU-Projekt stammt, und diesem nicht der Ruhm verwehrt bleiben soll.
 
 ## Graphical User Interface
 
-Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die untereinander konkurieren. Am meisten verbreitet sind KDE und Gnome, es gibt aber auch viele "kleine" Window-Manager wie WindowMaker, IceWM usw..
+Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die untereinander konkurieren. Am meisten verbreitet sind die Desktop-Environments KDE und Gnome, es gibt aber auch viele "kleine", alleinstehende Window-Manager wie WindowMaker, IceWM usw..
 
 ## Das UNIX-Prinzip
 
-Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskettenlaufwerk zum Beispiel wird über /dev/fd0 angesprochen. Linux besitzt keine Laufwerksbuchstaben wie MS-DOS und Windows, die erste Festplatte (bei IDE) findet man unter /dev/hda.
+Linux hat eine Eigenart von Unix übernommen: Alles ist eine Datei. Das Diskettenlaufwerk zum Beispiel wird über /dev/fd0 angesprochen. Linux besitzt keine Laufwerksbuchstaben wie [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") und [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), die erste Festplatte (bei IDE) findet man unter /dev/hda.
 
 ## Weblinks
 
@@ -44,6 +44,6 @@ Linux hat eine Eigenart von UNIX übernommen: Alles ist eine Datei. Das Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 5440; parent 5371; 2009-08-07T14:37:24Z -->
+<!-- MediaWiki page 1641; revision 5472; parent 5440; 2009-08-07T20:41:10Z -->
