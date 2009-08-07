@@ -44,12 +44,13 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im OpenSource-Bere
 
 ### Bekannte Projekte und ihr eingesetztes VCS
 
-| Projekt | VCS |
-| --------- | ------------ |
-| Linux | git |
-| Firefox | Mercurial |
-| GCC | Subversion |
-| Bochs | CVS |
+| VCS | Projekt |
+| ------------ | ------------------------------------- |
+| git | Linux, Qt, KDE, Compiz Fusion, GIMP |
+| Mercurial | Firefox, OpenJDK |
+| Subversion | GCC, GnuPG, Mono, GNOME |
+| CVS | Bochs |
+| Bazaar | Ubuntu |
 
 ## Weblinks
 
@@ -57,6 +58,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im OpenSource-Bere
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5481/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 5471; parent 4676; 2009-08-07T20:20:39Z -->
+<!-- MediaWiki page 1801; revision 5481; parent 5471; 2009-08-07T23:21:09Z -->
