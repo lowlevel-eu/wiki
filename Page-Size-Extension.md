@@ -10,6 +10,6 @@ Um PSE zu aktivieren, muss das Bit 4 (PSE) im [Kontrollregister](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5361/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1999/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1999/index.html)
 
-<!-- MediaWiki page 1999; revision 5361; parent 5356; 2009-08-06T17:58:23Z -->
+<!-- MediaWiki page 1999; revision 5450; parent 5361; 2009-08-07T15:01:30Z -->
