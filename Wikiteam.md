@@ -15,7 +15,7 @@ Natürlich bist aber **du** aufgerufen, ebenfalls mitzuarbeiten:
 
 - Dir gefällt ein Artikel nicht?
 - Du hast Rechtschreibfehler/Grammatikfehler entdeckt?
-- Du kennst dich bei einem Thema und und kannst eine bestehende Seite ergänzen oder gar neu schreiben?
+- Du kennst dich bei einem Thema aus und und kannst eine bestehende Seite ergänzen oder gar neu schreiben?
 - Du weißt etwas zu einem Thema, zu dem es noch gar keinen Artikel gibt?
 
   
@@ -23,6 +23,6 @@ Dann melde dich an, fallst du das noch nicht getan hast und helf mit! Für Frage
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5415/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2004/index.html)
 
-<!-- MediaWiki page 2004; revision 5415; parent 5384; 2009-08-06T21:58:05Z -->
+<!-- MediaWiki page 2004; revision 5416; parent 5415; 2009-08-07T02:19:43Z -->
