@@ -21,7 +21,7 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mä
 
 ### C/C++
 
-- ["C/C++ GE-PACK" von Herbert Schildt](http://www.amazon.de/ge-packt-Schneller-kompletten-Zahlreiche-Produktivität/dp/3826617282/ref=sr_1_1?ie=UTF8&s=books&qid=1249511226&sr=1-1)  
+- ["C/C++ GE-PACKT" von Herbert Schildt](http://www.amazon.de/ge-packt-Schneller-kompletten-Zahlreiche-Produktivität/dp/3826617282/ref=sr_1_1?ie=UTF8&s=books&qid=1249511226&sr=1-1)  
   Eine kurze Übersicht über die Features von C, C++ und den Standard-Bibliotheken.
 - ["C++ Objektorientiertes Programmieren von Anfang an" von Helmut Erlenkötter](http://www.amazon.de/C-Objektorientiertes-Programmieren-von-Anfang/dp/3499600773)  
   Das Buch ist optimal, wenn man bereits Programmieren kann, und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen die bereits C++ können ist es ein nettes Nachschlagewerg. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
@@ -29,8 +29,6 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mä
   Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kennitnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
 - ["C++ von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/von-bis-CD-ROM-umfassende-Handbuch/dp/3898428168)  
   Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert.
-
-  
 
 ## Bücher: OS-Development
 
@@ -58,6 +56,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5086/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5086; parent 5085; 2009-08-06T08:25:19Z -->
+<!-- MediaWiki page 1930; revision 5434; parent 5086; 2009-08-07T13:00:33Z -->
