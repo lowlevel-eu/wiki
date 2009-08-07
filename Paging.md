@@ -39,21 +39,21 @@ Ein Pagedirectory enthält 1024 Eintrage a 4 Byte. Ein Pagedirectory-Eintrag kan
 
 Verf.: Diese Bits sind frei verfügbar. Sie können z.B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen.
 
-G: Wird ignoriert
+**G**: Wird ignoriert
 
-S: Gibt die Größe der Page an. 0 steht für 4kB, 1 für 4MB (oder 2MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4MB-Pages) oder PAE-Bit (2MB-Pages) gesetzt ist.
+**S**: Gibt die Größe der Page an. 0 steht für 4kB, 1 für 4MB (oder 2MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4MB-Pages) oder PAE-Bit (2MB-Pages) gesetzt ist.
 
-A: Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt.
+**A**: Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt.
 
-C: Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt.
+**C**: Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt.
 
-W: Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt.
+**W**: Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt.
 
-U: Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0.
+**U**: Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0.
 
-R: Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden.
+**R**: Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden.
 
-P: Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden.
+**P**: Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden.
 
 ## Page Tables
 
@@ -65,9 +65,9 @@ Eine Page Table enthält 1024 Einträge a 4 Byte. Jeder Eintrag zeigt auf eine p
 
 Hier werden nur neue Abkürzungen geklärt, andere sind unter [Page-Directory](#page-directory) zu finden.
 
-G: Wenn G gesetzt ist, wird der TLB (s.u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z.B Kernel)
+**G**: Wenn G gesetzt ist, wird der TLB (s.u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z.B Kernel)
 
-D: Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt.
+**D**: Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt.
 
 ## Translation Lookaside Buffer
 
@@ -79,12 +79,7 @@ Man invalidiert den TLB mit "invlpg \<address\>". Wobei \<address\> eine virtuel
 
 ## Speicher mappen
 
-Um eine beliebige virtuelle Adresse auf eine beliebige physische Adresse zu mappen, muss man erst den richtigen Eintrag im Page Directory und in der Page Table berechnen, um schließlich die physische Page (mit den passenden Flags) in der Page Table eintragen zu können. Es wird immer von virtuell nach physisch zugeordnet, d.h wenn man 0xB8000 (phys.) auf 0x12345000 (virt.) mappen will, muss man erst den Page-Directory- und Page-Table-Eintrag von 0x12345000 berechnen. Das geht am besten so:
-
-    Pagedirectory_Eintrag =  virtuelle_adresse >> 22           (= 0x48)
-    Pagetable_Eintrag     = (virtuelle_adresse >> 12) % 1024   (= 0x345)
-
-Nun suche man erst die Adresse der Page Table (im eben berechneten *Pagedirectory_Eintrag* schauen). **Achtung:** Es handelt sich hier um die physische Adresse. Mit der Adresse der Page Table kann man jetzt in den *Pagetable_Eintrag* die physische Adresse eintragen, die passenden Flags setzen und schon ist die Page gemappt.
+Um eine beliebige virtuelle Adresse auf eine beliebige physische Adresse zu mappen, muss man erst den richtigen Eintrag im Page Directory und in der Page Table berechnen, um schließlich die physische Page (mit den passenden Flags) in der Page Table eintragen zu können. Es wird immer von virtuell nach physisch zugeordnet, d.h wenn man 0xB8000 (phys.) auf 0x12345000 (virt.) mappen will, muss man erst den Page-Directory- und Page-Table-Eintrag von 0x12345000 berechnen. Das geht am besten so: \<c\>Pagedirectory_Eintrag = virtuelle_adresse \>\> 22 (= 0x48) Pagetable_Eintrag = (virtuelle_adresse \>\> 12) % 1024 (= 0x345)\</c\> Nun suche man erst die Adresse der Page Table (im eben berechneten *Pagedirectory_Eintrag* schauen). **Achtung:** Es handelt sich hier um die physische Adresse. Mit der Adresse der Page Table kann man jetzt in den *Pagetable_Eintrag* die physische Adresse eintragen, die passenden Flags setzen und schon ist die Page gemappt.
 
 ## In physischen Speicher schreiben
 
@@ -105,6 +100,6 @@ Es besteht aber auch die Möglichkeit, Zugriff auf den gesamten physischen Speic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5126/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 5126; parent 4861; 2009-08-06T09:54:17Z -->
+<!-- MediaWiki page 1496; revision 5431; parent 5126; 2009-08-07T10:51:09Z -->
