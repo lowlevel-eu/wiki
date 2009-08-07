@@ -10,7 +10,7 @@ Es gibt so gut wie keinen Menschen, der alles kann. Auch nicht im OS-Development
 
 ## Bücher: Programmierung
 
-Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mächtig sein. Natürlich muss man hier und da nachlesen, wie denn nun z.B. nen Pointer dereferenziert wird oder was denn eigentlich 16 \<\< 8 bedeutet. Deshalb eine kleine Liste empfehlenswerter Bücher zum Einstieg und als Nachschlagewerk in die Programmierung:
+Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mächtig sein. Wer neue Sprachkenntnisse erlernen möchte, seine Sprachkenntnisse vertiefen möchte oder eine gute Referenz sucht, dem sei diese Liste ans Herz gelegt:
 
 ### Assembler
 
@@ -56,6 +56,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5434; parent 5086; 2009-08-07T13:00:33Z -->
+<!-- MediaWiki page 1930; revision 5435; parent 5434; 2009-08-07T13:02:42Z -->
