@@ -24,8 +24,12 @@ Aufgrund der Tatsache, dass die Artikel manchmal doof wirken, finde ich, sollten
 - *Siehe auch*-Kapitel für interne interessante Wikilinks
 - *Weblinks*-Kapitel für Weblinks
 
+## Weiterleitungen
+
+- Keine Weiterleitungen von Synonymen erstellen, wenn es überhaupt keine Links auf diese Weiterleitung gibt. In Artikeln kann man auch gleich den richtigen Artikel verlinken, anstatt den Umweg übers Synonym zu nehmen.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 5461; parent 4251; 2009-08-07T19:01:28Z -->
+<!-- MediaWiki page 1832; revision 5497; parent 5461; 2009-08-08T17:25:14Z -->
