@@ -45,15 +45,13 @@ Die "direkt" erreichbaren Register (ein Portzugriff) sind nur ein kleiner Teil d
 
 5\. Puffer zum Senden und Empfangen initialisieren; beide müssen 2 kB groß und physisch kontinuierlich sein.
 
-6\. Nun muss die Karte initialisiert werden. Dies geschieht mittels eines Initialization Block, der folgendermaßen aussieht: \<c\>typedef unsigned int uint;
-
-struct initialization_block {
+6\. Nun muss die Karte initialisiert werden. Dies geschieht mittels eines Initialization Block, der folgendermaßen aussieht: \<c\>struct initialization_block {
 
        uint16_t mode;
-       uint     reserved1 : 4;
-       uint     receive_length : 4;
-       uint     reserved2 : 4;
-       uint     transfer_length : 4;
+       unsigned reserved1 : 4;
+       unsigned receive_length : 4;
+       unsigned reserved2 : 4;
+       unsigned transfer_length : 4;
        uint64_t physical_address : 48;
        uint16_t reserved3;
        uint64_t logical_address;
@@ -166,6 +164,6 @@ void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 5486; parent 5485; 2009-08-08T10:27:13Z -->
+<!-- MediaWiki page 2025; revision 5493; parent 5486; 2009-08-08T14:41:24Z -->
