@@ -14,11 +14,11 @@ Ein Kernel hat meist folgenden Aufgaben:
 
 ## Kernelarten
 
-Folgenden Kernelarten exirstieren:
+Folgenden Kernelarten existieren:
 
 ### Monolithischer Kernel
 
-Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für und andere Funktionen mit sich bringt. Dadurch müssen nicht erst [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Module nachgeladen werden und auch eine Schnittstelle ist nicht erforderlich, was einen deutlichen Geschwindigkeitsvorteil mit sich bringt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module können nicht ohne weiteres neu gestartet werden. Der [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist ein Monolithischer Kernel.
+Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für [Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") und andere Funktionen mit sich bringt. Dadurch müssen nicht erst [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Module nachgeladen werden und auch eine Schnittstelle ist nicht erforderlich, was einen deutlichen Geschwindigkeitsvorteil mit sich bringt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module können nicht ohne weiteres neu gestartet werden. Der [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist ein Monolithischer Kernel.
 
 #### Diagramm zum Veranschaulichen
 
@@ -36,7 +36,7 @@ Dieses Diagramm zeigt den groben Aufbau eines Mikrokernels.
 
 ### [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel")
 
-Der Exokernel ist eine Unterart des Mikrokernel. Bei ein Exokernel kann jedes Programm auf die Hardware zugreifen, da es keine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") gibt. Da nicht jedes Programm Hardwarezugriff braucht, sind auch Bibliotheken da, die die Hardware abstraktieren.
+Der Exokernel ist eine Unterart des Mikrokernel. Bei ein Exokernel kann jedes Programm auf die Hardware zugreifen, da es keine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") gibt. Da nicht jedes Programm Hardwarezugriff braucht, sind auch Bibliotheken da, die die Hardware abstrahieren.
 
 ### [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel")
 
@@ -48,6 +48,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5505/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 5143; parent 5142; 2009-08-06T10:08:55Z -->
+<!-- MediaWiki page 1478; revision 5505; parent 5143; 2009-08-08T21:28:39Z -->
