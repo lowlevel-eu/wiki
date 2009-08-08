@@ -46,10 +46,7 @@ Die *Floating Pointer Structure* liegt an einer 16-Byte Grenze im Speicher und s
 Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksumme identifiziert. Die Prüfsumme wird berechnet, indem man alle Bytes (inklusive des Feldes *Checksum*) der Struktur aufaddiert. Das Ergebnis dieser Berechnung muss 0x00 sein. Die Struktur befindet sich in mindestens einem der folgenden Speicherbereiche:
 
 - In dem ersten Kilobyte der [Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area")
-- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area")), wenn die Addresse der Extended BIOS Data Area nicht definie
-
-rt ist
-
+- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MiB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area")), wenn die Adresse der Extended BIOS Data Area nicht definiert ist.
 - Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF)
 
 Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
@@ -99,6 +96,6 @@ Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4870/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 4870; parent 4402; 2009-07-30T14:11:14Z -->
+<!-- MediaWiki page 1490; revision 5487; parent 4870; 2009-08-08T10:39:04Z -->
