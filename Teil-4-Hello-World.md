@@ -98,7 +98,7 @@ Erwähnenswert ist vor allem die Option *-Ttext=0x100000* für ld. Das ist die A
 
 Die Werte für CC und LD müssen ggf. angepasst werden, so dass sie auf einen Compiler bzw. Linker zeigen, der i386-ELF-Dateien erzeugt. Mit dem Crosscompiler unter Windows könnte es beispielsweise sein, dass für CC *i586-elf-gcc* und für LD *i586-elf-ld* eingetragen werden muss.
 
-Nach einem Aufruf von *make* solltest Du jetzt eine Datei *kernel* vorfinden. Jetzt müssen wir ihn nur noch irgenwie ausführen. Dazu gibt es mehrere Möglichkeiten:
+Nach einem Aufruf von *make* solltest Du jetzt eine Datei *kernel* vorfinden. Jetzt müssen wir ihn nur noch irgendwie ausführen. Dazu gibt es mehrere Möglichkeiten:
 
 - qemu kann ab Version 0.11 Multiboot-Kernel direkt laden. *qemu -kernel kernel* bringt unseren Kernel zur Ausführung und schreibt ein wunderschönes Hello World in die linke obere Ecke. Den Rest des Bildschirms zu löschen haben wir leider vergessen, so dass das über irgendwelche BIOS-Meldungen geschrieben wird.
 - Jeder beliebige Emulator kann von Disketten-Images booten, z.B. qemu mit *qemu -fda floppy.img*. Wir brauchen also ein Diskettenimage, das GRUB und unseren Kernel enthält. Dazu gibt es folgende Artikel in diesem Wiki:
@@ -206,6 +206,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5072/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 5072; parent 4974; 2009-08-05T16:02:10Z -->
+<!-- MediaWiki page 1897; revision 5488; parent 5072; 2009-08-08T12:34:30Z -->
