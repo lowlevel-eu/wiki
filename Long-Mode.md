@@ -42,7 +42,9 @@ db 0xEA  ; Das ist ein far jmp, ich bekomms nit anders hin \>\< dd kernel.longm
 
 ## Es geht auch anders
 
-Vorlage:Hinweiss
+**Hinweis:**
+
+Hier folgt in Kürze eine Beschreibung, wie man den Long Mode auch direkt vom Real Mode aus aktivieren kann.
 
 ## Links
 
@@ -51,6 +53,6 @@ Vorlage:Hinweiss
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5511/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 5437; parent 5436; 2009-08-07T13:55:48Z -->
+<!-- MediaWiki page 1666; revision 5511; parent 5437; 2009-08-08T21:41:01Z -->
