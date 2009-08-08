@@ -16,7 +16,7 @@ D ist eine prozedurale sowie objekorientierte und wird seit 1999 von Walter Brig
 
 ## D als Sprache für ein Betriebssystem
 
-D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Desktruktoren einzusetzen, bedarf es ebenfalls Kompatibillitätscode.
+D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Destruktoren einzusetzen, bedarf es ebenfalls Laufzeitunterstützung.
 
 ## Kernel in D
 
@@ -129,7 +129,7 @@ extern(C) void main(uint magic, uint addr) {
        const uint COLUMNS = 80; 
        const uint LINES = 24;
 
-       ubyte* vidmem = cast(ubyte*)0xFFFF8000000B8000; 
+       ubyte* vidmem = cast(ubyte*)0x000B8000; 
 
        for (int i = 0; i < COLUMNS * LINES * 2; i++) { 
            volatile *(vidmem + i) = 0;
@@ -225,7 +225,7 @@ Erstellt wird das Ganze per
 
 und
 
-    $ gdc -nostdlib -nodefaultlibs -g -c -o ./obj/kernel.main.o ./src/kernel/kernel.main.d
+    $ gdc -nostdlib -g -c -o ./obj/kernel.main.o ./src/kernel/kernel.main.d
 
 gelinkt wird's so:
 
@@ -244,6 +244,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 5191; parent 5176; 2009-08-06T11:44:33Z -->
+<!-- MediaWiki page 1863; revision 5506; parent 5191; 2009-08-08T21:36:59Z -->
