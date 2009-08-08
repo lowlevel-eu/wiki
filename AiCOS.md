@@ -1,6 +1,8 @@
 # AiCOS
 
-Vorlage:Hinweiss
+**Hinweis:**
+
+Diese Seite wird demnächst durch ScollPi dem Autor von AiCOS überarbeitet. Die experimentelle Phase (0) ist damit abgeschlossen und die Entwicklung von AiCOS wird in Version 0.01 fortgesetzt.
 
   
 
@@ -220,6 +222,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 5394; parent 5379; 2009-08-06T20:33:47Z -->
+<!-- MediaWiki page 1766; revision 5513; parent 5394; 2009-08-08T21:41:48Z -->
