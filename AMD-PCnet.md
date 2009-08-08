@@ -69,7 +69,7 @@ struct initialization_block {
        uint32_t flags2;
        uint32_t avail;
 
-} \_\_attribute\_\_((packed));\</c\> "address" gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, "flags" und "flags2" enthalten Flags (siehe unten), "avail" kann vom Benutzer (also von dir) frei verwendet werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das "receive_descriptor"-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das "transmit_descriptor"-Feld eingetrage wurde.
+} \_\_attribute\_\_((packed));\</c\> "address" gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, "flags" und "flags2" enthalten Flags (siehe unten), "avail" kann vom Benutzer (also von dir) frei verwendet werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das "receive_descriptor"-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das "transmit_descriptor"-Feld eingetragen wurde.
 
 8\. Wenn auch die Deskriptoren initialisiert sind, sollte der Initialization Block bei der Karte registriert werden. Hierzu werden die niederwertigen 16 Bits der physischen Adresse in das CSR1-Register und die höherwertigen in das CSR2-Register geschrieben.
 
@@ -166,6 +166,6 @@ void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 5485; parent 5473; 2009-08-08T10:26:05Z -->
+<!-- MediaWiki page 2025; revision 5486; parent 5485; 2009-08-08T10:27:13Z -->
