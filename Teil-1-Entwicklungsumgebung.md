@@ -18,9 +18,9 @@ Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten 
 
 Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante.
 
-Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber unter Windows wird es definitiv deutlich umständlicher(jedenfalls wenn man GRUB und ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft.
+Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber unter Windows wird es definitiv deutlich umständlicher (jedenfalls wenn man GRUB und ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft.
 
-Eine andere Möglichkeiten, wenn Du kein Linux auf deinem Rechner installiert hast und das auch nicht tun willst, aber auch nicht den Nerv hast, unter Windows eine geignete Umgebung herzustellen, ist eine Linux-Live-CD wie Knoppix zu benutzen, die keine Installation benötigt. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
+Eine andere Möglichkeiten, wenn Du kein Linux auf deinem Rechner installiert hast und das auch nicht tun willst, aber auch nicht den Nerv hast, unter Windows eine geeignete Umgebung herzustellen, ist eine Linux-Live-CD wie Knoppix zu benutzen, die keine Installation benötigt. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
 
 ## Dein Editor
 
@@ -49,7 +49,7 @@ Unter <http://bochs.sourceforge.net> gibt es die jeweils neueste Version herunte
 
 ### qemu
 
-qemu verfolgt einen Ansatz: Wenn bochs ein Interrpreter ist, ist qemu ein (JIT-)Compiler. Wenn ein Stück Code des Gastbetriebssystems zum ersten Mal ausgeführt wird, übersetzt er es in Maschinencode, der statt auf den richtigen Prozessor auf den qemu-Prozessorzustand im Speicher zugreift. Dadurch wird die Codeausführung sehr viel schneller.
+qemu verfolgt einen Ansatz: Wenn bochs ein Interpreter ist, ist qemu ein (JIT-)Compiler. Wenn ein Stück Code des Gastbetriebssystems zum ersten Mal ausgeführt wird, übersetzt er es in Maschinencode, der statt auf den richtigen Prozessor auf den qemu-Prozessorzustand im Speicher zugreift. Dadurch wird die Codeausführung sehr viel schneller.
 
 Herunterzuladen ist qemu an folgenden Orten
 
@@ -75,6 +75,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4971/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5500/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 4971; parent 4962; 2009-08-01T17:04:11Z -->
+<!-- MediaWiki page 1919; revision 5500; parent 4971; 2009-08-08T21:01:34Z -->
