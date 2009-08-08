@@ -69,7 +69,7 @@ struct initialization_block {
        uint32_t flags2;
        uint32_t avail;
 
-} \_\_attribute\_\_((packed));\</c\> "address" gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, "flags" und "flags2" enthalten Flags (siehe unten), "avail" kann vom Benutzer (also von dir) frei verwendet werden.
+} \_\_attribute\_\_((packed));\</c\> "address" gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, "flags" und "flags2" enthalten Flags (siehe unten), "avail" kann vom Benutzer (also von dir) frei verwendet werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das "receive_descriptor"-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das "transmit_descriptor"-Feld eingetrage wurde.
 
 8\. Wenn auch die Deskriptoren initialisiert sind, sollte der Initialization Block bei der Karte registriert werden. Hierzu werden die niederwertigen 16 Bits der physischen Adresse in das CSR1-Register und die höherwertigen in das CSR2-Register geschrieben.
 
@@ -86,9 +86,16 @@ struct initialization_block {
 1.  define CSR0 0
 2.  define CSR1 1
 3.  define CSR2 2
-4.  define CSR3 3
-5.  define CSR4 4
-6.  define BCR20 20
+4.  define CSR4 4
+5.  define BCR20 20
+
+//Aliasnamen, damit man auch weiß, was es bedeutet
+
+1.  define CSR_STATUS CSR0
+2.  define CSR_INITIALIZATION_BLOCK_LOW CSR1
+3.  define CSR_INITIALIZATION_BLOCK_HIGH CSR2
+4.  define CSR_TEST_AND_FEATURES CSR4
+5.  define BCR_SOFTWARE_STYLE BCR20
 
 //16-Bit-I/O-Ports (bzw. Offsets zum Beginn des I/O-Raums)
 
@@ -99,6 +106,51 @@ struct initialization_block {
 5.  define RAP 0x12
 6.  define RESET 0x14
 7.  define BDP 0x16\</c\>
+
+### Senden eines Pakets
+
+Um ein Paket zu senden, muss die physische Adresse des entsprechenden Datenpuffers in das "address"-Felds des nächsten Sendedeskriptors geschrieben werden (zuerst Deskriptor 0, dann 1 und so weiter bis Deskriptor 7 (also der achte), danach wieder von vorn beginnen). "flags2" zeigt ein, ob ein Fehler beim Senden geschehen ist, sollte daher vom Treiber auf 0 gesetzt werden. Im "flags"-Feld muss nun das OWN-Bit gesetzt werden (0x80000000), um dem der Karte den Deskriptor zu "übergeben". Desweiteren sollten STP (Start of Packet, 0x02000000) und ENP (End of Packet, 0x01000000) gesetzt werden - dies zeigt an, dass die Daten nicht aufgeteilt werden, sondern dass es sich um ein einzelnes Ethernetpaket handelt. Weiterhin müssen die Bits 12-15 gesetzt werden (0x0000F000, sind wohl reserviert) und die Bits 0-11 geben die **negative** Größe des Pakets an.
+
+Nun könnte man einfach warten, bis die Karte sich das Paket abholt. Alternativ dazu kann man auch das TDMD-Bit (0x08) in CSR0 setzen (Also 0x48 nach CSR0 schreiben, um die Interrupts aktiviert zu lassen), um diese Wartezeit abzukürzen.
+
+Dazu ein Codebeispiel: \<c\>void write_csr(struct pcnet_card \*ncard, uint16_t csr, uint16_t val) {
+
+     outw(ncard->port_base + RAP, csr);
+     outw(ncard->port_base + RDP, val);
+
+}
+
+uint16_t read_csr(struct pcnet_card \*ncard, uint16_t csr) {
+
+     outw(ncard->port_base + RAP, csr);
+     return inw(ncard->port_base + RDP);
+
+}
+
+void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
+
+     int current_descriptor;
+
+     //Achtung, Beginn eines kritischen Abschnitts!
+     if (ncard->current_transmit_descriptor > 7)
+       ncard->current_transmit_descriptor = 0;
+     current_descriptor = ncard->current_transmit_descriptor++;
+     if (current_descriptor == 7) //ncard->current_transmit_descriptor ist also 8
+       ncard->current_transmit_descriptor = 0;
+     //Ende des Abschnitts
+
+     if (length > 1518) //Maximale Länge eines Ethernetframes
+       length = 1518;
+
+     //ncard->linear_transmit_buffer enthält die lineare Adresse des Puffers
+     memcpy(ncard->linear_transmit_buffer[current_descriptor], buffer, length);
+     //Die physische Adresse (also ncard->physical_transmit_buffer[current_descriptor]) sollte schon bei der
+     //Initialisierung in das "address"-Feld geschrieben worden sein
+     ncard->linear_transmit_descriptor[current_descriptor].flags2 = 0;
+     ncard->linear_transmit_descriptor[current_descriptor].flags = 0x8030F000 | (-length);
+     write_csr(ncard, CSR0, 0x48);
+
+}\</c\>
 
 ## Siehe auch
 
@@ -114,6 +166,6 @@ struct initialization_block {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 5473; parent 5463; 2009-08-07T20:56:40Z -->
+<!-- MediaWiki page 2025; revision 5485; parent 5473; 2009-08-08T10:26:05Z -->
