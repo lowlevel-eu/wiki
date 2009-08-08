@@ -53,7 +53,7 @@ Die Schnittstelle für Massenspeicher-Treiber ist äusserst einfach definiert. D
 - **read_blocks**(device, start_block, block_count, buffer)
 - **write_blocks**(device, start_block, block_count, buffer)
 
-Diese beiden Funktionen werden von der Implementierung dazu Benutzt Sektoren zu lesen oder zu schreiben. Wieviele Sektoren ein Gerät hat, und wie gross diese sind, wird in der Device-Struktur festgelegt. Die Implementierung muss garantieren, dass die Funktion nur mit, für dieses Gerät sinnvollen, Parametern aufgerufen wird.
+Diese beiden Funktionen werden von der Implementierung dazu Benutzt Sektoren zu lesen oder zu schreiben. Wieviele Sektoren ein Gerät hat, und wie groß diese sind, wird in der Device-Struktur festgelegt. Die Implementierung muss garantieren, dass die Funktion nur mit, für dieses Gerät sinnvollen, Parametern aufgerufen wird.
 
 ## Aufbau eines typischen Treibers
 
@@ -161,6 +161,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5484/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5499/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 5484; parent 5229; 2009-08-08T10:01:39Z -->
+<!-- MediaWiki page 1622; revision 5499; parent 5484; 2009-08-08T20:33:03Z -->
