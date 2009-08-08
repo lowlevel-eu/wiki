@@ -67,7 +67,7 @@ Die "direkt" erreichbaren Register (ein Portzugriff) sind nur ein kleiner Teil d
        uint32_t flags2;
        uint32_t avail;
 
-} \_\_attribute\_\_((packed));\</c\> "address" gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, "flags" und "flags2" enthalten Flags (siehe unten), "avail" kann vom Benutzer (also von dir) frei verwendet werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das "receive_descriptor"-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das "transmit_descriptor"-Feld eingetragen wurde.
+} \_\_attribute\_\_((packed));\</c\> "address" gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, "flags" und "flags2" enthalten Flags (siehe unten), "avail" kann vom Benutzer (also von dir) frei verwendet werden. Bei den Empfangsdeskriptoren muss das OWN-Bit (0x80000000) im "flags"-Feld gesetzt werden, zudem müssen die Bits 0 bis 11 des "flags"-Feldes auf 0x7FF gesetzt werden (negative Länge des Puffers, also -2048). Außerdem müssen in beiden Deskriptortypen die Bits 12 bis 15 (0x0000F000) im "flags"-Feld gesetzt werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das "receive_descriptor"-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das "transmit_descriptor"-Feld eingetragen wurde.
 
 8\. Wenn auch die Deskriptoren initialisiert sind, sollte der Initialization Block bei der Karte registriert werden. Hierzu werden die niederwertigen 16 Bits der physischen Adresse in das CSR1-Register und die höherwertigen in das CSR2-Register geschrieben.
 
@@ -104,6 +104,16 @@ Die "direkt" erreichbaren Register (ein Portzugriff) sind nur ein kleiner Teil d
 5.  define RAP 0x12
 6.  define RESET 0x14
 7.  define BDP 0x16\</c\>
+
+### Die ISR
+
+Wenn ein Interrupt eintrifft, dann zeigt das CSR0-Register den Grund dafür an. Ist das ERR-Bit (0x00008000) gesetzt, so trat ein Fehler auf.
+
+Wenn das TINT-Flag (0x00000200) gesetzt ist, dann wurde ein Sendedeskriptor abgearbeitet. Ob erfolgreich oder nicht, dass steht im entsprechenden Deskriptor. Ist im "flags"-Feld das ERROR-Bit gesetzt (0x40000000), dann trat ein Fehler auf, ansonsten wurde das Paket gesendet. Die "flags"-Felder (also "flags" und "flags2") des Deskriptors sollten dann auf 0 gesetzt werden.
+
+Sollte das RINT-Flag (0x00000400) gesetzt sein, dann wurde ein Paket abgearbeitet. Siehe dazu "Empfangen von Paketen".
+
+Am Ende der ISR sollte der Inhalt des CSR0-Registers dorthin zurückgeschrieben werden, um der Karte anzuzeigen, dass der Interrupt abgearbeitet wurde.
 
 ### Senden eines Pakets
 
@@ -150,6 +160,35 @@ void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
 
 }\</c\>
 
+### Empfangen von Paketen
+
+Sobald ein Paket empfangen wurde (das heißt, die ISR wurde aufgerufen und das RINT-Flag im CR0-Register ist gesetzt), müssen alle Empfangsdeskriptoren ab dem aktuellen abgearbeitet werden, bis das OWN-Bit (0x80000000 im "flags"-Feld) bei einem gesetzt ist. Denn alle Deskriptoren mit gelöschtem OWN-Bit wurden gerade von der Karte bearbeitet. Zum Abholen der Daten sollte dann das OWN-Bit gesetzt werden und die Daten können aus dem im Deskriptor angegebenen Puffer kopiert werden. Die Anzahl der Bytes steht in den Bits 0 bis 11 des "flags2"-Feldes. Zu diesen Daten gehört auch eine 4 Bytes lange CRC32-Checksumme am Ende des Pakets.
+
+Die Daten sollten nur dann gelesen werden, wenn das ERROR-Bit (0x40000000) im "flags"-Feld nicht gesetzt ist. Außerdem sollten die Bits STP und ENP (0x02000000 bzw. 0x01000000) - ebenfalls im "flags"-Feld - beide gesetzt sein.
+
+Beispielcode: \<c\>size_t size_of_packet;
+
+while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 0x80000000) == 0) {
+
+     if (!(ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x40000000) &&
+          (ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x03000000) == 0x03000000)
+     {
+       size_of_packet = netcard->linear_receive_descriptor[netcard->receive_descriptor].flags2 & 0xFFF;
+       if (size_of_packet > 64)
+         size_of_packet -= 4; //CRC32 nicht mitkopieren
+       //Mach mit den Daten, was du willst!
+       //Sie stehen in der virtuellen Version von netcard->linear_receive_descriptor[netcard_receive_descriptor].address
+       //und sind [size_of_packet] Bytes lang
+     }
+     ncard->linear_receive_descriptor[netcard->receive_descriptor].flags = 0x8000F7FF; //OWN-Bit und Standardwerte setzen
+     ncard->linear_receive_descriptor[netcard->receive_descriptor++].flags2 = 0;
+     if (netcard->last_receive_descriptor == 8)
+       netcard->last_receive_descriptor = 0;
+
+}\</c\>
+
+  
+
 ## Siehe auch
 
 - [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet")
@@ -164,6 +203,6 @@ void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5507/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 5493; parent 5486; 2009-08-08T14:41:24Z -->
+<!-- MediaWiki page 2025; revision 5507; parent 5493; 2009-08-08T21:37:13Z -->
