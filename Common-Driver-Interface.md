@@ -137,7 +137,7 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
        int               number;
        void (*send_packet)(struct cdi_net_device *device, void *data, size_t size);
 
-};\</c\> Diese Struktur beschreibt ein CDI.net-Gerät. "dev" ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, "mac" gibt die MAC-Adresse an und "number" die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei "device" ein Pointer auf diese Struktur ist, "data" ein Pointer auf die zu sendenden Daten, während "size" die Größe des Puffers "data" angibt. \<c\>struct cdi_net_driver {
+};\</c\> Diese Struktur beschreibt ein CDI.net-Gerät. "dev" ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, "mac" gibt die MAC-Adresse an und "number" die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei "device" ein Pointer auf diese Struktur ist, "data" ein Pointer auf die zu sendenden Daten, während "size" die Größe des Puffers "data" angibt. Wichtig: Man darf nicht erwarten, dass send_packet() reentrant (also gegen [Race Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") abgesichert) ist! Das Betriebssystem muss somit selbst dafür Sorge tragen, dass diese Funktion immer nur von maximal einem einzigen Prozess durchlaufen wird. \<c\>struct cdi_net_driver {
 
        struct cdi_driver drv;
 
@@ -161,6 +161,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5229/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5484/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 5229; parent 5151; 2009-08-06T12:49:26Z -->
+<!-- MediaWiki page 1622; revision 5484; parent 5229; 2009-08-08T10:01:39Z -->
