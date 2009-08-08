@@ -38,7 +38,7 @@ Um eine Datei komplett zu disassemblieren, nutzt man
 
 ` objdump -D DATEI `
 
-Mit dem Schalter -S versucht objdump, originalen Sourcecode herauszufinden und diesen mit dem disassemblierten Code zu vermischen. Der Schalter -l gibt zusätzlich Zeilennummern aus dem ursprünglichen Sourcecode aus (wenn dies möglich ist).
+Mit dem Schalter -S versucht objdump, originalen Sourcecode herauszufinden und diesen mit dem disassemblierten Code zu vermischen. Der Schalter -l gibt zusätzlich Zeilennummern aus dem ursprünglichen Sourcecode aus (wenn dies möglich ist). Mit "-M intel-mnemonic" wird der Assemblercode nicht in der AT&T-Syntax, sondern in der Intelsyntax ausgegeben.
 
   
 
@@ -49,6 +49,6 @@ Mit dem Schalter -S versucht objdump, originalen Sourcecode herauszufinden und d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1998/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1998/index.html)
 
-<!-- MediaWiki page 1998; revision 5365; parent 5362; 2009-08-06T18:04:28Z -->
+<!-- MediaWiki page 1998; revision 5498; parent 5365; 2009-08-08T20:05:59Z -->
