@@ -3,7 +3,12 @@
 Der **CPUID**-Befehl liefert, sofern er denn von der CPU unterstützt wird, Informationen zu zahlreichen Fähigkeiten der CPU, wie zum Beispiel den Herstellernamen, die Modellnummer oder die Größe des Caches.
 
   
-Vorlage:Hinweiss
+
+**Hinweis:**
+
+In den nachfolgenden Tabellen werden gelegentlich Tabellenzellen mit blauem oder grünen Hintergrund auftauchen.
+
+Diese deuten einen **herstellerspezifischen** Eintrag an. Auf anderen Prozessoren sind diese Einträge **reserviert**!
 
 So sehen die herstellerspezifischen Tabellenzellen aus:
 
@@ -12,7 +17,9 @@ So sehen die herstellerspezifischen Tabellenzellen aus:
 | Blau | Dieser Eintrag gilt **ausschließlich** für **Intel**-Prozessoren. Auf AMD-Prozessoren ist dieser Eintrag **reserviert**!. |
 | Grün | Dieser Eintrag gilt **ausschließlich** für **AMD**-Prozessoren. Auf Intel-Prozessoren ist dieser Eintrag **reserviert**!. |
 
-Vorlage:Hinweiss
+**Hinweis:**
+
+Manchmal folgen in der Beschreibung eines Registers auch **zwei Tabellen**. Die erste Tabelle ist dann zur schnellen Übersicht gedacht, die zweite Tabelle beschreibt die Funktion der Einträge.
 
   
 
@@ -1001,7 +1008,10 @@ Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschli
 Gibt verschiedene Informationen über den Cache und den TLB aus.
 
   
-Vorlage:Hinweiss
+
+**Hinweis:**
+
+Hier fehlt eine Erklärung.
 
 ## Funktion 0x0000_0003
 
@@ -1919,7 +1929,9 @@ Erweiterte Funktionen von Intel:
 <td colspan="1">LahfSahf
 </td></tr></tbody></table>
 
-Vorlage:Hinweiss
+**Hinweis:**
+
+Hier fehlt eine Erklärung!
 
 #### EDX - Erweiterte Featureflags
 
@@ -2056,7 +2068,9 @@ Vorlage:Hinweiss
 <td colspan="1">FPU
 </td></tr></tbody></table>
 
-Vorlage:Hinweiss
+**Hinweis:**
+
+Hier fehlt eine Erklärung!
 
 ## Funktion 0x8000_0002
 
@@ -2989,6 +3003,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5425/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5425; parent 5423; 2009-08-07T10:21:44Z -->
+<!-- MediaWiki page 1739; revision 5512; parent 5425; 2009-08-08T21:41:29Z -->
