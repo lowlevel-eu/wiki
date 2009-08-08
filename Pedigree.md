@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | James Molloy, Jörg Pfähler et. al. |
-| Akt. Version: | 1.0 |
+| Akt. Version: | \- |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Simplified BSD-Lizenz |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ARM. MIPS, PowerPC, |
@@ -17,10 +17,10 @@
 
 <http://pedigree-project.org/r/>
 
-**Pedigree** ist ein Hobby-OS, welches seit Januar 2008 von James Mollow und Jörg Pfähler, uns allen besser bekannt als [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode"), entwickelt wird. Es ist in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") mit einer Prise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und befindet sich in einem fortgeschrittenen Stadium.
+**Pedigree** ist ein Hobby-OS, welches seit Januar 2008 von James Molloy und Jörg Pfähler, uns allen besser bekannt als [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode"), entwickelt wird. Es ist in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") mit einer Prise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und befindet sich in einem fortgeschrittenen Stadium.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1973/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1973/index.html)
 
-<!-- MediaWiki page 1973; revision 5270; parent 5267; 2009-08-06T15:25:47Z -->
+<!-- MediaWiki page 1973; revision 5516; parent 5270; 2009-08-08T21:52:55Z -->
