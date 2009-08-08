@@ -12,7 +12,7 @@ Die frühen Hardwaremonitore, wo noch jedes Bit einzeln gecodet werden musste, k
 
 ### Linux/Unix
 
-Unter Linux und Unix war und ist das wohl essentiellste Werkzeug eines Linux-User und vor allem Administrators die Shell. Sie wird direkt nach dem Login gestartet und kann unter Desktop-Umgebungen wie Gnome oder KDE mit den Programmen Terminal bzw. Konsole gestartet werden. Die Shell unter Linux/Unix ist meistens auch Kommandozeileninterpreter und Interpreter für eine simple Scriptsprache, dem Shell-Script. Wobei simpel hier nicht ganz zutrifft, denn die Sprache ist doch recht mächtig.
+Unter Linux und Unix war und ist das wohl essentiellste Werkzeug eines Linux-User und vor allem Administrators die Shell. Sie wird direkt nach dem Login gestartet und kann unter Desktop-Umgebungen wie Gnome oder KDE mit den Programmen Terminal bzw. Konsole gestartet werden. Die Shell unter Linux/Unix ist meistens auch Kommandozeileninterpreter und Interpreter für eine einfache Scriptsprache, dem Shell-Script. Wobei einfach hier nicht ganz zutrifft, denn die Sprache ist doch recht mächtig.
 
 Die wohl mit Abstand meist genutzte Shell unter Linux ist die bash, die Bourne Again Shell. Sie ist ein GNU-Projekt und wird von der FDL auch als Standard-Shell empfohlen. Unter Linux/Unix greift die Shell allerdings (heutzutage) nicht mehr direkt auf die Funktionen des Betriebssystems zu. Dafür gibt es Programme wie rm, mv, cp usw.. Es wird beispielsweise
 
@@ -37,10 +37,10 @@ Die **Bourne-again Shell**, oder kurz **bash** ist die Standard-Shell für GNU-S
 
 Die Shell unter Windows wurde seit MS-DOS-Zeiten Befehlsinterpreter, bzw. Kommandozeileninterpreter genannt. Während der Windows-9x-Zeit hieß sie dann 'Eingabeaufforderung' oder auch "DOS-Box", wurde dann unter Windows 2000/XP nur "Eingabeaufforderung" genannt.
 
-Allerdings war seit jeher die "Windows-Shell" nicht halb so mächtig wie deren \*nix-Pendants. Die Scriptsprache, "Batch" bestand mehr oder weniger aus einer Einananderreihung von Befehlen mit simpelsten Kontrollstrukturen.
+Allerdings war seit jeher die "Windows-Shell" nicht halb so mächtig wie deren \*nix-Pendants. Die Scriptsprache, "Batch" bestand mehr oder weniger aus einer Eineinanderreihung von Befehlen mit einfachen Kontrollstrukturen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5501/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
 
-<!-- MediaWiki page 1864; revision 5344; parent 5099; 2009-08-06T17:00:05Z -->
+<!-- MediaWiki page 1864; revision 5501; parent 5344; 2009-08-08T21:10:51Z -->
