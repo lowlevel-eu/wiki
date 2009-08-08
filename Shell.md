@@ -1,7 +1,5 @@
 # Shell
 
-**An diesem Artikel wird im Laufe des 06.08.2009 gearbeitet! --[Benutzer:Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")**
-
 Eine **Shell** (deutsch wörtlich: Muschel, hier: Schale, Aufsatz) ist ein Programm, welches eine direkte Schnittstelle zwischen den Funktionen des Betriebssystems (Syscalls) und dem User darstellt und/oder als Kommandozeileninterpreter zum Ausführen von Programmen und der Navigation durch das Dateisystem dient.
 
 ## Geschichte
@@ -41,6 +39,6 @@ Allerdings war seit jeher die "Windows-Shell" nicht halb so mächtig wie deren \
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5501/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1864/index.html)
 
-<!-- MediaWiki page 1864; revision 5501; parent 5344; 2009-08-08T21:10:51Z -->
+<!-- MediaWiki page 1864; revision 5502; parent 5501; 2009-08-08T21:11:05Z -->
