@@ -1,11 +1,11 @@
 # Designrichtlinien
 
-Aufgrund der Tatsache, dass die Artikel manchmal doof wirken, finde ich, sollten gewisse Designrichtlinien eingeführt werden. Die Regeln können ergänzt werden.
+Natürlich ist jedem gestattet, seinen Artikel zu gestalten, wie er es gern möchte. Dennoch findet ihr hier ein paar Richtlinien, die ihr möglichst einhalten solltet, damit möglichst alle Artikel die selbe Basis haben und gleich formatiert sind.
 
 ## Mediawikicode
 
 - Artikel zu Kategorien immer mit *Kategorie: Kategoriename* einordnen, nicht mit *Category: Kategoriename*
-- C bzw. Assembler-Beispielcode in \<c\>code...\</c\> bzw. \<asm\>code...\</asm\> einfassen. Sieht schöner aus, siehe Beispiel.
+- C bzw. Assembler-Beispielcode in \<c\>code...\</c\> bzw. \<asm\>code...\</asm\> einfassen. Sieht schöner aus, siehe Beispiel:
 
 \<c\>int main() {
 
@@ -19,17 +19,33 @@ Aufgrund der Tatsache, dass die Artikel manchmal doof wirken, finde ich, sollten
 
 ## Artikelaussehen
 
-- Sinnvoll verlinken, das heißt nur auf Artikel verlinken die zum Thema beitragen/weiterhelfen
+- Sinnvoll verlinken, das heißt nur auf Artikel verlinken die zum Thema beitragen/weiterhelfen und in den aktuellen Kontext passen
+
+Beispiel: Im Artikel [Prozess](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess") tauchen die Wörter Kernel, Linux, Windows und Schedluer auf. Sinnvoll ist nun eine Verlinkung auf [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), da der Scheduler mit Prozessen zu tun hat. Das haben die drei anderen Begriffe auch, aber eine Verlinkung nur auf Scheduler ist im Kontext des "Prozesses" sinnvoller.
+
 - Wo zwei Artikelnamen in ein Wort stecken, garnichts verlinken. Zum Beispiel C-Kernel, *nicht* mittels \[\[C\]\]-\[\[Kernel\]\] auf C und Kernel verlinken.
 - *Siehe auch*-Kapitel für interne interessante Wikilinks
-- *Weblinks*-Kapitel für Weblinks
+- *Weblinks*-Kapitel für externe Weblinks
 
 ## Weiterleitungen
 
 - Keine Weiterleitungen von Synonymen erstellen, wenn es überhaupt keine Links auf diese Weiterleitung gibt. In Artikeln kann man auch gleich den richtigen Artikel verlinken, anstatt den Umweg übers Synonym zu nehmen.
 
+## Anrede
+
+In technischen Artikeln sollte die Anrede des Lesers sowie die Erwähnung der eigenen Person nicht benutzt werden: Beispiel:
+
+~~"Ich erkläre euch nun was ein Kernel ist"~~ Im Folgenden wird nun erklärt, was ein Kernel ist
+
+~~Du solltest keine Exceptions ignorieren~~ Man sollte keine Exceptions ignorieren
+
+  
+Anders als bei Tutorials: Dort wird durch die persönliche Anrede Lockerheit vermittelt und der Leser kann sich besser in das gelesene "einfühlen".
+
+Das Wiki richtet sich zwar an keine spezielle Altersgruppe, aber dennoch wird bei persönlicher Anrede "du" verwendet, um die eh schon teilweise trockene Materie nicht auch noch zu versteifen.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 5497; parent 5461; 2009-08-08T17:25:14Z -->
+<!-- MediaWiki page 1832; revision 5523; parent 5497; 2009-08-09T23:59:51Z -->
