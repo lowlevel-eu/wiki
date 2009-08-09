@@ -47,33 +47,11 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ## Lowlevel-Tutorials
 
-### Alte Tutorialseite
-
-- [LowLevel](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials)
-
-### OS Allgemein
-
-- [Newbie Theorie](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&showtut_id=47) - Aios
-
-### Festplatte/Dateisysteme
-
-- [Partitionen](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=63) - Toaster
-- [FAT 12](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=8) - TeeJay
-- [LowFS Beschreibung](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=27) - joachim_neu
-
-### Grafik
-
-- [VGA Mode 13h](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=41) - elfish_rider
-
 ### Protected Mode
 
 - [PM-Grundlagen](http://www.jay-code.de/scripts/htmlgenerator.php?page=pmode&directory=tutorials) - TeeJay
 - [Kernel in C](http://www.jay-code.de/scripts/htmlgenerator.php?page=ckernel&directory=tutorials) - TeeJay
 - [Kernel in C++](http://www.jay-code.de/scripts/htmlgenerator.php?page=ckernel2&directory=tutorials) - TeeJay
-
-### Sound
-
-- [PC Lautsprecher](http://lowlevel.brainsware.org/old/index.php?pagename=tutorials&tutextern=24) - joachim_neu
 
 ## Offizielle Spezifikationen
 
@@ -84,6 +62,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5427/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 5427; parent 5426; 2009-08-07T10:31:53Z -->
+<!-- MediaWiki page 1437; revision 5517; parent 5427; 2009-08-09T08:48:21Z -->
