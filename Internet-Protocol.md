@@ -11,9 +11,9 @@ In [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ether
 Bitte beachten: Wie bei vielen Netzwerkprotokollen wird auch bei IP Big-Endian verwendet.
 
 | Offset | Länge | Beschreibung |
-| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0x00 | 0,5 | Version (4 für IPv4) |
-| 0x00,5 | 0,5 | Länge des Headers in DWords (Also 5 (denn 5 \* 4B = 20B), wenn keine Optionen verwendet werden) |
+| 0x00 + 1/2 | 0,5 | Länge des Headers in DWords (Also 5 (denn 5 \* 4B = 20B), wenn keine Optionen verwendet werden) |
 | 0x01 | 1 | Priorität (z. B. 0 (normal)) |
 | 0x02 | 2 | Größe von Header und Daten zusammen in Bytes |
 | 0x04 | 2 | ID des Paketes (z. B. 0x0000, wird für Fragmentation benötigt) |
@@ -52,6 +52,6 @@ Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
 
-<!-- MediaWiki page 1970; revision 5494; parent 5240; 2009-08-08T14:43:31Z -->
+<!-- MediaWiki page 1970; revision 5521; parent 5494; 2009-08-09T18:57:35Z -->
