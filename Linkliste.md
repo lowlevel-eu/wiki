@@ -2,20 +2,6 @@
 
 Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer noch welche kennt, darf gerne etwas hinzufügen, sollte aber das begonnene Menüsystem bewahren.
 
-## Das Magazin
-
-Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
-
-- [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1")
-- [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2")
-- [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3")
-- [Ausgabe 4](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4 "Ausgabe 4")
-- [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5")
-- [Ausgabe 6](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-6 "Ausgabe 6")
-- [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7")
-- [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8")
-- [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9")
-
 ## Externe Seiten zur Betriebssystemprogrammierung
 
 - [Protected Mode Tutorial (FH Zwickau)](http://www.fh-zwickau.de/doc/prmo/start.htm) - Sehr gute Einführung in die Möglichkeiten des Protected Mode. Ebenso Erläuterungen zur MMX-Erweiterung.
@@ -62,6 +48,6 @@ Hier findet man die Links zu den neuesten Ausgaben von "Lowlevel"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 5517; parent 5427; 2009-08-09T08:48:21Z -->
+<!-- MediaWiki page 1437; revision 5518; parent 5517; 2009-08-09T08:49:53Z -->
