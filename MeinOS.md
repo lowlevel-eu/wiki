@@ -1,7 +1,7 @@
 # MeinOS
 
 | meinOS |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [Janosch Gräf](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") |
 | Akt. Version: | noch keine |
@@ -12,7 +12,7 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), Nativ |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), Message Queues (SysV), [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale") |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), [Message Queues](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#message-queues "Message Queue") (SysV), [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale") |
 | Homepage |  |
 
 <http://jgraef.dyndns.org/meinos/>
@@ -116,6 +116,6 @@ Das aktuelle CD-Image kann hier gedownloadet werden: [meinos_cd_20081207.iso.gz]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1551/index.html)
 
-<!-- MediaWiki page 1551; revision 5281; parent 4454; 2009-08-06T15:29:30Z -->
+<!-- MediaWiki page 1551; revision 5546; parent 5281; 2009-08-10T15:38:52Z -->
