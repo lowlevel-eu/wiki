@@ -30,7 +30,7 @@ Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki
 
 | Name des Registers | Port Slave | Port Master | Zugriff | Größe | Beschreibung |
 | ----------------------------- | ------------ | ------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Startadresse | Ch 0: 0x00 | Ch 0: 0xC0 | out | 16 | Die Startadresse des Buffers für die Daten |
+| Startadresse | Ch 0: 0x00 | Ch 0: 0xC0 | out | 16 | Die Startadresse des Puffers für die Daten |
 |  | Ch 1: 0x02 | Ch 1: 0xC2 | out | 16 |  |
 |  | Ch 2: 0x04 | Ch 2: 0xC4 | out | 16 |  |
 |  | Ch 3: 0x06 | Ch 3: 0xC6 | out | 16 |  |
@@ -108,7 +108,7 @@ Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem 
 |  | 10 = Block-Transfer |
 |  | 11 = Kaskadierung |
 
-Autonitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Buffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
+Autonitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
 
 #### Requestregister
 
@@ -134,6 +134,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 5315; parent 5314; 2009-08-06T15:48:08Z -->
+<!-- MediaWiki page 1555; revision 5530; parent 5315; 2009-08-10T15:23:20Z -->
