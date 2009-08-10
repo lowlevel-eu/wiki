@@ -22,6 +22,6 @@ Die Spezifikation der Benutzer- und Software-Schnittstelle ist in vier Teile unt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5392/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5547/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1775/index.html)
 
-<!-- MediaWiki page 1775; revision 5392; parent 4552; 2009-08-06T20:30:19Z -->
+<!-- MediaWiki page 1775; revision 5547; parent 5392; 2009-08-10T15:39:18Z -->
