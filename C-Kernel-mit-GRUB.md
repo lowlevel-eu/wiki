@@ -205,7 +205,7 @@ auf eine Floppydisk kopieren und damit booten. Wenn alles klappt seht ihr "Hello
 ## Vorschläge
 
 - Auf Dauer wird es anstregend die ganzen Befehl einzutippen. Am einfachsten ist es eine [Makefile](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Makefile") zu benutzen.
-- Um nicht immer neustarten zu müssen, kann man einen Emulator wie Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") nehmen. Dann muss man das Image auch erst gar nicht auf Diskette kopieren.
+- Um nicht immer neustarten zu müssen, kann man einen Emulator wie [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") nehmen. Dann muss man das Image auch erst gar nicht auf Diskette kopieren.
 - Mit *color light-blue/black light-cyan/blue* in menu.lst kann man dem Bootloader Farbe verpassen.
 
 ## Nachwort
@@ -222,6 +222,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4929/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 4929; parent 4926; 2009-07-31T13:52:17Z -->
+<!-- MediaWiki page 1604; revision 5540; parent 4929; 2009-08-10T15:30:50Z -->
