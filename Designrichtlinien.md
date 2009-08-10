@@ -1,6 +1,6 @@
 # Designrichtlinien
 
-Natürlich ist jedem gestattet, seinen Artikel zu gestalten, wie er es gern möchte. Dennoch findet ihr hier ein paar Richtlinien, die ihr möglichst einhalten solltet, damit möglichst alle Artikel die selbe Basis haben und gleich formatiert sind.
+Natürlich ist jedem gestattet, seinen Artikel zu gestalten, wie er es gern möchte. Dennoch gibt es hier ein paar Richtlinien, die möglichst eingehalten werden sollten, damit möglichst alle Artikel die selbe Basis haben und gleich formatiert sind.
 
 ## Mediawikicode
 
@@ -46,6 +46,6 @@ Das Wiki richtet sich zwar an keine spezielle Altersgruppe, aber dennoch wird be
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 5523; parent 5497; 2009-08-09T23:59:51Z -->
+<!-- MediaWiki page 1832; revision 5524; parent 5523; 2009-08-10T13:00:38Z -->
