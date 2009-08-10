@@ -39,7 +39,7 @@ Außerdem brauchst Du einen Assembler. Wenn gcc läuft, hast Du aber glückliche
 
 ## Dein Emulator
 
-Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
+Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") - oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
 
 ### bochs
 
@@ -47,9 +47,9 @@ Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, i
 
 Unter <http://bochs.sourceforge.net> gibt es die jeweils neueste Version herunterzuladen - sowohl den Quellcode als auch Binärpakete u.a. für Linux und Windows.
 
-### qemu
+### QEMU
 
-qemu verfolgt einen Ansatz: Wenn bochs ein Interpreter ist, ist qemu ein (JIT-)Compiler. Wenn ein Stück Code des Gastbetriebssystems zum ersten Mal ausgeführt wird, übersetzt er es in Maschinencode, der statt auf den richtigen Prozessor auf den qemu-Prozessorzustand im Speicher zugreift. Dadurch wird die Codeausführung sehr viel schneller.
+[QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") verfolgt einen Ansatz: Wenn bochs ein Interpreter ist, ist qemu ein (JIT-)Compiler. Wenn ein Stück Code des Gastbetriebssystems zum ersten Mal ausgeführt wird, übersetzt er es in Maschinencode, der statt auf den richtigen Prozessor auf den qemu-Prozessorzustand im Speicher zugreift. Dadurch wird die Codeausführung sehr viel schneller.
 
 Herunterzuladen ist qemu an folgenden Orten
 
@@ -75,6 +75,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5531/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 5531; parent 5500; 2009-08-10T15:25:49Z -->
+<!-- MediaWiki page 1919; revision 5544; parent 5531; 2009-08-10T15:33:35Z -->
