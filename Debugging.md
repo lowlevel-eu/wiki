@@ -14,17 +14,17 @@ Diese Methode ist schon etwas praktischer als die Letzte. Debug-Ausgaben werden 
 
 Ähnlich wie bei der print(f)/cout - Methode kann man auch Daten/ASCII-Strings über die [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") verschicken. Das hat den Vorteil, dass man mehr als nur 25 oder 50 Zeilen zeitgleich betrachten kann.
 
-Bei bochs werden die auf der seriellen Schnittstelle ausgegebenen Daten in eine Textdatei geschrieben, und Qemu kann man mit einem Schalter veranlassen, die serielle Schnittstelle auf stdout oder in eine Datei umzuleiten. Diese kann später ggf. auch von weiteren Tools (z.B. grep) weiterverarbeitet werden.
+Bei bochs werden die auf der seriellen Schnittstelle ausgegebenen Daten in eine Textdatei geschrieben, und QEMU kann man mit einem Schalter veranlassen, die serielle Schnittstelle auf stdout oder in eine Datei umzuleiten. Diese kann später ggf. auch von weiteren Tools (z.B. grep) weiterverarbeitet werden.
 
 Zudem ist ein Treiber für die [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") sowohl im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") als auch im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") relativ einfach zu schreiben. [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") müssen hierfür nicht verarbeitet werden können.
 
-## bochs / qemu
+## bochs / QEMU
 
 Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist es wichtig, die Registerinhalte vor der Exception zu kennen. Um an diese zu kommen sind Debug-Funktionen in den Emulatoren ein wertvolles Werkzeug.
 
 Bei [bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") kann dazu der integrierte Debugger benutzt werden.
 
-qemu stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen (siehe GNU Project Debugger und QEMU). Oft braucht man aber in Verbindung mit qemu gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt. Denn qemu bietet den -d Parameter um verschiedene Dinge zu loggen. Meist benötigt man ein -d int um alle Interrupts aufzuzeichnen. Dabei muss man aber ein wenig aufpassen, da ältere Versionen von Qemu bei einem Tripplefault keinen Reset auslösen. Das heißt, er schreibt dann lauter GPFs in die Logdatei und diese wird dabei SEHR gross. Man sollte den qemu also möglichst schnell schliessen, sobald ein Triplefault aufgetreten ist.
+[QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen (siehe GNU Project Debugger und QEMU). Oft braucht man aber in Verbindung mit qemu gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt. Denn qemu bietet den -d Parameter um verschiedene Dinge zu loggen. Meist benötigt man ein -d int um alle Interrupts aufzuzeichnen. Dabei muss man aber ein wenig aufpassen, da ältere Versionen von Qemu bei einem Tripplefault keinen Reset auslösen. Das heißt, er schreibt dann lauter GPFs in die Logdatei und diese wird dabei SEHR gross. Man sollte den qemu also möglichst schnell schliessen, sobald ein Triplefault aufgetreten ist.
 
 ## Exception-Meldungen
 
@@ -46,6 +46,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5538/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 4917; parent 3297; 2009-07-30T21:46:42Z -->
+<!-- MediaWiki page 1544; revision 5538; parent 4917; 2009-08-10T15:30:03Z -->
