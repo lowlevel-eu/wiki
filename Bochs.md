@@ -15,7 +15,7 @@
 
 <http://bochs.sourceforge.net/>
 
-Bochs ist ein portabler [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-[Emulator](https://lowlevel-eu.github.io/wiki/pages/1938/index.html "Emulator"), der in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") geschrieben ist. Da Bochs ein "reiner" Emulator ist, wird abgesehen von Tastatur, [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus"), Grafikkarte, Festplatten, etc. auch der bzw. die Prozessoren vollständig emuliert und nicht Maschinencode teilweise auf dem Hostsystem ausgeführt. Das führt zum einen dazu, dass Bochs um Größenordnungen langsamer ist als beispielsweise Qemu oder [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare"), andererseits sind die [Debuggingmöglichkeiten](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") von Bochs (im Bereich OSDev) um einiges besser.
+Bochs ist ein portabler [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-[Emulator](https://lowlevel-eu.github.io/wiki/pages/1938/index.html "Emulator"), der in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") geschrieben ist. Da Bochs ein "reiner" Emulator ist, wird abgesehen von Tastatur, [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus"), Grafikkarte, Festplatten, etc. auch der bzw. die Prozessoren vollständig emuliert und nicht Maschinencode teilweise auf dem Hostsystem ausgeführt. Das führt zum einen dazu, dass Bochs um Größenordnungen langsamer ist als beispielsweise [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") oder [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare"), andererseits sind die [Debuggingmöglichkeiten](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") von Bochs (im Bereich OSDev) um einiges besser.
 
 ## Emulierte Hardware
 
@@ -42,6 +42,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 5322; parent 5318; 2009-08-06T15:55:03Z -->
+<!-- MediaWiki page 1538; revision 5536; parent 5322; 2009-08-10T15:28:45Z -->
