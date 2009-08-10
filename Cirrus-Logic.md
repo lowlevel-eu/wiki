@@ -1,12 +1,12 @@
 # Cirrus Logic
 
-Qemu emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es sehr einfach, mit einem eigenen [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS") in den Genuss hardwarebeschleunigter¹ 2D-Grafik zu kommen.
+[QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es sehr einfach, mit einem eigenen [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS") in den Genuss hardwarebeschleunigter¹ 2D-Grafik zu kommen.
 
 ¹So weit ich es gesehen habe, werden die Grundoperationen hardwarebeschleunigt dargestellt. Alle Angaben ohne Gewähr.
 
 ## Ressourcen
 
-Die Grafikkarte ist eine [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle Qemus an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
+Die Grafikkarte ist eine [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle [QEMUs](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
 
 In diesen zweiten Bereich sind sämtliche VGA-Ports gemappt, wobei man von dem Port 0x3C0 abziehen muss, um den Offset in den MMIO-Bereich zu erhalten. So befindet sich das Register VGA_MISC_OUT_W (0x3C2) an der Speicheradresse 0xF2000002.
 
@@ -29,11 +29,11 @@ Ist die Karte einmal in dem Videomodus, muss noch die Beschleunigung aktiviert w
 
 outb(VGA_GRAPH_INDEX, 0x0E); outb(VGA_GRAPH_DATA, 0x20); // Oder outw(VGA_GRAPH_INDEX, 0x200E); \</c\>
 
-Ich habe diese Methode jedoch nur in Qemu getestet. Ich bin mir ziemlich sicher, dass das in der echten Welt da draußen nicht so einfach tut, aber wer hat schon eine Cirrus Logic. :)
+Ich habe diese Methode jedoch nur in [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") getestet. Ich bin mir ziemlich sicher, dass das in der echten Welt da draußen nicht so einfach tut, aber wer hat schon eine Cirrus Logic. :)
 
 ## Offscreen Memory
 
-Die von Qemu initialisierte Cirrus hat 2 Megabyte Videoram, der nicht dem Framebuffer zugeordnet ist. Es liegt in linear hinter dem Framebuffer und kann genau wie dieser für Beschleunigung benutzt werden. TODO: Das hier überprüfen. Eventuell sinds auch 4 Megabyte, dann allerdings inklusive Framebuffer.
+Die von QEMU initialisierte Cirrus hat 2 Megabyte Videoram, der nicht dem Framebuffer zugeordnet ist. Es liegt in linear hinter dem Framebuffer und kann genau wie dieser für Beschleunigung benutzt werden. TODO: Das hier überprüfen. Eventuell sinds auch 4 Megabyte, dann allerdings inklusive Framebuffer.
 
 ## Beschleunigung
 
@@ -123,12 +123,12 @@ Dann zeichnen wir zuerst die Maske mit dem Rop "and", sodass die schwarzen Berei
 
 ## Links
 
-- <http://www.koders.com/c/fidC2D0E7B95D33763B17521DF3EA7B68C81D500CAD.aspx> Code aus Qemu
+- <http://www.koders.com/c/fidC2D0E7B95D33763B17521DF3EA7B68C81D500CAD.aspx> Code aus QEMU
 - <http://cgit.freedesktop.org/xorg/driver/xf86-video-cirrus/> Xorg-Treiber
 - [Datenblatt von Cirrus Logic](http://www.tjd.phlegethon.org/gd5446trm.pdf.gz)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5542/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1743/index.html)
 
-<!-- MediaWiki page 1743; revision 5043; parent 4772; 2009-08-01T19:22:34Z -->
+<!-- MediaWiki page 1743; revision 5542; parent 5043; 2009-08-10T15:32:13Z -->
