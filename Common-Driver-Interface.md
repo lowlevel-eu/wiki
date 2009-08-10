@@ -73,52 +73,52 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 \<c\>typedef enum {
 
-       CDI_UNKNOWN = 0,
-       CDI_NETWORK = 1,
-       CDI_STORAGE = 2,
-       CDI_SCSI = 3,
+     CDI_UNKNOWN = 0,
+     CDI_NETWORK = 1,
+     CDI_STORAGE = 2,
+     CDI_SCSI = 3,
 
 } cdi_device_type_t;\</c\> cdi_device_type_t gibt den Typ eines Gerätes bzw. eines Treibers an. \<c\>struct cdi_device {
 
-       cdi_device_type_t type;
-       const char        *name;
-       struct cdi_driver *driver;
+     cdi_device_type_t type;
+     const char        *name;
+     struct cdi_driver *driver;
 
 };\</c\> Diese Struktur repräsentiert ein Gerät. "type" gibt den Typ an, "name" den Namen und "driver" einen Pointer zu einer Struktur, die den Gerätetreiber repräsentiert. \<c\>struct cdi_driver {
 
-       cdi_device_type_t type;
-       const char        *name;
-       cdi_list_t        devices;
-       void (*init_device)(struct cdi_device *device);
-       void (*remove_device)(struct cdi_device *device);
-       void (*destroy)(struct cdi_driver *driver);
+     cdi_device_type_t type;
+     const char        *name;
+     cdi_list_t        devices;
+     void (*init_device)(struct cdi_device *device);
+     void (*remove_device)(struct cdi_device *device);
+     void (*destroy)(struct cdi_driver *driver);
 
 };\</c\> Diese Struktur wiederum repräsentiert einen Gerätetreiber. "type" gibt den Typ an, "name" den Namen und "devices" ist eine Liste der registrierten Geräte. Die Funktion init_device() muss vom Betriebssystem aufgerufen werden, um ein Gerät zu initialisieren, remove_device() entfernt ein Gerät und destroy() deinitialisiert den Treiber. \<c\>struct cdi_pci_device {
 
-       uint16_t bus;
-       uint16_t dev;
-       uint16_t function;
-       uint16_t vendor_id;
-       uint16_t device_id;
-       uint8_t  class_id;
-       uint8_t  subclass_id;
-       uint8_t  interface_id;
-       uint8_t  rev_id;
-       uint8_t  irq;
-       cdi_list_t resources;
+     uint16_t bus;
+     uint16_t dev;
+     uint16_t function;
+     uint16_t vendor_id;
+     uint16_t device_id;
+     uint8_t  class_id;
+     uint8_t  subclass_id;
+     uint8_t  interface_id;
+     uint8_t  rev_id;
+     uint8_t  irq;
+     cdi_list_t resources;
 
 };\</c\> Mit dieser Struktur wird ein [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Gerät beschrieben. "bus" ist der Bus, auf dem es sich befindet, "dev" das Gerät und "function" die Funktion. "vendor_id" gibt die Hersteller-ID an, "device_id" die Geräte-ID. Die Classcodes befinden sich in "class_id" (Base class), "subclass_id" (Subclass) und "interface_id" (Programming interface). "rev_id" enthält die Revisions-ID. In "irq" steht der IRQ, den das Gerät verwendet. "resources" ist eine Liste mit den I/O- und Speicherresourcen, ihre Elemente sind vom Typ "struct cdi_pci_resource". \<c\>typedef enum {
 
-       CDI_PCI_MEMORY,
-       CDI_PCI_IOPORTS
+     CDI_PCI_MEMORY,
+     CDI_PCI_IOPORTS
 
 } cdi_res_t;\</c\> "cdi_res_t" gibt den Typ einer PCI-Resource an (I/O-Ports oder Speicherbereich). \<c\>struct cdi_pci_resource {
 
-       cdi_res_t    type;
-       uintptr_t    start;
-       size_t       length;
-       unsigned int index;
-       void         *address;
+     cdi_res_t    type;
+     uintptr_t    start;
+     size_t       length;
+     unsigned int index;
+     void         *address;
 
 };\</c\> Informationen zu einer Resource eines PCI-Gerätes erhält man aus dieser Struktur. "type" gibt den Typ an (I/O-Ports oder Speicherbereich), "start" den Beginn, "length" die Länge, "index" den Index der Resource (0 ist die erste usw.) und "address" gibt bei Speicherbereichen ihre virtuelle Adresse an (vorher muss der Bereich mit cdi_pci_alloc_memory() reserviert worden sein). \<c\>typedef ??? cdi_list_t;\</c\> "cdi_list_t" repräsentiert eine Linked-List. Dieser Datentyp muss ein Pointer sein, in týndur ist er ein Pointer auf eine Struktur mit den Elementen "anchor" (zeigt auf das erste Element der Liste) und "size" (Anzahl der Elemente in der Liste). Die Elemente der Liste wiederum müssen einen Pointer speichern können (der Wert des Elements) und sollten desweiteren einen Pointer auf das nächste Element enthalten (eine Linked-List eben).
 
@@ -132,14 +132,14 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 \<c\>struct cdi_net_device {
 
-       struct cdi_device dev;
-       uint64_t          mac : 48;
-       int               number;
-       void (*send_packet)(struct cdi_net_device *device, void *data, size_t size);
+     struct cdi_device dev;
+     uint64_t          mac : 48;
+     int               number;
+     void (*send_packet)(struct cdi_net_device *device, void *data, size_t size);
 
 };\</c\> Diese Struktur beschreibt ein CDI.net-Gerät. "dev" ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, "mac" gibt die MAC-Adresse an und "number" die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei "device" ein Pointer auf diese Struktur ist, "data" ein Pointer auf die zu sendenden Daten, während "size" die Größe des Puffers "data" angibt. Wichtig: Man darf nicht erwarten, dass send_packet() reentrant (also gegen [Race Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") abgesichert) ist! Das Betriebssystem muss somit selbst dafür Sorge tragen, dass diese Funktion immer nur von maximal einem einzigen Prozess durchlaufen wird. \<c\>struct cdi_net_driver {
 
-       struct cdi_driver drv;
+     struct cdi_driver drv;
 
 };\</c\> Mit dieser Struktur werden CDI.net-Treiber beschrieben. Sie enthält lediglich die Struktur "struct cdi_driver", die den Treiber im Allgmeinen repräsentiert.
 
@@ -161,6 +161,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5499/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 5499; parent 5484; 2009-08-08T20:33:03Z -->
+<!-- MediaWiki page 1622; revision 5559; parent 5499; 2009-08-10T18:01:42Z -->
