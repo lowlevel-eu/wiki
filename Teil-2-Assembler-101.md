@@ -227,6 +227,10 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
     gcc -m32 -o factorial main.c fact.S
 
+**Hinweis:**
+
+Bei gcc sollte die Assemblerdatei unbedingt die Endung .S (mit großem S) haben. Bei einem kleinen .s erkennt der Assembler die Datei sonst als bereits vom Präprozessor bearbeitet und würde diesen dann nicht mehr aufrufen. C-Kommentare, \#define, andere Präprozessordirektiven und manche Befehle sind dann nicht mehr nutzbar!
+
 ## Weblinks
 
 [Intels Prozessordokumentation](http://www.intel.com/products/processor/manuals/)
@@ -239,6 +243,6 @@ Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5000/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 5000; parent 4992; 2009-08-01T17:47:50Z -->
+<!-- MediaWiki page 1918; revision 5561; parent 5000; 2009-08-10T21:00:28Z -->
