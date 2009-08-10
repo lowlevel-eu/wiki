@@ -82,7 +82,7 @@
 ## Andere Emulations- / Virtualisierungs-Software
 
 - [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")
-- Qemu
+- [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU")
 - [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox")
 
   
@@ -96,6 +96,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
 
-<!-- MediaWiki page 1799; revision 5528; parent 5018; 2009-08-10T14:52:05Z -->
+<!-- MediaWiki page 1799; revision 5543; parent 5528; 2009-08-10T15:32:58Z -->
