@@ -64,7 +64,7 @@ Die Breakpoint-Instruktion (*INT3*) ermöglicht das Setzen von Breakpoints im Co
 
 ## Unterstützung in Emulatoren
 
-Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emulatoren diese eventuell noch nicht unterstützen. Zum Beispiel sind sie in [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.4.1 nur teilweise implementiert. In Qemu ab Version 0.10 und [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") scheinen sie hingegen zu funktionieren.
+Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emulatoren diese eventuell noch nicht unterstützen. Zum Beispiel sind sie in [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.4.1 nur teilweise implementiert. In [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") ab Version 0.10 und [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") scheinen sie hingegen zu funktionieren.
 
 ## Siehe auch
 
@@ -72,6 +72,6 @@ Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5063/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
 
-<!-- MediaWiki page 1928; revision 5063; parent 5062; 2009-08-04T11:55:56Z -->
+<!-- MediaWiki page 1928; revision 5545; parent 5063; 2009-08-10T15:33:55Z -->
