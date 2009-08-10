@@ -69,7 +69,7 @@ Auch beim Compiler ist die Sache relativ klar: Wenn Du [C](https://github.com/lo
 
 #### Dein Emulator
 
-Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm Qemu oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") – oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
+Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") – oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
 
 - <http://www.qemu.org>
 - <http://bochs.sourceforge.net>
@@ -166,6 +166,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5480/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5541/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 5480; parent 5479; 2009-08-07T22:15:30Z -->
+<!-- MediaWiki page 1619; revision 5541; parent 5480; 2009-08-10T15:31:30Z -->
