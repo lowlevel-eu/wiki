@@ -46,7 +46,7 @@
 
 <!-- -->
 
-- *Von [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") begonnen, muss nur noch ausgebaut/korrigiert werden*
+- *Von [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") begonnen, muss nur noch ausgebaut/korrigiert werden*
 
 <!-- -->
 
@@ -70,6 +70,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 5470; parent 5469; 2009-08-07T20:17:42Z -->
+<!-- MediaWiki page 1518; revision 5525; parent 5470; 2009-08-10T14:10:08Z -->
