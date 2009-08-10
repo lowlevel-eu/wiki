@@ -265,7 +265,7 @@ Und zum Schluss schreiben wir das Image mit Rawrite auf die Diskette:
 
 Jetzt rebootet ihr ganz einfach euren Rechner mit unserer neuen bootfähigen Diskette im Laufwerk... TÄDÄÄÄÄÄÄÄH!!!
 
-**Anmerkung:** Wer sein OS mit Qemu testen will, sollte dafür sorgen, dass auch die Größes des Kernels durch 512 teilbar ist, da Qemu nur ganze Sektoren lädt.
+**Anmerkung:** Wer sein OS mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") testen will, sollte dafür sorgen, dass auch die Größes des Kernels durch 512 teilbar ist, da QEMU nur ganze Sektoren lädt.
 
 ## Lowlevel-Grundlagen, Teil 1
 
@@ -648,6 +648,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4988/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 4988; parent 4820; 2009-08-01T17:39:52Z -->
+<!-- MediaWiki page 1412; revision 5533; parent 4988; 2009-08-10T15:27:11Z -->
