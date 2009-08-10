@@ -8,7 +8,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Eine der größten Hürden zu Beginn beim Schreiben eines ATA-Treibers ist das Erkennen der angeschlossenen Geräte. Hierzu gibt es keinen von der Spezifikation vorgeschriebenen Weg. Viele Methoden funktionieren zwar in einigen Emulatoren aber auf echter Hardware nicht und umgekehrt.
 
-Beim Schreiben des ATA-Treibers für týndur habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in Qemu und [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare") und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (4 Rechner von P1 bis zum P4).
+Beim Schreiben des ATA-Treibers für týndur habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") und [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare") und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (4 Rechner von P1 bis zum P4).
 
 ### HOB-Bit löschen
 
@@ -141,6 +141,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 5060; parent 4942; 2009-08-04T10:46:43Z -->
+<!-- MediaWiki page 1522; revision 5535; parent 5060; 2009-08-10T15:28:21Z -->
