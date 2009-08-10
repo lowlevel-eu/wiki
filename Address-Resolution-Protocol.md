@@ -10,6 +10,52 @@ Die Zuordnung IP \<-\> MAC sollte dann von A in einem ARP-Cache eingetragen werd
 
 ## Aufbau von ARP-Paketen
 
+### Übersicht
+
+<table>
+<tbody><tr>
+<td>0</td>
+<td>4</td>
+<td>8</td>
+<td>12</td>
+<td>16</td>
+<td>20</td>
+<td>24</td>
+<td>28</td>
+<td>31
+</td></tr>
+<tr>
+<td colspan="4">Hardwareadresstyp</td>
+<td colspan="5">Netzwerkadresstyp
+</td></tr>
+<tr>
+<td colspan="2">Hardwareadresslänge</td>
+<td colspan="2">Netzwerkadresslänge</td>
+<td colspan="5">Operation
+</td></tr>
+<tr>
+<td colspan="9">Absender-MAC-Adresse
+</td></tr>
+<tr>
+<td colspan="4">Absender-MAC-Adresse (Fortsetzung)</td>
+<td colspan="5">Absender-IP-Adresse
+</td></tr>
+<tr>
+<td colspan="4">Absender-IP-Adresse (Fortsetzung)</td>
+<td colspan="5">Empfänger-MAC-Adresse
+</td></tr>
+<tr>
+<td colspan="9">Empfänger-MAC-Adresse (Fortsetzung)
+</td></tr>
+<tr>
+<td colspan="9">Empfänger-IP-Adresse
+</td></tr>
+</tbody></table>
+
+  
+
+### Genaue Betrachtung
+
 Bitte beachten: Wie bei vielen Netzwerkprotokollen wird auch bei ARP Big-Endian verwendet.
 
 | Offset | Länge | Beschreibung |
@@ -30,6 +76,6 @@ Im Typfeld des Ethernetpaketes muss übrigens 0x0806 für ARP eingetragen werden
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5556/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
 
-<!-- MediaWiki page 1937; revision 5250; parent 5105; 2009-08-06T15:08:23Z -->
+<!-- MediaWiki page 1937; revision 5556; parent 5250; 2009-08-10T16:47:10Z -->
