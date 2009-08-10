@@ -35,7 +35,7 @@
 | **01.02.2007 :** | Version 0.66 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. Es wurden größtenteils nur Bugs behoben. |
 | **18.01.2007 :** | Die Version 0.57 der 64-Bit Variante des Betriebssystems MenuetOS wurde veröffentlicht. Die neue Version enthält nun einen FTP-Client. [menuetos.net](http://www.menuetos.net) |
 | **30.11.2006 :** | Der Linux Kernel 2.6.19 wird veröffentlicht. Neu ist u.a. die Unterstützung der Dateisysteme ext4, GFS2 und eCryptfs. [kernel.org](http://www.kernel.org) |
-| **11.11.2006 :** | MyEmu 0.2 erscheint [Website](http://myemu.masen-inhabitants.com/) |
+| **11.11.2006 :** | [MyEmu](http://myemu.masen-inhabitants.com/) 0.2 erscheint |
 | **25.10.2006 :** | Version 0.64 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. |
 | **22.10.2006 :** | Version 0.52B des 64bit OS [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS") wird veröffentlicht. Einzige Neuerungen sind kleine Verbesserungen am eigenen Browser. [Website](http://www.menuetos.net/) |
 | **20.09.2006 :** | Linus Torvalds gibt den Kernel 2.6.18 frei. Neben etlichen kleinen Änderungen, wurde der Scheduler und die Locking-Mechanismen überarbeitet. [\[3\]](http://www.kernel.org) |
@@ -47,6 +47,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 5457; parent 4883; 2009-08-07T18:56:28Z -->
+<!-- MediaWiki page 1416; revision 5529; parent 5457; 2009-08-10T14:53:25Z -->
