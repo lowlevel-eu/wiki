@@ -10,16 +10,43 @@ In [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ether
 
 ### Übersicht
 
-|  |  |  |  |  |  |  |  |
-| ------------- | ------------- | -------------- | ----- | --------------------------- | ----- | ----- | ----- |
-| 4 | 8 | 12 | 16 | 20 | 24 | 28 | 31 |
-| Version | Headerlänge | Priorität |  | Paketlänge |  |  |  |
-| Paket-ID |  |  |  | Fragment Offset und Flags |  |  |  |
-| TTL |  | Protokolltyp |  | Prüfsumme |  |  |  |
-| Absender-IP |  |  |  |  |  |  |  |
-| Ziel-IP |  |  |  |  |  |  |  |
-
-evtl. Optionen
+<table>
+<tbody><tr>
+<td>0</td>
+<td>4</td>
+<td>8</td>
+<td>12</td>
+<td>16</td>
+<td>20</td>
+<td>24</td>
+<td>28</td>
+<td>31
+</td></tr>
+<tr>
+<td colspan="1">Version</td>
+<td colspan="1">Headerlänge</td>
+<td colspan="2">Priorität</td>
+<td colspan="5">Paketlänge
+</td></tr>
+<tr>
+<td colspan="4">Paket-ID</td>
+<td colspan="5">Fragment Offset und Flags
+</td></tr>
+<tr>
+<td colspan="2">TTL</td>
+<td colspan="2">Protokolltyp</td>
+<td colspan="5">Prüfsumme
+</td></tr>
+<tr>
+<td colspan="9">Absender-IP
+</td></tr>
+<tr>
+<td colspan="9">Ziel-IP
+</td></tr>
+<tr>
+<td colspan="9">evtl. Optionen
+</td></tr>
+</tbody></table>
 
   
 
@@ -69,6 +96,6 @@ Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
 
-<!-- MediaWiki page 1970; revision 5552; parent 5521; 2009-08-10T16:20:19Z -->
+<!-- MediaWiki page 1970; revision 5553; parent 5552; 2009-08-10T16:24:31Z -->
