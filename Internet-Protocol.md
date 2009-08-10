@@ -8,6 +8,23 @@ In [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ether
 
 ## Aufbau von IP-Paketen
 
+### Übersicht
+
+|  |  |  |  |  |  |  |  |
+| ------------- | ------------- | -------------- | ----- | --------------------------- | ----- | ----- | ----- |
+| 4 | 8 | 12 | 16 | 20 | 24 | 28 | 31 |
+| Version | Headerlänge | Priorität |  | Paketlänge |  |  |  |
+| Paket-ID |  |  |  | Fragment Offset und Flags |  |  |  |
+| TTL |  | Protokolltyp |  | Prüfsumme |  |  |  |
+| Absender-IP |  |  |  |  |  |  |  |
+| Ziel-IP |  |  |  |  |  |  |  |
+
+evtl. Optionen
+
+  
+
+### Genaue Betrachtung
+
 Bitte beachten: Wie bei vielen Netzwerkprotokollen wird auch bei IP Big-Endian verwendet.
 
 | Offset | Länge | Beschreibung |
@@ -52,6 +69,6 @@ Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
 
-<!-- MediaWiki page 1970; revision 5521; parent 5494; 2009-08-09T18:57:35Z -->
+<!-- MediaWiki page 1970; revision 5552; parent 5521; 2009-08-10T16:20:19Z -->
