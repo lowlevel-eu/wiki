@@ -39,11 +39,12 @@ Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklu
 
 ## Links
 
+- [Artikel zu Minix bei Wikipedia](http://de.wikipedia.org/wiki/Minix_%28Betriebssystem%29)
 - [minix3.org](http://minix3.org)
 - [Flamewar im Usenet](http://www.educ.umu.se/~bjorn/mhonarc-files/obsolete/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5555/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 5284; parent 5054; 2009-08-06T15:30:14Z -->
+<!-- MediaWiki page 1910; revision 5555; parent 5284; 2009-08-10T16:45:43Z -->
