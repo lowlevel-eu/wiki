@@ -4,9 +4,9 @@
 
 |  |  |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **01.05.2009 :** | Mit Version 0.10.3 ist ein weiteres Bugfix-Release des stabilen Qemu-Zweigs erschienen. Die neu dazugekommenen Bugfixes sind wie üblich im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
-| **07.04.2009 :** | Version 0.10.2 von Qemu wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
-| **21.03.2009 :** | Version 0.10.1 von Qemu wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **01.05.2009 :** | Mit Version 0.10.3 ist ein weiteres Bugfix-Release des stabilen [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU")-Zweigs erschienen. Die neu dazugekommenen Bugfixes sind wie üblich im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **07.04.2009 :** | Version 0.10.2 von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **21.03.2009 :** | Version 0.10.1 von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
 | **06.08.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") wird in der Version 0.3.6 veröffentlicht. Changelog findet man [hier](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.6). |
 | **30.06.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.5 wird zum Download freigeben. Die [ReactOS Newsseite](http://www.reactos.org/de/news_page_44.html) gibt einen groben Überblick über die Änderungen. Genaueres steht im [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.5). |
 | **06.06.2008 :** | Bochs steht seit ein paar Tagen in der Version 2.3.7 zum Download bereit. Changelogs findet man [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_3_7_FINAL). |
@@ -14,7 +14,7 @@
 | **19.05.2008 :** | Version 4.2.4 des GNU C Compilers (GCC) wurde released. Weitere Informationen gibt es auf [gcc.gnu.org](http://gcc.gnu.org/) |
 | **02.05.2008 :** | Version 1.6 der x86 Virtualisierungssoftware [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") ist erschienen. Weitere Informationen gibt es auf [virtualbox.org](http://www.virtualbox.org/). |
 | **01.05.2008 :** | NASM Version 2.02 seit dem 20.02.2008 erhältlich. Weitere Informationen gibts auf der [NASM Homepage](http://nasm.sourceforge.net/). |
-| **07.01.2008 :** | Qemu 0.9.1 wurde freigegeben. Eine Zusammenfassung der Änderungen kann dem [Qemu Changelog](http://bellard.org/qemu/changelog.html) entnommen werden. |
+| **07.01.2008 :** | [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") 0.9.1 wurde freigegeben. Eine Zusammenfassung der Änderungen kann dem [Qemu Changelog](http://bellard.org/qemu/changelog.html) entnommen werden. |
 | **24.12.2007 :** | LOST, das Community-Betriebssystem von Lowlevel, wurde in Version 0.1.1 freigegeben. [\[1\]](http://lowlevel.brainsware.org/forum/index.php?topic=1919.0) |
 | **24.12.2007 :** | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.3.6 ist erschienen. Weitere Informationen gibts auf der [Bochs Homepage](http://bochs.sourceforge.net/). |
 | **29.11.2007 :** | NASM ist in Version 2.00 erschienen. Weitere Informationen gibts auf der [NASM Homepage](http://nasm.sourceforge.net/). |
@@ -31,7 +31,7 @@
 | **21.04.2007 :** | Der erste Releasekandidat für Version 0.1.0 des Lowlevel-Community-Betriebssystems LOST wird im [Forum](http://lowlevel.brainsware.org/forum/index.php?topic=1792.0) vorgestellt. |
 | **12.03.2007 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.1 erscheint und kann nun als Image heruntergeladen werden. Der [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.1) ist ziemlich umfangreich. [Website](http://www.reactos.org/) |
 | **02.03.2007 :** | @Heise: [Bundespatentgericht erklärt FAT-Patent von Microsoft für nichtig](http://www.heise.de/newsticker/meldung/86102) |
-| **05.02.2007 :** | Qemu 0.9 erscheint. Gleichzeitig wird der Qemu Accelerator unter die GPL gestellt. [Website](http://fabrice.bellard.free.fr/qemu/) |
+| **05.02.2007 :** | [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") 0.9 erscheint. Gleichzeitig wird der Qemu Accelerator unter die GPL gestellt. [Website](http://fabrice.bellard.free.fr/qemu/) |
 | **01.02.2007 :** | Version 0.66 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. Es wurden größtenteils nur Bugs behoben. |
 | **18.01.2007 :** | Die Version 0.57 der 64-Bit Variante des Betriebssystems MenuetOS wurde veröffentlicht. Die neue Version enthält nun einen FTP-Client. [menuetos.net](http://www.menuetos.net) |
 | **30.11.2006 :** | Der Linux Kernel 2.6.19 wird veröffentlicht. Neu ist u.a. die Unterstützung der Dateisysteme ext4, GFS2 und eCryptfs. [kernel.org](http://www.kernel.org) |
@@ -47,6 +47,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 5529; parent 5457; 2009-08-10T14:53:25Z -->
+<!-- MediaWiki page 1416; revision 5534; parent 5529; 2009-08-10T15:27:57Z -->
