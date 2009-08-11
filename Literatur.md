@@ -8,6 +8,8 @@ Es gibt so gut wie keinen Menschen, der alles kann. Auch nicht im OS-Development
 
 Leider sind die meisten Fach- und Lehrbücher sehr teuer. Darum sei an dieser Stelle nochmal an die leider viel zu oft vergessenen Bibliotheken verwiesen. Zwar wird man bei seiner Stadtbibliothek oft kein Glück haben, jedoch sind viele Büchereien über Hinweise, welche Fachbücher angeschafft werden sollten, teilweise sehr dankbar. Wenn alle Stricke reißen, dann lohnt sich (auch für Schüler) fast immer eine Mitgliedschaft bei der Bibliothek der nächsten Universität, besonders wenn sie Informatikstudiengänge anbietet. Sollte diese gut erreichbar sein, so ist ein Besuch ein absolutes Muss.
 
+Möchte man dennoch lieber ein Buch besitzen, um beispielsweise Notizen zu machen in selbigem, so sollte ein Besuch in der kleinen Bibliothek nebenan machen. Dort werden oftmals Reste von Beständen zu sehr günstigen Preisen verkauft, bsp. wenn von einem Buch eine neue auflage erschienen ist. Preisersparnisse von bis zu 50% sind keine Seltenheit.
+
 ## Bücher: Programmierung
 
 Wer ein OS entwickeln will, sollte schon der Sprache, in der es machen will, mächtig sein. Wer neue Sprachkenntnisse erlernen möchte, seine Sprachkenntnisse vertiefen möchte oder eine gute Referenz sucht, dem sei diese Liste ans Herz gelegt:
@@ -63,6 +65,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5570/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5569; parent 5568; 2009-08-11T11:15:59Z -->
+<!-- MediaWiki page 1930; revision 5570; parent 5569; 2009-08-11T11:18:29Z -->
