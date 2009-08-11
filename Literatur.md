@@ -52,19 +52,17 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 
 ## Bücher: Hardware
 
-Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zugriff darauf usw.. Nur die wenigsten wissen, an welchem Port man ein bestimmtes PCI-Gerät anspricht oder wie sich die Soundkarte dazu überreden lässt, einen Ton auszugeben. Hier eine Liste empfehlenswerter Büche:
+Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zugriff darauf usw.. Nur die wenigsten wissen, an welchem Port man ein bestimmtes PCI-Gerät anspricht oder wie sich die Soundkarte dazu überreden lässt, einen Ton auszugeben. Hier eine Liste empfehlenswerter Bücher:
 
 - ["Das Addison-Wesley Handbuch der Hardwareprogrammierung" von Klaus Dembowski](http://www.amazon.de/Das-Addison-Wesley-Handbuch-Hardwareprogrammierung/dp/3827323053)  
   Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
 - ["PC-Hardwarebuch" von Hans-Peter Messmer und Klaus Dembowski](http://www.amazon.de/PC-Hardwarebuch-Aufbau-Funktionsweise-Programmierung/dp/3827314615)  
   Das Standardwerk, wenn es um Hardwareprogrammierung geht.
 
-  
-
 ## Linkliste
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5568/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5568; parent 5567; 2009-08-11T11:15:26Z -->
+<!-- MediaWiki page 1930; revision 5569; parent 5568; 2009-08-11T11:15:59Z -->
