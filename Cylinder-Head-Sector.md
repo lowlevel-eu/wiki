@@ -1,6 +1,6 @@
 # Cylinder Head Sector
 
-**Cylinder Head Sector** (Zylinderkopfsektor), kurz CHS genannt, ist eine alte Adressierungsmethode für Massenspeicher wie Festplatten und Disketten. Das Gegenstück dazu ist die lineare Adressierung namens [LBA](https://github.com/lowlevel-eu/wiki/wiki/Logical-Block-Addressing "Logical Block Addressing").
+**Cylinder Head Sector** (Zylinder-Kopf-Sektor), oder auch **CHS**, ist eine veraltete Methode zur Adressierung von Blöcken/Sektoren auf Festplatten und Disketten. Mit steigender Größe der Massenspeicher wurde die Handhabung per CHS limitiert, weshalb man heute [LBA](https://github.com/lowlevel-eu/wiki/wiki/Logical-Block-Addressing "Logical Block Addressing") nutzt.
 
 Bei der Angabe des Sektors wird immer bei 1 begonnen. Der erste Sektor wird also mit Cylinder=0 Header=0 Sector=1 adressiert.
 
@@ -19,6 +19,6 @@ Umrechnung von CHS nach LBA:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4809/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1440/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5566/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1440/index.html)
 
-<!-- MediaWiki page 1440; revision 4809; parent 2689; 2009-07-30T00:21:27Z -->
+<!-- MediaWiki page 1440; revision 5566; parent 4809; 2009-08-11T11:04:06Z -->
