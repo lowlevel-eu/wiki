@@ -42,10 +42,13 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 
 - ["Understanding the Linux Kernel - From I/O ports to process management" von Daniel P. Bovet und Marco Cesati](http://www.amazon.de/Understanding-Linux-Kernel-Process-Management/dp/0596000022/ref=sr_1_2?ie=UTF8&qid=1249546324&sr=8-2)  
   Dieses Buch erklärt den [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") sehr detailliert, indem Grafiken Abläufe erklären und wichtige Strukturen sowie kurze Codeteile aufgelistet werden. Dabei handelt es unter anderem von [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") (mit Dateibuffering, Swapping und [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")), dem VFS von Linux, [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), Signalen, [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Synchronisation im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
-- ["Operating Systems: Design and Implementation" von Andrew S. Tanenbaum](http://www.amazon.de/Operating-Systems-Implementation-Prentice-Software/dp/0131429388)  
-  Dieses Lehrbuch beschäftigt sich mit [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch bevor und während er Linux entwickelte, zu schätzen.
 
   
+
+### Bücher über Implementierung
+
+- ["Operating Systems: Design and Implementation" von Andrew S. Tanenbaum](http://www.amazon.de/Operating-Systems-Implementation-Prentice-Software/dp/0131429388)  
+  Dieses Lehrbuch beschäftigt sich mit [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch bevor und während er Linux entwickelte, zu schätzen.
 
 ## Bücher: Hardware
 
@@ -62,6 +65,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5568/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 5567; parent 5477; 2009-08-11T11:13:50Z -->
+<!-- MediaWiki page 1930; revision 5568; parent 5567; 2009-08-11T11:15:26Z -->
