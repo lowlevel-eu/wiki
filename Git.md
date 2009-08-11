@@ -103,6 +103,16 @@ Sehr wichtig sind die Branching-Mechanismen. Mit den oben genannten Befehlen wä
 
 Aber auch die bereits oben erklärten Befehle sollte man in der Dokumentation nachschauen, da alle noch interessante Parameter haben, die sicherlich zur Anwendung kommen.
 
+## Tipps & Tricks
+
+### Branch im Remote-Archiv löschen
+
+Über
+
+    git push <Remote-Archiv> :heads/<Branch>
+
+kann der Branch \<Branch\> im Remote-Archiv \<Remote-Archiv\> (typischerweise *origin*) gelöscht werden.
+
 ## Vergleich zu Subversion
 
 Wie bei so vielen konkurrierenden Projekten gibt es auch viele Meinungen, Diskussionen und Flamewars bei der Frage, welches SCM das beste sei. Git und [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") werden oft direkt miteinander verglichen, was einerseits mit der Popularität beider Systeme zusammenhängt, aber vielleicht auch mit den starken Meinungen von Linus Torvalds gegenüber Subversion (und insbesondere [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS")). Dieser Abschnitt nimmt sich der wichtigsten Argumente an, und soll als Entscheidungshilfe dienen.
@@ -157,6 +167,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 5004; parent 4725; 2009-08-01T18:02:47Z -->
+<!-- MediaWiki page 1889; revision 5573; parent 5004; 2009-08-11T16:21:34Z -->
