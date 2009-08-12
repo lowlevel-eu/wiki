@@ -47,8 +47,6 @@ Einfach [hier](http://list.tyndur.org) auf der Mailingliste mit einer vorhandene
 
 Fast noch wichtiger als die Mailingliste selbst und die Anlaufstelle Nummer 1 ist der Channel zu týndur im euIRC. Dort sind viele aus der Community aktiv sowie die Projektleiter. Einfach mal in den Channel \#lost reinschauen und ruhig Fragen stellen, sie werden sicher gern beantwortet.
 
-  
-
 ## Mit der Entwicklung beginnen
 
 ### Programme schreiben
@@ -150,6 +148,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5584/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5585/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5584; parent 5583; 2009-08-12T08:12:19Z -->
+<!-- MediaWiki page 2035; revision 5585; parent 5584; 2009-08-12T08:13:17Z -->
