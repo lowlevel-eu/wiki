@@ -103,6 +103,46 @@ Sehr wichtig sind die Branching-Mechanismen. Mit den oben genannten Befehlen wä
 
 Aber auch die bereits oben erklärten Befehle sollte man in der Dokumentation nachschauen, da alle noch interessante Parameter haben, die sicherlich zur Anwendung kommen.
 
+## Beispiel-Konfigurationsdatei
+
+git bietet die Möglichkeit, in Konfigurationsdateien einige Einstellungen dauerhaft vorzunehmen, die man sonst jedes Mal über Kommandozeilenparameter angeben müsste. Es gibt dabei zwei verschiedene Konfigurationsdateien: ~/.gitconfig gilt für alle Repositories, .git/config liegt im Verzeichnis jedes einzelnen Repositorys und gilt nur für dieses. Für die globalen Einstellungen empfiehlt sich zumindest die folgenden Optionen anzugeben (die Werte natürlich anpassen, wo nötig):
+
+    [user]
+       name = Dein Name
+       email = mail@dres.se
+    [color]
+       branch = auto
+       diff = auto
+       status = auto
+    [color "branch"]
+       current = yellow reverse
+       local = yellow
+       remote = green
+    [color "diff"]
+       meta = yellow bold
+       frag = magenta bold
+       old = red bold
+       new = green bold
+    [color "status"]
+       added = yellow
+       changed = green
+       untracked = cyan
+    [sendemail]
+        chainreplyto = false
+        smtpserver = smtp.mail-provider.de
+        smtpuser = smtpuser
+    [format]
+        numbered = auto
+    [merge]
+        tool = vimdiff
+
+In der projektspezifischen Konfigurationsdatei kann man z.B. die Mailadresse einstellen, an die git-send-email seine Mails schicken soll:
+
+    [sendemail]
+        to = tyndur-devel@tyndur.org
+
+Weitere Einstellungsmöglichkeiten werden in den Manpages der einzelnen git-Befehle beschrieben.
+
 ## Tipps & Tricks
 
 ### Branch im Remote-Archiv löschen
@@ -167,6 +207,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 5573; parent 5004; 2009-08-11T16:21:34Z -->
+<!-- MediaWiki page 1889; revision 5616; parent 5573; 2009-08-12T19:43:45Z -->
