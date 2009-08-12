@@ -152,9 +152,10 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 - [Týndur/Bochs](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Bochs "Týndur/Bochs")
 - [Týndur/Wunschliste](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Wunschliste "Týndur/Wunschliste")
+- [Týndur/Ressourcen](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Ressourcen "Týndur/Ressourcen")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5579/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5581/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5579; parent 0; 2009-08-12T08:06:28Z -->
+<!-- MediaWiki page 2035; revision 5581; parent 5579; 2009-08-12T08:10:37Z -->
