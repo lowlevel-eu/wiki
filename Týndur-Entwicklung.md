@@ -89,7 +89,7 @@ Hat man schließlich ein Programm geschrieben oder portiert, einen Treiber entwi
 
 ### Commit erstellen
 
-Nun muss erstmal ein Commit erstellt werden. Dazu nutzt man git add:
+Nun muss erstmal ein Commit erstellt werden.Dazu nutzt man git add:
 
 ` git add src/modules/c/meinprog/* `
 
@@ -101,9 +101,7 @@ Danach öffnet sich der Standard-Editor (in der Regel vim). Dort kann man seinen
 
 - 1\. Zeile ist der E-Mail-Betreff
 - 2\. Zeile leer lassen
-- 3\. Zeile Kurze Erläuterung zum Patch
-- Neuer Absatz
-- Änderung angeben
+- Änderungen angeben
 
 Die Änderung wird nach folgendem Schema angegeben:
 
@@ -113,6 +111,8 @@ Die Änderung wird nach folgendem Schema angegeben:
 
 Nun eine neue Zeile einfügen und speichern. Der Commit wurde jetzt erstellt.
 
+Beim Committen bitte darauf achten, dass aus einer logischen Änderung genau ein Commit (und damit später genau ein Patch) wird. Wenn Du also an zwei verschiedenen Baustellen gearbeitet hast, füg zunächst alle Änderungen, die zur ersten gehören, mit git add hinzu, mache einen Commit und wiederhole das ganze für den zweiten Teil.
+
   
 
 ### Patch senden
@@ -121,7 +121,7 @@ Nun muss der Patch an die Mailingliste ankommen. Dazu wird der Patch per format-
 
 ` git format-patch -1 `
 
-Das -1 gibt an, der wie vielte Patch einer Patch-Reihe das ist, also in dem Fall 1.
+Das -1 gibt an, wie viele Patches zu der Patchserie gehören sollten, die exportiert werden soll. Das ist also in diesem Fall genau einer. Wenn es mehrere sind, kann man noch --cover-letter angeben, die einen \[PATCH 0/n\] erstellt, in dem üblicherweise der grobe Überblick über die ganze Serie gegeben wird.
 
 Jetzt wird der Patch an die Mailingliste gesendet:
 
@@ -129,10 +129,11 @@ Jetzt wird der Patch an die Mailingliste gesendet:
 
 Zur Erläuterung:
 
-- 000x-name-des-patches.patch ist der per git format-patch erstelle Patch. x steht dabei für den wievielten Patch, in unserem Fall 1, name-des-patches ist bei git commit angegebene Betreffzeile (Leerstellen wurden durch Bindestriche ersetzt)
+- 000x-name-des-patches.patch ist der per git format-patch erstelle Patch. x steht dabei für den wievielten Patch, in unserem Fall 1, name-des-patches ist bei git commit angegebene Betreffzeile (Leerstellen wurden durch Bindestriche ersetzt). Bei einer Patchserie werden alle Patches auf einmal angegeben, am einfachsten über 00\*.patch.
 - Bei --smtp-server musst der SMTP-Server des E-Mail-Providers angegeben werden
 - Bei --smtp-user der Username
 - Bei --smtp-pass das Passwort
+- Die Einstellungen können auch in der git-Konfigurationsdatei gemacht werden, siehe git-send-email --help
 
 Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Git versendet die E-Mail dann über einen eigenen Mailserver und trägt nur die Adresse des Entwicklers als Absender ein:
 
@@ -140,7 +141,7 @@ Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Gi
 
 Im nun folgendem Dialog wird gefragt, von woher die E-Mail kommen soll, sofern keine Änderung gewünscht ist einfach Enter drücken, dann wird nach der ID der Mail gefragt, auf die geantwortet werden soll - im Normalfall auch hier einfach Enter drücken. Wenn alles geklappt hat ist der Patch nun auf der Mailingliste angekommen (sofern man nicht die Anmeldung auf selbiger vergessen hat).
 
-Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pages/1460/index.html "Benutzer:FreakyPenguin") ein sogenanntes "Acked-by" an die Mailingliste gesendet wird, wurde der Patch akzeptiert und landet im Repository.
+Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt") werden, bevor er von Leuten mit Commitrechten in das Repository eingepflegt wird. Wenn Du beim Korrekturlesen helfen willst, kann Du auf einen Patch entweder mit einer Zeile wie *Acked-by: Max Mustermann \<max@mustermann.de\>* als korrekt bestätigen oder aber Deine Kritikpunkte zitieren und kommentieren.
 
 ## Siehe auch
 
@@ -150,6 +151,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5609/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5614/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5609; parent 5596; 2009-08-12T19:04:15Z -->
+<!-- MediaWiki page 2035; revision 5614; parent 5609; 2009-08-12T19:31:30Z -->
