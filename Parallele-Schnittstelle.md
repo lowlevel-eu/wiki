@@ -1,9 +1,5 @@
 # Parallele Schnittstelle
 
-**Achtung!**
-
-Dieser Artikel wird gerade bearbeitet, bitte **keine** Änderungen vornehmen! ~[Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 19:40, 6. Aug. 2009 (CEST)
-
 Die **parallele Schnitstelle** ist eine Schnitstelle am PC zur Übertragung von Daten an Peripheriegeräte.
 
   
@@ -134,6 +130,6 @@ Beim Nibble Mode arbeitet die Schnittstelle mir einer Breite von 4 Bit (einem Ha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5417; parent 5385; 2009-08-07T02:25:48Z -->
+<!-- MediaWiki page 1996; revision 5586; parent 5417; 2009-08-12T08:15:32Z -->
