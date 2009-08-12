@@ -15,6 +15,6 @@ Hier eine Liste mit den aktiven Team-Mitgliedern:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1502/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1502/index.html)
 
-<!-- MediaWiki page 1502; revision 4485; parent 3770; 2009-06-26T14:55:04Z -->
+<!-- MediaWiki page 1502; revision 5603; parent 4485; 2009-08-12T16:20:54Z -->
