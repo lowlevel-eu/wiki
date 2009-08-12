@@ -125,14 +125,14 @@ Das -1 gibt an, wie viele Patches zu der Patchserie gehören sollten, die export
 
 Jetzt wird der Patch an die Mailingliste gesendet:
 
-` git send-email 000x-name-des-patches.patch --smtp-server smtp.example.com --smtp-user username --smtp-pass password --to tyndur-devel@tyndur.org `
+` git send-email 000x-name-des-patches.patch --smtp-server smtp.example.com --smtp-user username --to tyndur-devel@tyndur.org `
 
 Zur Erläuterung:
 
 - 000x-name-des-patches.patch ist der per git format-patch erstelle Patch. x steht dabei für den wievielten Patch, in unserem Fall 1, name-des-patches ist bei git commit angegebene Betreffzeile (Leerstellen wurden durch Bindestriche ersetzt). Bei einer Patchserie werden alle Patches auf einmal angegeben, am einfachsten über 00\*.patch.
 - Bei --smtp-server muss der SMTP-Server des E-Mail-Providers angegeben werden
 - Bei --smtp-user der Username
-- Bei --smtp-pass das Passwort
+- Mit smtp-pass kann das Passwort angegeben werden - das ist aber im Allgemeinen eine schlechte Idee, weil das Passwort damit im Klartext in der History der Shell landet. Wenn man den Parameter weglässt, fragt git selber nach dem Passwort.
 - Die Einstellungen können auch in der git-Konfigurationsdatei gemacht werden, siehe git-send-email --help
 
 Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Git versendet die E-Mail dann über einen eigenen Mailserver und trägt nur die Adresse des Entwicklers als Absender ein:
@@ -151,6 +151,6 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5615/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5615; parent 5614; 2009-08-12T19:37:42Z -->
+<!-- MediaWiki page 2035; revision 5617; parent 5615; 2009-08-12T19:48:13Z -->
