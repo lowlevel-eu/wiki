@@ -1,8 +1,8 @@
 # AiCOS
 
-**Hinweis:**
+**Achtung!**
 
-Diese Seite wird demnächst durch ScollPi dem Autor von AiCOS überarbeitet. Die experimentelle Phase (0) ist damit abgeschlossen und die Entwicklung von AiCOS wird in Version 0.01 fortgesetzt.
+Diese Seite wird derzeit durch ScollPi dem Autor von AiCOS überarbeitet. Bitte keine anderweitigen Änderungen (z.B. Beseitigung von Schreibfehlern) vornehmen, bis dieser Vorgang abgeschlossen ist.
 
   
 
@@ -10,7 +10,7 @@ Diese Seite wird demnächst durch ScollPi dem Autor von AiCOS überarbeitet. Die
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
-| Akt. Version: | Research Phase 0 (0.00.38.57) |
+| Akt. Version: | Research Phase 1 (0.01.x) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (später auch [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64")) |
@@ -24,11 +24,13 @@ Diese Seite wird demnächst durch ScollPi dem Autor von AiCOS überarbeitet. Die
 In Planung
 
   
-AiCOS ist als ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") geplant, welches Anfangs für Aufgaben im Netzwerkbereich fungieren soll, unter anderem auch als Storage-System. Dabei wird es gezielt auf Multiprozessor bzw. Multicore-System operieren. Ob es auch den Sprung in ein Cluster schafft, wird sich dann zeigen. Aber erst einmal alles Schritt für Schritt, begonnen mit einem Singlecore-System.
+AiCOS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches ganz neue Wege gehen wird, vor allem im Kerneldesign. Warum also aus einer blöden und verrückten Idee nicht ein vollwertiges OS machen?
 
-AiCOS soll frisches Blut (über eine genauere Definition werde ich noch grübeln) in die Computertechnik bringen, unter anderem ein eigenes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), eigenes Netzwerkprotokoll und eine eigene Programmiersprache ... wenn es klappt.
+AiCOS Einsatzbereicht wird anfangs im Netzwerkbereich liegen, unter anderem aber auch als Storage-System. Auch wenn AiCOS auf Single-Core-Plattformen laufen wird, wird es seine Stärken wohl eher auf Multiprozessor bzw. Multicore-System zeigen können. Wichtigstes Ziel dabei ist zum Einem die Performance (ideal sogar Echtzeit) und zum Anderem die Stabilität (Redundanz bis auf CPU-Ebene).
 
-AiCOS Wurzel liegen weder in der Linux/Unix-Welt, weder in der Windows-Welt, sondern in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity").
+Dieses ehrgeizige Ziel von AiCOS soll frisches Blut in die Computertechnik bringen und hoffentlich auch andere zu solchen OS-Disgns motivieren. Denn noch ist AiCOS ein ClosedSource-Projekt.
+
+Wen wunderts also, dass AiCOS Wurzel liegen weder in der Linux/Unix-Welt noch in der Windows-Welt, sondern viel eher in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
 
   
 
@@ -48,6 +50,11 @@ AiCOS Wurzel liegen weder in der Linux/Unix-Welt, weder in der Windows-Welt, son
   - [Paging verschiedener CPUs](http://ra.ziti.uni-heidelberg.de/pages/student_work/seminar/ws0304/frank_lemke/praesentation.pdf)
 
   
+
+**Hinweis:**
+
+Alle ab hier folgenden Abschnitte werden noch überarbeitet.
+
 **Testumgebung:**
 
 Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da einmal ein P2 mit müden 400 MHz als Single-Core, um vor allem die Boot-Phasen zu testen. OK, derzeit benutze ich einen Laptop mit P3 mit 1 GHz und satten 256 MiB RAM. Versehentlich auch mal Tests auf meinem Quad-Core, wenn ich vergessen habe die Diskette nach dem Testen rauszunehmen. Aber da zeigt sich schon, dass auf der realen Maschine alles genauso läuft wie bisher in der VM.
@@ -222,6 +229,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5610/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 5513; parent 5394; 2009-08-08T21:41:48Z -->
+<!-- MediaWiki page 1766; revision 5610; parent 5513; 2009-08-12T19:05:20Z -->
