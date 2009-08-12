@@ -28,6 +28,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3838/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1803/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1803/index.html)
 
-<!-- MediaWiki page 1803; revision 3838; parent 3835; 2009-01-04T14:47:57Z -->
+<!-- MediaWiki page 1803; revision 5602; parent 3838; 2009-08-12T16:20:36Z -->
