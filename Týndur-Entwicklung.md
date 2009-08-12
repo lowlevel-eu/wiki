@@ -133,7 +133,7 @@ Zur Erläuterung:
 - Bei --smtp-server muss der SMTP-Server des E-Mail-Providers angegeben werden
 - Bei --smtp-user der Username
 - Mit smtp-pass kann das Passwort angegeben werden - das ist aber im Allgemeinen eine schlechte Idee, weil das Passwort damit im Klartext in der History der Shell landet. Wenn man den Parameter weglässt, fragt git selber nach dem Passwort.
-- Die Einstellungen können auch in der git-Konfigurationsdatei gemacht werden, siehe git-send-email --help
+- Die Einstellungen können auch in der [git-Konfigurationsdatei](https://github.com/lowlevel-eu/wiki/wiki/Git#beispiel-konfigurationsdatei "Git") gemacht werden, siehe git-send-email --help
 
 Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Git versendet die E-Mail dann über einen eigenen Mailserver und trägt nur die Adresse des Entwicklers als Absender ein:
 
@@ -151,6 +151,6 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5617; parent 5615; 2009-08-12T19:48:13Z -->
+<!-- MediaWiki page 2035; revision 5618; parent 5617; 2009-08-12T19:58:31Z -->
