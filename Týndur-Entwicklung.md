@@ -138,11 +138,9 @@ Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Gi
 
 ` git send-email 000x-name-des-patches.patch --to tyndur-devel@tyndur.org `
 
-Im nun folgendem Dialog wird gefragt, von woher die E-Mail kommen soll, sofern keine Änderung gewünscht ist einfach Enter drücken, dann wird nach der ID der Mail gefragt, hier eine 1 eintragen. Wenn alles geklappt hat ist der Patch nun auf der Mailingliste angekommen (sofern man nicht die Anmeldung auf selbiger vergessen hat).
+Im nun folgendem Dialog wird gefragt, von woher die E-Mail kommen soll, sofern keine Änderung gewünscht ist einfach Enter drücken, dann wird nach der ID der Mail gefragt, auf die geantwortet werden soll - im Normalfall auch hier einfach Enter drücken. Wenn alles geklappt hat ist der Patch nun auf der Mailingliste angekommen (sofern man nicht die Anmeldung auf selbiger vergessen hat).
 
 Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pages/1460/index.html "Benutzer:FreakyPenguin") ein sogenanntes "Acked-by" an die Mailingliste gesendet wird, wurde der Patch akzeptiert und landet im Repository.
-
-  
 
 ## Siehe auch
 
@@ -152,6 +150,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5609/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5596; parent 5595; 2009-08-12T16:18:43Z -->
+<!-- MediaWiki page 2035; revision 5609; parent 5596; 2009-08-12T19:04:15Z -->
