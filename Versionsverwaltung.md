@@ -58,6 +58,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im OpenSource-Bere
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5481/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5590/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 5481; parent 5471; 2009-08-07T23:21:09Z -->
+<!-- MediaWiki page 1801; revision 5590; parent 5481; 2009-08-12T16:11:17Z -->
