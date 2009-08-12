@@ -923,6 +923,6 @@ Und speichern die Datei mit `Speichern unter` ab. Als Namen habe ich hier `Start
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5594/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 4905; parent 4904; 2009-07-30T21:30:00Z -->
+<!-- MediaWiki page 1900; revision 5594; parent 4905; 2009-08-12T16:17:17Z -->
