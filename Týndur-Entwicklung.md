@@ -53,15 +53,13 @@ Fast noch wichtiger als die Mailingliste selbst und die Anlaufstelle Nummer 1 is
 
 ### Programme schreiben
 
-Alle nativen týndur-Programme befinden sich im Verzeichnis src/modules/c (Windows-User denken sich die Slashes weg und ersetzen selbige druch Backslashes). Die Anzahl der Programme ist aktuell recht überschaubar. Ob man nun ein Programm extra für týndur entwickeln möchte oder ob portieren sinnvoller ist, hängt von der Art des Programms ab:
+Alle nativen týndur-Programme befinden sich im Verzeichnis src/modules/c (Windows-User denken sich die Slashes weg und ersetzen selbige durch Backslashes). Die Anzahl der Programme ist aktuell recht überschaubar. Ob man nun ein Programm extra für týndur entwickeln möchte oder ob portieren sinnvoller ist, hängt von der Art des Programms ab:
 
 Es ist sicherlich sehr sinnvoll, ein Programm zur Festplattenpartionierung (siehe fdisk im c-Verzeichnis) selber zu schreiben, aber vielleicht nicht so sinnvoll, einen C-Compiler selber zu schreiben. Letzteres portiert man dann lieber.
 
 Man kann ruhig im Forum oder im IRC nachfragen, welche Anwendungen denn gewünscht sind. Man kann auch z.B. die Komandozeilentools (in sh/cmds) erweitern oder neue schreiben.
 
 Wenn man also ein neues Programm entwickelt, erstellt man einfach ein neues Verzeichnis in src/modules/c, am besten nach dem Namen des Programms (bsp. meinprog). In das Verzeichnis kopiert man sich eine Makefile.all aus einem anderen Programmverzeichnis und passt die Namen entsprechend an.
-
-  
 
 ### Programme portieren
 
@@ -152,6 +150,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5584/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5583; parent 5582; 2009-08-12T08:12:04Z -->
+<!-- MediaWiki page 2035; revision 5584; parent 5583; 2009-08-12T08:12:19Z -->
