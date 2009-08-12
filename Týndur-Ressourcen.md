@@ -4,7 +4,7 @@ Hier sind die wichtigsten Links, die man als Týndur-Benutzer und -Entwickler be
 
 Ausführliche Informationen zum Entwicklungsprozess gibt es unter [Týndur/Entwicklung](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Entwicklung "Týndur/Entwicklung").
 
-## Binärdownloads
+## Downloads
 
 - [download.tyndur.org](http://download.tyndur.org/) – Downloadserver für stabile Releases und andere Dateien zu Týndur
 - [nightlies.tyndur.org](http://nightlies.tyndur.org) – Nightly Builds
@@ -34,6 +34,6 @@ Channellogs und Statistiken: [irc.tyndur.org](http://irc.tyndur.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5589/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
 
-<!-- MediaWiki page 2027; revision 5587; parent 5580; 2009-08-12T13:53:48Z -->
+<!-- MediaWiki page 2027; revision 5589; parent 5587; 2009-08-12T15:48:07Z -->
