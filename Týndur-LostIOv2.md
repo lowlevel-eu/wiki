@@ -10,6 +10,6 @@ Auf dieser Seite können Ideen und Wünsche für die neue LostIO-Version niederg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1673/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1673/index.html)
 
-<!-- MediaWiki page 1673; revision 5419; parent 5418; 2009-08-07T02:30:06Z -->
+<!-- MediaWiki page 1673; revision 5598; parent 5419; 2009-08-12T16:19:23Z -->
