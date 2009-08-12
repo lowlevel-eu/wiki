@@ -41,7 +41,7 @@ Für lbuilds läuft es fast ähnlich:
 
 Die Mailingliste ist ein sehr wichtiges Informationsmedium in der tyńdur-Entwicklung. Dorthin werden alle Patches geschickt. Die Anmeldung ist natürlich kostenlos und die E-Mail-Adresse wird keiner Werbefirma o.ä. weitergegeben, auch bekommt man keine Mails über Potenz-steigernde Mittel.
 
-Einfach [hier](http://list.tyndur.org) auf der Mailingliste mit einer vorhandenen E-Mail-Adresse eintragen (**Nicht vergessen** in der Bestätigungs-Email den Bestätigungs-Link anzuklicken!)
+Einfach [hier](http://list.tyndur.org) auf der Mailingliste mit einer vorhandenen E-Mail-Adresse eintragen (**Nicht vergessen** in der Bestätigungs-E-Mail den Bestätigungs-Link anzuklicken!)
 
 ### Den IRC-Channel besuchen
 
@@ -79,13 +79,13 @@ Wer also einen neuen Treiber entwickeln möchte, erstellt ein Verzeichnis in src
 
 Nobody's perfect, auch nicht die týndur-Entwickler. Deshalb schleichen sich Fehler ein und Bugs entstehen. Wer einen Bug findet, kann, nein, sollte ihn sogar fixen. Hier sei allerdings auf ausgiebiges Testen hingewiesen, denn allzuoft wird aus dem Bugfix ein zweiter Bug.
 
-Auch sollte man überprüfen, ob der Bug nicht vielleicht doch eine Programmfunktion ist ;)
+Auch sollte man überprüfen, ob der Bug nicht vielleicht doch eine Programmfunktion ist. ;)
 
   
 
 ## Entwicklungsstand veröffentlichen
 
-Hat man nun ein Programm geschrieben oder portiert, einen Treiber entwickelt oder einen Bug gefixt, so möchte man natürlich, dass die Welt und speziell die anderen Entwickler etwas davon mitbekommen.
+Hat man schließlich ein Programm geschrieben oder portiert, einen Treiber entwickelt oder einen Bug gefixt, so möchte man natürlich, dass die Welt und speziell die anderen Entwickler etwas davon mitbekommen.
 
 ### Commit erstellen
 
@@ -97,7 +97,7 @@ Obiger Befehl fügt zum Beispiel ein entwickeltes Programm namens "meinprog" ins
 
 ` git commit -s `
 
-Nun öffnet sich der Standard-Editor (in der Regel vim). Nun kann man seinen Commit beschreiben. Dies sollte nach folgenden Regeln geschehen:
+Danach öffnet sich der Standard-Editor (in der Regel vim). Dort kann man seinen Commit beschreiben. Dies sollte nach folgenden Regeln geschehen:
 
 - 1\. Zeile ist der E-Mail-Betreff
 - 2\. Zeile leer lassen
@@ -111,7 +111,7 @@ Die Änderung wird nach folgendem Schema angegeben:
 - \* Für Änderung
 -  ! Für Bugfix
 
-Nun eine neue Zeile einfügen und speichern. Der Commit wurde nun erstellt.
+Nun eine neue Zeile einfügen und speichern. Der Commit wurde jetzt erstellt.
 
   
 
@@ -130,13 +130,17 @@ Jetzt wird der Patch an die Mailingliste gesendet:
 Zur Erläuterung:
 
 - 000x-name-des-patches.patch ist der per git format-patch erstelle Patch. x steht dabei für den wievielten Patch, in unserem Fall 1, name-des-patches ist bei git commit angegebene Betreffzeile (Leerstellen wurden durch Bindestriche ersetzt)
-- Bei --smtp-server musst der SMTP-Server des EMail-Providers angegeben werden
+- Bei --smtp-server musst der SMTP-Server des E-Mail-Providers angegeben werden
 - Bei --smtp-user der Username
 - Bei --smtp-pass das Passwort
 
-Im nun folgendem Dialog wird gefragt, von woher die EMail kommen soll, sofern keine Änderung gewünscht ist einfach Enter drücken, dann wird nach der ID der Mail gefragt, hier eine 1 eintragen. Wenn alles geklappt hat ist der Patch nun auf der Mailingliste angekommen (sofern man nicht die Anmeldung auf selbiger vergessen hat).
+Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Git versendet die E-Mail dann über einen eigenen Mailserver und trägt nur die Adresse des Entwicklers als Absender ein:
 
-Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pages/1460/index.html "Benutzer:FreakyPenguin") ein sogenanntes "Acked-by" an die Mailingliste gesendet wird, wurde der Patch akzeptiert und ladent im Repository.
+` git send-email 000x-name-des-patches.patch --to tyndur-devel@tyndur.org `
+
+Im nun folgendem Dialog wird gefragt, von woher die E-Mail kommen soll, sofern keine Änderung gewünscht ist einfach Enter drücken, dann wird nach der ID der Mail gefragt, hier eine 1 eintragen. Wenn alles geklappt hat ist der Patch nun auf der Mailingliste angekommen (sofern man nicht die Anmeldung auf selbiger vergessen hat).
+
+Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pages/1460/index.html "Benutzer:FreakyPenguin") ein sogenanntes "Acked-by" an die Mailingliste gesendet wird, wurde der Patch akzeptiert und landet im Repository.
 
   
 
@@ -148,6 +152,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5585/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5585; parent 5584; 2009-08-12T08:13:17Z -->
+<!-- MediaWiki page 2035; revision 5588; parent 5585; 2009-08-12T13:56:44Z -->
