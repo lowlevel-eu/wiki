@@ -12,7 +12,7 @@ Hier sind die wichtigsten Links, die man als Týndur-Benutzer und -Entwickler be
 - [git.tyndur.org](http://git.tyndur.org/) – Týndur-WebGit
 - [svn.tyndur.org](http://svn.tyndur.org/) – Týndur-WebSVN
 
-Anmerkung: Der vollständige Wechsel auf Git ist in Planung, und sofern man nicht an master (sondern nur in einem eigenen Branch) arbeiten will funktioniert dieses auch bereits. Für Änderungen am Hauptzweig ist Subversion zu verwenden. Die Adressen zum klonen:
+Anmerkung: Der vollständige Wechsel auf Git ist in Planung, und sofern man nicht an master (sondern nur in einem eigenen Branch) arbeiten will funktioniert dieses auch bereits. Für Änderungen am Hauptzweig ist Subversion zu verwenden. Die Adressen zum Klonen:
 
 - git://git.tyndur.org/tyndur.git
 - svn://overgames.de/lost
@@ -32,6 +32,6 @@ Channellogs und Statistiken: [irc.tyndur.org](http://irc.tyndur.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5491/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5580/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
 
-<!-- MediaWiki page 2027; revision 5491; parent 5490; 2009-08-08T14:13:58Z -->
+<!-- MediaWiki page 2027; revision 5580; parent 5491; 2009-08-12T08:10:05Z -->
