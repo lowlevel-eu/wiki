@@ -27,7 +27,7 @@ Ob ein Patch ins Repository kommt hängt davon ab, ob er sinnvoll ist und letzen
 
 ### Quellen beziehen
 
-Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per git aus dem týndur-Repository:
+Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") aus dem [týndur-Repository](http://git.tyndur.org):
 
 ` git clone ``git://git.tyndur.org/tyndur.git`` `
 
@@ -36,8 +36,6 @@ Je nach Internetverbindung dauert es ein paar Minuten, bis die ~5 MiB Quellcode 
 Für lbuilds läuft es fast ähnlich:
 
 ` git clone ``git://git.tyndur.org/lbuilds.git`` `
-
-  
 
 ### Auf der Mailingliste anmelden
 
@@ -156,6 +154,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5581/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5581; parent 5579; 2009-08-12T08:10:37Z -->
+<!-- MediaWiki page 2035; revision 5582; parent 5581; 2009-08-12T08:11:41Z -->
