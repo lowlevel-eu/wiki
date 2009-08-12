@@ -41,9 +41,7 @@ Für lbuilds läuft es fast ähnlich:
 
 Die Mailingliste ist ein sehr wichtiges Informationsmedium in der tyńdur-Entwicklung. Dorthin werden alle Patches geschickt. Die Anmeldung ist natürlich kostenlos und die E-Mail-Adresse wird keiner Werbefirma o.ä. weitergegeben, auch bekommt man keine Mails über Potenz-steigernde Mittel.
 
-Einfach [hier](http://list.tyndur.org) auf der Mailingliste mit einer vorhandenen E-Mail-Adresse eintragen (**Nicht vergessen** in der Bestätiguns-Email den Bestätigungs-Link anzuklicken!)
-
-  
+Einfach [hier](http://list.tyndur.org) auf der Mailingliste mit einer vorhandenen E-Mail-Adresse eintragen (**Nicht vergessen** in der Bestätigungs-Email den Bestätigungs-Link anzuklicken!)
 
 ### Den IRC-Channel besuchen
 
@@ -154,6 +152,6 @@ Wenn nun von taljeth oder [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pag
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5582; parent 5581; 2009-08-12T08:11:41Z -->
+<!-- MediaWiki page 2035; revision 5583; parent 5582; 2009-08-12T08:12:04Z -->
