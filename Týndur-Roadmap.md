@@ -57,6 +57,6 @@ Features
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1510/index.html)
 
-<!-- MediaWiki page 1510; revision 3799; parent 3773; 2009-01-02T12:58:36Z -->
+<!-- MediaWiki page 1510; revision 5601; parent 3799; 2009-08-12T16:20:19Z -->
