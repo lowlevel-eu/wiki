@@ -37,12 +37,11 @@ An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html 
 
 ## Weblinks
 
-[Wikipedia-Artikel "Ethernet"](http://de.wikipedia.org/wiki/Ethernet)
-
-[Englischer Wikipedia-Artikel zu Ethernet II](http://en.wikipedia.org/wiki/Ethernet_II_framing)
+- [Wikipedia-Artikel "Ethernet"](http://de.wikipedia.org/wiki/Ethernet)
+- [Englischer Wikipedia-Artikel zu Ethernet II](http://en.wikipedia.org/wiki/Ethernet_II_framing)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
 
-<!-- MediaWiki page 1876; revision 5214; parent 4644; 2009-08-06T12:17:00Z -->
+<!-- MediaWiki page 1876; revision 5619; parent 5214; 2009-08-13T23:01:08Z -->
