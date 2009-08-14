@@ -68,6 +68,6 @@ Das Problem ist klar: Prozess A hat die Überprüfung nicht korrekt durchgesetzt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5400/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
 
-<!-- MediaWiki page 2013; revision 5400; parent 5399; 2009-08-06T21:09:48Z -->
+<!-- MediaWiki page 2013; revision 5620; parent 5400; 2009-08-14T08:28:13Z -->
