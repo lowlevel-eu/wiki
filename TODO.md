@@ -40,8 +40,7 @@
   - Größtenteils erledigt, muss man vielleicht noch vervollständigen
 - [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
 - [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register")
-
-  
+- [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") Könnte bei den Funktionslisten noch eine Sortierung nach Headern vertragen, so sieht das nach so abschreckend viel aus.
 
 ## Neu erstellen
 
@@ -74,6 +73,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 5526; parent 5525; 2009-08-10T14:24:19Z -->
+<!-- MediaWiki page 1518; revision 5621; parent 5526; 2009-08-14T19:42:22Z -->
