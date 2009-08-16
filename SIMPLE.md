@@ -17,8 +17,11 @@
 
 none
 
+  
+jǐncòu ist das Chinesische Wort für "kompakt" und genau so soll das OS auch werden, allerdings befindet es sich noch im untestbarem Anfangsstadium.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5627; parent 5626; 2009-08-16T15:13:26Z -->
+<!-- MediaWiki page 2039; revision 5628; parent 5627; 2009-08-16T15:16:39Z -->
