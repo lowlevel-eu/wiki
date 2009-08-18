@@ -23,7 +23,7 @@ Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht n
 #### Diagramm zum Veranschaulichen
 
 Dieses Diagramm zeigt den groben Aufbau eines monolitschen Kernels.  
-![makro_kelin.png](http://be59.be.funpic.de/Lowlevel/makro_kelin.png)
+Datei:Makro kelin corr.png
 
 ### Mikrokernel
 
@@ -52,6 +52,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5638/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 5558; parent 5557; 2009-08-10T17:08:40Z -->
+<!-- MediaWiki page 1478; revision 5638; parent 5558; 2009-08-18T13:40:00Z -->
