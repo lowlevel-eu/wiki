@@ -22,8 +22,12 @@ Die Prozesse werden automatisch in den Speicher kopiert, welcher für diesen Pro
 
 Das Multitasking basiert auf der Hardware des IA32. Für jeden Prozess wird ein TSS-Eintrag in der GDT gebraucht. der Stack wird an den Speicher des Prozesses angehangen.
 
+#### Interprozesskommunikation (IPC)
+
+Die IPC basiert auf Semaphoren.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5648; parent 5647; 2009-08-19T09:45:46Z -->
+<!-- MediaWiki page 2042; revision 5649; parent 5648; 2009-08-19T09:47:45Z -->
