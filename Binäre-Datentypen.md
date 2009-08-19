@@ -1,7 +1,5 @@
 # Binäre Datentypen
 
-Dieser Artikel beschreibt und erklärt die Art und Weise wie Zahlen und Strings auf binärer Ebene aufgebaut sind und wie die CPU diese verarbeitet.
-
 ## Einführung in Zahlensysteme
 
 Bevor wir uns mit den einzelnen Datentypen beschäftigen ist es notwendig, dass wir generell verstehen wie Dualzahlen (Binärzahlen) aufgebaut sind.
@@ -218,6 +216,6 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5668/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5669/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 5668; parent 0; 2009-08-19T18:05:56Z -->
+<!-- MediaWiki page 2043; revision 5669; parent 5668; 2009-08-19T18:06:16Z -->
