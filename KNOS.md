@@ -10,8 +10,8 @@
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | monolitisch |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Asm, C |
-| API: | WinAPI |
-| Binärformat: | Portable Executable |
+| API: |  |
+| Binärformat: | com |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Semaphoren |
 | Homepage |  |
 
@@ -45,6 +45,6 @@ Die IPC basiert auf Semaphoren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5652; parent 5651; 2009-08-19T09:53:24Z -->
+<!-- MediaWiki page 2042; revision 5653; parent 5652; 2009-08-19T09:54:51Z -->
