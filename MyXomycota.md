@@ -20,6 +20,8 @@
   
 Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") verfügt.
 
+**HINWEIS:** Dieses Projekt wurde zugunsten von [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena") auf unbestimmte Zeit verschoben. Ich konnte das ewige "Das ist kaputt." einfach nicht mehr ertragen. ;-)
+
 **This product includes software developed by the tyndur Project and its contributors.** ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Treiber)
 
 ## Entwickler
@@ -124,6 +126,6 @@ Die ersten sechs Stellen der Hexfunktionsnummer (also Funktionsnummer&0xFFFFFF00
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1861/index.html)
 
-<!-- MediaWiki page 1861; revision 5290; parent 5287; 2009-08-06T15:31:49Z -->
+<!-- MediaWiki page 1861; revision 5672; parent 5290; 2009-08-19T20:11:13Z -->
