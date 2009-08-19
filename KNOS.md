@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | Peabrain |
 | Akt. Version: | 0.0.01 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | monolitisch |
@@ -45,6 +45,6 @@ Die IPC basiert auf Semaphoren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5654/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5653; parent 5652; 2009-08-19T09:54:51Z -->
+<!-- MediaWiki page 2042; revision 5654; parent 5653; 2009-08-19T09:57:41Z -->
