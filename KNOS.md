@@ -2,6 +2,23 @@
 
 ## **KNOS**
 
+| KNOS |  |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+|  |  |
+| Entwickler: | Peabrain |
+| Akt. Version: | 0.3.10 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| OS-Eigenschaften |  |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | monolitisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Asm, C |
+| API: | WinAPI |
+| Binärformat: | Portable Executable |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Semaphoren |
+| Homepage |  |
+
+  
+
 KNOS ist ein monolitischer Kernel, der im Moment nur Programme aus dem Speicher laden kann. Es gibt eine Shell und ein Testprogramm.
 
 ### Aufbau
@@ -28,6 +45,6 @@ Die IPC basiert auf Semaphoren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5649; parent 5648; 2009-08-19T09:47:45Z -->
+<!-- MediaWiki page 2042; revision 5650; parent 5649; 2009-08-19T09:52:39Z -->
