@@ -296,6 +296,8 @@ Aus \#lost (6. April 2009)
     <FreakyPenguin> Ist es zu langsam zum abstürzen, oder was? *g*
     <chris12> nene der bluescreen ist zu instabiel zum aufrufen ;)
 
+------------------------------------------------------------------------
+
 Aus \#lost (19. August 2009)
 
     < DerHartmut> Wer raucht schon echte Computer
@@ -310,6 +312,6 @@ Aus \#lost (19. August 2009)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5666/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 5666; parent 5459; 2009-08-19T17:17:30Z -->
+<!-- MediaWiki page 1435; revision 5667; parent 5666; 2009-08-19T17:18:17Z -->
