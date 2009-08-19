@@ -108,7 +108,7 @@ Wer in D einen Kernel schreibt wird bei der Benutzung von Arrays beim Linken sch
 
 \_d_array_bounds ist dabei nicht anderes, als eine Funktion im D-Runtime, welche überprüft, ob Array-Grenzen eingehalten werden. Um diesen Fehler vorzubeugen, sollte also zumindest eine Stub-Funktion erstellt werden:
 
-\<c\> extern(C) void \_d_array_bounds(char filename, uint line) {} \</c\>
+\<c\> extern(C) void \_d_array_bounds(char \*filename, uint line) {} \</c\>
 
 Zu Debugging-Zwecken kann hier natürlich auch eine echte Überprüfung gemacht werden.
 
@@ -244,6 +244,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5665/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 5506; parent 5191; 2009-08-08T21:36:59Z -->
+<!-- MediaWiki page 1863; revision 5665; parent 5506; 2009-08-19T16:50:04Z -->
