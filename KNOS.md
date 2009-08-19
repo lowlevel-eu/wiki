@@ -45,8 +45,12 @@ Die IPC basiert auf Semaphoren.
 
 ### Zukunft
 
+#### Version 0.0.02
+
+- Prozess dürfen nur Privilegstufe 3 haben. (im Moment haben sie noch Stufe 0)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5656; parent 5655; 2009-08-19T10:09:46Z -->
+<!-- MediaWiki page 2042; revision 5657; parent 5656; 2009-08-19T10:11:37Z -->
