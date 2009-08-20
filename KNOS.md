@@ -54,6 +54,6 @@ Die IPC basiert auf Semaphoren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5659; parent 5658; 2009-08-19T10:14:10Z -->
+<!-- MediaWiki page 2042; revision 5675; parent 5659; 2009-08-20T14:45:08Z -->
