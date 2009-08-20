@@ -34,7 +34,7 @@ Nebenbei kann man an diesem Beispiel auch gut sehen, wie man Dualzahlen in das D
 
 #### MSB und LSB
 
-Das MSB (**M**ost **S**ignifant **B**it) und das LSB (**L**east **S**ignifant **B**it) sind die Bezeichnungen von zwei besonderen Bits einer Dualzahl.
+Das MSB (**M**ost **S**ignificant **B**it) und das LSB (**L**east **S**ignificant **B**it) sind die Bezeichnungen von zwei besonderen Bits einer Dualzahl.
 
   
 Das **MSB** ist das höchstwertige Bit. D.h. das Bit einer Dualzahl mit der höchsten 2er-Potenz.  
@@ -216,6 +216,6 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5669/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5677/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 5669; parent 5668; 2009-08-19T18:06:16Z -->
+<!-- MediaWiki page 2043; revision 5677; parent 5669; 2009-08-20T16:04:52Z -->
