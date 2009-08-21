@@ -8,7 +8,7 @@ Es gibt verschiedene Arten von Netzwerkkarten, wie zum Beispiel die PCI-Lösung.
 
 ## Übertragungsraten
 
-Über ein LAN-Kabel lassen sich Daten mit bis zu 1 Gbit/S austauschen; das nennt man Gigabit-LAN.
+Über ein LAN-Kabel lassen sich Daten mit bis zu 1 GBit/s austauschen; das nennt man Gigabit-LAN.
 
 | Standard | Geschwindigkeit | Notizen |
 | -------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
@@ -32,6 +32,6 @@ Alle Kanäle haben eine Bandbreite von 20 MHz.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1826/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1826/index.html)
 
-<!-- MediaWiki page 1826; revision 5685; parent 5683; 2009-08-21T13:38:25Z -->
+<!-- MediaWiki page 1826; revision 5686; parent 5685; 2009-08-21T13:39:08Z -->
