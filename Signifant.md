@@ -4,7 +4,7 @@
 
 Dieser Artikel ist ein Scherzartikel. Er beschreibt (noch) keinen realen Gegenstand
 
-Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll.
+Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll. Signifanten sind außerdem das potenzielle inoffzielle Maskottchen des Community-Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur").
 
   
 
@@ -47,6 +47,6 @@ Der Signifant ist auch das inoffzielle Maskottchen von týndur.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
 
-<!-- MediaWiki page 2047; revision 5690; parent 5680; 2009-08-21T13:55:38Z -->
+<!-- MediaWiki page 2047; revision 5691; parent 5690; 2009-08-21T13:59:23Z -->
