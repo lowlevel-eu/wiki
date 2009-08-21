@@ -310,8 +310,32 @@ Aus \#lost (19. August 2009)
     < DerHartmut> *lol*
     < bluecode0> *rofl*
 
+------------------------------------------------------------------------
+
+Wie es zur Entstehung der [Signifanten](https://github.com/lowlevel-eu/wiki/wiki/Signifant "Signifant") kam:
+
+Aus \#lost (20. August 2009)
+
+    <taljeth> Hm, die Wikileute sind ja aber auch von gestern
+    <taljeth> Haben wohl noch gar nichts von Sicherheitstechnologien gehört
+    <taljeth> Ein Signifant ist selbstverständlich ein signierter Elefant, damit den ja niemand fälscht
+    <taljeth> Ich ziehe mich hier aus Protest zurück!
+    <taljeth> gn8
+    <FreakyPenguin> Ich helfe auch mit bei dieser Aktion, sonst bringt das ja nichts
+    <FreakyPenguin> gn64
+    <DerHartmut> gn8
+    <DerHartmut> Das Wikiteam distanziert sich von Signifanten.
+    <DerHartmut> *g*
+    <taljeth> Würde ich an eurer Stelle jetzt auch tun
+    <taljeth> Die könnten nicht gut auf euch zu sprechen sein
+    <chris12> brauch jemand noch nen kleinen Browser?
+    <DerHartmut> Ich denke mal, das wird sich wieder einrenken mit den Signifanten.
+    <taljeth> Auf jeden Fall weiß ich jetzt, was für ein Tier ich vorschlage, wenn mal wieder jemand nach einem tyndur-Maskottchen fragt *g*
+    * taljeth hat die Verbindung getrennt (Client exited)
+    <DerHartmut> Na wenn das mal nicht nach einem Wikieintrag schreit.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 5667; parent 5666; 2009-08-19T17:18:17Z -->
+<!-- MediaWiki page 1435; revision 5681; parent 5667; 2009-08-21T01:17:08Z -->
