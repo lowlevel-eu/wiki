@@ -27,6 +27,6 @@ Alle Kanäle haben eine Bandbreite von 20 MHz.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5682/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1826/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5683/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1826/index.html)
 
-<!-- MediaWiki page 1826; revision 5682; parent 4643; 2009-08-21T13:27:31Z -->
+<!-- MediaWiki page 1826; revision 5683; parent 5682; 2009-08-21T13:29:10Z -->
