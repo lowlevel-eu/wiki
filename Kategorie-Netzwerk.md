@@ -4,7 +4,7 @@ Es gibt verschiedene Netzwerktypen.
 
 ## LAN
 
-Das LAN (Local Area Network) ist ein räumlich relativ eng begrenztes Netzwerk, seine Ausdehnung übertrifft selten die eines Grundstücks. Der häufigste LAN-Typ ist wohl das Ethernet. Mit ihm lassen sich Daten mit folgenden Geschwindigkeiten erzielen:
+Das LAN (Local Area Network) ist ein räumlich relativ eng begrenztes Netzwerk, seine Ausdehnung übertrifft selten die eines Grundstücks. Der häufigste LAN-Typ ist wohl das Ethernet. Mit ihm lassen sich folgende Geschwindigkeiten erzielen:
 
 ### Übertragungsgeschwindigkeiten
 
@@ -43,6 +43,6 @@ Alle Kanäle haben eine Bandbreite von 20 MHz.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1888/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1888/index.html)
 
-<!-- MediaWiki page 1888; revision 5697; parent 4642; 2009-08-21T14:27:22Z -->
+<!-- MediaWiki page 1888; revision 5698; parent 5697; 2009-08-21T14:28:16Z -->
