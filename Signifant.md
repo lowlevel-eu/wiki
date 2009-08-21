@@ -4,7 +4,7 @@
 
 Dieser Artikel ist ein Scherzartikel. Er beschreibt (noch) keinen realen Gegenstand.
 
-Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll. Signifanten sind außerdem das potenzielle inoffzielle Maskottchen des Community-Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur").
+Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll. Signifanten sind außerdem das potenzielle inoffzielle Maskottchen des Community-Betriebssystems [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur").
 
   
 
@@ -12,21 +12,21 @@ Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein
 
 Elefanten wurde vor einigen Jahren als große, massive Tiere von indischen Entwicklern entwickelt. Sie dienten und dienen heute noch der Kommunikation und dem Transport, weshalb sie vor allem in Indien ein wichtiges Kommunikationsmittel sind. Genau genommen basieren Elefanten allerdings auf dem Quellcode von Mammuts. Nachdem diese allerdings nicht mehr von den Usern genutzt wurde, stellte die Natur den Quellcode unter die GNU GPL Version 1. Somit sind Elefanten quasi ein "Rewrite" von Mammuts.
 
-In Zeiten immer größer werdenden Datenverkehrs wurde der Aspekt der Sicherheit größer geschrieben. Man begann, erste Elefanten auch einfachste Art und Weise zu signieren, um die Fälschungssicher zu machen. Eine erste Spezifikation wird zur Zeit von [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") und SHyx0rmz entwickelt.
+In Zeiten immer größer werdenden Datenverkehrs wurde der Aspekt der Sicherheit größer geschrieben. Man begann, erste Elefanten auf einfachste Art und Weise zu signieren, um sie fälschungssicher zu machen. Eine erste Spezifikation wird zur Zeit von [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") und SHyx0rmz entwickelt.
 
 ## Erstellung und Anwendung
 
 Unter Linux wie auch Windows gibt es Tools zur Erstellung und Signierung von Elefanten. Nachfolgend die Erstellung und Signierung eines Elefanten unter Linux:
 
-Mit dem Tool "newelph" wird ein neuer Elefant erstellt. Hier soll der Elephant vier Beine, einen Rüssel haben und nicht mehr als 10 GiB wiegen: ` $ newelph --name myelephant.elph --alllegs --longsnout --maxweight=10 `
+Mit dem Tool "newelph" wird ein neuer Elefant erstellt. Hier soll der Elefant vier Beine, einen Rüssel haben und nicht mehr als 10 GB wiegen: ` $ newelph --name myelephant.elph --alllegs --longsnout --maxweight=10 `
 
-Der neu erstellte Elefant muss nun signiert werden. Dazu wird erst ein Schlüssel erstellt mit Hilfe von "create-elph-key" erstellt: ` $ createelphkey --name myelphkey.elphkey --verycomplex=true `
+Der neu erstellte Elefant muss nun signiert werden. Dazu wird zuerst ein Schlüssel mit Hilfe von "create-elph-key" erstellt: ` $ createelphkey --name myelphkey.elphkey --verycomplex=true `
 
-Nach dem man eine Passphrase eingegeben hat, hat man nun den öffentlichen und privaten Schlüssel erstellt. Nun kann ein Elephant mit dem öffentlichen Schlüssel signiert werden:
+Nach dem man eine Passphrase eingegeben hat, hat man nun den öffentlichen und privaten Schlüssel erstellt. Anschließend kann ein Elefant mit dem öffentlichen Schlüssel signiert werden:
 
 ` $ sigelph --elph=myelephant.elph --pubkey=myelphkey.pub.elphkey `
 
-Nun wurde ein signierter Elefant erstellt.
+Hierdurch wurde ein signierter Elefant erstellt.
 
   
 
@@ -47,6 +47,6 @@ Der Signifant ist auch das inoffzielle Maskottchen von týndur.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
 
-<!-- MediaWiki page 2047; revision 5695; parent 5694; 2009-08-21T14:05:11Z -->
+<!-- MediaWiki page 2047; revision 5699; parent 5695; 2009-08-21T14:39:43Z -->
