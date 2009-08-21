@@ -36,7 +36,7 @@ Signifanten verrichten Ihren Dienst in der Betriebssystementwicklung vor allem a
 
 Mit der Version 0.3.0 werden Signifanten offiziell auch von týndur unterstützt. Entsprechende Programme zur Erstellung signierter Elefanten werden zur Zeit entwickelt.
 
-  
+Der Signifant ist auch das inoffzielle Maskottchen von týndur.
 
 ## Weblinks
 
@@ -45,6 +45,6 @@ Mit der Version 0.3.0 werden Signifanten offiziell auch von týndur unterstützt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5678/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
 
-<!-- MediaWiki page 2047; revision 5678; parent 0; 2009-08-21T00:16:10Z -->
+<!-- MediaWiki page 2047; revision 5679; parent 5678; 2009-08-21T00:19:31Z -->
