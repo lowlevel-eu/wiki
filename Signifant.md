@@ -1,5 +1,9 @@
 # Signifant
 
+**Hinweis:**
+
+Dieser Artikel ist ein Scherzartikel. Er beschreibt (noch) keinen realen Gegenstand
+
 Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll.
 
   
@@ -43,6 +47,6 @@ Der Signifant ist auch das inoffzielle Maskottchen von týndur.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
 
-<!-- MediaWiki page 2047; revision 5680; parent 5679; 2009-08-21T01:13:43Z -->
+<!-- MediaWiki page 2047; revision 5690; parent 5680; 2009-08-21T13:55:38Z -->
