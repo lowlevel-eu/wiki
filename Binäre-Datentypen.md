@@ -214,8 +214,16 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ### Ansi-Strings
 
+## Weiterführende Artikel
+
+[Der Signifant](http://lowlevel.brainsware.org/wiki/index.php/Signifant)
+
+## Links
+
+[Wikipedia: Gleitkommazahl](http://de.wikipedia.org/wiki/Gleitkommazahl) [Wikipedia: Zweierkomplement](http://de.wikipedia.org/wiki/Zweierkomplement) [Wikipedia: Code](http://de.wikipedia.org/wiki/Code)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5677/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5706/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 5677; parent 5669; 2009-08-20T16:04:52Z -->
+<!-- MediaWiki page 2043; revision 5706; parent 5677; 2009-08-24T21:19:54Z -->
