@@ -226,6 +226,6 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5710/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5711/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 5710; parent 5707; 2009-08-25T00:09:58Z -->
+<!-- MediaWiki page 2043; revision 5711; parent 5710; 2009-08-25T00:10:22Z -->
