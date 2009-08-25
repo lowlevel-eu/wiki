@@ -134,10 +134,10 @@ Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Cod
 
 ## HTML
 
-Die Verwendung von HTML ist möglichst du vermeiden. Man kann auch in der MediaWiki-Dokumentation nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
+Die Verwendung von HTML ist möglichst zu vermeiden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5713/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 5712; parent 5709; 2009-08-25T11:36:57Z -->
+<!-- MediaWiki page 2049; revision 5713; parent 5712; 2009-08-25T11:40:04Z -->
