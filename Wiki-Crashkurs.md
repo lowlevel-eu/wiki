@@ -57,18 +57,20 @@ wird zu:
 2.  punkt y
 3.  punkt z
 
-### Mehrere Ebenen
+### Mehrere Ebenen (kombiniert)
 
     * foo
-    ** unterfoo
-    *** unterunterfoo
+    *# unterfoo1
+    *#* unterunterfoo
+    *# unterfoo2
     * bar
 
 wird zu:
 
 - foo
-  - unterfoo
-    - unterunterfoo
+  1.  unterfoo1
+      - unterunterfoo
+  2.  unterfoo2
 - bar
 
 ### Diskussionsfäden
@@ -136,6 +138,6 @@ Die Verwendung von HTML ist möglichst du vermeiden. Man kann auch in der MediaW
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5709/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 5709; parent 0; 2009-08-25T00:08:49Z -->
+<!-- MediaWiki page 2049; revision 5712; parent 5709; 2009-08-25T11:36:57Z -->
