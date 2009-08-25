@@ -216,7 +216,7 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ## Weiterführende Artikel
 
-- [Der Signifant](http://lowlevel.brainsware.org/wiki/index.php/Signifant)
+- [Der Signifant](https://github.com/lowlevel-eu/wiki/wiki/Signifant "Signifant")
 
 ## Links
 
@@ -226,6 +226,6 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5707/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5710/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 5707; parent 5706; 2009-08-24T21:21:20Z -->
+<!-- MediaWiki page 2043; revision 5710; parent 5707; 2009-08-25T00:09:58Z -->
