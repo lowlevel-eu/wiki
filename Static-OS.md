@@ -2,6 +2,23 @@
 
 **Static Operating System** (Static OS) ist ein 32 Bit Betriebssystem, welches von Stefan Mayer entwickelt wird. Das Betriebssystem wird derzeit noch als Closed Source entwickelt.
 
+| Static Operating System |  |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+|  |  |
+| Entwickler: | Stefan Mayer |
+| Akt. Version: | 1.8 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | \- |
+| OS-Eigenschaften |  |
+| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), ASM |
+| API: | SOS_API |
+| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Homepage |  |
+
+<http://www.staticos.at.tf/>
+
   
 
 ## Features
@@ -44,6 +61,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5719; parent 5718; 2009-08-26T09:02:47Z -->
+<!-- MediaWiki page 2050; revision 5720; parent 5719; 2009-08-26T09:04:21Z -->
