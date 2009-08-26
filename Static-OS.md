@@ -40,6 +40,7 @@
 - FDC (z.z. keien Verwendung)
 - Virtual 8086 Modus (ermöglicht das Ausführen von 16 Bit Code im Protected Mode)
 - Maus / Tastatur - Treiber (Treibermanagement -\> völlig eigenständige Treiber)
+- VESA (Verschiedene Auflösung durch V8086 Task möglich / Standart: 800x600x24bpp )
 - Grafische Benutzeroberfläche
   - Fenster (verschiebbar, Größe veränderbar)
   - Labels (Zur einfachen Textausgabe in Fenstern)
@@ -79,6 +80,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5734/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5734; parent 5733; 2009-08-26T09:27:30Z -->
+<!-- MediaWiki page 2050; revision 5736; parent 5734; 2009-08-26T09:28:56Z -->
