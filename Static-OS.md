@@ -78,10 +78,10 @@ Static Operating System Fenster vergrößern
 
 ## Download
 
-Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
+[Download](http://www.e-d-l.at/temp/staticos/StaticOS_QEMU.rar)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5741; parent 5740; 2009-08-26T12:39:42Z -->
+<!-- MediaWiki page 2050; revision 5744; parent 5741; 2009-08-26T16:42:46Z -->
