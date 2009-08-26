@@ -46,6 +46,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5715; parent 0; 2009-08-26T06:41:44Z -->
+<!-- MediaWiki page 2050; revision 5717; parent 5715; 2009-08-26T06:50:21Z -->
