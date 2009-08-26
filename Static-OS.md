@@ -59,11 +59,17 @@
 
 ## Screenshots
 
-Static Operating System Ladevorgang ![Staticos1.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos1.JPG)
+Static Operating System Ladevorgang
 
-Static Operating System GUI Test ![Staticos2.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos2.JPG)
+![Staticos1.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos1.JPG)
 
-Static Operating System Fenster vergrößern ![Staticos3.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos3.JPG)
+Static Operating System GUI Test
+
+![Staticos2.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos2.JPG)
+
+Static Operating System Fenster vergrößern
+
+![Staticos3.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos3.JPG)
 
 ## Download
 
@@ -71,6 +77,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5729/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5730/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5729; parent 5728; 2009-08-26T09:21:02Z -->
+<!-- MediaWiki page 2050; revision 5730; parent 5729; 2009-08-26T09:21:15Z -->
