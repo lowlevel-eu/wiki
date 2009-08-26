@@ -65,11 +65,13 @@ Static Operating System Ladevorgang
 
 Static Operating System GUI Test
 
-![Staticos2.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos2.JPG)
+![Staticos2.JPG](http://lowlevel.brainsware.org/wiki/images/4/4f/Staticos2.JPG)
 
 Static Operating System Fenster vergrößern
 
-![Staticos3.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos3.JPG)
+![Staticos3.JPG](http://lowlevel.brainsware.org/wiki/images/e/e2/Staticos3.JPG)
+
+  
 
 ## Download
 
@@ -77,6 +79,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5730/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5730; parent 5729; 2009-08-26T09:21:15Z -->
+<!-- MediaWiki page 2050; revision 5733; parent 5730; 2009-08-26T09:22:48Z -->
