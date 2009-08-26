@@ -3,9 +3,9 @@
 **Static Operating System** (Static OS) ist ein 32 Bit Betriebssystem, welches von Stefan Mayer entwickelt wird. Das Betriebssystem wird derzeit noch als Closed Source entwickelt.
 
 | Static Operating System |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Stefan Mayer |
+| Entwickler: | [Stefan Mayer](https://lowlevel-eu.github.io/wiki/pages/2055/index.html "Benutzer:Hunter") |
 | Akt. Version: | 1.8 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | \- |
 | OS-Eigenschaften |  |
@@ -80,6 +80,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5736; parent 5734; 2009-08-26T09:28:56Z -->
+<!-- MediaWiki page 2050; revision 5737; parent 5736; 2009-08-26T09:47:40Z -->
