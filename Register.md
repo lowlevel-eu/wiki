@@ -138,7 +138,7 @@ Die Segmentregister sind im [Protected Mode](https://github.com/lowlevel-eu/wiki
 
 **Achtung!**
 
-*Die **?H**-Register sind nur in Funktion nutzbar, die KEINEN REX-Präfix benötigen!*  
+*Die **?H**-Register sind nur in Funktion nutzbar, die **keinen** REX-Präfix benutzen!*  
 *Die **R?B** Register heißen in manchen Compilern oder Assemblern **R?L***
 
 Die Allzweckregister können, wie ihr Name schon andeutet eigentlich für fast jeden Zweck genutzt werden. Trotzdem gibt es einige gebräuchliche Nutzungen, zum Beispiel
@@ -160,7 +160,7 @@ Die Allzweckregister können, wie ihr Name schon andeutet eigentlich für fast j
 
 **Achtung!**
 
-*Die **?IL**-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!*
+*Die **?IL**-Register sind nur in Funktion nutzbar, die einen REX-Präfix **benutzen**!*
 
 Die Indexregister werden oft als Indexe in Datenbereichen verwendet. Dabei zeigt
 
@@ -181,7 +181,7 @@ Die Indexregister werden oft als Indexe in Datenbereichen verwendet. Dabei zeigt
 
 **Achtung!**
 
-*Die **?PL**-Register sind nur in Funktion nutzbar, die einen REX-Präfix benötigen!*
+*Die **?PL**-Register sind nur in Funktion nutzbar, die einen REX-Präfix **benutzen**!*
 
 Die Zeigerregister werden genutzt, um auf Stellen im Speicher zu zeigen.
 
@@ -471,6 +471,6 @@ Im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 5098; parent 4924; 2009-08-06T08:45:21Z -->
+<!-- MediaWiki page 1881; revision 5716; parent 5098; 2009-08-26T06:46:05Z -->
