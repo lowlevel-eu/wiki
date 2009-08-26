@@ -4,7 +4,7 @@
 | ------------------------ | ----------------------------------------------- |
 | Name: | VirtualBox |
 | Entwickler: | Innotek |
-| Akt. Version: | 2.2.4<br>(Stand 29.05.2009) |
+| Akt. Version: | 3.0.4<br>(Stand 04.08.2009) |
 | Lizenz: | Proprietär, GPL 2 (2 Versionen) |
 | Betriebssystem(e): | Linux, Windows, OS X, Solaris |
 | Virtualisiertes System |  |
@@ -54,6 +54,6 @@ Emulierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 5208; parent 5021; 2009-08-06T12:10:22Z -->
+<!-- MediaWiki page 1553; revision 5748; parent 5208; 2009-08-26T17:56:07Z -->
