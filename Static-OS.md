@@ -25,33 +25,33 @@
 
 **Version 1.8**
 
-     •  32 Bit
-     •  Intel x86 Architektur
-     •  GRUB als Bootloader (Multiboot fähig)
-     •  Protected Mode
-     •  Paging / Phys-Virt-Memorymanagement (malloc/realloc/free)
-     •  IDT / GDT / TSS
-     •  PIC / PIT
-     •  Multitasking (Ring 0 / Ring 3)
-     •  Elf-Support
-     •  ATAPI / ATA (derzeit noch im Kernel implementiert)
-     •  FDC (z.z. keien Verwendung)
-     •  Virtual 8086 Modus (ermöglicht das Ausführen von 16 Bit Code im Protected Mode)
-     •  Maus / Tastatur - Treiber (Treibermanagement -> völlig eigenständige Treiber)
-     •  Grafische Benutzeroberfläche
-          -  Fenster (verschiebbar, Größe veränderbar)
-          -  Labels (Zur einfachen Textausgabe in Fenstern)
-          -  Buttons
-          -  Textbox
-          -  Listbox (beliebig Einträge abfragen/hinufügen/editieren/entfernen)
-          -  Pictures (SBF, SCU, BMP, RAW)
-          -  Font-Support (Verdana, Courier New, Comic Sans, Impact, ...)
-     •  API
-          -  Taskhandling
-          -  User Speicherzugriffe (umalloc)
-          -  Funktions/Handler-Registrierung
-          -  IPC (Inter Process Communication)
-          -  ...
+- 32 Bit
+- Intel x86 Architektur
+- GRUB als Bootloader (Multiboot fähig)
+- Protected Mode
+- Paging / Phys-Virt-Memorymanagement (malloc/realloc/free)
+- IDT / GDT / TSS
+- PIC / PIT
+- Multitasking (Ring 0 / Ring 3)
+- Elf-Support
+- ATAPI / ATA (derzeit noch im Kernel implementiert)
+- FDC (z.z. keien Verwendung)
+- Virtual 8086 Modus (ermöglicht das Ausführen von 16 Bit Code im Protected Mode)
+- Maus / Tastatur - Treiber (Treibermanagement -\> völlig eigenständige Treiber)
+- Grafische Benutzeroberfläche
+  - Fenster (verschiebbar, Größe veränderbar)
+  - Labels (Zur einfachen Textausgabe in Fenstern)
+  - Buttons
+  - Textbox
+  - Listbox (beliebig Einträge abfragen/hinufügen/editieren/entfernen)
+  - Pictures (SBF, SCU, BMP, RAW)
+  - Font-Support (Verdana, Courier New, Comic Sans, Impact, ...)
+- API
+  - Taskhandling
+  - User Speicherzugriffe (umalloc)
+  - Funktions/Handler-Registrierung
+  - IPC (Inter Process Communication)
+  - ...
 
   
 
@@ -61,6 +61,6 @@ Zur Zeit steht leider noch keine Aktuelle Version zum Download bereit.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5721/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5720; parent 5719; 2009-08-26T09:04:21Z -->
+<!-- MediaWiki page 2050; revision 5721; parent 5720; 2009-08-26T09:05:59Z -->
