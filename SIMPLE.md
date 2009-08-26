@@ -44,6 +44,6 @@ Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background. Sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5714; parent 5663; 2009-08-25T20:30:00Z -->
+<!-- MediaWiki page 2039; revision 5749; parent 5714; 2009-08-26T18:32:54Z -->
