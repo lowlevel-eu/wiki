@@ -16,16 +16,18 @@ Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren an
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 |  |  |
 | Entwickler: | Jonas Schievink |
-| Akt. Version: | 0.1 |
+| Akt. Version: | Pre-Alpha 0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | by-nc-sa 2.0 |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | Nativ |
+| API: | Nativ(geplant) |
 | Binärformat: | Portable Executable |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | noch keine( |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | RPC(geplant) |
 | Homepage |  |
+
+\[noch keine\]
 
 J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe. Da es sich nicht lohnen würde, J-OS in der Kategorie Betriebssysteme zu verewigen, habe ich das auch nicht vor.
 
@@ -34,6 +36,6 @@ Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 5701; parent 5700; 2009-08-21T16:37:57Z -->
+<!-- MediaWiki page 1828; revision 5739; parent 5701; 2009-08-26T12:37:31Z -->
