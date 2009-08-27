@@ -8,6 +8,6 @@ Die **Extended BIOS Data Area** (Abkürzung: **EBDA**) dient dem BIOS als erweit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/2349/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1586/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5770/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1586/index.html)
 
-<!-- MediaWiki page 1586; revision 2349; parent 0; 2007-12-06T21:20:20Z -->
+<!-- MediaWiki page 1586; revision 5770; parent 2349; 2009-08-27T16:07:05Z -->
