@@ -33,6 +33,6 @@ Der sinnvolle Einsatz des Real Modes im OS-Dev beschränkt sich darauf im Bootlo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4254/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
 
-<!-- MediaWiki page 1665; revision 4254; parent 4240; 2009-04-04T16:47:39Z -->
+<!-- MediaWiki page 1665; revision 5766; parent 4254; 2009-08-27T16:05:01Z -->
