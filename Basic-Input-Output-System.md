@@ -22,6 +22,6 @@ Allerdings ist das BIOS (zumindest im [Real Mode](https://github.com/lowlevel-eu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5765/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 5503; parent 5167; 2009-08-08T21:17:57Z -->
+<!-- MediaWiki page 1616; revision 5765; parent 5503; 2009-08-27T16:04:58Z -->
