@@ -72,6 +72,6 @@ Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5771/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
 
-<!-- MediaWiki page 1928; revision 5545; parent 5063; 2009-08-10T15:33:55Z -->
+<!-- MediaWiki page 1928; revision 5771; parent 5545; 2009-08-27T16:07:47Z -->
