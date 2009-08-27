@@ -23,6 +23,6 @@ Eine Übersicht über die Speicherbereiche unter der 1MB-Grenze gibt folgende Gr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4547/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
 
-<!-- MediaWiki page 1563; revision 4547; parent 2513; 2009-07-04T15:35:11Z -->
+<!-- MediaWiki page 1563; revision 5764; parent 4547; 2009-08-27T16:04:55Z -->
