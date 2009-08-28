@@ -10,7 +10,7 @@ Im Folgenden wird erklärt, wie man einen Cross-Compiler für die x86-64-Plattfo
 
 Es gibt zwei verschiedene Wege, einen Cross-Compiler für x86-64 zu erstellen, wir bedienen uns hier der einfachsten Variante: Wir bauen die Binutils und den GCC neu, sodass wir einen funktionierenden gcc haben, mit dessen Hilfe wir x86-64-ELF-Dateien erstellen können.
 
-Als erstes müssen dazu die Binutils und der gcc heruntergeladen werden. Wir benutzen dazu die neueste (Stand: 28. August 2009) Version beider Toolchains, einmal die [binutils 2.19.9](http://ftp.gnu.org/gnu/binutils/binutils-2.19.tar.bz2) und das Core-Packe des [gcc 4.4.1](http://ftp.gnu.org/gnu/gcc/gcc-4.4.1/gcc-core-4.4.1.tar.bz2). Wenn allerdings auch Support für mehr Sprachen als C gewünscht ist, müssen dementsprechend zusätzliche Pakete unter [ftp.gnu.org/gnu/gcc](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
+Als erstes müssen dazu die Binutils und der gcc heruntergeladen werden. Wir benutzen dazu die neueste (Stand: 28. August 2009) Version beider Toolchains, einmal die [binutils 2.19.9](http://ftp.gnu.org/gnu/binutils/binutils-2.19.tar.bz2) und das Core-Package des [gcc 4.4.1](http://ftp.gnu.org/gnu/gcc/gcc-4.4.1/gcc-core-4.4.1.tar.bz2). Wenn allerdings auch Support für mehr Sprachen als C gewünscht ist, müssen dementsprechend zusätzliche Pakete unter [ftp.gnu.org/gnu/gcc](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
 Diese werden nun in ein beliebiges Verzeichnis entpackt, wir verwenden hier die Verzeichnisse **/usr/src/cross-gcc** und **/usr/src/cross-binutils**. Desweiteren sollte auch ein Verzeichnis für die Cross-Tools angelegt werden, in unserem Beispiel landen die fertigen Tools unter **/usr/cross**.
 
@@ -84,6 +84,6 @@ Gratulation, ein Cross-Compiler f+r die x86-64-Plattform wurde erstellt! Die Too
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5776/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5777/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
 
-<!-- MediaWiki page 2060; revision 5776; parent 5775; 2009-08-28T00:37:36Z -->
+<!-- MediaWiki page 2060; revision 5777; parent 5776; 2009-08-28T00:39:15Z -->
