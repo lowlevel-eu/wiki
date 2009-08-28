@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Multithreading (=Mehrfädigkeit) bezeichnet die gleichzeitige Ausführung mehrerer Aufgaben innerhalb eines Prozesses. Dabei wird zwischen Software- und Hardwaremultithreading unterschieden.
+Multithreading (=Mehrfädigkeit) bezeichnet die gleichzeitige Ausführung mehrerer Befehlssequenzen. Dabei wird zwischen Software- und Hardwaremultithreading unterschieden.
 
 ## Softwaremultithreading
 
@@ -22,6 +22,6 @@ Intel nennt diese Technik bei ihren Prozessoren Hyper-Threading und wendet dies 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5784/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
 
-<!-- MediaWiki page 2058; revision 5784; parent 5783; 2009-08-28T15:11:28Z -->
+<!-- MediaWiki page 2058; revision 5785; parent 5784; 2009-08-28T15:12:17Z -->
