@@ -12,12 +12,12 @@ Durch softwareseitiges Multithreading ist es möglich neben dem "Hauptthread", d
 
 ## Hardwaremultithreading
 
-Hardwaremultithreading macht es möglich, auch auf einem Prozessorkern mehrere Prozesse gleichzeitig auszuführen. Dies wird durch das Duplizieren der Allzweckregister, des Stackpointers sowie des Instructionpointers erreicht. Intel nennt diese Technik bei ihren Prozessoren Hyper-Threading und wendet dies z.B. beim recht leistungsschwachen Intel Atom an, der durch Hyper-Threading dem Betriebssystem zwei Prozessorkerne zur Verfügung stellt, wobei der Zweite ein rein virtueller Kern ist.
+Hardwaremultithreading macht es möglich, auch auf einem Prozessorkern mehrere Prozesse gleichzeitig auszuführen. Dies wird durch das Duplizieren der Allzweckregister, des Stackpointers sowie des Instructionpointers erreicht. Intel nennt diese Technik bei ihren Prozessoren Hyper-Threading und wendet dies z.B. beim recht leistungsschwachen Intel Atom an, der durch Hyper-Threading dem Betriebssystem zwei Prozessorkerne zur Verfügung stellt, wobei der zweite ein rein virtueller Kern ist.
 
 ## Hyper-Threading
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5783/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
 
-<!-- MediaWiki page 2058; revision 5782; parent 5779; 2009-08-28T13:49:26Z -->
+<!-- MediaWiki page 2058; revision 5783; parent 5782; 2009-08-28T13:51:39Z -->
