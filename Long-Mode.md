@@ -36,8 +36,9 @@ mov ecx, 0xC0000080  ; Wir brauchen Zugriff aus das MSR-Register 0xC0000080 rdm
 
 mov eax, cr0  ; CR0 einlesen or eax, 0x80000000  ; Das Paging-Bit setzen mov cr0, eax  ; CR0 beschreiben, ab jetzt sind wir im Long Mode
 
-db 0xEA  ; Das ist ein far jmp, ich bekomms nit anders hin \>\< dd kernel.longmode  ; Die neue Adresse für EIP/RIP dw 0x30  ; Das 64-Bit Code Segment
+jmp 0x30:kernel.longmode; Far Jmp in 64-Bit Code Segment
 
+  
 \[bits 64\] kernel.longmode: ; Jetzt führen wir auch endlich 64-Bit Code aus jmp \$  ; Endlosschleife xD \</asm\>
 
 ## Es geht auch anders
@@ -53,6 +54,6 @@ Hier folgt in Kürze eine Beschreibung, wie man den Long Mode auch direkt vom Re
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5511/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 5511; parent 5437; 2009-08-08T21:41:01Z -->
+<!-- MediaWiki page 1666; revision 5780; parent 5511; 2009-08-28T10:05:22Z -->
