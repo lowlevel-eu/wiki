@@ -215,7 +215,7 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
   
 
-## Grafik-Adapter-Informationen
+### Grafik-Adapter-Informationen
 
 | Offset | Größe (Bytes) | Beschreibung |
 | -------- | --------------- | ------------------------------------------------------------------------------- |
@@ -237,6 +237,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5786/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 5786; parent 5769; 2009-08-29T17:26:30Z -->
+<!-- MediaWiki page 1564; revision 5787; parent 5786; 2009-08-29T17:26:53Z -->
