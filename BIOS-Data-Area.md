@@ -26,7 +26,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x1C | 2 | Zeiger auf letzten Buchstaben im Tastatur-Ringpuffer |
 | 0x1E | 32 | Tastatur-Ringpuffer |
 | 0x3E | 11 | [Disk-Kontroller-Informationen](#disk-kontroller-informationen) |
-| 0x49 | 30 | Grafik-Adapter-Informationen |
+| 0x49 | 30 | [Grafik-Adapter-Informationen](#grafik-adapter-informationen) |
 | 0x67 | 5 | Unbekannt |
 | 0x6C | 4 | Zähler für Interrupt 0x1A |
 | 0x70 | 1 | Zähler 24h Überlauf |
@@ -215,6 +215,21 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
   
 
+## Grafik-Adapter-Informationen
+
+| Offset | Größe (Bytes) | Beschreibung |
+| -------- | --------------- | ------------------------------------------------------------------------------- |
+| 0x49 | 1 | Aktueller Videomodus ([\[1\]](http://www.ctyme.com/intr/rb-0069.htm#table10)) |
+| 0x4A | 2 | Anzahl Spalten |
+| 0x4C | 2 | Größe einer Bildschirmseite im Regenerate Buffer |
+| 0x4E | 2 | Adresse der aktuellen Seite im Regenerate Buffer |
+| 0x50 | 16 | Cursorpositionen für die Seiten 0-7, abwechselnd Spalte und Zeile |
+| 0x60 | 2 | Cursortyp |
+| 0x62 | 1 | Aktuelle Bildschirmseite |
+| 0x63 | 2 | I/O-Basisadresse des Grafikadapters |
+| 0x65 | 1 | Inhalt des Mode Select Registers |
+| 0x66 | 1 | Inhalt des CGA Palette Registers |
+
 ## Weblinks
 
 - <http://www.geocities.com/riskyfriends/x86/os/bios.html>
@@ -222,6 +237,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5769/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5786/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 5769; parent 4800; 2009-08-27T16:06:52Z -->
+<!-- MediaWiki page 1564; revision 5786; parent 5769; 2009-08-29T17:26:30Z -->
