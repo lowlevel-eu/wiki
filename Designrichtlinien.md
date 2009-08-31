@@ -26,6 +26,7 @@ Beispiel: Im Artikel [Prozess](https://github.com/lowlevel-eu/wiki/wiki/Prozess 
 - Wo zwei Artikelnamen in ein Wort stecken, gar nichts verlinken. Zum Beispiel C-Kernel, *nicht* mittels \[\[C\]\]-\[\[Kernel\]\] auf C und Kernel verlinken.
 - *Siehe auch*-Kapitel für interne und themenverwandte Wikilinks
 - *Weblinks*-Kapitel für externe Weblinks
+- Taucht ein eventuell per Wikilink zu erläutender Begriff mehrmals im Text auf, so reicht es, diesen **einmal** zu verlinken. Am besten ist hier, das erste Vorkommen des Begriffs auf den entsprechenden Wikiartikel zu verlinken
 
 ## Weiterleitungen
 
@@ -46,6 +47,6 @@ Das Wiki richtet sich zwar an keine spezielle Altersgruppe, aber dennoch wird be
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 5793; parent 5524; 2009-08-31T06:23:53Z -->
+<!-- MediaWiki page 1832; revision 5794; parent 5793; 2009-08-31T06:25:29Z -->
