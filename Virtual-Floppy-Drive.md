@@ -46,7 +46,7 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ## Alternative
 
-[WinImage](http://www.winimage.com/) ist eine Shareware (30-Tage Testversion), die keine Möglichkeit bietet, ein Disketten-Image als virtuelles Laufwerk einzubinden, aber mit der man allerdings Images direkt bearbeiten kann.
+[WinImage](http://www.winimage.com/) ist eine Shareware (30-Tage Testversion), die keine Möglichkeit bietet, ein Disketten-Image als virtuelles Laufwerk einzubinden, aber mit der man Images direkt bearbeiten kann.
 
 ## Weblinks
 
@@ -54,6 +54,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5810; parent 5807; 2009-08-31T17:34:30Z -->
+<!-- MediaWiki page 2063; revision 5811; parent 5810; 2009-08-31T17:35:34Z -->
