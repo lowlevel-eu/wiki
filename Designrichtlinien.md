@@ -21,10 +21,10 @@ Natürlich ist jedem gestattet, seinen Artikel zu gestalten, wie er es gern möc
 
 - Sinnvoll verlinken, das heißt nur auf Artikel verlinken die zum Thema beitragen/weiterhelfen und in den aktuellen Kontext passen
 
-Beispiel: Im Artikel [Prozess](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess") tauchen die Wörter Kernel, Linux, Windows und Schedluer auf. Sinnvoll ist nun eine Verlinkung auf [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), da der Scheduler mit Prozessen zu tun hat. Das haben die drei anderen Begriffe auch, aber eine Verlinkung nur auf Scheduler ist im Kontext des "Prozesses" sinnvoller.
+Beispiel: Im Artikel [Prozess](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess") tauchen die Wörter Kernel, Linux, Windows und Scheduler auf. Sinnvoll ist nun eine Verlinkung auf [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), da der Scheduler mit Prozessen zu tun hat. Das haben die drei anderen Begriffe auch, aber eine Verlinkung nur auf Scheduler ist im Kontext des "Prozesses" sinnvoller.
 
-- Wo zwei Artikelnamen in ein Wort stecken, garnichts verlinken. Zum Beispiel C-Kernel, *nicht* mittels \[\[C\]\]-\[\[Kernel\]\] auf C und Kernel verlinken.
-- *Siehe auch*-Kapitel für interne interessante Wikilinks
+- Wo zwei Artikelnamen in ein Wort stecken, gar nichts verlinken. Zum Beispiel C-Kernel, *nicht* mittels \[\[C\]\]-\[\[Kernel\]\] auf C und Kernel verlinken.
+- *Siehe auch*-Kapitel für interne und themenverwandte Wikilinks
 - *Weblinks*-Kapitel für externe Weblinks
 
 ## Weiterleitungen
@@ -46,6 +46,6 @@ Das Wiki richtet sich zwar an keine spezielle Altersgruppe, aber dennoch wird be
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 5524; parent 5523; 2009-08-10T13:00:38Z -->
+<!-- MediaWiki page 1832; revision 5793; parent 5524; 2009-08-31T06:23:53Z -->
