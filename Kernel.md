@@ -20,7 +20,7 @@ Folgenden Kernelarten existieren:
 
 Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich Treiber für [Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") und andere Funktionen mit sich bringt. Dadurch müssen nicht erst Treiber oder Module nachgeladen werden und auch eine Schnittstelle ist nicht erforderlich, was einen deutlichen Geschwindigkeitsvorteil mit sich bringt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module können nicht ohne weiteres neu gestartet werden. Außerdem macht die fehlende Hardwareabstraktion den Kernel schwieriger zu entwickeln, wenn er nicht Mechanismen wie genormte Treiberinterfaces oder Ähnliches anbietet. Der Linuxkernel ist ein Monolithischer Kernel.
 
-#### Diagramm zum Veranschaulichen
+#### Diagramm zur Veranschaulichung
 
 Dieses Diagramm zeigt den groben Aufbau eines monolitschen Kernels.  
 Datei:Makro kelin corr.png
@@ -31,7 +31,7 @@ Der Mikrokernel steht im Gegensatz zum monolithischen Kernel, da bei ihm nur ein
 
 Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix") verwendet.
 
-#### Diagramm zum Veranschaulichen
+#### Diagramm zur Veranschaulichung
 
 Dieses Diagramm zeigt den groben Aufbau eines Mikrokernels.  
 ![mikrokernel_klein.png](http://be59.be.funpic.de/Lowlevel/mikrokernel_klein.png)
@@ -52,6 +52,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 5791; parent 5638; 2009-08-31T06:18:43Z -->
+<!-- MediaWiki page 1478; revision 5792; parent 5791; 2009-08-31T06:19:49Z -->
