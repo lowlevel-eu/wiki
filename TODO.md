@@ -44,6 +44,7 @@
 
 ## Neu erstellen
 
+- irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
 - ~~Informationen zur [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte~~
 
 <!-- -->
@@ -80,6 +81,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5703/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 5703; parent 5621; 2009-08-24T16:58:05Z -->
+<!-- MediaWiki page 1518; revision 5819; parent 5703; 2009-08-31T18:47:20Z -->
