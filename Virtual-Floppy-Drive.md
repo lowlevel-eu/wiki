@@ -42,7 +42,7 @@ Diese Batch-Datei bindet das virtuelle Laufwerk wieder aus, stoppt den Treiber u
 
 ### Zugriff verweigert
 
-Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte man überprüfen, ob das Programm wirklich als Administrator läuft.
+Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte man überprüfen, ob das Programm wirklich als Administrator läuft. Unter Vista geht das indem man die .exe- oder .bat-Datei mit Rechtsklick -\> "Als Administrator ausführen" startet.
 
 ## Weblinks
 
@@ -50,6 +50,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5800/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5799; parent 5798; 2009-08-31T12:02:16Z -->
+<!-- MediaWiki page 2063; revision 5800; parent 5799; 2009-08-31T12:03:22Z -->
