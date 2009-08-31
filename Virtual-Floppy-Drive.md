@@ -54,6 +54,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5807/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5807; parent 5806; 2009-08-31T16:11:12Z -->
+<!-- MediaWiki page 2063; revision 5810; parent 5807; 2009-08-31T17:34:30Z -->
