@@ -20,12 +20,30 @@ Im Tab "Drive0" kann das erste virtuelle Laufwerk eingebunden werden. Zuerst mus
 
 Das Konsolenprogramm bietet sowohl die Möglichkeit über Parameter als auch über eine eigene Eingabeaufforderung die Funktionen von VFD zu verwenden. Man kann zum Beispiel über die Parameter den Vorgang des Mountens und Unmountens automatisieren, wenn man dafür nicht immer die GUI bemühen möchte. Dafür bietet es sich an eine Batch-Dateien zu erstellen.
 
+### Beispiel: Mount
+
+Diese Batch-Datei installiert den Treiber, startet den Treiber und bindet das Image auf den ersten verfügbaren Laufwerksbuchstaben ein. Die Variablen VFD und IMAGE sind gegebenenfalls anzupassen. Diese Datei ist dafür gedacht im Verzeichnis, in dem das Disketten-Image liegt, ausgeführt zu werden. Ist der Pfad in IMAGE absolut (also fängt mit C:\\ oder so an), dann muss das %~dp0%IMAGE% durch %IMAGE% ersetzt werden.
+
+`@SET VFD=E:\vfd21-080206\vfd.exe @SET IMAGE=disk.img `
+
+`%VFD% INSTALL %VFD% START %VFD% OPEN 0: %~dp0%IMAGE% `
+
+`@PAUSE`
+
+### Beispiel: Unmount
+
+Diese Batch-Datei bindet das virtuelle Laufwerk wieder aus, stoppt den Treiber und deinstalliert ihn wieder. `@SET VFD=E:\vfd21-080206\vfd.exe `
+
+`%VFD% CLOSE 0: %VFD% STOP %VFD% REMOVE `
+
+`@PAUSE`
+
 ## Weblinks
 
 - [VFD Homepage](http://chitchat.at.infoseek.co.jp/vmware/vfd.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5797; parent 0; 2009-08-31T11:39:06Z -->
+<!-- MediaWiki page 2063; revision 5798; parent 5797; 2009-08-31T11:59:35Z -->
