@@ -45,6 +45,6 @@ Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x3
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
 
-<!-- MediaWiki page 1589; revision 5181; parent 5155; 2009-08-06T11:29:44Z -->
+<!-- MediaWiki page 1589; revision 5814; parent 5181; 2009-08-31T18:37:04Z -->
