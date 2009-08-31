@@ -5,6 +5,13 @@
 - [A20 Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate")
 - [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
+
+<!-- -->
+
+- **Hinweis**: Wird von [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") am 31.08. und 01.09. überarbeitet
+
+<!-- -->
+
 - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
 - TeeJays Tutorial (Link siehe [Diskussion:Programmable Interrupt Controller](https://lowlevel-eu.github.io/wiki/pages/1713/index.html "Diskussion:Programmable Interrupt Controller")) in den Artikel [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") einarbeiten
 - [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
@@ -81,6 +88,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5824/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 5819; parent 5703; 2009-08-31T18:47:20Z -->
+<!-- MediaWiki page 1518; revision 5824; parent 5819; 2009-08-31T19:54:37Z -->
