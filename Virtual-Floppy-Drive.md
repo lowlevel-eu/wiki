@@ -38,12 +38,18 @@ Diese Batch-Datei bindet das virtuelle Laufwerk wieder aus, stoppt den Treiber u
 
 `@PAUSE`
 
+## Probleme
+
+### Zugriff verweigert
+
+Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte man überprüfen, ob das Programm wirklich als Administrator läuft.
+
 ## Weblinks
 
 - [VFD Homepage](http://chitchat.at.infoseek.co.jp/vmware/vfd.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5798; parent 5797; 2009-08-31T11:59:35Z -->
+<!-- MediaWiki page 2063; revision 5799; parent 5798; 2009-08-31T12:02:16Z -->
