@@ -6,7 +6,7 @@ Hier können angehende und fortgeschrittene Betriebssystementwickler Information
 
 Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](http://lowlevel.brainsware.org/forum/) / [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kund tust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick was noch zu tun ist, bietet die [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit, Wünsche und Anregungen für Artikel los zu werden. Dieses Wiki enthält momentan 348 Artikel.
 
-Sämtliche Artikel des Lowlevel-Wiki stehen unter der [by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/). Mehr dazu hier.
+Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")) stehen unter der [by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/).
 
 ****News****
 
@@ -161,6 +161,6 @@ Sämtliche Artikel des Lowlevel-Wiki stehen unter der [by-nc-sa 2.0](http://crea
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 5398; parent 5364; 2009-08-06T20:42:42Z -->
+<!-- MediaWiki page 1712; revision 5821; parent 5398; 2009-08-31T19:05:50Z -->
