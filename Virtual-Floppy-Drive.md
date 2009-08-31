@@ -34,7 +34,7 @@ Diese Batch-Datei installiert den Treiber, startet den Treiber und bindet das Im
 
 Diese Batch-Datei bindet das virtuelle Laufwerk wieder aus, stoppt den Treiber und deinstalliert ihn wieder. `@SET VFD=E:\vfd21-080206\vfd.exe `
 
-`%VFD% CLOSE 0: %VFD% STOP %VFD% REMOVE `
+`%VFD% ULINK 0 %VFD% CLOSE 0: %VFD% STOP %VFD% REMOVE `
 
 `@PAUSE`
 
@@ -54,6 +54,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5807/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5806; parent 5805; 2009-08-31T16:10:59Z -->
+<!-- MediaWiki page 2063; revision 5807; parent 5806; 2009-08-31T16:11:12Z -->
