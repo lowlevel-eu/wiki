@@ -5,7 +5,7 @@
 [Static Operating System RUN](http://www.youtube.com/watch?v=fF-6pyQtDJQ)
 
 | Static Operating System |  |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Stefan Mayer](https://lowlevel-eu.github.io/wiki/pages/2055/index.html "Benutzer:Hunter") |
 | Akt. Version: | 1.8 |
@@ -13,7 +13,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), ASM |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | SOS_API |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
@@ -82,6 +82,6 @@ Static Operating System Fenster vergrößern
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5795/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5744; parent 5741; 2009-08-26T16:42:46Z -->
+<!-- MediaWiki page 2050; revision 5795; parent 5744; 2009-08-31T06:37:12Z -->
