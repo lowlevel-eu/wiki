@@ -29,10 +29,10 @@ Als Beispiel kann die Adresse des Video-RAM dienen: Die physische Adresse des Vi
 
 Die [Einschränkungen](#eigenschaften) des Real Modes erschweren die Entwicklung eines Betriebssystems erheblich. Viele Anfänger versuchen trotzdem ihre ersten Schritte im Real Mode, da das BIOS mit seinen Funktionen für Hardwarezugriffe die Nachteile auszugleichen scheint. Damit gibt man jedoch genau eine der Hauptaufgaben eines Betriebssystems nämlich Verwaltung von Ressourcen aus der Hand.
 
-Der sinnvolle Einsatz des Real Modes im OS-Dev beschränkt sich darauf im Bootloader den Kernel zu laden, und dann in den Protected Mode zu springen. Diese scheinbar einfache Aufgabe ist jedoch keineswegs ohne Hürden, und viele selbstgebaute Bootloader funktionieren nur auf einer handvoll PCs. Deswegen nehmen universelle Bootloader wie [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") dem Entwickler auch diese Last ab.
+Der sinnvolle Einsatz des Real Modes im OS-Dev beschränkt sich darauf im Bootloader den Kernel zu laden, und dann in den Protected Mode zu springen. Diese scheinbar einfache Aufgabe ist jedoch keineswegs ohne Hürden und viele selbstgebaute Bootloader funktionieren nur auf einer handvoll PCs. Deswegen nehmen universelle Bootloader wie [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") dem Entwickler auch diese Last ab.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5809/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1665/index.html)
 
-<!-- MediaWiki page 1665; revision 5766; parent 4254; 2009-08-27T16:05:01Z -->
+<!-- MediaWiki page 1665; revision 5809; parent 5766; 2009-08-31T17:23:21Z -->
