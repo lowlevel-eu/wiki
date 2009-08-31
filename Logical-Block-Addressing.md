@@ -19,6 +19,6 @@ Umrechnung von LBA zu [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-He
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
 
-<!-- MediaWiki page 1442; revision 4445; parent 2719; 2009-06-17T12:09:58Z -->
+<!-- MediaWiki page 1442; revision 5816; parent 4445; 2009-08-31T18:40:07Z -->
