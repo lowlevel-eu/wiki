@@ -2,7 +2,7 @@
 
 Das Programm **Virtual Floppy Drive** (**VFD**) ermöglicht es unter Windows ein Disketten-Image als virtuelles Laufwerk einzubinden. Das ist zum Beispiel notwendig, wenn man Dateien auf das Disketten-Image kopieren will. Es kann damit als Ersatz für das Unix-Werkzeug *mount* dienen.
 
-VFD stellt sowohl eine graphische Oberfläche (vfdwin.exe) als auch Konsolenprogrammm (vfd.exe) zur Verfügung, die beide alle Funktionen des Programms steuern können. Beide Programme sollten als Administrator gestartet werden, wenn die Benutzerkontensteuerung aktiviert ist.
+VFD stellt sowohl eine graphische Oberfläche (vfdwin.exe) als auch Konsolenprogrammm (vfd.exe) zur Verfügung, die beide alle Funktionen des Programms steuern können. Beide Programme sollten als Administrator gestartet werden.
 
 ## Benutzung der GUI
 
@@ -50,6 +50,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5800/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5801/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5800; parent 5799; 2009-08-31T12:03:22Z -->
+<!-- MediaWiki page 2063; revision 5801; parent 5800; 2009-08-31T12:07:15Z -->
