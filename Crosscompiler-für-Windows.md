@@ -39,6 +39,14 @@ Ich verwende für týndur eine Batch-Datei, die mir die Umgebung einrichtet. Sie
 
 Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týndur und starte sie. Durch die Eingabe von *make* sollte dann týndur vollständig kompilieren.
 
+## týndur-Disketten-Images
+
+Das Buildsystem von týndur ist nicht darauf ausgelegt unter Windows ein GRUB-Image zu erstellen, deswegen ist dort eine alternative Lösung gefragt. Dieses Thema gehört zwar nicht mehr direkt zum Cross-Compiler, aber da dieses mehr oder wenige eine Anleitung ist, wie man týndur unter Windows baut, schreibe ich das vorerst mal hierhin.
+
+Um die GRUB-Problematik zu umgehen, ist es am einfachsten einfach ein fertiges Image (z.B. von den [Releases](http://download.tyndur.org/releases/)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](https://github.com/lowlevel-eu/wiki/wiki/Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
+
+Nachdem du týndur mit *make* kompiliert hast, kannst du mit *make updateroot* die erstellten Programme in der passenden Verzeichnisstruktur zusammenstellen lassen. Das Ergebnis landet im Verzeichnis *build\root* und den Inhalt davon kannst du dann einfach auf das Disketten-Image kopieren und ggf. boot/grub/menu.lst anpassen.
+
 ## Feedback
 
 Feedback im Forum, im IRC oder auf der Diskussionsseite ist erwünscht. Besonders, wenn irgendwas nicht funktioniert.
@@ -64,6 +72,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 5007; parent 4776; 2009-08-01T18:25:30Z -->
+<!-- MediaWiki page 1450; revision 5804; parent 5007; 2009-08-31T15:50:38Z -->
