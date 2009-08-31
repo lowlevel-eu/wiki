@@ -12,7 +12,6 @@
 
 [www.freebasic.net](http://www.freebasic.net/)
 
-  
 Ob man BASIC für einen Kernel benutzen kann, ist in erster Linie eine akademische Frage. Der typische BASIC-Programmierer hat nicht die Kenntnisse, ein OS zu schreiben, und die Fortgeschritteneren wollen mit BASIC in aller Regel nichts zu tun haben.
 
 Der Vollständigkeit halber: Es geht. Ich habe dazu FreeBASIC als Compiler benutzt.
@@ -99,6 +98,6 @@ Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompilier
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 4787; parent 4781; 2009-07-29T23:23:56Z -->
+<!-- MediaWiki page 1624; revision 5808; parent 4787; 2009-08-31T17:22:06Z -->
