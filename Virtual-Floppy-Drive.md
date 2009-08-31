@@ -22,11 +22,11 @@ Das Konsolenprogramm bietet sowohl die Möglichkeit über Parameter als auch üb
 
 ### Beispiel: Mount
 
-Diese Batch-Datei installiert den Treiber, startet den Treiber und bindet das Image auf den ersten verfügbaren Laufwerksbuchstaben ein. Die Variablen VFD und IMAGE sind gegebenenfalls anzupassen. Diese Datei ist dafür gedacht im Verzeichnis, in dem das Disketten-Image liegt, ausgeführt zu werden. Ist der Pfad in IMAGE absolut (also fängt mit C:\\ oder so an), dann muss das %~dp0%IMAGE% durch %IMAGE% ersetzt werden.
+Diese Batch-Datei installiert den Treiber, startet den Treiber und bindet das Image als Laufwerk B: ein. Die Variablen VFD und IMAGE sind gegebenenfalls anzupassen. Diese Datei ist dafür gedacht im Verzeichnis, in dem das Disketten-Image liegt, ausgeführt zu werden. Ist der Pfad in IMAGE absolut (also fängt mit C:\\ oder so an), dann muss das %~dp0%IMAGE% durch %IMAGE% ersetzt werden. Der Befehl %VFD% LINK 0 B wählt den Laufwerksbuchstaben aus. Lässt man das B weg, wird der erste verfügbare Buchstabe gewählt.
 
 `@SET VFD=E:\vfd21-080206\vfd.exe @SET IMAGE=disk.img `
 
-`%VFD% INSTALL %VFD% START %VFD% OPEN 0: %~dp0%IMAGE% `
+`%VFD% INSTALL %VFD% START %VFD% LINK 0 B %VFD% OPEN 0: %~dp0%IMAGE% `
 
 `@PAUSE`
 
@@ -54,6 +54,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 5805; parent 5801; 2009-08-31T16:08:31Z -->
+<!-- MediaWiki page 2063; revision 5806; parent 5805; 2009-08-31T16:10:59Z -->
