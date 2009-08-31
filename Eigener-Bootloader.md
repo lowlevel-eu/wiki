@@ -259,11 +259,8 @@ Einfach die Datei bochsrc.txt im Installationsordner von Bochs anlegen, Pfad zum
 
 Wenn alles gutgegangen ist haben wir jetzt ein Diskettenimage mit unserem HelloWorld Programm. Im nachfolgenden Teil 2 wollen wir diesen BootRecord so weit umbauen, und erweitern, dass wir damit auch andere Programme von einem Datenträger laden und ausführen können.
 
-  
-Termite 18:11, 16. Sep 2006 (CEST)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4778/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 4778; parent 3482; 2009-07-29T22:36:34Z -->
+<!-- MediaWiki page 1427; revision 5820; parent 4778; 2009-08-31T18:50:56Z -->
