@@ -44,6 +44,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 5813; parent 4779; 2009-08-31T18:35:56Z -->
+<!-- MediaWiki page 1543; revision 5825; parent 5813; 2009-09-01T09:01:50Z -->
