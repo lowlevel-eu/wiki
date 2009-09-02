@@ -80,12 +80,12 @@ Die Multiboot-Structure beinhaltet Informationen, die vom Bootloader verher ausg
 | 0x3C | 4 | [mbs_config_table](#mbs_config_table) | 8 |
 | 0x40 | 4 | [mbs_boot_loader_name](#mbs_boot_loader_name) | 9 |
 | 0x44 | 4 | [mbs_apm_table](#mbs_apm_table) | 10 |
-| 0x40 | 4 | mbs_vbe_control_info | 11 |
-| 0x40 | 4 | mbs_vbe_mode_info | 11 |
-| 0x40 | 4 | mbs_vbe_mode | 11 |
-| 0x40 | 4 | mbs_vbe_interface_seg | 11 |
-| 0x40 | 4 | mbs_vbe_interface_off | 11 |
-| 0x40 | 4 | mbs_vbe_interface_len | 11 |
+| 0x48 | 4 | mbs_vbe_control_info | 11 |
+| 0x4C | 4 | mbs_vbe_mode_info | 11 |
+| 0x50 | 2 | mbs_vbe_mode | 11 |
+| 0x52 | 2 | mbs_vbe_interface_seg | 11 |
+| 0x54 | 2 | mbs_vbe_interface_off | 11 |
+| 0x56 | 2 | mbs_vbe_interface_len | 11 |
 
 ### mbs_flags
 
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5827/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 5031; parent 5030; 2009-08-01T19:04:53Z -->
+<!-- MediaWiki page 1560; revision 5827; parent 5031; 2009-09-02T19:06:39Z -->
