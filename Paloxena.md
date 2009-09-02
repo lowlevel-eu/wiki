@@ -20,12 +20,14 @@
   
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
 
+**This product includes software developed by the tyndur Project and its contributors.** (pcnet-Treiber)
+
 ## Screenshot
 
 Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration): [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5671/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5828/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5671; parent 0; 2009-08-19T20:09:02Z -->
+<!-- MediaWiki page 2045; revision 5828; parent 5671; 2009-09-02T20:07:53Z -->
