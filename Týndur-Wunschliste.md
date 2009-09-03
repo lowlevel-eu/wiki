@@ -4,15 +4,18 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ## Kernel
 
+- Umstellung auf kernel2
 - Syscall damit Prozess für jeden abgestorbenen Prozess einen RPC erhält (Wichtig u.a. um bei unsauber beendeten Programmen aufräumen zu können - alternativ folgt irgendwann ein OOM)
-
-  
+- Mehr Dokumentation in kernel2, auf tyndur wird oft als Beispiel verwiesen und eines seiner ursprünglichen Ziele ist auch, daß es dabei hilfreich sein soll. In den Code könnte man oft fast eine Art Tutorial als Kommentar einbetten.
+- LostIOv2 als neues, kernelbasiertes virtuelles Dateisystem soll das bisherige LostIO, das im Userspace läuft, ablösen und sowohl eine sauberere Schnittstelle bereitstellen als auch die Performance verbessern
+- Portierung auf amd64
 
 ## Allgemeines
 
 - Entfernen der COM1-Ausgabe aus putc, stattdessen wäre ein komplettes Modul für serielle Ausgänge (inkl. Eingabe, nicht nur Ausgabe) wünschenswert.
-
-  
+- Mehr Hardwareunterstützung
+- Shared Libraries
+- POSIX-kompatible Shell
 
 ## Module
 
@@ -22,9 +25,19 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ## Anwendungen
 
+- kedit
+  - Suchen
+  - Markieren, Kopieren/Ausschneiden, Einfügen
+  - build-Integration
+  - vim-Befehlsmodus
+  - Syntaxhighlighting für mehr Sprachen
+- lpt
+  - Upgrades
+  - aptitude-ähnliche TUI
+- Setup (Installation & Konfiguration)
 - FTP-Client
 - Mail-Client
-- Setup (Installation & Konfiguration)
+- git-Client
 
 ## LostIO
 
@@ -34,6 +47,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 5829; parent 5604; 2009-09-03T08:15:06Z -->
+<!-- MediaWiki page 1513; revision 5831; parent 5829; 2009-09-03T20:01:12Z -->
