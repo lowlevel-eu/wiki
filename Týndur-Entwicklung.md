@@ -89,7 +89,7 @@ Hat man schließlich ein Programm geschrieben oder portiert, einen Treiber entwi
 
 ### Commit erstellen
 
-Nun muss erstmal ein Commit erstellt werden.Dazu nutzt man git add:
+Nun muss erstmal ein Commit erstellt werden. Dazu nutzt man git add:
 
 ` git add src/modules/c/meinprog/* `
 
@@ -112,8 +112,6 @@ Die Änderung wird nach folgendem Schema angegeben:
 Nun eine neue Zeile einfügen und speichern. Der Commit wurde jetzt erstellt.
 
 Beim Committen bitte darauf achten, dass aus einer logischen Änderung genau ein Commit (und damit später genau ein Patch) wird. Wenn Du also an zwei verschiedenen Baustellen gearbeitet hast, füg zunächst alle Änderungen, die zur ersten gehören, mit git add hinzu, mache einen Commit und wiederhole das ganze für den zweiten Teil.
-
-  
 
 ### Patch senden
 
@@ -151,6 +149,6 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5618; parent 5617; 2009-08-12T19:58:31Z -->
+<!-- MediaWiki page 2035; revision 5832; parent 5618; 2009-09-03T20:20:11Z -->
