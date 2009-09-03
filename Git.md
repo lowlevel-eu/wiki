@@ -179,7 +179,7 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 <!-- -->
 
-- [Gitorious](http://gitorious.org)
+- [Gitorious](http://gitorious.org): Viele Features wie Wikis, mehrere Repos pro Projekt möglich
 
 <!-- -->
 
@@ -207,6 +207,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 5616; parent 5573; 2009-08-12T19:43:45Z -->
+<!-- MediaWiki page 1889; revision 5833; parent 5616; 2009-09-03T20:32:35Z -->
