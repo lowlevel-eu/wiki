@@ -26,8 +26,8 @@ Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut
 
 ## Programme
 
-- fasm 1.68: Ein Assembler mit Intelsyntax
-- µsh 0.001: Die Shell (portiert von MyXomycota)
+- FASM 1.68: Ein Assembler mit Intelsyntax
+- µsh 0.001: Die Shell (portiert von [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"))
 - Paloxoreutils:
   - ls
   - cat
@@ -42,6 +42,6 @@ Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](h
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5838/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5837; parent 5835; 2009-09-04T18:50:47Z -->
+<!-- MediaWiki page 2045; revision 5838; parent 5837; 2009-09-04T18:53:19Z -->
