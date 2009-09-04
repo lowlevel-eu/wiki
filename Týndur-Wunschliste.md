@@ -22,6 +22,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Tastaturtreiber
   - Ladbare Tastaturbelegungen
   - Deadkeys
+- Framebufferkonsole für mehr als 80x25
 
 ## Anwendungen
 
@@ -47,6 +48,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 5831; parent 5829; 2009-09-03T20:01:12Z -->
+<!-- MediaWiki page 1513; revision 5836; parent 5831; 2009-09-04T18:26:50Z -->
