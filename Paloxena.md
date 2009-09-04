@@ -15,7 +15,8 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-[Gitorious](http://gitorious.org/paloxena)
+[Gitorious](http://gitorious.org/paloxena)  
+[Forum](http://forum.paloxena.bplaced.net/)
 
   
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
@@ -42,6 +43,6 @@ Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](h
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5838/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5838; parent 5837; 2009-09-04T18:53:19Z -->
+<!-- MediaWiki page 2045; revision 5839; parent 5838; 2009-09-04T19:57:28Z -->
