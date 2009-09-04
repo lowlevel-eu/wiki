@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
-| Akt. Version: | 0.000-i-1 |
+| Akt. Version: | 0.000-i-2 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -24,15 +24,24 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne
 
 Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration): [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
 
+## Programme
+
+- fasm 1.68: Ein Assembler mit Intelsyntax
+- µsh 0.001: Die Shell (portiert von MyXomycota)
+- Paloxoreutils:
+  - ls
+  - cat
+- mbr: Gibt 512 Bytes einer Datei von einer gegebenen Position an in Hex-Editor-Form aus
+
 ## Akt. Release
 
-Die aktuelle Freigabe ist 0.000-i-1 (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
+Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
 
-- Ankündigung: [Paloxenaforum - "0.000-i-1"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=2)
-- Direktlink: [0.000-i-1.img.bz2](http://www.paloxena.bplaced.net/releases/0.000-i-1.img.bz2)
+- Ankündigung: [Paloxenaforum - "0.000-i-2"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=4)
+- Direktlink: [0.000-i-2.img.bz2](http://www.paloxena.bplaced.net/releases/0.000-i-2.img.bz2)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5835; parent 5830; 2009-09-04T18:17:18Z -->
+<!-- MediaWiki page 2045; revision 5837; parent 5835; 2009-09-04T18:50:47Z -->
