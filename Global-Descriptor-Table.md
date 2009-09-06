@@ -58,8 +58,8 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 
 | Bit | Wert | Name | Bedeutung |
 | -------- | ------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 7 | 0x80 | present bit | Muss 1 für einen aktiven Eintrag sein |
-| 6 u. 5 | 0x20 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
+| 7 | 0x80 | Present bit | Muss 1 für einen aktiven Eintrag sein |
+| 6 u. 5 | 0x60 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
 | 4 | 0x10 | Segment bit | Ist 1 für Code-/Datensegmente; 0 für Gates und [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS"). Bits 0 bis 3 in dieser Tabelle gelten nur für Code-/Datensegmente, ansonsten enthalten sie den genauen Segmenttyp (z.B. 0x9 für 386-TSS) |
 | 3 | 0x08 | Executable bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
 | 2 | 0x04 | Direction bit/Conforming bit | Abhängig vom Executable bit |
@@ -134,6 +134,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 5402; parent 5003; 2009-08-06T21:17:26Z -->
+<!-- MediaWiki page 1661; revision 5843; parent 5402; 2009-09-06T08:41:26Z -->
