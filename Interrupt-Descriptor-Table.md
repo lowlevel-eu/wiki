@@ -8,7 +8,7 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 
 ### Descriptor
 
-| Bits | Name | Beschribung |
+| Bits | Name | Beschreibung |
 | ------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0-15 | Offet 0-15 | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
 | 15-31 | Selector | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
@@ -78,6 +78,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5842/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 5841; parent 5702; 2009-09-06T00:15:40Z -->
+<!-- MediaWiki page 1603; revision 5842; parent 5841; 2009-09-06T00:15:59Z -->
