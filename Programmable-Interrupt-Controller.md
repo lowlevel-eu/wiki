@@ -16,7 +16,7 @@ Jeder der beiden PICs hat jeweils zwei IO-Ports, über die er programmiert wird:
 
 Nach dem Booten beginnen die IRQs standardmäßig beim Interrupt 0. An dieser Stelle liegen sie aber denkbar ungünstig, weil dieselben Interruptnummern bereits von der CPU für [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") verwendet werden. Beim Start des Kernels müssen daher die IRQs auf andere Interruptnummern gelegt werden.
 
-Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und die nächsten gesendeten Datenbytes als Parameter für die Initialisierung gedacht sind. Anschließend werden bis zu vier Bytes nacheinander auf den Datenport geschrieben. Insgesamt werden folgende Operationen durchgeführt:
+Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und die nächsten gesendeten Datenbytes als Parameter für die Initialisierung gedacht sind. Anschließend werden bis zu drei Bytes nacheinander auf den Datenport geschrieben. Insgesamt werden folgende Operationen durchgeführt:
 
 | Port | Name | Erklärung |  |
 | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -78,6 +78,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5844/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 5817; parent 4933; 2009-08-31T18:43:09Z -->
+<!-- MediaWiki page 1465; revision 5844; parent 5817; 2009-09-06T10:40:45Z -->
