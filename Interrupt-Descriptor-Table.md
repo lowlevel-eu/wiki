@@ -8,20 +8,19 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 
 ### Descriptor
 
-| 63-48 | 47 | 46-45 | 44 | 43 | 42-40 | 39-32 |
-| -------------- | ----- | ------- | ----- | ----- | ------- | ---------- |
-| Offset 31-16 | P | DPL | 0 | D | Typ | 00000000 |
+| Bits | Name | Beschribung |
+| ------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0-15 | Offet 0-15 | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
+| 15-31 | Selector | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
+| 32-39 | 00000000 |  |
+| 40-42 | Typ | Gibt die Art des Interrupts an |
+| 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. |
+| 44 | 0 |  |
+| 45-46 | DPL | Gibt das Descriptor Privilege Level an, das man braucht um diesen Interrupt aufrufen zu dürfen. |
+| 47 | P | Gibt an, ob dieser Eintrag benutzt wird. |
+| 48-63 | Offset 16-31 |  |
 
-| 31-16 | 15-0 |
-| ---------- | ------------- |
-| Selector | Offset 15-0 |
-
-- *Selector* gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0).
-- *Offset*: Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt.
-- Das ***P***resent flag gibt an, ob dieser Eintrag benutzt wird.
-- *DPL* gibt das Descriptor Privilege Level an, das man braucht um diesen Interrupt aufrufen zu dürfen.
-- *D* gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt.
-- *Typ* gibt die Art des Interrupts an:
+### Interrupt-Arten (Typ)
 
 | Wert | Bedeutung |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -79,6 +78,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 5702; parent 4704; 2009-08-22T13:00:36Z -->
+<!-- MediaWiki page 1603; revision 5841; parent 5702; 2009-09-06T00:15:40Z -->
