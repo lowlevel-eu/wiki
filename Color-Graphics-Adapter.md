@@ -1,6 +1,6 @@
 # Color Graphics Adapter
 
-Der **Color Graphics Adapter** (**CGA**) ist die ursprüngliche Grafikkarte, die den 80x25 Textmodus eingeführt hat. In diesem Modus können ausschließlich Zeichen, die auf einem Raster vom Format 80x25 angeordnet sind, dargestellt werden. Die Zeichen können in 16 Farben dargestellt werden, und mit 8 verschiedenen Hintergrundfarben hinterlegt werden und blinken. Die Zeichen können auch mit verschiedenen 16 Hintergrundfarben dargestellt werden, aber dann nicht mehr blinken.
+Der **Color Graphics Adapter** (**CGA**) ist die ursprüngliche Grafikkarte, die den 80x25 Textmodus eingeführt hat. In diesem Modus können ausschließlich Zeichen, die auf einem Raster vom Format 80x25 angeordnet sind, dargestellt werden. Jedes Zeichen kann in einer von 16 Farben dargestellt werden, sowie mit einer von 8 Hintergrundfarben hinterlegt werden und optional blinken. Die Anzahl der Hintergrundfarben kann auch auf 16 erweitert werden, allerdings können dann die Zeichen nicht mehr blinken.
 
 ## Videospeicher
 
@@ -39,7 +39,7 @@ Die I/O Ports 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jewei
 
 ### Bewegen des Cursors
 
-Der Cursor wird über 2 der Register des Motorola 6845 CRT Controllers, der im ursprünglichen CGA verbaut war, angesteuert. Diese Register Befinden werden über die Ports 0x3D4 und 0x3D5 angesprochen. Dies ist im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe#cursor "Textausgabe") genauer beschrieben.
+Der Cursor wird über 2 der Register des Motorola 6845 CRT Controllers, der im ursprünglichen CGA verbaut war, angesteuert. Diese Register werden über die Ports 0x3D4 und 0x3D5 angesprochen. Dies ist im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe#cursor "Textausgabe") genauer beschrieben.
 
 ### 16 Hintergrundfarben
 
@@ -47,7 +47,7 @@ Um 16 Hintergrundfarben zu nutzen, muss das Bit 5 im Mode-Select Register (Port 
 
 ### Vertical Sync
 
-Bit 3 des Status Registers (Port 0x3DA) wird von der Grafikkarte genau dann gesetzt, wenn der Monitor sich im Vertical Retrace Mode befindet. Das heißt dann ist der Elektronenstrahl gerade deaktiviert und wird vom unten wieder nach oben bewegt, um ein weiteres Bild darzustellen. Dieses Bit ist besonders bei der Darstellung von Grafikmodi z.B. in Spielen oder graphischen Oberflächen interessant. Wenn man darauf wartet, dass dieses Bit gesetzt ist, bevor man beginnt in den Grafikspeicher zu schreiben, verhindert man, dass der Monitor mitten in der Darstellung eines Bildes andere Daten vorgesetzt bekommt. Dadurch lässt sich verhindern, dass das Bild in der Mitte des Monitor zerissen erscheint. Der Code dafür könnte z.B. so aussehen: \<c\>// Direkt vor dem Zeichnen aufrufen // (besser: direkt vor dem Kopieren des Double Buffers) void vsync() {
+Bit 3 des Status Registers (Port 0x3DA) wird von der Grafikkarte genau dann gesetzt, wenn der Monitor sich im Vertical Retrace Mode befindet. Das heißt dann ist der Elektronenstrahl gerade deaktiviert und wird wieder von unten nach oben bewegt, um ein weiteres Bild darzustellen. Dieses Bit ist besonders bei der Darstellung von Grafikmodi z.B. in Spielen oder graphischen Oberflächen interessant. Wenn man darauf wartet, dass dieses Bit gesetzt ist, bevor man beginnt in den Grafikspeicher zu schreiben, verhindert man, dass der Monitor mitten in der Darstellung eines Bildes andere Daten vorgesetzt bekommt. Dadurch lässt sich verhindern, dass das Bild bei horizontalen Bewegungen zerissen erscheint. Der Code dafür könnte z.B. so aussehen: \<c\>// Direkt vor dem Zeichnen aufrufen // (besser: direkt vor dem Kopieren des Double Buffers) void vsync() {
 
        do {} while (inb(0x3DA) & 8) != 0); // warten, wenn der vsync bereits läuft
        do {} while (inb(0x3DA) & 8) == 0); // warten während der Monitor darstellt
@@ -88,6 +88,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5037; parent 5036; 2009-08-01T19:13:58Z -->
+<!-- MediaWiki page 1890; revision 5851; parent 5037; 2009-09-07T10:09:58Z -->
