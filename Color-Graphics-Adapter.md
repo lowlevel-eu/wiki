@@ -135,7 +135,7 @@ Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing auf
 | 1 | 0 | Cursor blinkt normal |
 | 1 | 1 | Cursor blinkt schnell |
 
-## Start Address
+#### Start Address
 
 Die Register 12 und 13 geben das Offset an, an der das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
 
@@ -162,9 +162,9 @@ void select_page(unsigned int page) {
        start_address = DISPLAY_PAGE_OFFSET(page);
 
        outb(0x3D4, 13);
-       outb(0x3D5, start_address); // Low Byte schreiben
+       outb(0x3D5, start_address & 0xff); // Low Byte schreiben
        outb(0x3D4, 12);
-       outb(0x3D5, start_address >> 8); // High Byte schreiben
+       outb(0x3D5, (start_address >> 8) & 0xff); // High Byte schreiben
 
        /* 
         * Hier muss noch die Cursorposition gesetzt werden, da diese für 
@@ -176,7 +176,7 @@ void select_page(unsigned int page) {
 
 }\</c\>
 
-## Cursor Address
+#### Cursor Address
 
 Die Register 14 und 15 setzen die Cursor Addresse, die sich aus der Cursor Position berechnet. Um den Cursor zum Beispiel in Zeile 10, Spalte 63 zu setzen muss man 10 \* 80 + 63 = 863 rechnen. Dieser Wert wird dann in die High und Low Bytes der Register für die Cursor Addresse geschrieben.
 
@@ -197,9 +197,9 @@ void update_cursor() {
        cursor_address += start_address; 
 
        outb(0x3D4, 15);
-       outb(0x3D5, cursor_address);
+       outb(0x3D5, cursor_address & 0xff);
        outb(0x3D4, 14);
-       outb(0x3D5, cursor_address >> 8);
+       outb(0x3D5, (cursor_address >> 8) & 0xff);
 
 }\</c\>
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5857; parent 5856; 2009-09-07T12:30:47Z -->
+<!-- MediaWiki page 1890; revision 5858; parent 5857; 2009-09-07T12:31:29Z -->
