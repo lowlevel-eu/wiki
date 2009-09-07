@@ -10,16 +10,24 @@ Im 80x25 Textmodus (16 Farben) wird der Speicher ab Adresse 0xB8000 als Puffer v
 
 <table>
 <tbody><tr>
-<td><b>Bit</b></td>
-<td>7</td>
-<td>6</td>
-<td>5</td>
-<td>4</td>
-<td>3</td>
-<td>2</td>
-<td>1</td>
-<td>0
-</td></tr>
+<th><b>Bit</b>
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
 <tr>
 <td><b>Bedeutung</b></td>
 <td>Blinken</td>
@@ -88,6 +96,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5851; parent 5037; 2009-09-07T10:09:58Z -->
+<!-- MediaWiki page 1890; revision 5852; parent 5851; 2009-09-07T10:14:24Z -->
