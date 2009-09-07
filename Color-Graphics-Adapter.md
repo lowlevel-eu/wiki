@@ -82,6 +82,127 @@ Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 | 16 | Light Pen (High Byte) | ? |
 | 17 | Light Pen (Low Byte) | ? |
 
+Die ersten 10 Register (0-9) steuern das Timing des CRT-Displays, sowie weitere Details der Darstellung, die über den Zweck dieses Artikels hinausgehen. Informationen dazu gibt es im Datenblatt des 6845 z.B. unter [\[2\]](http://bbc.nvg.org/doc/datasheets/MC6845.zip).
+
+Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn ihre Werte braucht. Das BIOS nutzt dafür zum Beispiel Teile der Bios Data Area.
+
+#### Cursor Format
+
+Die Register 10 und 11 steuern die Form des Cursors. Die unteren 5 Bits dieser Register geben jeweils die Start- und End-Scanline des Cursors innerhalb eines Zeichens an. Außerdem steuern Bits 5 und 6 des Regster 10 das Blinken des Cursors.
+
+<table>
+<tbody><tr>
+<th>Register
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td><b>Cursor Start</b></td>
+<td>n/a</td>
+<td>Enable</td>
+<td>Timing
+</td>
+<td colspan="5">Scanline
+</td></tr>
+<tr>
+<td><b>Cursor End</b>
+</td>
+<td colspan="3">n/a
+</td>
+<td colspan="5">Scanline
+</td></tr></tbody></table>
+
+Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing dar:
+
+| Enable | Timing | Effekt |
+| -------- | -------- | ------------------------------- |
+| 0 | 0 | Cursor blinkt nicht |
+| 0 | 1 | Cursor wird nicht dargestellt |
+| 1 | 0 | Cursor blinkt normal |
+| 1 | 1 | Cursor blinkt schnell |
+
+## Start Address
+
+Die Register 12 und 13 geben das Offset an, an der das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
+
+Beispiel, das analog zum BIOS den Speicher in 8 Seiten unterteilt: \<c\>/\* Unsere Auflösung \*/
+
+1.  define ROWS 25
+2.  define COLS 80
+
+/\*
+
+    * DISPLAY_PAGE_OFFSET gibt die Startadresse der übergebenen Seitennummer 
+    * zurück. Dabei rundet es die Adresse einer Bildschirmseite auf das 
+    * nächste Vielfache von 256 auf. Das Makro ist etwas komplizierter als nötig, 
+    * falls es jemand mit anderen Auflösungen verwenden will. Für den 80x25-
+    * Modus vereinfacht es sich zu ((page) * 2048). 
+    */
+
+1.  define DISPLAY_PAGE_OFFSET(page) ((page) \* ((ROWS \* COLS + 0xff) & 0xff00))
+
+/\* Die Start Adresse der dargestellten Seite \*/ unsigned short start_address;
+
+void select_page(unsigned int page) {
+
+       start_address = DISPLAY_PAGE_OFFSET(page);
+
+       outb(0x3D4, 13);
+       outb(0x3D5, start_address); // Low Byte schreiben
+       outb(0x3D4, 12);
+       outb(0x3D5, start_address >> 8); // High Byte schreiben
+
+       /* 
+        * Hier muss noch die Cursorposition gesetzt werden, da diese für 
+        * jede Page eine andere ist. Das heißt sie muss z.B. in einem Array 
+        * gespeichert werden.
+        *
+        * Für das Setzen des Cursor siehe nächster Abschnitt.
+        */
+
+}\</c\>
+
+## Cursor Address
+
+Die Register 14 und 15 setzen die Cursor Addresse, die sich aus der Cursor Position berechnet. Um den Cursor zum Beispiel in Zeile 10, Spalte 63 zu setzen muss man 10 \* 80 + 63 = 863 rechnen. Dieser Wert wird dann in die High und Low Bytes der Register für die Cursor Addresse geschrieben.
+
+Dabei ist zu beachten, dass wenn man wie im letzten Abschnitt beschrieben die Startadresse verändert, diese Startadresse auf die Cursor position addieren muss.
+
+Beispiel: \<c\>/\* Unsere Auflösung \*/
+
+1.  define ROWS 25
+2.  define COLS 80
+
+/\* Cursorposition, die durch dir Ausgabefunktionen gesetzt werden \*/ unsigned int cursor_x; unsigned int cursor_y;
+
+void update_cursor() {
+
+       unsigned short cursor_address = cursor_x + cursor_y * COLS;
+
+       // die Startadresse dazuaddieren (nur nötig, wenn man diese auch verändert hat)
+       cursor_address += start_address; 
+
+       outb(0x3D4, 15);
+       outb(0x3D5, cursor_address);
+       outb(0x3D4, 14);
+       outb(0x3D5, cursor_address >> 8);
+
+}\</c\>
+
 ### 16 Hintergrundfarben
 
 Um 16 Hintergrundfarben zu nutzen, muss das Bit 5 im Mode-Select Register (Port 0x3D8) gelöscht werden. Dadurch bedeutet das Bit 7 im Attribut-Feld nicht mehr, dass das Zeichen blinken soll. Das Feld für die Hintergrundfarbe erweitert sich dann auf die Bits 4 bis 7, und es können somit 16 Hintergrundfarben dargestellt werden. Diese Farben stammen aus der selben Palette wie die Vordergrundfarben.
@@ -124,11 +245,11 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ## Siehe auch
 
-- IBM PC Technical Reference (z.B. unter [\[2\]](http://www.retroarchive.org/dos/docs/index.html))
+- IBM PC Technical Reference (z.B. unter [\[3\]](http://www.retroarchive.org/dos/docs/index.html))
 - [Artikel in der englischen Wikipedia](http://en.wikipedia.org/wiki/Color_Graphics_Adapter)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5855; parent 5854; 2009-09-07T11:23:54Z -->
+<!-- MediaWiki page 1890; revision 5856; parent 5855; 2009-09-07T12:27:40Z -->
