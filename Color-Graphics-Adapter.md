@@ -51,27 +51,6 @@ Der Motorola 6845 CRT Controllers hat interne Register, die verschiedene Aspekte
 
 Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 
-### 16 Hintergrundfarben
-
-Um 16 Hintergrundfarben zu nutzen, muss das Bit 5 im Mode-Select Register (Port 0x3D8) gelöscht werden. Dadurch bedeutet das Bit 7 im Attribut-Feld nicht mehr, dass das Zeichen blinken soll. Das Feld für die Hintergrundfarbe erweitert sich dann auf die Bits 4 bis 7, und es können somit 16 Hintergrundfarben dargestellt werden. Diese Farben stammen aus der selben Palette wie die Vordergrundfarben.
-
-### Vertical Sync
-
-Bit 3 des Status Registers (Port 0x3DA) wird von der Grafikkarte genau dann gesetzt, wenn der Monitor sich im Vertical Retrace Mode befindet. Das heißt dann ist der Elektronenstrahl gerade deaktiviert und wird wieder von unten nach oben bewegt, um ein weiteres Bild darzustellen. Dieses Bit ist besonders bei der Darstellung von Grafikmodi z.B. in Spielen oder graphischen Oberflächen interessant. Wenn man darauf wartet, dass dieses Bit gesetzt ist, bevor man beginnt in den Grafikspeicher zu schreiben, verhindert man, dass der Monitor mitten in der Darstellung eines Bildes andere Daten vorgesetzt bekommt. Dadurch lässt sich verhindern, dass das Bild bei horizontalen Bewegungen zerissen erscheint. Der Code dafür könnte z.B. so aussehen: \<c\>// Direkt vor dem Zeichnen aufrufen // (besser: direkt vor dem Kopieren des Double Buffers) void vsync() {
-
-       do {} while (inb(0x3DA) & 8) != 0); // warten, wenn der vsync bereits läuft
-       do {} while (inb(0x3DA) & 8) == 0); // warten während der Monitor darstellt
-
-}\</c\>
-
-## Textausgabe
-
-Die Ausgabe von Text erfolgt entweder über die [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")-Funktionen (z.B. Int 0x10/AH=0x0E), oder über das direkte Schreiben in den Videospeicher. Dies ist im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") genauer beschrieben.
-
-## Palette
-
-Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Karten verändert werden. Das Setzen der RGB-Werte funktioniert wie im VGA Modus über die Register 0x3C8 und 0x3C9. Die Farben des CGA-Modus sind allerdings nicht linear im Farbraum der VGA-Modi angeordnet.
-
 | Index | Register Typ | Einheit |
 | ------- | ---------------------------- | --------------- |
 | 0 | Horizontal Total | Character |
@@ -92,6 +71,27 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 | 15 | Cursor Address (Low Byte) | Offset |
 | 16 | Light Pen (High Byte) | ? |
 | 17 | Light Pen (Low Byte) | ? |
+
+### 16 Hintergrundfarben
+
+Um 16 Hintergrundfarben zu nutzen, muss das Bit 5 im Mode-Select Register (Port 0x3D8) gelöscht werden. Dadurch bedeutet das Bit 7 im Attribut-Feld nicht mehr, dass das Zeichen blinken soll. Das Feld für die Hintergrundfarbe erweitert sich dann auf die Bits 4 bis 7, und es können somit 16 Hintergrundfarben dargestellt werden. Diese Farben stammen aus der selben Palette wie die Vordergrundfarben.
+
+### Vertical Sync
+
+Bit 3 des Status Registers (Port 0x3DA) wird von der Grafikkarte genau dann gesetzt, wenn der Monitor sich im Vertical Retrace Mode befindet. Das heißt dann ist der Elektronenstrahl gerade deaktiviert und wird wieder von unten nach oben bewegt, um ein weiteres Bild darzustellen. Dieses Bit ist besonders bei der Darstellung von Grafikmodi z.B. in Spielen oder graphischen Oberflächen interessant. Wenn man darauf wartet, dass dieses Bit gesetzt ist, bevor man beginnt in den Grafikspeicher zu schreiben, verhindert man, dass der Monitor mitten in der Darstellung eines Bildes andere Daten vorgesetzt bekommt. Dadurch lässt sich verhindern, dass das Bild bei horizontalen Bewegungen zerissen erscheint. Der Code dafür könnte z.B. so aussehen: \<c\>// Direkt vor dem Zeichnen aufrufen // (besser: direkt vor dem Kopieren des Double Buffers) void vsync() {
+
+       do {} while (inb(0x3DA) & 8) != 0); // warten, wenn der vsync bereits läuft
+       do {} while (inb(0x3DA) & 8) == 0); // warten während der Monitor darstellt
+
+}\</c\>
+
+## Textausgabe
+
+Die Ausgabe von Text erfolgt entweder über die [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")-Funktionen (z.B. Int 0x10/AH=0x0E), oder über das direkte Schreiben in den Videospeicher. Dies ist im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") genauer beschrieben.
+
+## Palette
+
+Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Karten verändert werden. Das Setzen der RGB-Werte funktioniert wie im VGA Modus über die Register 0x3C8 und 0x3C9. Die Farben des CGA-Modus sind allerdings nicht linear im Farbraum der VGA-Modi angeordnet.
 
 | CGA Index | VGA Paletten Index |
 | ----------- | -------------------- |
@@ -119,6 +119,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5853/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5854/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5853; parent 5852; 2009-09-07T10:36:28Z -->
+<!-- MediaWiki page 1890; revision 5854; parent 5853; 2009-09-07T10:37:04Z -->
