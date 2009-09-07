@@ -24,9 +24,13 @@ Es gibt keine Prozesse, der gesamte Code läuft im Kernelmodus. Das Betriebssyst
 
 ## Features
 
-Bis jetzt gibt es eine Unterstützung für die [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")-Netzwerkkarte, [ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "ARP"), [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "IP") und etwas TCP. Mit Isynax kann man derzeit nur eine Verbindung zu einem IRC-Server außerhalb des lokalen Netzwerks herstellen und dann mittels Tastendruck einen Channel betreten.
+Bis jetzt gibt es eine Unterstützung für die [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")-Netzwerkkarte, [ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "ARP"), [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "IP") und Minimalunterstützung für TCP. Mit Isynax kann man derzeit nur eine Verbindung zu einem IRC-Server außerhalb des lokalen Netzwerks herstellen.
 
-Die eigene IP, die IP des Gateways im lokalen Netzwerks, die IP des Servers, der Zielport und der Channel sind bis jetzt noch feste Konstanten im Code.
+Die eigene IP, die IP des Gateways im lokalen Netzwerks, die IP des Servers, der Zielport und der Nickname sind bis jetzt noch feste Konstanten im Code.
+
+## Benutzung
+
+Um einen Channel zu betreten, muss `JOIN <Channel>` verwendet werden. Um eine Nachricht zu senden, verwendet man `PRIVMSG <Channel> :<Nachricht>` Um einen Channel zu verlassen, nimmt man `PART <Channel>` Und um schließlich die Verbindung zum Server zu trennen, kann man entweder einfach Escape benutzen oder `QUIT` Nach QUIT oder Escape wird der Computer neugestartet.
 
 ## Screenshot
 
@@ -36,8 +40,13 @@ Die eigene IP, die IP des Gateways im lokalen Netzwerks, die IP des Servers, der
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e792a94b4a8342e9c4d1.png" width="720" height="400" alt="Isynax-shot-falschrum.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e792a94b4a8342e9c4d1.png)  
 **...Und für AT&T-Fans auch andersrum! Aktivierbar per wrong=1 anstatt von wrong=0 im Code.**
 
+## Weblinks
+
+- Der Code bei [Gitorious](http://gitorious.org/isynax)
+- Ein relativ aktuelles Image unter [\[1\]](http://www.xanclic.bplaced.net/isynax.img.bz2), Falschrumversion unter [\[2\]](http://www.xanclic.bplaced.net/asynax.img.bz2)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
 
-<!-- MediaWiki page 2066; revision 5848; parent 5846; 2009-09-06T20:33:48Z -->
+<!-- MediaWiki page 2066; revision 5864; parent 5848; 2009-09-07T20:16:23Z -->
