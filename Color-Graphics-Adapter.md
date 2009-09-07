@@ -84,7 +84,7 @@ Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 
 Die ersten 10 Register (0-9) steuern das Timing des CRT-Displays, sowie weitere Details der Darstellung, die über den Zweck dieses Artikels hinausgehen. Informationen dazu gibt es im Datenblatt des 6845 z.B. unter [\[2\]](http://bbc.nvg.org/doc/datasheets/MC6845.zip).
 
-Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn man ihre Werte benötigt. Das BIOS nutzt dafür zum Beispiel Teile der Bios Data Area.
+Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn man ihre Werte benötigt. Das BIOS nutzt dafür zum Beispiel Teile der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area#grafik-adapter-informationen "BIOS Data Area").
 
 #### Cursor Format
 
@@ -137,7 +137,7 @@ Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing auf
 
 #### Start Address
 
-Die Register 12 und 13 geben das Offset an, an der das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
+Die Register 12 und 13 geben das Offset an, an der das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie die Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
 
 Beispiel, das analog zum BIOS den Speicher in 8 Seiten unterteilt: \<c\>/\* Unsere Auflösung \*/
 
@@ -178,16 +178,16 @@ void select_page(unsigned int page) {
 
 #### Cursor Address
 
-Die Register 14 und 15 setzen die Cursor Addresse, die sich aus der Cursor Position berechnet. Um den Cursor zum Beispiel in Zeile 10, Spalte 63 zu setzen muss man 10 \* 80 + 63 = 863 rechnen. Dieser Wert wird dann in die High und Low Bytes der Register für die Cursor Addresse geschrieben.
+Die Register 14 und 15 setzen die Cursor-Adresse, die sich aus der Cursor-Position berechnet. Um den Cursor zum Beispiel in die Zeile 10, und Spalte 63 zu setzen muss man 10 \* 80 + 63 = 863 rechnen. Dieser Wert wird dann in die High und Low Bytes der Register für die Cursor Addresse geschrieben.
 
-Dabei ist zu beachten, dass wenn man wie im letzten Abschnitt beschrieben die Startadresse verändert, diese Startadresse auf die Cursor position addieren muss.
+Dabei ist zu beachten, dass wenn man wie im letzten Abschnitt beschrieben die Startadresse verändert, diese Startadresse auf die Cursor-Adresse addieren muss.
 
 Beispiel: \<c\>/\* Unsere Auflösung \*/
 
 1.  define ROWS 25
 2.  define COLS 80
 
-/\* Cursorposition, die durch dir Ausgabefunktionen gesetzt werden \*/ unsigned int cursor_x; unsigned int cursor_y;
+/\* Cursor-Position, die durch die Ausgabefunktionen gesetzt werden \*/ unsigned int cursor_x; unsigned int cursor_y;
 
 void update_cursor() {
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5858/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5858; parent 5857; 2009-09-07T12:31:29Z -->
+<!-- MediaWiki page 1890; revision 5859; parent 5858; 2009-09-07T12:34:20Z -->
