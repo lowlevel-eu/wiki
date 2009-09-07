@@ -97,6 +97,10 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 \</c\>
 
+## Siehe auch
+
+- [CGA](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter "CGA")
+
 ## Weblinks
 
 - [Artikel aus der OSDevWiki](http://www.osdev.org/wiki/Text_UI)
@@ -105,6 +109,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5354/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 5354; parent 3745; 2009-08-06T17:44:20Z -->
+<!-- MediaWiki page 1549; revision 5850; parent 5354; 2009-09-07T09:58:14Z -->
