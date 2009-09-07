@@ -4,7 +4,7 @@ Der **Color Graphics Adapter** (**CGA**) ist die ursprüngliche Grafikkarte, die
 
 ## Videospeicher
 
-Im 80x25 Textmodus (16 Farben) wird der Speicher ab Adresse 0xB8000 als Puffer verwendet. In diesem Speicher liegen für jedes Zeichen abwechselnd jeweils ein Byte mit dem Index in die Font Table (in der Regel der ASCII-Code des Zeichens) und ein Attribut-Byte.
+Im 80x25 Textmodus (16 Farben) wird der Speicher ab Adresse 0xB8000 als Puffer verwendet. In diesem Speicher liegen für jedes Zeichen abwechselnd jeweils ein Byte mit dem Index in die Font Table (in der Regel der ASCII-Code des Zeichens) und ein Attribut-Byte. Das heißt jedes Zeichen belegt zwei Bytes im Videospeicher.
 
 ### Aufbau das Attribut-Bytes
 
@@ -40,6 +40,16 @@ Im 80x25 Textmodus (16 Farben) wird der Speicher ab Adresse 0xB8000 als Puffer v
 - Die Vordergrundfarbe setzt die Farbe des Zeichens auf eine der 16 CGA-Farben.
 
 Farben der Standard-CGA-Palette in der englischen Wikipedia: [\[1\]](http://en.wikipedia.org/wiki/List_of_8-bit_computer_hardware_palettes#CGA)
+
+### Regen Buffer
+
+Der Videospeicher wird auch als Regen Buffer (von engl. *regenerate*) bezeichnet. Er war ursprünglich 16 KiB groß und ging von 0xB8000 bis 0xBC000, bei neueren Grafikkarten (relativ zum CGA) ist er 32 KiB groß und geht bis 0xC0000. Im Folgenden gehen wir davon aus, dass der Puffer 32 KiB groß ist, denn einen originalen IBM PC hat vermutlich keiner mehr rumstehen.
+
+Aus dem Regen Buffer liest die Grafikkarte die Zeichencodes sowie die Attribute aus, und erstellt daraus die Signale für den Monitor. Die Bezeichnung *regenerate* zeigt an, dass die Grafikkarte nicht direkt die Buchstaben an den Monitor sendet, sondern das Videosignal bestehend aus den Farbinformationen der Pixel für jedes Bild neu generiert.
+
+In der 80x25 Auflösung können 80\*25 Zeichen dargestellt werden, von denen jedes 2 Bytes belegt. Das heißt es werden 80\*25\*2 = 4000 Bytes verwendet. In dem Regen Buffer wären also für insgesamt 8 Bildschirmseiten (32 KiB/4000) Platz. Standardmäßig werden (nach dem Systemstart) die ersten 4000 Bytes an Adresse 0xB8000 zur Darstellung verwendet. Man kann allerdings dieses Fenster verschieben indem man den Grafikadapter anweist eine andere Startadresse zu nehmen. (Siehe [Interne Register](#interne-register) weiter unten.)
+
+Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfache von 0x4000 (4KiB) sind. Allerdings ist man weder daran gebunden, noch muss man dieses Konzept von 8 getrennten Bildschirmseiten beibehalten (sofern man das BIOS vollständig umgeht). Man kann z.B. durch Verschieben der Startadresse in 80er-Schritten ein Scrollen ohne externen Speichern realisieren.
 
 ## I/O Ports
 
@@ -119,6 +129,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5854/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5854; parent 5853; 2009-09-07T10:37:04Z -->
+<!-- MediaWiki page 1890; revision 5855; parent 5854; 2009-09-07T11:23:54Z -->
