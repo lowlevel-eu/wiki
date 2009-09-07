@@ -45,9 +45,11 @@ Farben der Standard-CGA-Palette in der englischen Wikipedia: [\[1\]](http://en.w
 
 Die I/O Ports 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jeweils ein Byte groß.
 
-### Bewegen des Cursors
+### Interne Register
 
-Der Cursor wird über 2 der Register des Motorola 6845 CRT Controllers, der im ursprünglichen CGA verbaut war, angesteuert. Diese Register werden über die Ports 0x3D4 und 0x3D5 angesprochen. Dies ist im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe#cursor "Textausgabe") genauer beschrieben.
+Der Motorola 6845 CRT Controllers hat interne Register, die verschiedene Aspekte der Darstellung kontrollieren. Sie werden über die Ports 0x3D4 und 0x3D5 angesteuert. Das Laden eines Registers erfolgt, indem der Index des Registers an den Port 0x3D4 geschrieben wird, und dann die Daten nach Port 0x3D5 geschrieben werden.
+
+Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 
 ### 16 Hintergrundfarben
 
@@ -69,6 +71,27 @@ Die Ausgabe von Text erfolgt entweder über die [BIOS](https://github.com/lowlev
 ## Palette
 
 Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Karten verändert werden. Das Setzen der RGB-Werte funktioniert wie im VGA Modus über die Register 0x3C8 und 0x3C9. Die Farben des CGA-Modus sind allerdings nicht linear im Farbraum der VGA-Modi angeordnet.
+
+| Index | Register Typ | Einheit |
+| ------- | ---------------------------- | --------------- |
+| 0 | Horizontal Total | Character |
+| 1 | Horizontal Displayed | Character |
+| 2 | Horizontal Sync Position | Character |
+| 3 | Horizontal Sync Width | Character |
+| 4 | Vertical Total | Character Row |
+| 5 | Vertical Total Adjust | Scan Line |
+| 6 | Vertical Displayed | Character Row |
+| 7 | Vertical Sync Position | Character Row |
+| 8 | Interlace Mode | \- |
+| 9 | Maximum Scan Line Address | Scan Line |
+| 10 | Cursor Start | Scan Line |
+| 11 | Cursor End | Scan Line |
+| 12 | Start Address (High Byte) | Offset |
+| 13 | Start Address (Low Byte) | Offset |
+| 14 | Cursor Address (High Byte) | Offset |
+| 15 | Cursor Address (Low Byte) | Offset |
+| 16 | Light Pen (High Byte) | ? |
+| 17 | Light Pen (Low Byte) | ? |
 
 | CGA Index | VGA Paletten Index |
 | ----------- | -------------------- |
@@ -96,6 +119,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5853/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5852; parent 5851; 2009-09-07T10:14:24Z -->
+<!-- MediaWiki page 1890; revision 5853; parent 5852; 2009-09-07T10:36:28Z -->
