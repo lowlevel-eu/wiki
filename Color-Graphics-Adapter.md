@@ -57,7 +57,7 @@ Die I/O Ports 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jewei
 
 ### Interne Register
 
-Der Motorola 6845 CRT Controllers hat interne Register, die verschiedene Aspekte der Darstellung kontrollieren. Sie werden über die Ports 0x3D4 und 0x3D5 angesteuert. Das Laden eines Registers erfolgt, indem der Index des Registers an den Port 0x3D4 geschrieben wird, und dann die Daten nach Port 0x3D5 geschrieben werden.
+Der Motorola 6845 CRT Controller hat 18 interne Register, die verschiedene Aspekte der Darstellung kontrollieren. Sie werden über die Ports 0x3D4 und 0x3D5 angesteuert. Das Laden eines Registers erfolgt, indem der Index des Registers an den Port 0x3D4 geschrieben wird, und dann die Daten nach Port 0x3D5 geschrieben werden.
 
 Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 
@@ -84,11 +84,11 @@ Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 
 Die ersten 10 Register (0-9) steuern das Timing des CRT-Displays, sowie weitere Details der Darstellung, die über den Zweck dieses Artikels hinausgehen. Informationen dazu gibt es im Datenblatt des 6845 z.B. unter [\[2\]](http://bbc.nvg.org/doc/datasheets/MC6845.zip).
 
-Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn ihre Werte braucht. Das BIOS nutzt dafür zum Beispiel Teile der Bios Data Area.
+Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn man ihre Werte benötigt. Das BIOS nutzt dafür zum Beispiel Teile der Bios Data Area.
 
 #### Cursor Format
 
-Die Register 10 und 11 steuern die Form des Cursors. Die unteren 5 Bits dieser Register geben jeweils die Start- und End-Scanline des Cursors innerhalb eines Zeichens an. Außerdem steuern Bits 5 und 6 des Regster 10 das Blinken des Cursors.
+Die Register 10 und 11 steuern die Form des Cursors. Die unteren 5 Bits dieser Register geben jeweils die Start- und End-Scanline des Cursors innerhalb eines Zeichens an. Außerdem steuern Bits 5 und 6 des Registers 10 das Blinken des Cursors.
 
 <table>
 <tbody><tr>
@@ -126,7 +126,7 @@ Die Register 10 und 11 steuern die Form des Cursors. Die unteren 5 Bits dieser R
 <td colspan="5">Scanline
 </td></tr></tbody></table>
 
-Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing dar:
+Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing auf:
 
 | Enable | Timing | Effekt |
 | -------- | -------- | ------------------------------- |
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5856; parent 5855; 2009-09-07T12:27:40Z -->
+<!-- MediaWiki page 1890; revision 5857; parent 5856; 2009-09-07T12:30:47Z -->
