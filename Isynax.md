@@ -28,10 +28,6 @@ Bis jetzt gibt es eine Unterstützung für die [RTL8139](https://github.com/lowl
 
 Die eigene IP, die IP des Gateways im lokalen Netzwerks, die IP des Servers, der Zielport und der Nickname sind bis jetzt noch feste Konstanten im Code.
 
-## Benutzung
-
-Um einen Channel zu betreten, muss `JOIN <Channel>` verwendet werden. Um eine Nachricht zu senden, verwendet man `PRIVMSG <Channel> :<Nachricht>` Um einen Channel zu verlassen, nimmt man `PART <Channel>` Und um schließlich die Verbindung zum Server zu trennen, kann man entweder einfach Escape benutzen oder `QUIT` Nach QUIT oder Escape wird der Computer neugestartet.
-
 ## Screenshot
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6ec97dbbcb1faeabf08c.png" width="720" height="400" alt="Isynax-screen.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6ec97dbbcb1faeabf08c.png)  
@@ -47,6 +43,6 @@ Um einen Channel zu betreten, muss `JOIN <Channel>` verwendet werden. Um eine Na
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
 
-<!-- MediaWiki page 2066; revision 5864; parent 5848; 2009-09-07T20:16:23Z -->
+<!-- MediaWiki page 2066; revision 5865; parent 5864; 2009-09-08T17:44:52Z -->
