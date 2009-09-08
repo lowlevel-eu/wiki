@@ -26,8 +26,6 @@ Es gibt keine Prozesse, der gesamte Code läuft im Kernelmodus. Das Betriebssyst
 
 Bis jetzt gibt es eine Unterstützung für die [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")-Netzwerkkarte, [ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "ARP"), [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "IP") und Minimalunterstützung für TCP. Mit Isynax kann man derzeit nur eine Verbindung zu einem IRC-Server außerhalb des lokalen Netzwerks herstellen.
 
-Die eigene IP, die IP des Gateways im lokalen Netzwerks, die IP des Servers, der Zielport und der Nickname sind bis jetzt noch feste Konstanten im Code.
-
 ## Screenshot
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6ec97dbbcb1faeabf08c.png" width="720" height="400" alt="Isynax-screen.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6ec97dbbcb1faeabf08c.png)  
@@ -43,6 +41,6 @@ Die eigene IP, die IP des Gateways im lokalen Netzwerks, die IP des Servers, der
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5868/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
 
-<!-- MediaWiki page 2066; revision 5865; parent 5864; 2009-09-08T17:44:52Z -->
+<!-- MediaWiki page 2066; revision 5868; parent 5865; 2009-09-08T19:48:45Z -->
