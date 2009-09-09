@@ -1,6 +1,6 @@
 # Internet Protocol
 
-Das Internet Protocol (IP) ist ein sehr weit verbreitetes Netzwerkprotokoll. Es ist die Grundlage des Internets, daher auch der Name. Ist wird sehr häufig zusammen mit dem Transfer Control Protocol (TCP) verwendet, dass auf dem IP aufbaut.
+Das Internet Protocol (IP) ist ein sehr weit verbreitetes Netzwerkprotokoll. Es ist die Grundlage des Internets, daher auch der Name. Es wird sehr häufig zusammen mit dem Transfer Control Protocol (TCP) verwendet, dass auf dem IP aufbaut.
 
 ## Nutzen
 
@@ -96,6 +96,6 @@ Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5869/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
 
-<!-- MediaWiki page 1970; revision 5553; parent 5552; 2009-08-10T16:24:31Z -->
+<!-- MediaWiki page 1970; revision 5869; parent 5553; 2009-09-09T11:51:47Z -->
