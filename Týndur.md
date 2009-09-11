@@ -20,6 +20,26 @@
   
 týndur ist das Community-Betriebssystem von Lowlevel. Es entstand als Idee im Jahr 2005 und wird seitdem von verschiedenen Mitgliedern der Lowlevel-Community gepflegt und erweitert. Zielsetzung des Systems ist es, verständlich zum Lernen, aber auch zum Arbeiten gut benutzbar zu sein. Jeder ist eingeladen mitzuhelfen!
 
+## Funktionsweise des Kernels
+
+Beim Design kann man in einem Kernel wohl auf zwei verschiedene Dinge abheben: Einmal auf die innere Struktur, die verschiedenen Einheiten, die zusammen den Kernel bilden; zum anderen die Schnittstelle zu den Userspace-Programmen, also die Syscalls.
+
+Fangen wir mal mit dem ganz grundsätzlichen an: tyndur benutzt einen Mikrokernel, Hardwaretreiber laufen üblicherweise als ganz gewöhnliche Userspace-Prozesse. Die drei großen Einheiten im Kernel sind, wie ich das auch im [Einführungsartikel im Wiki](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger#die-aufgaben-des-kernels "OS-Dev für Einsteiger") dargestellt habe, die Speicherverwaltung, Prozessverwaltung und IPC. Dazu kommen natürlich noch so Geschichten wie Low-Level-Interrupthandling und Verwaltung der IO-Ports, also Zeug, was direkt Einfluss auf die CPU hat.
+
+Die Speicherverwaltung benutzt auf i386 (kernel2 sieht theoretisch auch andere Architekturen vor) die hier üblichen und als richtig dargestellten Mechanismen. Speicherschutz wird über Paging erreicht, jeder Prozess hat seinen eigenen Speicherkontext, und Segmentierung wird nicht benutzt.
+
+Die Prozessverwaltung macht nichts aufregendes - sie verwaltet eben Tasks. In kernel gibt es nur Prozesse, kernel2 kann auch Threads. Der Scheduler ist eine einfache Round-Robin-Variante. Der Kernel läuft in Ring 0, die Tasks in Ring 3. Ring 1 und 2 sind wie üblich unbenutzt.
+
+Etwas interessanter ist vielleicht die IPC, bei einem Mikrokernel ist es ja nicht ganz unwichtig, wie die Prozesse miteinander kommunizieren. Hier sind zwei Möglichkeiten unterstützt, zum einen Shared Memory und zum anderen RPC. RPCs sind asynchron und können Daten als Parameter enthalten. Für den aufgerufenen Prozess sieht das ähnlich aus wie ein Signal unter \*nix: Er wird unterbrochen, wo er gerade ist, bekommt die RPC-Daten auf den Stack gepackt und macht mit seinem RPC-Handler weiter. Wenn er fertig ist, springt er wieder zurück, wo er herkommt. Damit in kritischen Abschnitten nichts böses passiert, kann der RPC-Empfang auch blockiert werden.
+
+Das war's eigentlich schon, was die zentralen Themen angeht. Vielleicht noch einen Blick auf die [Liste der Syscalls](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/include/syscallno.h;h=b56ad45801c88d3140ea019c2278d6824b859fb9;hb=HEAD). Viel aufregendes ist dort nicht zu sehen, mehr oder weniger sind das die erwarteten Funktionen für den beschrieben Umfang. Was vielleicht noch interessant ist, ist der Start von Programmen und das Interrupthandling.
+
+Der Loader für die Programme sitzt ebenfalls im Userspace und zwar momentan in init. Was der Kernel bereitstellt ist eine Funktion, um einen "leeren" Task zu erstellen. Der Loader lädt anschließend das Programm erst einmal in seinen Speicher und tritt die entsprechenden Pages dann an den neuen Task ab. Wenn er damit fertig ist, lässt er ihn loslaufen.
+
+Für Hardware-Interrupts registriert sich der Treiber beim Kernel als zuständig. Wenn die Hardware jetzt einen IRQ feuert, sendet der Kernel einen RPC an den Treiber, der die passenden Maßnahmen ergreift, gleichzeitig sendet er aber auch ein EOI an den PIC. Damit der Interrupt nicht sofort wieder feuert, wird er maskiert. Erst wenn der Treiber aus dem RPC-Handler zurückkehrt und damit den Grund für den Interrupt hoffentlich behoben hat, wird der Interrupt wieder demaskiert.
+
+Ansonsten könnte man zu LostIO, dem VFS, auch noch ganze Romane schreiben. Es spielt eine ziemlich zentrale Rolle, weil in tyndur sehr viel über das Dateisystem läuft. Momentan ist es komplett im Userspace (wird über RPCs implementiert), wandert aber in Zukunft als letztendlich fast wichtigste IPC-Variante in tyndur nach kernel2.
+
 ## Geschichte
 
 Erste Planungen für ein Community-OS, welches als Idee vorher bereits mehrmals abgelehnt worden war, starteten am 31. März 2005. Allgemeine Zustimmung fand hierbei ein Team-Ansatz: Wer wollte konnte sich für ein Thema melden, sobald alles erledigt war wovon man abhing konnte man seine Arbeit starten. Allerdings entstand im Endeffekt kaum brauchbarer Code, viele die mitarbeiten wollten verschwanden, taten nichts, oder konnten mangels eines richtigen Anfangs nicht mitarbeiten. Zwischenzeitlich wechselte die Projektführung von mastermesh (dem Gründer des Lowlevel-Magazins) und Roshl (einem sehr aktiven und langjährigem Mitglied der Community) zu T0ast3r. In dieser Zeit entstand auch erster Kernelcode in der Form in der er in aktuellen Versionen noch verwendet wird. Aufgrund von Unzufriedenheit und einiger persönlicher Differenzen kam es zum nächsten Führungswechsel, in welchem T0ast3r seine Position am 13. Juni 2006 an den aktuellen Projektleiter taljeth abgab.
@@ -90,6 +110,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5873/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 5593; parent 5298; 2009-08-12T16:16:57Z -->
+<!-- MediaWiki page 1796; revision 5873; parent 5593; 2009-09-11T20:01:09Z -->
