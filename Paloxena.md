@@ -18,7 +18,8 @@
 [Gitorious](http://gitorious.org/paloxena)  
 [Forum](http://forum.paloxena.bplaced.net/)
 
-  
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png)
+
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
 
 ## Screenshot
@@ -32,6 +33,8 @@ Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut
 - Paloxoreutils:
   - ls
   - cat
+- Paloxena nettools:
+  - ping
 - mbr: Gibt 512 Bytes einer Datei von einer gegebenen Position an in Hex-Editor-Form aus
 
 ## Akt. Release
@@ -43,6 +46,6 @@ Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](h
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5840; parent 5839; 2009-09-05T12:57:46Z -->
+<!-- MediaWiki page 2045; revision 5877; parent 5840; 2009-09-12T12:50:55Z -->
