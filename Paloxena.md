@@ -34,8 +34,10 @@ Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut
   - ls
   - cat
 - Paloxena nettools:
+  - dig
   - ping
 - mbr: Gibt 512 Bytes einer Datei von einer gegebenen Position an in Hex-Editor-Form aus
+- maumau: Der Klassiker von MyXomycota
 
 ## Akt. Release
 
@@ -46,6 +48,6 @@ Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](h
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5880/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5877; parent 5840; 2009-09-12T12:50:55Z -->
+<!-- MediaWiki page 2045; revision 5880; parent 5877; 2009-09-13T17:22:36Z -->
