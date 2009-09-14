@@ -17,7 +17,8 @@
 
 \-
 
-  
+Datei:JincouLogo.png
+
 jǐncòu ist das Chinesische Wort für "kompakt" und genau so soll das OS auch werden, allerdings befindet es sich noch im untestbarem Anfangsstadium. Jincou soll erstmal rein textorientiert sein, allerdings besteht die Möglichkeit, dass vieleicht noch *vbe* Einzug finden wird.
 
   
@@ -44,6 +45,6 @@ Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background. Sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5888/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5749; parent 5714; 2009-08-26T18:32:54Z -->
+<!-- MediaWiki page 2039; revision 5888; parent 5749; 2009-09-14T17:00:55Z -->
