@@ -9,6 +9,8 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |  |
 | Binärformat: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |  |
 
+  
+
 jǐncòu ist das Chinesische Wort für "kompakt" und genau so soll das OS auch werden, allerdings befindet es sich noch im untestbarem Anfangsstadium. Jincou soll erstmal rein textorientiert sein, allerdings besteht die Möglichkeit, dass vieleicht noch *vbe* Einzug finden wird.
 
   
@@ -35,6 +37,6 @@ Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background. Sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5890; parent 5888; 2009-09-14T20:34:08Z -->
+<!-- MediaWiki page 2039; revision 5892; parent 5890; 2009-09-14T20:35:56Z -->
