@@ -22,10 +22,6 @@
 
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
 
-## Screenshot
-
-Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration): [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
-
 ## Programme
 
 - [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") 1.68: Ein Assembler mit Intelsyntax
@@ -46,8 +42,12 @@ Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](h
 - Ankündigung: [Paloxenaforum - "0.000-i-2"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=4)
 - Direktlink: [0.000-i-2.img.bz2](http://www.paloxena.bplaced.net/releases/0.000-i-2.img.bz2)
 
+## Screenshot
+
+Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration): [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5880/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5884/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5880; parent 5877; 2009-09-13T17:22:36Z -->
+<!-- MediaWiki page 2045; revision 5884; parent 5880; 2009-09-14T12:57:10Z -->
