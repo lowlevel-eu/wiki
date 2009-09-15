@@ -25,8 +25,12 @@ Nachfolgend eine Tabelle mit allen neuen Instruktionen und der Funktionsweise
 | EMMS | Empty MMX State | MMX-Zutand zurücksetzen | Der Befehl setzt die MMX-Einheit zurück und gibt alle FPU-Register frei |
 | MOVD<br>MOVQ | Move DWord<br>Move QWord | DWord bzw. QWord verschieben | Verschiebt ein DWord bzw. QWord von einem Allzweckregister in in MMX-Register und umgekehrt |
 
+## Weblinks
+
+- [MMX Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/mmxtutor/text/index.htm)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2003/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2003/index.html)
 
-<!-- MediaWiki page 2003; revision 5413; parent 5412; 2009-08-06T21:53:48Z -->
+<!-- MediaWiki page 2003; revision 5900; parent 5413; 2009-09-15T12:32:26Z -->
