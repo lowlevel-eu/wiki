@@ -9,6 +9,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Mehr Dokumentation in kernel2, auf tyndur wird oft als Beispiel verwiesen und eines seiner ursprünglichen Ziele ist auch, daß es dabei hilfreich sein soll. In den Code könnte man oft fast eine Art Tutorial als Kommentar einbetten.
 - LostIOv2 als neues, kernelbasiertes virtuelles Dateisystem soll das bisherige LostIO, das im Userspace läuft, ablösen und sowohl eine sauberere Schnittstelle bereitstellen als auch die Performance verbessern
 - Portierung auf amd64
+- FPU-Unterstützung
 
 ## Allgemeines
 
@@ -16,6 +17,9 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Mehr Hardwareunterstützung
 - Shared Libraries
 - POSIX-kompatible Shell
+- libc:
+  - xscanf
+  - fork/exec
 
 ## Module
 
@@ -48,6 +52,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5901/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 5836; parent 5831; 2009-09-04T18:26:50Z -->
+<!-- MediaWiki page 1513; revision 5901; parent 5836; 2009-09-15T12:39:17Z -->
