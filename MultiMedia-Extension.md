@@ -1,10 +1,9 @@
 # MultiMedia Extension
 
-**Achtung!**
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
 
-Dieser Artikel wird gerade bearbeitet, bitte **keine** Änderungen vornehmen! ~[Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 21:15, 6. Aug. 2009 (CEST)
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-  
 Die **MultiMedia Extension** oder kurz **MMX** umfasst neue Befehle zur Bearbeitung mehrerer gleichartiger Datenpakete mit nur einem Befehl (Single Instruction Multiple Data, SIMD-Verfahren gennant) bearbeiten. Somit bekommen z.B. Bildbearbeitungsprogramme durch die MMX-Befehle einen deutlichen Performanceschub.
 
   
@@ -31,6 +30,6 @@ Nachfolgend eine Tabelle mit allen neuen Instruktionen und der Funktionsweise
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2003/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2003/index.html)
 
-<!-- MediaWiki page 2003; revision 5900; parent 5413; 2009-09-15T12:32:26Z -->
+<!-- MediaWiki page 2003; revision 5902; parent 5900; 2009-09-15T12:42:40Z -->
