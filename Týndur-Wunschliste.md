@@ -33,6 +33,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - kedit
   - Suchen
   - Markieren, Kopieren/Ausschneiden, Einfügen
+    - Idealerweise über eine systemweite Zwischenablage, so dass man von einer kedit-Instanz in eine andere kopieren kann
   - build-Integration
   - vim-Befehlsmodus
   - Syntaxhighlighting für mehr Sprachen
@@ -52,6 +53,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5901/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 5901; parent 5836; 2009-09-15T12:39:17Z -->
+<!-- MediaWiki page 1513; revision 5913; parent 5901; 2009-09-15T14:53:00Z -->
