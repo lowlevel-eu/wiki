@@ -31,11 +31,12 @@ Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren an
 
 J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe. Da es sich nicht lohnen würde, J-OS in der Kategorie Betriebssysteme zu verewigen, habe ich das auch nicht vor.
 
-J-OS ist in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").  
-Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, Treiber für Tastatur und Festplatten/Disketten, externe Programme, eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") und vieles mehr. Das ist auch der Grund, warum ich es nicht in die Kategorie Betriebssysteme eintragen will. Es kann fast nichts ;-)
+J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben(teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").
+
+Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Tastatur und Festplatten/Disketten, externe Programme, eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") und vieles mehr. Also: Es kann fast nichts ;-)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5926/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 5925; parent 5924; 2009-09-16T12:29:57Z -->
+<!-- MediaWiki page 1828; revision 5926; parent 5925; 2009-09-16T12:32:53Z -->
