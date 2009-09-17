@@ -32,7 +32,7 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 <!-- -->
 
-- [Geany](http://www.geany.org/)
+- [Geany](http://www.geany.org/) ist ein Editor mit Eigenschaften einer IDE. Man kann Dateien in Projektform verwalten und Informationen zu Funktionen, Variablen einer Datei werden ebenfalls geordnet angezeigt
 
 <!-- -->
 
@@ -44,7 +44,7 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 <!-- -->
 
-- [Scite](http://www.scintilla.org/SciTE.html)
+- [Scite](http://www.scintilla.org/SciTE.html) ist ein sehr mächtiger Editor mit Eigentschaften einer IDE. Das Bauen von Projekten lässt sich direkt aus Scite per Tastendrück durchführen
 
 <!-- -->
 
@@ -52,6 +52,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5928/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 5175; parent 5173; 2009-08-06T11:24:59Z -->
+<!-- MediaWiki page 1908; revision 5928; parent 5175; 2009-09-17T07:52:43Z -->
