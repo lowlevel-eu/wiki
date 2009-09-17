@@ -24,7 +24,7 @@ jǐncòu ist das Chinesische Wort für "kompakt" und genau so soll das OS auch w
 
 ## Shell
 
-Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background. Sie wird UNIX/Linux ähnliche Befehle aufweisen, allerdings in geringerem Umfang.
+Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background, also ganz dem Farbthema von jincou angepasst. Sie wird UNIX/Linux ähnliche Befehle aufweisen, allerdings in geringerem Umfang.
 
   
 
@@ -44,6 +44,6 @@ Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background. Sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5919; parent 5916; 2009-09-15T19:22:59Z -->
+<!-- MediaWiki page 2039; revision 5933; parent 5919; 2009-09-17T15:29:59Z -->
