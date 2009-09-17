@@ -12,8 +12,9 @@
 
 [ISO-Norm](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
 
-  
 **Ada** ist eine nach Ada Loveleace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte [Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"), deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
+
+  
 
 ## Ada als Sprache für ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem")
 
@@ -60,6 +61,6 @@ Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5138/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
 
-<!-- MediaWiki page 1742; revision 5138; parent 5137; 2009-08-06T10:02:47Z -->
+<!-- MediaWiki page 1742; revision 5930; parent 5138; 2009-09-17T08:00:15Z -->
