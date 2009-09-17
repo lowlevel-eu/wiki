@@ -16,7 +16,7 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ## Windows
 
-- [Notepad++](http://notepad-plus.sourceforge.net/) ist ein sehr guter Editor mit Syntaxhightlighting für viele Sprachen und einer Tab-Anordnung von Dokumenten
+- [Notepad++](http://notepad-plus.sourceforge.net/) ist ein klasse Editor mit Syntaxhightlighting für viele Sprachen und einer Tab-Anordnung von Dokumenten
 
 <!-- -->
 
@@ -32,7 +32,7 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 <!-- -->
 
-- [Geany](http://www.geany.org/) ist ein Editor mit Eigenschaften einer IDE. Man kann Dateien in Projektform verwalten und Informationen zu Funktionen, Variablen einer Datei werden ebenfalls geordnet angezeigt
+- [Geany](http://www.geany.org/) ist ein Editor mit Eigenschaften einer IDE. Man kann Dateien in Projektform verwalten und Informationen zu Funktionen und Variablen einer Datei werden ebenfalls geordnet angezeigt
 
 <!-- -->
 
@@ -44,7 +44,7 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 <!-- -->
 
-- [Scite](http://www.scintilla.org/SciTE.html) ist ein sehr mächtiger Editor mit Eigentschaften einer IDE. Das Bauen von Projekten lässt sich direkt aus Scite per Tastendrück durchführen
+- [Scite](http://www.scintilla.org/SciTE.html) ist ein sehr mächtiger Editor mit Eigenschaften einer IDE. Das Bauen von Projekten lässt sich direkt aus Scite per Tastendruck durchführen
 
 <!-- -->
 
@@ -52,6 +52,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 5931; parent 5929; 2009-09-17T08:46:45Z -->
+<!-- MediaWiki page 1908; revision 5932; parent 5931; 2009-09-17T08:48:27Z -->
