@@ -16,11 +16,11 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ## Windows
 
-- [Notepad++](http://notepad-plus.sourceforge.net/)
+- [Notepad++](http://notepad-plus.sourceforge.net/) ist ein klasse Editor mit Syntaxhightlighting für viele Sprachen und einer Tab-Anordnung von Dokumenten
 
 <!-- -->
 
-- [Notepad2](http://www.flos-freeware.ch/notepad2.html)
+- [Notepad2](http://www.flos-freeware.ch/notepad2.html) ähnelt Notepad++, nur gibt es hier keine Tab-Anordnung für mehrere offene Dokumente
 
 <!-- -->
 
@@ -52,6 +52,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5928/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5929/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 5928; parent 5175; 2009-09-17T07:52:43Z -->
+<!-- MediaWiki page 1908; revision 5929; parent 5928; 2009-09-17T07:54:07Z -->
