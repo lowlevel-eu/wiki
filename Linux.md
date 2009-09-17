@@ -17,7 +17,7 @@
 
 <http://www.kernel.org>
 
-**Linux** ist ein großes freie Betriebssystem. Vermutlich sind Linux und seine Varianten sogar die erfolgreichste freie Betriebssystemfamilie, die im Moment existiert. Alle Textdateien im Linux-Kernel umfassen 11,9 Millionen Zeilen (Stand: 7.8.2009), die Anzahl der reinen Codezeilen liegt vermutlich zwischen 7 und 8 Millionen.
+**Linux** ist ein großes freies Betriebssystem. Vermutlich sind Linux und seine Varianten sogar die erfolgreichste freie Betriebssystemfamilie, die im Moment existiert. Alle Textdateien im Linux-Kernel umfassen 11,9 Millionen Zeilen (Stand: 7.8.2009), die Anzahl der reinen Codezeilen liegt vermutlich zwischen 7 und 8 Millionen.
 
 ## Die Entstehung
 
@@ -44,6 +44,6 @@ Linux hat eine Eigenart von Unix übernommen: Alles ist eine Datei. Das Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 5496; parent 5472; 2009-08-08T16:05:27Z -->
+<!-- MediaWiki page 1641; revision 5935; parent 5496; 2009-09-17T20:44:23Z -->
