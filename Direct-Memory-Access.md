@@ -84,7 +84,18 @@ Die DMA-Request-Bits sind auf Eins gesetzt, wenn das dem Channel zugehörige Ger
 
 #### Befehlsregister
 
-**TODO**
+| Bit | Beschreibung bei gesetztem Bit |
+| ----- | -------------------------------- |
+| 0 | x |
+| 1 | x |
+| 2 | DMA-Controller deaktivieren |
+| 3 | x |
+| 4 | x |
+| 5 | x |
+| 6 | x |
+| 7 | x |
+
+x: Bit funktioniert anscheinend nicht
 
 #### Transfermodusregister
 
@@ -122,8 +133,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 |  | 1 = Request; das ist das, was wohl in allen Fällen gewollt ist |
 | 3-7 | ungenutzt, sollte Null sein |
 
-  
-
 ### Alles zusammensetzen: Vorbereiten einer Übertragung
 
 **TODO**
@@ -134,6 +143,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 5530; parent 5315; 2009-08-10T15:23:20Z -->
+<!-- MediaWiki page 1555; revision 5936; parent 5530; 2009-09-19T11:47:02Z -->
