@@ -11,11 +11,11 @@ Mit ACPI ist es unter anderem möglich, den Computer in verschiedene Energiespar
 ## Weblinks
 
 - [ACPI Spezifikation](http://www.acpi.info/spec.htm)
-- [Wikipediaartikel](http://de.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface)
+- [Wikipedia-Artikel](http://de.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface)
 - [OS unabhängige Referenzimplementierung](http://www.acpica.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1992/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1992/index.html)
 
-<!-- MediaWiki page 1992; revision 5939; parent 5326; 2009-09-20T13:39:51Z -->
+<!-- MediaWiki page 1992; revision 5940; parent 5939; 2009-09-21T05:25:53Z -->
