@@ -119,7 +119,7 @@ Nun ist GRUB auf dem USB-Stick installiert und es kann von diesem gebootet werde
 
 ### Installation unter Windows
 
-Wie auch bei der Installation unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")/Unix werden hier die GRUB Binarys benötigt, welche auf dem ftp-Server des Projekts zu finden sind: GRUB Legacy. Zur Benutzung empfehle ich die Version 0.97! GRUB Legacy wird zwar nicht mehr weiterentwickelt, aber GRUB2 ist noch nicht als stable freigegeben ist.  
+Wie auch bei der Installation unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")/Unix werden hier die GRUB Binarys benötigt, welche auf dem ftp-Server des Projekts zu finden sind: GRUB Legacy. Zur Benutzung empfehle ich die Version 0.97! GRUB Legacy wird zwar nicht mehr weiterentwickelt, allerdings gibt es von GRUB2 noch keinen stable-Release.  
   
 Für die Installation von GRUB unter Windows gibt es ein kleines Tool, das sich "grubinstall.exe" nennt. Hiermit sollte es möglich sein, GRUB auf dem USB-Stick zu installieren. Man kann dieses kleine Tool [hier](http://www.geocities.com/lode_leroy/grubinstall/) herunterladen.
 
@@ -174,6 +174,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5943/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 5198; parent 4903; 2009-08-06T11:50:00Z -->
+<!-- MediaWiki page 1737; revision 5943; parent 5198; 2009-09-21T09:39:50Z -->
