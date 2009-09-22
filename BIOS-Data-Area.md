@@ -218,10 +218,10 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 ### Grafik-Adapter-Informationen
 
 | Offset | Größe (Bytes) | Beschreibung |
-| -------- | --------------- | ------------------------------------------------------------------------------- |
+| -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x49 | 1 | Aktueller Videomodus ([\[1\]](http://www.ctyme.com/intr/rb-0069.htm#table10)) |
 | 0x4A | 2 | Anzahl Spalten |
-| 0x4C | 2 | Größe einer Bildschirmseite im Regenerate Buffer |
+| 0x4C | 2 | Größe einer Bildschirmseite im [Regenerate Buffer](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter#regen-buffer "Color Graphics Adapter") |
 | 0x4E | 2 | Adresse der aktuellen Seite im Regenerate Buffer |
 | 0x50 | 16 | Cursorpositionen für die Seiten 0-7, abwechselnd Spalte und Zeile |
 | 0x60 | 2 | Cursortyp |
@@ -237,6 +237,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5951/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 5787; parent 5786; 2009-08-29T17:26:53Z -->
+<!-- MediaWiki page 1564; revision 5951; parent 5787; 2009-09-22T23:30:03Z -->
