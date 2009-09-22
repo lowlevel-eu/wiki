@@ -1,6 +1,6 @@
 # Color Graphics Adapter
 
-Der **Color Graphics Adapter** (**CGA**) ist die ursprüngliche Grafikkarte, die den 80x25 Textmodus eingeführt hat. In diesem Modus können ausschließlich Zeichen, die auf einem Raster vom Format 80x25 angeordnet sind, dargestellt werden. Jedes Zeichen kann in einer von 16 Farben dargestellt werden, sowie mit einer von 8 Hintergrundfarben hinterlegt werden und optional blinken. Die Anzahl der Hintergrundfarben kann auch auf 16 erweitert werden, allerdings können dann die Zeichen nicht mehr blinken.
+Der **Color Graphics Adapter** (**CGA**) ist die Grafikkarte, die den 80x25 Textmodus eingeführt hat. In diesem Modus können ausschließlich Zeichen auf einem Raster vom Format 80x25 dargestellt werden. Jedes Zeichen kann in einer von 16 Farben dargestellt werden, sowie mit einer von 8 Hintergrundfarben hinterlegt werden und optional blinken. Die Anzahl der Hintergrundfarben kann auch auf 16 erweitert werden, allerdings können dann die Zeichen nicht mehr blinken.
 
 ## Videospeicher
 
@@ -45,11 +45,11 @@ Farben der Standard-CGA-Palette in der englischen Wikipedia: [\[1\]](http://en.w
 
 Der Videospeicher wird auch als Regen Buffer (von engl. *regenerate*) bezeichnet. Er war ursprünglich 16 KiB groß und ging von 0xB8000 bis 0xBC000, bei neueren Grafikkarten (relativ zum CGA) ist er 32 KiB groß und geht bis 0xC0000. Im Folgenden gehen wir davon aus, dass der Puffer 32 KiB groß ist, denn einen originalen IBM PC hat vermutlich keiner mehr rumstehen.
 
-Aus dem Regen Buffer liest die Grafikkarte die Zeichencodes sowie die Attribute aus, und erstellt daraus die Signale für den Monitor. Die Bezeichnung *regenerate* zeigt an, dass die Grafikkarte nicht direkt die Buchstaben an den Monitor sendet, sondern das Videosignal bestehend aus den Farbinformationen der Pixel für jedes Bild neu generiert.
+Aus dem Regen Buffer liest die Grafikkarte die Zeichencodes sowie die Attribute aus, und erstellt daraus die Signale für den Monitor. Die Bezeichnung *regenerate* zeigt an, dass die Grafikkarte nicht direkt die Buchstaben an den Monitor sendet, sondern das Videosignal anhand des Regen Buffers und der Font Table generiert.
 
-In der 80x25 Auflösung können 80\*25 Zeichen dargestellt werden, von denen jedes 2 Bytes belegt. Das heißt es werden 80\*25\*2 = 4000 Bytes verwendet. In dem Regen Buffer wären also für insgesamt 8 Bildschirmseiten (32 KiB/4000) Platz. Standardmäßig werden (nach dem Systemstart) die ersten 4000 Bytes an Adresse 0xB8000 zur Darstellung verwendet. Man kann allerdings dieses Fenster verschieben indem man den Grafikadapter anweist eine andere Startadresse zu nehmen. (Siehe [Interne Register](#interne-register) weiter unten.)
+In der 80x25 Auflösung können 80\*25 Zeichen dargestellt werden, von denen jedes 2 Bytes belegt. Das heißt es werden 80\*25\*2 = 4000 Bytes verwendet. In dem Regen Buffer wären also für insgesamt 8 Bildschirmseiten (= 32 KiB/4000) Platz. Standardmäßig werden (nach dem Systemstart) die ersten 4000 Bytes an Adresse 0xB8000 zur Darstellung verwendet. Man kann allerdings dieses Fenster verschieben indem man den Grafikadapter anweist eine andere Startadresse zu nehmen. (Siehe [Interne Register](#interne-register) weiter unten.)
 
-Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfache von 0x4000 (4KiB) sind. Allerdings ist man weder daran gebunden, noch muss man dieses Konzept von 8 getrennten Bildschirmseiten beibehalten (sofern man das BIOS vollständig umgeht). Man kann z.B. durch Verschieben der Startadresse in 80er-Schritten ein Scrollen ohne externen Speichern realisieren.
+Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfache von 0x4000 (4 KiB) sind. Allerdings ist man weder daran gebunden, noch muss man dieses Konzept von 8 getrennten Bildschirmseiten beibehalten (sofern man das BIOS vollständig umgeht). Man kann z.B. durch Verschieben der Startadresse in 80er-Schritten ein Hardware Scrolling realisieren.
 
 ## I/O Ports
 
@@ -137,7 +137,7 @@ Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing auf
 
 #### Start Address
 
-Die Register 12 und 13 geben das Offset an, an der das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie die Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
+Die Register 12 und 13 geben das Offset an, an dem das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie die Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
 
 Beispiel, das analog zum BIOS den Speicher in 8 Seiten unterteilt: \<c\>/\* Unsere Auflösung \*/
 
@@ -155,7 +155,7 @@ Beispiel, das analog zum BIOS den Speicher in 8 Seiten unterteilt: \<c\>/\* Unse
 
 1.  define DISPLAY_PAGE_OFFSET(page) ((page) \* ((ROWS \* COLS + 0xff) & 0xff00))
 
-/\* Die Start Adresse der dargestellten Seite \*/ unsigned short start_address;
+/\* Die Startadresse der dargestellten Seite \*/ unsigned short start_address;
 
 void select_page(unsigned int page) {
 
@@ -169,16 +169,16 @@ void select_page(unsigned int page) {
        /* 
         * Hier muss noch die Cursorposition gesetzt werden, da diese für 
         * jede Page eine andere ist. Das heißt sie muss z.B. in einem Array 
-        * gespeichert werden.
+        * gespeichert werden, wenn man mehrere Pages verwalten möchte.
         *
-        * Für das Setzen des Cursor siehe nächster Abschnitt.
+        * Das Setzen des Cursors wird im nächsten Abschnitt erläutert.
         */
 
 }\</c\>
 
 #### Cursor Address
 
-Die Register 14 und 15 setzen die Cursor-Adresse, die sich aus der Cursor-Position berechnet. Um den Cursor zum Beispiel in die Zeile 10, und Spalte 63 zu setzen muss man 10 \* 80 + 63 = 863 rechnen. Dieser Wert wird dann in die High und Low Bytes der Register für die Cursor Addresse geschrieben.
+Die Register 14 und 15 setzen die Cursor-Adresse, die sich aus der Cursor-Position berechnet. Um den Cursor zum Beispiel in die Zeile 10 und Spalte 63 zu setzen, muss man 10 \* 80 + 63 = 863 rechnen. Dieser Wert wird dann in die High- und Low-Bytes der Register für die Cursor Adresse geschrieben.
 
 Dabei ist zu beachten, dass wenn man wie im letzten Abschnitt beschrieben die Startadresse verändert, diese Startadresse auf die Cursor-Adresse addieren muss.
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5950/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5859; parent 5858; 2009-09-07T12:34:20Z -->
+<!-- MediaWiki page 1890; revision 5950; parent 5859; 2009-09-22T23:29:16Z -->
