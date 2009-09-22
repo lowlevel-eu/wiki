@@ -42,16 +42,16 @@ Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie Windows oder
 Dieser Header ist vor jeder Datei/jedem Verzeichnis/jedem Link und gibt uns Informationen wie z.B. wie Groß ist die Datei oder handelt es sich um einen symbolischen Link.
 
 | Byte | Länge | Name |
-| ------ | ------- | ----------------- |
-| 0 | 100 | [\#name](#name) |
-| 100 | 8 | mode |
-| 108 | 8 | uid |
-| 116 | 8 | gid |
-| 124 | 12 | size |
-| 136 | 12 | mtime |
-| 148 | 8 | chksum |
-| 156 | 1 | link |
-| 157 | 100 | linkname |
+| ------ | ------- | ------------------- |
+| 0 | 100 | [name](#name) |
+| 100 | 8 | [mode](#mode) |
+| 108 | 8 | [uid](#uid) |
+| 116 | 8 | [gid](#gid) |
+| 124 | 12 | [size](#size) |
+| 136 | 12 | [mtime](#mtime) |
+| 148 | 8 | [chksum](#chksum) |
+| 156 | 1 | [link](#link) |
+| 157 | 100 | [linkname](#) |
 
 #### name
 
@@ -87,24 +87,24 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 
 ### Header
 
-| Byte | Länge | Name |  |
-| ------ | ------- | ---------- | ----- |
-| 0 | 100 | name |  |
-| 100 | 8 | mode |  |
-| 108 | 8 | uid |  |
-| 116 | 8 | gid |  |
-| 124 | 12 | size |  |
-| 136 | 12 | mtime |  |
-| 148 | 8 | chksum |  |
-| 156 | 1 | link |  |
-| 157 | 100 | linkname |  |
-| 156 | 6 | magic |  |
-| 156 | 2 | version |  |
-| 156 | 32 | uname |  |
-| 156 | 32 | gname |  |
-| 156 | 8 | devmajor |  |
-| 156 | 8 | devminor |  |
-| 156 | 155 | prefix |  |
+| Byte | Länge | Name |
+| ------ | ------- | ----------------------- |
+| 0 | 100 | [name](#name) |
+| 100 | 8 | [mode](#mode) |
+| 108 | 8 | [uid](#uid) |
+| 116 | 8 | [gid](#gid) |
+| 124 | 12 | [size](#size) |
+| 136 | 12 | [mtime](#mtime) |
+| 148 | 8 | [chksum](#chksum) |
+| 156 | 1 | [link](#link) |
+| 157 | 100 | [linkname](#) |
+| 257 | 6 | [magic](#magic) |
+| 263 | 2 | [version](#version) |
+| 266 | 32 | [uname](#uname) |
+| 298 | 32 | [gname](#gname) |
+| 330 | 8 | [devmajor](#devmajor) |
+| 338 | 8 | [devminor](#devminor) |
+| 346 | 155 | [prefix](#prefix) |
 
 #### name
 
@@ -140,6 +140,6 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5949/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
 
-<!-- MediaWiki page 2073; revision 5948; parent 5947; 2009-09-22T10:19:02Z -->
+<!-- MediaWiki page 2073; revision 5949; parent 5948; 2009-09-22T10:24:15Z -->
