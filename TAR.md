@@ -42,8 +42,8 @@ Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie Windows oder
 Dieser Header ist vor jeder Datei/jedem Verzeichnis/jedem Link und gibt uns Informationen wie z.B. wie Groß ist die Datei oder handelt es sich um einen symbolischen Link.
 
 | Byte | Länge | Name |
-| ------ | ------- | ---------- |
-| 0 | 100 | name |
+| ------ | ------- | ----------------- |
+| 0 | 100 | [\#name](#name) |
 | 100 | 8 | mode |
 | 108 | 8 | uid |
 | 116 | 8 | gid |
@@ -140,6 +140,6 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5947/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
 
-<!-- MediaWiki page 2073; revision 5947; parent 5945; 2009-09-22T10:17:30Z -->
+<!-- MediaWiki page 2073; revision 5948; parent 5947; 2009-09-22T10:19:02Z -->
