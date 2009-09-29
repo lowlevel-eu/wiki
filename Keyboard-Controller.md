@@ -47,9 +47,7 @@ Dies hat für Programmierer Vor- und Nachteile. Einerseits muss man für die Unt
 - Das [SMM BIOS](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "SMM"), über welches die USB zu PS/2 Abstraktion stattfindet, unterstützen nicht immer den Betrieb über 32Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") kann das System daher zum Abstürzen bringen!
 
   
-Diese Probleme sind nicht mehr vorhanden wenn der Legacy-Modus ausgeschaltet wurde.  
-  
-Der Legacy-Modus wird während der Initialisierung des USB-Hostcontrollers ausgeschaltet.
+Diese Probleme sind nicht mehr vorhanden wenn der Legacy-Modus ausgeschaltet wurde. Dies geschieht während der Initialisierung des USB-Hostcontrollers.
 
 ## Programmieren des KBC
 
@@ -342,6 +340,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5964/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 5963; parent 5323; 2009-09-29T16:27:17Z -->
+<!-- MediaWiki page 1468; revision 5964; parent 5963; 2009-09-29T16:28:09Z -->
