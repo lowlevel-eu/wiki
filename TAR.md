@@ -29,7 +29,7 @@ Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie Windows oder
 
 ## Allgemeines
 
-*ToDo: Text schreiben*
+TAR legt alle Dateien hintereinander mit einem Header voran ab. Möchte man das ganze Komprimieren, so kann man gzip oder bzip2 nehmen. Allerdings wird dies dann auch im Kernel gebraucht, falls es ausführbare Programme oder Module für den Kernel beinhaltet. Hinweis: Alle Daten im TAR-Header werden als ASCII-Zeichen abgelegt. Wenn man also z.B. die größe einer Datei ermitteln möchte, so muss man in diesem Fall das Feld "size" erst einmal in eine Zahl umwandeln und dann, da dieses Oktal vorliegt, ins dezimale oder hexadezimale umrechnen.
 
 ## Unterschied TAR-USTAR
 
@@ -140,6 +140,6 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5949/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
 
-<!-- MediaWiki page 2073; revision 5949; parent 5948; 2009-09-22T10:24:15Z -->
+<!-- MediaWiki page 2073; revision 5962; parent 5949; 2009-09-29T12:21:24Z -->
