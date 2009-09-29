@@ -49,7 +49,7 @@ Dies hat für Programmierer Vor- und Nachteile. Einerseits muss man für die Unt
   
 Diese Probleme sind nicht mehr vorhanden wenn der Legacy-Modus ausgeschaltet wurde.  
   
-Nach meinen Informationen wird der Legacy-Modus ausgeschaltet sobald der USB-Chip initialisiert wird. Also die Hardware weiß, dass die Software die USB Geräte direkt ansteuern kann. (Ist diese Information korrekt?)
+Der Legacy-Modus wird während der Initialisierung des USB-Hostcontrollers ausgeschaltet.
 
 ## Programmieren des KBC
 
@@ -342,6 +342,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 5323; parent 4959; 2009-08-06T15:57:10Z -->
+<!-- MediaWiki page 1468; revision 5963; parent 5323; 2009-09-29T16:27:17Z -->
