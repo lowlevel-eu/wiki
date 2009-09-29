@@ -27,7 +27,7 @@ Die Kernfunktionalität umfasst die folgenden Punkte:
 
 ### Net
 
-Ein Neztwerktreiber muss nur eine Funktion bereitstellen um Pakete über eine Karte zu versenden:
+Ein Netzwerktreiber muss nur eine Funktion bereitstellen um Pakete über eine Karte zu versenden:
 
 - **send_packet**(device, buffer, size)
 
@@ -162,6 +162,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5965/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 5576; parent 5560; 2009-08-11T16:42:40Z -->
+<!-- MediaWiki page 1622; revision 5965; parent 5576; 2009-09-29T20:15:06Z -->
