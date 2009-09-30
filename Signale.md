@@ -1,9 +1,9 @@
 # Signale
 
-Weiterleitung: [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation)
+Weiterleitung: [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1978/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1978/index.html)
 
-<!-- MediaWiki page 1978; revision 5263; parent 0; 2009-08-06T15:17:21Z -->
+<!-- MediaWiki page 1978; revision 5970; parent 5263; 2009-09-30T13:12:10Z -->
