@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | darkinsanity aka TheThing |
 | Akt. Version: | 0.1 (Codename: Jason) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL 2 |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
@@ -34,6 +34,6 @@ Seite des Kernels: <http://frostkernel.sourceforge.net>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 5976; parent 5285; 2009-10-03T12:04:43Z -->
+<!-- MediaWiki page 1754; revision 5977; parent 5976; 2009-10-03T12:05:25Z -->
