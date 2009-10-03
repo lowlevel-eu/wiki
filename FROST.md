@@ -15,25 +15,25 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[NerdPole-Homepage](http://darkinsanity.netne.net/nerdpole/)
+[NerdPole-Homepage](http://darkinsanity.netii.net/nerdpole/)
 
   
 NerdPole ist ein OS, das FROST als Kernel nutzt. Ziel ist es, ein nutzbares Betriebssystem mit FreeBASIC zu schreiben, auf dem der FreeBASIC-compiler ausgeführt werden kann. Jeder Teil des Systems soll nur die Aufgaben übernehmen, für die er geschrieben wurde.
 
 ## V0.1 (Codename: Jason)
 
-Die Version 0.1 von NerdPole soll am 22. Juli 2009 erscheinen. Wir sind noch nicht sicher ob wir den Termin halten können.
+Die Version 0.1 von NerdPole wird erscheinen, sobald es ein halbwegs benutzbares System ist.
 
-Der Codename Jason wurde der Version 0.1 zu Ehren von Jason Becker gegeben, einem der größten Komponisten/Gitarristen den die Welt je gesehen hat. Er wird am Erscheinungstermin 40 Jahre alt.
+Der Codename Jason wurde der Version 0.1 zu Ehren von Jason Becker gegeben, einem der größten Komponisten/Gitarristen den die Welt je gesehen hat. Er wurde am 22.Juli 2009 40 Jahre alt.
 
 ## Der Kernel
 
-FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben wird. Der Kernel enthät bereits Multitaking und Paging. Er ist Multiboot-kompatibel, als Bootloader wird GRUB empfohlen. FROST ist kein komplettes Betriebssystem, sondern bezeichnet lediglich den Kernel.
+FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben wird. Der Kernel enthält bereits Multitaking und Paging. Er ist Multiboot-kompatibel, als Bootloader wird GRUB empfohlen. FROST ist kein komplettes Betriebssystem, sondern bezeichnet lediglich den Kernel.
 
 Seite des Kernels: <http://frostkernel.sourceforge.net>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 5285; parent 4413; 2009-08-06T15:30:40Z -->
+<!-- MediaWiki page 1754; revision 5976; parent 5285; 2009-10-03T12:04:43Z -->
