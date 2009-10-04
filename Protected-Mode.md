@@ -72,7 +72,75 @@ So wird einem Segment beispielsweise eine Privilegstufe zugeordnet. So kann ein 
 
 Hier werde ich nun nochmal im Detail auf Deskriptoren eingehen. Dabei werde ich genauer beschreiben, wie diese Aufgebaut sind und welche Aufgaben die einzelnen Attribute die dort eingetragen werden haben. Dazu schauen wir uns zuerst einmal den allgemeinen Aufbau eines Deskriptoren an.
 
-![deskriptor.gif](http://www.jay-code.de/pics/deskriptor.gif)
+<table>
+<tbody><tr>
+<th>
+</th>
+<th>Bit 15
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>Bit 0
+</th></tr>
+<tr>
+<th>Word 1
+</th>
+<td colspan="16">Segmentgröße Bit 0-15
+</td></tr>
+<tr>
+<th>Word 2
+</th>
+<td colspan="16">Segmentbasisadresse Bit 0-15
+</td></tr>
+<tr>
+<th>Word 3
+</th>
+<td colspan="8">Zugriff / Segmenttyp
+</td>
+<td colspan="8">Segmentbasisadresse Bit 16-23
+</td></tr>
+<tr>
+<th>Word 4
+</th>
+<td colspan="8">Segmentbasisadresse Bit 24-31
+</td>
+<td colspan="4">Zusatz
+</td>
+<td colspan="4">Segmentgröße Bit 16-19
+</td></tr>
+<tr>
+<th>
+</th>
+<th colspan="8">High Byte
+</th>
+<th colspan="8">Low Byte
+</th></tr></tbody></table>
 
 Hier fällt gleich auf, das die Segmentgröße und die Segmentbasisadresse etwas wild verstreut auf die 4 WORDs verteilt sind. Das kommt daher, weil man den Deskriptor zum 286-Prozessor möglichst kompatibel halten wollte.
 
@@ -143,8 +211,6 @@ Dieses Bit ist reserviert und sollte immer auf 0 gesetzt sein.
 #### AVL = Available
 
 Dieses Bit kann vom Systemprogrammierer frei für eigenen Gebrauch benutzt werden oder einfach ignoriert werden.
-
-  
 
 ## Segmenttypen
 
@@ -299,6 +365,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5980/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 5767; parent 5510; 2009-08-27T16:05:47Z -->
+<!-- MediaWiki page 1464; revision 5980; parent 5767; 2009-10-04T13:12:31Z -->
