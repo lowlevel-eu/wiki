@@ -27,7 +27,8 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x1E | 32 | Tastatur-Ringpuffer |
 | 0x3E | 11 | [Disk-Kontroller-Informationen](#disk-kontroller-informationen) |
 | 0x49 | 30 | [Grafik-Adapter-Informationen](#grafik-adapter-informationen) |
-| 0x67 | 5 | Unbekannt |
+| 0x67 | 4 | Sprungadresse (Far Pointer) nach einem CPU-Reset (prä-AT: inkl. 0x6B diverse Informationen zum Kassettenlaufwerk) |
+| 0x6B | 1 | In AT und neuer ungenutzt. Siehe 0x67. |
 | 0x6C | 4 | Zähler für Interrupt 0x1A |
 | 0x70 | 1 | Zähler 24h Überlauf |
 | 0x71 | 1 | Keyboard-Control-Break-Flag |
@@ -237,6 +238,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5951/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 5951; parent 5787; 2009-09-22T23:30:03Z -->
+<!-- MediaWiki page 1564; revision 5987; parent 5951; 2009-10-08T12:58:50Z -->
