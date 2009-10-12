@@ -61,6 +61,6 @@ void sysenter_handler() {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6019/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2083/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2083/index.html)
 
-<!-- MediaWiki page 2083; revision 6019; parent 0; 2009-10-12T14:18:08Z -->
+<!-- MediaWiki page 2083; revision 6022; parent 6019; 2009-10-12T14:23:49Z -->
