@@ -988,7 +988,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 14 | Unterstützt die Machine-Check-Architektur (Besonders das **MTRR_CAP**-Register) |
 | 13 | Unterstützt das [Page-Global-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 12 | Unterstützt MTRR-Register (Besonders das **MTRR_CAP**-Register) |
-| 11 | Unterstützt schnelle [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") durch die Befehle **SYSENTER** und **SYSEXIT** |
+| 11 | Unterstützt schnelle [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") durch die Befehle [**SYSENTER** und **SYSEXIT**](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
 | 10 |  |
 | 9 | Besitzt einen lokalen [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") |
 | 8 | Unterstützt den **CMPXCHG8B** Befehl |
@@ -3003,6 +3003,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6020/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 5512; parent 5425; 2009-08-08T21:41:29Z -->
+<!-- MediaWiki page 1739; revision 6020; parent 5512; 2009-10-12T14:22:06Z -->
