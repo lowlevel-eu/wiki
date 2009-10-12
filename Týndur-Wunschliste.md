@@ -44,6 +44,10 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - FTP-Client
 - Mail-Client
 - git-Client
+- kirc
+  - Unterstuetzung fuer mehrere Channels
+  - Irgendwie sinnvoll ein /ns identify erlauben
+  - Hochscrollen
 
 ## LostIO
 
@@ -53,6 +57,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 5913; parent 5901; 2009-09-15T14:53:00Z -->
+<!-- MediaWiki page 1513; revision 6030; parent 5913; 2009-10-12T21:25:27Z -->
