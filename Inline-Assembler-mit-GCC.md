@@ -36,6 +36,8 @@ Viele Assembler-Programmierer sind die Intel-Syntax gewohnt. gcc (oder genauer g
 
       mov 0xfffffff8(%esp,%eax,1),%eax
 
+Wer sich überhaupt nicht mit der AT&T-Syntax anfreunden kann, für den bleibt immer noch die gcc-Kommandozeilenoption "-masm=intel", die die Intelsyntax aktiviert.
+
 ## Einfache Befehle
 
 Die Einbindung von Inline Assembler in den C-Code ist ganz einfach: Das Schlüsselwort asm (oder alternativ \_\_asm\_\_) in Verbindung mit dem Assemblercode als String muss in den C-Code eingebettet werden:
@@ -50,8 +52,6 @@ Sollen mehrere Assemblerbefehle ausgeführt werden, gibt es nicht nur eine Mögl
       "cli;"
       "hlt;"
     );
-
-Wer sich überhaupt nicht mit der AT&T-Syntax anfreunden kann, für den bleibt immer noch die gcc-Kommandozeilenoption "-masm=intel", die die Intelsyntax aktiviert.
 
 ## Ein- und Ausgabeparameter
 
@@ -143,6 +143,6 @@ Senden einer IPC-Nachricht in LOST:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5994/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5995/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 5994; parent 5815; 2009-10-12T10:05:19Z -->
+<!-- MediaWiki page 1472; revision 5995; parent 5994; 2009-10-12T10:05:41Z -->
