@@ -7,15 +7,15 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-Unter **Prozess** (auch **Task** genannt) versteht ein sich in der Ausführung befindendes Programm, welches vom Betriebssystem in Form einer Prozessliste verwaltet wird.
+Unter **Prozess** (auch **Task** genannt) versteht man ein sich in der Ausführung befindendes Programm, welches vom Betriebssystem in Form einer Prozessliste verwaltet wird.
 
-Um den Unterschied von Prozess und Programm deutlich zu machen, gibt es hier eine kleine Analogie von Andrew Tanenbaum: Wenn ein Koch (die CPU) einen Kuchen backt, dann benutzt er dazu Zutaten (die Daten) und ein Kochbuch (das Programm). Weder der Koch, noch die Zutaten oder das Kochbuch sind der Prozess des Kuchenbackens, alle sind nur Teil dieses abstrakten Vorgangs. <sup>\[[1](https://github.com/lowlevel-eu/wiki/wiki/Prozess#quellen "Prozess")\]</sup>
+Um den Unterschied zwischen Prozess und Programm deutlich zu machen, gibt es hier eine kleine Analogie von Andrew Tanenbaum: Wenn ein Koch (die CPU) einen Kuchen backt, dann benutzt er dazu Zutaten (die Daten) und ein Kochbuch (das Programm). Weder der Koch, noch die Zutaten oder das Kochbuch sind der Prozess des Kuchenbackens, alle sind nur Teil dieses abstrakten Vorgangs. <sup>\[[1](https://github.com/lowlevel-eu/wiki/wiki/Prozess#quellen "Prozess")\]</sup>
 
 ## Threads
 
 Normalerweise wird in einem Prozess der Programmcode sequenziell abgearbeitet. Oftmals ist es aber erwünscht, dass in einem Prozess gewisse Abläufe parallel ablaufen, zum Beispiel, um zwei CPU-Kerne auslasten zu können, oder einfach um ein GUI ansprechbar zu halten, während eine große Berechnung im Hintergrund läuft.
 
-Ein Prozess kann dazu einen Kindprozess erzeugen, und diesem eine Aufgabe übergeben. Dieses Vorgehen ist zwar völlig legitim und würde funktionieren, hat jedoch zwei große Nachteile. Erstens gibt es bei einem Task Switch einen relativ großen Overhead, also wäre der Wechsel zwischen den Prozessen zu langsam, um damit sorglos umzugehen. Außerdem hängen die Prozesse womöglich relativ nah zusammen, dass sie oft gemeinsame Daten brauchen. Sie müssten also durch verschiedene [Interprozesskommunikationsmethoden](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") kommunizieren, was ebenfalls langsam sein kann.
+Ein Prozess kann dazu einen Kindprozess erzeugen, und diesem eine Aufgabe übergeben. Dieses Vorgehen ist zwar völlig legitim und würde funktionieren, hat jedoch zwei große Nachteile. Erstens gibt es bei einem Task Switch einen relativ großen Overhead, also wäre der Wechsel zwischen den Prozessen zu langsam, um damit sorglos umzugehen. Außerdem hängen die Prozesse womöglich relativ nah zusammen, sodass sie oft gemeinsame Daten brauchen. Sie müssten also durch verschiedene [Interprozesskommunikationsmethoden](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") kommunizieren, was ebenfalls langsam sein kann.
 
 Als Lösung wurde das Prinzip des Threads (engl. für (Ausführungs-) Faden) entwickelt und in den Prozessbegriff integiert. Jeder Prozess hat mindestens einen Thread, der jeweils seinen eigenen Stack und Instruction Pointer hat. Jedoch teilen die Threads eines Prozesses sich die Daten, und können gleichberechtigt darauf zugreifen.
 
@@ -35,6 +35,6 @@ Die Vorraussetzungen für Benutzerthreads sind in den Programmen selbst enthalte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 5454; parent 5453; 2009-08-07T18:40:36Z -->
+<!-- MediaWiki page 1993; revision 5999; parent 5454; 2009-10-12T10:15:27Z -->
