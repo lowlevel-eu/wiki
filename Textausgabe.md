@@ -18,11 +18,10 @@ In dem ersten Byte wird der Buchstabe selbst, in dem 2. Byte wird das Attribut, 
 
 Das Attribute-Byte ist wie folgt gestaltet:
 
-0xXY, Hierbei ist X die Hintergrundfarbe und Y die Vordergrundfarbe. Hier ist eine Tabelle aller Farben:
+BXXXYYYYb, Hierbei ist X die Hintergrundfarbe, Y die Vordergrundfarbe und B das "Blinkbit". Ist es gesetzt, dann blinkt das entsprechende Zeichen. Hier ist eine Tabelle aller Farben:
 
-|  |  |  |  |
-| ------ | ---------- | ------ | ------------- |
 | Wert | Farbe | Wert | Farbe |
+| ------ | ---------- | ------ | ------------- |
 | 0x0 | Schwarz | 0x8 | Dunkelgrau |
 | 0x1 | Blau | 0x9 | Hellblau |
 | 0x2 | Grün | 0xA | Hellgrün |
@@ -33,6 +32,11 @@ Das Attribute-Byte ist wie folgt gestaltet:
 | 0x7 | Hellgrau | 0xF | Weiß |
 
 Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Schwarz.
+
+### Blinken
+
+Man kann sich nicht darauf verlassen, dass das höchstwertige Bit des Attributbytes wirklich anzeigt, ob das Zeichen blinken soll oder nicht. Bei einigen Computern ist dieses Bit einfach das höchstwertige Bit der Hintergrundfarbe, sodass man hier auch helle Farben als Hintergrund verwenden kann.  
+Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Color Graphics Adapter](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter#16-hintergrundfarben "Color Graphics Adapter").
 
 ## Beispiel
 
@@ -109,6 +113,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 5850; parent 5354; 2009-09-07T09:58:14Z -->
+<!-- MediaWiki page 1549; revision 6026; parent 5850; 2009-10-12T18:53:02Z -->
