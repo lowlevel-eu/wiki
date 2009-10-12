@@ -120,8 +120,12 @@ Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Proze
 - LAHF
 - SAHF
 
+## RFLAGS
+
+Das RFLAGS Register ist die 64-Bit Variante von EFLAGS. Allerdings hat sich abgesehen von der Tatsache, dass das Register jetzt 64 Bit breit ist, nichts geändert. Die Bits 32-63 sind reserviert und geben immer 0 zurück.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6008/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 6008; parent 6007; 2009-10-12T10:58:33Z -->
+<!-- MediaWiki page 1751; revision 6011; parent 6008; 2009-10-12T11:59:42Z -->
