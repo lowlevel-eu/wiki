@@ -40,6 +40,8 @@ void wrmsr(uint32_t msr, uint64_t value) {
 | 0x175 | IA32_SYSENTER_ESP | ESP für sysenter |
 | 0x176 | IA32_SYSENTER_EIP | EIP für sysenter |
 | 0xC0000080 | IA32_EFER | Erweiterte Features. Beispiel: Bit 0 - Aktiviert syscall/sysret im 64-Bit-Modus |
+| 0xC0000082 | LSTAR | RIP für Syscall im Long Mode |
+| 0xC0000083 | CSTAR | RIP für Syscall im Compability Mode |
 
 ## Weblinks
 
@@ -47,6 +49,6 @@ void wrmsr(uint32_t msr, uint64_t value) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6015/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6016/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 6015; parent 6004; 2009-10-12T12:24:55Z -->
+<!-- MediaWiki page 1607; revision 6016; parent 6015; 2009-10-12T13:08:22Z -->
