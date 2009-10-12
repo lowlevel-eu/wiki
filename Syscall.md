@@ -10,7 +10,7 @@ Anschließend [löst der Prozess einen Syscall aus](https://github.com/lowlevel-
 
 ## Auslösen des Syscalls
 
-Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere x86 AMD Prozessoren die *syscall* Instruktion und neuere Intel Prozessoren die *sysenter* Instruktion.
+Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere AMD-Prozessoren die *syscall*-Instruktion und neuere Intel-Prozessoren die *[sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")*-Instruktion.
 
 Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel übernimmt [die Behandlung des Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall#behandlung-des-syscalls "Syscall").
 
@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 4539; parent 4538; 2009-07-03T18:08:02Z -->
+<!-- MediaWiki page 1629; revision 6021; parent 4539; 2009-10-12T14:23:16Z -->
