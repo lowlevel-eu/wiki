@@ -27,7 +27,7 @@ Datei:Makro kelin corr.png
 
 ### Mikrokernel
 
-Der Mikrokernel steht im Gegensatz zum monolithischen Kernel, da bei ihm nur ein sehr kleiner Teil der Funktionalität wirklich im Kernelspace liegt. [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"), I/O und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel. Der Kernel verwaltet und verteilt also die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und einfach neu gestartet werden. Außerdem kann der Kernel an sich leicht für unterschiedlichste Systeme portiert werden, da die systemabhängigen Treiber nicht im Kernel sind, und der Kernel vom Aufbau des Systems idealerweise nichts wissen muss.
+Der Mikrokernel steht im Gegensatz zum monolithischen Kernel, da bei ihm nur ein sehr kleiner Teil der Funktionalität wirklich im Kernelspace liegt. [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"), I/O und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel. Der Kernel verwaltet und verteilt also die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und einfach neu gestartet werden. Außerdem kann der Kernel an sich leicht für unterschiedlichste Systeme portiert werden, da die systemabhängigen Treiber nicht im Kernel sind, und der Kernel vom Aufbau des Systems idealerweise nichts wissen muss. Der Kernel von [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ist ein Mikrokernel.
 
 Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix") verwendet.
 
@@ -52,6 +52,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6023/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 5792; parent 5791; 2009-08-31T06:19:49Z -->
+<!-- MediaWiki page 1478; revision 6023; parent 5792; 2009-10-12T17:08:03Z -->
