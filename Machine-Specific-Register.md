@@ -35,11 +35,11 @@ void wrmsr(uint32_t msr, uint64_t value) {
 ## Auswahl einiger MSRs
 
 | Nummer | Name | Inhalt |
-| ------------ | ------------------- | ----------------------------------------------------------------------------------------- |
+| ------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x174 | IA32_SYSENTER_CS | **CS** für **[SYSENTER](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")** |
 | 0x175 | IA32_SYSENTER_ESP | **ESP** für **SYSENTER** |
 | 0x176 | IA32_SYSENTER_EIP | **EIP** für **SYSENTER** |
-| 0xC0000080 | IA32_EFER | Erweiterte Features. Beispiel: Bit 0 - Aktiviert syscall/sysret im 64-Bit-Modus |
+| 0xC0000080 | IA32_EFER | Erweiterte Features. Beispiele: Bit 0 - Aktiviert syscall/sysret im 64-Bit-Modus; Bit 8 - Schaltet den [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") ein |
 | 0xC0000081 | STAR | **EIP** für **SYSCALL** im Protected Mode |
 | 0xC0000082 | LSTAR | **RIP** für **SYSCALL** im Long Mode |
 | 0xC0000083 | CSTAR | **RIP** für **SYSCALL** im Compability Mode |
@@ -50,6 +50,6 @@ void wrmsr(uint32_t msr, uint64_t value) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6017/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 6017; parent 6016; 2009-10-12T13:11:52Z -->
+<!-- MediaWiki page 1607; revision 6018; parent 6017; 2009-10-12T13:50:42Z -->
