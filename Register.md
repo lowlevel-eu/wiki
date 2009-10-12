@@ -203,6 +203,8 @@ Das Instruktionsregister **RIP** zeigt *immer* auf den nächsten auszuführenden
 
 ### Flagregister
 
+→ *Hauptartikel: [RFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS#rflags "RFLAGS")*
+
 | Bytes |  |  |  |  |  |  |  |
 | -------- | ----- | ----- | ----- | -------- | ----- | ----- | ----- |
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
@@ -473,6 +475,6 @@ Im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 6006; parent 5716; 2009-10-12T10:34:29Z -->
+<!-- MediaWiki page 1881; revision 6013; parent 6006; 2009-10-12T12:03:58Z -->
