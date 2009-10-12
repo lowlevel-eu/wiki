@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Ville Turjanmaa |
-| Akt. Version: | i386: 0.85<br>x86_64: 0.90Q |
+| Akt. Version: | i386: 0.85<br>x86_64: 0.91J |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
@@ -25,7 +25,7 @@
 Die derzeit aktuellen Versionen sind:
 
 - MenuetOS 32 v0.85
-- MenuetOS 64 v0.90Q
+- MenuetOS 64 v0.91J
 
 ## Features
 
@@ -48,6 +48,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 5282; parent 5154; 2009-08-06T15:29:50Z -->
+<!-- MediaWiki page 1481; revision 5997; parent 5282; 2009-10-12T10:09:16Z -->
