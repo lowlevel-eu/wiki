@@ -18,7 +18,7 @@
 [Offizielle-Homepage](http://www.jinocu.matheguru.bplaced.net)
 
   
-jǐncòu (jap.: 紧凑 (緊湊)) ist das chinesische Wort für "kompakt" und genau so soll das OS auch werden, allerdings befindet es sich noch im untestbarem Anfangsstadium. Jincou soll erstmal rein textorientiert sein, allerdings besteht die Möglichkeit, dass vieleicht noch *vbe* Einzug finden wird.
+jǐncòu (緊湊) ist das chinesische Wort für "kompakt" und genau so soll das OS auch werden, allerdings befindet es sich noch im untestbarem Anfangsstadium. Jincou soll erstmal rein textorientiert sein, allerdings besteht die Möglichkeit, dass vieleicht noch *vbe* Einzug finden wird.
 
   
 
@@ -44,6 +44,6 @@ Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background, also
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5993/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5961; parent 5960; 2009-09-28T20:24:07Z -->
+<!-- MediaWiki page 2039; revision 5993; parent 5961; 2009-10-12T09:07:17Z -->
