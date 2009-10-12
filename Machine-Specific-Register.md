@@ -6,8 +6,47 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Die **Machine-Specific Register**s bzw. **Model-Specific Register**s (**MSR**) sind Prozessorregister. Sie können im Gegensatz zu anderen Registern nur mit den Instruktionen *rdmsr* und *wrmsr* ([x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")) angesprochen werden. Außerdem sind diese Register spezifisch für eine bestimmte Prozessorfamilie/-generation, d.h. sie müssen von folgenden Prozessoren nicht bzw. nicht genauso implementiert werden.
 
+## WRMSR/RDMSR
+
+Mit folgendem Code kann man auf die MSRs zugreifen: \<c\>uint64_t rdmsr(uint32_t msr) {
+
+      uint32_t lomsr, himsr;
+      uint64_t content;
+
+      __asm__ __volatile__ ("rdmsr":"=a"(lomsr),"=d"(himsr):"c"(msr));
+
+      content = himsr;
+      content <<= 32;
+      content |= lomsr;
+      return content;
+
+}
+
+void wrmsr(uint32_t msr, uint64_t value) {
+
+      uint32_t lomsr, himsr;
+
+      lomsr = value & 0xFFFFFFFF;
+      himsr = value >> 32;
+      __asm__ __volatile__ ("wrmsr"::"a"(lomsr),"c"(msr),"d"(himsr));
+
+}\</c\>
+
+## Auswahl einiger MSRs
+
+| Nummer | Name | Inhalt |
+| ------------ | ------------------- | --------------------------------------------------------------------------------- |
+| 0x174 | IA32_SYSENTER_CS | CS für [sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
+| 0x175 | IA32_SYSENTER_ESP | ESP für sysenter |
+| 0x176 | IA32_SYSENTER_EIP | EIP für sysenter |
+| 0xC0000080 | IA32_EFER | Erweiterte Features. Beispiel: Bit 0 - Aktiviert syscall/sysret im 64-Bit-Modus |
+
+## Weblinks
+
+- <http://www.intel.com/Assets/PDF/manual/253669.pdf> - "Intel Architectures Software Developer's Manual Volume 3B: System Programming Guide" - Anhang B
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6015/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 6004; parent 2484; 2009-10-12T10:26:18Z -->
+<!-- MediaWiki page 1607; revision 6015; parent 6004; 2009-10-12T12:24:55Z -->
