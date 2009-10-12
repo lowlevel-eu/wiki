@@ -109,7 +109,7 @@ Gesetzt, um anzuzeigen, dass ein Interrupt abgearbeitet werden muss (Das Betrieb
 
 #### ID - Identification Flag (Bit 21)
 
-Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Prozessor den [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")-Befehel
+Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Prozessor den [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")-Befehl.
 
 ## Befehle zum direkten Verändern
 
@@ -122,6 +122,6 @@ Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Proze
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6008/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 6007; parent 3949; 2009-10-12T10:58:12Z -->
+<!-- MediaWiki page 1751; revision 6008; parent 6007; 2009-10-12T10:58:33Z -->
