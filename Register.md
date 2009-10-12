@@ -73,6 +73,8 @@ Das Instruktionsregister **EIP** zeigt *immer* auf den nächsten auszuführenden
 
 ### Flagregister
 
+→ *Hauptartikel: [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS")*
+
 | Bytes |  |  |  |
 | ------- | ----- | ----- | ----- |
 | 3 | 2 | 1 | 0 |
@@ -471,6 +473,6 @@ Im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1881/index.html)
 
-<!-- MediaWiki page 1881; revision 5716; parent 5098; 2009-08-26T06:46:05Z -->
+<!-- MediaWiki page 1881; revision 6006; parent 5716; 2009-10-12T10:34:29Z -->
