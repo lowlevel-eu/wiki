@@ -51,6 +51,8 @@ Sollen mehrere Assemblerbefehle ausgeführt werden, gibt es nicht nur eine Mögl
       "hlt;"
     );
 
+Wer sich überhaupt nicht mit der AT&T-Syntax anfreunden kann, für den bleibt immer noch die gcc-Kommandozeilenoption "-masm=intel", die die Intelsyntax aktiviert.
+
 ## Ein- und Ausgabeparameter
 
 gcc unterstützt darüber hinaus noch die Möglichkeit, im Assemblercode Werte zu verarbeiten, die nicht direkt im Assemblerstring stehen, sondern beispielsweise in C-Variablen gespeichert sind. Diese Möglichkeit macht zu einem großen Teil die Mächtigkeit des Inline-Assemblers von gcc aus. Das asm-Konstrukt wird dann folgendermaßen erweitert:
@@ -141,6 +143,6 @@ Senden einer IPC-Nachricht in LOST:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5994/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 5815; parent 3692; 2009-08-31T18:38:23Z -->
+<!-- MediaWiki page 1472; revision 5994; parent 5815; 2009-10-12T10:05:19Z -->
