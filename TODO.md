@@ -9,6 +9,7 @@
 <!-- -->
 
 - **Hinweis**: Sollte von [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") am 31.08. und 01.09. überarbeitet werden - wird das noch nachgeholt?
+- Natürlich, es ist schließlich Wikiathon :D [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")
 
 <!-- -->
 
@@ -88,6 +89,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6029; parent 6027; 2009-10-12T19:46:13Z -->
+<!-- MediaWiki page 1518; revision 6032; parent 6029; 2009-10-13T01:48:53Z -->
