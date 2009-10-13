@@ -116,9 +116,21 @@ Beim Nibble Mode arbeitet die Schnittstelle mir einer Breite von 4 Bit (einem Ha
 
 ### Byte Mode
 
+Der Byte Mode entspricht dem bidirektionalen Centronics Mode, der mit der damaligen PS/2-Architektur standardmäßig eingeführt wurde. Im Gegensatz zum obigen Nibble Mode werden die Daten hier byteweise über das Datenregister übertragen bzw. ausgetauscht. Dabei ist das Datenregister sowohl für die Sende- als auch die Empfangsdaten verantwortlich. Um die Übetragungsrichtung zu ändern muss hier das fünfte Bit im Steuerregister dementsprechend gesetzt werden (gesetzt: Senden; gelöscht: Empfangen).
+
+  
+
 ### Enhanced Parallel Port Mode
 
+Dieser Modus ist von Intel, Xircom und Zenith entwickelt worden und wird am häufigsten implementiert. Hier können Daten sowie Adressen bidirektional ebenfalls übertragen werden und es können bis zu 256 Geräte (bei 8 Bit-Adressbus, in Form von Schaltungen) mit Hilfe eines Hubs verbunden, angesprochen und in einem Pool verwaltet werden. Allerdings kann auch ein Gerät die bis zu 256 Schaltungen erhalten, was besonders für Multifunktionsgeärate geeignet ist. Die Datenübertragungsrate beträgt 2 MB/s und können auf bis zu 5 Meter übertragen werden.
+
+Die Daten werden in diesem Modus in bestimmten Zyklen übertragen.
+
+  
+
 ### Enhanced Capability Mode
+
+Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfügt über ähnliche Eigenschaften wie der EPP-Mode. Allerdings sind hier nur maxmial 128 Schaltungen (also maxmimal 128 miteinander verbundene Geräte) möglich.
 
 ## Siehe auch
 
@@ -130,6 +142,6 @@ Beim Nibble Mode arbeitet die Schnittstelle mir einer Breite von 4 Bit (einem Ha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 5586; parent 5417; 2009-08-12T08:15:32Z -->
+<!-- MediaWiki page 1996; revision 6033; parent 5586; 2009-10-13T09:15:13Z -->
