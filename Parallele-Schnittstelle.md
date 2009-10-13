@@ -78,15 +78,17 @@ Vom Statusregister aus kann nur gelesen werden. Dort wird der Zustand der Periph
 
 Die Statusregister sind D0 bis D7. Nachfolgen ein kleines Programm, um die Bits zu testen:
 
-` mov ah, 02h xor dx, dx int 17h `
+\<asm\> mov ah, 02h xor dx, dx int 17h
 
-`test ah, 10000000b ; Bit 7 -> Drucker bereit? je error `
+test ah, 10000000b ; Bit 7 -\> Drucker bereit? je error
 
-`test ah, 00100000b ; Bit 5 -> Kein Papier mehr? jne error `
+test ah, 00100000b ; Bit 5 -\> Kein Papier mehr? jne error
 
-`error: `
+error:
 
        jmp error
+
+\</asm\>
 
   
 
@@ -142,6 +144,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 6033; parent 5586; 2009-10-13T09:15:13Z -->
+<!-- MediaWiki page 1996; revision 6034; parent 6033; 2009-10-13T09:42:28Z -->
