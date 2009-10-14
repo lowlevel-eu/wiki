@@ -6,7 +6,7 @@ Um diese Probleme zu umgehen, wurden die Befehle *sysenter* und *sysexit* eingef
 ## Funktionsweise
 
 Wenn *sysenter* ausgeführt wird, dann lädt der Prozessor einige Werte aus bestimmten [MSRs](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register "MSR") in die entsprechenden Register. So wird der Wert aus dem MSR 0x174 (IA32_SYSENTER_CS) in CS geladen, außerdem wird zu diesem Wert noch 8 addiert und das Ergebnis in SS geladen. Bei beiden Werten wird die Privilegstufe auf 0 gesetzt. Der Wert aus dem MSR 0x175 (IA32_SYSENTER_ESP) kommt nach ESP und aus 0x176 (IA32_SYSENTER_EIP) nach EIP.  
-Weiterhin wird das VM-Flag im EFLAGS-Register gelöscht.
+Weiterhin werden das VM- und das Interruptflag im EFLAGS-Register gelöscht.
 
 Wird *sysexit* ausgeführt, so wird zuerst 16 zum Wert aus IA32_SYSENTER_CS addiert und das Ergebnis in CS geladen. Weiterhin wird zum gleichen Wert (IA32_SYSENTER_CS) nochmals 8 (also insgesamt 24) addiert und dieses Ergebnis nach SS kopiert. Die Privilegstufen beider Selektoren werden auf 3 gesetzt. EIP wird auf den Wert aus EDX gesetzt und ECX wird nach ESP kopiert. **Wichtig: EDX und ECX müssen vor sysexit vom Betriebssystem gesetzt werden, sysenter speichert keine Informationen über Rücksprungadresse und "ehemaliges" ESP!**
 
@@ -61,6 +61,6 @@ void sysenter_handler() {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2083/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2083/index.html)
 
-<!-- MediaWiki page 2083; revision 6022; parent 6019; 2009-10-12T14:23:49Z -->
+<!-- MediaWiki page 2083; revision 6041; parent 6022; 2009-10-14T20:47:42Z -->
