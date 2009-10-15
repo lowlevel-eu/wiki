@@ -26,10 +26,10 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg" width="730" height="503" alt="Cats.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg)
 
-Download : <http://uploaded.to/file/q38q4e>
+Download : <http://ul.to/3mcgj5>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6057/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6064/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6057; parent 6056; 2009-10-15T14:23:48Z -->
+<!-- MediaWiki page 2084; revision 6064; parent 6057; 2009-10-15T16:10:46Z -->
