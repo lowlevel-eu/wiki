@@ -1,24 +1,24 @@
 # GRUB 2
 
-Der **G**rand **U**nified **B**ootloader 2 ist der Nachfolger von GRUB (offizieller Name der Versionen bis 0.97: GRUB Legacy) und stellt eine Weiterentwicklung von GRUB dar. Er ist genauso wie GRUB Legacy multiboot-fähig.
+Der **G**rand **U**nified **B**ootloader 2 ist der Nachfolger von GRUB (offizieller Name der Versionen bis 0.97: GRUB Legacy) und stellt eine Weiterentwicklung von GRUB dar. Er ist genauso wie GRUB Legacy multibootfähig.
 
 ## Neuerungen gegenüber GRUB Legacy
 
 GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 
 - Scripting-Support mit Lua
-- Grafische Benutzerschittstelle (nicht mit einer klassischen GUI/einem Desktop zu verwechseln!)
+- Grafische Benutzerschittstelle (nicht mit einer klassischen GUI bzw. einem Desktop zu verwechseln!)
 - Dynamisches Laden von Module auch während der Laufzeit
 - Unterstützung neuer Architekturen
 - Internationalisierung
-- Modulares und objekt-orientiertes Framework für Dateisysteme etc.
+- Modulares und objektorientiertes Framework für Dateisysteme etc.
 - Cross-Plattform-Installation
 
   
 
 ## GRUB 2 im Alltag
 
-Bisher ist GRUB 2 leider sehr instabil und verträgt sich noch nicht gnaz mit dem erweiterten Multiboot-Standard. Von der Nutzung auf Produktivitätsmaschinen wird daher abgeraten. Auch für Hobby-OS eignet sich GRUB 2 noch nicht völlig.
+Bisher ist GRUB 2 leider sehr instabil und verträgt sich noch nicht ganz mit dem erweiterten Multiboot-Standard. Von der Nutzung auf Produktivitätsmaschinen wird daher abgeraten. Auch für Hobby-OS eignet sich GRUB 2 noch nicht völlig.
 
   
 
@@ -28,6 +28,6 @@ Bisher ist GRUB 2 leider sehr instabil und verträgt sich noch nicht gnaz mit de
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6053/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
 
-<!-- MediaWiki page 2087; revision 6050; parent 0; 2009-10-15T11:25:21Z -->
+<!-- MediaWiki page 2087; revision 6053; parent 6050; 2009-10-15T12:19:05Z -->
