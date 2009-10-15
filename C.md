@@ -30,7 +30,7 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ### Zeiger in C
 
-Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf den Arbeitsspeicher zugreifen. (Allerdings nicht auf Register) Folgender Beispielcode verdeutlicht dies:
+Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf den Arbeitsspeicher zugreifen (allerdings nicht auf Register). Folgender Beispielcode verdeutlicht dies:
 
     /* Standardfunktionen für die Shell */
     /***********************************************************************************
@@ -65,8 +65,7 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
         *Text = Atrribut;
     }
 
-Es handelt sich um den Code für die Textausgabe aus [FiKe](https://github.com/lowlevel-eu/wiki/wiki/FiKe "FiKe"). Die Zeile 3 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden(Zeile 18) oder auf dem zeigende Wert verändert werden(Zeile 19).  
-Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf die Sicherheit getan werden. (Nur nötig bei Netzwerkfähigkeit)
+Es handelt sich um den Code für die Textausgabe aus [FiKe](https://github.com/lowlevel-eu/wiki/wiki/FiKe "FiKe"). Die Zeile 3 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden (Zeile 18) oder auf dem zeigende Wert verändert werden (Zeile 19).  
 
 ## Bekannte C-Compiler
 
@@ -83,6 +82,6 @@ Bei **sehr** fortgeschrittenen Betriebsystemen sollte jedoch auch ein Aspekt auf
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 5257; parent 5140; 2009-08-06T15:14:24Z -->
+<!-- MediaWiki page 1526; revision 6045; parent 5257; 2009-10-15T11:04:06Z -->
