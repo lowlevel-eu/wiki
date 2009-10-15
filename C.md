@@ -30,42 +30,44 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ### Zeiger in C
 
-Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf den Arbeitsspeicher zugreifen (allerdings nicht auf Register). Folgender Beispielcode verdeutlicht dies:
+Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf den Arbeitsspeicher zugreifen (allerdings nicht auf Register). Folgender Beispielcode verdeutlicht dies: \<c\>
 
-    /* Standardfunktionen für die Shell */
-    /***********************************************************************************
-    * Funktion Oneletter: Zeigt ein Buchstaben an einer bestimmten Position
-    * Groundcolour: Vordergrundfarbe
-    * Backcolour: Hintergrundfarbe
-    * Letter: Der Buchstabe
-    * Zeile: Die Zeile des Buchstaben
-    * Position: Welche Position der Buchstabe in der Zeile hat
-    ***********************************************************************************
-    */
-    void OneLetter(unsigned char Groundcolour, unsigned char Backcolour, unsigned char Letter, unsigned char Zeile, unsigned char   Position)
+    int console_attr = 7, console_x = 0, console_y = 0;
+
+    void putchar(int c)
     {
-        char Colour;
-        unsigned short int Atribut;
-        unsigned short int *Text = 0xB8000;
-        /* Prüfen ob überhaupt Farben möglich sind */
-        if(Groundcolour > 16)
+        unsigned char *console = (unsigned char *)0xB8000;
+
+        if ((c != '\n') && (c != '\r'))
         {
-            End();
+            console += (console_y * 80 + console_x) * 2;
+            *(console++) = c;
+            *console = console_attr;
+            console_x++;
         }
-        if(Backcolour > 16)
+        else if (c == '\r')
         {
-            End();
+            console_x = 0;
         }
-        /* Zusammlegen der Farbe */
-        Colour = Groundcolour * 16 + Backcolour;
-        Atrribut = Colour <<8;
-        Atrribut = Atrribut | Letter;
-        /* Adress für die richtige Positionierung finden */
-        Text += y * 80 + x;
-        *Text = Atrribut;
+
+        while ((console_x >= 80) || (c == '\n'))
+        {
+            if (console_x >= 80)
+            {
+                console_x -= 80;
+            }
+            console_y++;
+            while (console_y >= 25)
+            {
+                console_y--;
+                memmove((void *)0xB8000, (void *)0xB80A0, 3840);
+                memset((void *)0xB8F00, 0, 160);
+            }
+            c = 0;
+        }
     }
 
-Es handelt sich um den Code für die Textausgabe aus [FiKe](https://github.com/lowlevel-eu/wiki/wiki/FiKe "FiKe"). Die Zeile 3 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden (Zeile 18) oder auf dem zeigende Wert verändert werden (Zeile 19).  
+\</c\> Hierbei handelt es sich um einen Beispielcode, der zeigt, wie eine putchar()-Funktion beispielsweise aussehen könnte. Die Zeile 5 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden (Zeile 7) oder auf dem zeigende Wert verändert werden (Zeile 9). In Zeile 8 wird zuerst der Wert, auf den den console zeigt, verändert und dann der Zeiger um eins erhöht.  
 
 ## Bekannte C-Compiler
 
@@ -82,6 +84,6 @@ Es handelt sich um den Code für die Textausgabe aus [FiKe](https://github.com/l
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6045; parent 5257; 2009-10-15T11:04:06Z -->
+<!-- MediaWiki page 1526; revision 6054; parent 6045; 2009-10-15T12:49:43Z -->
