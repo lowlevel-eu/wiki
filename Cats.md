@@ -30,6 +30,6 @@ Download : <http://ul.to/3mcgj5>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6067/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6067; parent 6064; 2009-10-15T16:18:31Z -->
+<!-- MediaWiki page 2084; revision 6068; parent 6067; 2009-10-15T16:19:39Z -->
