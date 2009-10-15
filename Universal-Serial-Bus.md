@@ -8,18 +8,18 @@ Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.gi
 
 ## Einsatzgebiete
 
-USB ist sehr vielseitig verwendbar, es eignet sich für externe Festplatten und Laufwerke, externen Flashspeicher(USB-Sticks), Drucker, Kartenleser und viele Geräte mehr, wo es (mehr oder weniger) auf schnelle Datenübertragung ankommt.
+USB ist sehr vielseitig verwendbar, es eignet sich z. B. für externe Festplatten, Flashspeicher (USB-Sticks), Drucker, Kartenleser, Multimediageräte, HID-Geräte und vieles mehr. Ursprünglich wurde es für langsame Geräte wie Drucker, Tastatur oder Maus entworfen, mit den Geschwindigkeitsklassen High-Speed (seit USB 2.0) und SuperSpeed (seit USB 3.0) jedoch eignet es sich auch für Geräte, die eine höhere Bandbreite benötigen, wie Festplatten oder Webcams.
 
 ## Spezifikationen
 
 **Für alle USB-Spezifikationen gilt**:
 
-- Spannung: 5V
-- Stromstärke: 500 mA (USB 3.0 liefert 900mA)
+- Spannung: 5 V
+- Stromstärke: 100 mA (bei USB 3.0 150 mA); nach besonderer Freigabe bis zu 500 mA (bei USB 3.0 900 mA)
 
 ### USB 3.0 (SuperSpeed USB)
 
-USB 3.0 ist noch nicht verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 4,8 GBit/s Es liefert anstatt 500mA jetzt 900mA. Damit lassen sich problem- und gefahrlos USB-Festplatten ohne externe Stromquelle anschließen.
+USB 3.0 ist noch nicht verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 4,8 GBit/s (SuperSpeed). Zudem kann ein Gerät auf Anfrage bis zu 900 mA statt der bisherigen 500 mA erhalten. Damit lassen sich problem- und gefahrlos USB-Festplatten ohne externe Stromquelle anschließen.
 
 ### USB 2.0 (Hi-Speed USB)
 
@@ -53,6 +53,6 @@ Es existieren folgende Standards für USB Host-Controller:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 6051; parent 4216; 2009-10-15T11:44:07Z -->
+<!-- MediaWiki page 1690; revision 6052; parent 6051; 2009-10-15T12:14:34Z -->
