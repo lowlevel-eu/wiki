@@ -22,6 +22,6 @@ Wie viel Rechenzeit ein Prozess bekommt verwaltet hierbei der [Scheduler](https:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4967/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1921/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6063/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1921/index.html)
 
-<!-- MediaWiki page 1921; revision 4967; parent 4966; 2009-08-01T16:13:34Z -->
+<!-- MediaWiki page 1921; revision 6063; parent 4967; 2009-10-15T15:52:17Z -->
