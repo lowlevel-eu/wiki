@@ -67,7 +67,7 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
         }
     }
 
-\</c\> Hierbei handelt es sich um einen Beispielcode, der zeigt, wie eine putchar()-Funktion beispielsweise aussehen könnte. Die Zeile 5 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden (Zeile 7) oder auf dem zeigende Wert verändert werden (Zeile 9). In Zeile 8 wird zuerst der Wert, auf den den console zeigt, verändert und dann der Zeiger um eins erhöht.  
+\</c\> Hierbei handelt es sich um einen Beispielcode, der zeigt, wie eine putchar()-Funktion beispielsweise aussehen könnte. Die Zeile 5 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden (Zeile 7) oder auf dem zeigende Wert verändert werden (Zeile 9). In Zeile 8 wird zuerst der Wert, auf den console zeigt, verändert und dann der Zeiger um eins erhöht.  
 
 ## Bekannte C-Compiler
 
@@ -84,6 +84,6 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6054; parent 6045; 2009-10-15T12:49:43Z -->
+<!-- MediaWiki page 1526; revision 6055; parent 6054; 2009-10-15T12:51:03Z -->
