@@ -18,7 +18,7 @@
 <http://www.menuetos.net/>
 
   
-**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und unter der [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") freigegeben wird. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt.
+**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") geschrieben und unter der [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") freigegeben wird. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt.
 
 ## Releases
 
@@ -48,6 +48,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 5997; parent 5282; 2009-10-12T10:09:16Z -->
+<!-- MediaWiki page 1481; revision 6076; parent 5997; 2009-10-15T21:01:45Z -->
