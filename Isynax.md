@@ -1,7 +1,7 @@
 # Isynax
 
 | Isynax |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | \- |
@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") (FASM) |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM")) |
 | API: | \- |
 | Binärformat: | \- |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
@@ -41,6 +41,6 @@ Bis jetzt gibt es eine Unterstützung für die [RTL8139](https://github.com/lowl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5874/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6074/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2066/index.html)
 
-<!-- MediaWiki page 2066; revision 5874; parent 5868; 2009-09-12T10:47:22Z -->
+<!-- MediaWiki page 2066; revision 6074; parent 5874; 2009-10-15T20:59:10Z -->
