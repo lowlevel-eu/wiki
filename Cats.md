@@ -3,7 +3,7 @@
 | Cats |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
-| Entwickler: | Peter Kowalsky ,Josef Biehler(Filesystem) |
+| Entwickler: | Peter Kowalsky, Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
@@ -18,22 +18,16 @@
 <http://peter-koro.at.tf>
 
   
-Ein kleines OS das auf jeden PC mit Floppy Laufwerk läüft....
+Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde bereits folgendes implementiert:
 
-.) FAT TREIBER
-
-.) SHELL
-
-.) KLEINER TEXTEDITOR
+- FAT-Treiber
+- Shell
+- kleiner Texteditor
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg" width="730" height="503" alt="Cats.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg)
 
-**DOWNLOAD**
-
-.img : BALD.......
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6042; parent 6040; 2009-10-14T21:20:41Z -->
+<!-- MediaWiki page 2084; revision 6043; parent 6042; 2009-10-15T02:15:27Z -->
