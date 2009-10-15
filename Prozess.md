@@ -35,6 +35,6 @@ Die Vorraussetzungen für Benutzerthreads sind in den Programmen selbst enthalte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 5999; parent 5454; 2009-10-12T10:15:27Z -->
+<!-- MediaWiki page 1993; revision 6061; parent 5999; 2009-10-15T15:51:41Z -->
