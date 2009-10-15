@@ -24,7 +24,7 @@ Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und d
 | Befehl | ICW1 | 0x01 | Gesetzt, wenn anschließend ICW4 gesendet wird |
 | Befehl | ICW1 | 0x02 | Single Mode, es gibt keinen Slave. Wenn dieses Bit gesetzt ist, entfällt ICW3 |
 | Befehl | ICW1 | 0x10 | Initialisierung einleiten (eigentliches Befehlsbit) |
-| Daten | ICW2 | Interruptnummer für IRQ 0 |  |
+| Daten | ICW2 | Interruptnummer für IRQ 0 (Vielfaches von 8) |  |
 | Daten | ICW3 | Master: IRQs, auf denen Slaves gemappt sind (Bitmaske, normal 0x04)<br>Slave: IRQ, über den der Slave am Master angeschlossen ist (normal 2) |  |
 | Daten | ICW4 | Flags<br> |  |
 | Daten | ICW4 | 0x01 | Für PCs gesetzt |
@@ -78,6 +78,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5844/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 5844; parent 5817; 2009-09-06T10:40:45Z -->
+<!-- MediaWiki page 1465; revision 6044; parent 5844; 2009-10-15T10:01:07Z -->
