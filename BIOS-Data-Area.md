@@ -238,6 +238,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 5987; parent 5951; 2009-10-08T12:58:50Z -->
+<!-- MediaWiki page 1564; revision 6049; parent 5987; 2009-10-15T11:10:17Z -->
