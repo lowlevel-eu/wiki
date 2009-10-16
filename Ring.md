@@ -8,8 +8,12 @@ Ein "Ring" bezeichnet eine Sicherheitsstufe eines Prozesses bzw. seine Privilegi
 
 Das Prinzip der "Ringe" wurde mit dem [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") eingeführt.
 
+## Siehe auch
+
+[Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5333/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1990/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1990/index.html)
 
-<!-- MediaWiki page 1990; revision 5333; parent 5324; 2009-08-06T16:23:44Z -->
+<!-- MediaWiki page 1990; revision 6081; parent 5333; 2009-10-16T11:34:00Z -->
