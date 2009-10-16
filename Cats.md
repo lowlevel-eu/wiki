@@ -1,8 +1,8 @@
 # Cats
 
 | Cats |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|  |  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg" width="222" height="314" alt="Katze-396196.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg) |  |
 | Entwickler: | Peter Kowalsky, Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU |
@@ -30,6 +30,6 @@ Download : <http://ul.to/3mcgj5>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6068; parent 6067; 2009-10-15T16:19:39Z -->
+<!-- MediaWiki page 2084; revision 6077; parent 6068; 2009-10-16T04:21:51Z -->
