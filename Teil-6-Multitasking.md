@@ -126,17 +126,19 @@ struct cpu_state\* schedule(struct cpu_state\* cpu) {
 
 }\</c\>
 
-Jetzt müssen wir den Scheduler nur noch zum Einsatz bringen. Dieser Teil ist das, was das eigentliche Multitasking macht. Der passende Code dazu ist so kurz wie die Idee einfach ist: Anstatt bei einem Interrupt den gerade eben gesicherten Prozessorzustand wiederherzustellen, stellen wir einfach den Zustand eines anderen Tasks wieder her. Dazu wird handle_interrupt so geändert, dass es *cpu* wieder zurückgibt. Im Fall des Timerinterrupts ändern wir cpu allerdings auf den Zustand des neuen Tasks: \<c\>struct cpu_state\* handle_interrupt(struct cpu_state\* cpu) {
+Jetzt müssen wir den Scheduler nur noch zum Einsatz bringen. Dieser Teil ist das, was das eigentliche Multitasking macht. Der passende Code dazu ist so kurz wie die Idee einfach ist: Anstatt bei einem Interrupt den gerade eben gesicherten Prozessorzustand wiederherzustellen, stellen wir einfach den Zustand eines anderen Tasks wieder her. Dazu wird handle_interrupt so geändert, dass es *cpu* wieder zurückgibt. Im Fall des Timerinterrupts geben wir allerdings den Zustand des neuen Tasks zurück: \<c\>struct cpu_state\* handle_interrupt(struct cpu_state\* cpu) {
+
+       struct cpu_state* new_cpu = cpu;
 
        ...
 
        if (cpu->intr == 0x20) {
-           cpu = schedule(cpu);
+           new_cpu = schedule(cpu);
        }
 
-       ....
+       ...
 
-       return cpu;
+       return new_cpu;
 
 }\</c\>
 
@@ -223,6 +225,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 6088; parent 5849; 2009-10-17T14:05:16Z -->
+<!-- MediaWiki page 1899; revision 6097; parent 6088; 2009-10-17T18:18:18Z -->
