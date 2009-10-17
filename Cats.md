@@ -3,7 +3,7 @@
 | Cats |  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg" width="222" height="314" alt="Katze-396196.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg) |  |
-| Entwickler: | Peter Kowalsky, Josef Biehler (Dateisystem) |
+| Entwickler: | Peter Kowalsky (Cyborg00222), Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU |
 | OS-Eigenschaften |  |
@@ -52,6 +52,6 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6086/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6086; parent 6083; 2009-10-17T08:10:41Z -->
+<!-- MediaWiki page 2084; revision 6096; parent 6086; 2009-10-17T17:01:04Z -->
