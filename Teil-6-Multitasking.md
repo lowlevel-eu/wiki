@@ -1,8 +1,8 @@
 # Teil 6 - Multitasking
 
 |  |  |  |
-| ----------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------- |
-| « [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | Teil 7 - Speicherverwaltung » |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| « [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | [Teil 7 - Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") » |
 
 ## Ziel
 
@@ -218,11 +218,11 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
   
 
 |  |  |  |
-| ----------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------- |
-| « [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | Teil 7 - Speicherverwaltung » |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| « [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | [Teil 7 - Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 5849; parent 4976; 2009-09-07T09:14:42Z -->
+<!-- MediaWiki page 1899; revision 6088; parent 5849; 2009-10-17T14:05:16Z -->
