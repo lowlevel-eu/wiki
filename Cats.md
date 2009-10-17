@@ -24,44 +24,34 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 - Shell
 - kleiner Texteditor
 
-**Befehle:**
+## Befehle
 
-date:
+- date
+- time
+- cd
+- mkdir
+- cls
+- show
+- tiny
+- sdir
+- help
+- tasks
+- kill
+- tsr
+- sver
+- echo
+- halt
 
-time:
-
-cd:
-
-mkdir:
-
-cls:
-
-show:
-
-tiny:
-
-sdir:
-
-help:
-
-tasks:
-
-kill:
-
-tsr:
-
-sver:
-
-echo:
-
-halt:
+## Screenshots
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg" width="730" height="503" alt="Cats.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg)
 
-Download : <http://ul.to/3mcgj5>
+## Links
+
+- [Diskettenimage von Cats](http://ul.to/3mcgj5)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6086/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6083; parent 6082; 2009-10-16T19:31:49Z -->
+<!-- MediaWiki page 2084; revision 6086; parent 6083; 2009-10-17T08:10:41Z -->
