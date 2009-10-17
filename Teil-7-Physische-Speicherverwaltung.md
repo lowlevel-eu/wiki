@@ -157,7 +157,7 @@ init_task muss jetzt statt nur dem Stack entsprechend auch eine Taskstruktur anl
 
 }\</c\>
 
-Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten Listenelement weitergehen (current_task = current_task-\>next) und wenn das Ende erreicht ist (next also NULL ist), wieder beim ersten Task anfangen. Das Array task_states, num_tasks und das alte current_task mit dem Arrayindex sind jetzt unnötig geworden und können gelöscht werden. Einen neuen Task anzulegen bedeutet jetzt nur noch, ein init_task mit dem passenden Einsprungpunkt aufzurufen.
+Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten Listenelement weitergehen (current_task = current_task-\>next) und wenn das Ende erreicht ist (next also NULL ist), wieder beim ersten Task anfangen. Das Array task_states, num_tasks und das alte current_task mit dem Arrayindex sind jetzt unnötig geworden und können gelöscht werden. Einen neuen Task anzulegen bedeutet jetzt nur noch ein init_task mit dem passenden Einsprungpunkt aufzurufen.
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------- |
@@ -165,6 +165,6 @@ Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten List
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6092/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
 
-<!-- MediaWiki page 2094; revision 6092; parent 6091; 2009-10-17T14:27:56Z -->
+<!-- MediaWiki page 2094; revision 6093; parent 6092; 2009-10-17T14:30:06Z -->
