@@ -64,7 +64,7 @@ Da die Implementierung offensichtlich ist, möchte ich sie hier nicht direkt in 
 
 ### Speicherverwaltung initialisieren
 
-Eigentlich fehlt jetzt nur noch der Anfangszustand für die Speicherbitmap. Wir müssen dazu wissen, welche Speicherbereiche frei sind und wo wir besser nicht hinschreiben. Zum Glück weiß das BIOS das und GRUB gibt uns die entsprechende Informationn auch weiter. Wir ignorieren sie bisher nur.
+Eigentlich fehlt jetzt nur noch der Anfangszustand für die Speicherbitmap. Wir müssen dazu wissen, welche Speicherbereiche frei sind und wo wir besser nicht hinschreiben. Zum Glück weiß das BIOS das und GRUB gibt uns die entsprechende Information auch weiter. Wir ignorieren sie bisher nur.
 
 Wenn unser Kernel gestartet ist, liegt im Register *ebx* ein Pointer auf die [Multiboot Information Structure](https://github.com/lowlevel-eu/wiki/wiki/Multiboot#multiboot-structure "Multiboot"). Der verlinkte Artikel enthält eine Tabelle über den Aufbau der Struktur, die wir am geschicktesten als C-struct deklarieren (zumindest bis zu den mmap-Feldern). Das Feld mbs_mmap_addr ist ein Pointer auf die gesuchten Daten und der Abschnitt [mbs_mmap_addr](https://github.com/lowlevel-eu/wiki/wiki/Multiboot#mbs_mmap_addr "Multiboot") enthält den Aufbau eines Eintrags der Memory Map.
 
@@ -165,6 +165,6 @@ Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten List
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6091/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
 
-<!-- MediaWiki page 2094; revision 6089; parent 0; 2009-10-17T14:11:58Z -->
+<!-- MediaWiki page 2094; revision 6091; parent 6089; 2009-10-17T14:26:27Z -->
