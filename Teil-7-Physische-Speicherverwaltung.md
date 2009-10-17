@@ -79,7 +79,7 @@ pmm_init geht anschließend wie folgt vor:
 
 1.  Zunächst wird der gesamte Speicher als belegt angesehen
 2.  Anschließend wird der Speicher freigegeben, der in der Memory Map als frei gekennzeichnet ist
-3.  Weil das BIOS aber nichts vom Betriebssystem, müssen nachher alle Speicherbereiche, die das OS benutzt gleich wieder als belegt gekennzeichnet werden (d.h. in erster Linie der komplette Kernel)
+3.  Weil das BIOS aber nichts vom Betriebssystem weiß, müssen nachher alle Speicherbereiche, die das OS benutzt gleich wieder als belegt gekennzeichnet werden (d.h. in erster Linie der komplette Kernel)
 
 Widmen wir uns zunächst der Memory Map. Wir haben Basisadresse und Länge und können damit über alle Einträge laufen und die freien Bereiche (Typ 1) als frei markieren: \<c\>struct multiboot_mmap\* mmap = mb_info-\>mbs_mmap_addr; struct multiboot_mmap\* mmap_end = (void\*)
 
@@ -165,6 +165,6 @@ Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten List
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6091/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6092/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
 
-<!-- MediaWiki page 2094; revision 6091; parent 6089; 2009-10-17T14:26:27Z -->
+<!-- MediaWiki page 2094; revision 6092; parent 6091; 2009-10-17T14:27:56Z -->
