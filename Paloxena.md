@@ -4,7 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png) |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
-| Akt. Version: | 0.000-i-2 |
+| Akt. Version: | 0.000-i-3 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -23,8 +23,8 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne
 
 ## Programme
 
-- [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") 1.68: Ein Assembler mit Intelsyntax
-- µsh 0.001: Die Shell (portiert von [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"))
+- [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") 1.69.08: Ein Assembler mit Intelsyntax
+- µsh 0.002: Die Shell (portiert von [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"))
 - Paloxoreutils:
   - ls
   - cat
@@ -33,13 +33,14 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne
   - ping
 - mbr: Gibt 512 Bytes einer Datei von einer gegebenen Position an in Hex-Editor-Form aus
 - maumau: Der Klassiker von MyXomycota
+- brainfuck: Brainfuckcompiler
 
 ## Akt. Release
 
-Die aktuelle Freigabe ist 0.000-i-2 (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
+Die aktuelle Freigabe ist 0.000-i-3 (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
 
-- Ankündigung: [Paloxenaforum - "0.000-i-2"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=4)
-- Direktlink: [0.000-i-2.img.bz2](http://www.paloxena.bplaced.net/releases/0.000-i-2.img.bz2)
+- Ankündigung: [Paloxenaforum - "0.000-i-3"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=5)
+- Direktlink: [0.000-i-3.img.bz2](http://www.paloxena.bplaced.net/releases/0.000-i-3.img.bz2)
 
 ## Screenshot
 
@@ -47,6 +48,6 @@ Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5907/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 5907; parent 5906; 2009-09-15T13:06:00Z -->
+<!-- MediaWiki page 2045; revision 6099; parent 5907; 2009-10-18T12:41:29Z -->
