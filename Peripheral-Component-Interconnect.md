@@ -9,8 +9,8 @@ Jedes PCI-Gerät besitzt ein Konfigurations-Register, welches 256 Byte groß ist
 ### Aufbau des Adress-I/O-Ports
 
 | 31 | 30-24 | 23-16 | 15-11 | 10-8 | 7-0 |
-| ------------ | ------------ | ----------- | -------------- | ----------------- | ---------------- |
-| Enable Bit | Reserviert | Busnummer | Gerätenummer | Funktionsnummer | Registernummer |
+| ------------ | ------------ | ----------- | -------------- | ----------------- | --------------------------------------- |
+| Enable Bit | Reserviert | Busnummer | Gerätenummer | Funktionsnummer | Registernummer<br>bit0 u. bit1 sind 0 |
 
   
 
@@ -408,6 +408,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6101/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 5108; parent 5107; 2009-08-06T09:01:09Z -->
+<!-- MediaWiki page 1626; revision 6101; parent 5108; 2009-10-21T23:11:04Z -->
