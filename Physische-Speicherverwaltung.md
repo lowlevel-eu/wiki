@@ -51,7 +51,7 @@ o Das Freigeben einer Speicherseite ist in konstanter Zeit möglich. (konstante 
 
 Beim Buddy Verfahren wird Speicher ausschließlich in verschiedenen festgelegten Größen allokiert, wobei diese Blöcke auf ein vielfaches ihrer Größe ausgerichtet sind. Für jede Größe existiert eine Menge mit freien Blöcken ("free list"), von denen einer gewählt wird, um die Anfrage zu erfüllen. Existiert kein freier Block der angeforderten Größe, wird ein Block der nächstgrößeren verfügbaren Größe gewählt und geteilt, wobei die ungenutzte Hälfte wieder in die entsprechende Freelist eingetragen wird. Jede Hälfte eines derartig geteilten Blocks ist der Buddy von der jeweils anderen Hälfte.
 
-Gibt man Speicher wieder frei, so will man zwei direkt nebeneinander liegende freie Blöcke wieder zu einem großen freien Block zusammenfügen. Damit man dafür nicht die free list durchsuchen muss, was relativ aufwändig ist, verwaltet man für jede Blockgröße in einer Bitmap den Status eines Blocks.
+Gibt man Speicher wieder frei, so will man zwei direkt nebeneinander liegende freie Blöcke wieder zu einem großen freien Block zusammenfügen. Damit man dafür nicht die free list durchsuchen muss, was relativ aufwändig ist, verwaltet man für jede Blockgröße in einer Bitmap den Status eines Blocks. Ein Block wird nur mit seinem Buddy wieder zusammengefügt.
 
 ### Allokation & Freigabe von Speicherseiten
 
@@ -86,6 +86,6 @@ Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu mar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6103/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
 
-<!-- MediaWiki page 1843; revision 6103; parent 5447; 2009-10-23T19:58:58Z -->
+<!-- MediaWiki page 1843; revision 6104; parent 6103; 2009-10-23T20:00:19Z -->
