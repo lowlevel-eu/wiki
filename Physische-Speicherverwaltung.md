@@ -49,17 +49,23 @@ o Das Freigeben einer Speicherseite ist in konstanter Zeit möglich. (konstante 
 
 ## Buddy
 
-Beim Buddy Verfahren wird der Speicher unterteilt in einzelnen Bitmaps. In diesen Bitmaps wird dann nach einer passenden Page durchsucht. Typische Größen einer Page sind 4 KB, 2 MB und 4 MB. Der Vorteil, den dieses Verfahren mit sich bringt ist eindeutig die Geschwindigkeit. So werden immer einzelne Einträge geprüft, ob irgendwo dort der benötigte Speicher, z.B. 4MB, frei ist. Wenn keine so große Page mehr frei ist, wird sofort der nächste Eintrag ausgewählt und geprüft.
+Beim Buddy Verfahren wird Speicher ausschließlich in verschiedenen festgelegten Größen allokiert, wobei diese Blöcke auf ein vielfaches ihrer Größe ausgerichtet sind. Für jede Größe existiert eine Menge mit freien Blöcken ("free list"), von denen einer gewählt wird, um die Anfrage zu erfüllen. Existiert kein freier Block der angeforderten Größe, wird ein Block der nächstgrößeren verfügbaren Größe gewählt und geteilt, wobei die ungenutzte Hälfte wieder in die entsprechende Freelist eingetragen wird. Jede Hälfte eines derartig geteilten Blocks ist der Buddy von der jeweils anderen Hälfte.
+
+Gibt man Speicher wieder frei, so will man zwei direkt nebeneinander liegende freie Blöcke wieder zu einem großen freien Block zusammenfügen. Damit man dafür nicht die free list durchsuchen muss, was relativ aufwändig ist, verwaltet man für jede Blockgröße in einer Bitmap den Status eines Blocks.
 
 ### Allokation & Freigabe von Speicherseiten
 
 ### Implementierungsvorschlag
+
+- Für die Blockgrößen wählt man in der Regel Potenzen von 2 beginnend mit der Größe einer Seite (4 KiB), bis zu einem bestimmten sinnvollen Wert (z.B. 4 MiB).
+- Da in jeder Menge nur gleich große Blöcke sind, kann man diese als verkettete Liste implementieren und beim Allokieren einfach immer das erste Listenelement nehmen. (First Fit -\> konstanter Zeitaufwand)
 
 ### Eigenschaften
 
 \+ Schnelle Reservierung von Speicherseiten  
 + Schnelle Freigabe von Speicherseiten  
 - Recht komplizierte Implementierung  
+- Allokierbare Größen sind auf bestimmte Werte eingeschränkt, damit anfällig für interne Fragmentierung  
 
 ## Fazit
 
@@ -80,6 +86,6 @@ Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu mar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5447/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6103/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
 
-<!-- MediaWiki page 1843; revision 5447; parent 5029; 2009-08-07T14:58:41Z -->
+<!-- MediaWiki page 1843; revision 6103; parent 5447; 2009-10-23T19:58:58Z -->
