@@ -40,14 +40,14 @@ Branching und Tagging sind die Konzepte, die sich mit der Koordinierung verschie
 
 ## Systeme
 
-Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Bereich [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") und [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion"), etwas selter trifft man auch [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial "Mercurial") oder das etwas ältere [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS"). Dabei sind sowohl Subversion als auch CVS für einen zentralen Aufbau ausgelegt (können aber auch lokal gut verwendet werden), git hingegen folgt einem vollständig dezentralen Ansatz.
+Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Bereich [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") und [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion"), etwas selter trifft man auch [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial "Mercurial") oder das etwas ältere [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS"). Dabei sind sowohl Subversion als auch CVS für einen zentralen Aufbau ausgelegt (können aber auch lokal gut verwendet werden), git und Mercurial hingegen folgen einem vollständig dezentralen Ansatz.
 
 ### Bekannte Projekte und ihr eingesetztes VCS
 
 | VCS | Projekt |
 | ------------ | ------------------------------------- |
 | git | Linux, Qt, KDE, Compiz Fusion, GIMP |
-| Mercurial | Firefox, OpenJDK |
+| Mercurial | Firefox, OpenOffice.org |
 | Subversion | GCC, GnuPG, Mono, GNOME |
 | CVS | Bochs |
 | Bazaar | Ubuntu |
@@ -58,6 +58,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 5812; parent 5590; 2009-08-31T18:30:54Z -->
+<!-- MediaWiki page 1801; revision 6102; parent 5812; 2009-10-23T18:38:28Z -->
