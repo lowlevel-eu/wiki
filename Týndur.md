@@ -17,7 +17,6 @@
 
 <http://www.tyndur.org/>
 
-  
 týndur ist das Community-Betriebssystem von Lowlevel. Es entstand als Idee im Jahr 2005 und wird seitdem von verschiedenen Mitgliedern der Lowlevel-Community gepflegt und erweitert. Zielsetzung des Systems ist es, verständlich zum Lernen, aber auch zum Arbeiten gut benutzbar zu sein. Jeder ist eingeladen mitzuhelfen!
 
 ## Funktionsweise des Kernels
@@ -110,6 +109,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5873/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 5873; parent 5593; 2009-09-11T20:01:09Z -->
+<!-- MediaWiki page 1796; revision 6106; parent 5873; 2009-10-27T15:31:31Z -->
