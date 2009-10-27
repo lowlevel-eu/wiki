@@ -83,7 +83,7 @@ Das Release im Jahr 2008 (genauer: am 24.12.2008), und außerdem erste Version u
 - Editor kedit verbessert; neu ist unter anderem das Syntax-Highlighting für C (einschalten mit F8)
 - Virtuelle Terminals (umschaltbar via Alt+Fx, Standardmäßig gibt es 4 Terminals)
 
-Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetzt auf der Betriebssystemunabhängigen Schnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI").
+Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetzt auf der vom Betriebssystem unabhängigen Schnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI").
 
   
 **0.2.1**  
@@ -109,6 +109,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 6106; parent 5873; 2009-10-27T15:31:31Z -->
+<!-- MediaWiki page 1796; revision 6107; parent 6106; 2009-10-27T15:35:05Z -->
