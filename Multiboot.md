@@ -61,7 +61,7 @@ Ein u32-Wert der Zusammen mit [mbh_magic](#mbh_magic) und [mbh_flags](#mbh_flags
 
 ## Multiboot-Structure
 
-Die Multiboot-Structure beinhaltet Informationen, die vom Bootloader verher ausgelesen wurden. Die Adresse der Multiboot-Structure ist unmittelbar nach dem Starten des Kernels in *EBX* gespeichert.
+Die Multiboot-Structure beinhaltet Informationen, die vom Bootloader vorher ausgelesen wurden. Die Adresse der Multiboot-Structure ist unmittelbar nach dem Starten des Kernels in *EBX* gespeichert.
 
 | Offset | Größe | Inhalt | Anwesend wenn mbs_flags\[X\] gesetzt |
 | -------- | ------- | ----------------------------------------------- | -------------------------------------- |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5827/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6115/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 5827; parent 5031; 2009-09-02T19:06:39Z -->
+<!-- MediaWiki page 1560; revision 6115; parent 5827; 2009-10-29T15:24:55Z -->
