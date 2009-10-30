@@ -17,7 +17,7 @@
 
 <http://gitorious.org/niwohlos>
 
-*"Ich verstehe Ihre Frage so, dass es Benutzer gibt, die wünschen, dass wir die Entwickler von niwohlOS dazu mobilisieren, um einen Paketfilter zu implementieren. Mir ist nicht bekannt, dass eine solche Absicht besteht. Die Entwickler kooperieren zur Sicherung von niwohlOS eifrig mit dem BKA, und ihre Arbeitskraft wird dafür voll eingesetzt. Niemand hat die Absicht, eine Firewall zu errichten!"*  
+*"Ich verstehe Ihre Frage so, dass es Benutzer gibt, die wünschen, dass wir die Entwickler von niwohlOS dazu mobilisieren, um einen Paketfilter zu implementieren. Mir ist nicht bekannt, dass eine solche Absicht besteht. Die Entwickler kooperieren zur Sicherung von niwohlOS eifrig mit dem BSI, und ihre Arbeitskraft wird dafür voll eingesetzt. Niemand hat die Absicht, eine Firewall zu errichten!"*  
 
 -- [Linus Torvalds](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der alte [Kommunist](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
 
@@ -80,8 +80,10 @@ Folgende Teile müssen noch implementiert werden:
 - Programme
 - Einfach alles
 
+Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwickelt. Die genauen Beschreibungen zur Performance und Stabilität im Artikel könnten allerdings von der Wirklichkeit abweichen. Theoretisch.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6127; parent 6126; 2009-10-30T22:24:26Z -->
+<!-- MediaWiki page 2095; revision 6128; parent 6127; 2009-10-30T22:44:22Z -->
