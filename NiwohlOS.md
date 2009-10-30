@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-<http://gitoious.org/niwohlos>
+<http://gitorious.org/niwohlos>
 
   
 
@@ -82,6 +82,6 @@ Folgende Teile müssen noch implementiert werden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6125/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6124; parent 6123; 2009-10-30T21:53:03Z -->
+<!-- MediaWiki page 2095; revision 6125; parent 6124; 2009-10-30T21:55:18Z -->
