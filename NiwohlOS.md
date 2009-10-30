@@ -42,7 +42,7 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 ## Die Entwickler
 
-Die Entwickler sind allesamt hocherfahrene Informatiker mit jahrelanger Erfahrung. Sie genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Allesamt sind auf dem Gebiet der Betriebssystementwicklung hocherfahren und zählen zur Elite von morgen. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
+Die Entwickler sind allesamt hocherfahrene Informatiker mit jahrelanger Erfahrung. Sie genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Allesamt sind auf dem Gebiet der Betriebssystementwicklung hocherfahren und zählen zu den zukünftigen Leistungsträgern. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
 
   
 
@@ -50,9 +50,11 @@ Die Entwickler sind allesamt hocherfahrene Informatiker mit jahrelanger Erfahrun
 
 Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
 
-- [Hochprofessioneller Entwickler \#1](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"): Jo
-- [Hochprofessioneller Entwickler \#2](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"): Super \*Applaus\*
-- [Hochprofessioneller Entwickler \#3](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"): Astrein.
+- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#1](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"): *"Jo"*
+- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#2](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"): *"Super \*Applaus\*"*
+- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#3](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"): *"Astrein."*
+- Zufriedener Benutzer: *"Wer sind Sie, und wie sind Sie in mein Haus gekommen?"*
+- Zufriedener Black Hat: *"Oh EXPLOITABLE!"*
 
   
 
@@ -63,6 +65,8 @@ Folgende Teile sind fertig implementiert:
 - Makefile
 - Verzeichnisstruktur
 - Repository
+
+  
 
 ## To-Do
 
@@ -78,6 +82,6 @@ Folgende Teile müssen noch implementiert werden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6126/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6126; parent 6125; 2009-10-30T22:05:47Z -->
+<!-- MediaWiki page 2095; revision 6127; parent 6126; 2009-10-30T22:24:26Z -->
