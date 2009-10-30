@@ -129,7 +129,7 @@ Für die Installation von GRUB unter Windows gibt es ein kleines Tool, das sich 
 
 ### Testen mit Bochs
 
-Leider konnte ich keine brauchbaren Informationen dazu finden, wie man Bochs dazu bringt vom Stick zu booten.
+Leider konnte ich keine brauchbaren Informationen dazu finden, wie man Bochs dazu bringt vom USB-Stick zu booten.
 
 ### Testen mit qemu
 
@@ -137,11 +137,11 @@ Leider konnte ich keine brauchbaren Informationen dazu finden, wie man Bochs daz
 
 #### Testen unter Linux/Unix
 
-Das booten des USB-Sticks unter Linux ist im Gegensatz zu der Vorgehensweise unter Windows etwas einfacher. Es wird einfach das Devicenode, das vom Kernel vergeben wird, benötigt. In diesem Beispiel ist das /dev/sda, da /dev/sda1 die Partition auf dem USB-Stick ist! Der Aufruf von qemu würde dann also so aussehen:
+Um qemu unter Linux/Unix dazu zu bringen, vom USB-Stick zu booten, muss das Devicenode, welches auch schon beim partitionieren gebraucht wurde, als Festplatte angegeben werden. Hierzu wird die Option "-hda" nutzen. Sollte der USB-Stick z.B. das Devicenode "/dev/sda" haben, würde der Aufruf von qemu wie folgt aussehen:
 
 **Warnung**
 
-Um ein physikalisches Gerät nutzen zu können, braucht man root-Rechte, da man als normaler Nutzer nicht auf die Devicenodes zugreifen darf.
+Um das Devicenode, also letzten Endes den Stick, nutzen zu können, benötigt man root-Rechte, da man als normaler Nutzer nicht auf dieses zugreifen darf.
 
     $ qemu -m 32 -localtime -boot c -hda /dev/sda
 
@@ -170,6 +170,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 6116; parent 5943; 2009-10-30T15:22:22Z -->
+<!-- MediaWiki page 1737; revision 6117; parent 6116; 2009-10-30T20:42:11Z -->
