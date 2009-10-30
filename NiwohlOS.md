@@ -10,7 +10,7 @@
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Micro](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel")[monolithischer](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") Modularhybrid |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, Assembler (Syntax: Intel und Falschrum) |
-| API: | POSIX |
+| API: | POSIX (nur besser, weil noch kaputter) |
 | Binärformat: | [ZWÖLF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
@@ -62,9 +62,9 @@ Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
 
 Folgende Teile sind fertig implementiert:
 
-- Makefile
-- Verzeichnisstruktur
-- Repository
+- Repository erfolgreich angelegt
+- Ausgeklügelte Verzeichnisstruktur des Quelltextes
+- State-of-the-art Makefile
 
   
 
@@ -80,10 +80,14 @@ Folgende Teile müssen noch implementiert werden:
 - Programme
 - Einfach alles
 
-Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwickelt. Die genauen Beschreibungen zur Performance und Stabilität im Artikel könnten allerdings von der Wirklichkeit abweichen. Theoretisch.
+  
+
+------------------------------------------------------------------------
+
+Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwickelt. Die genauen Beschreibungen zur Performance und Stabilität im Artikel könnten allerdings von der Wirklichkeit abweichen. Theoretisch.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6130/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6129; parent 6128; 2009-10-30T23:12:23Z -->
+<!-- MediaWiki page 2095; revision 6130; parent 6129; 2009-10-30T23:37:52Z -->
