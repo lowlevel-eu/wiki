@@ -43,6 +43,16 @@ Die Entwickler sind allesamt hocherfahrene Informatiker mit jahrelanger Erfahrun
 
   
 
+## Kritik
+
+Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
+
+- [Hochprofessioneller Entwickler \#1](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"): Jo
+- [Hochprofessioneller Entwickler \#2](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"): Super \*Applaus\*
+- [Hochprofessioneller Entwickler \#3](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"): Astrein.
+
+  
+
 ## Fertig implementiert
 
 Folgende Teile sind fertig implementiert:
@@ -63,6 +73,6 @@ Folgende Teile müssen noch implementiert werden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6119/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6118; parent 0; 2009-10-30T21:20:13Z -->
+<!-- MediaWiki page 2095; revision 6119; parent 6118; 2009-10-30T21:25:44Z -->
