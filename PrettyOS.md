@@ -25,7 +25,7 @@ PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei [\[2\]](htt
 
 ## Genereller Aufbau
 
-PrettyOS besteht monentan aus den Bereichen Bootloader Stage 1, Bootloader Stage 2, Kernel und User-Space. Die beiden Bootloader sind in Assembler (NASM) geschrieben und verwenden bisher FAT12. BL1 (in Sektor 1) lädt BL2 (Datei boot2.sys). Dieser wiederum startet den bisher binären Kernel (ckernel.sys). Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (Intel und AT&T Syntax) gehalten. Der User-Space dient bisher nur als Demonstartion für die API (syscalls) und wurde ebenfalls in C geschrieben. Bisher ist nur eine rudimentäre Shell vorhanden.
+PrettyOS besteht momentan aus den Bereichen Bootloader Stage 1, Bootloader Stage 2, Kernel und User-Space. Die beiden Bootloader sind in Assembler (NASM) geschrieben und verwenden bisher FAT12. BL1 (in Sektor 1) lädt BL2 (Datei boot2.sys). Dieser wiederum startet den bisher binären Kernel (ckernel.sys). Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (Intel und AT&T Syntax) gehalten. Der User-Space dient bisher nur als Demonstartion für die API (syscalls) und wurde ebenfalls in C geschrieben. Bisher ist nur eine rudimentäre Shell vorhanden.
 
 ### Elemente des Kernels
 
@@ -41,6 +41,6 @@ PrettyOS ist als erste Basis für Ideen der Projektgruppe gedacht und kann daher
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 6141; parent 6139; 2009-10-31T13:12:02Z -->
+<!-- MediaWiki page 2096; revision 6142; parent 6141; 2009-10-31T13:14:01Z -->
