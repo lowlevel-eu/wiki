@@ -54,7 +54,7 @@ Auch beim Paging sollte man erst einmal genau darüber nachdenken, bevor man den
 
 ## Der Code
 
-Und nun zum Hauptteil des Tutorials. Auch hier brauchen wir zuerst ein paar Konstanten:
+Und nun zum Hauptteil des Tutorials. Auch hier brauchen wir zuerst ein paar Konstanten: \<freebasic\>
 
     '// constants for all Paging-tables
     const Page_present = &b1
@@ -69,12 +69,20 @@ Und nun zum Hauptteil des Tutorials. Auch hier brauchen wir zuerst ein paar Kons
     '// constants only for the PageTable
     const Page_noTLBupdate = &b100000000
 
+\</freebasic\>
+
 Die benutzen wir später um die Flags der Tabellen-Einträge zu setzen.
+
+\<freebasic\>
 
     dim shared PageDirectoryPTR as UINTEGER PTR = cast(UINTEGER PTR, 2*1024*1024 - 4*1024) '// The PageDirectory lies at 2MB-4kb
     dim shared PageTablesPTR as UINTEGER PTR = cast(UINTEGER PTR, 2*1024*1024)             '// The PageTables lie at 2MB
 
+\</freebasic\>
+
 Hier setzen wir Pointer, wo die Tabellen später liegen. Warum ich das so mache? So kann ich festlegen, das die Tabellen 4kb-aligned sind, und muss mich nicht auf irgendwelche seltsamen Memory-Manager verlassen.
+
+\<freebasic\>
 
     sub Paging_initDirectory
         dim counter as UINTEGER
@@ -86,7 +94,11 @@ Hier setzen wir Pointer, wo die Tabellen später liegen. Warum ich das so mache?
         next
     end sub
 
+\</freebasic\>
+
 Wir setzen hier die Einträge des Page-Directory so, dass sie auf die Page-Tables verweisen. Man kann hier sehen, das wir zwei Flags setzen. Damit sorgen wie dafür, das wir auf diesen Speicherbereich schreiben dürfen, und wie sagen der CPU das der Speicherbereich im physischen Speicher liegt, also present ist.
+
+\<freebasic\>
 
     sub Paging_map4kb (vmem as UINTEGER, pmem as UINTEGER)
         dim PDentry as UINTEGER
@@ -99,6 +111,8 @@ Wir setzen hier die Einträge des Page-Directory so, dass sie auf die Page-Table
         *(PageTablesPTR+PTentry+PDentry*1024) = pmem OR Page_present OR Page_writeable
     end sub
 
+\</freebasic\>
+
 Das ist also unsere Routine, die einen 4kb Block in den virtuellen Speicher mappt. Wer oben aufgepasst hat, weiß auch, wie wir die Einträge der Tabellen berechnen:
 
 Wir schieben die Bits um 22 nach rechts, und übrig bleiben die linken 10bit, der Page-Directory-Eintrag.
@@ -106,6 +120,8 @@ Wir schieben die Bits um 22 nach rechts, und übrig bleiben die linken 10bit, de
 Wir schieben die Bits um 10 nach links (Page-Directory-Eintrag-bits fallen weg) und das dann 22 bits nach rechts, übrig bleiben die mittleren 10bit, der Page-Table-Eintrag.
 
 Auch hier setzen wir ein paar Bits.
+
+\<freebasic\>
 
     sub Paging_mapPhysicalMemory (vstart as UINTEGER, pstart as UINTEGER, pend as UINTEGER)
         dim vmemPTR as UINTEGER = vstart
@@ -118,7 +134,11 @@ Auch hier setzen wir ein paar Bits.
         loop
     end sub
 
+\</freebasic\>
+
 Diese Routine mappt den Speicher von pstart bis pend an die virtuelle Adresse vstart. Sie ruft dabei in 4kb-Schritten unsere obige Routine auf. Damit können wir große Speicherbereiche schnell und einfach mappen.
+
+\<freebasic\>
 
     sub SetPageDirectoryAddress (address as UINTEGER PTR)
         '// we set the address when we write it into cr3
@@ -128,7 +148,11 @@ Diese Routine mappt den Speicher von pstart bis pend an die virtuelle Adresse vs
         END ASM
     end sub
 
+\</freebasic\>
+
 Wir schreiben die Adresse zuerst in eax, und laden den Wert dann nach cr3, damit der Prozessor weiß wo unser Page-Directory liegt.
+
+\<freebasic\>
 
     sub Paging_activate
         '// we activate paging by enabling the last bit of cr0.
@@ -139,11 +163,15 @@ Wir schreiben die Adresse zuerst in eax, und laden den Wert dann nach cr3, damit
         END ASM
     end sub
 
+\</freebasic\>
+
 Hier holen wir den Inhalt von cr0 nach eax, setzen das Paging-Bit und schreiben den neuen Wert zurück. Und schon ist Paging aktiviert!
 
 ## Ein sehr kleines Beispiel
 
 Als Beispiel zeige ich hier einen Auszug aus meinem Kernel [FROST](https://github.com/lowlevel-eu/wiki/wiki/FROST "FROST"):
+
+\<freebasic\>
 
     print "Initializing page-directory..."
     Paging_initDirectory
@@ -153,6 +181,8 @@ Als Beispiel zeige ich hier einen Auszug aus meinem Kernel [FROST](https://githu
     SetPageDirectoryAddress (PageDirectoryPTR)
     print "Enabling paging..."
     Paging_activate
+
+\</freebasic\>
 
 Das ganze geschieht nach dem initialisieren der IDT und vor dem initialisieren von Multitasking.
 
@@ -176,6 +206,6 @@ Happy Coding, TheThing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
 
-<!-- MediaWiki page 1850; revision 5448; parent 5204; 2009-08-07T14:59:12Z -->
+<!-- MediaWiki page 1850; revision 6147; parent 5448; 2009-10-31T22:37:35Z -->
