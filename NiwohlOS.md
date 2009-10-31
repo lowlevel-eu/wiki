@@ -46,7 +46,21 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hocherfahrenen Informatikern mit jahrelanger Programmiererfahrung, welche sicherlich zu den zukünftigen Leistungsträgern gehören, und DickHuuhn. Sie genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
 
-  
+### XanClic alias Crazy-OS-names
+
+[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") (hochkomplexes Hybridakrobackronym) ist einer der Top-Entwickler von niwohlOS. Er besitzt auf dem Gebiet der Betriebssystementwicklung höchste Kompetenzen, entwickelte er doch schon mehrere Betriebssysteme im Alleingang (MyXomyxota, [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena")) und reichte schon zahlreiche Patches für [\|týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, wie einen AC97-Treiber, USB-Treiber und die hochkomplexe libmaumau, die es den Anwendern ermöglicht, Mau-Mau zu spielen. XanClic ist für den soliden Aufbau, das Grundgerüst in niwohlOS zuständig.
+
+### DerHartmut alias PageFaultHartmut
+
+[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und besitzt beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (qultics und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als "Hobby" neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und h9q+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimieren Stellen zuständig.
+
+### SHyx0rmZ alias HardcoreProgger
+
+[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimiertes Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. er wird oft als "Hardcore-Informatiker" bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **drei** Kerneln ausgestattet, um aus jedem erdenklichen System die höchste Maß an Leistung herauszukitzeln. Desweiteren schrieb der an Vortex, einem Loader, der unter anderem in qultics eingesetzt wird und wohlmöglich von Microsoft patentiert wird. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
+
+### DickHuuhn alias Chiken
+
+[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimiertes Buchstabenkomplex) ist ein Chiken.
 
 ## Frequently Asked Questions (FAQ)
 
@@ -110,6 +124,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6133/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6134/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6133; parent 6132; 2009-10-31T11:11:28Z -->
+<!-- MediaWiki page 2095; revision 6134; parent 6133; 2009-10-31T11:39:35Z -->
