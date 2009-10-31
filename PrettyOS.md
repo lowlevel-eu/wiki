@@ -17,10 +17,6 @@
 
 [\[1\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html)
 
-  
-
-Einleitung
-
 PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei [\[2\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html). Es entstand als Idee im März 2009, führte zu einem dreiteiligen Tutorial, das für Einstieger in die Materie beginnend beim ersten Boot-Vorgang gedacht war, und wird seit Mitte Oktober 2009 von interessierten Leuten diskutiert, umgebaut, gepflegt und erweitert. Zielsetzung ist es, verständlich zum Lernen und zum Experimentieren verwendbar zu sein. Als Arbeitsbasis ist PrettyOS bisher noch nicht ausgelegt, kann sich aber vielleicht noch in diese Richtung entwickeln.
 
 ## Genereller Aufbau
@@ -41,6 +37,6 @@ PrettyOS ist als erste Basis für Ideen der Projektgruppe gedacht und kann daher
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 6142; parent 6141; 2009-10-31T13:14:01Z -->
+<!-- MediaWiki page 2096; revision 6143; parent 6142; 2009-10-31T13:17:19Z -->
