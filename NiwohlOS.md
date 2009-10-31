@@ -48,6 +48,26 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 
   
 
+## Frequently Asked Questions (FAQ)
+
+Da niwohlOS so avantgardistisch ist, ist es natürlich ganz klar, dass beim durchschnittlichen Betrachter direkt einige Fragen auftauchen. Dafür muss man sich nicht schämen. Also, eigentlich doch. Aber nur ein bisschen. Für diese Leuter haben wir ein praktisches FAQ aufgesetzt.
+
+### Mal ehrlich, seid ihr eigentlich 4chan oder so?
+
+Nein, die meisten Entwickler haben immer wesentlich mehr als vier IRC-Channels offen.
+
+### Was ist V.O.M.I.T.?
+
+V.O.M.I.T. steht für "Verbose object-oriented machine-readable information transfer". Unsere besten Designer verbrachten Monate damit, ein ansprechendes und elegeantes Design für diese neue Art der Interprozesskommunikation zu entwerfen.
+
+Dann haben wir aber doch XML-RPC genommen, weil das auch auf die Beschreibung passt.
+
+### Ist niwohlOS in safe language geschrieben?
+
+niwohlOS wird natürlich in C und Assembler geschrieben. Außerdem wird es einen PHP-Intepreter geben, damit wir unseren IPC-Code von Wordpress klauen können. Also kann man beruhigt sein: niwohlOS ist so sicher wie die Rente!
+
+  
+
 ## Kritik
 
 Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
@@ -86,10 +106,10 @@ Folgende Teile müssen noch implementiert werden:
 
 ------------------------------------------------------------------------
 
-Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwickelt. Die genauen Beschreibungen zur Performance und Stabilität im Artikel könnten allerdings von der Wirklichkeit abweichen. Theoretisch.
+Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwickelt. Die genauen Beschreibungen zur Performance und Stabilität im Artikel könnten allerdings von der Wirklichkeit abweichen. Theoretisch. Natürlich stehlen wir auch keinen GPL-Code von Wordpress: Bei der Herstellung dieses OS wurden keine GNUs gequält.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6133/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6132; parent 6131; 2009-10-31T00:05:49Z -->
+<!-- MediaWiki page 2095; revision 6133; parent 6132; 2009-10-31T11:11:28Z -->
