@@ -4,7 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png) |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
-| Akt. Version: | 0.000-i-3 |
+| Akt. Version: | 0.001-o |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -37,10 +37,10 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne
 
 ## Akt. Release
 
-Die aktuelle Freigabe ist 0.000-i-3 (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
+Die aktuelle Freigabe ist 0.001-o (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
 
-- Ankündigung: [Paloxenaforum - "0.000-i-3"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=5)
-- Direktlink: [0.000-i-3.img.bz2](http://www.paloxena.bplaced.net/releases/0.000-i-3.img.bz2)
+- Ankündigung: [Paloxenaforum - "0.001-o"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=13)
+- Direktlink: [0.001-o.img.bz2](http://www.paloxena.bplaced.net/releases/0.001-o.img.bz2)
 
 ## Screenshot
 
@@ -48,6 +48,6 @@ Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 6099; parent 5907; 2009-10-18T12:41:29Z -->
+<!-- MediaWiki page 2045; revision 6146; parent 6099; 2009-10-31T19:35:55Z -->
