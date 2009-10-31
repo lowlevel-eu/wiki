@@ -58,7 +58,7 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 
 [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. er wird oft als "Hardcore-Informatiker" bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **drei** Kerneln ausgestattet, um aus jedem erdenklichen System die höchste Maß an Leistung herauszukitzeln. Des Weiteren schrieb er an Vortex, einem Loader, der unter anderem in qultics eingesetzt wird und womöglich von Microsoft patentiert wird. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
 
-### DickHuuhn alias Chiken
+### DickHuuhn alias DickHuuhn
 
 [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimierter Buchstabenkomplex) ist ein Chiken.
 
@@ -127,6 +127,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6137; parent 6136; 2009-10-31T11:49:51Z -->
+<!-- MediaWiki page 2095; revision 6140; parent 6137; 2009-10-31T12:41:10Z -->
