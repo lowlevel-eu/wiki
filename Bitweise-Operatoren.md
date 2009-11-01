@@ -87,19 +87,18 @@ Das ganze funktioniert natürlich auch mit mehreren Bits gleichzeitig. Interessi
 
 Ist das Ergebnis gleich 0 dann ist es das Bit auch, ist es ungleich 0 dann ist dein Bit gesetzt.
 
+C-Code: \<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
+
 ### Bits-Setzen
 
 Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdings gibt sie diesmal an, welches Bit gesetzt werden soll. Um z. B. die Bits 1,4,5 auf *1* zu setzen erstellt man sich als Maske: 00110010b Im Gegensatz zum Löschen wird jetzt allerdings mit einem einfachen OR verknüpft.
 
     (????????b OR 00110010b) = ??11??1?b
 
-### Bits-Setzen-Löschen in C
-
-\<c\>PORTx \|= (1 \<\< BitNummer); // Bit in PORTx setzen \</c\>  
-\<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
+C-Code: \<c\>PORTx \|= (1 \<\< BitNummer); // Bit in PORTx setzen \</c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 6154; parent 6153; 2009-11-01T23:30:08Z -->
+<!-- MediaWiki page 1757; revision 6155; parent 6154; 2009-11-01T23:39:01Z -->
