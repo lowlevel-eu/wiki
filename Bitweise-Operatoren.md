@@ -95,10 +95,11 @@ Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdin
 
 ### Anwendung in C
 
-PORTx \|= (1 \<\< BitNummer); // Bit in PORTx setzen PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen
+\<c\>PORTx \|= (1 \<\< BitNummer); // Bit in PORTx setzen \</c\>  
+\<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 6152; parent 5157; 2009-11-01T23:24:55Z -->
+<!-- MediaWiki page 1757; revision 6153; parent 6152; 2009-11-01T23:29:11Z -->
