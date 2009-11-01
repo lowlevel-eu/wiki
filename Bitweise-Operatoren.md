@@ -93,13 +93,13 @@ Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdin
 
     (????????b OR 00110010b) = ??11??1?b
 
-### Anwendung in C
+### Bits-Setzen-Löschen in C
 
 \<c\>PORTx \|= (1 \<\< BitNummer); // Bit in PORTx setzen \</c\>  
 \<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 6153; parent 6152; 2009-11-01T23:29:11Z -->
+<!-- MediaWiki page 1757; revision 6154; parent 6153; 2009-11-01T23:30:08Z -->
