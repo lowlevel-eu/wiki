@@ -34,6 +34,8 @@ Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/
 
 Der Kernel ist ein micromonolithischer Modularhybrid. Im Klartext bedeutet das: niwohlOS hat einen monolithischen Kernel, der zur Laufzeit Module einbinden kann. Diese laufen dann mit speziellen Privilegien im Usermode. Dadurch kann das Grundsystem beliebig erweitert werden und auf die individuellen Bedürfnisse jedes einzelnen Users ausgerichtet werden. Gleichzeitig wird aber auch die hohe Performance und die extreme Stabilität gewährleistet. Der monolithische Teil wird so klein wie möglich gehalten, um die vorausgesetzte optimale Performance zu garantieren.
 
+Da der Kernel emmmh (ein micromonlithischer Modularhybrid) ist, wird er auch als "Stoiber" bezeichnet. Hierin soll auch das Ziel KISS (Keep it simple, stupid) zum Ausdruck kommen (in Anerkennung der Leistungen Edmund Stoibers beim Bürokratieabbau in Europa).
+
 tl;dr: Wie Linux, nur geiler.
 
 ### Treiber
@@ -127,6 +129,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6140; parent 6137; 2009-10-31T12:41:10Z -->
+<!-- MediaWiki page 2095; revision 6148; parent 6140; 2009-11-01T10:08:44Z -->
