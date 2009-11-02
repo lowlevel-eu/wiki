@@ -91,10 +91,6 @@ Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompilier
 
     ld -Ttext=0x100000 kernel.o rtlib.o -melf_i386 -o basic.krn
 
-## PureBasic
-
-PureBasic unterscheidet sich von FreeBASIC unter anderem lediglich in der Lizenz: PureBasic wird kommerziell vertrieben. Aber auch in diesem BASIC-Dialekt kann man Kernel schreiben, wie [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") es mit [Camelopardalis](http://gitorious.org/camelopardalis) geschafft hat. Eine Portierung auf den FreeBASIC-Compiler dürfte nicht allzu schwer sein.
-
 ## Weblinks
 
 - <http://www.freebasic.net> - Offizielle englischsprachige Website der FreeBASIC-Entwickler
@@ -102,6 +98,6 @@ PureBasic unterscheidet sich von FreeBASIC unter anderem lediglich in der Lizenz
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 6159; parent 5808; 2009-11-02T11:52:59Z -->
+<!-- MediaWiki page 1624; revision 6163; parent 6159; 2009-11-02T14:13:34Z -->
