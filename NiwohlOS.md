@@ -22,7 +22,7 @@
 -- [Linus Torvalds](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der alte [Kommunist](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
 
   
-**niwohlOS** ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
+**niwohlOS** (Hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
 
 ## Inside niwohlOS
 
@@ -64,7 +64,9 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 
 [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimierter Buchstabenkomplex) ist ein Chiken.
 
-  
+### pocky alias Partynat0r
+
+[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky") (kein hochkomplexes Hybridakrobackronym, dafür aber der Wahrheit) ist vor allem für die GUI zuständig. So ganz nebenbei ist er auch für die mooraalische Unterstützung zu gebrauchen. Er betreut also sozusagen die GUI und die Mooraale. Und die GUI.
 
 ## Frequently Asked Questions (FAQ)
 
@@ -83,6 +85,14 @@ Dann haben wir aber doch XML-RPC genommen, weil das auch auf die Beschreibung pa
 ### Ist niwohlOS in safe language geschrieben?
 
 niwohlOS wird natürlich in C und Assembler geschrieben. Außerdem wird es einen PHP-Intepreter geben, damit wir unseren IPC-Code von Wordpress klauen können. Also kann man beruhigt sein: niwohlOS ist fast so sicher wie die Rente!
+
+### Was war an der GUI nochmal so besonders?
+
+Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele User bereits Erfahrung im Umganng mit D.U.M.M.-heit besitzen, haben wir uns für dieses tolle Konzept entschieden.
+
+### OK... Und was ist D.U.M.M. jetzt genau?
+
+Da du anscheinend nicht genug Erfahrung im Umgang mit D.U.M.M.-heit besitzt, hier die Auflösung: "Deutsches Usermenü mit Mauszeiger".
 
   
 
@@ -129,6 +139,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6151/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6151; parent 6149; 2009-11-01T19:49:57Z -->
+<!-- MediaWiki page 2095; revision 6156; parent 6151; 2009-11-02T07:00:37Z -->
