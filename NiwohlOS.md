@@ -64,9 +64,9 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 
 [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimierter Buchstabenkomplex) ist ein Chiken.
 
-### pocky alias Partynat0r
+### pocky alias 1337h4x0r
 
-[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky") (kein hochkomplexes Hybridakrobackronym, dafür aber der Wahrheit) ist vor allem für die GUI zuständig. So ganz nebenbei ist er auch für die mooraalische Unterstützung zu gebrauchen. Er betreut also sozusagen die GUI und die Mooraale. Und die GUI.
+[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky") (kein hochkomplexes Hybridakrobackronym und kein hochoptimierter Buchstabenkomplex, dafür aber der Wahrheit) ist vor allem für die noch nicht vorhandene, noch nicht geplante und wahrscheinlich auch gar nicht realsiert-werdende GUI zuständig. So ganz nebenbei ist er auch für die mooraalische Unterstützung zu gebrauchen. Er betreut also sozusagen die GUI und die Mooraale. Und die GUI.
 
 ## Frequently Asked Questions (FAQ)
 
@@ -137,6 +137,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6157; parent 6156; 2009-11-02T07:03:57Z -->
+<!-- MediaWiki page 2095; revision 6162; parent 6157; 2009-11-02T12:21:21Z -->
