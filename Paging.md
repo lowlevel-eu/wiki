@@ -33,41 +33,37 @@ Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 i
 
 Ein Pagedirectory enthält 1024 Eintrage a 4 Byte. Ein Pagedirectory-Eintrag kann jeweils auf ein Pagetable zeigen. Pagedirectories (wie auch Pagetables) müssen immer 4k-aligned sein, d.h sie füllen genau eine Page aus.
 
-| 31..12 | 11..9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| ----------- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| Pagetable | Verf. | G | S | 0 | A | C | W | U | R | P |
-
-Verf.: Diese Bits sind frei verfügbar. Sie können z.B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen.
-
-**G**: Wird ignoriert
-
-**S**: Gibt die Größe der Page an. 0 steht für 4kB, 1 für 4MB (oder 2MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4MB-Pages) oder PAE-Bit (2MB-Pages) gesetzt ist.
-
-**A**: Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt.
-
-**C**: Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt.
-
-**W**: Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt.
-
-**U**: Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0.
-
-**R**: Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden.
-
-**P**: Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden.
+| Bit | Beschreibung |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden. |
+| 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
+| 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
+| 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
+| 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
+| 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
+| 6 | Normalerweise 0. |
+| 7 | Gibt die Größe der Page an. 0 steht für 4kB, 1 für 4MB (oder 2MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4MB-Pages) oder PAE-Bit (2MB-Pages) gesetzt ist. |
+| 8 | Wird ignoriert |
+| 9 - 11 | Diese Bits sind frei verfügbar. Sie können z.B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 12 - 31 | Pagetable |
 
 ## Page Tables
 
 Eine Page Table enthält 1024 Einträge a 4 Byte. Jeder Eintrag zeigt auf eine physische Page. Page Tables müssen 4k-aligned sein und füllen somit eine ganze Page.
 
-| 31..12 | 11..9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| -------------- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| Page (phys.) | Verf. | G | 0 | D | A | C | W | U | R | P |
-
-Hier werden nur neue Abkürzungen geklärt, andere sind unter [Page-Directory](#page-directory) zu finden.
-
-**G**: Wenn G gesetzt ist, wird der TLB (s.u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z.B Kernel)
-
-**D**: Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt.
+| Bit | Beschreibung |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | Gibt an ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z.B. für Swapping genutzt werden. |
+| 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
+| 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
+| 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
+| 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
+| 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
+| 6 | Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt. |
+| 7 | Normalerweise 0. |
+| 8 | Wenn G gesetzt ist, wird der TLB (s.u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z.B Kernel) |
+| 9 - 11 | Diese Bits sind frei verfügbar. Sie können z.B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 12 - 31 | Page (phys.) |
 
 ## Translation Lookaside Buffer
 
@@ -100,6 +96,6 @@ Es besteht aber auch die Möglichkeit, Zugriff auf den gesamten physischen Speic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 5443; parent 5431; 2009-08-07T14:57:11Z -->
+<!-- MediaWiki page 1496; revision 6164; parent 5443; 2009-11-02T19:11:00Z -->
