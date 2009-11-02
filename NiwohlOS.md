@@ -92,9 +92,7 @@ Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele
 
 ### OK... Und was ist D.U.M.M. jetzt genau?
 
-Da du anscheinend nicht genug Erfahrung im Umgang mit D.U.M.M.-heit besitzt, hier die Auflösung: "Deutsches Usermenü mit Mauszeiger".
-
-  
+Da du anscheinend nicht genug Erfahrung im Umgang mit D.U.M.M.-heit besitzt, hier die Auflösung: "Deutsches Userinterface mit Mauszeiger".
 
 ## Kritik
 
@@ -139,6 +137,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6156; parent 6151; 2009-11-02T07:00:37Z -->
+<!-- MediaWiki page 2095; revision 6157; parent 6156; 2009-11-02T07:03:57Z -->
