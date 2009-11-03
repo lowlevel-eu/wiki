@@ -21,11 +21,11 @@ PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei [\[2\]](htt
 
 ## Genereller Aufbau
 
-PrettyOS besteht momentan aus den Bereichen Bootloader Stage 1, Bootloader Stage 2, Kernel und User-Space. Die beiden Bootloader sind in Assembler (NASM) geschrieben und verwenden bisher FAT12. BL1 (in Sektor 1) lädt BL2 (Datei boot2.sys). Dieser wiederum startet den bisher binären Kernel (ckernel.sys). Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (Intel und AT&T Syntax) gehalten. Der User-Space dient bisher nur als Demonstartion für die API (syscalls) und wurde ebenfalls in C geschrieben. Bisher ist nur eine rudimentäre Shell vorhanden.
+PrettyOS besteht momentan aus den Bereichen Bootloader Stage 1, Bootloader Stage 2, Kernel und User-Space. Die beiden Bootloader sind in Assembler (NASM) geschrieben und verwenden bisher FAT12. BL1 (in Sektor 1) lädt BL2 (Datei boot2.sys). Dieser wiederum startet den bisher binären Kernel (ckernel.sys). Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (Intel und AT&T Syntax) gehalten. Der User-Space dient bisher nur als Demonstration für die API (syscalls) und wurde ebenfalls in C geschrieben. Bisher ist nur eine rudimentäre Shell vorhanden.
 
 ### Elemente des Kernels
 
-Der Kernel bietet bisher grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel-Heap, Multitasking, syscalls und einige einfache Treiber.
+Der Kernel bietet bisher grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel-Heap, Multitasking, syscalls und einige einfache Treiber. Er kann durch GRUB und durch die beiden eigenen Bootloader aufgerufen werden.
 
 ### Elemente des Userspace
 
@@ -37,6 +37,6 @@ PrettyOS ist als erste Basis für Ideen der Projektgruppe gedacht und kann daher
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6171/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6172/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 6171; parent 6143; 2009-11-03T23:36:14Z -->
+<!-- MediaWiki page 2096; revision 6172; parent 6171; 2009-11-03T23:40:28Z -->
