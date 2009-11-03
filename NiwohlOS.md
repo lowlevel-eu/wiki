@@ -116,6 +116,16 @@ Folgende Teile sind fertig implementiert:
 
   
 
+## Teilweise implementiert
+
+Folgende Teile sind in Arbeit und schon teilweise implementiert:
+
+- niwohunloader: Kann beide Kernel laden
+- stoiber32: Kann schon Exceptions und lernt gerade [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
+- stoiber64: Kann bald Exceptions
+
+  
+
 ## To-Do
 
 Folgende Teile müssen noch implementiert werden:
@@ -123,7 +133,7 @@ Folgende Teile müssen noch implementiert werden:
 - Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
 - niwohunloader
 - Kernel
-- libc
+- lib.chiken
 - Signifanten
 - Unicode-Support (für ẞ und です)
 - Programme
@@ -137,6 +147,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6167/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6166; parent 6165; 2009-11-03T14:23:11Z -->
+<!-- MediaWiki page 2095; revision 6167; parent 6166; 2009-11-03T14:27:48Z -->
