@@ -1,9 +1,9 @@
 # NiwohlOS
 
 | niwohlOS<br>*"In God we trust – Da hilft nur noch beten"* |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Cjreek<br>[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
+| Entwickler: | Cjreek<br>[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>Paddy<br>[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.1.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT/X11 |
 | OS-Eigenschaften |  |
@@ -71,6 +71,10 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 ### Cjreek alias Sado-Masochist aka Windows-User
 
 Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessionelle Entwickler, der zur Zeit bei einem Tierversuch teilnimmt, bei welchem getestet wird, wie sich die dauerhafte ernsthafte Nutzung von dem sogenannten "Betriebssystem" "Windows" auf Mensch und Maschine auswirkt. Er hat ebenfalls weitreichende Erfahrungen in der Betriebssystementwicklung und entwickelt den noch gar nicht offiziellen und eigentlich noch geheimen Bootloader ohne Namen, der irgendwann als Ersatz für den hochprofessionellen GRUB dienen soll.
+
+### Paddy alias Paddynator
+
+Paddy (kein Mensch weiß, wer das ist) ist ein geheminisvoller Entwickler, der sich zu unserem Projekt gesellt hat. Auf einmal war er da, wie aus dem Nichts tauchte er in \#lost und \#niwohlos auf. Keiner weiß wer er ist, keiner weiß ob er was kann. Man weiß nur, dass er was gegen kwolf zu haben scheinen mag...
 
 ## Frequently Asked Questions (FAQ)
 
@@ -151,6 +155,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6170/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6169; parent 6168; 2009-11-03T15:40:18Z -->
+<!-- MediaWiki page 2095; revision 6170; parent 6169; 2009-11-03T19:19:00Z -->
