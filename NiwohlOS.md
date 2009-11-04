@@ -130,9 +130,7 @@ Folgende Teile sind in Arbeit und schon teilweise implementiert:
 
 - niwohunloader: Kann beide Kernel laden
 - stoiber32: Kann schon Exceptions und lernt gerade [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
-- stoiber64: Kann bald Exceptions
-
-  
+- stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung (Man könnte auch sagen: Wie stoiber32 nur [x64iger](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"))
 
 ## To-Do
 
@@ -155,6 +153,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6177/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6177; parent 6176; 2009-11-04T15:12:28Z -->
+<!-- MediaWiki page 2095; revision 6178; parent 6177; 2009-11-04T15:13:59Z -->
