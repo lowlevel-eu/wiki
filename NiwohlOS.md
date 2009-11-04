@@ -137,6 +137,7 @@ Folgende Teile sind in Arbeit und schon teilweise implementiert:
 Folgende Teile müssen noch implementiert werden:
 
 - Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
+- Geeignetes Logo ~~von 4chan klauen~~ erstellen
 - niwohunloader
 - Kernel
 - libc.hiken
@@ -153,6 +154,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6179/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6178; parent 6177; 2009-11-04T15:13:59Z -->
+<!-- MediaWiki page 2095; revision 6179; parent 6178; 2009-11-04T15:15:26Z -->
