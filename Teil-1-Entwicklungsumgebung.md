@@ -1,8 +1,8 @@
 # Teil 1 - Entwicklungsumgebung
 
 |  |  |  |
-| ----- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-|  | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| « [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
 
 ## Ziel
 
@@ -70,11 +70,11 @@ Um ein größeres Stück Software zu entwickeln (erfahrenere Programmierer werde
 Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird.
 
 |  |  |  |
-| ----- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-|  | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| « [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 5544; parent 5531; 2009-08-10T15:33:35Z -->
+<!-- MediaWiki page 1919; revision 6185; parent 5544; 2009-11-05T20:50:15Z -->
