@@ -1,5 +1,9 @@
 # OS-Dev für Einsteiger
 
+|  |  |  |
+| ----- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|  | **Navigation** | [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") » |
+
 Okay, Du hast also beschlossen, dass Du Dein eigenes Betriebssystem schreiben willst? Dann bist du hier genau richtig.
 
 Dieser Artikel versucht, Dir einen Überblick zu geben, welche Fragen Du Dir stellen solltest und wie Du die Sache am geschicktesten angehst. Er soll sozusagen einen Wegweiser durch das Wiki darstellen, der Dir am Anfang hilft, die relevanten Themen auf Anhieb zu finden.
@@ -164,8 +168,12 @@ Auch der tollste Kernel mit [Multitasking](https://github.com/lowlevel-eu/wiki/w
 
 Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") oder [Festplatte](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") lesen zu wollen. Dafür werden zwei Treiber benötigt: einer für das [Diskettenlaufwerk](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")/die [Festplatte](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") und ein [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Wie sich die Treiber in Dein System einfügen sollen, hast Du bei der Wahl Deiner Architektur ja schon grob entschieden. Jetzt ist es an der Zeit die Details festzulegen. Für die Treiber musst Du auch erstmal eine Schnittstelle definieren und Dir genau überlegen wie die Kommunikation zwischen Clients und den Treibern ablaufen soll. Dabei ist es sicher keine schlechte Idee, ein bisschen in den Schnittstellen von anderen [Betriebssystemen](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem") zu stöbern. Weiter könntest Du Dir auch überlegen dir [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), das von der Lowlevel-Community entwickelt wird, genauer anzusehen, denn damit sparst du unter Umständen viel Zeit und Ärger.
 
+|  |  |  |
+| ----- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|  | **Navigation** | [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") » |
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6105/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6105; parent 5541; 2009-10-24T10:22:14Z -->
+<!-- MediaWiki page 1619; revision 6184; parent 6105; 2009-11-05T20:49:36Z -->
