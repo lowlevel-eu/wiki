@@ -14,9 +14,9 @@ Umrechnung von LBA zu [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-He
 
 ` C = LBA / (mH*mS) H = (LBA mod (mH*mS)) / mS S = ((LBA mod (mH*mS)) mod mS) + 1 `
 
-## Beispiel für eine 3,5"-Diskette
+## Beispiel für eine 3,5"-HD-Diskette
 
-Da es im Bootsektor auf jedes Byte ankommt, habe ich mich darum bemüht, die Umrechnung möglichst klein zu machen. \<asm\>; in ax steht die Sektornummer
+Da es im Bootsektor auf jedes Byte ankommt, habe ich mich darum bemüht, die Umrechnung möglichst klein zu machen. Die Zahlenwerte (Sektoren pro Zylinder und Anzahl der Köpfe) gelten für eine 3,5"-Diskette mit 1440 kB Speicherplatz. \<asm\>; in ax steht die Sektornummer
 
 C
 
@@ -32,6 +32,6 @@ inc dx  ; Den Rest um 1 erhöhen mov \[tmpc\], dl ; Und ebenfalls sichern\</as
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
 
-<!-- MediaWiki page 1442; revision 6189; parent 6188; 2009-11-06T19:47:52Z -->
+<!-- MediaWiki page 1442; revision 6190; parent 6189; 2009-11-06T19:52:49Z -->
