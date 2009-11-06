@@ -6,19 +6,18 @@ Bei der Angabe des Sektors wird immer bei 1 begonnen. Der erste Sektor wird also
 
 Umrechnung von CHS nach LBA:
 
-    Abkürung Bedeutung
-       
-    mS       maximale Anzahl Sektoren (auf einem Zylinder)
-    mH       maximale Anzahl Köpfe
-       
-    S        Sektor
-    H        Kopf
-    C        Zylinder
+| Abkürzung | Bedeutung |
+| ----------- | ---------------------------------- |
+| mS | Anzahl der Sektoren pro Zylinder |
+| mH | Anzahl der Köpfe |
+| S | Sektor |
+| H | Kopf |
+| C | Zylinder |
 
-    LBA = (C*mH*mS) + (H*mS) + S - 1
+` LBA = (C*mH*mS) + (H*mS) + S - 1 `
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5566/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1440/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1440/index.html)
 
-<!-- MediaWiki page 1440; revision 5566; parent 4809; 2009-08-11T11:04:06Z -->
+<!-- MediaWiki page 1440; revision 6191; parent 5566; 2009-11-06T19:54:03Z -->
