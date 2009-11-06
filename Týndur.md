@@ -100,7 +100,6 @@ Release am 05.07.2009
 
 ## Links
 
-- [Builds von jeder Revision](http://nightlies.tyndur.org/)
 - [WebGit](http://git.tyndur.org/)
 - [Mailingliste](http://list.tyndur.org/mailman/listinfo/tyndur-devel) ([Archiv](http://list.tyndur.org/pipermail/tyndur-devel/))
 - [Revisionsaktuelle Dokumentation von CDI](http://lpt.tyndur.org/cdi/)
@@ -108,6 +107,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 6186; parent 6107; 2009-11-06T18:03:53Z -->
+<!-- MediaWiki page 1796; revision 6187; parent 6186; 2009-11-06T18:25:53Z -->
