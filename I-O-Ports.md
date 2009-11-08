@@ -8,7 +8,7 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x000 | 0x01F | [DMA Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access") (8237A-5) |
 | 0x020 | 0x021 | [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) |
-| 0x040 | 0x043 | [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) |
+| 0x040 | 0x043 | [Programmable Interval Timer](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") (PIT) |
 | 0x060 | 0x063 | [Tastaturcontroller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") |
 | 0x070 | 0x071 | [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") |
 | 0x080 | 0x083 | [DMA Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access") (8237A-5) |
@@ -44,6 +44,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6192/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 5825; parent 5813; 2009-09-01T09:01:50Z -->
+<!-- MediaWiki page 1543; revision 6192; parent 5825; 2009-11-08T14:13:43Z -->
