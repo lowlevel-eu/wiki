@@ -84,6 +84,6 @@ Gratulation, ein Cross-Compiler für die x86-64-Plattform wurde erstellt! Die To
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6195/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
 
-<!-- MediaWiki page 2060; revision 5781; parent 5777; 2009-08-28T13:43:02Z -->
+<!-- MediaWiki page 2060; revision 6195; parent 5781; 2009-11-08T23:49:04Z -->
