@@ -111,8 +111,7 @@ Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
 - [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#3](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"): *"Astrein."*
 - Zufriedener Benutzer: *"Wer sind Sie, und wie sind Sie in mein Haus gekommen?"*
 - Zufriedener Black Hat: *"Oh EXPLOITABLE!"*
-
-  
+- [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes"): *"niwohlOS \<-- Name finde ich gut, ein Os, das sich nie Wohl fühlt..."niw" rückwärts erinnert allerdings an "win""*
 
 ## Fertig implementiert
 
@@ -154,6 +153,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6179/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6179; parent 6178; 2009-11-04T15:15:26Z -->
+<!-- MediaWiki page 2095; revision 6193; parent 6179; 2009-11-08T19:26:22Z -->
