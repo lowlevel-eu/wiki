@@ -49,13 +49,12 @@ Die binutils wurden dann erfolgreich gebaut. Jetzt geht's weiter zum gcc.
 
 ### Halt, da fehlt noch was
 
-Um den gcc zu bauen, benötigt es zwei (sofern nicht bereits installiert) Bibliotheken: Die GMP und MPFR-Libraries. Diese müssen ebenfalls runtergeladen und per ./configure, make, make install gebaut und installiert werden. Hier allerdings **erst** GMP **dann** MPFR bauen und installieren.
+Um den gcc zu bauen, benötigt es zwei (sofern nicht bereits installiert) Bibliotheken: Die GMP und MPFR-Libraries. Diese können durch die Paketverwaltung bezogen werden oder müssen gegenebenfalls runtergeladen und von Hand gebaut werden.
 
-gcc wird beim configure schon meckern, wenn eines der Librarys fehlt.
+- GMP
+- [MPFR](http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2)
 
-TODO: Links dazu einfügen, find' ich grad' nicht \>.\<
-
-  
+Hierbei ist zu beachten, **erst** GMP zu bauen und zu installieren und **dann** MPFR zu bauen und zu installieren. Gebaut werden beide Libraries mit dem bekannten Dreisatz ./configure, make, (sudo) make install.
 
 ### Jetzt aber
 
@@ -84,6 +83,6 @@ Gratulation, ein Cross-Compiler für die x86-64-Plattform wurde erstellt! Die To
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6195/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
 
-<!-- MediaWiki page 2060; revision 6195; parent 5781; 2009-11-08T23:49:04Z -->
+<!-- MediaWiki page 2060; revision 6196; parent 6195; 2009-11-08T23:52:54Z -->
