@@ -26,10 +26,9 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 ## ARM
 
 - [ARM Architecture Reference Manual](http://www.arm.com/miscPDFs/14128.pdf)
-- [\[1\]](http://infocenter.arm.com/help/index.jsp)
+- [Offizielles Infocenter, alles über ARM](http://infocenter.arm.com/help/index.jsp)
 - [Building Bare-Metal ARM Systems with GNU](http://www.embedded.com/design/opensource/200000632?_requestid=64661)
 - [ARM PrimeCell Color LCD Controller (PL110)](http://www.kmcguire.org/doku.php?id=arm:arm_primecell_color_lcd_controller_pl110)
-- [\[2\]](http://www.kmcguire.org/doku.php?id=arm:tinkering)
 
 ## Lowlevel-Tutorials
 
@@ -48,6 +47,6 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6194/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 5518; parent 5517; 2009-08-09T08:49:53Z -->
+<!-- MediaWiki page 1437; revision 6194; parent 5518; 2009-11-08T23:40:08Z -->
