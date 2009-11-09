@@ -1,34 +1,34 @@
 # ARM Cross-Compiler
 
-Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren basierenden Architekturen erstellen will aber selber nicht auf einer solchen entwickelt, muss sich einen Cross-Compiler erstellen. In diesem Artikel wird erklärt, wie ein Cross-Compiler unter Linux für die ARM-Architektur erstellt wird.
+Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren basierenden Architekturen erstellen will, aber selber nicht auf einer solchen entwickelt, muss sich einen Cross-Compiler erstellen bzw. verwenden. In diesem Artikel wird erklärt, wie ein Cross-Compiler unter Linux für die ARM-Architektur erstellt wird.
 
   
 
 ## Vorbereitungen
 
-Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 09. November 2009) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
+Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 09. November 2009) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
 Es werden nun ein paar Variablen erstellt:
 
     $ export PREFIX=/usr/cross/arm
     $ export TARGET=arm-unknown-linux-gnu
 
-Der Pfad unter PREFIX kann geändert werden, wenn die Cross-Tools woanders compilliert werden sollen.
+Der Pfad unter PREFIX kann geändert werden, wenn die Cross-Tools an anderer Stelle compilliert werden sollen.
 
 ## binutils bauen
 
-Sofern nicht schon geschehen, sollte man jetzt das binutils-Paket entpacken, in diesem Beispiel werden die binutils nach */usr/src/cross-arm-binutils* entpackt. Nun sollte ein seperates Verzeichnis erstellt werden, in welchem die binutils gebaut werden, in unserem Beispiel ist das */usr/src/binutils-arm*. Nun wechselt man in eben dieses Verzeichnis und ruft configure wie folgt auf:
+Sofern nicht schon geschehen, sollte man jetzt das binutils-Paket entpacken, in diesem Beispiel werden die binutils nach */usr/src/cross-arm-binutils* entpackt. Nun sollte ein separates Verzeichnis erstellt werden, in welchem die binutils gebaut werden, in unserem Beispiel ist das */usr/src/binutils-arm*. Nun wechselt man in eben dieses Verzeichnis und ruft configure wie folgt auf:
 
     $ ../cross-arm-binutils/configure --target=$TARGET --prefix=$PREFIX
 
-Nach erfolgreichem Configure, bei dem an und für sich nichts schief gehen sollte, können die binutils nun gebaut werden per
+Nach erfolgreichem configure können die binutils nun gebaut werden mittels
 
     $ make all
     # make install
 
 ### Fehler beim Bauen
 
-Unter Ubuntu kann es passieren, dass make nicht reibungslos durchläuft und mit einem Fehler die Kompillierung abbricht:
+Unter Ubuntu kann es passieren, dass make nicht reibungslos durchläuft und mit einem Fehler die Kompilierung abbricht:
 
     cc1: warnings being treated as errors
     ../../cross-arm-binutils/gas/config/tc-arm.c: In function ‘make_mapping_symbol’:
@@ -38,7 +38,7 @@ Hier hilft entweder das Entfernen des Compiler-Flags "-Werror" oder man editiert
 
     $ vim ../cross-arm-binutils/gas/config/tc-arm.c
 
-Und schreibt nach dem if-Statement in Zeile **2489** zwei Klammern:
+und schreibt nach dem if-Statement in Zeile **2489** zwei Klammern:
 
 **Vorher** \<c\>
 
@@ -61,7 +61,7 @@ Und schreibt nach dem if-Statement in Zeile **2489** zwei Klammern:
 
 ## gcc bauen
 
-Nun geht's an den gcc: Hier gilt auch wieder, sofern nicht schon geschehen, den gcc zu entpacken, in diesem Beispiel nach */usr/src/cross-arm-gcc*. Nun sollte, genau wie bei den binutils, ein seperates Verzeichnis erstellt werden, in welchem der gcc gebaut wird, in unserem Beispiel ist das */usr/src/gcc-arm*. Nun wechselt man in eben dieses Verzeichnis und setzt erst den neuen Pfad zu den ARM-binutils:
+Nun geht's an den gcc: Hier gilt auch wieder, sofern nicht schon geschehen, den gcc zu entpacken, in diesem Beispiel nach */usr/src/cross-arm-gcc*. Nun sollte, genau wie bei den binutils, ein separates Verzeichnis erstellt werden, in welchem der gcc gebaut wird, in unserem Beispiel ist das */usr/src/gcc-arm*. Nun wechselt man in eben dieses Verzeichnis und setzt erst den neuen Pfad zu den ARM-binutils:
 
     $ export PATH=$PATH:$PREFIX/bin
 
@@ -69,7 +69,7 @@ Dann ruft man configure wie folgt auf:
 
     $ ../cross-arm-gcc/gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c --without-headers
 
-Nach erfolgreichem configure kann der gcc per
+Nach erfolgreichem configure kann der gcc mittels
 
     $ make all-gcc
     # make install-gcc
@@ -78,13 +78,13 @@ gebaut und installiert werden.
 
 ### Fehler beim configure
 
-Eventuell kann es sein, dass configure mit einem Fehler abbricht, die Libraries **GMP** und/oder **MPFR** seien nicht installiert. Diese müssen dann per Paketverwaltung oder von Hand installiert werden. Hier kann GMP und [hier](http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2) MPFR heruntergeladen werden, falls selbige nicht über die Paketverwaltung der Distribution erhältlich sind. Gebaut werden beide mit dem bekannten Dreisatz *./configure, make, make install*.
+Eventuell kann es sein, dass configure mit der Fehlermeldung abbricht, dass die Libraries **GMP** und/oder **MPFR** nicht installiert seien. Diese müssen dann per Paketverwaltung oder von Hand installiert werden. Hier kann GMP und [hier](http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2) MPFR heruntergeladen werden, falls selbige nicht über die Paketverwaltung der Distribution erhältlich sind. Gebaut werden beide mit dem in Linux bekannten Dreisatz *./configure, make, make install*.
 
   
 
 ## Fertig!
 
-Wenn alles geklappt hat wurde nun ein Cross-Compiler für ARM-Architekturen erstellt. Die Tools befinden sich (im Beispiel dieses Artikels) unter */usr/cross/arm*.
+Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen erstellt. Die Tools befinden sich (im Beispiel dieses Artikels) unter */usr/cross/arm*.
 
   
 
@@ -96,6 +96,6 @@ Wenn alles geklappt hat wurde nun ein Cross-Compiler für ARM-Architekturen erst
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 6208; parent 6203; 2009-11-09T01:14:09Z -->
+<!-- MediaWiki page 2099; revision 6237; parent 6208; 2009-11-09T16:47:56Z -->
