@@ -18,8 +18,8 @@ Falls man sich noch nicht auf der Shell befindet, sollte man **jetzt** zu selbig
 
 Anschließend werden ein paar Variablen gesetzt:
 
-    export PREFIX=/usr/cross
-    export TARGET=x86_64-elf
+    $ export PREFIX=/usr/cross
+    $ export TARGET=x86_64-elf
 
   
 PREFIX kann mit dem Verzeichnis ersetzt werden, wo die Tools später landen sollen.
@@ -83,6 +83,6 @@ Gratulation, ein Cross-Compiler für die x86-64-Plattform wurde erstellt! Die To
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6204/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
 
-<!-- MediaWiki page 2060; revision 6198; parent 6197; 2009-11-09T00:18:41Z -->
+<!-- MediaWiki page 2060; revision 6204; parent 6198; 2009-11-09T01:07:22Z -->
