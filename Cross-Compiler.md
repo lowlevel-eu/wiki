@@ -1,6 +1,6 @@
 # Cross-Compiler
 
-Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die verwendete (Hostsystem, kurz host) erzeugt. Die Zielplattform kann sich dabei sowohl bezüglich desBetriebssystems als auch des verwendeten Prozessors unterscheiden.
+Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die verwendete (Hostsystem, kurz host) erzeugt. Die Zielplattform kann sich dabei sowohl bezüglich des Betriebssystems als auch des verwendeten Prozessors unterscheiden.
 
   
 
@@ -130,6 +130,6 @@ Windows unterstützt nativ kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6235/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 6235; parent 6233; 2009-11-09T16:38:46Z -->
+<!-- MediaWiki page 1628; revision 6236; parent 6235; 2009-11-09T16:40:22Z -->
