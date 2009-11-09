@@ -4,21 +4,21 @@
 | ----- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 |  | **Navigation** | [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") » |
 
-Okay, Du hast also beschlossen, dass Du Dein eigenes Betriebssystem schreiben willst? Dann bist du hier genau richtig.
+Okay, du hast also beschlossen, dass du dein eigenes Betriebssystem schreiben willst? Dann bist du hier genau richtig.
 
-Dieser Artikel versucht, Dir einen Überblick zu geben, welche Fragen Du Dir stellen solltest und wie Du die Sache am geschicktesten angehst. Er soll sozusagen einen Wegweiser durch das Wiki darstellen, der Dir am Anfang hilft, die relevanten Themen auf Anhieb zu finden.
+Dieser Artikel versucht, dir einen Überblick zu geben, welche Fragen du dir stellen solltest und wie du die Sache am geschicktesten angehst. Er soll sozusagen einen Wegweiser durch das Wiki darstellen, der dir am Anfang hilft, die relevanten Themen auf Anhieb zu finden.
 
-Auf der anderen Seite wird er sicher auch die eine oder andere Frage offen lassen. Zögere nicht, Dich im [Forum](http://lowlevel.brainsware.org/forum) anzumelden und nachzufragen. Der harte Kern der Community ist auch im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") anzutreffen. Falls Du Probleme mit der Anmeldung im Forum haben solltest, kannst Du Dich dort melden.
+Auf der anderen Seite wird er sicher auch die eine oder andere Frage offen lassen. Zögere nicht, dich im [Forum](http://lowlevel.brainsware.org/forum) anzumelden und nachzufragen. Der harte Kern der Community ist auch im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") anzutreffen. Falls du Probleme mit der Anmeldung im Forum haben solltest, kannst du dich dort melden.
 
 ## Vor dem Start
 
-Frisch ans Werk, Editor und Compiler ausgepackt – aber halt! Bevor es wirklich losgeht, solltest Du Dir einige Fragen beantworten, damit Du weißt, was Du überhaupt entwickeln willst und worüber Du Informationen suchen musst.
+Frisch ans Werk, Editor und Compiler ausgepackt – aber halt! Bevor es wirklich losgeht, solltest du dir einige Fragen beantworten, damit du weißt, was du überhaupt entwickeln willst und worüber du Informationen suchen musst.
 
-### Willst Du wirklich ein OS schreiben?
+### Willst du wirklich ein OS schreiben?
 
-Die Frage klingt vielleicht seltsam, aber sie ist genau so gemeint, wie sie da steht. Willst Du wirklich ein OS entwickeln? Ist Dir klar, was ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") macht?
+Die Frage klingt vielleicht seltsam, aber sie ist genau so gemeint, wie sie da steht. Willst du wirklich ein OS entwickeln? Ist dir klar, was ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") macht?
 
-Wenn Du in erster Linie an eine grafische Oberfläche denkst, bist Du hier womöglich falsch. Grafische Oberflächen sind ein interessantes Thema – aber eine vollkommen andere Baustelle. Ein OS ist die [Schnittstelle zur Hardware](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL"). Das heißt, Du wirst eine [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") bauen, einen [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für störrische Hardware. Du wirst alles tun, nur keine bunten Pixel auf den Bildschirm bringen – oder falls doch, wird dir direkt anschließend die saubere Basis fehlen, damit man mit diesen Pixeln auch etwas sinnvolles anfangen kann.
+Wenn du in erster Linie an eine grafische Oberfläche denkst, bist du hier womöglich falsch. Grafische Oberflächen sind ein interessantes Thema – aber eine vollkommen andere Baustelle. Ein OS ist die [Schnittstelle zur Hardware](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL"). Das heißt, du wirst eine [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") bauen, einen [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für störrische Hardware. Du wirst alles tun, nur keine bunten Pixel auf den Bildschirm bringen – oder falls doch, wird dir direkt anschließend die saubere Basis fehlen, damit man mit diesen Pixeln auch etwas sinnvolles anfangen kann.
 
 Du wirst dich mit vielen Fehlern herumschlagen müssen, du wirst trockene Spezifikationen, etliche Artikel und [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials") lesen müssen und manchmal stundenlang über einem Problem hängen und darüber grübeln, wie man es (am besten oder überhaupt) löst. Du wirst eine Menge fremden Code lesen müssen, eventuell nicht in der Sprache, mit der du dein OS programmierst (falls du dich dazu entscheidest, nicht in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu programmieren). Du wirst dich selbst beim Kopieren von fremden Code ertappen, was aber der falsche Weg ist, denn beim Kopieren von Code lernt man nichts. Du wirst einige Wochen, wenn nicht gar Monate brauchen, bis du alles verstanden hast. Und selbst dann gibt es immer noch Dinge, die dir Kopfschmerzen bereiten. Es wird immer das ein oder andere Problem, den ein oder anderen Bug geben. Das ist aber in der Entwicklung von nativen Anwendungen auch nicht anders.
 
@@ -166,6 +166,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6228/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6229/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6228; parent 6227; 2009-11-09T13:50:31Z -->
+<!-- MediaWiki page 1619; revision 6229; parent 6228; 2009-11-09T13:52:15Z -->
