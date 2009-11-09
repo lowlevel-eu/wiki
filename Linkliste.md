@@ -11,12 +11,10 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 
 <!-- -->
 
-- [Ralf Brown's Interruptliste (RBIL)](http://www.cs.cmu.edu/~ralf/files.html) - Eine sehr ausführliche Liste mit Beschreibungen zu vielen Interrupts, IO Ports, geemappten Speicheradressen und anderen Dingen. (Auszug: lists of I/O port, CMOS, and memory locations, far-call entry points, model-specific registers, and system-management mode state save areas.  
-    
-  Interrupts: Sei es BIOS, VGA/VESA-BIOS oder DOS, nahezu alles wichtige zu den Interrupts ist hier zu finden. Für eine bessere und schnellere Übersicht der Interrupt Nummern gibt es hier eine [Matrixübersicht](http://www.ctyme.com/intr/int.htm).  
-    
-  IO Ports: Diese Informationen befinden sich in 3 Dateien (PORTS.A, PORTS.B und PORTS.C) in diesem Zip Archiv [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)  
-    
+- [Ralf Brown's Interruptliste (RBIL)](http://www.cs.cmu.edu/~ralf/files.html) - Eine sehr ausführliche Liste mit Beschreibungen zu vielen Interrupts, IO Ports, geemappten Speicheradressen und anderen Dingen. (Auszug: lists of I/O port, CMOS, and memory locations, far-call entry points, model-specific registers, system-management mode, state save areas).
+  - Interrupts: Sei es BIOS, VGA/VESA-BIOS oder DOS, nahezu alles wichtige zu den Interrupts ist hier zu finden. Für eine bessere und schnellere Übersicht der Interrupt Nummern gibt es hier eine [Matrixübersicht](http://www.ctyme.com/intr/int.htm).
+  - IO Ports: Diese Informationen befinden sich in 3 Dateien (PORTS.A, PORTS.B und PORTS.C) in diesem Zip Archiv [inter61d.zip](http://www.cs.cmu.edu/~ralf/interrupt-list/inter61d.zip)  
+      
 - [FAT12/16](http://members.inode.at/anton.zechner/az/FatFormat.htm) - Das FAT12/16 Kurz und verständlich.
 
 <!-- -->
@@ -47,6 +45,6 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6194/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6212/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 6194; parent 5518; 2009-11-08T23:40:08Z -->
+<!-- MediaWiki page 1437; revision 6212; parent 6194; 2009-11-09T01:53:35Z -->
