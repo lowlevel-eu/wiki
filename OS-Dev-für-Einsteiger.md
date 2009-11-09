@@ -74,7 +74,7 @@ Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schr
 
 #### Äh ja, nochmal auf Deutsch bitte
 
-Im **[vierten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")** der Reihe "OS-Dev für Einsteiger" wird genau erklärt, wie du dir einen einfachen Kernel in C und per GRUB aufbaust. Du wirst auch auf etwas [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") stoßen. Solltest du kein Assembler beherrschen, keine Bange: Du brauchst nur ganz wenig für die Betriebssystementwicklung. Wenn du keinen Plan hast, wie du in Assembler programmierst, dann les' dir den **zweiten Teil** des Reihe "OS-Dev für Einsteiger" durch, dort bekommst du das benötigte Wissen, um den minimalen Asssembler-Teil zu verstehen.
+Im **[vierten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")** der Reihe "OS-Dev für Einsteiger" wird genau erklärt, wie du dir einen einfachen Kernel in C und per GRUB aufbaust. Du wirst auch auf etwas [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") stoßen. Solltest du kein Assembler beherrschen, keine Bange: Du brauchst nur ganz wenig für die Betriebssystementwicklung. Wenn du keinen Plan hast, wie du in Assembler programmierst, dann les' dir den **[zweiten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")** des Reihe "OS-Dev für Einsteiger" durch, dort bekommst du das benötigte Wissen, um den minimalen Asssembler-Teil zu verstehen.
 
 ### Hello World und weiter
 
@@ -157,6 +157,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6218/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6219/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6218; parent 6217; 2009-11-09T02:21:03Z -->
+<!-- MediaWiki page 1619; revision 6219; parent 6218; 2009-11-09T02:21:18Z -->
