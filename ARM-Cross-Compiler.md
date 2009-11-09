@@ -28,7 +28,7 @@ Nach erfolgreichem configure können die binutils nun gebaut werden mittels
 
 ### Fehler beim Bauen
 
-Unter Ubuntu kann es passieren, dass make nicht reibungslos durchläuft und mit einem Fehler die Kompilierung abbricht:
+Unter Ubuntu kann es passieren, dass make nicht reibungslos durchläuft und mit einem Fehler abbricht:
 
     cc1: warnings being treated as errors
     ../../cross-arm-binutils/gas/config/tc-arm.c: In function ‘make_mapping_symbol’:
@@ -96,6 +96,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6239/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 6237; parent 6208; 2009-11-09T16:47:56Z -->
+<!-- MediaWiki page 2099; revision 6239; parent 6237; 2009-11-09T19:04:35Z -->
