@@ -90,6 +90,14 @@ Da niwohlOS so avantgardistisch ist, ist es natürlich ganz klar, dass beim durc
 
 Nein, die meisten Entwickler haben immer wesentlich mehr als vier IRC-Channels offen.
 
+### Wie werde ich eigentlich Entwickler bei niwohlOS?
+
+Grundsätzlich darf jeder, der genug Freizeit hat und die gewissen Portion an Wahnsinn besitzt für niwohlOS entwickeln. Man schreibt dazu enien Patch und gesellt sich in den Channel niwohlOS. Der Patch wird dann mit Sicherheit nicht angenommen und niemals commited, außer es ist ein Super-Mööögaaa-Pätsch (Diese Aussage ist Copyright © 2009 by XanClic). Ansonsten kann man sich als Committer bewerben.
+
+### Wie bewirbt man sich als Committer?
+
+Sag ich nicht. Könnt' ja jeder kommen. Nene.
+
 ### Was ist V.O.M.I.T.?
 
 V.O.M.I.T. steht für "Verbose object-oriented machine-readable information transfer". Unsere besten Designer verbrachten Monate damit, ein ansprechendes und elegeantes Design für diese neue Art der Interprozesskommunikation zu entwerfen.
@@ -159,6 +167,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6240; parent 6193; 2009-11-09T22:38:23Z -->
+<!-- MediaWiki page 2095; revision 6241; parent 6240; 2009-11-09T22:42:04Z -->
