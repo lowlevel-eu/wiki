@@ -117,7 +117,7 @@ Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürd
 
 ### Hm, ja, anschauliches Beispiel?
 
-Im **[fünften Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")** der Reihe "OS-Dev für Einsteiger" wird das Einrichten einer GDT sowie das Einrichten einer IDT und das Aktivieren von Interrupts und deren Behandlung noch einmal erklärt. Wenn Du die Artikel zur [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") gelesen hast, wird dir schnell der zusammenhang klar.
+Im **[fünften Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")** der Reihe "OS-Dev für Einsteiger" wird das Einrichten einer GDT sowie das Einrichten einer IDT und das Aktivieren von Interrupts und deren Behandlung noch einmal erklärt. Wenn Du die Artikel zur [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") gelesen hast, wird dir schnell der Zusammenhang klar.
 
 ## Der eigentliche Kernel
 
@@ -166,6 +166,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6226/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6227/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6226; parent 6225; 2009-11-09T08:54:49Z -->
+<!-- MediaWiki page 1619; revision 6227; parent 6226; 2009-11-09T09:16:39Z -->
