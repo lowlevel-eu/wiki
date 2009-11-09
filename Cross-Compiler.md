@@ -2,6 +2,8 @@
 
 Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die Verwendete (host) erzeugt. Die Zielplattform kann sich dabei sowohl beim [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), als auch beim verwendeten Prozessor unterscheiden.
 
+  
+
 ## Anforderungen
 
 Um einen Cross-Compiler zu bauen, werden die üblichen GNU-Tools benötigt. Dazu gehören binutils, [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und [make](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Make").
@@ -74,6 +76,8 @@ Sobald das Kompilieren abgeschlossen ist, können die binutils installiert werde
     $ make install
     $ cd ..
 
+  
+
 ## gcc
 
 Nachdem nun die binutils kompiliert und installiert wurden, kann mit gcc weitergefahren werden. Für das Konfigurieren von gcc müssen die Binutils in \$PATH also der Umgebungsvariable, die die Verzeichnisse enthält, in denen nach ausführbaren Dateien gesucht werden soll, enthält, sein. Erreicht wird das durch:
@@ -109,12 +113,22 @@ Nachdem gcc fertig kompiliert ist, kann er installiert werden. Das geschieht mit
 
     $ make install-gcc install-target-libgcc
 
+  
+
 ## Benutzung
 
 Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht werden, dass dieser nur zum Kompilieren und nicht zum Linken benutzt werden kann, denn dafür fehlt eine installierte Libc. Deshalb muss der gcc mit dem -c Flag aufgerufen wird, damit er nur den Präprozessor aufruft und den Quellcode kompiliert aber nicht linkt. Außerdem muss beachtet werden, dass der cross-kompilierte gcc nicht über das Kommando 'gcc' sondern über '/user/local/crosstools/bin/i386-elf-gcc' erreichbar ist. Dies gilt auch für g++ und alle Tools aus den binutils.
 
+  
+
+## Siehe auch
+
+- [Cross-Compiler für x86-64-Systeme](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler")
+- [Cross-Compiler für ARM-Systeme](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler")
+- [Cross-Compiler für Windows (erzeugt ELF-Dateien)](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5177/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6206/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 5177; parent 5163; 2009-08-06T11:26:53Z -->
+<!-- MediaWiki page 1628; revision 6206; parent 5177; 2009-11-09T01:12:29Z -->
