@@ -71,6 +71,6 @@ In jedem Modus hat der gerade auführende Code andere Privilegien, sofern er nic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 6209; parent 0; 2009-11-09T01:45:40Z -->
+<!-- MediaWiki page 2101; revision 6210; parent 6209; 2009-11-09T01:46:01Z -->
