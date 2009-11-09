@@ -82,6 +82,10 @@ Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, i
 - <http://www.qemu.org>
 - <http://bochs.sourceforge.net>
 
+#### Das Tutorial
+
+Wie du deine Entwicklungsumgebung einrichtest wird im **[hier](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")** ersten Teil der Tutorial-Reihe "OS-Dev für Einsteiger" erklärt.
+
 ## Wo anfangen?
 
 ### Der Bootloader
@@ -178,6 +182,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6214; parent 6213; 2009-11-09T02:08:39Z -->
+<!-- MediaWiki page 1619; revision 6215; parent 6214; 2009-11-09T02:13:10Z -->
