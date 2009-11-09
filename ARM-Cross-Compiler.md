@@ -40,7 +40,7 @@ Hier hilft entweder das Entfernen des Compiler-Flags "-Werror" oder man editiert
 
     $ vim ../cross-arm-binutils/gas/config/tc-arm.c
 
-Und schreibt in nach dem if-Statement in Zeile **2489** zwei Klammern:
+Und schreibt nach dem if-Statement in Zeile **2489** zwei Klammern:
 
 **Vorher** \<c\>
 
@@ -60,8 +60,6 @@ Und schreibt in nach dem if-Statement in Zeile **2489** zwei Klammern:
     2493   frag->tc_frag_data.last_map = symbolP;
 
 \</c\>
-
-  
 
 ## gcc bauen
 
@@ -100,6 +98,6 @@ Wenn alles geklappt hat wurde nun ein Cross-Compiler für ARM-Architekturen erst
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6199/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6201/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 6199; parent 0; 2009-11-09T01:03:48Z -->
+<!-- MediaWiki page 2099; revision 6201; parent 6199; 2009-11-09T01:05:11Z -->
