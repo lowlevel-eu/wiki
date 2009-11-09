@@ -72,6 +72,10 @@ Die folgenden beiden Artikel werden Dir bei den ersten Schritten mit [GRUB](http
 
 Wenn Du trotz diesen Vorteilen darauf bestehst, Deinen Bootloader selbst zu schreiben – so sei es. In den ersten Ausgaben des [Magazins](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin") findest Du die dazu nötigen Informationen. In den folgenden Abschnitten gehe ich allerdings davon aus, dass [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benutzt wird. Du solltest also sicherstellen, dass Du eine vergleichbare Umgebung herstellst – insbesondere, dass Du im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bist.
 
+#### Äh ja, nochmal auf Deutsch bitte
+
+Im **[vierten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")** der Reihe "OS-Dev für Einsteiger" wird genau erklärt, wie du dir einen einfachen Kernel in C und per GRUB aufbaust. Du wirst auch auf etwas [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") stoßen. Solltest du kein Assembler beherrschen, keine Bange: Du brauchst nur ganz wenig für die Betriebssystementwicklung. Wenn du keinen Plan hast, wie du in Assembler programmierst, dann les' dir den **zweiten Teil** des Reihe "OS-Dev für Einsteiger" durch, dort bekommst du das benötigte Wissen, um den minimalen Asssembler-Teil zu verstehen.
+
 ### Hello World und weiter
 
 Die allererste Aufgabe für ein neues Betriebssystem ist es selbstverständlich, ein "Hello world!" auf den Bildschirm auszugeben. Wenn Du nach dem oben genannten Artikel vorgegangen bist, hast Du diesen Schritt schon erreicht. Wenn nicht: Text gibst du aus, indem Du in der Videospeicher schreibst. Er beginnt für den Textmodus an der Adresse 0xB8000 und enthält für jedes Zeichen (insgesamt 80x25) auf dem Bildschirm je zwei Bytes. Das erste enthält den ASCII-Code des Zeichens selbst, das zweite Attribute wie Farbe. Experimentiere am besten ein bisschen damit herum. (Ausführlicher steht es im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"))
@@ -153,6 +157,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6216; parent 6215; 2009-11-09T02:15:56Z -->
+<!-- MediaWiki page 1619; revision 6217; parent 6216; 2009-11-09T02:20:44Z -->
