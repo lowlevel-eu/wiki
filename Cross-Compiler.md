@@ -1,24 +1,42 @@
 # Cross-Compiler
 
-Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die Verwendete (host) erzeugt. Die Zielplattform kann sich dabei sowohl beim [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), als auch beim verwendeten Prozessor unterscheiden.
+Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die Verwendete (Hostsystem, kurz host) erzeugt. Die Zielplattform kann sich dabei sowohl beim [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), als auch beim verwendeten Prozessor unterscheiden.
 
   
 
-## Anforderungen
+## Allgemeines
 
-Um einen Cross-Compiler zu bauen, werden die üblichen GNU-Tools benötigt. Dazu gehören binutils, [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und [make](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Make").
+Ein Cross-Compiler wird immer dann benötigt, wenn man Programme oder generell Code für eine andere Architektur als die eigene entwickeln (und auch in den entsprechenden Maschinencode) übersetzen will. Aber auch, wenn das Host-Betriebssystem bzw. die für dieses System verfügbaren Compiler nativ bestimmte Dateiformate nicht unterstützen muss ein Cross-Compiler genutzt werden.
+
+Typische Fälle, in denen man einen Cross-Compiler braucht sind also:
+
+- Man hat einen 32-Bit-Prozessor und möchte Code für einen 64-Bit-Prozessor übersetzen (und vice versa)
+- Man hat einen x86-Prozessor und möchte Code für die ARM- oder PPC-Architektur entwickeln
+- Man nutzt Windows und möchte [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Binaries erstellen
+
+In diesen Fällen muss man sich einen Cross-Compiler erstellen.
+
+  
+
+## Bau eines Cross-Compilers
+
+Der Bau eines Cross-Compilers gestaltet sich als recht einfach. Meistens gilt es, sich die aktuellen binutils und den gcc herunterzuladen. Die Befehle zum Übersetzen gleichen sich unter Linux sowie unter Windows/Cygwin.
 
 ### Linux
 
-Auf vielen [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")-Distributionen sind diese Programme standardmäßig dabei. Wer eine Binärdistribution, wie zum Beispiel Ubuntu oder andere Debianderivate, einsetzt und noch keine Programme kompiliert hat, muss unter Umständen noch Entwicklungspakete installieren (bei Ubuntu/Debian libc6-dev und texinfo).
+Unter Linux braucht man dazu [dieses](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) Paket mit den binutils und [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) Paket mit dem gcc. Will man Unterstützung für mehr Sprachen als C müssen weitere Pakete [hier](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden. Die einzelnen Sprachen müssen dann später beim Konfigurieren angegeben werden, aber dazu später mehr.
+
+Unter Linux kann es passieren, dass spätestens beim Konfigurieren vom gcc selbiges mit einem Fehler abbricht, dass zwei Libraries nicht installiert seien: GMP und MPFR. Diese sind dann aus der Paketverwaltung der Distribution zu beziehen oder können hier und [hier](http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2) heruntergeladen werden. Diese müssen nur entpackt und mit dem bekannten Dreisatz *./configure, make, make install* gebaut und installiert werden.
+
+  
 
 ### Windows
 
-Wer [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") einsetzt, hat grundsätzlich zwei Möglichkeiten an diese Tools zu kommen. Entweder [Cygwin](http://www.cygwin.com/) ([Direktlink zum Installer](http://www.cygwin.com/setup.exe)) oder [mingw](http://www.mingw.org/)
+Unter Windows gibt es zwei Möglichkeiten zum Bau eines Cross-Compilers:
 
 #### Cygwin
 
-Die Installation von Cygwin gestaltet sich recht einfach. Bei der Installation müssen jedoch ein paar Dinge beachtet werden, das betrifft vor allem die Auswahl der richtigen Pakete. Für das Kompilieren eines Cross-gcc müssen die folgenden Pakete unbedingt installiert werden:
+Cygwin kann als "emulierte Linux-Umgebung" unter Windows angesehen werden. Cygwin lässt sich leicht installieren: [diese](http://www.cygwin.com/setup.exe) Setup-Datei reicht, der Rest erledigt der Installer. Es können dann alle benötigten Pakete heruntergeladen und mit installiert werden. Besonders wichtig sind folgende Pakete:
 
 - Devel -\> gcc4
 - Devel -\> make
@@ -30,94 +48,77 @@ optional:
 
 - Devel -\> [nasm](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "Netwide Assembler")
 
-Nach der Installation müssen die Shellbefehle (siehe unten) in die Cygwin-[Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") eingegeben werden.
+Ist Cygwin erfolgreich eingerichtet können die binutils sowie der gcc wie unter Linux konfiguriert und kompilliert werden. Hierfür müssen ebenfalls die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) heruntergeladen werden.
 
-#### mingw
+#### minGW
 
-TODO
-
-  
-
-## binutils
-
-Die GNU-binutils beinhalten unter anderem den [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker") ld, den [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") as und viele weitere kleine Helfer wie ar, objdump oder objcopy. Da gcc auf diesen basiert, müssen diese vor dem gcc kompiliert werden. Diese sind streng genommen auch Bestandteil des Cross-Compilers, da sie auch für eine bestimmte Target- und Host-Plattform konfiguriert werden müssen. Jetzt aber zur eigentlichen Arbeit. Um die binutils zu kompilieren, muss zuerst der Quellcode heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/binutils/> bezogen werden. In diesem Artikel wird von der Version 2.19.1 ausgegangen:
-
-    $ wget http://ftp.gnu.org/gnu/binutils/binutils-2.19.1.tar.bz2
-
-Er müsste aber auch für jüngere und ältere Versionen funktionieren. Nach dem Herunterladen muss das Archiv entpackt werden:
-
-    $ tar -xjf binutils-2.19.1.tar.bz2
-
-### Konfigurieren
-
-Der nächste Schritt ist das Konfigurieren. Die Dokumentation empfiehlt, binutils außerhalb des Quellverzeichnisses zu konfigurieren und zu kompilieren:
-
-    $ mkdir binutils-build
-    $ cd binutils-build
-
-Beim Konfigurieren muss auch das Verzeichnis festgelegt werden, in das die binutils installiert werden sollen. Hier wird jetzt `/usr/local/crosstools` benutzt. Folgender Befehl wird zum Konfigurieren beunutzt:
-
-    $ ../binutils-2.19.1/configure --prefix=/usr/local/crosstools --target=i386-elf --disable-nls
-
-Als Zielplattform wird hier i386-elf benutzt, da dies wohl die Meistbenutzte im Zusammenhang mit Betriebssystementwicklung ist. Der letzte Schalter `--disable-nls` dient dazu, sämtliche Übersetzungen zu deaktivieren, da die meist mehr verwirren als nützen.
-
-### Kompilieren
-
-Nach dem Konfigurieren ist der nächste Schritt das Kompilieren:
-
-    $ make all
-
-Wer eine CPU mit mehreren Kernen benutzt, kann diesen Vorgang etwas beschleunigen, wenn er den Parameter -j3 benutzt. Dieser signalisiert make, dass maximal 3 Instanzen des Compilers zur selben Zeit laufen dürfen. Standardmässig wird hier 1 benutzt. Als Daumenregel wird oft Anzahl der Kerne + 1 empfohlen.
-
-### Installieren
-
-Sobald das Kompilieren abgeschlossen ist, können die binutils installiert werden:
-
-    $ make install
-    $ cd ..
+MinGW ist ein auf Windows portierter GCC. Für mehr Informationen siehe [Cross-Compiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 
   
 
-## gcc
+### Ablauf
 
-Nachdem nun die binutils kompiliert und installiert wurden, kann mit gcc weitergefahren werden. Für das Konfigurieren von gcc müssen die Binutils in \$PATH also der Umgebungsvariable, die die Verzeichnisse enthält, in denen nach ausführbaren Dateien gesucht werden soll, enthält, sein. Erreicht wird das durch:
+Der Ablauf ist fast immer der gleiche: Die Pakete müssen ausgepackt und mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgendes setzen:
 
-    $ export PATH="/usr/local/crosstools/bin:$PATH"
+    $ export TARGET=ziel-plattform
+    $ export PREFIX=wo-die-crossutils-landen-sollen
 
-Wichtig ist hier, dass der eigene Pfad vor den originalen Pfaden steht, damit sicher die vorhin kompilierten binutils benutzt werden. Der Pfad /usr/local/crosstools muss auch hier wieder angepasst werden, wenn für den Präfix bei Binutils ein anderer benutzt wurde. Als nächstes muss der Quellcode von gcc heruntergeladen werden. Dieser kann von <http://ftp.gnu.org/gnu/gcc> bezogen werden. Während dem Schreiben dieses Artikels wurde die Version 4.4.0 benutzt. Aber auch hier gilt wieder, dass das auf andere Versionen übertragen werden kann. Das Archiv mit Namen gcc-core-\<VERSION\>.tar.bz2 muss auf jeden Fall heruntergeladen werden. Falls auch ein [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") Compiler gewünscht wird, ist auch gcc-g++-\<VERSION\>.tar.bz2 notwendig. Nach dem Download des einen oder der beiden Archive müssen diese wieder entpackt werden:
+Dann reicht es, beim configure --target=\$TARGET und --prefix=\$PREFIX anzugeben. Auch ist es sinnvoll, die binutils und den gcc außerhalb ihrer entpackten Verzeichnisse zu bauen, also immer seperate Verzeichnisse zu erstellen (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR eigenen sich dafür z.B.).
 
-    $ wget http://ftp.gnu.org/gnu/gcc/gcc-4.4.0/gcc-core-4.4.0.tar.bz2
-    $ wget http://ftp.gnu.org/gnu/gcc/gcc-4.4.0/gcc-g++-4.4.0.tar.bz2
-    $ tar -xjf gcc-core-4.4.0.tar.bz2
-    $ tar -xjf gcc-g++-4.4.0.tar.bz2
+Beide Pakete (eventuell noch weitere, je nachdem ob weitere Sprachen gewünscht werden) werden dann per
 
-### Konfigurieren
+    $ tar -xjf paket.tar.endung
 
-Auch für gcc wird empfohlen, ihn ausserhalb des Quellverzeichnisses zu bauen:
-
-    $ mkdir gcc-build
-    $ cd gcc-build
-    $ ../gcc-4.4.0/configure --prefix=/usr/local/crosstools --target=i386-elf --disable-nls --without-headers --enable-languages=c,c++
-
-Beim Konfigurieren von gcc muss unbedingt darauf geachtet werden, dass der selbe Präfix wie bei binutils benutzt wird. Sonst benutzt gcc später den falschen Assembler. Die drei ersten Konfigurationsoptionen haben wieder die selbe Bedeutung wie bei gcc und werden hier deshalb nicht noch mal erläutert. Der Schalter --without-headers teilt gcc mit, dass keine Libc Header installiert sind und er sie somit nicht benutzen darf, und die letzte Option --enable-languages legt die Sprachen fest, die der Compiler beherrschen soll. Wie vorhin schon gesagt, muss für den C++ Compiler das 2. Archiv auch heruntergeladen werden. Wenn der Compiler nur C kompilieren soll muss auch nur --enable-languages=c angegeben werden.
-
-### Kompilieren
-
-Auch hier ist der nächste Schritt nach dem Konfigurieren wieder das Kompilieren. Dieser Prozess dauert je nach Prozessorleistung recht lange. Hier kann auch wie bei binutils die Option -j3 benutzt werden. Gestartet wird das Kompilieren folgendermaßen:
-
-    $ make all-gcc all-target-libgcc
-
-### Installieren
-
-Nachdem gcc fertig kompiliert ist, kann er installiert werden. Das geschieht mit diesem Befehl:
-
-    $ make install-gcc install-target-libgcc
+entpackt, wobei paket mit dem Namen des Pakets und endung mit der entsprechenden Endung zu ersetzen ist.
 
   
 
-## Benutzung
+## Targets
 
-Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht werden, dass dieser nur zum Kompilieren und nicht zum Linken benutzt werden kann, denn dafür fehlt eine installierte Libc. Deshalb muss der gcc mit dem -c Flag aufgerufen wird, damit er nur den Präprozessor aufruft und den Quellcode kompiliert aber nicht linkt. Außerdem muss beachtet werden, dass der cross-kompilierte gcc nicht über das Kommando 'gcc' sondern über '/user/local/crosstools/bin/i386-elf-gcc' erreichbar ist. Dies gilt auch für g++ und alle Tools aus den binutils.
+### x86-64
+
+Wer einen 32-Bit-Prozessor (oder ein 32-Bit-Betriebssystem) hat und Code für 64-Bit-Prozessoren und Betriebssysteme schreiben will, muss sich wie folgt seine Umgebung aufsetzen:
+
+    $ export TARGET=x86_64-elf
+    $ export TARGET=wo-die-crossutils-landen-sollen
+
+Die binutils müssen dann entsprechend konfiguriert werden.
+
+    $ ../binutils-2.20.0/configure --target=$TARGET --prefix=$PREFIX
+
+Nach erfolgreichem Konfigurieren können die binutils dann per
+
+    $ make
+    # make install
+
+gebaut werden. Mit dem gcc wird analog verfahren: Er wird wir folgt konfiguriert.
+
+    $ ../gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c
+
+Falls, wie im [Linux-Abschnitt](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler#linux "Cross-Compiler") erwähnt, das Konfigurieren mit einer Fehlermeldung abgebrochen wird, müssen die entsprechenden Libraries heruntergeladen und gebaut sowie installiert werden.
+
+Nach erfolgreichem Konfigurieren reicht dann ein
+
+    $ make all-gcc
+    # make install-gcc
+
+Zum Installieren des gcc. Weitere Informationen zum Bau eines x86-64-Cross-Compilers findet man [hier](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler").
+
+  
+
+### ARM
+
+Wer einen x86-Prozessor hat und gerne Code für die ARM-Architektur entwickeln möchte muss sich seine Umgebung verfährt analog. einzig das Target muss geändert werden:
+
+    $ export TARGET=arm-unknown-linux-gnu
+
+Dann ist genau so zu verfahren wie beim Bau eines x86-64-Cross-Compilers. Einen ausführlicheren Aritkel dazu und mehr Informationen finden sich [hier](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler").
+
+  
+
+### ELF
+
+Windows unterstützt nativ leider kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Format. Hier kann man sich schnell Abhilfe schaffen, in dem man den eigens von Jidder erstellten Cross-Compiler herunterlädt und sich seine Umgebung dementsprechend konfiguriert. Mehr Informationen dazu [hier](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows").
 
   
 
@@ -129,6 +130,6 @@ Beim Kompilieren von Programmen mit dem neuen Crosscompiler muss daran gedacht w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6206/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 6206; parent 5177; 2009-11-09T01:12:29Z -->
+<!-- MediaWiki page 1628; revision 6233; parent 6206; 2009-11-09T16:08:47Z -->
