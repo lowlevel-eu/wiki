@@ -115,6 +115,10 @@ Wenn Du die IDT fertig eingerichtet hast, kannst du sie am besten testen, indem 
 
 Wenn Du auch Hardwareinterrupts am Laufen hast, hast Du die ersten großen Hürden genommen. Für diejenigen unter uns, die gerne etwas sehen und irgendwas zum Spielen brauchen, wäre das ein guter Zeitpunkt, einfach mal einen Tastaturtreiber zu schreiben und ein bisschen was auszuprobieren. Es kommen noch genug schwere Sachen, bis Dein Produkt sich zurecht ein Betriebssystem nennen kann, aber hey, wenn ich zwei Zahlen eingeben kann und die werden addiert – das ist doch schonmal ein Erfolgserlebnis, oder? Mich hat das jedenfalls motiviert.
 
+### Hm, ja, anschauliches Beispiel?
+
+Im **[fünften Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts")** der Reihe "OS-Dev für Einsteiger" wird das Einrichten einer GDT sowie das Einrichten einer IDT und das Aktivieren von Interrupts und deren Behandlung noch einmal erklärt. Wenn Du die Artikel zur [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") gelesen hast, wird dir schnell der zusammenhang klar.
+
 ## Der eigentliche Kernel
 
 Wenn Du bis hierhin gekommen bist, hast Du mittlerweile etwas, was sich Kernel nennt. In Wirklichkeit hast Du aber noch nicht besonders viel von den ganzen Funktionen, die ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") bieten muss. Du hast die Initialisierung geschafft, bei der Du noch nicht besonders viel Auswahl hast. Richtig interessant wird es jetzt, denn jetzt kannst Du viele verschiedene Wege wählen, die eigentliche Funktionalität Deines Kernels umzusetzen.
@@ -157,6 +161,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6221/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6222/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6221; parent 6220; 2009-11-09T02:23:54Z -->
+<!-- MediaWiki page 1619; revision 6222; parent 6221; 2009-11-09T02:26:27Z -->
