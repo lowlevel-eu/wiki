@@ -95,6 +95,10 @@ gebaut werden. Mit dem gcc wird analog verfahren: Er wird wie folgt konfiguriert
 
     $ ../gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c
 
+Will man Support für mehr Sprachen als C muss man diese entsprechend angeben, bsp:
+
+    $ ../gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c,c++,fortran
+
 Falls, wie im [Linux-Abschnitt](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler#linux "Cross-Compiler") erwähnt, das Konfigurieren mit einer Fehlermeldung abbricht, müssen die entsprechenden Libraries (Bibliotheken) heruntergeladen, gebaut und installiert werden.
 
 Nach erfolgreichem Konfigurieren reicht abschließend ein
@@ -103,8 +107,6 @@ Nach erfolgreichem Konfigurieren reicht abschließend ein
     # make install-gcc
 
 zur Installation des gcc. Weitere Informationen zum Bau eines x86-64-Cross-Compilers findet man [hier](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler").
-
-  
 
 ### ARM
 
@@ -130,6 +132,6 @@ Windows unterstützt nativ kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 6236; parent 6235; 2009-11-09T16:40:22Z -->
+<!-- MediaWiki page 1628; revision 6238; parent 6236; 2009-11-09T18:18:07Z -->
