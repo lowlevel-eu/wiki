@@ -70,8 +70,16 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 - Lösung: crt0.o im Linkerskript nicht erwähnen, oder selbst etwas gleichwertiges bereitstellen.
 
+  
+
+## Siehe auch
+
+- [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
+- [Cross-Compiler für x86-64-Systeme](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler")
+- [Cross-Compiler für ARM-Systeme](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 5804; parent 5007; 2009-08-31T15:50:38Z -->
+<!-- MediaWiki page 1450; revision 6207; parent 5804; 2009-11-09T01:13:36Z -->
