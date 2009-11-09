@@ -10,12 +10,10 @@ Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs anal
 
 Es werden nun ein paar Variablen erstellt:
 
-    export PREFIX=/usr/cross/arm
-    export TARGET=arm-unknown-linux-gnu
+    $ export PREFIX=/usr/cross/arm
+    $ export TARGET=arm-unknown-linux-gnu
 
 Der Pfad unter PREFIX kann geändert werden, wenn die Cross-Tools woanders compilliert werden sollen.
-
-  
 
 ## binutils bauen
 
@@ -98,6 +96,6 @@ Wenn alles geklappt hat wurde nun ein Cross-Compiler für ARM-Architekturen erst
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6202/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 6202; parent 6201; 2009-11-09T01:06:10Z -->
+<!-- MediaWiki page 2099; revision 6203; parent 6202; 2009-11-09T01:06:31Z -->
