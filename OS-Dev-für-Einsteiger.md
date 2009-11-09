@@ -18,9 +18,13 @@ Frisch ans Werk, Editor und Compiler ausgepackt – aber halt! Bevor es wirklich
 
 Die Frage klingt vielleicht seltsam, aber sie ist genau so gemeint, wie sie da steht. Willst Du wirklich ein OS entwickeln? Ist Dir klar, was ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") macht?
 
-Wenn Du in erster Linie an eine grafische Oberfläche denkst, bist Du hier womöglich falsch. Grafische Oberflächen sind ein interessantes Thema – aber eine vollkommen andere Baustelle. Ein OS ist die Schnittstelle zur Hardware. Das heißt, Du wirst eine Speicherverwaltung bauen, einen Scheduler, Treiber für störrische Hardware. Du wirst alles tun, nur keine bunten Pixel auf den Bildschirm bringen – oder falls doch, wird dir direkt anschließend die saubere Basis fehlen, damit man mit diesen Pixeln auch etwas sinnvolles anfangen kann.
+Wenn Du in erster Linie an eine grafische Oberfläche denkst, bist Du hier womöglich falsch. Grafische Oberflächen sind ein interessantes Thema – aber eine vollkommen andere Baustelle. Ein OS ist die [Schnittstelle zur Hardware](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL"). Das heißt, Du wirst eine [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") bauen, einen [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), Treiber für störrische Hardware. Du wirst alles tun, nur keine bunten Pixel auf den Bildschirm bringen – oder falls doch, wird dir direkt anschließend die saubere Basis fehlen, damit man mit diesen Pixeln auch etwas sinnvolles anfangen kann.
 
-Wer sich nicht mit Hardware herumschlagen möchte, kann sich ein DOS oder ein abgespecktes Linux als Grundlage nehmen und seine Oberfläche darauf aufbauen.
+Du wirst dich mit vielen Fehlern herumschlagen müssen, du wirst trockene Spezifikationen lesen müssen, etliche Artikel und Tutorials und manchmal stundenlang über ein Problem hängen und darüber grübeln, wie man es (am besten oder überhaupt) löst. Du wirst eine Menge fremden Code lesen müssen, eventuell nicht in der Sprache, mit der du dein OS-Programmierst (falls du dich dazu entscheidest, nicht in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu programmieren). Du wirst dich selbst beim Kopieren von fremden Code ertappen, was aber der falsche Weg ist, denn beim Kopieren von Code lern man nichts. Du wirst einige Wochen, wenn nicht gar Monate brauchen bis du alles verstanden hast. Und selbst dann gibt es immer noch Dinge, die dir Kopfschmerzen bereiten. Es wird immer das ein oder andere Problem, den ein oder anderen Bug geben. Das ist aber in der Entwicklung von nativen Anwendungen auch nicht anders.
+
+Du wirst, sofern du nicht Linux nutzt, auch einige Zeit mit dem Setup deiner Build-Umgebung verbringen. Es wird auch nicht alles von Anfang an klappen mit den Tools. Es ist natürlich nicht unmöglich, auf anderen Systemen als Linux ein Betriebssystem zu entwickeln, aber anfangs schwieriger bzw. erfordert eine größere Vorbereitung.
+
+Wer sich nicht mit Hardware herumschlagen möchte, kann sich ein DOS oder ein abgespecktes Linux als Grundlage nehmen und seine Oberfläche darauf aufbauen. Aber selbst dann gibt es viel zu lernen: Du musst das darunter liegende System verstehen, wissen, wie es arbeitet und dementsprechend deine Vorstellung darauf aufbauen oder gegebenenfalls das System darunter an deine Bedürfnisse anpassen. Aber auch hier gilt wieder viele Spezifikationen, Artikel und Tutorials sowie Code zu lesen.
 
 ### Voraussetzungen
 
@@ -174,6 +178,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6213/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6184; parent 6105; 2009-11-05T20:49:36Z -->
+<!-- MediaWiki page 1619; revision 6213; parent 6184; 2009-11-09T02:02:15Z -->
