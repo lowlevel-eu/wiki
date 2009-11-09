@@ -151,6 +151,10 @@ Im Umkehrschluss gehören eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/
 
 Auch der tollste Kernel mit [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")-Unterstützung bringt Dir natürlich herzlich wenig, wenn die laufenden Programme nicht mit dem Benutzer interagieren können. Um den Programmen, die ja in einem eigenen Adressraum laufen und meist keinen direkten Zugriff auf die Hardware haben, diese Möglichkeit zu bieten, muss der Kernel eine entsprechende Schnittstelle, üblicherweise in Form von [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"), anbieten. Wie diese Schnittstelle genau aussieht, hängt von Deiner gewählten Architektur ab. Bei einem Monolithen wird die Schnittstelle eher breit ausfallen, und beispielsweise Funktionen für das Arbeiten mit Dateien mitbringen, während bei einem Mikrokernel vor allem die Funktionen für die [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") im Zentrum stehen werden.
 
+#### Da habt ihr doch sicher auch was in eurer Reihe, oder?
+
+Na klar. Im **[sechsten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking")** der Reihe "OS-Dev für Einsteiger" wird das Implementieren von Multitasking per [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") anschaulich und mit Codebeispielen erklärt.
+
 ### Treiber
 
 Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") oder [Festplatte](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") lesen zu wollen. Dafür werden zwei Treiber benötigt: einer für das [Diskettenlaufwerk](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")/die [Festplatte](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") und ein [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Wie sich die Treiber in Dein System einfügen sollen, hast Du bei der Wahl Deiner Architektur ja schon grob entschieden. Jetzt ist es an der Zeit die Details festzulegen. Für die Treiber musst Du auch erstmal eine Schnittstelle definieren und Dir genau überlegen wie die Kommunikation zwischen Clients und den Treibern ablaufen soll. Dabei ist es sicher keine schlechte Idee, ein bisschen in den Schnittstellen von anderen [Betriebssystemen](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem") zu stöbern. Weiter könntest Du Dir auch überlegen dir [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), das von der Lowlevel-Community entwickelt wird, genauer anzusehen, denn damit sparst du unter Umständen viel Zeit und Ärger.
@@ -161,6 +165,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6222/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6223/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6222; parent 6221; 2009-11-09T02:26:27Z -->
+<!-- MediaWiki page 1619; revision 6223; parent 6222; 2009-11-09T02:27:57Z -->
