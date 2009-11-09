@@ -57,6 +57,7 @@ Feedback im Forum, im IRC oder auf der Diskussionsseite ist erwünscht. Besonder
 
 - Die beste Lösung dafür ist, nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
 - Alternative: Dieser Fehler tritt auf, weil der gcc die Datei cc1.exe nicht finden kann. Man könnte diese (und cc1plus.exe und collect2.exe) als Workaround einfach von libexec\gcc\i586-elf\4.4.0 nach i586-elf\bin kopieren. Das sorgt allerdings unter Umständen für weitere Probleme, wenn man die mitgelieferte Bibliotheken nutzen will, siehe z.B. nächstes Problem.
+- Ein Auftreten dieser Meldung bei i586-elf-gcc wurde im Forum durch den selben Workaround gelöst. [\[1\]](http://lowlevel.brainsware.org/forum/index.php?topic=2345.msg26522#msg26522)
 
 ### error: no include path in which to search for stdio.h (oder andere .h)
 
@@ -80,6 +81,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6231/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 6207; parent 5804; 2009-11-09T01:13:36Z -->
+<!-- MediaWiki page 1450; revision 6231; parent 6207; 2009-11-09T15:55:08Z -->
