@@ -55,36 +55,7 @@ Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://gith
 
 ### Entwicklungsumgebung und Tools
 
-Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Auf die wichtigsten davon gehe ich in diesem Abschnitt kurz ein. Wie man sich eine Entwicklungsumgebung einrichtet, welche Tools man für sein Vorhaben benötigt und auf welchen Plattformen (Linux, Windows, ...) dies möglich ist, wird im Artikel [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") genauer erläutert.
-
-#### Dein Computer
-
-Fangen wir vorne an: Du brauchst einen PC. Ja, Du hast recht, Du brauchst natürlich strenggenommen keinen PC. Aber es wäre geschickt, denn ich nehme an, Du willst ein x86-Betriebssystem schreiben. Wenn Du wider Erwarten für eine andere Plattform entwickeln möchtest, teil Dich im Forum mit, das wird auch andere interessieren – allerdings bist dann Du derjenige, der erklären darf. Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten sind für den Anfang das handlichste. Und ein 386er oder höher sollte es schon sein – aber das sollte heutzutage machbar sein.
-
-#### Dein Betriebssystem
-
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber dazu braucht es schon eine gewisse masochistische Veranlagung (jedenfalls wenn man GRUB und daher ELF benutzen möchte – und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft. Man könnte jetzt versuchen, einen Kausalzusammenhang herzustellen, warum die Windowsbenutzer häufiger bei Assembler steckenbleiben – aber lassen wir das...
-
-Falls Du kein Linux auf deinem Rechner installieren willst und auch keinen Bock hast, unter Windows eine geignete Umgebung herstellen, nimm einfach Knoppix. Das ist allerdings auf Dauer keine richtige Lösung. Deswegen empfehle ich Dir, Linux richtig zu installieren. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
-
-#### Deine Tools
-
-Dann brauchst Du Editor und Compiler. Als Editor hast Du sicher schon Deinen eigenen Favoriten (nämlich vim), aber wenn nicht, dann findest Du sicherlich im Artikel zu [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") einen passenden.
-
-Auch beim Compiler ist die Sache relativ klar: Wenn Du [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") nimmst, wird der Compiler im Allgemeinen gcc sein und unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist damit alles geklärt. Wenn Du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzt, solltest du dir überlegen, ob Du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Bahnhof? Macht nichts, vertrau mir, installier ihn Dir einfach.
-
-- [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
-
-#### Dein Emulator
-
-Schließlich brauchst Du auch noch eine Möglichkeit, dein Werk zu testen. Ja, ich weiß, der PC. Aber du willst nicht nach jeder kleinen Änderungen neu booten müssen, richtig? Besorg dir einen Emulator. VMware ist ganz nett, aber hilft Dir beim Debuggen nicht besonders weiter. Nimm [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") – oder am besten beides. Wenn Dein System in beiden Emulatoren funktioniert, ist immer noch genug Zeit, es auf den echten PC loszulassen.
-
-- <http://www.qemu.org>
-- <http://bochs.sourceforge.net>
-
-#### Das Tutorial
-
-Wie du deine Entwicklungsumgebung einrichtest wird im **[hier](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")** ersten Teil der Tutorial-Reihe "OS-Dev für Einsteiger" erklärt.
+Um Dein eigenes Betriebssystem zu entwickeln, brauchst Du ein paar Werkzeuge. Du musst dir eine Buildumgebung aufbauen (was je nach Betriebssystem unterschiedlich komplex ist), du brauchst einen Editor und einen Emulator. All das wird im **[ersten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")** der Tutorial-Reihe "OS-Dev für Einsteiger" erklärt.
 
 ## Wo anfangen?
 
@@ -182,6 +153,6 @@ Irgendwann wirst Du vermutlich auf die Idee kommen irgendwas von einer [Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6215; parent 6214; 2009-11-09T02:13:10Z -->
+<!-- MediaWiki page 1619; revision 6216; parent 6215; 2009-11-09T02:15:56Z -->
