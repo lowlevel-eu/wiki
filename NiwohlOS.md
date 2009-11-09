@@ -1,9 +1,9 @@
 # NiwohlOS
 
 | niwohlOS<br>*"In God we trust – Da hilft nur noch beten"* |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Cjreek<br>[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>Paddy<br>[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
+| Entwickler: | Cjreek<br>cra1n<br>[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>Paddy<br>[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.1.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT/X11 |
 | OS-Eigenschaften |  |
@@ -75,6 +75,12 @@ Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessio
 ### Paddy alias Paddynator
 
 Paddy (kein Mensch weiß, wer das ist) ist ein geheminisvoller Entwickler, der sich zu unserem Projekt gesellt hat. Auf einmal war er da, wie aus dem Nichts tauchte er in \#lost und \#niwohlos auf. Keiner weiß wer er ist, keiner weiß, ob er was kann. Man weiß nur, dass er was gegen kwolf zu haben scheint...
+
+### cra1n alias Ich-kenn-ihn-erst-zwei-Minuten-und-mach-ihn-direkt-zum-Committer
+
+cra1n (auch hier weiß keiner, wer das ist) ist Schüler mit Informatik als Leistungskurs. Mehr weiß ich auch nicht.
+
+  
 
 ## Frequently Asked Questions (FAQ)
 
@@ -153,6 +159,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6193; parent 6179; 2009-11-08T19:26:22Z -->
+<!-- MediaWiki page 2095; revision 6240; parent 6193; 2009-11-09T22:38:23Z -->
