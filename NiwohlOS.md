@@ -92,7 +92,7 @@ Nein, die meisten Entwickler haben immer wesentlich mehr als vier IRC-Channels o
 
 ### Wie werde ich eigentlich Entwickler bei niwohlOS?
 
-Grundsätzlich darf jeder, der genug Freizeit hat und die gewissen Portion an Wahnsinn besitzt für niwohlOS entwickeln. Man schreibt dazu enien Patch und gesellt sich in den Channel niwohlOS. Der Patch wird dann mit Sicherheit nicht angenommen und niemals commited, außer es ist ein Super-Mööögaaa-Pätsch (Diese Aussage ist Copyright © 2009 by XanClic). Ansonsten kann man sich als Committer bewerben.
+Grundsätzlich darf jeder, der genug Freizeit hat und die gewissen Portion an Wahnsinn besitzt für niwohlOS entwickeln. Man schreibt dazu einen Patch und gesellt sich in den Channel niwohlOS. Der Patch wird dann mit Sicherheit nicht angenommen und niemals commited, außer es ist ein Super-Mööögaaa-Pätsch (Diese Aussage ist Copyright © 2009 by XanClic). Ansonsten kann man sich als Committer bewerben.
 
 ### Wie bewirbt man sich als Committer?
 
@@ -167,6 +167,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6241; parent 6240; 2009-11-09T22:42:04Z -->
+<!-- MediaWiki page 2095; revision 6242; parent 6241; 2009-11-10T08:36:23Z -->
