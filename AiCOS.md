@@ -28,9 +28,9 @@ AiCOS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebs
 
 AiCOS Einsatzbereicht wird anfangs im Netzwerkbereich liegen, unter anderem aber auch als Storage-System. Auch wenn AiCOS auf Single-Core-Plattformen laufen wird, wird es seine Stärken wohl eher auf Multiprozessor bzw. Multicore-System zeigen können. Wichtigstes Ziel dabei ist zum Einem die Performance (ideal sogar Echtzeit) und zum Anderem die Stabilität (Redundanz bis auf CPU-Ebene).
 
-Dieses ehrgeizige Ziel von AiCOS soll frisches Blut in die Computertechnik bringen und hoffentlich auch andere zu solchen OS-Disgns motivieren. Denn noch ist AiCOS ein ClosedSource-Projekt.
+Dieses ehrgeizige Ziel von AiCOS soll frisches Blut in die Computertechnik bringen und hoffentlich auch andere zu einem solchen OS-Design motivieren. Denn noch ist AiCOS ein ClosedSource-Projekt.
 
-Wen wunderts also, dass AiCOS Wurzel liegen weder in der Linux/Unix-Welt noch in der Windows-Welt, sondern viel eher in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
+Wen wunderts also, dass AiCOS Wurzel weder in der Linux/Unix-Welt noch in der Windows-Welt liegen, sondern viel eher in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
 
   
 
@@ -271,6 +271,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6245/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 6244; parent 5610; 2009-11-10T16:52:52Z -->
+<!-- MediaWiki page 1766; revision 6245; parent 6244; 2009-11-10T16:58:36Z -->
