@@ -34,6 +34,48 @@ Wen wunderts also, dass AiCOS Wurzel liegen weder in der Linux/Unix-Welt noch in
 
   
 
+# Über AiCOS
+
+### Namensgebung
+
+Ist der Name des OS nur ein fantasievolle Bezeichnung oder steht **AiCOS** für eine Abkürzung? Wenn ja, was verbirgt sich dahinter?
+
+AiCOS ist in der Tat eine Abkürzung und steht für ***A**syncronous **i**nter**C**onnected **O**perating **S**ystem*. Sollte sich die Entwicklung dieses OS meinen Erwartungen entsprechen, könnte diese AiCOS in einigen Jahren auch für ***A**rtificial **i**ntelligence **C**ontrolled **O**perating **S**ystem* stehen. Klingt nach **SKYNET**, könnte man denken, wird aber keinesfalls beabsichtig.
+
+### Entwickler
+
+Derzeit unterliegt die komplette Entwicklung von AiCOS einer einzigen Persion, nämlich mich, [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi"). Dies soll aber nicht für immer bleiben. Wenn wichtigsten Konzepte des OS (überwiegend Kernel) erstellt und ggf. auch schon umgesetzt wurden, werde ich meine Türe öffnen und andere Begeisterte mit in dieses Boot nehmen.
+
+### Lizenz
+
+Steht noch nicht fest. Derzeit ClosedSource, soll aber später, wenn ich andere mitwirken lassen, OpenSource werden.
+
+### Plattform
+
+Erstmal nur für x86 für 32/64-Bit Plattformen.
+
+### Kernel
+
+Beim Kernel werden ganz neue Wege gegangen. Monolithischer Kernel sowohl auch Mikrokernel mögen ihre Vor- und Nachteile haben. Klar, es gäbe noch die Hybriden. Aber die Entwicklung der Prozessoren geht ja auch weiter, Multicores haben die Zukunft. Ideal sind Multicore-CPUs, bei denen auf jedem Kern ein andere Kernel laufen könnte. Tile-Gx (100 Kerne) von Tileras geht da schon in diese Richtung. Doch selbst auf heutigen PC, in erster Linie Gaming-PC, gibs schon verschiedene Prozessoren, CPU, GPU und auch schon PPU.
+
+### Sprachen
+
+Hardware nahe Programmteile wie Bootloader (später mehr dazu) oder Treiber werden in Assembler (Intel-Syntax) vorliegen. Der Kernel selbst wird überwiegend in C geschrieben sein. Ob C++ auch verwendet wird, wird jedoch nicht ausgeschlossen. Programme im Userspace überwiegend in C++. Ob andere Sprachen Einzug erhalten, hängt davon ab, ob entsprechende Compiler portiert werden.
+
+### API
+
+*Noch nicht Bestandteil der Entwicklung.*
+
+### Binärformat
+
+Vorerst BIN, ggf. auch EXE. Ob ELF unterstützt wird, ist eine Frage der Implementierung.
+
+### IPC-Methode
+
+Den einzigen gemeinsamer Nenner, den ich finden konnte und auch bei der derzeitigen CPU-Entwicklung für zukunftsicher halte, sind Channels. Channels sollen später auch die Grundlage eigenes Netzwerkprotokolls werden, welches anfangs eher über IP zu einer anderen Maschine mit AiCOS getunnelt wird.
+
+  
+
 # Entwicklungsumgebung
 
 - **Hardware**
@@ -229,6 +271,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5610/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 5610; parent 5513; 2009-08-12T19:05:20Z -->
+<!-- MediaWiki page 1766; revision 6244; parent 5610; 2009-11-10T16:52:52Z -->
