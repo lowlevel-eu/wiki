@@ -70,13 +70,13 @@ Hier eine Liste von Anbietern, bei denen man sein Subversion-Archiv kostenlos ho
 
 ## Weblinks
 
-- [Subversion bei Wikipedia](http://de.wikipedia.org/wiki/Subversion)
+- [Subversion bei Wikipedia](http://de.wikipedia.org/wiki/Svn)
 - [Subversion Homepage](http://subversion.tigris.org/)
 - [Subversion-Dokumentation](http://svnbook.red-bean.com/nightly/de/index.html)
 - [Aktuellere Dokumentation (englisch)](http://svnbook.red-bean.com/nightly/en/index.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5611/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2036/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6247/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2036/index.html)
 
-<!-- MediaWiki page 2036; revision 5611; parent 0; 2009-08-12T19:06:38Z -->
+<!-- MediaWiki page 2036; revision 6247; parent 5611; 2009-11-12T07:48:36Z -->
