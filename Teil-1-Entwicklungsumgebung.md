@@ -55,7 +55,7 @@ Herunterzuladen ist qemu an folgenden Orten
 
 - <http://www.qemu.org> hat die aktuelle stabile Version
 - Unter git://git.savannah.nongnu.org/qemu.git befindet sich die Entwicklerversion
-- <http://lowlevel.brainsware.org/download/qemu-0.10.50-i386.tar.bz2> ist ein inoffizielles Binärpaket für Windows
+- <http://lowlevel.brainsware.org/download/qemu-0.11.50-c988bfa.tar.bz2> ist ein inoffizielles Binärpaket für Windows
 
 Nachdem der Quellcode heruntergeladen ist (entweder die stabile Version entpackt oder die Entwicklerversion aus dem git ausgecheckt), wird qemu folgendermaßen gebaut:
 
@@ -75,6 +75,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6185; parent 5544; 2009-11-05T20:50:15Z -->
+<!-- MediaWiki page 1919; revision 6252; parent 6185; 2009-11-13T18:22:14Z -->
