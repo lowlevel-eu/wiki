@@ -137,6 +137,7 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 ## Siehe auch
 
 - [Serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle")
+- [SCSI - Ebenfalls eine parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Small-Computer-System-Interface "SCSI")
 
 ## Weblinks
 
@@ -144,6 +145,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 6034; parent 6033; 2009-10-13T09:42:28Z -->
+<!-- MediaWiki page 1996; revision 6250; parent 6034; 2009-11-13T18:09:30Z -->
