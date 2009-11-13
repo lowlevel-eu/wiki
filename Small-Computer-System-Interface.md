@@ -28,6 +28,6 @@ SCSI wird überwiegend in Servern genutzt, da hier die Möglichkeit besteht, meh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6249/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2102/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6254/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2102/index.html)
 
-<!-- MediaWiki page 2102; revision 6249; parent 0; 2009-11-13T18:07:49Z -->
+<!-- MediaWiki page 2102; revision 6254; parent 6249; 2009-11-13T18:49:19Z -->
