@@ -69,7 +69,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 ## Aktueller Windows-Build
 
-Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeiten. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Eine einigermaßen aktuelle Version für Windows (git-Version von Ende Juni 2009) liegt auf unserem Server: [\[1\]](http://lowlevel.brainsware.org/download/qemu-0.10.50-i386.tar.bz2)
+Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeiten. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Eine einigermaßen aktuelle Version für Windows (git-Version von Anfang November 2009) liegt auf unserem Server: \[1\]
 
 ## Siehe Auch
 
@@ -83,6 +83,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6251/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 5956; parent 5955; 2009-09-25T11:27:32Z -->
+<!-- MediaWiki page 1505; revision 6251; parent 5956; 2009-11-13T18:20:56Z -->
