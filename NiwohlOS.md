@@ -140,7 +140,7 @@ niwohlOS wird natürlich in C und Assembler geschrieben. Außerdem wird es einen
 
 Es gibt Konkurrenz?
 
-Okay, um ehrlich zu sein: Ja, es gibt ein System. Das System heißt [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS") (Personally retarded ethymology table-tennis, yeah, operating system (das es so heißt ist allerdings nur eine Vermutung!)) und ich ein hochoptimiertes Betriebssystem mit einigen vollkommenen Neuerungen und Innovationen. Welche wissen wir auch nicht. Achja, und dann gibt es noch diesen "týndur", aber der stellt ja eher keine Gefahr dar bei genauerer Betrachtung (und nachdem man die rosa-rote Naivitätsbrille abgenommen hat).
+Okay, um ehrlich zu sein: Ja, es gibt ein System. Das System heißt [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS") (Personally retarded ethymology table-tennis, yeah, operating system (das es so heißt ist allerdings nur eine Vermutung!)) und ist ein hochoptimiertes Betriebssystem mit einigen vollkommenen Neuerungen und Innovationen. Welche wissen wir auch nicht. Achja, und dann gibt es noch diesen "týndur", aber der stellt ja eher keine Gefahr dar bei genauerer Betrachtung (und nachdem man die rosa-rote Naivitätsbrille abgenommen hat).
 
 ### Was war an der GUI nochmal so besonders?
 
@@ -212,6 +212,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6289/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6293/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6289; parent 6288; 2009-11-14T17:48:31Z -->
+<!-- MediaWiki page 2095; revision 6293; parent 6289; 2009-11-14T19:06:36Z -->
