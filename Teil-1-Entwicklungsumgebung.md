@@ -65,7 +65,7 @@ Nachdem der Quellcode heruntergeladen ist (entweder die stabile Version entpackt
 
 Um ein größeres Stück Software zu entwickeln (erfahrenere Programmierer werden mir zustimmen, dass "größer" hier bei mehr als einem Hello-World-Programm anfängt), ist es unverzichtbar eine [Versionsverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung") zu benutzen. Das gilt vor allem bei der Entwicklung im Team, aber auch bei Ein-Mann-Projekten ist sie sinnvoll. Die Grundidee ist, dass jedesmal, wenn ein Stück Arbeit erfolgreich erledigt ist, der aktuelle Quellcode in der Versionsverwaltung mit einer passenden Beschreibung gesichert wird. Dadurch kann man später nachvollziehen, wer wann was warum geändert hat. Wenn etwas schiefläuft, kann man zu einer alten Version zurückkehren, entweder um die seither gemachten Änderungen rückgängig zu machen oder um die Änderung herauszufinden, die einen Fehler verursacht hat.
 
-Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird. man kann aber auch ein SVN auf sourceforge verwenden.
+Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird. Man kann aber auch ein Versionsverwaltungssystem auf <http://sourceforge.net/> verwenden.
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -73,6 +73,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6284; parent 6283; 2009-11-14T15:41:05Z -->
+<!-- MediaWiki page 1919; revision 6285; parent 6284; 2009-11-14T15:42:33Z -->
