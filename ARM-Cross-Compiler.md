@@ -96,6 +96,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6239/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 6239; parent 6237; 2009-11-09T19:04:35Z -->
+<!-- MediaWiki page 2099; revision 6269; parent 6239; 2009-11-14T04:30:14Z -->
