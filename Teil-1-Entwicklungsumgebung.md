@@ -33,7 +33,7 @@ Auch beim Compiler ist die Sache relativ klar: Wenn Du als Programmiersprache [C
 
 Wenn Du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzen willst, solltest Du Dir überlegen, ob Du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Du brauchst in diesem Fall sowohl gcc als auch binutils in einer Cross-Variante. Der Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") beschreibt, wie Du dabei vorgehen musst.
 
-Außerdem brauchst Du einen Assembler. Wenn gcc läuft, hast Du aber glücklicherweise schon einen: *as* ist der GNU-Assembler und ist in binutils enthalten.
+Außerdem brauchst Du einen Assembler. Wenn gcc läuft, hast Du schon einen: *as* ist der GNU-Assembler und ist in binutils enthalten. Ansonsten verwendet man den heute üblicherweise eingesetzten NASM.
 
 ## Dein Emulator
 
@@ -73,6 +73,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6283/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6282; parent 6252; 2009-11-14T15:37:08Z -->
+<!-- MediaWiki page 1919; revision 6283; parent 6282; 2009-11-14T15:38:22Z -->
