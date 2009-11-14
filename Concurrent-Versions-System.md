@@ -59,6 +59,6 @@ Weiter Befehle:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6256/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2104/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2104/index.html)
 
-<!-- MediaWiki page 2104; revision 6256; parent 0; 2009-11-14T04:00:40Z -->
+<!-- MediaWiki page 2104; revision 6257; parent 6256; 2009-11-14T04:01:06Z -->
