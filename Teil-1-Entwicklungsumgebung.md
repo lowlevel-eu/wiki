@@ -16,9 +16,9 @@ Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten 
 
 ## Dein Betriebssystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Mit Windows kann man nicht ganz so problemlos arbeiten, aber auch das ist möglich. Hierzu empfehlen sich Cross-Compiler und msys, damit man in Makefiles UNIX-Befehle wie cp (anstelle copy) und rm (anstelle delete) verwenden kann.
+Eine Stufe weiter kommen wir zum Betriebssystem. Da das eigene Betriebssystem noch nicht fertig ist, wird man vorerst mit einem bestehenden vorlieb nehmen müssen. Ist eine Version von [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Nicht schlecht, aber mit MS Windows kann man unter Verwendung einiger "Cross-Tools" weitgehend vergleichbar arbeiten. Hierzu empfehlen sich Cross-Compiler und msys, damit man in Makefiles UNIX-Befehle wie cp (anstelle copy) und rm (anstelle delete) verwenden kann. Typischer OS-Dever verwenden allerdings bevorzugt Linux. Prinzipiell ist das Host-OS egal. Entscheidend ist, dass man die selbst gesteckten Ziele erreicht bzw. andere Beispiele ausführen kann.
 
-Wenn du kein Linux installiert hast, kannst du auch eine Linux-Live-CD wie z.B. Knoppix verwenden. Es ist natürlich auch möglich, ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") zu installieren.
+Wenn man kein Linux installiert hat, kann man auch eine Linux-Live-CD wie z.B. Knoppix verwenden. Es ist natürlich auch möglich, ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") zu installieren.
 
 ## Dein Editor
 
@@ -73,6 +73,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6287/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6287; parent 6285; 2009-11-14T17:21:43Z -->
+<!-- MediaWiki page 1919; revision 6306; parent 6287; 2009-11-14T20:43:53Z -->
