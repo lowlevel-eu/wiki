@@ -98,7 +98,7 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 
 ### Cjreek alias Sado-Masochist aka Windows-User
 
-Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessionelle Entwickler, der zur Zeit bei einem Tierversuch teilnimmt, bei welchem getestet wird, wie sich die dauerhafte ernsthafte Nutzung von dem sogenannten "Betriebssystem" "Windows" auf Mensch und Maschine auswirkt. Er hat ebenfalls weitreichende Erfahrungen in der Betriebssystementwicklung und entwickelt den noch gar nicht offiziellen und eigentlich noch geheimen Bootloader ohne Namen, der irgendwann als Ersatz für den hochprofessionellen GRUB dienen soll.
+Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessionelle Entwickler, der zur Zeit bei einem Tierversuch teilnimmt, bei welchem getestet wird, wie sich die dauerhafte ernsthafte Nutzung von dem sogenannten "Betriebssystem" "Windows" auf Mensch und Maschine auswirkt. Er hat ebenfalls weitreichende Erfahrungen in der Betriebssystementwicklung und entwickelt den multiboot-kompatiblen Bootloader NILO, der irgendwann als Ersatz für den hochprofessionellen GRUB dienen soll.
 
 ### Paddy alias Paddynator
 
@@ -202,6 +202,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6275/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6275; parent 6274; 2009-11-14T04:53:21Z -->
+<!-- MediaWiki page 2095; revision 6276; parent 6275; 2009-11-14T04:54:56Z -->
