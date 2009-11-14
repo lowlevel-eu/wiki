@@ -1,5 +1,11 @@
 # Ausgabe 8
 
+|  |  |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| © | Dieser Artikel ist urheberrechtlich geschützt.<br>Bitte beachte, dass die üblichen [Lizenzbestimmungen](https://lowlevel-eu.github.io/wiki/pages/1637/index.html "Lowlevel:Urheberrecht") des Wikis für diesen Artikel nicht gelten. |
+
+  
+
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
 | « [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") | **Navigation** | [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9") » |
@@ -779,6 +785,6 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6303/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 4997; parent 4590; 2009-08-01T17:43:52Z -->
+<!-- MediaWiki page 1521; revision 6303; parent 4997; 2009-11-14T20:23:38Z -->
