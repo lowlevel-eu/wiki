@@ -8,7 +8,7 @@ Die **I/O APIC** (= **I/O Advanced Programmable Interrupt Controller**) löst de
 
 ## Programmierung
 
-Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) und ein Datenregister (*I/O Window* bzw. *IOWIN*). Das Indexregister befindet sich an Offset 0x00 und das Datenregister an Offset 0x10 im Speicherbereich des I/O APIC, der bei einem PIIX3 Chipsatz bei 0xfec00xy00 (x und y werden mit dem APICBASE Register im PIIX3 festgelegt) beginnt. Im Allgemeinen ist die Basisadresse der I/O APICs über die [Multiprocessor Tabellen](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#intel-multiprocessor-specification "Symmetrisches Multiprozessorsystem") bzw. die [ACPI-Tabellen](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI") auslesbar. Beide sind les- und schreibbar. Mit dem Indexregister wählt man ein internes Register der I/O APIC aus und kann dann über das Datenregister das interne Register auslesen bzw. beschreiben.
+Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) und ein Datenregister (*I/O Window* bzw. *IOWIN*). Beide sind les- und schreibbar. Das Indexregister befindet sich an Offset 0x00 und das Datenregister an Offset 0x10 im Speicherbereich des I/O APIC, der bei einem PIIX3 Chipsatz bei 0xfec00xy00 (x und y werden mit dem APICBASE Register im PIIX3 festgelegt) beginnt. Im Allgemeinen ist die Basisadresse der I/O APICs über die [Multiprocessor Tabellen](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#intel-multiprocessor-specification "Symmetrisches Multiprozessorsystem") bzw. die [ACPI-Tabellen](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI") auslesbar. Mit dem Indexregister wählt man ein internes Register der I/O APIC aus und kann dann über das Datenregister das interne Register auslesen bzw. beschreiben.
 
 ## Weblinks
 
@@ -17,6 +17,6 @@ Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) u
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6286/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 5366; parent 5340; 2009-08-06T18:07:51Z -->
+<!-- MediaWiki page 1574; revision 6286; parent 5366; 2009-11-14T16:39:45Z -->
