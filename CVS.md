@@ -1,9 +1,9 @@
 # CVS
 
-Weiterleitung: Concurrent Verions System
+Weiterleitung: [Concurrent Versions System](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6258/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2105/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2105/index.html)
 
-<!-- MediaWiki page 2105; revision 6258; parent 0; 2009-11-14T04:01:06Z -->
+<!-- MediaWiki page 2105; revision 6262; parent 6258; 2009-11-14T04:02:58Z -->
