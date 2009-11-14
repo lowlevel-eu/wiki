@@ -30,6 +30,6 @@ RISC-Systeme zeichnen sich vor allem durch einen erhöhten Satz an *general purp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6266/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
 
-<!-- MediaWiki page 2108; revision 6266; parent 0; 2009-11-14T04:28:03Z -->
+<!-- MediaWiki page 2108; revision 6267; parent 6266; 2009-11-14T04:28:23Z -->
