@@ -1,5 +1,11 @@
 # Ausgabe 2
 
+|  |  |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| © | Dieser Artikel ist urheberrechtlich geschützt.<br>Bitte beachte, dass die üblichen [Lizenzbestimmungen](https://lowlevel-eu.github.io/wiki/pages/1637/index.html "Lowlevel:Urheberrecht") des Wikis für diesen Artikel nicht gelten. |
+
+  
+
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
 | « [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1") | **Navigation** | [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") » |
@@ -352,6 +358,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6297/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 5991; parent 4989; 2009-10-11T19:53:26Z -->
+<!-- MediaWiki page 1415; revision 6297; parent 5991; 2009-11-14T20:21:55Z -->
