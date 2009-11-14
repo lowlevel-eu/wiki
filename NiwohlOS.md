@@ -169,9 +169,15 @@ Folgende Teile sind in Arbeit und schon teilweise implementiert:
 
 Folgende Teile müssen noch implementiert werden:
 
+- printf
+- kprintf
+- vsprintf
+- printf mit Zahlen
+- Eine Funktion zum Ausgeben von Zahlen
+- puts mit Zahlen
+- Zahlenausgabefunktion
 - Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
 - Geeignetes Logo ~~von 4chan klauen~~ erstellen
-- niwohunloader
 - Kernel
 - libc.hiken
 - Signifanten
@@ -187,6 +193,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6272; parent 6242; 2009-11-14T04:45:51Z -->
+<!-- MediaWiki page 2095; revision 6273; parent 6272; 2009-11-14T04:47:27Z -->
