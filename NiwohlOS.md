@@ -66,7 +66,7 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 #### [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
 
-Wie es sich für jedes anständige micromonolithische Modulahybridsystem gehört implementiert natürlich auch niwohlOS einen Mechanismus der Interprozesskommunikation. Dabei wird, inspiriert von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") eine abgewandelte Form des [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") eingesetzt: In die Kernel wird eine Untermenge eines generischen XML-Parsers implementiert, welcher XML-RPCs, welche durch Sockets übertragen werden, parst und dementsprechend an ein Eventsystem weiterleitet, welches von da aus alles weitere koordiniert.
+Wie es sich für jedes anständige micromonolithische Modulahybridsystem gehört, implementiert natürlich auch niwohlOS einen Mechanismus der Interprozesskommunikation. Dabei wird, inspiriert von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur"), eine abgewandelte Form des [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") eingesetzt: In die Kernel wird eine Untermenge eines generischen XML-Parsers implementiert, welcher XML-RPCs, welche durch Sockets übertragen werden, parst und dementsprechend an ein Eventsystem weiterleitet, welches von da aus alles weitere koordiniert.
 
 ### GUI
 
@@ -154,7 +154,7 @@ Da du anscheinend nicht genug Erfahrung im Umgang mit D.U.M.M.-heit besitzt, hie
 
 ### Was für Tabletten nehmt ihr eigentlich? Und warum nehmt ihr nicht genug davon?
 
-Natürlich nur Paracetamol von ratiopharm. Ratiopharm: Gute Preis, gute Besserung!
+Natürlich nur Paracetamol von ratiopharm. Ratiopharm: Gute Preise, gute Besserung!
 
 ## Kritik
 
@@ -214,6 +214,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6277; parent 6276; 2009-11-14T05:03:49Z -->
+<!-- MediaWiki page 2095; revision 6281; parent 6277; 2009-11-14T11:47:17Z -->
