@@ -16,11 +16,9 @@ Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten 
 
 ## Dein Betriebssystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante.
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Man kann ebenso problemlos mit einem PC mit MS Windows entwickeln. Hierzu empfiehlt sich Cross-Compiler und msys, damit man in makefiles Linux-analoge Programme wie cp (anstelle copy) und rm (anstelle delete) verwenden kann.
 
-Trotzdem möchte ich hier nicht lügen, deshalb: Ja, man kann auch [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") nehmen. Aber unter Windows wird es definitiv deutlich umständlicher (jedenfalls wenn man GRUB und ELF benutzen möchte - und das ist der von uns dringend empfohlene Weg). Unter Windows wirst Du aller Voraussicht nach eine Weile mit der Umgebung basteln müssen, während es unter Linux einfach läuft.
-
-Eine andere Möglichkeiten, wenn Du kein Linux auf deinem Rechner installiert hast und das auch nicht tun willst, aber auch nicht den Nerv hast, unter Windows eine geeignete Umgebung herzustellen, ist eine Linux-Live-CD wie Knoppix zu benutzen, die keine Installation benötigt. Alternativ kannst Du das Linux-System auch auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") Installieren.
+Eine Linux-Live-CD, z.B. Knoppix, oder ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") bietet eine Alternative zu einer vollständigen Linux-Installation.
 
 ## Dein Editor
 
@@ -75,6 +73,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6252; parent 6185; 2009-11-13T18:22:14Z -->
+<!-- MediaWiki page 1919; revision 6282; parent 6252; 2009-11-14T15:37:08Z -->
