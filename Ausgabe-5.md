@@ -1,5 +1,11 @@
 # Ausgabe 5
 
+|  |  |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| © | Dieser Artikel ist urheberrechtlich geschützt.<br>Bitte beachte, dass die üblichen [Lizenzbestimmungen](https://lowlevel-eu.github.io/wiki/pages/1637/index.html "Lowlevel:Urheberrecht") des Wikis für diesen Artikel nicht gelten. |
+
+  
+
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
 | « [Ausgabe 4](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4 "Ausgabe 4") | **Navigation** | [Ausgabe 6](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-6 "Ausgabe 6") » |
@@ -370,6 +376,6 @@ Und das war\`s auch schon wieder mit dieser Ausgabe. Feedback ist natürlich wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1470/index.html)
 
-<!-- MediaWiki page 1470; revision 5109; parent 4994; 2009-08-06T09:12:53Z -->
+<!-- MediaWiki page 1470; revision 6300; parent 5109; 2009-11-14T20:22:44Z -->
