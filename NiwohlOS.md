@@ -26,13 +26,35 @@
 
 ## Inside niwohlOS
 
-### Loader
+### Bootvorgang
 
-Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für ein jedes Betriebssystem. Um dem User unnötige und komplexe Konfiguration abzunehmen wird nach dem eigentlich Bootloader ein Zwischenloader, der niwohunloader, geladen. Dieser entscheidet anhand komplexer und hochperformanter Algorithmen, welche Systemarchitektur der entsprechende Computer besitzt und lädt daraufhin alle passenden Komponenten nach. Hierdurch ist ein voll-automatisierter Ablauf des Ladeprozesses bei optimaler Perfomance und höchster Stabilität garantiert.
+#### Phase Ia: GRUB
+
+Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für ein jedes Betriebssystem. GRUB richtet eine standardisierte und standartisierte Umgebung ein und übergibt der zweiten Phase, dem niwohunloader alle nötigen Daten, die es brauch. Auch lädt GRUB dank hochperformanter Lademechnismen unsere beiden Kernel stoiber32 und stoiber64 in den Speicher.
+
+#### Phase Ib: NILO
+
+Alternativ zu GRUB kann der NIwohLOader, kurz NILO eingesetzt werden. Dieser ist ein hochperformanter und hochkomplexer multiboot-kompatibler Bootloader, mit dessen Hilfe der niwohunloader geladen wird.
+
+#### Phase II: niwohunloader
+
+Um dem User unnötige und komplexe Konfiguration abzunehmen wird nach dem eigentlich Bootloader ein Zwischenloader, der niwohunloader, geladen. Dieser entscheidet anhand komplexer und hochperformanter Algorithmen, welche Systemarchitektur der entsprechende Computer besitzt und lädt daraufhin alle passenden Komponenten nach. Hierdurch ist ein voll-automatisierter Ablauf des Ladeprozesses bei optimaler Perfomance und höchster Stabilität garantiert.
 
 ### Kernel
 
-Der Kernel ist ein micromonolithischer Modularhybrid. Im Klartext bedeutet das: niwohlOS hat einen monolithischen Kernel, der zur Laufzeit Module einbinden kann. Diese laufen dann mit speziellen Privilegien im Usermode. Dadurch kann das Grundsystem beliebig erweitert werden und auf die individuellen Bedürfnisse jedes einzelnen Users ausgerichtet werden. Gleichzeitig wird aber auch die hohe Performance und die extreme Stabilität gewährleistet. Der monolithische Teil wird so klein wie möglich gehalten, um die vorausgesetzte optimale Performance zu garantieren.
+#### Allgemeines Konzept
+
+Die Kernel sind micromonolithische Modularhybride. Im Klartext bedeutet das: niwohlOS hat monolithische Kernel, die zur Laufzeit Module einbinden können. Diese laufen dann mit speziellen Privilegien im Usermode. Dadurch kann das Grundsystem beliebig erweitert werden und auf die individuellen Bedürfnisse jedes einzelnen Users ausgerichtet werden. Gleichzeitig wird aber auch die hohe Performance und die extreme Stabilität gewährleistet. Der monolithische Teil wird so klein wie möglich gehalten, um die vorausgesetzte optimale Performance zu garantieren.
+
+#### 32-Bit: stoiber32
+
+Für alle Computer mit bewährten und dennoch hochperformanten 32-Bit-Prozessoren dient der 32-Bit-Kernel stoiber32. Dieser zeichnet sich durch eine hochperformante Speicherverwaltung und ein hochperformantes Multitasking aus, welches bis zu zwei Prozesse mit unglaublicher Geschwindigkeit nahezu parallel ausführen kann. Stoiber32 verfügt über ein Linux-Subsystem, mit dessen Hilfe es möglich ist, Linux-Module in den Kernel einzubinden.
+
+#### 64-Bit: stoiber64
+
+Hochmoderne Computer mit hochperformanten und hochkomplexen 64-Bit-Prozessoren stehen dank stoiber64 neue Möglichkeiten zur Verfügung. Der 64-Bit-Kernel verfügt über ebenfalls über eine hochperformante und auf 64-Bit-Systeme mit mehr als 4 Petabyte Arbeitsspeicher ausgelegte Speicherverwaltung, welche garantiert, dass ein Programm nie zu wenig Speicher hat, auch wenn zu wenig Speicher vorhanden ist. Win-Win-Situation wird dieses Verfahren im professionellem Umfeld genannt. Auch stoiber64 verfügt über hochperformantes Multitasking, welches ebenfalls bis zu zwei Programme nahezu gleichzeitig und in einer atemberaubenden Geschwindkeit ausführen kann.
+
+#### Namensherkunft
 
 Da der Kernel emmmh (ein micromonolithischer Modularhybrid) ist, wird er auch als "Stoiber" bezeichnet. Hierin soll auch das Ziel KISS (Keep it simple, stupid) zum Ausdruck kommen (in Anerkennung der Leistungen Edmund Stoibers beim Bürokratieabbau in Europa).
 
@@ -41,8 +63,6 @@ tl;dr: Wie Linux, nur geiler.
 ### Treiber
 
 Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber (oder auch Kernel- und Usertreiber). Kerneltreiber werden direkt in den Kernel miteingelinkt und laufen mit der gleichen Privilegsstufe wie der Kernel, Usertreiber können zur Laufzeit nachgeladen werden und laufen im Ring-3, also mit Privilegien, die jedes normale Programm auch besitzt. Durch eine ausgeklügelte und hochmoderne HAL, der niwohlosenHAL, können Usertreiber die gleiche Funktionalität wie Kerneltreiber nutzen, ohne jedoch bei Instabilität die Ausführung des Systems zu behindern. Durch den perfekten Mix aus extrem stabilen Kerneltreibern und hochoptimierten Usertreibern kann ein sicheres, stabiles und gleichzeitig hochperformantes System garantiert werden.
-
-  
 
 ## Die Entwickler
 
@@ -167,6 +187,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6242; parent 6241; 2009-11-10T08:36:23Z -->
+<!-- MediaWiki page 2095; revision 6272; parent 6242; 2009-11-14T04:45:51Z -->
