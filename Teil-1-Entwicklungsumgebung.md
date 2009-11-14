@@ -16,9 +16,9 @@ Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten 
 
 ## Dein Betriebssystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Man kann ebenso problemlos mit einem PC mit MS Windows entwickeln. Hierzu empfiehlt sich Cross-Compiler und msys, damit man in makefiles Linux-analoge Programme wie cp (anstelle copy) und rm (anstelle delete) verwenden kann.
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du vorerst mit einem bestehenden vorlieb nehmen müssen. Hast Du ein [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Mit Windows kann man nicht ganz so problemlos arbeiten, aber auch das ist möglich. Hierzu empfehlen sich Cross-Compiler und msys, damit man in Makefiles UNIX-Befehle wie cp (anstelle copy) und rm (anstelle delete) verwenden kann.
 
-Eine Linux-Live-CD, z.B. Knoppix, oder ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") bietet eine Alternative zu einer vollständigen Linux-Installation.
+Wenn du kein Linux installiert hast, kannst du auch eine Linux-Live-CD wie z.B. Knoppix verwenden. Es ist natürlich auch möglich, ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") zu installieren.
 
 ## Dein Editor
 
@@ -33,7 +33,7 @@ Auch beim Compiler ist die Sache relativ klar: Wenn Du als Programmiersprache [C
 
 Wenn Du gcc unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") benutzen willst, solltest Du Dir überlegen, ob Du nicht einen Crosscompiler benutzt, der ELF-Dateien erzeugt. Du brauchst in diesem Fall sowohl gcc als auch binutils in einer Cross-Variante. Der Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") beschreibt, wie Du dabei vorgehen musst.
 
-Außerdem brauchst Du einen Assembler. Wenn gcc läuft, hast Du schon einen: *as* ist der GNU-Assembler und ist in binutils enthalten. Ansonsten verwendet man den heute üblicherweise eingesetzten NASM.
+Außerdem brauchst Du einen Assembler. Wenn gcc läuft, hast Du schon einen: *as* ist der GNU-Assembler und ist in binutils enthalten. Ansonsten werden bei der Betriebssystementwicklung häufig [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") oder [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") verwendet.
 
 ## Dein Emulator
 
@@ -65,7 +65,7 @@ Nachdem der Quellcode heruntergeladen ist (entweder die stabile Version entpackt
 
 Um ein größeres Stück Software zu entwickeln (erfahrenere Programmierer werden mir zustimmen, dass "größer" hier bei mehr als einem Hello-World-Programm anfängt), ist es unverzichtbar eine [Versionsverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung") zu benutzen. Das gilt vor allem bei der Entwicklung im Team, aber auch bei Ein-Mann-Projekten ist sie sinnvoll. Die Grundidee ist, dass jedesmal, wenn ein Stück Arbeit erfolgreich erledigt ist, der aktuelle Quellcode in der Versionsverwaltung mit einer passenden Beschreibung gesichert wird. Dadurch kann man später nachvollziehen, wer wann was warum geändert hat. Wenn etwas schiefläuft, kann man zu einer alten Version zurückkehren, entweder um die seither gemachten Änderungen rückgängig zu machen oder um die Änderung herauszufinden, die einen Fehler verursacht hat.
 
-Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird. Man kann aber auch ein Versionsverwaltungssystem auf <http://sourceforge.net/> verwenden.
+Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird.
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -73,6 +73,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6287/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6285; parent 6284; 2009-11-14T15:42:33Z -->
+<!-- MediaWiki page 1919; revision 6287; parent 6285; 2009-11-14T17:21:43Z -->
