@@ -237,16 +237,16 @@ schreiben auf Port 0x60 (Bevor man auf Port 0x60 schreibt, muss der Ausgabepuffe
 
 ## Tastaturtreiber
 
-Im Folgenden soll genauer auf die Ansteuerung der Tastatur als ganzes eingegangen werden, also das auslesen und verarbeiten der vom Benutzer gedrückten Tasten. Dabei wird nur auf die manuelle Ansteuerung ohne BIOS-Funktionen behandelt, wie sie benötigt wird, wenn die Tastatur im Protected Mode angesteuert werden soll. Es wird davon ausgegangen, dass die entsprechenden Grundlagen für den Treiber gegeben sind (IRQ-Behandlung, Port-Funktionen).
+Im Folgenden soll genauer auf die Ansteuerung der Tastatur als ganzes eingegangen werden, also das Auslesen und Verarbeiten der vom Benutzer gedrückten Tasten. Dabei wird nur die manuelle Ansteuerung ohne BIOS-Funktionen behandelt, wie sie benötigt wird, wenn die Tastatur im Protected Mode angesteuert werden soll. Es wird davon ausgegangen, dass die entsprechenden Grundlagen für den Treiber gegeben sind (IRQ-Behandlung, Port-Funktionen).
 
 ### Initialisierung
 
-Bevor man die Tastatur benutzt, ist es ratsam sie erstmal in einen bekannten, sauberen Zustand zu bringen. Im [Tastaturtreiber von tyndur](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/keyboard.c) hat sich nach einigem herumexperimentieren mit verschiedenen Emulatoren die folgende einfache Initialisierung bewährt:
+Bevor man die Tastatur benutzt, ist es ratsam, sie erst einmal in einen bekannten, sauberen Zustand zu bringen. Im [Tastaturtreiber von tyndur](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/keyboard.c) hat sich nach einigem herumexperimentieren mit verschiedenen Emulatoren die folgende einfache Initialisierung bewährt:
 
-- Solange das Bit 0 im Statusregister (Puffer voll) gesetzt ist Bytes aus dem Datenregister lesen. Das hilft wenn schon vor der initialisierung des Treibers irgendwelche Tasten betätigt wurde, da der KBC dann keine weiteren Zeichen sendet, bis der Puffer geleert (ausgelesen wurde), das tritt zum Beispiel im Zusammenhang mit GRUB oft auf, wenn der Benutzer die Taste zu lange gedrückt hält.
-- Tastatur mit Befehl 0xF4 aktivieren Andere Kombinationen wurden auch getestet, haben aber Probleme bereitet, unter anderem war Zeitweise ein Reset der Tastatur drin, was dazu geführt hat, dass diese unter gewissen Emulatoren überhaupt nicht mehr funktionierte.
+- Solange das Bit 0 im Statusregister (Puffer voll) gesetzt ist Bytes aus dem Datenregister lesen. Das hilft, wenn schon vor der initialisierung des Treibers irgendwelche Tasten betätigt wurde, da der KBC dann keine weiteren Zeichen sendet, bis der Puffer geleert (ausgelesen wurde). Das tritt zum Beispiel im Zusammenhang mit GRUB oft auf, wenn der Benutzer die Taste zu lange gedrückt hält.
+- Tastatur mit Befehl 0xF4 aktivieren andere Kombinationen wurden auch getestet, haben aber Probleme bereitet, unter anderem war Zeitweise ein Reset der Tastatur drin, was dazu geführt hat, dass diese unter gewissen Emulatoren überhaupt nicht mehr funktionierte.
 
-Dieser Code könnte beispielsweise folgendermassen aussehen: \<c\> static void send_command(uint8_t command); void init_keyboard(void) {
+Dieser Code könnte beispielsweise folgendermaßen aussehen: \<c\> static void send_command(uint8_t command); void init_keyboard(void) {
 
        // IRQ-Handler fuer Tastatur-IRQ(1) registrieren
        register_intr_handler(IRQ_BASE + 1, &irq_handler);
@@ -269,17 +269,19 @@ Dieser Code könnte beispielsweise folgendermassen aussehen: \<c\> static void s
 
 } \</c\>
 
-In einem vernünftigen Betriebssystem möchte man die Tastatur wahrscheinlich mit IRQs nutzen, damit man jeweils benachrichtigt wird, wenn eine Taste gedrückt wird, und nicht darauf warten muss. Dabei ist es wichtig, dass die Routine zur Behandlung der Tastatur-IRQs vor der oben angegebenen Initialisierung erfolgt, da sich sonst möglicherweise üble Race-Conditions ergeben, also konkret wenn der Puffer bereits geleert wurde, und noch vor dem Registrieren der IRQ-Routine eine Taste gedrückt wird, dann ist der Puffer der Tastatur voll, und sie schickt somit auch keine IRQs mehr, bis er geleert wird, was aber dann nicht mehr passiert, und die Tastatur hängt somit.
+In einem vernünftigen Betriebssystem möchte man die Tastatur wahrscheinlich mit IRQs nutzen, damit man jeweils benachrichtigt wird, wenn eine Taste gedrückt wird, und nicht darauf warten muss. Dabei ist es wichtig, dass die Routine zur Behandlung der Tastatur-IRQs vor der oben angegebenen Initialisierung erfolgt, da sich sonst möglicherweise üble [Race-Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") ergeben, also konkret wenn der Puffer bereits geleert wurde und noch vor dem Registrieren der IRQ-Routine eine Taste gedrückt wird, dann ist der Puffer der Tastatur voll, und sie schickt somit auch keine IRQs mehr, bis er geleert wird, was aber dann nicht mehr passiert, und die Tastatur hängt somit.
 
 ### IRQ-Handler
 
-Nun sind wir also bereit Tastendrücke von der Tastatur einzulesen. Im folgenden wird genauer darauf eingegangen, wie wir die Tastendrücke die wir vom Kontroller über einen IRQ signalisiert erhalten, verarbeiten können. Der erste und wichtigste Schritt in unserer IRQ-Behandlungsroutine ist es, das vom Tastaturkontroller bereitgestellte Byte aus dem Puffer zu lesen. In einem weiteren Schritt müssen wir jetzt entscheiden womit wir es bei diesem Byte nun genau zu tun haben. Eine erste Unterscheidung, die wir machen müssen, ist die Unterteilung in gedrückte und gelöste Tasten, was uns durch das oberste Bit im eingelesenen Byte signalisiert wird.
+Nun sind wir also bereit Tastendrücke von der Tastatur einzulesen. Im Folgenden wird genauer darauf eingegangen, wie wir die Tastendrücke, die wir vom Kontroller über einen IRQ signalisiert erhalten, verarbeiten können.
 
-Der Rest des Bytes ist ein Scancode, der uns angibt um welche Taste es sich handelt. Dieser Scancode hat überhaupt nichts mit irgendwelchen Zeichen zu tun, er gibt uns nur an welche Taste gedrückt oder gelöst wurde, und muss von uns manuell mit einer Scancode-Tabelle in die korrespondierenden Zeichen umgewandelt werden. Dabei muss man sich bewusst sein, dass für die Tastatur eine Steuertaste, wie zum Beispiel die Umschalttaste oder Caps lock, genau das selbe ist wie beispielsweise ein "a". Wird beispielsweise Umschalt+a gedrückt, um ein grosses "a" zu erhalten, schickt uns der Tastaturkontroller 2 Bytes, eines Umschalttaste gedrückt und ein anderes "a" gedrückt. Es ist also Aufgabe des Treibers diese Tasten entsprechend zu interpretieren.
+Der erste und wichtigste Schritt in unserer IRQ-Behandlungsroutine ist es, das vom Tastaturkontroller bereitgestellte Byte aus dem Puffer zu lesen. In einem weiteren Schritt müssen wir jetzt entscheiden, womit wir es bei diesem Byte nun genau zu tun haben. Eine erste Unterscheidung, die wir machen müssen, ist die Unterteilung in gedrückte und gelöste Tasten, was uns durch das oberste Bit im eingelesenen Byte signalisiert wird.
 
-Um das ganze noch komplizierter zu machen, gibt es noch so genannte Extented Scancodes, davon gibt es zwei verschiedene Sorten. Diese werden mit E0- und E1 bezeichnet, und bestehen aus 2 (E0) und 3 (E1) Bytes. Das erste Byte eines E0-Scancodes hat überraschenderweise den Wert 0xE0, während das zweite Byte um welchen e0-Scancode es sich genau handelt. E1-Scancodes bestehen aus 3 Bytes, das erste hat den Wert 0xE1 während die folgenden zwei Bytes zu einem Scancode-Wert kombiniert werden. Dabei muss beachtet werden, dass bei den Extended-Scancodes das Bit 8 des 2. und 3. Bytes darüber Aufschluss gibt, ob es sich um eine gedrückte oder eine gelöste Taste handelt. Die einzelnen Bytes der E0-Scancodes werden mit unterschiedlichen IRQs gesendet, man muss sich den aktuellen Zustand im Code also irgendwie merken. Bei Extended Scancodes gibt es noch eine weitere Stolperfalle und zwar sind das die so genannten "fake shifts" [vgl.](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html#ss1.6)
+Der Rest des Bytes ist ein Scancode, der uns angib,t um welche Taste es sich handelt. Dieser Scancode hat überhaupt nichts mit irgendwelchen Zeichen zu tun, er gibt uns nur, an welche Taste gedrückt oder gelöst wurde, und muss von uns manuell mit einer Scancode-Tabelle in die korrespondierenden Zeichen umgewandelt werden. Dabei muss man sich bewusst sein, dass für die Tastatur eine Steuertaste, wie zum Beispiel die Umschalttaste oder Capslock, genau das Selbe ist wie beispielsweise ein "a". Wird beispielsweise Umschalt+a gedrückt, um ein großes "a" zu erhalten, schickt uns der Tastaturkontroller 2 Bytes, eines Umschalttaste gedrückt und ein anderes "a" gedrückt. Es ist also Aufgabe des Treibers diese Tasten entsprechend zu interpretieren.
 
-So nun wissen wir also mit welchem Scancode wir es zu tun haben, als nächstes müssen wir den seltsamen Scancode jetzt in etwas sinnvolles umwandeln. Hier gibt es jetzt zwei Möglichkeiten, entweder wir wandeln sie direkt in ASCII-Zeichen (oder welche Kodierung auch immer) um, oder wir wandeln sie in ein internes Format um (meist Keycodes genannt), welches wir dann weitergeben.
+Um das Ganze noch komplizierter zu machen, gibt es noch so genannte *Extented* Scancodes*, davon gibt es zwei verschiedene Sorten. Diese werden mit E0- und E1* bezeichnet, und bestehen aus 2 (E0) und 3 (E1) Bytes. Das erste Byte eines E0-Scancodes hat überraschenderweise den Wert 0xE0, während das zweite Byte beinhalte, um welchen e0-Scancode es sich genau handelt. E1-Scancodes bestehen aus 3 Bytes, das Erste hat den Wert 0xE1 während die folgenden zwei Bytes zu einem Scancode-Wert kombiniert werden. Dabei muss beachtet werden, dass bei den Extended-Scancodes das Bit 8 des 2. und 3. Bytes darüber Aufschluss gibt, ob es sich um eine gedrückte oder eine gelöste Taste handelt. Die einzelnen Bytes der E0-Scancodes werden mit unterschiedlichen IRQs gesendet, man muss sich den aktuellen Zustand im Code also irgendwie merken. Bei Extended Scancodes gibt es noch eine weitere Stolperfalle und zwar sind das die so genannten *"fake* shifts" *[vgl.](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html#ss1.6)*
+
+So, nun wissen wir also, mit welchem Scancode wir es zu tun haben. Als nächstes müssen wir den seltsamen Scancode jetzt in etwas sinnvolles umwandeln. Hier gibt es jetzt zwei Möglichkeiten, entweder wir wandeln sie direkt in ASCII-Zeichen (oder welche Kodierung auch immer) um oder wir wandeln sie in ein internes Format um (meist Keycodes genannt), welches wir dann weitergeben.
 
 Auch hier wieder ein kleiner Codeabschnitt, der zeigt wie man den IRQ-Handler umsetzen könnte (aus tyndur übernommen, BSD-Lizenz): \<c\> /\*\*
 
@@ -353,8 +355,6 @@ void irq_handler(uint8_t irq) {
 
 Dieses Codestück unternimmt genau die oben beschriebenen Schritte. Die Funktion "translate_scancode" übersetzt, wie oben im Kommentar angegeben, die Scancodes in interne Keycodes der Code dazu findet sich ebenfalls im [tyndur-Repository](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/sc2kc.c). Es handelt sich dabei aber nur um eine mögliche Umsetzung und keineswegs um die einzig mögliche, hier muss man sich selbst überlegen wie das für den konkreten Anwendungsfall am komfortabelsten ist.
 
-  
-
 ## Beispiele zur Benutzung der KBC Funktionen
 
 ### CPU-reset
@@ -383,6 +383,6 @@ mov al, 0xFEi out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 6318; parent 5964; 2009-11-15T16:04:46Z -->
+<!-- MediaWiki page 1468; revision 6319; parent 6318; 2009-11-15T16:37:12Z -->
