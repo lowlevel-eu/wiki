@@ -81,8 +81,21 @@ WTFPL und Creative Commons Zero sind in etwa funktionsgleich: Man gibt Anderen e
 - [Wikipediaartikel zur WTFPL](http://de.wikipedia.org/wiki/WTFPL)
 - [Die Creative Commons Zero License Deed](http://creativecommons.org/publicdomain/zero/1.0/deed.de)
 
+  
+
+## Geht auch Creative Commons?
+
+Natürlich kannst du deinen Code theoretisch auch unter einer Creative-Commons-Lizenz veröffentlicht, jedoch ist davon in einigen Fällen abzuraten, da diese Lizenzen nicht GPL-kompatibel sind, und damit ein Austausch von Code mit GPL-Programmen in beiden Richtungen unmöglich wird.
+
+Für die non-commercial-Varianten von Creative Commons existiert natürlich keine Free-Software-Ersatzlizenz, da die Open-Source-Definition explizit das Recht auf kommerziellen Vertrieb der Software einräumt. Außerdem ist natürlich ein unter der No-Derivative-Works-Klausel veröffentlichter Code kaum noch als offen zu bezeichnen, sodass es hier auch keine freien Alternativen gibt.
+
+Alternativen zu Creative Commons:
+
+- CC-by: Wer wirklich nur will, dass sein Name in Verbindung mit den Source genannt wird, der ist mit der [X11-Lizenz](#) für Software wesentlich besser beraten.
+- CC-by-sa: Bei dieser Kombination aus Namensnennung und Copyleft steht man vor dem Problem, dass es keine Lizenz gibt, die diese genau ersetzen würde. Wenn man also eine CC-by-sa-Lizenz wählen will, sollte man vorher genau abwägen, ob man nicht doch lieber die [GPL](#gnu-general-public-license) wählt, wordurch die Software trotz der zusätzlichen Auflagen anderen Programmierern wesentlich eher nützen wird.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4570/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 4570; parent 4569; 2009-07-07T11:17:38Z -->
+<!-- MediaWiki page 1552; revision 6313; parent 4570; 2009-11-15T11:28:13Z -->
