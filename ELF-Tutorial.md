@@ -11,7 +11,15 @@ Meine Wahl für das Format fiel damals auf ELF, das liegt an verschiedenen Dinge
 - Viele andere OS-Projekte nutzen es, daher bekommt man Hilfe
 - Linux benutzt es ;)
 
-Auch hier wird vorrausgesetzt, das euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials") geschrieben). Der Code in diesem Tutorial ist übrigens in [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") geschrieben. In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von GRUB als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
+Auch hier wird vorrausgesetzt, das euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von GRUB als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
+
+  
+
+## Hinweis
+
+Bevor es richtig los geht, zwei Hinweise: Der Code in diesem Tutorial ist in [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") geschrieben und die Funktionsweise, die hier erklärt wird gilt nur für den 32-Bit-Modus.
+
+  
 
 ## Schön langsam...
 
@@ -257,6 +265,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6324/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6324; parent 6009; 2009-11-15T19:25:02Z -->
+<!-- MediaWiki page 1854; revision 6326; parent 6324; 2009-11-15T19:27:29Z -->
