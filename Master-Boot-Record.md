@@ -27,13 +27,13 @@ Die Partitionstabelle besteht aus 4 Einträgen à 16 Byte in folgendem Format:
 | 0x3 | DB | Bit 0-7 des Anfangs-Zylinders |
 | 0x4 | DB | Gibt den Partitions Typ an |
 | 0x5 | DB | Kopf an dem die Partition endet |
-| 0x6 | DB | • Bit 0-5 -\> Anfangs Sektor<br>• Bit 6-7 -\> Bit 8-9 des Anfangs-Zylinders<br> |
-| 0x7 | DB | Bit 0-7 des Anfangs-Zylinders |
+| 0x6 | DB | • Bit 0-5 -\> Letzter Sektor<br>• Bit 6-7 -\> Bit 8-9 des letzten Zylinders<br> |
+| 0x7 | DB | Bit 0-7 des letzten Zylinders |
 | 0x8 | DD | LBA (Logical Block Addressing) Nummer des Ersten Sektors |
 | 0xC | DD | Länge der Partition in Sektoren |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 4808; parent 3740; 2009-07-30T00:19:11Z -->
+<!-- MediaWiki page 1431; revision 6317; parent 4808; 2009-11-15T13:57:22Z -->
