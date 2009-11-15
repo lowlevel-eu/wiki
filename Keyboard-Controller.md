@@ -243,8 +243,8 @@ Im Folgenden soll genauer auf die Ansteuerung der Tastatur als ganzes eingegange
 
 Bevor man die Tastatur benutzt, ist es ratsam, sie erst einmal in einen bekannten, sauberen Zustand zu bringen. Im [Tastaturtreiber von tyndur](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/keyboard.c) hat sich nach einigem herumexperimentieren mit verschiedenen Emulatoren die folgende einfache Initialisierung bewährt:
 
-- Solange das Bit 0 im Statusregister (Puffer voll) gesetzt ist Bytes aus dem Datenregister lesen. Das hilft, wenn schon vor der initialisierung des Treibers irgendwelche Tasten betätigt wurde, da der KBC dann keine weiteren Zeichen sendet, bis der Puffer geleert (ausgelesen wurde). Das tritt zum Beispiel im Zusammenhang mit GRUB oft auf, wenn der Benutzer die Taste zu lange gedrückt hält.
-- Tastatur mit Befehl 0xF4 aktivieren andere Kombinationen wurden auch getestet, haben aber Probleme bereitet, unter anderem war Zeitweise ein Reset der Tastatur drin, was dazu geführt hat, dass diese unter gewissen Emulatoren überhaupt nicht mehr funktionierte.
+- Solange das Bit 0 im Statusregister (Puffer voll) gesetzt ist Bytes aus dem Datenregister lesen. Das hilft, wenn schon vor der Initialisierung des Treibers irgendwelche Tasten betätigt wurde, da der KBC dann keine weiteren Zeichen sendet, bis der Puffer geleert (ausgelesen wurde). Das tritt zum Beispiel im Zusammenhang mit GRUB oft auf, wenn der Benutzer die Taste zu lange gedrückt hält.
+- Tastatur mit Befehl 0xF4 aktivieren. Andere Kombinationen wurden auch getestet, haben aber Probleme bereitet, unter anderem war Zeitweise ein Reset der Tastatur drin, was dazu geführt hat, dass diese unter gewissen Emulatoren überhaupt nicht mehr funktionierte.
 
 Dieser Code könnte beispielsweise folgendermaßen aussehen: \<c\> static void send_command(uint8_t command); void init_keyboard(void) {
 
@@ -383,6 +383,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 6320; parent 6319; 2009-11-15T16:56:22Z -->
+<!-- MediaWiki page 1468; revision 6321; parent 6320; 2009-11-15T17:02:32Z -->
