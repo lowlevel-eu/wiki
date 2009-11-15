@@ -375,7 +375,7 @@ wait2: in al, 0x64 test al, 00000010b jne wait2
 
 Den neuen Wert für den Inputport über Port 0x60 senden
 
-mov al, 0xFEi out 0x60, al \</asm\>
+mov al, 0xFE out 0x60, al \</asm\>
 
 # Links
 
@@ -383,6 +383,6 @@ mov al, 0xFEi out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 6319; parent 6318; 2009-11-15T16:37:12Z -->
+<!-- MediaWiki page 1468; revision 6320; parent 6319; 2009-11-15T16:56:22Z -->
