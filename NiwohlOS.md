@@ -148,9 +148,7 @@ Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele
 
 ### Was für Tabletten nehmt ihr eigentlich? Und warum nehmt ihr nicht genug davon?
 
-Natürlich nur Paracetamol von ratiopharm. Ratiopharm: Gute Preise, gute Besserung!
-
-  
+Natürlich nur \$NAMEEINESWIRKSTOFFS von \$FIRMENNAMEDERDIESENWIRKSTOFFINFORMVONTABLETTENHERSTELLT. \$WERBESPRUCH.
 
 ## Kritik
 
@@ -212,6 +210,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6293/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6328/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6293; parent 6289; 2009-11-14T19:06:36Z -->
+<!-- MediaWiki page 2095; revision 6328; parent 6293; 2009-11-15T19:35:50Z -->
