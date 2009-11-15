@@ -61,7 +61,7 @@ Zuletzt noch eine Routine, die zuerst die Check-Routine aufruft, dann die Progra
 
 ## Typen und Konstanten
 
-Zuerst ein paar Definitionen:
+Zuerst ein paar Definitionen: \<freebasic\>
 
     type Elf32_Addr  as UINTEGER
     type Elf32_Half  as USHORT
@@ -70,7 +70,11 @@ Zuerst ein paar Definitionen:
     type Elf32_Word  as UINTEGER
     type Elf32_Uchar as UBYTE
 
+\</freebasic\>
+
 Beginnen wir nun mal mit dem ELF-Header.
+
+\<freebasic\>
 
     type ELF_IDENT_HEADER
         EI_MAGIC as UINTEGER                       '// ELF-Magic Number
@@ -99,11 +103,13 @@ Beginnen wir nun mal mit dem ELF-Header.
         e_shstrndex as Elf32_Half                  '// tells us which entry of the section-header is linked to the String-Table
     end type
 
+\</freebasic\>
+
 So. Wofür ist jetzt "ELF_IDENT_HEADER" gut? Ganz einfach, er gibt uns erst mal ein paar grundlegende Infos, z.B. ob die Datei Little oder Big Endian ist. Das ist wichtig, da der Rest der Datei diesen Regeln folgt! (Eigentlich ist dieser Header etwas anders eingeteilt, aber der Einfachheit halber habe ich das mal so gelöst. Wie es wirklich richtig ist kann man in den ELF-Spezifikationen nachlesen)
 
 So, jetzt überlegen wir mal, welche Teile des Headers außer dem Ident-Header für uns wichtig sind. Naja, e_type auf jeden Fall, denn wir wollen nur ausführbare Dateien ausführen. e_machine sollte auch überprüft werden, damit wir nicht Code ausführen der für einen anderen Prozessor gedacht war. e_version zeigt uns, das wir eine aktuelle ELF-Datei vor uns haben, also auch wichtig. e_entry ist wohl das wichtigste, das ist unser Einsprungpunkt in den Code. e_phoff, e_phentsize und e_phnum sind wichtig, da sie uns sagen wie und wo wir die Segmente der ELF-Datei in den Speicher kopieren müssen. Der Rest ist für uns momentan noch unwichtig.
 
-Nun schmeiße ich euch wieder ein paar Konstanten an den Kopf:
+Nun schmeiße ich euch wieder ein paar Konstanten an den Kopf: \<freebasic\>
 
     const ELF_MAG0 as UBYTE = &h7f
     const ELF_MAG1 as UBYTE = &h45
@@ -119,7 +125,11 @@ Nun schmeiße ich euch wieder ein paar Konstanten an den Kopf:
     const ELF_DATA_2LSB as UBYTE = &h01
     const ELF_DATA_2MSB as UBYTE = &h02
 
+\</freebasic\>
+
 Die sind alle für den Ident-Header. Zuerst die Magic-Number, dann die Klasse (gibt nur an ob wir eine 32bit oder eine 64bit ELF-Datei vor uns haben) und dann die Angabe ob wir Little oder Big Endian haben. Die werden später wieder verwendet.
+
+\<freebasic\>
 
     const ELF_ET_NONE as USHORT = &h0000           '// no type
     const ELF_ET_REL as USHORT = &h0001            '// relocatable
@@ -141,9 +151,11 @@ Die sind alle für den Ident-Header. Zuerst die Magic-Number, dann die Klasse (g
     const ELF_EV_NONE as UINTEGER = &h00           '// invalid version
     const ELF_EV_CURRENT as UINTEGER = &h01        '// current version
 
+\</freebasic\>
+
 So, die sind für den ELF-Header. Zuerst die Konstanten für den Dateityp, dann für die Architektur. Und schließlich die Konstanten, damit wir erkennen das es eine aktuelle Version des ELF-Formats ist.
 
-So, was fehlt noch? Achja, richtig, der Program-Header. Los gehts.
+So, was fehlt noch? Achja, richtig, der Program-Header. Los gehts. \<freebasic\>
 
     type ELF_PROGRAM_HEADER_ENTRY
         p_type as Elf32_Word                         '// type of the segment (see constants above)
@@ -156,7 +168,9 @@ So, was fehlt noch? Achja, richtig, der Program-Header. Los gehts.
         p_align as Elf32_Word                        '// alignment. if zero or one, then no alignment is needed, otherwise the alignment has to be a power of two
     end type
 
-Das wird später alles noch klarer. Und damit dieser Header nicht so alleine ist, bekommt er auch ein paar Konstanten:
+\</freebasic\>
+
+Das wird später alles noch klarer. Und damit dieser Header nicht so alleine ist, bekommt er auch ein paar Konstanten: \<freebasic\>
 
     const ELF_PT_NULL as UINTEGER = &h00           '// invalid segment
     const ELF_PT_LOAD as UINTEGER = &h01           '// loadable segment
@@ -172,11 +186,15 @@ Das wird später alles noch klarer. Und damit dieser Header nicht so alleine ist
     const ELF_PF_W as UINTEGER = &h02              '// writeable segment
     const ELF_PF_R as UINTEGER = &h04              '// readable segment
 
+\</freebasic\>
+
 Zuerst die Konstanten für den Segment-Typ. Uns interessieren momentan nur die PT_LOAD-Segmente, die anderen brauchen wir (noch) nicht. Die anderen Konstanten können wir momentan getrost ignorieren. Die geben nur ein paar Flags an ;).
 
 ## Der Code
 
 Jetzt gehts richtig los.
+
+\<freebasic\>
 
     function ELF_check (ELFheader as ELF_HEADER) as BYTE
         '// first, we check the MAGIC-string
@@ -195,11 +213,13 @@ Jetzt gehts richtig los.
         return -1
     end function
 
+\</freebasic\>
+
 Eigentlich müsste man hier nicht wirklich erklären, oder? Ich tus trotzdem. Also, wir geben dieser Funktion einen ELF-Header. Zuerst überprüfen wir den MAGIC-String (0x7f, 'E', 'L', 'F'). Dann stellen wir sicher, das die Datei auch zum ausführen gedacht ist, anschließend prüfen wir, ob es auch die richtige Architektur ist. Dann sehen wir nach, das wir ein 32bit ELF-File haben, sehen nach dem richtigen Datenformat (ihr wisst schon, Endian...) und zum Schluss überprüfen wir die Dateiversion.
 
 Sollte irgendeiner dieser Werte nicht stimmen, können wir die Datei nicht ausführen! Daher geben wir einen Fehlercode zurück, den man später auswerten könnte. Ist alles glatt gelaufen, geben wir TRUE zurück.
 
-Und nun zum wichtigsten, aber auch gemeinsten Code:
+Und nun zum wichtigsten, aber auch gemeinsten Code: \<freebasic\>
 
     sub ELF_Create_Task (ID as USHORT, priority as UBYTE, address as any ptr)
         dim ELFheader as ELF_HEADER ptr = cast(ELF_HEADER ptr, address)
@@ -230,6 +250,8 @@ Und nun zum wichtigsten, aber auch gemeinsten Code:
         
         Task_Create (ID, priority, cast(any ptr, ELFheader->e_entry))
     end sub
+
+\</freebasic\>
 
 Die Funktion kümmert sich um die Erstellung eines Tasks. Dazu geben wir ihm die gewünschte Task-ID und die Priorität (kann man natürlich auch weglassen), und natürlich einen Pointer auf die ELF-Datei (kriegt ihr von GRUB in der Multiboot-Info-Struktur).
 
@@ -265,6 +287,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6329/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6326; parent 6324; 2009-11-15T19:27:29Z -->
+<!-- MediaWiki page 1854; revision 6329; parent 6326; 2009-11-15T20:13:06Z -->
