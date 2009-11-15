@@ -16,9 +16,9 @@ Aber zurück zum PC: Am besten hat dieser ein Diskettenlaufwerk, denn Disketten 
 
 ## Dein Betriebssystem
 
-Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du wohl vorerst mit einem bestehenden vorliebnehmen müssen. Ist eine Version von [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Sehr gut. Aber auch mit Windows kannst Du unter Verwendung einiger "Cross-Tools" weitgehend vergleichbar arbeiten. Hierzu empfehlen sich Cross-Compiler und msys, damit Du in Makefiles UNIX-Befehle wie cp (anstelle copy) und rm (anstelle delete) verwenden kannst. Typische OS-Dever verwenden allerdings bevorzugt Linux.
+Eine Stufe weiter kommen wir zum Betriebssystem. Da Dein eigenes Betriebssystem noch nicht fertig ist, wirst Du wohl vorerst mit einem bestehenden vorliebnehmen müssen. Ist eine Version von [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") installiert? Wunderbar, nimm das. Oder eine BSD-Variante. Wenn Du kein Linux installiert hast, kannst Du auch eine Linux-Live-CD wie z.B. Knoppix verwenden. Es ist natürlich auch möglich, ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") zu installieren. Der Vorteil eines solchen Systems ist, dass alle benötigten Werkzeuge nativ verfügbar sind und Du ohne großartige Einrichtung einfach loslegen kannst.
 
-Wenn Du kein Linux installiert hast, kannst Du auch eine Linux-Live-CD wie z.B. Knoppix verwenden. Es ist natürlich auch möglich, ein Linux-System auf einer virtuellen Maschine wie [VMware Server](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMware"), [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") oder [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") zu installieren.
+Wenn Du es dennoch bevorzugen solltest, mit Windows zu arbeiten, kannst Du Dir mit ein wenig Vorarbeit auch dort eine Entwicklungsumgebung einrichten. Dabei empfiehlt sich die Installation einer Cross-Toolchain und von MSYS, damit Du Deine Makefiles durch Verwendung von Unixbefehlen einigermaßen portabel halten kannst. Für andere Dinge wie die Bearbeitung von Disketten- und Festplattenimages wirst Du zusätzliche Tools wie z.B. VFD benötigen.
 
 ## Dein Editor
 
@@ -73,6 +73,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6309; parent 6308; 2009-11-14T21:27:57Z -->
+<!-- MediaWiki page 1919; revision 6314; parent 6309; 2009-11-15T11:28:29Z -->
