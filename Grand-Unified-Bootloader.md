@@ -25,9 +25,10 @@ Im Falle der Betriebssystem-Entwicklung ist er sehr hilfreich, wenn man keinen e
 
 - <http://de.wikipedia.org/wiki/GRUB>
 - <http://www.gnu.org/software/grub/>
+- <https://gna.org/projects/grub4dos>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6337/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 5466; parent 5409; 2009-08-07T20:00:40Z -->
+<!-- MediaWiki page 1567; revision 6337; parent 5466; 2009-11-16T13:19:29Z -->
