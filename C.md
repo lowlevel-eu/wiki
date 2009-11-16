@@ -73,6 +73,7 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 - gcc aus der [GNU Compiler Collection](http://gcc.gnu.org/)
 - [tcc](http://bellard.org/tcc/) (Tiny C Compiler)
+- [bcc](http://dir.filewatcher.com/d/FreeBSD/4.2-release/i386/bcc-1995.03.12.tgz.79915.html) ein 16Bit Compiler für Linux (im dev86-Paket enthalten)
 - Borland [Turbo C](http://dn.codegear.com/article/20841) für DOS (16 Bit/Real Mode)
 
 ## Weblinks
@@ -84,6 +85,6 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6055; parent 6054; 2009-10-15T12:51:03Z -->
+<!-- MediaWiki page 1526; revision 6330; parent 6055; 2009-11-16T10:18:46Z -->
