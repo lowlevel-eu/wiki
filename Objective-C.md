@@ -28,9 +28,6 @@ Primär hat Objective-C als Grundlage [C](https://github.com/lowlevel-eu/wiki/wi
 - Methoden
 - Instanzen
 - Delegierte
-- Generische Programmierung
-
-  
 
 ## Objective-C als Sprache für ein Betriebssystem
 
@@ -162,6 +159,6 @@ Dieser kann dann mit qemu direkt aufgerufen werden (ab Version 0.11.0):
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2115/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6346/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2115/index.html)
 
-<!-- MediaWiki page 2115; revision 6345; parent 6344; 2009-11-18T02:57:14Z -->
+<!-- MediaWiki page 2115; revision 6346; parent 6345; 2009-11-18T05:34:49Z -->
