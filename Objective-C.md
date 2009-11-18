@@ -142,7 +142,7 @@ Gebaut wird der Kernel nun wie folgt:
     $ gcc -g -c -m32 -Wall -fno-stack-protector -fno-builtin -nostdlib -nodefaultlibs -c init.m
     $ ld -melf_i386 -Tlink.ld start.o init.o -o objckernel
 
-Dieser kann dann mit qemu direkt aufgerufen werden (ab Version 0.11.0):
+Dieser kann dann mit [qemu](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") direkt aufgerufen werden (ab Version 0.11.0):
 
     $ qemu -kernel objkernel
 
@@ -159,6 +159,6 @@ Dieser kann dann mit qemu direkt aufgerufen werden (ab Version 0.11.0):
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6346/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2115/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2115/index.html)
 
-<!-- MediaWiki page 2115; revision 6346; parent 6345; 2009-11-18T05:34:49Z -->
+<!-- MediaWiki page 2115; revision 6347; parent 6346; 2009-11-18T05:35:57Z -->
