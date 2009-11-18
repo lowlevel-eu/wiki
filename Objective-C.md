@@ -79,7 +79,9 @@ folgendes:
 
     #import <stdio.h>
 
-=== start.S Hier die Assembler-Startdatei: \<asm\> .section .text
+### start.S
+
+Hier die Assembler-Startdatei samt [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Header, welche von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") aufgerufen wird und durch welche wir in den Objective-C-Kernel springen: \<asm\> .section .text
 
 .extern init
 
@@ -147,8 +149,6 @@ Dieser kann dann mit qemu direkt aufgerufen werden (ab Version 0.11.0):
 
     $ qemu -kernel objkernel
 
-  
-
 ## Compiler
 
 - [GCC](http://gcc.gnu.org/) - Unterstützung auch für Objective-C (gobjc)
@@ -162,6 +162,6 @@ Dieser kann dann mit qemu direkt aufgerufen werden (ab Version 0.11.0):
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2115/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2115/index.html)
 
-<!-- MediaWiki page 2115; revision 6344; parent 0; 2009-11-18T02:55:39Z -->
+<!-- MediaWiki page 2115; revision 6345; parent 6344; 2009-11-18T02:57:14Z -->
