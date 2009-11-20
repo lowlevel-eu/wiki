@@ -24,6 +24,12 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 - Shell
 - kleiner Texteditor
 
+Suche Leute für Netzwerkkartentreiber , ping und vieleicht auch einen kleinen Webbrowser.........
+
+[Quellcode von Cats](http://ul.to/ioyr40)
+
+Bitte Vorschläge an peter.junior@live.at senden.
+
 ## Befehle
 
 - date
@@ -52,6 +58,6 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6349/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6096; parent 6086; 2009-10-17T17:01:04Z -->
+<!-- MediaWiki page 2084; revision 6349; parent 6096; 2009-11-20T15:57:19Z -->
