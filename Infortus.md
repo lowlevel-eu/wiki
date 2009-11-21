@@ -17,10 +17,6 @@
 
 Keine
 
-  
-
-## Infortus
-
 Infortus ist mein Betriebssystem (abgeleitet von [Informatikonline.net](http://www.Informatikonline.net)).
 
 ## Planung
@@ -33,6 +29,6 @@ Implementierung von Floppydriver und Dateisystem
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6355; parent 0; 2009-11-21T20:51:17Z -->
+<!-- MediaWiki page 2117; revision 6356; parent 6355; 2009-11-21T20:51:34Z -->
