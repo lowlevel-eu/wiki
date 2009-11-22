@@ -29,6 +29,6 @@ Implementierung von Floppydriver und Dateisystem
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6359; parent 6356; 2009-11-22T00:58:58Z -->
+<!-- MediaWiki page 2117; revision 6360; parent 6359; 2009-11-22T00:59:33Z -->
