@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | \- |
-| Binärformat: | elf32 |
+| Binärformat: | [elf32](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF32") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
@@ -29,6 +29,6 @@ Implementierung von Floppydriver und Dateisystem
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6363; parent 6362; 2009-11-22T01:04:43Z -->
+<!-- MediaWiki page 2117; revision 6367; parent 6363; 2009-11-22T09:33:51Z -->
