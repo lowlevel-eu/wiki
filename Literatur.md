@@ -45,7 +45,9 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 - ["Understanding the Linux Kernel - From I/O ports to process management" von Daniel P. Bovet und Marco Cesati](http://www.amazon.de/Understanding-Linux-Kernel-Process-Management/dp/0596000022/ref=sr_1_2?ie=UTF8&qid=1249546324&sr=8-2)  
   Dieses Buch erklärt den [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") sehr detailliert, indem Grafiken Abläufe erklären und wichtige Strukturen sowie kurze Codeteile aufgelistet werden. Dabei handelt es unter anderem von [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") (mit Dateibuffering, Swapping und [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")), dem VFS von Linux, [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), Signalen, [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Synchronisation im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
 
-  
+<!-- -->
+
+- [Essential Linux Device Drivers von Sreekrishnan Venkateswaran](http://www.amazon.de/Essential-Drivers-Prentice-Software-Development/dp/0132396556) - Das wohl beste Buch über Treiber im Linux-Kernel. Neben der Arbeitsweise des Linux-Kernels werden sämtliche Arten von Device-Drivers ausführlich behandelt: Von TTY über die [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") und [parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle") bis hin zu [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB") und Firewire lässt der Autor hier nichts verborgen. Als Extra werden im Anhang die Basics zu Assembler unter Linux dem Leser nähergebracht.
 
 ### Bücher über Implementierung
 
@@ -75,6 +77,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 6375; parent 6095; 2009-11-23T20:34:15Z -->
+<!-- MediaWiki page 1930; revision 6377; parent 6375; 2009-11-23T22:05:59Z -->
