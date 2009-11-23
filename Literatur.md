@@ -10,6 +10,8 @@ Leider sind die meisten Fach- und Lehrbücher sehr teuer. Darum sei an dieser St
 
 Möchte man dennoch lieber ein Buch besitzen, um beispielsweise im selbigen Notizen zu machen, so sollte man der kleinen Bibliothek von nebenan einen Besuch machen. Dort werden oftmals Reste von Beständen zu sehr günstigen Preisen verkauft, zum Beispiel, wenn von einem Buch eine neue Auflage erschienen ist. Preisersparnisse von bis zu 50% sind keine Seltenheit.
 
+**Anmerkungen zur Aktualität der Liste:** Es kann vorkommen, dass die Links auf eine veraltete Version des Buches zeigen. Darum sollte man am besten immer noch einmal nach dem Buchtitel suchen, um eine eventuell neu herausgekommene aktualisierte Auflage zu finden. Wenn du siehst, dass ein Buch in einer aktualisierten Auflage erschienen ist, dann ändere den Link doch direkt hier im Artikel oder lass wenigstens einen Hinweis auf der [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/2123/index.html "Diskussion:Literatur") da! Danke!
+
 ## Bücher: Programmierung
 
 Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, mächtig sein. Wer neue Sprachkenntnisse erlernen möchte, seine Sprachkenntnisse vertiefen möchte oder eine gute Referenz sucht, dem sei diese Liste ans Herz gelegt:
@@ -23,16 +25,16 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 
 ### C/C++
 
-- ["C/C++ GE-PACKT" von Herbert Schildt](http://www.amazon.de/ge-packt-Schneller-kompletten-Zahlreiche-Produktivität/dp/3826617282/ref=sr_1_1?ie=UTF8&s=books&qid=1249511226&sr=1-1)  
+- ["C/C++ GE-PACKT" von Herbert Schildt](http://www.amazon.de/ge-packt-Schneller-kompletten-Zahlreiche-Produktivität/dp/3826617282)  
   Eine kurze Übersicht über die Features von C, C++ und den Standard-Bibliotheken.
 - ["C++ Objektorientiertes Programmieren von Anfang an" von Helmut Erlenkötter](http://www.amazon.de/C-Objektorientiertes-Programmieren-von-Anfang/dp/3499600773)  
   Das Buch ist optimal, wenn man bereits Programmieren kann, und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen die bereits C++ können ist es ein nettes Nachschlagewerg. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
 - ["C: Bibliotheksfunktionen sicher anwenden" von Helmut Erlenkötter](http://www.amazon.de/Bibliotheksfunktionen-sicher-anwenden-Helmut-Erlenk%C3%B6tter/dp/3499612232)  
   Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kennitnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
-- ["C++ von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/von-bis-CD-ROM-umfassende-Handbuch/dp/3898428168)  
+- ["C++ von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/von-bis-Mit-CD-ROM-umfassende/dp/3836214296)  
   Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert. Dazu kommt noch eine CD mit der HTML-Version des untenstehenden Buches "C von A bis Z".
-- ["C von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/umfassende-Handbuch-Linux-Unix-Windows/dp/3898426432)  
-  Das passende C-Handbuch vom selben Autor, es ist beim Verlag auch als HTML-Version als [kostenloses Openbook](http://openbook.galileocomputing.de/c_von_a_bis_z/) verfügbar. Ist sehr gut zum Lernen, jedoch teilweise verwirrend geschrieben, und für den OS-Entwickler teilweise zu ungenau. Trotzdem insgesamt eine empfehlenswerte Referenz. (ACHTUNG: Im September 2009 erscheint eine neue Auflage. Eventuell lohnt es sich zu warten, um das neue, aktuellere Buch zu kaufen, oder das alte Buch eventuell billiger zu kriegen)
+- ["C von A bis Z: Das umfassende Handbuch" von Jürgen Wolf](http://www.amazon.de/von-bis-umfassende-Handbuch-Windows/dp/3836214113)  
+  Das passende C-Handbuch vom selben Autor, es ist beim Verlag auch als HTML-Version als [kostenloses Openbook](http://openbook.galileocomputing.de/c_von_a_bis_z/) verfügbar. Ist sehr gut zum Lernen, jedoch teilweise verwirrend geschrieben, und für den OS-Entwickler teilweise zu ungenau. Trotzdem insgesamt eine empfehlenswerte Referenz.
 
   
 
@@ -42,7 +44,7 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 
 ### Bücher über existierende Kernel
 
-- ["Understanding the Linux Kernel - From I/O ports to process management" von Daniel P. Bovet und Marco Cesati](http://www.amazon.de/Understanding-Linux-Kernel-Process-Management/dp/0596000022/ref=sr_1_2?ie=UTF8&qid=1249546324&sr=8-2)  
+- ["Understanding the Linux Kernel - From I/O ports to process management" von Daniel P. Bovet und Marco Cesati](http://www.amazon.de/Understanding-Linux-Kernel-Process-Management/dp/0596000022)  
   Dieses Buch erklärt den [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") sehr detailliert, indem Grafiken Abläufe erklären und wichtige Strukturen sowie kurze Codeteile aufgelistet werden. Dabei handelt es unter anderem von [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") (mit Dateibuffering, Swapping und [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")), dem VFS von Linux, [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), Signalen, [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Synchronisation im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
 
 <!-- -->
@@ -78,6 +80,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 6379; parent 6378; 2009-11-23T22:07:57Z -->
+<!-- MediaWiki page 1930; revision 6380; parent 6379; 2009-11-23T22:16:01Z -->
