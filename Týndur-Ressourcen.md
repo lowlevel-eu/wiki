@@ -7,17 +7,14 @@ Ausführliche Informationen zum Entwicklungsprozess gibt es unter [Týndur/Entwi
 ## Downloads
 
 - [download.tyndur.org](http://download.tyndur.org/) – Downloadserver für stabile Releases und andere Dateien zu Týndur
-- [nightlies.tyndur.org](http://nightlies.tyndur.org) – Nightly Builds
 
 ## Code-Repositories
 
 - [git.tyndur.org](http://git.tyndur.org/) – Týndur-WebGit
-- [svn.tyndur.org](http://svn.tyndur.org/) – Týndur-WebSVN
 
-Anmerkung: Der vollständige Wechsel auf Git ist in Planung, und sofern man nicht an master (sondern nur in einem eigenen Branch) arbeiten will funktioniert dieses auch bereits. Für Änderungen am Hauptzweig ist Subversion zu verwenden. Die Adressen zum Klonen:
+Die Clone-Url lautet:
 
 - git://git.tyndur.org/tyndur.git
-- svn://overgames.de/lost
 
 ## IRC
 
@@ -34,6 +31,6 @@ Channellogs und Statistiken: [irc.tyndur.org](http://irc.tyndur.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
 
-<!-- MediaWiki page 2027; revision 5600; parent 5589; 2009-08-12T16:20:04Z -->
+<!-- MediaWiki page 2027; revision 6372; parent 5600; 2009-11-23T19:27:33Z -->
