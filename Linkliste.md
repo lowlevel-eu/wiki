@@ -45,11 +45,12 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 
 ### AMD
 
+- [AMD-Developer-Center](http://developer.amd.com/documentation/guides/pages/default.aspx)
 - [AMD64 Systemprogrammierung](http://support.amd.com/us/Processor_TechDocs/24593.pdf)
 - [AMD64 Instruktionen](http://support.amd.com/us/Processor_TechDocs/24594.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6386/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 6386; parent 6212; 2009-11-24T16:13:27Z -->
+<!-- MediaWiki page 1437; revision 6387; parent 6386; 2009-11-24T16:14:09Z -->
