@@ -23,8 +23,8 @@ TODO
 ## Links
 
 - \[\[Artikelname\]\] - Bsp: "Ein \[\[Interrupt\]\]" wird zu: "[Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")"
-- \[\[artikelname\|text im artikel\]\] - Bsp: "Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß" wird zu: "Eine [Unterbrechung](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") macht Spaß"
-- \[http://example.com externer linke\] - Bsp: "Das \[http://lowlevel.brainsware.org Lowlevel Wiki\] macht Spaß" wird zu: "Das [Lowlevel Wiki](http://lowlevel.brainsware.org) macht Spaß"
+- \[\[Artikelname\|Text im Artikel\]\] - Bsp: "Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß" wird zu: "Eine [Unterbrechung](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") macht Spaß"
+- \[http://example.com externer Link\] - Bsp: "Das \[http://lowlevel.brainsware.org Lowlevel Wiki\] macht Spaß" wird zu: "Das [Lowlevel Wiki](http://lowlevel.brainsware.org) macht Spaß"
 - \[http://example.com\] - Bsp: "Siehe \[http://lowlevel.brainsware.org\]" wird zu: "Siehe [\[1\]](http://lowlevel.brainsware.org)"
 
 ## Wikiformatierung unterdrücken
@@ -138,6 +138,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden. Man kann auch in der [Media
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5713/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 5713; parent 5712; 2009-08-25T11:40:04Z -->
+<!-- MediaWiki page 2049; revision 6382; parent 5713; 2009-11-24T15:09:41Z -->
