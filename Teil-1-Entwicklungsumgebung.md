@@ -27,6 +27,8 @@ Dann brauchst Du Editor und Compiler. Als Editor hast Du sicher schon Deinen eig
 - Unter Linux: vim, Kate, gedit, KDevelop, Eclipse
 - Unter Windows: Notepad++, Eclipse
 
+Vielleicht gefällt Dir ja einer aus [dieser](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") Liste.
+
 ## Dein Compiler
 
 Auch beim Compiler ist die Sache relativ klar: Wenn Du als Programmiersprache [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") nimmst (in dieser Reihe wird C für die Beispiele benutzt), wird der Compiler im Allgemeinen gcc sein und unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") ist damit alles geklärt.
@@ -73,6 +75,6 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6314; parent 6309; 2009-11-15T11:28:29Z -->
+<!-- MediaWiki page 1919; revision 6385; parent 6314; 2009-11-24T15:27:07Z -->
