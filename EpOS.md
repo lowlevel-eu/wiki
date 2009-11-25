@@ -3,7 +3,7 @@
 | EpOS |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
-| Entwickler: | [dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
+| Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
 | Akt. Version: | 0.01 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
@@ -15,10 +15,8 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[epOS.kilu.de](http://epos.kilu.de/)
-
   
-Hi, ich bin [dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") ^\_^  
+Hi, ich bin [dem epOS sein Linus (DesL)](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") ^\_^  
 und dass hier ist eben epOS.  
 Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating **S**ystem!  
 
@@ -47,16 +45,12 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 
 ## History/Archiv
 
-Naja, ich sitze an v0.01, so viel History is da nit...
-
-## Sonstiges
-
-Für Newsletter (Release&co) Mail an <epOS@gmx.de> Wer mit machen will, nur zu, Schick mir ne Mail. Ich weiss, ist Beides doch recht Unwahrscheinlich, aber egal :P
+Naja, ich sitze an v0.01, so viel History ist da nicht...
 
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5274/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 5274; parent 5033; 2009-08-06T15:27:19Z -->
+<!-- MediaWiki page 1771; revision 6394; parent 5274; 2009-11-25T10:09:30Z -->
