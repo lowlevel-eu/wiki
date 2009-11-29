@@ -31,7 +31,7 @@ class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear
 
 ### Video.cpp
 
-Die Implementierung der in Video.hpp definierten Memberfunktionen kommt in eine eigene Quellcodedatei:
+Die Implementierung der in Video.h definierten Memberfunktionen kommt in eine eigene Quellcodedatei:
 
 \<cpp\>
 
@@ -155,6 +155,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6408; parent 6405; 2009-11-29T13:15:24Z -->
+<!-- MediaWiki page 2124; revision 6409; parent 6408; 2009-11-29T13:21:15Z -->
