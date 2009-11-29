@@ -1,31 +1,31 @@
 # C\+\+-Kernel mit GRUB
 
-Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Da wären zum Beispiel der Aufruf der Constructoren, bzw. der Destructoren, die vor bzw. nach dem eigentlichen Kernel aufgerufen werden. Unser Kernel wird mittels [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") geladen.
+Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Da wären zum Beispiel der Aufruf der Konstruktoren, bzw. der Destruktoren, die vor bzw. nach dem eigentlichen Kernel aufgerufen werden. Unser Kernel wird mittels [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") geladen.
 
   
 
 ## Kernel
 
-Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Ich verwende den Cross-Compiler von Jidder, es sollte aber keinen Unterschied zu einem "normalen" GCC unter Linux geben.
+Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Ich verwende den [Crosscompiler_für_Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")Cross-Compiler von Jidder, es sollte aber keinen Unterschied zu einem "normalen" gcc unter Linux geben.
 
 ### Kernel.cpp
 
 Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erstellen wir ein Klasse namens Video, die wir in einen Header stecken. Dadurch ist unsere kernel.cpp sehr übersichtlich: \<cpp\>
 
-1.  include "MyOS.h" //einbinden unseres Header
+1.  include "MyOS.h" // Einbinden unseres Header
 
-void main(void){ Video screen; //erzeugen von screen screen.color(0x7000); //Vordergrund Schwarz, Hintergrund Dunkelgrau screen.clear(); //Bildschirm leeren screen.write((char \*)"Wilkommen im C++-TestKernel!"); //Textausgabe } \</cpp\>
+void main(void){ Video screen; // Screen instanzieren screen.color(0x7000); // Vordergrund Schwarz, Hintergrund Dunkelgrau screen.clear(); // Bildschirm leeren screen.write((char \*)"Wilkommen im C++-TestKernel!"); // Textausgabe } \</cpp\>
 
 ### MyOS.h
 
-Der Header ist dann doch etwas Umfangreicher:
+Der Header ist dann doch etwas umfangreicher:
 
 \<cpp\>
 
 1.  ifndef MyOS_H
 2.  define MyOS_H
 
-class Video { public: Video(); //Konstruktor ~Video(); //Destruktor void clear(); //Leeren des Bildschirms, die Gräße liegt bei 80x25 Zeichen void write(char \*cp); //Textausgabe void put(char c); //Ausgabe eines einzelnen Zeichens void color(int color); //Setzen der FG/BG Farben private: unsigned short \*videomem; //Zeiger auf den Videospeicher unsigned int off; //Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; //X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; //FB/BG Farbe }; Video::Video(){ screen_color = 0x0700; //Setzen der Farbe auf Dunkelgrau auf Schwarz pos=0; //Setzen der Textausgabe auf off=0; //Linksoben. videomem = (unsigned short\*) 0xb8000; //Startadresse des Videospeichers } Video::~Video(){} void Video::clear(){ for(int i=0;i\<(80\*25);i++) { videomem\[i\] = (unsigned char)' ' \|screen_color; //Füllen des Bildschirms mit Leerzeichen } pos = 0; //Zurücksetzen der Textausgabe nach Linksoben off = 0; // } void Video::write(char \*cp){ char \*str = cp, \*ch; for(ch = str; \*ch; ch++){ put(\*ch); //Für jedes einzelne Zeichen wird put() aufgerufen } } void Video::put(char c){ if(pos \>= 80){ //Wenn die Textausgabe den rechten pos = 0; off += 80; } if(off\>=(80\*25)){ //oder den unteren Bildschirmrand erreicht, gibt es einen clear(); //Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c\|screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; } void Video::color(int color){ screen_color = color; //eigentlcih selbsterklärend }
+class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe liegt bei 80x25 Zeichen void write(char \*cp); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG Farben private: unsigned short \*videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG Farbe }; Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Dunkelgrau auf Schwarz pos=0; // Setzen der Textausgabe auf off=0; // link soben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers } Video::~Video(){} void Video::clear(){ for(int i=0;i\<(80\*25);i++) { videomem\[i\] = (unsigned char)' ' \|screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; } void Video::write(char \*cp){ char \*str = cp, \*ch; for(ch = str; \*ch; ch++){ put(\*ch); // Für jedes einzelne Zeichen wird put() aufgerufen } } void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off\>=(80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c\|screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; } void Video::color(int color){ screen_color = color; }
 
 1.  endif
 
@@ -33,7 +33,7 @@ class Video { public: Video(); //Konstruktor ~Video(); //Destruktor void clear()
 
 ### cKernel.c
 
-Um den Constructor bzw. den Destructor aufzurufen, verlinken wir später diese zwei Funktionen mit:
+Um den Konstruktor bzw. den Destruktor aufzurufen, werden diese beiden Funktionen später mit in den Kernel gelinkt:
 
 \<c\> void \_cmain() { extern void (\*\_\_CTOR_LIST\_\_)(); void (\*\*constructor)() = &\_\_CTOR_LIST\_\_; int total = \*(int \*) constructor; constructor++; while(total){ (\*constructor)(); total--; constructor++; } }
 
@@ -80,15 +80,16 @@ Die asmKernel.asm:
 
 Kernel.cpp:
 
-    gcc -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -c -Os -o  Kernel.o Kernel.cpp
+    gcc -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -c -Os -o Kernel.o Kernel.cpp
 
 cKernel.cpp:
 
-    gcc -m32 -ffreestanding -fno-leading-underscore -c -o cKernel.o cKernel.c -Wall -Werror -nostdinc
+    gcc -Wall -Werror -nostdinc -m32 -ffreestanding -fno-leading-underscore -c -o cKernel.o cKernel.c 
 
-Nun zu einem der wichtigsten Stellen: das Linken. Wir müssen die asmKernel.o, die Kernel.o und die cKernel.o zu einer Kernel.bin linken, die dann von GRUB geladen werden kann.
+  
+Nun zu einer der wichtigsten Stellen: Dem Linkvorgang: Wir müssen die asmKernel.o, die Kernel.o und die cKernel.o zu einer Kernel.bin linken, die dann von GRUB geladen werden kann.
 
-Unser Linkerscript, wir speichern es in link.txt:
+Unser Linkerscript (link.txt)
 
     ENTRY(loader)
     OUTPUT_FORMAT(elf32-i386)
@@ -118,18 +119,28 @@ Unser Linkerscript, wir speichern es in link.txt:
       end = .; _end = .; __end = .;
     }
 
-Wir sagen dem Linker zusätzlich zu einem Script für eine C-Kernel, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ haben. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand, äh Maus ^^.
+Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
 
     ld -T link.txt -o kernel.bin asmKernel.o cKernel.o Kernel.o
 
-Und fertig ist unser Kernel! Unsere Kernel.bin kann die Kernel.bin auf dem Disketten-Image aus [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") ohne weiteres ersetzen, und schon Startet unsser C++-Kernel!
+Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette landet kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden, dort verfährt man einfach analog.
 
 ## Anmerkungen
 
-Es kann unter umständen nötig sein \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_\_ zu ersetzen, also das \_ weglassen. Ich vermute, dass das von der GCC Version abhängig ist.
+Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_\_ zu ersetzen, also das \_ weglassen. Ich vermute, dass das von der GCC Version abhängig ist.
+
+  
+
+## Siehe auch
+
+- [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB")
+- [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
+- [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
+- [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
+- [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6395/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6395; parent 0; 2009-11-29T00:48:31Z -->
+<!-- MediaWiki page 2124; revision 6398; parent 6395; 2009-11-29T01:07:19Z -->
