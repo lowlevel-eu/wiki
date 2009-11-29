@@ -51,13 +51,7 @@ void Video::color(int color){ screen_color = color; } \</cpp\>
 
 ### Startup.cpp
 
-Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), werden diese beiden Funktionen später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen:
-
-\<cpp\> extern "C" void constructors(); extern "C" void destructors();
-
-void constructors() { extern void (\*\_\_CTOR_LIST\_\_)(); void (\*\*constructor)() = &\_\_CTOR_LIST\_\_; int total = \*(int \*) constructor; constructor++; while(total){ (\*constructor)(); total--; constructor++; } }
-
-void destructors() { extern void (\*\_\_DTOR_LIST\_\_)(); void (\*\*deconstructor)() = &\_\_DTOR_LIST\_\_; deconstructor++; int total = \*(int \*) deconstructor; while(total) { (\*deconstructor)(); total--; deconstructor++; } } \</cpp\>
+Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), werden diese beiden Funktionen später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen: siehe [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#konstruktoren "C++").
 
 ### asmKernel.asm
 
@@ -127,8 +121,13 @@ Unser Linkerscript (link.txt)
 
       .data  :
       {
-        __CTOR_LIST__ = .;LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2) *(.ctors) LONG(0) __CTOR_END__ = .;
-        __DTOR_LIST__ = .; LONG((__DTOR_END__ - __DTOR_LIST__) / 4 - 2) *(.dtors) LONG(0) __DTOR_END__ = .;
+        start_ctors = .;
+        *(.ctors)
+        end_ctors = .;
+
+        start_dtors = .;
+        *(.dtors)
+        end_dtors = .;
 
         *(.data)
       }
@@ -155,6 +154,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6415/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6415; parent 6412; 2009-11-29T15:58:53Z -->
+<!-- MediaWiki page 2124; revision 6418; parent 6415; 2009-11-29T19:11:20Z -->
