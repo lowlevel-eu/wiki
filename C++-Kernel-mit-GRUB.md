@@ -141,6 +141,6 @@ Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6399/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6398; parent 6395; 2009-11-29T01:07:19Z -->
+<!-- MediaWiki page 2124; revision 6399; parent 6398; 2009-11-29T01:09:04Z -->
