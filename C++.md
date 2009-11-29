@@ -182,9 +182,9 @@ RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett de
 
 Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit g++ können Exceptions über den Kommandozeilenparameter *-fno-exceptions* deaktiviert werden.
 
-## Siehe Auch
+## Siehe auch
 
-C++-Kernel
+[C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
 
 ## Links
 
@@ -203,6 +203,6 @@ C++-Kernel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6396/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6396; parent 6264; 2009-11-29T00:49:49Z -->
+<!-- MediaWiki page 1486; revision 6401; parent 6396; 2009-11-29T11:08:17Z -->
