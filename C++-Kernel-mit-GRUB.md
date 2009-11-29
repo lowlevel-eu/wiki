@@ -1,43 +1,61 @@
 # C\+\+-Kernel mit GRUB
 
-Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Da wären zum Beispiel der Aufruf der Konstruktoren, bzw. der Destruktoren, die vor bzw. nach dem eigentlichen Kernel aufgerufen werden. Unser Kernel wird mittels [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") geladen.
-
-  
+Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Einen ausführlicheren Überblick zu den relevanten Unterschieden zu C gibt der Artikel [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"). Dieses Tutorial arbeitet genau wie [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") mit dem Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
 
 ## Kernel
 
-Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Ich verwende den [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") von Jidder, es sollte aber keinen Unterschied zu einem "normalen" gcc unter Linux geben.
+Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Es kann auch Windows verwendet werden, allerdings ist dazu etwas Vorarbeit in Bezug auf die Tools von Nöten, siehe dazu [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB#hinweis-f%C3%BCr-windowsianer "C-Kernel mit GRUB").
 
 ### Kernel.cpp
 
 Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erstellen wir ein Klasse namens Video, die wir in einen Header stecken. Dadurch ist unsere kernel.cpp sehr übersichtlich: \<cpp\>
 
-1.  include "MyOS.h" // Einbinden unseres Header
+1.  include "Video.h" // Einbinden unseres Header
 
-void main(void){ Video screen; // Screen instanzieren screen.color(0x7000); // Vordergrund schwarz, Hintergrund hellgrau screen.clear(); // Bildschirm leeren screen.write((char \*)"Wilkommen im C++-TestKernel!"); // Textausgabe } \</cpp\>
+void main() { Video screen; // Screen instanzieren screen.color(0x7000); // Vordergrund schwarz, Hintergrund hellgrau screen.clear(); // Bildschirm leeren screen.write("Willkommen im C++-TestKernel!"); // Textausgabe } \</cpp\>
 
-### MyOS.h
+### Video.h
 
 Der Header ist dann doch etwas umfangreicher:
 
 \<cpp\>
 
-1.  ifndef MyOS_H
-2.  define MyOS_H
+1.  ifndef VIDEO_H
+2.  define VIDEO_H
 
-class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen void write(char \*cp); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG-Farben private: unsigned short \*videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG-Farbe }; Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Hellgrau auf Schwarz pos=0; // Setzen der Textausgabe auf off=0; // links oben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers } Video::~Video(){} void Video::clear(){ for(int i=0;i\<(80\*25);i++) { videomem\[i\] = (unsigned char)' ' \|screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; } void Video::write(char \*cp){ char \*str = cp, \*ch; for(ch = str; \*ch; ch++){ put(\*ch); // Für jedes einzelne Zeichen wird put() aufgerufen } } void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off\>=(80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c\|screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; } void Video::color(int color){ screen_color = color; }
+class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen void write(const char\* cp); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG-Farben private: unsigned short\* videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG-Farbe };
 
 1.  endif
 
 \</cpp\>
 
-### cKernel.c
+### Video.cpp
 
-Um den Konstruktor bzw. den Destruktor aufzurufen, werden diese beiden Funktionen später mit in den Kernel gelinkt:
+Die Implementierung der in Video.hpp definierten Memberfunktionen kommt in eine eigene Quellcodedatei:
 
-\<c\> void \_cmain() { extern void (\*\_\_CTOR_LIST\_\_)(); void (\*\*constructor)() = &\_\_CTOR_LIST\_\_; int total = \*(int \*) constructor; constructor++; while(total){ (\*constructor)(); total--; constructor++; } }
+\<cpp\>
 
-void \_catexit() { extern void (\*\_\_DTOR_LIST\_\_)(); void (\*\*deconstructor)() = &\_\_DTOR_LIST\_\_; deconstructor++; int total = \*(int \*) deconstructor; while(total) { (\*deconstructor)(); total--; deconstructor++; } } \</c\>
+1.  include "Video.h"
+
+Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Hellgrau auf Schwarz pos = 0; // Setzen der Textausgabe auf off = 0; // links oben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers }
+
+Video::~Video(){ }
+
+void Video::clear(){ for(int i = 0;i \< (80\*25);i++) { videomem\[i\] = (unsigned char)' ' \| screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; }
+
+void Video::write(const char \*cp){ while (\*cp != '\0'){ put(\*ch++); // Für jedes einzelne Zeichen wird put() aufgerufen } }
+
+void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off \>= (80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c \| screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; }
+
+void Video::color(int color){ screen_color = color; } \</cpp\>
+
+### Startup.cpp
+
+Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), werden diese beiden Funktionen später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen:
+
+\<cpp\> void constructors() { extern void (\*\_\_CTOR_LIST\_\_)(); void (\*\*constructor)() = &\_\_CTOR_LIST\_\_; int total = \*(int \*) constructor; constructor++; while(total){ (\*constructor)(); total--; constructor++; } }
+
+void destructors() { extern void (\*\_\_DTOR_LIST\_\_)(); void (\*\*deconstructor)() = &\_\_DTOR_LIST\_\_; deconstructor++; int total = \*(int \*) deconstructor; while(total) { (\*deconstructor)(); total--; deconstructor++; } } \</cpp\>
 
 ### asmKernel.asm
 
@@ -45,7 +63,7 @@ Auch bei C++ kommen wir nicht um ein wenig Assembler herum:
 
 \<asm\>
 
-global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern \_cmain ; \_cmain() aus cKernel.c extern \_catexit ; \_catexit() aus cKernel.c
+global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern destructors ; aus Startup.cpp extern constructors ; aus Startup.cpp
 
 FLAGS equ 0 MAGIC equ 0x1BADB002 ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
@@ -60,15 +78,13 @@ loader:
      mov esp,0x200000                ; Stack an die 2MB-Grenze platzieren
      push eax                       ; Multiboot-Magicnumber auf den Stack legen
      push ebx                       ; Adresse der Multiboot-Structure auf den Stack legen
-     call _cmain                    ; main-Funktion des C++-Kernels aufrufen
-     call main                      ; cmain-Funktion des C-Kernels aufrufen
-     call _catexit                  ; atexit-Funktion des C-Kernels aufrufen
-     jmp stop
-     
+     call constructors                  ; Konstruktoren aufrufen
+     call main                      ; main aufrufen
+     call destructors                   ; Destruktoren aufrufen
 
-stop: ; Endlosschleife nach Beendigung unseres Kernels
+stop:
 
-    jmp stop
+     jmp stop                    ; Endlosschleife nach Beendigung unseres Kernels
 
 \</asm\>
 
@@ -78,16 +94,20 @@ Die asmKernel.asm:
 
     nasm -f elf -o asmKernel.o asmKernel.asm
 
+Video.cpp:
+
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Video.o Video.cpp
+
 Kernel.cpp:
 
-    gcc -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -c -Os -o Kernel.o Kernel.cpp
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Kernel.o Kernel.cpp
 
-cKernel.cpp:
+Startup.cpp:
 
-    gcc -Wall -Werror -nostdinc -m32 -ffreestanding -fno-leading-underscore -c -o cKernel.o cKernel.c 
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Startup.o Startup.c 
 
   
-Nun zu einer der wichtigsten Stellen, dem Linkvorgang: Wir müssen die asmKernel.o, die Kernel.o und die cKernel.o zu einer kernel.bin linken, die dann von GRUB geladen werden kann.
+Nun zu einer der wichtigsten Stellen, dem Linkvorgang: Wir müssen asmKernel.o, Startup.o, Video.o und Kernel.o zu einer kernel.bin linken, die dann von GRUB geladen werden kann.
 
 Unser Linkerscript (link.txt)
 
@@ -121,15 +141,9 @@ Unser Linkerscript (link.txt)
 
 Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END\_\_, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
 
-    ld -T link.txt -o kernel.bin asmKernel.o cKernel.o Kernel.o
+    ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o cKernel.o
 
 Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden, dort verfährt man einfach analog.
-
-## Anmerkungen
-
-Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_\_ zu ersetzen, also das \_ wegzulassen. Ich vermute, dass das von der GCC-Version abhängig ist.
-
-  
 
 ## Siehe auch
 
@@ -141,6 +155,6 @@ Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6402; parent 6399; 2009-11-29T11:20:43Z -->
+<!-- MediaWiki page 2124; revision 6405; parent 6402; 2009-11-29T12:36:47Z -->
