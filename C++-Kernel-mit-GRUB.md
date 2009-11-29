@@ -6,7 +6,7 @@ Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kern
 
 ## Kernel
 
-Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Ich verwende den [Crosscompiler_für_Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")Cross-Compiler von Jidder, es sollte aber keinen Unterschied zu einem "normalen" gcc unter Linux geben.
+Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Ich verwende den [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") von Jidder, es sollte aber keinen Unterschied zu einem "normalen" gcc unter Linux geben.
 
 ### Kernel.cpp
 
@@ -14,7 +14,7 @@ Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erste
 
 1.  include "MyOS.h" // Einbinden unseres Header
 
-void main(void){ Video screen; // Screen instanzieren screen.color(0x7000); // Vordergrund Schwarz, Hintergrund Dunkelgrau screen.clear(); // Bildschirm leeren screen.write((char \*)"Wilkommen im C++-TestKernel!"); // Textausgabe } \</cpp\>
+void main(void){ Video screen; // Screen instanzieren screen.color(0x7000); // Vordergrund schwarz, Hintergrund hellgrau screen.clear(); // Bildschirm leeren screen.write((char \*)"Wilkommen im C++-TestKernel!"); // Textausgabe } \</cpp\>
 
 ### MyOS.h
 
@@ -25,7 +25,7 @@ Der Header ist dann doch etwas umfangreicher:
 1.  ifndef MyOS_H
 2.  define MyOS_H
 
-class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe liegt bei 80x25 Zeichen void write(char \*cp); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG Farben private: unsigned short \*videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG Farbe }; Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Dunkelgrau auf Schwarz pos=0; // Setzen der Textausgabe auf off=0; // link soben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers } Video::~Video(){} void Video::clear(){ for(int i=0;i\<(80\*25);i++) { videomem\[i\] = (unsigned char)' ' \|screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; } void Video::write(char \*cp){ char \*str = cp, \*ch; for(ch = str; \*ch; ch++){ put(\*ch); // Für jedes einzelne Zeichen wird put() aufgerufen } } void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off\>=(80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c\|screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; } void Video::color(int color){ screen_color = color; }
+class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen void write(char \*cp); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG-Farben private: unsigned short \*videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG-Farbe }; Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Hellgrau auf Schwarz pos=0; // Setzen der Textausgabe auf off=0; // links oben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers } Video::~Video(){} void Video::clear(){ for(int i=0;i\<(80\*25);i++) { videomem\[i\] = (unsigned char)' ' \|screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; } void Video::write(char \*cp){ char \*str = cp, \*ch; for(ch = str; \*ch; ch++){ put(\*ch); // Für jedes einzelne Zeichen wird put() aufgerufen } } void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off\>=(80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c\|screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; } void Video::color(int color){ screen_color = color; }
 
 1.  endif
 
@@ -58,7 +58,7 @@ section .text align 4 MultiBootHeader:
 loader:
 
      mov esp,0x200000                ; Stack an die 2MB-Grenze platzieren
-     push eax                       ; Multiboot Magicnumber auf den Stack legen
+     push eax                       ; Multiboot-Magicnumber auf den Stack legen
      push ebx                       ; Adresse der Multiboot-Structure auf den Stack legen
      call _cmain                    ; main-Funktion des C++-Kernels aufrufen
      call main                      ; cmain-Funktion des C-Kernels aufrufen
@@ -66,7 +66,7 @@ loader:
      jmp stop
      
 
-stop: ; endlos Schleife nach Beendung unseres Kernels
+stop: ; Endlosschleife nach Beendigung unseres Kernels
 
     jmp stop
 
@@ -87,7 +87,7 @@ cKernel.cpp:
     gcc -Wall -Werror -nostdinc -m32 -ffreestanding -fno-leading-underscore -c -o cKernel.o cKernel.c 
 
   
-Nun zu einer der wichtigsten Stellen: Dem Linkvorgang: Wir müssen die asmKernel.o, die Kernel.o und die cKernel.o zu einer Kernel.bin linken, die dann von GRUB geladen werden kann.
+Nun zu einer der wichtigsten Stellen, dem Linkvorgang: Wir müssen die asmKernel.o, die Kernel.o und die cKernel.o zu einer kernel.bin linken, die dann von GRUB geladen werden kann.
 
 Unser Linkerscript (link.txt)
 
@@ -119,15 +119,15 @@ Unser Linkerscript (link.txt)
       end = .; _end = .; __end = .;
     }
 
-Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
+Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END\_\_, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
 
     ld -T link.txt -o kernel.bin asmKernel.o cKernel.o Kernel.o
 
-Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette landet kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden, dort verfährt man einfach analog.
+Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden, dort verfährt man einfach analog.
 
 ## Anmerkungen
 
-Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_\_ zu ersetzen, also das \_ weglassen. Ich vermute, dass das von der GCC Version abhängig ist.
+Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_\_ zu ersetzen, also das \_ wegzulassen. Ich vermute, dass das von der GCC-Version abhängig ist.
 
   
 
@@ -141,6 +141,6 @@ Es kann unter Umständen nötig sein, \_\_CTOR_LIST\_\_ etc. durch \_CTOR_LIST\_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6399/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6399; parent 6398; 2009-11-29T01:09:04Z -->
+<!-- MediaWiki page 2124; revision 6402; parent 6399; 2009-11-29T11:20:43Z -->
