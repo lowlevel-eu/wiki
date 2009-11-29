@@ -49,11 +49,13 @@ void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... 
 
 void Video::color(int color){ screen_color = color; } \</cpp\>
 
-### Startup.c
+### Startup.cpp
 
 Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), werden diese beiden Funktionen später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen:
 
-\<cpp\> void constructors() { extern void (\*\_\_CTOR_LIST\_\_)(); void (\*\*constructor)() = &\_\_CTOR_LIST\_\_; int total = \*(int \*) constructor; constructor++; while(total){ (\*constructor)(); total--; constructor++; } }
+\<cpp\> extern "C" void constructors(); extern "C" void destructors();
+
+void constructors() { extern void (\*\_\_CTOR_LIST\_\_)(); void (\*\*constructor)() = &\_\_CTOR_LIST\_\_; int total = \*(int \*) constructor; constructor++; while(total){ (\*constructor)(); total--; constructor++; } }
 
 void destructors() { extern void (\*\_\_DTOR_LIST\_\_)(); void (\*\*deconstructor)() = &\_\_DTOR_LIST\_\_; deconstructor++; int total = \*(int \*) deconstructor; while(total) { (\*deconstructor)(); total--; deconstructor++; } } \</cpp\>
 
@@ -63,7 +65,7 @@ Auch bei C++ kommen wir nicht um ein wenig Assembler herum:
 
 \<asm\>
 
-global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern destructors ; aus Startup.c extern constructors ; aus Startup.c
+global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern destructors ; aus Startup.cpp extern constructors ; aus Startup.cpp
 
 FLAGS equ 0 MAGIC equ 0x1BADB002 ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
@@ -102,9 +104,9 @@ Kernel.cpp:
 
     gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Kernel.o Kernel.cpp
 
-Startup.c:
+Startup.cpp:
 
-    gcc -m32 -nostdlib -fno-builtin -ffreestanding -fno-leading-underscore -std=c99 -c -o Startup.o Startup.c
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Startup.o Startup.cpp
 
   
 Nun zu einer der wichtigsten Stellen, dem Linkvorgang: Wir müssen asmKernel.o, Startup.o, Video.o und Kernel.o zu einer kernel.bin linken, die dann von GRUB geladen werden kann.
@@ -155,6 +157,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6409; parent 6408; 2009-11-29T13:21:15Z -->
+<!-- MediaWiki page 2124; revision 6412; parent 6409; 2009-11-29T14:08:13Z -->
