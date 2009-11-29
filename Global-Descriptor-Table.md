@@ -25,6 +25,18 @@ Zum einen kann die Basisadresse aber auch weiterhin nützlich sein - sie erlaubt
 
 Die Segmentregister sind aber nach wie vor nur 16 Bit breit und somit wird der Platz etwas knapp für diese ganzen Informationen. Aus diesem Grund enthalten die Segmentregister im Protected Mode nur noch sogenannte Selektoren, d.h. die Nummer eines Segments und einige wenige Flags. Die eigentliche Beschreibung der Segmente liegt in Form einer Tabelle im Speicher, der GDT. Die GDT besteht aus mehreren Einträgen (Segmentdeskriptoren) zu je 64 Bit, die direkt hintereinander liegen. Der erste Eintrag kann nicht benutzt werden, er ist der sogenannte Nulldeskriptor.
 
+## Selektoren
+
+Wie im vorigen Abschnitt erwähnt, stehen im Protected Mode in den Segmentregistern Selektoren, die auf Deskriptortabellen verweisen. Sie haben den folgenden Aufbau:
+
+| Bits | Wert | Bedeutung |
+| ------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| 0 - 1 | 0x3 | RPL (Requested Privilege Level). Gibt die Privilegstufe (den Ring) des zu selektierenden Segments an |
+| 2 | 0x4 | Bestimmt, ob ein Eintrag in der GDT (Bit nicht gesetzt) oder in der LDT (Bit gesetzt) ausgewählt wird |
+| 3 | 0xfff7 | Nummer des Eintrags in der GDT bzw. LDT (ab Null gezählt) |
+
+Um also nach ds das Segment zu laden, das durch den fünften GDT-Eintrag beschrieben wird, und zwar als Userspace-Segment (Ring 3), könnte man folgenden Code verwenden: \<asm\>mov \$0x23, %ax mov %ax, %ds\</asm\>
+
 ## Struktur
 
 Jeder Eintrag in den GDT besteht aus acht Bytes.
@@ -134,6 +146,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 5843; parent 5402; 2009-09-06T08:41:26Z -->
+<!-- MediaWiki page 1661; revision 6413; parent 5843; 2009-11-29T15:00:31Z -->
