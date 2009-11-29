@@ -219,9 +219,10 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
 - [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
 - GRUB auf CD
+- C++-Kernel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 5540; parent 4929; 2009-08-10T15:30:50Z -->
+<!-- MediaWiki page 1604; revision 6397; parent 5540; 2009-11-29T00:51:50Z -->
