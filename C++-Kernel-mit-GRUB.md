@@ -119,26 +119,24 @@ Unser Linkerscript (link.txt)
 
     SECTIONS
     {
-      .text  0x0100000 : {
-        code = .; _code = .; __code = .;
+      .text  0x0100000 :
+      {
         *(.text)
-        . = ALIGN(1);
+        *(.rodata)
       }
-      .data  : {
-        __CTOR_LIST__ = .; LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2) *(.ctors) LONG(0) __CTOR_END__ = .;
+
+      .data  :
+      {
+        __CTOR_LIST__ = .;LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2) *(.ctors) LONG(0) __CTOR_END__ = .;
         __DTOR_LIST__ = .; LONG((__DTOR_END__ - __DTOR_LIST__) / 4 - 2) *(.dtors) LONG(0) __DTOR_END__ = .;
 
-        data = .; _data = .; __data = .;
         *(.data)
-        . = ALIGN(1);
       }
+
       .bss  :
       {
-        bss = .; _bss = .; __bss = .;
         *(.bss)
-        . = ALIGN(1);
       }
-      end = .; _end = .; __end = .;
     }
 
 Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END\_\_, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
@@ -157,6 +155,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6415/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6412; parent 6409; 2009-11-29T14:08:13Z -->
+<!-- MediaWiki page 2124; revision 6415; parent 6412; 2009-11-29T15:58:53Z -->
