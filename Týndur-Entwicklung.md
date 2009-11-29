@@ -49,6 +49,22 @@ Fast noch wichtiger als die Mailingliste selbst und die Anlaufstelle Nummer 1 is
 
 ## Mit der Entwicklung beginnen
 
+### Umgebung aufsetzen
+
+Wer nicht vorhat, portierte Programme (lbuilds) zu kompilieren und auch keinen Pascal-Code übersetzen möchte, kann diesen Abschnitt überspringen. Alle anderen müssen zunächst die lbuilds einrichten und dabei einen FPC-Crosscompiler erstellen. Im Idealfall muss man dazu einfach nur das build_crosstools-Skript ausführen, das binutils, gcc und fpc herunterlädt und kompiliert (manchmal passen die Patches nicht mehr ganz auf die aktuelle FPC-Version, in diesem Fall melde man sich im Forum oder im IRC):
+
+    lbuilds$ scripts/build_crosstools
+
+Um lbuilds bauen zu können, muss anschließend die libc aus dem tyndur-Verzeichnis kopiert werden. Achtung: Wenn man später Änderungen an der libc vornimmt, muss die libc erneut kopiert und alle lbuilds neu entpackt werden, damit die neue Version benutzt wird! Auch dafür gibt es ein Skript:
+
+    lbuilds$ scripts/update_env /pfad/zum/tyndur/repository
+
+Schließlich bleiben noch die Pascal-Programme im tyndur-Repository übrig, für die noch Vorbereitungen getroffen werden müssen. Zum einen muss zunächst die Datei *src/modules/pas/.ignorenobuild* angelegt werden. Zum anderen muss die FPC-Laufzeitbibliothek eingebunden werden, und zwar als Verzeichnis *src/modules/pas/lib/rtl/include*:
+
+    lbuilds$ ln -s tmp/cross-fpc/fpc/rtl/ /pfad/zum/tyndur/repository/src/modules/pas/lib/rtl/include
+
+Nach dem nächsten Aufruf von *make* im tyndur-Verzeichnis sollten jetzt auch alle Pascal-Programme (z.B. lpt und kirc) kompiliert werden.
+
 ### Programme schreiben
 
 Alle nativen týndur-Programme befinden sich im Verzeichnis src/modules/c (Windows-User denken sich die Slashes weg und ersetzen selbige durch Backslashes). Die Anzahl der Programme ist aktuell recht überschaubar. Ob man nun ein Programm extra für týndur entwickeln möchte oder ob portieren sinnvoller ist, hängt von der Art des Programms ab:
@@ -80,8 +96,6 @@ Wer also einen neuen Treiber entwickeln möchte, erstellt ein Verzeichnis in src
 Nobody's perfect, auch nicht die týndur-Entwickler. Deshalb schleichen sich Fehler ein und Bugs entstehen. Wer einen Bug findet, kann, nein, sollte ihn sogar fixen. Hier sei allerdings auf ausgiebiges Testen hingewiesen, denn allzuoft wird aus dem Bugfix ein zweiter Bug.
 
 Auch sollte man überprüfen, ob der Bug nicht vielleicht doch eine Programmfunktion ist. ;)
-
-  
 
 ## Entwicklungsstand veröffentlichen
 
@@ -149,6 +163,6 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 5832; parent 5618; 2009-09-03T20:20:11Z -->
+<!-- MediaWiki page 2035; revision 6416; parent 5832; 2009-11-29T16:26:28Z -->
