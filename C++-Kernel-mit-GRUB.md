@@ -59,7 +59,11 @@ Auch bei C++ kommen wir nicht um ein wenig Assembler herum:
 
 \<asm\>
 
-global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern destructors ; aus Startup.cpp extern constructors ; aus Startup.cpp
+global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp
+
+TODO extern destructors ; aus Startup.cpp
+
+extern initialiseConstructors ; aus Startup.cpp
 
 FLAGS equ 0 MAGIC equ 0x1BADB002 ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
@@ -74,9 +78,9 @@ loader:
      mov esp,0x200000                ; Stack an die 2MB-Grenze platzieren
      push eax                       ; Multiboot-Magicnumber auf den Stack legen
      push ebx                       ; Adresse der Multiboot-Structure auf den Stack legen
-     call constructors                  ; Konstruktoren aufrufen
+     call initialiseConstructors        ; Konstruktoren aufrufen
      call main                      ; main aufrufen
-     call destructors                   ; Destruktoren aufrufen
+     ; TODO call destructors                    ; Destruktoren aufrufen
 
 stop:
 
@@ -154,6 +158,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6421/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6419; parent 6418; 2009-11-29T19:15:06Z -->
+<!-- MediaWiki page 2124; revision 6421; parent 6419; 2009-11-29T19:31:36Z -->
