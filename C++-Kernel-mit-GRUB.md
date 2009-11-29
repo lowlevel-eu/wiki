@@ -43,13 +43,13 @@ Video::~Video(){ }
 
 void Video::clear(){ for(int i = 0;i \< (80\*25);i++) { videomem\[i\] = (unsigned char)' ' \| screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; }
 
-void Video::write(const char \*cp){ while (\*cp != '\0'){ put(\*ch++); // Für jedes einzelne Zeichen wird put() aufgerufen } }
+void Video::write(const char \*cp){ while (\*cp != '\0'){ put(\*cp++); // Für jedes einzelne Zeichen wird put() aufgerufen } }
 
 void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off \>= (80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c \| screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; }
 
 void Video::color(int color){ screen_color = color; } \</cpp\>
 
-### Startup.cpp
+### Startup.c
 
 Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), werden diese beiden Funktionen später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen:
 
@@ -63,7 +63,7 @@ Auch bei C++ kommen wir nicht um ein wenig Assembler herum:
 
 \<asm\>
 
-global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern destructors ; aus Startup.cpp extern constructors ; aus Startup.cpp
+global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern destructors ; aus Startup.c extern constructors ; aus Startup.c
 
 FLAGS equ 0 MAGIC equ 0x1BADB002 ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
@@ -102,9 +102,9 @@ Kernel.cpp:
 
     gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Kernel.o Kernel.cpp
 
-Startup.cpp:
+Startup.c:
 
-    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Startup.o Startup.c 
+    gcc -m32 -nostdlib -fno-builtin -ffreestanding -fno-leading-underscore -std=c99 -c -o Startup.o Startup.c
 
   
 Nun zu einer der wichtigsten Stellen, dem Linkvorgang: Wir müssen asmKernel.o, Startup.o, Video.o und Kernel.o zu einer kernel.bin linken, die dann von GRUB geladen werden kann.
@@ -141,7 +141,7 @@ Unser Linkerscript (link.txt)
 
 Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END\_\_, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
 
-    ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o cKernel.o
+    ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
 
 Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden, dort verfährt man einfach analog.
 
@@ -155,6 +155,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6405; parent 6402; 2009-11-29T12:36:47Z -->
+<!-- MediaWiki page 2124; revision 6408; parent 6405; 2009-11-29T13:15:24Z -->
