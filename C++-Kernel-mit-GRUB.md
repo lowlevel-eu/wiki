@@ -138,7 +138,7 @@ Unser Linkerscript (link.txt)
       }
     }
 
-Wir teilen dem Linker mit, dass wir die Labels \_\_CTOR_LIST\_\_, \_\_CTOR_END\_\_, \_\_DTOR_LIST\_\_ und \_\_DTOR_END\_\_ in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
+Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors, start_dtors und end_dtors in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
 
     ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
 
@@ -154,6 +154,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6418; parent 6415; 2009-11-29T19:11:20Z -->
+<!-- MediaWiki page 2124; revision 6419; parent 6418; 2009-11-29T19:15:06Z -->
