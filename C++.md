@@ -182,6 +182,10 @@ RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett de
 
 Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit g++ können Exceptions über den Kommandozeilenparameter *-fno-exceptions* deaktiviert werden.
 
+## Siehe Auch
+
+C++-Kernel
+
 ## Links
 
 - [Draft des C++ Standards](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2006/n2135.pdf)
@@ -199,6 +203,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6396/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6264; parent 5260; 2009-11-14T04:08:11Z -->
+<!-- MediaWiki page 1486; revision 6396; parent 6264; 2009-11-29T00:49:49Z -->
