@@ -58,19 +58,19 @@ G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. 
 
 \<cpp\> // Lizenz: public domain
 
-// Im Linkerskript definiert extern "C" uintptr_t start_ctors; extern "C" uintptr_t end_ctors;
+// Im Linkerskript definiert extern "C" void\* start_ctors; extern "C" void\* end_ctors;
 
 extern "C" void initializeConstructors();
 
 // Ruft die Konstruktoren für globale/statische Objekte auf void initialiseConstructors() {
 
-     uintptr_t *iterator = reinterpret_cast<uintptr_t*>(&start_ctors);
-     while (iterator < reinterpret_cast<uintptr_t*>(&end_ctors))
-     {
-       void (*fp)(void) = reinterpret_cast<void (*)(void)>(*iterator);
-       fp();
-       iterator++;
-     }
+     typedef void (*constructor)();
+
+     constructor* iterator = reinterpret_cast<constructor*>(&start_ctors);
+     constructor* last     = reinterpret_cast<constructor*>(&end_ctors);
+
+     while (iterator != last)
+       (*iterator++)();
 
 } \</cpp\>
 
@@ -205,6 +205,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6420/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6420; parent 6417; 2009-11-29T19:30:01Z -->
+<!-- MediaWiki page 1486; revision 6422; parent 6420; 2009-11-29T20:17:02Z -->
