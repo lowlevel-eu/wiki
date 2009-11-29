@@ -58,7 +58,7 @@ G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. 
 
 \<cpp\> // Lizenz: public domain
 
-// Im Linkerskript definiert uintptr_t start_ctors; uintptr_t end_ctors;
+// Im Linkerskript definiert extern "C" uintptr_t start_ctors; extern "C" uintptr_t end_ctors;
 
 // Ruft die Konstruktoren für globale/statische Objekte auf void initialiseConstructors() {
 
@@ -203,6 +203,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6401; parent 6396; 2009-11-29T11:08:17Z -->
+<!-- MediaWiki page 1486; revision 6417; parent 6401; 2009-11-29T19:02:07Z -->
