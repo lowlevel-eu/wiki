@@ -76,35 +76,45 @@ Wie für alle größenwahnsinnigen Systeme wird natürlich auch in der relativ j
 
 Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hocherfahrenen Informatikern mit jahrelanger Programmiererfahrung, welche sicherlich zu den zukünftigen Leistungsträgern gehören, und DickHuuhn. Die Entwickler genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
 
-### XanClic alias Crazy-OS-names
+### niwohlose-developers
+
+Die "niwohlose-developers" sind das Entwicklerteam rund um niwohlOS sowie anderen Projekten. Es besteht aus vier hochoptimierten, äh hochintelligenten Programmierern und Softwareentwicklern.
+
+#### XanClic alias Crazy-OS-names
 
 [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") (hochkomplexes Hybridakrobackronym) ist einer der Top-Entwickler von niwohlOS. Er besitzt auf dem Gebiet der Betriebssystementwicklung höchste Kompetenzen, entwickelte er doch schon mehrere Betriebssysteme im Alleingang ([MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"), [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena")) und reichte schon zahlreiche Patches für [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, wie einen AC97-Treiber, USB-Treiber und die hochkomplexe libmaumau, die es den Anwendern ermöglicht, Mau-Mau zu spielen. XanClic ist für den soliden Aufbau, das Grundgerüst in niwohlOS zuständig.
 
-### DerHartmut alias PageFaultHartmut
+#### DerHartmut alias PageFaultHartmut
 
 [DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (qultics) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als "Hobby" neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig.
 
-### SHyx0rmZ alias HardcoreProgger
+#### SHyx0rmZ alias HardcoreProgger
 
 [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. er wird oft als "Hardcore-Informatiker" bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **drei** Kerneln ausgestattet, um aus jedem erdenklichen System die höchste Maß an Leistung herauszukitzeln. Des Weiteren schrieb er an Vortex, einem Loader, der unter anderem in qultics eingesetzt wird und womöglich von Microsoft patentiert wird. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
 
-### DickHuuhn alias DickHuuhn
+#### DickHuuhn alias DickHuuhn
 
 [DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimierter Buchstabenkomplex) ist ein Chiken.
 
-### pocky alias 1337h4x0r
+  
+
+### Die Committer
+
+Neben dem Entwicklerteam gibt es zahlreiche hochproffessionelle Commiter, die wertvollen Code und wertvolle Ideen tagtäglich committen.
+
+#### pocky alias 1337h4x0r
 
 [pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky") (kein hochkomplexes Hybridakrobackronym und kein hochoptimierter Buchstabenkomplex, dafür aber der Wahrheit) ist vor allem für die noch nicht vorhandene, noch nicht geplante und wahrscheinlich auch gar nicht realsiert-werdende GUI zuständig. So ganz nebenbei ist er auch für die mooraalische Unterstützung zu gebrauchen. Er betreut also sozusagen die GUI und die Mooraale. Und die GUI.
 
-### Cjreek alias Sado-Masochist aka Windows-User
+#### Cjreek alias Sado-Masochist aka Windows-User
 
 Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessionelle Entwickler, der zur Zeit bei einem Tierversuch teilnimmt, bei welchem getestet wird, wie sich die dauerhafte ernsthafte Nutzung von dem sogenannten "Betriebssystem" "Windows" auf Mensch und Maschine auswirkt. Er hat ebenfalls weitreichende Erfahrungen in der Betriebssystementwicklung und entwickelt den multiboot-kompatiblen Bootloader NILO, der irgendwann als Ersatz für den hochprofessionellen GRUB dienen soll.
 
-### Paddy alias Paddynator
+#### Paddy alias Paddynator
 
 Paddy (kein Mensch weiß, wer das ist) ist ein geheminisvoller Entwickler, der sich zu unserem Projekt gesellt hat. Auf einmal war er da, wie aus dem Nichts tauchte er in \#lost und \#niwohlos auf. Keiner weiß wer er ist, keiner weiß, ob er was kann. Man weiß nur, dass er was gegen kwolf zu haben scheint...
 
-### cra1n alias Ich-kenn-ihn-erst-zwei-Minuten-und-mach-ihn-direkt-zum-Committer
+#### cra1n alias Ich-kenn-ihn-erst-zwei-Minuten-und-mach-ihn-direkt-zum-Committer
 
 cra1n (auch hier weiß keiner, wer das ist) ist Schüler mit Informatik als Leistungskurs. Mehr weiß ich auch nicht.
 
@@ -210,6 +220,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6328/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6328; parent 6293; 2009-11-15T19:35:50Z -->
+<!-- MediaWiki page 2095; revision 6431; parent 6328; 2009-11-30T21:40:15Z -->
