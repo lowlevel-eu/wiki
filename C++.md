@@ -58,19 +58,16 @@ G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. 
 
 \<cpp\> // Lizenz: public domain
 
-// Im Linkerskript definiert extern "C" void\* start_ctors; extern "C" void\* end_ctors;
+typedef void (\*constructor)();
+
+// Im Linkerskript definiert extern "C" constructor start_ctors; extern "C" constructor end_ctors;
 
 extern "C" void initializeConstructors();
 
 // Ruft die Konstruktoren für globale/statische Objekte auf void initialiseConstructors() {
 
-     typedef void (*constructor)();
-
-     constructor* iterator = reinterpret_cast<constructor*>(&start_ctors);
-     constructor* last     = reinterpret_cast<constructor*>(&end_ctors);
-
-     while (iterator != last)
-       (*iterator++)();
+     for (constructor* i = &start_ctors;i != &end_ctors;++i)
+       (*i)();
 
 } \</cpp\>
 
@@ -205,6 +202,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6422; parent 6420; 2009-11-29T20:17:02Z -->
+<!-- MediaWiki page 1486; revision 6424; parent 6422; 2009-11-30T18:27:17Z -->
