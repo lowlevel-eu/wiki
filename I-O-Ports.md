@@ -1,8 +1,12 @@
 # I/O Ports
 
-Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste nicht vollständig, da beispielsweise bei Geräten die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind, sondern ausgelesen und konfiguriert werden können. Hier sind also Geräte aufgelistet, die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die I/O-Portbereiche für viele Geräte standardisiert wurden, da es im Allgemeinen keine Möglichkeit gab, diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
+Als I/O Ports werden die Schnittstellen zwischen CPU und Peripheriegeräten bezeichnet. Die Kommunikation erfolgt über spezielle Befehle, wie zum Beispiel *in* und *out*. Jedem Gerät wird dabei ein Bereich des I/O-Adressraums zugeordnet, und Lese- bzw. Schreibzugriffe werden an das Gerät weitergeleitet.
+
+Ergänzend zur Port I/O existiert Memory Mapped I/O, bei dem die Geräte in den Adressraum des physischen Speichers eingeblendet werden. Das Gerät kann somit über normale Befehle zum Speicherzugriff angesteuert werden.
 
 ## Liste
+
+Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste nicht vollständig, da beispielsweise bei Geräten die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind, sondern ausgelesen und konfiguriert werden können. Hier sind also Geräte aufgelistet, die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die I/O-Portbereiche für viele Geräte standardisiert wurden, da es im Allgemeinen keine Möglichkeit gab, diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
 
 | Begin | Ende | Gerät |
 | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,6 +48,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6192/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 6192; parent 5825; 2009-11-08T14:13:43Z -->
+<!-- MediaWiki page 1543; revision 6423; parent 6192; 2009-11-30T13:28:43Z -->
