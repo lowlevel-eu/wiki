@@ -51,7 +51,7 @@ void Video::color(int color){ screen_color = color; } \</cpp\>
 
 ### Startup.cpp
 
-Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), werden diese beiden Funktionen später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen: siehe [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#konstruktoren "C++").
+Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), wird die Funktion initialiseConstructors aus [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#konstruktoren "C++") benötigt. Diese wird später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen.
 
 ### asmKernel.asm
 
@@ -158,6 +158,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6421/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6425/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6421; parent 6419; 2009-11-29T19:31:36Z -->
+<!-- MediaWiki page 2124; revision 6425; parent 6421; 2009-11-30T19:54:50Z -->
