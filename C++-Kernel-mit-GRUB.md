@@ -8,11 +8,22 @@ Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Colle
 
 ### Kernel.cpp
 
-Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erstellen wir ein Klasse namens Video, die wir in einen Header stecken. Dadurch ist unsere kernel.cpp sehr übersichtlich: \<cpp\>
+Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erstellen wir ein Klasse namens Video, die wir in einen Header stecken. Dadurch ist unsere kernel.cpp sehr übersichtlich: \<cpp\> // Einbinden unseres Header
 
-1.  include "Video.h" // Einbinden unseres Header
+1.  include "Video.h"
 
-void main() { screen.color(0x7000); // Vordergrund schwarz, Hintergrund hellgrau screen.clear(); // Bildschirm leeren screen \<\< "Willkommen im C++-TestKernel!"; // Textausgabe } \</cpp\>
+void main() {
+
+     // Vordergrund schwarz, Hintergrund hellgrau
+     screen.color(0x7000);
+
+     // Bildschirm leeren
+     screen.clear();
+
+     // Textausgabe
+     screen << "Willkommen im C++-TestKernel!";
+
+} \</cpp\>
 
 ### Video.h
 
@@ -23,9 +34,43 @@ Der Header ist dann doch etwas umfangreicher:
 1.  ifndef VIDEO_H
 2.  define VIDEO_H
 
-class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen Video& operator \<\< (const char\* s); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG-Farben private: unsigned short\* videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG-Farbe };
+class Video {
 
-extern Video screen; // Globale Instanz der Video-Klasse, Definition in Video.cpp
+     public:
+       // Konstruktor
+       Video();
+
+       // Destruktor
+       ~Video();
+
+       // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen
+       void clear();
+
+       // Textausgabe
+       Video& operator << (const char* s);
+
+       // Ausgabe eines einzelnen Zeichens
+       void put(char c);
+
+       // Setzen der FG/BG-Farben
+       void color(int color);
+
+     private:
+       // Zeiger auf den Videospeicher
+       unsigned short* videomem;
+
+       // Y-Position der Textausgabe, je volle Zeile +80
+       unsigned int off;
+
+       // X-Position der Textausgabe, ab Zeilenanfang
+       unsigned int pos;
+
+       // FB/BG-Farbe
+       unsigned int screen_color;
+
+};
+
+// Globale Instanz der Video-Klasse, Definition in Video.cpp extern Video screen;
 
 1.  endif
 
@@ -41,17 +86,68 @@ Die Implementierung der in Video.h definierten Memberfunktionen kommt in eine ei
 
 Video screen;
 
-Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Hellgrau auf Schwarz pos = 0; // Setzen der Textausgabe auf off = 0; // links oben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers }
+Video::Video(){
+
+     // Setzen der Farbe auf Hellgrau auf Schwarz
+     screen_color = 0x0700;
+
+     // Setzen der Textausgabe auf links oben.
+     pos = 0;
+     off = 0;
+
+     // Startadresse des Videospeichers
+     videomem = (unsigned short*) 0xb8000;
+
+}
 
 Video::~Video(){ }
 
-void Video::clear(){ for(int i = 0;i \< (80\*25);i++) { videomem\[i\] = (unsigned char)' ' \| screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; }
+void Video::clear(){
 
-Video& Video::operator \<\< (const char\* s){ while (\*s != '\0'){ put(\*s++); // Für jedes einzelne Zeichen wird put() aufgerufen } return \*this; }
+     // Füllen des Bildschirms mit Leerzeichen
+     for(int i = 0;i < (80*25);i++)
+       videomem[i] = (unsigned char)' ' | screen_color;
 
-void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off \>= (80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c \| screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; }
+     // Zurücksetzen der Textausgabe nach links oben
+     pos = 0;
+     off = 0;                           
 
-void Video::color(int color){ screen_color = color; } \</cpp\>
+}
+
+Video& Video::operator \<\< (const char\* s){
+
+     // Für jedes einzelne Zeichen wird put() aufgerufen
+     while (*s != '\0')
+       put(*s++);
+
+     return *this;
+
+}
+
+void Video::put(char c){
+
+     // Wenn die Textausgabe den rechten...
+     if(pos >= 80){
+       pos = 0;
+       off += 80;
+     }
+
+     // ...oder den unteren Bildschirmrand erreicht, gibt es
+     // einen Umbruch bzw. es wird aufgeräumt.
+     if(off >= (80*25))
+       clear();
+
+     // Setzen des Zeichens und der Farbe in den Videospeicher
+     videomem[off + pos] = (unsigned char)c | screen_color;
+     pos++;
+
+}
+
+void Video::color(int color){
+
+     screen_color = color;
+
+} \</cpp\>
 
 ### Startup.cpp
 
@@ -159,6 +255,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6433; parent 6425; 2009-12-01T14:32:48Z -->
+<!-- MediaWiki page 2124; revision 6435; parent 6433; 2009-12-01T14:46:58Z -->
