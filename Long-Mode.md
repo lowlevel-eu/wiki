@@ -18,7 +18,7 @@ mov eax, 0x00000001 cpuid  ; CPUID Funktion 0x0000_0001 aufrufen and edx, 0x000
 
 ## Aktivierung des Long Mode
 
-Um in den Long Mode umschalten zu können, muss erst einmal der [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") aktiviert werden ([Es geht auch anders](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")). Eine weitere Voraussetzung ist, dass das **[Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension")**-Bit (Bit 5) im [CR4](https://github.com/lowlevel-eu/wiki/wiki/Control-Register#cr4 "Control Register") Register gesetzt und **[Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")** aktiviert ist. Jetzt kann der Long Mode mit dem Setzen des LME-Bits (Bit 8) im **MSR 0xC00000080** aktiviert werden. Im eigentlichen Long Mode befindet man sich aber erst, wenn man in ein 64-Bit-Code-Segment wechselt, das im Vergleich zu den 32-Bit-Code-Segmenten in seinem Descriptor das L-Bit (Bit 21) im 2. DWord gesetzt hat.
+Um in den Long Mode umschalten zu können, muss erst einmal der [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") aktiviert werden ([Es geht auch anders](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")). Eine weitere Voraussetzung ist, dass das **[Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "Physical Address Extension")**-Bit (Bit 5) im [CR4](https://github.com/lowlevel-eu/wiki/wiki/Control-Register#cr4 "Control Register") Register gesetzt und **[Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")** aktiviert ist. Jetzt kann der Long Mode mit dem Setzen des LME-Bits (Bit 8) im **MSR 0xC0000080** aktiviert werden. Im eigentlichen Long Mode befindet man sich aber erst, wenn man in ein 64-Bit-Code-Segment wechselt, das im Vergleich zu den 32-Bit-Code-Segmenten in seinem Descriptor das L-Bit (Bit 21) im 2. DWord gesetzt hat.
 
 **Achtung!**
 
@@ -54,6 +54,6 @@ Hier folgt in Kürze eine Beschreibung, wie man den Long Mode auch direkt vom Re
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 5780; parent 5511; 2009-08-28T10:05:22Z -->
+<!-- MediaWiki page 1666; revision 6437; parent 5780; 2009-12-01T17:39:51Z -->
