@@ -12,7 +12,7 @@ Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erste
 
 1.  include "Video.h" // Einbinden unseres Header
 
-void main() { Video screen; // Screen instanzieren screen.color(0x7000); // Vordergrund schwarz, Hintergrund hellgrau screen.clear(); // Bildschirm leeren screen.write("Willkommen im C++-TestKernel!"); // Textausgabe } \</cpp\>
+void main() { screen.color(0x7000); // Vordergrund schwarz, Hintergrund hellgrau screen.clear(); // Bildschirm leeren screen \<\< "Willkommen im C++-TestKernel!"; // Textausgabe } \</cpp\>
 
 ### Video.h
 
@@ -23,7 +23,9 @@ Der Header ist dann doch etwas umfangreicher:
 1.  ifndef VIDEO_H
 2.  define VIDEO_H
 
-class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen void write(const char\* cp); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG-Farben private: unsigned short\* videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG-Farbe };
+class Video { public: Video(); // Konstruktor ~Video(); // Destruktor void clear(); // Leeren des Bildschirms, die Größe beträgt 80x25 Zeichen Video& operator \<\< (const char\* s); // Textausgabe void put(char c); // Ausgabe eines einzelnen Zeichens void color(int color); // Setzen der FG/BG-Farben private: unsigned short\* videomem; // Zeiger auf den Videospeicher unsigned int off; // Y-Position der Textausgabe, je volle Zeile +80 unsigned int pos; // X-Position der Textausgabe, ab Zeilenanfang unsigned int screen_color; // FB/BG-Farbe };
+
+extern Video screen; // Globale Instanz der Video-Klasse, Definition in Video.cpp
 
 1.  endif
 
@@ -37,13 +39,15 @@ Die Implementierung der in Video.h definierten Memberfunktionen kommt in eine ei
 
 1.  include "Video.h"
 
+Video screen;
+
 Video::Video(){ screen_color = 0x0700; // Setzen der Farbe auf Hellgrau auf Schwarz pos = 0; // Setzen der Textausgabe auf off = 0; // links oben. videomem = (unsigned short\*) 0xb8000; // Startadresse des Videospeichers }
 
 Video::~Video(){ }
 
 void Video::clear(){ for(int i = 0;i \< (80\*25);i++) { videomem\[i\] = (unsigned char)' ' \| screen_color; // Füllen des Bildschirms mit Leerzeichen } pos = 0; // Zurücksetzen der Textausgabe nach links oben off = 0; }
 
-void Video::write(const char \*cp){ while (\*cp != '\0'){ put(\*cp++); // Für jedes einzelne Zeichen wird put() aufgerufen } }
+Video& Video::operator \<\< (const char\* s){ while (\*s != '\0'){ put(\*s++); // Für jedes einzelne Zeichen wird put() aufgerufen } return \*this; }
 
 void Video::put(char c){ if(pos \>= 80){ // Wenn die Textausgabe den rechten... pos = 0; off += 80; } if(off \>= (80\*25)){ // ...oder den unteren Bildschirmrand erreicht, gibt es einen clear(); // Umbruch bzw. es wird aufgeräumt. } videomem\[off + pos\] = (unsigned char)c \| screen_color; // Setzen des Zeichens und der Farbe in den Videospeicher pos++; }
 
@@ -51,7 +55,7 @@ void Video::color(int color){ screen_color = color; } \</cpp\>
 
 ### Startup.cpp
 
-Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), wird die Funktion initialiseConstructors aus [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#konstruktoren "C++") benötigt. Diese wird später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen.
+Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), wird die Funktion initialiseConstructors aus [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#konstruktoren "C++") benötigt. Diese wird später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen. Die Destruktoraufrufe von globalen/statischen Objekten werden absichtlich nicht aufgerufen, da es innerhalb des Kernels der Erfahrung von [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") nach keinen Sinn macht bei (globalen/statischen!) Objekten den Destruktor zu verwenden. Falls man dies dennoch möchte kann man im Artikel [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") einer der beiden relevanten Abschnitte implementieren.
 
 ### asmKernel.asm
 
@@ -59,11 +63,7 @@ Auch bei C++ kommen wir nicht um ein wenig Assembler herum:
 
 \<asm\>
 
-global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp
-
-TODO extern destructors ; aus Startup.cpp
-
-extern initialiseConstructors ; aus Startup.cpp
+global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern initialiseConstructors ; aus Startup.cpp
 
 FLAGS equ 0 MAGIC equ 0x1BADB002 ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
@@ -80,7 +80,6 @@ loader:
      push ebx                       ; Adresse der Multiboot-Structure auf den Stack legen
      call initialiseConstructors        ; Konstruktoren aufrufen
      call main                      ; main aufrufen
-     ; TODO call destructors                    ; Destruktoren aufrufen
 
 stop:
 
@@ -140,13 +139,15 @@ Unser Linkerscript (link.txt)
       {
         *(.bss)
       }
+
+      /DISCARD/ : { *(.dtors) }
     }
 
-Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors, start_dtors und end_dtors in der Datei cKernel.c haben und er diese beim Linken berücksichtigen soll. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel in der Hand (bzw. Maus ;-)):
+Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors, start_dtors und end_dtors in der Datei Startup.cpp haben und er diese beim Linken berücksichtigen soll. Außerdem wird die Liste der Destruktoren aus der aus dem Kernel entfernt, da sie wie oben erklärt nicht verwendet werden. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel:
 
     ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
 
-Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden, dort verfährt man einfach analog.
+Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden. Hier verfährt man einfach analog.
 
 ## Siehe auch
 
@@ -158,6 +159,6 @@ Und fertig ist unser Kernel! Wie der Kernel nun mitsamt GRUB auf einer Diskette 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6425/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6425; parent 6421; 2009-11-30T19:54:50Z -->
+<!-- MediaWiki page 2124; revision 6433; parent 6425; 2009-12-01T14:32:48Z -->
