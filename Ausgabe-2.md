@@ -166,7 +166,7 @@ Das BIOS benutzt ein ähnliches Interface, um dem Betriebssystem Zugriff auf BIO
 Exceptions sind besondere Interrupts, die automatisch ausgelöst werden, wenn etwas mit dem Code, der gerade ausgeführt wird, schief läuft, wie zum Beispiel eine Division durch Null.
 
 | Nr. | Bedeutung |
-| ----- | ----------------------------------------- |
+| ----- | ----------------------------- |
 | 0 | Divide Error |
 | 1 | Debug Exceptions |
 | 2 | reserved |
@@ -180,12 +180,10 @@ Exceptions sind besondere Interrupts, die automatisch ausgelöst werden, wenn et
 | 10 | Invalid TSS |
 | 11 | Segment Not Present |
 | 12 | Stack Exception |
-| 13 | General Protection Fault (Triple Fault) |
+| 13 | General Protection Fault |
 | 14 | Page Fault |
 | 15 | reserved |
 | 16 | Coprocessor Error |
-
-  
 
 ### Nächstes Mal...
 
@@ -358,6 +356,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6297/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 6297; parent 5991; 2009-11-14T20:21:55Z -->
+<!-- MediaWiki page 1415; revision 6443; parent 6297; 2009-12-01T22:53:48Z -->
