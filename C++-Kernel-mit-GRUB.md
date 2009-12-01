@@ -14,12 +14,6 @@ Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erste
 
 void main() {
 
-     // Vordergrund schwarz, Hintergrund hellgrau
-     screen.color(0x7000);
-
-     // Bildschirm leeren
-     screen.clear();
-
      // Textausgabe
      screen << "Willkommen im C++-TestKernel!";
 
@@ -88,8 +82,8 @@ Video screen;
 
 Video::Video(){
 
-     // Setzen der Farbe auf Hellgrau auf Schwarz
-     screen_color = 0x0700;
+     // Setzen der Farbe auf Schwarz auf Hellgrau
+     screen_color = 0x7000;
 
      // Setzen der Textausgabe auf links oben.
      pos = 0;
@@ -97,6 +91,9 @@ Video::Video(){
 
      // Startadresse des Videospeichers
      videomem = (unsigned short*) 0xb8000;
+
+     //Bildschirm leeren
+     clear();
 
 }
 
@@ -255,6 +252,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6435; parent 6433; 2009-12-01T14:46:58Z -->
+<!-- MediaWiki page 2124; revision 6439; parent 6435; 2009-12-01T19:35:12Z -->
