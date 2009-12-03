@@ -10,8 +10,8 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 
 | Bits | Name | Beschreibung |
 | ------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0-15 | Offset 0-15 | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
-| 15-31 | Selector | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
+| 0-15 | Offset 0-15 | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
+| 15-31 | Selector | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
 | 32-39 | 00000000 |  |
 | 40-42 | Typ | Gibt die Art des Interrupts an |
 | 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. |
@@ -32,9 +32,10 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 
 Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse einer 6 Bytes großen Datenstruktur aufgerufen werden. Die Datenstruktur sieht folgendermaßen aus:
 
-| 47-16 | 15-0 |
-| ------------------------ | --------------- |
-| Anfangsadresse der IDT | Limit der IDT |
+| Offset | Bedeutung |
+| -------- | ------------------- |
+| 0-15 | Das Limit der IDT |
+| 16-47 | Die Base der IDT |
 
 Die Anfangsadresse (Basis) ist die [lineare Adresse](https://github.com/lowlevel-eu/wiki/wiki/Paging "Lineare Adresse") des ersten Eintrags in der IDT und das Limit ist die Größe der IDT verringert um 1.
 
@@ -78,6 +79,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5872/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 5872; parent 5842; 2009-09-10T07:07:51Z -->
+<!-- MediaWiki page 1603; revision 6465; parent 5872; 2009-12-03T20:34:38Z -->
