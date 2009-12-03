@@ -17,7 +17,6 @@
 
 \-
 
-  
 **SIMPLE** steht für den folgenden Satz **Security is IMportant for peoPLE** und soll somit eine Anspielung darauf sein, dass das OS wert auf die Sicherheit der Daten des Benutzers legt und sich die Sicherung dieser ans Herz legt.
 
   
@@ -28,6 +27,6 @@ Die Shell befindet sich im CGA 80x25 Textmodus mit weißer Schrift und grünem H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 6461; parent 6459; 2009-12-03T20:27:16Z -->
+<!-- MediaWiki page 2039; revision 6462; parent 6461; 2009-12-03T20:27:45Z -->
