@@ -188,15 +188,15 @@ Die asmKernel.asm:
 
 Video.cpp:
 
-    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Video.o Video.cpp
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wall -Wextra -pedantic-errors -c -o Video.o Video.cpp
 
 Kernel.cpp:
 
-    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Kernel.o Kernel.cpp
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wall -Wextra -pedantic-errors -c -o Kernel.o Kernel.cpp
 
 Startup.cpp:
 
-    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -ffreestanding -fno-exceptions -fno-leading-underscore -c -o Startup.o Startup.cpp
+    gcc -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wall -Wextra -pedantic-errors -c -o Startup.o Startup.cpp
 
   
 Nun zu einer der wichtigsten Stellen, dem Linkvorgang: Wir müssen asmKernel.o, Startup.o, Video.o und Kernel.o zu einer kernel.bin linken, die dann von GRUB geladen werden kann.
@@ -252,6 +252,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6439; parent 6435; 2009-12-01T19:35:12Z -->
+<!-- MediaWiki page 2124; revision 6463; parent 6439; 2009-12-03T20:30:01Z -->
