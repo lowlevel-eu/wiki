@@ -1,10 +1,10 @@
 # SIMPLE
 
-| jincou |  |
+| SIMPLE |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Datei:JincouLogo.png |  |
+|  |  |
 | Entwickler: | [Paul Lange](https://lowlevel-eu.github.io/wiki/pages/1905/index.html "Benutzer:Matheguru") |
-| Akt. Version: |  |
+| Akt. Version: | \- |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPLv3](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -15,35 +15,19 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[Offizielle-Homepage](http://www.jinocu.matheguru.bplaced.net)
+\-
 
   
-jǐncòu (緊湊) ist das chinesische Wort für "kompakt" und genau so soll das OS auch werden, allerdings befindet es sich noch im untestbarem Anfangsstadium. Jincou soll erstmal rein textorientiert sein, allerdings besteht die Möglichkeit, dass vieleicht noch *vbe* Einzug finden wird.
+**SIMPLE** steht für den folgenden Satz **Security is IMportant for peoPLE** und soll somit eine Anspielung darauf sein, dass das OS wert auf die Sicherheit der Daten des Benutzers legt und sich die Sicherrung dieser ans Herz legt.
 
   
 
 ## Shell
 
-Die Shell ist im 80x25 Textmodus mit weißer Schrift und blauem Background, also ganz dem Farbthema von jincou angepasst. Sie wird UNIX/Linux ähnliche Befehle aufweisen, allerdings in geringerem Umfang.
-
-  
-
-## Aktueller Stand
-
-- Multiboot wird unterstützt
-- GDT wird eingerichtet
-- Interrupts funktionieren
-
-  
-
-## TODO
-
-- Exceptions
-- PIC programmieren
-- Speicherverwaltung
+Die Shell befindet sich im CGA 80x25 Textmodus mit weißer Schrift und grünem Hintergrund, also ganz im Farbchema von dem zukünftigen ersten Stablenamen 'Green Frog'. Sie wird an die POSIX-Standart Befehle gelehnt sein. Später wird dann in Richtung eines Desktops hingearbeitet, zuerst mit dem VGA-Standart, dann mit dem Standart des VESA-Comitees.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5993/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 5993; parent 5961; 2009-10-12T09:07:17Z -->
+<!-- MediaWiki page 2039; revision 6454; parent 5993; 2009-12-03T18:07:40Z -->
