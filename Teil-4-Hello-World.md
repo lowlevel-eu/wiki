@@ -32,7 +32,9 @@ Fangen wir mit dem einfachen an: Direkt nach dem Booten ist ein PC im Textmodus.
        int i;
        char* video = (char*) 0xb8000;
 
-       for (i = 0; i < sizeof(hw); i++) {
+       // C-Strings haben ein Nullbyte als Abschluss
+       for (i = 0; hw[i] != '\0'; i++) {
+
            // Zeichen i in den Videospeicher kopieren
            video[i * 2] = hw[i];
 
@@ -206,6 +208,6 @@ void init(void) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 5488; parent 5072; 2009-08-08T12:34:30Z -->
+<!-- MediaWiki page 1897; revision 6457; parent 5488; 2009-12-03T19:47:14Z -->
