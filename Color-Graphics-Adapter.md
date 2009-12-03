@@ -53,7 +53,7 @@ Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfa
 
 ## I/O Ports
 
-Die I/O Ports 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jeweils ein Byte groß.
+Die [I/O Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jeweils ein Byte groß.
 
 ### Interne Register
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5950/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 5950; parent 5859; 2009-09-22T23:29:16Z -->
+<!-- MediaWiki page 1890; revision 6450; parent 5950; 2009-12-03T01:32:54Z -->
