@@ -28,6 +28,6 @@ Die Shell befindet sich im CGA 80x25 Textmodus mit weißer Schrift und grünem H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 6454; parent 5993; 2009-12-03T18:07:40Z -->
+<!-- MediaWiki page 2039; revision 6455; parent 6454; 2009-12-03T18:07:56Z -->
