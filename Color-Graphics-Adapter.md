@@ -139,7 +139,7 @@ Die folgende Tabelle listet alle möglichen Belegungen von Enable und Timing auf
 
 Die Register 12 und 13 geben das Offset an, an dem das erste darzustellende Zeichen auf dem Bildschirm, also das Zeichen oben links, steht. Dabei ist zu beachten, dass die Berechnung des Offsets wie die Berechnung der Cursorposition (siehe unten) verläuft. Das heißt das Offset darf nicht mit 2 multipliziert werden, um die Attribute einzubeziehen.
 
-Beispiel, das analog zum BIOS den Speicher in 8 Seiten unterteilt: \<c\>/\* Unsere Auflösung \*/
+Beispiel, das analog zum BIOS den Speicher in 8 Seiten unterteilt: \<cpp\>/\* Unsere Auflösung \*/
 
 1.  define ROWS 25
 2.  define COLS 80
@@ -174,7 +174,7 @@ void select_page(unsigned int page) {
         * Das Setzen des Cursors wird im nächsten Abschnitt erläutert.
         */
 
-}\</c\>
+}\</cpp\>
 
 #### Cursor Address
 
@@ -182,7 +182,7 @@ Die Register 14 und 15 setzen die Cursor-Adresse, die sich aus der Cursor-Positi
 
 Dabei ist zu beachten, dass wenn man wie im letzten Abschnitt beschrieben die Startadresse verändert, diese Startadresse auf die Cursor-Adresse addieren muss.
 
-Beispiel: \<c\>/\* Unsere Auflösung \*/
+Beispiel: \<cpp\>/\* Unsere Auflösung \*/
 
 1.  define ROWS 25
 2.  define COLS 80
@@ -201,7 +201,7 @@ void update_cursor() {
        outb(0x3D4, 14);
        outb(0x3D5, (cursor_address >> 8) & 0xff);
 
-}\</c\>
+}\</cpp\>
 
 ### 16 Hintergrundfarben
 
@@ -209,12 +209,12 @@ Um 16 Hintergrundfarben zu nutzen, muss das Bit 5 im Mode-Select Register (Port 
 
 ### Vertical Sync
 
-Bit 3 des Status Registers (Port 0x3DA) wird von der Grafikkarte genau dann gesetzt, wenn der Monitor sich im Vertical Retrace Mode befindet. Das heißt dann ist der Elektronenstrahl gerade deaktiviert und wird wieder von unten nach oben bewegt, um ein weiteres Bild darzustellen. Dieses Bit ist besonders bei der Darstellung von Grafikmodi z.B. in Spielen oder graphischen Oberflächen interessant. Wenn man darauf wartet, dass dieses Bit gesetzt ist, bevor man beginnt in den Grafikspeicher zu schreiben, verhindert man, dass der Monitor mitten in der Darstellung eines Bildes andere Daten vorgesetzt bekommt. Dadurch lässt sich verhindern, dass das Bild bei horizontalen Bewegungen zerissen erscheint. Der Code dafür könnte z.B. so aussehen: \<c\>// Direkt vor dem Zeichnen aufrufen // (besser: direkt vor dem Kopieren des Double Buffers) void vsync() {
+Bit 3 des Status Registers (Port 0x3DA) wird von der Grafikkarte genau dann gesetzt, wenn der Monitor sich im Vertical Retrace Mode befindet. Das heißt dann ist der Elektronenstrahl gerade deaktiviert und wird wieder von unten nach oben bewegt, um ein weiteres Bild darzustellen. Dieses Bit ist besonders bei der Darstellung von Grafikmodi z.B. in Spielen oder graphischen Oberflächen interessant. Wenn man darauf wartet, dass dieses Bit gesetzt ist, bevor man beginnt in den Grafikspeicher zu schreiben, verhindert man, dass der Monitor mitten in der Darstellung eines Bildes andere Daten vorgesetzt bekommt. Dadurch lässt sich verhindern, dass das Bild bei horizontalen Bewegungen zerissen erscheint. Der Code dafür könnte z.B. so aussehen: \<cpp\>// Direkt vor dem Zeichnen aufrufen // (besser: direkt vor dem Kopieren des Double Buffers) void vsync() {
 
        do {} while (inb(0x3DA) & 8) != 0); // warten, wenn der vsync bereits läuft
        do {} while (inb(0x3DA) & 8) == 0); // warten während der Monitor darstellt
 
-}\</c\>
+}\</cpp\>
 
 ## Textausgabe
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 6450; parent 5950; 2009-12-03T01:32:54Z -->
+<!-- MediaWiki page 1890; revision 6451; parent 6450; 2009-12-03T01:37:17Z -->
