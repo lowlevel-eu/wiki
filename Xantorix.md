@@ -54,20 +54,24 @@ Die Veränderungen bei den verschiedenen Versionen:
 
 Folgende Versionen sind geplant:
 
-    Oktober 2009   : Xantorix 0.2.0 Alpha/Beta
+    Ende Dezember 2009   : Xantorix 0.2.0
 
 Die Features der kommenden Versionen:
 
 **Xantorix 0.2.0:**
 
 - erweiterte Benutzerverwaltung
-- neue virtuelle Speicherverwaltung
-- System-Datenbank (Sysdb)
-- Paketverwaltung
-- ATA-Treiber für Festplattenzugriffe
-- Unterstützung für mehrere Sprachen
-- VM86-Modus
-- noch einige weitere interessante Features :)
+- Paketverwaltung (Xantorix Package Manager)
+- neue virtuelle Speicherverwaltung (PAE Unterstützung)
+- System-Datenbank für Systemeinstellungen (Sysdb)
+- Unterstützung für mehrere Sprachen (Deutsch, Englisch)
+- VM86-Mode Unterstützung (für 32-Bit Version)
+- ATA Treiber für Festplatten (PIO, LBA28/LBA48)
+- ATAPI Treiber für CD/DVD Laufwerke (PIO)
+- CDFS Dateisystemtreiber (ISO9660, Rockridge, Joliet)
+- Erweiterter FAT Dateisystemtreiber (FAT32 Unterstützung)
+- VDisk: Virtuelle Laufwerke (Diskette, CD/DVD, Festplatte, Ramdisk)
+- Verbesserte Shell mit deutlich mehr Befehlen
 
 ## Offizielle Webseite
 
@@ -75,6 +79,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5575/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 5575; parent 5572; 2009-08-11T16:32:44Z -->
+<!-- MediaWiki page 1453; revision 6466; parent 5575; 2009-12-03T21:55:58Z -->
