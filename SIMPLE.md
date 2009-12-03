@@ -17,16 +17,16 @@
 
 \-
 
-**SIMPLE** steht für den folgenden Satz **Security is IMportant for peoPLE** und soll somit eine Anspielung darauf sein, dass das OS wert auf die Sicherheit der Daten des Benutzers legt und sich die Sicherung dieser ans Herz legt.
+**SIMPLE** steht für den Satz **Security is IMportant for peoPLE** und soll somit eine Anspielung darauf sein, dass das OS Wert auf die Sicherheit der Daten des Benutzers legt und sich die Sicherung dieser ans Herz legt.
 
   
 
 ## Shell
 
-Die Shell befindet sich im CGA 80x25 Textmodus mit weißer Schrift und grünem Hintergrund, also ganz im Farbchema von dem zukünftigen ersten Stablenamen 'Green Frog'. Sie wird an die POSIX-Standardbefehle gelehnt sein. Später wird dann in Richtung eines Desktops hingearbeitet, zuerst mit dem VGA-Standart, dann mit dem Standard des VESA-Komitees.
+Die Shell befindet sich im CGA-80x25-Textmodus mit weißer Schrift und grünem Hintergrund, also ganz im Farbschema von dem zukünftigen ersten Stablenamen 'Green Frog'. Sie wird an die POSIX-Standardbefehle gelehnt sein. Später wird dann in Richtung eines Desktops hingearbeitet, zuerst mit dem VGA-Standard, dann mit dem Standard des VESA-Komitees.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 6462; parent 6461; 2009-12-03T20:27:45Z -->
+<!-- MediaWiki page 2039; revision 6464; parent 6462; 2009-12-03T20:31:03Z -->
