@@ -62,7 +62,7 @@ Die Features der kommenden Versionen:
 
 - erweiterte Benutzerverwaltung
 - Paketverwaltung (Xantorix Package Manager)
-- neue virtuelle Speicherverwaltung (PAE Unterstützung)
+- neue virtuelle Speicherverwaltung
 - System-Datenbank für Systemeinstellungen (Sysdb)
 - Unterstützung für mehrere Sprachen (Deutsch, Englisch)
 - VM86-Mode Unterstützung (für 32-Bit Version)
@@ -79,6 +79,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 6467; parent 6466; 2009-12-03T21:57:28Z -->
+<!-- MediaWiki page 1453; revision 6468; parent 6467; 2009-12-04T22:58:11Z -->
