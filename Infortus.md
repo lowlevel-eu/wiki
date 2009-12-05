@@ -29,7 +29,12 @@ Implementierung von CD-Driver
 
 ## Screenshots
 
-![InfoOS1.png](http://www.informatikonline.net/images/extern/InfoOS1.png) ![InfoOS2.png](http://www.informatikonline.net/images/extern/InfoOS2.png)
+Grub:  
+![InfoOS1.png](http://www.informatikonline.net/images/extern/InfoOS1.png)
+
+  
+Kernel  
+![InfoOS2.png](http://www.informatikonline.net/images/extern/InfoOS2.png)
 
 ## Download
 
@@ -37,6 +42,6 @@ Implementierung von CD-Driver
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6475/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6475; parent 6474; 2009-12-05T22:36:46Z -->
+<!-- MediaWiki page 2117; revision 6476; parent 6475; 2009-12-05T22:39:51Z -->
