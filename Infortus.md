@@ -1,6 +1,6 @@
 # Infortus
 
-| Inforatus |  |
+| Inforatus (InfoOS) |  |
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Sebi2020 |
@@ -25,10 +25,14 @@ Erstes Minor Release (0.1.0) 2010 - 2011
 
 ## Phase
 
-Implementierung von Floppydriver und Dateisystem
+Implementierung von CD-Driver
+
+## Download
+
+<http://dev.informatikonline.net/download.php?file=3>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6367; parent 6363; 2009-11-22T09:33:51Z -->
+<!-- MediaWiki page 2117; revision 6471; parent 6367; 2009-12-05T21:33:37Z -->
