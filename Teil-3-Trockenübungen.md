@@ -182,7 +182,7 @@ char hello\[\] = "Hello World!\n";
 
 void \_start(void) {
 
-       // sys_write(0, hello, sizeof(hello))
+       // sys_write(1, hello, sizeof(hello))
        asm("int $0x80" : : "a" (SYSCALL_WRITE), "b" (1), "c" (hello), "d"
            (sizeof(hello)));
 
@@ -208,6 +208,6 @@ Aber genug der Vorrede, es wird Zeit für den Kernel.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4973/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
 
-<!-- MediaWiki page 1896; revision 4973; parent 4943; 2009-08-01T17:07:22Z -->
+<!-- MediaWiki page 1896; revision 6470; parent 4973; 2009-12-05T13:55:56Z -->
