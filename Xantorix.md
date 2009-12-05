@@ -60,6 +60,7 @@ Die Features der kommenden Versionen:
 
 **Xantorix 0.2.0:**
 
+- Booten von Diskette, Festplatte und CD/DVD-ROM (Installation und Live-CD)
 - erweiterte Benutzerverwaltung
 - Paketverwaltung (Xantorix Package Manager)
 - neue virtuelle Speicherverwaltung
@@ -79,6 +80,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6469/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 6468; parent 6467; 2009-12-04T22:58:11Z -->
+<!-- MediaWiki page 1453; revision 6469; parent 6468; 2009-12-05T13:25:52Z -->
