@@ -29,12 +29,14 @@ Implementierung von CD-Driver
 
 ## Screenshots
 
+Datei:Http://www.informatikonline.net/images/extern/InfoOS1.png Datei:Http://www.informatikonline.net/images/extern/InfoOS2.png
+
 ## Download
 
 <http://dev.informatikonline.net/download.php?file=3>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6474/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6473; parent 6472; 2009-12-05T22:13:47Z -->
+<!-- MediaWiki page 2117; revision 6474; parent 6473; 2009-12-05T22:26:02Z -->
