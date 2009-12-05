@@ -27,12 +27,16 @@ Erstes Minor Release (0.1.0) 2010 - 2011
 
 Implementierung von CD-Driver
 
+## Screenshots
+
+InfoOS1.png InfoOS2.png
+
 ## Download
 
 <http://dev.informatikonline.net/download.php?file=3>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6471; parent 6367; 2009-12-05T21:33:37Z -->
+<!-- MediaWiki page 2117; revision 6472; parent 6471; 2009-12-05T22:13:32Z -->
