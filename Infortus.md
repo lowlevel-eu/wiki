@@ -45,10 +45,10 @@ Kernel
 ## Download
 
 Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:  
-<http://dev.informatikonline.net/download.php?file=3>
+<http://dev.informatikonline.net/download.php?file=1>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6481/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6481; parent 6480; 2009-12-06T01:30:03Z -->
+<!-- MediaWiki page 2117; revision 6482; parent 6481; 2009-12-06T01:53:54Z -->
