@@ -17,17 +17,23 @@
 
 Keine
 
-Infortus ist mein Betriebssystem (abgeleitet von [Informatikonline.net](http://www.Informatikonline.net)).
+Infortus ist mein Betriebssystem (abgeleitet von [Informatikonline.net](http://www.Informatikonline.net)). Es baut auf einen [Makrokernelauf](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") und ist weitgehend in C geschrieben. Spezielle Aufgaben sind in Assembly ausgelagert worden (unter anderem bestimmte Treiber.). Es ist für x86 Systeme (also 32Bit) ausgelegt. Arbeiten tut es mit dem [Elf-Datei-Format](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF32").
 
 ## Planung
 
 Erstes Minor Release (0.1.0) 2010 - 2011
 
+Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")-Unterstützung Implementiert zu haben.
+
 ## Phase
 
-Implementierung von CD-Driver
+- **Implementierung des Keyboard-Treibers**
+- Implementierung des CD-Treibers
+- Implementierung von ISO9660
 
 ## Screenshots
+
+Hier sehen sie Screenshots von Infortus (Codename: InfoOS)
 
 Grub:  
 ![InfoOS1.png](http://www.informatikonline.net/images/extern/InfoOS1.png)
@@ -38,10 +44,10 @@ Kernel
 
 ## Download
 
-<http://dev.informatikonline.net/download.php?file=3>
+Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält: <http://dev.informatikonline.net/download.php?file=3>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6479/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6477; parent 6476; 2009-12-05T22:43:49Z -->
+<!-- MediaWiki page 2117; revision 6479; parent 6477; 2009-12-06T01:28:18Z -->
