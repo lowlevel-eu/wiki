@@ -59,11 +59,11 @@ Falls mir jemand Helfen möchte, und mir sagen kann, woran dieser Fehler liegt, 
 ## Download
 
 Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:  
-Aktuelle Version 0.0.001:  
+Aktuelle Version 0.00.001:  
 <http://dev.informatikonline.net/download.php?file=1>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6495/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6495; parent 6494; 2009-12-07T11:07:57Z -->
+<!-- MediaWiki page 2117; revision 6496; parent 6495; 2009-12-07T11:08:46Z -->
