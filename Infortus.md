@@ -42,6 +42,18 @@ Grub:
 Kernel  
 ![InfoOS2.png](http://www.informatikonline.net/images/extern/InfoOS2.png)
 
+## Bugs
+
+Bisher ist beim testen in KVM herausgekommen (talijet hat es getestet), dass ein Triple Fault ausgelöst wurde. Im Moment weiß ich leider noch nicht woran es liegt und wäre für Hilfe dankbar. (Siehe Download)
+
+Erfolgreich getestet:  
+**Emulatoren/Virtualisierung:** Vmware, Bochs  
+**Computer:**  
+
+- Fujitsu Siemens Amilo Reihe, 448 MB RAM
+- Medion, 2,6 GHz Intel Quad Core, 2GB RAM
+- Medion, 1,6 GHz Intel Pentium 4, 256 MB RAM
+
 ## Download
 
 Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:  
@@ -49,6 +61,6 @@ Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6482; parent 6481; 2009-12-06T01:53:54Z -->
+<!-- MediaWiki page 2117; revision 6493; parent 6482; 2009-12-07T10:57:55Z -->
