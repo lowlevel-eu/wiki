@@ -50,9 +50,11 @@ Erfolgreich getestet:
 **Emulatoren/Virtualisierung:** Vmware, Bochs  
 **Computer:**  
 
-- Fujitsu Siemens Amilo Reihe, 448 MB RAM
-- Medion, 2,6 GHz Intel Quad Core, 2GB RAM
-- Medion, 1,6 GHz Intel Pentium 4, 256 MB RAM
+- Fujitsu Siemens Amilo Reihe, Intel Celeron M CPU, 448 MB RAM,
+- Medion, 2,6 GHz Intel Quad Core CPU, 2GB RAM
+- Medion, 1,6 GHz Intel Pentium 4 CPU, 256 MB RAM
+
+Falls mir jemand Helfen möchte, und mir sagen kann, woran dieser Fehler liegt, kann er mir gerne eine PM im Forum an Sebi2020 schicken, oder einen Eintrag auf der Diskussionsseite von Infortus schreiben.
 
 ## Download
 
@@ -61,6 +63,6 @@ Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6493; parent 6482; 2009-12-07T10:57:55Z -->
+<!-- MediaWiki page 2117; revision 6494; parent 6493; 2009-12-07T11:00:50Z -->
