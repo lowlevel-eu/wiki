@@ -44,7 +44,7 @@ Kernel
 
 ## Bugs
 
-Bisher ist beim testen in KVM herausgekommen (talijet hat es getestet), dass ein Triple Fault ausgelöst wurde. Im Moment weiß ich leider noch nicht woran es liegt und wäre für Hilfe dankbar. (Siehe Download)
+Bisher ist beim Testen in KVM herausgekommen (taljeth hat es getestet), dass ein Triple Fault ausgelöst wurde. Im Moment weiß ich leider noch nicht woran es liegt und wäre für Hilfe dankbar. (Siehe Download)
 
 Erfolgreich getestet:  
 **Emulatoren/Virtualisierung:** Vmware, Bochs  
@@ -64,6 +64,6 @@ Aktuelle Version 0.00.001:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6496; parent 6495; 2009-12-07T11:08:46Z -->
+<!-- MediaWiki page 2117; revision 6497; parent 6496; 2009-12-07T13:21:26Z -->
