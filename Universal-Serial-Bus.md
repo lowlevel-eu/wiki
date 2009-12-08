@@ -19,7 +19,7 @@ USB ist sehr vielseitig verwendbar, es eignet sich z. B. für externe Festplatte
 
 ### USB 3.0 (SuperSpeed USB)
 
-USB 3.0 ist noch nicht verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 4,8 GBit/s (SuperSpeed). Zudem kann ein Gerät auf Anfrage bis zu 900 mA statt der bisherigen 500 mA erhalten. Damit lassen sich problem- und gefahrlos USB-Festplatten ohne externe Stromquelle anschließen.
+USB 3.0 ist noch nicht verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 4,8 GBit/s (SuperSpeed). Zudem kann ein Gerät auf Anfrage bis zu 900 mA statt der bisherigen 500 mA erhalten. Damit lassen sich problemlos USB-Festplatten ohne externe Stromquelle anschließen.
 
 ### USB 2.0 (Hi-Speed USB)
 
@@ -53,6 +53,6 @@ Es existieren folgende Standards für USB Host-Controller:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 6052; parent 6051; 2009-10-15T12:14:34Z -->
+<!-- MediaWiki page 1690; revision 6502; parent 6052; 2009-12-08T18:40:01Z -->
