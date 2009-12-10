@@ -60,18 +60,15 @@ Die Features der kommenden Versionen:
 
 **Xantorix 0.2.0:**
 
-- Booten von Diskette, Festplatte und CD/DVD-ROM (Installation und Live-CD)
+- Booten von Diskette, Festplatte und CD/DVD-ROM (Live-CD)
 - erweiterte Benutzerverwaltung
-- Paketverwaltung (Xantorix Package Manager)
 - neue virtuelle Speicherverwaltung
 - System-Datenbank für Systemeinstellungen (Sysdb)
-- Unterstützung für mehrere Sprachen (Deutsch, Englisch)
 - VM86-Mode Unterstützung (für 32-Bit Version)
 - ATA Treiber für Festplatten (PIO, LBA28/LBA48)
 - ATAPI Treiber für CD/DVD Laufwerke (PIO)
 - CDFS Dateisystemtreiber (ISO9660, Rockridge, Joliet)
 - Erweiterter FAT Dateisystemtreiber (FAT32 Unterstützung)
-- VDisk: Virtuelle Laufwerke (Diskette, CD/DVD, Festplatte, Ramdisk)
 - Verbesserte Shell mit deutlich mehr Befehlen
 
 ## Offizielle Webseite
@@ -80,6 +77,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6469/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 6469; parent 6468; 2009-12-05T13:25:52Z -->
+<!-- MediaWiki page 1453; revision 6508; parent 6469; 2009-12-10T19:07:41Z -->
