@@ -29,7 +29,7 @@ Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren an
 
 \[noch keine\]
 
-J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe. Da es sich nicht lohnen würde, J-OS in der Kategorie Betriebssysteme zu verewigen, habe ich das auch nicht vor.
+J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe.
 
 J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben(teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").
 
@@ -37,6 +37,6 @@ Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5926/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 5926; parent 5925; 2009-09-16T12:32:53Z -->
+<!-- MediaWiki page 1828; revision 6518; parent 5926; 2009-12-12T09:30:13Z -->
