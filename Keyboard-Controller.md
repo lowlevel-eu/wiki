@@ -252,7 +252,7 @@ Dieser Code könnte beispielsweise folgendermaßen aussehen: \<c\> static void s
        register_intr_handler(IRQ_BASE + 1, &irq_handler);
 
        // Tastaturpuffer leeren
-       while ((inb(0x64) & 0x1)) {
+       while (inb(0x64) & 0x2) {
            inb(0x60);
        }   
 
@@ -264,7 +264,7 @@ Dieser Code könnte beispielsweise folgendermaßen aussehen: \<c\> static void s
 /\*\* Befehl an die Tastatur senden \*/ static void send_command(uint8_t command) {
 
        // Warten bis die Tastatur bereit ist, und der Befehlspuffer leer ist
-       while ((inb(0x64) & 0x6) != 0x4) {}
+       while ((inb(0x64) & 0x2)) {}
        outb(0x60, command);
 
 } \</c\>
@@ -383,6 +383,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 6322; parent 6321; 2009-11-15T17:05:23Z -->
+<!-- MediaWiki page 1468; revision 6519; parent 6322; 2009-12-12T13:35:29Z -->
