@@ -16,7 +16,7 @@ Jeder der beiden PICs hat jeweils zwei IO-Ports, über die er programmiert wird:
 
 Nach dem Booten beginnen die IRQs 0 bis 7 standardmäßig beim Interrupt 0x08 (und die IRQs 8 bis 15 bei Interrupt 0x70). An dieser Stelle liegen sie aber denkbar ungünstig, weil dieselben Interruptnummern bereits von der CPU für [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") verwendet werden. Beim Start des Kernels müssen daher die IRQs auf andere Interruptnummern gelegt werden.
 
-Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und die nächsten gesendeten Datenbytes als Parameter für die Initialisierung gedacht sind. Anschließend werden bis zu drei Bytes nacheinander auf den Datenport geschrieben. Insgesamt werden folgende Operationen durchgeführt:
+Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und die nächsten gesendeten Datenbytes als Parameter für die Initialisierung gedacht sind. Anschließend werden bis zu drei Bytes nacheinander auf den Datenport geschrieben. Insgesamt werden folgende Operationen durchgeführt (die einzelnen gesendeten Bytes werden als ICWx durchnummeriert; ICW steht für *Initialization Control Word*):
 
 | Port | Name | Erklärung |  |
 | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -78,6 +78,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 6348; parent 6044; 2009-11-18T18:47:46Z -->
+<!-- MediaWiki page 1465; revision 6525; parent 6348; 2009-12-13T19:15:53Z -->
