@@ -4,7 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/62bf341e1dffc350b6ff.png" width="256" height="256" alt="Infortus.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/62bf341e1dffc350b6ff.png) |  |
 | Entwickler: | Sebi2020 |
-| Akt. Version: | 0.0.01 |
+| Akt. Version: | 0.0.001 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [Creative Commons](http://creativecommons.org/licenses/by-nc-nd/3.0/de/) |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -46,8 +46,8 @@ Kernel
 
 Bisher ist beim Testen in KVM herausgekommen (taljeth hat es getestet), dass ein Triple Fault ausgelöst wurde. Im Moment weiß ich leider noch nicht woran es liegt und wäre für Hilfe dankbar. (Siehe Download)
 
-Erfolgreich getestet:  
-**Emulatoren/Virtualisierung:** Vmware, Bochs  
+Erfolgreich getestet Version 0.00.02:  
+**Emulatoren/Virtualisierung:** Vmware, Bochs, Sun Virtual Box  
 **Computer:**  
 
 - Fujitsu Siemens Amilo Reihe, Intel Celeron M CPU, 448 MB RAM,
@@ -64,6 +64,6 @@ Aktuelle Version 0.00.001:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6513; parent 6511; 2009-12-10T21:21:31Z -->
+<!-- MediaWiki page 2117; revision 6522; parent 6513; 2009-12-13T15:05:51Z -->
