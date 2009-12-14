@@ -4,7 +4,7 @@
 | ------------------------ | ----------------------------------------------- |
 | Name: | VirtualBox |
 | Entwickler: | Innotek |
-| Akt. Version: | 3.0.4<br>(Stand 04.08.2009) |
+| Akt. Version: | 3.1.0<br>(Stand 30.11.2009) |
 | Lizenz: | Proprietär, GPL 2 (2 Versionen) |
 | Betriebssystem(e): | Linux, Windows, OS X, Solaris |
 | Virtualisiertes System |  |
@@ -23,6 +23,7 @@ Besondere Features:
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
 - Gastunsterstützung um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
 - OpenGL-Unterstützung (derzeit nur für die 32-Bit-Versionen von Windows XP und Windows Vista sowie Linux und Solaris)
+- Experimenteller Support für [EFI (Extensible Firmware Interface)](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "Extensible Firmware Interface")
 
 Befehlssatzerweiterungen für Gäste:
 
@@ -54,6 +55,6 @@ Emulierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 5748; parent 5208; 2009-08-26T17:56:07Z -->
+<!-- MediaWiki page 1553; revision 6536; parent 5748; 2009-12-14T17:22:13Z -->
