@@ -62,11 +62,11 @@ Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:
 Aktuelle Version 0.00.001:  
 <http://dev.informatikonline.net/download.php?file=1>
 
-Die Sourcefiles sind findet man unter:  
+Die Sourcefiles findet man unter:  
 <http://sourceforge.net/projects/infortus-os/files/source/prealpha-0-00-02/src-prealpha-0-00-02.zip/download>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6539; parent 6538; 2009-12-14T18:49:02Z -->
+<!-- MediaWiki page 2117; revision 6540; parent 6539; 2009-12-14T20:33:12Z -->
