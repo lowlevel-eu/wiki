@@ -74,10 +74,9 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 ## Links
 
 - [Hardware-Spezifikation (Intel)](http://pdos.csail.mit.edu/6.828/2005/readings/hardware/8259A.pdf)
-- [Programmierung des PIC (by maxinator)](http://maxinator.freehoster.ch/layout.php?menu=programming_tutorials&site=Programming/programming/pic/00200021.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 6525; parent 6348; 2009-12-13T19:15:53Z -->
+<!-- MediaWiki page 1465; revision 6535; parent 6525; 2009-12-14T17:04:41Z -->
