@@ -140,6 +140,6 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
 
-<!-- MediaWiki page 2073; revision 6527; parent 5962; 2009-12-14T12:36:17Z -->
+<!-- MediaWiki page 2073; revision 6530; parent 6527; 2009-12-14T13:21:56Z -->
