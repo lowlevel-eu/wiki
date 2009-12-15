@@ -4,7 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/62bf341e1dffc350b6ff.png" width="256" height="256" alt="Infortus.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/62bf341e1dffc350b6ff.png) |  |
 | Entwickler: | Sebi2020 |
-| Akt. Version: | 0.0.001 |
+| Akt. Version: | 0.0.02 prealpha |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -59,14 +59,14 @@ Falls mir jemand Helfen möchte, und mir sagen kann, woran dieser Fehler liegt, 
 ## Download
 
 Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:  
-Aktuelle Version 0.00.001:  
-<http://dev.informatikonline.net/download.php?file=1>
+Aktuelle Version 0.00.02-prealpha:  
+<http://sourceforge.net/projects/infortus-os/files/binary/prealpha-0-00-02/Infortus%20LiveCD%200-00-02%20prealpha.zip/download>
 
 Die Sourcefiles findet man unter:  
 <http://sourceforge.net/projects/infortus-os/files/source/prealpha-0-00-02/src-prealpha-0-00-02.zip/download>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6541/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6540; parent 6539; 2009-12-14T20:33:12Z -->
+<!-- MediaWiki page 2117; revision 6541; parent 6540; 2009-12-15T07:04:33Z -->
