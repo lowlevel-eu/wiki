@@ -1,20 +1,9 @@
 # J-OS
 
-Ich wurde 1996 geboren und wohne in Nordhorn. Ich habe mit ungefähr 9 Jahren angefangen Visual Basic zu programmieren. Mit ca. 10 Jahren kam dann HTML dazu. Seit ich 12 bin, programmiere ich ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") namens **[J-OS](#)** in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Ich "spreche" folgende Programmiersprachen:
-
-- Visual Basic
-- [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")
-- [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
-- HTML
-- ein bisschen JavaScript und PHP
-
-  
-==J-OS== J-OS
-
 | J-OS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Jonas Schievink |
+| Entwickler: | \[Benutzer:Jonebohne Jonas Schievink\] |
 | Akt. Version: | Pre-Alpha 0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) |
 | OS-Eigenschaften |  |
@@ -36,6 +25,6 @@ Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6547/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6554/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 6547; parent 6546; 2009-12-16T21:59:58Z -->
+<!-- MediaWiki page 1828; revision 6554; parent 6547; 2009-12-16T22:17:43Z -->
