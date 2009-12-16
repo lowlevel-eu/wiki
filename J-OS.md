@@ -3,7 +3,7 @@
 | J-OS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | \[Benutzer:Jonebohne Jonas Schievink\] |
+| Entwickler: | \[Benutzer:Jonebohne |
 | Akt. Version: | Pre-Alpha 0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) |
 | OS-Eigenschaften |  |
@@ -25,6 +25,6 @@ Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6554/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 6554; parent 6547; 2009-12-16T22:17:43Z -->
+<!-- MediaWiki page 1828; revision 6558; parent 6554; 2009-12-16T22:24:22Z -->
