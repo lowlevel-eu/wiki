@@ -88,18 +88,6 @@ Wieder Freebasic: \<freebasic\>
         EI_NIDENT as UBYTE                         '// ?
     end type
 
-Und in C: \<c\> struct ELF_IDENT_HEADER {
-
-       unsigned int EI_MAGIC 
-       unsigned byte EI_CLASS
-       unsigned byte EI_DATA
-       unsigned byte EI_VERSION
-       unsigned int EI_PAD
-       unsigned int EI_PAD2
-       unsigned byte EI_NIDENT
-
-} \</c\>
-
     type ELF_HEADER
         e_ident     as ELF_IDENT_HEADER            '// IDENT-HEADER (see above)
         e_type      as Elf32_Half                  '// type of the ELF-file (relocatable, executeable, shared-object...)
@@ -119,6 +107,19 @@ Und in C: \<c\> struct ELF_IDENT_HEADER {
 
 \</freebasic\>
 
+Und in C: \<c\> struct ELF_IDENT_HEADER {
+
+       unsigned int EI_MAGIC 
+       unsigned byte EI_CLASS
+       unsigned byte EI_DATA
+       unsigned byte EI_VERSION
+       unsigned int EI_PAD
+       unsigned int EI_PAD2
+       unsigned byte EI_NIDENT
+
+} \</c\>
+
+  
 So. Wofür ist jetzt "ELF_IDENT_HEADER" gut? Ganz einfach, er gibt uns erst mal ein paar grundlegende Infos, z.B. ob die Datei Little oder Big Endian ist. Das ist wichtig, da der Rest der Datei diesen Regeln folgt! (Eigentlich ist dieser Header etwas anders eingeteilt, aber der Einfachheit halber habe ich das mal so gelöst. Wie es wirklich richtig ist kann man in den ELF-Spezifikationen nachlesen)
 
 So, jetzt überlegen wir mal, welche Teile des Headers außer dem Ident-Header für uns wichtig sind. Naja, e_type auf jeden Fall, denn wir wollen nur ausführbare Dateien ausführen. e_machine sollte auch überprüft werden, damit wir nicht Code ausführen der für einen anderen Prozessor gedacht war. e_version zeigt uns, das wir eine aktuelle ELF-Datei vor uns haben, also auch wichtig. e_entry ist wohl das wichtigste, das ist unser Einsprungpunkt in den Code. e_phoff, e_phentsize und e_phnum sind wichtig, da sie uns sagen wie und wo wir die Segmente der ELF-Datei in den Speicher kopieren müssen. Der Rest ist für uns momentan noch unwichtig.
@@ -301,6 +302,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6566/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6566; parent 6564; 2009-12-17T10:44:51Z -->
+<!-- MediaWiki page 1854; revision 6567; parent 6566; 2009-12-17T10:47:02Z -->
