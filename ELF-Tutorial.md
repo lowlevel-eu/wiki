@@ -72,7 +72,7 @@ Zuerst ein paar Definitionen: In FreeBaisc: \<freebasic\>
 
 \</freebasic\>
 
-In C: \<c\> unsigned int Elf32_Addr; unsigned short ELF32_Half; unsigned int ELF32_Off; int ELF32_Sword; unsigned int ELF32_Word; unsigned byte ELF_Uchar; \</c\>
+In C: \<c\> typedef uint32_t Elf32_Addr; typedef uint16_t ELF32_Half; typedef uin32_t ELF32_Off; typedef int32_t ELF32_Sword; typedef uint32_t ELF32_Word; typedef unsigned char ELF_Uchar; \</c\>
 
 Beginnen wir nun mal mit dem ELF-Header.
 
@@ -109,13 +109,13 @@ Wieder Freebasic: \<freebasic\>
 
 Und in C: \<c\> struct ELF_IDENT_HEADER {
 
-       unsigned int EI_MAGIC 
-       unsigned byte EI_CLASS
-       unsigned byte EI_DATA
-       unsigned byte EI_VERSION
-       unsigned int EI_PAD
-       unsigned int EI_PAD2
-       unsigned byte EI_NIDENT
+       uint32_t EI_MAGIC 
+       uint8_t  EI_CLASS
+       uint8_t  EI_DATA
+       uint8_t  EI_VERSION
+       uint32_t EI_PAD
+       uint32_t EI_PAD2
+       uint8_t  EI_NIDENT
 
 } \</c\>
 
@@ -302,6 +302,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6567; parent 6566; 2009-12-17T10:47:02Z -->
+<!-- MediaWiki page 1854; revision 6569; parent 6567; 2009-12-17T15:20:53Z -->
