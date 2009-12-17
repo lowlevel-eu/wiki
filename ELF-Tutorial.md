@@ -61,7 +61,7 @@ Zuletzt noch eine Routine, die zuerst die Check-Routine aufruft, dann die Progra
 
 ## Typen und Konstanten
 
-Zuerst ein paar Definitionen: \<freebasic\>
+Zuerst ein paar Definitionen: In FreeBaisc: \<freebasic\>
 
     type Elf32_Addr  as UINTEGER
     type Elf32_Half  as USHORT
@@ -71,6 +71,8 @@ Zuerst ein paar Definitionen: \<freebasic\>
     type Elf32_Uchar as UBYTE
 
 \</freebasic\>
+
+In C: \<c\> unsigned int Elf32_Addr; unsigned short ELF32_Half; unsigned int ELF32_Off; int ELF32_Sword; unsigned int ELF32_Word; unsigned byte ELF_Uchar; \</c\>
 
 Beginnen wir nun mal mit dem ELF-Header.
 
@@ -287,6 +289,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6329/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6564/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6329; parent 6326; 2009-11-15T20:13:06Z -->
+<!-- MediaWiki page 1854; revision 6564; parent 6329; 2009-12-17T08:57:57Z -->
