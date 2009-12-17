@@ -72,7 +72,7 @@ Zuerst ein paar Definitionen: In FreeBaisc: \<freebasic\>
 
 \</freebasic\>
 
-In C: \<c\> typedef uint32_t Elf32_Addr; typedef uint16_t ELF32_Half; typedef uin32_t ELF32_Off; typedef int32_t ELF32_Sword; typedef uint32_t ELF32_Word; typedef unsigned char ELF_Uchar; \</c\>
+In C: \<c\> typedef uint32_t Elf32_Addr; typedef uint16_t ELF32_Half; typedef uint32_t ELF32_Off; typedef int32_t ELF32_Sword; typedef uint32_t ELF32_Word; typedef unsigned char ELF_Uchar; \</c\>
 
 Beginnen wir nun mal mit dem ELF-Header.
 
@@ -302,6 +302,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6570/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6569; parent 6567; 2009-12-17T15:20:53Z -->
+<!-- MediaWiki page 1854; revision 6570; parent 6569; 2009-12-17T15:21:16Z -->
