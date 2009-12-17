@@ -76,7 +76,7 @@ In C: \<c\> unsigned int Elf32_Addr; unsigned short ELF32_Half; unsigned int ELF
 
 Beginnen wir nun mal mit dem ELF-Header.
 
-\<freebasic\>
+Wieder Freebasic: \<freebasic\>
 
     type ELF_IDENT_HEADER
         EI_MAGIC as UINTEGER                       '// ELF-Magic Number
@@ -87,6 +87,18 @@ Beginnen wir nun mal mit dem ELF-Header.
         EI_PAD2 as UINTEGER                        '// reserved (zero)
         EI_NIDENT as UBYTE                         '// ?
     end type
+
+Und in C: \<c\> struct ELF_IDENT_HEADER {
+
+       unsigned int EI_MAGIC 
+       unsigned byte EI_CLASS
+       unsigned byte EI_DATA
+       unsigned byte EI_VERSION
+       unsigned int EI_PAD
+       unsigned int EI_PAD2
+       unsigned byte EI_NIDENT
+
+} \</c\>
 
     type ELF_HEADER
         e_ident     as ELF_IDENT_HEADER            '// IDENT-HEADER (see above)
@@ -289,6 +301,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6564/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6566/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6564; parent 6329; 2009-12-17T08:57:57Z -->
+<!-- MediaWiki page 1854; revision 6566; parent 6564; 2009-12-17T10:44:51Z -->
