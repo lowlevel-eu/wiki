@@ -67,7 +67,7 @@ Nochmal eine Veranschaulichung der Oder-Verknüpfung:
 
 ## Bildschirm scrollen
 
-Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2. Zeile zur 1. Zeile kopieren und die letzte Zeile löschen, also auf 0 oder irgendwas setzen. Wenn man eine memmove- und eine memset-Funktion bzw. eine memsetw-Funktion bei einem Attributbyte != 0 hat, geht das in ein paar Zeilen. Denn die Funktion memcpy muss für sich überlappende Speicherbereiche nicht das gewünschte Ergebnis erzielen.
+Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2. Zeile zur 1. Zeile kopieren und die letzte Zeile löschen, also auf 0 oder irgendwas setzen. Wenn man eine memmove- und eine memset-Funktion bzw. eine wmemset-Funktion bei einem Attributbyte != 0 hat, geht das in ein paar Zeilen. Denn die Funktion memcpy muss für sich überlappende Speicherbereiche nicht das gewünschte Ergebnis erzielen.
 
 ## Cursor
 
@@ -113,6 +113,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6573/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 6573; parent 6026; 2009-12-18T20:41:52Z -->
+<!-- MediaWiki page 1549; revision 6574; parent 6573; 2009-12-19T10:07:31Z -->
