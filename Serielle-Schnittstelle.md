@@ -1,6 +1,6 @@
 # Serielle Schnittstelle
 
-Die **serielle Schnittstelle** (Abkürzung: **COM** oder **RS232**) scheint veraltet ist aber sehr nützlich um z.B. den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") im frühen Entwicklungstand zu [debuggen](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"), denn der Bildschirm kann nur begrenzt Text anzeigen und in keinem der Emulatoren kann man mittels Copy'n'Paste den Bildschirminhalt kopieren. Außerdem sollte bei keinem Betriebssystem ein Treiber für die serielle Schnittstelle fehlen, da sie heute auch noch oft Anwendung findet und leicht zu programmieren ist.
+Die **serielle Schnittstelle** (Abkürzung: **COM** oder **RS232**) scheint veraltet ist aber sehr nützlich um z.B. den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") im frühen Entwicklungstand zu [debuggen](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"), denn der Bildschirm kann nur begrenzt Text anzeigen. Außerdem sollte bei keinem Betriebssystem ein Treiber für die serielle Schnittstelle fehlen, da sie heute auch noch oft Anwendung findet und leicht zu programmieren ist.
 
 ## Basis-I/O-Ports finden
 
@@ -147,6 +147,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6584/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 4850; parent 3188; 2009-07-30T12:45:39Z -->
+<!-- MediaWiki page 1561; revision 6584; parent 4850; 2009-12-20T16:59:12Z -->
