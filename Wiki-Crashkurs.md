@@ -2,23 +2,25 @@
 
 Diese Seite fasst die wichtigsten Formatierungsbefehle, die man in diesem Wiki verwenden kann, zusammen. Dies ist keine Anleitung, wann welche Befehle zu verwenden sind.
 
-Eine umfangreichere Dokumentation bietet die offizielle MediaWiki-Dokumentation.
-
-TODO: Das kann alles einiges an Erklärungen vertragen.
+Eine umfangreichere Dokumentation bietet die offizielle MediaWiki-Dokumentation. Zum Beispiel dieser Artikel: <http://www.mediawiki.org/wiki/Help:Formatting>
 
 ## Text
 
-TODO
+Um Text hervorzuheben, wird dieser von jeweils zwei oder drei Apostrophen (') vorne und hinten eingeschlossen.
 
-''kursiv'' und '''fett''' wird zu *kursiv* und **fett**
+Beispiel: ''kursiv'' und '''fett''' wird zu *kursiv* bzw. **fett**
 
 ## Überschriften
 
-TODO
+Überschriften werden von jeweils zwei oder mehr Gleichheitszeichen (=) vorne und hinten eingeschlossen. Die Überschriften der obersten Ebene, werden von zwei Gleichheitszeichen umschlossen, und niedrigere Ebenen von mehr als zweien.
 
 == Erste Überschriftsebene ==
 
 === Zweite Überschriftsebene ===
+
+### Inhaltsverzeichnis
+
+Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert die MediaWiki-Software automatisch ein Inhaltsverzeichnis. Dieses wird vor der ersten Überschrift (also nach den einleitenden Absätzen) platziert.
 
 ## Links
 
@@ -134,7 +136,7 @@ Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Cod
 
 ## HTML
 
-Die Verwendung von HTML ist möglichst zu vermeiden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
+Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließlich die eingebauten MediaWiki-Befehle (auch die, die hier nicht dokumentiert sind) verwendet werden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
 
   
 
@@ -145,6 +147,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden. Man kann auch in der [Media
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6579/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 6384; parent 6382; 2009-11-24T15:13:32Z -->
+<!-- MediaWiki page 2049; revision 6579; parent 6384; 2009-12-20T00:59:58Z -->
