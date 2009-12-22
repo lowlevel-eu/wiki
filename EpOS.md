@@ -23,7 +23,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 ## Features
 
 - Kleine Komandozeile
-- Reeboot
+- Reboot
 
 ## Geplant
 
@@ -51,6 +51,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 6394; parent 5274; 2009-11-25T10:09:30Z -->
+<!-- MediaWiki page 1771; revision 6596; parent 6394; 2009-12-22T19:46:35Z -->
