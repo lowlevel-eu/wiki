@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[Nexos](http://www.project-nexos.de.vu) / [Forum (Hoffentlich nur vorübergehend wegen SQL-Fehler inaktiv)](http://www.forum.nexos.de.vu)
+[Nexos](http://www.project-nexos.de.vu) / [Forum](http://www.forum.nexos.de.vu)
 
   
 NexOS ist ein Hobby Betriebssystem für Computer mit x86 Prozessoren. Dieses OS läuft im RealMode und soll auch dort bleiben, da es nur experimentell ist.  
@@ -120,6 +120,6 @@ Aktuelle Version zum Download: [Hier](http://chris122.ch.funpic.de/NexOS/img/Nex
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6577/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1884/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6592/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1884/index.html)
 
-<!-- MediaWiki page 1884; revision 6577; parent 6576; 2009-12-19T19:24:42Z -->
+<!-- MediaWiki page 1884; revision 6592; parent 6577; 2009-12-22T15:40:10Z -->
