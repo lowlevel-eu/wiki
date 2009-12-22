@@ -17,7 +17,7 @@
 
 **VirtualBox**, auch bekannt als **VirtuaBox** ist ein x86-Emulator für x86-Systeme. Original entwickelt von innotek, kaufte Sun das Programm auf, stelle zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
 
-Besondere Features:
+## Besondere Features
 
 - iSCSI für Blockgeräte
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
@@ -29,7 +29,7 @@ Befehlssatzerweiterungen für Gäste:
 
 - PAE/NX (falls vom Host unterstützt)
 
-Emulierte Hardware:
+## Emulierte Hardware
 
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
 - I/O APIC
@@ -55,6 +55,6 @@ Emulierte Hardware:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 6536; parent 5748; 2009-12-14T17:22:13Z -->
+<!-- MediaWiki page 1553; revision 6587; parent 6536; 2009-12-22T12:38:17Z -->
