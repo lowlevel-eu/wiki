@@ -6,13 +6,13 @@ Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel]
 
 Der aufrufende Prozess füllt entweder die Syscall-Parameter in Prozessorregister oder legt sie auf den Stack. Meistens wird der Syscall, den der Prozess aufrufen will, über eine Nummer als Parameter, z.B. über das Register eax, übergeben.
 
-Anschließend [löst der Prozess einen Syscall aus](https://github.com/lowlevel-eu/wiki/wiki/Syscall#ausl%C3%B6sen-des-syscalls "Syscall").
+Anschließend löst der Prozess einen Syscall aus.
 
 ## Auslösen des Syscalls
 
 Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere AMD-Prozessoren die *syscall*-Instruktion und neuere Intel-Prozessoren die *[sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")*-Instruktion.
 
-Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel übernimmt [die Behandlung des Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall#behandlung-des-syscalls "Syscall").
+Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel übernimmt.
 
 ## Behandlung des Syscalls
 
@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 6021; parent 4539; 2009-10-12T14:23:16Z -->
+<!-- MediaWiki page 1629; revision 6599; parent 6021; 2009-12-23T09:44:32Z -->
