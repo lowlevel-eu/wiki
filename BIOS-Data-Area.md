@@ -55,7 +55,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 
 | Bits | Beschreibung |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 15-14 | 00b = 1 Parallelport vorhanden<br>01b = 2 Parallelports vorhanden<br>10b = 3 Parallelports vorhanden |
+| 15-14 | Anzahl der vorhandenen LPT-Ports |
 | 13 | 01b = internes Modem vorhanden |
 | 12 | 01b = Joystick vorhanden |
 | 11-9 | Anzahl der vorhandenen [COM-Ports](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") 0-4 |
@@ -238,6 +238,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 6604; parent 6049; 2009-12-23T16:20:51Z -->
+<!-- MediaWiki page 1564; revision 6606; parent 6604; 2009-12-23T16:44:04Z -->
