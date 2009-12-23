@@ -58,17 +58,17 @@ Diese Bytes werden zur Datei-Identifikation benutzt.
 
 ##### EI_CLASS
 
-Die Klasse gibt unter anderen an, wie viel Bits zur Adressierung verwendet werden. Also eine 32Bit-Maschine sollte überprüfen, ob der Code auch wirklich auf 32Bit-Maschinen geht.
+Die Klasse gibt unter anderen an, wie viel Bits zur Adressierung verwendet werden. Also eine 32-Bit-Maschine sollte überprüfen, ob der Code auch wirklich auf 32-Bit-Maschinen geht.
 
 | Name | Wert | Beschreibung |
 | -------------- | ------ | ------------------ |
 | ELFCLASSNONE | 0 | Ungültige Klasse |
-| ELFCLASS32 | 1 | 32bit-Objekte |
-| ELFCLASS64 | 2 | 64bit-Objekte |
+| ELFCLASS32 | 1 | 32-Bit-Objekte |
+| ELFCLASS64 | 2 | 64-Bit-Objekte |
 
 ##### EI_DATA
 
-Das Byte e_ident\[EI_DATA\] gibt an, in welchen Format Daten gespeichert werden, Little-Endian oder Big-Endian
+Das Byte e_ident\[EI_DATA\] gibt an, in welchen Format Daten gespeichert werden, Little-Endian oder Big-Endian.
 
 | Name | Wert | Beschreibung |
 | ------------- | ------ | --------------- |
@@ -78,15 +78,15 @@ Das Byte e_ident\[EI_DATA\] gibt an, in welchen Format Daten gespeichert werden,
 
 ##### EI_VERSION
 
-Hier sollte das gleiche wie in e_version drinstehen, also EV_CURRENT
+Hier sollte das gleiche wie in e_version drinstehen, also EV_CURRENT.
 
 ##### EI_PAD
 
-Alle Bytes in e_ident ab EI_PAD (inklusive) werden nicht benutzt und sollten Null gesetzt sein.
+Alle Bytes in e_ident ab EI_PAD (inklusive) werden nicht benutzt und sollten auf Null gesetzt sein.
 
 ##### Architektur-Identifikation
 
-Für einen 32bit Intel-Prozessor sollten folgende Felder folgende Werte haben:
+Für einen [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessor sollten folgende Felder folgende Werte haben:
 
 | Feld | Wert |
 | --------------------- | ------------- |
@@ -99,20 +99,20 @@ Für einen 32bit Intel-Prozessor sollten folgende Felder folgende Werte haben:
 Dieses Feld beschreibt, welches ELF-Format benutzt wird:
 
 | Name | Wert | Beschreibung |
-| ----------- | -------- | ---------------------- |
+| ----------- | -------- | --------------------- |
 | ET_NONE | 0 | Kein Typ |
 | ET_REL | 1 | Relocatable Datei |
 | ET_EXEC | 2 | Ausführbare Datei |
 | ET_DYN | 3 | Shared-Object-Datei |
 | ET_CORE | 4 | Kerndatei |
-| ET_LOPROC | 0xff00 | Prozessor-spezifisch |
-| ET_HIPROC | 0x00ff | Prozessor-spezifisch |
+| ET_LOPROC | 0xff00 | Prozessorspezifisch |
+| ET_HIPROC | 0x00ff | Prozessorspezifisch |
 
-Für eine ausführbare ELF-Datei, müsste hier ET_EXEC stehen.
+Für eine ausführbare ELF-Datei müsste hier ET_EXEC stehen.
 
 #### e_machine
 
-Wie oben schonmal erwähnt, steht hier der Prozessor-Typ drin.
+Wie oben bereits erwähnt, enthält dieses Element den Prozessor-Typ.
 
 | Name | Wert | Beschreibung |
 | ---------- | ------ | ---------------- |
@@ -127,7 +127,7 @@ Wie oben schonmal erwähnt, steht hier der Prozessor-Typ drin.
 
 #### e_version
 
-Beschreibt die Aktuelle ELF-Version
+Beschreibt die ELF-Version der Datei.
 
 | Name | Wert | Beschreibung |
 | ------------ | ------ | ------------------- |
@@ -148,7 +148,7 @@ Offset in der Datei, an dem der Section-Header steht. Wenn die Datei keinen Sect
 
 #### e_flags
 
-Dieses Feld enthält Prozessorspezifische Flags.
+Dieses Feld enthält prozessorspezifische Flags.
 
 #### e_ehsize
 
@@ -176,14 +176,14 @@ Gibt an, welcher Eintrag im Section-Header mit der String-Tabelle verknüpft wir
 
 ### Programm-Header
 
-Der Programm-Header besteht aus e_phnum Einträgen, wobei jeder e_phentsize groß ist. Der Programm-Header ist also insgesamt e_phnum\*e_phentsize Bytes groß. Im Programm-Header stehen z.B der Text- oder Daten-Teil eines Programms. Ein Eintrag im Programm-Header ist wie folgt aufgebaut:
+Der Programm-Header besteht aus e_phnum Einträgen, wobei jeder e_phentsize groß ist. Der Programm-Header ist also insgesamt e_phnum\*e_phentsize Bytes groß. Im Programm-Header stehen z. B. der Text- oder Daten-Teil eines Programms. Ein Eintrag im Programm-Header ist wie folgt aufgebaut:
 
 | Name | Offset | Größe | Beschreibung |
 | ----------------------- | -------- | ------- | ----------------------------------------------------------- |
 | [p_type](#p_type) | 0x00 | 4 | Typ des Segments |
 | [p_offset](#p_offset) | 0x04 | 4 | Dateioffset, an dem das Segment steht |
 | [p_vaddr](#p_vaddr) | 0x08 | 4 | Virtuelle Adresse, an die das Segment kopiert werden soll |
-| [p_paddr](#p_paddr) | 0x0C | 4 | Physikalische Adresse (unrelevant) |
+| [p_paddr](#p_paddr) | 0x0C | 4 | Physische Adresse (meist irrelevant) |
 | [p_filesz](#p_filesz) | 0x10 | 4 | Größe des Segments in der Datei |
 | [p_memsz](#p_memsz) | 0x14 | 4 | Größe des Segments, das es im Speicher haben soll |
 | [p_flags](#p_flags) | 0x18 | 4 | Flags |
@@ -198,21 +198,21 @@ Dieses Feld gibt den Typ des Segments an, für eine ausführbare ELF-Datei ist v
 | PT_NULL | 0 | Ungültiges Segment |
 | PT_LOAD | 1 | Ladbares Segment |
 | PT_DYNAMIC | 2 | Dynamisches Segment |
-| PT_INTERP | 3 | Position eines 0-Terminierten Strings, der den Interpreter angibt. |
+| PT_INTERP | 3 | Position eines 0-terminierten Strings, der den Interpreter angibt. |
 | PT_NOTE | 4 | Universelles Segment |
 | PT_SHLIB | 5 | Shared Lib |
 | PT_PHDIR | 6 | Gibt Position und Größe des Programm-Headers an. |
 | PT_TLS | 7 | Thread-Local Storage |
-| PT_LOOS | 0x60000000 | Reserviert für Betriebssystem spezifische Erweiterungen |
-| PT_HIOS | 0x6fffffff | Reserviert für Betriebssystem spezifische Erweiterungen |
-| PT_LOPROC | 0x70000000 | Reserviert für Prozessor spezifische Erweiterungen |
-| PT_HIPROC | 0x7fffffff | Reserviert für Prozessor spezifische Erweiterungen |
+| PT_LOOS | 0x60000000 | Reserviert für betriebssystemspezifische Erweiterungen |
+| PT_HIOS | 0x6fffffff | Reserviert für betriebssystemspezifische Erweiterungen |
+| PT_LOPROC | 0x70000000 | Reserviert für prozessorspezifische Erweiterungen |
+| PT_HIPROC | 0x7fffffff | Reserviert für prozessorspezifische Erweiterungen |
 
-Außerdem habe ich noch diese (anscheinend inoffiziellen) Werte in Linux-Header-Dateien (<http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/include/linux/elf.h#L35>) gefunden.
+Außerdem habe ich noch diese (betriebssystemspezifischen) Werte in Linux-Header-Dateien (<http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/include/linux/elf.h#L35>) gefunden.
 
 | Name | Wert |
 | ----------------- | ------------------- |
-| PT_GNU_EH_FRAME | 0x6474e550 |
+| PT_GNU_EH_FRAME | PT_LOOS+0x474e550 |
 | PT_GNU_STACK | PT_LOOS+0x474e551 |
 
 #### p_offset
@@ -225,11 +225,11 @@ Virtuelle Adresse, an die das Segment kopiert werden soll.
 
 #### p_paddr
 
-Gibt die physikalische Zieladresse an, für Systeme, für welche dies relevant ist.
+Gibt die physische Zieladresse für Systeme an, für welche dies relevant ist.
 
 #### p_filesz
 
-Gibt die Größe des Segments in der Datei wieder. Kann eventuell auch 0 sein, z.B für die BSS-Sektion
+Enthält die Größe des Segments in der Datei. Kann eventuell auch 0 sein, z. B. für die BSS-Sektion.
 
 #### p_memsz
 
@@ -237,7 +237,7 @@ Gibt die Größe des Segments im RAM an. Kann 0 sein.
 
 #### p_flags
 
-Beschreibt Flags, z.B Zugriffsrechte.
+Beschreibt Flags, z. B. Zugriffsrechte.
 
 | Name | Wert | Beschreibung |
 | ------ | ------ | ------------------------ |
@@ -253,7 +253,7 @@ Damit kann man den Wert berechnen: \<c\>
 
 #### p_align
 
-Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erforderlich. Ansonsten muss es eine 2er Potenz sein (2, 4, 8, 16, ...).
+Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erforderlich. Ansonsten muss es eine 2er-Potenz sein (2, 4, 8, 16, ...).
 
 ## Überprüfen
 
@@ -265,17 +265,17 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 - Daten-Format (Little-/Big-Endian) überprüfen
 - Version überprüfen
 
-# Siehe auch
+## Siehe auch
 
 [ELF Tutorial](https://github.com/lowlevel-eu/wiki/wiki/ELF-Tutorial "ELF Tutorial")
 
-# Links
+## Links
 
 - [ELF für x86](http://www.acm.uiuc.edu/sigops/rsrc/pfmt11.pdf)
 - [wikipedia: ELF](http://en.wikipedia.org/wiki/Executable_and_Linkable_Format) (sehr gute Sammlung von Links)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 5069; parent 4423; 2009-08-04T19:35:38Z -->
+<!-- MediaWiki page 1528; revision 6598; parent 5069; 2009-12-23T09:32:47Z -->
