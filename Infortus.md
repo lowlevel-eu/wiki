@@ -28,7 +28,13 @@ Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660
 ## Phase
 
 - GDT, IDT, PIC etc...
-- **Implementierung des Keyboard-Treibers**
+  - GDT
+  - IDT
+  - Interrupts
+  - Timer
+  - **rudimentäres Multitasking**
+  - **Rudimentäre Speicherverwaltung**
+- Implementierung des Keyboard-Treibers
 - Implementierung des CD-Treibers
 - Implementierung von ISO9660
 
@@ -68,6 +74,6 @@ Die Sourcefiles findet man unter:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6542/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6542; parent 6541; 2009-12-15T07:05:29Z -->
+<!-- MediaWiki page 2117; revision 6607; parent 6542; 2009-12-23T18:31:17Z -->
