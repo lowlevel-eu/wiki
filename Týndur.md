@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Lowlevel-Community](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Team "Týndur/Team") |
-| Akt. Version: | 0.2.1 |
+| Akt. Version: | 0.2.2 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -96,6 +96,16 @@ Release am 05.07.2009
 - Neues Tool build, das einen Quellcode-Verzeichnisbaum baut (braucht einen installierten Compiler)
 - Ein Haufen Fehlerkorrekturen
 
+**0.2.2.**  
+Release am 25.12.2009
+
+- Unterstützung für TCP-Server
+- Konfigurierbare Tastaturbelegung und einige mehrsprachige Anwendungen
+- setup als menügeführtes Konfigurationstool
+- FTP-Client
+- Neue lbuilds: svn, maumau, fasm, nasm, ctris
+- Ein Haufen kleinerer Erweiterungen und Bugfixes
+
 [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screenshots "Týndur/Screenshots")
 
 ## Links
@@ -107,6 +117,6 @@ Release am 05.07.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 6187; parent 6186; 2009-11-06T18:25:53Z -->
+<!-- MediaWiki page 1796; revision 6621; parent 6187; 2009-12-26T12:46:04Z -->
