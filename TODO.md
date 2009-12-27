@@ -27,7 +27,6 @@
 ## Erweitern
 
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
-- ~~Screenshots von V2_OS für Ausgabe 2? siehe Diskussionsseite zu Ausgabe 2~~
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
@@ -42,36 +41,21 @@
 - [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
 - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
-- [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"): ~~Gescheites Diagramm zur Registerarchitektur,~~ Ergänzungen zur Handhabung von Interrupts, Eingehen auf verschiedene Befehlssätze, Verweis auf [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") zur Identifizierung.
+- [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"): Ergänzungen zur Handhabung von Interrupts, Eingehen auf verschiedene Befehlssätze, Verweis auf [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") zur Identifizierung.
   - Register sind größtenteils erledigt, siehe [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register")
-- ~~[CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID"): Die wichtigsten Kommandos (0x0 - 0x2, evtl, auch die Erweiterten von AMD) erläutern.~~
-  - Größtenteils erledigt, muss man vielleicht noch vervollständigen
+- [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")
 - [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
 - [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register")
 - [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") Könnte bei den Funktionslisten noch eine Sortierung nach Headern vertragen, so sieht das nach so abschreckend viel aus.
+- [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
+- [Kategorie:Versionsverwaltung](https://lowlevel-eu.github.io/wiki/pages/1887/index.html "Kategorie:Versionsverwaltung")
 
 ## Neu erstellen
 
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
-- ~~Informationen zur [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte~~
-
-<!-- -->
-
-- *Von [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") begonnen, muss nur noch ausgebaut/korrigiert werden*
-
-<!-- -->
-
-- Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen)
+- Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen), siehe beispielsweise [Intel(R) 64 and IA-32 Architectures Optimization Reference Manual](http://www.intel.com/Assets/PDF/manual/248966.pdf) und [Software Optimization Guide for the AMD64 Processors](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25112.PDF), aber dazu dürfte einiges an Verständnis für Pipelines, etc. notwendig sein
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
-- ~~Versionsverwaltung - Pro&Kontra, welche Systeme gibt es...~~
-
-<!-- -->
-
-- *Muss nur noch ausgebaut werden, siehe [Kategorie:Versionsverwaltung](https://lowlevel-eu.github.io/wiki/pages/1887/index.html "Kategorie:Versionsverwaltung")*
-
-<!-- -->
-
 - ~~Interne Darstellung der Zahlen, Darstellungsmöglichkeiten negativer Zahlen, Aufbau von Gleitkommazahlen (IEEE)~~
 
 <!-- -->
@@ -89,6 +73,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6634/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6633; parent 6632; 2009-12-27T23:11:52Z -->
+<!-- MediaWiki page 1518; revision 6634; parent 6633; 2009-12-27T23:36:26Z -->
