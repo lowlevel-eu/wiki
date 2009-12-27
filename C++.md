@@ -62,7 +62,7 @@ typedef void (\*constructor)();
 
 // Im Linkerskript definiert extern "C" constructor start_ctors; extern "C" constructor end_ctors;
 
-extern "C" void initializeConstructors();
+extern "C" void initialiseConstructors();
 
 // Ruft die Konstruktoren für globale/statische Objekte auf void initialiseConstructors() {
 
@@ -202,6 +202,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6623/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6424; parent 6422; 2009-11-30T18:27:17Z -->
+<!-- MediaWiki page 1486; revision 6623; parent 6424; 2009-12-27T01:00:01Z -->
