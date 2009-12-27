@@ -27,6 +27,7 @@
 ## Erweitern
 
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
+- ~~Screenshots von V2_OS für Ausgabe 2? siehe Diskussionsseite zu Ausgabe 2~~
 - [BDA](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BDA"): Die einzelnen Felder erklären
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
@@ -88,6 +89,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6632; parent 6032; 2009-12-27T23:10:41Z -->
+<!-- MediaWiki page 1518; revision 6633; parent 6632; 2009-12-27T23:11:52Z -->
