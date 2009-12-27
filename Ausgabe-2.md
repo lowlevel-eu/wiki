@@ -292,6 +292,10 @@ Ich glaube, es wird langsam Zeit, ein wenig Code anzufassen... aber dann in der 
 
 Ein Betriebssystem, komplett in 32bit-Assembler geschrieben! Kann das gut gehen? V2_Lab demonstriert eindrucksvoll, dass es möglich ist!
 
+### Screenshots
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/eb2e62925bc38565a48b.png" width="730" height="499" alt="Blue Screen V2OS.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/eb2e62925bc38565a48b.png) Den von Windows bekannte Bluescreen gibt auch beo V2_OS.
+
 ### OS Design
 
 Einige sehr innovative Features. Zum Beispiel gibt es mehrere Konsolen, für die verschiedensten Zwecke:
@@ -356,6 +360,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 6443; parent 6297; 2009-12-01T22:53:48Z -->
+<!-- MediaWiki page 1415; revision 6628; parent 6443; 2009-12-27T17:48:52Z -->
