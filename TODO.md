@@ -46,7 +46,6 @@
 - [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")
 - [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
 - [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register")
-- [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") Könnte bei den Funktionslisten noch eine Sortierung nach Headern vertragen, so sieht das nach so abschreckend viel aus.
 - [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
 - [Kategorie:Versionsverwaltung](https://lowlevel-eu.github.io/wiki/pages/1887/index.html "Kategorie:Versionsverwaltung")
 
@@ -73,6 +72,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6634/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6636/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6634; parent 6633; 2009-12-27T23:36:26Z -->
+<!-- MediaWiki page 1518; revision 6636; parent 6634; 2009-12-27T23:49:31Z -->
