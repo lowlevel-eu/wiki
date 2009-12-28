@@ -10,25 +10,27 @@ Die **Machine-Specific Register**s bzw. **Model-Specific Register**s (**MSR**) s
 
 Mit folgendem Code kann man auf die MSRs zugreifen: \<c\>uint64_t rdmsr(uint32_t msr) {
 
-      uint32_t lomsr, himsr;
-      uint64_t content;
+       uint32_t low, high;
 
-      __asm__ __volatile__ ("rdmsr":"=a"(lomsr),"=d"(himsr):"c"(msr));
+       __asm__ __volatile__ ("rdmsr" :
+                             "=a" (low), "=d" (high) :
+                             "c" (msr));
 
-      content = himsr;
-      content <<= 32;
-      content |= lomsr;
-      return content;
+       return ((uint64_t)high << 32) | low;
 
 }
 
-void wrmsr(uint32_t msr, uint64_t value) {
+void wrmsr(uint32_t msr,
 
-      uint32_t lomsr, himsr;
+              uint64_t value)
 
-      lomsr = value & 0xFFFFFFFF;
-      himsr = value >> 32;
-      __asm__ __volatile__ ("wrmsr"::"a"(lomsr),"c"(msr),"d"(himsr));
+{
+
+       uint32_t low = value & 0xFFFFFFFF;
+       uint32_t high = value >> 32;
+
+       __asm__ __volatile__ ("wrmsr" ::
+                             "a"(low), "c"(msr), "d"(high));
 
 }\</c\>
 
@@ -50,6 +52,6 @@ void wrmsr(uint32_t msr, uint64_t value) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 6018; parent 6017; 2009-10-12T13:50:42Z -->
+<!-- MediaWiki page 1607; revision 6655; parent 6018; 2009-12-28T14:08:08Z -->
