@@ -98,7 +98,7 @@ Zuerst initialisiert der Beispiel-Bootloader die Segmentregister und den Stack i
 
 Da unser Code an 0x7C00 liegt, reicht es aus, wenn wir das PageDirectory an die Adresse 0x8000 und die zwei PageTables an die Adressen 0x9000 und 0xA000 setzten. Die Adressen von der PageDirectory und den PageTables müssen immer ein Alignment von 4096 haben, heisst alle 4 KB (0x0000, 0x1000, 0x2000, ...). Zuerst füllen wir den Speicherbereich, wo die PageDirectory und die beiden PageTables liegen, mit 0en:
 
-\<asm\>InitPageDirectoryAndPageTables: xor eax,eax ; PageDirectory und 2 PageTables mit 0en füllen mov ecx,4024\*3 ; 1024 double word ≙ 4KB mov edi,0x8000 rep stosd\</asm\>
+\<asm\>InitPageDirectoryAndPageTables: xor eax,eax ; PageDirectory und 2 PageTables mit 0en füllen mov ecx,1024\*3 ; 1024 double word ≙ 4KB, insgesamt 12kB mov edi,0x8000 rep stosd\</asm\>
 
 Danach schreiben wir in die PageDirectory-Einträge für die beiden PageTables (PageTable 0 und PageTable 768):
 
@@ -785,6 +785,6 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1521/index.html)
 
-<!-- MediaWiki page 1521; revision 6662; parent 6647; 2009-12-28T16:24:24Z -->
+<!-- MediaWiki page 1521; revision 6663; parent 6662; 2009-12-28T16:34:35Z -->
