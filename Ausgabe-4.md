@@ -425,6 +425,6 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6299/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6643/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1424/index.html)
 
-<!-- MediaWiki page 1424; revision 6299; parent 4993; 2009-11-14T20:22:35Z -->
+<!-- MediaWiki page 1424; revision 6643; parent 6299; 2009-12-28T01:22:18Z -->
