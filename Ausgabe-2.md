@@ -362,6 +362,6 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6631/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1415/index.html)
 
-<!-- MediaWiki page 1415; revision 6631; parent 6628; 2009-12-27T18:27:48Z -->
+<!-- MediaWiki page 1415; revision 6641; parent 6631; 2009-12-28T01:22:01Z -->
