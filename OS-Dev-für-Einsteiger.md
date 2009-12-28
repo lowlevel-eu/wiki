@@ -40,7 +40,7 @@ Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie mög
 
 - Unix-Kenntnisse.
 - Assembler. Zwar braucht man nur einige Zeilen Assembler (wenn man es richtig macht), und das nötige Stück Assembler haben sich viele durch "learning-by-doing" angeeignet, jedoch helfen Kenntnisse von Assembler enorm beim Verständnis. Es lohnt sich eigentlich bei jedem Projekt, eine Abstraktionsschicht tiefer schauen zu können.
-- Englisch. Handbücher und andere Dokumentation sind kaum auf Deutsch zu finden, und das, was man findet, ist häufig veraltet. Außerdem ist OSDev.org oft noch besser als das Lowlevel-Wiki. Wir arbeiten dran *\*g\**
+- Englisch. Handbücher und andere Dokumentation sind kaum auf Deutsch zu finden, und das, was man findet, ist häufig veraltet. Außerdem ist [OSDev.org](http://wiki.osdev.org) oft noch besser als das Lowlevel-Wiki. Wir arbeiten dran *\*g\**
 
 ### Die Programmiersprache
 
@@ -166,6 +166,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6229/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 6229; parent 6228; 2009-11-09T13:52:15Z -->
+<!-- MediaWiki page 1619; revision 6651; parent 6229; 2009-12-28T01:38:33Z -->
