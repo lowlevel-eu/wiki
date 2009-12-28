@@ -52,10 +52,14 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 - ["Essential Linux Device Drivers" von Sreekrishnan Venkateswaran](http://www.amazon.de/Essential-Drivers-Prentice-Software-Development/dp/0132396556)  
   Das wohl beste Buch über Treiber im Linux-Kernel. Neben der Arbeitsweise des Linux-Kernels werden sämtliche Arten von Device-Drivers ausführlich behandelt: Von TTY über die [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") und [parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle") bis hin zu [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB") und Firewire lässt der Autor hier nichts verborgen. Als Extra werden im Anhang die Basics zu Assembler unter Linux dem Leser nähergebracht.
 
+  
+
 ### Bücher über Implementierung
 
 - ["Operating Systems: Design and Implementation" von Andrew S. Tanenbaum](http://www.amazon.de/Operating-Systems-Implementation-Prentice-Software/dp/0131429388)  
   Dieses Lehrbuch beschäftigt sich mit [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch bevor und während er Linux entwickelte, zu schätzen.
+
+  
 
 ## Bücher: Hardware
 
@@ -65,6 +69,15 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
   Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
 - ["PC-Hardwarebuch" von Hans-Peter Messmer und Klaus Dembowski](http://www.amazon.de/PC-Hardwarebuch-Aufbau-Funktionsweise-Programmierung/dp/3827314615)  
   Das Standardwerk, wenn es um Hardwareprogrammierung geht.
+
+  
+
+## Bücher: Verschiedenes
+
+- ["Just for fun: Wie ein Freak die Computerwelt revolutionierte" von Linus Torvalds und David Diamond](http://www.amazon.de/Just-Fun-Computerwelt-revolutionierte-Linux-Erfinders/dp/3423362995)  
+  Die Autobiographie des Linux-Erfinders ist eigentlich ein Muss für jeden Betriebssystementwickler, egal ob Linux-Fan oder nicht. Die Geschichte der Entstehung von Linux ist gleichzeitig unterhaltend und inspirierend, weil sich jeder Nerd doch irgendwie mit dem in seiner *larval stage* befindlichen Linus Torvalds identifizieren kann.
+
+  
 
 ## Linkliste
 
@@ -80,6 +93,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 6380; parent 6379; 2009-11-23T22:16:01Z -->
+<!-- MediaWiki page 1930; revision 6653; parent 6380; 2009-12-28T02:01:22Z -->
