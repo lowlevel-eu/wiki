@@ -17,6 +17,9 @@
 - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
 - TeeJays Tutorial (Link siehe [Diskussion:Programmable Interrupt Controller](https://lowlevel-eu.github.io/wiki/pages/1713/index.html "Diskussion:Programmable Interrupt Controller")) in den Artikel [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") einarbeiten
 - [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
+- [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
+  - Bilder ersetzen durch was richtigereres
+  - [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel") und [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") einarbeiten und dann löschen
 
 ## Magazin ausschlachten
 
@@ -72,6 +75,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6657; parent 6638; 2009-12-28T14:34:34Z -->
+<!-- MediaWiki page 1518; revision 6659; parent 6657; 2009-12-28T16:00:54Z -->
