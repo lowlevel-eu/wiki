@@ -24,7 +24,6 @@
 ## Magazin ausschlachten
 
 - [Ausgabe 1: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#lowlevel-grundlagen-teil-1 "Ausgabe 1")
-- [Ausgabe 2: OS-Dev-Tutorial](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#os-dev-tutorial-teil-2 "Ausgabe 2") in [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") einarbeiten
 - [Ausgabe 2: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
 - [Ausgabe 1: Etwas Systemtheorie](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#etwas-systemtheorie "Ausgabe 1") -\> [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") oder so
 
@@ -75,6 +74,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6659; parent 6657; 2009-12-28T16:00:54Z -->
+<!-- MediaWiki page 1518; revision 6660; parent 6659; 2009-12-28T16:13:18Z -->
