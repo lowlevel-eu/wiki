@@ -388,6 +388,6 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1471/index.html)
 
-<!-- MediaWiki page 1471; revision 6301; parent 4995; 2009-11-14T20:23:01Z -->
+<!-- MediaWiki page 1471; revision 6645; parent 6301; 2009-12-28T01:22:37Z -->
