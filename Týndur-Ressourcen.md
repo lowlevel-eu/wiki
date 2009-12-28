@@ -8,7 +8,7 @@ Ausführliche Informationen zum Entwicklungsprozess gibt es unter [Týndur/Entwi
 
 - [download.tyndur.org](http://download.tyndur.org/) – Downloadserver für stabile Releases und andere Dateien zu Týndur
 
-## Code-Repositories
+## Code-Repository
 
 - [git.tyndur.org](http://git.tyndur.org/) – Týndur-WebGit
 
@@ -31,6 +31,6 @@ Channellogs und Statistiken: [irc.tyndur.org](http://irc.tyndur.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2027/index.html)
 
-<!-- MediaWiki page 2027; revision 6372; parent 5600; 2009-11-23T19:27:33Z -->
+<!-- MediaWiki page 2027; revision 6652; parent 6372; 2009-12-28T01:42:33Z -->
