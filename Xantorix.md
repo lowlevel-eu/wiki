@@ -1,13 +1,13 @@
 # Xantorix
 
 | Xantorix |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Homix |
-| Akt. Version: | 0.1.2 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
+| Akt. Version: | 0.2.0 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source, Freeware |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (, [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64")) |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") |
 | API: | XixAPI |
@@ -18,21 +18,36 @@
 [www.xantorix.de](http://www.xantorix.de)
 
   
-**Xantorix** (früher *HomixOS*) ist ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Das Betriebssystem ist modular aufgebaut, daher ist es möglich einfach und bequem verschiedene Module oder Treiber zur Laufzeit hinzuzufügen oder zu entfernen. Der Kernel unterstützt alle modernen Technologien wie Protected-Mode, [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit Variante existiert seit neuestem auch eine noch nicht ausführlich getestete 64-Bit Version.
+**Xantorix** ist ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Der Kernel läuft ab einem Intel Pentium oder kompatiblen x86-Prozessor und unterstützt moderne Technologien wie [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"), [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Außerdem ist eine kleine Benutzerverwaltung und eine Systemdatenbank zur Speicherung von System- und Treiberinformationen vorhanden. Treiber stehen derzeit für Disketten- und IDE-ATA/ATAPI Laufwerke (Festplatten und CD/DVD-ROM Laufwerke) zur Verfügung. Die bisher unterstützten Dateisysteme sind [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und CDFS ([ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") mit RockRidge und Joliet Erweiterung). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit Variante existiert bei einigen Versionen auch eine 64-Bit Version, die aufgrund der bis jetzt wenigen Vorteile nicht regelmäßig erscheint.
 
 Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
 
 ## Features
 
-Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features finden sie auf der [offiziellen Webseite](http://www.xantorix.de/features.php).
+Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features findet man auf der [offiziellen Webseite](http://www.xantorix.de/features.php).
 
 ## Versionen
 
 Überblick der verschiedenen Versionen seit Umbenennung:
 
+    29.12.2009 : Xantorix 0.2.0
     20.12.2008 : Xantorix 0.1.2
 
 Die Veränderungen bei den verschiedenen Versionen:
+
+**Xantorix 0.2.0:**
+
+- Booten von Diskette, Festplatte und CD/DVD-ROM (Live-CD)
+- erweiterte Benutzerverwaltung
+- System-Datenbank (Sysdb)
+- Neue Konsole mit Scrolling-Funktion
+- Verbesserte virtuelle Speicherverwaltung
+- System- und Suchpfade
+- ATA Treiber für Festplatten (PIO, LBA28/LBA48)
+- ATAPI Treiber für CD/DVD Laufwerke (PIO)
+- CDFS Dateisystemtreiber (ISO9660, Rockridge, Joliet)
+- Auto-Mount für wechselbare Datenträger
+- Verbesserte Shell mit deutlich mehr Befehlen
 
 **Xantorix 0.1.2:**
 
@@ -54,22 +69,25 @@ Die Veränderungen bei den verschiedenen Versionen:
 
 Folgende Versionen sind geplant:
 
-    Ende Dezember 2009   : Xantorix 0.2.0
+    Februar 2010    : Xantorix 0.2.1
+    2. Quartal 2010 : Xantorix 0.2.2
 
 Die Features der kommenden Versionen:
 
-**Xantorix 0.2.0:**
+**Xantorix 0.2.1:**
 
-- Booten von Diskette, Festplatte und CD/DVD-ROM (Live-CD)
-- erweiterte Benutzerverwaltung
-- neue virtuelle Speicherverwaltung
-- System-Datenbank für Systemeinstellungen (Sysdb)
-- VM86-Mode Unterstützung (für 32-Bit Version)
-- ATA Treiber für Festplatten (PIO, LBA28/LBA48)
-- ATAPI Treiber für CD/DVD Laufwerke (PIO)
-- CDFS Dateisystemtreiber (ISO9660, Rockridge, Joliet)
-- Erweiterter FAT Dateisystemtreiber (FAT32 Unterstützung)
-- Verbesserte Shell mit deutlich mehr Befehlen
+- Verbesserte Laufwerks- und Dateiverwaltung
+- Caching für Dateien
+- DMA-Transfermodus für ATA/ATAPI Laufwerke
+- Schreibzugriff auf ATA-Festplatten
+- Partitionseditor
+
+**Xantorix 0.2.2:**
+
+- PAE Unterstützung für \>4GB Arbeitsspeicher
+- Ext2 Dateisystemtreiber (read-only)
+- VM86-Modus (16-Bit Emulation)
+- Virtuelle Laufwerke
 
 ## Offizielle Webseite
 
@@ -77,6 +95,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 6508; parent 6469; 2009-12-10T19:07:41Z -->
+<!-- MediaWiki page 1453; revision 6667; parent 6508; 2009-12-29T15:04:05Z -->
