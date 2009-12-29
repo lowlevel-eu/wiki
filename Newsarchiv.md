@@ -5,8 +5,16 @@
 |  |  |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **01.05.2009 :** | Mit Version 0.10.3 ist ein weiteres Bugfix-Release des stabilen [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU")-Zweigs erschienen. Die neu dazugekommenen Bugfixes sind wie üblich im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **26.04.2009 :** | Eine neue Version von [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") ist erschienen - 0.3.9. ([ChangeLog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.9)) |
+| **23.04.2009 :** | Version 4.4.0 der [Gnu Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gnu Compiler Collection") wurde freigegeben. Das Changelog gibts [hier](http://gcc.gnu.org/gcc-4.4/changes.html). |
 | **07.04.2009 :** | Version 0.10.2 von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
 | **21.03.2009 :** | Version 0.10.1 von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") wurde freigegeben. Die Bugfixes sind im [Changelog](http://www.nongnu.org/qemu/changelog.html) zu finden. |
+| **05.03.2009 :** | Version 0.10.0 von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") wurde freigegeben. Eine der zentralen Änderungen ist der Umstieg auf den TCG-Codegenerator, durch den die Einschränkung auf GCC 3.x entfällt. Die Changelog und die Download-URL sind [im Announcement](http://lists.gnu.org/archive/html/qemu-devel/2009-03/msg00154.html) zu finden. |
+| **05.02.2009 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") erscheint in der neuen Version namens 0.3.8. Changelog ist [hier](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.8) zu finden. |
+| **31.01.2009 :** | Kolibri 0.7.5.0 steht zum [Download](http://kolibrios.org/?p=Download) bereit. Die aktuelle Version soll neben 50 bugfixes auch 40 neue Programme enthalten. |
+| **24.12.2008 :** | [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur"), das Community-Betriebssystem, wurde in Version 0.2.0 freigegeben [\[1\]](http://lowlevel.brainsware.org/forum/index.php?topic=2100.0) |
+| **20.12.2008 :** | [Xantorix](https://github.com/lowlevel-eu/wiki/wiki/Xantorix "Xantorix") wurde heute in der Version 0.1.2 veröffentlicht. Das früher als HomixOS bekannte Betriebssystem wurde in den letzten Monaten komplett überarbeitet und verbessert. Mehr Informationen dazu findet man auf der [offiziellen Webseite](http://www.xantorix.de/)! |
+| **04.11.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.7 wird zum Download freigegeben. Auf der [ReactOS Newsseite](http://www.reactos.org/de/news_page_46.html) gibt es einen groben Überblick über die Änderungen. Genaueres steht im Changlog welches man [hier](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.7) findet. |
 | **06.08.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") wird in der Version 0.3.6 veröffentlicht. Changelog findet man [hier](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.6). |
 | **30.06.2008 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.5 wird zum Download freigeben. Die [ReactOS Newsseite](http://www.reactos.org/de/news_page_44.html) gibt einen groben Überblick über die Änderungen. Genaueres steht im [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.5). |
 | **06.06.2008 :** | Bochs steht seit ein paar Tagen in der Version 2.3.7 zum Download bereit. Changelogs findet man [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_3_7_FINAL). |
@@ -15,7 +23,7 @@
 | **02.05.2008 :** | Version 1.6 der x86 Virtualisierungssoftware [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox") ist erschienen. Weitere Informationen gibt es auf [virtualbox.org](http://www.virtualbox.org/). |
 | **01.05.2008 :** | NASM Version 2.02 seit dem 20.02.2008 erhältlich. Weitere Informationen gibts auf der [NASM Homepage](http://nasm.sourceforge.net/). |
 | **07.01.2008 :** | [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") 0.9.1 wurde freigegeben. Eine Zusammenfassung der Änderungen kann dem [Qemu Changelog](http://bellard.org/qemu/changelog.html) entnommen werden. |
-| **24.12.2007 :** | LOST, das Community-Betriebssystem von Lowlevel, wurde in Version 0.1.1 freigegeben. [\[1\]](http://lowlevel.brainsware.org/forum/index.php?topic=1919.0) |
+| **24.12.2007 :** | LOST, das Community-Betriebssystem von Lowlevel, wurde in Version 0.1.1 freigegeben. [\[2\]](http://lowlevel.brainsware.org/forum/index.php?topic=1919.0) |
 | **24.12.2007 :** | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") 2.3.6 ist erschienen. Weitere Informationen gibts auf der [Bochs Homepage](http://bochs.sourceforge.net/). |
 | **29.11.2007 :** | NASM ist in Version 2.00 erschienen. Weitere Informationen gibts auf der [NASM Homepage](http://nasm.sourceforge.net/). |
 | **27.10.2007 :** | Die NASM-Entwicklung geht weiter. Aktueller Entwickler-Stand ist 0.99.05 (17.10.2007). Weiter Informationen gibts auf [SourceForge](http://nasm.sourceforge.net/). |
@@ -24,7 +32,7 @@
 | **16.09.2007 :** | Der Emulator [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") wurde in Version 2.3.5 freigeben. Das Changelog gibt es [hier](http://bochs.cvs.sourceforge.net/bochs/bochs/CHANGES?view=markup&content-type=text/vnd.viewcvs-markup&revision=REL_2_3_5_FINAL). |
 | **12.09.2007 :** | [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") 0.3.3 wurde zum Download freigeben. Die [ReactOS Newsseite](http://www.reactos.org/en/news_page_37.html) gibt einen groben Überblick über die Änderungen. Genaueres steht im [Changelog](http://www.reactos.org/wiki/index.php/ChangeLog-0.3.3). |
 | **12.09.2007 :** | QNX hat den Quellcode von ihrem Neutrino Microkernel freigegeben. [Hier](http://community.qnx.com/sf/sfmain/do/home) kann man den Quellcode runterladen. |
-| **12.09.2007 :** | AMD hat heute Spezifikationen zu den GPUs RV630 und M56 veröffentlicht. Es sind aber leider "nur" Register Reference Guides, d.h. man findet nur eine insgesamt ungefähr 900 Seiten lange Liste mit Informationen zu den Registern. Unter [\[2\]](http://www.x.org/docs/AMD/) kann man beide Dokumente herunterladen. AMD hat auch angekündigt einen open-source Treiber für R500/600 Anfang nächster Woche freizugeben. |
+| **12.09.2007 :** | AMD hat heute Spezifikationen zu den GPUs RV630 und M56 veröffentlicht. Es sind aber leider "nur" Register Reference Guides, d.h. man findet nur eine insgesamt ungefähr 900 Seiten lange Liste mit Informationen zu den Registern. Unter [\[3\]](http://www.x.org/docs/AMD/) kann man beide Dokumente herunterladen. AMD hat auch angekündigt einen open-source Treiber für R500/600 Anfang nächster Woche freizugeben. |
 | **09.09.2007 :** | Die Version 0.1.0 von [HomixOS](https://github.com/lowlevel-eu/wiki/wiki/Xantorix "HomixOS") wurde freigegeben. Erstmals gibt es eine x86 und eine x86-64 Version des Betriebssystems. Die offizielle Homepage ist [hier](http://www.homix-online.de/homixos/). |
 | **03.05.2007 :** | Die erste LOST-Version 0.1.0 wurde freigegeben. Mehr dazu gibts [hier](http://lowlevel.brainsware.org/forum/index.php?topic=1798.0). |
 | **25.04.2007 :** | Linux 2.6.21 wurde freigegeben. Die größten Änderungen betreffen den Timer, um Tickless-Systeme zu unterstützen und Stromsparmodi besser zu nutzen. Außerdem sind einige Erweiterung im Bereich Virtualisierung (KVM) vorgenommen worden. [kernel.org](http://www.kernel.org) |
@@ -38,7 +46,7 @@
 | **11.11.2006 :** | [MyEmu](http://myemu.masen-inhabitants.com/) 0.2 erscheint |
 | **25.10.2006 :** | Version 0.64 des open-source Betriebssystems [Visopsys](http://www.visopsys.org/index.html) ist erschienen. |
 | **22.10.2006 :** | Version 0.52B des 64bit OS [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS") wird veröffentlicht. Einzige Neuerungen sind kleine Verbesserungen am eigenen Browser. [Website](http://www.menuetos.net/) |
-| **20.09.2006 :** | Linus Torvalds gibt den Kernel 2.6.18 frei. Neben etlichen kleinen Änderungen, wurde der Scheduler und die Locking-Mechanismen überarbeitet. [\[3\]](http://www.kernel.org) |
+| **20.09.2006 :** | Linus Torvalds gibt den Kernel 2.6.18 frei. Neben etlichen kleinen Änderungen, wurde der Scheduler und die Locking-Mechanismen überarbeitet. [\[4\]](http://www.kernel.org) |
 | **06.09.2006 :** | [Ausgabe 9](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-9 "Ausgabe 9") des Lowlevel Magazins erscheint |
 | **03.09.2006 :** | Nach 12 Jahren ist FreeDOS in der Version 1.0 fertig. Es ist fast komplett MS-DOS kompatibel, kennt aber trotzdem Features wie FAT32. [Website](http://www.freedos.org/) |
 | **28.08.2006 :** | Version 0.3.0 des freien Windows Klon [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") ist erschienen [Website](http://www.reactos.org) |
@@ -47,6 +55,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6668/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1416/index.html)
 
-<!-- MediaWiki page 1416; revision 5534; parent 5529; 2009-08-10T15:27:57Z -->
+<!-- MediaWiki page 1416; revision 6668; parent 5534; 2009-12-29T16:20:22Z -->
