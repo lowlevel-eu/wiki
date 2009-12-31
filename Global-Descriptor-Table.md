@@ -118,7 +118,7 @@ Das zweite TSS für Double Faults ist komplett optional. Double Faults entstehen
 
 ## Laden der GDT
 
-Nachdem der Kernel eine GDT im Speicher liegen hat, die er für seine Segmente verwenden möchte, muss er das Register GDTR ändern. Dieses Register enthält die Adresse und Länge der GDT und wird über den Befehl **lgdt** geladen. Da das Register 6 Bytes breit ist, kann dieser Befehl den neuen Wert nicht direkt als Operand entgegennehmen, sondern erwartet einen Pointer auf eine Speicherstelle, die diese 6 Bytes enthält:
+Nachdem der Kernel eine GDT im Speicher liegen hat, die er für seine Segmente verwenden möchte, muss er das Register GDTR ändern. Dieses Register enthält die Adresse und das sogenannte Limit der GDT &#150; dies entspricht ihrer Länge minus ein Byte &#150; und wird über den Befehl **lgdt** geladen. Da das Register 6 Bytes breit ist, kann dieser Befehl den neuen Wert nicht direkt als Operand entgegennehmen, sondern erwartet einen Pointer auf eine Speicherstelle, die diese 6 Bytes enthält:
 
 \<c\>static uint64_t gdt\[GDT_ENTRIES\];
 
@@ -126,12 +126,12 @@ Nachdem der Kernel eine GDT im Speicher liegen hat, die er für seine Segmente v
 
 struct {
 
-       uint16_t length;
+       uint16_t limit;
        void* pointer;
 
 } \_\_attribute\_\_((packed)) gdtp = {
 
-       .length = GDT_ENTRIES * 8,
+       .limit = GDT_ENTRIES * 8 - 1,
        .pointer = gdt,
 
 }; asm volatile("lgdt %0" : : "m" (gdtp));\</c\>
@@ -146,6 +146,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 6438; parent 6414; 2009-12-01T18:54:17Z -->
+<!-- MediaWiki page 1661; revision 6672; parent 6438; 2009-12-31T23:40:09Z -->
