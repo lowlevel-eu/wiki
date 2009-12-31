@@ -17,10 +17,9 @@
 
 [www.xantorix.de](http://www.xantorix.de)
 
-  
-**Xantorix** ist ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Der Kernel läuft ab einem Intel Pentium oder kompatiblen x86-Prozessor und unterstützt moderne Technologien wie [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"), [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Außerdem ist eine kleine Benutzerverwaltung und eine Systemdatenbank zur Speicherung von System- und Treiberinformationen vorhanden. Treiber stehen derzeit für Disketten- und IDE-ATA/ATAPI Laufwerke (Festplatten und CD/DVD-ROM Laufwerke) zur Verfügung. Die bisher unterstützten Dateisysteme sind [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und CDFS ([ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") mit RockRidge und Joliet Erweiterung). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit Variante existiert bei einigen Versionen auch eine 64-Bit Version, die aufgrund der bis jetzt wenigen Vorteile nicht regelmäßig erscheint.
+**Xantorix** ist ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Der Kernel läuft ab einem Intel Pentium oder kompatiblen x86-Prozessor und unterstützt moderne Technologien wie [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"), [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Außerdem ist eine kleine Benutzerverwaltung und eine Systemdatenbank zur Speicherung von System- und Treiberinformationen vorhanden. Treiber stehen derzeit für Disketten- und IDE-ATA/ATAPI Laufwerke (Festplatten und CD/DVD-ROM Laufwerke) zur Verfügung. Die bisher unterstützten Dateisysteme sind [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und CDFS ([ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") mit RockRidge und Joliet Erweiterung). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit-Variante existiert bei einigen Versionen auch eine 64-Bit-Version, die aufgrund der bis jetzt wenigen Vorteile nicht regelmäßig erscheint.
 
-Den Verlauf und Fortschritt der Entwicklung und die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
+Den Verlauf und Fortschritt der Entwicklung sowie die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
 
 ## Features
 
@@ -95,6 +94,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 6667; parent 6508; 2009-12-29T15:04:05Z -->
+<!-- MediaWiki page 1453; revision 6673; parent 6667; 2009-12-31T23:42:34Z -->
