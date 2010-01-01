@@ -12,7 +12,9 @@ Die **Industry Standard Architecture** ist ein damaliger Standard, der maßgebli
 
 Es wurde schon früh nach einem Standard in der Industrie gesucht sowie nach einer Möglichkeit, bestehende Systeme einfach und effektiv aufzurüsten, ohne dafür alte Systeme durch Neue zu ersetzen.
 
-  
+## Plug and Play
+
+**TODO**: [ISA Plug and Play Specification V1.0a](http://www.osdever.net/documents/PNP-ISA-v1.0a.pdf)
 
 ## Links
 
@@ -20,6 +22,6 @@ Es wurde schon früh nach einem Standard in der Industrie gesucht sowie nach ein
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
 
-<!-- MediaWiki page 1709; revision 6035; parent 4068; 2009-10-13T11:14:23Z -->
+<!-- MediaWiki page 1709; revision 6681; parent 6035; 2010-01-01T21:57:15Z -->
