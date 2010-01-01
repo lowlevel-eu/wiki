@@ -20,6 +20,7 @@
 - [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
   - Bilder ersetzen durch was richtigereres
   - [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel") und [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") einarbeiten und dann löschen
+- [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")
 
 ## Magazin ausschlachten
 
@@ -80,6 +81,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6683/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6680; parent 6660; 2010-01-01T21:47:17Z -->
+<!-- MediaWiki page 1518; revision 6683; parent 6680; 2010-01-01T22:04:29Z -->
