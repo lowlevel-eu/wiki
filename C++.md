@@ -193,15 +193,8 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 - [g++ ABI: Exception Handling](http://www.codesourcery.com/cxx-abi/abi-eh.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [OSDev.org wiki](http://www.osdev.org/wiki/C_PlusPlus)
 
-### C++0x
-
-- [New Features in the Next C++ Standard](http://video.google.de/videoplay?docid=2768126766555555011&q=c%2B%2B0x) (video)
-- [Initialization Lists](http://video.google.de/videoplay?docid=5262479012306588324&q=c%2B%2B0x) (video)
-- [Concepts Extending C++ Templates For Generic Programming](http://video.google.de/videoplay?docid=-1790714981047186825&q=c%2B%2B0x) (video)
-- [C++09 (Teil 1) - Ein Überblick: Sprachfeatures](http://www.c-plusplus.de/forum/viewtopic-var-t-is-204654.html)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6623/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6623; parent 6424; 2009-12-27T01:00:01Z -->
+<!-- MediaWiki page 1486; revision 6685; parent 6623; 2010-01-01T22:14:55Z -->
