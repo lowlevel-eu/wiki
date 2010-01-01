@@ -49,6 +49,7 @@
 - [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
 - [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register")
 - [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
+- [Floppy Disk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
 - [Kategorie:Versionsverwaltung](https://lowlevel-eu.github.io/wiki/pages/1887/index.html "Kategorie:Versionsverwaltung")
 
 ## Neu erstellen
@@ -69,11 +70,16 @@
 - Datenblätter lesen und verstehen! Was tun, wenn das Internet kaputt gegangen ist, und man keine Codebeispiele zum Abtippen hat? (Zum Anfang vielleicht die Datenblätter von [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") und die Intel Manuals. Dann knackigere Sachen wie Netzwerkkarten, Soundkarten, ATA, ... was weiß ich.)
 - Hier kommt dein Wunsch hin ;)
 
-  
+## Diskussionen, die sich noch nicht erledigt haben
+
+- Diskussion:Ausgabe 2
+- Diskussion:C++-Kernel mit GRUB
+- weitere: siehe [Liste der Diskussionsseiten](http://lowlevel.brainsware.org/wiki/index.php?title=Spezial%3APr%C3%A4fixindex&from=&namespace=1)
+
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6660; parent 6659; 2009-12-28T16:13:18Z -->
+<!-- MediaWiki page 1518; revision 6680; parent 6660; 2010-01-01T21:47:17Z -->
