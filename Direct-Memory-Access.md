@@ -10,7 +10,7 @@ Unter **Direct Memory Access**, oder auch **DMA** versteht man eine Methode, Dat
 
   
 
-## Physikalischer Aufbau
+## ISA-DMA Controller
 
 Für DMA-Transfere wurde in früheren PCs ein Chip mit der Bezeichnung 8237A verwendet. Im Laufe der Zeit wurde ein weiterer Controller hinzugefügt und die Hardware in den Chipsatz integriert. Die beiden Controller sind miteinander verbunden, einer von ihnen arbeitet als Master, der andere als Slave. Jeder der beiden Controller stellt vier sog. **Channel**, also Kanäle, zur Verfügung. Dadurch sind parallele und unabhängige Übertragungen möglich.
 
@@ -18,9 +18,7 @@ Vor einer Datenübertragung muss der Controller richtig programmiert bzw. initia
 
 Der eigentliche Transfer wird in der Regel von dem mit diesem Channel verbundenen Stück Hardware gestartet. Dafür hat jeder Controller vier Leitungen mit den Namen DREQ0 bis DREQ3, die den Transfer über den entsprechenden Channel starten. Alternativ kann dieses Signal auch per Software emuliert werden, um die Datenübertragung manuell zu starten. Dazu wird das Requestregister benötigt, das weiter unten beschrieben wird. Die Übertragung wird beendet, wenn die vorab definierte Datenmenge übertragen wurde oder wenn ein Signal auf der EOP-Leitung des Controllers ankommt, d.h. die Übertragung von der Hardware aus beendet wird.
 
-## Programmierung der Controller
-
-### Übersicht
+### Übersicht der I/O Ports
 
 Die folgende Tabelle ist eine Übersicht über alle [Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
 
@@ -61,7 +59,7 @@ Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki
 
   
 
-### Aufbau der zusammengesetzten Bytes
+### Aufbau der I/O Ports
 
 #### Statusregister
 
@@ -119,7 +117,7 @@ Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem 
 |  | 10 = Block-Transfer |
 |  | 11 = Kaskadierung |
 
-Autonitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
+Autointialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
 
 #### Requestregister
 
@@ -137,12 +135,16 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 **TODO**
 
-## Beispiel
+### Beispiel
+
+**TODO**: was mit dem Diskettenlaufwerk?
+
+## PCI-DMA
 
 **TODO**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 5936; parent 5530; 2009-09-19T11:47:02Z -->
+<!-- MediaWiki page 1555; revision 6679; parent 5936; 2010-01-01T21:41:20Z -->
