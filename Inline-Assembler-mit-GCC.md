@@ -6,64 +6,32 @@ Da ich in letzter Zeit immer wieder danach gefragt worden bin, wie das mit Inlin
 
 Viele Assembler-Programmierer sind die Intel-Syntax gewohnt. gcc (oder genauer gesagt gas, der GNU Assembler) benutzt stattdessen die AT&T-Syntax. Die Hauptmerkmale der AT&T-Syntax sind:
 
-- Register bekommen ein % vorangestellt:
-
-      xor %eax, %eax
-
-- Das Quellregister kommt zuerst, das Zielregister als zweites. Der folgende Befehl kopiert von eax nach ecx (nicht umgekehrt, wie man vermuten könnte, wenn man nur Intel-Syntax kennt!):
-
-      mov %eax, %ecx
-
-- Konstanten bekommen grundsätzlich ein \$ vorangestellt, Hexadezimalzahlen werden durch 0x eingeleitet:
-
-      mov $42, %eax
-
-      mov $0xBADC0FFE, %eax
-
-- Die Operandengrößen sind im Mnemonic enthalten. Wird die Größe nicht angegeben, versucht der Assembler sie anhand der Operanden festzustellen.
-
-      movl $123, %eax
-
-      movw $123, %ax
-
-      movb $123, %al
-
-- Speicherzugriffe erfolgen im Format "segment:displacement(base, index, scale)", wobei das Displacement als auch Index und Scale optional sind:
-
-      pushl (%eax)
-
-      mov %eax, 0x8(%ebp)
-
-      mov 0xfffffff8(%esp,%eax,1),%eax
+- Register bekommen ein % vorangestellt: \<asm\>xor %eax, %eax\</asm\>
+- Das Quellregister kommt zuerst, das Zielregister als zweites. Der folgende Befehl kopiert von eax nach ecx (nicht umgekehrt, wie man vermuten könnte, wenn man nur Intel-Syntax kennt!): \<asm\>mov %eax, %ecx\</asm\>
+- Konstanten bekommen grundsätzlich ein \$ vorangestellt, Hexadezimalzahlen werden durch 0x eingeleitet: \<asm\>mov \$42, %eax\</asm\>\<asm\>mov \$0xBADC0FFE, %eax\</asm\>
+- Die Operandengrößen sind im Mnemonic enthalten. Wird die Größe nicht angegeben, versucht der Assembler sie anhand der Operanden festzustellen. \<asm\>movl \$123, %eax\</asm\>\<asm\>movw \$123, %ax\</asm\>\<asm\>movb \$123, %al\</asm\>
+- Speicherzugriffe erfolgen im Format "segment:displacement(base, index, scale)", wobei das Displacement als auch Index und Scale optional sind: \<asm\>pushl (%eax)\</asm\>\<asm\>mov %eax, 0x8(%ebp)\</asm\>\<asm\>mov 0xfffffff8(%esp,%eax,1),%eax\</asm\>
 
 Wer sich überhaupt nicht mit der AT&T-Syntax anfreunden kann, für den bleibt immer noch die gcc-Kommandozeilenoption "-masm=intel", die die Intelsyntax aktiviert.
 
 ## Einfache Befehle
 
-Die Einbindung von Inline Assembler in den C-Code ist ganz einfach: Das Schlüsselwort asm (oder alternativ \_\_asm\_\_) in Verbindung mit dem Assemblercode als String muss in den C-Code eingebettet werden:
+Die Einbindung von Inline Assembler in den C-Code ist ganz einfach: Das Schlüsselwort asm (oder alternativ \_\_asm\_\_) in Verbindung mit dem Assemblercode als String muss in den C-Code eingebettet werden: \<c\>asm("int \$0x30")\</c\>
 
-    asm("int $0x30")
+Sollen mehrere Assemblerbefehle ausgeführt werden, gibt es nicht nur eine Möglichkeit, dies zu schreiben: Entweder Trennung durch Strichpunkt (Semikolon) oder durch einen Zeilenumbruch. Strings können dabei wie in C üblich getrennt werden, so daß nicht ein längeres Stück Assemblercode in einer Zeile C untergebracht werden muß: \<c\>asm("cli; hlt"); asm("cli\nhlt"); asm(
 
-Sollen mehrere Assemblerbefehle ausgeführt werden, gibt es nicht nur eine Möglichkeit, dies zu schreiben: Entweder Trennung durch Strichpunkt (Semikolon) oder durch einen Zeilenumbruch. Strings können dabei wie in C üblich getrennt werden, so daß nicht ein längeres Stück Assemblercode in einer Zeile C untergebracht werden muß:
+     "cli;"
+     "hlt;"
 
-    asm("cli; hlt");
-    asm("cli\nhlt");
-    asm(
-      "cli;"
-      "hlt;"
-    );
+);\</c\>
 
 ## Ein- und Ausgabeparameter
 
-gcc unterstützt darüber hinaus noch die Möglichkeit, im Assemblercode Werte zu verarbeiten, die nicht direkt im Assemblerstring stehen, sondern beispielsweise in C-Variablen gespeichert sind. Diese Möglichkeit macht zu einem großen Teil die Mächtigkeit des Inline-Assemblers von gcc aus. Das asm-Konstrukt wird dann folgendermaßen erweitert:
-
-    asm(code : ausgabe : eingabe)
+gcc unterstützt darüber hinaus noch die Möglichkeit, im Assemblercode Werte zu verarbeiten, die nicht direkt im Assemblerstring stehen, sondern beispielsweise in C-Variablen gespeichert sind. Diese Möglichkeit macht zu einem großen Teil die Mächtigkeit des Inline-Assemblers von gcc aus. Das asm-Konstrukt wird dann folgendermaßen erweitert: \<c\> asm(code : ausgabe : eingabe) \</c\>
 
 ### Übergabe in bestimmten Registern
 
-Wenn die Übergabe von Variablen bzw. Werten in bestimmten Registern stattfinden soll (z.B. für in/out benötigt), können diese Register direkt angegeben werden:
-
-    asm ("inb %1, %0" : "=a" (result) : "d" (port));
+Wenn die Übergabe von Variablen bzw. Werten in bestimmten Registern stattfinden soll (z.B. für in/out benötigt), können diese Register direkt angegeben werden: \<c\>asm ("inb %1, %0" : "=a" (result) : "d" (port));\</c\>
 
 - Die Ausgabe bzw. Eingabe wird durch *"register" (wert)* spezifiziert. *result* und *port* wären im Beispiel zwei C-Variablen.
 - Mehrere Ausgabe- bzw. Eingabevariablen werden durch Komma getrennt
@@ -77,63 +45,57 @@ Wenn die Übergabe von Variablen bzw. Werten in bestimmten Registern stattfinden
 Außerdem bietet gcc noch Möglichkeiten, die Übergabe nur grob zu spezifizieren und die konkrete Entscheidung dem Compiler zu überlassen:
 
 - "m" steht für Speicherübergabe, %0 ist dann die Adresse, an der der Wert zu finden ist
-
 - "r" steht für Registerübergabe, das konkrete Register wird aber dem Compiler zur Wahl überlassen
-
 - "g" steht für "general". Der Compiler hat die freie Wahl, wie er den Befehl umsetzen will. Er wird dabei nicht immer eine funktionierende Variante wählen, deswegen ist es oft notwendig, direkt "r" oder "m" anzugeben.
-
 - "i" steht für einen Immediate-Wert, "N" steht für einen Immediate-Wert in Bytegröße. Dies funktioniert nur, wenn der Wert konstant und bereits beim Kompilieren bekannt ist.
-
-- Mehrere Buchstaben können aneinandergereiht werden, um mehrere Optionen zu ermöglichen. Die vorderste Option, die funktioniert, wird dann gewählt. Der obenstehende Code für inb ließe sich also folgendermaßen ergänzen:
-
-      asm ("inb %1, %0" : "=a" (result) : "Nd" (port));
-
-  Wird inb darüber inline deklariert, kann der Compiler dann einen Funktionsaufruf wie *inb(0x60)* direkt in eine einzige Assemblerzeile übersetzen und muß kein Register zur Zwischenspeicherung von 0x60 verwenden. Bei einem Aufruf wie *inb(my_port_variable)* würde die traditionelle Variante gewählt und das Register benutzt werden.
+- Mehrere Buchstaben können aneinandergereiht werden, um mehrere Optionen zu ermöglichen. Die vorderste Option, die funktioniert, wird dann gewählt. Der obenstehende Code für inb ließe sich also folgendermaßen ergänzen: \<c\>asm ("inb %1, %0" : "=a" (result) : "Nd" (port));\</c\> Wird inb darüber inline deklariert, kann der Compiler dann einen Funktionsaufruf wie *inb(0x60)* direkt in eine einzige Assemblerzeile übersetzen und muß kein Register zur Zwischenspeicherung von 0x60 verwenden. Bei einem Aufruf wie *inb(my_port_variable)* würde die traditionelle Variante gewählt und das Register benutzt werden.
 
 ## Beispiele
 
 Die folgenden Beispiele sind dem Community-Projekt von Lowlevel, [LOST](https://lowlevel-eu.github.io/wiki/pages/1795/index.html "Kategorie:Týndur"), entnommen und unterliegen dessen Lizenz (4-Klausel-BSD-Lizenz). Diese Lizenz ist beim Kopieren von Code aus den Beispielen einzuhalten.
 
-Aufruf des sleep-Syscalls in LOST:
+Aufruf des sleep-Syscalls in LOST: \<c\>
 
-        asm(
-            "mov %0, %%eax;"
-            "int $0x30;"
-        : : "i" (SYSCALL_PM_SLEEP) : "eax");
+       asm(
+           "mov %0, %%eax;"
+           "int $0x30;"
+       : : "i" (SYSCALL_PM_SLEEP) : "eax");
 
-Laden der GDT:
+\</c\>
 
-    struct {
-        word size;
-        dword base;
-    }  __attribute__((packed)) gdt_ptr = {
-        .size  = GDT_SIZE*8 - 1,
-        .base  = (dword)gdt,
-    };
-    asm("lgdtl %0" : : "m" (gdt_ptr));
+Laden der GDT: \<c\> struct {
 
-Senden einer IPC-Nachricht in LOST:
+       word size;
+       dword base;
 
-    void send_message(dword pid, dword function, dword correlation_id, dword len, char* data)
-    {
-        asm(
-            "movl %4, %%eax;"
-            "add %5, %%eax;"
-            "movl %5, %%ecx;"
-            ".1: sub $4, %%eax;"
-            "pushl (%%eax);"
-            "sub $4, %%ecx;"
-            "jg .1;"
-            "pushl %3;"
-            "pushl %2;"
-            "pushl %1;"
-            "pushl %0;"
-            "mov $51, %%eax;"
-            "int $0x30;"
-            "add $0x10, %%esp;"
-            "add %5, %%esp;"
-        : : "g" (pid), "g" (len+8), "g"(function), "g" (correlation_id), "g" (data) , "g" (len) : "eax", "ecx");
-    }
+} \_\_attribute\_\_((packed)) gdt_ptr = {
+
+       .size  = GDT_SIZE*8 - 1,
+       .base  = (dword)gdt,
+
+}; asm("lgdtl %0" : : "m" (gdt_ptr)); \</c\>
+
+Senden einer IPC-Nachricht in LOST: \<c\> void send_message(dword pid, dword function, dword correlation_id, dword len, char\* data) {
+
+       asm(
+           "movl %4, %%eax;"
+           "add %5, %%eax;"
+           "movl %5, %%ecx;"
+           ".1: sub $4, %%eax;"
+           "pushl (%%eax);"
+           "sub $4, %%ecx;"
+           "jg .1;"
+           "pushl %3;"
+           "pushl %2;"
+           "pushl %1;"
+           "pushl %0;"
+           "mov $51, %%eax;"
+           "int $0x30;"
+           "add $0x10, %%esp;"
+           "add %5, %%esp;"
+       : : "g" (pid), "g" (len+8), "g"(function), "g" (correlation_id), "g" (data) , "g" (len) : "eax", "ecx");
+
+} \</c\>
 
   
 
@@ -143,6 +105,6 @@ Senden einer IPC-Nachricht in LOST:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6724/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6726/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 6724; parent 5995; 2010-01-02T17:41:33Z -->
+<!-- MediaWiki page 1472; revision 6726; parent 6724; 2010-01-02T17:46:36Z -->
