@@ -2,7 +2,7 @@
 
 Diese Seite fasst die wichtigsten Formatierungsbefehle, die man in diesem Wiki verwenden kann, zusammen. Dies ist keine Anleitung, wann welche Befehle zu verwenden sind.
 
-Eine umfangreichere Dokumentation bietet die offizielle MediaWiki-Dokumentation. Zum Beispiel dieser Artikel: <http://www.mediawiki.org/wiki/Help:Formatting>
+Eine umfangreichere Dokumentation bietet die offizielle [MediaWiki-Dokumentation](http://www.mediawiki.org/wiki/Help:Contents/de).
 
 ## Text
 
@@ -138,15 +138,17 @@ Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Cod
 
 Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließlich die eingebauten MediaWiki-Befehle (auch die, die hier nicht dokumentiert sind) verwendet werden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
 
-  
-
 ## Siehe auch
 
 - [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien")
 - [Wikiteam](https://github.com/lowlevel-eu/wiki/wiki/Wikiteam "Wikiteam")
 
+## Weblinks
+
+- [Mediawiki-Benutzerdokumentation](http://www.mediawiki.org/wiki/Help:Contents/de)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6704/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 6698; parent 6579; 2010-01-02T14:35:12Z -->
+<!-- MediaWiki page 2049; revision 6704; parent 6698; 2010-01-02T15:29:34Z -->
