@@ -236,7 +236,7 @@ struct Multiboot {
      uint32_t module_address;
      /* etc... */
 
-};
+} \_\_attribute\_\_((packed));
 
 1.  endif
 
@@ -348,6 +348,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6689/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6689; parent 6688; 2010-01-02T12:17:59Z -->
+<!-- MediaWiki page 2124; revision 6690; parent 6689; 2010-01-02T12:18:50Z -->
