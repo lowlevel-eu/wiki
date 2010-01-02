@@ -27,7 +27,7 @@ Manchmal folgen in der Beschreibung eines Registers auch **zwei Tabellen**. Die 
 
 Bevor man munter versucht, mit dem CPUID-Befehl Informationen auszulesen, sollte man ersteinmal prüfen, ob die CPU den Befehl überhaupt unterstützt. Dazu testet man, ob das ID-Flag gesetzt und gelöscht werden kann.
 
-Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pop ecx  ; Lade Flags in ECX mov eax, ecx  ; Schiebe Flags in EAX xor eax, 0x200000  ; Vertausche das ID-Flag push eax  ; Sichere neue Flags popfd  ; Lade neue Flags in EFLAGS
+Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pushfd  ; Sichere Flags pop ecx  ; Lade Flags in ECX mov eax, ecx  ; Schiebe Flags in EAX xor eax, 0x200000  ; Vertausche das ID-Flag push eax  ; Sichere neue Flags popfd  ; Lade neue Flags in EFLAGS
 
                           ; Wenn CPUID unterstützt wird, wird das geänderte ID-Flag übernommen
                           ; Ansonsten wird bleibt das alte ID-Flag bestehen
@@ -3003,6 +3003,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 6740; parent 6739; 2010-01-02T21:40:52Z -->
+<!-- MediaWiki page 1739; revision 6742; parent 6740; 2010-01-02T21:45:22Z -->
