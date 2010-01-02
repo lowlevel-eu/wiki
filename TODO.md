@@ -18,8 +18,7 @@
 - TeeJays Tutorial (Link siehe [Diskussion:Programmable Interrupt Controller](https://lowlevel-eu.github.io/wiki/pages/1713/index.html "Diskussion:Programmable Interrupt Controller")) in den Artikel [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") einarbeiten
 - [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
 - [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
-  - Bilder ersetzen durch was richtigereres
-  - [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel") und [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") einarbeiten und dann löschen
+  - [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel") einarbeiten und dann redirecten
 - [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")
 
 ## Magazin ausschlachten
@@ -30,7 +29,7 @@
 
 ## Erweitern
 
-- Wiki Crashkurs: Tabellen
+- [Wiki-Crashkurs](https://github.com/lowlevel-eu/wiki/wiki/Wiki-Crashkurs "Wiki-Crashkurs"): Tabellen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
@@ -81,6 +80,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6712; parent 6705; 2010-01-02T15:42:07Z -->
+<!-- MediaWiki page 1518; revision 6717; parent 6712; 2010-01-02T16:04:49Z -->
