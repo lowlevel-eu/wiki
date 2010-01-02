@@ -32,7 +32,6 @@ namespace color {
 
      enum type
      {
-       /* siehe Textausgabe */
        black         = 0x00,
        blue          = 0x01,
        green         = 0x02,
@@ -107,11 +106,9 @@ Video screen;
 
 Video::Video()
 
-     : pos(0), off(0), screen_color(0), videomem((unsigned short*) 0xb8000)
+     : pos(0), off(0), screen_color(0x0700), videomem((unsigned short*) 0xb8000)
 
 {
-
-     *this << color::light_gray;
 
      //Bildschirm leeren
      clear();
@@ -274,6 +271,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6686; parent 6463; 2010-01-02T01:03:13Z -->
+<!-- MediaWiki page 2124; revision 6687; parent 6686; 2010-01-02T01:07:35Z -->
