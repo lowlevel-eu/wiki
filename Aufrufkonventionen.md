@@ -1,6 +1,6 @@
 # Aufrufkonventionen
 
-Unter dem Begriff **Aufrufkonventionen** versteht man in der Programmierung die Art und Weise wie Parameter für eine aufzurufende Funktionen übergeben werden und wie der Rückgabewert zurückgegeben wird. Welche Aufrufkonvention verwendet wird, hängt von der Architektur, vom Compiler, den Compileroptionen und eventuell verwendeten Sprachkonstrukten ab.
+Unter dem Begriff **Aufrufkonventionen** (engl. *calling convention*) versteht man in der Programmierung die Art und Weise wie Parameter für eine aufzurufende Funktionen übergeben werden und wie der Rückgabewert zurückgegeben wird. Welche Aufrufkonvention verwendet wird, hängt von der Architektur, vom Compiler, den Compileroptionen und eventuell verwendeten Sprachkonstrukten ab.
 
 ## cdecl
 
@@ -90,6 +90,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 5818; parent 4059; 2009-08-31T18:44:23Z -->
+<!-- MediaWiki page 1525; revision 6720; parent 5818; 2010-01-02T16:45:57Z -->
