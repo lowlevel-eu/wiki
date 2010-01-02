@@ -994,7 +994,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 8 | Unterstützt den **CMPXCHG8B** Befehl |
 | 7 | Unterstützt Machine-Check-[Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") |
 | 6 | Unterstützt physische Adressen, die größer als 32-Bit sind |
-| 5 | Implementiert Modellspezifische Register über die Befehle **RDMSR** und **WRMSR** |
+| 5 | Implementiert [Modellspezifische Register](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register "Machine-Specific Register") über die Befehle **RDMSR** und **WRMSR** |
 | 4 | Unterstützt den **RDTSC** Befehl und CR4.TSD-Bit |
 | 3 | Unterstützt 4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 2 | Unterstützt I/O-Breakpoints, das CR4.DE-Bit und die DR4- und DR5-Register |
@@ -3003,6 +3003,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6020/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 6020; parent 5512; 2009-10-12T14:22:06Z -->
+<!-- MediaWiki page 1739; revision 6739; parent 6020; 2010-01-02T21:36:34Z -->
