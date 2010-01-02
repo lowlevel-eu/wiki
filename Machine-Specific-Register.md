@@ -6,6 +6,8 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Die **Machine-Specific Register**s bzw. **Model-Specific Register**s (**MSR**) sind Prozessorregister. Sie können im Gegensatz zu anderen Registern nur mit den Instruktionen *rdmsr* und *wrmsr* ([x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")) angesprochen werden. Außerdem sind diese Register spezifisch für eine bestimmte Prozessorfamilie/-generation, d.h. sie müssen von folgenden Prozessoren nicht bzw. nicht genauso implementiert werden.
 
+Ob eine bestimmte CPU MSRs besitzt und somit die Befehle *rdmsr* und *wrmsr* ohne Exception ausführt, kann per [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") herausgefunden werden. Ist nach einem *cpuid*-Befehl mit EAX = 0x00000001 in EDX Bit 5 gestzt, dann werden diese Instruktionen unterstützt (s. auch [EDX - Featureflags](https://github.com/lowlevel-eu/wiki/wiki/CPUID#edx---featureflags "CPUID") im CPUID-Artikel).
+
 ## WRMSR/RDMSR
 
 Mit folgendem Code kann man auf die MSRs zugreifen: \<c\>uint64_t rdmsr(uint32_t msr) {
@@ -52,6 +54,6 @@ void wrmsr(uint32_t msr,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 6655; parent 6018; 2009-12-28T14:08:08Z -->
+<!-- MediaWiki page 1607; revision 6741; parent 6655; 2010-01-02T21:43:32Z -->
