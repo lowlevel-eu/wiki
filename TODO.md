@@ -31,6 +31,7 @@
 
 - [Wiki-Crashkurs](https://github.com/lowlevel-eu/wiki/wiki/Wiki-Crashkurs "Wiki-Crashkurs"): Tabellen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
+- [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Was sind Cluster? Wie liest man Dateien?
@@ -84,6 +85,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6749; parent 6717; 2010-01-02T23:06:41Z -->
+<!-- MediaWiki page 1518; revision 6750; parent 6749; 2010-01-02T23:21:24Z -->
