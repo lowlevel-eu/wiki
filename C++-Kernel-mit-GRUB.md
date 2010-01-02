@@ -15,9 +15,13 @@ Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erste
 1.  include "Video.h"
 2.  include "Multiboot.h"
 
-void main(const Multiboot& multiboot_structur,
+extern "C" void kernelMain(const Multiboot& multiboot_structur,
 
-             uint32_t multiboot_magic)
+                              uint32_t multiboot_magic);
+
+void kernelMain(const Multiboot& multiboot_structur,
+
+                   uint32_t multiboot_magic)
 
 {
 
@@ -37,11 +41,20 @@ void main(const Multiboot& multiboot_structur,
 
 Ein paar Typendefinitionen:
 
-\<cpp\> /\* Garantiert, dass ein Typ nicht gepaddet wird und somit exakt die Größe seiner Member hat \*/
+\<cpp\>
+
+1.  ifndef TYPES_H
+2.  define TYPES_H
+
+/\* Garantiert, dass ein Typ nicht gepaddet wird und somit exakt die Größe seiner Member hat \*/
 
 1.  define PACKED \_\_attribute\_\_((packed))
 
-typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t; \</cpp\>
+typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t;
+
+1.  endif
+
+\</cpp\>
 
 ### Video.h
 
@@ -223,7 +236,7 @@ Eine Header um die von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Uni
 
 <!-- -->
 
-1.  include \<types.h\>
+1.  include "types.h"
 
 <!-- -->
 
@@ -256,7 +269,7 @@ Auch bei C++ kommen wir nicht um ein wenig Assembler herum:
 
 \<asm\>
 
-global loader ; Unser Einsprungspunkt extern main ; main() aus Kernel.cpp extern initialiseConstructors ; aus Startup.cpp
+global loader ; Unser Einsprungspunkt extern kernelMain ; kernelMain() aus Kernel.cpp extern initialiseConstructors ; aus Startup.cpp
 
 FLAGS equ 0 MAGIC equ 0x1BADB002 ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
@@ -272,7 +285,7 @@ loader:
      push eax                       ; Multiboot-Magicnumber auf den Stack legen
      push ebx                       ; Adresse der Multiboot-Structure auf den Stack legen
      call initialiseConstructors        ; Konstruktoren aufrufen
-     call main                      ; main aufrufen
+     call kernelMain                    ; kernelMain aufrufen
 
 stop:
 
@@ -352,6 +365,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6692; parent 6691; 2010-01-02T12:21:07Z -->
+<!-- MediaWiki page 2124; revision 6695; parent 6692; 2010-01-02T13:51:16Z -->
