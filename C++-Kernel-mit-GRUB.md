@@ -212,7 +212,7 @@ void Video::put(char c){
 
 } \</cpp\>
 
-## Multiboot.h =
+### Multiboot.h
 
 Eine Header um die von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") an das Betriebssystem übergebene Multibootstruktur zu verwenden (siehe auch [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")):
 
@@ -352,6 +352,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6691; parent 6690; 2010-01-02T12:20:34Z -->
+<!-- MediaWiki page 2124; revision 6692; parent 6691; 2010-01-02T12:21:07Z -->
