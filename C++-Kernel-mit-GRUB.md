@@ -15,7 +15,7 @@ Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erste
 void main() {
 
      // Textausgabe
-     screen << color::blue << "Willkommen im C++-TestKernel!";
+     screen << background(color::red) << color::blue << "Willkommen im C++-TestKernel!";
 
 } \</cpp\>
 
@@ -52,6 +52,15 @@ namespace color {
 
 }
 
+struct background {
+
+     inline background(color::type color)
+       : m_color(color){}
+
+     color::type m_color;
+
+};
+
 class Video {
 
      public:
@@ -67,24 +76,27 @@ class Video {
        // Textausgabe
        Video& operator << (const char* s);
 
-       // Vordergrund
+       // Vordergrundfarbe setzen
        Video& operator << (color::type color);
+
+       // Hintergrundfarbe setzen
+       Video& operator << (const background& color);
 
        // Ausgabe eines einzelnen Zeichens
        void put(char c);
 
      private:
        // Zeiger auf den Videospeicher
-       unsigned short* videomem;
+       unsigned short* m_videomem;
 
        // Y-Position der Textausgabe, je volle Zeile +80
-       unsigned int off;
+       unsigned int m_off;
 
        // X-Position der Textausgabe, ab Zeilenanfang
-       unsigned int pos;
+       unsigned int m_pos;
 
        // FB/BG-Farbe
-       unsigned int screen_color;
+       unsigned int m_color;
 
 };
 
@@ -106,7 +118,7 @@ Video screen;
 
 Video::Video()
 
-     : pos(0), off(0), screen_color(0x0700), videomem((unsigned short*) 0xb8000)
+     : m_videomem((unsigned short*) 0xb8000), m_off(0), m_pos(0), m_color(0x0700)
 
 {
 
@@ -121,11 +133,11 @@ void Video::clear(){
 
      // Füllen des Bildschirms mit Leerzeichen
      for(int i = 0;i < (80*25);i++)
-       videomem[i] = (unsigned char)' ' | screen_color;
+       m_videomem[i] = (unsigned char)' ' | m_color;
 
      // Zurücksetzen der Textausgabe nach links oben
-     pos = 0;
-     off = 0;                           
+     m_pos = 0;
+     m_off = 0;                         
 
 }
 
@@ -141,7 +153,14 @@ Video& Video::operator \<\< (const char\* s){
 
 Video& Video::operator \<\< (color::type color){
 
-     screen_color = (color << 12) | (screen_color & 0x0F00);
+     m_color = (static_cast<unsigned int>(color) << 8) | (m_color & 0xF000);
+     return *this;
+
+}
+
+Video& Video::operator \<\< (const background& color){
+
+     m_color = (static_cast<unsigned int>(color.m_color) << 12) | (m_color & 0x0F00);
      return *this;
 
 }
@@ -149,19 +168,19 @@ Video& Video::operator \<\< (color::type color){
 void Video::put(char c){
 
      // Wenn die Textausgabe den rechten...
-     if(pos >= 80){
-       pos = 0;
-       off += 80;
+     if(m_pos >= 80){
+       m_pos = 0;
+       m_off += 80;
      }
 
      // ...oder den unteren Bildschirmrand erreicht, gibt es
      // einen Umbruch bzw. es wird aufgeräumt.
-     if(off >= (80*25))
+     if(m_off >= (80*25))
        clear();
 
      // Setzen des Zeichens und der Farbe in den Videospeicher
-     videomem[off + pos] = (unsigned char)c | screen_color;
-     pos++;
+     m_videomem[m_off + m_pos] = (unsigned char)c | m_color;
+     m_pos++;
 
 } \</cpp\>
 
@@ -271,6 +290,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6687; parent 6686; 2010-01-02T01:07:35Z -->
+<!-- MediaWiki page 2124; revision 6688; parent 6687; 2010-01-02T01:18:27Z -->
