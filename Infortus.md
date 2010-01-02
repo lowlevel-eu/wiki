@@ -49,9 +49,7 @@ Grub:
 Kernel  
 ![InfoOS2.png](http://www.informatikonline.net/images/extern/InfoOS2.png)
 
-## Bugs
-
-Bisher ist beim Testen in KVM herausgekommen (taljeth hat es getestet), dass ein Triple Fault ausgelöst wurde. Im Moment weiß ich leider noch nicht woran es liegt und wäre für Hilfe dankbar. (Siehe Download)
+## Tests
 
 Erfolgreich getestet Version 0.00.02:  
 **Emulatoren/Virtualisierung:** Vmware, Bochs, Sun Virtual Box  
@@ -74,6 +72,6 @@ Die Sourcefiles findet man unter:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6734/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6733; parent 6608; 2010-01-02T21:07:44Z -->
+<!-- MediaWiki page 2117; revision 6734; parent 6733; 2010-01-02T21:08:55Z -->
