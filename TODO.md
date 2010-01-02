@@ -2,7 +2,7 @@
 
 ## Überarbeiten
 
-- Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch Lowlevel:Kategriebaum)
+- Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 - [A20 Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate")
 - [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"): Wie kann man Debuggen? Printf/cout? bochs? qemu? vmware? Disassemblieren? Stack traces? Was tun, bevor ich im Forum/Chat frage?
@@ -81,6 +81,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6705/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6705; parent 6697; 2010-01-02T15:32:20Z -->
+<!-- MediaWiki page 1518; revision 6712; parent 6705; 2010-01-02T15:42:07Z -->
