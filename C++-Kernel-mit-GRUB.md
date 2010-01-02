@@ -15,7 +15,7 @@ Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erste
 void main() {
 
      // Textausgabe
-     screen << "Willkommen im C++-TestKernel!";
+     screen << color::blue << "Willkommen im C++-TestKernel!";
 
 } \</cpp\>
 
@@ -27,6 +27,31 @@ Der Header ist dann doch etwas umfangreicher:
 
 1.  ifndef VIDEO_H
 2.  define VIDEO_H
+
+namespace color {
+
+     enum type
+     {
+       /* siehe Textausgabe */
+       black         = 0x00,
+       blue          = 0x01,
+       green         = 0x02,
+       cyan          = 0x03,
+       red           = 0x04,
+       magenta       = 0x05,
+       brown         = 0x06,
+       light_gray    = 0x07,
+       dark_gray     = 0x08,
+       light_blue    = 0x09,
+       light_green   = 0x0A,
+       light_cyan    = 0x0B,
+       light_red     = 0x0C,
+       light_magenta = 0x0D,
+       yellow        = 0x0E,
+       white         = 0x0F
+     };
+
+}
 
 class Video {
 
@@ -43,11 +68,11 @@ class Video {
        // Textausgabe
        Video& operator << (const char* s);
 
+       // Vordergrund
+       Video& operator << (color::type color);
+
        // Ausgabe eines einzelnen Zeichens
        void put(char c);
-
-       // Setzen der FG/BG-Farben
-       void color(int color);
 
      private:
        // Zeiger auf den Videospeicher
@@ -80,17 +105,13 @@ Die Implementierung der in Video.h definierten Memberfunktionen kommt in eine ei
 
 Video screen;
 
-Video::Video(){
+Video::Video()
 
-     // Setzen der Farbe auf Schwarz auf Hellgrau
-     screen_color = 0x7000;
+     : pos(0), off(0), screen_color(0), videomem((unsigned short*) 0xb8000)
 
-     // Setzen der Textausgabe auf links oben.
-     pos = 0;
-     off = 0;
+{
 
-     // Startadresse des Videospeichers
-     videomem = (unsigned short*) 0xb8000;
+     *this << color::light_gray;
 
      //Bildschirm leeren
      clear();
@@ -121,6 +142,13 @@ Video& Video::operator \<\< (const char\* s){
 
 }
 
+Video& Video::operator \<\< (color::type color){
+
+     screen_color = (color << 12) | (screen_color & 0x0F00);
+     return *this;
+
+}
+
 void Video::put(char c){
 
      // Wenn die Textausgabe den rechten...
@@ -137,12 +165,6 @@ void Video::put(char c){
      // Setzen des Zeichens und der Farbe in den Videospeicher
      videomem[off + pos] = (unsigned char)c | screen_color;
      pos++;
-
-}
-
-void Video::color(int color){
-
-     screen_color = color;
 
 } \</cpp\>
 
@@ -252,6 +274,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6463; parent 6439; 2009-12-03T20:30:01Z -->
+<!-- MediaWiki page 2124; revision 6686; parent 6463; 2010-01-02T01:03:13Z -->
