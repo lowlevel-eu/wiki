@@ -2,6 +2,8 @@
 
 Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Einen ausführlicheren Überblick zu den relevanten Unterschieden zu C gibt der Artikel [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"). Dieses Tutorial arbeitet genau wie [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") mit dem Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
 
+  
+
 ## Kernel
 
 Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Es kann auch Windows verwendet werden, allerdings ist dazu etwas Vorarbeit in Bezug auf die Tools von Nöten, siehe dazu [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB#hinweis-f%C3%BCr-windowsianer "C-Kernel mit GRUB").
@@ -11,13 +13,31 @@ Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Colle
 Da wir ja schon mit C++ arbeiten, wäre auch etwas OOP angebracht. Deshalb erstellen wir ein Klasse namens Video, die wir in einen Header stecken. Dadurch ist unsere kernel.cpp sehr übersichtlich: \<cpp\> // Einbinden unseres Header
 
 1.  include "Video.h"
+2.  include "Multiboot.h"
 
-void main() {
+void main(const Multiboot& multiboot_structur,
+
+             uint32_t multiboot_magic)
+
+{
+
+     if (multiboot_magic != MULTIBOOT_MAGIC)
+     {
+       // Fehler!
+       screen << background(color::red) << color::white << "Fehler: Nicht von einem multibootfaehigem Bootloader geladen!";
+       return;
+     }
 
      // Textausgabe
-     screen << background(color::red) << color::blue << "Willkommen im C++-TestKernel!";
+     screen << background(color::white) << color::blue << "Willkommen im C++-TestKernel!";
 
 } \</cpp\>
+
+### types.h
+
+Ein paar Typendefinitionen:
+
+\<cpp\> typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t; \</cpp\>
 
 ### Video.h
 
@@ -27,6 +47,10 @@ Der Header ist dann doch etwas umfangreicher:
 
 1.  ifndef VIDEO_H
 2.  define VIDEO_H
+
+<!-- -->
+
+1.  include "types.h"
 
 namespace color {
 
@@ -87,7 +111,7 @@ class Video {
 
      private:
        // Zeiger auf den Videospeicher
-       unsigned short* m_videomem;
+       uint16_t* m_videomem;
 
        // Y-Position der Textausgabe, je volle Zeile +80
        unsigned int m_off;
@@ -96,7 +120,7 @@ class Video {
        unsigned int m_pos;
 
        // FB/BG-Farbe
-       unsigned int m_color;
+       uint16_t m_color;
 
 };
 
@@ -118,7 +142,7 @@ Video screen;
 
 Video::Video()
 
-     : m_videomem((unsigned short*) 0xb8000), m_off(0), m_pos(0), m_color(0x0700)
+     : m_videomem((uint16_t*) 0xb8000), m_off(0), m_pos(0), m_color(0x0700)
 
 {
 
@@ -153,14 +177,14 @@ Video& Video::operator \<\< (const char\* s){
 
 Video& Video::operator \<\< (color::type color){
 
-     m_color = (static_cast<unsigned int>(color) << 8) | (m_color & 0xF000);
+     m_color = (static_cast<uint16_t>(color) << 8) | (m_color & 0xF000);
      return *this;
 
 }
 
 Video& Video::operator \<\< (const background& color){
 
-     m_color = (static_cast<unsigned int>(color.m_color) << 12) | (m_color & 0x0F00);
+     m_color = (static_cast<uint16_t>(color.m_color) << 12) | (m_color & 0x0F00);
      return *this;
 
 }
@@ -179,10 +203,44 @@ void Video::put(char c){
        clear();
 
      // Setzen des Zeichens und der Farbe in den Videospeicher
-     m_videomem[m_off + m_pos] = (unsigned char)c | m_color;
+     m_videomem[m_off + m_pos] = (uint16_t)c | m_color;
      m_pos++;
 
 } \</cpp\>
+
+## Multiboot.h =
+
+Eine Header um die von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") an das Betriebssystem übergebene Multibootstruktur zu verwenden (siehe auch [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")):
+
+\<cpp\>
+
+1.  ifndef MULTIBOOT_H
+2.  define MULTIBOOT_H
+
+<!-- -->
+
+1.  include \<types.h\>
+
+<!-- -->
+
+1.  define MULTIBOOT_MAGIC 0x2BADB002
+
+struct Multiboot {
+
+     uint32_t flags;
+     uint32_t mem_lower;
+     uint32_t mem_upper;
+     uint32_t bootdevce;
+     uint32_t cmdline;
+     uint32_t module_count;
+     uint32_t module_address;
+     /* etc... */
+
+};
+
+1.  endif
+
+\</cpp\>
 
 ### Startup.cpp
 
@@ -290,6 +348,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6689/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6688; parent 6687; 2010-01-02T01:18:27Z -->
+<!-- MediaWiki page 2124; revision 6689; parent 6688; 2010-01-02T12:17:59Z -->
