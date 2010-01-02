@@ -59,8 +59,6 @@ Erfolgreich getestet Version 0.00.02:
 - Medion, 2,6 GHz Intel Quad Core CPU, 2GB RAM
 - Medion, 1,6 GHz Intel Pentium 4 CPU, 256 MB RAM
 
-Falls mir jemand Helfen möchte, und mir sagen kann, woran dieser Fehler liegt, kann er mir gerne eine PM im Forum an Sebi2020 schicken, oder einen Eintrag auf der Diskussionsseite von Infortus schreiben.
-
 ## Download
 
 Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:  
@@ -72,6 +70,6 @@ Die Sourcefiles findet man unter:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6734/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6735/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6734; parent 6733; 2010-01-02T21:08:55Z -->
+<!-- MediaWiki page 2117; revision 6735; parent 6734; 2010-01-02T21:09:23Z -->
