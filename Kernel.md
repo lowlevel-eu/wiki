@@ -14,7 +14,7 @@ Ein Kernel hat grundsätzlich folgende Basisaufgaben:
 - Geräte- und Hardwareverwaltung
 - Schnittstelle für [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
 - [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") für Anwendungsprogramme
-- Scheduling
+- [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
 
 Architekturabhängige Teile dieser Aufgaben werden normalerweise in einem [Hardware Abstraction Layer](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "Hardware Abstraction Layer") mit einer klar definierten Schnittstelle gekapselt, um die Wiederverwendbarkeit anderer Komponenten zu erhöhen. Dazu zählen teilweise schon (kleine) Treiber, wie z. B. bei [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") bzw. [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") für die [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") oder ähnlichem.
 
@@ -84,6 +84,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6706/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 6706; parent 6703; 2010-01-02T15:36:23Z -->
+<!-- MediaWiki page 1478; revision 6719; parent 6706; 2010-01-02T16:30:04Z -->
