@@ -35,7 +35,18 @@ Das folgende Diagramm zeigt den groben Aufbau eines monolithischen Kernels:
 
   
 
-Datei:Makro kelin corr.png
+|  |  |
+| ---------------------------------------------------------------------------------- | --------- |
+| Hardware |  |
+| [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") |  |
+| Kernel | Treiber |
+| Syscallinterface |  |
+
+Anwendungen, Bibliotheken
+
+blau: Kernelmode
+
+grau: Usermode
 
   
 
@@ -49,7 +60,13 @@ Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
 
   
 
-![mikrokernel_klein.png](http://be59.be.funpic.de/Lowlevel/mikrokernel_klein.png)
+|  |  |
+| ---------------------------------------------------------------------------------- | ------------------------------------ |
+| Hardware |  |
+| [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") |  |
+| Kernel | HAL |
+| Syscallinterface | Syscallinterface (Hardwarezugriff) |
+| Anwendungen, Bibliotheken | Treiber |
 
   
 
@@ -69,6 +86,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6671/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 6671; parent 6664; 2009-12-31T21:51:18Z -->
+<!-- MediaWiki page 1478; revision 6701; parent 6671; 2010-01-02T15:12:58Z -->
