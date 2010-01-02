@@ -918,11 +918,10 @@ Und speichern die Datei mit `Speichern unter` ab. Als Namen habe ich hier `Start
 
 - [Bochs-Emulator](http://bochs.sourceforge.net/)
 - [Týndur Releases](http://download.tyndur.org/releases/)
-- [Týndur-Nightly-Builds](http://nightlies.tyndur.org/)
 - [Týndur](http://www.tyndur.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5594/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 5594; parent 4905; 2009-08-12T16:17:17Z -->
+<!-- MediaWiki page 1900; revision 6722; parent 5594; 2010-01-02T17:39:17Z -->
