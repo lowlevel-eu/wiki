@@ -29,6 +29,7 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 ## Sowohl, als auch
 
 - [Gobby](http://gobby.0x539.de/) basiert auf GTK. Die Besonderheit dieses Editors ist, dass er mehreren Entwicklern ermöglicht, gleichzeitig über Netzwerk und Internet an einem Dokument zu arbeiten.
+  - Nicht wirklich ein Editor, aber trotzdem erwähnenswert: [Etherpad](http://etherpad.com/) ist ein Webeditor. Dieser ermöglicht die kollaborative Zusammenarbeit zwischen verschiedenen Programmierern (z.B. zur Fehlersuche bei Anfängern), ohne dass jeder Gobby installiert haben muss, ein Browser reicht.
 
 <!-- -->
 
@@ -52,6 +53,6 @@ Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Synt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1908/index.html)
 
-<!-- MediaWiki page 1908; revision 5932; parent 5931; 2009-09-17T08:48:27Z -->
+<!-- MediaWiki page 1908; revision 6714; parent 5932; 2010-01-02T15:53:59Z -->
