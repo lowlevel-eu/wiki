@@ -33,7 +33,7 @@ void kernelMain(const Multiboot& multiboot_structur,
      }
 
      // Textausgabe
-     screen << background(color::white) << color::blue << "Willkommen im C++-TestKernel!";
+     screen << background(color::light_gray) << color::blue << "Willkommen im C++-TestKernel!";
 
 } \</cpp\>
 
@@ -322,9 +322,11 @@ Unser Linkerscript (link.txt)
 
     SECTIONS
     {
-      .text  0x0100000 :
+      . = 0x0100000;
+
+      .text :
       {
-        *(.text)
+        *(.text*)
         *(.rodata)
       }
 
@@ -334,10 +336,6 @@ Unser Linkerscript (link.txt)
         *(.ctors)
         end_ctors = .;
 
-        start_dtors = .;
-        *(.dtors)
-        end_dtors = .;
-
         *(.data)
       }
 
@@ -346,12 +344,12 @@ Unser Linkerscript (link.txt)
         *(.bss)
       }
 
-      /DISCARD/ : { *(.dtors) }
+      /DISCARD/ : { *(.dtors) *(.comment) }
     }
 
 Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors, start_dtors und end_dtors in der Datei Startup.cpp haben und er diese beim Linken berücksichtigen soll. Außerdem wird die Liste der Destruktoren aus der aus dem Kernel entfernt, da sie wie oben erklärt nicht verwendet werden. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel:
 
-    ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
+    ld -melf_i386 -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
 
 Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden. Hier verfährt man einfach analog.
 
@@ -365,6 +363,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6695; parent 6692; 2010-01-02T13:51:16Z -->
+<!-- MediaWiki page 2124; revision 6696; parent 6695; 2010-01-02T14:20:33Z -->
