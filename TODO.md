@@ -74,13 +74,12 @@
 ## Diskussionen, die sich noch nicht erledigt haben
 
 - Diskussion:Ausgabe 2
-- Diskussion:C++-Kernel mit GRUB
 - weitere: siehe [Liste der Diskussionsseiten](http://lowlevel.brainsware.org/wiki/index.php?title=Spezial%3APr%C3%A4fixindex&from=&namespace=1)
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6683/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6683; parent 6680; 2010-01-01T22:04:29Z -->
+<!-- MediaWiki page 1518; revision 6693; parent 6683; 2010-01-02T13:24:08Z -->
