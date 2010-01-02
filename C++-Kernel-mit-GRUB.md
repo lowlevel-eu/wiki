@@ -37,7 +37,11 @@ void main(const Multiboot& multiboot_structur,
 
 Ein paar Typendefinitionen:
 
-\<cpp\> typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t; \</cpp\>
+\<cpp\> /\* Garantiert, dass ein Typ nicht gepaddet wird und somit exakt die Größe seiner Member hat \*/
+
+1.  define PACKED \_\_attribute\_\_((packed))
+
+typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t; \</cpp\>
 
 ### Video.h
 
@@ -236,7 +240,7 @@ struct Multiboot {
      uint32_t module_address;
      /* etc... */
 
-} \_\_attribute\_\_((packed));
+} PACKED;
 
 1.  endif
 
@@ -348,6 +352,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6690/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 6690; parent 6689; 2010-01-02T12:18:50Z -->
+<!-- MediaWiki page 2124; revision 6691; parent 6690; 2010-01-02T12:20:34Z -->
