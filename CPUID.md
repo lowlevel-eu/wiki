@@ -27,13 +27,31 @@ Manchmal folgen in der Beschreibung eines Registers auch **zwei Tabellen**. Die 
 
 Bevor man munter versucht, mit dem CPUID-Befehl Informationen auszulesen, sollte man ersteinmal prüfen, ob die CPU den Befehl überhaupt unterstützt. Dazu testet man, ob das ID-Flag gesetzt und gelöscht werden kann.
 
-Aussehen kann das zum Beispiel so: \<asm\> pushfd  ; Sichere Flags pushfd  ; Sichere Flags pop ecx  ; Lade Flags in ECX mov eax, ecx  ; Schiebe Flags in EAX xor eax, 0x200000  ; Vertausche das ID-Flag push eax  ; Sichere neue Flags popfd  ; Lade neue Flags in EFLAGS
+Aussehen kann das zum Beispiel so: \<asm\>; Lade Flags nach ECX und EAX pushfd pop ecx mov eax, ecx
 
-                          ; Wenn CPUID unterstützt wird, wird das geänderte ID-Flag übernommen
-                          ; Ansonsten wird bleibt das alte ID-Flag bestehen
+Invertiere das ID-Flag
 
-pushfd  ; Sichere Flags pop eax  ; Lade Flags in EAX xor eax, ecx  ; Vergleiche EAX und ECX popfd  ; Stelle Original Flags wieder her je cpuid_unsupported  ; EAX und ECX sind gleich, CPUID wird nicht unterstützt! jmp cpu_supported  ; EAX und ECX sind verschieden, CPUID wird unterstützt! \</asm\>
+xor eax, 0x200000
 
+Lade EAX nach EFLAGS
+
+push eax popfd
+
+Wenn CPUID unterstützt wird, wird das geänderte ID-Flag übernommen
+
+Ansonsten wird bleibt das alte ID-Flag bestehen
+
+Lade Flags nach EAX
+
+pushfd pop eax
+
+Vergleiche vorher(ECX) und nachher(EAX)
+
+Wenn beide gleich sind, wird CPUID nicht unterstützt
+
+xor eax, ecx je cpuid_unsupported jmp cpu_supported \</asm\>
+
+  
 Um den CPUID-Befehl auszuführen, verwendet man einfach den Assemblerbefehl **CPUID**. Die Funktionsnummer der CPUID-Funktion wird dabei im **EAX**-Register übergeben. Die Rückgabewerte werden in den Registern **EAX**, **EBX**, **EDX** und **ECX** abgelegt.
 
 Um zum Beispiel den Vendor-ID-String, also den Herstellernamen, auszulesen, ruft man CPUID mit der Funktionsnummer 0x00000000 auf. \<asm\> mov eax, 0x00000000  ; xor eax, eax bewirkt das selbe und ist schneller cpuid  ; Der Vendor-ID-String befindet sich nun in (in dieser Reihenfolge), EBX, EDX, ECX \</asm\> Ein **AMD**-Prozessor hätte jetzt folgende Registerwerte: **EBX**="**Auth**", **EDX**="**enti**", **ECX**="**cAMD**"  
@@ -3003,6 +3021,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 6742; parent 6740; 2010-01-02T21:45:22Z -->
+<!-- MediaWiki page 1739; revision 6756; parent 6742; 2010-01-03T12:25:50Z -->
