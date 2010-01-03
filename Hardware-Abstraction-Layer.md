@@ -17,23 +17,8 @@ Die HAL beinhaltet somit folgende Aufgaben:
 - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
 - ...
 
-## Implentierung einer HAL
-
-Die Implentierung einer HAL ist im Protected Mode einfach:
-
-- Die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") mit ihr Rechteverwaltung.
-- ...
-
-## [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel")
-
-Eine besondere Rolle hat der [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel"). Dieser hat normalerweise keine HAL.
-
-## Ältere Betriebsysteme
-
-[MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") hatte keine HAL, zumindest wenn es nicht mit Windows aufgerüstet worden war.
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6752/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 6341; parent 6340; 2009-11-17T08:26:02Z -->
+<!-- MediaWiki page 1480; revision 6752; parent 6341; 2010-01-03T09:57:39Z -->
