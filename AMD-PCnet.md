@@ -159,7 +159,7 @@ void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
      //Die physische Adresse (also ncard->physical_transmit_buffer[current_descriptor]) sollte schon bei der
      //Initialisierung in das "address"-Feld geschrieben worden sein
      ncard->linear_transmit_descriptor[current_descriptor].flags2 = 0;
-     ncard->linear_transmit_descriptor[current_descriptor].flags = 0x8030F000 | (-length);
+     ncard->linear_transmit_descriptor[current_descriptor].flags = 0x8030F000 | ((-length) & 0x7FF);
      write_csr(ncard, CSR0, 0x48);
 
 }\</c\>
@@ -207,6 +207,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6760/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 6760; parent 6759; 2010-01-04T21:11:13Z -->
+<!-- MediaWiki page 2025; revision 6761; parent 6760; 2010-01-04T21:14:32Z -->
