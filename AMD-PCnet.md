@@ -121,7 +121,7 @@ Am Ende der ISR sollte der Inhalt des CSR0-Registers dorthin zurückgeschrieben 
 
 ### Senden eines Pakets
 
-Um ein Paket zu senden, muss die physische Adresse des entsprechenden Datenpuffers in das "address"-Felds des nächsten Sendedeskriptors geschrieben werden (zuerst Deskriptor 0, dann 1 und so weiter bis Deskriptor 7 (also der achte), danach wieder von vorn beginnen). "flags2" zeigt ein, ob ein Fehler beim Senden geschehen ist, sollte daher vom Treiber auf 0 gesetzt werden. Im "flags"-Feld muss nun das OWN-Bit gesetzt werden (0x80000000), um dem der Karte den Deskriptor zu "übergeben". Desweiteren sollten STP (Start of Packet, 0x02000000) und ENP (End of Packet, 0x01000000) gesetzt werden - dies zeigt an, dass die Daten nicht aufgeteilt werden, sondern dass es sich um ein einzelnes Ethernetpaket handelt. Weiterhin müssen die Bits 12-15 gesetzt werden (0x0000F000, sind wohl reserviert) und die Bits 0-11 geben die **negative** Größe des Pakets an.
+Um ein Paket zu senden, muss die physische Adresse des entsprechenden Datenpuffers in das "address"-Felds des nächsten Sendedeskriptors geschrieben werden (zuerst Deskriptor 0, dann 1 und so weiter bis Deskriptor 7 (also der achte), danach wieder von vorn beginnen). "flags2" zeigt ein, ob ein Fehler beim Senden geschehen ist, sollte daher vom Treiber auf 0 gesetzt werden. Im "flags"-Feld muss nun das OWN-Bit gesetzt werden (0x80000000), um der Karte den Deskriptor zu "übergeben". Desweiteren sollten STP (Start of Packet, 0x02000000) und ENP (End of Packet, 0x01000000) gesetzt werden - dies zeigt an, dass die Daten nicht aufgeteilt werden, sondern dass es sich um ein einzelnes Ethernetpaket handelt. Weiterhin müssen die Bits 12-15 gesetzt werden (0x0000F000, sind wohl reserviert) und die Bits 0-11 geben die **negative** Größe des Pakets an.
 
 Nun könnte man einfach warten, bis die Karte sich das Paket abholt. Alternativ dazu kann man auch das TDMD-Bit (0x08) in CSR0 setzen (Also 0x48 nach CSR0 schreiben, um die Interrupts aktiviert zu lassen), um diese Wartezeit abzukürzen.
 
@@ -207,6 +207,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6759/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6760/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 6759; parent 6758; 2010-01-04T20:39:50Z -->
+<!-- MediaWiki page 2025; revision 6760; parent 6759; 2010-01-04T21:11:13Z -->
