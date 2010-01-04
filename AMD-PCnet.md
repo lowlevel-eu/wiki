@@ -4,7 +4,7 @@
 
 Ich kenne mich mit der PCnet-Karte nicht besonders aus. Ich habe diesen Artikel auf Basis des týndur-Treibers und der drei unten genannten Spezifikationen erstellt, da diese Seite schon sehr lange auf der TODO-Liste steht, sich jedoch niemand darum gekümmert hat.
 
-Wenn **du** dich mit dieser Netzwerkkarte einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren!
+Wenn **du** dich mit dieser Netzwerkkarte einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
 
 Dieser Artikel beschäftigt sich mit der Programmierung der AMD-PCnet-FAST-III-Netzwerkkarte (Am79C973).
 
@@ -41,7 +41,7 @@ Die "direkt" erreichbaren Register (ein Portzugriff) sind nur ein kleiner Teil d
 
 1\. IRQ und I/O-Ports vom PCI-Treiber holen und gegebenenfalls registrieren
 
-2\. MAC-Adresse herausfinden; diese steht in drei 16-Bit-Registern ab 0x00 (APROM0, APROM2 und APROM4) in Little-Endian-Reihenfolge (also in APROM0 (0x00) die niederwertigsten 16 Bit und in APROM4 (0x04) die höchstwertigen 16 Bit).
+2\. MAC-Adresse herausfinden; deren einzelne Bytes stehen in den ersten Bytes des I/O-Raums (APROM0 bis APROM5).
 
 3\. Die Karte zurücksetzen; es muss ein Word vom Resetregister (0x14) eingelesen werden, um einen Software-Reset durchzuführen. Anschließend empfiehlt es sich, zehn Millisekunden zu warten, bis der Reset beendet ist. Danach sollte das BCR20-Register auf 0x0102 gesetzt werden, dies verändert den Softwarestyle zu PCnet-PCI, dadurch werden 32-Bit- und nicht 16-Bit-Strukturen verwendet. Außerdem wird dadurch das SSIZE32-Bit gesetzt, auch dadurch werden 32-Bit-Strukturen aktiviert.
 
@@ -102,12 +102,15 @@ Die "direkt" erreichbaren Register (ein Portzugriff) sind nur ein kleiner Teil d
 //16-Bit-I/O-Ports (bzw. Offsets zum Beginn des I/O-Raums)
 
 1.  define APROM0 0x00
-2.  define APROM2 0x02
-3.  define APROM4 0x04
-4.  define RDP 0x10
-5.  define RAP 0x12
-6.  define RESET 0x14
-7.  define BDP 0x16\</c\>
+2.  define APROM1 0x01
+3.  define APROM2 0x02
+4.  define APROM3 0x03
+5.  define APROM4 0x04
+6.  define APROM5 0x05
+7.  define RDP 0x10
+8.  define RAP 0x12
+9.  define RESET 0x14
+10. define BDP 0x16\</c\>
 
 ### Die ISR
 
@@ -207,6 +210,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6758/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 5514; parent 5507; 2009-08-08T21:42:08Z -->
+<!-- MediaWiki page 2025; revision 6758; parent 5514; 2010-01-04T11:32:45Z -->
