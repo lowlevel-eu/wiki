@@ -23,10 +23,14 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne
 
 *Hinweis: Nachdem nun schon [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota") so halb gegen die Wand gelaufen ist, passiert mit Paloxena wohl ähnliches. Allerdings heißt das neue OS nicht anders, sondern einfach nur paloxena2.*
 
-## Programme
+## paloxena1
+
+paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyXomycota so ziemlich kaputt war. Dummerweise wurde es noch viel kaputter. Deshalb gibt es jetzt paloxena2. Irgendwann muss man ja einen Glückstreffer landen.
+
+### Programme
 
 - [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") 1.69.08: Ein Assembler mit Intelsyntax
-- µsh 0.002: Die Shell (portiert von [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"))
+- µsh 0.002: Die Shell (portiert von MyXomycota)
 - Paloxoreutils:
   - ls
   - cat
@@ -37,19 +41,38 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne
 - maumau: Der Klassiker von MyXomycota
 - brainfuck: Brainfuckcompiler
 
-## Akt. Release
+### Akt. Release
 
 Die aktuelle Freigabe ist 0.001-o (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
 
 - Ankündigung: [Paloxenaforum - "0.001-o"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=13)
 - Direktlink: [0.001-o.img.bz2](http://www.paloxena.bplaced.net/releases/0.001-o.img.bz2)
 
-## Screenshot
+### Screenshot
 
 Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration): [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
 
+## paloxena2
+
+### Hast du nicht schon genug Betriebssysteme zu unterhalten?
+
+paloxena1 war ein halbes Abkopieren von MyXomycota. In meinem „Wahn“, alles schön zu machen und gut zu designen, habe ich mich wohl übernommen. Es entstand ein hübsches einheitliches Treiberinterface, das sowohl für die Console als auch für Dateisystemtreiber verwendet werden konnte. Leider hatte die Console dann jede Menge Code zu liefern, der total unnötig war. Den gleichen Code habe ich dann auch z. B. für den PCI-Treiber verwendet. Deshalb soll paloxena2 darauf ausgerichtet sein, wieder ein differenzierteres und vor allem einfacheres Treiberinterface zu liefern. Es soll nicht mehr schön sein. Es soll einfach funktionieren. Außerdem soll es eigentlich so tolle Sachen wie SMP und Threading mitbringen, hoffen wir, dass ich irgendwas dazu rausfinde. ;-)
+
+### Syscalls
+
+Erwähnenswert ist das geplante Syscallinterface. Nachdem ich in paloxena1 bereits versucht habe, die POSIX-Calls zu implementieren (ursprünglich, um die Newlib möglichst einfach portieren zu können &#150; welche in meinen Augen aber kaputt ist), habe ich mich nun entschlossen, die Syscalls einfach umzunummerieren, sodass mein open-Syscall die gleiche Nummer wie der open-Syscall von Linux hat, und so weiter. Dadurch sollen für Linux kompilierte Programme nativ unter paloxena2 ausgeführt werden (ganz einfach, weil ich sowieso die gleiche Syscalls habe, da kann man auch die Nummern umlegen). Dies bringt voraussichtlich vor allem den Vorteil, dass ich keine libc wirklich portieren muss, da ich die von Linux nutzen kann. Bis jetzt klappt es mit der glibc noch nicht so richtig, die diet libc spielt aber schon gut mit.
+
+### ppp
+
+Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Compilieren für Linux ist) gibt es auch ein eigenes Repo, genannt „ppp“, kurz für „Paloxena's Patched Packages“ (ja, der Name klingt absichtlich so bescheuert). Es ist lbuilds von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") nachempfunden. „Portiert“ wurden bisher folgende Programme (wenn auch mehr schlecht als recht):
+
+- *dash* 0.5.5.1 (Version der Almquist Shell)
+- *FASM* 1.69.11 (s. o.)
+- *maumau* 0.5 (Was sonst)
+- *pdksh* 5.2.14 (Public-Domain-Version der Korn Shell)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6795/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 6793; parent 6146; 2010-01-05T21:49:02Z -->
+<!-- MediaWiki page 2045; revision 6795; parent 6793; 2010-01-05T22:05:45Z -->
