@@ -9,16 +9,18 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 ### Descriptor
 
 | Bits | Name | Beschreibung |
-| ------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0-15 | Offset 0-15 | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
 | 15-31 | Selector | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
-| 32-39 | 00000000 |  |
+| 32-39 | 00000000 / IST | Gibt im LM den Index in die IST an, **ansonsten 0**! |
 | 40-42 | Typ | Gibt die Art des Interrupts an |
 | 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. |
 | 44 | 0 |  |
 | 45-46 | DPL | Gibt das Descriptor Privilege Level an, das man braucht um diesen Interrupt aufrufen zu dürfen. |
 | 47 | P | Gibt an, ob dieser Eintrag benutzt wird. |
 | 48-63 | Offset 16-31 |  |
+| 64-95 | Offset 32-63 | (Nur im LM, **ansonsten nicht vorhanden**!) |
+| 96-127 | Reserviert (0) | (Nur im LM, **ansonsten nicht vorhanden**!) |
 
 ### Interrupt-Arten (Typ)
 
@@ -79,6 +81,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 6465; parent 5872; 2009-12-03T20:34:38Z -->
+<!-- MediaWiki page 1603; revision 6763; parent 6465; 2010-01-05T11:10:25Z -->
