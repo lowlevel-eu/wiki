@@ -68,8 +68,14 @@ Der Hypervisor soll nur die CPUs bzw. Prozessoren verwalten und am Ende nur daf�
 
 Abgesehen davon, dass Paging im PAE-Modus betrieben wird, bietet der Hypervisor Shadow- und Nested-Paging
 
+## Code-Statistik
+
+## Kernel-Features
+
+## Roadmap
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6807/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 6806; parent 6805; 2010-01-05T23:33:20Z -->
+<!-- MediaWiki page 1816; revision 6807; parent 6806; 2010-01-05T23:34:44Z -->
