@@ -26,39 +26,46 @@ rizor-OS ist ein Projekt, dass eine möglichst generische API bieten soll. Dadur
 
 ## Kernel-Design
 
-- normaler Kernel
+### normaler Kernel
 
 Der Kernel soll verschiedene Möglichkeiten der Kommunikation, der Speicherverwaltung und des Schedulings bieten.
 
-- - Kommunikation
-    - x86
+#### Kommunikation
+
+##### x86
 
 Die einzelnen Elemente (Syscalls, IPC, Module-Communication) bekommen ihre eigenen Trap-Gates. Dadurch wird dem Kernel das Verwalten der einzelenen Elemente abgenommen. Bei der Initialisierung wird den Syscalls standardmäßig die 0x80 als Interrupt-Nummer zugewiesen. Die einzelnen IPC-Komponenten beantragen beim IDT-Manager eigene Interrupt-Gates an und registrieren eigene Handler. Das gleiche mach auch die Module-Communication. Wenn nun ein Task eine Nachricht abschicken möchte, fragt er über Syscalls die Interrupt-Nummer ab und löst dann den Interrupt aus. Somit muss der Kernel nur einmal bemüht werden und der IPC-Request kann schneller abgearbeitet werden. Außerdem kommunizieren die Tasks über ein extra Interface mit den Modules. Dadurch wird der Overhead der normalen IPC minimiert.
 
-- - - ARM
+##### ARM
 
 Bei dieser Architektur läuft alles über Syscalls ab und dadurch wird der Aufwand des Kernels größer, was sich allerdings nicht vermeiden lässt. Damit der Aufwand geringer ausfällt, werden die einzelnen Syscall-Handler in Hash-Tables gespeichert. Dadurch kann der zutreffende Handler schneller aufgerufen werden.
 
-- - Speicherverwaltung
-    - physische Speicherverwaltung
+#### Speicherverwaltung
+
+##### physische Speicherverwaltung
 
 Hierbei gibt es mehrere Wahlmöglichkeiten zur Verwaltung. Zum einen kann zwischen 4KiB- und 4MiB-Blöcken gewählt werden, dann kann man auch noch zwischen Bitmaps, Stacks und einer Mischung aus beiden wählen. Bei der Mischung soll Performanz mit Minimierung des Speicheraufwands kombiniert werden.
 
-- - - virtuelle Speicherverwaltung
-      - i386
+##### virtuelle Speicherverwaltung
+
+###### i386
 
 Hierbei kann zwischen dem normalen Paging, PSE und PAE gewählt werden. Welche Version benutzt werden soll, wird beim Compile-Vorgang definiert.
 
-- - - - ARM
+###### amd64
+
+Bei dieser Version wird natürlich automatisch PAE benutzt.
+
+###### ARM
 
 Die Speicherverwaltung wird je nach MMU definiert.
 
-- Hypervisor
+### Hypervisor
 
 Der Hypervisor soll nur die CPUs bzw. Prozessoren verwalten und am Ende nur dafür zuständig sein soll, welche VM welchen Interrupt behandelt. Dadurch liegt die Hauptaufgabe bei den VMs und der Hypervisor hat nur einen geringen Verwaltungsaufwand. Außerdem soll er die Möglichkeit bieten, dass man der VM bestimmte Hardware ein- bzw. ausblenden kann. Dadurch soll erreicht werden, dass die VMs nur die Hardware sehen, die sie auch benutzen dürfen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 6804; parent 6803; 2010-01-05T23:28:33Z -->
+<!-- MediaWiki page 1816; revision 6805; parent 6804; 2010-01-05T23:31:38Z -->
