@@ -62,10 +62,14 @@ Die Speicherverwaltung wird je nach MMU definiert.
 
 ### Hypervisor
 
-Der Hypervisor soll nur die CPUs bzw. Prozessoren verwalten und am Ende nur dafür zuständig sein soll, welche VM welchen Interrupt behandelt. Dadurch liegt die Hauptaufgabe bei den VMs und der Hypervisor hat nur einen geringen Verwaltungsaufwand. Außerdem soll er die Möglichkeit bieten, dass man der VM bestimmte Hardware ein- bzw. ausblenden kann. Dadurch soll erreicht werden, dass die VMs nur die Hardware sehen, die sie auch benutzen dürfen.
+Der Hypervisor soll nur die CPUs bzw. Prozessoren verwalten und am Ende nur dafür zuständig sein soll, welche VM welchen Interrupt behandelt. Dadurch liegt die Hauptaufgabe bei den VMs und der Hypervisor hat nur einen geringen Verwaltungsaufwand. Außerdem soll er die Möglichkeit bieten, dass man der VM bestimmte Hardware ein- bzw. ausblenden kann. Dadurch soll erreicht werden, dass die VMs nur die Hardware sehen, die sie auch benutzen dürfen. Der Hypervisor läuft standard-mäßig im amd64-Mode.
+
+#### Speicherverwaltung
+
+Abgesehen davon, dass Paging im PAE-Modus betrieben wird, bietet der Hypervisor Shadow- und Nested-Paging
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6806/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 6805; parent 6804; 2010-01-05T23:31:38Z -->
+<!-- MediaWiki page 1816; revision 6806; parent 6805; 2010-01-05T23:33:20Z -->
