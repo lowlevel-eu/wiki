@@ -70,12 +70,14 @@ Abgesehen davon, dass Paging im PAE-Modus betrieben wird, bietet der Hypervisor 
 
 ## Code-Statistik
 
+Momentan gibt es noch keine Statistiken zu dem Kernel
+
 ## Kernel-Features
 
 ## Roadmap
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6807/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 6807; parent 6806; 2010-01-05T23:34:44Z -->
+<!-- MediaWiki page 1816; revision 6808; parent 6807; 2010-01-05T23:35:32Z -->
