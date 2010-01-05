@@ -8,7 +8,7 @@
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"),[amd64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"),[ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") & [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Noch nicht näher geplant |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
@@ -55,8 +55,10 @@ Die Speicherverwaltung wird je nach MMU definiert.
 
 - Hypervisor
 
+Der Hypervisor soll nur die CPUs bzw. Prozessoren verwalten und am Ende nur dafür zuständig sein soll, welche VM welchen Interrupt behandelt. Dadurch liegt die Hauptaufgabe bei den VMs und der Hypervisor hat nur einen geringen Verwaltungsaufwand. Außerdem soll er die Möglichkeit bieten, dass man der VM bestimmte Hardware ein- bzw. ausblenden kann. Dadurch soll erreicht werden, dass die VMs nur die Hardware sehen, die sie auch benutzen dürfen.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 6803; parent 6801; 2010-01-05T23:25:33Z -->
+<!-- MediaWiki page 1816; revision 6804; parent 6803; 2010-01-05T23:28:33Z -->
