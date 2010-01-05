@@ -58,7 +58,7 @@ paloxena1 war ein halbes Abkopieren von MyXomycota. In meinem „Wahn“, alles 
 
 ### Syscalls
 
-Erwähnenswert ist das geplante Syscallinterface. Nachdem ich in paloxena1 bereits versucht habe, die POSIX-Calls zu implementieren (ursprünglich, um die Newlib möglichst einfach portieren zu können &#150; welche in meinen Augen aber kaputt ist), habe ich mich nun entschlossen, die Syscalls einfach umzunummerieren, sodass mein open-Syscall die gleiche Nummer wie der open-Syscall von Linux hat, und so weiter. Dadurch sollen für Linux kompilierte Programme nativ unter paloxena2 ausgeführt werden (ganz einfach, weil ich sowieso die gleiche Syscalls habe, da kann man auch die Nummern umlegen). Dies bringt voraussichtlich vor allem den Vorteil, dass ich keine libc wirklich portieren muss, da ich die von Linux nutzen kann. Bis jetzt klappt es mit der glibc noch nicht so richtig, die diet libc spielt aber schon gut mit.
+Erwähnenswert ist das geplante Syscallinterface. Nachdem ich in paloxena1 bereits versucht habe, die POSIX-Calls zu implementieren (ursprünglich, um die Newlib möglichst einfach portieren zu können &#150; welche in meinen Augen aber kaputt ist), habe ich mich nun entschlossen, die Syscalls einfach umzunummerieren, sodass mein open-Syscall die gleiche Nummer wie der open-Syscall von Linux hat, und so weiter. Dadurch sollen für Linux kompilierte Programme nativ unter paloxena2 ausgeführt werden (ganz einfach, weil ich sowieso die gleichen Syscalls habe, da kann man auch die Nummern umlegen). Dies bringt voraussichtlich vor allem den Vorteil, dass ich keine libc wirklich portieren muss, da ich die von Linux nutzen kann. Bis jetzt klappt es mit der glibc noch nicht so richtig, die diet libc spielt aber schon gut mit.
 
 ### ppp
 
@@ -71,6 +71,6 @@ Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Comp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 6796; parent 6795; 2010-01-05T22:06:06Z -->
+<!-- MediaWiki page 2045; revision 6797; parent 6796; 2010-01-05T22:10:20Z -->
