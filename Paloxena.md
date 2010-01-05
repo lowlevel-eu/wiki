@@ -21,6 +21,8 @@
   
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
 
+*Hinweis: Nachdem nun schon [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota") so halb gegen die Wand gelaufen ist, passiert mit Paloxena wohl ähnliches. Allerdings heißt das neue OS nicht anders, sondern einfach nur paloxena2.*
+
 ## Programme
 
 - [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") 1.69.08: Ein Assembler mit Intelsyntax
@@ -48,6 +50,6 @@ Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 6146; parent 6099; 2009-10-31T19:35:55Z -->
+<!-- MediaWiki page 2045; revision 6793; parent 6146; 2010-01-05T21:49:02Z -->
