@@ -21,8 +21,6 @@
   
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
 
-*Hinweis: Nachdem nun schon [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota") so halb gegen die Wand gelaufen ist, passiert mit Paloxena wohl ähnliches. Allerdings heißt das neue OS nicht anders, sondern einfach nur paloxena2.*
-
 ## paloxena1
 
 paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyXomycota so ziemlich kaputt war. Dummerweise wurde es noch viel kaputter. Deshalb gibt es jetzt paloxena2. Irgendwann muss man ja einen Glückstreffer landen.
@@ -73,6 +71,6 @@ Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Comp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6795/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 6795; parent 6793; 2010-01-05T22:05:45Z -->
+<!-- MediaWiki page 2045; revision 6796; parent 6795; 2010-01-05T22:06:06Z -->
