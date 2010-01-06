@@ -38,7 +38,7 @@ Zum Allozieren einer Speicherseite wird einfach die Adresse, die ganz oben auf d
 
 Der Speicher, der für den Stack benutzt wird, wird aus den Speicherseiten, die auf den Stack gelegt werden sollen, erstellt. Dies kann folgendermaßen implementiert werden: Beim Start des Kernels ist der Stack erstmal leer. Desweiteren ist nur ein virtueller und kein physischer Speicherbereich für den Stack reserviert. Anschließend geht man die freien Speicherbereiche durch und legt jede freie Speicherseite auf den Stack. Da der Stack bei der ersten Speicherseite noch keinen Speicherbereich hat, nimmt man einfach diese Seite und blendet in den virtuellen Adressraum an der Adresse des Stacks ein. Anschließend können die Adressen einiger Speicherseiten auf den Stack gelegt werden, solange bis wieder kein Speicher vorhanden ist. Dann wird einfach die nächste Speicherseite, die auf den Stack gelegt werden soll, in den virtuellen Adressraum ein.
 
-Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten, die in den virtuellen Adressraum engeblendet waren, wieder freigeben, falls dieser Speicherbereich nicht mehr vom Stack selbst benötigt wird. Somit verbraucht der Stack im Prinzip "keinen" Speicher.
+Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten, die in den virtuellen Adressraum eingeblendet waren, wieder freigeben, falls dieser Speicherbereich nicht mehr vom Stack selbst benötigt wird. Somit verbraucht der Stack im Prinzip "keinen" Speicher.
 
 ### Eigenschaften
 
@@ -46,6 +46,23 @@ Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten,
 + Der Stack verbraucht keinen Speicher.  
 o Das Freigeben einer Speicherseite ist in konstanter Zeit möglich. (konstante Komplexität)  
 - Das Allozieren physisch kontinuierlicher Speicherseiten ist unmöglich.  
+
+## verkette Liste
+
+Die Elemente der Liste sind dabei (freie, physisch zusammenhängende) Speicherbereiche, d.h. Zeiger auf den Beginn des Speicherbereichs und Länge des Speicherbereichs. Diese Liste benötigt allerdings ein malloc/free, um Speicher für die Listenelemente zu allozieren, d.h. diese Art der Speicherverwaltung kann nur für einen Teil des Speichers genutzt werden.
+
+### Allokation & Freigabe von Speicherseiten
+
+Zum Allozieren von Speicherseiten wird die Liste solange durchsucht bis ein ausreichend großer Speicherbereich gefunden ist. Falls der zu allozierende Speicherbereich exakt so groß wie der gefundene ist wird das Listenelemente entfernt, andernfalls die Größe angepasst. Beim Freigeben wird - falls dies möglich ist - zuerst versucht der freizugebende Speicherplatz in eines der vorhandenen Listenelemente einzubauen, was natürlich nur geht, wenn das freizugebende physisch genau davor bzw. genau dahinter liegt. Andernfalls wird ein neues Listenelement erzeugt und passend initialisiert.
+
+### Eigenschaften
+
+\+ Das Allozieren von physisch kontinuierlichen Speicherseiten ist möglich.  
+- Das Allozieren eines (physisch kontinuierlichen) Speicherbereichs oder einer Speicherseite ist in linearer Zeit möglich.  
+- Freigeben eines Speicherbereichs oder einer Speicherseite ist in linearer Zeit möglich.  
+- Es wird ein darunterliegendes malloc/free benötigt.  
+
+Das sieht natürlich für die verkettete Liste erstmal schlecht aus, aber nach Erfahrung von [Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") eignet sie sich perfekt zum Verwalten eines Speicherbereichs für Allokationen von physisch kontinuierlichem Speicher, da solche Allokationen sehr selten und deswegen die Liste nicht sonderlich groß ist. Der Rest des Speichers könnte den über einen wie oben beschriebenen Stack verwaltet werden.
 
 ## Buddy
 
@@ -86,6 +103,6 @@ Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu mar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
 
-<!-- MediaWiki page 1843; revision 6104; parent 6103; 2009-10-23T20:00:19Z -->
+<!-- MediaWiki page 1843; revision 6813; parent 6104; 2010-01-06T15:37:24Z -->
