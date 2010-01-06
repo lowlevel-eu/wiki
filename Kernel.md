@@ -80,10 +80,10 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ## Links
 
-[Erklärung zum Mikro- und L4Kernel](http://www.weihenstephan.org/~michaste/down/steil-l4.pdf)
+- [Erklärung zum Mikro- und L4-Kernel](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/904ad80cc1c81c6b6e5d.pdf "Die L4-Mikrokernel-Familie.pdf")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 6719; parent 6706; 2010-01-02T16:30:04Z -->
+<!-- MediaWiki page 1478; revision 6817; parent 6719; 2010-01-06T15:51:24Z -->
