@@ -39,7 +39,6 @@
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
 - Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
 - [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"): Programmierung, etc...
-- Unter [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung#physische-speicherverwaltung "Speicherverwaltung") weitere mögliche Datenstruktur hinzufügen. (Liste)
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
@@ -85,6 +84,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6750; parent 6749; 2010-01-02T23:21:24Z -->
+<!-- MediaWiki page 1518; revision 6814; parent 6750; 2010-01-06T15:37:55Z -->
