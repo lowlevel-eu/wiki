@@ -76,6 +76,8 @@
 
 Was meinst du damit? Soll das eine Anleitung werden, wie man Datenblätter ließt oder Primär eine Liste mit allen Datenblättern als Links? Programm Noob 14:53, 7. Jan. 2010 (CET)
 
+Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgehoben
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -87,6 +89,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6819/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6819; parent 6814; 2010-01-07T13:53:27Z -->
+<!-- MediaWiki page 1518; revision 6820; parent 6819; 2010-01-07T14:56:01Z -->
