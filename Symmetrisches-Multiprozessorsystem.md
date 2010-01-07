@@ -31,9 +31,9 @@ Die *Floating Pointer Structure* liegt an einer 16-Byte Grenze im Speicher und s
   
 
 | Feld | Beschreibung |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *Signatur* | Die Signatur enthält die nicht nullterminierte ASCII-Zeichenkette "\_MP\_" |
-| *physikalische Adresse* | Enthält die physikalische Adresse der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") oder 0x00000000, falls dieses System einer der [Default Configurations](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#default-configuration "SMP") entspricht. |
+| *physische Adresse* | Enthält die physische Adresse der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") oder 0x00000000, falls dieses System einer der [Default Configurations](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#default-configuration "SMP") entspricht. |
 | *Länge* | Die Größe der Struktur in 16-Byte großen Abschnitten. |
 | *Revision* | Die Revision der Intel Multiprocessor Specification. Der Wert 0x01 steht für die Version 1.1 und 0x04 für Version 1.4. |
 | *Checksum* | siehe [Auffinden der Struktur](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#auffinden-der-struktur "SMP") |
@@ -96,6 +96,6 @@ Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 5487; parent 4870; 2009-08-08T10:39:04Z -->
+<!-- MediaWiki page 1490; revision 6822; parent 5487; 2010-01-07T17:48:40Z -->
