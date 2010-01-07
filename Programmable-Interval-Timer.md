@@ -27,13 +27,12 @@ Ports: 40h bis 43h
 
 ## Links
 
-- [Programmierung des PIT (by maxinator)](http://maxinator.freehoster.ch/layout.php?menu=programming_tutorials&site=Programming/programming/pit/0040005F.html)
 - [Programmierung des PIT](http://ivs.cs.uni-magdeburg.de/bs/lehre/sose99/bs1/aufgaben/aufgabe3/timer.shtml)  
 - [Intel 8253 Chip auf Wikipedia](http://en.wikipedia.org/wiki/Intel_8253)  
 - [Intel 8254 Chip auf Wikipedia](http://en.wikipedia.org/wiki/Intel_8254)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 4954; parent 4277; 2009-08-01T13:24:27Z -->
+<!-- MediaWiki page 1432; revision 6821; parent 4954; 2010-01-07T14:58:59Z -->
