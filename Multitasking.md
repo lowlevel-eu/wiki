@@ -18,11 +18,11 @@ Beim Multitasking können mehrere Prozesse gestartet werden, d.h. sie werden ins
 
 Dabei wird zwischen zwei Methoden unterschieden:
 
-- Software - Multitasking
+- [Software - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Software-Multitasking-Tutorial "Software Multitasking Tutorial")
 
 und
 
-- Hardware - Multitasking
+- [Hardware Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking")
 
 ### Software - Multitasking
 
@@ -34,6 +34,6 @@ Im Gegensatz zum Software-Multitasking, wird hier die meiste Arbeit vom Prozesso
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1495/index.html)
 
-<!-- MediaWiki page 1495; revision 6071; parent 5051; 2009-10-15T18:40:43Z -->
+<!-- MediaWiki page 1495; revision 6837; parent 6071; 2010-01-08T19:46:10Z -->
