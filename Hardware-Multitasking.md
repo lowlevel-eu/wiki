@@ -6,11 +6,11 @@ Im Gegensatz zum häufig eingesetzten Software Multitasking, übernimmt beim Har
 
 ### Das Task State Segment
 
-Das Hardware Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird hier exakt beschrieben. Vereinfacht sieht er so aus:
+Das Hardware Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") beschrieben. Vereinfacht sieht er so aus:
 
 Datei:Tss.jpg
 
-Die dynamischen Felder werden von der CPU automaitsch beim TaskWechsel mit den entsprechenden Registerwerten des laufenden Tasks gefüllt. Die statischen Felder werden mit Anfangswerten belegt und später nicht mehr verändert. Meiner Meinung nach nicht so entsprechend sind die unwichtigen Felder. (alle Felder haben DWORD Größe) Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch die diese bei einem Taskwechsel weiß, wo sie die (dynamischen) Registerwerte speichern soll, damit diese beim Wiederaufruf des Tasks unverändert sind. Folgender Code legt ein TSS an, und erzeugt dann den Descriptor in der GDT an, der darauf zeigt.
+Die dynamischen Felder werden von der CPU automaitsch beim TaskWechsel mit den entsprechenden Registerwerten des laufenden Tasks gefüllt. Die statischen Felder werden mit Anfangswerten belegt und später nicht mehr verändert. Meiner Meinung nach nicht so entscheidenden Felder sind die als unwichtig markierten. (alle Felder haben DWORD Größe) Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch die diese bei einem Taskwechsel weiß, wo sie die (dynamischen) Registerwerte speichern soll, damit diese beim Wiederaufruf des Tasks unverändert sind. Folgender Code legt ein TSS an, und erzeugt dann den Descriptor in der GDT an, der darauf zeigt.
 
 \<c\>
 
@@ -47,7 +47,7 @@ Diese Sequenz lädt den dritten Selektor in das TaskRegister. Dieser muss auf ei
 
 ## Implementierung
 
-Schritt 1: Task State Segmente anlegen
+### Schritt 1: Task State Segmente anlegen
 
 Jeder spätere Task benötigt ein TSS. Diese müssen mit den Werten gefüllt werden, die der Task zu Beginn seiner Ausführung in den Registern stehen haben soll:
 
@@ -164,7 +164,7 @@ Eine kleine Funktion noch zum Schluss: \<c\> void init_mt(void) {
 
 } \</c\>
 
-Beim nächsten Tick wird dann der scheduler aufgerufen und verrichtet seine Arbeit.
+Beim nächsten Tick wird dann der Scheduler aufgerufen und verrichtet seine Arbeit.
 
 ## Tipps und Tricks
 
@@ -174,6 +174,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6835; parent 0; 2010-01-08T19:33:47Z -->
+<!-- MediaWiki page 2158; revision 6836; parent 6835; 2010-01-08T19:38:00Z -->
