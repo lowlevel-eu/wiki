@@ -1,16 +1,16 @@
 # Hardware-Multitasking
 
-Im Gegensatz zum häufig eingesetzten Software Multitasking, übernimmt beim Hardware Multitasking die CPU die Aufgaben des Dispatchers. Viele moderne Betriebssysteme verzichten auf Hardware Multitasking, da es angeblich keinen großen Zeitvorteil gegenüber dem Software Multitasking hat.
+Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Hardware-Multitasking die CPU die Aufgaben des Dispatchers. Viele moderne Betriebssysteme verzichten auf Hardware-Multitasking, da es angeblich keinen großen Zeitvorteil gegenüber dem Software-Multitasking hat.
 
 ## Grundlagen
 
 ### Das Task State Segment
 
-Das Hardware Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") beschrieben. Vereinfacht sieht er so aus:
+Hardware-Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") beschrieben. Vereinfacht sieht er so aus:
 
 Datei:Tss.jpg
 
-Die dynamischen Felder werden von der CPU automaitsch beim TaskWechsel mit den entsprechenden Registerwerten des laufenden Tasks gefüllt. Die statischen Felder werden mit Anfangswerten belegt und später nicht mehr verändert. Meiner Meinung nach nicht so entscheidenden Felder sind die als unwichtig markierten. (alle Felder haben DWORD Größe) Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch die diese bei einem Taskwechsel weiß, wo sie die (dynamischen) Registerwerte speichern soll, damit diese beim Wiederaufruf des Tasks unverändert sind. Folgender Code legt ein TSS an, und erzeugt dann den Descriptor in der GDT an, der darauf zeigt.
+Die dynamischen Felder werden von der CPU automatisch beim Taskwechsel mit den entsprechenden Registerwerten des laufenden Tasks gefüllt. Die statischen Felder werden mit Anfangswerten belegt und später nicht mehr verändert. Meiner Meinung nach nicht so entscheidende Felder sind die als unwichtig markierten (alle Felder sind 32 Bit lang). Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch sie bei einem Taskwechsel weiß, wo die (dynamischen) Registerwerte gespeichert werden sollen, damit diese beim Wiederaufruf des Tasks unverändert sind. Folgender Code legt ein TSS an und erzeugt dann den Descriptor in der GDT, der darauf zeigt.
 
 \<c\>
 
@@ -20,30 +20,30 @@ struct tss task_state_segment; gdt_create_descriptor ( n, //die Nummer des Descr
 
 ### Taskwechsel
 
-Für einen Taskwechsel (TaskSwitch) springt man mit einem jmp-Befehl zum Selektor der TSS, der dem neuen Task zugeordnet ist:
+Für einen Taskwechsel (Task-Switch) springt man mit einem jmp-Befehl zum Selektor des TSS, der dem neuen Task zugeordnet ist:
 
-\<asm\>Jmp TSS_SELECTOR : 0000\</asm\>
+\<asm\>jmp TSS_SELECTOR : 0000\</asm\>
 
 (Das RPL des TSS_SELECTORS sowie das Offset werden von der CPU ignoriert.)
 
-Dieser Befehl sorgt dafür, dass die CPU die Registerwerte des aktuellen Tasks in dessen TSS speichert, dessen Selektor ist im TaskRegister gespeichert. Dann lädt die CPU den im jmp-Befehl angegebenen neuen Selektor ins TaskRegister und schreibt die Werte des zugehörigen TSS in die Register, wodurch die Registerwerte des Tasks, zu dem durch den jmp-Befehl gewechselt werden soll, wiederhergestellt werden. Allerdings gibt es hier ein kleines Problem:
+Dieser Befehl sorgt dafür, dass die CPU die Registerwerte des aktuellen Tasks in dessen TSS speichert, dessen Selektor ist im Task Register gespeichert. Dann lädt die CPU den im jmp-Befehl angegebenen neuen Selektor ins Task Register und schreibt die Werte des zugehörigen TSS in die Register, wodurch die Registerwerte des Tasks, zu dem durch den jmp-Befehl gewechselt werden soll, wiederhergestellt werden. Allerdings gibt es hier ein kleines Problem:
 
 \<asm\>jmp ax : 0000\</asm\>
 
 ...funktioniert nicht. Daher muss man sich eines kleinen Tricks bedienen: \<asm\> mov \[opcode_hack+5\], ax opcode_hack: jmp 1234 : 1234 \</asm\>
 
-Das sieht nicht schön aus, ist aber die einzige Möglichkeit „dynamisch“ zu springen. Ich hoffe ich habe diesen Code korrekt in die AT&T Assembler Syntax (siehe unten) übertragen, da ich den Code nicht vollständig getestet habe.
+Das sieht nicht schön aus, ist aber die einzige Möglichkeit „dynamisch“ zu springen. Ich hoffe, ich habe diesen Code korrekt in die AT&T-Assembler-Syntax (siehe unten) übertragen, da ich den Code nicht vollständig getestet habe.
 
   
-Zu beachten ist allerdings, dass der TaskWechsel von der Software (dem Scheduler) implementiert werden muss, weil die CPU nur das Disptching übernimmt. Es gibt zwar einen Trick, wie man das Scheduling auch von der CPU ausführen lassen kann, aber diese Möglichkeit würde ich nicht empfehlen (siehe dazu unten). Außerdem sollte man wissen, dass man den TaskSwitch auch mit einem Call oder Int-Befehl ausführen kann, was allerdings etwas komplizierter ist.
+Zu beachten ist allerdings, dass der Taskwechsel von der Software (dem Scheduler) implementiert werden muss, weil die CPU nur das Disptching übernimmt. Es gibt zwar einen Trick, wie man das Scheduling auch von der CPU ausführen lassen kann, aber diese Möglichkeit würde ich nicht empfehlen (siehe dazu unten). Außerdem sollte man wissen, dass man den Task-Switch auch mit einem call- oder int-Befehl ausführen kann, was allerdings etwas komplizierter ist.
 
 ### Initialisierung
 
-Bevor überhaupt ein TaskSwitch ausgeführt werden kann, muss einmal ein Start-TSS-Selektor in das TaskRegister geladen werden. Dazu dient folgender Befehl:
+Bevor überhaupt ein Task-Switch ausgeführt werden kann, muss einmal ein Start-TSS-Selektor in das Task Register geladen werden. Dazu dient folgender Befehl:
 
 \<asm\> mov ax, 3\*8 ltr ax \</asm\>
 
-Diese Sequenz lädt den dritten Selektor in das TaskRegister. Dieser muss auf einen gültigen TSS-Descriptor zeigen, der wiederrum die Adresse des TSS des Starttasks angibt. (Der dritte Selektor wurde hier nur als Beispiel verwendet)
+Diese Sequenz lädt den dritten Selektor in das Task Register. Dieser muss auf einen gültigen TSS-Descriptor zeigen, der wiederum die Adresse des TSS des Starttasks angibt. (Der dritte Selektor wurde hier nur als Beispiel verwendet)
 
 ## Implementierung
 
@@ -73,7 +73,7 @@ void create_task ( DWORD n, //die ID/Nummer des Tasks WORD cs, WORD ss, WORD ds,
 
 } \</c\>
 
-Diese Funktion kann man natürlich noch ausweiten. Einige Dinge muss man dennoch dazu sagen, die entsprechenden Codezeilen sind markiert: **1-3:** Da wohl keiner der Tasks im Ring0 laufen wird, wie der Kernel, erfolgt bei einem Interrpt in den Ring0 ein Stackwechsel. Das entsprechende Stacksegment / der Stackpointer wird im ss0 und esp0 Feld des TSS gespeichert. Damit sich die Stacks nicht gegenseitig überschreiben, bekommt jeder Task seinen eigenen Kernelstack. **4:** Dieses Bitmuster sorgt dafür, dass das Interruptflag gesetzt ist, was sehr wichtig ist, weil sonst das ganze System einfrieren würde. Natürlich kann man das EFLAGS Bitmuster auch modifizieren, aber dieses hier eignet sich zu Anfgang.
+Diese Funktion kann man natürlich noch ausweiten. Einige Dinge muss man dennoch dazu sagen, die entsprechenden Codezeilen sind markiert: **1-3:** Da wohl keiner der Tasks im Ring 0 laufen wird, wie der Kernel, erfolgt bei einem Interrpt in den Ring 0 ein Stackwechsel. Das entsprechende Stacksegment / der Stackpointer wird im ss0- und esp0-Feld des TSS gespeichert. Damit sich die Stacks nicht gegenseitig überschreiben, bekommt jeder Task seinen eigenen Kernelstack. **4:** Dieses Bitmuster sorgt dafür, dass das Interruptflag gesetzt ist, was sehr wichtig ist, weil sonst das ganze System einfrieren würde. Natürlich kann man das EFLAGS-Bitmuster auch modifizieren, aber dieses hier eignet sich zu Anfgang.
 
 ### Schritt 2: TSS-Deskriptoren anlegen
 
@@ -94,9 +94,9 @@ i+TSS_SEL_BASE, (DWORD) &task_state_segment\[i\], sizeof(struct tss)-1, 0, GDT_T
 
 } \</c\>
 
-### Schritt 3: Task Tabelle anlegen
+### Schritt 3: Task-Tabelle anlegen
 
-Jetzt benötigt man nur noch eine Tabelle, die alle Tasks beinhaltet. Da diese zum Scheduler gehört, gibt es hier keine Hardwareseitigen Vorgaben. Folgender Tabellenaufbau ist nur ein Beispiel und kann nach Belieben verändert werden.
+Jetzt benötigt man nur noch eine Tabelle, die alle Tasks beinhaltet. Da diese zum Scheduler gehört, gibt es hier keine hardwareseitigen Vorgaben. Folgender Tabellenaufbau ist nur ein Beispiel und kann nach Belieben verändert werden.
 
 \<c\> struct task {
 
@@ -107,13 +107,13 @@ Jetzt benötigt man nur noch eine Tabelle, die alle Tasks beinhaltet. Da diese z
 
 struct task task_table\[NUM_TASKS\]; \</c\>
 
-Der Scheduler wird diese Tabelle später immer wieder durchlaufen. Wenn er ein present-Feld findet, das nicht Null ist, führt er den zugehörigen Task aus. Das heißt wir müssen in die obige Funktion create_task noch folgende Zeile einfügen:
+Der Scheduler wird diese Tabelle später immer wieder durchlaufen. Wenn er ein present-Feld findet, das nicht null ist, führt er den zugehörigen Task aus. Das heißt, wir müssen in die obige Funktion create_task noch folgende Zeile einfügen:
 
 \<c\>task_table\[n\].present=0xFF;\</c\>
 
 ### Schritt 4: Der Scheduler
 
-Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernhemen Ich gehe dabei davon aus, dass in deinem OS bereichts PIT und PIC initalisiert worden sind, denn denn immer wenn der PIT „feuert“, dann wechselt der Scheduler zum nächsten Task. Dafür muss er ersteinmal den nächsten Eintrag in der TaskTable finden, der aktiv ist (pressnet-Feld ist nicht Null)
+Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehmen. Ich gehe dabei davon aus, dass in deinem OS bereits PIT und PIC initalisiert worden sind, denn denn immer wenn der PIT „feuert“, dann wechselt der Scheduler zum nächsten Task. Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der aktiv ist (present-Feld ist nicht null)
 
 \<c\> DWORD current_task_id=0;
 
@@ -128,39 +128,39 @@ void irq_pit(DWORD cs, DWORD eflags) //das hier ist ein Interupt {
 
 \</c\> Jetzt muss zu diesem Task geswechselt werden, indem zu dessen TSS-Selektor gesprungen wird: \<c\>
 
-     asm(„mov %%ax, *$lf+5;“
-         „1:“
-         „ltr $1234:$1234;“ :
+     asm("mov %%ax, *$lf+5;"
+         "1:"
+         "ltr $1234:$1234;" :
 
- : „a“ (8\*(current_task_id + TSS_SEL_BASE));
+ : "a" (8\*(current_task_id + TSS_SEL_BASE));
 
-     asm(„leave; iret“);     //nicht vergessen: interrupt!
+     asm("leave; iret");     //nicht vergessen: Interrupt!
 
-} \</c\> Dieser Code kann natürlich noch erweitert werden, zum Beispiel, wenn man jedem Task eine unterschiedliche Priorität zuweist. Eventuell ist hier die AT&T Syntax falsch, da ich mit dieser nicht ganz vertraut bin.
+} \</c\> Dieser Code kann natürlich noch erweitert werden, zum Beispiel, wenn man jedem Task eine unterschiedliche Priorität zuweist. Eventuell ist hier die AT&T-Syntax falsch, da ich mit dieser nicht ganz vertraut bin.
 
 ### Schritt 5: Multitasking initalisieren
 
 Eine kleine Funktion noch zum Schluss: \<c\> void init_mt(void) {
 
-       asm(„ltr %%ax“ : : „a“ (TSS_SEL_BASE*8) ); //StartTssSselektor
-       asm(„sti“);
+       asm("ltr %%ax" : : "a" (TSS_SEL_BASE*8) ); //Start-TSS-Selektor
+       asm("sti");
 
 } \</c\> Jetzt muss der Code nur noch zusammengesetzt werden: \<c\> int kernel_main() {
 
-     int i;
-
-//... //remap_PIC() //init_PIT() //...
-
+      int i;
+      //...
+      //remap_PIC()
+      //init_PIT()
+      //...
       for (i=0; i<NUM_TASKS; i++)
       {
          task_table[i].present = 0;
       }
-
-//hier muss create_task() aufgerufen werden, um die //verschiedenen Tasks zu erzeugen
-
+      //hier muss create_task() aufgerufen werden, um die
+      //verschiedenen Tasks zu erzeugen
       create_tss_descriptors();
       init_mt();
-      for(;;);  //idle-loop
+      for(;;); //idle-loop
 
 } \</c\>
 
@@ -170,10 +170,10 @@ Beim nächsten Tick wird dann der Scheduler aufgerufen und verrichtet seine Arbe
 
 ### Hardwaregestütztes Scheduling
 
-Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardware ausführen zu lassen. Dafür muss man den PIT-Interrupt als TaskGate anlegen, die auf das TSS des nächsten Tasks zeigt. Dadurch wechselt die CPU automatisch zum nächsten Task. Dann setzt man Bit 0 im letzten DWORD jeder TSS (Debug-Trap-Bit), wodurch jedes mal eine Debugexception nach einem TaskSwich ausgelöst wird, in der man dann das TaskGate auf den nächsten Task zeigen lässt. Diese Methode ist allerdings sehr kompliziert, man kommt dennoch nicht um etwas Software Scheduling herum, und ausprobiert habe ich es auch noch nicht.
+Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardware ausführen zu lassen. Dafür muss man den PIT-Interrupt als Task-Gate anlegen, die auf das TSS des nächsten Tasks zeigt. Dadurch wechselt die CPU automatisch zum nächsten Task. Dann setzt man Bit 0 im letzten DWORD jeder TSS (Debug-Trap-Bit), wodurch jedes mal eine Debugexception nach einem Task-Swich ausgelöst wird, in der man dann das Task-Gate auf den nächsten Task zeigen lässt. Diese Methode ist allerdings sehr kompliziert, man kommt dennoch nicht um etwas Software-Scheduling herum, und ausprobiert habe ich es auch noch nicht.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6838/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6838; parent 6836; 2010-01-08T19:48:34Z -->
+<!-- MediaWiki page 2158; revision 6839; parent 6838; 2010-01-08T20:18:05Z -->
