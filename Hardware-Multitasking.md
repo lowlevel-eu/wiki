@@ -18,7 +18,7 @@ Die dynamischen Felder werden von der CPU automaitsch beim TaskWechsel mit den e
 
 struct tss task_state_segment; gdt_create_descriptor ( n, //die Nummer des Descriptor-Eintrags (DWORD) &task_state_segment, //Adresse sizeof(struct tss)-1, //Länge 0, //flags GDT_TYPE_TSS); //access \</c\>
 
-## Taskwechsel
+### Taskwechsel
 
 Für einen Taskwechsel (TaskSwitch) springt man mit einem jmp-Befehl zum Selektor der TSS, der dem neuen Task zugeordnet ist:
 
@@ -174,6 +174,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6838/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6836; parent 6835; 2010-01-08T19:38:00Z -->
+<!-- MediaWiki page 2158; revision 6838; parent 6836; 2010-01-08T19:48:34Z -->
