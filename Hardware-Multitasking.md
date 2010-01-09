@@ -117,7 +117,9 @@ Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehme
 
 \<c\> DWORD current_task_id=0;
 
-void irq_pit(DWORD cs, DWORD eflags) //das hier ist ein Interupt {
+1.  define interrupt_return asm("leave; iret")
+
+void isr_pit() {
 
       current_task_id++;
       while(task_table[current_task_id].present==0)
@@ -134,9 +136,9 @@ void irq_pit(DWORD cs, DWORD eflags) //das hier ist ein Interupt {
 
  : "a" (8\*(current_task_id + TSS_SEL_BASE));
 
-     asm("leave; iret");     //nicht vergessen: Interrupt!
+     interrupt_return;
 
-} \</c\> Dieser Code kann natürlich noch erweitert werden, zum Beispiel, wenn man jedem Task eine unterschiedliche Priorität zuweist. Eventuell ist hier die AT&T-Syntax falsch, da ich mit dieser nicht ganz vertraut bin.
+} \</c\> Dieser Code kann natürlich noch erweitert werden, zum Beispiel, wenn man jedem Task eine unterschiedliche Priorität zuweist. *Eventuell ist hier die AT&T-Syntax falsch, da ich mit dieser nicht ganz vertraut bin. Außerdem ist dieses als normale C-Prozedur getarnte Version einer ISR etwas unschön.*
 
 ### Schritt 5: Multitasking initalisieren
 
@@ -174,6 +176,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6839; parent 6838; 2010-01-08T20:18:05Z -->
+<!-- MediaWiki page 2158; revision 6843; parent 6839; 2010-01-09T11:35:43Z -->
