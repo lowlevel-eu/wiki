@@ -30,10 +30,10 @@ Die Segmentregister sind aber nach wie vor nur 16 Bit breit und somit wird der P
 Wie im vorigen Abschnitt erwähnt, stehen im Protected Mode in den Segmentregistern Selektoren, die auf Deskriptortabellen verweisen. Sie haben den folgenden Aufbau:
 
 | Bits | Wert | Bedeutung |
-| ------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| -------- | -------- | ------------------------------------------------------------------------------------------------------- |
 | 0 - 1 | 0x3 | RPL (Requested Privilege Level). Gibt die Privilegstufe (den Ring) des zu selektierenden Segments an |
 | 2 | 0x4 | Bestimmt, ob ein Eintrag in der GDT (Bit nicht gesetzt) oder in der LDT (Bit gesetzt) ausgewählt wird |
-| 3 | 0xfff8 | Nummer des Eintrags in der GDT bzw. LDT (ab Null gezählt) |
+| 3 - 15 | 0xfff8 | Nummer des Eintrags in der GDT bzw. LDT (ab Null gezählt) |
 
 Um also nach ds das Segment zu laden, das durch den fünften GDT-Eintrag beschrieben wird, und zwar als Userspace-Segment (Ring 3), könnte man folgenden Code verwenden: \<asm\>mov \$0x23, %ax mov %ax, %ds\</asm\>
 
@@ -146,6 +146,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 6672; parent 6438; 2009-12-31T23:40:09Z -->
+<!-- MediaWiki page 1661; revision 6851; parent 6672; 2010-01-09T18:38:26Z -->
