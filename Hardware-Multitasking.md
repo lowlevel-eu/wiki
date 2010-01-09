@@ -8,11 +8,8 @@ Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Har
 
 Hardware-Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") beschrieben. Man kann die Felder dabei in zwei Kategorien einteilen:
 
-1.  **statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Adress, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, wenn Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Adress kann Null gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
-
-<!-- -->
-
-1.  **dynamische Felder** müssen auch initalisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX-EDX, CS-GS/SS, EFLAGS, ESI/EDI/EBP/ESP und Previous Task Link.
+1.  **statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Address, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, wenn Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Address kann Null gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
+2.  **dynamische Felder** müssen auch initalisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX-EDX, CS-GS/SS, EFLAGS, ESI/EDI/EBP/ESP und Previous Task Link.
 
 Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch sie bei einem Taskwechsel weiß, wo die (dynamischen) Registerwerte gespeichert werden sollen, damit diese beim Wiederaufruf des Tasks unverändert sind. Folgender Code legt ein TSS an und erzeugt dann den Descriptor in der GDT, der darauf zeigt.
 
@@ -180,6 +177,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6848; parent 6847; 2010-01-09T14:22:49Z -->
+<!-- MediaWiki page 2158; revision 6850; parent 6848; 2010-01-09T14:44:15Z -->
