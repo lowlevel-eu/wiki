@@ -75,7 +75,7 @@ Das Interrupt Command Register wird verwendet um IPIs zu versenden.
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 63-56 | Destination Field |
 | 55-20 | Reserviert |
-| 19-18 | Destination Shorthand<br>00b = No shorthand<br>01b = Self<br>10b = All Including Self<br>11b = All excluding Selg |
+| 19-18 | Destination Shorthand<br>00b = No shorthand<br>01b = Self<br>10b = All Including Self<br>11b = All excluding Self |
 | 17-16 | Reserviert |
 | 15 | Trigger Mode<br>0b = Edge<br>1b = Level |
 | 14 | Level<br>0b = De-Assert<br>1b = Assert |
@@ -231,6 +231,6 @@ schlussKalib:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6844/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 4811; parent 4381; 2009-07-30T00:28:15Z -->
+<!-- MediaWiki page 1581; revision 6844; parent 4811; 2010-01-09T11:56:40Z -->
