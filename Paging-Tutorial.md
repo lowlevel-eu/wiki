@@ -71,6 +71,23 @@ Und nun zum Hauptteil des Tutorials. Auch hier brauchen wir zuerst ein paar Kons
 
 \</freebasic\>
 
+und in C: \<C\>
+
+    // constants for all Paging-tables
+    #define Page_present &b1
+    #define Page_writeable &b10
+    #define Page_noUsermodeAccess &b100
+    #define Page_noWriteThrough &b1000
+    #define Page_noCache &b10000
+
+    // constants only for the PageDirectory
+    #define Page_bigPage &b10000000
+
+    // constants only for the PageTable
+    #define Page_noTLBupdate &b100000000
+
+\</C\>
+
 Die benutzen wir später um die Flags der Tabellen-Einträge zu setzen.
 
 \<freebasic\>
@@ -206,6 +223,6 @@ Happy Coding, TheThing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1850/index.html)
 
-<!-- MediaWiki page 1850; revision 6147; parent 5448; 2009-10-31T22:37:35Z -->
+<!-- MediaWiki page 1850; revision 6877; parent 6147; 2010-01-11T00:16:18Z -->
