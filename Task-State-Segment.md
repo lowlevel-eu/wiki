@@ -1,5 +1,27 @@
 # Task State Segment
 
+Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einem Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Um ein TSS für den Ringwechsel benutzen zu können, legt man einen TSS-Descriptor in der GDT an, der auf das TSS zeigt. Der Selektor dieses Descriptors muss dann mit *ltr \<Selektor\>* ins Taskregister der CPU geladen werden. Man kann das TSS auch benutzen, um [Hardware Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking") zu realisieren.
+
+  
+
+### Aufbau - TSS-Deskriptor
+
+**Task State Segment Deskriptor**
+
+| 31-24 | 23 | 21-22 | 20 | 19-16 | 15 | 14-13 | 12 | 11-8 | 7-0 |
+| -------------------- | ----- | ------- | ----- | ------------- | ----- | ------- | ----- | ------ | -------------------- |
+| Basisadresse 31-24 | G | 0 | AVL | Limit 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
+
+| 31-16 | 15-0 |
+| ------------------- | ------------ |
+| Basisadresse 15-0 | Limit 15-0 |
+
+- *Type* - Deskriptor Typ - Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
+
+  
+
+## Aufbau TSS
+
 **Aufbau - Task State Segment**
 
 | Offset | 31-16 | 0-15 |
@@ -31,26 +53,19 @@
 | 0x60 |  | LDT Segment Selektor |
 | 0x64 | I/O Map Base Address |  |
 
-Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einem Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Man kann das TSS auch benutzen, um [Hardware-Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu realisieren. Dafür wird der TSS-Deskriptor mit einem Longjump angesprungen. Dabei werden auch andere Register (wie EIP) geladen. Um ein TSS für den Ringwechsel benutzen zu können, muss es vorher mit *ltr \<Selektor\>* geladen werden.
+Man kann die Felder des TSS in zwei Kategorien einteilen:
 
-  
+1.  **statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Address, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, wenn Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Address kann Null gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
+2.  **dynamische Felder** müssen auch initalisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX-EDX, CS-GS/SS, EFLAGS, ESI/EDI/EBP/ESP und Previous Task Link.
 
-### Aufbau - TSS-Deskriptor
+Auch wenn man [Hardware Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking") nicht verwendet, muss mindestens ein TSS angelegt und dessen Selektor im Taskregister gespeichert worden sein. Denn die CPU lädt bei einem Ringwechsel einen neuen Stack damit weniger privilligierte Software nicht höher privilligierte Software durch einen Stackfault zum Absturtz bringt. Dafür lädt die CPU die Felder ss0 (bzw ss1 oder ss2) sowie esp0 (bzw. esp1 oder esp2) als neuen Stack. Ein Stackwechsel wird ausgeführt, wenn ein Programm die Kontrolle an ein anderes übegibt durch...
 
-**Task State Segment Deskriptor**
-
-| 31-24 | 23 | 21-22 | 20 | 19-16 | 15 | 14-13 | 12 | 11-8 | 7-0 |
-| -------------------- | ----- | ------- | ----- | ------------- | ----- | ------- | ----- | ------ | -------------------- |
-| Basisadresse 31-24 | G | 0 | AVL | Limit 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
-
-| 31-16 | 15-0 |
-| ------------------- | ------------ |
-| Basisadresse 15-0 | Limit 15-0 |
-
-- *Type* - Deskriptor Typ - Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
+- einen [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
+- eine Call Gate
+- eine Task Gate
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5338/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6881/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 5338; parent 4831; 2009-08-06T16:29:17Z -->
+<!-- MediaWiki page 1599; revision 6881; parent 5338; 2010-01-11T19:24:15Z -->
