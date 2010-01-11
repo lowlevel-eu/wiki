@@ -36,7 +36,7 @@ Um den "Schaden" so gering wie möglich zu halten, haben die IBM Entwickler nich
 
 ## Einschalten
 
-Nachdem wir dir Ursache und Notwendigkeit des A20 Gates geklärt haben, wenden wir uns nun dem Einschalten des Gates zu. Dazu ist lediglich ein minimales Wissen über den Tastatur-Controller notwendig, welches ich natürlich nicht für mich behalten werde. :)
+Nachdem wir die Ursache und Notwendigkeit des A20 Gates geklärt haben, wenden wir uns nun dem Einschalten des Gates zu. Dazu ist lediglich ein minimales Wissen über den Tastatur-Controller notwendig, welches ich natürlich nicht für mich behalten werde. :)
 
 Zuerst einmal sollte klar sein, dass es **zwei** Controller gibt, die für die Tastatur zuständig sind. Zum einen der eigentliche Controller auf dem Mainboard und einen weiteren, der direkt in der Tastatur integriert ist. Um die beiden besser auseinander halten zu können, nennen wir den Tastatur-Controller auf dem Mainboard auch einfach Tastatur-Controller und den Controller in der Tastatur selbst betiteln wir einfach mal als Tastatur-Chip.
 
@@ -157,6 +157,6 @@ Status: 0x01 Keyboard im Secure Mode
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 6031; parent 5768; 2009-10-12T21:42:14Z -->
+<!-- MediaWiki page 1462; revision 6878; parent 6031; 2010-01-11T08:42:41Z -->
