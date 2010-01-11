@@ -1,10 +1,10 @@
 # Task State Segment
 
-Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einem Ringwechsel den richtigen [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") zu laden. Um ein TSS für den Ringwechsel benutzen zu können, legt man einen TSS-Descriptor in der GDT an, der auf das TSS zeigt. Der Selektor dieses Descriptors muss dann mit *ltr \<Selektor\>* ins Taskregister der CPU geladen werden. Man kann das TSS auch benutzen, um [Hardware Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking") zu realisieren.
+Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Informationen über einen Task zu speichern. Eigentlich vor allem für [Hardware-Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking") verwendet, benötigt man es jedoch auch für Software-Multitasking, um der CPU im Falle eines Ringwechsels von einem niedriger privilegierten [Ring](https://github.com/lowlevel-eu/wiki/wiki/Ring "Ring") in einen höheren einen Stack zu übergeben. Um ein TSS benutzen zu können, legt man einen entsprechenden Deskriptor in der GDT an, der darauf zeigt. Der Selektor dieses Deskriptors muss dann mit *ltr \<Selektor\>* ins Taskregister der CPU geladen werden.
 
   
 
-### Aufbau - TSS-Deskriptor
+### Aufbau &#150; TSS-Deskriptor
 
 **Task State Segment Deskriptor**
 
@@ -16,13 +16,13 @@ Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um bei einem R
 | ------------------- | ------------ |
 | Basisadresse 15-0 | Limit 15-0 |
 
-- *Type* - Deskriptor Typ - Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
+- *Type* &#150; Deskriptor Typ &#150; Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
 
   
 
 ## Aufbau TSS
 
-**Aufbau - Task State Segment**
+**Aufbau &#150; Task State Segment**
 
 | Offset | 31-16 | 0-15 |
 | -------- | ---------------------- | ---------------------- |
@@ -58,7 +58,7 @@ Man kann die Felder des TSS in zwei Kategorien einteilen:
 1.  **statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Address, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, wenn Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Address kann Null gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
 2.  **dynamische Felder** müssen auch initalisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX-EDX, CS-GS/SS, EFLAGS, ESI/EDI/EBP/ESP und Previous Task Link.
 
-Auch wenn man [Hardware Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking") nicht verwendet, muss mindestens ein TSS angelegt und dessen Selektor im Taskregister gespeichert worden sein. Denn die CPU lädt bei einem Ringwechsel einen neuen Stack damit weniger privilligierte Software nicht höher privilligierte Software durch einen Stackfault zum Absturtz bringt. Dafür lädt die CPU die Felder ss0 (bzw ss1 oder ss2) sowie esp0 (bzw. esp1 oder esp2) als neuen Stack. Ein Stackwechsel wird ausgeführt, wenn ein Programm die Kontrolle an ein anderes übegibt durch...
+Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS angelegt und dessen Selektor im Taskregister gespeichert worden sein. Denn die CPU lädt bei einem Ringwechsel einen neuen Stack damit weniger privilligierte Software nicht höher privilligierte Software durch einen Stackfault zum Absturtz bringt. Dafür lädt die CPU die Felder ss0 (bzw ss1 oder ss2) sowie esp0 (bzw. esp1 oder esp2) als neuen Stack. Ein Stackwechsel wird ausgeführt, wenn ein Programm die Kontrolle an ein anderes übergibt durch...
 
 - einen [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
 - eine Call Gate
@@ -66,6 +66,6 @@ Auch wenn man [Hardware Multitasking](https://github.com/lowlevel-eu/wiki/wiki/H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6881/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6883/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 6881; parent 5338; 2010-01-11T19:24:15Z -->
+<!-- MediaWiki page 1599; revision 6883; parent 6881; 2010-01-11T20:31:17Z -->
