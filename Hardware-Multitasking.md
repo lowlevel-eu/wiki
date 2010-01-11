@@ -6,12 +6,11 @@ Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Har
 
 ### Das Task State Segment
 
-Hardware-Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") beschrieben. Man kann die Felder dabei in zwei Kategorien einteilen:
+Hardware-Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") beschrieben.
 
-1.  **statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Address, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, wenn Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Address kann Null gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
-2.  **dynamische Felder** müssen auch initalisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX-EDX, CS-GS/SS, EFLAGS, ESI/EDI/EBP/ESP und Previous Task Link.
+Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch sie bei einem Taskwechsel weiß, wo die (dynamischen) Registerwerte gespeichert werden sollen, damit diese beim Wiederaufruf des Tasks unverändert sind.
 
-Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch sie bei einem Taskwechsel weiß, wo die (dynamischen) Registerwerte gespeichert werden sollen, damit diese beim Wiederaufruf des Tasks unverändert sind. Folgender Code legt ein TSS an und erzeugt dann den Descriptor in der GDT, der darauf zeigt.
+Folgender Code legt ein TSS an und erzeugt dann den Descriptor in der GDT, der darauf zeigt.
 
 \<c\>
 
@@ -114,13 +113,11 @@ Der Scheduler wird diese Tabelle später immer wieder durchlaufen. Wenn er ein p
 
 ### Schritt 4: Der Scheduler
 
-Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehmen. Ich gehe dabei davon aus, dass in deinem OS bereits PIT und PIC initalisiert worden sind, denn denn immer wenn der PIT „feuert“, dann wechselt der Scheduler zum nächsten Task. Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der aktiv ist (present-Feld ist nicht null)
+Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehmen. Ich gehe dabei davon aus, dass in deinem OS bereits PIT und PIC initalisiert worden sind, denn in der [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") des [PITs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") wird der Schedulercode ausgeführt.
 
-\<c\> DWORD current_task_id=0;
+Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der aktiv ist (present-Feld ist nicht null)
 
-1.  define interrupt_return asm("leave; iret")
-
-void isr_pit() {
+\<c\> DWORD current_task_id=0; WORD tss_sel; void scheduler() {
 
       current_task_id++;
       while(task_table[current_task_id].present==0)
@@ -128,18 +125,23 @@ void isr_pit() {
          current_task_id++;
          if (current_task_id = NUM_TASKS]) current_task_id=0;
       }
+      tss_sel = current_task_id + TSS_SEL_BASE;
 
-\</c\> Jetzt muss zu diesem Task geswechselt werden, indem zu dessen TSS-Selektor gesprungen wird: \<c\>
+} \</c\> Jetzt muss zu diesem Task geswechselt werden, indem zu dessen TSS-Selektor gesprungen wird. Es empfiehlt sich diesen Teil in Assembler zu schreiben, da die ISR auch aus einem Assemblerstub heraus aufgerufen werden sollte. Dieser sieht dann so aus:
 
-     asm("mov %%ax, *$lf+5;"
-         "1:"
-         "ltr $1234:$1234;" :
+\<asm\> extern \_tss_sel extern \_scheduler global \_isr_pit \_isr_pit:
 
- : "a" (8\*(current_task_id + TSS_SEL_BASE));
+     pusha
+     call _scheduler
+     mov ax, [_tss_sel]
+     mov [opcode_hack+5], ax
+     popa
+     opcode_hack:
+     jmp 1234 : 1234
 
-     interrupt_return;
+iret \</asm\>
 
-} \</c\> Dieser Code kann natürlich noch erweitert werden, zum Beispiel, wenn man jedem Task eine unterschiedliche Priorität zuweist. *Eventuell ist hier die AT&T-Syntax falsch, da ich mit dieser nicht ganz vertraut bin. Außerdem ist dieses als normale C-Prozedur getarnte Version einer ISR etwas unschön.*
+Jetzt musst du nur noch "isr_pit" in deine IDT als PIT Interrupthandler eintragen, damit der Scheduler auch bei jedem Tick aufgerufen wird und zum nächsten Task wechselt.
 
 ### Schritt 5: Multitasking initalisieren
 
@@ -177,6 +179,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6882/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6864; parent 6850; 2010-01-09T22:35:35Z -->
+<!-- MediaWiki page 2158; revision 6882; parent 6864; 2010-01-11T19:42:47Z -->
