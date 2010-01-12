@@ -1,6 +1,6 @@
 # Task State Segment
 
-Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Informationen über einen Task zu speichern. Eigentlich vor allem für [Hardware-Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware Multitasking") verwendet, benötigt man es jedoch auch für Software-Multitasking, um der CPU im Falle eines Ringwechsels von einem niedriger privilegierten [Ring](https://github.com/lowlevel-eu/wiki/wiki/Ring "Ring") in einen höheren einen Stack zu übergeben. Um ein TSS benutzen zu können, legt man einen entsprechenden Deskriptor in der GDT an, der darauf zeigt. Der Selektor dieses Deskriptors muss dann mit *ltr \<Selektor\>* ins Taskregister der CPU geladen werden.
+Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Informationen über einen Task zu speichern. Eigentlich vor allem für [Hardware-Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking "Hardware-Multitasking") verwendet, benötigt man es jedoch auch für Software-Multitasking, um der CPU im Falle eines Ringwechsels von einem niedriger privilegierten [Ring](https://github.com/lowlevel-eu/wiki/wiki/Ring "Ring") in einen höheren einen Stack zu übergeben. Um ein TSS benutzen zu können, legt man einen entsprechenden Deskriptor in der GDT an, der darauf zeigt. Der Selektor dieses Deskriptors muss dann mit *ltr \<Selektor\>* ins Taskregister der CPU geladen werden.
 
   
 
@@ -66,6 +66,6 @@ Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS ang
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6883/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6888/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 6883; parent 6881; 2010-01-11T20:31:17Z -->
+<!-- MediaWiki page 1599; revision 6888; parent 6883; 2010-01-12T10:51:36Z -->
