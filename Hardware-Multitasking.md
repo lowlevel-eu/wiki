@@ -179,6 +179,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6882/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6884/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6882; parent 6864; 2010-01-11T19:42:47Z -->
+<!-- MediaWiki page 2158; revision 6884; parent 6882; 2010-01-12T08:29:58Z -->
