@@ -5,8 +5,8 @@ Bei Logical Block Addressing (Logische Block Adressierung) werden Sektoren von M
 Umrechnung von LBA zu [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS"):
 
 | Abkürzung | Bedeutung |
-| ----------- | ---------------------------------- |
-| mS | Anzahl der Sektoren pro Zylinder |
+| ----------- | ------------------------------ |
+| mS | Anzahl der Sektoren pro Spur |
 | mH | Anzahl der Köpfe |
 | S | Sektor |
 | H | Kopf |
@@ -32,6 +32,6 @@ inc dx  ; Den Rest um 1 erhöhen mov \[tmpc\], dl ; Und ebenfalls sichern\</as
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
 
-<!-- MediaWiki page 1442; revision 6190; parent 6189; 2009-11-06T19:52:49Z -->
+<!-- MediaWiki page 1442; revision 6892; parent 6190; 2010-01-13T20:15:39Z -->
