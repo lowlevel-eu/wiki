@@ -78,7 +78,7 @@ Was meinst du damit? Soll das eine Anleitung werden, wie man Datenblätter ließ
 
 Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgehoben
 
-- Bochs-Debugger - Die einzelnen Befehle, z.b Register-u.Speicherdumb, Breakpoints, usw.
+- Bochs-Debugger &#150; Die einzelnen Befehle, z. B. Register- und Speicherdump, Breakpoints, usw.
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -90,6 +90,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6890; parent 6820; 2010-01-13T19:25:12Z -->
+<!-- MediaWiki page 1518; revision 6891; parent 6890; 2010-01-13T19:28:54Z -->
