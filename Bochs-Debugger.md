@@ -76,10 +76,10 @@ Einzelschritte ausführen lassen.
 
 ## Weblinks
 
-- \[[aller verfügbaren Befehle (Englisch)](http://bochs.sourceforge.net/doc/docbook/user/internal-debugger.html%7CListe)\]
+- <http://bochs.sourceforge.net/doc/docbook/user/internal-debugger.html> Liste aller verfügbaren Befehle (Englisch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2163/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2163/index.html)
 
-<!-- MediaWiki page 2163; revision 6896; parent 0; 2010-01-16T17:28:54Z -->
+<!-- MediaWiki page 2163; revision 6898; parent 6896; 2010-01-16T17:32:07Z -->
