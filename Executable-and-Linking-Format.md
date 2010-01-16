@@ -267,7 +267,7 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ## Siehe auch
 
-[ELF Tutorial](https://github.com/lowlevel-eu/wiki/wiki/ELF-Tutorial "ELF Tutorial")
+[ELF-Tutorial](https://github.com/lowlevel-eu/wiki/wiki/ELF-Tutorial "ELF-Tutorial")
 
 ## Links
 
@@ -276,6 +276,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 6598; parent 5069; 2009-12-23T09:32:47Z -->
+<!-- MediaWiki page 1528; revision 6912; parent 6598; 2010-01-16T21:36:17Z -->
