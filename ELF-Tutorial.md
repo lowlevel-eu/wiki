@@ -11,13 +11,13 @@ Meine Wahl für das Format fiel damals auf ELF, das liegt an verschiedenen Dinge
 - Viele andere OS-Projekte nutzen es, daher bekommt man Hilfe
 - Linux benutzt es ;)
 
-Auch hier wird vorrausgesetzt, das euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von GRUB als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
+Auch hier wird vorausgesetzt, dass euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
 
   
 
 ## Hinweis
 
-Bevor es richtig los geht, zwei Hinweise: Der Code in diesem Tutorial ist in [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") geschrieben und die Funktionsweise, die hier erklärt wird gilt nur für den 32-Bit-Modus.
+Bevor es richtig los geht, zwei Hinweise: Der Code in diesem Tutorial ist in [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") geschrieben und die Funktionsweise, die hier erklärt wird, gilt nur für den 32-Bit-Modus.
 
   
 
@@ -28,7 +28,7 @@ Wie immer lassen wir uns erstmal alles durch den Kopf gehen, bevor wir Code schr
   
 **Kümmern wir uns einmal um die erste Frage:**
 
-ELF-Dateien haben einen ELF-Header, der Dinge wie eine "Magic-Number" (zur Identifizierung) enthält. Da ELF ein plattformübergreifendes Format ist, sind hier auch einige wichtige Angaben gespeichert, z.B. für welche Architektur diese Datei gedacht ist. Der ELF-Header liegt immer direkt am Anfang einer ELF-Datei.
+ELF-Dateien haben einen ELF-Header, der Dinge wie eine "Magic-Number" (zur Identifizierung) enthält. Da ELF ein plattformübergreifendes Format ist, sind hier auch einige wichtige Angaben gespeichert, z. B. für welche Architektur diese Datei gedacht ist. Der ELF-Header liegt immer direkt am Anfang einer ELF-Datei.
 
   
 **Nun zur zweiten Frage:**
@@ -40,7 +40,7 @@ ELF-Dateien können auch einen Section-Header haben, der ist für uns aber unint
   
 **Und jetzt die dritte Frage:**
 
-Das Feld "e_entry" im ELF-Header gibt die virtuelle Adresse an, an der der ausführbare Code später liegt. Wenn wir einen Task erstellen, geben wir ihm einfach diesen Wert als EIP-Register. Bei Linux beträgt dieser Wert 0x805F540, der ausführbare Code liegt also ungefähr bei 128 MB. Aber dank Paging braucht der PC gar nicht so viel RAM.
+Das Feld "e_entry" im ELF-Header gibt die virtuelle Adresse an, an der der ausführbare Code später liegt. Wenn wir einen Task erstellen, geben wir ihm einfach diesen Wert als EIP-Register. Bei Linux beträgt dieser Wert meist 0x805F540, der ausführbare Code liegt also ungefähr bei 128 MB. Aber dank Paging braucht der PC gar nicht so viel RAM.
 
 ## Weitere Überlegungen
 
@@ -61,7 +61,7 @@ Zuletzt noch eine Routine, die zuerst die Check-Routine aufruft, dann die Progra
 
 ## Typen und Konstanten
 
-Zuerst ein paar Definitionen: In FreeBaisc: \<freebasic\>
+Zuerst ein paar Definitionen: In FreeBasic: \<freebasic\>
 
     type Elf32_Addr  as UINTEGER
     type Elf32_Half  as USHORT
@@ -76,7 +76,7 @@ In C: \<c\> typedef uint32_t Elf32_Addr; typedef uint16_t ELF32_Half; typedef ui
 
 Beginnen wir nun mal mit dem ELF-Header.
 
-Wieder Freebasic: \<freebasic\>
+Wieder FreeBasic: \<freebasic\>
 
     type ELF_IDENT_HEADER
         EI_MAGIC as UINTEGER                       '// ELF-Magic Number
@@ -120,9 +120,9 @@ Und in C: \<c\> struct ELF_IDENT_HEADER {
 } \</c\>
 
   
-So. Wofür ist jetzt "ELF_IDENT_HEADER" gut? Ganz einfach, er gibt uns erst mal ein paar grundlegende Infos, z.B. ob die Datei Little oder Big Endian ist. Das ist wichtig, da der Rest der Datei diesen Regeln folgt! (Eigentlich ist dieser Header etwas anders eingeteilt, aber der Einfachheit halber habe ich das mal so gelöst. Wie es wirklich richtig ist kann man in den ELF-Spezifikationen nachlesen)
+So. Wofür ist jetzt "ELF_IDENT_HEADER" gut? Ganz einfach, er gibt uns erst mal ein paar grundlegende Infos, z. B. ob die Datei Little oder Big Endian ist. Das ist wichtig, da der Rest der Datei diesen Regeln folgt! (Eigentlich ist dieser Header etwas anders eingeteilt, aber der Einfachheit halber habe ich das mal so gelöst. Wie es wirklich richtig ist, kann man in den ELF-Spezifikationen nachlesen)
 
-So, jetzt überlegen wir mal, welche Teile des Headers außer dem Ident-Header für uns wichtig sind. Naja, e_type auf jeden Fall, denn wir wollen nur ausführbare Dateien ausführen. e_machine sollte auch überprüft werden, damit wir nicht Code ausführen der für einen anderen Prozessor gedacht war. e_version zeigt uns, das wir eine aktuelle ELF-Datei vor uns haben, also auch wichtig. e_entry ist wohl das wichtigste, das ist unser Einsprungpunkt in den Code. e_phoff, e_phentsize und e_phnum sind wichtig, da sie uns sagen wie und wo wir die Segmente der ELF-Datei in den Speicher kopieren müssen. Der Rest ist für uns momentan noch unwichtig.
+So, jetzt überlegen wir mal, welche Teile des Headers außer dem Ident-Header für uns wichtig sind. Naja, e_type auf jeden Fall, denn wir wollen nur ausführbare Dateien ausführen. e_machine sollte auch überprüft werden, damit wir nicht Code ausführen, der für einen anderen Prozessor gedacht war. e_version zeigt uns, dass wir eine aktuelle ELF-Datei vor uns haben, also auch wichtig. e_entry ist wohl das wichtigste, das ist unser Einsprungpunkt in den Code. e_phoff, e_phentsize und e_phnum sind wichtig, da sie uns sagen, wie und wo wir die Segmente der ELF-Datei in den Speicher kopieren müssen. Der Rest ist für uns momentan noch unwichtig.
 
 Nun schmeiße ich euch wieder ein paar Konstanten an den Kopf: \<freebasic\>
 
@@ -142,7 +142,7 @@ Nun schmeiße ich euch wieder ein paar Konstanten an den Kopf: \<freebasic\>
 
 \</freebasic\>
 
-Die sind alle für den Ident-Header. Zuerst die Magic-Number, dann die Klasse (gibt nur an ob wir eine 32bit oder eine 64bit ELF-Datei vor uns haben) und dann die Angabe ob wir Little oder Big Endian haben. Die werden später wieder verwendet.
+Die sind alle für den Ident-Header. Zuerst die Magic-Number, dann die Klasse (gibt nur an ob wir eine 32-Bit- oder eine 64-Bit-ELF-Datei vor uns haben) und dann die Angabe, ob wir Little oder Big Endian haben. Die werden später wieder verwendet.
 
 \<freebasic\>
 
@@ -168,7 +168,7 @@ Die sind alle für den Ident-Header. Zuerst die Magic-Number, dann die Klasse (g
 
 \</freebasic\>
 
-So, die sind für den ELF-Header. Zuerst die Konstanten für den Dateityp, dann für die Architektur. Und schließlich die Konstanten, damit wir erkennen das es eine aktuelle Version des ELF-Formats ist.
+So, die sind für den ELF-Header. Zuerst die Konstanten für den Dateityp, dann für die Architektur. Und schließlich die Konstanten, damit wir erkennen, dass es eine aktuelle Version des ELF-Formats ist.
 
 So, was fehlt noch? Achja, richtig, der Program-Header. Los gehts. \<freebasic\>
 
@@ -230,7 +230,7 @@ Jetzt gehts richtig los.
 
 \</freebasic\>
 
-Eigentlich müsste man hier nicht wirklich erklären, oder? Ich tus trotzdem. Also, wir geben dieser Funktion einen ELF-Header. Zuerst überprüfen wir den MAGIC-String (0x7f, 'E', 'L', 'F'). Dann stellen wir sicher, das die Datei auch zum ausführen gedacht ist, anschließend prüfen wir, ob es auch die richtige Architektur ist. Dann sehen wir nach, das wir ein 32bit ELF-File haben, sehen nach dem richtigen Datenformat (ihr wisst schon, Endian...) und zum Schluss überprüfen wir die Dateiversion.
+Eigentlich müsste man hier nicht wirklich erklären, oder? Ich tus trotzdem. Also, wir geben dieser Funktion einen ELF-Header. Zuerst überprüfen wir den MAGIC-String (0x7f, 'E', 'L', 'F'). Dann stellen wir sicher, dass die Datei auch zum Ausführen gedacht ist, anschließend prüfen wir, ob es auch die richtige Architektur ist. Dann sehen wir nach, dass wir eine 32-Bit-ELF-Datei haben, schauen nach dem richtigen Datenformat (ihr wisst schon, Endian...) und zum Schluss überprüfen wir die Dateiversion.
 
 Sollte irgendeiner dieser Werte nicht stimmen, können wir die Datei nicht ausführen! Daher geben wir einen Fehlercode zurück, den man später auswerten könnte. Ist alles glatt gelaufen, geben wir TRUE zurück.
 
@@ -268,7 +268,7 @@ Und nun zum wichtigsten, aber auch gemeinsten Code: \<freebasic\>
 
 \</freebasic\>
 
-Die Funktion kümmert sich um die Erstellung eines Tasks. Dazu geben wir ihm die gewünschte Task-ID und die Priorität (kann man natürlich auch weglassen), und natürlich einen Pointer auf die ELF-Datei (kriegt ihr von GRUB in der Multiboot-Info-Struktur).
+Die Funktion kümmert sich um die Erstellung eines Tasks. Dazu geben wir ihm die gewünschte Task-ID und die Priorität (kann man natürlich auch weglassen), und natürlich einen Pointer auf die ELF-Datei (bekommt ihr von GRUB in der Multiboot-Info-Struktur).
 
 Als erstes lassen wir natürlich den ELF-Header prüfen. Ist alles glatt gelaufen, machen wir weiter.
 
@@ -279,11 +279,11 @@ Dann überprüfen wir, ob das ein PT_LOAD-Segment ist. Wenn nicht, machen wir mi
 Zu guter Letzt erstellen wir noch den Task mit e_entry als Startadresse und fertig.
 
   
-Natürlich ist der Code so noch nicht "fertig"! Wenn ich das in einem "fertigen" Kernel sehen sollte, kriegt der Programmierer was zu hören. Wir schummeln in diesem Code nämlich. Erstens kopieren wir die Segmente nicht, sondern wir mappen sie nur. Zweitens teilt sich der Kernel hier den virtuellen Adressraum mit seinen Tasks. Drittens ignorieren wir, das ein Segment im Speicher eventuell größer sein muss als in der Datei, den Rest müsste man mit Nullen auffüllen. Und viertens hat der Task hier Kernelrechte.
+Natürlich ist der Code so noch nicht "fertig"! Wenn ich das in einem "fertigen" Kernel sehen sollte, bekommt der Programmierer was zu hören. Wir schummeln in diesem Code nämlich. Erstens kopieren wir die Segmente nicht, sondern wir mappen sie nur. Zweitens teilt sich der Kernel hier den virtuellen Adressraum mit seinen Tasks. Drittens ignorieren wir, das ein Segment im Speicher eventuell größer sein muss als in der Datei, den Rest müsste man mit Nullen auffüllen. Und viertens hat der Task hier Kernelrechte.
 
-Also hinsetzen und Code verbessern! Das hier soll nur erklären wie es geht, übernehmt den Code so nicht! Für jeden Task sollte ein eigenes PageDir erzeugt werden, und die oben genannten Kritikpunkte sollten verbessert werden. Vielleicht fragt ihr euch, warum ich es nicht gleich richtig gemacht habe. Naja, \*ähem\*, das liegt daran, dass mein Speichermanager nur Unfug treibt. Würde der funktionieren, hätte ich das von Anfang an anders umgesetzt. Vielleicht ändere ich dieses Tutorial noch, wenn alles läuft.
+Also hinsetzen und Code verbessern! Das hier soll nur erklären, wie es geht, übernehmt den Code so nicht! Für jeden Task sollte ein eigenes PageDir erzeugt werden, und die oben genannten Kritikpunkte sollten verbessert werden. Vielleicht fragt ihr euch, warum ich es nicht gleich richtig gemacht habe. Naja, \*ähem\*, das liegt daran, dass mein Speichermanager nur Unfug treibt. Würde der funktionieren, hätte ich das von Anfang an anders umgesetzt. Vielleicht ändere ich dieses Tutorial noch, wenn alles läuft.
 
-Also, ich hoffe es hat euch Spaß gemacht dieses Tutorial zu lesen. Wenn ihr Fragen habt, wie gesagt, stellt sie im Lowlevel-Forum, oder ihr werft mal einen Blick in die Spezifikationen.
+Also, ich hoffe, es hat euch Spaß gemacht, dieses Tutorial zu lesen. Wenn ihr Fragen habt, wie gesagt, stellt sie im Lowlevel-Forum, oder ihr werft mal einen Blick in die Spezifikationen.
 
 Kleiner Hinweis: Auch dieser Code stammt wieder aus meinem Kernel: <http://sourceforge.net/projects/frostkernel>
 
@@ -302,6 +302,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6570/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6570; parent 6569; 2009-12-17T15:21:16Z -->
+<!-- MediaWiki page 1854; revision 6913; parent 6570; 2010-01-16T21:47:58Z -->
