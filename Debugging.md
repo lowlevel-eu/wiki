@@ -22,7 +22,7 @@ Zudem ist ein Treiber für die serielle Schnittstelle sowohl im [Real Mode](http
 
 Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist es wichtig, die Registerinhalte vor der Exception zu kennen. Um an diese zu kommen, sind Debug-Funktionen in den Emulatoren ein wertvolles Werkzeug.
 
-Bei bochs kann dazu der integrierte Debugger benutzt werden.
+Bei bochs kann dazu der [integrierte Debugger](https://github.com/lowlevel-eu/wiki/wiki/Bochs-Debugger "Bochs Debugger") benutzt werden.
 
 QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen (siehe GNU Project Debugger und QEMU). Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den "-d"-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein "-d int", um alle Interrupts aufzuzeichnen. Dabei muss man aber ein wenig aufpassen, da ältere Versionen von QEMU bei einem Triplefault keinen Reset auslösen. Das heißt, er schreibt dann lauter GPFs in die Logdatei und diese wird dabei **sehr** groß. Man sollte den QEMU also möglichst schnell schließen, sobald ein Triplefault aufgetreten ist.
 
@@ -46,6 +46,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 6028; parent 5538; 2009-10-12T19:44:38Z -->
+<!-- MediaWiki page 1544; revision 6897; parent 6028; 2010-01-16T17:30:02Z -->
