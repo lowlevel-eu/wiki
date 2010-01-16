@@ -29,9 +29,7 @@ Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert
 - \[http://example.com externer Link\] - Bsp: "Das \[http://lowlevel.brainsware.org Lowlevel Wiki\] macht Spaß" wird zu: "Das [Lowlevel Wiki](http://lowlevel.brainsware.org) macht Spaß"
 - \[http://example.com\] - Bsp: "Siehe \[http://lowlevel.brainsware.org\]" wird zu: "Siehe [\[1\]](http://lowlevel.brainsware.org)"
 
-## Wikiformatierung unterdrücken
-
-Wenn man zum Beispiel Wikibefehle erklären will, oder einfach eine Kollision mit den Befehlen von Mediawiki hat, kann man das \<nowiki\>-Tag benutzen, um zu verhindern, dass Mediawiki den enthaltenen Text formatiert.
+  
 
 ## Listen
 
@@ -75,31 +73,34 @@ wird zu:
   2.  unterfoo2
 - bar
 
-### Diskussionsfäden
+## Tabellen
 
-Diskussionsfäden können mittels Listen ohne Auflistungszeichen relativ übersicht gestaltet werden. Zum Beispiel so:
+Tabellen werden immer durch ein "{\|" begonnen und mit "\|}" beendet. Dazwischen definiert man dann die einzelnen Reihen. Die Inhalte einer Reihe werden wiederrum durch "\|-" voneinander abgegrenzt. Jede Zelle selbst wird auf im Code auf eine eigene Zeile geschrieben, die mit "\|" beginnen muss, um anzuzeigen, dass nun eine neue Zelle der aktuellen Reihe beginnt. Außerdem kann man eine Überschriftenzelle erzeugen, die aber statt mit "\|" mit "!" beginnen muss.
 
-    : Also ich finde diese Diskussion verdient Antworten. --~~~~
-    :: Ich bin eine Antwort. --~~~~
-    ::: Ich bin eine mehrzeilige Antwort
-    ::: auf die Antwort. --~~~~
-    :: Ich bin auch wichtig. --~~~~
+Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem "{\|") diese mit dem Attribut {{prettytable}} zu versehen, um den [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien") treu zu bleiben. Außerdem sieht es einfach besser aus. Mit dem Attribut width='??%' kann man zudem festlegen, über wieviel Prozent der Seite sich die Tabelle erstrecken soll.
 
-Und das sieht so aus
+**Anzeige**
 
-Also ich finde diese Diskussion verdient Antworten. --Autor1 0:00, 1. Jan. 1900 (CEST)
+**Code**
 
-Ich bin eine Antwort. --Autor2 10:10, 1. Jan. 1900 (CEST)
+| Auto | Fahrrad |
+| ------ | ---------- |
+| Boot | Bahn |
+| Taxi | Flugzeug |
 
-Ich bin eine mehrzeilige Antwort
+     
+    {| {{prettytable}}
+    !Auto
+    !Fahrrad
+    |-
+    |Boot
+    |Bahn
+    |-
+    |Taxi
+    |Flugzeug 
+    |}
 
-auf die Antwort. --Autor3 13:37, 1. Jan. 1900 (CEST)
-
-Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
-
-## Signatur
-
-Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden.
+  
 
 ## Code
 
@@ -134,6 +135,38 @@ wird zu: \<asm\>mov eax, cr0 or al, 1 mov cr0, eax\</asm\>
 
 Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Code-Formatierung, wenn man einfach ein Leerzeichen vor jede Zeile des Codes setzt.
 
+## Diskussionsfäden
+
+Diskussionsfäden können mittels Listen ohne Auflistungszeichen relativ übersicht gestaltet werden. Zum Beispiel so:
+
+    : Also ich finde diese Diskussion verdient Antworten. --~~~~
+    :: Ich bin eine Antwort. --~~~~
+    ::: Ich bin eine mehrzeilige Antwort
+    ::: auf die Antwort. --~~~~
+    :: Ich bin auch wichtig. --~~~~
+
+Und das sieht so aus
+
+Also ich finde diese Diskussion verdient Antworten. --Autor1 0:00, 1. Jan. 1900 (CEST)
+
+Ich bin eine Antwort. --Autor2 10:10, 1. Jan. 1900 (CEST)
+
+Ich bin eine mehrzeilige Antwort
+
+auf die Antwort. --Autor3 13:37, 1. Jan. 1900 (CEST)
+
+Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
+
+### Signatur
+
+Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden.
+
+  
+
+## Wikiformatierung unterdrücken
+
+Wenn man zum Beispiel Wikibefehle erklären will, oder einfach eine Kollision mit den Befehlen von Mediawiki hat, kann man das \<nowiki\>-Tag benutzen, um zu verhindern, dass Mediawiki den enthaltenen Text formatiert.
+
 ## HTML
 
 Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließlich die eingebauten MediaWiki-Befehle (auch die, die hier nicht dokumentiert sind) verwendet werden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
@@ -149,6 +182,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6704/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 6704; parent 6698; 2010-01-02T15:29:34Z -->
+<!-- MediaWiki page 2049; revision 6905; parent 6704; 2010-01-16T19:56:52Z -->
