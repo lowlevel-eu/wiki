@@ -1,6 +1,8 @@
 # A20-Gate
 
-Auch wenn in diesem Tutorial der Keyboard-Controller teilweise angesprochen wird, ist dies **kein** ausführliches Tutorial über den Keyboard-Controller selbst, sondern bezieht sich lediglich auf das A20-Gate.
+Das A20-Gate steuert die 21te Adressleitung der CPU. Diese muss aktiviert werden, um mehr als 1MB des Arbeitsspeichers adressieren zu können.
+
+*Hinweis: Auch wenn in diesem Tutorial der Keyboard-Controller teilweise angesprochen wird, ist dies **kein** ausführliches Tutorial über den Keyboard-Controller selbst, sondern bezieht sich lediglich auf das A20-Gate.*
 
 ## Was ist das A20-Gate und warum muss es extra eingeschaltet werden?
 
@@ -157,6 +159,6 @@ Status: 0x01 Keyboard im Secure Mode
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1462/index.html)
 
-<!-- MediaWiki page 1462; revision 6878; parent 6031; 2010-01-11T08:42:41Z -->
+<!-- MediaWiki page 1462; revision 6902; parent 6878; 2010-01-16T19:09:43Z -->
