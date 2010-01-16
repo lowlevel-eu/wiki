@@ -43,7 +43,7 @@
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
-- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
+- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"): Liste der (Standard-)DMA-Kanäle
 - [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
   - Ergänzungen zur Handhabung von Interrupts
     - Was genau? Denke das gehört eher dann in [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"), [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und/oder [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
@@ -90,6 +90,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6891; parent 6890; 2010-01-13T19:28:54Z -->
+<!-- MediaWiki page 1518; revision 6900; parent 6891; 2010-01-16T18:16:46Z -->
