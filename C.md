@@ -18,7 +18,7 @@ C wurde 1971–1973 von Dennis Ritchie in den Bell Laboratories entwickelt, er s
 
 ## häufiger Verwendungszweck
 
-C wird häufig in der Systemprogrammierung eingesetzt. z.B. Der Linuxkernel, ist bis auf Ausnahmen vollständig in C geschrieben. C wird auch sehr häufig in der Anwendungsentwicklung eingesetzt.
+C wird häufig in der Systemprogrammierung eingesetzt. Ein Beispiel hierfür ist der Linuxkernel, welcher bis auf Ausnahmen vollständig in C geschrieben ist. Andererseits wird C jedoch auch sehr häufig in der Anwendungsentwicklung eingesetzt.
 
 ## Kernelprogrammierung mit C
 
@@ -107,6 +107,6 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6922/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6916; parent 6915; 2010-01-17T01:04:23Z -->
+<!-- MediaWiki page 1526; revision 6922; parent 6916; 2010-01-17T11:18:49Z -->
