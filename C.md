@@ -12,6 +12,14 @@
 
 C ist eine bekannte, ältere Programmiersprache. Sie verfolgt das Ziel, bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
 
+## Geschichte
+
+C wurde 1971–1973 von Dennis Ritchie in den Bell Laboratories entwickelt, er stützte sich dabei auf die Programmiersprache B, die Ken Thompson in den Jahren 1969/70 geschrieben hatte. Ritchie schrieb auch den ersten Compiler für C. 1973 war die Sprache so weit ausgereift, dass man nun den Unix-Kernel in C neu schreiben konnte.
+
+## häufiger Verwendungszweck
+
+C wird häufig in der Systemprogrammierung eingesetzt. z.B. Der Linuxkernel, ist bis auf Ausnahmen vollständig in C geschrieben. C wird auch sehr häufig in der Anwendungsentwicklung eingesetzt.
+
 ## Kernelprogrammierung mit C
 
 Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"). Für Einsteiger gibt es ein [Tutorial](http://www.cheebi.de/c-kernel-tutorial.pdf), welches beschreibt, wie man in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") schaltet und in C geschriebenen Code ausführt.
@@ -69,6 +77,20 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 \</c\> Hierbei handelt es sich um einen Beispielcode, der zeigt, wie eine putchar()-Funktion beispielsweise aussehen könnte. Die Zeile 5 beinhaltet einen Zeiger, der für die Textausgabe essentiell ist. Dieser Zeiger kann erhöht werden (Zeile 7) oder auf dem zeigende Wert verändert werden (Zeile 9). In Zeile 8 wird zuerst der Wert, auf den console zeigt, verändert und dann der Zeiger um eins erhöht.  
 
+## Beispielprogramm
+
+\<c\>
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        printf("Hallo Welt!\n");
+        return EXIT_SUCCESS;
+    } /* end main() */
+
+\</c\>
+
 ## Bekannte C-Compiler
 
 - gcc aus der [GNU Compiler Collection](http://gcc.gnu.org/)
@@ -85,6 +107,6 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6330; parent 6055; 2009-11-16T10:18:46Z -->
+<!-- MediaWiki page 1526; revision 6915; parent 6330; 2010-01-17T01:03:56Z -->
