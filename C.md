@@ -86,7 +86,7 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
     int main(void)
     {
         printf("Hallo Welt!\n");
-        return EXIT_SUCCESS;
+        return 0;
     } /* end main() */
 
 \</c\>
@@ -107,6 +107,6 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6915; parent 6330; 2010-01-17T01:03:56Z -->
+<!-- MediaWiki page 1526; revision 6916; parent 6915; 2010-01-17T01:04:23Z -->
