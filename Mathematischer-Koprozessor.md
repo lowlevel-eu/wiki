@@ -9,11 +9,11 @@ Ein mathematischer Koprozessor (oder FPU: **F**loating **P**oint **U**nit) ist e
 ## Weblinks
 
 - [Wikipedia: FPU](http://de.wikipedia.org/wiki/FPU) (*deutsch*)
-- [Liste von mathematischen Koprozessoren](http://de.wikipedia.org/wiki/X86er-Koprozessoren%7C) (*deutsch*)
+- [Liste von mathematischen Koprozessoren](http://de.wikipedia.org/wiki/X86er-Koprozessoren) (*deutsch*)
 - [i80x87](http://en.wikipedia.org/wiki/X87) (*englisch*)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6926/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1601/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6928/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1601/index.html)
 
-<!-- MediaWiki page 1601; revision 6926; parent 5921; 2010-01-17T21:09:37Z -->
+<!-- MediaWiki page 1601; revision 6928; parent 6926; 2010-01-17T21:11:18Z -->
