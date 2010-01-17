@@ -1,15 +1,36 @@
 # Page Size Extension
 
-Dieses Feature von [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessoren wurde mit dem Pentium-Prozessor eingeführt. Es ermöglicht [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") mit Pages, die größer als 4 kB sind - nämlich 4 MB. Dadurch wird weniger Speicherplatz für Page Tables verbraucht und außerdem kann der Translation Lookaside Buffer besser arbeiten, da es weniger Pages gibt. Außerdem können, wenn PSE aktiviert ist, gleichzeitig 4-kB- und 4-MB-Pages verwendet werden.
+Die Page Size Extension von x86-Prozessoren wurde mit dem Pentium-Prozessor eingeführt. Es ermöglicht Paging mit sogenannten *large pages*, also [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging#funktionsweise "Paging"), die statt 4KB einen 4MB großen Speicherbereich representieren.
 
-Ein großer Nachteil ist, dass eine 4-MB-Page einfach auch 4 MB Speicher benötigt. Wird z. B. nur ein Megabyte benötigt, dann werden drei Megabyte verschwendet. PSE kann im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") nicht verwendet werden, da dort automatisch [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") genutzt wird.
+## Vorteile
+
+- Es wird deutlich weniger Speicherplatz durch Pagetables verbraucht. (Im günstigsten Fall 4MB weniger)
+- Der Translation Lookaside Buffer kann besser arbeiten.
+- 4MB und 4KB Pages können auch gleichzeitig verwendet werden.
 
 ## Funktionsweise
 
-Um PSE zu aktivieren, muss das Bit 4 (PSE) im [Kontrollregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") CR4 gesetzt werden. Anschließend wird das Bit 7 (S-Bit) im [Page Directory](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") gültig. Ist es nicht gesetzt, so zeigt der jeweilige Eintrag auf eine Page Table, welche wiederum 4-kB-Pages enthält, ist es gesetzt, so zeigt er direkt auf eine 4-MB-Page.
+### Unterschied zum 4KB Paging
+
+Beim "normalen" Paging zeigt jeder der 1024 Einträge im [Page Directory](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") auf eine 4KB große [Page Table](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), deren 1024 Einträge wiederrum einen 4 MB großen Bereich definieren. Somit sind insgesamt 4 MB Speicherplatz durch Page Tables belegt.
+
+Wenn PSE aktiviert ist, dann wird Bit7 (S-Bit) in den Einträgen des Page Directory gültig. Ist dieses Bit nicht gesetzt, dann zeigt der Eintrag auf eine 4KB Page Table (so wie beim "normalen" Paging), andernfalls zeigt der Eintrag direkt auf eine 4MB Page. Falls man also nur 4MB Pages verwendet (alle S-Bits sind gesetzt), bedeutet das, dass man keine Page Tables mehr benötigt, weil das Page Directory alle Pages direkt definiert.
+
+### Aktivieren der Page Size Extension
+
+- ein Page Directory mit 1024 Einträge anlegen
+  - ist das S-Bit gesetzt, dann zeigt der Eintrag direkt auf eine 4MB Page
+  - ist das S-Bit nicht gesetzt, muss eine Page Table angelegt werden, auf die der Eintrag zeigt
+- in das [Control Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") cr3 die Adresse des Page Directory laden
+- PSE aktivieren, indem Bit4 im [Control Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") cr4 gesetzt wird
+- Paging aktivieren, indem Bit31 im [Control Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") cr0 gesetzt wird
+
+## Siehe auch
+
+- [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1999/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1999/index.html)
 
-<!-- MediaWiki page 1999; revision 6024; parent 5450; 2009-10-12T17:28:47Z -->
+<!-- MediaWiki page 1999; revision 6925; parent 6024; 2010-01-17T21:03:31Z -->
