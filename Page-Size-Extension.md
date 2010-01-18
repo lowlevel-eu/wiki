@@ -5,8 +5,8 @@ Die Page Size Extension von x86-Prozessoren wurde mit dem Pentium-Prozessor eing
 ## Vorteile
 
 - Es wird deutlich weniger Speicherplatz durch Pagetables verbraucht. (Im günstigsten Fall 4MB weniger)
-- Der [Translation Lookaside Buffer](https://github.com/lowlevel-eu/wiki/wiki/Paging#translation-lookaside-buffer "Translation Lookaside Buffer") kann besser arbeiten.
 - 4MB und 4KB große Pages können auch gleichzeitig verwendet werden.
+- Der [Translation Lookaside Buffer](https://github.com/lowlevel-eu/wiki/wiki/Paging#translation-lookaside-buffer "Translation Lookaside Buffer") wird besser ausgenutzt (es gibt üblicherweise zwei separate TLBs für 4k- und 4M-Pages; mit 4k-Pages bleibt letzterer ungenutzt).
 
 ## Funktionsweise
 
@@ -31,6 +31,6 @@ Wenn PSE aktiviert ist, dann wird Bit 7 (S-Bit) in den Einträgen des Page Direc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6927/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1999/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1999/index.html)
 
-<!-- MediaWiki page 1999; revision 6927; parent 6925; 2010-01-17T21:10:10Z -->
+<!-- MediaWiki page 1999; revision 6930; parent 6927; 2010-01-18T11:04:27Z -->
