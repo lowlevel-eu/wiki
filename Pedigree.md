@@ -15,12 +15,12 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | n.a. |
 | Homepage |  |
 
-<http://pedigree-project.org/r/>
+<http://pedigree-project.org/>
 
 **Pedigree** ist ein Hobby-OS, welches seit Januar 2008 von James Molloy und Jörg Pfähler, uns allen besser bekannt als [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode"), entwickelt wird. Es ist in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") mit einer Prise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben und befindet sich in einem fortgeschrittenen Stadium.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1973/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1973/index.html)
 
-<!-- MediaWiki page 1973; revision 5516; parent 5270; 2009-08-08T21:52:55Z -->
+<!-- MediaWiki page 1973; revision 6931; parent 5516; 2010-01-18T19:43:55Z -->
