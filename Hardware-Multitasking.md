@@ -1,6 +1,6 @@
 # Hardware-Multitasking
 
-Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Hardware-Multitasking die CPU die Aufgaben des Dispatchers. Viele moderne Betriebssysteme verzichten auf Hardware-Multitasking, da es angeblich keinen großen Zeitvorteil gegenüber dem Software-Multitasking hat.
+Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Hardware-Multitasking die CPU die Aufgaben des Dispatchers. Viele moderne Betriebssysteme verzichten auf Hardware-Multitasking, da es angeblich keinen großen Zeitvorteil gegenüber dem Software-Multitasking hat. Im Long Mode kann kein Hardware-Multitasking genutzt werden!
 
 ## Grundlagen
 
@@ -35,7 +35,7 @@ Dieser Befehl sorgt dafür, dass die CPU die Registerwerte des aktuellen Tasks i
 Das sieht nicht schön aus, ist aber die einzige Möglichkeit „dynamisch“ zu springen. Ich hoffe, ich habe diesen Code korrekt in die AT&T-Assembler-Syntax (siehe unten) übertragen, da ich den Code nicht vollständig getestet habe.
 
   
-Zu beachten ist allerdings, dass der Taskwechsel von der Software (dem Scheduler) implementiert werden muss, weil die CPU nur das Disptching übernimmt. Es gibt zwar einen Trick, wie man das Scheduling auch von der CPU ausführen lassen kann, aber diese Möglichkeit würde ich nicht empfehlen (siehe dazu unten). Außerdem sollte man wissen, dass man den Task-Switch auch mit einem call- oder int-Befehl ausführen kann, was allerdings etwas komplizierter ist.
+Zu beachten ist allerdings, dass der Taskwechsel von der Software (dem Scheduler) implementiert werden muss, weil die CPU nur das Dispatching übernimmt. Es gibt zwar einen Trick, wie man das Scheduling auch von der CPU ausführen lassen kann, aber diese Möglichkeit würde ich nicht empfehlen (siehe dazu unten). Außerdem sollte man wissen, dass man den Task-Switch auch mit einem call- oder int-Befehl ausführen kann, was allerdings etwas komplizierter ist.
 
 ### Initialisierung
 
@@ -179,6 +179,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6933; parent 6884; 2010-01-19T17:04:30Z -->
+<!-- MediaWiki page 2158; revision 6935; parent 6933; 2010-01-19T19:06:13Z -->
