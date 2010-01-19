@@ -123,7 +123,7 @@ Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der ak
       while(task_table[current_task_id].present==0)
       {
          current_task_id++;
-         if (current_task_id = NUM_TASKS]) current_task_id=0;
+         if (current_task_id == NUM_TASKS]) current_task_id=0;
       }
       tss_sel = current_task_id + TSS_SEL_BASE;
 
@@ -179,6 +179,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6884/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6933/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6884; parent 6882; 2010-01-12T08:29:58Z -->
+<!-- MediaWiki page 2158; revision 6933; parent 6884; 2010-01-19T17:04:30Z -->
