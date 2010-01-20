@@ -6,7 +6,7 @@ Die **parallele Schnitstelle** ist eine Schnitstelle am PC zur Übertragung von 
 
 ## Funktionsweise
 
-Die parallele Schnitstelle ist primär für die Übertragung von Daten an Peripheriegeräte gedacht und eignet sich nur gering für die bidirektionale Übertragung. Meistens wird an der parallelen Schnitstelle ein Drucker angeschlossen, für den es einen extra 36-poligen Druckeranschluss (auch Centronics, nach dem ehemaligen Drucker-Hersteller benannt) gibt. Der parallele Anschuluss an sich ist 25-polig und männlich.
+Die parallele Schnitstelle ist primär für die Übertragung von Daten an Peripheriegeräte gedacht und eignet sich nur gering für die bidirektionale Übertragung. Meistens wird an der parallelen Schnitstelle ein Drucker angeschlossen, für den es einen extra 36-poligen Druckeranschluss (auch Centronics, nach dem ehemaligen Drucker-Hersteller benannt) gibt. Der parallele Anschluss an sich ist 25-polig und männlich.
 
 Die Bestätigung für die Datennannahme erfolt von Peripherie-Seite mit dem sogenannten Handshake (eine, sehr vereinfacht ausgedrückt, beidseitige Einverständnis zur Übertragung der Daten), und zwar nach dem 2-Wege und 3-Weg-Verfahren (siehe dazu [\[1\]](http://de.wikipedia.org/wiki/Drei-Wege-Handshake)).
 
@@ -42,8 +42,6 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | 17 | 36 | Select In | PC-\>Gerät | Online schalten |
 
 Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommunizieren.
-
-  
 
 ## Register
 
@@ -145,6 +143,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 6250; parent 6034; 2009-11-13T18:09:30Z -->
+<!-- MediaWiki page 1996; revision 6939; parent 6250; 2010-01-20T18:59:37Z -->
