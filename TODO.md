@@ -67,7 +67,14 @@ Was meinst du damit? Soll das eine Anleitung werden, wie man Datenblätter ließ
 
 Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgehoben
 
-- Bochs-Debugger &#150; Die einzelnen Befehle, z. B. Register- und Speicherdump, Breakpoints, usw.
+- Aritkel zu Datenstrukturen:
+  - Stack
+  - Heap
+  - Ausbau des Artikels [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
+  - evtl noch kurz Datenstrukturen wie den "Binärbaum" (=binary tree) oder "Verlinkte Liste" (=linked list) erläutern?
+
+<!-- -->
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -79,6 +86,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6908/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6938/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 6908; parent 6906; 2010-01-16T20:23:36Z -->
+<!-- MediaWiki page 1518; revision 6938; parent 6908; 2010-01-20T18:21:15Z -->
