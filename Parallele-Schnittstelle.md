@@ -1,16 +1,16 @@
 # Parallele Schnittstelle
 
-Die **parallele Schnitstelle** ist eine Schnitstelle am PC zur Übertragung von Daten an Peripheriegeräte.
+Die **parallele Schnittstelle** ist eine Schnittstelle am PC zur Übertragung von Daten an Peripheriegeräte.
 
   
 
 ## Funktionsweise
 
-Die parallele Schnitstelle ist primär für die Übertragung von Daten an Peripheriegeräte gedacht und eignet sich nur gering für die bidirektionale Übertragung. Meistens wird an der parallelen Schnitstelle ein Drucker angeschlossen, für den es einen extra 36-poligen Druckeranschluss (auch Centronics, nach dem ehemaligen Drucker-Hersteller benannt) gibt. Der parallele Anschluss an sich ist 25-polig und männlich.
+Die parallele Schnittstelle ist primär für die Übertragung von Daten an Peripheriegeräte gedacht und eignet sich nur gering für die bidirektionale Übertragung. Meistens wird an ihr ein Drucker angeschlossen, für den es einen besonderen 36-poligen Druckeranschluss (auch Centronics, nach dem ehemaligen Drucker-Hersteller benannt) gibt. Der parallele Anschluss an sich ist 25-polig und wird als *männlich* bezeichnet.
 
-Die Bestätigung für die Datennannahme erfolt von Peripherie-Seite mit dem sogenannten Handshake (eine, sehr vereinfacht ausgedrückt, beidseitige Einverständnis zur Übertragung der Daten), und zwar nach dem 2-Wege und 3-Weg-Verfahren (siehe dazu [\[1\]](http://de.wikipedia.org/wiki/Drei-Wege-Handshake)).
+Die Bestätigung für die Datenannahme erfolgt von Peripherie-Seite mit dem sogenannten Handshake (ein, sehr vereinfacht ausgedrückt, beidseitiges Einverständnis zur Übertragung der Daten), und zwar nach dem 2-Wege- und 3-Wege-Verfahren (siehe dazu [\[1\]](http://de.wikipedia.org/wiki/Drei-Wege-Handshake)).
 
-### Spezielle Funktionsweise bei Drucker
+### Spezielle Funktionsweise bei Druckern
 
 Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmodi und die Pins vom 25-poligen Stecker werden anders gemappt. Auch ist hier eine geringe bidirektionale Übertragung möglich. Nachfolgend eine Tabelle der möglichen Signale, die der PC an den Drucker und vice versa schicken kann:
 
@@ -26,7 +26,7 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | 8 | 8 | D7 | PC-\>Gerät | Datenbit 6 |
 | 9 | 9 | DD8 | PC-\>Gerät | Datenbit 7 |
 | 10 | 10 | Acknowledge | Gerät-\>PC | Daten wurden übernommen (Handshake) |
-| 11 | 11 | Busy | Gerät-\>PC | Nicht empfangbereit für neue Daten |
+| 11 | 11 | Busy | Gerät-\>PC | Nicht empfangsbereit für neue Daten |
 | 12 | 12 | Paper Error | Gerät-\>PC | Kein Papier |
 | 13 | 13 | Select | Gerät-\>PC | Gerät ist online |
 | 14 | 14 | Auto Feed | PC-\>Gerät | Bei jedem CR (carriage return) ein LF (line feed) hinzufügen |
@@ -45,14 +45,14 @@ Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommu
 
 ## Register
 
-Das BIOS kennt bis zu vier parallele Schnitstellen (bei einigen nur zwei):
+Das BIOS kennt bis zu vier parallele Schnittstellen (bei einigen nur zwei):
 
 - LPT1: 0x3BC
 - LPT2: 0x378
 - LPT3: 0x278
 - LPT4: 0x2BC
 
-Jede parallele Schnitstelle verfügt dabei über drei Register:
+Jede parallele Schnittstelle verfügt dabei über drei Register:
 
 - Basisregister, enspricht dem Datenregister
 - Statusregister
@@ -104,25 +104,25 @@ Unter anderem gibt es nun neue Modi zur Dateiübertragung.
 
 ### Compatible Mode
 
-Der Compatible Mode dient dazu, dass ältere Drucker an einer IEEE 1284-Schnitstelle benutzt werden können. Der Modus entspricht einer Centronics-Verbindung mit der oben genannten Registerbelegung
+Der Compatible Mode dient dazu, dass ältere Drucker an einer IEEE-1284-Schnitstelle benutzt werden können. Der Modus entspricht einer Centronics-Verbindung mit der oben genannten Registerbelegung.
 
   
 
 ### Nibble Mode
 
-Beim Nibble Mode arbeitet die Schnittstelle mir einer Breite von 4 Bit (einem Halbbyte, auch Nibble). Die restlichen 4 Bit werden gebraucht, damit Daten vom Gerät zum PC zurückgeschickt werden können, es sit also eine Art bidirektionaler Verbindung möglich.
+Beim Nibble Mode arbeitet die Schnittstelle mit einer Breite von 4 Bit (einem Halbbyte, auch Nibble). Die restlichen 4 Bit werden gebraucht, damit Daten vom Gerät zum PC zurückgeschickt werden können, es ist also eine Art bidirektionale Verbindung möglich.
 
   
 
 ### Byte Mode
 
-Der Byte Mode entspricht dem bidirektionalen Centronics Mode, der mit der damaligen PS/2-Architektur standardmäßig eingeführt wurde. Im Gegensatz zum obigen Nibble Mode werden die Daten hier byteweise über das Datenregister übertragen bzw. ausgetauscht. Dabei ist das Datenregister sowohl für die Sende- als auch die Empfangsdaten verantwortlich. Um die Übetragungsrichtung zu ändern muss hier das fünfte Bit im Steuerregister dementsprechend gesetzt werden (gesetzt: Senden; gelöscht: Empfangen).
+Der Byte Mode entspricht dem bidirektionalen Centronics Mode, der mit der damaligen PS/2-Architektur standardmäßig eingeführt wurde. Im Gegensatz zum obigen Nibble Mode werden die Daten hier byteweise über das Datenregister übertragen bzw. ausgetauscht. Dabei ist das Datenregister sowohl für die Sende- als auch die Empfangsdaten verantwortlich. Um die Übetragungsrichtung zu ändern, muss hier das fünfte Bit im Steuerregister dementsprechend gesetzt werden (gesetzt: Senden; gelöscht: Empfangen).
 
   
 
 ### Enhanced Parallel Port Mode
 
-Dieser Modus ist von Intel, Xircom und Zenith entwickelt worden und wird am häufigsten implementiert. Hier können Daten sowie Adressen bidirektional ebenfalls übertragen werden und es können bis zu 256 Geräte (bei 8 Bit-Adressbus, in Form von Schaltungen) mit Hilfe eines Hubs verbunden, angesprochen und in einem Pool verwaltet werden. Allerdings kann auch ein Gerät die bis zu 256 Schaltungen erhalten, was besonders für Multifunktionsgeärate geeignet ist. Die Datenübertragungsrate beträgt 2 MB/s und können auf bis zu 5 Meter übertragen werden.
+Dieser Modus ist von Intel, Xircom und Zenith entwickelt worden und wird am häufigsten implementiert. Hier können Daten sowie Adressen bidirektional ebenfalls übertragen werden und es können bis zu 256 Geräte (bei 8-Bit-Adressbus, in Form von Schaltungen) mit Hilfe eines Hubs verbunden, angesprochen und in einem Pool verwaltet werden. Allerdings kann auch ein Gerät die bis zu 256 Schaltungen erhalten, was besonders für Multifunktionsgeräte geeignet ist. Die Datenübertragungsrate beträgt 2 MB/s und es können bis zu 5 Meter überbrückt werden.
 
 Die Daten werden in diesem Modus in bestimmten Zyklen übertragen.
 
@@ -130,7 +130,7 @@ Die Daten werden in diesem Modus in bestimmten Zyklen übertragen.
 
 ### Enhanced Capability Mode
 
-Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfügt über ähnliche Eigenschaften wie der EPP-Mode. Allerdings sind hier nur maxmial 128 Schaltungen (also maxmimal 128 miteinander verbundene Geräte) möglich.
+Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfügt über ähnliche Eigenschaften wie der EPP-Mode. Allerdings sind hier nur maximal 128 Schaltungen (also maximal 128 miteinander verbundene Geräte) möglich.
 
 ## Siehe auch
 
@@ -139,10 +139,10 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ## Weblinks
 
-- [IEEE_1284-Spezifikation](http://de.wikipedia.org/wiki/IEEE_1284)
+- [IEEE-1284-Spezifikation](http://de.wikipedia.org/wiki/IEEE_1284)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 6939; parent 6250; 2010-01-20T18:59:37Z -->
+<!-- MediaWiki page 1996; revision 6940; parent 6939; 2010-01-20T19:58:40Z -->
