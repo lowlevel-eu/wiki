@@ -17,8 +17,14 @@
 
 \[geos.orca.lu\] (Noch nicht online)
 
+GEOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch nicht sehr ausgereift, und ausserdem konnte ich mich noch nicht mit der HP beschäftigen, deswegen gibt es auch keine Downloads.
+
+## Features
+
+\- formatierte Textausgabe über Video-RAM - Keyboard-Treiber - GDT - IDT
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6943/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 6942; parent 6941; 2010-01-21T17:22:58Z -->
+<!-- MediaWiki page 2164; revision 6943; parent 6942; 2010-01-21T17:29:09Z -->
