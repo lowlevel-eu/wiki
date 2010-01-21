@@ -21,10 +21,13 @@ GEOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch nic
 
 ## Features
 
-\- formatierte Textausgabe über Video-RAM - Keyboard-Treiber - GDT - IDT
+- formatierte Textausgabe über Video-RAM
+- Keyboard-Treiber
+- GDT
+- IDT
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6945/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6946/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 6945; parent 6944; 2010-01-21T17:30:11Z -->
+<!-- MediaWiki page 2164; revision 6946; parent 6945; 2010-01-21T17:34:21Z -->
