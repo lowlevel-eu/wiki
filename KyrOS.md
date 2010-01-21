@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-[\[1\]](http://geos.gilles.orca.lu)
+[\[1\]](http://geos.kilu.de)
 
 GEOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch sehr jung, kann fast nichts, und ausserdem konnte ich mich noch nicht um die HP kümmern, deswegen gibt es auch keine Downloads.
 
@@ -28,6 +28,6 @@ GEOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch seh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6947/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 6947; parent 6946; 2010-01-21T17:36:49Z -->
+<!-- MediaWiki page 2164; revision 6948; parent 6947; 2010-01-21T17:44:21Z -->
