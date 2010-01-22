@@ -30,22 +30,25 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). 
 ### Befehle, die sich auf den Stack auswirken
 
 | Befehl | Beschreibung |
-| -------------- | ----------------------------------------------------------------------------------------- |
-| push operand | schreibt den Operanden auf den Stack |
-| pop operand | liest das oberste Element vom Stack in den Operanden |
+| --------------------- | ----------------------------------------------------------------------------------------- |
+| push *operand* | schreibt den Operanden auf den Stack |
+| pop *operand* | liest das oberste Element vom Stack in den Operanden |
 | pushf | schreibt das EFLAGS-Register auf den Stack |
 | popf | liest das EFLAGS-Register vom Stack |
 | pusha | legt alle "allgemeinen" Register (EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI) auf den Stack |
 | popa | Holt diese Register wieder vom Stack, wobei ESP übersprungen wird |
-| call |  |
-| ret |  |
-| int |  |
-| iret |  |
-| enter |  |
-| leave |  |
+| call (far) | Legt CS und EIP auf den Stack |
+| retf | Lädt diese Register wieder, um zur aufrufenden Codestelle zurückzukehren |
+| call | Legt EIP auf den Stack |
+| ret | Lädt EIP vom Stack, um zur aufrufenden Codestelle zurückzukehren |
+| int | Legt SS, ESP (beide nur bei Ringwechsel), EFLAGS, CS, EIP auf den Stack |
+| iret | Lädt diese Register wieder, um zur aufrufenden Codestelle zurückzukehren |
+| sysenter / sysleave | siehe [Sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
+| syscall / sysret | siehe [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") |
+| enter / leave | siehe leave |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6952/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6958/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 6952; parent 6949; 2010-01-21T21:00:05Z -->
+<!-- MediaWiki page 2165; revision 6958; parent 6952; 2010-01-22T19:07:33Z -->
