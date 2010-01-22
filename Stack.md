@@ -44,11 +44,11 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). 
 | int | Legt SS, ESP (beide nur bei Ringwechsel), EFLAGS, CS, EIP auf den Stack |
 | iret | Lädt diese Register wieder, um zur aufrufenden Codestelle zurückzukehren |
 | sysenter / sysleave | siehe [Sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
-| syscall / sysret | siehe [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") |
-| enter / leave | siehe leave |
+| syscall / sysret |  |
+| enter / leave |  |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6958/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 6958; parent 6952; 2010-01-22T19:07:33Z -->
+<!-- MediaWiki page 2165; revision 6961; parent 6958; 2010-01-22T21:00:31Z -->
