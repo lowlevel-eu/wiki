@@ -1,34 +1,34 @@
 # Windows
 
 | Windows |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Microsoft |
-| Akt. Version: | NT 6.0 (= Vista) |
+| Akt. Version: | NT 6.1 (= 7) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") und Intel-MAC(BootCamp), ältere Versionen auch andere |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ältere Versionen auch andere |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Unbekannt, da nicht Open-Source(vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Unbekannt, da nicht Open-Source (vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) |
 | API: | WinAPI |
-| Binärformat: | Portable Executable |
+| Binärformat: | [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
 | Homepage |  |
 
 [www.microsoft.com](http://www.microsoft.com/windows)
 
   
-Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt. Als freie Alternative zu Windows gibt es [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS") .
+Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt. Als freie Alternative zu Windows gibt es [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS").
 
 ## OS-Dev unter Windows
 
 ### Pro
 
-Für Leute, die noch nie mit Linux gearbeitet haben, ist der Einstieg sicher etwas schwerer, vor allem, wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist, mit Windows zu arbeiten, der wird sich nicht bemühen, [Bash](https://github.com/lowlevel-eu/wiki/wiki/Shell#bash "Bash") oder Sonstiges zu lernen, wenn er mit \*.bat Dateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen, ihr eigenes Betriebssystem zu entwickeln. Außerdem existieren die Programme, die benötigt werden (Compiler,...) mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden. (Binutils, Crosscompiler, MingGW CygWin,...)
+Für Leute, die noch nie mit Linux gearbeitet haben, ist der Einstieg sicher etwas schwerer, vor allem, wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist, mit Windows zu arbeiten, der wird sich nicht bemühen, [Bash](https://github.com/lowlevel-eu/wiki/wiki/Shell#bash "Bash") oder Sonstiges zu lernen, wenn er mit Batchdateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen, ihr eigenes Betriebssystem zu entwickeln. Außerdem existieren die Programme, die benötigt werden (Compiler, ...) mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden (Binutils, Crosscompiler, MingGW, Cygwin, ...).
 
 ### Contra
 
-Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssysteme ist wohl, dass viele Programme erst heruntergeladen werden müssen, damit man mit dem Programmieren anfangen kann. (gcc, make, ...) Außerdem fehlen Windows noch ein paar Kommandozeilen-Programme, welche die OS-Programmierung erleichtern. (dd, ...) Sicherlich ist auch der Funktionsumfang von Batch-Dateien eher gering, was aber in diesem Einsatzgebiet wohl eher nicht so wichtig ist.
+Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssysteme ist wohl, dass viele Programme erst heruntergeladen werden müssen, damit man mit dem Programmieren anfangen kann (gcc, make, ...). Außerdem fehlen Windows noch ein paar Kommandozeilenprogramme, welche die OS-Programmierung erleichtern (dd, ...). Sicherlich ist auch der Funktionsumfang von Batchdateien eher gering, was aber in diesem Einsatzgebiet wohl eher nicht so wichtig ist.
 
 Es gab über dieses Thema eine Diskussion, siehe [Diskussion:OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1654/index.html "Diskussion:OS-Dev für Einsteiger").
 
@@ -40,11 +40,11 @@ Windows NT, oder besser gesagt der NT-Kernel, wird in allen neuen Betriebssystem
 
 #### Kernel
 
-Über das Design von Windows ist relativ wenig bekannt, da von Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") als Ring-0-Applikationen ausgeführt, genauso wie andere Teile (seit Vista werden die Grafiktreiber wieder als Ring-3 Prozesse angesehen). Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") betrachtet.
+Über das Design von Windows ist relativ wenig bekannt, da von Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") als Ring-0-Applikationen ausgeführt, genauso wie andere Teile (seit Vista werden die Grafiktreiber wieder als Ring-3-Prozesse angesehen). Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") betrachtet.
 
 #### API
 
-Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undokumentiert ist (Syscalls, obwohl sich auch hier bereits einiges an Dokumentation z.B. in ReactOS findet), größtenteils durch das Treiberinterface (Windows WDK bzw. DDK) jedoch sogar gut dokumentiert ist, und der WinAPI (kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, nämlich das .NET Framework. Das.NET Framework war ursprünglich nur eine "Weiterleitung" an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr sogenannter *Managed Code ist*, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt.
+Bei der API wird unterschieden zwischen der „nativen NT-API“, die teilweise undokumentiert ist (Syscalls, obwohl sich auch hier bereits einiges an Dokumentation z. B. in ReactOS findet), größtenteils durch das Treiberinterface (Windows WDK bzw. DDK) jedoch sogar gut dokumentiert ist, und der WinAPI (kernel32.dll, user32.dll, gdi32.dll). Seit .NET gibt es nun auch eine dritte, objektorientierte Schicht, die über diese APIs gelegt ist, nämlich das .NET-Framework. Das .NET-Framework war ursprünglich nur eine „Weiterleitung“ an die WinAPI, wurde dann aber später erweitert und von der WinAPI getrennt, sodass es mittlerweile nur mehr sogenannter *Managed Code* ist, der unter einer Laufzeitumgebung in einer virtuellen Maschine läuft, die den Bytecode übersetzt.
 
 ## Siehe auch
 
@@ -58,6 +58,6 @@ Bei der API wird unterschieden zwischen der "nativen NT-API", die teilweise undo
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5299/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6968/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 5299; parent 5012; 2009-08-06T15:33:39Z -->
+<!-- MediaWiki page 1558; revision 6968; parent 5299; 2010-01-23T22:14:25Z -->
