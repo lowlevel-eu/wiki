@@ -27,30 +27,35 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 
 ## Geplant
 
-- Floppy/Festplatten Zugriff(v0.02)
-- entsprechende Befehle in der Komzei(v0.02)
-- Speicherverwaltung(v0.1)
-- GUI(v0.3)
-- (Multi-)Tasking(v0.2)
+- GDT, IDT etc.
+- Floppy/Festplatten Zugriff
+- CDI?
+- entsprechende Befehle in der Komzei
+- Speicherverwaltung
+- GUI
+- (Multi-)Tasking
 
 ## Realease
 
-Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Steht dann auf der HP zum Download.
+Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.01 fertig, steht aber nicht zum Download, da nutzlos.
 
 ## Versionsdiferenzierung
 
 - Je neues, stabiles Realese mit den Geplanten Features wird die Versionsnummer um 0.01 angehoben.
 - 
-- Bei abschluss einer "Komponenten Reihe" (z.B. Komzei), also vollständiges erfüllen meiner Erwatungen, wird die Versions Nummer um 1.00 erhöht.
+- Bei abschluss einer "Komponenten Reihe" (z.B. Komzei), also vollständiges erfüllen meiner Erwartungen, wird die Versions Nummer um 1.00 erhöht.
 
 ## History/Archiv
 
-Naja, ich sitze an v0.01, so viel History ist da nicht...
+- V0.01 - 29.11.09, kurz nahc Mitternacht ^^
+  - Simple Textausgabe in C++, färben von Text und BG
+- V0.02 - Coming soon
+  - Vorraussichtlich GDT & IDT
 
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6966/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 6596; parent 6394; 2009-12-22T19:46:35Z -->
+<!-- MediaWiki page 1771; revision 6966; parent 6596; 2010-01-23T18:31:15Z -->
