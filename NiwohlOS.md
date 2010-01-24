@@ -190,19 +190,20 @@ Folgende Teile sind in Arbeit und schon teilweise implementiert:
 - niwohunloader: Kann beide Kernel laden
 - stoiber32: Kann schon Exceptions und lernt gerade [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
 - stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung (Man könnte auch sagen: Wie stoiber32 nur [x64iger](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"))
+- SMP: Kann schon APs entdecken und bis zu einem *jmp \$* im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hochfahren
 
 ## To-Do
 
-Folgende Teile müssen noch implementiert werden:
+Folgende Teile müssen noch implementiert werden (einige durchgestrichene müssen noch in den master-Branch gemerget werden):
 
-- printf
-- kprintf
-- vsprintf
-- printf mit Zahlen
-- Eine Funktion zum Ausgeben von Zahlen
-- puts mit Zahlen
-- Zahlenausgabefunktion
--  %i
+- printf gut machen
+- kprintf gut machen
+- vsprintf gut machen
+- ~~printf mit Zahlen~~
+- ~~Eine Funktion zum Ausgeben von Zahlen~~ Hexzahlen ausgeben
+- ~~puts mit Zahlen~~ (nennt sich printf)
+- ~~Zahlenausgabefunktion~~ Hex ausgeben
+- ~~%i~~
 - Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
 - Geeignetes Logo ~~von 4chan klauen~~ erstellen
 - Kernel
@@ -211,6 +212,7 @@ Folgende Teile müssen noch implementiert werden:
 - Unicode-Support (für ẞ und です)
 - Programme
 - Einfach alles
+- SMP (in Arbeit)
 
   
 
@@ -220,6 +222,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6979/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6431; parent 6328; 2009-11-30T21:40:15Z -->
+<!-- MediaWiki page 2095; revision 6979; parent 6431; 2010-01-24T21:54:45Z -->
