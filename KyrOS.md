@@ -1,6 +1,6 @@
 # KyrOS
 
-| GEOS |  |
+| GillesOS |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | GE |
@@ -17,7 +17,7 @@
 
 <http://geos-hp.kilu.de>
 
-GEOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch sehr jung, kann fast nichts, und ausserdem konnte ich mich noch nicht um die HP kümmern, deswegen gibt es auch keine Downloads.
+GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch sehr jung, kann fast nichts, und ausserdem konnte ich mich noch nicht um die HP kümmern, deswegen gibt es auch keine Downloads.
 
 ## Features
 
@@ -28,6 +28,6 @@ GEOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch seh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6971/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6972/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 6971; parent 6970; 2010-01-24T11:39:06Z -->
+<!-- MediaWiki page 2164; revision 6972; parent 6971; 2010-01-24T11:41:18Z -->
