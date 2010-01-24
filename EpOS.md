@@ -47,7 +47,7 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 
 ## History/Archiv
 
-- V0.01 - 29.11.09, kurz nahc Mitternacht ^^
+- V0.01 - 29.11.09, kurz nach Mitternacht ^^
   - Simple Textausgabe in C++, färben von Text und BG
 - V0.02 - Coming soon
   - Vorraussichtlich GDT & IDT
@@ -56,6 +56,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6966/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6978/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 6966; parent 6596; 2010-01-23T18:31:15Z -->
+<!-- MediaWiki page 1771; revision 6978; parent 6966; 2010-01-24T17:32:18Z -->
