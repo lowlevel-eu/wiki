@@ -82,11 +82,11 @@ Die "niwohlose-developers" sind das Entwicklerteam rund um niwohlOS sowie andere
 
 #### XanClic alias Crazy-OS-names
 
-[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") (hochkomplexes Hybridakrobackronym) ist einer der Top-Entwickler von niwohlOS. Er besitzt auf dem Gebiet der Betriebssystementwicklung höchste Kompetenzen, entwickelte er doch schon mehrere Betriebssysteme im Alleingang ([MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"), [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena")) und reichte schon zahlreiche Patches für [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, wie einen AC97-Treiber, USB-Treiber und die hochkomplexe libmaumau, die es den Anwendern ermöglicht, Mau-Mau zu spielen. XanClic ist für den soliden Aufbau, das Grundgerüst in niwohlOS zuständig.
+[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") (hochkomplexes Hybridakrobackronym) ist einer der Top-Entwickler von niwohlOS. Er besitzt auf dem Gebiet der Betriebssystementwicklung höchste Kompetenzen, entwickelte er doch schon mehrere Betriebssysteme im Alleingang ([MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"), [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena")) und reichte schon zahlreiche Patches für [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, wie einen AC97-Treiber, USB-Treiber und die hochkomplexe libmaumau, die es den Anwendern ermöglicht, Mau-Mau zu spielen. XanClic ist für den ~~fragilen~~ soliden Aufbau, das Grundgerüst in niwohlOS zuständig.
 
-#### DerHartmut alias PageFaultHartmut
+#### DerHartmut alias TheHartmutYouHaveCalledIsTemporarilyNotAvailable
 
-[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (qultics) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als "Hobby" neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig.
+[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (qultics) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als "Hobby" neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwingen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren.
 
 #### SHyx0rmZ alias HardcoreProgger
 
@@ -190,7 +190,7 @@ Folgende Teile sind in Arbeit und schon teilweise implementiert:
 - niwohunloader: Kann beide Kernel laden
 - stoiber32: Kann schon Exceptions und lernt gerade [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
 - stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung (Man könnte auch sagen: Wie stoiber32 nur [x64iger](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"))
-- SMP: Kann schon APs entdecken und bis zu einem *jmp \$* im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hochfahren
+- SMP: APs werden niwohlosisiert und stellen nach Anzeige einer entsprechenden Nachricht (selbstverständlich mit ẞ) blinkende ß dar (in Ermangelung eines ẞ in [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
 
 ## To-Do
 
@@ -222,6 +222,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6979/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6980/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6979; parent 6431; 2010-01-24T21:54:45Z -->
+<!-- MediaWiki page 2095; revision 6980; parent 6979; 2010-01-25T20:58:07Z -->
