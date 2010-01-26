@@ -15,7 +15,7 @@ An dieser Stelle sei angemerkt, dass es mehrere verschiedene Assembler-Varianten
 - Eine *Instruktion* ist ein kompletter Prozessorbefehl, z.B. addiere 5 auf den Inhalt des Registers eax (*add \$5, %eax*). Mit Instruktion kann sowohl die Assemblerdarstellung als auch der Opcode gemeint sein.
 - Der *Opcode* ist der binäre Maschinenbefehl, wie er vom Prozessor verstanden wird. Er wird meistens hexadezimal und byteweise geschrieben: *05 05 00 00 00* für unser Beispiel. Oft wird unter Opcode auch nur der eigentliche Befehl (*05* für add ..., %eax) verstanden.
 - Der *Operand* sind die Daten, auf denen der Maschinenbefehl arbeitet. Das ist zum einen die Zahl 5 und zum anderen das Register eax.
-- Das *Mnemonic* ist die Assemblername eines Befehls, z.B. *add*
+- Das *Mnemonic* ist der Assemblername eines Befehls, z.B. *add*
 
 ## Operanden
 
@@ -243,6 +243,6 @@ Bei gcc sollte die Assemblerdatei unbedingt die Endung .S (mit großem S) haben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6981/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 5561; parent 5000; 2009-08-10T21:00:28Z -->
+<!-- MediaWiki page 1918; revision 6981; parent 5561; 2010-01-26T20:11:31Z -->
