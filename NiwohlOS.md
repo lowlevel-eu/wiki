@@ -180,6 +180,8 @@ Folgende Teile sind fertig implementiert:
 - Repository erfolgreich angelegt
 - Ausgeklügelte Verzeichnisstruktur des Quelltextes
 - State-of-the-art Makefile
+- niwohunloader: Kann beide Kernel laden
+- SMP: APs werden niwohlosisiert und laufen in Ermangelung genügender Tasks bisher noch im Leerlauf &#150; theoretisch ist ein Multiprozessorbetrieb aber bereits möglich
 
   
 
@@ -187,10 +189,8 @@ Folgende Teile sind fertig implementiert:
 
 Folgende Teile sind in Arbeit und schon teilweise implementiert:
 
-- niwohunloader: Kann beide Kernel laden
-- stoiber32: Kann schon Exceptions und lernt gerade [physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
-- stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung (Man könnte auch sagen: Wie stoiber32 nur [x64iger](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"))
-- SMP: APs werden niwohlosisiert und stellen nach Anzeige einer entsprechenden Nachricht (selbstverständlich mit ẞ) blinkende ß dar (in Ermangelung eines ẞ in [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
+- stoiber32: Kann schon Exceptions, Interrupts, Paging, APIC, Multitasking, Syscalls, SMP, … &#150; im master-Branch noch nicht ganz so weit
+- stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung.
 
 ## To-Do
 
@@ -200,9 +200,9 @@ Folgende Teile müssen noch implementiert werden (einige durchgestrichene müsse
 - kprintf gut machen
 - vsprintf gut machen
 - ~~printf mit Zahlen~~
-- ~~Eine Funktion zum Ausgeben von Zahlen~~ Hexzahlen ausgeben
+- ~~Eine Funktion zum Ausgeben von Zahlen~~ ~~Hexzahlen ausgeben~~
 - ~~puts mit Zahlen~~ (nennt sich printf)
-- ~~Zahlenausgabefunktion~~ Hex ausgeben
+- ~~Zahlenausgabefunktion~~ ~~Hex ausgeben~~
 - ~~%i~~
 - Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
 - Geeignetes Logo ~~von 4chan klauen~~ erstellen
@@ -212,7 +212,7 @@ Folgende Teile müssen noch implementiert werden (einige durchgestrichene müsse
 - Unicode-Support (für ẞ und です)
 - Programme
 - Einfach alles
-- SMP (in Arbeit)
+- SMP ganz machen
 
   
 
@@ -222,6 +222,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6980/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6984/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6980; parent 6979; 2010-01-25T20:58:07Z -->
+<!-- MediaWiki page 2095; revision 6984; parent 6980; 2010-01-29T22:29:43Z -->
