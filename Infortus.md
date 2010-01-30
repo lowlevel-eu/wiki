@@ -40,7 +40,8 @@ Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660
 
 ## Screenshots
 
-Hier sehen sie Screenshots von Infortus (Codename: InfoOS) **Version: 0.00.01:**  
+Hier sehen sie Screenshots von Infortus (Codename: InfoOS)  
+**Version: 0.00.01:**  
 Grub:  
 ![InfoOS1.png](http://www.informatikonline.net/images/extern/InfoOS1.png)
 
@@ -81,6 +82,6 @@ Beim Springen nach Phase 2 hängt das System manchmal. (festgestellt unter VBox)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6988/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6987; parent 6986; 2010-01-30T17:38:36Z -->
+<!-- MediaWiki page 2117; revision 6988; parent 6987; 2010-01-30T17:39:33Z -->
