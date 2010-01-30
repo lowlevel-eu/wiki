@@ -80,8 +80,15 @@ Die Sourcefiles findet man unter:
 
 Beim Springen nach Phase 2 hängt das System manchmal. (festgestellt unter VBox)
 
+## Links
+
+- [Homepage](http://infortus-os.sourceforge.net)
+- [Infortus Seite bei Ohloh.net](http://www.ohloh.net/p/infortus-os)
+- [Bugtracker](http://sourceforge.net/tracker/?group_id=293332&atid=1239537)
+- [Sourcecode](http://infortus-os.svn.sourceforge.net/viewvc/infortus-os/)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6988/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6988; parent 6987; 2010-01-30T17:39:33Z -->
+<!-- MediaWiki page 2117; revision 6989; parent 6988; 2010-01-30T17:45:58Z -->
