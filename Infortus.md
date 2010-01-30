@@ -49,7 +49,8 @@ Kernel
 ![InfoOS2.png](http://www.informatikonline.net/images/extern/InfoOS2.png)
 
   
-**Version 0.00.03 (preview)** Phase 1:  
+**Version 0.00.03 (preview)**  
+Phase 1:  
 ![InfoOS3.png](http://www.informatikonline.net/images/extern/InfoOS3.png)
 
 Phase 2:  
@@ -74,8 +75,12 @@ Aktuelle Version 0.00.02-prealpha:
 Die Sourcefiles findet man unter:  
 <http://sourceforge.net/projects/infortus-os/files/source/prealpha-0-00-02/src-prealpha-0-00-02.zip/download>
 
+## Bekannte Bugs
+
+Beim Springen nach Phase 2 hängt das System manchmal. (festgestellt unter VBox)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6986/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6986; parent 6985; 2010-01-30T17:36:57Z -->
+<!-- MediaWiki page 2117; revision 6987; parent 6986; 2010-01-30T17:38:36Z -->
