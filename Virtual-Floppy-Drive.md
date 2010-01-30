@@ -49,7 +49,7 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 - [VDK](http://chitchat.at.infoseek.co.jp/vmware/vdk.html) ist ähnlich, funktioniert aber mit Festplatten-Images. ([64-Bit Version hier](http://oss.netfarm.it/win32/))
 - [WinImage](http://www.winimage.com/) ist eine Shareware (30-Tage Testversion), die keine Möglichkeit bietet, ein Disketten-Image als virtuelles Laufwerk einzubinden, aber mit der man Images direkt bearbeiten kann.
 - Das [VMware Disk Mount Utility](http://www.vmware.com/download/eula/diskmount_ws_v55.html) kann Images im VMware-Format (.vmdk) einbinden.
-- Der \[ImDisk Virtual Disk Driver <http://www.ltr-data.se/opencode.html#ImDisk>\] kann Disketten-, Festplatten-, sowie ISO-Images einbinden.
+- Der [ImDisk Virtual Disk Driver](http://www.ltr-data.se/opencode.html#ImDisk) kann Disketten-, Festplatten-, sowie ISO-Images einbinden.
 
 ## Weblinks
 
@@ -57,6 +57,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 6932; parent 5811; 2010-01-19T11:47:38Z -->
+<!-- MediaWiki page 2063; revision 6991; parent 6932; 2010-01-30T18:03:03Z -->
