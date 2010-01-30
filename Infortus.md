@@ -40,14 +40,20 @@ Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660
 
 ## Screenshots
 
-Hier sehen sie Screenshots von Infortus (Codename: InfoOS)
-
+Hier sehen sie Screenshots von Infortus (Codename: InfoOS) **Version: 0.00.01:**  
 Grub:  
 ![InfoOS1.png](http://www.informatikonline.net/images/extern/InfoOS1.png)
 
   
 Kernel  
 ![InfoOS2.png](http://www.informatikonline.net/images/extern/InfoOS2.png)
+
+  
+**Version 0.00.03 (preview)** Phase 1:  
+![InfoOS3.png](http://www.informatikonline.net/images/extern/InfoOS3.png)
+
+Phase 2:  
+![InfoOS4.png](http://www.informatikonline.net/images/extern/InfoOS4.png)
 
 ## Tests
 
@@ -70,6 +76,6 @@ Die Sourcefiles findet man unter:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6986/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6985; parent 6751; 2010-01-30T17:06:15Z -->
+<!-- MediaWiki page 2117; revision 6986; parent 6985; 2010-01-30T17:36:57Z -->
