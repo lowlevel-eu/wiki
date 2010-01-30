@@ -32,7 +32,7 @@ Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660
   - IDT
   - Interrupts
   - Timer
-  - *rudimentäres Multitasking*
+  - rudimentäres Multitasking
   - **Rudimentäre Speicherverwaltung**
 - Implementierung des Keyboard-Treibers
 - Implementierung des CD-Treibers
@@ -70,6 +70,6 @@ Die Sourcefiles findet man unter:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6751/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 6751; parent 6735; 2010-01-03T02:17:57Z -->
+<!-- MediaWiki page 2117; revision 6985; parent 6751; 2010-01-30T17:06:15Z -->
