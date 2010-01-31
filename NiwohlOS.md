@@ -72,6 +72,8 @@ Wie es sich für jedes anständige micromonolithische Modulahybridsystem gehört
 
 Wie für alle größenwahnsinnigen Systeme wird natürlich auch in der relativ jungen Entwicklungsgeschichte von niwohlOS über eine grafische Benutzeroberfläche nachgedacht. Hier soll nicht allzuviel verraten werden, nur dass wir ein System namens D.U.M.M., inspiriert von Windows-Usern, entwickeln werden.
 
+  
+
 ## Die Entwickler
 
 Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hocherfahrenen Informatikern mit jahrelanger Programmiererfahrung, welche sicherlich zu den zukünftigen Leistungsträgern gehören, und DickHuuhn. Die Entwickler genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
@@ -161,6 +163,8 @@ Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele
 Natürlich nur \$WIRKSTOFF von \$FIRMA. \$WERBESPRUCH.  
 (Dieser Absatz wurde zensiert, weil Markenrechtler meistens Weicheier ohne Leben und/oder Freunde sind und keinen Spaß verstehen.)
 
+  
+
 ## Kritik
 
 Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
@@ -232,6 +236,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6994/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6995/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6994; parent 6993; 2010-01-31T13:00:05Z -->
+<!-- MediaWiki page 2095; revision 6995; parent 6994; 2010-01-31T13:03:56Z -->
