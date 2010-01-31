@@ -158,7 +158,8 @@ Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele
 
 ### Was für Tabletten nehmt ihr eigentlich? Und warum nehmt ihr nicht genug davon?
 
-Natürlich nur \$NAMEEINESWIRKSTOFFS von \$FIRMENNAMEDERDIESENWIRKSTOFFINFORMVONTABLETTENHERSTELLT. \$WERBESPRUCH.
+Natürlich nur \$WIRKSTOFF von \$FIRMA. \$WERBESPRUCH.  
+(Dieser Absatz wurde zensiert, weil Markenrechtler meistens Weicheier ohne Leben und/oder Freunde sind und keinen Spaß verstehen.)
 
 ## Kritik
 
@@ -180,8 +181,6 @@ Folgende Teile sind fertig implementiert:
 - Repository erfolgreich angelegt
 - Ausgeklügelte Verzeichnisstruktur des Quelltextes
 - State-of-the-art Makefile
-- niwohunloader: Kann beide Kernel laden
-- SMP: APs werden niwohlosisiert und laufen in Ermangelung genügender Tasks bisher noch im Leerlauf &#150; theoretisch ist ein Multiprozessorbetrieb aber bereits möglich
 
   
 
@@ -189,8 +188,19 @@ Folgende Teile sind fertig implementiert:
 
 Folgende Teile sind in Arbeit und schon teilweise implementiert:
 
+- niwohunloader: Kann beide Kernel laden
+- SMP: APs werden niwohlosisiert und laufen in Ermangelung genügender Tasks bisher noch im Leerlauf &#150; theoretisch ist ein Multiprozessorbetrieb aber bereits möglich
+
+  
+
+## Rudimentär implementiert
+
+Folgende Teile hat irgendwer halb-besoffen runtergetippt und trotzdem eingecheckt:
+
 - stoiber32: Kann schon Exceptions, Interrupts, Paging, APIC, Multitasking, Syscalls, SMP, … &#150; im master-Branch noch nicht ganz so weit
 - stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung.
+
+  
 
 ## To-Do
 
@@ -222,6 +232,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6984/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6992/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 6984; parent 6980; 2010-01-29T22:29:43Z -->
+<!-- MediaWiki page 2095; revision 6992; parent 6984; 2010-01-31T12:36:20Z -->
