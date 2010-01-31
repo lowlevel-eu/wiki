@@ -12,9 +12,10 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 | -------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0-15 | Offset 0-15 | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
 | 15-31 | Selector | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
-| 32-39 | 00000000 / IST | Gibt im LM den Index in die IST an, **ansonsten 0**! |
+| 32-34 | 000 / IST | Gibt im LM den Index in die IST an, **ansonsten 0**! |
+| 35-39 | Reserviert | Wird ignoriert |
 | 40-42 | Typ | Gibt die Art des Interrupts an |
-| 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. |
+| 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. Im LM: Für 64-Bit LDT 0, **ansonsten 1** |
 | 44 | 0 |  |
 | 45-46 | DPL | Gibt das Descriptor Privilege Level an, das man braucht um diesen Interrupt aufrufen zu dürfen. |
 | 47 | P | Gibt an, ob dieser Eintrag benutzt wird. |
@@ -81,6 +82,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 6763; parent 6465; 2010-01-05T11:10:25Z -->
+<!-- MediaWiki page 1603; revision 6997; parent 6763; 2010-01-31T21:39:48Z -->
