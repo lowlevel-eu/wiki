@@ -432,6 +432,6 @@ Ja, so erstellt man einen Kernel mit Sather. Hoffentlich habe ich euch genügend
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2174/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7009/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2174/index.html)
 
-<!-- MediaWiki page 2174; revision 6999; parent 0; 2010-02-01T17:09:59Z -->
+<!-- MediaWiki page 2174; revision 7009; parent 6999; 2010-02-03T15:15:42Z -->
