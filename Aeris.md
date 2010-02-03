@@ -25,10 +25,16 @@ Die Aktuellste Version die man beziehen kann ist 0.4 BETA3. Die Entwicklerversio
 
 ### Kontakt
 
-Wiki: [\[1\]](http://aeris.a-server.tk/index.php/Hauptseite) Forum: [\[2\]](http://aeris.a-server.tk/phpBB3/index.php) Download der letzten Versionen: \[cloidnerux.cl.funpic.de\] SVN: Bitte im Wiki nachschauen
+Wiki: [\[1\]](http://aeris.a-server.tk/index.php/Hauptseite)
+
+Forum: [\[2\]](http://aeris.a-server.tk/phpBB3/index.php)
+
+Download der letzten Versionen: [\[3\]](http://cloidnerux.cl.funpic.de/)
+
+SVN: Bitte im Wiki nachschauen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7005/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
 
-<!-- MediaWiki page 2175; revision 7005; parent 0; 2010-02-03T14:19:48Z -->
+<!-- MediaWiki page 2175; revision 7006; parent 7005; 2010-02-03T14:20:22Z -->
