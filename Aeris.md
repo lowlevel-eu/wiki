@@ -35,6 +35,6 @@ SVN: Bitte im Wiki nachschauen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
 
-<!-- MediaWiki page 2175; revision 7006; parent 7005; 2010-02-03T14:20:22Z -->
+<!-- MediaWiki page 2175; revision 7007; parent 7006; 2010-02-03T14:26:12Z -->
