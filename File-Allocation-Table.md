@@ -12,7 +12,7 @@ Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Daten
 - FAT16
 - FAT32
 
-FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2^12 Cluster adressierbar, mit FAT16 2^16 und mit FAT32 2^32.
+FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2<sup>12</sup> Cluster adressierbar, mit FAT16 2<sup>16</sup> und mit FAT32 2<sup>32</sup>.
 
 ## Aufbau von FAT
 
@@ -22,11 +22,11 @@ FAT wird in 5 Bereiche unterteilt:
 - [Reservierte Sektoren](#reservierte-sektoren)
 - [File Allocation Table](#file-allocation-table-1)
 - [Wurzelverzeichnis](#) (bei FAT32 nicht vorhanden)
-- [Datei- and Verzeichnis-Datenregion](#datei--and-verzeichnis-datenregion)
+- [Datei- and Verzeichnis-Datenregion](#)
 
 ### Bootsektor
 
-Der Bootsektor enthält den BIOS Parameter Block, den Bootloader und die Bootsignatur. Damit der BIOS Parameter Block nicht ausgeführt wird, sind seine ersten 2 Bytes eine JMP-Anweisung. Hinter dem BIOS Parameter Block folgt der Bootloader. Dieser ist **zwingend** unter FAT notwendig. Der Bootloader der von Windows für FAT benutzt wird, zeigt meistens nur eine Nachricht an, dass man die Diskette entfernen und den Computer neustarten solle.
+Der Bootsektor enthält den BIOS Parameter Block, den Bootloader und die Bootsignatur. Damit der BIOS Parameter Block nicht ausgeführt wird, sind seine ersten 2 Bytes eine JMP-Anweisung. Hinter dem BIOS Parameter Block folgt der Bootloader. Dieser ist unter FAT **zwingend** notwendig. Der Bootloader der von Windows für FAT benutzt wird, zeigt meistens nur eine Nachricht an, dass man die Diskette entfernen und den Computer neustarten solle.
 
 In MS-DOS 1.0 war kein BPB vorhanden. Stattdessen gab es zwei Typen von FAT:
 
@@ -49,7 +49,7 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 | 0x16 | 2 | FAT-Größe in Sektoren. Bei FAT32 steht hier 0 und es wird das Feld bei Offset 0x24 benutzt. |
 | 0x18 | 2 | Spur-Größe in Sektoren. |
 | 0x1A | 2 | Anzahl der Schreib-Lese-Köpfe. |
-| 0x1C | 4 | Anzahl an Sektoren vor dem Bootsektor (z.B wenn das FAT auf einer Partition liegt) |
+| 0x1C | 4 | Anzahl an Sektoren vor dem Bootsektor (z. B. wenn das FAT auf einer Partition liegt) |
 | 0x20 | 4 | Anzahl an Sektoren. |
 
 Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
@@ -63,7 +63,7 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 | 0x26 | 1 | Erweiterte Bootsignatur |
 | 0x27 | 4 | Dateisystem-ID |
 | 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
-| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). z.B.: "FAT12 " oder "FAT16 ". |
+| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). z. B.: "FAT12 " oder "FAT16 ". |
 | 0x3E | 448 | Bootloader |
 | 0x1FE | 2 | Bootsignatur: 0xAA55 |
 
@@ -89,11 +89,11 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 
 ### Reservierte Sektoren
 
-Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren kann z.B ein Bootloader untergebracht werden, wenn der Platz im Bootsektor nicht reicht. Der Bootsektor wird von FAT zu den reservierten Sektoren dazugezählt.
+Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren kann z. B. ein Bootloader untergebracht werden, wenn der Platz im Bootsektor nicht reicht. Der Bootsektor wird von FAT zu den reservierten Sektoren dazugezählt.
 
 ### File Allocation Table
 
-In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man das erste Cluster einer Datei hat, kann man es in der FAT nachschlagen und somit das nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z.B eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters, kann dieses in der FAT auch als defekt markiert werden. Es wird dann nicht mehr zum Speichern von Daten verwendet.
+In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man das erste Cluster einer Datei hat, kann man es in der FAT nachschlagen und somit das nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters, kann dieses in der FAT auch als defekt markiert werden. Es wird dann nicht mehr zum Speichern von Daten verwendet.
 
 | Bedeutung | FAT12 | FAT16 | FAT32 |
 | ------------------------------------- | ------------- | --------------- | ----------------------- |
@@ -108,9 +108,9 @@ Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT das n�
 
 Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter Bereich auf dem Volume. Es bildet eine Tabelle aus Verzeichnis-Einträgen. Bei FAT32 wird das Wurzelverzeichnis wie jedes andere Verzeichnis auch behandelt und hat deshalb keinen festen Platz auf dem Volume.
 
-### Datei- and Verzeichnis-Datenregion
+### Datei- und Verzeichnis-Datenregion
 
-In der Datei- and Verzeichnis-Datenregion liegen die Datei- und Verzeichnis-Daten. Diese sind in Cluster verteilt. Um eine Datei Clustern zuzuordnen benutzt man die FAT.
+In der Datei- und Verzeichnis-Datenregion liegen die Datei- und Verzeichnis-Daten. Diese sind in Cluster verteilt. Um eine Datei Clustern zuzuordnen benutzt man die FAT.
 
 ## Verzeichnis-Eintrag
 
@@ -146,7 +146,7 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster
 
 ## VFAT
 
-VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"). Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z.B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
+VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"). Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
 
 ## Siehe auch
 
@@ -159,6 +159,6 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 6516; parent 4312; 2009-12-11T19:33:08Z -->
+<!-- MediaWiki page 1643; revision 7018; parent 6516; 2010-02-04T18:52:13Z -->
