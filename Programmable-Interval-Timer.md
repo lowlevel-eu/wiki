@@ -35,7 +35,7 @@ Der am häufigste verwendete Modus ist Mode 2, da man mit diesem leicht eine Sys
 
 ### Mode 0: Interrupt on terminal count
 
-Wenn das Counter-Register mit einem neunen Wert geladen wurde, wird dieses inkrementiert, bis es 0 erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
+Wenn das Counter-Register mit einem neunen Wert geladen wurde, wird dieses dekrementiert, bis es 0 erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
 
 ### Mode 1: Hardware Retriggerable One-Shot
 
@@ -43,13 +43,13 @@ In diesem Modus wird der IRQ in regelmäßigen Abständen ausgelöst. Dabei wird
 
 ### Mode 2: Rate Generator
 
-Es wird ein Zähler inkrementiert, bis dieser den Wert 1 enthält, dann wird der IRQ ausgelöst und der ursprüngliche Wert des Zählers wiederhergestellt. Der Vorgang beginnt von vorn. Der Wert des Zählers ergibt sich folgendermaßen:
+Es wird ein Zähler dekrementiert, bis dieser den Wert 1 enthält, dann wird der IRQ ausgelöst und der ursprüngliche Wert des Zählers wiederhergestellt. Der Vorgang beginnt von vorn. Der Wert des Zählers ergibt sich folgendermaßen:
 
      Zähler=Interne Freqenz / Counter-Register
 
 ### Mode 3: Square Wave Generator
 
-Ähnlich Mode 2, nur dass die Hälfte der Zeit während des Inkrementierens ein IRQ ausgelöst wird. Dieser Modus sollte für Channel 2 verwendet werden.
+Ähnlich Mode 2, nur dass die Hälfte der Zeit während des Dekrementierens ein IRQ ausgelöst wird. Dieser Modus sollte für Channel 2 verwendet werden.
 
 ### Mode 4: Software Triggered Strobe
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7024; parent 7022; 2010-02-05T20:39:26Z -->
+<!-- MediaWiki page 1432; revision 7027; parent 7024; 2010-02-05T21:02:19Z -->
