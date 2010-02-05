@@ -1,38 +1,108 @@
 # Programmable Interval Timer
 
-Der **Programmable Interval Timer** oder kurz **PIT** ist ein Signal erzeugender Baustein auf dem Mainboard. Er erzeugt ein Signal in einer Frequenz von 1193180 Hz. Er wird u.a. für den sleep()-Befehl gebraucht oder sonstige zeitbedingte Aufgaben.
+Der Programmable Interval Timer (PIT) ist ein Signal erzeugender Baustein auf dem Mainboard. Er arbeitet intern mit einer Frequenz von 1193180 Hz und kann z.B. für Multitasking oder als Systemuhr genutzt werden.
 
-Der **Programmable Interval Timer** (= **PIT**) erzeugt ein Signal mit der Frequenz von 1193180Hz.
+## Register
 
-## Funktionsweise
+Der PIT belegt vier Ports:
 
-Das Signal von dem die Rede ist, zählt drei Register herunter, welche jeweils eine Aktion auslösen sobald sie 0 erreichen:
+| Port | Verwendung |
+| ------ | --------------------------------- |
+| 0x40 | Counter-Register 0 setzen/lesen |
+| 0x41 | Counter-Register 1 setzen/lesen |
+| 0x42 | Counter-Register 0 setzen/lesen |
+| 0x43 | Initalisierung (siehe unten) |
 
-- Zählregister 1: Das Auslösen des [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 0 (dient Betriebssystemen zur Zeitmessung und wird oft für Multitasking genutzt)  
-- Zählregister 2: Dient in alten XT-PCs, zusammen mit dem DMA-Kanal 0, der Speicherauffrischung  
-- Zählregister 3: Signal für den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") (also die Tonfrequenz)  
+## Channels
 
-Die Frequenz für das Auslösen errechnet sich aus der Grundfrequenz und dem Wert im Register der heruntergezählt wird (Teiler).  
+Der PIT besitzt drei Channels, wobei lediglich der erste (Channel 0) beliebig benutzt werden kann, die anderen sind somit im Grunde ohne Relevanz.
 
-1193180 Hz / Teiler = Auslöse-Frequenz  
+### Channel 0
 
-Der Teiler ist ein 16-Bit groß, kann also Werte von 0 bis 65535 aufnehmen. Der Wert 0 wird jedoch als 65536 interpretiert, weshalb sich ein möglicher Teilerwert von 1 bis 65536 ergibt.  
+Dieser Channel ist mit dem [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") verbunden und löst je nach Modus den \[\[IRQ\|IRQ 0\] in regelmäßigen Abständen aus. Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das BIOS den PIT darauf initialisiert alle 54,9254 ms den IRQ 0 auszulösen. Die entsprechende [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") inkrementiert dann den Wert 0000:046C.
 
-Der Minimal- und Maximalwert des Teilers bestimmt die möglichen Auslöse-Frequenzen:  
+### Channel 1
 
-Max: 1193180 Hz / 1 = 1193180 Hz  
-Min: 1193180 Hz / 65536 = ~18.206 Hz  
+Dieser Channel wurde früher verwendet, um den Arbeitsspeicher zu synchronisieren. Heutzutage hat er keinen Nutzen mehr, sollte aber dennoch nicht verwendet werden, da es keine Garantie gibt, das er nicht doch von irgendeinem Bauteil verwendet wird.
 
-Ports: 40h bis 43h
+### Channel 2
 
-## Links
+Dieser Channel ist mit dem [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") verbunden.
 
-- [Programmierung des PIT](http://ivs.cs.uni-magdeburg.de/bs/lehre/sose99/bs1/aufgaben/aufgabe3/timer.shtml)  
-- [Intel 8253 Chip auf Wikipedia](http://en.wikipedia.org/wiki/Intel_8253)  
-- [Intel 8254 Chip auf Wikipedia](http://en.wikipedia.org/wiki/Intel_8254)
+## Modi
+
+Der am häufigste verwendete Mode ist Mode 2, da man mit diesem leicht eine Systemuhr implementieren kann.
+
+### Mode 0: Interrupt on terminal count
+
+Wenn das Counter-Register mit einem neunen Wert geladen wurde, wird dieses inkrementiert, bis es Null erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
+
+### Mode 1: Hardware Retriggerable One-Shot
+
+In diesem Mode wird der IRQ in regelmäßigen Abständen ausgelöst. Dabei wird nach das Counter-Register bis Null runtergezählt, dann dessen ursprünglicher Wert wiederhergestellt und der IRQ ausgelöst. Danach beginnt der Vorgang von vorn.
+
+### Mode 2: Rate Generator
+
+Es wird ein Zähler inkrementiert, bis dieser den Wert Eins enthält, dann wird der IRQ ausgelöst und der ursprüngliche Wert des Zählers wiederhergestellt. Der Vorgang beginnt von vorn. Der Wert des Zählers ergibt sich folgendermaßen:
+
+     Zähler=Interne Freqenz / Counter-Register
+
+### Mode 3: Square Wave Generator
+
+Ähnlich Mode 2, nur dass die Hälfte der Zeit während des Inkrementierens ein IRQ ausgelöst wird. Dieser Modus sollte für Channel 2 verwendet werden.
+
+### Mode 4: Software Triggered Strobe
+
+Das Counter-Register wird bis Null runtergezählt, ein Interrupt ausgelöst und der ursprüngliche Wert wiederhergestellt. Der Vorgang beginnt von vorn.
+
+### Mode 5: Hardware Triggered Strobe
+
+Das Herunterzählen beginnt erst, wenn andere Hardware dieses auslöst. Der IRQ wird bei Erreichen des Wertes Null ausgelöst, dann wird wieder auf das Hardwaresignal gewartet usw.
+
+## Initialisierung
+
+Zur Initialisierung muss ein Byte an den Port 0x43 gesendet werden:
+
+| Bit | Bedeutung | Mögliche Werte |
+| ----- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | Counterformat | 0: binär, 1: [BCD](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD") |
+| 1-3 | Modusnummer (siehe oben) | 0-5, alle anderen sind nicht definiert |
+| 4,5 | Lesen/Schreiben des Counterregisters | 00: Wert ist in einem internen Register, 01:nur [LSB](https://github.com/lowlevel-eu/wiki/wiki/Bin%C3%A4re-Datentypen#msb-und-lsb "LSB"), 10: nur [MSB](https://github.com/lowlevel-eu/wiki/wiki/Bin%C3%A4re-Datentypen#msb-und-lsb "MSB"), 11: [LSB](https://github.com/lowlevel-eu/wiki/wiki/Bin%C3%A4re-Datentypen#msb-und-lsb "LSB") dann [MSB](https://github.com/lowlevel-eu/wiki/wiki/Bin%C3%A4re-Datentypen#msb-und-lsb "MSB") |
+| 6,7 | Channel, der geändert werden soll | 0-2 |
+
+Nachdem der entsprechende Channel des PITs (re-)initialisiert wurde, kann das Counter-Register geschrieben werden.
+
+### Beispielcode
+
+Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird die Frequenz übergeben (Rechnung siehe unten).
+
+\<c\> VOID pit_init(WORD freq) {
+
+      freq = 1193180 / freq;
+      outb(0x43, 0x36);
+      outb(0x40,freq & 0xFF);
+      outb(0x40,freq >> 8);
+
+} \</c\>
+
+### Frequenzberechnung
+
+Frequenzen haben die Einheit 1/s, wodurch man sich leicht deren Bedeutung klar machen kann: Hat die Frequenz z.B den Wert 10, wird 10 mal pro Sekunde der IRQ 0 ausgelöst, also alle 100 ms (1s = 1000ms).
+
+Im Mode 2 wird die interne Frequenz durch den Wert des Counterregisters geteilt, um den Zähler zu erhalten. Wenn man nun eine bestimmte Frequenz benötigt, berechnet man den zu übergebenen Wert des Counter-Registers wie folgt:
+
+    Counter-Register = 1193180 / Frequenz.
+
+Entsprechendes steht auch im obigen Beispielcode.
+
+## Weblinks
+
+- <http://ivs.cs.uni-magdeburg.de/bs/lehre/sose99/bs1/aufgaben/aufgabe3/timer.shtml>
+- <http://www.stanford.edu/class/cs140/projects/pintos/specs/8254.pdf> -Intel Spezifikation (englisch)
+- <http://www.brokenthorn.com/Resources/OSDevPit.html> (englisch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 6821; parent 4954; 2010-01-07T14:58:59Z -->
+<!-- MediaWiki page 1432; revision 7022; parent 6821; 2010-02-05T17:50:32Z -->
