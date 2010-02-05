@@ -1,6 +1,6 @@
 # Programmable Interval Timer
 
-Der Programmable Interval Timer (PIT) ist ein Signal erzeugender Baustein auf dem Mainboard. Er arbeitet intern mit einer Frequenz von 1193180 Hz und kann z.B. für Multitasking oder als Systemuhr genutzt werden.
+Der Programmable Interval Timer (PIT) ist ein signalerzeugender Baustein auf dem Mainboard. Er arbeitet intern mit einer Frequenz von 1193180 Hz und kann z. B. für präemptives Multitasking oder als Systemuhr genutzt werden.
 
 ## Register
 
@@ -15,15 +15,15 @@ Der PIT belegt vier Ports:
 
 ## Channels
 
-Der PIT besitzt drei Channels, wobei lediglich der erste (Channel 0) beliebig benutzt werden kann, die anderen sind somit im Grunde ohne Relevanz.
+Der PIT besitzt drei Channels, wobei lediglich der erste (Channel 0) beliebig benutzt werden kann.
 
 ### Channel 0
 
-Dieser Channel ist mit dem [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") verbunden und löst je nach Modus den \[\[IRQ\|IRQ 0\] in regelmäßigen Abständen aus. Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das BIOS den PIT darauf initialisiert alle 54,9254 ms den IRQ 0 auszulösen. Die entsprechende [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") inkrementiert dann den Wert 0000:046C.
+Dieser Channel ist mit dem [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") verbunden und löst je nach Modus in regelmäßigen Abständen den [IRQ 0](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") aus. Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das BIOS den PIT darauf initialisiert alle 54,9254 ms den IRQ 0 auszulösen. Die entsprechende [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") inkrementiert dann den Wert 0000:046C.
 
 ### Channel 1
 
-Dieser Channel wurde früher verwendet, um den Arbeitsspeicher zu synchronisieren. Heutzutage hat er keinen Nutzen mehr, sollte aber dennoch nicht verwendet werden, da es keine Garantie gibt, das er nicht doch von irgendeinem Bauteil verwendet wird.
+Dieser Channel wurde früher verwendet, um den Arbeitsspeicher zu synchronisieren. Heutzutage hat er keinen Nutzen mehr, sollte aber dennoch nicht verwendet werden, da es keine Garantie gibt, dass er nicht doch von irgendeinem Bauteil verwendet wird.
 
 ### Channel 2
 
@@ -31,19 +31,19 @@ Dieser Channel ist mit dem [Systemlautsprecher](https://github.com/lowlevel-eu/w
 
 ## Modi
 
-Der am häufigste verwendete Mode ist Mode 2, da man mit diesem leicht eine Systemuhr implementieren kann.
+Der am häufigste verwendete Modus ist Mode 2, da man mit diesem leicht eine Systemuhr implementieren kann.
 
 ### Mode 0: Interrupt on terminal count
 
-Wenn das Counter-Register mit einem neunen Wert geladen wurde, wird dieses inkrementiert, bis es Null erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
+Wenn das Counter-Register mit einem neunen Wert geladen wurde, wird dieses inkrementiert, bis es 0 erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
 
 ### Mode 1: Hardware Retriggerable One-Shot
 
-In diesem Mode wird der IRQ in regelmäßigen Abständen ausgelöst. Dabei wird nach das Counter-Register bis Null runtergezählt, dann dessen ursprünglicher Wert wiederhergestellt und der IRQ ausgelöst. Danach beginnt der Vorgang von vorn.
+In diesem Modus wird der IRQ in regelmäßigen Abständen ausgelöst. Dabei wird das Counter-Register bis 0 heruntergezählt, dann dessen ursprünglicher Wert wiederhergestellt und der IRQ ausgelöst. Danach beginnt der Vorgang von vorn.
 
 ### Mode 2: Rate Generator
 
-Es wird ein Zähler inkrementiert, bis dieser den Wert Eins enthält, dann wird der IRQ ausgelöst und der ursprüngliche Wert des Zählers wiederhergestellt. Der Vorgang beginnt von vorn. Der Wert des Zählers ergibt sich folgendermaßen:
+Es wird ein Zähler inkrementiert, bis dieser den Wert 1 enthält, dann wird der IRQ ausgelöst und der ursprüngliche Wert des Zählers wiederhergestellt. Der Vorgang beginnt von vorn. Der Wert des Zählers ergibt sich folgendermaßen:
 
      Zähler=Interne Freqenz / Counter-Register
 
@@ -53,11 +53,11 @@ Es wird ein Zähler inkrementiert, bis dieser den Wert Eins enthält, dann wird 
 
 ### Mode 4: Software Triggered Strobe
 
-Das Counter-Register wird bis Null runtergezählt, ein Interrupt ausgelöst und der ursprüngliche Wert wiederhergestellt. Der Vorgang beginnt von vorn.
+Das Counter-Register wird bis 0 heruntergezählt, ein Interrupt ausgelöst und der ursprüngliche Wert wiederhergestellt. Der Vorgang beginnt von vorn.
 
 ### Mode 5: Hardware Triggered Strobe
 
-Das Herunterzählen beginnt erst, wenn andere Hardware dieses auslöst. Der IRQ wird bei Erreichen des Wertes Null ausgelöst, dann wird wieder auf das Hardwaresignal gewartet usw.
+Das Herunterzählen beginnt erst, wenn andere Hardware dieses auslöst. Der IRQ wird bei Erreichen des Wertes 0 ausgelöst, dann wird wieder auf das Hardwaresignal gewartet usw.
 
 ## Initialisierung
 
@@ -76,7 +76,7 @@ Nachdem der entsprechende Channel des PITs (re-)initialisiert wurde, kann das Co
 
 Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird die Frequenz übergeben (Rechnung siehe unten).
 
-\<c\> VOID pit_init(WORD freq) {
+\<c\> void pit_init(int freq) {
 
       freq = 1193180 / freq;
       outb(0x43, 0x36);
@@ -87,7 +87,7 @@ Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird 
 
 ### Frequenzberechnung
 
-Frequenzen haben die Einheit 1/s, wodurch man sich leicht deren Bedeutung klar machen kann: Hat die Frequenz z.B den Wert 10, wird 10 mal pro Sekunde der IRQ 0 ausgelöst, also alle 100 ms (1s = 1000ms).
+Frequenzen haben die Einheit 1/s, wodurch man sich leicht deren Bedeutung klar machen kann: Hat die Frequenz z. B. den Wert 10, wird zehnmal pro Sekunde der IRQ 0 ausgelöst, also alle 100 ms (1 s = 1000 ms).
 
 Im Mode 2 wird die interne Frequenz durch den Wert des Counterregisters geteilt, um den Zähler zu erhalten. Wenn man nun eine bestimmte Frequenz benötigt, berechnet man den zu übergebenen Wert des Counter-Registers wie folgt:
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7022; parent 6821; 2010-02-05T17:50:32Z -->
+<!-- MediaWiki page 1432; revision 7024; parent 7022; 2010-02-05T20:39:26Z -->
