@@ -52,10 +52,14 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 - V0.02 - Coming soon
   - Vorraussichtlich GDT & IDT
 
+## Screenshot
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png" width="720" height="400" alt="EpOS V0.1.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png)
+
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6978/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 6978; parent 6966; 2010-01-24T17:32:18Z -->
+<!-- MediaWiki page 1771; revision 7036; parent 6978; 2010-02-06T23:13:37Z -->
