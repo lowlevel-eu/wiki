@@ -1,25 +1,25 @@
 # Programmable Interval Timer
 
-Der Programmable Interval Timer (PIT) ist ein signalerzeugender Baustein auf dem Mainboard. Er arbeitet intern mit einer Frequenz von 1193180 Hz und kann z. B. für präemptives Multitasking oder als Systemuhr genutzt werden.
+Der Programmable Interval Timer (PIT) ist ein Baustein auf dem Mainboard, der in regelmäßigen Zeitabständen Signale erzeugt. Er arbeitet intern mit einer Frequenz von 1193180 Hz und kann z. B. für präemptives Multitasking oder als Systemuhr genutzt werden.
 
 ## Register
 
 Der PIT belegt vier Ports:
 
 | Port | Verwendung |
-| ------ | --------------------------------- |
-| 0x40 | Counter-Register 0 setzen/lesen |
-| 0x41 | Counter-Register 1 setzen/lesen |
-| 0x42 | Counter-Register 0 setzen/lesen |
+| ------ | --------------------------------------------- |
+| 0x40 | Counter-Register für Channel 0 setzen/lesen |
+| 0x41 | Counter-Register für Channel 1 setzen/lesen |
+| 0x42 | Counter-Register für Channel 2 setzen/lesen |
 | 0x43 | Initalisierung (siehe unten) |
 
 ## Channels
 
-Der PIT besitzt drei Channels, wobei lediglich der erste (Channel 0) beliebig benutzt werden kann.
+Der PIT besitzt drei verschiedene *Channels*, die jeweils mit unterschiedlichen Intervallen laufen und unterschiedliche Signal erzeugen. Dabei kann lediglich der erste (Channel 0) beliebig benutzt werden, da die beiden anderen Channels bereits eine Sonderfunktion haben.
 
 ### Channel 0
 
-Dieser Channel ist mit dem [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") verbunden und löst je nach Modus in regelmäßigen Abständen den [IRQ 0](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") aus. Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das BIOS den PIT darauf initialisiert alle 54,9254 ms den IRQ 0 auszulösen. Die entsprechende [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") inkrementiert dann den Wert 0000:046C.
+Dieser Channel ist mit dem [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") verbunden und löst je nach Modus in regelmäßigen Abständen den [IRQ 0](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") aus. Standardmäßg ist der PIT darauf initialisiert, alle 54,9254 ms den IRQ 0 auszulösen (das entspricht einer Frequenz von ungefähr 18,2 Hz). Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das BIOS für den IRQ 0 eine entsprechende [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") eingerichtet, die bei jedem Aufruf einen 16-Bit-Zähler an der Adresse 0000:046C erhöht.
 
 ### Channel 1
 
@@ -27,15 +27,15 @@ Dieser Channel wurde früher verwendet, um den Arbeitsspeicher zu synchronisiere
 
 ### Channel 2
 
-Dieser Channel ist mit dem [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") verbunden.
+Dieser Channel ist mit dem [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") verbunden und bestimmt die Frequenz des ausgegebenen Tons.
 
 ## Modi
 
-Der am häufigste verwendete Modus ist Mode 2, da man mit diesem leicht eine Systemuhr implementieren kann.
+Der PIT unterstützt mehrere verschiedene Modi, in denen er arbeiten kann. Der am häufigste verwendete Modus ist Mode 2, da man mit diesem leicht eine Systemuhr implementieren kann.
 
 ### Mode 0: Interrupt on terminal count
 
-Wenn das Counter-Register mit einem neunen Wert geladen wurde, wird dieses dekrementiert, bis es 0 erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
+Wenn das Counter-Register mit einem neuen Wert geladen wurde, wird dieses dekrementiert, bis es 0 erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
 
 ### Mode 1: Hardware Retriggerable One-Shot
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7027; parent 7024; 2010-02-05T21:02:19Z -->
+<!-- MediaWiki page 1432; revision 7033; parent 7027; 2010-02-06T21:20:37Z -->
