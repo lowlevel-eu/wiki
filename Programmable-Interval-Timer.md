@@ -79,7 +79,7 @@ Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird 
 \<c\> void pit_init(int freq) {
 
       freq = 1193180 / freq;
-      outb(0x43, 0x36);
+      outb(0x43, 0x34);
       outb(0x40,freq & 0xFF);
       outb(0x40,freq >> 8);
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7039; parent 7034; 2010-02-08T06:20:41Z -->
+<!-- MediaWiki page 1432; revision 7041; parent 7039; 2010-02-08T17:27:25Z -->
