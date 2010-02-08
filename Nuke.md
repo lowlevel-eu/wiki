@@ -1,17 +1,17 @@
 # Nuke
 
 | Nuke |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
-| Akt. Version: | 00003 |
+| Akt. Version: | kernel4-0.0.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
 | OS-Eigenschaften |  |
 | Plattform: | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Exokernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"),[C](https://github.com/lowlevel-eu/wiki/wiki/C "C"),[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 | API: | *noch nicht vorhanden* |
-| Binärformat: | *noch nicht vorhanden* (RAW?) |
+| Binärformat: | *noch nicht vorhanden* (Vermutlich ELF?) |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | *noch nicht vorhanden* |
 | Homepage |  |
 
@@ -27,8 +27,6 @@ Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, 
 ## Aktuelle Features
 
 - Textausgabe (mit Farbe)
-- Registerinhalte ausgeben
-- 640x480x4 VGA
 - Vorhanden Arbeitsspeicher anzeigen
 
 ## Geplante Features
@@ -43,7 +41,11 @@ Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, 
 
 ## Historie
 
-Die Versionsnummer besteht aus 5 Hex-Ziffern. Sie kann im Bootsektor an Adresse 0x127 - 0x12B ausgelesen werden. (Nur für andere OS wichtig :D)
+kernel4-0.0.0
+
+- Neuester Rewrite, dazwischen liegen noch ein paar Versionen, kernel3 gab's sogar auch mal (glaub ich zumindest)
+- Alles so weit wie möglich in C++0x
+- Zielsetzung: Nuke endlich mal benutzbar bekommen und Neueinsteigern Resourcen bieten (Kommentare, UML-Diagramme, ...)
 
 Ver **00004**
 
@@ -78,6 +80,6 @@ Ver **00000**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 5387; parent 5288; 2009-08-06T19:49:33Z -->
+<!-- MediaWiki page 1750; revision 7047; parent 5387; 2010-02-08T22:38:40Z -->
