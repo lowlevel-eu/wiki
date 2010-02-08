@@ -35,7 +35,7 @@ Der PIT unterstützt mehrere verschiedene Modi, in denen er arbeiten kann. Der a
 
 ### Mode 0: Interrupt on terminal count
 
-Wenn das Counter-Register mit einem neuen Wert geladen wurde, wird dieses dekrementiert, bis es 0 erreicht. Dann wird der wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
+Wenn das Counter-Register mit einem neuen Wert geladen wurde, wird dieses dekrementiert, bis es 0 erreicht. Dann wird der IRQ ausgelöst. Der Vorgang beginnt erst wieder von vorne, wenn ein neuer Wert ins Counter-Register geladen wird.
 
 ### Mode 1: Hardware Retriggerable One-Shot
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7034; parent 7033; 2010-02-06T21:27:57Z -->
+<!-- MediaWiki page 1432; revision 7039; parent 7034; 2010-02-08T06:20:41Z -->
