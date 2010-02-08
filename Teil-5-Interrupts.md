@@ -94,9 +94,7 @@ Jetzt fehlt nur noch die eigentliche Funktion, die aufgerufen werden soll, wenn 
 
 \<c\>void handle_interrupt(struct cpu_state\* cpu) {
 
-       int int_no = cpu->intr;
-
-       if (int_no <= 0x1f) {
+       if (cpu->intr <= 0x1f) {
            kprintf("Exception %d, Kernel angehalten!\n", interrupt);
 
            // Hier den CPU-Zustand ausgeben
@@ -190,9 +188,9 @@ Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass 
 
 };\</c\>
 
-Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene Fehlermeldung mit anschließendem Anhalten des Systems (später könnte man das aktuell ausgeführte Programm beenden, aber wir haben so etwas ja noch nicht). Für Hardware-Interrupts muss zumindest ein EOI (End of Interrupt) an den PIC gesendet werden, damit der Interrupt gleich beim nächsten Mal wieder gemeldet wird und nicht noch vom letzten Aufruf blockiert ist: \<c\>if (int_no \>= 0x20 && int_no \<= 0x2f) {
+Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene Fehlermeldung mit anschließendem Anhalten des Systems (später könnte man das aktuell ausgeführte Programm beenden, aber wir haben so etwas ja noch nicht). Für Hardware-Interrupts muss zumindest ein EOI (End of Interrupt) an den PIC gesendet werden, damit der Interrupt gleich beim nächsten Mal wieder gemeldet wird und nicht noch vom letzten Aufruf blockiert ist: \<c\>if (cpu-\>intr \>= 0x20 && cpu-\>intr \<= 0x2f) {
 
-       if (int_no >= 0x28) {
+       if (cpu->intr >= 0x28) {
            outb(0xa0, 0x20);
        }
        outb(0x20, 0x20);
@@ -209,6 +207,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 7042; parent 6545; 2010-02-08T19:26:36Z -->
+<!-- MediaWiki page 1898; revision 7043; parent 7042; 2010-02-08T19:31:13Z -->
