@@ -3,7 +3,7 @@
 | J-OS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | [Jonas Schievink](https://lowlevel-eu.github.io/wiki/pages/2138/index.html "Benutzer:Jonebohne") |
+| Entwickler: | [Jonebohne](https://lowlevel-eu.github.io/wiki/pages/2138/index.html "Benutzer:Jonebohne") |
 | Akt. Version: | Pre-Alpha 0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) |
 | OS-Eigenschaften |  |
@@ -19,12 +19,10 @@
 
 J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe.
 
-J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben(teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").
-
-Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Tastatur und Festplatten/Disketten, externe Programme, eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") und vieles mehr. Also: Es kann fast nichts ;-)
+J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben(teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader. Es läuft vollständig im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Tastatur und Festplatten/Disketten, externe Programme, eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") und vieles mehr. Also: Es kann fast nichts ;-)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 6559; parent 6558; 2009-12-16T22:25:19Z -->
+<!-- MediaWiki page 1828; revision 7038; parent 6559; 2010-02-08T06:16:39Z -->
