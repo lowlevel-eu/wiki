@@ -175,7 +175,7 @@ void operator delete\[\]( void \*obj ) {
 
 ## RTTI
 
-RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett deaktiviert. Mit g++ geschieht dies mittels des Kommandozeilenparameter *-fno-rtti*.
+RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett deaktiviert. Mit g++ geschieht dies mittels des Kommandozeilenparameter *-fno-rtti*. Ohne RTTI muss man aber auch auf dynamic_cast verzichten.
 
 ## Exceptions
 
@@ -195,6 +195,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 6685; parent 6623; 2010-01-01T22:14:55Z -->
+<!-- MediaWiki page 1486; revision 7054; parent 6685; 2010-02-09T19:04:28Z -->
