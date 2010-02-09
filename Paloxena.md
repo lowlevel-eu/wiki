@@ -48,7 +48,9 @@ Die aktuelle Freigabe ist 0.001-o (zur Benennung der Versionen, siehe [hier](htt
 
 ### Screenshot
 
-Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration): [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
+Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration):
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
 
 ## paloxena2
 
@@ -69,8 +71,32 @@ Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Comp
 - *maumau* 0.5 (Was sonst)
 - *pdksh* 5.2.14 (Public-Domain-Version der Korn Shell)
 
+## paloxena3
+
+### Oh, mein Gott.
+
+Ja. Es ist schon wieder passiert. Auch paloxena2 war zu kaputt, also gibt es nun paloxena3. Im Großen und Ganzen verfolgt es die gleichen Ziele wie paloxena2 (SMP, Threads, einfacheres Treiberinterface). Bei paloxena2 gab es aber erstens das Problem, dass ich anfangs noch keine Ahnung von SMP hatte und ich das OS zweitens zu Beginn nur als Testplattform für meinen CDI-USB-Treiber verwendet habe &#150; das soll bei paloxena3 von Anfang an besser laufen.
+
+### Syscalls
+
+Im Gegensatz zu paloxena2 sind die Linuxsyscalls nicht die nativen Syscalls von paloxena3. Native Calls finden (vorerst) über den Interrupt 0xA2 (in Anlehnung an 0x2A, der aber für IRQs reserviert ist) statt. Wird allerdings der Interrupt 0x80 aufgerufen, so wird der entsprechende Linux-Syscall ausgeführt. Per Interrupt 0x7F sind [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS")-Syscalls zu erreichen. Auf diese Art und Weise soll es möglich sein, verschiedene Betriebssysteme zu „emulieren“, sollten zwei Betriebssysteme z. B. den gleichen Interrupt verwenden, dann wird beim Programmstart festgestellt, welche Emulationsart verwendet werden soll, dies ist auch z. B. für den Zustand des Stacks bei Programmaufruf wichtig. Bis jetzt geschieht dies folgendermaßen:
+
+- Wenn an der Stelle 0x7FFFFFFC ein DWord mit dem Wert 42 steht, dann handelt es sich um eine native paloxena3-Anwendung (sollte nur per 0xA2 Syscalls ausführen, darf vorraussichtlich aber auch per 0x80).
+- Ist der Entry-Point zwischen 0x14000000 und 0x2000000, dann wird PrettyOS emuliert.
+- Sonst handelt es sich um eine Linuxanwendung.
+
+PrettyOS wird bereits ziemlich gut emuliert (allerdings fehlen in Ermangelung eines entsprechenden Treibers die Disketten- bzw. FAT-Funktionen, ebenso gibt es nur eine rudimentäre Tastaturunterstützung), hier ein Screenshot der Shell:
+
+Datei:Prettypaloxena.png
+
+### OSOD
+
+Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwiegenden Fehler anzeigende Farbe ist also nicht mehr pink oder violett, sondern orange, meine Lieblingsfarbe (#FF4000, um genau zu sein). Hier ein entsprechender Screenshot:
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/48d49f3eb3ec3b0a95ae.png" width="720" height="400" alt="Paloxenaosod.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/48d49f3eb3ec3b0a95ae.png)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 6797; parent 6796; 2010-01-05T22:10:20Z -->
+<!-- MediaWiki page 2045; revision 7058; parent 6797; 2010-02-09T23:06:06Z -->
