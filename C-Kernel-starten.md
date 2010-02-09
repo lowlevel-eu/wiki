@@ -280,6 +280,6 @@ Hier noch das Packet an Tools und Quelltexten: [ckernel.zip](http://lowlevel.bra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 4451; parent 4435; 2009-06-17T13:17:55Z -->
+<!-- MediaWiki page 1458; revision 7051; parent 4451; 2010-02-09T16:54:45Z -->
