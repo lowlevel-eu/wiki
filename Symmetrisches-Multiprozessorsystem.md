@@ -93,9 +93,10 @@ Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 - [Intel Multiprocessor Specification](http://www.intel.com/design/pentium/datashts/242016.htm)
 - Kapitel 7 von [Intel® 64 and IA-32 Architectures Software Developer’s Manual](http://www.intel.com/design/processor/manuals/253668.pdf)
+- [Bona-Fide-Tutorial "Multiprocessing Support for Hobby OSes Explained"](http://www.osdever.net/tutorials/view/multiprocessing-support-for-hobby-oses-explained)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 6822; parent 5487; 2010-01-07T17:48:40Z -->
+<!-- MediaWiki page 1490; revision 7059; parent 6822; 2010-02-10T21:36:39Z -->
