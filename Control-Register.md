@@ -10,7 +10,7 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 
 | 31 | 30 | 29 | 28-19 | 18 | 17 | 16 | 15-6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | ----- | ----- | ----- | -------------- | ----- | ----- | ----- | -------------- | ----- | ----- | ----- | ----- | ----- | ----- |
-| PG | CD | NW | *Reserviert* | AW |  | WP | *Reserviert* | NE | ET | TS | EM | MP | PE |
+| PG | CD | NW | *Reserviert* | AM |  | WP | *Reserviert* | NE | ET | TS | EM | MP | PE |
 
 - PE - *Protection Enbale* Flag schaltet den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") ein bzw. aus (Genaueres siehe [hier](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode"))
 - MP - Mit dem *Monitor Coprocessor* Flag kann festgelegt werden ob bei Gesetztem TS-Flag der Aufruf von WAIT/FWAIT einen Exception auslösen oder nicht (bei gesetztem MP-Flag wird die Exception ausgelöst).
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 7060; parent 4888; 2010-02-11T13:30:23Z -->
+<!-- MediaWiki page 1610; revision 7061; parent 7060; 2010-02-11T13:50:21Z -->
