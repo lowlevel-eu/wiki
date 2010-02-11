@@ -26,7 +26,7 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 
 ## CR2
 
-Bevor die CPU eine [Page-Falut Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") auslöst, lädt sie die virtuelle Adresse, die den Fehler verursacht hat, in das CR2 Register.
+Bevor die CPU eine [Page-Fault-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") auslöst, lädt sie die virtuelle Adresse, die den Fehler verursacht hat, in das CR2 Register.
 
 ## CR3
 
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4888/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 4888; parent 4878; 2009-07-30T17:46:52Z -->
+<!-- MediaWiki page 1610; revision 7060; parent 4888; 2010-02-11T13:30:23Z -->
