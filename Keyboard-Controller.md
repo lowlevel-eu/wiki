@@ -132,7 +132,7 @@ Schreiben über KBC-Befehl 0x60
 
   
 
-- KBC Scancode-Übersetzung: <http://www.win.tue.nl/~aeb/linux/kbd/scancodes-10.html#translationtable>
+\*KBC Scancode-Übersetzung: http://www.win.tue.nl/~aeb/linux/kbd/scancodes-10.html#translationtable
 
   
 
@@ -383,6 +383,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7063/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 6519; parent 6322; 2009-12-12T13:35:29Z -->
+<!-- MediaWiki page 1468; revision 7063; parent 6519; 2010-02-12T21:00:06Z -->
