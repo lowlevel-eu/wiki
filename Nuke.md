@@ -20,9 +20,9 @@
   
 Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, dem Benutzer eine schnelle Arbeit am Computer zu gewährleisten.
 
-## Entwickler
+## Screenshot
 
-- [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cd20ff76126c74c40341.png" width="720" height="400" alt="Nuke-0.4.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cd20ff76126c74c40341.png)
 
 ## Aktuelle Features
 
@@ -80,6 +80,6 @@ Ver **00000**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 7047; parent 5387; 2010-02-08T22:38:40Z -->
+<!-- MediaWiki page 1750; revision 7075; parent 7047; 2010-02-14T18:39:52Z -->
