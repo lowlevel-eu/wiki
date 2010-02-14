@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
-| Akt. Version: | kernel4-0.0.0 |
+| Akt. Version: | kernel4-0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
 | OS-Eigenschaften |  |
 | Plattform: | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
@@ -40,6 +40,13 @@ Nuke ist mein Hobby OS, welches im Long Mode läuft. Hauptziel von Nuke ist es, 
 - *AMD Processor Optimization Module*
 
 ## Historie
+
+kernel4-0.0.1
+
+- Paging
+- Rudimentäres MM
+- delete/delete\[\] und new/new\[\] (Funktioniert, solang Objekt kleinergleich Pagegröße)
+- IRQ0-Handler alloziert zu Demonstrationszwecken Speicher
 
 kernel4-0.0.0
 
@@ -80,6 +87,6 @@ Ver **00000**
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1750/index.html)
 
-<!-- MediaWiki page 1750; revision 7075; parent 7047; 2010-02-14T18:39:52Z -->
+<!-- MediaWiki page 1750; revision 7077; parent 7075; 2010-02-14T23:48:34Z -->
