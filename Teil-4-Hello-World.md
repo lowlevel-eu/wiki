@@ -206,8 +206,12 @@ void init(void) {
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------- |
 | « [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") | **Navigation** | [Teil 5 - Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Teil-5-Interrupts "Teil 5 - Interrupts") » |
 
+## Sourcecode
+
+Den Sourcecode zu diesem Teil der Tutorialreihe und den folgenden, kann man [hier](http://git.tyndur.org/?p=tutorial.git;a=summary) einsehen. Der Sourcecode ist **nicht** dazu gedacht, kopiert zu werden, sondern sollte nur im Notfall verwendet werden um eine unverstandene Kleinigkeit nachzuschauen. Falls größere Verständnisprobleme auftauchen, kann jederzeit im [Forum](http://lowlevel.brainsware.org/forum/) oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachgefragt werden.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7065/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 6457; parent 5488; 2009-12-03T19:47:14Z -->
+<!-- MediaWiki page 1897; revision 7065; parent 6457; 2010-02-14T13:49:49Z -->
