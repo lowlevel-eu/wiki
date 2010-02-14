@@ -202,7 +202,7 @@ void init(void) {
 
 ## Sourcecode
 
-Den Sourcecode zu diesem Teil der Tutorialreihe und den folgenden, kann man [hier](http://git.tyndur.org/?p=tutorial.git;a=summary) einsehen. Der Sourcecode ist **nicht** dazu gedacht, kopiert zu werden, sondern sollte nur im Notfall verwendet werden um eine unverstandene Kleinigkeit nachzuschauen. Falls größere Verständnisprobleme auftauchen, kann jederzeit im [Forum](http://lowlevel.brainsware.org/forum/) oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachgefragt werden.
+Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hier](http://git.tyndur.org/?p=tutorial.git;a=summary) einsehen. Der Sourcecode ist **nicht** dazu gedacht, kopiert zu werden, sondern sollte nur im Notfall verwendet werden, um eine unverstandene Kleinigkeit nachzuschauen. Falls größere Verständnisprobleme auftauchen, kann jederzeit im [Forum](http://lowlevel.brainsware.org/forum/) oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachgefragt werden.
 
   
 
@@ -212,6 +212,6 @@ Den Sourcecode zu diesem Teil der Tutorialreihe und den folgenden, kann man [hie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7066/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7066; parent 7065; 2010-02-14T13:50:31Z -->
+<!-- MediaWiki page 1897; revision 7068; parent 7066; 2010-02-14T16:11:15Z -->
