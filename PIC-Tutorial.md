@@ -1,12 +1,12 @@
 # PIC Tutorial
 
-Dieses Tutorial soll auf die wichtigsten Aspekte der Programmierung des PICs eingehen. Ich empfehle dennoch, auch [diesen Aritkel](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") zu lesen, da dieser alle Aspekte erläutert. **Hinweis: Du musst den PIC nur umprogrammieren, wenn du aus dem [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") wechselst!**
+Dieses Tutorial soll auf die wichtigsten Aspekte der Programmierung des PICs eingehen. Ich empfehle dennoch, auch [diesen Aritkel](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") zu lesen, da dieser alle Aspekte erläutert.
 
 ## Vorüberlegungen
 
 ### Wofür benötige ich den PIC überhaupt?
 
-Wann immer ein Bauteil (Hardware) Daten für die CPU bereithält, benötigt dieses eine Möglichkeit der CPU mitzuteilen, dass sie diese Daten auslesen soll. Dafür gibt es im Grunde zwei Möglichkeiten: Entweder du fragst in regelmäßigen Abständen bei jedem Port nach, ob er Daten für dich hat - Polling genannt - oder du lässt den PIC das machen. Es liegt auf der Hand, dass letzteres erheblich schneller ist, weswegen es kein modernes Betriebssystem gibt, das Polling verwendet.
+Wann immer ein Bauteil (Hardware) Daten für die CPU bereithält, benötigt dieses eine Möglichkeit der CPU mitzuteilen, dass sie diese Daten auslesen soll. Dafür gibt es im Grunde zwei Möglichkeiten: Entweder du fragst in regelmäßigen Abständen bei jedem Port nach, ob er Daten für dich hat &#150; Polling genannt &#150; oder du lässt den PIC das machen. Es liegt auf der Hand, dass letzteres erheblich schneller ist, weswegen es kein modernes Betriebssystem gibt, das Polling verwendet, wenn auch Interrupts möglich sind.
 
 ### Wie funktioniert der PIC denn genau?
 
@@ -14,7 +14,7 @@ Wenn ein Bauteil die Aufmerksamkeit der CPU möchte, dann sendet es einen sogena
 
 ### Wieso muss ich den PIC denn dann umprogrammieren?
 
-Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") den PIC so programmiert, dass er auf Einträge in der [IVT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "IVT") zeigt. Da diese aber nun durch die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") ersetzt wird, stimmen die Interrupt-Nummern, die der PIC an die CPU übermittelt nicht mehr. So würde z.B. jeder Tastendruck eine Debug-Exception auslösen. Deshalb muss die Zuordnung der IRQ Nummer zur Interrupt Nummer geändert werden.
+Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") hat das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") den PIC so programmiert, dass er auf Einträge in der [IVT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "IVT") zeigt. Da diese aber nun durch die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") ersetzt wird, stimmen die Interrupt-Nummern, die der PIC an die CPU übermittelt nicht mehr. So würde z. B. jeder Tastendruck eine Debug-Exception auslösen. Deshalb muss die Zuordnung der IRQ Nummer zur Interrupt Nummer geändert werden.
 
 ## Programmierung
 
@@ -29,7 +29,7 @@ Zur Reintialisierung müssen vier sogenannte ICWs (Initialization Control Words)
 5.  define PIC_SLAVE_DATA 0xA1
 6.  define PIC_SLAVE_IMR 0xA1
 
-\</c\> Wie man sehen kann, gibt es zwei PICs, die übelicherweise über die IRQ-Leitung 2 miteinander kommunizieren, was man aber auch ändern kann (siehe unten). Befehle müssen allerdings zu jedem PIC gesendet werden. Das Bitmuster der Befehle kann [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#initialisierung "PIC") hier noch einmal im Einzelnen nachvollzogen werden.
+\</c\> Wie man sehen kann, gibt es zwei PICs, die üblicherweise über die IRQ-Leitung 2 miteinander kommunizieren, was man aber auch ändern kann (siehe unten). Befehle müssen allerdings zu jedem PIC gesendet werden. Das Bitmuster der Befehle kann [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#initialisierung "PIC") hier noch einmal im Einzelnen nachvollzogen werden.
 
 Kommen wir also zu ICW Nummer Eins:
 
@@ -40,7 +40,7 @@ Kommen wir also zu ICW Nummer Eins:
 
 \</c\> 0x11 bedeutet: Wir senden auch ICW4, es gibt zwei PICs und wir wollen Initialisieren.
 
-Das nächste ICW ist das wichtigste, denn hiermit wird angegeben auf welchen Eintrag in der IDT der IRQ 0 (für den Master PIC) und IRQ 8 (für den Slave) zeigt. Dieser Wert wird der Funktion als Parameter übergeben. Üblicherweise verwendet man 32, um direkt an die Exceptions anzuschließen. Aber natürlich dürfen auch andere Werte verwendet werden, solange diese durch 8 teilbar sind.
+Das nächste ICW ist das wichtigste, denn hiermit wird angegeben, auf welchen Eintrag in der IDT der IRQ 0 (für den Master PIC) und IRQ 8 (für den Slave) zeigt. Dieser Wert wird der Funktion als Parameter übergeben. Üblicherweise verwendet man 32, um direkt an die Exceptions anzuschließen. Aber natürlich dürfen auch andere Werte verwendet werden, solange diese durch 8 teilbar sind.
 
 \<c\>
 
@@ -49,16 +49,16 @@ Das nächste ICW ist das wichtigste, denn hiermit wird angegeben auf welchen Ein
 
 \</c\>
 
-Die Hälfte ist geschaft. Kommen wir zu ICW3. Mit diesem gibt man, über welchen IRQ die beiden PICs miteinander kommunizieren, das ist IRQ 2.
+Die Hälfte ist geschafft. Kommen wir zu ICW3. Mit diesem gibt man, über welchen IRQ die beiden PICs miteinander kommunizieren, das ist IRQ 2.
 
 \<c\>
 
        outb(PIC_MASTER_DATA, 0x04);
        outb(PIC_SLAVE_DATA, 2);
 
-\</c\> Merkwürdigerweise übergibt man an den Slave direkt die IRQ Nummer, dem Master übergibt man eine Bitmaske, in dem das betreffende Bit gesetzt ist.
+\</c\> Merkwürdigerweise übergibt man an den Slave direkt die IRQ-Nummer, dem Master übergibt man eine Bitmaske, in dem das betreffende Bit gesetzt ist.
 
-Fast fertig, nur noch ICW4. Es wird 0x01 an beide gesendet, um anzuzeigen, dass wir uns im 8086 Mode befinden (was auch sonst...)
+Fast fertig, nur noch ICW4 fehlt. Es wird 0x01 an beide gesendet, um anzuzeigen, dass wir uns im 8086-Mode befinden (was auch sonst...).
 
 \<c\>
 
@@ -69,12 +69,12 @@ Fast fertig, nur noch ICW4. Es wird 0x01 an beide gesendet, um anzuzeigen, dass 
 
 ### IRQs maskieren
 
-Wie bereits erwähnt, kann die CPU auch bestimmte IRQs blocken. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ geblockt. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden.Schreiben wir uns eine Funktion dazu: \<c\> void pic_mask_irqs(word mask) {
+Wie bereits erwähnt, kann die CPU auch bestimmte IRQs blockieren. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ blockiert. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden. Schreiben wir uns eine Funktion dazu: \<c\> void pic_mask_irqs(uint16_t mask) {
 
-      outb(PIC_MASTER_IMR, (byte) mask);
-      outb(PIC_SLAVE_IMR, (byte) mask>>8);
+      outb(PIC_MASTER_IMR, (uint8_t) mask);
+      outb(PIC_SLAVE_IMR, (uint8_t) mask>>8);
 
-} \</c\> Simpel, oder? Nebenbei: Wenn das Interruptflag gelöscht ist (-\>cli), dann kommen sowieso keine IRQs an.
+} \</c\> Simpel, oder? Nebenbei: Wenn das Interruptflag gelöscht ist (-\>cli), dann kommen sowieso keine IRQs an. Außerdem werden alle IRQs des Slaves blockiert, wenn im Master der IRQ 2 maskiert wird.
 
 ### ISRs programmieren
 
@@ -141,6 +141,6 @@ void pic_send_eoi(int irq_num) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7070/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 7070; parent 0; 2010-02-14T17:26:30Z -->
+<!-- MediaWiki page 2183; revision 7073; parent 7070; 2010-02-14T17:46:57Z -->
