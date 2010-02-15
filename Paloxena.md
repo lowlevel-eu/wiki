@@ -85,7 +85,7 @@ Im Gegensatz zu paloxena2 sind die Linuxsyscalls nicht die nativen Syscalls von 
 - Ist der Entry-Point zwischen 0x14000000 und 0x2000000, dann wird PrettyOS emuliert.
 - Sonst handelt es sich um eine Linuxanwendung.
 
-PrettyOS wird bereits ziemlich gut emuliert (allerdings fehlen in Ermangelung eines entsprechenden Treibers die Disketten- bzw. FAT-Funktionen, ebenso gibt es nur eine rudimentäre Tastaturunterstützung), hier ein Screenshot der Shell:
+PrettyOS wird bereits ziemlich gut emuliert (allerdings fehlen in Ermangelung eines entsprechenden Treibers die Disketten- bzw. FAT-Funktionen), hier ein Screenshot der Shell:
 
 Datei:Prettypaloxena.png
 
@@ -97,6 +97,6 @@ Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 7058; parent 6797; 2010-02-09T23:06:06Z -->
+<!-- MediaWiki page 2045; revision 7079; parent 7058; 2010-02-15T16:38:43Z -->
