@@ -124,10 +124,10 @@ void pic_remap(int interrupt_num) {
 
 }
 
-void pic_mask_irqs(word mask) {
+void pic_mask_irqs(uint16_t mask) {
 
-      outb(PIC_MASTER_IMR, (byte) mask);
-      outb(PIC_SLAVE_IMR, (byte) mask>>8);
+      outb(PIC_MASTER_IMR, (uint8_t) mask);
+      outb(PIC_SLAVE_IMR, (uint8_t) mask>>8);
 
 }
 
@@ -141,6 +141,6 @@ void pic_send_eoi(int irq_num) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 7073; parent 7070; 2010-02-14T17:46:57Z -->
+<!-- MediaWiki page 2183; revision 7083; parent 7073; 2010-02-16T14:19:18Z -->
