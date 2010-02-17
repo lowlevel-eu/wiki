@@ -30,7 +30,7 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). 
 ### Befehle, die sich auf den Stack auswirken
 
 | Befehl | Beschreibung |
-| --------------------- | ----------------------------------------------------------------------------------------- |
+| --------------------- | --------------------------------------------------------------------------------------------- |
 | push *operand* | schreibt den Operanden auf den Stack |
 | pop *operand* | liest das oberste Element vom Stack in den Operanden |
 | pushf | schreibt das EFLAGS-Register auf den Stack |
@@ -45,10 +45,10 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). 
 | iret | Lädt diese Register wieder, um zur aufrufenden Codestelle zurückzukehren |
 | sysenter / sysleave | siehe [Sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
 | syscall / sysret |  |
-| enter / leave |  |
+| enter / leave | siehe [Enter / Leave](https://github.com/lowlevel-eu/wiki/wiki/Enter-Leave "Enter / Leave") |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 6961; parent 6958; 2010-01-22T21:00:31Z -->
+<!-- MediaWiki page 2165; revision 7088; parent 6961; 2010-02-17T14:38:37Z -->
