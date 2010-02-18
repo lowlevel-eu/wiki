@@ -45,7 +45,7 @@ Dient GRUB zum Finden des Multiboot-Headers. Muss 0x1BADB002 sein.
 
 ### mbh_flags
 
-Bits 0-15 sind Flags die umbedingt benötigt werden. Wenn der Bootloader eines dieser Flags nicht kennt, bricht er den Bootvorgang ab. Bits 16-31 sind optionale Flags. Es gibt die folgenden Flags
+Bits 0-15 sind Flags die unbedingt benötigt werden. Wenn der Bootloader eines dieser Flags nicht kennt, bricht er den Bootvorgang ab. Bits 16-31 sind optionale Flags. Es gibt die folgenden Flags
 
 | Bit | Auswirkung |
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6115/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7094/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 6115; parent 5827; 2009-10-29T15:24:55Z -->
+<!-- MediaWiki page 1560; revision 7094; parent 6115; 2010-02-18T15:05:34Z -->
