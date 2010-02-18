@@ -17,7 +17,7 @@
 
 <http://geos-hp.kilu.de>
 
-GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch sehr jung, kann fast nichts, und ausserdem konnte ich mich noch nicht um die HP kümmern, deswegen gibt es auch keine Downloads.
+GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 
 ## Features
 
@@ -26,8 +26,16 @@ GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Es ist noch
 - GDT
 - IDT
 
+## Geplante Features
+
+- Multitasking
+- FAT 16/32 und ext2/3 Treiber
+- vielleicht noch ein Treiber für GEFS
+- USB- & Internetkarten-Treiber
+- eigener Multibootloaders
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6983/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 6983; parent 6973; 2010-01-29T15:58:16Z -->
+<!-- MediaWiki page 2164; revision 7093; parent 6983; 2010-02-18T11:05:06Z -->
