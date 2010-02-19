@@ -12,7 +12,7 @@ Die HAL beinhaltet somit folgende Aufgaben, wobei zu beachten ist, dass das nur 
 
 Um I/O-Ports zu verwalten könnten Funktionen zum Allozieren und Freigeben von [I/O-Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Port") zur Verfügung gestellt werden, falls die Architektur (wie z. B. [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")) I/O-Ports zur Verfügung stellt. Außerdem werden Funktionen benötigt um auf die I/O-Ports zuzugreifen.
 
-### Memmory-mapped I/O
+### Memory-mapped I/O
 
 Zusätzlich zu den I/O-Ports &#150; oft auch anstelle der I/O-Ports &#150; wird von der Architektur an bestimmmten Speicherbereichen nicht normaler RAM eingeblendet, sondern Register von Hardwarekomponenten. Es kann deshalb sinnvoll sein, Funktionen zum Allozieren, Freigeben und zum Zugriff auf solche Speicherbereiche vorzusehen. Dabei ist zu beachten, dass in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") und [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") der type-qualifier *volatile* verwendet werden sollte, um auf solche Speicherbereiche zuzugreifen.
 
@@ -38,6 +38,6 @@ Der [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6755/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 6755; parent 6754; 2010-01-03T11:22:24Z -->
+<!-- MediaWiki page 1480; revision 7104; parent 6755; 2010-02-19T15:52:03Z -->
