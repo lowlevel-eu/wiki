@@ -48,7 +48,10 @@
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
   - Macht das im OS Dev überhaupt Sinn? Kann man mit GDB einen Kernel debuggen?!
     - Ob es Sinn macht, weiß ich nicht, aber ergeben tut es welchen (tut-tuuut): Ja, man kann einen Kernel debuggen. Mit qemu eben.
-- Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen), siehe beispielsweise [Intel(R) 64 and IA-32 Architectures Optimization Reference Manual](http://www.intel.com/Assets/PDF/manual/248966.pdf) und [Software Optimization Guide for the AMD64 Processors](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25112.PDF), aber dazu dürfte einiges an Verständnis für Pipelines, etc. notwendig sein
+      - Ok. PS: Der Lok ergibt es Spaß zu pfeifen...
+
+<!-- -->
+
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
 - ~~Interne Darstellung der Zahlen, Darstellungsmöglichkeiten negativer Zahlen, Aufbau von Gleitkommazahlen (IEEE)~~
@@ -85,6 +88,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7110/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7110; parent 7100; 2010-02-19T17:06:54Z -->
+<!-- MediaWiki page 1518; revision 7117; parent 7110; 2010-02-19T19:26:29Z -->
