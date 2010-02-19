@@ -46,6 +46,7 @@
 ## Neu erstellen
 
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
+  - Macht das im OS Dev überhaupt Sinn? Kann man mit GDB einen Kernel debuggen?!
 - Lowlevel Optimierungsmöglichkeiten (bsp *mov eax, 0* mit *xor eax,eax* ersetzen), siehe beispielsweise [Intel(R) 64 and IA-32 Architectures Optimization Reference Manual](http://www.intel.com/Assets/PDF/manual/248966.pdf) und [Software Optimization Guide for the AMD64 Processors](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25112.PDF), aber dazu dürfte einiges an Verständnis für Pipelines, etc. notwendig sein
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
@@ -83,6 +84,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7072/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7100/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7072; parent 7067; 2010-02-14T17:30:41Z -->
+<!-- MediaWiki page 1518; revision 7100; parent 7072; 2010-02-19T15:44:11Z -->
