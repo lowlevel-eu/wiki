@@ -35,7 +35,7 @@ In Version 0.0.1 sind folgende Features implementiert:
 - Multitasking in Ring 3
 - Physikale Speicherverwaltung
 
-### Version 0.0.2 (geplant)
+#### Version 0.0.2 (geplant)
 
 In Version 0.0.2 soll folgendes stecken:
 
@@ -44,6 +44,6 @@ In Version 0.0.2 soll folgendes stecken:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7101/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 7101; parent 7048; 2010-02-19T15:46:49Z -->
+<!-- MediaWiki page 1828; revision 7102; parent 7101; 2010-02-19T15:47:12Z -->
