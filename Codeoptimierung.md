@@ -43,10 +43,11 @@ TODO
 
 ## Weblinks
 
-- <http://www.intel.com/Assets/PDF/manual/248966.pdf>
+- [Intel ‐ Optimierung für IA32](http://www.intel.com/Assets/PDF/manual/248966.pdf)
+- [AMD ‐ Software Optimierung für AMD64](http://support.amd.com/us/Processor_TechDocs/25112.PDF)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7111/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7112/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 7111; parent 7109; 2010-02-19T17:17:07Z -->
+<!-- MediaWiki page 2187; revision 7112; parent 7111; 2010-02-19T17:27:40Z -->
