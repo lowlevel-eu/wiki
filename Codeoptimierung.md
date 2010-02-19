@@ -6,7 +6,7 @@ Durch die Optimierung des Quellcodes eines Programms kann dieses schneller, effe
 
 ### Datengrößen
 
-DWORD ist beser...
+Wordgröße des Prozessors verwenden, ist oft besser, als dies nicht zu tun (DWords bei i386, QWords bei x86-64).
 
 ### Alignment
 
@@ -14,7 +14,7 @@ DWORD ist beser...
 
 ### Reduzierung der Codegröße
 
-Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), wie es z.B. im [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") nötig ist.
+Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), wie es z. B. im [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") nötig ist.
 
 | Beschreibung | Optimierter Code |
 | --------------------------------------- | --------------------------------------------------------------------------------------------- |
@@ -47,6 +47,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 7107; parent 0; 2010-02-19T16:13:30Z -->
+<!-- MediaWiki page 2187; revision 7109; parent 7107; 2010-02-19T17:04:45Z -->
