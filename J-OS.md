@@ -15,27 +15,35 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC")(geplant) |
 | Homepage |  |
 
-\[noch keine\]
+(noch keine)
 
 J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe.
 
-J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben(teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader. Es läuft vollständig im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Festplatten/Disketten/CD-Laufwerke, externe Programme, Netzwerktreiber, eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") und vieles mehr. Es kann also fast nichts ;-)
+J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben(teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader. Es läuft vollständig im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Festplatten/Disketten/CD-Laufwerke, Netzwerktreiber, eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") und vieles mehr. Es kann also fast nichts ;-)
 
   
 
 ## Changelog
 
-#### Version 0.0.1
+#### Version 0.0.1 - Buchstabensalat
 
 In Version 0.0.1 sind folgende Features implementiert:
 
 - Textausgabe (verschiedene Farben)
 - GDT und IDT
 - Exceptions werden behandelt
-- Multitasking in Ring 0
+- Multitasking in Ring 3
+- Physikale Speicherverwaltung
+
+### Version 0.0.2 (geplant)
+
+In Version 0.0.2 soll folgendes stecken:
+
+- Reboot-Funktion
+- Angepasste Erstellung von Tasks
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7101/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 7048; parent 7038; 2010-02-09T14:40:39Z -->
+<!-- MediaWiki page 1828; revision 7101; parent 7048; 2010-02-19T15:46:49Z -->
