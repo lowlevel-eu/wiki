@@ -29,11 +29,11 @@ J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ge
 
 In Version 0.0.1 sind folgende Features implementiert:
 
-- Textausgabe (verschiedene Farben)
-- GDT und IDT
-- Exceptions werden behandelt
-- Multitasking in Ring 3
-- Physikale Speicherverwaltung
+- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") (verschiedene Farben)
+- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT")
+- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") werden behandelt
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") in Ring 3
+- [Physikale Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
 
 #### Version 0.0.2 (geplant)
 
@@ -44,6 +44,6 @@ In Version 0.0.2 soll folgendes stecken:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7103/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 7102; parent 7101; 2010-02-19T15:47:12Z -->
+<!-- MediaWiki page 1828; revision 7103; parent 7102; 2010-02-19T15:49:41Z -->
