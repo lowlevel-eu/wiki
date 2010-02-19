@@ -6,11 +6,11 @@ Durch die Optimierung des Quellcodes eines Programms kann dieses schneller, effe
 
 ### Datengrößen
 
-- Die Wortgröße des Prozessors zu verwenden ist meist die schnellste. (32 Bit bei i386, 64 Bit bei x86-64).
+- Die Wortgröße des Prozessors zu verwenden ist meist vorteilhaft. (32 Bit bei i386, 64 Bit bei x86-64).
 
 ### Alignment
 
-- Code und Daten sollten in getrennten Pages gehalten werden.
+- Code und Daten sollten in getrennten [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") gehalten werden.
 - Wenn man aber gezwungen ist, Code und Daten zu mischen, dann sollte man die Daten so legen, dass Sprünge nicht darüber hinweg springen müssen.
 - Selbst modifizierender Code widerspricht diesem Prinzip.
 - Sprungziele sollten am Anfang eines Paragrafs (16Byte) stehen.
@@ -38,7 +38,7 @@ Somit sind auch Schleifen performancekritisch, da in ihnen sehr oft gesprungen w
 
 Auch Funktionsaufrufe fallen unter Sprünge.
 
-- Funktionen, die nur wenig leisten, sollten vermieden und ihr Code direkt eingearbeitet werden (diesem Zweck dient das inline-Schlüsselwort in C)
+- Funktionen, die nur wenig leisten, sollten vermieden und ihr Code direkt eingearbeitet werden (diesem Zweck dient das inline-Schlüsselwort in C, allerdings werden kurze Funktionen bei entsprechender Optimierung vom C-Compiler oft auch automatisch entsprechend behandelt)
 
 ### Caching
 
@@ -51,12 +51,12 @@ Auch Funktionsaufrufe fallen unter Sprünge.
 
 ### Reduzierung der Codegröße
 
-Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), wie es z.B. im [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") nötig ist.
+Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), wie es z. B. im [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") nötig ist.
 
 | Beschreibung | Optimierter Code |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | Register 0 setzen | \<asm\>xor eax, eax\</asm\> |
-| Prüfen, ob Register 0 ist | \<asm\>test eax, eax<br>jz ...\</asm\> |
+| Prüfen, ob Register 0 ist | \<asm\>test eax, eax jz ...\</asm\><br> |
 | Multiplikation mit einer Zweierpotenz | \<asm\>shl eax, log2 Faktor\</asm\> |
 | Division durch eine Zweierpotenz | \<asm\>shr eax, log2 Divisor\</asm\> |
 | Beliebige Multiplikation | \<asm\>imul eax, \[Faktor_1\], \[Faktor_2\]\</asm\> |
@@ -64,15 +64,16 @@ Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](
 | Bedingte Wertzuweisung, Register | \<asm\>cmov?? eax, \[Wert\]\</asm\> |
 | Bedingte Wertzuweisung, Byte im Arbeitsspeicher | \<asm\>set?? \[Wert\]\</asm\> |
 | Addition, Subtraktion | \<asm\>lea eax, \[ebx + ecx + 4\]\</asm\> |
+| Bestimmte Multiplikationen (z. B. mit 3 oder 5) | \<asm\>lea eax, \[edx \* 4 + edx\]\</asm\> |
 
 ### Steigerung der Effektivität
 
-- Registerzugriffe sind immer schneller als Arbeitsspeicher-Zugriffe.
+- Registerzugriffe sind immer schneller als Arbeitsspeicherzugriffe.
 - Daher sollten Parameter an Funktionen über Register, nicht über den Stack übergeben werden.
 
 #### PUSHA / POPA
 
-- von der Verwendung von pusha/popa ist meist abzuraten, da man auch jedes einzelne Register direkt pushen/popen kann, und dabei selektiver vorgehen kann.
+- Von der Verwendung von pusha/popa ist meist abzuraten, da man auch jedes einzelne Register direkt pushen/popen kann, und dabei selektiver vorgehen kann.
 
 ## Hochsprachen
 
@@ -97,6 +98,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 7116; parent 7112; 2010-02-19T18:13:53Z -->
+<!-- MediaWiki page 2187; revision 7118; parent 7116; 2010-02-19T19:40:26Z -->
