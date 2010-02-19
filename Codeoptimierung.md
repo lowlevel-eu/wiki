@@ -6,7 +6,7 @@ Durch die Optimierung des Quellcodes eines Programms kann dieses schneller, effe
 
 ### Datengrößen
 
-Wordgröße des Prozessors verwenden, ist oft besser, als dies nicht zu tun (DWords bei i386, QWords bei x86-64).
+Die Wortgröße des Prozessors zu verwenden ist oft besser als dies nicht zu tun (32 Bit bei i386, 64 Bit bei x86-64).
 
 ### Alignment
 
@@ -47,6 +47,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7111/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 7109; parent 7107; 2010-02-19T17:04:45Z -->
+<!-- MediaWiki page 2187; revision 7111; parent 7109; 2010-02-19T17:17:07Z -->
