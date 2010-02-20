@@ -30,7 +30,6 @@
 - [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
 - irgendwo edge- vs. level-triggered Interrupts besprechen
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung von DELMOD
-- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"): Liste der (Standard-)DMA-Kanäle
 - [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
   - Ergänzungen zur Handhabung von Interrupts
     - Was genau? Denke das gehört eher dann in [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"), [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und/oder [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
@@ -89,6 +88,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7124/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7125/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7124; parent 7117; 2010-02-20T16:53:45Z -->
+<!-- MediaWiki page 1518; revision 7125; parent 7124; 2010-02-20T17:12:37Z -->
