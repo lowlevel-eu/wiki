@@ -205,10 +205,10 @@ Als nächstes legen wir das TSS an. Der Aufbau wird im Artikel [Task State Segme
 
            if (cpu->intr == 0x20) {
                new_cpu = schedule(cpu);
-               tss[1] = (unsigned long) (new_cpu + 1);
+               tss[1] = (uint32_t) (new_cpu + 1);
            }</c>
 
-Außerdem müssen wir das TSS noch aktivieren. Dazu fügen wir der GDT einen zusätzlichen Eintrag hinzu und laden anschließend auch das Taskregister TR neu (nicht vergessen, das Limit der GDT zu erhöhen, wenn nötig): \<c\> set_entry(5, (unsigned int) tss, sizeof(tss),
+Außerdem müssen wir das TSS noch aktivieren. Dazu fügen wir der GDT einen zusätzlichen Eintrag hinzu und laden anschließend auch das Taskregister TR neu (nicht vergessen, das Limit der GDT zu erhöhen, wenn nötig): \<c\> set_entry(5, (uint32_t) tss, sizeof(tss),
 
            GDT_FLAG_TSS | GDT_FLAG_PRESENT | GDT_FLAG_RING3);
 
@@ -225,6 +225,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 7127; parent 6460; 2010-02-21T11:05:54Z -->
+<!-- MediaWiki page 1899; revision 7128; parent 7127; 2010-02-21T11:07:06Z -->
