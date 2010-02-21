@@ -36,7 +36,7 @@ Eine "Struktur für den Prozessorzustand" kommt irgendwie bekannt vor. In der Ta
 
 Wir benutzen die Struktur sogar schon an der richtigen Stelle: Ein Taskwechsel findet immer in einem Interrupthandler statt – das kann z.B. ein Timerinterrupt sein, der signalisiert, dass der Prozess seine Zeit aufgebraucht hat, oder ein Syscall, mit dem das Programm anzeigt, dass es vorzeitig den Prozessor abgeben möchte. Genau genommen findet sogar der ganze Kernel nur noch in Interrupthandlern statt, sobald der erste Task gestartet ist.
 
-Legen wir also einmal den Startzustand für die beiden Tasks fest, jeder bekommt seinen Stack und dort drin eine struct cpu_state: \<c\>static char stack_a\[4096\]; static char stack_b\[4096\];
+Legen wir also einmal den Startzustand für die beiden Tasks fest, jeder bekommt seinen Stack und dort drin eine struct cpu_state: \<c\>static uint8_t stack_a\[4096\]; static uint8_t stack_b\[4096\];
 
 /\*
 
@@ -45,7 +45,7 @@ Legen wir also einmal den Startzustand für die beiden Tasks fest, jeder bekommt
     * einen Einsprungspunkt.
     */
 
-struct cpu_state\* init_task(char\* stack, void\* entry) {
+struct cpu_state\* init_task(uint8_t\* stack, void\* entry) {
 
        /*
         * CPU-Zustand fuer den neuen Task festlegen
@@ -59,7 +59,7 @@ struct cpu_state\* init_task(char\* stack, void\* entry) {
            .edi = 0,
            .ebp = 0,
            //.esp = unbenutzt (kein Ring-Wechsel)
-           .eip = (unsigned long) entry,
+           .eip = (uint32_t) entry,
 
            /* Ring-0-Segmentregister */
            .cs  = 0x08,
@@ -165,14 +165,14 @@ Was ändert sich für uns mit Ring-3-Tasks? An sich ist es nicht viel. Wie oben 
 
 Aber fangen wir beim leichten Teil an. Stellen wir den Taskzustand auf Ring 3 um. Dazu brauchen wir jetzt zusätzlich zum Kernelstack jedes Tasks, der für den Prozessorzustand und die Ausführung der Interrupt-Handler benutzt wird, einen zweiten getrennten Stack für jeden Task, auf dem dieser beliebig arbeiten kann. Außerdem benutzen wir jetzt die Ring-3-Segmente aus der GDT:
 
-\<c\>static char user_stack_a\[4096\]; static char user_stack_b\[4096\];
+\<c\>static uint8_t user_stack_a\[4096\]; static uint8_t user_stack_b\[4096\];
 
-struct cpu_state\* init_task(char\* stack, char\* user_stack, void\* entry) {
+struct cpu_state\* init_task(uint8_t\* stack, uint8_t\* user_stack, void\* entry) {
 
 ...
 
-           .esp = (unsigned long) user_stack + 4096,
-           .eip = (unsigned long) entry,
+           .esp = (uint32_t) user_stack + 4096,
+           .eip = (uint32_t) entry,
 
            /* Ring-3-Segmentregister */
            .cs  = 0x18 | 0x03,
@@ -199,7 +199,7 @@ Code und Stack wären damit abgedeckt, aber wir brauchen auch noch die Datensegm
 
 Als nächstes legen wir das TSS an. Der Aufbau wird im Artikel [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "Task State Segment") beschrieben, wir brauchen davon nur die Felder esp0 und ss0. ss0 können wir konstant auf unser Ring-0-Datensegment setzen, esp0 muss für jeden Task angepasst werden.
 
-\<c\>static unsigned long tss\[32\] = { 0, 0, 0x10 };
+\<c\>static uint32_t tss\[32\] = { 0, 0, 0x10 };
 
 ...
 
@@ -225,6 +225,6 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1899/index.html)
 
-<!-- MediaWiki page 1899; revision 6460; parent 6097; 2009-12-03T20:24:37Z -->
+<!-- MediaWiki page 1899; revision 7127; parent 6460; 2010-02-21T11:05:54Z -->
