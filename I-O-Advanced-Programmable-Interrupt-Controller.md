@@ -110,19 +110,19 @@ Folgender Code kann dazu verwendet werden auf die internen Register zuzugreifen:
 1.  define IO_APIC_MMREG_IOREGSEL 0x00
 2.  define IO_APIC_MMREG_IOWIN 0x04
 
-/\* Basisadresse, sollte vorher initialisiert werden \*/ uint8_t \* volatile io_apic_base;
+/\* Basisadresse, sollte vorher initialisiert werden \*/ volatile uint8_t \* io_apic_base;
 
 /\* Lesen eines internen Registers \*/ uint32_t io_apic_read(uint8_t index) {
 
      *(io_apic_base + IO_APIC_MMREG_IOREGSEL) = index;
-     return *(uint32_t * volatile)(io_apic_base + IO_APIC_MMREG_IOWIN);
+     return *(volatile uint32_t *)(io_apic_base + IO_APIC_MMREG_IOWIN);
 
 }
 
 /\* Schreiben eines internen Registers \*/ void io_apic_write(uint8_t index, uint32_t value) {
 
      *(io_apic_base + IO_APIC_MMREG_IOREGSEL) = index;
-     *(uint32_t * volatile)(io_apic_base + IO_APIC_MMREG_IOWIN) = value;
+     *(volatile uint32_t *)(io_apic_base + IO_APIC_MMREG_IOWIN) = value;
 
 } \</c\>
 
@@ -137,6 +137,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 7123; parent 6286; 2010-02-20T16:51:09Z -->
+<!-- MediaWiki page 1574; revision 7132; parent 7123; 2010-02-21T11:16:59Z -->
