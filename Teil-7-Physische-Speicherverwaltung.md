@@ -16,8 +16,8 @@ Fangen wir zunächst damit an, unseren Kernel von der Einschränkung zu befreien
 
 Für jeden Task im Voraus Speicher zu reservieren, ist zu unflexibel, also müssen die Variablen *stack_a*, *stack_b*, *user_stack_a* und *user_stack_b* weg. Die Funktion *init_task* braucht die entsprechenden Parameter jetzt auch nicht mehr, denn sie soll sich den benötigten Speicher jetzt selbst (und zwar zur Laufzeit) holen. Wir schreiben also ungefähr so etwas: \<c\>struct cpu_state\* init_task(void\* entry) {
 
-       char* stack = pmm_alloc();
-       char* user_stack = pmm_alloc();
+       uint8_t* stack = pmm_alloc();
+       uint8_t* user_stack = pmm_alloc();
        ...
 
 }\</c\>
@@ -165,6 +165,6 @@ Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten List
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
 
-<!-- MediaWiki page 2094; revision 6093; parent 6092; 2009-10-17T14:30:06Z -->
+<!-- MediaWiki page 2094; revision 7129; parent 6093; 2010-02-21T11:08:39Z -->
