@@ -80,7 +80,7 @@ Ein übliches Modell ist es, auf den Interrupts 0 bis 0x1f die Exceptions zu hab
 
 // Alle IRQs aktivieren (demaskieren) outb(0x20, 0x0); outb(0xa0, 0x0);\</c\>
 
-Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb(unsigned short port, unsigned char data) {
+Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb(uint16_t port, uint8_t data) {
 
        asm volatile ("outb %0, %1" : : "a" (data), "Nd" (port));
 
@@ -168,23 +168,23 @@ Im zweiten Teil müssen wir jetzt den *intr_common_handler* definieren. Er soll 
 Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass sie einfach die auf den Stack gepushten Werte enthält. Zur Erinnerung, der Stack wächst nach unten, daher fängt die Struktur mit dem zuletzt gepushten (also eax) an: \<c\>struct cpu_state {
 
        // Von Hand gesicherte Register
-       unsigned long   eax;
-       unsigned long   ebx;
-       unsigned long   ecx;
-       unsigned long   edx;
-       unsigned long   esi;
-       unsigned long   edi;
-       unsigned long   ebp;
+       uint32_t   eax;
+       uint32_t   ebx;
+       uint32_t   ecx;
+       uint32_t   edx;
+       uint32_t   esi;
+       uint32_t   edi;
+       uint32_t   ebp;
 
-       unsigned long   intr;
-       unsigned long   error;
+       uint32_t   intr;
+       uint32_t   error;
 
        // Von der CPU gesichert
-       unsigned long   eip;
-       unsigned long   cs;
-       unsigned long   eflags;
-       unsigned long   esp;
-       unsigned long   ss;
+       uint32_t   eip;
+       uint32_t   cs;
+       uint32_t   eflags;
+       uint32_t   esp;
+       uint32_t   ss;
 
 };\</c\>
 
@@ -207,6 +207,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7126/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 7043; parent 7042; 2010-02-08T19:31:13Z -->
+<!-- MediaWiki page 1898; revision 7126; parent 7043; 2010-02-21T11:03:19Z -->
