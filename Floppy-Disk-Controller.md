@@ -192,9 +192,9 @@ Not Writeable
 gesetzt wenn die Floppy schreibgeschützt ist
 
 NID  
-Ao Address Mark
+No Address Mark
 
-gesetzt wenn die ID Address mark nicht gefunden wurde
+gesetzt wenn die ID Address Mark nicht gefunden wurde
 
 ##### ST2
 
@@ -299,6 +299,6 @@ Drive select
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7136; parent 4918; 2010-02-21T12:49:17Z -->
+<!-- MediaWiki page 1443; revision 7137; parent 7136; 2010-02-21T12:52:12Z -->
