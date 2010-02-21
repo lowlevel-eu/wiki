@@ -37,7 +37,6 @@
     - [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") würde Vorschlagen nur auf [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)"), [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") zu verweisen
   - Liste der Hardware die sonst noch zu einem x86-System gehört
 - [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): SSE und FPU Register in [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") oder so verschieben
-- [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"): Gründe für OS-Dev auflisten (Einleitung), mehr auf genaue Schritte eingehen / Leitfaden bieten, Erfahrungen einbringen, auf Userspace eingehen.
 - [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
 - [Floppy Disk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
 - [Kategorie:Versionsverwaltung](https://lowlevel-eu.github.io/wiki/pages/1887/index.html "Kategorie:Versionsverwaltung")
@@ -88,6 +87,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7125/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7138/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7125; parent 7124; 2010-02-20T17:12:37Z -->
+<!-- MediaWiki page 1518; revision 7138; parent 7125; 2010-02-21T14:42:09Z -->
