@@ -79,7 +79,8 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - evtl noch kurz Datenstrukturen wie den "Binärbaum" (=binary tree) oder "Verlinkte Liste" (=linked list) erläutern?
 - Artikel über [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix"). Wir sollten uns echt schämen, dass wir als OSDev Wiki nichts darüber haben!
   - Mit welchem Inhalt denn? --[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 18:27, 21. Feb. 2010 (CET)
-    - Ein wenig zur Geschichte, aber hauptsächlich Internes wie zB. das VFS, das ja doch recht revolutionär war. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 19:44, 21. Feb. 2010 (CET)
+  - Ein wenig zur Geschichte, aber hauptsächlich Internes wie zB. das VFS, das ja doch recht revolutionär war. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 19:44, 21. Feb. 2010 (CET)
+  - Geschichte halte ich nicht für relevant. Das kann wikipedia (besser). Und VFS kommt in einen Artikel zum VFS und in keinen zu Unix.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 22:04, 21. Feb. 2010 (CET)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -91,6 +92,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7149/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7148; parent 7147; 2010-02-21T18:44:43Z -->
+<!-- MediaWiki page 1518; revision 7149; parent 7148; 2010-02-21T21:04:34Z -->
