@@ -36,6 +36,7 @@ Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie mög
 - Gute Kenntnis des Systems. Wenn du regelmäßig mit der Bedienung deines Betriebssystems kämpfst, dann ist es schwer, dabei Arbeit getan zu kriegen. Ein Windowsnutzer braucht eventuell sogar mehr Erfahrung als ein Linuxer, da sich manche Tools auf Windows zu Beginn recht zickig verhalten können.
 - Neugier und Geduld. Vermutlich die heimlichen Kernqualifikationen jedes Programmierers. Ohne Neugier und Geduld wird es schwer, die Frustrationen der Betriebssystementwicklung zu überstehen.
 - Umrechnen zwischen Zahlensystemen. Beim OS-Dev muss man häufig zwischen Dezimal-, Hexadezimal-, Oktal- und Binärsystem umrechnen, um die richtigen Bits zu setzten/löschen. Eine gute und kurze Anleitung dazu gibt es z.B. [hier](http://www.linuxhilfen.org/c/c_aufsteiger_zahl.html).
+- Bitweise Operatoren. Man sollte wissen, wie man einzelne Bits innerhalb einer Variable löscht und setzt. Der Artikel [Bitweise Operatoren](https://github.com/lowlevel-eu/wiki/wiki/Bitweise-Operatoren "Bitweise Operatoren") bietet hier das nötige Wissen.
 
 #### Hilfreich, aber nicht unbedingt nötig
 
@@ -167,6 +168,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7133/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7134/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 7133; parent 6651; 2010-02-21T11:55:11Z -->
+<!-- MediaWiki page 1619; revision 7134; parent 7133; 2010-02-21T12:30:24Z -->
