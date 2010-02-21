@@ -78,7 +78,7 @@ IP-Pakete können in mehrere Pakete unterteilt werden. So unterstützt z. B. Eth
 
 ### C-Struktur
 
-Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest für i386: \<c\>typedef unsigned long IP_t; struct ip_header {
+Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest für i386: \<c\>typedef uint32_t IP_t; struct ip_header {
 
      unsigned headerlen : 4; //Vertauscht, da i386 Little-Endian ist
      unsigned version : 4;
@@ -96,6 +96,6 @@ Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5871/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7131/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
 
-<!-- MediaWiki page 1970; revision 5871; parent 5869; 2009-09-09T13:27:59Z -->
+<!-- MediaWiki page 1970; revision 7131; parent 5871; 2010-02-21T11:11:53Z -->
