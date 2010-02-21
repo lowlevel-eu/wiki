@@ -59,41 +59,44 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 | 24-27 | 4Bit Arbitration ID der I/O APIC | lesend/schreibend |
 | 0-23 | reserviert |  |
 
-#### Eintrag der *Redirection Table*
+#### *Redirection Table*
 
-**Bits**
+##### Aufbau eines Eintrags
 
-**Abkürzung**
+| Bits | Abkürzung | Name | Beschreibung | Zugriffsart |
+| ------- | ----------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| 56-63 |  | Destination | gibt die empfangende(n) [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")(s) an, Erklärung siehe [*Destination*-Tabelle](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller#destination "I/O APIC") | lesend/schreibend |
+| 17-55 |  |  | reserviert |  |
+| 16 |  | Interrupt Mask | Der Interrupt ist maskiert, falls der Wert 1 ist | lesend/schreibend |
+| 15 |  | Trigger Mode | 0b = edge sensitive<br>1b = level sensitive | lesend/schreibend |
+| 14 |  | Remote IRR | Dieses Bit ist nur gültig, wenn der *Trigger Mode* *edge* ist:<br>0b = EOI mit passendem Interruptvektor wurde gesendet<br>1b = Interrupt wurde von der [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") bzw. den Local APICs angenommen | nur lesend |
+| 13 | INTPOL | Interrupt Input Pin Polarity | 0b = high active<br>1b = low active | lesend/schreibend |
+| 12 | DELIVS | Delivery Status | Der Interrupt wird momentan ausgeliefert, falls der Wert 1 ist | nur lesend |
+| 11 | DESTMOD | Destination Mode | Gibt an wie das Destination-Feld zur Adressierung der empfangenden [Local APICs](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") interpretiert wird, siehe Destination-Feld | lesend/schreiben |
+| 8-10 | DELMOD | Delivery Mode | Gibt an wie die empfangenden [Local APICs](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") reagieren sollen, Erklärung siehe [*Delivery Mode*-Tabelle](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller#delivery-mode "I/O APIC") | lesend/schreibend |
+| 0-7 | INTVEC | Interrupt Vector | auszulösender Interruptvektor | lesend/schreibend |
 
-**Name**
-
-**Beschreibung**
-
-**Zugriffsart**
-
-56-63Destinationgibt die empfangende(n) [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")(s) an:
+##### *Destination*
 
 | Wert von DESTMOD | Modus | Beschreibung |
 | ------------------ | --------------- | ----------------------------------------------------------- |
 | 0 | Physical Mode | Bits 56-59 enthalten eine APIC ID |
 | 1 | Logical Mode | Bits 56-63 werden als Menge von Prozessoren interpretiert |
 
-lesend/schreibend 17-55reserviert 16Interrupt MaskDer Interrupt ist maskiert, falls der Wert 1 istlesend/schreibend 15Trigger Mode0b = edge sensitive  
-1b = level sensitivelesend/schreibend 14Remote IRRnur lesend 13INTPOLInterrupt Input Pin Polarity0b = high active  
-1b = low activelesend/schreibend 12DELIVSDelivery StatusDer Interrupt wird momentan ausgeliefert, falls der Wert 1 istnur lesend 11DESTMODDestination ModeGibt an wie das Destination-Feld zur Adressierung der empfangenden [Local APICs](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") interpretiert wird, siehe Destination-Feldlesend/schreiben 8-10 DELMOD Delivery Mode Gibt an wie die empfangenden [Local APICs](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") reagieren sollen:
+##### *Delivery Mode*
 
 | Wert | Modus | Beschreibung |
-| ------ | ------------------------------------------------------------------------------ | -------------- |
-| 000b | Fixed |  |
-| 001b | niedrigste Priorität |  |
-| 010b | [SMI](https://github.com/lowlevel-eu/wiki/wiki/SMI "SMI") |  |
+| ------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 000b | Fixed | Löst in den durch das *Destination*-Feld ausgewählten Prozessoren einen normalen Interrupt aus. |
+| 001b | niedrigste Priorität | Löst in dem Prozessor mit der momentan geringsten Priorität der durch das *Destination*-Feld ausgewählten Prozessoren einen normalen Interrupt aus. |
+| 010b | [SMI](https://github.com/lowlevel-eu/wiki/wiki/SMI "SMI") | Es wird allen durch das *Destination*-Feld ausgewählten Prozessoren ein SMI signalisiert. Dabei wird der Interruptvektor ignoriert, sollte aber aus Kompatibilitätsgründen auf 0 gesetzt werden. Der *Trigger Mode* muss *edge* sein. |
 | 011b | reserviert |  |
-| 100b | [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI") |  |
+| 100b | [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI") | Es wird allen durch das *Destination*-Feld ausgewählten Prozessoren ein NMI signalisiert. Dabei wird der Interruptvektor ignoriert. Der *Trigger Mode* muss *edge* sein. |
 | 101b | INIT |  |
 | 110b | reserviert |  |
-| 111b | ExtINT |  |
+| 111b | ExtINT | Analog zu *Fixed* wird ein normaler Interrupt ausgelöst. Der Interruptvektor kommt allerdings nicht von der I/O APIC sondern wird von einem externen Controller (z.B. des [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) geliefert. Der *Trigger Mode* muss *edge* sein. |
 
-lesend/schreibend 0-7INTVECInterrupt Vectorauszulösender Interruptvektorlesend/schreibend
+  
 
 ## Programmierung
 
@@ -137,6 +140,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 7132; parent 7123; 2010-02-21T11:16:59Z -->
+<!-- MediaWiki page 1574; revision 7140; parent 7132; 2010-02-21T15:11:27Z -->
