@@ -94,7 +94,7 @@ Controller Reset
 1: Controller aktiviert (Reset ausgeführt)
 
 DRIVE  
-Laufwärk auswählen
+Laufwerk auswählen
 
 00: Drive 0
 
@@ -299,6 +299,6 @@ Drive select
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 4918; parent 4628; 2009-07-30T21:49:42Z -->
+<!-- MediaWiki page 1443; revision 7136; parent 4918; 2010-02-21T12:49:17Z -->
