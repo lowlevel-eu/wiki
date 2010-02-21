@@ -26,8 +26,9 @@
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
 - Dateisysteme wie FAT, extfs, reiser, UDF, iso9660 usw.
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
-- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"): logischer Adressierungsmodus, nettes Bildchen das I/O APIC und LAPIC + Prozessor enthält
-- [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
+- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
+  - logischer Adressierungsmodus
+  - [Benutzer:Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") glaubt, dass in der SMP-Spec irgendwas dazu steht wie die PIC mit dem Zeuch verbunden ist bzw. verbunden sein kann
 - irgendwo edge- vs. level-triggered Interrupts besprechen
 - [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
   - Ergänzungen zur Handhabung von Interrupts
@@ -90,6 +91,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7141; parent 7138; 2010-02-21T15:13:03Z -->
+<!-- MediaWiki page 1518; revision 7145; parent 7141; 2010-02-21T15:36:03Z -->
