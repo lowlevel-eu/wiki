@@ -77,9 +77,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Heap
   - Ausbau des Artikels [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
   - evtl noch kurz Datenstrukturen wie den "Binärbaum" (=binary tree) oder "Verlinkte Liste" (=linked list) erläutern?
-
-<!-- -->
-
+- Artikel über [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix"). Wir sollten uns echt schämen, dass wir als OSDev Wiki nichts darüber haben!
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -91,6 +89,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7145; parent 7141; 2010-02-21T15:36:03Z -->
+<!-- MediaWiki page 1518; revision 7146; parent 7145; 2010-02-21T16:28:36Z -->
