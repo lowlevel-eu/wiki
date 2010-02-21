@@ -208,11 +208,29 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ## Strings
 
-### Pascal-Strings
+Strings, zu Deutsch "Zeichenkette", sind Hintereinanderreihungen von ASCII-Zeichen.
 
 ### C-Strings
 
-### Ansi-Strings
+In dieser Variante, die von C genutzt wird, werden die Zeichen einfach hintereinander in einem linearen Speicher abgelegt. Das Ende des Strings wird durch ein Nullzeichen (\0) markiert. Somit ist ein String in C im Grunde ein Char-Array.
+
+Wenn man in C eine Stringkonstante definiert, wird das abschließende Nullzeichen automtisch angehängt. Dennoch sollte immer darauf geachtet werden, dass nicht in unerlaubte Speicherbereiche geschrieben wird, falls ein Programm dieses Nullzeichen weglässt.
+
+"LowLevel" in C:
+
+     Index:   0-1-2-3-4-5-6-7-8
+     Inhalt:  L o w L e v e l 0
+
+### Pascal-Strings
+
+In der Pascal-Variante ist ein String ebenfalls ein Char-Array. Allerdings wird die Länge des Strings im 0ten Element gespeichert, der eigentliche Text beginnt erst beim ersten Element.
+
+"LowLevel" in Pascal:
+
+     Index:   0-1-2-3-4-5-6-7-8
+     Inhalt:  8 L o w L e v e l
+
+  
 
 ## Weiterführende Artikel
 
@@ -226,6 +244,6 @@ Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5711/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 5711; parent 5710; 2009-08-25T00:10:22Z -->
+<!-- MediaWiki page 2043; revision 7142; parent 5711; 2010-02-21T15:15:16Z -->
