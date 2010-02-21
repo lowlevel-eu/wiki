@@ -9,6 +9,19 @@ Die **APIC**-Architektur (**A**dvanced **P**rogrammable **I**nterrupt **C**ontro
 - eine oder mehrere [I/O APICs](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
 - eine [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") pro Prozessor
 
+## Aufbau
+
+Der schematische Aufbau kann aus folgendem Bild entnommen werden:
+
+  
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6bd762e3a5c69e74b59a.png" width="412" height="293" alt="APIC.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6bd762e3a5c69e74b59a.png)
+
+  
+Die I/O APIC ist mit der Hardware verbunden und nimmt von ihr Interrupts entgegen. Diese verteilt die I/O APIC dann anhand ihrer *Redirection Table* an die Local APICs, welche pro Prozessor jeweils ein Mal vorhanden sind. Diese signalisieren dem Prozessor dann den jeweiligen Interrupt.
+
+Aufgrund von Abwärtskompatibilität ist außerdem natürlich noch der [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") weiterhin vorhanden der verschieden mit den auf den Bild sichtbaren Komponenten verbunden sein kann.
+
 ## Weblinks
 
 - [www.osdev.org: Enable local-apic interrupts?](http://www.osdev.org/phpBB2/viewtopic.php?t=14808&postdays=0&postorder=asc)
@@ -17,6 +30,6 @@ Die **APIC**-Architektur (**A**dvanced **P**rogrammable **I**nterrupt **C**ontro
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
 
-<!-- MediaWiki page 1584; revision 4058; parent 3073; 2009-02-26T18:48:35Z -->
+<!-- MediaWiki page 1584; revision 7144; parent 4058; 2010-02-21T15:34:30Z -->
