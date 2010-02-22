@@ -78,10 +78,14 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Heap
   - Ausbau des Artikels [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
   - evtl noch kurz Datenstrukturen wie den "Binärbaum" (=binary tree) oder "Verlinkte Liste" (=linked list) erläutern?
-- Artikel über [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix"). Wir sollten uns echt schämen, dass wir als OSDev Wiki nichts darüber haben!
+- Artikel über [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix"). Wir sollten uns echt schämen, dass wir als OS-Entwicklungs Wiki nichts darüber haben!
   - Mit welchem Inhalt denn? --[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 18:27, 21. Feb. 2010 (CET)
   - Ein wenig zur Geschichte, aber hauptsächlich Internes wie zB. das VFS, das ja doch recht revolutionär war. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 19:44, 21. Feb. 2010 (CET)
   - Geschichte halte ich nicht für relevant. Das kann wikipedia (besser). Und VFS kommt in einen Artikel zum VFS und in keinen zu Unix.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 22:04, 21. Feb. 2010 (CET)
+  - Zur Geschichte reichen ja drei, vier Zeilen. Aber ein wenig das Design von Unix sollte man dennoch beschreiben (Monolith, VFS, Syscall, viel mehr ist das ja auch nicht), da vor allem Anfäger bei der Wahl ihres Designs für ihr Betriebssystem bei den "Großen" abschauen. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 15:11, 22. Feb. 2010 (CET)
+
+<!-- -->
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -93,6 +97,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7150/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7151/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7150; parent 7149; 2010-02-22T09:53:39Z -->
+<!-- MediaWiki page 1518; revision 7151; parent 7150; 2010-02-22T14:11:33Z -->
