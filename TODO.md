@@ -84,6 +84,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Geschichte halte ich nicht für relevant. Das kann wikipedia (besser). Und VFS kommt in einen Artikel zum VFS und in keinen zu Unix.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 22:04, 21. Feb. 2010 (CET)
   - Zur Geschichte reichen ja drei, vier Zeilen. Aber ein wenig das Design von Unix sollte man dennoch beschreiben (Monolith, VFS, Syscall, viel mehr ist das ja auch nicht), da vor allem Anfäger bei der Wahl ihres Designs für ihr Betriebssystem bei den "Großen" abschauen. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 15:11, 22. Feb. 2010 (CET)
   - Es könnte sein, dass wir mit Unix verschiedene Dinge meinen. Ich meine damit eigentlich ein System, dass der Single Unix Specification genügt (oder alternative und bekannter: POSIX). Keiner der beiden Spezifikationen sagt aber irgendetwas über die Kernelart oder die Syscalls aus. Falls du wirklich das eine Unix von Bell Labs meinst, dann interessiert das doch noch viel weniger Leute. Da kann man dann lieber den [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") Artikel endlich sinnvoll ausbauen. Es könnte auch sinnvoll sein, wenn du einfach den Artikel anfängst zu schreiben...--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 15:35, 22. Feb. 2010 (CET)
+  - Ja, stimmt, da haben wir ein wenig aneinander vorbei geredet. Ich meinte das System von Bell Labs und hab einen Aritkel dazu geschrieben. Dann können wir die Diskussion auch da weiter führen, falls nötig. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 16:53, 22. Feb. 2010 (CET)
 
 <!-- -->
 
@@ -98,6 +99,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7155; parent 7154; 2010-02-22T14:37:16Z -->
+<!-- MediaWiki page 1518; revision 7157; parent 7155; 2010-02-22T15:53:10Z -->
