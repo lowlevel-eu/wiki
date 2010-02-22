@@ -2,7 +2,7 @@
 
 Bei Logical Block Addressing (Logische Block Adressierung) werden Sektoren von Massenspeichern von 0 aufsteigend adressiert. Das Gegenstück zu LBA ist das ältere [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "Cylinder Head Sector").
 
-Umrechnung von LBA zu [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS"):
+## Umrechnung von LBA zu CHS
 
 | Abkürzung | Bedeutung |
 | ----------- | ------------------------------ |
@@ -12,7 +12,9 @@ Umrechnung von LBA zu [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-He
 | H | Kopf |
 | C | Zylinder |
 
-` C = LBA / (mH*mS) H = (LBA mod (mH*mS)) / mS S = ((LBA mod (mH*mS)) mod mS) + 1 `
+    C =   LBA  /  (mH*mS)
+    H =  (LBA mod (mH*mS))  /  mS
+    S = ((LBA mod (mH*mS)) mod mS) + 1
 
 ## Beispiel für eine 3,5"-HD-Diskette
 
@@ -30,8 +32,12 @@ S
 
 inc dx  ; Den Rest um 1 erhöhen mov \[tmpc\], dl ; Und ebenfalls sichern\</asm\>
 
+## siehe auch
+
+- [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") - veraltete Methode zum Adressieren von Sektoren
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1442/index.html)
 
-<!-- MediaWiki page 1442; revision 6892; parent 6190; 2010-01-13T20:15:39Z -->
+<!-- MediaWiki page 1442; revision 7153; parent 6892; 2010-02-22T14:35:08Z -->
