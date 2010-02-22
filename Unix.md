@@ -12,7 +12,7 @@ UNIX war von Anfang an als Programmiersystem gedacht. Dementsprechend wurde es a
 
 ### Kernel
 
-UNIX basierte auf einem monolithischen Kernel, der u.a. für die Prozessverwaltung, die Hardwareverwaltung und die Systemdienste als Schnittstelle zu Anwendungsprogrammen verantwortlich war.
+UNIX basierte auf einem monolithischen Kernel, der u. a. für die Prozessverwaltung, die Hardwareverwaltung und die Systemdienste als Schnittstelle zu Anwendungsprogrammen verantwortlich war.
 
 ### Mitgelieferte Software
 
@@ -20,12 +20,12 @@ Mit UNIX wurden viele kleine nützliche Programme mitgeliefert, die zwar nur kle
 
 ### Dateisystem
 
-In UNIX wurde zum ersten Mal die Idee des [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS") umgesetzt, also das "alles ist eine Datei"-Prinzip.
+In UNIX wurde zum ersten Mal die Idee des [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS") umgesetzt, also das „alles ist eine Datei“-Prinzip.
 
 ## siehe auch
 
 - [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - freies, unixartiges Betriebssystem
-- [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") - ein vom UNIX-Design abgeleiteter Standart
+- [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") - ein vom UNIX-Design abgeleiteter Standard
 
 ## Weblinks
 
@@ -34,6 +34,6 @@ In UNIX wurde zum ersten Mal die Idee des [VFS](https://github.com/lowlevel-eu/w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2191/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2191/index.html)
 
-<!-- MediaWiki page 2191; revision 7156; parent 0; 2010-02-22T15:49:58Z -->
+<!-- MediaWiki page 2191; revision 7158; parent 7156; 2010-02-22T16:51:41Z -->
