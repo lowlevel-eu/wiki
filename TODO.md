@@ -90,6 +90,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
 <!-- -->
 
 - [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB") und alles drumherum ([UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI"), [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI"), [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI"), vielleicht ja auch [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI"))
+- APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -101,6 +102,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7162; parent 7161; 2010-02-23T16:18:49Z -->
+<!-- MediaWiki page 1518; revision 7164; parent 7162; 2010-02-23T21:04:57Z -->
