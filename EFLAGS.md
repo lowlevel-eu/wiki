@@ -81,7 +81,7 @@ Kann mit **CLI** (Clear Interruptflag) und **STI** (Set Interruptflag) geändert
 
 #### IOPL - I/O Privilege Field (Bits 12 und 13)
 
-Gibt an, ab welcher Privilegstufe "Systembefehle" (**IN**, **OUT**, Zugriff auf Kontrollregister, ...) verwendet werden dürfen.
+Gibt an, ab welcher Privilegstufe alle I/O-Ports (und nicht nur per I/O-Port-Bitmap ausgewählte) benutzt werden dürfen.
 
 #### NT - Nested Task Flag (Bit 14)
 
@@ -126,6 +126,6 @@ Das RFLAGS Register ist die 64-Bit Variante von EFLAGS. Allerdings hat sich abge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1751/index.html)
 
-<!-- MediaWiki page 1751; revision 6011; parent 6008; 2009-10-12T11:59:42Z -->
+<!-- MediaWiki page 1751; revision 7163; parent 6011; 2010-02-23T20:13:23Z -->
