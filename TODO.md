@@ -91,6 +91,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
 
 - [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB") und alles drumherum ([UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI"), [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI"), [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI"), vielleicht ja auch [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI"))
 - APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
+  - Wäre ACPI nicht besser? Dazu gibt es im OS-Dev-Forum immerhin ein Beispiel (dazu könnte man ja einfach einen Link im ACPI-Artikel setzen): [\[1\]](http://forum.osdev.org/viewtopic.php?f=1&t=16990&p=151565) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 14:47, 24. Feb. 2010 (CET)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -102,6 +103,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7164; parent 7162; 2010-02-23T21:04:57Z -->
+<!-- MediaWiki page 1518; revision 7166; parent 7164; 2010-02-24T13:47:03Z -->
