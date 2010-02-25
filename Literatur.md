@@ -69,6 +69,8 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
   Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
 - ["PC-Hardwarebuch" von Hans-Peter Messmer und Klaus Dembowski](http://www.amazon.de/PC-Hardwarebuch-Aufbau-Funktionsweise-Programmierung/dp/3827314615)  
   Das Standardwerk, wenn es um Hardwareprogrammierung geht.
+- ["PC intern 5" von Michael Tischer](http://www.amazon.de/PC-intern-Systemprogrammierung-Michael-Tischer/dp/3815811694)  
+  Behandelt einige Aspekte der Systemprogrammierung, s. Inhaltsangabe bei Amazon.
 
   
 
@@ -93,6 +95,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 6653; parent 6380; 2009-12-28T02:01:22Z -->
+<!-- MediaWiki page 1930; revision 7169; parent 6653; 2010-02-25T18:52:17Z -->
