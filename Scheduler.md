@@ -14,7 +14,7 @@ Jeder Prozess bekommt zu Anfang nach Priorität eine gewisse Zeit (Ausführzeit)
 
 Bei diesem Scheduling-System wird probiert die voraussichtliche absolute Ausführzeit eines Prozesses zu ermitteln und danach bestimmt, welche Priorität dieser Prozess hat. Kurze Prozesse bekommen dabei eine höhere Priorität, da sie damit schnell fertig sind und die CPU somit schneller wieder entlasten. Nachteil: Lange Prozesse dauern noch länger als üblich.
 
-## Schudeling mit "Prioritätswarteschlangen"
+## Scheduling mit "Prioritätswarteschlangen"
 
 Die Prozesse werden in Klassen eingeteilt, bei denen jeder Prozess einem, seiner Klasse entsprechenden Anteil Rechenleistung zugeteilt bekommt. Der höchsten Klasse wird am wenigsten Rechenleistung zugeteilt. Je niedriger die Klasse, desto höher ist der Anteil der Rechenleistung für den Prozess. Ein Prozess steigt einen Rang ab, wenn er vom Scheduler "gestoppt" werden muss. Andernfalls steigt der Prozess einen Rang auf. Hierzu ein Beispiel:
 
@@ -24,6 +24,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7167/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 6059; parent 5028; 2009-10-15T15:50:51Z -->
+<!-- MediaWiki page 1711; revision 7167; parent 6059; 2010-02-25T14:32:44Z -->
