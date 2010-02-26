@@ -76,10 +76,10 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 #### Command-Register
 
 | Bit | Name | Bedeutung |
-| ----- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | IO Space | Nur wenn dieses Bit gesetzt ist, kann der I/O-Raum des Geräts verwendet werden, sonst ist er deaktiviert. |
 | 1 | Memory Space | Nur wenn dieses Bit gesetzt ist, können MMIO-Register verwendet werden, sonst sind diese deaktiviert. |
-| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das heißt, es kann ohne Aufforderung vom Host Daten senden und so z. B. in den Speicher schreiben (wichtig u. a. für Netzwerkkarten). |
+| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das ist z. B. für PCI-DMA notwendig (wird u. a. von Netzwerkkarten und Festplatten verwendet). |
 | 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. |
 | 4 | Memory Write and Invalidate Enable | Falls gesetzt, kann das Gerät diesen Befehl (Memory Write and Invalidate) ausführen, sonst muss es sich mit einem einfachen Memory Write begnügen. |
 | 5 | VGA Palette Snoop | Dieses Bit ist nur für VGA-kompatible Geräte interessant (ist es gesetzt, so werden Zugriffe auf die VGA-Palettenregister gesondert behandelt). |
@@ -427,6 +427,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7170/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7171/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7170; parent 6101; 2010-02-26T16:08:09Z -->
+<!-- MediaWiki page 1626; revision 7171; parent 7170; 2010-02-26T20:29:22Z -->
