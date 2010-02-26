@@ -71,6 +71,25 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 | 0x38 | Extension ROM base address |  |  |  |
 | 0x3C | Bridge control |  | Interrupt pin | Interrupt line |
 
+### Bedeutung einiger Register
+
+#### Command-Register
+
+| Bit | Name | Bedeutung |
+| ----- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | IO Space | Nur wenn dieses Bit gesetzt ist, kann der I/O-Raum des Geräts verwendet werden, sonst ist er deaktiviert. |
+| 1 | Memory Space | Nur wenn dieses Bit gesetzt ist, können MMIO-Register verwendet werden, sonst sind diese deaktiviert. |
+| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das heißt, es kann ohne Aufforderung vom Host Daten senden und so z. B. in den Speicher schreiben (wichtig u. a. für Netzwerkkarten). |
+| 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. |
+| 4 | Memory Write and Invalidate Enable | Falls gesetzt, kann das Gerät diesen Befehl (Memory Write and Invalidate) ausführen, sonst muss es sich mit einem einfachen Memory Write begnügen. |
+| 5 | VGA Palette Snoop | Dieses Bit ist nur für VGA-kompatible Geräte interessant (ist es gesetzt, so werden Zugriffe auf die VGA-Palettenregister gesondert behandelt). |
+| 6 | Parity Error Response | Ist dieses Bit gelöscht, so wird bei Parityfehlern auf dem PCI-Bus das Detected-Parity-Error-Statusbit im Statusregister gesetzt. |
+| 8 | SERR# Enable | *TODO* |
+| 9 | Fast Back-to-Back Enable | *TODO* |
+| 10 | Interrupt Disable | Ist dieses Flag gesetzt, dann kann das entsprechende Gerät keine IRQs auslösen. |
+
+Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert). Nach dem Reset des Geräts sind alle hier aufgeführten Bits auf 0 gesetzt (wobei das BIOS wohl einige davon setzen wird).
+
 ### Codebeispiel
 
 \<c\>
@@ -408,6 +427,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6101/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7170/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 6101; parent 5108; 2009-10-21T23:11:04Z -->
+<!-- MediaWiki page 1626; revision 7170; parent 6101; 2010-02-26T16:08:09Z -->
