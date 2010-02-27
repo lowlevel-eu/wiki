@@ -110,7 +110,7 @@ Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem 
 | 4 | Autoinitialisierung |
 | 5 | Zählrichtung: |
 |  | 0 = Adressregister wird inkrementiert, es wird aufwärts gezählt |
-|  | 1 = Adressregister wird swkrementiert, es wird abwärts gezählt |
+|  | 1 = Adressregister wird dekrementiert, es wird abwärts gezählt |
 | 6-7 | Transfermodus: |
 |  | 00 = Demand-Transfer |
 |  | 01 = Einzel-Transfer |
@@ -145,6 +145,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7172/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 6679; parent 5936; 2010-01-01T21:41:20Z -->
+<!-- MediaWiki page 1555; revision 7172; parent 6679; 2010-02-27T09:51:39Z -->
