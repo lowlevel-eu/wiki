@@ -117,7 +117,7 @@ Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem 
 |  | 10 = Block-Transfer |
 |  | 11 = Kaskadierung |
 
-Autointialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
+Autoinitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
 
 #### Requestregister
 
@@ -145,6 +145,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7172/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7172; parent 6679; 2010-02-27T09:51:39Z -->
+<!-- MediaWiki page 1555; revision 7175; parent 7172; 2010-02-27T11:46:09Z -->
