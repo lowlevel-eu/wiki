@@ -205,8 +205,12 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 - [Transskription dieser Rede](http://git.or.cz/gitwiki/LinusTalk200705Transcript) (englisch)
 
+<!-- -->
+
+- [Eine FAQ zu Git, die fast alle geläufigen Probleme lösen kann](http://git.wiki.kernel.org/index.php/GitFaq) (englisch)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 5833; parent 5616; 2009-09-03T20:32:35Z -->
+<!-- MediaWiki page 1889; revision 7198; parent 5833; 2010-02-28T20:13:08Z -->
