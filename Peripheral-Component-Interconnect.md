@@ -58,9 +58,9 @@ Im Basis-Header sind die Bytes 0x000-0x00F, 0x034, 0x03C und 0x03D für alle PCI
 | 0x01 | [PCI/PCI-Bridge](#header-type-0x01) |
 | 0x02 | CardBus-Bridge |
 
-- Der *Capabilities Pointer* zeigt, falls er gültig ist, auf die erste Capabilitie-Struktur welche der Start einer verketteten Liste ist. Für gültige Capabilities Pointer sind nur Werte von 0x40 bis 0xF0 erlaubt.
-- Im *Interrupt Pin*-Register wird angegeben welches Interrupt-Pin das Gerät verwendet. 0x00 steht für kein Interrupt-Signal, trotzdem kann noch MSI(-X) benutzt werden. Die Werte 0x01 bis 0x04 stehen für \#INTA bis \#INTD, alle anderen Werte sind nicht erlaubt. Bei Singlefunction-Devices ist nur Pin \#INTA erlaubt. Bei Multifunction-Devices dürfen auch \#INTB bis \#INTD benutzt werden, es dürfen auch mehrere Funktionen in einem PCI-Gerät sich eine Interrupt-Leitung teilen.
-- Im *Interrupt Line*-Register legt das BIOS die zugewiesene x86-Interrupt-Nummer ab welche das \#INT?-Signal des betreffendem PCI-Geräts auslöst.
+- Der *Capabilities Pointer* zeigt, falls er gültig ist, auf die erste Capability-Struktur, welche der Start einer verketteten Liste ist. Für gültige Capabilities Pointer sind nur Werte von 0x40 bis 0xF0 erlaubt.
+- Im *Interrupt Pin*-Register wird angegeben, welches Interrupt-Pin das Gerät verwendet. 0x00 steht für kein Interrupt-Signal, trotzdem kann noch MSI(-X) benutzt werden. Die Werte 0x01 bis 0x04 stehen für \#INTA bis \#INTD, alle anderen Werte sind nicht erlaubt. Bei Singlefunction-Devices ist nur Pin \#INTA erlaubt. Bei Multifunction-Devices dürfen auch \#INTB bis \#INTD benutzt werden, es dürfen auch mehrere Funktionen in einem PCI-Gerät sich eine Interrupt-Leitung teilen.
+- Im *Interrupt Line*-Register legt das BIOS die zugewiesene x86-Interrupt-Nummer ab, welche das \#INT?-Signal des betreffendem PCI-Geräts auslöst.
 
 #### Header Type 0x00
 
@@ -461,6 +461,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7212/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7211; parent 7208; 2010-02-28T21:59:08Z -->
+<!-- MediaWiki page 1626; revision 7212; parent 7211; 2010-02-28T22:08:47Z -->
