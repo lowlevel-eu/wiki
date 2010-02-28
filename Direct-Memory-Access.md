@@ -42,46 +42,46 @@ Für DMA-Transfere wurde in früheren PCs ein Chip mit der Bezeichnung 8237A ver
 
 Vor einer Datenübertragung muss der Controller richtig programmiert bzw. initialisiert werden. Die meisten Einstellungen, die hierfür nötig sind, können für jeden Channel einzeln geändert werden; das heißt, dass alle Channel unabhängig voneinander programmiert werden müssen und unabhängig voneinander die Daten übertragen.
 
-Der eigentliche Transfer wird in der Regel von dem mit diesem Channel verbundenen Stück Hardware gestartet. Dafür hat jeder Controller vier Leitungen mit den Namen DREQ0 bis DREQ3, die den Transfer über den entsprechenden Channel starten. Alternativ kann dieses Signal auch per Software emuliert werden, um die Datenübertragung manuell zu starten. Dazu wird das Requestregister benötigt, das weiter unten beschrieben wird. Die Übertragung wird beendet, wenn die vorab definierte Datenmenge übertragen wurde oder wenn ein Signal auf der EOP-Leitung des Controllers ankommt, d.h. die Übertragung von der Hardware aus beendet wird.
+Der eigentliche Transfer wird in der Regel von dem mit diesem Channel verbundenen Stück Hardware gestartet. Dafür hat jeder Controller vier Leitungen mit den Namen DREQ0 bis DREQ3, die den Transfer über den entsprechenden Channel starten. Alternativ kann dieses Signal auch per Software emuliert werden, um die Datenübertragung manuell zu starten. Dazu wird das Requestregister benötigt, das weiter unten beschrieben wird. Die Übertragung wird beendet, wenn die vorab definierte Datenmenge übertragen wurde oder wenn ein Signal auf der EOP-Leitung des Controllers ankommt, d. h. die Übertragung von der Hardware aus beendet wird.
 
-### Übersicht der I/O Ports
+### Übersicht der I/O-Ports
 
 Die folgende Tabelle ist eine Übersicht über alle [Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
 
-Mit "Zugriff" ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") gemeint, mit dem auf den Port zugegriffen werden kann. Diese Spalte gibt an, ob lesend oder schreibend zugegriffen wird. Die Spalte "Größe" gibt an, wieviele Bits das entsprechende Register umfasst. Auch wenn hier 16 stehen sollte, wird nur byteweise mit den DMA-Controllern kommuniziert - siehe dazu die Beschreibung des Flip-Flop-Registers.
+Mit „Zugriff“ ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") gemeint, mit dem auf den Port zugegriffen werden kann. Diese Spalte gibt an, ob lesend oder schreibend zugegriffen wird. Die Spalte „Größe“ gibt an, wieviele Bits das entsprechende Register umfasst. Auch wenn hier 16 stehen sollte, wird nur byteweise mit den DMA-Controllern kommuniziert &#150; siehe dazu die Beschreibung des Flip-Flop-Registers.
 
   
 
 | Name des Registers | Port Slave | Port Master | Zugriff | Größe | Beschreibung |
-| ----------------------------- | ------------ | ------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------- | ------------ | ------------- | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Startadresse | Ch 0: 0x00 | Ch 0: 0xC0 | out | 16 | Die Startadresse des Puffers für die Daten |
 |  | Ch 1: 0x02 | Ch 1: 0xC2 | out | 16 |  |
 |  | Ch 2: 0x04 | Ch 2: 0xC4 | out | 16 |  |
 |  | Ch 3: 0x06 | Ch 3: 0xC6 | out | 16 |  |
-| Zähler | Ch 0: 0x01 | Ch 0: 0xC1 | out | 16 | Anzahl der Bytes, die übertragen werden sollen, minus eins |
+| Zähler | Ch 0: 0x01 | Ch 0: 0xC1 | out | 16 | Anzahl der zu übertragenden Bytes minus eins |
 |  | Ch 1: 0x03 | Ch 1: 0xC3 | out | 16 |  |
 |  | Ch 2: 0x05 | Ch 2: 0xC5 | out | 16 |  |
 |  | Ch 3: 0x07 | Ch 3: 0xC7 | out | 16 |  |
-| Aktuelle Adresse | Ch 0: 0x00 | Ch 0: 0xC0 | in | 16 | Die Aktuelle Adresse. Sie gibt an, wo der DMA-Controller gerade liest oder schreibt |
+| Aktuelle Adresse | Ch 0: 0x00 | Ch 0: 0xC0 | in | 16 | Die aktuelle Adresse. Sie gibt an, wo der DMA-Controller gerade liest oder schreibt. |
 |  | Ch 1: 0x02 | Ch 1: 0xC2 | in | 16 |  |
 |  | Ch 2: 0x04 | Ch 2: 0xC4 | in | 16 |  |
 |  | Ch 3: 0x06 | Ch 3: 0xC6 | in | 16 |  |
-| Aktueller Zähler | Ch 0: 0x01 | Ch 0: 0xC1 | in | 16 | Der momentane Zählerstand gibt an, wie viele Bytes noch verbleiben |
+| Aktueller Zähler | Ch 0: 0x01 | Ch 0: 0xC1 | in | 16 | Der momentane Zählerstand gibt an, wie viele Bytes noch verbleiben. |
 |  | Ch 1: 0x03 | Ch 1: 0xC3 | in | 16 |  |
 |  | Ch 2: 0x05 | Ch 2: 0xC5 | in | 16 |  |
 |  | Ch 3: 0x07 | Ch 3: 0xC7 | in | 16 |  |
-| Page | Ch 0: 0x87 | Ch 0: 0x8F | out/in | 8 | Da sich mit Hilfe der Startadresse nur ein 16bit-Adressraum ansprechen lässt, also 64KiB, kann hierüber eine Page festegelegt werden. Die Startadresse wird also auf eine 24bit-Adresse erweiter, womit sich immerhin 1MiB ansprechen lässt. Dieses 8bit-Register nimmt dabei die Bits 16-23 dieser Adresse auf. |
+| Page | Ch 0: 0x87 | Ch 0: 0x8F | out/in | 8 | Da sich mit Hilfe der Startadresse nur ein 16-Bit-Adressraum ansprechen lässt, also 64 KiB, kann hierüber eine Page festegelegt werden. Die Startadresse wird also auf eine 24-Bit-Adresse erweitert, womit sich immerhin 1 MiB ansprechen lässt. Dieses 8-Bit-Register nimmt dabei die Bits 16 &#150; 23 dieser Adresse auf. |
 |  | Ch 1: 0x83 | Ch 1: 0x8B | out/in | 8 |  |
 |  | Ch 2: 0x81 | Ch 2: 0x89 | out/in | 8 |  |
 |  | Ch 3: 0x82 | Ch 3: 0x8A | out/in | 8 |  |
-| Status | 0x08 | 0xD0 | in | 8 | Liefert Statusinformationen zum DMA-Controller (siehe dazu unten) |
-| Befehle | 0x08 | 0xD0 | out | 8 | Befehle, die der Controller ausführen soll, werden hierein geschrieben (für eine Liste der Befehle siehe unten) |
-| Controller zurücksetzen | 0x0D | 0xDA | out | \- | Durch Schreiben in dieses Register wird ein Reset des entsprechenden Controllers durchgeführt |
-| Flip-Flop | 0x0C | 0xD8 | out | 8 | Dieses Register ist nötig, um mit 8bit-Zugriffen, die 16bit-Register zu verwenden. Vor dem Zugriff auf ein 16bit-Register sollte eine Null an dieses Register gesendet werden. Dadurch wird der Flip-Flop des Controllers zurückgesetzt und es wird beim anschließenden Zugriff auf ein 16bit-Register das Low-Byte adressiert. Der Controller wird das Flip-Flop-Register danach selbstständig auf Eins setzen, wodurch der nächste Zugriff das High-Byte adressiert. Dies ist sowohl beim Lesen als auch beim Schreiben aus bzw. in 16bit-Register nötig. |
-| Transfermodus | 0x0B | 0xD6 | out | 8 | Über dieses Register kann der Übertragungsmodus für einen Channel und einige weitere ergänzende Details zum Befehl, der an das Befehlsregister gesendet wird, festgelegt werden (Für eine genaue Beschreibung siehe unten) |
-| Maskierung eines Channels | 0x0A | 0xD4 | out | 8 | Hierüber kann ein einzelner Channel maksiert, also deaktiviert, werden. Dies sollte immer(!) getan werden, wenn der Controller auf einen Transfer vorbereitet wird, um gleichzeitige Zugriffe von mehreren Programmen zu unterbinden. Die Bits 0 und 1 enthalten dabei die Nummer des Channels, dessen Status geändert werden soll. In Bit 2 wird angegeben, ob der gewählte Channel aktiviert (0) oder deaktiviert (1) werden soll. |
-| Maskierung mehrerer Channel | 0x0F | 0xDE | out | 8 | Dieses Register hat die gleiche Funktion wie das Maskierungsregister oben, aber mit dem Unterschied, dass mit Hilfe dieses Registers der Zustand meherer Channel gleichzeitig geändert werden kann. Bit 0 bis 3 geben dabei an, ob der entsprechende Channel (0-3) aktiviert (0) oder deaktiviert (1) werden soll. Hierbei muss aufgepasst werden, dass nicht aus Versehen ein Channel irrtümlicherweise (de)aktiviert wird, dessen Status eigentlich unverändert bleiben soll. |
-| Request | 0x09 | 0xD2 | out | 8 | Dieses Register ermöglicht es, einen Transfer mittels Software auszulösen. Für den Aufbau des zu sendenen Bytes siehe unten |
+| Status | 0x08 | 0xD0 | in | 8 | Liefert Statusinformationen zum DMA-Controller (siehe dazu unten). |
+| Befehle | 0x08 | 0xD0 | out | 8 | Befehle, die der Controller ausführen soll, werden hierein geschrieben (für eine Liste der Befehle siehe unten). |
+| Controller zurücksetzen | 0x0D | 0xDA | out | &#151; | Durch Schreiben in dieses Register wird ein Reset des entsprechenden Controllers durchgeführt. |
+| Flip-Flop | 0x0C | 0xD8 | out | 8 | Dieses Register ist nötig, um mit 8-Bit-Zugriffen, die 16-Bit-Register zu verwenden. Vor dem Zugriff auf ein 16-Bit-Register sollte eine Null an dieses Register gesendet werden. Dadurch wird der Flip-Flop des Controllers zurückgesetzt und es wird beim anschließenden Zugriff auf ein 16-Bit-Register das Low-Byte adressiert. Der Controller wird das Flip-Flop-Register danach selbstständig auf Eins setzen, wodurch der nächste Zugriff das High-Byte adressiert. Dies ist sowohl beim Lesen als auch beim Schreiben aus bzw. in 16-Bit-Register nötig. |
+| Transfermodus | 0x0B | 0xD6 | out | 8 | Über dieses Register kann der Übertragungsmodus für einen Channel und einige weitere ergänzende Details zum Befehl, der an das Befehlsregister gesendet wird, festgelegt werden (Für eine genaue Beschreibung siehe unten). |
+| Maskierung eines Channels | 0x0A | 0xD4 | out | 8 | Hierüber kann ein einzelner Channel maskiert, also deaktiviert, werden. Dies sollte immer(!) getan werden, wenn der Controller auf einen Transfer vorbereitet wird, um gleichzeitige Zugriffe von mehreren Programmen zu unterbinden. Die Bits 0 und 1 enthalten dabei die Nummer des Channels, dessen Status geändert werden soll. In Bit 2 wird angegeben, ob der gewählte Channel aktiviert (0) oder deaktiviert (1) werden soll. |
+| Maskierung mehrerer Channel | 0x0F | 0xDE | out | 8 | Dieses Register hat die gleiche Funktion wie das Maskierungsregister oben, aber mit dem Unterschied, dass mit Hilfe dieses Registers der Zustand meherer Channel gleichzeitig geändert werden kann. Bit 0 bis 3 geben dabei an, ob der entsprechende Channel (0 &#150; 3) aktiviert (0) oder deaktiviert (1) werden soll. Hierbei ist zu beachten, dass nicht aus Versehen ein Channel irrtümlicherweise (de)aktiviert wird, dessen Status eigentlich unverändert bleiben soll. |
+| Request | 0x09 | 0xD2 | out | 8 | Dieses Register ermöglicht es, einen Transfer mittels Software auszulösen. Für den Aufbau des zu sendenen Bytes siehe unten. |
 
   
 
@@ -102,7 +102,7 @@ Das Statusregister enthält einige Informationen über die Channel des jeweilige
 | 6 | DMA-Request für Channel 2 |
 | 7 | DMA-Request für Channel 3 |
 
-Mit Terminal Count ist das Umspringen des Zählers von 0x0000 auf 0xFFFF bzw. von 0xFFFF auf 0x0000 - je nach Zählrichtung - gemeint. Wenn dies der Fall ist wird die Übertragung beendet.
+Mit Terminal Count ist das Umspringen des Zählers von 0x0000 auf 0xFFFF bzw. von 0xFFFF auf 0x0000 &#150; je nach Zählrichtung &#150; gemeint. Wenn dies der Fall ist, wird die Übertragung beendet.
 
 Die DMA-Request-Bits sind auf Eins gesetzt, wenn das dem Channel zugehörige Gerät eine Übertragung per Hardwaresignal starten möchte.
 
@@ -126,7 +126,7 @@ x: Bit funktioniert anscheinend nicht
 Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem Channel bearbeiten. Dazu wird ein Byte nach dem folgenden Schema zusammengesetzt und an den entsprechenden Port geschickt.
 
 | Bit | Beschreibung |
-| ----- | ----------------------------------------------------------------- |
+| ----- | ------------------------------------------------------------------ |
 | 0-1 | Channelnummer |
 | 2-3 | Transferrichtung: |
 |  | 00 = Verifizieren: Selbsttest des Controllers |
@@ -135,8 +135,8 @@ Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem 
 |  | 11 = undefiniert |
 | 4 | Autoinitialisierung |
 | 5 | Zählrichtung: |
-|  | 0 = Adressregister wird inkrementiert, es wird aufwärts gezählt |
-|  | 1 = Adressregister wird dekrementiert, es wird abwärts gezählt |
+|  | 0 = Adressregister wird inkrementiert, es wird aufwärts gezählt. |
+|  | 1 = Adressregister wird dekrementiert, es wird abwärts gezählt. |
 | 6-7 | Transfermodus: |
 |  | 00 = Demand-Transfer |
 |  | 01 = Einzel-Transfer |
@@ -150,12 +150,12 @@ Autoinitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Ein
 Das Requestregister wird verwendet, um einen Transfer manuell per Software auszulösen. Dazu wird ein Byte an den entsprechenden Port geschickt, das so aufgebaut ist:
 
 | Bit | Beschreibung |
-| ----- | ---------------------------------------------------------------- |
+| ----- | ----------------------------------------------------------------- |
 | 0-1 | Channelnummer |
 | 2 | Request-Bit: |
 |  | 0 = Kein Request |
-|  | 1 = Request; das ist das, was wohl in allen Fällen gewollt ist |
-| 3-7 | ungenutzt, sollte Null sein |
+|  | 1 = Request; das ist das, was wohl in allen Fällen gewollt ist. |
+| 3-7 | ungenutzt, sollte null sein |
 
 ### Alles zusammensetzen: Vorbereiten einer Übertragung
 
@@ -167,6 +167,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7180/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7180; parent 7179; 2010-02-28T11:33:53Z -->
+<!-- MediaWiki page 1555; revision 7181; parent 7180; 2010-02-28T11:44:13Z -->
