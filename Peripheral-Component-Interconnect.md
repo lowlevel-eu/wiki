@@ -2,9 +2,13 @@
 
 **Peripheral Component Interconnect** (kurz **PCI**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur leichten Verbindung von Peripheriegeräten mit der CPU.
 
+Die Informationen in diesem Artikel beziehen sich auch auf die vom klassischen PCI-Bus abgeleiteten Bus-Standards: PCI-Express, Hypertransport, PCI-X und AGP. Diese Busse basieren vom logischen Protokoll her auf PCI aber benutzen andere physikalische Daten-Übertragungsmechanismen bzw. andere Topologien.
+
 ## Konfigurations-Register
 
-Jedes PCI-Gerät besitzt ein Konfigurations-Register, welches 256 Byte groß ist. Gelesen und beschrieben wird es 32bit-weise mithilfe eines Adress-I/O-Ports (0xCF8) und eines Daten-I/O-Ports (0xCFC).
+Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist. Gelesen und beschrieben wird er 32bit-weise mithilfe eines Adress-I/O-Ports (0xCF8) und eines Daten-I/O-Ports (0xCFC).
+
+Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß.
 
 ### Aufbau des Adress-I/O-Ports
 
@@ -28,6 +32,7 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 - Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist.
 - Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
 - *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Base Class*. Die mittleren 8 Bit stehen für die *Subclass* und die unter 8 Bit für das *Programming Interface*.
+- Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
 
 | Header Type | Kurze Beschreibung |
 | ------------- | ------------------------------------- |
@@ -73,6 +78,10 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 
 ### Bedeutung einiger Register
 
+#### Status-Register
+
+*TODO*
+
 #### Command-Register
 
 | Bit | Name | Bedeutung |
@@ -89,6 +98,10 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 | 10 | Interrupt Disable | Ist dieses Flag gesetzt, dann kann das entsprechende Gerät keine IRQs auslösen. |
 
 Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert). Nach dem Reset des Geräts sind alle hier aufgeführten Bits auf 0 gesetzt (wobei das BIOS wohl einige davon setzen wird).
+
+#### Base-Address-Register
+
+*TODO*
 
 ### Codebeispiel
 
@@ -427,6 +440,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7185; parent 7184; 2010-02-28T12:53:56Z -->
+<!-- MediaWiki page 1626; revision 7186; parent 7185; 2010-02-28T13:13:26Z -->
