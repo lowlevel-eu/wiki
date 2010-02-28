@@ -109,7 +109,7 @@ Im Basis-Header sind die Bytes 0x000-0x00F, 0x034, 0x03C und 0x03D für alle PCI
 | 0 | IO Space | Nur wenn dieses Bit gesetzt ist, kann der I/O-Raum des Geräts verwendet werden, sonst ist er deaktiviert.<br>Falls das Gerät keine IO-Ports anbietet, ist dieses Bit fest auf 0 geklemmt. |
 | 1 | Memory Space | Nur wenn dieses Bit gesetzt ist, können MMIO-Register verwendet werden, sonst sind diese deaktiviert.<br>Falls das Gerät kein MMIO (oder andere Speicherbereiche) anbietet, ist dieses Bit fest auf 0 geklemmt. |
 | 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das ist z. B. für PCI-DMA notwendig (wird u. a. von Netzwerkkarten und (S)ATA-Host-Controllern verwendet).<br>Falls das Gerät nicht busmasterfähig ist, ist dieses Bit fest auf 0 geklemmt.<br>Wenn dieses Bit auf 0 steht, wird damit auch MSI(-X) unterbunden. |
-| 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. Special Cycles werden zum broadcasten von speziellen Nachrichten an alle PCI-Geräte benutzt.<br>Es gibt nur wenige PCI-Geräte, bei denen dises Bit überhaupt beschreibbar ist, bei den meisten ist es fest auf 0 geklemmt. Bei PCI-Express ist es immer fest auf 0 geklemmt. |
+| 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. Special Cycles werden zum Broadcasten von speziellen Nachrichten an alle PCI-Geräte benutzt.<br>Es gibt nur wenige PCI-Geräte, bei denen dieses Bit überhaupt beschreibbar ist, bei den meisten ist es fest auf 0 geklemmt. Bei PCI-Express ist es immer fest auf 0 geklemmt. |
 | 4 | Memory Write and Invalidate Enable | Falls gesetzt, kann das Gerät diesen Befehl (Memory Write and Invalidate) ausführen, sonst muss es sich mit einem einfachen Memory Write begnügen.<br>Bei PCI-Express ist dieses Bit immer fest auf 0 geklemmt. |
 | 5 | VGA Palette Snoop | Dieses Bit ist nur für VGA-kompatible Geräte interessant (ist es gesetzt, so werden Zugriffe auf die VGA-Palettenregister gesondert behandelt), auf allen anderen Geräten ist es immer fest auf 0 geklemmt.<br>Bei PCI-Express und Hypertransport ist dieses Bit immer fest auf 0 geklemmt, dort wird sowas in den Bridges konfiguriert. |
 | 6 | Parity Error Response | Ist dieses Bit gesetzt, so wird bei Parityfehlern auf dem PCI-Bus das Detected-Parity-Error-Statusbit im Statusregister gesetzt. Nicht jede PCI-Hardware unterstützt die Generierung und Prüfung des Paritybits auf dem PCI-Bus, sodass dieses Bit dann fest auf 0 geklemmt ist. Daher sollte dieses Bit nur dann auf 1 gesetzt werden, wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment die Parity-Bit-Generierung unterstützen.<br>Bei PCI-Express und Hypertransport gibt es leistungsfähigere Fehlererkennungsmechanismen, deren Benutzung zu bevorzugen ist. |
@@ -461,6 +461,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7207; parent 7203; 2010-02-28T21:24:47Z -->
+<!-- MediaWiki page 1626; revision 7208; parent 7207; 2010-02-28T21:39:01Z -->
