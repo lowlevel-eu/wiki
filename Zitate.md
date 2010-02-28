@@ -334,8 +334,14 @@ Aus \#lost (20. August 2009)
     * taljeth hat die Verbindung getrennt (Client exited)
     <DerHartmut> Na wenn das mal nicht nach einem Wikieintrag schreit.
 
+------------------------------------------------------------------------
+
+Aus \#PrettyOS (28. Februar 2010)
+
+    <taljeth> Spatium addressorum est omnes divisum in partes tres, quarum unum incolit code, alterum data, tertium, quo ipsi linguae cella, nostra stack appellatur ;-)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 5681; parent 5667; 2009-08-21T01:17:08Z -->
+<!-- MediaWiki page 1435; revision 7209; parent 5681; 2010-02-28T21:49:11Z -->
