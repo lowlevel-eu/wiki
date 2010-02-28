@@ -20,26 +20,47 @@ Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 409
 
 ### Aufbau des Konfigurations-Adressraum
 
+Im Konfigurations-Adressraum sind die ersten 64 Byte fest für den Basis-Header reserviert. Die restlichen Bytes stehen zur freien Nutzung durch das Gerät zur Verfügung, in diesem Bereich sind auch die Capabilities untergebracht.
+
+Im Basis-Header sind die Bytes 0x000-0x00F, 0x034, 0x03C und 0x03D für alle PCI-Geräte identisch definiert. Diese Bytes dienen dazu das PCI-Gerät zu klassifizieren und identifizieren.
+
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
-| ---------- | ----------- | ------------- | --------------- | ----------------- |
+| ---------- | ---------------------- | ------------- | --------------- | ---------------------- |
 | 0x00 | Device ID |  | Vendor ID |  |
 | 0x04 | Status |  | Command |  |
 | 0x08 | Classcode |  |  | Revision ID |
 | 0x0C | BIST | Header Type | Latency Timer | Cache Line Size |
-
-Die ersten 16 Byte sind für alle PCI-Geräte gleich.
+| 0x10 | Header Type Specific |  |  |  |
+| 0x14 | Header Type Specific |  |  |  |
+| 0x18 | Header Type Specific |  |  |  |
+| 0x1C | Header Type Specific |  |  |  |
+| 0x20 | Header Type Specific |  |  |  |
+| 0x24 | Header Type Specific |  |  |  |
+| 0x28 | Header Type Specific |  |  |  |
+| 0x2C | Header Type Specific |  |  |  |
+| 0x30 | Header Type Specific |  |  |  |
+| 0x34 | Header Type Specific |  |  | Capabilities Pointer |
+| 0x38 | Header Type Specific |  |  |  |
+| 0x3C | Header Type Specific |  | Interrupt Pin | Interrupt Line |
 
 - Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist.
 - Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
-- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Base Class*. Die mittleren 8 Bit stehen für die *Subclass* und die unter 8 Bit für das *Programming Interface*.
+- Im *Status*-Register werden verschiedene Basis-Statuse und Gerät-Fähigkeiten angezeigt.
+- Im *Command*-Register werden verschiedene Basis-Konfigurationen vorgenommen.
+- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit (Byte 0x00B) repräsentieren die *Base Class*. Die mittleren 8 Bit (Byte 0x00A) stehen für die *Subclass* und die unter 8 Bit (Byte 0x009) für das *Programming Interface*.
 - Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
-- *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
+- Mit dem *BIST*-Register kann ein Geräte-Spezifischer Selbst-Test ausgelöst und ausgewertet werden. Diese Funktion ist optional und wird nur von wenigen PCI-Geräten unterstützt.
+- *Header Type* spezifiziert den Inhalt der Register 0x010-0x03F. Dabei gibt Bit 7 an ob es sich um ein Multifunction-Device handelt oder nicht, in dem Fall muss das Bit 7 in allen vorhandenen Funktionen gesetzt sein.
 
 | Header Type | Kurze Beschreibung |
 | ------------- | ------------------------------------- |
 | 0x00 | [Standard](#header-type-0x00) |
 | 0x01 | [PCI/PCI-Bridge](#header-type-0x01) |
 | 0x02 | CardBus-Bridge |
+
+- Der *Capabilities Pointer* zeigt, falls er gültig ist, auf die erste Capabilitie-Struktur welche der Start einer verketteten Liste ist. Für gültige Capabilities Pointer sind nur Werte von 0x40 bis 0xF0 erlaubt.
+- Im *Interrupt Pin*-Register wird angegeben welches Interrupt-Pin das Gerät verwendet. 0x00 steht für kein Interrupt-Signal, trotzdem kann noch MSI(-X) benutzt werden. Die Werte 0x01 bis 0x04 stehen für \#INTA bis \#INTD, alle anderen Werte sind nicht erlaubt. Bei Singlefunction-Devices ist nur Pin \#INTA erlaubt. Bei Multifunction-Devices dürfen auch \#INTB bis \#INTD benutzt werden, es dürfen auch mehrere Funktionen in einem PCI-Gerät sich eine Interrupt-Leitung teilen.
+- Im *Interrupt Line*-Register legt das BIOS die zugewiesene x86-Interrupt-Nummer ab welche das \#INT?-Signal des betreffendem PCI-Geräts auslöst.
 
 #### Header Type 0x00
 
@@ -440,6 +461,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7203; parent 7202; 2010-02-28T20:32:43Z -->
+<!-- MediaWiki page 1626; revision 7207; parent 7203; 2010-02-28T21:24:47Z -->
