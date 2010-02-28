@@ -22,7 +22,7 @@ Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 409
 
 Im Konfigurations-Adressraum sind die ersten 64 Byte fest für den Basis-Header reserviert. Die restlichen Bytes stehen zur freien Nutzung durch das Gerät zur Verfügung, in diesem Bereich sind auch die Capabilities untergebracht.
 
-Im Basis-Header sind die Bytes 0x000-0x00F, 0x034, 0x03C und 0x03D für alle PCI-Geräte identisch definiert. Diese Bytes dienen dazu das PCI-Gerät zu klassifizieren und identifizieren.
+Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für alle PCI-Geräte identisch definiert. Diese Bytes dienen dazu, das PCI-Gerät zu klassifizieren und identifizieren.
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------- | ------------- | --------------- | ---------------------- |
@@ -49,8 +49,8 @@ Im Basis-Header sind die Bytes 0x000-0x00F, 0x034, 0x03C und 0x03D für alle PCI
 - Im *Command*-Register werden verschiedene Basis-Konfigurationen vorgenommen.
 - *Classcode* ist noch einmal geteilt. Die oberen 8 Bit (Byte 0x00B) repräsentieren die *Base Class*. Die mittleren 8 Bit (Byte 0x00A) stehen für die *Subclass* und die unter 8 Bit (Byte 0x009) für das *Programming Interface*.
 - Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
-- Mit dem *BIST*-Register kann ein Geräte-Spezifischer Selbst-Test ausgelöst und ausgewertet werden. Diese Funktion ist optional und wird nur von wenigen PCI-Geräten unterstützt.
-- *Header Type* spezifiziert den Inhalt der Register 0x010-0x03F. Dabei gibt Bit 7 an ob es sich um ein Multifunction-Device handelt oder nicht, in dem Fall muss das Bit 7 in allen vorhandenen Funktionen gesetzt sein.
+- Mit dem *BIST*-Register kann ein Gerätespezifischer Selbsttest ausgelöst und ausgewertet werden. Diese Funktion ist optional und wird nur von wenigen PCI-Geräten unterstützt.
+- *Header Type* spezifiziert den Inhalt der Register 0x010 &#150; 0x03F. Dabei gibt Bit 7 an, ob es sich um ein Multifunction-Device handelt oder nicht, in dem Fall muss das Bit 7 in allen vorhandenen Funktionen gesetzt sein.
 
 | Header Type | Kurze Beschreibung |
 | ------------- | ------------------------------------- |
@@ -461,6 +461,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7212/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7213/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7212; parent 7211; 2010-02-28T22:08:47Z -->
+<!-- MediaWiki page 1626; revision 7213; parent 7212; 2010-02-28T22:11:18Z -->
