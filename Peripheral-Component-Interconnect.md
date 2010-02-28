@@ -45,7 +45,7 @@ Im Basis-Header sind die Bytes 0x000-0x00F, 0x034, 0x03C und 0x03D für alle PCI
 
 - Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist.
 - Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
-- Im *Status*-Register werden verschiedene Basis-Statuse und Gerät-Fähigkeiten angezeigt.
+- Im *Status*-Register werden verschiedene Basis-Status und Gerät-Fähigkeiten angezeigt.
 - Im *Command*-Register werden verschiedene Basis-Konfigurationen vorgenommen.
 - *Classcode* ist noch einmal geteilt. Die oberen 8 Bit (Byte 0x00B) repräsentieren die *Base Class*. Die mittleren 8 Bit (Byte 0x00A) stehen für die *Subclass* und die unter 8 Bit (Byte 0x009) für das *Programming Interface*.
 - Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
@@ -461,6 +461,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7208; parent 7207; 2010-02-28T21:39:01Z -->
+<!-- MediaWiki page 1626; revision 7211; parent 7208; 2010-02-28T21:59:08Z -->
