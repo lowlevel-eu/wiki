@@ -6,11 +6,13 @@ Die Informationen in diesem Artikel beziehen sich auch auf die vom klassischen P
 
 ## Konfigurations-Register
 
-Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist. Gelesen und beschrieben wird er 32bit-weise mithilfe eines Adress-I/O-Ports (0xCF8) und eines Daten-I/O-Ports (0xCFC).
+Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist. Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß. Auf den Konfigurations-Adressraum kann immer Zugegriffen werden, unabhängig vom Zustand des PCI-Geräts. Für den Zugriff auf den Konfigurations-Adressraum werden die PCI-Geräte über ihre Bus-Nummer, Device-Nummer und Function-Nummer angesprochen, dazu müssen eventuelle PCI-2-PCI-Bridges korrekt konfiguriert sein.
 
-Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß.
+### Zugriff auf den Konfigurations-Adressraum
 
-### Aufbau des Adress-I/O-Ports
+Gelesen und beschrieben wird der Konfigurations-Adressraum, bei PCs, 32bit-weise mithilfe eines Adress-I/O-Ports (0xCF8) und eines Daten-I/O-Ports (0xCFC).
+
+#### Aufbau des Adress-I/O-Ports
 
 | 31 | 30-24 | 23-16 | 15-11 | 10-8 | 7-0 |
 | ------------ | ------------ | ----------- | -------------- | ----------------- | --------------------------------------- |
@@ -461,6 +463,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7215; parent 7214; 2010-02-28T22:38:26Z -->
+<!-- MediaWiki page 1626; revision 7216; parent 7215; 2010-02-28T22:52:13Z -->
