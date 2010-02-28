@@ -70,7 +70,7 @@ Mit „Zugriff“ ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/
 |  | Ch 1: 0x03 | Ch 1: 0xC3 | in | 16 |  |
 |  | Ch 2: 0x05 | Ch 2: 0xC5 | in | 16 |  |
 |  | Ch 3: 0x07 | Ch 3: 0xC7 | in | 16 |  |
-| Page | Ch 0: 0x87 | Ch 0: 0x8F | out/in | 8 | Da sich mit Hilfe der Startadresse nur ein 16-Bit-Adressraum ansprechen lässt, also 64 KiB, kann hierüber eine Page festegelegt werden. Die Startadresse wird also auf eine 24-Bit-Adresse erweitert, womit sich immerhin 1 MiB ansprechen lässt. Dieses 8-Bit-Register nimmt dabei die Bits 16 &#150; 23 dieser Adresse auf. |
+| Page | Ch 0: 0x87 | Ch 0: 0x8F | out/in | 8 | Da sich mit Hilfe der Startadresse nur ein 16-Bit-Adressraum ansprechen lässt, also 64 KiB, kann hierüber eine Page festegelegt werden. Die Startadresse wird also auf eine 24-Bit-Adresse erweitert, womit sich immerhin 16 MiB ansprechen lässt. Dieses 8-Bit-Register nimmt dabei die Bits 16 &#150; 23 dieser Adresse auf. |
 |  | Ch 1: 0x83 | Ch 1: 0x8B | out/in | 8 |  |
 |  | Ch 2: 0x81 | Ch 2: 0x89 | out/in | 8 |  |
 |  | Ch 3: 0x82 | Ch 3: 0x8A | out/in | 8 |  |
@@ -82,8 +82,6 @@ Mit „Zugriff“ ist der [Assemblerbefehl](https://github.com/lowlevel-eu/wiki/
 | Maskierung eines Channels | 0x0A | 0xD4 | out | 8 | Hierüber kann ein einzelner Channel maskiert, also deaktiviert, werden. Dies sollte immer(!) getan werden, wenn der Controller auf einen Transfer vorbereitet wird, um gleichzeitige Zugriffe von mehreren Programmen zu unterbinden. Die Bits 0 und 1 enthalten dabei die Nummer des Channels, dessen Status geändert werden soll. In Bit 2 wird angegeben, ob der gewählte Channel aktiviert (0) oder deaktiviert (1) werden soll. |
 | Maskierung mehrerer Channel | 0x0F | 0xDE | out | 8 | Dieses Register hat die gleiche Funktion wie das Maskierungsregister oben, aber mit dem Unterschied, dass mit Hilfe dieses Registers der Zustand meherer Channel gleichzeitig geändert werden kann. Bit 0 bis 3 geben dabei an, ob der entsprechende Channel (0 &#150; 3) aktiviert (0) oder deaktiviert (1) werden soll. Hierbei ist zu beachten, dass nicht aus Versehen ein Channel irrtümlicherweise (de)aktiviert wird, dessen Status eigentlich unverändert bleiben soll. |
 | Request | 0x09 | 0xD2 | out | 8 | Dieses Register ermöglicht es, einen Transfer mittels Software auszulösen. Für den Aufbau des zu sendenen Bytes siehe unten. |
-
-  
 
 ### Aufbau der I/O Ports
 
@@ -167,6 +165,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7182/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7181; parent 7180; 2010-02-28T11:44:13Z -->
+<!-- MediaWiki page 1555; revision 7182; parent 7181; 2010-02-28T12:39:12Z -->
