@@ -85,19 +85,20 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 #### Command-Register
 
 | Bit | Name | Bedeutung |
-| ----- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | IO Space | Nur wenn dieses Bit gesetzt ist, kann der I/O-Raum des Geräts verwendet werden, sonst ist er deaktiviert. |
-| 1 | Memory Space | Nur wenn dieses Bit gesetzt ist, können MMIO-Register verwendet werden, sonst sind diese deaktiviert. |
-| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das ist z. B. für PCI-DMA notwendig (wird u. a. von Netzwerkkarten und Festplatten verwendet). |
-| 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. |
-| 4 | Memory Write and Invalidate Enable | Falls gesetzt, kann das Gerät diesen Befehl (Memory Write and Invalidate) ausführen, sonst muss es sich mit einem einfachen Memory Write begnügen. |
-| 5 | VGA Palette Snoop | Dieses Bit ist nur für VGA-kompatible Geräte interessant (ist es gesetzt, so werden Zugriffe auf die VGA-Palettenregister gesondert behandelt). |
-| 6 | Parity Error Response | Ist dieses Bit gelöscht, so wird bei Parityfehlern auf dem PCI-Bus das Detected-Parity-Error-Statusbit im Statusregister gesetzt. |
-| 8 | SERR# Enable | *TODO* |
-| 9 | Fast Back-to-Back Enable | *TODO* |
-| 10 | Interrupt Disable | Ist dieses Flag gesetzt, dann kann das entsprechende Gerät keine IRQs auslösen. |
+| ----- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | IO Space | Nur wenn dieses Bit gesetzt ist, kann der I/O-Raum des Geräts verwendet werden, sonst ist er deaktiviert.<br>Falls das Gerät keine IO-Ports anbietet ist dieses Bit fest auf 0 geklemmt. |
+| 1 | Memory Space | Nur wenn dieses Bit gesetzt ist, können MMIO-Register verwendet werden, sonst sind diese deaktiviert.<br>Falls das Gerät kein MMIO (oder andere Speicherbereiche) anbietet ist dieses Bit fest auf 0 geklemmt. |
+| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das ist z. B. für PCI-DMA notwendig (wird u. a. von Netzwerkkarten und (S)ATA-Host-Controllern verwendet).<br>Falls das Gerät nicht Bus-Master fähig ist ist dieses Bit fest auf 0 geklemmt.<br>Wenn dieses Bit auf 0 steht wird damit auch MSI(-X) unterbunden. |
+| 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. Special Cycles werden zum broadcasten von speziellen Nachrichten an alle PCI-Geräte benutzt.<br>Es gibt nur wenige PCI-Geräte bei denen dises Bit überhaupt beschreibbar ist, bei den meisten ist es fest auf 0 geklemmt. Bei PCI-Express ist es immer fest auf 0 geklemmt. |
+| 4 | Memory Write and Invalidate Enable | Falls gesetzt, kann das Gerät diesen Befehl (Memory Write and Invalidate) ausführen, sonst muss es sich mit einem einfachen Memory Write begnügen.<br>Bei PCI-Express ist dieses Bit immer fest auf 0 geklemmt. |
+| 5 | VGA Palette Snoop | Dieses Bit ist nur für VGA-kompatible Geräte interessant (ist es gesetzt, so werden Zugriffe auf die VGA-Palettenregister gesondert behandelt), auf allen anderen Geräten ist es immer fest auf 0 geklemmt.<br>Bei PCI-Express und Hypertransport ist dieses Bit immer fest auf 0 geklemmt, dort wird sowas in den Bridges konfiguriert. |
+| 6 | Parity Error Response | Ist dieses Bit gesetzt, so wird bei Parityfehlern auf dem PCI-Bus das Detected-Parity-Error-Statusbit im Statusregister gesetzt. Nicht jede PCI-Hardware unterstützt die Generierung und Prüfung des Paritybits auf dem PCI-Bus so das dieses Bit dann fest auf 0 geklemmt ist. Daher sollte dieses Bit nur dann auf 1 gesetzt werden wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment die Parity-Bit-Generierung unterstützen.<br>Bei PCI-Express und Hypertransport gibt es leistungsfähigere Fehlererkennungsmechanismen deren Benutzung zu bevorzugen ist. |
+| 7 | IDSEL Stepping /<br>Wait Cycle Control | Dieses Bit war nur in den ersten PCI-Spezifikationen gültig (vor 2.0) und muss immer auf 0 gesetzt werden. Auf allen PCI-Geräten seit der PCI-Spezifikation 2.0 (ab 1993) ist dieses Bit immer fest auf 0 geklemmt. |
+| 8 | SERR# Enable | Wenn dieses Bit gesetzt ist darf/soll das Gerät erkannte schwerwiegende Fehler (z. B. Parityfehler während der Adressierungsphase oder ungültige Kommandos) über die extra \#SERR-Leitung, oder bei PCI-Express über spezielle Messages, melden. Solche Fehler lösen für gewöhnlich einen NMI oder eine Machine-Check-Exception aus.<br>Bei PCI-Express und Hypertransport gibt es leistungsfähigere Fehlererkennungsmechanismen deren Benutzung zu bevorzugen ist. |
+| 9 | Fast Back-to-Back Enable | Wenn dieses Bit auf 1 gesetzt ist soll das PCI-Gerät Back-to-Back-Zugriffe (als Slave)unterstützen und darf auch solche Zugriffe (als Master) ausführen. Dieses Bit lässt sich nur auf 1 setzen wenn das zugehörige Bit im Status-Register diese Fähigkeit signalisiert, andernfalls ist es fest auf 0 geklemmt. Dieses Bit darf nur dann auf 1 gesetzt werden wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment Back-to-Back-Zugriffe unterstützen. Wenn alle Geräte diesen Modus unterstützen, kann die Idle-Phase zwischen zwei PCI-Zyklen entfallen. Das erhöht etwas den Datendurchsatz auf dem PCI-Bus.<br>Bei PCI-Express, Hypertransport und PCI-X ist es immer fest auf 0 geklemmt. |
+| 10 | Interrupt Disable | Ist dieses Flag gesetzt, dann kann das entsprechende Gerät keine IRQs auslösen. Nach dem Hardware-Reset muss dieses Bit dummerweise immer gelöscht sein, so das IRQs erst mal nicht verboten sind. MSI(-X) ist davon unabhängig, dafür gibt es extra Interrupt-Enable-Bits in den entsprechenden Capabilities. |
 
-Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert). Nach dem Reset des Geräts sind alle hier aufgeführten Bits auf 0 gesetzt (wobei das BIOS wohl einige davon setzen wird).
+Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert) und müssen ebenfalls immer auf 0 gesetzt werden. Nach dem Reset des Geräts sind alle hier aufgeführten Bits auf 0 gesetzt (wobei das BIOS wohl einige davon setzen wird). Die Software sollte immer prüfen ob sich die gewünschten Bits auch wirklich auf 1 setzen lassen, einige Bits sind eben fest auf 0 geklemmt.
 
 #### Base-Address-Register
 
@@ -440,6 +441,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7199/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7186; parent 7185; 2010-02-28T13:13:26Z -->
+<!-- MediaWiki page 1626; revision 7199; parent 7186; 2010-02-28T20:13:50Z -->
