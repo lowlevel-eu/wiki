@@ -2,9 +2,9 @@
 
 **Hinweis:**
 
-Ich kenne mich mit der PCnet-Karte nicht besonders aus. Ich habe diesen Artikel auf Basis des týndur-Treibers und der drei unten genannten Spezifikationen erstellt, da diese Seite schon sehr lange auf der TODO-Liste steht, sich jedoch niemand darum gekümmert hat.
+Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema aus. Da dieses Thema aber dringend nach einem Artikel verlangte (z. B. aufgrund eines Eintrags in der [TODO](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO")-Liste), hat er sich dennoch entschieden, seine Kenntnisse niederzuschreiben.
 
-Wenn **du** dich mit dieser Netzwerkkarte einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
+Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
 
 Dieser Artikel beschäftigt sich mit der Programmierung der AMD-PCnet-FAST-III-Netzwerkkarte (Am79C973).
 
@@ -207,6 +207,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7205/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 6761; parent 6760; 2010-01-04T21:14:32Z -->
+<!-- MediaWiki page 2025; revision 7205; parent 6761; 2010-02-28T21:07:54Z -->
