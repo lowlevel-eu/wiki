@@ -6,7 +6,25 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
-Unter **Direct Memory Access**, oder auch **DMA** versteht man eine Methode, Daten zwischen Peripheriegeräten zum Arbeitsspeicher und umgekehrt zu übertragen, ohne die CPU dafür benutzen zu müssen. Dies wird meistens mit einem extra Chip, der auf dem Mainboard oder in den Peripheriegeräten selbst verbaut ist, realisiert. Typische DMA-Geräte sind dabei Festplatten und CD/DVD/BD-ROM-Laufwerke. Besonders wird dieses Feature von Multitasking-Betriebssystemen benötigt, da hier der Prozesswechsel sonst durch z.B. Festplattenzugriffe verzögert werden müsste.
+Unter **Direct Memory Access**, oder auch **DMA** versteht man eine Methode, Daten zwischen Peripheriegeräten zum Arbeitsspeicher und umgekehrt zu übertragen, ohne die CPU dafür benutzen zu müssen. Dafür gibt es in 2 grundlegend verschiedene Methoden. Entweder das betreffende Peripheriegerät ist in der Lage auf die Daten im Arbeitsspeicher selbst zu zugreifen, als Bus-Master, oder es wird ein Hilfs-Chip, der DMA-Controller, benötigt dessen einzige Aufgabe es ist die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten benutzt und die zweite Methode wird von [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")-Geräten benutzt. Typische DMA bzw. Bus-Master fähige PCI-Geräte sind dabei (S)ATA-Host-Controller, Netzwerkkarten und neuere USB-Host-Controller. Bus-Master bedeutet das ein Peripheriegerät selbstständig (in Abhängigkeit von entsprechenden Ereignissen) auf den Speicher oder auch auf andere Peripheriegeräte zugreifen kann so wie die CPU auch selbstständig (in Abhängigkeit vom gerade ausgeführtem Programm) auf den Speicher zugreift. Besonders wird dieses Feature von Multitasking-Betriebssystemen benötigt, da hier der Prozesswechsel sonst durch z.B. Festplattenzugriffe verzögert werden müsste.
+
+  
+
+## Gemeinsamkeiten/Unterschiede von PCI-DMA und ISA-DMA
+
+Eine wesentliche Gemeinsamkeit beider Methoden ist das die Software die Speicherzugriffe der Peripheriegeräte vorbereiten muss. Die Software muss bestimmen an welchen Adressen im Speicher die Daten liegen bzw. hin geschrieben werden sollen. Des weiteren informieren die Peripheriegeräte die CPU meist mit einem Interrupt wenn alle Daten transferiert wurden damit der entsprechende Gerätetreiber die Daten verarbeiten und/oder neue Daten vorbereiten kann.
+
+Der wichtigste Unterschied beider Methoden ist das es bei PCI-DMA keine einheitlichen Möglichkeiten gibt mit der die Software die DMA-Fähigkeiten der Peripheriegeräte steuern kann wohingegen der ISA-DMA-Controller immer der selbe ist. Dagegen sind die Fähigkeiten der meisten PCI-DMA-Implementierungen deutlich leistungsfähiger, es können oft mehrere DMA-Jobs auf ein mal dem Peripheriegerät mitgeteilt werden so das dieses deutlich seltener die CPU in Anspruch nehmen muss. Auch sind die meisten PCI-Geräte in der Lage die Daten aus mehreren verteilten Speicherbereichen zusammen zu tragen, der ISA-DMA-Controller kann Daten immer nur aus unmittelbar zusammenhängenden Speicherbereichen transferieren. Grundsätzlich sind die PCI-DMA-Implementierungen deutlich leistungsfähiger, vor allem weil sie auf die Bedürfnisse des entsprechenden PCI-Gerätes speziell zugeschnitten sind. Der ISA-DMA-Controller ist recht unflexibel, er ist z.B. nicht in der Lage selbstständig einen neuen DMA-Job zu laden sondern ist immer auf die Hilfe der Software angewiesen. Der ISA-DMA-Controller ist nur in der Lage Speicherbereiche in den ersten 16MByte anzusprechen, PCI-Geräte können mindestens 32Bit-Adressen benutzen, viele sind auch fähig mit 64Bit-Adressen umzugehen.
+
+ISA-DMA wird in heutigen PCs nur noch für das Floppy-Laufwerk und ganz selten für ISA-Soundkarten benutzt, in vielen Computern, die z.B. für den Einsatz als Steuerungen in der Industrie gedacht sind, gibt es diese Möglichkeit bereits gar nicht mehr (Legacy-Free). Es ist daher nur eine Frage der Zeit bis dieser Mechanismus aus den PCs komplett verschwunden ist. Die Möglichkeiten die moderne PCI-DMA-Implementierungen bieten lassen sich nicht mit ISA-DMA realisieren nebst dessen das PCI und seine (aktuellen) Nachfolger wie PCI-Express, Hypertransport, PCI-X und AGP deutlich schneller arbeiten können.
+
+  
+
+## PCI-DMA
+
+Da bei PCI-DMA jedes Gerät eine eigene Implementierung hat kann man dazu kaum etwas allgemeines vermitteln. Als einfaches Beispiel kann z.B. die EHCI-Spezifikation gelten, dort wird gezeigt wie alle relevanten Informationen über die zu erledigenden Arbeiten des EHCI-Host-Controllers und die zu transferierenden Daten in entsprechenden Strukturen im Arbeitsspeicher untergebracht sind. Auf diese Strukturen kann die Software mit ganz normalen Speicherzugriffen arbeiten und auch der EHCI-Host-Controller liest und modifiziert diese Strukturen mit eigenen Speicherzugriffen (eben als Bus-Master) im Arbeitsspeicher.
+
+Eine ganz wesentliche Eigenschaft nahezu aller PCI-DMA-Implementierungen ist das die zu transferierenden Daten nicht an einem Stück im Arbeitsspeicher vorliegen müssen. Dieses Feature wird oft Scatter/Gatter bezeichnet. Dabei bekommt das PCI-Gerät nicht einfach nur gesagt wo die Daten liegen bzw. hin sollen sondern es wird eine Liste mit einem oder mehreren Pointern/Größenangaben zu den einzelnen Datenhäppchen übergeben welche das PCI-Gerät dann selbstständig abarbeitet. Dieses Feature ist deshalb so wichtig weil in modernen Betriebssystemen das [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") benutzt wird und es daher nur sehr selten ist das Daten die im virtuellen Adressraum der Software am Stück vorliegen auch physisch an einem Stück im Speicher liegen.
 
   
 
@@ -139,12 +157,8 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 **TODO**: was mit dem Diskettenlaufwerk?
 
-## PCI-DMA
-
-**TODO**
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7175; parent 7172; 2010-02-27T11:46:09Z -->
+<!-- MediaWiki page 1555; revision 7178; parent 7175; 2010-02-28T10:49:47Z -->
