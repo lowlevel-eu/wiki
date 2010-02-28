@@ -170,7 +170,7 @@ In diesem Byte wird der Typ der [Diskettenlaufwerke](https://github.com/lowlevel
     0001b = 5 1/4 - 360 kB
     0010b = 5 1/4 - 1.2 MB
     0011b = 3 1/2 - 720 kB
-    0100b = 2 1/2 - 1.44 MB (sollte eigentlich heutzutage der Standard sein)
+    0100b = 3 1/2 - 1.44 MB (sollte eigentlich heutzutage der Standard sein)
     0101b - 1111b sind unbenutzt
 
   
@@ -283,6 +283,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 4848; parent 3202; 2009-07-30T12:44:14Z -->
+<!-- MediaWiki page 1562; revision 7189; parent 4848; 2010-02-28T14:10:12Z -->
