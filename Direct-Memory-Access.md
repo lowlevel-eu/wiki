@@ -10,7 +10,7 @@ Unter **Direct Memory Access** (abgekürzt **DMA**) versteht man eine Methode, D
 
 Es gibt zwei grundlegend verschiedene Methoden, DMA umzusetzen: Entweder das betreffende Peripheriegerät ist in der Lage, auf die Daten im Arbeitsspeicher selbst zuzugreifen (als *Busmaster*), oder es wird ein Hilfschip, der DMA-Controller, benötigt, dessen einzige Aufgabe es ist, die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten verwendet und die zweite Methode wird u.a. von [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")-Geräten benutzt. Aufgrund der unterschiedlichen Konzepte die sich hinter "DMA" verbergen sollte man bei der Verwendung dieses Begriffs immer etwas Vorsicht walten lassen.
 
-Typische DMA- bzw. busmasterfähige PCI-Geräte sind dabei (S)ATA-Host-Controller, Netzwerkkarten und neuere USB-Host-Controller.
+Typische DMA- bzw. busmasterfähige PCI-Geräte sind z. B. (S)ATA-Host-Controller, Netzwerkkarten und neuere USB-Host-Controller.
 
 Busmastering bedeutet, dass ein Peripheriegerät selbstständig (in Abhängigkeit von entsprechenden Ereignissen) auf den Speicher oder auch auf andere Peripheriegeräte zugreifen kann &#150; so wie die CPU auch selbstständig (in Abhängigkeit vom gerade ausgeführten Programm) auf den Speicher zugreift. Dieses Feature wird besonders von Multitasking-Betriebssystemen benötigt, da hier der Prozesswechsel sonst durch z. B. Festplattenzugriffe verzögert werden müsste.
 
@@ -167,6 +167,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7195/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7195; parent 7182; 2010-02-28T18:07:04Z -->
+<!-- MediaWiki page 1555; revision 7196; parent 7195; 2010-02-28T18:07:28Z -->
