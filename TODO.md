@@ -51,12 +51,6 @@
 ## Neu erstellen
 
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
-  - Macht das im OS Dev überhaupt Sinn? Kann man mit GDB einen Kernel debuggen?!
-    - Ob es Sinn macht, weiß ich nicht, aber ergeben tut es welchen (tut-tuuut): Ja, man kann einen Kernel debuggen. Mit qemu eben.
-      - Ok. PS: Der Lok ergibt es Spaß zu pfeifen...
-
-<!-- -->
-
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
 - ~~Interne Darstellung der Zahlen, Darstellungsmöglichkeiten negativer Zahlen, Aufbau von Gleitkommazahlen (IEEE)~~
@@ -79,16 +73,6 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Heap
   - Ausbau des Artikels [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
   - evtl noch kurz Datenstrukturen wie den "Binärbaum" (=binary tree) oder "Verlinkte Liste" (=linked list) erläutern?
-- Artikel über [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix"). Wir sollten uns echt schämen, dass wir als OS-Entwicklungs Wiki nichts darüber haben!
-  - Mit welchem Inhalt denn? --[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 18:27, 21. Feb. 2010 (CET)
-  - Ein wenig zur Geschichte, aber hauptsächlich Internes wie zB. das VFS, das ja doch recht revolutionär war. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 19:44, 21. Feb. 2010 (CET)
-  - Geschichte halte ich nicht für relevant. Das kann wikipedia (besser). Und VFS kommt in einen Artikel zum VFS und in keinen zu Unix.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 22:04, 21. Feb. 2010 (CET)
-  - Zur Geschichte reichen ja drei, vier Zeilen. Aber ein wenig das Design von Unix sollte man dennoch beschreiben (Monolith, VFS, Syscall, viel mehr ist das ja auch nicht), da vor allem Anfäger bei der Wahl ihres Designs für ihr Betriebssystem bei den "Großen" abschauen. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 15:11, 22. Feb. 2010 (CET)
-  - Es könnte sein, dass wir mit Unix verschiedene Dinge meinen. Ich meine damit eigentlich ein System, dass der Single Unix Specification genügt (oder alternative und bekannter: POSIX). Keiner der beiden Spezifikationen sagt aber irgendetwas über die Kernelart oder die Syscalls aus. Falls du wirklich das eine Unix von Bell Labs meinst, dann interessiert das doch noch viel weniger Leute. Da kann man dann lieber den [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") Artikel endlich sinnvoll ausbauen. Es könnte auch sinnvoll sein, wenn du einfach den Artikel anfängst zu schreiben...--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 15:35, 22. Feb. 2010 (CET)
-  - Ja, stimmt, da haben wir ein wenig aneinander vorbei geredet. Ich meinte das System von Bell Labs und hab einen Aritkel dazu geschrieben. Dann können wir die Diskussion auch da weiter führen, falls nötig. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 16:53, 22. Feb. 2010 (CET)
-
-<!-- -->
-
 - [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB") und alles drumherum ([UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI"), [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI"), [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI"), vielleicht ja auch [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI"))
 - APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
   - Wäre ACPI nicht besser? Dazu gibt es im OS-Dev-Forum immerhin ein Beispiel (dazu könnte man ja einfach einen Link im ACPI-Artikel setzen): [\[1\]](http://forum.osdev.org/viewtopic.php?f=1&t=16990&p=151565) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 14:47, 24. Feb. 2010 (CET)
@@ -103,6 +87,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7206/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7166; parent 7164; 2010-02-24T13:47:03Z -->
+<!-- MediaWiki page 1518; revision 7206; parent 7166; 2010-02-28T21:19:17Z -->
