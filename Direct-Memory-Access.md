@@ -8,7 +8,7 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 Unter **Direct Memory Access** (abgekürzt **DMA**) versteht man eine Methode, Daten von Peripheriegeräten zum Arbeitsspeicher und umgekehrt zu übertragen, ohne dafür die CPU benutzen zu müssen.
 
-Es gibt zwei grundlegend verschiedene Methoden, DMA umzusetzen: Entweder das betreffende Peripheriegerät ist in der Lage, auf die Daten im Arbeitsspeicher selbst zuzugreifen (als *Busmaster*), oder es wird ein Hilfschip, der DMA-Controller, benötigt, dessen einzige Aufgabe es ist, die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten verwendet und die zweite Methode wird u.a. von [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")-Geräten benutzt. Aufgrund der unterschiedlichen Konzepte die sich hinter "DMA" verbergen sollte man bei der Verwendung dieses Begriffs immer etwas Vorsicht walten lassen.
+Es gibt zwei grundlegend verschiedene Methoden, DMA umzusetzen: Entweder das betreffende Peripheriegerät ist in der Lage, auf die Daten im Arbeitsspeicher selbst zuzugreifen (als *Busmaster*), oder es wird ein Hilfschip, der DMA-Controller, benötigt, dessen einzige Aufgabe es ist, die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten verwendet und die zweite Methode wird u. a. von [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")-Geräten benutzt. Aufgrund der unterschiedlichen Konzepte die sich hinter "DMA" verbergen sollte man bei der Verwendung dieses Begriffs immer etwas Vorsicht walten lassen.
 
 Typische DMA- bzw. busmasterfähige PCI-Geräte sind z. B. (S)ATA-Host-Controller, Netzwerkkarten und neuere USB-Host-Controller.
 
@@ -167,6 +167,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7196; parent 7195; 2010-02-28T18:07:28Z -->
+<!-- MediaWiki page 1555; revision 7197; parent 7196; 2010-02-28T18:08:30Z -->
