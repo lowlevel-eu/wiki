@@ -237,13 +237,13 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 ### Class 0x06 - Bridge-Geräte
 
 | Subclass | Programming Interface | Beschreibung |
-| ---------- | ----------------------- | ------------------------------------------------------- |
+| ---------- | ----------------------- | ----------------------------------------------------------- |
 | 0x00 | 0x00 | Host/PCI-Bridge |
 | 0x01 | 0x00 | PCI/ISA-Bridge |
 | 0x02 | 0x00 | PCI/EISA-Bridge |
 | 0x03 | 0x00 | PCI/MicroChannel-Bridge |
-| 0x04 | 0x00 | PCI/PCI-Bridge |
-| 0x04 | 0x01 | PCI/PCI-Bridge (Subtractive Decode) |
+| 0x04 | 0x00 | PCI/PCI-Bridge (hat Header Type 0x01) |
+| 0x04 | 0x01 | PCI/PCI-Bridge (Subtractive Decode, hat Header Type 0x01) |
 | 0x05 | 0x00 | PCI/PCMCIA-Bridge |
 | 0x06 | 0x00 | PCI/NuBus-Bridge |
 | 0x07 | 0x00 | PCI/CardBus-Bridge |
@@ -427,6 +427,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7184; parent 7171; 2010-02-28T12:51:43Z -->
+<!-- MediaWiki page 1626; revision 7185; parent 7184; 2010-02-28T12:53:56Z -->
