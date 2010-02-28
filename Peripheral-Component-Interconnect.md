@@ -345,15 +345,15 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 ### Class 0x0C - Serielle Buscontroller
 
 | Subclass | Programming Interface | Beschreibung |
-| ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| ---------- | ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | 0x00 | 0x00 | Firewire (IEEE 1394) |
 | 0x00 | 0x10 | Firewire (OHCI) |
 | 0x01 | 0x00 | ACCESS-Bus |
 | 0x02 | 0x00 | SSA (Serial Storage Architecture) |
-| 0x03 | 0x00 | [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus") (UHCI) |
-| 0x03 | 0x10 | USB (OHCI) |
-| 0x03 | 0x20 | USB (EHCI) |
-| 0x03 | 0x80 | USB (kein HCI) |
+| 0x03 | 0x00 | [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Host (UHCI) |
+| 0x03 | 0x10 | USB-Host (OHCI) |
+| 0x03 | 0x20 | USB-Host (EHCI) |
+| 0x03 | 0x80 | USB-Host (kein HCI) |
 | 0x03 | 0xFE | USB-Gerät |
 | 0x04 | 0x00 | Fibre Channel |
 | 0x05 | 0x00 | SMB (System Management Bus) |
@@ -427,6 +427,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7171/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7171; parent 7170; 2010-02-26T20:29:22Z -->
+<!-- MediaWiki page 1626; revision 7184; parent 7171; 2010-02-28T12:51:43Z -->
