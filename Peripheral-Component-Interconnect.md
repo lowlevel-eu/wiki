@@ -26,22 +26,22 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------- | ------------- | --------------- | ---------------------- |
-| 0x00 | Device ID |  | Vendor ID |  |
-| 0x04 | Status |  | Command |  |
-| 0x08 | Classcode |  |  | Revision ID |
-| 0x0C | BIST | Header Type | Latency Timer | Cache Line Size |
-| 0x10 | Header Type Specific |  |  |  |
-| 0x14 | Header Type Specific |  |  |  |
-| 0x18 | Header Type Specific |  |  |  |
-| 0x1C | Header Type Specific |  |  |  |
-| 0x20 | Header Type Specific |  |  |  |
-| 0x24 | Header Type Specific |  |  |  |
-| 0x28 | Header Type Specific |  |  |  |
-| 0x2C | Header Type Specific |  |  |  |
-| 0x30 | Header Type Specific |  |  |  |
-| 0x34 | Header Type Specific |  |  | Capabilities Pointer |
-| 0x38 | Header Type Specific |  |  |  |
-| 0x3C | Header Type Specific |  | Interrupt Pin | Interrupt Line |
+| 0x000 | Device ID |  | Vendor ID |  |
+| 0x004 | Status |  | Command |  |
+| 0x008 | Classcode |  |  | Revision ID |
+| 0x00C | BIST | Header Type | Latency Timer | Cache Line Size |
+| 0x010 | Header Type Specific |  |  |  |
+| 0x014 | Header Type Specific |  |  |  |
+| 0x018 | Header Type Specific |  |  |  |
+| 0x01C | Header Type Specific |  |  |  |
+| 0x020 | Header Type Specific |  |  |  |
+| 0x024 | Header Type Specific |  |  |  |
+| 0x028 | Header Type Specific |  |  |  |
+| 0x02C | Header Type Specific |  |  |  |
+| 0x030 | Header Type Specific |  |  |  |
+| 0x034 | Header Type Specific |  |  | Capabilities Pointer |
+| 0x038 | Header Type Specific |  |  |  |
+| 0x03C | Header Type Specific |  | Interrupt Pin | Interrupt Line |
 
 - Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist.
 - Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
@@ -66,35 +66,35 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------------- | ----------- | --------------------- | ---------------------- |
-| 0x10 | Base Address 0 (BAR0) |  |  |  |
-| 0x14 | Base Address 1 (BAR1) |  |  |  |
-| 0x18 | Base Address 2 (BAR2) |  |  |  |
-| 0x1C | Base Address 3 (BAR3) |  |  |  |
-| 0x20 | Base Address 4 (BAR4) |  |  |  |
-| 0x24 | Base Address 5 (BAR5) |  |  |  |
-| 0x28 | Cardbus CIS Pointer |  |  |  |
-| 0x2C | Subsystem ID |  | Subsystem Vendor ID |  |
-| 0x30 | Expansion ROM base address |  |  |  |
-| 0x34 | Reserviert |  |  | Capabilities Pointer |
-| 0x38 | Reserviert |  |  |  |
-| 0x3C | Max Latency | Min Grant | Interrupt Pin | Interrupt Line |
+| 0x010 | Base Address 0 (BAR0) |  |  |  |
+| 0x014 | Base Address 1 (BAR1) |  |  |  |
+| 0x018 | Base Address 2 (BAR2) |  |  |  |
+| 0x01C | Base Address 3 (BAR3) |  |  |  |
+| 0x020 | Base Address 4 (BAR4) |  |  |  |
+| 0x024 | Base Address 5 (BAR5) |  |  |  |
+| 0x028 | Cardbus CIS Pointer |  |  |  |
+| 0x02C | Subsystem ID |  | Subsystem Vendor ID |  |
+| 0x030 | Expansion ROM base address |  |  |  |
+| 0x034 | Reserviert |  |  | Capabilities Pointer |
+| 0x038 | Reserviert |  |  |  |
+| 0x03C | Max Latency | Min Grant | Interrupt Pin | Interrupt Line |
 
 #### Header Type 0x01
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------------------- | ------------------- | -------------------------- | ---------------------- |
-| 0x10 | Base address 0 |  |  |  |
-| 0x14 | Base address 1 |  |  |  |
-| 0x18 | Secondary latency timer | Subordinate bus № | Secondary bus № | Primary bus № |
-| 0x1C | Secondary Status |  | I/O Limit | I/O base |
-| 0x20 | Memory limit |  | Memory base |  |
-| 0x24 | Prefetchable memory limit |  | Prefetchable memory base |  |
-| 0x28 | Prefetchable base upper 32 bits |  |  |  |
-| 0x2C | Prefetchable limit upper 32 bits |  |  |  |
-| 0x30 | I/O limit upper 16 bits |  | I/O base upper 16 bits |  |
-| 0x34 | Reserviert |  |  | Capabilities pointer |
-| 0x38 | Extension ROM base address |  |  |  |
-| 0x3C | Bridge control |  | Interrupt pin | Interrupt line |
+| 0x010 | Base address 0 |  |  |  |
+| 0x014 | Base address 1 |  |  |  |
+| 0x018 | Secondary latency timer | Subordinate bus № | Secondary bus № | Primary bus № |
+| 0x01C | Secondary Status |  | I/O Limit | I/O base |
+| 0x020 | Memory limit |  | Memory base |  |
+| 0x024 | Prefetchable memory limit |  | Prefetchable memory base |  |
+| 0x028 | Prefetchable base upper 32 bits |  |  |  |
+| 0x02C | Prefetchable limit upper 32 bits |  |  |  |
+| 0x030 | I/O limit upper 16 bits |  | I/O base upper 16 bits |  |
+| 0x034 | Reserviert |  |  | Capabilities pointer |
+| 0x038 | Extension ROM base address |  |  |  |
+| 0x03C | Bridge control |  | Interrupt pin | Interrupt line |
 
 ### Bedeutung einiger Register
 
@@ -461,6 +461,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7214; parent 7213; 2010-02-28T22:11:35Z -->
+<!-- MediaWiki page 1626; revision 7215; parent 7214; 2010-02-28T22:38:26Z -->
