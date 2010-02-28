@@ -33,14 +33,13 @@ Die ersten 16 Byte sind für alle PCI-Geräte gleich.
 - Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
 - *Classcode* ist noch einmal geteilt. Die oberen 8 Bit repräsentieren die *Base Class*. Die mittleren 8 Bit stehen für die *Subclass* und die unter 8 Bit für das *Programming Interface*.
 - Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
+- *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
 
 | Header Type | Kurze Beschreibung |
 | ------------- | ------------------------------------- |
 | 0x00 | [Standard](#header-type-0x00) |
 | 0x01 | [PCI/PCI-Bridge](#header-type-0x01) |
 | 0x02 | CardBus-Bridge |
-
-- *Header Type* spezifiziert den Inhalt der Register 0x10-0x3C, wobei Bit 7 angibt ob es sich um ein Multifunction-Device handelt oder nicht.
 
 #### Header Type 0x00
 
@@ -441,6 +440,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7202/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7202; parent 7201; 2010-02-28T20:26:01Z -->
+<!-- MediaWiki page 1626; revision 7203; parent 7202; 2010-02-28T20:32:43Z -->
