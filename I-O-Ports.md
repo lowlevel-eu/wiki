@@ -13,7 +13,8 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 | 0x000 | 0x01F | [DMA Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access") (8237A-5) |
 | 0x020 | 0x021 | [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) |
 | 0x040 | 0x043 | [Programmable Interval Timer](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") (PIT) |
-| 0x060 | 0x063 | [Tastaturcontroller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") |
+| 0x060 | 0x060 | [Tastaturcontroller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") |
+| 0x064 | 0x064 | [Tastaturcontroller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") |
 | 0x070 | 0x071 | [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") |
 | 0x080 | 0x083 | [DMA Kontroller](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access") (8237A-5) |
 | 0x0A0 | 0x0AF | [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") |
@@ -48,6 +49,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7224/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 6423; parent 6192; 2009-11-30T13:28:43Z -->
+<!-- MediaWiki page 1543; revision 7224; parent 6423; 2010-03-01T13:32:34Z -->
