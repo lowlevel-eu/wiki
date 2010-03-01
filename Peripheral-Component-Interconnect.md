@@ -103,20 +103,20 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 #### Status-Register
 
 | Bit | Name | Bedeutung |
-| ------ | ---------------------------------------- | ----------- |
-| 3 | Interrupt Status | *TODO* |
-| 4 | Capabilities List | *TODO* |
-| 5 | 66 MHz Capable | *TODO* |
-| 7 | Fast Back-to-Back Transactions Capable | *TODO* |
-| 8 | Master Data Parity Error | *TODO* |
-| 10-9 | DEVSEL Timing | *TODO* |
-| 11 | Signalled Target-Abort | *TODO* |
-| 12 | Received Target-Abort | *TODO* |
-| 13 | Received Master-Abort | *TODO* |
-| 14 | Signalled System Error | *TODO* |
-| 15 | Detected Parity Error | *TODO* |
+| ------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 | Interrupt Status | *TODO* (RO) |
+| 4 | Capabilities List | Wenn dieses Bit auf 1 gesetzt ist ist der Capabilities-Pointer (Offset 0x034) gültig.<br>Bei PCI-Express, Hypertransport und PCI-X muss dieses Bit immer gesetzt sein da dort bus-spezifische Capabilities Pflicht sind. (RO) |
+| 5 | 66 MHz Capable | Dieses Bit gibt an ob eine PCI-Karte nicht nur mit maximal 33 MHz-Bus-Takt arbeiten kann sondern bis zu 66 MHz verträgt. Nur wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment mit mehr als 33 MHz umgehen können darf dieses Bus-Segment auch mit mehr als 33 MHz, bis maximal 66 MHz, betrieben werden.<br>Dieses Bit ist nur beim klassischen PCI gültig und bei allen PCI-Nachfolgern immer fest auf 0 geklemmt. (RO) |
+| 7 | Fast Back-to-Back Transactions Capable | *TODO* (RO) |
+| 8 | Master Data Parity Error | *TODO* (RW1C) |
+| 10-9 | DEVSEL Timing | *TODO* (RO) |
+| 11 | Signalled Target-Abort | *TODO* (RW1C) |
+| 12 | Received Target-Abort | *TODO* (RW1C) |
+| 13 | Received Master-Abort | *TODO* (RW1C) |
+| 14 | Signalled System Error | *TODO* (RW1C) |
+| 15 | Detected Parity Error | *TODO* (RW1C) |
 
-Nicht beschriebene Bits sind reserviert und liefern beim lesen eine 0.
+Nicht beschriebene Bits sind reserviert und liefern beim lesen eine 0. Die Bits im Status-Register sind entweder Read-Only (RO) oder lassen sich durch beschreiben mit einer 1 rücksetzen (RW1C).
 
 #### Command-Register
 
@@ -477,6 +477,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7230; parent 7229; 2010-03-01T17:23:22Z -->
+<!-- MediaWiki page 1626; revision 7233; parent 7230; 2010-03-01T17:47:29Z -->
