@@ -66,12 +66,122 @@ Ist Bit 3 oder 4 gesetzt, dann wird so lange ein IRQ ausgelöst, bis die Bits ge
 | 1 | RI | Wird das Resume-Detect-Bit im USBSTS-Register gesetzt und ist dieses Bit gesetzt, dann wird ein IRQ ausgelöst. |
 | 0 | TO/CRC | Gibt es bei einer USB-Transaktion einen Timeout oder einen CRC-Fehler, dann wird bei gesetztem Bit ein IRQ generiert. |
 
+#### FRNUM
+
+| Bit | Name | Bedeutung |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10 &#150; 0 | Frame number | Aktuelle Framenummer, als Index in der Frameliste werden nur die Bits 0 bis 9 (Werte 0 bis 1023) verwendet, diese werden auch in SOF-Token auf dem USB verwendet. |
+
+#### FLBASEADD
+
+| Bit | Name | Bedeutung |
+| -------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 12 | Base Address | Physische Adresse der Frameliste (bzw. die oberen 20 Bit davon, die unteren 12 Bit müssen auf 0 gesetzt ist (d. h., der Bereich muss an 4 kB ausgerichtet werden)). |
+| 11 &#150; 0 | Reserved | Müssen als 0 geschrieben werden, der Hostcontroller kann hier während des Benutzens der Liste den Offset des aktuellen Elements eintragen (sodass das gesamte Register dann die physische Adresse des aktuell bearbeiteten Elements enthält). |
+
+#### SOFMOD
+
+Das oberste Bit in diesem Register ist reserviert, mit den unteren sieben kann man die genaue Länge eines Frames modifizieren. Sie beträgt 11936 ms + der eingetragene Wert (normalerweise wird 64 eingetragen, sodass die Framelänge 12000 ms beträgt).
+
+#### PORTSC
+
+| Bit | Name | Bedeutung |
+| ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 12 | Suspend | Gibt an, ob sich der Port im Suspendmodus befindet. Dieses Bit sollte nicht gleichzeitig mit dem Global Suspend Mode verwendet werden. |
+| 9 | Port Reset | Wird dieses Bit gesetzt, dann wird das Resetsignal auf dem USB getrieben. Der HCD muss dafür Sorge tragen, dass es nach der vorgesehen Zeit (50 ms) wieder gelöscht wird. |
+| 8 | Low Speed Device Attached | Dieses Flag gibt an, ob ein Low-Speed-Gerät angeschlossen ist. Wenn es nicht gesetzt ist, dann ist logischerweise ein Full-Speed-Gerät angeschlossen (oder gar keins, wenn Current Connect Status 0 ist). |
+| 7 | Reserved | Dieses Bit wird immer als 1 gelesen und kann daher dazu dienen, die tatsächliche Anzahl der Rootports herauszufinden (s. Hinweis bei [I/O-Raum](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface#io-raum "Universal Host Controller Interface")). |
+| 6 | Resume Detect | Wenn ein Gerät ein Remote Wakeup sendet, dann wird dieses Bit gesetzt. Außerdem kann der HCD dieses Bit setzen, um selektiv an diesem Port ein Resumesignal zu treiben. Nach der von der USB-Spezifikation vorgesehenen Zeitspanne (sollten 20 ms sein) muss es vom HCD wieder aufgehoben werden. |
+| 4/5 | Line Status | Gibt den Status der Datenleitungen (D+/D-) wieder. So können einige Fehler entdeckt werden (sind z. B. beide Leitungen gleich, dann hängt vermutlich kein Gerät am Bus). D+ entspricht Bit 4, D- Bit 5. |
+| 3 | Port Enable/Disable Change | Hat der HC den Rootport selbst deaktiviert (wegen eines schweren Fehlers oder dem Disconnect des Geräts), dann wird dieses Bit gesetzt. Analog zum Connect-Status-Change-Bit muss es durch Schreiben einer 1 gelöscht werden. |
+| 2 | Port Enabled/Disabled | Um den Port zu aktivieren, muss dieses Flag auf 1 gesetzt werden. Ist es 0, so werden keine Daten am Port ausgegeben und auch keine in Empfang genommen. Dieses Bit kann auch vom HC selbst gelöscht werden, wenn ein schwerer Fehler aufgetreten ist oder das Gerät entfernt wurde. |
+| 1 | Connect Status Change | Wenn ein Gerät angesteckt oder entfernt wird, dann wird dieses Bit gesetzt. Um es zu löschen, muss eine 1 hineingeschrieben werden. |
+| 0 | Current Connect Status | Ist ein Gerät an diesen Rootport angeschlossen, so ist dieses Bit 1. Es kann vom HCD nicht beschrieben werden. |
+
+## Verwendete Datenstrukturen
+
+Relativ wenig der tatsächlichen Steuerung des UHC findet über die genannten Register ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
+
+Die eigentlichen USB-Transaktionen werden jedoch über Datenstrukturen abgewickelt, die im Hauptspeicher liegen und deren Wurzel die Frameliste ist. Diese verzweigt dann zu Warteschlangenköpfen (Queue Heads, QH) und zu Transferdeskriptoren (Transfer Descriptors, TD), welche dann einzelne Transaktionen steuern.
+
+### Frameliste
+
+Die Frameliste ist ein Array mit 1024 Einträgen zu je vier Byte. Jeder dieser Einträge entspricht einem Frame und weißt den Hostcontroller zu bestimmten Transaktionen an (bzw. weist auf den Beginn einer Liste von Transaktionen).
+
+Ein Eintrag ist wie folgt aufgebaut:
+
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | Frame List Pointer | Dieses Feld enthält die physische Adresse eines QH oder eines TD. Der Wert entspricht den Bits 31 &#150; 4 dieser Adresse, welche also an 16 Byte ausgerichtet sein muss. |
+| 1 | QH/TD Select | Ist dieses Bit gesetzt, dann zeigt der FLP auf einen QH, sonst zeigt er auf einen TD. |
+| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist. Ist es gesetzt, so wird der HC dem Link nicht folgen. |
+
+### Warteschlangenköpfe
+
+Jeder QH kann einerseits auf das nächste Element in der Liste (horizontal) und andererseits auf eine Warteschlange zeigen (vertikal).
+
+| Offset | Bezeichnung |
+| -------- | ----------------------------------- |
+| 0x00 | Queue Head Link Pointer (QHLP) |
+| 0x04 | Queue Element Link Pointer (QELP) |
+
+#### QHLP
+
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------- | -------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | QHLP | Physische Adresse des nächsten Elements in der horizontalen Liste (entweder ein QH oder ein TD). |
+| 1 | QH/TD Select | Gibt an, ob es sich um einen QH oder einen TD handelt (wieder 1 für QH und 0 für TD). |
+| 0 | Terminate | Ist dieses Bit 1, so ist dieser QH das letzte Element in der Liste. |
+
+#### QELP
+
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | QELP | Physische Adresse des ersten Elements in der hier beginnenden vertikalen Liste (entweder QH oder TD). |
+| 1 | QH/TD Select | Gibt wieder an, ob es sich um einen QH oder einen TD handelt. |
+| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist (sonst gibt es keine vertikale Liste). |
+
+### Transferdeskriptoren
+
+Ein Transferdeskriptor bezeichnet einen einzelnen USB-Transfer (wobei man sich nicht um Dinge wie NAK, ACK oder ähnliches kümmern muss). Solche Transfers sind SETUP-, IN- und OUT-Pakete.
+
+| Offset | Bezeichnung |
+| -------- | -------------------- |
+| 0x00 | Link Pointer (LP) |
+| 0x04 | Control and Status |
+| 0x08 | Token |
+| 0x0C | Buffer Pointer |
+
+#### LP
+
+*TODO*
+
+#### Control and Status
+
+*TODO*
+
+#### Token
+
+*TODO*
+
+#### Buffer Pointer
+
+*TODO*
+
+### Zusammenspiel
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/52d4009af5bf1cb705f6.png" width="300" height="194" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png "vergrößern")Schema aus der UHCI-Spezifikation
+
+Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frameliste die Wurzel des ganzen. Dort trägt man in jedes Feld einen Pointer auf die spezifisch in diesem Frame auszuführenden periodischen Transfers (Isochronous-TDs oder Interrupt-QHs mit deren TDs) ein. Am Ende dieser Liste von periodischen Transfers sollte dann der erste QH der aperiodischen Transfers folgen. Womit ein QH korrespondiert, ist ziemlich egal. Er kann einer USB-Pipe entsprechen, man kann aber auch einfach einen einzigen QH für alle aperiodischen Transfers anlegen, an den alle Transferdeskriptoren angehangen werden.
+
+*TODO*
+
 ## Weblinks
 
 - [Universal Host Controller Interface (UHCI) Design Guide Revision 1.1](http://www.intel.com/technology/usb/uhci11d.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7210; parent 5202; 2010-02-28T21:58:15Z -->
+<!-- MediaWiki page 1576; revision 7236; parent 7210; 2010-03-01T22:08:59Z -->
