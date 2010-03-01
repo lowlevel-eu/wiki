@@ -102,7 +102,21 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 #### Status-Register
 
-*TODO*
+| Bit | Name | Bedeutung |
+| ------ | ---------------------------------------- | ----------- |
+| 3 | Interrupt Status | *TODO* |
+| 4 | Capabilities List | *TODO* |
+| 5 | 66 MHz Capable | *TODO* |
+| 7 | Fast Back-to-Back Transactions Capable | *TODO* |
+| 8 | Master Data Parity Error | *TODO* |
+| 10-9 | DEVSEL Timing | *TODO* |
+| 11 | Signalled Target-Abort | *TODO* |
+| 12 | Received Target-Abort | *TODO* |
+| 13 | Received Master-Abort | *TODO* |
+| 14 | Signalled System Error | *TODO* |
+| 15 | Detected Parity Error | *TODO* |
+
+Nicht beschriebene Bits sind reserviert und liefern beim lesen eine 0.
 
 #### Command-Register
 
@@ -463,6 +477,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7216/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7228/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7216; parent 7215; 2010-02-28T22:52:13Z -->
+<!-- MediaWiki page 1626; revision 7228; parent 7216; 2010-03-01T17:22:23Z -->
