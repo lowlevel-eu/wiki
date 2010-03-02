@@ -49,7 +49,7 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 - Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
 - Im *Status*-Register werden verschiedene Basis-Status und Gerät-Fähigkeiten angezeigt.
 - Im *Command*-Register werden verschiedene Basis-Konfigurationen vorgenommen.
-- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit (Byte 0x00B) repräsentieren die *Base Class*. Die mittleren 8 Bit (Byte 0x00A) stehen für die *Subclass* und die unter 8 Bit (Byte 0x009) für das *Programming Interface*.
+- *Classcode* ist noch einmal geteilt. Die oberen 8 Bit (Byte 0x00B) repräsentieren die *Base Class*, die mittleren 8 Bit (Byte 0x00A) stehen für die *Subclass* und die unteren 8 Bit (Byte 0x009) für das *Programming Interface*.
 - Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
 - Mit dem *BIST*-Register kann ein gerätespezifischer Selbsttest ausgelöst und ausgewertet werden. Diese Funktion ist optional und wird nur von wenigen PCI-Geräten unterstützt.
 - *Header Type* spezifiziert den Inhalt der Register 0x010 &#150; 0x03F. Dabei gibt Bit 7 an, ob es sich um ein Multifunction-Device handelt oder nicht, in dem Fall muss das Bit 7 in allen vorhandenen Funktionen gesetzt sein.
@@ -62,7 +62,7 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 - Der *Capabilities Pointer* zeigt, falls er gültig ist, auf die erste Capability-Struktur, welche der Start einer verketteten Liste ist. Für gültige Capabilities Pointer sind nur Werte von 0x40 bis 0xF0 erlaubt.
 - Im *Interrupt Pin*-Register wird angegeben, welches Interrupt-Pin das Gerät verwendet. 0x00 steht für kein Interrupt-Signal, trotzdem kann noch MSI(-X) benutzt werden. Die Werte 0x01 bis 0x04 stehen für \#INTA bis \#INTD, alle anderen Werte sind nicht erlaubt. Bei Singlefunction-Devices ist nur Pin \#INTA erlaubt. Bei Multifunction-Devices dürfen auch \#INTB bis \#INTD benutzt werden, es dürfen auch mehrere Funktionen in einem PCI-Gerät sich eine Interrupt-Leitung teilen.
-- Im *Interrupt Line*-Register legt das BIOS die zugewiesene x86-Interrupt-Nummer ab, welche das \#INT?-Signal des betreffendem PCI-Geräts auslöst.
+- Im *Interrupt Line*-Register legt das BIOS die zugewiesene x86-Interrupt-Nummer ab, welche das \#INT?-Signal des betreffendem PCI-Geräts auslöst. Diese Info ist nur relevant wenn man die IRQs über den klassischen PIC vermitteln lässt, wenn die APICs benutzt werden ist diese Info unter Umständen nur noch von begrenztem Nutzen. Diese Info ist eine reine Freundlichkeit des BIOS der x86-Plattform, auf allen anderen Plattformen bleibt dieses Register leer. Dem PCI-Gerät ist der Wert in diesem Register egal und wird es auch nicht verändern. Falls das PCI-Gerät keine Interrupts benutzt, oder nur per MSI(-X) signalisiert, kann dieses Register auch fest auf 0x00 geklemmt sein.
 
 #### Header Type 0x00
 
@@ -102,21 +102,21 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 #### Status-Register
 
-| Bit | Name | Bedeutung |
-| ------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 | Interrupt Status | *TODO* (RO) |
-| 4 | Capabilities List | Wenn dieses Bit auf 1 gesetzt ist ist der Capabilities-Pointer (Offset 0x034) gültig.<br>Bei PCI-Express, Hypertransport und PCI-X muss dieses Bit immer gesetzt sein da dort bus-spezifische Capabilities Pflicht sind. (RO) |
-| 5 | 66 MHz Capable | Dieses Bit gibt an ob eine PCI-Karte nicht nur mit maximal 33 MHz-Bus-Takt arbeiten kann sondern bis zu 66 MHz verträgt. Nur wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment mit mehr als 33 MHz umgehen können darf dieses Bus-Segment auch mit mehr als 33 MHz, bis maximal 66 MHz, betrieben werden.<br>Dieses Bit ist nur beim klassischen PCI gültig und bei allen PCI-Nachfolgern immer fest auf 0 geklemmt. (RO) |
-| 7 | Fast Back-to-Back Transactions Capable | *TODO* (RO) |
-| 8 | Master Data Parity Error | *TODO* (RW1C) |
-| 10-9 | DEVSEL Timing | *TODO* (RO) |
-| 11 | Signalled Target-Abort | *TODO* (RW1C) |
-| 12 | Received Target-Abort | *TODO* (RW1C) |
-| 13 | Received Master-Abort | *TODO* (RW1C) |
-| 14 | Signalled System Error | *TODO* (RW1C) |
-| 15 | Detected Parity Error | *TODO* (RW1C) |
+| Bit | Name | Typ | Bedeutung |
+| ------ | ---------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 | Interrupt Status | RO / dynamic | *TODO* |
+| 4 | Capabilities List | RO / fix | Wenn dieses Bit auf 1 gesetzt ist ist der Capabilities-Pointer (Offset 0x034) gültig.<br>Bei PCI-Express, Hypertransport und PCI-X muss dieses Bit immer gesetzt sein da dort bus-spezifische Capabilities Pflicht sind. |
+| 5 | 66 MHz Capable | RO / fix | Dieses Bit gibt an ob eine PCI-Karte nicht nur mit maximal 33 MHz-Bus-Takt arbeiten kann sondern bis zu 66 MHz verträgt. Nur wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment mit mehr als 33 MHz umgehen können darf dieses Bus-Segment auch mit mehr als 33 MHz, bis maximal 66 MHz, betrieben werden.<br>Dieses Bit ist nur beim klassischen PCI gültig und bei allen PCI-Nachfolgern immer fest auf 0 geklemmt. |
+| 7 | Fast Back-to-Back Transactions Capable | RO / fix | *TODO* |
+| 8 | Master Data Parity Error | RW1C / dynamic | *TODO* |
+| 10-9 | DEVSEL Timing | RO / fix | *TODO* |
+| 11 | Signalled Target-Abort | RW1C / dynamic | *TODO* |
+| 12 | Received Target-Abort | RW1C / dynamic | *TODO* |
+| 13 | Received Master-Abort | RW1C / dynamic | *TODO* |
+| 14 | Signalled System Error | RW1C / dynamic | *TODO* |
+| 15 | Detected Parity Error | RW1C / dynamic | *TODO* |
 
-Nicht beschriebene Bits sind reserviert und liefern beim lesen eine 0. Die Bits im Status-Register sind entweder Read-Only (RO) oder lassen sich durch beschreiben mit einer 1 rücksetzen (RW1C).
+Nicht beschriebene Bits sind reserviert und liefern beim lesen eine 0. Die Bits im Status-Register sind entweder Read-Only (RO) oder lassen sich durch beschreiben mit einer 1 rücksetzen (RW1C), das beschreiben mit einer 0 hat keinen Effekt. Einige Bits ändern ihren Zustand nie (fix) und andere können ihren Zustand durch bestimmte Ereignisse ändern (dynamic).
 
 #### Command-Register
 
@@ -134,7 +134,7 @@ Nicht beschriebene Bits sind reserviert und liefern beim lesen eine 0. Die Bits 
 | 9 | Fast Back-to-Back Enable | Wenn dieses Bit auf 1 gesetzt ist soll das PCI-Gerät Back-to-Back-Zugriffe (als Target) unterstützen und darf auch solche Zugriffe (als Master) ausführen. Dieses Bit lässt sich nur auf 1 setzen, wenn das zugehörige Bit 7 im Status-Register diese Fähigkeit signalisiert, andernfalls ist es fest auf 0 geklemmt. Dieses Bit darf nur dann auf 1 gesetzt werden wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment Back-to-Back-Zugriffe unterstützen. Wenn alle Geräte diesen Modus unterstützen, kann die Idle-Phase zwischen zwei PCI-Zyklen entfallen. Das erhöht etwas den Datendurchsatz auf dem PCI-Bus.<br>Bei PCI-Express, Hypertransport und PCI-X ist es immer fest auf 0 geklemmt. |
 | 10 | Interrupt Disable | Ist dieses Flag gesetzt, dann kann das entsprechende Gerät keine IRQs auslösen. Nach dem Hardware-Reset muss dieses Bit dummerweise immer gelöscht sein, sodass IRQs anfangs nicht verboten sind. MSI(-X) ist davon unabhängig, dafür gibt es spezielle Interrupt-Enable-Bits in den entsprechenden Capabilities. |
 
-Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert) und müssen ebenfalls immer auf 0 gesetzt werden. Nach dem Reset des Geräts sind alle hier aufgeführten Bits auf 0 gesetzt (wobei das BIOS wohl einige davon setzen wird). Die Software sollte immer prüfen, ob sich die gewünschten Bits auch wirklich auf 1 setzen lassen, einige Bits sind eben fest auf 0 geklemmt.
+Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert) und müssen ebenfalls immer auf 0 gesetzt werden. Nach dem Reset des Geräts sind alle hier aufgeführten Bits auf 0 gesetzt (wobei das BIOS wohl einige davon setzen wird). Die Software sollte immer prüfen, ob sich die gewünschten Bits auch wirklich auf 1 setzen lassen, einige Bits sind eben fest auf 0 geklemmt. Es sind zwar nicht alle Bits beschreibbar aber kein Bit wird seinen Zustand von alleine ändern.
 
 #### Base-Address-Register
 
@@ -477,6 +477,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7245/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7234; parent 7233; 2010-03-01T17:55:58Z -->
+<!-- MediaWiki page 1626; revision 7245; parent 7234; 2010-03-02T20:46:14Z -->
