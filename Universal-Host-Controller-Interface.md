@@ -124,11 +124,11 @@ Das UHCI ist &#150; wie andere USB-Hostcontrollerinterfaces auch &#150; häufig 
 Jedes UHCI besitzt einen I/O-Raum, der aus dem PCI-Konfigurationsraum ausgelesen werden muss. In ihm kann man den Status der Rootports sowie des Hostcontrollers allgemein auslesen oder verändern, sowie letzteren initialisieren und dabei auch den Beginn der Frameliste eintragen. Dieser ist wie folgt aufgebaut:
 
 | Offset | Name | Bits | Bedeutung |
-| -------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | USBCMD | 16 | Enthält Flags zum Steuern des Hostcontrollers. |
 | 0x02 | USBSTS | 16 | Zeigt den Status des Hostcontrollers an. |
 | 0x04 | USBINTR | 16 | Gibt an, bei welchen in USBSTS gesetzten Bits ein Interrupt ausgelöst werden soll. |
-| 0x06 | FRNUM | 16 | Enthält die aktuelle Framenummer (0 bis 2047, wobei auf dem USB und in der Frameliste nur die unteren 10 Bits (also 0 bis 1023) verwendet werden)). |
+| 0x06 | FRNUM | 16 | Enthält die aktuelle Framenummer (0 bis 2047, wobei auf dem USB und in der Frameliste nur die unteren 10 Bits (also 0 bis 1023) verwendet werden). |
 | 0x08 | FRBASEADD | 32 | Hier muss der physische Pointer zur Frameliste eingetragen werden (an 4 kB ausgerichtet). |
 | 0x0C | SOFMOD | 8 | Gibt an, wie lange ein USB-Frame genau dauern soll. |
 | 0x10 | PORTSC1 | 16 | Enthält Flags zum Steuern und Informationen über den ersten Rootport. |
@@ -188,7 +188,7 @@ Ist Bit 3 oder 4 gesetzt, dann wird so lange ein IRQ ausgelöst, bis die Bits ge
 
 #### SOFMOD
 
-Das oberste Bit in diesem Register ist reserviert, mit den unteren sieben kann man die genaue Länge eines Frames modifizieren. Sie beträgt 11936 ms + der eingetragene Wert (normalerweise wird 64 eingetragen, sodass die Framelänge 12000 ms beträgt).
+Das oberste Bit in diesem Register ist reserviert, mit den unteren sieben kann man die genaue Länge eines Frames modifizieren. Sie beträgt 11936 Bitzeiten + der eingetragene Wert (normalerweise wird 64 eingetragen, sodass die Framelänge 12000 Bitzeiten beträgt, das ist genau eine Millisekunde).
 
 #### PORTSC
 
@@ -207,12 +207,65 @@ Wie bereits angedeutet gibt es für jeden Rootport ein solches Register am Ende 
 | 1 | Connect Status Change | Wenn ein Gerät angesteckt oder entfernt wird, dann wird dieses Bit gesetzt. Um es zu löschen, muss eine 1 hineingeschrieben werden. |
 | 0 | Current Connect Status | Ist ein Gerät an diesen Rootport angeschlossen, so ist dieses Bit 1. Es kann vom HCD nicht beschrieben werden. |
 
+## Initialisierung
+
+Leider enthält die UHCI-Spezifikation keine Anleitung, wie dies zu bewerkstelligen ist (im Gegensatz zur OHCI- oder EHCI-Spezifikation). Deshalb sei hier ein Weg dargestellt, der vielleicht ein Overkill ist, aber zumindest bei mir funktioniert.
+
+### Informationen vom PCI-Treiber holen
+
+Zuerst muss die Adresse des I/O-Raums (und wenn möglich auch dessen Größe) sowie die IRQ-Nummer vom PCI-Treiber herausgefunden werden. Anschließend sollten beide Resourcen registriert bzw. reserviert werden, außerdem sollten sowohl I/O-Raum als auch die Busmasterfunktionalität aktiviert werden (indem 0x05 ins Commandregister geschrieben wird).
+
+### Reset
+
+Nun muss der UHCI nicht nur zurückgesetzt, sondern auch komplett in Besitz genommen werden (es ist sehr gut möglich, dass das BIOS derzeit über den Controller verfügt).
+
+#### USB-Reset und Rootports
+
+Zuerst sollte ein globaler USB-Reset auf allen aktivierten Ports getrieben werden. Dies geschieht, indem das GRESET-Bit im USBCMD-Register (USBCMD.GRESET) gesetzt wird. Außerdem kann man hierbei auch gleich alle anderen Bits in diesem Register löschen, sodass der Controller anhält. Nach 50 Millisekunden muss das Resetsignal wieder aufgehoben werden, indem das GRESET-Bit wieder gelöscht wird.
+
+Jetzt muss die Anzahl der vorhanden Rootports in Erfahrung gebracht werden. Hierzu nimmt man zunächst die Größe des I/O-Raums minus 0x10 und geteilt durch 2 als Obergrenze und 2 als Untergrenze. Jetzt wird für jeden Rootport überprüft, ob sowohl Bit 7 gesetzt ist (0x0080) als auch der Gesamtwert nicht 0xFFFF ist. Ist das Bit nicht gesetzt oder beträgt der Wert 0xFFFF, so handelt es sich beim verwendeten Port um keinen I/O-Port für einen Rootport mehr. Beispielcode:
+
+\<c\>int root_ports = (io_space_size - 0x10) / 2; for (int i = 2; i \< root_ports; i++) {
+
+       if (!(inw(io_space + 0x10 + i*2) & 0x0080) || (inw(io_space + 0x10 + i*2) == 0xFFFF))
+       {
+           root_ports = i;
+           break;
+       }
+
+}\</c\>
+
+Mehr als sieben Rootports sind unwahrscheinlich, in diesem Fall sollten nur zwei verwendet werden.
+
+#### Deaktivieren des Legacy Supports
+
+Normalerweise ist der USB-Legacy-Support etwas tolles. Mit ihm können USB-Sticks oder -Diskettenlaufwerke per int 13h angesprochen werden und Tastaturen und Mäuse verhalten sich wie PS/2-Geräte. Wenn wir selbst die Kontrolle über einen USB-Hostcontroller übernehmen wollen, ist dieser Support oft lästig, weil sich das BIOS oft regelrecht am Controller festgesaugt hat. So genügt es nicht, den Controller einfach nur zurückzusetzen und die Interrupts abzufangen, da das BIOS sich vom HC einen SMI generieren lässt, sodass wir am Ende in die Röhre schauen, falls dieser nicht abgeschaltet wird (da man normale IRQs (also PCI-IRQs) benutzen möchte).
+
+Zuerst ist festzustellen, ob der HC überhaupt schon benutzt wurde. Wenn nicht, so können wir uns den folgenden Reset sparen. Ein Reset ist nötig, wenn entweder USBCMD.RS, USBCMD.CF oder ein Bit im USBINTR-Register gesetzt sind. Er ist außerdem notwendig, wenn das USBCMD.EGSM-Bit gelöscht ist. Weiterhin gibt es im PCI-Konfigurationsraum des Geräts das LEGSUP-Register (Legacy Support). Es befindet sich am Offset 0xC0 und ist 16 Bit lang. Wenn eine binäre UND-Operation mit dem Wert 0x00BF ein Ergebnis ungleich 0 liefert, so muss ebenfalls ein kompletter Reset durchgeführt werden (da dann der Legacy Support aktiviert ist).
+
+Dieser Reset beginnt mit dem Reset des Hostcontrollers an sich. Dazu wird 0x3F ins USBSTS-Register geschrieben, damit der Controller keine Interrupts auslöst. Anschließend sollte eine Millisekunde gewartet werden, damit der HC auf jeden Fall angehalten ist. Nun werden alle Legacy-Support-Statusbits im LEGSUP-Register gelöscht, dies geschieht, indem 0x8F00 hineingeschrieben wird. Danach kann der HC wirklich selbst zurückgesetzt werden, indem das Bit USBCMD.HCRESET gesetzt wird. Der HC löscht dieses Bit selbstständig, sobald der Reset abgeschlossen ist.
+
+Jetzt ist es ratsam, 0 ins USBINTR-Register zu schreiben, ebenfalls, damit keine IRQs auftreten. Danach sollte auch ins USBCMD-Register 0 geschrieben werden, genau wie in alle Rootportregister (um alle Rootports zu deaktivieren).
+
+Nun sollte der Reset abgeschlossen sein.
+
+### Konfiguration
+
+Das UHCI ist jetzt bereit, konfiguriert zu werden. Als erstes kann man die Länge eines Frames mit dem SOFMOD-Register verstellen, ratsam ist hier der Standardwert von 0x40 für eine Millisekunde. Anschließend sollte die physische Adresse der Frameliste eingetragen (Register FRBASEADD) und die aktuelle Framenummer (FRNUM) auf 0 zurückgesetzt werden.
+
+Um PCI-IRQs generieren zu lassen, ist es notwendig, dies im LEGSUP-Register im PCI-Konfigurationsraum (s. [Deaktivieren des Legacy Supports](#deaktivieren-des-legacy-supports)) deutlich zu machen, indem 0x2000 hineingeschrieben wird.
+
+Der Hostcontroller ist jetzt bereit, die Abarbeitung der Frameliste zu beginnen. Dies wird mit dem Setzen von USBCMD.RS und USBCMD.CF ausgelöst. Es ist möglich, USBCMD.MAXP zu setzen. Anschließend sollte USBCMD.FGR für 20 ms gesetzt werden, um den HC (falls nötig) aus dem globalen Suspendmodus zu befreien, damit auch wirklich SOF-Token gesendet werden und der USB benutzt werden kann. Danach muss dieses Bit wieder gelöscht werden, um das Resumesignal aufzuheben. Nun sollte wohl noch ca. 10 ms gewartet werden, bis alle Geräte betriebsbereit sind.
+
+  
+An diesem Punkt arbeitet der UHC die Frameliste und alle verlinkten Warteschlangen und die Transfers darin ab. Allerdings sind vermutlich alle Rootports deaktiviert und müssen manuell aktiviert werden (oder sind in einem undefinierten Zustand, wenn sie nicht im Zuge des Komplettresets deaktiviert wurden).
+
 ## Weblinks
 
 - [Universal Host Controller Interface (UHCI) Design Guide Revision 1.1](http://www.intel.com/technology/usb/uhci11d.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7243/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7243; parent 7242; 2010-03-02T18:39:39Z -->
+<!-- MediaWiki page 1576; revision 7244; parent 7243; 2010-03-02T19:34:45Z -->
