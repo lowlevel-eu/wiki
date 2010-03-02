@@ -10,9 +10,13 @@ Das UHCI ist neben dem [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host
 
 ## Verwendete Datenstrukturen
 
-Relativ wenig der tatsächlichen Steuerung des UHC findet über die unten genannten Register (s. [\#I/O-Raum](#io-raum)) ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
+Relativ wenig der tatsächlichen Steuerung des UHC (Universal Host Controller) findet über die unten genannten Register (s. [\#I/O-Raum](#io-raum)) ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
 
 Die eigentlichen USB-Transaktionen werden jedoch über Datenstrukturen abgewickelt, die im Hauptspeicher liegen und deren Wurzel die Frameliste ist. Diese verzweigt dann zu Warteschlangenköpfen (Queue Heads, QH) und zu Transferdeskriptoren (Transfer Descriptors, TD), welche dann einzelne Transaktionen steuern.
+
+Vorweg sei gesagt: Wenn in einem DWord ein Pointer anzugeben ist, dann wird er immer komplett in dieses DWord geschrieben. Felder, die nicht zum Pointer gehören, bedeuten, dass die entsprechenden Bits der Adresse 0 sein müssen. Sind z. B. die Bits 4 &#150; 31 für den Pointer reserviert (und der restliche Platz für andere Felder), dann müssen dort die Bits 4 &#150; 31 des Pointers eingetragen werden. Die niederwertigsten vier Bit der Adresse müssen dann 0 sein, d. h. der Puffer ist an 16 Byte auszurichten.
+
+Alle nicht erwähnten Bits sind reserviert und (wenn nicht anders ausgezeichnet) auf 0 zu setzen.
 
 ### Frameliste
 
@@ -21,10 +25,10 @@ Die Frameliste ist ein Array mit 1024 Einträgen zu je vier Byte, das im Speiche
 Ein Eintrag ist wie folgt aufgebaut:
 
 | Bits | Bezeichnung | Bedeutung |
-| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 31 &#150; 4 | Frame List Pointer | Dieses Feld enthält die physische Adresse eines QH oder eines TD. Der Wert entspricht den Bits 31 &#150; 4 dieser Adresse, welche also an 16 Byte ausgerichtet sein muss. |
+| ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | Frame List Pointer | Dieses Feld enthält die physische Adresse eines QH oder eines TD. |
 | 1 | QH/TD Select | Ist dieses Bit gesetzt, dann zeigt der FLP auf einen QH, sonst zeigt er auf einen TD. |
-| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist. Ist es gesetzt, so wird der HC dem Link nicht folgen. |
+| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist. Ist es gesetzt, so wird der HC (Hostcontroller) dem Link nicht folgen. |
 
 ### Warteschlangenköpfe
 
@@ -46,8 +50,8 @@ Jeder QH kann einerseits auf das nächste Element in der Liste (horizontal) und 
 #### QELP
 
 | Bits | Bezeichnung | Bedeutung |
-| ------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
-| 31 &#150; 4 | QELP | Physische Adresse des ersten Elements in der hier beginnenden vertikalen Liste (entweder QH oder TD). |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | QELP | Physische Adresse des ersten Elements in der hier beginnenden vertikalen Liste (entweder QH oder TD). Dieser Wert wird vom HC angepasst, wenn er das nächste Element in der Warteschlange lädt. |
 | 1 | QH/TD Select | Gibt wieder an, ob es sich um einen QH oder einen TD handelt. |
 | 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist (sonst gibt es keine vertikale Liste). |
 
@@ -64,19 +68,44 @@ Ein Transferdeskriptor bezeichnet einen einzelnen USB-Transfer (wobei man sich n
 
 #### LP
 
-*TODO*
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | Link Pointer | Pointer zum nächsten TD (oder auch QH) in der Warteschlange (oder allgemeiner Liste, wenn der TD sich in keiner Warteschlange befindet) |
+| 2 | Depth/Breadth Select | Ist nur gültig, wenn sich der TD in einer Warteschlange befindet. Gibt an, ob die Warteschlangen horizontal oder vertikal abgearbeitet werden. Ist es gesetzt, so wird vertikal gearbeitet, das heißt, diese Warteschlange ist komplett abzuarbeiten, bis der nächste QH an die Reihe kommt (nützlich z. B., wenn man nur einen einzigen QH hat oder nach Priorität sortieren möchte). Wenn es gelöscht ist, wird hingegen horizontal gearbeitet, sobald ein TD aus der Warteschlange fertig ist, geht der HC sofort zum nächsten QH (nützlich, wenn man für jede USB-Pipe einen QH hat). |
+| 1 | QH/TD Select | Zeigt an, ob es sich beim nächsten Element um einen TD oder einen QH handelt. |
+| 0 | Terminate | Ist das Bit gesetzt, so ist der TD der letzte in der Liste. |
 
 #### Control and Status
 
-*TODO*
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 29 | SPD | Gibt an, ob weniger Bytes als erwartet empfangen wurden (gilt nur, wenn sich der TD in einer Warteschlange befindet). Der HC setzt dieses Bit nur, wenn kein Fehler aufgetreten ist. |
+| 28/27 | C_ERR | Gibt die Anzahl von Fehlern an, bis die Übertragung als fehlgeschlagen gewertet werden soll und der TD als inaktiv markiert wird. Ist dieser Wert 0, dann gibt es keine Fehlerbegrenzung. Entsprechende Fehler sind: CRC-Fehler, Timeout, Pufferfehler oder Bitstufffehler (bei STALL oder Babble wird die Übertragung unabhängig von diesem Wert sofort als fehlgeschlagen angesehen). Bei einem NAK beachtet der HC diesen Wert nicht und beginnt die Übertragung einfach erneut. |
+| 26 | LS | Ist gesetzt, wenn eine Low-Speed-Transaktion durchgeführt werden soll. |
+| 25 | IOS | Muss gesetzt werden, um einen Isochronous-Transfer durchzuführen. Der HC markiert den TD dabei in jedem Fall als inaktiv, unabhängig davon, wie die Übertragung beendet wurde. |
+| 24 | IOC | Ist dieses Flag gesetzt, dann wird beim Abschluss der Übertragung ein Interrupt ausgelöst. Der Hostcontroller kann sich damit allerdings Zeit lassen, häufig wird er erst am Ende des Frames ausgelöst. |
+| 23 | Active | Muss vom HCD gesetzt werden, um die Transaktion durchzuführen. Der HC löscht das Bit, sobald der Transfer beendet ist. |
+| 22 | Stalled | Gibt *nicht* ausschließlich, wie man denken könnte, an, ob ein STALL-Handshake empfangen wurde, sondern „nur“, ob ein so schwerer Fehler aufgetreten ist, dass der TD als inaktiv markiert wurde. Dazu gehört unter anderem auch ein STALL-Handshake, tritt ein solcher bei SETUP-Transaktionen auf, so wird gleichzeitig das CRC/Timeout-Bit gesetzt. |
+| 21 | Data Buffer Error | Falls gesetzt, ist ein Pufferfehler aufgetreten (Overrun: Daten zu schnell empfangen, HC kommt mit der Verarbeitung nicht nach; Underrun: Daten können nicht schnell genug gesendet werden). In beiden Fällen wird die Übertragung beim Zielgerät automatisch ungültig gemacht. |
+| 20 | Babble Detected | Wenn mehr Daten als erwartet empfangen wurden, ist dieses Bit gesetzt. Es zeigt einen schweren Fehler an, da ein Gerät so anderen Geräten Busbandbreite „stehlen“ kann. Der HC setzt das Stalled-Bit, deaktiviert den TD und fährt sofort mit dem nächsten Frame fort. |
+| 19 | NAK Received | Falls ein NAK empfangen wurde, wird dieses Bit gesetzt (kein Fehler, Transaktion wird automatisch neu begonnen). Wurde dieses NAK beim Senden eines SETUP-Pakets empfangen, wird zusätzlich das CRC/Timeout-Flag gesetzt. |
+| 18 | CRC/Time Out Error | Wird bei IN-Transaktionen gesetzt, wenn ein CRC-Fehler aufgetreten ist und bei OUT- oder SETUP-Transfers, falls kein Handshake erhalten wurde (was auf einen CRC-Fehler hindeutet, natürlich kann aber auch einfach gar kein Verbindung bestehen). |
+| 17 | Bitstuff Error | Wird gesetzt, wenn beim Empfang mehr als sechs gesetzte Bits hintereinander empfangen wurden (das USB-Bitstuffing sollte genau das verhindern). |
+| 10 &#150; 0 | Actual Length | Gibt die Anzahl von Bytes minus eins an, die tatsächlich übertragen wurden. Wurden keine Daten übertragen, beträgt der Wert 0x7FF. |
 
 #### Token
 
-*TODO*
+| Bits | Bezeichnung | Bedeutung |
+| -------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 21 | Maximum Length | Gibt an, wie viele Bytes übertragen werden sollen, minus eins. Der Wert 0x007 steht also für 8 Bytes. Ist der Wert 0x7FF, so werden keine Daten übertragen. Werte zwischen 0x500 und 0x7FE (über 1280) sind nicht erlaubt und resultieren in einem HC-Fehler (1280 ist die maximale Anzahl von Bytes, die in einen Frame passen, von der USB-Spezifikation sind nur 1024 erlaubt). Zu beachten ist jedoch, dass der UHC keine Kenntnis von der maximalen Paketgröße hat, die der Endpoint besitzt, sodass er alle Daten in einem Rutsch sendet (dieser Wert sollte die maximale Paketgröße des Endpoints also nicht überschreiten; **TODO:** *Stimmt das wirklich?*). |
+| 19 | Data Toggle | Muss für Isochronous-Transfers immer 0 sein. Für alle anderen Übertragungen gibt es das zu verwendende oder zu erwartende Toggle-Bit an (0 für DATA0 und 1 für DATA1). Für SETUP-Transfers ist es laut USB-Spezifikation ebenfalls immer 0. |
+| 18 &#150; 15 | Endpoint | Enthält die Nummer des Endpoints. |
+| 14 &#150; 8 | Device Address | Enthält die Geräteadresse. |
+| 7 &#150; 0 | Packet Identification | Enthält den Typ des Pakets, ein Nibble ist jeweils das Einerkomplement des anderen. Erlaubt sind nur IN (0x69), OUT (0xE1) und SETUP (0x2D). Alle anderen Werte resultieren in einem HC-Fehler. |
 
 #### Buffer Pointer
 
-*TODO*
+Dieses DWord enthält die physische Adresse des Puffers, in den empfangene Daten geschrieben (IN) oder aus dem Daten gelesen und gesendet werden (OUT, SETUP) sollen. Da das komplette Feld für die Adresse reserviert ist, muss dieser Speicherbereich nur an Bytegrenzen (also praktisch gar nicht) ausgerichtet werden.
 
 ### Zusammenspiel
 
@@ -84,7 +113,7 @@ Ein Transferdeskriptor bezeichnet einen einzelnen USB-Transfer (wobei man sich n
 
 Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frameliste die Wurzel des ganzen. Dort trägt man in jedes Feld einen Pointer auf die spezifisch in diesem Frame auszuführenden periodischen Transfers (Isochronous-TDs oder Interrupt-QHs mit deren TDs) ein. Am Ende dieser Liste von periodischen Transfers sollte dann der erste QH der aperiodischen Transfers folgen. Womit ein QH korrespondiert, ist ziemlich egal. Er kann einer USB-Pipe entsprechen, man kann aber auch einfach einen einzigen QH für alle aperiodischen Transfers anlegen, an den alle Transferdeskriptoren angehangen werden.
 
-*TODO*
+Jeder QH enthält also einen Pointer zum Beginn einer Warteschlange, die nach und nach vom HC abgearbeitet wird. Diese Warteschlange wird in den meisten Fällen nur TDs enthalten. Jedes TD korrespondiert (wie bereits gesagt) zu einem USB-Transfer, dabei gibt es die Möglichkeiten SETUP, IN und OUT. Der HCD (Host Controller Driver, also Hostcontrollertreiber) hängt somit nach und nach neue Transaktionen in die Warteschlange ein, die vom HC dann abgearbeitet werden. Dieser aktualisiert dazu immer den Pointer zum nächsten Transfer in der Warteschlange im QH.
 
 ## Interface
 
@@ -105,7 +134,7 @@ Jedes UHCI besitzt einen I/O-Raum, der aus dem PCI-Konfigurationsraum ausgelesen
 | 0x10 | PORTSC1 | 16 | Enthält Flags zum Steuern und Informationen über den ersten Rootport. |
 | 0x12 | PORTSC2 | 16 | Dasselbe für den zweiten Rootport. |
 
-Hinweis: Nach PORTSC1 und PORTSC2 können noch weitere Rootport-Ports folgen. Wie viele das sind, muss aus der Länge des I/O-Raums ermittelt werden (Länge ist vom PCI-Treiber festzustellen). Außerdem ist in jedem Port Bit 7 gesetzt (0x0080), sodass man testen kann, ab welchem Port entweder Bit 7 nicht mehr gesetzt oder 0xFFFF zu lesen ist. An der Stelle sind dann die Rootport-Ports zu Ende (wobei mehr als sieben Rootports eher unwahrscheinlich sind, wenn man mehr gefunden hat, sollte man davon ausgehen, dass es nur zwei gibt).
+Hinweis: Nach PORTSC1 und PORTSC2 können noch weitere Rootport-Ports folgen. Wie viele das maximal sind, muss aus der Länge des I/O-Raums ermittelt werden (Länge ist vom PCI-Treiber festzustellen). Außerdem ist in jedem Port Bit 7 gesetzt (0x0080), sodass man testen kann, ab welchem Port entweder Bit 7 nicht mehr gesetzt oder 0xFFFF zu lesen ist. An der Stelle sind dann die Rootport-Ports zu Ende (wobei mehr als sieben Rootports eher unwahrscheinlich sind, wenn man mehr gefunden hat, sollte man davon ausgehen, dass es nur zwei gibt).
 
 #### USBCMD
 
@@ -172,7 +201,7 @@ Wie bereits angedeutet gibt es für jeden Rootport ein solches Register am Ende 
 | 8 | Low Speed Device Attached | Dieses Flag gibt an, ob ein Low-Speed-Gerät angeschlossen ist. Wenn es nicht gesetzt ist, dann ist logischerweise ein Full-Speed-Gerät angeschlossen (oder gar keins, wenn Current Connect Status 0 ist). |
 | 7 | Reserved | Dieses Bit wird immer als 1 gelesen und kann daher dazu dienen, die tatsächliche Anzahl der Rootports herauszufinden (s. Hinweis bei [I/O-Raum](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface#io-raum "Universal Host Controller Interface")). |
 | 6 | Resume Detect | Wenn ein Gerät ein Remote Wakeup sendet, dann wird dieses Bit gesetzt. Außerdem kann der HCD dieses Bit setzen, um selektiv an diesem Port ein Resumesignal zu treiben. Nach der von der USB-Spezifikation vorgesehenen Zeitspanne (sollten 20 ms sein) muss es vom HCD wieder aufgehoben werden. |
-| 4/5 | Line Status | Gibt den Status der Datenleitungen (D+/D-) wieder. So können einige Fehler entdeckt werden (sind z. B. beide Leitungen gleich, dann hängt vermutlich kein Gerät am Bus). D+ entspricht Bit 4, D- Bit 5. |
+| 5/4 | Line Status | Gibt den Status der Datenleitungen (D+/D-) wieder. So können einige Fehler entdeckt werden (sind z. B. beide Leitungen gleich, dann hängt vermutlich kein Gerät am Bus). D+ entspricht Bit 4, D- Bit 5. |
 | 3 | Port Enable/Disable Change | Hat der HC den Rootport selbst deaktiviert (wegen eines schweren Fehlers oder dem Disconnect des Geräts), dann wird dieses Bit gesetzt. Analog zum Connect-Status-Change-Bit muss es durch Schreiben einer 1 gelöscht werden. |
 | 2 | Port Enabled/Disabled | Um den Port zu aktivieren, muss dieses Flag auf 1 gesetzt werden. Ist es 0, so werden keine Daten am Port ausgegeben und auch keine in Empfang genommen. Dieses Bit kann auch vom HC selbst gelöscht werden, wenn ein schwerer Fehler aufgetreten ist oder das Gerät entfernt wurde. |
 | 1 | Connect Status Change | Wenn ein Gerät angesteckt oder entfernt wird, dann wird dieses Bit gesetzt. Um es zu löschen, muss eine 1 hineingeschrieben werden. |
@@ -184,6 +213,6 @@ Wie bereits angedeutet gibt es für jeden Rootport ein solches Register am Ende 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7241; parent 7239; 2010-03-02T15:18:46Z -->
+<!-- MediaWiki page 1576; revision 7242; parent 7241; 2010-03-02T18:33:38Z -->
