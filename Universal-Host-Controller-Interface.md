@@ -10,7 +10,7 @@ Das UHCI ist neben dem [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host
 
 ## Verwendete Datenstrukturen
 
-Relativ wenig der tatsächlichen Steuerung des UHC (Universal Host Controller) findet über die unten genannten Register (s. [\#I/O-Raum](#io-raum)) ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
+Relativ wenig der tatsächlichen Steuerung des UHC (Universal Host Controller) findet über die unten genannten Register (s. [I/O-Raum](#io-raum)) ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
 
 Die eigentlichen USB-Transaktionen werden jedoch über Datenstrukturen abgewickelt, die im Hauptspeicher liegen und deren Wurzel die Frameliste ist. Diese verzweigt dann zu Warteschlangenköpfen (Queue Heads, QH) und zu Transferdeskriptoren (Transfer Descriptors, TD), welche dann einzelne Transaktionen steuern.
 
@@ -213,6 +213,6 @@ Wie bereits angedeutet gibt es für jeden Rootport ein solches Register am Ende 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7243/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7242; parent 7241; 2010-03-02T18:33:38Z -->
+<!-- MediaWiki page 1576; revision 7243; parent 7242; 2010-03-02T18:39:39Z -->
