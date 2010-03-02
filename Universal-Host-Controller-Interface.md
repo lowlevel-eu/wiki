@@ -8,13 +8,91 @@ Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt*
 
 Das UHCI ist neben dem [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface") ein Interface für [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")-1.x-Hostcontroller.
 
+## Verwendete Datenstrukturen
+
+Relativ wenig der tatsächlichen Steuerung des UHC findet über die unten genannten Register (s. [\#I/O-Raum](#io-raum)) ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
+
+Die eigentlichen USB-Transaktionen werden jedoch über Datenstrukturen abgewickelt, die im Hauptspeicher liegen und deren Wurzel die Frameliste ist. Diese verzweigt dann zu Warteschlangenköpfen (Queue Heads, QH) und zu Transferdeskriptoren (Transfer Descriptors, TD), welche dann einzelne Transaktionen steuern.
+
+### Frameliste
+
+Die Frameliste ist ein Array mit 1024 Einträgen zu je vier Byte, das im Speicher an einer 4-kB-Grenze liegen muss (die unteren 12 Bit der Adresse sind also 0). Jeder dieser Einträge entspricht einem Frame und weist den Hostcontroller zu bestimmten Transaktionen an (bzw. weist auf den Beginn einer Liste von Transaktionen).
+
+Ein Eintrag ist wie folgt aufgebaut:
+
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | Frame List Pointer | Dieses Feld enthält die physische Adresse eines QH oder eines TD. Der Wert entspricht den Bits 31 &#150; 4 dieser Adresse, welche also an 16 Byte ausgerichtet sein muss. |
+| 1 | QH/TD Select | Ist dieses Bit gesetzt, dann zeigt der FLP auf einen QH, sonst zeigt er auf einen TD. |
+| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist. Ist es gesetzt, so wird der HC dem Link nicht folgen. |
+
+### Warteschlangenköpfe
+
+Jeder QH kann einerseits auf das nächste Element in der Liste (horizontal) und andererseits auf eine Warteschlange zeigen (vertikal). Es muss immer an einer 16-Byte-Grenze im Speicher liegen.
+
+| Offset | Bezeichnung |
+| -------- | ----------------------------------- |
+| 0x00 | Queue Head Link Pointer (QHLP) |
+| 0x04 | Queue Element Link Pointer (QELP) |
+
+#### QHLP
+
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------- | -------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | QHLP | Physische Adresse des nächsten Elements in der horizontalen Liste (entweder ein QH oder ein TD). |
+| 1 | QH/TD Select | Gibt an, ob es sich um einen QH oder einen TD handelt (wieder 1 für QH und 0 für TD). |
+| 0 | Terminate | Ist dieses Bit 1, so ist dieser QH das letzte Element in der Liste. |
+
+#### QELP
+
+| Bits | Bezeichnung | Bedeutung |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
+| 31 &#150; 4 | QELP | Physische Adresse des ersten Elements in der hier beginnenden vertikalen Liste (entweder QH oder TD). |
+| 1 | QH/TD Select | Gibt wieder an, ob es sich um einen QH oder einen TD handelt. |
+| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist (sonst gibt es keine vertikale Liste). |
+
+### Transferdeskriptoren
+
+Ein Transferdeskriptor bezeichnet einen einzelnen USB-Transfer (wobei man sich nicht um Dinge wie NAK, ACK oder ähnliches kümmern muss). Solche Transfers sind SETUP-, IN- und OUT-Pakete. Ebenso wie QHs müssen sie immer an 16-Byte-Grenzen im Speicher liegen.
+
+| Offset | Bezeichnung |
+| -------- | -------------------- |
+| 0x00 | Link Pointer (LP) |
+| 0x04 | Control and Status |
+| 0x08 | Token |
+| 0x0C | Buffer Pointer |
+
+#### LP
+
+*TODO*
+
+#### Control and Status
+
+*TODO*
+
+#### Token
+
+*TODO*
+
+#### Buffer Pointer
+
+*TODO*
+
+### Zusammenspiel
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/52d4009af5bf1cb705f6.png" width="300" height="194" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png "vergrößern")Schema aus der UHCI-Spezifikation
+
+Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frameliste die Wurzel des ganzen. Dort trägt man in jedes Feld einen Pointer auf die spezifisch in diesem Frame auszuführenden periodischen Transfers (Isochronous-TDs oder Interrupt-QHs mit deren TDs) ein. Am Ende dieser Liste von periodischen Transfers sollte dann der erste QH der aperiodischen Transfers folgen. Womit ein QH korrespondiert, ist ziemlich egal. Er kann einer USB-Pipe entsprechen, man kann aber auch einfach einen einzigen QH für alle aperiodischen Transfers anlegen, an den alle Transferdeskriptoren angehangen werden.
+
+*TODO*
+
 ## Interface
 
 Das UHCI ist &#150; wie andere USB-Hostcontrollerinterfaces auch &#150; häufig als [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Gerät ausgeführt. Allen UHCIs gemein ist der Classcode 0x0C (Serielle Buscontroller), der Subclasscode 0x03 (USB-Hostcontrollerinterfaces) und das Programming Interface 0x00 (UHCI). Anhand dieser drei Werte kann man einen UHCI also auf dem PCI-Bus identifizieren und den entsprechenden Treiber aufrufen.
 
 ### I/O-Raum
 
-Jedes UHCI besitzt einen I/O-Raum, der aus dem PCI-Konfigurationsraum ausgelesen werden muss. Dieser ist wie folgt aufgebaut:
+Jedes UHCI besitzt einen I/O-Raum, der aus dem PCI-Konfigurationsraum ausgelesen werden muss. In ihm kann man den Status der Rootports sowie des Hostcontrollers allgemein auslesen oder verändern, sowie letzteren initialisieren und dabei auch den Beginn der Frameliste eintragen. Dieser ist wie folgt aufgebaut:
 
 | Offset | Name | Bits | Bedeutung |
 | -------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -85,6 +163,8 @@ Das oberste Bit in diesem Register ist reserviert, mit den unteren sieben kann m
 
 #### PORTSC
 
+Wie bereits angedeutet gibt es für jeden Rootport ein solches Register am Ende des I/O-Raums. Laut UHCI-Spezifikation sind dies normalerweise zwei Ports, sodass sich ein PORTSC-Register (PORTSC1) am Offset (im I/O-Raum) 0x10 und das für den zweiten Rootport (PORTSC2) bei 0x12 befindet (PORTSC3 wäre dann bei 0x14, PORTSC4 bei 0x16, usw.).
+
 | Bit | Name | Bedeutung |
 | ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 12 | Suspend | Gibt an, ob sich der Port im Suspendmodus befindet. Dieses Bit sollte nicht gleichzeitig mit dem Global Suspend Mode verwendet werden. |
@@ -98,90 +178,12 @@ Das oberste Bit in diesem Register ist reserviert, mit den unteren sieben kann m
 | 1 | Connect Status Change | Wenn ein Gerät angesteckt oder entfernt wird, dann wird dieses Bit gesetzt. Um es zu löschen, muss eine 1 hineingeschrieben werden. |
 | 0 | Current Connect Status | Ist ein Gerät an diesen Rootport angeschlossen, so ist dieses Bit 1. Es kann vom HCD nicht beschrieben werden. |
 
-## Verwendete Datenstrukturen
-
-Relativ wenig der tatsächlichen Steuerung des UHC findet über die genannten Register ab. Er wird meist nur einmal initialisiert und später werden nur Gründe für Interrupts ausgelesen oder der aktuelle Status der Rootports abgefragt.
-
-Die eigentlichen USB-Transaktionen werden jedoch über Datenstrukturen abgewickelt, die im Hauptspeicher liegen und deren Wurzel die Frameliste ist. Diese verzweigt dann zu Warteschlangenköpfen (Queue Heads, QH) und zu Transferdeskriptoren (Transfer Descriptors, TD), welche dann einzelne Transaktionen steuern.
-
-### Frameliste
-
-Die Frameliste ist ein Array mit 1024 Einträgen zu je vier Byte. Jeder dieser Einträge entspricht einem Frame und weist den Hostcontroller zu bestimmten Transaktionen an (bzw. weist auf den Beginn einer Liste von Transaktionen).
-
-Ein Eintrag ist wie folgt aufgebaut:
-
-| Bits | Bezeichnung | Bedeutung |
-| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 31 &#150; 4 | Frame List Pointer | Dieses Feld enthält die physische Adresse eines QH oder eines TD. Der Wert entspricht den Bits 31 &#150; 4 dieser Adresse, welche also an 16 Byte ausgerichtet sein muss. |
-| 1 | QH/TD Select | Ist dieses Bit gesetzt, dann zeigt der FLP auf einen QH, sonst zeigt er auf einen TD. |
-| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist. Ist es gesetzt, so wird der HC dem Link nicht folgen. |
-
-### Warteschlangenköpfe
-
-Jeder QH kann einerseits auf das nächste Element in der Liste (horizontal) und andererseits auf eine Warteschlange zeigen (vertikal).
-
-| Offset | Bezeichnung |
-| -------- | ----------------------------------- |
-| 0x00 | Queue Head Link Pointer (QHLP) |
-| 0x04 | Queue Element Link Pointer (QELP) |
-
-#### QHLP
-
-| Bits | Bezeichnung | Bedeutung |
-| ------------- | -------------- | -------------------------------------------------------------------------------------------------- |
-| 31 &#150; 4 | QHLP | Physische Adresse des nächsten Elements in der horizontalen Liste (entweder ein QH oder ein TD). |
-| 1 | QH/TD Select | Gibt an, ob es sich um einen QH oder einen TD handelt (wieder 1 für QH und 0 für TD). |
-| 0 | Terminate | Ist dieses Bit 1, so ist dieser QH das letzte Element in der Liste. |
-
-#### QELP
-
-| Bits | Bezeichnung | Bedeutung |
-| ------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
-| 31 &#150; 4 | QELP | Physische Adresse des ersten Elements in der hier beginnenden vertikalen Liste (entweder QH oder TD). |
-| 1 | QH/TD Select | Gibt wieder an, ob es sich um einen QH oder einen TD handelt. |
-| 0 | Terminate | Der Link ist nur gültig, wenn dieses Bit gelöscht ist (sonst gibt es keine vertikale Liste). |
-
-### Transferdeskriptoren
-
-Ein Transferdeskriptor bezeichnet einen einzelnen USB-Transfer (wobei man sich nicht um Dinge wie NAK, ACK oder ähnliches kümmern muss). Solche Transfers sind SETUP-, IN- und OUT-Pakete.
-
-| Offset | Bezeichnung |
-| -------- | -------------------- |
-| 0x00 | Link Pointer (LP) |
-| 0x04 | Control and Status |
-| 0x08 | Token |
-| 0x0C | Buffer Pointer |
-
-#### LP
-
-*TODO*
-
-#### Control and Status
-
-*TODO*
-
-#### Token
-
-*TODO*
-
-#### Buffer Pointer
-
-*TODO*
-
-### Zusammenspiel
-
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/52d4009af5bf1cb705f6.png" width="300" height="194" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png "vergrößern")Schema aus der UHCI-Spezifikation
-
-Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frameliste die Wurzel des ganzen. Dort trägt man in jedes Feld einen Pointer auf die spezifisch in diesem Frame auszuführenden periodischen Transfers (Isochronous-TDs oder Interrupt-QHs mit deren TDs) ein. Am Ende dieser Liste von periodischen Transfers sollte dann der erste QH der aperiodischen Transfers folgen. Womit ein QH korrespondiert, ist ziemlich egal. Er kann einer USB-Pipe entsprechen, man kann aber auch einfach einen einzigen QH für alle aperiodischen Transfers anlegen, an den alle Transferdeskriptoren angehangen werden.
-
-*TODO*
-
 ## Weblinks
 
 - [Universal Host Controller Interface (UHCI) Design Guide Revision 1.1](http://www.intel.com/technology/usb/uhci11d.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7239/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7239; parent 7237; 2010-03-02T08:32:57Z -->
+<!-- MediaWiki page 1576; revision 7241; parent 7239; 2010-03-02T15:18:46Z -->
