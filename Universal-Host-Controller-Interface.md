@@ -106,7 +106,7 @@ Die eigentlichen USB-Transaktionen werden jedoch über Datenstrukturen abgewicke
 
 ### Frameliste
 
-Die Frameliste ist ein Array mit 1024 Einträgen zu je vier Byte. Jeder dieser Einträge entspricht einem Frame und weißt den Hostcontroller zu bestimmten Transaktionen an (bzw. weist auf den Beginn einer Liste von Transaktionen).
+Die Frameliste ist ein Array mit 1024 Einträgen zu je vier Byte. Jeder dieser Einträge entspricht einem Frame und weist den Hostcontroller zu bestimmten Transaktionen an (bzw. weist auf den Beginn einer Liste von Transaktionen).
 
 Ein Eintrag ist wie folgt aufgebaut:
 
@@ -182,6 +182,6 @@ Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frame
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7239/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7237; parent 7236; 2010-03-02T08:15:40Z -->
+<!-- MediaWiki page 1576; revision 7239; parent 7237; 2010-03-02T08:32:57Z -->
