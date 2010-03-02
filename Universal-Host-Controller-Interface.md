@@ -76,7 +76,7 @@ Ist Bit 3 oder 4 gesetzt, dann wird so lange ein IRQ ausgelöst, bis die Bits ge
 
 | Bit | Name | Bedeutung |
 | -------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 31 &#150; 12 | Base Address | Physische Adresse der Frameliste (bzw. die oberen 20 Bit davon, die unteren 12 Bit müssen auf 0 gesetzt ist (d. h., der Bereich muss an 4 kB ausgerichtet werden)). |
+| 31 &#150; 12 | Base Address | Physische Adresse der Frameliste (bzw. die oberen 20 Bit davon, die unteren 12 Bit müssen auf 0 gesetzt sein (d. h., der Bereich muss an 4 kB ausgerichtet werden)). |
 | 11 &#150; 0 | Reserved | Müssen als 0 geschrieben werden, der Hostcontroller kann hier während des Benutzens der Liste den Offset des aktuellen Elements eintragen (sodass das gesamte Register dann die physische Adresse des aktuell bearbeiteten Elements enthält). |
 
 #### SOFMOD
@@ -182,6 +182,6 @@ Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frame
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7236; parent 7210; 2010-03-01T22:08:59Z -->
+<!-- MediaWiki page 1576; revision 7237; parent 7236; 2010-03-02T08:15:40Z -->
