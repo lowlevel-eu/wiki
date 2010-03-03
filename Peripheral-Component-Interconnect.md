@@ -109,7 +109,7 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 | 5 | 66 MHz Capable | RO / fix | Dieses Bit gibt an ob eine PCI-Karte nicht nur mit maximal 33 MHz-Bus-Takt arbeiten kann sondern bis zu 66 MHz verträgt. Nur wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment mit mehr als 33 MHz umgehen können darf dieses Bus-Segment auch mit mehr als 33 MHz, bis maximal 66 MHz, betrieben werden.<br>Dieses Bit ist nur beim klassischen PCI gültig und bei allen PCI-Nachfolgern immer fest auf 0 geklemmt, außer bei AGP dort ist es immer fest auf 1 geklemmt. Für die Software hat dieses Bit keine Bedeutung, auf dem PCI-Bus wird die Geschwindigkeit in Hardware ausgehandelt, wenn die Software auf den Konfigurations-Adressraum der angeschlossenen Geräte zugreifen kann ist der Bus bereits funktionsfähig. |
 | 7 | Fast Back-to-Back Transactions Capable | RO / fix | Wenn diese Bit gesetzt ist bedeutet dasss dass das betreffende PCI-Gerät die minimal schnelleren Back-to-Back Transfers unterstützt. Als Target werden diese Transfers immer unterstützt, aber als Master dürfen diese Transfers nur benutzt werden falls das Bit 9 im Command-Register gesetzt ist. |
 | 8 | Master Data Parity Error | RW1C / dynamic | *TODO* |
-| 10-9 | DEVSEL Timing | RO / fix | Diese 2 Bits, als unsigned Integer betrachtet, geben an nach wie vielen PCI-Bus-Takten das PCI-Gerät erkannt hat ab es das Target eines Zugriffs ist. Gültige Werte sind 0, 1 und 2. Der Wert 3 darf nicht verwendet werden, jedes PCI-Gerät muss nach spätestens 2 Takten dekodiert haben ob es das gewünschte Target ist oder nicht. Im 3ten Takt wird dann eine eventuell vorhandene Subtractive-Bridge aktiv und nimmt den Transfer entgegen. |
+| 10-9 | DEVSEL Timing | RO / fix | Diese 2 Bits, als unsigned Integer betrachtet, geben an nach wie vielen PCI-Bus-Takten das PCI-Gerät erkannt hat ob es das Target eines Zugriffs ist. Gültige Werte sind 0, 1 und 2. Der Wert 3 darf nicht verwendet werden, jedes PCI-Gerät muss nach spätestens 2 Takten dekodiert haben ob es das gewünschte Target ist oder nicht. Im 3ten Takt wird dann eine eventuell vorhandene Subtractive-Bridge aktiv und nimmt den Transfer entgegen. |
 | 11 | Signalled Target-Abort | RW1C / dynamic | *TODO* |
 | 12 | Received Target-Abort | RW1C / dynamic | *TODO* |
 | 13 | Received Master-Abort | RW1C / dynamic | *TODO* |
@@ -477,6 +477,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7252; parent 7250; 2010-03-03T19:48:17Z -->
+<!-- MediaWiki page 1626; revision 7253; parent 7252; 2010-03-03T19:56:29Z -->
