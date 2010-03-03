@@ -6,7 +6,7 @@ Die Informationen in diesem Artikel beziehen sich auch auf die vom klassischen P
 
 ## Konfigurations-Register
 
-Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist. Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß. Auf den Konfigurations-Adressraum kann immer Zugegriffen werden, unabhängig vom Zustand des PCI-Geräts (von den Zuständen "defekt", "abgeschaltet" oder "ausgebaut" mal abgesehen). Für den Zugriff auf den Konfigurations-Adressraum werden die PCI-Geräte über ihre Bus-Nummer, Device-Nummer und Function-Nummer angesprochen, dazu müssen eventuelle PCI-2-PCI-Bridges korrekt konfiguriert sein.
+Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist. Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß. Auf den Konfigurations-Adressraum kann immer Zugegriffen werden, unabhängig vom Zustand des PCI-Geräts (von den Zuständen "defekt", "abgeschaltet" oder "ausgebaut" mal abgesehen). Für den Zugriff auf den Konfigurations-Adressraum werden die PCI-Geräte über ihre Bus-Nummer, Device-Nummer und Function-Nummer angesprochen, dazu müssen eventuelle PCI-to-PCI-Bridges korrekt konfiguriert sein.
 
 ### Zugriff auf den Konfigurations-Adressraum
 
@@ -477,6 +477,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7250; parent 7248; 2010-03-03T16:28:58Z -->
+<!-- MediaWiki page 1626; revision 7252; parent 7250; 2010-03-03T19:48:17Z -->
