@@ -85,8 +85,8 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------------------- | ------------------- | -------------------------- | ---------------------- |
-| 0x010 | Base address 0 |  |  |  |
-| 0x014 | Base address 1 |  |  |  |
+| 0x010 | Base Address 0 (BAR0) |  |  |  |
+| 0x014 | Base Address 1 (BAR1) |  |  |  |
 | 0x018 | Secondary latency timer | Subordinate bus № | Secondary bus № | Primary bus № |
 | 0x01C | Secondary Status |  | I/O Limit | I/O base |
 | 0x020 | Memory limit |  | Memory base |  |
@@ -477,6 +477,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7259/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7253; parent 7252; 2010-03-03T19:56:29Z -->
+<!-- MediaWiki page 1626; revision 7259; parent 7253; 2010-03-04T15:44:11Z -->
