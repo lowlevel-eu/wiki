@@ -136,11 +136,15 @@ Nur alleine durch lesen eines BAR-Register kann man nicht auf die Größe der be
 | -------------- | ----- | ----- | ----- |
 | Base Address | P | Typ | 0 |
 
+Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt. Für die Bits 2-1 sind nur die Werte 00 und 01 erlaubt. Die Bits 31-4 geben die Basis-Adressbits 31-4 der Speicher-Ressource an.
+
 ##### Base-Address-Register für Speicher-Ressourcen mit 64 Bit Adresse
 
 | 63-4 | 3 | 2-1 | 0 |
 | -------------- | ----- | ----- | ----- |
 | Base Address | P | Typ | 0 |
+
+Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt. Für die Bits 2-1 ist nur der Wert 10 erlaubt. Die Bits 63-4 geben die Basis-Adressbits 63-4 der Speicher-Ressource an.
 
 ##### Base-Address-Register für IO-Ressourcen
 
@@ -497,6 +501,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7260; parent 7259; 2010-03-04T17:59:51Z -->
+<!-- MediaWiki page 1626; revision 7263; parent 7260; 2010-03-04T19:39:10Z -->
