@@ -1,10 +1,10 @@
 # EpOS
 
-| EpOS |  |
+| epOS |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
-| Akt. Version: | 0.01 |
+| Akt. Version: | 0.02 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -16,50 +16,49 @@
 | Homepage |  |
 
   
-Hi, ich bin [dem epOS sein Linus (DesL)](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") ^\_^  
+Hi, ich bin [dem epOS sein Linus (DesL)](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")  
 und dass hier ist eben epOS.  
 Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating **S**ystem!  
 
 ## Features
 
-- Kleine Komandozeile
-- Reboot
+- Basics wie GDT, IDT und PIC
+- Textausgabe
 
 ## Geplant
 
-- GDT, IDT etc.
 - Floppy/Festplatten Zugriff
 - CDI?
 - entsprechende Befehle in der Komzei
 - Speicherverwaltung
 - GUI
 - (Multi-)Tasking
+- und überhaupt alles...
 
 ## Realease
 
-Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.01 fertig, steht aber nicht zum Download, da nutzlos.
+Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.02 fertig, steht aber nicht zum Download, da ja noch interaktionslos.
 
 ## Versionsdiferenzierung
 
 - Je neues, stabiles Realese mit den Geplanten Features wird die Versionsnummer um 0.01 angehoben.
-- 
 - Bei abschluss einer "Komponenten Reihe" (z.B. Komzei), also vollständiges erfüllen meiner Erwartungen, wird die Versions Nummer um 1.00 erhöht.
 
 ## History/Archiv
 
 - V0.01 - 29.11.09, kurz nach Mitternacht ^^
   - Simple Textausgabe in C++, färben von Text und BG
-- V0.02 - Coming soon
-  - Vorraussichtlich GDT & IDT
+- V0.02 - 04.03.10
+  - GDT, IDT und PIC
 
 ## Screenshot
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png" width="720" height="400" alt="EpOS V0.1.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5c7c393aa5f141049669.png" width="200" height="111" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png "vergrößern")epOS V0.1
 
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7261/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 7036; parent 6978; 2010-02-06T23:13:37Z -->
+<!-- MediaWiki page 1771; revision 7261; parent 7036; 2010-03-04T18:51:51Z -->
