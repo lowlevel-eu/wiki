@@ -4,21 +4,9 @@
 
 Die Informationen in diesem Artikel beziehen sich auch auf die vom klassischen PCI-Bus abgeleiteten Bus-Standards: PCI-Express, Hypertransport, PCI-X und AGP. Diese Busse basieren vom logischen Protokoll her auf PCI aber benutzen andere physikalische Daten-Übertragungsmechanismen bzw. andere Topologien.
 
-## Konfigurations-Register
+## Konfigurations-Adressraum
 
-Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist. Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß. Auf den Konfigurations-Adressraum kann immer Zugegriffen werden, unabhängig vom Zustand des PCI-Geräts (von den Zuständen "defekt", "abgeschaltet" oder "ausgebaut" mal abgesehen). Für den Zugriff auf den Konfigurations-Adressraum werden die PCI-Geräte über ihre Bus-Nummer, Device-Nummer und Function-Nummer angesprochen, dazu müssen eventuelle PCI-to-PCI-Bridges korrekt konfiguriert sein.
-
-### Zugriff auf den Konfigurations-Adressraum
-
-Gelesen und beschrieben wird der Konfigurations-Adressraum, bei PCs, 32bit-weise mithilfe eines Adress-I/O-Ports (0xCF8) und eines Daten-I/O-Ports (0xCFC).
-
-#### Aufbau des Adress-I/O-Ports
-
-| 31 | 30-24 | 23-16 | 15-11 | 10-8 | 7-0 |
-| ------------ | ------------ | ----------- | -------------- | ----------------- | --------------------------------------- |
-| Enable Bit | Reserviert | Busnummer | Gerätenummer | Funktionsnummer | Registernummer<br>bit0 u. bit1 sind 0 |
-
-  
+Jedes PCI-Gerät besitzt einen eigenen Konfigurations-Adressraum, welcher 256 Byte groß ist und verschiedene Konfigurations-Register enthält. Bei PCI-Express, Hypertransport und PCI-X ist der Konfigurations-Adress-Raum 4096 Byte groß. Auf den Konfigurations-Adressraum kann immer Zugegriffen werden, unabhängig vom Zustand des PCI-Geräts (von den Zuständen "defekt", "ausgebaut" oder "abgeschaltet" mal abgesehen). Für den Zugriff auf den Konfigurations-Adressraum werden die PCI-Geräte über ihre Bus-Nummer, Device-Nummer und Function-Nummer angesprochen, dazu müssen eventuelle PCI-to-PCI-Bridges korrekt konfiguriert sein.
 
 ### Aufbau des Konfigurations-Adressraum
 
@@ -68,12 +56,12 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------------- | ----------- | --------------------- | ---------------------- |
-| 0x010 | Base Address 0 (BAR0) |  |  |  |
-| 0x014 | Base Address 1 (BAR1) |  |  |  |
-| 0x018 | Base Address 2 (BAR2) |  |  |  |
-| 0x01C | Base Address 3 (BAR3) |  |  |  |
-| 0x020 | Base Address 4 (BAR4) |  |  |  |
-| 0x024 | Base Address 5 (BAR5) |  |  |  |
+| 0x010 | Base Address \#0 (BAR0) |  |  |  |
+| 0x014 | Base Address \#1 (BAR1) |  |  |  |
+| 0x018 | Base Address \#2 (BAR2) |  |  |  |
+| 0x01C | Base Address \#3 (BAR3) |  |  |  |
+| 0x020 | Base Address \#4 (BAR4) |  |  |  |
+| 0x024 | Base Address \#5 (BAR5) |  |  |  |
 | 0x028 | Cardbus CIS Pointer |  |  |  |
 | 0x02C | Subsystem ID |  | Subsystem Vendor ID |  |
 | 0x030 | Expansion ROM base address |  |  |  |
@@ -85,8 +73,8 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 
 | Register | 31-24 | 23-16 | 15-8 | 7-0 |
 | ---------- | ---------------------------------- | ------------------- | -------------------------- | ---------------------- |
-| 0x010 | Base Address 0 (BAR0) |  |  |  |
-| 0x014 | Base Address 1 (BAR1) |  |  |  |
+| 0x010 | Base Address \#0 (BAR0) |  |  |  |
+| 0x014 | Base Address \#1 (BAR1) |  |  |  |
 | 0x018 | Secondary latency timer | Subordinate bus № | Secondary bus № | Primary bus № |
 | 0x01C | Secondary Status |  | I/O Limit | I/O base |
 | 0x020 | Memory limit |  | Memory base |  |
@@ -138,14 +126,46 @@ Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert) und 
 
 #### Base-Address-Register
 
-*TODO*
+Die Base-Address-Register dienen dem Zuweisen von Adressen an die Ressourcen des PCI-Gerätes. Ein PCI-Gerät kann bis zu 6, bei Bridges nur maximal 2, Ressourcen anbieten dehnen das BIOS oder OS eine Adresse zuweist über welche diese Ressource dann ansprechbar ist. Als Ressourcen können Speicherbereiche aber auch IO-Bereiche angeboten werden, der IO-Adress-Raum wird aber nicht auf jeder Plattform unterstützt, eigentlich nur beim PC. Die IO-Ressourcen haben verschiedene Nachteile, u.a. sind sie langsamer da es keine Burst-Zugriffe gibt und es gibt Einschränkungen bei der Adressenraumgröße. Speicher-Ressourcen können bis zu 64 Bit Adressen nutzen, wofür dann aber 2 hintereinander liegende BARs für eine Ressource benutzt werden müssen.
 
-### Codebeispiel
+Nur alleine durch lesen eines BAR-Register kann man nicht auf die Größe der betreffenden Ressource schließen.
+
+##### Base-Address-Register für Speicher-Ressourcen mit 32 Bit Adresse
+
+| 31-4 | 3 | 2-1 | 0 |
+| -------------- | ----- | ----- | ----- |
+| Base Address | P | Typ | 0 |
+
+##### Base-Address-Register für Speicher-Ressourcen mit 64 Bit Adresse
+
+| 63-4 | 3 | 2-1 | 0 |
+| -------------- | ----- | ----- | ----- |
+| Base Address | P | Typ | 0 |
+
+##### Base-Address-Register für IO-Ressourcen
+
+| 31-2 | 1 | 0 |
+| -------------- | ----- | ----- |
+| Base Address | R | 1 |
+
+Das Bit 0 signalisiert mit seinem Wert 1 das es sich bei dem betreffenden BAR um eine IO-Ressource handelt. Das Bit 1 ist reserviert und muss beim lesen ignoriert und beim schreiben mit 0 gelöscht werden. Die Bits 31-2 geben die Basis-Adressbits 31-2 der IO-Ressource an. Die IO-Ressource muss also mindestens 4 Byte groß sein. Oft sind die Bits 31-16 fest auf 0 geklemmt so das nur 16 Bit-IO-Adressen benutzt werden können, auf der PC-Plattform unterstützen die CPUs auch nur 16 Bit-IO-Adressen so das normalerweise daraus kein Problem entsteht.
+
+### Zugriff auf den Konfigurations-Adressraum
+
+Gelesen und beschrieben wird der Konfigurations-Adressraum, bei PCs, 32bit-weise mithilfe eines Adress-I/O-Ports (0x0CF8) und eines Daten-I/O-Ports (0x0CFC).
+
+#### Aufbau des Adress-I/O-Ports
+
+| 31 | 30-24 | 23-16 | 15-11 | 10-8 | 7-0 |
+| ------------ | ------------ | ----------- | -------------- | ----------------- | --------------------------------------- |
+| Enable Bit | Reserviert | Busnummer | Gerätenummer | Funktionsnummer | Registernummer<br>bit0 u. bit1 sind 0 |
+
+#### Codebeispiel
 
 \<c\>
 
-1.  define PCI_CONFIG_DATA 0xCFC
-2.  define PCI_CONFIG_ADDRESS 0xCF8
+1.  define PCI_CONFIG_DATA 0x0CFC
+2.  define PCI_CONFIG_ADDRESS 0x0CF8
 
 /\*\*
 
@@ -477,6 +497,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7259/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7259; parent 7253; 2010-03-04T15:44:11Z -->
+<!-- MediaWiki page 1626; revision 7260; parent 7259; 2010-03-04T17:59:51Z -->
