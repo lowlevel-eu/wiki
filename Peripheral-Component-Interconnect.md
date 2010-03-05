@@ -337,7 +337,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x04 | 0x03 | Hayes-kompatibles Modem (16650) |
 | 0x04 | 0x04 | Hayes-kompatibles Modem (16750) |
 | 0x05 | 0x00 | SmartCard |
-| 0x80 | 0x00 | AnderemController |
+| 0x80 | 0x00 | Anderer Controller |
 
 ### Class 0x08 - System-Peripherie
 
@@ -463,6 +463,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7264; parent 7263; 2010-03-05T08:15:04Z -->
+<!-- MediaWiki page 1626; revision 7267; parent 7264; 2010-03-05T10:47:12Z -->
