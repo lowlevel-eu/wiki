@@ -126,7 +126,7 @@ Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert) und 
 
 #### Base-Address-Register
 
-Die Base-Address-Register dienen dem Zuweisen von Adressen an die Ressourcen des PCI-Gerätes. Ein PCI-Gerät kann bis zu 6, bei Bridges nur maximal 2, Ressourcen anbieten dehnen das BIOS oder OS eine Adresse zuweist über welche diese Ressource dann ansprechbar ist. Als Ressourcen können Speicherbereiche aber auch IO-Bereiche angeboten werden, der IO-Adress-Raum wird aber nicht auf jeder Plattform unterstützt, eigentlich nur beim PC. Die IO-Ressourcen haben verschiedene Nachteile, u.a. sind sie langsamer da es keine Burst-Zugriffe gibt und es gibt Einschränkungen bei der Adressenraumgröße. Speicher-Ressourcen können bis zu 64 Bit Adressen nutzen, wofür dann aber 2 hintereinander liegende BARs für eine Ressource benutzt werden müssen.
+Die Base-Address-Register dienen dem Zuweisen von Adressen an die Ressourcen des PCI-Gerätes. Ein PCI-Gerät kann bis zu 6, bei Bridges nur maximal 2, Ressourcen anbieten dehnen das BIOS oder OS eine Adresse zuweist über welche diese Ressource dann ansprechbar ist. Als Ressourcen können Speicherbereiche aber auch IO-Bereiche angeboten werden, der IO-Adress-Raum wird aber nicht auf jeder Plattform unterstützt, eigentlich nur beim PC. Die IO-Ressourcen haben verschiedene Nachteile, u.a. sind sie langsamer da es keine Burst-Zugriffe gibt und es gibt Einschränkungen bei der Adressenraumgröße. Speicher-Ressourcen können bis zu 64 Bit Adressen nutzen, wofür dann aber 2 hintereinander liegende BARs für eine Ressource benutzt werden müssen, das folgende BAR enthält dann die oberen 32 Bit der Base-Adresse.
 
 Nur alleine durch lesen eines BAR-Register kann man nicht auf die Größe der betreffenden Ressource schließen.
 
@@ -136,7 +136,7 @@ Nur alleine durch lesen eines BAR-Register kann man nicht auf die Größe der be
 | -------------- | ----- | ----- | ----- |
 | Base Address | P | Typ | 0 |
 
-Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt. Für die Bits 2-1 sind nur die Werte 00 und 01 erlaubt. Die Bits 31-4 geben die Basis-Adressbits 31-4 der Speicher-Ressource an.
+Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt und die Werte 00 und 01 in den Bits 2-1 signalisieren das es sich um einen 32Bit-BAR handelt. Die Bits 31-4 geben die Basis-Adressbits 31-4 der Speicher-Ressource an.
 
 ##### Base-Address-Register für Speicher-Ressourcen mit 64 Bit Adresse
 
@@ -144,7 +144,7 @@ Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um
 | -------------- | ----- | ----- | ----- |
 | Base Address | P | Typ | 0 |
 
-Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt. Für die Bits 2-1 ist nur der Wert 10 erlaubt. Die Bits 63-4 geben die Basis-Adressbits 63-4 der Speicher-Ressource an.
+Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt und der Wert 10 in den Bits 2-1 signalisiert das es sich um einen 64-Bit-BAR handelt. Die Bits 63-4 geben die Basis-Adressbits 63-4 der Speicher-Ressource an.
 
 ##### Base-Address-Register für IO-Ressourcen
 
@@ -161,8 +161,8 @@ Gelesen und beschrieben wird der Konfigurations-Adressraum, bei PCs, 32bit-weise
 #### Aufbau des Adress-I/O-Ports
 
 | 31 | 30-24 | 23-16 | 15-11 | 10-8 | 7-0 |
-| ------------ | ------------ | ----------- | -------------- | ----------------- | --------------------------------------- |
-| Enable Bit | Reserviert | Busnummer | Gerätenummer | Funktionsnummer | Registernummer<br>bit0 u. bit1 sind 0 |
+| ------------ | ------------ | ----------- | -------------- | ----------------- | ----------------------------------------- |
+| Enable Bit | Reserviert | Busnummer | Gerätenummer | Funktionsnummer | Registernummer<br>Bit 0 u. Bit 1 sind 0 |
 
 #### Codebeispiel
 
@@ -234,16 +234,12 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x12-0xFE | *Reserviert* |
 | 0xFF | Sonstige |
 
-  
-
 ### Class 0x00 - Pre 2.0
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 0x00 | Alle nicht- [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array")-Geräte |
 | 0x01 | 0x00 | VGA-Geräte |
-
-  
 
 ### Class 0x01 - Massenspeicher
 
@@ -258,8 +254,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x05 | 0x30 | ATA-Controller (Chained DMA) |
 | 0x80 | 0x00 | Anderer Massenspeicher |
 
-  
-
 ### Class 0x02 - [Netzwerk](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk")-Controller
 
 | Subclass | Programming Interface | Beschreibung |
@@ -273,8 +267,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x06 | 0x?? | PICMG 2.14, Multi-Computing |
 | 0x80 | 0x00 | Anderer Netzwerk-Controller |
 
-  
-
 ### Class 0x03 - Bildschirm-Controller
 
 | Subclass | Programming Interface | Beschreibung |
@@ -285,8 +277,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x02 | 0x00 | 3D |
 | 0x80 | 0x00 | Anderer Bildschirm-Controller |
 
-  
-
 ### Class 0x04 - Multimedia-Geräte
 
 | Subclass | Programming Interface | Beschreibung |
@@ -296,8 +286,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x02 | 0x00 | Telefonie |
 | 0x80 | 0x00 | Anderes Multimedia-Gerät |
 
-  
-
 ### Class 0x05 - Speicher-Controller
 
 | Subclass | Programming Interface | Beschreibung |
@@ -305,8 +293,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x00 | 0x00 | RAM |
 | 0x01 | 0x00 | Flash-Speicher |
 | 0x80 | 0x00 | Anderer Speicher |
-
-  
 
 ### Class 0x06 - Bridge-Geräte
 
@@ -322,25 +308,23 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x06 | 0x00 | PCI/NuBus-Bridge |
 | 0x07 | 0x00 | PCI/CardBus-Bridge |
 | 0x08 | 0x?? | Raceway, Switched Fabric |
-| 0x09 | 0x40 | Semitransparente PCI/PCI-Bridge (primär zum Host)<br> |
+| 0x09 | 0x40 | Semitransparente PCI/PCI-Bridge (primär zum Host) |
 | 0x09 | 0x80 | Semitransparente PCI/PCI-Bridge (sekundär zum Host) |
 | 0x0A | 0x00 | InfiniBand/PCI-Brige |
-| 0x80 | Anderer Bridge-Typ |  |
-
-  
+| 0x80 | 0x?? | Anderer Bridge-Typ |
 
 ### Class 0x07 - Controller zur einfachen Kommunikation
 
 | Subclass | Programming Interface | Beschreibung |
-| ---------- | ----------------------- | -------------------------------------------- |
-| 0x00 | 0x00 | Serielle Schnittstelle (XT-kompatibel)<br> |
+| ---------- | ----------------------- | ---------------------------------------- |
+| 0x00 | 0x00 | Serielle Schnittstelle (XT-kompatibel) |
 | 0x00 | 0x01 | Serielle Schnittstelle (16450) |
 | 0x00 | 0x02 | Serielle Schnittstelle (16550) |
 | 0x00 | 0x03 | Serielle Schnittstelle (16650) |
 | 0x00 | 0x04 | Serielle Schnittstelle (16750) |
 | 0x00 | 0x05 | Serielle Schnittstelle (16850) |
 | 0x00 | 0x06 | Serielle Schnittstelle (16950) |
-| 0x01 | 0x00 | Parallelport (Standard)<br> |
+| 0x01 | 0x00 | Parallelport (Standard) |
 | 0x01 | 0x01 | Parallelport (Bidirektional) |
 | 0x01 | 0x02 | Parallelport (ECP 1.0) |
 | 0x01 | 0x03 | Parallelport (IEEE 1284) |
@@ -353,9 +337,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x04 | 0x03 | Hayes-kompatibles Modem (16650) |
 | 0x04 | 0x04 | Hayes-kompatibles Modem (16750) |
 | 0x05 | 0x00 | SmartCard |
-| 0x80 | 0x00 | Andere Controller<br> |
-
-  
+| 0x80 | 0x00 | AnderemController |
 
 ### Class 0x08 - System-Peripherie
 
@@ -377,8 +359,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x04 | 0x00 | PCI Hot Plug Controller |
 | 0x80 | 0x00 | Andere System-Peripherie |
 
-  
-
 ### Class 0x09 - Input-Geräte
 
 | Subclass | Programming Interface | Beschreibung |
@@ -391,16 +371,12 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x04 | 0x10 | Gameport |
 | 0x80 | 0x00 | Anderes Input-Gerät |
 
-  
-
 ### Class 0x0A - Docking-Stationen
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | ------------------------- |
 | 0x00 | 0x00 | Normale Docking-Station |
 | 0x80 | 0x00 | Andere Docking-Station |
-
-  
 
 ### Class 0x0B - Prozessoren
 
@@ -414,8 +390,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x30 | 0x00 | MIPS |
 | 0x40 | 0x00 | Coprozessor |
 
-  
-
 ### Class 0x0C - Serielle Buscontroller
 
 | Subclass | Programming Interface | Beschreibung |
@@ -428,7 +402,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x03 | 0x10 | USB-Host (OHCI) |
 | 0x03 | 0x20 | USB-Host (EHCI) |
 | 0x03 | 0x80 | USB-Host (kein HCI) |
-| 0x03 | 0xFE | USB-Gerät |
+| 0x03 | 0xFE | USB-Device |
 | 0x04 | 0x00 | Fibre Channel |
 | 0x05 | 0x00 | SMB (System Management Bus) |
 | 0x06 | 0x00 | InfiniBand |
@@ -436,9 +410,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x07 | 0x01 | IPMI Keyboard Style Interface |
 | 0x07 | 0x02 | IPMI Block Transfer Device |
 | 0x08 | 0x00 | SERCOS Interface |
-| 0x09 | 0x00 | CANBus |
-
-  
+| 0x09 | 0x00 | CAN-Bus |
 
 ### Class 0x0D - Wireless-Controller
 
@@ -451,16 +423,12 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x12 | 0x00 | Broadband |
 | 0x80 | 0x00 | Anderer Wireless-Controller |
 
-  
-
 ### Class 0x0E - Intelligente Controller
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | ----------------- |
 | 0x00 | 0x?? | I²O-Architektur |
 | 0x00 | 0x00 | Message FIFO |
-
-  
 
 ### Class 0x0F - Satelliten-Kommunikations-Controller
 
@@ -471,8 +439,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x03 | 0x00 | Sprache |
 | 0x04 | 0x00 | Daten |
 
-  
-
 ### Class 0x10 - Encryption/Decryption-Controller
 
 | Subclass | Programming Interface | Beschreibung |
@@ -480,8 +446,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x01 | 0x00 | Netzwerk |
 | 0x10 | 0x00 | Entertainment |
 | 0x80 | 0x00 | Anderer Controller |
-
-  
 
 ### Class 0x11 - Datenerfassungs- und Signalprozessor-Controller
 
@@ -493,14 +457,12 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x20 | 0x00 | Management Card |
 | 0x80 | 0x00 | Anderer Controller |
 
-  
-
 ## Weblinks
 
 - [Linux PCI ID Repositorium](http://pci-ids.ucw.cz/) - Enthält viele VendorIDs und die dazugehörigen DeviceIDs
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7263; parent 7260; 2010-03-04T19:39:10Z -->
+<!-- MediaWiki page 1626; revision 7264; parent 7263; 2010-03-05T08:15:04Z -->
