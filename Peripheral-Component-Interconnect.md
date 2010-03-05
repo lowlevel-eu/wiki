@@ -237,9 +237,9 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 ### Class 0x00 - Pre 2.0
 
 | Subclass | Programming Interface | Beschreibung |
-| ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 0x00 | 0x00 | Alle nicht- [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array")-Geräte |
-| 0x01 | 0x00 | VGA-Geräte |
+| ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| 0x00 | 0x00 | Alle nicht-VGA-Geräte |
+| 0x01 | 0x00 | [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array")-Geräte |
 
 ### Class 0x01 - Massenspeicher
 
@@ -463,6 +463,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7267; parent 7264; 2010-03-05T10:47:12Z -->
+<!-- MediaWiki page 1626; revision 7268; parent 7267; 2010-03-05T10:48:38Z -->
