@@ -115,7 +115,7 @@ Nun gut, wer jetzt noch mutig genug ist, um diese Gefahr auf sich zu nehmen, der
 - Ein altes USB-Kabel, das nicht mehr benötigt wird
 - Ein relativ scharfes Messer
 - Eine Möglichkeit zum Verbinden von Kabeln (Steckbretter, Löten, der Fantasie sind hier kaum Grenzen gesetzt)
-- Einen Widerstand, der zumindest in die Nähe von 1,5 kΩ kommt sowie einer, der mindestens 200 Ω besitzen sollte (aber nicht viel mehr)
+- Einen Widerstand, der zumindest in die Nähe von 1,5 kΩ kommt sowie einen, der mindestens 200 Ω besitzen sollte (aber nicht viel mehr)
 - Einen Transistor (könnte auch ohne gehen)
 - Eine LED
 
@@ -140,6 +140,6 @@ Sobald man jetzt das USB-Kabel einsteckt, sollte die LED leuchten (hoffentlich n
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7281; parent 7277; 2010-03-06T10:24:52Z -->
+<!-- MediaWiki page 1690; revision 7282; parent 7281; 2010-03-06T10:26:55Z -->
