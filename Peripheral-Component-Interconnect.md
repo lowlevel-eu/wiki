@@ -248,7 +248,7 @@ typedef .... pci_bdf_t;
                 pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
                 const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; //und wieder zurücklesen
                 if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
-                 { printf("FEHLER : 20Bit-Memory-BAR %u enthält keine beschreibaren Adressbits!\n",bar); return; }
+                 { printf("FEHLER : 20Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
 
                 const uint lowestBit = get_number_of_lowest_set_bit(barValue);
                 // es muss eine gültige 20Bit-Adresse sein :
@@ -310,13 +310,13 @@ typedef .... pci_bdf_t;
            pci_config_writed(addr,barOffset,0xFFFFFFFC); // mit lauter 1en überschreiben
            const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFFC; // und wieder zurücklesen
            if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
-            { printf("FEHLER : IO-BAR %u enthält keine beschreibaren Adressbits!\n",bar); return; }
+            { printf("FEHLER : IO-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
 
            const uint lowestBit  = get_number_of_lowest_set_bit(barValue);
            const uint highestBit = get_number_of_highest_set_bit(barValue);
            // es muss entwerder eine gültige 32Bit-Adresse oder eine gültige 16Bit-Adresse sein :
            if ( ( (highestBit != 31) && (highestBit != 15) ) || (highestBit < lowestBit) || (lowestBit < 2) )
-            { printf("FEHLER : IO-BAR %u enthält ungültige beschreibare Adressbits!\n",bar); return; }
+            { printf("FEHLER : IO-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
 
            // BAR-Infos ausgeben :
            printf("BAR %u enhält eine %uBit-IO-Ressource mit einer Größe von 2^%u Bytes.\n",bar,highestBit+1,lowestBit);
@@ -634,6 +634,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7274/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7273; parent 7269; 2010-03-06T09:17:14Z -->
+<!-- MediaWiki page 1626; revision 7274; parent 7273; 2010-03-06T09:19:54Z -->
