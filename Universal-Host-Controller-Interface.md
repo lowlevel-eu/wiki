@@ -124,11 +124,11 @@ Das UHCI ist &#150; wie andere USB-Hostcontrollerinterfaces auch &#150; häufig 
 Jedes UHCI besitzt einen I/O-Raum, der aus dem PCI-Konfigurationsraum ausgelesen werden muss. In ihm kann man den Status der Rootports sowie des Hostcontrollers allgemein auslesen oder verändern, sowie letzteren initialisieren und dabei auch den Beginn der Frameliste eintragen. Dieser ist wie folgt aufgebaut:
 
 | Offset | Name | Bits | Bedeutung |
-| -------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | 0x00 | USBCMD | 16 | Enthält Flags zum Steuern des Hostcontrollers. |
 | 0x02 | USBSTS | 16 | Zeigt den Status des Hostcontrollers an. |
 | 0x04 | USBINTR | 16 | Gibt an, bei welchen in USBSTS gesetzten Bits ein Interrupt ausgelöst werden soll. |
-| 0x06 | FRNUM | 16 | Enthält die aktuelle Framenummer (0 bis 2047, wobei auf dem USB und in der Frameliste nur die unteren 10 Bits (also 0 bis 1023) verwendet werden). |
+| 0x06 | FRNUM | 16 | Enthält die aktuelle Framenummer (0 bis 2047, wobei in der Frameliste nur die unteren 10 Bits (also 0 bis 1023) verwendet werden). |
 | 0x08 | FRBASEADD | 32 | Hier muss der physische Pointer zur Frameliste eingetragen werden (an 4 kB ausgerichtet). |
 | 0x0C | SOFMOD | 8 | Gibt an, wie lange ein USB-Frame genau dauern soll. |
 | 0x10 | PORTSC1 | 16 | Enthält Flags zum Steuern und Informationen über den ersten Rootport. |
@@ -176,8 +176,8 @@ Ist Bit 3 oder 4 gesetzt, dann wird so lange ein IRQ ausgelöst, bis die Bits ge
 #### FRNUM
 
 | Bit | Name | Bedeutung |
-| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10 &#150; 0 | Frame number | Aktuelle Framenummer, als Index in der Frameliste werden nur die Bits 0 bis 9 (Werte 0 bis 1023) verwendet, diese werden auch in SOF-Token auf dem USB verwendet. |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
+| 10 &#150; 0 | Frame number | Aktuelle Framenummer, als Index in der Frameliste werden nur die Bits 0 bis 9 (Werte 0 bis 1023) verwendet. |
 
 #### FLBASEADD
 
@@ -266,6 +266,6 @@ An diesem Punkt arbeitet der UHC die Frameliste und alle verlinkten Warteschlang
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7244; parent 7243; 2010-03-02T19:34:45Z -->
+<!-- MediaWiki page 1576; revision 7292; parent 7244; 2010-03-06T19:37:15Z -->
