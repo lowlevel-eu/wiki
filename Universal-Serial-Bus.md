@@ -563,12 +563,71 @@ Interrupttransfers sind im Grunde einfache Bulk-IN-Transfers, die periodisch (al
 
 ### Isochronoustransfers
 
-Das Toggle-Bit-Verhalten von Isochronoustransfers [wurde bereits besprochen](#data-toggle). Ebenso [wurde bereits gezeigt](#nicht-handshake-datentransfers), dass Übertragungen von und zu Isochronousendpunkten kein Handshake besitzen. Und mehr ist dazu auch nicht zu sagen, man könnte hier nur das bereits gezeigte Beispiel nochmals zeigen:
+Das Toggle-Bit-Verhalten von Isochronoustransfers [wurde bereits besprochen](#isochronous-1). Ebenso [wurde bereits gezeigt](#nicht-handshake-datentransfers), dass Übertragungen von und zu Isochronousendpunkten kein Handshake besitzen. Und mehr ist dazu auch nicht zu sagen, man könnte hier nur das bereits gezeigte Beispiel nochmals zeigen:
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------- | -------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 42 | 7 | &#151; | 0x13 |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
+
+### Beispiel
+
+So, nachdem wir all das durchgekaut haben, können wir uns jetzt wieder an einem lustigen kleinen Beispiel versuchen, zum Beispiel dem Transfer des Strings „Lowlevel?“ als Bulk-OUT-Transfer. Wie wir gesehen haben, sieht das in der Zusammenfassung so aus:
+
+| Richtung | PID | ADDR | ENDP | Daten | CRC |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ---------------------------------------------- | -------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | OUT | 42 | 1 | &#151; | 0x1C |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+
+Dies wird zu den einzelnen Paketen (zwischen Feldern jeweils ein Leerzeichen und Little Endian!):
+
+    10000111 0101010 1000 00111
+
+    11000011 001100101111011011101110001101101010011001101110101001100011011011111100
+    0100111100000001
+
+    01001011
+
+Jetzt lassen wir die Leerzeichen weg und führen das Bitstuffing durch (das immer noch an nur einer Stelle durchzuführen ist):
+
+    100001110101010100000111
+
+    11000011001100101111011011101110001101101010011001101110101001100011011011111100
+    0100111100000001
+
+    01001011
+
+Jetzt zum NRZI mit SOP und EOP (Leerzeichen zur Verdeutlichung, zuerst Idle-Zustand, dann SOP, dann Paket, dann EOP, alles Full-Speed), dabei gilt \_ als SE0:
+
+    J KJKJKJKK KJKJKKKKJJKKJJKKJKJKJJJJ __J
+
+    J KJKJKJKK KKJKJKKKJKKKJKKJJJJJKKKJJJJKKKKJKJJJKKKJJKKJKKKJKKKJJJJKKJJKJJJKJKKKJ
+    JJKKKKKKKJKJJKJJJJJKJKJKJKK __J
+
+    J KJKJKJKK JJKJJKKK __J
+
+Lassen wir jetzt die Leerzeichen und auch die Pausen zwischen den Paketen weg (bzw. setzen da 16 Bitzeiten J hin):
+
+    JJJJJJJJJJJJJJJJKJKJKJKKKJKJKKKKJJKKJJKKJKJKJJJJ__JJJJJJJJJJJJJJJJKJKJKJKKKKJKJK
+    KKJKKKJKKJJJJJKKKJJJJKKKKJKJJJKKKJJKKJKKKJKKKJJJJKKJJKJJJKJKKKJJJKKKKKKKJKJJKJJJ
+    JJKJKJKJKK__JJJJJJJJJJJJJJJJKJKJKJKKJJKJJKKK__JJJJJJJJJJJJJJJJ
+
+Jetzt ein hübscheres „Diagramm“, auf dem man den Zustand der D+- und D--Leitung sehen kann (Full-Speed!):
+
+    D+ ----------------_-_-_-___-_-____--__--__-_-_----__----------------_-_-_-____-
+
+    D- ________________-_-_-_---_-_----__--__--_-_-______________________-_-_-_----_
+
+    D+ _-___-___-__-----___----____-_---___--__-___-___----__--_---_-___---_______-_
+
+    D- -_---_---_--_____---____----_-___---__--_---_---____--__-___-_---___-------_-
+
+    D+ --_-----_-_-_-____----------------_-_-_-__--_--_____----------------
+
+    D- __-_____-_-_-_--__________________-_-_-_--__-__---__________________
+
+So, wer das jetzt unbedingt ausprobieren will, kann das ja gerne tun, sich eines dieser extrem teuren USB-Analysegeräte kaufen, an 5 V anschließen und dann zwei Taster mit 12 MHz betätigen. Aber Achtung: Dies kann zu akuten Muskelbeschwerden im Armbereich führen.
 
 ## Links
 
@@ -581,6 +640,6 @@ Das Toggle-Bit-Verhalten von Isochronoustransfers [wurde bereits besprochen](#da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7308; parent 7306; 2010-03-07T14:09:04Z -->
+<!-- MediaWiki page 1690; revision 7309; parent 7308; 2010-03-07T14:51:30Z -->
