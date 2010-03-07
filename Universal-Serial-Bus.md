@@ -10,7 +10,7 @@ Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt*
 
 An diesem Artikel wird derzeit vor allem von [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") aktiv gearbeitet. Melde dich daher entweder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/1815/index.html "Diskussion:Universal Serial Bus"), bevor du ihn veränderst (wenn ich nicht im IRC bin, dann kannst du ihn auch verändern, weil ich dann sehr wahrscheinlich gar nicht online bin).
 
-Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man lagsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
+Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man lagsame USB 1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
 
 ## Einsatzgebiete
 
@@ -295,8 +295,8 @@ Als nächstes folgt ein Feld, dass den Typ des Pakets anzeigt. Es ist 8 Bit lang
 | Token | SETUP | 0x2D | Beginnt einen Setuptransfer und gibt Informationen darüber an das Gerät aus |
 | Data | DATA0 | 0xC3 | Ein Datenpaket mit dem Data-Toggle-Bit 0. |
 | Data | DATA1 | 0x4B | Ein Datenpaket mit dem Data-Toggle-Bit 1. |
-| Data | DATA2 | 0x87 | Ein Datenpaket für High-Speed-Isochronoustransfers, die eine hohe Bandbreite benötigen. |
-| Data | MDATA | 0x0F | Ein Datenpaket für High-Speed-SPLIT-Isochronoustransfers, die eine hohe Bandbreite benötigen. |
+| Data | DATA2 | 0x87 | Ein Datenpaket für High-Speed-IN-Isochronoustransfers, die eine hohe Bandbreite benötigen. |
+| Data | MDATA | 0x0F | Ein Datenpaket für High-Speed-OUT-Isochronoustransfers, die eine hohe Bandbreite benötigen. |
 | Handshake | ACK | 0xD2 | Bestätigung eines fehlerfrei empfangenen Pakets. |
 | Handshake | NAK | 0x5A | Daten wurden nicht akzeptiert, entspricht meistens einer Art EAGAIN, d. h., die Daten sollten zu einem späteren Zeitpunkt nochmals gesendet werden |
 | Handshake | STALL | 0x1E | Ein schwerwiegender Fehler ist aufgetreten und der Ziel-Endpoint kann nicht verwendet werden, bis er explizit wieder freigegeben wird, außer beim Endpoint 0, hier wird einfach der aktuelle Controltransfer als ungültig abgewiesen. |
@@ -472,6 +472,16 @@ Das ganze funktioniert natürlich auch in die andere Richtung:
 
 Hinweis: Man könnte sich fragen, warum der Host nach dem nicht angekommenen ACK ein IN sendet, wenn er doch alle Daten hat. Wir nehmen hier an, dass er eben noch nicht alle Daten hat und ein weiteres Paket erwartet. Wenn er allerdings bereits alle Daten empfangen hätte, würde er die Übertragung einfach beenden und das Gerät würde anhand der verstreichenden Zeitspanne bemerken, dass etwas nicht stimmt und somit seine Daten verwerfen.
 
+Es gibt für die verschiedenen Transferarten verschiedene Regeln, wann das Toggle-Bit auf einen definierten Zustand gesetzt wird. Bei Controltransfers wird das SETUP-Paket mit DATA0 versendet, danach gelten die normalen Regeln, bis zum Handshake, das immer mit DATA1 versehen wird. Das Toggle-Bit von Bulkendpunkten wird auf 0 gesetzt, sobald die aktuelle Konfiguration gewechselt wird, gleiches gilt für Interruptendpunkte.
+
+###### Isochronous
+
+Bei Isochronoustransfers wird das Toggle-Bit nicht wie hier beschrieben verwendet, stattdessen wird bei normalen Isochronoustransfers immer DATA0 verwenden und bei solche mit hoher Bandbreite, also mehreren Paketen pro Microframe (bei Full-Speed-Isochronous wird nur DATA0 verwendet), wird das Bit bei Beginn jedes Microframes gewissermaßen zurückgesetzt.
+
+Bei IN-Transfers wird bei einem Paket pro Microframe nur DATA0 verwendet, bei zweiem kommt zuerst DATA1, dann DATA0 und bei dreien sendet das Gerät am zuerst DATA2, dann DATA1 und zuletzt DATA0.
+
+Bei OUT-Transfers zeigt ein MDATA-Paket an, dass im aktuellen Microframe noch ein Paket folgt und der Typ des letzten DATA-Pakets gibt dann an, wie viele MDATA-Pakete gesendet wurden. So wird bei einem Paket pro Microframe nur DATA0 verwendet, bei zweien ergibt sich zuerst MDATA, dann DATA1 und bei dreien gibt es zuerst zwei MDATA-Pakete und zuletzt ein DATA2-Paket.
+
 #### False EOPs
 
 Ja, auch das gibs: Falsche EOP-Signale. Durch etwas Rauschen kann es schnell passieren, dass mittem im Paket plötzlich ein SE0 auftritt und der Empfänger ein EOP registriert. Dies ist allerdings selten ein Problem, da das Paket dann entweder völlig zerstückelt ist oder einfach ein CRC-Fehler auftritt. Sendet der Host, so wird das Gerät kein Handshake senden und der Host initiiert ja sowieso erst wieder einen Transfer, wenn er mit dem Senden tatsächlich fertig ist. Ist der Gerät der Sender, so ist es schwieriger. In diesem Fall muss der Host darauf achten, bei solch einem CRC-Fehler 16 Bitzeiten zu warten. Tritt während dieser Zeit kein Verkehr auf dem USB auf, so darf er das nächsten Token senden, ansonsten muss er warten, bis das nächste EOP auftritt (16 Bitzeiten reichen aus, da bereits nach sechs Bitzeiten dank des Bitstuffings ein Wechsel in der Spannung auftreten muss, wenn Daten übertragen werden). Bei High-Speed-Transfers muss der Host einfach warten, bis die Datenleitungen zu SE0 zurückkehren (bei High-Speed tritt solche ein Fehler auch nicht aufgrund von SE0, sondern wegen eines Bitstufffehlers auf).
@@ -522,6 +532,44 @@ Hier nochmal die Zusammenfassung eines Controltransfers:
 | Daten | IN/OUT | Je nach in der Setupphase angegebenen Richtung werden nun Daten ein- oder ausgegeben. Ist die Länge der Datenphase im SETUP-Paket als 0 angegeben worden, existiert diese Phase nicht. |
 | Handshake | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. |
 
+### Bulktransfers
+
+Ein Bulktransfer besitzt keine besondere Struktur. Das Data-Toggle-Bit wird bei jeder Änderung der Gerätekonfiguration auf 0 zurückgesetzt und ansonsten werden einfache IN- und OUT-Pakete verwendet. Hier könnte das „Lowlevel?“-Paket als Beispiel dienen:
+
+| Richtung | PID | ADDR | ENDP | Daten | CRC |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ---------------------------------------------- | -------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | OUT | 42 | 1 | &#151; | 0x1C |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+
+### Interrupttransfers
+
+Interrupttransfers sind im Grunde einfache Bulk-IN-Transfers, die periodisch (also regelmäßig) ausgeführt werden. Wenn das Gerät keine neuen Daten besitzt, sendet es ein NAK, sind Daten vorhanden, sendet es diese und wartet auf ein ACK des Hosts (oder auf einen anderen Handshake, wobei es pro Frame nur drei Versuche gibt, danach wird die Übertragung abgebrochen). Hier ein Beispiel für das periodische Abfragen des Interrupt-Endpoints eines Hubs, bei dem sich schließlich eine nicht näher spezifizierte Änderung am Port 2 ergibt:
+
+| Richtung | PID | ADDR | ENDP | Daten | CRC |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | -------- | -------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | NAK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | SOF | &#151; | &#151; | &#151; | &#151; |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | NAK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | SOF | &#151; | &#151; | &#151; | &#151; |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x04 | 0x7C41 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | SOF | &#151; | &#151; | &#151; | &#151; |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | NAK | &#151; | &#151; | &#151; | &#151; |
+
+### Isochronoustransfers
+
+Das Toggle-Bit-Verhalten von Isochronoustransfers [wurde bereits besprochen](#data-toggle). Ebenso [wurde bereits gezeigt](#nicht-handshake-datentransfers), dass Übertragungen von und zu Isochronousendpunkten kein Handshake besitzen. Und mehr ist dazu auch nicht zu sagen, man könnte hier nur das bereits gezeigte Beispiel nochmals zeigen:
+
+| Richtung | PID | ADDR | ENDP | Daten | CRC |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------- | -------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 42 | 7 | &#151; | 0x13 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
+
 ## Links
 
 - [Offizielle USB-Spezifikationen](http://www.usb.org/developers/docs/)
@@ -533,6 +581,6 @@ Hier nochmal die Zusammenfassung eines Controltransfers:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7306; parent 7305; 2010-03-07T13:07:52Z -->
+<!-- MediaWiki page 1690; revision 7308; parent 7306; 2010-03-07T14:09:04Z -->
