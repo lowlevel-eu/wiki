@@ -84,10 +84,10 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
 - Diskussion:Ausgabe 2
 - weitere: siehe [Liste der Diskussionsseiten](http://lowlevel.brainsware.org/wiki/index.php?title=Spezial%3APr%C3%A4fixindex&from=&namespace=1)
 
-Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten
+Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die TODO-Vorlage verwenden \| [Stubs](https://lowlevel-eu.github.io/wiki/pages/1618/index.html "Kategorie:Stub")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7272; parent 7206; 2010-03-06T00:21:46Z -->
+<!-- MediaWiki page 1518; revision 7312; parent 7272; 2010-03-07T15:08:38Z -->
