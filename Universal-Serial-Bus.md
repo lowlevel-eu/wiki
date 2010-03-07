@@ -10,6 +10,13 @@ Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt*
 
 An diesem Artikel wird derzeit vor allem von [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") aktiv gearbeitet. Melde dich daher entweder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/1815/index.html "Diskussion:Universal Serial Bus"), bevor du ihn veränderst (wenn ich nicht im IRC bin, dann kannst du ihn auch verändern, weil ich dann sehr wahrscheinlich gar nicht online bin).
 
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+*Nein, sie ist noch nicht komplett, man kann es aber schonmal sagen: Low- und Full-Speed werden hier detailliert beschrieben, High-Speed in den meisten Fällen auch relativ genau, wäre aber zu verbessern. Zu SuperSpeed jedoch fehlt jegliche Information (außer den bekannten Consumerinfos, die man auch von Wikipedia bekommen kann), das wäre aber schon nett.*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
+  
 Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man lagsame USB 1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
 
 ## Einsatzgebiete
@@ -640,6 +647,6 @@ So, wer das jetzt unbedingt ausprobieren will, kann das ja gerne tun, sich eines
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7310; parent 7309; 2010-03-07T15:01:28Z -->
+<!-- MediaWiki page 1690; revision 7311; parent 7310; 2010-03-07T15:06:12Z -->
