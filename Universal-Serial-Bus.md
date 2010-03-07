@@ -421,7 +421,7 @@ In diesem Fall wird kein Handshake gesendet. Das Ausbleiben zeigt dem Sender, da
 
 #### CRC-Fehler
 
-Wird der CRC-Wert als nicht zum Paket gehörig erkannt, so wird ebenfalls kein Handshake gesendet. Auch dies veranlasst dann den Host, das Paket neu zu senden.
+Wird der CRC-Wert als nicht zum Paket gehörig erkannt, so wird ebenfalls kein Handshake gesendet. Auch dies veranlasst dann den Sender, das Paket neu zu übertragen.
 
 #### Daten können nicht empfangen werden
 
@@ -636,6 +636,51 @@ Jetzt ein hübscheres „Diagramm“, auf dem man den Zustand der D+- und D--Lei
 
 So, wer das jetzt unbedingt ausprobieren will, kann das ja gerne tun, sich eines dieser extrem teuren USB-Analysegeräte kaufen, an 5 V anschließen und dann zwei Taster mit 12 MHz betätigen. Aber Achtung: Dies kann zu akuten Muskelbeschwerden im Armbereich führen.
 
+## Controltransfers
+
+Dieses Kapitel soll die Controltransfers näher beleuchten und einige von den Standardrequests vorstellen. Zudem soll noch etwas über das Erkennen neuer Geräte am Bus erzählt werden.
+
+### Enumeration
+
+Diese Erkennung und Initialisierung neuer Geräte wird *Enumeration* genannt. Dies passiert folgermaßen:
+
+1.  Eventuell muss zuerst ein Resume getrieben werden, falls sich das Gerät oder der Port im Suspendmodus befindet. Dieses wird 20 ms gehalten, dann mit einem Low-Speed-EOP beendet und das Gerät erhält 10 ms, um sich zu stabilisieren.
+2.  Zuerst wird ein Resetsignal am Port des Geräts getrieben, dies veranlasst es wie beschrieben dazu, in den Ursprungszustand zurückzugehen und die USB-Adresse 0 anzunehmen.
+3.  Nun sollten die ersten 8 Bytes des Device-Descriptors abgeholt werden (USB-Adresse ist natürlich 0), nur die ersten acht, weil man zu diesem Zeitpunkt die MPS von EP0 (MPS0) noch nicht kennt. Diese beträgt aber mindestens 8 Byte und genau im achten befindet sich der MPS0-Wert.
+4.  Sicherheitshalber sollte das Gerät nun nochmals zurückgesetzt werden.
+5.  Anschließend wird die Adresse des Geräts auf einen auf dem jeweiligen Bus eindeutigen Wert gesetzt.
+6.  Jetzt, da MPS0 bekannt ist, wird der gesamte Device-Descriptor eingelesen.
+7.  Danach müssen alle möglichen Konfigurationen mit ihren Interfaces eingelesen und eine davon ausgewählt werden.
+
+#### Enumeration beim Hochfahren
+
+Die erste Enumeration kann anfangs schwierig erscheinen: Eventuell hängen mehrere Geräte am Bus, die alle die Adresse 0 benutzen. Wie kann man diese einzeln enumerieren? Eigentlich ist das ganz einfach.
+
+1.  Zuerst werden alle Rootports deaktiviert, der Strom wird ggf. eingeschaltet, dann müssen dem Gerät 100 ms gegeben werden, bis es stabil ist.
+2.  Anschließend wird ein Rootport aktiviert, hängt daran ein Hub, gehe zu Schritt 4
+3.  Das Gerät ist kein Hub, also wird es normal enumeriert. Gehe danach zu Schritt 2.
+4.  Das Gerät ist ein Hub. Enumeriere ihn, gehe dann zu Schritt 1 und behandele seine Ports als Rootports (nach dem Ende des Untersuchen des Hubs gehe hierhin zurück). Gehe dann wieder zu Scrhitt 2.
+
+Mit dieser Schrittfolge wird gewährleistet, dass immer nur ein Gerät die Adresse 0 hat und somit keine Konflikte auftreten können.
+
+#### Enumeration eines neuen Geräts
+
+Der häufiger beschriebene Fall ist das Anstecken eines neuen Gerätes. Hier muss zuerst 100 ms gewartet werden, bis das Gerät stabil ist, danach kann der Port aktiviert werden. Nun kann die normale Enumeration beginnen.
+
+### Setuppaket
+
+Wie bereits gesagt ist der Aufbau eines Setuppakets standardisiert. Er lautet immer folgendermaßen:
+
+| Offset | Größe | Name | Bedeutung |
+| -------- | ------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0x00 | 0 | bmRequestType | Ein Bitfeld, das die Eigenschaften des Request angibt: • Bit 0 &#150; 4: Empfänger • 0 &#150; Geräte<br>• 1 &#150; Interface<br>• 2 &#150; Endpunkt<br>• 3 &#150; Anderer<br><br>• Bit 5 &#150; 6: Typ des Requests • 0 &#150; Standardrequest<br>• 1 &#150; Klassenspezifisch<br>• 2 &#150; Herstellerspezifisch<br><br>• Bit 7: Richtung des Transfers • 0 &#150; Gerät zum Host (OUT)<br>• 1 &#150; Host zum Gerät (IN)<br><br> |
+| 0x01 | 1 | bRequest | Nummer des Requests |
+| 0x02 | 2 | wValue | Requestspezifischer Wert |
+| 0x04 | 2 | wIndex | Ebenfalls requestspezifisch, wird normalerweise benutzt, um einen Index oder einen Offset anzugeben |
+| 0x06 | 2 | wLength | Länge der zu übertragenden Daten (Anzahl von Bytes) |
+
+Ein Setuppaket ist immer 8 Byte lang, sodass es von jedem Gerät unabhängig von MPS0 (welche mindestens 8 sein muss) empfangen werden kann.
+
 ## Links
 
 - [Offizielle USB-Spezifikationen](http://www.usb.org/developers/docs/)
@@ -647,6 +692,6 @@ So, wer das jetzt unbedingt ausprobieren will, kann das ja gerne tun, sich eines
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7311; parent 7310; 2010-03-07T15:06:12Z -->
+<!-- MediaWiki page 1690; revision 7313; parent 7311; 2010-03-07T19:16:28Z -->
