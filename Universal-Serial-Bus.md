@@ -46,14 +46,22 @@ USB 1.1 wurde 1998 veröffentlicht und behob einige Fehler und Unklarheiten
 
 USB 1.0 wurde 1996 von Intel veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. Es eignete sich wegen der langsamen Datenübertragung von 12 MBit/s nicht zum Anschluss von Festplatten.
 
-## USB-Controller
+## Vorwort
 
-Es existieren folgende Standards für USB-Host-Controller:
+### Worum es in den folgenden Abschnitten geht
 
-- [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
-- [UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI")
-- [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")
-- [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
+Die folgenden Abschnitte sollen eine erschöpfende Abhandlung und auch in gewisser Weise ein Nachschlagewerk über den USB sein. Sie handeln sowohl vom für den Entwickler eher uninteressanten elektrischen Teil, belegen diesen auch mit Beispielen, als auch von abstrakteren Objekten wie USB-Paketen und ganzen Transfers. Kurzum: Dieser Artikel soll den USB in seiner ganzen Fülle behandeln, bewusst oft sehr nah an der Hardware &#150; schließlich ist das hier das *Lowlevel*-Wiki und viele Betriebssystemprogrammierer führen als Grund für ihre Motivation an, dass sie die Hardware im kleinsten Detail kennenlernen wollen.
+
+Außerdem ist USB ein derartig komplexes Thema, dass es nicht genügen kann, eine Einführung zu lesen, etwas Code zu kopieren und dann nach und nach alles zu lernen: Schon der allererste Transfer fordert die Verwendung der meisten der mannigfaltigen Aspekte des USBs. Daher geht es hier vor allem darum, zu *verstehen* und nicht, Beispielcode zu sehen.
+
+### Worum es nicht geht
+
+Hier geht es nicht um die Programmierung des USB. So wie die Artikel [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet") und [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139") getrennt sind, so ist auch dieser Artikel von den Artikeln für die Hostcontroller getrennt, die die einzelnen Transfers initiieren und steuern. Hier wird also nur vermittelt, was im Endeffekt auf dem Bus elektrisch passiert und was diese Signale bedeuten, nicht jedoch, wie man sie erzeugt. Dazu müssen die Artikel zu den entsprechenden Hostcontrollern konsultiert werden:
+
+- [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface")
+- [UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "Universal Host Controller Interface")
+- [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface")
+- [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "Extensible Host Controller Interface")
 
 ## Überblick
 
@@ -840,6 +848,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7314; parent 7313; 2010-03-07T21:12:21Z -->
+<!-- MediaWiki page 1690; revision 7315; parent 7314; 2010-03-07T22:23:34Z -->
