@@ -12,6 +12,6 @@ Das OHCI ist neben dem [UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5577/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
 
-<!-- MediaWiki page 1575; revision 5577; parent 5201; 2009-08-11T20:09:25Z -->
+<!-- MediaWiki page 1575; revision 7319; parent 5577; 2010-03-07T22:37:09Z -->
