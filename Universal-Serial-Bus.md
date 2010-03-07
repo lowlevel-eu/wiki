@@ -667,6 +667,10 @@ Mit dieser Schrittfolge wird gewährleistet, dass immer nur ein Gerät die Adres
 
 Der häufiger beschriebene Fall ist das Anstecken eines neuen Gerätes. Hier muss zuerst 100 ms gewartet werden, bis das Gerät stabil ist, danach kann der Port aktiviert werden. Nun kann die normale Enumeration beginnen.
 
+### Wiederholung
+
+Im ersten [Controltransfer-Abschnitt](#controltransfers) wurde bereits gezeigt, dass jeder Controltransfer aus zwei oder drei Phasen besteht: Setup, Daten, Handshake. Die Datenphase ist dabei optional. Das Setuppaket gibt an, was das Gerät tun soll, ob es eine Datenphase gibt, in welche Richtung sie geht und welche Daten dabei ausgetauscht werden sollen.
+
 ### Setuppaket
 
 Wie bereits gesagt ist der Aufbau eines Setuppakets standardisiert. Er lautet immer folgendermaßen:
@@ -681,6 +685,150 @@ Wie bereits gesagt ist der Aufbau eines Setuppakets standardisiert. Er lautet im
 
 Ein Setuppaket ist immer 8 Byte lang, sodass es von jedem Gerät unabhängig von MPS0 (welche mindestens 8 sein muss) empfangen werden kann.
 
+#### Standardrequests
+
+##### CLEAR_FEATURE
+
+Hebt einen bestimmten Zustand eines Geräts, Interfaces oder Endpunkts auf.
+
+| Feld | Wert |
+| --------------- | ------------------------------------------------------------------------ |
+| bmRequestType | • 00000000b<br>• 00000001b<br>• 00000010b<br> |
+| bmRequest | 1 |
+| wValue | Aufzuhebender Zustand |
+| wIndex | • Gerät: 0<br>• Interface: Interface-ID<br>• Endpunkt: Endpunkt-ID<br> |
+| wLength | 0 |
+
+Es gibt keine Datenphase.
+
+##### SET_ADDRESS
+
+Legt die USB-Adresse eines Geräts fest. Diese Adresse nimmt es erst nach der Handshakephase an (die findet also noch mit der alten Adresse statt).
+
+| Feld | Wert |
+| --------------- | ----------------------------------- |
+| bmRequestType | 00000000b |
+| bmRequest | 5 |
+| wValue | Neue Adresse (zwischen 0 und 127) |
+| wIndex | 0 |
+| wLength | 0 |
+
+Es gibt keine Datenphase.
+
+##### GET_DESCRIPTOR
+
+Liest einen Descriptor vom Gerät, welcher irgendetwas beschreiben kann. Dieses „irgendwas“ kann das gesamte Gerät sein, eine einzelne Konfiguration, ein Interface, ein Endpunkt, etc..
+
+| Feld | Wert |
+| --------------- | ------------------------------------------------------------------------------------------------------- |
+| bmRequestType | 10000000b |
+| bRequest | 6 |
+| wValue | Typ des Descriptors im höherwertigen Byte und Index im niederwertigen |
+| wIndex | ID der Sprache bei Stringdescriptoren, sonst 0 |
+| wLength | Länge des Descriptors (bzw. die Länge, die gelesen werden soll &#150; *kann also auch kleiner sein!*) |
+
+In der Datenphase wird dann der Descriptor zum Host gesendet.
+
+##### GET_CONFIGURATION
+
+Hiermit kann die aktuelle Konfiguration ermittelt werden.
+
+| Feld | Wert |
+| --------------- | ----------- |
+| bmRequestType | 10000000b |
+| bRequest | 8 |
+| wValue | 0 |
+| wIndex | 0 |
+| wLength | 1 |
+
+In der Datenphase wird ein Byte übertragen, das die aktuelle Konfiguration angibt. Ist es 0, so ist das Gerät unkonfiguriert.
+
+##### SET_CONFIGURATION
+
+Mit diesem Request wird eine neue Konfiguration festgelegt. Die Data-Toggle-Bits aller geänderten Endpunkte (also alle außer EP0) werden auf 0 zurückgesetzt.
+
+| Feld | Wert |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bmRequestType | 00000000b |
+| bRequest | 9 |
+| wValue | Das untere Byte gibt die zu setzende Konfiguration anhand ihrer ID an. Ist der Wert 0, so wird das Gerät in den unkonfigurierten Zustand zurückgesetzt. Das höherwertige Byte ist reserviert und am besten auf 0 zu setzen. |
+| wIndex | 0 |
+| wLength | 0 |
+
+Es gibt keine Datenphase.
+
+### Descriptoren
+
+Nun zu den Descriptoren, die man per GET_CONFIGURATION lesen und per SET_CONFIGURATION setzen kann. Jeder Descriptor beginnt mit einem Byte, dass seine Länge angibt und einem weiteren, dass seinen Typ angibt.
+
+#### Device-Descriptor
+
+Dieser Descriptor enthält allgemeine Informationen zum Gerät, die für alle Konfigurationen zutreffen. Ihn in Erfahrung zu bringen (bzw. seine ersten 8 Bytes) ist normalerweise der erste Vorgang während der [Enumeration](#enumeration).
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 1 | bLength | 18 |
+| 0x01 | 1 | bDescriptorType | 1 |
+| 0x02 | 2 | bcdUSB | Gibt die USB-Spezifikation, der das Gerät unterliegt, in BCD-Form an (z. B. 0x0210 für 2.10). |
+| 0x04 | 1 | bDeviceClass | Gibt die USB-Klasse an, zu der dieses Gerät gehört. Damit können viele verschiedene Geräte mit dem gleichen Treiber verwendet werden. Ist der Wert 0x00, dann besitzt jedes Interface eine eigene Klasse. Ist der 0xFF, so gehört das Gerät keiner Klasse an, sondern verhält sich herstellerspezifisch. Alle anderen Werte bedeuten, dass das Gerät zu nur einer einzigen Klasse gehört. |
+| 0x05 | 1 | bDeviceSubclass | Unterklasse. Ist die Klasse 0x00, so muss dieser Wert auch 0x00 sein. 0xFF bedeutet eine herstellerspezifische Unterklasse. |
+| 0x06 | 1 | bDeviceProtocol | Protokolltyp (noch feinere Unterteilung der Klassencodes). Sind Klasse und Unterklasse 0x00, dann muss auch dieser Wert 0x00 sein. Bei 0xFF gilt ein herstellerspezifisches Protokoll. |
+| 0x07 | 1 | bMaxPacketSize0 | MPS0. Muss 8, 16, 32 oder 64 sein. |
+| 0x08 | 2 | idVendor | Vendor-ID. |
+| 0x0A | 2 | idProduct | Geräte-ID. |
+| 0x0C | 2 | bcdDevice | Releasenummer des Geräts in BCD-Form. |
+| 0x0E | 1 | iManufacturer | ID des Stringdescriptors, der den Herstellernamen angibt. |
+| 0x0F | 1 | iProduct | ID des Stringdescriptors, der den Gerätenamen angibt. |
+| 0x10 | 1 | iSerialNumber | ID des Stringdescriptors, der die Seriennummer angibt. |
+| 0x11 | 1 | bNumConfigurations | Anzahl der möglichen Konfigurationen. |
+
+#### Konfigurationsdescriptor
+
+Ein Konfigurationsdescriptor enthält Informationen &#150; wen wunderts &#150; zu einer Konfiguration.
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 1 | bLength | 9 |
+| 0x01 | 1 | bDescriptorType | 2 |
+| 0x02 | 2 | wTotalLength | Wenn ein Konfigurationsdescriptor angefordert wird, wird nicht nur dieser zurückgegeben. Das Gerät hängt immer alle Interfacedescriptoren und an jeden Interfacedescriptor alle verwendeten Endpunktdescriptoren an. Dieses Feld gibt an, wie viele Bytes alle Descriptoren dieser Konfiguration zusammen brauchen. |
+| 0x04 | 1 | bNumInterfaces | Anzahl der Interfaces für diese Konfiguration |
+| 0x05 | 1 | bConfigurationValue | ID der Konfiguration (für GET_CONFIGURATION oder SET_CONFIGURATION) |
+| 0x06 | 1 | iConfiguration | ID des Stringdescriptors, der den Namen dieser Konfiguration enthält. |
+| 0x07 | 1 | bmAttributes | Charakteristika der Konfiguration: • Bit 0 &#150; 4: Reserviert, auf 0 zu setzen<br>• Bit 5: [Remote Wakeup](#remote-wakeup), gibt an, ob dies möglich ist<br>• Bit 6: Self-powered, gibt an, ob das Gerät in dieser Konfiguration seinen Strom vom Bus bezieht (0) oder von einer externen Stromquelle (1)<br>• Bit 7: Reserviert, auf 1 zu setzen<br> |
+| 0x08 | 1 | bMaxPower | Gibt an, wie viel Strom das Gerät in dieser Konfiguration *maximal* vom Bus bezieht, in 2-mA-Schritten (50 bedeutet 100 mA). Wenn das Gerät mit einer externen Stromquelle betrieben und plötzlich von dieser Quelle getrennt wird, darf es nicht mehr Strom verbrauchen, als dieses Feld angibt. |
+
+Tipp: Wie beschrieben weiß man anfangs nicht, wie lang alle Konfigurations-, Interface- und Endpunktdescriptoren einer Konfiguration zusammen sind. Daher müsste man theoretisch einen ausreichend großen Datenpuffer reservieren. Besser ist, zuerst nur die ersten neun Bytes dieses Descriptorenarrays (oder auch -liste) einzulesen (also nur den Konfigurationsdescriptor), daraus zu ermitteln, wie viel Platz alle Descriptoren zusammen brauchen (wTotalLength) und dann einen Puffer dieser Größe zu reservieren.
+
+## Übersetzung
+
+Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur liest (z. B. die Spezifikation), hier noch eine Übersetzung der von mir verwendeten Begriffe.
+
+### Deutsch-Englisch
+
+| Deutsch | Englisch |
+| ---------------- | ----------------- |
+| Asynchron | Asynchronous |
+| Datenphase | Data stage |
+| Endpunkt | Endpoint |
+| Flusskontrolle | Flow control |
+| Handshakephase | Handshake stage |
+| Konfiguration | Configuration |
+| Periodisch | Periodic |
+| Setupphase | Setup stage |
+
+### Englisch-Deutsch
+
+| Englisch | Deutsch |
+| ----------------- | ---------------- |
+| Asynchronous | Asynchron |
+| Configuration | Konfiguration |
+| Data stage | Datenphase |
+| Endpoint | Endpunkt |
+| Flow control | Flusskontrolle |
+| Handshake stage | Handshakephase |
+| Periodic | Periodisch |
+| Setup stage | Setupphase |
+
 ## Links
 
 - [Offizielle USB-Spezifikationen](http://www.usb.org/developers/docs/)
@@ -692,6 +840,6 @@ Ein Setuppaket ist immer 8 Byte lang, sodass es von jedem Gerät unabhängig von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7313; parent 7311; 2010-03-07T19:16:28Z -->
+<!-- MediaWiki page 1690; revision 7314; parent 7313; 2010-03-07T21:12:21Z -->
