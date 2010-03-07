@@ -48,6 +48,42 @@ Es existieren folgende Standards für USB-Host-Controller:
 - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")
 - [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
 
+## Überblick
+
+Bevor wir zum technischen Teil kommen, zuerst einmal ein Überblick über die Organisation des USB.
+
+### Geräte
+
+Logischerweise gibt es am USB Geräte. Das sind gewissermaßen Objekte, mit denen man kommunizieren kann. Jedes Gerät erhält eine am jeweiligen USB eindeutige Nummer von 1 bis 127 (0 ist für einen besonderen Zweck reserviert). Die USB-Geräte werden nochmals in Functions und Hubs unterteilt. Eine Function kann eine bestimmte Aufgabe erfüllen, z. B. ist dies ein Massenspeicher, ein Drucker oder eine Webcam. Ein Hub hat auch eine Aufgabe, aber eine ganz spezielle: Er leitet die Daten, die er an seinem USB-Anschluss (Upstreamport) erhält, an neue Ports (Downstreamports) weiter. So erhält der USB eine baumartige Struktur, die Wurzel ist der sogenannte Roothub, die einzelnen Verzweigungen werden durch Hubs gebildet. Es ist festgelegt, dass maximal fünf Hubs hintereinander geschaltet werden dürfen.
+
+### Host
+
+Der Host bildet den Busmaster eines USB. Er ist der einzige Teilnehmer, der Transaktionen initiieren darf, Geräte dürfen dies nicht von sich aus. Er besitzt keine Adresse, stattdessen wird er nur per Richtung adressiert: IN bedeutet immer in Richtung Host, OUT in Richtung Gerät (wobei das Gerät dann jeweils mit seiner Adresse identifiziert wird).
+
+### Konfigurationen
+
+In verschiedenen Situationen muss sich ein Gerät unterschiedlich verhalten. Denkbar wäre zum Beispiel ein Gerät, das 500 mA vom Bus benötigt, um zu funktionieren. Hat der Host allerdings keine Möglichkeit, diese 500 mA bereitzustellen (z. B. hängt das Gerät hinter einem Hub, der sich ebenfalls mit Strom vom Bus versorgt und so maximal 100 mA pro Port bereitstellen kann). Obwohl das Gerät dadurch vielleicht keine Möglichkeit, seine eigentliche Funktion auszuführen, muss es trotzdem aktiv am Bus hängen. Das heißt, es kann zum Beispiel einfach nur darauf warten, dass es doch noch 500 mA erhält.
+
+Dieses Reagieren auf unterschiedliche Situationen wird mit Konfigurationen erreicht. Jedes Gerät muss eine Default-Konfiguration anbieten, in der es nur 100 mA verbraucht und kann beliebig viele weitere Konfigurationen anbieten, die verschiedene Funktionen erlauben. Zu einem bestimmten Zeitpunkt kann ein Gerät nur eine Konfiguration besitzen.
+
+### Interfaces
+
+Es gibt sogenannte Composite Devices, welche mehrere Funktionen in sich vereinen. Eine Webcam beispielsweise hat häufig zwei Funktionen: Sie kann sowohl Bild als auch Ton aufnehmen. Nun gibt es drei Möglichkeiten, dies zu implementieren. Entweder man erstellt ein gerätespezifisches Protokoll und liefert für dieses Gerät Treiber aus &#150; schlecht, da man erst Treiber schreiben muss und außerdem z. B. Linuxnutzer in die Röhre gucken könnten. Zweite Möglichkeit: Man setzt auf Standardfunktionen, hier wären die Video- und die Audiogeräteklasse sinnvoll. Dummerweise sind das aber zwei verschiedene Klassen. Man müsste also zwei verschiedene Geräte implementieren (oder zumindest zwei verschiedene logische Geräte, eventuell sogar mit integriertem Hub, sodass alles vollkommen transparent für das System erscheint). Das Problem hierbei ist offensichtlich: Relativ hohe Hardwarekosten, da es ja zwei getrennte USB-Geräte sind und außerdem noch ein zusätzlicher Hub, wenn zwei Upstreamports vermieden werden sollen. Die Lösung liegt in der dritten Möglichkeit, man verwendet Interfaces.
+
+Jede Konfiguration kann mehrere Interfaces verwenden, wobei jedes Interface zu einer USB-Klasse gehören kann (oder auch nicht). So ist es für die Webcam möglich, ein Audio- und ein Videointerface bereitzustellen, die dann gleichzeitig verwendet werden können. Diese Möglichkeit besticht einerseits durch die Verwendung allgemein unterstützter Klassen, andererseits aber auch durch günstigere Hardware und auch ein schöneres Design.
+
+Zu einem bestimmten Zeitraum besitzt ein Gerät alle Interfaces, die durch die aktuelle Konfiguration aktiviert sind, gleichzeitig.
+
+### Endpunkte
+
+Endpunkte entsprechen sozusagen den Ports von Netzwerkprotokollen. Jedes Gerät besitzt innerhalb einer Konfiguration eindeutige Endpunkte, mit denen der Host kommunizieren kann. 31 verschiedene Endpunkte sind gleichzeitig möglich, davon ist einer (Endpunkt 0, EP0) jedoch als Kontrollendpunkt reserviert (Low-Speed-Geräte dürfen nur drei Endpunkte nutzen). Ein Interface gibt immer an, welche Endpunkte es nutzt. Deren Nummern müssen innerhalb einer Konfiguration eindeutig sein.
+
+### Pipes
+
+Obwohl es im Grunde nur einen physischen Kommunikationskanal auf dem USB gibt, der von allen Geräten genutzt wird und daher aufgeteilt werden muss, gibt es mehrere logische Kanäle, sogenannte Pipes. Eine Pipe ist eine Verbindung vom Host zu einem bestimmten Endpunkt eines bestimmten Geräts, sie wird also durch die Geräteadresse und die Endpunktnummer eindeutig bestimmt. Dieser Endpunkt und seine Rolle bestimmen dann auch den Typ der Pipe (also den [Transfertyp](#%C3%BCbertragungsarten)).
+
+Eine besondere Rolle spielt die *Default Control Pipe*, die zur Konfiguration des Geräts dient und bei jedem Gerät vorhanden sein muss. Sie entspricht einer Verbindung zum EP0. Sie ist verfügbar, sobald das Gerät Strom erhält und einen USB-Reset empfangen hat. Auch wenn schwerwiegende Fehler aufgetreten sind, muss sie immer erreichbar und ansprechbar sein.
+
 ## Elektrische Hintergründe
 
 ![Usb_kabel_beschriftet.jpg](http://upload.wikimedia.org/wikipedia/de/a/a7/Usb_kabel_beschriftet.jpg)
@@ -176,11 +212,11 @@ Einige Geräte, wie z. B. Tastaturen oder Mäuse, können auch eigenmächtig ei
 
 Bei High-Speed-Geräten entspricht das Suspendsignal dem Resetsignal. Das Gerät beginnt also zuerst einen Reset, indem es sich in den Full-Speed-Modus begibt. Das heißt auch, dass der Pull-Up-Widerstand an D+ angeschlossen wird. Da sich die Datenleitungen im Idle-Zustand befinden, wird diese Spannung dann auch auf den Datenleitungen zu messen sein, wenn es sich um einen Suspend handelt. Bei einem Reset hingegen treibt der Hub aktiv SE0 und somit befinden sich die Leitungen bei einem Suspend nach dem Anschluss des Pull-Up-Widerstands im J-Zustand, bei einem Reset hingegen im SE0-Zustand.
 
-Hat das Gerät ein Reset entdeckt, so fährt es wie vorgesehen fort (s. [\#Reset](#reset)), wenn nicht, tritt es als Full-Speed-Gerät in den Suspendmodus ein, beim Resume muss es allerdings wieder in den High-Speed-Modus schalten.
+Hat das Gerät ein Reset entdeckt, so fährt es wie vorgesehen fort (s. [Reset](#reset)), wenn nicht, tritt es als Full-Speed-Gerät in den Suspendmodus ein, beim Resume muss es allerdings wieder in den High-Speed-Modus schalten.
 
 ## Protokoll
 
-USB gleicht weniger einem klassischen Bus wie der [seriellen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") oder der [parallelen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle"), sondern eher einem Netzwerkprotokoll. Es gibt Zieladressen (könnte man als eine Art IP-Adresse werten), sog. Endpoints (entsprechen den von TCP oder UDP bekannten Ports) und die gesamte Übertragung findet in Paketen gekapselt statt. Allerdings besitzt USB eine wichtige Eigenschaft eines Bus: Es gibt Busmaster, und zwar genau einen. Dieser wird im Allgemeinen Host genannt, nur er darf Übertragungen initiieren &#150; kein Gerät darf dies (im klassischen USB). Damit haben wir uns schon mal einen groben Überblick verschafft und können jetzt voll einsteigen.
+USB gleicht weniger einem klassischen Bus wie der [seriellen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") oder der [parallelen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle"), sondern eher einem Netzwerkprotokoll. Es gibt Zieladressen (könnte man als eine Art IP-Adresse werten), Endpunkte (entsprechen den von TCP oder UDP bekannten Ports) und die gesamte Übertragung findet in Paketen gekapselt statt. Allerdings besitzt USB eine wichtige Eigenschaft eines Bus: Es gibt Busmaster, und zwar genau einen. Dieser wird im Allgemeinen Host genannt, nur er darf Übertragungen initiieren &#150; kein Gerät darf dies (im klassischen USB). Damit haben wir uns schon mal einen groben Überblick verschafft und können jetzt voll einsteigen.
 
 ### Bit- und Bytereihenfolge
 
@@ -259,8 +295,8 @@ Als nächstes folgt ein Feld, dass den Typ des Pakets anzeigt. Es ist 8 Bit lang
 | Token | SETUP | 0x2D | Beginnt einen Setuptransfer und gibt Informationen darüber an das Gerät aus |
 | Data | DATA0 | 0xC3 | Ein Datenpaket mit dem Data-Toggle-Bit 0. |
 | Data | DATA1 | 0x4B | Ein Datenpaket mit dem Data-Toggle-Bit 1. |
-| Data | DATA2 | 0x87 | Ein Datenpaket für High-Speed-Isochronoustransfers. |
-| Data | MDATA | 0x0F | Ein Datenpaket für High-Speed-SPLIT-Isochronoustransfers. |
+| Data | DATA2 | 0x87 | Ein Datenpaket für High-Speed-Isochronoustransfers, die eine hohe Bandbreite benötigen. |
+| Data | MDATA | 0x0F | Ein Datenpaket für High-Speed-SPLIT-Isochronoustransfers, die eine hohe Bandbreite benötigen. |
 | Handshake | ACK | 0xD2 | Bestätigung eines fehlerfrei empfangenen Pakets. |
 | Handshake | NAK | 0x5A | Daten wurden nicht akzeptiert, entspricht meistens einer Art EAGAIN, d. h., die Daten sollten zu einem späteren Zeitpunkt nochmals gesendet werden |
 | Handshake | STALL | 0x1E | Ein schwerwiegender Fehler ist aufgetreten und der Ziel-Endpoint kann nicht verwendet werden, bis er explizit wieder freigegeben wird, außer beim Endpoint 0, hier wird einfach der aktuelle Controltransfer als ungültig abgewiesen. |
@@ -268,7 +304,7 @@ Als nächstes folgt ein Feld, dass den Typ des Pakets anzeigt. Es ist 8 Bit lang
 | Special | PRE | 0x3C | Beginnt einen Low-Speed-Transfer über einen Full-Speed-Bus. |
 | Special | ERR | 0x3C | Zeigt einen Fehler bei einer SPLIT-Transaktion an (benutzt die gleiche PID wie PRE, kann aber nicht verwechselt werden) |
 | Special | SPLIT | 0x78 | Beginnt eine SPLIT-Transaktion (also einen Full- oder Low-Speed-Transfer über einen High-Speed-Bus). |
-| Special | PING | 0xB4 | Wird zur High-Speed-Flusskontrolle eingesetzt (s. [entsprechender Abschnitt](#high-speed)). |
+| Special | PING | 0xB4 | Wird zur High-Speed-Flusskontrolle eingesetzt (s. [entsprechender Abschnitt](#flusskontrolle)). |
 
 #### ADDR
 
@@ -325,6 +361,16 @@ Nicht alle Felder werden gleichzeitig verwendet. Bei welchem Pakettyp welches Fe
 | SPLIT | x |  |  |  | 5 |
 | PING | x | x |  |  | 5 |
 
+  
+
+### Senden eines USB-Pakets
+
+Ein USB-Paket wird immer an eine bestimmte Pipe gesendet. Diese Pipe wird durch Zieladresse, Endpunktnummer und Richtung des Transfers eindeutig identifiziert. Einige Pakete wie die Datenpakete besitzen keine Zieladresse etc., deren Ziel muss also durch vorherige Pakete wie IN oder OUT definiert werden.
+
+#### MPS
+
+Zu beachten ist, dass ein USB-Gerät die Daten eines Datenpakets irgendwie aufnehmen muss. Es besitzt dafür für jeden Endpunkt einen FIFO-Speicher, dieser ist jedoch begrenzt. Daher kann ein Paket während eines Transfers nur eine bestimmte Menge an Daten aufnehmen, bis der Speicher voll ist, oder senden, bis er leer ist. Diese Datenmenge wird als *Maximum Packet Size* (maximale Paketgröße, kurz MPS) eines Endpunkts und damit auch einer Pipe bezeichnet. Ist ein Paket mit 64 Byte Daten beispielsweise an einen Endpunkt mit einer 32-Byte-FIFO gerichtet, muss das Gerät zwangsläufig die Hälfte der Daten verwerfen &#150; und damit natürlich das gesamte Paket, denn nur die Hälfte der Daten bringt natürlich nichts.
+
 ## USB-Transfer
 
 Ein richtiger USB-Transfer besteht allerdings nicht nur aus einzelnen Paketen. Es werden mehrere hintereinandergeschaltet, um eine richtige Transaktion durchzuführen.
@@ -354,9 +400,91 @@ Es gibt auch Datentransfers ohne Handshake, diese werden bei Isochronoustransfer
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 42 | 7 | &#151; | 0x13 |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
 
+### Fehlerbehandlung
+
+Während der Übertragung eines Paketes können verschiedenste Fehler auftreten, die mit dem Handshake erkannt werden können.
+
+#### Daten korrekt empfangen und akzeptiert
+
+Dies ist der einfachste Fall. Hier wird einfach ein ACK geschickt.
+
+#### Ungültiges PID-Feld oder Adresse/Endpunkt nicht vorhanden
+
+In diesem Fall wird kein Handshake gesendet. Das Ausbleiben zeigt dem Sender, dass solch ein Fehler aufgetreten ist und er beginnt die Übertragung erneut.
+
+#### CRC-Fehler
+
+Wird der CRC-Wert als nicht zum Paket gehörig erkannt, so wird ebenfalls kein Handshake gesendet. Auch dies veranlasst dann den Host, das Paket neu zu senden.
+
+#### Daten können nicht empfangen werden
+
+Wenn die Daten zwar korrekt sind, aber aus verschiedensten Gründen derzeit nicht empfangen (oder bei IN-Transfers nicht gesendet) werden können, wird ein NAK gesendet. Unter Full- oder Low-Speed werden die Daten in diesem Fall später nochmals übertragen, unter High-Speed beginnt dann das PING-Protokoll (s. [Flusskontrolle](#flusskontrolle)).
+
+#### Handshake geht verloren
+
+Dies ist immer wieder ein besonders komplizierter Fall. Beim Netzwerkprotokoll TCP wurde dieses Problem gelöst, indem jedes Paket eine eindeutige Nummer erhält. Geht hier ein Handshake verloren, sendet der Sender das ganze Paket noch einmal, der Empfänger akzeptiert dieses zweite Paket mit einem ACK (da es ja korrekt ist) und verwirft es erst dann, da die Daten bereits korrekt empfangen wurden (oder auch nicht, dann wird das Paket eben entgegengenommen). Auch bei USB hat man sich für eine ähnliche Lösung entschieden, wenngleich die eindeutige Identifizierung nicht wie bei TCP über die Position im Datenstrom, sondern über ein sogenanntes Toggle-Bit geschieht.
+
+##### Data-Toggle
+
+Wie oben bereits beschrieben, gibt es verschiedene Datenpakete. Für die meisten Transfers sind allerdings nur DATA0 und DATA1 interessant (DATA2 und MDATA werden nur in Spezialfällen eingesetzt). Die Ziffer hinter dem DATA gibt den Zustand des sogenannten Toggle-Bits an, 0 oder 1. Dieses Bit dient wie die Sequenznummer bei TCP der eindeutigen Identifizierung eines Pakets, wobei diese Eindeutigkeit bei USB erstmal nicht ganz so gegeben ist. Dies erklärt sich aber dadurch, dass TCP über große Entfernungen verläuft, sodass der Sender die Handshakes des Empfängers selten abwartet, bevor er das nächste Paket schickt. Bei USB sind die Entfernungen und damit auch die Laufzeiten wesentlich geringer, sodass nach jeder Übertragung eines Datenpakets erst einmal das Handshake abgewartet wird. Daher genügt es, ein Datenpaket vom nächsten unterscheiden zu können.
+
+Für jede Pipe gibt es ein Data-Toggle. Es wird nach dem erfolgreichen Empfang eines Pakets oder eines Handshakes invertiert. Dies sorgt dafür, dass verlorene Handshakes zu keiner Katastrophe führen. Stellen wir uns folgende Übertragung mit der hypothetischen MPS von 4 Byte vor:
+
+| Richtung | PID | ADDR | ENDP | Daten | CRC |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | --------------------- | -------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | OUT | 2 | 4 | &#151; | 0x1F |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x2A 0x42 0x66 0xFF | 0x373C |
+| *Anmerkung:* Hier wird jetzt das Toggle-Bit beim Gerät invertiert. |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| *Anmerkung:* Und hier wird auch das Toggle-Bit beim Host invertiert. |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | OUT | 2 | 4 | &#151; | 0x1F |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| *Anmerkung:* Invertierung des Toggle-Bits beim Gerät |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| *Anmerkung:* Jetzt nehmen wir an, dass dieses ACK-Handshake verlorengeht. Der Host wird darauf reagieren, indem er sein Toggle-Bit nicht invertiert und die Daten noch einmal sendet, in der Annahme, dass ein Fehler aufgetreten ist: |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | OUT | 2 | 4 | &#151; | 0x1F |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| *Anmerkung:* Das Gerät erkennt nun, dass der Host das Handshake nicht erhalten hat, da schon wieder ein DATA1-Paket ankommt. Daraufhin lässt es sein Toggle-Bit auf 0 und schickt ein ACK, da die Daten ansonsten korrekt empfangen wurden. |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+
+*Anmerkung:* Dieses ACK kommt an, also invertiert der Host sein Toggle-Bit und alle sind glücklich.
+
+Das ganze funktioniert natürlich auch in die andere Richtung:
+
+| Richtung | PID | ADDR | ENDP | Daten | CRC |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | -------- | -------- | --------------------- | -------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 2 | 4 | &#151; | 0x1F |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x2A 0x42 0x66 0xFF | 0x373C |
+| *Anmerkung:* Hier wird jetzt das Toggle-Bit beim Host invertiert. |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| *Anmerkung:* Und hier wird auch das Toggle-Bit beim Gerät invertiert. |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 2 | 4 | &#151; | 0x1F |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| *Anmerkung:* Invertierung des Toggle-Bits beim Host |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| *Anmerkung:* Wieder nehmen wir an, dass dieses ACK-Handshake verlorengeht. Das Gerät wird darauf reagieren, indem es sein Toggle-Bit nicht invertiert und die Daten noch einmal sendet: |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 2 | 4 | &#151; | 0x1F |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| *Anmerkung:* In diesem Fall erkennt nun der Host, dass das Gerät das Handshake nicht erhalten hat, da schon wieder ein DATA1-Paket ankommt. Daraufhin lässt er sein Toggle-Bit auf 0 und schickt ein ACK, da die Daten ansonsten korrekt empfangen wurden. |  |  |  |  |  |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+
+*Anmerkung:* Dieses ACK kommt an, also invertiert das Gerät sein Toggle-Bit und auch hier: Friede, Freude, Eierkuchen.
+
+Hinweis: Man könnte sich fragen, warum der Host nach dem nicht angekommenen ACK ein IN sendet, wenn er doch alle Daten hat. Wir nehmen hier an, dass er eben noch nicht alle Daten hat und ein weiteres Paket erwartet. Wenn er allerdings bereits alle Daten empfangen hätte, würde er die Übertragung einfach beenden und das Gerät würde anhand der verstreichenden Zeitspanne bemerken, dass etwas nicht stimmt und somit seine Daten verwerfen.
+
+#### False EOPs
+
+Ja, auch das gibs: Falsche EOP-Signale. Durch etwas Rauschen kann es schnell passieren, dass mittem im Paket plötzlich ein SE0 auftritt und der Empfänger ein EOP registriert. Dies ist allerdings selten ein Problem, da das Paket dann entweder völlig zerstückelt ist oder einfach ein CRC-Fehler auftritt. Sendet der Host, so wird das Gerät kein Handshake senden und der Host initiiert ja sowieso erst wieder einen Transfer, wenn er mit dem Senden tatsächlich fertig ist. Ist der Gerät der Sender, so ist es schwieriger. In diesem Fall muss der Host darauf achten, bei solch einem CRC-Fehler 16 Bitzeiten zu warten. Tritt während dieser Zeit kein Verkehr auf dem USB auf, so darf er das nächsten Token senden, ansonsten muss er warten, bis das nächste EOP auftritt (16 Bitzeiten reichen aus, da bereits nach sechs Bitzeiten dank des Bitstuffings ein Wechsel in der Spannung auftreten muss, wenn Daten übertragen werden). Bei High-Speed-Transfers muss der Host einfach warten, bis die Datenleitungen zu SE0 zurückkehren (bei High-Speed tritt solche ein Fehler auch nicht aufgrund von SE0, sondern wegen eines Bitstufffehlers auf).
+
+#### Babble
+
+Ein Babble ist ein äußerst schwerwiegender Fehler. Dieser tritt auf, wenn ein Gerät entweder einfach mehr Daten sendet als erwartet, oder wenn am Ende eines Frames noch Busaktivität herrscht &#150; laut USB-Spezifikation sind solche Zustände „inakzeptabel“. Der Hub, an dem das Gerät hängt, muss den entsprechenden Port deaktivieren und der Hostcontroller wird dem Treiber diesen schwerwiegenden Fehler melden und den aktuellen Transfer zum Gerät abbrechen.
+
 ## Zusammengesetzte Transfers
 
 Diese kleinen Bausteine werden dann zu den Transfertypen zusammengesetzt.
+
+Hinweis: *Im Folgenden wird mit einem „SETUP-Paket“ die Gesamtheit eines SETUP-Tokens, eines DATA0-Pakets vom Host zum Gerät und eines Handshakes vom Gerät zum Host bezeichnet. Ein „IN-Paket“ ist die Gesamtheit eines IN-Tokens, eines DATA0- oder DATA1-Pakets (wenn nicht explizit anders angegeben) vom Gerät zum Host und eines Handshakes vom Host zum Gerät. Schlussendlich ist ein „OUT-Paket“ die Gesamtheit eines OUT-Tokens, eines DATA0- oder DATA1-Pakets (wieder, wenn nicht anders angegeben) vom Host zum Gerät und eines Handshakes vom Gerät zum Host.*
 
 ### Controltransfers
 
@@ -367,6 +495,7 @@ Ein Controltransfer beginnt mit einer Setupstage, danach folgt die Datenstage un
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | SETUP | 1 | 0 | &#151; | 0x1D |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x80 0x06 0x00 0x01 0x00 0x00 0x12 0x00 | 0x1A4E |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| *Anmerkung:* Setupphase abgeschlossen. |  |  |  |  |  |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 1 | 0 | &#151; | 0x1D |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x12 0x01 0x00 0x01 0x00 0x00 0x00 0x08 | 0x3718 |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
@@ -374,13 +503,24 @@ Ein Controltransfer beginnt mit einer Setupstage, danach folgt die Datenstage un
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x27 0x06 0x01 0x00 0x00 0x00 0x03 0x02 | 0xA7A8 |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 1 | 0 | &#151; | 0x1D |
-| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x01 0x01 | 8307 |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x01 0x01 | 0x8307 |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| *Anmerkung:* Datenphase abgeschlossen, da in der Setupphase 18 Bytes angefordert wurden. |  |  |  |  |  |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | OUT | 1 | 0 | &#151; | 0x1D |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | &#151; | &#151; |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
+*Anmerkung:* Handshakephase abgeschlossen.
+
 Wie man sieht, ist das letzte Datenpaket ein Paket ohne Inhalt. Hier wird immer die entgegengesetzte Richtung der Datenstage genommen (IN in der Datenstage → OUT in der Handshakestage und umgekehrt). Mit diesem wird noch einmal bestätigt, dass alle Daten korrekt empfangen wurden und auch korrekt interpretiert werden können (falls nicht, kommt ein STALL).
+
+Hier nochmal die Zusammenfassung eines Controltransfers:
+
+| Phase | Pakettyp | Bedeutung |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Setup | SETUP | Hier wird ein 8 Byte langes SETUP-Paket zum Gerät gesendet, dessen Aufbau für alle Controltransfers einheitlich ist und u. a. die Länge und Richtung des Transfers angibt. Unterstützt das Gerät die Funktion nicht, kann sie hier bereits ein STALL zurückgeben. |
+| Daten | IN/OUT | Je nach in der Setupphase angegebenen Richtung werden nun Daten ein- oder ausgegeben. Ist die Länge der Datenphase im SETUP-Paket als 0 angegeben worden, existiert diese Phase nicht. |
+| Handshake | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. |
 
 ## Links
 
@@ -393,6 +533,6 @@ Wie man sieht, ist das letzte Datenpaket ein Paket ohne Inhalt. Hier wird immer 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7302/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7305/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7302; parent 7291; 2010-03-06T23:45:05Z -->
+<!-- MediaWiki page 1690; revision 7305; parent 7302; 2010-03-07T12:47:28Z -->
