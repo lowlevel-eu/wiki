@@ -36,7 +36,7 @@ USB 3.0 ist noch sehr spärlich verfügbar. Erste Spezifikationen gab es 2008, U
 
 ### USB 2.0
 
-USB 2.0 wurde im Jahr 2000 veröffentlicht und bot erstmal High-Speed mit einer Übertragungsrate von 480 MBit/s an.
+USB 2.0 wurde am 27.04.2000 von Compaq, Hewlett-Packard, Intel, Lucent, Microsoft, NEC und Philips veröffentlicht und bot erstmal "High-Speed" mit einer Übertragungsrate von 480 MBit/s an. In der Realität findet man beispielsweise bei den beliebten USB-Memorysticks Schreibraten von 3 bis 6 MB/s und Leseraten von 20 bis 40 MB/s.
 
 ### USB 1.1
 
@@ -848,6 +848,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7315; parent 7314; 2010-03-07T22:23:34Z -->
+<!-- MediaWiki page 1690; revision 7322; parent 7315; 2010-03-07T23:32:31Z -->
