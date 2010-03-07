@@ -594,7 +594,7 @@ Jetzt lassen wir die Leerzeichen weg und führen das Bitstuffing durch (das imme
     100001110101010100000111
 
     11000011001100101111011011101110001101101010011001101110101001100011011011111100
-    0100111100000001
+    00100111100000001
 
     01001011
 
@@ -603,15 +603,15 @@ Jetzt zum NRZI mit SOP und EOP (Leerzeichen zur Verdeutlichung, zuerst Idle-Zust
     J KJKJKJKK KJKJKKKKJJKKJJKKJKJKJJJJ __J
 
     J KJKJKJKK KKJKJKKKJKKKJKKJJJJJKKKJJJJKKKKJKJJJKKKJJKKJKKKJKKKJJJJKKJJKJJJKJKKKJ
-    JJKKKKKKKJKJJKJJJJJKJKJKJKK __J
+    JJKKKKKKKJKJKKJKKKKKJKJKJKJJ __J
 
     J KJKJKJKK JJKJJKKK __J
 
 Lassen wir jetzt die Leerzeichen und auch die Pausen zwischen den Paketen weg (bzw. setzen da 16 Bitzeiten J hin):
 
     JJJJJJJJJJJJJJJJKJKJKJKKKJKJKKKKJJKKJJKKJKJKJJJJ__JJJJJJJJJJJJJJJJKJKJKJKKKKJKJK
-    KKJKKKJKKJJJJJKKKJJJJKKKKJKJJJKKKJJKKJKKKJKKKJJJJKKJJKJJJKJKKKJJJKKKKKKKJKJJKJJJ
-    JJKJKJKJKK__JJJJJJJJJJJJJJJJKJKJKJKKJJKJJKKK__JJJJJJJJJJJJJJJJ
+    KKJKKKJKKJJJJJKKKJJJJKKKKJKJJJKKKJJKKJKKKJKKKJJJJKKJJKJJJKJKKKJJJKKKKKKKJKJKKJKK
+    KKKJKJKJKJJ__JJJJJJJJJJJJJJJJKJKJKJKKJJKJJKKK__JJJJJJJJJJJJJJJJ
 
 Jetzt ein hübscheres „Diagramm“, auf dem man den Zustand der D+- und D--Leitung sehen kann (Full-Speed!):
 
@@ -623,9 +623,9 @@ Jetzt ein hübscheres „Diagramm“, auf dem man den Zustand der D+- und D--Lei
 
     D- -_---_---_--_____---____----_-___---__--_---_---____--__-___-_---___-------_-
 
-    D+ --_-----_-_-_-____----------------_-_-_-__--_--_____----------------
+    D+ -__-_____-_-_-_--__----------------_-_-_-__--_--_____----------------
 
-    D- __-_____-_-_-_--__________________-_-_-_--__-__---__________________
+    D- _--_-----_-_-_-____________________-_-_-_--__-__---__________________
 
 So, wer das jetzt unbedingt ausprobieren will, kann das ja gerne tun, sich eines dieser extrem teuren USB-Analysegeräte kaufen, an 5 V anschließen und dann zwei Taster mit 12 MHz betätigen. Aber Achtung: Dies kann zu akuten Muskelbeschwerden im Armbereich führen.
 
@@ -640,6 +640,6 @@ So, wer das jetzt unbedingt ausprobieren will, kann das ja gerne tun, sich eines
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7309; parent 7308; 2010-03-07T14:51:30Z -->
+<!-- MediaWiki page 1690; revision 7310; parent 7309; 2010-03-07T15:01:28Z -->
