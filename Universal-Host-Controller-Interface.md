@@ -266,6 +266,6 @@ An diesem Punkt arbeitet der UHC die Frameliste und alle verlinkten Warteschlang
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7292; parent 7244; 2010-03-06T19:37:15Z -->
+<!-- MediaWiki page 1576; revision 7318; parent 7292; 2010-03-07T22:36:46Z -->
