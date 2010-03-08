@@ -77,6 +77,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Selbst eingetragen, nun löffel ich die Suppe auch selbst aus. Wer helfen kann und will, ist natürlich herzlich eingeladen! ;-) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 01:21, 6. Mär. 2010 (CET)
 - APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
   - Wäre ACPI nicht besser? Dazu gibt es im OS-Dev-Forum immerhin ein Beispiel (dazu könnte man ja einfach einen Link im ACPI-Artikel setzen): [\[1\]](http://forum.osdev.org/viewtopic.php?f=1&t=16990&p=151565) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 14:47, 24. Feb. 2010 (CET)
+- Mich würde mal interessieren, wie man ein Programm für das eigenen OS portiert. Also mit einer Anleitung, wie man das dan compilern muss usw. --user94 21:14, 8. Mär. 2010 (CET)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -88,6 +89,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7312; parent 7272; 2010-03-07T15:08:38Z -->
+<!-- MediaWiki page 1518; revision 7341; parent 7312; 2010-03-08T20:14:29Z -->
