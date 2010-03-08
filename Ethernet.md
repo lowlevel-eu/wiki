@@ -1,6 +1,6 @@
 # Ethernet
 
-Ethernet ist eine Datenübertragungstechnik für kabelgebundene LANs. Bis heute wurden Geschwindigkeiten von 10 Mbit/s bis hin zu 10 Gbit/s spezifiziert. Es ist die meistverwendete LAN-Technik und hat andere Standards wie FDDI oder Token-Ring verdrängt. Diese werden nur noch in Spezialbereichen genutzt.
+Ethernet ist eine Datenübertragungstechnik für kabelgebundene LANs. Bis heute wurden Geschwindigkeiten von 10 Mbit/s bis hin zu 100 Gbit/s spezifiziert. Es ist die meistverwendete LAN-Technik und hat andere Standards wie FDDI oder Token-Ring verdrängt. Diese werden nur noch in Spezialbereichen genutzt.
 
 ## Ethernetpakete
 
@@ -33,7 +33,7 @@ Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-P
 
 Heutzutage wird Ethernet I kaum noch verwendet. Daher ist es ratsam, Ethernet-II-Pakete zu benutzen.
 
-An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Oftmals kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es an das Paket an.
+An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicher Weise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
 
 ## Weblinks
 
@@ -42,6 +42,6 @@ An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7130/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
 
-<!-- MediaWiki page 1876; revision 7130; parent 5619; 2010-02-21T11:10:49Z -->
+<!-- MediaWiki page 1876; revision 7326; parent 7130; 2010-03-08T12:00:15Z -->
