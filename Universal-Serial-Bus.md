@@ -139,7 +139,7 @@ Auf dem USB kann es also vier Zustände geben: SE0 (D+ = D-, beide niedrig), SE1
 
 ### Datenübertragung
 
-Daten werden, bevor sie über den USB verschickt werden, doppelt verschlüsselt:
+Daten werden, bevor sie über den USB verschickt werden, doppelt codiert:
 
 Zuerst findet ein sogenanntes Bitstuffing statt. Das heißt, nach sechs aufeinander folgenden Einsen im eingehenden Datenstrom wird automatisch eine Null eingefügt (unabhängig davon, ob das Bit danach wieder eine Eins wäre). Dies mag merkwürdig erscheinen, erklärt sich jedoch aus der zweiten Verschlüsselung, der NRZI-Kodierung.
 
@@ -848,6 +848,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7327/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7322; parent 7315; 2010-03-07T23:32:31Z -->
+<!-- MediaWiki page 1690; revision 7327; parent 7322; 2010-03-08T12:22:37Z -->
