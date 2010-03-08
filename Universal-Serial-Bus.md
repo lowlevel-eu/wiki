@@ -151,7 +151,7 @@ Zunächst müssen die Zeichen in einen Bitstrom umgewandelt werden. Da wir ASCII
 
     0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F
 
-Wir nehmen Little Endian, also wird daraus der Bitstrom:
+Wir nehmen Little Endian (s. auch [Bit- und Bytereihenfolge](#bit--und-bytereihenfolge)), also wird daraus der Bitstrom:
 
     001100101111011011101110001101101010011001101110101001100011011011111100
 
@@ -848,6 +848,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7338/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7338; parent 7327; 2010-03-08T17:40:34Z -->
+<!-- MediaWiki page 1690; revision 7340; parent 7338; 2010-03-08T19:23:41Z -->
