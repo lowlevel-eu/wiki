@@ -8,7 +8,7 @@ Es gibt im Grunde zwei Formen von Ethernetpaketen: Ethernet I und Ethernet II. B
 
 ### Ethernet I
 
-![ethernet1.png](http://freenet-homepage.de/xanclic/ethernet1.png)
+![Ethernet1.png](http://lowlevel.brainsware.org/wiki/images/8/89/Ethernet1.png)
 
 Dies ist die "Abbildung" eines Ethernet-I-Paketes. Den Teil, der aus den MAC-Adressen, dem Längenfeld, den Nutzdaten, dem PAD-Feld und der CRC32-Checksumme gebildet wird, nennt man Ethernetframe.
 
@@ -25,7 +25,7 @@ Dies ist die "Abbildung" eines Ethernet-I-Paketes. Den Teil, der aus den MAC-Adr
 
 ### Ethernet II
 
-![ethernet2.png](http://freenet-homepage.de/xanclic/ethernet2.png)
+![Ethernet2.png](http://lowlevel.brainsware.org/wiki/images/b/b9/Ethernet2.png)
 
 Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-Paket: Statt dem Längenfeld gibt es ein Typfeld, welches den Typ der Nutzdaten angibt. Der Wert im Typfeld ist stets größer als 0x0600 (1536), sodass zwischen Ethernet-I-Paketen (der Wert muss kleiner oder gleich 0x05DC (1500) sein) und zwischen Ethernet-II-Paketen unterschieden werden kann. Wichtige Typwerte sind 0x0800 ([IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol")) und 0x0806 ([ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "Address Resolution Protocol")).
 
@@ -33,7 +33,7 @@ Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-P
 
 Heutzutage wird Ethernet I kaum noch verwendet. Daher ist es ratsam, Ethernet-II-Pakete zu benutzen.
 
-An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicher Weise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
+An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicherweise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
 
 ## Weblinks
 
@@ -42,6 +42,6 @@ An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7332/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
 
-<!-- MediaWiki page 1876; revision 7326; parent 7130; 2010-03-08T12:00:15Z -->
+<!-- MediaWiki page 1876; revision 7332; parent 7326; 2010-03-08T12:53:04Z -->
