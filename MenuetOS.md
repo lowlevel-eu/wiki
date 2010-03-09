@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Ville Turjanmaa |
-| Akt. Version: | i386: 0.85<br>x86_64: 0.91J |
+| Akt. Version: | i386: 0.85<br>x86_64: 0.93B |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
@@ -39,7 +39,7 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 - IRC-, HTTP-, NNTP-, E-Mail- und TFTP-Clients
 - Freigestaltbare Programmfenster
 - Echtzeitdatenverarbeitung
-- USB-2.0-Support für High-Speed-Storage, Webcams und Drucker
+- USB-2.0-Support für High-Speed-Massenspeicher, -Webcams, -Drucker und -TV (mit DVB-T)
 - Passt unkomprimiert auf eine einzelne Diskette
 
 ## siehe auch
@@ -48,6 +48,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 6076; parent 5997; 2009-10-15T21:01:45Z -->
+<!-- MediaWiki page 1481; revision 7350; parent 6076; 2010-03-09T19:27:35Z -->
