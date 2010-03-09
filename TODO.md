@@ -79,6 +79,9 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Wäre ACPI nicht besser? Dazu gibt es im OS-Dev-Forum immerhin ein Beispiel (dazu könnte man ja einfach einen Link im ACPI-Artikel setzen): [\[1\]](http://forum.osdev.org/viewtopic.php?f=1&t=16990&p=151565) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 14:47, 24. Feb. 2010 (CET)
 - Mich würde mal interessieren, wie man ein Programm für das eigenen OS portiert. Also mit einer Anleitung, wie man das dan compilern muss usw. --user94 21:14, 8. Mär. 2010 (CET)
   - Wie sowas funktioniert dürfte sehr stark von Deinem OS abhängen. Allgemeine Anleitungen sind da IMHO unmöglich. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:16, 9. Mär. 2010 (CET)
+
+Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit dann z.B. fasm compilern? Weil da steht ja, dass man nicht viel dazu braucht.--user94 19:20, 9. Mär. 2010 (CET)
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -90,6 +93,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7345; parent 7341; 2010-03-09T16:16:23Z -->
+<!-- MediaWiki page 1518; revision 7347; parent 7345; 2010-03-09T18:20:35Z -->
