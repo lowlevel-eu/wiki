@@ -82,6 +82,8 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
 
 Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit dann z.B. [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") compilern? Weil da steht ja, dass man nicht viel dazu braucht.--user94 19:20, 9. Mär. 2010 (CET)
 
+Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembler.net/fasm-1.69.12.tar.gz) gegen die eigene libc.a. Bei anderen Sachen ist es aber eben um einiges komplizierter und weil es bei FASM so einfach ist, denke ich nicht, dass sich da eine Seite lohnt (wogegen es bei anderen Sachen eben, wie von Erik beschrieben, zu betriebssystemspezifisch ist). --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 20:30, 9. Mär. 2010 (CET)
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -93,6 +95,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7348; parent 7347; 2010-03-09T18:21:57Z -->
+<!-- MediaWiki page 1518; revision 7351; parent 7348; 2010-03-09T19:30:49Z -->
