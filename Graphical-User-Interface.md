@@ -8,18 +8,20 @@ Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](https://github
 
 ## Entwickeln einer GUI für das eigene OS
 
-Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwähnt wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")! Auch die GUI von [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") gehört nicht zum Kernel, wie oft angenommen wird (allerdings sind GUI und Kernel über die WinAPI und verschiedenste [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") eng miteinander verzahnt). Wer eine GUI für sein OS entwickeln möchte, benötigt folgendes in seinem Kernel:
+Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwähnt wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")! Auch die GUI von [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") gehört nicht zum Kernel, wie oft angenommen wird (allerdings sind GUI und Kernel über die WinAPI und verschiedenste [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") eng miteinander verzahnt).
+
+Wer eine GUI für sein OS entwickeln möchte, benötigt mindestens folgendes in seinem Kernel:
 
 - Vollständige [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") (am besten für User-Space-Programme)
 
-Dazu werden noch
+Dazu braucht man dann wahrscheinlich noch:
 
 - Grafiktreiber
 - libc
 - Sonstige Libs
 
-benötigt. Multitasking vor allem, weil die GUI, wenn sie als einziger Prozess ausgeführt werden würde, sich nicht mehr bedienen lassen würde, wenn ein anderes Programm gestartet wird (und auch dieses im Grunde nicht ausgeführt werden kann, weil es sich der Elemente der GUI bedient).
+Multitasking vor allem, weil die GUI, wenn sie als einziger Prozess ausgeführt werden würde, sich nicht mehr bedienen lassen würde, wenn ein anderes Programm gestartet wird (und auch dieses im Grunde nicht ausgeführt werden kann, weil es sich der Elemente der GUI bedient).
 
 ### Portieren oder selbst schreiben?
 
@@ -55,6 +57,6 @@ Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 5276; parent 5084; 2009-08-06T15:27:59Z -->
+<!-- MediaWiki page 1511; revision 7343; parent 5276; 2010-03-09T15:56:21Z -->
