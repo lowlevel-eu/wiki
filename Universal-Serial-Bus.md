@@ -32,19 +32,19 @@ USB ist sehr vielseitig verwendbar, es eignet sich z. B. für externe Festplatt
 
 ### USB 3.0
 
-USB 3.0 ist noch sehr spärlich verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 5,0 GBit/s (SuperSpeed) was durch die [8b10b-Codierung](http://de.wikipedia.org/wiki/8b10b-Code) 500 MByte/s Brutto-Transferrate ergibt. Zudem kann ein Gerät auf Anfrage bis zu 900 mA statt der bisherigen 500 mA erhalten. Damit lassen sich problemlos USB-Festplatten ohne externe Stromquelle anschließen.
+USB 3.0 ist noch sehr spärlich verfügbar. Erste Spezifikationen gab es 2008, USB 3.0 erlaubt eine Übertragungsrate von 5,0 GBit/s (Super-Speed) was durch die [8b10b-Codierung](http://de.wikipedia.org/wiki/8b10b-Code) 500 MByte/s Brutto-Transferrate ergibt. Diese Datenrate steht, im Gegensatz zu USB 1 und USB 2, in beiden Richtungen (vom Host zum Device und vom Device zum Host) gleichzeitig zur Verfügung, USB 3 ist [vollduplex](http://de.wikipedia.org/wiki/Duplex_%28Nachrichtentechnik%29) und nicht mehr [halbduplex](http://de.wikipedia.org/wiki/Duplex_%28Nachrichtentechnik%29) wie seine Vorgänger. Zudem kann ein Gerät auf Anfrage bis zu 900 mA statt der bisherigen 500 mA erhalten. Damit lassen sich problemlos USB-Festplatten ohne zusätzliche externe Stromquelle anschließen.
 
 ### USB 2.0
 
-USB 2.0 wurde am 27.04.2000 von Compaq, Hewlett-Packard, Intel, Lucent, Microsoft, NEC und Philips veröffentlicht und bot erstmal "High-Speed" mit einer Übertragungsrate von 480 MBit/s an. In der Realität findet man beispielsweise bei den beliebten USB-Memorysticks Schreibraten von 3 bis 6 MB/s und Leseraten von 20 bis 40 MB/s.
+USB 2.0 wurde 2000 veröffentlicht und bot erstmals "High-Speed" mit einer Übertragungsrate von 480 MBit/s was durch das Bitstuffing etwa 50 bis 55 MByte/s Brutto-Transferrate ergibt.
 
 ### USB 1.1
 
-USB 1.1 wurde 1998 veröffentlicht und behob einige Fehler und Unklarheiten
+USB 1.1 wurde 1998 veröffentlicht und behob einige Fehler und Unklarheiten von USB 1.0.
 
 ### USB 1.0
 
-USB 1.0 wurde 1996 von Intel veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. Es eignete sich wegen der langsamen Datenübertragung von 12 MBit/s nicht zum Anschluss von Festplatten.
+USB 1.0 wurde 1996 veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. USB 1.0 definiert zwei Übertragungsgeschwindigkeiten mit 12 MBit/s (Full-Speed) und 1,2 MBit/s (Low-Speed) was durch das Bitstuffing etwa 1,3 bis 1,4 MByte/s bzw. ca. 135 kByte/s Brutto-Transferrate ergibt. Aufgrund dieser langsamen Datenübertragung eignet sich USB 1 kaum zum Anschluss von Festplatten, Kameras oder anderen Geräte die größere Datenmengen transportieren.
 
 ## Vorwort
 
@@ -848,6 +848,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7340; parent 7338; 2010-03-08T19:23:41Z -->
+<!-- MediaWiki page 1690; revision 7352; parent 7340; 2010-03-09T19:37:29Z -->
