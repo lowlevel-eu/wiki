@@ -80,7 +80,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
 - Mich würde mal interessieren, wie man ein Programm für das eigenen OS portiert. Also mit einer Anleitung, wie man das dan compilern muss usw. --user94 21:14, 8. Mär. 2010 (CET)
   - Wie sowas funktioniert dürfte sehr stark von Deinem OS abhängen. Allgemeine Anleitungen sind da IMHO unmöglich. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:16, 9. Mär. 2010 (CET)
 
-Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit dann z.B. fasm compilern? Weil da steht ja, dass man nicht viel dazu braucht.--user94 19:20, 9. Mär. 2010 (CET)
+Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit dann z.B. [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") compilern? Weil da steht ja, dass man nicht viel dazu braucht.--user94 19:20, 9. Mär. 2010 (CET)
 
 - Hier kommt dein Wunsch hin ;)
 
@@ -93,6 +93,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7347; parent 7345; 2010-03-09T18:20:35Z -->
+<!-- MediaWiki page 1518; revision 7348; parent 7347; 2010-03-09T18:21:57Z -->
