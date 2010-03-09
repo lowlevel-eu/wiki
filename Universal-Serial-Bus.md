@@ -44,7 +44,7 @@ USB 1.1 wurde 1998 veröffentlicht und behob einige Fehler und Unklarheiten von 
 
 ### USB 1.0
 
-USB 1.0 wurde 1996 veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. USB 1.0 definiert zwei Übertragungsgeschwindigkeiten mit 12 MBit/s (Full-Speed) und 1,2 MBit/s (Low-Speed) was durch das Bitstuffing etwa 1,3 bis 1,4 MByte/s bzw. ca. 135 kByte/s Brutto-Transferrate ergibt. Aufgrund dieser langsamen Datenübertragung eignet sich USB 1 kaum zum Anschluss von Festplatten, Kameras oder anderen Geräte die größere Datenmengen transportieren.
+USB 1.0 wurde 1996 veröffentlicht und diente (wie auch noch heute) zum Anschluss von Peripheriegeräten an den PC. USB 1.0 definiert zwei Übertragungsgeschwindigkeiten mit 12 MBit/s (Full-Speed) und 1,5 MBit/s (Low-Speed) was durch das Bitstuffing etwa 1,3 bis 1,4 MByte/s bzw. ca. 135 kByte/s Brutto-Transferrate ergibt. Aufgrund dieser langsamen Datenübertragung eignet sich USB 1 kaum zum Anschluss von Festplatten, Kameras oder anderen Geräten, die größere Datenmengen transportieren.
 
 ## Vorwort
 
@@ -848,6 +848,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7352; parent 7340; 2010-03-09T19:37:29Z -->
+<!-- MediaWiki page 1690; revision 7353; parent 7352; 2010-03-09T19:46:50Z -->
