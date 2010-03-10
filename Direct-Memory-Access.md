@@ -34,9 +34,7 @@ ISA-DMA wird in heutigen PCs nur noch für das Floppy-Laufwerk und ganz selten f
 
 Da bei PCI-DMA jedes Gerät eine eigene Implementierung hat, kann man dazu kaum etwas allgemeines vermitteln. Als einfaches Beispiel kann z. B. die EHCI-Spezifikation gelten; dort wird gezeigt, wie alle relevanten Informationen über die zu erledigenden Arbeiten des EHCI-Host-Controllers und die zu transferierenden Daten in entsprechenden Strukturen im Arbeitsspeicher untergebracht sind. Auf diese Strukturen kann die Software mit ganz normalen Speicherzugriffen arbeiten und auch der EHCI-Host-Controller liest und modifiziert diese Strukturen mit eigenen Speicherzugriffen (eben als Busmaster) auf den Arbeitsspeicher.
 
-Eine ganz wesentliche Eigenschaft nahezu aller PCI-DMA-Implementierungen ist, dass die zu transferierenden Daten nicht an einem Stück im Arbeitsspeicher vorliegen müssen. Dieses Feature wird oft als *Scatter/Gatter* bezeichnet. Dabei bekommt das PCI-Gerät nicht einfach nur gesagt, wo die Daten liegen bzw. hingeschrieben werden sollen, sondern es wird eine Liste mit einem oder mehreren Pointern/Größenangaben zu den einzelnen Datenhäppchen übergeben, welche das PCI-Gerät dann selbstständig abarbeitet. Dieses Feature ist deshalb so wichtig, weil in modernen Betriebssystemen das [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") benutzt wird und es daher nur sehr selten vorkommt, dass Daten, die im virtuellen Adressraum der Software am Stück vorliegen, auch physisch an einem Stück im Speicher liegen.
-
-  
+Eine ganz wesentliche Eigenschaft nahezu aller PCI-DMA-Implementierungen ist, dass die zu transferierenden Daten nicht an einem Stück im Arbeitsspeicher vorliegen müssen. Dieses Feature wird oft als "*Scatter/Gather*" bezeichnet. Dabei bekommt das PCI-Gerät nicht einfach nur gesagt, wo die Daten liegen bzw. hingeschrieben werden sollen, sondern es wird eine Liste mit einem oder mehreren Pointern+Größenangaben zu den einzelnen Datenhäppchen übergeben, welche das PCI-Gerät dann selbstständig abarbeitet. Dieses Feature ist deshalb so wichtig, weil in modernen Betriebssystemen das [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") benutzt wird und es daher nur sehr selten vorkommt, dass Daten, die im virtuellen Adressraum der Software am Stück vorliegen, auch physisch an einem Stück im Speicher liegen.
 
 ## ISA-DMA Controller
 
@@ -167,6 +165,6 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7197; parent 7196; 2010-02-28T18:08:30Z -->
+<!-- MediaWiki page 1555; revision 7357; parent 7197; 2010-03-10T11:16:44Z -->
