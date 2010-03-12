@@ -6,6 +6,10 @@ Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema 
 
 Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
 
+**Achtung!**
+
+An diesem Artikel wird derzeit vor allem von [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") aktiv gearbeitet. Melde dich daher entweder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/1815/index.html "Diskussion:Universal Serial Bus"), bevor du ihn veränderst (wenn ich nicht im IRC bin, dann kannst du ihn auch verändern, weil ich dann sehr wahrscheinlich gar nicht online bin).
+
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
 *Nein, sie ist noch nicht komplett, man kann es aber schonmal sagen: Low- und Full-Speed werden hier detailliert beschrieben, High-Speed in den meisten Fällen auch relativ genau, wäre aber zu verbessern. Zu SuperSpeed jedoch fehlt jegliche Information (außer den bekannten Consumerinfos, die man auch von Wikipedia bekommen kann), das wäre aber schon nett.*
@@ -489,7 +493,7 @@ Das ganze funktioniert natürlich auch in die andere Richtung:
 
 Hinweis: Man könnte sich fragen, warum der Host nach dem nicht angekommenen ACK ein IN sendet, wenn er doch alle Daten hat. Wir nehmen hier an, dass er eben noch nicht alle Daten hat und ein weiteres Paket erwartet. Wenn er allerdings bereits alle Daten empfangen hätte, würde er die Übertragung einfach beenden und das Gerät würde anhand der verstreichenden Zeitspanne bemerken, dass etwas nicht stimmt und somit seine Daten verwerfen.
 
-Es gibt für die verschiedenen Transferarten verschiedene Regeln, wann das Toggle-Bit auf einen definierten Zustand gesetzt wird. Bei Controltransfers wird das SETUP-Paket mit DATA0 versendet, danach gelten die normalen Regeln, bis zum Handshake, das immer mit DATA1 versehen wird. Das Toggle-Bit von Bulkendpunkten wird auf 0 gesetzt, sobald die aktuelle Konfiguration gewechselt wird, gleiches gilt für Interruptendpunkte.
+Es gibt für die verschiedenen Transferarten verschiedene Regeln, wann das Toggle-Bit auf einen definierten Zustand gesetzt wird. Bei Controltransfers wird das SETUP-Paket mit DATA0 versendet, danach gelten die normalen Regeln, bis zur Statusphase, deren Paket immer mit DATA1 versehen wird. Das Toggle-Bit von Bulkendpunkten wird auf 0 gesetzt, sobald die aktuelle Konfiguration gewechselt wird, gleiches gilt für Interruptendpunkte.
 
 ###### Isochronous
 
@@ -515,7 +519,7 @@ Hinweis: *Im Folgenden wird mit einem „SETUP-Paket“ die Gesamtheit eines SET
 
 ### Controltransfers
 
-Ein Controltransfer beginnt mit einer Setupstage, danach folgt die Datenstage und zuletzt kommt noch eine Handshakestage, die aber nichts mit den Handshakepaketen zu tun hat. Die in der Setupstage verwendeten Datenpakete sind immer DATA0, danach alterniert der Wert (DATA0/DATA1) und das letzte Paket ist immer DATA1. Daraus ergibt sich ein Gesamttransfer wie der dieses Beispiel, das den Device-Descriptor eines Geräts einliest, wobei hier für den Endpunkt 0 eine maximale Paketgröße von 8 Byte angenommen wird:
+Ein Controltransfer beginnt mit einer Setupphase, danach folgt die Datenphase und zuletzt kommt noch eine Statusphase. Die in der Setupphase verwendeten Datenpakete sind immer DATA0, danach alterniert der Wert (DATA0/DATA1) und das letzte Paket (Statusphase) ist immer DATA1. Daraus ergibt sich ein Gesamttransfer wie der dieses Beispiel, das den Device-Descriptor eines Geräts einliest, wobei hier für den Endpunkt 0 eine maximale Paketgröße von 8 Byte angenommen wird:
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ----------------------------------------- | -------- |
@@ -537,17 +541,17 @@ Ein Controltransfer beginnt mit einer Setupstage, danach folgt die Datenstage un
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | &#151; | &#151; |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
-*Anmerkung:* Handshakephase abgeschlossen.
+*Anmerkung:* Statusphase abgeschlossen.
 
-Wie man sieht, ist das letzte Datenpaket ein Paket ohne Inhalt. Hier wird immer die entgegengesetzte Richtung der Datenstage genommen (IN in der Datenstage → OUT in der Handshakestage und umgekehrt). Mit diesem wird noch einmal bestätigt, dass alle Daten korrekt empfangen wurden und auch korrekt interpretiert werden können (falls nicht, kommt ein STALL).
+Wie man sieht, ist das letzte Datenpaket ein Paket ohne Inhalt. Hier wird immer die entgegengesetzte Richtung der Datenphase genommen (IN in der Datenphase → OUT in der Statusphase und umgekehrt). Mit diesem wird noch einmal bestätigt, dass alle Daten korrekt empfangen wurden und auch korrekt interpretiert werden können (falls nicht, kommt ein STALL).
 
 Hier nochmal die Zusammenfassung eines Controltransfers:
 
 | Phase | Pakettyp | Bedeutung |
-| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Setup | SETUP | Hier wird ein 8 Byte langes SETUP-Paket zum Gerät gesendet, dessen Aufbau für alle Controltransfers einheitlich ist und u. a. die Länge und Richtung des Transfers angibt. Unterstützt das Gerät die Funktion nicht, kann sie hier bereits ein STALL zurückgeben. Für das SETUP-Paket wird immer DATA0 verwendet. |
 | Daten | IN/OUT | Je nach in der Setupphase angegebenen Richtung werden nun Daten ein- oder ausgegeben. Ist die Länge der Datenphase im SETUP-Paket als 0 angegeben worden, existiert diese Phase nicht. Das erste Datenpaket der Datenphase ist immer DATA1, da das Toggle-Bit beim SETUP-Paket auf 0 gesetzt war. |
-| Handshake | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. In der Handshakephase wird immer DATA1 eingesetzt. |
+| Status | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. In der Statusphase wird immer DATA1 eingesetzt. |
 
 ### Bulktransfers
 
@@ -679,7 +683,7 @@ Der häufiger beschriebene Fall ist das Anstecken eines neuen Gerätes. Hier mus
 
 ### Wiederholung
 
-Im ersten [Controltransfer-Abschnitt](#controltransfers) wurde bereits gezeigt, dass jeder Controltransfer aus zwei oder drei Phasen besteht: Setup, Daten, Handshake. Die Datenphase ist dabei optional. Das Setuppaket gibt an, was das Gerät tun soll, ob es eine Datenphase gibt, in welche Richtung sie geht und welche Daten dabei ausgetauscht werden sollen.
+Im ersten [Controltransfer-Abschnitt](#controltransfers) wurde bereits gezeigt, dass jeder Controltransfer aus zwei oder drei Phasen besteht: Setup, Daten, Status. Die Datenphase ist dabei optional. Das Setuppaket gibt an, was das Gerät tun soll, ob es eine Datenphase gibt, in welche Richtung sie geht und welche Daten dabei ausgetauscht werden sollen.
 
 ### Setuppaket
 
@@ -697,6 +701,35 @@ Ein Setuppaket ist immer 8 Byte lang, sodass es von jedem Gerät unabhängig von
 
 #### Standardrequests
 
+##### GET_STATUS
+
+Gibt den Status des ausgewählten Empfängers zurück.
+
+| Feld | Wert |
+| --------------- | ------------------------------------------------------------------------ |
+| bmRequestType | • 00000000b<br>• 00000001b<br>• 00000010b<br> |
+| bmRequest | 0 |
+| wValue | 0 |
+| wIndex | • Gerät: 0<br>• Interface: Interface-ID<br>• Endpunkt: Endpunkt-ID<br> |
+| wLength | 2 |
+
+In der Datenphase wird dann der Status des Empfängers in zwei Bytes zurückgegeben.
+
+Empfänger ist ein Gerät:
+
+- Bit 0: Gesetzt, wenn das Gerät derzeit seinen Strom von einer externen Quelle bezieht, gelöscht, wenn es seinen Strom vom Bus bezieht.
+- Bit 1: Gibt an, ob das Gerät derzeit Remote-Wakeup durchführen kann (Bit wäre dann gesetzt und sonst gelöscht).
+- Alle anderen Bits sind reserviert.
+
+Empfänger ist ein Interface:
+
+- Alle Bits sind reserviert.
+
+Empfänger ist ein Endpunkt:
+
+- Bit 0: Ist gesetzt, wenn der Endpunkt derzeit gestallt, also gesperrt ist. Dies tritt meist aufgrund eines Funktionsfehlers auf, der nur durch den USB-Treiber wieder aufgehoben werden kann (per CLEAR_FEATURE).
+- Alle anderen Bits sind reserviert.
+
 ##### CLEAR_FEATURE
 
 Hebt einen bestimmten Zustand eines Geräts, Interfaces oder Endpunkts auf.
@@ -711,9 +744,34 @@ Hebt einen bestimmten Zustand eines Geräts, Interfaces oder Endpunkts auf.
 
 Es gibt keine Datenphase.
 
+Mögliche Zustände sind:
+
+- 0: ENDPOINT_HALT (für Endpunkte), wenn dieser Zustand gesetzt ist (vgl. [GET_STATUS](#get_status)), reagiert der Endpunkt auf jeden Transfer mit einem STALL-Handshake. Dieser Zustand kann nur durch ein ClearFeature(ENDPOINT_HALT) wieder aufgehoben werden, dabei wird das Data-Toggle-Bit der entsprechenden Pipe auf 0 gesetzt.
+- 1: DEVICE_REMOTE_WAKEUP (für Geräte), gibt an, ob das Gerät ein Remote-Wakeup durchführen darf. ClearFeature(DEVICE_REMOTE_WAKEUP) verbietet dies.
+
+##### SET_FEATURE
+
+Setzt einen bestimmten Zustand eines Geräts, Interfaces oder Endpunkts und ist somit das Gegenteil zu CLEAR_FEATURE.
+
+| Feld | Wert |
+| --------------- | ------------------------------------------------------------------------ |
+| bmRequestType | • 00000000b<br>• 00000001b<br>• 00000010b<br> |
+| bmRequest | 3 |
+| wValue | Zu setzender Zustand |
+| wIndex | • Gerät: 0<br>• Interface: Interface-ID<br>• Endpunkt: Endpunkt-ID<br> |
+| wLength | 0 |
+
+Es gibt keine Datenphase.
+
+Mögliche Zustände sind:
+
+- 0: ENDPOINT_HALT (für Endpunkte), per SetFeature(ENDPOINT_HALT) kann ein schwerwiegender Fehler sozusagen simuliert werden (wobei sich mir der Sinn dessen bis heute verschließt).
+- 1: DEVICE_REMOTE_WAKEUP (für Geräte), SetFeature(DEVICE_REMOTE_WAKEUP) erlaubt ein Remote-Wakeup vom Gerät.
+- 2: TEST_MODE (für Geräte), dessen genaue Bedeutung mir unbekannt ist.
+
 ##### SET_ADDRESS
 
-Legt die USB-Adresse eines Geräts fest. Diese Adresse nimmt es erst nach der Handshakephase an (die findet also noch mit der alten Adresse statt).
+Legt die USB-Adresse eines Geräts fest. Diese Adresse nimmt es erst nach der Statusphase an (die findet also noch mit der alten Adresse statt).
 
 | Feld | Wert |
 | --------------- | ----------------------------------- |
@@ -739,6 +797,20 @@ Liest einen Descriptor vom Gerät, welcher irgendetwas beschreiben kann. Dieses 
 
 In der Datenphase wird dann der Descriptor zum Host gesendet.
 
+##### SET_DESCRIPTOR
+
+In Einzelfällen kann es wünschenswert sein, auch einen Descriptor zu verändern oder hinzuzufügen. Dafür gibt es diesen Request, welcher allerdings optional ist (vom Gerät also per STALL-Handshake abgewiesen werden kann).
+
+| Feld | Wert |
+| --------------- | ----------------------------------------------------------------------- |
+| bmRequestType | 00000000b |
+| bRequest | 7 |
+| wValue | Typ des Descriptors im höherwertigen Byte und Index im niederwertigen |
+| wIndex | ID der Sprache bei Stringdescriptoren, sonst 0 |
+| wLength | Descriptorlänge |
+
+In der Datenphase muss der Host dann den neuen Descriptor an das Gerät übermitteln.
+
 ##### GET_CONFIGURATION
 
 Hiermit kann die aktuelle Konfiguration ermittelt werden.
@@ -763,6 +835,34 @@ Mit diesem Request wird eine neue Konfiguration festgelegt. Die Data-Toggle-Bits
 | bRequest | 9 |
 | wValue | Das untere Byte gibt die zu setzende Konfiguration anhand ihrer ID an. Ist der Wert 0, so wird das Gerät in den unkonfigurierten Zustand zurückgesetzt. Das höherwertige Byte ist reserviert und am besten auf 0 zu setzen. |
 | wIndex | 0 |
+| wLength | 0 |
+
+Es gibt keine Datenphase.
+
+##### GET_INTERFACE
+
+Dieser Request ermittelt die derzeitige alternative Einstellung für ein bestimmtes Interface.
+
+| Feld | Wert |
+| --------------- | -------------- |
+| bmRequestType | 10000001b |
+| bRequest | 10 |
+| wValue | 0 |
+| wIndex | Interface-ID |
+| wLength | 1 |
+
+In der Datenphase überträgt das Gerät dann ein Byte, welches die ID der derzeit aktiven alternativen Einstellung des Interfaces enthält.
+
+##### SET_INTERFACE
+
+Mit diesem Request wird eine alternative Einstellung für ein Interface festgelegt.
+
+| Feld | Wert |
+| --------------- | ---------------------------------------------- |
+| bmRequestType | 00000001b |
+| bRequest | 11 |
+| wValue | ID der zu setzenden alternativen Einstellung |
+| wIndex | Interface-ID |
 | wLength | 0 |
 
 Es gibt keine Datenphase.
@@ -897,11 +997,11 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 | Asynchron | Asynchronous |
 | Datenphase | Data stage |
 | Endpunkt | Endpoint |
-| Flusskontrolle | Flow control |
-| Handshakephase | Handshake stage |
+| Flusskontrolle | Flow controls |
 | Konfiguration | Configuration |
 | Periodisch | Periodic |
 | Setupphase | Setup stage |
+| Statusphase | Status stage |
 
 ### Englisch-Deutsch
 
@@ -913,9 +1013,9 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 | Data stage | Datenphase |
 | Endpoint | Endpunkt |
 | Flow control | Flusskontrolle |
-| Handshake stage | Handshakephase |
 | Periodic | Periodisch |
 | Setup stage | Setupphase |
+| Status stage | Statusphase |
 
 ## Links
 
@@ -928,6 +1028,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7364; parent 7363; 2010-03-12T17:56:45Z -->
+<!-- MediaWiki page 1690; revision 7365; parent 7364; 2010-03-12T18:29:12Z -->
