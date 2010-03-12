@@ -69,9 +69,9 @@ Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2.
 
 ## Cursor
 
-Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindestens wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der vom BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem selbst überlassen.
+Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindest wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der vom BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem selbst überlassen.
 
-Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden)
+Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden). In dem Artikel [I/O Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") wird genauer erklärt, was es mit den hier verwendeten I/O Ports auf sich hat.
 
 \<c\> void displaycursor(uint8_t col, uint8_t row) {
 
@@ -107,6 +107,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7358; parent 7015; 2010-03-12T14:05:32Z -->
+<!-- MediaWiki page 1549; revision 7359; parent 7358; 2010-03-12T14:47:10Z -->
