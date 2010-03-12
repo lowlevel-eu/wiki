@@ -42,19 +42,17 @@ Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Colo
 
 Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet, bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
 
-\<c\>
+\<c\> void printchar(uint8_t chr, uint8_t color, uint8_t x, uint8_t y) {
 
-    void printchar(u8 chr,u8 color,u8 x,u8 y) {
-      u16 *off = (u16*)0xB8000;
-      // berechnen der Adresse
-      off += y*80+x;  // eine Multiplikation mit 2 darf hier nicht erfolgen, da off vom type u16 ist
-      // setzen des zeichens + attributebyte
-      *off = (((u16)color)<<8)|chr;
-    }
+     uint16_t* off = (uint16_t*)0xB8000;
+     // berechnen der Adresse
+     off += y * 80 + x;  // eine Multiplikation mit 2 darf hier nicht erfolgen, da off vom type uint16_t ist
+     // setzen des zeichens + attributebyte
+     *off = (((uint16_t)color) << 8) | chr;
 
-\</c\>
+} \</c\>
 
-Nun folgt die Erklärung: Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist u16, also 2byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin u8 benutzt müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischen Oder mit dem Zeichenbyte verknüpfen.
+Nun folgt die Erklärung: Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin uint8_t benutzt müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischen Oder mit dem Zeichenbyte verknüpfen.
 
 Achtung: Das Attributebyte kommt zwar immer nach dem Zeichenbyte, aber wir benutzen hier ein Word und arbeiten ja auf einem [Little-Endian](http://de.wikipedia.org/wiki/Byte-Reihenfolge)-System.
 
@@ -75,31 +73,27 @@ Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist
 
 Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden)
 
-\<c\>
+\<c\> void displaycursor(uint8_t col, uint8_t row) {
 
-    void displaycursor(u8 col,u8 row) {
-      u16 tmp;
-      tmp = row*VIDEOTEXT_WIDTH+col;
-      outb(0x3D4,14);
-      outb(0x3D5,tmp>>8);
-      outb(0x3D4,15);
-      outb(0x3D5,tmp);
-    }
+     uint16_t tmp;
+     tmp = row * VIDEOTEXT_WIDTH + col;
+     outb(0x3D4,14);
+     outb(0x3D5,tmp >> 8);
+     outb(0x3D4,15);
+     outb(0x3D5,tmp);
 
-\</c\>
+} \</c\>
 
 Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach in die 26. Zeile setzen (diese gibt es nämlich nicht). Das geht natürlich genau so wie in der eben genannten Funktion, aber dies hier ist die direkte Variante:
 
-\<c\>
+\<c\> void removecursor() {
 
-    void removecursor() {
-      outb(0x3D4,14);
-      outb(0x3D5,0x07);
-      outb(0x3D4,15);
-      outb(0x3D5,0xD0);
-    }
+     outb(0x3D4,14);
+     outb(0x3D5,0x07);
+     outb(0x3D4,15);
+     outb(0x3D5,0xD0);
 
-\</c\>
+} \</c\>
 
 ## Siehe auch
 
@@ -113,6 +107,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7015/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7015; parent 6575; 2010-02-04T14:35:54Z -->
+<!-- MediaWiki page 1549; revision 7358; parent 7015; 2010-03-12T14:05:32Z -->
