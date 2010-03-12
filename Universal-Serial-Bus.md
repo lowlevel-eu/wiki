@@ -13,6 +13,14 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
+
+![200px-Usb-svg.svg.png](http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Usb-svg.svg/200px-Usb-svg.svg.png)
+
+------------------------------------------------------------------------
+
+USB-Symbol  
+[Quelle](http://de.wikipedia.org/wiki/Datei:Usb-svg.svg)
+
 Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man lagsame USB 1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
 
 ## Einsatzgebiete
@@ -1024,6 +1032,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7366; parent 7365; 2010-03-12T18:29:56Z -->
+<!-- MediaWiki page 1690; revision 7367; parent 7366; 2010-03-12T20:24:40Z -->
