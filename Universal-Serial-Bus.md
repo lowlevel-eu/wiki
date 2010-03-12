@@ -6,10 +6,6 @@ Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema 
 
 Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
 
-**Achtung!**
-
-An diesem Artikel wird derzeit vor allem von [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") aktiv gearbeitet. Melde dich daher entweder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/1815/index.html "Diskussion:Universal Serial Bus"), bevor du ihn veränderst (wenn ich nicht im IRC bin, dann kannst du ihn auch verändern, weil ich dann sehr wahrscheinlich gar nicht online bin).
-
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
 *Nein, sie ist noch nicht komplett, man kann es aber schonmal sagen: Low- und Full-Speed werden hier detailliert beschrieben, High-Speed in den meisten Fällen auch relativ genau, wäre aber zu verbessern. Zu SuperSpeed jedoch fehlt jegliche Information (außer den bekannten Consumerinfos, die man auch von Wikipedia bekommen kann), das wäre aber schon nett.*
@@ -1028,6 +1024,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7365; parent 7364; 2010-03-12T18:29:12Z -->
+<!-- MediaWiki page 1690; revision 7366; parent 7365; 2010-03-12T18:29:56Z -->
