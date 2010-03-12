@@ -90,12 +90,14 @@ Nachdem die IRQs auf sinnvolle Nummern gelegt sind und Handler in der IDT instal
 
 ## Nützliche Interrupthandler
 
-Jetzt fehlt nur noch die eigentliche Funktion, die aufgerufen werden soll, wenn ein Interrupt auftritt. Meistens möchte man nur einen Handler für alle Interrupts zusammen haben. Ein gemeinsamer Teil soll den Prozessorzustand sichern und der eigentliche Handler soll nur noch ungefähr so aussehen:
+Jetzt fehlt nur noch die eigentliche Funktion, die aufgerufen werden soll, wenn ein Interrupt auftritt. Meistens möchte man nur einen einzigen Handler für alle Interrupts zusammen haben, der allerdings die Interruptnummer (und den sonstigen Prozessorzustand beim Auftreten des Interrupts) als Parameter übergeben bekommt.
+
+Ein vorgeschalteter Teil soll den Prozessorzustand sichern und der eigentliche Handler soll nur noch ungefähr so aussehen:
 
 \<c\>void handle_interrupt(struct cpu_state\* cpu) {
 
        if (cpu->intr <= 0x1f) {
-           kprintf("Exception %d, Kernel angehalten!\n", interrupt);
+           kprintf("Exception %d, Kernel angehalten!\n", cpu->intr);
 
            // Hier den CPU-Zustand ausgeben
 
@@ -188,6 +190,8 @@ Die passende Definition für struct cpu_state sähe in diesem Fall so aus, dass 
 
 };\</c\>
 
+Nachdem die Handler für die einzelnen Interrupts nun fertig geschrieben sind, müssen sie (falls noch nicht geschehen) natürlich noch in die IDT eingetragen werden, damit sie beim Auftreten eines Interrupts angesprungen werden. Andernfalls würde der Code nie ausgeführt werden.
+
 Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene Fehlermeldung mit anschließendem Anhalten des Systems (später könnte man das aktuell ausgeführte Programm beenden, aber wir haben so etwas ja noch nicht). Für Hardware-Interrupts muss zumindest ein EOI (End of Interrupt) an den PIC gesendet werden, damit der Interrupt gleich beim nächsten Mal wieder gemeldet wird und nicht noch vom letzten Aufruf blockiert ist: \<c\>if (cpu-\>intr \>= 0x20 && cpu-\>intr \<= 0x2f) {
 
        if (cpu->intr >= 0x28) {
@@ -207,6 +211,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7126/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 7126; parent 7043; 2010-02-21T11:03:19Z -->
+<!-- MediaWiki page 1898; revision 7369; parent 7126; 2010-03-12T20:48:46Z -->
