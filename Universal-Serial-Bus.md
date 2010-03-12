@@ -23,7 +23,7 @@ Hilf Lowlevel, den Artikel zu verbessern.
 USB-Symbol  
 [Quelle](http://de.wikipedia.org/wiki/Datei:Usb-svg.svg)
 
-Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB 1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
+Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
 
 ## Einsatzgebiete
 
@@ -427,9 +427,69 @@ Es gibt auch Datentransfers ohne Handshake, diese werden bei Isochronoustransfer
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b564f5f07b50cdbba672.png) | IN | 42 | 7 | &#151; | 0x13 |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
 
+### SPLIT-Transfers
+
+Mit der neuen Geschwindigkeit High-Speed kam ein relativ großes Problem auf: Wie werden Geräte behandelt, die mit Full- oder Low-Speed arbeiten? Man könnte High-Speed-Geräte vollkommen inkompatibel mit diesen machen, sodass das Problem nicht auftritt, aber das wird den Benutzer nicht sehr freuen (vor allem bei HID-Geräten, die fast grundsätzlich Low-Speed verwenden). Kurzzeitig die Busgeschwindigkeit absenken würde die Performance sehr negativ beeinflussen und außerdem alle High-Speed-Geräte sehr kompliziert machen, die darauf reagieren müssten.
+
+Die Lösung bestand letztendlich in den SPLIT-Token: Solch ein Token wird einem Low- oder Full-Speed-Transfer vorgeschaltet und mit High-Speed zum Hub geschickt, an dem das Gerät hängt. Dieser Hub muss den Transfer dann in Low- oder Full-Speed zum entsprechenden Gerät senden und dem Host später das Handshake übermitteln. Dies macht zwar High-Speed-Hubs ziemlich kompliziert, lässt aber High-Speed-Geräte unberührt und wirkt sich nicht negativ auf die Leistung des High-Speed-Busses aus.
+
+#### SSPLIT
+
+Es gibt zwei Typen von SPLIT-Token, der erste nennt sich SSPLIT für *Start split*. Wie sich aus dem Namen ergibt, leitet er eine SPLIT-Transaktion ein. Das Adressfeld dieses Tokens enthält nicht etwa die Adresse des USB-Geräts, sondern die Adresse des Hubs, an dem es hängt. Insgesamt ist der Aufbau wie folgt:
+
+| Größe in Bit | Name | Inhalt |
+| -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 8 | PID | Paket-ID (0x78) |
+| 7 | Hub Addr | USB-Adresse des Hubs, an dem das Low-/Full-Speed-Gerät hängt. |
+| 1 | SC | 0 (kennzeichnet dieses Token als SSPLIT) |
+| 7 | Port | Port des Hubs, an dem das Low-/Full-Speed-Gerät hängt. |
+| 1 | S | Ist bei Low-Speed-Geräten gesetzt und bei Full-Speed-Geräten gelöscht. |
+| 1 | E | Nur für Isochronous-OUT-Transfers relevant (wer sich dafür interessiert, möge es in der USB-2.0-Spezifikation Abschnitt 8.4.2.2 nachschlagen und die Bedeutung wenn möglich hier eintragen). |
+| 2 | ET | Typ des Endpunkts: • 00b: Control<br>• 01b: Isochronous<br>• 10b: Bulk<br>• 11b: Interrupt<br> |
+| 5 | CRC5 | Zum Schluss dann noch der CRC-Wert über *Hub Addr*, *SC*, *Port*, *S*, *E* und *ET*. |
+
+Wie das SSPLIT-Token verwendet wird, zeigt das folgende Schema:
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/87098f4c8d36ab9c9a85.png" width="524" height="159" alt="SSPLIT.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/87098f4c8d36ab9c9a85.png)
+
+Der ganze Transfer beginnt mit dem SSPLIT-Token an sich, das den SPLIT-Transfer anzeigt und zweitens auch den Zielhub und den dortigen Zielport anzeigt. Danach beginnt mit dem Low- oder Full-Speed-Token (das aber in High-Speed gesendet wird) die eigentliche SPLIT-Transaktion. Bei OUT- oder SETUP-Transfers folgen anschließend noch die zu verschickenden Daten und ein Handshakepaket des Hubs, dass er diese Daten akzeptiert hat.
+
+#### CSPLIT
+
+Nun zur zweiten Art, den CSPLIT-Token. Dieser Name kommt von *Complete split*, mit einem CSPLIT beendet man also eine SPLIT-Transaktion. Zuerst könnte man sich fragen, warum es überhaupt zwei Transaktionen gibt. Der Host könnte doch per SPLIT einen solchen Transfer einleiten, die Daten mit dem Hub austauschen und fertig. Das Problem ist aber, dass dies wieder den High-Speed-Bus ausbremsen würde. So würde es natürlich relativ lange dauern, bis das Low-/Full-Speed-Gerät überhaupt den Request übermittelt bekommen hat, da könnte man auch gleich den gesamten High-Speed-Bus in die entsprechende Geschwindigkeit umschalten. Also passiert das ganze gewissermaßen asynchron: Der Hub bekommt den Auftrag zur Transaktion und später fragt der Host per CSPLIT nach, wie diese denn ausgegangen ist.
+
+Solch ein CSPLIT-Token sieht so aus:
+
+| Größe in Bit | Name | Inhalt |
+| -------------- | ---------- | ------------------------------------------------------------------------ |
+| 8 | PID | Paket-ID (0x78) |
+| 7 | Hub Addr | USB-Adresse des Hubs, an dem das Low-/Full-Speed-Gerät hängt. |
+| 1 | SC | 1 (kennzeichnet dieses Token als CSPLIT) |
+| 7 | Port | Port des Hubs, an dem das Low-/Full-Speed-Gerät hängt. |
+| 1 | S | Ist bei Low-Speed-Geräten gesetzt und bei Full-Speed-Geräten gelöscht. |
+| 1 | U | Reserviert, muss auf 0 gesetzt werden. |
+| 2 | ET | Typ des Endpunkts (s. bei SSPLIT) |
+| 5 | CRC5 | Und zum Schluss wieder CRC. |
+
+Folgendermaßen wird es verwendet:
+
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/feb3fdad8d282a48be70.png" width="448" height="159" alt="CSPLIT.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/feb3fdad8d282a48be70.png)
+
+Zuerst kommt also wieder das SPLIT-Token, in diesem Fall CSPLIT. Anschließend wiederholt der Host sein Low-/Full-Speed-Token (war es beim ersten Mal OUT, so ist es jetzt wieder OUT). Der Hub reagiert darauf, indem er die Antwort des Geräts weiterleitet, also ein Handshake oder ein Datenpaket, je nachdem, was das Gerät gesendet hat. Ein Datenpaket würde letztendlich dann natürlich noch vom Host mit einem Handshake quittiert.
+
+#### Zusammenfassung
+
+Insgesamt gibt es also immer drei Transaktionen:
+
+1.  Einleitung des Transfers per SSPLIT durch den Host. Hier werden Token und evtl. auch Daten an den Hub geschickt.
+2.  Kommunikation des Hubs mit dem nicht-High-Speed-Gerät. Der Hub sendet nun das Token und, soweit empfangen, auch Daten an dieses Gerät. Dabei speichert er sowohl die vom Gerät gesendeten Daten als auch das Handshake (es sei denn, es gab kein Handshake, dann wird die Transaktion normal wiederholt, s. auch [Fehlerbehandlung](#fehlerbehandlung)).
+3.  Zuletzt dann das Ende und die Auswertung des Transfers per CSPLIT. Jetzt kommuniziert der Host mit dem Hub, als wäre er selbst das Gerät, nimmt also evtl. gesendete Daten in Empfang und quittiert sie mit einem Handshake oder empfängt direkt das vom Gerät gesendete Handshake.
+
+Hier sieht man, wie komplex High-Speed-Hubs sein müssen. Sie bilden gewissermaßen zwei hermetisch voneinander abgeriegelte Bussysteme: Der High-Speed-Bus zum Host auf der einen und der nicht-High-Speed-Bus zum Gerät auf der anderen Seite. Kein Bit gelangt hindurch, der Hub übernimmt im Grunde für das Low-/Full-Speed-Gerät die Rolle des Hosts (da er die SOFs selbst initiiert und auch alle Transfers nicht vom Host durchleitet, sondern zwischenspeichert und dann komplett selbstständig ausführt).
+
 ### Fehlerbehandlung
 
-Während der Übertragung eines Paketes können verschiedenste Fehler auftreten, die mit dem Handshake erkannt werden können.
+Während der Übertragung eines Datenpaketes können verschiedenste Fehler auftreten, die mit dem Handshake erkannt werden können.
 
 #### Daten korrekt empfangen und akzeptiert
 
@@ -1034,6 +1094,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7368/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7368; parent 7367; 2010-03-12T20:26:07Z -->
+<!-- MediaWiki page 1690; revision 7372; parent 7368; 2010-03-12T22:34:11Z -->
