@@ -83,6 +83,8 @@ Der Host bildet den Busmaster eines USB. Er ist der einzige Teilnehmer, der Tran
 
 ### Konfigurationen
 
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/c9f1174b80f9b30937ba.png" width="300" height="212" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a41f63c56744da7ff4f8.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a41f63c56744da7ff4f8.png "vergrößern")Zusammenhang zwischen Gerät, Konfiguration, Interface und Endpunkt
+
 In verschiedenen Situationen muss sich ein Gerät unterschiedlich verhalten. Denkbar wäre zum Beispiel ein Gerät, das 500 mA vom Bus benötigt, um zu funktionieren. Hat der Host allerdings keine Möglichkeit, diese 500 mA bereitzustellen (z. B. hängt das Gerät hinter einem Hub, der sich ebenfalls mit Strom vom Bus versorgt und so maximal 100 mA pro Port bereitstellen kann). Obwohl das Gerät dadurch vielleicht keine Möglichkeit, seine eigentliche Funktion auszuführen, muss es trotzdem aktiv am Bus hängen. Das heißt, es kann zum Beispiel einfach nur darauf warten, dass es doch noch 500 mA erhält.
 
 Dieses Reagieren auf unterschiedliche Situationen wird mit Konfigurationen erreicht. Jedes Gerät muss eine Default-Konfiguration anbieten, in der es nur 100 mA verbraucht und kann beliebig viele weitere Konfigurationen anbieten, die verschiedene Funktionen erlauben. Zu einem bestimmten Zeitpunkt kann ein Gerät nur eine Konfiguration besitzen.
@@ -100,6 +102,8 @@ Zu einem bestimmten Zeitraum besitzt ein Gerät alle Interfaces, die durch die a
 Ein Gerät kann es für nötig befinden, dass ein einzelnes Interface während des Betriebs ausgetauscht werden muss, ohne die gesamte Konfiguration zu verändern. Dies wird über alternative Einstellungen erreicht.
 
 Kommen wir zurück zur Webcam: Diese besitzt wie gesagt zwei Interfaces. Nun soll das Videointerface aber mehrere Auflösungen unterstützen, um sich an die verfügbare Bandbreite auf dem USB anzupassen. Hier könnte man einerseits mehrere Konfigurationen anbieten, da sich aber das Audiointerface nicht ändert, kann man auch mehrere Variationen für das Videointerface anbieten. Dies geschieht über alternative Einstellung. Beim Laden der Konfiguration wird die alternative Einstellung 0 geladen. Der USB-Gerätetreiber kann später eine andere alternative Einstellung (und so ein komplett anderes Interface) auswählen, falls dies nötig sein sollte.
+
+Wie auch bei Konfigurationen kann immer nur eine alternative Einstellung pro Interface zu einem bestimmten Zeitpunkt ausgewählt sein.
 
 ### Endpunkte
 
@@ -1094,6 +1098,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7372; parent 7368; 2010-03-12T22:34:11Z -->
+<!-- MediaWiki page 1690; revision 7374; parent 7372; 2010-03-12T23:04:59Z -->
