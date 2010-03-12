@@ -89,6 +89,12 @@ Jede Konfiguration kann mehrere Interfaces verwenden, wobei jedes Interface zu e
 
 Zu einem bestimmten Zeitraum besitzt ein Gerät alle Interfaces, die durch die aktuelle Konfiguration aktiviert sind, gleichzeitig.
 
+#### Alternative Einstellungen
+
+Ein Gerät kann es für nötig befinden, dass ein einzelnes Interface während des Betriebs ausgetauscht werden muss, ohne die gesamte Konfiguration zu verändern. Dies wird über alternative Einstellungen erreicht.
+
+Kommen wir zurück zur Webcam: Diese besitzt wie gesagt zwei Interfaces. Nun soll das Videointerface aber mehrere Auflösungen unterstützen, um sich an die verfügbare Bandbreite auf dem USB anzupassen. Hier könnte man einerseits mehrere Konfigurationen anbieten, da sich aber das Audiointerface nicht ändert, kann man auch mehrere Variationen für das Videointerface anbieten. Dies geschieht über alternative Einstellung. Beim Laden der Konfiguration wird die alternative Einstellung 0 geladen. Der USB-Gerätetreiber kann später eine andere alternative Einstellung (und so ein komplett anderes Interface) auswählen, falls dies nötig sein sollte.
+
 ### Endpunkte
 
 Endpunkte entsprechen sozusagen den Ports von Netzwerkprotokollen. Jedes Gerät besitzt innerhalb einer Konfiguration eindeutige Endpunkte, mit denen der Host kommunizieren kann. 31 verschiedene Endpunkte sind gleichzeitig möglich, davon ist einer (Endpunkt 0, EP0) jedoch als Kontrollendpunkt reserviert (Low-Speed-Geräte dürfen nur drei Endpunkte nutzen). Ein Interface gibt immer an, welche Endpunkte es nutzt. Deren Nummern müssen innerhalb einer Konfiguration eindeutig sein.
@@ -542,10 +548,10 @@ Wie man sieht, ist das letzte Datenpaket ein Paket ohne Inhalt. Hier wird immer 
 Hier nochmal die Zusammenfassung eines Controltransfers:
 
 | Phase | Pakettyp | Bedeutung |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Setup | SETUP | Hier wird ein 8 Byte langes SETUP-Paket zum Gerät gesendet, dessen Aufbau für alle Controltransfers einheitlich ist und u. a. die Länge und Richtung des Transfers angibt. Unterstützt das Gerät die Funktion nicht, kann sie hier bereits ein STALL zurückgeben. |
-| Daten | IN/OUT | Je nach in der Setupphase angegebenen Richtung werden nun Daten ein- oder ausgegeben. Ist die Länge der Datenphase im SETUP-Paket als 0 angegeben worden, existiert diese Phase nicht. |
-| Handshake | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. |
+| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Setup | SETUP | Hier wird ein 8 Byte langes SETUP-Paket zum Gerät gesendet, dessen Aufbau für alle Controltransfers einheitlich ist und u. a. die Länge und Richtung des Transfers angibt. Unterstützt das Gerät die Funktion nicht, kann sie hier bereits ein STALL zurückgeben. Für das SETUP-Paket wird immer DATA0 verwendet. |
+| Daten | IN/OUT | Je nach in der Setupphase angegebenen Richtung werden nun Daten ein- oder ausgegeben. Ist die Länge der Datenphase im SETUP-Paket als 0 angegeben worden, existiert diese Phase nicht. Das erste Datenpaket der Datenphase ist immer DATA1, da das Toggle-Bit beim SETUP-Paket auf 0 gesetzt war. |
+| Handshake | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. In der Handshakephase wird immer DATA1 eingesetzt. |
 
 ### Bulktransfers
 
@@ -807,6 +813,82 @@ Ein Konfigurationsdescriptor enthält Informationen &#150; wen wunderts &#150
 
 Tipp: Wie beschrieben weiß man anfangs nicht, wie lang alle Konfigurations-, Interface- und Endpunktdescriptoren einer Konfiguration zusammen sind. Daher müsste man theoretisch einen ausreichend großen Datenpuffer reservieren. Besser ist, zuerst nur die ersten neun Bytes dieses Descriptorenarrays (oder auch -liste) einzulesen (also nur den Konfigurationsdescriptor), daraus zu ermitteln, wie viel Platz alle Descriptoren zusammen brauchen (wTotalLength) und dann einen Puffer dieser Größe zu reservieren.
 
+#### Stringdescriptor
+
+Ein Stringdescriptor besitzt keinen besonders spezifischen Aufbau. Er enthält Strings, die z. B. den Hersteller oder den Namen des Produkts selbst beinhalten &#150; somit haben sie für den Treiber selbst eher eine untergeordnete Bedeutung und dienen eher der Information des Benutzers.
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ---------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 1 | bLength | Länge dieses Descriptors (Anzahl der Zeichen im String mal zwei plus zwei: Mal zwei, weil UTF16 verwendet wird und plus zwei, weil der String erst bei Offset 2 beginnt) |
+| 0x01 | 1 | bDescriptorType | 3 |
+| 0x02 | beliebig | bString | Enthält den String, UTF16-kodiert. Wenn man keine UTF16-Unterstützung hat, genügt es in den meisten Fällen, das höherwertige Byte zu ignorieren und das niederwertige als ASCII auszugeben (oder ein Ersatzzeichen ausgeben, wenn der Wert größer als 127 ist). |
+
+Alle Stringdescriptoren haben einen Index größer als 0. Dieser Index ist für die Liste der verfügbaren Sprachen reserviert. Anstatt von Unicodezeichen enthält der Stringdescriptor 0 ein Array von 16-Bit-Werten, welche die verfügbaren Sprach-IDs enthalten.
+
+#### Interfacedescriptor
+
+Ein Interfacedescriptor beschreibt ein Interface einer Konfiguration. Solche Descriptoren können nicht einzeln abgefragt werden, sie werden vom Gerät immer zusammen mit dem Konfigurationsdescriptor geliefert.
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ------- | -------------------- | ----------------------------------------------------------------------------- |
+| 0x00 | 1 | bLength | 9 |
+| 0x01 | 1 | bDescriptorType | 4 |
+| 0x02 | 1 | bInterfaceNumber | Eindeutiger Index dieses Interfaces in der aktuellen Konfiguration |
+| 0x03 | 1 | bAlternateSetting | Gibt die ID dieser alternativen Einstellung an (Standardeinstellung ist 0). |
+| 0x04 | 1 | bNumEndpoints | Enthält die Anzahl der Endpunkte dieses Interfaces. |
+| 0x05 | 1 | bInterfaceClass | USB-Klassencode (Wert 0 ist reserviert, 255 bedeutet herstellerspezifisch) |
+| 0x06 | 1 | bInterfaceSubClass | Unterklasse |
+| 0x07 | 1 | bInterfaceProtocol | Protokolltyp |
+| 0x08 | 1 | iInterface | ID des Stringdescriptors, der dieses Interface beschreibt. |
+
+#### Endpunktdescriptor
+
+Der letzte Descriptor in der Kette Gerät → Konfiguration → Interface → Endpunkt ist eben dieser. Er beschreibt logischerweise einen Endpunkt und wie auch der Interfacedescriptor können Endpunktdescriptoren nicht einzeln, sondern nur zusammen mit dem Konfigurationsdescriptor abgefragt werden.
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x00 | 1 | bLength | 7 |
+| 0x01 | 1 | bDescriptorType | 5 |
+| 0x02 | 1 | bEndpointAddress | Beschreibt die Adresse des Endpunkts nach dem folgenden Schema: • Bit 0 &#150; 3: ID des Endpunkts (die tatsächliche Adresse)<br>• Bit 4 &#150; 6: Reserviert (auf 0 zu setzen)<br>• Bit 7: Richtung (wird bei Controlendpunkten ignoriert, da sie sich bidirektional verhalten): • 0: OUT<br>• 1: IN<br><br> |
+| 0x03 | 1 | bmAttributes | Eigenschaften des Endpunkts: • Bit 0 &#150; 1: Übertragungstyp: • 00b: Control<br>• 01b: Isochronous<br>• 10b: Bulk<br>• 11b: Interrupt<br><br>• Bit 2 &#150; 3: Synchronisation (nur für Isochronous): • 00b: Keine<br>• 01b: Asynchron<br>• 10b: Adaptiv<br>• 11b: Synchron<br><br>• Bit 4 &#150; 5: Benutzung (nur für Isochronous): • 00b: Datenendpunkt<br>• 01b: Feedbackendpunkt<br>• 10b: Daten und gleichzeitig Feedback für einen anderen Endpunkt<br>• 11b: Reserviert<br><br>• Bit 6 &#150; 7: Reserviert und auf 0 zu setzen (ebenso die Bits 2 &#150; 5 für nicht-Isochronoustransfers)<br> |
+| 0x04 | 2 | wMaxPacketSize | Enthält u. a. die MPS für diesen Endpunkt: • Bit 0 &#150; 10: MPS in Bytes<br>• Bit 11 &#150; 12: Gibt für High-Speed-Interrupt- und -Isochronoustransfers die Anzahl von zusätzlichen Übertragungen pro Microframe an (bei Interrupttransfers: falls eine fehlschlagen sollte): • 00b: Keine (max. eine Übertragung pro Microframe)<br>• 01b: Eine (max. zwei Übertragungen pro Microframe)<br>• 10b: Zwei (max. drei Übertragungen pro Microframe)<br><br>• Bit 13 &#150; 15: Reserviert<br> |
+| 0x06 | 1 | bInterval | Die Bedeutung hängt vom Endpunkttyp ab: • Isochronous: 2^bInterval gibt an, wie häufig Transfers stattfinden sollen (aller wie viel (Micro-)Frames).<br>• Low-/Full-Speed-Interrupt: Gibt die Anzahl der Frames an, die zwischen zwei Interrupttransfers vergehen sollen.<br>• High-Speed-Interrupt: 2^bInterval gibt die Anzahl dieser Microframes an.<br>• High-Speed-Control/Bulk-OUT: Sozusagen die Anzahl der Microframes pro NAK. Ist der Wert 0, so gibt es nie ein NAK. Ist er 42, so gibt es höchstens aller 42 Microframes ein NAK.<br> |
+
+#### Device-Qualifier
+
+Wenn ein High-Speed-Gerät an einen Full-Speed-Rootport angeschlossen wird, dann zeigen sowohl Windows als auch Linux eine nette Meldung à la „Dieses Gerät kann eine höhere Leistung erzielen“. Wie geht das, ein High-Speed-Gerät hat sich an Full-Speed-Rootports doch als normales Full-Speed-Gerät auszugeben?
+
+Die Antwort liegt im Device-Qualifier. Dieser Descriptor enthält Informationen darüber, ob ein Gerät mit einer anderen Geschwindigkeit arbeiten kann und wie es sich dann verhalten würde. Arbeitet z. B. ein High-Speed-Gerät im Full-Speed-Modus, dann muss der Device-Qualifier Informationen über den High-Speed-Modus enthalten, arbeitet es im High-Speed-Modus, muss er Informationen zum Full-Speed-Modus enthalten.
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ------- | -------------------- | -------------------------------------------------------------- |
+| 0x00 | 1 | bLength | 10 |
+| 0x01 | 1 | bDescriptorType | 6 |
+| 0x02 | 2 | bcdUSB | USB-Versionsnummer in BCD-Forum (mindestens 0x0200 für 2.00) |
+| 0x04 | 1 | bDeviceClass | USB-Klassencode |
+| 0x05 | 1 | bDeviceSubClass | Unterklasse |
+| 0x06 | 1 | bDeviceProtocol | Protokolltyp |
+| 0x07 | 1 | bMaxPacketSize0 | MPS für EP0 |
+| 0x08 | 1 | bNumConfigurations | Anzahl der Konfigurationen |
+| 0x09 | 1 | bReserved | 0 (reserviert) |
+
+#### Other-Speed-Konfigurationsdescriptor
+
+Nun enthält der Device-Qualifier in etwa so viel Information wie der Device-Descriptor. Da fehlt natürlich noch jede Menge, um z. B. entscheiden zu können, wie viel die andere Geschwindigkeit denn wirklich brächte, vor allem die dann verfügbaren Konfigurationen, Interfaces und Endpunkte. Dafür gibt es den Other-Speed-Konfigurationsdescriptor.
+
+Dieser enthält die gleichen Informationen und ist genauso aufgebaut wie ein normaler Konfigurationsdescriptor, nur dass er einen anderen Code besitzt und so unabhängig von den normalen Konfigurationsdescriptoren abgefragt werden kann. Genau wie beim normalen Descriptor werden auch hier die entsprechenden Interface- und Endpunktdescriptoren angehangen.
+
+| Offset | Länge | Name | Bedeutung oder Inhalt |
+| -------- | ------- | --------------------- | ----------------------------------------------------------- |
+| 0x00 | 1 | bLength | 9 |
+| 0x01 | 1 | bDescriptorType | 7 |
+| 0x02 | 2 | wTotalLength | s\. [Konfigurationsdescriptor](#konfigurationsdescriptor) |
+| 0x04 | 1 | bNumInterfaces | s\. Konfigurationsdescriptor |
+| 0x05 | 1 | bConfigurationValue | s\. Konfigurationsdescriptor |
+| 0x06 | 1 | iConfiguration | s\. Konfigurationsdescriptor |
+| 0x07 | 1 | bmAttributes | s\. Konfigurationsdescriptor |
+| 0x08 | 1 | bMaxPower | s\. Konfigurationsdescriptor |
+
 ## Übersetzung
 
 Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur liest (z. B. die Spezifikation), hier noch eine Übersetzung der von mir verwendeten Begriffe.
@@ -814,7 +896,8 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 ### Deutsch-Englisch
 
 | Deutsch | Englisch |
-| ---------------- | ----------------- |
+| ------------------------- | ------------------- |
+| Alternative Einstellung | Alternate Setting |
 | Asynchron | Asynchronous |
 | Datenphase | Data stage |
 | Endpunkt | Endpoint |
@@ -827,7 +910,8 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 ### Englisch-Deutsch
 
 | Englisch | Deutsch |
-| ----------------- | ---------------- |
+| ------------------- | ------------------------- |
+| Alternate Setting | Alternative Einstellung |
 | Asynchronous | Asynchron |
 | Configuration | Konfiguration |
 | Data stage | Datenphase |
@@ -848,6 +932,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7354/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7354; parent 7353; 2010-03-09T19:48:35Z -->
+<!-- MediaWiki page 1690; revision 7363; parent 7354; 2010-03-12T17:52:36Z -->
