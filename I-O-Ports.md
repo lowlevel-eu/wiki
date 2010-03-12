@@ -1,6 +1,6 @@
 # I/O Ports
 
-Als I/O Ports werden die Schnittstellen zwischen CPU und Peripheriegeräten bezeichnet. Die Kommunikation erfolgt über spezielle Befehle, wie zum Beispiel *in* und *out*. Jedem Gerät wird dabei ein Bereich des I/O-Adressraums zugeordnet, und Lese- bzw. Schreibzugriffe werden an das Gerät weitergeleitet.
+Als I/O Ports werden die Schnittstellen zwischen CPU und Peripheriegeräten bezeichnet. Die Kommunikation erfolgt über spezielle Maschinenbefehle, wie zum Beispiel *in* und *out*. Jedem Gerät wird dabei ein Bereich des I/O-Adressraums zugeordnet, und Lese- bzw. Schreibzugriffe werden an das Gerät weitergeleitet. In diesem wiki werden als C-Funktionen *outb*, *outw* und entsprechende andere Varianten von in und out vorausgesetzt. Wie man diese Funktionen in C mit Hilfe von Inline-Assembler implementieren kann wird im Artikel [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") für den [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") teilweise erklärt.
 
 Ergänzend zur Port I/O existiert Memory Mapped I/O, bei dem die Geräte in den Adressraum des physischen Speichers eingeblendet werden. Das Gerät kann somit über normale Befehle zum Speicherzugriff angesteuert werden.
 
@@ -49,6 +49,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7226/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 7226; parent 7224; 2010-03-01T13:35:39Z -->
+<!-- MediaWiki page 1543; revision 7360; parent 7226; 2010-03-12T14:50:55Z -->
