@@ -24,11 +24,6 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 - Shell
 - kleiner Texteditor
 
-  
-[Quellcode von Cats](http://ul.to/sdb16t)
-
-  
-
 ## Befehle
 
 - date
@@ -54,9 +49,11 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 ## Links
 
 - [Diskettenimage von Cats](http://ul.to/3mcgj5)
+- [Quellcode von Cats](http://ul.to/sdb16t)
+- [Offizielle Webseite von Cats](http://www.peter-koro.at.tf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 7382; parent 6352; 2010-03-13T13:05:59Z -->
+<!-- MediaWiki page 2084; revision 7383; parent 7382; 2010-03-13T13:07:49Z -->
