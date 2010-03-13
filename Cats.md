@@ -24,11 +24,10 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 - Shell
 - kleiner Texteditor
 
-Suche Leute für Netzwerkkartentreiber , ping und vieleicht auch einen kleinen Webbrowser.........
-
+  
 [Quellcode von Cats](http://ul.to/sdb16t)
 
-Bitte Vorschläge an peter.junior@live.at senden.
+  
 
 ## Befehle
 
@@ -58,6 +57,6 @@ Bitte Vorschläge an peter.junior@live.at senden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 6352; parent 6349; 2009-11-20T18:32:40Z -->
+<!-- MediaWiki page 2084; revision 7382; parent 6352; 2010-03-13T13:05:59Z -->
