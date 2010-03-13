@@ -8,6 +8,7 @@
 - [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
   - [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel") einarbeiten und dann redirecten
 - [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")
+- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") bedarf wahrscheinlich der Überarbeitung (stilistisch)
 
 ## Magazin ausschlachten
 
@@ -96,6 +97,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7376/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7376; parent 7351; 2010-03-13T07:17:50Z -->
+<!-- MediaWiki page 1518; revision 7377; parent 7376; 2010-03-13T07:19:22Z -->
