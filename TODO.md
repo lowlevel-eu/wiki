@@ -53,7 +53,7 @@
 
 - sowas in richtung troubleshooting oder so, mit zB
   - Warum meckert mein Linker irgendwas mit *undefined reference* (auch im Spezialfall C++, extern "C" und so)
-    - Du bist doch normalerweise für wenigstens ein paar Relevanzkriterien, [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") weiß nicht, ob Linkprobleme direkt was hier im Wiki zu suchen haben... Eher ein Link zu einem guten Tutorial etc. zum Thema (wobei mir da spontan keins einfällt).
+    - ~~Du bist doch normalerweise für wenigstens ein paar Relevanzkriterien, [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") weiß nicht, ob Linkprobleme direkt was hier im Wiki zu suchen haben... Eher ein Link zu einem guten Tutorial etc. zum Thema (wobei mir da spontan keins einfällt).~~
   - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
   - bitte Liste erweitern
 - Warum empfehlen wir GRUB? Wir sollten irgendwo ne Liste von Gründen dafür/dagegen sammeln, das Thema kommt so elendig oft auf, dass man dann darauf verweisen könnte. [Benutzer:Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") fällt nur kein Name für einen Artikel dazu ein, Vorschläge?
@@ -103,6 +103,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7380; parent 7379; 2010-03-13T11:04:53Z -->
+<!-- MediaWiki page 1518; revision 7381; parent 7380; 2010-03-13T11:48:00Z -->
