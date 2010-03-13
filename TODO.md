@@ -51,6 +51,9 @@
 
 ## Neu erstellen
 
+- sowas in richtung troubleshooting oder so, mit zB
+  - Warum meckert mein Linker irgendwas mit *undefined reference* (auch im Spezialfall C++, extern "C" und so)
+  - bitte Liste erweitern
 - Warum empfehlen wir GRUB? Wir sollten irgendwo ne Liste von Gründen dafür/dagegen sammeln, das Thema kommt so elendig oft auf, dass man dann darauf verweisen könnte. [Benutzer:Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") fällt nur kein Name für einen Artikel dazu ein, Vorschläge?
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
@@ -97,6 +100,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7377; parent 7376; 2010-03-13T07:19:22Z -->
+<!-- MediaWiki page 1518; revision 7378; parent 7377; 2010-03-13T09:46:02Z -->
