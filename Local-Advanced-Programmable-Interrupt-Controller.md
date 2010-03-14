@@ -103,7 +103,7 @@ Zuerstmal muss man die *Local APIC* über das *Spurious Interrupt Vector Registe
 - *LVT LINT1 Register*
 - *LVT Error Register*
 
-### Bug beim Beschreiben der Regsiter
+### Bug beim Beschreiben der Register
 
 Bei Pentium Prozessoren mit einer Geschwindigkeit über 75 MHz aus der Prozessor-Familie 5 mit der Modellnummer 2 und der Revisionsnummer (Stepping) 1,2,3,4 oder 11 wird jegliches einfache Schreiben in LAPIC Register ignoriert. Um dies zu verhindern, muss vor einem Schreibzugriff auf den APIC zuerst etwas daraus ausgelesen werden.
 
@@ -231,6 +231,6 @@ schlussKalib:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6844/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 6844; parent 4811; 2010-01-09T11:56:40Z -->
+<!-- MediaWiki page 1581; revision 7384; parent 6844; 2010-03-14T18:33:01Z -->
