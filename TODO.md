@@ -96,7 +96,11 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 
 - Ich habe auf Basis von Radixsort einen extrem schnellen Sortieralgorithmus entwickelt, mit dem unter C nach allen Datentypen sortiert werden kann, und habe ihn bei SourceForge *public* gemacht. Ich habe schon einen Artikel bei [Wikiversity](http://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Kapitel_2) (letzter Algorithmus) eingestellt. Da man auch in Betriebssystemen Tabellen sortieren muß, könnte das auch hier von Interesse sein. Falls dem so ist, würde ich einen Artikel schreiben, der technisch genauer darauf eingeht, was wie und warum funktioniert. --JDHenning 12:12, 16. Mär. 2010 (CET)
 
-Wer ein Betriebssystem schreiben will, der sollte auch sortieren können... Außerdem braucht man in seiner libc eh ein qsort(), das kann man dann implementieren. Radixsort eignet sich aber nicht als Implementierung für qsort(), weil es nicht jede totalgeordnete Menge sortieren kann. --[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") 21:03, 16. Mär. 2010 (CET)
+<!-- -->
+
+- Wer ein Betriebssystem schreiben will, der sollte auch sortieren können... Außerdem braucht man in seiner libc eh ein qsort(), das kann man dann implementieren. Radixsort eignet sich aber nicht als Implementierung für qsort(), weil es nicht jede totalgeordnete Menge sortieren kann. --[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") 21:03, 16. Mär. 2010 (CET)
+
+<!-- -->
 
 - Hier kommt dein Wunsch hin ;)
 
@@ -109,6 +113,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7391/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7392/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7391; parent 7389; 2010-03-16T20:03:14Z -->
+<!-- MediaWiki page 1518; revision 7392; parent 7391; 2010-03-16T20:03:41Z -->
