@@ -435,6 +435,8 @@ Es gibt auch Datentransfers ohne Handshake, diese werden bei Isochronoustransfer
 
 Mit der neuen Geschwindigkeit High-Speed kam ein relativ großes Problem auf: Wie werden Geräte behandelt, die mit Full- oder Low-Speed arbeiten? Man könnte High-Speed-Geräte vollkommen inkompatibel mit diesen machen, sodass das Problem nicht auftritt, aber das wird den Benutzer nicht sehr freuen (vor allem bei HID-Geräten, die fast grundsätzlich Low-Speed verwenden). Kurzzeitig die Busgeschwindigkeit absenken würde die Performance sehr negativ beeinflussen und außerdem alle High-Speed-Geräte sehr kompliziert machen, die darauf reagieren müssten.
 
+Es gibt grundsätzlich zwei Möglichkeiten, ein nicht-High-Speed-Gerät anzuschließen: An einen Rootport oder an einen Hub. Bei einem Rootport wurde das Problem gelöst, indem der High-Speed-Hostcontroller den Port an einen Low-/Full-Speed-Hostcontroller weitergibt und dieser dann direkt mit der entsprechenden Geschwindigkeit arbeitet. Bei Hubs tritt allerdings das Problem auf, dass sie mitten in der USB-Topologie hängen und somit Änderungen der Geschwindigkeit alle Geräte am entsprechenden Bus beeinflussen.
+
 Die Lösung bestand letztendlich in den SPLIT-Token: Solch ein Token wird einem Low- oder Full-Speed-Transfer vorgeschaltet und mit High-Speed zum Hub geschickt, an dem das Gerät hängt. Dieser Hub muss den Transfer dann in Low- oder Full-Speed zum entsprechenden Gerät senden und dem Host später das Handshake übermitteln. Dies macht zwar High-Speed-Hubs ziemlich kompliziert, lässt aber High-Speed-Geräte unberührt und wirkt sich nicht negativ auf die Leistung des High-Speed-Busses aus.
 
 #### SSPLIT
@@ -1099,6 +1101,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7393/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7390; parent 7375; 2010-03-16T19:42:01Z -->
+<!-- MediaWiki page 1690; revision 7393; parent 7390; 2010-03-16T21:03:46Z -->
