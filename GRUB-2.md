@@ -21,9 +21,10 @@ Bisher ist GRUB 2 leider sehr instabil und verträgt sich noch nicht ganz mit de
 ## Weblinks
 
 - [Offizielle Seite auf gnu.org](http://www.gnu.org/software/grub/grub-2.en.html)
+- [GRUB 2 auf Diskette oder ISO](http://wiki.osdev.org/GRUB_2)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
 
-<!-- MediaWiki page 2087; revision 6108; parent 6053; 2009-10-28T16:05:28Z -->
+<!-- MediaWiki page 2087; revision 7394; parent 6108; 2010-03-17T22:38:02Z -->
