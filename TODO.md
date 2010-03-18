@@ -101,7 +101,11 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 - Wer ein Betriebssystem schreiben will, der sollte auch sortieren können... Außerdem braucht man in seiner libc eh ein qsort(), das kann man dann implementieren. Radixsort eignet sich aber nicht als Implementierung für qsort(), weil es nicht jede totalgeordnete Menge sortieren kann. --[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") 21:03, 16. Mär. 2010 (CET)
 - Bist du bitte so nett und gibst mir **irgendein** Beispiel einer Sortieraufgabe, die Quicksort handhaben kann und ExtraDix nicht? Da ExtraDix nach allen in C bekannten Datentypen sortieren kann bin ich mal gespannt ;-). --JDHenning 11:50, 18. Mär. 2010 (CET)
 
-Alle nicht in C Basisdatentypen, dann möchte ich primär die Vergleichsfunktion angeben, was bei einem nicht vergleichsbasierten Algorithmus offensichtlich nicht möglich ist.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 12:28, 18. Mär. 2010 (CET)
+<!-- -->
+
+- Alle nicht in C Basisdatentypen, dann möchte ich primär die Vergleichsfunktion angeben, was bei einem nicht vergleichsbasierten Algorithmus offensichtlich nicht möglich ist.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 12:28, 18. Mär. 2010 (CET)
+
+<!-- -->
 
 - Hier kommt dein Wunsch hin ;)
 
@@ -114,6 +118,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7397; parent 7396; 2010-03-18T11:28:48Z -->
+<!-- MediaWiki page 1518; revision 7398; parent 7397; 2010-03-18T11:29:20Z -->
