@@ -99,6 +99,7 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 <!-- -->
 
 - Wer ein Betriebssystem schreiben will, der sollte auch sortieren können... Außerdem braucht man in seiner libc eh ein qsort(), das kann man dann implementieren. Radixsort eignet sich aber nicht als Implementierung für qsort(), weil es nicht jede totalgeordnete Menge sortieren kann. --[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") 21:03, 16. Mär. 2010 (CET)
+- Bist du bitte so nett und gibst mir **irgendein** Beispiel einer Sortieraufgabe, die Quicksort handhaben kann und ExtraDix nicht? Da ExtraDix nach allen in C bekannten Datentypen sortieren kann bin ich mal gespannt ;-). --JDHenning 11:50, 18. Mär. 2010 (CET)
 
 <!-- -->
 
@@ -113,6 +114,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7392/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7396/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7392; parent 7391; 2010-03-16T20:03:41Z -->
+<!-- MediaWiki page 1518; revision 7396; parent 7392; 2010-03-18T10:50:43Z -->
