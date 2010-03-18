@@ -1,11 +1,5 @@
 # AiCOS
 
-**Achtung!**
-
-Diese Seite wird derzeit durch ScollPi dem Autor von AiCOS überarbeitet. Bitte keine anderweitigen Änderungen (z.B. Beseitigung von Schreibfehlern) vornehmen, bis dieser Vorgang abgeschlossen ist.
-
-  
-
 | ![AiCOS-Logo-small.png](http://aicos.amazing-fx.de/images/AiCOS-Logo-small.png) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
@@ -42,17 +36,15 @@ Ist der Name des OS nur ein fantasievolle Bezeichnung oder steht **AiCOS** für 
 
 AiCOS ist in der Tat eine Abkürzung und steht für ***A**syncronous **i**nter**C**onnected **O**perating **S**ystem*. Sollte sich die Entwicklung dieses OS meinen Erwartungen entsprechen, könnte diese AiCOS in einigen Jahren auch für ***A**rtificial **i**ntelligence **C**ontrolled **O**perating **S**ystem* stehen. Klingt nach **SKYNET**, könnte man denken, wird aber keinesfalls beabsichtig.
 
-### Entwickler
+### Entwickler & Lizenz
 
 Derzeit unterliegt die komplette Entwicklung von AiCOS einer einzigen Persion, nämlich mich, [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi"). Dies soll aber nicht für immer bleiben. Wenn wichtigsten Konzepte des OS (überwiegend Kernel) erstellt und ggf. auch schon umgesetzt wurden, werde ich meine Türe öffnen und andere Begeisterte mit in dieses Boot nehmen.
-
-### Lizenz
 
 Steht noch nicht fest. Derzeit ClosedSource, soll aber später, wenn ich andere mitwirken lassen, OpenSource werden.
 
 ### Plattform
 
-Erstmal nur für x86 für 32/64-Bit Plattformen.
+Erstmal nur aus x86-Reihe für 32/64-Bit Plattformen.
 
 ### Kernel
 
@@ -68,11 +60,11 @@ Hardware nahe Programmteile wie Bootloader (später mehr dazu) oder Treiber werd
 
 ### Binärformat
 
-Vorerst BIN, ggf. auch EXE. Ob ELF unterstützt wird, ist eine Frage der Implementierung.
+Vorerst BIN, ggf. auch EXE. Ob ELF unterstützt wird, ist eine Frage der Implementierung. Ein ganz anderes Format wäre natürlich auch denkbar.
 
 ### IPC-Methode
 
-Den einzigen gemeinsamer Nenner, den ich finden konnte und auch bei der derzeitigen CPU-Entwicklung für zukunftsicher halte, sind Channels. Channels sollen später auch die Grundlage eigenes Netzwerkprotokolls werden, welches anfangs eher über IP zu einer anderen Maschine mit AiCOS getunnelt wird.
+Den einzigen gemeinsamer Nenner, den ich finden konnte und auch bei der derzeitigen CPU-Entwicklung für zukunftsicher halte, sind Channels. Channels sollen später auch die Grundlage eines eigenen Netzwerkprotokolls werden, welches anfangs eher über IP zu einer anderen Maschine mit AiCOS getunnelt wird.
 
   
 
@@ -81,11 +73,13 @@ Den einzigen gemeinsamer Nenner, den ich finden konnte und auch bei der derzeiti
 - **Hardware**
   - Intel Core 2 Quad mit 8 GiB RAM
 - **Software**
-  - [Microsoft XP Pro](http://www.microsoft.com/germany/windows/windows-xp/) \>\>\> [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
+  - [Microsoft Windows 7 (64-bit)](http://www.microsoft.com/germany/windows/windows-7/) \>\>\> [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
   - [Microsoft Visual Studio 2008 Express](http://www.microsoft.com/germany/express/)
   - [Mircosoft .NET Framework v3.5](http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6&DisplayLang=de)
   - [Microsoft Windows-Debugger x86/x64 für Kernel-Debug](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
   - [Microsoft Virtual PC 2007 inkl. SP 1](http://www.microsoft.com/downloads/details.aspx?FamilyID=28c97d22-6eb8-4a09-a7f7-f6c7a1f000b5&DisplayLang=de) \>\>\> [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC")
+  - Sun VirtualBox
+  - Bochs
 - **Referenzmaterial**
   - [Microsoft Singularity RDK 2.0](http://www.codeplex.com/singularity)
   - [Protected Mode Tutorials](http://www.fh-zwickau.de/doc/prmo/start.htm)
@@ -93,23 +87,16 @@ Den einzigen gemeinsamer Nenner, den ich finden konnte und auch bei der derzeiti
 
   
 
-**Hinweis:**
-
-Alle ab hier folgenden Abschnitte werden noch überarbeitet.
-
-**Testumgebung:**
-
-Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn da alles ohne Probleme läuft, wird auf der realen Maschine getestet. Als Test-PC dient da einmal ein P2 mit müden 400 MHz als Single-Core, um vor allem die Boot-Phasen zu testen. OK, derzeit benutze ich einen Laptop mit P3 mit 1 GHz und satten 256 MiB RAM. Versehentlich auch mal Tests auf meinem Quad-Core, wenn ich vergessen habe die Diskette nach dem Testen rauszunehmen. Aber da zeigt sich schon, dass auf der realen Maschine alles genauso läuft wie bisher in der VM.
-
-  
-
 # Konzept
+
+Ich wurde gefragt, warum ich zum Booten meines OS denn nicht GRUB nehme. Nun, erstens brauche ich nur einen Bootloader und keinen ganzen Bootmanager. Zudem muss der Bootloader in der Lage sein, ein Modulares-Kernel-System laden und initialisieren zu können. Wie anfangs schon gesagt, AiCOS geht ganz neue Wege. Und zweitens geht es mir bei der Entwicklung auch darum den Bootvorgang zu verstehen. Dazu schaue ich mir den Bootcode an, den Windows XP verwendet (also NT-Bootsektor und NTLDR).
 
 ### Bootsektor
 
-- Der Bootsektor wird so geschrieben, dass es im Prinzip egal ist, an welcher Adresse dieser geladen und ausgeführt wird. Derzeit wird noch ein Fehlercode ausgeben und die Ausführung angehalten, wenn sich der Bootcode nicht an der Adresse 0x00007C00 befindet.
-- Für jedes [FS](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (RAW, FAT, FAT32 und ISO9660) auf dem AiCOS zum Einsatz kommen wird, wird es einen entsprechenden Bootcode geben.
-- Die Aufgabe des Bootsektors sollte wohl ja klar sein, nämlich unabhängig vom Medium den Bootloader zu laden und auszuführen.
+- Universeller Aufbau, sodass nur die Routinen für das jeweiliges Dateisystem ausgetauscht werden müssen.
+- Es wird nicht versucht, den gesamten Code zum vollständigen Laden des Bootloaders in den Bootsektor zu quetschen.
+- Bootcode wird es anfangs für folgende Dateisystem geben: FAT12, FAT16, FAT32, ROSF, ISO9660 und eventuell auch NTFS.
+- Zukünftige Festplatten mit 4k-Sektoren werden ebenfalls berücksichtigt.
 
 ### Bootloader
 
@@ -133,6 +120,7 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
   - Subsystem-Kernel, für weitere Treiber, Filter und und und ...
 - Soll in sich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
 
+  
 **Notiz:** Zum besseren Verständnis meines Konzept ist eine visuelle Darstellung meines OS in Planung. Sie beinhaltet den Bootprozess und den Aufbau des MKS. Diese Visualisierungen werden überwiegend auf der Homepage von AiCOS zu finden sein, die sich derzeit noch im Aufbau befindet.
 
   
@@ -141,6 +129,8 @@ Es wird immer zuerst in der VM auf dem Entwicklungssystem getestet und erst wenn
 
 **Die letzten 10 Änderungen:**
 
+- 18.03.2010: Entwicklungsinfo
+  - Lange war es ruhig um AiCOS, doch wirklich ruhte die Entwicklung nicht. Es wurde vor allem in der Theorie gefeilt. Zur Zeit wird an der Überarbeitung des Bootsektors gearbeitet, da dieser universal aufgebaut sein soll und sich nur in den Bestandteilen des jeweiligen Dateisystem unterscheidet. Zeitgleich wird auch am Bootloader gearbeitet, vor allem am Assebler-Part.
 - 15.01.2009: Version 0.00.??.??
   - ROFS-Bootsektor-Code finalisiert, es kann nun auch eine Datei grö´ßer 64KiB geladen werden. Der Bootloader selbst wurde wegen seiner PM-Funktionalität auf 256 KiB beschränkt.
   - Suchen und Auslesen von MPS (FPS).
@@ -190,52 +180,28 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
 
 **Fertig:**
 
-- Bootsector für ROFS, FDD-Version.
-- Bootloader
-  - Entry16: 16-Bit-Einsprung in Assembler
-  - Entry32: 32-Bit-PM-Einsprung in Assembler
-  - Entry: C++ Part
-  - Routinen für Textausgabe, darunter auch mit printf()
-  - COM-Treiber: für Kernel-Debug benötigt
-  - Kernel-Debug
-  - SMAP (System Memory Map)
+- *Noch nicht wirklich etwas, nur Baustelle =)*
 
   
 **In Arbeit:**
 
-- Bootloader
-  - Paging mit PAE (bisher nur 2 MiB gemappt, sollte erstmal für Bootloader-Spielereien reichen).
-  - Memory Management.
-  - PCI Suuport.
-  - PnP Support.
-  - ACPI Support.
-  - ACPI (Um Anzahl der Cores zu ermitteln).
-- Homepage für AiCOS.
+- Bootsektor für FAT12
+- Dummy-Bootloader (einfach nur eine 256 KiB große Datei mit Pseudodaten)
 
   
 **Geplant:**
 
-- Bootloader
-  - System-Shell (Kernel-Ersatz, dient zum Anzeigen wichtiger System-Informationen und wird als CLI \[Command Line Interface\] aufgesetzt.
+- Bootsektor für FAT16
+- Bootsektor für FAT32
+- Bootsektor für ROFS (Read Only File System - Eigenentwicklung
 - Bootsektor für CD
+- Bootsektor für NTFS
+
+  
 
 # Roadmap
 
-**Ziele für Sprung in Research Phase 1 (Version 0.01)**
-
-- Single-CPU
-- Funtionierender Bootsektor für Floppy (ROFS) und CD (ISO9660) - (Einheitlicher Code, bis auf die unterschiedliche Sektorgröße).
-- Funktionierender Bootloader, der System-Vorab-Checks durchführt, bevor gewissen Funktionen wie Protected Mode oder Paging benutzt werden.
-- Ausführliche Comments in Bootsektoren und Bootloader.
-- AiCOS-Source-Tree, Hardwarebedingter Code wird von System-Code getrennt, damit soll später eine bessere Portierbarkeit erreicht werden, wodurch nur der Hardwarebedingte Code (überwiegend Assembler) ausgetauscht werden muss.
-- AiCOS-Startup-Dummy.
-
-  
-**Ziele für Sprung in Research Phase 2 (Version 0.02)**
-
-- Differenzierung des Kernelgrundsystem in Management-Kernel, CPU-Kernel & I/O-Kernel
-- Channel-System als IPC implementieren
-- Hello-World-Prozess
+**Folgt in Kürze**
 
   
 
@@ -267,10 +233,10 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
 
 # Ziele
 
-Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkbereich behaupten kann. Dabei wird keinster Weise direkt Code von anderen OS verwendet, vorallem keine Bootloader wie z.B. Grub! Vielmehr wird deren Funktionsweise analysiert. Der Kernel, besser gesagt das Kernel-System von AiCOS wird keines im Sinnes der Definition eines Kernels sein, sondern vielmehr ein Systemkern aus einer modularen Ansammlung mehrere Mikrokernels.
+Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkbereich behaupten kann. Dabei wird in keinster Weise direkt Code von anderen OS verwendet, vorallem keine Bootloader wie z.B. Grub! Vielmehr wird deren Funktionsweise analysiert. Der Kernel, besser gesagt das Kernel-System von AiCOS wird keines im Sinnes der Definition eines Kernels sein, sondern vielmehr ein Systemkern aus einer modularen Ansammlung mehrere Mikrokernels.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6245/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 6245; parent 6244; 2009-11-10T16:58:36Z -->
+<!-- MediaWiki page 1766; revision 7401; parent 6245; 2010-03-18T17:49:57Z -->
