@@ -104,6 +104,7 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 <!-- -->
 
 - Alle nicht in C direkt eingebauten Datentypen, dann möchte ich primär die Vergleichsfunktion angeben, was bei einem nicht vergleichsbasierten Algorithmus offensichtlich nicht möglich ist. Ich finde es auch nicht besonders redlich, dann auf der Wikipedia-Seite das mit Quicksort zu vergleichen. Abgesehen davon ist es eine Implementierung eines Algorithmus und kein Algorithmus an sich, deswegen finde ich es selbst auf der [Wikipedia-Seite](http://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Kapitel_2#ExtraDix) fehl am Platz.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 12:28, 18. Mär. 2010 (CET)
+- Es ist sowohl ein Algorithmus, nämlich die Erweiterung von RadixSort, als auch eine Implementierung, die aus pragmatischen Gründen den gleichen Namen bekommen hat. In C gibt es integer und floats mit unterschiedlichen Ausprägungen sowie strings und alle diese lassen sich sortieren. Dann gibt es die zusammengesetzten Strukturen, die aus diesen Grundtypen aufgebaut werden. Alle diese können mittels ExtraDix sortiert werden und andere Datentypen sind mir in C nicht bekannt. Was also meinst du bitte mit "Alle nicht in C direkt eingebauten Datentypen"? Und was ist unredlich am Vergleich mit Quicksort? Schließlich wird dieser Algorithmus an vielen Stellen als der schnellste angepriesen. --JDHenning 12:13, 19. Mär. 2010 (CET)
 
 <!-- -->
 
@@ -118,6 +119,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7400/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7400; parent 7399; 2010-03-18T11:35:37Z -->
+<!-- MediaWiki page 1518; revision 7402; parent 7400; 2010-03-19T11:13:45Z -->
