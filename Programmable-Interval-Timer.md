@@ -15,7 +15,7 @@ Der PIT belegt vier Ports:
 
 ## Channels
 
-Der PIT besitzt drei verschiedene *Channels*, die jeweils mit unterschiedlichen Intervallen laufen und unterschiedliche Signal erzeugen. Dabei kann lediglich der erste (Channel 0) beliebig benutzt werden, da die beiden anderen Channels bereits eine Sonderfunktion haben.
+Der PIT besitzt drei verschiedene *Channels*, die jeweils mit unterschiedlichen Intervallen laufen und unterschiedliche Signale erzeugen. Dabei kann lediglich der erste Channel (0) beliebig benutzt werden, da die beiden anderen Channels bereits eine Sonderfunktion haben.
 
 ### Channel 0
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7041; parent 7039; 2010-02-08T17:27:25Z -->
+<!-- MediaWiki page 1432; revision 7405; parent 7041; 2010-03-20T19:58:51Z -->
