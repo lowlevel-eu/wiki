@@ -13,7 +13,7 @@
 | Mechanismus: | dynamische Übersetzung, KVM (nur Linux), Kernelunterstützung |
 | Homepage |  |
 
-<http://www.nongnu.org/qemu/>
+<http://wiki.qemu.org/Index.html>
 
 QEMU ist ein Emulator unter anderem für die Systeme [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), MacOS, FreeBSD, OpenBsd und NetBSD.
 
@@ -83,6 +83,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7084/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 7084; parent 7062; 2010-02-17T12:15:18Z -->
+<!-- MediaWiki page 1505; revision 7408; parent 7084; 2010-03-20T20:22:14Z -->
