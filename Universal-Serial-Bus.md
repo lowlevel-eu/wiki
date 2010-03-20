@@ -1057,6 +1057,28 @@ Dieser enthält die gleichen Informationen und ist genauso aufgebaut wie ein nor
 | 0x07 | 1 | bmAttributes | s\. Konfigurationsdescriptor |
 | 0x08 | 1 | bMaxPower | s\. Konfigurationsdescriptor |
 
+## Legacy Support
+
+### Funktionsweise
+
+Für einen Computer gibt es einige essentielle Geräte, ohne die er nicht arbeiten kann, die Tastatur ist eines von ihnen. Ist an einen Computer keine Tastatur angeschlossen, so wird bereits das BIOS sich weigern, ein Betriebssystem zu laden, ein solches würde häufig wiederum die Funktion verweigern (z. B. mit der berühmt-berüchtigen Meldung „Tastatur nicht gefunden. Drücken Sie F1 zum Fortfahren.“). Nun ist es so, dass heutzutage sehr oft USB-Tastaturen anstatt der „normalen“ PS/2-Tastaturen verwendet werden – hier liegt offenbar ein Problem, denn in diesem Fall würde zumindest das BIOS ohne USB-Treiber den Betrieb verweigern und nur Betriebssysteme mit USB-Treiber könnten dann mit der Tastatur umgehen. Zur Lösung dieser Probleme hat man den sogenannten *Legacy Support* eingeführt.
+
+Das BIOS muss hierzu einen USB-Treiber enthalten. Beim Start initialisiert es alle USB-Hostcontroller und beginnt sie nach Geräten abzusuchen. Die Hostcontroller werden hierbei allerdings nicht so initialisiert, wie es das Betriebssystem tun würde, der Grund liegt darin, dass der BIOS-USB-Treiber auch im Protected Mode noch funktionieren muss, um Betriebssystemen ohne eigenen USB-Treiber den Umgang mit Maus und Tastatur zu ermöglichen. Dies geschieht über den [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode"). Der USB-Hostcontroller wird so eingerichtet, dass er bei jedem USB-Ereignis keinen normalen PCI-IRQ sondern einen SMI auslöst, der die CPU in besagten Modus versetzt. Hier läuft dann der BIOS-Treiber in einer „kontrollierten“ Umgebung und kann die anstehenden Aufgaben bewältigen, wobei das Betriebssystem davon gar nichts merkt.
+
+Das BIOS initialisiert also den Hostcontroller und weist ihn an, SMIs zu bestimmten Ereignissen auszulösen, einige Hostcontroller können sogar Zugriffe auf die PS/2-Ports 0x60 und 0x64 überwachen und dementsprechend SMIs auslösen. Der BIOS-Treiber simuliert dann dort ganz einfach ein PS/2-Gerät.
+
+### Deaktivieren
+
+Das alles ist zwar schön für Betriebssysteme ohne USB-Unterstützung, aber ziemlich doof für solche mit. Wenn das OS nun versucht, die Kontrolle über den HC zu übernehmen, wird es ihn zurücksetzen, seine ISR für einen IRQ registrieren und so weiter. Das Problem ist aber, dass der HC immer noch darauf eingestellt ist SMIs auszulösen. Somit besitzen dann praktisch zwei Parteien den HC gleichzeitig: Das OS, das ihn initialisiert hat und das BIOS, welches seine Interrupts abarbeitet. Irgendwie muss das Betriebssystem also diese SMIs deaktivieren, dies geschieht bei jedem Hostcontroller auf verschiedenen Wegen. Beim UHCI müssen alle SMIs manuell deaktiviert werden, beim OHCI und beim EHCI hingegen wird idealerweise nur ein Bit vom OS gesetzt, das dem BIOS mitteilt, den HC freizugeben.
+
+#### EHCI
+
+Es gibt allerdings noch ein viel größeres Problem: Zwar gibt es Maus und Tastatur (fast?) nur in der Low-Speed-Variante, also für UHCI und OHCI, allerdings gibt es noch weitere Geräte, die von einer leicht anderen Form des Legacy Supports erfasst werden: USB-Massenspeicher. Sie werden allerdings nicht als ATA-Festplatten oder ISA-Diskettenlaufwerke simuliert, sondern sind nur über den BIOS-Interrupt 13h zu erreichen, daher kann man den BIOS-Treiber im Protected Mode nicht mehr (oder nur per VM8086) nutzen.
+
+Das Problem ist hier, dass viele dieser Massenspeicher High-Speed-Geräte sind, also sehr gern am EHCI arbeiten. Viele BIOS besitzen auch EHCI-Unterstützung und dies ist geradezu tödlich für Betriebssysteme ohne jegliche EHCI-Unterstützung. Das Problem ist nämlich, dass jegliches High-Speed-Gerät per definitionem auch an Full-Speed-Ports arbeiten muss, da das BIOS aber den EHCI initialisiert hat, arbeiten diese Gerät im High-Speed-Modus und können aufgrund des EHCI-Designs von einem sogenannten *Companion Controller* nicht erkannt werden (ein EHC kann nur High-Speed-Geräte behandeln, alle anderen müssen von einem anderen HC wie UHC oder OHC gehandhabt werden – dem Companion Controller). Das heißt, für Betriebssysteme ohne EHCI-Unterstützung bleiben diese Geräte vollkommen unsichtbar, obwohl sie laut USB-2.0-Spezifikation auch als Full-Speed-Geräte arbeiten könnten und somit benutzbar wären.
+
+Zur Lösung dieses Problems muss ein Betriebssystem zumindest eine minimale EHCI-Unterstützung mitbringen, welche darin besteht, den EHCI zu finden, die Kontrolle vom BIOS zu übernehmen (also den Legacy Support zu deaktivieren), zurückzusetzen und alle Geräte an die Companion Controller weiterzuleiten – dies ist allerdings leichter gesagt als getan. Wird mit dem Companion Controller dann ein Reset getrieben, so schaltet das Gerät in den Full-Speed-Modus zurück (s. auch [Reset](#reset)), da es keinen High-Speed-Hub erkennt.
+
 ## Übersetzung
 
 Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur liest (z. B. die Spezifikation), hier noch eine Übersetzung der von mir verwendeten Begriffe.
@@ -1101,6 +1123,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7393/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7393; parent 7390; 2010-03-16T21:03:46Z -->
+<!-- MediaWiki page 1690; revision 7409; parent 7393; 2010-03-20T23:42:50Z -->
