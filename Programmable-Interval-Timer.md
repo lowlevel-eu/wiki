@@ -87,11 +87,11 @@ Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird 
 
 ### Frequenzberechnung
 
-Frequenzen haben die Einheit 1/s, wodurch man sich leicht deren Bedeutung klar machen kann: Hat die Frequenz z. B. den Wert 10, wird zehnmal pro Sekunde der IRQ 0 ausgelöst, also alle 100 ms (1 s = 1000 ms).
+Frequenzen haben die Einheit Hz = 1/s, wodurch man sich leicht deren Bedeutung klar machen kann: Hat die Frequenz z. B. den Wert 10 Hz, wird zehnmal pro Sekunde der IRQ 0 ausgelöst, also alle 100 ms (1 s = 1000 ms).
 
-Im Mode 2 wird die interne Frequenz durch den Wert des Counterregisters geteilt, um den Zähler zu erhalten. Wenn man nun eine bestimmte Frequenz benötigt, berechnet man den zu übergebenen Wert des Counter-Registers wie folgt:
+Im Mode 2 wird die interne Frequenz durch den Wert des Counter-Registers geteilt, um den Zähler zu erhalten. Wenn man nun eine bestimmte Frequenz benötigt, berechnet man den zu übergebenen Wert des Counter-Registers wie folgt:
 
-    Counter-Register = 1193180 / Frequenz.
+    Counter-Register = 1193180 Hz / Frequenz.
 
 Entsprechendes steht auch im obigen Beispielcode.
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7405; parent 7041; 2010-03-20T19:58:51Z -->
+<!-- MediaWiki page 1432; revision 7406; parent 7405; 2010-03-20T20:09:40Z -->
