@@ -13,11 +13,11 @@ Die Streaming SIMD Extensions (oder kurz SSE genannt), ist ein eine Befehlserwei
 Hinweis: Das zuerst angegebene Register enthält das Ergebnis.
 
 | Befehl | Funktion | Beispiel |
-| -------- | ---------------------------------------------------------- | ------------------ |
-| ADDPS | Addiert die Komponenten von zwei Registern | ADDPS xmm0, xmm1 |
-| SUBPS | Subtrahiert die Komponenten von zwei Registern | SUBPS xmm0, xmm1 |
-| MULPS | Multipliziert die Komponenten von zwei Registern | MULPS xmm0, xmm1 |
-| DIVPS | Dividiert die Komponenten von zwei Registern | DIVPS xmm0, xmm1 |
+| -------- | ---------------------------------------------------------- | --------------------------------- |
+| ADDPS | Addiert die Komponenten von zwei Registern | \<asm\>ADDPS xmm0, xmm1\</asm\> |
+| SUBPS | Subtrahiert die Komponenten von zwei Registern | \<asm\>SUBPS xmm0, xmm1\</asm\> |
+| MULPS | Multipliziert die Komponenten von zwei Registern | \<asm\>MULPS xmm0, xmm1\</asm\> |
+| DIVPS | Dividiert die Komponenten von zwei Registern | \<asm\>DIVPS xmm0, xmm1\</asm\> |
 | ADDSS | Addiert Skalar zu Komponenten eines Registers |  |
 | SUBSS | Subtrahiert Skalar von den Komponenten eines Registers |  |
 | MULSS | Multipliziert die Komponenten eines Registers mit Skalar |  |
@@ -25,6 +25,6 @@ Hinweis: Das zuerst angegebene Register enthält das Ergebnis.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
 
-<!-- MediaWiki page 2199; revision 7412; parent 7411; 2010-03-21T01:16:19Z -->
+<!-- MediaWiki page 2199; revision 7413; parent 7412; 2010-03-21T01:21:12Z -->
