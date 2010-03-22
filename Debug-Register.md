@@ -6,7 +6,7 @@ Die **Debug Register** ermöglichen es eine Debug [Exception](https://github.com
 
 Um einen Breakpoint zu setzen, lädt man eines der Register *DR0* bis *DR3* mit der Adresse und setzt die entsprechenden Flags in *DR7*. Beim Erreichen des Breakpoints wird der Interrupt 1 (*\#DB*) ausgelöst. Bei der Behandlung sollte man das DR6 Register auswerten, und danach auf 0 setzen, da die CPU möglicherweise nicht automatisch alle Flags vor der nächsten Exception zurücksetzt. Um zu verhindern, dass dieser Breakpoint bei der Rückkehr aus der ISR direkt wieder ausgelöst wird, sollte das Resume Flag (*RF*) im [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS")-Register (auf dem Stack) gesetzt werden.
 
-Kapitel 18 des Intel Manuals sollte vor der Implementierung von Debugfunktionen gelesen werden. Im Folgenden ein grober Überblick über die wichtigsten Flags der Register *DR6* und *DR7*.
+Das Kapitel zu den Debug Registern im System Programming Guide der Intel Manuals sollte vor der Implementierung von Debugfunktionen gelesen werden. Im Folgenden ein grober Überblick über die wichtigsten Flags der Register *DR6* und *DR7*.
 
 ### DR7
 
@@ -68,10 +68,10 @@ Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emu
 
 ## Siehe auch
 
-- Intel Manuals - Volume 3: System Programming Guide, Chapter 18 - Debugging and Performance Monitoring
+- Intel Manuals - Volume 3: System Programming Guide
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5771/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1928/index.html)
 
-<!-- MediaWiki page 1928; revision 5771; parent 5545; 2009-08-27T16:07:47Z -->
+<!-- MediaWiki page 1928; revision 7416; parent 5771; 2010-03-22T22:50:46Z -->
