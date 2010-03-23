@@ -112,6 +112,14 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 
 <!-- -->
 
+- GUI hat nichts mit OS zu tun. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
+
+<!-- -->
+
+- Klar ist Sortieren etwas fundamental wichtiges in der Software-Entwicklung, aber eben **allgemein** in **jeder** Software-Entwicklung, und hat nichts speziell mit OS-Entwicklung zu tun. Jeder der das Niveau erreicht hat tatsächlich ein richtiges OS coden zu können sollte mindestens ein paar Grundkenntnisse beim Sortieren haben und ansonsten in der Lage sein die Suchmaschine seiner Wahl zu nutzen, es gibt ne Menge guter Infos/Tutorials/usw. im Netz zu diesem Thema. Auch im LowLevel-Forum wird man sicher den ein oder anderen Tipp dazu bekommen (so wie in allen anderen Foren mit Schwerpunkt auf SW-Entwicklung auch), auch wenn ich speziell dazu noch keine einzige Frage im LowLevel-Forum gesehen hab. Ich persönlich sehe keine Notwendigkeit dieses Thema in dieses Wiki aufzunehmen. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
+
+<!-- -->
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -123,6 +131,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7417; parent 7415; 2010-03-23T10:32:30Z -->
+<!-- MediaWiki page 1518; revision 7418; parent 7417; 2010-03-23T16:08:57Z -->
