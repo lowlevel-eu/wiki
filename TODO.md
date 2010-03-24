@@ -113,6 +113,7 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 <!-- -->
 
 - GUI hat nichts mit OS zu tun. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
+- Wieso denn das nicht?! Du hast natürlich Recht, wenn man davon ausgeht, dass OS Entwicklung nur auf den Kernel beschränkt ist. Aber der Kernel allein macht doch noch keinen glücklich, oder?! Außerdum haben wir doch auch einen Artikel zum Thema [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 18:21, 24. Mär. 2010 (CET)
 
 <!-- -->
 
@@ -131,6 +132,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7420/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7418; parent 7417; 2010-03-23T16:08:57Z -->
+<!-- MediaWiki page 1518; revision 7420; parent 7418; 2010-03-24T17:21:18Z -->
