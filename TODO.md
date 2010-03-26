@@ -117,7 +117,12 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 
 <!-- -->
 
+- Die meisten Prgramme hab ich für Computer entwickelt die weder Tastatur noch Monitor oder gar eine Maus besitzen (noch nicht mal die nötigen Anschlüsse haben). Trotzdem lief dort meistens ein richtiges OS, ein paar mal sogar ganz normales Linux. Der GUI-Artikel gibt eher ein paar grobe Denkansätze speziell aus Sicht des OS-Coders, behandelt die GUI an sich aber nicht. Ich denke diese Art von Artikel ist für das Thema GUI auch genau richtig in diesem Wiki. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:45, 26. Mär. 2010 (CET)
+
+<!-- -->
+
 - Klar ist Sortieren etwas fundamental wichtiges in der Software-Entwicklung, aber eben **allgemein** in **jeder** Software-Entwicklung, und hat nichts speziell mit OS-Entwicklung zu tun. Jeder der das Niveau erreicht hat tatsächlich ein richtiges OS coden zu können sollte mindestens ein paar Grundkenntnisse beim Sortieren haben und ansonsten in der Lage sein die Suchmaschine seiner Wahl zu nutzen, es gibt ne Menge guter Infos/Tutorials/usw. im Netz zu diesem Thema. Auch im LowLevel-Forum wird man sicher den ein oder anderen Tipp dazu bekommen (so wie in allen anderen Foren mit Schwerpunkt auf SW-Entwicklung auch), auch wenn ich speziell dazu noch keine einzige Frage im LowLevel-Forum gesehen hab. Ich persönlich sehe keine Notwendigkeit dieses Thema in dieses Wiki aufzunehmen. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
+- Kann dieser leidige Thread bitte nun endlich gelöscht werden? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:45, 26. Mär. 2010 (CET)
 
 <!-- -->
 
@@ -132,6 +137,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7420/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7420; parent 7418; 2010-03-24T17:21:18Z -->
+<!-- MediaWiki page 1518; revision 7422; parent 7420; 2010-03-26T08:45:19Z -->
