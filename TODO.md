@@ -121,8 +121,13 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 
 <!-- -->
 
+- Mir ist natürlich bewusst, dass eine GUI keineswegs essentiell für ein OS ist. Aber sie ist vor allem auf heutigen (Heim-) PCs ein wichtiger Bestandteil, deswegen habe ich sie als Beispiel aufgeführt. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 12:14, 26. Mär. 2010 (CET)
+
+<!-- -->
+
 - Klar ist Sortieren etwas fundamental wichtiges in der Software-Entwicklung, aber eben **allgemein** in **jeder** Software-Entwicklung, und hat nichts speziell mit OS-Entwicklung zu tun. Jeder der das Niveau erreicht hat tatsächlich ein richtiges OS coden zu können sollte mindestens ein paar Grundkenntnisse beim Sortieren haben und ansonsten in der Lage sein die Suchmaschine seiner Wahl zu nutzen, es gibt ne Menge guter Infos/Tutorials/usw. im Netz zu diesem Thema. Auch im LowLevel-Forum wird man sicher den ein oder anderen Tipp dazu bekommen (so wie in allen anderen Foren mit Schwerpunkt auf SW-Entwicklung auch), auch wenn ich speziell dazu noch keine einzige Frage im LowLevel-Forum gesehen hab. Ich persönlich sehe keine Notwendigkeit dieses Thema in dieses Wiki aufzunehmen. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
 - Kann dieser leidige Thread bitte nun endlich gelöscht werden? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:45, 26. Mär. 2010 (CET)
+- Ja, dreht sich ja doch nur im Kreis... --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 12:14, 26. Mär. 2010 (CET)
 
 <!-- -->
 
@@ -137,6 +142,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7422; parent 7420; 2010-03-26T08:45:19Z -->
+<!-- MediaWiki page 1518; revision 7423; parent 7422; 2010-03-26T11:14:21Z -->
