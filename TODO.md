@@ -94,43 +94,6 @@ Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit da
 
 Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembler.net/fasm-1.69.12.tar.gz) gegen die eigene libc.a. Bei anderen Sachen ist es aber eben um einiges komplizierter und weil es bei FASM so einfach ist, denke ich nicht, dass sich da eine Seite lohnt (wogegen es bei anderen Sachen eben, wie von Erik beschrieben, zu betriebssystemspezifisch ist). --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 20:30, 9. Mär. 2010 (CET)
 
-- Ich habe auf Basis von Radixsort einen extrem schnellen Sortieralgorithmus entwickelt, mit dem unter C nach allen Datentypen sortiert werden kann, und habe ihn bei SourceForge *public* gemacht. Ich habe schon einen Artikel bei [Wikiversity](http://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Kapitel_2) (letzter Algorithmus) eingestellt. Da man auch in Betriebssystemen Tabellen sortieren muß, könnte das auch hier von Interesse sein. Falls dem so ist, würde ich einen Artikel schreiben, der technisch genauer darauf eingeht, was wie und warum funktioniert. --JDHenning 12:12, 16. Mär. 2010 (CET)
-
-<!-- -->
-
-- Wer ein Betriebssystem schreiben will, der sollte auch sortieren können... Außerdem braucht man in seiner libc eh ein qsort(), das kann man dann implementieren. Radixsort eignet sich aber nicht als Implementierung für qsort(), weil es nicht jede totalgeordnete Menge sortieren kann. --[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") 21:03, 16. Mär. 2010 (CET)
-- Bist du bitte so nett und gibst mir **irgendein** Beispiel einer Sortieraufgabe, die Quicksort handhaben kann und ExtraDix nicht? Da ExtraDix nach allen in C bekannten Datentypen sortieren kann bin ich mal gespannt ;-). --JDHenning 11:50, 18. Mär. 2010 (CET)
-
-<!-- -->
-
-- Array aus Zeigern auf Strukturen, welche Autotypen enthalten, nach Baujahr sortieren, bitte. ^^ --[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") 01:25, 21. Mär. 2010 (CET)
-- Alle nicht in C direkt eingebauten Datentypen, dann möchte ich primär die Vergleichsfunktion angeben, was bei einem nicht vergleichsbasierten Algorithmus offensichtlich nicht möglich ist. Ich finde es auch nicht besonders redlich, dann auf der Wikipedia-Seite das mit Quicksort zu vergleichen. Abgesehen davon ist es eine Implementierung eines Algorithmus und kein Algorithmus an sich, deswegen finde ich es selbst auf der [Wikipedia-Seite](http://de.wikiversity.org/wiki/Kurs:Algorithmen_und_Datenstrukturen/Kapitel_2#ExtraDix) fehl am Platz.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 12:28, 18. Mär. 2010 (CET)
-- Es ist sowohl ein Algorithmus, nämlich die Erweiterung von RadixSort, als auch eine Implementierung, die aus pragmatischen Gründen den gleichen Namen bekommen hat. In C gibt es integer und floats mit unterschiedlichen Ausprägungen sowie strings und alle diese lassen sich sortieren. Dann gibt es die zusammengesetzten Strukturen, die aus diesen Grundtypen aufgebaut werden. Alle diese können mittels ExtraDix sortiert werden und andere Datentypen sind mir in C nicht bekannt. Was also meinst du bitte mit "Alle nicht in C direkt eingebauten Datentypen"? Und was ist unredlich am Vergleich mit Quicksort? Schließlich wird dieser Algorithmus an vielen Stellen als der schnellste angepriesen. --JDHenning 12:13, 19. Mär. 2010 (CET)
-- Worin besteht denn der Unterschied zwischen Radixsort und ExtraDix? Es ist unredlich in dem Sinne, dass man bei Quicksort eine beliebige Ordnung auf den zu sortierenden Objekten angeben kann, bei Radixsort aber nur eine Ordnung auf dem Alphabet und es wird automatisch daraus die lexikographische Ordnung. Bei ExtraDix kommt hinzu (zumindest so wie ich das verstehe), dass die Ordnung automatisch die der Binärdarstellung des Objekts ist (und man kann dann nur zwischen aufsteigend bzw. absteigend wählen). Außerdem kann man bei Strukturen sowie ich das sehe nur ein Feld der Struktur auswählen und nach diesem Sortieren lassen. Was ist nun wenn man mehrere Felder braucht, um zu vergleichen? zB könnte ich mir einen n-dimensionalen Vektor vorstellen, den ich der Länge nach sortieren will, dabei aber nicht die Länge explizit speichern will. Ich will deine Implemtierung in keinster Weise diskreditieren, aber 1. ich halte Sortieralgorithmen nicht relevant für dieses Wiki (dafür gibt es genug andere Plätze im Internet um eine gute Erklärung dafür zu finden), falls du anderer Meinung bist, müsstest du mir Erklären warum das speziell beim OSDev (das ist das Thema des Wikis) und nicht nur allgemein beim Programmieren (das ist nicht das Thema des Wikis) relevant ist 2. Ich halte ExtraDix für eine Implementierung von RadixSort und nicht für einen Algorithmus (siehe oben)
-- Es ist, wie der Name schon sagt, eine Erweiterung von Radixsort. Mir ist keine Version von Radixsort bekannt, die etwa floats sortiert, ohne sie zuvor entweder in eine dezimale Darstellung zu bringen, oder sie bitweise zu bearbeiten. Der Vorteil von ExtraDix ist, dass alle gängigen Sortieraufgaben mit einer Geschwindigkeit erledigt werden, die sehr dicht am mathematischen Optimum liegen (und ich weiß, dass man mit Bucketsort schneller ist, wenn man nach 16-Bit-Zahlen sortiert und 65.000 Eimer aufstellt, aber dann ist man auch sehr viel schneller als Quicksort). Ich will auch nicht Quicksort schlecht machen; es ist nur so, dass es ab ein paar hundert Datensätzen nicht der schnellste Algorithmus ist. Und es gibt natürlich auch Aufgaben, die man mit ExtraDix nicht handhaben kann. Aber alle Sortieraufgaben, die man mit normalen Datenbanken machen kann, kann man damit erledigen. Und warum ich gefragt habe ob es euch interessiert, liegt an dem alten Unix-Spruch: "Letztendlich sind alles Dateien" der eigentlich ergänzt werden müßte mit "und viele davon sind Datenbank-Tabellen". Und wenn es euch nicht interessiert, dann beenden wir doch ganz einfach die Diskussion an dieser Stelle.--JDHenning 11:22, 22. Mär. 2010 (CET)
-- IMO ist diese Diskussion ganz und gar nicht überflüssig. Denn im OSDev muss man früher oder später sortieren (z.B. bei der GUI). Dabei stößt man aber auf ganz andere Probleme als der "gewöhnliche" Programmierer: Der Quicksort ist zwar immer noch der schnellste Alogrithmus, aber leider auch rekursiv. Radixsort ist langsamer, speicherplatzintensiver und nur eingeschränkt nutzbar, aber dafür auf jeden Fall stabil. Man wird also früher oder später nicht ums Sortieren herumkommen, und dann sollte man hier im Wiki doch eine Antwort finden, wie man dieses Problem am sichersten und schnellsten löst. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 11:32, 23. Mär. 2010 (CET)
-
-<!-- -->
-
-- GUI hat nichts mit OS zu tun. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
-- Wieso denn das nicht?! Du hast natürlich Recht, wenn man davon ausgeht, dass OS Entwicklung nur auf den Kernel beschränkt ist. Aber der Kernel allein macht doch noch keinen glücklich, oder?! Außerdum haben wir doch auch einen Artikel zum Thema [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 18:21, 24. Mär. 2010 (CET)
-
-<!-- -->
-
-- Die meisten Prgramme hab ich für Computer entwickelt die weder Tastatur noch Monitor oder gar eine Maus besitzen (noch nicht mal die nötigen Anschlüsse haben). Trotzdem lief dort meistens ein richtiges OS, ein paar mal sogar ganz normales Linux. Der GUI-Artikel gibt eher ein paar grobe Denkansätze speziell aus Sicht des OS-Coders, behandelt die GUI an sich aber nicht. Ich denke diese Art von Artikel ist für das Thema GUI auch genau richtig in diesem Wiki. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:45, 26. Mär. 2010 (CET)
-
-<!-- -->
-
-- Mir ist natürlich bewusst, dass eine GUI keineswegs essentiell für ein OS ist. Aber sie ist vor allem auf heutigen (Heim-) PCs ein wichtiger Bestandteil, deswegen habe ich sie als Beispiel aufgeführt. --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 12:14, 26. Mär. 2010 (CET)
-
-<!-- -->
-
-- Klar ist Sortieren etwas fundamental wichtiges in der Software-Entwicklung, aber eben **allgemein** in **jeder** Software-Entwicklung, und hat nichts speziell mit OS-Entwicklung zu tun. Jeder der das Niveau erreicht hat tatsächlich ein richtiges OS coden zu können sollte mindestens ein paar Grundkenntnisse beim Sortieren haben und ansonsten in der Lage sein die Suchmaschine seiner Wahl zu nutzen, es gibt ne Menge guter Infos/Tutorials/usw. im Netz zu diesem Thema. Auch im LowLevel-Forum wird man sicher den ein oder anderen Tipp dazu bekommen (so wie in allen anderen Foren mit Schwerpunkt auf SW-Entwicklung auch), auch wenn ich speziell dazu noch keine einzige Frage im LowLevel-Forum gesehen hab. Ich persönlich sehe keine Notwendigkeit dieses Thema in dieses Wiki aufzunehmen. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:08, 23. Mär. 2010 (CET)
-- Kann dieser leidige Thread bitte nun endlich gelöscht werden? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:45, 26. Mär. 2010 (CET)
-- Ja, dreht sich ja doch nur im Kreis... --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 12:14, 26. Mär. 2010 (CET)
-
-<!-- -->
-
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -142,6 +105,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7423; parent 7422; 2010-03-26T11:14:21Z -->
+<!-- MediaWiki page 1518; revision 7424; parent 7423; 2010-03-27T10:53:20Z -->
