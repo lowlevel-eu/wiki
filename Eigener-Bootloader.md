@@ -12,6 +12,8 @@ Das brauchen wir um unser erstes Programm zu realisieren: Einen Editor, einen As
 
 ### Der Editor
 
+*Hauptartikel: [Editor](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor")*
+
 Fürs erste reicht jeder beliebige Texteditor. Unter Windows z.B. Notepad. Von Vorteil ist es, wenn der Editor Syntaxhighlighting für Assembler Dateien unterstützt wie z.B. Notepad 2, Ultraedit, Proton ... Für LINUX gilt das gleiche. Hier gibt es auch jede Menge brauchbarer Editoren die unseren Ansprüchen genügen.
 
 ### Der Assembler
@@ -261,6 +263,6 @@ Wenn alles gutgegangen ist haben wir jetzt ein Diskettenimage mit unserem HelloW
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 5820; parent 4778; 2009-08-31T18:50:56Z -->
+<!-- MediaWiki page 1427; revision 7438; parent 5820; 2010-03-28T22:25:34Z -->
