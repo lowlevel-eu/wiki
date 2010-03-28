@@ -69,7 +69,7 @@ ASM-Code \<asm\>mov al, 11001100b xor al, 01100110b  ; al = 10101010b\</asm\>
 
 Besonders bei hardwarenaher Programmierung kann man auf die Bit-Operatoren kaum verzichten. Sie sind nötig, da in [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") einzelnen Bits oft dazu dienen einen Zustand der Hardware wiederzuspiegeln: Sie dienen als Flags. Da Software über die CPU aber immer nur auf Bytes zugreifen kann, und so den Zustand einzelner Bits nicht überprüfen kann verwendet man die Bit-Operatoren, um z. B. irrelevante Bits zu löschen oder bestimmte Bits zu setzen ohne den Zustand der anderen Bits zu beeinflussen.
 
-### Bits-Löschen
+### Bits löschen
 
 Um bestimmte Bits in einem oder mehreren Bytes zu löschen wird eine (Bit-)Maske benötigt. Die Maske gibt an welche Bits gelöscht werden sollen. Angenommen du hast ein Byte, dessen 5. Bit unbedingt *0* sein muss, weil es für eine Hardware-Funktion steht, die du ausschalten willst. Du erstellst dir also eine Maske in der nur das 5. Bit gesetzt ist: 00100000b.
 
@@ -81,15 +81,9 @@ und Verknüpfst dein Byte per AND mit dem Resultat
 
     (????????b AND 11011111b) = ??0?????b
 
-Das ganze funktioniert natürlich auch mit mehreren Bits gleichzeitig. Interessiert die z. B. nur ob diese Funktion gerade an- oder ausgeschaltet ist löschst du einfach alle anderen Bits.
+Das ganze funktioniert natürlich auch mit mehreren Bits gleichzeitig. C-Code: \<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
 
-    (????????b AND 00100000b) = 00?00000b
-
-Ist das Ergebnis gleich 0 dann ist es das Bit auch, ist es ungleich 0 dann ist dein Bit gesetzt.
-
-C-Code: \<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
-
-### Bits-Setzen
+### Bits setzen
 
 Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdings gibt sie diesmal an, welches Bit gesetzt werden soll. Um z. B. die Bits 1,4,5 auf *1* zu setzen erstellt man sich als Maske: 00110010b Im Gegensatz zum Löschen wird jetzt allerdings mit einem einfachen OR verknüpft.
 
@@ -97,8 +91,16 @@ Wie beim Löschen eines Bits wird auch hier eine (Bit-)Maske benötigt. Allerdin
 
 C-Code: \<c\>PORTx \|= (1 \<\< BitNummer); // Bit in PORTx setzen \</c\>
 
+### Bit testen
+
+Oft muss man auch testen, ob ein Bit gesetzt ist, um z.B. zu erfahren, ob man aus einem Port lesen darf. Dafür löscht man einfach alle Bits, die nicht betrachtet werden sollen mithilfe der AND Verknüpfung. Ist das Resultat 0, dann war das betrachtete Bit gelöscht, andernfalls war es gesetzt.
+
+    (????????b AND 00100000b) = 00?00000b
+
+C-Code: \<c\>if (PORTx & (1 \<\< BitNummer) == 0) //bit gelöscht else //bit gesetzt
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 6155; parent 6154; 2009-11-01T23:39:01Z -->
+<!-- MediaWiki page 1757; revision 7428; parent 6155; 2010-03-28T17:59:25Z -->
