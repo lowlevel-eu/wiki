@@ -62,8 +62,6 @@ GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 - Modulares und objektorientiertes Framework für Dateisysteme etc.
 - Cross-Plattform-Installation
 
-  
-
 ## Siehe auch
 
 - GRUB legacy
@@ -82,6 +80,6 @@ GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7429; parent 6337; 2010-03-28T20:03:49Z -->
+<!-- MediaWiki page 1567; revision 7432; parent 7429; 2010-03-28T20:05:44Z -->
