@@ -19,19 +19,19 @@ Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](https://
 
 ## Warum GRUB?
 
-Im [Forum](http://lowlevel.brainsware.org/forum/) und hier im Wiki wird von den meisten GRUB empfehlen und selbst verwendet. Außerdem benutzen die Tutorials im Wiki (größtenteils) GRUB. Dies geschieht aus folgenden Gründen:
+Im [Forum](http://lowlevel.brainsware.org/forum/) und hier im Wiki wird von den meisten GRUB empfohlen und selbst verwendet. Außerdem benutzen die Tutorials im Wiki (größtenteils) GRUB. Dies geschieht aus folgenden Gründen:
 
 - Einen Bootloader zu schreiben setzt **tiefergehende Assemblerkenntnisse** voraus. Falls man diese noch nicht hat, dann wird man sehr wahrscheinlich am Bootloader scheitern oder aber einen Teil/den größten Teil aus anderem Quellcode zusammenkopieren.
-- Dabei kommen dann **fehleranfällige** Bootloader heraus, von denen der jeweilige Programmierer meist nicht weiss was sie genau machen (z.B. in welchem Dateiformat der Kernel sein muss, an welche Adresse der Kernel geladen wird oder wieviel vom Kernel überhaupt geladen wird) und im Forum werden dann Threads mit 500 Zeilen zusammengefrickelten Assemblercode und der Frage *"Warum funktioniert denn das nicht so wie ich das will!?"* erstellt. Der Punkt hier ist nicht, dass wir zu faul wären Fragen zu beantworten, sondern, dass es einfach nichts bringt einen eigenen Bootloader zu schreiben, wenn derjenige nicht einmal im Ansatz verstanden hat, was er denn da überhaupt tut. Das ist dann für uns primär frustrierend.
-- Diese Fehleranfälligkeit kann auch dazu führen, dass das ganze eine Weile funktioniert, aber irgendwann tauchen plötzlich seltsame Fehler auf. Dies kann unter anderem den Grund haben, dass nicht der komplette Kernel geladen wird, sondern z.B. nur die ersten paar Kilobyte. Solche Fehler sind meist extrem **schwer zu debuggen**.
-- Eventuell tauchen später auch **neue Anforderungen** an den Bootloader auf, z.B. könnte man bei einem [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") durch den Bootloader Module (meistens Treiber) laden wollen. Dann wird entweder versucht das schnell *hinzufrickeln* oder aber man entscheidet sich dann doch gegen einen Mikrokernel, d.h. es kann **Auswirkungen auf das Design** des Kernels haben.
-- Falls man allerdings von Anfang an intensiv seinen Bootloader plant - was einem Anfänger aufgrund mangelnder Erfahrung verwehrt bleibt - und diesen sehr gewissenhaft programmiert, dann ist das ein Projekt für sich, d.h. es wird **Unmengen an Zeit verschlucken** (wir reden hier nicht von Tagen oder Wochen).
+- Dabei kommen dann **fehleranfällige** Bootloader heraus, von denen der jeweilige Programmierer meist nicht weiß, was sie genau machen (z. B. in welchem Dateiformat der Kernel sein muss, an welche Adresse der Kernel geladen wird oder wie viel vom Kernel überhaupt geladen wird) und im Forum werden dann Threads mit 500 Zeilen zusammengefrickelten Assemblercode und der Frage *„Warum funktioniert denn das nicht so, wie ich das will!?“* erstellt. Der Punkt hier ist nicht, dass wir zu faul wären Fragen zu beantworten, sondern, dass es einfach nichts bringt einen eigenen Bootloader zu schreiben, wenn derjenige nicht einmal im Ansatz verstanden hat, was er denn da überhaupt tut. Das ist dann für uns primär frustrierend.
+- Diese Fehleranfälligkeit kann auch dazu führen, dass das ganze eine Weile funktioniert, aber irgendwann tauchen plötzlich seltsame Fehler auf. Dies kann unter anderem den Grund haben, dass nicht der komplette Kernel geladen wird, sondern z. B. nur die ersten paar Kilobyte. Solche Fehler sind meist extrem **schwer zu debuggen**.
+- Eventuell tauchen später auch **neue Anforderungen** an den Bootloader auf, z. B. könnte man bei einem [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") durch den Bootloader Module (meistens Treiber) laden wollen. Dann wird entweder versucht das schnell *hinzufrickeln* oder aber man entscheidet sich dann doch gegen einen Mikrokernel, d. h. es kann **Auswirkungen auf das Design** des Kernels haben.
+- Falls man allerdings von Anfang an intensiv seinen Bootloader plant – was einem Anfänger aufgrund mangelnder Erfahrung verwehrt bleibt – und diesen sehr gewissenhaft programmiert, dann ist das ein Projekt für sich, d. h. es wird **Unmengen an Zeit verschlucken** (wir reden hier nicht von Tagen oder Wochen).
 - Der **[Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") auf x86-Prozessoren** hat so manches Hindernis, welches von Intel und Konsorten gerne aufgrund von Abwärtskompatibilität aufgestellt wurde. Beispiele hierfür sind der [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") (der Bootloader startet im Realmode) und das [A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"), welches aktiviert werden muss.
 
 Wir möchten natürlich dem geneigten Leser nicht vorenthalten, was genau er denn verpasst, wenn er GRUB benutzt:
 
 - Eine eingehende Beschäftigung mit dem [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") bleibt wahrscheinlich aus (oder kommt erst, wenn man sich mit dem [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") beschäftigt).
-- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z.B. im Kernel an einigen kleinen Stellen [Inlineassembler](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") verwendet werden muss.
+- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z. B. im Kernel an einigen kleinen Stellen [Inlineassembler](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") verwendet werden muss.
 
 ## GRUB legacy
 
@@ -80,6 +80,6 @@ GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7433; parent 7432; 2010-03-28T20:06:21Z -->
+<!-- MediaWiki page 1567; revision 7437; parent 7433; 2010-03-28T20:49:51Z -->
