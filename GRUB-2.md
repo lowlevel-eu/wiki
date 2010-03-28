@@ -1,30 +1,9 @@
 # GRUB 2
 
-Der **G**rand **U**nified **B**ootloader 2 ist der Nachfolger von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") (offizieller Name der Versionen bis 0.97: GRUB Legacy) und stellt eine Weiterentwicklung von GRUB dar. Er ist genauso wie GRUB Legacy [multibootfähig](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot").
-
-## Neuerungen gegenüber GRUB Legacy
-
-GRUB 2 weißt eine Vielzahl an Neuerungen auf:
-
-- Scripting-Support mit Lua
-- Grafische Benutzerschittstelle (nicht mit einer klassischen GUI bzw. einem Desktop zu verwechseln!)
-- Dynamisches Laden von Module auch während der Laufzeit
-- Unterstützung neuer Architekturen
-- Internationalisierung
-- Modulares und objektorientiertes Framework für Dateisysteme etc.
-- Cross-Plattform-Installation
-
-## GRUB 2 im Alltag
-
-Bisher ist GRUB 2 leider sehr instabil und verträgt sich noch nicht ganz mit dem erweiterten Multiboot-Standard. Von der Nutzung auf Produktivitätsmaschinen wird daher abgeraten. Auch für Hobby-OS eignet sich GRUB 2 noch nicht völlig.
-
-## Weblinks
-
-- [Offizielle Seite auf gnu.org](http://www.gnu.org/software/grub/grub-2.en.html)
-- [Disketten-/ISO-Images mit GRUB 2 erstellen](http://wiki.osdev.org/GRUB_2)
+Weiterleitung: [Grand Unified Bootloader#GRUB 2](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-2)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7395/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
 
-<!-- MediaWiki page 2087; revision 7395; parent 7394; 2010-03-17T22:39:01Z -->
+<!-- MediaWiki page 2087; revision 7430; parent 7395; 2010-03-28T20:04:45Z -->
