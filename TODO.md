@@ -95,6 +95,10 @@ Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit da
 
 Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembler.net/fasm-1.69.12.tar.gz) gegen die eigene libc.a. Bei anderen Sachen ist es aber eben um einiges komplizierter und weil es bei FASM so einfach ist, denke ich nicht, dass sich da eine Seite lohnt (wogegen es bei anderen Sachen eben, wie von Erik beschrieben, zu betriebssystemspezifisch ist). --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 20:30, 9. Mär. 2010 (CET)
 
+- Möglicherweise lohnt es sich in jeweils einem Artikel zu beschreiben, wie man häufig verwendete Komponenten portiert. Zum Beispiel Compiler, Shells, oder Standard-Bibliotheken. lbuild ist sicherlich auch ein guter Ansatzpunkt. Weil da vermutlich keine Copy&Paste-Anleitung entstehen kann, könnte man das ganze als mehr oder weniger allgemein gehaltene Erfahrungsberichte halten, wie es sie teilweise auch auf osdev.org gibt. --Jidder 01:22, 28. Mär. 2010 (CET)
+
+<!-- -->
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -106,6 +110,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7427/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7426; parent 7424; 2010-03-28T00:03:48Z -->
+<!-- MediaWiki page 1518; revision 7427; parent 7426; 2010-03-28T00:22:32Z -->
