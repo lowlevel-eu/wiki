@@ -45,6 +45,7 @@
 - [Kategorie:Versionsverwaltung](https://lowlevel-eu.github.io/wiki/pages/1887/index.html "Kategorie:Versionsverwaltung")
 - OSDev dür Einsteiger Serie: auf irgendwas zum Umwandeln zwischen verschiedenen Zahlensystemen verweisen
 - [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")
+- Einige der beliebtesten Seiten haben teilweise schon seit Jahren keinen Edit mehr gesehen. Zum Beispiel [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick") könnte mindestens an den markierten Stellen erweitert werden, oder vielleicht auch allgemein ausgebaut werden.
 
 ## Kleinigkeiten
 
@@ -105,6 +106,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7426/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7424; parent 7423; 2010-03-27T10:53:20Z -->
+<!-- MediaWiki page 1518; revision 7426; parent 7424; 2010-03-28T00:03:48Z -->
