@@ -31,7 +31,7 @@ Im [Forum](http://lowlevel.brainsware.org/forum/) und hier im Wiki wird von den 
 Wir möchten natürlich dem geneigten Leser nicht vorenthalten, was genau er denn verpasst, wenn er GRUB benutzt:
 
 - Eine eingehende Beschäftigung mit dem [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") bleibt wahrscheinlich aus (oder kommt erst, wenn man sich mit dem [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") beschäftigt).
-- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z.B. im Kernel an einigen kleinen Stellen Inlineassembler verwendet werden muss.
+- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z.B. im Kernel an einigen kleinen Stellen [Inlineassembler](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") verwendet werden muss.
 
 ## GRUB legacy
 
@@ -80,6 +80,6 @@ GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7432; parent 7429; 2010-03-28T20:05:44Z -->
+<!-- MediaWiki page 1567; revision 7433; parent 7432; 2010-03-28T20:06:21Z -->
