@@ -14,7 +14,7 @@ Das brauchen wir um unser erstes Programm zu realisieren: Einen Editor, einen As
 
 *Hauptartikel: [Editor](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor")*
 
-Fürs erste reicht jeder beliebige Texteditor. Unter Windows z.B. Notepad. Von Vorteil ist es, wenn der Editor Syntaxhighlighting für Assembler Dateien unterstützt wie z.B. Notepad 2, Ultraedit, Proton ... Für LINUX gilt das gleiche. Hier gibt es auch jede Menge brauchbarer Editoren die unseren Ansprüchen genügen.
+Fürs erste reicht jeder beliebige Texteditor. Unter Windows z. B. Notepad. Von Vorteil ist es, wenn der Editor Syntaxhighlighting für Assemblerdateien unterstützt wie z. B. Notepad 2, Ultraedit, Proton ... Für Linux gilt das gleiche. Hier gibt es auch jede Menge brauchbarer Editoren, die unseren Ansprüchen genügen.
 
 ### Der Assembler
 
@@ -24,7 +24,7 @@ Als Assembler verwenden wir den [Netwide Assembler](https://github.com/lowlevel-
 
 ### Die Testumgebung
 
-Zum Testen unseres Images werden wir Bochs verwenden. Bochs ist ein PC–Emulator. Er emuliert einen vollständigen PC inklusive Prozessor, im Gegensatz zu z.B. VM-Ware oder Virtual PC. Diese Programme simulieren auch einen PC, hier wird jedoch das Programm auf dem Hostprozessor ausgeführt, um mehr Geschwindigkeit heraus zu holen. Bochs hingegen hat für uns den Vorteil, das er einen integrierten Debugger besitzt. Er wird uns noch viele nützliche Informationen über unser Programm und dessen Fehler liefern.
+Zum Testen unseres Images werden wir Bochs verwenden. Bochs ist ein PC–Emulator. Er emuliert einen vollständigen PC inklusive Prozessor, im Gegensatz zu z. B. VM-Ware oder Virtual PC. Diese Programme simulieren auch einen PC, hier wird jedoch das Programm auf dem Hostprozessor ausgeführt, um mehr Geschwindigkeit zu erzielen. Bochs hingegen hat für uns den Vorteil, dass er einen integrierten Debugger besitzt. Er wird uns noch viele nützliche Informationen über unser Programm und dessen Fehler liefern.
 
 Auch Bochs steht unter der LGPL und ist auf Sourceforge.net unter <http://bochs.sourceforge.net> erhältlich.
 
@@ -34,9 +34,9 @@ Auch Bochs steht unter der LGPL und ist auf Sourceforge.net unter <http://bochs.
 
 Wie bereits erwähnt wird unser erstes Programm nicht viel anderes machen, als einen Text auszugeben, danach auf eine beliebige Taste zu warten, und dann das System neu zu starten.
 
-Bevor wir anfangen sind noch ein paar Informationen wichtig. Unser Programm wird im [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record") liegen. Daher muss unser Programm im ersten Sektor einer Partition oder Diskette liegen. Weiter braucht unser Programm eine besondere Kennzeichnung, die Magic Number (0xAA55). Diese muss am Ende des Sektors stehen. Ein Sektor ist übrigens nur 512 Byte groß. Abzüglich der Magic Number bleiben uns noch 510 Byte für unser Programm. Das ist nicht wirklich viel. Und auch mit einer der Gründe wieso wir das Programm in Assembler schreiben und nicht in einer Hochsprache wie z.B. C. Der nächste wichtige Punkt ist, dass das BIOS unseren Sektor an die absolute Adresse 0x07C00 kopiert und ausführt. Je nach BIOS-Hersteller kann die Zusammensetzung der absoluten Adresse aber unterschiedlich aussehen.
+Bevor wir anfangen, sind noch ein paar Informationen wichtig. Unser Programm wird im [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record") liegen. Daher muss es im ersten Sektor einer Partition oder Diskette liegen. Weiterhin braucht unser Programm eine besondere Kennzeichnung, die Magic Number (0xAA55). Diese muss am Ende des Sektors stehen. Ein Sektor ist übrigens nur 512 Byte groß. Abzüglich der Magic Number bleiben uns noch 510 Byte für unser Programm. Das ist nicht wirklich viel und unter anderem ein Grund, wieso wir das Programm in Assembler schreiben und nicht in einer Hochsprache wie z. B. C. Der nächste wichtige Punkt ist, dass das BIOS unseren Sektor an die absolute Adresse 0x07C00 kopiert und ausführt. Je nach BIOS-Hersteller kann die Zusammensetzung der absoluten Adresse aber unterschiedlich aussehen.
 
-### Assembler Direktiven
+### Assemblerdirektiven
 
 Nun zu unserem Programm. Das Programm beginnt mit folgenden Zeilen.
 
@@ -55,11 +55,11 @@ Nun zu unserem Programm. Das Programm beginnt mit folgenden Zeilen.
 
 \</asm\>
 
-Die ersten Zeilen beginnen mit einem Semikolon, und sind somit Kommentarzeilen. Alles was nach einem Semikolon steht wird vom Assembler nachher beim Übersetzen (Assemblieren) nicht berücksichtigt.
+Die ersten Zeilen beginnen mit einem Semikolon und sind somit Kommentarzeilen. Alles, was nach einem Semikolon steht, wird vom Assembler beim Übersetzen (Assemblieren) nicht berücksichtigt.
 
-Die darauf folgenden beiden Zeilen enthalten Anweisungen an den Assembler selber (Assembler Direktiven). Die Zeile \[BITS 16\] gibt an, dass es sich bei diesem Programm um ein 16 Bit Programm handelt. Dadurch wird die Adressierung für den Real Mode festgelegt. Die Zeile \[ORG 0x0000\] ist für die Speicherorganisation zuständig. Im Realmode lässt sich damit der Offset festlegen, ab dem die Adressierung beginnen soll. In unserem Falle 0.
+Die darauf folgenden beiden Zeilen enthalten Anweisungen an den Assembler selbst (Assemblerdirektiven). Die Zeile \[BITS 16\] gibt an, dass es sich bei diesem Programm um ein 16-Bit-Programm handelt. Dadurch wird die Adressierung für den Real Mode festgelegt. Die Zeile \[ORG 0x0000\] ist für die Speicherorganisation zuständig. Im Realmode lässt sich damit der Offset festlegen, ab dem die Adressierung beginnen soll, in unserem Falle 0.
 
-### Start Code
+### Startcode
 
 \<asm\>
 
@@ -79,11 +79,11 @@ Die darauf folgenden beiden Zeilen enthalten Anweisungen an den Assembler selber
 
 \</asm\>
 
-Die erste Zeile enthält ein Label. Die Befehle, die nach dem Label START folgen, sind für die Initialisierung des Stacks, der Segmentregister und des Instruction Pointers. Wie bereits erwähnt, ist die absolute Adresse, an die unser Programm vom BIOS kopiert wird, zwar gleich, kann aber von BIOS-Hersteller zu Hersteller unterschiedlich realisiert werden. Daher bringen wir sie erst einmal in einen definierten Zustand, mit dem wir weiterarbeiten können.
+Die erste Zeile enthält ein Label. Die Befehle, die nach dem Label START folgen, initialisieren den Stack, die Segmentregister und den Instruction Pointer. Wie bereits erwähnt, ist die absolute Adresse, an die unser Programm vom BIOS kopiert wird, zwar gleich, kann aber von BIOS-Hersteller zu Hersteller unterschiedlich realisiert werden. Daher bringen wir sie erst einmal in einen definierten Zustand, mit dem wir weiterarbeiten können.
 
 Data Segment, Extra Segment, Code Segment und Stack Segment werden alle auf das gleiche Segment gelegt. Das hört sich jetzt erst einmal gefährlich an, da der Stack aber von oben nach unten wächst, und unser Programm um unteren Ende des Segments liegt ist genug Platz dazwischen.
 
-Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, machen wir den Umweg über AX. Mit dem ersten MOV Befehl wird AX mit der Segmentadresse 0x07C0 initialisiert, die anschließend mit den nächsten 3 MOV Befehlen den einzelnen Segmentregistern DS, ES und SS zugewiesen wird. Der Stackpointer wird anschließend mit dem letzten MOV auf den höchst möglichen Wert gesetzt, damit dieser von oben nach unten wachsen kann. Der letzte Befehl ist ein absoluter Sprung (JMP für jump), mit dem DS und IP neu gesetzt werden. DS wird dabei auf 0x07C0 gesetzt, IP auf die Adresse die dem Label Main vom Assembler zugewiesen wird. Wir kennen den absoluten Wert nicht, nur den Platzhalter dafür. Aber das ist nicht schlimm, der Assembler ersetzt beim Assemblieren die Platzhalter durch die zugehörigen Adressen.
+Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, machen wir den Umweg über AX. Mit dem ersten MOV-Befehl wird AX mit der Segmentadresse 0x07C0 initialisiert, die anschließend mit den nächsten 3 MOV-Befehlen den einzelnen Segmentregistern DS, ES und SS zugewiesen wird. Der Stackpointer wird nun mit dem letzten MOV auf den höchstmöglichen Wert gesetzt, damit dieser von oben nach unten wachsen kann. Der letzte Befehl ist ein absoluter Sprung (JMP für jump), mit dem CS und IP neu gesetzt werden. CS wird dabei auf 0x07C0 gesetzt, IP auf die Adresse die dem Label MAIN vom Assembler zugewiesen wird. Wir kennen den absoluten Wert nicht, nur den Platzhalter dafür. Aber das ist nicht schlimm, der Assembler ersetzt beim Assemblieren die Platzhalter durch die zugehörigen Adressen.
 
 ### Hauptprogramm
 
@@ -99,13 +99,13 @@ Da Segmentregister nicht direkt mit absoluten Werten gesetzt werden können, mac
 
 \</asm\>
 
-Nach dem Label MAIN folgt das Hauptprogramm. Es besteht im ganzen aus nur 5 Anweisungen. 2 mov Befehlen, einem call und 2 Interrupt Aufrufen. Die ersten beiden kümmern sich um die Textausgabe, die darauf folgenden beiden um das Warten auf die Tastatur, der letzte um den Reset. Aber erst mal der Reihe nach.
+Nach dem Label MAIN folgt das Hauptprogramm. Es besteht im ganzen aus nur 5 Anweisungen. 2 MOV-Befehlen, einem CALL und 2 Interruptaufrufen. Die ersten beiden kümmern sich um die Textausgabe, die darauf folgenden beiden um das Warten auf einen Tastendruck, der letzte um den Reset. Aber erst mal der Reihe nach.
 
-Als erstes wird dem Register SI ein Wert zugewiesen. Das geschieht mit einem mov. Danach folgt ein CALL DisplayMessage. DisplayMessage ist eine Prozedur, die einen Text auf dem Monitor ausgibt. Die Prozedur erwartet, dass die Adresse des auszugebenden Textes durch DS:SI angegeben wird. Da DS bereits im START-Bereich gesetzt wurde, müssen wir nur noch SI entsprechend setzen. Da wir den genauen Wert nicht kennen, verwenden wir auch hier einen Platzhalter bzw. ein Label. Das Label wird weiter unten noch definiert.
+Als erstes wird dem Register SI ein Wert zugewiesen. Das geschieht mit einem MOV. Danach folgt ein CALL DisplayMessage, DisplayMessage ist eine Prozedur, die einen Text auf dem Monitor ausgibt. Die Prozedur erwartet, dass die Adresse des auszugebenden Textes durch DS:SI angegeben wird. Da DS bereits im START-Bereich gesetzt wurde, müssen wir nur noch SI entsprechend setzen. Da wir den genauen Wert nicht kennen, verwenden wir auch hier einen Platzhalter bzw. ein Label, welches weiter unten noch definiert wird.
 
-Danach folgt ein mov, mit dem das Register AH auf 0x00 gesetzt wird, und anschließend ein INT 0x16. Diese beiden Zeilen starten ein Funktion, die uns das BIOS zur Verfügung stellt. Diese Funktion wartet auf einen Tastendruck und liest diesen aus. Die ISR für den Interrupt 0x16 wertet einige Register aus, bevor die entsprechende Funktion ausgeführt wird. Die meisten der ISR des BIOS verwenden Register zur Parameterübergabe an Software-Interrupts.
+Danach folgt ein MOV, mit dem das Register AH auf 0x00 gesetzt wird, und anschließend ein INT 0x16. Diese beiden Zeilen rufen eine Funktion auf, die uns das BIOS zur Verfügung stellt. Diese wartet auf einen Tastendruck und liest diesen aus. Die ISR für den Interrupt 0x16 wertet einige Register aus, bevor die entsprechende Funktion ausgeführt wird. Die meisten der ISR des BIOS verwenden Register zur Parameterübergabe an Software-Interrupts.
 
-Als letztes folgt ein INT 0x19. Diese ISR startet das BIOS neu und generiert somit einen Neustart des Rechners.
+Als letztes folgt ein INT 0x19. Diese ISR startet das BIOS neu und entspricht somit einem Neustart des Rechners.
 
 ### Procedure DisplayMessage
 
@@ -136,15 +136,15 @@ Als letztes folgt ein INT 0x19. Diese ISR startet das BIOS neu und generiert som
 
 \</asm\>
 
-DisplayMessage ist eine Prozedur die den Text, der durch DS:SI angegeben ist, auf dem Monitor ausgibt. Die Textausgabe erfolgt zeichenweise mit der Funktion 14 des BIOS Interrupts 0x10. Wir benötigen daher eine Schleife die die BIOS-Funktion für jedes einzelne Zeichen aufruft. Die Schleife wird verlassen, wenn das darzustellende Zeichen den Wert 0 aufweist. Wir geben mit dieser Prozedur somit einen Nullterminierten String aus, so wie er z.B. in C verwendet wird.
+DisplayMessage ist eine Prozedur, die den Text, der durch DS:SI angegeben ist, auf dem Monitor ausgibt. Die Textausgabe erfolgt zeichenweise mit der Funktion 14 des BIOS-Interrupts 0x10. Wir benötigen daher eine Schleife, die die BIOS-Funktion für jedes einzelne Zeichen aufruft. Die Schleife wird verlassen, wenn das darzustellende Zeichen den Wert 0 aufweist. Wir geben mit dieser Prozedur somit einen nullterminierten String aus, so wie er z. B. in C verwendet wird.
 
-Die Prozedur benötigt intern einige Register für Zähler und Funktionsparameter. Daher sind wir gezwungen diese Register zu sichern, bevor wir sie verwenden. Danach müssen wir logischerweise das Gesicherte wieder zurücksichern. Würden wir das nicht tun, müssten wir überall dort, wo wir unsere Prozedur aufrufen erst einmal all diejenigen Register sichern die die Prozedur verwendet, und nach dem Aufruf rücksichern. Also machen wir das gleich in der Prozedur, und wir müssen uns beim Aufruf nicht mehr drum kümmern.
+Die Prozedur benötigt intern einige Register für Zähler und Funktionsparameter. Daher sind wir gezwungen, diese Register zu sichern, bevor wir sie verwenden. Danach müssen wir logischerweise das Gesicherte wiederherstellen. Würden wir das nicht tun, müssten wir überall dort, wo wir unsere Prozedur aufrufen, erst einmal all diejenigen Register sichern, die die Prozedur verwendet, und nach dem Aufruf wiederherstellen. Also machen wir das gleich in der Prozedur und müssen uns so beim Aufruf nicht mehr darum kümmern.
 
-Die Sicherung der Register auf dem Stack erfolgt mit dem Befehl pusha. Danach wird AH auf 0x0E und BX auf 0x0007 gesetzt. AH enthält die Funktionsnummer für den BIOS Interrupt 0x10. BX enthält Parameter für die Entsprechende Funktion 14. In diesem Fall Vorder-/Hintergrundfarbe und die Nummer des Displaypuffers.
+Die Sicherung der Register auf dem Stack erfolgt mit dem Befehl PUSHA. Danach wird AH auf 0x0E und BX auf 0x0007 gesetzt. AH enthält die Funktionsnummer für den BIOS-Interrupt 0x10, BX enthält Parameter für die entsprechende Funktion 14 – in diesem Fall Vorder-, Hintergrundfarbe und die Nummer des Displaypuffers.
 
-Danach folgt die Schleife. Das Label .DisplayLoop kennzeichnet den Anfang der Schleife. Es wird solange angesprungen, bis der komplette Text ausgegeben wurde.
+Anschließend folgt die Schleife. Das Label .DisplayLoop kennzeichnet ihren Anfang, es wird solange angesprungen, bis der komplette Text ausgegeben wurde.
 
-Der Befehl lodsb lädt das durch DS:SI angegebene Byte in AL und erhöht dabei gleichzeitig SI um eins. Danach zeigt DS:SI auf das nächste Zeichen, das ausgegeben werden soll. Mit dem nächsten beiden Befehlen wird überprüft, ob das Zeichen das Textende kennzeichnet oder nicht. Der Befehl test führt einen „Test“ durch, der einige Flags im Statusregister setzt. Wurde das Zero flag (ZF) gesetzt, sprich in AL befindet sich 0x00, dann wird mit dem Befehl JZ (Jump if Zero) die Schleife verlassen und an das Label .DONE gesprungen, wenn nicht, werden die nachfolgenden Befehle ausgeführt. Handelte es sich um ein druckbares Zeichen, das Zero Flag wurde somit beim test nicht gesetzt, wird int 0x10 aufgerufen. Dieser BIOS Interrupt mit den vorher gesetzten Funktionsnummer in AH gibt das Zeichen auf dem Monitor aus. Das Zeichen muss sich in AL befinden, die Farbangaben in BX. Anschließend wird mit JMP wieder zum Anfang der Schleife gesprungen.
+Der Befehl LODSB lädt das durch DS:SI angegebene Byte in AL und erhöht dabei gleichzeitig SI um eins. Jetzt zeigt DS:SI auf das nächste Zeichen, das ausgegeben werden soll. Mit dem nächsten beiden Befehlen wird überprüft, ob das Zeichen das Textende kennzeichnet oder nicht. Der Befehl TEST führt einen „Test“ durch, der einige Flags im Statusregister setzt (ein bitweises UND ohne das Ergebnis zu speichern, es werden nur die entsprechenden Flags gesetzt). Wurde das Zero Flag (ZF) gesetzt, sprich in AL befindet sich 0x00, dann wird mit dem Befehl JZ (Jump if Zero) die Schleife verlassen und an das Label .DONE gesprungen, wenn nicht, werden die nachfolgenden Befehle ausgeführt. Handelte es sich um ein auszugebendes Zeichen, das Zero Flag wurde also beim TEST nicht gesetzt, wird INT 0x10 aufgerufen. Dieser BIOS-Interrupt mit der vorher gesetzten Funktionsnummer in AH gibt das Zeichen auf dem Monitor aus. Das Zeichen muss sich in AL befinden, die Farbangaben in BX. Anschließend wird mit JMP wieder zum Anfang der Schleife gesprungen.
 
 Wird das Label .DONE angesprungen, werden mit dem Befehl POPA die Register wieder in den Ursprungszustand gebracht. Danach wird mit dem Befehl RET die Prozedur verlassen.
 
@@ -166,17 +166,17 @@ Wird das Label .DONE angesprungen, werden mit dem Befehl POPA die Register wiede
 
 \</asm\>
 
-Nach der Prozedur folgt der Datenteil unseres Programmes. Hier befindet sich unser Text, den wir ausgeben wollen. Das Label msgText Kennzeichnet die Adresse, an der sich unser Text befindet. Wir erinnern uns, im Hauptprogramm haben wir es bei der Textausgabe verwendet. Nach dem Label folgt ein db, es kennzeichnet einen Datenbereich der aus Bytes besteht. Danach folgen entweder durch Kommas getrennt die einzelnen Zeichen als Hexzahl, oder in Hochkommas gesetzter ganz normaler Text. 0x0D und 0x0A sind Steuerzeichen, die dafür sorgen, das unser Text in einer neuen Zeile ausgegeben wird.
+Nach der Prozedur folgt der Datenteil unseres Programmes. Hier befindet sich unser Text, den wir ausgeben wollen. Das Label msgText kennzeichnet die Adresse, an der sich unser Text befindet. Wir erinnern uns, im Hauptprogramm haben wir es bei der Textausgabe verwendet. Nach dem Label folgt ein DB, es kennzeichnet einen aus Bytes bestehenden Datenbereich. Anschließend folgen entweder durch Kommas getrennt die einzelnen Zeichen als Hexzahl oder in Hochkommas gesetzter ganz normaler Text. 0x0D und 0x0A sind Steuerzeichen, die dafür sorgen, dass unser Text in einer neuen Zeile ausgegeben wird.
 
-Die darauf folgende Zeile enthält wieder eine Besonderheit von NASM: Hiermit werden so viele 0x00 Datenbytes in den Programmcode eingefügt, das unser Programm mit der Magic Number genau 512 Byte groß ist.
+Die darauf folgende Zeile enthält wieder eine Besonderheit von NASM: Hiermit werden so viele 0x00-Datenbytes in den Programmcode eingefügt, dass unser Programm zusammen mit der Magic Number genau 512 Byte groß ist.
 
-Die nächste Zeile enthält die Magic Number. Das dw kennzeichnet einen Datenbereich mit 16 Bit Werten.
+Die nächste Zeile enthält diese Magic Number. Das DW kennzeichnet einen Datenbereich mit 16-Bit-Werten.
 
-In den letzten 3 Zeilen werden die bisher 512 Byte auf Diskettenimagegröße von 1.44 MB aufgefüllt. Diese Erweiterung lässt sich über einen Parameter beim Aufruf von NASM ein- und ausschalten.
+In den letzten 3 Zeilen werden die bisher 512 Byte auf Diskettenimagegröße von 1,44 MB aufgefüllt. Diese Erweiterung lässt sich über einen Parameter beim Aufruf von NASM ein- und ausschalten.
 
-### Assemblierung und Image Erzeugung
+### Assemblierung und Imageerzeugung
 
-Ich gehe davon aus, dass wir unser Programm mittlerweile in einer Datei mit dem Namen HelloWorld.asm gespeichert haben. Wenn nicht, unter **TODO** lässt sich der Quelltext herunterladen.
+Ich gehe davon aus, dass wir unser Programm mittlerweile in einer Datei mit dem Namen HelloWorld.asm gespeichert haben.
 
 #### Windows
 
@@ -184,7 +184,7 @@ Um den Boot Record zu übersetzen genügt nun folgender Aufruf:
 
     F:\BootRecord>nasmw src\HelloWorld.asm -o bin\HelloWorld.bin -l bin\HelloWorld.lst
 
-Danach sollte im Verzeichnis bin eine 512 Byte große Datei entstanden sein sowie eine HelloWorld.lst. Aus dieser Datei lassen sich Adressen und entstandener Maschinencode ablesen. Die .bin Datei kann jetzt in den ersten Sektor jeder beliebigen Diskette kopiert werden.
+Danach sollte im Verzeichnis bin eine 512 Byte große Datei entstanden sein sowie eine HelloWorld.lst. Aus dieser Datei lassen sich Adressen und entstandener Maschinencode ablesen. Die .bin-Datei kann jetzt in den ersten Sektor jeder beliebigen Diskette kopiert werden.
 
     F:\BootRecord>dir bin
      Datenträger in Laufwerk F: ist 
@@ -199,11 +199,11 @@ Danach sollte im Verzeichnis bin eine 512 Byte große Datei entstanden sein sowi
                    2 Datei(en)          6.209 Bytes
                    2 Verzeichnis(se),   Bytes frei
 
-Wir aber wollen ja zum Test ein Diskettenimage, das wir Testen können. Dafür rufen wir NASM mit der Option "-dIMAGE" auf. Mit -d wird das Define IMAGE gesetzt. Mit Hilfe dieses Defines und dem %ifdef %endif in unsere HelloWorld.asm erzeugt NASM jetzt eine 1.44 MB grosse Datei.
+Wir aber wollen ja zum Test ein Diskettenimage, das wir testen können. Hierzu rufen wir NASM mit der Option "-dIMAGE" auf. Mit -d wird das Define IMAGE gesetzt. Mit Hilfe dieses Defines und dem %ifdef %endif in unsere HelloWorld.asm erzeugt NASM jetzt eine 1,44 MB große Datei.
 
     F:\BootRecord>nasmw src\HelloWorld.asm -o img\HelloWorld.img -dIMAGE
 
-Zur Kontrolle ob unser Image auch erzeugt wurde:
+Zur Kontrolle, ob unser Image auch erzeugt wurde:
 
     F:\BootRecord>dir img
      Datenträger in Laufwerk F: ist 
@@ -219,19 +219,19 @@ Zur Kontrolle ob unser Image auch erzeugt wurde:
 
 #### Linux
 
-Unter Linux verwenden wir anstelle von NASMW NASM
+Unter Linux verwenden wir anstelle von NASMW NASM.
 
     nasm src/HelloWorld.asm -o bin/HelloWorld.bin -l bin/HelloWorld.lst
     nasm src/HelloWorld.asm -o img/HelloWorld.img -dIMAGE
 
 #### Der Test
 
-Jetzt können wir das erstellte Image mit Bochs testen. Ich gehe einmal davon aus dass ihr es schon installiert habt. Hier mal eine kleine bochsrc.txt:
+Jetzt können wir das erstellte Image mit Bochs testen. Ich gehe einmal davon aus, dass ihr es schon installiert habt. Hier mal eine kleine bochsrc.txt:
 
     # small bochsrc.txt
     # by muuh
 
-    ### Hier den Pfad anpassen für dein disk-image
+    ### Hier den Pfad anpassen für dein Diskimage
     floppya: 1_44=C:\NASM\HelloWorld.img, status=inserted
     ####
     romimage: file=$BXSHARE/BIOS-bochs-latest, address=0xf0000
@@ -255,14 +255,14 @@ Jetzt können wir das erstellte Image mit Bochs testen. Ich gehe einmal davon au
     keyboard_mapping: enabled=0, map=
     i440fxsupport: enabled=1
 
-Einfach die Datei bochsrc.txt im Installationsordner von Bochs anlegen, Pfad zum erstellten Image anpassen, bochs.exe starten und in dem Menü die Option 6 (Simulation) wählen.
+Einfach die Datei bochsrc.txt im Installationsordner von Bochs anlegen, Pfad zum erstellten Image anpassen, bochs.exe starten und im Menü die Option 6 (Simulation) wählen.
 
 ## Nachwort
 
-Wenn alles gutgegangen ist haben wir jetzt ein Diskettenimage mit unserem HelloWorld Programm. Im nachfolgenden Teil 2 wollen wir diesen BootRecord so weit umbauen, und erweitern, dass wir damit auch andere Programme von einem Datenträger laden und ausführen können.
+Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem HelloWorld-Programm. Im nachfolgenden Teil 2 wollen wir diesen BootRecord so weit umbauen und erweitern, dass wir damit auch andere Programme von einem Datenträger laden und ausführen können.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7438; parent 5820; 2010-03-28T22:25:34Z -->
+<!-- MediaWiki page 1427; revision 7440; parent 7438; 2010-03-29T12:10:53Z -->
