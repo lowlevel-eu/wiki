@@ -263,6 +263,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7440; parent 7438; 2010-03-29T12:10:53Z -->
+<!-- MediaWiki page 1427; revision 7445; parent 7440; 2010-03-29T15:55:48Z -->
