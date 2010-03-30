@@ -187,6 +187,7 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
 
 - Bootsektor für FAT12
 - Dummy-Bootloader (einfach nur eine 256 KiB große Datei mit Pseudodaten)
+- "Tutorial: Eigener Bootloader" für Lowlevel
 
   
 **Geplant:**
@@ -237,6 +238,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 7401; parent 6245; 2010-03-18T17:49:57Z -->
+<!-- MediaWiki page 1766; revision 7456; parent 7401; 2010-03-30T16:01:06Z -->
