@@ -13,6 +13,20 @@ Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen
 
   
 
+## Allgemeines
+
+Der [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") wird ja bereits an anderer Stelle beschrieben, jedoch wird dort nicht näher ins Detail gegangen. Dies wird nun an dieser Stelle nun nachgeholt.
+
+Ausgangspunkt ist, dass das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert.
+
+Die Falle in der man tappen wird, wenn man wild drauf los programmiert, dass der Binärcode des Bootsektors die 512-Byte-Grenze überschreiten wird. OK, zugegeben, bei der CD mit ihren 2048 Bytes pro Sektor und deren Dateisystem langt dieser. Auch zukünftige Festplatten mit einer physikalischen Sektorgröße von 4096 Bytes mögen dem entgegen wirken. Unser Ziel ist aber keineswegs für jedes Dateisystem einen eigenen Bootloader (ausschließlich dem Bootsektor) zu entwickeln, sondern viel mehr ein universelles Modell auf die Beine zu stellen, bei dem nur der Bootsektor individuell dem Dateisystem vorliegt und der Bootloader (Binärdatei) für alle unterstützten Dateisystemen gleich bleibt.
+
+  
+
+**Hinweis:**
+
+Der folgende Text enthält noch den ursprünglichen Artikel.
+
 ## Tools
 
 Das brauchen wir um unser erstes Programm zu realisieren: Einen Editor, einen Assembler, ein paar Konsolentools und eine Testumgebung.
@@ -270,6 +284,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7458; parent 7457; 2010-03-30T16:48:19Z -->
+<!-- MediaWiki page 1427; revision 7459; parent 7458; 2010-03-30T17:29:41Z -->
