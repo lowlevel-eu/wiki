@@ -5,11 +5,13 @@
 Dieser Artikel wird in mehreren Schritten komplett überarbeitet, da der bisherige Inhalt nur das Programmieren eines Bootsektor beinhaltet, jedoch in keinster Weise auf das Booten des eigenen OS eingeht. -- [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") 18:16, 30. Mär. 2010 (CEST)
 
   
-Der Weg zum eigenen Betriebssystem ist lang und steinig. Viele versuchen als erstes, einen eigenen [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record"), auch Bootsektor genannt, zu entwickeln. Das ist ein Programm, welches in einem bestimmten Sektor einer Diskette oder Partition liegt, und vom PC direkt nach der Ausführung des BIOS geladen und ausgeführt wird.
+Der Weg zum eigenem Betriebssystem ist lang und steinig. Manch einer versucht als erstes einen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") inklusiv [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") zu entwickeln. Klar kann man sich die Arbeit auch sparen, indem man prompt zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") greift. Dennoch, möchte man die Funktionsweise eines Bootloader verstehen können. Dies soll mit diesem Tutorial vermittelt werden.
 
-In diesem Tutorial wollen wir so ein Programm entwickeln und testen. Dieses Programm wird nicht viel können, außer etwas Text auszugeben, auf eine Tastatureingabe zu warten und anschließend das System neu zu starten.
+Dieses Tutorial wird in erster Linie die Vorgehensweise erläutern, die bei vielen [Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") identisch sind. Folglich wird hier auch kein kompletter Source-Code eines Bootloader gelistet. Grundkenntnise in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sind für dieses Tutorial allerdings Voraussetzung, so auch der Umgang mit einem Assembler und einem [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker").
 
-Grundkenntnisse in Assembler sind für dieses Tutorial von Vorteil, aber nicht zwingend notwendig.
+Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen und Variablen statt Offset-Konstanten zu verwenden, besonders beim Boot-Parameter-Block.
+
+  
 
 ## Tools
 
@@ -268,6 +270,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7457; parent 7445; 2010-03-30T16:16:35Z -->
+<!-- MediaWiki page 1427; revision 7458; parent 7457; 2010-03-30T16:48:19Z -->
