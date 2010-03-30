@@ -54,6 +54,8 @@ grau: Usermode
 
 Bei einem Mikrokernel liegt im Gegensatz zum monolithischen Kernel nur die Implementierung der oben genannten Basisaufgaben im Kernelspace. [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"), Dateisystemverwaltung (eventuell inklusive virtuellem Dateisystem) und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel über [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") bzw. mit anderen Prozessen über [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation"). Der Kernel verwaltet und verteilt also nur die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und eventuell neu gestartet werden. Letzteres funktioniert allerdings nur bei einem entsprechenden Design des Kernels, der Interprozesskommunikation und anderer Komponenten, da z. B. ein abstürzender Festplattentreiber, der die Betriebssystempartition verwaltet, nicht so ohne weiteres nachgeladen werden kann, sondern permanent im Speicher vorgehalten werden muss.
 
+Da die Treiber nicht im Kernel sind, ist es wesentlich, dass der Bootloader auch die Treiber laden kann und diesen dem Kernel übergibt. Dies ist von Haus aus z. B. über [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") möglich.
+
 Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix") verwendet.
 
 Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
@@ -84,6 +86,6 @@ Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen eine
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 6817; parent 6719; 2010-01-06T15:51:24Z -->
+<!-- MediaWiki page 1478; revision 7452; parent 6817; 2010-03-30T12:53:31Z -->
