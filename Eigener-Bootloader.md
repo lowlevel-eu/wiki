@@ -33,6 +33,72 @@ Damit wir nicht im Chaos bei der Entwicklung unseres Bootloaders versinken, werd
 
 Manch einer würde hier jetzt die Frage stellen, ob es wirklich sinnvoll ist, auch den MBR zu entwickeln. Wie schon anfangs erwähnt, wollen wir den Bootloader im Detail verstehen können, also machen wir keine halben Sachen. Dennoch, ganz so verkehrt ist die Frage allerdings nicht, denn meine Disketten haben für gewöhnlich keinen MBR.
 
+### Stage 0: Master-Boot-Record
+
+Fangen wir mal klein an, oder besser gesagt bei Null, denn der MBR ist wirklich der kleinste Teil des Ganzen. Der Code des MBR macht nichts weiter als in der Partitionstabelle nach einer aktiven Partition zu suchen, dessen Bootsektor zu laden und die Kontrolle an diesen abzugeben.
+
+Doch zuerst das wichtigste, was man über den MBR wissen sollte. Richtig, die Position und Struktur der Partitionstabelle. Aber die können wir hier im Lowlevel-Wiki nachschlagen.
+
+Doch hier erst einmal etwas Starthilfe, ein MBR-Rohling.
+
+\<asm\>
+
+ !! Intel-Syntax (MASN) !!
+
+Master-Boot-Record
+
+==================
+
+Struktur der eines Partitionseintrages
+
+MBR_PART_ENTRY struct
+
+       Bootflag                db      ?
+
+       BeginHead               db      ?
+       BeginCylinderHigh       db      ?
+       BeginCylinderLow        db      ?
+
+       EndHead                 db      ?
+       EndCylinderHigh         db      ?
+       EndCylinderLow          db      ?
+
+       BeginLBA                dd      ?
+       SizeLBA                 dd      ?
+
+MBR_PART_ENTRY ends
+
+Struktur der Partitionstabelle
+
+MBR_PART_TABLE struct
+
+       Partition1              MBR_PART_ENTRY <>
+       Partition2              MBR_PART_ENTRY <>
+       Partition3              MBR_PART_ENTRY <>
+       Partition4              MBR_PART_ENTRY <>
+
+MBR_PART_TABLE ends
+
+  
+
+MBR - Boot-Code
+
+.org 0  ; Offset 0x0
+
+\<\< Hier kommt der Boot-Code rein \>\>
+
+  
+
+Partitionstabelle
+
+.org 01BEh  ; Offset 0x01BE PartitionTable MBR_PART_TABLE \<\>
+
+  
+
+Boot-Signatur
+
+Sig dw 0AA55h  ; 0xAA55 \</asm\>
+
   
 
 **Hinweis:**
@@ -296,6 +362,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7460; parent 7459; 2010-03-30T18:26:20Z -->
+<!-- MediaWiki page 1427; revision 7461; parent 7460; 2010-03-30T20:46:53Z -->
