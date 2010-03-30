@@ -21,7 +21,6 @@
 
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
-- [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Was sind Cluster? Wie liest man Dateien?
@@ -108,6 +107,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7439; parent 7435; 2010-03-29T11:51:35Z -->
+<!-- MediaWiki page 1518; revision 7454; parent 7439; 2010-03-30T12:56:25Z -->
