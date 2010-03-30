@@ -1,5 +1,10 @@
 # Eigener Bootloader
 
+**Hinweis:**
+
+Dieser Artikel wird in mehreren Schritten komplett überarbeitet, da der bisherige Inhalt nur das Programmieren eines Bootsektor beinhaltet, jedoch in keinster Weise auf das Booten des eigenen OS eingeht. -- [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") 18:16, 30. Mär. 2010 (CEST)
+
+  
 Der Weg zum eigenen Betriebssystem ist lang und steinig. Viele versuchen als erstes, einen eigenen [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record"), auch Bootsektor genannt, zu entwickeln. Das ist ein Programm, welches in einem bestimmten Sektor einer Diskette oder Partition liegt, und vom PC direkt nach der Ausführung des BIOS geladen und ausgeführt wird.
 
 In diesem Tutorial wollen wir so ein Programm entwickeln und testen. Dieses Programm wird nicht viel können, außer etwas Text auszugeben, auf eine Tastatureingabe zu warten und anschließend das System neu zu starten.
@@ -263,6 +268,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7445; parent 7440; 2010-03-29T15:55:48Z -->
+<!-- MediaWiki page 1427; revision 7457; parent 7445; 2010-03-30T16:16:35Z -->
