@@ -23,6 +23,18 @@ Die Falle in der man tappen wird, wenn man wild drauf los programmiert, dass der
 
   
 
+## Universelles Bootloader-Modell
+
+Damit wir nicht im Chaos bei der Entwicklung unseres Bootloaders versinken, werden wir diesen unterteilen, nicht nur wegen der Übersicht, sondern weil es zum einen auch partitionierte Datenträger gibt und zum anderem der Bootsektor in seiner Größe begrenzt ist.
+
+- Stage 0: Master-Boot-Recort (optional)
+- Stage 1: Bootsektor
+- Stage 2: Bootloader
+
+Manch einer würde hier jetzt die Frage stellen, ob es wirklich sinnvoll ist, auch den MBR zu entwickeln. Wie schon anfangs erwähnt, wollen wir den Bootloader im Detail verstehen können, also machen wir keine halben Sachen. Dennoch, ganz so verkehrt ist die Frage allerdings nicht, denn meine Disketten haben für gewöhnlich keinen MBR.
+
+  
+
 **Hinweis:**
 
 Der folgende Text enthält noch den ursprünglichen Artikel.
@@ -284,6 +296,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7459; parent 7458; 2010-03-30T17:29:41Z -->
+<!-- MediaWiki page 1427; revision 7460; parent 7459; 2010-03-30T18:26:20Z -->
