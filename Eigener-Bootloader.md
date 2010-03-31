@@ -5,7 +5,7 @@
 Dieser Artikel wird in mehreren Schritten komplett überarbeitet, da der bisherige Inhalt nur das Programmieren eines Bootsektor beinhaltet, jedoch in keinster Weise auf das Booten des eigenen OS eingeht. -- [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") 18:16, 30. Mär. 2010 (CEST)
 
   
-Der Weg zum eigenem Betriebssystem ist lang und steinig. Manch einer versucht als erstes einen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") inklusiv [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") zu entwickeln. Klar kann man sich die Arbeit auch sparen, indem man prompt zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") greift. Dennoch, möchte man die Funktionsweise eines Bootloader verstehen können. Dies soll mit diesem Tutorial vermittelt werden.
+Der Weg zum eigenen Betriebssystem ist lang und steinig. Manch einer versucht als erstes einen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") inklusive [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") zu entwickeln. Klar kann man sich die Arbeit auch sparen, indem man einfach zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") greift. Dennoch möchte man die Funktionsweise eines Bootloader verstehen können. Dies soll mit diesem Tutorial vermittelt werden.
 
 Dieses Tutorial wird in erster Linie die Vorgehensweise erläutern, die bei vielen [Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") identisch sind. Folglich wird hier auch kein kompletter Source-Code eines Bootloader gelistet. Grundkenntnise in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sind für dieses Tutorial allerdings Voraussetzung, so auch der Umgang mit einem Assembler und einem [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker").
 
@@ -17,9 +17,7 @@ Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen
 
 Der [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") wird ja bereits an anderer Stelle beschrieben, jedoch wird dort nicht näher ins Detail gegangen. Dies wird nun an dieser Stelle nun nachgeholt.
 
-Ausgangspunkt ist, dass das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert.
-
-Die Falle in der man tappen wird, wenn man wild drauf los programmiert, dass der Binärcode des Bootsektors die 512-Byte-Grenze überschreiten wird. OK, zugegeben, bei der CD mit ihren 2048 Bytes pro Sektor und deren Dateisystem langt dieser. Auch zukünftige Festplatten mit einer physikalischen Sektorgröße von 4096 Bytes mögen dem entgegen wirken. Unser Ziel ist aber keineswegs für jedes Dateisystem einen eigenen Bootloader (ausschließlich dem Bootsektor) zu entwickeln, sondern viel mehr ein universelles Modell auf die Beine zu stellen, bei dem nur der Bootsektor individuell dem Dateisystem vorliegt und der Bootloader (Binärdatei) für alle unterstützten Dateisystemen gleich bleibt.
+Ausgangspunkt ist, dass das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur (0x0AA55) die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert. Das erste Problem, auf das man stoßen wird, ist, dass der Binärcode des Bootsektors die Größe eines Sektors nicht überschreiten darf. OK, zugegeben, bei der CD mit ihren 2048 Bytes pro Sektor und deren Dateisystem langt dieser. Auch zukünftige Festplatten mit einer physikalischen Sektorgröße von 4096 Bytes mögen dem entgegen wirken. Aber bei der Diskette, die viele am Anfang verwenden, beträgt die Sektorgröße lediglich 512 Byte. Unser Ziel ist aber keineswegs für jedes Dateisystem einen eigenen Bootloader (ausschließlich dem Bootsektor) zu entwickeln, sondern viel mehr ein universelles Modell auf die Beine zu stellen, bei dem nur der Bootsektor individuell dem Dateisystem vorliegt und der Bootloader (Binärdatei) für alle unterstützten Dateisystemen gleich bleibt.
 
   
 
@@ -31,7 +29,7 @@ Damit wir nicht im Chaos bei der Entwicklung unseres Bootloaders versinken, werd
 - Stage 1: Bootsektor
 - Stage 2: Bootloader
 
-Manch einer würde hier jetzt die Frage stellen, ob es wirklich sinnvoll ist, auch den MBR zu entwickeln. Wie schon anfangs erwähnt, wollen wir den Bootloader im Detail verstehen können, also machen wir keine halben Sachen. Dennoch, ganz so verkehrt ist die Frage allerdings nicht, denn meine Disketten haben für gewöhnlich keinen MBR.
+Manch einer würde hier die Frage stellen, ob es wirklich sinnvoll ist, auch den MBR zu entwickeln. Wie schon anfangs erwähnt, wollen wir den Bootloader im Detail verstehen können, also machen wir keine halben Sachen. Dennoch, ganz so verkehrt ist die Frage allerdings nicht, denn Disketten haben für gewöhnlich keinen MBR.
 
   
 
@@ -126,7 +124,7 @@ end \</asm\>
 
 Gut gut, leider fehlt hier noch der einscheidene Sourcecode, aber den wirst du dir selbst zusammen frickeln müssen. Du wirst hier lediglich ein Umschreibung dessen finden, wie der MBR vom Programm her funktionieren sollte.
 
-1.  Am Anfang sollte vor allem das DS richtig initialisiert werden und wenn du der Meinung ist, das DS = 0x07C0 sein sollte, liegst du völlig richtig. Den Stack könntest du aber nach deinen Belieben einrichten, aber vergesse dabei nicht den Interrupt dafür zu sperren.
+1.  Am Anfang sollte vor allem das DS richtig initialisiert werden und wenn du der Meinung ist, das DS = 0x07C0 sein sollte, liegst du völlig richtig. Den Stack könntest du aber nach deinen Belieben einrichten, aber vergiss dabei nicht den Interrupt dafür zu sperren.
 2.  Wo möglich ist dir schon aufgefallen, dass der MBR an die gleiche Adresse geladen wurde, wo üblich auch der Bootsektor geladen wird. Um diese Kompatiblität zu waren, solltest du ebenfalls den Bootsektor der aktiven Partition an genau dieser Adresse laden. Also was musst du jetzt tun? Richtig! Du musst den MBR im RAM verschieben und einen Sprung an die neue Adresse durchenführen, quasi ein Far-Jump ist erforderlich.
 3.  Jetzt fangen wir erst richtig an. Da die Partitionstabelle nur maximal 4 Partitionen aufnehmen kann, laden wir unseren Zähler mit den Wert 4. Den Indexpointer setzen wir auf den Anfang der Partitionstabelle. Jetzt durchsuchen wir die Partitionstabellen nach einer als aktiv markierten Partition, welche mit einem Bootflag = 0x80 als solche markiert ist.
 4.  Wurde keine gefunden, Fehlermeldung ausgeben und Bootvorgang anhalten. Wurde jedoch eine aktive Partition gefunden, holen wir dessen Startadresse, entweder im CHS-Format oder wenn vom BIOS unterstützt als LBA. Dies sollte zuvor aber geprüft werden.
@@ -440,6 +438,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7464; parent 7463; 2010-03-31T19:52:57Z -->
+<!-- MediaWiki page 1427; revision 7465; parent 7464; 2010-03-31T21:02:38Z -->
