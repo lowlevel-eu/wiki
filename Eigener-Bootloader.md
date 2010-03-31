@@ -33,6 +33,8 @@ Damit wir nicht im Chaos bei der Entwicklung unseres Bootloaders versinken, werd
 
 Manch einer würde hier jetzt die Frage stellen, ob es wirklich sinnvoll ist, auch den MBR zu entwickeln. Wie schon anfangs erwähnt, wollen wir den Bootloader im Detail verstehen können, also machen wir keine halben Sachen. Dennoch, ganz so verkehrt ist die Frage allerdings nicht, denn meine Disketten haben für gewöhnlich keinen MBR.
 
+  
+
 ### Stage 0: Master-Boot-Record
 
 Fangen wir mal klein an, oder besser gesagt bei Null, denn der MBR ist wirklich der kleinste Teil des Ganzen. Der Code des MBR macht nichts weiter als in der Partitionstabelle nach einer aktiven Partition zu suchen, dessen Bootsektor zu laden und die Kontrolle an diesen abzugeben.
@@ -132,6 +134,50 @@ Gut gut, leider fehlt hier noch der einscheidene Sourcecode, aber den wirst du d
 6.  Bei korrekter Signatur hat der MBR seinen Teil getan und sollte daher die Kontrolle an den geladenen Bootsektor abgeben.
 
   
+
+### Stage 1: Bootsektor
+
+Wie schon am MBR gesehen ist das Programmieren eines Bootsektors nicht so schwer, zumindest wenn es so einfach ist wie ein "Hello World!" auszugeben oder wie beim MBR den Bootsektor einer aktiven Partition zu laden und zu starten.
+
+Der Bootsektor einer Partition, genauergenommen eines Dateisystem, ist da schon weitaus komplexer, da wir zum einen nicht nur einen Sektor laden müssen, sondern gleich eine ganze Datei. Diese muss allerdings im Dateisystem gesucht werden, und und und ...
+
+Aber vereinfachen wir das ganze, damit ein Modell für alle Dateisystem (egal ob FAT, NTFS, ISO9660, ext2/3 oder gar ein eigenes) benutzbar ist.
+
+1.  Suche im Hauptverzeichnis nach einer bestimmten Datei, bspw. "bootload.bin".
+2.  Ermittle deren Position auf dem Datenträger, also alle zur Datei gehörenden Sektoren.
+3.  Lade die Datei ins RAM und starte diese.
+
+Schon im ersten Punkt unterscheidet sich der Bootsektor für jedes Dateisystem, da dessen Verzeichnisse unterschiedlich organisiert sind.
+
+Ein zweites Problem, das auf uns zukommen wird, dass die 512 Bytes abzüglich des Boot-Parameter-Block (kurz BPB) nicht ausreichen werden. Was also tun?
+
+FAT bietet die Möglichkeit, zusätzlichen Code hinter den Bootsektor zu heften und diesen zu den reservierten Sektoren einreiht. Allerdings müsste dann neu formatiert werden, zumidest bei FAT12 und FAT16. Bei FAT32 hat man dieses Problem berücksichtig.
+
+Eine andere Alternative wäre, das man diesen zusätzlichen Code in den Bootloader verfrachtet, gleich an den Anfang, denn dieser wird ja eh vom Bootsektor geladen.
+
+Aber treten wir erst einmal wieder etwas auf die Bremse und fangen mal mit FAT12 an. Da FAT16 bis auf die Adressbreite der Clusteradressierung identisch ist, nehmen wir es gleich mit an Bord.
+
+  
+
+#### FAT12 / FAT16
+
+*(Ist in Arbeit)*
+
+  
+
+#### FAT32
+
+*(Demnächst)*
+
+  
+
+### Stage 2: Bootloader
+
+*(Demnächst)*
+
+  
+
+------------------------------------------------------------------------
 
 **Hinweis:**
 
@@ -394,6 +440,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7463; parent 7462; 2010-03-31T16:29:07Z -->
+<!-- MediaWiki page 1427; revision 7464; parent 7463; 2010-03-31T19:52:57Z -->
