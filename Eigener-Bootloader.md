@@ -122,6 +122,15 @@ Sig dw 0AA55h  ; 0xAA55
   
 end \</asm\>
 
+Gut gut, leider fehlt hier noch der einscheidene Sourcecode, aber den wirst du dir selbst zusammen frickeln müssen. Du wirst hier lediglich ein Umschreibung dessen finden, wie der MBR vom Programm her funktionieren sollte.
+
+1.  Am Anfang sollte vor allem das DS richtig initialisiert werden und wenn du der Meinung ist, das DS = 0x07C0 sein sollte, liegst du völlig richtig. Den Stack könntest du aber nach deinen Belieben einrichten, aber vergesse dabei nicht den Interrupt dafür zu sperren.
+2.  Wo möglich ist dir schon aufgefallen, dass der MBR an die gleiche Adresse geladen wurde, wo üblich auch der Bootsektor geladen wird. Um diese Kompatiblität zu waren, solltest du ebenfalls den Bootsektor der aktiven Partition an genau dieser Adresse laden. Also was musst du jetzt tun? Richtig! Du musst den MBR im RAM verschieben und einen Sprung an die neue Adresse durchenführen, quasi ein Far-Jump ist erforderlich.
+3.  Jetzt fangen wir erst richtig an. Da die Partitionstabelle nur maximal 4 Partitionen aufnehmen kann, laden wir unseren Zähler mit den Wert 4. Den Indexpointer setzen wir auf den Anfang der Partitionstabelle. Jetzt durchsuchen wir die Partitionstabellen nach einer als aktiv markierten Partition, welche mit einem Bootflag = 0x80 als solche markiert ist.
+4.  Wurde keine gefunden, Fehlermeldung ausgeben und Bootvorgang anhalten. Wurde jedoch eine aktive Partition gefunden, holen wir dessen Startadresse, entweder im CHS-Format oder wenn vom BIOS unterstützt als LBA. Dies sollte zuvor aber geprüft werden.
+5.  Mit dieser Sektoradresse können wir nun den Bootsektor dieser Partition laden. Ja ja, sollten Fehler auftreten wäre es schön, das Ganze mit einer Fehlermeldung zu quittieren. Doch bei Erfolg prüfen wir, ob die Signatur stimm.
+6.  Bei korrekter Signatur hat der MBR seinen Teil getan und sollte daher die Kontrolle an den geladenen Bootsektor abgeben.
+
   
 
 **Hinweis:**
@@ -385,6 +394,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7462; parent 7461; 2010-03-31T15:45:52Z -->
+<!-- MediaWiki page 1427; revision 7463; parent 7462; 2010-03-31T16:29:07Z -->
