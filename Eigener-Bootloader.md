@@ -39,15 +39,36 @@ Fangen wir mal klein an, oder besser gesagt bei Null, denn der MBR ist wirklich 
 
 Doch zuerst das wichtigste, was man über den MBR wissen sollte. Richtig, die Position und Struktur der Partitionstabelle. Aber die können wir hier im Lowlevel-Wiki nachschlagen.
 
-Doch hier erst einmal etwas Starthilfe, ein MBR-Rohling.
+Doch hier erst einmal etwas Starthilfe, ein MBR-Rohling:
+
+*MBR.asm*
 
 \<asm\>
 
  !! Intel-Syntax (MASN) !!
 
+  
+
 Master-Boot-Record
 
 ==================
+
+  
+.model tiny, c, nearstack .386 .code
+
+  
+
+------------------------------------------------------------------------------
+
+Struktur von CHS
+
+MBR_CHS struct
+
+       Value                   db      3 dup(?)
+
+MBR_CHS ends
+
+  
 
 Struktur der eines Partitionseintrages
 
@@ -55,18 +76,15 @@ MBR_PART_ENTRY struct
 
        Bootflag                db      ?
 
-       BeginHead               db      ?
-       BeginCylinderHigh       db      ?
-       BeginCylinderLow        db      ?
-
-       EndHead                 db      ?
-       EndCylinderHigh         db      ?
-       EndCylinderLow          db      ?
+       BeginCHS                MBR_CHS <>
+       EndCHS                  MBR_CHS <>     
 
        BeginLBA                dd      ?
        SizeLBA                 dd      ?
 
 MBR_PART_ENTRY ends
+
+  
 
 Struktur der Partitionstabelle
 
@@ -81,9 +99,11 @@ MBR_PART_TABLE ends
 
   
 
+------------------------------------------------------------------------------
+
 MBR - Boot-Code
 
-.org 0  ; Offset 0x0
+org 0  ; Offset 0x0
 
 \<\< Hier kommt der Boot-Code rein \>\>
 
@@ -91,13 +111,16 @@ MBR - Boot-Code
 
 Partitionstabelle
 
-.org 01BEh  ; Offset 0x01BE PartitionTable MBR_PART_TABLE \<\>
+org 01BEh  ; Offset 0x01BE PartitionTable MBR_PART_TABLE \<\>
 
   
 
 Boot-Signatur
 
-Sig dw 0AA55h  ; 0xAA55 \</asm\>
+Sig dw 0AA55h  ; 0xAA55
+
+  
+end \</asm\>
 
   
 
@@ -362,6 +385,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7461; parent 7460; 2010-03-30T20:46:53Z -->
+<!-- MediaWiki page 1427; revision 7462; parent 7461; 2010-03-31T15:45:52Z -->
