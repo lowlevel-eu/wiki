@@ -10,7 +10,7 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 ## Allgemeines
 
-Als erstes ein Paar Informationen zu APM(Advanced Power Management) und diesem Tutorial.
+Als erstes ein paar Informationen zu APM (Advanced Power Management) und diesem Tutorial.
 
 ### Vorwort
 
@@ -18,7 +18,7 @@ Da dies mein erstes Tutorial ist bitte ich euch bei Fehlern nachsichtig zu sein.
 
 ### Worum geht es in diesem Artikel?
 
-Da ich mich selbst eine Zeit lang mit APM beschäftigt habe möchte ich euch zeigen wie man mit diesem Standart umgeht.
+Da ich mich selbst eine Zeit lang mit APM beschäftigt habe möchte ich euch zeigen wie man mit diesem Standard umgeht.
 
 ### Was muss mein OS können, damit ich diesem Tutorial folgen kann?
 
@@ -30,13 +30,13 @@ Im Protected-Mode: Für den Protected-Mode brauchst du ein OS, dass eine vareabl
 
 ### Was ist APM?
 
-APM ist ein Standart für Power-Management, der von Intel und Microsoft entwickelt wurde.
+APM ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde.
 
   
 
 ## APM Einstieg
 
-Der APM-Standart deffiniert 3 Schnittstellen, mit denen das Betriebssystem arbeiten kann.
+Der APM-Standard definiert 3 Schnittstellen, mit denen das Betriebssystem arbeiten kann.
 
 Diese Schnittstellen sind:
 
@@ -46,7 +46,7 @@ Diese Schnittstellen sind:
 
 Nur eine dieser Schnittstellen kann gleichzeitig genutzt werden.  
 Bevor eine dieser Schnittstellen genutzt werden kann muss das Betriebssystem kontrollieren, ob APM vorhanden ist, denn einige neue Computer unterstützen APM nicht mehr.  
-Wenn APM unterstützt wird muss das Betribssystem sich als nächstes mit einer Schnittstelle verbinden. Es ist eine Gute Idee das Trennkomando zu senden bevor man sich mit einre Schnittstelle verbindet.
+Wenn APM unterstützt wird muss das Betriebssystem sich als nächstes mit einer Schnittstelle verbinden. Es ist eine gute Idee das Trennkommando zu senden bevor man sich mit einer Schnittstelle verbindet.
 
   
 
@@ -75,7 +75,7 @@ mov al,00h  ;Versions-Anzeige Komando xor bx,bx  ;Geräte id (0 = APM BIOS) in
 
 ##### Verbinden
 
-Diese Funktion verbindet sich zu einer der Schnittstellen, basierend auf der Vareable *interface_number* welche diese Werte haben kann:
+Diese Funktion verbindet sich zu einer der Schnittstellen, basierend auf der Variable *interface_number*, die folgende Werte haben kann:
 
     01h = Real Mode Interface
     02h = 16bit Protected Mode Interface
@@ -86,7 +86,7 @@ Diese Funktion verbindet sich zu einer der Schnittstellen, basierend auf der Var
 mov ah,53h  ;Dies ist das APM Komando mov al,\[interface_number\];Siehe oben xor bx,bx  ;Geräte id (0 = APM BIOS) int 15h  ; jc APM_error  ;Wenn das Carry-Flag gesetzt wurde gab es einen Fehler (APM_error eigenes Label)
 
                             ;Die Funktion war erfolgreich
-                            ;Die Rückabewerte sind unterschiedlich für jede Schnittstelle
+                            ;Die Rückgabewerte sind unterschiedlich für jede Schnittstelle
                             ;Die Real Mode Schnittstelle gibt nichts zurück.
                             
 
@@ -111,7 +111,7 @@ mov ah,53h  ;dies ist das APM KOmando mov al,04h  ;Trennkomando xor bx,bx  ;G
 
 ### Geräte kontrollieren
 
-Nachdem das Betriebssystem sich mit einer Schnittstelle verbunden hat kann es anfangen Geräte zu kontrollieren aber als erstes muss es das Power Management aktivieren.
+Nachdem das Betriebssystem sich mit einer Schnittstelle verbunden hat kann es anfangen Geräte zu kontrollieren, aber als erstes muss es das Power Management aktivieren.
 
 #### Power Management aktivieren
 
@@ -127,7 +127,7 @@ mov ah,53h  ;Dies ist das APM KOmando mov al,08h  ;Den Status von Power Manage
 
 #### Gerätezustand setzen
 
-Diese Funktion setzt alle Geräte auf den Zustand auf den Wert der Vareable *power_state* Korrekte Werte für *power_state* sind:
+Diese Funktion setzt alle Geräte auf den Zustand auf den Wert der Variable *power_state* Korrekte Werte für *power_state* sind:
 
     01h = Standby
     02h = Suspend
@@ -196,6 +196,6 @@ Ich hoffe, dass euch das Tutorial Spass gemacht hat und euch APM etwas näher ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
 
-<!-- MediaWiki page 2221; revision 7477; parent 0; 2010-04-01T10:30:49Z -->
+<!-- MediaWiki page 2221; revision 7486; parent 7477; 2010-04-01T10:41:50Z -->
