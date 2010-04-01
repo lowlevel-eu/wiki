@@ -70,22 +70,23 @@ Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
 | Syscallinterface | Syscallinterface (Hardwarezugriff) |
 | Anwendungen, Bibliotheken | Treiber |
 
-### [Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel "Exokernel")
+### Exokernel
 
-Der Exokernel ist eine Unterart des Mikrokernels. Bei einem Exokernel liegt die HAL in Bibliotheken, die vom Programm eingebunden werden können. Jedoch kann das Programm genau so gut selbst auf die Hardware zugreifen. Der Vorteil ist damit höhere Flexibilität für den Programmierer und die bessere Möglichkeit, ein anderes System und dessen API durch eine spezielle Bibliothek zu emulieren.
+Im Unterschied zu einem Mikrokernel liegt beim Exokernel der Fokus darauf, das Verwalten (z. B. das Layout des Adressraums, abgesehen vom Kernel) und das Schützen (z. B. sollen zwei Anwendungen nicht unkontrolliert die gleichen Pages verwenden) von Ressourcen voneinander zu trennen. Das Schützen der Ressourcen soll weiterhin im Kernel verbleiben, aber die Verwaltung soll in einer Bibliothek (meist als libOS bezeichnet) im Userspace erfolgen. Jede Anwendung wird dann gegen eine solche libOS, die z. B. die Verwaltung des Adressraums übernimmt oder auch wie ein Treiber direkt auf die Hardware zugreifen kann (wobei durch den Kernel sichergestellt wird, dass dieser Zugriff nicht in Konflikt mit anderen Zugriffen anderer Anwendungen steht), gelinkt, d.h. im Gegensatz zum Mikrokernel, bei dem es genau einen Treiber in einem eigenen Prozess gibt, kann beim Exokernel (für bestimmte Hardware) in jeder libOS ein Treiber existieren. Dadurch hat jede Anwendung größtmögliche Freiheit - ohne dabei in Konflikt mit anderen Anwendungen zu stehen - was die Nutzung von Ressourcen angeht. Für eine Spezialanwendung kann dann auch eine eigene libOS, die auf diese Spezialanwendung hin optimiert ist, implementieren.
 
-Ein Beispiel für einen Exokernel ist das [xok](http://pdos.csail.mit.edu/exo/)-System vom MIT.
+Es ist allerdings nicht sonderlich fruchtbar sich einen Exokernel als einen Mikrokernel ins Extrem getrieben vorzustellen, sondern vom ursprünglich monolithischen Kerneldesign her gesehen sind Mikro- bzw. Exokernel zwei orthogonale Designentscheidungen: Beim Mikrokernel werden Treiber in **einen** separaten Prozess ausgelagert, beim Exokernel **jede** Anwendung. Auch abstrahiert ein Exokernel nicht immer weniger als ein Mikrokernel, z. B. findet sich meist ein Festplattentreiber im Exokernel und die Anwendungen können Sektoren allozieren: Der Schutz ist gewährleistet, aber die Verwaltung wird der konkreten Anwendung/libOS überlassen. In einem Mikrokernel hingegen befindet sich der Festplattentreiber typischerweise in einem separaten Prozess im Userspace. Nur wenn man den Mikrokernel und die umgebenden Serverprozesse betrachtet, die um in dem Beispiel zu bleiben sehr wahrscheinlich als Abstraktion am Ende eine Datei anbieten (ohne das man überhaupt auf Sektoren Zugriff hätte), kommt man zu dem Schluss, dass der Exokernel weniger Abstraktion vorwegnimmt.
 
 ### Makrokernel
 
-Der Makrokernel, auch Hybridkernel genannt, ist eine Verschmelzung zwischen einem monolithischem Kernel und Mikrokernel, die jedoch nicht genau definiert ist. Damit will man die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") als Hybridkernel.
+Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Skala von Mikrokernel zum monolithischen Kernel irgendwo dazwischen und es ist somit nicht näher definiert, was genau ein Makrokernel ist. Man will dabei die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") als Hybridkernel.
 
 ## Links
 
 - [Erklärung zum Mikro- und L4-Kernel](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/904ad80cc1c81c6b6e5d.pdf "Die L4-Mikrokernel-Familie.pdf")
+- [The Exokernel Operating System Architecture](http://pdos.csail.mit.edu/exo/theses/engler/thesis.ps)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 7452; parent 6817; 2010-03-30T12:53:31Z -->
+<!-- MediaWiki page 1478; revision 7498; parent 7452; 2010-04-01T16:32:36Z -->
