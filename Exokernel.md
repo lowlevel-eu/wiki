@@ -1,21 +1,9 @@
 # Exokernel
 
-Der Exokernel ist eine Unterart des [Mikrokernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel"). Bestimmende Eigenschaft dieser [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ist die optionale [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL"), d. h. der Anwendungsprogrammierer kann entscheiden, ob er direkt auf die [Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") zugreift oder diese abstrahiert.
-
-## Motivation für den Exokernel
-
-Eine [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") kann unmöglich alle Anforderung einer Anwendung erfüllen. Trotzdem wird bei jedem traditionellen [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") versucht, alle Anforderungen zu erfüllen. Die [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") wird dadurch aufgebläht und träge. Die Idee des Exokernels ist, dass die Abstraktion der [Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") nicht auf [Kernelebene](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), sondern auf Anwendungsebene passiert.
-
-## Besonderheiten eines Exokernels
-
-Wie erwähnt, ist die HAL nicht zwingend, sondern optional. Ein Programm kann entscheiden, ob sie denn Hardwarezugriff braucht. Bei den meisten Programmen wird dies nicht nötig sein. Bei rechenintensiven oder systemverändernden Programmen wird dies jedoch nötig. Folgendes Diagramm veranschaulich dies. ![exokernel.png](http://be59.be.funpic.de/Lowlevel/exokernel.png)
-
-## Vorteile
-
-- Bessere Flexibilität für Benutzer: Ein Entwickler kann seine Anwendung besser optimieren.
+Weiterleitung: [Kernel#Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7499/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1678/index.html)
 
-<!-- MediaWiki page 1678; revision 5076; parent 5075; 2009-08-05T18:16:21Z -->
+<!-- MediaWiki page 1678; revision 7499; parent 5076; 2010-04-01T16:35:40Z -->
