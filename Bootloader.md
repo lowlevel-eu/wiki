@@ -35,6 +35,6 @@ Obwohl davon abgeraten wird, kann man seinen Bootloader natürlich auch selbst p
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
 
-<!-- MediaWiki page 1477; revision 7451; parent 5280; 2010-03-29T16:12:47Z -->
+<!-- MediaWiki page 1477; revision 7473; parent 7451; 2010-04-01T07:22:02Z -->
