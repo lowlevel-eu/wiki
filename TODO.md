@@ -96,6 +96,7 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 
 <!-- -->
 
+- RaWrite: evtl. mit Commands usw.
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -107,6 +108,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7454; parent 7439; 2010-03-30T12:56:25Z -->
+<!-- MediaWiki page 1518; revision 7476; parent 7454; 2010-04-01T09:13:34Z -->
