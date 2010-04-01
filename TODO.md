@@ -73,11 +73,6 @@ Was meinst du damit? Soll das eine Anleitung werden, wie man Datenblätter ließ
 
 Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgehoben
 
-- Aritkel zu Datenstrukturen:
-  - Stack
-  - Heap
-  - Ausbau des Artikels [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
-  - evtl noch kurz Datenstrukturen wie den "Binärbaum" (=binary tree) oder "Verlinkte Liste" (=linked list) erläutern?
 - ~~[USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")~~ und alles drumherum (~~[UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI")~~, [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI"), [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI"), vielleicht ja auch [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI"))
   - Selbst eingetragen, nun löffel ich die Suppe auch selbst aus. Wer helfen kann und will, ist natürlich herzlich eingeladen! ;-) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 01:21, 6. Mär. 2010 (CET)
 - APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
@@ -106,6 +101,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7505/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7505; parent 7503; 2010-04-01T20:43:12Z -->
+<!-- MediaWiki page 1518; revision 7506; parent 7505; 2010-04-01T21:57:22Z -->
