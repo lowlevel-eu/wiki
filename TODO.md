@@ -93,7 +93,7 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 
 - Möglicherweise lohnt es sich in jeweils einem Artikel zu beschreiben, wie man häufig verwendete Komponenten portiert. Zum Beispiel Compiler, Shells, oder Standard-Bibliotheken. lbuild ist sicherlich auch ein guter Ansatzpunkt. Weil da vermutlich keine Copy&Paste-Anleitung entstehen kann, könnte man das ganze als mehr oder weniger allgemein gehaltene Erfahrungsberichte halten, wie es sie teilweise auch auf osdev.org gibt. --Jidder 01:22, 28. Mär. 2010 (CET)
 
-<!-- -->
+Zu Programmen die configure/make verwenden und sich an POSIX halten könnte man sicherlich ein bisschen was sagen. Aber sobald man die Anwendung wirklich ändern muss zum portieren wird es sehr schwierig.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 19:21, 1. Apr. 2010 (CEST)
 
 - RaWrite: evtl. mit Commands usw.
 - Hier kommt dein Wunsch hin ;)
@@ -107,6 +107,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7500/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7500; parent 7496; 2010-04-01T16:35:59Z -->
+<!-- MediaWiki page 1518; revision 7503; parent 7500; 2010-04-01T17:21:04Z -->
