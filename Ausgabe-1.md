@@ -654,6 +654,6 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1412/index.html)
 
-<!-- MediaWiki page 1412; revision 7052; parent 6640; 2010-02-09T17:11:01Z -->
+<!-- MediaWiki page 1412; revision 7470; parent 7052; 2010-04-01T07:18:22Z -->
