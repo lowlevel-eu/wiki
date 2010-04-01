@@ -194,6 +194,6 @@ Ich hoffe, dass euch das Tutorial Spass gemacht hat und euch APM etwas näher ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7489/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
 
-<!-- MediaWiki page 2221; revision 7489; parent 7488; 2010-04-01T10:50:40Z -->
+<!-- MediaWiki page 2221; revision 7493; parent 7489; 2010-04-01T11:05:55Z -->
