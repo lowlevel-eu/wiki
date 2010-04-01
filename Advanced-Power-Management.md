@@ -22,11 +22,9 @@ Da ich mich selbst eine Zeit lang mit APM beschäftigt habe möchte ich euch zei
 
 ### Was muss mein OS können, damit ich diesem Tutorial folgen kann?
 
-Im Real-Mode: Für den Real-Mode brauchst du eigentlich nur ein Lauffähiges Private-Mode-OS.
+Im Real-Mode: Für den Real-Mode brauchst du eigentlich nur ein Lauffähiges Real-Mode-OS.
 
 Im Protected-Mode: Für den Protected-Mode brauchst du ein OS, dass eine vareable [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") unterstützt.
-
-  
 
 ### Was ist APM?
 
@@ -196,6 +194,6 @@ Ich hoffe, dass euch das Tutorial Spass gemacht hat und euch APM etwas näher ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
 
-<!-- MediaWiki page 2221; revision 7487; parent 7486; 2010-04-01T10:43:06Z -->
+<!-- MediaWiki page 2221; revision 7488; parent 7487; 2010-04-01T10:44:44Z -->
