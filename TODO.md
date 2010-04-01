@@ -85,6 +85,7 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
   - Selbst eingetragen, nun löffel ich die Suppe auch selbst aus. Wer helfen kann und will, ist natürlich herzlich eingeladen! ;-) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 01:21, 6. Mär. 2010 (CET)
 - APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
   - Wäre ACPI nicht besser? Dazu gibt es im OS-Dev-Forum immerhin ein Beispiel (dazu könnte man ja einfach einen Link im ACPI-Artikel setzen): [\[1\]](http://forum.osdev.org/viewtopic.php?f=1&t=16990&p=151565) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 14:47, 24. Feb. 2010 (CET)
+  - Im Real Mode erledigt fehlt nur noch im Protected Mode --Thylôn 12:32, 1. Apr. 2010 (CEST)
 - Mich würde mal interessieren, wie man ein Programm für das eigenen OS portiert. Also mit einer Anleitung, wie man das dan compilern muss usw. --user94 21:14, 8. Mär. 2010 (CET)
   - Wie sowas funktioniert dürfte sehr stark von Deinem OS abhängen. Allgemeine Anleitungen sind da IMHO unmöglich. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:16, 9. Mär. 2010 (CET)
 
@@ -108,6 +109,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7476; parent 7454; 2010-04-01T09:13:34Z -->
+<!-- MediaWiki page 1518; revision 7478; parent 7476; 2010-04-01T10:32:38Z -->
