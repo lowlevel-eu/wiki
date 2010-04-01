@@ -8,7 +8,7 @@
 
 Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootprozess. Aus Sicht des Kernels könnte dieser Abschnitt den Titel "was bisher geschah" tragen.
 
-Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt das BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7C00 (z.B. 07c0:0000) und springt an diese Adresse.
+Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt das BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7c00 (z.B. 07c0:0000) und springt an diese Adresse.
 
 Der Bootloader ist anschließend dafür zuständig, den Kernel des Betriebssystems in den Speicher zu laden und an dessen Einsprungspunkt zu springen.
 
@@ -212,6 +212,6 @@ Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7469/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7469; parent 7468; 2010-04-01T07:16:44Z -->
+<!-- MediaWiki page 1897; revision 7485; parent 7469; 2010-04-01T10:35:22Z -->
