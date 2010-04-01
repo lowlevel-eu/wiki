@@ -32,6 +32,6 @@ Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4860/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7472/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
 
-<!-- MediaWiki page 1852; revision 4860; parent 4430; 2009-07-30T13:34:52Z -->
+<!-- MediaWiki page 1852; revision 7472; parent 4860; 2010-04-01T07:20:50Z -->
