@@ -7,32 +7,11 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-
-## Allgemeines
-
-Als erstes ein paar Informationen zu APM (Advanced Power Management) und diesem Tutorial.
-
-### Vorwort
-
-Da dies mein erstes Tutorial ist bitte ich euch bei Fehlern nachsichtig zu sein. Ich hoffe, dass ich alles gut erkläre.
-
-### Worum geht es in diesem Artikel?
-
-Da ich mich selbst eine Zeit lang mit APM beschäftigt habe möchte ich euch zeigen wie man mit diesem Standard umgeht.
-
-### Was muss mein OS können, damit ich diesem Tutorial folgen kann?
-
-Im Real-Mode: Für den Real-Mode brauchst du eigentlich nur ein lauffähiges Real-Mode-OS.
-
-Im Protected-Mode: Für den Protected-Mode brauchst du ein OS, dass eine variable [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") unterstützt.
-
-### Was ist APM?
-
-APM ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde.
+**Advanced Power Management** (**APM**) ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde. Um die [Real-Mode Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "Advanced Power Management") zu nutzen, sollte bereits ein [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")-Betriebssystem oder ein Betriebssystem, das den [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") unterstützt, vorhanden sein. Für die [Protected-Mode Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management#protected-mode-schnittstelle "Advanced Power Management") gilt sollte ein lauffähiges [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")-Betriebssystem, das zumindest Funktionen zum Verändern der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") bereitstellt, vorhanden sein.
 
   
 
-## APM Einstieg
+## Allgemeines
 
 Der APM-Standard definiert 3 Schnittstellen, mit denen das Betriebssystem arbeiten kann.
 
@@ -48,11 +27,11 @@ Wenn APM unterstützt wird muss das Betriebssystem sich als nächstes mit einer 
 
   
 
-## Real-Mode
+## Real-Mode Schnittstelle
 
-### Initialisation
+### Initialisierung
 
-#### Versions-Kontrolle
+#### Versionskontrolle
 
 Diese Funktion kontrolliert ob APM unterstützt wird:
 
@@ -173,19 +152,13 @@ APM_error: popa ret
 
 interface_number db 01h ;Real Mode Schnittstelle power_state db 03h  ;Power off \</asm\>
 
-## Protected Mode
+## Protected-Mode Schnittstelle
 
 TODO: ergänzen
 
-  
-
-## Nachwort
-
-Ich hoffe, dass euch das Tutorial Spass gemacht hat und euch APM etwas näher gebracht hat.
-
 ## Siehe auch
 
-- [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")
+- [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI"): Ein neuerer Standard für Power Management (unter anderem)
 
 ## Weblinks
 
@@ -194,6 +167,6 @@ Ich hoffe, dass euch das Tutorial Spass gemacht hat und euch APM etwas näher ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7495/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
 
-<!-- MediaWiki page 2221; revision 7493; parent 7489; 2010-04-01T11:05:55Z -->
+<!-- MediaWiki page 2221; revision 7495; parent 7493; 2010-04-01T11:24:14Z -->
