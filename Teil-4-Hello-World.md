@@ -212,6 +212,6 @@ Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7120; parent 7068; 2010-02-20T10:50:46Z -->
+<!-- MediaWiki page 1897; revision 7468; parent 7120; 2010-04-01T07:15:49Z -->
