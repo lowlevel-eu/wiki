@@ -48,7 +48,6 @@
 
 ## Kleinigkeiten
 
-- 0x7C00 in [Bootprozess auf x86](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess auf x86") einarbeiten
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung des INIT Delivery Modes
 - [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"): Beispiel für eine Config, die man jemandem geben kann, der einfach nur Kernel und Module im Speicher haben will.
 
@@ -110,6 +109,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7492; parent 7478; 2010-04-01T11:02:11Z -->
+<!-- MediaWiki page 1518; revision 7496; parent 7492; 2010-04-01T15:28:25Z -->
