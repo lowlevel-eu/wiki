@@ -36,6 +36,7 @@
   - Eingehen auf verschiedene Befehlssätze
     - [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") würde Vorschlagen nur auf [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)"), [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") zu verweisen
       - Das Wichtigste für uns OS-Frickler ist vielleicht, wie man die mit Multitasking kombiniert. Also wie man unnötiges Sichern/Wiederherstellen der Register vermeidet. 3DNow! wäre wohl auch noch ein Kandidat in der Liste.
+        - 3DNow! ist eher bedeutungslos, von SSE überholt und wird hoffentlich nicht mehr eingesetzt, da es nur unter AMD CPUs läuft
   - Liste der Hardware die sonst noch zu einem x86-System gehört
 - [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): SSE und FPU Register in [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") oder so verschieben
 - [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
@@ -101,6 +102,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7506; parent 7505; 2010-04-01T21:57:22Z -->
+<!-- MediaWiki page 1518; revision 7508; parent 7506; 2010-04-03T22:00:03Z -->
