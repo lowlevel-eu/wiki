@@ -159,7 +159,110 @@ Aber treten wir erst einmal wieder etwas auf die Bremse und fangen mal mit FAT12
 
 #### FAT12 / FAT16
 
-*(Ist in Arbeit)*
+Bevor wir uns nun wieder an den Editor setzen und fleißig Code hacken wollen, nix da ... ein Chaos Computer Club Reloaded brauchen wir an diese Stelle nicht, denn wir sind LOWLEVEL.
+
+Richtig wäre erst einmal, alle wichtigsten Informationen zu FAT (genauer gesagt FAT12 & FAT16) zusammen zu tragen, da wir als ersten eine Includedatei mit Strukturen und Konstanten erstellen. Diese benötigen wir nicht nur für den Bootsektor, sondern für den Bootloader ebenso. (Vielleicht auch später für deine eigenen Treiber.)
+
+Nagut, ich werde euch wieder etwas unter die Arme greifen und präsentiere euch gleich die ganze Includedatei namens "fat.inc", so wie ich sie in meinem OS (AiCOS) verwende. Übrigens, FAT32 ist gleich inklusive.
+
+\<asm\>
+
+Cluster Masken
+
+FAT_MASK_12 equ 000000FFFh FAT_MASK_16 equ 00000FFFFh FAT_MASK_32 equ 0FFFFFFFFh
+
+  
+
+Cluster Flags
+
+FAT_FREE equ 000000000h FAT_ZEROFILE equ 000000000h
+
+FAT_32_BAD equ 0FFFFFFF7h  ; Defekter Sektor FAT_32_EOF equ 0FFFFFFF8h  ; End-Of-File Check-Marker FAT_32_EOC equ 0FFFFFFFFh  ; End-Of-Cluster Marker
+
+FAT_16_BAD equ FAT_32_BAD AND FAT_MASK_16 FAT_16_EOF equ FAT_32_EOF AND FAT_MASK_16 FAT_16_EOC equ FAT_32_EOC AND FAT_MASK_16
+
+FAT_12_BAD equ FAT_32_BAD AND FAT_MASK_12 FAT_12_EOF equ FAT_32_EOF AND FAT_MASK_12 FAT_12_EOC equ FAT_32_EOC AND FAT_MASK_12
+
+  
+
+BIOS-Parameter-Block Struktur
+
+FAT_BPB struct
+
+       BytesPerSector      dw  ?
+       SecsPerCluster      db  ?
+       ReservedSectors     dw  ?
+       NumFats             db  ?
+       RootEntries         dw  ?
+       TotalSectors16      dw  ?
+       MediaByte           db  ?
+       NumFatSecs16        dw  ?
+       SectorPerTrack      dw  ?
+       NumHeads            dw  ?
+       HiddenSecs          dd  ?
+       TotalSectors32      dd  ?
+
+FAT_BPB ends
+
+FAT 12/16 Struktur
+
+FAT_FAT12 struct
+
+       BootDrive           db  ?
+       BSReserved1         db  ?
+       ExtBootSig          db  ?
+       VolumeID            dw  ?
+       VolumeLabel         db  11  dup(' ')
+       FSType              db  8   dup(' ')
+
+FAT_FAT12 ends
+
+FAT_FAT16 TYPEDEF FAT_FAT12
+
+FAT 32 Struktur
+
+FAT_FAT32 struct
+
+       NumFatSecs32        db  ?
+       FatVersion          dw  ?
+       RootCluster         dd  ?
+       FatInfo             dw  ?
+       BootSecBackup       dw  ?
+       BPBReserved         db  12  dup(?)
+       BootDrive           db  ?
+       BSReserved1         db  ?
+       ExtBootSig          db  ?
+       VolumeID            dd  ?
+       VolumeLabel         db  11  dup(' ')
+       FSType              db  8   dup(' ')
+
+FAT_FAT32 ends
+
+  
+
+FAT_BS_FAT12 struct
+
+       OEM                 db  8   dup(' ')
+       BiosParamBlock      FAT_BPB <>
+       StructFAT12         FAT_FAT12 <>
+
+FAT_BS_FAT12 ends
+
+FAT_BS_FAT16 struct
+
+       OEM                 db  8   dup(' ')
+       BiosParamBlock      FAT_BPB <>
+       StructFAT16         FAT_FAT16 <>
+
+FAT_BS_FAT16 ends
+
+FAT_BS_FAT32 struct
+
+      OEM                  db  8   dup(' ')
+      BiosParamBlock       FAT_BPB <>
+      StructFAT32          FAT_FAT32 <>
+
+FAT_BS_FAT32 ends \</asm\>
 
   
 
@@ -438,6 +541,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7513; parent 7512; 2010-04-06T17:35:35Z -->
+<!-- MediaWiki page 1427; revision 7514; parent 7513; 2010-04-06T17:38:51Z -->
