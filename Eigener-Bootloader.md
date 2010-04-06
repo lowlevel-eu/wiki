@@ -17,7 +17,9 @@ Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen
 
 Der [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") wird ja bereits an anderer Stelle beschrieben, jedoch wird dort nicht näher ins Detail gegangen. Dies wird nun an dieser Stelle nun nachgeholt.
 
-Ausgangspunkt ist, dass das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur (0x0AA55) die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert. Das erste Problem, auf das man stoßen wird, ist, dass der Binärcode des Bootsektors die Größe eines Sektors nicht überschreiten darf. OK, zugegeben, bei der CD mit ihren 2048 Bytes pro Sektor und deren Dateisystem langt dieser. Auch zukünftige Festplatten mit einer physikalischen Sektorgröße von 4096 Bytes mögen dem entgegen wirken. Aber bei der Diskette, die viele am Anfang verwenden, beträgt die Sektorgröße lediglich 512 Byte. Unser Ziel ist aber keineswegs für jedes Dateisystem einen eigenen Bootloader (ausschließlich dem Bootsektor) zu entwickeln, sondern viel mehr ein universelles Modell auf die Beine zu stellen, bei dem nur der Bootsektor individuell dem Dateisystem vorliegt und der Bootloader (Binärdatei) für alle unterstützten Dateisystemen gleich bleibt.
+Ausgangspunkt ist, dass das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur (0x0AA55) die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert.
+
+Das erste Problem, auf das man stoßen wird, ist, dass der Binärcode des Bootsektors die Größe eines Sektors (typische 512 Bytes bei Diskette, Festplatten und Flash-Storages) je nach Komplexität des Dateisystem überschreiten könnte, dies aber im Idealfall jedoch nicht sollte. OK, zugegeben, bei der CD mit ihren 2048 Bytes pro Sektor und deren Dateisystem langt dieser. Auch zukünftige Festplatten mit einer physikalischen Sektorgröße von 4096 Bytes mögen dem entgegen wirken. Unser Ziel ist aber keineswegs für jedes Dateisystem einen eigenen Bootloader (ausschließlich dem Bootsektor) zu entwickeln, sondern viel mehr ein universelles Modell auf die Beine zu stellen, bei dem nur der Bootsektor individuell dem Dateisystem vorliegt und der Bootloader (Binärdatei) für alle unterstützten Dateisystemen gleich bleibt.
 
   
 
@@ -139,10 +141,10 @@ Wie schon am MBR gesehen ist das Programmieren eines Bootsektors nicht so schwer
 
 Der Bootsektor einer Partition, genauergenommen eines Dateisystem, ist da schon weitaus komplexer, da wir zum einen nicht nur einen Sektor laden müssen, sondern gleich eine ganze Datei. Diese muss allerdings im Dateisystem gesucht werden, und und und ...
 
-Aber vereinfachen wir das ganze, damit ein Modell für alle Dateisystem (egal ob FAT, NTFS, ISO9660, ext2/3 oder gar ein eigenes) benutzbar ist.
+Aber vereinfachen wir das ganze, damit ein Modell für alle Dateisysteme (egal ob [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")/[Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder gar ein eigenes wie ROFS von [AiCOS](https://github.com/lowlevel-eu/wiki/wiki/AiCOS "AiCOS")) benutzbar ist.
 
 1.  Suche im Hauptverzeichnis nach einer bestimmten Datei, bspw. "bootload.bin".
-2.  Ermittle deren Position auf dem Datenträger, also alle zur Datei gehörenden Sektoren.
+2.  Ermittle deren Position auf dem Datenträger, d.h. alle zur Datei gehörenden Sektoren.
 3.  Lade die Datei ins RAM und starte diese.
 
 Schon im ersten Punkt unterscheidet sich der Bootsektor für jedes Dateisystem, da dessen Verzeichnisse unterschiedlich organisiert sind.
@@ -438,6 +440,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7510/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7511/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7510; parent 7465; 2010-04-06T15:07:25Z -->
+<!-- MediaWiki page 1427; revision 7511; parent 7510; 2010-04-06T16:42:04Z -->
