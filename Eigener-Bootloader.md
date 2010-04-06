@@ -130,10 +130,8 @@ Gut gut, leider fehlt hier noch der einscheidene Sourcecode, aber den wirst du d
 2.  Wo möglich ist dir schon aufgefallen, dass der MBR an die gleiche Adresse geladen wurde, wo üblich auch der Bootsektor geladen wird. Um diese Kompatiblität zu waren, solltest du ebenfalls den Bootsektor der aktiven Partition an genau dieser Adresse laden. Also was musst du jetzt tun? Richtig! Du musst den MBR im RAM verschieben und einen Sprung an die neue Adresse durchenführen, quasi ein Far-Jump ist erforderlich.
 3.  Jetzt fangen wir erst richtig an. Da die Partitionstabelle nur maximal 4 Partitionen aufnehmen kann, laden wir unseren Zähler mit den Wert 4. Den Indexpointer setzen wir auf den Anfang der Partitionstabelle. Jetzt durchsuchen wir die Partitionstabellen nach einer als aktiv markierten Partition, welche mit einem Bootflag = 0x80 als solche markiert ist.
 4.  Wurde keine gefunden, Fehlermeldung ausgeben und Bootvorgang anhalten. Wurde jedoch eine aktive Partition gefunden, holen wir dessen Startadresse, entweder im CHS-Format oder wenn vom BIOS unterstützt als LBA. Dies sollte zuvor aber geprüft werden.
-5.  Mit dieser Sektoradresse können wir nun den Bootsektor dieser Partition laden. Ja ja, sollten Fehler auftreten wäre es schön, das Ganze mit einer Fehlermeldung zu quittieren. Doch bei Erfolg prüfen wir, ob die Signatur stimm.
+5.  Mit dieser Sektoradresse können wir nun den Bootsektor dieser Partition laden. Ja ja, sollten Fehler auftreten wäre es schön, das Ganze mit einer Fehlermeldung zu quittieren. Doch bei Erfolg prüfen wir, ob die Signatur stimmt.
 6.  Bei korrekter Signatur hat der MBR seinen Teil getan und sollte daher die Kontrolle an den geladenen Bootsektor abgeben. Dabei sollte auf keinen Fall vergessen werden, dass Bootlaufwerk genauso weiterzureichen, wie man es erhalten hat, nämlich über das DL-Register.
-
-  
 
 ### Stage 1: Bootsektor
 
@@ -440,6 +438,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7512; parent 7511; 2010-04-06T17:33:31Z -->
+<!-- MediaWiki page 1427; revision 7513; parent 7512; 2010-04-06T17:35:35Z -->
