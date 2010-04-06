@@ -27,7 +27,7 @@ Das erste Problem, auf das man stoßen wird, ist, dass der Binärcode des Bootse
 
 Damit wir nicht im Chaos bei der Entwicklung unseres Bootloaders versinken, werden wir diesen unterteilen, nicht nur wegen der Übersicht, sondern weil es zum einen auch partitionierte Datenträger gibt und zum anderem der Bootsektor in seiner Größe begrenzt ist.
 
-- Stage 0: Master-Boot-Recort (optional)
+- Stage 0: Master-Boot-Record (optional)
 - Stage 1: Bootsektor
 - Stage 2: Bootloader
 
@@ -440,6 +440,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7511/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7511; parent 7510; 2010-04-06T16:42:04Z -->
+<!-- MediaWiki page 1427; revision 7512; parent 7511; 2010-04-06T17:33:31Z -->
