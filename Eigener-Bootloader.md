@@ -78,7 +78,7 @@ MBR_PART_ENTRY struct
 
        Bootflag                db      ?
        BeginCHS                MBR_CHS <>
-       Type                    db      ?
+       PartitionType           db      ?
        EndCHS                  MBR_CHS <>     
        BeginLBA                dd      ?
        SizeLBA                 dd      ?
@@ -540,6 +540,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7522; parent 7514; 2010-04-08T17:28:18Z -->
+<!-- MediaWiki page 1427; revision 7523; parent 7522; 2010-04-08T17:29:09Z -->
