@@ -4,6 +4,12 @@
 
 Dieser Artikel wird in mehreren Schritten komplett überarbeitet, da der bisherige Inhalt nur das Programmieren eines Bootsektor beinhaltet, jedoch in keinster Weise auf das Booten des eigenen OS eingeht. -- [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") 18:16, 30. Mär. 2010 (CEST)
 
+| Eigener Bootloader |  |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Schwierigkeit**: *nicht angegeben*<br> |  |
+| Benötigtes Vorwissen: | [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"), [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Sprache: |  |
+
   
 Der Weg zum eigenen Betriebssystem ist lang und steinig. Manch einer versucht als erstes einen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") inklusive [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") zu entwickeln. Klar kann man sich die Arbeit auch sparen, indem man einfach zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") greift. Dennoch möchte man die Funktionsweise eines Bootloader verstehen können. Dies soll mit diesem Tutorial vermittelt werden.
 
@@ -540,6 +546,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7523; parent 7522; 2010-04-08T17:29:09Z -->
+<!-- MediaWiki page 1427; revision 7530; parent 7523; 2010-04-09T15:47:23Z -->
