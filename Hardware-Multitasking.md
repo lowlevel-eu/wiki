@@ -1,5 +1,11 @@
 # Hardware-Multitasking
 
+| Hardware-Multitasking |  |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Schwierigkeit**: *nicht angegeben*<br> |  |
+| Benötigtes Vorwissen: | [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS"), [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") |
+| Sprache: |  |
+
 Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Hardware-Multitasking die CPU die Aufgaben des Dispatchers. Viele moderne Betriebssysteme verzichten auf Hardware-Multitasking, da es angeblich keinen großen Zeitvorteil gegenüber dem Software-Multitasking hat. Im Long Mode kann kein Hardware-Multitasking genutzt werden!
 
 ## Grundlagen
@@ -179,6 +185,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6935/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7541/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 6935; parent 6933; 2010-01-19T19:06:13Z -->
+<!-- MediaWiki page 2158; revision 7541; parent 6935; 2010-04-10T17:58:38Z -->
