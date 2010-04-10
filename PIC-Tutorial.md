@@ -1,5 +1,11 @@
 # PIC Tutorial
 
+| PIC |  |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Schwierigkeit**: *nicht angegeben*<br> |  |
+| Benötigtes Vorwissen: | ([PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")), [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") |
+| Sprache: |  |
+
 Dieses Tutorial soll auf die wichtigsten Aspekte der Programmierung des PICs eingehen. Ich empfehle dennoch, auch [diesen Aritkel](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") zu lesen, da dieser alle Aspekte erläutert.
 
 ## Vorüberlegungen
@@ -35,8 +41,8 @@ Kommen wir also zu ICW Nummer Eins:
 
 \<c\> void pic_remap(int interrupt_num) {
 
-        outb(PIC_MASTER_CMD, 0x11);
-        outb(PIC_MASTER_CMD, 0x11);
+        outb(PIC_MASTER_COMMAND, 0x11);
+        outb(PIC_MASTER_COMMAND, 0x11);
 
 \</c\> 0x11 bedeutet: Wir senden auch ICW4, es gibt zwei PICs und wir wollen Initialisieren.
 
@@ -90,9 +96,9 @@ Und beim nächsten Tick des [Timers](https://github.com/lowlevel-eu/wiki/wiki/Pr
 
 void pic_send_eoi(int irq_num) {
 
-     outb(PIC_MASTER_CMD, EOI);
+     outb(PIC_MASTER_COMMAND, EOI);
      if (irq_num>7)
-       outb(PIC_SLAVE_CMD, EOI);
+       outb(PIC_SLAVE_COMMAND, EOI);
 
 } \</c\> Es ist eine beliebte Fehlerquelle, das Senden des EOI zu vergessen!
 
@@ -113,8 +119,8 @@ void pic_send_eoi(int irq_num) {
 
 void pic_remap(int interrupt_num) {
 
-       outb(PIC_MASTER_CMD, 0x11);
-       outb(PIC_MASTER_CMD, 0x11);
+       outb(PIC_MASTER_COMMAND, 0x11);
+       outb(PIC_MASTER_COMMAND, 0x11);
        outb(PIC_MASTER_DATA, interrupt_num);
        outb(PIC_SLAVE_DATA, interrupt_num+8);
        outb(PIC_MASTER_DATA, 0x04);
@@ -133,14 +139,14 @@ void pic_mask_irqs(uint16_t mask) {
 
 void pic_send_eoi(int irq_num) {
 
-     outb(PIC_MASTER_CMD, EOI);
+     outb(PIC_MASTER_COMMAND, EOI);
      if (irq_num>7)
-       outb(PIC_SLAVE_CMD, EOI);
+       outb(PIC_SLAVE_COMMAND, EOI);
 
 } \</c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 7083; parent 7073; 2010-02-16T14:19:18Z -->
+<!-- MediaWiki page 2183; revision 7540; parent 7083; 2010-04-10T17:53:49Z -->
