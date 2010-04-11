@@ -200,6 +200,12 @@ void init(void) {
 
 }\</c\>
 
+## Troubleshooting
+
+### undefined reference to \`init'
+
+Du benutzt einen [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")-Compiler zum kompilieren und hast die Funktion *void init(void)* im Sourcecode aber nicht *extern "C"* deklariert, siehe auch [hier](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
+
 ## Sourcecode
 
 Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hier](http://git.tyndur.org/?p=tutorial.git;a=summary) einsehen. Der Sourcecode ist **nicht** dazu gedacht, kopiert zu werden, sondern sollte nur im Notfall verwendet werden, um eine unverstandene Kleinigkeit nachzuschauen. Falls größere Verständnisprobleme auftauchen, kann jederzeit im [Forum](http://lowlevel.brainsware.org/forum/) oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachgefragt werden.
@@ -212,6 +218,6 @@ Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7485; parent 7469; 2010-04-01T10:35:22Z -->
+<!-- MediaWiki page 1897; revision 7546; parent 7485; 2010-04-11T13:11:11Z -->
