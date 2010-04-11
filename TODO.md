@@ -51,7 +51,6 @@
 
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung des INIT Delivery Modes
 - [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"): Beispiel für eine Config, die man jemandem geben kann, der einfach nur Kernel und Module im Speicher haben will.
-- [C++#TODO](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") und [Troubleshooting#expected primary-expression before ‘.’ token](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting") falscher Link
 
 ## Neu erstellen
 
@@ -101,6 +100,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7551/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7556/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7551; parent 7550; 2010-04-11T14:06:46Z -->
+<!-- MediaWiki page 1518; revision 7556; parent 7551; 2010-04-11T14:59:33Z -->
