@@ -17,6 +17,9 @@
 
 ## Erweitern
 
+- [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting")
+  - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
+  - bitte Liste erweitern
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
@@ -52,11 +55,6 @@
 
 ## Neu erstellen
 
-- sowas in richtung troubleshooting oder so, mit zB
-  - Warum meckert mein Linker irgendwas mit *undefined reference* (auch im Spezialfall C++, extern "C" und so)
-    - ~~Du bist doch normalerweise für wenigstens ein paar Relevanzkriterien, [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") weiß nicht, ob Linkprobleme direkt was hier im Wiki zu suchen haben... Eher ein Link zu einem guten Tutorial etc. zum Thema (wobei mir da spontan keins einfällt).~~
-  - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
-  - bitte Liste erweitern
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
@@ -103,6 +101,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7551/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7550; parent 7508; 2010-04-11T14:05:39Z -->
+<!-- MediaWiki page 1518; revision 7551; parent 7550; 2010-04-11T14:06:46Z -->
