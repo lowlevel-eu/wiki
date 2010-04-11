@@ -189,9 +189,9 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* - dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut - deaktivieren für diese Funktion. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\> extern "C" void foobar(int i, char\* s); \</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
 
-### TODO
+### designated initializers
 
-Das Problem hier ist, dass C++ im Gegensatz zu C keine TODO unterstützt, beispielsweise wird der Code \<cpp\> struct {
+Das Problem hier ist, dass C++ im Gegensatz zu C keine *designated initializers* (siehe [GCC Manual](http://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html) für eine Erklärung) unterstützt, beispielsweise wird der Code \<cpp\> struct {
 
      uint16_t limit;
      void* pointer;
@@ -240,6 +240,6 @@ gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7549/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7554/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7549; parent 7544; 2010-04-11T14:04:25Z -->
+<!-- MediaWiki page 1486; revision 7554; parent 7549; 2010-04-11T14:58:26Z -->
