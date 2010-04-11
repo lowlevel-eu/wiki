@@ -183,9 +183,48 @@ RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett de
 
 Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit g++ können Exceptions über den Kommandozeilenparameter *-fno-exceptions* deaktiviert werden.
 
-## C++ Funktionen aus C/Assembler nutzen
+## sonstige Probleme
+
+### C++ Funktionen aus C/Assembler nutzen
 
 Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* - dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut - deaktivieren für diese Funktion. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\> extern "C" void foobar(int i, char\* s); \</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
+
+### TODO
+
+Das Problem hier ist, dass C++ im Gegensatz zu C keine TODO unterstützt, beispielsweise wird der Code \<cpp\> struct {
+
+     uint16_t limit;
+     void* pointer;
+
+} \_\_attribute\_\_((packed)) gdtp = {
+
+     .limit = GDT_ENTRIES * 8 - 1,
+     .pointer = gdt,
+
+}; \</cpp\> beim Kompilieren eine Fehlermeldung namens *expected primary-expression before ‘.’ token* ausgeben.
+
+Man kann allerdings den gleichen Effekt entweder durch Weglassen des Feldnamens erreichen (dann muss die Initialisierung in der Reihenfolge wie die Definition des Strukturtyps sein): \<cpp\> struct {
+
+     uint16_t limit;
+     void* pointer;
+
+} \_\_attribute\_\_((packed)) gdtp = {
+
+     GDT_ENTRIES * 8 - 1,
+     gdt,
+
+}; \</cpp\> Die andere Möglichkeit ist einen Konstruktor für die Struktur zu definieren - dafür muss aber die Struktur benannt werden: \<cpp\> struct gdt_register {
+
+     uint16_t limit;
+     void* pointer;
+
+     gdt_register(uint16_t _limit,
+                  void*    _pointer)
+       : limit(_limit), pointer(_pointer){}
+
+} \_\_attribute\_\_((packed));
+
+gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
 ## Siehe auch
 
@@ -201,6 +240,6 @@ Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufru
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7549/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7544; parent 7543; 2010-04-11T13:01:54Z -->
+<!-- MediaWiki page 1486; revision 7549; parent 7544; 2010-04-11T14:04:25Z -->
