@@ -10,6 +10,8 @@
 | Beispielkernel in der Sprache: | [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB") |
 | Homepage |  |
 
+[The C++ Standards Committee](http://www.open-std.org/jtc1/sc22/wg21/)
+
 **C++** wurde 1983 von Bjarne Stroustoup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
 ## Überblick
@@ -199,6 +201,6 @@ Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufru
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7543; parent 7055; 2010-04-11T12:53:42Z -->
+<!-- MediaWiki page 1486; revision 7544; parent 7543; 2010-04-11T13:01:54Z -->
