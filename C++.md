@@ -181,6 +181,10 @@ RTTI (Runtime Type Information) wird am besten innerhalb des Kernels komplett de
 
 Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit g++ können Exceptions über den Kommandozeilenparameter *-fno-exceptions* deaktiviert werden.
 
+## C++ Funktionen aus C/Assembler nutzen
+
+Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* - dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut - deaktivieren für diese Funktion. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\> extern "C" void foobar(int i, char\* s); \</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
+
 ## Siehe auch
 
 [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
@@ -195,6 +199,6 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7055; parent 7054; 2010-02-09T19:27:52Z -->
+<!-- MediaWiki page 1486; revision 7543; parent 7055; 2010-04-11T12:53:42Z -->
