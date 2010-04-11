@@ -202,6 +202,8 @@ void init(void) {
 
 ## Troubleshooting
 
+*→ Hauptartikel: [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting") (gilt natürlich auch für die folgenden Artikel der OS-Dev für Einsteiger Serie)*
+
 ### undefined reference to \`init'
 
 Du benutzt einen [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")-Compiler zum kompilieren und hast die Funktion *void init(void)* im Sourcecode aber nicht *extern "C"* deklariert, siehe auch [hier](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
@@ -218,6 +220,6 @@ Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7547/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7546; parent 7485; 2010-04-11T13:11:11Z -->
+<!-- MediaWiki page 1897; revision 7547; parent 7546; 2010-04-11T13:53:51Z -->
