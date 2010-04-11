@@ -18,10 +18,10 @@ Falls nichts davon zutrifft, könntest du die Objektdatei, die die deiner Meinun
 
 ### expected primary-expression before ‘.’ token
 
-→ Hauptartikel: [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
+→ Hauptartikel: [C++: designated initializers](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7552/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2227/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7555/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2227/index.html)
 
-<!-- MediaWiki page 2227; revision 7552; parent 7548; 2010-04-11T14:17:10Z -->
+<!-- MediaWiki page 2227; revision 7555; parent 7552; 2010-04-11T14:59:13Z -->
