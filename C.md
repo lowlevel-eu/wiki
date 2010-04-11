@@ -10,6 +10,8 @@
 | Beispielkernel in der Sprache: | [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") |
 | Homepage |  |
 
+[The C Standards Committee](http://www.open-std.org/jtc1/sc22/wg14/)
+
 C ist eine bekannte, ältere Programmiersprache. Sie verfolgt das Ziel, bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++").
 
 ## Geschichte
@@ -107,6 +109,6 @@ Zeiger sind einzigartig in C. Mit Zeigern kann man wie bei Assembler direkt auf 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6922/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 6922; parent 6916; 2010-01-17T11:18:49Z -->
+<!-- MediaWiki page 1526; revision 7545; parent 6922; 2010-04-11T13:02:35Z -->
