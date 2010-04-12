@@ -12,8 +12,7 @@ Diese Fehlermeldung wird vom Linker ausgegeben, wenn er kein Symbol mit dem Name
 - du [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") verwendest und *funktionsname* in einer C++-Quellcodedatei definiert und von einer C/Assembler-Quellcodedatei verwendet wird, eine Lösung findet sich [hier](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
 - du Archive (.a-Dateien) verwendest und die Reihenfolge der Kommandozeilenparameter von ld nicht richtig ist oder du vergessen hast *--start-group* und *--end-group* anzugeben, siehe hierfür auch das [ld-Manual](http://sourceware.org/binutils/docs/ld/Options.html)
 
-Falls nichts davon zutrifft, könntest du die Objektdatei, die die deiner Meinung nach entsprechende Funktion enthalten soll, disassemblieren und schauen, ob ein entsprechender Symbolname auftaucht.  
-Alternativ kannst du dir auch mit dem befehl *readelf* die Symbole des object-files anzeigen lassen:
+Falls nichts davon zutrifft, könntest du die Objektdatei, die die deiner Meinung nach entsprechende Funktion enthalten soll, disassemblieren und schauen, ob ein entsprechender Symbolname auftaucht. Alternativ kannst du dir auch mit dem Befehl *readelf* die Symbole der Objektdatei anzeigen lassen:
 
      readelf -s objectfile.o
 
@@ -25,6 +24,6 @@ Alternativ kannst du dir auch mit dem befehl *readelf* die Symbole des object-fi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2227/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2227/index.html)
 
-<!-- MediaWiki page 2227; revision 7558; parent 7555; 2010-04-11T20:00:56Z -->
+<!-- MediaWiki page 2227; revision 7561; parent 7558; 2010-04-12T08:31:21Z -->
