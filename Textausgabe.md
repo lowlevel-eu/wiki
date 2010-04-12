@@ -1,24 +1,24 @@
 # Textausgabe
 
-## Vorwort
+Die Textausgabe ist für so gut wie jedes Programm eine wichtige Möglichkeit, dem User oder Programmierer Informationen über sich mitzuteilen bzw. generell Output auszugeben. Auch und gerade für ein Betriebssystem ist es, auch schon in einer sehr frühen Phase wichtig, dass es Informationen per Textausgabe ausgeben kann um z.B. anzuzeigen, ob diverse Aufgaben gelungen sind oder nicht.
 
-In diesem Artikel geht es nur darum wie im Textmode Schrift (und nur Schrift, keine Grafiken) auf dem Bildschirm ausgegeben werden kann. Normalerweise geht das über einen BIOS-Interrupt, aber man will ja auch im Protected Mode Text auf dem Bildschirm schreiben können.
+Folgend wird nun beschrieben, wie man im Protected Mode Text auf dem Bildschirm ausgeben kann.
 
 ## Textspeicher
 
-Zur Ausgabe von Text gibt es einen 4kB großen Speicher an der Adresse 0xB8000. Dieser Speicher kann linear angesprochen werden und benutzt 2 Byte pro Zeichen auf dem Bildschirm. Es gibt also 80 Spalten (Zeichen pro Zeile) und 25 Zeilen.
+Zur Ausgabe von Text gibt es einen 4 kB großen Speicher an der Adresse 0xB8000. Dieser Speicher kann linear angesprochen werden und benutzt 2 Byte pro Zeichen auf dem Bildschirm. Es ergeben sich also 80 Spalten (Zeichen pro Zeile) und 25 Zeilen, insgesamt also 2000 gleichzeitig darstellbare Zeichen.
 
 ## Schreiben in den Textspeicher
 
-Um nun auf dem Bildschirm ein Zeichen zu haben, muss man erstmal das Offset ausrechnen, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s Wobei hier o das Offset ist, z die Zeile und s die Spalte ist.
+Um nun auf dem Bildschirm ein Zeichen auszugeben, muss erstmal das Offset ausgerechnet werden, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s o steht für das Offset, z für die Zeile und s für die Spalte.
 
 In dem ersten Byte wird der Buchstabe selbst, in dem 2. Byte wird das Attribut, also die Vorder- und Hintergrundfarbe gespeichert. Als Code wird [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437") verwendet, welche eine Erweiterung von [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII") darstelt.
 
 ## Attribut-Byte
 
-Das Attribute-Byte ist wie folgt gestaltet:
+Das Attribute-Byte ist wie folgt aufgebaut:
 
-BXXXYYYYb, Hierbei ist X die Hintergrundfarbe, Y die Vordergrundfarbe und B das "Blinkbit". Ist es gesetzt, dann blinkt das entsprechende Zeichen. Hier ist eine Tabelle aller Farben:
+BXXXYYYYb, Hierbei ist X die Hintergrundfarbe, Y die Vordergrundfarbe und B das "Blinkbit". Ist es gesetzt, blinkt das entsprechende Zeichen. Hier ist eine Tabelle aller Farben:
 
 | Wert | Farbe | Wert | Farbe |
 | ------ | ---------- | ------ | ------------- |
@@ -31,11 +31,12 @@ BXXXYYYYb, Hierbei ist X die Hintergrundfarbe, Y die Vordergrundfarbe und B das 
 | 0x6 | Braun | 0xE | Gelb |
 | 0x7 | Hellgrau | 0xF | Weiß |
 
-Nebenbei bemerkt: Die Standardfarbe ist 0x07. Also Hellgrau auf Schwarz.
+Nebenbei bemerkt: Die inoffizielle Standardfarbe ist 0x07, Hellgrau auf Schwarz.
 
 ### Blinken
 
-Man kann sich nicht darauf verlassen, dass das höchstwertige Bit des Attributbytes wirklich anzeigt, ob das Zeichen blinken soll oder nicht. Bei einigen Computern ist dieses Bit einfach das höchstwertige Bit der Hintergrundfarbe, sodass man hier auch helle Farben als Hintergrund verwenden kann.  
+Man kann sich nicht darauf verlassen, dass das höchstwertige Bit des Attributbytes wirklich anzeigt, ob das Zeichen blinken soll oder nicht. Bei einigen Computern ist dieses Bit einfach das höherwertige Bit der Hintergrundfarbe, sodass man hier auch helle Farben als Hintergrund verwenden kann.
+
 Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Color Graphics Adapter](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter#16-hintergrundfarben "Color Graphics Adapter").
 
 ## Beispiel
@@ -52,7 +53,9 @@ Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe co
 
 } \</c\>
 
-Nun folgt die Erklärung: Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin uint8_t benutzt müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischen Oder mit dem Zeichenbyte verknüpfen.
+Erläuterung des Codes:
+
+Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin uint8_t benutzt müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischen Oder mit dem Zeichenbyte verknüpfen.
 
 Achtung: Das Attributebyte kommt zwar immer nach dem Zeichenbyte, aber wir benutzen hier ein Word und arbeiten ja auf einem [Little-Endian](http://de.wikipedia.org/wiki/Byte-Reihenfolge)-System.
 
@@ -65,11 +68,11 @@ Nochmal eine Veranschaulichung der Oder-Verknüpfung:
 
 ## Bildschirm scrollen
 
-Um den Bildschirm zu scrollen muss man einfach den ganzen Textspeicher ab der 2. Zeile zur 1. Zeile kopieren und die letzte Zeile löschen, also auf 0 oder irgendwas setzen. Wenn man eine memmove- und eine memset-Funktion bzw. eine memsetw-Funktion bei einem Attributbyte != 0 hat, geht das in ein paar Zeilen. Denn die Funktion memcpy muss für sich überlappende Speicherbereiche nicht das gewünschte Ergebnis erzielen.
+Um den Bildschirm zu scrollen muss einfach der gesamte Textspeicher ab der 2. Zeile zur 1. Zeile kopiert werden und die letzte Zeile gelöscht werden, also auf 0 oder einen sonstigen Wert setzen. Wenn man eine memmove- und eine memset-Funktion bzw. eine memsetw-Funktion bei einem Attributbyte != 0 hat, geht das in ein paar Zeilen. Denn die Funktion memcpy muss für sich überlappende Speicherbereiche nicht das gewünschte Ergebnis erzielen.
 
 ## Cursor
 
-Manchen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindest wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der vom BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem selbst überlassen.
+Einigen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindest wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der vom BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum "Löschen" des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht (["Keep in mind that in/out to VGA Hardware is a slow operation"](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem selbst überlassen.
 
 Hier eine Funktion zum Verschieben des Cursors (dies kann auch mit Int 0x10,0x02 gemacht werden). In dem Artikel [I/O Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") wird genauer erklärt, was es mit den hier verwendeten I/O Ports auf sich hat.
 
@@ -107,6 +110,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z.B einfach i
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7359; parent 7358; 2010-03-12T14:47:10Z -->
+<!-- MediaWiki page 1549; revision 7559; parent 7359; 2010-04-12T00:27:43Z -->
