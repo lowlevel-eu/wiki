@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
-| Akt. Version: | 0.02 |
+| Akt. Version: | 0.03 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -37,7 +37,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 
 ## Realease
 
-Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.02 fertig, steht aber nicht zum Download, da ja noch interaktionslos.
+Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.03 fertig, steht aber nicht zum Download, da noch interaktionslos.
 
 ## Versionsdiferenzierung
 
@@ -46,10 +46,12 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 
 ## History/Archiv
 
-- V0.01 - 29.11.09, kurz nach Mitternacht ^^
+- V0.01 - 29.11.09
   - Simple Textausgabe in C++, färben von Text und BG
 - V0.02 - 04.03.10
   - GDT, IDT und PIC
+- V0.03 - 10.04.10
+  - CMOS (-\>Systemzeit), überarbeitung von GDT
 
 ## Screenshot
 
@@ -59,6 +61,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7261/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 7261; parent 7036; 2010-03-04T18:51:51Z -->
+<!-- MediaWiki page 1771; revision 7563; parent 7261; 2010-04-12T09:13:14Z -->
