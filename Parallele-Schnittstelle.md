@@ -64,7 +64,7 @@ Das Statusregister hat gegenüber der Basisadresse einen Offset von 1 und das St
 
 ### Datenregister
 
-In das Datenregister werden die zu sendenden Daten geschrieben. Wird eine Centronics-Schnitstelle verwendet, können Daten auch empfangen werden, welche sich dann ebenfalls im Datenregister befinden.
+In das Datenregister werden die zu sendenden Daten geschrieben. Wird eine Centronics-Schnittstelle verwendet, können Daten auch empfangen werden, welche sich dann ebenfalls im Datenregister befinden.
 
 Die Datenregister sind D0 bis D7 und werden auf den Leitungen von D1 bis D8 übertragen.
 
@@ -74,7 +74,7 @@ Die Datenregister sind D0 bis D7 und werden auf den Leitungen von D1 bis D8 übe
 
 Vom Statusregister aus kann nur gelesen werden. Dort wird der Zustand der Peripherie gespeichert.
 
-Die Statusregister sind D0 bis D7. Nachfolgen ein kleines Programm, um die Bits zu testen:
+Die Statusregister sind D0 bis D7. Nachfolgend ein kleines Programm, um die Bits zu testen:
 
 \<asm\> mov ah, 02h xor dx, dx int 17h
 
@@ -92,7 +92,7 @@ error:
 
 ### Steuerregister
 
-Ins das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das 4. Bit gesetzt, wird ein Interrupt ausgelöst. Wird das 5. Bit gesetzt, ist eine Art bidirektionaler Übertragung möglich.
+In das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das 4. Bit gesetzt, wird ein Interrupt ausgelöst. Wird das 5. Bit gesetzt, ist eine Art bidirektionaler Übertragung möglich.
 
   
 
@@ -143,6 +143,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7565/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 6940; parent 6939; 2010-01-20T19:58:40Z -->
+<!-- MediaWiki page 1996; revision 7565; parent 6940; 2010-04-13T11:07:46Z -->
