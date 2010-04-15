@@ -17,6 +17,7 @@
 
 ## Erweitern
 
+- [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung") Freispeicherliste überarbeiten/ausbauen
 - [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting")
   - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
   - bitte Liste erweitern
@@ -54,7 +55,6 @@
 
 ## Neu erstellen
 
-- [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung") (Freispeicherliste dürfte da erstmal reichen) und [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") dann anpassen
 - irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
@@ -101,6 +101,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7576/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7579/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7576; parent 7575; 2010-04-15T13:12:29Z -->
+<!-- MediaWiki page 1518; revision 7579; parent 7576; 2010-04-15T15:09:04Z -->
