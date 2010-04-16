@@ -90,6 +90,8 @@ Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembl
 Zu Programmen die configure/make verwenden und sich an POSIX halten könnte man sicherlich ein bisschen was sagen. Aber sobald man die Anwendung wirklich ändern muss zum portieren wird es sehr schwierig.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 19:21, 1. Apr. 2010 (CEST)
 
 - RaWrite: evtl. mit Commands usw.
+- Variable Sektor-Größen bei Massenspeichern (Block-Devices). Dafür dürfte sich wohl kein eigener Artikel lohnen aber es sollte in einigen Artikeln berücksichtigt werden, z.B. könnten sich einige Dateisystem-Strukturen ändern wenn sie auf größere Sektoren "skaliert" werden (zumindest bei den komplexeren Dateisystemen, also nicht bei FAT). Auch müsste ein OS mit verschiedenen Sektorgrößen von verschiedenen Massenspeichern gleichzeitig umgehen können. "Variabel" deshalb weil ich nicht glaube, das wenn die HDD-Hersteller erst mal damit angefangen haben an der Sektorgröße zu drehen, das dann bei 4k wieder Schluss ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:40, 16. Apr. 2010 (CEST)
+- Das neue/moderne [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table) könnte mal hier im Wiki berücksichtigt werden. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:40, 16. Apr. 2010 (CEST)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -101,6 +103,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7579/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7583/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7579; parent 7576; 2010-04-15T15:09:04Z -->
+<!-- MediaWiki page 1518; revision 7583; parent 7579; 2010-04-16T16:40:56Z -->
