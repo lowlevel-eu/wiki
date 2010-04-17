@@ -6,6 +6,8 @@ Die Streaming SIMD Extensions (oder kurz SSE genannt), ist ein eine Befehlserwei
 
 ## Register
 
+Im 32-Bit-Modus stehen 8 Register (xmm0 bis xmm7) zur Verfügung. Im 64-Bit-Modus gibt es 8 zusätzliche Register (xmm8 bis xmm15).
+
 ## Befehle
 
 ### Arithmetische Befehle
@@ -25,6 +27,6 @@ Hinweis: Das zuerst angegebene Register enthält das Ergebnis.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
 
-<!-- MediaWiki page 2199; revision 7413; parent 7412; 2010-03-21T01:21:12Z -->
+<!-- MediaWiki page 2199; revision 7586; parent 7413; 2010-04-17T16:22:09Z -->
