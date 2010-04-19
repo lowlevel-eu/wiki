@@ -1,6 +1,6 @@
 # Zitate
 
-bitmaster in <http://lowlevel.brainsware.org/forum/index.php?topic=1651.0>:
+bitmaster in [http://forum.lowlevel.eu/index.php?topic=1651.0](https://lowlevel-eu.github.io/forum/topics/1651/index.html):
 
     Dann wandelte ich den Spaghetti Code (in C/C++ geschrieben) von 
     meinem PC Hardwarebuch in Assembler Code um.
@@ -342,6 +342,6 @@ Aus \#PrettyOS (28. Februar 2010)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 7209; parent 5681; 2010-02-28T21:49:11Z -->
+<!-- MediaWiki page 1435; revision 7601; parent 7209; 2010-04-19T14:13:02Z -->
