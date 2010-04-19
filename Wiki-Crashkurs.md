@@ -24,10 +24,10 @@ Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert
 
 ## Links
 
-- \[\[Artikelname\]\] - Bsp: "Ein \[\[Interrupt\]\]" wird zu: "[Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")"
-- \[\[Artikelname\|Text im Artikel\]\] - Bsp: "Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß" wird zu: "Eine [Unterbrechung](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") macht Spaß"
-- \[http://example.com externer Link\] - Bsp: "Das \[http://www.lowlevel.eu Lowlevel Wiki\] macht Spaß" wird zu: "Das Lowlevel Wiki macht Spaß"
-- \[http://example.com\] - Bsp: "Siehe \[http://www.lowlevel.eu\]" wird zu: "Siehe \[1\]"
+- \[\[Artikelname\]\] - Bsp: „Ein \[\[Interrupt\]\]“ wird zu: „[Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")“
+- \[\[Artikelname\|Text im Artikel\]\] - Bsp: „Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß“ wird zu: „Eine [Unterbrechung](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") macht Spaß“
+- \[http://example.com externer Link\] - Bsp: „Das \[http://www.lowlevel.eu Lowlevel-Wiki\] macht Spaß“ wird zu: „Das Lowlevel-Wiki macht Spaß“
+- \[http://example.com\] - Bsp: „Siehe \[http://www.lowlevel.eu\]“ wird zu: „Siehe \[1\]“
 
   
 
@@ -75,9 +75,9 @@ wird zu:
 
 ## Tabellen
 
-Tabellen werden immer durch ein "{\|" begonnen und mit "\|}" beendet. Dazwischen definiert man dann die einzelnen Reihen. Die Inhalte einer Reihe werden wiederrum durch "\|-" voneinander abgegrenzt. Jede Zelle selbst wird auf im Code auf eine eigene Zeile geschrieben, die mit "\|" beginnen muss, um anzuzeigen, dass nun eine neue Zelle der aktuellen Reihe beginnt. Außerdem kann man eine Überschriftenzelle erzeugen, die aber statt mit "\|" mit "!" beginnen muss.
+Tabellen werden immer durch ein „{\|“ begonnen und mit „\|}“ beendet. Dazwischen definiert man dann die einzelnen Reihen. Die Inhalte einer Reihe werden wiederrum durch „\|-“ voneinander abgegrenzt. Jede Zelle selbst wird auf im Code auf eine eigene Zeile geschrieben, die mit „\|“ beginnen muss, um anzuzeigen, dass nun eine neue Zelle der aktuellen Reihe beginnt. Außerdem kann man eine Überschriftenzelle erzeugen, die aber statt mit „\|“ mit „!“ beginnen muss.
 
-Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem "{\|") diese mit dem Attribut {{prettytable}} zu versehen, um den [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien") treu zu bleiben. Außerdem sieht es einfach besser aus. Mit dem Attribut width='??%' kann man zudem festlegen, über wieviel Prozent der Seite sich die Tabelle erstrecken soll.
+Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit dem Attribut {{prettytable}} zu versehen, um den [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien") treu zu bleiben. Außerdem sieht es einfach besser aus. Mit dem Attribut width='??%' kann man zudem festlegen, über wieviel Prozent der Seite sich die Tabelle erstrecken soll.
 
 **Anzeige**
 
@@ -127,6 +127,8 @@ Bsp:
     mov cr0, eax</asm>
 
 wird zu: \<asm\>mov eax, cr0 or al, 1 mov cr0, eax\</asm\>
+
+Eine Liste aller verfügbaren Sprachen befindet sich bei den Versionsinformationen.
 
 ### In anderen Sprachen
 
@@ -182,6 +184,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 7596; parent 6905; 2010-04-19T14:09:40Z -->
+<!-- MediaWiki page 2049; revision 7603; parent 7596; 2010-04-19T14:13:40Z -->
