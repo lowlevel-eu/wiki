@@ -19,7 +19,7 @@ Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](https://
 
 ## Warum GRUB?
 
-Im [Forum](http://lowlevel.brainsware.org/forum/) und hier im Wiki wird von den meisten GRUB empfohlen und selbst verwendet. Außerdem benutzen die Tutorials im Wiki (größtenteils) GRUB. Dies geschieht aus folgenden Gründen:
+Im Forum und hier im Wiki wird von den meisten GRUB empfohlen und selbst verwendet. Außerdem benutzen die Tutorials im Wiki (größtenteils) GRUB. Dies geschieht aus folgenden Gründen:
 
 - Einen Bootloader zu schreiben setzt **tiefergehende Assemblerkenntnisse** voraus. Falls man diese noch nicht hat, dann wird man sehr wahrscheinlich am Bootloader scheitern oder aber einen Teil/den größten Teil aus anderem Quellcode zusammenkopieren.
 - Dabei kommen dann **fehleranfällige** Bootloader heraus, von denen der jeweilige Programmierer meist nicht weiß, was sie genau machen (z. B. in welchem Dateiformat der Kernel sein muss, an welche Adresse der Kernel geladen wird oder wie viel vom Kernel überhaupt geladen wird) und im Forum werden dann Threads mit 500 Zeilen zusammengefrickelten Assemblercode und der Frage *„Warum funktioniert denn das nicht so, wie ich das will!?“* erstellt. Der Punkt hier ist nicht, dass wir zu faul wären Fragen zu beantworten, sondern, dass es einfach nichts bringt einen eigenen Bootloader zu schreiben, wenn derjenige nicht einmal im Ansatz verstanden hat, was er denn da überhaupt tut. Das ist dann für uns primär frustrierend.
@@ -80,6 +80,6 @@ GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7437; parent 7433; 2010-03-28T20:49:51Z -->
+<!-- MediaWiki page 1567; revision 7600; parent 7437; 2010-04-19T14:12:18Z -->
