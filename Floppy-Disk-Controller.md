@@ -294,11 +294,11 @@ Drive select
 
 ## Weblinks
 
-- [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](http://lowlevel.brainsware.org/wiki/images/82077AA_FloppyControllerDatasheet.pdf)
+- [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/3c350f238581550e0dd8.pdf "82077AA FloppyControllerDatasheet.pdf")
 - <http://www.isdaman.com/alsos/hardware/fdc/floppy.htm>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7609/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7137; parent 7136; 2010-02-21T12:52:12Z -->
+<!-- MediaWiki page 1443; revision 7609; parent 7137; 2010-04-19T14:18:25Z -->
