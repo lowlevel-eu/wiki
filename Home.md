@@ -4,7 +4,7 @@
 
 Hier können angehende und fortgeschrittene Betriebssystementwickler Informationen finden, die sie unterstützen. Die Artikelserie [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") ist speziell an Neulinge gerichtet und gibt einen kleinen Einblick über die steinige Welt der Betriebssystementwicklung. Ansonsten ist hier vom ersten [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") bis zum [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")/[OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS")-Design alles zu finden.
 
-Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](http://lowlevel.brainsware.org/forum/) / [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kundtust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick darüber, was noch zu tun ist, bietet die [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit, Wünsche und Anregungen für Artikel los zu werden. Wenn du keine Erfahrung im Umgang mit Wikis hast, lies dir doch unseren kleinen [Wiki-Crashkurs](https://github.com/lowlevel-eu/wiki/wiki/Wiki-Crashkurs "Wiki-Crashkurs") durch. Dieses Wiki enthält momentan 348 Artikel.
+Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](https://lowlevel-eu.github.io/forum/index.html) / [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kundtust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick darüber, was noch zu tun ist, bietet die [TODO-Liste](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit, Wünsche und Anregungen für Artikel los zu werden. Wenn du keine Erfahrung im Umgang mit Wikis hast, lies dir doch unseren kleinen [Wiki-Crashkurs](https://github.com/lowlevel-eu/wiki/wiki/Wiki-Crashkurs "Wiki-Crashkurs") durch. Dieses Wiki enthält momentan 348 Artikel.
 
 Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")) stehen unter der [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/).
 
@@ -161,6 +161,6 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7595/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 6831; parent 6730; 2010-01-08T16:36:27Z -->
+<!-- MediaWiki page 1712; revision 7595; parent 6831; 2010-04-19T13:59:32Z -->
