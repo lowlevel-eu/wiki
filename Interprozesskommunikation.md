@@ -41,10 +41,10 @@ Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr
 
 ## Links
 
-- [Forumsthread über die Implementation von RPC](http://lowlevel.brainsware.org/forum/index.php?topic=1787.0)
+- [Forumsthread über die Implementation von RPC](https://lowlevel-eu.github.io/forum/topics/1787/index.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6062/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 6062; parent 5468; 2009-10-15T15:52:00Z -->
+<!-- MediaWiki page 1530; revision 7602; parent 6062; 2010-04-19T14:13:29Z -->
