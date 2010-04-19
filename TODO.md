@@ -97,12 +97,12 @@ Zu Programmen die configure/make verwenden und sich an POSIX halten könnte man 
 ## Diskussionen, die sich noch nicht erledigt haben
 
 - Diskussion:Ausgabe 2
-- weitere: siehe [Liste der Diskussionsseiten](http://lowlevel.brainsware.org/wiki/index.php?title=Spezial%3APr%C3%A4fixindex&from=&namespace=1)
+- weitere: siehe Liste der Diskussionsseiten
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die TODO-Vorlage verwenden \| [Stubs](https://lowlevel-eu.github.io/wiki/pages/1618/index.html "Kategorie:Stub")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7610/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 7587; parent 7585; 2010-04-17T16:23:19Z -->
+<!-- MediaWiki page 1518; revision 7610; parent 7587; 2010-04-19T14:21:03Z -->
