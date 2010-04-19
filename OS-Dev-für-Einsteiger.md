@@ -8,7 +8,7 @@ Okay, du hast also beschlossen, dass du dein eigenes Betriebssystem schreiben wi
 
 Dieser Artikel versucht, dir einen Überblick zu geben, welche Fragen du dir stellen solltest und wie du die Sache am geschicktesten angehst. Er soll sozusagen einen Wegweiser durch das Wiki darstellen, der dir am Anfang hilft, die relevanten Themen auf Anhieb zu finden.
 
-Auf der anderen Seite wird er sicher auch die eine oder andere Frage offen lassen. Zögere nicht, dich im [Forum](http://lowlevel.brainsware.org/forum) anzumelden und nachzufragen. Der harte Kern der Community ist auch im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") anzutreffen. Falls du Probleme mit der Anmeldung im Forum haben solltest, kannst du dich dort melden.
+Auf der anderen Seite wird er sicher auch die eine oder andere Frage offen lassen. Zögere nicht, dich im Forum anzumelden und nachzufragen. Der harte Kern der Community ist auch im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") anzutreffen. Falls du Probleme mit der Anmeldung im Forum haben solltest, kannst du dich dort melden.
 
 ## Vor dem Start
 
@@ -168,6 +168,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 7436; parent 7135; 2010-03-28T20:13:43Z -->
+<!-- MediaWiki page 1619; revision 7598; parent 7436; 2010-04-19T14:11:02Z -->
