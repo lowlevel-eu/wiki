@@ -154,11 +154,25 @@ Schon im ersten Punkt unterscheidet sich der Bootsektor für jedes Dateisystem, 
 
 Ein zweites Problem, das auf uns zukommen wird, dass die 512 Bytes abzüglich des Boot-Parameter-Block (kurz BPB) nicht ausreichen werden. Was also tun?
 
-FAT bietet die Möglichkeit, zusätzlichen Code hinter den Bootsektor zu heften und diesen zu den reservierten Sektoren einreiht. Allerdings müsste dann neu formatiert werden, zumidest bei FAT12 und FAT16. Bei FAT32 hat man dieses Problem berücksichtig.
+FAT bietet die Möglichkeit, zusätzlichen Code hinter den Bootsektor zu heften und diesen zu den reservierten Sektoren einreiht. Allerdings müsste dann neu formatiert werden, zumindest bei FAT12 und FAT16. Bei FAT32 hat man dieses Problem berücksichtig.
 
 Eine andere Alternative wäre, das man diesen zusätzlichen Code in den Bootloader verfrachtet, gleich an den Anfang, denn dieser wird ja eh vom Bootsektor geladen.
 
 Aber treten wir erst einmal wieder etwas auf die Bremse und fangen mal mit FAT12 an. Da FAT16 bis auf die Adressbreite der Clusteradressierung identisch ist, nehmen wir es gleich mit an Bord.
+
+  
+
+**Hinweis:**
+
+Man sollte sich unbedingt Gedanken machen, wohin man den Bootloader lädt, den Kernel, und so weiter. Um unnötige Fehler zu vermeiden, ist es unabdingbar hierfür eine Includedatei anzulegen, die global alle wichtigen Adressen und Segmente als Konstanten enthält.
+
+\<asm\>
+
+Real-Mode Bootloader (RM_BL)
+
+\#0001
+
+RM_BL_BEGIN equ 000010000h RM_BL_END equ 00004FFFFh RM_BL_LENGHT equ RM_BL_END - RM_BL_BEGIN + 1 \</asm\>
 
   
 
@@ -274,8 +288,6 @@ FAT_BS_FAT32 ends \</asm\>
 #### FAT32
 
 *(Demnächst)*
-
-  
 
 ### Stage 2: Bootloader
 
@@ -546,6 +558,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7616; parent 7530; 2010-04-19T20:49:43Z -->
+<!-- MediaWiki page 1427; revision 7618; parent 7616; 2010-04-20T16:01:23Z -->
