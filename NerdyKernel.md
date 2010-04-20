@@ -1,6 +1,6 @@
 # NerdyKernel
 
-| rizor-OS |  |
+| rizor-kernel |  |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
@@ -78,36 +78,10 @@ Da der Kernel noch in der Version 0.0.0.0 liegt, gibt es auch keine Features
 
 ## Roadmap
 
-- 0.1.0.0
-  - physische Speicherverwaltung mit Bitmaps
-- 0.2.0.0
-  - virtuelle Speicherverwaltung ohne Zusatzflags
-- 0.3.0.0
-  - Anzeige von Kernel-Messages über Serial-Ports und das Display
-- 0.4.0.0
-  - Prozessverwaltung
-  - Scheduling
-- 0.5.0.0
-  - Syscalls
-- 0.6.0.0
-  - Message-Passing
-  - Message-Queues
-- 0.7.0.0
-  - Module-Communication
-- 0.8.0.0
-  - ELF-Loader und automatisches laden der Module
-- 1.0.0.0
-  - Möglichst viele Kernel-Elemente in Threads und Prozesse auslagern
-- 1.1.0.0
-  - physische Speicherverwaltung um Stack-Mode erweitern
-- 1.2.0.0
-  - PSE-Kompatibilität
-  - PAE-Kompatibilität
-- 1.3.0.0
-  - amd64-Kompatibilität
+Wird gerade genauer definiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 6810; parent 6809; 2010-01-05T23:42:44Z -->
+<!-- MediaWiki page 1816; revision 7620; parent 6810; 2010-04-20T19:56:05Z -->
