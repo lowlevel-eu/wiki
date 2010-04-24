@@ -340,8 +340,16 @@ Aus \#PrettyOS (28. Februar 2010)
 
     <taljeth> Spatium addressorum est omnes divisum in partes tres, quarum unum incolit code, alterum data, tertium, quo ipsi linguae cella, nostra stack appellatur ;-)
 
+------------------------------------------------------------------------
+
+Aus \#lost (25. April 2010)
+
+    [00:07] <JanDing> hm meine brunch prediction unit sagt meiner execution unit, dass sie mal im kühlschrank einen cache lookup machen muss
+    [00:08] <JanDing> ich hoffe, wir haben keinen miss
+    [00:08] <JanDing> ansonsten gibts resource starvation
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 7601; parent 7209; 2010-04-19T14:13:02Z -->
+<!-- MediaWiki page 1435; revision 7625; parent 7601; 2010-04-24T22:22:35Z -->
