@@ -173,7 +173,7 @@ Anschließend muss der Linker auch noch wissen, dass er die Datei benutzen soll.
 
 ## printf
 
-Nach sehr viel sehr detailliert besprochenem Code kommen wir zu einigen Aufgaben, die ich dem geneigten Leser gern zur Übung überlassen würde. Es handelt sich dabei um Funktionen zur Textausgabe - denn man kann keine Fehler finden, wenn man sich keine Informationen anzeigen lassen kann. Wir brauchen mindestens:
+Nach sehr viel sehr detailliert besprochenem Code kommen wir zu einigen Aufgaben, die ich dem geneigten Leser gern zur Übung überlassen würde. Es handelt sich dabei um Funktionen zur [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") - denn man kann keine Fehler finden, wenn man sich keine Informationen anzeigen lassen kann. Wir brauchen mindestens:
 
 - Eine Funktion zum Löschen des Bildschirms (nicht zwingend, sieht aber einfach schöner aus)
 - Eine Funktion um Text auszugeben
@@ -220,6 +220,6 @@ Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7599; parent 7547; 2010-04-19T14:11:25Z -->
+<!-- MediaWiki page 1897; revision 7627; parent 7599; 2010-04-25T16:40:38Z -->
