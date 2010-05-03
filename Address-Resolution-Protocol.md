@@ -4,7 +4,7 @@ Das Address Resolution Protocol (ARP) dient dazu, Netzwerkadressen zu physikalis
 
 ## Ablauf
 
-Wenn ein Computer A ein IP-Paket zu einem anderen Computer B im Netzwerk senden will, muss er dessen IP-Adresse kennen. Damit B das Paket sicher empfängt, muss jedoch auch dessen MAC-Adresse bekannt sein. Diese wird mittels ARP bestimmt. Dazu sendet A einen ARP-Request, in welchem er seine eigene MAC-Adresse, seine IP-Adresse und die IP-Adresse von B einträgt. Dieser Request wird an alle Computer im Netzwerk gesendet, indem als Ziel-MAC-Adresse FF:FF:FF:FF:FF:FF eingetragen wird. Der Computer mit der angegebenen IP-Adresse - also B - sollte dann mit einem ARP-Reply antworten. Dort trägt er seine MAC-Adresse, seine IP-Adresse, die IP-Adresse von A und die MAC-Adresse von A ein. A wird dieses Paket empfangen und kann dort die MAC-Adresse von B auslesen.
+Wenn ein Computer A ein IP-Paket zu einem anderen Computer B im Netzwerk senden will, muss er dessen IP-Adresse kennen. Damit B das Paket sicher empfängt, muss jedoch auch dessen MAC-Adresse bekannt sein. Diese wird mittels ARP bestimmt. Dazu sendet A einen ARP-Request, in welchem er seine eigene MAC-Adresse, seine IP-Adresse und die IP-Adresse von B einträgt. Dieser Request wird an alle Computer im Netzwerk gesendet, indem als Ziel-MAC-Adresse FF:FF:FF:FF:FF:FF eingetragen wird. Der Computer mit der angegebenen IP-Adresse – also B – sollte dann mit einem ARP-Reply antworten. Dort trägt er seine MAC-Adresse, seine IP-Adresse, die IP-Adresse von A und die MAC-Adresse von A ein. A wird dieses Paket empfangen und kann dort die MAC-Adresse von B auslesen.
 
 Die Zuordnung IP \<-\> MAC sollte dann von A in einem ARP-Cache eingetragen werden, damit A nicht vor jedem Paket nach der MAC-Adresse von B fragen muss. B muss nun übrigens keinen ARP-Request an A senden, um dessen MAC-Adresse herauszufinden, da B diese Adresse aus dem ARP-Request von A herauslesen kann.
 
@@ -76,6 +76,6 @@ Im Typfeld des Ethernetpaketes muss übrigens 0x0806 für ARP eingetragen werden
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5556/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7640/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
 
-<!-- MediaWiki page 1937; revision 5556; parent 5250; 2009-08-10T16:47:10Z -->
+<!-- MediaWiki page 1937; revision 7640; parent 5556; 2010-05-03T14:22:36Z -->
