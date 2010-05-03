@@ -17,9 +17,9 @@
 
 <http://gitorious.org/niwohlos>
 
-*"Ich verstehe Ihre Frage so, dass es Benutzer gibt, die wünschen, dass wir die Entwickler von niwohlOS dazu mobilisieren, um einen Paketfilter zu implementieren. Mir ist nicht bekannt, dass eine solche Absicht besteht. Die Entwickler kooperieren zur Sicherung von niwohlOS eifrig mit dem BSI, und ihre Arbeitskraft wird dafür voll eingesetzt. Niemand hat die Absicht, eine Firewall zu errichten!"*  
+*„Ich verstehe Ihre Frage so, dass es Benutzer gibt, die wünschen, dass wir die Entwickler von niwohlOS dazu mobilisieren, um einen Paketfilter zu implementieren. Mir ist nicht bekannt, dass eine solche Absicht besteht. Die Entwickler kooperieren zur Sicherung von niwohlOS eifrig mit dem BSI, und ihre Arbeitskraft wird dafür voll eingesetzt. Niemand hat die Absicht, eine Firewall zu errichten!“*  
 
--- [Linus Torvalds](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der alte [Kommunist](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
+— [Linus Torvalds](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der alte [Kommunist](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
 
   
 **niwohlOS** (Hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
@@ -30,7 +30,7 @@
 
 #### Phase Ia: GRUB
 
-Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für ein jedes Betriebssystem. GRUB richtet eine standardisierte und standartisierte Umgebung ein und übergibt der zweiten Phase, dem niwohunloader alle nötigen Daten, die es brauch. Auch lädt GRUB dank hochperformanter Lademechnismen unsere beiden Kernel stoiber32 und stoiber64 in den Speicher.
+Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für jedes Betriebssystem. GRUB richtet eine standardisierte und standartisierte Umgebung ein und übergibt der zweiten Phase, dem niwohunloader, alle nötigen Daten, die sie benötigt. Auch lädt GRUB dank hochperformanter Lademechnismen unsere beiden Kernel stoiber32 und stoiber64 in den Speicher.
 
 #### Phase Ib: NILO
 
@@ -38,7 +38,7 @@ Alternativ zu GRUB kann der NIwohLOader, kurz NILO eingesetzt werden. Dieser ist
 
 #### Phase II: niwohunloader
 
-Um dem User unnötige und komplexe Konfiguration abzunehmen wird nach dem eigentlich Bootloader ein Zwischenloader, der niwohunloader, geladen. Dieser entscheidet anhand komplexer und hochperformanter Algorithmen, welche Systemarchitektur der entsprechende Computer besitzt und lädt daraufhin alle passenden Komponenten nach. Hierdurch ist ein voll-automatisierter Ablauf des Ladeprozesses bei optimaler Perfomance und höchster Stabilität garantiert.
+Um dem User unnötige und komplexe Konfiguration abzunehmen, wird nach dem eigentlichen Bootloader ein Zwischenloader, der niwohunloader, geladen. Dieser entscheidet anhand komplexer und hochperformanter Algorithmen, welche Systemarchitektur der entsprechende Computer besitzt und lädt daraufhin alle passenden Komponenten nach. Hierdurch ist ein voll-automatisierter Ablauf des Ladeprozesses bei optimaler Perfomance und höchster Stabilität garantiert.
 
 ### Kernel
 
@@ -48,21 +48,21 @@ Die Kernel sind micromonolithische Modularhybride. Im Klartext bedeutet das: niw
 
 #### 32-Bit: stoiber32
 
-Für alle Computer mit bewährten und dennoch hochperformanten 32-Bit-Prozessoren dient der 32-Bit-Kernel stoiber32. Dieser zeichnet sich durch eine hochperformante Speicherverwaltung und ein hochperformantes Multitasking aus, welches bis zu zwei Prozesse mit unglaublicher Geschwindigkeit nahezu parallel ausführen kann. Stoiber32 verfügt über ein Linux-Subsystem, mit dessen Hilfe es möglich ist, Linux-Module in den Kernel einzubinden.
+Für alle Computer mit bewährten und dennoch hochperformanten 32-Bit-Prozessoren dient der 32-Bit-Kernel stoiber32. Dieser zeichnet sich durch eine extrem leistungsfähige Speicherverwaltung und ein auch unter Extrembedingungen noch optimal arbeitendes Multitasking aus, welches bis zu zwei Prozesse mit unglaublicher Geschwindigkeit nahezu parallel ausführen kann. Stoiber32 verfügt über ein Linux-Subsystem, mit dessen Hilfe es möglich ist, Linux-Module in den Kernel einzubinden.
 
 #### 64-Bit: stoiber64
 
-Hochmoderne Computer mit hochperformanten und hochkomplexen 64-Bit-Prozessoren stehen dank stoiber64 neue Möglichkeiten zur Verfügung. Der 64-Bit-Kernel verfügt über ebenfalls über eine hochperformante und auf 64-Bit-Systeme mit mehr als 4 Petabyte Arbeitsspeicher ausgelegte Speicherverwaltung, welche garantiert, dass ein Programm nie zu wenig Speicher hat, auch wenn zu wenig Speicher vorhanden ist. Win-Win-Situation wird dieses Verfahren im professionellem Umfeld genannt. Auch stoiber64 verfügt über hochperformantes Multitasking, welches ebenfalls bis zu zwei Programme nahezu gleichzeitig und in einer atemberaubenden Geschwindkeit ausführen kann.
+Hochmoderne Computer mit hochperformanten und hochkomplexen 64-Bit-Prozessoren stehen dank stoiber64 neue Möglichkeiten zur Verfügung. Der 64-Bit-Kernel verfügt ebenfalls über eine hochoptimierte und auf 64-Bit-Systeme mit mehr als 4 Petabyte Arbeitsspeicher ausgelegte Speicherverwaltung, welche garantiert, dass ein Programm nie zu wenig Speicher hat, auch wenn zu wenig Speicher vorhanden ist. Win-Win-Situation wird dieses Verfahren im professionellem Umfeld genannt. Auch stoiber64 verfügt über hochperformantes Multitasking, welches ebenfalls bis zu zwei Programme nahezu gleichzeitig und in einer atemberaubenden Geschwindigkeit ausführen kann.
 
 #### Namensherkunft
 
-Da der Kernel emmmh (ein micromonolithischer Modularhybrid) ist, wird er auch als "Stoiber" bezeichnet. Hierin soll auch das Ziel KISS (Keep it simple, stupid) zum Ausdruck kommen (in Anerkennung der Leistungen Edmund Stoibers beim Bürokratieabbau in Europa).
+Da der Kernel emmmh (ein micromonolithischer Modularhybrid) ist, wird er auch als „Stoiber“ bezeichnet. Hierin soll auch das Ziel KISS (Keep it simple, stupid) zum Ausdruck kommen (in Anerkennung der Leistungen Edmund Stoibers beim Bürokratieabbau in Europa).
 
 tl;dr: Wie Linux, nur geiler.
 
 ### Treiber
 
-Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber (oder auch Kernel- und Usertreiber). Kerneltreiber werden direkt in den Kernel miteingelinkt und laufen mit der gleichen Privilegsstufe wie der Kernel, Usertreiber können zur Laufzeit nachgeladen werden und laufen im Ring-3, also mit Privilegien, die jedes normale Programm auch besitzt. Durch eine ausgeklügelte und hochmoderne HAL, der niwohlosenHAL, können Usertreiber die gleiche Funktionalität wie Kerneltreiber nutzen, ohne jedoch bei Instabilität die Ausführung des Systems zu behindern. Durch den perfekten Mix aus extrem stabilen Kerneltreibern und hochoptimierten Usertreibern kann ein sicheres, stabiles und gleichzeitig hochperformantes System garantiert werden.
+Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber (oder auch Kernel- und Usertreiber). Kerneltreiber werden direkt in den Kernel miteingelinkt und laufen mit der gleichen Privilegsstufe wie der Kernel, Usertreiber können zur Laufzeit nachgeladen werden und laufen im Ring 3, also mit Privilegien, die jedes normale Programm auch besitzt. Durch eine ausgeklügelte und hochmoderne HAL, der niwohlosenHAL, können Usertreiber die gleiche Funktionalität wie Kerneltreiber nutzen, ohne jedoch bei Instabilität die Ausführung des Systems zu behindern. Durch den perfekten Mix aus extrem stabilen Kerneltreibern und hochoptimierten Usertreibern kann ein sicheres, stabiles und gleichzeitig hochperformantes System garantiert werden.
 
 #### [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
 
@@ -80,7 +80,7 @@ Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hoch
 
 ### niwohlose-developers
 
-Die "niwohlose-developers" sind das Entwicklerteam rund um niwohlOS sowie anderen Projekten. Es besteht aus vier hochoptimierten, äh hochintelligenten Programmierern und Softwareentwicklern.
+Die „niwohlose-developers“ sind das Entwicklerteam rund um niwohlOS sowie anderen Projekten. Es besteht aus vier hochoptimierten, äh, hochintelligenten Programmierern und Softwareentwicklern.
 
 #### XanClic alias Crazy-OS-names
 
@@ -88,11 +88,11 @@ Die "niwohlose-developers" sind das Entwicklerteam rund um niwohlOS sowie andere
 
 #### DerHartmut alias TheHartmutYouHaveCalledIsTemporarilyNotAvailable
 
-[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (qultics) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als "Hobby" neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwingen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren.
+[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (nusskuchen) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als „Hobby“ neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwingen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren.
 
 #### SHyx0rmZ alias HardcoreProgger
 
-[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. er wird oft als "Hardcore-Informatiker" bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **drei** Kerneln ausgestattet, um aus jedem erdenklichen System die höchste Maß an Leistung herauszukitzeln. Des Weiteren schrieb er an Vortex, einem Loader, der unter anderem in qultics eingesetzt wird und womöglich von Microsoft patentiert wird. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
+[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. Er wird oft als „Hardcore-Informatiker“ bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **drei** Kerneln ausgestattet, um aus jedem erdenklichen System das höchste Maß an Leistung herauszukitzeln. Des Weiteren schrieb er Vortex, einen Loader, der unter anderem in qultics eingesetzt wird und womöglich von Microsoft patentiert wird. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
 
 #### DickHuuhn alias DickHuuhn
 
@@ -102,7 +102,7 @@ Die "niwohlose-developers" sind das Entwicklerteam rund um niwohlOS sowie andere
 
 ### Die Committer
 
-Neben dem Entwicklerteam gibt es zahlreiche hochproffessionelle Commiter, die wertvollen Code und wertvolle Ideen tagtäglich committen.
+Neben dem Entwicklerteam gibt es zahlreiche hochprofessionelle Commiter, die wertvollen Code und wertvolle Ideen tagtäglich committen.
 
 #### pocky alias 1337h4x0r
 
@@ -110,7 +110,7 @@ Neben dem Entwicklerteam gibt es zahlreiche hochproffessionelle Commiter, die we
 
 #### Cjreek alias Sado-Masochist aka Windows-User
 
-Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessionelle Entwickler, der zur Zeit bei einem Tierversuch teilnimmt, bei welchem getestet wird, wie sich die dauerhafte ernsthafte Nutzung von dem sogenannten "Betriebssystem" "Windows" auf Mensch und Maschine auswirkt. Er hat ebenfalls weitreichende Erfahrungen in der Betriebssystementwicklung und entwickelt den multiboot-kompatiblen Bootloader NILO, der irgendwann als Ersatz für den hochprofessionellen GRUB dienen soll.
+Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessionelle Entwickler, der zur Zeit bei einem Tierversuch teilnimmt, bei welchem getestet wird, wie sich die dauerhafte ernsthafte Nutzung des sogenannten ~~Außer~~Betriebssystems „Windows“ auf Mensch und Maschine auswirkt. Er hat ebenfalls weitreichende Erfahrungen in der Betriebssystementwicklung und entwickelt den multiboot-kompatiblen Bootloader NILO, der irgendwann als Ersatz für den hochprofessionellen GRUB dienen soll.
 
 #### Paddy alias Paddynator
 
@@ -136,11 +136,11 @@ Grundsätzlich darf jeder, der genug Freizeit hat und die gewissen Portion an Wa
 
 ### Wie bewirbt man sich als Committer?
 
-Sag ich nicht. Könnt' ja jeder kommen. Nene.
+Sag ich nicht. Könnt’ ja jeder kommen. Nene.
 
 ### Was ist V.O.M.I.T.?
 
-V.O.M.I.T. steht für "Verbose object-oriented machine-readable information transfer". Unsere besten Designer verbrachten Monate damit, ein ansprechendes und elegeantes Design für diese neue Art der Interprozesskommunikation zu entwerfen.
+V.O.M.I.T. steht für „Verbose object-oriented machine-readable information transfer“. Unsere besten Designer verbrachten Monate damit, ein ansprechendes und elegeantes Design für diese neue Art der Interprozesskommunikation zu entwerfen.
 
 Dann haben wir aber doch XML-RPC genommen, weil das auch auf die Beschreibung passt.
 
@@ -152,11 +152,11 @@ niwohlOS wird natürlich in C und Assembler geschrieben. Außerdem wird es einen
 
 Es gibt Konkurrenz?
 
-Okay, um ehrlich zu sein: Ja, es gibt ein System. Das System heißt [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS") (Personally retarded ethymology table-tennis, yeah, operating system (das es so heißt ist allerdings nur eine Vermutung!)) und ist ein hochoptimiertes Betriebssystem mit einigen vollkommenen Neuerungen und Innovationen. Welche wissen wir auch nicht. Achja, und dann gibt es noch diesen "týndur", aber der stellt ja eher keine Gefahr dar bei genauerer Betrachtung (und nachdem man die rosa-rote Naivitätsbrille abgenommen hat).
+Okay, um ehrlich zu sein: Ja, es gibt ein System. Das System heißt [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS") (*Personally retarded ethymology table-tennis, yeah, operating system* (dass es so heißt, ist allerdings nur eine Vermutung!)) und ist ein hochoptimiertes Betriebssystem mit einigen vollkommenen Neuerungen und Innovationen. Welche, das wissen wir auch nicht. Ach ja, und dann gibt es noch dieses „týndur“, aber der stellt ja eher keine Gefahr dar bei genauerer Betrachtung (und nachdem man die rosa-rote Naivitätsbrille abgenommen hat).
 
 ### Was war an der GUI nochmal so besonders?
 
-Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele User bereits Erfahrung im Umganng mit D.U.M.M.-heit besitzen, haben wir uns für dieses tolle Konzept entschieden. Falls du dumm bist und darum nicht genug Erfahrung mit D.U.M.M.-heit hast, hier die Auflösung: D.U.M.M. steht für "Deutsches Userinterface mit Mauszeiger".
+Das Konzept der GUI ist recht simpel, denn es ist einfach nur D.U.M.M.. Da viele User bereits Erfahrung im Umganng mit D.U.M.M.-heit besitzen, haben wir uns für dieses tolle Konzept entschieden. Falls du dumm bist und darum nicht genug Erfahrung mit D.U.M.M.-heit hast, hier die Auflösung: D.U.M.M. steht für „Deutsches Userinterface mit Mauszeiger“.
 
 ### Was für Tabletten nehmt ihr eigentlich? Und warum nehmt ihr nicht genug davon?
 
@@ -169,12 +169,12 @@ Natürlich nur \$WIRKSTOFF von \$FIRMA. \$WERBESPRUCH.
 
 Zahlreiche professionelle Entwickler haben eine Kritik zu niwohlOS abgegeben:
 
-- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#1](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"): *"Jo"*
-- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#2](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"): *"Super \*Applaus\*"*
-- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#3](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"): *"Astrein."*
-- Zufriedener Benutzer: *"Wer sind Sie, und wie sind Sie in mein Haus gekommen?"*
-- Zufriedener Black Hat: *"Oh EXPLOITABLE!"*
-- [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes"): *"niwohlOS \<-- Name finde ich gut, ein Os, das sich nie Wohl fühlt..."niw" rückwärts erinnert allerdings an "win""*
+- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#1](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn"): *„Jo“*
+- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#2](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic"): *„Super \*Applaus\*“*
+- [Hochprofessioneller, neutraler, unvoreingenommener Entwickler \#3](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"): *„Astrein.“*
+- Zufriedener Benutzer: *„Wer sind Sie, und wie sind Sie in mein Haus gekommen?“*
+- Zufriedener Black Hat: *„Oh EXPLOITABLE!“*
+- [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes"): *„niwohlOS \<-- Name finde ich gut, ein Os, das sich nie Wohl fühlt...‚niw‘ rückwärts erinnert allerdings an ‚win‘“*
 
   
 
@@ -193,7 +193,7 @@ Folgende Teile sind fertig implementiert:
 Folgende Teile sind in Arbeit und schon teilweise implementiert:
 
 - niwohunloader: Kann beide Kernel laden
-- SMP: APs werden niwohlosisiert und laufen in Ermangelung genügender Tasks bisher noch im Leerlauf &#150; theoretisch ist ein Multiprozessorbetrieb aber bereits möglich
+- SMP: APs werden niwohlosisiert und laufen in Ermangelung genügender Tasks bisher noch im Leerlauf – theoretisch ist ein Multiprozessorbetrieb aber bereits möglich
 
   
 
@@ -201,14 +201,14 @@ Folgende Teile sind in Arbeit und schon teilweise implementiert:
 
 Folgende Teile hat irgendwer halb-besoffen runtergetippt und trotzdem eingecheckt:
 
-- stoiber32: Kann schon Exceptions, Interrupts, Paging, APIC, Multitasking, Syscalls, SMP, … &#150; im master-Branch noch nicht ganz so weit
+- stoiber32: Kann schon Exceptions, Interrupts, Paging, APIC, Multitasking, Syscalls, SMP, …
 - stoiber64: Kann auch schon Exceptions und lernt gerade physische Speicherverwaltung.
 
   
 
 ## To-Do
 
-Folgende Teile müssen noch implementiert werden (einige durchgestrichene müssen noch in den master-Branch gemerget werden):
+Folgende Teile müssen noch implementiert werden:
 
 - printf gut machen
 - kprintf gut machen
@@ -236,6 +236,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7654/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 7081; parent 6995; 2010-02-16T11:08:06Z -->
+<!-- MediaWiki page 2095; revision 7654; parent 7081; 2010-05-03T15:36:28Z -->
