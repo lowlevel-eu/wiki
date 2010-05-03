@@ -12,35 +12,33 @@ Um zwischen einen in Assembly geschriebenen Teil, und einem in C oder C++ geschr
 2.  Argumente
 3.  Rückgabewert
 
-Der **Funktionsname** wird beim gcc 4 ( [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ) nicht verändert. Nennt man die Funktion in C *test* so heißt diese auch im objectfile *test*.\\ Beim g++ ( [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") ) ist das schon etwas komplizierter. Bei C++ kann man namensräume verwenden, und Funktionen überladen, entsprechend wird der Funktionsname aufwändiger codiert:\\ Als Beispiel folgende Funktion: \<cpp\>namespace namensraum {
+Der **Funktionsname** wird beim gcc 4 ([C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) nicht verändert. Nennt man die Funktion in C *test*, so heißt diese auch in der Objektdatei *test*. Beim g++ ( [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") ) ist das schon etwas komplizierter. Bei C++ kann man Namensräume verwenden, und Funktionen überladen, entsprechend wird der Funktionsname aufwändiger codiert: Als Beispiel folgende Funktion: \<cpp\>namespace namensraum {
 
     int test(int x)
     {
      return x;
     }
 
-}\</cpp\> Im Objectfile heißt die Funktion nun *\_ZN10namensraum4testEi*  
-Aufgelöst bedeutet *N10* Das ein Namensraum mit 10 Buchstaben folgt (*namensraum*)  
-Die *4* gibt an, das nun der funktionsname mit 4 Buchstaben folgt (*test*)  
-Und nach dem *E* werden die datentypen der parameter aufgelistet - hier ein *i* für int  
-Dies kann bei anderen Compilern auch anders sein; Am besten einfach mal in ein objectfile gucken, das mit dem Compiler erstellt wurde, und die Namen, mit den Namen des entsprechenden sourcefiles vergleichen. Wenn man eine Funktion mit dem Namen *test* erstellen möchte, muss man neben dem üblichen lable den Assembler noch anweisen, das dieses lable auch für andere "Dateien" sichtbar sein soll. Dazu verwendet man (unter nasm) das schlüsselwort *global* \<asm\>\[global test\] test:
+}\</cpp\> In der Objektdatei heißt die Funktion nun *\_ZN10namensraum4testEi*. Aufgelöst bedeutet *N10*, dass ein Namensraum mit 10 Buchstaben folgt (*namensraum*), die *4* gibt an, dass nun der Funktionsname mit 4 Buchstaben folgt (*test*) und nach dem *E* werden die Datentypen der Parameter aufgelistet – hier ein *i* für int.  
+Dies kann bei anderen Compilern auch anders sein; am besten einfach mal in eine Objektdatei gucken, die mit dem Compiler erstellt wurde, und die Namen, mit den Namen im entsprechenden Quelltext vergleichen.  
+Wenn man eine Funktion mit dem Namen *test* erstellen möchte, muss man neben dem üblichen Label den Assembler noch anweisen, dass dieses Label auch für andere „Dateien“ sichtbar sein soll. Dazu verwendet man (unter nasm) das Schlüsselwort *global*: \<asm\>\[global test\] test:
 
     ret</asm>
 
-Damit man diese Funktion jetzt von C aus aufrufen kann, muss man in C angeben, dass irgendwo eine Funktion ist, die *test* heißt. Das geht über das Schlüsselwort *extern* \<c\>extern int test(int x);\</c\>
+Damit man diese Funktion jetzt von C aus aufrufen kann, muss man in C angeben, dass irgendwo eine Funktion ist, die *test* heißt. Das geht über das Schlüsselwort *extern*: \<c\>extern int test(int x);\</c\>
 
-Die **Argumente** Werden in C über den Stack übergeben. Dabei werden die Argumente von rechts nach links auf den Stack gepushed. \<asm\>\[global test\] test:
+Die **Argumente** werden in C (x86) über den Stack übergeben. Dabei werden die Argumente von rechts nach links auf den Stack gepusht. \<asm\>\[global test\] test:
 
     mov eax, [esp+4]
     ret</asm>
 
-Unter *\[esp\]* liegt die Rücksprungadresse, unter *\[esp+4\]* liegt das 1. Argument. Das 2. Argument würde unter *\[esp+8\]* liegen, usw.
+Unter *\[esp\]* liegt die Rücksprungadresse, unter *\[esp+4\]* liegt das erste Argument. Das zweite Argument würde unter *\[esp+8\]* liegen, usw..
 
-Der **Rückgabewert** steht in *eax*. Mann sollte also bei der Verwendung von *popad* darauf achten, dass der Rückgabewert nicht verlohren geht. Die Beispeilfunktion *test* würde hier das Argument zurückgeben.
+Der **Rückgabewert** steht in *eax*. Mann sollte also bei der Verwendung von *popad* darauf achten, dass der Rückgabewert nicht verloren geht. Die Beispielfunktion *test* würde hier das Argument zurückgeben.
 
-Das asm-file und das C-file müssen nun jeweils zu einem object-file assembliert/compiliert werden, und können dann zusammen geliked werden.
+Die Assemblerdatei und die C-Datei müssen nun jeweils zu einer Objektdatei assembliert/kompiliert werden und können dann zusammen gelinkt werden.
 
-Ein Aufruf einer C-Funktion (oder der Funktion einer anderen Hochsprache) aus einem Assembley-code geht natürlich auch: \<c\> //int a,b,c,r; int test(int a,int b,int c); //r = test(a,b,c) \</c\> \<asm\>
+Ein Aufruf einer C-Funktion (oder der Funktion einer anderen Hochsprache) aus Assemblercode geht natürlich auch: \<c\> //int a,b,c,r; int test(int a,int b,int c); //r = test(a,b,c) \</c\> \<asm\>
 
      ; Parameter werden auf den Stack gelegt
      push c
@@ -90,6 +88,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6720/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 6720; parent 5818; 2010-01-02T16:45:57Z -->
+<!-- MediaWiki page 1525; revision 7653; parent 6720; 2010-05-03T15:11:44Z -->
