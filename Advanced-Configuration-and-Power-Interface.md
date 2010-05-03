@@ -6,7 +6,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Das **Advanced Configuration and Power Interface** (**ACPI**) ist ein offener Standard für die Energieverwaltung von Computern. Es hat das ältere [Advanced Power Management](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "Advanced Power Management") (APM) zum Großteil bereits abgelöst.
 
-Mit ACPI ist es unter anderem möglich, den Computer in verschiedene Energiesparstufen zu bringen, diese reichen von "Voller Betrieb" über verschiedene Schlafmodi bis hin zu Standby (Suspend to RAM), Ruhezustand (Suspend to disk) und Soft-Off-Modus (Das System kann mittels eines "Einschaltknopfes" eingeschaltet werden).
+Mit ACPI ist es unter anderem möglich, den Computer in verschiedene Energiesparstufen zu bringen, diese reichen von „Voller Betrieb“ über verschiedene Schlafmodi bis hin zu Standby (Suspend to RAM), Ruhezustand (Suspend to disk) und Soft-Off-Modus (Das System kann mittels eines „Einschaltknopfes“ eingeschaltet werden).
 
 ## Weblinks
 
@@ -16,6 +16,6 @@ Mit ACPI ist es unter anderem möglich, den Computer in verschiedene Energiespar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1992/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1992/index.html)
 
-<!-- MediaWiki page 1992; revision 7504; parent 5941; 2010-04-01T19:35:46Z -->
+<!-- MediaWiki page 1992; revision 7644; parent 7504; 2010-05-03T14:39:01Z -->
