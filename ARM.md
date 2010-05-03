@@ -14,7 +14,7 @@ Als ARM wird primär das Design des Prozessors bzw. der Prozessor-Architektur be
 
 ## Einsatzgebiete
 
-ARM-Prozessoren sind zwar vor allem bei PC-Anwendern nicht in aller Munde, stecken aber in erstaunlich vielen Geräten: In fast jedem Router ist ein ARM-Prozessor zu finden, der Apple iPod läuft mit einem ARM-Prozessor und der Game Boy Advance von Nintendo ermöglicht mobiles Spielen mit eben diesen ARM-Prozessoren (im Nintendo DS stecken sogar zwei dieser Sorte, einen für DS-Programme und einen für die GBA-Emulation).
+ARM-Prozessoren sind zwar vor allem bei PC-Anwendern nicht in aller Munde, stecken aber in erstaunlich vielen Geräten: In fast jedem Router ist ein ARM-Prozessor zu finden, der Apple iPod läuft mit einem ARM-Prozessor und der Game Boy Advance von Nintendo ermöglicht mobiles Spielen mit eben diesen ARM-Prozessoren (im Nintendo DS stecken sogar zwei dieser Sorte, einen für DS-Programme und einen für die GBA-Kompatibilität).
 
 ## Programmierung
 
@@ -71,6 +71,6 @@ In jedem Modus hat der gerade auführende Code andere Privilegien, sofern er nic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 7646; parent 6234; 2010-05-03T14:50:51Z -->
+<!-- MediaWiki page 2101; revision 7648; parent 7646; 2010-05-03T14:52:37Z -->
