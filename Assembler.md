@@ -1,13 +1,13 @@
 # Assembler
 
-Als Assembler wird sowohl die Assemblersprache, als auch das Programm zur Übersetzung von Quelltexten in Assemblersprache in Maschinensprache bezeichnet. Die CPU führt ausschließlich Maschinenbefehle aus, die als Folge von Bytes im Speicher vorliegen. Jedem Maschinenbefehl ist genau ein Assemblerbefehl (Mnemonic) zugeordnet. Diese 1:1 Abbildung auf die CPU-Befehle hat zur Folge, dass in der Regel Assemblerprogramme nicht zwischen verschiedenen Prozessortypen übertragbar sind. Außerdem werden in Assembler geschriebene Programme schnell sehr lang und erfordern, dass der Programmierer sich wenig zielführend mit vielen Details der Architektur auseinandersetzen muss.
+Als Assembler wird sowohl die Assemblersprache, als auch das Programm zur Übersetzung von Quelltexten in Assemblersprache in Maschinensprache bezeichnet. Die CPU führt ausschließlich Maschinenbefehle aus, die als Folge von Bytes im Speicher vorliegen. Jedem Maschinenbefehl ist genau ein Assemblerbefehl (Mnemonic) zugeordnet. Diese 1:1-Abbildung auf die CPU-Befehle hat zur Folge, dass in der Regel Assemblerprogramme nicht zwischen verschiedenen Prozessortypen übertragbar sind. Außerdem werden in Assembler geschriebene Programme schnell sehr lang und erfordern, dass der Programmierer sich wenig zielführend mit vielen Details der Architektur auseinandersetzen muss.
 
-Der sinnvolle Einsatz von Assembler beschränkt sich darauf, eine Umgebung für eine Hochsprache aufzubauen, sowie kurze, plattformabhängige Hilfsfunktionen und Einsprungsstellen für z.B. [Interrupt-Behandlungsroutinen](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") bereitzustellen.
+Der sinnvolle Einsatz von Assembler beschränkt sich darauf, eine Umgebung für eine Hochsprache aufzubauen, sowie kurze, plattformabhängige Hilfsfunktionen und Einsprungsstellen für z. B. [Interrupt-Behandlungsroutinen](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") bereitzustellen.
 
 ## Aufgaben eines Assemblers
 
 - Übersetzung von Assembler in Maschinencode
-- Auflösen der symbolischen Namen (z.B. von Labels) in numerische Konstanten, soweit möglich
+- Auflösen der symbolischen Namen (z. B. von Labels) in numerische Konstanten, soweit möglich
 - Erzeugung von Objektcode, der in der Regel noch [gelinkt](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker") werden muss
 
 ## Aufbau von Assemblerbefehlen
@@ -16,15 +16,15 @@ Die direkte Abbildung von Assemblerbefehlen auf Maschinenbefehle hat zur Folge, 
 
     mnemonic operand1, operand2
 
-Bei der x86-Architektur ist bei zweistelligen Operationen (Addition, Subtraktion, bitweise Operationen, etc.), immer einer der beiden Operanden sowohl Quelle als auch Ziel. Es existiert also z.B. ein Befehl, um das Register eax zu ebx zu addieren, und das Ergebnis in ebx zu speichern. Aber es existiert kein Befehl, um das Ergebnis in einem dritten Register zu speichern.
+Bei der x86-Architektur ist bei zweistelligen Operationen (Addition, Subtraktion, bitweise Operationen, etc.), immer einer der beiden Operanden sowohl Quelle als auch Ziel. Es existiert also z. B. ein Befehl, um das Register eax zu ebx zu addieren, und das Ergebnis in ebx zu speichern. Aber es existiert kein Befehl, um das Ergebnis in einem dritten Register zu speichern.
 
 ### Syntax
 
-Man unterscheidet bei Assembler grob zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf Intel-Syntax aufbaut, gehören FASM, NASM, MASM, TASM und YASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und YASM verarbeitet werden.
+Man unterscheidet bei Assembler grob zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf der Intel-Syntax aufbaut, gehören [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM"), [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM"), MASM, TASM und YASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und YASM verarbeitet werden.
 
 #### Intel-Syntax
 
-Zu den Hauptmerkmalen der Intel-Syntax gehört die Reihenfolge der Operanden, bei Befehlen mit zwei Operanden oder mehr. Das Ziel einer derartigen Operation steht immer als erstes in der Operandenliste. Die Addition von eax zu ebx sieht dann z.B. so aus, wobei das Ergebnis in ebx ist: \<asm\>add ebx, eax\</asm\>
+Zu den Hauptmerkmalen der Intel-Syntax gehört die Reihenfolge der Operanden, bei Befehlen mit zwei Operanden oder mehr. Das Ziel einer derartigen Operation steht immer als erstes in der Operandenliste. Die Addition von eax zu ebx sieht dann z. B. so aus, wobei das Ergebnis in ebx ist: \<asm\>add ebx, eax\</asm\>
 
 #### AT&T-Syntax
 
@@ -52,6 +52,6 @@ Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 4465; parent 2829; 2009-06-20T14:43:58Z -->
+<!-- MediaWiki page 1514; revision 7642; parent 4465; 2010-05-03T14:32:35Z -->
