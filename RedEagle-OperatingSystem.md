@@ -27,7 +27,7 @@ Ziel ist es **nicht** ein sicheres und stabiles System zu schreiben. Diese Punkt
 - Paging
 - Multitasking
 - Singeluser-system
-- Pipe
+- Pipes
 - alle Programme laufen in ring0
 
 ## Nennenswerte Besonderheiten
@@ -73,6 +73,6 @@ Da das Dateisystem speziell auf mein Betriebssystem zugeschnitten ist werden kei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7647/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 7647; parent 0; 2010-05-03T14:52:28Z -->
+<!-- MediaWiki page 2232; revision 7649; parent 7647; 2010-05-03T14:54:12Z -->
