@@ -42,7 +42,7 @@ TAR legt alle Dateien hintereinander mit einem Header voran ab. Möchte man das 
 Dieser Header ist vor jeder Datei/jedem Verzeichnis/jedem Link und gibt uns Informationen wie z.B. wie Groß ist die Datei oder handelt es sich um einen symbolischen Link.
 
 | Byte | Länge | Name |
-| ------ | ------- | ------------------- |
+| ------ | ------- | ----------------------- |
 | 0 | 100 | [name](#name) |
 | 100 | 8 | [mode](#mode) |
 | 108 | 8 | [uid](#uid) |
@@ -51,7 +51,7 @@ Dieser Header ist vor jeder Datei/jedem Verzeichnis/jedem Link und gibt uns Info
 | 136 | 12 | [mtime](#mtime) |
 | 148 | 8 | [chksum](#chksum) |
 | 156 | 1 | [link](#link) |
-| 157 | 100 | [linkname](#) |
+| 157 | 100 | [linkname](#linkname) |
 
 #### name
 
@@ -79,7 +79,7 @@ Dieses Feld enthält die Größe der eigentlichen Datei. Allerdings werden alle 
 | 1 | verlinkte Datei |
 | 2 | symbolischer Link |
 
-#### linkaname
+#### linkname
 
 Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Datei in diesem Feld. Wie auch beim Attribut "name" kann es sein, dass die 0-Terminierung vorhanden ist, es muss aber nicht.
 
@@ -97,7 +97,7 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 | 136 | 12 | [mtime](#mtime) |
 | 148 | 8 | [chksum](#chksum) |
 | 156 | 1 | [link](#link) |
-| 157 | 100 | [linkname](#) |
+| 157 | 100 | [linkname](#linkname) |
 | 257 | 6 | [magic](#magic) |
 | 263 | 2 | [version](#version) |
 | 266 | 32 | [uname](#uname) |
@@ -140,6 +140,6 @@ Handelt es sich bei der Datei um einen Link, so ist der Name der verlinkten Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7629/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
 
-<!-- MediaWiki page 2073; revision 6530; parent 6527; 2009-12-14T13:21:56Z -->
+<!-- MediaWiki page 2073; revision 7629; parent 6530; 2010-05-03T08:26:26Z -->
