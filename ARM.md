@@ -14,11 +14,11 @@ Als ARM wird primär das Design des Prozessors bzw. der Prozessor-Architektur be
 
 ## Einsatzgebiete
 
-ARM-Prozessoren sind zwar vor allem bei PC-Anwendern nicht in aller Munde, stecken aber in erstaunlich vielen Geräten: In fast jedem Router ist ein ARM-Prozessor zu finden, der Apple iPod läuft mit einem ARM-Prozessor und die GameBoys von Nintendo ermöglichen mobiles Spielen mit eben diesen ARM-Prozessoren (im Nintendo DS stecken sogar zwei dieser Sorte).
+ARM-Prozessoren sind zwar vor allem bei PC-Anwendern nicht in aller Munde, stecken aber in erstaunlich vielen Geräten: In fast jedem Router ist ein ARM-Prozessor zu finden, der Apple iPod läuft mit einem ARM-Prozessor und der Game Boy Advance von Nintendo ermöglicht mobiles Spielen mit eben diesen ARM-Prozessoren (im Nintendo DS stecken sogar zwei dieser Sorte, einen für DS-Programme und einen für die GBA-Emulation).
 
 ## Programmierung
 
-Die "Lowlevel-Programmierung" eines ARM-Prozessors mit Assembler unterscheidet sich signifikant von der eines x86-Prozessors. Ein ARM-Prozessor kennt drei Kategorien an Befehlen:
+Die „Lowlevel-Programmierung“ eines ARM-Prozessors mit Assembler unterscheidet sich signifikant von der eines x86-Prozessors. Ein ARM-Prozessor kennt drei Kategorien an Befehlen:
 
 - Befehle zum Zugriff auf den Speicher
 - Arithmetische oder logische Befehle auf Werte in Registern
@@ -36,9 +36,9 @@ Anders als die x86-Architektur verfügt der ARM über einen Drei-Register-Befehl
 
 ### Register
 
-Es stehen 15 Allzweckregister zur Verfügung (ähnlich \*ax-Register der x86-Prozessoren): r0 bis r14. das Register r13 wird allerdings standardmäßig als Stackpointer genutzt und das Registger r14 als "Link-Register", in welchem die Rücksprungadresse bei Prozeduraufrufen gespeichert wird. Das Register r15 dient als "Programmzähler". Daneben gibt es ein Register namens CPSR (Current Program Status Register), in welchem Informationen wie der aktuelle Programm-Status gespeichert werden.
+Es stehen 15 Allzweckregister zur Verfügung (ähnlich \*ax-Register der x86-Prozessoren): r0 bis r14. das Register r13 wird allerdings standardmäßig als Stackpointer genutzt und das Registger r14 als „Link-Register“, in welchem die Rücksprungadresse bei Prozeduraufrufen gespeichert wird. Das Register r15 dient als „Programmzähler“. Daneben gibt es ein Register namens CPSR (Current Program Status Register), in welchem Informationen wie der aktuelle Programm-Status gespeichert werden.
 
-Die Register r13, r14 und das Statusregister werden "gespiegelt", so dass bei einer Exception und der dazugehörigen Behandlung man sich nicht um die Sicherung des Stackpointers und des Instruction-Pointers kümmern muss.
+Die Register r13, r14 und das Statusregister werden „gespiegelt“, sodass man sich bei einer Exception und der dazugehörigen Behandlung nicht um die Sicherung des Stackpointers und des Instruction-Pointers kümmern muss.
 
   
 
@@ -46,12 +46,12 @@ Die Register r13, r14 und das Statusregister werden "gespiegelt", so dass bei ei
 
 Bei ARM-Prozessoren gibt es keinen Real-Mode und Protected-Mode. Auch das Konzept der Privileg-Ringe fällt weg, stattdessen wird selbiges als Prozessor-Modus implementiert. Hier die Modi des ARM-Prozessors:
 
-- Supervisor-Mode (SVC): Entspricht dem Ring-0 bei x86-Prozessoren, hier läuft das Betriebssystem
-- User Mode: Entspricht dem Ring-3 bei x86-Prozessoren. hier laufen normale User-Programme
-- Interrupt-Mode (IRQ): Wird ein Interrupt ausgelöst oder eine Exception geworfen wird der Prozessor in diesen Modus umgeschaltet
+- Supervisor-Mode (SVC): Entspricht dem Ring 0 bei x86-Prozessoren, hier läuft das Betriebssystem
+- User Mode: Entspricht dem Ring 3 bei x86-Prozessoren. hier laufen normale User-Programme
+- Interrupt-Mode (IRQ): Wird ein Interrupt ausgelöst oder eine Exception geworfen, so wird der Prozessor in diesen Modus umgeschaltet
 - Undefined Instruction Exception (UND): Wird ein unbekannter Befehl ausgeführt, wird der Prozessor in diesen Modus geschaltet und bei Bedarf der Befehl emuliert
 - Memory Abort (ABT): Kann eine Datenanforderung nicht verarbeitet werden, wird der Prozessor in diesen Modus geschaltet
-- Fast Interrupt-Mode (FIQ): Wird durch einen sogenannten "Fast-Interrupt-Request" ausgelöst, findet meist bei Echtzeit-Betriebssystemen Verwendung
+- Fast Interrupt-Mode (FIQ): Wird durch einen sogenannten „Fast-Interrupt-Request“ ausgelöst, findet meist bei Echtzeit-Betriebssystemen Verwendung
 
 In jedem Modus hat der gerade auführende Code andere Privilegien, sofern er nicht schon im Supervisor-Mode arbeitet.
 
@@ -66,11 +66,11 @@ In jedem Modus hat der gerade auführende Code andere Privilegien, sofern er nic
 
 ## Weblinks
 
-- [Offizielle ARM-Seite](http://infocenter.arm.com/help/index.jsp?noscript=1) - Spezifikationen und weitere Informationen
-- [Erstellen einer "nackten" ARM-Umgebung](http://www.embedded.com/columns/technicalinsights/200900043)
+- [Offizielle ARM-Seite](http://infocenter.arm.com/help/index.jsp?noscript=1) – Spezifikationen und weitere Informationen
+- [Erstellen einer „nackten“ ARM-Umgebung](http://www.embedded.com/columns/technicalinsights/200900043)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 6234; parent 6210; 2009-11-09T16:18:46Z -->
+<!-- MediaWiki page 2101; revision 7646; parent 6234; 2010-05-03T14:50:51Z -->
