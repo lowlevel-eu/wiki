@@ -20,8 +20,12 @@ Intel nennt diese Technik bei ihren Prozessoren Hyper-Threading und wendet dies 
 
 ### Hyper-Threading
 
+Hyper-Threading ist die von Intel entwickelte Implementierung von hardwareseitigem Multithreading.
+
+Siehe auch: [Hyperthreading-Artikel von Wikipedia](http://de.wikipedia.org/wiki/Hyperthreading)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7634/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
 
-<!-- MediaWiki page 2058; revision 6263; parent 5785; 2009-11-14T04:06:43Z -->
+<!-- MediaWiki page 2058; revision 7634; parent 6263; 2010-05-03T11:58:28Z -->
