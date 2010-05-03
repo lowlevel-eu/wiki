@@ -6,13 +6,13 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Erkennen der angeschlossenen Geräte
 
-Eine der größten Hürden zu Beginn beim Schreiben eines ATA-Treibers ist das Erkennen der angeschlossenen Geräte. Hierzu gibt es keinen von der Spezifikation vorgeschriebenen Weg. Viele Methoden funktionieren zwar in einigen Emulatoren aber auf echter Hardware nicht und umgekehrt.
+Eine der größten Hürden zu Beginn beim Schreiben eines ATA-Treibers ist das Erkennen der angeschlossenen Geräte. Hierzu gibt es keinen von der Spezifikation vorgeschriebenen Weg. Viele Methoden funktionieren zwar in einigen Emulatoren, aber auf echter Hardware nicht und umgekehrt.
 
-Beim Schreiben des ATA-Treibers für týndur habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") und [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare") und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (4 Rechner von P1 bis zum P4).
+Beim Schreiben des ATA-Treibers für týndur habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") und [VMWare](https://github.com/lowlevel-eu/wiki/wiki/VMware "VMWare") und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (vier Rechner von P1 bis zum P4).
 
 ### HOB-Bit löschen
 
-Im OSDev-Forum bin ich darauf gestoßen, dass man vor dem Suchen nach Geräten zuerst das HOB-Bit in den Kontrollregistern der beiden Geräte löschen sollte, da noch nicht klar ist, ob sie LBA48 unterstützen oder nicht. Ob es wirklich notwendig ist weiß ich nicht, aber schaden kann es ja nicht.
+Im OSDev-Forum bin ich darauf gestoßen, dass man vor dem Suchen nach Geräten zuerst das HOB-Bit in den Kontrollregistern der beiden Geräte löschen sollte, da noch nicht klar ist, ob sie LBA48 unterstützen oder nicht. Ob es wirklich notwendig ist, weiß ich nicht, aber schaden kann es ja nicht.
 
 ### Floating Bus
 
@@ -20,11 +20,11 @@ Angefangen wird mit einem kleinen Test auf eine Erscheinung, die als *floating b
 
 ### Responsive Device
 
-Der nächste Schritt dient dazu, herauszufinden, ob auf dem Bus ein Gerät vorhanden ist, das auf Anfragen reagiert. Der Test kann einfach durchgeführt werden, indem man ein Gerät auswählt, danach beliebige Werte in die LBA-Register schreibt, und diese wieder ausliest. Wenn ein antwortendes Gerät vorhanden ist, kann man die gleichen Werte wieder einlesen, wenn das nicht der Fall ist, müssen auf dem Bus keine weiteren Prüfungen vorgenommen werden. Sicherheitshalber sollte hier zweimal geprüft werden, einmal mit Master und einmal mit Slave. Dies macht zwar eigentlich keinen Sinn, aber in VMWare reagiert der Master nicht (wie es in der Spezifikation vorgeschrieben ist), falls nur der Slave angesprochen wird, und soviel Zeit braucht das ganze ja nicht.
+Der nächste Schritt dient dazu, herauszufinden, ob auf dem Bus ein Gerät vorhanden ist, das auf Anfragen reagiert. Der Test kann einfach durchgeführt werden, indem man ein Gerät auswählt, danach beliebige Werte in die LBA-Register schreibt, und diese wieder ausliest. Wenn ein antwortendes Gerät vorhanden ist, kann man die gleichen Werte wieder einlesen, wenn das nicht der Fall ist, müssen auf dem Bus keine weiteren Prüfungen vorgenommen werden. Sicherheitshalber sollte hier zweimal geprüft werden, einmal mit Master und einmal mit Slave. Dies ist zwar eigentlich sinnlos, aber in VMWare reagiert der Master nicht (wie es in der Spezifikation vorgeschrieben ist), falls nur der Slave angesprochen wird, und soviel Zeit braucht das ganze ja nicht.
 
-### IDENTIFY DEVICE - Kommando
+### IDENTIFY-DEVICE-Kommando
 
-Falls keine der vorherigen Prüfungen fehlgeschlagen ist, müsste jetzt mindestens ein Gerät am Bus vorhanden sein. Das wird jetzt sichergestellt und genauer ermittelt, welche Geräte wirklich vorhanden sind. Dies wird mit dem IDENTIFY DEVICE Befehl gemacht. Beim Senden dieses Befehls ist es sehr wichtig, dass man die ATA-Spezifikation genau befolgt, und sich an die dort erwähnten Protokolle hält. Wenn das korrekt gemacht wird, geht das Erkennen ohne ewig lange Timeouts und co. von statten. Falls das Identifizieren eines Gerätes fehlschlägt, heißt das noch nicht, dass kein Gerät vorhanden ist. Denn es könnte auch sein, dass es sich um ein Gerät mit PACKET Interface handelt. Diese Geräte lassen sich mit dem IDENTIFY PACKET DEVICE identifizieren.
+Falls keine der vorherigen Prüfungen fehlgeschlagen ist, müsste jetzt mindestens ein Gerät am Bus vorhanden sein. Das wird jetzt sichergestellt und genauer ermittelt, welche Geräte wirklich vorhanden sind. Dies wird mit dem IDENTIFY-DEVICE-Befehl erledigt. Beim Senden dieses Befehls ist es sehr wichtig, dass man die ATA-Spezifikation genau befolgt, und sich an die dort erwähnten Protokolle hält. Wenn das korrekt gemacht wird, geht das Erkennen ohne ewig lange Timeouts und co. vonstatten. Falls das Identifizieren eines Gerätes fehlschlägt, heißt das noch nicht, dass kein Gerät vorhanden ist. Denn es könnte auch sein, dass es sich um ein Gerät mit PACKET-Interface handelt. Diese Geräte lassen sich mit dem IDENTIFY PACKET DEVICE identifizieren.
 
 ## Register
 
@@ -54,7 +54,7 @@ Nach der Ausführung eines Kommandos kann man hier den Fehlercode auslesen. Der 
 
 - ICRC: CRC-Vergleichsfehler bei Ultra-DMA-Übertragungen
 - UNC: Fehler im Datenfeld des Sektors
-- MC: Das Speichermedium(CD) wurde gewechselt
+- MC: Das Speichermedium (CD) wurde gewechselt
 - IDNF: Die Sektor-ID wurde nicht gefunden
 - MCR: Bei einem CD-Laufwerk wurde der Auswurf-Knopf gedrückt
 - ABRT: Command aborted (falsches Kommando oder Gerätefehler)
@@ -94,9 +94,9 @@ Beim Lesen:
 | BSY | DRDY | DF | \# | DRQ | r | r | ERR |
 
 - BSY: Busy
-- DRDY: Drive Ready. Gesetzt, wenn die Drive Kommandos annehmen kann.
+- DRDY: Drive Ready. Gesetzt, wenn das Laufwerk Kommandos annehmen kann.
 - DF: Device Fault. Betrifft Fehler, die nicht im Fehlerregister angezeigt werden.
-- \#: Kommando-abhängig
+- \#: Befehlsabhängig.
 - DRQ: Ein Zugriff auf das Datenregister wird erwartet
 - ERR: Error-Bit. Nach Fehler gesetzt, Beschreibung im Fehlerregister.
 
@@ -112,7 +112,7 @@ Beim Lesen: Wie Statusregister. Beim Schreiben:
 
 - HOB: siehe [HOB-Bit](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment#hob-bit-l%C3%B6schen "AT Attachment")
 - SRST: Software Reset
-- nIEN: Wenn gesetzt, sendet der Controller keine PIC-Ints mehr
+- nIEN: Wenn gesetzt, sendet der Controller keine IRQs mehr
 - 0: Immer 0
 
 ## Kommandos
@@ -141,6 +141,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 5535; parent 5060; 2009-08-10T15:28:21Z -->
+<!-- MediaWiki page 1522; revision 7641; parent 5535; 2010-05-03T14:28:59Z -->
