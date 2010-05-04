@@ -129,7 +129,7 @@ Sig dw 0AA55h  ; 0xAA55
   
 end \</asm\>
 
-Gut gut, leider fehlt hier noch der einscheidene Sourcecode, aber den wirst du dir selbst zusammen frickeln müssen. Du wirst hier lediglich ein Umschreibung dessen finden, wie der MBR vom Programm her funktionieren sollte.
+Gut gut, leider fehlt hier noch der entscheidene Sourcecode, aber den wirst du dir selbst zusammen frickeln müssen. Du wirst hier lediglich ein Umschreibung dessen finden, wie der MBR vom Programm her funktionieren sollte.
 
 1.  Am Anfang sollte vor allem das DS richtig initialisiert werden und wenn du der Meinung ist, das DS = 0x07C0 sein sollte, liegst du völlig richtig. Den Stack könntest du aber nach deinen Belieben einrichten, aber vergiss dabei nicht den Interrupt dafür zu sperren.
 2.  Wo möglich ist dir schon aufgefallen, dass der MBR an die gleiche Adresse geladen wurde, wo üblich auch der Bootsektor geladen wird. Um diese Kompatiblität zu waren, solltest du ebenfalls den Bootsektor der aktiven Partition an genau dieser Adresse laden. Also was musst du jetzt tun? Richtig! Du musst den MBR im RAM verschieben und einen Sprung an die neue Adresse durchenführen, quasi ein Far-Jump ist erforderlich.
@@ -572,6 +572,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7657; parent 7656; 2010-05-04T17:04:07Z -->
+<!-- MediaWiki page 1427; revision 7658; parent 7657; 2010-05-04T17:14:39Z -->
