@@ -146,9 +146,10 @@ Der Bootsektor einer Partition, genauergenommen eines Dateisystem, ist da schon 
 
 Aber vereinfachen wir das ganze, damit ein Modell für alle Dateisysteme (egal ob [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")/[Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder gar ein eigenes wie ROFS von [AiCOS](https://github.com/lowlevel-eu/wiki/wiki/AiCOS "AiCOS")) benutzbar ist.
 
-1.  Suche im Hauptverzeichnis nach einer bestimmten Datei, bspw. "bootload.bin".
-2.  Ermittle deren Position auf dem Datenträger, d.h. alle zur Datei gehörenden Sektoren.
-3.  Lade die Datei ins RAM und starte diese.
+1.  LBA-Offset der eigenen Partition ermitteln, also die von der der Bootsektor geladen wurde.
+2.  Suche im Hauptverzeichnis nach einer bestimmten Datei, bspw. "bootload.bin".
+3.  Ermittle deren Position auf dem Datenträger, d.h. alle zur Datei gehörenden Sektoren.
+4.  Lade die Datei ins RAM und starte diese.
 
 Schon im ersten Punkt unterscheidet sich der Bootsektor für jedes Dateisystem, da dessen Verzeichnisse unterschiedlich organisiert sind.
 
@@ -556,6 +557,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7655; parent 7618; 2010-05-04T16:07:41Z -->
+<!-- MediaWiki page 1427; revision 7656; parent 7655; 2010-05-04T16:14:59Z -->
