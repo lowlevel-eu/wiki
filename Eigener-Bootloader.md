@@ -170,8 +170,6 @@ Man sollte sich unbedingt Gedanken machen, wohin man den Bootloader lädt, den K
 
 Real-Mode Bootloader (RM_BL)
 
-\#0001
-
 RM_BL_BEGIN equ 000010000h RM_BL_END equ 00004FFFFh RM_BL_LENGHT equ RM_BL_END - RM_BL_BEGIN + 1 \</asm\>
 
   
@@ -230,7 +228,7 @@ FAT_FAT12 struct
        BootDrive           db  ?
        BSReserved1         db  ?
        ExtBootSig          db  ?
-       VolumeID            dw  ?
+       VolumeID            dd  ?
        VolumeLabel         db  11  dup(' ')
        FSType              db  8   dup(' ')
 
@@ -558,6 +556,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7618; parent 7616; 2010-04-20T16:01:23Z -->
+<!-- MediaWiki page 1427; revision 7655; parent 7618; 2010-05-04T16:07:41Z -->
