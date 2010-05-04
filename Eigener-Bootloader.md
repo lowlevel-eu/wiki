@@ -282,7 +282,22 @@ FAT_BS_FAT32 struct
 
 FAT_BS_FAT32 ends \</asm\>
 
-  
+Nun aber endlich ans Eingemachte. Aber Vorsicht, man wird auf Anhieb nicht alles gleich in den Bootsektor hineinbekommen. Man wird am Ende sehr viel optimieren müssen, jedoch setzt dies sehr gute Kenntnisse in Assembler (speziell 386) voraus.
+
+1.  Wie schon beim MBR sollte man am Anfang erst einmal die Segmentregister richtig setzen, ebenso den Stack. Zudem sollte man sich das Bootlaufwerk vom Register DL sichern.
+2.  Wenn man von großen Festplatten booten möchte, kommt man nicht drum herum kommen die INT13-Extension des BIOS zu benutzen. Daher sollte man jetzt dies prüfen, ob INT13-Ext unterstützt wird, zudem auch das Packet-Format.
+3.  Da wir nicht wirklich wissen, ob wir nun wie bei Festplatten üblich von einer Partition booten, prüfen wie dieses und verifizieren den LBA-Offset dieser Partition mit dem Wert "HiddenSecs" aus dem BIOS-Parameter-Block des Bootsektors. Diese sollten identisch sein.  
+    Beachte aber, das man nur aus sogenannten primären Partitionen bootet.
+4.  Was wir als nächstes benötigen, sind die Offsets der FAT, des Hauptverzeichnisses und den Offset an dem die Dateien anfangen.  
+    LBA-STart = Offset, an der die Partition beginnt, also gleich "HiddenSecs".  
+    FAT = LBA-Start + ReservedSectors  
+    ROOT = FAT + NumFats \* NumFatSecs16  
+    DATA = ROOT + ((RootEntries - 1) \* 32 + BytesPerSector) / BytesPerSector
+5.  Nach dem wir nun den Offset des Hauptverzeichnis haben und wissen, wie groß dieses ist, können wir nun nach dem Bootloader bspw. "bootload.bin" suchen. Sofern sie gefunden wurde, ermitteln wir den Startcluster.
+6.  Nun haben wir den ersten Cluster und können mit dem Laden der Datei anfangen. Dazu müssen wir die Clusternummer in LBA umrechnen. Beachte aber, dass der Datenbereich bei Cluster \#2 anfängt.  
+    LBA = DATA + (Cluster - 2) \* SecsPerCluster
+7.  Da unsere Datei sicher noch nicht mit einem Cluster komplett geladen wurde, müssen wir in der FAT nach weiteren Clustern zu dieser Datei suchen. Hier unterscheidet sich FAT12 von FAT16 etwas und genau hier weist der Source-Code etwas ab.
+8.  Nach dem auch der letzte Cluster geladen wurde, kann endlich in den Bootloader gesprungen wurden. Damit beginnt also Stage 2.
 
 #### FAT32
 
@@ -557,6 +572,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 7656; parent 7655; 2010-05-04T16:14:59Z -->
+<!-- MediaWiki page 1427; revision 7657; parent 7656; 2010-05-04T17:04:07Z -->
