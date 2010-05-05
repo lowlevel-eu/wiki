@@ -33,7 +33,7 @@ Es gibt 2 Arten Pipes:
 
 ## Semaphore
 
-Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr zum Exklusiven Zugriff aus spezielle Resourcen.
+Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr zum Exklusiven Zugriff auf spezielle Resourcen.
 
 ## Monitore
 
@@ -45,6 +45,6 @@ Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 7659; parent 7602; 2010-05-05T16:51:37Z -->
+<!-- MediaWiki page 1530; revision 7660; parent 7659; 2010-05-05T16:51:56Z -->
