@@ -8,7 +8,7 @@ Als **Interprozesskommunikation** (**IPC**, engl. **inter-process communication*
 
 ## Message Passing
 
-Beim Message Passing werden Nachrichten direkt zwischen zwei Prozessen versendet. Dies erfolgt meist mit einer Adressierung mithilfer der PID oder einer Portnummer.
+Beim Message Passing werden Nachrichten direkt zwischen zwei Prozessen versendet. Dies erfolgt meist mit einer Adressierung mithilfe der PID oder einer Portnummer.
 
 ## Message Queues
 
@@ -45,6 +45,6 @@ Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 7602; parent 6062; 2010-04-19T14:13:29Z -->
+<!-- MediaWiki page 1530; revision 7659; parent 7602; 2010-05-05T16:51:37Z -->
