@@ -797,7 +797,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">9
 </th>
-<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE3</a>
+<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSSE3</a>
 </td></tr>
 <tr>
 <th colspan="1">8
@@ -3021,6 +3021,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7661/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 7661; parent 6756; 2010-05-06T15:15:34Z -->
+<!-- MediaWiki page 1739; revision 7662; parent 7661; 2010-05-06T15:22:58Z -->
