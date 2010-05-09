@@ -14,7 +14,7 @@ Diese Methode ist schon etwas praktischer als die letzte. Debug-Ausgaben werden 
 
 Ähnlich wie bei der print(f)/cout-Methode kann man auch Daten/ASCII-Strings über die [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") verschicken. Das hat den Vorteil, dass man mehr als nur 25 oder 50 Zeilen zeitgleich betrachten kann.
 
-Bei [bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") werden die auf der seriellen Schnittstelle ausgegebenen Daten in eine Textdatei geschrieben, [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") kann man mit einem Schalter veranlassen, die serielle Schnittstelle auf stdout oder in eine Datei umzuleiten. Diese kann später ggf. auch von weiteren Tools (z. B. grep) weiterverarbeitet werden.
+Bei [bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") werden die auf der seriellen Schnittstelle ausgegebenen Daten in eine Textdatei geschrieben, [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") kann man mit einem Schalter veranlassen, die serielle Schnittstelle auf stdout oder in eine Datei umzuleiten. Diese kann später ggf. auch von weiteren Tools (z. B. grep) weiterverarbeitet werden.
 
 Zudem ist ein Treiber für die serielle Schnittstelle sowohl im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") als auch im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") relativ einfach zu schreiben. [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") müssen hierfür nicht verarbeitet werden können.
 
@@ -24,7 +24,7 @@ Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist 
 
 Bei bochs kann dazu der [integrierte Debugger](https://github.com/lowlevel-eu/wiki/wiki/Bochs-Debugger "Bochs Debugger") benutzt werden.
 
-QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen (siehe GNU Project Debugger und QEMU). Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den "-d"-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein "-d int", um alle Interrupts aufzuzeichnen. Dabei muss man aber ein wenig aufpassen, da ältere Versionen von QEMU bei einem Triplefault keinen Reset auslösen. Das heißt, er schreibt dann lauter GPFs in die Logdatei und diese wird dabei **sehr** groß. Man sollte den QEMU also möglichst schnell schließen, sobald ein Triplefault aufgetreten ist.
+QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen (siehe GNU Project Debugger und QEMU). Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den „-d“-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein „-d int“, um alle Interrupts aufzuzeichnen.
 
 ## Exception-Meldungen
 
@@ -34,7 +34,7 @@ Es können auch Breakpoints gesetzt werden: \<c\>asm("int \$3");\</c\>
 
 ## objdump
 
-Sobald die Adresse bekannt ist, muss man daraus auf die Codestelle schließen können. Dabei kann das GNU-Tool [objdump](https://github.com/lowlevel-eu/wiki/wiki/Objdump "Objdump") eine große Hilfe sein. Dies ist aber nur möglich, wenn man ein Binärformat wie [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") benutzt, bei flachen Binaries fehlen dem Tool nötige Informationen (um einfach nur zu disassemblieren, kann man dann z. B. ndisasm, also den Disassembler von nasm, verwenden). objdump kann dabei mit dem Parameter -d Assemblercode mit Adresse vor jeder Instruktion generieren.
+Sobald die Adresse bekannt ist, muss man daraus auf die Codestelle schließen können. Dabei kann das GNU-Tool [objdump](https://github.com/lowlevel-eu/wiki/wiki/Objdump "Objdump") eine große Hilfe sein. Dies ist aber nur möglich, wenn man ein Binärformat wie [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") benutzt, bei flachen Binaries fehlen dem Tool nötige Informationen (um einfach nur zu disassemblieren, kann man dann z. B. ndisasm, also den Disassembler von nasm, verwenden). objdump kann dabei mit dem Parameter -d Assemblercode mit Adresse vor jeder Instruktion generieren.
 
 ### Debuginformationen
 
@@ -46,6 +46,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 6897; parent 6028; 2010-01-16T17:30:02Z -->
+<!-- MediaWiki page 1544; revision 7675; parent 6897; 2010-05-09T09:40:31Z -->
