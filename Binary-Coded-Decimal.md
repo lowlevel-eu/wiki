@@ -1,6 +1,6 @@
 # Binary Coded Decimal
 
-**Binary Coded Decimal** (kurz **BCD**) ist ein Format zur binären Kodierung von Dezimalzahlen. Man unterscheidet zwischen gepackten- und ungepackten BCD-Zahlen. Im BCD-Format werden die einzelnen Dezimalstellen einer Zahl in einem Byte, bzw. in gepackter Form in einem Nibble (4 Bit), gespeichert.
+**Binary Coded Decimal** (kurz **BCD**) ist ein Format zur binären Kodierung von Dezimalzahlen. Man unterscheidet zwischen gepackten und ungepackten BCD-Zahlen. Im BCD-Format werden die einzelnen Dezimalstellen einer Zahl in einem Byte bzw. in gepackter Form in einem Nibble (4 Bit) gespeichert.
 
 Dies kann man mit der folgenden Tabelle verdeutlichen:
 
@@ -37,7 +37,7 @@ Beispiel:
      Dezimal  : 42
      Ungepacktes BCD-Format: 0000 0100b (0x04)  0000 0010b (0x02)
 
-Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII")-Zeichen umgewandelt werden kann.
+Der Vorteil hierbei ist z. B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII")-Zeichen umgewandelt werden kann.
 
 ## Weblinks
 
@@ -45,6 +45,6 @@ Der Vorteil hierbei ist z.B., dass durch eine einfache *or*-Verknüpfung mit 0x3
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7668/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1589/index.html)
 
-<!-- MediaWiki page 1589; revision 5814; parent 5181; 2009-08-31T18:37:04Z -->
+<!-- MediaWiki page 1589; revision 7668; parent 5814; 2010-05-09T09:07:08Z -->
