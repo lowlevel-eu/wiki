@@ -10,7 +10,7 @@ Das **BIOS** (**B**asic **I**nput/**O**utput **S**ystem) ist die Firmware eines 
 
 ## Aufgaben des BIOS
 
-Das BIOS ist das „Ur-Programm“ eines x86-Rechners (im Nachfolgendem nur noch „PC\<" genannt). Es sitzt in einem beschreibbaren Flash-Speicher und wird direkt beim Starten des PCs ausgeführt. Es unternimmt nun den sogenannten [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST"), den **P**ower-**O**n **S**elf-**T**est, welcher den verfügbaren Arbeitsspeicher hochzählt und verschiedene Laufwerke anspricht sowie ihre Daten ausliest.
+Das BIOS ist das „Ur-Programm“ eines x86-Rechners (im Nachfolgendem nur noch „PC“ genannt). Es sitzt in einem beschreibbaren Flash-Speicher und wird direkt beim Starten des PCs ausgeführt. Es unternimmt nun den sogenannten [POST](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test "POST"), den **P**ower-**O**n **S**elf-**T**est, welcher den verfügbaren Arbeitsspeicher hochzählt und verschiedene Laufwerke anspricht sowie ihre Daten ausliest.
 
 Nach dem POST versucht es von einer Liste von Laufwerken einen Bootloader zu laden. Dieser wird an Adresse 0x7C00 geladen und dann ausgeführt; Ab da hat das Betriebssystem die volle Kontrolle über den PC.
 
@@ -22,6 +22,6 @@ Allerdings ist das BIOS (zumindest im [Real Mode](https://github.com/lowlevel-eu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7666/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 7666; parent 7479; 2010-05-09T09:05:11Z -->
+<!-- MediaWiki page 1616; revision 7667; parent 7666; 2010-05-09T09:05:28Z -->
