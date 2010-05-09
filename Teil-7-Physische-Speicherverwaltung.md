@@ -123,7 +123,7 @@ Den vom OS benutzten Speicher als belegt zu markieren (z.B. die Multiboot-Infost
         kernel_end = .;
     }
 
-In C können wir diese Symbole anschließend als extern-Variablen deklarieren. Da die Variable keinen Datentyp hat (es zeigt ja nur ein Symbol an diese Stelle, ohne dass dort Platz für irgendwelche Daten reserviert wäre), ist void die richtige Wahl. Wir sind hinterher sowieso nur an der Adresse der Variablen interessiert: \<c\>extern void kernel_start; extern void kernel_end;
+In C können wir diese Symbole anschließend als extern-Variablen deklarieren. Da die Variable keinen Datentyp hat (es zeigt ja nur ein Symbol an diese Stelle, ohne dass dort Platz für irgendwelche Daten reserviert wäre), ist void die richtige Wahl (da dieses Nichts zudem so ziemlich unveränderlich ist, kann man gleich ein const void verwenden (sonst kann es passieren, dass der Compiler eine Warnung ausgibt)). Wir sind hinterher sowieso nur an der Adresse der Variablen interessiert: \<c\>extern const void kernel_start; extern const void kernel_end;
 
 uintptr_t addr = (uintptr_t) &kernel_start; while (addr \< (uintptr_t) &kernel_end) {
 
@@ -165,6 +165,6 @@ Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten List
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7129/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
 
-<!-- MediaWiki page 2094; revision 7129; parent 6093; 2010-02-21T11:08:39Z -->
+<!-- MediaWiki page 2094; revision 7680; parent 7129; 2010-05-09T13:42:32Z -->
