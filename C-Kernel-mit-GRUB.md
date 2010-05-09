@@ -1,10 +1,10 @@
 # C-Kernel mit GRUB
 
-In diesem Tutorial werde ich beschreiben wie man einen in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmierten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mithilfe von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") bootet.
+In diesem Tutorial werde ich beschreiben, wie man einen in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") programmierten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") mithilfe von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") bootet.
 
 ## Hinweis für Windowsianer
 
-Ich werde hier beschreiben, wie ich es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") mache. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt - das heißt, du solltest dir erst entweder den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") (Verwenden von Jidders Crosscompiler) oder [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") (Erstellen eines eigenen Crosscompilers) durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
+Ich werde hier beschreiben, wie ich es unter [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") mache. Unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt – das heißt, du solltest dir erst entweder den Artikel [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") (Verwenden von Jidders Crosscompiler) oder [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") (Erstellen eines eigenen Crosscompilers) durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
 
 ## Kernel
 
@@ -64,11 +64,11 @@ loader:
 
 - Die Flags können geändert werden, am besten schaut man sich die [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Spezifikation an.
 - Den Stack kann man natürlich an eine beliebige Stelle setzen, aber an der 2MB-Grenze wird er uns nicht stören.
-- Es wird die Adresse der Multiboot-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der Multiboot-Structure steht z.B wie viel Speicher der Rechner hat, oder welche Module von GRUB mitgeladen wurden.
+- Es wird die Adresse der Multiboot-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der Multiboot-Structure steht z. B. wie viel Speicher der Rechner hat oder welche Module von GRUB mitgeladen wurden.
 
 ## Zusammenbauen
 
-Nun müssen wir den Kernel "zusammenbauen". Dafür müssen wir den Assembler-Code assemblieren, den C-Code kompilieren und am Ende beides linken.
+Nun müssen wir den Kernel „zusammenbauen“. Dafür müssen wir den Assembler-Code assemblieren, den C-Code kompilieren und am Ende beides linken.
 
 ### Assemblieren
 
@@ -86,13 +86,13 @@ Der C-Kernel wird mit diesem Befehl kompiliert:
 
 Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. Es ist wichtig, dass keine Includes und damit auch keine Funktionen aus der Standardbibliothek des Hostsystems benutzt werden. Diese müssen erst selbst implementiert werden. Eine genau Beschreibung der einzelnen Kommandozeilenparameter findet sich im [GCC Handbuch (englisch)](http://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html#Invoking-GCC). An dieser Stelle nur so viel:
 
-- -m32 weißt gcc an den Code für den 32Bit Protected-Mode (im Gegensatz zu -m64) zu erstellen
+- -m32 weist gcc an, den Code für den 32-Bit-Protected-Mode (im Gegensatz zu -m64) zu erstellen
 - -ffreestanding weißt gcc an nicht davon auszugehen, dass eine Standardbibliothek zur Verfügung steht
 - -nostdinc weißt gcc an keine Header aus der Standardbibliothek des Hostsystems bereitzustellen
 
 ### Linken
 
-Meiner Meinung nach ist dies der schwierigste Teil des "Zusammenbauens". Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z.B dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei/[Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript") für *ld*:
+Meiner Meinung nach ist dies der schwierigste Teil des „Zusammenbauens“. Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z. B. dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei/[Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript") für *ld*:
 
     ENTRY (loader)
     OUTPUT_FORMAT(elf32-i386)
@@ -132,11 +132,11 @@ Nun wird gelinkt:
 
 Wenn man später mehr Dateien hat, können diese natürlich auch dazugelinkt werden. Man sollte den fertigen Kernel jetzt in einer Datei namens *kernel.bin* haben.
 
-Mehr Informationen was genau dieses Linkerscript genau macht und warum es notwendig bzw. sinnvoll ist findet ihr im Artikel [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript"). An dieser Stelle nur so viel:
+Mehr Informationen darüber, was genau dieses Linkerscript genau macht und warum es notwendig bzw. sinnvoll ist, findet ihr im Artikel [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript"). An dieser Stelle nur so viel:
 
-Mit "ENTRY(loader)" wird ld mitgeteilt, dass der Kernel bei der Funktion loader (siehe [Assemblerteil des Kernels](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB#kernel---assembler "C-Kernel mit GRUB")) beginnt. Dies wird in einem Datenfeld in der ELF-Header der "kernel.bin" festgehalten und von GRUB benötigt um zur richtigen Adresse zu springen.
+Mit „ENTRY(loader)“ wird ld mitgeteilt, dass der Kernel bei der Funktion loader (siehe [Assemblerteil des Kernels](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB#kernel---assembler "C-Kernel mit GRUB")) beginnt. Dies wird in einem Datenfeld in der ELF-Header der „kernel.bin“ festgehalten und von GRUB benötigt um zur richtigen Adresse zu springen.
 
-Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche welche man in Assembler mittels des ".section .text" beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei "kernel.bin" bzw. nach dem Laden im Speicher landen. Das ". = 0x00100000;" gibt an, dass die "kernel.bin" an Adresse 1MB gelinkt wird, d.h. sich nach dem Laden durch GRUB an Adresse 1MB und folgende im (physischen) Speicher befindet. 1MB ist als Adresse gewählt, da GRUB keine Dateien unter diese Adresse lädt, der Grund dafür ist das der Speicherbereich zwischen 0 und 1MB durch das BIOS, den Bootloader selbst und verschiedene Hardware belegt ist. Siehe dazu auch den Artikel über [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche").
+Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche, welche man in Assembler mittels des „.section .text“ beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei „kernel.bin“ bzw. nach dem Laden im Speicher landen. Das „. = 0x00100000;“ gibt an, dass die „kernel.bin“ an die Adresse 1 MB gelinkt wird, d. h. sich nach dem Laden durch GRUB an die Adresse 1 MB und folgende im (physischen) Speicher befindet. 1 MB ist als Adresse gewählt, da GRUB keine Dateien unter diese Adresse lädt, der Grund dafür ist, dass der Speicherbereich zwischen 0 und 1 MB durch das BIOS, den Bootloader selbst und verschiedene Hardware belegt ist. Siehe dazu auch den Artikel über [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche").
 
 ## GRUB-Image erstellen
 
@@ -144,7 +144,7 @@ Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann GRUB un
 
 ### Floppy-Image erstellen
 
-Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") benutzt werden, z.B [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass GRUB dieses Dateisystem unterstützt.
+Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") benutzt werden, z. B .[FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass GRUB dieses Dateisystem unterstützt.
 
 Mit *dd* erzeugen wir ein 1,44MB großes Floppy-Image:
 
@@ -200,11 +200,11 @@ Fertig ist unser GRUB-Image! Man kann es jetzt noch mit
 
     $ dd if=floppy.img of=/dev/fd0
 
-auf eine Floppydisk kopieren und damit booten. Wenn alles klappt seht ihr "Hello World" auf dem Bildschirm.
+auf eine Floppydisk kopieren und damit booten. Wenn alles klappt, seht ihr „Hello World“ auf dem Bildschirm.
 
 ## Vorschläge
 
-- Auf Dauer wird es anstregend die ganzen Befehl einzutippen. Am einfachsten ist es eine [Makefile](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Makefile") zu benutzen.
+- Auf Dauer wird es anstregend, die ganzen Befehle einzutippen. Am einfachsten ist es eine [Makefile](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Makefile") zu benutzen.
 - Um nicht immer neustarten zu müssen, kann man einen Emulator wie [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") oder [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") nehmen. Dann muss man das Image auch erst gar nicht auf Diskette kopieren.
 - Mit *color light-blue/black light-cyan/blue* in menu.lst kann man dem Bootloader Farbe verpassen.
 
@@ -223,6 +223,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6403/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 6403; parent 6397; 2009-11-29T11:25:33Z -->
+<!-- MediaWiki page 1604; revision 7676; parent 6403; 2010-05-09T09:46:48Z -->
