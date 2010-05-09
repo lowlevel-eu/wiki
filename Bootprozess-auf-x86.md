@@ -16,7 +16,7 @@ Ab hier ist es nicht mehr eindeutig, was passiert, generell kann man schon einen
 
 ## Der Bootloader
 
-Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhängige (bspw. NTLDR für Windows bis XP) und -unabhängige (bspw. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")). Diese laden möglicherweise noch Konfigurationsdateien nach, laden aber im Endeffekt alles, was weiter benötigt wird, um ein Betriebssystem zu starten (d.h. den Kernel und gegebenenfalls die ersten Treiber, je nach Architektur des Systems). Zu beachten ist hierbei, dass die meisten Bootloader auch die Möglichkeit besitzen, anderen Bootcode zu laden (sog. "chainloading", „Kettenladen“) – hierdurch können auch Systeme geladen werden, die von einem bestimmten Bootloader nicht unterstützt werden (indem einfach ein anderer geladen wird).
+Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhängige (bspw. NTLDR für Windows bis XP) und -unabhängige (bspw. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")). Diese laden möglicherweise noch Konfigurationsdateien nach, laden aber im Endeffekt alles, was weiter benötigt wird, um ein Betriebssystem zu starten (d.h. den Kernel und gegebenenfalls die ersten Treiber, je nach Architektur des Systems). Zu beachten ist hierbei, dass die meisten Bootloader auch die Möglichkeit besitzen, anderen Bootcode zu laden (sog. „chainloading“, „Kettenladen“) – hierdurch können auch Systeme geladen werden, die von einem bestimmten Bootloader nicht unterstützt werden (indem einfach ein anderer geladen wird).
 
 ## Alles weitere
 
@@ -32,6 +32,6 @@ Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7674/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
 
-<!-- MediaWiki page 1852; revision 7673; parent 7482; 2010-05-09T09:36:38Z -->
+<!-- MediaWiki page 1852; revision 7674; parent 7673; 2010-05-09T09:36:57Z -->
