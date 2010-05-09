@@ -12,11 +12,11 @@ Wenn das BIOS die Kontrolle erhält, wird (bei neueren zumindest) zuerst ein kle
 
 ## Der Bootsektor
 
-Ab hier ist es nicht mehr eindeutig, was passiert, generell kann man schon einen kleinen Kernelansatz mit FS-Treiber (für Realmode) in den Bootsektor einbauen und damit weiteren Code laden. Manchmal wird (im Rahmen eines Bootloaders) zuerst etwas mehr von der Platte gelesen, da sich vor der Partitionstabelle noch für Bootcode nutzbarer Platz befindet. Im Regelfall werden dann aber die Partitionen erkannter Festplatten auf ein "bootfähig"-Flag geprüft. Ist dieses gesetzt, wird weiterer Code aus den ersten Sektoren der Partition geladen, hier befindet sich zumeist ein spezieller Bootloader.
+Ab hier ist es nicht mehr eindeutig, was passiert, generell kann man schon einen kleinen Kernelansatz mit FS-Treiber (für Realmode) in den Bootsektor einbauen und damit weiteren Code laden. Manchmal wird (im Rahmen eines Bootloaders) zuerst etwas mehr von der Platte gelesen, da sich vor der Partitionstabelle noch für Bootcode nutzbarer Platz befindet. Im Regelfall werden dann aber die Partitionen erkannter Festplatten auf ein „bootfähig“-Flag geprüft. Ist dieses gesetzt, wird weiterer Code aus den ersten Sektoren der Partition geladen, hier befindet sich zumeist ein spezieller Bootloader.
 
 ## Der Bootloader
 
-Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhängige (bspw. NTLDR für Windows bis XP) und -unabhängige (bspw. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")). Diese laden möglicherweise noch Konfigurationsdateien nach, laden aber im Endeffekt alles, was weiter benötigt wird, um ein Betriebssystem zu starten (d.h. den Kernel und gegebenenfalls die ersten Treiber, je nach Architektur des Systems). Zu beachten ist hierbei, dass die meisten Bootloader auch die Möglichkeit besitzen, anderen Bootcode zu laden (sog. "chainloading", "Kettenladen") – hierdurch können auch Systeme geladen werden, die von einem bestimmten Bootloader nicht unterstützt werden (indem einfach ein anderer geladen wird).
+Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhängige (bspw. NTLDR für Windows bis XP) und -unabhängige (bspw. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")). Diese laden möglicherweise noch Konfigurationsdateien nach, laden aber im Endeffekt alles, was weiter benötigt wird, um ein Betriebssystem zu starten (d.h. den Kernel und gegebenenfalls die ersten Treiber, je nach Architektur des Systems). Zu beachten ist hierbei, dass die meisten Bootloader auch die Möglichkeit besitzen, anderen Bootcode zu laden (sog. "chainloading", „Kettenladen“) – hierdurch können auch Systeme geladen werden, die von einem bestimmten Bootloader nicht unterstützt werden (indem einfach ein anderer geladen wird).
 
 ## Alles weitere
 
@@ -26,12 +26,12 @@ Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zu
 
 ## Siehe auch
 
-- [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1"), Abschnitte "Etwas Systemtheorie" und folgende.
+- [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1"), Abschnitte „Etwas Systemtheorie“ und folgende.
 - [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor")
 - [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
 
-<!-- MediaWiki page 1852; revision 7482; parent 7472; 2010-04-01T10:35:09Z -->
+<!-- MediaWiki page 1852; revision 7673; parent 7482; 2010-05-09T09:36:38Z -->
