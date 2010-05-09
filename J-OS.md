@@ -1,49 +1,48 @@
 # J-OS
 
 | J-OS |  |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | [Jonebohne](https://lowlevel-eu.github.io/wiki/pages/2138/index.html "Benutzer:Jonebohne") |
-| Akt. Version: | Pre-Alpha 0.0.1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) |
+| Entwickler: | [jonebohne](https://lowlevel-eu.github.io/wiki/pages/2138/index.html "Benutzer:Jonebohne") |
+| Akt. Version: | Noch keine (siehe unten) |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/de/) |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | Nativ(geplant) |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") (geplant) |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC")(geplant) |
+| API: | [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")-Interface (geplant) |
+| Binärformat: | (noch keins) |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Keine |
 | Homepage |  |
 
-(noch keine)
+Noch keine (siehe unten)
 
 J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe.
 
-J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben (teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader. Es läuft vollständig im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Geplant ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel"), eine native API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Festplatten/Disketten/CD-Laufwerke, Netzwerktreiber und vieles mehr. Es kann also fast nichts ;-)
+J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben (teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader. Es läuft vollständig im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Geplant ist eine API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Festplatten/Disketten/CD-Laufwerke, Netzwerkkarten und vieles mehr.
 
-  
+**Die Versionsnummern wurden zurückgesetzt und werden erst wieder eingeführt, wenn J-OS in einer testbaren Version vorliegt. Dann wird auch der erste Download online gestellt**
 
 ## Changelog
 
-#### Version 0.0.1 - Buchstabensalat
+#### Version 0.0.1 (wird geschrieben)
 
-In Version 0.0.1 sind folgende Features implementiert:
+In der Version 0.0.1 werden (vorraussichtlich) folgende Features implementiert sein:
 
-- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") (verschiedene Farben)
-- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT")
-- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") werden behandelt
+- Einrichtung einer [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") und einer [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")
+- Behandlung von [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") und [ISRs](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR")
+- [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")-Interface
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") in Ring 3
-- [Physikale Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung")
-
-#### Version 0.0.2 (geplant)
-
-In Version 0.0.2 soll folgendes stecken:
-
-- Reboot-Funktion
-- Angepasste Erstellung von Tasks
+- [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
+- Eine kleine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") (momentan eher eine *sehr* kleine Shell)
+- [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") über den [COM](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "COM")-Port
+- stdlibc (momentan nur teilweise)
+- [Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur")-[Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
+- Treiber für [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") und evtl. Netzwerkkarten
+- Vielleicht auch mehr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 7632; parent 7122; 2010-05-03T11:50:53Z -->
+<!-- MediaWiki page 1828; revision 7679; parent 7632; 2010-05-09T11:09:20Z -->
