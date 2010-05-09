@@ -19,7 +19,7 @@
 [Forum](http://forum.paloxena.bplaced.net/)
 
   
-Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die "Grüne Stinkwanze" ("Palomena"), ein "Bug" also. Und das wird das OS wohl vermutlich ausmachen.
+Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die „Grüne Stinkwanze“ („Palomena“), ein „Bug“ also. Und das wird das OS wohl vermutlich ausmachen.
 
 ## paloxena1
 
@@ -97,6 +97,6 @@ Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7678/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 7079; parent 7058; 2010-02-15T16:38:43Z -->
+<!-- MediaWiki page 2045; revision 7678; parent 7079; 2010-05-09T11:05:04Z -->
