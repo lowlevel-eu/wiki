@@ -72,9 +72,9 @@ Einzelschritte ausführen lassen.
 
 ## Sonstiges
 
-- Mit "quit" wird der Debugger beendet.
-- Mit "help" kann man sich die Liste der verfügbaren Befehle ausgeben.
-- Mit "show int" werden Interruptaufrufe ausgegeben.
+- Mit „quit“ wird der Debugger beendet.
+- Mit „help“ kann man sich die Liste der verfügbaren Befehle ausgeben.
+- Mit „show int“ werden Interruptaufrufe ausgegeben.
 
 ## Weblinks
 
@@ -82,6 +82,6 @@ Einzelschritte ausführen lassen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6909/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2163/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2163/index.html)
 
-<!-- MediaWiki page 2163; revision 6909; parent 6898; 2010-01-16T21:01:52Z -->
+<!-- MediaWiki page 2163; revision 7672; parent 6909; 2010-05-09T09:35:06Z -->
