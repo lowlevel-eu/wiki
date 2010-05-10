@@ -20,11 +20,11 @@ In Planung
   
 AiCOS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches ganz neue Wege gehen wird, vor allem im Kerneldesign. Warum also aus einer blöden und verrückten Idee nicht ein vollwertiges OS machen?
 
-AiCOS Einsatzbereicht wird anfangs im Netzwerkbereich liegen, unter anderem aber auch als Storage-System. Auch wenn AiCOS auf Single-Core-Plattformen laufen wird, wird es seine Stärken wohl eher auf Multiprozessor bzw. Multicore-System zeigen können. Wichtigstes Ziel dabei ist zum Einem die Performance (ideal sogar Echtzeit) und zum Anderem die Stabilität (Redundanz bis auf CPU-Ebene).
+AiCOS Einsatzbereich wird anfangs im Netzwerkbereich liegen, unter anderem aber auch als Storage-System. Auch wenn AiCOS auf Single-Core-Plattformen laufen wird, wird es seine Stärken wohl eher auf Multiprozessor bzw. Multicore-System zeigen können. Wichtigstes Ziel ist dabei zum Einem die Performance (ideal sogar Echtzeit) und zum Anderem die Stabilität (Redundanz bis auf CPU-Ebene).
 
-Dieses ehrgeizige Ziel von AiCOS soll frisches Blut in die Computertechnik bringen und hoffentlich auch andere zu einem solchen OS-Design motivieren. Denn noch ist AiCOS ein ClosedSource-Projekt.
+Dieses ehrgeizige Ziel von AiCOS soll frischen Wind in die Computertechnik bringen und hoffentlich auch andere zu einem solchen OS-Design motivieren und gegebenenfalls auch animieren. Denn noch ist AiCOS ein ClosedSource-Projekt.
 
-Wen wunderts also, dass AiCOS Wurzel weder in der Linux/Unix-Welt noch in der Windows-Welt liegen, sondern viel eher in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
+Wen wundert es also, dass die Wurzeln von AiCOS weder in der Linux/Unix-Welt noch in der Windows-Welt liegen, sondern viel eher in Microsofts [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
 
   
 
@@ -34,25 +34,23 @@ Wen wunderts also, dass AiCOS Wurzel weder in der Linux/Unix-Welt noch in der Wi
 
 Ist der Name des OS nur ein fantasievolle Bezeichnung oder steht **AiCOS** für eine Abkürzung? Wenn ja, was verbirgt sich dahinter?
 
-AiCOS ist in der Tat eine Abkürzung und steht für ***A**syncronous **i**nter**C**onnected **O**perating **S**ystem*. Sollte sich die Entwicklung dieses OS meinen Erwartungen entsprechen, könnte diese AiCOS in einigen Jahren auch für ***A**rtificial **i**ntelligence **C**ontrolled **O**perating **S**ystem* stehen. Klingt nach **SKYNET**, könnte man denken, wird aber keinesfalls beabsichtig.
+AiCOS ist in der Tat eine Abkürzung und steht für ***A**syncronous **i**nter**C**onnected **O**perating **S**ystem*. Sollte sich die Entwicklung dieses OS meinen Erwartungen entsprechen, könnte AiCOS in einigen Jahren auch für ***A**rtificial **i**ntelligence **C**ontrolled **O**perating **S**ystem* stehen. Klingt nach **SKYNET**, könnte man denken, wird aber keinesfalls beabsichtig.
 
 ### Entwickler & Lizenz
 
-Derzeit unterliegt die komplette Entwicklung von AiCOS einer einzigen Persion, nämlich mich, [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi"). Dies soll aber nicht für immer bleiben. Wenn wichtigsten Konzepte des OS (überwiegend Kernel) erstellt und ggf. auch schon umgesetzt wurden, werde ich meine Türe öffnen und andere Begeisterte mit in dieses Boot nehmen.
-
-Steht noch nicht fest. Derzeit ClosedSource, soll aber später, wenn ich andere mitwirken lassen, OpenSource werden.
+Derzeit unterliegt die komplette Entwicklung von AiCOS einer einzigen Persion, nämlich mein Wenigkeit, [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi"). Dies soll aber nicht für immer so bleiben. Wenn die wichtigsten Konzepte des OS (überwiegend Kernel) erstellt und ggf. auch schon umgesetzt wurden, werde ich meine Türe öffnen und andere Begeisterte mit in dieses Boot nehmen.
 
 ### Plattform
 
-Erstmal nur aus x86-Reihe für 32/64-Bit Plattformen.
+Erstmal nur aus x86-Reihe für 32/64-Bit Plattformen ab 586 voraussichtlich.
 
 ### Kernel
 
-Beim Kernel werden ganz neue Wege gegangen. Monolithischer Kernel sowohl auch Mikrokernel mögen ihre Vor- und Nachteile haben. Klar, es gäbe noch die Hybriden. Aber die Entwicklung der Prozessoren geht ja auch weiter, Multicores haben die Zukunft. Ideal sind Multicore-CPUs, bei denen auf jedem Kern ein andere Kernel laufen könnte. Tile-Gx (100 Kerne) von Tileras geht da schon in diese Richtung. Doch selbst auf heutigen PC, in erster Linie Gaming-PC, gibs schon verschiedene Prozessoren, CPU, GPU und auch schon PPU.
+Beim Kernel werden ganz neue Wege gegangen. Der monolithischer Kernel als auch die Mikrokernel mögen ihre Vor- und Nachteile haben. Klar, es gäbe noch die Hybriden. Aber die Entwicklung der Prozessoren geht ja auch weiter, Multicores und Co's gehört die Zukunft. Ideal sind Multicore-CPUs, bei denen auf jedem Kern ein andere Kernel laufen könnte. Tile-Gx (100 Kerne) von Tileras geht da schon in diese Richtung. Doch selbst auf heutigen PC, in erster Linie Gaming-PC, gibs schon verschiedene Prozessoren, CPU, GPU und auch schon PPU.
 
 ### Sprachen
 
-Hardware nahe Programmteile wie Bootloader (später mehr dazu) oder Treiber werden in Assembler (Intel-Syntax) vorliegen. Der Kernel selbst wird überwiegend in C geschrieben sein. Ob C++ auch verwendet wird, wird jedoch nicht ausgeschlossen. Programme im Userspace überwiegend in C++. Ob andere Sprachen Einzug erhalten, hängt davon ab, ob entsprechende Compiler portiert werden.
+Hardware nahe Programmteile wie Bootloader (später mehr dazu) oder Treiber werden in Assembler (Intel-Syntax) vorliegen. Der Kernel selbst wird überwiegend in C geschrieben sein, bis auf den CPU-Kernel. Ob C++ auch verwendet wird, wird jedoch nicht ausgeschlossen. Programme im Userspace werden überwiegend in C++ geschrieben. Ob andere Sprachen Einzug erhalten, hängt davon ab, ob entsprechende Compiler portiert werden.
 
 ### API
 
@@ -64,7 +62,7 @@ Vorerst BIN, ggf. auch EXE. Ob ELF unterstützt wird, ist eine Frage der Impleme
 
 ### IPC-Methode
 
-Den einzigen gemeinsamer Nenner, den ich finden konnte und auch bei der derzeitigen CPU-Entwicklung für zukunftsicher halte, sind Channels. Channels sollen später auch die Grundlage eines eigenen Netzwerkprotokolls werden, welches anfangs eher über IP zu einer anderen Maschine mit AiCOS getunnelt wird.
+Den einzigen gemeinsamer Nenner, den ich finden konnte und den ich auch bei der derzeitigen CPU-Entwicklung für zukunftsicher halte, sind Channels. Channels sollen später auch die Grundlage eines eigenen Netzwerkprotokolls werden, welches anfangs eher über IP zu einer anderen Maschine mit AiCOS getunnelt wird.
 
   
 
@@ -94,8 +92,8 @@ Ich wurde gefragt, warum ich zum Booten meines OS denn nicht GRUB nehme. Nun, er
 ### Bootsektor
 
 - Universeller Aufbau, sodass nur die Routinen für das jeweiliges Dateisystem ausgetauscht werden müssen.
-- Es wird nicht versucht, den gesamten Code zum vollständigen Laden des Bootloaders in den Bootsektor zu quetschen.
-- Bootcode wird es anfangs für folgende Dateisystem geben: FAT12, FAT16, FAT32, ROSF, ISO9660 und eventuell auch NTFS.
+- Es wird anfangs nicht versucht, den gesamten Code zum vollständigen Laden des Bootloaders in den Bootsektor zu quetschen. Entsprechende Optimierungen folgen erst später.
+- Bootcode wird es anfangs für folgende Dateisysteme geben: FAT12, FAT16, FAT32, ROSF, ISO9660 und eventuell auch NTFS.
 - Zukünftige Festplatten mit 4k-Sektoren werden ebenfalls berücksichtigt.
 
 ### Bootloader
@@ -115,7 +113,7 @@ Ich wurde gefragt, warum ich zum Booten meines OS denn nicht GRUB nehme. Nun, er
 
 - MKS = Modulares Kernel System, unterteilt in:
   - Managemant-Kernel, verwaltet RAM und koordiniert die anderen Kernels für CPU, IO und Subsysteme.
-  - CPU-Kernel, jeder Kern hat seinen eigenen Mikrokernel.
+  - CPU-Kernel, jeder Kern hat seinen eigenen Mikrokernel. Der für den BSP ist bereits im Bootloader enthalten.
   - IO-Kernel.
   - Subsystem-Kernel, für weitere Treiber, Filter und und und ...
 - Soll in sich redundant werden, erfordert aber mind. 2 CPUs bzw. 2 CPU-Kerne.
@@ -180,23 +178,23 @@ Gezählt wurde mit dem Java-Programm: **[Lines Of Code Wichtel](http://www.andre
 
 **Fertig:**
 
-- *Noch nicht wirklich etwas, nur Baustelle =)*
+- Bootsektor für FAT12
+- Bootsektor für FAT16
 
   
 **In Arbeit:**
 
-- Bootsektor für FAT12
-- Dummy-Bootloader (einfach nur eine 256 KiB große Datei mit Pseudodaten)
+- Bootloader (Assembler-Part)
 - "Tutorial: Eigener Bootloader" für Lowlevel
 
   
 **Geplant:**
 
-- Bootsektor für FAT16
 - Bootsektor für FAT32
 - Bootsektor für ROFS (Read Only File System - Eigenentwicklung
 - Bootsektor für CD
 - Bootsektor für NTFS
+- Bootloader (CPU-Kernel)
 
   
 
@@ -238,6 +236,6 @@ Ein vollwertiges OS auf die Beine zu stellen, welches sich auch im Netzwerkberei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1766/index.html)
 
-<!-- MediaWiki page 1766; revision 7456; parent 7401; 2010-03-30T16:01:06Z -->
+<!-- MediaWiki page 1766; revision 7681; parent 7456; 2010-05-10T16:04:06Z -->
