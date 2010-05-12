@@ -8,7 +8,7 @@ Das ist die primitivste Methode der Fehlersuche und sie wird meist nur am Anfang
 
 ## print(f)/cout
 
-Diese Methode ist schon etwas praktischer als die letzte. Debug-Ausgaben werden eigentlich in jedem Stadium der Entwicklung immer wieder gebraucht. Man platziert an den relevanten Stellen im Code [Textausgaben](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"), um beispielsweise zu sehen, welche Funktion aufgerufen wurde oder wie oft eine Schleife durchlaufen wird.
+Diese Methode ist schon etwas praktischer als die vorangegangene. Debug-Ausgaben werden eigentlich in jedem Stadium der Entwicklung immer wieder gebraucht. Man platziert an den relevanten Stellen im Code [Textausgaben](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"), um beispielsweise zu sehen, welche Funktion aufgerufen wurde oder wie oft eine Schleife durchlaufen wird.
 
 ## Serielle Schnittstelle
 
@@ -46,6 +46,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 7675; parent 6897; 2010-05-09T09:40:31Z -->
+<!-- MediaWiki page 1544; revision 7686; parent 7675; 2010-05-12T04:56:34Z -->
