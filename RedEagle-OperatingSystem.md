@@ -23,12 +23,35 @@ Ziel ist es **nicht** ein sicheres und stabiles System zu schreiben. Diese Punkt
 
 ## Allgemeine Features
 
+- Monolithisch
 - Arbeitet im PM
 - Paging
 - Multitasking
 - Singeluser-system
 - Pipes
 - alle Programme laufen in ring0
+
+### GUI
+
+**noch in einem sehr frühen Entwicklungsstadium**  
+Das GUI läuft im textmode. Mithilfe von ASCII-Zeichen werden Fenster gezeichnet welche wie üblich verschoben, in ihrer Größe verändert, oder maximiert werden können.  
+Das GUI wird vollständig über die Tastatur bedient.
+
+JEDES Fenster besitzt 3 GUI-Elemente:
+
+- Eine Menüleiste
+- Eine F-Tasten-Leiste (im Prinzip auch eine 2. Menüleiste)
+- Ein Textfeld
+
+Dabei soll das Textfeld verschiedene Modi bereitstellen:
+
+- Command-Mode: Verhält sich wie eine Konsole
+- Text-Mode: Verhält sich wie ein übliches edit-control
+- Interactiv-Mode: Verhält sich etwa wie ein billiger webbrowser
+
+### Pipes
+
+### Prozesse
 
 ## Nennenswerte Besonderheiten
 
@@ -73,6 +96,6 @@ Da das Dateisystem speziell auf mein Betriebssystem zugeschnitten ist werden kei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 7649; parent 7647; 2010-05-03T14:54:12Z -->
+<!-- MediaWiki page 2232; revision 7687; parent 7649; 2010-05-12T11:10:36Z -->
