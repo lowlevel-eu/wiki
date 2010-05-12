@@ -33,7 +33,8 @@ Ziel ist es **nicht** ein sicheres und stabiles System zu schreiben. Diese Punkt
 
 ### GUI
 
-**noch in einem sehr frühen Entwicklungsstadium**  
+**Status:** Noch in einem sehr frühen Entwicklungsstadium
+
 Das GUI läuft im textmode. Mithilfe von ASCII-Zeichen werden Fenster gezeichnet welche wie üblich verschoben, in ihrer Größe verändert, oder maximiert werden können.  
 Das GUI wird vollständig über die Tastatur bedient.
 
@@ -51,9 +52,32 @@ Dabei soll das Textfeld verschiedene Modi bereitstellen:
 
 ### Pipes
 
-### Prozesse
+**Status:** Bereits vereinzelt erfolgreich im Einsatz, aber noch nicht 100% ausgereift.
 
-## Nennenswerte Besonderheiten
+Jedes Programm, jeder Thread hat 4.294.967.294 Ports. Diese Ports können unter den folgenden Bedingungen miteinander verknüpft werden:
+
+- Es können nur 2 Ports verknüpft werden
+- Einer muss lesend sein, der andere schreibend
+
+Werden 2 Ports verknüpft die noch nicht geöffnet wurden (wo also unklar ist, welcher lesender und welcher schreibender Natur ist) wird der 1. als schreibend, der 2. lesend geöffnet. \<c\> PID pid = CreateProcess(...); // Prozess erstellen
+
+open(2, true); //Port 2 zum schreiben öffnen link(MyPID(), 2, pid, 1); //Port 2 mit Port 1 des neuen Prozesses verbinden \</c\>
+
+### Programme
+
+**Status:** Funktionsfähig, aber mangels Bibliotheken/Shell im Einsatz nicht allzu mächtig.
+
+Programme liegen im [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-format vor. Die API ist über *int 0xFF* anwendbar.  
+Programme können in C und Assembly geschrieben sein. Für C-Programme gib es eine entsprechende API-Bibliothek.  
+Bislang gibt es abgesehen von der API keine weiteren Bibliotheken.
+
+Alle Programme laufen in ring0, ihnen stehen also alle Befehle der CPU zur Verfügung und können beliebig auf Hardware zugreifen. So können Programme per *cli* auch den Taskswitch unterdrücken oder ggf die gesamte Kontrolle übernehmen. (REOS könnte also auch als Bootmanager verwendet werden)  
+Da es sich um ein single-user-system handelt gibt es auch keine Einschränkung im Zugriff aus Dateien (währe bei ring0-programmen auch kein wirkliches Hindernis).
+
+Greift ein Programm schreibend auf eine schreibgeschützte Datei zu, so fragt der Kernel den User, ob dieses Programm das trotz verbot darf oder nicht. - Ein Schreibschutz ist kein Verbot, sondern vielmehr die Aufforderung sich beim User zu melden bevor etwas verändert wird.  
+*(bislang noch nicht implementiert)*
+
+## sonstige Nennenswerte Besonderheiten
 
 Ich lege viel wert darauf wirklich alles selber zu schreiben. Ich möchte nicht nur ein Kernel schreiben sondern ein Betriebssystem :)  
 Ich werde wohl bei einigen Tools wie einem Assembler ausnahmen machen, aber die Basis soll von Grund auf neu sein.  
@@ -96,6 +120,6 @@ Da das Dateisystem speziell auf mein Betriebssystem zugeschnitten ist werden kei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 7687; parent 7649; 2010-05-12T11:10:36Z -->
+<!-- MediaWiki page 2232; revision 7688; parent 7687; 2010-05-12T13:58:42Z -->
