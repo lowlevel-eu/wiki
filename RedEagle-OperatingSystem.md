@@ -21,6 +21,15 @@ RedEagle-OperatingSystem ist ein 32Bit OS dessen Hauptziel darin besteht einfach
 
 Ziel ist es **nicht** ein sicheres und stabiles System zu schreiben. Diese Punkte werden frühstens in der Nächsten Generation berücksichtigt :)
 
+## Bestandteile des Betriebssystems
+
+Das RedEagle-OperatingSystem besteht (bisher) aus den folgenden Komponenten
+
+- **reosboot**: Der Bootloader des Systems
+- **reos**: Der Kernel des Systems
+- **FT3fs**: Für das Betriebssystem entwickeltes Dateisystem
+- **Bifröst**: Schnittstelle zur Außenwelt per rs232
+
 ## Allgemeine Features
 
 - Monolithisch
@@ -118,8 +127,30 @@ Das Dateisystem ist in die folgenden Nodes zerlegt:
 Die Verteilung der Dateien auf dem Datenträger wird durch eine Liste von Sektor-nummern in der Datei-spezifischen Datenstruktur der Nodes beschrieben.  
 Da das Dateisystem speziell auf mein Betriebssystem zugeschnitten ist werden keine unix-permissions unterstützt.
 
+### Bifröst
+
+Bifröst bezeichnet einen Server und ein Übertragungsprotokoll dessen Aufgabe es ist, den Kernel zu unterstützen, bzw vom kernel stammende Informationen auszuwerten.  
+Der bootloader und später der kernel verbinden sich per rs232 mit dem auf einem Linux-rechner laufenden Server.
+
+Der Server bietet derzeit folgende Features:
+
+- Up/Download von Dateien
+- Sektor-weiser lese/schreibzugriff auf image-files
+- empfangen & Anzeigen von log-informationen
+
+#### kernel-logs
+
+Der Kernel schickt beständig Informationen über die rs232. Dafür verwendet er 3 verschiedene Übertragungsprotokolle:
+
+1.  Bifröst
+2.  raw ascii
+3.  ansi
+
+Durch ein ping wird ermittelt ob der Bifröst-Server erreichbar ist (s.o.) - ist dies nicht der Fall werden die logs ASCII-Codiert übertragen. Das hat den Vorteil dass auf einer virtuellen Maschiene die log-daten einfach in ein Textfile geschrieben werden können um sie später auszuwerten.  
+Im ANSI-Modus werden die Daten mit ANSI-Escape-Sequenzen coloriert. Somit kann man auch ohne Bifröst-Server die Daten mit einem 2. PC in Echtzeit farbig beobachten.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7689/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 7688; parent 7687; 2010-05-12T13:58:42Z -->
+<!-- MediaWiki page 2232; revision 7689; parent 7688; 2010-05-12T14:14:03Z -->
