@@ -49,7 +49,7 @@ Aus dem Regen Buffer liest die Grafikkarte die Zeichencodes sowie die Attribute 
 
 In der 80x25 Auflösung können 80\*25 Zeichen dargestellt werden, von denen jedes 2 Bytes belegt. Das heißt es werden 80\*25\*2 = 4000 Bytes verwendet. In dem Regen Buffer wären also für insgesamt 8 Bildschirmseiten (= 32 KiB/4000) Platz. Standardmäßig werden (nach dem Systemstart) die ersten 4000 Bytes an Adresse 0xB8000 zur Darstellung verwendet. Man kann allerdings dieses Fenster verschieben indem man den Grafikadapter anweist eine andere Startadresse zu nehmen. (Siehe [Interne Register](#interne-register) weiter unten.)
 
-Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfache von 0x4000 (4 KiB) sind. Allerdings ist man weder daran gebunden, noch muss man dieses Konzept von 8 getrennten Bildschirmseiten beibehalten (sofern man das BIOS vollständig umgeht). Man kann z.B. durch Verschieben der Startadresse in 80er-Schritten ein Hardware Scrolling realisieren.
+Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfache von 0x1000 (4 KiB) sind. Allerdings ist man weder daran gebunden, noch muss man dieses Konzept von 8 getrennten Bildschirmseiten beibehalten (sofern man das BIOS vollständig umgeht). Man kann z.B. durch Verschieben der Startadresse in 80er-Schritten ein Hardware Scrolling realisieren.
 
 ## I/O Ports
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 6451; parent 6450; 2009-12-03T01:37:17Z -->
+<!-- MediaWiki page 1890; revision 7692; parent 6451; 2010-05-14T19:20:52Z -->
