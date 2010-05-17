@@ -59,7 +59,7 @@ Nachteile:
 - bei statischer Prioritätsvergabe evt ´Aushungern´ von Prozessen
 - Vergabe der Prioritäten nicht einfach
 
-# pr#emptiv (preemptive)
+# präemptiv (preemptive)
 
 OS holt sich Kontrolle selbst zurück (Interrupt)
 
@@ -97,6 +97,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 7696; parent 7695; 2010-05-17T11:50:50Z -->
+<!-- MediaWiki page 1711; revision 7697; parent 7696; 2010-05-17T11:51:09Z -->
