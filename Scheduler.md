@@ -6,7 +6,7 @@ Der Scheduler hat die Aufgabe festzustellen welcher Prozess als nächstes CPU-Ze
 
 # non-preemptive
 
-Prozesse geben Kontrolle freiwillig ab.
+Prozesse geben Kontrolle freiwillig ab. Non-preemptive Scheduling-Strategien sind für Dialogbetrieb weniger und für RT-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Deshalb wird bei preemptive Scheduling-Strategien das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch routinemäßig statt.
 
 ## FCFS - First Come First Served
 
@@ -27,21 +27,65 @@ Nachteile:
 
 - kurz laufende Prozesse müssen u.U. sehr lange warten, daher für Dialogsysteme nicht geeignet.
 
+## SJF - Smallest Job First
+
+Prozess mit küzester Bedienzeit kommt zuerst. Bsp:
+
+    Bedienzeiten: P1=22, P2=2, P3=3, P4=5, P5=8
+    Antwortzeiten: R1=40, R2=2, R3=5, R4=10, R5=18
+    durchschnittliche Antwortzeit: 15
+
+Vorteile:
+
+- garantiert minimale durchschnittliche Antwortzeit
+- kurz laufende Prozesse werden nicht benachteiligt
+- Algorithmus relativ leicht zu implementieren, wenn die Dauer des nächsten CPU burst bekannt ist
+
+Nachteile:
+
+- lang laufene Prozesse müssen evt sehr lange warten
+- größerer Verwaltungsaufwand
+
+## Priority scheduling
+
+Reihenfolge nach Priorität der Prozesse. Prioritäten können statisch oder dynamisch vergeben werden.
+
+Vorteile:
+
+- dringende Aufgaben werden am schnellsten erledigt
+
+Nachteile:
+
+- bei statischer Prioritätsvergabe evt ´Aushungern´ von Prozessen
+- Vergabe der Prioritäten nicht einfach
+
 # preemptive
 
 OS holt sich Kontrolle selbst zurück (Interrupt)
 
 ## Round Robin
 
-Alle Prozesse werden gleichberechtigt. Ein Prozess kommt nach dem Anderen an die Reihe. Jeder Prozess wird nach einer festen Zeit gestoppt und der nächste gestartet.
+Alle Prozesse werden gleichberechtigt. Ein Prozess kommt nach dem Anderen an die Reihe. Jeder Prozess wird nach einer festen Zeit gestoppt und der nächste gestartet. Bsp
+
+    Bedienzeiten: P1=22, P2=2, P3=3, P4=5, P5=8
+    Zeitscheibe: 3 Zeiteinheiten
+    Antwortzeiten: R1=40, R2=5, R3=8, R4=19, R5=27
+    durchschnittliche Antwortzeit: 19.8
+
+Vorteile:
+
+- Fairness, jeder Prozess bekommt ´seinen´ Anteil an dem Prozessor
+- kurz laufende Prozesse werden nicht benachteiligt
+- einfach zu implementieren
+- wenig Verwaltungsaufwand
+
+Nachteile:
+
+- langlaufende Prozesse müssen bis zu ihrem Ende lange warten
 
 ## Round Robin (mit Prioritäten)
 
 Jeder Prozess bekommt zu Anfang nach Priorität eine gewisse Zeit (Ausführzeit) zugeordnet. Dabei sollte die Zeit gleich oder ein Vielfaches der Scheduler-Frequenz (Die Frequenz in der der Scheduler aufgerufen wird) sein. Die Prozesse werden wie beim "normalen" [Round Robin](#round-robin) nacheinander ausgeführt. Diesmal wird aber zum nächsten Prozess erst gewechselt, wenn beim vorherigen die Ausführzeit abgelaufen ist.
-
-## Kürzester als Nächstes
-
-Bei diesem Scheduling-System wird probiert die voraussichtliche absolute Ausführzeit eines Prozesses zu ermitteln und danach bestimmt, welche Priorität dieser Prozess hat. Kurze Prozesse bekommen dabei eine höhere Priorität, da sie damit schnell fertig sind und die CPU somit schneller wieder entlasten. Nachteil: Lange Prozesse dauern noch länger als üblich.
 
 ## Scheduling mit "Prioritätswarteschlangen"
 
@@ -53,6 +97,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7694/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 7694; parent 7167; 2010-05-17T00:03:41Z -->
+<!-- MediaWiki page 1711; revision 7695; parent 7694; 2010-05-17T00:25:25Z -->
