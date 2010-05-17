@@ -4,9 +4,9 @@ Der Scheduler hat die Aufgabe festzustellen welcher Prozess als nächstes CPU-Ze
 
   
 
-# non-preemptive
+# kooperativ (non-preemptive)
 
-Prozesse geben Kontrolle freiwillig ab. Non-preemptive Scheduling-Strategien sind für Dialogbetrieb weniger und für RT-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Deshalb wird bei preemptive Scheduling-Strategien das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch routinemäßig statt.
+Prozesse geben Kontrolle freiwillig ab. Kooperierened Scheduling-Strategien sind für Dialogbetrieb weniger und für Echtzeit-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Deshalb wird bei päemptiven Scheduling-Strategien das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch routinemäßig statt.
 
 ## FCFS - First Come First Served
 
@@ -59,7 +59,7 @@ Nachteile:
 - bei statischer Prioritätsvergabe evt ´Aushungern´ von Prozessen
 - Vergabe der Prioritäten nicht einfach
 
-# preemptive
+# pr#emptiv (preemptive)
 
 OS holt sich Kontrolle selbst zurück (Interrupt)
 
@@ -97,6 +97,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 7695; parent 7694; 2010-05-17T00:25:25Z -->
+<!-- MediaWiki page 1711; revision 7696; parent 7695; 2010-05-17T11:50:50Z -->
