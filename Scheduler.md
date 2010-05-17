@@ -2,6 +2,35 @@
 
 Der Scheduler hat die Aufgabe festzustellen welcher Prozess als nächstes CPU-Zeit zugeteilt bekommt. Dabei gibt es mehr oder weniger komplizierte Systeme. Das einfachste System ist [Round Robin](#round-robin). Dabei bekommt ein Prozess nach dem anderen CPU-Zeit zugeteilt. Man kann aber auch Prioritäten setzen und damit Prozesse, die wichtiger sind mehr CPU-Zeit zuteilen.
 
+  
+
+# non-preemptive
+
+Prozesse geben Kontrolle freiwillig ab.
+
+## FCFS - First Come First Served
+
+Prozesse werden in der Reihenfolge in der sie erstellt werden abgearbeitet. Erst wenn der erste beendet ist kommt der nächste an die Reihe. Bsp:
+
+    P1, P2, P3, P4 und P5 werden in dieser Reihenfolge gestartet.
+    Bedienzeiten: P1=22, P2=2, P3=3, P4=5, P5=8
+    Antwortzeiten: R1=22, R2=22+2=24, R3=24+3=27, R4=27+5=32, R5=32+8=40
+    durchschnittliche Antwortzeit: 29
+
+Vorteile:
+
+- einfach zu implementieren
+- geringer Verwaltungsaufwand
+- Fairness, alle Prozesse erreichen der Reihe nach CPU)
+
+Nachteile:
+
+- kurz laufende Prozesse müssen u.U. sehr lange warten, daher für Dialogsysteme nicht geeignet.
+
+# preemptive
+
+OS holt sich Kontrolle selbst zurück (Interrupt)
+
 ## Round Robin
 
 Alle Prozesse werden gleichberechtigt. Ein Prozess kommt nach dem Anderen an die Reihe. Jeder Prozess wird nach einer festen Zeit gestoppt und der nächste gestartet.
@@ -24,6 +53,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7167/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7694/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 7167; parent 6059; 2010-02-25T14:32:44Z -->
+<!-- MediaWiki page 1711; revision 7694; parent 7167; 2010-05-17T00:03:41Z -->
