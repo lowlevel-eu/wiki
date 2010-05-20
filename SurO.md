@@ -17,7 +17,7 @@
 
 (noch keine)
 
-SurO ist ein HobbyOS, welches durch einen Programmierwettstreit entstanden ist, Version 0.1 war noch eine in QBasic geschriebene DOS-GUI.
+SurO ist ein HobbyOS, welches durch einen Programmierwettstreit entstanden ist. Version 0.1 war noch eine in QBasic geschriebene DOS-GUI. Version 3,5b ist momentan in Flat-Assembler geschrieben, soll aber dann in Version 3,5c einen eigenen (Meta-)Assemblerdialekt benutzen.
 
 ## Entwickler
 
@@ -40,6 +40,6 @@ Aktuell wird daran gearbeitet, SMP zu integrieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7701/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 7701; parent 7700; 2010-05-20T14:17:39Z -->
+<!-- MediaWiki page 2233; revision 7702; parent 7701; 2010-05-20T14:20:35Z -->
