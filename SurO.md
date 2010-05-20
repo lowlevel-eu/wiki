@@ -36,10 +36,10 @@ Im Moment sind die folgenden Features implementiert:
 
 ## ToDo
 
-Aktuell wird daran gearbeitet SMP zu integrieren.
+Aktuell wird daran gearbeitet, SMP zu integrieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 7698; parent 0; 2010-05-20T14:09:29Z -->
+<!-- MediaWiki page 2233; revision 7699; parent 7698; 2010-05-20T14:10:37Z -->
