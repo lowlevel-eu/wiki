@@ -31,7 +31,7 @@ Im Moment sind die folgenden Features implementiert:
 - FAT32 Dateisystem
 - Multitasking
 - Editor (Angucken und Editieren des Arbeitsspeichers)
-- Tetris im Kernel
+- **Tetris im Kernel**
 - HyperEbenenProjektionsTreiber (Sowas wie Grafikfenster für Programme)
 
 ## ToDo
@@ -40,6 +40,6 @@ Aktuell wird daran gearbeitet, SMP zu integrieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7708/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7709/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 7708; parent 7706; 2010-05-20T14:31:49Z -->
+<!-- MediaWiki page 2233; revision 7709; parent 7708; 2010-05-20T14:32:23Z -->
