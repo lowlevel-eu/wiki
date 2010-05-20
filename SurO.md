@@ -1,9 +1,9 @@
 # SurO
 
 | SurO (ehemals SUR-Office) |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | [Benutzer:Sur3](https://lowlevel-eu.github.io/wiki/pages/2234/index.html "Benutzer:Sur3") |
+| Entwickler: | Benutzer:Sur3 |
 | Akt. Version: | 3,5b |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | (noch keine) |
 | OS-Eigenschaften |  |
@@ -40,6 +40,6 @@ Aktuell wird daran gearbeitet, SMP zu integrieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7703/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 7702; parent 7701; 2010-05-20T14:20:35Z -->
+<!-- MediaWiki page 2233; revision 7703; parent 7702; 2010-05-20T14:22:03Z -->
