@@ -41,7 +41,7 @@ Ein Pagedirectory enthält 1024 Eintrage à vier Byte. Ein Pagedirectory-Eintrag
 | 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
-| 6 | Normalerweise 0. |
+| 6 | Wird ignoriert, falls 4 kB Page, andernfalls wird es von der CPU bei einem Schreibzugriff auf die Page gesetzt |
 | 7 | Gibt die Größe der Page an. 0 steht für 4 kB, 1 für 4 MB (oder 2 MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4-MB-Pages) oder PAE-Bit (2-MB-Pages) gesetzt ist. |
 | 8 | Wird ignoriert |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
@@ -96,6 +96,6 @@ Es besteht aber auch die Möglichkeit, Zugriff auf den gesamten physischen Speic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 7031; parent 6164; 2010-02-06T15:52:54Z -->
+<!-- MediaWiki page 1496; revision 7714; parent 7031; 2010-05-22T22:24:17Z -->
