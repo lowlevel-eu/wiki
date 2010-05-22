@@ -12,7 +12,7 @@ Ich gehe jetzt einfach mal von einem Linux aus. Arbeitsverzeichnis ist /tmp/grub
 
 ## Durchführung
 
-Als erstes lädt man sich ein Image mit Grub 1 hier runter: <http://download.tyndur.org/releases/0.2/> ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dann ins Arbeitsverzeichnis entpacken. Nun mounten: \<bash\> mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt \</bash\> und alle Dateien und Verzeichnisse außer dem /boot/grub Verzeichniss mit den Dateien stage1, stage2 und menu.lst. Nun wird die Datei menu.lst editiert, dass ihr Inhalt folgender ist:
+Als erstes lädt man sich ein Image mit Grub 1 hier runter: <http://download.tyndur.org/releases/0.2/>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dann ins Arbeitsverzeichnis entpacken. Nun mounten: \<bash\> mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt \</bash\> und alle Dateien und Verzeichnisse außer dem /boot/grub Verzeichniss mit den Dateien stage1, stage2 und menu.lst. Nun wird die Datei menu.lst editiert, dass ihr Inhalt folgender ist:
 
     timeout=0
 
@@ -47,6 +47,6 @@ Man testet das Image mit qemu einfach so: \<bash\>qemu -fda 0.2.1-gothmog-floppy
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7711/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2235/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2235/index.html)
 
-<!-- MediaWiki page 2235; revision 7711; parent 0; 2010-05-22T13:15:17Z -->
+<!-- MediaWiki page 2235; revision 7712; parent 7711; 2010-05-22T13:16:24Z -->
