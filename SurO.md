@@ -27,12 +27,12 @@ SurO ist ein HobbyOS, welches durch einen Programmierwettstreit entstanden ist. 
 
 Im Moment sind die folgenden Features implementiert:
 
-- HW- xor SW-Multitasking
-- FAT32 Dateisystem
 - Multitasking
-- Editor (Angucken und Editieren des Arbeitsspeichers)
+- FAT32 Dateisystem
+- Editor (Angucken und Editieren des Arbeitsspeichers oder von Dateien)
 - **Tetris im Kernel**
 - HyperEbenenProjektionsTreiber (Sowas wie Grafikfenster für Programme)
+- 1024x768x25 (8881 rgba) Grafik + süßer Fadenkreuzmauszeiger
 
 ## ToDo
 
@@ -40,6 +40,6 @@ Aktuell wird daran gearbeitet, SMP zu integrieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7710/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 7710; parent 7709; 2010-05-20T14:34:03Z -->
+<!-- MediaWiki page 2233; revision 7716; parent 7710; 2010-05-24T15:13:01Z -->
