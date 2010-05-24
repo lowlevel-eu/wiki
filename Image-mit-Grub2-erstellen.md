@@ -12,7 +12,7 @@ Im Folgenden gehe ich davon aus, dass ihr Linux verwendet, das Arbeitsverzeichni
 
 ## Durchführung
 
-Zuerst lädt man sich ein Image mit GRUB Legacy herunter, z. B. hier: <http://download.tyndur.org/releases/0.2/>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dieses Image entpackt man nun ins Arbeitsverzeichnis und mountet es anschließend: \<bash\>mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt\</bash\> Jetzt müssen alle Dateien und Ordner aus /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
+Zuerst lädt man sich ein Image mit GRUB Legacy herunter, z. B. hier: <http://download.tyndur.org/releases/0.2/>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dieses Image entpackt man nun ins Arbeitsverzeichnis und mountet es anschließend: \<bash\>mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt\</bash\> Jetzt müssen alle Dateien und Ordner außer /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
 
     timeout=0
 
@@ -47,6 +47,6 @@ Testen kann man das Image z. B. mit qemu: \<bash\>qemu -fda 0.2.1-gothmog-flopp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2235/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7718/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2235/index.html)
 
-<!-- MediaWiki page 2235; revision 7717; parent 7713; 2010-05-24T20:58:27Z -->
+<!-- MediaWiki page 2235; revision 7718; parent 7717; 2010-05-24T20:58:56Z -->
