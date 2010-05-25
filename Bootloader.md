@@ -1,6 +1,8 @@
 # Bootloader
 
-Der **Bootloader** wird vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") vom ersten Sektor ([Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") in den Speicher geladen und ausgeführt. Er hat die Aufgabe, das [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zu starten, indem er den Kernel und ggf. weitere Module lädt und ausführt.
+Der **Bootloader** wird vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") aus dem ersten Sektor (dem sogenannten [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor")) eines Massenspeichermediums, wie z.B. einer Diskette oder einer Festplattenpartition, in den Hauptspeicher geladen und dort zur Ausführung gebracht. Seine Hauptaufgabe besteht darin, das [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zu starten, indem er den Kernel und ggf. weitere Module lädt und ausführt.
+
+Handelt es sich bei dem Massenspeicher, von dem gebootet wird, um eine Festplatte, so wird der **Bootloader** nicht direkt von dem [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") geladen, sondern über den Umweg über den [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") (MBR), d.h., das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") lädt den MBR, welcher wiederum den **Bootloader** aus dem ersten Sektor einer Festplattenpartition lädt und zur Ausführung bringt.
 
   
 
@@ -35,6 +37,6 @@ Obwohl davon abgeraten wird, kann man seinen Bootloader natürlich auch selbst p
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7481/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
 
-<!-- MediaWiki page 1477; revision 7481; parent 7473; 2010-04-01T10:35:01Z -->
+<!-- MediaWiki page 1477; revision 7719; parent 7481; 2010-05-25T20:13:02Z -->
