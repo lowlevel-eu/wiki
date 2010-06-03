@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Ville Turjanmaa |
-| Akt. Version: | i386: 0.85<br>x86_64: 0.93B |
+| Akt. Version: | i386: 0.85<br>x86_64: 0.93V |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
@@ -25,21 +25,22 @@
 Die derzeit aktuellen Versionen sind:
 
 - MenuetOS 32 v0.85
-- MenuetOS 64 v0.91J
+- MenuetOS 64 v0.93V
 
 ## Features
 
 Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), Multithreading, Ring-3 Schutz
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), Multithreading, Ring-3-Schutz
 - [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") (Graphical User Interface)
 - IDE: Editor/Makro Assembler um Kernel und Anwendungen zu erzeugen
-- TCP/IP Stack mit Loopback, PPP & Ethernettreibern
+- TCP/[IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "IP")-Stack mit Loopback, PPP & [Ethernettreibern](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet")
 - Netzwerkanwendungen inklusive FTP-/HTTP-/MP3-/SMTP-Server
 - IRC-, HTTP-, NNTP-, E-Mail- und TFTP-Clients
 - Freigestaltbare Programmfenster
 - Echtzeitdatenverarbeitung
-- USB-2.0-Support für High-Speed-Massenspeicher, -Webcams, -Drucker und -TV (mit DVB-T)
+- [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")-2.0-Support für High-Speed-Massenspeicher, -Webcams, -Drucker und -TV (mit DVB-T)
+- Multiprocessor-Unterstützung
 - Passt unkomprimiert auf eine einzelne Diskette
 
 ## siehe auch
@@ -48,6 +49,6 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7727/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 7350; parent 6076; 2010-03-09T19:27:35Z -->
+<!-- MediaWiki page 1481; revision 7727; parent 7350; 2010-06-03T21:19:11Z -->
