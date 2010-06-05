@@ -46,12 +46,22 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 
 ## History/Archiv
 
-- V0.01 - 29.11.09
+- v0.01 - 29.11.09
   - Simple Textausgabe in C++, färben von Text und BG
-- V0.02 - 04.03.10
-  - GDT, IDT und PIC
-- V0.03 - 10.04.10
-  - CMOS (-\>Systemzeit), überarbeitung von GDT
+- v0.02 - 04.03.10
+  - GDT
+  - IDT
+  - PIC
+- v0.03 - 10.04.10
+  - CMOS (-\>Systemzeit
+  - überarbeitung von GDT
+- v0.04 - 30.05.10
+  - PMM
+  - Multitasking (Kernel)
+- v0.05 - XX.06.10
+  - rudimentärer Tastatur-"treiber"
+  - Paging
+  - VFS?
 
 ## Screenshot
 
@@ -61,6 +71,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7730/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 7563; parent 7261; 2010-04-12T09:13:14Z -->
+<!-- MediaWiki page 1771; revision 7730; parent 7563; 2010-06-05T12:53:16Z -->
