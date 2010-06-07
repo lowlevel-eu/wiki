@@ -58,10 +58,10 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 - v0.04 - 30.05.10
   - PMM
   - Multitasking (Kernel)
-- v0.05 - XX.06.10
+- v0.05 - 07.06.10
   - rudimentärer Tastatur-"treiber"
   - Paging
-  - VFS?
+  - Heap
 
 ## Screenshot
 
@@ -71,6 +71,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7730/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 7730; parent 7563; 2010-06-05T12:53:16Z -->
+<!-- MediaWiki page 1771; revision 7731; parent 7730; 2010-06-07T16:17:18Z -->
