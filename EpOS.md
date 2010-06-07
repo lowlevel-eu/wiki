@@ -35,9 +35,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 - Floppy/Festplatten Zugriff
 - CDI?
 - entsprechende Befehle in der Komzei
-- Speicherverwaltung
 - GUI
-- (Multi-)Tasking
 - und überhaupt alles...
 
 ## Realease
@@ -76,6 +74,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 7732; parent 7731; 2010-06-07T16:18:33Z -->
+<!-- MediaWiki page 1771; revision 7733; parent 7732; 2010-06-07T16:19:42Z -->
