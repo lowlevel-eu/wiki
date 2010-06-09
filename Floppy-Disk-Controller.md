@@ -1,11 +1,18 @@
 # Floppy Disk Controller
 
-Der Floppy Disk Controller ist ein Chip, der ein bis vier Floppy-Laufwerke ansteuern kann.
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
 
-## Eigenschaften
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-- DMA-Channel: 2
-- IRQ: 6
+Der Floppy Disk Controller (FDC) ist ein Chip, der ein bis vier Disketten-Laufwerke ansteuern kann.
+
+## Eigenschaften und Besonderheiten
+
+- Der FDC sendet [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 6, wenn z.B. eine Lese- oder Schreiboperation beendet ist
+- Der FDC kann über [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA") Daten direkt aus dem Speicher auf Diskette schreiben und anders herum. Dafür wird DMA Channel 2 verwendet
+- Der FDC ist recht schlecht standardisiert, da verschiedene Hersteller unterschiedliche Funktionalitäten hinzugefügt haben.
+- Bei allen Operationen, für die der Schreib-/Lesekopf bewegt werden muss, sollte eine Wartezeit eingehalten werden, bis die nächste Operation folgt, da insbesondere Disketten sehr langsame Zugriffszeiten besitzen. Bei Fehlen dieser Wartezeiten funktioniert der Treiber oft nur in Emulatoren, versagt aber auf echter Hardware!
+- Der FDC kann nur Sektorangaben in [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") verarbeiten
 
 ## Register
 
@@ -282,11 +289,53 @@ Drive select
 
 11: D
 
+CCR Im CCR sind nur die Funktionen der ersten zwei Bits definiert (Bit 0 und Bit 1):
+
+       *  00 500 Kbps
+       * 10 250 Kbps
+       * 01 300 Kbps
+       * 11 1 Mbps
+
 ## Befehle
 
-## Infos
+### Senden von Befehlen
 
-## Data Address Mark
+Das Senden von Befehlen erfolgt in drei Phasen:
+
+- Command-Phase: Der Befehl wird von der CPU an den FDC gesendet. Dafür werden die Daten wie weiter unten beschrieben in das Datenregister geschrieben. Vorher sollte getestet werden, ob dieses wirklich leer ist.
+- Execution-Phase: Der Befehl wird vom FDC ausgeführt. Dabei sollte im Treiber eine Wartezeit eingehalten werden, da Diskettenlaufwerke sehr langsam sind. Bei einigen Befehlen wird die Execution-Phase zusätzlich durch das Senden eines IRQs beendet.
+- Result-Phase: Bei einigen Befehlen liefert der FDC Daten zurück, z.B. ob der Befehl erfolgreich ausgeführt wurde. Diese müssen gelesen werden, damit erneut Befehle gesendet werden können.
+
+### Allgemeine Parameter
+
+| Abkürzung | Beschreibung | Empfohlener Wert für 3,5" |
+| ----------- | ------------------------------------------------------------------------- | --------------------------- |
+| MT | Multitrack, Befehl wird auf beiden Seiten der Diskette ausgeführt |  |
+| DTL | Datenlänge | 0xFF |
+| N | Sekorengröße, wobei 0=128Byte, 1=256Byte, 2=512Byte, ... | 2 |
+| Gap3 | Abstand zwischen Sektoren (?) | 27 |
+| MFM | High Density (HD) Mode | 1 |
+| SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | ??? |
+
+### Liste von Befehlen
+
+*ich arbeite daran...*
+
+## Beispielcode
+
+### Erkennen von Diskettenlaufwerken
+
+int 13, ah=8 oder CMOS
+
+### Daten/Befehle schreiben
+
+### Daten lesen
+
+### Initialisierung
+
+### Auf Diskette schreiben
+
+### Von Diskette lesen
 
 ## Siehe auch
 
@@ -299,6 +348,6 @@ Drive select
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7609/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7609; parent 7137; 2010-04-19T14:18:25Z -->
+<!-- MediaWiki page 1443; revision 7737; parent 7609; 2010-06-09T19:34:10Z -->
