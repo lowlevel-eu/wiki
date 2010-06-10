@@ -4,6 +4,15 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+- Nach Rechtschreibfehlern suchen
+- Nach inhaltlichen Fehlern suchen (vor allem bei Bitmasken verschreibt man sich leicht!)
+- Verlinkungen innerhalb des Artikels einbauen.
+- Beispielcode
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
 Der Floppy Disk Controller (FDC) ist ein Chip, der ein bis vier Disketten-Laufwerke ansteuern kann.
 
 ## Eigenschaften und Besonderheiten
@@ -557,14 +566,14 @@ Command Phase:
 </th></tr>
 <tr>
 <td>#1:</td>
-<td>0</td>
+<td>MT</td>
 <td>MFM</td>
 <td>SK</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
-<td>0
+<td>0</td>
+<td>1
 </td></tr>
 <tr>
 <td>#2:</td>
@@ -639,12 +648,12 @@ Command Phase:
 </th></tr>
 <tr>
 <td>#1:</td>
-<td>0</td>
+<td>MT</td>
 <td>MFM</td>
 <td>SK</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
+<td>1</td>
 <td>1</td>
 <td>0
 </td></tr>
@@ -831,6 +840,6 @@ int 13, ah=8 oder CMOS
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7740; parent 7739; 2010-06-10T19:52:41Z -->
+<!-- MediaWiki page 1443; revision 7741; parent 7740; 2010-06-10T20:04:15Z -->
