@@ -324,7 +324,222 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 | Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") |  |
 | Trackgrößße | Anzahl der Sektoren, die auf einem Track ("Ring") liegen | ??? |
 
-### Kompletten Track lesen (2h)
+  
+
+### Technische Laufweksdaten einstellen (3h)
+
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1
+</td></tr>
+<tr>
+<td>#2:</td>
+<td colspan="4">Step Rate</td>
+<td colspan="4">Head Unload Time
+</td></tr>
+<tr>
+<td>#3</td>
+<td colspan="7">Head Load Time</td>
+<td>Kein DMA
+</td></tr></tbody></table>
+
+Result Phase: *keine*
+
+  
+Anmerkungen:
+
+- Die benötigten Daten sollten vom BIOS abgefragt werden (siehe unten)
+- Im MSR kann eingestellt werden, ob DMA/IRQ oder keins von beidem, hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
+
+  
+
+### Laufwerk kalibrieren (7h)
+
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1
+</td></tr>
+<tr>
+<td>#2:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Head</td>
+<td colspan="2">Drive
+</td></tr></tbody></table>
+
+Result Phase: *keine*
+
+  
+Anmerkungen:
+
+- Nach der Kalibrierung wird ein IRQ6 gesendet
+- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb sollte mit "Interrput Status überprüfen" (8h) überprüft werden, ob der aktuelle Zylinder wirklich Null ist.
+
+  
+
+  
+
+### Laufwerksstatus überprüfen (4h)
+
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>#2:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Head</td>
+<td colspan="2">Drive
+</td></tr></tbody></table>
+
+Result Phase:
+
+ST3
+
+  
+
+### Interrupt Status überprüfen (8h)
+
+Command Phase:
+
+| Bit: | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| \#1: | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+
+Result Phase:
+
+|  |  |
+| ------ | -------------------- |
+| \#1: | ST0 |
+| \#2: | Aktueller Zylinder |
+
+Anmerkungen:
+
+- Dieser Befehl sollte immer gesendet werden, wenn der FDC einen IRQ 6 gesendet hat.
+
+  
+
+### Schreib- /Lesekopf positionieren (fh)
+
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>#2:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Head</td>
+<td colspan="2">Drive
+</td></tr>
+<tr>
+<td>#3:</td>
+<td colspan="8">Cylinder
+</td></tr></tbody></table>
+
+Result Phase: *Keine*
+
+  
+Anmerkungen:
+
+- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb sollte mit "Interrput Status überprüfen" (8h) überprüft werden, ob der aktuelle Zylinder wirklich Null ist.
+- Nach Beendigung wird ein IRQ 6 gesendet.
+
+### Sektor schreiben (5h)
 
 Command Phase:
 
@@ -399,60 +614,14 @@ Result Phase:
 | \#3: | ST2 |
 | \#4: | Cylinder |
 | \#5: | Head |
-| \#6: | 0 |
+| \#6: | Sektor |
 | \#7: | Sektorgröße N |
 
 Anmerkungen:
 
-- Dieser Befehl ließt alle Sektoren eines Tracks hintereinander ein
-- Der Befehl funktioniert nur für eine Seite der Diskette, für beide Seiten muss der Befehl mehrmals gesendet werden
+- Nach dem Schreibvorgang wird ein IRQ 6 gesendet.
 
-### Diskettendaten einstellen (3h)
-
-Command Phase:
-
-<table>
-<tbody><tr>
-<th>Bit:</th>
-<th>7</th>
-<th>6</th>
-<th>5</th>
-<th>4</th>
-<th>3</th>
-<th>2</th>
-<th>1</th>
-<th>0
-</th></tr>
-<tr>
-<td>#1:</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1
-</td></tr>
-<tr>
-<td>#2:</td>
-<td colspan="4">Step Rate</td>
-<td colspan="4">Head Unload Time
-</td></tr>
-<tr>
-<td>#3</td>
-<td colspan="7">Head Load Time</td>
-<td>Kein DMA
-</td></tr></tbody></table>
-
-Result Phase: *keine*
-
-Anmerkungen:
-
-- Die benötigten Daten sollten vom BIOS abgefragt werden (siehe unten)
-- Im MSR kann eingestellt werden, ob DMA/IRQ oder keins von beidem, hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
-
-### Laufwerksstatus überprüfen (4h)
+### Sektor lesen (6h)
 
 Command Phase:
 
@@ -471,12 +640,12 @@ Command Phase:
 <tr>
 <td>#1:</td>
 <td>0</td>
-<td>0</td>
+<td>MFM</td>
+<td>SK</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
-<td>0</td>
 <td>0
 </td></tr>
 <tr>
@@ -488,29 +657,152 @@ Command Phase:
 <td>0</td>
 <td>Head</td>
 <td colspan="2">Drive
+</td></tr>
+<tr>
+<td>#3:</td>
+<td colspan="8">Cylinder
+</td></tr>
+<tr>
+<td>#4:</td>
+<td colspan="8">Head
+</td></tr>
+<tr>
+<td>#5:</td>
+<td colspan="8">Sektor
+</td></tr>
+<tr>
+<td>#6:</td>
+<td colspan="8">Sektorgröße N
+</td></tr>
+<tr>
+<td>#7:</td>
+<td colspan="8">Track-Größe
+</td></tr>
+<tr>
+<td>#8:</td>
+<td colspan="8">GAP3
+</td></tr>
+<tr>
+<td>#9:</td>
+<td colspan="8">DTL
 </td></tr></tbody></table>
 
 Result Phase:
 
-ST3
+|  |  |
+| ------ | --------------- |
+| \#1: | ST0 |
+| \#2: | ST1 |
+| \#3: | ST2 |
+| \#4: | Cylinder |
+| \#5: | Head |
+| \#6: | Sektor |
+| \#7: | Sektorgröße N |
+
+Anmerkungen:
+
+- Nach dem Lesevorgang wird ein IRQ 6 gesendet.
 
   
 
-### write sector
+### Kompletten Track lesen (2h)
 
-### calibrate drive
+Command Phase:
 
-### check interrupt status
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>MFM</td>
+<td>SK</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0
+</td></tr>
+<tr>
+<td>#2:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Head</td>
+<td colspan="2">Drive
+</td></tr>
+<tr>
+<td>#3:</td>
+<td colspan="8">Cylinder
+</td></tr>
+<tr>
+<td>#4:</td>
+<td colspan="8">Head
+</td></tr>
+<tr>
+<td>#5:</td>
+<td colspan="8">0
+</td></tr>
+<tr>
+<td>#6:</td>
+<td colspan="8">Sektorgröße N
+</td></tr>
+<tr>
+<td>#7:</td>
+<td colspan="8">Track-Größe
+</td></tr>
+<tr>
+<td>#8:</td>
+<td colspan="8">GAP3
+</td></tr>
+<tr>
+<td>#9:</td>
+<td colspan="8">DTL
+</td></tr></tbody></table>
 
-### write deleted sector
+Result Phase:
 
-### read sector ID
+|  |  |
+| ------ | --------------- |
+| \#1: | ST0 |
+| \#2: | ST1 |
+| \#3: | ST2 |
+| \#4: | Cylinder |
+| \#5: | Head |
+| \#6: | Sektor |
+| \#7: | Sektorgröße N |
 
-### read deleted sector
+Anmerkungen:
 
-### format track
+- Dieser Befehl ließt alle Sektoren eines Tracks hintereinander ein
+- Der Befehl funktioniert nur für eine Seite der Diskette, für beide Seiten muss der Befehl mehrmals gesendet werden
+- Es ist immer schneller einen gesamten Track zu lesen anstatt einzeln jeden Sektor des Tracks.
 
-### seek head
+### Andere
+
+Der FDC kennt noch weitere Befehle, auf die hier nicht weiter eingegangen wird. Diese sind:
+
+- Gelöschten Sektor lesen / schreiben
+- Track formatieren
+- Sektor ID einlesen
+
+Darüber hinaus gibt es noch erweiterte Befehle. Man kann sich aber nicht darauf verlassen, dass der eingebaute FDC diese unterstützt:
+
+- Register Zusammenfassung
+- Controller Version lesen
+- Bestätigen
+- Relatives Positionieren des Schreib-/Lesekopfes
 
 ## Beispielcode
 
@@ -539,6 +831,6 @@ int 13, ah=8 oder CMOS
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7739; parent 7737; 2010-06-10T16:31:52Z -->
+<!-- MediaWiki page 1443; revision 7740; parent 7739; 2010-06-10T19:52:41Z -->
