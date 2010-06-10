@@ -289,12 +289,17 @@ Drive select
 
 11: D
 
-CCR Im CCR sind nur die Funktionen der ersten zwei Bits definiert (Bit 0 und Bit 1):
+### CCR
 
-       *  00 500 Kbps
-       * 10 250 Kbps
-       * 01 300 Kbps
-       * 11 1 Mbps
+Im CCR sind nur die Funktionen der ersten zwei Bits definiert (Bit 0 und Bit 1):
+
+00 500 Kbps
+
+10 250 Kbps
+
+01 300 Kbps
+
+11 1 Mbps
 
 ## Befehle
 
@@ -309,17 +314,203 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 ### Allgemeine Parameter
 
 | Abkürzung | Beschreibung | Empfohlener Wert für 3,5" |
-| ----------- | ------------------------------------------------------------------------- | --------------------------- |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | MT | Multitrack, Befehl wird auf beiden Seiten der Diskette ausgeführt |  |
 | DTL | Datenlänge | 0xFF |
 | N | Sekorengröße, wobei 0=128Byte, 1=256Byte, 2=512Byte, ... | 2 |
-| Gap3 | Abstand zwischen Sektoren (?) | 27 |
+| Gap3 | Abstand zwischen Sektoren | 27 |
 | MFM | High Density (HD) Mode | 1 |
 | SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | ??? |
+| Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") |  |
+| Trackgrößße | Anzahl der Sektoren, die auf einem Track ("Ring") liegen | ??? |
 
-### Liste von Befehlen
+### Kompletten Track lesen (2h)
 
-*ich arbeite daran...*
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>MFM</td>
+<td>SK</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0
+</td></tr>
+<tr>
+<td>#2:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Head</td>
+<td colspan="2">Drive
+</td></tr>
+<tr>
+<td>#3:</td>
+<td colspan="8">Cylinder
+</td></tr>
+<tr>
+<td>#4:</td>
+<td colspan="8">Head
+</td></tr>
+<tr>
+<td>#5:</td>
+<td colspan="8">Sektor
+</td></tr>
+<tr>
+<td>#6:</td>
+<td colspan="8">Sektorgröße N
+</td></tr>
+<tr>
+<td>#7:</td>
+<td colspan="8">Track-Größe
+</td></tr>
+<tr>
+<td>#8:</td>
+<td colspan="8">GAP3
+</td></tr>
+<tr>
+<td>#9:</td>
+<td colspan="8">DTL
+</td></tr></tbody></table>
+
+Result Phase:
+
+|  |  |
+| ------ | --------------- |
+| \#1: | ST0 |
+| \#2: | ST1 |
+| \#3: | ST2 |
+| \#4: | Cylinder |
+| \#5: | Head |
+| \#6: | 0 |
+| \#7: | Sektorgröße N |
+
+Anmerkungen:
+
+- Dieser Befehl ließt alle Sektoren eines Tracks hintereinander ein
+- Der Befehl funktioniert nur für eine Seite der Diskette, für beide Seiten muss der Befehl mehrmals gesendet werden
+
+### Diskettendaten einstellen (3h)
+
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1
+</td></tr>
+<tr>
+<td>#2:</td>
+<td colspan="4">Step Rate</td>
+<td colspan="4">Head Unload Time
+</td></tr>
+<tr>
+<td>#3</td>
+<td colspan="7">Head Load Time</td>
+<td>Kein DMA
+</td></tr></tbody></table>
+
+Result Phase: *keine*
+
+Anmerkungen:
+
+- Die benötigten Daten sollten vom BIOS abgefragt werden (siehe unten)
+- Im MSR kann eingestellt werden, ob DMA/IRQ oder keins von beidem, hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
+
+### Laufwerksstatus überprüfen (4h)
+
+Command Phase:
+
+<table>
+<tbody><tr>
+<th>Bit:</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>#1:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>#2:</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Head</td>
+<td colspan="2">Drive
+</td></tr></tbody></table>
+
+Result Phase:
+
+ST3
+
+  
+
+### write sector
+
+### calibrate drive
+
+### check interrupt status
+
+### write deleted sector
+
+### read sector ID
+
+### read deleted sector
+
+### format track
+
+### seek head
 
 ## Beispielcode
 
@@ -348,6 +539,6 @@ int 13, ah=8 oder CMOS
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7737; parent 7609; 2010-06-09T19:34:10Z -->
+<!-- MediaWiki page 1443; revision 7739; parent 7737; 2010-06-10T16:31:52Z -->
