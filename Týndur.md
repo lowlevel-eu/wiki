@@ -19,6 +19,31 @@
 
 týndur ist das Community-Betriebssystem von Lowlevel. Es entstand als Idee im Jahr 2005 und wird seitdem von verschiedenen Mitgliedern der Lowlevel-Community gepflegt und erweitert. Zielsetzung des Systems ist es, verständlich zum Lernen, aber auch zum Arbeiten gut benutzbar zu sein. Jeder ist eingeladen mitzuhelfen!
 
+## Download
+
+Die übliche Variante, týndur ans Laufen zu bekommen, ist, eine aktuelle Entwicklerversion aus dem git herunterzuladen und den Quellcode selbst zu kompilieren. Für alle, die daran interessiert sind, mitzuhelfen, ist das auch die einzig sinnvolle Möglichkeit. Wer das System nur antesten und sich dazu keine Entwicklungsumgebung aufsetzen möchte, kann auf die stabilen Releases zurückgreifen, die in der Regel ein- bis zweimal im Jahr veröffentlicht werden. Sie stehen für die aktuelle Version als Festplatten- und Live-CD-Image zur Verfügung.
+
+- Releases: <http://download.tyndur.org/releases/0.2/>
+- Entwicklerversionen: Siehe [Týndur/Entwicklung](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Entwicklung "Týndur/Entwicklung")
+
+## Features
+
+- [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")
+- Speichermedien: Festplatte, CD-ROM, Diskette
+- Dateisysteme: [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), iso9660
+- Netzwerkkarten: [rtl8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139"), sis900, ne2k, e1000, [pcnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
+- So gut wie alle Treiber benutzen das [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), um Treiber mit anderen Betriebssystemen austauschen zu können
+- Eigene Programme:
+  - losh (Shell)
+  - kedit (Texteditor)
+  - kirc (IRC-Programm)
+  - lpt (Paketmanager)
+  - setup (Konfigurationsprogramm)
+- Portierte Programme:
+  - Entwicklung: gcc, FPC, binutils, nasm, yasm, fasm, Subversion
+  - Editor: nano
+  - Netzwerk: lynx, wget, dropbear
+
 ## Funktionsweise des Kernels
 
 Beim Design kann man in einem Kernel wohl auf zwei verschiedene Dinge abheben: Einmal auf die innere Struktur, die verschiedenen Einheiten, die zusammen den Kernel bilden; zum anderen die Schnittstelle zu den Userspace-Programmen, also die Syscalls.
@@ -78,6 +103,6 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7745/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7745; parent 6621; 2010-06-12T13:03:52Z -->
+<!-- MediaWiki page 1796; revision 7747; parent 7745; 2010-06-12T14:11:10Z -->
