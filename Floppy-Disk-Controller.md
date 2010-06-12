@@ -298,7 +298,7 @@ Drive select
 
 11: D
 
-### CCR
+#### CCR
 
 Im CCR sind nur die Funktionen der ersten zwei Bits definiert (Bit 0 und Bit 1):
 
@@ -329,7 +329,7 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 | N | Sekorengröße, wobei 0=128Byte, 1=256Byte, 2=512Byte, ... | 2 |
 | Gap3 | Abstand zwischen Sektoren | 27 |
 | MFM | High Density (HD) Mode | 1 |
-| SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | ??? |
+| SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | 1 |
 | Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") |  |
 | Trackgrößße | Anzahl der Sektoren, die auf einem Track ("Ring") liegen | ??? |
 
@@ -817,11 +817,38 @@ Darüber hinaus gibt es noch erweiterte Befehle. Man kann sich aber nicht darauf
 
 ### Erkennen von Diskettenlaufwerken
 
-int 13, ah=8 oder CMOS
+Zum Erkennen von den an den Computer angeschlossenen Diskettenlaufwerken gibt es zwei Möglichkeiten:
+
+- Im Real Mode das BIOS fragen (in 0x13, ah=8), siehe dazu [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h")
+- Im [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") nachschauen (Offset 0x10), hier sind allerdings keine technischen Daten abfragbar, sondern nur der Typ des Laufwerks
 
 ### Daten/Befehle schreiben
 
+Bevor man Daten bzw. Befehle ins Datenregister schreiben darf, muss man im MSR testen, ob das DIO-Bit gelöscht und das MRQ-Bit gesetzt ist. Erst dann ist das Datenregister leer und bereit Daten zu empfangen. \<c\> VOID send_command(BYTE cmd) {
+
+     send_data(cmd);
+
+}
+
+VOID send_data(BYTE data) {
+
+     BYTE status=0;
+     while ((status & MSR_MASK_MRQ) && !(status & MSR_MASK_DIO)) status=inb(MSR);
+       outb(DATAREG, data);
+
+} \</c\>
+
 ### Daten lesen
+
+Ähnlich wie beim Senden von Daten muss beim Lesen das MRQ-Bit gesetzt und das DIO-Bit ebenfalls gesetzt sein.
+
+\<c\> BYTE read_data() {
+
+     BYTE status=0;
+     while ((status & MSR_MASK_MRQ) && !(status & MSR_MASK_DIO)) status=inb(MSR);
+     return inb(DATAREG);
+
+} \</c\>
 
 ### Initialisierung
 
@@ -840,6 +867,6 @@ int 13, ah=8 oder CMOS
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7752/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7741; parent 7740; 2010-06-10T20:04:15Z -->
+<!-- MediaWiki page 1443; revision 7752; parent 7741; 2010-06-12T21:20:59Z -->
