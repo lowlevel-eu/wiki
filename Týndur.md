@@ -26,6 +26,10 @@ Die übliche Variante, týndur ans Laufen zu bekommen, ist, eine aktuelle Entwic
 - Releases: <http://download.tyndur.org/releases/0.2/>
 - Entwicklerversionen: Siehe [Týndur/Entwicklung](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Entwicklung "Týndur/Entwicklung")
 
+## Kurzeinführung
+
+*→ Hauptartikel: [Týndur/Konzepte und Benutzung](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Konzepte-und-Benutzung "Týndur/Konzepte und Benutzung")*
+
 ## Features
 
 - [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")
@@ -103,6 +107,6 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7747; parent 7745; 2010-06-12T14:11:10Z -->
+<!-- MediaWiki page 1796; revision 7749; parent 7747; 2010-06-12T16:04:45Z -->
