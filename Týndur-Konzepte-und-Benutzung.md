@@ -64,6 +64,6 @@ Es geht mit ein wenig Geduld allerdings auch etwas umfangreicher, nämlich unter
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2238/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2238/index.html)
 
-<!-- MediaWiki page 2238; revision 7748; parent 0; 2010-06-12T16:02:14Z -->
+<!-- MediaWiki page 2238; revision 7750; parent 7748; 2010-06-12T18:01:47Z -->
