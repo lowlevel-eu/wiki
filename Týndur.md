@@ -80,7 +80,7 @@ Weitere Meilensteine der Entwicklung sind die Veröffentlichung der Versionen 0.
 
 Seit dem 27. Mai 2007 ist ein neuer Kernel (kernel2 genannt) in Arbeit, welcher eine neue Version der [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")-Schnittstelle [LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO") implementieren soll. Weitere geplante oder bereits implementierte Features sind Unterstützung für andere Architekturen (in erster Linie [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")), Mehrprozessorsysteme nach [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Standard, sowie Threading. Aktuell werden die Arbeiten an kernel2 intensiviert, da dieser mit Version 0.3 zum Standardkernel werden soll.
 
-## Versionen
+== Versionen == kann da jemand downloadlinks hinstellen ?? von den älteren versionen ? im git sind so viele .. da hat man null durchblick ..
 
 *→ Hauptartikel: [Týndur/Versionen](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Versionen "Týndur/Versionen")*
 
@@ -91,8 +91,6 @@ Seit dem 27. Mai 2007 ist ein neuer Kernel (kernel2 genannt) in Arbeit, welcher 
 | 0.2.0 | 24.12.2008 | Festplatten- und ext2-Treiber. Portierte Programme wie FPC, gcc und nano. Erstes Release mit der Treiberschnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"). |
 | 0.2.1 | 05.07.2009 | CD-ROM, UTF-8, zusätzliche portierte Programme (lynx, dropbear, Subversion) |
 | 0.2.2 | 25.12.2009 | Erstes Release mit Live-CD und Internationalisierung. setup ist neu. Erstes Release, das seinen eigenen Kernel kompilieren kann. |
-
-  
 
 ## Screenshots
 
@@ -107,6 +105,6 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7751/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7749; parent 7747; 2010-06-12T16:04:45Z -->
+<!-- MediaWiki page 1796; revision 7751; parent 7749; 2010-06-12T20:56:08Z -->
