@@ -70,6 +70,6 @@ Release am 25.12.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2237/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2237/index.html)
 
-<!-- MediaWiki page 2237; revision 7744; parent 0; 2010-06-12T13:03:25Z -->
+<!-- MediaWiki page 2237; revision 7746; parent 7744; 2010-06-12T13:12:09Z -->
