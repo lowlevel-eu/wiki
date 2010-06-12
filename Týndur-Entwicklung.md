@@ -155,7 +155,7 @@ Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Gi
 
 Im nun folgendem Dialog wird gefragt, von woher die E-Mail kommen soll, sofern keine Änderung gewünscht ist einfach Enter drücken, dann wird nach der ID der Mail gefragt, auf die geantwortet werden soll - im Normalfall auch hier einfach Enter drücken. Wenn alles geklappt hat ist der Patch nun auf der Mailingliste angekommen (sofern man nicht die Anmeldung auf selbiger vergessen hat).
 
-Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt") werden, bevor er von Leuten mit Commitrechten in das Repository eingepflegt wird. Wenn Du beim Korrekturlesen helfen willst, kann Du auf einen Patch entweder mit einer Zeile wie *Acked-by: Max Mustermann \<max@mustermann.de\>* als korrekt bestätigen oder aber Deine Kritikpunkte zitieren und kommentieren.
+Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt") werden, bevor er von Leuten mit Commitrechten in das Repository eingepflegt wird. Wenn Du beim Korrekturlesen helfen willst, kannst Du auf einen Patch entweder mit einer Zeile wie *Acked-by: Max Mustermann \<max@mustermann.de\>* antworten und ihn so als korrekt bestätigen oder aber Deine Kritikpunkte zitieren und kommentieren.
 
 ## Entwicklung unter Windows
 
@@ -198,6 +198,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7743/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 7742; parent 6416; 2010-06-12T12:00:22Z -->
+<!-- MediaWiki page 2035; revision 7743; parent 7742; 2010-06-12T12:12:00Z -->
