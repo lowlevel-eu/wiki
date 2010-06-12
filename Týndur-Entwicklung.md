@@ -25,6 +25,8 @@ Ob ein Patch ins Repository kommt hängt davon ab, ob er sinnvoll ist und letzen
 
 ## Vorbereitungen
 
+Die folgenden Abschnitten beziehen sich primär auf Linux oder ähnliche Systeme. Dieser Artikel enthält weiter unten einen gesonderten Abschnitt, wie týndur [unter Windows](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Entwicklung#entwicklung-unter-windows "Týndur/Entwicklung") gebaut und ausgeführt werden kann.
+
 ### Quellen beziehen
 
 Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") aus dem [týndur-Repository](http://git.tyndur.org):
@@ -155,6 +157,39 @@ Im nun folgendem Dialog wird gefragt, von woher die E-Mail kommen soll, sofern k
 
 Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt") werden, bevor er von Leuten mit Commitrechten in das Repository eingepflegt wird. Wenn Du beim Korrekturlesen helfen willst, kann Du auf einen Patch entweder mit einer Zeile wie *Acked-by: Max Mustermann \<max@mustermann.de\>* als korrekt bestätigen oder aber Deine Kritikpunkte zitieren und kommentieren.
 
+## Entwicklung unter Windows
+
+### Quellcode auschecken
+
+- Falls kein git-Client vorhanden ist, msysgit herunterladen und installieren (<http://code.google.com/p/msysgit/downloads/list>)
+  - Im Installationsprogramm eine der Optionen wählen, mit denen git in PATH eingetragen wird
+- In cmd.exe *git clone git://git.tyndur.org/tyndur.git* ausführen (oder alternativ die Git-GUI benutzen)
+
+### Buildumgebung aufbauen
+
+Ein Crosscompiler, der ELF-Dateien erzeugen kann, nasm und MSYS werden benötigt. Für Details siehe [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows"). Durch Aufruf von *make* tyndur kompilieren. Später reicht in der Regel ein *make subdirs*, das das unter Windows zeitaufwendige Erzeugen der Makefiles weglässt.
+
+### Ausführen
+
+Wir brauchen hier einen [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU"), mindestens in Version 0.11.0, gern auch was neueres. Auf der Wikiseite ist eine Version verlinkt, die auf unserem Server liegt, falls das Internet nichts aktuelleres hergibt. Das Verzeichnis, in dem qemu liegt, am besten auch in PATH aufnehmen.
+
+Unter Windows sind mir keine Möglichkeiten bekannt, ext2-Festplattenimages mit GRUB zu erstellen. Wir werden daher erst einmal einen etwas anderen Weg gehen: qemu kann Multiboot direkt booten und es kann Verzeichnisse als FAT-Festplatten zur Verfügung stellen.
+
+Zunächst brauchen wir also ein Verzeichnis (*build/root*), das alle Dateien enthält, die tyndur zum Booten braucht. Ich habe dafür eine Batchdatei *buildroot.bat* mit folgendem Inhalt angelegt:
+
+    sh build\scripts\updateroot
+    xcopy /s /y build\root-common\*.* build\root\
+    xcopy /s /y build\root-hd\*.* build\root\
+    xcopy /s /y build\root-local\*.* build\root\
+
+Anschließend muss qemu mit den passenden Parametern aufgerufen werden. Das macht bei mir eine *run.bat*:
+
+    cd build\output\modules
+    qemu-system-x86_64 -kernel ..\kernel\tyndur -initrd "init,pci,ata,fat,console servmgr:/term servmgr:/term,servmgr ata:/ata00_p0|fat:/ vterm:/vterm8/out ata fat console pci" -hda fat:../../root %*
+    cd ..\..\..
+
+Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur über *run.bat* beliebig oft ausgeführt werden. Beachte, dass alle Änderungen am Dateisystem verloren gehen, wenn qemu beendet wird. Um das zu lösen, kann man entweder versuchen, die rw-Unterstützung von qemu zu benutzen (die aber als instabil bekannt ist), oder ein zusätzliches Image anlegen und das als zweite Festplatte einbinden.
+
 ## Siehe auch
 
 - [Týndur/Bochs](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Bochs "Týndur/Bochs")
@@ -163,6 +198,6 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 6416; parent 5832; 2009-11-29T16:26:28Z -->
+<!-- MediaWiki page 2035; revision 7742; parent 6416; 2010-06-12T12:00:22Z -->
