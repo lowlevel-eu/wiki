@@ -98,12 +98,12 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ## Weblinks
 
-- [Mercurial Homepage](http://http://mercurial.selenic.com/) *(english)*
+- [Mercurial Homepage](http://mercurial.selenic.com/) *(english)*
 - [Deutschsprachiges Tutorial auf der offiziellen Mercurial Website](http://mercurial.selenic.com/wiki/GermanTutorial)
 - [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/) *(english)*
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 6342; parent 4774; 2009-11-17T16:45:34Z -->
+<!-- MediaWiki page 1891; revision 7756; parent 6342; 2010-06-13T09:42:03Z -->
