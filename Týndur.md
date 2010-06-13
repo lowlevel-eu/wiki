@@ -80,7 +80,7 @@ Weitere Meilensteine der Entwicklung sind die Veröffentlichung der Versionen 0.
 
 Seit dem 27. Mai 2007 ist ein neuer Kernel (kernel2 genannt) in Arbeit, welcher eine neue Version der [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")-Schnittstelle [LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO") implementieren soll. Weitere geplante oder bereits implementierte Features sind Unterstützung für andere Architekturen (in erster Linie [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")), Mehrprozessorsysteme nach [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Standard, sowie Threading. Aktuell werden die Arbeiten an kernel2 intensiviert, da dieser mit Version 0.3 zum Standardkernel werden soll.
 
-== Versionen == kann da jemand downloadlinks hinstellen ?? von den älteren versionen ? im git sind so viele .. da hat man null durchblick ..
+## Versionen
 
 *→ Hauptartikel: [Týndur/Versionen](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Versionen "Týndur/Versionen")*
 
@@ -105,6 +105,6 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7751/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7753/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7751; parent 7749; 2010-06-12T20:56:08Z -->
+<!-- MediaWiki page 1796; revision 7753; parent 7751; 2010-06-13T08:22:33Z -->
