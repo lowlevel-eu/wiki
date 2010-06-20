@@ -1,8 +1,8 @@
 # Teil 7 - Physische Speicherverwaltung
 
 |  |  |  |
-| ----------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------- |
-| « [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") | **Navigation** | Teil 8 - Paging » |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| « [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") | **Navigation** | [Teil 8 - Ein erstes Programm](https://github.com/lowlevel-eu/wiki/wiki/Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm") » |
 
 ## Ziel
 
@@ -160,11 +160,11 @@ init_task muss jetzt statt nur dem Stack entsprechend auch eine Taskstruktur anl
 Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten Listenelement weitergehen (current_task = current_task-\>next) und wenn das Ende erreicht ist (next also NULL ist), wieder beim ersten Task anfangen. Das Array task_states, num_tasks und das alte current_task mit dem Arrayindex sind jetzt unnötig geworden und können gelöscht werden. Einen neuen Task anzulegen bedeutet jetzt nur noch ein init_task mit dem passenden Einsprungpunkt aufzurufen.
 
 |  |  |  |
-| ----------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------- |
-| « [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") | **Navigation** | Teil 8 - Paging » |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| « [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") | **Navigation** | [Teil 8 - Ein erstes Programm](https://github.com/lowlevel-eu/wiki/wiki/Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2094/index.html)
 
-<!-- MediaWiki page 2094; revision 7680; parent 7129; 2010-05-09T13:42:32Z -->
+<!-- MediaWiki page 2094; revision 7763; parent 7680; 2010-06-20T16:41:07Z -->
