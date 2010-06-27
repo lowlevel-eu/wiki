@@ -16,9 +16,7 @@ Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Information
 | ------------------- | ------------ |
 | Basisadresse 15-0 | Limit 15-0 |
 
-- *Type* &#150; Deskriptor Typ &#150; Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht redundant. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
-
-  
+- *Type* &#150; Deskriptor Typ &#150; Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht wiedereintrittsfähig. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
 
 ## Aufbau TSS
 
@@ -66,6 +64,6 @@ Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS ang
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6888/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7772/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 6888; parent 6883; 2010-01-12T10:51:36Z -->
+<!-- MediaWiki page 1599; revision 7772; parent 6888; 2010-06-27T19:55:21Z -->
