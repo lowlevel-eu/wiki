@@ -1,6 +1,6 @@
 # Race Condition
 
-Eine Race Condition (auf Deutsch "kritischer Wettlauf", wörtlich "Wettlaufsituation") ist eine Konstellation, in der das Resultat einer Operation vom zeitlichen Verhalten bestimmter Einzeloperationen abhängt. Sie stellen eine sehr schwer auffindbare Fehlerquelle dar, da das erfolgreiche Abschließen der bewussten Operation sozusagen vom Zufall abhängt - mal funktioniert das System, mal nicht.
+Eine Race Condition (auf Deutsch „kritischer Wettlauf“, wörtlich „Wettlaufsituation“) ist eine Konstellation, in der das Resultat einer Operation vom zeitlichen Verhalten bestimmter Einzeloperationen abhängt. Sie stellen eine sehr schwer auffindbare Fehlerquelle dar, da das erfolgreiche Abschließen der bewussten Operation sozusagen vom Zufall abhängt – mal funktioniert das System, mal nicht.
 
 ## Beispiel
 
@@ -43,7 +43,7 @@ Was passiert nun, wenn zwei Prozesse versuchen, zu drucken? Normalerweise wird z
 | \[beendet\] | 0 | printer_reserved = 0; |
 | \[beendet\] | 0 | \[beendet\] |
 
-Aber was passiert, wenn der Scheduler genau nach der while-Schleife unterbricht? Schauen wir es uns an...
+Aber was passiert, wenn der Scheduler genau nach der while-Schleife unterbricht? Schauen wir es uns an…
 
 | Prozess A | printer_reserved | Prozess B |
 | --------------------------- | ------------------ | --------------------------- |
@@ -64,10 +64,10 @@ Aber was passiert, wenn der Scheduler genau nach der while-Schleife unterbricht?
 | printer_reserved = 0; | 0 | \[beendet\] |
 | \[beendet\] | 0 | \[beendet\] |
 
-Das Problem ist klar: Prozess A hat die Überprüfung nicht korrekt durchgesetzt und printer_reserved auf eins gesetzt, obwohl es das schon war. Dadurch druckt zuerst Prozess B, dann Prozess A und dann Prozess B. Die Folge ist logischerweise Chaos auf dem fertigen Blatt Papier. Und genau das ist eine Race Condition: Sie hängt davon ab, ob Prozess A mit der Überprüfung von printer_reserved und dem Setzen schnell genug fertig wird, bevor ihn der Scheduler unterbricht - quasi ein Wettlauf, ein "Race", zwischen Scheduler und Prozess.
+Das Problem ist klar: Prozess A hat die Überprüfung nicht korrekt durchgesetzt und printer_reserved auf eins gesetzt, obwohl es das schon war. Dadurch druckt zuerst Prozess B, dann Prozess A und dann Prozess B. Die Folge ist logischerweise Chaos auf dem fertigen Blatt Papier. Und genau das ist eine Race Condition: Sie hängt davon ab, ob Prozess A mit der Überprüfung von printer_reserved und dem Setzen schnell genug fertig wird, bevor ihn der Scheduler unterbricht – quasi ein Wettlauf, ein „Race“, zwischen Scheduler und Prozess.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7768/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
 
-<!-- MediaWiki page 2013; revision 5620; parent 5400; 2009-08-14T08:28:13Z -->
+<!-- MediaWiki page 2013; revision 7768; parent 5620; 2010-06-27T11:33:24Z -->
