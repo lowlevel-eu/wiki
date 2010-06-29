@@ -12,7 +12,7 @@
 <http://www.gnu.org/software/grub/grub.html>
 
   
-Der **GR**and **U**nified **B**ootloader2 (**GRUB2**) ist ein kompletter rewrite von GRUB legacy und ist wie sein vorgänger ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader").
+Der **GR**and **U**nified **B**ootloader2 (**GRUB2**) ist ein kompletter Rewrite von GRUB legacy und ist wie sein Vorgänger ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader").
 
   
 
@@ -36,7 +36,9 @@ Der **GR**and **U**nified **B**ootloader2 (**GRUB2**) ist ein kompletter rewrite
 
 ### Linux
 
-wenn du GRUB2 installiert hast, dann must du nur folgendes auf der komandozeile eingeben: ` grub-mkrescue --output=GRUB2.iso /boot/grub ` Danach sollte in dem Ordner, von dem du aus diesen Befehl ausgeführt hat eine GRUB2.iso liegen. Diese must du nur noch mit deinem Kernel, modulen und der GRUB.cfg(die neue konfigurationsdatei änlich der grub.lst)
+Wenn GRUB2 installiert ist, dann muss folgendes auf der Kommandozeile eingegeben werden: ` grub-mkrescue --output=GRUB2.iso /boot/grub `
+
+Diese muss dann noch mit dem eigenen Kernel und ggf. Modulen sowie der grub.cfg zusammengeführt werden.
 
 ### Windows
 
@@ -95,6 +97,6 @@ Die grub.cfg Datei ist die neue konfigurationsdatei von GRUB2 sie ist das äquiv
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7777/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7778/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
 
-<!-- MediaWiki page 2087; revision 7777; parent 7430; 2010-06-29T12:42:48Z -->
+<!-- MediaWiki page 2087; revision 7778; parent 7777; 2010-06-29T16:00:39Z -->
