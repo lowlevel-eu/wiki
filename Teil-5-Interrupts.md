@@ -8,7 +8,7 @@
 
 In diesem Teil wollen wir unserern Kernel *Interrupts* behandeln lassen. Ein Interrupt ist eine Unterbrechnung des aktuell ausgeführten Code, um eine Kernelfunktion (den *Interrupt-Handler*) aufzurufen. Es gibt drei unterschiedliche interessante Arten von Interrupts und keine davon ist für ein Betriebssystem verzichtbar:
 
-- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") treten bei Fehlern auf. Der Kernel kann in machen Fällen den Fehler beheben und das unterbrochene Programm fortsetzen. In anderen Fällen bleibt ihm nicht anderes übrig als das Programm (möglicherweise sich selbst) abzubrechen und eine Fehlermeldung auszugeben.
+- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") treten bei Fehlern auf. Der Kernel kann in manchen Fällen den Fehler beheben und das unterbrochene Programm fortsetzen. In anderen Fällen bleibt ihm nicht anderes übrig als das Programm (möglicherweise sich selbst) abzubrechen und eine Fehlermeldung auszugeben.
 - [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") (auch *Hardware-Interrupts*) werden von angeschlossener Hardware ausgelöst. Sie müssen vom passenden Treiber verarbeitet werden. Beispielsweise löst das Diskettenlaufwerk einen IRQ aus, wenn es einen Lesebefehl fertig ausgeführt hat oder eine Netzwerkkarte, wenn sie ein Ethernetpaket empfangen hat.
 - *Software-Interrupts* werden gezielt von Programmen aufgerufen, z.B. mit der *int*-Instruktion. Das häufigste Einsatzgebiet ist der Aufruf von *Syscalls*, also von Kernelfunktionen, in Programmen.
 
@@ -211,6 +211,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 7369; parent 7126; 2010-03-12T20:48:46Z -->
+<!-- MediaWiki page 1898; revision 7781; parent 7369; 2010-07-02T16:31:01Z -->
