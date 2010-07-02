@@ -3017,10 +3017,10 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 - [Englischer Artikel über den CPUID-Befehl](http://wiki.osdev.org/CPUID)
 - [Englische Doku von CPUID; mit AMD/INTEL und anderen Prozessoren](http://sandpile.org/ia32/cpuid.htm)
 - [Intels CPUID-Spezifikation](http://support.intel.com/Assets/PDF/appnote/241618.pdf)
-- [AMDs CPUID-Spezifikation](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/25481.pdf)
+- [AMDs CPUID-Spezifikation](http://support.amd.com/de/Processor_TechDocs/25481.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7662/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7779/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 7662; parent 7661; 2010-05-06T15:22:58Z -->
+<!-- MediaWiki page 1739; revision 7779; parent 7662; 2010-07-02T08:50:55Z -->
