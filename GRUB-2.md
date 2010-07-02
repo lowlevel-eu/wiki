@@ -42,7 +42,7 @@ Diese muss dann noch mit dem eigenen Kernel und ggf. Modulen sowie der grub.cfg 
 
 ### Windows
 
-Unter Windows gibt es noch keine möglichkeit ein CD-Image von GRUB2 zu erstellen. am besten nimmst du ein fertiges. Dafür ist das ändern sehr leicht. Lade dir [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter(ist Shareware und bis 300MB begrenzt aber das dauert wohl ne Zeit bis euer OS so groß ist)Wenn UltraISO heruntergeladen und installiert ist solltest du die in einem Ordner alle nötigen Dateien sammeln. Das GRUB2.iso image, die grub.cfg und deinen kernel bzw. zusätzliche module. Das sollte dann so ausehen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png" width="597" height="130" alt="GRUB2-1.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png)
+Unter Windows gibt es noch keine Möglichkeit, ein CD-Image von GRUB2 zu erstellen. Am besten nimmt man ein Fertiges. Dafür ist das Ändern des Images sehr einfach. Man lädt [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter, falls man Windows-User ist (das Programm ist Shareware und bis 300MB begrenzt). Wenn UltraISO heruntergeladen und installiert ist, sollte man folgende Dateien in einem Ordner haben: Das GRUB2.iso-Image, die grub.cfg und alle für das eigene OS nötigen Dateien (Kernel, Module, Programe etc.). Das sollte dann so ausehen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png" width="597" height="130" alt="GRUB2-1.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png)
 
 Die grub.cfg sollte folgenden inhalt haben: ` set timeout=15 set default=0 `
 
@@ -51,34 +51,34 @@ Die grub.cfg sollte folgenden inhalt haben: ` set timeout=15 set default=0 `
       multiboot /boot/kernel.elf   
       boot                         
 
-`} ` Wenn das der Fall ist. dann starte UltraISO und klicke auf den button :Weiterhin testen... Klicke oben link auf Datei-\>Öffnen navigiere in deinen Ordner wo die GRUB2.iso liegt und öffne diese dann. Dann sollte dein Fenster so ausehen: Navigire unten links in der Verzeichnissstruktur zu deinem Ordner mit der grub.cfg und deiner Kernel.elf. rechts unten sollte dannn der Inhalt angezeigt werden.
+`} ` Wenn das der Fall ist, UltraISO starten, den "Weiterhin testen..."-Button betätigen, auf Datei-\>Öffnen klicken und dann das GRUB2-Image auswählen und öffnen. Das Fenster sollte dan wie folgt aussehen: In der Verzeichnisstruktur zu dem Ordner mit der grub.cfg und den eigenen OS-Dateien wechseln. Das Fenster sollte dann den Inhalt des Ordners beinhalten.
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a96869af9be98ac5a13.png" width="839" height="489" alt="GRUB2-2.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a96869af9be98ac5a13.png)
 
-Kernel ins Image bringen: klicke oben links auf den ordner boot und klicke unten rechts auf die Kernel.elf. Klicke auf den makierten Button.
+Kernel ins Image bringen: Obenb Links auf den Ordner "boot" und unten rechts auf die eigene Kernel-Datei klicken. Klicke auf den makierten Button.
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png" width="838" height="490" alt="GRUB2-3.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png)
 
-grub.cfg ins Image bringen: klicke oben links auf das Plus neben dem Rrdner boot und klicke auf den Ordner Grub. Klicke unten rechts auf die grub.cfg. Klicke auf den makierten Button.
+grub.cfg ins Image bringen: Oben links auf das Plus neben dem Ordner "boot" klicken und dann auf den Ordner "Grub". Die grub.cfg auswählen und auf den markierten Button klicken.
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png" width="838" height="490" alt="GRUB2-3.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png)
 
-Nun klicke auf Datei-\>speichern
+Auf "Datei-\>Speichern" klicken.
 
-Jetzt kannst du dieses image benutzen um im Emulator oder auf echter Hardware zu booten. Achtung: bitte beachte das du jedesmal deinen kernel neu ins ISO intigrieren must, wenn du etwas daran verändert hast.
+Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu werden. Achtung: Bedanken, dass immer, wenn sich etwas am Kernel oder den Modulen ändert, diese erneut dem Image hinzugefügt werden müssen.
 
 ## grub.cfg
 
-Die grub.cfg Datei ist die neue konfigurationsdatei von GRUB2 sie ist das äquivalent zur grublst von GRUB legacy. Hir ein Beispiel. ` set timeout=15 set default=0 # Set the default menu entry `
+Die grub.cfg Datei ist die neue Konfigurationsdatei von GRUB2. Sie ist das Äquivalent zur grublst von GRUB legacy. Hier ein Beispiel: ` set timeout=15 set default=0 # Set the default menu entry `
 
 `menuentry "_OS_" { `
 
       multiboot /boot/kernel.elf   
       boot                         
 
-`} ` Diese konfigurationsdatei würde die Kerneldatei Kernel.elf aus dem order boot laden und danach ausführen.
+`} ` Diese Konfigurationsdatei würde die Kerneldatei Kernel.elf aus dem Ordner "boot" laden und danach ausführen.
 
-# == wichtige Befehle
+### wichtige Befehle
 
 | Befehl | Beschreibung |
 | ---------------------------------------------- | --------------------------------------------------------------- |
@@ -97,6 +97,6 @@ Die grub.cfg Datei ist die neue konfigurationsdatei von GRUB2 sie ist das äquiv
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7778/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
 
-<!-- MediaWiki page 2087; revision 7778; parent 7777; 2010-06-29T16:00:39Z -->
+<!-- MediaWiki page 2087; revision 7780; parent 7778; 2010-07-02T11:02:03Z -->
