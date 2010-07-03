@@ -25,6 +25,19 @@ Beim i386 bildet ein *Page Directory* einen Speicherkontext ab. Dabei handelt es
 
 Die Page Table ist anschließend dafür zuständig, innerhalb „ihrer“ 4 MB die Zuordnung der einzelnen 4K-Pages vorzunehmen. Beim Zugriff auf die Adresse 0x456789 wird also zunächst festgestellt, dass die Pagetable für den Bereich 4 bis 8 MB zuständig ist (0x400000 sind 4 MB), und ihre Adresse im Page Directory nachgeschlagen. Anschließend wird innerhalb der Page Table nachgeschlagen, was die physische Adresse für die Bytes 0x56000 bis 0x56fff dieses 4-MB-Blocks ist. Angenommen, die Page Table ordnet diesen die physische Adresse 0xabcde000 zu, dann liegt der gesuchte Speicher an 0xabcde789.
 
+Wie die CPU aus einer virtuellen die zugeordnete physikalische Adresse brechnet, soll folgende Grafik zeigen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/1b1a9ef3d397e97ab8da.jpg" width="700" height="332" alt="Paging funktionsweise.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg)
+
+Das Berechnen erfolgt folgendermaßen:
+
+1.  Page Directory suchen, anhand der Adresse in CR3
+2.  im Page Directory den Eintrag suchen, dessen Index in Bit 22-31 der virtuellen Adresse steht
+3.  dieser Eintrag zeigt auf eine Page Table
+4.  in dieser Page Table den Eintrag suchen, dessen Index in Bit 12-21 der virtuellen Adresse steht
+5.  dieser Eintrag wiederum zeigt auf eine Page
+6.  in dieser Page die gesuchten Daten suchen, deren Offset innerhalb dieser Page in den Bits 0-11 in der virtuellen Adresse steht
+
+(*Hinweis:* Bei Schritt 3 kann der Eintrag auch direkt auf einen 4MB Bereich ("Large Page") zeigen, siehe hierzu [Page Size Extension](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension"))
+
 ## Einschalten des Paging-Mechanismus
 
 Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 im CR0-Register setzen. Davor muss aber ein gültiges Page-Directory angelegt und dessen physische Adresse im CR3-Register abgelegt worden sein.
@@ -179,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7728/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7783/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 7728; parent 7715; 2010-06-04T19:39:13Z -->
+<!-- MediaWiki page 1496; revision 7783; parent 7728; 2010-07-03T11:39:20Z -->
