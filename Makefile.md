@@ -15,9 +15,10 @@ Da Makefiles zum Erstellen von Dateien direkte Compilerbefehle angeben, sind Mak
 - [Wikipedia zu make](http://de.wikipedia.org/wiki/Make)
 - [GNU Make Dokumentation](http://www.gnu.org/software/make/manual/html_node/index.html) (englisch)
 - [Ein Tutorial zu Makefiles](http://www.ijon.de/comp/tutorials/makefile.html)
+- [Ein ausfürliches Tutorial zu makefiles](http://www.selflinux.org/selflinux/html/make01.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
 
-<!-- MediaWiki page 1436; revision 5390; parent 5253; 2009-08-06T20:16:04Z -->
+<!-- MediaWiki page 1436; revision 7785; parent 5390; 2010-07-04T10:57:13Z -->
