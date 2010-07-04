@@ -2,11 +2,11 @@
 
 Ein **Makefile** ist eine Konfigurationsdatei für das Unix-Programm *make*. Eine der bekanntesten Implementierungen ist das freie GNU Make.
 
-Die Aufgabe von *make* ist es im Grunde genommen, dem Programmierer zu ermöglichen, ein Programm zu kompilieren, ohne alle Compilerbefehle von Hand eingeben zu müssen. Um ein Projekt, das mit Makefiles ausgestattet ist, zu bauen, muss man normalerweise nur in das Verzeichnis wechseln und den Befehl *make* eingeben. Im Gegensatz zu einem Shellscript, das genau die selbe Aufgabe erledigen könnte, prüft *make* jedoch, welche Dateien verändert wurden, und welche Komponenten darum neu gebaut werden müssen. Dadurch wird bei mehrfacher Kompilierung (z.B in der Entwicklung) viel Zeit gespart, weil nicht immer das ganze Programm neu kompiliert werden muss. Je größer das Projekt ist, desto mehr macht sich dieser Effekt deutlich.
+Die Aufgabe von *make* ist es im Grunde genommen, dem Programmierer zu ermöglichen, ein Programm zu kompilieren, ohne alle Compilerbefehle von Hand eingeben zu müssen. Um ein Projekt, das mit Makefiles ausgestattet ist, zu bauen, muss man normalerweise nur in das Verzeichnis wechseln und den Befehl *make* eingeben. Im Gegensatz zu einem Shellscript, das genau die selbe Aufgabe erledigen könnte, prüft *make* jedoch, welche Dateien verändert wurden, und welche Komponenten darum neu gebaut werden müssen. Dadurch wird bei mehrfacher Kompilierung (z. B. in der Entwicklung) viel Zeit gespart, weil nicht immer das ganze Programm neu kompiliert werden muss. Je größer das Projekt ist, desto mehr wird dieser Effekt deutlich.
 
-Um *make* diese Checks zu ermöglichen definiert der Programmierer in der Makefile seines Projekts Targets und Abhängigkeiten zwischen diesen. Die Targets sind im einfachsten Falle Dateien (z.B. Source-, Header- und Objektdateien), können aber auch abstrakte Objekte wie Module sein. Das jeweilige Target definiert dann einen Befehl, mit dem die Target-Datei eben aus den Abhängigkeiten erstellt wird.
+Um *make* diese Checks zu ermöglichen definiert der Programmierer in der Makefile seines Projekts Targets und Abhängigkeiten zwischen diesen. Die Targets sind im einfachsten Falle Dateien (z. B. Source-, Header- und Objektdateien), können aber auch abstrakte Objekte wie Module sein. Das jeweilige Target definiert dann einen Befehl, mit dem die Target-Datei eben aus den Abhängigkeiten erstellt wird.
 
-Dies ist jedoch nur die Grundidee von *make*. Für weitergehende Informationen empfiehlt sich die Lektüre der vielen im Internet verfügbaren Tutorials sowie natürlich die GNU Make Dokumentation.
+Dies ist jedoch nur die Grundidee von *make*. Für weitergehende Informationen empfiehlt sich die Lektüre der vielen im Internet verfügbaren Tutorials sowie natürlich die GNU-Make-Dokumentation.
 
 Da Makefiles zum Erstellen von Dateien direkte Compilerbefehle angeben, sind Makefiles sehr plattformabhängig. Abhilfe schaffen die Autotools oder CMake.
 
@@ -15,10 +15,10 @@ Da Makefiles zum Erstellen von Dateien direkte Compilerbefehle angeben, sind Mak
 - [Wikipedia zu make](http://de.wikipedia.org/wiki/Make)
 - [GNU Make Dokumentation](http://www.gnu.org/software/make/manual/html_node/index.html) (englisch)
 - [Ein Tutorial zu Makefiles](http://www.ijon.de/comp/tutorials/makefile.html)
-- [Ein ausfürliches Tutorial zu makefiles](http://www.selflinux.org/selflinux/html/make01.html)
+- [Ein ausführliches Tutorial zu Makefiles](http://www.selflinux.org/selflinux/html/make01.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7786/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1436/index.html)
 
-<!-- MediaWiki page 1436; revision 7785; parent 5390; 2010-07-04T10:57:13Z -->
+<!-- MediaWiki page 1436; revision 7786; parent 7785; 2010-07-04T11:08:29Z -->
