@@ -163,7 +163,7 @@ void \*operator new\[\]( size_t size ) {
 
 }
 
-void operator delete( void \*ojb ) {
+void operator delete( void \*obj ) {
 
      kfree( obj );
 
@@ -240,6 +240,6 @@ gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7554/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7554; parent 7549; 2010-04-11T14:58:26Z -->
+<!-- MediaWiki page 1486; revision 7791; parent 7554; 2010-07-05T13:21:44Z -->
