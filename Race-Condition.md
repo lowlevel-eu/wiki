@@ -72,10 +72,10 @@ Um mit Race Conditions umzugehen gibt es im Grunde genommen zwei Lösungen:
 
 Im Fall des Druckers ist die Einrichtung eines Spooler-Prozesses am häufigsten verbreitet. Nur der Spooler allein darf überhaupt auf den Drucker zugreifen. Alle Druckaufträge werden an den Spooler geschickt und dann von diesem speziellen Prozess nacheinander an den Drucker geschickt. So kommt es natürlich nicht zu Race Conditions. Jedoch wird es nicht bei jeder Ressource möglich sein, einem Prozess den exklusiven Zugriff zu verleihen.
 
-In anderen Fällen wird man versuchen, das Sperren der Ressource "atomar" zu gestalten, das heißt, nach einer Anweisung, die nicht unterbrochen werden kann, ist die Ressource gesperrt. Wenn die Ressource blockiert ist, wird der Prozess ebenfalls blockiert, und bei Freigabe der Ressource wieder aufgeweckt. Dies wird zum Beispiel durch Semaphoren umgesetzt, die eine atomare Funktion zum Sperren und Freigeben bereitstellen. Diese sind vom Betriebssystem privilegiert (z.B. indem sie als Syscall implementiert werden) und werden daher garantiert nicht vom Scheduler unterbrochen.
+In anderen Fällen wird man versuchen, das Sperren der Ressource „atomar“ zu gestalten, das heißt, nach einer Anweisung, die nicht unterbrochen werden kann, ist die Ressource gesperrt. Wenn die Ressource blockiert ist, wird der Prozess ebenfalls blockiert, und bei Freigabe der Ressource wieder aufgeweckt. Dies wird zum Beispiel durch Semaphoren umgesetzt, die eine atomare Funktion zum Sperren und Freigeben bereitstellen. Diese sind vom Betriebssystem privilegiert (z. B. indem sie als Syscall implementiert werden) und werden daher garantiert nicht vom Scheduler unterbrochen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7790/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
 
-<!-- MediaWiki page 2013; revision 7787; parent 7768; 2010-07-04T22:17:32Z -->
+<!-- MediaWiki page 2013; revision 7790; parent 7787; 2010-07-05T09:26:03Z -->
