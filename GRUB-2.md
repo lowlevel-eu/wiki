@@ -87,7 +87,7 @@ Die grub.cfg Datei ist die neue Konfigurationsdatei von GRUB2. Sie ist das Äqui
 
 ## Siehe auch
 
-- \[GRUB\]
+- [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
 
   
 
@@ -97,6 +97,6 @@ Die grub.cfg Datei ist die neue Konfigurationsdatei von GRUB2. Sie ist das Äqui
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7789/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2087/index.html)
 
-<!-- MediaWiki page 2087; revision 7780; parent 7778; 2010-07-02T11:02:03Z -->
+<!-- MediaWiki page 2087; revision 7789; parent 7780; 2010-07-05T06:59:43Z -->
