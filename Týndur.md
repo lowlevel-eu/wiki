@@ -34,7 +34,7 @@ Die übliche Variante, týndur ans Laufen zu bekommen, ist, eine aktuelle Entwic
 
 - [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")
 - Speichermedien: Festplatte, CD-ROM, Diskette
-- Dateisysteme: [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), iso9660
+- Dateisysteme: [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
 - Netzwerkkarten: [rtl8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139"), sis900, ne2k, e1000, [pcnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
 - So gut wie alle Treiber benutzen das [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), um Treiber mit anderen Betriebssystemen austauschen zu können
 - Eigene Programme:
@@ -105,6 +105,6 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7753/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7753; parent 7751; 2010-06-13T08:22:33Z -->
+<!-- MediaWiki page 1796; revision 7797; parent 7753; 2010-07-08T17:53:29Z -->
