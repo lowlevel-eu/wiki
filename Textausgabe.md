@@ -61,9 +61,9 @@ Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe co
 
 ##### Erläuterung
 
-Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2 Byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin uint8_t benutzt, müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischem Oder mit dem Zeichenbyte verknüpfen.
+Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2 Byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird mit der obengenannten Formel die Adresse ausgerechnet. Würde man uint8_t benutzen, müsste man dann mit 2 multiplizieren, denn jedes Zeichen benutzt 2 Byte. Man setzt das Zeichen, indem man das Attribute-Byte auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornimmt und per logischem Oder mit dem Zeichenbyte verknüpft.
 
-Achtung: Das Attributebyte kommt zwar immer nach dem Zeichenbyte, aber wir benutzen hier ein Word und arbeiten ja auf einem [Little-Endian](http://de.wikipedia.org/wiki/Byte-Reihenfolge)-System.
+Achtung: Das Attributebyte kommt zwar immer nach dem Zeichenbyte, aber x86 ist ein [Little-Endian](http://de.wikipedia.org/wiki/Byte-Reihenfolge)-System.
 
 Nochmal eine Veranschaulichung der Oder-Verknüpfung:
 
@@ -122,6 +122,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfac
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7802; parent 7614; 2010-07-12T20:13:12Z -->
+<!-- MediaWiki page 1549; revision 7803; parent 7802; 2010-07-12T20:17:05Z -->
