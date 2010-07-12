@@ -8,8 +8,6 @@ Die Textausgabe ist für so gut wie jedes Programm eine wichtige Möglichkeit, d
 | Benötigtes Vorwissen: | *keins* |
 | Sprache: | C |
 
-  
-
 ## Anwendung
 
 ### Protected Mode
@@ -122,6 +120,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfac
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7803; parent 7802; 2010-07-12T20:17:05Z -->
+<!-- MediaWiki page 1549; revision 7804; parent 7803; 2010-07-12T21:01:11Z -->
