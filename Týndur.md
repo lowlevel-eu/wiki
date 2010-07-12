@@ -84,13 +84,13 @@ Seit dem 27. Mai 2007 ist ein neuer Kernel (kernel2 genannt) in Arbeit, welcher 
 
 *→ Hauptartikel: [Týndur/Versionen](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Versionen "Týndur/Versionen")*
 
-| Version | Datum | Wesentliche Merkmale |
-| --------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0.1.0 | 03.05.2007 | Einfacher Mikrokernel mit Speicherverwaltung, Multitasking und RPC. Im Usermode Tastatur-, Disketten- und FAT-Treiber und eine einfache Shell. |
-| 0.1.1 | 24.12.2007 | Texteditor, experimentelle Netzwerkunterstützung, Performance |
-| 0.2.0 | 24.12.2008 | Festplatten- und ext2-Treiber. Portierte Programme wie FPC, gcc und nano. Erstes Release mit der Treiberschnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"). |
-| 0.2.1 | 05.07.2009 | CD-ROM, UTF-8, zusätzliche portierte Programme (lynx, dropbear, Subversion) |
-| 0.2.2 | 25.12.2009 | Erstes Release mit Live-CD und Internationalisierung. setup ist neu. Erstes Release, das seinen eigenen Kernel kompilieren kann. |
+| Version | Datum | Wesentliche Merkmale | Download |
+| --------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0.1.0 | 03.05.2007 | Einfacher Mikrokernel mit Speicherverwaltung, Multitasking und RPC. Im Usermode Tastatur-, Disketten- und FAT-Treiber und eine einfache Shell. |  |
+| 0.1.1 | 24.12.2007 | Texteditor, experimentelle Netzwerkunterstützung, Performance |  |
+| 0.2.0 | 24.12.2008 | Festplatten- und ext2-Treiber. Portierte Programme wie FPC, gcc und nano. Erstes Release mit der Treiberschnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"). | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.0-gothmog-floppy.img.bz2 "Floppy") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.0-gothmog-hd.img.bz2 "HD-Image") |
+| 0.2.1 | 05.07.2009 | CD-ROM, UTF-8, zusätzliche portierte Programme (lynx, dropbear, Subversion) | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.1-gothmog-floppy.img.bz2 "Floppy") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.1-gothmog-hd.img.bz2 "HD-Image") |
+| 0.2.2 | 25.12.2009 | Erstes Release mit Live-CD und Internationalisierung. setup ist neu. Erstes Release, das seinen eigenen Kernel kompilieren kann. | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8707bdeb48a151166527.png" width="16" height="16" alt="CD" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.2-gothmog-livecd-full.iso.bz2 "CD") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.2-gothmog-hd.img.bz2 "HD-Image") |
 
 ## Screenshots
 
@@ -105,6 +105,6 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7797; parent 7753; 2010-07-08T17:53:29Z -->
+<!-- MediaWiki page 1796; revision 7818; parent 7797; 2010-07-12T21:57:18Z -->
