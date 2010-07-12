@@ -1,26 +1,26 @@
 # Textausgabe
 
+Die Textausgabe ist für so gut wie jedes Programm eine wichtige Möglichkeit, dem User oder Programmierer Informationen über sich mitzuteilen bzw. generell Output auszugeben. Auch und gerade für ein Betriebssystem ist es auch schon in einer sehr frühen Phase wichtig, dass es Informationen per Textausgabe ausgeben kann um z. B. anzuzeigen, ob diverse Aufgaben gelungen sind oder nicht.
+
 | Textausgabe ohne BIOS |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | **Schwierigkeit**: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)<br> |  |
 | Benötigtes Vorwissen: | *keins* |
 | Sprache: | C |
 
-Die Textausgabe ist für so gut wie jedes Programm eine wichtige Möglichkeit, dem User oder Programmierer Informationen über sich mitzuteilen bzw. generell Output auszugeben. Auch und gerade für ein Betriebssystem ist es auch schon in einer sehr frühen Phase wichtig, dass es Informationen per Textausgabe ausgeben kann um z. B. anzuzeigen, ob diverse Aufgaben gelungen sind oder nicht.
+  
 
-Folgend wird nun beschrieben, wie man im Protected Mode Text auf dem Bildschirm ausgeben kann.
+## Anwendung
 
-## Textspeicher
+### Protected Mode
 
 Zur Ausgabe von Text gibt es einen 4 kB großen Speicher an der Adresse 0xB8000. Dieser Speicher kann linear angesprochen werden und benutzt 2 Byte pro Zeichen auf dem Bildschirm. Es ergeben sich also 80 Spalten (Zeichen pro Zeile) und 25 Zeilen, insgesamt also 2000 gleichzeitig darstellbare Zeichen.
 
-## Schreiben in den Textspeicher
-
-Um nun auf dem Bildschirm ein Zeichen auszugeben, muss erstmal das Offset ausgerechnet werden, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s o steht für das Offset, z für die Zeile und s für die Spalte.
+Um nun auf dem Bildschirm ein Zeichen auszugeben, muss erstmal das Offset ausgerechnet werden, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s, wobei o für das Offset, z für die Zeile und s für die Spalte steht
 
 In dem ersten Byte wird der Buchstabe selbst, in dem 2. Byte wird das Attribut, also die Vorder- und Hintergrundfarbe gespeichert. Als Code wird [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437") verwendet, welche eine Erweiterung von [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII") darstellt.
 
-## Attribut-Byte
+#### Attribute-Byte
 
 Das Attribute-Byte ist wie folgt aufgebaut:
 
@@ -37,15 +37,15 @@ BXXXYYYYb, Hierbei ist X die Hintergrundfarbe, Y die Vordergrundfarbe und B das 
 | 0x6 | Braun | 0xE | Gelb |
 | 0x7 | Hellgrau | 0xF | Weiß |
 
-Nebenbei bemerkt: Die inoffizielle Standardfarbe ist 0x07, Hellgrau auf Schwarz.
+Häufig benutzt wird 0x07, Hellgrau auf Schwarz.
 
-### Blinken
+##### Blinken
 
 Man kann sich nicht darauf verlassen, dass das höchstwertige Bit des Attributbytes wirklich anzeigt, ob das Zeichen blinken soll oder nicht. Bei einigen Computern ist dieses Bit einfach das höherwertige Bit der Hintergrundfarbe, sodass man hier auch helle Farben als Hintergrund verwenden kann.
 
 Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Color Graphics Adapter](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter#16-hintergrundfarben "Color Graphics Adapter").
 
-## Beispiel
+#### Beispiel
 
 Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
 
@@ -59,7 +59,7 @@ Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe co
 
 } \</c\>
 
-Erläuterung des Codes:
+##### Erläuterung
 
 Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2 Byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird die Adresse ausgerechnet, mit der oben genannten Formel. Hätten wird vorhin uint8_t benutzt, müssten wir jetzt noch mit 2 multiplizieren, da ja jedes Zeichen 2 Byte benutzt. Das Setzen des Zeichens machen wir, indem wir einfach das Attribute auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornehmen und per logischem Oder mit dem Zeichenbyte verknüpfen.
 
@@ -72,17 +72,19 @@ Nochmal eine Veranschaulichung der Oder-Verknüpfung:
     <<8       "
     0x0700 | 0x41 = 0x0741
 
-## Bildschirm scrollen
+  
+
+### Bildschirm scrollen
 
 Um den Bildschirm zu scrollen muss einfach der gesamte Textspeicher ab der 2. Zeile zur 1. Zeile kopiert werden und die letzte Zeile gelöscht werden, also auf 0 oder einen sonstigen Wert setzen. Wenn man eine memmove- und eine memset-Funktion bzw. eine memsetw-Funktion bei einem Attributbyte != 0 hat, geht das in ein paar Zeilen. Denn die Funktion memcpy muss für sich überlappende Speicherbereiche nicht das gewünschte Ergebnis erzielen.
 
-## Cursor
+### Cursor
 
-Einigen wird schon aufgefallen sein, dass auf dem Bildschirm ein Unterstrich ist, wo keiner sein sollte. Also zumindest wo keiner im Textspeicher ist. Das ist der Bildschirmcursor, der vom BIOS zur Verfügung gestellt wird. Ich will nicht lange darauf eingehen, ich stelle nur eine Funktion zum Verschieben und zum „Löschen“ des Cursors zur Verfügung. Ich selber benutze ihn nicht, da das Verschieben des Cursors wirklich lahm geht ([“Keep in mind that in/out to VGA Hardware is a slow operation”](http://www.osdev.org/wiki/Text_Mode_Cursor)), es ist aber jedem selbst überlassen.
+Das BIOS stellt ein Cursor zur Verfügung, dessen Verschiebung relativ lange dauert.([“Keep in mind that in/out to VGA Hardware is a slow operation”](http://www.osdev.org/wiki/Text_Mode_Cursor))
 
-Hier eine Funktion zum Verschieben des Cursors (dies kann im Real Mode auch mit Int 0x10,0x02 gemacht werden). In dem Artikel [I/O Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") wird genauer erklärt, was es mit den hier verwendeten I/O Ports auf sich hat.
+#### Verschieben des Cursors
 
-\<c\> void displaycursor(uint8_t col, uint8_t row) {
+Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint8_t row) {
 
      uint16_t tmp;
      tmp = row * VIDEOTEXT_WIDTH + col;
@@ -93,7 +95,11 @@ Hier eine Funktion zum Verschieben des Cursors (dies kann im Real Mode auch mit 
 
 } \</c\>
 
+#### Löschen des Cursors
+
 Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfach in die 26. Zeile setzen (diese gibt es nämlich nicht). Das geht natürlich genau so wie in der eben genannten Funktion, aber dies hier ist die direkte Variante:
+
+##### Beispiel
 
 \<c\> void removecursor() {
 
@@ -116,6 +122,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfac
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7614/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7614; parent 7564; 2010-04-19T20:45:54Z -->
+<!-- MediaWiki page 1549; revision 7802; parent 7614; 2010-07-12T20:13:12Z -->
