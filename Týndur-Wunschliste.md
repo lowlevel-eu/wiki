@@ -6,7 +6,14 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 - Umstellung auf kernel2
 - Syscall damit Prozess für jeden abgestorbenen Prozess einen RPC erhält (Wichtig u.a. um bei unsauber beendeten Programmen aufräumen zu können - alternativ folgt irgendwann ein OOM)
-- Mehr Dokumentation in kernel2, auf tyndur wird oft als Beispiel verwiesen und eines seiner ursprünglichen Ziele ist auch, daß es dabei hilfreich sein soll. In den Code könnte man oft fast eine Art Tutorial als Kommentar einbetten.
+- Mehr Dokumentation in kernel2, auf týndur wird oft als Beispiel verwiesen und eines seiner ursprünglichen Ziele ist auch, dass es dabei hilfreich sein soll. In den Code könnte man oft fast eine Art Tutorial als Kommentar einbetten.
+
+<!-- -->
+
+- Idee: Eine Art "Code-Walkthrough". Das habe ich mal bei einem Open-Source-Spiel gesehen ([Unknown Horizons](http://www.unknown-horizons.org) falls es wen interessiert), da werden im Code halt Kommentarmarken platziert, die einen neuen Programmierer in logisch sinnvoller Reihenfolge durch den Kern-Code führen, um den Einstieg zu erleichtern. Ist wohl schwer zu warten, aber das ist ja eh nur eine Wunschliste.
+
+<!-- -->
+
 - LostIOv2 als neues, kernelbasiertes virtuelles Dateisystem soll das bisherige LostIO, das im Userspace läuft, ablösen und sowohl eine sauberere Schnittstelle bereitstellen als auch die Performance verbessern
 - Portierung auf amd64
 - FPU-Unterstützung
@@ -57,6 +64,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 6030; parent 5913; 2009-10-12T21:25:27Z -->
+<!-- MediaWiki page 1513; revision 7810; parent 6030; 2010-07-12T21:30:33Z -->
