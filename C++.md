@@ -187,7 +187,9 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ### C++ Funktionen aus C/Assembler nutzen
 
-Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* - dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut - deaktivieren für diese Funktion. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\> extern "C" void foobar(int i, char\* s); \</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
+Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* - dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut - deaktivieren für diese Funktion. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\>extern "C" void foobar(int i, char\* s);\</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
+
+Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überladen, das würde beim Linken zu ernsten Problemen führen. Folgendes Beispiel funktioniert also nicht: \<cpp\>extern "C" void foobar(int i, char\* s); extern "C" void foobar(int i, double\* d);\</cpp\> Der Linker würde 2 Funktionen mit dem Namen 'foobar' finden und könnte das ganze nicht mehr linken und auch nicht feststellen welche Funktion die Aufrufer jeweils meinen.
 
 ### designated initializers
 
@@ -240,6 +242,6 @@ gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7791; parent 7554; 2010-07-05T13:21:44Z -->
+<!-- MediaWiki page 1486; revision 7831; parent 7791; 2010-07-13T14:55:18Z -->
