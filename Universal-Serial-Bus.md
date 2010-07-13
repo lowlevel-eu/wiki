@@ -745,7 +745,7 @@ Die erste Enumeration kann anfangs schwierig erscheinen: Eventuell hängen mehre
 1.  Zuerst werden alle Rootports deaktiviert, der Strom wird ggf. eingeschaltet, dann müssen dem Gerät 100 ms gegeben werden, bis es stabil ist.
 2.  Anschließend wird ein Rootport aktiviert, hängt daran ein Hub, gehe zu Schritt 4
 3.  Das Gerät ist kein Hub, also wird es normal enumeriert. Gehe danach zu Schritt 2.
-4.  Das Gerät ist ein Hub. Enumeriere ihn, gehe dann zu Schritt 1 und behandele seine Ports als Rootports (nach dem Ende des Untersuchen des Hubs gehe hierhin zurück). Gehe dann wieder zu Scrhitt 2.
+4.  Das Gerät ist ein Hub. Enumeriere ihn, gehe dann zu Schritt 1 und behandele seine Ports als Rootports (nach dem Ende des Untersuchen des Hubs gehe hierhin zurück). Gehe dann wieder zu Schritt 2.
 
 Mit dieser Schrittfolge wird gewährleistet, dass immer nur ein Gerät die Adresse 0 hat und somit keine Konflikte auftreten können.
 
@@ -1123,6 +1123,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7828/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7828; parent 7542; 2010-07-13T11:17:56Z -->
+<!-- MediaWiki page 1690; revision 7829; parent 7828; 2010-07-13T11:23:37Z -->
