@@ -16,7 +16,7 @@ Der Zugriff auf Treiber mit einer LostIO-Schnittstelle erfolgt über die Standar
 
 ### Treiber
 
-Auf der Treiberseite baut LostIO auf einem Dateisystem-Baum (Intern als vfstree benannt) im Speicher auf. Dieser Baum besteht aus sogenannten Knoten(engl. nodes), die alle wieder Kinderknoten haben können. Jeder dieser Knoten hat einen bestimmten Typ, der für die Handhabung dessen eine zentrale Rolle spielt. Dabei ist ein Verzeichnis vom Prizip her genau das selbe wie jede andere Datei. In den Knoten wird dabei nur eine Typen-ID abgespeichert. Wird nun von einem Prozess versucht irgend eine Datei oder ein Verzeichnis zu öffnen und auszulesen, wird intern in der Typendatenbank nach dem Typen des zu öffnenden Knotens gesucht, um herauszufinden, wie die Aktion gehandhabt werden muss.
+Auf der Treiberseite baut LostIO auf einem Dateisystem-Baum (Intern als vfstree benannt) im Speicher auf. Dieser Baum besteht aus sogenannten Knoten(engl. nodes), die alle wieder Kinderknoten haben können. Jeder dieser Knoten hat einen bestimmten Typ, der für die Handhabung dessen eine zentrale Rolle spielt. Dabei ist ein Verzeichnis vom Prinzip her genau das selbe wie jede andere Datei. In den Knoten wird dabei nur eine Typen-ID abgespeichert. Wird nun von einem Prozess versucht irgend eine Datei oder ein Verzeichnis zu öffnen und auszulesen, wird intern in der Typendatenbank nach dem Typen des zu öffnenden Knotens gesucht, um herauszufinden, wie die Aktion gehandhabt werden muss.
 
 Die Typendatenbank beinhaltet die sogenannten Typehandles. Darin sind Pointer auf die Funktionen, die ausgeführt werden, wenn ein Prozess zum Beispiel versucht Daten von einem Knoten dieses Typs zu lesen. Momentan können Handler (eben diese Funktionen) für die folgenden Aktionen eingetragen werden:
 
@@ -282,6 +282,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7824/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 7799; parent 4818; 2010-07-11T15:30:00Z -->
+<!-- MediaWiki page 1498; revision 7824; parent 7799; 2010-07-13T08:11:51Z -->
