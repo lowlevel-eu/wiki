@@ -4,11 +4,11 @@ Der Scheduler hat die Aufgabe festzustellen welcher Prozess als nächstes CPU-Ze
 
   
 
-# kooperativ (non-preemptive)
+## kooperativ (non-preemptive)
 
 Prozesse geben Kontrolle freiwillig ab. Kooperierened Scheduling-Strategien sind für Dialogbetrieb weniger und für Echtzeit-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Deshalb wird bei päemptiven Scheduling-Strategien das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch routinemäßig statt.
 
-## FCFS - First Come First Served
+### FCFS - First Come First Served
 
 Prozesse werden in der Reihenfolge in der sie erstellt werden abgearbeitet. Erst wenn der erste beendet ist kommt der nächste an die Reihe. Bsp:
 
@@ -27,7 +27,7 @@ Nachteile:
 
 - kurz laufende Prozesse müssen u.U. sehr lange warten, daher für Dialogsysteme nicht geeignet.
 
-## SJF - Smallest Job First
+### SJF - Smallest Job First
 
 Prozess mit küzester Bedienzeit kommt zuerst. Bsp:
 
@@ -46,7 +46,7 @@ Nachteile:
 - lang laufene Prozesse müssen evt sehr lange warten
 - größerer Verwaltungsaufwand
 
-## Priority scheduling
+### Priority scheduling
 
 Reihenfolge nach Priorität der Prozesse. Prioritäten können statisch oder dynamisch vergeben werden.
 
@@ -59,11 +59,11 @@ Nachteile:
 - bei statischer Prioritätsvergabe evt ´Aushungern´ von Prozessen
 - Vergabe der Prioritäten nicht einfach
 
-# präemptiv (preemptive)
+## präemptiv (preemptive)
 
 OS holt sich Kontrolle selbst zurück (Interrupt)
 
-## Round Robin
+### Round Robin
 
 Alle Prozesse werden gleichberechtigt. Ein Prozess kommt nach dem Anderen an die Reihe. Jeder Prozess wird nach einer festen Zeit gestoppt und der nächste gestartet. Bsp
 
@@ -83,11 +83,11 @@ Nachteile:
 
 - langlaufende Prozesse müssen bis zu ihrem Ende lange warten
 
-## Round Robin (mit Prioritäten)
+### Round Robin (mit Prioritäten)
 
 Jeder Prozess bekommt zu Anfang nach Priorität eine gewisse Zeit (Ausführzeit) zugeordnet. Dabei sollte die Zeit gleich oder ein Vielfaches der Scheduler-Frequenz (Die Frequenz in der der Scheduler aufgerufen wird) sein. Die Prozesse werden wie beim "normalen" [Round Robin](#round-robin) nacheinander ausgeführt. Diesmal wird aber zum nächsten Prozess erst gewechselt, wenn beim vorherigen die Ausführzeit abgelaufen ist.
 
-## Scheduling mit "Prioritätswarteschlangen"
+### Scheduling mit "Prioritätswarteschlangen"
 
 Die Prozesse werden in Klassen eingeteilt, bei denen jeder Prozess einem, seiner Klasse entsprechenden Anteil Rechenleistung zugeteilt bekommt. Der höchsten Klasse wird am wenigsten Rechenleistung zugeteilt. Je niedriger die Klasse, desto höher ist der Anteil der Rechenleistung für den Prozess. Ein Prozess steigt einen Rang ab, wenn er vom Scheduler "gestoppt" werden muss. Andernfalls steigt der Prozess einen Rang auf. Hierzu ein Beispiel:
 
@@ -97,6 +97,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 7697; parent 7696; 2010-05-17T11:51:09Z -->
+<!-- MediaWiki page 1711; revision 7837; parent 7697; 2010-07-13T15:34:25Z -->
