@@ -18,6 +18,8 @@ Beispiel: ''kursiv'' und '''fett''' wird zu *kursiv* bzw. **fett**
 
 === Zweite Überschriftsebene ===
 
+Überschriften, die von nur einem Gleichheitszeichen umschlossen sind, existieren zwar auch, werden aber in den Artikeln **nicht** benutzt, da diese eine Überschrift erster Ordnung darstellen und damit semantisch auf der selben Ebene wie die Artikelüberschrift ständen.
+
 ### Inhaltsverzeichnis
 
 Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert die MediaWiki-Software automatisch ein Inhaltsverzeichnis. Dieses wird vor der ersten Überschrift (also nach den einleitenden Absätzen) platziert.
@@ -184,6 +186,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7809/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 7809; parent 7603; 2010-07-12T21:18:55Z -->
+<!-- MediaWiki page 2049; revision 7839; parent 7809; 2010-07-13T15:40:24Z -->
