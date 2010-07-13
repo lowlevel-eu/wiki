@@ -32,8 +32,8 @@ Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie mög
 
 #### Unverzichtbar
 
-- Programmiererfahrung. Wenn du noch nie ein Programm geschrieben hast, bist du hier ziemlich sicher falsch. Wenn du einen Einstieg suchst, dann werden dir die Lowlevel-Forenmitglieder sicher trotzdem dabei helfen, Tutorials und Ressourcen zum Einstieg zu finden.
-- Gute Kenntnis des Systems. Wenn du regelmäßig mit der Bedienung deines Betriebssystems kämpfst, dann ist es schwer, dabei Arbeit getan zu kriegen. Ein Windowsnutzer braucht eventuell sogar mehr Erfahrung als ein Linuxer, da sich manche Tools auf Windows zu Beginn recht zickig verhalten können.
+- Programmiererfahrung! Wenn du noch nie ein Programm geschrieben hast, bist du hier ziemlich sicher falsch. Das Programmieren eines richtigen Betriebssystems ist keine Anfängerübung zum erlernen des Programmierens, ein gewisser Level an Programmiererfahrungen ist dafür zwingenst erforderlich. Wenn du einen Einstieg in das Programmieren eines eigenen Betriebssystems suchst, dann werden dir die Lowlevel-Forenmitglieder sicher trotzdem dabei helfen, Tutorials und Ressourcen zu finden.
+- Gute Kenntnis des Systems und der benutzten Tools, also Compiler, Linker und deren Kollegen. Wenn du regelmäßig mit der Bedienung deines Betriebssystems oder der benötigten Programmierwerkzeuge kämpfst, dann ist es schwer, dabei Arbeit getan zu kriegen. Ein Windowsnutzer braucht eventuell sogar mehr Erfahrung als ein Linuxer, da sich manche Tools auf Windows zu Beginn recht zickig verhalten können.
 - Neugier und Geduld. Vermutlich die heimlichen Kernqualifikationen jedes Programmierers. Ohne Neugier und Geduld wird es schwer, die Frustrationen der Betriebssystementwicklung zu überstehen.
 - Umrechnen zwischen Zahlensystemen. Beim OS-Dev muss man häufig zwischen Dezimal-, Hexadezimal-, Oktal- und Binärsystem umrechnen, um die richtigen Bits zu setzten/löschen. Eine gute und kurze Anleitung dazu gibt es z.B. [hier](http://www.linuxhilfen.org/c/c_aufsteiger_zahl.html). Nachdem du verstanden hast wie es funktioniert und es mehrmals auf Papier geübt hast, kannst du natürlich auch z.B. den Windowstaschenrechner im "wissenschaftlichen Modus" zum Umrechnen benutzen.
 - Bitweise Operatoren. Man sollte wissen, wie man einzelne Bits innerhalb einer Variable löscht und setzt. Der Artikel [Bitweise Operatoren](https://github.com/lowlevel-eu/wiki/wiki/Bitweise-Operatoren "Bitweise Operatoren") bietet hier das nötige Wissen.
@@ -168,6 +168,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7598/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 7598; parent 7436; 2010-04-19T14:11:02Z -->
+<!-- MediaWiki page 1619; revision 7833; parent 7598; 2010-07-13T15:19:40Z -->
