@@ -81,7 +81,9 @@ und Verknüpfst dein Byte per AND mit dem Resultat
 
     (????????b AND 11011111b) = ??0?????b
 
-Das ganze funktioniert natürlich auch mit mehreren Bits gleichzeitig. C-Code: \<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
+Das ganze funktioniert natürlich auch mit mehreren Bits gleichzeitig.
+
+C-Code: \<c\>PORTx &= ~(1 \<\< BitNummer); // Bit in PORTx löschen\</c\>
 
 ### Bits setzen
 
@@ -101,6 +103,6 @@ C-Code: \<c\>if (PORTx & (1 \<\< BitNummer) == 0) //bit gelöscht else //bit ges
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1757/index.html)
 
-<!-- MediaWiki page 1757; revision 7428; parent 6155; 2010-03-28T17:59:25Z -->
+<!-- MediaWiki page 1757; revision 7835; parent 7428; 2010-07-13T15:26:32Z -->
