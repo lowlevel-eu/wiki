@@ -6,8 +6,6 @@
 | Benötigtes Vorwissen: | *[keins\*](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger#voraussetzungen "OS-Dev für Einsteiger")* |
 | Sprache: | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"),[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 
-## Worum geht es in diesem Tutorial?
-
 In diesem Tutorial geht es um das Portieren von Programmen und Bibliotheken aufs eigene Betriebssystem. Es macht wenig Sinn, alle Programme neu zu schreiben, weil es diese schon zu hunderten gibt.
 
 ## Vorbereitung
@@ -56,6 +54,6 @@ Ich verwende als Beispiel die Version 1.2.5.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
 
-<!-- MediaWiki page 2256; revision 7848; parent 7847; 2010-07-14T15:45:03Z -->
+<!-- MediaWiki page 2256; revision 7852; parent 7848; 2010-07-14T19:30:42Z -->
