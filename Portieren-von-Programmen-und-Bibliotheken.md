@@ -36,7 +36,7 @@ Ich verwende als Beispiel die Version 1.69.14.
 
 \<stdio.h\> \<c\> FILE \*fopen(const char \*filename, const char \*mode); int fclose( FILE \*stream); size_t fread ( void \* ptr, size_t size, size_t count, FILE \* stream ); size_t fwrite ( const void \* ptr, size_t size, size_t count, FILE \* stream ); int fseek ( FILE \* stream, long int offset, int origin ); long int ftell ( FILE \* stream ); \</c\>
 
-\<c\> size_t write(int fd, const void \*buf, size_t count); \</c\>
+\<unistd.h\> \<c\> size_t write(int fd, const void \*buf, size_t count); \</c\>
 
   
 
@@ -52,6 +52,6 @@ Ich verwende als Beispiel die Version 1.2.5.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7845/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7846/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
 
-<!-- MediaWiki page 2256; revision 7845; parent 0; 2010-07-14T15:25:20Z -->
+<!-- MediaWiki page 2256; revision 7846; parent 7845; 2010-07-14T15:28:18Z -->
