@@ -38,7 +38,13 @@ Ich verwende als Beispiel die Version 1.69.14.
 
 \<unistd.h\> \<c\> size_t write(int fd, const void \*buf, size_t count); \</c\>
 
-  
+wenn du alle diese Funktionen in deine rlibc implementiert hast kannst du weiterlesen ansonsten solltest du erstmal alle Funktionen implementieren
+
+##### Bauen
+
+Du brauchst FASM, LD und deine libc als .a Datei.
+
+zuerst assembilierst du Fasm mit FASM fasm.asm fasm.o danach linkst du die fasm.o gegen deine libc.a
 
 ### Bibliotheken
 
@@ -52,6 +58,6 @@ Ich verwende als Beispiel die Version 1.2.5.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7846/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7847/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
 
-<!-- MediaWiki page 2256; revision 7846; parent 7845; 2010-07-14T15:28:18Z -->
+<!-- MediaWiki page 2256; revision 7847; parent 7846; 2010-07-14T15:36:48Z -->
