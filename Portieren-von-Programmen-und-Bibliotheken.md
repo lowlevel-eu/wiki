@@ -6,7 +6,7 @@
 | Benötigtes Vorwissen: | *[keins\*](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger#voraussetzungen "OS-Dev für Einsteiger")* |
 | Sprache: | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"),[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 
-In diesem Tutorial geht es um das Portieren von Programmen und Bibliotheken aufs eigene Betriebssystem. Es macht wenig Sinn, alle Programme neu zu schreiben, weil es diese schon zu hunderten gibt.
+In diesem Tutorial geht es um das Portieren von Programmen und Bibliotheken aufs eigene Betriebssystem. Es ist nicht sehr sinnvoll, alle Programme neu zu schreiben, weil es diese schon zu hunderten gibt.
 
 ## Vorbereitung
 
@@ -34,11 +34,11 @@ Ich verwende als Beispiel die Version 1.69.14.
 
 \<unistd.h\> \<c\> size_t write(int fd, const void \*buf, size_t count); \</c\>
 
-wenn du alle diese Funktionen in deine rlibc implementiert hast kannst du weiterlesen ansonsten solltest du erstmal alle Funktionen implementieren
+Wenn du alle diese Funktionen in deiner libc implementiert hast, kannst du weiterlesen, ansonsten solltest du dies erstmal tun.
 
 ##### Bauen
 
-Du brauchst FASM, LD und deine libc als .a Datei.
+Du brauchst FASM, LD und deine libc als .a-Datei.
 
 Zuerst assemblierst du FASM mit `fasm fasm.asm fasm.o`. Danach linkst du die `fasm.o` gegen deine `libc.a`.
 
@@ -54,6 +54,6 @@ Ich verwende als Beispiel die Version 1.2.5.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7859/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
 
-<!-- MediaWiki page 2256; revision 7852; parent 7848; 2010-07-14T19:30:42Z -->
+<!-- MediaWiki page 2256; revision 7859; parent 7852; 2010-07-14T20:16:09Z -->
