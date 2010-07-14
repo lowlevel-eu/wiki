@@ -14,7 +14,7 @@ Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, 
 
 ## IRC-Start mit KVirc unter Windows
 
-- Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases&platform=win32) hat man auf den Eintrag bei "Latest Release" zu klicken. Nun nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
+- Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases&platform=win32) hat man auf den Eintrag bei "Neueste Ausgabe" zu klicken. Nun nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
 
 <!-- -->
 
@@ -83,20 +83,20 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-u
 ## Verhaltensregeln im Channel
 
 - Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt.
-- Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben.
-- Flooden, also sinnloses aneinanderreihen von sinnlosen Buchstabenfolgen ist verboten.
+- Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben. Dazu benutzt man einen sogenannten Nopaste-Service wie zum Beispiel <http://pastebin.com>
+- Flooden, also sinnloses Aneinanderreihen von Buchstabenfolgen ist verboten.
 - Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
-- Sollte das passieren, ist Autorejoin verboten.
+- Sollte das passieren, ist ein automatischer Rejoin verboten.
 - Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
 - Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anderswertig zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
-- Bei der Codierung des Clients ist darauf zu achten, dass UTF8 benutzt wird, da nicht alle Clients sauber umgehen können, mit mehreren Codierungen
+- Bei der Codierung des Clients ist darauf zu achten, dass UTF8 benutzt wird, da nicht alle Clients sauber mit mehreren Codierungen umgehen können.
 
 ## Channel-Logs und Statistiken
 
-Aufzeichnungen der Channelgespräche und Statistiken sind immer aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu haben.
+Aufzeichnungen der Channelgespräche sind genauso wie einige Statistiken stetig aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu finden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7860/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 5664; parent 5458; 2009-08-19T16:00:37Z -->
+<!-- MediaWiki page 1463; revision 7860; parent 5664; 2010-07-14T21:11:34Z -->
