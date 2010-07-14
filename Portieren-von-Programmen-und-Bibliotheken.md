@@ -1,20 +1,18 @@
 # Portieren von Programmen und Bibliotheken
 
 | Portieren von Programmen und Bibliotheken |  |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Schwierigkeit**: *nicht angegeben*<br> |  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Schwierigkeit**: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)<br> |  |
 | Benötigtes Vorwissen: | *[keins\*](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger#voraussetzungen "OS-Dev für Einsteiger")* |
 | Sprache: | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"),[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 
-  
-
 ## Worum geht es in diesem Tutorial?
 
-In diesem Tutorial geht es um portieren von Programmen und Bibliotheken aufs eigene OS. Es macht wenig Sinn alle Programme neuzuschreiben, weil es diese schon zu hunderten gibt.
+In diesem Tutorial geht es um das Portieren von Programmen und Bibliotheken aufs eigene Betriebssystem. Es macht wenig Sinn, alle Programme neu zu schreiben, weil es diese schon zu hunderten gibt.
 
 ## Vorbereitung
 
-Als erstes solltest du dir einen Crosscompiler für dein OS aufsetzten und ein paar Funktionen in deiner LibC implementiert haben.
+Als erstes solltest du dir einen Crosscompiler für dein OS aufsetzten und ein paar Funktionen in deiner libc implementiert haben.
 
 ## Portieren
 
@@ -44,11 +42,11 @@ wenn du alle diese Funktionen in deine rlibc implementiert hast kannst du weiter
 
 Du brauchst FASM, LD und deine libc als .a Datei.
 
-zuerst assembilierst du Fasm mit FASM fasm.asm fasm.o danach linkst du die fasm.o gegen deine libc.a
+Zuerst assemblierst du FASM mit `fasm fasm.asm fasm.o`. Danach linkst du die `fasm.o` gegen deine `libc.a`.
 
 ### Bibliotheken
 
-Hier werde ich einige Bibliotheken auflisten, welche sich recht einfach portieren lassen und werde zu jedem Programm erklären welche Schritte notwendig sind.
+Hier werde ich einige Bibliotheken auflisten, welche sich recht einfach portieren lassen, und werde zu jedem Programm erklären, welche Schritte notwendig sind.
 
 #### zlib
 
@@ -58,6 +56,6 @@ Ich verwende als Beispiel die Version 1.2.5.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7847/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2256/index.html)
 
-<!-- MediaWiki page 2256; revision 7847; parent 7846; 2010-07-14T15:36:48Z -->
+<!-- MediaWiki page 2256; revision 7848; parent 7847; 2010-07-14T15:45:03Z -->
