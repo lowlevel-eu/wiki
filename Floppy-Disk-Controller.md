@@ -45,9 +45,8 @@ Wenn nichts dasteht, gilt das Flag bei gesetztem Bit.
 
 #### MSR
 
-|  |  |  |  |  |  |  |  |  |
-| ---------- | ----- | ----- | ------ | ------ | ------ | ------ | ------ | ------ |
 | **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ---------- | ----- | ----- | ------ | ------ | ------ | ------ | ------ | ------ |
 | **Name** | MRQ | DIO | NDMA | BUSY | ACTD | ACTC | ACTB | ACTA |
 
 MRQ  
@@ -83,9 +82,8 @@ Laufwerk D-A ist im Positionierungs-Modus
 
 #### DOR
 
-|  |  |  |  |  |  |  |  |
-| ---------- | ------ | ------ | ------ | ------ | ----- | ------- | ------------ |
 | **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 &#150; 0 |
+| ---------- | ------ | ------ | ------ | ------ | ----- | ------- | ------------ |
 | **Name** | MOTD | MOTC | MOTB | MOTA | DMA | RESET | DRIVE |
 
 MOTD-A  
@@ -126,9 +124,8 @@ In das Data-Register werden die Befehle geschrieben, die jeweils aus mehreren By
 
 ##### ST0
 
-|  |  |  |  |  |  |  |
-| ---------- | ------------ | ----- | ----- | ----- | ----- | ------------ |
 | **Bit** | 7 &#150; 6 | 5 | 4 | 3 | 2 | 1 &#150; 0 |
+| ---------- | ------------ | ----- | ----- | ----- | ----- | ------------ |
 | **Name** | IC | SE | UC | NR | HD | US |
 
 IC  
@@ -175,9 +172,8 @@ aktives Laufwerk
 
 ##### ST1
 
-|  |  |  |  |  |  |  |  |  |
-| ---------- | ----- | ----- | ----- | ----- | ----- | ------ | ----- | ----- |
 | **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ---------- | ----- | ----- | ----- | ----- | ----- | ------ | ----- | ----- |
 | **Name** | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
 
 EN  
@@ -214,9 +210,8 @@ gesetzt wenn die ID Address Mark nicht gefunden wurde
 
 ##### ST2
 
-|  |  |  |  |  |  |  |  |  |
-| ---------- | ----- | ------ | ------ | ------ | ----- | ------ | ------ | ------ |
 | **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| ---------- | ----- | ------ | ------ | ------ | ----- | ------ | ------ | ------ |
 | **Name** | 0 | DADM | CRCE | WCYL | SEQ | SERR | BCYL | NDAM |
 
 DADM  
@@ -250,9 +245,8 @@ not data address mark DAM
 
 ##### ST3
 
-|  |  |  |  |  |  |  |  |
-| ---------- | ------ | ------ | ----- | ------ | ------ | ------ | ------------ |
 | **Bit** | 7 | 6 | 5 | 4 | 3 | 2 | 1 &#150; 0 |
+| ---------- | ------ | ------ | ----- | ------ | ------ | ------ | ------------ |
 | **Name** | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
 
 ESIG  
@@ -867,6 +861,6 @@ VOID send_data(BYTE data) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7752/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 7752; parent 7741; 2010-06-12T21:20:59Z -->
+<!-- MediaWiki page 1443; revision 7878; parent 7752; 2010-07-16T15:17:20Z -->
