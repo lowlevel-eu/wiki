@@ -20,7 +20,7 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 
 - "Assembler: Maschinennahes Programmieren von Anfang an" von Reiner Backer  
   Klasse Buch für den Einstieg in die x86-Programmierung. Es wird die Arbeitsweise eines Prozessors sowie das Zusammenspiel zwischen CPU, RAM, MMU und ALU erklärt. Das Buch ist gut strukturiert und bietet ausführliche Beispiele zu jedem wichtigen Assemblerbefehl. Der Windows-Teil ist allerdings nur mittelmäßig, ist aber für unser Klientel eh nicht von Bedeutung.
-- ["Assembler GE-PACKT" von Joachim Rohde](http://www.amazon.de/Assembler-GE-PACKT-Joachim-Rohde/dp/3826607864)  
+- "Assembler GE-PACKT" von Joachim Rohde  
   Ein gutes, handliches Nachschlagewerk zu allen x86-Befehlen, vom 8086 bis zum Pentium 4. Auch FPU, MMX, SSE und SSE2 sowie 3D Now! werden behandelt.
 
 ### C/C++
@@ -93,6 +93,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 7892; parent 7864; 2010-07-16T17:00:09Z -->
+<!-- MediaWiki page 1930; revision 7893; parent 7892; 2010-07-16T17:00:38Z -->
