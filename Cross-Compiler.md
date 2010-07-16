@@ -80,7 +80,7 @@ entpackt, wobei paket mit dem Namen des Pakets und endung mit der entsprechenden
 Wer einen 32-Bit-Prozessor (oder ein 32-Bit-Betriebssystem) verwendet und Code für 64-Bit-Prozessoren und Betriebssysteme schreiben will, muss sich wie folgt seine Umgebung aufsetzen:
 
     $ export TARGET=x86_64-elf
-    $ export TARGET=wo-die-crossutils-landen-sollen
+    $ export PREFIX=wo-die-crossutils-landen-sollen
 
 Die binutils müssen dann entsprechend konfiguriert werden.
 
@@ -132,6 +132,6 @@ Windows unterstützt nativ kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 6238; parent 6236; 2009-11-09T18:18:07Z -->
+<!-- MediaWiki page 1628; revision 7894; parent 6238; 2010-07-16T17:03:08Z -->
