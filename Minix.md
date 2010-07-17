@@ -23,7 +23,7 @@
 
 ## Minix als Lehrsystem
 
-Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 12.500 Zeilen und sollte Studenten in die Geheimnisse des x86-Prozessors einführen. Der Code von Minix wird auch in Tanenbaum's eigenem Buch "Operating Systems Design and Implementation" benutzt, um anhand des Codes die Funktionsweise eines Betriebssystems zu erklären.
+Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 12.500 Zeilen und sollte Studenten in die Geheimnisse des x86-Prozessors einführen. Der Code von Minix wird auch in Tanenbaums eigenem Buch "Operating Systems Design and Implementation" benutzt, um anhand des Codes die Funktionsweise eines Betriebssystems zu erklären.
 
   
 
@@ -41,7 +41,7 @@ Ausgangspunkt waren hierbei die herbe Kritik an dem noch jungen Projekt Linux.
 
 Kritikpunkte waren hier der monolithische Kernel, der in Tanenbaums Augen unzeitgemäß wäre, die "Versteifung" auf die x86-Plattform durch Inline-Assembler, das liberale Entwicklungssystem sowie "unnötige" Features, wie das parallele Zugreifen auf das Dateisystem von mehreren Programmen aus.
 
-Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklung beider Systeme angefacht hat.
+Dies war Ausgangspunkt für einen Flamewar ganz besonderer Art, der die Entwicklung beider Systeme angefacht hat.
 
 ## Links
 
@@ -51,6 +51,6 @@ Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 7905; parent 5555; 2010-07-17T23:55:00Z -->
+<!-- MediaWiki page 1910; revision 7906; parent 7905; 2010-07-17T23:57:34Z -->
