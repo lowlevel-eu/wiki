@@ -60,13 +60,11 @@ Sicherlich gibt es auch noch weitere Vorteile die der Protected Mode mit sich br
 
 ## Segmente im Protected Mode
 
-Wie oben schon erwähnt, gibt es auch im Protected Mode Segmente. Diese haben jedoch eine andere Bedeutung als im Real-Mode. Segmente dienen auch im Protected Mode zur Unterteilung des Speichers, jedoch kann die größe und die Anzahl der Segmente "nahezu" beliebig gewählt werden.
+Wie oben schon erwähnt, gibt es auch im Protected Mode Segmente. Diese haben jedoch eine andere Bedeutung als im Real-Mode. Segmente dienen auch im Protected Mode zur Unterteilung des Speichers, jedoch kann die Grösse, die Position im Speicher und die Anzahl der Segmente "nahezu" beliebig gewählt werden.
 
 Zudem erhalten Segmente eine ganze Reihe von Attributen die bei jedem Speicherzugriff eines Programms innerhalb eines Segmentes überprüft werden.
 
 So wird einem Segment beispielsweise eine Privilegstufe zugeordnet. So kann ein Programm NUR DANN auf ein Segment zugreifen, wenn die Privilegstufe des Programms höher oder gleich hoch ist. Wenn dem nicht so ist, erkennt der Prozessor diesen Fehler und startet automatisch eine Unterroutine (Exception) die vom Kernel bereitgestellt wird. Im einfachsten Falle veranlasst der Kernel dann einfach, das das betreffende Programm beendet wird und aus dem Speicher entfernt wird. Dies garantiert, das das restliche System ohne Beinträchtigung weiterlaufen kann. Damit der Prozessor weiß welche Attribute ein Segment hat, muss dieses dem Prozessor mitgeteilt werden. Dazu wird eine Tabelle (die Global Deskriptor Table, kurz GDT) erstellt. In dieser Tabelle werden sogenannte Deskriptoren eingetragen. Diese Deskriptoren sind 8 Byte lange Speicherbereiche die Ihrerseits nochmal in einzelnen Bereiche unterteilt werden. Diese Bereiche beschreiben dann im einzelnen die Attribute der Segmente. Die Deskriptoren (to describe) beschreiben also die Eigenschaften der Segmente.
-
-  
 
 ## Deskriptoren
 
@@ -365,6 +363,6 @@ Eine knappe Variante in den Protected Mode zu schalten wird [hier](https://githu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5980/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 5980; parent 5767; 2009-10-04T13:12:31Z -->
+<!-- MediaWiki page 1464; revision 7898; parent 5980; 2010-07-17T08:56:20Z -->
