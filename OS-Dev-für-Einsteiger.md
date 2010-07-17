@@ -49,12 +49,21 @@ Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie mög
 
 Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") schreiben muss, oder sogar erst einen Compiler entwickeln müsste. Quatsch. Man kann, wenn man es möchte, aber man muss nicht. Wahr ist, dass man um einige wenige Zeilen Assembler nicht herumkommen wird, aber es hält sich in Grenzen.
 
-Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im großen und ganzen zwei Alternativen:
+Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im grossen und ganzen zwei Alternativen:
 
 - Du nimmst [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Fast jeder spricht diese Sprache und du bekommst Unmengen an Beispielcode in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können.
-- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst dich möglicherweise öfter selbst durchschlagen – gerade, wenn es um Besonderheiten deiner Sprache oder deines Compilers geht.
+- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Aussenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst dich möglicherweise öfter selbst durchschlagen – gerade, wenn es um Besonderheiten deiner Sprache oder deines Compilers geht.
 
 Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") sind beispielsweise [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") oder [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") (mit FreePascal oder mit Tricks auch Delphi als Compiler). Theoretisch würden auch [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") und PureBasic funktionieren. Andere Sprachen hat hier meines Wissens noch niemand versucht, könnten natürlich aber trotzdem funktionieren.
+
+### Plattform
+
+Für welche Plattform du dein Betriebssystem schreiben möchtest musst du auch überlegen, hier gibt es ebenfalls im grossen und ganzen zwei Alternativen:
+
+- Du nimmst den x86-PC der mit extrem hoher Wahrscheinlichkeit bereits vor Dir steht. Fast jeder programmiert für den x86-PC und du bekommst Unmengen an Beispielcode hier und im Internet. Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können. Die PC-Plattform ist nun schon über 30 Jahre gewachsen, einiges ist wild zusammengewürfelt und die einzelnen Komponenten benutzen teilweise sehr unterschiedliche Programmierparadigmen, je nach deren Alter. Du wirst dich mit seltsamen Dingen auseinander setzen müssen wie dem [Real-Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") bzw. [Protected-Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") samt zugehöriger Segmentierung oder den unterschiedlichen [Privilegstufen](https://github.com/lowlevel-eu/wiki/wiki/Ring "Ring"). Auch gibt es einige Hardwarekomponenten mehrfach (mit unterschiedlichem Alter und Funktionsumfang) wie z.B. [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") vs. [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") oder [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") vs. HPET, da muss man sich oft überlegen bis zu welchem Alter der x86-PCs das eigene Betriebssystem kompatibel sein soll also welcher Umfang an Hardware (optional) Unterstützt werden soll bzw. für das Betriebssystem als Voraussetzung gilt.
+- Du nimmst eine andere Plattform. Das bedeutet mit hoher Wahrscheinlichkeit das erst mal Geld ausgegeben werden muss. Auch bist du dann ein Aussenseiter und kaum einer wird dir Helfen können wenn du mal auf (plattformspezifische) Probleme stösst, da bist du dann auf die (oft recht gute) Dokumentation (in englisch) oder auf viele Versuche angewiesen. Dafür sind die meisten in Frage kommenden Plattformen recht gut "*aus einem Guss*" und auch sehr deutlich weniger komplex als der x86-PC. Es gibt auch deutlich weniger Stolperfallen und andere Merkwürdigkeiten. Ebenfalls sind die Programmierparadigmen für die einzelnen Hardwarekomponenten auf den Plattformen meist in sich stimmig und recht modern, die meisten alternativen Plattformen sind sehr viel jünger als der x86-PC. Wenn du ein Betriebssystem für Spielkonsolen oder SmartPhones entwickeln möchtest dann wirst du mehr mit den Sicherungsmechanismen der Hersteller als mit der Plattform als solches kämpfen, die Hersteller mögen es in der Regel gar nicht wenn der *zahlende* Kunde die Geräte anders benutzen will als der Hersteller sich das vorstellt.
+
+Die Mitglieder der Lowlevel-Community entwickeln ihre Betriebssysteme in aller Regel für den x86-PC, Ausnahmen gibt es da fast keine.
 
 ### Entwicklungsumgebung und Tools
 
@@ -169,6 +178,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 7897; parent 7862; 2010-07-17T08:40:18Z -->
+<!-- MediaWiki page 1619; revision 7899; parent 7897; 2010-07-17T09:40:03Z -->
