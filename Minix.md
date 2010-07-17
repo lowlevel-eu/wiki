@@ -27,6 +27,12 @@ Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 
 
   
 
+## Minix für Enwtickler
+
+Für engagierte Entwickler ist Minix unter Umständen auch eine interessante Plattform. Das Projekt bietet nämlich jährlich Patenschaften im Rahmen des Google Summer Of Code an, bei dem man als Student einen Sommer lang an einem bestimmten Bereich arbeiten kann, und dabei von Google bezahlt wird. Natürlich sollte man am Ende auch gute Ergebnisse vorweisen können, daher ist ein solches Projekt nur für sehr erfahrene Entwickler geeignet.
+
+  
+
 ## "Linux is obsolete"
 
 Minix ist bekanntlich älterem Datums als Linux (Minix 0.1.0: 1987, Linux 0.01: 1991). Linus Torvalds wollte mit Linux eigentlich einen Terminal-Emulator schreiben, fand aber immer mehr Gefallen daran, die Hardware seines x86 zu erforschen und so wurde aus einem Terminal-Emulator ein Betriebssystem, welches in Konkurrenz zu Minix stand. In einem bis dato beispiellosen Flamewar, angefangen von Andrew S. Tanenbaum persönlich, wurde jeweils gegen das andere System und mögliche Stärken/Schwächen gewettert.
@@ -45,6 +51,6 @@ Dies war Ausgangspunkt fur einen Flamewar ganz besonderer Art, der die Entwicklu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5555/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 5555; parent 5284; 2009-08-10T16:45:43Z -->
+<!-- MediaWiki page 1910; revision 7905; parent 5555; 2010-07-17T23:55:00Z -->
