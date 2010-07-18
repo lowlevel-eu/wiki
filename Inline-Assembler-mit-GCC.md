@@ -1,6 +1,6 @@
 # Inline-Assembler mit GCC
 
-Da ich in letzter Zeit immer wieder danach gefragt worden bin, wie das mit Inline-Assembler in gcc denn funktioniere und die Sache durchaus nicht intuitiv (dafür aber recht mächtig) ist, habe ich beschlossen, diese Frage in Zukunft nur noch mit einem Link beantworten zu wollen. Als Vorbereitung entsteht nun also dieser Artikel.
+In diesem Artikel geht es um Inline Assembler mit dem GCC bzw. G++. Inline Assembler ist nicht dafür da, Sachen die man in C oder einer anderen Hochsprache nicht lösen kann zu machen, sondern ist zugleich eines der mächtigsten Werkzeuge des OS-Progger's.
 
 ## AT&T-Syntax
 
@@ -105,6 +105,6 @@ Senden einer IPC-Nachricht in LOST: \<c\> void send_message(dword pid, dword fun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6726/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7909/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 6726; parent 6724; 2010-01-02T17:46:36Z -->
+<!-- MediaWiki page 1472; revision 7909; parent 6726; 2010-07-18T21:36:34Z -->
