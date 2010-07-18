@@ -293,10 +293,10 @@ void irq_handler(uint8_t irq) {
 
        uint8_t scancode;
        uint8_t keycode = 0;
-       bool break_code = FALSE;
+       int break_code = 1;
 
        // Status-Variablen fuer das Behandeln von e0- und e1-Scancodes
-       static bool     e0_code = FALSE;
+       static int     e0_code = 1;
        // Wird auf 1 gesetzt, sobald e1 gelesen wurde, und auf 2, sobald das erste
        // Datenbyte gelesen wurde
        static int      e1_code = 0;
@@ -310,19 +310,22 @@ void irq_handler(uint8_t irq) {
            (e1_code || (scancode != 0xE1)) &&
            (e0_code || (scancode != 0xE0)))
        {
-           break_code = TRUE;
+           break_code = 0;
            scancode &= ~0x80;
+
+return;
+
        }
 
        if (e0_code) {
            // Fake shift abfangen und ignorieren
            if ((scancode == 0x2A) || (scancode == 0x36)) {
-               e0_code = FALSE;
+               e0_code = 1;
                return;
            }
 
            keycode = translate_scancode(1, scancode);
-           e0_code = FALSE;
+           e0_code = 1;
        } else if (e1_code == 2) {
            // Fertiger e1-Scancode
            // Zweiten Scancode in hoeherwertiges Byte packen
@@ -335,19 +338,22 @@ void irq_handler(uint8_t irq) {
            e1_code++;
        } else if (scancode == 0xE0) {
            // Anfang eines e0-Codes
-           e0_code = TRUE;
+           e0_code = 0;
        } else if (scancode == 0xE1) {
            // Anfang eines e1-Codes
            e1_code = 1;
        } else {
            // Normaler Scancode
            keycode = translate_scancode(0, scancode);
-       }
 
-       if (keycode != 0) {
-        // Keycodes an Anwendungen verteilen, die sich dafuer interessieren.
-           send_key_event(keycode, break_code);
+keyboard_char = keycode;
+
        }
+           // Zum Testen sollte folgendes verwendet werden:
+
+kprintf("%c", keycode);
+
+           //Nach erfolgreichen Tests, könnte eine send_key_event Funtkion wie bei Týndur verwendet werden
 
 } \</c\>
 
@@ -381,6 +387,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7064/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7908/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 7064; parent 7063; 2010-02-13T20:58:55Z -->
+<!-- MediaWiki page 1468; revision 7908; parent 7064; 2010-07-18T20:57:38Z -->
