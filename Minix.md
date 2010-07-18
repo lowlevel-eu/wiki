@@ -23,23 +23,23 @@
 
 ## Minix als Lehrsystem
 
-Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 12.500 Zeilen und sollte Studenten in die Geheimnisse des x86-Prozessors einführen. Der Code von Minix wird auch in Tanenbaums eigenem Buch "Operating Systems Design and Implementation" benutzt, um anhand des Codes die Funktionsweise eines Betriebssystems zu erklären.
+Ursprünglich wurde Minix als Lehrsystem konzipiert. Die erste Version umfasste 12.500 Zeilen und sollte Studenten in die Geheimnisse des x86-Prozessors einführen. Der Code von Minix wird auch in Tanenbaums eigenem Buch „Operating Systems: Design and Implementation“ benutzt, um anhand des Codes die Funktionsweise eines Betriebssystems zu erklären.
 
   
 
-## Minix für Enwtickler
+## Minix für Entwickler
 
 Für engagierte Entwickler ist Minix unter Umständen auch eine interessante Plattform. Das Projekt bietet nämlich jährlich Patenschaften im Rahmen des Google Summer Of Code an, bei dem man als Student einen Sommer lang an einem bestimmten Bereich arbeiten kann, und dabei von Google bezahlt wird. Natürlich sollte man am Ende auch gute Ergebnisse vorweisen können, daher ist ein solches Projekt nur für sehr erfahrene Entwickler geeignet.
 
   
 
-## "Linux is obsolete"
+## „Linux is obsolete“
 
-Minix ist bekanntlich älterem Datums als Linux (Minix 0.1.0: 1987, Linux 0.01: 1991). Linus Torvalds wollte mit Linux eigentlich einen Terminal-Emulator schreiben, fand aber immer mehr Gefallen daran, die Hardware seines x86 zu erforschen und so wurde aus einem Terminal-Emulator ein Betriebssystem, welches in Konkurrenz zu Minix stand. In einem bis dato beispiellosen Flamewar, angefangen von Andrew S. Tanenbaum persönlich, wurde jeweils gegen das andere System und mögliche Stärken/Schwächen gewettert.
+Minix ist bekanntlich älteren Datums als Linux (Minix 0.1.0: 1987, Linux 0.01: 1991). Linus Torvalds wollte mit Linux eigentlich einen Terminal-Emulator schreiben, fand aber immer mehr Gefallen daran, die Hardware seines x86 zu erforschen und so wurde aus einem Terminal-Emulator ein Betriebssystem, welches in Konkurrenz zu Minix stand. In einem bis dato beispiellosen Flamewar, angefangen von Andrew S. Tanenbaum persönlich, wurde jeweils gegen das andere System und mögliche Stärken/Schwächen gewettert.
 
 Ausgangspunkt waren hierbei die herbe Kritik an dem noch jungen Projekt Linux.
 
-Kritikpunkte waren hier der monolithische Kernel, der in Tanenbaums Augen unzeitgemäß wäre, die "Versteifung" auf die x86-Plattform durch Inline-Assembler, das liberale Entwicklungssystem sowie "unnötige" Features, wie das parallele Zugreifen auf das Dateisystem von mehreren Programmen aus.
+Kritikpunkte waren hier der monolithische Kernel, der in Tanenbaums Augen unzeitgemäß wäre, die „Versteifung“ auf die x86-Plattform durch Inline-Assembler, das liberale Entwicklungssystem sowie „unnötige“ Features, wie das parallele Zugreifen auf das Dateisystem von mehreren Programmen aus.
 
 Dies war Ausgangspunkt für einen Flamewar ganz besonderer Art, der die Entwicklung beider Systeme angefacht hat.
 
@@ -51,6 +51,6 @@ Dies war Ausgangspunkt für einen Flamewar ganz besonderer Art, der die Entwickl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7907/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 7906; parent 7905; 2010-07-17T23:57:34Z -->
+<!-- MediaWiki page 1910; revision 7907; parent 7906; 2010-07-18T10:53:09Z -->
