@@ -6,7 +6,7 @@ Wenn man sein Betriebssystem veröffentlicht, sollte man sich auch Gedanken übe
 
 ### GNU General Public License
 
-Die vier Hauptpunkte der GNU General Public License (GPL) sind:
+Die Hauptpunkte der GNU General Public License (GPL) sind:
 
 - Das Programm darf für alle Zwecke, ohne Einschränkung genutzt werden, auch für kommerziellen Nutzen.
 - Das Programm darf kostenlos, aber auch gegen Geld, weiterverteilt werden. Der Empfänger hat das Recht den Quellcode zu erhalten, ohne zusätzliche Gebühren. Der Empfänger darf das Programm unter genau den gleichen Bedingungen weiterverteilen - gegen Geld, aber auch kostenfrei. Es dürfen keine Lizenzgebühren verlangt werden. Niemand ist verpflichtet, das Programm weiterzuverteilen.
@@ -96,6 +96,6 @@ Alternativen zu Creative Commons:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7922/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 6313; parent 4570; 2009-11-15T11:28:13Z -->
+<!-- MediaWiki page 1552; revision 7922; parent 6313; 2010-07-19T15:02:02Z -->
