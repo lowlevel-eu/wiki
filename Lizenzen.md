@@ -41,7 +41,7 @@ Die BSD-Lizenz erlaubt die freie Benutzung, Veränderung und Weiterverbeitung ei
 
 Der dritte Absatz der BSD-Lizenz besagt, dass beim Bewerben eines Programms der Name des ursprünglichen Autors genannt werden muss (Mit dieser Klausel ist die Lizenz nicht mehr GPL-kompatibel!).
 
-- [Wikipediaartikel zur BSD-Lizenz](http://de.wikipedia.org/wiki/BSD_Lizenz)
+- [Wikipediaartikel zur BSD-Lizenz](http://de.wikipedia.org/wiki/BSD-Lizenz)
 
   
 
@@ -96,6 +96,6 @@ Alternativen zu Creative Commons:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7922/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1552/index.html)
 
-<!-- MediaWiki page 1552; revision 7922; parent 6313; 2010-07-19T15:02:02Z -->
+<!-- MediaWiki page 1552; revision 7923; parent 7922; 2010-07-19T15:04:43Z -->
