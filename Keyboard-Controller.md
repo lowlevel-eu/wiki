@@ -345,9 +345,6 @@ return;
        } else {
            // Normaler Scancode
            keycode = translate_scancode(0, scancode);
-
-keyboard_char = keycode;
-
        }
            // Zum Testen sollte folgendes verwendet werden:
 
@@ -387,6 +384,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7908/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 7908; parent 7064; 2010-07-18T20:57:38Z -->
+<!-- MediaWiki page 1468; revision 7915; parent 7908; 2010-07-19T06:40:57Z -->
