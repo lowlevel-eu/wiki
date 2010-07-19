@@ -30,7 +30,7 @@ Der KBC wurde mit dem AT-System (i286) eingeführt. Im Vorgängersystem XT wurde
 ## Kommunikationswege
 
   
-![kbclogic20071105bt5.png](http://img441.imageshack.us/img441/636/kbclogic20071105bt5.png)  
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png)  
   
 
 Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) eine Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z. B. von Linux unterstützt, nicht jedoch von Windows.  
@@ -384,6 +384,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 7915; parent 7908; 2010-07-19T06:40:57Z -->
+<!-- MediaWiki page 1468; revision 7919; parent 7915; 2010-07-19T10:00:53Z -->
