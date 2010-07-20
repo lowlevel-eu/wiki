@@ -46,6 +46,12 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 - Kann mit einem Passwort gesichert werden
 - Kann von einem TFTP-Server booten
 
+  
+
+### Beispielkonfigurationsdatei
+
+` title OS_Name kernel /kernel modul /modul.mod boot ` Diese Beispilkofogurationsdatei läd die Datei 'kernel' aus dem rootdirectory als kernel in den speicher und läd die Datei 'modul.mod' als Modul in den Speicher und führt den kernel danach aus.
+
 ## GRUB 2
 
 GRUB 2 ist der Nachfolger von GRUB legacy und wurde von Grund auf neu geschrieben. Er ist genauso wie GRUB Legacy [multibootfähig](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"). Außerdem wird mit GRUB 2 der Multiboot 2 Standard, der sich momentan noch in Entwicklung befindet, unterstützt.
@@ -80,6 +86,6 @@ GRUB 2 weißt eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7934/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7600; parent 7437; 2010-04-19T14:12:18Z -->
+<!-- MediaWiki page 1567; revision 7934; parent 7600; 2010-07-20T00:13:33Z -->
