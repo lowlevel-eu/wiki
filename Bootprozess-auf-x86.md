@@ -20,7 +20,7 @@ Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhän
 
 ## Alles weitere
 
-Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zuständigkeitsbereich – dem eigenen Kernel. Wie dieser weitermacht, müsst ihr für euer Projekt entscheiden – auch wenn die Grundstruktur oft ähnlich ist (Speicherverwaltung und Prozessverwaltung laden, Treiber laden, Anwendungen starten).
+Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zuständigkeitsbereich – dem eigenen Kernel. Wie dieser weitermacht, müsst ihr für euer Projekt entscheiden – auch wenn die Grundstruktur oft ähnlich ist (Speicherverwaltung und Prozessverwaltung laden, Treiber laden, Anwendungen starten). Die grundlegenden Aufgaben des Kernels sind ausführlicher im Artikel [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") aufgelistet.
 
   
 
@@ -32,6 +32,6 @@ Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7674/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7932/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1852/index.html)
 
-<!-- MediaWiki page 1852; revision 7674; parent 7673; 2010-05-09T09:36:57Z -->
+<!-- MediaWiki page 1852; revision 7932; parent 7674; 2010-07-20T00:06:15Z -->
