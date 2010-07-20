@@ -20,6 +20,8 @@ Beispiel: ''kursiv'' und '''fett''' wird zu *kursiv* bzw. **fett**
 
 Überschriften, die von nur einem Gleichheitszeichen umschlossen sind, existieren zwar auch, werden aber in den Artikeln **nicht** benutzt, da diese eine Überschrift erster Ordnung darstellen und damit semantisch auf der selben Ebene wie die Artikelüberschrift ständen.
 
+Vor einer Überschrift wird genau eine Zeile freigelassen.
+
 ### Inhaltsverzeichnis
 
 Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert die MediaWiki-Software automatisch ein Inhaltsverzeichnis. Dieses wird vor der ersten Überschrift (also nach den einleitenden Absätzen) platziert.
@@ -186,6 +188,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7941/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 7839; parent 7809; 2010-07-13T15:40:24Z -->
+<!-- MediaWiki page 2049; revision 7941; parent 7839; 2010-07-20T00:33:45Z -->
