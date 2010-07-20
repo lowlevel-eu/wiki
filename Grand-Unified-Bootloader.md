@@ -44,7 +44,7 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 
 ### Beispielkonfigurationsdatei
 
-` title OS_Name kernel /kernel modul /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
+` title OS_Name kernel /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
 
 ## GRUB 2
 
@@ -64,7 +64,7 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ### Beispielkonfigurationsdatei
 
-` title OS_Name multiboot /kernel modul /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
+` title OS_Name multiboot /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
 
 ## Siehe auch
 
@@ -84,6 +84,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7945/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7942; parent 7940; 2010-07-20T00:35:50Z -->
+<!-- MediaWiki page 1567; revision 7945; parent 7942; 2010-07-20T00:42:23Z -->
