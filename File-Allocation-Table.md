@@ -146,7 +146,7 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster
 
 ## Cluster
 
-Ein Cluster ist die kleinste von FAT verwaltete Einheit, auf jeder Diskette und Festplatte, und besteht aus einem oder mehreren (für gewöhnlich eine Zweierpotenz) Datenträger-Sektoren. Bei Disketten, die mit FAT 12 formatiert sind, ist ein Cluster immer 1 Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur 1 Byte groß ist. Eine 2312 Byte große Datei würde dort 5 Cluster Belegen und fast ein halber Cluster bleibt frei. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT 12 formatiert, sondern meißtens mit FAT 32 oder NTFS. Um NTFS kümmern wir uns in diesem Artikel aber nicht. Bei FAT 32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT 32 8 Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch.
+Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit und besteht aus einem oder mehreren (für gewöhnlich eine Zweierpotenz) Sektoren. Bei Disketten, die mit FAT12 formatiert sind, ist ein Cluster immer ein Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur ein Byte groß ist. Eine 2312 Byte große Datei würde dort fünf Cluster belegen und fast einen halben Cluster ungenutzt lassen. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT12 formatiert, sondern meistens mit FAT32 oder NTFS. Um NTFS kümmern wir uns in diesem Artikel aber nicht. Bei FAT32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 acht Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch.
 
 ## VFAT
 
@@ -163,6 +163,6 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7955/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 7955; parent 7950; 2010-07-21T18:27:01Z -->
+<!-- MediaWiki page 1643; revision 7956; parent 7955; 2010-07-21T18:50:38Z -->
