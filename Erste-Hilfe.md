@@ -72,6 +72,10 @@ iret \</asm\> Ja, gut gedacht, funktioniert aber nicht. Bochs beschwert sich zum
 
 \</asm\>
 
+### Defekter Sektor
+
+Es kann auch durchaus vorkommen das ein Sektor der Diskette, die zu zum Testen verwendest, defekt ist. Dieser Fehler ist besonders dann schwer zu finden wenn man sein System primär auf realer Hardware testet.
+
 ## C-spezifische Fehler
 
 ### \_\_attribute\_\_((packed)) in structs vergessen
@@ -185,6 +189,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7958/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 7958; parent 0; 2010-07-21T19:55:37Z -->
+<!-- MediaWiki page 2263; revision 7963; parent 7958; 2010-07-21T20:06:45Z -->
