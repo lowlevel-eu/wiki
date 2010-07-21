@@ -144,6 +144,10 @@ Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 bit des ersten Clusters (für 
 
 Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster +2 (man muss 2 subtrahieren um die eigentliche Clusternummer zu erhalten) 0x1C4Dateigröße in Bytes
 
+## Cluster
+
+Ein Cluster ist die kleinste adressierbare Einheit, auf jeder Dieskette und Festplatte. Bei Diesketten, die mit FAT12 formatiert sind, ist ein Cluster immer 512 Byte groß. Somit nimmt auf der Diskette jede datei mindestens 512 Byte in anspruch, auch wenn si nur 32 Byte groß ist. Eine 2312 Byte große Datei würde jezt 5 Cluster Belegen und fast ein halber Cluster bleibt frei. Größeren Massenspeicher wie Festplatten sind natürlich nicht mit FAT 12 formatiert. sondern meißtens mit FAT32 oder NTFS. UM NTFS kümmern wir uns in diesem Artikel aber nicht. Bei FAT 32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 4096 Bytes zu einem Cluster zusammengefasst Somit nimmt jede noch so kleine Datei 4096 Byte in anspruch nehmen.
+
 ## VFAT
 
 VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"). Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
@@ -159,6 +163,6 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7949/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7950/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 7949; parent 7018; 2010-07-21T15:51:11Z -->
+<!-- MediaWiki page 1643; revision 7950; parent 7949; 2010-07-21T16:05:16Z -->
