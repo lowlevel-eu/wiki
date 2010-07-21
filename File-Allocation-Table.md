@@ -12,7 +12,7 @@ Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Daten
 - FAT16
 - FAT32
 
-FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2<sup>12</sup> Cluster adressierbar, mit FAT16 2<sup>16</sup> und mit FAT32 2<sup>32</sup>.
+FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2<sup>12</sup> Cluster adressierbar, mit FAT16 2<sup>16</sup> und mit FAT32 2<sup>28</sup>.
 
 ## Aufbau von FAT
 
@@ -159,6 +159,6 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7949/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 7018; parent 6516; 2010-02-04T18:52:13Z -->
+<!-- MediaWiki page 1643; revision 7949; parent 7018; 2010-07-21T15:51:11Z -->
