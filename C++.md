@@ -191,43 +191,6 @@ Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufru
 
 Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überladen, das würde beim Linken zu ernsten Problemen führen. Folgendes Beispiel funktioniert also nicht: \<cpp\>extern "C" void foobar(int i, char\* s); extern "C" void foobar(int i, double\* d);\</cpp\> Der Linker würde 2 Funktionen mit dem Namen 'foobar' finden und könnte das ganze nicht mehr linken und auch nicht feststellen welche Funktion die Aufrufer jeweils meinen.
 
-### designated initializers
-
-Das Problem hier ist, dass C++ im Gegensatz zu C keine *designated initializers* (siehe [GCC Manual](http://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html) für eine Erklärung) unterstützt, beispielsweise wird der Code \<cpp\> struct {
-
-     uint16_t limit;
-     void* pointer;
-
-} \_\_attribute\_\_((packed)) gdtp = {
-
-     .limit = GDT_ENTRIES * 8 - 1,
-     .pointer = gdt,
-
-}; \</cpp\> beim Kompilieren eine Fehlermeldung namens *expected primary-expression before ‘.’ token* ausgeben.
-
-Man kann allerdings den gleichen Effekt entweder durch Weglassen des Feldnamens erreichen (dann muss die Initialisierung in der Reihenfolge wie die Definition des Strukturtyps sein): \<cpp\> struct {
-
-     uint16_t limit;
-     void* pointer;
-
-} \_\_attribute\_\_((packed)) gdtp = {
-
-     GDT_ENTRIES * 8 - 1,
-     gdt,
-
-}; \</cpp\> Die andere Möglichkeit ist einen Konstruktor für die Struktur zu definieren - dafür muss aber die Struktur benannt werden: \<cpp\> struct gdt_register {
-
-     uint16_t limit;
-     void* pointer;
-
-     gdt_register(uint16_t _limit,
-                  void*    _pointer)
-       : limit(_limit), pointer(_pointer){}
-
-} \_\_attribute\_\_((packed));
-
-gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
-
 ## Siehe auch
 
 [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
@@ -242,6 +205,6 @@ gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7959/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7831; parent 7791; 2010-07-13T14:55:18Z -->
+<!-- MediaWiki page 1486; revision 7959; parent 7831; 2010-07-21T19:56:22Z -->
