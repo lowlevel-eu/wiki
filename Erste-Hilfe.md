@@ -2,23 +2,23 @@
 
 Dieser Artikel richtet sich an verschiedene Personengruppen:
 
-**Anfänger**: Du hast es gerade geschafft deinen Kernel zu laden und möchtest einfach nur Text auf dem Bildschirm ausgeben. Der Code scheint einwandfrei, der Kernel wird auch geladen und... - der Emulator stürzt ab. Wahrscheinlich ist dir nur irgendwo ein kleiner Fehler unterlaufen, den schon tausende vor dir gemacht haben. Deswegen quäl dich nicht und lies einfach diesen Artikel, am besten behälst du die kleinen Tücken der Betriebssystem-Entwicklung, die hier aufgeführt werden, immer im Hinterkopf. Dann sparst du dir viel Zeit und Ärger.
+**Anfänger**: Du hast es gerade geschafft deinen Kernel zu laden und möchtest einfach nur Text auf dem Bildschirm ausgeben. Der Code scheint einwandfrei, der Kernel wird auch geladen und… – der Emulator stürzt ab. Wahrscheinlich ist dir nur irgendwo ein kleiner Fehler unterlaufen, den schon tausende vor dir gemacht haben. Deswegen quäl dich nicht und lies einfach diesen Artikel, am besten behälst du die kleinen Tücken der Betriebssystem-Entwicklung, die hier aufgeführt werden, immer im Hinterkopf. Dann sparst du dir viel Zeit und Ärger.
 
 **Frustrierte**: Schon seit einer Woche hängst du an der einen Codestelle und findest den Fehler einfach nicht? Du möchtest dein Betriebssystemprojekt am liebsten aufgeben und nur dein Ehrgeiz hält dich davon ab? Bestimmt ist es nur ein kleiner Fehler, den du immer wieder überliest. Schau einfach mal in diesem Artikel, ob du nicht vielleicht hier die Rettung findest.
 
 **Doktoren** Du bist häufig im Forum unterwegs und hilfst gerne? Und da ist dieser eine Fehler, den alle immer wieder machen. Damit du ihn nicht tausendmal wieder korrigieren musst, schreib ihn einfach in diesen Artikel.
 
-## Allgeime Fehler
+## Allgemeine Fehler
 
-### "ich habe die fehlerhafte Stelle genau gefunden"
+### „Ich habe die fehlerhafte Stelle genau gefunden“
 
 NEIN! Es kann sein, dass die Stelle fehlerhaft ist, sie muss es aber nicht sein. Dafür ist die Betriebssystementwicklung einfach viel zu komplex. Vielmehr kann die Codestelle nur der Auslöser für einen Fehler sein, der sich schon viel früher eingeschlichen hat. Beispielsweise kann ein Fehler bei einem bestimmten Funktionsaufruf auftreten, aber nicht, weil die Funktion fehlerhaft ist, sondern weil der Stack zu groß wird.
 
 ### Schon im Bootloader
 
-Viele schreiben ihren Bootloader zwar nicht selbst, aber die Unerscchrockenen, die es tun, begeben sich gleich am Anfang in Gefahr: \<asm\> \[org 0x7c00\]
+Viele schreiben ihren Bootloader zwar nicht selbst, aber die Unerschrockenen, die es tun, begeben sich gleich am Anfang in Gefahr: \<asm\> \[org 0x7c00\]
 
-mov si, msg call write jmp \$ \</asm\> Feiner Code, aber wer weiß, welche Registerzustände das BIOS uns überlässt. Wenn es zum Beispiel einen Farjump nach 0x00:0x7C00 macht, dann ist alles in Ordnung. Ist es aber einer nach 0x7C0:0x00, dann ist bei "call write " Schluss, weil die Org-Directive erwartet, dass in IP ein 0x00 steht. Außerdem wissen wir auch nicht, wohin das BIOS den Stack gesetzt hat, also sollte man den auch noch verschieben. Deswegen hat am Anfang jedes Bootloaders folgender (oder ähnlicher) Code zu stehen: \<asm\> %define STACK_SEGMENT 0x1000 %define STACK_OFFSET 0xFFFF
+mov si, msg call write jmp \$ \</asm\> Feiner Code, aber wer weiß, welche Registerzustände das BIOS uns überlässt. Wenn es zum Beispiel einen Farjump nach 0x0000:0x7C00 macht, dann ist alles in Ordnung. Ist es aber einer nach 0x07C0:0x0000, dann ist bei „call write“ Schluss, weil die Org-Directive erwartet, dass in IP ein 0x7C00 steht. Außerdem wissen wir auch nicht, wohin das BIOS den Stack gesetzt hat, also sollte man den auch noch verschieben. Deswegen hat am Anfang jedes Bootloaders folgender (oder ähnlicher) Code zu stehen: \<asm\> %define STACK_SEGMENT 0x1000 %define STACK_OFFSET 0xFFFF
 
 \[org 0x7c00\] cli xor ax, ax ; null segments mov ds, ax mov es, ax mov ax, STACK_SEGMENT mov ss, ax mov sp, STACK_OFFSET jmp 0x00:refresh refresh: sti
 
@@ -26,7 +26,7 @@ mov si, msg call write jmp \$ \</asm\> So gibt es keine Komplikationen. (Die obi
 
 ### Der Stack
 
-Kommen wir jetzt zum einem der größten Biester in der Betriebssystemsentwicklung: der Stack. Das erste, was viele vergessen, ist, dass der Stack nach UNTEN hin wächst. Ein *push* vermindert also den Stackpointer! Und der Stack die unangenehme Eigenschaft, alles zu überschreiben, was sich ihm in den Weg stellt, also auch Code und Daten. Deswegen ist folgender Code zum Scheitern verurteilt: \<asm\>
+Kommen wir jetzt zum einem der größten Biester in der Betriebssystemsentwicklung: dem Stack. Das erste, was viele vergessen, ist, dass der Stack nach **unten** hin wächst. Ein *push* vermindert also den Stackpointer! Und der Stack hat die unangenehme Eigenschaft, alles zu überschreiben, was sich ihm in den Weg stellt, also auch Code und Daten. Deswegen ist folgender Code zum Scheitern verurteilt: \<asm\>
 
 1.  define GDT_BASE 0x20000
 2.  define STACK_TOP 0x20100
@@ -45,9 +45,9 @@ call ClearScreen
 
 \</asm\>
 
-Und irgendwo in *ClearScreen* schmiert dann der Code ab, weil der Stack eben nach UNTEN wächst und die GDT überschreibt. Also immer vorsichtig sein mit dem Stack, insbesondere wenn irgendwann man für jeden Prozess einen eigenen hat.
+Und irgendwo in *ClearScreen* schmiert dann der Code ab, weil der Stack eben nach **unten** wächst und die GDT überschreibt. Also immer vorsichtig sein mit dem Stack, insbesondere wenn man irgendwann für jeden Prozess einen eigenen hat.
 
-### invalid TSS
+### Invalid TSS
 
 Das [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") ist ein sehr speicherhungriges Konstrukt, wesegen viele Programmierer auf Software-Multitasking umsteigen. Aber ganz ohne TSS geht es dann doch nicht. Dann nimmt man eben nur ein TSS und ändert die einzelnen Felder je nach Prozess. Damit spart man viel Speicherplatz. Dann hat man im [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") folgendes: \<asm\> %define TSS_SELECTOR 0x28 task_switch:
 
@@ -58,7 +58,7 @@ Das [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") ist
      ltr ax
      ;neuen Zustand laden
 
-iret \</asm\> Ja, gut gedacht, funktioniert aber nicht. Bochs beschwert sich zum Beispiel mit einem gut gemeinten *LTR: doesn't point to an available TSS descriptor!*. Das Problem: die CPU setzt im TSS das sogenannte busy-Flag in der GDT beim Laden des TSS. Wenn man Hardware-Multitasking verwendet, wofür daa TSS eigentlich gedacht ist, dann ist das kein Problem, da man ja immer wieder ein neues TSS lädt und im alten das busy-Flag automatisch wieder gelöscht wird. Hier wird aber nur EIN TSS verwendet. Desshalb muss das busy-Flag von Hand gelöscht werden:
+iret \</asm\> Ja, gut gedacht, funktioniert aber nicht. Bochs beschwert sich zum Beispiel mit einem gut gemeinten *LTR: doesn't point to an available TSS descriptor!*. Das Problem: die CPU setzt im TSS das sogenannte busy-Flag in der GDT beim Laden des TSS. Wenn man Hardware-Multitasking verwendet, wofür daa TSS eigentlich gedacht ist, dann ist das kein Problem, da man ja immer wieder ein neues TSS lädt und im alten das busy-Flag automatisch wieder gelöscht wird. Hier wird aber nur **ein** TSS verwendet. Deshalb muss das busy-Flag von Hand gelöscht werden:
 
 \<asm\>
 
@@ -74,7 +74,7 @@ iret \</asm\> Ja, gut gedacht, funktioniert aber nicht. Bochs beschwert sich zum
 
 ### Defekter Sektor
 
-Es kann auch durchaus vorkommen das ein Sektor der Diskette, die zu zum Testen verwendest, defekt ist. Dieser Fehler ist besonders dann schwer zu finden wenn man sein System primär auf realer Hardware testet.
+Es kann auch durchaus vorkommen das ein Sektor der Diskette, die zu zum Testen verwendest, defekt ist. Dieser Fehler ist besonders dann schwer zu finden, wenn man sein System primär auf realer Hardware testet.
 
 ## C-spezifische Fehler
 
@@ -84,13 +84,13 @@ TODO
 
 ### volatile
 
-Der Compiler hat die angenehme Eigenschaft den Code um sinnlose Passagen zu erleichtern. Aber manchmal ist das eben nicht hilfreich, vor allem wenn man inline-Assembler verwendet wird dieser oft wegoptimiert. Dagegen hilft das *volatile* Schlüsselwort. Es fordert den Compiler dazu auf den entsprechenden Code nicht zu optimieren: \<c\> asm volatile("mov %0, %%eax;" : : "a" (value) ); \</c\> Aber volatile kann noch mehr. Folgender Code könnte nicht funktionieren: \<c\> bool key_pressed=false; //wird vom IRQ-handler gesetzt
+Der Compiler hat die angenehme Eigenschaft den Code um sinnlose Passagen zu erleichtern. Aber manchmal ist das eben nicht hilfreich, vor allem wenn man inline-Assembler verwendet, wird dieser oft wegoptimiert. Dagegen hilft das *volatile* Schlüsselwort. Es fordert den Compiler dazu auf, den entsprechenden Code nicht zu optimieren: \<c\> asm volatile("mov %0, %%eax;" : : "a" (value) ); \</c\> Aber volatile kann noch mehr. Folgender Code könnte nicht funktionieren: \<c\> bool key_pressed=false; //wird vom IRQ-handler gesetzt
 
 void wait_keypress() {
 
      while(!key_pressed);
 
-} \</c\> Aus der Schleife könnte der Compiler eine Endlosschleife machen, da er der Meinung ist, dass sich key_pressed nicht ändern kann in der Schleife. Aber *volatile* löst das Problem: \<c\> volatile bool key_pressed=false; //wird vom IRQ-handler gesetzt
+} \</c\> Aus der Schleife könnte der Compiler eine Endlosschleife machen, da er der Meinung ist, dass sich key_pressed in der Schleife nicht ändern kann. Aber *volatile* löst das Problem: \<c\> volatile bool key_pressed=false; //wird vom IRQ-handler gesetzt
 
 void wait_keypress() {
 
@@ -100,9 +100,11 @@ void wait_keypress() {
 
 ### Nur ein kleines Zeichen...
 
-**Soll diese Passage im Artikel bleiben?** Die folgenden Fehler sind eigentlich zu banal für diesen Artikel. Leider passieren sie aber doch zu häufig. Außerdem überließt man sie bei längeren Codepassagen schneller als einem lieb ist:
+**Soll diese Passage im Artikel bleiben?**
 
-#### "==" ist ungleich "="
+Die folgenden Fehler sind eigentlich zu banal für diesen Artikel. Leider passieren sie aber doch zu häufig. Außerdem überliest man sie bei längeren Codepassagen schneller, als einem lieb ist:
+
+#### „==“ ist ungleich „=“
 
 #### Zahlensysteme
 
@@ -122,9 +124,9 @@ Nein, wieder falsch. Das Minuszeichen negiert den Wert doch nur, bildet also das
 
      int gekippt = ~0xFA;
 
-Diese Operation liefert das gewünschte 0x05
+Diese Operation liefert das gewünschte 0x05.
 
-## C++ spezifische Fehler
+## C++-spezifische Fehler
 
 ### designated initializers
 
@@ -150,7 +152,7 @@ Man kann allerdings den gleichen Effekt entweder durch Weglassen des Feldnamens 
      GDT_ENTRIES * 8 - 1,
      gdt,
 
-}; \</cpp\> Die andere Möglichkeit ist einen Konstruktor für die Struktur zu definieren - dafür muss aber die Struktur benannt werden: \<cpp\> struct gdt_register {
+}; \</cpp\> Die andere Möglichkeit ist einen Konstruktor für die Struktur zu definieren – dafür muss aber die Struktur benannt werden: \<cpp\> struct gdt_register {
 
      uint16_t limit;
      void* pointer;
@@ -163,14 +165,14 @@ Man kann allerdings den gleichen Effekt entweder durch Weglassen des Feldnamens 
 
 gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
-## Linker-spezifische Fehler
+## Linkerspezifische Fehler
 
-### undefined reference to \`funktionsname'
+### Undefined reference to \`funktionsname'
 
 Diese Fehlermeldung wird vom Linker ausgegeben, wenn er kein Symbol mit dem Namen *funktionsname* findet. Dies kann vorkommen, wenn
 
 - du vergessen hast die Objektdatei mit der Definition der Funktion *funktionsname* zu kompilieren und mit zu linken
-- du vergessen hast in der Sourcecodedatei diese Funktion zu definieren
+- du vergessen hast diese Funktion in der Sourcecodedatei zu definieren
 - du aus Versehen die Funktion als *static* deklariert hast
 - du [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") verwendest und *funktionsname* in einer C++-Quellcodedatei definiert und von einer C/Assembler-Quellcodedatei verwendet wird, eine Lösung findet sich [hier](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
 - du Archive (.a-Dateien) verwendest und die Reihenfolge der Kommandozeilenparameter von ld nicht richtig ist oder du vergessen hast *--start-group* und *--end-group* anzugeben, siehe hierfür auch das [ld-Manual](http://sourceware.org/binutils/docs/ld/Options.html)
@@ -189,6 +191,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 7963; parent 7958; 2010-07-21T20:06:45Z -->
+<!-- MediaWiki page 2263; revision 7969; parent 7963; 2010-07-22T13:24:43Z -->
