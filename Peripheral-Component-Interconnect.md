@@ -178,7 +178,7 @@ typedef .... pci_bdf_t;
 
      uint pos = 0;
      uint32_t mask = 0x00000001;
-     while( ( value & mask ) != 0 )
+     while (!(value & mask))
       { ++pos; mask=mask<<1; }
      return pos;
 
@@ -188,7 +188,7 @@ typedef .... pci_bdf_t;
 
      uint pos = 31;
      uint32_t mask = 0x80000000;
-     while( ( value & mask ) != 0 )
+     while (!(value & mask))
       { --pos; mask=mask>>1; }
      return pos;
 
@@ -214,9 +214,9 @@ typedef .... pci_bdf_t;
         // prüfen ob Speicher oder IO :
         if ( (pci_config_readd(addr,barOffset) & 0x1) == 0 )
          { // Speicher-Ressource :
-           static const char ptext_pref[] = "prefetchable"; //Text für prefetchable
-           static const char ptext_nopr[] = "non-prefetchable"; //Text für non-prefetchable
-           const char* const ptext = (((pci_config_readd(addr,barOffset) >> 3) & 0x1) == 1) ? &ptext_pref[0] : &ptext_nopr[0];
+           static const char* ptext_pref = "prefetchable"; //Text für prefetchable
+           static const char* ptext_nopr = "non-prefetchable"; //Text für non-prefetchable
+           const char* const ptext = (((pci_config_readd(addr,barOffset) >> 3) & 0x1) == 1) ? ptext_pref : ptext_nopr;
 
            switch(((pci_config_readd(addr,barOffset) >> 1) & 0x3)) // check Memory-BAR-Type
             {
@@ -226,7 +226,7 @@ typedef .... pci_bdf_t;
                 const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; //und wieder zurücklesen
                 if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
                  {
-                   if (ptext != &ptext_nopr[0]) // unbenutzte BARs müssen komplett 0 sein
+                   if (ptext != ptext_nopr) // unbenutzte BARs müssen komplett 0 sein
                     { printf("FEHLER : 32Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
 
                    // BAR-Infos ausgeben :
@@ -636,6 +636,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7303/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7303; parent 7289; 2010-03-07T09:28:53Z -->
+<!-- MediaWiki page 1626; revision 7977; parent 7303; 2010-07-22T20:24:55Z -->
