@@ -274,7 +274,7 @@ typedef .... pci_bdf_t;
                 pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
                 pci_config_writed(addr,barOffset+4,0xFFFFFFFF); // mit lauter 1en überschreiben
                 const uint32_t barLowValue  = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
-                const uint32_t barHighValue = pci_config_readd(addr+4,barOffset); // und wieder zurücklesen
+                const uint32_t barHighValue = pci_config_readd(addr,barOffset+4); // und wieder zurücklesen
 
                 uint lowestBit = 0;
                 if (barLowValue != 0)
@@ -636,6 +636,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7983/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7977; parent 7303; 2010-07-22T20:24:55Z -->
+<!-- MediaWiki page 1626; revision 7983; parent 7977; 2010-07-22T20:49:02Z -->
