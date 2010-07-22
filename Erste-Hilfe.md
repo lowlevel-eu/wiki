@@ -98,7 +98,7 @@ void wait_keypress() {
 
 } \</c\> Num wird bei jedem Schleifendurchlauf der Wert von key_pressed neu geladen und getestet.
 
-### Nur ein kleines Zeichen...
+### Nur ein kleines Zeichen…
 
 **Soll diese Passage im Artikel bleiben?**
 
@@ -128,7 +128,7 @@ Diese Operation liefert das gewünschte 0x05.
 
 ## C++-spezifische Fehler
 
-### designated initializers
+### Designated initializers
 
 Das Problem hier ist, dass C++ im Gegensatz zu C keine *designated initializers* (siehe [GCC Manual](http://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html) für eine Erklärung) unterstützt, beispielsweise wird der Code \<cpp\> struct {
 
@@ -191,6 +191,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 7969; parent 7963; 2010-07-22T13:24:43Z -->
+<!-- MediaWiki page 2263; revision 7970; parent 7969; 2010-07-22T13:25:57Z -->
