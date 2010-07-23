@@ -304,7 +304,7 @@ typedef .... pci_bdf_t;
                 break;
 
               default: // ungültiger Memory-BAR :
-                printf("FEHLER : Memory-BAR %u is invalid!\n",bar); return;
+                printf("FEHLER : Memory-BAR %u ist ungültig!\n",bar); return;
             }
          }
         else
@@ -636,6 +636,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7983/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7983; parent 7977; 2010-07-22T20:49:02Z -->
+<!-- MediaWiki page 1626; revision 7989; parent 7983; 2010-07-23T08:08:33Z -->
