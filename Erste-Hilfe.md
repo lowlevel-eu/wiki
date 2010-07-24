@@ -47,40 +47,13 @@ call ClearScreen
 
 Und irgendwo in *ClearScreen* schmiert dann der Code ab, weil der Stack eben nach **unten** wächst und die GDT überschreibt. Also immer vorsichtig sein mit dem Stack, insbesondere wenn man irgendwann für jeden Prozess einen eigenen hat.
 
-### Invalid TSS
-
-Das [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") ist ein sehr speicherhungriges Konstrukt, wesegen viele Programmierer auf Software-Multitasking umsteigen. Aber ganz ohne TSS geht es dann doch nicht. Dann nimmt man eben nur ein TSS und ändert die einzelnen Felder je nach Prozess. Damit spart man viel Speicherplatz. Dann hat man im [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") folgendes: \<asm\> %define TSS_SELECTOR 0x28 task_switch:
-
-     ;alten Zustand sichern
-     ;neuen Prozess suchen
-     ;Einträge im TSS ändern
-     mov ax, TSS_SELECTOR
-     ltr ax
-     ;neuen Zustand laden
-
-iret \</asm\> Ja, gut gedacht, funktioniert aber nicht. Bochs beschwert sich zum Beispiel mit einem gut gemeinten *LTR: doesn't point to an available TSS descriptor!*. Das Problem: die CPU setzt im TSS das sogenannte busy-Flag in der GDT beim Laden des TSS. Wenn man Hardware-Multitasking verwendet, wofür daa TSS eigentlich gedacht ist, dann ist das kein Problem, da man ja immer wieder ein neues TSS lädt und im alten das busy-Flag automatisch wieder gelöscht wird. Hier wird aber nur **ein** TSS verwendet. Deshalb muss das busy-Flag von Hand gelöscht werden:
-
-\<asm\>
-
-...
-
-      mov BYTE  [ADDRESS_GDT+TSS_SELECTOR+5], 0x89  ;busy-Flag löschen
-      mov ax, 40
-      ltr ax
-
-...
-
-\</asm\>
+## Hardware
 
 ### Defekter Sektor
 
 Es kann auch durchaus vorkommen das ein Sektor der Diskette, die zu zum Testen verwendest, defekt ist. Dieser Fehler ist besonders dann schwer zu finden, wenn man sein System primär auf realer Hardware testet.
 
 ## C-spezifische Fehler
-
-### \_\_attribute\_\_((packed)) in structs vergessen
-
-TODO
 
 ### volatile
 
@@ -98,6 +71,33 @@ void wait_keypress() {
 
 } \</c\> Num wird bei jedem Schleifendurchlauf der Wert von key_pressed neu geladen und getestet.
 
+### \_\_attribute\_\_((packed))
+
+Und wieder macht uns der Compiler ein schönes Codekonstrukt kaputt, weil er structs "optimiert". Folgender Code erstellt einen IDT-Eintrag: \<c\> VOID idt_set_entry(uint8 n, unit16 sel, void\* handler, uint8 flags) {
+
+      idt_entry[n].resreved = 0;
+      idt_entry[n].flags   = flags;
+      idt_entry[n].sel     = sel;
+      idt_entry[n].baseLo  = (handler) & 0x0000FFFF;
+      idt_entry[n].baseHi  = (handler) >> 16;
+      return;
+
+} \</c\> Diese (fehlerfreie) Funktion greift dabei auf ein Array aus folgendem struct zu:
+
+\<c\> struct idt_entry {
+
+       unit16 baseLo;
+       uint16 sel;
+       uint8 always0;   //reserved
+       uint8 flags;
+       uint16 baseHi;
+
+} \</c\> Und genau an dieser Stelle produziert der Compiler mit seiner Optimierung einen Fehler und die CPU wird sich mit einem freundlichen Triple-Fault verabschieden. Denn der Compiler hat die Eigenart, die Elemente eines structs an DWORD-Grenzen auszurichten, weil dann die CPU schneller arbeiten kann. Das hat in diesem Fall aber fatale Folgen, denn aus dem angegebenen WORDs/BYTEs macht der Compiler einfach mal DWORDs. Und damit ist natürlich der IDT-Eintrag komplett falsch. Glücklicherweise gibt es aber eine ganz einfache Lösung: \<c\> struct idt_entry {
+
+     //...
+
+}\_\_attribute\_\_((packed)); \</c\> Das angehängte *\_\_attribute\_\_((packed))* vehindert, dass der Compiler die Elemente ausrichtet, wodurch schließlich der Code funktioniert.
+
 ### Nur ein kleines Zeichen…
 
 **Soll diese Passage im Artikel bleiben?**
@@ -105,6 +105,8 @@ void wait_keypress() {
 Die folgenden Fehler sind eigentlich zu banal für diesen Artikel. Leider passieren sie aber doch zu häufig. Außerdem überliest man sie bei längeren Codepassagen schneller, als einem lieb ist:
 
 #### „==“ ist ungleich „=“
+
+Es ist eigentlich ein totaler Anfängerfehler, in Bedingungen das Zuweisungszeichen '=' mit dem Vergleichsoperator '==' zu verwechseln. Also bitte aufpassen!
 
 #### Zahlensysteme
 
@@ -181,16 +183,102 @@ Falls nichts davon zutrifft, könntest du die Objektdatei, die die deiner Meinun
 
      readelf -s objectfile.o
 
-### rodata steht am Anfang
-
-TODO
-
 ### Ladeadresse nicht berücksichtigt
 
-TODO
+Ein kleiner aber gemeiner Fehler: Man hat einen schönen Kernel, der von dem genauso schönen Bootloader in den RAM geladen wird z.B. nach 0x10000. Dieser wird dann gelinkt: OUTPUT_FORMAT("binary") INPUT("kernel.o") ENTRY(\_main) SECTIONS {
+
+    .text : {
+       *(.text*)
+    }
+    .data : {
+       *(.data*)
+    }
+    .bss : {
+       *(.bss*)
+    }
+
+}
+
+\- die CPU verabschieded sich, da man die Ladeadresse auch im Linkerscript berücksichtigen muss (die Standartadresse ist 0x00, aber das stimmt ja hier nicht). Desshalb: OUTPUT_FORMAT("binary") INPUT("kernel.o") ENTRY(\_main) SECTIONS {
+
+    .text (0x10000): {
+       *(.text*)
+    }
+    .data : {
+       *(.data*)
+    }
+    .bss : {
+       *(.bss*)
+    }
+
+}
+
+### rodata steht am Anfang
+
+Über folgenden Fehler stolpert man meistens gleich zu Beginn, wenn man im Kernel nur ein wenig Text ausgeben möchte. Nehmen wir beispielsweise folgenden kleinen Kernel: \<c\> void main() {
+
+     clrscr;
+     kprintf("Hallo Welt!");
+     for(;;);
+
+} \</c\>
+
+Der Kernel wird mit folgendem Linkerscript gelinkt:
+
+    OUTPUT_FORMAT("binary")
+    INPUT("kernel.o")
+    ENTRY(_main)
+    SECTIONS
+    {
+     .text (0x10000):
+     {
+        *(.text*)
+     }
+     .data :
+     {
+        *(.data*)
+     }
+     .bss :
+     {
+        *(.bss*)
+     }
+    }
+
+Funktioniert natürlich nicht. Interessanterweise führt das Ändern des Textes zu ganz anderen Fehlern. Die Begründung ist simpel: Der Text ("Hallo Welt!") landet nicht etwa in der .data-Sektion sondern in der sogenannten .rodata-Sektion. Und da wir diese hier nicht im Linkerscript angeben, wird sie einfach an den Anfang der Ausgabedatei gesetzt. Das führt natürlich zwangsweise zu Fehlern, weil ein Text ja kein Code ist. Es gibt nun zwei Möglichkeiten:
+
+1.  Man ergänzt das Linkerscript um die .rodata-Sektion *oder noch besser*
+2.  Man schaltet eine Assemblerdatei vor den eigentlichen Kernel, die zum Label \_main springt. Da man irgendann sowieseo Assembler benötigt, bietet es sich an, das gleich hiermit zu erledigen.
+
+Diese Assembler-Datei, die dann assembliert wird zu 'start.o', könnte so aussehen:
+
+\<asm\> extern \_main  ;das ist unser Einsprunglabel im eigentlichen Kernel global start
+
+start: jmp \_main \</asm\>
+
+Dann noch das Linkerscript modifizieren und fertig:
+
+    OUTPUT_FORMAT("binary")
+    INPUT("kernel.o","start.o")
+    ENTRY(start)
+    SECTIONS
+    {
+     .text (0x10000):
+     {
+        *start.o(*)
+        *(.text*)
+     }
+     .data :
+     {
+        *(.data*)
+     }
+     .bss :
+     {
+        *(.bss*)
+     }
+    }
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 7970; parent 7969; 2010-07-22T13:25:57Z -->
+<!-- MediaWiki page 2263; revision 8002; parent 7970; 2010-07-24T11:03:15Z -->
