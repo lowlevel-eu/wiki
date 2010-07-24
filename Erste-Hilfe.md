@@ -221,7 +221,7 @@ Der Kernel wird mit folgendem Linkerscript gelinkt:
 
     OUTPUT_FORMAT("binary")
     INPUT("kernel.o")
-    ENTRY(_main)
+    ENTRY(main)
     SECTIONS
     {
      .text (0x10000):
@@ -273,6 +273,6 @@ Dann noch das Linkerscript modifizieren und fertig:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8003/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 8003; parent 8002; 2010-07-24T11:19:39Z -->
+<!-- MediaWiki page 2263; revision 8004; parent 8003; 2010-07-24T11:20:40Z -->
