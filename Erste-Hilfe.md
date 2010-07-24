@@ -73,26 +73,26 @@ void wait_keypress() {
 
 ### \_\_attribute\_\_((packed))
 
-Und wieder macht uns der Compiler ein schönes Codekonstrukt kaputt, weil er structs "optimiert". Folgender Code erstellt einen IDT-Eintrag: \<c\> VOID idt_set_entry(uint8 n, unit16 sel, void\* handler, uint8 flags) {
+Und wieder macht uns der Compiler ein schönes Codekonstrukt kaputt, weil er structs „optimiert“. Folgender Code erstellt einen IDT-Eintrag: \<c\> VOID idt_set_entry(uint8_t n, uint16_t sel, void\* handler, uint8_t flags) {
 
       idt_entry[n].resreved = 0;
       idt_entry[n].flags   = flags;
       idt_entry[n].sel     = sel;
-      idt_entry[n].baseLo  = (handler) & 0x0000FFFF;
-      idt_entry[n].baseHi  = (handler) >> 16;
+      idt_entry[n].baseLo  = (uintptr_t)(handler) & 0x0000FFFF;
+      idt_entry[n].baseHi  = (uintptr_t)(handler) >> 16;
       return;
 
 } \</c\> Diese (fehlerfreie) Funktion greift dabei auf ein Array aus folgendem struct zu:
 
 \<c\> struct idt_entry {
 
-       unit16 baseLo;
-       uint16 sel;
-       uint8 always0;   //reserved
-       uint8 flags;
-       uint16 baseHi;
+       uint16_t baseLo;
+       uint16_t sel;
+       uint8_t always0; //reserved
+       uint8_t flags;
+       uint16_t baseHi;
 
-} \</c\> Und genau an dieser Stelle produziert der Compiler mit seiner Optimierung einen Fehler und die CPU wird sich mit einem freundlichen Triple-Fault verabschieden. Denn der Compiler hat die Eigenart, die Elemente eines structs an DWORD-Grenzen auszurichten, weil dann die CPU schneller arbeiten kann. Das hat in diesem Fall aber fatale Folgen, denn aus dem angegebenen WORDs/BYTEs macht der Compiler einfach mal DWORDs. Und damit ist natürlich der IDT-Eintrag komplett falsch. Glücklicherweise gibt es aber eine ganz einfache Lösung: \<c\> struct idt_entry {
+}; \</c\> Und genau an dieser Stelle produziert der Compiler mit seiner Optimierung einen Fehler und die CPU wird sich mit einem freundlichen Triple-Fault verabschieden. Denn der Compiler hat die Eigenart, die Elemente eines structs an DWORD-Grenzen auszurichten (auf i386), weil dann die CPU schneller arbeiten kann. Das hat in diesem Fall aber fatale Folgen, denn aus dem angegebenen WORDs/BYTEs macht der Compiler einfach mal DWORDs. Und damit ist natürlich der IDT-Eintrag komplett falsch. Glücklicherweise gibt es aber eine ganz einfache Lösung: \<c\> struct idt_entry {
 
      //...
 
@@ -106,7 +106,7 @@ Die folgenden Fehler sind eigentlich zu banal für diesen Artikel. Leider passie
 
 #### „==“ ist ungleich „=“
 
-Es ist eigentlich ein totaler Anfängerfehler, in Bedingungen das Zuweisungszeichen '=' mit dem Vergleichsoperator '==' zu verwechseln. Also bitte aufpassen!
+Es ist eigentlich ein totaler Anfängerfehler, in Bedingungen das Zuweisungszeichen „=“ mit dem Vergleichsoperator „==“ zu verwechseln. Also bitte aufpassen!
 
 #### Zahlensysteme
 
@@ -114,19 +114,7 @@ Die Page Size Extension ist eine tolle Sache, also aktivieren wir sie doch mal. 
 
 #### Wie ging nochmal dieses NOT?!
 
-Ganz einfache Aufgabe: Alle Bits in einer Maske umkippen, also ein logisches NOT. Wie hieß nochmal der Operator? Achja:
-
-     int gekippt = !0xFA;
-
-Leider falsch geraten. Das Ausrufezeichen liefert nur Null (false) und Eins (true), egal welchen Operanden man ihm liefert. Zweiter Versuch:
-
-     int gekippt = -0xFA;
-
-Nein, wieder falsch. Das Minuszeichen negiert den Wert doch nur, bildet also das Zweierkomplement. Richtig gewsen wäre:
-
-     int gekippt = ~0xFA;
-
-Diese Operation liefert das gewünschte 0x05.
+Ganz einfache Aufgabe: Alle Bits in einer Maske umkippen, also ein logisches NOT. Wie hieß nochmal der Operator? Achja: \<c\>int gekippt = !0xFA;\</c\> Leider falsch geraten. Das Ausrufezeichen liefert nur Null (false) und Eins (true), egal welchen Operanden man ihm liefert. Zweiter Versuch: \<c\>int gekippt = -0xFA;\</c\> Nein, wieder falsch. Das Minuszeichen negiert den Wert doch nur, bildet also das Zweierkomplement. Richtig gewsen wäre: \<c\>int gekippt = ~0xFA;\</c\> Diese Operation liefert das gewünschte 0x05.
 
 ## C++-spezifische Fehler
 
@@ -185,33 +173,39 @@ Falls nichts davon zutrifft, könntest du die Objektdatei, die die deiner Meinun
 
 ### Ladeadresse nicht berücksichtigt
 
-Ein kleiner aber gemeiner Fehler: Man hat einen schönen Kernel, der von dem genauso schönen Bootloader in den RAM geladen wird z.B. nach 0x10000. Dieser wird dann gelinkt: OUTPUT_FORMAT("binary") INPUT("kernel.o") ENTRY(\_main) SECTIONS {
+Ein kleiner aber gemeiner Fehler: Man hat einen schönen Kernel, der von dem genauso schönen Bootloader in den RAM geladen wird, z. B. nach 0x10000. Dieser wird dann gelinkt:
 
-    .text : {
-       *(.text*)
-    }
-    .data : {
-       *(.data*)
-    }
-    .bss : {
-       *(.bss*)
-    }
-
-}
-
-\- die CPU verabschieded sich, da man die Ladeadresse auch im Linkerscript berücksichtigen muss (die Standartadresse ist 0x00, aber das stimmt ja hier nicht). Desshalb: OUTPUT_FORMAT("binary") INPUT("kernel.o") ENTRY(\_main) SECTIONS {
-
-    .text (0x10000): {
-       *(.text*)
-    }
-    .data : {
-       *(.data*)
-    }
-    .bss : {
-       *(.bss*)
+    OUTPUT_FORMAT("binary")
+    INPUT("kernel.o")
+    ENTRY(_main)
+    SECTIONS {
+     .text : {
+        *(.text*)
+     }
+     .data : {
+        *(.data*)
+     }
+     .bss : {
+        *(.bss*)
+     }
     }
 
-}
+– die CPU verabschiedet sich, da man die Ladeadresse auch im Linkerscript berücksichtigen muss (die Standardadresse ist 0x00, aber das stimmt ja hier nicht). Deshalb:
+
+    OUTPUT_FORMAT("binary")
+    INPUT("kernel.o")
+    ENTRY(_main)
+    SECTIONS {
+     .text (0x10000): {
+        *(.text*)
+     }
+     .data : {
+        *(.data*)
+     }
+     .bss : {
+        *(.bss*)
+     }
+    }
 
 ### rodata steht am Anfang
 
@@ -244,16 +238,16 @@ Der Kernel wird mit folgendem Linkerscript gelinkt:
      }
     }
 
-Funktioniert natürlich nicht. Interessanterweise führt das Ändern des Textes zu ganz anderen Fehlern. Die Begründung ist simpel: Der Text ("Hallo Welt!") landet nicht etwa in der .data-Sektion sondern in der sogenannten .rodata-Sektion. Und da wir diese hier nicht im Linkerscript angeben, wird sie einfach an den Anfang der Ausgabedatei gesetzt. Das führt natürlich zwangsweise zu Fehlern, weil ein Text ja kein Code ist. Es gibt nun zwei Möglichkeiten:
+Funktioniert natürlich nicht. Interessanterweise führt das Ändern des Textes zu ganz anderen Fehlern. Die Begründung ist simpel: Der Text („Hallo Welt!“) landet nicht etwa in der .data-Sektion sondern in der sogenannten .rodata-Sektion. Und da wir diese hier nicht im Linkerscript angeben, wird sie einfach an den Anfang der Ausgabedatei gesetzt. Das führt natürlich zwangsweise zu Fehlern, weil ein Text ja kein Code ist. Es gibt nun zwei Möglichkeiten:
 
 1.  Man ergänzt das Linkerscript um die .rodata-Sektion *oder noch besser*
-2.  Man schaltet eine Assemblerdatei vor den eigentlichen Kernel, die zum Label \_main springt. Da man irgendann sowieseo Assembler benötigt, bietet es sich an, das gleich hiermit zu erledigen.
+2.  Man schaltet eine Assemblerdatei vor den eigentlichen Kernel, die zum Label main springt. Da man irgendann sowieseo Assembler benötigt, bietet es sich an, das gleich hiermit zu erledigen.
 
-Diese Assembler-Datei, die dann assembliert wird zu 'start.o', könnte so aussehen:
+Diese Assembler-Datei, die dann zu „start.o“ assembliert wird, könnte so aussehen:
 
-\<asm\> extern \_main  ;das ist unser Einsprunglabel im eigentlichen Kernel global start
+\<asm\> extern main  ;das ist unser Einsprunglabel im eigentlichen Kernel global start
 
-start: jmp \_main \</asm\>
+start: jmp main \</asm\>
 
 Dann noch das Linkerscript modifizieren und fertig:
 
@@ -279,6 +273,6 @@ Dann noch das Linkerscript modifizieren und fertig:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8003/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 8002; parent 7970; 2010-07-24T11:03:15Z -->
+<!-- MediaWiki page 2263; revision 8003; parent 8002; 2010-07-24T11:19:39Z -->
