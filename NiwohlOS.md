@@ -64,6 +64,11 @@ tl;dr: Wie Linux, nur geiler.
 
 Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber (oder auch Kernel- und Usertreiber). Kerneltreiber werden direkt in den Kernel miteingelinkt und laufen mit der gleichen Privilegsstufe wie der Kernel, Usertreiber können zur Laufzeit nachgeladen werden und laufen im Ring 3, also mit Privilegien, die jedes normale Programm auch besitzt. Durch eine ausgeklügelte und hochmoderne HAL, der niwohlosenHAL, können Usertreiber die gleiche Funktionalität wie Kerneltreiber nutzen, ohne jedoch bei Instabilität die Ausführung des Systems zu behindern. Durch den perfekten Mix aus extrem stabilen Kerneltreibern und hochoptimierten Usertreibern kann ein sicheres, stabiles und gleichzeitig hochperformantes System garantiert werden.
 
+Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem ~~naiven~~ nativen Treiberinterface von niwohlOS, welches mit erstaunlichen Datendurchsatzraten besticht, und dem bewährten [UDI](http://de.wikipedia.org/wiki/Unión_Demócrata_Independiente). Dessen Vorteile liegen ganz klar auf der Hand:
+
+- Unterstützung durch die Industrie aufgrund der einheitlichen ABI und der damit verbundenen Möglichkeit, Closed-Source-Treiber zu implementieren. Die Vertreter großer Hardwarehersteller wünschen sich schon seit langem einen einheitlichen Weg, alle Hobbybetriebssysteme (was niwohlOS eigentlich nicht ist) mit Treibern für ihre Hardware zu versorgen. Dies ist dank UDI nun endlich möglich.
+- Unterstützung durch die extrem kompetenten Entwickler von osdev.org. Diese bereichern die Spezifikation immer wieder durch lebhafte Diskussionen. Außerdem werden sie nicht müde zu betonen, welch großartige Leistung von UDI-Treibern aufgrund der bisher von anderen Interfaces unübertroffenen Skalierbarkeit erreicht werden kann.
+
 #### [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
 
 Wie es sich für jedes anständige micromonolithische Modulahybridsystem gehört, implementiert natürlich auch niwohlOS einen Mechanismus der Interprozesskommunikation. Dabei wird, inspiriert von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur"), eine abgewandelte Form des [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") eingesetzt: In die Kernel wird eine Untermenge eines generischen XML-Parsers implementiert, welcher XML-RPCs, welche durch Sockets übertragen werden, parst und dementsprechend an ein Eventsystem weiterleitet, welches von da aus alles weitere koordiniert.
@@ -236,6 +241,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8019/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 7766; parent 7760; 2010-06-23T11:44:46Z -->
+<!-- MediaWiki page 2095; revision 8019; parent 7766; 2010-07-26T16:01:23Z -->
