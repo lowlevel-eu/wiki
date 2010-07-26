@@ -112,6 +112,8 @@ Es ist eigentlich ein totaler Anfängerfehler, in Bedingungen das Zuweisungszeic
 
 Die Page Size Extension ist eine tolle Sache, also aktivieren wir sie doch mal. Dafür einfach in cr4 das 4. Bit setzen. Ganz simpel: \<asm\> mov eax, cr4 or eax, 10 mov cr4, eax \</asm\> Mh, funktioniert nicht. Der Fehler ist allerdings leicht behoben: \<asm\> mov eax, cr4 or eax, 0x10 mov cr4, eax \</asm\> Ein sehr ärgerlicher Schreibfehler!
 
+Man sollte auch aufpassen, dass Zahlen mit führenden Nullen im Oktalsystem interpretiert werden, daher sollte man darauf verzichten.
+
 #### Wie ging nochmal dieses NOT?!
 
 Ganz einfache Aufgabe: Alle Bits in einer Maske umkippen, also ein bitweise NOT. Wie hieß nochmal der Operator? Achja: \<c\>int gekippt = !0xFA;\</c\> Leider falsch geraten. Das Ausrufezeichen ist kein bitweises, sondern ein logisches Nicht und liefert nur Null (false) und Eins (true), egal welchen Operanden man ihm liefert. Zweiter Versuch: \<c\>int gekippt = -0xFA;\</c\> Nein, wieder falsch. Das Minuszeichen negiert den Wert doch nur, bildet also das Zweierkomplement. Richtig gewsen wäre: \<c\>int gekippt = ~0xFA;\</c\> Diese Operation liefert das gewünschte 0x05.
@@ -273,6 +275,6 @@ Dann noch das Linkerscript modifizieren und fertig:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8005/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 8005; parent 8004; 2010-07-25T11:18:07Z -->
+<!-- MediaWiki page 2263; revision 8018; parent 8005; 2010-07-26T08:39:26Z -->
