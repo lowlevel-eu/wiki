@@ -66,7 +66,7 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 #### Interfaces
 
-Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem ~~naiven~~ nativen Treiberinterface von niwohlOS, welches mit erstaunlichen Datendurchsatzraten besticht, und dem bewährten [UDI](http://de.wikipedia.org/wiki/Unión_Demócrata_Independiente). Dessen Vorteile liegen ganz klar auf der Hand:
+Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem ~~naiven~~ nativen Treiberinterface von niwohlOS, welches mit erstaunlichen Datendurchsatzraten besticht, und dem bewährten [UDI](http://www.spr.germanistik.uni-wuerzburg.de/udi/). Dessen Vorteile liegen ganz klar auf der Hand:
 
 - Unterstützung durch die Industrie aufgrund der einheitlichen ABI und der damit verbundenen Möglichkeit, Closed-Source-Treiber zu implementieren. Die Vertreter großer Hardwarehersteller wünschen sich schon seit langem einen einheitlichen Weg, alle Hobbybetriebssysteme (was niwohlOS eigentlich nicht ist) mit Treibern für ihre Hardware zu versorgen. Dies ist dank UDI nun endlich möglich.
 - Unterstützung durch die extrem kompetenten Entwickler von osdev.org. Diese bereichern die Spezifikation immer wieder durch lebhafte Diskussionen. Außerdem werden sie nicht müde zu betonen, welch großartige Leistung von UDI-Treibern aufgrund der bisher von anderen Interfaces unübertroffenen Skalierbarkeit erreicht werden kann.
@@ -243,6 +243,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8021; parent 8020; 2010-07-27T05:54:33Z -->
+<!-- MediaWiki page 2095; revision 8022; parent 8021; 2010-07-27T09:11:42Z -->
