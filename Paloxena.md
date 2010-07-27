@@ -23,7 +23,7 @@ Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die „Grü
 
 ## paloxena1
 
-paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyXomycota so ziemlich kaputt war. Dummerweise wurde es noch viel kaputter. Deshalb gibt es jetzt paloxena2. Irgendwann muss man ja einen Glückstreffer landen.
+paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyXomycota so ziemlich kaputt war. Dummerweise wurde es noch viel kaputter. Deshalb gibt es jetzt paloxena2 (Und paloxena3. Und paloxena3.5.). Irgendwann muss man ja einen Glückstreffer landen.
 
 ### Programme
 
@@ -97,6 +97,6 @@ Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7678/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8023/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 7678; parent 7079; 2010-05-09T11:05:04Z -->
+<!-- MediaWiki page 2045; revision 8023; parent 7678; 2010-07-27T21:52:04Z -->
