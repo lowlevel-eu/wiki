@@ -21,10 +21,10 @@ JPC ist ein portabler [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-
 
 ## Links
 
-- [JPC Homepage](http://www-jpc.physics.ox.ac.uk/home_home.html)
+- [JPC Homepage](http://jpc.sourceforge.net/home_home.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2142/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2142/index.html)
 
-<!-- MediaWiki page 2142; revision 8024; parent 6591; 2010-07-28T09:57:00Z -->
+<!-- MediaWiki page 2142; revision 8026; parent 8024; 2010-07-28T13:52:32Z -->
