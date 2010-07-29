@@ -368,7 +368,7 @@ Werden 2 Bytes verlangt, wird das zweite an den Port 60h gesendet!**
 | *ABh* | 1 Byte | Testet das Interface, für mögliche Ergebnisse siehe Befehl A9h |
 | *ADh* | 1 Byte | Deaktiviere Keyboard (Bit 4 in Commando-Byte). |
 | *AEh* | 1 Byte | Aktiviere Keyboard wieder (Bit 4 in commando-Byte) |
-| *C0h* | 1 Byte | Lese Inputport-Byte nach 60h aus. Dieses ist wie folgt aufgebaut<br>7 - Keyboard aktiviert/nicht gesperrt<br>6 - 0 - Video ist CGA (Farbe)<br>1 - Video ist MDA (schwarz/weiß)<br>5 - 0 - Manufaktur-jumper ist installiert (Manufaktor-Testmodus)<br>1 - normal<br>4 - war früher dafür da um die Größe des Ram zu symbolisieren, wir aber nciht mehr genutzt<br>3 - reserved<br>2 - Keyboard hat kein Strom<br>1 - current mouse serial data input state<br>0 - current keyboard serial input state |
+| *C0h* | 1 Byte | Lese Inputport-Byte nach 60h aus. Dieses ist wie folgt aufgebaut<br>7 - Keyboard aktiviert/nicht gesperrt<br>6 - 0 - Video ist CGA (Farbe)<br>1 - Video ist MDA (schwarz/weiß)<br>5 - 0 - Manufaktur-jumper ist installiert (Manufaktor-Testmodus)<br>1 - normal<br>4 - war früher dafür da um die Größe des Ram zu symbolisieren, wir aber nicht mehr genutzt<br>3 - reserved<br>2 - Keyboard hat kein Strom<br>1 - current mouse serial data input state<br>0 - current keyboard serial input state |
 | *D0h* | 1 Byte | Lese das Ouputport-Byte und platziere in auf Port 60h um ihn odrt abholen lassen zu können. Das Byte sieht folgendermaßen aus(Beschr. gilt, wenn Bit=1 ist):<br><br>7 - keyboard data (output)<br>6 - keyboard clock (output/signal)<br>5 - In OutputBuffer ist ein Mausbyte (sobald dies gesetzt ist wird IRQ12 aufgerufen, sofern Bit1 im Commando-Byte gesetzt ist)<br>4 - In OutputBuffer sind Daten der Tastatur byte (aktiviert IRQ1, sofern Bit0 im Commando-Byte gesetzt ist)<br>3 - mouse data (output)<br>2 - mouse clock (output)<br>1 - Aktiviere die A20-Gate<br>0 - System reset/Reset processor<br>Notiz: Bit 0 sollte immer gesetzt sein, wenn man per D1h das Outputport-Byte schreibt :)<br> |
 | *D1h* | 2 Bytes | Das zweite Byte ist das Outpuport-Byte, welches somit das Outputport-Byte neu setzt. siehe auch Befehl D0h |
 | *D2h* | 2 Bytes | Dieser Befehl schreibt das zweite Byte in den Output-Buffer des Keyboards (60h) |
@@ -1030,6 +1030,6 @@ Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/lay
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 4923; parent 4895; 2009-07-31T11:26:55Z -->
+<!-- MediaWiki page 1559; revision 8029; parent 4923; 2010-07-29T10:33:14Z -->
