@@ -46,8 +46,12 @@ Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wen
 | 0x13 | \#XF - SIMD Floating Point |
 | 0x14-0x1f | *Reserviert* |
 
+## Weblinks
+
+<http://www.logix.cz/michal/doc/i386/chp09-08.htm>
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4718/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 4718; parent 4518; 2009-07-25T17:12:10Z -->
+<!-- MediaWiki page 1824; revision 8032; parent 4718; 2010-07-30T13:23:06Z -->
