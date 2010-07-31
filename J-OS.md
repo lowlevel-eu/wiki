@@ -17,11 +17,12 @@
 
 Noch keine (siehe unten)
 
+  
+***J-OS wird nicht mehr weiterentwickelt. Stattdessen entwickle ich momentan an meinem neues OS: ExpOS. Grund: J-OS war nicht nur untestbar sondern auch unübersichtlich und bestand aus zusammengewürfeltem Nudelsalat-Code :-).***
+
 J-OS ist ein (sehr) kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") von mir, welches ich hier etwas genauer beschreibe.
 
 J-OS ist fast komplett in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") geschrieben (teilweise [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) und bootet mit dem [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")-Loader. Es läuft vollständig im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Geplant ist eine API, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") für Festplatten/Disketten/CD-Laufwerke, Netzwerkkarten und vieles mehr.
-
-**Die Versionsnummern wurden zurückgesetzt und werden erst wieder eingeführt, wenn J-OS in einer testbaren Version vorliegt. Dann wird auch der erste Download online gestellt**
 
 ## Changelog
 
@@ -43,6 +44,6 @@ In der Version 0.0.1 werden (vorraussichtlich) folgende Features implementiert s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 7679; parent 7632; 2010-05-09T11:09:20Z -->
+<!-- MediaWiki page 1828; revision 8033; parent 7679; 2010-07-31T11:52:25Z -->
