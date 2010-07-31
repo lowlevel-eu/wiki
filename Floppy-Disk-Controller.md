@@ -325,9 +325,7 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 | MFM | High Density (HD) Mode | 1 |
 | SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | 1 |
 | Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") |  |
-| Trackgrößße | Anzahl der Sektoren, die auf einem Track ("Ring") liegen | Müsste 18 sein. |
-
-  
+| Trackgröße | Anzahl der Sektoren, die auf einem Track („Ring“) liegen | Müsste 18 sein. |
 
 ### Technische Laufweksdaten einstellen (3h)
 
@@ -861,6 +859,6 @@ VOID send_data(BYTE data) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8034; parent 7878; 2010-07-31T12:00:03Z -->
+<!-- MediaWiki page 1443; revision 8036; parent 8034; 2010-07-31T20:12:59Z -->
