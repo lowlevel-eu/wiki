@@ -1,11 +1,5 @@
 # Direct Memory Access
 
-Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
-
-*Diesen Artikel erweitern*
-
-Hilf Lowlevel, den Artikel zu verbessern.
-
 Unter **Direct Memory Access** (abgekürzt **DMA**) versteht man eine Methode, Daten von Peripheriegeräten zum Arbeitsspeicher und umgekehrt zu übertragen, ohne dafür die CPU benutzen zu müssen.
 
 Es gibt zwei grundlegend verschiedene Methoden, DMA umzusetzen: Entweder das betreffende Peripheriegerät ist in der Lage, auf die Daten im Arbeitsspeicher selbst zuzugreifen (als *Busmaster*), oder es wird ein Hilfschip, der DMA-Controller, benötigt, dessen einzige Aufgabe es ist, die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten verwendet und die zweite Methode wird u. a. von [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")-Geräten benutzt. Aufgrund der unterschiedlichen Konzepte die sich hinter "DMA" verbergen sollte man bei der Verwendung dieses Begriffs immer etwas Vorsicht walten lassen.
@@ -155,16 +149,42 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 |  | 1 = Request; das ist das, was wohl in allen Fällen gewollt ist. |
 | 3-7 | ungenutzt, sollte null sein |
 
-### Alles zusammensetzen: Vorbereiten einer Übertragung
+### Beispielcode
 
-**TODO**
+Folgende Funktion bereitet eine Übertragung vor: \<c\>
 
-### Beispiel
+1.  define CHANNEL_ADRESS 0x04
+2.  define CHANNEL_COUNTER 0x05
+3.  define CHANNEL_PAGE 0x81
 
-**TODO**: was mit dem Diskettenlaufwerk?
+VOID dma_begin_transfer(VOID\* buffer, WORD size, BOOL write) {
+
+     BYTE page   = (DWORD) buffer >> 16;
+     WORD offset = (DWORD) buffer - (page<<16);
+     size--;
+
+     mask_channel(2);
+
+     clear_flip_flop();
+     outb(CHANNEL_COUNTER, size);
+     outb(CHANNEL_COUNTER, size>>8);
+     
+     clear_flip_flop();
+     outb(CHANNEL_ADRESS, offset & 0xFF);
+     outb(CHANNEL_ADRESS, offset>>8);
+     outb(CHANNEL_PAGE,    page);  
+
+     if (write)
+       outb(DMA_MODE, MODE_MASK_CHANNEL2 | MODE_MASK_TRANSFER_WRITE | MODE_MASK_MODE_SINGLE); // | MODE_MASK_AUTO);
+     else
+       outb(DMA_MODE, MODE_MASK_CHANNEL2 | MODE_MASK_TRANSFER_READ | MODE_MASK_MODE_SINGLE); // | MODE_MASK_AUTO);
+
+     unmask_channel(2);
+
+} \</c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 7357; parent 7197; 2010-03-10T11:16:44Z -->
+<!-- MediaWiki page 1555; revision 8040; parent 7357; 2010-08-08T10:37:38Z -->
