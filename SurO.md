@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [Sur3](https://lowlevel-eu.github.io/wiki/pages/2234/index.html "Benutzer:Sur3") |
 | Akt. Version: | 3,5b |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | (noch keine) |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-nd 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/de/) |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), geplant: [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64") und [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
@@ -40,6 +40,6 @@ Aktuell wird daran gearbeitet, SMP zu integrieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 7716; parent 7710; 2010-05-24T15:13:01Z -->
+<!-- MediaWiki page 2233; revision 8039; parent 7716; 2010-08-08T02:29:37Z -->
