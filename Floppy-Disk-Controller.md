@@ -1,9 +1,5 @@
 # Floppy Disk Controller
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
 - Nach Rechtschreibfehlern suchen
@@ -22,6 +18,13 @@ Der Floppy Disk Controller (FDC) ist ein Chip, der ein bis vier Disketten-Laufwe
 - Der FDC ist recht schlecht standardisiert, da verschiedene Hersteller unterschiedliche Funktionalitäten hinzugefügt haben.
 - Bei allen Operationen, für die der Schreib-/Lesekopf bewegt werden muss, sollte eine Wartezeit eingehalten werden, bis die nächste Operation folgt, da insbesondere Disketten sehr langsame Zugriffszeiten besitzen. Bei Fehlen dieser Wartezeiten funktioniert der Treiber oft nur in Emulatoren, versagt aber auf echter Hardware!
 - Der FDC kann nur Sektorangaben in [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") verarbeiten
+- Der FDC kann theoretisch bis zu vier Diskettenlaufwerke ansteuern, allerdings findet man heute wohl kein System mehr, welches mehr als zwei besitzt.
+- **Diskettenlaufwerke sind sehr fehleranfällig! Deshalb muss ein Befehl oftmals mehrmals gesendet werden, bevor er funktioniert. Großzügige Timeouts sind Pflicht in jedem Treiber für Diskettenlaufwerke.**
+
+## Verhalten in Emulatoren und echter Hardware
+
+- [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") unterstützt nur die Übertragung der Daten via [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"). Allerdings ist dies auch die sinnvollste Variante.
+- Virtual PC hat Probleme mit DMA, wenn das Auto Bit gesetzt ist. Damit der Code funktioniert, muss der DMA Trnasfer jedes Mal durch die CPU reinitialisiert werden.
 
 ## Register
 
@@ -312,7 +315,7 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 
 - Command-Phase: Der Befehl wird von der CPU an den FDC gesendet. Dafür werden die Daten wie weiter unten beschrieben in das Datenregister geschrieben. Vorher sollte getestet werden, ob dieses wirklich leer ist.
 - Execution-Phase: Der Befehl wird vom FDC ausgeführt. Dabei sollte im Treiber eine Wartezeit eingehalten werden, da Diskettenlaufwerke sehr langsam sind. Bei einigen Befehlen wird die Execution-Phase zusätzlich durch das Senden eines IRQs beendet.
-- Result-Phase: Bei einigen Befehlen liefert der FDC Daten zurück, z.B. ob der Befehl erfolgreich ausgeführt wurde. Diese müssen gelesen werden, damit erneut Befehle gesendet werden können.
+- Result-Phase: Bei einigen Befehlen liefert der FDC Daten zurück, z.B. ob der Befehl erfolgreich ausgeführt wurde. Diese müssen alle gelesen werden, damit erneut Befehle gesendet werden können.
 
 ### Allgemeine Parameter
 
@@ -371,7 +374,7 @@ Result Phase: *keine*
 Anmerkungen:
 
 - Die benötigten Daten sollten vom BIOS abgefragt werden (siehe unten)
-- Im MSR kann eingestellt werden, ob DMA/IRQ oder keins von beidem, hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
+- Im DOR kann eingestellt werden, ob DMA/IRQ oder keins von beidem, hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
 
   
 
@@ -419,11 +422,8 @@ Result Phase: *keine*
 Anmerkungen:
 
 - Nach der Kalibrierung wird ein IRQ6 gesendet
-- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb sollte mit "Interrput Status überprüfen" (8h) überprüft werden, ob der aktuelle Zylinder wirklich Null ist.
-
-  
-
-  
+- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb sollte mit "Interrput Status überprüfen" (8h) überprüft werden, ob Bit 4 in St0 gelöscht ist.
+- Bei Disketten mit mehr als 80 Tracks muss dieser Befehl in jedem Fall mehrmals gesendet werden.
 
 ### Laufwerksstatus überprüfen (4h)
 
@@ -487,6 +487,8 @@ Result Phase:
 Anmerkungen:
 
 - Dieser Befehl sollte immer gesendet werden, wenn der FDC einen IRQ 6 gesendet hat.
+- Er muss außerdem viermal (!) nach einem Reset des FDCs gesendet werden.
+- Die Zylindernummer ist oftmals falsch und sollte ignoriert werden.
 
   
 
@@ -537,7 +539,7 @@ Result Phase: *Keine*
   
 Anmerkungen:
 
-- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb sollte mit "Interrput Status überprüfen" (8h) überprüft werden, ob der aktuelle Zylinder wirklich Null ist.
+- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb muss mit "Interrput Status überprüfen" (8h) überprüft werden, ob Bit 5 in St0 gesetzt ist.
 - Nach Beendigung wird ein IRQ 6 gesendet.
 
 ### Sektor schreiben (5h)
@@ -816,7 +818,14 @@ Zum Erkennen von den an den Computer angeschlossenen Diskettenlaufwerken gibt es
 
 ### Daten/Befehle schreiben
 
-Bevor man Daten bzw. Befehle ins Datenregister schreiben darf, muss man im MSR testen, ob das DIO-Bit gelöscht und das MRQ-Bit gesetzt ist. Erst dann ist das Datenregister leer und bereit Daten zu empfangen. \<c\> VOID send_command(BYTE cmd) {
+Bevor man Daten bzw. Befehle ins Datenregister schreiben darf, muss man im MSR testen, ob das DIO-Bit gelöscht und das MRQ-Bit gesetzt ist. Erst dann ist das Datenregister leer und bereit Daten zu empfangen. \<c\>
+
+1.  define NO_ERROR = 0;
+2.  define ERROR_TIMEOUT = 1;
+
+BYTE error=NO_ERROR;
+
+VOID send_cmd(BYTE cmd) {
 
      send_data(cmd);
 
@@ -824,29 +833,135 @@ Bevor man Daten bzw. Befehle ins Datenregister schreiben darf, muss man im MSR t
 
 VOID send_data(BYTE data) {
 
-     BYTE status=0;
-     while ((status & MSR_MASK_MRQ) && !(status & MSR_MASK_DIO)) status=inb(MSR);
-       outb(DATAREG, data);
+     BYTE timeout;
+     for (timeout=0; timeout<200; timeout++)
+     {
+       if ( (inb(MSR) & (MSR_MASK_DATAREG|MSR_MASK_DIO2CPU)) == MSR_MASK_DATAREG)
+       {
+         outb(CMD,cmd);
+         error = NO_ERROR;
+         return;
+       }
+       sleep(5);  //5ms warten vor dem nächsten Versuch
+     }
+     error = ERROR_TIMEOUT;
+     return;
 
 } \</c\>
 
 ### Daten lesen
 
-Ähnlich wie beim Senden von Daten muss beim Lesen das MRQ-Bit gesetzt und das DIO-Bit ebenfalls gesetzt sein.
+Ähnlich wie beim Senden von Daten müssen beim Lesen das MRQ-Bit und DIO-Bit gesetzt sein.
 
 \<c\> BYTE read_data() {
 
-     BYTE status=0;
-     while ((status & MSR_MASK_MRQ) && !(status & MSR_MASK_DIO)) status=inb(MSR);
-     return inb(DATAREG);
+     BYTE timeout;
+     for(timeout=0; timeout<200; timeout++)
+     {
+       if( (inb(MSR) & (MSR_MASK_DATAREG|MSR_MASK_DIO2CPU)) == (MSR_MASK_DATAREG|MSR_MASK_DIO2CPU))
+       {
+         error = NO_ERROR;
+         return inb(DATA);
+       }
+       sleep(5);
+     }
+     error = ERROR_TIMEOUT;
+     return 0;
 
 } \</c\>
 
-### Initialisierung
+### Motor starten/anhalten
 
-### Auf Diskette schreiben
+\<c\> VOID start_motor(BYTE n) {
 
-### Von Diskette lesen
+     if (!drive_states[n].motor_on)
+     {
+       outb(DOR,n | (0x01<<(n+4)) | DOR_MASK_NRESET | DOR_MASK_DMA);
+     }
+
+}
+
+VOID stop_motor(BYTE n) {
+
+     if (drive_states[n].motor_on)
+     {
+       outb(DOR,n | DOR_MASK_NRESET | DOR_MASK_DMA);
+     }
+
+} \</c\>
+
+### Laufwerk kallibrieren
+
+\<c\> VOID calibrate_drive(BYTE drive) { ...TODO \</c\>
+
+### Schreib-/Lesekopf postionieren
+
+\<c\> BOOL seek_head(BYTE cyl, BYTE head, BYTE sector) { ...TODO \</c\>
+
+### Reset
+
+\<c\> VOID reset() {
+
+     int i;
+
+     outb(DOR, 0);
+     sleep(10);
+     outb(DOR, DOR_MASK_NRESET | DOR_MASK_DMA);
+     wait_irq();
+     for(i=0; i<4; i++)
+     {
+       check_interrupt_status();
+     }
+     outb(CCR, 0);
+
+     /* TODO: zusätzlich sollten jetzt noch die Laufwerke kallibriert werden */
+
+} \</c\>
+
+### Sektoren lesen/schreiben
+
+Die folgende Funktion nutzt Code aus dem [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA") Artikel: \<c\>
+
+1.  define CMD_WRITE_SECTOR (0x05 \| 0x40)
+2.  define CMD_READ_SECTOR (0x06 \| 0x40)
+
+BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL write, VOID\* buffer) {
+
+     int i;
+     select_drive(drive);   //TODO
+     start_motor(drive);    //TODO
+     seek_head(drive);      //TODO
+
+     dma_begin_transfer(buffer, write);
+     for (i=0; i<5; i++)
+     {
+       send_command(wrie ? CMD_WRIE_SECTOR : CMD_READ_SECTOR);
+       send_data(drive | head<<2) );
+       send_data(cylinder);
+       send_data(head);
+       send_data(sector);
+       send_data(2);
+       send_data(18);
+       send_data(27);
+       send_data(0xFF);
+       wait_irq();
+       read_data();  //st0
+       read_data();  //st1
+       read_data();  //st2
+       read_data();  //cylinder
+       read_data();  //head
+       read_data();  //sector
+       read_data();  //Sektorgröße
+       if ( inb(MSR) & 0xC0)
+       {
+         check_interrupt_status();
+         return TRUE;
+       }
+     }
+     /* fünf Fehlversuche */
+     return FALSE;
+
+} \</c\>
 
 ## Siehe auch
 
@@ -859,6 +974,6 @@ VOID send_data(BYTE data) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8037; parent 8036; 2010-08-01T06:49:17Z -->
+<!-- MediaWiki page 1443; revision 8041; parent 8037; 2010-08-08T10:41:34Z -->
