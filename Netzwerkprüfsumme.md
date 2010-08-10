@@ -6,6 +6,8 @@ Bei [Netzwerkprotokollen](https://lowlevel-eu.github.io/wiki/pages/1888/index.ht
 
 Zuerst wird das Prüfsummenfeld des Protokolls auf null (bzw. 0x0000) gesetzt. Danach wird die Prüfsumme folgendermaßen berechnet: Eine vorzeichenlose 32-Bit-Variable (uint32_t) wird für die Prüfsumme erstellt und auf null gesetzt. Immer zwei benachbarte Bytes der Daten werden zu 16-Bit-Blöcken zusammengefasst. Wenn der letzte Block weniger als 16 Bit hat (das heißt, wenn die Anzahl der Bytes ungerade ist), dann wird er in der Berechnung von hinten mit Nullen aufgefüllt, bis er 16 Bit hat (Das heißt, das niederwertige Byte wird praktisch auf null gesetzt – die Daten für die Prüfsumme werden dabei aber nicht angetastet). Nun werden alle 16-Bit-Blöcke mit Übertrag addiert und das 32-Bit-Ergebnis in der Prüfsummenvariable gespeichert. Anschließend werden die höherwertigen 16 Bits der Prüfsumme so lange zu den niederwertigen 16 Bits hinzuaddiert, bis die höherwertigen 16 Bits null sind (also bis kein Übertrag bei der Addition mehr entsteht). Die niederwertigen 16 Bits der Prüfsumme sind nun die eigentliche Prüfsumme, die im Prüfsummenfeld gespeichert werden kann.
 
+Für das Einlesen der 16-Bit-Blöcke wird, wie bei Netzwerkprotokollen üblich, Big Endian verwendet.
+
 ## Code
 
 \<c\>int calculate_network_checksum(void \*buffer, int size) {
@@ -34,6 +36,6 @@ Zuerst wird das Prüfsummenfeld des Protokolls auf null (bzw. 0x0000) gesetzt. D
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8046/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1974/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1974/index.html)
 
-<!-- MediaWiki page 1974; revision 8046; parent 5248; 2010-08-10T15:44:19Z -->
+<!-- MediaWiki page 1974; revision 8047; parent 8046; 2010-08-10T15:45:48Z -->
