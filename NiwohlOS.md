@@ -66,10 +66,36 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 #### Interfaces
 
-Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem ~~naiven~~ nativen Treiberinterface von niwohlOS, welches mit erstaunlichen Datendurchsatzraten besticht, und dem bewährten [UDI](http://www.spr.germanistik.uni-wuerzburg.de/udi/). Dessen Vorteile liegen ganz klar auf der Hand:
+Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem ~~naiven~~ nativen Treiberinterface von niwohlOS, welches mit erstaunlichen Datendurchsatzraten besticht, und dem bewährten [UDI](http://www.spr.germanistik.uni-wuerzburg.de/udi/).
+
+##### niwoio
+
+Das ~~naive~~ native Treiberinterface ist **niwoio**. Es ist dabei sogleich Schnittstelle als auch Verwaltung: Treiber werden in einer komplexen Baum-Hierarchie geordnet, welche zugleich virtuelle Pfade zum Zugriff auf den einzelnen Treiber darstellt.
+
+Hochmoderne Visualisierung dieses Konzepts:
+
+- Programm will Datei speichern
+- Programm ruft Funktion zum Speichern auf
+- Funktion in der Library ruft Syscall auf
+- Syscall ruft die generische Write-Funktion im Frontend von niwoio auf
+- Diese findet heraus, auf welches Gerät sich der übergebene Pfad bezieht
+- Die Funktion stellt eine Anfrage an das Backend von niwoio und niwoio ermittelt den richtigen Treiber, den korrekten Pfad und die korrekte Funktion
+- Die Anfrage wird weitergeleitet über diesen Pfad hin zu dem gewünschten Treiber
+
+(Das Konzept kann ruhig Fehler enthalten, denn dann ist es niwohlOS-konform).
+
+Diese Vorgänge werden natürlich durch hochkomplexe und hochoptimierte Algorithmen unterstützt. Gewisse Parallelen zu anderen Systemen sind ~~gewünscht~~ nicht vorhanden.
+
+  
+
+##### UDI
+
+Die Vorteile liegen ganz klar auf der Hand:
 
 - Unterstützung durch die Industrie aufgrund der einheitlichen ABI und der damit verbundenen Möglichkeit, Closed-Source-Treiber zu implementieren. Die Vertreter großer Hardwarehersteller wünschen sich schon seit langem einen einheitlichen Weg, alle Hobbybetriebssysteme (was niwohlOS eigentlich nicht ist) mit Treibern für ihre Hardware zu versorgen. Dies ist dank UDI nun endlich möglich.
 - Unterstützung durch die extrem kompetenten Entwickler von osdev.org. Diese bereichern die Spezifikation immer wieder durch lebhafte Diskussionen. Außerdem werden sie nicht müde zu betonen, welch großartige Leistung von UDI-Treibern aufgrund der bisher von anderen Interfaces unübertroffenen Skalierbarkeit erreicht werden kann.
+
+  
 
 ### [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
 
@@ -243,6 +269,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8022; parent 8021; 2010-07-27T09:11:42Z -->
+<!-- MediaWiki page 2095; revision 8049; parent 8022; 2010-08-11T13:05:45Z -->
