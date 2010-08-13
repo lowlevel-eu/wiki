@@ -1,6 +1,6 @@
 # LF OS
 
-| LF OS |  |
+| LF OS (LittleFox' Operating System) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | LittleFox |
@@ -48,6 +48,6 @@ Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8066/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 8061; parent 0; 2010-08-12T19:30:35Z -->
+<!-- MediaWiki page 2267; revision 8066; parent 8061; 2010-08-13T18:24:51Z -->
