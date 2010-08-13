@@ -25,10 +25,10 @@ Primär sollte man das Spiel als technischen Versuch ansehen.
 
 - Das eigentliche Rendering
 - Maus-/Tastaturtreiber zur Bewegung des Spielers
-- Optimierungen.
+- Optimierungen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8064/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2268/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8065/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2268/index.html)
 
-<!-- MediaWiki page 2268; revision 8064; parent 8063; 2010-08-13T14:15:09Z -->
+<!-- MediaWiki page 2268; revision 8065; parent 8064; 2010-08-13T14:18:25Z -->
