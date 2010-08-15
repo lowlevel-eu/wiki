@@ -43,7 +43,7 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 | 0x0D | 1 | Cluster-Größe in Sektoren. Gültig: Zweierpotenz zwischen 1 und 64. |
 | 0x0E | 2 | Anzahl reservierter Sektoren inkl. Bootsektor. |
 | 0x10 | 1 | Anzahl an File Allocation Tables. Normal gibt es immer 2 FATs |
-| 0x11 | 2 | Maximale Anzahl an Einträgen im Wurzelverzeichnis (nur gültig für FAT16 und FAT32) |
+| 0x11 | 2 | Maximale Anzahl an Einträgen im Wurzelverzeichnis (nur gültig für FAT12 und FAT16) |
 | 0x13 | 2 | Anzahl an Sektoren. Wenn hier 0 steht, wird das Feld am Offset 0x20 benutzt. |
 | 0x15 | 1 | Media-Descriptor: • 0xF0: Double sided, 80 Spuren, 18/36 Sektoren pro Spur<br>• 0xF8: Festplatte<br>• 0xF9: Double sided, 80 Spuren, 9/15 Sektoren pro Spur<br>• 0xFA: Single sided, 80 Spuren, 8 Sektoren pro Spur (eventuell auch Ramdisk)<br>• 0xFB: Double sided, 80 Spuren, 8 Sektoren pro Spur<br>• 0xFC: Single sided, 40 Spuren, 9 Sektoren pro Spur<br>• 0xFD: Double sided, 40 Spuren, 9 Sektoren pro Spur oder Double Sided, 77 Spuren, 26 Sektoren pro Spur<br>• 0xFE: Single sided, 40 Spuren, 8 Sektoren pro Spur, Single Sided, 77 Spuren, 26 Sektoren pro Spur oder Double Sided, 77 Spuren, 8 Sektoren pro Spur<br>• 0xFF: Double sided, 40 Spuren, 8 Sektoren pro Spur<br>Dieses Byte gilt als veraltet.<br> |
 | 0x16 | 2 | FAT-Größe in Sektoren. Bei FAT32 steht hier 0 und es wird das Feld bei Offset 0x24 benutzt. |
@@ -163,6 +163,6 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 7956; parent 7955; 2010-07-21T18:50:38Z -->
+<!-- MediaWiki page 1643; revision 8069; parent 7956; 2010-08-15T12:57:16Z -->
