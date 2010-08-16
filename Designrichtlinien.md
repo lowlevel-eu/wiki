@@ -43,10 +43,10 @@ In technischen Artikeln sollte die Anrede des Lesers sowie die Erwähnung der ei
   
 Anders als bei Tutorials: Dort wird durch die persönliche Anrede Lockerheit vermittelt und der Leser kann sich besser in das gelesene "einfühlen".
 
-Das Wiki richtet sich zwar an keine spezielle Altersgruppe, aber dennoch wird bei persönlicher Anrede "du" verwendet, um die eh schon teilweise trockene Materie nicht auch noch zu versteifen.
+Das Wiki richtet sich zwar an keine spezielle Altersgruppe, aber dennoch wird bei persönlicher Anrede "Du" verwendet, um die eh schon teilweise trockene Materie nicht auch noch zu versteifen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8074/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1832/index.html)
 
-<!-- MediaWiki page 1832; revision 5794; parent 5793; 2009-08-31T06:25:29Z -->
+<!-- MediaWiki page 1832; revision 8074; parent 5794; 2010-08-16T11:22:35Z -->
