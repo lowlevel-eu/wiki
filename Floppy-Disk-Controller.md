@@ -24,7 +24,7 @@ Der Floppy Disk Controller (FDC) ist ein Chip, der ein bis vier Disketten-Laufwe
 ## Verhalten in Emulatoren und echter Hardware
 
 - [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") unterstützt nur die Übertragung der Daten via [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"). Allerdings ist dies auch die sinnvollste Variante.
-- Virtual PC hat Probleme mit DMA, wenn das Auto Bit gesetzt ist. Damit der Code funktioniert, muss der DMA Trnasfer jedes Mal durch die CPU reinitialisiert werden.
+- [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") hat Probleme mit DMA, wenn das Auto Bit gesetzt ist. Damit der Code funktioniert, muss der DMA Trnasfer jedes Mal durch die CPU reinitialisiert werden.
 
 ## Register
 
@@ -974,6 +974,6 @@ BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL wri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8072/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8041; parent 8037; 2010-08-08T10:41:34Z -->
+<!-- MediaWiki page 1443; revision 8072; parent 8041; 2010-08-16T11:02:56Z -->
