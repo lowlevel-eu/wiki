@@ -6,39 +6,32 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Einleitung
 
-Hallo ihr. Ich will euch in diesem Tutorial zeigen, wie man unter Windows mit den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" Týndur ausprobieren kann. Ich verwende als Betriebssystem die Windows 7 Beta.
+Dieses Tutorial erläutert die Emulation von týndur unter [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs"). Das in dem Tutorial verwendete Betriebssystem ist Windows 7 Beta.
 
 ## Was wird benötigt
 
-Zunächst einmal brauchen wir den Emulator "[Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")" und natürlich Týndur. Es ist Dir überlassen, welche Images du verwendest. Du kannst entweder die [Nightly Builds](http://nightlies.tyndur.org/) nehmen oder auch [fertige Releases](http://download.tyndur.org/releases/0.2/).
+- Bochs - [Download](http://sourceforge.net/projects/bochs/files/bochs/2.4.5/Bochs-2.4.5.exe/download)
+- týndur-Image
+  - [Release-Images](http://download.tyndur.org/releases/0.2/)
+  - [Nightly Builds](http://nightlies.tyndur.org/)
 
-Bei den Releases bitte drauf achten, dass ihr
+  
 
-    *-floppy.img.bz2
-
-bezieht, da dieses Tutorial sich darauf aufbaut.
-
-## Wie gehts nun weiter?
+## Wie geht's nun weiter?
 
 ### Bochs installieren
 
-Wir installieren Bochs, falls dies noch nicht geschehen ist. In der Regel kann man hier einfach immer auf "Next" klicken.
+DIe Installation von Bochs gestaltet sich denkbar einfach. Einfach den Installer per Doppelklick ausführen und den Anweisungen auf dem Bildschirm folgen.
 
-### Image beziehen
+### Konfiguration
 
-Nun beziehen wir das Týndur-Diskettenimage. Diese Dateien, sind noch komprimiert mit bz2, also müssen sie erst entpackt werden. Ich entpacke sie zum Testen einfach mal auf `C:\Tyndur\` Bei mir trägt das Image den Titel `floppy-r1249.img`, da ich die Nightly-Build-Version verwende.
+Aus dem Verzeichnis, in welchem Bochs installiert wurde (in der Regel "C:\Program Files\Bochs" unter Windows), wird nun die Datei "bochsrc-sample" in den Ordner mit dem týndur-Image kopiert. Die Datei muss nun bearbeitet werden und folgende Sachen geändert werden:
 
-### Bochs Konfigurieren
-
-Es ist empfehlenswert nun unter Windows Notepad++ hierbei zu verwenden. Wir kopieren aus den Verzeichnis, wo Bochs installiert wurde in der Regel unter `C:\Program Files\Bochs-2.4.1` die Datei "bochsrc-sample" in unserem Ordner wo die Týndur-Imagedatei liegt. Also unter `C:\Tyndur\` Wir öffnen die Datei mit einem Editor, ich verwende hierbei Notepad++.
-
-Dort müssen drei Sachen geändert werden.
-
-    Zeile 223 floppya: 1_44=C:\Tyndur\floppy-r1249.img, status=inserted
+    Zeile 223 floppya: 1_44=C:\Pfad\zum\Image\Name_des_tyndur_Images.img, status=inserted
     Zeile 310 #ata0-master: type=disk, mode=flat, path="30M.sample" // Auskommentieren
     Zeile 330 boot: floppy
 
-Und speichern die Datei mit `Speichern unter` ab. Als Namen habe ich hier `Start_Tyndur` genommen. Damit man bequem Týndur starten kann, empfehle ich diese Datei mit den Dateierweiterung: `.bxrc` zu speichern. Also praktisch `Start_Tyndur.bxrc`. Doppelt klick darauf und es startet sich Bochs mit Týndur ;-)
+Die Datei wird nun mit der Dateiendung ".bxrc" gespeichert. Diese kann dann per Doppelklick ausgeführt werden, worauf sich Bochs mit dem týndur-Image startet.
 
 ## Anhang
 
@@ -922,6 +915,6 @@ Und speichern die Datei mit `Speichern unter` ab. Als Namen habe ich hier `Start
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1900/index.html)
 
-<!-- MediaWiki page 1900; revision 6722; parent 5594; 2010-01-02T17:39:17Z -->
+<!-- MediaWiki page 1900; revision 8073; parent 6722; 2010-08-16T11:14:33Z -->
