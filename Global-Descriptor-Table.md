@@ -30,8 +30,8 @@ Die Segmentregister sind aber nach wie vor nur 16 Bit breit und somit wird der P
 Wie im vorigen Abschnitt erwähnt, stehen im Protected Mode in den Segmentregistern Selektoren, die auf Deskriptortabellen verweisen. Sie haben den folgenden Aufbau:
 
 | Bits | Wert | Bedeutung |
-| -------- | -------- | ------------------------------------------------------------------------------------------------------- |
-| 0 - 1 | 0x3 | RPL (Requested Privilege Level). Gibt die Privilegstufe (den Ring) des zu selektierenden Segments an |
+| -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 - 1 | 0x3 | RPL (Requested Privilege Level). Gibt die Privilegstufe (den Ring) an mit der versucht werden soll das Segment anzusprechen, falls diese kleiner ist als die aktuelle des aufrufenden Tasks so behält diese seine aktuelle |
 | 2 | 0x4 | Bestimmt, ob ein Eintrag in der GDT (Bit nicht gesetzt) oder in der LDT (Bit gesetzt) ausgewählt wird |
 | 3 - 15 | 0xfff8 | Nummer des Eintrags in der GDT bzw. LDT (ab Null gezählt) |
 
@@ -146,6 +146,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 6851; parent 6672; 2010-01-09T18:38:26Z -->
+<!-- MediaWiki page 1661; revision 8077; parent 6851; 2010-08-17T12:22:16Z -->
