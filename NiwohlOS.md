@@ -26,7 +26,7 @@
 
 ## Inside niwohlOS
 
-Im folgenden wird kurz im reießrischen und profesionelen Marketingdeutsch auch für Laien verständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel) tieferen Einblick sei [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
+Im folgenden wird kurz im hochgradig reißerischen und hochprofessionellen Marketinghochdeutsch auch für Laien hochverständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel) tieferen Einblick sei [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
 
 ### Bootvorgang
 
@@ -102,8 +102,6 @@ Wie es sich für jedes anständige micromonolithische Modularhybridsystem gehör
 ### GUI
 
 Wie für alle größenwahnsinnigen Systeme wird natürlich auch in der relativ jungen Entwicklungsgeschichte von niwohlOS über eine grafische Benutzeroberfläche nachgedacht. Hier soll nicht allzuviel verraten werden, nur dass wir ein System namens D.U.M.M., inspiriert von Windows-Usern, entwickeln werden.
-
-  
 
 ## Die Entwickler
 
@@ -281,6 +279,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8086/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8086; parent 8084; 2010-08-18T10:22:48Z -->
+<!-- MediaWiki page 2095; revision 8088; parent 8086; 2010-08-18T17:25:53Z -->
