@@ -32,10 +32,6 @@
 
 Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für jedes Betriebssystem. GRUB richtet eine standardisierte und standartisierte Umgebung ein und übergibt der zweiten Phase, dem niwohunloader, alle nötigen Daten, die sie benötigt. Auch lädt GRUB dank hochperformanter Lademechnismen unsere beiden Kernel stoiber32 und stoiber64 in den Speicher.
 
-#### Phase Ib: NILO
-
-Alternativ zu GRUB kann der NIwohLOader, kurz NILO eingesetzt werden. Dieser ist ein hochperformanter und hochkomplexer multiboot-kompatibler Bootloader, mit dessen Hilfe der niwohunloader geladen wird.
-
 #### Phase II: niwohunloader
 
 Um dem User unnötige und komplexe Konfiguration abzunehmen, wird nach dem eigentlichen Bootloader ein Zwischenloader, der niwohunloader, geladen. Dieser entscheidet anhand komplexer und hochperformanter Algorithmen, welche Systemarchitektur der entsprechende Computer besitzt und lädt daraufhin alle passenden Komponenten nach. Hierdurch ist ein voll-automatisierter Ablauf des Ladeprozesses bei optimaler Perfomance und höchster Stabilität garantiert.
@@ -273,6 +269,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8057/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8057; parent 8056; 2010-08-11T16:54:35Z -->
+<!-- MediaWiki page 2095; revision 8081; parent 8057; 2010-08-18T09:17:16Z -->
