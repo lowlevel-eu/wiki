@@ -1,9 +1,9 @@
 # NiwohlOS
 
 | niwohlOS<br>*"In God we trust – Da hilft nur noch beten"* |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Cjreek<br>[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>Paddy<br><br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
+| Entwickler: | [DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[SchreibeNieCode](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.1.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT/X11 |
 | OS-Eigenschaften |  |
@@ -22,7 +22,7 @@
 — [Linus Torvalds](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der alte [Kommunist](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
 
   
-**niwohlOS** (Hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
+**niwohlOS** (hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
 
 ## Inside niwohlOS
 
@@ -107,9 +107,9 @@ Wie für alle größenwahnsinnigen Systeme wird natürlich auch in der relativ j
 
 Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hocherfahrenen Informatikern mit jahrelanger Programmiererfahrung, welche sicherlich zu den zukünftigen Leistungsträgern gehören, und DickHuuhn. Die Entwickler genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
 
-### niwohlose-developers
+### Niwohlosen Developers
 
-Die „niwohlose-developers“ sind das Entwicklerteam rund um niwohlOS sowie anderen Projekten. Es besteht aus vier hochoptimierten, äh, hochintelligenten Programmierern und Softwareentwicklern.
+Die [niwohlosen Developers](http://gitorious.org/+niwohlose-developers) sind das Entwicklerteam rund um niwohlOS sowie anderen Projekten. Es besteht aus vier hochoptimierten, äh, hochintelligenten Programmierern und Softwareentwicklern.
 
 #### XanClic alias Crazy-OS-names
 
@@ -125,17 +125,13 @@ Die „niwohlose-developers“ sind das Entwicklerteam rund um niwohlOS sowie an
 
 #### DickHuuhn alias DickHuuhn
 
-[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimierter Buchstabenkomplex) ist ein Chiken.
+[DickHuuhn](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn") (kein hochkomplexes Hybridakrobackronym und auch kein hochoptimierter Buchstabenkomplex) ist ein Chiken. Allerdings nicht frittiert und auch nicht mit Mayonaise.
 
   
 
 ### Die Committer
 
 Neben dem Entwicklerteam gibt es zahlreiche hochprofessionelle Commiter, die wertvollen Code und wertvolle Ideen tagtäglich committen.
-
-#### pocky alias 1337h4x0r
-
-[pocky](https://lowlevel-eu.github.io/wiki/pages/2097/index.html "Benutzer:Pocky") (kein hochkomplexes Hybridakrobackronym und kein hochoptimierter Buchstabenkomplex, dafür aber der Wahrheit) ist vor allem für die noch nicht vorhandene, noch nicht geplante und wahrscheinlich auch gar nicht realsiert-werdende GUI zuständig. So ganz nebenbei ist er auch für die mooraalische Unterstützung zu gebrauchen. Er betreut also sozusagen die GUI und die Mooraale. Und die GUI.
 
 #### Cjreek alias Sado-Masochist aka Windows-User
 
@@ -144,10 +140,6 @@ Cjreek (kein Mensch weiß, was das heißen soll) ist ebenfalls ein hochprofessio
 #### Paddy alias Paddynator
 
 Paddy (kein Mensch weiß, wer das ist) ist ein geheminisvoller Entwickler, der sich zu unserem Projekt gesellt hat. Auf einmal war er da, wie aus dem Nichts tauchte er in \#lost und \#niwohlos auf. Keiner weiß wer er ist, keiner weiß, ob er was kann. Man weiß nur, dass er was gegen kwolf zu haben scheint...
-
-#### cra1n alias Ich-kenn-ihn-erst-zwei-Minuten-und-mach-ihn-direkt-zum-Committer
-
-cra1n (auch hier weiß keiner, wer das ist) ist Schüler mit Informatik als Leistungskurs. Mehr weiß ich auch nicht.
 
   
 
@@ -239,23 +231,35 @@ Folgende Teile hat irgendwer halb-besoffen runtergetippt und trotzdem eingecheck
 
 Folgende Teile müssen noch implementiert werden:
 
+**Allgemeines**
+
+- Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
+- Geeignetes Logo ~~von 4chan klauen~~ erstellen
+
+**Library**
+
 - printf gut machen
 - kprintf gut machen
 - vsprintf gut machen
-- ~~printf mit Zahlen~~
-- ~~Eine Funktion zum Ausgeben von Zahlen~~ ~~Hexzahlen ausgeben~~
-- ~~puts mit Zahlen~~ (nennt sich printf)
-- ~~Zahlenausgabefunktion~~ ~~Hex ausgeben~~
-- ~~%i~~
-- Professionelle Homepage (verzögert sich leider aufgrund der Schließung von Geocities)
-- Geeignetes Logo ~~von 4chan klauen~~ erstellen
-- Kernel
 - libc.hiken
+
+**Kernel**
+
+- SMP ganz machen
+- niwoio ausbauen
+- Startvorgang und so
+
+**Verschiedenes**
+
 - Signifanten
 - Unicode-Support (für ẞ und です)
 - Programme
+
+**Und sonst so?**
+
 - Einfach alles
-- SMP ganz machen
+
+  
 
 # Weblinks
 
@@ -269,6 +273,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8084/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8083; parent 8082; 2010-08-18T09:21:06Z -->
+<!-- MediaWiki page 2095; revision 8084; parent 8083; 2010-08-18T09:29:15Z -->
