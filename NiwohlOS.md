@@ -26,7 +26,7 @@
 
 ## Inside niwohlOS
 
-Im folgenden wird kurz im reießrischen und profesionelen Marketingdeutsch auch für Laien verständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel) tieferen Einblick sei [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
+Im folgenden wird kurz im hochreießrischen und hochprofesionelen Marketinghochdeutsch auch für Laien hochverständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel höheren) tieferen Einblick sei [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
 
 ### Bootvorgang
 
@@ -281,6 +281,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8090/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8089; parent 8088; 2010-08-18T17:39:31Z -->
+<!-- MediaWiki page 2095; revision 8090; parent 8089; 2010-08-19T18:27:36Z -->
