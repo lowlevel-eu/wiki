@@ -14,7 +14,7 @@ Rot: Nicht eindeutig konvertierbare Zeichen
 
 ## Darstellung in QEMU
 
-Hier eine Darstellung der Zeichen mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") (aus der englischen Wikipedia):
+Hier eine Darstellung der Zeichen mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU"):
 
 ![Codepage-437.png](http://upload.wikimedia.org/wikipedia/commons/f/f8/Codepage-437.png)
 
@@ -24,6 +24,6 @@ Hier eine Darstellung der Zeichen mit [QEMU](https://github.com/lowlevel-eu/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8091/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1588/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8092/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1588/index.html)
 
-<!-- MediaWiki page 1588; revision 8091; parent 7630; 2010-08-20T14:32:54Z -->
+<!-- MediaWiki page 1588; revision 8092; parent 8091; 2010-08-20T17:06:23Z -->
