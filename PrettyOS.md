@@ -29,7 +29,7 @@ PrettyOS besteht momentan aus den Bereichen Bootloader Stage 1, Bootloader Stage
 
 ### Elemente des Kernels
 
-Der Kernel bietet bisher grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel-Heap, Multitasking, Multithreading, syscalls und einige einfache Treiber. EHCI läuft ebenfalls. Er kann durch die beiden eigenen Bootloader aufgerufen werden (später evtl. auch mittels GRUB).
+Der Kernel bietet bisher grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel-Heap, Multitasking, Multithreading, syscalls, virtual mode 86 und einige einfache Treiber. EHCI, Vesa Bios Extensions und FAT12/16/32 laufen ebenfalls. Er kann durch die beiden eigenen Bootloader aufgerufen werden (später evtl. auch mittels GRUB).
 
 ### Elemente des Userspace
 
@@ -41,6 +41,6 @@ PrettyOS ist als erste Basis für Ideen der Projektgruppe gedacht und kann daher
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 7569; parent 6279; 2010-04-13T22:29:46Z -->
+<!-- MediaWiki page 2096; revision 8097; parent 7569; 2010-08-22T15:53:41Z -->
