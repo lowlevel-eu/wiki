@@ -138,7 +138,7 @@ struct {
 
 Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche Auswirkungen hat die Änderung noch nicht. Auf die Tabelle wird nur zugegriffen, wenn ein Segmentregister neu geladen wird. Daher müssen jetzt noch alle Segmentregister neu geladen werden:
 
-\<asm\> mov \$0x10, %ax mov %ax, %ds mov %ax, %es mov %ax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
+\<asm\> mov \$0x10, %ax mov %ax, %ds mov %ax, %es mov %ax, %fs mov %ax, %gs mov %ax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
 
 ## Web-Links
 
@@ -146,6 +146,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 8079; parent 8078; 2010-08-17T12:36:25Z -->
+<!-- MediaWiki page 1661; revision 8096; parent 8079; 2010-08-22T11:54:17Z -->
