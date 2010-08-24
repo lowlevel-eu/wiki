@@ -103,7 +103,17 @@ Wie es sich für jedes anständige micromonolithische Modularhybridsystem gehör
 
 Wie für alle größenwahnsinnigen Systeme wird natürlich auch in der relativ jungen Entwicklungsgeschichte von niwohlOS über eine grafische Benutzeroberfläche nachgedacht. Hier soll nicht allzuviel verraten werden, nur dass wir ein System namens D.U.M.M., inspiriert von Windows-Usern, entwickeln werden.
 
-  
+### Emulation
+
+Bei der Vielzahl von hochmodernen und weithochentwickelten Systemen soll niwohlOS keinerseits eine Konkurrenz darstellen. Vielmehr soll eine hochoptimierte Kohärenz zu diesen Systemen und deren Möglichkeiten bestehen. Dazu emuliert niwohlOS diverse Systeme mit einem ausgeklügelten Verfahren auf tiefster Ebene.
+
+#### Linux
+
+Linux wird in Form von Syscalls unterstützt. Dazu wird das Modul-System umgesetzt, damit Linux-Module hocheffizient geladen und hochoptimiert ausgeführt werden können.
+
+#### PrettyOS
+
+PrettyOS wird in Form eines didaktisch ausgeklügelten hochoptimierten Syscall-Redirection-Prozesses emuliert. Die fehlende und kaputte Speicherverwaltung wird selbstverständlich von niwohlOS bereitgestellt, sodass PrettyOS quasi zu einer Untermenge von niwohlOS wird.
 
 ## Die Entwickler
 
@@ -281,6 +291,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8100/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8098; parent 8090; 2010-08-22T18:43:24Z -->
+<!-- MediaWiki page 2095; revision 8100; parent 8098; 2010-08-24T12:37:33Z -->
