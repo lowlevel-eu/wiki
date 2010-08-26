@@ -2,7 +2,8 @@
 
 ## Überarbeiten
 
-- Mir ist gerade aufgefallen das weder in [Datenschutz](https://lowlevel-eu.github.io/wiki/pages/2290/index.html), [Über Lowlevel](https://lowlevel-eu.github.io/wiki/pages/2281/index.html) noch [Impressum](https://lowlevel-eu.github.io/wiki/pages/2280/index.html) etwas drin steht (zumindest der letzte Punkt könnte rechtliche Konsequenzen haben), ich bin der Meinung das hier die *Offiziell-Wiki-Verantwortlichen* mal ein klein wenig Zeit erübrigen sollten schließlich sind die drei Links auf jeder Seite vom Wiki (ganz unten) enthalten. Für Hilfe dazu stehe ich gern zur Verfügung.
+- Mir ist gerade aufgefallen das weder in [Datenschutz](https://lowlevel-eu.github.io/wiki/pages/2290/index.html), [Über Lowlevel](https://lowlevel-eu.github.io/wiki/pages/2281/index.html) noch [Impressum](https://lowlevel-eu.github.io/wiki/pages/2280/index.html) etwas drin steht (zumindest der letzte Punkt könnte rechtliche Konsequenzen haben), ich bin der Meinung das hier die *Offiziell-Wiki-Verantwortlichen* mal ein klein wenig Zeit erübrigen sollten schließlich sind die drei Links auf jeder Seite vom Wiki (ganz unten) enthalten. Für Hilfe dazu stehe [ich](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") gern zur Verfügung.
+  - Außerdem ist [Hilfe:Inhaltsverzeichnis](https://lowlevel-eu.github.io/wiki/pages/2289/index.html "Hilfe:Inhaltsverzeichnis") gar nicht besetzt --[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 21:20, 26. Aug. 2010 (CEST)
 - Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
 - [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
@@ -108,6 +109,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8110/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8112/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8110; parent 7951; 2010-08-26T11:00:56Z -->
+<!-- MediaWiki page 1518; revision 8112; parent 8110; 2010-08-26T19:20:14Z -->
