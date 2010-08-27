@@ -66,25 +66,9 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem ~~naiven~~ nativen Treiberinterface von niwohlOS, welches mit erstaunlichen Datendurchsatzraten besticht, und dem bewährten [UDI](http://www.spr.germanistik.uni-wuerzburg.de/udi/).
 
-##### niwoio
+##### CDI
 
-Das ~~naive~~ native Treiberinterface ist **niwoio**. Es ist dabei sogleich Schnittstelle als auch Verwaltung: Treiber werden in einer komplexen Baum-Hierarchie geordnet, welche zugleich virtuelle Pfade zum Zugriff auf den einzelnen Treiber darstellt.
-
-Hochmoderne Visualisierung dieses Konzepts:
-
-- Programm will Datei speichern
-- Programm ruft Funktion zum Speichern auf
-- Funktion in der Library ruft Syscall auf
-- Syscall ruft die generische Write-Funktion im Frontend von niwoio auf
-- Diese findet heraus, auf welches Gerät sich der übergebene Pfad bezieht
-- Die Funktion stellt eine Anfrage an das Backend von niwoio und niwoio ermittelt den richtigen Treiber, den korrekten Pfad und die korrekte Funktion
-- Die Anfrage wird weitergeleitet über diesen Pfad hin zu dem gewünschten Treiber
-
-(Das Konzept kann ruhig Fehler enthalten, denn dann ist es niwohlOS-konform).
-
-Diese Vorgänge werden natürlich durch hochkomplexe und hochoptimierte Algorithmen unterstützt. Gewisse Parallelen zu anderen Systemen sind ~~gewünscht~~ nicht vorhanden.
-
-  
+Da niwohlOS hochproffesionel und hochoptimiert ist bedient es sich natürlich auch nur hochproffesioneler und hochoptimierter externer Ressourcen. Darum implementiert niwohlOS [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), das Common Driver Interface. Damit wird es möglich Gebrauch von hochproffesionelen und hochoptimierten Treibern zu machen und selbst solche zu entwickeln.
 
 ##### UDI
 
@@ -291,6 +275,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8100/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8115/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8100; parent 8098; 2010-08-24T12:37:33Z -->
+<!-- MediaWiki page 2095; revision 8115; parent 8100; 2010-08-27T10:03:58Z -->
