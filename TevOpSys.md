@@ -25,9 +25,10 @@ tevOpSys soll ein OS werden, dass die schnelle Benutzung des PCs erlaubt. Dazu w
 
 - Assemblerprogrammierer sind gern gesehen
 - Tester werden ebenfalls gesucht
+- IRC-Channel \#tevOpSys im euIRC
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8119/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
 
-<!-- MediaWiki page 2270; revision 8119; parent 8118; 2010-08-30T21:41:07Z -->
+<!-- MediaWiki page 2270; revision 8120; parent 8119; 2010-08-31T14:33:42Z -->
