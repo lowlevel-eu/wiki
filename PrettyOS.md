@@ -25,11 +25,11 @@ PrettyOS soll Einsteiger in die Betriebssystementwicklung dabei unterstützen, d
 
 ## Genereller Aufbau
 
-PrettyOS besteht momentan aus den Bereichen Bootloader Stage 1, Bootloader Stage 2, Kernel und User-Space. Die beiden Bootloader sind in Assembler (NASM) geschrieben und verwenden bisher FAT12. BL1 (in Sektor 1) lädt BL2 (Datei boot2.sys). Dieser wiederum startet den bisher binären Kernel (ckernel.sys). Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (Intel und AT&T Syntax) gehalten. Der User-Space dient bisher nur als Demonstration für die API (syscalls) und wurde ebenfalls in C geschrieben. Bisher ist nur eine rudimentäre Shell vorhanden.
+PrettyOS besteht momentan aus den Bereichen Bootloader Stage 1, Bootloader Stage 2, Kernel und User-Space. Die beiden Bootloader sind in Assembler (NASM) geschrieben und verwenden bisher FAT12. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den bisher binären Kernel (kernel.bin). Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (Intel und AT&T Syntax) gehalten. Der User-Space dient bisher nur als Demonstration für die API (syscalls) und wurde ebenfalls in C geschrieben. Bisher ist nur eine einfache Shell vorhanden.
 
 ### Elemente des Kernels
 
-Der Kernel bietet bisher grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel-Heap, Multitasking, Multithreading, syscalls, virtual mode 86 und einige einfache Treiber. EHCI, Vesa Bios Extensions und FAT12/16/32 laufen ebenfalls. Er kann durch die beiden eigenen Bootloader aufgerufen werden (später evtl. auch mittels GRUB).
+Der Kernel bietet bisher grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, syscalls, virtual mode 86 und einige einfache Treiber. EHCI, Vesa Bios Extensions und FAT12/16/32 laufen ebenfalls. Er kann durch die beiden eigenen Bootloader aufgerufen werden (später evtl. auch mittels GRUB).
 
 ### Elemente des Userspace
 
@@ -37,10 +37,10 @@ Man verwendet die shell (program.elf) aus dem User-Space zum Testen der syscalls
 
 ### Weitere Entwicklung
 
-PrettyOS ist als erste Basis für Ideen der Projektgruppe gedacht und kann daher noch weitgehend umgebaut werden. Weitere Details und Links findet man hier: [\[3\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html).
+PrettyOS ist als Experimentier-Basis für Ideen der OS-Projektgruppe bei c-plusplus.de gedacht und kann daher beeinflusst und weitgehend umgebaut werden. Weitere Details und Links findet man hier: [\[3\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html). Inzwischen entwickeln bis zu 10 Personen an PrettyOS.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8133/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 8132; parent 8131; 2010-09-01T22:02:10Z -->
+<!-- MediaWiki page 2096; revision 8133; parent 8132; 2010-09-01T22:06:31Z -->
