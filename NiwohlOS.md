@@ -60,7 +60,7 @@ tl;dr: Wie Linux, nur geiler.
 
 ### Treiber
 
-Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber (oder auch Kernel- und Usertreiber). Kerneltreiber werden direkt in den Kernel miteingelinkt und laufen mit der gleichen Privilegsstufe wie der Kernel, Usertreiber können zur Laufzeit nachgeladen werden und laufen im Ring 3, also mit Privilegien, die jedes normale Programm auch besitzt. Durch eine ausgeklügelte und hochmoderne HAL, der niwohlosenHAL, können Usertreiber die gleiche Funktionalität wie Kerneltreiber nutzen, ohne jedoch bei Instabilität die Ausführung des Systems zu behindern. Durch den perfekten Mix aus extrem stabilen Kerneltreibern und hochoptimierten Usertreibern kann ein sicheres, stabiles und gleichzeitig hochperformantes System garantiert werden.
+Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber (oder auch Kernel- und Usertreiber). Kerneltreiber werden direkt in den Kernel miteingelinkt und laufen mit der gleichen Privilegsstufe wie der Kernel, Usertreiber können zur Laufzeit nachgeladen werden und laufen im Ring 3, also mit Privilegien, die jedes normale Programm auch besitzt. Jder Treiber, auch CDI- oder UDI-Treiber, kommunizieren miteinander über **niwoio**, dem VFS von niwohlOS. Es dient sowohl zur Interprozesskommunikation zwischen den Treibern wie auch als Verwaltungseinheit für Treiber und Module.
 
 #### Interfaces
 
@@ -273,6 +273,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8116; parent 8115; 2010-08-27T10:04:54Z -->
+<!-- MediaWiki page 2095; revision 8128; parent 8116; 2010-09-01T20:17:47Z -->
