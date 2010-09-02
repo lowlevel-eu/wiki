@@ -49,9 +49,10 @@ Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quel
 - [Intel Manual Volume 2A/B: Instruction Set Reference](http://www.intel.com/products/processor/manuals/)
 - [AMD Manual Volume 3: General-Purpose and System Instructions](http://www.amd.com/us-en/Processors/DevelopWithAMD/0,,30_2252_875_7044,00.html)
 - [ASM86FAQ](http://www.pbhq.de/asm86faq/) (10 Jahre alt, aber auf Deutsch)
+- [i8086.de](http://www.i8086.de)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 7642; parent 4465; 2010-05-03T14:32:35Z -->
+<!-- MediaWiki page 1514; revision 8143; parent 7642; 2010-09-02T10:58:33Z -->
