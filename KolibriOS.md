@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | KolibriOS Team |
-| Akt. Version: | : 0.7.7.0 |
+| Akt. Version: | 0.7.7.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -40,6 +40,6 @@ Systemanforderung laut der KolbriOS Homepage:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2275/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2275/index.html)
 
-<!-- MediaWiki page 2275; revision 8136; parent 0; 2010-09-01T22:51:41Z -->
+<!-- MediaWiki page 2275; revision 8139; parent 8136; 2010-09-02T08:34:08Z -->
