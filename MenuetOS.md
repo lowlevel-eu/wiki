@@ -8,7 +8,7 @@
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch? |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Nativ |
 | Binärformat: | ? |
@@ -17,7 +17,7 @@
 
 <http://www.menuetos.net/>
 
-**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") geschrieben und unter der [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") freigegeben wird. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt.
+**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") geschrieben. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt, was zu [KolibriOS](https://github.com/lowlevel-eu/wiki/wiki/KolibriOS "KolibriOS"), das eine Weiterentwicklung des letzten öffentlichen 32-Bitzweiges ist, geführt hat.
 
 ## Releases
 
@@ -45,9 +45,10 @@ Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 ## siehe auch
 
 - [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#os-showcase-menuetos "Ausgabe 1")
+- [KolibriOS](https://github.com/lowlevel-eu/wiki/wiki/KolibriOS "KolibriOS")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1481/index.html)
 
-<!-- MediaWiki page 1481; revision 7851; parent 7832; 2010-07-14T19:29:45Z -->
+<!-- MediaWiki page 1481; revision 8142; parent 7851; 2010-09-02T10:09:28Z -->
