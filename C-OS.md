@@ -23,7 +23,7 @@ in Arbeit
 
 - pgahlen
 
-Wer List und Zeit hat, kann mich in den Channeln \#lost, \#NG-OS oder \#tevopsys anschreiben, oder mich per Mail kontaktieren: pgahlen@yahoo.de
+Wer Lust und Zeit hat, kann mich in den Channeln \#lost, \#NG-OS oder \#tevopsys anschreiben, oder mich per Mail kontaktieren: pgahlen@yahoo.de
 
 ## Besonderheiten
 
@@ -41,6 +41,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8156; parent 0; 2010-09-04T15:05:05Z -->
+<!-- MediaWiki page 2276; revision 8157; parent 8156; 2010-09-04T20:59:02Z -->
