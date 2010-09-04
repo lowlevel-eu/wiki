@@ -6,7 +6,7 @@
 
 Der VM86-Modus wird aktiviert, indem für den entsprechenden Task in [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS") das VM-Bit (0x20000) gesetzt wird. *Achtung:* Dieses Setzen funktioniert *nicht* per popfd oder einem ähnlichen Befehl! Das VM-Bit kann nur durch einen Sprung verändert werden, z. B. also durch einen Sprung in einen anderen Hardwaretask, dessen EFLAGS-Feld im [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") ein gesetztes VM-Bit enthält oder durch ein iret mit einem Stack, wie er unten beschrieben wird.
 
-Während eines solchen iret aus dem Kernel in den Task werden automatisch vier Realmode-Segmentregister geladen (wenn die CPU im neuen EFLAGS das VM-Bit als gesetzt erkannt hat), die vorher auf den Kernel-Stack gepusht werden müssen. Da für den Task Realmode-Addressierung benutzt wird, müssen auch cs:ip und ss:sp so gesetzt werden, dass sie im Realmode auf die entsprechende Addresse zeigen. VM86-Tasks laufen grundsätzlich im Ring 3. Der große Vorteil des VM86 ist, dass [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") unterstützt wird, so können die entsprechenden physikalischen Addressen von Kernel belegt werden und sogar mehrere VM86-Tasks gleichzeitig laufen, indem Speicher aus anderen Bereichen in das erste Megabyte gemappt wird. Hier kann es allerdings Probleme geben, wenn der Kernel in diesem Bereich Speicher benutzt, bei einem entsprechend niedrig geladenen Kernel muss man halt entsprechend aufpassen.
+Während eines solchen iret aus dem Kernel in den Task werden automatisch vier Realmode-Segmentregister geladen (wenn die CPU im neuen EFLAGS das VM-Bit als gesetzt erkannt hat), die vorher auf den Kernel-Stack gepusht werden müssen. Da für den Task Realmode-Addressierung benutzt wird, müssen auch cs:ip und ss:sp so gesetzt werden, dass sie im Realmode auf die entsprechende Addresse zeigen. VM86-Tasks laufen grundsätzlich im Ring 3. Der große Vorteil des VM86 ist, dass [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") unterstützt wird, so können die entsprechenden physikalischen Addressen von Kernel belegt werden und sogar mehrere VM86-Tasks gleichzeitig laufen, indem Speicher aus anderen Bereichen in das erste Megabyte gemappt wird. Hier kann es allerdings Probleme geben, wenn der Kernel in diesem virtuellen Bereich Speicher benutzt, bei einem entsprechend niedrig geladenen Kernel muss man halt entsprechend aufpassen.
 
 ## Beispiel
 
@@ -38,6 +38,6 @@ Ich persönlich benutze den VM86-Mode nur, um Interrupts aufzurufen und missbrau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 8152; parent 5209; 2010-09-03T13:35:15Z -->
+<!-- MediaWiki page 1546; revision 8154; parent 8152; 2010-09-04T12:14:37Z -->
