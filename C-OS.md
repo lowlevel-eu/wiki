@@ -34,18 +34,12 @@ Wer Lust und Zeit hat, kann mich in den Channeln \#lost, \#NG-OS oder \#tevopsys
 
 NG-OS hat viele Besonderheiten, eine davon, oder die größte ist wohl, mit wie wenig Hardware es auskommt, Desweiteren, ist es ein OS, das hauptsächlich für den Lerneinsatz programmiert wurde, so kann man z.B. Als Informatikschüler daran mitwirken.
 
-## Programme
-
-- Shell
-- rudimentärer Init App
-- Ping Pong Spiel :)
-
 ## Closed Source?
 
 Ich habe mich für closed Source entschieden, weil ich nicht von allen möglichen Leuten auf meine Konstrukte angesprochen werden will, wer allerdings Lust und Zeit hat, kann mitwirken, und erhält Zugang zum Sourcecode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8162; parent 8157; 2010-09-05T16:11:21Z -->
+<!-- MediaWiki page 2276; revision 8163; parent 8162; 2010-09-05T16:11:44Z -->
