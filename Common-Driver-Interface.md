@@ -169,7 +169,7 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 - [meinOS](https://github.com/lowlevel-eu/wiki/wiki/MeinOS "MeinOS")
 - [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota")
-- [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena") (kernel1 und kernel2)
+- [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena") (kernel1, kernel2 und kernel3)
 - [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree")
 - [planlOS](https://github.com/lowlevel-eu/wiki/wiki/PlanlOS "PlanlOS")
 - [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
@@ -181,6 +181,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7677/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8168/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 7677; parent 7080; 2010-05-09T09:54:58Z -->
+<!-- MediaWiki page 1622; revision 8168; parent 7677; 2010-09-05T21:19:15Z -->
