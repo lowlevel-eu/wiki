@@ -77,17 +77,9 @@ Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Comp
 
 Ja. Es ist schon wieder passiert. Auch paloxena2 war zu kaputt, also gibt es nun paloxena3. Im Großen und Ganzen verfolgt es die gleichen Ziele wie paloxena2 (SMP, Threads, einfacheres Treiberinterface). Bei paloxena2 gab es aber erstens das Problem, dass ich anfangs noch keine Ahnung von SMP hatte und ich das OS zweitens zu Beginn nur als Testplattform für meinen CDI-USB-Treiber verwendet habe &#150; das soll bei paloxena3 von Anfang an besser laufen.
 
-### Syscalls
+### VFS und Treiberinterface
 
-Im Gegensatz zu paloxena2 sind die Linuxsyscalls nicht die nativen Syscalls von paloxena3. Native Calls finden (vorerst) über den Interrupt 0xA2 (in Anlehnung an 0x2A, der aber für IRQs reserviert ist) statt. Wird allerdings der Interrupt 0x80 aufgerufen, so wird der entsprechende Linux-Syscall ausgeführt. Per Interrupt 0x7F sind [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS")-Syscalls zu erreichen. Auf diese Art und Weise soll es möglich sein, verschiedene Betriebssysteme zu „emulieren“, sollten zwei Betriebssysteme z. B. den gleichen Interrupt verwenden, dann wird beim Programmstart festgestellt, welche Emulationsart verwendet werden soll, dies ist auch z. B. für den Zustand des Stacks bei Programmaufruf wichtig. Bis jetzt geschieht dies folgendermaßen:
-
-- Wenn an der Stelle 0x7FFFFFFC ein DWord mit dem Wert 42 steht, dann handelt es sich um eine native paloxena3-Anwendung (sollte nur per 0xA2 Syscalls ausführen, darf vorraussichtlich aber auch per 0x80).
-- Ist der Entry-Point zwischen 0x14000000 und 0x2000000, dann wird PrettyOS emuliert.
-- Sonst handelt es sich um eine Linuxanwendung.
-
-PrettyOS wird bereits ziemlich gut emuliert (allerdings fehlen in Ermangelung eines entsprechenden Treibers die Disketten- bzw. FAT-Funktionen), hier ein Screenshot der Shell:
-
-Datei:Prettypaloxena.png
+*TODO*
 
 ### OSOD
 
@@ -97,6 +89,6 @@ Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 8093; parent 8023; 2010-08-20T17:07:35Z -->
+<!-- MediaWiki page 2045; revision 8169; parent 8093; 2010-09-05T21:21:41Z -->
