@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | --------------------------------- |
 |  |  |
 | Entwickler: | pgahlen |
-| Akt. Version: | 0.0.0.8 |
+| Akt. Version: | 0.0.1.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
 | Plattform: | x86, amd64, ARM |
@@ -25,6 +25,11 @@ in Arbeit
 
 Wer Lust und Zeit hat, kann mich in den Channeln \#lost, \#NG-OS oder \#tevopsys anschreiben, oder mich per Mail kontaktieren: pgahlen@yahoo.de
 
+## User-Programme
+
+- Shell
+- PingPong Spiel (noch in Arbeit, da VM86 noch nicht funktioniert)
+
 ## Besonderheiten
 
 NG-OS hat viele Besonderheiten, eine davon, oder die größte ist wohl, mit wie wenig Hardware es auskommt, Desweiteren, ist es ein OS, das hauptsächlich für den Lerneinsatz programmiert wurde, so kann man z.B. Als Informatikschüler daran mitwirken.
@@ -41,6 +46,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8157; parent 8156; 2010-09-04T20:59:02Z -->
+<!-- MediaWiki page 2276; revision 8162; parent 8157; 2010-09-05T16:11:21Z -->
