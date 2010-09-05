@@ -20,8 +20,8 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 - NE - *Numeric Error*
 - WP - Mittels *Write Protect* Flag kann festgelegt werden ob Schreibgeschützte Pages auch vor dem Kernel(Ring0) geschützt sind (bei gesetztem WP-Flag sind die Pages auch vor dem Kernel sicher).
 - AM - *Alignment Mask*
-- NW - *Not Write-throgh*
-- CD - *Cache Disable*
+- NW - Im Long Mode löst das Setzen des *Not Write-throgh Disable* eine [\#GP-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus (außer wenn Caching mittels CD-Flag ganz abgeschaltet ist). Im Legacy Mode wird mit gesetztem Flag Writethroug-Caching erzwungen, unabhängig vom PWT-Flag in den Paging Strukturen.
+- CD - Das *Cache Disable* Flag steuert das Caching der CPU. Mit dem setzten dieses Flags wird das Caching der CPU abgeschaltet und die den Cache betreffenden Flags in möglichen Paging-Strukturen werden ignoriert.
 - PG - Mit dem *Paging* Flag kann der [Paging-Meschanismus](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") ein- bzw. ausgeschaltet werden.
 
 ## CR2
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 7061; parent 7060; 2010-02-11T13:50:21Z -->
+<!-- MediaWiki page 1610; revision 8158; parent 7061; 2010-09-05T14:33:31Z -->
