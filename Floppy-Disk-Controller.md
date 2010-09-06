@@ -597,7 +597,7 @@ Command Phase:
 </td></tr>
 <tr>
 <td>#7:</td>
-<td colspan="8">Letzter zu schreibender Sektor (im aktuellen Track)
+<td colspan="8">Letzter zu schreibender Sektor (im aktuellen Cylinder)
 </td></tr>
 <tr>
 <td>#8:</td>
@@ -972,6 +972,6 @@ BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL wri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8177/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8176; parent 8175; 2010-09-06T13:43:45Z -->
+<!-- MediaWiki page 1443; revision 8177; parent 8176; 2010-09-06T13:44:05Z -->
