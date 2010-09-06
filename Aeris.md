@@ -1,5 +1,24 @@
 # Aeris
 
+| Aeris |  |
+| ----------------------------------------------------------------------------------------------------- | ------------ |
+|  |  |
+| Entwickler: | cloidnerux |
+| Akt. Version: |  |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| OS-Eigenschaften |  |
+| Plattform: |  |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): |  |
+| API: |  |
+| Binärformat: |  |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Homepage |  |
+
+[\[1\]](http://aeris.a-server.tk/index.php/)
+
+  
+
 ## Geschichte
 
 2007 gründete ein Jugendlicher ein Projekt mit dem Namen „Future OS“, da er aber nicht programmieren konnte, warb er in anderen Foren Programmierer an, die das OS programmieren sollten. Es meldeten sich auch einige an, die das Interesse verfolgten, einen eigenen Kernel zu programmieren, doch keiner wollte die Ideen eines anderen verwirklichen, der noch keinerlei Erfahrung mit dem Programmieren hatte. Im Herbst 2007 hatte „cloidnerux“, der spätere Projektleiter des Aeris-Projekts, einen ersten kleinen Kernel geschrieben und hochgeladen, doch vom Projektleiter des „Future OS“ kam keine weitere Kooperation. Da man auch das Ziel, DAS Betriebssystem der Zukunft zu programmieren, für Schwachsinn hielt, entfernte man sich vom Projekt und gründete ein neues Projekt, eben das Aeris-Projekt.
@@ -25,11 +44,10 @@ Die aktuellste Version die man beziehen kann ist 0.4 BETA3. Die Entwicklerversio
 
 - [Wiki](http://aeris.a-server.tk/index.php/Hauptseite)
 - [Forum](http://aeris.a-server.tk/phpBB3/index.php)
-- [Download der letzten Versionen](http://cloidnerux.cl.funpic.de/)
 - SVN: Bitte im Wiki nachschauen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8174/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
 
-<!-- MediaWiki page 2175; revision 7652; parent 7012; 2010-05-03T14:59:43Z -->
+<!-- MediaWiki page 2175; revision 8174; parent 7652; 2010-09-06T13:01:17Z -->
