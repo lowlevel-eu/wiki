@@ -679,7 +679,7 @@ Command Phase:
 </td></tr>
 <tr>
 <td>#7:</td>
-<td colspan="8">Track-Größe
+<td colspan="8">Letzter zu lesender Sektor (im aktuellen Cylinder)
 </td></tr>
 <tr>
 <td>#8:</td>
@@ -705,8 +705,6 @@ Result Phase:
 Anmerkungen:
 
 - Nach dem Lesevorgang wird ein IRQ 6 gesendet.
-
-  
 
 ### Kompletten Track lesen (2h)
 
@@ -974,6 +972,6 @@ BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL wri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8175/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8175; parent 8072; 2010-09-06T13:43:03Z -->
+<!-- MediaWiki page 1443; revision 8176; parent 8175; 2010-09-06T13:43:45Z -->
