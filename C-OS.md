@@ -1,7 +1,7 @@
 # C-OS
 
 | NG-OS |  |
-| ----------------------------------------------------------------------------------------------------- | --------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------- |
 |  |  |
 | Entwickler: | pgahlen |
 | Akt. Version: | 0.0.1.1 |
@@ -10,7 +10,7 @@
 | Plattform: | x86, amd64, ARM |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, ASM |
-| API: | darckblackAPI, POSIX-kompatibel |
+| API: | darkblackAPI, POSIX-kompatibel |
 | Binärformat: | ELF |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
@@ -40,6 +40,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8163; parent 8162; 2010-09-05T16:11:44Z -->
+<!-- MediaWiki page 2276; revision 8181; parent 8163; 2010-09-07T21:16:16Z -->
