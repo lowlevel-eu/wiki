@@ -119,7 +119,7 @@ Beim Lesen: Wie Statusregister. Beim Schreiben:
 
 - LBA 28 Lesen: 0x20
 - LBA 28 Schreiben: 0x30
-- LBA 28 Lesen: 0x24
+- LBA 48 Lesen: 0x24
 - LBA 48 Schreiben: 0x34
 
 ## Fehlerquellen
@@ -141,6 +141,6 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 7641; parent 5535; 2010-05-03T14:28:59Z -->
+<!-- MediaWiki page 1522; revision 8185; parent 7641; 2010-09-08T10:20:59Z -->
