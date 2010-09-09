@@ -6,7 +6,59 @@ Die Streaming SIMD Extensions (oder kurz SSE genannt), ist ein eine Befehlserwei
 
 ## Register
 
-Im 32-Bit-Modus stehen 8 Register (xmm0 bis xmm7) zur Verfügung. Im 64-Bit-Modus gibt es 8 zusätzliche Register (xmm8 bis xmm15).
+### 32-Bit
+
+Im 32-Bit-Modus stehen 8 Register (xmm0 bis xmm7) zur Verfügung.
+
+  
+
+### 64-Bit
+
+Im 64-Bit-Modus gibt es 8 zusätzliche Register (xmm8 bis xmm15).
+
+<table>
+<tbody><tr>
+<th colspan="16">Bytes
+</th></tr>
+<tr>
+<th>15
+</th>
+<th>14
+</th>
+<th>13
+</th>
+<th>12
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th>
+<th>6
+</th>
+<th>5
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>2
+</th>
+<th>1
+</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="16">XMM?
+</td></tr>
+<tr>
+<td colspan="16">? = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+</td></tr></tbody></table>
 
 ## Befehle
 
@@ -27,6 +79,6 @@ Hinweis: Das zuerst angegebene Register enthält das Ergebnis.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7586/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8204/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
 
-<!-- MediaWiki page 2199; revision 7586; parent 7413; 2010-04-17T16:22:09Z -->
+<!-- MediaWiki page 2199; revision 8204; parent 7586; 2010-09-09T10:52:07Z -->
