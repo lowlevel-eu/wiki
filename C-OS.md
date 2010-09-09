@@ -41,11 +41,17 @@ NG-OS hat viele Besonderheiten, eine davon, oder die größte ist wohl, mit wie 
 
 - v.0.0.1.3
 
-\- Massenspeichertreiber (Floppy) - VM86 - Paging
+\- Massenspeichertreiber (Floppy)
+
+\- VM86
+
+\- Paging
 
 - v.0.0.1.4
 
-\- VGA - Ping Pong Spiel vollenden
+\- VGA
+
+\- Ping Pong Spiel vollenden
 
 ## Closed Source?
 
@@ -53,6 +59,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8209; parent 8181; 2010-09-09T11:56:26Z -->
+<!-- MediaWiki page 2276; revision 8210; parent 8209; 2010-09-09T11:57:08Z -->
