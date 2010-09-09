@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | -------------------------------- |
 |  |  |
 | Entwickler: | pgahlen |
-| Akt. Version: | 0.0.1.1 |
+| Akt. Version: | 0.0.1.2 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
 | Plattform: | x86, amd64, ARM |
@@ -25,14 +25,27 @@ in Arbeit
 
 Wer Lust und Zeit hat, kann mich in den Channeln \#lost, \#NG-OS oder \#tevopsys anschreiben, oder mich per Mail kontaktieren: pgahlen@yahoo.de
 
+suche noch jemanden der mitmachen will, du musst keine großartigen Vorkentnisse haben, nur die Sprache C realtiv zu beherrschen, dann bist du willkommen
+
 ## User-Programme
 
-- Shell
+- Shell (Windows und Linux kompatibel (alle Befehlssätze eingebracht, nur noch keine volle Funktion in einigen))
+- Init (wegen dem fehlenden Massenspeichertreiber noch keine richtige Funktion)
 - PingPong Spiel (noch in Arbeit, da VM86 noch nicht funktioniert)
 
 ## Besonderheiten
 
 NG-OS hat viele Besonderheiten, eine davon, oder die größte ist wohl, mit wie wenig Hardware es auskommt, Desweiteren, ist es ein OS, das hauptsächlich für den Lerneinsatz programmiert wurde, so kann man z.B. Als Informatikschüler daran mitwirken.
+
+## Roadmap
+
+- v.0.0.1.3
+
+\- Massenspeichertreiber (Floppy) - VM86 - Paging
+
+- v.0.0.1.4
+
+\- VGA - Ping Pong Spiel vollenden
 
 ## Closed Source?
 
@@ -40,6 +53,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8181; parent 8163; 2010-09-07T21:16:16Z -->
+<!-- MediaWiki page 2276; revision 8209; parent 8181; 2010-09-09T11:56:26Z -->
