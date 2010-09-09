@@ -12,15 +12,15 @@ Die oben genannten Funktionen werden sowohl im Userspace – als Teil der Stan
 
 Die einfachste Möglichkeit malloc() und free() zu implementieren ist eine (meist einfach verkettete) Liste aus freien Speicherbereichen zu verwalten. Während malloc() wird dann diese Liste durchlaufen, um nach einem Speicherstück ausreichender Größe zu suchen. Diese Suche kann nach mehreren Strategien erfolgen:
 
-- Exact fit: ein Speicherstück das exakt die geforderte Größe hat wird gesucht
-- First fit: das erstbeste, ausreichend große Speicherstück wird gesucht
-- Best fit: das kleinste, gerade noch ausreichend große Speicherstück wird gesucht
+- Exact fit: Ein Speicherstück mit exakt der geforderten Größe wird gesucht
+- First fit: Das erstbeste, ausreichend große Speicherstück wird gesucht
+- Best fit: Das kleinste, gerade noch ausreichend große Speicherstück wird gesucht
 
-Falls Eines gefunden wird, wird dieses aus der Liste entfernt und einen Zeiger auf den Speicherbereich zurückgegeben, ansonsten wird die virtuelle bzw. physische Speicherverwaltung aufgerufen, um neue Speicherseiten zu allozieren. Um Speicher zu sparen, ist es sinnvoll einen Speicherbereich, falls er viel zu groß - d.h. es muss noch Platz für eine weitere Header (siehe unten) und zumindest ein bisschen Speicher danach sein - ist, in zwei Teile zu splitten, wobei der erste zurückgegeben wird und der zweite der Freispeicherliste hinzugefügt wird.
+Falls eines gefunden wird, wird dieses aus der Liste entfernt und ein Zeiger auf den Speicherbereich zurückgegeben, ansonsten wird die virtuelle bzw. physische Speicherverwaltung aufgerufen, um neue Speicherseiten zu allozieren. Um Speicher zu sparen, ist es sinnvoll einen Speicherbereich, falls er viel zu groß – d. h. es muss noch Platz für eine weitere Header (siehe unten) und zumindest ein bisschen Speicher danach sein – ist, in zwei Teile zu splitten, wobei der erste zurückgegeben wird und der zweite der Freispeicherliste hinzugefügt wird.
 
 Bei einem free() wird der freizugebende Speicherbereich der Liste der freien Speicherbereiche einfach vorne hinzugefügt.
 
-Damit man für die Liste keinen eigenen Speicher allozieren muss, wird beim malloc bewusst einige Bytes mehr Speicher alloziert, um - **vor** dem von der anschließend benutzten Speicherbereich (genannt Header) - die Größe und den next-Zeiger (und je nach Bedarf weitere Werte, wie z.B. Flags oder einen previous-Pointer) zu speichern.
+Damit man für die Liste keinen eigenen Speicher allozieren muss, werden beim malloc bewusst einige Bytes mehr Speicher reserviert (**vor** dem anschließend benutzten Speicherbereich (genannt Header)), um die Größe und den next-Zeiger (und je nach Bedarf weitere Werte, wie z. B. Flags oder einen previous-Pointer) zu speichern.
 
 *Beispielimplementierung:* [Public-Domain C Library](https://svn.lcube.de/dev34/pdclib/trunk/functions/stdlib/malloc.c)
 
@@ -43,6 +43,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8208; parent 8203; 2010-09-09T11:31:56Z -->
+<!-- MediaWiki page 2229; revision 8211; parent 8208; 2010-09-09T18:48:19Z -->
