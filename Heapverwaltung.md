@@ -26,7 +26,7 @@ Damit man für die Liste keinen eigenen Speicher allozieren muss, wird beim mall
 
 ## Buddy-Speicherverwaltung
 
-Die Buddy-Speicherverwaltung ist ein Kompromiss aus statischer und dynamischer Partitionierung (auch Halbierungsverfahren genennant). Die Anzhal nicht-ausgelagerter Prozesse ist dabei dynamisch und die interne Fragmentierung beschränkt.
+Die Buddy-Speicherverwaltung ist ein Kompromiss aus statischer und dynamischer Partitionierung (auch Halbierungsverfahren genennant). Die Anzahl nicht-ausgelagerter Prozesse ist dabei dynamisch und die interne Fragmentierung beschränkt.
 
 *siehe* [Wikipedia: Buddy-Speicherverwaltung](http://de.wikipedia.org/wiki/Buddy-Speicherverwaltung)
 
@@ -43,6 +43,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8201/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8202/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8201; parent 8197; 2010-09-09T10:17:43Z -->
+<!-- MediaWiki page 2229; revision 8202; parent 8201; 2010-09-09T10:43:56Z -->
