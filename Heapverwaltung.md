@@ -16,7 +16,7 @@ Die einfachste Möglichkeit malloc() und free() zu implementieren ist eine (meis
 - First fit: das erstbeste, ausreichend große Speicherstück wird gesucht
 - Best fit: das kleinste, gerade noch ausreichend große Speicherstück wird gesucht
 
-Falls Eines gefunden wird, wird dieses aus der Liste entfernt und einen Zeiger auf den Speicherbereich zurückgegeben, ansonsten wird die virtuelle bzw. physische Speicherverwaltung aufgerufen, um neue Speicherseiten zu allozieren. Um Speicher zu sparen, ist es sinnvoll einen Speicherbereich, falls er viel zu groß - d.h. ein muss noch Platz für eine weitere Header (siehe unten) und zumindest ein bisschen Speicher danach sein - ist, in zwei Teile zu splitten, wobei der erste zurückgegeben wird und der zweite der Freispeicherliste hinzugefügt wird.
+Falls Eines gefunden wird, wird dieses aus der Liste entfernt und einen Zeiger auf den Speicherbereich zurückgegeben, ansonsten wird die virtuelle bzw. physische Speicherverwaltung aufgerufen, um neue Speicherseiten zu allozieren. Um Speicher zu sparen, ist es sinnvoll einen Speicherbereich, falls er viel zu groß - d.h. es muss noch Platz für eine weitere Header (siehe unten) und zumindest ein bisschen Speicher danach sein - ist, in zwei Teile zu splitten, wobei der erste zurückgegeben wird und der zweite der Freispeicherliste hinzugefügt wird.
 
 Bei einem free() wird der freizugebende Speicherbereich der Liste der freien Speicherbereiche einfach vorne hinzugefügt.
 
@@ -43,6 +43,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8208/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8203; parent 8202; 2010-09-09T10:49:05Z -->
+<!-- MediaWiki page 2229; revision 8208; parent 8203; 2010-09-09T11:31:56Z -->
