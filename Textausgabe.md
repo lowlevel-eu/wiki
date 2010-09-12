@@ -24,18 +24,18 @@ Das Attribute-Byte ist wie folgt aufgebaut:
 
 BXXXYYYYb, Hierbei ist X die Hintergrundfarbe, Y die Vordergrundfarbe und B das „Blinkbit“. Ist es gesetzt, blinkt das entsprechende Zeichen. Hier ist eine Tabelle aller Farben:
 
-| Wert | Farbe | Wert | Farbe |
-| ------ | ---------- | ------ | ------------- |
-| 0x0 | Schwarz | 0x8 | Dunkelgrau |
-| 0x1 | Blau | 0x9 | Hellblau |
-| 0x2 | Grün | 0xA | Hellgrün |
-| 0x3 | Cyan | 0xB | Hellcyan |
-| 0x4 | Rot | 0xC | Hellrot |
-| 0x5 | Magenta | 0xD | Hellmagenta |
-| 0x6 | Braun | 0xE | Gelb |
-| 0x7 | Hellgrau | 0xF | Weiß |
+| Wert | Farbe |  | Wert | Farbe |  |
+| ------ | ---------- | ----- | ------ | ------------- | ----- |
+| 0x0 | Schwarz |  | 0x8 | Dunkelgrau |  |
+| 0x1 | Blau |  | 0x9 | Hellblau |  |
+| 0x2 | Grün |  | 0xA | Hellgrün |  |
+| 0x3 | Cyan |  | 0xB | Hellcyan |  |
+| 0x4 | Rot |  | 0xC | Hellrot |  |
+| 0x5 | Magenta |  | 0xD | Hellmagenta |  |
+| 0x6 | Braun |  | 0xE | Gelb |  |
+| 0x7 | Hellgrau |  | 0xF | Weiß |  |
 
-Häufig benutzt wird 0x07, Hellgrau auf Schwarz.
+Häufig benutzt wird 0x07, **Hellgrau auf Schwarz.**
 
 ##### Blinken
 
@@ -120,6 +120,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfac
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8223/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 7808; parent 7806; 2010-07-12T21:16:40Z -->
+<!-- MediaWiki page 1549; revision 8223; parent 7808; 2010-09-12T11:06:27Z -->
