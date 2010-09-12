@@ -120,6 +120,6 @@ Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfac
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8223/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8225/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 8223; parent 7808; 2010-09-12T11:06:27Z -->
+<!-- MediaWiki page 1549; revision 8225; parent 8223; 2010-09-12T15:33:59Z -->
