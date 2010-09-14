@@ -1,16 +1,16 @@
 # C-OS
 
-| NG-OS |  |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------- |
+| C-OS |  |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 |  |  |
 | Entwickler: | pgahlen |
-| Akt. Version: | 0.0.1.2 |
+| Akt. Version: | 0.0.1.4 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
 | Plattform: | x86, amd64, ARM |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, ASM |
-| API: | darkblackAPI, POSIX-kompatibel |
+| API: | darkblackAPI, POSIX-kompatibel (so halb) |
 | Binärformat: | ELF |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
@@ -39,7 +39,7 @@ NG-OS hat viele Besonderheiten, eine davon, oder die größte ist wohl, mit wie 
 
 ## Roadmap
 
-- v.0.0.1.3
+- v.0.0.1.5
 
 \- Massenspeichertreiber (Floppy)
 
@@ -47,7 +47,7 @@ NG-OS hat viele Besonderheiten, eine davon, oder die größte ist wohl, mit wie 
 
 \- Paging
 
-- v.0.0.1.4
+- v.0.0.1.6
 
 \- VGA
 
@@ -59,6 +59,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8229/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8231/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8229; parent 8210; 2010-09-13T17:21:18Z -->
+<!-- MediaWiki page 2276; revision 8231; parent 8229; 2010-09-14T07:48:10Z -->
