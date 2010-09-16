@@ -22,8 +22,7 @@ in Arbeit
 ## Entwickler
 
 - pgahlen
-
-Wer Lust und Zeit hat, kann mich in den Channeln \#lost, \#NG-OS oder \#tevopsys anschreiben, oder mich per Mail kontaktieren: pgahlen@yahoo.de
+- robotx
 
 suche noch jemanden der mitmachen will, du musst keine großartigen Vorkentnisse haben, nur die Sprache C realtiv zu beherrschen, dann bist du willkommen
 
@@ -31,7 +30,7 @@ suche noch jemanden der mitmachen will, du musst keine großartigen Vorkentnisse
 
 - Shell (Windows und Linux kompatibel (alle Befehlssätze eingebracht, nur noch keine volle Funktion in einigen))
 - Init (wegen dem fehlenden Massenspeichertreiber noch keine richtige Funktion)
-- PingPong Spiel (noch in Arbeit, da VM86 noch nicht funktioniert)
+- PingPong Spiel (noch in Arbeit, da VESA noch nicht funktioniert)
 
 ## Besonderheiten
 
@@ -59,6 +58,6 @@ Ich habe mich für closed Source entschieden, weil ich nicht von allen mögliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8231/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8231; parent 8229; 2010-09-14T07:48:10Z -->
+<!-- MediaWiki page 2276; revision 8240; parent 8231; 2010-09-16T11:52:09Z -->
