@@ -147,7 +147,7 @@ Wichtig ist jetzt, dass die Speicherverwaltung die entsprechenden Speicherbereic
 Das war's im Prinzip schon, jetzt müssen wir das Modul nur noch testen:
 
 - Wer den Kernel direkt von qemu laden lässt, gibt das Modul per -initrd an: *qemu -kernel kernel -initrd test.bin*. Mehrere Module werden per Komma getrennt angegeben.
-- Wer ein Diskettenimage (oder eine echte Diskette) benutzt, kopiert test.bin auf das Image und benutzt in GRUB vor dem Bootem noch den Befehl *module /test.bin*.
+- Wer ein Diskettenimage (oder eine echte Diskette) benutzt, kopiert test.bin auf das Image und benutzt in GRUB vor dem Booten noch den Befehl *module /test.bin*.
 
 ## Syscalls
 
@@ -319,6 +319,6 @@ Damit haben wir einen Kernel, der eine ELF-Datei ausführen kann.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2241/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2241/index.html)
 
-<!-- MediaWiki page 2241; revision 7764; parent 0; 2010-06-20T16:46:38Z -->
+<!-- MediaWiki page 2241; revision 8242; parent 7764; 2010-09-16T19:59:11Z -->
