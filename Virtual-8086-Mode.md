@@ -12,11 +12,11 @@ Während eines solchen iret aus dem Kernel in den Task werden automatisch vier R
 
 Aufbau eines Stacks direkt vor dem iret zu einem VM86-Task:
 
-(Alle Werte, auch die 16-Bit-Register, sind auf dem Stack 32 bit groß, alle Segment-Register sind mit Realmode-Werten gefüllt)
+(Alle Werte, auch die 16-Bit-Register, sind auf dem Stack 32 bit groß, alle Segment-Register sind mit Realmode-Werten gefüllt. Man beachte auch die nicht-alphabetische Reihenfolge von ds und es.)
 
 **Wert**
 
-gs fs es ds ss sp eflags cs ip
+gs fs ds es ss sp eflags cs ip
 
 Darunter kommen je nach OS noch andere Werte, unter anderem die [General Purpose Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") des Tasks.
 
@@ -38,6 +38,6 @@ Ich persönlich benutze den VM86-Mode nur, um Interrupts aufzurufen und missbrau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 8154; parent 8152; 2010-09-04T12:14:37Z -->
+<!-- MediaWiki page 1546; revision 8241; parent 8154; 2010-09-16T15:13:50Z -->
