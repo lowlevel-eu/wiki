@@ -14,6 +14,12 @@ Es wurde schon früh nach einem Standard in der Industrie gesucht sowie nach ein
 
   
 
+## Gegenwart
+
+Heutzutage wird der ISA-Slot nicht mehr in Desktop-PCs verbaut. Allerdings sind [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC") und [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy") allesamt ISA-Geräte, sodass ISA auch heute noch eine große Rolle spielt.
+
+  
+
 ## Plug-and-Play
 
 Die Plug-and-Play-Spezifikation ist dafür gedacht gewesen, den ISA-Bus mit den gleichen Funktionialitäten des PCI-Busses auszustatten. Dazu gehören relozierbare I/O-Ports und geographische Addressierung. Die Relozierung übernimmt dabei das BIOS, weshalb das BIOS auch PnP-fähig sein muss.
@@ -29,6 +35,6 @@ Bei der geographischen Addressierung wird jedem Peripheriegerät eine *Card Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
 
-<!-- MediaWiki page 1709; revision 8076; parent 8075; 2010-08-16T13:09:09Z -->
+<!-- MediaWiki page 1709; revision 8250; parent 8076; 2010-09-17T11:32:17Z -->
