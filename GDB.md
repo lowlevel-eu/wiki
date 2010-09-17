@@ -12,13 +12,15 @@ Damit der eigene Kernel allerdings in der Lage ist sich mit GDB zu verbinden mus
 
 Damit dieser Code erfolgreich kompiliert und gelinkt wird müssen folgende Funktionen bereitgestellt werden: \<c\>int getDebugChar(); // Liest Daten (Bytes) von der Seriellen Schnittstelle void putDebugChar(int chr); // Schickt Daten (Bytes) über die serielle Schnittstelle void exceptionHandler(int exception_number, void \*exception_address); // wird benötigt um exception-handler einzurichten\</c\>
 
-Zusätzlich wird die ANSI-C-Funktion: *strcpy* benötigt. An einigen Stellen im Code noch wird die Funktion *fprintf* aufgerufen. Diese sollten auskommentiert oder besser durch Kernel-eigene Äquivalente ersetzt werden.
+Zusätzlich wird die ANSI-C-Funktion: *strcpy* benötigt. An einigen Stellen im Code wird die Funktion *fprintf* aufgerufen. Diese sollten auskommentiert oder besser durch Kernel-eigene Äquivalente ersetzt werden.
 
-Nun muss nur noch eine Verbindung aufgebaut werden. Dazu muss im Kernel die Funktion *set_debug_traps* aus der i386-stub.c aufgerufen werden und ein breakpoint gesetzt werden damit der Kernel auf den User, bzw GBD wartet. \<c\>set_debug_traps(); // i386-stub initialisieren
+Nun muss nur noch eine Verbindung aufgebaut werden. Dazu muss im Kernel die Funktion *set_debug_traps* aus der i386-stub.c aufgerufen und die RS232-Schnittstelle konfiguriert werden. Damit der kernel auch darauf wartet bis der User bzw GDB bereit ist ein wird zuletzt noch ein breakpoint gesetzt. \<c\>SetupRS232(baudrate, DATA_BIT_8, NO_PARITY, STOP_BIT_1); //standard-baudrate ist 9600 set_debug_traps(); // i386-stub initialisieren
 
 asm volatile ("int \$3"); // warten bis GDB auf den anderen System gestartet wurde\</c\>
 
-Auf der kernel-seite ist nun alles Fertig. Jetzt kann man sich ganz einfach mit GDB zu dem Kernel verbinden und ihn debuggen: ` $ gdb (gdb) target remote /dev/ttyS0 `
+Die standard-Baudrate von 9600 ist etwas knapp bemessen. Bei conditional breakpoints in häufig wiederkehrenden Prozessen wird das System extrem stark ausgebremst. Man sollte eine etwas schnellere Übertragungsrate verwenden.
+
+Auf der kernel-seite ist nun alles Fertig. Jetzt kann man sich ganz einfach mit GDB zu dem Kernel verbinden und ihn debuggen: `$ gdb (gdb) set remotebaud 115200 (gdb) target remote /dev/ttyS0 `
 
   
 
@@ -28,6 +30,6 @@ Auf der kernel-seite ist nun alles Fertig. Jetzt kann man sich ganz einfach mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8226/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2283/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2283/index.html)
 
-<!-- MediaWiki page 2283; revision 8226; parent 0; 2010-09-13T13:57:13Z -->
+<!-- MediaWiki page 2283; revision 8255; parent 8226; 2010-09-17T12:36:18Z -->
