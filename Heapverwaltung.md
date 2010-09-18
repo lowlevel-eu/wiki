@@ -2,8 +2,6 @@
 
 Die **Heapverwaltung** ist ein Teil der [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung"), der aufbauend auf der virtuellen Speicherverwaltung Funktionen zur Verwaltung dynamisch allozierten Speichers beliebiger Größe – dieser Speicher zusammengenommen wird dann auch als [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap") bezeichnet – bereitstellt. In der C-Standardbibliothek sind damit die Funktionen malloc/free (und Konsorten) bzw. in der C++-Laufzeitumgebung new/delete gemeint. Gelegentlich werden die beiden Funktionen auch als Bestandteil der virtuellen Speicherverwaltung bezeichnet, da sie ebenfalls mit virtuellen Adressen arbeiten. Sie sind aber nicht mit [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") – d. h. dem, was in diesem Wiki als [virtuelle Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung#virtuelle-speicherverwaltung "Speicherverwaltung") beschrieben wird – zu verwechseln.
 
-  
-
 ## Überblick
 
 Die oben genannten Funktionen werden sowohl im Userspace – als Teil der Standardbibliothek oder Laufzeitumgebung der verwendeten Programmiersprache – als auch im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") benötigt. Bei der Implementierung im Userspace werden dabei über [Systemaufrufe](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemaufruf") die benötigten Funktionen der virtuellen Speicherverwaltung des Kernels – **nicht** der Heapverwaltung des Kernels, da der (Userspace-)Heap (normalerweise) vom Userspace selbst verwaltet wird – aufgerufen. Im Kernel wird direkt auf die virtuelle Speicherverwaltung zugegriffen.
@@ -26,8 +24,6 @@ Damit man für die Liste keinen eigenen Speicher allozieren muss, werden beim ma
 
 ## Buddy-Speicherverwaltung
 
-Die Buddy-Speicherverwaltung ist ein Kompromiss aus statischer und dynamischer Partitionierung (auch Halbierungsverfahren genannt). Die Anzahl nicht-ausgelagerter Prozesse ist dabei dynamisch und die interne Fragmentierung beschränkt.
-
 *siehe* [Wikipedia: Buddy-Speicherverwaltung](http://de.wikipedia.org/wiki/Buddy-Speicherverwaltung)
 
 ## Andere Implementierung portieren
@@ -43,6 +39,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8258/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8211; parent 8208; 2010-09-09T18:48:19Z -->
+<!-- MediaWiki page 2229; revision 8258; parent 8211; 2010-09-18T13:55:29Z -->
