@@ -24,7 +24,7 @@ Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist 
 
 Bei bochs kann dazu der [integrierte Debugger](https://github.com/lowlevel-eu/wiki/wiki/Bochs-Debugger "Bochs Debugger") benutzt werden.
 
-QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen (siehe GNU Project Debugger und QEMU). Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den „-d“-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein „-d int“, um alle Interrupts aufzuzeichnen.
+QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen, wie z. B. dem GNU Debugger. Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den „-d“-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein „-d int“, um alle Interrupts aufzuzeichnen.
 
 ## Exception-Meldungen
 
@@ -46,6 +46,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 7686; parent 7675; 2010-05-12T04:56:34Z -->
+<!-- MediaWiki page 1544; revision 8262; parent 7686; 2010-09-18T15:03:26Z -->
