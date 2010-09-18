@@ -111,7 +111,7 @@ Die [niwohlosen Developers](http://gitorious.org/+niwohlose-developers) sind das
 
 #### DerHartmut alias IAmBackAndWritingSoDamnFuckingShitForNiwohlOS
 
-[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (nusskuchen) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als „Hobby“ neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwangen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren. Nun ist er allerdings wieder "back to the roots" und arbeitet voller Enthusiasmus an niwohlOS.
+[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (Nusskuchen) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als „Hobby“ neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwangen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren. Nun ist er allerdings wieder "back to the roots" und arbeitet voller Enthusiasmus an niwohlOS.
 
 #### SHyx0rmZ alias HardcoreProgger
 
@@ -273,6 +273,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8260; parent 8128; 2010-09-18T15:02:07Z -->
+<!-- MediaWiki page 2095; revision 8263; parent 8260; 2010-09-18T15:04:26Z -->
