@@ -2,8 +2,6 @@
 
 Die **HAL** (**H**ardware **A**bstraction **L**ayer) bezeichnet eine Softwareschicht, die zwischen der Hardware und dem [Betriebssystemkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") liegt. Sie hat die Aufgabe, hardwarespezifische Funktionen auszulagern, um eine spätere Portierung zu erleichtern, da im besten Fall nur die HAL angepasst werden muss. Die verbreitesten Betriebsysteme haben eine HAL.
 
-  
-
 ## Aufgaben
 
 Die HAL beinhaltet somit folgende Aufgaben, wobei zu beachten ist, dass das nur mögliche Teile einer HAL sind:
@@ -38,6 +36,6 @@ Der [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 7104; parent 6755; 2010-02-19T15:52:03Z -->
+<!-- MediaWiki page 1480; revision 8257; parent 7104; 2010-09-18T13:54:12Z -->
