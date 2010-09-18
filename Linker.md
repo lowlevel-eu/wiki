@@ -63,6 +63,6 @@ Hier ein Beispiel aus dem Betriebssystem Qultics:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5090/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8259/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 5090; parent 5089; 2009-08-06T08:35:31Z -->
+<!-- MediaWiki page 1932; revision 8259; parent 5090; 2010-09-18T15:01:42Z -->
