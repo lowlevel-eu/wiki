@@ -1,6 +1,17 @@
 # IRC
 
-Im IRC-Channel \#lost auf irc.euirc.net bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich [Týndur](https://lowlevel-eu.github.io/wiki/pages/1795/index.html "Kategorie:Týndur") im speziellen führen.
+Im IRC-Channel *\#lost* auf *irc.euirc.net* bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich [Týndur](https://lowlevel-eu.github.io/wiki/pages/1795/index.html "Kategorie:Týndur") im speziellen führen.
+
+## Verhaltensregeln im Channel
+
+- Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt.
+- Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben. Dazu benutzt man einen sogenannten Nopaste-Service wie zum Beispiel <http://pastebin.com>
+- Flooden, also sinnloses Aneinanderreihen von Buchstabenfolgen ist verboten.
+- Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
+- Sollte das passieren, ist ein automatischer Rejoin verboten.
+- Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
+- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anderswertig zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
+- Bei der Codierung des Clients ist darauf zu achten, dass UTF8 benutzt wird, da nicht alle Clients sauber mit mehreren Codierungen umgehen können.
 
 ## Schnell-Zugriff per Link
 
@@ -11,6 +22,15 @@ irc://irc.euirc.net/lost
 ## Schnell-Zugriff zum Channel per CGIIRC
 
 Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, ist der Zugang über CGIIRC eine Alternative. Dieser arbeitet nur über HTTP und funktioniert somit auch hinter Firewalls und Proxies (also zum Beispiel etwas für in der Schule ;-)). Eine CGIIRC-Installation speziell für den \#lost-Channel kann [hier](http://cgiirc.tyndur.org/) gefunden werden. Es wird aber empfohlen, wenn möglich einen normalen IRC-Client zu verwenden, da die Anzahl der möglichen CGIIRC-Verbindungen von Seiten Euirc beschränkt sind.
+
+## Schnell-Zugriff per Mibbit
+
+Wenn du unseren CGI-IRC schonen willst, und trotzdem keinen Client installieren willst, dann nutze am besten den Mibbit-WebIRC-Client:
+
+- Rufe [diese Seite](http://chat.mibbit.com) auf.
+- Im Feld *IRC* wählst du im Dropdownmenü den Punkt *euIRC \[webirc\]*.
+- Als Channel muss natürlich *\#lost* gesetzt sein.
+- Dann gib noch im Feld *Nick* deinen Wunschnick an, und mit einem Klick auf *Go* geht es los!
 
 ## IRC-Start mit KVirc unter Windows
 
@@ -80,23 +100,12 @@ Nun kompiliert er alles. Danach „make install“ als root. Denn wird er das Pr
 
 Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-unter-windows)
 
-## Verhaltensregeln im Channel
-
-- Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt.
-- Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben. Dazu benutzt man einen sogenannten Nopaste-Service wie zum Beispiel <http://pastebin.com>
-- Flooden, also sinnloses Aneinanderreihen von Buchstabenfolgen ist verboten.
-- Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
-- Sollte das passieren, ist ein automatischer Rejoin verboten.
-- Wird dies auch nicht eingehalten, kann das schnell zu einem Bann führen.
-- Ist man gebannt, sollte man nicht versuchen, diese Sperre irgendwie zu umgehen oder anderswertig zu nerven!! Denn dann wird aus dem technischen Bann mit ziemlich großer Wahrscheinlichkeit eine persönliche Ächtung. Und mit der ganzen Community will man es sich ja schließlich nicht verscherzen, oder?
-- Bei der Codierung des Clients ist darauf zu achten, dass UTF8 benutzt wird, da nicht alle Clients sauber mit mehreren Codierungen umgehen können.
-
 ## Channel-Logs und Statistiken
 
 Aufzeichnungen der Channelgespräche sind genauso wie einige Statistiken stetig aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu finden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7860/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8266/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 7860; parent 5664; 2010-07-14T21:11:34Z -->
+<!-- MediaWiki page 1463; revision 8266; parent 7860; 2010-09-18T20:15:29Z -->
