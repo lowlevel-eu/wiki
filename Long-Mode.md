@@ -36,7 +36,7 @@ mov eax, 0x30200F  ; Eintrag für die Page Directory Table stosd mov ecx, 0x03F
 
 mov ecx, 0x0200 mov esi, 0x008B  ; Die Attribute für die Einträge im Page Directory
 
-map.loop:  ; Hier werden die ersten 512 MiB Identity-Mapped mov eax, esi  ; Page eintragen stosd xor eax, eax  ; Jeder Eintrag besteht aus 8 Byte, also die oberen 4 auffüllen stosd add esi, 0x200000  ; Und zwar mit 2 MiB Pages sub ecx, 1 jnz map.loop
+map.loop:  ; Hier werden die ersten 512 MiB Identity-Mapped mov eax, esi  ; Page eintragen stosd xor eax, eax  ; Jeder Eintrag besteht aus 8 Byte, also die oberen 4 auffüllen stosd add esi, 0x200000  ; Wir benutzen hier 2 MiB Pages sub ecx, 1 jnz map.loop
 
 mov eax, 0x300000  ; Die Adresse des Page Map Level 4 hier eintragen mov cr3, eax
 
@@ -56,6 +56,6 @@ jmp 0x30:kernel.longmode; Far Jmp in 64-Bit Code Segment
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 8308; parent 6437; 2010-09-19T16:46:10Z -->
+<!-- MediaWiki page 1666; revision 8309; parent 8308; 2010-09-19T16:47:27Z -->
