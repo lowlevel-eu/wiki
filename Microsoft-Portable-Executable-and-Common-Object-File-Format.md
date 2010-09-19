@@ -34,13 +34,13 @@ Durch die an Offset 0x3c im EXE-Header angegebene Offsetadresse ist der PE/COFF-
 Hier ist der Common Object File Format Header:
 
 | Offset | Größe | Beschreibung |
-| -------- | --------- | ------------------------------------------------------------------------------------------------ |
+| -------- | --------- | --------------------------------------------------------------------------------------------- |
 | 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
 | 0x02 | 2 Bytes | Die Anzahl der Sektoren |
 | 0x04 | 4 Bytes | Die ersten 32 Bits der Sekundenanzahl vom 1. Januar 1970 00:00 bis zur Erstellung der Datei |
 | 0x08 | 4 Bytes | In der Objektdatei der Offset zur Symboltabelle. Sollte in der Executable 0 sein. |
 | 0x0B | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle |
-| 0x0F | 2 Bytes | Größe des optionalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
+| 0x0F | 2 Bytes | Größe des "optionalen" Headers in der Executable. Sollte in einer Objektdatei 0 sein. |
 | 0x12 | 2 Bytes | Flags für Eigenschaften der Datei |
 
 #### Plattformtypen für den COFF-Header
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 8282; parent 8281; 2010-09-19T15:17:47Z -->
+<!-- MediaWiki page 1644; revision 8284; parent 8282; 2010-09-19T15:20:03Z -->
