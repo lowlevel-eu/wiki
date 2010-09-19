@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ältere Versionen auch andere |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Unbekannt, da nicht Open-Source (vermutlich [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C |
 | API: | WinAPI |
 | Binärformat: | [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
@@ -17,20 +17,9 @@
 
 [www.microsoft.com](http://www.microsoft.com/windows)
 
+Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf einfache Bedienung ausgelegt.
+
   
-Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer sehr großen Anzahl von Privat-PCs zum Einsatz kommt. Es ist auf Bedienerfreundlichkeit ausgelegt. Als freie Alternative zu Windows gibt es [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS").
-
-## OS-Dev unter Windows
-
-### Pro
-
-Für Leute, die noch nie mit Linux gearbeitet haben, ist der Einstieg sicher etwas schwerer, vor allem, wenn man gleich mit OS-Programmierung anfängt. Wer gewohnt ist, mit Windows zu arbeiten, der wird sich nicht bemühen, [Bash](https://github.com/lowlevel-eu/wiki/wiki/Shell#bash "Bash") oder Sonstiges zu lernen, wenn er mit Batchdateien vertraut ist. So wird es Windows-Leuten wohl einfacher fallen, ihr eigenes Betriebssystem zu entwickeln. Außerdem existieren die Programme, die benötigt werden (Compiler, ...) mittlerweile auch schon für Windows und müssen nur mehr heruntergeladen werden (Binutils, Crosscompiler, MingGW, Cygwin, ...).
-
-### Contra
-
-Das wohl größte Argument gegen Windows als Entwicklerplattform für Betriebssysteme ist wohl, dass viele Programme erst heruntergeladen werden müssen, damit man mit dem Programmieren anfangen kann (gcc, make, ...). Außerdem fehlen Windows noch ein paar Kommandozeilenprogramme, welche die OS-Programmierung erleichtern (dd, ...). Sicherlich ist auch der Funktionsumfang von Batchdateien eher gering, was aber in diesem Einsatzgebiet wohl eher nicht so wichtig ist.
-
-Es gab über dieses Thema eine Diskussion, siehe [Diskussion:OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1654/index.html "Diskussion:OS-Dev für Einsteiger").
 
 ## Design
 
@@ -58,6 +47,6 @@ Bei der API wird unterschieden zwischen der „nativen NT-API“, die teilweise 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6968/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8305/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 6968; parent 5299; 2010-01-23T22:14:25Z -->
+<!-- MediaWiki page 1558; revision 8305; parent 6968; 2010-09-19T16:01:22Z -->
