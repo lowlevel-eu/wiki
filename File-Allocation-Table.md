@@ -152,6 +152,24 @@ Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit u
 
 VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"). Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
 
+## Dateikonventionen
+
+Dateinamen dürfen maximal 255 Zeichen lang sein (FAT12 unterstützt nur 12 Zeichen (acht im Namen plus maximal drei für die Erweiterung plus dem "." für die Trennung von Namen und Erweiterung). Des weiteren sind folgende Zeichen nicht erlaubt:
+
+- \<
+- \>
+-  ?
+- "
+-  :
+- \|
+- \\
+- /
+- \*
+
+Unter Windows ist außerdem zu beachten, dass keine Dateinamen mit einem Leerzeichen am Ende erstellt werden können.
+
+  
+
 ## Siehe auch
 
 - FAT12
@@ -163,6 +181,6 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8069; parent 7956; 2010-08-15T12:57:16Z -->
+<!-- MediaWiki page 1643; revision 8306; parent 8069; 2010-09-19T16:12:16Z -->
