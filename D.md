@@ -235,7 +235,7 @@ gelinkt wird's so:
 
 ## D-Compiler
 
-- [gdc](http://dgcc.sourceforge.net/gdc) aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection")
+- [gdc](http://bitbucket.org/goshawk/gdc/wiki/Home) für die [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection")
 - [dmd](http://www.digitalmars.com/d) Digital-Mars-D-Compiler
 
 ## Weblinks
@@ -244,6 +244,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5982/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8275/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 5982; parent 5665; 2009-10-06T04:55:07Z -->
+<!-- MediaWiki page 1863; revision 8275; parent 5982; 2010-09-19T14:25:25Z -->
