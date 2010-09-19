@@ -23,7 +23,7 @@ Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 
 ### MS-DOS-Stub
 
-Dieser dient nur noch dazu, um unter DOS nur die Meldung auszugeben, dass dieses Programm Windows benötigt.
+Dieser dient nur noch dazu, um unter DOS nur die Meldung "This programm connot be run in DOS mode" auszugeben.
 
 ### PE Kennzeichnung
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 8276; parent 4551; 2010-09-19T14:25:26Z -->
+<!-- MediaWiki page 1644; revision 8277; parent 8276; 2010-09-19T14:27:45Z -->
