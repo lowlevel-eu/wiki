@@ -23,7 +23,7 @@ Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 
 ### MS-DOS-Stub
 
-Dieser dient nur noch dazu, um unter DOS nur die Meldung "This programm connot be run in DOS mode" auszugeben.
+Dieser liegt an offset 0x4F und Dieser dient nur noch dazu, um unter DOS nur die Meldung "This programm connot be run in DOS mode" auszugeben.
 
 ### PE Kennzeichnung
 
@@ -34,13 +34,13 @@ Durch die an Offset 0x3c im EXE-Header angegebene Offsetadresse ist der PE/COFF-
 Hier ist der Common Object File Format Header:
 
 | Offset | Größe | Beschreibung |
-| -------- | --------- | ----------------------------------------------------------------------------------------------- |
+| -------- | --------- | ------------------------------------------------------------------------------------------------ |
 | 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
 | 0x02 | 2 Bytes | Die Anzahl der Sektoren |
 | 0x04 | 4 Bytes | Die ersten 32 Bits der Sekundenanzahl vom 1. Januar 1970 00:00 bis zur Erstellung der Datei |
 | 0x08 | 4 Bytes | Der Dateioffset dieser COFF-Datei. Wenn Null, dann ist keiner vorhanden |
 | 0x0B | 4 Bytes | Die Anzahl der Eintragungen von der Symboltabelle |
-| 0x0F | 2 Bytes | Größe des optimalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
+| 0x0F | 2 Bytes | Größe des optionalen Headers der ausführbaren Datei **Achtung, ist nicht für die Objektdatei** |
 | 0x12 | 2 Bytes | Flags für Eigenschaften der Datei |
 
 #### Plattformtypen für den COFF-Header
@@ -92,7 +92,7 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 
   
 
-#### Informationen zum optimalen Header
+#### Informationen zum optionalen Header
 
 Jede ausführbare Datei hat ein optimalen Header. Hier wird er (für Windows) benötigt. In Objektdateien wird dieser normalerweise nicht verwendet, er erhöht lediglich deren Größe. Der optimale Header wird in drei Abschnitte unterteilt (Zu PE32 und PE32+ siehe unten):
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8279/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 8277; parent 8276; 2010-09-19T14:27:45Z -->
+<!-- MediaWiki page 1644; revision 8279; parent 8277; 2010-09-19T14:58:51Z -->
