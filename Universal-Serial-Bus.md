@@ -1123,6 +1123,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 7829; parent 7828; 2010-07-13T11:23:37Z -->
+<!-- MediaWiki page 1690; revision 8317; parent 7829; 2010-09-19T21:18:36Z -->
