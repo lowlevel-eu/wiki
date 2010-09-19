@@ -23,7 +23,7 @@ Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 
 ### MS-DOS-Stub
 
-Dieser liegt an offset 0x4F und Dieser dient nur noch dazu, um unter DOS nur die Meldung "This programm connot be run in DOS mode" auszugeben.
+Dieser liegt an offset 0x4F und Dieser dient nur noch dazu, um unter DOS nur die Meldung "This programm cannot be run in DOS mode" auszugeben.
 
 ### PE Kennzeichnung
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8287/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 8284; parent 8282; 2010-09-19T15:20:03Z -->
+<!-- MediaWiki page 1644; revision 8287; parent 8284; 2010-09-19T15:23:40Z -->
