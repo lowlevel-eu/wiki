@@ -27,6 +27,6 @@ Cosmos steht für **C# Open Source Managed Operating System** und ist ein in C# 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8294/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2294/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2294/index.html)
 
-<!-- MediaWiki page 2294; revision 8294; parent 0; 2010-09-19T15:31:24Z -->
+<!-- MediaWiki page 2294; revision 8301; parent 8294; 2010-09-19T15:49:14Z -->
