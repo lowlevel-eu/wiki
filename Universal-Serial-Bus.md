@@ -1115,7 +1115,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 - [Offizielle USB-Spezifikationen](http://www.usb.org/developers/docs/)
 - [USB in a nutshell](http://www.beyondlogic.org/usbnutshell/usb1.htm)
-- [USB-Artikel in der osdev.org-Wiki](http://wiki.osdev.org/Universal_Serial_Bus)
 
 ## Literatur
 
@@ -1123,6 +1122,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 8317; parent 7829; 2010-09-19T21:18:36Z -->
+<!-- MediaWiki page 1690; revision 8318; parent 8317; 2010-09-19T21:19:05Z -->
