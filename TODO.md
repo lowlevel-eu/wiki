@@ -98,6 +98,7 @@ Zu Programmen die configure/make verwenden und sich an POSIX halten könnte man 
 - RaWrite: evtl. mit Commands usw.
 - Variable Sektor-Größen bei Massenspeichern (Block-Devices). Dafür dürfte sich wohl kein eigener Artikel lohnen aber es sollte in einigen Artikeln berücksichtigt werden, z.B. könnten sich einige Dateisystem-Strukturen ändern wenn sie auf größere Sektoren "skaliert" werden (zumindest bei den komplexeren Dateisystemen, also nicht bei FAT). Auch müsste ein OS mit verschiedenen Sektorgrößen von verschiedenen Massenspeichern gleichzeitig umgehen können. "Variabel" deshalb weil ich nicht glaube, das wenn die HDD-Hersteller erst mal damit angefangen haben an der Sektorgröße zu drehen, das dann bei 4k wieder Schluss ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:40, 16. Apr. 2010 (CEST)
 - Das neue/moderne [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table) könnte mal hier im Wiki berücksichtigt werden. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:40, 16. Apr. 2010 (CEST)
+  - Da GUID nur eine Untermenge von EFI ist, das am besten auch. --[Dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 15:49, 19. Sep. 2010 (CEST)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -109,6 +110,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8198; parent 8112; 2010-09-09T10:02:36Z -->
+<!-- MediaWiki page 1518; revision 8267; parent 8198; 2010-09-19T13:49:01Z -->
