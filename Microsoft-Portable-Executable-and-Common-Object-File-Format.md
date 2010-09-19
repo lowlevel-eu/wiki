@@ -27,7 +27,7 @@ Dieser liegt an offset 0x4F und Dieser dient nur noch dazu, um unter DOS nur die
 
 ### PE Kennzeichnung
 
-Durch die an Offset 0x3c im EXE-Header angegebene Offsetadresse ist der PE/COFF-Header zu finden, welcher mit der Signature "PE\0\0" (4 Bytes, davon zwei Nullbytes am Ende) eingeleitet wird. Direkt im Anschluss folgt dann der COFF-Header. Das ist wiederum ein Kennzeichen von Windows und sollte verändert (nicht weggelassen) werden.
+**ToDo**
 
 ### COFF Dateiheader
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8304/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 8290; parent 8287; 2010-09-19T15:25:34Z -->
+<!-- MediaWiki page 1644; revision 8304; parent 8290; 2010-09-19T15:55:02Z -->
