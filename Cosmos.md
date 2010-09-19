@@ -1,0 +1,32 @@
+# Cosmos
+
+| Cosmos |  |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+|  |  |
+| Entwickler: | [Entwickler](http://cosmos.codeplex.com/team/view) |
+| Akt. Version: | Milestone 5 |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | New BSD License |
+| OS-Eigenschaften |  |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C# |
+| API: | [Microsoft .NET Micro Framework](http://www.microsoft.com/netmf/default.mspx) |
+| Binärformat: | [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Homepage |  |
+
+[Codeplex](http://cosmos.codeplex.com/)
+
+Cosmos steht für **C# Open Source Managed Operating System** und ist ein in C# mithilfe des Microsoft .NET Micro Framework geschriebenes Betriebssystem. Dabei ist es sowohl ein eigenständiges Betriebssystem als auch ein Framework, auf welchem andere Betriebssysteme aufgesetzt werden können.
+
+  
+
+## Weblinks
+
+- [Homepage](http://cosmos.codeplex.com/)
+
+---
+
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8294/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2294/index.html)
+
+<!-- MediaWiki page 2294; revision 8294; parent 0; 2010-09-19T15:31:24Z -->
