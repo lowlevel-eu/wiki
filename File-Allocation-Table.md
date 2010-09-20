@@ -156,7 +156,8 @@ VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://g
 
 Dateinamen bestehen in FAT aus acht Zeichen plus drei Zeichen Dateierweiterung. Die folgenden Zeichen sind reserviert und in Dateinamen nicht erlaubt:
 
-    < > ? " : | \ / *
+    < > ? " : | \ / *   sind in kurzen und langen Dateinamen verboten
+    + , . ; = [ ]       sind nur in kurzen Dateinamen verboten
 
 Leerzeichen am Ende von Name oder Erweiterung werden ignoriert, denn sie werden in Verzeichniseinträgen als Padding für kürzere Dateinamen benutzt.
 
@@ -173,6 +174,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8322; parent 8306; 2010-09-20T07:53:18Z -->
+<!-- MediaWiki page 1643; revision 8323; parent 8322; 2010-09-20T07:57:03Z -->
