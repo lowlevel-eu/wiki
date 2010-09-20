@@ -1,8 +1,16 @@
 # Serielle Schnittstelle
 
-Die **serielle Schnittstelle** (Abkürzung: **COM** oder **RS232**) scheint veraltet ist aber sehr nützlich um z.B. den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") im frühen Entwicklungstand zu [debuggen](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"), denn der Bildschirm kann nur begrenzt Text anzeigen. Außerdem sollte bei keinem Betriebssystem ein Treiber für die serielle Schnittstelle fehlen, da sie heute auch noch oft Anwendung findet und leicht zu programmieren ist.
+Die **serielle Schnittstelle** (Abkürzung: **COM** von *Communication* oder **RS232**, heute **EIA232** genannt) ist eine 1980 eingeführte Schnittstelle für die Übertragung von Daten, meist von Computer zu Computer.
 
-## Basis-I/O-Ports finden
+  
+
+## Funktionsweise
+
+Daten werden bei der seriellen Schnittstellen als Wörter übertragen, welche je nach Konfiguration fünf bis neun Bits entsprechen. Codiert werden diese Wörter nach dem ASCII-Zeichensatz. Der wichtigste Unterschied zur parallelen Schnittstelle ist, dass die Bits nacheinander übertragen werden.
+
+## Aufbau
+
+### Basis-I/O-Ports
 
 Normalerweise haben die COM-Ports folgende Basis-I/O-Ports:
 
@@ -15,7 +23,7 @@ Normalerweise haben die COM-Ports folgende Basis-I/O-Ports:
 
 Man sollte die Basis-I/O-Ports aber aus der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area") auslesen.
 
-## Offsets der einzelnen Register
+### Offsets der einzelnen Register
 
 Da ein COM-Port mehrere Register benutzt, braucht er auch mehrere I/O-Ports. Die oben angegebenen I/O-Ports sind nur die Basis-I/O-Ports. Man muss also nachher noch das Offset der einzelnen Register addieren. Folgende Register verbergen sich hinter den Offsets:
 
@@ -117,7 +125,7 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
       outb(base+MCR,0x0B);
     }
 
-    // Ob man schreiben kann
+    // Prüft, ob man bereits schreiben kann
     uint8_t is_transmit_empty(u16 base) {
       return inb(base+LSR)&0x20;
     }
@@ -128,7 +136,7 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
       outb(base,chr);
     }
 
-    // Ob man lesen kann
+    // Prüft, ob man bereits lesen kann
     uint8_t serial_received(uint16_t base) {
       return inb(base+LSR)&1;
     }
@@ -143,10 +151,11 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ## Weblinks
 
-- <http://www.nondot.org/sabre/os/files/Communication/CP_serial.pdf>
+- [Tutorial zur seriellen Schnittstelle](http://www.nondot.org/sabre/os/files/Communication/CP_serial.pdf)
+- [Tutorial zum RS232-Standard](http://www.camiresearch.com/Data_Com_Basics/RS232_standard.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6584/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 6584; parent 4850; 2009-12-20T16:59:12Z -->
+<!-- MediaWiki page 1561; revision 8319; parent 6584; 2010-09-20T05:49:34Z -->
