@@ -1012,15 +1012,12 @@ Diese Zeile würde an die Stelle 0;50 auf den Bildschirm eine grüne 4 auf blaue
 
 ## Schlusswort
 
-Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den Code extra stark kommentiert habe. Am Anfang des Dokuments ist der Downloadlink dessen, viel Spaß damit und viel Glück bei eurem OS xD. Wer sich noch tiefer in das Thema einlesen will, dem empfehle ich folgendes [Dokument](http://maxinator.freehoster.ch/Programming/programming/ps2mouse/tp-intf2-4.PDF) über das Synaptic-Touchpad, in dem auch das PS/2-Protokoll gut beschrieben ist. Das ganze Programm kann auch gleich auf meinem [OS](http://maxinator.freehoster.ch/layout.php?menu=programming_downloads&site=Programming/programme/kaos.html) getestet werden, indem ihr in die Shell als Befehl einfach "ps2mouse" oder "run ps2mouse" eingebt.
-
-Soviel von mir, für Fragen per ICQ(412207644) stehe ich gerne zur Verfügung.  
-Das Original dieses Dokuments ist auch [hier](http://maxinator.freehoster.ch/layout.php?menu=programming_tutorials&site=Programming/programming/ps2mouse/00600064mouse.html) zu finde und stammt von mir.
+Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den Code extra stark kommentiert habe. Wer sich noch tiefer in das Thema einlesen will, dem empfehle ich folgendes [Dokument](http://maxinator.freehoster.ch/Programming/programming/ps2mouse/tp-intf2-4.PDF) über das Synaptic-Touchpad, in dem auch das PS/2-Protokoll gut beschrieben ist.
 
 --[Maxinator](https://lowlevel-eu.github.io/wiki/pages/1839/index.html "Benutzer:Maxinator") 22:03, 11. Nov 2007 (CET)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 8320; parent 8030; 2010-09-20T06:27:20Z -->
+<!-- MediaWiki page 1559; revision 8321; parent 8320; 2010-09-20T06:28:52Z -->
