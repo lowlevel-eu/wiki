@@ -19,6 +19,8 @@ Die Arbeiten am Subversionprojekt wurden 2000 begonnen. Das Ziel war es, Problem
 
 Subversion lässt sich bei jeder größeren Distribution aus den Paketquellen installieren. Meist heißt das Paket *subversion*.
 
+Es gibt jedoch, wie unter Windows, einen grafischen SVN Clienten namens kdesvn, der sehr komfortabel ist.
+
 ### Windows
 
 Unter Windows ist die Arbeit mit der Shell oft weniger bequem als unter Linux, darum empfiehlt sich die Installation von TortoiseSVN, welches sich sehr gut in den Windows Explorer integiert.
@@ -77,6 +79,6 @@ Hier eine Liste von Anbietern, bei denen man sein Subversion-Archiv kostenlos ho
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2036/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8324/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2036/index.html)
 
-<!-- MediaWiki page 2036; revision 7534; parent 6247; 2010-04-09T17:05:59Z -->
+<!-- MediaWiki page 2036; revision 8324; parent 7534; 2010-09-20T18:29:10Z -->
