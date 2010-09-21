@@ -8,7 +8,7 @@ Die oben genannten Funktionen werden sowohl im Userspace – als Teil der Stan
 
 ## Freispeicherliste
 
-Die einfachste Möglichkeit malloc() und free() zu implementieren ist eine (meist einfach verkettete) Liste aus freien Speicherbereichen zu verwalten. Während malloc() wird dann diese Liste durchlaufen, um nach einem Speicherstück ausreichender Größe zu suchen. Diese Suche kann nach mehreren Strategien erfolgen:
+Die einfachste Möglichkeit malloc() und free() zu implementieren ist eine (meist einfach verkettete) Liste **nur** aus **freien** Speicherbereichen zu verwalten. Während malloc() wird dann diese Liste durchlaufen, um nach einem Speicherstück ausreichender Größe zu suchen. Diese Suche kann nach mehreren Strategien erfolgen:
 
 - Exact fit: Ein Speicherstück mit exakt der geforderten Größe wird gesucht
 - First fit: Das erstbeste, ausreichend große Speicherstück wird gesucht
@@ -18,9 +18,12 @@ Falls eines gefunden wird, wird dieses aus der Liste entfernt und ein Zeiger auf
 
 Bei einem free() wird der freizugebende Speicherbereich der Liste der freien Speicherbereiche einfach vorne hinzugefügt.
 
-Damit man für die Liste keinen eigenen Speicher allozieren muss, werden beim malloc bewusst einige Bytes mehr Speicher reserviert (**vor** dem anschließend benutzten Speicherbereich (genannt Header)), um die Größe und den next-Zeiger (und je nach Bedarf weitere Werte, wie z. B. Flags oder einen previous-Pointer) zu speichern.
+Damit man für die Liste keinen eigenen Speicher allozieren muss, werden beim malloc bewusst einige Bytes mehr Speicher reserviert (**vor** dem anschließend benutzten Speicherbereich (genannt Header)), um die Größe (und je nach Bedarf weitere Werte, wie z. B. Flags oder einen previous-Pointer) zu speichern. Für den next-Zeiger kann man den eigentlich Speicherbereich verwenden, da der next-Zeiger nur dann gültig sein muss, wenn der Speicherbereich unbenutzt ist.
 
 *Beispielimplementierung:* [Public-Domain C Library](https://svn.lcube.de/dev34/pdclib/trunk/functions/stdlib/malloc.c)
+
+  
+Alternativ kann man auch eine Liste aus **freiem und belegtem** Speicher machen. Dabei reicht es dann aus für jeden Speicherbereich zu speichern, ob er frei oder belegt ist und wie groß er ist. Der next-Zeiger ergibt sich dann implizit aus der Adresse dieses Speicherblocks + Größe dieses Speicherblocks. In dieser Variante ist das malloc wahrscheinlich langsamer, da zusätzlich zu allen freien Speicherbereichen auch die belegten durchlaufen werden (im Worstcase), aber man kann ein Verschmelzen von zwei zusammenhängenden, freien Speicherbereichen sehr einfach durchführen (falls man zusätzlich noch die Größe des vorhergehenden Speicherbereichs oder einen Zeiger auf selbigen speichert).
 
 ## Buddy-Speicherverwaltung
 
@@ -39,6 +42,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8258/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8334/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8258; parent 8211; 2010-09-18T13:55:29Z -->
+<!-- MediaWiki page 2229; revision 8334; parent 8258; 2010-09-21T03:15:16Z -->
