@@ -4,7 +4,7 @@ Mercurial ist ein Version Control System, das wie die meisten in erster Linie ü
 
 ## Eigenschaften
 
-Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d. h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen Erheblich Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
+Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d. h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen erheblich Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
 
 ### Besonderheiten
 
@@ -12,7 +12,7 @@ Eine Besonderheit an Mercurial ist, dass alle Befehle sich auf das Wurzelverzeic
 
 ## Konfiguration
 
-Mercurial sucht Konfigurationsdateien unter anderem in \$HOME/.hgrc und \$(hg root)/.hg/hgrc. Die folgenden Konfigurationsdatei lässt unter anderem die Pager Extension laden, so dass die Ausgabe von Ausgewählte Befehlen durch den angegeben Pager geleitet werden, und schaltet die diff Ausgabe auf das erweiterte git Format um, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
+Mercurial sucht Konfigurationsdateien unter anderem in *\$HOME/.hgrc* und *\$(hg root)/.hg/hgrc*. Die folgenden Konfigurationsdatei lässt unter anderem die Pager Extension laden, so dass die Ausgabe von Ausgewählte Befehlen durch den angegeben Pager geleitet werden, und schaltet die diff Ausgabe auf das erweiterte git Format um, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
 
     [ui]
       username = Max Mustermann <max.mustermann@example.com>
@@ -117,12 +117,12 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ## Weblinks
 
-- [Mercurial Homepage](http://mercurial.selenic.com/) *(english)*
-- [Deutschsprachiges Tutorial auf der offiziellen Mercurial Website](http://mercurial.selenic.com/wiki/GermanTutorial)
-- [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/) *(english)*
+- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Mercurial Homepage](http://mercurial.selenic.com/)
+- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> Deutschsprachiges Tutorial auf der offiziellen Mercurial Website](http://mercurial.selenic.com/wiki/GermanTutorial)
+- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/) *(english)*
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 8340; parent 7756; 2010-09-21T14:58:40Z -->
+<!-- MediaWiki page 1891; revision 8341; parent 8340; 2010-09-21T15:13:58Z -->
