@@ -22,7 +22,6 @@ Damit man für die Liste keinen eigenen Speicher allozieren muss, werden beim ma
 
 *Beispielimplementierung:* [Public-Domain C Library](https://svn.lcube.de/dev34/pdclib/trunk/functions/stdlib/malloc.c)
 
-  
 Alternativ kann man auch eine Liste aus **freiem und belegtem** Speicher machen. Dabei reicht es dann aus für jeden Speicherbereich zu speichern, ob er frei oder belegt ist und wie groß er ist. Der next-Zeiger ergibt sich dann implizit aus der Adresse dieses Speicherblocks + Größe dieses Speicherblocks. In dieser Variante ist das malloc wahrscheinlich langsamer, da zusätzlich zu allen freien Speicherbereichen auch die belegten durchlaufen werden (im Worstcase), aber man kann ein Verschmelzen von zwei zusammenhängenden, freien Speicherbereichen sehr einfach durchführen (falls man zusätzlich noch die Größe des vorhergehenden Speicherbereichs oder einen Zeiger auf selbigen speichert).
 
 ## Buddy-Speicherverwaltung
@@ -42,6 +41,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8334/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8335/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8334; parent 8258; 2010-09-21T03:15:16Z -->
+<!-- MediaWiki page 2229; revision 8335; parent 8334; 2010-09-21T03:16:20Z -->
