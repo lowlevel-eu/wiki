@@ -45,11 +45,11 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ## Weblinks
 
-- [Draft des C Standards](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1124.pdf)
 - [C-Tutorial](http://www.c-howto.de/)
+- [Draft des nächsten C Standards (C1x)](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1494.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8327/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 8326; parent 7545; 2010-09-21T01:58:41Z -->
+<!-- MediaWiki page 1526; revision 8327; parent 8326; 2010-09-21T02:03:46Z -->
