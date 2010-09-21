@@ -4,7 +4,7 @@ Mercurial ist ein Version Control System, das wie die meisten in erster Linie ü
 
 ## Eigenschaften
 
-Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d. h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen erheblich Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
+Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d. h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen erheblichen Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
 
 ### Besonderheiten
 
@@ -123,6 +123,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 8342; parent 8341; 2010-09-21T15:17:49Z -->
+<!-- MediaWiki page 1891; revision 8344; parent 8342; 2010-09-21T17:29:43Z -->
