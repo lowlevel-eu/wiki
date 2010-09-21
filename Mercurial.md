@@ -12,7 +12,7 @@ Eine Besonderheit an Mercurial ist, dass alle Befehle sich auf das Wurzelverzeic
 
 ## Konfiguration
 
-Mercurial sucht Konfigurationsdateien unter anderem in *\$HOME/.hgrc* und *\$(hg root)/.hg/hgrc*. Die folgenden Konfigurationsdatei lässt unter anderem die Pager Extension laden, so dass die Ausgabe von Ausgewählte Befehlen durch den angegeben Pager geleitet werden, und schaltet die diff Ausgabe auf das erweiterte git Format um, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
+Mercurial sucht Konfigurationsdateien unter anderem in *\$HOME/.hgrc* und *\$(hg root)/.hg/hgrc*. Die folgenden Konfigurationsdatei lässt unter anderem die Pager Extension laden, so dass die Ausgabe von Ausgewählte Befehlen durch den angegeben Pager geleitet wird. Zudem wird die *diff*-Ausgabe auf das erweiterte git-Format umgestellt, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
 
     [ui]
       username = Max Mustermann <max.mustermann@example.com>
@@ -123,6 +123,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 8341; parent 8340; 2010-09-21T15:13:58Z -->
+<!-- MediaWiki page 1891; revision 8342; parent 8341; 2010-09-21T15:17:49Z -->
