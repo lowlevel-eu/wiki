@@ -101,13 +101,12 @@ Zu Programmen die configure/make verwenden und sich an POSIX halten könnte man 
 
 ## Diskussionen, die sich noch nicht erledigt haben
 
-- Diskussion:Ausgabe 2
-- weitere: siehe Liste der Diskussionsseiten
+- siehe Liste der Diskussionsseiten
 
 Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die TODO-Vorlage verwenden \| [Stubs](https://lowlevel-eu.github.io/wiki/pages/1618/index.html "Kategorie:Stub")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8307/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8339/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8307; parent 8302; 2010-09-19T16:14:32Z -->
+<!-- MediaWiki page 1518; revision 8339; parent 8307; 2010-09-21T13:01:52Z -->
