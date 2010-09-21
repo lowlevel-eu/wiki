@@ -5,7 +5,7 @@
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg" width="222" height="314" alt="Katze-396196.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222), Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
@@ -52,6 +52,6 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8329/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 8329; parent 7383; 2010-09-21T02:31:38Z -->
+<!-- MediaWiki page 2084; revision 8330; parent 8329; 2010-09-21T02:32:47Z -->
