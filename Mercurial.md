@@ -1,14 +1,33 @@
 # Mercurial
 
-Mercurial ist ein in Python entwickeltes Version Control System, das wie die meisten in erster Linie über die Shell gesteuert wird. Wobei alle Kommandos mit hg, dem Elementsymbol für Quecksilber (engl. Mercury), beginnen. Es gibt aber auch eine Explorererweiterung (TortoiseHg) mit Hilfe derer Mercurial über das Kontextmenü gesteuert werden kann und IDEs, wie zum Beispiel NetBeans und KDevelop, die Mercurial unterstützen.
+Mercurial ist ein Version Control System, das wie die meisten in erster Linie über die Shell gesteuert wird. Es ist nahezu vollständig in Python geschrieben, so dass quasi problemlos auf allen Plattformen mit Python Umgebung einsatzfähig ist. Dar Name des Kommandozeilentools lautet *hg* (chem. Elementsymbol für Quecksilber; engl. Mercury). Es gibt aber auch eine Explorererweiterung (TortoiseHg) mit deren Hilfe Mercurial auch über das Kontextmenü gesteuert werden kann. Außerdem existieren eine Reihe IDEs, wie zum Beispiel NetBeans, Eclipse und KDevelop, die Mercurial von sich aus unterstützen oder für die Plugins existieren, die diese Unterstützung nachrüsten.
 
 ## Eigenschaften
 
-Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d.h. es benötigt keinen zentralen Server, um die Repositories vieler Entwickler miteinander zu synchronisieren.
+Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d. h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen Erheblich Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
 
 ### Besonderheiten
 
 Eine Besonderheit an Mercurial ist, dass alle Befehle sich auf das Wurzelverzeichnis des Repositories beziehen, wenn nicht anders angegeben, und nicht wie bei den meisten anderen Systemen nur auf das aktuelle Verzeichnis.
+
+## Konfiguration
+
+Mercurial sucht Konfigurationsdateien unter anderem in \$HOME/.hgrc und \$(hg root)/.hg/hgrc. Die folgenden Konfigurationsdatei lässt unter anderem die Pager Extension laden, so dass die Ausgabe von Ausgewählte Befehlen durch den angegeben Pager geleitet werden, und schaltet die diff Ausgabe auf das erweiterte git Format um, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
+
+    [ui]
+      username = Max Mustermann <max.mustermann@example.com>
+    [diff]
+      git=true
+    [extensions]
+      color=
+      pager=
+      progress=
+    [pager]
+      pager=LESS='FSRX' less
+      ignore=version, update
+    #  attend=log, diff, annotate
+
+Für weitere Konfigurationsmöglichkeiten siehe: `$ `[`man hgrc`](http://www.selenic.com/mercurial/hgrc.5.html)
 
 ## hg - Shell Kommandos
 
@@ -104,6 +123,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 7756; parent 6342; 2010-06-13T09:42:03Z -->
+<!-- MediaWiki page 1891; revision 8340; parent 7756; 2010-09-21T14:58:40Z -->
