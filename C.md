@@ -1,13 +1,13 @@
 # C
 
 | Allgemeines |  |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | C |
 | Inlineassembler: | Ja |
-| Compiler: | [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc"), icc, ... |
+| Compiler: | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), icc, ... |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") |
+| Beispielkernel in der Sprache: | [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger") |
 | Homepage |  |
 
 [The C Standards Committee](http://www.open-std.org/jtc1/sc22/wg14/)
@@ -32,6 +32,28 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 - **Externe Assemblerdatei**: Der Assemblercode wird in eine eigene Datei ausgelagert und vom C-Code als eigenständige Funktion aufgerufen. Die Übergabe von Parametern und des Rückgabewerts wird im Artikel [Aufrufkonventionen](https://github.com/lowlevel-eu/wiki/wiki/Aufrufkonventionen "Aufrufkonventionen") beschrieben.
 
+### *volatile*
+
+*volatile* ist ein *type-qualifier* in C. Falls ein Typ T *volatile*-qualifiziert ist, dann bedeutet das, dass sich der Wert einer Variable vom Typ T durch Instruktionen, die außerhalb der momentanen Befehlssequenz stehen (z.B. in einem [Interrupthandler](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")), verändern kann. Dazu folgender Beispielcode: \<c\> // 1 falls next_char ein gültiges Zeichen enthält, 0 sonst int char_valid;
+
+// Falls gültig, das zuletzt von der Tastatur gelesene Zeichen, char next_char;
+
+// Wartet auf einen Tastendruck char get_char() {
+
+     // Auf den nächsten Tastendruck warten
+     while (char_valid == 0);
+
+     char_valid = 0;
+     return next_char;
+
+} \</c\> Die Variable *char_valid* und *next_char* sollen außerdem in einem Interrupthandler entsprechend gesetzt werden. Bei dem obigen Code kann es nun sein, dass der Compiler "optimiert" hat, indem die while-Schleife wie folgt abgeändert wird: \<c\> if (char_valid == 0)
+
+     while (1); // Endlosschleife
+
+\</c\> Dies ist eine korrekte Optimierung da der Compiler bei *char_valid* - da es nicht *volatile*-qualifiziert ist - annehmen darf, dass es nicht durch den Interrupthandler (oder irgendwelchen Code der nicht in get_char steht) verändert werden kann. Insofern reicht es aus einmal *char_valid* zu lesen. Mit dieser "Optimierung" liefert der Code natürlich nichtmehr das gewünschte Resultat. Um das zu korrigieren muss *char_valid* und *next_char* *volatile*-qualifiziert werden.
+
+Aus analogem Grund sollte auch auf [Memory-mapped I/O](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer#memory-mapped-io "Hardware Abstraction Layer")-Bereich nur über Zeiger auf *volatile*-qualifizierte Datentypen zugegriffen werden.
+
 ## Bekannte C-Compiler
 
 - gcc aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection")
@@ -47,9 +69,10 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 - [C-Tutorial](http://www.c-howto.de/)
 - [Draft des nächsten C Standards (C1x)](http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1494.pdf)
+- [Single UNIX Specification](http://www.unix.org/single_unix_specification/) und [POSIX](http://www.opengroup.org/onlinepubs/9699919799/): auf dem C-Standard aufbauende Spezifikationen für unixoide Betriebssysteme
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8327/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8328/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 8327; parent 8326; 2010-09-21T02:03:46Z -->
+<!-- MediaWiki page 1526; revision 8328; parent 8327; 2010-09-21T02:28:10Z -->
