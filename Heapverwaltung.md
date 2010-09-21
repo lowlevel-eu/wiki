@@ -8,7 +8,7 @@ Die oben genannten Funktionen werden sowohl im Userspace – als Teil der Stan
 
 ## Freispeicherliste
 
-Die einfachste Möglichkeit malloc() und free() zu implementieren ist eine (meist einfach verkettete) Liste **nur** aus **freien** Speicherbereichen zu verwalten. Während malloc() wird dann diese Liste durchlaufen, um nach einem Speicherstück ausreichender Größe zu suchen. Diese Suche kann nach mehreren Strategien erfolgen:
+Die einfachste Möglichkeit malloc() und free() zu implementieren ist eine (meist einfach verkettete) Liste **nur** aus **freien** Speicherbereichen zu verwalten. In malloc() wird dann diese Liste durchlaufen, um nach einem Speicherstück ausreichender Größe zu suchen. Diese Suche kann nach mehreren Strategien erfolgen:
 
 - Exact fit: Ein Speicherstück mit exakt der geforderten Größe wird gesucht
 - First fit: Das erstbeste, ausreichend große Speicherstück wird gesucht
@@ -41,6 +41,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8335/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8335; parent 8334; 2010-09-21T03:16:20Z -->
+<!-- MediaWiki page 2229; revision 8343; parent 8335; 2010-09-21T17:26:27Z -->
