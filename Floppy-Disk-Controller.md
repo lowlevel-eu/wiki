@@ -818,25 +818,24 @@ Zum Erkennen von den an den Computer angeschlossenen Diskettenlaufwerken gibt es
 
 Bevor man Daten bzw. Befehle ins Datenregister schreiben darf, muss man im MSR testen, ob das DIO-Bit gelöscht und das MRQ-Bit gesetzt ist. Erst dann ist das Datenregister leer und bereit Daten zu empfangen. \<c\>
 
-1.  define NO_ERROR = 0;
-2.  define ERROR_TIMEOUT = 1;
+1.  define NO_ERROR 0;
+2.  define ERROR_TIMEOUT 1;
 
-BYTE error=NO_ERROR;
+uint8_t error = NO_ERROR;
 
-VOID send_cmd(BYTE cmd) {
+void send_cmd(uint8_t cmd) {
 
      send_data(cmd);
 
 }
 
-VOID send_data(BYTE data) {
+void send_data(uint8_t data) {
 
-     BYTE timeout;
-     for (timeout=0; timeout<200; timeout++)
+     for (uint8_t timeout = 0; timeout < 200; timeout++)
      {
-       if ( (inb(MSR) & (MSR_MASK_DATAREG|MSR_MASK_DIO2CPU)) == MSR_MASK_DATAREG)
+       if ( (inb(MSR) & (MSR_MASK_DATAREG | MSR_MASK_DIO2CPU)) == MSR_MASK_DATAREG)
        {
-         outb(CMD,cmd);
+         outb(CMD, cmd);
          error = NO_ERROR;
          return;
        }
@@ -851,12 +850,11 @@ VOID send_data(BYTE data) {
 
 Ähnlich wie beim Senden von Daten müssen beim Lesen das MRQ-Bit und DIO-Bit gesetzt sein.
 
-\<c\> BYTE read_data() {
+\<c\> uint8_t read_data() {
 
-     BYTE timeout;
-     for(timeout=0; timeout<200; timeout++)
+     for(uint8_t timeout = 0; timeout < 200; timeout++)
      {
-       if( (inb(MSR) & (MSR_MASK_DATAREG|MSR_MASK_DIO2CPU)) == (MSR_MASK_DATAREG|MSR_MASK_DIO2CPU))
+       if( (inb(MSR) & (MSR_MASK_DATAREG | MSR_MASK_DIO2CPU)) == (MSR_MASK_DATAREG | MSR_MASK_DIO2CPU))
        {
          error = NO_ERROR;
          return inb(DATA);
@@ -870,43 +868,41 @@ VOID send_data(BYTE data) {
 
 ### Motor starten/anhalten
 
-\<c\> VOID start_motor(BYTE n) {
+\<c\> void start_motor(uint8_t n) {
 
      if (!drive_states[n].motor_on)
      {
-       outb(DOR,n | (0x01<<(n+4)) | DOR_MASK_NRESET | DOR_MASK_DMA);
+       outb(DOR, n | (0x01<<(n+4)) | DOR_MASK_NRESET | DOR_MASK_DMA);
      }
 
 }
 
-VOID stop_motor(BYTE n) {
+void stop_motor(uint8_t n) {
 
      if (drive_states[n].motor_on)
      {
-       outb(DOR,n | DOR_MASK_NRESET | DOR_MASK_DMA);
+       outb(DOR, n | DOR_MASK_NRESET | DOR_MASK_DMA);
      }
 
 } \</c\>
 
 ### Laufwerk kallibrieren
 
-\<c\> VOID calibrate_drive(BYTE drive) { ...TODO \</c\>
+\<c\> void calibrate_drive(uint8_t drive) { ...TODO \</c\>
 
 ### Schreib-/Lesekopf postionieren
 
-\<c\> BOOL seek_head(BYTE cyl, BYTE head, BYTE sector) { ...TODO \</c\>
+\<c\> bool seek_head(uint8_t cyl, uint8_t head, uint8_t sector) { ...TODO \</c\>
 
 ### Reset
 
-\<c\> VOID reset() {
-
-     int i;
+\<c\> void reset() {
 
      outb(DOR, 0);
      sleep(10);
      outb(DOR, DOR_MASK_NRESET | DOR_MASK_DMA);
      wait_irq();
-     for(i=0; i<4; i++)
+     for(int i = 0; i < 4; i++)
      {
        check_interrupt_status();
      }
@@ -923,18 +919,17 @@ Die folgende Funktion nutzt Code aus dem [DMA](https://github.com/lowlevel-eu/wi
 1.  define CMD_WRITE_SECTOR (0x05 \| 0x40)
 2.  define CMD_READ_SECTOR (0x06 \| 0x40)
 
-BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL write, VOID\* buffer) {
+bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sector, bool write, void\* buffer) {
 
-     int i;
      select_drive(drive);   //TODO
      start_motor(drive);    //TODO
      seek_head(drive);      //TODO
 
      dma_begin_transfer(buffer, write);
-     for (i=0; i<5; i++)
+     for (int i = 0; i<5; i++)
      {
        send_command(wrie ? CMD_WRIE_SECTOR : CMD_READ_SECTOR);
-       send_data(drive | head<<2) );
+       send_data(drive | head<<2);
        send_data(cylinder);
        send_data(head);
        send_data(sector);
@@ -953,11 +948,11 @@ BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL wri
        if ( inb(MSR) & 0xC0)
        {
          check_interrupt_status();
-         return TRUE;
+         return true;
        }
      }
      /* fünf Fehlversuche */
-     return FALSE;
+     return false;
 
 } \</c\>
 
@@ -972,6 +967,6 @@ BOOL transfer_sector(BYTE drive, BYTE cylinder, BYTE head, BYTE sector, BOOL wri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8177/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8331/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8177; parent 8176; 2010-09-06T13:44:05Z -->
+<!-- MediaWiki page 1443; revision 8331; parent 8177; 2010-09-21T02:55:02Z -->
