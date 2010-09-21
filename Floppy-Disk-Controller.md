@@ -818,8 +818,8 @@ Zum Erkennen von den an den Computer angeschlossenen Diskettenlaufwerken gibt es
 
 Bevor man Daten bzw. Befehle ins Datenregister schreiben darf, muss man im MSR testen, ob das DIO-Bit gelöscht und das MRQ-Bit gesetzt ist. Erst dann ist das Datenregister leer und bereit Daten zu empfangen. \<c\>
 
-1.  define NO_ERROR 0;
-2.  define ERROR_TIMEOUT 1;
+1.  define NO_ERROR 0
+2.  define ERROR_TIMEOUT 1
 
 uint8_t error = NO_ERROR;
 
@@ -967,6 +967,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8331/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8332/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8331; parent 8177; 2010-09-21T02:55:02Z -->
+<!-- MediaWiki page 1443; revision 8332; parent 8331; 2010-09-21T02:55:25Z -->
