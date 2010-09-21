@@ -28,12 +28,10 @@ Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert
 
 ## Links
 
-- \[\[Artikelname\]\] - Bsp: „Ein \[\[Interrupt\]\]“ wird zu: „[Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")“
+- \[\[Artikelname\]\] - Bsp: „Ein \[\[Interrupt\]\]“ wird zu: „Ein [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")“
 - \[\[Artikelname\|Text im Artikel\]\] - Bsp: „Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß“ wird zu: „Eine [Unterbrechung](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") macht Spaß“
 - \[http://example.com externer Link\] - Bsp: „Das \[http://www.lowlevel.eu Lowlevel-Wiki\] macht Spaß“ wird zu: „Das Lowlevel-Wiki macht Spaß“
 - \[http://example.com\] - Bsp: „Siehe \[http://www.lowlevel.eu\]“ wird zu: „Siehe \[1\]“
-
-  
 
 ## Listen
 
@@ -188,6 +186,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7941/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8338/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 7941; parent 7839; 2010-07-20T00:33:45Z -->
+<!-- MediaWiki page 2049; revision 8338; parent 7941; 2010-09-21T11:36:10Z -->
