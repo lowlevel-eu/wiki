@@ -133,7 +133,7 @@ Leider konnte ich keine brauchbaren Informationen dazu finden, wie man Bochs daz
 
 ### Testen mit qemu
 
-*ToDo*
+Unter Linux siehe unten. Unter Windows ist es nicht möglich.
 
 #### Testen unter Linux/Unix
 
@@ -170,6 +170,6 @@ Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8346/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 6117; parent 6116; 2009-10-30T20:42:11Z -->
+<!-- MediaWiki page 1737; revision 8346; parent 6117; 2010-09-22T15:54:06Z -->
