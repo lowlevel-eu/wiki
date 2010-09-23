@@ -17,10 +17,6 @@ Hilf Lowlevel, den Artikel zu verbessern.
   
 Eine **Pipeline** ist eine Art "Fließbandmechanismus" moderner Prozessoren, der es ermöglicht, die Abarbeitung eines einzelnen Befehls in verschiedene Phasen zu zerlegen. Jede dieser Phasen wird dann in einer Pipelinestufe bearbeitet. Eine Aufteilung in Phasen/Pipelinestufen sieht bei einem DLX-Prozessor folgendermaßen aus:
 
-// TODO Tabelle vielleicht, bin grad zu faul
-
-  
-
 IF -\> DE -\> EX -\> MEM -\> WB
 
 |  |  |  |
@@ -37,6 +33,6 @@ Davon abgesehen zeigt sich, dass man verschiedene Befehle in unterschiedlichen P
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2107/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2107/index.html)
 
-<!-- MediaWiki page 2107; revision 8350; parent 6316; 2010-09-23T08:05:58Z -->
+<!-- MediaWiki page 2107; revision 8351; parent 8350; 2010-09-23T08:06:50Z -->
