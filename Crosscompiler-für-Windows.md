@@ -24,7 +24,7 @@ Alternativ kann man statt C:\crosstools\bin auch C:\crosstools\i586-elf\bin in d
 
 Für weitere Werkzeuge wie make, bash usw. wird wie bei MinGW die MSYS-Umgebung benötigt. Wenn MSYS bereits installiert ist, kann es problemlos weiter verwendet werden. In der Regel bedeutet das, dass das MSYS-Verzeichnis (Standard C:\msys\bin) ebenfalls in die PATH-Variable eingetragen werden muss.
 
-Wenn bisher noch kein MinGW installiert war, ist vermutlich auch MSYS noch nicht eingerichtet. MSYS kann auf der [SourceForge-Seite von MinGW](http://sourceforge.net/project/showfiles.php?group_id=2435&package_id=24963) heruntergeladen werden. Die Setup-Datei hat einen Namen in der Form MSYS-1.0.xx.exe, und muss nach dem Download einfach abgearbeitet werden. Um MSYS zu verwenden, muss dann das bin-Verzeichnis ebenfalls in die PATH-Umgebungsvariable eingetragen werden.
+Wenn bisher noch kein MinGW installiert war, ist vermutlich auch MSYS noch nicht eingerichtet. MSYS kann auf der [SourceForge-Seite von MinGW](http://sourceforge.net/projects/mingw/files/MSYS/) heruntergeladen werden. Um MSYS zu verwenden, muss dann das bin-Verzeichnis ebenfalls in die PATH-Umgebungsvariable eingetragen werden.
 
 ### NASM
 
@@ -81,6 +81,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 8352; parent 7607; 2010-09-24T15:15:38Z -->
+<!-- MediaWiki page 1450; revision 8353; parent 8352; 2010-09-24T15:17:08Z -->
