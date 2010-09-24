@@ -28,7 +28,7 @@ Wenn bisher noch kein MinGW installiert war, ist vermutlich auch MSYS noch nicht
 
 ### NASM
 
-Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf SourceForge zum [Download](http://sourceforge.net/project/showfiles.php?group_id=6208&package_id=47034) gibt. Diesen auch einfach installieren.
+Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf SourceForge zum [Download](http://sourceforge.net/projects/nasm/files/) gibt. Diesen auch einfach installieren.
 
 ## Cross-Compiler Kommandozeile
 
@@ -81,6 +81,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 7607; parent 6232; 2010-04-19T14:15:51Z -->
+<!-- MediaWiki page 1450; revision 8352; parent 7607; 2010-09-24T15:15:38Z -->
