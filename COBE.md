@@ -50,10 +50,10 @@ Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") wird auf 
 - stabiler [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
 - [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") implementieren
-- Mulitasking
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 8356; parent 8355; 2010-09-25T17:54:28Z -->
+<!-- MediaWiki page 2298; revision 8357; parent 8356; 2010-09-25T17:54:45Z -->
