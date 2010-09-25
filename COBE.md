@@ -52,8 +52,12 @@ Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") wird auf 
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") implementieren
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
 
+## Sourcecode
+
+COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http://cobe.svn.sourceforge.net/viewvc/cobe/?view=tar).
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 8357; parent 8356; 2010-09-25T17:54:45Z -->
+<!-- MediaWiki page 2298; revision 8358; parent 8357; 2010-09-25T17:58:39Z -->
