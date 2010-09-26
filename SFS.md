@@ -2,16 +2,16 @@
 
 ## Einführung
 
-SFS(simple file system) verfolgt das Ziel sehr einfach implementierbar zu sein. Es kann auf Floppys und Festplatten verwendet werden.
+SFS (simple file system) verfolgt das Ziel sehr einfach implementierbar zu sein. Es kann auf Floppys und Festplatten verwendet werden.
 
 Vorteile des SFS:
 
-- einfacher Aufbau
-- lange Dateinamen
+- Einfacher Aufbau
+- Lange Dateinamen
 
 Nachteile des SFS:
 
-- keine Unterstützung für Linux
+- Keine Unterstützung für Linux
 
 ## Aufbau
 
@@ -29,7 +29,7 @@ Der Superblock enthält wichtige Daten für den SFS Treiber.
 
 ### Reserved Area
 
-Dieser Bereich enthält Daten, die der SFS Treiber ignorieren muss laut Spezifikation, die der Programmierer frei verwenden kann zum Beispiel für den Bootloader.
+Dieser Bereich enthält Daten, die der SFS Treiber laut Spezifikation ignorieren muss und die der Programmierer frei verwenden kann, zum Beispiel für den Bootloader.
 
 ### Data Area
 
@@ -37,7 +37,7 @@ Der Datenbereich enthält alle Dateien, die das Dateisystem enthält.
 
 ### Free Area
 
-Die Free Area trennt die Data Area und die Index Area d.h. wenn Dateien erstellt werden vergrößert sich der Datenbereich und die Free Area wird kleiner.
+Die Free Area trennt die Data Area und die Index Area, d.h. wenn Dateien erstellt werden vergrößert sich der Datenbereich und die Free Area wird kleiner.
 
 ### Index Area
 
@@ -49,6 +49,6 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8376/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8373; parent 0; 2010-09-26T13:48:24Z -->
+<!-- MediaWiki page 2301; revision 8376; parent 8373; 2010-09-26T14:13:28Z -->
