@@ -163,7 +163,7 @@ Das dezentrale System von git bietet viel Komfort für Programmierer. Anders als
 
 ### Nachteile von git
 
-*TODO: Lass sich hier mal einer was einfallen \*g\**
+Es gibt zu Git keine GUI's.
 
 ## Kostenloses Git-Hosting
 
@@ -211,6 +211,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 7198; parent 5833; 2010-02-28T20:13:08Z -->
+<!-- MediaWiki page 1889; revision 8365; parent 7198; 2010-09-26T11:17:03Z -->
