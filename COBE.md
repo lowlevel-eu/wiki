@@ -8,7 +8,7 @@
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithkernel |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolith](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Noch keine vorhanden |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
@@ -24,30 +24,30 @@ COBE (Computer Betriebsystem) ist ein System mit Ziel eines monolithischen [Kern
 
 COBE besteht aus folgenden Elementen:
 
-- [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader"): Ein eigens geschriebener [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader"), welcher zuerst den Sektor des Kernelloaders lädt und danach die Sektoren des eigentlichen [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Der Bootloader springt danach in den Kernelloader.
-- Kernelloader: Der Kernelloader ist dafür da, in den Protected Mode zu springen, die GDT Tabelle zu erstellen und danach den eigentlichen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu laden.
+- [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader"): Ein eigens geschriebener Bootloader, welcher zuerst den Sektor des Kernelloaders lädt und danach die Sektoren des eigentlichen Kernels. Der Bootloader springt danach in den Kernelloader.
+- Kernelloader: Der Kernelloader ist dafür da, in den Protected Mode zu springen, die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") Tabelle zu erstellen und danach den eigentlichen Kernel zu laden.
 
 ## Kernel
 
-Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") wird auf monolithischer Basis aufgebaut werden. Derzeit ist der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in einem noch recht instabilem Zustand, jedoch ist zu erwarten, dass der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") bereits in der Version 0.2 wesentlich stabiler laufen wird. Die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") ist bei COBE nicht im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") enthalten, sondern in dem Kernelloader, dafür ist aber bereits die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR"), und ein Remap der [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") enthalten.
+Der Kernel wird auf monolithischer Basis aufgebaut werden. Derzeit ist der Kernel in einem noch recht instabilem Zustand, jedoch ist zu erwarten, dass der Kernel bereits in der Version 0.2 wesentlich stabiler laufen wird. Die GDT ist bei COBE nicht im Kernel enthalten, sondern in dem Kernelloader, dafür ist aber bereits die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR"), und ein Remap der [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") im Kernel enthalten.
 
 ## Versionen
 
 **COBE 0.1 Alpha:**
 
 - Grundinitialisierung von COBE
-- eigener [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")
+- eigener Bootloader
 - Bootscreen
-- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")
-- [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR")
-- [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") Remap
+- GDT
+- IDT, ISR
+- PIC Remap
 - Keyboard-Treiber (wird derzeit fertiggestellt)
 
 ## Geplant
 
 **COBE 0.2:**
 
-- stabiler [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
+- stabiler Kernel
 - [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") implementieren
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
@@ -58,6 +58,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 8358; parent 8357; 2010-09-25T17:58:39Z -->
+<!-- MediaWiki page 2298; revision 8364; parent 8358; 2010-09-26T11:13:07Z -->
