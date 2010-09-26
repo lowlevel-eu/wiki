@@ -29,7 +29,7 @@ Der Superblock enthält wichtige Daten für den SFS Treiber.
 
 ### Reserved Area
 
-Dieser Bereich enthält Daten, die der SFS Treiber laut Spezifikation ignorieren muss und die der Programmierer frei verwenden kann, zum Beispiel für den Bootloader.
+Dieser Bereich enthält Daten, die der SFS Treiber laut Spezifikation ignorieren muss und die der Programmierer frei verwenden kann, zum Beispiel für die Bootloader Stage 2.
 
 ### Data Area
 
@@ -51,6 +51,6 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8379; parent 8378; 2010-09-26T14:24:00Z -->
+<!-- MediaWiki page 2301; revision 8380; parent 8379; 2010-09-26T14:27:18Z -->
