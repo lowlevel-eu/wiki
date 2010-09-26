@@ -45,10 +45,10 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ## weiterführende Links
 
-[Spezifikation(Englisch)](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html) [\[1\]](http://wiki.osdev.org/SFS)
+[Spezifikation(Englisch)](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html) [SFS bei wiki.osdev.org](http://wiki.osdev.org/SFS)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8377; parent 8376; 2010-09-26T14:23:01Z -->
+<!-- MediaWiki page 2301; revision 8378; parent 8377; 2010-09-26T14:23:37Z -->
