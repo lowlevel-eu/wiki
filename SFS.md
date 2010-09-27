@@ -44,12 +44,12 @@ Die Free Area trennt die Data Area und die Index Area, d.h. wenn Dateien erstell
 
 Die Index Area enthält die Informationen über die Dateien.
 
-## weiterführende Links
+## Weblinks
 
-[Spezifikation(Englisch)](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
+[Spezifikation (in Englisch)](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8386/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8386; parent 8381; 2010-09-27T13:09:22Z -->
+<!-- MediaWiki page 2301; revision 8387; parent 8386; 2010-09-27T13:38:35Z -->
