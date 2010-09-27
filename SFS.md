@@ -46,11 +46,11 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ## Weblinks
 
-- [Spezifikation (in Englisch)](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
-- [Tool zum Erstellen und Manipulieren von SFS-Images (für Windows)](http://dimensionalrift.homelinux.net/combuster/vdisk/)
+- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Spezifikation](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
+- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Tool zum Erstellen und Manipulieren von SFS-Images (für Windows)](http://dimensionalrift.homelinux.net/combuster/vdisk/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8389/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8389; parent 8388; 2010-09-27T19:49:49Z -->
+<!-- MediaWiki page 2301; revision 8394; parent 8389; 2010-09-27T23:03:34Z -->
