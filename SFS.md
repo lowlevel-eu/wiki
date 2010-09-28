@@ -1,5 +1,12 @@
 # SFS
 
+**Warnung**
+
+Achtung, alles was hier steht ist von extrem eingeschränkter Nützlichkeit und man sollte sich gut überlegen ob man das wirklich implementieren will!  
+Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierte Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!
+
+  
+
 ## Einführung
 
 SFS (simple file system) verfolgt das Ziel sehr einfach implementierbar zu sein. Es kann auf Floppys und Festplatten verwendet werden.
@@ -51,6 +58,6 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8394; parent 8389; 2010-09-27T23:03:34Z -->
+<!-- MediaWiki page 2301; revision 8402; parent 8394; 2010-09-28T15:12:28Z -->
