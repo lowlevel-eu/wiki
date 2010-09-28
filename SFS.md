@@ -14,12 +14,13 @@ SFS (simple file system) verfolgt das Ziel sehr einfach implementierbar zu sein.
 Vorteile des SFS:
 
 - Einfacher Aufbau
-- Lange Dateinamen
 
 Nachteile des SFS:
 
-- Keine Unterstützung für Linux
+- Keine native Unterstützung unter Linux oder Windows
+  - Unter Windows existiert ein unvollständiges Tool, um auf SFS-Images zuzugreifen
 - Dateien müssen zusammenhängend sein, d.h. Schreibzugriff erfordert aufwändige und langsame Online-Defragmentierung
+- Die Defragmentierung kann nicht sicher implementiert werden (d.h. ein Absturz/Stromausfall während der Defragmentierung zieht zwangsläufig Datenverlust oder -korruption nach sich)
 
 ## Aufbau
 
@@ -53,7 +54,11 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ## Vergleich mit anderen Dateisystemen
 
-Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen mit recht wenig Code zu realisieren, leider gehören du diesen einfachen Datei-Operationen nicht das Vergrößern oder Verkleinern von Dateien dazu. Als Vorteil kann man die durchgängige Unicode-Unterstützung für die recht langen Dateinamen ansehen und das Fehlen von komplexen Block-Verkettungen ermöglicht zwar einen leichten Einstig stellt aber eben auch die größte Schwäche von SFS dar. Ansonsten bleiben gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. FAT, keine Vorteile übrig. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table einen etwas komplexeren Mechanismus, gegenüber SFS, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden, man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen einer Cluster-Kette zu folgen, was aber auch nicht so schwierig ist.
+Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen wie die das Lesen von Dateien mit recht wenig Code zu realisieren. Das Fehlen von komplexen Block-Verkettungen ermöglicht zwar einen leichten Einsteig, stellt aber gleichzeitig auch die größte Schwäche von SFS dar. Als weiteren Vorteil kann man die durchgängige Unicode-Unterstützung für die recht langen Dateinamen ansehen.
+
+Für die Implementierung einer Schreibunterstützung sind bereits einige grundlegende Operationen nötig, die mit SFS sehr mühsam und nur unsicher (Gefahr von Datenverlust und Korruption!) zu erreichen sind, z.B. das Erstellen, Vergrößern oder Verkleinern von Dateien.
+
+Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist).
 
 ## Weblinks
 
@@ -62,6 +67,6 @@ Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8407/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8406; parent 8402; 2010-09-28T18:10:59Z -->
+<!-- MediaWiki page 2301; revision 8407; parent 8406; 2010-09-28T18:44:10Z -->
