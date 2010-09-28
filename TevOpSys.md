@@ -19,7 +19,9 @@
 
 ## Beschreibung
 
-TevOpSys soll ein OS werden, dass die schnelle Benutzung des PCs erlaubt. Dazu wird es den Protected Mode verwenden und in Assembler geschrieben.
+TevOpSys soll ein OS werden, dass die schnelle Benutzung des PCs erlaubt. Dazu wird es den Protected Mode verwenden und in Assembler geschrieben. Und es ist keine GUI geplant, nur eine Shell.
+
+Das OS wurde am 30.8.2010 begonnen.
 
 ## Weitere Informationen
 
@@ -29,6 +31,6 @@ TevOpSys soll ein OS werden, dass die schnelle Benutzung des PCs erlaubt. Dazu w
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
 
-<!-- MediaWiki page 2270; revision 8217; parent 8180; 2010-09-10T16:27:56Z -->
+<!-- MediaWiki page 2270; revision 8408; parent 8217; 2010-09-28T19:19:51Z -->
