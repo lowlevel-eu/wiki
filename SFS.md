@@ -3,7 +3,7 @@
 **Warnung**
 
 Achtung, alles was hier steht ist von extrem eingeschränkter Nützlichkeit und man sollte sich gut überlegen ob man das wirklich implementieren will!  
-Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierte Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!
+Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierten Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!
 
   
 
@@ -51,6 +51,10 @@ Die Free Area trennt die Data Area und die Index Area, d.h. wenn Dateien erstell
 
 Die Index Area enthält die Informationen über die Dateien.
 
+## Vergleich mit anderen Dateisystemen
+
+Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen mit recht wenig Code zu realisieren, leider gehören du diesen einfachen Datei-Operationen nicht das Vergrößern oder Verkleinern von Dateien dazu. Als Vorteil kann man die durchgängige Unicode-Unterstützung für die recht langen Dateinamen ansehen und das Fehlen von komplexen Block-Verkettungen ermöglicht zwar einen leichten Einstig stellt aber eben auch die größte Schwäche von SFS dar. Ansonsten bleiben gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. FAT, keine Vorteile übrig. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table einen etwas komplexeren Mechanismus, gegenüber SFS, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden, man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen einer Cluster-Kette zu folgen, was aber auch nicht so schwierig ist.
+
 ## Weblinks
 
 - [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Spezifikation](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
@@ -58,6 +62,6 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8402; parent 8394; 2010-09-28T15:12:28Z -->
+<!-- MediaWiki page 2301; revision 8406; parent 8402; 2010-09-28T18:10:59Z -->
