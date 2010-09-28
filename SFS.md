@@ -54,11 +54,11 @@ Die Index Area enthält die Informationen über die Dateien.
 
 ## Vergleich mit anderen Dateisystemen
 
-Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen wie die das Lesen von Dateien mit recht wenig Code zu realisieren. Das Fehlen von komplexen Block-Verkettungen ermöglicht zwar einen leichten Einsteig, stellt aber gleichzeitig auch die größte Schwäche von SFS dar. Als weiteren Vorteil kann man die durchgängige Unicode-Unterstützung für die recht langen Dateinamen ansehen.
+Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen wie das Lesen von Dateien mit recht wenig Code zu realisieren. Das Fehlen von komplexen Block-Verkettungen ermöglicht zwar einen leichten Einsteig, stellt aber gleichzeitig auch die größte Schwäche von SFS dar. Als weiteren Vorteil kann man die durchgängige Unicode-Unterstützung für die recht langen Dateinamen ansehen.
 
 Für die Implementierung einer Schreibunterstützung sind bereits einige grundlegende Operationen nötig, die mit SFS sehr mühsam und nur unsicher (Gefahr von Datenverlust und Korruption!) zu erreichen sind, z.B. das Erstellen, Vergrößern oder Verkleinern von Dateien.
 
-Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist).
+Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist, zumindest einfach genug damit man das in einem FAT-Boot-Sektor realisieren kann).
 
 ## Weblinks
 
@@ -67,6 +67,6 @@ Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8407/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8407; parent 8406; 2010-09-28T18:44:10Z -->
+<!-- MediaWiki page 2301; revision 8409; parent 8407; 2010-09-28T19:24:40Z -->
