@@ -21,7 +21,7 @@ FAT wird in 5 Bereiche unterteilt:
 - [Bootsektor](#bootsektor)
 - [Reservierte Sektoren](#reservierte-sektoren)
 - [File Allocation Table](#file-allocation-table-1)
-- [Wurzelverzeichnis](#) (bei FAT32 nicht vorhanden)
+- [Wurzelverzeichnis](#) (bei FAT32 in der Datenregion enthalten)
 - [Datei- and Verzeichnis-Datenregion](#)
 
 ### Bootsektor
@@ -63,7 +63,7 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 | 0x26 | 1 | Erweiterte Bootsignatur |
 | 0x27 | 4 | Dateisystem-ID |
 | 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
-| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). z. B.: "FAT12 " oder "FAT16 ". |
+| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). : "FAT12 " oder "FAT16 ". |
 | 0x3E | 448 | Bootloader |
 | 0x1FE | 2 | Bootsignatur: 0xAA55 |
 
@@ -93,7 +93,7 @@ Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren ka
 
 ### File Allocation Table
 
-In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man das erste Cluster einer Datei hat, kann man es in der FAT nachschlagen und somit das nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters, kann dieses in der FAT auch als defekt markiert werden. Es wird dann nicht mehr zum Speichern von Daten verwendet.
+In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man das erste Cluster einer Datei hat, kann man es in der FAT nachschlagen und somit das nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters, kann dieses in der FAT auch als defekt markiert werden. Es wird dann nicht mehr zum Speichern von Daten verwendet. Normalerweise gibt es 2 FAT-Kopien um durch die Redundanz etwas Fehlertoleranz zu ermöglichen.
 
 | Bedeutung | FAT12 | FAT16 | FAT32 |
 | ------------------------------------- | ------------- | --------------- | ----------------------- |
@@ -106,7 +106,7 @@ Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT das n�
 
 ### Wurzelverzeichnis
 
-Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter Bereich auf dem Volume. Es bildet eine Tabelle aus Verzeichnis-Einträgen. Bei FAT32 wird das Wurzelverzeichnis wie jedes andere Verzeichnis auch behandelt und hat deshalb keinen festen Platz auf dem Volume.
+Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter Bereich auf dem Volume. Es bildet eine Tabelle aus Verzeichnis-Einträgen. Bei FAT32 wird das Wurzelverzeichnis wie jedes andere Verzeichnis auch behandelt und hat deshalb keinen festen Platz auf dem Volume und sein erster Cluster wird im Boot-Sektor gespeichert.
 
 ### Datei- und Verzeichnis-Datenregion
 
@@ -114,7 +114,7 @@ In der Datei- und Verzeichnis-Datenregion liegen die Datei- und Verzeichnis-Date
 
 ## Verzeichnis-Eintrag
 
-Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverzeichnis). Ein Verzeichnis-Eintrag enthält außerdem die Nummer des ersten Sektors.
+Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverzeichnis). Ein Verzeichnis-Eintrag enthält außerdem die Nummer des ersten Clusters.
 
 **Offset**
 
@@ -138,11 +138,11 @@ Dekasekunde (1 Dekasekunde entspricht 10 Sekunden) Stunde Minute 2 Sekunden Jahr
 
 **Bedeutung**
 
-Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 bit des ersten Clusters (für FAT32) 0x164Datum des letzten Schreibzugriffs
+Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (für FAT32) 0x164Datum des letzten Schreibzugriffs
 
 **Bedeutung**
 
-Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erstes Cluster +2 (man muss 2 subtrahieren um die eigentliche Clusternummer zu erhalten) 0x1C4Dateigröße in Bytes
+Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster +2 (man muss 2 subtrahieren um die eigentliche Clusternummer zu erhalten) 0x1C4Dateigröße in Bytes
 
 ## Cluster
 
@@ -150,7 +150,7 @@ Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit u
 
 ## VFAT
 
-VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"). Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
+VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für FAT. Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
 
 ## Dateikonventionen
 
@@ -161,7 +161,7 @@ Dateinamen bestehen in FAT aus acht Zeichen plus drei Zeichen Dateierweiterung. 
 
 Leerzeichen am Ende von Name oder Erweiterung werden ignoriert, denn sie werden in Verzeichniseinträgen als Padding für kürzere Dateinamen benutzt.
 
-Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die sowohl Name als auch ggf. Erweiterung enthalten. Unter Windows ist außerdem zu beachten, dass weiterhin keine Dateinamen mit einem Leerzeichen am Ende erstellt werden können.
+Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die sowohl Name als auch ggf. Erweiterung und auch den Punkt enthalten. Unter Windows ist außerdem zu beachten, dass weiterhin keine Dateinamen mit einem Leerzeichen am Ende erstellt werden können.
 
 ## Siehe auch
 
@@ -174,6 +174,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8323; parent 8322; 2010-09-20T07:57:03Z -->
+<!-- MediaWiki page 1643; revision 8422; parent 8323; 2010-09-29T19:58:25Z -->
