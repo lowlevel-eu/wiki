@@ -1,9 +1,10 @@
 # SFS
 
-**Warnung**
+**Achtung!**
 
 Achtung, alles was hier steht ist von extrem eingeschränkter Nützlichkeit und man sollte sich gut überlegen ob man das wirklich implementieren will!  
-Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierten Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!
+Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierten Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!  
+Siehe dazu auf die [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/2302/index.html "Diskussion:SFS") und in den Abschnitt [Vergleich mit anderen Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/SFS#vergleich-mit-anderen-dateisystemen "SFS")
 
   
 
@@ -14,13 +15,15 @@ SFS (simple file system) verfolgt das Ziel sehr einfach implementierbar zu sein.
 Vorteile des SFS:
 
 - Einfacher Aufbau
+  - Wobei [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") auch nur dann wirklich komplizierter ist wenn man lange Dateinamen unterstützen möchte
 
 Nachteile des SFS:
 
-- Keine native Unterstützung unter Linux oder Windows
+- Keine native Unterstützung unter Linux, Windows oder anderen relevanten Betriebssystemen
   - Unter Windows existiert ein unvollständiges Tool, um auf SFS-Images zuzugreifen
 - Dateien müssen zusammenhängend sein, d.h. Schreibzugriff erfordert aufwändige und langsame Online-Defragmentierung
 - Die Defragmentierung kann nicht sicher implementiert werden (d.h. ein Absturz/Stromausfall während der Defragmentierung zieht zwangsläufig Datenverlust oder -korruption nach sich)
+- Flash-basierte Datenträger (USB-Sticks oder SSDs) könnten aufgrund des häufigen Defragmentierens schneller altern.
 
 ## Aufbau
 
@@ -58,7 +61,7 @@ Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen
 
 Für die Implementierung einer Schreibunterstützung sind bereits einige grundlegende Operationen nötig, die mit SFS sehr mühsam und nur unsicher (Gefahr von Datenverlust und Korruption!) zu erreichen sind, z.B. das Erstellen, Vergrößern oder Verkleinern von Dateien.
 
-Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist, zumindest einfach genug damit man das in einem FAT-Boot-Sektor realisieren kann).
+Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist, zumindest einfach genug damit man das in einem 512 Byte-FAT-Boot-Sektor realisieren kann).
 
 ## Weblinks
 
@@ -67,6 +70,6 @@ Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8410/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8409; parent 8407; 2010-09-28T19:24:40Z -->
+<!-- MediaWiki page 2301; revision 8410; parent 8409; 2010-09-29T09:51:52Z -->
