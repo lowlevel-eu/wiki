@@ -71,7 +71,7 @@ Nachdem man nun die gewünschte Grafikmodusnummer hat, muss man nur noch in dies
 
 Vorweg: Es ist nicht möglich, mit VBE einen Grafiktreiber komplett im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") zu entwickeln. Wenigstens das Umschalten in den gewünschten Grafikmodus muss im Real Mode erfolgen!
 
-//TODO: Funktion 4f0Ah beschreiben
+//TODO: Funktion 4f0Ah beschreiben //TODO:VESA V3?? Protected Mode Interface??
 
 ## Weblinks
 
@@ -79,6 +79,6 @@ Vorweg: Es ist nicht möglich, mit VBE einen Grafiktreiber komplett im [Protecte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8423; parent 8382; 2010-09-29T20:16:39Z -->
+<!-- MediaWiki page 2303; revision 8424; parent 8423; 2010-09-29T20:45:33Z -->
