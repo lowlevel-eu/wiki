@@ -62,6 +62,12 @@ Für die Implementierung einer Schreibunterstützung sind bereits einige grundle
 
 Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist, zumindest einfach genug damit man das in einem 512 Byte-FAT-Boot-Sektor realisieren kann).
 
+Lange Dateinamen sind in SFS recht simpel implementiert obwohl man auch dort mehrere "Entrys" benötigt, der Name wird dann über (mehrere) "Continuation Entrys" fortgesetzt. In diesem Punkt ist FAT etwas komplexer weil es immer noch parallel den kurzen (8.3) Dateinamen gibt der nach bestimmten Regeln mit gepflegt werden muss. Dafür sind bei FAT die Fortsetzungs-Einträge als solche zu erkennen was bei SFS nicht gegeben ist so das SFS hier einer höheren Gefahr von Datenfehlern ausgesetzt ist.
+
+In den Verzeichnis- und Datei-Namen von SFS ist auch immer der gesamte Pfad enthalten. SFS selber unterscheidet nicht zwischen verschiedenen Verzeichnissen, alle Entrys liegen (ohne besondere Ordnung) in der einen Index-Area. Das macht es sehr langwierig alle Dateien eines bestimmten Verzeichnisses aufzulisten. SFS ist eher auf kleine Datenträger mit wenigen Dateien/Verzeichnissen ausgelegt (so das der SFS-Treiber eine komplette Liste im RAM halten kann).
+
+SFS ist sehr darauf angewiesen das der benutzte Datenträger keine defekten Sektoren bekommt, in der Index-Area gibt es absolut keine Fehlertoleranz, wenn ein Eintrag defekt ist kann es passieren das alle folgenden (noch intakten) Einträge ebenfalls unbrauchbar sind.
+
 ## Weblinks
 
 - [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Spezifikation](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
@@ -69,6 +75,6 @@ Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8411; parent 8410; 2010-09-29T13:07:54Z -->
+<!-- MediaWiki page 2301; revision 8413; parent 8411; 2010-09-29T14:09:04Z -->
