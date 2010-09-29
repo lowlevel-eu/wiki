@@ -15,7 +15,6 @@ SFS (simple file system) verfolgt das Ziel sehr einfach implementierbar zu sein.
 Vorteile des SFS:
 
 - Einfacher Aufbau
-  - Wobei [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") auch nur dann wirklich komplizierter ist wenn man lange Dateinamen unterstützen möchte
 
 Nachteile des SFS:
 
@@ -70,6 +69,6 @@ Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8410/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8410; parent 8409; 2010-09-29T09:51:52Z -->
+<!-- MediaWiki page 2301; revision 8411; parent 8410; 2010-09-29T13:07:54Z -->
