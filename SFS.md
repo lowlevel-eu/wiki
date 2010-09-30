@@ -29,30 +29,34 @@ Nachteile des SFS:
 Das SFS teilt das Medium in fünf Bereiche auf.
 
 1.  Superblock
-2.  Reserved Area
-3.  Data Area
-4.  Free Area
-5.  Index Area
+2.  Reservierter Bereich
+3.  Datenbereich
+4.  Unbenutzer Bereich
+5.  Indexbereich
 
 ### Superblock
 
-Der Superblock enthält wichtige Daten für den SFS Treiber.
+Der Superblock enthält grundlegende Daten über das SFS-Dateisystem. Er ist 512 Bytes groß und entspricht damit dem Bootsektor.
 
 ### Reserved Area
 
-Dieser Bereich enthält Daten, die der SFS Treiber laut Spezifikation ignorieren muss und die der Programmierer frei verwenden kann, zum Beispiel für die Bootloader Stage 2.
+Dieser Bereich enthält Daten, die nicht für das Dateisystem selbst benutzt werden. Der SFS-Treiber muss sie laut Spezifikation ignorieren, so dass sie frei verwendet werden können, zum Beispiel für einen Bootloader. Der Superblock ist ebenfalls Teil des reservierten Bereiches.
+
+Die Größe des reservierten Bereichs wird im Superblock festgelegt.
 
 ### Data Area
 
-Der Datenbereich enthält alle Dateien, die das Dateisystem enthält.
+Der Datenbereich enthält alle Nutzdaten, die das Dateisystem enthält. Er hat eine dynamische Größe und kann nach oben hin wachsen, wenn bestehende Dateien vergrößert oder neue Dateien angelegt werden.
 
 ### Free Area
 
-Die Free Area trennt die Data Area und die Index Area, d.h. wenn Dateien erstellt werden vergrößert sich der Datenbereich und die Free Area wird kleiner.
+Die Free Area ist ein Bereich von unbenutztem Speicher. Er trennt die Data Area und die Index Area, d.h. wenn Dateien erstellt werden vergrößert sich der Datenbereich und die Free Area wird kleiner.
 
 ### Index Area
 
-Die Index Area enthält die Informationen über die Dateien.
+Die Index Area enthält Informationen über die Dateien und entspricht damit in etwa den Verzeichniseinträgen und Inodes in anderen Dateisystemen. Da die Einträge im Indexbereich eine feste Länge von 64 Bytes haben und längere Pfade unterstützt werden, können die Pfade über mehrere Folgeeinträge (*Continuation Entries*) im Indexbereich verteilt werden.
+
+Eine Besonderheit im Vergleich zu anderen Dateisystemen ist, dass es keine Verzeichnisse gibt, die ähnlich zum Indexbereich ihre eigenen Dateien verwalten. Stattdessen werden alle Dateien im Indexbereich gespeichert und enthalten den kompletten Pfad zur Datei.
 
 ## Vergleich mit anderen Dateisystemen
 
@@ -75,6 +79,6 @@ SFS ist sehr darauf angewiesen das der benutzte Datenträger keine defekten Sekt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8415/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8415; parent 8413; 2010-09-29T14:26:21Z -->
+<!-- MediaWiki page 2301; revision 8430; parent 8415; 2010-09-30T13:46:06Z -->
