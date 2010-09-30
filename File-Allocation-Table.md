@@ -57,13 +57,13 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 **FAT12 und FAT16**
 
 | Offset | Größe | Beschreibung |
-| -------- | ------- | --------------------------------------------------------------------------------------- |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x24 | 1 | Nummer des BIOS-Laufwerks |
 | 0x25 | 1 | Reserviert |
 | 0x26 | 1 | Erweiterte Bootsignatur |
 | 0x27 | 4 | Dateisystem-ID |
 | 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
-| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt). : "FAT12 " oder "FAT16 ". |
+| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt), d.h. "FAT12 " oder "FAT16 ". Achtung: Dieses Feld ist nicht zuverlässig und daher maßgeblich für die Feststellung des Dateisystems. Stattdessen muss die FAT-Variante anhand der Anzahl der Cluster bestimmt werden! |
 | 0x3E | 448 | Bootloader |
 | 0x1FE | 2 | Bootsignatur: 0xAA55 |
 
@@ -106,7 +106,9 @@ Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT das n�
 
 ### Wurzelverzeichnis
 
-Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter Bereich auf dem Volume. Es bildet eine Tabelle aus Verzeichnis-Einträgen. Bei FAT32 wird das Wurzelverzeichnis wie jedes andere Verzeichnis auch behandelt und hat deshalb keinen festen Platz auf dem Volume und sein erster Cluster wird im Boot-Sektor gespeichert.
+Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter, zusammenhängender Bereich auf dem Volume. Es bildet wie andere Verzeichnisse auch eine Tabelle aus Verzeichnis-Einträgen, allerdings wird seine Größe statisch beim Erstellen des Dateisystems festgelegt, so dass die Anzahl möglicher Dateien im Wurzelverzeichnis beschränkt ist.
+
+Bei FAT32 liegt das Wurzelverzeichnis im Datenbereich und wird wie jedes andere Verzeichnis auch behandelt. Es hat deshalb keinen festen Platz auf dem Volume. Sein erster Cluster wird im Boot-Sektor gespeichert, die weiteren Cluster werden in der FAT gespeichert. Die Größe des Verzeichnisses ist dadurch dynamisch.
 
 ### Datei- und Verzeichnis-Datenregion
 
@@ -114,7 +116,7 @@ In der Datei- und Verzeichnis-Datenregion liegen die Datei- und Verzeichnis-Date
 
 ## Verzeichnis-Eintrag
 
-Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverzeichnis). Ein Verzeichnis-Eintrag enthält außerdem die Nummer des ersten Clusters.
+Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverzeichnis). Ein Verzeichnis-Eintrag enthält außerdem die Nummer des ersten Clusters der Datei.
 
 **Offset**
 
@@ -174,6 +176,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8422/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8422; parent 8323; 2010-09-29T19:58:25Z -->
+<!-- MediaWiki page 1643; revision 8428; parent 8422; 2010-09-30T12:52:37Z -->
