@@ -94,7 +94,7 @@ In VBE 1.0 waren die Nummern der verschiedenen Grafikmodi noch vordefiniert:
 | 0x11E | 1600×1200 | 16 |
 | 0x11F | 1600×1200 | 24 |
 
-Mit VBE 2.0 hat man sich allerdings dafür entschieden, dass die Grafikkartenherrsteller einfach nur eine Funktion bereitstellen, die alle von der Grafikkarte unterstützten Modi auflistet. Den Zeiger auf diese Liste erhält man mit dem VBE Info Block (4F00h). Diese Liste ist eigentlich nur ein WORD-Array, also eine Hintereinaderreihung von 16Bit Nummern. Diese repräsentieren die von der Grafikkarte unterstützten Grafikmodi. Die Liste wird terminiert durch den Eintrag 0xFFFF.
+Mit VBE 2.0 hat man sich allerdings dafür entschieden, dass die Grafikkartenherrsteller einfach nur eine Funktion bereitstellen, die alle von der Grafikkarte unterstützten Modi auflistet. Den Zeiger auf diese Liste erhält man mit dem VBE Info Block (4F00h). Diese Liste ist eigentlich nur ein WORD-Array, also eine Hintereinaderreihung von 16Bit Nummern. Diese repräsentieren die von der Grafikkarte unterstützten Grafikmodi. Die Liste wird terminiert durch den Eintrag 0xFFFF. Es wird empfohlen, sich nicht auf die o.g. Standardmodi zu verlassen, sondern durch Abfragen des Modeinfoblocks die Auflösung und anderen Eigenschaften der Modi aus der Modeliste herauszufinden.
 
 ### Einen bestimmten Grafikmodus suchen: 4F01h
 
@@ -167,6 +167,6 @@ Im Real Mode kann man die obige Variante theoretisch auch verwenden, wenn der Gr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8434; parent 8424; 2010-09-30T16:27:32Z -->
+<!-- MediaWiki page 2303; revision 8436; parent 8434; 2010-09-30T16:57:50Z -->
