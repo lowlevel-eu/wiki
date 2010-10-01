@@ -158,15 +158,44 @@ Im Real Mode kann man die obige Variante theoretisch auch verwenden, wenn der Gr
 
 ## VBE 3.0
 
-//TODO
+VBE 3.0 bietet nicht viele neue Funktionen an. Eine der wichtigsten ist die Unterstützung für Triple Buffering, für die zwei neue Funktionen eingeführt wurden:
+
+ScheduleDisplayStart:
+
+- AX=4f07h
+- BL=0
+- BH=2
+- ECX=Offset des ersten Pixels im [LFB](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions#linear-frame-buffer "LFB")
+
+GetDisplayStartStatus:
+
+- AX=4f07h
+- BL=0
+- BH=4
+- liefert AX!=0, wenn das Bild im Buffer, der mit *ScheduleDisplayStart* gewählt wurde, auf dem Bildschirm abgebildet wurde.
+
+  
+Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https://github.com/lowlevel-eu/wiki/wiki/Double-Buffering "Double Buffering") verwenden:
+
+- Den ersten Buffer rendern
+- Ihn mit *ScheduleDisplayStart* auswählen
+- Während der erste Buffer auf dem Bildschirm erscheint, den zweiten rendern
+- Mit *GetDisplayStatus* darauf warten, dass der erste Buffer komplett auf dem Bildchirm gezeichnet wurde
+- Den zweiten Buffer mit *ScheduleDisplayStart* auswählen
+- Das Bild wieder im ersten Buffer rendern
+- Mit *GetDisplayStatus* darauf warten, dass der zweite Buffer komplett auf dem Bildchirm gezeichnet wurde
+- Den ersten Buffer mit *ScheduleDisplayStart* auswählen
+- usw.
+
+[Double Buffering](https://github.com/lowlevel-eu/wiki/wiki/Double-Buffering "Double Buffering") wäre auch schon mit VBE 2.0 möglich (siehe Funktion: 4F07h, 80h – Set Display Start During Vertical Retrace). Allerdings ist müsste man hier direkt auf die Grafikkarte zugreifen, um das Timing hinzukriegen.
 
 ## Weblinks
 
+- <http://www.phatcode.net/res/221/files/vbe20.pdf> - VBE Spezifikation 2.0
 - <http://www.petesqbsite.com/sections/tutorials/tuts/vbe3.pdf> - VBE Spezifikation Version 3.0
-- //TODO: Link für VBE 2.0 ( und VBE 1.0?)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8436; parent 8434; 2010-09-30T16:57:50Z -->
+<!-- MediaWiki page 2303; revision 8439; parent 8436; 2010-10-01T16:49:04Z -->
