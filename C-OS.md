@@ -1,9 +1,9 @@
 # C-OS
 
 | C-OS |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 |  |  |
-| Entwickler: | pgahlen (Gründer) • Christian<br>• mblank (Designer)<br>• robotx<br> |
+| Entwickler: | pgahlen (Gründer) • mblank (Designer)<br> |
 | Akt. Version: | 0.0.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
@@ -19,6 +19,6 @@ in Arbeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8325/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8325; parent 8316; 2010-09-20T20:28:28Z -->
+<!-- MediaWiki page 2276; revision 8443; parent 8325; 2010-10-02T15:11:48Z -->
