@@ -155,7 +155,7 @@ Nachdem man nun die gewünschte Grafikmodusnummer hat, muss man nur noch in dies
 
 ## VBE im Protected Mode
 
-Vorweg: Es ist nicht möglich, mit VBE einen Grafiktreiber komplett im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") zu entwickeln. Wenigstens das Umschalten in den gewünschten Grafikmodus muss im Real Mode erfolgen! Allerdings ist man auf die VBE Funktionen im PM auch nicht mehr angewiesen, wenn man sich für das [LFB](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions#linear-frame-buffer "LFB") Modell entschieden hat und nachträglich nicht mehr die Auflösung wechseln möchte.
+//ToDo VBE 3.0 Protected Mode Interface
 
 Mit VBE 2.0 wurde das sogenannte "Protected Mode Interface" eingeführt. Das sind Funktionen, die die Grafikkarte zur Verfügung stellt und die im Gegensatz zu den anderen Funktionen in 32Bit Protected Mode Code vorliegen. Die Adresse dieser Funktionen erhält man mit folgendem Auftuf, der allerdings immer noch im Real Mode stattfinden muss:
 
@@ -231,6 +231,6 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8441/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8441; parent 8439; 2010-10-02T12:18:21Z -->
+<!-- MediaWiki page 2303; revision 8442; parent 8441; 2010-10-02T14:48:48Z -->
