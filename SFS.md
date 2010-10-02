@@ -79,6 +79,6 @@ SFS ist sehr darauf angewiesen das der benutzte Datenträger keine defekten Sekt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8430; parent 8415; 2010-09-30T13:46:06Z -->
+<!-- MediaWiki page 2301; revision 8445; parent 8430; 2010-10-02T18:34:32Z -->
