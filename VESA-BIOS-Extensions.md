@@ -1,10 +1,6 @@
 # VESA BIOS Extensions
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
-Die VESA BIOS Extensions (kurz: VBE) sind ein Standard der [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA"). Er vereinheitlicht den Zugriff auf eine Grafikkarte, bietet dabei allerdings deutlich mehr Möglichkeiten als [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA"). Der Standard wird von nahezu allen Grafikkarten in Version 2.0 oder der letzten Version, 3.0, unterstützt.
+Die VESA BIOS Extensions (kurz: VBE) sind ein Standard der [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA"). Er vereinheitlicht den Zugriff auf eine Grafikkarte, bietet dabei allerdings deutlich mehr Möglichkeiten als [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA"). Der Standard wird von nahezu allen Grafikkarten in Version 2.0 oder der letzten Version, 3.0, unterstützt. **Daher bezieht sich dieser Artikel, wenn nicht anders vermerkt, auf Version 2.0.**
 
 ## VBE Funktionen
 
@@ -102,11 +98,50 @@ Man durchläuft also die obige Liste der unterstützten Videomodi und prüft dan
 
 - AX = 4F01h
 - CX = Nummer des Grafikmodus
-- ES:DI = Zeiger auf freien Speicher für den ModeInfoBlock
-
-//TODO: ModeInfoBlock beschreiben
+- ES:DI = Zeiger auf freien Speicher für den ModeInfoBlock (256 Bytes)
 
 So kann man die Nummer desjenigen Grafikmodus herausfinden, den man benötigt.
+
+| Offset | Eintrag | Größe | Beschreibung |
+| -------- | --------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | ModeAttributes | Word | • Bit 7: 0=kein LFB, 1=LFB verfügbar<br>• Bit 6: 0=kein VGA kompatibles Speichermodell, 1=VGA kompatibles Speichermodell verfügbar (=paged)<br>• Bit 5: 0=VGA kompatibler Modues, 1= nicht VGA kompatibel<br>• Bit 4: 0=Textmodus, 1=Grafikmodus<br>• Bit 3: 0=Monochrom, 1=farbig<br>• Bit 2: 0=TTY Ausgabe Funktionen werden nicht unterstuützt, 1=werden unterstützt<br>• Bit 1: Reserved (1)<br>• Bit 0: 0=Modus wird nicht unterstützt, 1=wird unterstützt<br> |
+| 2 | WinAAttributes | Byte | • Bit 2: 0=Window nicht schreibbar, 1=Window schreibbar<br>• Bit 1: 0=Window lesbar, 1=nicht lesbar<br>• Bit 0: 0=Reallozierung der Windows nicht möglich, 1=ist möglich<br> |
+| 3 | WinBAttributes | Byte | *siehe WinAAttributes* |
+| 4 | WinGranularity | Word | in KB |
+| 6 | WinSize | Word | Window Größe in KB |
+| 8 | WinASegment | Word | WindowA Start Segment |
+| 10 | WinBSegment | Word | WindowB Start Segment |
+| 12 | WinFuncPtr | Dword | Zeiger auf die "Window Function" (segment:offset) |
+| 16 | BytesPerScanLine | Word |  |
+| 18 | XResolution | Word | Horizontale Auflösung |
+| 20 | YResolution | Word | Vertikale Auflösung |
+| 22 | XCharSize | Byte | Breite eines Buchstabens (Textmodus) |
+| 23 | YCharSize | Byte | Höhe eines Buchstabens (Textmodues) |
+| 24 | NumberOfPlanes | Byte |  |
+| 25 | BitsPerPixel | Byte | Bits pro Pixel (=Farbtiefe) |
+| 26 | NumberOfBanks | Byte |  |
+| 27 | Speichermodell | Byte | • 00h = Text mode<br>• 01h = CGA graphics<br>• 02h = Hercules graphics<br>• 03h = Planar<br>• 04h = Packed pixel<br>• 05h = Non-chain 4, 256 color<br>• 06h = Direct color<br>• 07h = YUV<br> |
+| 28 | BankSize | Byte | in KB |
+| 29 | NumberOfImagePages | Byte | Anzahl der Images minus Eins |
+| 30 | Reserviert | Byte | =1 |
+| 31 | RedMaskSize | Byte | Anzahl der Bits, die den roten Farbanteil angeben (Speichermodell: direct color) |
+| 32 | RedFieldPosition | Byte | Position des ersten Bits ([LSB](https://github.com/lowlevel-eu/wiki/wiki/Bin%C3%A4re-Datentypen#msb-und-lsb "LSB")), das den roten Farbanteil angibt |
+| 33 | GreenMaskSize | Byte |  |
+| 34 | GreenFieldPosition | Byte |  |
+| 35 | BlueMaskSize | Byte |  |
+| 36 | BlueFieldPosition | Byte |  |
+| 37 | RsvdMaskSize | Byte |  |
+| 38 | DirectColorModeInfo | Byte | • Bit 1: 0=Alle reservierten Bits in der Farbmaske dürfen NICHT benutzt werden, 1=dürfen benutzt werden<br>• Bit 0: 0=Color ramp is fixed, 1=programmable (???)<br> |
+| 39 | PhysBasePtr | DWord | Physikalische Adresse des LFB |
+| 43 | OffScreenMemOffset | DWord | Zeiger auf den Anfang des Teil des Grafikspeichers, der nicht auf dem Bildschirm zu sehen ist |
+| 47 | OffScreenMemSize | Word | in KB |
+| 49 | Reserviert | 206 Bytes |  |
+
+Von diesen Einträgen sind einige besonders wichtig:
+
+- In grün: Diese Einträge sind für die Verwendung des [LFB](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions#linear-frame-buffer "LFB") wichtig.
+- In rot: Diese Einträge sind zum Adressieren/Zeichnen eines Pixels wichtig.
+- In blau: Diese Einträge zeigen an, wie die Farbe eines Pixels anzugeben ist. Dies ist in der Regel eine RGB-Angabe. Dafür muss das Speichermodell (27) *direct color* sein (=6h).
 
 ### In einen Grafikmodus umschalten: 4F02h
 
@@ -196,6 +231,6 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8441/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8439; parent 8436; 2010-10-01T16:49:04Z -->
+<!-- MediaWiki page 2303; revision 8441; parent 8439; 2010-10-02T12:18:21Z -->
