@@ -52,7 +52,7 @@ Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 
 Wir brauchen also zunächst einmal ein mit [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-formatiertes Diskettenimage:
 
-    # dd if=/dev/zero of=test.img bs=1024 count=1440
+    # dd of=test.img bs=1024 seek=1440 count=0
     # mkdosfs test.img
 
 Anstelle von *mkdosfs test.img* kann auch *mke2fs -F test.img* verwendet werden, was ein [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")-formatiertes Diskettenimage erstellt. Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
@@ -200,6 +200,6 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8475/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8465; parent 8464; 2010-10-03T09:38:45Z -->
+<!-- MediaWiki page 1567; revision 8475; parent 8465; 2010-10-03T11:05:42Z -->
