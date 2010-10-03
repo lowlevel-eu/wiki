@@ -11,7 +11,7 @@
 
 <http://www.gnu.org/software/grub/grub.html>
 
-Der **GRand Unified Bootloader** (**GRUB**) ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
+Der **GR***and* **U***nified* **B***ootloader* (**GRUB**) ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
 
 ## Warum GRUB?
 
@@ -171,6 +171,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8450; parent 8448; 2010-10-03T08:59:42Z -->
+<!-- MediaWiki page 1567; revision 8451; parent 8450; 2010-10-03T09:02:08Z -->
