@@ -2,7 +2,7 @@
 
 Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 
-## Überarbeiten
+## Überarbeiten/Fehler beheben
 
 - [GRUB#GRUB 2](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-2 "GRUB"): Sowohl Diskettenimage als auch CD-Image scheint nicht wirklich zu tun
 - [Floppy Disk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
@@ -90,6 +90,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8503; parent 8502; 2010-10-03T16:13:56Z -->
+<!-- MediaWiki page 1518; revision 8504; parent 8503; 2010-10-03T16:14:37Z -->
