@@ -42,6 +42,62 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 - Kann mit einem Passwort gesichert werden
 - Kann von einem TFTP-Server booten
 
+### Disketten image herstellen
+
+#### Linux
+
+**Achtung!**
+
+Funktioniert nur mit GRUB, nicht aber mit GRUB2!
+
+Wir brauchen also zunächst einmal ein Image:
+
+    # dd if=/dev/zero of=/tmp/testimg bs=1024 count=1440
+    # mkdosfs /tmp/testimg
+
+Danach muß dieses Image gemountet und alle nötigen Dateien draufkopiert werden:
+
+    # mount -oloop /tmp/testimg /mnt
+    # mkdir /mnt/grub
+    # cp /boot/grub/stage* /mnt/grub
+    # cp lost.krn /mnt
+    # umount /mnt
+
+Anschließend das Image noch bootbar machen:
+
+    # grub
+
+    grub> device (fd0) /tmp/testimg
+    grub> root (fd0)
+    grub> setup (fd0)
+    grub> quit
+
+#### Windows
+
+**Achtung!**
+
+Funktioniert nur mit GRUB4DOS, nicht aber mit GRUB/GRUB2!
+
+Es sind folgende Tools vonnöten:
+
+- [BFI](http://www.nu2.nu/bfi/) (*Build Floppy Image*)
+- [GRUB4DOS](https://gna.org/projects/grub4dos)
+- [Virtual Floppy Drive](http://chitchat.at.infoseek.co.jp/vmware/vfd.html)
+
+Wir brauchen also zunächst einmal einen Ordner. In desen Ordner kommt die Datei *grldr*(GRUB4DOS Stage2). Aus diesem Ordner machen wir jetzt ein Iamge.
+
+    bfi -t=144 -f=floppy.img floppy
+
+Erstellt die Datei floppy.img mit dem Inhalt des Ordners *floppy*.
+
+Nun muss GRUB nur noch auf dem Image installiert werden und das Image Bootfähig gemacht werden. Das geschieht mit diesem Befehl:
+
+    bootlace.com --fat12 --floppy floppy.img
+
+Installiert GRUB-stage1 in den Bootsektor des Floppy Images
+
+Nun kannst du das Image mit VFD mounten und deinen Kernel und eine menu.lst(Die GRUB konfigurationsdatei) auf das Image kopieren.
+
 ### Beispielkonfigurationsdatei
 
 ` title OS_Name kernel /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
@@ -84,6 +140,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7945/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 7945; parent 7942; 2010-07-20T00:42:23Z -->
+<!-- MediaWiki page 1567; revision 8448; parent 7945; 2010-10-03T08:44:24Z -->
