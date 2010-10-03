@@ -47,8 +47,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
     - [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") würde Vorschlagen nur auf [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)"), [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") zu verweisen
       - Das Wichtigste für uns OS-Frickler ist vielleicht, wie man die mit Multitasking kombiniert. Also wie man unnötiges Sichern/Wiederherstellen der Register vermeidet. 3DNow! wäre wohl auch noch ein Kandidat in der Liste.
         - 3DNow! ist eher bedeutungslos, von SSE überholt und wird hoffentlich nicht mehr eingesetzt, da es nur unter AMD CPUs läuft
-  - Liste der Hardware die sonst noch zu einem x86-System gehört
-    - Wozu? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:49, 3. Okt. 2010 (CEST)
 - [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): SSE und FPU Register in [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") oder so verschieben
 - [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
 
@@ -61,9 +59,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table)
 - [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
 - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
-- [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")
-- [Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3")
-- [Ext4](https://github.com/lowlevel-eu/wiki/wiki/Ext4 "Ext4")
+- Ext
 - UDF
 - Debuggen mit Qemu und GDB
 - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
@@ -101,6 +97,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8515; parent 8514; 2010-10-03T16:52:08Z -->
+<!-- MediaWiki page 1518; revision 8516; parent 8515; 2010-10-03T16:54:25Z -->
