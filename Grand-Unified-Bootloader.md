@@ -52,22 +52,22 @@ Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 
 Wir brauchen also zunächst einmal ein Image:
 
-    # dd if=/dev/zero of=/tmp/testimg bs=1024 count=1440
-    # mkdosfs /tmp/testimg
+    # dd if=/dev/zero of=test.img bs=1024 count=1440
+    # mkdosfs /test.img
 
-Danach muß dieses Image gemountet und alle nötigen Dateien draufkopiert werden:
+Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
 
-    # mount -oloop /tmp/testimg /mnt
+    # sudo mount -oloop test.img /mnt
     # mkdir /mnt/grub
     # cp /boot/grub/stage* /mnt/grub
-    # cp lost.krn /mnt
+    # cp kernel /mnt
     # umount /mnt
 
 Anschließend das Image noch bootbar machen:
 
     # grub
 
-    grub> device (fd0) /tmp/testimg
+    grub> device (fd0) test.img
     grub> root (fd0)
     grub> setup (fd0)
     grub> quit
@@ -177,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8454; parent 8453; 2010-10-03T09:09:31Z -->
+<!-- MediaWiki page 1567; revision 8455; parent 8454; 2010-10-03T09:11:38Z -->
