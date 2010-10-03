@@ -136,19 +136,9 @@ Für die Installation von GRUB unter Windows gibt es ein kleines Tool, das sich 
 
 ## Testen des USB-Sticks
 
-#### Testen mit qemu
+### Windows
 
-#### = Testen unter Linux/Unix
-
-Um qemu unter Linux/Unix dazu zu bringen, vom USB-Stick zu booten, muss das Devicenode, welches auch schon beim partitionieren gebraucht wurde, als Festplatte angegeben werden. Hierzu wird die Option "-hda" nutzen. Sollte der USB-Stick z.B. das Devicenode "/dev/sda" haben, würde der Aufruf von qemu wie folgt aussehen:
-
-**Warnung**
-
-Um das Devicenode, also letzten Endes den Stick, nutzen zu können, benötigt man root-Rechte, da man als normaler Nutzer nicht auf dieses zugreifen darf.
-
-    $ qemu -m 32 -localtime -boot c -hda /dev/sda
-
-#### Testen unter Windows
+#### qemu
 
 Um unter qemu von dem USB-Stick booten zu lassen, muss der Stick als Festplatte angegeben werden. Dazu wird jedoch allerdings der Name des Geräts benötigt. Dieser ist wie folgt zu finden:
 
@@ -161,18 +151,25 @@ Hier wird dann "diskmgmt.msc" eingegeben und mittels Klick auf "OK" geöffnet. H
 **Anmerkung:** Der Stick wird mit "PhysicalDrive" und der entsprechenden Nummer dahinter angesprochen. PhysicalDrive ist einfach nur der Englische Name für "Datenträger". Die vielen \\ sind aus dem Grund, da eben dieses Zeichen für die Verwendung mit qemu escaped werden muss.  
 Wird dies so ausgeführt, sollte, falls nichts schief gelaufen ist, unter qemu dann GRUB vom USB-Stick geladen werden.
 
+### Linux
+
+#### qemu
+
+Um qemu unter Linux/Unix dazu zu bringen, vom USB-Stick zu booten, muss das Devicenode, welches auch schon beim partitionieren gebraucht wurde, als Festplatte angegeben werden. Hierzu wird die Option "-hda" nutzen. Sollte der USB-Stick z.B. das Devicenode "/dev/sda" haben, würde der Aufruf von qemu wie folgt aussehen:
+
+**Warnung**
+
+Um das Devicenode, also letzten Endes den Stick, nutzen zu können, benötigt man root-Rechte, da man als normaler Nutzer nicht auf dieses zugreifen darf.
+
+    $ qemu -m 32 -localtime -boot c -hda /dev/sda
+
 ### Testen auf einer realen Maschine
 
 Der Test auf einer realen Maschine sollte nicht unbedingt so schwer sein.  
-Die einzige Vorraussetzung ist, dass das BIOS von einer USB-Festplatte booten können muss. Das heißt, man muss um dies zu aktivieren im BIOS bei den Geräten von denen gebootet werden soll den Eintrag "USB-HDD" einfügen, insofern dieser vorhanden ist. Andere Einstellungen, wie z.B. "USB-FDD" oder "USB-CDROM" funktionieren leider nicht.  
-Ist dieser Eintrag ("USB-HDD") nicht vorhanden, muss ein BIOS-Update vorgenommen werden, wo dieser dann hoffentlich vorhanden ist.  
-**Anmerkung:** Dieser Part steht hier unter vorbehalt, da ich schauen muss, ob nicht eventuell irgendwo noch eine Option vorhanden ist, mit der man das bootem von USB Festplatten verbieten kann. Dieser Part sollte dem zufolge also erst einmal \_**IGNORIERT**\_ werden
-
-  
-***Dieser Artikel ist unvollständig, wird noch erweitert und korrigiert***
+Die einzige Vorraussetzung ist, dass das BIOS von einer USB-Festplatte booten können muss. Das heißt, man muss um dies zu aktivieren im BIOS bei den Geräten von denen gebootet werden soll den Eintrag "USB-HDD" einfügen, insofern dieser vorhanden ist. Andere Einstellungen, wie z.B. "USB-FDD" oder "USB-CDROM" funktionieren leider nicht.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 8466; parent 8346; 2010-10-03T09:48:18Z -->
+<!-- MediaWiki page 1737; revision 8468; parent 8466; 2010-10-03T09:51:55Z -->
