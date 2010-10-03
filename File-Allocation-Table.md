@@ -1,26 +1,13 @@
 # File Allocation Table
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
-| FAT32 |  |
-| ---------------------------- | ----------- |
+| FAT12/FAT16/FAT32 |  |
+| ---------------------------- | ---------------------------------------------------------------- |
 | Entwickler: | Microsoft |
-| Vollständige Bezeichnung: |  |
-| Maximalgröße einer Datei: |  |
+| Vollständige Bezeichnung: | File Allocation Table 12/16/32 |
+| Maximalgröße einer Datei: | 4 GiB |
 | Maximale Dateianzahl: |  |
-| Länge des Dateinames: |  |
-| Maximale Dateisystemgröße: |  |
-
-| FAT12/FAT16 |  |
-| ---------------------------- | ----------- |
-| Entwickler: | Microsoft |
-| Vollständige Bezeichnung: |  |
-| Maximalgröße einer Datei: |  |
-| Maximale Dateianzahl: |  |
-| Länge des Dateinames: |  |
-| Maximale Dateisystemgröße: |  |
+| Länge des Dateinames: | 255 Zeichen |
+| Maximale Dateisystemgröße: | • 32 MiB (FAT12)<br>• 2 – 4 GiB (FAT16)<br>• 8 TiB (FAT32)<br> |
 
 FAT ist ein [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), das mit [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") eingeführt wurde. Da PCs Ende der 70er Jahre meist noch keine Festplatten sondern nur Diskettenlaufwerke hatten, war dieses Dateisystem zunächst nur für die Kapazitäten von Disketten ausgelegt.
 
@@ -194,6 +181,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8487; parent 8428; 2010-10-03T14:17:31Z -->
+<!-- MediaWiki page 1643; revision 8506; parent 8487; 2010-10-03T16:22:59Z -->
