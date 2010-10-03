@@ -98,6 +98,37 @@ Installiert GRUB-stage1 in den Bootsektor des Floppy Images
 
 Nun kannst du das Image mit VFD mounten und deinen Kernel und eine menu.lst(Die GRUB konfigurationsdatei) auf das Image kopieren.
 
+### CD-Image herstellen
+
+#### Linux
+
+Es sind folgende Dinge vonnöten:
+
+- stage2_eltorito von GRUB(Sollte bei deinem Linux dabei sein.)
+- mkisofs
+
+Als erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner stecken. Dazu gehören auch die von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Wenn die Dateien dann alle fertig sein, baut man das CD-Image. Das geht folgendermaßen:
+
+    mkisofs -R -b boot/grub/stage2_eltorito -no-emul-boot -boot-load-size 4 -boot-info-table -o cdrom.iso cdrom_files/
+
+Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_files*. *boot/grub/stage2_eltorito* ist dabei ein relativer Pfad von der CD aus auf den Bootloader.
+
+*Mögliche Probleme*:
+
+- Die menu.lst kann nicht geladen werden, d.h. es erscheint nur der GRUB-Prompt. Schuld an diesem Fehler ist ein falscher Pfad in stage2 (der Pfad ist Lowercase, aber ISO-Level-1 speichert nur Uppercase). Abhilfe schafft entweder GRUB gepatcht neu bauen, oder einfach den Pfad im Binary zu ändern:
+
+<!-- -->
+
+     sed -i "s/boot\/grub\/menu.lst/BOOT\/GRUB\/MENU.LST/g" stage2_eltorito
+
+- Es gibt Systeme die nicht von ElTorito-CDs booten können. Abhilfe schafft hier manchmal, statt ElTorito die Floppyemulation zum Booten zu verwenden. Einfach ein Floppyimage mit allen benötigten Treibern erstellen, welches dann von CD weiterlädt. Das CD-Image hierfür wird dann via
+
+<!-- -->
+
+     mkisofs -b floppy.img -o cdrom.iso cdrom_files/
+
+erstellt. ACHTUNG, man braucht wenn man nicht alles im Speicher hat wirklich eigene Treiber, das Floppy-Image ist ab Protected Mode verloren (es werden Interrupts umgeleitet).
+
 ### Beispielkonfigurationsdatei
 
 ` title OS_Name kernel /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
@@ -140,6 +171,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8448; parent 7945; 2010-10-03T08:44:24Z -->
+<!-- MediaWiki page 1567; revision 8450; parent 8448; 2010-10-03T08:59:42Z -->
