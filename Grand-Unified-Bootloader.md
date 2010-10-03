@@ -109,7 +109,7 @@ Es sind folgende Tools vonnöten:
 
 Als Erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner kopieren. Dazu gehören auch die von GRUB benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Anschließend erstellt man das CD-Image folgendermaßen:
 
-    mkisofs -R -b boot/grub/stage2_eltorito -no-emul-boot -boot-load-size 4 -boot-info-table -o cdrom.iso cdrom_files/
+    mkisofs -R -b /boot/grub/stage2_eltorito -no-emul-boot -boot-load-size 4 -boot-info-table -o cdrom.iso cdrom_files/
 
 Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_files*. *boot/grub/stage2_eltorito* ist dabei ein relativer Pfad von der CD aus auf den Bootloader.
 
@@ -200,6 +200,6 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8462; parent 8460; 2010-10-03T09:34:17Z -->
+<!-- MediaWiki page 1567; revision 8464; parent 8462; 2010-10-03T09:38:03Z -->
