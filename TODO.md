@@ -20,6 +20,8 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung"): Buddy?
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
+- [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
+- [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
@@ -28,8 +30,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
   - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
   - bitte Liste erweitern
     - Mich würde viel mehr interessieren, wo man die Grenze setzt zwischen Kinderkram und interessantem/nützlichem Troubleshooting?
-- [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
-  - Was wäre denn speziell gewünscht? Über Linux könnte man halt Bücher füllen.
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
   - Welcher Thread? Der hier: [http://forum.lowlevel.eu/index.php?topic=1787.0](https://lowlevel-eu.github.io/forum/topics/1787/index.html) Steht im Artikel unter Links.
     - Ja. Wobei bei den 4 Möglichkeiten von bluecode noch eine fehlt: der Thread der einen/mehrere Service(s) anbieten will wartet (blockierend per Syscall) einfach auf ankommende Anfragen, so ähnlich wie bei TCP-Server-Sockets. Die Anfrage könnte dann entweder im Thread selber bearbeitet werden (womit dann keine weiteren Anfragen parallel bearbeitet werden können) oder es wird ein Worker-Thread erstellt/aktiviert (wobei dann die Variante mit den OS-gemanagten-PopUp-Threads wieder interessanter klingt weil damit im Service eine Ebene weg fällt).
@@ -93,6 +93,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8496/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8494; parent 8493; 2010-10-03T15:37:16Z -->
+<!-- MediaWiki page 1518; revision 8496; parent 8494; 2010-10-03T16:00:52Z -->
