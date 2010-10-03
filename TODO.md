@@ -14,9 +14,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 ## Erweitern
 
-- [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
-  - Was soll da rein? Viel mehr als wofür er genutzt wird, würde ich da nicht reinpacken… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
-  - Und genau das hab ich jetzt schon reingeschrieben —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:52, 3. Okt. 2010 (CEST)
+- ~~[System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")~~
 - [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.
   - Wieso werden meine Fragen einfach entfernt? Nichtsdestotrotz: Wer braucht das wirklich, sodass es auf dieser Liste stehen muss? (Kategorie:TODO per Vorlage:TODO reicht ja) —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:52, 3. Okt. 2010 (CEST)
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") RealMode
@@ -97,6 +95,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8516; parent 8515; 2010-10-03T16:54:25Z -->
+<!-- MediaWiki page 1518; revision 8517; parent 8516; 2010-10-03T16:58:30Z -->
