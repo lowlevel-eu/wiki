@@ -4,6 +4,24 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
+| FAT32 |  |
+| ---------------------------- | ----------- |
+| Entwickler: | Microsoft |
+| Vollständige Bezeichnung: |  |
+| Maximalgröße einer Datei: |  |
+| Maximale Dateianzahl: |  |
+| Länge des Dateinames: |  |
+| Maximale Dateisystemgröße: |  |
+
+| FAT12/FAT16 |  |
+| ---------------------------- | ----------- |
+| Entwickler: | Microsoft |
+| Vollständige Bezeichnung: |  |
+| Maximalgröße einer Datei: |  |
+| Maximale Dateianzahl: |  |
+| Länge des Dateinames: |  |
+| Maximale Dateisystemgröße: |  |
+
 FAT ist ein [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), das mit [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") eingeführt wurde. Da PCs Ende der 70er Jahre meist noch keine Festplatten sondern nur Diskettenlaufwerke hatten, war dieses Dateisystem zunächst nur für die Kapazitäten von Disketten ausgelegt.
 
 Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Datenträgergröße unterscheiden:
@@ -176,6 +194,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8428; parent 8422; 2010-09-30T12:52:37Z -->
+<!-- MediaWiki page 1643; revision 8487; parent 8428; 2010-10-03T14:17:31Z -->
