@@ -2,7 +2,7 @@
 
 | Allgemeines |  |
 | --------------- | -------------------------------------------------- |
-| Name: | GRand Unified Bootloader |
+| Name: | **GR**and **U**nified **B**ootloader |
 | Entwickler: | \- |
 | Akt. Version: | 0.97 (GRUB legacy)<br>1.98 (GRUB2) |
 | Lizenz: | GNU GPL V 2 (GRUB legacy)<br>GNU GPL V 3 (GRUB2) |
@@ -11,7 +11,7 @@
 
 <http://www.gnu.org/software/grub/grub.html>
 
-Der **GR***and* **U***nified* **B***ootloader* (**GRUB**) ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
+Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
 
 ## Warum GRUB?
 
@@ -177,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8456; parent 8455; 2010-10-03T09:12:27Z -->
+<!-- MediaWiki page 1567; revision 8457; parent 8456; 2010-10-03T09:13:08Z -->
