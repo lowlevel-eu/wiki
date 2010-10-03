@@ -140,61 +140,7 @@ Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche, welc
 
 ## GRUB-Image erstellen
 
-Wir müssen jetzt natürlich noch ein Disketten-Image erstellen und dann GRUB und unseren Kernel draufladen. Dieser Abschnitt beschreibt das Vorgehen unter Linux, für Windows siehe GRUB-Image erstellen (Windows)
-
-### Floppy-Image erstellen
-
-Wir erstellen uns erstmal ein Floppy-Image und formatieren es mit [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"). Es können auch andere [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") benutzt werden, z. B .[FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), man muss nur drauf achten, dass GRUB dieses Dateisystem unterstützt.
-
-Mit *dd* erzeugen wir ein 1,44MB großes Floppy-Image:
-
-    $ dd if=/dev/zero of=floppy.img bs=1024 count=1440
-
-Dann formatieren wir es mit ext2:
-
-    $ /sbin/mke2fs -F floppy.img
-
-### Dateien auf die Diskette kopieren
-
-Jetzt mounten wir schnell das Image (ein Verzeichnis namens *floppy* wird benötigt)
-
-    $ mount -o loop floppy.img floppy/
-
-und kopieren unseren Kernel drauf
-
-    $ cp kernel.bin floppy/
-
-[GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") muss auch noch drauf. Hierzu legen wir einen Ordner namens *grub* auf der Diskette an und kopieren *stage1* und *stage2* aus */boot/grub* auf die Diskette.
-
-    $ mkdir floppy/grub
-    $ cp /boot/grub/stage1 floppy/grub
-    $ cp /boot/grub/stage2 floppy/grub
-
-Wir brauchen natürlich noch eine GRUB-Konfigurationsdatei. Diese sollte folgendermaßen aussehen:
-
-    default 0
-    timeout 10
-
-    title Mein super tolles OS
-    root (fd0)
-    kernel /kernel.bin
-
-Die Konfigurationsdatei wird als *floppy/grub/menu.lst* gespeichert.
-
-Jetzt können wir das Floppy-Image schon wieder unmounten
-
-    $ umount floppy/
-
-aber GRUB muss noch in den Bootsektor
-
-    $ /usr/sbin/grub
-
-Und dann folgendes eingeben:
-
-    device (fd0) floppy.img
-    root (fd0)
-    setup (fd0)
-    quit
+*siehe: [GRUB legacy](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-legacy "GRUB")*
 
 Fertig ist unser GRUB-Image! Man kann es jetzt noch mit
 
@@ -223,6 +169,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 7676; parent 6403; 2010-05-09T09:46:48Z -->
+<!-- MediaWiki page 1604; revision 8461; parent 7676; 2010-10-03T09:30:07Z -->
