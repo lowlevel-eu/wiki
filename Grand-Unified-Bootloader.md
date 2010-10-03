@@ -53,7 +53,7 @@ Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 Wir brauchen also zunächst einmal ein Image:
 
     # dd if=/dev/zero of=test.img bs=1024 count=1440
-    # mkdosfs /test.img
+    # mkdosfs test.img
 
 Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
 
@@ -177,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8455; parent 8454; 2010-10-03T09:11:38Z -->
+<!-- MediaWiki page 1567; revision 8456; parent 8455; 2010-10-03T09:12:27Z -->
