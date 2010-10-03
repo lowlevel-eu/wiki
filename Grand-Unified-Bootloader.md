@@ -58,10 +58,10 @@ Wir brauchen also zunächst einmal ein Image:
 Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
 
     # sudo mount -oloop test.img /mnt
-    # mkdir /mnt/grub
-    # cp /boot/grub/stage* /mnt/grub
-    # cp kernel /mnt
-    # umount /mnt
+    # sudo mkdir /mnt/grub
+    # sudo cp /boot/grub/stage* /mnt/grub
+    # sudo cp kernel /mnt
+    # sudo umount /mnt
 
 Anschließend das Image noch bootbar machen:
 
@@ -177,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8457; parent 8456; 2010-10-03T09:13:08Z -->
+<!-- MediaWiki page 1567; revision 8458; parent 8457; 2010-10-03T09:13:36Z -->
