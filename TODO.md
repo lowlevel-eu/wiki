@@ -23,6 +23,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
 - [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
+- [APM](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "APM")
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
@@ -58,7 +59,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
 - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")
 - [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
-- [APM](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "APM")
 - [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")
 - [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")
 - RaWrite: evtl. mit Commands usw.
@@ -90,6 +90,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8500/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8502/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8500; parent 8498; 2010-10-03T16:11:48Z -->
+<!-- MediaWiki page 1518; revision 8502; parent 8500; 2010-10-03T16:13:05Z -->
