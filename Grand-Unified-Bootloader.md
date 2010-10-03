@@ -48,7 +48,7 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 
 **Achtung!**
 
-Funktioniert nur mit GRUB, nicht aber mit GRUB2!
+Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 
 Wir brauchen also zunächst einmal ein Image:
 
@@ -177,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8453/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8452; parent 8451; 2010-10-03T09:07:14Z -->
+<!-- MediaWiki page 1567; revision 8453; parent 8452; 2010-10-03T09:08:56Z -->
