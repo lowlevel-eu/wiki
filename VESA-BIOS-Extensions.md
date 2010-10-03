@@ -149,7 +149,7 @@ Nachdem man nun die gewünschte Grafikmodusnummer hat, muss man nur noch in dies
 
 - AX = 4F02h
 - BX = Nummer des VBE Grafikmodus:
-  - Bit 15: Löscht den Grafikspeicher, wenn gelöscht
+  - Bit 15: Löscht den Grafikspeicher, wenn gelöscht (VBE 3.0 garantiert nicht, das die Grafikkarte dies unterstützt)
   - Bit 14: Speichermodell: 0=Windowed (paged); 1=Linear (flat)
   - Bits 13-9: reserviert, Null setzen
 
@@ -231,6 +231,6 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8447/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8442; parent 8441; 2010-10-02T14:48:48Z -->
+<!-- MediaWiki page 2303; revision 8447; parent 8442; 2010-10-03T08:33:49Z -->
