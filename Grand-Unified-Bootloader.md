@@ -50,12 +50,12 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 
 Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 
-Wir brauchen also zunächst einmal ein Image:
+Wir brauchen also zunächst einmal ein mit [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-formatiertes Diskettenimage:
 
     # dd if=/dev/zero of=test.img bs=1024 count=1440
     # mkdosfs test.img
 
-Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
+Anstelle von *mkdosfs test.img* kann auch *mke2fs -F test.img* verwendet werden, was ein [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")-formatiertes Diskettenimage erstellt. Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
 
     # sudo mount -oloop test.img /mnt
     # sudo mkdir /mnt/grub
@@ -200,6 +200,6 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8460; parent 8459; 2010-10-03T09:24:24Z -->
+<!-- MediaWiki page 1567; revision 8462; parent 8460; 2010-10-03T09:34:17Z -->
