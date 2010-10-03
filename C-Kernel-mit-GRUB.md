@@ -161,14 +161,12 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 ## Siehe auch
 
 - [C-Kernel starten](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-starten "C-Kernel starten")
-- [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
 - [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
-- GRUB auf CD
 - [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 8461; parent 7676; 2010-10-03T09:30:07Z -->
+<!-- MediaWiki page 1604; revision 8463; parent 8461; 2010-10-03T09:36:25Z -->
