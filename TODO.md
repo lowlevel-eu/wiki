@@ -15,10 +15,13 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 ## Erweitern
 
 - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
+  - Was soll da rein? Viel mehr als wofür er genutzt wird, würde ich da nicht reinpacken… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
 - [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")
+  - Wozu genau? —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") RealMode
 - [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung"): Buddy?
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
+  - Sollte man das nicht selbst anhand des Artikels rausfinden können? —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
 - [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
 - [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
@@ -27,6 +30,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
+  - FPU wird bei OS-Dev eher weniger als bei anderer Programmierung eingesetzt, oder? Korrekter wäre vielleicht, wie man math.h-Funktionen implementiert, aber das sollte man imho auch per Intelmanual rausfinden können… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
 - [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting") Themen siehe [Diskussion:Erste_Hilfe](https://lowlevel-eu.github.io/wiki/pages/2264/index.html "Diskussion:Erste Hilfe")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
   - Welcher Thread? Der hier: [http://forum.lowlevel.eu/index.php?topic=1787.0](https://lowlevel-eu.github.io/forum/topics/1787/index.html) Steht im Artikel unter Links.
@@ -90,6 +94,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8509/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8504; parent 8503; 2010-10-03T16:14:37Z -->
+<!-- MediaWiki page 1518; revision 8509; parent 8504; 2010-10-03T16:32:24Z -->
