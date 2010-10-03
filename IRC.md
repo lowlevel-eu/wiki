@@ -6,7 +6,7 @@ Im IRC-Channel *\#lost* auf *irc.euirc.net* bekommt man einerseits schnelle Hilf
 
 - Es wird weder geflucht, noch irgendeine andere Person oder deren Arbeit/Projekt beleidigt.
 - Codestücke usw. über 5 Zeilen werden nicht direkt per Copy+Paste übertragen sondern als Link angegeben. Dazu benutzt man einen sogenannten Nopaste-Service wie zum Beispiel <http://pastebin.com>
-- Statusnicks (bspw. "nick\|afk") sind unerwünscht.
+- Statusnicks (bspw. „nick\|afk“) sind unerwünscht.
 - Flooden, also sinnloses Aneinanderreihen von Buchstabenfolgen ist verboten.
 - Bei irgendwelchen Verstössen kann es durchaus sein, dass man von einem Admin gekickt wird.
 - Sollte das passieren, ist ein automatischer Rejoin verboten.
@@ -107,6 +107,6 @@ Aufzeichnungen der Channelgespräche sind genauso wie einige Statistiken stetig 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 8529; parent 8526; 2010-10-03T18:25:46Z -->
+<!-- MediaWiki page 1463; revision 8530; parent 8529; 2010-10-03T18:27:11Z -->
