@@ -26,10 +26,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
-- [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting")
-  - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
-  - bitte Liste erweitern
-    - Mich würde viel mehr interessieren, wo man die Grenze setzt zwischen Kinderkram und interessantem/nützlichem Troubleshooting?
+- [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting") Themen siehe [Diskussion:Erste_Hilfe](https://lowlevel-eu.github.io/wiki/pages/2264/index.html "Diskussion:Erste Hilfe")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
   - Welcher Thread? Der hier: [http://forum.lowlevel.eu/index.php?topic=1787.0](https://lowlevel-eu.github.io/forum/topics/1787/index.html) Steht im Artikel unter Links.
     - Ja. Wobei bei den 4 Möglichkeiten von bluecode noch eine fehlt: der Thread der einen/mehrere Service(s) anbieten will wartet (blockierend per Syscall) einfach auf ankommende Anfragen, so ähnlich wie bei TCP-Server-Sockets. Die Anfrage könnte dann entweder im Thread selber bearbeitet werden (womit dann keine weiteren Anfragen parallel bearbeitet werden können) oder es wird ein Worker-Thread erstellt/aktiviert (wobei dann die Variante mit den OS-gemanagten-PopUp-Threads wieder interessanter klingt weil damit im Service eine Ebene weg fällt).
@@ -93,6 +90,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8498/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8500/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8498; parent 8497; 2010-10-03T16:08:19Z -->
+<!-- MediaWiki page 1518; revision 8500; parent 8498; 2010-10-03T16:11:48Z -->
