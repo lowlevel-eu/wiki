@@ -42,7 +42,7 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 - Kann mit einem Passwort gesichert werden
 - Kann von einem TFTP-Server booten
 
-### Disketten image herstellen
+### Diskettenimage erstellen
 
 #### Linux
 
@@ -84,50 +84,41 @@ Es sind folgende Tools vonnöten:
 - [GRUB4DOS](https://gna.org/projects/grub4dos)
 - [Virtual Floppy Drive](http://chitchat.at.infoseek.co.jp/vmware/vfd.html)
 
-Wir brauchen also zunächst einmal einen Ordner. In desen Ordner kommt die Datei *grldr*(GRUB4DOS Stage2). Aus diesem Ordner machen wir jetzt ein Iamge.
+Wir brauchen also zunächst einmal einen Ordner. In desen Ordner kommt die Datei *grldr* (GRUB4DOS Stage2). Aus diesem Ordner machen wir jetzt ein Image.
 
     bfi -t=144 -f=floppy.img floppy
 
 Erstellt die Datei floppy.img mit dem Inhalt des Ordners *floppy*.
 
-Nun muss GRUB nur noch auf dem Image installiert werden und das Image Bootfähig gemacht werden. Das geschieht mit diesem Befehl:
+Nun muss GRUB nur noch auf dem Image installiert werden und das Image bootfähig gemacht werden. Das geschieht mit folgendem Befehl:
 
     bootlace.com --fat12 --floppy floppy.img
 
 Installiert GRUB-stage1 in den Bootsektor des Floppy Images
 
-Nun kannst du das Image mit VFD mounten und deinen Kernel und eine menu.lst(Die GRUB konfigurationsdatei) auf das Image kopieren.
+Nun kannst du das Image mit VFD mounten und deinen Kernel und eine menu.lst (Die GRUB Konfigurationsdatei) auf das Image kopieren.
 
 ### CD-Image herstellen
 
 #### Linux
 
-Es sind folgende Dinge vonnöten:
+Es sind folgende Tools vonnöten:
 
-- stage2_eltorito von GRUB(Sollte bei deinem Linux dabei sein.)
+- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein.)
 - mkisofs
 
-Als erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner stecken. Dazu gehören auch die von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Wenn die Dateien dann alle fertig sein, baut man das CD-Image. Das geht folgendermaßen:
+Als Erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner kopieren. Dazu gehören auch die von GRUB benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Anschließend erstellt man das CD-Image folgendermaßen:
 
     mkisofs -R -b boot/grub/stage2_eltorito -no-emul-boot -boot-load-size 4 -boot-info-table -o cdrom.iso cdrom_files/
 
 Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_files*. *boot/grub/stage2_eltorito* ist dabei ein relativer Pfad von der CD aus auf den Bootloader.
 
+  
 *Mögliche Probleme*:
 
-- Die menu.lst kann nicht geladen werden, d.h. es erscheint nur der GRUB-Prompt. Schuld an diesem Fehler ist ein falscher Pfad in stage2 (der Pfad ist Lowercase, aber ISO-Level-1 speichert nur Uppercase). Abhilfe schafft entweder GRUB gepatcht neu bauen, oder einfach den Pfad im Binary zu ändern:
-
-<!-- -->
-
-     sed -i "s/boot\/grub\/menu.lst/BOOT\/GRUB\/MENU.LST/g" stage2_eltorito
-
-- Es gibt Systeme die nicht von ElTorito-CDs booten können. Abhilfe schafft hier manchmal, statt ElTorito die Floppyemulation zum Booten zu verwenden. Einfach ein Floppyimage mit allen benötigten Treibern erstellen, welches dann von CD weiterlädt. Das CD-Image hierfür wird dann via
-
-<!-- -->
-
-     mkisofs -b floppy.img -o cdrom.iso cdrom_files/
-
-erstellt. ACHTUNG, man braucht wenn man nicht alles im Speicher hat wirklich eigene Treiber, das Floppy-Image ist ab Protected Mode verloren (es werden Interrupts umgeleitet).
+- Die menu.lst kann nicht geladen werden, d.h. es erscheint nur der GRUB-Prompt. Schuld an diesem Fehler ist ein falscher Pfad in stage2 (der Pfad ist Lowercase, aber ISO-Level-1 speichert nur Uppercase). Abhilfe schafft entweder GRUB gepatcht neu bauen, oder einfach den Pfad im Binary zu ändern:`sed -i "s/boot\/grub\/menu.lst/BOOT\/GRUB\/MENU.LST/g" stage2_eltorito`
+- Es gibt Systeme die nicht von ElTorito-CDs booten können. Abhilfe schafft hier manchmal, statt ElTorito die Floppyemulation zum Booten zu verwenden. Einfach ein Floppyimage mit allen benötigten Treibern erstellen, welches dann von CD weiterlädt. Das CD-Image hierfür wird dann via`mkisofs -b floppy.img -o cdrom.iso cdrom_files/`  
+  erstellt. **ACHTUNG**: Man braucht wenn man nicht alles im Speicher hat wirklich eigene Treiber, das Floppy-Image ist ab Protected Mode verloren (es werden Interrupts umgeleitet).
 
 ### Beispielkonfigurationsdatei
 
@@ -149,7 +140,7 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 - Modulares und objektorientiertes Framework für Dateisysteme etc.
 - Cross-Plattform-Installation
 
-### CD-Image herstellen
+### CD-Image erstellen
 
 #### Linux
 
@@ -198,9 +189,6 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 - GRUB legacy
   - [OS-Dev für Einsteiger - Teil 4](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World"): kleiner Beispielkernel mit Multiboot
-  - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen")
-  - GRUB-Image erstellen (Windows)
-  - GRUB auf CD
   - [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
 - GRUB 2
   - [Disketten-/ISO-Images mit GRUB 2 erstellen](http://wiki.osdev.org/GRUB_2)
@@ -212,6 +200,6 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8459; parent 8458; 2010-10-03T09:15:40Z -->
+<!-- MediaWiki page 1567; revision 8460; parent 8459; 2010-10-03T09:24:24Z -->
