@@ -59,7 +59,9 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table)
 - [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
 - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
-  - Ext2 wär mir ja persönlich lieber… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:35, 3. Okt. 2010 (CEST)
+- [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")
+- [Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3")
+- [Ext4](https://github.com/lowlevel-eu/wiki/wiki/Ext4 "Ext4")
 - UDF
 - Debuggen mit Qemu und GDB
 - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
@@ -97,6 +99,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8513; parent 8511; 2010-10-03T16:49:10Z -->
+<!-- MediaWiki page 1518; revision 8514; parent 8513; 2010-10-03T16:50:59Z -->
