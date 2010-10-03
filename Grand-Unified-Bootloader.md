@@ -1,11 +1,11 @@
 # Grand Unified Bootloader
 
 | Allgemeines |  |
-| --------------- | -------------------------- |
+| --------------- | -------------------------------------------------------------- |
 | Name: | GRand Unified Bootloader |
 | Entwickler: | \- |
-| Akt. Version: | 1.98 |
-| Lizenz: | GNU GPL Version 3 |
+| Akt. Version: | 0.97 (GRUB legacy)<br>1.98 (GRUB2) |
+| Lizenz: | GNU GPL Version 2 (GRUB legacy)<br>GNU GPL Version 3 (GRUB2) |
 | Plattform: | Unix |
 | Homepage |  |
 
@@ -151,7 +151,13 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ### Beispielkonfigurationsdatei
 
-` title OS_Name multiboot /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
+` menuentry "OS_Name" { `
+
+     multiboot /kernel
+     module /modul.mod
+     boot
+
+`} ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
 
 ## Siehe auch
 
@@ -171,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8451; parent 8450; 2010-10-03T09:02:08Z -->
+<!-- MediaWiki page 1567; revision 8452; parent 8451; 2010-10-03T09:07:14Z -->
