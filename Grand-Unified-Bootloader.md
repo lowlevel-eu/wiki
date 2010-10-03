@@ -140,11 +140,61 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 - Modulares und objektorientiertes Framework für Dateisysteme etc.
 - Cross-Plattform-Installation
 
+### Disketten-Image erstellen
+
+#### Linux
+
+Du benötigst ein Disketten Image mit GRUB Legacy drauf, wie man das erstellt, wird oben beschrieben.
+
+    mkdir mnt
+    sudo mount -oloop floppy.img mnt
+    cd mnt
+
+Jetzt müssen alle Dateien und Ordner außer /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
+
+    timeout=0
+
+    title GRUB 2
+    kernel /boot/grub2/core.img
+    boot
+
+Als nächstes legt man unter boot ein Verzeichnis grub2 an und führt dann folgende Befehle aus, um die core.img für GRUB 2 zu erhalten:
+
+    cd /usr/lib/grub/i386-pc
+    grub-mkimage -p /boot/grub2 -o /tmp/grubimage/mnt/boot/grub2 *.mod
+
+Erklärung:
+
+| Option | Erklärung |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -p /boot/grub2 | Der Pfad auf dem Image, in welchem GRUB später nach der grub.cfg sucht, wenn dieser nicht angegeben wird /boot/grub |
+| -o ... | Die Ausgabedatei, standardmäßig stdout |
+| \*.mod | Die Module, die eingefügt werden, folgende müssen mindestens vorhanden sein: fat sh multiboot ls ext2 configfile extcmd biosdisk (Zumindest hat mit diesen bei mir alles funktioniert) |
+
+Nun erstellt man noch eine grub.cfg mit folgendem Inhalt unter /boot/grub2 auf dem Image ein:
+
+     set timeout=10
+     set default=0
+     
+     menuentry "OS-Name"
+     {
+         multiboot /pfad/zu/kernel/kernel/datei
+         boot    
+     }
+
+Anschließend kopiert man den Kernel und die dazugehörigen Dateien auf das Image und unmountet es: \<bash\>sudo umount mnt\</bash\> Das Image ist danach fertig.
+
+#### Windows
+
+// Todo kann man sich die GRUB2 Binary irgendwo runterladen?
+
 ### CD-Image erstellen
 
 #### Linux
 
-Wenn GRUB2 installiert ist, dann muss folgendes auf der Kommandozeile eingegeben werden: ` grub-mkrescue --output=GRUB2.iso /boot/grub `
+Wenn GRUB2 installiert ist, dann muss folgendes auf der Kommandozeile eingegeben werden:
+
+    grub-mkrescue --output=GRUB2.iso /boot/grub
 
 Diese muss dann noch mit dem eigenen Kernel und ggf. Modulen sowie der grub.cfg zusammengeführt werden.
 
@@ -152,14 +202,18 @@ Diese muss dann noch mit dem eigenen Kernel und ggf. Modulen sowie der grub.cfg 
 
 Unter Windows gibt es noch keine Möglichkeit, ein CD-Image von GRUB2 zu erstellen. Am besten nimmt man ein Fertiges. Dafür ist das Ändern des Images sehr einfach. Man lädt [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter, falls man Windows-User ist (das Programm ist Shareware und bis 300MB begrenzt). Wenn UltraISO heruntergeladen und installiert ist, sollte man folgende Dateien in einem Ordner haben: Das GRUB2.iso-Image, die grub.cfg und alle für das eigene OS nötigen Dateien (Kernel, Module, Programe etc.). Das sollte dann so ausehen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png" width="597" height="130" alt="GRUB2-1.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png)
 
-Die grub.cfg sollte folgenden inhalt haben: ` set timeout=15 set default=0 `
+Die grub.cfg sollte folgenden inhalt haben:
 
-`menuentry "_OS_" { `
+    set timeout=15
+    set default=0
+     
+    menuentry "_OS_"
+    {
+       multiboot /boot/kernel.elf   
+       boot                         
+    }
 
-      multiboot /boot/kernel.elf   
-      boot                         
-
-`} ` Wenn das der Fall ist, UltraISO starten, den "Weiterhin testen..."-Button betätigen, auf Datei-\>Öffnen klicken und dann das GRUB2-Image auswählen und öffnen. Das Fenster sollte dan wie folgt aussehen: In der Verzeichnisstruktur zu dem Ordner mit der grub.cfg und den eigenen OS-Dateien wechseln. Das Fenster sollte dann den Inhalt des Ordners beinhalten.
+Wenn das der Fall ist, UltraISO starten, den "Weiterhin testen..."-Button betätigen, auf Datei-\>Öffnen klicken und dann das GRUB2-Image auswählen und öffnen. Das Fenster sollte dan wie folgt aussehen: In der Verzeichnisstruktur zu dem Ordner mit der grub.cfg und den eigenen OS-Dateien wechseln. Das Fenster sollte dann den Inhalt des Ordners beinhalten.
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a96869af9be98ac5a13.png" width="839" height="489" alt="GRUB2-2.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a96869af9be98ac5a13.png)
 
@@ -177,13 +231,14 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 ### Beispielkonfigurationsdatei
 
-` menuentry "OS_Name" { `
+    menuentry "OS_Name"
+    {
+      multiboot /kernel
+      module /modul.mod
+      boot
+    }
 
-     multiboot /kernel
-     module /modul.mod
-     boot
-
-`} ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
+Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
 
 ## Siehe auch
 
@@ -200,6 +255,6 @@ Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8475/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8475; parent 8465; 2010-10-03T11:05:42Z -->
+<!-- MediaWiki page 1567; revision 8476; parent 8475; 2010-10-03T11:51:55Z -->
