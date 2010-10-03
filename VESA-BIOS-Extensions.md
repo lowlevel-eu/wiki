@@ -103,7 +103,7 @@ Man durchläuft also die obige Liste der unterstützten Modi und prüft dann mit
 So kann man die Nummer desjenigen Grafikmodus herausfinden, den man benötigt.
 
 | Offset | Eintrag | Größe in Byte | Beschreibung |
-| -------- | --------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ----------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | ModeAttributes | 2 | • Bit 7: 0=kein LFB, 1=LFB verfügbar<br>• Bit 6: 0=kein VGA kompatibles Speichermodell, 1=VGA kompatibles Speichermodell verfügbar (=paged)<br>• Bit 5: 0=VGA kompatibler Modues, 1= nicht VGA kompatibel<br>• Bit 4: 0=Textmodus, 1=Grafikmodus<br>• Bit 3: 0=Monochrom, 1=farbig<br>• Bit 2: 0=TTY Ausgabe Funktionen werden nicht unterstuützt, 1=werden unterstützt<br>• Bit 1: Reserved (1)<br>• Bit 0: 0=Modus wird nicht unterstützt, 1=wird unterstützt<br> |
 | 2 | WinAAttributes | 1 | • Bit 2: 0=Fenster nicht beschreibbar, 1=Fenster beschreibbar<br>• Bit 1: 0=Fenster lesbar, 1=nicht lesbar<br>• Bit 0: 0=Reallozierung der Fenster nicht möglich, 1=ist möglich<br> |
 | 3 | WinBAttributes | 1 | *siehe WinAAttributes* |
@@ -136,7 +136,21 @@ So kann man die Nummer desjenigen Grafikmodus herausfinden, den man benötigt.
 | 40 | PhysBasePtr | 4 | Physische Adresse des LFB |
 | 44 | OffScreenMemOffset | 4 | Zeiger auf den Anfang des Teil des Grafikspeichers, der nicht auf dem Bildschirm zu sehen ist |
 | 48 | OffScreenMemSize | 2 | in kB |
-| 50 | Reserviert | 206 Bytes |  |
+| 50 | LinBytesPerScanLine | 2 | Bytes pro Zeile im LFB-Modus |
+| 52 | BnkNumberOfImagePages | 1 |  |
+| 53 | LinNumberOfImagePages | 1 |  |
+| 54 | LinRedMaskSize | 1 | Anzahl der Bits, die den roten Farbanteil im LFB-Modus angeben (Speichermodell: direct color) |
+| 55 | LinRedFieldPosition | 1 | Position des ersten Bits, das den roten Farbanteil im LFB-Modus angibt |
+| 56 | LinGreenMaskSize | 1 |  |
+| 57 | LinGreenFieldPosition | 1 |  |
+| 58 | LinBlueMaskSize | 1 |  |
+| 59 | LinBlueFieldPosition | 1 |  |
+| 60 | LinRsvdMaskSize | 1 |  |
+| 61 | LinRsvdFieldPosition | 1 |  |
+| 62 | MaxPixelClock | 4 |  |
+| 66 | Reserviert | 190 |  |
+
+Die Felder ab LinBytesPerScanLine (also Offset 50) sind erst in VBE 3.0 definiert.
 
 Von diesen Einträgen sind einige besonders wichtig:
 
@@ -159,7 +173,7 @@ Nachdem man nun die gewünschte Grafikmodusnummer hat, muss man nur noch in dies
 
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
-*{{{1}}}*
+*Tatsächlich beschreiben (wobei man es eigentlich nie braucht)*
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
@@ -240,6 +254,6 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 8522; parent 8447; 2010-10-03T17:50:43Z -->
+<!-- MediaWiki page 2303; revision 8528; parent 8522; 2010-10-03T18:17:19Z -->
