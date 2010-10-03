@@ -103,9 +103,7 @@ Die Werte für CC und LD müssen ggf. angepasst werden, so dass sie auf einen Co
 Nach einem Aufruf von *make* solltest Du jetzt eine Datei *kernel* vorfinden. Jetzt müssen wir ihn nur noch irgendwie ausführen. Dazu gibt es mehrere Möglichkeiten:
 
 - qemu kann ab Version 0.11 Multiboot-Kernel direkt laden. *qemu -kernel kernel* bringt unseren Kernel zur Ausführung und schreibt ein wunderschönes Hello World in die linke obere Ecke. Den Rest des Bildschirms zu löschen haben wir leider vergessen, so dass das über irgendwelche BIOS-Meldungen geschrieben wird.
-- Jeder beliebige Emulator kann von Disketten-Images booten, z.B. qemu mit *qemu -fda floppy.img*. Wir brauchen also ein Diskettenimage, das GRUB und unseren Kernel enthält. Dazu gibt es folgende Artikel in diesem Wiki:
-  - [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen") (für Linux)
-  - GRUB-Image erstellen (Windows)
+- Jeder beliebige Emulator kann von Disketten-Images booten, z.B. qemu mit *qemu -fda floppy.img*. Wir brauchen also ein Diskettenimage, das GRUB und unseren Kernel enthält. Dazu gibt es den Artikel zu [GRUB legacy](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-legacy "GRUB") in diesem Wiki.
 - Ein echter PC und eine echte Floppy geht natürlich auch. Dazu entweder das Image erstellen und auf Diskette schreiben (z.B. mit *dd* oder *rawrite*) oder direkt eine GRUB-Diskette nehmen und den Kernel darauf kopieren
 
 Wenn wir nicht mit qemu 0.11 direkt booten, sondern ein Diskettenimage (bzw. eine echte Diskette) benutzen, begrüßt uns nach dem Booten GRUB (jedenfalls, wenn keine menu.lst angelegt wurde). Der Kernel kann dann folgendermaßen gestartet werden:
@@ -220,6 +218,6 @@ Den Sourcecode zu diesem und den folgenden Teilen der Tutorialreihe kann man [hi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8474/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 7627; parent 7599; 2010-04-25T16:40:38Z -->
+<!-- MediaWiki page 1897; revision 8474; parent 7627; 2010-10-03T10:04:45Z -->
