@@ -120,7 +120,18 @@ Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_
 - Es gibt Systeme die nicht von ElTorito-CDs booten können. Abhilfe schafft hier manchmal, statt ElTorito die Floppyemulation zum Booten zu verwenden. Einfach ein Floppyimage mit allen benötigten Treibern erstellen, welches dann von CD weiterlädt. Das CD-Image hierfür wird dann via`mkisofs -b floppy.img -o cdrom.iso cdrom_files/`  
   erstellt. **ACHTUNG**: Man braucht wenn man nicht alles im Speicher hat wirklich eigene Treiber, das Floppy-Image ist ab Protected Mode verloren (es werden Interrupts umgeleitet).
 
-### Beispielkonfigurationsdatei
+### Konfigurationsdatei
+
+#### Wichtige Befehle
+
+| Befehl | Beschreibung |
+| ----------------------------------- | --------------------------------------------------------------------------------------- |
+| title \<NAME\> | Der name wird im Auswahlmenu beim Booten angezeigt. |
+| kernel \</pfad/zum/kernel/datei\> | Läd den angegebenen Kernel |
+| mudule \</pfad/zum/modul/datei\> | Läd das angegebene Modul in den Speicher und trägt es in die Multiboot modulliste ein |
+| boot | Sagt Grub das er jetzt in den Kernel springen soll. |
+
+#### Beispielkonnfigurationsdatei
 
 ` title OS_Name kernel /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
 
@@ -255,6 +266,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8476; parent 8475; 2010-10-03T11:51:55Z -->
+<!-- MediaWiki page 1567; revision 8478; parent 8476; 2010-10-03T12:10:41Z -->
