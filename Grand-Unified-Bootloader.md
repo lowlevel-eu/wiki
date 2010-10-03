@@ -1,11 +1,11 @@
 # Grand Unified Bootloader
 
 | Allgemeines |  |
-| --------------- | -------------------------------------------------------------- |
+| --------------- | -------------------------------------------------- |
 | Name: | GRand Unified Bootloader |
 | Entwickler: | \- |
 | Akt. Version: | 0.97 (GRUB legacy)<br>1.98 (GRUB2) |
-| Lizenz: | GNU GPL Version 2 (GRUB legacy)<br>GNU GPL Version 3 (GRUB2) |
+| Lizenz: | GNU GPL V 2 (GRUB legacy)<br>GNU GPL V 3 (GRUB2) |
 | Plattform: | Unix |
 | Homepage |  |
 
@@ -177,6 +177,6 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8453/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8453; parent 8452; 2010-10-03T09:08:56Z -->
+<!-- MediaWiki page 1567; revision 8454; parent 8453; 2010-10-03T09:09:31Z -->
