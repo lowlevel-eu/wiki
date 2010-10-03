@@ -36,11 +36,9 @@ Anders als die x86-Architektur verfügt der ARM über einen Drei-Register-Befehl
 
 ### Register
 
-Es stehen 15 Allzweckregister zur Verfügung (ähnlich \*ax-Register der x86-Prozessoren): r0 bis r14. das Register r13 wird allerdings standardmäßig als Stackpointer genutzt und das Registger r14 als „Link-Register“, in welchem die Rücksprungadresse bei Prozeduraufrufen gespeichert wird. Das Register r15 dient als „Programmzähler“. Daneben gibt es ein Register namens CPSR (Current Program Status Register), in welchem Informationen wie der aktuelle Programm-Status gespeichert werden.
+Es stehen 15 Allzweckregister zur Verfügung (ähnlich \*ax-Register der x86-Prozessoren): r0 bis r14. das Register r13 wird allerdings standardmäßig als Stackpointer genutzt und das Registger r14 als „Link-Register“, in welchem die Rücksprungadresse bei Prozeduraufrufen gespeichert wird. Das Register r15 dient als „Programmzähler“. Daneben gibt es ein Register namens CPSR (Current Program Status Register), in welchem Flags sowie Informationen wie das aktuelle Privileglevel stehen.
 
 Die Register r13, r14 und das Statusregister werden „gespiegelt“, sodass man sich bei einer Exception und der dazugehörigen Behandlung nicht um die Sicherung des Stackpointers und des Instruction-Pointers kümmern muss.
-
-  
 
 ## Prozessor-Modi
 
@@ -71,6 +69,6 @@ In jedem Modus hat der gerade auführende Code andere Privilegien, sofern er nic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8481/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 7648; parent 7646; 2010-05-03T14:52:37Z -->
+<!-- MediaWiki page 2101; revision 8481; parent 7648; 2010-10-03T12:42:47Z -->
