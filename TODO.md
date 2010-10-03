@@ -1,12 +1,14 @@
 # TODO
 
+- Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
+
 ## Überarbeiten
 
-- Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 - [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
 - [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") bedarf wahrscheinlich der Überarbeitung (stilistisch)
 - [GRUB#GRUB 2](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-2 "GRUB"): Sowohl Diskettenimage als auch CD-Image scheint nicht wirklich zu tun
+- [Floppy Disk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
 
 ## Magazin ausschlachten
 
@@ -16,24 +18,21 @@
 ## Erweitern
 
 - [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung"): Buddy?
+- [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
+- [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
+- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
+- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
+- [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
+- [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
 - [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting")
   - du wolltest eine IDT/GDT laden und es gibt Exceptions? Registerdump des Emulators IDTR und GDTR (Adresse und Größe) überprüfen
   - bitte Liste erweitern
     - Mich würde viel mehr interessieren, wo man die Grenze setzt zwischen Kinderkram und interessantem/nützlichem Troubleshooting?
-- [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
-- [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
 - [Linux Artikel erweitern](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
   - Was wäre denn speziell gewünscht? Über Linux könnte man halt Bücher füllen.
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
   - Welcher Thread? Der hier: [http://forum.lowlevel.eu/index.php?topic=1787.0](https://lowlevel-eu.github.io/forum/topics/1787/index.html) Steht im Artikel unter Links.
     - Ja. Wobei bei den 4 Möglichkeiten von bluecode noch eine fehlt: der Thread der einen/mehrere Service(s) anbieten will wartet (blockierend per Syscall) einfach auf ankommende Anfragen, so ähnlich wie bei TCP-Server-Sockets. Die Anfrage könnte dann entweder im Thread selber bearbeitet werden (womit dann keine weiteren Anfragen parallel bearbeitet werden können) oder es wird ein Worker-Thread erstellt/aktiviert (wobei dann die Variante mit den OS-gemanagten-PopUp-Threads wieder interessanter klingt weil damit im Service eine Ebene weg fällt).
-- [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
-- [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
-- Dateisysteme
-  - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
-  - UDF
-- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
-- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
   - logischer Adressierungsmodus
   - [Benutzer:Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") glaubt, dass in der SMP-Spec irgendwas dazu steht wie die PIC mit dem Zeuch verbunden ist bzw. verbunden sein kann
 - irgendwo edge- vs. level-triggered Interrupts besprechen
@@ -46,9 +45,7 @@
         - 3DNow! ist eher bedeutungslos, von SSE überholt und wird hoffentlich nicht mehr eingesetzt, da es nur unter AMD CPUs läuft
   - Liste der Hardware die sonst noch zu einem x86-System gehört
 - [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): SSE und FPU Register in [FPU (x86)](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)") und [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") oder so verschieben
-- [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet") Netzwerkkarte
-- [Floppy Disk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
-- [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")
+- [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
 
 ## Kleinigkeiten
 
@@ -56,7 +53,18 @@
 
 ## Neu erstellen
 
-- irgendwas zu QEMU und GDB, primär wie man beides zusammen verwendet
+- [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table)
+- [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
+- [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
+- UDF
+- Debuggen mit Qemu und GDB
+- [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
+- [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")
+- [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
+- [APM](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "APM")
+- [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")
+- [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")
+- RaWrite: evtl. mit Commands usw.
 - Entwicklungsumgebungen - Woraus sollte sie bestehen, welche Programme gibt es für einen Verwendungszweck - gesonderte Programmvorstellungen, vllt. Empfehlungen wären gut! Die unterschiedlichen Entwicklungsplattformen (Linux, Windows, ...) sollten schon aufgeführt sein.
   - Teilweise erledigt: [Editoren](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor") sind schon abgedeckt.
 - ~~Interne Darstellung der Zahlen, Darstellungsmöglichkeiten negativer Zahlen, Aufbau von Gleitkommazahlen (IEEE)~~
@@ -74,26 +82,7 @@ Was meinst du damit? Soll das eine Anleitung werden, wie man Datenblätter ließ
 
 Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgehoben
 
-- ~~[USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")~~ und alles drumherum (~~[UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI")~~, [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI"), [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI"), vielleicht ja auch [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI"))
-  - Selbst eingetragen, nun löffel ich die Suppe auch selbst aus. Wer helfen kann und will, ist natürlich herzlich eingeladen! ;-) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 01:21, 6. Mär. 2010 (CET)
-- APM, und vielleicht als Beispiel wie man damit einen PC herunterfährt
-  - Wäre ACPI nicht besser? Dazu gibt es im OS-Dev-Forum immerhin ein Beispiel (dazu könnte man ja einfach einen Link im ACPI-Artikel setzen): [\[1\]](http://forum.osdev.org/viewtopic.php?f=1&t=16990&p=151565) --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 14:47, 24. Feb. 2010 (CET)
-  - Im Real Mode erledigt fehlt nur noch im Protected Mode --Thylôn 12:32, 1. Apr. 2010 (CEST)
-- Mich würde mal interessieren, wie man ein Programm für das eigenen OS portiert. Also mit einer Anleitung, wie man das dan compilern muss usw. --user94 21:14, 8. Mär. 2010 (CET)
-  - Wie sowas funktioniert dürfte sehr stark von Deinem OS abhängen. Allgemeine Anleitungen sind da IMHO unmöglich. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 17:16, 9. Mär. 2010 (CET)
-
-Ich mein, man hat ja eine libc oder so was ähnliches. Und wie kann man damit dann z.B. [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") compilern? Weil da steht ja, dass man nicht viel dazu braucht.--user94 19:20, 9. Mär. 2010 (CET)
-
-Na ja, bei FASM linkt man halt einfach die [libc-Objektdatei](http://flatassembler.net/fasm-1.69.12.tar.gz) gegen die eigene libc.a. Bei anderen Sachen ist es aber eben um einiges komplizierter und weil es bei FASM so einfach ist, denke ich nicht, dass sich da eine Seite lohnt (wogegen es bei anderen Sachen eben, wie von Erik beschrieben, zu betriebssystemspezifisch ist). --[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 20:30, 9. Mär. 2010 (CET)
-
-- Möglicherweise lohnt es sich in jeweils einem Artikel zu beschreiben, wie man häufig verwendete Komponenten portiert. Zum Beispiel Compiler, Shells, oder Standard-Bibliotheken. lbuild ist sicherlich auch ein guter Ansatzpunkt. Weil da vermutlich keine Copy&Paste-Anleitung entstehen kann, könnte man das ganze als mehr oder weniger allgemein gehaltene Erfahrungsberichte halten, wie es sie teilweise auch auf osdev.org gibt. --Jidder 01:22, 28. Mär. 2010 (CET)
-
-Zu Programmen die configure/make verwenden und sich an POSIX halten könnte man sicherlich ein bisschen was sagen. Aber sobald man die Anwendung wirklich ändern muss zum portieren wird es sehr schwierig.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 19:21, 1. Apr. 2010 (CEST)
-
-- RaWrite: evtl. mit Commands usw.
 - Variable Sektor-Größen bei Massenspeichern (Block-Devices). Dafür dürfte sich wohl kein eigener Artikel lohnen aber es sollte in einigen Artikeln berücksichtigt werden, z.B. könnten sich einige Dateisystem-Strukturen ändern wenn sie auf größere Sektoren "skaliert" werden (zumindest bei den komplexeren Dateisystemen, also nicht bei FAT). Auch müsste ein OS mit verschiedenen Sektorgrößen von verschiedenen Massenspeichern gleichzeitig umgehen können. "Variabel" deshalb weil ich nicht glaube, das wenn die HDD-Hersteller erst mal damit angefangen haben an der Sektorgröße zu drehen, das dann bei 4k wieder Schluss ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:40, 16. Apr. 2010 (CEST)
-- Das neue/moderne [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table) könnte mal hier im Wiki berücksichtigt werden. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:40, 16. Apr. 2010 (CEST)
-  - Da GUID nur eine Untermenge von EFI ist, das am besten auch. --[Dem epOS sein Linus](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 15:49, 19. Sep. 2010 (CEST)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -104,6 +93,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8480/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8483/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8480; parent 8479; 2010-10-03T12:28:54Z -->
+<!-- MediaWiki page 1518; revision 8483; parent 8480; 2010-10-03T13:48:00Z -->
