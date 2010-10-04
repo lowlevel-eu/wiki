@@ -57,8 +57,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 ## Neu erstellen
 
-Assembler Tutorial - Were ich warscheinlich selber machen --Programm Noob 22:15, 4. Okt. 2010 (CEST)
-
+- Assembler Tutorial - Werde ich warscheinlich selber machen --Programm Noob 22:15, 4. Okt. 2010 (CEST)
 - [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table)
 - [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
 - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
@@ -101,6 +100,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8543; parent 8539; 2010-10-04T20:15:45Z -->
+<!-- MediaWiki page 1518; revision 8544; parent 8543; 2010-10-04T20:16:19Z -->
