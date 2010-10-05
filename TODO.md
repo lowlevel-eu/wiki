@@ -63,7 +63,8 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
 - Ext
 - UDF
-- Debuggen mit Qemu und GDB
+- Debuggen mit Qemu und [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB")
+  - Gehört das nicht eher zu "Erweitern"? Wenn ich die Zeit finde werde ich mich mir das mit Qemu mal angucken... --[RedEagle](https://lowlevel-eu.github.io/wiki/pages/1491/index.html "Benutzer:RedEagle") 15:34, 5. Okt. 2010 (CEST)
 - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
 - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")
 - [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
@@ -100,6 +101,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8544/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8553/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8544; parent 8543; 2010-10-04T20:16:19Z -->
+<!-- MediaWiki page 1518; revision 8553; parent 8544; 2010-10-05T13:34:17Z -->
