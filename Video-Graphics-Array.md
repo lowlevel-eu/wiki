@@ -12,7 +12,7 @@ Man könnte für jede Grafikkarte einen eigenen Treiber schreiben. Dann hätte m
 
 Die zweite Möglichkeit wären die [VESA BIOS Extensions](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VESA BIOS Extensions") (VBE). Diese unterstützen viel höhere Auflösungen und Farbtiefen als VGA mit seinen popeligen 640 mal 480 Pixeln bei 4 Bit (16 Farben) als Maximum. Der Nachteil dabei ist, dass man auf die Video-BIOS Routinen angewiesen ist, und damit den 16 Bit Real Mode benötigt. Die meisten von Euch haben wahrscheinlich schon den Protected Mode initialisiert (oder von Grub initialisieren lassen), Interrupts zum arbeiten gebracht und vielleicht sogar einen Speichermanager geschrieben. Der Wechsel in den Real Mode würde da vieles durcheinander bringen und viel einfacher sind die VBEs auch nicht zu benutzen, sodass man erst mal mit VGA anfangen kann.
 
-VGA wird von fast allen Grafikkarten unterstützt (Mir ist keine bekannt die VGA nicht unterstützt, aber ich denke Grafikkarten vor der Einführung von VGA dürften da Probleme haben... ;) ), bietet 256 KByte Speicher auf der Karte (kein direkter Zugriff, nur Memory Mapped IO (MMIO), später mehr dazu) und kann im Textmodus und dem Grafikmodus betrieben werden. Folgende Modi sind vom Standard vorgeschrieben: 720x400 Textmodus (80x25 Zeichen, ein Zeichen 9x16), 640x480 Textmodi (80x30 Zeichen, ein Zeichen 8x16), 320x200 bei 8 Bit Farbtiefe (palettenbasiert), 320x200 bei 16 Bit Farbtiefe, 640x480 mit 4 Bit Farbtiefe.
+VGA wird von fast allen Grafikkarten unterstützt (Mir ist keine bekannt die VGA nicht unterstützt, aber ich denke Grafikkarten vor der Einführung von VGA dürften da Probleme haben... ;) ), bietet 256 KByte Speicher auf der Karte (kein direkter Zugriff, nur Memory Mapped IO (MMIO), später mehr dazu) und kann im Textmodus und dem Grafikmodus betrieben werden. Folgende Modi sind vom Standard vorgeschrieben: 720x400 Textmodus (80x25 Zeichen, ein Zeichen 9x16), 640x480 Textmodi (80x30 Zeichen, ein Zeichen 8x16), 320x200 bei 8 Bit Farbtiefe (palettenbasiert), 640x480 mit 4 Bit Farbtiefe.
 
 ## Warnung!
 
@@ -57,6 +57,6 @@ Der Attribut-Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8537/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8555/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 8537; parent 8449; 2010-10-04T07:10:42Z -->
+<!-- MediaWiki page 1516; revision 8555; parent 8537; 2010-10-06T19:03:22Z -->
