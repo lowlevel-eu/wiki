@@ -41,7 +41,8 @@ Der Kernel wird auf monolithischer Basis aufgebaut werden. Derzeit ist der Kerne
 - GDT
 - IDT, ISR
 - PIC Remap
-- Keyboard-Treiber (wird derzeit fertiggestellt)
+- Keyboard-Treiber
+- Mini-Shell im Kernel
 
 ## Geplant
 
@@ -58,6 +59,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8558/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 8364; parent 8358; 2010-09-26T11:13:07Z -->
+<!-- MediaWiki page 2298; revision 8558; parent 8364; 2010-10-07T19:57:49Z -->
