@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev") |
 | Akt. Version: | aktuell keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 3 Klausel BSD |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [WTFPL](http://de.wikipedia.org/wiki/WTFPL#Lizenz) |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
@@ -31,6 +31,6 @@ Das OS wurde am 30.8.2010 begonnen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8408/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8584/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
 
-<!-- MediaWiki page 2270; revision 8408; parent 8217; 2010-09-28T19:19:51Z -->
+<!-- MediaWiki page 2270; revision 8584; parent 8408; 2010-10-09T20:57:06Z -->
