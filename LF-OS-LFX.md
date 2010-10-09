@@ -35,10 +35,10 @@ Der Header ist nur 256 Byte groß, also geht kaum Platz verloren.
 
 ------------------------------------------------------------------------
 
-Auf meiner Internetseite <http://littlefox.web-fuxx.de> werde ich demnächst eine Beispielimplementation in C++ veröffentlichen, fertig ist sie schon.
+Auf meiner Internetseite [http://littlefox.web-fuxx.de](http://littlefox.web-fuxx.de/phpBB3/viewtopic.php?p=56) gibt es eine Beispielimplementation in C++ mit Qt.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8562/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2315/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2315/index.html)
 
-<!-- MediaWiki page 2315; revision 8562; parent 0; 2010-10-09T10:32:08Z -->
+<!-- MediaWiki page 2315; revision 8563; parent 8562; 2010-10-09T11:06:18Z -->
