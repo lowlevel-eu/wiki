@@ -40,14 +40,14 @@ Folgende Features fehlen noch:
 
 - Dateizugriffe (Speichergeräte, Dateisysteme ...)
 - Klickibunti-Oberfläche
-- ein Teiberinterface (Planung bereits fertig)
+- ein Treiberinterface (Planung bereits fertig)
 
-Sollte es Fragen geben, können diese gerne im LF OS Forum gestellt werden. Die englische Version unter <http://www.lf-os.tk> spinnt manchmal etwas, die deutsche unter <http://littlefox.web-fuxx.de> funktioniert in der Regel.
+Sollte es Fragen geben, können diese gerne im LF OS Forum gestellt werden. Die englische Version unter <http://www.lf-os.tk> ~~spinnt manchmal etwas~~ (sollte behoben sein ...), die deutsche unter <http://littlefox.web-fuxx.de> funktioniert in der Regel.
 
 Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail](mailto:littlefox@web-fuxx.de) bei mir melden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8066/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8560/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 8066; parent 8061; 2010-08-13T18:24:51Z -->
+<!-- MediaWiki page 2267; revision 8560; parent 8066; 2010-10-09T10:09:10Z -->
