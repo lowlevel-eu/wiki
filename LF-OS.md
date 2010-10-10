@@ -46,10 +46,10 @@ Folgende Features fehlen noch:
 
 Sollte es Fragen geben, können diese gerne im LF OS Forum gestellt werden. Die englische Version unter <http://www.lf-os.tk> ~~spinnt manchmal etwas~~ (sollte behoben sein ...), die deutsche unter <http://littlefox.web-fuxx.de> funktioniert in der Regel.
 
-Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail](mailto:littlefox@web-fuxx.de) bei mir melden.
+Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail](mailto:littlefox@web-fuxx.de) bei mir melden. Ich werde wahrscheinlich nicht nein sagen, da ein wenig Unterstützung nicht schlecht wäre.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8561/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 8561; parent 8560; 2010-10-09T10:14:26Z -->
+<!-- MediaWiki page 2267; revision 8599; parent 8561; 2010-10-10T09:48:56Z -->
