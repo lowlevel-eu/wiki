@@ -25,6 +25,6 @@ Es wird von zwei Freunden geschrieben in den Sprachen Allegro C++, C und viellei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 8601; parent 8600; 2010-10-10T09:55:53Z -->
+<!-- MediaWiki page 2317; revision 8602; parent 8601; 2010-10-10T10:03:23Z -->
