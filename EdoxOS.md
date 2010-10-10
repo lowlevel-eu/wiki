@@ -21,10 +21,10 @@ Aktuell keine
 
 ## Das OS
 
-Es wird von zwei Freunden geschrieben in den Sprachen Allegro C++, C und vielleicht auch B. Sebastian schreibt den Kernel, Calvin den Anti-Virus Programm, Internetbrowser(vielleicht) und das Setup. Die erste Version des OS wird im Dezember oder im Januar fertig sein. Dieses Betriebssystem wird eine Grafische Benutzeroberfläche besitzen, die vollständig in Allegro C++ geschrieben werden soll. Funktionen wie Taschenrechner Funktionen werden in C geschrieben. Leider wird es nach neusten Angaben nicht frei zu Verfügung stehen.
+Es wird von zwei Freunden geschrieben in den Sprachen Allegro C++, C und vielleicht auch B. Sebastian schreibt den Kernel, Calvin das Anti-Virus Programm, Internetbrowser(vielleicht) und das Setup. Die erste Version des OS wird im Dezember oder im Januar fertig sein. Dieses Betriebssystem wird eine Grafische Benutzeroberfläche besitzen, die vollständig in Allegro C++ geschrieben werden soll. Funktionen wie Taschenrechner Funktionen werden in C geschrieben. Leider wird es nach neusten Angaben nicht frei zur Verfügung stehen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 8593; parent 8592; 2010-10-10T09:22:42Z -->
+<!-- MediaWiki page 2317; revision 8600; parent 8593; 2010-10-10T09:53:43Z -->
