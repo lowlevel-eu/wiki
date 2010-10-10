@@ -257,9 +257,7 @@ Folgende Teile müssen noch implementiert werden:
 
 ## Siehe auch
 
-- \[[\[1\]](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside)\] - ein tieferer Einblick in die Funktionsweise
-
-  
+- [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") - ein tieferer Einblick in die Funktionsweise
 
 ## Weblinks
 
@@ -273,6 +271,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8589/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8589; parent 8263; 2010-10-09T23:09:46Z -->
+<!-- MediaWiki page 2095; revision 8603; parent 8589; 2010-10-10T10:16:15Z -->
