@@ -32,6 +32,8 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 
 ## Geplant
 
+- VFS
+- Multitasking/Usermode
 - Floppy/Festplatten Zugriff
 - CDI?
 - entsprechende Befehle in der Komzei
@@ -40,12 +42,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 
 ## Realease
 
-Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.03 fertig, steht aber nicht zum Download, da noch interaktionslos.
-
-## Versionsdiferenzierung
-
-- Je neues, stabiles Realese mit den Geplanten Features wird die Versionsnummer um 0.01 angehoben.
-- Bei abschluss einer "Komponenten Reihe" (z.B. Komzei), also vollständiges erfüllen meiner Erwartungen, wird die Versions Nummer um 1.00 erhöht.
+Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.05 fertig, steht aber nicht zum Download, da noch weitesgehend witzlos.
 
 ## History/Archiv
 
@@ -56,7 +53,7 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
   - IDT
   - PIC
 - v0.03 - 10.04.10
-  - CMOS (-\>Systemzeit
+  - CMOS (-\>Systemzeit)
   - überarbeitung von GDT
 - v0.04 - 30.05.10
   - PMM
@@ -74,6 +71,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 7733; parent 7732; 2010-06-07T16:19:42Z -->
+<!-- MediaWiki page 1771; revision 8616; parent 7733; 2010-10-11T09:59:30Z -->
