@@ -12,7 +12,7 @@
 
 [The C++ Standards Committee](http://www.open-std.org/jtc1/sc22/wg21/)
 
-**C++** wurde 1983 von Bjarne Stroustoup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
+**C++** wurde 1983 von Bjarne Stroustrup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
 
 ## Überblick
 
@@ -205,6 +205,6 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7959/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 7959; parent 7831; 2010-07-21T19:56:22Z -->
+<!-- MediaWiki page 1486; revision 8628; parent 7959; 2010-10-12T12:38:08Z -->
