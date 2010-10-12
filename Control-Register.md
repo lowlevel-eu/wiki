@@ -13,16 +13,16 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 | PG | CD | NW | *Reserviert* | AM |  | WP | *Reserviert* | NE | ET | TS | EM | MP | PE |
 
 - PE - *Protection Enbale* Flag schaltet den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") ein bzw. aus (Genaueres siehe [hier](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode"))
-- MP - Mit dem *Monitor Coprocessor* Flag kann festgelegt werden ob bei Gesetztem TS-Flag der Aufruf von WAIT/FWAIT einen Exception auslösen oder nicht (bei gesetztem MP-Flag wird die Exception ausgelöst).
+- MP - Mit dem *Monitor Coprocessor* Flag kann festgelegt werden, ob bei gesetztem TS-Flag der Aufruf von WAIT/FWAIT einen Exception auslöst oder nicht (bei gesetztem MP-Flag wird die Exception ausgelöst).
 - EM - Bei gesetztem *Emulation* Flag löst die CPU für jede [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU")-Instruktion eine [\#NM-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus. Für Multimedia-Instruktionen wird eine [\#UD-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") ausgelöst. Damit wird es dem Betriebssystem ermöglicht eine FPU zu emulieren. (WAIT/FWAIT lösen keine Exception aus)
 - TS - Das *Task Switched* Flag wird bei einem [Hardware-Taskswitch](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") von der CPU gesetzt und kann für Software Multitasking auch von Hand gesetzt werden. Wenn bei gesetztem TS-Flage versucht wird eine FPU- oder Multimedia-Instruktion auszuführen, dann löst die CPU eine \#NM-Exception aus. Dadurch können die FPU- bzw. Multimedia-Register, die bei normalen Taskswitchs nicht beachtet werden, entsprechend gesichert und geladen werden bevor sie verwendet werden.
 - ET - *Extension Type*
 - NE - *Numeric Error*
-- WP - Mittels *Write Protect* Flag kann festgelegt werden ob Schreibgeschützte Pages auch vor dem Kernel(Ring0) geschützt sind (bei gesetztem WP-Flag sind die Pages auch vor dem Kernel sicher).
+- WP - Mittels *Write Protect* Flag kann festgelegt werden ob schreibgeschützte Pages auch vor dem Kernel (Ring0) geschützt sind (bei gesetztem WP-Flag sind die Pages auch vor dem Kernel sicher).
 - AM - *Alignment Mask*
 - NW - Im Long Mode löst das Setzen des *Not Write-throgh Disable* eine [\#GP-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus (außer wenn Caching mittels CD-Flag ganz abgeschaltet ist). Im Legacy Mode wird mit gesetztem Flag Writethroug-Caching erzwungen, unabhängig vom PWT-Flag in den Paging Strukturen.
-- CD - Das *Cache Disable* Flag steuert das Caching der CPU. Mit dem setzten dieses Flags wird das Caching der CPU abgeschaltet und die den Cache betreffenden Flags in möglichen Paging-Strukturen werden ignoriert.
-- PG - Mit dem *Paging* Flag kann der [Paging-Meschanismus](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") ein- bzw. ausgeschaltet werden.
+- CD - Das *Cache Disable* Flag steuert das Caching der CPU. Mit dem Setzten dieses Flags wird das Caching der CPU abgeschaltet und die den Cache betreffenden Flags in möglichen Paging-Strukturen werden ignoriert.
+- PG - Mit dem *Paging* Flag kann der [Paging-Mechanismus](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") ein- bzw. ausgeschaltet werden.
 
 ## CR2
 
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8631/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 8158; parent 7061; 2010-09-05T14:33:31Z -->
+<!-- MediaWiki page 1610; revision 8631; parent 8158; 2010-10-12T17:27:42Z -->
