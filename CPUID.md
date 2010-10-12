@@ -1016,7 +1016,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 4 | Unterstützt den **RDTSC** Befehl und CR4.TSD-Bit |
 | 3 | Unterstützt 4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 2 | Unterstützt I/O-Breakpoints, das CR4.DE-Bit und die DR4- und DR5-Register |
-| 1 | Unterstützt den [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") |
+| 1 | Unterstützt Erweiterungen des [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") (z. B. Virtual Interrupts). |
 | 0 | Besitzt eine [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU"), die den x87-Befehlssatz implementiert |
 
 ## Funktion 0x0000_0002
@@ -3021,6 +3021,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7779/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8629/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 7779; parent 7662; 2010-07-02T08:50:55Z -->
+<!-- MediaWiki page 1739; revision 8629; parent 7779; 2010-10-12T16:27:02Z -->
