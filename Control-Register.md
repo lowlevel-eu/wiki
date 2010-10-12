@@ -1,6 +1,6 @@
 # Control Register
 
-Die Control Register sind spezielle Register der [IA-32](https://github.com/lowlevel-eu/wiki/wiki/X86 "IA-32") und [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64") Architekturen, die den Betriebsmodus und einige Eigenschaften der CPU festlegen. In der AMD64-Architektur haben sie eine Breite von 64 Bit, wobei die unteren 32 Bit, den der IA-32 Architektur entsprechen. Der Zugriff auf diese Register ist wie bei den Segment Registern auch nur mit einem Umweg über Allzweckregister möglich.
+Die Control Register sind spezielle Register der [IA-32](https://github.com/lowlevel-eu/wiki/wiki/X86 "IA-32") und [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64") Architekturen, die den Betriebsmodus und einige Eigenschaften der CPU festlegen. In der AMD64-Architektur haben sie eine Breite von 64 Bit, wobei die unteren 32 Bit, den der IA-32 Architektur entsprechen. Der Zugriff auf diese Register ist wie bei den Segmentregistern auch nur mit einem Umweg über Allzweckregister möglich.
 
 ## CR0
 
@@ -13,7 +13,7 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 | PG | CD | NW | *Reserviert* | AM |  | WP | *Reserviert* | NE | ET | TS | EM | MP | PE |
 
 - PE - *Protection Enbale* Flag schaltet den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") ein bzw. aus (Genaueres siehe [hier](https://github.com/lowlevel-eu/wiki/wiki/Umschalten-in-Protected-Mode "Umschalten in Protected Mode"))
-- MP - Mit dem *Monitor Coprocessor* Flag kann festgelegt werden, ob bei gesetztem TS-Flag der Aufruf von WAIT/FWAIT einen Exception auslöst oder nicht (bei gesetztem MP-Flag wird die Exception ausgelöst).
+- MP - Mit dem *Monitor Coprocessor* Flag kann festgelegt werden, ob bei gesetztem TS-Flag der Aufruf von WAIT/FWAIT eine Exception auslöst oder nicht (bei gesetztem MP-Flag wird die Exception ausgelöst).
 - EM - Bei gesetztem *Emulation* Flag löst die CPU für jede [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU")-Instruktion eine [\#NM-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus. Für Multimedia-Instruktionen wird eine [\#UD-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") ausgelöst. Damit wird es dem Betriebssystem ermöglicht eine FPU zu emulieren. (WAIT/FWAIT lösen keine Exception aus)
 - TS - Das *Task Switched* Flag wird bei einem [Hardware-Taskswitch](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") von der CPU gesetzt und kann für Software Multitasking auch von Hand gesetzt werden. Wenn bei gesetztem TS-Flage versucht wird eine FPU- oder Multimedia-Instruktion auszuführen, dann löst die CPU eine \#NM-Exception aus. Dadurch können die FPU- bzw. Multimedia-Register, die bei normalen Taskswitchs nicht beachtet werden, entsprechend gesichert und geladen werden bevor sie verwendet werden.
 - ET - *Extension Type*
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8631/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 8631; parent 8158; 2010-10-12T17:27:42Z -->
+<!-- MediaWiki page 1610; revision 8632; parent 8631; 2010-10-12T17:47:06Z -->
