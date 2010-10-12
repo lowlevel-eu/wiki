@@ -126,27 +126,27 @@ Bit 7 ist auf 0 zu setzen, Bits 11 bis 15 sind reserviert (und undefiniert) und 
 
 #### Base-Address-Register
 
-Die Base-Address-Register dienen dem Zuweisen von Adressen an die Ressourcen des PCI-Gerätes. Ein PCI-Gerät kann bis zu 6, bei Bridges nur maximal 2, Ressourcen anbieten dehnen das BIOS oder OS eine Adresse zuweist über welche diese Ressourcen dann ansprechbar sind. Als Ressourcen können Speicherbereiche aber auch IO-Bereiche angeboten werden, der IO-Adress-Raum wird aber nicht auf jeder Plattform unterstützt, eigentlich nur beim PC. Die IO-Ressourcen haben verschiedene Nachteile, u.a. sind sie langsamer da es keine Burst-Zugriffe gibt und es gibt Einschränkungen bei der Adressenraumgröße. Speicher-Ressourcen können neben den einfachen 32 Bit-Adressen auch 64 Bit-Adressen nutzen, wofür dann aber 2 hintereinander liegende BARs für eine Ressource benutzt werden müssen, das folgende BAR enthält dann die oberen 32 Bit der Basis-Adresse.
+Die Base-Address-Register dienen dem Zuweisen von Adressen an die Ressourcen des PCI-Gerätes. Ein PCI-Gerät kann bis zu 6, bei Bridges nur maximal 2, Ressourcen anbieten dehnen das BIOS oder OS eine Adresse zuweist über welche diese Ressourcen dann ansprechbar sind. Als Ressourcen können Speicherbereiche aber auch IO-Bereiche angeboten werden, der IO-Adress-Raum wird aber nicht auf jeder Plattform unterstützt, eigentlich nur beim PC. Die IO-Ressourcen haben verschiedene Nachteile, u.a. sind sie langsamer da es keine Burst-Zugriffe gibt und es gibt Einschränkungen bei der Adressenraumgröße. Speicher-Ressourcen können neben den einfachen 32 Bit-Adressen auch 64 Bit-Adressen nutzen, wofür dann aber 2 hintereinander liegende BARs für eine Ressource benutzt werden müssen, das folgende BAR enthält dann die oberen 32 Bit der Basis-Adresse.
 
-In den unteren 2 Bit (IO-Ressourcen) oder 4 Bit (Speicher-Ressourcen) eines BAR ist codiert was für eine Ressource dieses BAR anbietet, diese Bits sind immer fest und können nicht verändert werden. Die restlichen Bits können für die Basis-Adresse benutzt werden wobei für die Basis-Adresse als ganzes die unteren 2 oder 4 Bits als 0 angenommen werden. Daraus ergibt sich das IO-Ressourcen immer mindestens 4 Bytes und Speicher-Ressourcen immer mindesten 16 Bytes groß sein müssen. Um größere Ressourcen anzubieten können oberhalb der fest definierten unteren Bits noch weitere Bits fest auf 0 geklemmt sein. Um z.B. einen 256 Byte große Speicher-Ressource anzubieten müssen dann auch die Bits 4 bis 7 fest auf 0 geklemmt sein. Wenn dann das BIOS oder OS das BAR mit lauter 1en beschreibt und anschließend zurück ließt, was den Wert 0xFFFFFF00 ergibt, kann es ermitteln welche Bits zur Konfiguration der Basis-Adresse zur Verfügung stehen. Wenn z.B. der Wert 0xFFFF0000 von einem BAR für eine 32 Bit-Speicher-Ressource gelesen wird bedeutet dass das die Bits 16 bis 31 für die Basis-Adresse zu Verfügung stehen und diese Speicher-Ressource 64 kBytes groß ist. Daraus das die Bits 0 bis 15 der Basis-Adresse 0 sind ergibt sich das diese Speicher-Ressource auch an einer 64 kByte Grenze ausgerichtet sein muss. Da immer mindestens 1 Bit für die Basis-Adresse beschreibbar sein muss können mit 32 Bit-Adresse maximal 2 GByte große Ressourcen angeboten werden. Die angebotenen Ressourcen müssen immer eine Zweierpotenz als Größe haben und sind dann auch entsprechend ausgerichtet.
+In den unteren 2 Bit (IO-Ressourcen) oder 4 Bit (Speicher-Ressourcen) eines BAR ist codiert was für eine Ressource dieses BAR anbietet, diese Bits sind immer fest und können nicht verändert werden. Die restlichen Bits können für die Basis-Adresse benutzt werden wobei für die Basis-Adresse als ganzes die unteren 2 oder 4 Bits als 0 angenommen werden. Daraus ergibt sich das IO-Ressourcen immer mindestens 4 Bytes und Speicher-Ressourcen immer mindesten 16 Bytes groß sein müssen. Um größere Ressourcen anzubieten, können oberhalb der fest definierten unteren Bits noch weitere Bits fest auf 0 geklemmt sein. Um z. B. eine 256 Byte große Speicher-Ressource anzubieten müssen dann auch die Bits 4 bis 7 fest auf 0 geklemmt sein. Wenn dann das BIOS oder OS das BAR mit lauter 1en beschreibt und anschließend zurück ließt, was den Wert 0xFFFFFF00 ergibt, kann es ermitteln welche Bits zur Konfiguration der Basis-Adresse zur Verfügung stehen. Wenn z. B. der Wert 0xFFFF0000 von einem BAR für eine 32 Bit-Speicher-Ressource gelesen wird bedeutet dass das die Bits 16 bis 31 für die Basis-Adresse zu Verfügung stehen und diese Speicher-Ressource 64 kBytes groß ist. Daraus das die Bits 0 bis 15 der Basis-Adresse 0 sind ergibt sich das diese Speicher-Ressource auch an einer 64 kByte Grenze ausgerichtet sein muss. Da immer mindestens 1 Bit für die Basis-Adresse beschreibbar sein muss, können mit einer 32 Bit-Adresse maximal 2 GByte große Ressourcen angeboten werden. Die angebotenen Ressourcen müssen immer eine Zweierpotenz als Größe haben und sind dann auch entsprechend ausgerichtet.
 
-Nur alleine durch lesen der BAR-Register kann man nicht auf die Größe der betreffenden Ressourcen schließen. Zum kompletten analysieren der BARs müssen diese auch immer beschrieben werden. Darüber hinaus haben es die PCI-Erfinder auch versäumt wenigstens dafür zu sorgen das man nur durch lesen den genauen Type des BARs erkennen kann. Falls die unteren 4 Bit alle 0 sind ist es entweder ein unbenutzter BAR oder eine non-prefetchable 32 Bit-Speicher-Ressource, genau kann man das erst ermitteln indem man prüft ob die restlichen Bits beschreibbar sind.
+Nur alleine durch lesen der BAR-Register kann man nicht auf die Größe der betreffenden Ressourcen schließen. Zum kompletten analysieren der BARs müssen diese auch immer beschrieben werden. Darüber hinaus haben es die PCI-Erfinder auch versäumt wenigstens dafür zu sorgen das man nur durch lesen den genauen Type des BARs erkennen kann. Falls die unteren 4 Bit alle 0 sind ist es entweder ein unbenutzter BAR oder eine non-prefetchable 32 Bit-Speicher-Ressource, genau kann man das erst ermitteln indem man prüft ob die restlichen Bits beschreibbar sind.
 
-##### Base-Address-Register für Speicher-Ressourcen mit 32 Bit Adresse
+##### Base-Address-Register für Speicher-Ressourcen mit 32 Bit-Adresse
 
 | 31-4 | 3 | 2-1 | 0 |
 | -------------- | ----- | ----- | ----- |
 | Base Address | P | Typ | 0 |
 
-Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt und die Werte 00 und 01 in den Bits 2-1 signalisieren das es sich um einen 32Bit-BAR handelt. Die Bits 31-4 geben die Basis-Adressbits 31-4 der Speicher-Ressource an.
+Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt und die Werte 00 und 01 in den Bits 2-1 signalisieren das es sich um einen 32 Bit-BAR handelt. Die Bits 31-4 geben die Basis-Adressbits 31-4 der Speicher-Ressource an.
 
-##### Base-Address-Register für Speicher-Ressourcen mit 64 Bit Adresse
+##### Base-Address-Register für Speicher-Ressourcen mit 64 Bit-Adresse
 
 | 63-4 | 3 | 2-1 | 0 |
 | -------------- | ----- | ----- | ----- |
 | Base Address | P | Typ | 0 |
 
-Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt und der Wert 10 in den Bits 2-1 signalisiert das es sich um einen 64-Bit-BAR handelt. Die Bits 63-4 geben die Basis-Adressbits 63-4 der Speicher-Ressource an. Das Prefetchable-Bit muss bei 64 Bit-Speicher-Ressourcen eigentlich immer fest auf 1 geklemmt sein, die PCI-Spezifikation verlangt das zwar nicht explizit aber bei Non-Prefetchable-Speicher macht eine 64 Bit-Adresse keinen Sinn da PCI-to-PCI-Bridges Zugriffe auf Non-Prefetchable-Speicher nur mit einer 32 Bit-Adresse weiterleiten können (siehe Bytes 0x020 bis 0x023 im Type 0x01 Konfigurations-Adressraum).
+Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um eine Speicher-Ressource handelt und der Wert 10 in den Bits 2-1 signalisiert das es sich um einen 64 Bit-BAR handelt. Die Bits 63-4 geben die Basis-Adressbits 63-4 der Speicher-Ressource an. Das Prefetchable-Bit muss bei 64 Bit-Speicher-Ressourcen eigentlich immer fest auf 1 geklemmt sein, die PCI-Spezifikation verlangt das zwar nicht explizit aber bei Non-Prefetchable-Speicher macht eine 64 Bit-Adresse keinen Sinn da PCI-to-PCI-Bridges Zugriffe auf Non-Prefetchable-Speicher nur mit einer 32 Bit-Adresse weiterleiten können (siehe Bytes 0x020 bis 0x023 im Type 0x01 Konfigurations-Adressraum).
 
 ##### Base-Address-Register für IO-Ressourcen
 
@@ -154,7 +154,7 @@ Das Bit 0 signalisiert mit seinem Wert 0 das es sich bei dem betreffenden BAR um
 | -------------- | ----- | ----- |
 | Base Address | R | 1 |
 
-Das Bit 0 signalisiert mit seinem Wert 1 das es sich bei dem betreffenden BAR um eine IO-Ressource handelt. Das Bit 1 ist reserviert und muss beim lesen ignoriert und beim schreiben mit 0 gelöscht werden. Die Bits 31-2 geben die Basis-Adressbits 31-2 der IO-Ressource an. Die IO-Ressource muss also mindestens 4 Byte groß sein. Oft sind die Bits 31-16 fest auf 0 geklemmt so das nur 16 Bit-IO-Adressen benutzt werden können, auf der PC-Plattform unterstützen die CPUs sowieso nur 16 Bit-IO-Adressen so das normalerweise daraus kein Problem entsteht.
+Das Bit 0 signalisiert mit seinem Wert 1 das es sich bei dem betreffenden BAR um eine IO-Ressource handelt. Das Bit 1 ist reserviert und muss beim lesen ignoriert und beim schreiben mit 0 gelöscht werden. Die Bits 31-2 geben die Basis-Adressbits 31-2 der IO-Ressource an. Die IO-Ressource muss also mindestens 4 Byte groß sein. Oft sind die Bits 31-16 fest auf 0 geklemmt so das nur 16 Bit-IO-Adressen benutzt werden können, auf der PC-Plattform unterstützen die CPUs sowieso nur 16 Bit-IO-Adressen so das normalerweise daraus kein Problem entsteht.
 
 ##### Beispiel-Code zur BAR-Analyse
 
@@ -636,6 +636,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 7989; parent 7983; 2010-07-23T08:08:33Z -->
+<!-- MediaWiki page 1626; revision 8630; parent 7989; 2010-10-12T16:44:04Z -->
