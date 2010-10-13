@@ -62,6 +62,10 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
   - rudimentärer Tastatur-"treiber"
   - Paging
   - Heap
+- v0.06 - 13.10.10
+  - VFS/initrd
+  - KB-Treiber überarbeitet
+  - Bugfix in der Heapverwaltung
 
 ## Screenshot
 
@@ -71,6 +75,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8616/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8634/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 8616; parent 7733; 2010-10-11T09:59:30Z -->
+<!-- MediaWiki page 1771; revision 8634; parent 8616; 2010-10-13T01:42:48Z -->
