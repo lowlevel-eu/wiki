@@ -6,7 +6,7 @@ Ein weiterer Vorteil besteht darin, dass die „realen“ Dateisysteme nicht wir
 
 ## Aufbau
 
-Ein VFS lässt sich am besten als Baum implementieren. Dabei ist jedes Element (Node) mit den "umliegenden" Nodes verkettet. folgendermaßen könnte ein Ausschnitt aus einem VFS aussehen, die Nodes können (und sollten) mehr Elemente als die dargestellten enhalten:  
+Ein VFS lässt sich als Baum implementieren. Dabei ist jedes Element (Node) mit den "umliegenden" Nodes verkettet. folgendermaßen könnte ein Ausschnitt aus einem VFS aussehen, die Nodes können (und sollten) mehr Elemente als die dargestellten enhalten:  
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/728be1d284a54fc9fc41.png" width="560" height="280" alt="VFS.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/728be1d284a54fc9fc41.png)  
 Weitere Elemente eines Nodes könnten zum Beispiel ein (Funktions-)Pointer auf einen Treiber, eine Inode-Nummer, oder einen Zugriffszähler enthalten. Weiterhin wäre es sinnvoll zu speichern welche Art von Node vorliegt, eine Datei, ein Ordner, ein Gerätetreiber...
 
@@ -17,6 +17,6 @@ Weitere Elemente eines Nodes könnten zum Beispiel ein (Funktions-)Pointer auf e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2019/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2019/index.html)
 
-<!-- MediaWiki page 2019; revision 8645; parent 7160; 2010-10-13T12:47:41Z -->
+<!-- MediaWiki page 2019; revision 8646; parent 8645; 2010-10-13T12:53:33Z -->
