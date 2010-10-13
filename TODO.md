@@ -25,7 +25,8 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
   - Hab ich auf der Diskussionsseite zu ISA nicht klar erklärt warum es in heutigen PCs (der letzten \>10 Jahre) kein ISA-PnP mehr gibt? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:43, 4. Okt. 2010 (CEST)
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") RealMode
   - Ich bin mit der Gliederung des Artikels überhaupt nicht einverstanden, muss man extra zwei Tutorials zur Textausgabe in den Artikel packen? Reicht es nicht, einfach zu Beschreiben, wie man das macht? Muss man für alles ein Händchen-Halt-Tutorial schreiben? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:49, 3. Okt. 2010 (CEST)
-- [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung"): Buddy?
+- ~~[Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung"): Buddy?~~
+  - Buddy hinzugefügt. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 13:57, 13. Okt. 2010 (CEST)
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
   - Sollte man das nicht selbst anhand des Artikels rausfinden können? —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
   - Vieleicht nur ein kurzer Umriss was in welcher Reihenfolge zu tun ist? --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
@@ -101,6 +102,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8640/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8640; parent 8638; 2010-10-13T11:36:47Z -->
+<!-- MediaWiki page 1518; revision 8642; parent 8640; 2010-10-13T11:57:52Z -->
