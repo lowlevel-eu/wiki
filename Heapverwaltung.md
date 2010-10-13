@@ -26,7 +26,10 @@ Alternativ kann man auch eine Liste aus **freiem und belegtem** Speicher machen.
 
 ## Buddy-Speicherverwaltung
 
-*siehe* [Wikipedia: Buddy-Speicherverwaltung](http://de.wikipedia.org/wiki/Buddy-Speicherverwaltung)
+Die Buddy-Speicherverwaltung ist sehr einfach zu implementieren: der freie Speicher wird zu Beginn in Blöcke der größe 2<sup>n</sup> aufgeteilt.  
+Bei einer Anfrage nach Speicher wird die angeforderte Größe auf die nächste Zweierpotenz 2<sup>n</sup>aufgerundet. Ist kein Block dieser Größe vorhanden, wird nach einem Block der Größe 2<sup>n+1</sup> gesucht, der dann halbiert wird, wenn kein Block der Größe 2<sup>n+1</sup> vorhanden ist, wird nach 2<sup>n+2</sup> gesucht, usw.  
+Bei freigabe eines Blocks wird geprüft ob er direkt mit einem freien Block gleicher größe benachbart ist, die dann zu einem Block von 2<sup>n+1</sup> Bytes zusammen gefügt werden.  
+Nachteile sind u.U. ein große Platzverschwendung, bspw. wenn die angeforderte Größe 2<sup>n+1</sup>+1 beträgt, und eine mögliche starke Fragmentierung des Speichers.
 
 ## Andere Implementierung portieren
 
@@ -41,6 +44,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8343; parent 8335; 2010-09-21T17:26:27Z -->
+<!-- MediaWiki page 2229; revision 8641; parent 8343; 2010-10-13T11:56:04Z -->
