@@ -29,10 +29,10 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 - Keyboard
 - Paging
 - Heap
+- VFS/initrd
 
 ## Geplant
 
-- VFS
 - Multitasking/Usermode
 - Floppy/Festplatten Zugriff
 - CDI?
@@ -75,6 +75,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8634/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 8634; parent 8616; 2010-10-13T01:42:48Z -->
+<!-- MediaWiki page 1771; revision 8635; parent 8634; 2010-10-13T01:43:48Z -->
