@@ -1,12 +1,14 @@
 # Virtuelles Dateisystem
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
 Ein virtuelles [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (VFS &#150; Virtual File System) abstrahiert verschiedene reale Dateisysteme. Dadurch muss ein Programm, das auf Dateien zugreift, nicht wissen, auf welchem Dateisystem sie liegen.
 
 Ein weiterer Vorteil besteht darin, dass die „realen“ Dateisysteme nicht wirklich real sein müssen. Sie müssen nicht wirklich auf einem physischen Medium existieren, sie können auch selbst „virtuell“ sein (wie zum Beispiel das Linux-Dateisystem procfs).
+
+## Aufbau
+
+Ein VFS lässt sich am besten als Baum implementieren. Dabei ist jedes Element (Node) mit den "umliegenden" Nodes verkettet. folgendermaßen könnte ein Ausschnitt aus einem VFS aussehen, die Nodes können (und sollten) mehr Elemente als die dargestellten enhalten:  
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/728be1d284a54fc9fc41.png" width="560" height="280" alt="VFS.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/728be1d284a54fc9fc41.png)  
+Weitere Elemente eines Nodes könnten zum Beispiel ein (Funktions-)Pointer auf einen Treiber, eine Inode-Nummer, oder einen Zugriffszähler enthalten. Weiterhin wäre es sinnvoll zu speichern welche Art von Node vorliegt, eine Datei, ein Ordner, ein Gerätetreiber...
 
 ## Weblinks
 
@@ -15,6 +17,6 @@ Ein weiterer Vorteil besteht darin, dass die „realen“ Dateisysteme nicht wir
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2019/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2019/index.html)
 
-<!-- MediaWiki page 2019; revision 7160; parent 7159; 2010-02-22T21:16:50Z -->
+<!-- MediaWiki page 2019; revision 8645; parent 7160; 2010-10-13T12:47:41Z -->
