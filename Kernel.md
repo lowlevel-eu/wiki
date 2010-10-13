@@ -1,6 +1,6 @@
 # Kernel
 
-Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentraler Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt.
+Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt.
 
   
 
@@ -29,7 +29,7 @@ Folgende Kernelarten existieren:
 
 ### Monolithischer Kernel
 
-Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich Treiber für alle [Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware"), das virtuelle Dateisystem, Dateisystemtreiber und vieles mehr enthält. Diese Treiber können entweder fest in den Kernel einkompiliert sein oder zur Laufzeit ladbar sein, laufen aber immer im Kernelmode. Das Treiberinterface besteht somit aus normalen Funktionsaufrufen, was zu einem deutlichen Geschwindigkeitsvorteil führt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger und abgestürzte Module führen meist zu einem Absturz des gesamten Systems. Interprozesskommunikation spielt in einem solchen Kernel anfangs sicherlich erstmal eine untergeordnete Rolle, da die ges. Funktionalität direkt über den Kernel erreichbar ist.
+Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich Treiber für alle [Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware"), das virtuelle Dateisystem, Dateisystemtreiber und vieles mehr enthält. Diese Treiber können entweder fest in den Kernel einkompiliert sein oder zur Laufzeit ladbar sein, laufen aber immer im Kernelmode. Das Treiberinterface besteht somit aus normalen Funktionsaufrufen, was zu einem deutlichen Geschwindigkeitsvorteil führt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger, und abgestürzte Module führen meist zu einem Absturz des gesamten Systems. Interprozesskommunikation spielt in einem solchen Kernel anfangs sicherlich erstmal eine untergeordnete Rolle, da die gesamte Funktionalität direkt über den Kernel erreichbar ist.
 
 Das folgende Diagramm zeigt den groben Aufbau eines monolithischen Kernels:
 
@@ -87,6 +87,6 @@ Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Ska
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7501/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 7501; parent 7498; 2010-04-01T16:45:02Z -->
+<!-- MediaWiki page 1478; revision 8651; parent 7501; 2010-10-13T13:24:22Z -->
