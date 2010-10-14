@@ -55,7 +55,7 @@ In [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ether
 Bitte beachten: Wie bei vielen Netzwerkprotokollen wird auch bei IP Big-Endian verwendet.
 
 | Offset | Länge | Beschreibung |
-| ------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0x00 | 0,5 | Version (4 für IPv4) |
 | 0x00 + 1/2 | 0,5 | Länge des Headers in DWords (Also 5 (denn 5 \* 4B = 20B), wenn keine Optionen verwendet werden) |
 | 0x01 | 1 | Priorität (z. B. 0 (normal)) |
@@ -68,7 +68,7 @@ Bitte beachten: Wie bei vielen Netzwerkprotokollen wird auch bei IP Big-Endian v
 | 0x0C | 4 | IP des Absenders |
 | 0x10 | 4 | IP des Empfängers |
 | 0x14 | Länge des Headers - 20 | Hier können noch Optionen angegeben werden, wie das Paket zu behandeln ist. Die Größe dieses Feldes muss immer ohne Rest durch vier teilbar sein (da die Länge des Headers in Viererschritten angegeben wird), daher muss es gegebenenfalls mit Nullbytes aufgefüllt werden. |
-| 0x14+? | ?? | Die Nutzdaten |
+| 0x14+? | Gesamtlänge - Länge des Headers | Die Nutzdaten |
 
 Im Typfeld des Ethernetpaketes muss übrigens 0x0800 für IP eingetragen werden.
 
@@ -96,6 +96,6 @@ Hier noch eine C-Struktur für einen IP-Paketheader, funktionsfähig zumindest f
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1970/index.html)
 
-<!-- MediaWiki page 1970; revision 8655; parent 7131; 2010-10-14T12:21:22Z -->
+<!-- MediaWiki page 1970; revision 8656; parent 8655; 2010-10-14T12:23:14Z -->
