@@ -4,7 +4,23 @@ Die Textausgabe ist für so gut wie jedes Programm eine wichtige Möglichkeit, d
 
 ## Realmode
 
-/// ToDo
+Im Realmode macht das BIOS diese Arbeit. Um ein Zeichen zu schreiben reicht folgender ASM-Code (für NASM): \<asm\> sti  ;Falls Interrupts aus sind, schalte Interrupts an mov ah, 0x0E  ;Wir wollen schreiben mov bh, 0x00  ;Auf den Bildschirm mov al, "T"  ;Das zu schreibende Zeichen int 0x10  ;Ausführen \</asm\> Um einen ganzen Text zu schreiben gibt es folgenden Trick: \<asm\> Schreibe:  ;Hier fängt die Funktion Schreibe an sti  ;Wenn Interrupts aus sind, dann schalte sie an lodsb  ;Zeichen laden nach al cmp al, 0x00  ;Wenn 0-Byte ... je Schreibeende;... dann beende Schreibefunktion
+
+Wenn nicht, dann
+
+mov ah, 0x0E  ;Wir wollen schreiben mov bh, 0x00  ;Auf den Bildschirm int 0x10  ;Jetzt jmp Schreibe  ;Mache nächstes Zeichen Schreibeende:  ;Bei Stringende wird hierher gesprungen: ret  ;Die Funktion beenden \</asm\>
+
+Dann kann man einfach einen Text schreiben: \<asm\> mov si, Text  ;Den Text unten call Schreibe  ;schreiben
+
+Der Text  
+
+Text db "Text im Realmode schreiben geht!",13,10,0
+
+,13,10 macht eine Neue Zeile
+
+,0 sagt das es hier aufhört (sonst würde zuviel geschrieben werden)
+
+\</asm\>
 
 ## Protected Mode
 
@@ -103,6 +119,6 @@ Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 8523; parent 8495; 2010-10-03T17:53:07Z -->
+<!-- MediaWiki page 1549; revision 8658; parent 8523; 2010-10-16T04:29:25Z -->
