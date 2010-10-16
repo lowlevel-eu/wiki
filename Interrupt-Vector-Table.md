@@ -31,7 +31,7 @@ Nach dem [Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-
 
 Beispielsweise will man wahrscheinlich eine "Division durch 0" (Interrupt 0) anders als das BIOS behandeln (z.B. den momentanen Prozess beenden und zur Shell zurückkehren):
 
-\<asm\> xor ax, ax mov es, ax
+\<asm\> xor ax, ax  ;ax = 0x00 (mov ax, 0x00 wäre ein Byte mehr) mov es, ax  ;es = ax (also 0)
 
 IRQs deaktivieren
 
@@ -66,6 +66,6 @@ sti \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 4865; parent 4784; 2009-07-30T14:02:16Z -->
+<!-- MediaWiki page 1540; revision 8660; parent 4865; 2010-10-16T04:35:10Z -->
