@@ -22,6 +22,8 @@ Text db "Text im Realmode schreiben geht!",13,10,0
 
 \</asm\>
 
+Hinweis: Leider kann man nicht die Textfarbe umstellen. :(
+
 ## Protected Mode
 
 Zur Ausgabe von Text gibt es einen 4 kB großen Speicher an der Adresse 0xB8000. Dieser Speicher kann linear angesprochen werden und benutzt 2 Byte pro Zeichen auf dem Bildschirm. Es ergeben sich also 80 Spalten (Zeichen pro Zeile) und 25 Zeilen, insgesamt also 2000 gleichzeitig darstellbare Zeichen.
@@ -119,6 +121,6 @@ Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 8658; parent 8523; 2010-10-16T04:29:25Z -->
+<!-- MediaWiki page 1549; revision 8659; parent 8658; 2010-10-16T04:32:02Z -->
