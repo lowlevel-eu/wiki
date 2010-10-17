@@ -4,7 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/62bf341e1dffc350b6ff.png" width="256" height="256" alt="Infortus.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/62bf341e1dffc350b6ff.png) |  |
 | Entwickler: | Sebi2020 |
-| Akt. Version: | 0.0.02 prealpha |
+| Akt. Version: | 0.0.07 prealpha |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -91,6 +91,6 @@ Beim Springen nach Phase 2 hängt das System manchmal. (festgestellt unter VBox)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 8663; parent 7069; 2010-10-17T09:54:45Z -->
+<!-- MediaWiki page 2117; revision 8664; parent 8663; 2010-10-17T09:55:55Z -->
