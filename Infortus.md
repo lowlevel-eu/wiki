@@ -33,8 +33,9 @@ Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660
   - Interrupts
   - Timer
   - rudimentäres Multitasking
-  - *Rudimentäre Speicherverwaltung*
-- **Implementierung des Keyboard-Treibers**
+  - **Verbesserung des Multitasking/Neuschreiben**
+  - ***Rudimentäre Speicherverwaltung***
+- Implementierung des Keyboard-Treibers
 - Implementierung des CD-Treibers
 - Implementierung von ISO9660
 
@@ -70,11 +71,11 @@ Erfolgreich getestet Version 0.00.02:
 ## Download
 
 Dies ist der Downloadlink zu einer Zip-Datei, die ein CD ISO-Image enthält:  
-Aktuelle Version 0.00.02-prealpha:  
-<http://sourceforge.net/projects/infortus-os/files/binary/prealpha-0-00-02/Infortus%20LiveCD%200-00-02%20prealpha.zip/download>
+Aktuelle Version 0.00.07-prealpha:  
+<http://sourceforge.net/projects/infortus-os/files/binary/prelapha-0-00-07/Infortus-x86-LiveCD%200-00-07%20prealpha.gz/download>
 
 Die Sourcefiles findet man unter:  
-<http://sourceforge.net/projects/infortus-os/files/source/prealpha-0-00-02/src-prealpha-0-00-02.zip/download>
+<http://sourceforge.net/projects/infortus-os/files/source/prealpha-0-00-07/src-prealpha-0-00-07.zip/download>
 
 ## Bekannte Bugs
 
@@ -90,6 +91,6 @@ Beim Springen nach Phase 2 hängt das System manchmal. (festgestellt unter VBox)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 7069; parent 6990; 2010-02-14T16:33:46Z -->
+<!-- MediaWiki page 2117; revision 8663; parent 7069; 2010-10-17T09:54:45Z -->
