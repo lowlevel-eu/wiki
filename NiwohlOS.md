@@ -115,7 +115,7 @@ Die [niwohlosen Developers](http://gitorious.org/+niwohlose-developers) sind das
 
 #### SHyx0rmZ alias HardcoreProgger
 
-[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. Er wird oft als „Hardcore-Informatiker“ bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **drei** Kerneln ausgestattet, um aus jedem erdenklichen System das höchste Maß an Leistung herauszukitzeln. Des Weiteren schrieb er Vortex, einen Loader, der unter anderem in Qultics eingesetzt wird und womöglich von Microsoft patentiert wird. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
+[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. Er wird oft als „Hardcore-Informatiker“ bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **fünf** Kerneln ausgestattet, um aus jedem erdenklichen System das höchste Maß an Leistung herauszukitzeln. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
 
 #### DickHuuhn alias DickHuuhn
 
@@ -271,6 +271,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8666/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8603; parent 8589; 2010-10-10T10:16:15Z -->
+<!-- MediaWiki page 2095; revision 8666; parent 8603; 2010-10-18T13:35:52Z -->
