@@ -63,16 +63,12 @@ In einem Mikrokernel müssen Prozesse zwangsläufig über eine andere Art als de
 
 niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf Basis von XML und [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC"). Das funktioniert in etwa so:
 
-- Prozess A sendet Signal
-  - Prozess A erzeugt einen PopUp-Thread, welcher die XML-Datei erstellt
-  - PopUp-Thread sendet Daten an Handler im Kernel über niwoio
+- Prozess A erzeugt eine X(HT)ML-Datei mit allen nötigen Daten und schickt sie per niwoio an den Kernel
 - Handler im Kernel empfängt XML-Datei
   - Handler liest die Daten per niwoio
   - Daten werden ausgewertet und Signal wird an zu empfangenden Prozess geschickt
 - Prozess B erhält Signal
-  - Kernel unterbricht Prozess B
-
-  
+  - Kernel erzeugt Popup-Thread im Prozess B, der die XML-Datei empfängt
 
 ## Weblinks
 
@@ -83,6 +79,6 @@ niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf B
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8668/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8669/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
 
-<!-- MediaWiki page 2269; revision 8668; parent 8087; 2010-10-18T13:57:15Z -->
+<!-- MediaWiki page 2269; revision 8669; parent 8668; 2010-10-18T15:08:50Z -->
