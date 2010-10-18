@@ -57,6 +57,23 @@ Paging wurde bereits im niwohunloader aktiviert, genauso wie PAE.
 
   
 
+## [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
+
+In einem Mikrokernel müssen Prozesse zwangsläufig über eine andere Art als den Hauptspeicher kommunizieren, da jeder Prozess in einem anderen Adressraum kommuniziert. Darum wurde das Konzept der Interprozesskommunikation entwickelt, mit welchem Prozesse in der Lage sind, Daten auch über Adressräume hinweg auszutauschen.
+
+niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf Basis von XML und [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC"). Das funktioniert in etwa so:
+
+- Prozess A sendet Signal
+  - Prozess A erzeugt einen PopUp-Thread, welcher die XML-Datei erstellt
+  - PopUp-Thread sendet Daten an Handler im Kernel über niwoio
+- Handler im Kernel empfängt XML-Datei
+  - Handler liest die Daten per niwoio
+  - Daten werden ausgewertet und Signal wird an zu empfangenden Prozess geschickt
+- Prozess B erhält Signal
+  - Kernel unterbricht Prozess B
+
+  
+
 ## Weblinks
 
 - [Repository](http://git.niwohlos.de)
@@ -66,6 +83,6 @@ Paging wurde bereits im niwohunloader aktiviert, genauso wie PAE.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8087/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8668/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
 
-<!-- MediaWiki page 2269; revision 8087; parent 8085; 2010-08-18T14:02:21Z -->
+<!-- MediaWiki page 2269; revision 8668; parent 8087; 2010-10-18T13:57:15Z -->
