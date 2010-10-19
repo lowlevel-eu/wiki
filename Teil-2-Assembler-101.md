@@ -85,7 +85,7 @@ An dieser Stelle ein kurzer Abriss über die von x86 unterstützten Befehle. Ich
 | Befehl | Erklärung |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | mov *Quelle, Ziel* | Kopiert den Wert von Quelle nach Ziel |
-| lea *Speicher, Ziel* | Lädt die Adresse des Speichers nach Ziel (*lea (%eax), %edx* ist dasselbe wie *mov %eax, %edx*) |
+| lea *Speicher, Ziel* | Lädt die Adresse des Speichers nach Ziel (*mov (%eax), %edx* ist dasselbe wie *lea %eax, %edx*) |
 | push *Operand* | Legt den Wert auf den Stack; d.h. esp wird um die Größe des Operanden verringert und der Operand an die neue Speicheradresse von esp kopiert. |
 | pop *Operand* | Holt den Wert vom Stack; d.h. der Wert an der Adresse von esp wird zum Operanden kopiert und esp um die Größe des Operanden erhöht. |
 
@@ -243,6 +243,6 @@ Bei gcc sollte die Assemblerdatei unbedingt die Endung .S (mit großem S) haben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6981/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8674/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 6981; parent 5561; 2010-01-26T20:11:31Z -->
+<!-- MediaWiki page 1918; revision 8674; parent 6981; 2010-10-19T16:27:27Z -->
