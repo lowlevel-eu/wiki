@@ -97,7 +97,7 @@ Nachdem das Überprüfen des Systems abgeschlossen ist, müssen wir es kompilier
 
     fabian@fabian:~/Desktop/kvirc-3.2.0/kvirc-3.2.0$ make
 
-Nun kompiliert er alles. Danach „make install“ als root. Denn wird er das Programm ausführbar machen. Einfach danach \[ALT\]+\[F2\] da denn „kvirc“ eingeben und KVIRC startet.
+Nun kompiliert er alles. Danach „make install“ als root. Dann wird er das Programm ausführbar machen. Einfach danach \[ALT\]+\[F2\] da denn „kvirc“ eingeben und KVIRC startet.
 
 Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-unter-windows)
 
@@ -107,6 +107,6 @@ Aufzeichnungen der Channelgespräche sind genauso wie einige Statistiken stetig 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 8533; parent 8530; 2010-10-03T20:36:01Z -->
+<!-- MediaWiki page 1463; revision 8673; parent 8533; 2010-10-19T15:41:47Z -->
