@@ -49,7 +49,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - NE2000-Netzwerkadapter sowohl für ISA als auch PCI
 - [Realtek 8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")
 - Intel eepro100 und e1000
-- AMD PCnet
+- [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
 - virtio (Paravirtualisiertes Netzwerk)
 
 #### Sound
@@ -80,6 +80,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8672/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 8672; parent 8261; 2010-10-19T09:45:33Z -->
+<!-- MediaWiki page 1505; revision 8675; parent 8672; 2010-10-19T16:32:28Z -->
