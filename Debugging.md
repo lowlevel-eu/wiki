@@ -24,7 +24,9 @@ Falls man mit Fehlern wie Pagefaults, GPFs oder anderen Exceptions kämpft, ist 
 
 Bei bochs kann dazu der [integrierte Debugger](https://github.com/lowlevel-eu/wiki/wiki/Bochs-Debugger "Bochs Debugger") benutzt werden.
 
-QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen, wie z. B. dem GNU Debugger. Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den „-d“-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein „-d int“, um alle Interrupts aufzuzeichnen.
+QEMU stellt keinen eigenen Debugger zur Verfügung, ermöglicht aber eine Verbindung mit einem externen, wie z. B. dem GNU Debugger. Dies ist mit der Option „-s“ möglich, dazu sollte man „-S“ verwenden, da das emulierte OS sonst sofort startet. Verwendet wird TCP-Port 1234. Um den GDB anzuhängen, startet man GDB mit dem Kernel-Binary, also z. B. „*gdb bin/kernel.bin*“. Darauf gibt man auf der GDB-Kommandozeile „*target remote :1234*“ ein, um GDB mit QEMU zu verbinden. Ein „*cont*“ führt die Ausführung fort. Breakpoints können mit „*break datei:zeile*“ gesetzt werden, können aber auch auf Funktionen („*break \_foo*“) gesetzt werden.
+
+Oft braucht man aber in Verbindung mit QEMU gar keine komplexen Debug-Funktionen, wenn man nur an die Adresse kommen muss, an der eine Exception auftritt, es den „-d“-Schalter anbietet, um verschiedene Dinge zu loggen. Meist benötigt man ein „-d int“, um alle Interrupts aufzuzeichnen.
 
 ## Exception-Meldungen
 
@@ -46,6 +48,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 8262; parent 7686; 2010-09-18T15:03:26Z -->
+<!-- MediaWiki page 1544; revision 8679; parent 8262; 2010-10-20T14:11:49Z -->
