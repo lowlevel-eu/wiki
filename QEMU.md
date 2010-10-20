@@ -70,8 +70,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging")
 
-  
-
 ## Weblinks
 
 - [QEMU Homepage](http://www.qemu.org)
@@ -80,6 +78,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 8680; parent 8678; 2010-10-20T14:14:23Z -->
+<!-- MediaWiki page 1505; revision 8681; parent 8680; 2010-10-20T14:14:32Z -->
