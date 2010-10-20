@@ -633,9 +633,10 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 ## Weblinks
 
 - [Linux PCI ID Repositorium](http://pci-ids.ucw.cz/) - Enthält viele VendorIDs und die dazugehörigen DeviceIDs
+- [PCI Vendor and Device Lists](http://www.pcidatabase.com/index.php) - Enthält ebenfalls eine größe Liste Vendor- und DeviceIDs
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8684/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 8639; parent 8630; 2010-10-13T07:26:56Z -->
+<!-- MediaWiki page 1626; revision 8684; parent 8639; 2010-10-20T14:46:50Z -->
