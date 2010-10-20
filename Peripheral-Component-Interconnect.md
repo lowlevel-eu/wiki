@@ -632,11 +632,11 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ## Weblinks
 
-- [Linux PCI ID Repositorium](http://pci-ids.ucw.cz/) - Enthält viele Vendor- und die dazugehörigen Device-IDs
-- [PCI Vendor and Device Lists](http://www.pcidatabase.com/index.php) - Enthält ebenfalls eine große Liste Vendor- und Device-IDs
+- [Linux PCI ID Repositorium](http://pci-ids.ucw.cz/) – Enthält viele Vendor- und die dazugehörigen Device-IDs
+- [PCI Vendor and Device Lists](http://www.pcidatabase.com/index.php) – Enthält ebenfalls eine große Liste Vendor- und Device-IDs
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 8685; parent 8684; 2010-10-20T15:28:01Z -->
+<!-- MediaWiki page 1626; revision 8686; parent 8685; 2010-10-20T15:28:26Z -->
