@@ -384,7 +384,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ## Classcodes
 
-| Class | Beschreibung |
+| Baseclass | Beschreibung |
 | ----------- | ------------------------------------------------------------------------------------------------------------------ |
 | 0x00 | [Alle Geräte die gebaut wurden bevor Classcodes eingeführt wurden](#class-0x00---pre-20) |
 | 0x01 | [Massenspeicher](#class-0x01---massenspeicher) |
@@ -637,6 +637,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 8686; parent 8685; 2010-10-20T15:28:26Z -->
+<!-- MediaWiki page 1626; revision 8692; parent 8686; 2010-10-21T09:03:31Z -->
