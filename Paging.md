@@ -58,7 +58,7 @@ Ein Pagedirectory enthält 1024 Eintrage à vier Byte. Ein Pagedirectory-Eintrag
 | 7 | Gibt die Größe der Page an. 0 steht für 4 kB, 1 für 4 MB (oder 2 MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4-MB-Pages) oder PAE-Bit (2-MB-Pages) gesetzt ist. |
 | 8 | Wird ignoriert |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12 &#150; 31 | Zeiger zu einer Pagetable |
+| 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable |
 
 ## Page Tables
 
@@ -76,7 +76,7 @@ Eine Page Table enthält 1024 Einträge à vier Byte. Jeder Eintrag zeigt auf ei
 | 7 | Normalerweise 0. |
 | 8 | Wenn G gesetzt ist, wird der TLB (s. u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z. B. Kernel) |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12 &#150; 31 | Physische Adresse eines Pageframes |
+| 12 &#150; 31 | 12 &#150; 31 der physischen Adresse eines Pageframes |
 
 ## Translation Lookaside Buffer
 
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7784/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 7784; parent 7783; 2010-07-03T22:31:46Z -->
+<!-- MediaWiki page 1496; revision 8693; parent 7784; 2010-10-23T16:08:49Z -->
