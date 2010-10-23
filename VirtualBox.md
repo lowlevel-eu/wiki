@@ -4,7 +4,7 @@
 | ------------------------ | ----------------------------------------------- |
 | Name: | VirtualBox |
 | Entwickler: | Innotek |
-| Akt. Version: | 3.1.0<br>(Stand 30.11.2009) |
+| Akt. Version: | 3.2.10<br>(Stand 24.10.2010) |
 | Lizenz: | Proprietär, GPL 2 (2 Versionen) |
 | Betriebssystem(e): | Linux, Windows, OS X, Solaris |
 | Virtualisiertes System |  |
@@ -55,6 +55,6 @@ Befehlssatzerweiterungen für Gäste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 6587; parent 6536; 2009-12-22T12:38:17Z -->
+<!-- MediaWiki page 1553; revision 8696; parent 6587; 2010-10-23T23:48:52Z -->
