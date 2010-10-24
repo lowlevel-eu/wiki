@@ -31,6 +31,7 @@ Wenn du unseren CGI-IRC schonen willst, und trotzdem keinen Client installieren 
 - Rufe [diese Seite](http://chat.mibbit.com) auf.
 - Im Feld *IRC* wählst du im Dropdownmenü den Punkt *euIRC \[webirc\]*.
 - Als Channel muss natürlich *\#lost* gesetzt sein.
+- Solltest du deinen Nicknamen mit mit einem Passwort geschützt haben (NickServ), klicke auf *Auth* neben dem Dropdown für den IRC Server aus und gebe dein Passwort in das entsprechende Passwort-Feld ein.
 - Dann gib noch im Feld *Nick* deinen Wunschnick an, und mit einem Klick auf *Go* geht es los!
 
 ## IRC-Start mit KVirc unter Windows
@@ -107,6 +108,6 @@ Aufzeichnungen der Channelgespräche sind genauso wie einige Statistiken stetig 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 8673; parent 8533; 2010-10-19T15:41:47Z -->
+<!-- MediaWiki page 1463; revision 8699; parent 8673; 2010-10-24T16:37:09Z -->
