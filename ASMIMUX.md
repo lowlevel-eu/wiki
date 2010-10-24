@@ -32,10 +32,10 @@ Der Kernel kann bisher folgendes:
 - Paging (rudimentär)
 - Exceptions
 - IRQs
-- Tastaturt
+- Tastaturtreiber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8697/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
 
-<!-- MediaWiki page 2332; revision 8697; parent 0; 2010-10-24T13:08:32Z -->
+<!-- MediaWiki page 2332; revision 8698; parent 8697; 2010-10-24T13:12:21Z -->
