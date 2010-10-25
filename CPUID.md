@@ -1025,7 +1025,7 @@ Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschli
 
 Gibt verschiedene Informationen über den Cache und den TLB aus.
 
-Die ersten 8 Bit von EAX (also AL) enthalten die Anzahl Ausführungen, die benötigt werden um den kompletten Cache des Prozessors auszulesen. Die restlichen Bits von EAX, EBX, ECX und EDX enthalten die Cache-Deskriptoren.
+Die ersten 8 Bit von EAX (also AL) enthalten die Anzahl Ausführungen, die benötigt werden um alle Cache-Deskriptoren des Prozessors auszulesen. Die restlichen Bits von EAX, EBX, ECX und EDX enthalten die Cache-Deskriptoren.
 
 **Hinweis:**
 
@@ -3021,6 +3021,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8712/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 8695; parent 8694; 2010-10-23T23:41:34Z -->
+<!-- MediaWiki page 1739; revision 8712; parent 8695; 2010-10-25T07:57:04Z -->
