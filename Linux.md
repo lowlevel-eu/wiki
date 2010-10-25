@@ -41,9 +41,10 @@ Linux hat eine Eigenart von Unix übernommen: Alles ist eine Datei. Das Diskette
 - [Linux-Crossreference, Sourcecode online anschauen und untersuchen](http://lxr.linux.no)
 - [Linus' Git-Tree, "offizieller" Hauptentwicklungszweig](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary)
 - [DistroWatch, Infos zu allen möglichen Distributionen von Linux (und BSD)](http://distrowatch.com)
+- [Linuysyscallreferenz](http://syscalls.kernelgrok.com/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7509/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8713/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 7509; parent 6581; 2010-04-03T22:18:29Z -->
+<!-- MediaWiki page 1641; revision 8713; parent 7509; 2010-10-25T20:31:34Z -->
