@@ -15,7 +15,7 @@ Der Compiler ist verfügbar unter <http://jidder.de/lost/files/crosstools-comple
 Ein neuerer Compiler Build ist [hier](http://pnoob.bplaced.net/downloads/i586-elf.rar) zu finden. Darin enthalten sind
 
 - GCC 4.5.1 (C -C++-Compiler)
-- Binutils 20.20
+- Binutils 2.20
 
 ## Installation
 
@@ -86,6 +86,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8721/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8722/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 8721; parent 8353; 2010-10-27T13:17:36Z -->
+<!-- MediaWiki page 1450; revision 8722; parent 8721; 2010-10-27T13:22:56Z -->
