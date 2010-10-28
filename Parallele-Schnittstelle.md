@@ -38,7 +38,7 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | 15 | 32 | Error or Fault | Gerät-\>PC | Drucker-Störung |
 | 18 | 33 | Extern GND oder NC | Gerät-\>PC | Masse oder nicht belegt |
 | \- | 34 | NC | \- | Keine Verbindung |
-| \- | 35 | \#5V oder NC | \- | \#5V oder nicht belegt |
+| \- | 35 | \#5V oder NC | \- | +5V oder nicht belegt |
 | 17 | 36 | Select In | PC-\>Gerät | Online schalten |
 
 Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommunizieren.
@@ -143,6 +143,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7565/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8729/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 7565; parent 6940; 2010-04-13T11:07:46Z -->
+<!-- MediaWiki page 1996; revision 8729; parent 7565; 2010-10-28T15:36:36Z -->
