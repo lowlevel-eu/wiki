@@ -22,7 +22,7 @@ Text db "Text im Realmode schreiben geht!",13,10,0
 
 \</asm\>
 
-Hinweis: Leider kann man nicht die Textfarbe umstellen. :(
+Die Funktion INT 10/AH=0Eh erlaubt es nicht im Textmodus eine Farbe anzugeben.
 
 ## Protected Mode
 
@@ -121,6 +121,6 @@ Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8738/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 8659; parent 8658; 2010-10-16T04:32:02Z -->
+<!-- MediaWiki page 1549; revision 8738; parent 8659; 2010-10-29T20:18:00Z -->
