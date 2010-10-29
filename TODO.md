@@ -72,7 +72,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung des INIT Delivery Modes
 - [Parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle"): Erklären, wie man damit Daten Sendet.
-  - Dürfte recht einleuchtend sein: Man schickt Daten einfach an einen der LPT-Ports via outb oder einer äquivalenten Funktion. Aber ich kann's ja mal etwas ausführlicher für die Noobs unter uns machen ;-) --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:17, 29. Okt. 2010 (CEST)
+  - Ich mach's mal was ausführlicher. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:17, 29. Okt. 2010 (CEST)
 
 ## Neu erstellen
 
@@ -111,6 +111,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 8731; parent 8730; 2010-10-29T10:17:43Z -->
+<!-- MediaWiki page 1518; revision 8733; parent 8731; 2010-10-29T13:36:06Z -->
