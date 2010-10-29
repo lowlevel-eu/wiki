@@ -24,7 +24,7 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | 6 | 6 | D5 | PC-\>Gerät | Datenbit 4 |
 | 7 | 7 | D6 | PC-\>Gerät | Datenbit 5 |
 | 8 | 8 | D7 | PC-\>Gerät | Datenbit 6 |
-| 9 | 9 | DD8 | PC-\>Gerät | Datenbit 7 |
+| 9 | 9 | D8 | PC-\>Gerät | Datenbit 7 |
 | 10 | 10 | Acknowledge | Gerät-\>PC | Daten wurden übernommen (Handshake) |
 | 11 | 11 | Busy | Gerät-\>PC | Nicht empfangsbereit für neue Daten |
 | 12 | 12 | Paper Error | Gerät-\>PC | Kein Papier |
@@ -38,7 +38,7 @@ Für Drucker wurde die Centronics-Buchse entwickelt. Diese hat andere Betriebsmo
 | 15 | 32 | Error or Fault | Gerät-\>PC | Drucker-Störung |
 | 18 | 33 | Extern GND oder NC | Gerät-\>PC | Masse oder nicht belegt |
 | \- | 34 | NC | \- | Keine Verbindung |
-| \- | 35 | \#5V oder NC | \- | +5V oder nicht belegt |
+| \- | 35 | \#5V oder NC | \- | \#5V oder nicht belegt |
 | 17 | 36 | Select In | PC-\>Gerät | Online schalten |
 
 Somit ist es möglich, den Drucker über Ports anzusprechen und mit ihm zu kommunizieren.
@@ -143,6 +143,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8729/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 8729; parent 7565; 2010-10-28T15:36:36Z -->
+<!-- MediaWiki page 1996; revision 8732; parent 8729; 2010-10-29T12:35:48Z -->
