@@ -1,7 +1,7 @@
 # LF OS
 
 | LF OS (LittleFox' Operating System) |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | LittleFox |
 | Akt. Version: | 1.0 Alpha 5 / Kernel2 |
@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel (Mikromonolith ;)) |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | Nativ, DarkblackAPI |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), LFX (eigenes) |
+| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
@@ -50,6 +50,6 @@ Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8745/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 8745; parent 8599; 2010-10-30T20:39:08Z -->
+<!-- MediaWiki page 2267; revision 8746; parent 8745; 2010-10-30T20:39:53Z -->
