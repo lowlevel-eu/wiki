@@ -76,6 +76,15 @@ niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf B
 - Prozess B erhält Signal
   - Kernel erzeugt Popup-Thread im Prozess B, der die XML-Datei empfängt
 
+  
+Der Aufbau eines solchen RPCs könnte für verschiedene Prioritäten z. B. so aussehen:
+
+- [Niedrige Priorität](http://paloxena.bplaced.net/niwohlos-lo.html)
+- [Mittlere](http://paloxena.bplaced.net/niwohlos-mi.html)
+- [Hohe](http://paloxena.bplaced.net/niwohlos-hi.html)
+
+Zur Darstellung wird [ein externes Stylesheet](http://paloxena.bplaced.net/niwohlos.css) verwendet.
+
 ## Weblinks
 
 - [Repository](http://git.niwohlos.de)
@@ -85,6 +94,6 @@ niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf B
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8773/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
 
-<!-- MediaWiki page 2269; revision 8773; parent 8669; 2010-10-31T23:23:44Z -->
+<!-- MediaWiki page 2269; revision 8774; parent 8773; 2010-10-31T23:31:45Z -->
