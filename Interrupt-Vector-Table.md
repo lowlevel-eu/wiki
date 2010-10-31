@@ -59,6 +59,22 @@ IRQs wieder aktivieren
 
 sti \</asm\>
 
+### Ein NASM Macro
+
+Jetzt ein macro für NASM: \<asm\> %macro IVT.Handlerwahl 2 push ax push es xor ax, ax mov es, ax cli mov WORD \[es:%1\*4\], %2 mov WORD \[es:%1\*4+2\], cs sti pop es pop ex %endmacro \</asm\> Das erste Argument muss dann die IRQ-Nummer sein, das zweite ein Label von dem Handler. Das kann dann so benutzt werden: \<asm\>
+
+... hier ist der Startcode ...
+
+IVT.Handlerwahl 0x00, IRQ_0x00
+
+... hier kommt dann noch irgendein Code ...
+
+IRQ_0x00:  ;Handler für IRQ 0
+
+... hier kann ein Hinewistext geschreiben werden o.ä. ...
+
+iret \</asm\>
+
 ## Links
 
 - [Ralf Brown's Interrupt List](http://www.cs.cmu.edu/afs/cs.cmu.edu/user/ralf/pub/WWW/files.html) (Download)
@@ -66,6 +82,6 @@ sti \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8751/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 8660; parent 4865; 2010-10-16T04:35:10Z -->
+<!-- MediaWiki page 1540; revision 8751; parent 8660; 2010-10-31T15:05:29Z -->
