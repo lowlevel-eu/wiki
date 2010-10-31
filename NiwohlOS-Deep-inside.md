@@ -37,7 +37,7 @@ Einer unserer beiden Kernel wurde also erfolgreich von GRUB geladen und vom niwo
 
 Der 32-Bit-Kernel setzt erstmal ein paar interne Dinge auf, unter anderem Variablen, Structs und Arrays, die für Idle-Tasks, Anzahl der Prozessoren und Umlaute (für die [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")) genutzt werden.
 
-Dann wird der Bildschirm initialisiert und stoiber32 meldet sich zu Wort. Nachdem eine neue [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") aufgesetzt wurden wird das physische Speichermanagement initialisiert; Dazu wird die von GRUB übergebene Memory-Map der Funktion „init_pmm()“ übergeben, die die weitere Initialisierung übernimmt (mehr dazu im Abschnitt „Arbeitsspeicherverwaltungsgedrisse“). Danach wird das allseits beliebte [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") aktiviert. darauffolgend dann die [Interrups](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") sowie der Dispatcher für unser Multitasking.
+Dann wird der Bildschirm initialisiert und stoiber32 meldet sich zu Wort. Nachdem eine neue [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") aufgesetzt wurden wird das physische Speichermanagement initialisiert; Dazu wird die von GRUB übergebene Memory-Map der Funktion „init_pmm()“ übergeben, die die weitere Initialisierung übernimmt (mehr dazu im Abschnitt „Arbeitsspeicherverwaltungsgedrisse“). Danach wird das allseits beliebte [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") aktiviert. darauffolgend dann die [Interrups](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") sowie der Dispatcher und der Scheduler für unser Multitasking.
 
 Ist bis dahin alles glatt gelaufen werden die am Anfang deaktivierten Interrupts wieder eingeschaltet und stoiber32 verkündet elegant und souverän mit einer kleinen Hommage an den Ex-Bundespräsidentschaftskandidaten Edmund Stoiber, dass niwohlOS vollständig geladen und bisher reibungslos initialisiert wurde.
 
@@ -56,6 +56,12 @@ Die Initialisierung von stoiber64 läuft daher ein wenig anders ab: Analog zu st
 Paging wurde bereits im niwohunloader aktiviert, genauso wie PAE.
 
   
+
+### Scheduler
+
+Da niwohlOS zukunftsorientiert ist, besitzt es einen Scheduler, der auch auf Quantencomputern zuverlässig funktioniert. Er arbeitet nach dem Prinzip des Lottery Scheduling. Das heißt, es gibt eine große Lostrommel, in die alle Threads bei ihrer Erstellung entsprechend ihrer Priorität mehr oder weniger Lose werfen. Bei jedem Schedulingvorgang wird dann von der Lottofee persönlich ein Los gezogen und der entsprechende Thread ausgeführt – es sei denn, er ist unabkömmlich, weil er bereits auf einer anderen CPU läuft; in diesem Fall verfällt der Gewinn.
+
+Vorteile sind die einfache Implementierung von Prioritäten und Prioritätsverschiebungen zugunsten anderer Threads sowie natürlich, dass dieser Scheduler zuverlässig sowohl mit Java2k als auch auf Quantencomputern läuft.
 
 ## [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
 
@@ -79,6 +85,6 @@ niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf B
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8669/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8773/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
 
-<!-- MediaWiki page 2269; revision 8669; parent 8668; 2010-10-18T15:08:50Z -->
+<!-- MediaWiki page 2269; revision 8773; parent 8669; 2010-10-31T23:23:44Z -->
