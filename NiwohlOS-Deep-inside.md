@@ -6,8 +6,6 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Dieser Artikel gibt einen (sehr) tiefen und gnadenlos detaillierten sowie aufschlussreichen Einblick in die tiefen Unweiten der Arbeitsweise von niwohlOS. Eventuelle Fragen, die dabei aufkommen, werden selbstverständlich nicht beantwortet, außer man fragt die Entwickler ganz lieb und nett (niwohlos nett versteht sich) im euIRC-Channel \#niwohlos.
 
-  
-
 ## Am Anfang stand das Laden
 
 Wie jedes Betriebssystem will auch niwohlOS erst einmal in den Arbeitsspeicher geladen werden. Da wir eine duale Entwicklung von 32-Bit- und 64-Bit-Kernel für x86 sowie für ARM-Prozessoren betreiben bedienen wir uns eines Zwischenloaders. Aber der Reihe nach:
@@ -94,6 +92,6 @@ Zur Darstellung wird [ein externes Stylesheet](http://paloxena.bplaced.net/niwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
 
-<!-- MediaWiki page 2269; revision 8774; parent 8773; 2010-10-31T23:31:45Z -->
+<!-- MediaWiki page 2269; revision 8775; parent 8774; 2010-10-31T23:34:31Z -->
