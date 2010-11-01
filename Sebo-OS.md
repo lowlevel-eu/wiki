@@ -31,6 +31,6 @@ Sebo Os ist ein OS, welches NUR in Virtual PC abgespielt werden kann. Es ist ope
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8780; parent 8779; 2010-11-01T14:04:46Z -->
+<!-- MediaWiki page 2338; revision 8785; parent 8780; 2010-11-01T16:51:44Z -->
