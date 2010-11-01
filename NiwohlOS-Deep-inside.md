@@ -12,7 +12,7 @@ Wie jedes Betriebssystem will auch niwohlOS erst einmal in den Arbeitsspeicher g
 
 ### Phase I: GRUB
 
-Wie überall und auch von uns empfohlen benutzen wir als Bootloader bzw. Bootmanager [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"). Denn wir wollen ein Betriebssystem und keinen Bootloader entwickeln (Flamewars über die Abgrenzung von der Entwicklung von Bootloadern und der Entwicklung eines Betriebssystem bitte [hier](http://w3.c-plusplus.info/forum/viewforum-var-f-is-62.html) abhalten). GRUB lädt für uns folgende Dinge:
+Wie überall und auch von uns empfohlen benutzen wir als Bootloader bzw. Bootmanager [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"). Denn wir wollen ein Betriebssystem und keinen Bootloader entwickeln (Flamewars über die Abgrenzung von der Entwicklung von Bootloadern und der Entwicklung eines Betriebssystem bitte [hier](http://c-plusplus.info/forum/viewforum-var-f-is-62.html) abhalten). GRUB lädt für uns folgende Dinge:
 
 - niwohunloader, der Zwischenloader
 - stoiber32, der 32-Bit-Kernel
@@ -92,6 +92,6 @@ Zur Darstellung wird [ein externes Stylesheet](http://paloxena.bplaced.net/niwoh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8789/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2269/index.html)
 
-<!-- MediaWiki page 2269; revision 8775; parent 8774; 2010-10-31T23:34:31Z -->
+<!-- MediaWiki page 2269; revision 8789; parent 8775; 2010-11-01T19:16:38Z -->
