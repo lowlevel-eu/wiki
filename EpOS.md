@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
-| Akt. Version: | 0.05 |
+| Akt. Version: | 0.07 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -75,6 +75,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 8635; parent 8634; 2010-10-13T01:43:48Z -->
+<!-- MediaWiki page 1771; revision 8782; parent 8635; 2010-11-01T16:26:09Z -->
