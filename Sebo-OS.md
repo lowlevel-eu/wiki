@@ -1,7 +1,7 @@
 # Sebo OS
 
 | Sebo OS |  |
-| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Sebo |
 | Akt. Version: | Noch keine |
@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: |  |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), Batch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
 | API: |  |
 | Binärformat: |  |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
@@ -19,9 +19,9 @@ Aktuell keine
 
 **Sebo OS** ist ein Hobby-OS.
 
-## Das besondere
+## Eine kleine Beschreibung
 
-Sebo Os ist ein OS, welches NUR in Virtual PC abgespielt werden kann. Es ist opensource und frei zu bekommen. Das OS kriegt man zunächst als RAR Datei, um diese zu öffnen, braucht man WinRar.
+Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Das OS kriegt man zunächst als RAR Datei, um diese zu öffnen, braucht man WinRar.
 
 ## Timeline
 
@@ -31,6 +31,6 @@ Sebo Os ist ein OS, welches NUR in Virtual PC abgespielt werden kann. Es ist ope
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8785; parent 8780; 2010-11-01T16:51:44Z -->
+<!-- MediaWiki page 2338; revision 8797; parent 8785; 2010-11-02T06:46:59Z -->
