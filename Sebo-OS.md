@@ -26,11 +26,11 @@ Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das ö
 ## Timeline
 
 | Aktuelle Version | Zukunftsversion |
-| ------------------ | ----------------- |
-| / | Version 0.0.1.0 |
+| ------------------ | --------------------------- |
+| / | Version 0.0.1.0(Pre-Apha) |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8798; parent 8797; 2010-11-02T06:47:27Z -->
+<!-- MediaWiki page 2338; revision 8799; parent 8798; 2010-11-02T06:47:48Z -->
