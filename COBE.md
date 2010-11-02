@@ -24,8 +24,7 @@ COBE (Computer Betriebsystem) ist ein System mit Ziel eines monolithischen [Kern
 
 COBE besteht aus folgenden Elementen:
 
-- [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader"): Ein eigens geschriebener Bootloader, welcher zuerst den Sektor des Kernelloaders lädt und danach die Sektoren des eigentlichen Kernels. Der Bootloader springt danach in den Kernelloader.
-- Kernelloader: Der Kernelloader ist dafür da, in den Protected Mode zu springen, die [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") Tabelle zu erstellen und danach den eigentlichen Kernel zu laden.
+- COBE besteht mittlerweile nur noch aus dem Kernel, da das System nun GRUB als Bootloader benutzt.
 
 ## Kernel
 
@@ -64,6 +63,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8805/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 8804; parent 8803; 2010-11-02T09:07:57Z -->
+<!-- MediaWiki page 2298; revision 8805; parent 8804; 2010-11-02T09:33:34Z -->
