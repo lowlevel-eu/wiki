@@ -33,9 +33,11 @@ Der Kernel kann bisher folgendes:
 - Exceptions
 - IRQs
 - Tastaturtreiber
+- ISRs
+- Floppytreiber (noch nicht wirklich funktionsfähig)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
 
-<!-- MediaWiki page 2332; revision 8813; parent 8702; 2010-11-02T16:35:54Z -->
+<!-- MediaWiki page 2332; revision 8816; parent 8813; 2010-11-02T20:22:59Z -->
