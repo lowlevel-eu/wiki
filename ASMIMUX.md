@@ -3,7 +3,7 @@
 | ASMIMUX |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
-| Entwickler: | [tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev") |
+| Entwickler: | [tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev"), AGGROStar1991 |
 | Akt. Version: | aktuell keine |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [WTFPL](http://de.wikipedia.org/wiki/WTFPL#Lizenz) |
 | OS-Eigenschaften |  |
@@ -36,6 +36,6 @@ Der Kernel kann bisher folgendes:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
 
-<!-- MediaWiki page 2332; revision 8702; parent 8698; 2010-10-24T19:45:57Z -->
+<!-- MediaWiki page 2332; revision 8813; parent 8702; 2010-11-02T16:35:54Z -->
