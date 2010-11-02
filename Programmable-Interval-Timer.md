@@ -91,7 +91,7 @@ Frequenzen haben die Einheit Hz = 1/s, wodurch man sich leicht deren Bedeutung k
 
 Im Mode 2 wird die interne Frequenz durch den Wert des Counter-Registers geteilt, um den Zähler zu erhalten. Wenn man nun eine bestimmte Frequenz benötigt, berechnet man den zu übergebenen Wert des Counter-Registers wie folgt:
 
-    Counter-Register = 1193180 Hz / Frequenz.
+    Counter-Register = 1193182 Hz / Frequenz.
 
 Entsprechendes steht auch im obigen Beispielcode.
 
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 8814; parent 7407; 2010-11-02T19:33:40Z -->
+<!-- MediaWiki page 1432; revision 8815; parent 8814; 2010-11-02T19:34:10Z -->
