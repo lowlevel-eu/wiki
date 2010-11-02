@@ -1,6 +1,6 @@
 # Programmable Interval Timer
 
-Der Programmable Interval Timer (PIT) ist ein Baustein auf dem Mainboard, der in regelmäßigen Zeitabständen Signale erzeugt. Er arbeitet intern mit einer Frequenz von 1193180 Hz und kann z. B. für präemptives Multitasking oder als Systemuhr genutzt werden.
+Der Programmable Interval Timer (PIT) ist ein Baustein auf dem Mainboard, der in regelmäßigen Zeitabständen Signale erzeugt. Er arbeitet intern mit einer Frequenz von rund 1193182 Hz und kann z. B. für präemptives Multitasking oder als Systemuhr genutzt werden.
 
 ## Register
 
@@ -78,7 +78,7 @@ Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird 
 
 \<c\> void pit_init(int freq) {
 
-      freq = 1193180 / freq;
+      freq = 1193182 / freq;
       outb(0x43, 0x34);
       outb(0x40,freq & 0xFF);
       outb(0x40,freq >> 8);
@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7407/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8814/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 7407; parent 7406; 2010-03-20T20:11:54Z -->
+<!-- MediaWiki page 1432; revision 8814; parent 7407; 2010-11-02T19:33:40Z -->
