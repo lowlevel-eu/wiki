@@ -21,7 +21,7 @@ Aktuell keine
 
 ## Eine kleine Beschreibung
 
-Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Das OS kriegt man zunächst als RAR Datei, um diese zu öffnen, braucht man WinRar.
+Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen.
 
 ## Timeline
 
@@ -31,6 +31,6 @@ Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das ö
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8797; parent 8785; 2010-11-02T06:46:59Z -->
+<!-- MediaWiki page 2338; revision 8798; parent 8797; 2010-11-02T06:47:27Z -->
