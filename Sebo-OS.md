@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | Sebo |
 | Akt. Version: | Noch keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Open Source, Freeware |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: |  |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
@@ -31,6 +31,6 @@ Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das ö
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8799; parent 8798; 2010-11-02T06:47:48Z -->
+<!-- MediaWiki page 2338; revision 8823; parent 8799; 2010-11-04T10:24:03Z -->
