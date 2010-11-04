@@ -371,7 +371,7 @@ perform internal power-on reset function
 
 ### Normal-Mode-Packet
 
-Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12 angepingt wird, liegt ein Datenpaket im Maus-Output-Buffer, was Byteweise abgeholt werden sollte, wenn Bit5 im 64h-Status-Byte gesetzt ist. Das Daten-Paket ist dabei wie folgt aufgebaut:
+Die Sache mit dem Daten-Paket ist eigentlich recht einfach, immer wenn der IRQ12 ausgelöst wird, liegt ein Datenpaket im Maus-Output-Buffer, was Byteweise abgeholt werden sollte, wenn Bit5 im 64h-Status-Byte gesetzt ist. Das Daten-Paket ist dabei wie folgt aufgebaut:
 
 <table>
 <tbody><tr>
@@ -1018,6 +1018,6 @@ Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 8321; parent 8320; 2010-09-20T06:28:52Z -->
+<!-- MediaWiki page 1559; revision 8825; parent 8321; 2010-11-04T21:45:03Z -->
