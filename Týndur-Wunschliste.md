@@ -37,6 +37,8 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ## Anwendungen
 
+- help
+  - Kommando um von den Hilfsunterseiten wieder zurück zur Einleitung zu springen (Hilfe neu Starten)
 - kedit
   - Suchen
   - Markieren, Kopieren/Ausschneiden, Einfügen
@@ -47,6 +49,8 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - lpt
   - Upgrades
   - aptitude-ähnliche TUI
+  - Liste von Bereits instalierter Software
+  - Liste von vorhandener aber noch nicht instalierter Software
 - Setup (Installation & Konfiguration)
 - FTP-Client
 - Mail-Client
@@ -64,6 +68,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7810/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 7810; parent 6030; 2010-07-12T21:30:33Z -->
+<!-- MediaWiki page 1513; revision 8829; parent 7810; 2010-11-07T19:38:51Z -->
