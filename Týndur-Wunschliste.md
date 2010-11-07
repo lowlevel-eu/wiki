@@ -59,6 +59,9 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
   - Unterstuetzung fuer mehrere Channels
   - Irgendwie sinnvoll ein /ns identify erlauben
   - Hochscrollen
+- fbc (FreeBasic Compiler)
+  - Der Compiler ist in C geschrieben. Vielleicht lässt sich das portieren.
+  - (infos hier <http://www.freebasic.net/> )
 
 ## LostIO
 
@@ -68,6 +71,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8830/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8829; parent 7810; 2010-11-07T19:38:51Z -->
+<!-- MediaWiki page 1513; revision 8830; parent 8829; 2010-11-07T20:09:21Z -->
