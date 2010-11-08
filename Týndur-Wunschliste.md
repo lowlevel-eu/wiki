@@ -66,6 +66,8 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 Also in FreeBasic ist der bestimmt nicht geschrieben. Man kann doch keinen Kompiler in einer Sprache Schreiben, für die es noch keinen Comiler gibt. (Und fbc ist der meiner Kenntniss nach einzige Complier für FB also gabs beim Schreiben des selbigen noch keinen anderen. Das mit C mein ich irgentwo gelesen zu haben. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj")
 
+Lies im Forum den Thread zur 0.3 von Tyndur. Da wird darüber diskutiert. und ich habe nacgesehen es ist fbc Code. Ich werde die portierung weitermachen. --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 15:40, 8. Nov. 2010 (CET)
+
 ## LostIO
 
 - Berechtigungen setzen und abfragen
@@ -74,6 +76,6 @@ Also in FreeBasic ist der bestimmt nicht geschrieben. Man kann doch keinen Kompi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8839; parent 8832; 2010-11-08T13:12:35Z -->
+<!-- MediaWiki page 1513; revision 8840; parent 8839; 2010-11-08T14:40:37Z -->
