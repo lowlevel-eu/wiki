@@ -70,6 +70,8 @@ Lies im Forum den Thread zur 0.3 von Tyndur. Da wird darüber diskutiert. und ic
 
 Ok, dann hab ich mich vertan, blos versteh ich immer noch nicht wie man einen Compiler mit sich selbst schreiben kann. Trotztdem danke fürs Compilieren. Sag mir bescheit wenn es eine Alpha Version oder so was gibt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 18:00, 8. Nov. 2010 (CET)
 
+Ist ganz einfach du schreibst nen Compiler erst in einer anderen Sprache und schreibst dann den Compiler in der Sprache und kompiliert den. dann kannst du mit dem alles machen was du willst. Sowas wie ne Alpha wirds nie geben. entweder es läuft dan geb ich das frei oder es läuft nicht dann bleibt das auf meinem PC. ;) --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 18:07, 8. Nov. 2010 (CET)
+
 ## LostIO
 
 - Berechtigungen setzen und abfragen
@@ -78,6 +80,6 @@ Ok, dann hab ich mich vertan, blos versteh ich immer noch nicht wie man einen Co
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8848; parent 8840; 2010-11-08T17:00:40Z -->
+<!-- MediaWiki page 1513; revision 8849; parent 8848; 2010-11-08T17:07:49Z -->
