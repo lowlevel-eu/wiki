@@ -68,6 +68,8 @@ Also in FreeBasic ist der bestimmt nicht geschrieben. Man kann doch keinen Kompi
 
 Lies im Forum den Thread zur 0.3 von Tyndur. Da wird darüber diskutiert. und ich habe nacgesehen es ist fbc Code. Ich werde die portierung weitermachen. --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 15:40, 8. Nov. 2010 (CET)
 
+Ok, dann hab ich mich vertan, blos versteh ich immer noch nicht wie man einen Compiler mit sich selbst schreiben kann. Trotztdem danke fürs Compilieren. Sag mir bescheit wenn es eine Alpha Version oder so was gibt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 18:00, 8. Nov. 2010 (CET)
+
 ## LostIO
 
 - Berechtigungen setzen und abfragen
@@ -76,6 +78,6 @@ Lies im Forum den Thread zur 0.3 von Tyndur. Da wird darüber diskutiert. und ic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8848/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8840; parent 8839; 2010-11-08T14:40:37Z -->
+<!-- MediaWiki page 1513; revision 8848; parent 8840; 2010-11-08T17:00:40Z -->
