@@ -60,17 +60,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
   - Irgendwie sinnvoll ein /ns identify erlauben
   - Hochscrollen
 - fbc (FreeBasic Compiler)
-  - Der Compiler ist in C geschrieben. Vielleicht lässt sich das portieren.
   - (infos hier <http://www.freebasic.net/> )
-  - Seit wann ist der in C geschrieben. Der ist meines Wissens nach in FreeBasic geschrieben. Hab den mal angefangen zu portieren. Weiß aber nicht was noch fehlt.
-
-Also in FreeBasic ist der bestimmt nicht geschrieben. Man kann doch keinen Kompiler in einer Sprache Schreiben, für die es noch keinen Comiler gibt. (Und fbc ist der meiner Kenntniss nach einzige Complier für FB also gabs beim Schreiben des selbigen noch keinen anderen. Das mit C mein ich irgentwo gelesen zu haben. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj")
-
-Lies im Forum den Thread zur 0.3 von Tyndur. Da wird darüber diskutiert. und ich habe nacgesehen es ist fbc Code. Ich werde die portierung weitermachen. --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 15:40, 8. Nov. 2010 (CET)
-
-Ok, dann hab ich mich vertan, blos versteh ich immer noch nicht wie man einen Compiler mit sich selbst schreiben kann. Trotztdem danke fürs Compilieren. Sag mir bescheit wenn es eine Alpha Version oder so was gibt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 18:00, 8. Nov. 2010 (CET)
-
-Ist ganz einfach du schreibst nen Compiler erst in einer anderen Sprache und schreibst dann den Compiler in der Sprache und kompiliert den. dann kannst du mit dem alles machen was du willst. Sowas wie ne Alpha wirds nie geben. entweder es läuft dan geb ich das frei oder es läuft nicht dann bleibt das auf meinem PC. ;) --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 18:07, 8. Nov. 2010 (CET)
 
 ## LostIO
 
@@ -80,6 +70,6 @@ Ist ganz einfach du schreibst nen Compiler erst in einer anderen Sprache und sch
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8849; parent 8848; 2010-11-08T17:07:49Z -->
+<!-- MediaWiki page 1513; revision 8850; parent 8849; 2010-11-08T19:58:20Z -->
