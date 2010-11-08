@@ -64,6 +64,8 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
   - (infos hier <http://www.freebasic.net/> )
   - Seit wann ist der in C geschrieben. Der ist meines Wissens nach in FreeBasic geschrieben. Hab den mal angefangen zu portieren. Weiß aber nicht was noch fehlt.
 
+Also in FreeBasic ist der bestimmt nicht geschrieben. Man kann doch keinen Kompiler in einer Sprache Schreiben, für die es noch keinen Comiler gibt. (Und fbc ist der meiner Kenntniss nach einzige Complier für FB also gabs beim Schreiben des selbigen noch keinen anderen. Das mit C mein ich irgentwo gelesen zu haben. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj")
+
 ## LostIO
 
 - Berechtigungen setzen und abfragen
@@ -72,6 +74,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8832; parent 8831; 2010-11-07T22:20:07Z -->
+<!-- MediaWiki page 1513; revision 8839; parent 8832; 2010-11-08T13:12:35Z -->
