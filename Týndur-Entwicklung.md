@@ -53,6 +53,8 @@ Fast noch wichtiger als die Mailingliste selbst und die Anlaufstelle Nummer 1 is
 
 ### Umgebung aufsetzen
 
+Wer ein 64 Bit Linux hat muss sich eine 32 Bit Libgcc installieren. Wenn keine 32 Bit Libgcc installiert ist, dann gibt es beim bauen Fehler.
+
 Wer nicht vorhat, portierte Programme (lbuilds) zu kompilieren und auch keinen Pascal-Code übersetzen möchte, kann diesen Abschnitt überspringen. Alle anderen müssen zunächst die lbuilds einrichten und dabei einen FPC-Crosscompiler erstellen. Im Idealfall muss man dazu einfach nur das build_crosstools-Skript ausführen, das binutils, gcc und fpc herunterlädt und kompiliert (manchmal passen die Patches nicht mehr ganz auf die aktuelle FPC-Version, in diesem Fall melde man sich im Forum oder im IRC):
 
     lbuilds$ scripts/build_crosstools
@@ -198,6 +200,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7743/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 7743; parent 7742; 2010-06-12T12:12:00Z -->
+<!-- MediaWiki page 2035; revision 8855; parent 7743; 2010-11-09T13:33:15Z -->
