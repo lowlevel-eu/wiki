@@ -140,7 +140,7 @@ Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der ak
      pusha
      call _scheduler
      mov ax, [_tss_sel]
-     mov [opcode_hack+5], %ax
+     mov [opcode_hack+5], ax
      popa
      opcode_hack:
      jmp 1234 : 1234
@@ -185,6 +185,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 8856; parent 7541; 2010-11-09T14:44:04Z -->
+<!-- MediaWiki page 2158; revision 8861; parent 8856; 2010-11-09T18:44:36Z -->
