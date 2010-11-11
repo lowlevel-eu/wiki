@@ -21,7 +21,7 @@ Aktuell keine
 
 ## Eine kleine Beschreibung
 
-Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen.
+Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Um ihn zu starten, braucht man einen USB-Stick und ein spezielles Programm, um den USB-Stick bootfähig zu machen. Das Programm findet ihr an der WebSite, wenn die erste Version erscheint.
 
 ## Timeline
 
@@ -31,6 +31,6 @@ Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das ö
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8823/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8823; parent 8799; 2010-11-04T10:24:03Z -->
+<!-- MediaWiki page 2338; revision 8863; parent 8823; 2010-11-11T16:54:19Z -->
