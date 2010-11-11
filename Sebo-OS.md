@@ -10,12 +10,12 @@
 | Plattform: |  |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
-| API: |  |
+| API: | Keins |
 | Binärformat: |  |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-Aktuell keine
+<http://sebo-os.blogspot.com/>
 
 **Sebo OS** ist ein Hobby-OS.
 
@@ -31,6 +31,6 @@ Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das ö
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8863; parent 8823; 2010-11-11T16:54:19Z -->
+<!-- MediaWiki page 2338; revision 8864; parent 8863; 2010-11-11T17:02:32Z -->
