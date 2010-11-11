@@ -794,7 +794,7 @@ datasel equ \$-gdt
       db 0xCF           ; Zusatzinformationen und Segmentgröße 16...19
       db 0x00           ; Segmentadresse 24..31
 
-gdt_end \</asm\>
+gdt_end: \</asm\>
 
 ## OS-Showcase: ReactOS
 
@@ -930,6 +930,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8862/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 6646; parent 6302; 2009-12-28T01:22:49Z -->
+<!-- MediaWiki page 1494; revision 8862; parent 6646; 2010-11-11T14:17:07Z -->
