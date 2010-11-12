@@ -250,7 +250,7 @@ Dieser Code könnte beispielsweise folgendermaßen aussehen: \<c\> static void s
        register_intr_handler(IRQ_BASE + 1, &irq_handler);
 
        // Tastaturpuffer leeren
-       while (inb(0x64) & 0x2) {
+       while (inb(0x64) & 0x1) {
            inb(0x60);
        }   
 
@@ -384,6 +384,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8868/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 7919; parent 7915; 2010-07-19T10:00:53Z -->
+<!-- MediaWiki page 1468; revision 8868; parent 7919; 2010-11-12T10:46:33Z -->
