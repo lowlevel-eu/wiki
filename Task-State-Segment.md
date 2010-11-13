@@ -8,7 +8,7 @@ Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Information
 
 **Task State Segment Deskriptor**
 
-| 31-24 | 23 | 21-22 | 20 | 19-16 | 15 | 14-13 | 12 | 11-8 | 7-0 |
+| 31-24 | 23 | 22-21 | 20 | 19-16 | 15 | 14-13 | 12 | 11-8 | 7-0 |
 | -------------------- | ----- | ------- | ----- | ------------- | ----- | ------- | ----- | ------ | -------------------- |
 | Basisadresse 31-24 | G | 0 | AVL | Limit 19-16 | P | DPL | 0 | Type | Basisadresse 16-23 |
 
@@ -64,6 +64,6 @@ Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS ang
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7772/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 7772; parent 6888; 2010-06-27T19:55:21Z -->
+<!-- MediaWiki page 1599; revision 8890; parent 7772; 2010-11-13T19:07:45Z -->
