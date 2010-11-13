@@ -18,7 +18,7 @@ Wer sich überhaupt nicht mit der AT&T-Syntax anfreunden kann, für den bleibt i
 
 Die Einbindung von Inline Assembler in den C-Code ist ganz einfach: Das Schlüsselwort asm (oder alternativ \_\_asm\_\_) in Verbindung mit dem Assemblercode als String muss in den C-Code eingebettet werden: \<c\>asm("int \$0x30")\</c\>
 
-Sollen mehrere Assemblerbefehle ausgeführt werden, gibt es nicht nur eine Möglichkeit, dies zu schreiben: Entweder Trennung durch Strichpunkt (Semikolon) oder durch einen Zeilenumbruch. Strings können dabei wie in C üblich getrennt werden, so daß nicht ein längeres Stück Assemblercode in einer Zeile C untergebracht werden muß: \<c\>asm("cli; hlt"); asm("cli\nhlt"); asm(
+Sollen mehrere Assemblerbefehle ausgeführt werden, gibt es nicht nur eine Möglichkeit, dies zu schreiben: Entweder Trennung durch Strichpunkt (Semikolon) oder durch einen Zeilenumbruch. Strings können dabei wie in C üblich getrennt werden, so dass nicht ein längeres Stück Assemblercode in einer Zeile C untergebracht werden muss: \<c\>asm("cli; hlt"); asm("cli\nhlt"); asm(
 
      "cli;"
      "hlt;"
@@ -105,6 +105,6 @@ Senden einer IPC-Nachricht in LOST: \<c\> void send_message(dword pid, dword fun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1472/index.html)
 
-<!-- MediaWiki page 1472; revision 7916; parent 7910; 2010-07-19T09:28:44Z -->
+<!-- MediaWiki page 1472; revision 8892; parent 7916; 2010-11-13T23:40:34Z -->
