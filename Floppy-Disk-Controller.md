@@ -330,7 +330,7 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 | Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") |  |
 | Trackgröße | Anzahl der Sektoren, die auf einem Track („Ring“) liegen | 18 (pro Track und Seite) |
 
-### Technische Laufweksdaten einstellen (3h)
+### Technische Laufwerksdaten einstellen (3h)
 
 Command Phase:
 
@@ -373,10 +373,8 @@ Result Phase: *keine*
   
 Anmerkungen:
 
-- Die benötigten Daten sollten vom BIOS abgefragt werden (siehe unten)
-- Im DOR kann eingestellt werden, ob DMA/IRQ oder keins von beidem, hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
-
-  
+- Die benötigten Daten sollten vom BIOS abgefragt werden (siehe unten).
+- Im DOR kann eingestellt werden, ob DMA/IRQ oder keins von beiden verwendet wird. Hier wird dann noch einmal explizit zwischen DMA (Bit gelöscht) und kein DMA (Bit gesetzt) entschieden.
 
 ### Laufwerk kalibrieren (7h)
 
@@ -967,6 +965,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8557/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8886/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8557; parent 8332; 2010-10-07T19:04:17Z -->
+<!-- MediaWiki page 1443; revision 8886; parent 8557; 2010-11-13T15:05:15Z -->
