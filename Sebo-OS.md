@@ -26,7 +26,7 @@ Das Sebo OS ist ein zukünftiges OS, welches eine GUI hat. Sebo DOS ist ein zuk�
 
 ## Eine kleine Beschreibung
 
-Das OS(und DOS) wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Um ihn zu starten, braucht man Bochs. Der Bootloader ist GRUB.
+Das OS(und DOS) wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Um ihn zu starten, braucht man Bochs. Der Bootloader ist GRUB oder irgendein anderer.
 
 ## Timeline
 
@@ -61,6 +61,6 @@ Das OS(und DOS) wird in einer 7-Zip Datei sein, so dass, Linux und Windows User 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8896; parent 8895; 2010-11-14T10:09:06Z -->
+<!-- MediaWiki page 2338; revision 8897; parent 8896; 2010-11-14T11:19:54Z -->
