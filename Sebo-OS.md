@@ -61,6 +61,6 @@ Das OS(und DOS) wird in einer 7-Zip Datei sein, so dass, Linux und Windows User 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8895/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8895; parent 8894; 2010-11-14T10:03:08Z -->
+<!-- MediaWiki page 2338; revision 8896; parent 8895; 2010-11-14T10:09:06Z -->
