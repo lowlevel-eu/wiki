@@ -19,18 +19,30 @@
 
 **Sebo OS** ist ein Hobby-OS.
 
+## Sebo OS und Sebo DOS, wo ist da der Unterschied?
+
+Das Sebo OS ist ein zukünftiges OS, welches eine GUI hat. Sebo DOS ist ein zukünftiges Zeilenbasiertes OS.
+
 ## Eine kleine Beschreibung
 
-Um das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Um ihn zu starten, braucht man DOS Box.
+Das OS(und DOS) wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffnen können. Das OS ist opensource und frei zu bekommen. Um ihn zu starten, braucht man Bochs. Der Bootloader ist GRUB.
 
 ## Timeline
 
+**Sebo DOS**:
+
 | Aktuelle Version | Zukunftsversion |
-| ------------------ | --------------------------- |
-| / | Version 0.0.1.0(Pre-Apha) |
+| ------------------ | ----------------- |
+| / | Version 0.0.1.0 |
+
+**Sebo OS:**
+
+| Aktuelle Version | Zukunftsversion |
+| ------------------ | ----------------- |
+| / | Version 0.0.1.1 |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8877; parent 8864; 2010-11-12T17:12:38Z -->
+<!-- MediaWiki page 2338; revision 8894; parent 8877; 2010-11-14T09:58:10Z -->
