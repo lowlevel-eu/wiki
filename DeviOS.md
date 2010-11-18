@@ -28,10 +28,6 @@ DeviOS ist geplant mit :
 - nasm
 - RS232 Chat Programm
 
-## Fehlercodes
-
-0x0000001 : Datenträger nicht Multiboot fähig
-
   
 
 ## Versionen
@@ -41,8 +37,7 @@ DeviOS ist geplant mit :
            Textausgabe
            Multiboot
            Mit GRUB kompatible
-           Bluescreen
-           Erster Fehlercode
+           
 
   
 
@@ -52,6 +47,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8921/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8921; parent 8920; 2010-11-18T18:24:12Z -->
+<!-- MediaWiki page 2349; revision 8924; parent 8921; 2010-11-18T20:35:16Z -->
