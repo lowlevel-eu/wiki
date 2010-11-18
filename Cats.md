@@ -5,7 +5,7 @@
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg" width="222" height="314" alt="Katze-396196.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222), Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
@@ -15,9 +15,11 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-<http://peter-koro.at.tf>
+\[nicht mehr vorhanden\]
 
   
+Cats wurde zugunsten von DeviOS eingestellt.......
+
 Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde bereits folgendes implementiert:
 
 - FAT-Treiber
@@ -48,6 +50,6 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8911/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 8911; parent 8330; 2010-11-18T15:31:11Z -->
+<!-- MediaWiki page 2084; revision 8912; parent 8911; 2010-11-18T15:33:55Z -->
