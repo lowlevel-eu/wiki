@@ -46,12 +46,8 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg" width="730" height="503" alt="Cats.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9ad69f61a7cbe4b955a8.jpg)
 
-## Links
-
-- [Offizielle Webseite von Cats](http://www.peter-koro.at.tf)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8911/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 8330; parent 8329; 2010-09-21T02:32:47Z -->
+<!-- MediaWiki page 2084; revision 8911; parent 8330; 2010-11-18T15:31:11Z -->
