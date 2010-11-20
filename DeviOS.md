@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[\[1\]](https://sourceforge.net/projects/devios/)
+<https://sourceforge.net/projects/devios/>
 
   
 DeviOS ist geplant mit :
@@ -50,6 +50,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8941/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8942/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8941; parent 8940; 2010-11-20T21:43:53Z -->
+<!-- MediaWiki page 2349; revision 8942; parent 8941; 2010-11-20T21:44:36Z -->
