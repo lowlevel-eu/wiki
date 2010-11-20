@@ -65,7 +65,7 @@ struct tss task_state_segments\[NUM_TASKS\]; uint32_t stacks\[NUM_TASKS \* 7\]; 
 
 /\*\*\* Hilfsfunktionen \*\*\*/
 
-void create_task ( uint32_t n, //die ID/Nummer des Tasks uint16_t cs, uint16_t ss, uint16_t ds, uint32_t adr_code, uint32_T adr_stack) {
+void create_task ( uint32_t n, //die ID/Nummer des Tasks uint16_t cs, uint16_t ss, uint16_t ds, uint32_t adr_code, uint32_t adr_stack) {
 
      if(n > NUM_TASKS) return;
      task_state_segments[n].cs = cs;
@@ -94,7 +94,7 @@ void create_tss_descriptors () {
      {
        gdt_create_descriptor (
 
-i+TSS_SEL_BASE, (uint32_TD) &task_state_segment\[i\], sizeof(struct tss)-1, 0, GDT_TYPE_TSS);
+i+TSS_SEL_BASE, (uint32_t) &task_state_segment\[i\], sizeof(struct tss)-1, 0, GDT_TYPE_TSS);
 
      }
 
@@ -185,6 +185,6 @@ Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardw
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 8930; parent 8861; 2010-11-20T11:02:20Z -->
+<!-- MediaWiki page 2158; revision 8931; parent 8930; 2010-11-20T11:12:54Z -->
