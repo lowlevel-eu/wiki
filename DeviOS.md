@@ -34,10 +34,9 @@ DeviOS ist geplant mit :
 
 0.0.1 :
 
-           Textausgabe
-           Multiboot
-           Mit GRUB kompatible
-           
+- Textausgabe
+- Multiboot
+- Mit GRUB kompatibel
 
   
 
@@ -47,6 +46,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8937/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8938/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8937; parent 8936; 2010-11-20T20:48:27Z -->
+<!-- MediaWiki page 2349; revision 8938; parent 8937; 2010-11-20T20:49:20Z -->
