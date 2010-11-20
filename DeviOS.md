@@ -2,7 +2,7 @@
 
 | DeviOS |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| noch nicht verfürbar |  |
+| n\[Datei:DeviOS.jpg\]\] |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222) |
 | Akt. Version: | 0.0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU |
@@ -47,6 +47,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8924; parent 8921; 2010-11-18T20:35:16Z -->
+<!-- MediaWiki page 2349; revision 8936; parent 8924; 2010-11-20T20:48:13Z -->
