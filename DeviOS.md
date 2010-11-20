@@ -5,7 +5,7 @@
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/2b5401fd0d2f6ebd01f0.jpg" width="221" height="78" alt="DeviOS.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/2b5401fd0d2f6ebd01f0.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222) |
 | Akt. Version: | 0.0.1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPL |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | DPL (DeviOS Puplic License) |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
@@ -46,6 +46,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8939/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8940/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8939; parent 8938; 2010-11-20T20:54:45Z -->
+<!-- MediaWiki page 2349; revision 8940; parent 8939; 2010-11-20T21:18:52Z -->
