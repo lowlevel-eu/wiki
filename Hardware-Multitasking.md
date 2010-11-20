@@ -22,7 +22,7 @@ Folgender Code legt ein TSS an und erzeugt dann den Descriptor in der GDT, der d
 
 1.  define GDT_TYPE_TSS 0x89
 
-struct tss task_state_segment; gdt_create_descriptor ( n, //die Nummer des Descriptor-Eintrags (DWORD) &task_state_segment, //Adresse sizeof(struct tss)-1, //Länge 0, //flags GDT_TYPE_TSS); //access \</c\>
+struct tss task_state_segment; gdt_create_descriptor ( n, //die Nummer des Descriptor-Eintrags (uint32_t) &task_state_segment, //Adresse sizeof(struct tss)-1, //Länge 0, //flags GDT_TYPE_TSS); //access \</c\>
 
 ### Taskwechsel
 
@@ -61,11 +61,11 @@ Jeder spätere Task benötigt ein TSS. Diese müssen mit den Werten gefüllt wer
 
 1.  define NUM_TASKS 10 //oder wieviele auch immer du möchtest
 
-struct tss task_state_segments\[NUM_TASKS\]; DWORD stacks\[NUM_TASKS \* 7\]; // (1)
+struct tss task_state_segments\[NUM_TASKS\]; uint32_t stacks\[NUM_TASKS \* 7\]; // (1)
 
 /\*\*\* Hilfsfunktionen \*\*\*/
 
-void create_task ( DWORD n, //die ID/Nummer des Tasks WORD cs, WORD ss, WORD ds, DWORD adr_code, DWORD adr_stack) {
+void create_task ( uint32_t n, //die ID/Nummer des Tasks uint16_t cs, uint16_t ss, uint16_t ds, uint32_t adr_code, uint32_T adr_stack) {
 
      if(n > NUM_TASKS) return;
      task_state_segments[n].cs = cs;
@@ -75,7 +75,7 @@ void create_task ( DWORD n, //die ID/Nummer des Tasks WORD cs, WORD ss, WORD ds,
      task_state_segments[n].esp = adr_stack;
      task_state_segments[n].eflags = 0x1600;    // (4)
      task_state_segments[n].ss0 = 0x10; // (2)
-     task_state_segments[n].esp0 = (DWORD) &stacks[n*7];    // (3)
+     task_state_segments[n].esp0 = (uint32_t) &stacks[n*7]; // (3)
 
 } \</c\>
 
@@ -94,7 +94,7 @@ void create_tss_descriptors () {
      {
        gdt_create_descriptor (
 
-i+TSS_SEL_BASE, (DWORD) &task_state_segment\[i\], sizeof(struct tss)-1, 0, GDT_TYPE_TSS);
+i+TSS_SEL_BASE, (uint32_TD) &task_state_segment\[i\], sizeof(struct tss)-1, 0, GDT_TYPE_TSS);
 
      }
 
@@ -106,8 +106,8 @@ Jetzt benötigt man nur noch eine Tabelle, die alle Tasks beinhaltet. Da diese z
 
 \<c\> struct task {
 
-      BYTE present;
-      BYTE priority;
+      uint8_t present;
+      uint8_t priority;
 
 }\_\_attribute\_\_((packed));
 
@@ -123,7 +123,7 @@ Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehme
 
 Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der aktiv ist (present-Feld ist nicht null)
 
-\<c\> DWORD current_task_id=0; WORD tss_sel; void scheduler() {
+\<c\> uint32_t current_task_id=0; uint16_t tss_sel; void scheduler() {
 
       current_task_id++;
       while(task_table[current_task_id].present==0)
@@ -133,7 +133,7 @@ Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der ak
       }
       tss_sel = current_task_id + TSS_SEL_BASE;
 
-} \</c\> Jetzt muss zu diesem Task geswechselt werden, indem zu dessen TSS-Selektor gesprungen wird. Es empfiehlt sich diesen Teil in Assembler zu schreiben, da die ISR auch aus einem Assemblerstub heraus aufgerufen werden sollte. Dieser sieht dann so aus:
+} \</c\> Jetzt muss zu diesem Task gewechselt werden, indem zu dessen TSS-Selektor gesprungen wird. Es empfiehlt sich diesen Teil in Assembler zu schreiben, da die ISR auch aus einem Assemblerstub heraus aufgerufen werden sollte. Dieser sieht dann so aus:
 
 \<asm\> extern \_tss_sel extern \_scheduler global \_isr_pit \_isr_pit:
 
@@ -181,10 +181,10 @@ Beim nächsten Tick wird dann der Scheduler aufgerufen und verrichtet seine Arbe
 
 ### Hardwaregestütztes Scheduling
 
-Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardware ausführen zu lassen. Dafür muss man den PIT-Interrupt als Task-Gate anlegen, die auf das TSS des nächsten Tasks zeigt. Dadurch wechselt die CPU automatisch zum nächsten Task. Dann setzt man Bit 0 im letzten DWORD jeder TSS (Debug-Trap-Bit), wodurch jedes mal eine Debugexception nach einem Task-Swich ausgelöst wird, in der man dann das Task-Gate auf den nächsten Task zeigen lässt. Diese Methode ist allerdings sehr kompliziert, man kommt dennoch nicht um etwas Software-Scheduling herum, und ausprobiert habe ich es auch noch nicht.
+Wie bereits erwähnt ist es möglich, auch das Scheduling zum Teil von der Hardware ausführen zu lassen. Dafür muss man den PIT-Interrupt als Task-Gate anlegen, die auf das TSS des nächsten Tasks zeigt. Dadurch wechselt die CPU automatisch zum nächsten Task. Dann setzt man Bit 0 im letzten DWord jeder TSS (Debug-Trap-Bit), wodurch jedes mal eine Debugexception nach einem Task-Switch ausgelöst wird, in der man dann das Task-Gate auf den nächsten Task zeigen lässt. Diese Methode ist allerdings sehr kompliziert, man kommt dennoch nicht um etwas Software-Scheduling herum, und ausprobiert habe ich es auch noch nicht.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8861/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8930/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2158/index.html)
 
-<!-- MediaWiki page 2158; revision 8861; parent 8856; 2010-11-09T18:44:36Z -->
+<!-- MediaWiki page 2158; revision 8930; parent 8861; 2010-11-20T11:02:20Z -->
