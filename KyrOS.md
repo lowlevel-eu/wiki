@@ -15,8 +15,6 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-<http://geos.gilles.orca.lu/>
-
 GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 
 ## Features
@@ -36,6 +34,6 @@ GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7168/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 7168; parent 7093; 2010-02-25T15:17:39Z -->
+<!-- MediaWiki page 2164; revision 8954; parent 7168; 2010-11-21T11:29:31Z -->
