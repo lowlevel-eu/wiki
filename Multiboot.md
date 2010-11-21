@@ -113,7 +113,7 @@ Gibt an wie viele Module von GRUB geladen wurden
 
 ### mbs_mods_addr
 
-Pointer auf die erste Modulstruktur. Eine Modulstruktur sieht folgendermaßen aus:
+Pointer auf die erste Modulstruktur, deren Einträge hintereinander im Speicher liegen. Eine Modulstruktur sieht folgendermaßen aus:
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ----------- | ------------------------------------------------------------------------- |
@@ -148,7 +148,7 @@ Gibt die Länge der Memorymap an
 
 ### mbs_mmap_addr
 
-Pointer zur Memorymap. Ein Eintrag in der Memorymap sieht folgendermaßen aus:
+Pointer zur Memorymap, deren Einträge hintereinander im Speicher liegen. Ein Eintrag in der Memorymap sieht folgendermaßen aus:
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ---------- | ----------------------------------------------------- |
@@ -206,6 +206,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7094/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8964/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 7094; parent 6115; 2010-02-18T15:05:34Z -->
+<!-- MediaWiki page 1560; revision 8964; parent 7094; 2010-11-21T15:25:33Z -->
