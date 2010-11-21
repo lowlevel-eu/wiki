@@ -7,8 +7,8 @@
 | Akt. Version: | 0.0.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") |
+| Plattform: | [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") & [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | In Planung |
 | Binärformat: | In Planung |
@@ -34,6 +34,6 @@ GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8955/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 8955; parent 8954; 2010-11-21T11:30:06Z -->
+<!-- MediaWiki page 2164; revision 8956; parent 8955; 2010-11-21T11:31:11Z -->
