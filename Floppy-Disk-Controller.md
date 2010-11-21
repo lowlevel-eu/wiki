@@ -511,9 +511,9 @@ Command Phase:
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
 <td>0</td>
 <td>0
 </td></tr>
@@ -965,6 +965,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8886/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8886; parent 8557; 2010-11-13T15:05:15Z -->
+<!-- MediaWiki page 1443; revision 8969; parent 8886; 2010-11-21T20:07:33Z -->
