@@ -34,6 +34,6 @@ GillesOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8954/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8955/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 8954; parent 7168; 2010-11-21T11:29:31Z -->
+<!-- MediaWiki page 2164; revision 8955; parent 8954; 2010-11-21T11:30:06Z -->
