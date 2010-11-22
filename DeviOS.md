@@ -85,7 +85,7 @@ Bald verfügbar !
 
 ## Beta-Test Anmeldung
 
-Wer mitmachen will kann mich unter peter.junior@live.at
+Wer mitmachen will kann mich unter peter.junior@live.at erreichen
 
 ## Downloads
 
@@ -93,6 +93,6 @@ Wer mitmachen will kann mich unter peter.junior@live.at
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8976; parent 8975; 2010-11-22T14:52:55Z -->
+<!-- MediaWiki page 2349; revision 8977; parent 8976; 2010-11-22T14:53:08Z -->
