@@ -77,10 +77,15 @@ DeviOS ist geplant mit :
 - Interrupts
 - erste Shell
 - Paging
+- Noch in Beta Test
 
 ## Screenshots
 
 Bald verfügbar !
+
+## Beta-Test Anmeldung
+
+Wer mitmachen will kann mich unter peter.junior@live.at
 
 ## Downloads
 
@@ -88,6 +93,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8975/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8975; parent 8974; 2010-11-22T12:51:53Z -->
+<!-- MediaWiki page 2349; revision 8976; parent 8975; 2010-11-22T14:52:55Z -->
