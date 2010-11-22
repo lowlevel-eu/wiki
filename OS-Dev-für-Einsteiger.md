@@ -36,7 +36,7 @@ Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie mög
 - Gute Kenntnis des Systems und der benutzten Tools, also Compiler, Linker und deren Kollegen. Wenn du regelmäßig mit der Bedienung deines Betriebssystems oder der benötigten Programmierwerkzeuge kämpfst, dann ist es schwer, dabei Arbeit getan zu kriegen. Ein Windowsnutzer braucht eventuell sogar mehr Erfahrung als ein Linuxer, da sich manche Tools auf Windows zu Beginn recht zickig verhalten können. Auch die Zusammenhänge von Compiler - Assembler - Linker und den dazwischen liegenden Dateiformaten (linkbare Objekt-Dateien und ausführbare Programm-Dateien) sollten zumindest in Grundzügen geläufig sein.
 - Neugier und Geduld. Vermutlich die heimlichen Kernqualifikationen jedes Programmierers. Ohne Neugier und Geduld wird es schwer, die Frustrationen der Betriebssystementwicklung zu überstehen.
 - Kenntnisse über die Funktionsweise eines Computers. Ein Betriebssystem hat die Aufgabe, den Anwendungsprogrammen einen funktionierenden und fairen Zugang zu den Ressourcen eines Computers zu ermöglichen. Dafür ist es natürlich von Vorteil, wenn man weiß, was den Computer in seinem Innersten zusammenhält. Du solltest also schon recht konkret wissen, was die einzelnen Komponenten eines Computers machen und wie diese zusammenspielen.
-- Umrechnen zwischen Zahlensystemen. Beim OS-Dev muss man häufig zwischen Dezimal-, Hexadezimal-, Oktal- und Binärsystem umrechnen, um die richtigen Bits zu setzten/löschen. Eine gute und kurze Anleitung dazu gibt es z.B. [hier](http://www.linuxhilfen.org/c/c_aufsteiger_zahl.html). Nachdem du verstanden hast wie es funktioniert und es mehrmals auf Papier geübt hast, kannst du natürlich auch z.B. den Windowstaschenrechner im "wissenschaftlichen Modus" zum Umrechnen benutzen.
+- Umrechnen zwischen Zahlensystemen. Beim OS-Dev muss man häufig zwischen Dezimal-, Hexadezimal-, Oktal- und Binärsystem umrechnen, um die richtigen Bits zu setzten/löschen. Eine gute und kurze Anleitung dazu gibt es z.B. [hier](http://www.linuxhilfen.org/c/c_aufsteiger_zahl.html). Nachdem du verstanden hast wie es funktioniert und es mehrmals auf Papier geübt hast, kannst du natürlich auch z.B. den Windowstaschenrechner im "wissenschaftlichen Modus" zum Umrechnen benutzen. Ab Windows 7 gibt es einen "Programmierer"-Modus, der das Umrechnen noch einfacher macht, indem man sogar einzelne Bits an- und abschalten kann.
 - Bitweise Operatoren. Man sollte wissen, wie man einzelne Bits innerhalb einer Variable löscht und setzt. Der Artikel [Bitweise Operatoren](https://github.com/lowlevel-eu/wiki/wiki/Bitweise-Operatoren "Bitweise Operatoren") bietet hier das nötige Basiswissen.
 
 #### Hilfreich, aber nicht unbedingt nötig
@@ -178,6 +178,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8978/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 7904; parent 7903; 2010-07-17T12:30:52Z -->
+<!-- MediaWiki page 1619; revision 8978; parent 7904; 2010-11-22T18:52:41Z -->
