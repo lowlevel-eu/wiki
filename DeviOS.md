@@ -67,6 +67,16 @@ DeviOS ist geplant mit :
 - ELF-Loader
 - Paging
 - Macht leider noch Probleme.....
+- Wird (leider) nie veröffentlicht...
+
+0.0.3.0 :
+
+- Textausgabe (kprint)
+- Multiboot
+- Mit GRUB kompatibel
+- Interrupts
+- erste Shell
+- Paging
 
 ## Screenshots
 
@@ -78,6 +88,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8974/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8975/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8974; parent 8973; 2010-11-22T12:50:19Z -->
+<!-- MediaWiki page 2349; revision 8975; parent 8974; 2010-11-22T12:51:53Z -->
