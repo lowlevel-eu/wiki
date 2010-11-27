@@ -125,7 +125,7 @@ Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_
 
 - Die menu.lst kann nicht geladen werden, d.h. es erscheint nur der GRUB-Prompt. Schuld an diesem Fehler ist ein falscher Pfad in stage2 (der Pfad ist Lowercase, aber ISO-Level-1 speichert nur Uppercase). Abhilfe schafft entweder GRUB gepatcht neu bauen, oder einfach den Pfad im Binary zu ändern:`sed -i "s/boot\/grub\/menu.lst/BOOT\/GRUB\/MENU.LST/g" stage2_eltorito`Nur für Linux User, die *stage2_eltorito* von tyndur sollte aber funktionieren.
 - Es gibt Systeme die nicht von ElTorito-CDs booten können. Abhilfe schafft hier manchmal, statt ElTorito die Floppyemulation zum Booten zu verwenden. Einfach ein Floppyimage mit allen benötigten Treibern erstellen, welches dann von CD weiterlädt. Das CD-Image hierfür wird dann via`mkisofs -b floppy.img -o cdrom.iso cdrom_files/`  
-  erstellt. **ACHTUNG**: Man braucht wenn man nicht alles im Speicher hat wirklich eigene Treiber, das Floppy-Image ist ab Protected Mode verloren (es werden Interrupts umgeleitet).
+  erstellt. **ACHTUNG**: Man braucht, wenn man nicht alles im Speicher hat, wirklich eigene Treiber, denn das Floppy-Image ist ab dem Protected Mode weg (es werden Interrupts umgeleitet).
 
 ### Konfigurationsdatei
 
@@ -273,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8992/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8993/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8992; parent 8991; 2010-11-27T16:29:44Z -->
+<!-- MediaWiki page 1567; revision 8993; parent 8992; 2010-11-27T16:33:36Z -->
