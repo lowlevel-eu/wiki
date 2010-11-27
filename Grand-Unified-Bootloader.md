@@ -97,7 +97,7 @@ Installiert GRUB-stage1 in den Bootsektor des Floppy Images
 
 Den ganzen Prozess kann man in einer .bat Datei zusammenfassen.
 
-### Windows 64-Bit
+#### Windows 64-Bit
 
 Da Windows 64-Bit Systeme die direkte Ausführung von .com Dateien, die 16-Bit sind, verweigern, muss man hier einen kleinen Umweg nehmen:
 
@@ -273,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8992/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8991; parent 8990; 2010-11-27T16:02:59Z -->
+<!-- MediaWiki page 1567; revision 8992; parent 8991; 2010-11-27T16:29:44Z -->
