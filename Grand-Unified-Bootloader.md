@@ -238,7 +238,7 @@ grub.cfg ins Image bringen: Oben links auf das Plus neben dem Ordner "boot" klic
 
 Auf "Datei-\>Speichern" klicken.
 
-Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu werden. Achtung: Bedanken, dass immer, wenn sich etwas am Kernel oder den Modulen ändert, diese erneut dem Image hinzugefügt werden müssen.
+Nun ist das Image bereit, um auf einem echten PC oder einem Emulator gebootet zu werden. Achtung: Beachten, dass immer, wenn sich etwas am Kernel oder den Modulen ändert, diese erneut dem Image hinzugefügt werden müssen.
 
 ### Beispielkonfigurationsdatei
 
@@ -266,6 +266,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8478; parent 8476; 2010-10-03T12:10:41Z -->
+<!-- MediaWiki page 1567; revision 8989; parent 8478; 2010-11-27T15:22:06Z -->
