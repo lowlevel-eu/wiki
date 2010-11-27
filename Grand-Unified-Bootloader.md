@@ -72,7 +72,7 @@ Anschließend das Image noch bootbar machen:
     grub> setup (fd0)
     grub> quit
 
-#### Windows
+#### Windows 32-Bit
 
 **Achtung!**
 
@@ -82,9 +82,8 @@ Es sind folgende Tools vonnöten:
 
 - [BFI](http://www.nu2.nu/bfi/) (*Build Floppy Image*)
 - [GRUB4DOS](https://gna.org/projects/grub4dos)
-- [Virtual Floppy Drive](http://chitchat.at.infoseek.co.jp/vmware/vfd.html)
 
-Wir brauchen also zunächst einmal einen Ordner. In desen Ordner kommt die Datei *grldr* (GRUB4DOS Stage2). Aus diesem Ordner machen wir jetzt ein Image.
+Wir brauchen also zunächst einmal einen Ordner. In desen Ordner kommen die Dateien *grldr* (GRUB4DOS Stage2), *menu.lst* (Die GRUB Konfigurationsdatei) und der kernel. Aus diesem Ordner machen wir jetzt ein Image.
 
     bfi -t=144 -f=floppy.img floppy
 
@@ -96,7 +95,17 @@ Nun muss GRUB nur noch auf dem Image installiert werden und das Image bootfähig
 
 Installiert GRUB-stage1 in den Bootsektor des Floppy Images
 
-Nun kannst du das Image mit VFD mounten und deinen Kernel und eine menu.lst (Die GRUB Konfigurationsdatei) auf das Image kopieren.
+Den ganzen Prozess kann man in einer .bat Datei zusammenfassen.
+
+### Windows 64-Bit
+
+Da Windows 64-Bit Systeme die direkte Ausführung von .com Dateien, die 16-Bit sind, verweigern, muss man hier einen kleinen Umweg nehmen:
+
+    bfi.exe -t=144 -f=floppy.img floppy -b=mbr.bin
+
+Erstellt die Datei floppy.img mit dem Inhalt der Ordnes *floppy* und dem MBR aus *mbr.bin*.
+
+Der Ordner *floppy* hat exakt den gleichen Inhalt wie bei oben. Die *mbr.bin* kann erstellt werden indem man den [MBR](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "MBR") bspw. von einem existierenden Image mittels [dd for Windows](http://www.chrysocome.net/dd) extrahiert. Wer kein zur der GRUB Version kompatibles Image hat, kann sich mittels der Bootlace.com einmalig eines auf einem anderen PC oder in der [DosBox](http://www.dosbox.com/) erstellen.
 
 ### CD-Image herstellen
 
@@ -266,6 +275,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8989; parent 8478; 2010-11-27T15:22:06Z -->
+<!-- MediaWiki page 1567; revision 8990; parent 8989; 2010-11-27T15:44:17Z -->
