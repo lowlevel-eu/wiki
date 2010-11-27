@@ -18,7 +18,10 @@
 <https://sourceforge.net/projects/devios/>
 
   
-DeviOS ist geplant mit :
+**Die Entwicklung von DeviOS wird eingestellt, stattdessen wird die Entwicklung jetzt als Pinix weitergeführt!**
+
+  
+DeviOS war geplant mit :
 
 - Netzwerktreibern
 - FAT-Treiber
@@ -69,23 +72,13 @@ DeviOS ist geplant mit :
 - Macht leider noch Probleme.....
 - Wird (leider) nie veröffentlicht...
 
-0.0.3.0 :
-
-- Textausgabe (kprint)
-- Multiboot
-- Mit GRUB kompatibel
-- Interrupts
-- erste Shell
-- Paging
-- Noch in Beta Test
+  
 
 ## Screenshots
 
 Bald verfügbar !
 
-## Beta-Test Anmeldung
-
-Wer mitmachen will kann mich unter peter.junior@live.at erreichen
+  
 
 ## Downloads
 
@@ -93,6 +86,6 @@ Wer mitmachen will kann mich unter peter.junior@live.at erreichen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8979/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8981/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8979; parent 8977; 2010-11-23T14:22:04Z -->
+<!-- MediaWiki page 2349; revision 8981; parent 8979; 2010-11-27T07:31:48Z -->
