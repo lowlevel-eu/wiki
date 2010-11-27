@@ -109,12 +109,10 @@ Der Ordner *floppy* hat exakt den gleichen Inhalt wie bei oben. Die *mbr.bin* ka
 
 ### CD-Image herstellen
 
-#### Linux
-
 Es sind folgende Tools vonnöten:
 
-- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein.)
-- mkisofs
+- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein. Windows Nutzer können die *stage2_eltorito* von [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") nehmen)
+- mkisofs (für Windows Nutzer [hier](http://www.student.tugraz.at/thomas.plank/) verfügbar)
 
 Als Erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner kopieren. Dazu gehören auch die von GRUB benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Anschließend erstellt man das CD-Image folgendermaßen:
 
@@ -125,7 +123,7 @@ Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_
   
 *Mögliche Probleme*:
 
-- Die menu.lst kann nicht geladen werden, d.h. es erscheint nur der GRUB-Prompt. Schuld an diesem Fehler ist ein falscher Pfad in stage2 (der Pfad ist Lowercase, aber ISO-Level-1 speichert nur Uppercase). Abhilfe schafft entweder GRUB gepatcht neu bauen, oder einfach den Pfad im Binary zu ändern:`sed -i "s/boot\/grub\/menu.lst/BOOT\/GRUB\/MENU.LST/g" stage2_eltorito`
+- Die menu.lst kann nicht geladen werden, d.h. es erscheint nur der GRUB-Prompt. Schuld an diesem Fehler ist ein falscher Pfad in stage2 (der Pfad ist Lowercase, aber ISO-Level-1 speichert nur Uppercase). Abhilfe schafft entweder GRUB gepatcht neu bauen, oder einfach den Pfad im Binary zu ändern:`sed -i "s/boot\/grub\/menu.lst/BOOT\/GRUB\/MENU.LST/g" stage2_eltorito`Nur für Linux User, die *stage2_eltorito* von tyndur sollte aber funktionieren.
 - Es gibt Systeme die nicht von ElTorito-CDs booten können. Abhilfe schafft hier manchmal, statt ElTorito die Floppyemulation zum Booten zu verwenden. Einfach ein Floppyimage mit allen benötigten Treibern erstellen, welches dann von CD weiterlädt. Das CD-Image hierfür wird dann via`mkisofs -b floppy.img -o cdrom.iso cdrom_files/`  
   erstellt. **ACHTUNG**: Man braucht wenn man nicht alles im Speicher hat wirklich eigene Treiber, das Floppy-Image ist ab Protected Mode verloren (es werden Interrupts umgeleitet).
 
@@ -275,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8990; parent 8989; 2010-11-27T15:44:17Z -->
+<!-- MediaWiki page 1567; revision 8991; parent 8990; 2010-11-27T16:02:59Z -->
