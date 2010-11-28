@@ -4,7 +4,7 @@ Eine Übersicht über die Speicherbereiche unter der 1MB-Grenze gibt folgende Gr
 
   
 
-![memory.png](http://lowlevel.brainsware.org/wiki/images/memory.png)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9e3df79f7fb6404b5c75.png" width="428" height="690" alt="Memory.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9e3df79f7fb6404b5c75.png)
 
   
 
@@ -23,6 +23,6 @@ Eine Übersicht über die Speicherbereiche unter der 1MB-Grenze gibt folgende Gr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
 
-<!-- MediaWiki page 1563; revision 5764; parent 4547; 2009-08-27T16:04:55Z -->
+<!-- MediaWiki page 1563; revision 9001; parent 5764; 2010-11-28T10:18:28Z -->
