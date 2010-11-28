@@ -6,11 +6,11 @@ Der Bootsektor ist in der Regel 512 Byte groß und endet mit der Magic Number 0x
 
 ## siehe auch
 
-- Eigener Boot Record
+- [Eigener Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Eigener-Bootloader "Eigener Bootloader")
 - [Ausgabe 1 (4.3 Unser Bootloader)](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#unser-bootloader "Ausgabe 1")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/3448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1475/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9011/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1475/index.html)
 
-<!-- MediaWiki page 1475; revision 3448; parent 2453; 2008-11-01T08:14:09Z -->
+<!-- MediaWiki page 1475; revision 9011; parent 3448; 2010-11-28T13:32:13Z -->
