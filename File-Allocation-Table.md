@@ -180,7 +180,9 @@ Die Informationen die dem Boot-Sektor zu entnehmen sind können je nach FAT-Vers
 
 ## VFAT
 
-VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für FAT. Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten. Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert.
+VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für FAT. Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten.
+
+Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert, aber das ist nicht an die Benutzung der langen Dateinamen gebunden.
 
 ## Dateikonventionen
 
@@ -204,6 +206,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9019/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9020/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9019; parent 9018; 2010-11-28T19:54:46Z -->
+<!-- MediaWiki page 1643; revision 9020; parent 9019; 2010-11-28T19:58:00Z -->
