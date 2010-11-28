@@ -174,7 +174,7 @@ Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reser
 
     Anzahl_der_Stammverzeichnissektoren = Anzahl_der_Stammverzeichniseinträge / ( Größe_der_Sektoren_in_Byte / 32 );
 
-Auch diese Informationen sind dem Boot-Sektor zu entnehmen (zumindest bei FAT12 und FAT32). Diese Gleichung sollte ohne Rest aufgehen, wenn dem nicht so ist ist das ein Fehler. Die 32 ist die Größe eines Verzeichniseintrages und die ist bei FAT immer gleich.
+Auch diese Informationen sind dem Boot-Sektor zu entnehmen (zumindest bei FAT12 und FAT16). Diese Gleichung sollte ohne Rest aufgehen, wenn dem nicht so ist ist das ein Fehler. Die 32 ist die Größe eines Verzeichniseintrages und die ist bei FAT immer gleich.
 
 Die Informationen die dem Boot-Sektor zu entnehmen sind können je nach FAT-Version in verschiedenen Einträgen drin sein, da muss entsprechend aufgepasst werden.
 
@@ -204,6 +204,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9015/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9015; parent 8998; 2010-11-28T18:50:06Z -->
+<!-- MediaWiki page 1643; revision 9018; parent 9015; 2010-11-28T19:52:49Z -->
