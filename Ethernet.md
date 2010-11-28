@@ -8,7 +8,7 @@ Es gibt im Grunde zwei Formen von Ethernetpaketen: Ethernet I und Ethernet II. B
 
 ### Ethernet I
 
-![Ethernet1.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/ea7a62df1b460e1b00e2.png)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/ea7a62df1b460e1b00e2.png" width="827" height="62" alt="Ethernet1.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/ea7a62df1b460e1b00e2.png)
 
 Dies ist die "Abbildung" eines Ethernet-I-Paketes. Den Teil, der aus den MAC-Adressen, dem Längenfeld, den Nutzdaten, dem PAD-Feld und der CRC32-Checksumme gebildet wird, nennt man Ethernetframe.
 
@@ -25,7 +25,7 @@ Dies ist die "Abbildung" eines Ethernet-I-Paketes. Den Teil, der aus den MAC-Adr
 
 ### Ethernet II
 
-![Ethernet2.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/251c283c3864cad6e788.png)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/251c283c3864cad6e788.png" width="827" height="62" alt="Ethernet2.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/251c283c3864cad6e788.png)
 
 Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-Paket: Statt dem Längenfeld gibt es ein Typfeld, welches den Typ der Nutzdaten angibt. Der Wert im Typfeld ist stets größer als 0x0600 (1536), sodass zwischen Ethernet-I-Paketen (der Wert muss kleiner oder gleich 0x05DC (1500) sein) und zwischen Ethernet-II-Paketen unterschieden werden kann. Wichtige Typwerte sind 0x0800 ([IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol")) und 0x0806 ([ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "Address Resolution Protocol")).
 
@@ -42,6 +42,6 @@ An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7594/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1876/index.html)
 
-<!-- MediaWiki page 1876; revision 7594; parent 7332; 2010-04-19T13:56:49Z -->
+<!-- MediaWiki page 1876; revision 9004; parent 7594; 2010-11-28T10:32:24Z -->
