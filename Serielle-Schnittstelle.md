@@ -6,7 +6,7 @@ Die **serielle Schnittstelle** (Abkürzung: **COM** von *Communication* oder **R
 
 ## Funktionsweise
 
-Daten werden bei der seriellen Schnittstellen als Wörter übertragen, welche je nach Konfiguration fünf bis neun Bits entsprechen. Codiert werden diese Wörter nach dem ASCII-Zeichensatz. Der wichtigste Unterschied zur parallelen Schnittstelle ist, dass die Bits nacheinander übertragen werden.
+Daten werden bei der seriellen Schnittstellen als Wörter übertragen, welche je nach Konfiguration fünf bis neun Bits entsprechen. Codiert werden diese Wörter nach dem ASCII-Zeichensatz. Der wichtigste Unterschied zur [parallelen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle") ist, dass die Bits nacheinander übertragen werden.
 
 ## Aufbau
 
@@ -156,6 +156,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9012/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 8319; parent 6584; 2010-09-20T05:49:34Z -->
+<!-- MediaWiki page 1561; revision 9012; parent 8319; 2010-11-28T13:34:56Z -->
