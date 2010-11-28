@@ -156,14 +156,20 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster
 
 Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit und besteht aus einem oder mehreren (für gewöhnlich eine Zweierpotenz) Sektoren. Bei Disketten, die mit FAT12 formatiert sind, ist ein Cluster immer ein Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur ein Byte groß ist. Eine 2312 Byte große Datei würde dort fünf Cluster belegen und fast einen halben Cluster ungenutzt lassen. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT12 formatiert, sondern meistens mit FAT32 oder NTFS. Um NTFS kümmern wir uns in diesem Artikel aber nicht. Bei FAT32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 acht Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch.
 
-Um von der Cluster-Nummer auf die Sektor-Nummer zu kommen, in dem die eigentlichen Daten liegen, muss man folgende Gleichung benutzen:  
-Sektor_Nummer = ( ( Cluster_Nummer - 2 ) \* Cluster_Größe_in_Sektoren ) + Position_des_ersten_Datensektors;  
+Um von der Cluster-Nummer auf die Sektor-Nummer zu kommen, in dem die eigentlichen Daten liegen, muss man folgende Gleichung benutzen:
+
+    Sektor_Nummer = ( ( Cluster_Nummer - 2 ) * Cluster_Größe_in_Sektoren ) + Position_des_ersten_Datensektors;
+
 Die Subtraktion mit 2 ist weil es keine Daten-Cluster 0 und 1 gibt. Die Multiplikation mit der Cluster-Größe sollte logisch sein. Die Addition mit der Position des ersten Datensektors ist wichtig weil vor den Nutzdaten ja noch mindestens der Boot-Sektor und die FAT(s) kommen, bei FAT12 und FAT16 kommt da auch noch das Stammverzeichnis. Die Position des ersten Datensektors ist üblicherweise konstant und muss daher nur ein mal beim mounten ausrechnet werden. Die hier ausgerechnete Sektor-Nummer bezieht sich nur auf das FAT-Dateisystem als solches, wenn dieses Dateisystem als Partition auf einer Festplatte liegt dann muss natürlich noch die Start-Position der betreffenden Partition dazu addiert werden um eine absolute Sektor-Nummer zu erhalten und wenn das Dateisystem ohne Partitionierung auf einer Diskette liegt dann ist keine weitere Rechnung erforderlich.
 
-Die Position des ersten Datensektors rechnet man folgendermaßen aus:  
-Position_des_ersten_Datensektors = Anzahl_reservierter_Sektoren + ( Anzahl_der_FAT_Sektoren \* Anzahl_der_FAT_Kopien ) + Anzahl_der_Stammverzeichnissektoren;  
-Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reservierten Sektoren ist mindestens 1 da dazu auch der Boot-Sektor selber zählt. Die Anzahl der FAT-Sektoren und die Anzahl der FAT-Kopien sollten klar sein. Die Anzahl der Stammverzeichnissektoren ist bei FAT32 immer 0 weil dort das Stammverzeichnis ganz normal im Datenbereich liegt. Bei FAT12 und FAT16 muss man sich die Größe des Stammverzeichnis in Sektoren erst ausrechnen:  
-Anzahl_der_Stammverzeichnissektoren = Anzahl_der_Stammverzeichniseinträge / ( Größe_der_Sektoren_in_Byte / 32 );  
+Die Position des ersten Datensektors rechnet man folgendermaßen aus:
+
+    Position_des_ersten_Datensektors = Anzahl_reservierter_Sektoren + ( Anzahl_der_FAT_Sektoren * Anzahl_der_FAT_Kopien ) + Anzahl_der_Stammverzeichnissektoren;
+
+Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reservierten Sektoren ist mindestens 1 da dazu auch der Boot-Sektor selber zählt. Die Anzahl der FAT-Sektoren und die Anzahl der FAT-Kopien sollten klar sein. Die Anzahl der Stammverzeichnissektoren ist bei FAT32 immer 0 weil dort das Stammverzeichnis ganz normal im Datenbereich liegt. Bei FAT12 und FAT16 muss man sich die Größe des Stammverzeichnis in Sektoren erst ausrechnen:
+
+    Anzahl_der_Stammverzeichnissektoren = Anzahl_der_Stammverzeichniseinträge / ( Größe_der_Sektoren_in_Byte / 32 );
+
 Auch diese Informationen sind dem Boot-Sektor zu entnehmen (zumindest bei FAT12 und FAT32). Diese Gleichung sollte ohne Rest aufgehen, wenn dem nicht so ist ist das ein Fehler. Die 32 ist die Größe eines Verzeichniseintrages und die ist bei FAT immer gleich.
 
 Die Informationen die dem Boot-Sektor zu entnehmen sind können je nach FAT-Version in verschiedenen Einträgen drin sein, da muss entsprechend aufgepasst werden.
@@ -194,6 +200,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8996/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8996; parent 8995; 2010-11-28T09:20:59Z -->
+<!-- MediaWiki page 1643; revision 8997; parent 8996; 2010-11-28T09:25:41Z -->
