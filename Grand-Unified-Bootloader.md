@@ -241,7 +241,7 @@ Kernel ins Image bringen: Obenb Links auf den Ordner "boot" und unten rechts auf
 
 grub.cfg ins Image bringen: Oben links auf das Plus neben dem Ordner "boot" klicken und dann auf den Ordner "Grub". Die grub.cfg auswählen und auf den markierten Button klicken.
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png" width="838" height="490" alt="GRUB2-3.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e5127e0a1ea9c0f1ea3e.png" width="837" height="489" alt="GRUB2-4.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e5127e0a1ea9c0f1ea3e.png)
 
 Auf "Datei-\>Speichern" klicken.
 
@@ -273,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8993/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 8993; parent 8992; 2010-11-27T16:33:36Z -->
+<!-- MediaWiki page 1567; revision 9013; parent 8993; 2010-11-28T13:55:09Z -->
