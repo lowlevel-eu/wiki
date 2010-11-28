@@ -15,7 +15,7 @@ Der Weg zum eigenen Betriebssystem ist lang und steinig. Manch einer versucht al
 
 Dieses Tutorial wird in erster Linie die Vorgehensweise erläutern, die bei vielen [Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") identisch sind. Folglich wird hier auch kein kompletter Source-Code eines Bootloader gelistet. Grundkenntnise in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sind für dieses Tutorial allerdings Voraussetzung, so auch der Umgang mit einem Assembler und einem [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker").
 
-Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen und Variablen statt Offset-Konstanten zu verwenden, besonders beim Boot-Parameter-Block.
+Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen und Variablen statt Offset-Konstanten zu verwenden, besonders beim [Boot-Parameter-Block](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table#bootsektor "FAT").
 
   
 
@@ -572,6 +572,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8665/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 8665; parent 8661; 2010-10-17T16:59:36Z -->
+<!-- MediaWiki page 1427; revision 9007; parent 8665; 2010-11-28T13:20:31Z -->
