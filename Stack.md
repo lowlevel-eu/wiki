@@ -21,7 +21,7 @@ Zudem sind die Befehle PUSH und POP in die CPU integriert. Dabei ist zu beachten
 - Der PUSH-Befehl vermindert den Wert von ESP um die Größe des Operanden und schreibt diesen an die Stelle, auf die das Register dann zeigt
 - Der POP-Befehl liest das Element, auf das ESP zeigt und erhöht das Register um die Operandengröße.
 
-Das bedeutet, dass der Stack seine maximale Größe erreicht hat, wenn der Wert 0 im ESP-Register steht. In diesem Fall wird ein Stackfault ausgelöst.
+Das bedeutet, dass der Stack seine maximale Größe erreicht hat, wenn der Wert 0 im ESP-Register steht. In diesem Fall wird ein [Stackfault](https://github.com/lowlevel-eu/wiki/wiki/Exception#liste-der-exceptions "Exception") ausgelöst.
 
 ### Das EPB-Register
 
@@ -49,6 +49,6 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7091/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9010/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 7091; parent 7088; 2010-02-17T16:31:03Z -->
+<!-- MediaWiki page 2165; revision 9010; parent 7091; 2010-11-28T13:29:57Z -->
