@@ -21,7 +21,7 @@
 
 <http://www.staticos.at.tf/>
 
-![Staticos1.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos1.JPG)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg)
 
   
 
@@ -64,15 +64,15 @@
 
 Static Operating System Ladevorgang
 
-![Staticos1.JPG](http://lowlevel.brainsware.org/wiki/images/8/8d/Staticos1.JPG)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg)
 
 Static Operating System GUI Test
 
-![Staticos2.JPG](http://lowlevel.brainsware.org/wiki/images/4/4f/Staticos2.JPG)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/4917882a3dee917fdb65.jpg" width="399" height="329" alt="Staticos2.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/4917882a3dee917fdb65.jpg)
 
 Static Operating System Fenster vergrößern
 
-![Staticos3.JPG](http://lowlevel.brainsware.org/wiki/images/e/e2/Staticos3.JPG)
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/15703bca12330b93272d.jpg" width="396" height="328" alt="Staticos3.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/15703bca12330b93272d.jpg)
 
   
 
@@ -82,6 +82,6 @@ Static Operating System Fenster vergrößern
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5795/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2050/index.html)
 
-<!-- MediaWiki page 2050; revision 5795; parent 5744; 2009-08-31T06:37:12Z -->
+<!-- MediaWiki page 2050; revision 9002; parent 5795; 2010-11-28T10:20:52Z -->
