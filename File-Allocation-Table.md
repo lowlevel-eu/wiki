@@ -79,7 +79,7 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 | 0x24 | 4 | FAT-Größe in Sektoren |
 | 0x28 | 2 | FAT-Flags |
 | 0x2A | 2 | FAT32-Version |
-| 0x2C | 4 | Erstes Cluster des Wurzelverzeichnis |
+| 0x2C | 4 | Erster Cluster des Wurzelverzeichnis |
 | 0x30 | 2 | Info-Sektor. Sektor der Informationen über das Dateisystem enthält. |
 | 0x32 | 2 | Sektor der Bootsektorkopie. (Microsoft empfiehlt nur 6 zu verwenden) |
 | 0x34 | 12 | Reserviert |
@@ -98,17 +98,21 @@ Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren ka
 
 ### File Allocation Table
 
-In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man das erste Cluster einer Datei hat, kann man es in der FAT nachschlagen und somit das nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters, kann dieses in der FAT auch als defekt markiert werden. Es wird dann nicht mehr zum Speichern von Daten verwendet. Normalerweise gibt es 2 FAT-Kopien um durch die Redundanz etwas Fehlertoleranz zu ermöglichen.
+In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man den ersten Cluster einer Datei hat, kann man ihn in der FAT nachschlagen und somit den nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters kann dieser in der FAT auch als defekt markiert werden. Er wird dann nicht mehr zum Speichern von Daten verwendet.
+
+Normalerweise gibt es 2 FAT-Kopien um durch die Redundanz etwas Fehlertoleranz zu ermöglichen.
 
 | Bedeutung | FAT12 | FAT16 | FAT32 |
 | ------------------------------------- | ------------- | --------------- | ------------------------------------ |
-| freies Cluster | 0x000 | 0x0000 | 0x00000000 |
-| defektes Cluster | 0xFF7 | 0xFFF7 | 0x0FFFFFF7 |
-| letztes Cluster einer Clusterkette | 0xFF8-0xFFF | 0xFFF8-0xFFFF | 0x0FFFFFF8-0x0FFFFFFF |
-| normales Cluster einer Clusterkette | 0x002-0xFF6 | 0x0002-0xFFF6 | 0x00000002-0x0FFFFFF6 |
-| verbotene Cluster-Nummern | 0x001 | 0x0001 | 0x00000001 , 0x10000000-0xFFFFFFFF |
+| Freier Cluster | 0x000 | 0x0000 | 0x00000000 |
+| Verbotene Cluster-Nummern | 0x001 | 0x0001 | 0x00000001 , 0x10000000-0xFFFFFFFF |
+| Normaler Cluster einer Clusterkette | 0x002-0xFF6 | 0x0002-0xFFF6 | 0x00000002-0x0FFFFFF6 |
+| Defekter Cluster | 0xFF7 | 0xFFF7 | 0x0FFFFFF7 |
+| Letzter Cluster einer Clusterkette | 0xFF8-0xFFF | 0xFFF8-0xFFFF | 0x0FFFFFF8-0x0FFFFFFF |
 
-Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT das nächste Cluster an. Man muss also den Wert aus der FAT nehmen, und ihn als neuen Index für die FAT benutzen. Wenn man auf die eigentlichen Daten zugreifen will muss man vorher 2 subtrahieren, weil die Cluster 0 und 1 nicht im Datenbereich existieren (der Datenbereich ist quasi ein Array aus Clustern das mit Index 2 anfängt wogegen die FAT ein Array aus Cluster-Nummern ist das mit Index 0 anfängt). Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Einträge 0 und 1 in der FAT werden für spezielle Zwecke benutzt und sollten nicht verändert werden.
+Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT die Nummer des nächsten Clusters an. Man muss also den Wert aus der FAT nehmen und ihn als neuen Index für die FAT benutzen. Wenn man auf die eigentlichen Daten zugreifen will, muss man vorher 2 subtrahieren, weil die Cluster 0 und 1 nicht im Datenbereich existieren (der Datenbereich ist quasi ein Array aus Clustern das mit Index 2 anfängt wogegen die FAT ein Array aus Cluster-Nummern ist das mit Index 0 anfängt).
+
+Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Einträge 0 und 1 in der FAT werden für spezielle Zwecke benutzt und sollten nicht verändert werden.
 
 ### Wurzelverzeichnis
 
@@ -200,6 +204,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8998/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 8997; parent 8996; 2010-11-28T09:25:41Z -->
+<!-- MediaWiki page 1643; revision 8998; parent 8997; 2010-11-28T09:58:08Z -->
