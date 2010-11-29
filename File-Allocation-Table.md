@@ -150,11 +150,12 @@ Dekasekunde (1 Dekasekunde entspricht 10 Sekunden) Stunde Minute 2 Sekunden Jahr
 
 **Bedeutung**
 
-Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (für FAT32) 0x164Datum des letzten Schreibzugriffs
+Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (nur für FAT32, ansonsten immer 0) 0x164Datum des letzten Schreibzugriffs
 
 **Bedeutung**
 
-Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster +2 (man muss 2 subtrahieren um die eigentliche Clusternummer zu erhalten) 0x1C4Dateigröße in Bytes
+Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster  
+(beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren das es im Datenbereich die Cluster 0 und 1 nicht gibt, in der FAT gibt es aber die Einträge 0 und 1 so das dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist) 0x1C4Dateigröße in Bytes
 
 ## Cluster
 
@@ -208,6 +209,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9026; parent 9023; 2010-11-29T11:28:44Z -->
+<!-- MediaWiki page 1643; revision 9030; parent 9026; 2010-11-29T14:44:26Z -->
