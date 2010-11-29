@@ -27,7 +27,7 @@ FAT wird in 5 Bereiche unterteilt:
 - [Reservierte Sektoren](#reservierte-sektoren)
 - [File Allocation Table](#file-allocation-table-1)
 - [Wurzelverzeichnis](#) (bei FAT32 in der Datenregion enthalten)
-- [Datei- and Verzeichnis-Datenregion](#)
+- [Datei- und Verzeichnis-Datenregion](#datei--und-verzeichnis-datenregion)
 
 ### Bootsektor
 
@@ -98,7 +98,7 @@ Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren ka
 
 ### File Allocation Table
 
-In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man den ersten Cluster einer Datei hat, kann man ihn in der FAT nachschlagen und somit den nächste Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters kann dieser in der FAT auch als defekt markiert werden. Er wird dann nicht mehr zum Speichern von Daten verwendet.
+In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man den ersten Cluster einer Datei hat, kann man ihn in der FAT nachschlagen und somit den nächsten Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters kann dieser in der FAT auch als defekt markiert werden. Er wird dann nicht mehr zum Speichern von Daten verwendet.
 
 Normalerweise gibt es 2 FAT-Kopien um durch die Redundanz etwas Fehlertoleranz zu ermöglichen.
 
@@ -112,13 +112,13 @@ Normalerweise gibt es 2 FAT-Kopien um durch die Redundanz etwas Fehlertoleranz z
 
 Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT die Nummer des nächsten Clusters an. Man muss also den Wert aus der FAT nehmen und ihn als neuen Index für die FAT benutzen. Wenn man auf die eigentlichen Daten zugreifen will, muss man vorher 2 subtrahieren, weil die Cluster 0 und 1 nicht im Datenbereich existieren (der Datenbereich ist quasi ein Array aus Clustern das mit Index 2 anfängt wogegen die FAT ein Array aus Cluster-Nummern ist das mit Index 0 anfängt).
 
-Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichiseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden für unbekannte Zwecke benutzt (die Tools von Microsoft verlangen die aber) und sollten daher nicht verändert werden.
+Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichiseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden für unbekannte Zwecke benutzt (die Tools von Microsoft verlangen die aber) und sollten daher nicht verändert werden.
 
 ### Wurzelverzeichnis
 
 Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter, zusammenhängender Bereich auf dem Volume. Es bildet wie andere Verzeichnisse auch eine Tabelle aus Verzeichnis-Einträgen, allerdings wird seine Größe statisch beim Erstellen des Dateisystems festgelegt, so dass die Anzahl möglicher Dateien im Wurzelverzeichnis beschränkt ist.
 
-Bei FAT32 liegt das Wurzelverzeichnis im Datenbereich und wird wie jedes andere Verzeichnis auch behandelt. Es hat deshalb keinen festen Platz auf dem Volume. Sein erster Cluster wird im Boot-Sektor gespeichert, die weiteren Cluster werden in der FAT gespeichert. Die Größe des Verzeichnisses ist dadurch dynamisch.
+Bei FAT32 liegt das Wurzelverzeichnis im Datenbereich und wird wie jedes andere Verzeichnis auch behandelt. Es hat deshalb keinen festen Platz auf dem Volume. Sein erster Cluster wird im Boot-Sektor gespeichert, die weiteren Cluster werden in der FAT gespeichert. Die Größe des Wurzelverzeichnisses ist dadurch dynamisch.
 
 ### Datei- und Verzeichnis-Datenregion
 
@@ -206,6 +206,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9020/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9020; parent 9019; 2010-11-28T19:58:00Z -->
+<!-- MediaWiki page 1643; revision 9022; parent 9020; 2010-11-29T11:01:42Z -->
