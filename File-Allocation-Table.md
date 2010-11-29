@@ -202,11 +202,12 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ## Weblinks
 
-- [FAT32 File System Specification](http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx)
+- [FAT32 File System Specification](http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx) - direkt von Microsoft (im DOC-Format)
+- [FAT32 File System Specification](http://www.osdever.net/downloads/docs/fatgen103.zip) - aus der "Cottontail OS Development Library" (als geziptes PDF)
 - [Wikipedia-Artikel zu FAT](http://de.wikipedia.org/wiki/File_Allocation_Table)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9023/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9023; parent 9022; 2010-11-29T11:03:29Z -->
+<!-- MediaWiki page 1643; revision 9026; parent 9023; 2010-11-29T11:28:44Z -->
