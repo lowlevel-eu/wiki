@@ -170,7 +170,8 @@ Die Position des ersten Datensektors rechnet man folgendermaßen aus:
 
     Position_des_ersten_Datensektors = Anzahl_reservierter_Sektoren + ( Anzahl_der_FAT_Sektoren * Anzahl_der_FAT_Kopien ) + Anzahl_der_Stammverzeichnissektoren;
 
-Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reservierten Sektoren ist mindestens 1 da dazu auch der Boot-Sektor selber zählt. Die Anzahl der FAT-Sektoren und die Anzahl der FAT-Kopien sollten klar sein. Die Anzahl der Stammverzeichnissektoren ist bei FAT32 immer 0 weil dort das Stammverzeichnis ganz normal im Datenbereich liegt. Bei FAT12 und FAT16 muss man sich die Größe des Stammverzeichnis in Sektoren erst ausrechnen:
+Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reservierten Sektoren ist mindestens 1 da dazu auch der Boot-Sektor selber zählt. Die Anzahl der FAT-Sektoren und die Anzahl der FAT-Kopien sollten klar sein. Die Anzahl der Stammverzeichnissektoren ist bei FAT32 immer 0 weil dort das Stammverzeichnis ganz normal im Datenbereich liegt.  
+Bei FAT12 und FAT16 muss man sich die Größe des Stammverzeichnis in Sektoren erst ausrechnen:
 
     Anzahl_der_Stammverzeichnissektoren = Anzahl_der_Stammverzeichniseinträge / ( Größe_der_Sektoren_in_Byte / 32 );
 
@@ -206,6 +207,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9022/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9023/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9022; parent 9020; 2010-11-29T11:01:42Z -->
+<!-- MediaWiki page 1643; revision 9023; parent 9022; 2010-11-29T11:03:29Z -->
