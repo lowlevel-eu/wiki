@@ -43,7 +43,7 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 - Keyboard-Treiber
 - stabiler Kernel
 - [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")
-- [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") implementieren
+- [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
 - [FDC](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")
 - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
@@ -63,6 +63,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9034; parent 9033; 2010-12-02T17:05:32Z -->
+<!-- MediaWiki page 2298; revision 9035; parent 9034; 2010-12-02T17:05:43Z -->
