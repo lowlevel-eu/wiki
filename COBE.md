@@ -28,7 +28,7 @@ COBE besteht aus folgenden Elementen:
 
 ## Kernel
 
-Der Kernel wird auf monolithischer Basis aufgebaut werden. Derzeit ist der Kernel in einem noch recht instabilem Zustand, jedoch ist zu erwarten, dass der Kernel bereits in der Version 0.2 wesentlich stabiler laufen wird. Die GDT ist bei COBE nicht im Kernel enthalten, sondern in dem Kernelloader, dafür ist aber bereits die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR"), und ein Remap der [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") im Kernel enthalten.
+Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit das System-nötigste im Kernel enthalten. Der Kernel von COBE beinhaltet System-Calls, welche über den Interrupt 0x30 erreichbar sind, eine genaue Dokumentation der System-Calls ist in Kürze auf der Projekt-Seite verfügbar.
 
 ## Versionen
 
@@ -63,6 +63,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9032; parent 8818; 2010-12-02T17:02:58Z -->
+<!-- MediaWiki page 2298; revision 9033; parent 9032; 2010-12-02T17:05:11Z -->
