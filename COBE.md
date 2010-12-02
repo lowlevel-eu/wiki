@@ -35,7 +35,7 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 **COBE 0.1 Alpha:**
 
 - Grundinitialisierung von COBE
-- eigener Bootloader
+- GRUB
 - Bootscreen
 - GDT
 - IDT, ISR
@@ -63,6 +63,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9033; parent 9032; 2010-12-02T17:05:11Z -->
+<!-- MediaWiki page 2298; revision 9034; parent 9033; 2010-12-02T17:05:32Z -->
