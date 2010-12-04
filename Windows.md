@@ -1,13 +1,13 @@
 # Windows
 
 | Windows |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Microsoft |
 | Akt. Version: | NT 6.1 (= 7) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ältere Versionen auch andere |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), Alpha (NT 4) |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C |
 | API: | WinAPI |
@@ -25,7 +25,7 @@ Windows ist ein kommerzielles Betriebssystem der Firma Microsoft, das auf einer 
 
 ### NT-Linie
 
-Windows NT, oder besser gesagt der NT-Kernel, wird in allen neuen Betriebssystemen von Microsoft eingesetzt. Der Name bedeutete anfangs N-Ten. Das war der Name der Prozessorarchitektur, für die NT anfangs entwickelt wurde. Der Name wurde später als ein Backronym auf *New Technology* umgedeutet.
+Windows NT, oder besser gesagt der NT-Kernel, wird in allen neuen Betriebssystemen von Microsoft eingesetzt. Der Name bedeutete anfangs N-Ten. Das war der Name der Prozessorarchitektur, für die NT anfangs entwickelt wurde. Der Name wurde später als ein Backronym auf *New Technology* umgedeutet. Mit dem NT-Kernel wollte Microsoft neben der Windows 9x-Linie (welche auf MS-DOS basierte) einen stabilen und sicheren Microkernel entwickeln.
 
 #### Kernel
 
@@ -47,6 +47,6 @@ Bei der API wird unterschieden zwischen der „nativen NT-API“, die teilweise 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8305/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 8305; parent 6968; 2010-09-19T16:01:22Z -->
+<!-- MediaWiki page 1558; revision 9036; parent 8305; 2010-12-04T00:14:36Z -->
