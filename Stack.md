@@ -1,6 +1,6 @@
 # Stack
 
-Der Stack (=Kellerspeicher oder Stapel) ist eine der wichtigsten Datenstrukturen sowohl für Software als auch Hardware, da dieser u. a. Parameter und Rücksprungadressen speichert.
+Der Stack (Kellerspeicher oder *Stapel*) ist eine der wichtigsten Datenstrukturen sowohl für Software als auch Hardware, da dieser u.a. Parameter und Rücksprungadressen speichert.
 
 ### Funktionsweise
 
@@ -11,7 +11,7 @@ Der Stack arbeitet nach dem LIFO-Prinzip ("Last in, first out"). Das bedeutet, d
 
 ### Implementierung durch die CPU
 
-Die CPU bietet zwei Register zum Arbeiten mit dem Stack:
+Die CPU bietet zwei Register zum Arbeiten mit dem Stack an:
 
 - **das SS-Register** speichert das Stacksegment (im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")) bzw. den Stackselektor (im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")).
 - **das ESP-Register** (=StackPointer) zeigt auf das oberste Element des aktuellen Stacks. Die [Real-Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")-Variante dieses Registers ist das SP-Register.
@@ -25,7 +25,7 @@ Das bedeutet, dass der Stack seine maximale Größe erreicht hat, wenn der Wert 
 
 ### Das EPB-Register
 
-Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). Dieses wird von vielen Hochsprachen verwendet, um lokale Variablen auf dem Stack zu speichern.
+Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (Base Pointer). Dieses wird von vielen Hochsprachen verwendet, um lokale Variablen auf dem Stack zu speichern.
 
 ### Befehle, die sich auf den Stack auswirken
 
@@ -49,6 +49,6 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (=Base Pointer). 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9010/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 9010; parent 7091; 2010-11-28T13:29:57Z -->
+<!-- MediaWiki page 2165; revision 9040; parent 9010; 2010-12-04T00:35:18Z -->
