@@ -203,6 +203,17 @@ Eine geeignete Implementierung für Exceptions ist die oben schon vorgeschlagene
 
 Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon ein [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") schreiben.
 
+## Weitere Quellen
+
+- [Offizielle Handbücher zu den Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/Linkliste#offizielle-spezifikationen "Linkliste"):
+  - Intel Architecture Software Developer's Manuals, Band 3A
+    - Kapitel 3: Protected Mode Memory Management
+    - Kapitel 5: Interrupt and Exception Handling
+  - AMD64 Architecture Programmer's Manual, Band 2
+    - Kapitel 4: Segmented Virtual Memory
+    - Kapitel 8: Exceptions and Interrupts
+- [Protected-Mode-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/index.htm), Kapitel 2
+
   
 
 |  |  |  |
@@ -211,6 +222,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 8348; parent 8347; 2010-09-22T16:35:38Z -->
+<!-- MediaWiki page 1898; revision 9044; parent 8348; 2010-12-04T21:54:32Z -->
