@@ -165,7 +165,7 @@ Um von der Cluster-Nummer auf die Sektor-Nummer zu kommen, in dem die eigentlich
 
     Sektor_Nummer = ( ( Cluster_Nummer - 2 ) * Cluster_Größe_in_Sektoren ) + Position_des_ersten_Datensektors;
 
-Da es keine Daten-Cluster 0 und 1 gibt wird die Cluster-Nummer durch 2 subtrahiert. Die Multiplikation mit der Cluster-Größe sollte logisch sein. Die Addition mit der Position des ersten Datensektors ist wichtig, weil vor den Nutzdaten ja noch mindestens der Boot-Sektor und die FAT(s) kommen, bei FAT12 und FAT16 kommt da auch noch das Stammverzeichnis. Die Position des ersten Datensektors ist üblicherweise konstant und muss daher nur ein mal beim Mounten ausrechnet werden. Die hier ausgerechnete Sektor-Nummer bezieht sich nur auf das FAT-Dateisystem als solches, wenn dieses Dateisystem als Partition auf einer Festplatte liegt muss dann noch die Start-Position der betreffenden Partition dazu addiert werden um eine absolute Sektor-Nummer zu erhalten. Wenn das Dateisystem ohne Partitionierung auf einer Diskette liegt, dann ist keine weitere Rechnung erforderlich.
+Da es keine Daten-Cluster 0 und 1 gibt wird die Cluster-Nummer um 2 verringert (im Verzeichniseintrag dürfen auch nur Cluster-Nummern größer gleich 2 drin sein wenn eine Datei Daten enthält). Die Multiplikation mit der Cluster-Größe sollte logisch sein. Die Addition mit der Position des ersten Datensektors ist wichtig, weil vor den Nutzdaten ja noch mindestens der Boot-Sektor und die FAT(s) kommen, bei FAT12 und FAT16 kommt da auch noch das Stammverzeichnis. Die Position des ersten Datensektors ist üblicherweise konstant und muss daher nur ein mal beim Mounten ausrechnet werden. Die hier ausgerechnete Sektor-Nummer bezieht sich nur auf das FAT-Dateisystem als solches, wenn dieses Dateisystem als Partition auf einer Festplatte liegt muss dann noch die Start-Position der betreffenden Partition dazu addiert werden um eine absolute Sektor-Nummer zu erhalten. Wenn das Dateisystem ohne Partitionierung auf einer Diskette liegt, dann ist keine weitere Rechnung erforderlich.
 
 Die Position des ersten Datensektors rechnet man folgendermaßen aus:
 
@@ -209,6 +209,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9041; parent 9037; 2010-12-04T07:53:23Z -->
+<!-- MediaWiki page 1643; revision 9042; parent 9041; 2010-12-04T07:59:40Z -->
