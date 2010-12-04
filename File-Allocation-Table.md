@@ -17,11 +17,11 @@ Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Daten
 - FAT16
 - FAT32
 
-FAT steht dabei für File Allocation Table und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2<sup>12</sup> Cluster adressierbar, mit FAT16 2<sup>16</sup> und mit FAT32 2<sup>28</sup>.
+FAT steht dabei für **F**ile **A**llocation **T**able und die Zahl gibt an wie groß die Einträge in dieser Tabelle sind. Mit FAT12 sind somit nur 2<sup>12</sup> Cluster adressierbar, mit FAT16 2<sup>16</sup> und mit FAT32 2<sup>28</sup>.
 
 ## Aufbau von FAT
 
-FAT wird in 5 Bereiche unterteilt:
+FAT wird in fünf Bereiche unterteilt:
 
 - [Bootsektor](#bootsektor)
 - [Reservierte Sektoren](#reservierte-sektoren)
@@ -43,7 +43,7 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 | Offset | Größe | Beschreibung |
 | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 3 | Instruktion die den BIOS Parameter Block überspringt |
-| 0x03 | 8 | OEM-Name. Der Name, der Software, die das FAT erstellt hat. Dieses Feld hat keinen Einfluss auf eigentliche Dateisystem. |
+| 0x03 | 8 | OEM-Name. Der Name, der Software, die das FAT erstellt hat. Dieses Feld hat keinen Einfluss auf das eigentliche Dateisystem. |
 | 0x0B | 2 | Sektor-Größe in Bytes. Gültig: 512, 1024, 2048 und 4096. Normal wird 512 verwendet. |
 | 0x0D | 1 | Cluster-Größe in Sektoren. Gültig: Zweierpotenz zwischen 1 und 64. |
 | 0x0E | 2 | Anzahl reservierter Sektoren inkl. Bootsektor. |
@@ -54,21 +54,21 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 | 0x16 | 2 | FAT-Größe in Sektoren. Bei FAT32 steht hier 0 und es wird das Feld bei Offset 0x24 benutzt. |
 | 0x18 | 2 | Spur-Größe in Sektoren. |
 | 0x1A | 2 | Anzahl der Schreib-Lese-Köpfe. |
-| 0x1C | 4 | Anzahl an Sektoren vor dem Bootsektor (z. B. wenn das FAT auf einer Partition liegt) |
+| 0x1C | 4 | Anzahl an Sektoren vor dem Bootsektor (z.B. wenn das FAT auf einer Partition liegt) |
 | 0x20 | 4 | Anzahl an Sektoren. |
 
-Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
+Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 
 **FAT12 und FAT16**
 
 | Offset | Größe | Beschreibung |
-| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x24 | 1 | Nummer des BIOS-Laufwerks |
 | 0x25 | 1 | Reserviert |
 | 0x26 | 1 | Erweiterte Bootsignatur |
 | 0x27 | 4 | Dateisystem-ID |
 | 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
-| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt), d.h. "FAT12 " oder "FAT16 ". Achtung: Dieses Feld ist nicht zuverlässig und daher maßgeblich für die Feststellung des Dateisystems. Stattdessen muss die FAT-Variante anhand der Anzahl der Cluster bestimmt werden! |
+| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt), d.h. "FAT12 " oder "FAT16 ". **Achtung**: Dieses Feld ist **nicht** zuverlässig und daher maßgeblich für die Feststellung des Dateisystems. Stattdessen muss die FAT-Variante anhand der Anzahl der Cluster bestimmt werden! |
 | 0x3E | 448 | Bootloader |
 | 0x1FE | 2 | Bootsignatur: 0xAA55 |
 
@@ -94,13 +94,13 @@ Die folgenden Daten unterscheiden sich wischen FAT12/FAT16 und FAT32.
 
 ### Reservierte Sektoren
 
-Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren kann z. B. ein Bootloader untergebracht werden, wenn der Platz im Bootsektor nicht reicht. Der Bootsektor wird von FAT zu den reservierten Sektoren dazugezählt.
+Nach dem Bootsektor folgen optionale reservierte Sektoren. In diesen Sektoren kann z.B. ein Bootloader untergebracht werden, wenn der Platz im Bootsektor nicht reicht. Der Bootsektor wird von FAT zu den reservierten Sektoren dazugezählt.
 
 ### File Allocation Table
 
-In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man den ersten Cluster einer Datei hat, kann man ihn in der FAT nachschlagen und somit den nächsten Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z. B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters kann dieser in der FAT auch als defekt markiert werden. Er wird dann nicht mehr zum Speichern von Daten verwendet.
+In der File Allocation Table (kurz FAT) wird festgehalten, welche Cluster zu welcher Datei gehören. Wenn man den ersten Cluster einer Datei hat, kann man ihn in der FAT nachschlagen und somit den nächsten Cluster herausfinden. Außerdem kann man in der FAT leere Cluster finden, wenn man z.B. eine neue Datei anlegen will. Bei einer Beschädigung eines Clusters kann dieser in der FAT auch als defekt markiert werden. Er wird dann nicht mehr zum Speichern von Daten verwendet.
 
-Normalerweise gibt es 2 FAT-Kopien um durch die Redundanz etwas Fehlertoleranz zu ermöglichen.
+Normalerweise gibt es zwei FAT-Kopien um durch die Redundanz etwas Fehlertoleranz zu ermöglichen.
 
 | Bedeutung | FAT12 | FAT16 | FAT32 |
 | ------------------------------------- | ------------- | --------------- | ------------------------------------ |
@@ -116,7 +116,7 @@ Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verze
 
 ### Wurzelverzeichnis
 
-Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter, zusammenhängender Bereich auf dem Volume. Es bildet wie andere Verzeichnisse auch eine Tabelle aus Verzeichnis-Einträgen, allerdings wird seine Größe statisch beim Erstellen des Dateisystems festgelegt, so dass die Anzahl möglicher Dateien im Wurzelverzeichnis beschränkt ist.
+Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter zusammenhängender Bereich auf dem Volume. Es bildet, wie andere Verzeichnisse auch, eine Tabelle aus Verzeichnis-Einträgen. Allerdings wird seine Größe statisch beim Erstellen des Dateisystems festgelegt, so dass die Anzahl möglicher Dateien im Wurzelverzeichnis beschränkt ist.
 
 Bei FAT32 liegt das Wurzelverzeichnis im Datenbereich und wird wie jedes andere Verzeichnis auch behandelt. Es hat deshalb keinen festen Platz auf dem Volume. Sein erster Cluster wird im Boot-Sektor gespeichert, die weiteren Cluster werden in der FAT gespeichert. Die Größe des Wurzelverzeichnisses ist dadurch dynamisch.
 
@@ -155,23 +155,23 @@ Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (nur f
 **Bedeutung**
 
 Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster  
-(beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren das es im Datenbereich die Cluster 0 und 1 nicht gibt, in der FAT gibt es aber die Einträge 0 und 1 so das dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist) 0x1C4Dateigröße in Bytes
+(beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist) 0x1C4Dateigröße in Bytes
 
 ## Cluster
 
-Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit und besteht aus einem oder mehreren (immer eine Zweierpotenz) Sektoren. Bei Disketten, die mit FAT12 formatiert sind, ist ein Cluster immer ein Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur ein Byte groß ist. Eine 2312 Byte große Datei würde dort fünf Cluster belegen und fast einen halben Cluster ungenutzt lassen. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT12 formatiert, sondern meistens mit FAT32 oder NTFS. Um NTFS kümmern wir uns in diesem Artikel aber nicht. Bei FAT32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 acht Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch.
+Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit und besteht aus einem oder mehreren (immer eine Zweierpotenz) Sektoren. Bei Disketten, die mit FAT12 formatiert sind, ist ein Cluster immer ein Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur ein Byte groß ist. Eine 2312 Byte große Datei würde dort fünf Cluster belegen und fast einen halben Cluster ungenutzt lassen. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT12 formatiert, sondern meistens mit FAT32 oder NTFS. Bei FAT32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 acht Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch.
 
 Um von der Cluster-Nummer auf die Sektor-Nummer zu kommen, in dem die eigentlichen Daten liegen, muss man folgende Gleichung benutzen:
 
     Sektor_Nummer = ( ( Cluster_Nummer - 2 ) * Cluster_Größe_in_Sektoren ) + Position_des_ersten_Datensektors;
 
-Die Subtraktion mit 2 ist weil es keine Daten-Cluster 0 und 1 gibt. Die Multiplikation mit der Cluster-Größe sollte logisch sein. Die Addition mit der Position des ersten Datensektors ist wichtig weil vor den Nutzdaten ja noch mindestens der Boot-Sektor und die FAT(s) kommen, bei FAT12 und FAT16 kommt da auch noch das Stammverzeichnis. Die Position des ersten Datensektors ist üblicherweise konstant und muss daher nur ein mal beim mounten ausrechnet werden. Die hier ausgerechnete Sektor-Nummer bezieht sich nur auf das FAT-Dateisystem als solches, wenn dieses Dateisystem als Partition auf einer Festplatte liegt dann muss natürlich noch die Start-Position der betreffenden Partition dazu addiert werden um eine absolute Sektor-Nummer zu erhalten und wenn das Dateisystem ohne Partitionierung auf einer Diskette liegt dann ist keine weitere Rechnung erforderlich.
+Da es keine Daten-Cluster 0 und 1 gibt wird die Cluster-Nummer durch 2 subtrahiert. Die Multiplikation mit der Cluster-Größe sollte logisch sein. Die Addition mit der Position des ersten Datensektors ist wichtig, weil vor den Nutzdaten ja noch mindestens der Boot-Sektor und die FAT(s) kommen, bei FAT12 und FAT16 kommt da auch noch das Stammverzeichnis. Die Position des ersten Datensektors ist üblicherweise konstant und muss daher nur ein mal beim Mounten ausrechnet werden. Die hier ausgerechnete Sektor-Nummer bezieht sich nur auf das FAT-Dateisystem als solches, wenn dieses Dateisystem als Partition auf einer Festplatte liegt muss dann noch die Start-Position der betreffenden Partition dazu addiert werden um eine absolute Sektor-Nummer zu erhalten. Wenn das Dateisystem ohne Partitionierung auf einer Diskette liegt, dann ist keine weitere Rechnung erforderlich.
 
 Die Position des ersten Datensektors rechnet man folgendermaßen aus:
 
     Position_des_ersten_Datensektors = Anzahl_reservierter_Sektoren + ( Anzahl_der_FAT_Sektoren * Anzahl_der_FAT_Kopien ) + Anzahl_der_Stammverzeichnissektoren;
 
-Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reservierten Sektoren ist mindestens 1 da dazu auch der Boot-Sektor selber zählt. Die Anzahl der FAT-Sektoren und die Anzahl der FAT-Kopien sollten klar sein. Die Anzahl der Stammverzeichnissektoren ist bei FAT32 immer 0 weil dort das Stammverzeichnis ganz normal im Datenbereich liegt.  
+Alle diese Informationen sind dem Boot-Sektor zu entnehmen. Die Anzahl der reservierten Sektoren ist mindestens 1, da dazu auch der Boot-Sektor selber zählt. Die Anzahl der FAT-Sektoren und die Anzahl der FAT-Kopien sollten klar sein. Die Anzahl der Stammverzeichnissektoren ist bei FAT32 immer 0, weil dort das Stammverzeichnis ganz normal im Datenbereich liegt.  
 Bei FAT12 und FAT16 muss man sich die Größe des Stammverzeichnis in Sektoren erst ausrechnen:
 
     Anzahl_der_Stammverzeichnissektoren = Anzahl_der_Stammverzeichniseinträge / ( Größe_der_Sektoren_in_Byte / 32 );
@@ -182,7 +182,7 @@ Die Informationen die dem Boot-Sektor zu entnehmen sind können je nach FAT-Vers
 
 ## VFAT
 
-VFAT (*Virtual File Allocation Table*) ist eine Erweiterung für FAT. Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z. B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten.
+VFAT (**V**irtual **F**ile **A**llocation **T**able) ist eine Erweiterung für FAT. Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z.B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten.
 
 Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert, aber das ist nicht an die Benutzung der langen Dateinamen gebunden.
 
@@ -209,6 +209,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9030/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9030; parent 9026; 2010-11-29T14:44:26Z -->
+<!-- MediaWiki page 1643; revision 9037; parent 9030; 2010-12-04T00:27:58Z -->
