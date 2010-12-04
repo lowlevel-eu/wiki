@@ -43,21 +43,19 @@ Der Transmitting-Buffer und der InterruptEnable-Buffer wird bei einem gesetzten 
 
 ## Programmierung
 
-Ich werde hier ein wenig drauf eingehen, wie man verschiedene Optionen setzt und auf einen COM-Port sendet bzw. empfängt.
-
 ### Baudrate einstellen
 
-Um die Baudrate einzustellen muss man erstmal das DLAB-Bit setzen, es ist eine Art Umschaltbit um 12 Register über 8 I/O-Port-Adressen zu benutzen. Dafür muss man im LineControl-Register Bit 7 setzen.
+Um die Baudrate einzustellen muss erstmal das DLAB-Bit gesetzt werden, es ist eine Art Umschaltbit um 12 Register über 8 I/O-Port-Adressen benutzen zu können. Dafür muss im LineControl-Register das 7. Bit gesetzt sein.
 
-Die Baudrate wird aber nicht direkt gespeichert. Es wird immer nur ein Teiler gespeichert. Diesen kann man wie folgt berechnen:\\ *t = 115200/b*\\ Wobei *t* der Teiler und *b* die Baudrate ist.
+Die Baudrate wird allerdings nicht direkt gespeichert, es wird immer nur ein Teiler gespeichert. Diesen kann man wie folgt berechnen:\\ *t = 115200/b*\\ Wobei *t* der Teiler und *b* die Baudrate ist.
 
-Nun kann man in den Transmitting-Buffer das Lowbyte des Teilers und in das InterruptEnable-Register das Highbyte.
+Nun kann in den Transmitting-Buffer das Lowbyte des Teilers und in das InterruptEnable-Register das Highbyte geschrieben werden.
 
-Danach sollte man das DLAB-Bit wieder zurücksetzen.
+Danach sollte das DLAB-Bit wieder zurückgesetzt werden.
 
 ### Parität setzen
 
-Es gibt 4 verschiedene Paritäten: Odd, Even, High Parity und Low Parity. Diese setzt man mithilfe von 3 Bits, es sind die Bits 3-5 des LineControl-Registers.
+Es gibt vier verschiedene Paritäten: *Odd*, *Even*, *High Parity* und *Low Parity*. Diese setzt man mit Hilfe von drei Bits, es sind die Bits 3-5 des LineControl-Registers.
 
 | Parität | Bit 3 | Bit 4 | Bit 5 |
 | ------------- | ------- | ------- | ------- |
@@ -69,7 +67,7 @@ Es gibt 4 verschiedene Paritäten: Odd, Even, High Parity und Low Parity. Diese 
 
 ### Bytelänge setzen
 
-Die Bytelänge bestimmt wie viel Bits ein Byte ergeben. Heutzutage werden eigentlich immer 8 Bits zu einem Byte zusammengefasst. Ein Byte kann 5 bis 8 Bits haben. Zum Setzen der Anzahl werden Bits 0 und 1 im LineControl-Register benutzt. 00b entspricht 5 Bits 01b 6 usw. Also einfach die Anzahl an Bits minus 5 und in einen zwei-Bit-Wert wandeln.
+Die Bytelänge bestimmt wie viel Bits ein Byte ergeben. Heutzutage werden eigentlich immer 8 Bits zu einem Byte zusammengefasst. Ein Byte kann 5 bis 8 Bits haben. Zum Setzen der Anzahl werden Bits 0 und 1 im LineControl-Register benutzt. 00b entspricht 5 Bits 01b 6 usw. Also einfach die Anzahl an Bits minus 5 und in einen Zwei-Bit-Wert wandeln.
 
 ### Anzahl Stoppbits setzen
 
@@ -77,7 +75,7 @@ Die Anzahl an Stoppbits wird mit Bit 2 des LineControl-Registers gesetzt. 0b ent
 
 ### Senden
 
-Zum Senden muss man erstmal nachschauen ob man senden darf. Wenn Bit 5 des LineStatus-Registers gesetzt ist darf man Senden. Dafür schreibt man einfach das zu sendende Byte in Transmitting-Buffer.
+Um Daten Senden zu können muss erst überprüft werden, ob überhaupt gesendet werden darf. Wenn Bit 5 des LineStatus-Registers gesetzt ist darf gesendet werden. Dazu wir das zu sendende Byte in den Transmitting-Buffer geschrieben.
 
 ### Empfangen
 
@@ -156,6 +154,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9012/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 9012; parent 8319; 2010-11-28T13:34:56Z -->
+<!-- MediaWiki page 1561; revision 9038; parent 9012; 2010-12-04T00:33:07Z -->
