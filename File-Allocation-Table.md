@@ -155,7 +155,7 @@ Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (nur f
 **Bedeutung**
 
 Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster  
-(beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist) 0x1C4Dateigröße in Bytes
+(Beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist.) 0x1C4Dateigröße in Bytes
 
 ## Cluster
 
@@ -209,6 +209,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9041/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9037; parent 9030; 2010-12-04T00:27:58Z -->
+<!-- MediaWiki page 1643; revision 9041; parent 9037; 2010-12-04T07:53:23Z -->
