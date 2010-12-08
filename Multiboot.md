@@ -152,10 +152,12 @@ Pointer zur Memorymap, deren Einträge hintereinander im Speicher liegen. Ein Ei
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ---------- | ----------------------------------------------------- |
-| -0x04 | 4 | size | Gibt die Größe des Eintrags an |
-| 0x00 | 8 | BaseAddr | Basisadresse des Speicherbereichs |
-| 0x08 | 8 | Length | Länge des Speicherbereichs |
-| 0x10 | 4 | Type | Typ des Speicherbereichs (1=frei, ansonsten belegt) |
+| 0x00 | 4 | size | Gibt die Größe des Eintrags -4 an |
+| 0x04 | 8 | BaseAddr | Basisadresse des Speicherbereichs |
+| 0x0C | 8 | Length | Länge des Speicherbereichs |
+| 0x14 | 4 | Type | Typ des Speicherbereichs (1=frei, ansonsten belegt) |
+
+Der Eintrag size sollte dazu verwendet werden zum nächsten Eintrag zu springen.
 
 ### mbs_drives_length
 
@@ -206,6 +208,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8964/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 8964; parent 7094; 2010-11-21T15:25:33Z -->
+<!-- MediaWiki page 1560; revision 9048; parent 8964; 2010-12-08T12:41:59Z -->
