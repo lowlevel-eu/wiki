@@ -574,6 +574,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x03 | 0x00 | [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Host (UHCI) |
 | 0x03 | 0x10 | USB-Host (OHCI) |
 | 0x03 | 0x20 | USB-Host (EHCI) |
+| 0x03 | 0x30 | USB-Host (xHCI) |
 | 0x03 | 0x80 | USB-Host (kein HCI) |
 | 0x03 | 0xFE | USB-Device |
 | 0x04 | 0x00 | Fibre Channel |
@@ -637,6 +638,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 8692; parent 8686; 2010-10-21T09:03:31Z -->
+<!-- MediaWiki page 1626; revision 9050; parent 8692; 2010-12-10T15:26:04Z -->
