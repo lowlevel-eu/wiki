@@ -425,6 +425,9 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x04 | 0x00 | RAID |
 | 0x05 | 0x20 | [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "AT Attachment")-Controller (Single [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")) |
 | 0x05 | 0x30 | ATA-Controller (Chained DMA) |
+| 0x06 | 0x00 | SATA-Controller (Herstellerspezifische Schnittstelle) |
+| 0x06 | 0x01 | SATA-Controller (AHCI 1.0) |
+| 0x07 | 0x00 | SAS-Controller (Serial Attached SCSI) |
 | 0x80 | 0x00 | Anderer Massenspeicher |
 
 ### Class 0x02 - [Netzwerk](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk")-Controller
@@ -457,6 +460,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x00 | 0x00 | Video-Gerät |
 | 0x01 | 0x00 | Audio-Gerät |
 | 0x02 | 0x00 | Telefonie |
+| 0x03 | ?? | HD-Audio-Gerät |
 | 0x80 | 0x00 | Anderes Multimedia-Gerät |
 
 ### Class 0x05 - Speicher-Controller
@@ -638,6 +642,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 9050; parent 8692; 2010-12-10T15:26:04Z -->
+<!-- MediaWiki page 1626; revision 9051; parent 9050; 2010-12-11T10:48:11Z -->
