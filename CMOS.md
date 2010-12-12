@@ -53,14 +53,14 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
 **Beschreibung**
 
-7Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert) 6-4Zeit-Basis (Standard = 010b = 32768 Hz) 3-0Auswahl-Bits zum Einstellen der Wiederholrate des periodischen Interrupts. Frequenz = 65536 Hz / 2^Rate-Bits
+7Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert) 6-4Zeit-Basis (Standard = 010b = 32768 Hz) 3-0Auswahl-Bits zum Einstellen der Wiederholrate des periodischen Interrupts. Frequenz = 65536 Hz / 2<sup>Rate-Bits</sup>
 
 | Rate-Bits | Teiler | Frequenz | Periode | Bemerkung |
-| ----------- | ------------ | ---------- | ------------ | ---------------- |
+| ----------- | ---------------------- | ---------- | ------------ | ---------------- |
 | 0000b | 0 | \- | \- | kein Interrupt |
-| 0011b | 2^3=8 | 8192 Hz | 122 µs | Minimum |
-| 0110b | 2^6=64 | 1024 Hz | 976.562 µs | Standard |
-| 1111b | 2^15=32768 | 2 Hz | 500 ms |  |
+| 0011b | 2<sup>3</sup>=8 | 8192 Hz | 122 µs | Minimum |
+| 0110b | 2<sup>6</sup>=64 | 1024 Hz | 976.562 µs | Standard |
+| 1111b | 2<sup>15</sup>=32768 | 2 Hz | 500 ms |  |
 
   
 
@@ -266,6 +266,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9056/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9057/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 9056; parent 9055; 2010-12-12T14:06:24Z -->
+<!-- MediaWiki page 1562; revision 9057; parent 9056; 2010-12-12T15:31:46Z -->
