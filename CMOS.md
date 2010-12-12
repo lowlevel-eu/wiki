@@ -127,17 +127,21 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
 Prozessoren können nicht vom [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") in den Realmode zurückgeschaltet werden. Zu diesem Zweck ist ein Prozessor-Reset nötig. Das Shutdown-Statusbyte dient dazu dem BIOS anzuzeigen ob der PC neu gebootet oder der Prozessor nur im Realmode neu gestartet werden soll.
 
-Werte des Bytes:
-
-    0x00 - 0x03:  Power-On Reset durchführen
-    0x04:  int 0x19-reboot
-    0x05:  EOI an PIC ausgeben, Tastatur resetten, Sprung zur Addresse [0x0040:0x0067]
-    0x09:  zurück zu int 0x15, Funktion 0x87 (Block im Extenden Memory verschieben)
-    0x0A:  JMP zu [0x0040:0x0067]
-    0x0B:  IRET zu [0x0040:0x0067]
-    0x0C:  RET zu [0x0040:0x0067]
-
-  
+| Wert | Beschreibung |
+| ------ | ------------------------------------------------------------------------------- |
+| 0x00 | Normale Ausführung des POST |
+| 0x01 | Chip Satz Initialisierung für Real Mode |
+| 0x02 | Power-On Reset durchführen |
+| 0x03 | Power-On Reset durchführen |
+| 0x04 | int 0x19-reboot |
+| 0x05 | EOI an PIC ausgeben, Tastatur resetten, Sprung zur Addresse \[0x0040:0x0067\] |
+| 0x06 | Sprung zur Addresse \[0x0040:0x0067\] ohne EOI |
+| 0x07 | zurück zu Int 0x15, Funktion 0x87 (Block im Extenden Memory verschieben) |
+| 0x08 | zurück zum POST Speicher Test |
+| 0x09 | zurück zu Int 0x15, Funktion 0x87 (Block im Extenden Memory verschieben) |
+| 0x0A | JMP zu \[0x0040:0x0067\] |
+| 0x0B | IRET zu \[0x0040:0x0067\] |
+| 0x0C | RET zu \[0x0040:0x0067\] |
 
   
 
@@ -262,6 +266,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9056/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 9055; parent 9054; 2010-12-12T12:24:45Z -->
+<!-- MediaWiki page 1562; revision 9056; parent 9055; 2010-12-12T14:06:24Z -->
