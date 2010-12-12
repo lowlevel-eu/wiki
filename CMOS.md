@@ -125,7 +125,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
 ### 0x0F - Shutdown-Statusbyte
 
-Prozessoren können nicht vom [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") in den Realmode zurückgeschaltet werden. Zu diesem Zweck ist ein Prozessor-Reset nötig. Das Shutdown-Statusbyte dient dazu dem BIOS anzuzeigen ob der PC neu gebootet oder der Prozessor nur im Realmode neu gestartet werden soll.
+80286-Prozessoren konnten nicht vom [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") in den Realmode zurückgeschaltet werden. Zu diesem Zweck war ein Prozessor-Reset nötig. Das Shutdown-Statusbyte dient dazu dem BIOS anzuzeigen, ob der PC neu gebootet oder der Prozessor nur im Realmode neu gestartet werden soll.
 
 | Wert | Beschreibung |
 | ------ | ------------------------------------------------------------------------------- |
@@ -266,6 +266,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9057/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 9057; parent 9056; 2010-12-12T15:31:46Z -->
+<!-- MediaWiki page 1562; revision 9058; parent 9057; 2010-12-12T17:12:05Z -->
