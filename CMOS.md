@@ -43,6 +43,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 | 0x30 | Erweiterter Speicher (niederwertiges Byte) |
 | 0x31 | Erweiterter Speicher (höherwertiges Byte) |
 | 0x32 | Jahrhundert (BCD) |
+| 0x33 - 0x3F | Reserviert / vom BIOS abhängig |
 
   
 
@@ -261,6 +262,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9055/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 9054; parent 9053; 2010-12-12T11:58:32Z -->
+<!-- MediaWiki page 1562; revision 9055; parent 9054; 2010-12-12T12:24:45Z -->
