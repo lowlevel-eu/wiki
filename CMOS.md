@@ -48,40 +48,18 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
 ### 0x0A - Statusregister A
 
-**Bit:**
+**Bit**
 
-7
+**Beschreibung**
 
-**Beschreibung:**
+7Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert) 6-4Zeit-Basis (Standard = 010b = 32768 Hz) 3-0Auswahl-Bits der Wiederholrate des periodischen Interrupts. Frequenz = 65536 Hz / 2^Rate
 
-Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert)
-
-------------------------------------------------------------------------
-
-**Bit:**
-
-6-4
-
-**Beschreibung:**
-
-Zeit-Basis (Standard = 010b = 32768 Hz)
-
-------------------------------------------------------------------------
-
-**Bit:**
-
-3-0
-
-**Beschreibung:**
-
-Auswahl-Bits für Interrupt-Rate
-
-                0000b = kein Interrupt
-                0011b = alle 122 Mikrosekunden (minimum)
-                0110b = 976.562 Mikrosekunden (Standard)
-                1111b = 500 Millisekunden
-
-  
+| Rate | Teiler | Frequenz | Periode | Bemerkung |
+| ------- | -------- | ---------- | ------------ | ---------------- |
+| 0000b | 0 |  |  | kein Interrupt |
+| 0011b | 8 | 8192 Hz | 122 µs | Minimum) |
+| 0110b | 6 | 1024 Hz | 976.562 µs | Standard |
+| 1111b | 15 | 2 Hz | 500 ms |  |
 
   
 
@@ -283,6 +261,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 8031; parent 7414; 2010-07-30T08:42:50Z -->
+<!-- MediaWiki page 1562; revision 9052; parent 8031; 2010-12-12T11:34:57Z -->
