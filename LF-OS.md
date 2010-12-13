@@ -31,11 +31,10 @@ Folgende Features sind bereits implementiert:
 - ELF-Loader
 - Multitasking im Usermode
 - eine einfachste API
-- Parallelport LEDs ;D (D0 - D3)
+- Maustreiber (scheint zu funktionieren ... ;))
 
 Folgende Features sind momentan in Arbeit:
 
-- Maustreiber (noch einige Bugs ...)
 - Paging
 
 Folgende Features fehlen noch:
@@ -50,6 +49,6 @@ Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 8746; parent 8745; 2010-10-30T20:39:53Z -->
+<!-- MediaWiki page 2267; revision 9059; parent 8746; 2010-12-13T19:59:48Z -->
