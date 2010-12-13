@@ -53,13 +53,25 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
 **Beschreibung**
 
-7Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert) 6-4Zeit-Basis (Standard = 010b = 32768 Hz) 3-0Auswahl-Bits zum Einstellen der Wiederholrate des periodischen Interrupts. Frequenz = 65536 Hz / 2<sup>Rate-Bits</sup>
+7Zeit-Update-Zyklus (1 = Update läuft =\> Zeitangaben undefiniert) 6-4Zeit-Basis (Standard = 010b = 32768 Hz) 3-0
+
+**Auswahl-Bits zum Einstellen der Wiederholrate des periodischen Interrupts. Frequenz = 65536 Hz / 2<sup>Rate-Bits</sup>**
 
 | Rate-Bits | Teiler | Frequenz | Periode | Bemerkung |
-| ----------- | ---------------------- | ---------- | ------------ | ---------------- |
+| ----------- | ---------------------- | ---------- | ------------- | ---------------- |
 | 0000b | 0 | \- | \- | kein Interrupt |
-| 0011b | 2<sup>3</sup>=8 | 8192 Hz | 122 µs | Minimum |
+| 0011b | 2<sup>3</sup>=8 | 8192 Hz | 122.070 µs | Minimum |
+| 0100b | 2<sup>4</sup>=16 | 4096 Hz | 244.141 µs |  |
+| 0101b | 2<sup>5</sup>=32 | 2048 Hz | 488.281 µs |  |
 | 0110b | 2<sup>6</sup>=64 | 1024 Hz | 976.562 µs | Standard |
+| 0111b | 2<sup>7</sup>=128 | 512 Hz | 1.953125 ms |  |
+| 1000b | 2<sup>8</sup>=256 | 256 Hz | 3.90625 ms |  |
+| 1001b | 2<sup>9</sup>=512 | 128 Hz | 7.8125 ms |  |
+| 1010b | 2<sup>10</sup>=1024 | 64 Hz | 15.625 ms |  |
+| 1011b | 2<sup>11</sup>=2048 | 32 Hz | 31.25 ms |  |
+| 1100b | 2<sup>12</sup>=4096 | 16 Hz | 62.5 ms |  |
+| 1101b | 2<sup>13</sup>=8192 | 8 Hz | 125 ms |  |
+| 1110b | 2<sup>14</sup>=16384 | 4 Hz | 250 ms |  |
 | 1111b | 2<sup>15</sup>=32768 | 2 Hz | 500 ms |  |
 
   
@@ -266,6 +278,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9058/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 9058; parent 9057; 2010-12-12T17:12:05Z -->
+<!-- MediaWiki page 1562; revision 9061; parent 9058; 2010-12-13T22:11:03Z -->
