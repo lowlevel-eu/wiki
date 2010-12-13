@@ -32,10 +32,12 @@ Folgende Features sind bereits implementiert:
 - Multitasking im Usermode
 - eine einfachste API
 - Maustreiber (scheint zu funktionieren ... ;))
+- Floppy Treiber
 
 Folgende Features sind momentan in Arbeit:
 
 - Paging
+- FAT 12
 
 Folgende Features fehlen noch:
 
@@ -49,6 +51,6 @@ Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9059/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 9059; parent 8746; 2010-12-13T19:59:48Z -->
+<!-- MediaWiki page 2267; revision 9060; parent 9059; 2010-12-13T20:00:40Z -->
