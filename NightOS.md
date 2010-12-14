@@ -15,10 +15,10 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-\[ <http://www.sfan.homepage.eu/stefanos_12875318.html> <http://sfan.homepage.eu>\]
+[\[1\]](http://www.sfan.homepage.eu/stefanos_12875318.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9066/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9067/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9066; parent 9065; 2010-12-14T14:24:04Z -->
+<!-- MediaWiki page 2359; revision 9067; parent 9066; 2010-12-14T14:24:41Z -->
