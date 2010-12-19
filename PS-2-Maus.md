@@ -537,7 +537,7 @@ Byte 4, also die Z-Bewegung kann eigentlich nur Werte von -8(1111) bis +7(0000) 
 
 ### Wheel-and-5-Button-Mode-Packet
 
-Nun habt ihr aber sicher auch schon gemerkt, dass in dem 3 Byte noch 4 Bits frei sind und wir noch nicht die Stati der 3.+4. Taste bekommen, falls diese vorhanden wären. Damit diese Stati auch mit dem 4.Byte mitgesendet werden, gibt es dafür auch wieder eine Sequenz um dies zu aktivieren, die wie folgt aussieht:
+Nun habt ihr aber sicher auch schon gemerkt, dass in dem 4. Byte noch 4 Bits frei sind und wir noch nicht die Stati der 4.+5. Taste bekommen, falls diese vorhanden wären. Damit diese Stati auch mit dem 4.Byte mitgesendet werden, gibt es dafür auch wieder eine Sequenz um dies zu aktivieren, die wie folgt aussieht:
 
 Setze Sample-Rate auf 200 reports/s
 
@@ -590,7 +590,12 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 <td colspan="4">Z Movement seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
-  
+Hierbei enthalten die 4 Bits für die Mausradbewegung (Z) sowohl die Bewegung in horizontale, als auch vertikale Richtung (Es werden also zwei Mausräder unterstützt):
+
+| Wert | Bedeutung |
+| ------ | ------------------------ |
+| +-1 | vertikales Scrollrad |
+| +-2 | horizontales Scrollrad |
 
 ## Anwendung
 
@@ -1018,6 +1023,6 @@ Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 8825; parent 8321; 2010-11-04T21:45:03Z -->
+<!-- MediaWiki page 1559; revision 9075; parent 8825; 2010-12-19T19:45:27Z -->
