@@ -537,7 +537,7 @@ Byte 4, also die Z-Bewegung kann eigentlich nur Werte von -8(1111) bis +7(0000) 
 
 ### Wheel-and-5-Button-Mode-Packet
 
-Nun habt ihr aber sicher auch schon gemerkt, dass in dem 4. Byte noch 4 Bits frei sind und wir noch nicht die Stati der 4.+5. Taste bekommen, falls diese vorhanden wären. Damit diese Stati auch mit dem 4.Byte mitgesendet werden, gibt es dafür auch wieder eine Sequenz um dies zu aktivieren, die wie folgt aussieht:
+Nun habt ihr aber sicher auch schon gemerkt, dass im vierten Byte noch vier Bits frei sind und wir noch nicht die Status der 4. und 5. Taste bekommen, falls diese vorhanden wären. Damit diese Status auch mit dem vierten Byte mitgesendet werden, gibt es dafür auch wieder eine Sequenz um dies zu aktivieren, die wie folgt aussieht:
 
 Setze Sample-Rate auf 200 reports/s
 
@@ -545,7 +545,7 @@ Setze Sample-Rate auf 200 reports/s
 
 Setze Sample-Rate auf 80 reports/s
 
-Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer modifizierten Version des Sources zum Aktivieren des Wheel-Modus möglich sein. Wenn die Maus Taste 4+5 unterstützt, dann sendet sie nach dem GetDeviceID(F2h) 04h, statt 00h und sendet ab sofort folgendes Maus-Daten-Paket:
+Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer modifizierten Version des Quellcodes zum Aktivieren des Wheel-Modus möglich sein. Wenn die Maus die Tasten 4 und 5 unterstützt, dann sendet sie nach dem GetDeviceID(F2h) 04h, statt 00h und sendet ab sofort folgendes Maus-Daten-Paket:
 
 <table>
 <tbody><tr>
@@ -567,27 +567,27 @@ Der Code zum Aktivieren des Rades und der 5 Button sollte ganz einfach aus einer
 <td>Y sign bit</td>
 <td>X sign bit</td>
 <td>Reserved (1)</td>
-<td>Middle Button pressed</td>
-<td>Right Button pressed</td>
-<td>Left Button pressed
+<td>Mittlere Taste gedrückt</td>
+<td>Rechte Taste gedrückt</td>
+<td>Linke Taste gedrückt
 </td></tr>
 <tr>
 <th>Byte 2
 </th>
-<td colspan="8">X Movement seit dem letztem Daten-Paket
+<td colspan="8">X-Bewegung seit dem letztem Daten-Paket
 </td></tr>
 <tr>
 <th>Byte 3
 </th>
-<td colspan="8">Y Movement seit dem letztem Daten-Paket
+<td colspan="8">Y-Bewegung seit dem letztem Daten-Paket
 </td></tr>
 <tr>
 <th>Byte 4
 </th>
 <td colspan="2">reserved (0)</td>
-<td>5th Maustaste</td>
-<td>4th Maustaste</td>
-<td colspan="4">Z Movement seit dem letztem Daten-Paket
+<td>5. Maustaste</td>
+<td>4. Maustaste</td>
+<td colspan="4">Z-Bewegung seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
 Hierbei enthalten die 4 Bits für die Mausradbewegung (Z) sowohl die Bewegung in horizontale, als auch vertikale Richtung (Es werden also zwei Mausräder unterstützt):
@@ -1023,6 +1023,6 @@ Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 9075; parent 8825; 2010-12-19T19:45:27Z -->
+<!-- MediaWiki page 1559; revision 9076; parent 9075; 2010-12-19T19:52:30Z -->
