@@ -4,15 +4,15 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Benutzer:RedEagle](https://lowlevel-eu.github.io/wiki/pages/1491/index.html "Benutzer:RedEagle") |
-| Akt. Version: | 0.8.0 |
+| Akt. Version: | 0.9.9 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [CC by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) (GPL geplant) |
 | OS-Eigenschaften |  |
 | Plattform: | [i586](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Nativ |
-| Binärformat: | Kernel: raw; Apps: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Pipe](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
+| Binärformat: | Kernel: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"); Apps: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
 | Homepage |  |
 
 [www.redeagle-operatingsystem.de.vu](http://www.redeagle-operatingsystem.de.vu/)
@@ -39,6 +39,7 @@ Das RedEagle-OperatingSystem besteht (bisher) aus den folgenden Komponenten
 - Singeluser-system
 - Pipes
 - alle Programme laufen in ring0
+- [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB") interface
 
 ### GUI
 
@@ -110,6 +111,8 @@ Zu den Tools gehört unter anderem ein ramdisk-manager der folgende Features bie
 - eine ramdisk auf Diskette schreiben
 - Eine ramdisk per RS232 herunterladen und in den RAM schreiben
 
+Ein weiteres tool namens *xelf* lädt eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei und führt diesem im PM aus. (Derzeit in der Entwicklung)
+
 ### Das FT3fs - Dateisystem
 
 Das Dateisystem basiert auf einem Graph der in einer Datei gespeichert ist.  
@@ -151,6 +154,6 @@ Im ANSI-Modus werden die Daten mit ANSI-Escape-Sequenzen coloriert. Somit kann m
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9074/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 7798; parent 7689; 2010-07-08T17:56:55Z -->
+<!-- MediaWiki page 2232; revision 9074; parent 7798; 2010-12-19T12:59:55Z -->
