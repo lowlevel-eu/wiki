@@ -290,7 +290,7 @@ perform internal power-on reset function
 
 ### Maus-Befehle (60h)
 
-**Dies ist die Liste der Befehle, die zur Adjustierung der Maus dienen. Bevor einer dieser Befehle an den Port 60h gesendet werden kann, muss zuerst per "D4h" an den Port 64h, dem Controller gesagt werden, dass das nächste Byte, also eins aus dieser Liste, auch an die Maus gesendet wird. Wir "D4h" nicht zuvor verwendet, würde der Befehl an die Tastatur und nicht die Maus gehen. **Achtung**: Bei zwei Byte großen Befehlen muss auch vor dem Senden des zweiten Bytes dies mit "D4h" initiiert werden.**
+**Dies ist die Liste der Befehle, die zur Adjustierung der Maus dienen. Bevor einer dieser Befehle an den Port 60h gesendet werden kann, muss zuerst per "D4h" an den Port 64h, dem Controller gesagt werden, dass das nächste Byte, also eins aus dieser Liste, auch an die Maus gesendet wird. Wird "D4h" nicht zuvor verwendet, würde der Befehl an die Tastatur und nicht die Maus gehen. **Achtung**: Bei zwei Byte großen Befehlen muss auch vor dem Senden des zweiten Bytes dies mit "D4h" initiiert werden.**
 
 | Befehl | Größe | Beschreibung |
 | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -306,7 +306,7 @@ perform internal power-on reset function
 | *F2h* | 1 Byte | Lese MausID. Returns 00h (siehe auch bei den [SpecialCodes](#spezial-codes-als-r%C3%BCckgabe-von-befehlen-60h)) |
 | *F3h* | 2 Bytes | Setze die Maus-Sample-Rate, also wie oft die Maus Daten abfragen soll. Das zweite Byte kann dann so aussehen:<br>0Ah=10/s 50h= 80/s<br>14h=20/s 64h=100/s<br>28h=40/s C8h=200/s<br>3Ch=60/s |
 | *F4h* | 1 Byte | Aktiviere die Maus und setze den Modus auf Stream. In diesem Modus wird bei jeder Veränderung der IRQ12 aufgerufen |
-| *F5h* | 1 Byte | Deaktivierz die Maus im Stream-Modus und setze die vorgegebenen Parameter |
+| *F5h* | 1 Byte | Deaktiviere die Maus im Stream-Modus und setze die vorgegebenen Parameter |
 | *F6h* | 1 Byte | Stelle alles auf die Vorgaben zurück -\> StreamMode, 4/mm-Maus-Resolution, Scaling 1:1, 100/s-Sample-Rate |
 | *FEh* | 1 Byte | Sende das letzte Maus-Data-Paket erneut (für Beschreibung des Pakets siehe [hier](#das-maus-daten-packet)) |
 | *FFh* | 1 Byte | Reset Maus |
@@ -329,8 +329,6 @@ perform internal power-on reset function
 | *FCh* | bei MF2-Keyboards wird dies bei einen BAT-Fehler, also einem Fehler in der zweiten Hälfte des Power on self test, geliefert |
 | *FDh* | das selbe wie FCh nur bei AT-Keyboards (AT ist der derzeitige Standard) |
 | *FEh* | dieser Befehl sagt, dass letzte Befehl nocheinmal gesendet werden soll |
-
-  
 
 ### KBC-Status-Byte (64h)
 
@@ -1023,6 +1021,6 @@ Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9080/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 9079; parent 9076; 2010-12-22T18:49:32Z -->
+<!-- MediaWiki page 1559; revision 9080; parent 9079; 2010-12-22T18:52:14Z -->
