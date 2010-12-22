@@ -46,6 +46,8 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
 - [FDC](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")
+- [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
+- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
 - [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
 - Speicherverwaltung
 - ELF-Programme
@@ -63,6 +65,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9035; parent 9034; 2010-12-02T17:05:43Z -->
+<!-- MediaWiki page 2298; revision 9077; parent 9035; 2010-12-22T17:24:39Z -->
