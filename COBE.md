@@ -57,7 +57,10 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 
 **COBE 0.2:**
 
-noch in Planung
+- FAT32
+- [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA")
+- GUI-Demo
+- mehr Syscalls
 
 ## Sourcecode
 
@@ -65,6 +68,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9078/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9077; parent 9035; 2010-12-22T17:24:39Z -->
+<!-- MediaWiki page 2298; revision 9078; parent 9077; 2010-12-22T17:26:15Z -->
