@@ -442,7 +442,7 @@ Besonders interessant ist eig. nur die Prozedur kb.read.mouse, die vom irq12 3x 
 
 ### Wheel-Mode-Packet
 
-Wie manch einer vlt. bemerkt hat, fehlt bei dem Daten-Paket noch was... nämlich das Rad und evtl. die Tasten 4+5. Das Problem ist, dass auch Mäuse, die ein Rad besitze zuerst nur diese Daten an die Maus senden, da dies aus Kompatibilätsgründen notwendig ist, sonst könnte man ja keine alte Maus an einem neuen PC anschließen und anderes. Um nun den Wheel-Modus der Maus zu betreten reagieren neuere Mäuse auf eine bestimmte Befehlsequenz, die wie folgt aussieht:
+Wie manch einer vlt. bemerkt hat, fehlt bei dem Daten-Paket noch was... nämlich das Rad und evtl. die Tasten 4+5. Das Problem ist, dass auch Mäuse, die ein Rad besitze zuerst nur diese Daten an die Maus senden, da dies aus Kompatibilitätsgründen notwendig ist, sonst könnte man ja keine alte Maus an einem neuen PC anschließen und anderes. Um nun den Wheel-Modus der Maus zu betreten, reagieren neuere Mäuse auf eine bestimmte Befehlsequenz, die wie folgt aussieht:
 
 Setze Sample-Rate auf 200 reports/s
 
@@ -492,7 +492,7 @@ Wenn dies erfolgreich gesendet wurde und gleich danach mit F2h die MausID abgefr
 <td colspan="8">Z Movement seit dem letztem Daten-Paket
 </td></tr></tbody></table>
 
-Byte 4, also die Z-Bewegung kann eigentlich nur Werte von -8(1111) bis +7(0000) annehmen und nutzt deswegen eigentlich nur Bit 3-0, die anderen Bits dienen dabei nur als Sign-Extension, also nehmen den Zustand von Bit3 an (man schlage auch mal die Befehle movsx, movzx nach x) ). Dazu noch der Code, der in den Wheel-Mode schaltet, der Code zum abholen sollte klar sein, dass ist der selbe wie bei dem Standard-Paket nur, dass noch per call kb.read.mouse ein Byte mehr abgeholt werden muss. Der COde gibt am Ende noch die ID plus dem Error auf ah aus... dafür die Zeilen 45-47.
+Byte 4, also die Z-Bewegung kann eigentlich nur Werte von -8(1111) bis +7(0000) annehmen und nutzt deswegen eigentlich nur Bit 3-0, die anderen Bits dienen dabei nur als Sign-Extension, also nehmen den Zustand von Bit3 an (man schlage auch mal die Befehle movsx, movzx nach x) ). Dazu noch der Code, der in den Wheel-Mode schaltet, der Code zum abholen sollte klar sein, dass ist der selbe wie bei dem Standard-Paket nur, dass noch per call kb.read.mouse ein Byte mehr abgeholt werden muss. Der Code gibt am Ende noch die ID plus dem Error auf ah aus... dafür die Zeilen 45-47.
 
 \<asm\>
 
@@ -1023,6 +1023,6 @@ Und das wars auch schon von mir, mehr ist nicht zu sagen, vor allem, da ich den 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9079/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1559/index.html)
 
-<!-- MediaWiki page 1559; revision 9076; parent 9075; 2010-12-19T19:52:30Z -->
+<!-- MediaWiki page 1559; revision 9079; parent 9076; 2010-12-22T18:49:32Z -->
