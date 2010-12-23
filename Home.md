@@ -8,7 +8,7 @@ Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Communi
 
 Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")) stehen unter der [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/).
 
-Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt, sei euch [dieser](https://github.com/lowlevel-eu/wiki/wiki/Lowlevel-offline "Lowlevel-Offline") Artikel ans Herz gelegt.
+Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt, sei euch die [Offline-Variante](https://github.com/lowlevel-eu/wiki/wiki/Lowlevel-offline "Lowlevel-Offline") des Wikis ans Herz gelegt.
 
 ****News****
 
@@ -163,6 +163,6 @@ Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9085/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 9081; parent 8311; 2010-12-23T09:39:50Z -->
+<!-- MediaWiki page 1712; revision 9085; parent 9081; 2010-12-23T23:08:30Z -->
