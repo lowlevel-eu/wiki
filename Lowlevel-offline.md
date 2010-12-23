@@ -20,6 +20,6 @@ Einzelne Artikel könnt ihr auch als PDF-Datei herunterladen z.B. zum Ausdrucken
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9082/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2362/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2362/index.html)
 
-<!-- MediaWiki page 2362; revision 9082; parent 0; 2010-12-23T09:42:12Z -->
+<!-- MediaWiki page 2362; revision 9083; parent 9082; 2010-12-23T09:43:45Z -->
