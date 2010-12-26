@@ -24,19 +24,19 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 CORE.\OS bietet einige Features (bzw. soll sie bieten). Einige Beispiele:
 
-- CORE.\BOOT (Eigener Bootmanager)
-- CORE.\\LOTUS" (Graphische Benutzeroberfläche)
+- *CORE.\BOOT* (Eigener Bootmanager)
+- *CORE.\\LOTUS"* (Graphische Benutzeroberfläche)
 - Speichermedien: Festplatte, CD-ROM, Diskette
 - Dateisysteme: CORE.\FS, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
 - Eigene Programme:
-  - CORE.\TERMINAL (Shell)
-  - CORE.\TXT (TextEditor)
-  - CORE.\PCKG (Paketmanager)
-  - CORE.\EDIT (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
-  - CORE.\CLOUD (Cloud-Computing-Service für Entwickler)
+  - *CORE.\TERMINAL* (Shell)
+  - *CORE.\TXT* (TextEditor)
+  - *CORE.\PCKG* (Paketmanager)
+  - *CORE.\EDIT* (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
+  - *CORE.\CLOUD* (Cloud-Computing-Service für Entwickler)
   - CORE.\WEB (Webbrowser)
   - Weiteres folgt...
-- CORE.\KRNL (Kernel):
+- *CORE.\KRNL* (Kernel):
   - Multitasking
   - Protected Mode
   - Pagging
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (bzw. soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9096; parent 9095; 2010-12-26T00:31:07Z -->
+<!-- MediaWiki page 2365; revision 9097; parent 9096; 2010-12-26T00:33:24Z -->
