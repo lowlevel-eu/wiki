@@ -28,31 +28,25 @@ CORE.\OS bietet einige Features (bzw. soll sie bieten). Einige Beispiele:
 - CORE.\\LOTUS" (Graphische Benutzeroberfläche)
 - Speichermedien: Festplatte, CD-ROM, Diskette
 - Dateisysteme: CORE.\FS, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
-- Eigene Programme: \*\*CORE.\TERMINAL (Shell)
-
-<!-- -->
-
-                       **CORE.\TXT      (TextEditor)
-                       **CORE.\PCKG     (Paketmanager)
-                       **CORE.\EDIT     (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
-                       **CORE.\CLOUD    (Cloud-Computing-Service für Entwickler)
-                       **CORE.\WEB      (Webbrowser)
-                       **Weiteres folgt...
-
-- CORE.\KRNL (Kernel): \*\*Multitasking
-
-<!-- -->
-
-                         **Protected Mode
-                         **Pagging
-                         **Physische Speicherverwaltung
-                         **Interprozesskommunikation
-                         **Weiteres folgt...
-
+- Eigene Programme:
+  - CORE.\TERMINAL (Shell)
+  - CORE.\TXT (TextEditor)
+  - CORE.\PCKG (Paketmanager)
+  - CORE.\EDIT (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
+  - CORE.\CLOUD (Cloud-Computing-Service für Entwickler)
+  - CORE.\WEB (Webbrowser)
+  - Weiteres folgt...
+- CORE.\KRNL (Kernel):
+  - Multitasking
+  - Protected Mode
+  - Pagging
+  - Physische Speicherverwaltung
+  - Interprozesskommunikation
+  - Weiteres folgt...
 - Und vieles mehr...
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9095/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9095; parent 0; 2010-12-26T00:29:48Z -->
+<!-- MediaWiki page 2365; revision 9096; parent 9095; 2010-12-26T00:31:07Z -->
