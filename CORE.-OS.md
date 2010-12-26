@@ -66,12 +66,13 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
   - Microsoft® VisualStudio™: Ultimate
   - Microsoft® Windows-Debugger x86/x64
   - FASM
+  - Notepad++
   - Microsoft® VirtualPC 2007:SP1
   - Bochs
   - Oracle® VirtualBox™
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9112/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9113/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9112; parent 9111; 2010-12-26T19:01:32Z -->
+<!-- MediaWiki page 2365; revision 9113; parent 9112; 2010-12-26T19:14:25Z -->
