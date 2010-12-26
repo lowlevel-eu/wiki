@@ -39,7 +39,7 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 - *CORE.\KRNL* (Kernel):
   - Multitasking
   - Protected Mode
-  - Pagging
+  - Paging
   - Physische Speicherverwaltung
   - Interprozesskommunikation
   - Weiteres folgt...
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9103/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9102; parent 9101; 2010-12-26T00:36:27Z -->
+<!-- MediaWiki page 2365; revision 9103; parent 9102; 2010-12-26T00:38:28Z -->
