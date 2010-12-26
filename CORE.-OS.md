@@ -29,7 +29,7 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 - Speichermedien: Festplatte, CD-ROM, Diskette
 - Dateisysteme: *CORE.\FS*, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
 - Eigene Programme:
-  - *CORE.\TERMINAL* (Shell)
+  - *CORE.\TRMNL* (Shell)
   - *CORE.\TXT* (TextEditor)
   - *CORE.\PCKG* (Paketmanager)
   - *CORE.\EDIT* (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9106; parent 9105; 2010-12-26T00:39:50Z -->
+<!-- MediaWiki page 2365; revision 9107; parent 9106; 2010-12-26T00:44:27Z -->
