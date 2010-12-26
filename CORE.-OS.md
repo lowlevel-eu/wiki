@@ -32,7 +32,7 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
   - *CORE.\TRMNL* (Shell)
   - *CORE.\TXT* (TextEditor)
   - *CORE.\PCKG* (Paketmanager)
-  - *CORE.\EDIT* (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
+  - *CORE.\STUDIO* (Integrierte Entwicklungsumgebung mit CORE.\SCRPT)
   - *CORE.\CLOUD* (Cloud-Computing-Service für Entwickler)
   - CORE.\WEB (Webbrowser)
   - Weiteres folgt...
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9108; parent 9107; 2010-12-26T00:47:05Z -->
+<!-- MediaWiki page 2365; revision 9109; parent 9108; 2010-12-26T00:57:10Z -->
