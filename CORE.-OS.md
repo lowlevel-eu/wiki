@@ -18,7 +18,7 @@
 In der Mache.
 
   
-CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem sehr frühen Stadium. Hauptziel von CORE.\OS ist es, eine benutzbare Umgebung für Entwickler bereitzustellen. Vom Bedienungskonzept her wird CORE.\OS neue Wege gehen.
+CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem sehr frühen Stadium. Die Hauptziele von CORE.\OS sind, eine benutzbare Umgebung für Entwickler und Normalanwender bereitzustellen. Vom Bedienungskonzept her wird CORE.\OS neue Wege gehen.
 
 ## Features
 
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9110/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9109; parent 9108; 2010-12-26T00:57:10Z -->
+<!-- MediaWiki page 2365; revision 9110; parent 9109; 2010-12-26T10:51:58Z -->
