@@ -7,7 +7,7 @@
 | Akt. Version: | 1.0 Alpha (Sonderversion: 1.0.C2) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | CORE.\LICENCE. |
 | OS-Eigenschaften |  |
-| Plattform: | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
+| Plattform: | x86/x64 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Makrokernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | CORE.\API |
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9105/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9104; parent 9103; 2010-12-26T00:38:55Z -->
+<!-- MediaWiki page 2365; revision 9105; parent 9104; 2010-12-26T00:39:19Z -->
