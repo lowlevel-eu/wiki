@@ -22,7 +22,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ## Features
 
-CORE.\OS bietet einige Features (Bzw. soll sie bieten). Einige Beispiele:
+CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 - *CORE.\BOOT* (Eigener Bootmanager)
 - *CORE.\\LOTUS"* (Graphische Benutzeroberfläche)
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (Bzw. soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9100/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9099; parent 9098; 2010-12-26T00:34:17Z -->
+<!-- MediaWiki page 2365; revision 9100; parent 9099; 2010-12-26T00:34:35Z -->
