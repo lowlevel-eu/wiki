@@ -27,7 +27,7 @@ CORE.\OS bietet einige Features (bzw. soll sie bieten). Einige Beispiele:
 - *CORE.\BOOT* (Eigener Bootmanager)
 - *CORE.\\LOTUS"* (Graphische Benutzeroberfläche)
 - Speichermedien: Festplatte, CD-ROM, Diskette
-- Dateisysteme: CORE.\FS, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
+- Dateisysteme: *CORE.\FS*, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
 - Eigene Programme:
   - *CORE.\TERMINAL* (Shell)
   - *CORE.\TXT* (TextEditor)
@@ -47,6 +47,6 @@ CORE.\OS bietet einige Features (bzw. soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9097; parent 9096; 2010-12-26T00:33:24Z -->
+<!-- MediaWiki page 2365; revision 9098; parent 9097; 2010-12-26T00:33:39Z -->
