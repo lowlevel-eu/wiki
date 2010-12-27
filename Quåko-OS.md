@@ -17,8 +17,10 @@
 
 <http://quako-company.blogspot.com/>
 
+**Quåko OS** ist ein Hobby-OS, welches Zeilenbasiert ist und in den Sprachen C, C++ und NASM geschrieben ist. Die erste Version wird 0.1 heißen, die ist gerade in Produktion. Sie kommt wahrscheinlich noch am Silvester oder erst Anfang Januar raus und wird zu einem kostenlosen Download verfügbar sein. Der Source Code wird auch frei verfügbar sein. Das OS und der Sorce Code wird sich in einer 7-Zip Datei befinden. Der Boot wird vom Diskettenlaufwerk erfolgen.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2367/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2367/index.html)
 
-<!-- MediaWiki page 2367; revision 9117; parent 0; 2010-12-27T19:00:51Z -->
+<!-- MediaWiki page 2367; revision 9118; parent 9117; 2010-12-27T19:05:54Z -->
