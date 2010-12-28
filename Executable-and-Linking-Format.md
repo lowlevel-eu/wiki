@@ -194,7 +194,7 @@ Der Programm-Header besteht aus e_phnum Einträgen, wobei jeder e_phentsize gro�
 Dieses Feld gibt den Typ des Segments an, für eine ausführbare ELF-Datei ist vor allem PT_LOAD relevant. Die folgenden Beschreibungen sind auf PT_LOAD bezogen (es kann sein, dass sie auch auf andere Typen zutreffen).
 
 | Name | Wert | Beschreibung |
-| ------------ | ------------ | -------------------------------------------------------------------- |
+| ------------ | -------------- | -------------------------------------------------------------------- |
 | PT_NULL | 0 | Ungültiges Segment |
 | PT_LOAD | 1 | Ladbares Segment |
 | PT_DYNAMIC | 2 | Dynamisches Segment |
@@ -203,17 +203,17 @@ Dieses Feld gibt den Typ des Segments an, für eine ausführbare ELF-Datei ist v
 | PT_SHLIB | 5 | Shared Lib |
 | PT_PHDIR | 6 | Gibt Position und Größe des Programm-Headers an. |
 | PT_TLS | 7 | Thread-Local Storage |
-| PT_LOOS | 0x60000000 | Reserviert für betriebssystemspezifische Erweiterungen |
-| PT_HIOS | 0x6fffffff | Reserviert für betriebssystemspezifische Erweiterungen |
-| PT_LOPROC | 0x70000000 | Reserviert für prozessorspezifische Erweiterungen |
-| PT_HIPROC | 0x7fffffff | Reserviert für prozessorspezifische Erweiterungen |
+| PT_LOOS | `0x60000000` | Reserviert für betriebssystemspezifische Erweiterungen |
+| PT_HIOS | `0x6fffffff` | Reserviert für betriebssystemspezifische Erweiterungen |
+| PT_LOPROC | `0x70000000` | Reserviert für prozessorspezifische Erweiterungen |
+| PT_HIPROC | `0x7fffffff` | Reserviert für prozessorspezifische Erweiterungen |
 
 Außerdem habe ich noch diese (betriebssystemspezifischen) Werte in Linux-Header-Dateien (<http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/include/linux/elf.h#L35>) gefunden.
 
 | Name | Wert |
-| ----------------- | ------------------- |
-| PT_GNU_EH_FRAME | PT_LOOS+0x474e550 |
-| PT_GNU_STACK | PT_LOOS+0x474e551 |
+| ----------------- | --------------------- |
+| PT_GNU_EH_FRAME | PT_LOOS+`0x474e550` |
+| PT_GNU_STACK | PT_LOOS+`0x474e551` |
 
 #### p_offset
 
@@ -276,6 +276,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 6912; parent 6598; 2010-01-16T21:36:17Z -->
+<!-- MediaWiki page 1528; revision 9123; parent 6912; 2010-12-28T18:06:20Z -->
