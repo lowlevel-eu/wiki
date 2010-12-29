@@ -27,6 +27,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - libc:
   - xscanf
   - fork/exec
+- Buildsystem überarbeiten (oder für Neulinge erklären)
 
 ## Module
 
@@ -70,6 +71,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 8850; parent 8849; 2010-11-08T19:58:20Z -->
+<!-- MediaWiki page 1513; revision 9157; parent 8850; 2010-12-29T22:47:50Z -->
