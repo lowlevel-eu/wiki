@@ -42,6 +42,7 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
   - Paging
   - Physische Speicherverwaltung
   - Interprozesskommunikation
+  - Symmetrisches Multiprocessing
   - Weiteres folgt...
 - Treiber:
   - Tastaturtreiber (PS/2 Tastaturen)
@@ -74,6 +75,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9141; parent 9140; 2010-12-29T12:58:36Z -->
+<!-- MediaWiki page 2365; revision 9142; parent 9141; 2010-12-29T13:27:01Z -->
