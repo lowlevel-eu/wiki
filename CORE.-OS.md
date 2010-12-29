@@ -27,7 +27,7 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 - *CORE.\BOOT* (Eigener Bootmanager)
 - *CORE.\\LOTUS"* (Graphische Benutzeroberfläche)
 - Speichermedien: Festplatte, CD-ROM, Diskette
-- Dateisysteme: *CORE.\FS*, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), Joliet, [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3")
+- Dateisysteme: *CORE.\FS*, [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), Joliet
 - Eigene Programme:
   - *CORE.\TRMNL* (Shell)
   - *CORE.\TXT* (TextEditor)
@@ -49,9 +49,9 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
   - ATA/ATAPI Laufwerkstreiber (IDE-Festplatten und IDE-CD-ROM Laufwerke)
   - Dateisystemtreiber:
     - CORE.\FS Dateisytemtreiber
+    - ext-Dateisystemtreiber (ext2, ext3)
     - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
     - CDFS-Dateisystemtreiber (ISO9660, Joliet)
-    - ext-Dateisystemtreiber (ext2, ext3)
   - Weiteres folgt...
 - Und vieles mehr...
 
@@ -74,6 +74,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9139; parent 9137; 2010-12-29T12:56:49Z -->
+<!-- MediaWiki page 2365; revision 9140; parent 9139; 2010-12-29T12:58:15Z -->
