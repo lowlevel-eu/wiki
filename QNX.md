@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), Power PC, X-Scale und weitere |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Kernel#Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | ? |
 | API: |  |
 | Binärformat: | ? |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
@@ -33,6 +33,6 @@ QNX ist ein kommerzielles Mikrokernel-Betriebssystem der Firma [Harman Internati
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2370/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2370/index.html)
 
-<!-- MediaWiki page 2370; revision 9159; parent 9158; 2010-12-29T22:53:02Z -->
+<!-- MediaWiki page 2370; revision 9160; parent 9159; 2010-12-29T22:53:46Z -->
