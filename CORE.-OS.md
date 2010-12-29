@@ -34,7 +34,7 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
   - *CORE.\PCKG* (Paketmanager)
   - *CORE.\STUDIO* (Integrierte Entwicklungsumgebung mit *CORE.\SCRPT*)
   - *CORE.\CLOUD* (Cloud-Computing-Service für Entwickler)
-  - CORE.\WEB (Webbrowser)
+  - *CORE.\WEB* (Webbrowser)
   - Weiteres folgt...
 - *CORE.\KRNL* (Kernel):
   - Multitasking
@@ -73,6 +73,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9136; parent 9114; 2010-12-29T12:39:16Z -->
+<!-- MediaWiki page 2365; revision 9137; parent 9136; 2010-12-29T12:39:42Z -->
