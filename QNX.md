@@ -1,14 +1,14 @@
 # QNX
 
 | QNX |  |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | QNX Software Systems |
 | Akt. Version: | Neutrino (im Desktop-Bereich) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), Power PC, X-Scale und weitere |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Kernel#Mikrokernel Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | ? |
 | API: |  |
 | Binärformat: | ? |
@@ -33,6 +33,6 @@ QNX ist ein kommerzielles Mikrokernel-Betriebssystem der Firma [Harman Internati
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9164/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2370/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2370/index.html)
 
-<!-- MediaWiki page 2370; revision 9164; parent 9160; 2010-12-29T22:56:52Z -->
+<!-- MediaWiki page 2370; revision 9165; parent 9164; 2010-12-29T22:57:32Z -->
