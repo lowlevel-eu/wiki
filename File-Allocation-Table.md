@@ -43,19 +43,19 @@ Ab MS-DOS gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die Verb
 | Offset | Größe | Beschreibung |
 | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 3 | Instruktion die den BIOS Parameter Block überspringt |
-| 0x03 | 8 | OEM-Name. Der Name, der Software, die das FAT erstellt hat. Dieses Feld hat keinen Einfluss auf das eigentliche Dateisystem. |
+| 0x03 | 8 | OEM-Name. Der Name, der Software, die das FAT erstellt hat. Dieses Feld hat keinen Einfluss auf das eigentliche Dateisystem. Manche nicht-Windows-Betriebssysteme verlangen, dass hier "MSWIN4.1" steht. |
 | 0x0B | 2 | Sektor-Größe in Bytes. Gültig: 512, 1024, 2048 und 4096. Normal wird 512 verwendet. |
 | 0x0D | 1 | Cluster-Größe in Sektoren. Gültig: Zweierpotenz zwischen 1 und 64. |
 | 0x0E | 2 | Anzahl reservierter Sektoren inkl. Bootsektor. |
 | 0x10 | 1 | Anzahl an File Allocation Tables. Normal gibt es immer 2 FATs |
 | 0x11 | 2 | Maximale Anzahl an Einträgen im Wurzelverzeichnis (nur gültig für FAT12 und FAT16) |
-| 0x13 | 2 | Anzahl an Sektoren. Wenn hier 0 steht, wird das Feld am Offset 0x20 benutzt. |
+| 0x13 | 2 | Anzahl an Sektoren. Wenn hier 0 steht (nötig für FAT32), wird das Feld bei Offset 0x20 benutzt. |
 | 0x15 | 1 | Media-Descriptor: • 0xF0: Double sided, 80 Spuren, 18/36 Sektoren pro Spur<br>• 0xF8: Festplatte<br>• 0xF9: Double sided, 80 Spuren, 9/15 Sektoren pro Spur<br>• 0xFA: Single sided, 80 Spuren, 8 Sektoren pro Spur (eventuell auch Ramdisk)<br>• 0xFB: Double sided, 80 Spuren, 8 Sektoren pro Spur<br>• 0xFC: Single sided, 40 Spuren, 9 Sektoren pro Spur<br>• 0xFD: Double sided, 40 Spuren, 9 Sektoren pro Spur oder Double Sided, 77 Spuren, 26 Sektoren pro Spur<br>• 0xFE: Single sided, 40 Spuren, 8 Sektoren pro Spur, Single Sided, 77 Spuren, 26 Sektoren pro Spur oder Double Sided, 77 Spuren, 8 Sektoren pro Spur<br>• 0xFF: Double sided, 40 Spuren, 8 Sektoren pro Spur<br>Dieses Byte gilt als veraltet.<br> |
 | 0x16 | 2 | FAT-Größe in Sektoren. Bei FAT32 steht hier 0 und es wird das Feld bei Offset 0x24 benutzt. |
 | 0x18 | 2 | Spur-Größe in Sektoren. |
 | 0x1A | 2 | Anzahl der Schreib-Lese-Köpfe. |
 | 0x1C | 4 | Anzahl an Sektoren vor dem Bootsektor (z.B. wenn das FAT auf einer Partition liegt) |
-| 0x20 | 4 | Anzahl an Sektoren. |
+| 0x20 | 4 | Anzahl an Sektoren. (0, wenn das Feld bei 0x13 verwendet wird) |
 
 Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 
@@ -65,7 +65,7 @@ Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x24 | 1 | Nummer des BIOS-Laufwerks |
 | 0x25 | 1 | Reserviert |
-| 0x26 | 1 | Erweiterte Bootsignatur |
+| 0x26 | 1 | Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) |
 | 0x27 | 4 | Dateisystem-ID |
 | 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
 | 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt), d.h. "FAT12 " oder "FAT16 ". **Achtung**: Dieses Feld ist **nicht** zuverlässig und daher maßgeblich für die Feststellung des Dateisystems. Stattdessen muss die FAT-Variante anhand der Anzahl der Cluster bestimmt werden! |
@@ -74,23 +74,22 @@ Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 
 **FAT32**
 
-| Offset | Größe | Beschreibung |
-| -------- | ------- | --------------------------------------------------------------------------------------- |
-| 0x24 | 4 | FAT-Größe in Sektoren |
-| 0x28 | 2 | FAT-Flags |
-| 0x2A | 2 | FAT32-Version |
-| 0x2C | 4 | Erster Cluster des Wurzelverzeichnis |
-| 0x30 | 2 | Info-Sektor. Sektor der Informationen über das Dateisystem enthält. |
-| 0x32 | 2 | Sektor der Bootsektorkopie. (Microsoft empfiehlt nur 6 zu verwenden) |
-| 0x34 | 12 | Reserviert |
-| 0x40 | 1 | Nummer des BIOS-Laufwerks |
-| 0x41 | 1 | Reserviert |
-| 0x42 | 1 | Erweiterte Bootsignatur |
-| 0x43 | 4 | Dateisystem-ID |
-| 0x47 | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
-| 0x52 | 8 | FAT-Variante (mit Leerzeichen gefüllt). Immer "FAT32 ". |
-| 0x5A | 420 | Bootloader |
-| 0x1FE | 2 | Bootsignatur: 0xAA55 |
+**Offset**
+
+**Größe**
+
+**Beschreibung**
+
+0x244FAT-Größe in Sektoren 0x282FAT-Flags
+
+| Bits | Bedeutung |
+| ------ | ------------------------------------------------------------------------------------------------------------------- |
+| 1-3 | Nummer der aktiven FAT. Nur valide, wenn Bit 7 gesetzt ist |
+| 7 | Zeigt, ob die FAT von allen FATs gespiegelt wird (0) oder ob lediglich die in Bits 1-3 genannte FAT aktiv ist (1) |
+
+Alle anderen Bits sind reserviert.
+
+0x2A2FAT32-Version. Üblicherweise 0 - andernfalls kann es sein, dass die Partition von Windows nicht gemounted wird. 0x2C4Erster Cluster des Wurzelverzeichnis 0x302Info-Sektor. Sektor der Informationen über das Dateisystem enthält. 0x322Sektor der Bootsektorkopie. (Microsoft empfiehlt, nur 6 zu verwenden) 0x3412Reserviert 0x401Nummer des BIOS-Laufwerks 0x411Reserviert 0x421Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) 0x434Dateisystem-ID 0x4711Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. 0x528FAT-Variante (mit Leerzeichen gefüllt). Immer "FAT32 ". 0x5A420Bootloader 0x1FE2Bootsignatur: 0xAA55
 
 ### Reservierte Sektoren
 
@@ -209,6 +208,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9042; parent 9041; 2010-12-04T07:59:40Z -->
+<!-- MediaWiki page 1643; revision 9190; parent 9042; 2010-12-30T20:38:46Z -->
