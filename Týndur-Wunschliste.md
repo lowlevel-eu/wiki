@@ -4,7 +4,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ## Kernel
 
-- Umstellung auf kernel2
 - Syscall damit Prozess für jeden abgestorbenen Prozess einen RPC erhält (Wichtig u.a. um bei unsauber beendeten Programmen aufräumen zu können - alternativ folgt irgendwann ein OOM)
 - Mehr Dokumentation in kernel2, auf týndur wird oft als Beispiel verwiesen und eines seiner ursprünglichen Ziele ist auch, dass es dabei hilfreich sein soll. In den Code könnte man oft fast eine Art Tutorial als Kommentar einbetten.
 
@@ -20,19 +19,16 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ## Allgemeines
 
-- Entfernen der COM1-Ausgabe aus putc, stattdessen wäre ein komplettes Modul für serielle Ausgänge (inkl. Eingabe, nicht nur Ausgabe) wünschenswert.
 - Mehr Hardwareunterstützung
 - Shared Libraries
 - POSIX-kompatible Shell
 - libc:
-  - xscanf
   - fork/exec
 - Buildsystem überarbeiten (oder für Neulinge erklären)
 
 ## Module
 
 - Tastaturtreiber
-  - Ladbare Tastaturbelegungen
   - Deadkeys
 - Framebufferkonsole für mehr als 80x25
 
@@ -46,14 +42,12 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
     - Idealerweise über eine systemweite Zwischenablage, so dass man von einer kedit-Instanz in eine andere kopieren kann
   - build-Integration
   - vim-Befehlsmodus
-  - Syntaxhighlighting für mehr Sprachen
 - lpt
   - Upgrades
   - aptitude-ähnliche TUI
   - Liste von Bereits instalierter Software
   - Liste von vorhandener aber noch nicht instalierter Software
-- Setup (Installation & Konfiguration)
-- FTP-Client
+- Setup (Installation)
 - Mail-Client
 - git-Client
 - kirc
@@ -71,6 +65,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9157; parent 8850; 2010-12-29T22:47:50Z -->
+<!-- MediaWiki page 1513; revision 9185; parent 9157; 2010-12-30T11:21:11Z -->
