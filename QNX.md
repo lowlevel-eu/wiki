@@ -18,13 +18,13 @@
 [\[1\]](http://www.qnx.com/)
 
   
-QNX ist ein kommerzielles Mikrokernel-Betriebssystem der Firma [Harman International](http://de.wikipedia.org/wiki/Harman_International_Industries_Inc.) . QNX wurde ursprünglich nicht für den Desktopbereich, sondern für eingebettete Systeme entwickelt. Später entstand jedoch die Version "QNX RTOS" bzw. "QNX Neutrino" als Echtzeit-Betriebssystem mit [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI").
+QNX ist ein kommerzielles Mikrokernel-Betriebssystem der Firma [Harman International](http://de.wikipedia.org/wiki/Harman_International_Industries_Inc.). QNX wurde ursprünglich nicht für den Desktopbereich, sondern für eingebettete Systeme entwickelt. Später entstand jedoch die Version "QNX RTOS" bzw. "QNX Neutrino" als Echtzeit-Betriebssystem mit [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI").
 
   
 
 ## Siehe auch
 
-- [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel)
+- [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Kernel")
 
 ## Links
 
@@ -33,6 +33,6 @@ QNX ist ein kommerzielles Mikrokernel-Betriebssystem der Firma [Harman Internati
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2370/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2370/index.html)
 
-<!-- MediaWiki page 2370; revision 9165; parent 9164; 2010-12-29T22:57:32Z -->
+<!-- MediaWiki page 2370; revision 9186; parent 9165; 2010-12-30T13:18:43Z -->
