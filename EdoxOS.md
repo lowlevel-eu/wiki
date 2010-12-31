@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [Edox](https://lowlevel-eu.github.io/wiki/pages/2314/index.html "Benutzer:Edox") |
 | Akt. Version: | Aktuell keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | \[[BSD](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen)\] |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [BSD](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#bsd-lizenz "Lizenz") |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
@@ -25,6 +25,6 @@ Es wird in Assembler geschrieben. Ob es eine GUI haben wird, ist unbekannt.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9194/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 9193; parent 8652; 2010-12-31T08:57:34Z -->
+<!-- MediaWiki page 2317; revision 9194; parent 9193; 2010-12-31T11:48:16Z -->
