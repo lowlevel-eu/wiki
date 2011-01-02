@@ -22,10 +22,10 @@ In Arbeit
 
 ## Das OS
 
-Es wird in C, und C++ geschrieben. Der Boot wird von Grub gemacht.
+Es wird in C und C++ geschrieben. Der Boot wird von Grub gemacht.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9200/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9201/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 9200; parent 9198; 2011-01-02T10:51:54Z -->
+<!-- MediaWiki page 2317; revision 9201; parent 9200; 2011-01-02T11:10:09Z -->
