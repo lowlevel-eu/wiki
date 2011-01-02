@@ -80,12 +80,41 @@ Wird ausgelöst, wenn ein FPU-Instruktion ausgeführt werden soll, obwohl an den
 
 //TODO: die restlichen Exceptions beschreiben //TODO: Exceptions mit der Tabelle oben verlinken
 
+### Page Fault
+
+Der Page Fault wird ausgelöst, wenn ein Programm...
+
+- auf eine Page zuzugreift, die nicht aktiv ist (Present-Bit gelöscht).
+- Daten in eine Page schreibt, die als nur lesbar markiert ist.
+- auf eine Page zuzugreift, dessen Reserved-Bit gesetzt ist.
+- in Ring 3 (Usermode) läuft und auf eine Page zugreift, die nur für den Kernel (Ring 0) zugänglich ist.
+
+Die CPU übergibt zusätzlich noch einen Errorcode auf dem Stack:
+
+| Bit | Bedeutung |
+| ----- | -------------------------------------------------------------------------------------------------- |
+| 0 | Wenn gelöscht, dann wurde der Fault durch eine nicht aktive Page ausgelöst |
+| 1 | Wenn gesetzt, dann wurde der Fault durch einen Schreibzugriff ausgelöst |
+| 2 | Wenn gestzt, dann hatte das Programm nur Usermode-Rechte |
+| 3 | Wenn gesetzt, dann hatte das Reserved-Feld den Wert 1 |
+| 4 | Wenn gesetzt, dann wurde der Fault durch einen Zugriff auf Code ausgelöst, andernfalls auf Daten |
+
+Außerdem übergibt die CPU im [CR2](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") die Adresse, auf die zugegriffen wurde.
+
+#### Planmäßiger Einsatz des Page Faults
+
+Der Page Fault ist oftmals nicht auf einen wirklichen Fehler zurückzuführen, sondern wird planmäßig eingesetzt.
+
+Wenn bei aktiviertem [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") eine Speicherseite nicht zugegriffen werden kann, kann das beispielsweise daran liegen, dass diese Seite auf die Festplatte ausgelagert worden ist. In diesem Fall lädt der Kernel die Seite wieder in den Speicher und springt zurück in das Programm. Diese Methode bezeichnet man als [Swapping](https://github.com/lowlevel-eu/wiki/wiki/Swapping "Swapping").
+
+Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wenn ganze Pages kopiert werden - z.B. bei unixoiden Systemen bei fork(), dem Klonen von Prozessen. Dabei werden alle zu kopierenden Seiten zunächst nicht wirklich kopiert, sondern sowohl im alten als auch neuen Prozess als schreibgeschützt markiert. Erst bei Bedarf, also wenn sich die Originalpage und Kopie zum ersten Mal unterscheiden, wird wirklich kopiert: Beim ersten Schreibzugriff auf eine solche Seite wird ein Page Fault abgefangen (der ausgelöst wird, weil der Bereich schreibgeschützt ist) und eine zweite Page für die Kopie alloziert.
+
 ## Weblinks
 
 <http://www.logix.cz/michal/doc/i386/chp09-08.htm> (Englisch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9213/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9187; parent 8032; 2010-12-30T16:34:08Z -->
+<!-- MediaWiki page 1824; revision 9213; parent 9187; 2011-01-02T13:23:12Z -->
