@@ -18,14 +18,10 @@
 In Arbeit
 
   
-**Das EdoxOS** ist ein von der Firma Edox geplantes 8-Bit oder 16-Bit OS.
-
-## Das OS
-
-Es wird in C und C++ geschrieben. Der Boot wird von Grub gemacht.
+**Das EdoxOS** ist ein von der Firma Edox geplantes 16-Bit oder 32 Bit OS, welches eine Grafik haben wird. Da es noch in der Planung ist, konzentriert sich Edox mehr auf EdoxDOS.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9201/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9204/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 9201; parent 9200; 2011-01-02T11:10:09Z -->
+<!-- MediaWiki page 2317; revision 9204; parent 9201; 2011-01-02T11:49:32Z -->
