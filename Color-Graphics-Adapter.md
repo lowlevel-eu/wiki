@@ -6,7 +6,7 @@ Der **Color Graphics Adapter** (**CGA**) ist die Grafikkarte, die den 80x25 Text
 
 Im 80x25 Textmodus (16 Farben) wird der Speicher ab Adresse 0xB8000 als Puffer verwendet. In diesem Speicher liegen für jedes Zeichen abwechselnd jeweils ein Byte mit dem Index in die Font Table (in der Regel der ASCII-Code des Zeichens) und ein Attribut-Byte. Das heißt jedes Zeichen belegt zwei Bytes im Videospeicher.
 
-### Aufbau das Attribut-Bytes
+### Aufbau des Attribut-Bytes
 
 <table>
 <tbody><tr>
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 7692; parent 6451; 2010-05-14T19:20:52Z -->
+<!-- MediaWiki page 1890; revision 9241; parent 7692; 2011-01-03T17:26:41Z -->
