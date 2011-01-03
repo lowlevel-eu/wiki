@@ -20,6 +20,14 @@
 
 Die ursprüngiche Codebasis von [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") (Windows 1.x bis Windows ME) waren lediglich ein grafischer Betriebssystemaufsatz für MS-DOS, auch wenn MS-DOS seit Windows 95 (MS-DOS 7.0) nicht mehr einzeln verkauft wurde. Beim NT-Kernel, der von allen neueren Windows-Versionen benutzt wird, änderte sich das aber: Der [NT](https://github.com/lowlevel-eu/wiki/wiki/Windows "NT")-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") wurde komplett neu entwickelt und konnte DOS-Anwendungen nicht mehr oder nur mit Problemen starten. Ab diesem Zeitpunkt wurden immer häufiger Emulatoren wie z.B. DOS-Box eingesetzt, um diese Programme dennoch starten zu können.
 
+## Treiber und TSR-Programme
+
+DOS ist zwar ein Single-Tasking-System, aber dennoch muss neben den aktuell laufenden Programm weiterer Code im Speicher liegen - neben dem [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") selbst sind das vor allem zusätzliche Treiber. DOS kennt dazu das Konzept TSR, *Terminate and Stay Resident*. Ein TSR-Programm beendet sich anders als ein normales Programm über einen besonderen [Systemaufruf](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemaufruf"), der einen Teil des Programms auch nach dem Programmende im Speicher belässt.
+
+Der residente Teil des Programms bleibt anschließend solange inaktiv, bis er von anderer Stelle aufgerufen wird. In der Regel geschieht das dadurch, dass das TSR-Programm einen [IVT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "IVT")-Eintrag auf seinen residenten Teil umbiegt, so dass es bei einem bestimmten Interruptaufruf zum Zug kommt. Das kann ein Hardwareinterrupt sein oder aber auch ein Softwareinterrupt, der die API des TSR-Programms anderen Anwendungen zur Verfügung stellt - Hardwaretreiber benötigen oft beides.
+
+Es ist auch nicht unüblich, BIOS- oder DOS-Funktionen zu "überladen", indem der passende IVT-Eintrag auf eine Funktion des TSR-Programms geändert wird. Besonders in diesen Fällen wird das TSR-Programm sich den alten IVT-Eintrag merken und den ursprünglichen Interrupthandler aufrufen, sobald es seine Aufgabe erledigt hat (oder wenn es nur eine Unterfunktion des Interrupts ändert). Auf diese Weise können ganze Ketten von Interrupthandlern zu einem einzigen Interrupt entstehen.
+
 ## Zugriff auf hohen Speicher
 
 Da DOS ein [Real-Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")-Betriebssystem ist, ist der direkt adressierbare Speicher auf etwa ein Megabyte beschränkt. Da der Bereich zwischen 640 kB und 1 MB für das BIOS und zum Einblenden von Hardware reserviert ist (die *Upper Memory Area*), bleiben für Treiber und Anwendungen 640 kB an *konventionellem Speicher* übrig. Weil das auf Dauer etwas zu wenig war, wurden Methoden eingesetzt, um auch auf die höheren Speicherbereiche zugreifen zu können.
@@ -39,6 +47,6 @@ Mit dem *Expanded Memory* stellt emm386.exe einen anderen Mechanismus zur Verfü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
 
-<!-- MediaWiki page 1829; revision 9233; parent 5301; 2011-01-03T12:13:30Z -->
+<!-- MediaWiki page 1829; revision 9234; parent 9233; 2011-01-03T12:34:03Z -->
