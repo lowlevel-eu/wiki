@@ -67,7 +67,7 @@ Schließlich bleiben noch die Pascal-Programme im tyndur-Repository übrig, für
 
     lbuilds$ ln -s tmp/cross-fpc/fpc/rtl/ /pfad/zum/tyndur/repository/src/modules/pas/lib/rtl/include
 
-Dann muss noch der vom update_env-Script erstellte Pascal-Compiler noch in die Datei config.sh für LOST_TOOLS_PPC eingetragen werden. Der Compiler liegt normalerweise in lbuilds/tmp/cross-fpc/fpc-2.4.0/compiler/ppc386.
+Dann muss noch der vom build_crosstools-Script erstellte Pascal-Compiler noch in die Datei config.sh für LOST_TOOLS_PPC eingetragen werden. Der Compiler liegt normalerweise in lbuilds/tmp/cross-fpc/fpc-2.4.0/compiler/ppc386.
 
 Nach dem nächsten Aufruf von *make* im tyndur-Verzeichnis sollten jetzt auch alle Pascal-Programme (z.B. lpt und kirc) kompiliert werden.
 
@@ -202,6 +202,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9246/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9247/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 9246; parent 8855; 2011-01-04T17:38:39Z -->
+<!-- MediaWiki page 2035; revision 9247; parent 9246; 2011-01-04T17:40:54Z -->
