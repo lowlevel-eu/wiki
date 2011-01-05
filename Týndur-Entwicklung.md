@@ -67,9 +67,9 @@ Schließlich bleiben noch die Pascal-Programme im tyndur-Repository übrig, für
 
     lbuilds$ ln -s /absoluter/pfad/zum/lbuilds/repository/tmp/cross-fpc/fpc-2.4.0/rtl/ /absoluter/pfad/zum/tyndur/repository/src/modules/pas/lib/rtl/include
 
-Dann muss noch der vom build_crosstools-Script erstellte Pascal-Compiler noch in die Datei config.sh eintragen. Bei "LOST_TOOLS_PPC" muss vor das dort schon stehende "fpc" der absolute pfad hingeschrieben werden. Dort sollte also später "/absoluter7pfad/zum/lbuilds/repository/env/bin/fpc" stehen.
+Dann muss noch der vom build_crosstools-Script erstellte Pascal-Compiler in die Datei config.sh eingetragen werden. Bei "LOST_TOOLS_PPC" muss vor das dort schon stehende „fpc“ der absolute Pfad gesetzt werden, sodass sich „/absoluter/pfad/zum/lbuilds/repository/env/bin/fpc“ ergibt.
 
-Nach dem nächsten Aufruf von *make* im tyndur-Verzeichnis sollten jetzt auch alle Pascal-Programme (z.B. lpt und kirc) kompiliert werden.
+Nach dem nächsten Aufruf von *make* im tyndur-Verzeichnis sollten jetzt auch alle Pascal-Programme (z. B. lpt und kirc) kompiliert werden.
 
 ### Programme schreiben
 
@@ -202,6 +202,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 9267; parent 9266; 2011-01-05T20:36:59Z -->
+<!-- MediaWiki page 2035; revision 9268; parent 9267; 2011-01-05T21:49:25Z -->
