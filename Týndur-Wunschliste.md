@@ -32,6 +32,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
   - Deadkeys
 - Framebufferkonsole für mehr als 80x25
 - mehr Netzwerktreiber
+  - nVidia MCP67 \[10de:054c\]
 
 ## Anwendungen
 
@@ -66,6 +67,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9210; parent 9202; 2011-01-02T13:12:21Z -->
+<!-- MediaWiki page 1513; revision 9264; parent 9210; 2011-01-05T12:54:34Z -->
