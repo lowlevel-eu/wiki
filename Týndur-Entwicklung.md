@@ -65,9 +65,9 @@ Um lbuilds bauen zu können, muss anschließend die libc aus dem tyndur-Verzeich
 
 Schließlich bleiben noch die Pascal-Programme im tyndur-Repository übrig, für die noch Vorbereitungen getroffen werden müssen. Zum einen muss zunächst die Datei *src/modules/pas/.ignorenobuild* angelegt werden. Zum anderen muss die FPC-Laufzeitbibliothek eingebunden werden, und zwar als Verzeichnis *src/modules/pas/lib/rtl/include*:
 
-    lbuilds$ ln -s tmp/cross-fpc/fpc/rtl/ /pfad/zum/tyndur/repository/src/modules/pas/lib/rtl/include
+    lbuilds$ ln -s /absoluter/pfad/zum/lbuilds/repository/tmp/cross-fpc/fpc-2.4.0/rtl/ /absoluter/pfad/zum/tyndur/repository/src/modules/pas/lib/rtl/include
 
-Dann muss noch der vom build_crosstools-Script erstellte Pascal-Compiler noch in die Datei config.sh für LOST_TOOLS_PPC eingetragen werden. Der Compiler liegt in lbuilds/env/bin/.
+Dann muss noch der vom build_crosstools-Script erstellte Pascal-Compiler noch in die Datei config.sh eintragen. Bei "LOST_TOOLS_PPC" muss vor das dort schon stehende "fpc" der absolute pfad hingeschrieben werden. Dort sollte also später "/absoluter7pfad/zum/lbuilds/repository/env/bin/fpc" stehen.
 
 Nach dem nächsten Aufruf von *make* im tyndur-Verzeichnis sollten jetzt auch alle Pascal-Programme (z.B. lpt und kirc) kompiliert werden.
 
@@ -202,6 +202,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9266/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 9266; parent 9247; 2011-01-05T20:21:55Z -->
+<!-- MediaWiki page 2035; revision 9267; parent 9266; 2011-01-05T20:36:59Z -->
