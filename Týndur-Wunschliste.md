@@ -31,8 +31,16 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Tastaturtreiber
   - Deadkeys
 - Framebufferkonsole für mehr als 80x25
-- mehr Netzwerktreiber
-  - nVidia MCP67 \[10de:054c\]
+
+  
+
+## Treiber
+
+### Netzwerk
+
+- nVidia MCP67 \[10de:054c\]
+- Atheros AR8132 PCI-E Fast Ethernet Controller \[1969:1062\]
+- PCIe Gigabit Ethernet Family Controller \[10EC:8168\]
 
 ## Anwendungen
 
@@ -67,6 +75,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9265/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9264; parent 9210; 2011-01-05T12:54:34Z -->
+<!-- MediaWiki page 1513; revision 9265; parent 9264; 2011-01-05T13:04:37Z -->
