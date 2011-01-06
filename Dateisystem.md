@@ -23,6 +23,7 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 - ReiserFS
 - Reiser4
 - UFS
+- [SFS](https://github.com/lowlevel-eu/wiki/wiki/SFS "SFS")
 - XFS
 
 ### Dateisysteme für CD/DVD
@@ -37,6 +38,6 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 4825; parent 4824; 2009-07-30T01:29:37Z -->
+<!-- MediaWiki page 1548; revision 9271; parent 4825; 2011-01-06T17:39:56Z -->
