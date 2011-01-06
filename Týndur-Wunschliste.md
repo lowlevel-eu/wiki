@@ -42,6 +42,10 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Atheros AR8132 PCI-E Fast Ethernet Controller \[1969:1062\]
 - PCIe Gigabit Ethernet Family Controller \[10EC:8168\]
 
+### Sonstiges
+
+- SD-Kartentreiber
+
 ## Anwendungen
 
 - help
@@ -75,6 +79,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9265/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9265; parent 9264; 2011-01-05T13:04:37Z -->
+<!-- MediaWiki page 1513; revision 9269; parent 9265; 2011-01-06T12:40:45Z -->
