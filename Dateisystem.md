@@ -12,6 +12,7 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
   - [FAT12](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4#das-fat12-dateisystem "Ausgabe 4")
   - FAT16
 - minix
+- [SFS](https://github.com/lowlevel-eu/wiki/wiki/SFS "SFS")
 
 ### Dateisysteme für Festplatten
 
@@ -25,7 +26,6 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 - ReiserFS
 - Reiser4
 - UFS
-- [SFS](https://github.com/lowlevel-eu/wiki/wiki/SFS "SFS")
 - XFS
 
 ### Dateisysteme für CD/DVD
@@ -40,6 +40,6 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 9272; parent 9271; 2011-01-06T17:42:02Z -->
+<!-- MediaWiki page 1548; revision 9273; parent 9272; 2011-01-06T17:58:35Z -->
