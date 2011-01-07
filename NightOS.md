@@ -3,7 +3,7 @@
 | StefanOS |  |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | sfan |
+| Entwickler: | [sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") |
 | Akt. Version: | 0.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
@@ -23,6 +23,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9240/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9279/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9240; parent 9203; 2011-01-03T16:41:17Z -->
+<!-- MediaWiki page 2359; revision 9279; parent 9240; 2011-01-07T09:30:33Z -->
