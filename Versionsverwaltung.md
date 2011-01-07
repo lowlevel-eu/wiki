@@ -48,8 +48,8 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 | ------------ | -------------------------------------------------------------------------------------------------------------- |
 | git | Linux, Qt, KDE, Compiz Fusion, GIMP, [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") |
 | Mercurial | Firefox, OpenOffice.org |
-| Subversion | GCC, GnuPG, Mono, GNOME |
-| CVS | Bochs |
+| Subversion | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), GnuPG, Mono, GNOME |
+| CVS | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") |
 | Bazaar | Ubuntu |
 
 ## Weblinks
@@ -58,6 +58,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 9270; parent 6102; 2011-01-06T13:29:10Z -->
+<!-- MediaWiki page 1801; revision 9282; parent 9270; 2011-01-07T09:38:40Z -->
