@@ -45,8 +45,8 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 ### Bekannte Projekte und ihr eingesetztes VCS
 
 | VCS | Projekt |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
-| git | Linux, Qt, KDE, Compiz Fusion, GIMP, [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| git | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), Qt, KDE, Compiz Fusion, GIMP, [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") |
 | Mercurial | Firefox, OpenOffice.org |
 | Subversion | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), GnuPG, Mono, GNOME |
 | CVS | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") |
@@ -58,6 +58,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9282/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9283/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 9282; parent 9270; 2011-01-07T09:38:40Z -->
+<!-- MediaWiki page 1801; revision 9283; parent 9282; 2011-01-07T09:39:51Z -->
