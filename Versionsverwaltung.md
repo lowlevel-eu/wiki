@@ -45,11 +45,11 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 ### Bekannte Projekte und ihr eingesetztes VCS
 
 | VCS | Projekt |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), Qt, KDE, Compiz Fusion, GIMP, [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") |
-| Mercurial | Firefox, OpenOffice.org |
+| [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial "Mercurial") | Firefox, OpenOffice.org |
 | [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), GnuPG, Mono, GNOME |
-| CVS | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") |
+| [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS") | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") |
 | Bazaar | Ubuntu |
 
 ## Weblinks
@@ -58,6 +58,6 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9284/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 9284; parent 9283; 2011-01-07T09:43:01Z -->
+<!-- MediaWiki page 1801; revision 9285; parent 9284; 2011-01-07T09:43:59Z -->
