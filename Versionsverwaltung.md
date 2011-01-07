@@ -54,10 +54,10 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 
 ## Weblinks
 
-- [Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/) *(english)*
+- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9285/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9286/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1801/index.html)
 
-<!-- MediaWiki page 1801; revision 9285; parent 9284; 2011-01-07T09:43:59Z -->
+<!-- MediaWiki page 1801; revision 9286; parent 9285; 2011-01-07T12:28:47Z -->
