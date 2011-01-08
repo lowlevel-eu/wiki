@@ -1,9 +1,15 @@
 # Exception
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+- Einige Exceptions ausführlicher beschreiben
+- Verlinkungen von der Tabelle zu den Beschreibungen
+- Mehr praktische Hinweise
+- Rechtschreibung korrigieren
 
+Hilf Lowlevel, den Artikel zu verbessern.
+
+  
 Als Exception (engl. Ausnahme) bezeichnet man einen Fehler, der während des Ausführens eines Programmes auftritt. Es entsteht also eine Ausnahmesituation, in der die Programmausführung nicht wie geplant fortgesetzt werden kann. Eine der bekanntesten Exception ist die 'Divide by Zero'-Exception, die auftritt, wenn man versucht durch Null zu teilen. Auf der x86-Architektur löst eine Exception, die nicht abgefangen wird, zunächst einen Double Fault aus, der selbst wieder eine Exception ist. Wird auch der Double Fault nicht abgefangen, führt dies zum Triple Fault und ein CPU-Reset wird durchgeführt.
 
 ## Abfangen von Exceptions
@@ -78,7 +84,36 @@ Wird ausgelöst, wenn die CPU auf einen ungültigen Opcode oder einen gültigen 
 
 Wird ausgelöst, wenn ein FPU-Instruktion ausgeführt werden soll, obwohl an den Computer keine FPU angeschlossen ist. Dieser Fehler ist bei neueren Computern eher nicht mehr relevant.
 
-//TODO: die restlichen Exceptions beschreiben //TODO: Exceptions mit der Tabelle oben verlinken
+### Double Fault
+
+Wenn eine Exception eintritt während die CPU versucht, den Handler für eine andere Exception aufzurufen, dann bezeichnet man dies als Double Fault. Dieser ist im Grunde der letzte Schritt vorm Triple Fault (Systemabsturtz) und kann nicht in irgendeiner Art behoben werden.
+
+### Coprocessor Segment Overrun
+
+???
+
+### Invalid TSS
+
+Die Exception wird ausgelöst, wenn die CPU beim Taskswitch auf ein ungültiges TSS trifft. Sie übergibt auf dem Stack einen Errorcode:
+
+| Bits | Bedeutung |
+| ------- | -------------------------------------------------------------- |
+| 0 | Gesetzt: Die Exception hat ihren Ursprung außerhalb der CPU |
+| 1,2 | 0: GDT, 1 und 3: IDT, 2: LDT |
+| 3-15 | Index in der GDT, IDT oder LDT, je nach Wert von Bit 1 und 2 |
+| 16-31 | reserviert |
+
+### Segment not Present
+
+Diese Exception wird ausgelöst, wenn die CPU ein Segmentregister (DS, ES, FS, GS, CS) mit einem ungültigen Wert füllt. Ungültige Werte meint hierbei einen Deskriptor, der als nicht aktiv oder in irgendeiner anderen Form ungültig ist. Beim Laden des SS Register tritt ein Stack Fault auf.
+
+### Stack Fault
+
+Der Stack Fault tritt auf, wenn der Stack seine maximale Größe erreicht hat oder das SS-Register mit einem ungültigen Wert geladen wird.
+
+### General Protection
+
+*Hauptartikel: \[\[General Protection Fault* Der General Protection Fault tritt bei jeder Art von Rechteverletzung auf, die nicht von einer anderen Exception abgefangen wird.
 
 ### Page Fault
 
@@ -109,12 +144,24 @@ Wenn bei aktiviertem [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "P
 
 Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wenn ganze Pages kopiert werden - z.B. bei unixoiden Systemen bei fork(), dem Klonen von Prozessen. Dabei werden alle zu kopierenden Seiten zunächst nicht wirklich kopiert, sondern sowohl im alten als auch neuen Prozess als schreibgeschützt markiert. Erst bei Bedarf, also wenn sich die Originalpage und Kopie zum ersten Mal unterscheiden, wird wirklich kopiert: Beim ersten Schreibzugriff auf eine solche Seite wird ein Page Fault abgefangen (der ausgelöst wird, weil der Bereich schreibgeschützt ist) und eine zweite Page für die Kopie alloziert.
 
+### x87 Floating Point
+
+???
+
+### Alignment Check
+
+Wenn auf nicht ausgerichtete Daten zugegriffen wird und daa AM Bit in CR0 sowie das AC in den EFLAGS sind gesetzt, dann wird diese Exception ausgelöst. In der Regel trifft man nicht auf diese Exception, weil Alignment Checks standartmäßig ausgeschaltet sind.
+
+### Machine Check
+
+???
+
 ## Weblinks
 
 <http://www.logix.cz/michal/doc/i386/chp09-08.htm> (Englisch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9213/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9294/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9213; parent 9187; 2011-01-02T13:23:12Z -->
+<!-- MediaWiki page 1824; revision 9294; parent 9213; 2011-01-08T20:27:30Z -->
