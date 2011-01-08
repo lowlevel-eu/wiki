@@ -57,7 +57,7 @@ Wer nicht vorhat, portierte Programme (lbuilds) zu kompilieren und auch keinen P
 
 Dadurch wird das lbuilds-Repository ausgecheckt und binutils, gcc, fpc udn fasm heruntergeladen und kompiliert (manchmal passen die Patches nicht mehr ganz auf die aktuelle FPC-Version, in diesem Fall melde man sich im Forum oder im IRC). Außerdem wird die libc von tyndur in das Verzeichnis lbuilds Unterverzeichnis kopiert. Achtung: Wenn man später Änderungen an der libc vornimmt, muss also **make lbuilds-env** erneut aufgerufen werden und alle lbuilds neu entpackt werden, damit die neue Version benutzt wird! Beim nächsten Bauen im tyndur-Verzeichnis werden nun auch die Pascal-Programme (z. B. lpt und kirc) erstellt. Ein lbuild kann nun über
 
-    lbuilds/lbuild.sh <Pfad zur *.lbuild Datei irgendwo in lbuilds/lbuilds/>
+    cd lbuilds && ./lbuild.sh <Pfad zur *.lbuild Datei irgendwo in lbuilds/<programm>/>
 
 erstellt werden.
 
@@ -192,6 +192,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9293/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 9292; parent 9268; 2011-01-08T12:58:48Z -->
+<!-- MediaWiki page 2035; revision 9293; parent 9292; 2011-01-08T15:48:24Z -->
