@@ -35,10 +35,6 @@ Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht
 
 Je nach Internetverbindung dauert es ein paar Minuten, bis die ~5 MiB Quellcode heruntergeladen sind.
 
-Für lbuilds läuft es fast ähnlich:
-
-` git clone ``git://git.tyndur.org/lbuilds.git`` `
-
 ### Auf der Mailingliste anmelden
 
 Die Mailingliste ist ein sehr wichtiges Informationsmedium in der tyńdur-Entwicklung. Dorthin werden alle Patches geschickt. Die Anmeldung ist natürlich kostenlos und die E-Mail-Adresse wird keiner Werbefirma o.ä. weitergegeben, auch bekommt man keine Mails über Potenz-steigernde Mittel.
@@ -55,21 +51,15 @@ Fast noch wichtiger als die Mailingliste selbst und die Anlaufstelle Nummer 1 is
 
 Wer ein 64 Bit Linux hat muss sich eine 32 Bit Libgcc installieren. Wenn keine 32 Bit Libgcc installiert ist, dann gibt es beim bauen Fehler.
 
-Wer nicht vorhat, portierte Programme (lbuilds) zu kompilieren und auch keinen Pascal-Code übersetzen möchte, kann diesen Abschnitt überspringen. Alle anderen müssen zunächst die lbuilds einrichten und dabei einen FPC-Crosscompiler erstellen. Im Idealfall muss man dazu einfach nur das build_crosstools-Skript ausführen, das binutils, gcc und fpc herunterlädt und kompiliert (manchmal passen die Patches nicht mehr ganz auf die aktuelle FPC-Version, in diesem Fall melde man sich im Forum oder im IRC):
+Wer nicht vorhat, portierte Programme (lbuilds) zu kompilieren und auch keinen Pascal-Code übersetzen möchte, kann diesen Abschnitt überspringen. Alle anderen müssen zunächst die lbuilds einrichten und dabei einen FPC-Crosscompiler erstellen. Im Idealfall muss man dazu einfach nur den Maketarget lbuilds-env ausführen:
 
-    lbuilds$ scripts/build_crosstools
+    make lbuilds-env
 
-Um lbuilds bauen zu können, muss anschließend die libc aus dem tyndur-Verzeichnis kopiert werden. Achtung: Wenn man später Änderungen an der libc vornimmt, muss die libc erneut kopiert und alle lbuilds neu entpackt werden, damit die neue Version benutzt wird! Auch dafür gibt es ein Skript:
+Dadurch wird das lbuilds-Repository ausgecheckt und binutils, gcc, fpc udn fasm heruntergeladen und kompiliert (manchmal passen die Patches nicht mehr ganz auf die aktuelle FPC-Version, in diesem Fall melde man sich im Forum oder im IRC). Außerdem wird die libc von tyndur in das Verzeichnis lbuilds Unterverzeichnis kopiert. Achtung: Wenn man später Änderungen an der libc vornimmt, muss also **make lbuilds-env** erneut aufgerufen werden und alle lbuilds neu entpackt werden, damit die neue Version benutzt wird! Beim nächsten Bauen im tyndur-Verzeichnis werden nun auch die Pascal-Programme (z. B. lpt und kirc) erstellt. Ein lbuild kann nun über
 
-    lbuilds$ scripts/update_env /pfad/zum/tyndur/repository
+    lbuilds/lbuild.sh <Pfad zur *.lbuild Datei irgendwo in lbuilds/lbuilds/>
 
-Schließlich bleiben noch die Pascal-Programme im tyndur-Repository übrig, für die noch Vorbereitungen getroffen werden müssen. Zum einen muss zunächst die Datei *src/modules/pas/.ignorenobuild* angelegt werden. Zum anderen muss die FPC-Laufzeitbibliothek eingebunden werden, und zwar als Verzeichnis *src/modules/pas/lib/rtl/include*:
-
-    lbuilds$ ln -s /absoluter/pfad/zum/lbuilds/repository/tmp/cross-fpc/fpc-2.4.0/rtl/ /absoluter/pfad/zum/tyndur/repository/src/modules/pas/lib/rtl/include
-
-Dann muss noch der vom build_crosstools-Script erstellte Pascal-Compiler in die Datei config.sh eingetragen werden. Bei "LOST_TOOLS_PPC" muss vor das dort schon stehende „fpc“ der absolute Pfad gesetzt werden, sodass sich „/absoluter/pfad/zum/lbuilds/repository/env/bin/fpc“ ergibt.
-
-Nach dem nächsten Aufruf von *make* im tyndur-Verzeichnis sollten jetzt auch alle Pascal-Programme (z. B. lpt und kirc) kompiliert werden.
+erstellt werden.
 
 ### Programme schreiben
 
@@ -202,6 +192,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 9268; parent 9267; 2011-01-05T21:49:25Z -->
+<!-- MediaWiki page 2035; revision 9292; parent 9268; 2011-01-08T12:58:48Z -->
