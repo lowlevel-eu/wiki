@@ -24,7 +24,8 @@ COBE (Computer Betriebsystem) ist ein System mit Ziel eines [Microkernels](https
 
 COBE besteht aus folgenden Elementen:
 
-- COBE besteht mittlerweile nur noch aus dem Kernel, da das System nun GRUB als Bootloader benutzt.
+- COBE besteht aus dem Kernel, da das System nun GRUB als Bootloader benutzt.
+- Eine Shell sorgt für die Kommunikation zum Benutzer. Derzeit werden an relevanten Befehlen nur folgende überstützt: *help*, *cd*, *dir*, *mkdir*, *del*, *rechne*
 
 ## Kernel
 
@@ -68,6 +69,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9307/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9230; parent 9229; 2011-01-02T23:20:20Z -->
+<!-- MediaWiki page 2298; revision 9307; parent 9230; 2011-01-09T20:23:41Z -->
