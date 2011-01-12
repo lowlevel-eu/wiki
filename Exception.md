@@ -14,11 +14,11 @@ Als Exception (engl. Ausnahme) bezeichnet man einen Fehler, der während des Aus
 
 ## Abfangen von Exceptions
 
-Die Exceptions sind im Grunde wie [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"). Sie werden aber nichht von der Software über die "int x"-Instruktion ausgelöst, sondern von der CPU selbst, wenn diese auf Fehler in der Codeausführung stößt. Die Exceptions werden den Interrupts 0 bis 31 zugeordent. D.h., um Exceptions abzufangen, muss man die entsprechenden Interrupts abfangen und behandeln.
+Die Exceptions sind im Grunde wie [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"). Sie werden aber nicht von der Software über die "int x"-Instruktion ausgelöst, sondern von der CPU selbst, wenn diese auf Fehler in der Codeausführung stößt. Die Exceptions werden den Interrupts 0 bis 31 zugeordnet. D.h., um Exceptions abzufangen, muss man die entsprechenden Interrupts abfangen und behandeln.
 
 ### Behandeln von Exceptions
 
-Wie bei allen Interrupts legt die CPU die Werte der Register CS, EIP, EFLAGS, SS und ESP auf dem [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") ab, bevor sie die in die [Interrupt-Behandlungs-Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") springt. Bei manchen Exceptions legt die CPU zusätzlich noch einen Fehlercode auf den Stack, der zusätzliche Informationen zum Fehler enthält. Wie dieser Fehlercode zu interpretieren ist, wird unten bei den Excpetions beschrieben. Zu beachten ist außerdem, dass das CS:EIP Registerpaar bei Exceptions des Typs Fault immer auf die Instruktion zeigen, die den Fehler verursachte, bei den anderen Exceptions muss dies nicht der Fall sein.
+Wie bei allen Interrupts legt die CPU die Werte der Register CS, EIP, EFLAGS, SS und ESP auf dem [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") ab, bevor sie die in die [Interrupt-Behandlungs-Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") springt. Bei manchen Exceptions legt die CPU zusätzlich noch einen Fehlercode auf den Stack, der zusätzliche Informationen zum Fehler enthält. Wie dieser Fehlercode zu interpretieren ist, wird unten bei den Exceptions beschrieben. Zu beachten ist außerdem, dass das CS:EIP Registerpaar bei Exceptions des Typs Fault immer auf die Instruktion zeigen, die den Fehler verursachte, bei den anderen Exceptions muss dies nicht der Fall sein.
 
 ## Arten von Exceptions
 
@@ -162,6 +162,6 @@ Wenn auf nicht ausgerichtete Daten zugegriffen wird und daa AM Bit in CR0 sowie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9294/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9294; parent 9213; 2011-01-08T20:27:30Z -->
+<!-- MediaWiki page 1824; revision 9340; parent 9294; 2011-01-12T22:05:52Z -->
