@@ -212,9 +212,9 @@ Anschließend kopiert man den Kernel und die dazugehörigen Dateien auf das Imag
 
 Wenn GRUB2 installiert ist, dann muss folgendes auf der Kommandozeile eingegeben werden:
 
-    grub-mkrescue --output=GRUB2.iso /boot/grub
+    grub-mkrescue --output=GRUB2.iso /angegebener/Pfad
 
-Diese muss dann noch mit dem eigenen Kernel und ggf. Modulen sowie der grub.cfg zusammengeführt werden.
+Man kopiert alles vorher in den Ordner, der angegeben wurde und GRUB erstellt, dann das Image ohne, dass man etwas extra machen muss. Das, was in dem angegebenen Pfad enthalten ist spiegelt die Ordnerstruktur auf dem CD-Image wieder.
 
 #### Windows
 
@@ -273,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9339/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 9013; parent 8993; 2010-11-28T13:55:09Z -->
+<!-- MediaWiki page 1567; revision 9339; parent 9013; 2011-01-12T19:52:23Z -->
