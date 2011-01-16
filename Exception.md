@@ -31,26 +31,26 @@ Man teilt Exceptions in drei Arten ein:
 ## Liste der Exceptions
 
 | Vektor | Bezeichnung | Typ | Fehlercode |
-| ----------- | ------------------------------------------------------------------------------ | ------------ | ------------ |
-| 0x00 | \#DE - Divide by Zero | Fault | nein |
-| 0x01 | \#DB - Debug | Fault/Trap | nein |
-| 0x02 | [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI") | \- | nein |
-| 0x03 | \#BP - Breakpoint | Trap | nein |
-| 0x04 | \#OF - Overflow | Trap | nein |
-| 0x05 | \#BR - Bound Range | Fault | nein |
-| 0x06 | \#UD - Invalid Opcode | Fault | nein |
-| 0x07 | \#NM - Device Not Available | Fault | nein |
-| 0x08 | \#DF - Double Fault |  | ja |
-| 0x09 | Coprocessor Segment Overrun |  | nein |
-| 0x0a | \#TS - Invalid TSS |  | ja |
-| 0x0b | \#NP - Segment not Present |  | ja |
-| 0x0c | \#SS - Stack |  | ja |
-| 0x0d | \#GP - General Protection |  | ja |
-| 0x0e | \#PF - Page Fault |  | ja |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------ |
+| 0x00 | \#DE - [Divide by Zero](https://github.com/lowlevel-eu/wiki/wiki/Exception#divide-by-zero "Exception") | Fault | nein |
+| 0x01 | \#DB - [Debug](https://github.com/lowlevel-eu/wiki/wiki/Exception#debug "Exception") | Fault/Trap | nein |
+| 0x02 | \#NMI - [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt") | \- | nein |
+| 0x03 | \#BP - [Breakpoint](https://github.com/lowlevel-eu/wiki/wiki/Exception#breakpoint "Exception") | Trap | nein |
+| 0x04 | \#OF - [Overflow](https://github.com/lowlevel-eu/wiki/wiki/Exception#overflow "Exception") | Trap | nein |
+| 0x05 | \#BR - [Bound Range](https://github.com/lowlevel-eu/wiki/wiki/Exception#bound-range "Exception") | Fault | nein |
+| 0x06 | \#UD - [Invalid Opcode](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-opcode "Exception") | Fault | nein |
+| 0x07 | \#NM - [Device Not Available](https://github.com/lowlevel-eu/wiki/wiki/Exception#device-not-available "Exception") | Fault | nein |
+| 0x08 | \#DF - [Double Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#double-fault "Exception") |  | ja |
+| 0x09 | [Coprocessor Segment Overrun](https://github.com/lowlevel-eu/wiki/wiki/Exception#coprocessor-segment-overrun "Exception") |  | nein |
+| 0x0a | \#TS - [Invalid TSS](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-tss "Exception") |  | ja |
+| 0x0b | \#NP - [Segment not Present](https://github.com/lowlevel-eu/wiki/wiki/Exception#segment-not-present "Exception") |  | ja |
+| 0x0c | \#SS - [Stack Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#stack-fault "Exception") |  | ja |
+| 0x0d | \#GP - [General Protection](https://github.com/lowlevel-eu/wiki/wiki/Exception#general-protection "Exception") |  | ja |
+| 0x0e | \#PF - [Page Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#page-fault "Exception") |  | ja |
 | 0x0f | *Reserviert* | \- | \- |
-| 0x10 | \#MF - x87 Floating Point |  | nein |
-| 0x11 | \#AC - Alignment Check |  | ja |
-| 0x12 | \#MC - Machine Check |  | nein |
+| 0x10 | \#MF - [x87 Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#x87-floating-point "Exception") |  | nein |
+| 0x11 | \#AC - [Alignment Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#alignment-check "Exception") |  | ja |
+| 0x12 | \#MC - [Machine Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#machine-check "Exception") |  | nein |
 | 0x13 | \#XF - SIMD Floating Point |  | nein |
 | 0x14-0x1f | *Reserviert* | \- | \- |
 
@@ -162,6 +162,6 @@ Wenn auf nicht ausgerichtete Daten zugegriffen wird und daa AM Bit in CR0 sowie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9341; parent 9340; 2011-01-16T05:05:03Z -->
+<!-- MediaWiki page 1824; revision 9342; parent 9341; 2011-01-16T05:19:26Z -->
