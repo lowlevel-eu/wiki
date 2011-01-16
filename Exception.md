@@ -40,18 +40,18 @@ Man teilt Exceptions in drei Arten ein:
 | 0x05 | \#BR - [Bound Range](https://github.com/lowlevel-eu/wiki/wiki/Exception#bound-range "Exception") | Fault | nein |
 | 0x06 | \#UD - [Invalid Opcode](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-opcode "Exception") | Fault | nein |
 | 0x07 | \#NM - [Device Not Available](https://github.com/lowlevel-eu/wiki/wiki/Exception#device-not-available "Exception") | Fault | nein |
-| 0x08 | \#DF - [Double Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#double-fault "Exception") |  | ja |
-| 0x09 | [Coprocessor Segment Overrun](https://github.com/lowlevel-eu/wiki/wiki/Exception#coprocessor-segment-overrun "Exception") |  | nein |
-| 0x0a | \#TS - [Invalid TSS](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-tss "Exception") |  | ja |
-| 0x0b | \#NP - [Segment not Present](https://github.com/lowlevel-eu/wiki/wiki/Exception#segment-not-present "Exception") |  | ja |
-| 0x0c | \#SS - [Stack Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#stack-fault "Exception") |  | ja |
-| 0x0d | \#GP - [General Protection](https://github.com/lowlevel-eu/wiki/wiki/Exception#general-protection "Exception") |  | ja |
-| 0x0e | \#PF - [Page Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#page-fault "Exception") |  | ja |
+| 0x08 | \#DF - [Double Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#double-fault "Exception") | Abort | ja |
+| 0x09 | [Coprocessor Segment Overrun](https://github.com/lowlevel-eu/wiki/wiki/Exception#coprocessor-segment-overrun "Exception") | \- | nein |
+| 0x0a | \#TS - [Invalid TSS](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-tss "Exception") | Fault | ja |
+| 0x0b | \#NP - [Segment not Present](https://github.com/lowlevel-eu/wiki/wiki/Exception#segment-not-present "Exception") | Fault | ja |
+| 0x0c | \#SS - [Stack Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#stack-fault "Exception") | Fault | ja |
+| 0x0d | \#GP - [General Protection](https://github.com/lowlevel-eu/wiki/wiki/Exception#general-protection "Exception") | Fault | ja |
+| 0x0e | \#PF - [Page Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#page-fault "Exception") | Fault | ja |
 | 0x0f | *Reserviert* | \- | \- |
-| 0x10 | \#MF - [x87 Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#x87-floating-point "Exception") |  | nein |
-| 0x11 | \#AC - [Alignment Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#alignment-check "Exception") |  | ja |
-| 0x12 | \#MC - [Machine Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#machine-check "Exception") |  | nein |
-| 0x13 | \#XF - SIMD Floating Point |  | nein |
+| 0x10 | \#MF - [x87 Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#x87-floating-point "Exception") | Fault | nein |
+| 0x11 | \#AC - [Alignment Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#alignment-check "Exception") | Fault | ja |
+| 0x12 | \#MC - [Machine Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#machine-check "Exception") | Abort | nein |
+| 0x13 | \#XF - [SIMD Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#simd-floating-point "Exception") | Fault | nein |
 | 0x14-0x1f | *Reserviert* | \- | \- |
 
 ## Nähere Erläuterung
@@ -156,12 +156,16 @@ Wenn auf nicht ausgerichtete Daten zugegriffen wird und daa AM Bit in CR0 sowie 
 
 ???
 
+### SIMD Floating Point
+
+Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit gesetzt ist, so löst eine 128-Bit Floating Point Exception diese Exception aus. Ist das Exception Mask Bit gesetzt, so wird keine Exception ausgelöst. Ist CR4.OSXMMEXCPT gelöscht, so wird statt der SIMD Floating Point Exception eine [Invalid Opcode Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-opcode "Exception") ausgelöst.
+
 ## Weblinks
 
 <http://www.logix.cz/michal/doc/i386/chp09-08.htm> (Englisch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9342/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9342; parent 9341; 2011-01-16T05:19:26Z -->
+<!-- MediaWiki page 1824; revision 9343; parent 9342; 2011-01-16T16:35:35Z -->
