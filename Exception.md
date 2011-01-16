@@ -40,19 +40,19 @@ Man teilt Exceptions in drei Arten ein:
 | 0x05 | \#BR - Bound Range | Fault | nein |
 | 0x06 | \#UD - Invalid Opcode | Fault | nein |
 | 0x07 | \#NM - Device Not Available | Fault | nein |
-| 0x08 | \#DF - Double Fault |  |  |
-| 0x09 | Coprocessor Segment Overrun |  |  |
-| 0x0a | \#TS - Invalid TSS |  |  |
-| 0x0b | \#NP - Segment not Present |  |  |
-| 0x0c | \#SS - Stack |  |  |
-| 0x0d | \#GP - General Protection |  |  |
-| 0x0e | \#PF - Page Fault |  |  |
-| 0x0f | *Reserviert* |  |  |
-| 0x10 | \#MF - x87 Floating Point |  |  |
-| 0x11 | \#AC - Alignment Check |  |  |
-| 0x12 | \#MC - Machine Check |  |  |
-| 0x13 | \#XF - SIMD Floating Point |  |  |
-| 0x14-0x1f | *Reserviert* |  |  |
+| 0x08 | \#DF - Double Fault |  | ja |
+| 0x09 | Coprocessor Segment Overrun |  | nein |
+| 0x0a | \#TS - Invalid TSS |  | ja |
+| 0x0b | \#NP - Segment not Present |  | ja |
+| 0x0c | \#SS - Stack |  | ja |
+| 0x0d | \#GP - General Protection |  | ja |
+| 0x0e | \#PF - Page Fault |  | ja |
+| 0x0f | *Reserviert* | \- | \- |
+| 0x10 | \#MF - x87 Floating Point |  | nein |
+| 0x11 | \#AC - Alignment Check |  | ja |
+| 0x12 | \#MC - Machine Check |  | nein |
+| 0x13 | \#XF - SIMD Floating Point |  | nein |
+| 0x14-0x1f | *Reserviert* | \- | \- |
 
 ## Nähere Erläuterung
 
@@ -162,6 +162,6 @@ Wenn auf nicht ausgerichtete Daten zugegriffen wird und daa AM Bit in CR0 sowie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9340/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9341/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9340; parent 9294; 2011-01-12T22:05:52Z -->
+<!-- MediaWiki page 1824; revision 9341; parent 9340; 2011-01-16T05:05:03Z -->
