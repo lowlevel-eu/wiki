@@ -3,9 +3,7 @@
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
 - Einige Exceptions ausführlicher beschreiben
-- Verlinkungen von der Tabelle zu den Beschreibungen
 - Mehr praktische Hinweise
-- Rechtschreibung korrigieren
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
@@ -82,11 +80,11 @@ Wird ausgelöst, wenn die CPU auf einen ungültigen Opcode oder einen gültigen 
 
 ### Device Not Available
 
-Wird ausgelöst, wenn ein FPU-Instruktion ausgeführt werden soll, obwohl an den Computer keine FPU angeschlossen ist. Dieser Fehler ist bei neueren Computern eher nicht mehr relevant.
+Wird ausgelöst, wenn eine FPU-Instruktion ausgeführt werden soll, obwohl an den Computer keine FPU angeschlossen ist. Dieser Fehler ist bei neueren Computern eher nicht mehr relevant.
 
 ### Double Fault
 
-Wenn eine Exception eintritt während die CPU versucht, den Handler für eine andere Exception aufzurufen, dann bezeichnet man dies als Double Fault. Dieser ist im Grunde der letzte Schritt vorm Triple Fault (Systemabsturtz) und kann nicht in irgendeiner Art behoben werden.
+Wenn eine Exception eintritt während die CPU versucht, den Handler für eine andere Exception aufzurufen, dann bezeichnet man dies als Double Fault. Dieser ist im Grunde der letzte Schritt vorm Triple Fault (Systemabsturz) und kann nicht in irgendeiner Art behoben werden.
 
 ### Coprocessor Segment Overrun
 
@@ -119,9 +117,9 @@ Der Stack Fault tritt auf, wenn der Stack seine maximale Größe erreicht hat od
 
 Der Page Fault wird ausgelöst, wenn ein Programm...
 
-- auf eine Page zuzugreift, die nicht aktiv ist (Present-Bit gelöscht).
+- auf eine Page zugreift, die nicht aktiv ist (Present-Bit gelöscht).
 - Daten in eine Page schreibt, die als nur lesbar markiert ist.
-- auf eine Page zuzugreift, dessen Reserved-Bit gesetzt ist.
+- auf eine Page zugreift, dessen Reserved-Bit gesetzt ist.
 - in Ring 3 (Usermode) läuft und auf eine Page zugreift, die nur für den Kernel (Ring 0) zugänglich ist.
 
 Die CPU übergibt zusätzlich noch einen Errorcode auf dem Stack:
@@ -142,7 +140,7 @@ Der Page Fault ist oftmals nicht auf einen wirklichen Fehler zurückzuführen, s
 
 Wenn bei aktiviertem [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") eine Speicherseite nicht zugegriffen werden kann, kann das beispielsweise daran liegen, dass diese Seite auf die Festplatte ausgelagert worden ist. In diesem Fall lädt der Kernel die Seite wieder in den Speicher und springt zurück in das Programm. Diese Methode bezeichnet man als [Swapping](https://github.com/lowlevel-eu/wiki/wiki/Swapping "Swapping").
 
-Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wenn ganze Pages kopiert werden - z.B. bei unixoiden Systemen bei fork(), dem Klonen von Prozessen. Dabei werden alle zu kopierenden Seiten zunächst nicht wirklich kopiert, sondern sowohl im alten als auch neuen Prozess als schreibgeschützt markiert. Erst bei Bedarf, also wenn sich die Originalpage und Kopie zum ersten Mal unterscheiden, wird wirklich kopiert: Beim ersten Schreibzugriff auf eine solche Seite wird ein Page Fault abgefangen (der ausgelöst wird, weil der Bereich schreibgeschützt ist) und eine zweite Page für die Kopie alloziert.
+Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wenn ganze Pages kopiert werden - z.B. bei unixoiden Systemen bei fork(), dem Klonen von Prozessen. Dabei werden alle zu kopierenden Seiten zunächst nicht wirklich kopiert, sondern sowohl im alten als auch neuen Prozess als schreibgeschützt markiert. Erst bei Bedarf, also wenn sich die Originalpage und Kopie zum ersten Mal unterscheiden, wird wirklich kopiert: Beim ersten Schreibzugriff auf eine solche Seite wird ein Page Fault abgefangen (der ausgelöst wird, weil der Bereich schreibgeschützt ist) und eine zweite Page für die Kopie allokiert.
 
 ### x87 Floating Point
 
@@ -150,7 +148,7 @@ Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wen
 
 ### Alignment Check
 
-Wenn auf nicht ausgerichtete Daten zugegriffen wird und daa AM Bit in CR0 sowie das AC in den EFLAGS sind gesetzt, dann wird diese Exception ausgelöst. In der Regel trifft man nicht auf diese Exception, weil Alignment Checks standartmäßig ausgeschaltet sind.
+Wenn auf nicht ausgerichtete Daten zugegriffen wird und das AM Bit in CR0 sowie das AC in den EFLAGS sind gesetzt, dann wird diese Exception ausgelöst. In der Regel trifft man nicht auf diese Exception, weil Alignment Checks standartmäßig ausgeschaltet sind.
 
 ### Machine Check
 
@@ -166,6 +164,6 @@ Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9344; parent 9343; 2011-01-16T17:47:55Z -->
+<!-- MediaWiki page 1824; revision 9345; parent 9344; 2011-01-17T19:53:59Z -->
