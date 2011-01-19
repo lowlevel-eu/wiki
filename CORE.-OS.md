@@ -4,8 +4,8 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") |
-| Akt. Version: | 1.0 Beta (Sonderversion: 1.0.C2) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | CORE.\LICENCE. |
+| Akt. Version: | 1.1 pre-Beta (Sonderversion: 1.1.B6) |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | CORE.\LICENCE |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Makrokernel |
@@ -18,14 +18,16 @@
 In der Mache.
 
   
-CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem sehr frühen Stadium. Die Hauptziele von CORE.\OS sind, eine benutzbare Umgebung für Entwickler und Normalanwender bereitzustellen. Vom Bedienungskonzept her wird CORE.\OS neue Wege gehen.
+CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem sehr frühen Stadium. Die Hauptziele von CORE.\OS sind, eine benutzbare Umgebung für Entwickler und Normalanwender bereitzustellen.
+
+  
 
 ## Features
 
 CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 - *CORE.\BOOT* (Eigener Bootmanager)
-- *CORE.\\LOTUS"* (Graphische Benutzeroberfläche)
+- *CORE.\\MOON"* (Graphische Benutzeroberfläche)
 - Speichermedien: Festplatte, CD-ROM, Diskette
 - Unterstützte Dateisysteme: *CORE.\FS*, [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), Joliet
 - Eigene Programme:
@@ -75,6 +77,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 9357; parent 9145; 2011-01-19T18:52:24Z -->
+<!-- MediaWiki page 2365; revision 9359; parent 9357; 2011-01-19T19:27:55Z -->
