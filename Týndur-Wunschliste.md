@@ -40,7 +40,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 - nVidia MCP67 \[10de:054c\]
 - Atheros AR8132 PCI-E Fast Ethernet Controller \[1969:1062\]
-- PCIe Gigabit Ethernet Family Controller \[10EC:8168\]
+- Realtek PCIe Gigabit Ethernet Family Controller \[10EC:8168\]
 
 ### Sonstiges
 
@@ -79,6 +79,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9269; parent 9265; 2011-01-06T12:40:45Z -->
+<!-- MediaWiki page 1513; revision 9360; parent 9269; 2011-01-19T19:48:47Z -->
