@@ -130,7 +130,7 @@ Wird mit dem KBC-Befehl 0x20 ausgelesen und per 0x60 geschrieben:
 
   
 
-\*KBC-Scancode-Übersetzung: \[[\[1\]](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-10.html#translationtable)\]
+- [KBC-Scancode-Übersetzung](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-10.html#translationtable)
 
 ### KBC-Befehle
 
@@ -382,6 +382,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 9347; parent 8868; 2011-01-18T15:49:33Z -->
+<!-- MediaWiki page 1468; revision 9351; parent 9347; 2011-01-19T13:28:05Z -->
