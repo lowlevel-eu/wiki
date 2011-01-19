@@ -160,7 +160,7 @@ Das Bit 0 signalisiert mit seinem Wert 1 das es sich bei dem betreffenden BAR um
 
 Der folgende C-Code analysiert alle BARs im Konfigurations-Adressraum eines PCI-Gerätes und gibt alle verfügbaren Informationen aus. Dieser Code sollte möglichst nicht auf aktivierte PCI-Geräte angewendet werden, falls doch wäre es geschickt den Vorgang atomar zu gestalten und alle BARs vorher zu sichern und hinter zu restaurieren. Außerdem sollten die Bits 0 und 1 des Command-Registers gelöscht sein. \<c\>/\*\*\* Diesen Code darf jeder, unter Berücksichtigung der Lizenz für diesen Wiki-Artikel, zu jedem Zweck kopieren, nutzen und verändern!
 
-        (C) <http://lowlevel.brainsware.org/> ***/
+        (C) <http://www.lowlevel.eu/> ***/
 
   
 /\* deklariert einen Typ der Bus, Device und Function enthält um ein bestimmtes PCI-Gerät zu adressieren,
@@ -214,11 +214,14 @@ typedef .... pci_bdf_t;
         // prüfen ob Speicher oder IO :
         if ( (pci_config_readd(addr,barOffset) & 0x1) == 0 )
          { // Speicher-Ressource :
+
+           // Prefetchable-Bit auslesen :
            static const char* ptext_pref = "prefetchable"; //Text für prefetchable
            static const char* ptext_nopr = "non-prefetchable"; //Text für non-prefetchable
            const char* const ptext = (((pci_config_readd(addr,barOffset) >> 3) & 0x1) == 1) ? ptext_pref : ptext_nopr;
 
-           switch(((pci_config_readd(addr,barOffset) >> 1) & 0x3)) // check Memory-BAR-Type
+           // check Memory-BAR-Type :
+           switch((pci_config_readd(addr,barOffset) >> 1) & 0x3)
             {
               case 0x0: // 32Bit Memory-BAR :
                 {
@@ -226,7 +229,7 @@ typedef .... pci_bdf_t;
                 const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; //und wieder zurücklesen
                 if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
                  {
-                   if (ptext != ptext_nopr) // unbenutzte BARs müssen komplett 0 sein
+                   if (ptext != ptext_nopr) // unbenutzte BARs müssen komplett 0 sein (auch das Prefetchable-Bit darf nicht gesetzt sein)
                     { printf("FEHLER : 32Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
 
                    // BAR-Infos ausgeben :
@@ -247,6 +250,9 @@ typedef .... pci_bdf_t;
 
               case 0x1: // 20Bit Memory-BAR :
                 {
+                if (headerType == 0x01)
+                 { printf("FEHLER : 20Bit-Memory-BAR %u ist für eine Bridge nicht erlaubt!\n",bar); return; }
+
                 pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
                 const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; //und wieder zurücklesen
                 if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
@@ -324,6 +330,8 @@ typedef .... pci_bdf_t;
            printf("BAR %u enhält eine %uBit-IO-Ressource mit einer Größe von 2^%u Bytes.\n",bar,highestBit+1,lowestBit);
          }
       }
+     if (bar != max_bars)
+      { printf("interner Fehler in Schleife!\n"); return; }
 
 }\</c\>
 
@@ -642,6 +650,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 9051; parent 9050; 2010-12-11T10:48:11Z -->
+<!-- MediaWiki page 1626; revision 9352; parent 9051; 2011-01-19T14:26:32Z -->
