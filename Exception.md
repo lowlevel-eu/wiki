@@ -62,13 +62,17 @@ Tritt bei den DIV und IDIV Instruktionen auf, wenn der Teiler Null ist.
 
 Wird durch die [Debug Register](https://github.com/lowlevel-eu/wiki/wiki/Debug-Register "Debug Register") gesteuert.
 
+### Non Maskable Interrupt
+
+Das ist nicht wirklich eine Exception sondern eine Art externer Interrupt der aber nicht durch das IE-Flag gesperrt werden kann. Genauere Infos: [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt").
+
 ### Breakpoint
 
 Diese Exception wird durch die "int 3"-Instruktion ausgelöst und kann zu Debugging-Zwecken genutzt werden. Die "int 3"-Instruktion besitzt einen speziellen Opcode und ist nur ein Byte groß. Das CS:EIP Registerpaar auf dem Stack zeigt auf die Instruktion **nach** der "int 3"-Instruktion.
 
 ### Overflow
 
-Die Overflow-Exception wird durch die "into"-Instruktion ausgelöst. Die CPU überprüft das Overflow-Flag und löst dann diese Exception aus, wen es gesetzt ist.
+Die Overflow-Exception wird durch die "into"-Instruktion ausgelöst. Die CPU überprüft das Overflow-Flag und löst dann diese Exception aus, wenn es gesetzt ist.
 
 ### Bound Range
 
@@ -164,6 +168,6 @@ Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9346/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9368/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9346; parent 9345; 2011-01-18T08:21:42Z -->
+<!-- MediaWiki page 1824; revision 9368; parent 9346; 2011-01-20T12:17:30Z -->
