@@ -10,7 +10,9 @@ Bevor wir anfangen, Code zu schreiben, zunächst ein kleiner Blick auf den Bootp
 
 Bei einem CPU-Reset (der beispielsweise beim Anschalten passiert) wird der gesamte Prozessorzustand neu gesetzt. Insbesondere schaltet der Prozessor in den Real Mode und springt an die lineare Adresse 0xffff0 (z.B. cs:ip = f000:fff0). An dieser Adresse liegt das BIOS. Das BIOS initialisiert die Hardware, führt einen Selbsttest durch und wenn es fertig ist, löst es einen Interrupt 0x19 aus. Der Handler lädt den Bootsektor von der Festplatte oder Diskette nach linear 0x7c00 (z.B. 07c0:0000) und springt an diese Adresse.
 
-Der Bootloader ist anschließend dafür zuständig, den Kernel des Betriebssystems in den Speicher zu laden und an dessen Einsprungspunkt zu springen.
+Der Bootloader ist anschließend dafür zuständig, den Kernel des Betriebssystems in den Speicher zu laden, eine passende Umgebung aufzusetzen und an den Einsprungspunkt des Kernels zu springen. Zum Vorbereiten der Umgebung gehört der Wechsel in den passenden Prozessormodus (in unserem Fall der [32-Bit-Protected-Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") des x86) und die Übergabe bestimmter Informationen an den Kernel (z.B. über den vorhandenen Speicher, eine Kernelkommandozeile, usw.)
+
+Sobald der Bootloader an den Einsprungspunkt des Kernels gesprungen ist, gibt er die Kontrolle komplett an den Kernel ab. Er wird dann nicht mehr benötigt und sein Speicher kann anderweitig verwendet werden.
 
 ## Multiboot
 
@@ -221,6 +223,6 @@ Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9043/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 9043; parent 8474; 2010-12-04T21:40:30Z -->
+<!-- MediaWiki page 1897; revision 9366; parent 9043; 2011-01-20T11:16:34Z -->
