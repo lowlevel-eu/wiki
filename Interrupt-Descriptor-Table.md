@@ -1,12 +1,16 @@
 # Interrupt Descriptor Table
 
-**IDT** steht für **I**nterrupt **D**escriptor **T**able. Sie wird im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") des x86 verwendet, um [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") ihre [Handler (ISRs)](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") zuzuordnen. Die Einträge in der Tabelle heißen *Interruptdeskriptoren*.
+**IDT** steht für **I**nterrupt **D**escriptor **T**able. Sie wird im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") des x86 verwendet, um [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") ihre [Handler (ISRs)](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") zuzuordnen. Die Einträge in der Tabelle heißen *Interruptdeskriptoren*.
 
 ## Aufbau
 
 Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die bis zu 256 Interruptdeskriptoren abgelegt sind (d.h. in Hochsprachen aus einem gepackten Array von 256 Deskriptoren). Für die Behandlung des Interrupt 0 wird der erste Eintrag der Tabelle benutzt, für Interrupt 1 der zweite usw.
 
-### Descriptor
+Die Tabelle kann weniger als 256 Einträge haben. Wenn einer der Interrupts ausgelöst wird, die dadurch nicht von der IDT beschrieben sind und deren Interrupthandler folglich nicht aufgerufen werden kann, wird stattdessen ein \#GP (General Protection Fault, siehe [Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception")) ausgelöst.
+
+### Deskriptor
+
+Ein Deskriptor in der IDT ist im Protected Mode 64 Bit und im Long Mode 128 Bit lang. Die in der Tabelle grau hinterlegten Einträge gelten nur für den Long Mode.
 
 | Bits | Name | Beschreibung |
 | -------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,8 +24,8 @@ Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die 
 | 45-46 | DPL | Gibt das Descriptor Privilege Level an, das man braucht um diesen Interrupt aufrufen zu dürfen. |
 | 47 | P | Gibt an, ob dieser Eintrag benutzt wird. |
 | 48-63 | Offset 16-31 |  |
-| 64-95 | Offset 32-63 | (Nur im LM, **ansonsten nicht vorhanden**!) |
-| 96-127 | Reserviert (0) | (Nur im LM, **ansonsten nicht vorhanden**!) |
+| 64-95 | Offset 32-63 | (Nur im Long Mode, **im Protected Mode hat der Deskriptor nur 64 Bit**!) |
+| 96-127 | Reserviert (0) | (Nur im Long Mode, **im Protected Mode hat der Deskriptor nur 64 Bit**!) |
 
 ### Interrupt-Arten (Typ)
 
@@ -82,6 +86,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 6997; parent 6763; 2010-01-31T21:39:48Z -->
+<!-- MediaWiki page 1603; revision 9365; parent 6997; 2011-01-20T10:51:49Z -->
