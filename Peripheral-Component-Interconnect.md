@@ -215,9 +215,9 @@ typedef .... pci_bdf_t;
         if ( (pci_config_readd(addr,barOffset) & 0x1) == 0 )
          { // Speicher-Ressource :
 
-           // Prefetchable-Bit auslesen :
-           static const char* ptext_pref = "prefetchable"; //Text für prefetchable
-           static const char* ptext_nopr = "non-prefetchable"; //Text für non-prefetchable
+           // Prefetchable-Bit auslesen und passenden Text auswählen :
+           static const char* ptext_pref = "prefetchable"; // Text für prefetchable
+           static const char* ptext_nopr = "non-prefetchable"; // Text für non-prefetchable
            const char* const ptext = (((pci_config_readd(addr,barOffset) >> 3) & 0x1) == 1) ? ptext_pref : ptext_nopr;
 
            // check Memory-BAR-Type :
@@ -226,7 +226,7 @@ typedef .... pci_bdf_t;
               case 0x0: // 32Bit Memory-BAR :
                 {
                 pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
-                const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; //und wieder zurücklesen
+                const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
                 if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
                  {
                    if (ptext != ptext_nopr) // unbenutzte BARs müssen komplett 0 sein (auch das Prefetchable-Bit darf nicht gesetzt sein)
@@ -254,7 +254,7 @@ typedef .... pci_bdf_t;
                  { printf("FEHLER : 20Bit-Memory-BAR %u ist für eine Bridge nicht erlaubt!\n",bar); return; }
 
                 pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
-                const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; //und wieder zurücklesen
+                const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
                 if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
                  { printf("FEHLER : 20Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
 
@@ -650,6 +650,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 9352; parent 9051; 2011-01-19T14:26:32Z -->
+<!-- MediaWiki page 1626; revision 9369; parent 9352; 2011-01-21T10:26:45Z -->
