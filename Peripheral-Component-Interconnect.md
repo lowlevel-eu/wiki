@@ -374,7 +374,7 @@ int pci_config_readd(int bus,int dev,int func,int offset) {
 
 /\*\*
 
-    * Schreibt ein Dword in in ein PCI-Konfigurations-Register
+    * Schreibt ein Dword in ein PCI-Konfigurations-Register
     *  @param bus Bus
     *  @param dev Gerät
     *  @param func Funktion
@@ -650,6 +650,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9370/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 9369; parent 9352; 2011-01-21T10:26:45Z -->
+<!-- MediaWiki page 1626; revision 9370; parent 9369; 2011-01-21T10:30:28Z -->
