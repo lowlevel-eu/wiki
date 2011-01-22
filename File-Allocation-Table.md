@@ -158,7 +158,7 @@ Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster
 
 ## Cluster
 
-Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit und besteht aus einem oder mehreren (immer eine Zweierpotenz) Sektoren. Bei Disketten, die mit FAT12 formatiert sind, ist ein Cluster immer ein Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur ein Byte groß ist. Eine 2312 Byte große Datei würde dort fünf Cluster belegen und fast einen halben Cluster ungenutzt lassen. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT12 formatiert, sondern meistens mit FAT32 oder NTFS. Bei FAT32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 acht Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch.
+Ein Cluster ist auf jedem Datenträger die kleinste von FAT verwaltete Einheit und besteht aus einem oder mehreren (immer eine Zweierpotenz) Sektoren. Bei Disketten, die mit FAT12 formatiert sind, ist ein Cluster immer ein Sektor (also für gewöhnlich 512 Byte) groß. Somit nimmt auf der Diskette jede Datei mindestens 512 Byte in Anspruch, auch wenn sie tatsächlich nur ein Byte groß ist. Eine 2312 Byte große Datei würde dort fünf Cluster belegen und fast einen halben Cluster ungenutzt lassen. Größere Massenspeicher wie heutige Festplatten sind natürlich nicht mit FAT12 formatiert, sondern meistens mit FAT32 oder NTFS. Bei FAT32 kann man 2^28 Cluster adressieren. Meistens sind bei FAT32 acht Sektoren (also für gewöhnlich 4096 Bytes) zu einem Cluster zusammengefasst, somit nimmt dort jede noch so kleine Datei mindestens 4096 Byte in Anspruch. Dateien mit einer Größe von 0 Bytes, also ohne Inhalt, belegen aber nie irgendwelche Cluster.
 
 Um von der Cluster-Nummer auf die Sektor-Nummer zu kommen, in dem die eigentlichen Daten liegen, muss man folgende Gleichung benutzen:
 
@@ -208,6 +208,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9371/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9190; parent 9042; 2010-12-30T20:38:46Z -->
+<!-- MediaWiki page 1643; revision 9371; parent 9190; 2011-01-22T12:26:18Z -->
