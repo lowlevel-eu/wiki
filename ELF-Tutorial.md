@@ -1,5 +1,12 @@
 # ELF-Tutorial
 
+| ELF-Tutorial |  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Schwierigkeit**: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)<br> |  |
+| Benötigtes Vorwissen: | [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
+| Sprache: | FreeBasic |
+
+  
 Und wieder einmal schreibe ich ein Tutorial für euch. Diesmal geht es um ELF, ein Format für ausführbare Dateien. Sich mit ELF zu beschäftigen ist sinnvoll, denn irgendwann braucht man eben ein gescheites Dateiformat für seine Treiber und sonstigen Programme.
 
 Meine Wahl für das Format fiel damals auf ELF, das liegt an verschiedenen Dingen:
@@ -26,19 +33,17 @@ Bevor es richtig los geht, zwei Hinweise: Der Code in diesem Tutorial ist in [Fr
 Wie immer lassen wir uns erstmal alles durch den Kopf gehen, bevor wir Code schreiben. Es schwirren euch sicher einige Fragen durch den Kopf: "**Wie ist eine ELF-Datei aufgebaut?**", "**Wie lade ich die Daten korrekt in den Speicher?**", "**Wo liegt der ausführbare Code?**" usw.
 
   
-**Kümmern wir uns einmal um die erste Frage:**
+**Kümmern wir uns einmal um die erste Frage: Wie ist eine ELF-Datei aufgebaut?**
 
 ELF-Dateien haben einen ELF-Header, der Dinge wie eine "Magic-Number" (zur Identifizierung) enthält. Da ELF ein plattformübergreifendes Format ist, sind hier auch einige wichtige Angaben gespeichert, z. B. für welche Architektur diese Datei gedacht ist. Der ELF-Header liegt immer direkt am Anfang einer ELF-Datei.
 
   
-**Nun zur zweiten Frage:**
+**Nun zur zweiten Frage: Wie lade ich die Daten korrekt in den Speicher?**
 
-Die Daten einer ELF-Datei liegen in einzelnen Abschnitten vor, die in die "Programmheader-Tabelle" eingetragen sind. Der ELF-Header enthält Einträge, die angeben, wo diese Tabelle liegt, wie groß die Einträge sind usw. Die Einträge dieser Tabelle enthalten die Angaben, wo der Speicherbereich liegt, wie groß er in der Datei ist, wie groß er im Speicher sein sollte, wo dieser Speicherbereich im Speicher liegen soll und noch einiges mehr.
-
-ELF-Dateien können auch einen Section-Header haben, der ist für uns aber uninteressant.
+Die Daten einer ELF-Datei liegen in einzelnen Abschnitten vor, die in die "Programmheader-Tabelle" eingetragen sind. Der ELF-Header enthält Einträge, die angeben, wo diese Tabelle liegt, wie groß die Einträge sind usw. Die Einträge dieser Tabelle enthalten die Angaben, wo der Speicherbereich liegt, wie groß er in der Datei ist, wie groß er im Speicher sein sollte, wo dieser Speicherbereich im Speicher liegen soll und noch einiges mehr. ELF-Dateien können auch einen Section-Header haben, der ist für uns aber uninteressant.
 
   
-**Und jetzt die dritte Frage:**
+**Und jetzt die dritte Frage: Wo liegt der ausführbare Code?**
 
 Das Feld "e_entry" im ELF-Header gibt die virtuelle Adresse an, an der der ausführbare Code später liegt. Wenn wir einen Task erstellen, geben wir ihm einfach diesen Wert als EIP-Register. Bei Linux beträgt dieser Wert meist 0x805F540, der ausführbare Code liegt also ungefähr bei 128 MB. Aber dank Paging braucht der PC gar nicht so viel RAM.
 
@@ -72,8 +77,7 @@ Zuerst ein paar Definitionen: In FreeBasic: \<freebasic\>
 
 \</freebasic\>
 
-In C: \<c\> typedef uint32_t Elf32_Addr; typedef uint16_t ELF32_Half; typedef uint32_t ELF32_Off; typedef int32_t ELF32_Sword; typedef uint32_t ELF32_Word; typedef unsigned char ELF_Uchar; \</c\>
-
+  
 Beginnen wir nun mal mit dem ELF-Header.
 
 Wieder FreeBasic: \<freebasic\>
@@ -107,19 +111,6 @@ Wieder FreeBasic: \<freebasic\>
 
 \</freebasic\>
 
-Und in C: \<c\> struct ELF_IDENT_HEADER {
-
-       uint32_t EI_MAGIC 
-       uint8_t  EI_CLASS
-       uint8_t  EI_DATA
-       uint8_t  EI_VERSION
-       uint32_t EI_PAD
-       uint32_t EI_PAD2
-       uint8_t  EI_NIDENT
-
-} \</c\>
-
-  
 So. Wofür ist jetzt "ELF_IDENT_HEADER" gut? Ganz einfach, er gibt uns erst mal ein paar grundlegende Infos, z. B. ob die Datei Little oder Big Endian ist. Das ist wichtig, da der Rest der Datei diesen Regeln folgt! (Eigentlich ist dieser Header etwas anders eingeteilt, aber der Einfachheit halber habe ich das mal so gelöst. Wie es wirklich richtig ist, kann man in den ELF-Spezifikationen nachlesen)
 
 So, jetzt überlegen wir mal, welche Teile des Headers außer dem Ident-Header für uns wichtig sind. Naja, e_type auf jeden Fall, denn wir wollen nur ausführbare Dateien ausführen. e_machine sollte auch überprüft werden, damit wir nicht Code ausführen, der für einen anderen Prozessor gedacht war. e_version zeigt uns, dass wir eine aktuelle ELF-Datei vor uns haben, also auch wichtig. e_entry ist wohl das wichtigste, das ist unser Einsprungpunkt in den Code. e_phoff, e_phentsize und e_phnum sind wichtig, da sie uns sagen, wie und wo wir die Segmente der ELF-Datei in den Speicher kopieren müssen. Der Rest ist für uns momentan noch unwichtig.
@@ -302,6 +293,6 @@ Happy Coding, The Thing
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1854/index.html)
 
-<!-- MediaWiki page 1854; revision 6913; parent 6570; 2010-01-16T21:47:58Z -->
+<!-- MediaWiki page 1854; revision 9373; parent 6913; 2011-01-23T20:58:29Z -->
