@@ -23,7 +23,7 @@ Zudem sind die Befehle PUSH und POP in die CPU integriert. Dabei ist zu beachten
 
 Das bedeutet, dass der Stack seine maximale Größe erreicht hat, wenn der Wert 0 im ESP-Register steht. In diesem Fall wird ein [Stackfault](https://github.com/lowlevel-eu/wiki/wiki/Exception#liste-der-exceptions "Exception") ausgelöst.
 
-### Das EPB-Register
+### Das EBP-Register
 
 Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (Base Pointer). Dieses wird von vielen Hochsprachen verwendet, um lokale Variablen auf dem Stack zu speichern.
 
@@ -49,6 +49,6 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (Base Pointer). D
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 9040; parent 9010; 2010-12-04T00:35:18Z -->
+<!-- MediaWiki page 2165; revision 9372; parent 9040; 2011-01-23T16:43:36Z -->
