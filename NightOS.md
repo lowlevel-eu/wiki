@@ -20,12 +20,21 @@
 [Image](http://sfan.funpic.de/StefanOS.img)  
 [.bin Datei des Kernels](http://sfan.funpic.de/StefanOS_source/kernel.bin)
 
+StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen.
+
 ## Features
 
-- Tastaturtreiber
+### 0.1
+
+- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")/[IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") wird geladen
+
+### 0.2 (vorraussichtlich)
+
+- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")/[IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") wird geladen
+- kleine Shell
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9355; parent 9354; 2011-01-19T17:53:30Z -->
+<!-- MediaWiki page 2359; revision 9375; parent 9355; 2011-01-24T12:48:56Z -->
