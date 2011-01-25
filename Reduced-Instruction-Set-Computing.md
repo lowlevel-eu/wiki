@@ -26,9 +26,10 @@ RISC-Systeme zeichnen sich vor allem durch einen erhöhten Satz an *General-Purp
 
 - [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")
 - [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
+- [CISC](https://github.com/lowlevel-eu/wiki/wiki/Complex-Instruction-Set-Computing "CISC")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
 
-<!-- MediaWiki page 2108; revision 9380; parent 7651; 2011-01-25T00:29:03Z -->
+<!-- MediaWiki page 2108; revision 9384; parent 9380; 2011-01-25T00:31:51Z -->
