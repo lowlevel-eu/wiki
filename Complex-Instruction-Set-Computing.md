@@ -10,11 +10,9 @@ Ein Befehl besteht im CISC aus dem eigentlichen Maschinenbefehl, der Adressierun
 
   
 
-## Heute Anwendung
+## Heutige Anwendung
 
-Prozessoren, die CISC implementiert haben, sind allen voran Intel - Ab dem 808x wurde dieses Prinzip übernommen. Heutzutage verschwimmen CISC und RISC, die Intel Itanium-Reihe beinhaltet Elemente von RISC und RISC entwickelt sich immer weiter und nähert sich CISC an.
-
-  
+Früher war das CISC-Prinzip Grundlage für alle Prozessoren, auch Intel verwendete es für den 808x. Während die meisten heutzutage verbreiteten Architekturen aber dem RISC-Prinzip folgen, verwendet die x86-Architektur wohl nicht zuletzt aufgrund der umfangreichen Abwärtskompatibilität (u. a. zum 8086) CISC bis in die Gegenwart. Intern jedoch arbeiten die meisten neueren x86-Prozessoren ebenfalls eher nach dem RISC-Prinzip.
 
 ## Weblinks
 
@@ -29,6 +27,6 @@ Prozessoren, die CISC implementiert haben, sind allen voran Intel - Ab dem 808x 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2387/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2387/index.html)
 
-<!-- MediaWiki page 2387; revision 9385; parent 9382; 2011-01-25T00:32:26Z -->
+<!-- MediaWiki page 2387; revision 9387; parent 9385; 2011-01-25T12:54:33Z -->
