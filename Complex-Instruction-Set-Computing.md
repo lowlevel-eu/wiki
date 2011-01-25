@@ -29,6 +29,6 @@ Prozessoren, die CISC implementiert haben, sind allen voran Intel - Ab dem 808x 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2387/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2387/index.html)
 
-<!-- MediaWiki page 2387; revision 9381; parent 0; 2011-01-25T00:30:23Z -->
+<!-- MediaWiki page 2387; revision 9382; parent 9381; 2011-01-25T00:30:55Z -->
