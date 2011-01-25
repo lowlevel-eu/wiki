@@ -22,6 +22,6 @@ In Arbeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9205/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 9205; parent 9204; 2011-01-02T11:52:50Z -->
+<!-- MediaWiki page 2317; revision 9378; parent 9205; 2011-01-25T00:13:53Z -->
