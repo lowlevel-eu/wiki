@@ -20,8 +20,7 @@ RISC-Systeme zeichnen sich vor allem durch einen erhöhten Satz an *General-Purp
 
 - [RISC im Elektronik-Kompendium](http://www.elektronik-kompendium.de/sites/com/0501011.htm)
 - [RISC OS – Betriebssystem auf RISC-Basis](http://www.operating-system.org/betriebssystem/_german/bs-riscos.htm)
-
-  
+- [RISC versus CISC](http://www.weblearn.hs-bremen.de/risse/RST/assign02/Intel/risccisc.html)
 
 ## Siehe auch
 
@@ -30,6 +29,6 @@ RISC-Systeme zeichnen sich vor allem durch einen erhöhten Satz an *General-Purp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
 
-<!-- MediaWiki page 2108; revision 7651; parent 6267; 2010-05-03T14:55:58Z -->
+<!-- MediaWiki page 2108; revision 9380; parent 7651; 2011-01-25T00:29:03Z -->
