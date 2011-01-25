@@ -1,6 +1,6 @@
 # Reduced Instruction Set Computing
 
-Das **Reduced Instructions-Set Computing** (englisch, in etwa *Arbeiten mit reduziertem Befehlssatz*, kurz **RISC**) bezeichnet ein Prozessordesign, welches sich dadurch auszeichnet, mit reduziertem und einfacherem Befehlssatz zu arbeiten. Dem entgegen steht das [Complex Instruction-Set Computing](https://github.com/lowlevel-eu/wiki/wiki/Complex-Instruction-Set-Computing "CISC").
+Das **Reduced Instruction-Set Computing** (englisch, in etwa *Arbeiten mit reduziertem Befehlssatz*, kurz **RISC**) bezeichnet ein Prozessordesign, welches sich dadurch auszeichnet, mit reduziertem und einfacherem Befehlssatz zu arbeiten. Dem entgegen steht das [Complex Instruction-Set Computing](https://github.com/lowlevel-eu/wiki/wiki/Complex-Instruction-Set-Computing "CISC").
 
   
 
@@ -30,6 +30,6 @@ RISC-Systeme zeichnen sich vor allem durch einen erhöhten Satz an *General-Purp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9386/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2108/index.html)
 
-<!-- MediaWiki page 2108; revision 9384; parent 9380; 2011-01-25T00:31:51Z -->
+<!-- MediaWiki page 2108; revision 9386; parent 9384; 2011-01-25T00:33:03Z -->
