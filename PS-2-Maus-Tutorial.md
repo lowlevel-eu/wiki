@@ -35,9 +35,9 @@ Die anderen Bits sind erst einmal irrelevant.
 
 Einige der weiter unten aufgeführten Befehle erwarten zusätzliche Daten. Diese werden über den Input Puffer (Port 0x60) übergeben. Das Schreiben in den Input Puffer ist aber nur erlaubt, wenn Bit 1 im Statusregister gelöscht ist. Die folgende Funktion wartet darauf, dass das Bit 1 gelöscht ist und sendet dann die Daten:
 
-\<c\> VOID kbc_write_inbuf(BYTE data) {
+\<c\> void kbc_write_inbuf(uint8_t data) {
 
-     DWORD to = 255;
+     uint32_t to = 255;
      while ( inb(0x64) & 0x02)
      {
        if (! (to--) )
@@ -52,9 +52,9 @@ Einige der weiter unten aufgeführten Befehle erwarten zusätzliche Daten. Diese
 
 Andere Befehle des Keyboard Controllers liefern Daten zurück. Diese werden dann aus dem Output Puffer (Port 0x60) gelesen. Hier muss darauf gewartet werden, dass das Bit 0 im Statusregister gesetzt ist:
 
-\<c\> BYTE kbc_read_outbuf() {
+\<c\> uint8_t kbc_read_outbuf() {
 
-     DWORD to = 255;
+     uint32t to = 255;
      while ( ! (inb(0x64) & 0x01) )
      {
        if (! (to--) )
@@ -71,10 +71,10 @@ Andere Befehle des Keyboard Controllers liefern Daten zurück. Diese werden dann
 
 Befehle an den Keyboard Controller werden zum Port 0x64 geschrieben. Auch hier muss vor dem Senden darauf gewartet werden, dass das Bit 1 des Statusregisters gelöscht ist:
 
-\<c\> VOID kbc_send_cmd (BYTE cmd) {
+\<c\> void kbc_send_cmd (uint8_t cmd) {
 
-     DWORD to = 255;
-     BYTE kbc_status = inb(KBC_STATUS);
+     uint32_t to = 255;
+     uint8_t kbc_status = inb(KBC_STATUS);
      while ( inb(0x64) & 0x02)
      {
        if (! (to--) )
@@ -114,7 +114,7 @@ Zum Schreiben muss man zuerst den Befehl 0x60 an den Keyboard Controller senden 
 
 Der Keyboard Controller steuert wie bereits erwähnt zwei Eingabegeräte. Wenn man Daten im Inputpuffer platziert interpretiert der Keyboard Controller diese als Befehle an die Tastatur und leitet sie entsprechend weiter. Wenn man aber nun Befehle an die Maus senden möchte, dann muss man dieses vorher mit dem Befehl 0xD4 signalisieren:
 
-\<c\> VOID mouse_send_cmd(BYTE cmd) {
+\<c\> void mouse_send_cmd(uint8_t cmd) {
 
      kbc_send_cmd(KBC_CMD_MOUSE);
      kbc_write_inbuf(cmd);
@@ -131,7 +131,7 @@ Auch wenn ein Mausbefehl noch Daten erwartet, dann muss das Senden von Daten vor
 
 Auf all diese Befehle antwortet die Maus, indem sie den Wert 0xFA (ACK – Acknowledge genannt) im Output Puffer platziert:
 
-\<c\> BYTE mouse_read_data() {
+\<c\> uint8_t mouse_read_data() {
 
      return kbc_read_outbuf();
 
@@ -145,37 +145,37 @@ Folgende Funktion aktiviert die Maus so, dass sie immer einen IRQ12 auslöst, we
 
 1.  define ACK 0xFA
 
-VOID mouse_install() {
+void mouse_install() {
 
-     BYTE command_byte;
+     uint8_t command_byte;
 
-         //leere den Daten Puffer
+     //leere den Daten Puffer
      while ( inb(0x64) & 0x01)
      {
        inb(0x60);
      }
 
-         //aktiviere die Maus beim Keyboard Controller
+     //aktiviere die Maus beim Keyboard Controller
      kbc_send_cmd(0xA8);
 
-         //Bit 1 im Command Byte setzen
+     //Bit 1 im Command Byte setzen
      kbc_send_cmd(0x20);
      cb = kbc_read_outbuf();
      cb |= 0x02;
      kbc_send_cmd(0x60);
      kbc_write_inbuf(cb);
 
-         //Standards setzen
+     //Standards setzen
      mouse_send_cmd(0xF6)
-     if ( mouse_read_data() != ACK)
+     if( mouse_read_data() != ACK)
      {
        kprintf(“mouse error!”);
        return;
      }
 
-         //das Senden von Daten aktivieren
+     //das Senden von Daten aktivieren
      mous_send_cmd(0xF4);
-     if ( mouse_read_data() != ACK)
+     if( mouse_read_data() != ACK)
      {
        kprintf(“mouse error!”);
        return;
@@ -235,11 +235,11 @@ Wenn im Byte 1 das X Overflow und/oder das Y Overflow Bit gesetzt ist, dann soll
 
 Der Handler für den IRQ 12 wird dreimal aufgerufen, damit man alle drei Bytes der Maus hat. Im Handler muss man sich natürlich merken, bei welchem der Bytes man gerade ist. Der Handler kann also z.B. so aussehen:
 
-\<c\> BYTE cycle=1; BYTE flags; int x_mov, y_mov;
+\<c\> uint8_t cycle=1; uint8_t flags; int x_mov, y_mov;
 
-VOID irq_12_handler() {
+void irq_12_handler() {
 
-     DWORD val;
+     uint32_t val;
      switch (cycle)
      {
        case 1:
@@ -255,7 +255,7 @@ VOID irq_12_handler() {
          break;
        case 2:
          val = mouse_read_data();
-         val &= (DWORD) 0xFF;       //es dürfen wirklich nur die ersten 8 Bits belegt sein!
+         val &= (uint32_t )0xFF;        //es dürfen wirklich nur die ersten 8 Bits belegt sein!
          if (flags & 0x10)
            x_mov = (val | 0xFFFFFF00);
          else
@@ -264,7 +264,7 @@ VOID irq_12_handler() {
          break;
        case 3:
          val = inb(0x60);
-         val &= (DWORD) 0xFF;
+         val &= (uint32_t )0xFF;
          if (flags & 0x20)
            y_mov = - (val | 0xFFFFFF00);
          else
@@ -308,6 +308,6 @@ Vergiss nicht, das EOI Signal an den PIC zu senden!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9393/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2390/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2390/index.html)
 
-<!-- MediaWiki page 2390; revision 9393; parent 0; 2011-01-30T18:57:41Z -->
+<!-- MediaWiki page 2390; revision 9411; parent 9393; 2011-02-03T20:48:00Z -->
