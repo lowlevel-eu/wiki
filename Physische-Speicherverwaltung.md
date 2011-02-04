@@ -103,6 +103,6 @@ Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu mar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9425/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
 
-<!-- MediaWiki page 1843; revision 6813; parent 6104; 2010-01-06T15:37:24Z -->
+<!-- MediaWiki page 1843; revision 9425; parent 6813; 2011-02-04T21:35:03Z -->
