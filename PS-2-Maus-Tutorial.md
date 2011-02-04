@@ -54,7 +54,7 @@ Andere Befehle des Keyboard Controllers liefern Daten zurück. Diese werden dann
 
 \<c\> uint8_t kbc_read_outbuf() {
 
-     uint32t to = 255;
+     uint32_t to = 255;
      while ( ! (inb(0x64) & 0x01) )
      {
        if (! (to--) )
@@ -308,6 +308,6 @@ Vergiss nicht, das EOI Signal an den PIC zu senden!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2390/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2390/index.html)
 
-<!-- MediaWiki page 2390; revision 9411; parent 9393; 2011-02-03T20:48:00Z -->
+<!-- MediaWiki page 2390; revision 9413; parent 9411; 2011-02-04T05:58:10Z -->
