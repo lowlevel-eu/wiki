@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 8693; parent 7784; 2010-10-23T16:08:49Z -->
+<!-- MediaWiki page 1496; revision 9424; parent 8693; 2011-02-04T21:31:42Z -->
