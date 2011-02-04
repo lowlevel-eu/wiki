@@ -36,6 +36,6 @@ Die **Heapverwaltung** stellt auf der virtuellen Speicherverwaltung aufbauend Fu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7876/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9423/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1591/index.html)
 
-<!-- MediaWiki page 1591; revision 7876; parent 7577; 2010-07-16T15:15:15Z -->
+<!-- MediaWiki page 1591; revision 9423; parent 7876; 2011-02-04T21:29:39Z -->
