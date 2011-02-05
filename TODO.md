@@ -69,6 +69,11 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") - Scheint ganz unten etwas zu fehlen.
 - [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"): Zu einem richtigen Artikel ausbauen und anschließend den Interwiki-Link von osdev.org zu uns setzen
 - [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") ist eine ziemliche Tabellenwüste. Ich würde mir eine Erklärung wünschen, wofür jeder der drei Typen gut ist, und wie man grob vorgeht, um ein Programm (ggf. mit Shared Libs) zu starten oder ein Kernelmodul zu laden.
+- [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"):
+  - Stacktrace erwähnen/erklären, vllt. mit Beispielcode
+  - Tricks und Kniffe von [\[1\]](http://wiki.osdev.org/Troubleshooting) übernehmen - vorallem sowas wie \_\_LINE\_\_, \_\_FILE\_\_ für Debugausgaben wären da wichtig.
+
+  
 
 ## Kleinigkeiten
 
@@ -115,6 +120,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9449/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9448; parent 9446; 2011-02-05T14:03:25Z -->
+<!-- MediaWiki page 1518; revision 9449; parent 9448; 2011-02-05T14:05:04Z -->
