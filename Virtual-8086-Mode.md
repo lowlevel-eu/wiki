@@ -38,6 +38,6 @@ Ich persönlich benutze den VM86-Mode nur, um Interrupts aufzurufen und missbrau
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 8241; parent 8154; 2010-09-16T15:13:50Z -->
+<!-- MediaWiki page 1546; revision 9442; parent 8241; 2011-02-05T13:06:35Z -->
