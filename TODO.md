@@ -74,6 +74,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung des INIT Delivery Modes
 - [Parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle"): Erklären, wie man damit Daten Sendet.
   - Ich mach's mal was ausführlicher. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:17, 29. Okt. 2010 (CEST)
+- [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"): Zu einem richtigen Artikel ausbauen und anschließend den Interwiki-Link von osdev.org zu uns setzen
 
 ## Neu erstellen
 
@@ -113,6 +114,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9432; parent 9295; 2011-02-05T12:37:52Z -->
+<!-- MediaWiki page 1518; revision 9445; parent 9432; 2011-02-05T13:48:53Z -->
