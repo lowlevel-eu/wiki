@@ -48,6 +48,6 @@ Ein weiteres Problem sind beim Debuggen oft die Compileroptimierungen. Sind dies
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1544/index.html)
 
-<!-- MediaWiki page 1544; revision 8679; parent 8262; 2010-10-20T14:11:49Z -->
+<!-- MediaWiki page 1544; revision 9438; parent 8679; 2011-02-05T12:53:08Z -->
