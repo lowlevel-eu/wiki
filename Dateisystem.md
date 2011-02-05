@@ -40,6 +40,6 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 9273; parent 9272; 2011-01-06T17:58:35Z -->
+<!-- MediaWiki page 1548; revision 9464; parent 9273; 2011-02-05T23:57:46Z -->
