@@ -76,6 +76,6 @@ Im Typfeld des Ethernetpaketes muss übrigens 0x0806 für ARP eingetragen werden
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7640/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
 
-<!-- MediaWiki page 1937; revision 7640; parent 5556; 2010-05-03T14:22:36Z -->
+<!-- MediaWiki page 1937; revision 9459; parent 7640; 2011-02-05T23:24:16Z -->
