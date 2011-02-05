@@ -53,6 +53,6 @@ Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 8143; parent 7642; 2010-09-02T10:58:33Z -->
+<!-- MediaWiki page 1514; revision 9452; parent 8143; 2011-02-05T14:20:00Z -->
