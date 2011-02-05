@@ -88,6 +88,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7653/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 7653; parent 6720; 2010-05-03T15:11:44Z -->
+<!-- MediaWiki page 1525; revision 9458; parent 7653; 2011-02-05T23:22:43Z -->
