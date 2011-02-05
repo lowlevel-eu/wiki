@@ -98,6 +98,6 @@ TODO
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 7118; parent 7116; 2010-02-19T19:40:26Z -->
+<!-- MediaWiki page 2187; revision 9462; parent 7118; 2011-02-05T23:46:35Z -->
