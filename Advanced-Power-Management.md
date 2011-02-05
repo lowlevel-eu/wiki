@@ -167,6 +167,6 @@ TODO: ergänzen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7639/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9451/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2221/index.html)
 
-<!-- MediaWiki page 2221; revision 7639; parent 7495; 2010-05-03T14:21:41Z -->
+<!-- MediaWiki page 2221; revision 9451; parent 7639; 2011-02-05T14:16:29Z -->
