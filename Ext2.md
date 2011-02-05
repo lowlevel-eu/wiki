@@ -20,6 +20,6 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4063/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
 
-<!-- MediaWiki page 1617; revision 4063; parent 3843; 2009-02-26T18:52:59Z -->
+<!-- MediaWiki page 1617; revision 9435; parent 4063; 2011-02-05T12:48:08Z -->
