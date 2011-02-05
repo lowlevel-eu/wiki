@@ -30,6 +30,6 @@ Aufgrund von Abwärtskompatibilität ist außerdem natürlich noch der [Programm
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
 
-<!-- MediaWiki page 1584; revision 7144; parent 4058; 2010-02-21T15:34:30Z -->
+<!-- MediaWiki page 1584; revision 9430; parent 7144; 2011-02-05T12:29:28Z -->
