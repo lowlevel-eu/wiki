@@ -64,6 +64,6 @@ Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS ang
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 8890; parent 7772; 2010-11-13T19:07:45Z -->
+<!-- MediaWiki page 1599; revision 9428; parent 8890; 2011-02-05T12:17:13Z -->
