@@ -73,6 +73,6 @@ Aus analogem Grund sollte auch auf [Memory-mapped I/O](https://github.com/lowlev
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8328/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 8328; parent 8327; 2010-09-21T02:28:10Z -->
+<!-- MediaWiki page 1526; revision 9457; parent 8328; 2011-02-05T23:19:41Z -->
