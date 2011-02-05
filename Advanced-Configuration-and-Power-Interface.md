@@ -16,6 +16,6 @@ Mit ACPI ist es unter anderem möglich, den Computer in verschiedene Energiespar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1992/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1992/index.html)
 
-<!-- MediaWiki page 1992; revision 7644; parent 7504; 2010-05-03T14:39:01Z -->
+<!-- MediaWiki page 1992; revision 9431; parent 7644; 2011-02-05T12:31:27Z -->
