@@ -205,6 +205,6 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 8628; parent 7959; 2010-10-12T12:38:08Z -->
+<!-- MediaWiki page 1486; revision 9456; parent 8628; 2011-02-05T23:16:34Z -->
