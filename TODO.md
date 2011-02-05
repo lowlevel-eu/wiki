@@ -68,6 +68,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
   - Habe die Baum-Implementation eingebaut, wer was anderes sehen will soll es einbauen. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 15:00, 13. Okt. 2010 (CEST)
 - [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") - Scheint ganz unten etwas zu fehlen.
 - [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"): Zu einem richtigen Artikel ausbauen und anschließend den Interwiki-Link von osdev.org zu uns setzen
+- [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") ist eine ziemliche Tabellenwüste. Ich würde mir eine Erklärung wünschen, wofür jeder der drei Typen gut ist, und wie man grob vorgeht, um ein Programm (ggf. mit Shared Libs) zu starten oder ein Kernelmodul zu laden.
 
 ## Kleinigkeiten
 
@@ -114,6 +115,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9446; parent 9445; 2011-02-05T13:49:26Z -->
+<!-- MediaWiki page 1518; revision 9448; parent 9446; 2011-02-05T14:03:25Z -->
