@@ -201,10 +201,9 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 - [Draft des TR1 (=Technical Report 1)](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n1836.pdf)
 - [g++ ABI](http://www.codesourcery.com/cxx-abi/abi.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
 - [g++ ABI: Exception Handling](http://www.codesourcery.com/cxx-abi/abi-eh.html) (Nicht nur die ABI für Itanium, sondern auch für x86 und x86-64)
-- [OSDev.org wiki](http://www.osdev.org/wiki/C_PlusPlus)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 9456; parent 8628; 2011-02-05T23:16:34Z -->
+<!-- MediaWiki page 1486; revision 9468; parent 9456; 2011-02-06T09:47:32Z -->
