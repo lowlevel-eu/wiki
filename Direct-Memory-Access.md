@@ -185,6 +185,6 @@ VOID dma_begin_transfer(VOID\* buffer, WORD size, BOOL write) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 8040; parent 7357; 2010-08-08T10:37:38Z -->
+<!-- MediaWiki page 1555; revision 9465; parent 8040; 2011-02-06T00:01:26Z -->
