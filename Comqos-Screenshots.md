@@ -14,8 +14,10 @@
 
 [\[6\]](http://img703.imageshack.us/i/50562421.png/) **ver Command**
 
+[\[7\]](http://www.youtube.com/watch?v=7Hwg7eLFmsM) **Preview Video**
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9484/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2396/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2396/index.html)
 
-<!-- MediaWiki page 2396; revision 9484; parent 9483; 2011-02-07T17:03:16Z -->
+<!-- MediaWiki page 2396; revision 9486; parent 9484; 2011-02-07T17:23:01Z -->
