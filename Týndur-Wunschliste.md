@@ -42,10 +42,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Atheros AR8132 PCI-E Fast Ethernet Controller \[1969:1062\]
 - Realtek PCIe Gigabit Ethernet Family Controller \[10EC:8168\]
 
-### Sonstiges
-
-- SD-Kartentreiber
-
 ## Anwendungen
 
 - help
@@ -61,6 +57,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
   - aptitude-ähnliche TUI
   - Liste von Bereits instalierter Software
   - Liste von vorhandener aber noch nicht instalierter Software
+  - Liste für auslesbare Paketlisten (Für z.B. eine Paketliste auf lpt.sfan.bplaced.net) --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 21:27, 8. Feb. 2011 (CET)
 - Setup (Installation)
 - Mail-Client
 - git-Client
@@ -79,6 +76,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9360; parent 9269; 2011-01-19T19:48:47Z -->
+<!-- MediaWiki page 1513; revision 9497; parent 9360; 2011-02-08T20:27:52Z -->
