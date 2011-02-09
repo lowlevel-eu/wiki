@@ -28,6 +28,10 @@ Der residente Teil des Programms bleibt anschließend solange inaktiv, bis er vo
 
 Es ist auch nicht unüblich, BIOS- oder DOS-Funktionen zu "überladen", indem der passende IVT-Eintrag auf eine Funktion des TSR-Programms geändert wird. Besonders in diesen Fällen wird das TSR-Programm sich den alten IVT-Eintrag merken und den ursprünglichen Interrupthandler aufrufen, sobald es seine Aufgabe erledigt hat (oder wenn es nur eine Unterfunktion des Interrupts ändert). Auf diese Weise können ganze Ketten von Interrupthandlern zu einem einzigen Interrupt entstehen.
 
+## Speicherverwaltung
+
+Der konventionellen Speicher (also die untersten 640 kB die mal für alles reichen sollten) werden als einfach verkettete Liste verwaltet. DOS verwaltet diesen Speicher mit einer Granularität von 16 Bytes, dort Paragraph genannt, und auch mit einem Alignment von 16 Bytes. Vor jedem Speicherblock, egal ob ein belegter oder ein unbelegter, liegt immer ein 16 Byte großer Header der MCB (Memory Control Block). In diesem MCB ist neben einer Markierung vermerkt ob der folgende Block belegt oder frei ist, wem er gehört und wie groß er ist. Über die Größe erkennt man dann wo der nächste MCB liegt. Der letzte Block, dessen Ende normalerweise bei 0x9FFFF ist, wird mit einem Z markiert wogegen alle anderen MCBs mit einem M markiert werden. Die DOS-Speicherverwaltung ist in der Lage freie Blöcke zu teilen um einen neuen Block mit einer bestimmten Größe zu bekommen aber auch nebeneinander liegende freie Blöcke zusammenzufassen. Die Adresse des ersten MCB, der Start der verketteten Liste, bekommt man mit einen undokumentierten Trick über eine Int-21h-Funktion (dieser Trick funktioniert aber unter allen DOS-Versionen und weil er von so vielen Programmen benutzt wird konnte Microsoft ihn auch nicht mehr ändern, er gehört quasi zur offiziellen API dazu). Diese Liste ist in keinster Weise geschützt so das viele DOS-Programme da nach eigenem Gutdünken frei dran rum fummeln.
+
 ## Zugriff auf hohen Speicher
 
 Da DOS ein [Real-Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")-Betriebssystem ist, ist der direkt adressierbare Speicher auf etwa ein Megabyte beschränkt. Da der Bereich zwischen 640 kB und 1 MB für das BIOS und zum Einblenden von Hardware reserviert ist (die *Upper Memory Area*), bleiben für Treiber und Anwendungen 640 kB an *konventionellem Speicher* übrig. Weil das auf Dauer etwas zu wenig war, wurden Methoden eingesetzt, um auch auf die höheren Speicherbereiche zugreifen zu können.
@@ -47,6 +51,6 @@ Mit dem *Expanded Memory* stellt emm386.exe einen anderen Mechanismus zur Verfü
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9505/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
 
-<!-- MediaWiki page 1829; revision 9234; parent 9233; 2011-01-03T12:34:03Z -->
+<!-- MediaWiki page 1829; revision 9505; parent 9234; 2011-02-09T19:51:33Z -->
