@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | \- |
-| Binärformat: | \- |
+| Binärformat: | .bin und [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
@@ -30,6 +30,7 @@ StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen.
 ### 0.1.1 (vorraussichtlich)
 
 - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")/[IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") wird geladen
+- Multitasking
 - Tastaturtreiber
 - kleine Shell
 - Loader für Binaries
@@ -38,6 +39,6 @@ StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9388/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9499/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9388; parent 9376; 2011-01-25T20:28:19Z -->
+<!-- MediaWiki page 2359; revision 9499; parent 9388; 2011-02-09T13:39:38Z -->
