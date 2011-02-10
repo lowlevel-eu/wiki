@@ -21,6 +21,20 @@
 
 StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen. Das OS wird dafür (voraussichtlich) einen Dateisystemtreiber für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") im Kernel haben. Die Shell wird als .elf oder .bin Datei von GRUB geladen.
 
+## Programme
+
+Für Programme kann man [\[1\]](http://sfan.funpic.de/StefanOS_source/libstefanos.h%7CLibStefanOS) benutzen. \<c\>
+
+1.  include "libstefanos.h"
+
+int main() {
+
+     putc('H');
+     print("ello World!");
+     kill_process(get_pid());
+
+} \</c\> Das *kill_process(get_pid());* ist dabei zwingend notwendig um die Anwendung zu beenden.
+
 ## Features
 
 ### 0.1
@@ -39,6 +53,6 @@ StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen. Das OS wird d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9512; parent 9499; 2011-02-10T16:48:17Z -->
+<!-- MediaWiki page 2359; revision 9514; parent 9512; 2011-02-10T18:11:33Z -->
