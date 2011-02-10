@@ -23,7 +23,7 @@ StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen. Das OS wird d
 
 ## Programme
 
-Für Programme kann man [\[1\]](http://sfan.funpic.de/StefanOS_source/libstefanos.h%7CLibStefanOS) benutzen. \<c\>
+Für Programme kann man [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h) benutzen. \<c\>
 
 1.  include "libstefanos.h"
 
@@ -53,6 +53,6 @@ int main() {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9514; parent 9512; 2011-02-10T18:11:33Z -->
+<!-- MediaWiki page 2359; revision 9515; parent 9514; 2011-02-10T18:12:12Z -->
