@@ -1,5 +1,11 @@
 # SIMPLE
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Keine Homepage, Stand des Projektes ist nicht ersichtbar, vermutlicher Stillstand des Projektes --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:15, 10. Feb. 2011 (CET)
+
 | SIMPLE |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -27,6 +33,6 @@ Die Shell befindet sich im CGA-80x25-Textmodus mit weißer Schrift und grünem H
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9507/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2039/index.html)
 
-<!-- MediaWiki page 2039; revision 6464; parent 6462; 2009-12-03T20:31:03Z -->
+<!-- MediaWiki page 2039; revision 9507; parent 6464; 2011-02-10T11:15:06Z -->
