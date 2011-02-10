@@ -1,5 +1,11 @@
 # Rypos
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Keine genaueren Informationen, keine Homepage, vermutlicher Stillstand des Projektes. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:14, 10. Feb. 2011 (CET)
+
 | Rypos |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -22,6 +28,6 @@ RYPOS ist unser Versuch, ein x86 OS in C zu schreiben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2056/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2056/index.html)
 
-<!-- MediaWiki page 2056; revision 5747; parent 0; 2009-08-26T17:25:32Z -->
+<!-- MediaWiki page 2056; revision 9506; parent 5747; 2011-02-10T11:14:05Z -->
