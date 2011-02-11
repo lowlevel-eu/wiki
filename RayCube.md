@@ -1,5 +1,11 @@
 # RayCube
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Relevanz - Wenn es z.B. ein Bootsektor-Spiel wäre ok, aber das ist jetzt ein PM-Spiel für NandOS, von daher hat das hier nichts zu suchen. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:51, 11. Feb. 2011 (CET)
+
 | RayCube |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 |  |  |
@@ -33,6 +39,6 @@ Primär sollte man das Spiel als technischen Versuch ansehen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2268/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2268/index.html)
 
-<!-- MediaWiki page 2268; revision 8109; parent 8108; 2010-08-26T06:03:49Z -->
+<!-- MediaWiki page 2268; revision 9527; parent 8109; 2011-02-11T09:51:08Z -->
