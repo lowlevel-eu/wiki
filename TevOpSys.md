@@ -1,5 +1,11 @@
 # TevOpSys
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Laut Text eine Art "Zukunftsprojekt" in der Planungsphase, daher keine Relevanz. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:49, 11. Feb. 2011 (CET)
+
 | tevOpSys |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
@@ -35,6 +41,6 @@ Ich arbeite gerade an meinem Floppytreiber, also am FDC und dem ISA DMA.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
 
-<!-- MediaWiki page 2270; revision 8633; parent 8584; 2010-10-12T20:39:32Z -->
+<!-- MediaWiki page 2270; revision 9526; parent 8633; 2011-02-11T09:49:54Z -->
