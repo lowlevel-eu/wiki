@@ -1,5 +1,11 @@
 # KNOS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Letzter Eintrag von anderthalb (deutsche Sprache fdS) Jahren, keine Homepage, keine sichtbare Weiterentwicklung. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:43, 11. Feb. 2011 (CET)
+
 | KNOS |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 |  |  |
@@ -54,6 +60,6 @@ Die IPC basiert auf Semaphoren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5675/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2042/index.html)
 
-<!-- MediaWiki page 2042; revision 5675; parent 5659; 2009-08-20T14:45:08Z -->
+<!-- MediaWiki page 2042; revision 9525; parent 5675; 2011-02-11T09:43:42Z -->
