@@ -1,5 +1,11 @@
 # Cats
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Wieder ein eingestelltes OS (Katzen sind übrigens meine Lieblingstiere, weshalb mir hier der Löschvorschlag echt schwerfällt). --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:39, 11. Feb. 2011 (CET)
+
 | Cats |  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg" width="222" height="314" alt="Katze-396196.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cf787878cdc9ddd55936.jpg) |  |
@@ -50,6 +56,6 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2084/index.html)
 
-<!-- MediaWiki page 2084; revision 8912; parent 8911; 2010-11-18T15:33:55Z -->
+<!-- MediaWiki page 2084; revision 9523; parent 8912; 2011-02-11T09:39:48Z -->
