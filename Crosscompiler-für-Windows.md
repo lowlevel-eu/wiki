@@ -12,11 +12,6 @@ Der Compiler ist verfügbar unter <http://jidder.de/lost/files/crosstools-comple
 - binutils 2.19.1
 - newlib 1.17.0 und libstdc++ (C- bzw. C++-Standardbibliothek)
 
-Ein neuerer Compiler Build ist [hier](http://pnoob.bplaced.net/downloads/i586-elf.rar) zu finden (funktioniert nur in einer Cygwin-Umgebung). Darin enthalten sind
-
-- GCC 4.5.1 (C -C++-Compiler)
-- Binutils 2.20
-
 ## Installation
 
 Im Prinzip reicht es, das Archiv zu entpacken (z.B. nach C:\crosstools), und in die PATH-Variable das Verzeichnis C:\crosstools\bin einzutragen. Alle Programme haben dann das Präfix "i586-elf-". Zum Beispiel kann der C-Compiler mit *i586-elf-gcc* aufgerufen werden.
@@ -86,6 +81,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8725/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 8725; parent 8724; 2010-10-27T15:49:11Z -->
+<!-- MediaWiki page 1450; revision 9530; parent 8725; 2011-02-11T12:59:30Z -->
