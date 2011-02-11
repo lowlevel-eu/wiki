@@ -56,11 +56,11 @@ Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
 ## Weblinks
 
-- GNU Ada Compiler [\[1\]](https://libre2.adacore.com/)
-- ISO-Norm Ada 2005 [\[2\]](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
+- [GNU Ada Compiler](https://libre2.adacore.com/)
+- [ISO-Norm Ada 2005](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6084/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
 
-<!-- MediaWiki page 1742; revision 6084; parent 5930; 2009-10-16T21:16:28Z -->
+<!-- MediaWiki page 1742; revision 9519; parent 6084; 2011-02-11T09:30:19Z -->
