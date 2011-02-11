@@ -1,5 +1,11 @@
 # KyrOS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Keine Homepage, keine Download-Möglichkeit, keine sichtbare Aktivität --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:32, 11. Feb. 2011 (CET)
+
 | KyrOS |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -31,6 +37,6 @@ KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8959/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9520/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 8959; parent 8957; 2010-11-21T11:34:44Z -->
+<!-- MediaWiki page 2164; revision 9520; parent 8959; 2011-02-11T09:32:31Z -->
