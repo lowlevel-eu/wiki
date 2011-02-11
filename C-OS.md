@@ -1,5 +1,11 @@
 # C-OS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Kein Text, keine Homepage (wenn auch in Arbeit), letzte Änderungen von Oktober letztem Jahres --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:21, 11. Feb. 2011 (CET)
+
 | C-OS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 |  |  |
@@ -19,6 +25,6 @@ in Arbeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2276/index.html)
 
-<!-- MediaWiki page 2276; revision 8443; parent 8325; 2010-10-02T15:11:48Z -->
+<!-- MediaWiki page 2276; revision 9517; parent 8443; 2011-02-11T09:21:45Z -->
