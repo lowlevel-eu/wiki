@@ -1,5 +1,11 @@
 # J-OS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Wird nicht mehr weiterentwickelt. ---[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:36, 11. Feb. 2011 (CET)
+
 | J-OS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 |  |  |
@@ -44,6 +50,6 @@ In der Version 0.0.1 werden (vorraussichtlich) folgende Features implementiert s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1828/index.html)
 
-<!-- MediaWiki page 1828; revision 8033; parent 7679; 2010-07-31T11:52:25Z -->
+<!-- MediaWiki page 1828; revision 9521; parent 8033; 2011-02-11T09:36:14Z -->
