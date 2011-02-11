@@ -1,5 +1,11 @@
 # FiKe
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Letzte Änderung des Programmieres vor zwei Jahren, keine sichtbare Weiterentwicklung. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:41, 11. Feb. 2011 (CET)
+
 FiKe ist ein monolithischer Kernel mit integrierter Shell. FiKe steht dabei für First Kernel und meint damit meinen ersten Kernel.
 
 | FiKe |  |
@@ -30,6 +36,6 @@ FiKe kann keine Module laden und besitzt nur einen einzigen Treiber, der des Key
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1762/index.html)
 
-<!-- MediaWiki page 1762; revision 5277; parent 3970; 2009-08-06T15:28:02Z -->
+<!-- MediaWiki page 1762; revision 9524; parent 5277; 2011-02-11T09:41:19Z -->
