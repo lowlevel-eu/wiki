@@ -1,5 +1,11 @@
 # Aeris
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Letzte Änderung vor gut einem Jahr, keine sichtbare Weiterentwicklung. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 10:38, 11. Feb. 2011 (CET)
+
 | Aeris |  |
 | ----------------------------------------------------------------------------------------------------- | ------------ |
 |  |  |
@@ -48,6 +54,6 @@ Die aktuellste Version die man beziehen kann ist 0.4 BETA3. Die Entwicklerversio
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8174/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2175/index.html)
 
-<!-- MediaWiki page 2175; revision 8174; parent 7652; 2010-09-06T13:01:17Z -->
+<!-- MediaWiki page 2175; revision 9522; parent 8174; 2011-02-11T09:38:22Z -->
