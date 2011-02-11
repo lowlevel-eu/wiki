@@ -23,6 +23,8 @@ StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen. Das OS wird d
 
 ## Programme
 
+### LibStefanOS
+
 Für Programme kann man [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h) benutzen. \<c\>
 
 1.  include "libstefanos.h"
@@ -35,6 +37,15 @@ int main() {
 
 } \</c\> Das *kill_process(get_pid());* ist dabei zwingend notwendig um die Anwendung zu beenden.
 
+### Funktionen
+
+Die [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h) besitzt 4 Funktionen, die im obigen Beispiel alle benutzt werden. Trotzdem ist hier nochaml eine Liste der Funktionen von [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h).  
+  
+void putc(char *c*) : Gibt das Zeichen *c* auf dem Bildschirm aus  
+void print(char \**str*) : Gibt die Zeichenkette *str* auf dem Bildschirm aus  
+void kill_process(int *pid*) : Beendet den Prozess *pid*  
+int get_pid() : Gibt die Prozessnummer des laufenden Prozesses zurück  
+
 ## Features
 
 ### 0.1
@@ -46,6 +57,14 @@ int main() {
 - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")/[IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") wird geladen
 - Multitasking
 - Tastaturtreiber
+- Loader für Binaries
+  - flache Binärdateien (.bin)
+
+### 0.1.2 (voraussichtlich)
+
+- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")/[IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") wird geladen
+- Multitasking
+- Tastaturtreiber
 - kleine Shell
 - Loader für Binaries
   - [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")
@@ -53,6 +72,6 @@ int main() {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9515; parent 9514; 2011-02-10T18:12:12Z -->
+<!-- MediaWiki page 2359; revision 9536; parent 9515; 2011-02-11T14:35:28Z -->
