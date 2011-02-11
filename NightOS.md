@@ -19,7 +19,8 @@
 [Quellcode](http://sfan.funpic.de/StefanOS_source)  
 [Image](http://sfan.funpic.de/StefanOS_source/StefanOS.img)
 
-StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen. Das OS wird dafür (voraussichtlich) einen Dateisystemtreiber für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") im Kernel haben. Die Shell wird als .elf oder .bin Datei von GRUB geladen.
+StefanOS hat die Aufgabe einen PC schnell und einfach zu benutzen. Das OS wird dafür (voraussichtlich) einen Dateisystemtreiber für [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") im Kernel haben. Die Shell wird als .elf oder .bin Datei von GRUB geladen.  
+**aktuelle Version: 0.1.1 Beta**
 
 ## Programme
 
@@ -72,6 +73,6 @@ int get_pid() : Gibt die Prozessnummer des laufenden Prozesses zurück
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9537/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9536; parent 9515; 2011-02-11T14:35:28Z -->
+<!-- MediaWiki page 2359; revision 9537; parent 9536; 2011-02-11T14:41:00Z -->
