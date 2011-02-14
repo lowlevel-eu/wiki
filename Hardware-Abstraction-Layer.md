@@ -4,7 +4,7 @@ Die **HAL** (**H**ardware **A**bstraction **L**ayer) bezeichnet eine Softwaresch
 
 ## Aufgaben
 
-Die HAL beinhaltet somit folgende Aufgaben, wobei zu beachten ist, dass das nur mögliche Teile einer HAL sind:
+Die HAL beinhaltet somit folgende Aufgaben, wobei zu beachten ist, dass das nur mögliche Teile einer HAL sind. Was genau der HAL macht hängt sehr von der Struktur des OS ab. In gewissen Grenzen ist es auch eine Sache der persönlichen/subjektiven Definition ob bestimmte Code-Fragmente vom OS Teil des HAL sind oder einer anderen Komponente zugeordnet werden.
 
 ### I/O-Ports
 
@@ -34,8 +34,12 @@ Bei [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") bzw. [x86-64](http
 
 Der [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") hat unter anderem die Aufgabe den Kontext zu wechseln. Dabei müssen Register gesichert und wiederhergestellt werden und außerdem der virtuelle Adressraum gewechselt werden, d. h. dieser Teil des Schedulers ist extrem abhängig von der Architektur und gehört somit auch zur HAL. Außerdem muss der Scheduler von einem Timer &#150; bei [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") die [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), der [RTC](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock "RTC"), die [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")-Timer oder der HPET &#150; aufgerufen werden, d. h. der Treiber für diesen Timer könnte auch Teil der HAL sein.
 
+### Plug-and-Play
+
+Das OS muss oft erst die im System vorhandenen Geräte alle finden und die benutzten (Speicher-/IO-/Interupt-)Ressourcen ermitteln oder selber vergeben. Dazu werden für moderne Hardware-Komponenten üblicherweise die Plug-and-Play-Mechanismen des betreffenden Busses (über den das Gerät dem System zugänglich ist) benutzt. Bei z.B. [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten wird dazu der PCI-Config-Space benutzt und damit nicht alle Treiber selber direkt darauf zugreifen müssen bietet der OS-Kernel üblicherweise passende Funktionen an welche wiederum als Teil des HAL gezählt werden können.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 8257; parent 7104; 2010-09-18T13:54:12Z -->
+<!-- MediaWiki page 1480; revision 9546; parent 8257; 2011-02-14T12:28:18Z -->
