@@ -101,7 +101,7 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
         uint8_t b[2];
         uint16_t w;
       } divisor;
-      divisor.w = 115200/baud;;
+      divisor.w = 115200/baud;
 
       // Interrupt ausschalten
       outb(base+IER,0x00);
@@ -154,6 +154,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9568/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 9038; parent 9012; 2010-12-04T00:33:07Z -->
+<!-- MediaWiki page 1561; revision 9568; parent 9038; 2011-02-18T21:00:57Z -->
