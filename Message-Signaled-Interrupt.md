@@ -14,10 +14,10 @@ Bei PCI müssen für die Benutzung von Message-Signaled-Interrupts eigentlich nu
 
 ## Weblinks
 
-- [Erklärung der PCI-Capabilitys für MSI und MSI-X von der PCI-SIG](http://www.pcisig.com/specifications/conventional/msi-x_ecn.pdf)
+- [Erklärung der PCI-Capabilities für MSI und MSI-X von der PCI-SIG](http://www.pcisig.com/specifications/conventional/msi-x_ecn.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
 
-<!-- MediaWiki page 2400; revision 9563; parent 0; 2011-02-18T19:33:40Z -->
+<!-- MediaWiki page 2400; revision 9567; parent 9563; 2011-02-18T20:12:26Z -->
