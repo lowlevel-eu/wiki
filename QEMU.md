@@ -4,7 +4,7 @@
 | ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
-| Akt. Version: | 0.13.0<br>(Stand 18.10.2010) |
+| Akt. Version: | 0.14.0<br>(Stand 18.02.2011) |
 | Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
@@ -33,6 +33,9 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - Zwei PCI-ATA-Schnittstellen mit Unterstützung für maximal vier Festplatten-Images
 - CD-ROM/DVD-Laufwerk über ISO-Abbild oder reales Laufwerk
 - Diskettenlaufwerk
+- SATA-Festplatten (AHCI)
+- SCSI-Festplatten und SCSI-CD-ROM-Laufwerke
+- virtio-blk (Paravirtualisierte Festplatte)
 - Unterstützte Dateiformate für Images: Raw, das qemu-eigene Format qcow/qcow2, die Formate von VMware, VirtualBox, Parallels, VirtualPC, Bochs, Knoppix (cloop). Außerdem das Pseudoformat vvfat, das ein Verzeichnis auf dem Hostsystem als FAT-Image im Gast abbildet.
 
 #### Grafikkarte
@@ -54,6 +57,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - Soundblaster 16
 - ES1370 PCI
 - [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")
+- Intel HD Audio
 
 #### USB
 
@@ -78,6 +82,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8681/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9559/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 8681; parent 8680; 2010-10-20T14:14:32Z -->
+<!-- MediaWiki page 1505; revision 9559; parent 8681; 2011-02-18T12:02:05Z -->
