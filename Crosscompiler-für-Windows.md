@@ -18,7 +18,7 @@ Im Prinzip reicht es, das Archiv zu entpacken (z.B. nach C:\crosstools), und in 
 
 týndur erwartet, dass dieses Präfix in der *config.sh* eingetragen wird, damit die Makefiles den Compiler finden. Dazu muss die Variable *COMPILER_PREFIX_I386* in Zeile 3 mittels *COMPILER_PREFIX_I386=i586-elf-* entsprechend gesetzt werden.
 
-Alternativ kann man statt C:\crosstools\bin auch C:\crosstools\i586-elf\bin in die PATH-Variable eintragen. Dann haben die Programme kein Präfix und heißen einfach *gcc*, *ld*, etc. Das kann allerdings unter Umständen zu Problemen führen, wenn noch mehr Compiler in der PATH-Variable eingetragen sind.
+Alternativ kann man statt C:\crosstools\bin auch C:\crosstools\i586-elf\bin in die PATH-Variable eintragen. Dann haben die Programme kein Präfix und heißen *gcc*, *ld*, etc. Das kann allerdings unter Umständen zu Problemen führen, wenn noch mehr Compiler in der PATH-Variable eingetragen sind.
 
 ### MSYS einrichten
 
@@ -28,7 +28,7 @@ Wenn bisher noch kein MinGW installiert war, ist vermutlich auch MSYS noch nicht
 
 ### NASM
 
-Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf SourceForge zum [Download](http://sourceforge.net/projects/nasm/files/) gibt. Diesen auch einfach installieren.
+Für týndur wird als Assembler außerdem NASM benötigt, den es auch auf SourceForge zum [Download](http://sourceforge.net/projects/nasm/files/) gibt. Diesen auch installieren.
 
 ## Cross-Compiler Kommandozeile
 
@@ -43,9 +43,9 @@ Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týn
 
 Das Buildsystem von týndur ist nicht darauf ausgelegt unter Windows ein GRUB-Image zu erstellen, deswegen ist dort eine alternative Lösung gefragt. Dieses Thema gehört zwar nicht mehr direkt zum Cross-Compiler, aber da dieses mehr oder wenige eine Anleitung ist, wie man týndur unter Windows baut, schreibe ich das vorerst mal hierhin.
 
-Um die GRUB-Problematik zu umgehen, ist es am einfachsten einfach ein fertiges Image (z.B. von den [Releases](http://download.tyndur.org/releases/)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](https://github.com/lowlevel-eu/wiki/wiki/Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
+Um die GRUB-Problematik zu umgehen, kann man ein fertiges Image (z.B. von den [Releases](http://download.tyndur.org/releases/)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](https://github.com/lowlevel-eu/wiki/wiki/Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
 
-Nachdem du týndur mit *make* kompiliert hast, kannst du mit *make updateroot* die erstellten Programme in der passenden Verzeichnisstruktur zusammenstellen lassen. Das Ergebnis landet im Verzeichnis *build\root* und den Inhalt davon kannst du dann einfach auf das Disketten-Image kopieren und ggf. boot/grub/menu.lst anpassen.
+Nachdem du týndur mit *make* kompiliert hast, kannst du mit *make updateroot* die erstellten Programme in der passenden Verzeichnisstruktur zusammenstellen lassen. Das Ergebnis landet im Verzeichnis *build\root*. Den Inhalt davon kannst du dann auf das Disketten-Image kopieren und ggf. boot/grub/menu.lst anpassen.
 
 ## Feedback
 
@@ -56,7 +56,7 @@ Feedback im Forum, im IRC oder auf der Diskussionsseite ist erwünscht. Besonder
 ### gcc: CreateProcess: No such file or directory
 
 - Die beste Lösung dafür ist, nicht gcc.exe und die anderen Programme im Verzeichnis i586-elf\bin zu benutzen, sondern die i586-elf-gcc.exe und so weiter im Verzeichnis bin.
-- Alternative: Dieser Fehler tritt auf, weil der gcc die Datei cc1.exe nicht finden kann. Man könnte diese (und cc1plus.exe und collect2.exe) als Workaround einfach von libexec\gcc\i586-elf\4.4.0 nach i586-elf\bin kopieren. Das sorgt allerdings unter Umständen für weitere Probleme, wenn man die mitgelieferte Bibliotheken nutzen will, siehe z.B. nächstes Problem.
+- Alternative: Dieser Fehler tritt auf, weil der gcc die Datei cc1.exe nicht finden kann. Man könnte diese (und cc1plus.exe und collect2.exe) als Workaround von libexec\gcc\i586-elf\4.4.0 nach i586-elf\bin kopieren. Das sorgt allerdings unter Umständen für weitere Probleme, wenn man die mitgelieferte Bibliotheken nutzen will, siehe z.B. nächstes Problem.
 - Ein Auftreten dieser Meldung bei i586-elf-gcc (der eigentlich nicht das Problem haben sollte) wurde im Forum durch den selben Workaround gelöst. [\[1\]](https://lowlevel-eu.github.io/forum/topics/2345/index.html#msg26522)
 
 ### error: no include path in which to search for stdio.h (oder andere .h)
@@ -81,6 +81,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9569/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 9530; parent 8725; 2011-02-11T12:59:30Z -->
+<!-- MediaWiki page 1450; revision 9569; parent 9530; 2011-02-18T21:01:35Z -->
