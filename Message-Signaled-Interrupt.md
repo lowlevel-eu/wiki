@@ -18,6 +18,6 @@ Bei PCI müssen für die Benutzung von Message-Signaled-Interrupts eigentlich nu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9567/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9571/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
 
-<!-- MediaWiki page 2400; revision 9567; parent 9563; 2011-02-18T20:12:26Z -->
+<!-- MediaWiki page 2400; revision 9571; parent 9567; 2011-02-19T14:11:30Z -->
