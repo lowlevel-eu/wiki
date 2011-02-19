@@ -8,9 +8,9 @@ Mit einem **M**essage-**S**ignaled-**I**nterrupt kann ein Hardware-Gerät dem Sy
 
 Das einzigste aktuelle Bussystem das Message-Signaled-Interrupts bietet ist [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") und seine Verwandten bzw. Nachfolger. Auf dem PC sind Message-Signaled-Interrupts nur nutzbar wenn man die [I/O APICs](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") benutzt.
 
-## Message-Signaled-Interrupts bei PCI
+## Message Signaled Interrupts bei PCI
 
-Bei PCI müssen für die Benutzung von Message-Signaled-Interrupts eigentlich nur das Gerät und der I/O-APIC dazu passend konfiguriert werden, alle anderen Komponenten (inklusive eventueller Bridges u.ä.) müssen keine speziellen Voraussetzungen erfüllen. Die Message-Signaled-Interrupts werden als ganz normale Speicher-Schreib-Zugriffe an eine bestimmte Adresse geschickt. Diese Adresse muss beim PC ein I/O-APIC zur Verfügung stellen. Bei Message-Signaled-Interrupts kann jede PCI-Funktion mehrere unabhängige Interrupts haben und es ist kein Interrupt-Sharing erforderlich. Bei PCI gibt es Message-Signaled-Interrupts in 2 verschiedenen Geschmacksrichtungen, einmal als einfaches MSI und einmal als erweitertes MSI-X. Das einfache MSI unterstützt bis zu 32 Interrupts pro PCI-Funktion und die gehen alle an den selben Interrupt-Controller, das mächtigere MSI-X unterstützt bis zu 2048 Interrupts die alle an unterschiedliche Interrupt-Controller gehen können.
+Bei PCI müssen für die Benutzung von Message Signaled Interrupts eigentlich nur das Gerät und der I/O-APIC dazu passend konfiguriert werden, alle anderen Komponenten (inklusive eventueller Bridges u.ä.) müssen keine speziellen Voraussetzungen erfüllen. Die Message Signaled Interrupts werden als ganz normale Speicher Schreib Zugriffe an eine bestimmte Adresse geschickt. Diese Adresse muss beim PC ein I/O-APIC zur Verfügung stellen. Bei Message Signaled Interrupts kann jede PCI-Funktion mehrere unabhängige Interrupts haben und es ist kein Interrupt-Sharing erforderlich. Bei PCI gibt es Message Signaled Interrupts in 2 verschiedenen Geschmacksrichtungen, einmal als einfaches MSI und einmal als erweitertes MSI-X. Das einfache MSI unterstützt bis zu 32 Interrupts pro PCI-Funktion und die gehen alle an den selben Interrupt-Controller, das mächtigere MSI-X unterstützt bis zu 2048 Interrupts die alle an unterschiedliche Interrupt-Controller gehen können.
 
 ## Weblinks
 
@@ -18,6 +18,6 @@ Bei PCI müssen für die Benutzung von Message-Signaled-Interrupts eigentlich nu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9571/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9574/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
 
-<!-- MediaWiki page 2400; revision 9571; parent 9567; 2011-02-19T14:11:30Z -->
+<!-- MediaWiki page 2400; revision 9574; parent 9571; 2011-02-19T14:14:09Z -->
