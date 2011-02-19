@@ -43,6 +43,7 @@ Interrupts können mit Hilfe der Instruktionen *sti* und *cli* ein- bzw. ausgesc
 - [Interprocessor Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "Interprocessor Interrupt")
 - [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")
 - [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h")
+- [Message Signaled Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Message-Signaled-Interrupt "Message Signaled Interrupt")
 - Intel Manuals Volume 1A - Chapter 6 und Volume 3A - Chapter 5
 
 ## Links
@@ -51,6 +52,6 @@ Interrupts können mit Hilfe der Instruktionen *sti* und *cli* ein- bzw. ausgesc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4801/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9570/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 4801; parent 4350; 2009-07-30T00:03:21Z -->
+<!-- MediaWiki page 1596; revision 9570; parent 4801; 2011-02-19T14:05:38Z -->
