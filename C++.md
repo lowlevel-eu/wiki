@@ -185,11 +185,11 @@ Exceptions sollten auch am besten innerhalb des Kernels deaktiviert werden. Mit 
 
 ## sonstige Probleme
 
-### C++ Funktionen aus C/Assembler nutzen
+### C++-Funktionen aus C/Assembler nutzen
 
-Um C++ Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* - dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut - deaktivieren für diese Funktion. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\>extern "C" void foobar(int i, char\* s);\</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
+Um C++-Funktionen von Sourcecode, der in C oder Assembler geschrieben ist, aufrufen zu können, muss das *name mangling* – dabei werden die Funktionsnamen nicht direkt als Symbolnamen genommen, sondern Parameter- und Rückgabetypen und Informationen zum Namespace mit in den Symbolnamen eingebaut – für diese Funktionen deaktiviert werden. Dies geschieht dadurch, dass die betreffende Funktion innerhalb des C++-Sourcecodes *extern "C"* deklariert wird, wie in folgendem Beispiel: \<cpp\>extern "C" void foobar(int i, char\* s);\</cpp\> Anschließend kann die Funktion in C++ ganz normal definiert werden und schließlich aus dem C/Assembler-Sourcecode heraus wie sonst üblich aufgerufen werden.
 
-Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überladen, das würde beim Linken zu ernsten Problemen führen. Folgendes Beispiel funktioniert also nicht: \<cpp\>extern "C" void foobar(int i, char\* s); extern "C" void foobar(int i, double\* d);\</cpp\> Der Linker würde 2 Funktionen mit dem Namen 'foobar' finden und könnte das ganze nicht mehr linken und auch nicht feststellen welche Funktion die Aufrufer jeweils meinen.
+Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überladen, das würde beim Linken zu ernsten Problemen führen. Folgendes Beispiel funktioniert also nicht: \<cpp\>extern "C" void foobar(int i, char\* s); extern "C" void foobar(int i, double\* d);\</cpp\> Der Linker würde 2 Funktionen mit dem Namen 'foobar' finden und könnte das ganze nicht mehr linken und auch nicht feststellen, welche Funktion die Aufrufer jeweils meinen.
 
 ## Siehe auch
 
@@ -204,6 +204,6 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 9468; parent 9456; 2011-02-06T09:47:32Z -->
+<!-- MediaWiki page 1486; revision 9588; parent 9468; 2011-02-20T20:17:48Z -->
