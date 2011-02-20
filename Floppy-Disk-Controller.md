@@ -145,7 +145,7 @@ Interrupt Code
 SE  
 Seek end
 
-der Controller hat einen Befehl mit inplizitem Seek erfolgreich ausgeführt
+Der Controller hat einen Befehl mit implizitem Seek, Calibrate oder Seek erfolgreich ausgeführt
 
 UC  
 unit check
@@ -965,6 +965,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 8970; parent 8969; 2010-11-21T20:09:07Z -->
+<!-- MediaWiki page 1443; revision 9587; parent 8970; 2011-02-20T18:26:44Z -->
