@@ -145,7 +145,7 @@ Wenn die ersten 4 Bits (Bitmaske: 0x0F) gesetzt sind, handelt es sich um einen V
 
 **Bedeutung**
 
-Dekasekunde (1 Dekasekunde entspricht 10 Sekunden) Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x122Datum des letzten Zugriffs
+Dekasekunde (1 Dekasekunde entspricht 10 Millisekunden, gültige Werte von 0 bis 199) Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x122Datum des letzten Zugriffs
 
 **Bedeutung**
 
@@ -154,7 +154,8 @@ Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (nur f
 **Bedeutung**
 
 Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster  
-(Beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist.) 0x1C4Dateigröße in Bytes
+(Beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist.  
+Gültige Werte sind 0 wenn die Datei keine Daten enthält also keine Clusterkette benötigt wird und ≥2 wenn doch eine Clusterkette benötigt wird.) 0x1C4Dateigröße in Bytes
 
 ## Cluster
 
@@ -208,6 +209,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9590/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9591/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9590; parent 9371; 2011-02-21T12:08:10Z -->
+<!-- MediaWiki page 1643; revision 9591; parent 9590; 2011-02-21T12:19:56Z -->
