@@ -48,10 +48,11 @@ Interrupts können mit Hilfe der Instruktionen *sti* und *cli* ein- bzw. ausgesc
 
 ## Links
 
-[Liste von BIOS-Interrupts](http://www.cs.cmu.edu/afs/cs/user/ralf/pub/WWW/files.html) [Tabelle zu BIOS-Interrupts](http://www.ctyme.com/intr/int.htm)
+- [Liste von BIOS-Interrupts](http://www.cs.cmu.edu/afs/cs/user/ralf/pub/WWW/files.html)
+- [Tabelle zu BIOS-Interrupts](http://www.ctyme.com/intr/int.htm)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1596/index.html)
 
-<!-- MediaWiki page 1596; revision 9600; parent 9570; 2011-02-22T16:53:10Z -->
+<!-- MediaWiki page 1596; revision 9601; parent 9600; 2011-02-22T16:53:48Z -->
