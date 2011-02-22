@@ -10,7 +10,7 @@ Keine Homepage, keine Download-Möglichkeit, keine sichtbare Aktivität --[DerHa
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | GE |
-| Akt. Version: | 0.0.0 |
+| Akt. Version: | 0.0.2 (Phobos) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
 | Plattform: | [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
@@ -26,17 +26,20 @@ KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird.
 ## Features
 
 - GDT, IDT
-- Keyboard-Treiber, CMOS-Treiber, RTC-Treiber
-- Paging
+- Keyboard-Treiber, CMOS-Treiber, RTC-Treiber, COM-Treiber
+- Paging, Heap-Speicherverwaltung
+
+<!-- -->
+
+- Multitasking (in Arbeit)
 
 ## Geplante Features
 
-- Multitasking
 - FAT 16/32 und später ext2/3 Treiber
 - USB-, PCI & Internetkarten-Treiber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9520/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 9520; parent 8959; 2011-02-11T09:32:31Z -->
+<!-- MediaWiki page 2164; revision 9603; parent 9520; 2011-02-22T17:44:35Z -->
