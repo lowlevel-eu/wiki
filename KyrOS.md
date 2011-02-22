@@ -21,7 +21,7 @@ Keine Homepage, keine Download-Möglichkeit, keine sichtbare Aktivität --[DerHa
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Da ich nicht viel Zeit habe, schreitet die Entwicklung sehr langsam voran.
+KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Da ich nicht viel Zeit habe, schreitet die Entwicklung sehr langsam voran. Es gibt im Moment noch keine Homepage, da keine benötigt wird. Die Uhrzeit kann man auch anderswo sehen.
 
 ## Features
 
@@ -40,6 +40,6 @@ KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Da ich nicht v
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9605/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 9604; parent 9603; 2011-02-22T17:47:47Z -->
+<!-- MediaWiki page 2164; revision 9605; parent 9604; 2011-02-22T19:15:58Z -->
