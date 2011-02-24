@@ -12,8 +12,12 @@ Unter **VMware** bezeichnet man primär die Emulationsprogramme der Firma VMware
 
 Die Workstation- und Server-Versionen sind kostenpflichtig, der Player ist Freeware. Die Produkte von VMware werden besonders im professionellen Bereich der Virtualisierung benutzt.
 
+## Links
+
+- [VMware Webseite](http://vmware.com/)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5207/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1944/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1944/index.html)
 
-<!-- MediaWiki page 1944; revision 5207; parent 5127; 2009-08-06T12:07:53Z -->
+<!-- MediaWiki page 1944; revision 9607; parent 5207; 2011-02-24T16:04:32Z -->
