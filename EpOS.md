@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
-| Akt. Version: | 0.07 in Entwicklung |
+| Akt. Version: | 0.08 in Entwicklung |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Im moment Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -32,6 +32,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 - Paging
 - Heap
 - VFS/initrd
+- laden eines "Programms" von der initrd + ausführen
 
 ## Geplant
 
@@ -44,7 +45,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 
 ## Realease
 
-Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.06 fertig, steht mittlerweile auch zum Download, aber die Featurelist ist immer noch maximal durchschnittlich.
+Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stabilität. Im Moment ist v0.07 fertig, steht mittlerweile auch zum Download, aber die Featurelist ist immer noch maximal durchschnittlich.
 
 ## History/Archiv
 
@@ -68,6 +69,11 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
   - VFS/initrd
   - KB-Treiber überarbeitet
   - Bugfix in der Heapverwaltung
+- v0.07 - 06.03.11
+  - Paging neu implementiert (war mir zu nahe am Tutorial)
+  - PMM neu implementiert: vormals BMP, jetzt Freispeicherliste, inklusive Bugfix.
+  - Heap: Bugfix, Pages werden nun durch vmm (1:1) gemappt
+  - "Prozess" von der initrd laden und ausführen
 
 ## Screenshot
 
@@ -77,6 +83,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9613/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 9236; parent 8808; 2011-01-03T13:00:19Z -->
+<!-- MediaWiki page 1771; revision 9613; parent 9236; 2011-03-06T16:41:05Z -->
