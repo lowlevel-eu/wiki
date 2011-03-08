@@ -1,5 +1,11 @@
 # Klovnix
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Keine Homepage, keine Download-Möglichkeit, keine sichtbare relevanz --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 13:44, 8. Mär. 2011 (CET)
+
 | Klovnix |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 |  |  |
@@ -35,6 +41,6 @@ Für die Version **0.1.0** ist vorausgesehen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9617/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2406/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2406/index.html)
 
-<!-- MediaWiki page 2406; revision 9617; parent 0; 2011-03-07T13:58:56Z -->
+<!-- MediaWiki page 2406; revision 9619; parent 9617; 2011-03-08T12:44:44Z -->
