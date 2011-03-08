@@ -1,11 +1,5 @@
 # Klovnix
 
-**Löschhinweis:**
-
-Dieser Artikel wurde zum Löschen vorgeschlagen.
-
-Keine Homepage, keine Download-Möglichkeit, keine sichtbare relevanz --[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") 13:44, 8. Mär. 2011 (CET)
-
 | Klovnix |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 |  |  |
@@ -23,7 +17,7 @@ Keine Homepage, keine Download-Möglichkeit, keine sichtbare relevanz --[PNoob](
 
 ---
 
-**Klovnix** ist ein von mir in Assembler hergestelltes Hobby-OS.
+**Klovnix** ist ein von mir in Assembler hergestelltes Hobby-OS. Im Moment arbeite ich dran und es wird im Mai rauskommen.
 
 ## Dateiformat
 
@@ -41,6 +35,6 @@ Für die Version **0.1.0** ist vorausgesehen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9619/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2406/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2406/index.html)
 
-<!-- MediaWiki page 2406; revision 9619; parent 9617; 2011-03-08T12:44:44Z -->
+<!-- MediaWiki page 2406; revision 9621; parent 9619; 2011-03-08T15:22:36Z -->
