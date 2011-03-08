@@ -1,5 +1,11 @@
 # Klovnix
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Keine Homepage, Zukunftsprojekt, noch nicht erschienen - Und was zum Henkel ist eine "Werbe Klausel"? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 19:20, 8. Mär. 2011 (CET)
+
 | Klovnix |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 |  |  |
@@ -35,6 +41,6 @@ Für die Version **0.1.0** ist vorausgesehen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2406/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9622/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2406/index.html)
 
-<!-- MediaWiki page 2406; revision 9621; parent 9619; 2011-03-08T15:22:36Z -->
+<!-- MediaWiki page 2406; revision 9622; parent 9621; 2011-03-08T18:20:54Z -->
