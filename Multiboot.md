@@ -193,7 +193,7 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 | -------- | ------- | ------------- | ------------------------------- |
 | 0x00 | 2 | version | Version |
 | 0x02 | 2 | cseg | 32bit Codesegment |
-| 0x04 | 2 | offset | Offset des Entrypoints |
+| 0x04 | 4 | offset | Offset des Entrypoints |
 | 0x08 | 2 | cseg_16 | 16bit Codesegment |
 | 0x0A | 2 | dseg | 16bit Datensegment |
 | 0x0C | 2 | flags | Flags |
@@ -208,6 +208,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 9048; parent 8964; 2010-12-08T12:41:59Z -->
+<!-- MediaWiki page 1560; revision 9620; parent 9048; 2011-03-08T15:02:19Z -->
