@@ -40,7 +40,7 @@ int main() {
 
 ### Funktionen
 
-Die [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h) besitzt 4 Funktionen, die im obigen Beispiel alle benutzt werden. Trotzdem ist hier nochaml eine Liste der Funktionen von [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h).  
+Die [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h) besitzt 4 Funktionen, die im obigen Beispiel alle benutzt werden. Trotzdem ist hier nochmal eine Liste der Funktionen von [LibStefanOS](http://sfan.funpic.de/StefanOS_source/libstefanos.h).  
   
 void putc(char *c*) : Gibt das Zeichen *c* auf dem Bildschirm aus  
 void print(char \**str*) : Gibt die Zeichenkette *str* auf dem Bildschirm aus  
@@ -73,6 +73,6 @@ int get_pid() : Gibt die Prozessnummer des laufenden Prozesses zurück
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9537/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9537; parent 9536; 2011-02-11T14:41:00Z -->
+<!-- MediaWiki page 2359; revision 9626; parent 9537; 2011-03-11T19:10:46Z -->
