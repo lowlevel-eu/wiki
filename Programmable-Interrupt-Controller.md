@@ -60,7 +60,19 @@ In diesem Wert steht jedes Bit für einen Interrupt (IRQ 0 ist Bit 0 usw.). Gese
 
 ## Spurious Interrupt
 
-Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen Interrupt an die CPU meldet und erst danach bemerkt, dass er eigentlich gar kein Interrupt auslösen hätte dürfen. Darum ruft die CPU den Spurious Interrupt auf, welcher sich je nach Konfiguration am letzten Eingang des Master oder Slave PIC befindet. Um ihn von den "normalen" Interrupts (LPT oder ATA) zu unterscheiden kann man im ISR Register des jeweiligen PICs schauen, ob dieser gerade einen "normalen" Interrupt bearbeitet oder eben nicht. Ein Spurious Interrupt kann einfach mit einem iret beendet werden ohne dass anderer Code nötig ist. Bemerkenswert ist, dass ein Spurious Interrupt selbst dann auftreten kann, wenn alle IRQ-Kanäle in der PIC maskiert wurden.
+Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen Interrupt an die CPU meldet und erst danach bemerkt, dass er eigentlich gar kein Interrupt auslösen hätte dürfen. Darum ruft die CPU den Spurious Interrupt auf, welcher sich je nach Konfiguration am letzten Eingang des Master oder Slave PIC befindet. Um ihn von den „normalen“ Interrupts (LPT oder ATA) zu unterscheiden kann man im ISR-Register des jeweiligen PICs schauen, ob dieser gerade einen „normalen“ Interrupt bearbeitet oder eben nicht. Ein Spurious Interrupt kann einfach mit einem iret beendet werden ohne dass anderer Code nötig ist. Bemerkenswert ist, dass ein Spurious Interrupt selbst dann auftreten kann, wenn alle IRQ-Kanäle in der PIC maskiert wurden.
+
+### Ablauf
+
+Dem PIC wird zunächst ein Interrupt von der Hardware gemeldet, woraufhin er dies der CPU meldet und das entsprechende Bit im ISR-Register (s. u.) setzt. Die CPU reagiert darauf mit einer Bestätigung an den PIC. Anschließend fordert sie die Nummer des auszulösenden Interrupts an. Stellt der PIC in der Zwischenzeit fest, dass plötzlich gar kein Interrupt mehr gemeldet wird, so muss er trotzdem irgendwie reagieren und tut so, als sei ein IRQ 7 ausgelöst worden (beim Slave dementsprechend IRQ 15). Im Gegensatz zu einem echten IRQ wird das Bit im ISR-Register bei einem solche Spurious Interrupt allerdings vor der Meldung der Interruptnummer bei der CPU gelöscht.
+
+### Bearbeitung
+
+Theoretisch sollte es nicht schaden, dem PIC bei einem Spurious Interrupt ein EOI zu schicken: Ein EOI löscht das Bit des niedrigsten IRQ (= der mit der höchsten Priorität) im ISR-Register. Da ein Spurious Interrupt nur dann ausgelöst wird, wenn gar kein echter Interrupt eingetroffen ist, sollte das ISR somit 0 sein. Ein EOI kann daher kein Bit löschen und es passiert nichts. Wird vom Slave ein Spurious Interrupt ausgelöst, so muss jedoch an den Master ein EOI gesendet werden, da dieser sozusagen einen „echten“ IRQ 2 behandelt.
+
+Dennoch muss man einen Spurious Interrupt von einem normalen unterscheiden: Auch wenn LPT 1 (IRQ 7) heute wohl selten verwendet wird, so kann dies bei IRQ 15 durchaus anders sein (IRQ des sekundären ATA-Controllers). Wie bereits angedeutet, muss hierzu das ISR-Register des jeweiligen PIC ausgelesen werden. Dazu muss man ein OCW3 (Output Control Word) an den PIC schicken, um festzulegen, dass beim Lesen vom Befehlsport das ISR-Register zurückgegeben werden soll. Dieses OCW3 hat den Wert 0x0B und wird einfach ohne besondere Vorkehrungen an den Befehlsport geschrieben. In der ISR sollte dann das ISR-Register ausgelesen werden (also der Befehlsport des entsprechenden PIC), um zu prüfen, ob es sich um einen Spurious Interrupt handelt. Ist Bit 7 nicht gesetzt, dann sollte bei IRQ 7 einfach ein iret durchgeführt und bei IRQ 15 zuvor noch ein EOI an den Master geschickt werden.
+
+*Hinweis zum OCW3 und ISR:* Liest man ein Byte vom Befehlsport des PIC ein, so können zwei verschiedene Register gelesen werden, entweder das ISR (In-Service Register) oder das IRR (Interrupt Request Register). Das IRR repräsentiert alle eingehenden IRQs (Wenn also gleichzeitig die Geräte an IRQ 0, 1 und 4 einen Interrupt anfordern, ist der Wert des IRR 0x13), das ISR die Interrupts (sollte eigentlich nur einer sein), die gerade bearbeitet werden. Nach der Initialisierung des PIC wird am Befehlsport standardmäßig das IRR-Register ausgegeben, dies kann allerdings mit dem OCW3 geändert werden (0x0B als OCW3 wählt das ISR aus, 0x0A das IRR). Um sicherzugehen, dass immer das richtige Register ausgelesen wird, kann man vor jedem Lesen immer ein OCW3 ausgeben, muss dies allerdings nicht, da sich der PIC merkt, welches Register ausgewählt wurde. Es genügt also auch, einmal nach der Initialisierung das ISR-Register per OCW3 auszuwählen, um vom Befehlsport immer das ISR auszulesen, wenn man den PIC anschließend weder nochmals initialisiert noch ein OCW3 sendet, welches das IRR-Register auswählt.
 
 ## siehe auch
 
@@ -74,6 +86,6 @@ Ein Spurious Interrupt wird ausgelöst, wenn der PIC irrtümlicherweise einen In
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9551/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9627/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1465/index.html)
 
-<!-- MediaWiki page 1465; revision 9551; parent 7071; 2011-02-14T22:06:36Z -->
+<!-- MediaWiki page 1465; revision 9627; parent 9551; 2011-03-19T14:20:10Z -->
