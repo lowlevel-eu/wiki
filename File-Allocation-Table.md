@@ -135,25 +135,50 @@ Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverz
 
 0x008Dateiname ohne Erweiterung (mit Leerzeichen aufgefüllt). Der Dateiname darf nur aus Großbuchstaben bestehen und darf folgende Zeichen nicht enthalten: 0x22, 0x2A, 0x2B, 0x2C, 0x2E, 0x2F, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F, 0x5B, 0x5C, 0x5D, 0x7C. 0x083Dateierweiterung (mit Leerzeichen aufgefüllt). Erlaubte Zeichen siehe Dateiname. 0x0B1Dateiattribute
 
-**Bedeutung**
-
-Schreibschutz Versteckt Systemdatei Volume-Label Verzeichnis Archiv Ungenutzt
+| Bit | Bedeutung |
+| ----- | --------------- |
+| 0 | Schreibschutz |
+| 1 | Versteckt |
+| 2 | Systemdatei |
+| 3 | Volume-Label |
+| 4 | Verzeichnis |
+| 5 | Archiv |
+| 6/7 | Ungenutzt |
 
 Wenn die ersten 4 Bits (Bitmaske: 0x0F) gesetzt sind, handelt es sich um einen VFAT-Eintrag
 
 0x0C1Reserviert 0x0D5Erstellungsdatum
 
-**Bedeutung**
+| Bit | Bedeutung |
+| -------- | -------------------------------------------------------------------------------------- |
+| 0..7 | Dekasekunde (1 Dekasekunde entspricht 10 Millisekunden, gültige Werte von 0 bis 199) |
+| 8..12 | Stunde |
+| 13..18 | Minute |
+| 19..23 | 2 Sekunden |
+| 24..30 | Jahr seit 1980 |
+| 31..34 | Monat |
+| 35..39 | Tag des Monats |
 
-Dekasekunde (1 Dekasekunde entspricht 10 Millisekunden, gültige Werte von 0 bis 199) Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x122Datum des letzten Zugriffs
+0x122Datum des letzten Zugriffs
 
-**Bedeutung**
+| Bit | Bedeutung |
+| -------- | ---------------- |
+| 0..6 | Jahr seit 1980 |
+| 7..10 | Monat |
+| 11..15 | Tag des Monats |
 
-Jahr seit 1980 Monat Tag des Monats 0x142Obere 16 Bit des ersten Clusters (nur für FAT32, ansonsten immer 0) 0x164Datum des letzten Schreibzugriffs
+0x142Obere 16 Bit des ersten Clusters (nur für FAT32, ansonsten immer 0) 0x164Datum des letzten Schreibzugriffs
 
-**Bedeutung**
+| Bit | Bedeutung |
+| -------- | ---------------- |
+| 0..4 | Stunde |
+| 5..10 | Minute |
+| 11..15 | 2 Sekunden |
+| 16..22 | Jahr seit 1980 |
+| 23..26 | Monat |
+| 27..31 | Tag des Monats |
 
-Stunde Minute 2 Sekunden Jahr seit 1980 Monat Tag des Monats 0x1A2Erster Cluster  
+0x1A2Erster Cluster  
 (Beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist.  
 Gültige Werte sind 0 wenn die Datei keine Daten enthält also keine Clusterkette benötigt wird und ≥2 wenn doch eine Clusterkette benötigt wird.) 0x1C4Dateigröße in Bytes
 
@@ -209,6 +234,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9595/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9595; parent 9594; 2011-02-21T12:39:13Z -->
+<!-- MediaWiki page 1643; revision 9628; parent 9595; 2011-03-20T00:40:24Z -->
