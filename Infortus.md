@@ -33,8 +33,10 @@ Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660
   - Interrupts
   - Timer
   - rudimentäres Multitasking
-  - **Verbesserung des Multitasking/Neuschreiben**
-  - ***Rudimentäre Speicherverwaltung***
+  - Verbesserung des Multitasking/Neuschreiben
+  - Rudimentäre Speicherverwaltung
+  - Paging
+- Modul & ELF-Loader
 - Implementierung des Keyboard-Treibers
 - Implementierung des CD-Treibers
 - Implementierung von ISO9660
@@ -91,6 +93,6 @@ Beim Springen nach Phase 2 hängt das System manchmal. (festgestellt unter VBox)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2117/index.html)
 
-<!-- MediaWiki page 2117; revision 8664; parent 8663; 2010-10-17T09:55:55Z -->
+<!-- MediaWiki page 2117; revision 9630; parent 8664; 2011-03-26T16:01:00Z -->
