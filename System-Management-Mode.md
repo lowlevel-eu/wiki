@@ -16,10 +16,10 @@ Für das Betriebssystem an sich ist der SMM nutzlos, verwendet wird er vor allem
 
 ## Links
 
-[Intels Manual, Volume 3B: System Programming Guide – System Management](http://www.intel.com/products/processor/manuals/)
+[Intel Manuals, Volume 3B: System Programming Guide – System Management](http://www.intel.com/products/processor/manuals/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9637/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1699/index.html)
 
-<!-- MediaWiki page 1699; revision 8512; parent 6654; 2010-10-03T16:48:42Z -->
+<!-- MediaWiki page 1699; revision 9637; parent 8512; 2011-03-28T19:53:35Z -->
