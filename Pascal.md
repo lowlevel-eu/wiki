@@ -22,16 +22,19 @@ Anders als oft behauptet, ist Pascal eine Programmiersprache, die durchaus auch 
 
 ## Beispielkernel in Pascal
 
-Zunächst **kernel.pas** - der eigentliche Kernel, der ein Zeichen ausgibt. \<pascal\>program kernel;
+Zunächst **kernel.pas** - der eigentliche Kernel, der ein Zeichen ausgibt. \<pascal\>unit kernel;
 
-type tScreen = array\[1..25, 1..80\] of record
+interface
+
+procedure PASCALMAIN(); type tScreen = array\[1..25, 1..80\] of record
 
        c: char;
        attr: byte;
 
-end;
+end; implementation
 
-var
+  
+procedure PASCALMAIN(); var
 
        screen: ^tScreen;
 
@@ -39,8 +42,11 @@ begin
 
        screen := Pointer($B8000);
        screen^[1, 1].c := '#';
+       screen^[1, 1].attr := $07;
 
-end.\</pascal\>
+end;
+
+end. \</pascal\> Die Zeile *screen^\[1, 1\].attr := \$07;* definiert die Zeichenfarbe, in diesem Fall Grau auf Schwarz. Wollen wir jetzt aber z.B. einen Bluescreen-Zeichenhintergrund haben müssten wir *screen^\[1, 1\].attr := \$1F;* nehmen. Für weitere Farben siehe [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe").
 
 Das war der einfache Teil. Als nächstes brauchen wir eine eigene system-Unit, die allerdings für den Anfang nur zwei Stubs bereitstellen muss. **system.pas**: \<pascal\>unit system;
 
@@ -56,14 +62,14 @@ procedure FPC_DO_EXIT; alias: 'FPC_DO_EXIT'; compilerproc; begin end;
 
 end.\</pascal\>
 
-Und der dritte Teil ist ein Assembler-Stub, **prt0.asm**: \<asm\>extern PASCALMAIN global \_start
+Und der dritte Teil ist ein Assembler-Stub, **prt0.asm**: \<asm\> extern KERNEL_PASCALMAIN global \_start
 
 section .text \_start:
 
        ; Stack initalisieren
        mov esp, kernelstack
 
-       call PASCALMAIN
+       call KERNEL_PASCALMAIN, sie kann frei gesetzt werden
        jmp $
 
 multiboot_header: align 4
@@ -82,18 +88,39 @@ section .bss
 
 kernelstack:\</asm\>
 
-Anschließend müssen diese drei Dateien kompiliert/assembliert und gelinkt werden. Das ist der Punkt, der mir noch nicht so ganz gefällt, weil ich ld eigentlich nicht von Hand aufrufen müssen will, um text=0x100000 setzen zu können.
+Jetzt sind nur noch 2 leere Units nötig damit der Kernel läuft.
+
+**si_prc.pas**: \<pascal\> unit si_prc;
+
+interface
+
+implementation
+
+end. \</pascal\> **fpintres.pas**: \<pascal\> unit fpintres;
+
+interface
+
+implementation
+
+end. \</pascal\>
+
+Anschließend müssen diese fünf Dateien kompiliert/assembliert und gelinkt werden. Das ist der Punkt, der mir noch nicht so ganz gefällt, weil ich ld eigentlich nicht von Hand aufrufen müssen will, um text=0x100000 setzen zu können.
 
     nasm -felf prt0.asm
     fpc kernel
     ld -Ttext=0x100000 *.o -o kernel
 
+Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann den Kernel nach dem linken sofort mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") ausführen:
+
+    qemu -kernel kernel
+
 ## Weblinks
 
 - [FreePascal](http://www.freepascal.org)
+- [FpOS - ein in Pascal geschriebenes OS](http://code.google.com/p/fpos/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 5796; parent 4794; 2009-08-31T06:48:39Z -->
+<!-- MediaWiki page 1623; revision 9633; parent 5796; 2011-03-28T13:33:03Z -->
