@@ -69,7 +69,7 @@ section .text \_start:
        ; Stack initalisieren
        mov esp, kernelstack
 
-       call KERNEL_PASCALMAIN, sie kann frei gesetzt werden
+       call KERNEL_PASCALMAIN
        jmp $
 
 multiboot_header: align 4
@@ -121,6 +121,6 @@ Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9633/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9636/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 9633; parent 5796; 2011-03-28T13:33:03Z -->
+<!-- MediaWiki page 1623; revision 9636; parent 9633; 2011-03-28T13:42:22Z -->
