@@ -10,7 +10,7 @@
 | Beispielkernel in der Sprache: | s.u. |
 | Homepage |  |
 
-[www.freepascal.net](http://www.freepascal.net/)
+[www.freepascal.org](http://www.freepascal.org/)
 
 Pascal ist eine strukturierte, prozedurale, objektorientierte, nach Blaise Pascal benannte, und von Nikolaus Wirth im Jahre 1972 als Lehrsprache konzipierte Programmiersprache. Sie ist ähnlich mächtig wie C und wurde im Laufe der Jahre durch verschiedene Sprachkonstrukte erweitert und weiterentwickelt (Borlands Delphi, ObjectPascal).
 
@@ -121,6 +121,6 @@ Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9636/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9638/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 9636; parent 9633; 2011-03-28T13:42:22Z -->
+<!-- MediaWiki page 1623; revision 9638; parent 9636; 2011-03-29T17:25:01Z -->
