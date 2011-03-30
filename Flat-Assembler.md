@@ -8,7 +8,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | --------------- | --------------------------------------------------------------------- |
 | Name: | Flat Assembler |
 | Entwickler: | Tomasz Grysztar |
-| Akt. Version: | 1.69.11 |
+| Akt. Version: | 1.69.31 |
 | Lizenz: | Alle Rechte vorbehalten<br>(Quellcode verfügbar) |
 | Plattform: | Linux, Unix (bzw. alle Systeme mit rudimentärer libc), Windows, DOS |
 | Homepage |  |
@@ -34,6 +34,6 @@ Ein großer Vorteil des Flat Assemblers ist wohl seine Portabilität. Es gibt Ve
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2091/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2091/index.html)
 
-<!-- MediaWiki page 2091; revision 7001; parent 6075; 2010-02-02T18:51:38Z -->
+<!-- MediaWiki page 2091; revision 9644; parent 7001; 2011-03-30T21:01:33Z -->
