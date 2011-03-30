@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Andrew S. Tanenbaum |
-| Akt. Version: | 3.1.2a |
+| Akt. Version: | 3.1.8 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), Motorola 68000, Sun SPARC |
@@ -51,6 +51,6 @@ Dies war Ausgangspunkt für einen Flamewar ganz besonderer Art, der die Entwickl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7907/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 7907; parent 7906; 2010-07-18T10:53:09Z -->
+<!-- MediaWiki page 1910; revision 9646; parent 7907; 2011-03-30T21:05:42Z -->
