@@ -113,6 +113,8 @@ Eine Anleitung, Links zu Datenblättern sind bei den Artikeln weit besser aufgeh
 
 Was ich wohl demnächst eh machen wollte, ist ein kleiner Kernel in Java (nativ Kompiliert) incl Wiki-Artikel. Ich kann da wohl wenns passt deinen Vorschlag mit einbauen. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 12:24, 30. Mär. 2011 (CEST)
 
+Ein Kernel in Java? Interessante Sache, wäre echt nett, wenn du dazu ein wenig schreiben könntest.--[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 21:27, 31. Mär. 2011 (CEST)
+
 - [L4](http://de.wikipedia.org/wiki/L4_%28Microkernel%29) eine moderne zukunftsträchtige Mikrokernelspezifikation.
 - Hier kommt dein Wunsch hin ;)
 
@@ -124,6 +126,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9640/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9647/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9640; parent 9639; 2011-03-30T10:24:17Z -->
+<!-- MediaWiki page 1518; revision 9647; parent 9640; 2011-03-31T19:27:09Z -->
