@@ -115,6 +115,8 @@ Was ich wohl demnächst eh machen wollte, ist ein kleiner Kernel in Java (nativ 
 
 Ein Kernel in Java? Interessante Sache, wäre echt nett, wenn du dazu ein wenig schreiben könntest.--[Bjork](https://lowlevel-eu.github.io/wiki/pages/2155/index.html "Benutzer:Bjork") 21:27, 31. Mär. 2011 (CEST)
 
+Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 08:27, 3. Apr. 2011 (CEST)
+
 - [L4](http://de.wikipedia.org/wiki/L4_%28Microkernel%29) eine moderne zukunftsträchtige Mikrokernelspezifikation.
 - Hier kommt dein Wunsch hin ;)
 
@@ -126,6 +128,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9647/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9647; parent 9640; 2011-03-31T19:27:09Z -->
+<!-- MediaWiki page 1518; revision 9648; parent 9647; 2011-04-03T06:27:25Z -->
