@@ -55,7 +55,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - lpt
   - Upgrades
   - aptitude-ähnliche TUI
-  - Liste von Bereits instalierter Software
+  - Liste von Bereits installierter Software
   - Liste von vorhandener aber noch nicht instalierter Software
 - Setup (Installation)
 - Mail-Client
@@ -63,6 +63,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - kirc
   - Unterstuetzung fuer mehrere Channels
   - Irgendwie sinnvoll ein /ns identify erlauben
+    - Geht das nicht mit */msg NickServ identify passwort*? --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 18:18, 3. Apr. 2011 (CEST)
   - Hochscrollen
 - fbc (FreeBasic Compiler)
   - (infos hier <http://www.freebasic.net/> )
@@ -75,6 +76,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9606/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9606; parent 9497; 2011-02-24T15:56:42Z -->
+<!-- MediaWiki page 1513; revision 9649; parent 9606; 2011-04-03T16:18:13Z -->
