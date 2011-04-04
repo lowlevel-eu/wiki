@@ -136,11 +136,12 @@ Beim Testen auf einem älteren Gerät (Pentium), musste ich feststellen, dass da
 
 ## Weblinks
 
-- [Working-Drafts der aktuellen Spezifikationen zu ATA(PI)](http://t13.org/Documents/UploadedDocuments/project/d1321r3-ATA-ATAPI-5.pdf)
+- [Working Draft für ATA8-ACS (aktuelle Spezifikation)](http://www.t13.org/Documents/UploadedDocuments/docs2007/D1699r4a-ATA8-ACS.pdf)
+- [Working-Drafts für ATA-ATAPI-5](http://t13.org/Documents/UploadedDocuments/project/d1321r3-ATA-ATAPI-5.pdf)
 - [ataprinciples_1.pdf](http://www.controllersandpcs.de/pdfs/ataprinciples_1.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1522/index.html)
 
-<!-- MediaWiki page 1522; revision 9450; parent 8185; 2011-02-05T14:15:37Z -->
+<!-- MediaWiki page 1522; revision 9650; parent 9450; 2011-04-04T15:20:03Z -->
