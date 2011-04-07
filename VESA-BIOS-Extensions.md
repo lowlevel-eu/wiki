@@ -254,6 +254,6 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9008/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9655/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 9008; parent 8528; 2010-11-28T13:25:41Z -->
+<!-- MediaWiki page 2303; revision 9655; parent 9008; 2011-04-07T12:27:30Z -->
