@@ -51,12 +51,55 @@ Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster
 - GUIs verbrauchen viele Ressourcen. Daher wird insbesondere auf Servern nur ein einfaches GUI eingesetzt oder oft auch ganz auf ein GUI verzichtet.
 - Last but not least ist der Aufwand der Entwicklung oder Portierung eines GUI enorm. Desweiteren braucht eine GUI besonders viel Infrastruktur, wie z.B. Grafik- oder Maustreiber. Von der Entwicklung eines GUI ohne einen stabilen und relativ ausgereiften [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ist also abzuraten.
 
+## Nützliches für die GUI-Programmierung
+
+Wer nicht gleich ein Library portieren will um schiefe Linien zu zeichnen kann diesen Beispielcode verwenden. **Der Beispielcode setzt voraus das es die Funktion setpixel(int x,int y, unsigned char color) gibt.(die Funktion sollte einen Pixel zeichnen)** \<c\>
+
+1.  define sgn(x) ((x\<0)?-1:((x\>0)?1:0))
+
+void line(int x1, int y1, int x2, int y2, unsigned char color) {
+
+     int dx,dy,sdx,sdy,px,py,dxabs,dyabs,i;
+     int slope;
+
+     dx = x2-x1;      
+     dy = y2-y1;      
+     dxabs = abs(dx);
+     dyabs = abs(dy);
+     sdx = sgn(dx);
+     sdy = sgn(dy);
+     if(dxabs >= dyabs) {
+       slope = dy / dx;
+       for(i=0;i!=dx;i+=sdx) {
+         px = i + x1;
+         py = slope * i + y1;
+         setpixel(px, py, color);
+       }
+     } else {
+       slope = dx / dy;
+       for(i=0;i!=dy;i+=sdy) {
+         px = slope * i + x1;
+         py = i + y1;
+         setpixel(px, py, color);
+       }
+     }
+
+} \</c\> Hat man diese Funktion ist vieles getan.  
+Eine leichte Übung wäre jetzt eine Funktion um ein Rechteck zu zeichnen: \<c\> void rectangle(int x, int y, int w, int h, unsigned char color) {
+
+     line(x, y, x + h, y, color);
+     line(x, y, x, y + w, color);
+     line(x, y + w, x + h, y + w, color);
+     line(x + h, y, x + h, y + w, color);
+
+} \</c\>
+
 ## Links
 
 [Common Usability Terms](http://osnews.com/story/20287/Common_Usability_Terms_part_IX_the_Menu)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 7343; parent 5276; 2010-03-09T15:56:21Z -->
+<!-- MediaWiki page 1511; revision 9657; parent 7343; 2011-04-09T07:02:18Z -->
