@@ -36,11 +36,24 @@ Der Attribut-Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer
 
 ## Modi
 
-#### Modus 13h
+### Modus 13h
 
 - 320x200 Punkte bei 256 Farben
 - Speicheradresse: 0xA0000
 - Speichergröße: 64000 Bytes
+
+#### Beispielcode
+
+Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned char\* VGA = (unsigned char\*) 0xA0000; \</c\> Wenn man einen Pixel zeichnen möchte, muss man einfach in dem Speicher schreiben: \<c\> void setpixel(int x, int y, unsigned char color) {
+
+     offset = 320*y + x;
+     if(x <= 320) {
+       if(y <= 200) {
+         VGA[offset] = color;
+       }
+     }
+
+} \</c\>
 
 ## Siehe auch
 
@@ -57,6 +70,6 @@ Der Attribut-Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8555/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 8555; parent 8537; 2010-10-06T19:03:22Z -->
+<!-- MediaWiki page 1516; revision 9656; parent 8555; 2011-04-09T06:39:07Z -->
