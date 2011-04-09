@@ -55,6 +55,29 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 
 } \</c\>
 
+#### Farben
+
+| Wert | Farbe |
+| ------ | ------------- |
+| 0 | Schwarz |
+| 1 | Blau |
+| 2 | Grün |
+| 3 | Cyan |
+| 4 | Rot |
+| 5 | Magenta |
+| 6 | Braun |
+| 7 | Hellgrau |
+| 8 | Dunkelgrau |
+| 9 | Hellblau |
+| 10 | Hellgrün |
+| 11 | Hellcyan |
+| 12 | Hellrot |
+| 13 | Hellmagenta |
+| 14 | Gelb |
+| 15 | Weiß |
+
+  
+
 ## Siehe auch
 
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")
@@ -70,6 +93,6 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9656/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 9656; parent 8555; 2011-04-09T06:39:07Z -->
+<!-- MediaWiki page 1516; revision 9658; parent 9656; 2011-04-09T07:11:48Z -->
