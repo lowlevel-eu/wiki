@@ -46,9 +46,10 @@ Der Attribut-Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer
 
 Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned char\* VGA = (unsigned char\*) 0xA0000; \</c\> Wenn man einen Pixel zeichnen möchte, muss man einfach in dem Speicher schreiben: \<c\> void setpixel(int x, int y, unsigned char color) {
 
-     offset = 320*y + x;
-     if(x <= 320) {
-       if(y <= 200) {
+     int offset;
+     if(0 <= x && x < 320) {
+       if(0 <= y && y < 200) {
+         offset = 320*y + x;
          VGA[offset] = color;
        }
      }
@@ -93,6 +94,6 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9658/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 9658; parent 9656; 2011-04-09T07:11:48Z -->
+<!-- MediaWiki page 1516; revision 9659; parent 9658; 2011-04-09T10:01:38Z -->
