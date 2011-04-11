@@ -97,12 +97,12 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ## Weblinks
 
-- <http://ivs.cs.uni-magdeburg.de/bs/lehre/sose99/bs1/aufgaben/aufgabe3/timer.shtml>
+- <http://www4.informatik.uni-erlangen.de/Lehre/WS07/V_BS/Uebungen/oostubs/web/aufgaben/aufgabe5/timer.shtml>
 - <http://www.scs.stanford.edu/09wi-cs140/pintos/specs/8254.pdf> -Intel Spezifikation (englisch)
 - <http://www.brokenthorn.com/Resources/OSDevPit.html> (englisch)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 8815; parent 8814; 2010-11-02T19:34:10Z -->
+<!-- MediaWiki page 1432; revision 9660; parent 8815; 2011-04-11T12:35:18Z -->
