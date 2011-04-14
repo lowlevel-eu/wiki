@@ -10,7 +10,7 @@ Und für die Praxisleute werde ich am Ende auch noch etwas Code bereitstellen, w
 
 ## Der Protected Mode
 
-Wenn der PC neu gestartet wird, so befindet er sich im sogenannten [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"). In diesem Modus wird nur 16-Bit-Code benutzt, sowie der Speicher, der adressierbar ist, auf 1 MiB begrenzt, da im Real Mode nur 20-Bit-Adressen zur Adressierung des Speichers gebildet werden können.
+Wenn der PC neu gestartet wird, so befindet er sich im sogenannten [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"). In diesem Modus werden nur 16-Bit-Zeiger benutzt, sowie der Speicher, der adressierbar ist, auf 1 MiB begrenzt, da im Real Mode nur 20-Bit-Adressen zur Adressierung des Speichers gebildet werden können.
 
 **Hinweis:**
 
@@ -21,7 +21,7 @@ Wenn der PC neu gestartet wird, so befindet er sich im sogenannten [Real Mode](h
   
 Im Real Mode gibt es entscheidende Nachteile. Die verschiedenen laufenden Programme werden alle gleich behandelt. Das heißt, jedes Programm kann ohne Einschränkung auf den kompletten Speicher zugreifen und diesen verändern. Auch der Kernel eines Betriebssystems ist nicht geschützt. Somit ist ein Betriebssystem das im Real Mode läuft anfällig für jegliche Art von Viren und Programmierfehlern. Selbst ein einfacher Programmierfehler, welcher verursacht, dass an eine ungewollte Speicheradresse Daten geschrieben werden, kann dazu führen, dass das komplette System zum Absturz gebracht wird oder instabil läuft. Auch könnten Ergebnisse anderer Programme die im Speicher sind verändert werden, was den korrekten Ablauf jenes Programms erheblich stören kann.
 
-Microsoft DOS ist ein Betriebssystem das im Real Mode läuft. Da dieses System früher hauptsächlich von Privatpersonen als Single-User-System genutzt wurde, waren die eben aufgezeigten Sicherheitsrisiken zu vernachlässigen. Zudem kam noch hinzu, dass das Internet noch sehr wenig verbreitet war und daher die Gefahr von Viren und dergleichen ebenfalls zu vernachlässigen war.
+Ältere Microsoft DOS Betriebssysteme das im Real Mode läuft. Da dieses System früher hauptsächlich von Privatpersonen als Single-User-System genutzt wurde, waren die eben aufgezeigten Sicherheitsrisiken zu vernachlässigen. Zudem kam noch hinzu, dass das Internet noch sehr wenig verbreitet war und daher die Gefahr von Viren und dergleichen ebenfalls zu vernachlässigen war.
 
 **Hinweis:**
 
@@ -361,6 +361,6 @@ Eine knappe Variante, um in den Protected Mode zu schalten, wird [hier](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9669/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 7902; parent 7898; 2010-07-17T10:20:00Z -->
+<!-- MediaWiki page 1464; revision 9669; parent 7902; 2011-04-14T19:37:59Z -->
