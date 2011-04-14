@@ -493,7 +493,15 @@ Um den Boot Record zu übersetzen genügt nun folgender Aufruf:
 
     F:\BootRecord>nasmw src\HelloWorld.asm -o bin\HelloWorld.bin -l bin\HelloWorld.lst
 
-Danach sollte im Verzeichnis bin eine 512 Byte große Datei entstanden sein sowie eine HelloWorld.lst. Aus dieser Datei lassen sich Adressen und entstandener Maschinencode ablesen. Die .bin-Datei kann jetzt in den ersten Sektor jeder beliebigen Diskette kopiert werden.
+Danach sollte im Verzeichnis bin eine 512 Byte große Datei entstanden sein sowie eine HelloWorld.lst. Aus dieser Datei lassen sich Adressen und entstandener Maschinencode ablesen. Die .bin-Datei kann jetzt in den ersten Sektor jeder beliebigen Diskette kopiert werden, was folgendermaßen geht:
+
+    F:\BOOTRE~1>debug hellow~1.bin
+    -w 7c00 0 0 1
+    -q
+    F:\BOOTRE~1>
+    (danach nur noch STRG+ALT+ENTF drücken)
+
+  
 
     F:\BootRecord>dir bin
      Datenträger in Laufwerk F: ist 
@@ -572,6 +580,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9665/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 9466; parent 9007; 2011-02-06T00:05:46Z -->
+<!-- MediaWiki page 1427; revision 9665; parent 9466; 2011-04-14T16:54:53Z -->
