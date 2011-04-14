@@ -499,7 +499,8 @@ Danach sollte im Verzeichnis bin eine 512 Byte große Datei entstanden sein sowi
     -w 7c00 0 0 1
     -q
     F:\BOOTRE~1>
-    (danach nur noch STRG+ALT+ENTF drücken)
+
+(danach nur noch STRG+ALT+ENTF drücken)
 
   
 
@@ -580,6 +581,6 @@ Wenn alles gutgegangen ist, haben wir jetzt ein Diskettenimage mit unserem Hello
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9665/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9666/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1427/index.html)
 
-<!-- MediaWiki page 1427; revision 9665; parent 9466; 2011-04-14T16:54:53Z -->
+<!-- MediaWiki page 1427; revision 9666; parent 9665; 2011-04-14T16:55:14Z -->
