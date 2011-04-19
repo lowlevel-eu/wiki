@@ -31,14 +31,10 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ## Roadmap
 
-0.0.1: Ein grundlegender Kernel mit Paging und Heap
-
-0.0.2: Multitasking, IPC
-
-0.0.3: VFS und floppy treiber. Unter Umständen auch CDI Unterstützung
+0.0.1: Paging und Heap 0.0.2: Multitasking und IPC 0.0.3: VFS und DDI 0.0.4: Floppy-Treiber und FAT16 0.0.5: VESA und ext4 0.0.6: FAT32 und CD-Treiber
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9684/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9686/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9684; parent 9683; 2011-04-19T09:15:05Z -->
+<!-- MediaWiki page 2411; revision 9686; parent 9684; 2011-04-19T14:00:47Z -->
