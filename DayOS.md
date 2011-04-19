@@ -12,12 +12,10 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Nativ |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Keines |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing + Shared Memory |
 | Homepage |  |
 
 [Homepage bei Sourceforge](http://dayos.sourceforge.net/)
-
-  
 
 ## Features
 
@@ -32,12 +30,12 @@
 
 0.0.1: Ein grundlegender Kernel mit Paging und Heap
 
-0.0.2: Multitasking, IPC (message passing und shared memory)
+0.0.2: Multitasking, IPC
 
 0.0.3: VFS und floppy treiber. Unter Umständen auch CDI Unterstützung
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9682/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9683/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9682; parent 9680; 2011-04-19T09:01:47Z -->
+<!-- MediaWiki page 2411; revision 9683; parent 9682; 2011-04-19T09:03:11Z -->
