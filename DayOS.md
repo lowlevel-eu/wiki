@@ -1,8 +1,8 @@
 # DayOS
 
 | DayOS |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  |  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5e1274d3dfd1b7f64bb0.jpg" width="225" height="177" alt="DayOS.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5e1274d3dfd1b7f64bb0.jpg) |  |
 | Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") |
 | Akt. Version: | 0.0.2 (pre-alpha) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu GPL |
@@ -38,6 +38,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9682/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9680; parent 9679; 2011-04-19T08:57:59Z -->
+<!-- MediaWiki page 2411; revision 9682; parent 9680; 2011-04-19T09:01:47Z -->
