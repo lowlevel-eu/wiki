@@ -37,7 +37,7 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 0.0.3: VFS und DDI
 
-0.0.4: Floppy-Treiber und FAT16
+0.0.4: Floppy-Treiber und FAT12
 
 0.0.5: VESA und ext4
 
@@ -45,6 +45,6 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9687; parent 9686; 2011-04-19T14:01:04Z -->
+<!-- MediaWiki page 2411; revision 9688; parent 9687; 2011-04-19T14:21:21Z -->
