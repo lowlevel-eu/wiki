@@ -17,7 +17,8 @@
 
 [Homepage bei Sourceforge](http://dayos.sourceforge.net/)
 
-DayOS ist ein freies und kostenlos erhältliches Hobby Betriebssystem, das das Ziel hat, einen sicheren und schnellen Microkernel für den Alltagsgebrauch zu entwickeln.  
+DayOS ist ein freies und kostenlos erhältliches Hobby Betriebssystem, das das Ziel hat, einen sicheren und schnellen Microkernel für den Alltagsgebrauch zu entwickeln.
+
 Es wird in C/C++ und x86 Assembler geschrieben.
 
 ## Features
@@ -45,6 +46,6 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9688/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9688; parent 9687; 2011-04-19T14:21:21Z -->
+<!-- MediaWiki page 2411; revision 9693; parent 9688; 2011-04-20T15:54:15Z -->
