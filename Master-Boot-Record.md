@@ -32,8 +32,54 @@ Die Partitionstabelle besteht aus 4 Einträgen à 16 Byte in folgendem Format:
 | 0x8 | DD | LBA (Logical Block Addressing) Nummer des Ersten Sektors |
 | 0xC | DD | Länge der Partition in Sektoren |
 
+## Übereinkünfte
+
+Bei dem MBR muss man beachten, das er 'über' den Betriebssystemen steht, da ja eine Partitionierte Festplatte durchaus mehrere verschiedene Betriebssystem auf den Partitionen enthalten kann. Beim Anlegen eines MBRs muss darauf Rücksicht genommen werden, dass gewisse Übereinkünfte eingehalten werden, um die Partitionstabelle für andere Betriebssysteme lesbar zu halten ihre Partitionen nicht zu beschädigen, reservierte Sektoren frei zu Halten und Partitionsgranzen korrekt zu setzten.
+
+Es ist zu beachten, das die ATA-Übereinkünfte variieren je nachdem ob die Festplatte (nativ) durch LBA oder CHS adressiert wird.
+
+### Versteckte (reservierte Sektoren)
+
+Vor der ersten Partition müssen sich versteckte Sektoren befinden, die zu keiner Partition gehören. Der erste davon enthält den MBR selbst, die anderen sind für erweiterungen reserviert. ( eine Erweiterung, die gerade im kommen ist, ist das *Extendet Firmware Interface*([EFI](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "EFI")), eine erweiterung zum MBR, die langsam nötig wird, da für neue Festplatten, die 48bit LBA nutzen, das 32bit Feld des Normalen LBA nicht ausreicht. Weiterhin könnten auch Bootmanager oder Präboot-Treiber in den Verteckten Sektoren sein.
+
+Die Anzahl der verstecketen Sektoren beträgt:
+
+- bei **CHS**-Adressierung **eine Spur**
+- bei **LBA**-Adressierung **64 (40h) Sektoren** (was übrigens auch der virtuellen Spur der durch int 13h emulierten CHS-adressierung entspricht)
+
+### Partitionsgrenzen
+
+Partitionen dürfen nicht an beliebigen Sektoren beginnen. Diese Übereinkunft hängt bei der CHS-Adressierung damit zu sammen, dass immer ganze Spuren formatiert werden müssen, und bei der LBA-Adresseirung, sorgt sie für bessere Übersicht, und bessere Nutzung des Festplattencaches.
+
+Die Partitionsgrenzen sollten ...
+
+- bei **CHS**-Adressierung auf ganzzahligen **ganze Spuren** liegen
+- bei **LBA**-Adressierung **auf** ganzzahligen Megabytes n\*100000h **liegen**
+
+### Nur eine Bootfähige Partition
+
+Der Standart MBR prüft alle Partitionen auf Bootfähigkeit. Wenn mehrere Partitionen Bootfähig sind, bricht er mit der Meldung "Ungültige Partitionstabelle" ab. Es darf also nur eine Bootfähig sein. Es ist durchaus möglich einfach einen anderen Code einzufügen, der sich anders verhält, doch dann muss man bedenken, das ein anderes Betriebssystem den MBR-Code möglicherweise wieder durch einen Standartkonformen ersetzt, und dann die Tabelle als ungültig erkannt wird.
+
+### Verhalten des MBRcodes
+
+- Stack setzten
+- sich selbst nach 0000h:0600h kopieren, und dort weitermachen (jmp far)
+- die ersten Bytes der Partitionen auf 80h prüfen.
+- wenn keine Bootfähig, dann int 18h aufrufen (Das BIOS wird dann entweder das nächste Laufwerk booten, eine Fehlermeldung ausgeben oder den ROM-BASIC-Interpreter Starten)
+- wenn mehrere Bootfähig, Abbruch mit Fehlermeldung
+- wenn eine Bootfähig den ersten Sektor der Partition laden.
+  - Wenn er per CHS erreichbar ist CHS verwenden.
+  - Wenn nicht LBA verwenden
+- wenn Fehler Laufwerk justieren und nochmal versuchen
+- 0000h:7DFEh auf Signatur 55h,0AAh prüfen
+- wenn nicht vorhanden Laufwerk justieren und nochmal versuchen
+- wenn immer noch nicht vorhanden Abbruch mit Fehlermeldung, (oder ggf. eigene Erweiterung verwenden (z.b. hohe bits der LBA in obsolete CHS Felder))
+- ES:DI auf den Partitionseintrag der Partition setzten
+- DL wieder auf BIOS-Nummer des physischen Laufwerks setzten
+- den geladenen Sektor anspringen (jmp 0000h:7C00h)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9695/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 6317; parent 4808; 2009-11-15T13:57:22Z -->
+<!-- MediaWiki page 1431; revision 9695; parent 6317; 2011-04-20T21:14:28Z -->
