@@ -67,8 +67,8 @@ Der Standard-MBR prüft alle Partitionen auf Bootfähigkeit. Wenn mehrere Partit
 - die ersten Bytes der Partitionen auf 80h prüfen.
 - wenn keine bootfähig, dann *int 18h* aufrufen (Das BIOS wird dann entweder das nächste Laufwerk booten, eine Fehlermeldung ausgeben oder den ROM-BASIC-Interpreter starten)
 - wenn mehrere bootfähig, Abbruch mit Fehlermeldung
-- wenn eine bootfähig, den ersten Sektor der Partition laden.
-  - Wenn er per CHS erreichbar ist, CHS verwenden.
+- wenn eine bootfähig, den ersten Sektor dieser Partition an 0000h:7C00h laden.
+  - Wenn er per CHS erreichbar ist, CHS verwenden
   - Wenn nicht, LBA verwenden
 - wenn Fehler, Laufwerk justieren und nochmal versuchen
 - 0000h:7DFEh auf Signatur 55h,0AAh prüfen
@@ -80,6 +80,6 @@ Der Standard-MBR prüft alle Partitionen auf Bootfähigkeit. Wenn mehrere Partit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9707/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9711/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 9707; parent 9706; 2011-04-22T11:52:30Z -->
+<!-- MediaWiki page 1431; revision 9711; parent 9707; 2011-04-22T13:03:01Z -->
