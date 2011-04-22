@@ -40,7 +40,7 @@ Es ist zu beachten, das die ATA-Übereinkünfte variieren, je nachdem ob die Fes
 
 ### Versteckte (reservierte Sektoren)
 
-Vor der ersten Partition müssen sich versteckte Sektoren befinden, die zu keiner Partition gehören. Der erste davon enthält den MBR selbst, die anderen sind für Erweiterungen reserviert. (Eine Erweiterung, die gerade im Kommen ist, ist das *[Extended Firmware Interface](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "EFI")*, eine Erweiterung zum MBR, die langsam nötig wird, da für neue Festplatten, die 48bit LBA nutzen, das 32bit Feld des normalen LBA nicht ausreicht. Weiterhin könnten auch Bootmanager oder Preboot-Treiber in den versteckten Sektoren enthalten sein.
+Vor der ersten Partition müssen sich versteckte Sektoren befinden, die zu keiner Partition gehören. Der erste davon enthält den MBR selbst, die anderen sind für Erweiterungen reserviert. (Eine Erweiterung, die gerade im Kommen ist, ist das *[Extended Firmware Interface](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "EFI")*, eine Erweiterung zum MBR, die langsam nötig wird, da für neue Festplatten, die 48bit LBA nutzen, das 32bit Feld des normalen LBA nicht ausreicht.) Weiterhin könnten auch Bootmanager oder Preboot-Treiber in den versteckten Sektoren enthalten sein.
 
 Die Anzahl der versteckten Sektoren beträgt:
 
@@ -80,6 +80,6 @@ Der Standard-MBR prüft alle Partitionen auf Bootfähigkeit. Wenn mehrere Partit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9706/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9707/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 9706; parent 9695; 2011-04-22T10:24:54Z -->
+<!-- MediaWiki page 1431; revision 9707; parent 9706; 2011-04-22T11:52:30Z -->
