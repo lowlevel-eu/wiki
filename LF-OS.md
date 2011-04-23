@@ -1,7 +1,7 @@
 # LF OS
 
-| LF OS (LittleFox' Operating System) |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| LF OS (LittleFox' Operating System oder Light & Fast Operating System) |  |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | LittleFox |
 | Akt. Version: | 1.0 Alpha 5 / Kernel2 |
@@ -9,8 +9,8 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel (Mikromonolith ;)) |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | Nativ, DarkblackAPI |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
+| API: | Nativ, DarkblackAPI, evt. POSIX |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
@@ -45,12 +45,14 @@ Folgende Features fehlen noch:
 - Klickibunti-Oberfläche
 - ein Treiberinterface (Planung bereits fertig)
 
+Momentan wird LF OS (wiedereinmal) komplett neu geschrieben, womit ich dann bei Kernel 3 wäre. Als Sprache wird diesmal C++ verwendet. Außerdem versuch ich mich jetzt mal ein meine Roadmap zu halten ;). Alles was oben An Features steht, gilt nur für den Kernel 2.
+
 Sollte es Fragen geben, können diese gerne im LF OS Forum gestellt werden. Die englische Version unter <http://www.lf-os.tk> ~~spinnt manchmal etwas~~ (sollte behoben sein ...), die deutsche unter <http://littlefox.web-fuxx.de> funktioniert in der Regel.
 
 Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail](mailto:littlefox@web-fuxx.de) bei mir melden. Ich werde wahrscheinlich nicht nein sagen, da ein wenig Unterstützung nicht schlecht wäre.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 9060; parent 9059; 2010-12-13T20:00:40Z -->
+<!-- MediaWiki page 2267; revision 9716; parent 9060; 2011-04-23T11:50:48Z -->
