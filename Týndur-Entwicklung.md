@@ -49,8 +49,8 @@ Fast noch wichtiger als die Mailingliste selbst und die Anlaufstelle Nummer 1 is
 
 ### Umgebung aufsetzen
 
-Wer ein 64 Bit Linux hat muss sich eine 32 Bit Libgcc installieren. Sonst gibt es beim bauen Fehler.  
-Unter Debian, Ubuntu und Open Suse heißt das nötige Paket ia32-libs.
+Wer einen 64-Bit-gcc hat, muss sich eine 32-Bit-libgcc installieren, da týndur diese benötigt.  
+Unter Debian und Ubuntu heißt das nötige Paket ia32-libs, unter openSUSE libgcc\<Version\>-32bit (z. B. libgcc45-32bit) und unter Arch gcc-multilib aus dem multilib-Repository (*TODO*: Weitere Distributionen und Betriebssysteme ergänzen).
 
   
 Wer nicht vorhat, portierte Programme (lbuilds) zu kompilieren und auch keinen Pascal-Code übersetzen möchte, kann diesen Abschnitt überspringen. Alle anderen müssen zunächst die lbuilds einrichten und dabei einen FPC-Crosscompiler erstellen. Im Idealfall muss man dazu einfach nur den Maketarget lbuilds-env ausführen:
@@ -194,6 +194,6 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9714/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9715/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2035/index.html)
 
-<!-- MediaWiki page 2035; revision 9714; parent 9713; 2011-04-22T20:01:51Z -->
+<!-- MediaWiki page 2035; revision 9715; parent 9714; 2011-04-23T00:06:03Z -->
