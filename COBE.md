@@ -33,16 +33,15 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 
 ## Versionen
 
-**COBE 0.1 Alpha:**
+**COBE 0.1 Alpha unstable:**
 
 - Grundinitialisierung von COBE
 - [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
-- Bootscreen
+- Bootscreen (derzeit ausgeschaltet)
 - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")
 - [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), ISR
 - [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") Remap
 - [Keyboard-Treiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC")
-- stabiler Kernel
 - Shell
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
@@ -70,6 +69,6 @@ COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9612/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9719/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 9612; parent 9611; 2011-02-27T20:58:56Z -->
+<!-- MediaWiki page 2298; revision 9719; parent 9612; 2011-04-25T21:57:05Z -->
