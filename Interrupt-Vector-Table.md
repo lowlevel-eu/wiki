@@ -71,7 +71,7 @@ IVT.Handlerwahl 0x00, IRQ_0x00
 
 IRQ_0x00:  ;Handler für IRQ 0
 
-... hier kann ein Hinewistext geschreiben werden o.ä. ...
+... hier kann ein Hinweistext geschreiben werden o.ä. ...
 
 iret \</asm\>
 
@@ -82,6 +82,6 @@ iret \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8751/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9723/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1540/index.html)
 
-<!-- MediaWiki page 1540; revision 8751; parent 8660; 2010-10-31T15:05:29Z -->
+<!-- MediaWiki page 1540; revision 9723; parent 8751; 2011-04-27T10:44:43Z -->
