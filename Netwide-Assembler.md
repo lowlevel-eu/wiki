@@ -27,10 +27,9 @@ Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und 
 ## Weblinks
 
 - [NASM bei Sourceforge](http://nasm.sourceforge.net)
-- [Webseite von NASM](http://nasm.us)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9724/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9725/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
 
-<!-- MediaWiki page 1909; revision 9724; parent 9699; 2011-04-28T07:24:25Z -->
+<!-- MediaWiki page 1909; revision 9725; parent 9724; 2011-04-28T10:19:00Z -->
