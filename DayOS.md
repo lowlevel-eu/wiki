@@ -27,6 +27,7 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 - Paging
 - Heap
 - Textmode Video treiber
+- IPC
 
   
 
@@ -36,7 +37,7 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 0.0.2: Multitasking und IPC
 
-0.0.3: VFS und DDI
+0.0.3: VFS und DDI und vielleicht [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")
 
 0.0.4: Floppy-Treiber und FAT12
 
@@ -46,6 +47,6 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9693/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9726/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9693; parent 9688; 2011-04-20T15:54:15Z -->
+<!-- MediaWiki page 2411; revision 9726; parent 9693; 2011-04-29T09:09:50Z -->
