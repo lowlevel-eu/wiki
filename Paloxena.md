@@ -1,13 +1,13 @@
 # Paloxena
 
 | Paloxena |  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png) |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | — |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
+| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
 | API: | Bis kernel3 POSIX-ähnlich; ab 3.5 nativ mit POSIX-Wrappern |
@@ -16,14 +16,14 @@
 | Homepage |  |
 
 [Gitorious](http://gitorious.org/paloxena)  
-[Forum](http://forum.paloxena.bplaced.net/)
+[Website](http://xanclic.bplaced.net/)
 
   
 Der Name Paloxena stammt von der wissenschaftlichen Bezeichnung für die „Grüne Stinkwanze“ („Palomena“), ein „Bug“ also. Und das wird das OS wohl vermutlich ausmachen.
 
 ## paloxena1
 
-paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyXomycota so ziemlich kaputt war. Dummerweise wurde es noch viel kaputter. Deshalb gibt es jetzt paloxena2 (Und paloxena3. Und paloxena3.5.). Irgendwann muss man ja einen Glückstreffer landen.
+paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyXomycota so ziemlich kaputt war. Dummerweise wurde es noch viel kaputter. Deshalb gibt es jetzt paloxena2 (Und paloxena3. Und paloxena3.5. Und paloxena4). Irgendwann muss man ja einen Glückstreffer landen.
 
 ### Programme
 
@@ -38,13 +38,6 @@ paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyX
 - mbr: Gibt 512 Bytes einer Datei von einer gegebenen Position an in Hex-Editor-Form aus
 - maumau: Der Klassiker von MyXomycota
 - brainfuck: Brainfuckcompiler
-
-### Akt. Release
-
-Die aktuelle Freigabe ist 0.001-o (zur Benennung der Versionen, siehe [hier](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=3)).
-
-- Ankündigung: [Paloxenaforum - "0.001-o"](http://forum.paloxena.bplaced.net/viewtopic.php?f=2&t=13)
-- Direktlink: [0.001-o.img.bz2](http://www.paloxena.bplaced.net/releases/0.001-o.img.bz2)
 
 ### Screenshot
 
@@ -77,18 +70,26 @@ Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Comp
 
 Ja. Es ist schon wieder passiert. Auch paloxena2 war zu kaputt, also gibt es nun paloxena3. Im Großen und Ganzen verfolgt es die gleichen Ziele wie paloxena2 (SMP, Threads, einfacheres Treiberinterface). Bei paloxena2 gab es aber erstens das Problem, dass ich anfangs noch keine Ahnung von SMP hatte und ich das OS zweitens zu Beginn nur als Testplattform für meinen CDI-USB-Treiber verwendet habe &#150; das soll bei paloxena3 von Anfang an besser laufen.
 
-### VFS und Treiberinterface
-
-*TODO*
-
 ### OSOD
 
 Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwiegenden Fehler anzeigende Farbe ist also nicht mehr pink oder violett, sondern orange, meine Lieblingsfarbe (#FF4000, um genau zu sein). Hier ein entsprechender Screenshot:
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/48d49f3eb3ec3b0a95ae.png" width="720" height="400" alt="Paloxenaosod.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/48d49f3eb3ec3b0a95ae.png)
 
+  
+
+## paloxena4
+
+Aus Spaß an der Freude habe ich mir noch einen Rewrite gegönnt, der allerdings das VFS von paloxena3.5 weiterverwendet. Dieser Rewrite ist zum ersten Mal einigermaßen portabel und wurde bisher auf den i586 sowie auf den Game Boy Advance mit einem ARM7TDMI als CPU (ohne MMU) portiert. Details zum VFS, den aktuellen Features und den Besonderheiten auf dem GBA befinden sich auf der [Website](http://xanclic.bplaced.net/).
+
+Damit das nicht alles war, hier noch ein Screenshot von der GBA-Version direkt nach dem Booten (unter einem Emulator, da ich nicht mal einen GBA besitze):
+
+![pal4-gba1.png](http://xanclic.is-a-geek.org/imgs/pal4-gba1.png)
+
+Wie man evtl. erkennen kann, unterstützt paloxena4 wie auch seine Vorgänger [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), bisher allerdings nur CDI.audio (Man beachte das kleine „cdi.audio“ in Zeile 9). Für den GBA existiert auch ein entsprechender Treiber.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 8169; parent 8093; 2010-09-05T21:21:41Z -->
+<!-- MediaWiki page 2045; revision 9733; parent 8169; 2011-05-02T22:25:23Z -->
