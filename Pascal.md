@@ -52,7 +52,7 @@ Das war der einfache Teil. Als nächstes brauchen wir eine eigene system-Unit, d
 
 interface
 
-procedure FPC_INITIALIZEUNITS; compilerproc; procedure FPC_DO_EXIT; compilerproc;
+type hresult = longint; procedure FPC_INITIALIZEUNITS; compilerproc; procedure FPC_DO_EXIT; compilerproc;
 
 implementation
 
@@ -121,6 +121,6 @@ Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9638/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 9638; parent 9636; 2011-03-29T17:25:01Z -->
+<!-- MediaWiki page 1623; revision 9732; parent 9638; 2011-05-02T18:56:57Z -->
