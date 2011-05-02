@@ -115,7 +115,7 @@ Der Stack Fault tritt auf, wenn der Stack seine maximale Größe erreicht hat od
 
 ### General Protection
 
-Der General Protection Fault tritt bei jeder Art von Rechteverletzung auf, die nicht von einer anderen Exception abgefangen wird.
+Der General Protection Fault tritt bei jeder Art von Rechteverletzung auf, die nicht von einer anderen Exception abgefangen wird. Als Error-Code wird die Segmentnummer übergeben, bei der die Exception auftrat.
 
 ### Page Fault
 
@@ -168,6 +168,6 @@ Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9377; parent 9368; 2011-01-24T14:50:10Z -->
+<!-- MediaWiki page 1824; revision 9731; parent 9377; 2011-05-02T15:52:35Z -->
