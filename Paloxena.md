@@ -84,12 +84,12 @@ Aus Spaß an der Freude habe ich mir noch einen Rewrite gegönnt, der allerdings
 
 Damit das nicht alles war, hier noch ein Screenshot von der GBA-Version direkt nach dem Booten (unter einem Emulator, da ich nicht mal einen GBA besitze):
 
-![pal4-gba1.png](http://xanclic.is-a-geek.org/imgs/pal4-gba1.png)
+![pal4-gba1.png](http://xanclic.bplaced.net/imgs/pal4-gba1.png)
 
 Wie man evtl. erkennen kann, unterstützt paloxena4 wie auch seine Vorgänger [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), bisher allerdings nur CDI.audio (Man beachte das kleine „cdi.audio“ in Zeile 9). Für den GBA existiert auch ein entsprechender Treiber.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9735/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2045/index.html)
 
-<!-- MediaWiki page 2045; revision 9733; parent 8169; 2011-05-02T22:25:23Z -->
+<!-- MediaWiki page 2045; revision 9735; parent 9733; 2011-05-03T09:47:03Z -->
