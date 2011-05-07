@@ -44,7 +44,7 @@ Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Versio
 - verbesserte Benutzerrechte
 - Multiprocessor Unterstützung ([SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP"))
 - [IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "IDE") und AHCI (S-ATA) Treiber für ATA/ATAPI Laufwerke
-- CDFS, FAT (lesend und schreibend), \[\[ext2}} (nur lesend)
+- CDFS, FAT (lesend und schreibend), [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2") (nur lesend)
 - Einfacher Grafikmodus ohne richtigen Desktop
 - Speicherverwaltung [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") und PSE
 - Erste Netzwerkimplementierung mit DNS, IPv4, TCP und UDP
@@ -66,6 +66,6 @@ Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Versio
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9743/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 9742; parent 6673; 2011-05-07T11:42:26Z -->
+<!-- MediaWiki page 1453; revision 9743; parent 9742; 2011-05-07T11:42:49Z -->
