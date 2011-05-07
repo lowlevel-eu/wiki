@@ -42,7 +42,7 @@ Kommen wir also zu ICW Nummer Eins:
 \<c\> void pic_remap(int interrupt_num) {
 
         outb(PIC_MASTER_COMMAND, 0x11);
-        outb(PIC_MASTER_COMMAND, 0x11);
+        outb(PIC_SLAVE_COMMAND, 0x11);
 
 \</c\> 0x11 bedeutet: Wir senden auch ICW4, es gibt zwei PICs und wir wollen Initialisieren.
 
@@ -55,7 +55,7 @@ Das nächste ICW ist das wichtigste, denn hiermit wird angegeben, auf welchen Ei
 
 \</c\>
 
-Die Hälfte ist geschafft. Kommen wir zu ICW3. Mit diesem gibt man, über welchen IRQ die beiden PICs miteinander kommunizieren, das ist IRQ 2.
+Die Hälfte ist geschafft. Kommen wir zu ICW3. Mit diesem gibt man an, über welchen IRQ die beiden PICs miteinander kommunizieren, das ist IRQ 2.
 
 \<c\>
 
@@ -120,7 +120,7 @@ void pic_send_eoi(int irq_num) {
 void pic_remap(int interrupt_num) {
 
        outb(PIC_MASTER_COMMAND, 0x11);
-       outb(PIC_MASTER_COMMAND, 0x11);
+       outb(PIC_SLAVE_COMMAND, 0x11);
        outb(PIC_MASTER_DATA, interrupt_num);
        outb(PIC_SLAVE_DATA, interrupt_num+8);
        outb(PIC_MASTER_DATA, 0x04);
@@ -147,6 +147,6 @@ void pic_send_eoi(int irq_num) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7613/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 7613; parent 7540; 2010-04-19T20:42:39Z -->
+<!-- MediaWiki page 2183; revision 9748; parent 7613; 2011-05-07T16:42:01Z -->
