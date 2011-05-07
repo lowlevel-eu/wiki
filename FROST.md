@@ -34,6 +34,6 @@ Seite des Kernels: <http://frostkernel.sourceforge.net>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9745/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 5977; parent 5976; 2009-10-03T12:05:25Z -->
+<!-- MediaWiki page 1754; revision 9745; parent 5977; 2011-05-07T14:37:05Z -->
