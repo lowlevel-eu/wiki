@@ -1,13 +1,13 @@
 # Xantorix
 
 | Xantorix |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | Homix |
 | Akt. Version: | 0.2.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source, Freeware |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") (, [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64")) |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") |
 | API: | XixAPI |
@@ -17,13 +17,9 @@
 
 [www.xantorix.de](http://www.xantorix.de)
 
-**Xantorix** ist ein kleines [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches vollständig in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")) und [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") ([Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), Anwendungen) programmiert wird. Der Kernel läuft ab einem Intel Pentium oder kompatiblen x86-Prozessor und unterstützt moderne Technologien wie [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"), [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") und [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"). Außerdem ist eine kleine Benutzerverwaltung und eine Systemdatenbank zur Speicherung von System- und Treiberinformationen vorhanden. Treiber stehen derzeit für Disketten- und IDE-ATA/ATAPI Laufwerke (Festplatten und CD/DVD-ROM Laufwerke) zur Verfügung. Die bisher unterstützten Dateisysteme sind [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und CDFS ([ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") mit RockRidge und Joliet Erweiterung). Das Betriebssystem steht derzeit noch am Anfang der Entwicklung und ist daher noch nicht für die dauerhafte Verwendung geeignet. Neben der 32-Bit-Variante existiert bei einigen Versionen auch eine 64-Bit-Version, die aufgrund der bis jetzt wenigen Vorteile nicht regelmäßig erscheint.
-
-Den Verlauf und Fortschritt der Entwicklung sowie die Roadmap kann man auf der offiziellen Webseite betrachten. Dort findet man auch Screenshots aktueller Versionen.
-
-## Features
-
-Einen Überblick über die bereits integrierten, der sich in Entwicklung befindlichen oder erst geplanten Features findet man auf der [offiziellen Webseite](http://www.xantorix.de/features.php).
+  
+**Xantorix** ist ein kleines 32-Bit Hobby-[Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") für Computer mit x86-Architektur. Ziel ist es, ein schnelles, stabiles und speichersparendes System zu erschaffen, das für den Benutzer möglichst einfach zu bedienen ist. Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") des Betriebssystems sowie auch die meisten [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"), Bibliotheken und Programme sind bis auf einige wenige Ausnahmen komplett selbst geschrieben. Xantorix ist derzeit hauptsächlich in [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") (mit Hilfe des FreePascal Compilers) programmiert.  
+Aktuell wird an der Version 0.4.0 gearbeitet, die eine grafische Benutzeroberfläche und Netzwerkunterstützung beinhalten soll. Zu Demonstrations- und Testzwecken soll davor eine Zwischenversion 0.3.0 erscheinen, um den Entwicklungsstand zu zeigen. Gegen Ende des Jahres mit der Version 0.4.0 wird auch angedacht, das Projekt komplett oder zumindest größtenteils unter einer OpenSource-Lizenz zur Verfügung zu stellen.
 
 ## Versionen
 
@@ -32,61 +28,37 @@ Einen Überblick über die bereits integrierten, der sich in Entwicklung befindl
     29.12.2009 : Xantorix 0.2.0
     20.12.2008 : Xantorix 0.1.2
 
-Die Veränderungen bei den verschiedenen Versionen:
-
-**Xantorix 0.2.0:**
-
-- Booten von Diskette, Festplatte und CD/DVD-ROM (Live-CD)
-- erweiterte Benutzerverwaltung
-- System-Datenbank (Sysdb)
-- Neue Konsole mit Scrolling-Funktion
-- Verbesserte virtuelle Speicherverwaltung
-- System- und Suchpfade
-- ATA Treiber für Festplatten (PIO, LBA28/LBA48)
-- ATAPI Treiber für CD/DVD Laufwerke (PIO)
-- CDFS Dateisystemtreiber (ISO9660, Rockridge, Joliet)
-- Auto-Mount für wechselbare Datenträger
-- Verbesserte Shell mit deutlich mehr Befehlen
-
-**Xantorix 0.1.2:**
-
-- Multiboot-kompatibler Kernel
-- 32-Bit ProtectedMode Kernel
-- 64-Bit LongMode Kernel
-- Multitasking (Prozesse und Threads)
-- moderne Speicherverwaltung (Paging)
-- Benutzerverwaltung
-- Exception-Handling
-- Diskettenlaufwerkstreiber
-- FAT-Dateisystemtreiber
-- Tastaturtreiber
-- PE-Unterstützung
-- Shell
-- Texteditor
+Anmerkung: Da die Entwicklung der neuen Versionen voranschreitet und die bisherigen Releases schon ein wenig zurückliegen, sind diese Versionen nicht mehr als "aktuell" anzusehen.
 
 ## Roadmap
 
 Folgende Versionen sind geplant:
 
-    Februar 2010    : Xantorix 0.2.1
-    2. Quartal 2010 : Xantorix 0.2.2
+    August 2011    : Xantorix 0.3.0
+    Dezember 2011  : Xantorix 0.4.0
 
-Die Features der kommenden Versionen:
+**Xantorix 0.3.0:**  
+Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Version 0.4.0 dar und hat das Hauptziel, die Kernelfunktionen und Treiber stabil laufen zu lassen und einige der 0.4.0-Features teilweise und/oder als Beta-Module nachladen zu können. Da der Zeitpunkt des Releases fest ist, können die unten angegebenen Features nur als Schätzung angegeben werden.  
 
-**Xantorix 0.2.1:**
+- Neue Dateisystemverwaltung
+- verbesserte Benutzerrechte
+- Multiprocessor Unterstützung ([SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP"))
+- [IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "IDE") und AHCI (S-ATA) Treiber für ATA/ATAPI Laufwerke
+- CDFS, FAT (lesend und schreibend), \[\[ext2}} (nur lesend)
+- Einfacher Grafikmodus ohne richtigen Desktop
+- Speicherverwaltung [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") und PSE
+- Erste Netzwerkimplementierung mit DNS, IPv4, TCP und UDP
+- Netzwerkkartentreiber: [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139"), [PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "PCnet") (PCI)
 
-- Verbesserte Laufwerks- und Dateiverwaltung
-- Caching für Dateien
-- DMA-Transfermodus für ATA/ATAPI Laufwerke
-- Schreibzugriff auf ATA-Festplatten
-- Partitionseditor
+**Xantorix 0.4.0:**
 
-**Xantorix 0.2.2:**
-
-- PAE Unterstützung für \>4GB Arbeitsspeicher
-- Ext2 Dateisystemtreiber (read-only)
-- VM86-Modus (16-Bit Emulation)
-- Virtuelle Laufwerke
+- Xantorix GUI mit Desktop und grafischen Anwendungen
+- Stabiles Netzwerk mit DNS, IPv4, TCP, UDP, DHCP
+- Netzwerkkartentreiber: [RTL8169](https://github.com/lowlevel-eu/wiki/wiki/RTL8169 "RTL8169"), e1000
+- Evtl. eine einfache [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") Implementierung
+- Zusätzliches ausführbares Binärformat: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")
+- ext2/3/4 (lesend und schreibend)
+- Programme: u.a. einfacher Internet Browser, E-Mail Client, portierter Compiler
 
 ## Offizielle Webseite
 
@@ -94,6 +66,6 @@ Die Features der kommenden Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6673/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 6673; parent 6667; 2009-12-31T23:42:34Z -->
+<!-- MediaWiki page 1453; revision 9742; parent 6673; 2011-05-07T11:42:26Z -->
