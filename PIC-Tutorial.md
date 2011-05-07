@@ -26,7 +26,7 @@ Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") h
 
 ### Initialisierung
 
-Zur Reintialisierung müssen vier sogenannte ICWs (Initialization Control Words) geschickt werden, die ich nun im Einzelnen durchgehen werde. Beginnen wir mit den Portnummern: \<c\>
+Zur Reinitialisierung müssen vier sogenannte ICWs (Initialization Control Words) geschickt werden, die ich nun im Einzelnen durchgehen werde. Beginnen wir mit den Portnummern: \<c\>
 
 1.  define PIC_MASTER_COMMAND 0x20
 2.  define PIC_MASTER_DATA 0x21
@@ -147,6 +147,6 @@ void pic_send_eoi(int irq_num) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 9749; parent 9748; 2011-05-07T16:45:10Z -->
+<!-- MediaWiki page 2183; revision 9750; parent 9749; 2011-05-07T16:47:13Z -->
