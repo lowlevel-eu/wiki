@@ -46,7 +46,7 @@ Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Versio
 - [IDE](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "IDE") und AHCI (S-ATA) Treiber für ATA/ATAPI Laufwerke
 - CDFS, FAT (lesend und schreibend), [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2") (nur lesend)
 - Einfacher Grafikmodus ohne richtigen Desktop
-- Speicherverwaltung [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") und PSE
+- Speicherverwaltung mit [PAE](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension "PAE") und PSE
 - Erste Netzwerkimplementierung mit DNS, IPv4, TCP und UDP
 - Netzwerkkartentreiber: [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139"), [PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "PCnet") (PCI)
 
@@ -66,6 +66,6 @@ Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Versio
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9743/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 9743; parent 9742; 2011-05-07T11:42:49Z -->
+<!-- MediaWiki page 1453; revision 9744; parent 9743; 2011-05-07T11:43:12Z -->
