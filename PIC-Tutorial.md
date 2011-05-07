@@ -75,7 +75,7 @@ Fast fertig, nur noch ICW4 fehlt. Es wird 0x01 an beide gesendet, um anzuzeigen,
 
 ### IRQs maskieren
 
-Wie bereits erwähnt, kann die CPU auch bestimmte IRQs blockieren. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ blockiert. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden. Schreiben wir uns eine Funktion dazu: \<c\> void pic_mask_irqs(uint16_t mask) {
+Wie bereits erwähnt, können die PICs auch bestimmte IRQs blockieren. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ blockiert. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden. Schreiben wir uns eine Funktion dazu: \<c\> void pic_mask_irqs(uint16_t mask) {
 
       outb(PIC_MASTER_IMR, (uint8_t) mask);
       outb(PIC_SLAVE_IMR, (uint8_t) mask>>8);
@@ -147,6 +147,6 @@ void pic_send_eoi(int irq_num) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9748/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9749/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 9748; parent 7613; 2011-05-07T16:42:01Z -->
+<!-- MediaWiki page 2183; revision 9749; parent 9748; 2011-05-07T16:45:10Z -->
