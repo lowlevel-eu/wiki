@@ -20,12 +20,26 @@
   
 FROST ist ein OS, dass auf dem gleichnamigen Microkernel beruht und zum Ziel hat, ein kleines und benutzbares System in FreeBASIC zu schreiben.
 
+## FROST V2 0.1 (codename: river dragon)
+
+geplante Features:
+
+- Multitasking
+- Paging
+- VFS
+- Shell (daSH - dumb although somehow helpful)
+- tcp/ip
+- Treiber für RTL8139
+- ext2 und FAT support
+
 ## Der Kernel
 
-FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben ist. Der Kernel wird im Moment komplett neu geschrieben und wird Multitasking und Paging unterstützen. Er ist Multiboot-kompatibel und wird in Zukunft auch Multiboot2-kompatibel werden.
+FROST ist ein 32-Bit Microkernel, der in FreeBASIC und Assembler geschrieben ist. Der Kernel wird im Moment komplett neu geschrieben und wird Multitasking und Paging unterstützen. Er ist Multiboot-kompatibel und wird in Zukunft wahrscheinlich auch Multiboot2-kompatibel werden.
+
+Die letzte Version des alten Kernels (V0.3.4a) kann noch über sourceforge heruntergeladen werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9753/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 9747; parent 9745; 2011-05-07T14:42:40Z -->
+<!-- MediaWiki page 1754; revision 9753; parent 9747; 2011-05-09T17:54:32Z -->
