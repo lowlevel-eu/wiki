@@ -26,7 +26,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - PCI und ISA-System (i440FX host PCI bridge und PIIX3 PCI to ISA bridge)
 - PS/2-Maus und -Tastatur
 - Serielle Schnittstelle
-- Parallelele Schnittstelle
+- Parallele Schnittstelle
 
 #### Massenspeicher
 
@@ -82,6 +82,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9754/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9755/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 9754; parent 9559; 2011-05-10T07:37:16Z -->
+<!-- MediaWiki page 1505; revision 9755; parent 9754; 2011-05-10T08:40:20Z -->
