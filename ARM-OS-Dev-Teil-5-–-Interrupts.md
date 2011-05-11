@@ -179,8 +179,12 @@ Irgendwo in der init-Funktion, möglichst am Anfang, sollte jetzt noch die init_
 
 Theoretisch könnte man auch hier jetzt schon einen Tastaturtreiber schreiben, wenn man unbedingt wöllte. Dieser unterscheidet sich noch nicht einmal besonders vom x86-Treiber, weil auch bei I/CP-Boards PS/2 als Tastaturinterface benutzt wird, es werden also die gleichen Befehle zur Kommunikation mit der Tastatur verwendet.
 
+## Weitere Quellen
+
+Der fertige Code für diesen Teil des Tutorials befindet sich [hier](https://gitorious.org/arm-os-dev/kernel/trees/c13720c987aba6d195f60201081cbbb677e4365a).
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2422/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9769/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2422/index.html)
 
-<!-- MediaWiki page 2422; revision 9767; parent 0; 2011-05-11T21:47:51Z -->
+<!-- MediaWiki page 2422; revision 9769; parent 9767; 2011-05-11T22:58:35Z -->
