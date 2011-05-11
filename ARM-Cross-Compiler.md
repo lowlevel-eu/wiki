@@ -6,7 +6,7 @@ Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren ba
 
 ## Vorbereitungen
 
-Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 09. November 2009) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
+Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.21.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.6.0/gcc-core-4.6.0.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 11. Mai 2011) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
 Es werden nun ein paar Variablen erstellt:
 
@@ -26,39 +26,6 @@ Nach erfolgreichem configure können die binutils nun gebaut werden mittels
     $ make all
     # make install
 
-### Fehler beim Bauen
-
-Unter Ubuntu kann es passieren, dass make nicht reibungslos durchläuft und mit einem Fehler abbricht:
-
-    cc1: warnings being treated as errors
-    ../../cross-arm-binutils/gas/config/tc-arm.c: In function ‘make_mapping_symbol’:
-    ../../cross-arm-binutils/gas/config/tc-arm.c:2489: error: suggest braces around empty body in an ‘if’ statement
-
-Hier hilft entweder das Entfernen des Compiler-Flags "-Werror" oder man editiert die Datei via
-
-    $ vim ../cross-arm-binutils/gas/config/tc-arm.c
-
-und schreibt nach dem if-Statement in Zeile **2489** zwei Klammern:
-
-**Vorher** \<c\>
-
-    2489   if (frag->tc_frag_data.last_map != NULL)
-    2490     know (S_GET_VALUE (frag->tc_frag_data.last_map) < S_GET_VALUE (symbolP));
-    2491   frag->tc_frag_data.last_map = symbolP;
-
-\</c\>
-
-**Nachher** \<c\>
-
-    2488   if (frag->tc_frag_data.last_map != NULL)
-    2489   {                                                                                                                                   
-    2490     know (S_GET_VALUE (frag->tc_frag_data.last_map) < S_GET_VALUE (symbolP));
-    2491   }
-    2492 
-    2493   frag->tc_frag_data.last_map = symbolP;
-
-\</c\>
-
 ## gcc bauen
 
 Nun geht's an den gcc: Hier gilt auch wieder, sofern nicht schon geschehen, den gcc zu entpacken, in diesem Beispiel nach */usr/src/cross-arm-gcc*. Nun sollte, genau wie bei den binutils, ein separates Verzeichnis erstellt werden, in welchem der gcc gebaut wird, in unserem Beispiel ist das */usr/src/gcc-arm*. Nun wechselt man in eben dieses Verzeichnis und setzt erst den neuen Pfad zu den ARM-binutils:
@@ -67,7 +34,7 @@ Nun geht's an den gcc: Hier gilt auch wieder, sofern nicht schon geschehen, den 
 
 Dann ruft man configure wie folgt auf:
 
-    $ ../cross-arm-gcc/gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c --without-headers
+    $ ../cross-arm-gcc/gcc-4.6.0/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c --without-headers
 
 Nach erfolgreichem configure kann der gcc mittels
 
@@ -96,6 +63,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9760/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 6269; parent 6239; 2009-11-14T04:30:14Z -->
+<!-- MediaWiki page 2099; revision 9760; parent 6269; 2011-05-11T14:32:45Z -->
