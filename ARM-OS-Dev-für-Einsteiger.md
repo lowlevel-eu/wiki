@@ -43,6 +43,6 @@ An sich gelten hier die gleichen Regeln wie für x86-Treiber. Zu beachten ist je
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9758/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2417/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2417/index.html)
 
-<!-- MediaWiki page 2417; revision 9758; parent 0; 2011-05-11T13:38:18Z -->
+<!-- MediaWiki page 2417; revision 9764; parent 9758; 2011-05-11T17:21:11Z -->
