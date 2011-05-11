@@ -135,6 +135,7 @@ Um von einer Exception zurückzukehren, müssen gleichzeitig r14 nach r15 und da
 
 - [Cross-Compiler unter Linux für ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler")
 - [RISC](https://github.com/lowlevel-eu/wiki/wiki/Reduced-Instruction-Set-Computing "RISC")
+- [ARM-OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/ARM-OS-Dev-f%C3%BCr-Einsteiger "ARM-OS-Dev für Einsteiger")
 
 ## Weblinks
 
@@ -145,6 +146,6 @@ Um von einer Exception zurückzukehren, müssen gleichzeitig r14 nach r15 und da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9757/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9765/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 9757; parent 8481; 2011-05-11T12:24:35Z -->
+<!-- MediaWiki page 2101; revision 9765; parent 9757; 2011-05-11T17:21:56Z -->
