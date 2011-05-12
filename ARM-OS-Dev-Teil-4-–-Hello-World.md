@@ -140,10 +140,12 @@ Nach einem *make*-Aufruf sollte eine ELF namens „kernel“ erstellt worden sei
 
 ## Weitere Quellen
 
+Das Interface der seriellen Ausgabe ist in [einem I/CP-Manual](http://infocenter.arm.com/help/topic/com.arm.doc.dui0159b/DUI0159B_integratorcp_1_0_ug.pdf) ab Seite 103 beschrieben.
+
 Wie auch vom Kernel der x86-Reihe gibt es ein [git-Repository von diesem Kernel](https://gitorious.org/arm-os-dev/kernel), in dem der Code dieser und der folgenden Teile zu finden ist. Den Code für diesen Teil findet man [hier](https://gitorious.org/arm-os-dev/kernel/trees/e692519a643cca9a65e7c424d364a1be095b5c36), [hier](https://gitorious.org/arm-os-dev/kernel/trees/9dbeaa7b606627787e3681bb5415acd1f074ec28) ist dann noch ein kprintf hinzugefügt worden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9768/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2421/index.html)
 
-<!-- MediaWiki page 2421; revision 9768; parent 9763; 2011-05-11T22:56:24Z -->
+<!-- MediaWiki page 2421; revision 9774; parent 9768; 2011-05-12T21:13:04Z -->
