@@ -13,20 +13,13 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 - [Ausgabe 1: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#lowlevel-grundlagen-teil-1 "Ausgabe 1")
 - [Ausgabe 2: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
+  - Wirklich noch notwendig? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 09:11, 12. Mai 2011 (CEST)
 
 ## Erweitern
 
-- ~~[System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")~~
-  - Was soll da rein? Viel mehr als wofür er genutzt wird, würde ich da nicht reinpacken… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
-  - Und genau das hab ich jetzt schon reingeschrieben —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:52, 3. Okt. 2010 (CEST)
-  - Sehe ich auch so. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
   - Wieso werden meine Fragen einfach entfernt? Nichtsdestotrotz: Wer braucht das wirklich, sodass es auf dieser Liste stehen muss? (Kategorie:TODO per Vorlage:TODO reicht ja) —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:52, 3. Okt. 2010 (CEST)
   - Hab ich auf der Diskussionsseite zu ISA nicht klar erklärt warum es in heutigen PCs (der letzten \>10 Jahre) kein ISA-PnP mehr gibt? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:43, 4. Okt. 2010 (CEST)
-- [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") RealMode
-  - Ich bin mit der Gliederung des Artikels überhaupt nicht einverstanden, muss man extra zwei Tutorials zur Textausgabe in den Artikel packen? Reicht es nicht, einfach zu Beschreiben, wie man das macht? Muss man für alles ein Händchen-Halt-Tutorial schreiben? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:49, 3. Okt. 2010 (CEST)
-- ~~[Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heapverwaltung"): Buddy?~~
-  - Buddy hinzugefügt. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 13:57, 13. Okt. 2010 (CEST)
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
   - Sollte man das nicht selbst anhand des Artikels rausfinden können? —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
   - Vieleicht nur ein kurzer Umriss was in welcher Reihenfolge zu tun ist? --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
@@ -80,7 +73,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - Interwiki links zu *OSDev.org*: Seiten ohne Links zu anderen Sprachen
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung des INIT Delivery Modes
 - [Parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle"): Erklären, wie man damit Daten Sendet.
-  - Ich mach's mal was ausführlicher. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:17, 29. Okt. 2010 (CEST)
 - [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") verschieben nach \[\[Cross-Compiler-Download mit gewätziger Anleitung\]\] oder so
 
 ## Neu erstellen
@@ -129,6 +121,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9770/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9766; parent 9648; 2011-05-11T18:18:09Z -->
+<!-- MediaWiki page 1518; revision 9770; parent 9766; 2011-05-12T07:11:50Z -->
