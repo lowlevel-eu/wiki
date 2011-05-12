@@ -6,9 +6,9 @@
 
 ## Der Bootprozess
 
-Im Gegensatz zu x86 gibt es auf dem Integrator/CP-Board kein BIOS und keinen Bootloader. An den Anfang des RAMs wird der Flashspeicher gemappt, auf dem sich der Kernel befindet. Dieser Flashspeicher ist normalerweise 16 MB groß. Die CPU beginnt ihre Ausführung am Beginn des RAMs, bei 0x00000000. Da dort der gemappte Flashspeicher liegt, wird sofort unser Code ausgeführt.
+Im Gegensatz zu x86 gibt es auf dem Integrator/CP-Board kein BIOS und keinen Bootloader. An den Anfang des RAMs wird ein Teil des Flashspeichers gemappt (die letzten 256 kB), auf dem sich der Kernel befindet. Die CPU beginnt ihre Ausführung am Beginn des RAMs, bei 0x00000000. Da dort der gemappte Flashspeicher liegt, wird sofort unser Code ausgeführt.
 
-Wer kein I/CP-Board hat, dem bleibt QEMU zur Emulation. QEMU emuliert keinen Flashspeicher, es bietet nur die Möglichkeit, eine ELF-Datei als Kernel zu laden. Wir werden eine ELF-Datei so erstellen lassen, dass sie in den Speicher geladen wird, als befände sich der Code auf einem ROM-Image (d. h., würde man die ELF in eine rohe Binärdatei umwandeln, dann wäre diese vermutlich ein gültiges Flashimage), also direkt an den Beginn des Arbeitsspeichers.
+Wer kein I/CP-Board hat, dem bleibt QEMU zur Emulation. QEMU emuliert keinen Flashspeicher, es bietet nur die Möglichkeit, eine ELF-Datei als Kernel zu laden. Wir werden eine ELF-Datei so erstellen lassen, dass sie an den Anfang des Speichers geladen wird, so, als befände sie sich in den letzten 256 kB des Flashspeichers (nachdem man die ELF in eine rohe Binärdatei umgewandelt hätte).
 
 ## Der Hello-World-Kernel
 
@@ -146,6 +146,6 @@ Wie auch vom Kernel der x86-Reihe gibt es ein [git-Repository von diesem Kernel]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9774/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2421/index.html)
 
-<!-- MediaWiki page 2421; revision 9774; parent 9768; 2011-05-12T21:13:04Z -->
+<!-- MediaWiki page 2421; revision 9775; parent 9774; 2011-05-12T21:18:17Z -->
