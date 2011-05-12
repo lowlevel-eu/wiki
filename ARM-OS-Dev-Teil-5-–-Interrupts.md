@@ -181,10 +181,12 @@ Theoretisch könnte man auch hier jetzt schon einen Tastaturtreiber schreiben, w
 
 ## Weitere Quellen
 
+Die/der Interruptcontroller ist in [einem I/CP-Manual](http://infocenter.arm.com/help/topic/com.arm.doc.dui0159b/DUI0159B_integratorcp_1_0_ug.pdf) ab Seite 50 beschrieben.
+
 Der fertige Code für diesen Teil des Tutorials befindet sich [hier](https://gitorious.org/arm-os-dev/kernel/trees/c13720c987aba6d195f60201081cbbb677e4365a).
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9769/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2422/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9773/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2422/index.html)
 
-<!-- MediaWiki page 2422; revision 9769; parent 9767; 2011-05-11T22:58:35Z -->
+<!-- MediaWiki page 2422; revision 9773; parent 9769; 2011-05-12T21:11:15Z -->
