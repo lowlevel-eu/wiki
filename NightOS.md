@@ -73,6 +73,6 @@ int get_pid() : Gibt die Prozessnummer des laufenden Prozesses zurück
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9776/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2359/index.html)
 
-<!-- MediaWiki page 2359; revision 9626; parent 9537; 2011-03-11T19:10:46Z -->
+<!-- MediaWiki page 2359; revision 9776; parent 9626; 2011-05-13T14:47:06Z -->
