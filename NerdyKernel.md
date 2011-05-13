@@ -20,6 +20,6 @@ Weitere Informationen folgen demnaechst, sobald ich einen neuen Patch in das Rep
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9782/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9783/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 9782; parent 9557; 2011-05-13T19:48:37Z -->
+<!-- MediaWiki page 1816; revision 9783; parent 9782; 2011-05-13T19:49:02Z -->
