@@ -50,11 +50,11 @@ optional:
 
 Ist Cygwin erfolgreich eingerichtet, können die binutils sowie der gcc entsprechend der Vorgehensweise unter Linux konfiguriert und kompiliert werden. Hierfür müssen ebenfalls die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) heruntergeladen werden.
 
-#### minGW
+#### MinGW
 
-MinGW ist ein auf MS Windows portierter gcc. Für mehr Informationen siehe [Cross-Compiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+MinGW ist ein auf MS Windows portierter GCC. Die neueste Version des Installers für MinGW kann man auf der Projektseite unter [Automated MinGW Installer / mingw-get-inst](http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/mingw-get-inst/) herunterladen. Bei der Installation sollte man das MSYS Base System noch auswählen. Um GCC zu kompilieren muss man außerdem GMP, MPFR und MPC nachinstallieren, indem man nach der Installieren mingw-get in der MinGW Shell aufruft:
 
-  
+    mingw-get install gmp mpfr mpc
 
 ### Ablauf
 
@@ -132,6 +132,6 @@ Windows unterstützt nativ kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 7894; parent 6238; 2010-07-16T17:03:08Z -->
+<!-- MediaWiki page 1628; revision 9787; parent 7894; 2011-05-14T12:28:38Z -->
