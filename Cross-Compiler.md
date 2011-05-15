@@ -20,11 +20,9 @@ In diesen Fällen muss man einen Cross-Compiler erstellen bzw. verwenden.
 
 ## Bau eines Cross-Compilers
 
-Der Bau eines Cross-Compilers gestaltet sich recht einfach. Meistens gilt es, sich die aktuellen binutils und den gcc herunterzuladen. Die Befehle zum Übersetzen gleichen sich unter Linux und Windows/Cygwin.
+Der Bau eines Cross-Compilers gestaltet sich recht einfach. Meistens gilt es, sich die aktuellen binutils und den gcc herunterzuladen. Die Befehle zum Übersetzen gleichen sich unter Linux und Windows(Cygwin, MinGW).
 
 ### Linux
-
-Unter Linux braucht man dazu [dieses](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) Paket mit den binutils und [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) Paket mit dem gcc. Will man Unterstützung für mehr Sprachen als C müssen weitere Pakete [hier](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden. Die einzelnen Sprachen müssen anschließend beim Konfigurieren angegeben werden, aber dazu später mehr.
 
 Unter Linux kann es passieren, dass spätestens beim Konfigurieren vom gcc selbiges mit der Fehlermeldung abbricht, dass zwei Libraries nicht installiert seien: GMP und MPFR. Diese sind dann aus der Paketverwaltung der Distribution zu beziehen oder können hier und [hier](http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2) heruntergeladen werden. Diese müssen nur entpackt und mit dem in Linux bekannten Dreisatz *./configure, make, make install* gebaut und installiert werden.
 
@@ -48,7 +46,7 @@ optional:
 
 - Devel -\> [nasm](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "Netwide Assembler")
 
-Ist Cygwin erfolgreich eingerichtet, können die binutils sowie der gcc entsprechend der Vorgehensweise unter Linux konfiguriert und kompiliert werden. Hierfür müssen ebenfalls die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) heruntergeladen werden.
+Ist Cygwin erfolgreich eingerichtet, können die binutils sowie der gcc entsprechend der Vorgehensweise unter Ablauf gebaut werden.
 
 #### MinGW
 
@@ -58,71 +56,37 @@ MinGW ist ein auf MS Windows portierter GCC. Die neueste Version des Installers 
 
 ### Ablauf
 
-Der Ablauf ist fast immer der gleiche: Die Pakete müssen ausgepackt und mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgende Parameter setzen:
+Der Ablauf ist immer der gleiche: Folgende Pakete müssen heruntergeladen werden [Binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.bz2) und [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) und anschliesend mittels
+
+    $ tar -xjf binutils-2.20.tar.bz2
+    $ tar -xjf gcc-core-4.4.2.tar.bz2
+
+ausgepackt werden. Wenn noch weitere Sprachen zusätzlich zu C unterstützt erden sollen, müssen die entsprechenden Pakete auch noch heruntergeladen werden beisppielsweise [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-g++-4.4.2.tar.bz2) Paket für C++. Danach müssen sie mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgende Variablen setzen:
 
     $ export TARGET=ziel-plattform
     $ export PREFIX=wo-die-crossutils-landen-sollen
 
-Dann reicht es, beim configure --target=\$TARGET und --prefix=\$PREFIX anzugeben. Auch ist es sinnvoll, die binutils und den gcc außerhalb ihrer entpackten Verzeichnisse zu bauen, also immer separate Verzeichnisse zu erstellen (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR eignen sich beispielsweise hierfür ).
+Dann reicht es, beim configure --target=\$TARGET und --prefix=\$PREFIX anzugeben. Auch ist es sinnvoll, die binutils und den gcc außerhalb ihrer entpackten Verzeichnisse zu bauen, also immer separate Verzeichnisse zu erstellen (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR eignen sich beispielsweise hierfür ). Jetzt konfigureren wir die Pakete mit folgendne Befehlen(jeweils im entsprechendem separatem Verzeichniss(gcc-ARCHITEKTUR und binutils-ARCHITEKTUR) ausführen):
 
-Beide Pakete (eventuell noch weitere, je nachdem ob weitere Sprachen gewünscht sind) werden dann mittels
+binutils:
 
-    $ tar -xjf paket.tar.endung
+    $ Pfad/zum/code/configure  --prefix=$PREFIX --with-sysroot=$PREFIX --target=$TARGET --disable-nls
 
-entpackt, wobei paket mit dem Namen des Pakets und endung mit der entsprechenden Endung zu ersetzen ist.
+gcc:
 
-  
+    $ Pfad/zum/Code/configure --prefix=$PREFIX --target=$TARGET --disable-nls --enable-languages=c --disable-shared --disable-libssp
 
-## Targets
+für welche CPU Architektur der cross Compiler gebaut wird, wird mit dem target Parameter angegeben. Hier mal eine nicht vollständige Liste der wichtigsten Targets:
 
-### x86-64
+- *x86_64-elf* (um auf einem 32 Bit Porzessor/OS für ein 64Bit Prozessor/OS zu kompilieren. kann auch verwendet werden um sich einen cross compiler für Windows zu bauen.)
+- *arm-unknown-linux-gnu* (um für ARM Systeme Code zu kompilieren.)
 
-Wer einen 32-Bit-Prozessor (oder ein 32-Bit-Betriebssystem) verwendet und Code für 64-Bit-Prozessoren und Betriebssysteme schreiben will, muss sich wie folgt seine Umgebung aufsetzen:
-
-    $ export TARGET=x86_64-elf
-    $ export PREFIX=wo-die-crossutils-landen-sollen
-
-Die binutils müssen dann entsprechend konfiguriert werden.
-
-    $ ../binutils-2.20.0/configure --target=$TARGET --prefix=$PREFIX
-
-Nach erfolgreichem Konfigurieren können die binutils dann mittels
+Wenn weitere Sprachen unterstützt werden sollen und die entsrechenden Pakete heruntergeladen und entpackt wurden, dann müssen die Sprachen bei --enable-languages= aufgezählt werden. mit Komata getrennt. Nachdem die Pakete nun konfiguriert wurden, müssen diese jeweils noch mit
 
     $ make
-    # make install
+    $ make install
 
-gebaut werden. Mit dem gcc wird analog verfahren: Er wird wie folgt konfiguriert.
-
-    $ ../gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c
-
-Will man Support für mehr Sprachen als C muss man diese entsprechend angeben, bsp:
-
-    $ ../gcc-4.4.2/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c,c++,fortran
-
-Falls, wie im [Linux-Abschnitt](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler#linux "Cross-Compiler") erwähnt, das Konfigurieren mit einer Fehlermeldung abbricht, müssen die entsprechenden Libraries (Bibliotheken) heruntergeladen, gebaut und installiert werden.
-
-Nach erfolgreichem Konfigurieren reicht abschließend ein
-
-    $ make all-gcc
-    # make install-gcc
-
-zur Installation des gcc. Weitere Informationen zum Bau eines x86-64-Cross-Compilers findet man [hier](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler").
-
-### ARM
-
-Wer einen x86-Prozessor verwendet, um Code für die ARM-Architektur zu entwickeln, verfährt analog. Einzig das Target muss geändert werden:
-
-    $ export TARGET=arm-unknown-linux-gnu
-
-Dann verfährt man gleichartig wie beim Bau eines x86-64-Cross-Compilers. Einen ausführlicheren Artikel dazu und weitere Informationen finden sich [hier](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler").
-
-  
-
-### ELF
-
-Windows unterstützt nativ kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Format. Hier kann man sich leicht Abhilfe schaffen, in dem man den eigens von Jidder erstellten Cross-Compiler herunterlädt und sich seine Umgebung dementsprechend konfiguriert. Mehr Informationen dazu [hier](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows").
-
-  
+gebaut und installiert werden.
 
 ## Siehe auch
 
@@ -132,6 +96,6 @@ Windows unterstützt nativ kein [ELF](https://github.com/lowlevel-eu/wiki/wiki/E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9787/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 9787; parent 7894; 2011-05-14T12:28:38Z -->
+<!-- MediaWiki page 1628; revision 9791; parent 9787; 2011-05-15T22:19:50Z -->
