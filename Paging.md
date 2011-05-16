@@ -54,9 +54,9 @@ Ein Pagedirectory enthält 1024 Eintrage à vier Byte. Ein Pagedirectory-Eintrag
 | 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
-| 6 | Wird ignoriert, falls 4 kB Page, andernfalls wird es von der CPU bei einem Schreibzugriff auf die Page gesetzt |
+| 6 | Wird ignoriert, falls 4-kB-Page, andernfalls wird es von der CPU bei einem Schreibzugriff auf die Page gesetzt |
 | 7 | Gibt die Größe der Page an. 0 steht für 4 kB, 1 für 4 MB (oder 2 MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4-MB-Pages) oder PAE-Bit (2-MB-Pages) gesetzt ist. |
-| 8 | Wird ignoriert |
+| 8 | Wird ignoriert, falls 4-kB-Page, andernfalls hat es die gleiche Bedeutung wie Bit G in Page-Table-Einträgen (s. u.). |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
 | 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable |
 
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9424/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 9424; parent 8693; 2011-02-04T21:31:42Z -->
+<!-- MediaWiki page 1496; revision 9794; parent 9424; 2011-05-16T23:10:56Z -->
