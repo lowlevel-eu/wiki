@@ -56,12 +56,12 @@ MinGW ist ein auf MS Windows portierter GCC. Die neueste Version des Installers 
 
 ### Ablauf
 
-Der Ablauf ist immer der gleiche: Folgende Pakete müssen heruntergeladen werden [Binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.bz2) und [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) und anschliesend mittels
+Der Ablauf ist immer der gleiche: Folgende Pakete müssen heruntergeladen werden : [Binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.bz2) und [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) und anschliesend mittels
 
     $ tar -xjf binutils-2.20.tar.bz2
     $ tar -xjf gcc-core-4.4.2.tar.bz2
 
-ausgepackt werden. Wenn noch weitere Sprachen zusätzlich zu C unterstützt erden sollen, müssen die entsprechenden Pakete auch noch heruntergeladen werden beisppielsweise [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-g++-4.4.2.tar.bz2) Paket für C++. Danach müssen sie mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgende Variablen setzen:
+ausgepackt werden. Wenn noch weitere Sprachen zusätzlich zu C unterstützt werden sollen müssen weitere Pakete heruntergeladen werden. Für C++ ist benötigt man zum Beispiel [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-g++-4.4.2.tar.bz2) Paket. Die komplette Liste befindet sich im Verzeichnis der jeweiligen GCC-Version auf dem FTP-Server. Danach müssen sie mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgende Variablen setzen:
 
     $ export TARGET=ziel-plattform
     $ export PREFIX=wo-die-crossutils-landen-sollen
@@ -76,12 +76,12 @@ gcc:
 
     $ Pfad/zum/Code/configure --prefix=$PREFIX --target=$TARGET --disable-nls --enable-languages=c --disable-shared --disable-libssp
 
-für welche CPU Architektur der cross Compiler gebaut wird, wird mit dem target Parameter angegeben. Hier mal eine nicht vollständige Liste der wichtigsten Targets:
+für welche CPU Architektur der Cross-Compiler gebaut wird, wird mit dem *target* Parameter angegeben. Hier mal eine nicht vollständige Liste der wichtigsten Targets:
 
-- *x86_64-elf* (um auf einem 32 Bit Porzessor/OS für ein 64Bit Prozessor/OS zu kompilieren. kann auch verwendet werden um sich einen cross compiler für Windows zu bauen.)
-- *arm-unknown-linux-gnu* (um für ARM Systeme Code zu kompilieren.)
+- *x86_64-elf* (um auf einem 32 Bit Prozessor/OS für ein 64Bit Prozessor/OS zu kompilieren. Kann auch verwendet werden um sich einen Cross-Compiler für Windows zu bauen.)
+- *arm-unknown-linux-gnu* (um für ARM Systeme Code zu kompillieren.)
 
-Wenn weitere Sprachen unterstützt werden sollen und die entsrechenden Pakete heruntergeladen und entpackt wurden, dann müssen die Sprachen bei --enable-languages= aufgezählt werden. mit Komata getrennt. Nachdem die Pakete nun konfiguriert wurden, müssen diese jeweils noch mit
+Wenn weitere Sprachen unterstützt werden sollen und die entsrechenden Pakete heruntergeladen und entpackt wurden, dann müssen die Sprachen bei *--enable-languages=* durch Kommata getrennt aufgezählt werden. Nachdem die Pakete nun konfiguriert wurden, müssen diese jeweils noch mit
 
     $ make
     $ make install
@@ -96,6 +96,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9791/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 9791; parent 9787; 2011-05-15T22:19:50Z -->
+<!-- MediaWiki page 1628; revision 9792; parent 9791; 2011-05-16T07:25:32Z -->
