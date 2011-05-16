@@ -20,7 +20,7 @@ In diesen Fällen muss man einen Cross-Compiler erstellen bzw. verwenden.
 
 ## Bau eines Cross-Compilers
 
-Der Bau eines Cross-Compilers gestaltet sich recht einfach. Meistens gilt es, sich die aktuellen binutils und den gcc herunterzuladen. Die Befehle zum Übersetzen gleichen sich unter Linux und Windows(Cygwin, MinGW).
+Der Bau eines Cross-Compilers gestaltet sich recht einfach. Meistens gilt es, sich die aktuellen binutils und den gcc herunterzuladen. Die Befehle zum Übersetzen gleichen sich unter Linux und Windows (Cygwin, MinGW).
 
 ### Linux
 
@@ -50,18 +50,18 @@ Ist Cygwin erfolgreich eingerichtet, können die binutils sowie der gcc entsprec
 
 #### MinGW
 
-MinGW ist ein auf MS Windows portierter GCC. Die neueste Version des Installers für MinGW kann man auf der Projektseite unter [Automated MinGW Installer / mingw-get-inst](http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/mingw-get-inst/) herunterladen. Bei der Installation sollte man das MSYS Base System noch auswählen. Um GCC zu kompilieren muss man außerdem GMP, MPFR und MPC nachinstallieren, indem man nach der Installieren mingw-get in der MinGW Shell aufruft:
+MinGW ist ein auf MS Windows portierter GCC. Die neueste Version des Installers für MinGW kann man auf der Projektseite unter [Automated MinGW Installer / mingw-get-inst](http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/mingw-get-inst/) herunterladen. Bei der Installation sollte man das MSYS Base System noch auswählen. Um GCC zu kompillieren muss man außerdem GMP, MPFR und MPC nachinstallieren, indem man nach der Installation mingw-get in der MinGW Shell aufruft:
 
     mingw-get install gmp mpfr mpc
 
 ### Ablauf
 
-Der Ablauf ist immer der gleiche: Folgende Pakete müssen heruntergeladen werden : [Binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.bz2) und [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) und anschliesend mittels
+Der Ablauf ist immer der gleiche. Folgende Pakete müssen heruntergeladen werden: [Binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.bz2) und [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) und anschließend mittels
 
     $ tar -xjf binutils-2.20.tar.bz2
     $ tar -xjf gcc-core-4.4.2.tar.bz2
 
-ausgepackt werden. Wenn noch weitere Sprachen zusätzlich zu C unterstützt werden sollen müssen weitere Pakete heruntergeladen werden. Für C++ ist benötigt man zum Beispiel [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-g++-4.4.2.tar.bz2) Paket. Die komplette Liste befindet sich im Verzeichnis der jeweiligen GCC-Version auf dem FTP-Server. Danach müssen sie mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgende Variablen setzen:
+ausgepackt werden. Wenn noch weitere Sprachen zusätzlich zu C unterstützt werden sollen müssen weitere Pakete heruntergeladen werden. Für C++ benötigt man zum Beispiel [dieses](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-g++-4.4.2.tar.bz2) Paket. Die komplette Liste befindet sich im Verzeichnis der jeweiligen GCC-Version auf dem FTP-Server. Danach müssen sie mit speziellen Parametern konfiguriert werden. Der Einfachheit halber sollte man dabei folgende Variablen setzen:
 
     $ export TARGET=ziel-plattform
     $ export PREFIX=wo-die-crossutils-landen-sollen
@@ -96,6 +96,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9792/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9793/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 9792; parent 9791; 2011-05-16T07:25:32Z -->
+<!-- MediaWiki page 1628; revision 9793; parent 9792; 2011-05-16T10:24:07Z -->
