@@ -208,7 +208,7 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 - [Offizielle Handbücher zu den Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/Linkliste#offizielle-spezifikationen "Linkliste"):
   - Intel Architecture Software Developer's Manuals, Band 3A
     - Kapitel 3: Protected Mode Memory Management
-    - Kapitel 5: Interrupt and Exception Handling
+    - Kapitel 6: Interrupt and Exception Handling
   - AMD64 Architecture Programmer's Manual, Band 2
     - Kapitel 4: Segmented Virtual Memory
     - Kapitel 8: Exceptions and Interrupts
@@ -222,6 +222,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 9044; parent 8348; 2010-12-04T21:54:32Z -->
+<!-- MediaWiki page 1898; revision 9798; parent 9044; 2011-05-17T20:42:07Z -->
