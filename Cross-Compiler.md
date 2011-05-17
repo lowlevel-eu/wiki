@@ -66,7 +66,7 @@ entpackt werden. Wenn noch weitere Sprachen zusätzlich zu C unterstützt werden
     $ export TARGET=ziel-plattform
     $ export PREFIX=wo-die-crossutils-landen-sollen
 
-Dann reicht es, beim configure --target=\$TARGET und --prefix=\$PREFIX anzugeben. Auch ist es sinnvoll, die binutils und den gcc außerhalb ihrer entpackten Verzeichnisse zu bauen, also immer separate Verzeichnisse zu erstellen (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR eignen sich beispielsweise hierfür ). Jetzt konfigureren wir die Pakete mit folgendne Befehlen (jeweils im entsprechenden separaten Verzeichnis (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR) ausführen):
+Dann reicht es, beim configure --target=\$TARGET und --prefix=\$PREFIX anzugeben. Auch ist es sinnvoll, die binutils und den gcc außerhalb ihrer entpackten Verzeichnisse zu bauen, also immer separate Verzeichnisse zu erstellen (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR eignen sich beispielsweise hierfür). Jetzt konfigurieren wir die Pakete mit folgenden Befehlen (jeweils im entsprechenden separaten Verzeichnis (gcc-ARCHITEKTUR und binutils-ARCHITEKTUR) ausführen):
 
 binutils:
 
@@ -96,6 +96,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9796/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 9796; parent 9795; 2011-05-17T10:50:32Z -->
+<!-- MediaWiki page 1628; revision 9797; parent 9796; 2011-05-17T10:52:28Z -->
