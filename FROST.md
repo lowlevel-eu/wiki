@@ -27,7 +27,7 @@ geplante Features:
 - Multitasking
 - Paging
 - VFS
-- Shell (daSH - dumb although somehow helpful)
+- Shell (dasuSH - dumb although somehow useful shell)
 - tcp/ip
 - Treiber für RTL8139
 - ext2 und FAT support
@@ -40,6 +40,6 @@ Die letzte Version des alten Kernels (V0.3.4a) kann noch über sourceforge herun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9753/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9799/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1754/index.html)
 
-<!-- MediaWiki page 1754; revision 9753; parent 9747; 2011-05-09T17:54:32Z -->
+<!-- MediaWiki page 1754; revision 9799; parent 9753; 2011-05-18T15:56:38Z -->
