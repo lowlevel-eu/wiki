@@ -4,7 +4,7 @@
 | --------------- | -------------------------------------------------- |
 | Name: | **GR**and **U**nified **B**ootloader |
 | Entwickler: | \- |
-| Akt. Version: | 0.97 (GRUB legacy)<br>1.98 (GRUB2) |
+| Akt. Version: | 0.97 (GRUB legacy)<br>1.99 (GRUB2) |
 | Lizenz: | GNU GPL V 2 (GRUB legacy)<br>GNU GPL V 3 (GRUB2) |
 | Plattform: | Unix |
 | Homepage |  |
@@ -273,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9454/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 9454; parent 9339; 2011-02-05T14:21:38Z -->
+<!-- MediaWiki page 1567; revision 9802; parent 9454; 2011-05-19T15:42:04Z -->
