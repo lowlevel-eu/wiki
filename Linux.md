@@ -4,7 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | ![150px-Tux.svg.png](http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/150px-Tux.svg.png) |  |
 | Entwickler: | Linus Torvalds et al. |
-| Akt. Version: | 2.6.38.6 |
+| Akt. Version: | 2.6.39 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ppc, uvm. |
@@ -45,6 +45,6 @@ Linux hat eine Eigenart von Unix übernommen: Alles ist eine Datei. Das Diskette
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9786/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9803/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1641/index.html)
 
-<!-- MediaWiki page 1641; revision 9786; parent 9643; 2011-05-13T19:53:36Z -->
+<!-- MediaWiki page 1641; revision 9803; parent 9786; 2011-05-19T15:43:06Z -->
