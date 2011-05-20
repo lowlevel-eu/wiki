@@ -111,11 +111,16 @@ Die „direkt“ erreichbaren Register (ein Portzugriff) sind nur ein kleiner Te
 
 ### Die ISR
 
-Wenn ein Interrupt eintrifft, dann zeigt das CSR0-Register den Grund dafür an. Ist das ERR-Bit (0x00008000) gesetzt, so trat ein Fehler auf.
+Wenn ein Interrupt eintrifft, dann zeigt das CSR0-Register den Grund dafür an (Die folgende Tabelle stellt keine vollständige Übersicht über alle möglichen Zustände des CSR0-Registers dar):
 
-Wenn das TINT-Flag (0x00000200) gesetzt ist, dann wurde ein Sendedeskriptor abgearbeitet. Ob erfolgreich oder nicht, dass steht im entsprechenden Deskriptor. Ist im „flags“-Feld das ERROR-Bit gesetzt (0x40000000), dann trat ein Fehler auf, ansonsten wurde das Paket gesendet. Die „flags“-Felder (also „flags“ und „flags2“) des Deskriptors sollten dann auf 0 gesetzt werden.
-
-Sollte das RINT-Flag (0x00000400) gesetzt sein, dann wurde ein Paket abgearbeitet. Siehe dazu „Empfangen von Paketen“.
+| Bit | Name | Erklärung |
+| -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0x8000 | ERR | Ein Fehler ist aufgetreten. Bit ist gesetzt, wenn CERR-, MISS- oder MERR-Bit in CSR0 gesetzt ist. |
+| 0x2000 | CERR | "Collision Error" |
+| 0x1000 | MISS | "Missed Frame". Ein eingehendes Paket wurde verloren, weil kein Deskriptor verfügbar war. |
+| 0x800 | MERR | "Memory Error" |
+| 0x400 | RINT | "Receive Interrupt". Ein Paket wurde abgearbeitet. Siehe dazu „Empfangen von Paketen“. |
+| 0x200 | TINT | "Transmit Interrupt". Ein Sendedeskriptor wurde abgearbeitet. Im Fehlerfall wurde das ERROR-Bit im flags-Feld des Deskriptors (0x40000000) gesetzt, andernfalls wurde das Paket gesendet. Die Felder "flags" und "flags2" des Deskriptors sollten dann auf 0 gesetzt werden. |
 
 Am Ende der ISR sollte der Inhalt des CSR0-Registers dorthin zurückgeschrieben werden, um der Karte anzuzeigen, dass der Interrupt abgearbeitet wurde.
 
@@ -207,6 +212,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7645/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9804/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 7645; parent 7205; 2010-05-03T14:45:52Z -->
+<!-- MediaWiki page 2025; revision 9804; parent 7645; 2011-05-20T08:40:11Z -->
