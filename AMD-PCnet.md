@@ -207,11 +207,11 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 ## Weblinks
 
 - [Datei:Am79C973.pdf](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6edd87861edd96ccdcd2.pdf "Datei:Am79C973.pdf") - Umfangreiche Spezifikation für die Am79C973 (PCnet-FAST III) und Am79C975
-- [AMD-Hardware-Spezifikation](http://www.amd.com/us-en/assets/content_type/DownloadableAssets/22351.pdf)
-- [Umfangreiche Spezifikation für die Am79C972 (PCnet-FAST+)](http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/21485_pt1.pdf) – sollte zur Am79C973 (PCnet-FAST III) kompatibel sein
+- [AMD-Hardware-Spezifikation](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/777e98fb4180ab93b4d0.pdf)
+- Umfangreiche Spezifikation für die Am79C972 (PCnet-FAST+): [Teil 1](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/aa163a95c7c675a38d80.pdf) und [Teil 2](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b533b83773bf73697ec4.pdf) – sollte zur Am79C973 (PCnet-FAST III) kompatibel sein
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9808/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 9808; parent 9805; 2011-05-20T09:05:29Z -->
+<!-- MediaWiki page 2025; revision 9811; parent 9808; 2011-05-20T09:10:19Z -->
