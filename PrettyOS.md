@@ -33,7 +33,7 @@ Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. 
 
 ### Kernel
 
-Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er bietet verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, EHCI, VESA BIOS Extensions und die Netzwerkkarte RTL8139. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 unterstützt.
+Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, EHCI, VESA BIOS Extensions und die Netzwerkkarte RTL8139. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 unterstützt.
 
 ### Userprogramme
 
@@ -53,6 +53,6 @@ PrettyOS ist als Experimentier-Basis für Ideen der OS-Projektgruppe bei c-plusp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 8657; parent 8433; 2010-10-14T13:22:27Z -->
+<!-- MediaWiki page 2096; revision 9812; parent 8657; 2011-05-22T06:26:13Z -->
