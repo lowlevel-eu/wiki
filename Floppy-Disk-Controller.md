@@ -323,7 +323,7 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | MT | Multitrack, Befehl wird auf beiden Seiten der Diskette ausgeführt |  |
 | DTL | Datenlänge | 0xFF |
-| N | Sekorengröße, wobei 0=128Byte, 1=256Byte, 2=512Byte, ... | 2 |
+| N | Sektorengröße, wobei 0=128Byte, 1=256Byte, 2=512Byte, ... | 2 |
 | Gap3 | Abstand zwischen Sektoren | 27 |
 | MFM | High Density (HD) Mode | 1 |
 | SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | 1 |
@@ -420,7 +420,7 @@ Result Phase: *keine*
 Anmerkungen:
 
 - Nach der Kalibrierung wird ein IRQ6 gesendet
-- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb sollte mit "Interrput Status überprüfen" (8h) überprüft werden, ob Bit 4 in St0 gelöscht ist.
+- Es kann passieren, dass der Befehl nicht funktioniert. Deshalb sollte mit "Interrupt Status überprüfen" (8h) überprüft werden, ob Bit 4 in St0 gelöscht ist.
 - Bei Disketten mit mehr als 80 Tracks muss dieser Befehl in jedem Fall mehrmals gesendet werden.
 
 ### Laufwerksstatus überprüfen (4h)
@@ -537,7 +537,7 @@ Result Phase: *Keine*
   
 Anmerkungen:
 
-- Es kann passieren, dass der Befehl nicht funktioniert. Desshalb muss mit "Interrput Status überprüfen" (8h) überprüft werden, ob Bit 5 in St0 gesetzt ist.
+- Es kann passieren, dass der Befehl nicht funktioniert. Deshalb muss mit "Interrupt Status überprüfen" (8h) überprüft werden, ob Bit 5 in St0 gesetzt ist.
 - Nach Beendigung wird ein IRQ 6 gesendet.
 
 ### Sektor schreiben (5h)
@@ -965,6 +965,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 9587; parent 8970; 2011-02-20T18:26:44Z -->
+<!-- MediaWiki page 1443; revision 9816; parent 9587; 2011-05-27T16:00:56Z -->
