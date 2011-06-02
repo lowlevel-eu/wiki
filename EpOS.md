@@ -42,6 +42,7 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
   - diverse Protokolle
 - PCI
 - Shell
+- Treiberschicht, Auslagerung einiger Komponenten in Binaries
 
 ## Geplant
 
@@ -92,6 +93,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 9820; parent 9613; 2011-06-02T23:28:28Z -->
+<!-- MediaWiki page 1771; revision 9821; parent 9820; 2011-06-02T23:30:06Z -->
