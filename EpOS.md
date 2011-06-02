@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
 | Akt. Version: | 0.08 in Entwicklung |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Im moment Closed-Source |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Im Moment Closed-Source |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
@@ -32,7 +32,16 @@ Wofür steht epOS? Ganz einfach: **e**xperimentally **p**rogrammed **O**perating
 - Paging
 - Heap
 - VFS/initrd
-- laden eines "Programms" von der initrd + ausführen
+- laden eines Programms von der initrd + ausführen
+
+## in Arbeit
+
+- Netzwerk:
+  - RTL8139
+  - Ethernet
+  - diverse Protokolle
+- PCI
+- Shell
 
 ## Geplant
 
@@ -83,6 +92,6 @@ Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9613/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1771/index.html)
 
-<!-- MediaWiki page 1771; revision 9613; parent 9236; 2011-03-06T16:41:05Z -->
+<!-- MediaWiki page 1771; revision 9820; parent 9613; 2011-06-02T23:28:28Z -->
