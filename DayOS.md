@@ -1,10 +1,10 @@
 # DayOS
 
 | DayOS |  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5e1274d3dfd1b7f64bb0.jpg" width="225" height="177" alt="DayOS.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5e1274d3dfd1b7f64bb0.jpg) |  |
-| Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob"), [SYN-SYN/ACK-ACK](https://lowlevel-eu.github.io/wiki/pages/2415/index.html "Benutzer:SYN-SYN/ACK-ACK") |
-| Akt. Version: | 0.0.2 (pre-alpha) |
+| Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") |
+| Akt. Version: | 0.0.2 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu GPL |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
@@ -33,11 +33,13 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ## Roadmap
 
+(Stable kursiv, Dev fett)  
+
 0.0.1: Paging und Heap
 
-0.0.2: Multitasking und IPC
+*0.0.2: Multitasking und IPC*
 
-0.0.3: VFS und DDI und vielleicht [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")
+**0.0.3: VFS und DDI und vielleicht [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")**
 
 0.0.4: Floppy-Treiber und FAT12
 
@@ -47,6 +49,6 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9740/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9740; parent 9726; 2011-05-04T17:42:48Z -->
+<!-- MediaWiki page 2411; revision 9822; parent 9740; 2011-06-05T16:31:21Z -->
