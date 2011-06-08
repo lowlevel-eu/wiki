@@ -24,6 +24,8 @@
   
 **niwohlOS** (hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
 
+Aktuell befand sich niwohlOS in einer Rewrite-Phase, welche nun nach einer längeren Ruhepause bald in einen erneuten Rewrite mündet. Dazu befinden sich allerdings die Hauptentwickler noch einem hochperforierten Diskurs.
+
 ## Inside niwohlOS
 
 Im folgenden wird kurz im hochreießrischen und hochprofesionelen Marketinghochdeutsch auch für Laien hochverständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel höheren) tieferen Einblick sei [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
@@ -271,6 +273,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9828/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 8667; parent 8666; 2010-10-18T13:36:23Z -->
+<!-- MediaWiki page 2095; revision 9828; parent 8667; 2011-06-08T12:04:03Z -->
