@@ -3,7 +3,7 @@
 | DayOS |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5e1274d3dfd1b7f64bb0.jpg" width="225" height="177" alt="DayOS.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5e1274d3dfd1b7f64bb0.jpg) |  |
-| Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") |
+| Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob"),BSDBlack |
 | Akt. Version: | 0.0.2 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu GPL |
 | OS-Eigenschaften |  |
@@ -49,6 +49,6 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9830/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2411/index.html)
 
-<!-- MediaWiki page 2411; revision 9822; parent 9740; 2011-06-05T16:31:21Z -->
+<!-- MediaWiki page 2411; revision 9830; parent 9822; 2011-06-08T18:54:46Z -->
