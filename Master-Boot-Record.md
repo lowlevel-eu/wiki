@@ -80,6 +80,6 @@ Der Standard-MBR prüft alle Partitionen auf Bootfähigkeit. Wenn mehrere Partit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9711/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 9711; parent 9707; 2011-04-22T13:03:01Z -->
+<!-- MediaWiki page 1431; revision 9843; parent 9711; 2011-06-11T20:54:09Z -->
