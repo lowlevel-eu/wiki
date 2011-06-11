@@ -87,6 +87,6 @@ Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Ska
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9840/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1478/index.html)
 
-<!-- MediaWiki page 1478; revision 8651; parent 7501; 2010-10-13T13:24:22Z -->
+<!-- MediaWiki page 1478; revision 9840; parent 8651; 2011-06-11T20:50:18Z -->
