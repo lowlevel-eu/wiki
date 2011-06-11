@@ -40,6 +40,6 @@ Das OS muss oft erst die im System vorhandenen Geräte alle finden und die benut
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9546/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1480/index.html)
 
-<!-- MediaWiki page 1480; revision 9546; parent 8257; 2011-02-14T12:28:18Z -->
+<!-- MediaWiki page 1480; revision 9837; parent 9546; 2011-06-11T20:46:51Z -->
