@@ -12,6 +12,6 @@ Ein NMI (**N**on **M**askable **I**nterrupt) ist ein [Hardwareinterrupt](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6005/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9847/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1594/index.html)
 
-<!-- MediaWiki page 1594; revision 6005; parent 2953; 2009-10-12T10:27:59Z -->
+<!-- MediaWiki page 1594; revision 9847; parent 6005; 2011-06-11T20:58:59Z -->
