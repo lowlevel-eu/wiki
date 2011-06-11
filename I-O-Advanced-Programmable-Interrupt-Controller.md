@@ -140,6 +140,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 7140; parent 7132; 2010-02-21T15:11:27Z -->
+<!-- MediaWiki page 1574; revision 9836; parent 7140; 2011-06-11T20:46:09Z -->
