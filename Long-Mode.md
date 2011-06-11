@@ -56,6 +56,6 @@ jmp 0x30:kernel.longmode; Far Jmp in 64-Bit Code Segment
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9842/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 9817; parent 8309; 2011-05-27T19:35:03Z -->
+<!-- MediaWiki page 1666; revision 9842; parent 9817; 2011-06-11T20:52:55Z -->
