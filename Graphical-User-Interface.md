@@ -100,6 +100,6 @@ Eine leichte Übung wäre jetzt eine Funktion um ein Rechteck zu zeichnen: \<c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9657/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 9657; parent 7343; 2011-04-09T07:02:18Z -->
+<!-- MediaWiki page 1511; revision 9835; parent 9657; 2011-06-11T20:45:29Z -->
