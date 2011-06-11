@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8677/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9845/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 8677; parent 8304; 2010-10-20T07:55:49Z -->
+<!-- MediaWiki page 1644; revision 9845; parent 8677; 2011-06-11T20:56:24Z -->
