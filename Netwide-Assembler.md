@@ -30,6 +30,6 @@ Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9725/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9846/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
 
-<!-- MediaWiki page 1909; revision 9725; parent 9724; 2011-04-28T10:19:00Z -->
+<!-- MediaWiki page 1909; revision 9846; parent 9725; 2011-06-11T20:58:23Z -->
