@@ -98,6 +98,6 @@ Diese werden in die Datei rtlib.bas gepackt, danach wie oben angegeben kompilier
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6163/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1624/index.html)
 
-<!-- MediaWiki page 1624; revision 6163; parent 6159; 2009-11-02T14:13:34Z -->
+<!-- MediaWiki page 1624; revision 9833; parent 6163; 2011-06-11T20:42:50Z -->
