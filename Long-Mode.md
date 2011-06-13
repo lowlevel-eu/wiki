@@ -51,11 +51,10 @@ jmp 0x30:kernel.longmode; Far Jmp in 64-Bit Code Segment
 
 ## Links
 
-- <http://www.osdev.org/wiki/X86-64>
 - <http://www.sandpile.org/aa64/index.htm>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9842/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9850/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1666/index.html)
 
-<!-- MediaWiki page 1666; revision 9842; parent 9817; 2011-06-11T20:52:55Z -->
+<!-- MediaWiki page 1666; revision 9850; parent 9842; 2011-06-13T15:12:46Z -->
