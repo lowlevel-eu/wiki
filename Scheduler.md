@@ -21,7 +21,7 @@ Vorteile:
 
 - einfach zu implementieren
 - geringer Verwaltungsaufwand
-- Fairness, alle Prozesse erreichen der Reihe nach CPU)
+- Fairness, alle Prozesse erreichen der Reihe nach die CPU
 
 Nachteile:
 
@@ -97,6 +97,6 @@ Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Imp
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 7837; parent 7697; 2010-07-13T15:34:25Z -->
+<!-- MediaWiki page 1711; revision 9851; parent 7837; 2011-06-14T18:43:11Z -->
