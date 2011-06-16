@@ -45,9 +45,7 @@ gebaut und installiert werden.
 
 ### Fehler beim configure
 
-Eventuell kann es sein, dass configure mit der Fehlermeldung abbricht, dass die Libraries **GMP** und/oder **MPFR** nicht installiert seien. Diese müssen dann per Paketverwaltung oder von Hand installiert werden. Hier kann GMP und [hier](http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2) MPFR heruntergeladen werden, falls selbige nicht über die Paketverwaltung der Distribution erhältlich sind. Gebaut werden beide mit dem in Linux bekannten Dreisatz *./configure, make, make install*.
-
-  
+Eventuell kann es sein, dass configure mit der Fehlermeldung abbricht, dass die Libraries **GMP** und/oder **MPFR** nicht installiert seien. Diese müssen dann per Paketverwaltung oder von Hand installiert werden. Hier kann GMP und [hier](http://www.mpfr.org/mpfr-current/mpfr-3.0.1.tar.gz) MPFR heruntergeladen werden, falls selbige nicht über die Paketverwaltung der Distribution erhältlich sind. Gebaut werden beide mit dem in Linux bekannten Dreisatz *./configure, make, make install*.
 
 ## Fertig!
 
@@ -63,6 +61,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9760/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9852/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 9760; parent 6269; 2011-05-11T14:32:45Z -->
+<!-- MediaWiki page 2099; revision 9852; parent 9760; 2011-06-16T16:00:20Z -->
