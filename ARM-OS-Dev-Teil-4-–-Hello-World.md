@@ -88,8 +88,8 @@ Nun schreiben wir noch eine hübsche Makefile, ähnlich der aus der x86-Reihe (u
     CC = /usr/cross/arm/bin/arm-unknown-linux-gnu-gcc
     LD = /usr/cross/arm/bin/arm-unknown-linux-gnu-ld
 
-    ASFLAGS = -march=armv5t
-    CFLAGS = -march=armv5t -O3 -ffreestanding -nostartfiles -nostdinc -nodefaultlibs -Wall -Wextra -fno-stack-protector
+    ASFLAGS = -march=armv5t -mfloat-abi=hard -mfpu=fpa
+    CFLAGS = -march=armv5t -O3 -ffreestanding -nostartfiles -nostdinc -nodefaultlibs -Wall -Wextra -fno-stack-protector -mfloat-abi=hard -mfpu=fpa
     LDFLAGS = -e 0x00000000 -T link.ld
 
     kernel: $(OBJS)
@@ -144,8 +144,10 @@ Das Interface der seriellen Ausgabe ist in [einem I/CP-Manual](http://infocenter
 
 Wie auch vom Kernel der x86-Reihe gibt es ein [git-Repository von diesem Kernel](https://gitorious.org/arm-os-dev/kernel), in dem der Code dieser und der folgenden Teile zu finden ist. Den Code für diesen Teil findet man [hier](https://gitorious.org/arm-os-dev/kernel/trees/e692519a643cca9a65e7c424d364a1be095b5c36), [hier](https://gitorious.org/arm-os-dev/kernel/trees/9dbeaa7b606627787e3681bb5415acd1f074ec28) ist dann noch ein kprintf hinzugefügt worden.
 
+*Achtung:* Das Makefile in diesem Repository besitzt CFLAGS und ASFLAGS ohne „-mfloat-abi=hard -mfpu=fpa“. Es kann sein, dass LD sich aufgrunddessen weigert, die Objektdateien zusammenzulinken (mit einer Meldung wie „error: foo.o uses VFP instructions, whereas bar does not“). Dann müssen die genannten Optionen an CFLAGS und ASFLAGS (wie oben im Beispielmakefile gezeigt) angefügt werden.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9775/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9856/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2421/index.html)
 
-<!-- MediaWiki page 2421; revision 9775; parent 9774; 2011-05-12T21:18:17Z -->
+<!-- MediaWiki page 2421; revision 9856; parent 9775; 2011-06-17T12:53:43Z -->
