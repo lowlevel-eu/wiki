@@ -74,17 +74,22 @@ binutils:
 
 gcc:
 
-    $ Pfad/zum/Code/configure --prefix=$PREFIX --target=$TARGET --disable-nls --enable-languages=c --disable-shared --disable-libssp
+    $ Pfad/zum/Code/configure --prefix=$PREFIX --target=$TARGET --disable-nls --enable-languages=c --disable-shared --disable-libssp --without-headers
 
 für welche CPU-Architektur der Cross-Compiler gebaut wird, wird mit dem *target*-Parameter angegeben. Hier eine nicht vollständige Liste der wichtigsten Targets:
 
 - *x86_64-elf* (um auf einem 32-Bit-Prozessor/-OS für ein(en) 64-Bit-Prozessor/-OS zu kompilieren. Kann auch verwendet werden, um sich einen Cross-Compiler für Windows zu bauen.)
 - *arm-unknown-linux-gnu* (um für ARM-Systeme Code zu kompilieren.)
 
-Wenn weitere Sprachen unterstützt werden sollen und die entsprechenden Pakete heruntergeladen und entpackt wurden, dann müssen die Sprachen bei *--enable-languages=* durch Kommata getrennt aufgezählt werden. Nachdem die Pakete nun konfiguriert wurden, müssen diese jeweils noch mit
+Wenn weitere Sprachen unterstützt werden sollen und die entsprechenden Pakete heruntergeladen und entpackt wurden, dann müssen die Sprachen bei *--enable-languages=* durch Kommata getrennt aufgezählt werden. Nachdem die Pakete nun konfiguriert wurden, müssen die **binutils** mit
 
     $ make
     $ make install
+
+bzw. der **gcc** mit
+
+    $ make all-gcc
+    $ make install-gcc
 
 gebaut und installiert werden.
 
@@ -96,6 +101,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9797/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 9797; parent 9796; 2011-05-17T10:52:28Z -->
+<!-- MediaWiki page 1628; revision 9857; parent 9797; 2011-06-17T14:26:48Z -->
