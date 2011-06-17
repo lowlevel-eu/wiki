@@ -10,7 +10,7 @@ Im Folgenden wird erklärt, wie man einen Cross-Compiler für die x86-64-Plattfo
 
 Es gibt zwei verschiedene Wege, einen Cross-Compiler für x86-64 zu erstellen, wir bedienen uns hier der einfachsten Variante: Wir bauen die Binutils und den [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") neu, sodass wir einen funktionierenden gcc haben, mit dessen Hilfe wir x86-64-ELF-Dateien erstellen können.
 
-Als erstes müssen dazu die Binutils und der gcc heruntergeladen werden. Wir benutzen dazu die neueste (Stand: 09. November 2009) Version beider Toolchains, einmal die [binutils 2.20.0](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.gz) und das Core-Package des [gcc 4.4.2](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2). Wenn allerdings auch Support für mehr Sprachen als C gewünscht ist, müssen dementsprechend zusätzliche Pakete unter [ftp.gnu.org/gnu/gcc](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
+Als erstes müssen dazu die Binutils und der gcc heruntergeladen werden. Wir benutzen dazu die neueste (Stand: 17. Juni 2011) Version beider Toolchains, einmal die [binutils 2.21.0](http://ftp.gnu.org/gnu/binutils/binutils-2.21.tar.gz) und das Core-Package des [gcc 4.6.0](http://ftp.gnu.org/gnu/gcc/gcc-4.6.0/gcc-core-4.6.0.tar.bz2). Wenn allerdings auch Support für mehr Sprachen als C gewünscht ist, müssen dementsprechend zusätzliche Pakete unter [ftp.gnu.org/gnu/gcc](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
 Diese werden nun in ein beliebiges Verzeichnis entpackt, wir verwenden hier die Verzeichnisse **/usr/src/cross-gcc** und **/usr/src/cross-binutils**. Desweiteren sollte auch ein Verzeichnis für die Cross-Tools angelegt werden, in unserem Beispiel landen die fertigen Tools unter **/usr/cross**.
 
@@ -83,6 +83,6 @@ Gratulation, ein Cross-Compiler für die x86-64-Plattform wurde erstellt! Die To
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9854/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
 
-<!-- MediaWiki page 2060; revision 6270; parent 6204; 2009-11-14T04:30:53Z -->
+<!-- MediaWiki page 2060; revision 9854; parent 6270; 2011-06-17T10:13:33Z -->
