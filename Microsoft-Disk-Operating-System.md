@@ -42,7 +42,7 @@ Der Treiber himem.sys stellt gemäß der *Extended Memory Specification* (XMS) d
 - Je nach Hardware freie Speicherbereiche in der *Upper Memory Area* zwischen 640 kB und 1 MB. Die Adressierung im Real Mode stellt hier kein Problem dar.
 - *Extended Memory Blocks* beginnen nach dem Ende der HMA. Die API erlaubt es, im erweiterten Speicher Blöcke zu reservieren, freizugeben und Daten hinein/heraus zu kopieren (die Speicherverwaltung schaltet dazu kurzzeitig in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")). Eine direkte Adressierung des Speichers ist im Real Mode nicht möglich, so dass die API-Funktion zum Kopieren der Daten in den konventionellen Speicher benutzt werden muss bevor mit dem Inhalt gearbeitet werden kann. Darüber hinaus kann so ein Extended Memory Block auch gelockt werden was ihn in seiner Größe unveränderlich macht aber dafür auch als nicht verschiebbar deklariert. Von einem gelockten EMB bekommt man auch die physische Adresse und kann ihn so für eigene Protected Mode Spielchen benutzen (alle DOS-Extender machen das so wenn sie auf einem DOS-System gestartet werden in dem nur himem.sys aber nicht emm386.exe läuft).
 
-Mit dem *Expanded Memory* (EMS) stellt emm386.exe einen anderen Mechanismus zur Verfügung, um auf hohen Speicher zuzugreifen. Dazu wird mindestens ein 386er benötigt, denn der Prozessor wird dazu dauerhaft in den 32-Bit-Protected-Mode geschaltet, so dass [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") verfügbar ist und hoher Speicher pageweise in das erste Megabyte des virtuellen Adressraums eingeblendet werden kann. Dadurch wird das bei XMS nötige Kopieren vermieden. Das eigentliche System und alle Programme laufen mit emm386.exe im [VM86](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "VM86")-Modus.
+Mit dem *Expanded Memory Specification* (EMS) stellt emm386.exe einen anderen Mechanismus zur Verfügung, um auf hohen Speicher zuzugreifen. Dazu wird mindestens ein 386er benötigt, denn der Prozessor wird dazu dauerhaft in den 32-Bit-Protected-Mode geschaltet, so dass [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") verfügbar ist und hoher Speicher pageweise in das erste Megabyte des virtuellen Adressraums eingeblendet werden kann. Dadurch wird das bei XMS nötige Kopieren vermieden. Das eigentliche System und alle Programme laufen mit emm386.exe im [VM86](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "VM86")-Modus.
 
 ## Weblinks
 
@@ -51,6 +51,6 @@ Mit dem *Expanded Memory* (EMS) stellt emm386.exe einen anderen Mechanismus zur 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9863/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9864/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1829/index.html)
 
-<!-- MediaWiki page 1829; revision 9863; parent 9505; 2011-06-21T13:10:09Z -->
+<!-- MediaWiki page 1829; revision 9864; parent 9863; 2011-06-21T13:11:16Z -->
