@@ -135,7 +135,7 @@ Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_
 | ----------------------------------- | --------------------------------------------------------------------------------------- |
 | title \<NAME\> | Der name wird im Auswahlmenu beim Booten angezeigt. |
 | kernel \</pfad/zum/kernel/datei\> | Läd den angegebenen Kernel |
-| mudule \</pfad/zum/modul/datei\> | Läd das angegebene Modul in den Speicher und trägt es in die Multiboot modulliste ein |
+| module \</pfad/zum/modul/datei\> | Läd das angegebene Modul in den Speicher und trägt es in die Multiboot modulliste ein |
 | boot | Sagt Grub das er jetzt in den Kernel springen soll. |
 
 #### Beispielkonnfigurationsdatei
@@ -273,6 +273,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9802/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 9802; parent 9454; 2011-05-19T15:42:04Z -->
+<!-- MediaWiki page 1567; revision 9865; parent 9802; 2011-06-21T17:27:10Z -->
