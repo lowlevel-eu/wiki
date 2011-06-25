@@ -3,8 +3,8 @@
 | Allgemeines |  |
 | ------------------------ | ----------------------------------------------- |
 | Name: | VirtualBox |
-| Entwickler: | Innotek |
-| Akt. Version: | 3.2.10<br>(Stand 24.10.2010) |
+| Entwickler: | Oracle (ehemals Innotek & Sun) |
+| Akt. Version: | 4.0.8<br>(Stand 26.06.2011) |
 | Lizenz: | Proprietär, GPL 2 (2 Versionen) |
 | Betriebssystem(e): | Linux, Windows, OS X, Solaris |
 | Virtualisiertes System |  |
@@ -15,7 +15,7 @@
 
 <http://www.virtualbox.org/>
 
-**VirtualBox**, auch bekannt als **VirtuaBox** ist ein x86-Emulator für x86-Systeme. Original entwickelt von innotek, kaufte Sun das Programm auf, stelle zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
+**VirtualBox**, auch bekannt als **VirtuaBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Diese Duale Lizenzierung wurde auch nach der Übernahme durch Oracle weitergeführt. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
 
 ## Besondere Features
 
@@ -55,6 +55,6 @@ Befehlssatzerweiterungen für Gäste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9874/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 8696; parent 6587; 2010-10-23T23:48:52Z -->
+<!-- MediaWiki page 1553; revision 9874; parent 8696; 2011-06-25T22:58:08Z -->
