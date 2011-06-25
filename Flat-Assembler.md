@@ -34,6 +34,6 @@ Ein großer Vorteil des Flat Assemblers ist wohl seine Portabilität. Es gibt Ve
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9644/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2091/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9883/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2091/index.html)
 
-<!-- MediaWiki page 2091; revision 9644; parent 7001; 2011-03-30T21:01:33Z -->
+<!-- MediaWiki page 2091; revision 9883; parent 9644; 2011-06-25T23:15:26Z -->
