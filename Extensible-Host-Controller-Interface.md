@@ -12,6 +12,6 @@ Das xHCI ist das Interface für [USB](https://github.com/lowlevel-eu/wiki/wiki/U
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9877/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1692/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9881/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1692/index.html)
 
-<!-- MediaWiki page 1692; revision 9877; parent 7321; 2011-06-25T23:10:44Z -->
+<!-- MediaWiki page 1692; revision 9881; parent 9877; 2011-06-25T23:13:26Z -->
