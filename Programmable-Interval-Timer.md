@@ -103,6 +103,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9882/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 9878; parent 9660; 2011-06-25T23:12:14Z -->
+<!-- MediaWiki page 1432; revision 9882; parent 9878; 2011-06-25T23:13:52Z -->
