@@ -12,6 +12,6 @@ Das EHCI ist das Interface für [USB](https://github.com/lowlevel-eu/wiki/wiki/U
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1577/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9875/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1577/index.html)
 
-<!-- MediaWiki page 1577; revision 7320; parent 5174; 2010-03-07T22:37:17Z -->
+<!-- MediaWiki page 1577; revision 9875; parent 7320; 2011-06-25T23:07:30Z -->
