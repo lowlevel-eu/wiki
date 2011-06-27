@@ -4,7 +4,7 @@
 | --------------- | ----------------------------------------------- |
 | Name: | GNU Compiler Collection |
 | Entwickler: | [Das GCC-Team](http://gcc.gnu.org/about.html) |
-| Akt. Version: | 4.6.0 |
+| Akt. Version: | 4.6.1 |
 | Lizenz: | GNU GPL |
 | Plattform: | Linux, Unix<br>(inoffiziell: Windows) |
 | Homepage |  |
@@ -44,6 +44,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9641/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9886/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 9641; parent 7734; 2011-03-30T20:56:29Z -->
+<!-- MediaWiki page 1805; revision 9886; parent 9641; 2011-06-27T14:51:36Z -->
