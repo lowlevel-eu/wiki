@@ -161,10 +161,8 @@ Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt
 - [Literatur](https://github.com/lowlevel-eu/wiki/wiki/Literatur "Literatur")
 - Alle Kategorien
 
-Most of my issues in this area that had previously, just by visiting this site, I would speak highly of it for anyone with the same problems \<a href="<http://viagrakaufende.de/products/viagra.htm>"\>viagra online\</a\>=-=
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9889/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9890/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 9889; parent 9085; 2011-06-30T16:20:49Z -->
+<!-- MediaWiki page 1712; revision 9890; parent 9889; 2011-06-30T17:01:29Z -->
