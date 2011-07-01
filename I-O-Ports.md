@@ -36,8 +36,8 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 | 0x3F0 | 0x3F5 | 1\. [Diskettenlaufwerk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x3F6 | 0x3F7 | 1\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x3F8 | 0x3FF | 1\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
-| 0xCF8 | 0xCF8 | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") |
-| 0xCFC | 0xCFC | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") |
+| 0xCF8 | 0xCF8 | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Address |
+| 0xCFC | 0xCFC | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Data |
 
 ## Links
 
@@ -49,6 +49,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9348/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 9348; parent 7362; 2011-01-18T16:34:13Z -->
+<!-- MediaWiki page 1543; revision 9891; parent 9348; 2011-07-01T09:42:27Z -->
