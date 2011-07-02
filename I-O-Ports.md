@@ -8,8 +8,8 @@ Ergänzend zur Port I/O existiert Memory Mapped I/O, bei dem die Geräte in den 
 
 Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste ist nicht vollständig, da beispielsweise bei Geräten, die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind, sondern ausgelesen und konfiguriert werden können. Hier sind also vorwiegend Geräte aufgelistet, die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die I/O-Portbereiche für viele Geräte standardisiert wurden, da es im Allgemeinen keine Möglichkeit gab, diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
 
-| Begin | Ende | Gerät |
-| ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beginn | Ende | Gerät |
+| -------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x000 | 0x01F | [DMA Controller](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access") (8237A-5) |
 | 0x020 | 0x021 | [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) |
 | 0x040 | 0x043 | [Programmable Interval Timer](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") (PIT) |
@@ -49,6 +49,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9895/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 9895; parent 9894; 2011-07-02T12:37:46Z -->
+<!-- MediaWiki page 1543; revision 9897; parent 9895; 2011-07-02T15:04:43Z -->
