@@ -6,7 +6,7 @@ Ergänzend zur Port I/O existiert Memory Mapped I/O, bei dem die Geräte in den 
 
 ## Liste
 
-Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste ist nicht vollständig, da beispielsweise bei Geräten, die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind, sondern ausgelesen und konfiguriert werden können. Hier sind also Geräte aufgelistet, die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die I/O-Portbereiche für viele Geräte standardisiert wurden, da es im Allgemeinen keine Möglichkeit gab, diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
+Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Systems. Diese Liste ist nicht vollständig, da beispielsweise bei Geräten, die über den [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus angeschlossen sind, die I/O Ports und die physischen Speicherbereiche nicht fix sind, sondern ausgelesen und konfiguriert werden können. Hier sind also vorwiegend Geräte aufgelistet, die aus der Zeit des [ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA")/[EISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")-Busses stammen, als die I/O-Portbereiche für viele Geräte standardisiert wurden, da es im Allgemeinen keine Möglichkeit gab, diese Bereiche zur Laufzeit auszulesen bzw. zu konfigurieren.
 
 | Begin | Ende | Gerät |
 | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -24,20 +24,20 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 | 0x1F0 | 0x1F7 | 1\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x278 | 0x27F | 2\. Parallel Port (3. mit MDA) |
 | 0x2C0 | 0x2DF | 2\. EGA |
-| 0x2E8 | 0x2EF | 4\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
-| 0x2F8 | 0x2FF | 2\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
+| 0x2E8 | 0x2EF | 4\. RS232 (COM-Port) |
+| 0x2F8 | 0x2FF | 2\. RS232 (COM-Port) |
 | 0x370 | 0x375 | 2\. [Diskettenlaufwerk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x376 | 0x377 | 2\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x378 | 0x37F | 1\. Parallel Port |
 | 0x3B0 | 0x3DF | [Video Graphics Array](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array") (VGA) |
 | 0x3C0 | 0x3CF | 1\. EGA |
 | 0x3D0 | 0x3DF | CGA und EGA/[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array") |
-| 0x3E8 | 0x3EF | 3\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
+| 0x3E8 | 0x3EF | 3\. RS232 (COM-Port) |
 | 0x3F0 | 0x3F5 | 1\. [Diskettenlaufwerk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x3F6 | 0x3F7 | 1\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
-| 0x3F8 | 0x3FF | 1\. [rs232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232") (COM-Port) |
-| 0xCF8 | 0xCF8 | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Address |
-| 0xCFC | 0xCFC | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Data |
+| 0x3F8 | 0x3FF | 1\. RS232 (COM-Port) |
+| 0xCF8 | 0xCFB | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Address |
+| 0xCFC | 0xCFF | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Data |
 
 ## Links
 
@@ -49,6 +49,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9891/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 9891; parent 9348; 2011-07-01T09:42:27Z -->
+<!-- MediaWiki page 1543; revision 9894; parent 9891; 2011-07-02T12:32:28Z -->
