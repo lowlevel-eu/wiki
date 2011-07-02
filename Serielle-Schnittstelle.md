@@ -29,7 +29,8 @@ Da ein COM-Port mehrere Register benutzt, braucht er auch mehrere I/O-Ports. Die
 
 | Offset | Lesen/Schreiben | Name |
 | -------- | ----------------- | ---------------------------------- |
-| 0 | rw | Transmitting-Buffer |
+| 0 | r | Receiving-Buffer |
+| 0 | w | Transmitting-Buffer |
 | 1 | rw | InterruptEnable-Register |
 | 2 | r | InterruptIdentification-Register |
 | 2 | w | FIFOControl-Register |
@@ -154,6 +155,6 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9568/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 9568; parent 9038; 2011-02-18T21:00:57Z -->
+<!-- MediaWiki page 1561; revision 9896; parent 9568; 2011-07-02T12:42:37Z -->
