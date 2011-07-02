@@ -24,18 +24,18 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 | 0x1F0 | 0x1F7 | 1\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x278 | 0x27F | 2\. Parallel Port (3. mit MDA) |
 | 0x2C0 | 0x2DF | 2\. EGA |
-| 0x2E8 | 0x2EF | 4\. RS232 (COM-Port) |
-| 0x2F8 | 0x2FF | 2\. RS232 (COM-Port) |
+| 0x2E8 | 0x2EF | 4\. [RS232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") (COM-Port) |
+| 0x2F8 | 0x2FF | 2\. [RS232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") (COM-Port) |
 | 0x370 | 0x375 | 2\. [Diskettenlaufwerk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x376 | 0x377 | 2\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
 | 0x378 | 0x37F | 1\. Parallel Port |
 | 0x3B0 | 0x3DF | [Video Graphics Array](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array") (VGA) |
 | 0x3C0 | 0x3CF | 1\. EGA |
 | 0x3D0 | 0x3DF | CGA und EGA/[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "Video Graphics Array") |
-| 0x3E8 | 0x3EF | 3\. RS232 (COM-Port) |
+| 0x3E8 | 0x3EF | 3\. [RS232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") (COM-Port) |
 | 0x3F0 | 0x3F5 | 1\. [Diskettenlaufwerk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller") |
 | 0x3F6 | 0x3F7 | 1\. [Festplatten Controller](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") |
-| 0x3F8 | 0x3FF | 1\. RS232 (COM-Port) |
+| 0x3F8 | 0x3FF | 1\. [RS232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") (COM-Port) |
 | 0xCF8 | 0xCFB | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Address |
 | 0xCFC | 0xCFF | [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") Configuration Data |
 
@@ -49,6 +49,6 @@ Dies ist eine kleine Liste der Standard-I/O-Portbereiche eines [x86](https://git
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9895/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1543/index.html)
 
-<!-- MediaWiki page 1543; revision 9894; parent 9891; 2011-07-02T12:32:28Z -->
+<!-- MediaWiki page 1543; revision 9895; parent 9894; 2011-07-02T12:37:46Z -->
