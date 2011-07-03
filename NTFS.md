@@ -46,6 +46,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 9899; parent 9898; 2011-07-03T10:42:49Z -->
+<!-- MediaWiki page 2437; revision 9900; parent 9899; 2011-07-03T10:47:45Z -->
