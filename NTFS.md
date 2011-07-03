@@ -9,13 +9,13 @@
 | Länge des Dateinames: | 255 Zeichen |
 | Maximale Dateisystemgröße: |  |
 
-**NTFS** steht für **N**ew **T**echnology **F**ile **s**ystem. Das Dateisystem wurde zusammen mit Windows NT eingeführt. Es wird für Festplatten, grosse USBsticks und externe Festplatten benutzt.
+**NTFS** steht für **N**ew **T**echnology **F**ile **S**ystem. Das Dateisystem wurde zusammen mit Windows NT eingeführt. Es wird für Festplatten, große USB-Sticks und externe Festplatten benutzt und ist seit Windows XP Service Pack 2 das Standarddateisystem.
 
 ## Aufbau von NTFS
 
 ### Bootsektor
 
-Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT").
+Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"):
 
 | Offset | Größe | Beschreibung |
 | -------- | ------- | ----------------------------------------------------------- |
@@ -42,8 +42,10 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ## Weblinks
 
+[ntfs-g3-Projekt, bietet Lese- und Schreibmöglichkeiten unter Linux für NTFS](http://www.ntfs-3g.org/)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 9898; parent 9893; 2011-07-03T00:12:49Z -->
+<!-- MediaWiki page 2437; revision 9899; parent 9898; 2011-07-03T10:42:49Z -->
