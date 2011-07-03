@@ -1,11 +1,11 @@
 # NTFS
 
 | NTFS |  |
-| ---------------------------- | ---------------------------- |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- |
 | Entwickler: | Microsoft |
 | Vollständige Bezeichnung: | New Technology File System |
-| Maximalgröße einer Datei: |  |
-| Maximale Dateianzahl: |  |
+| Maximalgröße einer Datei: | Theoretisch 16 EiB, praktisch auf Limitierungen des Betriebssystem beschränkt (XP z.B. maximal 16 TiB) |
+| Maximale Dateianzahl: | 4.294.967.295 |
 | Länge des Dateinames: | 255 Zeichen |
 | Maximale Dateisystemgröße: |  |
 
@@ -46,6 +46,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9901/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 9900; parent 9899; 2011-07-03T10:47:45Z -->
+<!-- MediaWiki page 2437; revision 9901; parent 9900; 2011-07-03T10:48:35Z -->
