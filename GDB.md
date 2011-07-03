@@ -6,7 +6,7 @@ Um GDB dazu zu bringen den Kernel über die RS232 zu debuggen sind folgende Ding
 
 - 2 Computer die über eine RS232-Schnittstelle verfügen
 - Ein Lauffähiges Betriebssystem auf dem GDB installiert ist
-- und der eigene Kernel mit [RS232-Treibern](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Rs232")
+- und der eigene Kernel mit [RS232](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle")-Treibern
 
 Damit der eigene Kernel allerdings in der Lage ist sich mit GDB zu verbinden muss man die Datei *i386-stub.c* zu dem Kernel linken. Diese Datei findet man in den GDB-Source-Files.
 
@@ -30,6 +30,6 @@ Auf der kernel-seite ist nun alles Fertig. Jetzt kann man sich ganz einfach mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2283/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2283/index.html)
 
-<!-- MediaWiki page 2283; revision 8255; parent 8226; 2010-09-17T12:36:18Z -->
+<!-- MediaWiki page 2283; revision 9906; parent 8255; 2011-07-03T17:18:16Z -->
