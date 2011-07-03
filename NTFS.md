@@ -7,7 +7,7 @@
 | Maximalgröße einer Datei: | Theoretisch 16 EiB, praktisch auf Limitierungen des Betriebssystem beschränkt (XP z.B. maximal 16 TiB) |
 | Maximale Dateianzahl: | 4.294.967.295 |
 | Länge des Dateinames: | 255 Zeichen |
-| Maximale Dateisystemgröße: |  |
+| Maximale Dateisystemgröße: | Clustergrößen-Abhängig, bei 64 KiB-Cluster 265 TiB, bei 4 KiB-Cluter 16 TiB |
 
 **NTFS** steht für **N**ew **T**echnology **F**ile **S**ystem. Das Dateisystem wurde zusammen mit Windows NT eingeführt. Es wird für Festplatten, große USB-Sticks und externe Festplatten benutzt und ist seit Windows XP Service Pack 2 das Standarddateisystem.
 
@@ -46,6 +46,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9901/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 9901; parent 9900; 2011-07-03T10:48:35Z -->
+<!-- MediaWiki page 2437; revision 9902; parent 9901; 2011-07-03T10:49:07Z -->
