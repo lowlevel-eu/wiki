@@ -6,7 +6,7 @@
 | Vollständige Bezeichnung: | New Technology File System |
 | Maximalgröße einer Datei: |  |
 | Maximale Dateianzahl: |  |
-| Länge des Dateinames: |  |
+| Länge des Dateinames: | 255 Zeichen |
 | Maximale Dateisystemgröße: |  |
 
 **NTFS** steht für **N**ew **T**echnology **F**ile **s**ystem. Das Dateisystem wurde zusammen mit Windows NT eingeführt. Es wird für Festplatten, grosse USBsticks und externe Festplatten benutzt.
@@ -44,6 +44,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 9893; parent 9892; 2011-07-02T08:59:06Z -->
+<!-- MediaWiki page 2437; revision 9898; parent 9893; 2011-07-03T00:12:49Z -->
