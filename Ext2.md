@@ -4,6 +4,15 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
+| ext2 |  |
+| ---------------------------- | ----------------------------- |
+| Entwickler: | Rémy Card |
+| Vollständige Bezeichnung: | Second extended file system |
+| Maximalgröße einer Datei: |  |
+| Maximale Dateianzahl: |  |
+| Länge des Dateinames: | 255 Byte |
+| Maximale Dateisystemgröße: |  |
+
 Das ext2-Dateisystem (ext steht für extended) war bis vor ein paar Jahren das Standarddateisystem unter Linux und anderen Unix-Derivaten, bis es durch [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder andere Journaling-Dateisysteme ersetzt wurde.
 
 ## Aufbau
@@ -20,6 +29,6 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9435/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9903/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
 
-<!-- MediaWiki page 1617; revision 9435; parent 4063; 2011-02-05T12:48:08Z -->
+<!-- MediaWiki page 1617; revision 9903; parent 9435; 2011-07-03T10:51:37Z -->
