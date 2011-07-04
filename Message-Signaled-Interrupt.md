@@ -6,7 +6,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Mit einem **M**essage **S**ignaled **I**nterrupt kann ein Hardware-Gerät dem System einen [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") melden ohne dafür eine spezielle Leitung zu benötigen, der Interrupt wird als Nachricht über den normalen Bus zum Interrupt-Controller geschickt. Neben der Ersparnis von Leitungen hat das vor allem den Vorteil das viel mehr verschiedene Interrupts möglich sind weil so eine Nachricht einen Interrupt-Vector mit mehreren Bits (typisch 16 oder 32 Bits) aufnehmen kann.
 
-Das einzigste aktuelle Bussystem das Message Signaled Interrupts bietet ist [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") und seine Verwandten bzw. Nachfolger. Auf dem PC sind Message Signaled Interrupts nur nutzbar wenn man die [APICs](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") benutzt.
+Das einzige aktuelle Bussystem das Message Signaled Interrupts bietet ist [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI") und seine Verwandten bzw. Nachfolger. Auf dem PC sind Message Signaled Interrupts nur nutzbar wenn man die [APICs](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") benutzt.
 
 ## Message Signaled Interrupts bei PCI
 
@@ -25,6 +25,6 @@ Einen speziellen Vorteil bieten die Message Signaled Interrupts bei PCI im Zusam
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9589/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9907/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2400/index.html)
 
-<!-- MediaWiki page 2400; revision 9589; parent 9576; 2011-02-21T10:18:23Z -->
+<!-- MediaWiki page 2400; revision 9907; parent 9589; 2011-07-04T06:27:21Z -->
