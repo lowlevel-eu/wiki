@@ -9,7 +9,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Entwickler: | Rémy Card |
 | Vollständige Bezeichnung: | Second extended file system |
 | Maximalgröße einer Datei: | 2 TiB |
-| Maximale Dateianzahl: | 10e18 |
+| Maximale Dateianzahl: | 10<sup>18</sup> |
 | Länge des Dateinames: | 255 Byte |
 | Maximale Dateisystemgröße: | 16 TiB |
 
@@ -29,6 +29,6 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9912/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1617/index.html)
 
-<!-- MediaWiki page 1617; revision 9904; parent 9903; 2011-07-03T10:53:12Z -->
+<!-- MediaWiki page 1617; revision 9912; parent 9904; 2011-07-08T21:45:54Z -->
