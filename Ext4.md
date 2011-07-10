@@ -19,9 +19,9 @@ Das Fourth extended file system oder kurz **ext4** ist die Weiterentwicklung von
 
 ## Neuerungen gegenüber ext3
 
-ext4 bietet einige Neuerungen gegenüber ext3 wie z.B. Zeitstempel auf Nanosekunden-Basis, Journal mit Prüfsummenunterstützung (einschaltbar beim Mounten via journal_checksum), Mehrfache Preallokation von Dateiblöcken und Inodes sowie Zeitverzögerte Allokation von Dateiblöcken und Inodes..
+Die wichtigste Neuerung von ext4 gegenüber ext3 ist, dass das Dateisystem jetzt auch Extents statt Blocktabellen benutzen kann. Das bedeutet, dass die Zuordnung nicht in Blöcken fester Größe geschieht, sondern in variablen Extents, deren Beschreibung eine Anzahl von Blöcken enthält, die auf der Platte direkt hintereinander liegen. Besonders bei großen Dateien können so die Metadaten verkleinert und damit die Performance verbessert werden.
 
-  
+Weitere Neuerungen sind Zeitstempel auf Nanosekunden-Basis, Journal mit Prüfsummenunterstützung (einschaltbar beim Mounten via journal_checksum), Mehrfache Preallokation von Dateiblöcken und Inodes sowie Zeitverzögerte Allokation von Dateiblöcken und Inodes.
 
 ## Weblinks
 
@@ -29,6 +29,6 @@ ext4 bietet einige Neuerungen gegenüber ext3 wie z.B. Zeitstempel auf Nanosekun
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9914/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2438/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2438/index.html)
 
-<!-- MediaWiki page 2438; revision 9914; parent 0; 2011-07-10T03:29:48Z -->
+<!-- MediaWiki page 2438; revision 9917; parent 9914; 2011-07-10T11:42:28Z -->
