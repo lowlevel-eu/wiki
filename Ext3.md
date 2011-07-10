@@ -15,7 +15,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Das ext3-Dateisystem ist die Weiterentwicklung des ext2-Dateisystems. Im Gegensatz zu ext2 hat ext3 ein Journal. Der Dateisystemtreiber speichert dann vor einer Änderung am Dateisystem je nach Konfiguration mehr oder weniger viele Informationen dazu im Journal. Wenn nun ein Absturz stattfindet, so muss danach das Dateisystem nicht vollständig geprüft werden, außerdem ist somit die Konsistenz des Dateisystems garantiert.
 
-Das ext4-Dateisystem ist die Weiterentwicklung von ext3.
+Das [ext4](https://github.com/lowlevel-eu/wiki/wiki/Ext4 "Ext4")-Dateisystem ist die Weiterentwicklung von ext3.
 
 ## Erkennen eines ext3 Dateisystems
 
@@ -28,6 +28,6 @@ Ein ext3-Dateisystem ist eigentlich ein ext2-Dateisystem mit einer Erweiterung. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1660/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1660/index.html)
 
-<!-- MediaWiki page 1660; revision 9905; parent 5408; 2011-07-03T10:55:27Z -->
+<!-- MediaWiki page 1660; revision 9913; parent 9905; 2011-07-10T03:22:50Z -->
