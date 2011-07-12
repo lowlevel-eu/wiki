@@ -6,6 +6,15 @@ Achtung, alles was hier steht ist von extrem eingeschränkter Nützlichkeit und 
 Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierten Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!  
 Siehe dazu auf die [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/2302/index.html "Diskussion:SFS") und in den Abschnitt [Vergleich mit anderen Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/SFS#vergleich-mit-anderen-dateisystemen "SFS")
 
+| SFS |  |
+| ---------------------------- | ----------------------------- |
+| Entwickler: | Brendan Trotter |
+| Vollständige Bezeichnung: | SimpleFS/Simple File System |
+| Maximalgröße einer Datei: |  |
+| Maximale Dateianzahl: |  |
+| Länge des Dateinames: |  |
+| Maximale Dateisystemgröße: |  |
+
   
 
 ## Einführung
@@ -79,6 +88,6 @@ SFS ist sehr darauf angewiesen das der benutzte Datenträger keine defekten Sekt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2301/index.html)
 
-<!-- MediaWiki page 2301; revision 8445; parent 8430; 2010-10-02T18:34:32Z -->
+<!-- MediaWiki page 2301; revision 9918; parent 8445; 2011-07-12T09:37:58Z -->
