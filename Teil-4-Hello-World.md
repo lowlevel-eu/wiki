@@ -66,8 +66,11 @@ Nachdem wir das erste Problem souverän gelöst haben, müssen wir den Code jetz
        // C-Code aufrufen
        call init
 
-       // Falls wir jemals aus init zurueckkommen sollten, gehen wir in eine
-       // Endlosschleife
+       // Falls wir jemals aus init zurueckkommen sollten, halten wir einfach
+       // den Prozessor an. (man braucht ihn ja nicht unnötig heißlaufen lassen.)
+       hlt
+       
+       // Sollte es doch weitergehen, gehen wir in eine Endlosschleife
        jmp .
 
 // 8 kB Stack fuer den Kernel. Das Label steht hinter dem freien Speicher, // weil der Stack nach unten waechst .section .bss .space 8192 kernel_stack:\</asm\>
@@ -223,6 +226,6 @@ Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 9366; parent 9043; 2011-01-20T11:16:34Z -->
+<!-- MediaWiki page 1897; revision 9919; parent 9366; 2011-07-12T18:42:48Z -->
