@@ -68,11 +68,14 @@ Nachdem wir das erste Problem souverän gelöst haben, müssen wir den Code jetz
 
        // Falls wir jemals aus init zurueckkommen sollten, sperren wir die Interrupts und
        // halten einfach den Prozessor an. (man braucht ihn ja nicht unnötig heißlaufen lassen.)
+
+\_stop:
+
        cli
        hlt
        
-       // Sollte es doch weitergehen, gehen wir in eine Endlosschleife
-       jmp .
+       // Sollte es doch weitergehen, probieren wir erneut die CPU schlafen zu lassen
+       jmp _stop
 
 // 8 kB Stack fuer den Kernel. Das Label steht hinter dem freien Speicher, // weil der Stack nach unten waechst .section .bss .space 8192 kernel_stack:\</asm\>
 
@@ -227,6 +230,6 @@ Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9920/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9921/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 9920; parent 9919; 2011-07-13T07:10:37Z -->
+<!-- MediaWiki page 1897; revision 9921; parent 9920; 2011-07-13T16:50:12Z -->
