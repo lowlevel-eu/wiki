@@ -66,8 +66,9 @@ Nachdem wir das erste Problem souverän gelöst haben, müssen wir den Code jetz
        // C-Code aufrufen
        call init
 
-       // Falls wir jemals aus init zurueckkommen sollten, halten wir einfach
-       // den Prozessor an. (man braucht ihn ja nicht unnötig heißlaufen lassen.)
+       // Falls wir jemals aus init zurueckkommen sollten, sperren wir die Interrupts und
+       // halten einfach den Prozessor an. (man braucht ihn ja nicht unnötig heißlaufen lassen.)
+       cli
        hlt
        
        // Sollte es doch weitergehen, gehen wir in eine Endlosschleife
@@ -226,6 +227,6 @@ Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9919/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9920/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 9919; parent 9366; 2011-07-12T18:42:48Z -->
+<!-- MediaWiki page 1897; revision 9920; parent 9919; 2011-07-13T07:10:37Z -->
