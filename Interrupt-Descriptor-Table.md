@@ -15,7 +15,7 @@ Ein Deskriptor in der IDT ist im Protected Mode 64 Bit und im Long Mode 128 Bit 
 | Bits | Name | Beschreibung |
 | -------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0-15 | Offset 0-15 | Gibt das Offset des ISR innerhalb des Segments an. Wenn der entsprechende Interrupt auftritt, wird eip auf diesen Wert gesetzt. |
-| 15-31 | Selector | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
+| 16-31 | Selector | Gibt den Selector des Codesegments an, in das beim Auftreten des Interrupts gewechselt werden soll. Im Allgemeinen ist dies das Kernel-Codesegment (Ring 0). |
 | 32-34 | 000 / IST | Gibt im LM den Index in die IST an, **ansonsten 0**! |
 | 35-39 | Reserviert | Wird ignoriert |
 | 40-42 | Typ | Gibt die Art des Interrupts an |
@@ -86,6 +86,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9946/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 9365; parent 6997; 2011-01-20T10:51:49Z -->
+<!-- MediaWiki page 1603; revision 9946; parent 9365; 2011-07-17T14:39:34Z -->
