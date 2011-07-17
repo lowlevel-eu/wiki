@@ -20,7 +20,7 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 | Offset | Größe | Beschreibung |
 | -------- | ------- | ----------------------------------------------------------- |
 | 0x000 | 3 | Sprung zum Bootloader \<asm\> EB 52 90 JMP + NOP \</asm\> |
-| 0x003 | 8 | Filesystem-ID bei immer "NTFS" |
+| 0x003 | 8 | Filesystem-ID bei NTFS immer "NTFS" |
 | 0x00B | 2 | Anzahl Bytes pro Sektor |
 | 0x00D | 1 | Anzahl Sektoren pro Cluster |
 | 0x00E | 7 | Reserviert immer 00 00 00 00 00 00 00 |
@@ -46,6 +46,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9928/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 9902; parent 9901; 2011-07-03T10:49:07Z -->
+<!-- MediaWiki page 2437; revision 9928; parent 9902; 2011-07-17T11:51:33Z -->
