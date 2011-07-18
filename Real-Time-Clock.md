@@ -15,10 +15,9 @@ Im IRQ-Handler muss dann das [Statusregister C](https://github.com/lowlevel-eu/w
 ## Siehe auch
 
 - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
-- [Artikel im osdev.org-Wiki](http://wiki.osdev.org/RTC)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/4721/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1715/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9951/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1715/index.html)
 
-<!-- MediaWiki page 1715; revision 4721; parent 4707; 2009-07-25T19:59:51Z -->
+<!-- MediaWiki page 1715; revision 9951; parent 4721; 2011-07-18T11:27:45Z -->
