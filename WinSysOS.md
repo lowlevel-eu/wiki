@@ -155,10 +155,10 @@ FAT12 FAT32 CDFS NTFS ( in GANZ fehrner zukunft )
 
 ## Internetlinks
 
-[Mein Projekt bei SourceForge](https://sourceforge.net/projects/winsysos/files/) [Meine Diskusieonsseite](http://www.coding-board.de/board/showthread.php?t=30903) [FlatAssembler Downloadseite ( Englich)](http://flatassembler.net/download.php) [PureBasic Downloadseite ( Deutsch )](http://www.purebasic.com/german/download.php) [PureBasic Downloadseite ( Englich )](http://www.purebasic.com/download.php)
+[SourceForge](https://sourceforge.net/projects/winsysos/files/) [Diskusieonsseite](http://www.coding-board.de/board/showthread.php?t=30903) [FlatAssembler](http://flatassembler.net/download.php) [PureBasic ( Deutsch )](http://www.purebasic.com/german/download.php) [PureBasic ( Englich )](http://www.purebasic.com/download.php) [FDOS](http://fdos.de/fdos/download/) [MenuetOS](http://menuetos.de/downloads/) [KolibriOS](http://www.kolibrios.org/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9955/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2457/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9957/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2457/index.html)
 
-<!-- MediaWiki page 2457; revision 9955; parent 0; 2011-07-20T13:20:09Z -->
+<!-- MediaWiki page 2457; revision 9957; parent 9955; 2011-07-20T13:58:56Z -->
