@@ -106,7 +106,7 @@ Dieses Feld beschreibt, welches ELF-Format benutzt wird:
 | ET_DYN | 3 | Shared-Object-Datei |
 | ET_CORE | 4 | Kerndatei |
 | ET_LOPROC | 0xff00 | Prozessorspezifisch |
-| ET_HIPROC | 0x00ff | Prozessorspezifisch |
+| ET_HIPROC | 0xffff | Prozessorspezifisch |
 
 Für eine ausführbare ELF-Datei müsste hier ET_EXEC stehen.
 
@@ -276,6 +276,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9440/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 9440; parent 9123; 2011-02-05T12:56:47Z -->
+<!-- MediaWiki page 1528; revision 9963; parent 9440; 2011-07-21T11:17:52Z -->
