@@ -51,10 +51,10 @@ Obwohl dieses Wiki den Einstieg in Betriebssystementwicklung so einfach wie mög
 
 Ein weit verbreitetes Vorurteil ist, dass man ein Betriebssystem komplett in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") schreiben muss, oder sogar erst einen Compiler entwickeln müsste. Quatsch. Man kann, wenn man es möchte, aber man muss nicht. Wahr ist, dass man um einige wenige Zeilen Assembler nicht herumkommen wird, aber es hält sich in Grenzen.
 
-Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im grossen und ganzen zwei Alternativen:
+Ein übliches Vorgehen ist es, nur das nötigste in Assembler zu schreiben und für den Rest eine Hochsprache zu benutzen. Für die Wahl dieser Hochsprache gibt es im Großen und Ganzen zwei Alternativen:
 
 - Du nimmst [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Fast jeder spricht diese Sprache und du bekommst Unmengen an Beispielcode in [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Dein Betriebssystem ist eins von vielen und im Forum oder im IRC wird dir fast jeder helfen können.
-- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Aussenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst dich möglicherweise öfter selbst durchschlagen – gerade, wenn es um Besonderheiten deiner Sprache oder deines Compilers geht.
+- Du nimmst nicht [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Du wirst dich vor allem am Anfang wesentlich seltener beim Kopieren von Code erwischen, weil es einfach nicht geht, ohne ihn in deine Sprache zu übersetzen. Ja, das ist durchaus positiv. Auf der anderen Seite bist du ein Außenseiter und erhältst vielleicht nicht ganz so umfangreich Hilfe und musst dich möglicherweise öfter selbst durchschlagen – gerade, wenn es um Besonderheiten deiner Sprache oder deines Compilers geht.
 
 Von Mitgliedern der Lowlevel-Community benutzte Alternativen zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") sind beispielsweise [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") oder [Pascal](https://github.com/lowlevel-eu/wiki/wiki/Pascal "Pascal") (mit FreePascal oder mit Tricks auch Delphi als Compiler). Theoretisch würden auch [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC") und PureBasic funktionieren. Andere Sprachen hat hier meines Wissens noch niemand versucht, könnten natürlich aber trotzdem funktionieren.
 
@@ -88,7 +88,7 @@ Wenn du trotz diesen Vorteilen darauf bestehst, deinen Bootloader selbst zu schr
 
 #### Äh ja, nochmal auf Deutsch bitte
 
-Im **[vierten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")** der Reihe "OS-Dev für Einsteiger" wird genau erklärt, wie du dir einen einfachen Kernel in C und mit GRUB aufbaust. Du wirst auch auf etwas [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") stoßen. Solltest du kein Assembler beherrschen, keine Bange: Du brauchst nur ganz wenig für die Betriebssystementwicklung. Wenn du keinen Plan hast, wie du in Assembler programmierst, dann lies dir den **[zweiten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")** des Reihe "OS-Dev für Einsteiger" durch, dort bekommst du das benötigte Wissen, um den minimalen Asssembler-Teil zu verstehen.
+Im **[vierten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World")** der Reihe "OS-Dev für Einsteiger" wird genau erklärt, wie du dir einen einfachen Kernel in C und mit GRUB aufbaust. Du wirst auch auf etwas [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") stoßen. Solltest du kein Assembler beherrschen, keine Bange: Du brauchst nur ganz wenig für die Betriebssystementwicklung. Wenn du keinen Plan hast, wie du in Assembler programmierst, dann lies dir den **[zweiten Teil](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101")** des Reihe "OS-Dev für Einsteiger" durch, dort bekommst du das benötigte Wissen, um den minimalen Assembler-Teil zu verstehen.
 
 ### Hello World und weiter
 
@@ -180,6 +180,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9965/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9966/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 9965; parent 9756; 2011-07-22T08:45:05Z -->
+<!-- MediaWiki page 1619; revision 9966; parent 9965; 2011-07-22T09:01:10Z -->
