@@ -6,9 +6,11 @@
 
 Okay, du hast also beschlossen, dass du dein eigenes Betriebssystem schreiben willst? Dann bist du hier genau richtig.
 
-Dieser Artikel versucht, dir einen Überblick zu geben, welche Fragen du dir stellen solltest und wie du die Sache am geschicktesten angehst. Er soll sozusagen einen Wegweiser durch das Wiki darstellen, der dir am Anfang hilft, die relevanten Themen auf Anhieb zu finden.
+Die Artikelserie OS-Dev für Einsteiger erklärt Schritt für Schritt zunächst einige Grundkonzepte und dann anhand eines Beispielprojekts die Entwicklung eines eigenen Betriebssystems. Oben und unten auf jeder Seite findest du eine Navigationsleiste, die dich zum nächsten Teil führt. Alle Teile auf einen Blick findest du in der [Kategorie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger").
 
-Auf der anderen Seite wird er sicher auch die eine oder andere Frage offen lassen. Zögere nicht, dich im Forum anzumelden und nachzufragen. Der harte Kern der Community ist auch im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") anzutreffen. Falls du Probleme mit der Anmeldung im Forum haben solltest, kannst du dich dort melden.
+Dieser Artikel dient als Einstieg in die Serie und geht im Schnelldurchlauf über alle Konzepte. Er versucht damit, dir einen Überblick zu geben, welche Fragen du dir stellen solltest und wie du die Sache am geschicktesten angehst.
+
+Auf der anderen Seite wird die Tutorialreihe sicher auch die eine oder andere Frage offen lassen. Zögere nicht, dich im Forum anzumelden und nachzufragen. Der harte Kern der Community ist auch im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") anzutreffen. Falls du Probleme mit der Anmeldung im Forum haben solltest, kannst du dich dort melden.
 
 ## Vor dem Start
 
@@ -178,6 +180,6 @@ Irgendwann wirst du vermutlich auf die Idee kommen, irgendwas von einer [Diskett
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9965/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1619/index.html)
 
-<!-- MediaWiki page 1619; revision 9756; parent 8978; 2011-05-11T10:12:13Z -->
+<!-- MediaWiki page 1619; revision 9965; parent 9756; 2011-07-22T08:45:05Z -->
