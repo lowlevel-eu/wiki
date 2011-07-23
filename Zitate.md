@@ -348,8 +348,14 @@ Aus \#lost (25. April 2010)
     [00:08] <JanDing> ich hoffe, wir haben keinen miss
     [00:08] <JanDing> ansonsten gibts resource starvation
 
+------------------------------------------------------------------------
+
+Aus \#lost (23. Juli 2011)
+
+    [20:44] <Jidder> wir können ja mal ein formelles humorfeststellungsverfahren einleiten. das ergebnis wird kein witz sein.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 7625; parent 7601; 2010-04-24T22:22:35Z -->
+<!-- MediaWiki page 1435; revision 9976; parent 7625; 2011-07-23T21:33:10Z -->
