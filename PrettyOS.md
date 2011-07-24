@@ -17,11 +17,11 @@
 
 [\[1\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html)
 
-PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei <http://www.c-plusplus.de/forum/>. Es entstand als Idee im März 2009, führte zu einem vierteiligen Tutorial, das für Einsteiger in die Materie beginnend beim ersten Boot-Vorgang gedacht war, und wird seit Mitte Oktober 2009 von interessierten Entwicklern diskutiert, umgebaut, gepflegt und erweitert. Zielsetzung ist, verständlich zum Lernen und zum Experimentieren verwendbar zu sein.
+PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei <http://www.c-plusplus.de/forum/>. Es entstand als Idee im März 2009, führte zu einem vierteiligen Tutorial, das für Einsteiger in die Materie beginnend beim ersten Boot-Vorgang gedacht war, und wird seit Mitte Oktober 2009 von interessierten Entwicklern diskutiert, umgebaut, gepflegt und erweitert. Zielsetzung ist, verständlich zum Lernen und zum Experimentieren verwendbar zu sein. Das ist bisher hervorragend gelungen.
 
 ## Ziel
 
-PrettyOS soll Einsteiger in die Betriebssystementwicklung dabei unterstützen, den gesamten Prozess des Bootens, Startens eines C-Kernels und einer Shell (C oder C++) an einem einfachen praktischen Beispiel zu verstehen. Als Entwicklungsumgebung soll sowohl Linux als auch MS Windows einsetzbar sein.
+PrettyOS soll Einsteiger in die Betriebssystementwicklung dabei unterstützen, den gesamten Prozess des Bootens, Startens eines C-Kernels und einer Shell (C oder C++) an einem einfachen praktischen Beispiel zu verstehen. Als Entwicklungsumgebung ist sowohl Linux, MacOS als auch MS Windows einsetzbar.
 
 ## Genereller Aufbau
 
@@ -33,7 +33,7 @@ Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. 
 
 ### Kernel
 
-Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, EHCI, VESA BIOS Extensions und die Netzwerkkarten [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139") und [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet"). Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 unterstützt. Betriebsbereite Netzwerkprotokolle sind: ethernet, ip, arp, icmp, udp, dhcp, tcp.
+Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, EHCI, VESA BIOS Extensions und die Netzwerkkarten [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139") und \[\[AMD PCnet\]. Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden voll unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 unterstützt.
 
 ### Userprogramme
 
@@ -53,6 +53,6 @@ PrettyOS ist als freie Experimentier-Basis für Ideen der OS-Projektgruppe bei c
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9967/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 9967; parent 9964; 2011-07-22T09:31:42Z -->
+<!-- MediaWiki page 2096; revision 9977; parent 9967; 2011-07-24T21:09:51Z -->
