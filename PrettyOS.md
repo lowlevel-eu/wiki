@@ -1,7 +1,7 @@
 # PrettyOS
 
 | PrettyOS |  |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes") et. al. |
 | Akt. Version: | 0.0.2.0 |
@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolith](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, Assembler |
 | API: | Nativ |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") (Userprogramme) |
+| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") (Userprogramme) |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
@@ -29,30 +29,31 @@ PrettyOS besteht momentan aus den Bereichen Bootloader (Stage 1 und 2), Kernel u
 
 ### Bootloader
 
-Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den Kernel (kernel.bin). Als Dateisystem für das Bootlaufwerk wird FAT12 vorausgesetzt. Der Bootloader soll [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konform werden. Als Alternative zum nativen Bootloader wird an der Unterstützung von GRUB gearbeitet.
+Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den Kernel (kernel.bin). Als Dateisystem für das Bootlaufwerk wird FAT12 vorausgesetzt. Der Bootloader soll [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konform werden. Als Alternative zum nativen Bootloader kann mit Einschränkungen GRUB verwendet werden.
 
 ### Kernel
 
-Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, EHCI, VESA BIOS Extensions und die Netzwerkkarten [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139") und \[\[AMD PCnet\]. Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden voll unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 unterstützt.
+Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, Syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI") (USB 2), [VESA BIOS Extensions](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VESA BIOS Extensions") und die Netzwerkkarten [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139") und [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet"). Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 unterstützt.
 
 ### Userprogramme
 
-Der User-Space dient bisher nur als Demonstration für die API (syscalls). Bisher sind nur eine einfache Shell sowie ein paar simple Programme vorhanden, die u.a. zum Test neuer Features dienen. Programme für den Userspace können in diversen Sprachen geschrieben werden. Als Hilfe stehen die Dummy-makefiles, eine C-Userlib (Syscalls sowie einige wenige Funktionen der Standardlib) und eine C++-Userlib, die die C-Userlib als Untermenge hat und zudem ein paar C++-spezifische Funktionen bietet (new, delete) zur Verfügung.
+Der User-Space dient bisher nur als Demonstration für die API (syscalls). Bisher sind nur eine einfache Shell sowie ein paar simple Programme vorhanden, die u.a. zum Test neuer Features dienen. Programme für den Userspace können in diversen Sprachen geschrieben werden. Als Hilfe stehen die Dummy-makefiles, eine C-Userlib (Syscalls sowie einige wenige Funktionen der C-Standardlib) und eine C++-Userlib, die die C-Userlib als Untermenge hat und zudem ein paar C++-spezifische Funktionen bietet (new, delete) zur Verfügung.
 
-Userprogramme können auf drei verschiedenen Wegen eingebunden werden: Mittels incbin direkt in den kernel, von wo es dann über die vom Linker generierte Adresse gestartet werden kann (derzeit für das VM86-Programm für VBE genutzt), über die Ramdisk (so wie es derzeit mit der Shell gemacht wird), oder auf dem herkömmlichen Weg als Executable im ELF- oder PE-Format auf einem von PrettyOS unterstützten Speichermedium, wodurch das Programm für den Nutzer von der Shell aus aufrufbar wird.
+Userprogramme können auf drei verschiedenen Wegen eingebunden werden: Mittels incbin direkt in den Kernel, von wo es dann über die vom Linker generierte Adresse gestartet werden kann (derzeit für die VM86-Programme für VBE und APM genutzt), über die Ramdisk (so wie es derzeit mit der Shell gemacht wird), oder auf dem herkömmlichen Weg als Executable im ELF- oder PE-Format auf einem von PrettyOS unterstützten Speichermedium, wodurch das Programm für den Nutzer von der Shell aus aufrufbar wird.
 
 ## Entwicklung
 
-PrettyOS ist als freie Experimentier-Basis für Ideen der OS-Projektgruppe bei c-plusplus.de gedacht und wird von einer aktiven Community gepflegt und erweitert. Inzwischen entwickeln bis zu 10 Personen (allerdings nur zwei bis drei wirklich aktiv) an PrettyOS. IRC Channel: \#PrettyOS auf euirc.net und im Forum (siehe Links). Tester und Entwickler sind immer gerne gesehen. PrettyOS wird das führende Hobby-OS in Europa werden.
+PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-plusplus.de gedacht und wird von einer aktiven Community gepflegt und erweitert. Inzwischen entwickeln bis zu 10 Personen (allerdings nur zwei bis drei wirklich aktiv) an PrettyOS. IRC Channel: \#PrettyOS auf euirc.net und im Forum (siehe Links). Tester und Entwickler sind immer gerne gesehen. PrettyOS wird das führende Hobby-OS in Europa werden.
 
 ## Links
 
 - SVN-Repository: <https://prettyos.svn.sourceforge.net/svnroot/prettyos/trunk/Source>
 - Forum: <http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html>
 - Tutorial: <http://www.henkessoft.de/OS_Dev/OS_Dev1.htm>
+- IRC: irc.euirc.net, \#PrettyOS
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9986/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 9977; parent 9967; 2011-07-24T21:09:51Z -->
+<!-- MediaWiki page 2096; revision 9986; parent 9977; 2011-07-27T20:13:01Z -->
