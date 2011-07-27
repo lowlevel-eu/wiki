@@ -932,7 +932,7 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
        send_data(head);
        send_data(sector);
        send_data(2);
-       send_data(18);
+       send_data(sector); // Letzter zu transferierender Sektor
        send_data(27);
        send_data(0xFF);
        wait_irq();
@@ -965,6 +965,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9834/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 9834; parent 9816; 2011-06-11T20:43:52Z -->
+<!-- MediaWiki page 1443; revision 9985; parent 9834; 2011-07-27T15:49:45Z -->
