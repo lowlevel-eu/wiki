@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9999/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 6599; parent 6021; 2009-12-23T09:44:32Z -->
+<!-- MediaWiki page 1629; revision 9999; parent 6599; 2011-07-28T21:11:21Z -->
