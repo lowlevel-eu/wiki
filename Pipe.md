@@ -20,6 +20,6 @@ Häufig werden Pipes solchen temporären Dateien aber vorgezogen, da sie einerse
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1997/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9989/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1997/index.html)
 
-<!-- MediaWiki page 1997; revision 5350; parent 0; 2009-08-06T17:26:13Z -->
+<!-- MediaWiki page 1997; revision 9989; parent 5350; 2011-07-28T03:44:26Z -->
