@@ -14,6 +14,6 @@ Intel Manual - Volume 3A - Kapitel 3.8
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5953/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1982/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9988/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1982/index.html)
 
-<!-- MediaWiki page 1982; revision 5953; parent 5449; 2009-09-24T20:10:38Z -->
+<!-- MediaWiki page 1982; revision 9988; parent 5953; 2011-07-28T03:43:28Z -->
