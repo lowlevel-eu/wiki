@@ -18,6 +18,6 @@ Die Workstation- und Server-Versionen sind kostenpflichtig, der Player ist Freew
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1944/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9995/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1944/index.html)
 
-<!-- MediaWiki page 1944; revision 9607; parent 5207; 2011-02-24T16:04:32Z -->
+<!-- MediaWiki page 1944; revision 9995; parent 9607; 2011-07-28T21:03:54Z -->
