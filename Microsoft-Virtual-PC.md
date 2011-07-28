@@ -96,6 +96,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1799/index.html)
 
-<!-- MediaWiki page 1799; revision 5543; parent 5528; 2009-08-10T15:32:58Z -->
+<!-- MediaWiki page 1799; revision 10007; parent 5543; 2011-07-28T21:20:15Z -->
