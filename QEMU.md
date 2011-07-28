@@ -82,6 +82,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9755/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 9755; parent 9754; 2011-05-10T08:40:20Z -->
+<!-- MediaWiki page 1505; revision 9990; parent 9755; 2011-07-28T03:45:34Z -->
