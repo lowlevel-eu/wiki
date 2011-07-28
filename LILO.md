@@ -22,6 +22,6 @@ Nach dem Erstellen eines neuen Linux-Kernels muss zuerst der Befehl *lilo* ausge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
 
-<!-- MediaWiki page 1776; revision 5047; parent 5046; 2009-08-02T07:32:06Z -->
+<!-- MediaWiki page 1776; revision 10004; parent 5047; 2011-07-28T21:16:35Z -->
