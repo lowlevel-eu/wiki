@@ -361,6 +361,6 @@ Eine knappe Variante, um in den Protected Mode zu schalten, wird [hier](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9671/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 9671; parent 9669; 2011-04-14T22:55:02Z -->
+<!-- MediaWiki page 1464; revision 10001; parent 9671; 2011-07-28T21:14:15Z -->
