@@ -49,6 +49,6 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (Base Pointer). D
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9992/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2165/index.html)
 
-<!-- MediaWiki page 2165; revision 9372; parent 9040; 2011-01-23T16:43:36Z -->
+<!-- MediaWiki page 2165; revision 9992; parent 9372; 2011-07-28T03:49:37Z -->
