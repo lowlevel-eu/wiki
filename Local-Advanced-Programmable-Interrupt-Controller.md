@@ -231,6 +231,6 @@ schlussKalib:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9987/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 7384; parent 6844; 2010-03-14T18:33:01Z -->
+<!-- MediaWiki page 1581; revision 9987; parent 7384; 2011-07-28T03:42:22Z -->
