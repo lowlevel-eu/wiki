@@ -117,7 +117,7 @@ Diese Exception wird durch den SWI-Befehl (oder auch SVC-Befehl genannt) ausgel�
 
 Entsprechen dem Pagefault von x86. Sie werden ausgelöst, wenn beim Zugriff auf virtuellen Speicher ein Fehler aufgetreten ist (Speicher nicht gemappt oder nicht genügend Zugriffsrechte). Die Prefetch-Abort-Exception wird ausgelöst, wenn beim Laden eines Befehls ein Fehler aufgetreten ist, die Data-Abort-Exception bei Fehlern während der Ausführung.
 
-Sogenannte Imprecise Aborts entstehen, wenn von unabhängig vom eigentlichen Codes auf virtuellen Speicher zugegriffen wird und dieser Zugriff einen Fehler auslöst. Es kann sein, dass die CPU sich dann in einem Modus befindet, in dem sie dann nicht sofort einen Abort auslösen kann, daher wird er zurückgestellt und erst später ausgelöst.
+Sogenannte Imprecise Aborts entstehen, wenn unabhängig vom eigentlichen Code auf virtuellen Speicher zugegriffen wird und dieser Zugriff einen Fehler auslöst. Es kann sein, dass die CPU sich dann in einem Modus befindet, in dem sie dann nicht sofort einen Abort auslösen kann, daher wird er zurückgestellt und erst später ausgelöst.
 
 #### IRQ
 
@@ -146,6 +146,6 @@ Um von einer Exception zurückzukehren, müssen gleichzeitig r14 nach r15 und da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9996/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10012/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 9996; parent 9765; 2011-07-28T21:05:07Z -->
+<!-- MediaWiki page 2101; revision 10012; parent 9996; 2011-07-29T17:30:42Z -->
