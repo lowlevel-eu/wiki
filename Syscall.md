@@ -10,7 +10,7 @@ Anschließend löst der Prozess einen Syscall aus.
 
 ## Auslösen des Syscalls
 
-Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere AMD-Prozessoren die *syscall*-Instruktion und neuere Intel-Prozessoren die *[sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")*-Instruktion. [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-CPUs haben dafür den svc-Instruktion.
+Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere AMD-Prozessoren die *syscall*-Instruktion und neuere Intel-Prozessoren die *[sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")*-Instruktion. [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-CPUs haben dafür die svc-Instruktion.
 
 Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel übernimmt.
 
@@ -24,6 +24,6 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1629/index.html)
 
-<!-- MediaWiki page 1629; revision 10013; parent 9999; 2011-07-29T17:34:03Z -->
+<!-- MediaWiki page 1629; revision 10014; parent 10013; 2011-07-29T17:34:34Z -->
