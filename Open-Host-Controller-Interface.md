@@ -17,7 +17,7 @@ Das OHCI ist neben dem UHCI ein Interface für USB-1.x- und Firewire-Hostcontrol
 
 ## Kommunikation mit dem HC
 
-Die Kommunikation mit dem HC erfolgt über zwei Wege, zum einen über in den Arbeitsspeicher eingeblendete Reigster, zum anderen über einen gemeinsamen Speicherbereich im Arbeitsspeicher. Dieser Speicherberiech enthält zum einen die sogenannte Host Controller Communications Area (HCCA) und zum anderen verkettete Listen, die die Abfolge der zu erledigenden Transfers enthalten.
+Die Kommunikation mit dem HC erfolgt über zwei Wege, zum einen über in den Arbeitsspeicher eingeblendete Register, zum anderen über einen gemeinsamen Speicherbereich im Arbeitsspeicher. Dieser Speicherbereich enthält zum einen die sogenannte Host Controller Communications Area (HCCA) und zum anderen verkettete Listen, die die Abfolge der zu erledigenden Transfers enthalten.
 
 ### Register
 
@@ -121,15 +121,15 @@ Die Register sind in den Arbeitsspeicher eingeblendet. Ihre Adresse ist allerdin
 <td colspan="2">CBSR
 </td></tr></tbody></table>
 
-**CBSR** (ControlBulkServiceRatio): In einem Frame werden sowohl Transfers für Bulk-Endpunkte als auch für Control-Endpunkte durchgeführt. Hier wird spezifiziert, wieviele Control-Endpunkte auf einen Bulk-Endpunkt kommen: 00b = 1:1, 01b = 2:1, 10b = 3:1, 11b = 4:1
+**CBSR** (ControlBulkServiceRatio): In einem Frame werden sowohl Transfers für Bulk-Endpunkte als auch für Control-Endpunkte durchgeführt. Hier wird spezifiziert, wie viele Control-Endpunkte auf einen Bulk-Endpunkt kommen: 00b = 1:1, 01b = 2:1, 10b = 3:1, 11b = 4:1
 
-**PLE** (PeriodicListEnable): Ist dieses Bit gestzt, dann arbeitet der HC die Liste mit periodischen Transfers ab (-\> HcPeriodCurrentED)
+**PLE** (PeriodicListEnable): Ist dieses Bit gesetzt, dann arbeitet der HC die Liste mit periodischen Transfers ab (-\> HcPeriodCurrentED)
 
-**IE** (IsochronousEnable): Ist dieses Bit gestzt, dann führt der HC auch Isochronous Transfers in der Liste der periodischen Transfers aus
+**IE** (IsochronousEnable): Ist dieses Bit gesetzt, dann führt der HC auch Isochronous Transfers in der Liste der periodischen Transfers aus
 
-**CLE** (ControlListEnable): Ist dieses Bit gestzt, dann arbeitet der HC die Liste mit Control Transfers ab (-\>HcControlCurrentED)
+**CLE** (ControlListEnable): Ist dieses Bit gesetzt, dann arbeitet der HC die Liste mit Control Transfers ab (-\>HcControlCurrentED)
 
-**BLE** (BulkListEnable): Ist dieses Bit gestzt, dann arbeit der HC die Liste mit Bulk Transfers ab (-\>HcBulkCurrentED)
+**BLE** (BulkListEnable): Ist dieses Bit gesetzt, dann arbeitet der HC die Liste mit Bulk Transfers ab (-\>HcBulkCurrentED)
 
 **HCFS** (HostControllerFunctionalState): Der Zustand, in den der HC den USB setzen soll: 00b=USB_RESET, 01b=USB_RESUME, 10b=USB_OPERATIONAL, 11b=USB_SUSPEND
 
@@ -203,6 +203,6 @@ Es ist dabei Aufgabe des USB-Treibers diese Listen im Arbeitsspeicher anzulegen,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10016/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10017/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
 
-<!-- MediaWiki page 1575; revision 10016; parent 9848; 2011-07-30T14:21:59Z -->
+<!-- MediaWiki page 1575; revision 10017; parent 10016; 2011-07-30T17:54:07Z -->
