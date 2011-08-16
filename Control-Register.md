@@ -48,7 +48,7 @@ Das CR3-Register enthält primär die Adresse des Page Directories, sowie 2 Flag
 
 | 31-11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | -------------- | ------------ | -------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| *Reserviert* | OSXMMEXCPT | OSFXSR | PCE | PGE | MCE | PAE | PSE | DE | TSP | PVI | VME |
+| *Reserviert* | OSXMMEXCPT | OSFXSR | PCE | PGE | MCE | PAE | PSE | DE | TSD | PVI | VME |
 
 - VME - *Virtual-8086 Mode Extension*
 - PVI - *Protected-Mode Virtual Interrupts*
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 8632; parent 8631; 2010-10-12T17:47:06Z -->
+<!-- MediaWiki page 1610; revision 10029; parent 8632; 2011-08-16T12:10:59Z -->
