@@ -26,7 +26,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
-- *CORE.\BOOT* (Eigener Bootmanager/Bootloader)
+- *CORE.\BOOT* (Eigener Bootmanager)
 - *CORE.\WAVE* (Graphische Benutzeroberfläche)
 - Speichermedien: Festplatte, CD-ROM, Diskette
 - Unterstützte Dateisysteme: *CORE.\FS*, [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), Joliet
@@ -77,6 +77,6 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10033; parent 10032; 2011-08-16T22:08:10Z -->
+<!-- MediaWiki page 2365; revision 10034; parent 10033; 2011-08-16T22:08:32Z -->
