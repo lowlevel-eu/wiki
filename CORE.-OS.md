@@ -18,45 +18,13 @@
 Coming Soon.
 
   
-CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem sehr frühen Stadium. Die Hauptziele von CORE.\OS sind, eine benutzbare Umgebung für Entwickler und Normalanwender bereitzustellen.
+CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches seit 2009 von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem frühen Stadium. Die Hauptziele von CORE.\OS sind, eine brauchbare Umgebung für Entwickler und Normalanwender bereitzustellen.
 
-  
+## Versions-History
+
+## Konzepte/Bedienung
 
 ## Features
-
-CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
-
-- *CORE.\BOOT* (Eigener Bootmanager)
-- *CORE.\WAVE* (Graphische Benutzeroberfläche)
-- Speichermedien: Festplatte, CD-ROM, Diskette
-- Unterstützte Dateisysteme: *CORE.\FS*, [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), Joliet
-- Eigene Programme:
-  - *cTRMNL* (Shell)
-  - *cTXT* (TextEditor)
-  - *cPCKG* (Paketmanager)
-  - *cSTUDIO* (Integrierte Entwicklungsumgebung mit *CORE.\SCRPT*)
-  - *cCLOUD* (Cloud-Computing-Service für Entwickler)
-  - *cWEB* (Webbrowser)
-  - Weiteres folgt...
-- *CORE.\KRNL* (Kernel):
-  - Multitasking
-  - Protected Mode
-  - Paging
-  - Physische Speicherverwaltung
-  - Interprozesskommunikation
-  - Symmetrisches Multiprocessing
-  - Weiteres folgt...
-- Treiber:
-  - Tastaturtreiber (PS/2 Tastaturen)
-  - Diskettenlaufwerkstreiber
-  - ATA/ATAPI Laufwerkstreiber (IDE-Festplatten und IDE-CD-ROM Laufwerke)
-  - Dateisystemtreiber:
-    - CORE.\FS Dateisytemtreiber
-    - ext-Dateisystemtreiber (ext2, ext3)
-    - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
-    - CDFS-Dateisystemtreiber (ISO9660, Joliet)
-  - Weiteres folgt...
-- Und vieles mehr...
 
 ## Entwicklungsumgebung
 
@@ -73,10 +41,10 @@ CORE.\OS bietet einige Features (Bzw. Soll sie bieten). Einige Beispiele:
   - Notepad++
   - Microsoft® VirtualPC 2007:SP1
   - Bochs
-  - Oracle® VirtualBox™
+  - VMware® Workstation 7
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10034; parent 10033; 2011-08-16T22:08:32Z -->
+<!-- MediaWiki page 2365; revision 10036; parent 10034; 2011-08-17T11:39:39Z -->
