@@ -12,7 +12,7 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), *CORE.\SCRPT* |
 | API: | CORE.\API |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), EXE |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Channels |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Channels, RPC |
 | Homepage |  |
 
 In Arbeit.
@@ -25,6 +25,48 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 ## Konzepte/Bedienung
 
 ## Features
+
+**Folgende Features sind bereits implementiert:**
+
+- *CORE.\KRNL* (Kernel)
+  - Präemptives Multitasking
+  - Protected Mode
+  - Paging
+  - Physische Speicherverwaltung
+- Treiber:
+  - Tastaturtreiber (PS/2 Tastaturen)
+  - Diskettenlaufwerkstreiber
+  - Dateisystemtreiber:
+    - ext-Dateisystemtreiber (ext2, ext3)
+- Eigene Programme:
+  - *cTRMNL* (Shell)
+  - *cTXT* (TextEditor)
+- Andere:
+  - CORE.\BOOT (Bootloader)
+
+**Folgende Features sind noch nicht implementiert bzw. befinden sich noch in der Planung:**
+
+- *CORE.\KRNL* (Kernel)
+  - Interprozesskommunikation
+  - Symmetrisches Multiprocessing
+- Treiber:
+  - ATA/ATAPI Laufwerkstreiber (IDE-Festplatten und IDE-CD-ROM Laufwerke)
+  - Dateisystemtreiber:
+    - *CORE.\FS*-Dateisytemtreiber (Da noch zu unausgereift.)
+    - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
+    - CDFS-Dateisystemtreiber (ISO9660, Joliet)
+- Eigene Programme:
+  - *cPCKG* (Paketmanager)
+  - *cSTUDIO* (Integrierte Entwicklungsumgebung mit *CORE.\SCRPT*)
+  - *cWEB* (Webbrowser)
+- Andere:
+  - *CORE.\WAVE* (Graphische Benutzeroberfläche)
+
+Weiteres folgt...
+
+  
+
+  
 
 ## Entwicklungsumgebung
 
@@ -45,6 +87,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10039; parent 10038; 2011-08-17T11:55:14Z -->
+<!-- MediaWiki page 2365; revision 10047; parent 10039; 2011-08-17T22:18:18Z -->
