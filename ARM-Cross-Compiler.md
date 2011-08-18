@@ -59,8 +59,12 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 - [Cross-Compiler für x86-64-Systeme](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler")
 - [Cross-Compiler für Windows (erzeugt ELF-Dateien)](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 
+## Weblinks
+
+- [summon-arm-toolchain](https://github.com/esden/summon-arm-toolchain/blob/master/summon-arm-toolchain) – Ein Script zum erstellen eines ARM-Cross-Compilers unter Linux
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9853/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 9853; parent 9852; 2011-06-17T10:11:01Z -->
+<!-- MediaWiki page 2099; revision 10049; parent 9853; 2011-08-18T07:17:31Z -->
