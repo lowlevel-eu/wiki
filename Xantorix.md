@@ -34,7 +34,7 @@ Anmerkung: Da die Entwicklung der neuen Versionen voranschreitet und die bisheri
 
 Folgende Versionen sind geplant:
 
-    August 2011    : Xantorix 0.3.0
+    September 2011 : Xantorix 0.3.0
     Dezember 2011  : Xantorix 0.4.0
 
 **Xantorix 0.3.0:**  
@@ -66,6 +66,6 @@ Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Versio
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9744/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10069/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1453/index.html)
 
-<!-- MediaWiki page 1453; revision 9744; parent 9743; 2011-05-07T11:43:12Z -->
+<!-- MediaWiki page 1453; revision 10069; parent 9744; 2011-08-20T20:47:49Z -->
