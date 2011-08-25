@@ -1,14 +1,10 @@
 # Open Host Controller Interface
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
 - Die Liste der Register vervollständigen (Spezifikation: Seite 137ff)
 - Isochronous Transfers (Spezifikation: Seite 39ff und 48ff)
-- Initialisierung des HCs
+- Initialisierung des HCs (Seite 52ff)
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
@@ -638,7 +634,7 @@ Die Organisation der Datentransfers erfolgt über zwei Datenstrukturen, die übe
 
 //Aufbau ED / TD
 
-Es ist dabei Aufgabe des USB-Treibers diese Listen im Arbeitsspeicher anzulegen, wobei beide Deskriptoren an 16 Byte Grenzen im Arbeitsspeicher ausgerichtet sein müssen. Außerdem muss der Treiber die Felder HcBulkHeadED, HcControlHeadED sowie die Bits CLE/BLE im Feld HcControl entsprechend zu setzen. Es ist dann Aufgabe des HCs die Listen abzuarbeiten und die Felder HcBulkCurrentED und HcControlCurrentED zu setzen. Außerdem entfernt er die TDs und fügt sie in die sogenannte Done-Liste ein, auf die HcDoneHead zeigt.
+Es ist dabei Aufgabe des USB-Treibers diese Listen im Arbeitsspeicher anzulegen, wobei beide Deskriptoren an 16 Byte Grenzen im Arbeitsspeicher ausgerichtet sein müssen. Außerdem muss der Treiber die Felder *HcBulkHeadED*, *HcControlHeadED* sowie die Bits *CLE/BLE* im Feld *HcControl* sowie *CLF/BLF* in *HcCommandStatus* entsprechend zu setzen. Es ist dann Aufgabe des HCs die Listen abzuarbeiten und die Felder *HcBulkCurrentED* und HcControlCurrentED zu setzen. Außerdem entfernt er die TDs und fügt sie in die sogenannte Done-Liste ein, auf die *HcDoneHead* zeigt.
 
 #### Organisation von Interrupt Transfers
 
@@ -646,7 +642,21 @@ Die Organisation von Interrupt Transfers funktioniert über 32 Interrupt-Transfe
 
 #### Organisation von Isochronous Transfers
 
+//TODO
+
 ## Initialisierung des HCs
+
+### Finden eines OHCI kompatiblen Host Controller
+
+Bei PCs sind die Host Controller über den \[\[PCI\]-Bus mit der CPU verbunden. Man muss also die Konfigurationsadressräume nach einem Geräte mit dem Classcode 0x0C und der Subclass 0x03 durchsuchen. Weitere Informationen dazu im Artikel zum [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI"). Das DWord an Offset 0x10 im Konfigurationsadressraum enthält die Basisadresse der Register. Bei diesen sollte man nun zuerst das *HcRevision* Feld überprüfen, welches den Wert 0x10 enthalten muss. Andernfalls ist der HC mit dieser Spezifikation möglicherweise nicht kompatibel.
+
+### Kontrolle über den Host Controller übernehmen
+
+Nun muss der [SMI](https://github.com/lowlevel-eu/wiki/wiki/SMI "SMI") deaktiviert werden, der momentan die Steuerung des HCs übernimmt. Dafür muss nur das OCR-Bit in HcCommandStatus gesetzt werden. Wenn der SMI erfolgreich deaktiviert wurde, setzt der HC das IR-Bit in HcControl. Sollte sich die CPU im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") befinden, dann ist möglicherweise der [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") USB-Treiber aktiv, der ebenfalls deaktiviert werden muss.
+
+### Host Controller zurücksetzen
+
+### Host Controller einrichten
 
 ## Weblinks
 
@@ -654,6 +664,6 @@ Die Organisation von Interrupt Transfers funktioniert über 32 Interrupt-Transfe
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10070/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
 
-<!-- MediaWiki page 1575; revision 10070; parent 10017; 2011-08-21T14:02:43Z -->
+<!-- MediaWiki page 1575; revision 10075; parent 10070; 2011-08-25T18:15:25Z -->
