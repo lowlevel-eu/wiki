@@ -1,5 +1,11 @@
 # CORE.\\OS
 
+**Achtung!**
+
+**Die Homepage befindet sich in Arbeit, leider verzögert mein Privatleben die Fertigstellung drastisch! :(**  
+**Trotzdem werde ich wenigstens versuchen regelmäßig den Artikel zu füllen und fertigzustellen.**  
+**PS: CORE.\OS wird wahrscheinlich erst veröffentlicht, wenn es aus der Betaphase draußen ist! (Ich hab ja nicht mal die GUI richtig fertig...)**
+
 | CORE.\OS |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
@@ -35,11 +41,14 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
   - Protected Mode
   - Paging
   - Physische Speicherverwaltung
+  - Interprozesskommunikation
 - Treiber:
   - Tastaturtreiber (PS/2 Tastaturen)
   - Diskettenlaufwerkstreiber
+  - ATA/ATAPI Laufwerkstreiber (IDE-Festplatten und IDE-CD-ROM Laufwerke)
   - Dateisystemtreiber:
     - ext-Dateisystemtreiber (ext2, ext3)
+    - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
 - Eigene Programme:
   - *coreTERMINAL* (Shell)
   - *coreTXT* (Texteditor)
@@ -48,13 +57,10 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 **Folgende Features sind noch nicht implementiert bzw. befinden sich noch in der Entwicklung:**
 
-- - Interprozesskommunikation
-  - Symmetrisches Multiprocessing
+- Symmetrisches Multiprocessing
 - Treiber:
-  - ATA/ATAPI Laufwerkstreiber (IDE-Festplatten und IDE-CD-ROM Laufwerke)
   - Dateisystemtreiber:
     - *CORE.\FS*-Dateisytemtreiber (Da noch zu unausgereift.)
-    - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
     - CDFS-Dateisystemtreiber (ISO9660, Joliet)
 - Eigene Programme:
   - *corePACKAGE* (Paketmanager)
@@ -90,6 +96,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10094/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10093; parent 10092; 2011-08-29T20:54:16Z -->
+<!-- MediaWiki page 2365; revision 10094; parent 10093; 2011-08-29T21:06:03Z -->
