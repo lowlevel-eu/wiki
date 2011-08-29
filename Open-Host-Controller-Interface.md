@@ -4,7 +4,8 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 
 - Die Liste der Register vervollständigen (Spezifikation: Seite 137ff)
 - Isochronous Transfers (Spezifikation: Seite 39ff und 48ff)
-- Initialisierung des HCs (Seite 52ff)
+- Alignment der verschiedenen Datenstrukturen!
+- Vielleicht noch ein paar nette Flowcharts, wie man Transfers durchführt?
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
@@ -590,9 +591,20 @@ Wenn der HC einen TD abgearbeitet hat, dann hängt er ihn an die Done-Liste an u
 #### Root-Hub-Register
 
 - **HcRhDescriptorA** (0x48)
+
+//TODO
+
 - **HcRhDescriptorB** (0x4C)
+
+//TODO
+
 - **HcRhStatus** (0x50)
+
+//TODO
+
 - **HcRhPortStatus**\[1\] (0x54)
+
+//TODO
 
 ### Host Controller Communications Area (HCCA)
 
@@ -628,13 +640,156 @@ Der HC teilt die einzelnen Frames in drei Abschnitte ein, in denen er die unters
 
 #### Organisation von nicht-periodischen Transfers
 
-Die Organisation der Datentransfers erfolgt über zwei Datenstrukturen, die über einfach verkettete Listen miteinander verknüpft sind. Die Datenstrukturen sind zum einen der Endpoint Descriptor (ED) und zum anderen der Transfer Descriptor (TD). Die EDs beschreiben genau einen Endpunkt einer Funktion (d.h. eines USB-Geräts). Die TDs beschreiben einen Transfer, der einem Endpunkt zugeordnet wird. Die EDs sind in einfach verketteten Listen organisiert. Von diesen Listen gibt es zwei für die nicht-periodischen, d.h. Bulk und Control Transfers. Die Zeiger auf die Anfänge dieser Listen sind in den Registern HcBulkHeadED sowie HcControlHeadED gespeichert. Jeder ED enthält wiederum einen Zeiger auf den Kopf einer verketteten Liste von TDs, die für diesen Endpunkt ausgeführt werden sollen.
+Die Organisation der Datentransfers erfolgt über zwei Datenstrukturen, die über einfach verkettete Listen miteinander verknüpft sind. Die Datenstrukturen sind zum einen der Endpoint Descriptor (ED) und zum anderen der Transfer Descriptor (TD). Die EDs beschreiben genau einen Endpunkt einer Funktion (d.h. eines USB-Geräts). Die TDs beschreiben einen Transfer, der einem Endpunkt zugeordnet wird. Die EDs sind in einfach verketteten Listen organisiert. Von diesen Listen gibt es zwei für die nicht-periodischen, d.h. Bulk und Control Transfers. Die Zeiger auf die Anfänge dieser Listen sind in den Registern HcBulkHeadED sowie HcControlHeadED gespeichert. Jeder ED enthält wiederum einen Zeiger auf den Kopf einer verketteten Liste von TDs, die für diesen Endpunkt ausgeführt werden sollen, zB:
 
-//BILD
-
-//Aufbau ED / TD
+    HcBulkHeadED
+     |
+     V
+     ED --> ED --> ED --> ED --> ED --> ED
+     |       |            |      |
+     V       V            V      V
+     TD      TD           TD     TD
+             |                   |
+             V                   V
+             TD                  TD
+                                 |
+                                 V
+                                 TD
 
 Es ist dabei Aufgabe des USB-Treibers diese Listen im Arbeitsspeicher anzulegen, wobei beide Deskriptoren an 16 Byte Grenzen im Arbeitsspeicher ausgerichtet sein müssen. Außerdem muss der Treiber die Felder *HcBulkHeadED*, *HcControlHeadED* sowie die Bits *CLE/BLE* im Feld *HcControl* sowie *CLF/BLF* in *HcCommandStatus* entsprechend zu setzen. Es ist dann Aufgabe des HCs die Listen abzuarbeiten und die Felder *HcBulkCurrentED* und HcControlCurrentED zu setzen. Außerdem entfernt er die TDs und fügt sie in die sogenannte Done-Liste ein, auf die *HcDoneHead* zeigt.
+
+##### Aufbau EndpointDescriptor
+
+<table>
+<tbody><tr>
+<th>Bit</th>
+<th>31</th>
+<th>30</th>
+<th>29</th>
+<th>28</th>
+<th>27</th>
+<th>26</th>
+<th>25</th>
+<th>24</th>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>DWORD 1</td>
+<td colspan="6"><i>??</i></td>
+<td colspan="11">MPS</td>
+<td>F</td>
+<td>K</td>
+<td>S</td>
+<td colspan="2">D</td>
+<td colspan="4">EN</td>
+<td colspan="7">FA
+</td></tr>
+<tr>
+<td>DWORD 2</td>
+<td colspan="28">TD Queue Tail Pointer (TailP)</td>
+<td colspan="4"><i>??</i>
+</td></tr>
+<tr>
+<td>DWORD 3</td>
+<td colspan="28">TD Queue Head Pointer (HeadP)</td>
+<td colspan="2">0</td>
+<td>C</td>
+<td>H
+</td></tr>
+<tr>
+<td>DWORD 4</td>
+<td colspan="28">Next Endpoint Descriptor (NextED)</td>
+<td colspan="4"><i>??</i>
+</td></tr></tbody></table>
+
+//TODO: Beschreibung der Felder
+
+##### Aufbau TransferDescriptor
+
+<table>
+<tbody><tr>
+<th>Bit</th>
+<th>31</th>
+<th>30</th>
+<th>29</th>
+<th>28</th>
+<th>27</th>
+<th>26</th>
+<th>25</th>
+<th>24</th>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td>DWORD 1</td>
+<td colspan="4">CC</td>
+<td colspan="2">EC</td>
+<td colspan="2">T</td>
+<td colspan="3">DI</td>
+<td colspan="2">DP</td>
+<td>R</td>
+<td colspan="18"><i>??</i>
+</td></tr>
+<tr>
+<td>DWORD 2</td>
+<td colspan="32">Current Buffer Pointer (CBP)
+</td></tr>
+<tr>
+<td>DWORD 3</td>
+<td colspan="28">Next TD (NextTD)</td>
+<td colspan="4">0
+</td></tr>
+<tr>
+<td>DWORD 4</td>
+<td colspan="32">Buffer End (BE)
+</td></tr></tbody></table>
+
+//TODO: Beschreibung der Felder
 
 #### Organisation von Interrupt Transfers
 
@@ -656,7 +811,17 @@ Nun muss der [SMI](https://github.com/lowlevel-eu/wiki/wiki/SMI "SMI") deaktivie
 
 ### Host Controller zurücksetzen
 
+Vor dem Zurücksetzen muss der Wert des Registers *HcFmInterval* gesichert werden. Dann wird das HCR Bit in *HcCommandStatus* gesetz, um den HC zurückzusetzen. Der HC darf nicht länger als 10µs für den Reset benötigen, diese Zeit sollte der Treiber warten.
+
 ### Host Controller einrichten
+
+1.  Die HCCA anlegen, ihre Adresse in HcHCCA eintragen
+2.  CLE/BLE/IE/PLE in *HcControl' löschen, andernfalls müssen die entsprechenden Listen angelegt werden!*
+3.  Speicher für die Done-Liste reservieren und deren physikalische Adresse in HcDoneHead eintragen
+4.  *HcPeriodicStart* auf 90% vom ursprünglichen Wert von *HcFmInterval* setzen
+5.  In *HcInterruptEnable* gewünschte Interrupts aktivieren
+6.  HCFS in *HcControl* auf 10b (USB_OPERATIONAL) setzen
+7.  Innerhalb von 1ms beginnt der HC nun SOF-Tokens zu senden, womit er auch mit Transfers beginnt.
 
 ## Weblinks
 
@@ -664,6 +829,6 @@ Nun muss der [SMI](https://github.com/lowlevel-eu/wiki/wiki/SMI "SMI") deaktivie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
 
-<!-- MediaWiki page 1575; revision 10075; parent 10070; 2011-08-25T18:15:25Z -->
+<!-- MediaWiki page 1575; revision 10089; parent 10075; 2011-08-29T15:36:07Z -->
