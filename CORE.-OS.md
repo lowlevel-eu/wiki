@@ -63,6 +63,10 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 - Andere:
   - *CORE.\WAVE* (Graphische Benutzeroberfläche)
 
+**Über folgende Features wird nachgedacht, sie zu implementieren:**
+
+- CDI-Integration
+
 **Weiteres folgt...**
 
   
@@ -86,6 +90,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10091/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10092/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10091; parent 10090; 2011-08-29T20:50:47Z -->
+<!-- MediaWiki page 2365; revision 10092; parent 10091; 2011-08-29T20:53:34Z -->
