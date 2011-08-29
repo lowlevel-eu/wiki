@@ -30,7 +30,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 **Folgende Features sind bereits implementiert:**
 
-- *CORE.\KRNL* (Kernel)
+- *CORE.\KERNEL* (Kernel)
   - Präemptives Multitasking
   - Protected Mode
   - Paging
@@ -41,15 +41,14 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
   - Dateisystemtreiber:
     - ext-Dateisystemtreiber (ext2, ext3)
 - Eigene Programme:
-  - *cTRMNL* (Shell)
-  - *cTXT* (TextEditor)
+  - *coreTERMINAL* (Shell)
+  - *coreTXT* (Texteditor)
 - Andere:
   - CORE.\BOOT (Bootloader)
 
 **Folgende Features sind noch nicht implementiert bzw. befinden sich noch in der Planung:**
 
-- *CORE.\KRNL* (Kernel)
-  - Interprozesskommunikation
+- - Interprozesskommunikation
   - Symmetrisches Multiprocessing
 - Treiber:
   - ATA/ATAPI Laufwerkstreiber (IDE-Festplatten und IDE-CD-ROM Laufwerke)
@@ -58,9 +57,9 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
     - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
     - CDFS-Dateisystemtreiber (ISO9660, Joliet)
 - Eigene Programme:
-  - *cPCKG* (Paketmanager)
-  - *cSTUDIO* (Integrierte Entwicklungsumgebung mit *CORE.\SCRPT*)
-  - *cWEB* (Webbrowser)
+  - *corePACKAGE* (Paketmanager)
+  - *coreSTUDIO* (Integrierte Entwicklungsumgebung mit *CORE.\SCRPT*)
+  - *coreWEB* (Webbrowser)
 - Andere:
   - *CORE.\WAVE* (Graphische Benutzeroberfläche)
 
@@ -87,6 +86,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10067/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10090/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10067; parent 10066; 2011-08-18T20:19:12Z -->
+<!-- MediaWiki page 2365; revision 10090; parent 10067; 2011-08-29T20:50:05Z -->
