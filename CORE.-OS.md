@@ -30,7 +30,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ## Hintergrundstory
 
-## Konzepte/Bedienung
+## Konzepte
 
 ## Features
 
@@ -96,6 +96,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10097; parent 10096; 2011-08-29T21:38:22Z -->
+<!-- MediaWiki page 2365; revision 10098; parent 10097; 2011-08-29T21:40:32Z -->
