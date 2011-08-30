@@ -1,5 +1,11 @@
 # A / OS PM
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Keine Website, letzter Edit des Autors von Mitte 2008, wird scheinbar nicht mehr weiterentwickelt --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:40, 30. Aug. 2011 (CEST)
+
 A / OS PM ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann. Es gab einen Vorgänger (A / OS RM) der im RealMode lief und nur zu testzwecken diente.
 
 | A / OS PM |  |
@@ -62,6 +68,6 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10101/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1451/index.html)
 
-<!-- MediaWiki page 1451; revision 5271; parent 4884; 2009-08-06T15:26:14Z -->
+<!-- MediaWiki page 1451; revision 10101; parent 5271; 2011-08-30T09:40:39Z -->
