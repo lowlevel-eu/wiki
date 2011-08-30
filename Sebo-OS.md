@@ -1,5 +1,11 @@
 # Sebo OS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Es gibt hier zwar keine offizielle Schöpfungshöhe im Wik, aber es wird scheinbar nicht weiter entwickelt, die erste Version ist laut Blog seit ca. einem Jahr "fertig", keine Download-Möglichkeit, keine großartige Beschreibung...--[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:50, 30. Aug. 2011 (CEST)
+
 | Sebo OS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -36,6 +42,6 @@ Das OS wird in einer 7-Zip Datei sein, so dass, Linux und Windows User das öffn
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2338/index.html)
 
-<!-- MediaWiki page 2338; revision 8898; parent 8897; 2010-11-14T11:58:23Z -->
+<!-- MediaWiki page 2338; revision 10106; parent 8898; 2011-08-30T09:50:28Z -->
