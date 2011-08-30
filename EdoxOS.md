@@ -1,5 +1,11 @@
 # EdoxOS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Öhm ja, schon fast selbsterklärend - es wird sich erst auf "EdoxDOS" konzentriert, keine Homepage, keine sichtbaren Ergebnisse...--[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:45, 30. Aug. 2011 (CEST)
+
 | EdoxOS |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -22,6 +28,6 @@ In Arbeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10103/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2317/index.html)
 
-<!-- MediaWiki page 2317; revision 9378; parent 9205; 2011-01-25T00:13:53Z -->
+<!-- MediaWiki page 2317; revision 10103; parent 9378; 2011-08-30T09:45:35Z -->
