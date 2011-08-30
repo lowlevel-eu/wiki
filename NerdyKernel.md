@@ -1,5 +1,11 @@
 # NerdyKernel
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Najo, hier sollte mal bald Content hin...scheint so, als wenn es nicht weiterentwickelt wird. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:47, 30. Aug. 2011 (CEST)
+
 | nerdy-kernel |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -20,6 +26,6 @@ Weitere Informationen folgen demnaechst, sobald ich einen neuen Patch in das Rep
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9783/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 9783; parent 9782; 2011-05-13T19:49:02Z -->
+<!-- MediaWiki page 1816; revision 10104; parent 9783; 2011-08-30T09:47:18Z -->
