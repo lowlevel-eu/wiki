@@ -1,5 +1,11 @@
 # Quåko OS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Scheint nicht mehr weiterentwickelt zu werden --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:48, 30. Aug. 2011 (CEST)
+
 | Quåko OS |  |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -21,6 +27,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2367/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10105/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2367/index.html)
 
-<!-- MediaWiki page 2367; revision 9181; parent 9167; 2010-12-30T10:59:54Z -->
+<!-- MediaWiki page 2367; revision 10105; parent 9181; 2011-08-30T09:48:56Z -->
