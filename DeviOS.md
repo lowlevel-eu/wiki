@@ -1,5 +1,11 @@
 # DeviOS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:18, 10. Feb. 2011 (CET)
+
 | DeviOS |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/2b5401fd0d2f6ebd01f0.jpg" width="221" height="78" alt="DeviOS.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/2b5401fd0d2f6ebd01f0.jpg) |  |
@@ -86,6 +92,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8981/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 8981; parent 8979; 2010-11-27T07:31:48Z -->
+<!-- MediaWiki page 2349; revision 10099; parent 8981; 2011-08-30T09:39:26Z -->
