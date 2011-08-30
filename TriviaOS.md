@@ -1,5 +1,11 @@
 # TriviaOS
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Recht interessantes Projekt, aber keine Homepage, letzter Page-Edit aus 2008, keine Download-Möglichkeit, wird wohl nicht mehr weiterentwickelt --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:52, 30. Aug. 2011 (CEST)
+
 | TriviaOS |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 |  |  |
@@ -71,6 +77,6 @@ Das nächste Release wird in etwa die folgenden Features beinhalten:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10107/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1448/index.html)
 
-<!-- MediaWiki page 1448; revision 5296; parent 3426; 2009-08-06T15:33:03Z -->
+<!-- MediaWiki page 1448; revision 10107; parent 5296; 2011-08-30T09:52:13Z -->
