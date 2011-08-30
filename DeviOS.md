@@ -4,7 +4,7 @@
 
 Dieser Artikel wurde zum Löschen vorgeschlagen.
 
-Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:18, 10. Feb. 2011 (CET)
+Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:39, 30. Aug. 2011 (CEST)
 
 | DeviOS |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -92,6 +92,6 @@ Bald verfügbar !
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10100/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2349/index.html)
 
-<!-- MediaWiki page 2349; revision 10099; parent 8981; 2011-08-30T09:39:26Z -->
+<!-- MediaWiki page 2349; revision 10100; parent 10099; 2011-08-30T09:39:44Z -->
