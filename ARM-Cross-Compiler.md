@@ -6,7 +6,7 @@ Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren ba
 
 ## Vorbereitungen
 
-Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.21.tar.gz) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.6.0/gcc-core-4.6.0.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 11. Mai 2011) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
+Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.21.1a.tar.bz2) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.6.0/gcc-core-4.6.0.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 11. Mai 2011) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
 Es werden nun ein paar Variablen erstellt:
 
@@ -65,6 +65,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10049/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10114/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10049; parent 9853; 2011-08-18T07:17:31Z -->
+<!-- MediaWiki page 2099; revision 10114; parent 10049; 2011-08-31T17:00:10Z -->
