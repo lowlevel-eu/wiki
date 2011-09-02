@@ -262,10 +262,10 @@ An diesem Punkt arbeitet der UHC die Frameliste und alle verlinkten Warteschlang
 
 ## Weblinks
 
-- [Universal Host Controller Interface (UHCI) Design Guide Revision 1.1](http://www.intel.com/technology/usb/uhci11d.pdf)
+- [Universal Host Controller Interface (UHCI) Design Guide Revision 1.1](http://download.intel.com/technology/usb/UHCI11D.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10116/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1576/index.html)
 
-<!-- MediaWiki page 1576; revision 7318; parent 7292; 2010-03-07T22:36:46Z -->
+<!-- MediaWiki page 1576; revision 10116; parent 7318; 2011-09-02T15:50:19Z -->
