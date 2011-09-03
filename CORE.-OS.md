@@ -30,7 +30,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ## Hintergrundstory
 
-## Konzepte
+## Versionierungsprinzip
 
 ## Features
 
@@ -50,7 +50,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
     - ext-Dateisystemtreiber (ext2, ext3)
     - FAT-Dateisystemtreiber (FAT12/FAT16/FAT32)
 - Eigene Programme:
-  - *coreTERMINAL* (Shell)
+  - *CORE.\TERMINAL* (Shell)
   - *coreTXT* (Texteditor)
 - Andere:
   - CORE.\BOOT (Bootloader)
@@ -67,7 +67,7 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
   - *coreSTUDIO* (Integrierte Entwicklungsumgebung mit *coreSCRIPT*)
   - *coreWEB* (Webbrowser)
 - Andere:
-  - *CORE.\WAVE* (Graphische Benutzeroberfläche)
+  - *CORE.\COSMOS* (Graphische Benutzeroberfläche)
 
 **Über folgende Features wird nachgedacht:**
 
@@ -96,6 +96,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10098; parent 10097; 2011-08-29T21:40:32Z -->
+<!-- MediaWiki page 2365; revision 10117; parent 10098; 2011-09-03T20:32:26Z -->
