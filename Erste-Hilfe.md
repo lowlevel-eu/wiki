@@ -275,10 +275,10 @@ Dann noch das Linkerscript modifizieren und fertig:
 
 ### Bochs verabschiedet sich mit einer Endlosschleife der Meldung: "math_abort: MSDOS compatibility FPU exception"
 
-Dieser Fehler tritt auf, wenn dein Code zur Berechnung von Fleißkommazahlen auf die [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU") zugreift, z.B. bei der Verwendung des Daentyps "float". Wenn du vorher die FPU nicht initialisiert hast, dann tritt in Bochs der obige Fehler auf. Die Behebung des Problems lässt sich mit folgendem einfachen Assembler-Befehl beheben, den du nur vor der Verwwendung der FPU aufrufen musst: \<asm\>finit\</asm\> Achtung: Falls mehrere Prozesse die FPU verwenden, musst du die Inhalte der FPU-Register vor dem Task-Switch sichern!
+Dieser Fehler tritt auf, wenn dein Code zur Berechnung von Fleißkommazahlen auf die [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU") zugreift, z.B. bei der Verwendung des Daentyps "float". Wenn du vorher die FPU nicht initialisiert hast, dann tritt in Bochs der obige Fehler auf. Die Behebung des Problems lässt sich mit folgendem einfachen Assembler-Befehl beheben, den du nur vor der ersten Verwendung der FPU aufrufen musst: \<asm\>finit\</asm\> Achtung: Falls mehrere Prozesse die FPU verwenden, musst du die Inhalte der FPU-Register während dem Task-Switch mit sichern und wiederherstellen! Das lässt sich aber durch Nutzung des TS-Flag im CR0 optimieren.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10119/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 10118; parent 8018; 2011-09-05T13:38:00Z -->
+<!-- MediaWiki page 2263; revision 10119; parent 10118; 2011-09-05T18:31:24Z -->
