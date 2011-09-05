@@ -53,7 +53,7 @@ Und irgendwo in *ClearScreen* schmiert dann der Code ab, weil der Stack eben nac
 
 Es kann auch durchaus vorkommen das ein Sektor der Diskette, die zu zum Testen verwendest, defekt ist. Dieser Fehler ist besonders dann schwer zu finden, wenn man sein System primär auf realer Hardware testet.
 
-## C-spezifische Fehler
+## C-bezogene Fehler
 
 ### volatile
 
@@ -100,8 +100,6 @@ Und wieder macht uns der Compiler ein schönes Codekonstrukt kaputt, weil er str
 
 ### Nur ein kleines Zeichen…
 
-**Soll diese Passage im Artikel bleiben?**
-
 Die folgenden Fehler sind eigentlich zu banal für diesen Artikel. Leider passieren sie aber doch zu häufig. Außerdem überliest man sie bei längeren Codepassagen schneller, als einem lieb ist:
 
 #### „==“ ist ungleich „=“
@@ -118,7 +116,7 @@ Man sollte auch aufpassen, dass Zahlen mit führenden Nullen im Oktalsystem inte
 
 Ganz einfache Aufgabe: Alle Bits in einer Maske umkippen, also ein bitweise NOT. Wie hieß nochmal der Operator? Achja: \<c\>int gekippt = !0xFA;\</c\> Leider falsch geraten. Das Ausrufezeichen ist kein bitweises, sondern ein logisches Nicht und liefert nur Null (false) und Eins (true), egal welchen Operanden man ihm liefert. Zweiter Versuch: \<c\>int gekippt = -0xFA;\</c\> Nein, wieder falsch. Das Minuszeichen negiert den Wert doch nur, bildet also das Zweierkomplement. Richtig gewsen wäre: \<c\>int gekippt = ~0xFA;\</c\> Diese Operation liefert das gewünschte 0x05.
 
-## C++-spezifische Fehler
+## C++-bezogene Fehler
 
 ### Designated initializers
 
@@ -157,7 +155,7 @@ Man kann allerdings den gleichen Effekt entweder durch Weglassen des Feldnamens 
 
 gdt_register gdtp(GDT_ENTRIES \* 8 - 1, gdt); \</cpp\>
 
-## Linkerspezifische Fehler
+## Linker-bezogene Fehler
 
 ### Undefined reference to \`funktionsname'
 
@@ -273,8 +271,14 @@ Dann noch das Linkerscript modifizieren und fertig:
      }
     }
 
+## Emulator-bezogene Fehler
+
+### Bochs verabschiedet sich mit einer Endlosschleife der Meldung: "math_abort: MSDOS compatibility FPU exception"
+
+Dieser Fehler tritt auf, wenn dein Code zur Berechnung von Fleißkommazahlen auf die [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU") zugreift, z.B. bei der Verwendung des Daentyps "float". Wenn du vorher die FPU nicht initialisiert hast, dann tritt in Bochs der obige Fehler auf. Die Behebung des Problems lässt sich mit folgendem einfachen Assembler-Befehl beheben, den du nur vor der Verwwendung der FPU aufrufen musst: \<asm\>finit\</asm\> Achtung: Falls mehrere Prozesse die FPU verwenden, musst du die Inhalte der FPU-Register vor dem Task-Switch sichern!
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8018/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2263/index.html)
 
-<!-- MediaWiki page 2263; revision 8018; parent 8005; 2010-07-26T08:39:26Z -->
+<!-- MediaWiki page 2263; revision 10118; parent 8018; 2011-09-05T13:38:00Z -->
