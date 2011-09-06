@@ -38,12 +38,8 @@ KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Da ich nicht v
 - FAT 16/32 und später ext2/3 Treiber
 - USB-, PCI & Internetkarten-Treiber
 
-## Screenshots
-
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/72e85beed5777fed1914.png" width="720" height="400" alt="Irius.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/72e85beed5777fed1914.png)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10122/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2164/index.html)
 
-<!-- MediaWiki page 2164; revision 10122; parent 10120; 2011-09-06T11:06:17Z -->
+<!-- MediaWiki page 2164; revision 10123; parent 10122; 2011-09-06T11:06:57Z -->
