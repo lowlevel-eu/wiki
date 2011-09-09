@@ -8,7 +8,7 @@
 
 Unter Linux sollte das SYSLINUX aus dem Repository der Distribution verwendet werden. Für Windows gibt es Binaries in der offiziellen Source Code Distribution in den Verzeichnissen *win32\syslinux.exe* und *win64\syslinux64.exe* (für 32- bzw. 64-Bit-Windows).
 
-Um mittels SYSLINUX ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformes Betriebssystem zu booten wird das Modul *mboot.c32* benötigt. Dieses ist in der offiziellen Source Code Distribution (siehe Weblinks) mitgeliefert und befindet sich im Verzeichnis *com32/mboot*.
+Um mittels SYSLINUX ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformes Betriebssystem zu booten wird das Modul *mboot.c32* benötigt. Dieses ist in der offiziellen Source Code Distribution mitgeliefert und befindet sich im Verzeichnis *com32/mboot*.
 
 Außerdem muss eine Konfigurationsdatei namens *syslinux.cfg* erstellt werden, die wie folgt aussehen könnte: `DEFAULT myos LABEL myos `
 
@@ -39,6 +39,6 @@ Nur der letzte Schritt muss wiederholt werden, wenn das Image aktualisiert werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10135/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2470/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2470/index.html)
 
-<!-- MediaWiki page 2470; revision 10135; parent 10133; 2011-09-09T17:19:20Z -->
+<!-- MediaWiki page 2470; revision 10136; parent 10135; 2011-09-09T17:19:31Z -->
