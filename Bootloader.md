@@ -30,6 +30,7 @@ Andere Dinge sind allerdings nicht standardisiert:
 - [LILO](https://github.com/lowlevel-eu/wiki/wiki/LILO "LILO") ([Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") Loader)
 - NTLDR ([Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") NT Loader)
 - BOOTMGR (Windows Vista Loader)
+- [SYSLINUX](https://github.com/lowlevel-eu/wiki/wiki/SYSLINUX "SYSLINUX")
 
 ## Weiterführende Artikel
 
@@ -37,6 +38,6 @@ Obwohl davon abgeraten wird, kann man seinen Bootloader natürlich auch selbst p
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10134/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1477/index.html)
 
-<!-- MediaWiki page 1477; revision 9460; parent 7719; 2011-02-05T23:36:19Z -->
+<!-- MediaWiki page 1477; revision 10134; parent 9460; 2011-09-09T15:21:26Z -->
