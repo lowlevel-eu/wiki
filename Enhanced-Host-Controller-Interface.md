@@ -6,12 +6,9 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Das EHCI ist das Interface für [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-2.0-Hostcontroller.
 
-Eine konkrete Umsetzung der EHCI-Spezifikation findet man unter anderem in folgenden Betriebssystemen:
+## Benutzung mit QEMU
 
-- PrettyOS (Hobby-OS)
-- [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") (sehr umfassend).
-
-Die Betriebssysteme implementieren nicht die Hardware-Spezifikation sondern lediglich die Treiber.
+Ab Version 0.15 unterstützt [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") einen virtuellen EHCI-Controller. Eine mitgelieferte Konfigurationsdatei, die einen EHCI-Controller mit UHCI-Companions erstellt, wie man ihn in echter Hardware üblicherweise antrifft, kann mit *-readconfig docs/ich9-ehci-uhci.cfg* benutzt werden.
 
 ## Weblinks
 
@@ -19,6 +16,6 @@ Die Betriebssysteme implementieren nicht die Hardware-Spezifikation sondern ledi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1577/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1577/index.html)
 
-<!-- MediaWiki page 1577; revision 10128; parent 10127; 2011-09-08T06:37:44Z -->
+<!-- MediaWiki page 1577; revision 10137; parent 10128; 2011-09-10T12:32:50Z -->
