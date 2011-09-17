@@ -79,12 +79,12 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ## Entwicklungsumgebung
 
-- Hardware:
+- **Hardware:**
   - Intel® Core™ i7-980X: Extreme Edition @ 3,33 GHz
   - 8GB DDR3-SDRAM
   - nVidia GeForce GTX 580
   - 128GB SSD & 2TB HDD
-- Software:
+- **Software**:
   - Microsoft® Windows® 7: Ultimate (64Bit)
   - Microsoft® VisualStudio™: Ultimate
   - Microsoft® Windows-Debugger x86/x64
@@ -96,6 +96,6 @@ CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betri
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10117/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2365/index.html)
 
-<!-- MediaWiki page 2365; revision 10117; parent 10098; 2011-09-03T20:32:26Z -->
+<!-- MediaWiki page 2365; revision 10139; parent 10117; 2011-09-17T13:41:44Z -->
