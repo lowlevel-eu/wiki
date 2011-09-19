@@ -4,8 +4,8 @@
 | ------------------------ | ----------------------------------------------- |
 | Name: | VirtualBox |
 | Entwickler: | Oracle (ehemals Innotek & Sun) |
-| Akt. Version: | 4.0.8<br>(Stand 26.06.2011) |
-| Lizenz: | Proprietär, GPL 2 (2 Versionen) |
+| Akt. Version: | 4.1.2<br>(Stand 19.09.2011) |
+| Lizenz: | GPL 2, Proprietär (Extension Packs) |
 | Betriebssystem(e): | Linux, Windows, OS X, Solaris |
 | Virtualisiertes System |  |
 | Plattform: | x86, x86-64 |
@@ -15,15 +15,16 @@
 
 <http://www.virtualbox.org/>
 
-**VirtualBox**, auch bekannt als **VirtuaBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Diese Duale Lizenzierung wurde auch nach der Übernahme durch Oracle weitergeführt. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
+**VirtualBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Nach der Übernahme durch Oracle wurden beide Versionen zu einer Open-Source-Version zusammengeführt und proprietäre Erweiterungen als "Extension Packs" angeboten. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
 
 ## Besondere Features
 
 - iSCSI für Blockgeräte
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
-- Gastunsterstützung um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
+- Gastunterstützung, um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
 - OpenGL-Unterstützung (derzeit nur für die 32-Bit-Versionen von Windows XP und Windows Vista sowie Linux und Solaris)
 - Experimenteller Support für [EFI (Extensible Firmware Interface)](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "Extensible Firmware Interface")
+- Debugger
 
 Befehlssatzerweiterungen für Gäste:
 
@@ -33,6 +34,7 @@ Befehlssatzerweiterungen für Gäste:
 
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
 - I/O APIC
+- VGA- und VBE-kompatible Grafikkarte
 - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
 - IDE Controller:
   - PIIX3
@@ -46,15 +48,65 @@ Befehlssatzerweiterungen für Gäste:
   - Intel PRO/1000 T Server
 - [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Controller:
   - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0)
+  - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface")
 - Serielle Schnittstellen (max. 2)
+
+## Debugger
+
+Seit einiger Zeit bietet VirtualBox einen integrierten Debugger, der Informationen zum Zustand der VM, der emulierten CPU, der emulierten Geräte ausgeben kann und zudem Breakpoints und die schrittweise Ausführung des Codes ermöglicht. Im Folgenden soll kurz dargestellt werden, wie diese (versteckte) Funktion aktiviert wird, was sie bringt und wie man sie nutzt.
+
+### Den Debugger aktivieren und starten
+
+Oracle hat den Debugger - mit der Begründung, er sei nur was für "advanced users" - gut versteckt, denn standardmäßig ist er nicht aktiviert und seine Existenz über die GUI auch nicht zu erkennen. Es gibt 3 Wege, diesen zu aktivieren:
+
+- In der Konfigurationsdatei von VirtualBox (Unter Windows zu finden unter C:/Benutzer/\<Benutzer\>/.VirtualBox/VirtualBox.xml (Windows 7) bzw. C:/Dokumente und Einstellungen/\<Benutzer\>/.VirtualBox (Windows XP)) zum Knoten "VirtualBox/Global/ExtraData" dies hinzufügen:
+
+      <ExtraDataItem name="GUI/Dbg/Enabled" value="true"/>
+
+  VBox muss neu gestartet werden, damit die Änderung übernommen wird.
+
+- Die Umgebungsvariable VBOX_GUI_DBG_ENABLED oder VBOX_GUI_DBG_AUTO_SHOW auf true setzen, bevor VBox gestartet wird
+
+- VirtualBox mit den Kommandozeilenparametern --dbg, --debug, oder --debug-command-line starten
+
+Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein. Wählen dessen Unterpunkt "Kommandozeile". Sie erhalten dann eine Konsole, über die die weitere Steuerung erfolgt.
+
+### Benutzung
+
+#### Informationen beschaffen
+
+Die wichtigsten Befehle, um Infos über das System zu erhalten:
+
+| Befehl | Wirkung |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| r | Gibt den Inhalt der Register der CPU aus |
+| u | Disassembliert den Code, der als nächstes ausgeführt wird |
+| k | Gibt einen Stacktrace aus |
+| dg | GDT |
+| di | IDT |
+| dl | LDT |
+| dt | TSS |
+| da/db/dw/dd/dq | Gibt den Speicher an der angegebenen Addresse aus, als ASCII-Text, in Bytes/Words/Doublewords/Quadwords |
+| info \<arg\> | Gibt Infos zum angegebenen Gerät aus. Übersicht über diese Geräte: info help. Beispiele: pcnet0, pit, pic, ohci, ehci, vbe, ioport, ... |
+
+  
+
+Folgende Informationen fehlen dem Artikel an dieser Stelle:
+
+- Ergänzungen zum Debugger, d.h. zum Setzen von Breakpoints und zur schrittweisen Code-Ausführung
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
+  
 
 ## Links
 
 - [VirtualBox Homepage](http://www.virtualbox.org/)
 - [Changelog](http://www.virtualbox.org/wiki/Changelog)
+- [VirtualBox-Dokumentation über den Debugger](http://www.virtualbox.org/manual/ch12.html#idp6083456)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9874/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 9874; parent 8696; 2011-06-25T22:58:08Z -->
+<!-- MediaWiki page 1553; revision 10140; parent 9874; 2011-09-19T18:48:30Z -->
