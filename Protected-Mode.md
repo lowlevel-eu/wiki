@@ -315,7 +315,7 @@ Diese haben in etwa den selben Sinn und Zweck eines Call Gates. Jedoch werden di
 
 **Interrupt Gate (BITs) Teil 2**
 
-| **31 – 24** | **16 – 0** |
+| **31 – 16** | **15 – 0** |
 | ------------- | --------------- |
 | Selektor | Offset 15 – 0 |
 
@@ -359,6 +359,6 @@ Eine knappe Variante, um in den Protected Mode zu schalten, wird [hier](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10144/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 10143; parent 10001; 2011-09-20T20:31:41Z -->
+<!-- MediaWiki page 1464; revision 10144; parent 10143; 2011-09-20T20:33:11Z -->
