@@ -267,7 +267,7 @@ In der Regel ist es so, dass lediglich das Betriebssystem, welches mit der Privi
 
 **Call Gate (BITs) Teil 2**
 
-| **31 - 24** | **16 - 0** |
+| **31 – 16** | **15 – 0** |
 | ------------- | --------------- |
 | Selektor | Offset 15 – 0 |
 
@@ -302,8 +302,6 @@ Hier wird der Selektor des Code Segmentes eingetragen, in dem sich der Code befi
 #### Offset 15 – 0
 
 Gibt die Bits 15 bis 0 des 32-Bit-Offsets innerhalb des Codesegmentes an, in dem sich der Code befindet, zu dem über das Call Gate gesprungen werden soll.
-
-  
 
 ### Interrupt Gate
 
@@ -361,6 +359,6 @@ Eine knappe Variante, um in den Protected Mode zu schalten, wird [hier](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1464/index.html)
 
-<!-- MediaWiki page 1464; revision 10001; parent 9671; 2011-07-28T21:14:15Z -->
+<!-- MediaWiki page 1464; revision 10143; parent 10001; 2011-09-20T20:31:41Z -->
