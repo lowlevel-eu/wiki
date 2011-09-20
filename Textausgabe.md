@@ -85,7 +85,7 @@ Um den Bildschirm zu scrollen muss einfach der gesamte Textspeicher ab der 2. Ze
 
 ### Cursor
 
-Das BIOS stellt ein Cursor zur Verfügung, dessen Verschiebung relativ lange dauert.([“Keep in mind that in/out to VGA Hardware is a slow operation”](http://www.osdev.org/wiki/Text_Mode_Cursor))
+Der Cursor dient dazu dem Nutzer anzuzeigen, an welcher Stelle die nächste Ausgabe erfolgt. In der Regel ist er als blinkender Unterstrich unter der Textzeile zu sehen. Das Verschieben des Cursors ist eine Operation, die 'relativ' lange dauert. ([“Keep in mind that in/out to VGA Hardware is a slow operation”](http://www.osdev.org/wiki/Text_Mode_Cursor))
 
 **Cursor verschieben**
 
@@ -121,6 +121,6 @@ Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9288/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 9288; parent 8738; 2011-01-07T15:23:37Z -->
+<!-- MediaWiki page 1549; revision 10141; parent 9288; 2011-09-20T17:01:27Z -->
