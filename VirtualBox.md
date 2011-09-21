@@ -15,7 +15,7 @@
 
 <http://www.virtualbox.org/>
 
-**VirtualBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Diese Duale Lizenzierung wurde auch nach der Übernahme durch Oracle weitergeführt, jedoch wurden später beide Versionen zur Open-Source-Version zusammengeführt, die propietären Erweiterungen sind nun als Extension Pack erhältlich. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
+**VirtualBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Diese Duale Lizenzierung wurde auch nach der Übernahme durch Oracle weitergeführt, zur Veröffenlichung von Version 4.0 jedoch umgestelt: Es existiert nun nur noch die Open-Source-Version, die propietären Erweiterungen werden als Extension Pack angeboten. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
 
 ## Besondere Features
 
@@ -47,7 +47,7 @@ Befehlssatzerweiterungen für Gäste:
   - Intel PRO/1000 MT Desktop
   - Intel PRO/1000 T Server
 - [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Controller:
-  - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0)
+  - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
   - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface")
 - Serielle Schnittstellen (max. 2)
 
@@ -107,6 +107,6 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 10146; parent 10145; 2011-09-21T07:57:38Z -->
+<!-- MediaWiki page 1553; revision 10147; parent 10146; 2011-09-21T08:05:20Z -->
