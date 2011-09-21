@@ -69,7 +69,7 @@ Oracle hat den Debugger - mit der Begründung, er sei nur für "advanced users" 
 
 - VirtualBox mit den Kommandozeilenparametern --dbg, --debug, oder --debug-command-line starten
 
-Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein. Wenn sie dessen Unterpunkt "Kommandozeile" wählen, erhalten sie dann eine Konsole, über die die weitere Steuerung erfolgt.
+Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein. Wenn man dessen Unterpunkt "Kommandozeile" wählt, erhält man dann eine Konsole, über die die weitere Steuerung erfolgt.
 
 ### Benutzung
 
@@ -107,6 +107,6 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10146/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 10145; parent 10140; 2011-09-21T07:53:36Z -->
+<!-- MediaWiki page 1553; revision 10146; parent 10145; 2011-09-21T07:57:38Z -->
