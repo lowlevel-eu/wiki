@@ -15,7 +15,7 @@
 
 <http://www.virtualbox.org/>
 
-**VirtualBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Nach der Übernahme durch Oracle wurden beide Versionen zu einer Open-Source-Version zusammengeführt und proprietäre Erweiterungen als "Extension Packs" angeboten. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
+**VirtualBox** ist ein x86-Emulator für x86-Systeme. Ursprünglich entwickelt von innotek, kaufte Sun das Programm auf, stellte zugleich aber eine der beiden Versionen als OpenSource-Software frei zur Verfügung. Diese Duale Lizenzierung wurde auch nach der Übernahme durch Oracle weitergeführt, jedoch wurden später beide Versionen zur Open-Source-Version zusammengeführt, die propietären Erweiterungen sind nun als Extension Pack erhältlich. Das Besondere an VirtualBox ist sicherlich die ausgereifte grafische Benutzerschnittstelle, die die Bedienung weitaus einfacher macht.
 
 ## Besondere Features
 
@@ -53,11 +53,11 @@ Befehlssatzerweiterungen für Gäste:
 
 ## Debugger
 
-Seit einiger Zeit bietet VirtualBox einen integrierten Debugger, der Informationen zum Zustand der VM, der emulierten CPU, der emulierten Geräte ausgeben kann und zudem Breakpoints und die schrittweise Ausführung des Codes ermöglicht. Im Folgenden soll kurz dargestellt werden, wie diese (versteckte) Funktion aktiviert wird, was sie bringt und wie man sie nutzt.
+Seit einiger Zeit bietet VirtualBox einen integrierten Debugger, der Informationen zum Zustand der VM, der emulierten CPU und der emulierten Geräte ausgeben kann. Weiterhin werden Breakpoints unterstützt sowie die schrittweise Ausführung des Codes ermöglicht. Im Folgenden soll kurz dargestellt werden, wie diese (versteckte) Funktion aktiviert wird, was sie bringt und wie man sie nutzt.
 
 ### Den Debugger aktivieren und starten
 
-Oracle hat den Debugger - mit der Begründung, er sei nur was für "advanced users" - gut versteckt, denn standardmäßig ist er nicht aktiviert und seine Existenz über die GUI auch nicht zu erkennen. Es gibt 3 Wege, diesen zu aktivieren:
+Oracle hat den Debugger - mit der Begründung, er sei nur für "advanced users" geeignet - gut versteckt, denn standardmäßig ist er nicht aktiviert und seine Existenz ist über die GUI auch nicht zu erkennen. Es gibt 3 Wege, diesen zu aktivieren:
 
 - In der Konfigurationsdatei von VirtualBox (Unter Windows zu finden unter C:/Benutzer/\<Benutzer\>/.VirtualBox/VirtualBox.xml (Windows 7) bzw. C:/Dokumente und Einstellungen/\<Benutzer\>/.VirtualBox (Windows XP)) zum Knoten "VirtualBox/Global/ExtraData" dies hinzufügen:
 
@@ -69,7 +69,7 @@ Oracle hat den Debugger - mit der Begründung, er sei nur was für "advanced use
 
 - VirtualBox mit den Kommandozeilenparametern --dbg, --debug, oder --debug-command-line starten
 
-Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein. Wählen dessen Unterpunkt "Kommandozeile". Sie erhalten dann eine Konsole, über die die weitere Steuerung erfolgt.
+Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein. Wenn sie dessen Unterpunkt "Kommandozeile" wählen, erhalten sie dann eine Konsole, über die die weitere Steuerung erfolgt.
 
 ### Benutzung
 
@@ -107,6 +107,6 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10145/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 10140; parent 9874; 2011-09-19T18:48:30Z -->
+<!-- MediaWiki page 1553; revision 10145; parent 10140; 2011-09-21T07:53:36Z -->
