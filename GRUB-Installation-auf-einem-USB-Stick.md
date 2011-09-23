@@ -15,15 +15,8 @@ Des Weiteren muss im [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input
 
 ### Linux
 
-#### Löschen der Dateien
+#### Vorbereitung
 
-In diesem Abschnitt werden der Inhalt des USB-Sticks mit Null-Bytes überschrieben, damit überhaupt nichts mehr darauf vorhanden ist.
-
-**Warnung**
-
-Sichert vorher alle Daten von dem Stick, denn spätestens nach dem überschreiben des Stick-Inhalts mit Null-Bytes werden diese **nicht wiederherstellbar** sein!
-
-  
 Zuerst sollte man nachschauen, wo der USB-Stick hin gemountet wurde, falls das automatisch geschehen ist. Dies kann man mit dem Befehl mount machen:
 
     $ mount
@@ -36,29 +29,15 @@ Zumeist liegt der Stick an der Stelle /dev/sda o.ä. zumindest war es bei mir so
 
     $ umount /dev/sda1
 
-Nun wird der komplette Stick mit Null-Bytes überschrieben. Dies wird wie folgt gemacht:
-
-    $ cat /dev/zero > /dev/sda
-    cat: write error: No space left on device
+#### Formatieren des Sticks
 
 **Warnung**
 
-**/dev/sda** kann durchaus auch deine Festplatte sein. Falls du dir also nicht sicher bist: ***nicht*** einfach ausprobieren
-
-Wird die untere Fehlermeldung ausgegeben, so heißt das, dass der USB-Stick komplett überschrieben wurde. Ab hier gibt es denke ich mal keine Möglichkeit mehr noch eventuelle Daten zu sichern, da alles überschrieben wurde.  
-Ein anderer Weg, den Stick von den Daten zu befreien, wäre der folgende:
-
-    $ dd if=/dev/zero of=/dev/sda
-    dd: Schreiben in „/dev/sda“: Auf dem Gerät ist kein Speicherplatz mehr verfügbar
-    2007041+0 Datensätze ein
-    2007040+0 Datensätze aus
-    1027604480 Bytes (1,0 GB) kopiert, 349,675 s, 2,9 MB/s
-
-#### Formatieren des Sticks
+Sichert vorher alle Daten von dem Stick, denn nach dem Erstellen einer neuen Partitionstabelle kann auf diese nicht mehr so einfach zugegriffen werden (sie sind praktisch gelöscht).
 
 In diesem zweiten Abschnitt bekommt der USB-Stick ein neues [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"). Das Dateisystem meiner Wahl ist ext2, kann aber durchaus auch ein anderes, wie FAT32 oder so sein.
 
-Bevor der Stick formatiert wird, sollte eben jener zuerst partitioniert werden, da die Partition ja durch Null-Bytes ersetzt wurde. Um den USB-Stick zu partitionieren, muss einfach nur cfdisk oder fdisk mit der Stelle angeben, unter der der Stick von der jeweiligen Maschine verwaltet wird, was in dieser Anleitung /dev/sda ist. Also lautet der Aufruf wie folgt:
+Bevor der Stick formatiert wird, sollte eben jener zuerst partitioniert werden. Um den USB-Stick zu partitionieren, muss einfach nur cfdisk oder fdisk mit der Stelle angeben, unter der der Stick von der jeweiligen Maschine verwaltet wird, was in dieser Anleitung /dev/sda ist. Also lautet der Aufruf wie folgt:
 
     $ cfdisk /dev/sda
     .... oder ....
@@ -72,7 +51,7 @@ Hier wird der Stick, nach drücken der Return-Taste, mit dem Ext2 Dateisystem fo
 
 #### Installieren von GRUB
 
-Nun muss der Formatierte Stick wieder gemountet werden:
+Nun muss der formatierte Stick wieder gemountet werden:
 
     # mount /dev/sda1 /media/usb
 
@@ -168,6 +147,6 @@ Die einzige Vorraussetzung ist, dass das BIOS von einer USB-Festplatte booten k�
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 9539; parent 8468; 2011-02-11T22:32:18Z -->
+<!-- MediaWiki page 1737; revision 10154; parent 9539; 2011-09-23T17:12:17Z -->
