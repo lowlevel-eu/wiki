@@ -22,7 +22,7 @@ Mit dem Tool "newelph" wird ein neuer Elefant erstellt. Hier soll der Elefant vi
 
 Der neu erstellte Elefant muss nun signiert werden. Dazu wird zuerst ein Schlüssel mit Hilfe von "create-elph-key" erstellt: ` $ createelphkey --name myelphkey.elphkey --verycomplex=true `
 
-Nach dem man eine Passphrase eingegeben hat, hat man nun den öffentlichen und privaten Schlüssel erstellt. Anschließend kann ein Elefant mit dem öffentlichen Schlüssel signiert werden:
+Nach dem man eine Passphrase eingegeben hat, hat man nun den öffentlichen und privaten Schlüssel erstellt. Anschließend kann ein Elefant mit dem privaten Schlüssel signiert werden:
 
 ` $ sigelph --elph=myelephant.elph --pubkey=myelphkey.pub.elphkey `
 
@@ -90,6 +90,6 @@ Der Signifant ist auch das inoffzielle Maskottchen von týndur.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
 
-<!-- MediaWiki page 2047; revision 10152; parent 5708; 2011-09-23T16:33:23Z -->
+<!-- MediaWiki page 2047; revision 10157; parent 10152; 2011-09-23T22:07:24Z -->
