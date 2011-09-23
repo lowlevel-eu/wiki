@@ -26,9 +26,52 @@ Nach dem man eine Passphrase eingegeben hat, hat man nun den öffentlichen und p
 
 ` $ sigelph --elph=myelephant.elph --pubkey=myelphkey.pub.elphkey `
 
-Hierdurch wurde ein signierter Elefant erstellt.
+Hierdurch wurde ein signierter Elefant erstellt:
 
-  
+    -----BEGIN PGP SIGNED ELEPHANT-----
+    Hash: SHA1
+     
+                   _..--""-.                  .-""--.._
+               _.-'         \ __...----...__ /         '-._
+             .'      .:::...,'              ',...:::.      '.
+            (     .'``'''::;      Týndur      ;::'''``'.     )
+             \             '-)              (-'             /
+              \             /                \             /
+               \          .'.-.            .-.'.          /
+                \         | \0|            |0/ |         /
+                |          \  |   .-==-.   |  /          |
+                 \          `/`;          ;`\`          /
+                  '.._      (_ |  .-==-.  | _)      _..'
+                      `"`"-`/ `/'        '\` \`-"`"`
+                           / /`;   .==.   ;`\ \
+                     .---./_/   \  .==.  /   \ \
+                    / '.    `-.__)       |    `"
+                   | =(`-.        '==.   ;
+             jgs    \  '. `-.           /
+                     \_:_)   `"--.....-'
+    -----BEGIN PGP SIGNATURE-----
+    Version: GnuPG v2.0.17 (GNU/Linux)
+     
+    iJwEAQECAAYFAk53XcwACgkQFCe/r9OXfcIlugP+KOIsgSRK+SLPEpn6XJdnQ4bK
+    aobCz2Rc89+TCRR07Zk+t4YSJTmxdcCpp/mTVqQ7OpcuXsgmuksTaQBArhENrmIr
+    PouSOVDQlSTyfO9aQJdslfVcAQiDC8vQnRGAPTwDgvF2fpZH7DnUZep97iDaEIef
+    dAFs9kYCdjRG9Xv3ciQ=
+    =f+O8
+    -----END PGP SIGNATURE-----
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+    Version: GnuPG v2.0.17 (GNU/Linux)
+     
+    mI0ETndcxgEEANIB5qaqgQstA3MP5QZzBno5pCQhCXGoz0/U0duyhJQTbEXwEQVC
+    AeNFVAHyj8Z+h1BSPfPwXA8VsxKiV5nDUeNLf2/qNAnARaU2SUC/Ne3seHUpO6fH
+    kKC0Aczu7aSf8Wa4/ZDW6iTzTUZxI0oqKWVJt8SYBiQ9gSr0VBoQGnh7ABEBAAG0
+    N1NpZ25pZmFudCAoVOG7s25kdXIgTWFza290dGNoZW4pIDxzaWduaWZhbnRAdHlu
+    ZHVyLm9yZz6IuAQTAQIAIgUCTndcxgIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgEC
+    F4AACgkQFCe/r9OXfcJmkAQAxDLir+ez/XrssrFukvpTrXesPEL+V550iXY7WcdM
+    iZET6xuWeDHnZFgo92iVjg6W7nUHJCy1PrdkbmcnPQNDGvwVAnXhr/Fwg2tSm7pD
+    wz0AEdWLYhF/eqJlcm+L/1+YH0azbcMllJ0W5dJJi/cZ8lWUS0XwUYyYN8ExFOWb
+    tP8=
+    =NW7d
+    -----END PGP PUBLIC KEY BLOCK----
 
 ## Signifanten in der Betriebssystementwicklung
 
@@ -47,6 +90,6 @@ Der Signifant ist auch das inoffzielle Maskottchen von týndur.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5708/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2047/index.html)
 
-<!-- MediaWiki page 2047; revision 5708; parent 5699; 2009-08-24T23:32:52Z -->
+<!-- MediaWiki page 2047; revision 10152; parent 5708; 2011-09-23T16:33:23Z -->
