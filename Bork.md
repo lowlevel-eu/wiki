@@ -6,6 +6,6 @@ Nun, lieber Jidder, findest du auch Bork im Wiki.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10149/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2471/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10150/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2471/index.html)
 
-<!-- MediaWiki page 2471; revision 10149; parent 10148; 2011-09-23T07:19:00Z -->
+<!-- MediaWiki page 2471; revision 10150; parent 10149; 2011-09-23T07:21:21Z -->
