@@ -34,10 +34,10 @@ Ich persönlich benutze den VM86-Mode nur, um Interrupts aufzurufen und missbrau
 ## Links
 
 - [Sehr gutes Tutorial von Tim Robinson (englisch)](http://osdev.berlios.de/v86.html)
-- [Code aus LOST für VM86-Tasks (nur für RM-Interrupts)](http://svn.tyndur.org/filedetails.php?repname=Lost&path=%2Ftrunk%2Fsrc%2Fkernel%2Fsrc%2Fvm86.c)
+- [Code aus LOST für VM86-Tasks (nur für RM-Interrupts)](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel2/src/arch/i386/vm86.c;hb=HEAD)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10160/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1546/index.html)
 
-<!-- MediaWiki page 1546; revision 9442; parent 8241; 2011-02-05T13:06:35Z -->
+<!-- MediaWiki page 1546; revision 10160; parent 9442; 2011-09-29T19:24:57Z -->
