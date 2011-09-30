@@ -111,7 +111,7 @@ Damit lassen sich Änderungen (entsprechende Rechte vorausgesetzt) direkt in fre
 
 ## Kostenlose Repository Hoster
 
-Auch wenn Mercurial ohne zentralen Server auskommt, kann ein solcher für zum Beispiel die Veröffentlichung nützlich sein. Kostenlose Hoster sind unter anderem [SourceForge](http://sourceforge.net) und [Google Code](http://code.google.com).
+Auch wenn Mercurial ohne zentralen Server auskommt, kann ein solcher für zum Beispiel die Veröffentlichung nützlich sein. Kostenlose Hoster sind unter anderem [Bitbucket](http://bitbucket.org/) und [Google Code](http://code.google.com).
 
 Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki/MercurialHosting).
 
@@ -123,6 +123,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 8344; parent 8342; 2010-09-21T17:29:43Z -->
+<!-- MediaWiki page 1891; revision 10162; parent 8344; 2011-09-30T18:24:53Z -->
