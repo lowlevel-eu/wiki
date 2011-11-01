@@ -21,7 +21,7 @@ PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei <http://www
 
 ## Ziel
 
-PrettyOS soll Einsteiger in die Betriebssystementwicklung dabei unterstützen, den gesamten Prozess des Bootens, Startens eines C-Kernels und einer Shell (C oder C++) an einem einfachen praktischen Beispiel zu verstehen. Als Entwicklungsumgebung ist sowohl Linux, MacOS als auch MS Windows einsetzbar.
+PrettyOS soll Einsteiger in die Betriebssystementwicklung dabei unterstützen, den gesamten Prozess des Bootens, Startens eines C-Kernels, einer Shell sowie Applikationen (C oder C++) an einem noch überschaubaren praktischen Beispiel zu verstehen. Als Entwicklungs-Plattform ist Linux, MacOS und MS Windows einsetzbar.
 
 ## Genereller Aufbau
 
@@ -54,6 +54,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10068/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10191/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 10068; parent 9986; 2011-08-20T09:50:18Z -->
+<!-- MediaWiki page 2096; revision 10191; parent 10068; 2011-11-01T18:56:29Z -->
