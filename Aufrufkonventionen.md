@@ -57,9 +57,13 @@ Ein Aufruf einer C-Funktion (oder der Funktion einer anderen Hochsprache) aus As
 
 Die Pascal-Aufrufkonvention gibt vor, dass die Parameter, beginnend mit dem ersten, auf den Stack gelegt werden. Außerdem muss die aufgerufene Funktion den Stackpointer zurücksetzen.
 
+## stdcall
+
+stdcall ist die Standartaufrufkonvention unter 32bit-Windows Systemen. Es gleicht in den meisten Aspekten cdecl, allerdings muss die Aufgerufene Funktion den Stack am Ende mit einem "ret n" (Wobei n für die Größe der Parameter auf dem Stack steht) ausgleichen.
+
 ## Register- oder Fastcall-Konvention
 
-Bei der Register- oder Fastcall-Konvention werden aus Geschwindigkeitsgründen die ersten zwei oder drei Parameter in die Register EAX, EDX und ECX gespeichert. Die übrigen Parameter werden, beginnend mit dem letzen, auf den Stack gelegt. Der Rückgabewert wird in AL, AX oder EAX übergeben. \<c\> int a,b,c,d,e,r; int test(int a,int b,int c,int d,int e); r = test(a,b,c) \</c\> \<asm\>
+Viele Compiler bieten zusätzlich auch noch eine Register- oder Fastcall-Konvention an, die aber meist Compilerspezifisch ist. Bei dieser werden aus Geschwindigkeitsgründen die ersten zwei oder drei Parameter in die Register EAX, EDX und ECX gespeichert. Die übrigen Parameter werden, beginnend mit dem letzen, auf den Stack gelegt. Der Rückgabewert wird in AL, AX oder EAX übergeben. \<c\> int a,b,c,d,e,r; int test(int a,int b,int c,int d,int e); r = test(a,b,c) \</c\> \<asm\>
 
 Die ersten drei Parameter werden über Register übergeben
 
@@ -88,6 +92,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10188/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 9458; parent 7653; 2011-02-05T23:22:43Z -->
+<!-- MediaWiki page 1525; revision 10188; parent 9458; 2011-11-01T14:15:36Z -->
