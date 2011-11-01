@@ -165,13 +165,14 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 \<c\>void cdi_net_driver_init(struct cdi_net_driver \*driver);\</c\> Diese Funktion wird aufgerufen, um einen CDI.net-Treiber „driver“ zu initialisieren. Das Betriebssystem sollte „driver-\>drv.type“ auf CDI_NETWORK setzen und anschließend „cdi_driver_init((struct cdi_driver \*)driver)“ aufrufen. \<c\>void cdi_net_driver_destroy(struct cdi_net_driver \*driver);\</c\> Diese Funktion wiederum deinitialisiert einen CDI.net-Treiber. \<c\>void cdi_net_device_init(struct cdi_net_device \*device);\</c\> Mit dieser Funktion werden CDI.net-Geräte (also Netzwerkkarten) initialisiert. Der Treiber hat alle vorgegebenen Felder in der „cdi_net_device“-Struktur „device“ außer „number“ bereits initialisiert. „number“ muss vom Betriebssystem gesetzt werden. \<c\>void cdi_net_receive(struct cdi_net_device \*device, void \*buffer, size_t size);\</c\> Diese Funktion wird vom CDI.net-Treiber aufgerufen, wenn Daten von einer Netzwerkkarte empfangen wurden. „device“ gibt die Netzwerkkarte an, „buffer“ ist ein Pointer zum empfangenen Paket und „size“ enthält die Größe des Pakets.
 
-## Betriebssysteme, welche CDI benutzen
+## Betriebssysteme, welche u.a. CDI benutzen
 
 - [meinOS](https://github.com/lowlevel-eu/wiki/wiki/MeinOS "MeinOS")
 - [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota")
 - [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena") (kernel1, kernel2 und kernel3)
 - [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree")
 - [planlOS](https://github.com/lowlevel-eu/wiki/wiki/PlanlOS "PlanlOS")
+- [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS")
 - [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
 
 ## Weblinks
@@ -181,6 +182,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8168/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 8168; parent 7677; 2010-09-05T21:19:15Z -->
+<!-- MediaWiki page 1622; revision 10190; parent 8168; 2011-11-01T18:51:59Z -->
