@@ -59,7 +59,7 @@ Die Pascal-Aufrufkonvention gibt vor, dass die Parameter, beginnend mit dem erst
 
 ## stdcall
 
-stdcall ist die Standartaufrufkonvention unter 32bit-Windows Systemen. Es gleicht in den meisten Aspekten cdecl, allerdings muss die Aufgerufene Funktion den Stack am Ende mit einem "ret n" (Wobei n für die Größe der Parameter in Bytes auf dem Stack steht) ausgleichen.
+stdcall ist die Standardaufrufkonvention unter 32bit-Windows Systemen. Es gleicht in den meisten Aspekten cdecl, allerdings ist die aufgerufene Funktion dafür zuständig, die Parameter vom Stack zu nehmen, z.B. indem sie für den Rücksprung die Instruktion "ret n" (Wobei n für die Größe der Parameter in Bytes auf dem Stack steht) benutzt.
 
 ## Register- oder Fastcall-Konvention
 
@@ -92,6 +92,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10189/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 10189; parent 10188; 2011-11-01T17:26:15Z -->
+<!-- MediaWiki page 1525; revision 10196; parent 10189; 2011-11-02T10:37:11Z -->
