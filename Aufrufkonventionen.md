@@ -59,11 +59,11 @@ Die Pascal-Aufrufkonvention gibt vor, dass die Parameter, beginnend mit dem erst
 
 ## stdcall
 
-stdcall ist die Standardaufrufkonvention unter 32bit-Windows Systemen. Es gleicht in den meisten Aspekten cdecl, allerdings ist die aufgerufene Funktion dafür zuständig, die Parameter vom Stack zu nehmen, z.B. indem sie für den Rücksprung die Instruktion "ret n" (Wobei n für die Größe der Parameter in Bytes auf dem Stack steht) benutzt.
+stdcall ist die Standardaufrufkonvention unter 32-Bit-Windows-Systemen. Es gleicht in den meisten Aspekten cdecl, allerdings muss die aufgerufene Funktion den Stack am Ende mit einem „ret n“ (Wobei n für die Größe der Parameter auf dem Stack steht) ausgleichen.
 
 ## Register- oder Fastcall-Konvention
 
-Viele Compiler bieten zusätzlich auch noch eine Register- oder Fastcall-Konvention an, die aber meist Compilerspezifisch ist. Bei dieser werden aus Geschwindigkeitsgründen die ersten zwei oder drei Parameter in die Register EAX, EDX und ECX gespeichert. Die übrigen Parameter werden, beginnend mit dem letzen, auf den Stack gelegt. Der Rückgabewert wird in AL, AX oder EAX übergeben. \<c\> int a,b,c,d,e,r; int test(int a,int b,int c,int d,int e); r = test(a,b,c) \</c\> \<asm\>
+Viele Compiler bieten zusätzlich auch noch eine Register- oder Fastcall-Konvention an, die aber meist compilerspezifisch ist. Bei dieser werden aus Geschwindigkeitsgründen die ersten zwei oder drei Parameter in die Register EAX, EDX und ECX gespeichert. Die übrigen Parameter werden, beginnend mit dem letzen, auf den Stack gelegt. Der Rückgabewert wird in AL, AX oder EAX übergeben. \<c\> int a,b,c,d,e,r; int test(int a,int b,int c,int d,int e); r = test(a,b,c) \</c\> \<asm\>
 
 Die ersten drei Parameter werden über Register übergeben
 
@@ -92,6 +92,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10196/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 10196; parent 10189; 2011-11-02T10:37:11Z -->
+<!-- MediaWiki page 1525; revision 10197; parent 10196; 2011-11-02T11:21:01Z -->
