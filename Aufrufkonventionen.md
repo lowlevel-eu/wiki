@@ -53,13 +53,15 @@ Ein Aufruf einer C-Funktion (oder der Funktion einer anderen Hochsprache) aus As
 
 \</asm\>
 
-## Pascal
-
-Die Pascal-Aufrufkonvention gibt vor, dass die Parameter, beginnend mit dem ersten, auf den Stack gelegt werden. Außerdem muss die aufgerufene Funktion den Stackpointer zurücksetzen.
-
 ## stdcall
 
 stdcall ist die Standardaufrufkonvention unter 32bit-Windows Systemen. Es gleicht in den meisten Aspekten cdecl, allerdings ist die aufgerufene Funktion dafür zuständig, die Parameter vom Stack zu nehmen, z.B. indem sie für den Rücksprung die Instruktion "ret n" (Wobei n für die Größe der Parameter in Bytes auf dem Stack steht) benutzt.
+
+## Pascal
+
+Die Pascal-Aufrufkonvention gibt vor, dass die Parameter, beginnend mit dem ersten, auf den Stack gelegt werden. Außerdem muss die aufgerufene Funktion den Stackpointer zurücksetzen, wie bei stdcall beschrieben.
+
+  
 
 ## Register- oder Fastcall-Konvention
 
@@ -92,6 +94,6 @@ mov r,eax \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10198/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10206/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1525/index.html)
 
-<!-- MediaWiki page 1525; revision 10198; parent 10197; 2011-11-02T11:21:47Z -->
+<!-- MediaWiki page 1525; revision 10206; parent 10198; 2011-11-05T13:08:41Z -->
