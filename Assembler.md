@@ -20,7 +20,7 @@ Bei der x86-Architektur ist bei zweistelligen Operationen (Addition, Subtraktion
 
 ### Syntax
 
-Bei Assembler unterscheidet man verschiedene Syntax. Bei der x86 unterscheidend man zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf der Intel-Syntax aufbaut, gehören [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM"), [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM"), MASM und TASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und anderen Unix-Assemblern ("as") verarbeitet werden. YASM und neuere Versionen des GNU Assemblers können zwischen beiden Syntax umschalten.
+Bei Assembler unterscheidet man verschiedene Syntax. Bei der x86-CPU-Familie unterscheidend man zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf der Intel-Syntax aufbaut, gehören [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM"), [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM"), MASM und TASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und anderen Unix-Assemblern ("as") verarbeitet werden. YASM und neuere Versionen des GNU Assemblers können zwischen beiden Syntax umschalten. Die Programme in den binutils können aber mit beiden Syntax-Varianten souverän umgehen, ebenfalls kann der gcc beides ausgeben.
 
 #### Intel-Syntax
 
@@ -28,27 +28,27 @@ Als Intel-Syntax bezeichnet man diejenigen Syntax Formen, die von der Syntax des
 
 Kommentare werden in der Intel-Syntax mit einem Semikolon eingeleitet: \<asm\>; Das ist ein Kommentar.\</asm\>
 
-Darüber hinaus wird die Wortlänge anhand der Registerbezeichnung bestimmt. Speicherzugriffe werden mit eckigen Klammern angedeutet. \<asm\>mov ax, \[ebp\] ; Lädt ein word (2 Byte Zahl) von der Adresse in ebp nach eax\</asm\> \<asm\>mov cl, \[esi\]  ; Lädt ein Byte von der Adresse in esi nach cl\</asm\>
+Darüber hinaus wird die Wortlänge anhand der Registerbezeichnung bestimmt. Speicherzugriffe werden mit eckigen Klammern angedeutet. \<asm\>mov ax, \[ebp\] ; lädt ein word (2 Byte Zahl) von der Adresse in ebp nach ax\</asm\> \<asm\>mov cl, \[esi\] ; lädt ein Byte von der Adresse in esi nach cl\</asm\>
 
-Wenn die Wortlänge nicht eindeutig feststellbar ist, muss sie angegeben werden: \<asm\>push dword ptr \[ebp + 4\] ; Schiebt ein dword (4 Byte Zahl) von der Adresse, welche um 4 größer ist als die in ebp, auf den Stack.\</asm\>
+Wenn die Wortlänge nicht eindeutig feststellbar ist, muss sie angegeben werden: \<asm\>push dword ptr \[ebp + 4\] ; schiebt ein dword (4 Byte Zahl) von der Adresse, welche um 4 größer ist als die in ebp, auf den Stack\</asm\>
 
-Alle Bestandteile der Adresse werden in der Klammer angegeben, werden die Klammern Weggelassen wir eine Konstante oder der Registerinhalt verwendet: \<asm\>add dh, \[ebp + eax\*4 + 5\] ; Addiert dh mit den Byte, dessen Adresse sich durch ebp + eax\*4 + 5 berechnen lässt\</asm\> \<asm\>sub ecx, 16 ; Verringert den Wert in ecx um 16\</asm\> \<asm\>or ecx, eax ; ecx = Wert in ecx OR Wert in eax\</asm\>
+Alle Bestandteile der Adresse werden in der Klammer angegeben, werden die Klammern Weggelassen wir eine Konstante oder der Registerinhalt verwendet: \<asm\>add dh, \[ebp + eax\*4 + 5\] ; addiert dh mit den Byte, dessen Adresse sich durch ebp + eax\*4 + 5 berechnen lässt und speichert das Ergebnis wieder in dh ab\</asm\> \<asm\>sub ecx, 16 ; verringert den Wert in ecx um 16\</asm\> \<asm\>or ecx, eax ; ecx = Wert in ecx OR Wert in eax\</asm\>
 
 Allerdings wird die Zuordnung Adresse = eckige Klammer in einigen Assembler nicht konsequent verwendet, so das man Aufpassen muss.
 
 #### AT&T-Syntax
 
-Der AT&T-Syntax leitet sich von derjenigen Syntax ab, die der Unix Assembler (as) für verschiedene Prozessorplattformen verwendet. Auf der x86-Plattform ist sie zwar weniger verbreitet, allerdings arbeitet die GNU Implementierung der Unix-Werkzeuge (gcc, gdb, ...) vorwiegend mit damit. In der AT&T-Syntax werden die Register mit einem % als Präfix versehen, und der Zieloperand ist der letzte Operand. Das Beispiel von eben sieht dann so aus: \<asm\>add %eax, %ebx\</asm\>
+Der AT&T-Syntax leitet sich von derjenigen Syntax ab, die der Unix Assembler (as) für verschiedene Prozessorplattformen verwendet. Auf der x86-Plattform ist sie zwar weniger verbreitet, allerdings arbeitet die GNU Implementierung der Unix-Werkzeuge (gcc, gdb, ...) vorwiegend damit. In der AT&T-Syntax werden die Register mit einem % als Präfix versehen und der Zieloperand ist der letzte Operand. Das Beispiel von eben sieht dann so aus: \<asm\>add %eax, %ebx\</asm\>
 
 Kommentare werden im AT&T-Syntax mit einem Doppelkreuz eingeleitet: \<asm\># Das ist ein Kommentar.\</asm\>
 
-Die Wortlänge wird als Suffix an den Opcode angehängt, "b" steht für Byte, "w" für Word (2 Byte), "l" für DWord (4 Byte) und "q" für QWord (8 Byte). Die Wortlänge kann aber weggelassen werden, wenn die Länge aus den Registernamen hervorgeht. Register als Addresszeiger verwendet, werden sie eingeklammert. \<asm\>movw (%ebp), ax \# Lädt ein Word (2 Byte Zahl) von der Adresse in ebp nach eax\</asm\> \<asm\>movb (%esi), cl \# Lädt ein Byte von der Adresse in esi nach cl\</asm\> \<asm\>pushl 4(%ebp) \# Schiebt ein dword (4 Byte Zahl) von der Adresse, welche um 4 größer ist als die in ebp, auf den Stack. S.u.\</asm\>
+Die Wortlänge wird als Suffix an den Opcode angehängt, "b" steht für Byte, "w" für Word (2 Byte), "l" für DWord (4 Byte) und "q" für QWord (8 Byte). Die Wortlänge kann aber weggelassen werden, wenn die Länge aus den Registernamen hervorgeht. Register als Addresszeiger verwendet, werden sie eingeklammert. \<asm\>movw (%ebp), ax \# lädt ein Word (2 Byte Zahl) von der Adresse in ebp nach eax\</asm\> \<asm\>movb (%esi), cl \# lädt ein Byte von der Adresse in esi nach cl\</asm\> \<asm\>pushl 4(%ebp) \# schiebt ein dword (4 Byte Zahl) von der Adresse, welche um 4 größer ist als die in ebp, auf den Stack. S.u.\</asm\>
 
 Die Bezeichnung von Addressen ist allerdings komplizierter. Sie werden wie folgt dargestellt (wobei alle Bestandteile Optional sind.):
 
     <Address Basis>(<Erstes Register das Addiert werden soll>,<Zweites Register>,<Faktor mit dem das zweite Register zuvor Multipliziert wird>)
 
-Also z.B. \<asm\>addb 5(ebp,eax,4), dh \# Addiert dh mit den Byte, dessen Adresse sich durch ebp + eax\*4 + 5 berechnen lässt\</asm\> \<asm\>addb 12345, dh \# Addiert dh mit den Byte von der Adresse 12345\</asm\>
+Also z.B. \<asm\>addb 5(ebp,eax,4), dh \# addiert dh mit den Byte, dessen Adresse sich durch ebp + eax\*4 + 5 berechnen lässt\</asm\> \<asm\>addb 12345, dh \# addiert dh mit den Byte von der Adresse 12345 und speichert das Ergebnis wieder in dh ab\</asm\>
 
 Konstanten wird ein Dollarzeichen vorgestellt, um sie von Addressen zu unterscheiden. \<asm\>subl \$16, ecx \# Verringert den Wert in ecx um 16\</asm\>
 
@@ -75,6 +75,6 @@ Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10213/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 10213; parent 9452; 2011-11-11T14:53:00Z -->
+<!-- MediaWiki page 1514; revision 10215; parent 10213; 2011-11-11T16:57:18Z -->
