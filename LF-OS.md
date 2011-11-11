@@ -17,7 +17,7 @@
 
 <http://www.lf-os.tk> (englisch)  
 [http://littlefox.web-fuxx.de](http://littlefox.web-fuxx.de/newSite/lf_os.php) (deutsch)  
-[\[1\]](http://lf-os.googlecode.com)
+<http://lf-os.googlecode.com>
 
   
 LF OS ist ein weiteres Hobbybetriebssystem das in C/C++ und Assembler programmiert wird.
@@ -35,6 +35,6 @@ Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10212/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 10211; parent 10210; 2011-11-11T10:00:29Z -->
+<!-- MediaWiki page 2267; revision 10212; parent 10211; 2011-11-11T10:00:46Z -->
