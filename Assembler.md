@@ -42,15 +42,15 @@ Der AT&T-Syntax leitet sich von derjenigen Syntax ab, die der Unix Assembler (as
 
 Kommentare werden im AT&T-Syntax mit einem Doppelkreuz eingeleitet: \<asm\># Das ist ein Kommentar.\</asm\>
 
-Die Wortlänge wird als Suffix an den Opcode angehängt, "b" steht für Byte, "w" für Word (2 Byte), "l" für DWord (4 Byte) und "q" für QWord (8 Byte). Die Wortlänge kann aber weggelassen werden, wenn die Länge aus den Registernamen hervorgeht. Register als Addresszeiger verwendet, werden sie eingeklammert. \<asm\>movw (%ebp), ax \# lädt ein Word (2 Byte Zahl) von der Adresse in ebp nach eax\</asm\> \<asm\>movb (%esi), cl \# lädt ein Byte von der Adresse in esi nach cl\</asm\> \<asm\>pushl 4(%ebp) \# schiebt ein dword (4 Byte Zahl) von der Adresse, welche um 4 größer ist als die in ebp, auf den Stack. S.u.\</asm\>
+Die Wortlänge wird als Suffix an den Opcode angehängt, "b" steht für Byte, "w" für Word (2 Byte), "l" für DWord (4 Byte) und "q" für QWord (8 Byte). Die Wortlänge kann aber weggelassen werden, wenn die Länge aus den Registernamen hervorgeht. Register in Klammern werden für die indirekte Adressierung des Speichers verwendet. \<asm\>movw (%ebp), %ax \# lädt ein Word (2 Byte Zahl) von der Adresse in ebp nach ax\</asm\> \<asm\>movb (%esi), %cl \# lädt ein Byte von der Adresse in esi nach cl\</asm\> \<asm\>pushl 4(%ebp) \# schiebt ein dword (4 Byte Zahl) von der Adresse, welche um 4 größer ist als die in ebp, auf den Stack. S.u.\</asm\>
 
-Die Bezeichnung von Addressen ist allerdings komplizierter. Sie werden wie folgt dargestellt (wobei alle Bestandteile Optional sind.):
+Die Bezeichnung von Adressen ist allerdings komplizierter. Sie werden wie folgt dargestellt (wobei alle Bestandteile optional sind):
 
-    <Address Basis>(<Erstes Register das Addiert werden soll>,<Zweites Register>,<Faktor mit dem das zweite Register zuvor Multipliziert wird>)
+    <Adressbasis>(<Erstes Register, das addiert werden soll>,<Zweites Register>,<Faktor, mit dem das zweite Register zuvor multipliziert wird>)
 
-Also z.B. \<asm\>addb 5(ebp,eax,4), dh \# addiert dh mit den Byte, dessen Adresse sich durch ebp + eax\*4 + 5 berechnen lässt\</asm\> \<asm\>addb 12345, dh \# addiert dh mit den Byte von der Adresse 12345 und speichert das Ergebnis wieder in dh ab\</asm\>
+Also z.B. \<asm\>addb 5(%ebp,%eax,4), %dh \# addiert dh mit den Byte, dessen Adresse sich durch ebp + eax\*4 + 5 berechnen lässt\</asm\> \<asm\>addb 12345, %dh \# addiert dh mit den Byte von der Adresse 12345 und speichert das Ergebnis wieder in dh ab\</asm\>
 
-Konstanten wird ein Dollarzeichen vorgestellt, um sie von Addressen zu unterscheiden. \<asm\>subl \$16, ecx \# Verringert den Wert in ecx um 16\</asm\>
+Konstanten wird ein Dollarzeichen vorgestellt, um sie von Adressen zu unterscheiden. \<asm\>subl \$16, %ecx \# Verringert den Wert in ecx um 16\</asm\>
 
 ## Inline-Assembler
 
@@ -75,6 +75,6 @@ Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1514/index.html)
 
-<!-- MediaWiki page 1514; revision 10215; parent 10213; 2011-11-11T16:57:18Z -->
+<!-- MediaWiki page 1514; revision 10217; parent 10215; 2011-11-11T17:55:39Z -->
