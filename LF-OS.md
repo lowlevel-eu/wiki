@@ -5,7 +5,7 @@
 |  |  |
 | Entwickler: | LittleFox |
 | Akt. Version: | 1.0 Alpha 1 / Kernel4 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | NewBSD |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPLv3+ |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), später [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
@@ -34,6 +34,6 @@ Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10209/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 10209; parent 10208; 2011-11-11T09:59:11Z -->
+<!-- MediaWiki page 2267; revision 10210; parent 10209; 2011-11-11T09:59:46Z -->
