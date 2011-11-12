@@ -43,7 +43,7 @@ Userprogramme können auf drei verschiedenen Wegen eingebunden werden: Mittels i
 
 ## Entwicklung
 
-PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-plusplus.de gedacht und wird von einer aktiven Community gepflegt und erweitert. Inzwischen entwickeln bis zu 10 Personen (allerdings nur zwei bis drei wirklich aktiv) an PrettyOS. IRC Channel: \#PrettyOS auf euirc.net und im Forum (siehe Links). Tester und Entwickler sind immer gerne gesehen. PrettyOS wird das führende Hobby-OS in Europa werden.
+PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-plusplus.de gedacht und wird von einer aktiven Community gepflegt und erweitert. Inzwischen entwickeln bis zu 10 Personen (allerdings nur zwei bis drei wirklich aktiv) an PrettyOS. IRC Channel: \#PrettyOS auf euirc.net und im Forum (siehe Links). Tester und Entwickler sind immer gerne gesehen.
 
 ## Links
 
@@ -54,6 +54,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10223/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 10193; parent 10192; 2011-11-01T19:00:13Z -->
+<!-- MediaWiki page 2096; revision 10223; parent 10193; 2011-11-12T16:12:01Z -->
