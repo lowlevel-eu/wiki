@@ -299,14 +299,12 @@ Wenn man in C eine Stringkonstante definiert, wird das abschließende Nullzeiche
 
 ### Pascal-Strings
 
-In der Pascal-Variante ist ein String ebenfalls ein Char-Array. Allerdings wird die Länge des Strings im ersten Element gespeichert, der eigentliche Text beginnt erst beim ersten Element.
+In der Pascal-Variante ist ein String ebenfalls ein Char-Array. Allerdings wird die Länge des Strings im nullten Element gespeichert, der eigentliche Text beginnt erst beim ersten Element.
 
 „LowLevel“ in Pascal:
 
      Index:   0-1-2-3-4-5-6-7-8
      Inhalt:  8 L o w L e v e l
-
-  
 
 ## Weiterführende Artikel
 
@@ -320,6 +318,6 @@ In der Pascal-Variante ist ein String ebenfalls ein Char-Array. Allerdings wird 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10258/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 10257; parent 7670; 2011-11-20T18:34:23Z -->
+<!-- MediaWiki page 2043; revision 10258; parent 10257; 2011-11-20T18:35:07Z -->
