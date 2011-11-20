@@ -15,6 +15,10 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [Ausgabe 2: Lowlevel-Grundlagen](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
   - Wirklich noch notwendig? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 09:11, 12. Mai 2011 (CEST)
 
+## "Bitte Löschen" aufräumen
+
+Nur in "Kategorie:Bitte Löschen" eintragen bringt auch nicht viel. Artikel mit weniger als 1000 Byte (ohne den Löschhinweis) oder geleerte Artikel sollten können einfach gelöscht werden. (Wenn der Autor wirklich noch weiter machen will, dürfte es ihn kaum stören den Artikel dann neu schreiben zu müssen.) --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:40, 20. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -122,6 +126,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10259/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10255; parent 10249; 2011-11-20T17:23:20Z -->
+<!-- MediaWiki page 1518; revision 10259; parent 10255; 2011-11-20T19:40:26Z -->
