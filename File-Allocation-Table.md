@@ -230,14 +230,16 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
-Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-Eintrag. Sobald man diesen hat, kann man den ersten Cluster (der ja im Verzeichnis-Eintrag steht) laden. Danach sucht man für den ersten Cluster den zugehörigen Eintrag in der FAT. Über den FAT-Eintrag kann man nun feststellen ob dieser Cluster der letzte war oder, wenn nicht, welcher der nächste Cluster ist. Hier nochmal in Kurzform:
+Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-Eintrag. Sobald man diesen hat, kann man den ersten Cluster (der ja im Verzeichnis-Eintrag steht) laden. Danach lädt man für den ersten Cluster den zugehörigen Eintrag in der FAT. Über den FAT-Eintrag kann man nun feststellen ob dieser Cluster der letzte war oder, wenn nicht, welcher der nächste Cluster ist. Hier nochmal in Kurzform:
 
 1.  Verzeichnis-Eintrag suchen
-2.  Nummer des ersten Clusters extrahieren
+2.  Nummer des ersten Clusters aus den Verzeichnis-Eintrag extrahieren
 3.  Cluster-Inhalt laden (Nutzdaten der Datei)
 4.  zugehörigen FAT-Eintrag für den aktuellen Cluster laden
 5.  Wenn im FAT-Eintrag eine gültige Cluster-Nummer steht zu 3. gehen, sonst weitermachen
 6.  Datei ist geladen
+
+Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende lädt, vor allem bei größeren Dateien, ist es noch wichtig wenn man wahlfreie Zugriffe implementiert. Dazu bekommt man vom VFS ja üblicherweise ein Offset innerhalb der Datei und die Länge der gewünschten Daten (beides muss natürlich anhand der Dateigröße auf Gültigkeit geprüft werden). Mit dem Offset muss man sich als erstes ausrechnen in welchem Cluster der gewünschte Bereich anfängt um sich dann anhand der Cluster-Kette in der FAT bis zur gewünschten Stelle durch zu hangeln, ab da kann man dann die gewünschten Daten wie oben beschrieben laden.
 
 ## Siehe auch
 
@@ -251,6 +253,6 @@ Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10250; parent 10248; 2011-11-20T12:51:09Z -->
+<!-- MediaWiki page 1643; revision 10252; parent 10250; 2011-11-20T13:16:22Z -->
