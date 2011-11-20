@@ -222,6 +222,22 @@ Leerzeichen am Ende von Name oder Erweiterung werden ignoriert, denn sie werden 
 
 Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die sowohl Name als auch ggf. Erweiterung und auch den Punkt enthalten. Unter Windows ist außerdem zu beachten, dass weiterhin keine Dateinamen mit einem Leerzeichen am Ende erstellt werden können.
 
+## Lesen von Dateien
+
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+*Nochmal überfliegen ob das so stimmt. Hab noch nie einen entsprechenden Treiber geschrieben ;)*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
+Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-Eintrag. Sobald man diesen hat, kann man den ersten Sektor (der ja im Verzeichnis-Eintrag steht) laden. Danach sucht man für den ersten Sektor den Eintrag in der FAT. Über den FAT-Eintrag kann man nun feststellen ob ob dieser Sektor der letzte war oder, wenn nicht, wo der nächste Sektor ist. Hier nochmal in Kurzform:
+
+1.  Verzeichnis-Eintrag suchen
+2.  Sektor laden
+3.  FAT-Eintrag für den Sektor suchen
+4.  Wenn im FAT-Eintrag ein anderer Sektor steht zu 2. gehen, sonst weitermachen
+5.  Datei ist geladen
+
 ## Siehe auch
 
 - [Ausgabe_4#Das_FAT12-Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4#das-fat12-dateisystem "Ausgabe 4")
@@ -234,6 +250,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9628/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10248/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 9628; parent 9595; 2011-03-20T00:40:24Z -->
+<!-- MediaWiki page 1643; revision 10248; parent 9628; 2011-11-20T12:22:14Z -->
