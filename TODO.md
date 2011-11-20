@@ -23,6 +23,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"): Wie liest man Dateien?
   - Sollte man das nicht selbst anhand des Artikels rausfinden können? —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
   - Vieleicht nur ein kurzer Umriss was in welcher Reihenfolge zu tun ist? --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
+  - Das werde ich nachher mal erledigen, damit ich auch mal an der Todo-Liste gearbeitet hab ;) -[Littlefox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") 12:50, 20. Nov. 2011 (CET)
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
 - [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
 - [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
@@ -121,6 +122,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9770/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10246/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 9770; parent 9766; 2011-05-12T07:11:50Z -->
+<!-- MediaWiki page 1518; revision 10246; parent 9770; 2011-11-20T11:50:53Z -->
