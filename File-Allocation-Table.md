@@ -239,7 +239,7 @@ Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-E
 5.  Wenn im FAT-Eintrag eine gültige Cluster-Nummer steht zu 3. gehen, sonst weitermachen
 6.  Datei ist geladen
 
-Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende lädt, vor allem bei größeren Dateien, ist es noch wichtig wenn man wahlfreie Zugriffe implementiert. Dazu bekommt man vom VFS ja üblicherweise ein Offset innerhalb der Datei und die Länge der gewünschten Daten (beides muss natürlich anhand der Dateigröße auf Gültigkeit geprüft werden). Mit dem Offset muss man sich als erstes ausrechnen in welchem Cluster der gewünschte Bereich anfängt um sich dann anhand der Cluster-Kette in der FAT bis zur gewünschten Stelle durch zu hangeln, ab da kann man dann die gewünschten Daten wie oben beschrieben laden.
+Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende lädt, vor allem bei größeren Dateien, ist es noch wichtig das man wahlfreie Zugriffe implementiert. Dazu bekommt der Dateisystem-Treiber vom VFS ja üblicherweise ein Offset innerhalb der Datei und die Länge der gewünschten Daten (beides muss natürlich anhand der Dateigröße auf Gültigkeit geprüft werden). Mit dem Offset muss man sich als erstes ausrechnen in welchem Cluster der gewünschte Bereich anfängt um sich dann anhand der Cluster-Kette in der FAT bis zur gewünschten Stelle durch zu hangeln, ab da kann man dann die gewünschten Daten wie oben beschrieben laden.
 
 ## Siehe auch
 
@@ -253,6 +253,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10252/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10252; parent 10250; 2011-11-20T13:16:22Z -->
+<!-- MediaWiki page 1643; revision 10253; parent 10252; 2011-11-20T13:30:13Z -->
