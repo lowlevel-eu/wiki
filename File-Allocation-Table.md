@@ -216,7 +216,7 @@ Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch 
 Dateinamen bestehen in FAT aus acht Zeichen plus drei Zeichen Dateierweiterung. Die folgenden Zeichen sind reserviert und in Dateinamen nicht erlaubt:
 
     < > ? " : | \ / *   sind in kurzen und langen Dateinamen verboten
-    + , . ; = [ ]       sind nur in kurzen Dateinamen verboten
+    + , . ; = [ ]       sind nur in kurzen Dateinamen verboten (wobei der Punkt implizit bis zu ein mal vorhanden sein kann)
 
 Leerzeichen am Ende von Name oder Erweiterung werden ignoriert, denn sie werden in Verzeichniseinträgen als Padding für kürzere Dateinamen benutzt.
 
@@ -253,6 +253,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10253/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10254/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10253; parent 10252; 2011-11-20T13:30:13Z -->
+<!-- MediaWiki page 1643; revision 10254; parent 10253; 2011-11-20T13:32:27Z -->
