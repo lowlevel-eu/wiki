@@ -180,18 +180,79 @@ Nun, da hätte -1 rauskommen sollen. Also anscheinend auch nicht geeignet für a
 
 Seltsam, oder? Selbst wenn die Addition erfolgreich gewesen **wäre**, dann wäre diese Phänomen immer noch sehr fragwürdig.
 
-### 2k-Zahlen
+### Das Einerkomplement
+
+Die Sache mit dem Vorzeichenbit hat immer noch ein Problem.
+
+Was machen wir, wenn wir die Zahl der Bits vergrößern wollen?
+
+Wir müssen immer wissen, das MSB nicht zur Zahl selber, sondern zum Vorzeichen gehört.
+
+    Denn:
+        1011 ist -3
+
+    Aber:
+    00001011 ist 11
+
+    Es müsst aber heißen:
+    10000011 ist 11
+
+Das kopieren eines einzelnen Bits ist ziemlich aufwendig. Also probieren wir doch mal folgenes:
+
+  
+Wir sagen einfach:
+
+  
+
+| Bedeutung | Darstellung |
+| ----------------- | --------------------------------------------------- |
+| positive Zahl | einfache Binärzahl wobei das MSB 0 bleiben sollte |
+| 1<sub>(2)</sub> | Logisches Komplent des Betrags. |
+
+Also zum Beispiel:
+
+    0100 = +4
+    1011 = -4 
+    0011 = +3
+
+Dadurch das das logische Komplement des MSB 1 ergeben muss, lässt sich das Vorzeichen dort ablesen.
+
+Die Addition funktioniert doch schon ganz gut:
+
+     1011 (-4)         1001 (-6)
+    +0011 (+3)        +0011 (+3)
+    ---------         ----------
+     1110 (-1)         1100 (-3)
+
+Aber wehe man überschreitet den Nullpunkt (Wir schmeißen den Übertrag raus):
+
+     1100 (-3)         1001 (-6)
+    +0101 (+5)        +0111 (+7)
+    ---------         ----------
+     0001 (+1)         0000 (+0)
+
+Das Problem ist klar. Sobald man versucht, 0 zu überschreiten, wird das Ergebnis um eins kleiner als es sein sollte. Ist ja auch logisch, schließlich liegen zwischen -1 und 1 auch zwei Zahlen, nämlich:
+
+    1111 = -0
+    0000 = +0
+
+Wir müssen also versuchen wie wir das Problem gelöst bekommen.
+
+### Das Zweierkomplement
 
 Ich hoffe, ihr habt noch nicht die Hoffnung aufgegeben eine geeignete Codierung für ganze Zahlen zu finden – ich kann euch beruhigen: Dieser Ansatz wird zum Erfolg führen!
 
-Was heißt „2k-Zahl“ überhaupt? 2k-Zahl ist eine abkürzende Schreibweise für „Zweierkomplement-Zahl“.
+Das mit dem Einerkomplement war schon kleine Schlechte Idee. Was ist, wenn wir einfach sagen, das man zu jeder negativen Zahl die fehlenden 1 schon mal nach dem Komplementieren dazu zählen?
 
-Alle Zahlen von 0 bis 2<sup>n-1</sup> werden wieder genau so codiert, wie wir es von den natürlichen Zahlen gewohnt sind. Um nun zu einer Zahl das negative Gegenstück zu finden, muss man folgendermaßen vorgehen:
+Dann haben wir das Zweierkomplement (2k)
+
+Wir müssen also folgendes tun:
 
 - Binärkette negieren
 - 1 draufaddieren
 
-Praktischerweise ergibt sich bei dieser Codierung, dass das MSB negativer Zahlen 1 und das von positiven Zahlen gleich 0 ist.
+  
+Praktischerweise ergibt sich bei dieser Codierung, dass das MSB negativer Zahlen 1 und das von positiven Zahlen gleich 0 ist, da ja das Vorzeichen nur bei -0 (1111) zu 0000 gewechselt wird. (0 ist also immer eine Positive Zahl)
 
 #### Beispiel
 
@@ -211,6 +272,11 @@ Angenommen wir haben die 4-Bit-2k-Zahl 5<sub>(10)</sub> = 0101<sub>(2)</sub> Wir
 Ergebnis: 1011<sub>(2)</sub> = -5<sub>(10)</sub>
 
 Durch das selbe Verfahren lässt sich aus der -5 auch wieder die +5 gewinnen!
+
+Wenn wir das ganze zu Fuß machen wollen, gibt es da noch einen Weg:
+
+1.  Alle Bits vom LSB bis zum ersten gesetzten Bit (=1) einschließlich übernehmen.
+2.  Alle höherwertigen Bits negieren.
 
 ## Fließkommazahlen
 
@@ -254,6 +320,6 @@ In der Pascal-Variante ist ein String ebenfalls ein Char-Array. Allerdings wird 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7670/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2043/index.html)
 
-<!-- MediaWiki page 2043; revision 7670; parent 7142; 2010-05-09T09:32:01Z -->
+<!-- MediaWiki page 2043; revision 10257; parent 7670; 2011-11-20T18:34:23Z -->
