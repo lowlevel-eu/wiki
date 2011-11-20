@@ -59,6 +59,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 <!-- -->
 
+- - Little/Big Endian
 - [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS") - Mach ich demnächst. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
   - Habe die Baum-Implementation eingebaut, wer was anderes sehen will soll es einbauen. --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 15:00, 13. Okt. 2010 (CEST)
 - [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") - Scheint ganz unten etwas zu fehlen.
@@ -67,8 +68,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"):
   - Stacktrace erwähnen/erklären, vllt. mit Beispielcode
   - Tricks und Kniffe von [\[1\]](http://wiki.osdev.org/Troubleshooting) übernehmen - vorallem sowas wie \_\_LINE\_\_, \_\_FILE\_\_ für Debugausgaben wären da wichtig.
-
-  
 
 ## Kleinigkeiten
 
@@ -123,6 +122,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10249/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10249; parent 10246; 2011-11-20T12:27:39Z -->
+<!-- MediaWiki page 1518; revision 10255; parent 10249; 2011-11-20T17:23:20Z -->
