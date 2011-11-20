@@ -230,13 +230,14 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
-Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-Eintrag. Sobald man diesen hat, kann man den ersten Sektor (der ja im Verzeichnis-Eintrag steht) laden. Danach sucht man für den ersten Sektor den Eintrag in der FAT. Über den FAT-Eintrag kann man nun feststellen ob ob dieser Sektor der letzte war oder, wenn nicht, wo der nächste Sektor ist. Hier nochmal in Kurzform:
+Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-Eintrag. Sobald man diesen hat, kann man den ersten Cluster (der ja im Verzeichnis-Eintrag steht) laden. Danach sucht man für den ersten Cluster den zugehörigen Eintrag in der FAT. Über den FAT-Eintrag kann man nun feststellen ob dieser Cluster der letzte war oder, wenn nicht, welcher der nächste Cluster ist. Hier nochmal in Kurzform:
 
 1.  Verzeichnis-Eintrag suchen
-2.  Sektor laden
-3.  FAT-Eintrag für den Sektor suchen
-4.  Wenn im FAT-Eintrag ein anderer Sektor steht zu 2. gehen, sonst weitermachen
-5.  Datei ist geladen
+2.  Nummer des ersten Clusters extrahieren
+3.  Cluster-Inhalt laden (Nutzdaten der Datei)
+4.  zugehörigen FAT-Eintrag für den aktuellen Cluster laden
+5.  Wenn im FAT-Eintrag eine gültige Cluster-Nummer steht zu 3. gehen, sonst weitermachen
+6.  Datei ist geladen
 
 ## Siehe auch
 
@@ -250,6 +251,6 @@ Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-E
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10248/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10250/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10248; parent 9628; 2011-11-20T12:22:14Z -->
+<!-- MediaWiki page 1643; revision 10250; parent 10248; 2011-11-20T12:51:09Z -->
