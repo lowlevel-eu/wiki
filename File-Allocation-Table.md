@@ -62,13 +62,13 @@ Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 **FAT12 und FAT16**
 
 | Offset | Größe | Beschreibung |
-| -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x24 | 1 | Nummer des BIOS-Laufwerks |
 | 0x25 | 1 | Reserviert |
 | 0x26 | 1 | Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) |
 | 0x27 | 4 | Dateisystem-ID |
-| 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. |
-| 0x36 | 8 | FAT-Variante (mit Leerzeichen gefüllt), d.h. "FAT12 " oder "FAT16 ". **Achtung**: Dieses Feld ist **nicht** zuverlässig und daher maßgeblich für die Feststellung des Dateisystems. Stattdessen muss die FAT-Variante anhand der Anzahl der Cluster bestimmt werden! |
+| 0x2B | 11 | Dateisystem-Name (mit Leerzeichen auf 11 Zeichen aufgefüllt). Wird nicht mehr verwendet. |
+| 0x36 | 8 | FAT-Variante (mit Leerzeichen auf 8 Zeichen aufgefüllt), d.h. "FAT12 " oder "FAT16 ". **Achtung**: Dieses Feld ist **nicht** zuverlässig und daher maßgeblich für die Feststellung des Dateisystems. Stattdessen muss die FAT-Variante anhand der Anzahl der Cluster bestimmt werden! |
 | 0x3E | 448 | Bootloader |
 | 0x1FE | 2 | Bootsignatur: 0xAA55 |
 
@@ -89,7 +89,7 @@ Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 
 Alle anderen Bits sind reserviert.
 
-0x2A2FAT32-Version. Üblicherweise 0 - andernfalls kann es sein, dass die Partition von Windows nicht gemounted wird. 0x2C4Erster Cluster des Wurzelverzeichnis 0x302Info-Sektor. Sektor der Informationen über das Dateisystem enthält. 0x322Sektor der Bootsektorkopie. (Microsoft empfiehlt, nur 6 zu verwenden) 0x3412Reserviert 0x401Nummer des BIOS-Laufwerks 0x411Reserviert 0x421Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) 0x434Dateisystem-ID 0x4711Dateisystem-Name (mit Leerzeichen auf 11 Zeichen gefüllt). Wird nicht mehr verwendet. 0x528FAT-Variante (mit Leerzeichen gefüllt). Immer "FAT32 ". 0x5A420Bootloader 0x1FE2Bootsignatur: 0xAA55
+0x2A2FAT32-Version. Üblicherweise 0 - andernfalls kann es sein, dass die Partition von Windows nicht gemounted wird. 0x2C4Erster Cluster des Wurzelverzeichnis 0x302Info-Sektor. Sektor der Informationen über das Dateisystem enthält. 0x322Sektor der Bootsektorkopie. (Microsoft empfiehlt, nur 6 zu verwenden) 0x3412Reserviert 0x401Nummer des BIOS-Laufwerks 0x411Reserviert 0x421Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) 0x434Dateisystem-ID 0x4711Dateisystem-Name (mit Leerzeichen auf 11 Zeichen aufgefüllt). Wird nicht mehr verwendet. 0x528FAT-Variante (mit Leerzeichen auf 8 Zeichen aufgefüllt). Immer "FAT32 ". 0x5A420Bootloader 0x1FE2Bootsignatur: 0xAA55
 
 ### Reservierte Sektoren
 
@@ -253,6 +253,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10254/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10256/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10254; parent 10253; 2011-11-20T13:32:27Z -->
+<!-- MediaWiki page 1643; revision 10256; parent 10254; 2011-11-20T17:53:27Z -->
