@@ -10,7 +10,7 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
 
 Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt, sei euch die [Offline-Variante](https://github.com/lowlevel-eu/wiki/wiki/Lowlevel-offline "Lowlevel-Offline") des Wikis ans Herz gelegt.
 
-****News****
+****News** ( [Bearbeiten](https://lowlevel-eu.github.io/wiki/pages/1406/index.html "Vorlage:News"))**
 
 |  |  |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -163,6 +163,6 @@ Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10251/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 10021; parent 10020; 2011-08-01T16:18:30Z -->
+<!-- MediaWiki page 1712; revision 10251; parent 10021; 2011-11-20T13:14:46Z -->
