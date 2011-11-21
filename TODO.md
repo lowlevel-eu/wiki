@@ -25,6 +25,20 @@ Naja, ich setze jetzt Wikibooksmasstäbe an. Neben der Dauer des Artikelverwaise
 
 Wie willst Du eigentlich den Aufwand, den der Autor hatte, abschätzen können? Es gibt sicher Sätze in denen etliche Stunden Denkarbeit drin steckt! Nebst dessen das ich persönlich das für kein adäquates Kriterium halte. Wer gibt uns das Recht die Arbeit anderer Leute (die wir hier doch so dringend brauchen) wegen theoretischer Wiederholbarkeit zu vernichten? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 20:57, 21. Nov. 2011 (CET)
 
+Der Kreislauf läuft hier in etwa so:
+
+\<freebasic\> 10 Jemand meint sich des Wikis annehmen zu müssen, und verlinkt fleißig nicht-existierende Artikel.
+
+    20 Derjenige hat keine Lust mehr, und verschwindet. Ein paar Monate ziehen ins Land.
+    30 Jemand meint sich des Wikis annehmen zu müssen, und erstellt fleißig Stubs für diese Artikel.
+    40 Derjenige hat keine Lust mehr, und verschwindet. Ein paar Monate ziehen ins Land.
+    50 Jemand meint sich des Wikis annehmen zu müssen, und verteilt Bitte Löschen-Kommentare bzw. neuerdings -Vorlagen.
+    60 Derjenige hat keine Lust mehr, und verschwindet. Ein paar Monate ziehen ins Land.
+    70 Jemand meint sich des Wikis annehmen zu müssen, und irrelevante Artikel löschen.
+    80 Derjenige hat keine Lust mehr, und verschwindet. Ein paar Monate ziehen ins Land.
+    90 GOTO 1
+    100 REM --Jidder 20:58, 21. Nov. 2011 (CET)</freebasic>
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -136,6 +150,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10271; parent 10270; 2011-11-21T19:57:55Z -->
+<!-- MediaWiki page 1518; revision 10272; parent 10271; 2011-11-21T19:58:42Z -->
