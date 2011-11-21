@@ -23,6 +23,8 @@ Artikel die wirklich 0 Bytes haben (und das seit einiger Zeit) können sicher be
 
 Naja, ich setze jetzt Wikibooksmasstäbe an. Neben der Dauer des Artikelverwaises, spielt auch der in den Artikel investierte Aufwand eine Rolle. Sind das nur 2 Sätze und/oder eine Tabelle, gehe ich von einem Aufwand von 10 Minuten aus. Das bedeutet, das der Autor das Löschen sicher verkraften kann. Will er weiterarbeiten kann er den Artikel wieder neu anlegen oder herstellen lassen. Trozdem sollte alle User vor dem Löschen natürlich auf der Disskussionsseite angeschrieben werden, und sich dann zum Thema äußern dürfen. Gibt es keine Reaktion bin ich für löschen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:45, 21. Nov. 2011 (CET)
 
+Wie willst Du eigentlich den Aufwand, den der Autor hatte, abschätzen können? Es gibt sicher Sätze in denen etliche Stunden Denkarbeit drin steckt! Nebst dessen das ich persönlich das für kein adäquates Kriterium halte. Wer gibt uns das Recht die Arbeit anderer Leute (die wir hier doch so dringend brauchen) wegen theoretischer Wiederholbarkeit zu vernichten? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 20:57, 21. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -134,6 +136,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10270; parent 10269; 2011-11-21T19:47:37Z -->
+<!-- MediaWiki page 1518; revision 10271; parent 10270; 2011-11-21T19:57:55Z -->
