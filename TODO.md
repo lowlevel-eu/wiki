@@ -19,6 +19,8 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 Nur in "Kategorie:Bitte Löschen" eintragen bringt auch nicht viel. Artikel mit weniger als 1000 Byte (ohne den Löschhinweis) oder geleerte Artikel sollten können einfach gelöscht werden. (Wenn der Autor wirklich noch weiter machen will, dürfte es ihn kaum stören den Artikel dann neu schreiben zu müssen.) Bei allen anderen sollte das noch mal überprüft werden, dannach muss aber eine Handlung folgen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:40, 20. Nov. 2011 (CET)
 
+Artikel die wirklich 0 Bytes haben (und das seit einiger Zeit) können sicher bedenkenlos gelöscht werden aber Artikel mit Inhalt würde ich persönlich nur ungern einfach so löschen. Manche dieser kurzen Artikel enthalten zumindest genug das man was für die Eingabemaske der präferierten Suchmaschine bekommt. Einer Größenangabe in Bytes als Löschkriterium kann ich jedenfalls nicht zustimmen, andere Kriterien kann man sicher diskutieren (im Forum). --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:32, 21. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -126,6 +128,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10260; parent 10259; 2011-11-20T19:44:39Z -->
+<!-- MediaWiki page 1518; revision 10263; parent 10260; 2011-11-21T09:32:44Z -->
