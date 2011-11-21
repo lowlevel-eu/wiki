@@ -49,6 +49,12 @@ Das Problem an eingeschlafenen Projekten ist ja gerade das der Autor hier nicht 
 
 Deshalb wär ich ja auch für löschen, aber da sind ja einige dagegen. Nur der aktuelle Zustand ist ziemlich suboptimal --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 21:24, 21. Nov. 2011 (CET)
 
+Ich denke man sollte beim Löschen zwischen mehreren Kategorien unterscheiden:
+
+- Einmal Leute, die einfach nur ihre eigene Benutzerseite oder den Artikel für ihr eigenes OS gelöscht haben wollen. Ich finde für die passt die Bezeichnung "Bitte Löschen", und dafür sollte die Vorlage umgedeutet werden. Das würde dann auch einschließen, wenn der Autor seine Seite leert.
+- Bei "Löschhinweisen", die nicht vom Autor des OS stammen, könnte man wirklich nach einer Frist löschen, wie du es vorschlägst. Ich schätze mal, dass die zwölf Monate alle bisher markierten Artikel erschlagen. Man könnte im Zuge dessen ein paar Regeln einführen, z.B. dass ein funktionierender Link auf eine Website, die aktueller als der Artikel ist, den Artikel vor dem Löschen bewahren kann, etc.
+- Für technische Artikel halte ich nichts vom Löschen, auch wenn der Artikel im derzeitigen Zustand nicht viel beiträgt. Es finden sich immer wieder Leute, die diese Artikel erweitern, wenn man nur lange genug wartet. Bis dahin schaden die Artikel dem Wikis nicht. --Jidder 21:26, 21. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -160,6 +166,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10276; parent 10275; 2011-11-21T20:24:29Z -->
+<!-- MediaWiki page 1518; revision 10277; parent 10276; 2011-11-21T20:26:57Z -->
