@@ -55,6 +55,12 @@ Ich denke man sollte beim Löschen zwischen mehreren Kategorien unterscheiden:
 - Bei "Löschhinweisen", die nicht vom Autor des OS stammen, könnte man wirklich nach einer Frist löschen, wie du es vorschlägst. Ich schätze mal, dass die zwölf Monate alle bisher markierten Artikel erschlagen. Man könnte im Zuge dessen ein paar Regeln einführen, z.B. dass ein funktionierender Link auf eine Website, die aktueller als der Artikel ist, den Artikel vor dem Löschen bewahren kann, etc.
 - Für technische Artikel halte ich nichts vom Löschen, auch wenn der Artikel im derzeitigen Zustand nicht viel beiträgt. Es finden sich immer wieder Leute, die diese Artikel erweitern, wenn man nur lange genug wartet. Bis dahin schaden die Artikel dem Wikis nicht. --Jidder 21:26, 21. Nov. 2011 (CET)
 
+Also bei Wikibooks gibt es 3 Kategorien (Wikibooksbücher verhalten sich ähnlich zu OS Projekten bei uns, weil meist nur einer Ahnung hat):
+
+- "Verwaist" - Keiner kümmert sich um das Buch/ den Artikel, obwohl es im aktuellen Zustand nicht wirklich brauchbar ist.
+- "Löschdiskussion" - Wurde zum Löschen vorgeschlagen. Der Autor wird gewarnt. Dann können alle Leute ihre Meinung abgeben. Zuletzt entscheidet der Admin, ob der Antrag entfernt werden soll, oder ob das Buch/ der Artikel gelöscht wird.
+- "Schnellöschandtrag" (SLA) Darf nur dann verwendet werden, wenn eine Disskussion sinlos ist, sprich Löschungen im Benutzernamensraum, Urheberrechtsverletzungen uä., sowie vom Buch/OS Autor selbt angefertigte Löschanträge. Dies werden vom Admin sofort bearbeitet. Gruß --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 21:35, 21. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -166,6 +172,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10278/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10277; parent 10276; 2011-11-21T20:26:57Z -->
+<!-- MediaWiki page 1518; revision 10278; parent 10277; 2011-11-21T20:35:18Z -->
