@@ -45,6 +45,8 @@ Ok, gut ich komm von Wikipedia, der Löschhölle, und war dann lange bei Wikiboo
 
 @Jidder Das ist aber kein schönes FreeBasic, was du da schreibst. Du hättest die nigelnagelneue Vererbung nutzen sollen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 21:13, 21. Nov. 2011 (CET)
 
+Das Problem an eingeschlafenen Projekten ist ja gerade das der Autor hier nicht mehr vorbei kommt und sich demzufolge auch nicht äußern wird wie mit seinem Artikel zu verfahren ist. Wenn wir hier Leichen nicht bis in alle Ewigkeit konservieren wollen dann muss früher oder später, mit Konsens der restlichen/aktiven Community, gelöscht werden. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 21:19, 21. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -156,6 +158,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10274/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10275/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10274; parent 10273; 2011-11-21T20:13:18Z -->
+<!-- MediaWiki page 1518; revision 10275; parent 10274; 2011-11-21T20:19:34Z -->
