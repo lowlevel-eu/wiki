@@ -41,6 +41,7 @@ Artikel die wirklich 0 Bytes haben (und das seit einiger Zeit) können sicher be
 - [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler"): aus irgendeinem Grund ist hier der i\*86 Teil weggefallen
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
   - FPU wird bei OS-Dev eher weniger als bei anderer Programmierung eingesetzt, oder? Korrekter wäre vielleicht, wie man math.h-Funktionen implementiert, aber das sollte man imho auch per Intelmanual rausfinden können… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
+    - Aber der Kernel muss den Zustand von FPU (und auch SSE/AVX/...) manuell sichern, da aber nicht jeder Prozess überhaupt Zugriff auf die FPU benötigt gibt es da ja einige Beschleunigungstricks wo der Kernel von der CPU drauf hingewiesen wird dann jetzt doch mal zu sichern. Ich denke das es nicht schaden würde dazu mal ein paar Sätze zu erklären, das dahinter stehende Konzept ergibt sich nämlich nicht so einfach aus den Intel-Manuals. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:43, 21. Nov. 2011 (CET)
 - [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting") Themen siehe [Diskussion:Erste_Hilfe](https://lowlevel-eu.github.io/wiki/pages/2264/index.html "Diskussion:Erste Hilfe")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
   - Welcher Thread? Der hier: [http://forum.lowlevel.eu/index.php?topic=1787.0](https://lowlevel-eu.github.io/forum/topics/1787/index.html) Steht im Artikel unter Links.
@@ -128,6 +129,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10263; parent 10260; 2011-11-21T09:32:44Z -->
+<!-- MediaWiki page 1518; revision 10264; parent 10263; 2011-11-21T09:43:26Z -->
