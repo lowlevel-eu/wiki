@@ -36,8 +36,10 @@ Der Kreislauf läuft hier in etwa so:
     60 Derjenige hat keine Lust mehr, und verschwindet. Ein paar Monate ziehen ins Land.
     70 Jemand meint sich des Wikis annehmen zu müssen, und irrelevante Artikel löschen.
     80 Derjenige hat keine Lust mehr, und verschwindet. Ein paar Monate ziehen ins Land.
-    90 GOTO 1
+    90 GOTO 10
     100 REM --Jidder 20:58, 21. Nov. 2011 (CET)</freebasic>
+
+Und wie durchbrechen wir diesen Teufelskreis am besten? Bei normalen Artikeln würd ich ja sagen das derjenige von Punkt 50 einfach etwas Inhalt beisteuern sollte anstatt den *Bitte-Löschen*-Aufkleber zu verteilen. Aber in der Kategorie "Bitte Löschen" sind ja keine normalen Artikel sondern überwiegend Vorstellungen von privaten Hobby-OSen (da kann ja gar kein Anderer was zu schreiben) so das es hier schwierig wird sinnvoll einzugreifen. Das einzigste was ich mir vorstellen kann ist das wenn ein Artikel seit 12 Monaten in der "Bitte Löschen" Kategorie ist **und** sich keiner mehr drum kümmert das dann doch mal endgültig gelöscht wird (bevor diese Kadaver das Riechen anfangen). Dazu muss man aber auch wieder ganz klar sagen das diese 12 Monate eine völlig willkürliche Festlegung sind hinter der zumindest die Mehrheit der Wiki-Nutzer/Editoren stehen muss damit man diese willkürliche Festlegung auch ruhigen Gewissens anwenden kann. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 21:07, 21. Nov. 2011 (CET)
 
 ## Erweitern
 
@@ -150,6 +152,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10272/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10272; parent 10271; 2011-11-21T19:58:42Z -->
+<!-- MediaWiki page 1518; revision 10273; parent 10272; 2011-11-21T20:07:34Z -->
