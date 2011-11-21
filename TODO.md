@@ -41,6 +41,10 @@ Der Kreislauf läuft hier in etwa so:
 
 Und wie durchbrechen wir diesen Teufelskreis am besten? Bei normalen Artikeln würd ich ja sagen das derjenige von Punkt 50 einfach etwas Inhalt beisteuern sollte anstatt den *Bitte-Löschen*-Aufkleber zu verteilen. Aber in der Kategorie "Bitte Löschen" sind ja keine normalen Artikel sondern überwiegend Vorstellungen von privaten Hobby-OSen (da kann ja gar kein Anderer was zu schreiben) so das es hier schwierig wird sinnvoll einzugreifen. Das einzigste was ich mir vorstellen kann ist das wenn ein Artikel seit 12 Monaten in der "Bitte Löschen" Kategorie ist **und** sich keiner mehr drum kümmert das dann doch mal endgültig gelöscht wird (bevor diese Kadaver das Riechen anfangen). Dazu muss man aber auch wieder ganz klar sagen das diese 12 Monate eine völlig willkürliche Festlegung sind hinter der zumindest die Mehrheit der Wiki-Nutzer/Editoren stehen muss damit man diese willkürliche Festlegung auch ruhigen Gewissens anwenden kann. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 21:07, 21. Nov. 2011 (CET)
 
+Ok, gut ich komm von Wikipedia, der Löschhölle, und war dann lange bei Wikibooks. Da steht das Löschen verwaister Bücher auf der Tagesordnung. Da es sich hier aber jeweils nur um einzelne Seiten dreht, ist das Egal. Was ich aber nicht sogut finde ist, das die Artikel in einer Kategorie bitte Löschen stehen. So ne Kategorie heißt für mich: Dieser Artikel wird zur Zeit überprüft, ob er relevant ist, oder gelöscht werden soll. Macht doch ne Kategorie "Eingeschlafen" auf, in die dann alle OS-Projekte kommen die Eingeschlafen sind. Der Autor kann dann gefragt werden, ob er den Artikel so lassen, oder zum Löschen freigeben will.
+
+@Jidder Das ist aber kein schönes FreeBasic, was du da schreibst. Du hättest die nigelnagelneue Vererbung nutzen sollen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 21:13, 21. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -152,6 +156,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10273/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10274/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10273; parent 10272; 2011-11-21T20:07:34Z -->
+<!-- MediaWiki page 1518; revision 10274; parent 10273; 2011-11-21T20:13:18Z -->
