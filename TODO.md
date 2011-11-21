@@ -58,7 +58,7 @@ Ich denke man sollte beim Löschen zwischen mehreren Kategorien unterscheiden:
 Also bei Wikibooks gibt es 3 Kategorien (Wikibooksbücher verhalten sich ähnlich zu OS Projekten bei uns, weil meist nur einer Ahnung hat):
 
 - "Verwaist" - Keiner kümmert sich um das Buch/ den Artikel, obwohl es im aktuellen Zustand nicht wirklich brauchbar ist.
-- "Löschdiskussion" - Wurde zum Löschen vorgeschlagen. Der Autor wird gewarnt. Dann können alle Leute ihre Meinung abgeben. Zuletzt entscheidet der Admin, ob der Antrag entfernt werden soll, oder ob das Buch/ der Artikel gelöscht wird.
+- "Löschdiskussion" - Wurde zum Löschen vorgeschlagen. Der Autor wird gewarnt. Dann können alle Leute ihre Meinung abgeben. Zuletzt entscheidet der Admin, ob der Antrag entfernt werden soll, oder ob das Buch/ der Artikel gelöscht wird (Nach einer bestimmten Frist.).
 - "Schnellöschandtrag" (SLA) Darf nur dann verwendet werden, wenn eine Disskussion sinlos ist, sprich Löschungen im Benutzernamensraum, Urheberrechtsverletzungen uä., sowie vom Buch/OS Autor selbt angefertigte Löschanträge. Dies werden vom Admin sofort bearbeitet. Gruß --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 21:35, 21. Nov. 2011 (CET)
 
 ## Erweitern
@@ -172,6 +172,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10278/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10279/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10278; parent 10277; 2011-11-21T20:35:18Z -->
+<!-- MediaWiki page 1518; revision 10279; parent 10278; 2011-11-21T20:35:54Z -->
