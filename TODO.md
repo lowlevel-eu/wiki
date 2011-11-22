@@ -68,6 +68,10 @@ Also bei Wikibooks gibt es 3 Kategorien (Wikibooksbücher verhalten sich ähnlic
 - "Löschdiskussion" - Wurde zum Löschen vorgeschlagen. Der Autor wird gewarnt. Dann können alle Leute ihre Meinung abgeben. Zuletzt entscheidet der Admin, ob der Antrag entfernt werden soll, oder ob das Buch/ der Artikel gelöscht wird (Nach einer bestimmten Frist.).
 - "Schnellöschandtrag" (SLA) Darf nur dann verwendet werden, wenn eine Disskussion sinlos ist, sprich Löschungen im Benutzernamensraum, Urheberrechtsverletzungen uä., sowie vom Buch/OS Autor selbt angefertigte Löschanträge. Dies werden vom Admin sofort bearbeitet. Gruß --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 21:35, 21. Nov. 2011 (CET)
 
+Ich war ja einer der ersten, der hier blockwartmäßig viele Seiten auf die Löschliste gesetzt hat - allesamt Seiten beendeter oder nicht mehr aktiver oder was auch immer Projekte. Es gibt hier so gut wie nie den Fall, dass man eine Seite, die nun keine Hobby-OS-Seite ist, löschen muss bzw. eine Diskussion darum starten muss. Ich bin auch dafür, dass die Seiten, welche auf der "Zu Löschen"-Liste stehen auch gelöscht werden sollten und das es dafür einen Workflow geben sollte alá "Seite kommt auf die Liste, Diskussion beginnt, wird weitergeführt, wenn eindeutig -\> Löschen, wenn nicht entscheidet der Admin" - Admins sind dafür da, dass, wenn sich keiner Einig eine klare Linie zu fahren. Auch wenn das nicht immer jedem passt - du kannst es halt nicht jedem Recht machen. Aber ich finde halt dass die Admins (bzw. der, huhu bluecode :D) + eine kleine Gruppe vertrauenswürdiger Menschen mit erweiterten Rechten die "letzte Instanz" bilden, natürlich immer zum Wohle der Community (und nicht nach dem Motto: "Näh, zwei Jahre kein tyndur-Release, die Seite wird dann wohl mal gelöscht).
+
+Aber um zurück zum Thema zu kommen: Es bedarf halt einer Regelung bzw. zweier, einmal für Hobby-OS-Seiten (ich finde hier brauchts keine große Diskussion, vor allem bei den jetzt schon auf der Liste stehenden Projekten, hier muss man Faktoren miteinbeziehen wie letzter Edit, aktueller Inhalt, Mehrwert für die Community (hatten uns ja mal im IRC darüber unterhalten eine Gewisse "Schöpfungsgrenze" o.ä. für die Artikel zu erstellen, d.h. nur zu schreiben: "lol mein os hat features wie gdt" reicht nicht) etc. und bei technischen/sonstigen Seiten muss man dann halt diskutieren und am Ende entscheidet die Mehrheit und im Falle, dass es diese nicht gibt die Admins. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 09:28, 22. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -179,6 +183,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10281/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10283/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10281; parent 10280; 2011-11-22T07:01:48Z -->
+<!-- MediaWiki page 1518; revision 10283; parent 10281; 2011-11-22T08:28:50Z -->
