@@ -55,6 +55,10 @@ Ich denke man sollte beim Löschen zwischen mehreren Kategorien unterscheiden:
 - Bei "Löschhinweisen", die nicht vom Autor des OS stammen, könnte man wirklich nach einer Frist löschen, wie du es vorschlägst. Ich schätze mal, dass die zwölf Monate alle bisher markierten Artikel erschlagen. Man könnte im Zuge dessen ein paar Regeln einführen, z.B. dass ein funktionierender Link auf eine Website, die aktueller als der Artikel ist, den Artikel vor dem Löschen bewahren kann, etc.
 - Für technische Artikel halte ich nichts vom Löschen, auch wenn der Artikel im derzeitigen Zustand nicht viel beiträgt. Es finden sich immer wieder Leute, die diese Artikel erweitern, wenn man nur lange genug wartet. Bis dahin schaden die Artikel dem Wikis nicht. --Jidder 21:26, 21. Nov. 2011 (CET)
 
+<!-- -->
+
+- Sehe ich auch so, die stören ja nicht, im schlimmsten Fall nutzen sie halt nichts. [FreakyPenguin](https://lowlevel-eu.github.io/wiki/pages/1460/index.html "Benutzer:FreakyPenguin") 01:41, 22. Nov. 2011 (CET)
+
 Also bei Wikibooks gibt es 3 Kategorien (Wikibooksbücher verhalten sich ähnlich zu OS Projekten bei uns, weil meist nur einer Ahnung hat):
 
 - "Verwaist" - Keiner kümmert sich um das Buch/ den Artikel, obwohl es im aktuellen Zustand nicht wirklich brauchbar ist.
@@ -172,6 +176,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10279/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10280/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10279; parent 10278; 2011-11-21T20:35:54Z -->
+<!-- MediaWiki page 1518; revision 10280; parent 10279; 2011-11-22T00:41:40Z -->
