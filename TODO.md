@@ -126,6 +126,11 @@ Aber um zurück zum Thema zu kommen: Es bedarf halt einer Regelung bzw. zweier, 
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"):
   - Stacktrace erwähnen/erklären, vllt. mit Beispielcode
   - Tricks und Kniffe von [\[1\]](http://wiki.osdev.org/Troubleshooting) übernehmen - vorallem sowas wie \_\_LINE\_\_, \_\_FILE\_\_ für Debugausgaben wären da wichtig.
+- [L4](https://github.com/lowlevel-eu/wiki/wiki/L4 "L4") - [L4](http://de.wikipedia.org/wiki/L4_%28Microkernel%29) eine moderne zukunftsträchtige Mikrokernelspezifikation.
+
+Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:47, 21. Nov. 2011 (CET)
+
+- Hier kommt dein Wunsch hin ;)
 
 ## Kleinigkeiten
 
@@ -169,12 +174,6 @@ Ein Kernel in Java? Interessante Sache, wäre echt nett, wenn du dazu ein wenig 
 
 Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 08:27, 3. Apr. 2011 (CEST)
 
-- [L4](http://de.wikipedia.org/wiki/L4_%28Microkernel%29) eine moderne zukunftsträchtige Mikrokernelspezifikation.
-
-Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:47, 21. Nov. 2011 (CET)
-
-- Hier kommt dein Wunsch hin ;)
-
 ## Diskussionen, die sich noch nicht erledigt haben
 
 - siehe Liste der Diskussionsseiten
@@ -183,6 +182,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10283/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10293/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10283; parent 10281; 2011-11-22T08:28:50Z -->
+<!-- MediaWiki page 1518; revision 10293; parent 10283; 2011-11-22T19:43:08Z -->
