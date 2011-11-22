@@ -224,12 +224,6 @@ Mit VFAT erweitert sich die maximale Länge des Dateinamens auf 255 Zeichen, die
 
 ## Lesen von Dateien
 
-Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
-
-*Nochmal überfliegen ob das so stimmt. Hab noch nie einen entsprechenden Treiber geschrieben ;)*
-
-Hilf Lowlevel, den Artikel zu verbessern.
-
 Um eine Datei zu lesen benötigt man als ersten den entsprechenden Verzeichnis-Eintrag. Sobald man diesen hat, kann man den ersten Cluster (der ja im Verzeichnis-Eintrag steht) laden. Danach lädt man für den ersten Cluster den zugehörigen Eintrag in der FAT. Über den FAT-Eintrag kann man nun feststellen ob dieser Cluster der letzte war oder, wenn nicht, welcher der nächste Cluster ist. Hier nochmal in Kurzform:
 
 1.  Verzeichnis-Eintrag suchen
@@ -253,6 +247,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10256/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10291/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10256; parent 10254; 2011-11-20T17:53:27Z -->
+<!-- MediaWiki page 1643; revision 10291; parent 10256; 2011-11-22T19:16:36Z -->
