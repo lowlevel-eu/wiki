@@ -81,6 +81,8 @@ Hm, das ist in der Tat ein berechtigter Einwand, auf der anderen Seite ist diese
 
 Meine Seite inkl. Diskussion kann weg. --Jidder 13:25, 23. Nov. 2011 (CET)
 
+Sicher? Die Diskussionsseite is ja quasi leer gewesen aber in Deiner Benutzerseite sind doch einige interessante/lustige Dinge in der History. Hier muss ich taljeth auf jeden Fall zustimmen das da ja doch was verloren geht (da sind z.B. einige Tipps zu tyndur drin von denen ich mir vorstellen könnte das die vielleicht noch jemand in den tyndur-Artikel einarbeiten möchte, falls ja dann sollte derjenige das bald tun den wenn Jidder den letzten Bestätigungsbutton (ein weiterer wird wohl nicht kommen) gedrückt hat ist wirklich alles weg). Daher: "Sind Sie sich sicher das Sie sich sicher sind?", weg is weg! --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 14:28, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -186,6 +188,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10300; parent 10299; 2011-11-23T12:25:45Z -->
+<!-- MediaWiki page 1518; revision 10301; parent 10300; 2011-11-23T13:28:39Z -->
