@@ -140,8 +140,6 @@ Richtig löschen kann ein normaler User hier keine Seiten, das darf nur Admin od
 
 Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:47, 21. Nov. 2011 (CET)
 
-- Hier kommt dein Wunsch hin ;)
-
 ## Kleinigkeiten
 
 - Interwiki links zu *OSDev.org*: Seiten ohne Links zu anderen Sprachen
@@ -184,6 +182,9 @@ Ein Kernel in Java? Interessante Sache, wäre echt nett, wenn du dazu ein wenig 
 
 Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 08:27, 3. Apr. 2011 (CEST)
 
+- Andere Prozessorachitekturen (Man braucht ja nicht gleich einen Kernel dazu schreiben.) --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:34, 23. Nov. 2011 (CET)
+- Hier kommt dein Wunsch hin ;)
+
 ## Diskussionen, die sich noch nicht erledigt haben
 
 - siehe Liste der Diskussionsseiten
@@ -192,6 +193,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10307/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10307; parent 10306; 2011-11-23T17:28:58Z -->
+<!-- MediaWiki page 1518; revision 10308; parent 10307; 2011-11-23T19:34:08Z -->
