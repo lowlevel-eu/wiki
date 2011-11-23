@@ -83,6 +83,8 @@ Bitte sei dir darüber im Klaren, das ein löschen irgendeiner Seite, in keinste
 
 Mir ist bewusst das die Datenbank nicht von alleine schrumpft aber desto weniger aktiver Content drin ist desto mehr kann sie theoretisch (auf explizite Anforderung) schrumpfen. Das aktive eigenhändige Leerräumen einer Seite empfinde ich persönlich durchaus als Aufforderung, vor allem wenn dann für sehr lange Zeit nichts mehr geändert wird. Ich bin durchaus der Meinung das ein Wiki kein Web-Archiv ist. Natürlich darf man nicht einfach Seiten löschen an denen gearbeitet wird oder die Content beinhalten aber wenn beides seit langer Zeit nicht mehr zutrifft (und bei Benutzerseiten der Benutzer auch schon ziemlich lange weg ist) dann sollte man solche Leichen auch aufräumen. Leere Seiten und sonstige Leichen machen IMHO auch keinen guten Eindruck nach außen. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:08, 23. Nov. 2011 (CET)
 
+Das stimmt. Leere Seiten können gelöscht werden. (Im Zweifel geh' davon aus, das der Leerer nicht wusste, wie man richtig löscht.) Bei Leuten die öfter mal on sind kannst du auch Fragen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 18:12, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -188,6 +190,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10305/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10305; parent 10304; 2011-11-23T17:08:07Z -->
+<!-- MediaWiki page 1518; revision 10306; parent 10305; 2011-11-23T17:12:31Z -->
