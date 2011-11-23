@@ -79,6 +79,8 @@ Vergiss bitte nicht, dass du beim Löschen eine Seite nicht nur den aktuellen le
 
 Hm, das ist in der Tat ein berechtigter Einwand, auf der anderen Seite ist dieses Wiki kein kostenloses unbegrenztes Datenarchiv. Wer seine Benutzer-Seite selber leer räumt (und auch sonst nichts mehr zum Wiki beiträgt) muss auch damit rechnen das die History seiner Benutzer-Seite früher oder später ebenfalls komplett verschwindet. Außerdem hab ich mir die Versionsgeschichte von allen Seiten die ich heute Früh gelöscht hab genau angesehen und denke das nirgends Informationen dabei waren die diese Personen nicht auch so wissen, wer sich später nicht mehr erinnern kann auf was für einer Schule er mit 15 war oder welche ICQ-Nummer er vor Urzeiten mal benutzt hat der hat noch ganz andere Probleme als eine verschwundene History in irgendeinem Wiki in dem er mal vor etlichen Jahren aktiv war. Nebst dessen das z.B. der Kommentar beim Leerräumen von PNoob durchaus als Aufforderung interpretierbar ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 12:30, 23. Nov. 2011 (CET)
 
+Meine Seite inkl. Diskussion kann weg. --Jidder 13:25, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -184,6 +186,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10299/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10299; parent 10297; 2011-11-23T11:30:54Z -->
+<!-- MediaWiki page 1518; revision 10300; parent 10299; 2011-11-23T12:25:45Z -->
