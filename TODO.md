@@ -75,6 +75,8 @@ Aber um zurück zum Thema zu kommen: Es bedarf halt einer Regelung bzw. zweier, 
   
 Ich hab gerade mal nach leeren Benutzerseiten geschaut, waren ja doch ein paar dabei, und entsprechend gelöscht. Nicht sicher war ich mir bei Jidder, [PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") und [Stultus](https://lowlevel-eu.github.io/wiki/pages/1534/index.html "Benutzer:Stultus") was damit nun passieren soll, bei Stultus gibt es zwar Bytes aber Inhalt ist das meiner persönlichen Meinung nach nicht (vom Alter der Seite mal ganz abgesehen) und die anderen zwei sind noch nicht so lange leer. Wäre nett wenn ich da Feadback bekommen könnte (auch wenn ich nicht wirklich damit rechne), wenn nix kommt sind alle 3 Seiten in 2 Wochen weg. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 08:12, 23. Nov. 2011 (CET)
 
+Vergiss bitte nicht, dass du beim Löschen eine Seite nicht nur den aktuellen leeren Inhalt löschst, sondern auch die komplette Versionsgeschichte. Ohne dass jemand aktiv verlangt, dass seine Benutzerseite gelöscht wird, würde ich das eher bleiben lassen. --Taljeth 12:11, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -180,6 +182,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10297/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10296; parent 10294; 2011-11-23T07:12:46Z -->
+<!-- MediaWiki page 1518; revision 10297; parent 10296; 2011-11-23T11:11:33Z -->
