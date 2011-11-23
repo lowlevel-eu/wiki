@@ -85,6 +85,8 @@ Mir ist bewusst das die Datenbank nicht von alleine schrumpft aber desto weniger
 
 Das stimmt. Leere Seiten können gelöscht werden. (Im Zweifel geh' davon aus, das der Leerer nicht wusste, wie man richtig löscht.) Bei Leuten die öfter mal on sind kannst du auch Fragen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 18:12, 23. Nov. 2011 (CET)
 
+Richtig löschen kann ein normaler User hier keine Seiten, das darf nur Admin oder höher, von daher ist das Leerräumen das Maximalste was der User machen kann und das ist IMHO ein gutes Indiz für den Willen das die Seite verschwinden darf. Leute die hier noch mitmachen (oder erst vor kurzem gegangen sind so das eine Rückkehr durchaus noch eine gewisse Wahrscheinlichkeit hat) sind natürlich tabu, deswegen hab ich ja heute Früh dann auch diese Diskussion gestartet um eben die Grenzfälle zu klären. Die Seite von Stultus ist IMHO ein spezieller Grenzfall, echten Contet gibt es da eher nicht und die letzte (einzigste) Änderung ist auch schon über 4 Jahre her, aber wirklich leer ist sie eben auch nicht so das ich es als unhöflich betrachten würde diese Seite einfach zu löschen (so knapp ist der Platz in der Datenbank bestimmt auch nicht). --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 18:28, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -190,6 +192,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10307/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10306; parent 10305; 2011-11-23T17:12:31Z -->
+<!-- MediaWiki page 1518; revision 10307; parent 10306; 2011-11-23T17:28:58Z -->
