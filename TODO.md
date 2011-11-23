@@ -79,6 +79,8 @@ Vergiss bitte nicht, dass du beim Löschen eine Seite nicht nur den aktuellen le
 
 Hm, das ist in der Tat ein berechtigter Einwand, auf der anderen Seite ist dieses Wiki kein kostenloses unbegrenztes Datenarchiv. Wer seine Benutzer-Seite selber leer räumt (und auch sonst nichts mehr zum Wiki beiträgt) muss auch damit rechnen das die History seiner Benutzer-Seite früher oder später ebenfalls komplett verschwindet. Außerdem hab ich mir die Versionsgeschichte von allen Seiten die ich heute Früh gelöscht hab genau angesehen und denke das nirgends Informationen dabei waren die diese Personen nicht auch so wissen, wer sich später nicht mehr erinnern kann auf was für einer Schule er mit 15 war oder welche ICQ-Nummer er vor Urzeiten mal benutzt hat der hat noch ganz andere Probleme als eine verschwundene History in irgendeinem Wiki in dem er mal vor etlichen Jahren aktiv war. Nebst dessen das z.B. der Kommentar beim Leerräumen von PNoob durchaus als Aufforderung interpretierbar ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 12:30, 23. Nov. 2011 (CET)
 
+Bitte sei dir darüber im Klaren, das ein löschen irgendeiner Seite, in keinster Weise die Datenbank leert. Die MediaWiki Software löscht eigentlich nie was, sie fügt lediglich etwas dazu. Was du als löschen bezeichnet, bedeutet eigentlich bloß das entfernen aus dem öffentlich zugänglichen Teil des Forums. Außerdem würde ich nicht irgendwelche Aktionen an fremden Benutzerseiten vornehmen, es seiden du wirst vom Besitzer dazu aufgefordert, oder siehst dich aus rechtlichen Gründen dazu gezwungen, alles andere verstöße bei Wikipedia gegen die Wikiquette. Gruß --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 17:29, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -184,6 +186,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10303/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10304/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10303; parent 10302; 2011-11-23T16:14:14Z -->
+<!-- MediaWiki page 1518; revision 10304; parent 10303; 2011-11-23T16:29:54Z -->
