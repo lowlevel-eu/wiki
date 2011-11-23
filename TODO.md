@@ -72,6 +72,9 @@ Ich war ja einer der ersten, der hier blockwartmäßig viele Seiten auf die Lös
 
 Aber um zurück zum Thema zu kommen: Es bedarf halt einer Regelung bzw. zweier, einmal für Hobby-OS-Seiten (ich finde hier brauchts keine große Diskussion, vor allem bei den jetzt schon auf der Liste stehenden Projekten, hier muss man Faktoren miteinbeziehen wie letzter Edit, aktueller Inhalt, Mehrwert für die Community (hatten uns ja mal im IRC darüber unterhalten eine Gewisse "Schöpfungsgrenze" o.ä. für die Artikel zu erstellen, d.h. nur zu schreiben: "lol mein os hat features wie gdt" reicht nicht) etc. und bei technischen/sonstigen Seiten muss man dann halt diskutieren und am Ende entscheidet die Mehrheit und im Falle, dass es diese nicht gibt die Admins. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 09:28, 22. Nov. 2011 (CET)
 
+  
+Ich hab gerade mal nach leeren Benutzerseiten geschaut, waren ja doch ein paar dabei, und entsprechend gelöscht. Nicht sicher war ich mir bei Jidder, [PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob") und [Stultus](https://lowlevel-eu.github.io/wiki/pages/1534/index.html "Benutzer:Stultus") was damit nun passieren soll, bei Stultus gibt es zwar Bytes aber Inhalt ist das meiner persönlichen Meinung nach nicht (vom Alter der Seite mal ganz abgesehen) und die anderen zwei sind noch nicht so lange leer. Wäre nett wenn ich da Feadback bekommen könnte (auch wenn ich nicht wirklich damit rechne), wenn nix kommt sind alle 3 Seiten in 2 Wochen weg. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 08:12, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -177,6 +180,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10294/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10294; parent 10293; 2011-11-22T21:31:03Z -->
+<!-- MediaWiki page 1518; revision 10296; parent 10294; 2011-11-23T07:12:46Z -->
