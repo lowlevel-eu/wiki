@@ -83,6 +83,8 @@ Meine Seite inkl. Diskussion kann weg. --Jidder 13:25, 23. Nov. 2011 (CET)
 
 Sicher? Die Diskussionsseite is ja quasi leer gewesen aber in Deiner Benutzerseite sind doch einige interessante/lustige Dinge in der History. Hier muss ich taljeth auf jeden Fall zustimmen das da ja doch was verloren geht (da sind z.B. einige Tipps zu tyndur drin von denen ich mir vorstellen könnte das die vielleicht noch jemand in den tyndur-Artikel einarbeiten möchte, falls ja dann sollte derjenige das bald tun den wenn Jidder den letzten Bestätigungsbutton (ein weiterer wird wohl nicht kommen) gedrückt hat ist wirklich alles weg). Daher: "Sind Sie sich sicher das Sie sich sicher sind?", weg is weg! --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 14:28, 23. Nov. 2011 (CET)
 
+Mich würde es auch nicht stören, wenn das da bleibt. For the lulz. Ich bin allerdings nicht mehr auf die Inhalte angewiesen. Die Tipps zu týndur stehen auch hier [\[1\]](https://lowlevel-eu.github.io/forum/topics/2397/index.html), das Imageerstellen unter Cygwin war für mich nicht so der Bringer, und die Abenteuer von Bobby dem Bootloader wurden bereits nach der ersten Folge wegen schlechter Einschaltquoten wieder abgesetzt. --Jidder 15:43, 23. Nov. 2011 (CET)
+
 ## Erweitern
 
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -131,7 +133,7 @@ Sicher? Die Diskussionsseite is ja quasi leer gewesen aber in Deiner Benutzersei
 - [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") ist eine ziemliche Tabellenwüste. Ich würde mir eine Erklärung wünschen, wofür jeder der drei Typen gut ist, und wie man grob vorgeht, um ein Programm (ggf. mit Shared Libs) zu starten oder ein Kernelmodul zu laden.
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"):
   - Stacktrace erwähnen/erklären, vllt. mit Beispielcode
-  - Tricks und Kniffe von [\[1\]](http://wiki.osdev.org/Troubleshooting) übernehmen - vorallem sowas wie \_\_LINE\_\_, \_\_FILE\_\_ für Debugausgaben wären da wichtig.
+  - Tricks und Kniffe von [\[2\]](http://wiki.osdev.org/Troubleshooting) übernehmen - vorallem sowas wie \_\_LINE\_\_, \_\_FILE\_\_ für Debugausgaben wären da wichtig.
 - [L4](https://github.com/lowlevel-eu/wiki/wiki/L4 "L4") - [L4](http://de.wikipedia.org/wiki/L4_%28Microkernel%29) eine moderne zukunftsträchtige Mikrokernelspezifikation.
 
 Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:47, 21. Nov. 2011 (CET)
@@ -188,6 +190,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10302/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10301; parent 10300; 2011-11-23T13:28:39Z -->
+<!-- MediaWiki page 1518; revision 10302; parent 10301; 2011-11-23T14:43:34Z -->
