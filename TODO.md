@@ -196,6 +196,8 @@ Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/p
 
 Da frage ich mich welche Architekturen das sein sollen. Es gibt eine nahezu unüberschaubare Fülle an CPU-Architekturen, viele davon lassen sich in wenige Kategorien (z.B. 32Bit/RISC/Flat-Memory mit Paging oder 16Bit/RISC/keine Speicherverwaltung) einteilen. Außerhalb von x86 ist momentan ARM der "Shooting Star" der in fast allen Bereichen (vom kleinsten Mikrocontroller über normale Applikationsprozessoren bis hin zum Hochleistungsprozessor) seinen Marktanteil spürbar vergrößert. ARM wird hier im Wiki bereits vorgestellt, auch wenn der Artikel vielleicht noch ein bisschen *mehr* haben könnte (z.B. könnte eventuell der kommende 64Bit-Modus integriert werden). Wirklich erwähnenswert wären daneben noch MIPS und PowerPC (die haben zumindest derzeit noch eine gewisse Verbreitung in einer größeren Anzahl an Marktsegmenten), ansonsten fällt mir kein triftiger Grund ein weitere CPU-Architekturen hier detailliert vorzustellen und eine simple Auflistung was es alles gibt (oder ein Haufen fast leerer Stubs) macht hier meiner persönlichen Meinung nach keinen Sinn (wer zu diesem Thema einen Überblick haben möchte ist IMHO auf Wikipedia ganz gut aufgehoben). Auch sollten wir hier zumindest einen rudimentären Test-Kernel zu einer CPU präsentieren können schließlich interessieren wir uns ja vor allem für den Aspekt wie man ein richtiges OS für eine Architektur entwickelt. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:34, 24. Nov. 2011 (CET)
 
+Ich persönich dachte an die üblichen Verdächtigten, die theoretisch auch PC Anforderungen entsprächen, sprich (abgesehen von ARM) PowerPC, MIPS, SPARK und Itanium (evtl. auch Alpha). Microkontroller oder irgentwelcher alter Mist wie Z80 oder I8080 sind nicht angedacht. Das mit dem Kernel stimmt, so was währe mal ganz interessant. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 16:22, 24. Nov. 2011 (CET)
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -206,6 +208,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10313; parent 10312; 2011-11-24T13:51:45Z -->
+<!-- MediaWiki page 1518; revision 10314; parent 10313; 2011-11-24T15:22:08Z -->
