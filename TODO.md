@@ -152,6 +152,9 @@ Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj]
 - [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table)
 - [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
 - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
+
+Ist das überhaupt noch nötig? ReiserFS ist quasi ausgestorben, Version 3 ist zwar im offiziellen Linux-Kernel und wurde früher z.B. von SUSE gerne benutzt aber wird auch seit Jahren nicht mehr aktiv gepflegt, Version 4 hat wimre nie die Aufnahme in den offiziellen Linux-Kernel geschafft und da auch dort keine Weiterentwicklung mehr stattfindet wird das wohl auch nicht mehr passieren. Sollte sich nicht wirklich jemand erbarmen dazu einen echten Artikel zu schreiben dann ist meiner persönlichen Meinung nach dieser Punkt hinfällig und der existierende Stub ein prädestinierter Löschkandidat. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:34, 24. Nov. 2011 (CET)
+
 - Ext
 - UDF
 - Debuggen mit Qemu und [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB")
@@ -183,6 +186,9 @@ Ein Kernel in Java? Interessante Sache, wäre echt nett, wenn du dazu ein wenig 
 Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 08:27, 3. Apr. 2011 (CEST)
 
 - Andere Prozessorachitekturen (Man braucht ja nicht gleich einen Kernel dazu schreiben.) --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:34, 23. Nov. 2011 (CET)
+
+Da frage ich mich welche Architekturen das sein sollen. Es gibt eine nahezu unüberschaubare Fülle an CPU-Architekturen, viele davon lassen sich in wenige Kategorien (z.B. 32Bit/RISC/Flat-Memory mit Paging oder 16Bit/RISC/keine Speicherverwaltung) einteilen. Außerhalb von x86 ist momentan ARM der "Shooting Star" der in fast allen Bereichen (vom kleinsten Mikrocontroller über normale Applikationsprozessoren bis hin zum Hochleistungsprozessor) seinen Marktanteil spürbar vergrößert. ARM wird hier im Wiki bereits vorgestellt, auch wenn der Artikel vielleicht noch ein bisschen *mehr* haben könnte (z.B. könnte eventuell der kommende 64Bit-Modus integriert werden). Wirklich erwähnenswert wären daneben noch MIPS und PowerPC (die haben zumindest derzeit noch eine gewisse Verbreitung in einer größeren Anzahl an Marktsegmenten), ansonsten fällt mir kein triftiger Grund ein weitere CPU-Architekturen hier detailliert vorzustellen und eine simple Auflistung was es alles gibt (oder ein Haufen fast leerer Stubs) macht hier meiner persönlichen Meinung nach keinen Sinn (wer zu diesem Thema einen Überblick haben möchte ist IMHO auf Wikipedia ganz gut aufgehoben). Auch sollten wir hier zumindest einen rudimentären Test-Kernel zu einer CPU präsentieren können schließlich interessieren wir uns ja vor allem für den Aspekt wie man ein richtiges OS für eine Architektur entwickelt. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:34, 24. Nov. 2011 (CET)
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -193,6 +199,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10308; parent 10307; 2011-11-23T19:34:08Z -->
+<!-- MediaWiki page 1518; revision 10309; parent 10308; 2011-11-24T09:34:24Z -->
