@@ -159,6 +159,8 @@ Ich finde, das hätte schon seine Berechtigung, weil es einen anderen Ansatz ver
 
 Klar ist ReiserFS sehr interessant, es geht mir eher darum das es defacto Tod ist und keine nennenswerte Verbreitung (mehr) hat und sich deswegen hier dazu kein Artikel mehr lohnt (geschichtliches oder die privaten Probleme des Initiators sind IMHO bei Wikipedia besser aufgehoben als hier). Btrfs, oder meinetwegen auch ZFS, ist da auf jeden Fall sehr viel interessanter aber vor allem auch praxisrelevanter (zumindest deutlich praxisrelevanter als ReiserFS). Ich bin nur der Meinung wenn es eh keinen echten Sinn macht den leeren Stub zu füllen dann sollte dieser Punkt auch von der TODO-Liste runter. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 14:02, 24. Nov. 2011 (CET)
 
+Ich kenne mich mit beiden nicht wirklich aus, aber meine Vermutung wäre, dass Reiser leichter zu verstehen ist, und das würde ihm schon einen berechtigten Platz hier schaffen. Kein Mensch benutzt mehr ext2 produktiv und FAT auch nur noch als kleinsten gemeinsamen Nenner. Trotzdem sind sie einfach genug, dass man sie verstehen und in einem Hobby-OS implementieren kann. Ich glaube, das ist ein viel wichtigeres Kriterium als Praxisrelevanz für produktive Systeme. --Taljeth 14:51, 24. Nov. 2011 (CET)
+
 - btrfs
 - Ext
 - UDF
@@ -204,6 +206,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10312; parent 10311; 2011-11-24T13:02:01Z -->
+<!-- MediaWiki page 1518; revision 10313; parent 10312; 2011-11-24T13:51:45Z -->
