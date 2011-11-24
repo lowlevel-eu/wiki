@@ -153,7 +153,7 @@ Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj]
 - [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
 - [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
 
-Ist das überhaupt noch nötig? ReiserFS ist quasi ausgestorben, Version 3 ist zwar im offiziellen Linux-Kernel und wurde früher z.B. von SUSE gerne benutzt aber wird auch seit Jahren nicht mehr aktiv gepflegt, Version 4 hat wimre nie die Aufnahme in den offiziellen Linux-Kernel geschafft und da auch dort keine Weiterentwicklung mehr stattfindet wird das wohl auch nicht mehr passieren. Sollte sich nicht wirklich jemand erbarmen dazu einen echten Artikel zu schreiben dann ist meiner persönlichen Meinung nach dieser Punkt hinfällig und der existierende Stub ein prädestinierter Löschkandidat. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:34, 24. Nov. 2011 (CET)
+Ist das überhaupt noch nötig? ReiserFS ist quasi ausgestorben, Version 3 ist zwar im offiziellen Linux-Kernel und wurde früher z.B. von SUSE gerne benutzt aber wird auch seit Jahren nicht mehr aktiv gepflegt, Version 4 hat wimre nie die Aufnahme in den offiziellen Linux-Kernel geschafft und da auch dort keine Weiterentwicklung mehr stattfindet wird das wohl auch nicht mehr passieren. Sollte sich nicht wirklich jemand erbarmen dazu einen echten Artikel zu schreiben dann ist meiner persönlichen Meinung nach dieser Punkt hinfällig und der existierende Stub ein prädestinierter Löschkandidat. Hier wäre es vielleicht interessant eine Seite zu haben wo die wichtigen/verbreiteten Dateisysteme kurz vorgestellt werden und auch Infos sind ob es sich überhaupt lohnt dafür einen Treiber zu schreiben (ich denke da auch an SFS) bzw. wie komplex der Versuch wohl in etwa wäre. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:34, 24. Nov. 2011 (CET)
 
 - Ext
 - UDF
@@ -199,6 +199,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10309; parent 10308; 2011-11-24T09:34:24Z -->
+<!-- MediaWiki page 1518; revision 10310; parent 10309; 2011-11-24T09:38:20Z -->
