@@ -155,6 +155,9 @@ Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj]
 
 Ist das überhaupt noch nötig? ReiserFS ist quasi ausgestorben, Version 3 ist zwar im offiziellen Linux-Kernel und wurde früher z.B. von SUSE gerne benutzt aber wird auch seit Jahren nicht mehr aktiv gepflegt, Version 4 hat wimre nie die Aufnahme in den offiziellen Linux-Kernel geschafft und da auch dort keine Weiterentwicklung mehr stattfindet wird das wohl auch nicht mehr passieren. Sollte sich nicht wirklich jemand erbarmen dazu einen echten Artikel zu schreiben dann ist meiner persönlichen Meinung nach dieser Punkt hinfällig und der existierende Stub ein prädestinierter Löschkandidat. Hier wäre es vielleicht interessant eine Seite zu haben wo die wichtigen/verbreiteten Dateisysteme kurz vorgestellt werden und auch Infos sind ob es sich überhaupt lohnt dafür einen Treiber zu schreiben (ich denke da auch an SFS) bzw. wie komplex der Versuch wohl in etwa wäre. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:34, 24. Nov. 2011 (CET)
 
+Ich finde, das hätte schon seine Berechtigung, weil es einen anderen Ansatz verfolgt als FAT und ext2. Wir wollen ja nicht nur den einzig wahren Weg darstellen, den wir im Forum/auf Diskussionsseiten ausgetüftelt haben sondern verschiedene Ideen vorstellen, die man vielleicht auch kombinieren kann oder was auch immer. Wobei ich wegen der Aktualität einen btrfs-Artikel schon auch spannender fände als ReiserFS. Ich nehme das mal in die Liste auf. --Taljeth 10:45, 24. Nov. 2011 (CET)
+
+- btrfs
 - Ext
 - UDF
 - Debuggen mit Qemu und [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB")
@@ -199,6 +202,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10310/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10310; parent 10309; 2011-11-24T09:38:20Z -->
+<!-- MediaWiki page 1518; revision 10311; parent 10310; 2011-11-24T09:45:16Z -->
