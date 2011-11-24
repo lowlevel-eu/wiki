@@ -157,6 +157,8 @@ Ist das überhaupt noch nötig? ReiserFS ist quasi ausgestorben, Version 3 ist z
 
 Ich finde, das hätte schon seine Berechtigung, weil es einen anderen Ansatz verfolgt als FAT und ext2. Wir wollen ja nicht nur den einzig wahren Weg darstellen, den wir im Forum/auf Diskussionsseiten ausgetüftelt haben sondern verschiedene Ideen vorstellen, die man vielleicht auch kombinieren kann oder was auch immer. Wobei ich wegen der Aktualität einen btrfs-Artikel schon auch spannender fände als ReiserFS. Ich nehme das mal in die Liste auf. --Taljeth 10:45, 24. Nov. 2011 (CET)
 
+Klar ist ReiserFS sehr interessant, es geht mir eher darum das es defacto Tod ist und keine nennenswerte Verbreitung (mehr) hat und sich deswegen hier dazu kein Artikel mehr lohnt (geschichtliches oder die privaten Probleme des Initiators sind IMHO bei Wikipedia besser aufgehoben als hier). Btrfs, oder meinetwegen auch ZFS, ist da auf jeden Fall sehr viel interessanter aber vor allem auch praxisrelevanter (zumindest deutlich praxisrelevanter als ReiserFS). Ich bin nur der Meinung wenn es eh keinen echten Sinn macht den leeren Stub zu füllen dann sollte dieser Punkt auch von der TODO-Liste runter. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 14:02, 24. Nov. 2011 (CET)
+
 - btrfs
 - Ext
 - UDF
@@ -202,6 +204,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10311/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10312/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10311; parent 10310; 2011-11-24T09:45:16Z -->
+<!-- MediaWiki page 1518; revision 10312; parent 10311; 2011-11-24T13:02:01Z -->
