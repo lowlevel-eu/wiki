@@ -161,6 +161,8 @@ Klar ist ReiserFS sehr interessant, es geht mir eher darum das es defacto Tod is
 
 Ich kenne mich mit beiden nicht wirklich aus, aber meine Vermutung wäre, dass Reiser leichter zu verstehen ist, und das würde ihm schon einen berechtigten Platz hier schaffen. Kein Mensch benutzt mehr ext2 produktiv und FAT auch nur noch als kleinsten gemeinsamen Nenner. Trotzdem sind sie einfach genug, dass man sie verstehen und in einem Hobby-OS implementieren kann. Ich glaube, das ist ein viel wichtigeres Kriterium als Praxisrelevanz für produktive Systeme. --Taljeth 14:51, 24. Nov. 2011 (CET)
 
+Wenn jemand meint, einen Artikel erstellen zu wollen und der resultierende Artikel ist mehr als nur ein Stub ist doch alles OK. Und ReiserFS hat, auch wenn es nicht mehr benutzt wird, mit Sicherheit eine (technisch vertiefte) Erwähnung verdient, eben weil es andere Wege geht. Man könnte ja, damit man Wichtiges von Unwichtigem unterscheiden kann, eine Überschrift "Diese Seiten gibt's noch nicht, sind auch nicht dringend, aber wenn du jemand ist, der die Seite erstellen will dann gerne" erstellen und dieen Artikel daruntersetzen. Oder ihn einfach hier stehen lassen, weil es ihn nicht gibt :) --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 17:06, 24. Nov. 2011 (CET)
+
 - btrfs
 - Ext
 - UDF
@@ -208,6 +210,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10314; parent 10313; 2011-11-24T15:22:08Z -->
+<!-- MediaWiki page 1518; revision 10315; parent 10314; 2011-11-24T16:06:22Z -->
