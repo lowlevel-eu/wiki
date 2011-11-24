@@ -166,13 +166,6 @@ Wenn jemand meint, einen Artikel erstellen zu wollen und der resultierende Artik
 - btrfs
 - Ext
 - UDF
-- Debuggen mit Qemu und [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB")
-
-Gehört das nicht eher zu "Erweitern"? Wenn ich die Zeit finde werde ich mich mir das mit Qemu mal angucken... --[RedEagle](https://lowlevel-eu.github.io/wiki/pages/1491/index.html "Benutzer:RedEagle") 15:34, 5. Okt. 2010 (CEST)
-
-Ich habe in den Artikel [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") eine Kurzbeschreibung geschrieben, wie man mit GDB und QEMU debuggt. --[Markus111](https://lowlevel-eu.github.io/wiki/pages/2285/index.html "Benutzer:Markus111") 16:24, 20. Okt. 2010 (CEST)
-
-- [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI")
 - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")
 - [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
 - [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")
@@ -210,6 +203,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10315/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10316/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10315; parent 10314; 2011-11-24T16:06:22Z -->
+<!-- MediaWiki page 1518; revision 10316; parent 10315; 2011-11-24T19:14:18Z -->
