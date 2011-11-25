@@ -165,6 +165,8 @@ Wenn jemand meint, einen Artikel erstellen zu wollen und der resultierende Artik
 
 Versteh mich nicht falsch, aber ext2 wird immer noch genutzt, gerade weil es kein Journaling mehr enthält. Wenn man also Linux auf einem Flash-Speicher (z.B. USB-Stick) installieren will, sollte man ext2 benutzen. Darüber hinaus ist ext2 das erste sehr Leistungsfähige Datensystem. Mit USB-Sticks allgemein ist es so, das dort auch heute noch FAT Verwendet wird. Viele nicht Betriebssystem abhängige Syteme (UEFI, Stereoanlage mit USB-Schnittstelle, usw.) greifen auf dieses relativ einfache Datensystem zurück. Neben dem Fehlen des Journalings ist es die Tatsache, das es das einzige offenen Datensystem ist, welches von Windows nativ unterstützt wird, ein wichtiger Faktor. (Ich glaube die Einführung einer ext2 Unterstützung für Windows würde das Format in den Schatten stellen.) Aus diesen Gründe konnte sich das ansonsten Veraltete System sehr populär halten. Also enthalten sowohl, ext2 als auch FAT Faktoren, die sie wesentlich aktuelle als ReiserFS machen. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:30, 24. Nov. 2011 (CET)
 
+Ich glaube für Flash-Speicher gibt es mittlerweile wesentlich bessere Dateisysteme als ext2. Möglicherweise wird es trotzdem noch benutzt, wie FAT dann aber eher aus Kompatibilitätsgründen. Geht aber alles an der Argumentation vorbei, dass der "Marktanteil" überhaupt keine Rolle spielt. Was technisch interessant ist, sollte als mögliche Alternative beschrieben werden, damit sich der geneigte OS-Entwickler selber eine Meinung bilden kann, was der beste Ansatz ist. Es baut ja auch nicht jeder einen Unix- oder Win32-Klon, obwohl (auf PCs) andere Systeme in der Praxis zur Zeit keine große Rolle spielen. --Taljeth 10:12, 25. Nov. 2011 (CET)
+
 - btrfs
 - Ext
 - UDF
@@ -205,6 +207,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10317; parent 10316; 2011-11-24T19:30:59Z -->
+<!-- MediaWiki page 1518; revision 10320; parent 10317; 2011-11-25T09:12:54Z -->
