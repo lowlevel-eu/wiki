@@ -167,6 +167,8 @@ Versteh mich nicht falsch, aber ext2 wird immer noch genutzt, gerade weil es kei
 
 Ich glaube für Flash-Speicher gibt es mittlerweile wesentlich bessere Dateisysteme als ext2. Möglicherweise wird es trotzdem noch benutzt, wie FAT dann aber eher aus Kompatibilitätsgründen. Geht aber alles an der Argumentation vorbei, dass der "Marktanteil" überhaupt keine Rolle spielt. Was technisch interessant ist, sollte als mögliche Alternative beschrieben werden, damit sich der geneigte OS-Entwickler selber eine Meinung bilden kann, was der beste Ansatz ist. Es baut ja auch nicht jeder einen Unix- oder Win32-Klon, obwohl (auf PCs) andere Systeme in der Praxis zur Zeit keine große Rolle spielen. --Taljeth 10:12, 25. Nov. 2011 (CET)
 
+Natürlich hab ich nichts gegen ein guten Artikel über ReiserFS (oder jedes andere Dateisystem) einzuwenden, jeder gute Artikel verbessert dieses Wiki. Der Grund warum (nahezu) jedes Hobby-OS als erstes FAT unterstützt liegt wohl vor allem daran das FAT simpel ist und von jedem anderen OS (das auch nur halbwegs Bedeutung hat) verstanden wird. Klar würde FAT schlagartig verschwinden wenn Windows ein anständiges Open-Source-Dateisystem unterstützen würde aber MS möchte auf USB-Sticks u.ä. wohl in Zukunft lieber UDF (dessen Spec auch frei verfügbar ist) haben. Wenn ich ein funktionierendes OS im richtigen Reifegrad hätte wäre aus meiner persönlichen Sicht UDF der interessanteste Kandidat, schon weil damit auch gleich alle DVD's u.ä. erschlagen sind und eben weil jedes andere OS mit Bedeutung ebenfalls UDF kann. Natürlich soll sich in diesem Wiki der mündige OS-Dever gut informieren können aber wenn keiner von uns einen Artikel zu einen Dateisystem schreiben kann weil keiner von uns dazu Ahnung hat dann muss dieser Punkt nicht unbedingt auf der TODO-Liste stehen (und suggerieren das ein entsprechender Artikel hier noch wirklich fehlt). Ich bin daher für Hartmuts Vorschlag das wir hier eine Kategorie "Nice to Have" einführen in die solche Vorschläge, wie z.B. ReiserFS oder andere *Nicht-Mainstream-Dateisysteme*, kommen. Ich habe diese Diskussion nicht angefangen weil ich was grundsätzliches gegen ReiserFS habe sondern einfach weil ich nicht der Meinung bin das es auf einer *TODO*-Liste stehen muss (und der leere Stub nützt IMHO auch niemanden etwas). --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 12:30, 25. Nov. 2011 (CET)
+
 - btrfs
 - Ext
 - UDF
@@ -197,6 +199,8 @@ Da frage ich mich welche Architekturen das sein sollen. Es gibt eine nahezu unü
 
 Ich persönich dachte an die üblichen Verdächtigten, die theoretisch auch PC Anforderungen entsprächen, sprich (abgesehen von ARM) PowerPC, MIPS, SPARK und Itanium (evtl. auch Alpha). Microkontroller oder irgentwelcher alter Mist wie Z80 oder I8080 sind nicht angedacht. Das mit dem Kernel stimmt, so was währe mal ganz interessant. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 16:22, 24. Nov. 2011 (CET)
 
+Also MIPS und PowerPC hab ich ja schon als interessante Kandidaten genannt, aber sind SPARC, Itanium und Alpha wirklich Dein Ernst? Schon um überhaupt ein physisches System auf dem Tisch stehen zu haben, an dem man praktisch entwickeln kann, ist ne ganze Menge Geld erforderlich. Alpha wird übrigens nicht mehr hergestellt, den Itanium möchte Intel auch lieber Gestern als Heute über Bord werfen und wie lange Oracle sich noch für SPARC engagiert steht auch in den Sternen. Natürlich sind diese 3 sehr interessante CPU-Architekturen und entsprechende gute Artikel wären eine echte Bereicherung für dieses Wiki aber der Nutzwert für den typischen **Hobby**-OS-Dever ist wohl doch eher gering (wenn auch nicht ganz 0). Es ist ja eben gerade der Vorteil vom ARM, MIPS und PowerPC das es jeweils einige Hersteller gibt (MIPS und PowerPC und sogar SPARC sind auch als Soft-CPU für FPGAs verfügbar (PowerPC wimre aber nur als Closed-Source gegen Geld), für ARM gab es schon mehrere (Open-Source-)Projekte dieser Art die aber allesamt von der Rechtsabteilung von ARM vernichtet wurden) und diese CPUs eben in vielen verschiedenen Größen (vom Mikro-Controller über PC-Klasse bis einschließlich HPC-System (nur aus ARM wurde noch nie ein Super-Computer gebaut, aus x86, MIPS, PowerPC, SPARC, Itanium und Alpha aber schon)) verfügbar sind und deswegen auch was passendes für den Hobby-OS-Dever dabei ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 12:30, 25. Nov. 2011 (CET)
+
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -207,6 +211,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10320; parent 10317; 2011-11-25T09:12:54Z -->
+<!-- MediaWiki page 1518; revision 10321; parent 10320; 2011-11-25T11:30:44Z -->
