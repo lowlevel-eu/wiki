@@ -1,6 +1,6 @@
 # ARM
 
-**ARM** (**A**corn **R**isc **M**achine) sind 32-Bit-Prozessoren nach dem [RISC](https://github.com/lowlevel-eu/wiki/wiki/Reduced-Instruction-Set-Computing "RISC")-Prinzip.
+**ARM** (**A**dvanced **R**isc **M**achine, vormals ***A**corn **R**isc **M**achine*) sind 32-Bit-Prozessoren nach dem [RISC](https://github.com/lowlevel-eu/wiki/wiki/Reduced-Instruction-Set-Computing "RISC")-Prinzip.
 
 ## Eigenschaften
 
@@ -91,13 +91,13 @@ Eine Exception ist jegliche Unterbrechnung des normalen Programmflusses, sei es 
 
 | Name | CPU-Modus | r15-Offset | r14-Offset |
 | ----------------------- | ----------------------------- | ------------ | ------------ |
-| Reset | Supervisor (SVC) | 0x0000 | — |
-| Undefined Instruction | Undefined Instruction (UND) | 0x0004 | +4 |
-| Software Interrupt | Supervisor (SVC) | 0x0008 | +4 |
-| Prefetch Abort | Abort (ABT) | 0x000C | +4 |
-| Data Abort | Abort (ABT) | 0x0010 | +8 |
-| IRQ | IRQ | 0x0018 | +8 |
-| FIQ | FIQ | 0x001C | +8 |
+| Reset | Supervisor (SVC) | 0x00000000 | — |
+| Undefined Instruction | Undefined Instruction (UND) | 0x00000004 | +4 |
+| Software Interrupt | Supervisor (SVC) | 0x00000008 | +4 |
+| Prefetch Abort | Abort (ABT) | 0x0000000C | +4 |
+| Data Abort | Abort (ABT) | 0x00000010 | +8 |
+| IRQ | IRQ | 0x00000018 | +8 |
+| FIQ | FIQ | 0x0000001C | +8 |
 
 Bei allen Exceptions werden IRQs deaktiviert, bei FIQ oder Reset zusätzlich noch FIQs. Der nach r15 geladene Wert ist der hier angegebene Wert, zu dem noch eine Basisadresse addiert wird. Normalerweise ist diese 0x00000000, kann jedoch auch als 0xFFFF0000 festgelegt werden („High vector“). Der Wert „r14-Offset“ gibt an, wie weit der in r14 stehende Wert von der Adresse des Befehls entfernt ist, an dem die Exception aufgetreten ist (angenommen, dass der Prozessor sich im ARM-Modus befand). Bei allen Exceptions mit +4 weiß die CPU zum Zeitpunkt der Aufnahme des Befehls in die Pipeline bereits, dass eine Exception auftreten wird, bei allen mit +8 wird dies erst bei der Ausführung bemerkt.
 
@@ -146,6 +146,6 @@ Um von einer Exception zurückzukehren, müssen gleichzeitig r14 nach r15 und da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10012/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 10012; parent 9996; 2011-07-29T17:30:42Z -->
+<!-- MediaWiki page 2101; revision 10326; parent 10012; 2011-11-26T21:37:04Z -->
