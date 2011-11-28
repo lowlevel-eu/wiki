@@ -108,6 +108,8 @@ Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/p
 
 (siehe [Diskussion:TODO#Andere Architekturen](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#Andere_Architekturen "Diskussion:TODO")
 
+- Hier kommt dein Wunsch hin ;)
+
 ## Diskussionen, die sich noch nicht erledigt haben
 
 - siehe Liste der Diskussionsseiten
@@ -116,6 +118,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10332/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10335/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10332; parent 10330; 2011-11-28T13:46:15Z -->
+<!-- MediaWiki page 1518; revision 10335; parent 10332; 2011-11-28T16:10:02Z -->
