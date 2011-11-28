@@ -201,7 +201,7 @@ Ich persönich dachte an die üblichen Verdächtigten, die theoretisch auch PC A
 
 Also MIPS und PowerPC hab ich ja schon als interessante Kandidaten genannt, aber sind SPARC, Itanium und Alpha wirklich Dein Ernst? Schon um überhaupt ein physisches System auf dem Tisch stehen zu haben, an dem man praktisch entwickeln kann, ist ne ganze Menge Geld erforderlich. Alpha wird übrigens nicht mehr hergestellt, den Itanium möchte Intel auch lieber Gestern als Heute über Bord werfen und wie lange Oracle sich noch für SPARC engagiert steht auch in den Sternen. Natürlich sind diese 3 sehr interessante CPU-Architekturen und entsprechende gute Artikel wären eine echte Bereicherung für dieses Wiki aber der Nutzwert für den typischen **Hobby**-OS-Dever ist wohl doch eher gering (wenn auch nicht ganz 0). Es ist ja eben gerade der Vorteil vom ARM, MIPS und PowerPC das es jeweils einige Hersteller gibt (MIPS und PowerPC und sogar SPARC sind auch als Soft-CPU für FPGAs verfügbar (PowerPC wimre aber nur als Closed-Source gegen Geld), für ARM gab es schon mehrere (Open-Source-)Projekte dieser Art die aber allesamt von der Rechtsabteilung von ARM vernichtet wurden) und diese CPUs eben in vielen verschiedenen Größen (vom Mikro-Controller über PC-Klasse bis einschließlich HPC-System (nur aus ARM wurde noch nie ein Super-Computer gebaut, aus x86, MIPS, PowerPC, SPARC, Itanium und Alpha aber schon)) verfügbar sind und deswegen auch was passendes für den Hobby-OS-Dever dabei ist. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 12:30, 25. Nov. 2011 (CET)
 
-- Hier kommt dein Wunsch hin ;)
+Das Alpha obsolvent ist, wusste ich, deshalb auch nur in Klammern. Ansonsten habe ich mich bei der Wahl der verbreiteten Architekturen an deren Unterstützung durch LLVM und L4Ka::Pistachio orientiert (die Effektivität dieses Systems sei mal in den Raum gestellt). Das SPARC und Itanium so schlecht darstehen, überrascht mich jetzt. (Naja, ich wusste schon, das Itanium ein bisschen zu komplex ausgefallen ist, aber Intel schien es anscheinend hingekriegt zu haben, das Teil zu vermarkten.) PowerPC schien mir persönlich ziemlich unter der neusten Apple-Politik gelitten zu haben. Das Problem was ich bei ARM sehe ist halt, das neben der Tatsache, das 64 bit wohl schwer zu implementieren sein wird, das Drum-Herum mir einfach zu wenig standardisiert erscheint. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 14:38, 28. Nov. 2011 (CET)
 
 ## Diskussionen, die sich noch nicht erledigt haben
 
@@ -211,6 +211,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10330/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10322; parent 10321; 2011-11-25T11:34:28Z -->
+<!-- MediaWiki page 1518; revision 10330; parent 10322; 2011-11-28T13:38:47Z -->
