@@ -2,7 +2,7 @@
 
 Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 
-**Wichtig**: Wenn ihr einen Punkt kommentieren wollt signiert euren Kommentar bitte via --\~\~\~~. Dadurch kann ein Kommentar auch einem User zugeordnet werden und eventuell via Forum oder im IRC darüber diskutiert werden.
+**Wichtig**: Wenn ihr einen Punkt kommentieren wollt signiert euren Kommentar bitte via --\~\~\~~. Dadurch kann ein Kommentar auch einem User zugeordnet werden und eventuell via Forum oder im IRC darüber diskutiert werden. Trotzdem ist diese Seite keine Diskussions-Seite, richtige Diskussionen Bitte nach nebenan: [Diskussion:TODO](https://lowlevel-eu.github.io/wiki/pages/2185/index.html "Diskussion:TODO"). Die Punkte hier müssen auch nicht nummeriert werden da eine Verlinkung zu der zugehörigen Diskussion direkt möglich ist.
 
 ## Überarbeiten/Fehler beheben
 
@@ -79,7 +79,10 @@ Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj]
 
 - [GUID-Partitionierungsschema](http://de.wikipedia.org/wiki/GUID_Partition_Table)
 - [EFI](http://de.wikipedia.org/wiki/Extensible_Firmware_Interface)
-- [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS") (siehe [Diskussion:TODO#ReiserFS](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#ReiserFS "Diskussion:TODO"))
+- [ReiserFS](https://github.com/lowlevel-eu/wiki/wiki/ReiserFS "ReiserFS")
+
+siehe [Diskussion:TODO#ReiserFS](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#ReiserFS "Diskussion:TODO")
+
 - btrfs
 - Ext
 - UDF
@@ -106,7 +109,7 @@ Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/p
 
 - Andere Prozessorachitekturen (Man braucht ja nicht gleich einen Kernel dazu schreiben.) --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:34, 23. Nov. 2011 (CET)
 
-(siehe [Diskussion:TODO#Andere Architekturen](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#Andere_Architekturen "Diskussion:TODO")
+siehe [Diskussion:TODO#Andere Architekturen](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#Andere_Architekturen "Diskussion:TODO")
 
 - Hier kommt dein Wunsch hin ;)
 
@@ -118,6 +121,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10335/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10336/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10335; parent 10332; 2011-11-28T16:10:02Z -->
+<!-- MediaWiki page 1518; revision 10336; parent 10335; 2011-11-28T16:55:27Z -->
