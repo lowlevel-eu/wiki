@@ -2,7 +2,7 @@
 
 Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 
-**Wichtig**: Wenn ihr einen Punkt kommentieren wollt signiert euren Kommentar bitte via --\~\~\~~. Dadurch kann ein Kommentar auch einem User zugeordnet werden und eventuell via Forum oder im IRC darüber diskutiert werden. Trotzdem ist diese Seite keine Diskussions-Seite, richtige Diskussionen Bitte nach nebenan: [Diskussion:TODO](https://lowlevel-eu.github.io/wiki/pages/2185/index.html "Diskussion:TODO"). Die Punkte hier müssen auch nicht nummeriert werden da eine Verlinkung zu der zugehörigen Diskussion direkt möglich ist.
+**Wichtig**: Wenn ihr einen Punkt kommentieren wollt signiert euren Kommentar bitte via --\~\~\~~. Dadurch kann ein Kommentar auch einem User zugeordnet werden und eventuell via Forum oder im IRC darüber diskutiert werden. Trotzdem ist diese Seite keine vollwertige Diskussions-Seite, richtige/umfangreiche Diskussionen Bitte nach nebenan auslagern: [Diskussion:TODO](https://lowlevel-eu.github.io/wiki/pages/2185/index.html "Diskussion:TODO"). Die Punkte hier müssen auch nicht nummeriert werden da eine Verlinkung zu der zugehörigen Diskussion direkt möglich ist.
 
 ## Überarbeiten/Fehler beheben
 
@@ -121,6 +121,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10336/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10338/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10336; parent 10335; 2011-11-28T16:55:27Z -->
+<!-- MediaWiki page 1518; revision 10338; parent 10336; 2011-11-28T17:03:23Z -->
