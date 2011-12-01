@@ -4,7 +4,7 @@
 | ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
-| Akt. Version: | 0.15.0<br>(Stand 09.08.2011) |
+| Akt. Version: | 1.0<br>(Stand 01.12.2011) |
 | Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
@@ -13,7 +13,7 @@
 | Mechanismus: | dynamische Übersetzung, KVM (nur Linux), Kernelunterstützung |
 | Homepage |  |
 
-<http://wiki.qemu.org/Index.html>
+<http://wiki.qemu.org/Main_Page>
 
 QEMU ist ein Emulator unter anderem für die Systeme [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), MacOS, FreeBSD, OpenBSD und NetBSD. Er emuliert eine Vielzahl von Architekturen.
 
@@ -82,6 +82,6 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10027; parent 9990; 2011-08-09T08:05:13Z -->
+<!-- MediaWiki page 1505; revision 10347; parent 10027; 2011-12-01T23:22:37Z -->
