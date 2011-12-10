@@ -1,10 +1,10 @@
 # RedEagle-OperatingSystem
 
-| RedEagle-OperatingSystem |  |
+| RedEagle-OperatingSystem (Projektname) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Benutzer:RedEagle](https://lowlevel-eu.github.io/wiki/pages/1491/index.html "Benutzer:RedEagle") |
-| Akt. Version: | 0.9.9 |
+| Akt. Version: | Betriebssystem: 1.00<br>Kernel: 0.10.0 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [CC by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) (GPL geplant) |
 | OS-Eigenschaften |  |
 | Plattform: | [i586](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -15,15 +15,21 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
 | Homepage |  |
 
-[www.redeagle-operatingsystem.de.vu](http://www.redeagle-operatingsystem.de.vu/)
+[Projektseite](http://www.redeagle-operatingsystem.de.vu/)  
+[YouTube-Channel](http://www.youtube.com/1000Tode)
 
 RedEagle-OperatingSystem ist ein 32Bit OS dessen Hauptziel darin besteht einfach und unkompliziert auf lowlevel-ebene Programmieren zu können. Das System dient quasi nur als Unterstützung für den Programmierer und soll ihn nicht bevormunden.
 
 Ziel ist es **nicht** ein sicheres und stabiles System zu schreiben. Diese Punkte werden frühstens in der Nächsten Generation berücksichtigt :)
 
+## Namensänderung
+
+Das gesamte Betriebssystem wird seit der Kernel-Version 0.10 Adversys genannt.  
+Das Projekt heißt weiterhin RedEagle-OperatingSystem, und der Kernel weiterhin reos
+
 ## Bestandteile des Betriebssystems
 
-Das RedEagle-OperatingSystem besteht (bisher) aus den folgenden Komponenten
+Adversys besteht (bisher) aus den folgenden Komponenten
 
 - **reosboot**: Der Bootloader des Systems
 - **reos**: Der Kernel des Systems
@@ -38,27 +44,9 @@ Das RedEagle-OperatingSystem besteht (bisher) aus den folgenden Komponenten
 - Multitasking
 - Singeluser-system
 - Pipes
+- Ausführen von [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Dateien
 - alle Programme laufen in ring0
 - [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB") interface
-
-### GUI
-
-**Status:** Noch in einem sehr frühen Entwicklungsstadium
-
-Das GUI läuft im textmode. Mithilfe von ASCII-Zeichen werden Fenster gezeichnet welche wie üblich verschoben, in ihrer Größe verändert, oder maximiert werden können.  
-Das GUI wird vollständig über die Tastatur bedient.
-
-JEDES Fenster besitzt 3 GUI-Elemente:
-
-- Eine Menüleiste
-- Eine F-Tasten-Leiste (im Prinzip auch eine 2. Menüleiste)
-- Ein Textfeld
-
-Dabei soll das Textfeld verschiedene Modi bereitstellen:
-
-- Command-Mode: Verhält sich wie eine Konsole
-- Text-Mode: Verhält sich wie ein übliches edit-control
-- Interactiv-Mode: Verhält sich etwa wie ein billiger webbrowser
 
 ### Pipes
 
@@ -89,8 +77,10 @@ Greift ein Programm schreibend auf eine schreibgeschützte Datei zu, so fragt de
 
 ## sonstige Nennenswerte Besonderheiten
 
-Ich lege viel wert darauf wirklich alles selber zu schreiben. Ich möchte nicht nur ein Kernel schreiben sondern ein Betriebssystem :)  
+Ich lege viel Wert darauf, wirklich alles selber zu schreiben. Ich möchte nicht nur ein Kernel schreiben sondern ein Betriebssystem :)  
 Ich werde wohl bei einigen Tools wie einem Assembler ausnahmen machen, aber die Basis soll von Grund auf neu sein.  
+
+**!! Nicht alle Ideen und Umsetzungen sind gut oder sinnvoll !!**
 
 ### Der Bootloader
 
@@ -111,7 +101,16 @@ Zu den Tools gehört unter anderem ein ramdisk-manager der folgende Features bie
 - eine ramdisk auf Diskette schreiben
 - Eine ramdisk per RS232 herunterladen und in den RAM schreiben
 
-Ein weiteres tool namens *xelf* lädt eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei und führt diesem im PM aus. (Derzeit in der Entwicklung)
+Ein weiteres tool namens *ldelf* lädt eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei (den Kernel) in den Speicher. Diese kann dann mit einem weiteren Tool ausgeführt werden.
+
+  
+Für die Entwicklung im Realmode wurden folgende Programme eingesetzt:
+
+- bcc - ein C-Compiler der Code für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") erzeugt
+- ld86 - Der Entsprechende Linker um eine [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") - Anwendung zu erzeugen
+- nasm - Ein universeller Assembler für alles :)
+
+*bcc* und *ld86* werden vom Paketmanager (opensuse & Fedora) im Paket *dev86* bereit gestellt.
 
 ### Das FT3fs - Dateisystem
 
@@ -129,6 +128,29 @@ Das Dateisystem ist in die folgenden Nodes zerlegt:
 
 Die Verteilung der Dateien auf dem Datenträger wird durch eine Liste von Sektor-nummern in der Datei-spezifischen Datenstruktur der Nodes beschrieben.  
 Da das Dateisystem speziell auf mein Betriebssystem zugeschnitten ist werden keine unix-permissions unterstützt.
+
+### Speichermanager
+
+Ist jetzt nicht direkt eine Besonderheit des Kernels, aber ich will dennoch mal beschreiben wie ich ihn realisiert habe.
+
+Es gibt drei Listen die in dem Speichermanager genutzt werden.
+
+1.  Eine Liste, die freie Listenelemente enthält
+2.  Eine Liste, die reservierten Speicher beschreibt
+3.  und eine Liste, die freien Speicher beschreibt.
+
+Da innerhalb des Speichermanagers nur ganze Pages reserviert werden könne um neue Listenelemente anzulegen wird direkt eine ganze reihe an Elementen gleichzeitig reserviert. Nämlich soviel, wie in einer Page platz finden. Diese Elemente werden zu einer Liste freier Elemente "verbunden".  
+Wird freier Speicher angefordert wird in der Liste, die den freien Speicher beschreibt nach einem ausreichend großen Speicherbereich gesucht. Wird keiner gefunden werden entsprechend viele Pages vom Pagemanager angefordert. Der benötigte Speicher wird vom freien Speicher angezogen und durch ein neues Listenelement beschrieben welches in die Liste des Reservierten Speichers aufgenommen wird.  
+Wird Speicher freigegeben wird das entsprechende Listenelement aus der Liste des reservierten Speicher in die liste des freien Speichers gegeben. Es wird geprüft ob dieser Speicherbereich an anderen freien Speicher angrenzt und verschmolzen werden kann. Falls ja, wird das überflüssige Listenelement wieder in die Liste der freien Elemente aufgenommen.
+
+### Pagemanager
+
+Ein Pagemanager an sich ist ebenfalls nichts besonderes in einem x86-Kernel, aber naja… auch da hat jeder seine eigenen Vorstellungen wie man so etwas angeht :)
+
+Beim Initialisieren werden die ersten 3 4MiB-Pages reserviert und an 0x00000000, 0x00400000, 0x00800000 gemapped. Für die ersten 12MiB ist die Vvrtuelle Adresse also gleich der Physikalischen.
+
+Werden später Pages angefordert wird zunächst geprüft ob es mehr als 1024 Pages sind. Falls ja wird der Speicher in 4MiB-Pages reserviert. Wird also 5MiB angefordert werden 8MiB reserviert.  
+Werden weniger als 1024 Pages angefordert werden entsprechend viele Pages reserviert und eine Pagetable gesucht, die genügend freie Plätze für den Speicher hat. Sind nicht ausreichend viele Plätze frei wird eine neue Pagetable angelegt.
 
 ### Bifröst
 
@@ -154,6 +176,6 @@ Im ANSI-Modus werden die Daten mit ANSI-Escape-Sequenzen coloriert. Somit kann m
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9074/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 9074; parent 7798; 2010-12-19T12:59:55Z -->
+<!-- MediaWiki page 2232; revision 10358; parent 9074; 2011-12-10T13:40:24Z -->
