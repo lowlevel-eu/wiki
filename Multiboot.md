@@ -51,7 +51,8 @@ Bits 0-15 sind Flags die unbedingt benötigt werden. Wenn der Bootloader eines d
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | Module werden 4k-aligned geladen |
 | 1 | Ermittelt [mbs_mem_lower](#mbs_mem_lower) und [mbs_mem_upper](#mbs_mem_upper). Wenn möglich auch [mbs_mmap_length](#mbs_mmap_length) und [mbs_mmap_addr](#mbs_mmap_addr) |
-| 16 | Informationen über das OS-Image werden aus den Feldern 0x0C-0x1C des Multiboot-Headers entnommen. |
+| 2 | Informationen über den zu setzenden Videomodus werden den Feldern 0x20-0x2C entnommen, andernfalls können diese Felder einen undefinierten Wert enthalten. |
+| 16 | Informationen über das OS-Image werden aus den Feldern 0x0C-0x1C des Multiboot-Headers entnommen, andernfalls können diese Felder einen undefinierten Wert enthalten. |
 
 ### mbh_checksum
 
@@ -208,6 +209,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 10363; parent 9829; 2011-12-15T22:23:04Z -->
+<!-- MediaWiki page 1560; revision 10364; parent 10363; 2011-12-15T22:32:12Z -->
