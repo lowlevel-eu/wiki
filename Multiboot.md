@@ -89,7 +89,7 @@ Die Multiboot-Structure beinhaltet Informationen, die vom Bootloader vorher ausg
 
 ### mbs_flags
 
-Gibt an welche Felder anwesend sind.
+Gibt an welche Felder gültig sind. Falls ein Flag nicht gesetzt ist, sind die zugehörigen Felder zwar in der Struktur vorhanden, aber deren Wert ist undefiniert.
 
 ### mbs_mem_lower
 
@@ -208,6 +208,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9829/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10363/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 9829; parent 9823; 2011-06-08T13:58:43Z -->
+<!-- MediaWiki page 1560; revision 10363; parent 9829; 2011-12-15T22:23:04Z -->
