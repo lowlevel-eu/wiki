@@ -30,13 +30,13 @@ in Arbeit
 Teile dieser Ziele sind bereits umgesetzt, jedoch dauert die Fertigstellung der anderen Funktionen noch an.
 
 - Graphische Benutzeroberfläche (GUI)
-- Verbesserung der Speicherverwaltung ([Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"))
+- Verbesserung der Speicherverwaltung ([Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) \[erledigt\]
 - verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System
 - Implememtierung von Linux [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Dateien
 - Implememtierung des [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface")
 - Treiber:
   - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")
-  - [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
+  - [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus") \[erledigt\]
   - [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA")
   - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
 
@@ -56,6 +56,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10353/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10353; parent 10352; 2011-12-07T14:04:50Z -->
+<!-- MediaWiki page 2498; revision 10367; parent 10353; 2011-12-18T18:37:17Z -->
