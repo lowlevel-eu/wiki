@@ -27,7 +27,7 @@ Dieser liegt an offset 0x4F und Dieser dient nur noch dazu, um unter DOS nur die
 
 ### PE Kennzeichnung
 
-**ToDo**
+Dem DOS Stub folgt die eigentliche PE Datei. Sie beginnt mit der Signatur, die 4 Byte Lang ist und den Wert 0x00004550 enthält, was dem Wort "PE", gefolgt von zwei Nullbytes entspricht.
 
 ### COFF Dateiheader
 
@@ -143,6 +143,6 @@ Wird noch erweitert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9845/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10368/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 9845; parent 8677; 2011-06-11T20:56:24Z -->
+<!-- MediaWiki page 1644; revision 10368; parent 9845; 2011-12-18T19:59:18Z -->
