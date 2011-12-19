@@ -31,7 +31,7 @@ Im Header eines MZ EXE Programms befinden sich nur 16Bit Werte, weil die Program
 | 0x14 | IP | Wert, der zu Programmstart ins IP Register geladen werden soll |
 | 0x16 | CS | Wert, der zu Programmstart ins CS Register geladen werden soll |
 | 0x18 | Offset der Relocationtable | Offset der Relocationtable in der Datei. Wenn hier 0x40 steht, dann ist die Datei möglicherweise keine MZ EXE |
-| 0x1A | ??? | ??? |
+| 0x1A | Overlay number | 0, wenn es sich um das Hauptprogramm handelt. |
 
 ## Die Relocationtable
 
@@ -60,6 +60,6 @@ Eine MZ EXE konnte von DOS an jede beliebige Stelle im Speicher geladen werden. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10005/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2375/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2375/index.html)
 
-<!-- MediaWiki page 2375; revision 10005; parent 9239; 2011-07-28T21:17:31Z -->
+<!-- MediaWiki page 2375; revision 10372; parent 10005; 2011-12-19T19:32:21Z -->
