@@ -6,11 +6,15 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Aufbau
 
-### EXE Header
+### MS-DOS-Stub
+
+Aus Gründen der Abwährskompatiblität, beginnt auch heute jedes Programm unter Windows mit dem sogenannten MS-DOS-Stub. Das ist ein kleines MZ-EXE Programm, das am Beginn der PE/COFF Datei steht und aufgerufen wird, wenn man versuchen sollte es unter DOS aufzurufen.
+
+#### EXE Header
 
 Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich der PE/COFF-Header aufbaut. Da aber die Informationen für solche Dateien nicht mehr im EXE-Header abgelegt werden, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE/COFF-Header enthält.
 
-Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
+Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird (Einzelheiten können in [MZ EXE](https://github.com/lowlevel-eu/wiki/wiki/MZ-EXE "MZ EXE") nachgelesen werden.)
 
 | Offset | Größe | Beschreibung |
 | -------- | ---------- | ------------------------------------------------------------ |
@@ -20,9 +24,9 @@ Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird:
 | 0x0A | 50 Bytes | *Unbedeutend* |
 | 0x3C | 4 Bytes | Dateioffset des PE/COFF-Header |
 
-### MS-DOS-Stub
+Hierauf folgt, meist ab Offset 0x40 der eigentliche Stub. Er dient meist nur noch dazu, um unter DOS nur die Meldung "This programm cannot be run in DOS mode" auszugeben.
 
-Dieser liegt an offset 0x4F und dient nur noch dazu, um unter DOS nur die Meldung "This programm cannot be run in DOS mode" auszugeben.
+Die Struktur und der Inhalt des DOS-Stubs ist bei den meisten heutigen Programmen gleich (Wer will, kann sich mal irgendein Programm im Hex Editor ansehen). Der DOS Stub ist in der Regel 216 Byte lang, wodurch die PE-Kenzeichnung dann am Offset 0x000000D8 liegt. Trozdem sollte man sich nicht darauf verlassen sondern den Wert aus 0x3C prüfen.
 
 ### PE Kennzeichnung
 
@@ -164,6 +168,6 @@ Es gibt folgende Eigneschaftflags von 0 bis 31:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 10373; parent 10369; 2011-12-19T19:36:40Z -->
+<!-- MediaWiki page 1644; revision 10374; parent 10373; 2011-12-19T19:54:39Z -->
