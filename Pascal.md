@@ -3,7 +3,7 @@
 | Allgemeines |  |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | (Turbo/Object)Pascal |
-| Inlineassembler: | Ja (Intel-Syntax) |
+| Inlineassembler: | Ja |
 | Compiler: | FreePascal, Borland Delphi |
 | Spracheneigenschaften |  |
 | Plattformen: | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") (Hier vor allem Delphi), [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), u.a. |
@@ -121,6 +121,6 @@ Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10000/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10376/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1623/index.html)
 
-<!-- MediaWiki page 1623; revision 10000; parent 9732; 2011-07-28T21:13:15Z -->
+<!-- MediaWiki page 1623; revision 10376; parent 10000; 2011-12-23T12:36:14Z -->
