@@ -12,10 +12,10 @@ Die folgenden Register sind in den physischen Adressraum des Systems eingeblende
 
   
 
-| Index | Abkürzung | Beschreibung | Zugriffsart |
-| ------- | ----------- | --------------------- | -------------------------- |
+| Offset | Abkürzung | Beschreibung | Zugriffsart |
+| -------- | ----------- | --------------------- | -------------------------- |
 | 0x00 | IOREGSEL | I/O Register Select | 8Bit, lesend/schreibend |
-| 0x04 | IOWIN | I/O Window | 32Bit, lesend/schreibend |
+| 0x10 | IOWIN | I/O Window | 32Bit, lesend/schreibend |
 
   
 
@@ -111,7 +111,7 @@ Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) u
 Folgender Code kann dazu verwendet werden auf die internen Register zuzugreifen: \<c\> /\* Offset der memory-mapped Register \*/
 
 1.  define IO_APIC_MMREG_IOREGSEL 0x00
-2.  define IO_APIC_MMREG_IOWIN 0x04
+2.  define IO_APIC_MMREG_IOWIN 0x10
 
 /\* Basisadresse, sollte vorher initialisiert werden \*/ volatile uint8_t \* io_apic_base;
 
@@ -140,6 +140,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9849/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 9849; parent 9836; 2011-06-13T09:26:25Z -->
+<!-- MediaWiki page 1574; revision 10379; parent 9849; 2011-12-29T14:04:21Z -->
