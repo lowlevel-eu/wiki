@@ -57,6 +57,8 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 | 6 | Limit | 16-19 |
 | 7 | Base | 24-31 |
 
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8272a5b7d823c7ab1d5e.png" width="580" height="88" alt="SegmentDescriptor.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8272a5b7d823c7ab1d5e.png)
+
 ### Bedeutung
 
 | Name | Bedeutung |
@@ -146,6 +148,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9455/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 9455; parent 8099; 2011-02-05T14:23:08Z -->
+<!-- MediaWiki page 1661; revision 10378; parent 9455; 2011-12-29T01:31:47Z -->
