@@ -8,18 +8,18 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Jim Hall et al. |
-| Akt. Version: | 1.0 |
+| Akt. Version: | 1.1 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
-| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
+| API: | [DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "DOS") |
 | Binärformat: | COM, EXE ([COFF](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "COFF")) |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | n.a. |
 | Homepage |  |
 
-[\[1\]](http://freedos.sourceforge.net/)
+<http://freedos.sourceforge.net/>
 
   
 FreeDOS gehört - wie der Name schon sagt - zu den DOS-Betriebssystemen. Es wurde geschaffen, um eine freie und vor allem kompatible Alternative zu [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") zu erstellen.
@@ -28,6 +28,6 @@ Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgefüh
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5376/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2002/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2002/index.html)
 
-<!-- MediaWiki page 2002; revision 5376; parent 0; 2009-08-06T19:15:05Z -->
+<!-- MediaWiki page 2002; revision 10380; parent 5376; 2012-01-02T15:24:45Z -->
