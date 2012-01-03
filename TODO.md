@@ -17,6 +17,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 ## Erweitern
 
+- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"): Der Beispielcode ist unvollständig
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"): Beschreibung wie die Headerflags 2 und 16 zu verwenden sind
   - Wenn ELF verwendet wird, lassen sich die Informationen viel besser aus dem ELF header auslesen. Die FLAG\[2\] und FLAG\[16\] Informationen werden deshalb eigentlich nur bei Kerneln im a.out Format benötigt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 12:19, 18. Dez. 2011 (CET)
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -123,6 +124,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10366; parent 10365; 2011-12-18T11:19:49Z -->
+<!-- MediaWiki page 1518; revision 10384; parent 10366; 2012-01-03T22:03:38Z -->
