@@ -31,7 +31,7 @@ Teile dieser Ziele sind bereits umgesetzt, jedoch dauert die Fertigstellung der 
 
 - Graphische Benutzeroberfläche (GUI)
 - Verbessertes Speichermamagement ([Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) \[erledigt\]
-- verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System
+- Verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System
 - Ausführung von einfachen [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Dateien
 - Verwendung des [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface")
 - Treiber:
@@ -56,6 +56,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10382/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10382; parent 10367; 2012-01-03T20:12:56Z -->
+<!-- MediaWiki page 2498; revision 10383; parent 10382; 2012-01-03T20:13:15Z -->
