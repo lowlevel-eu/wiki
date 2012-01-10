@@ -71,7 +71,7 @@ Eine Page Table enthält 1024 Einträge à vier Byte. Jeder Eintrag zeigt auf ei
 | 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
 | 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
-| 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
+| 5 | Wird von der CPU gesetzt, wenn die Page benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt. |
 | 7 | Normalerweise 0. |
 | 8 | Wenn G gesetzt ist, wird der TLB (s. u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z. B. Kernel) |
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9794/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 9794; parent 9424; 2011-05-16T23:10:56Z -->
+<!-- MediaWiki page 1496; revision 10397; parent 9794; 2012-01-10T14:49:27Z -->
