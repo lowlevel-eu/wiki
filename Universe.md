@@ -3,7 +3,7 @@
 Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux und eventuell Windows Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne. Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode").
 
 | Universe |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Tdotu |
 | Akt. Version: | 0.8 (in Entwicklung) |
@@ -14,7 +14,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C/C++ |
 | API: | nativ |
 | Binärformat: | UEF,[ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory"),[RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") |
 | Homepage |  |
 
 in Arbeit
@@ -25,14 +25,15 @@ in Arbeit
 
   
 
-## Ziele der Version 0.8
+## Ziele der Version 0.8 (Kernel 1.00)
 
 Teile dieser Ziele sind bereits umgesetzt, jedoch dauert die Fertigstellung der anderen Funktionen noch an.
 
 - Graphische Benutzeroberfläche (GUI)
 - Verbessertes Speichermamagement ([Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) \[erledigt\]
-- Verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System
-- Ausführung von einfachen [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Dateien
+- Verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System \[erledigt\]
+- Einbau von einem Synchronen RPC IPC System \[erledigt\]
+- Ausführung von einfachen [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Dateien \[erledigt\]
 - Verwendung des [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface")
 - Treiber:
   - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy") \[erledigt\]
@@ -56,6 +57,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10383; parent 10382; 2012-01-03T20:13:15Z -->
+<!-- MediaWiki page 2498; revision 10402; parent 10383; 2012-01-28T23:17:49Z -->
