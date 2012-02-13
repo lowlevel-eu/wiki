@@ -14,10 +14,11 @@ Die Workstation- und Server-Versionen sind kostenpflichtig, der Player ist Freew
 
 ## Links
 
-- [VMware Webseite](http://vmware.com/)
+- [VMware Website (deutsch)](http://vmware.com/de/)
+- [VMware Website (englisch)](http://vmware.com)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9995/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1944/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10433/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1944/index.html)
 
-<!-- MediaWiki page 1944; revision 9995; parent 9607; 2011-07-28T21:03:54Z -->
+<!-- MediaWiki page 1944; revision 10433; parent 9995; 2012-02-13T19:18:58Z -->
