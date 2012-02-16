@@ -47,7 +47,7 @@ Ab MS-DOS 2.0 gab es den BPB, womit jetzt jedes FAT-System diesen braucht. (Die 
 | 0x0B | 2 | Sektor-Größe in Bytes. Gültig: 512, 1024, 2048 und 4096. Normal wird 512 verwendet. |
 | 0x0D | 1 | Cluster-Größe in Sektoren. Gültig: Zweierpotenz zwischen 1 und 64. |
 | 0x0E | 2 | Anzahl reservierter Sektoren inkl. Bootsektor. |
-| 0x10 | 1 | Anzahl an File Allocation Tables. Normal gibt es immer 2 FATs |
+| 0x10 | 1 | Anzahl an File Allocation Tables. Normal gibt es immer 2 FATs, man kann zwar auch ein Laufwerk mit nur einer FAT anlegen (DOS, Windows und Linux können damit umgehen) aber sehr viele Tools haben damit Probleme so das man davon grundsätzlich absehen sollte. |
 | 0x11 | 2 | Maximale Anzahl an Einträgen im Wurzelverzeichnis (nur gültig für FAT12 und FAT16) |
 | 0x13 | 2 | Anzahl an Sektoren. Wenn hier 0 steht (nötig für FAT32 und bei größeren FAT16-Laufwerken) wird das Feld bei Offset 0x20 benutzt. |
 | 0x15 | 1 | Media-Descriptor: • 0xF0: Double sided, 80 Spuren, 18/36 Sektoren pro Spur<br>• 0xF8: Festplatte (dieser Wert wird auch für andere Datenträger benutzt für die kein Media-Descriptor-Byte vergeben wurde wie z.B. ZIP-Disketten oder MO-Disks)<br>• 0xF9: Double sided, 80 Spuren, 9/15 Sektoren pro Spur<br>• 0xFA: Single sided, 80 Spuren, 8 Sektoren pro Spur (eventuell auch Ramdisk)<br>• 0xFB: Double sided, 80 Spuren, 8 Sektoren pro Spur<br>• 0xFC: Single sided, 40 Spuren, 9 Sektoren pro Spur<br>• 0xFD: Double sided, 40 Spuren, 9 Sektoren pro Spur oder Double Sided, 77 Spuren, 26 Sektoren pro Spur<br>• 0xFE: Single sided, 40 Spuren, 8 Sektoren pro Spur, Single Sided, 77 Spuren, 26 Sektoren pro Spur oder Double Sided, 77 Spuren, 8 Sektoren pro Spur<br>• 0xFF: Double sided, 40 Spuren, 8 Sektoren pro Spur<br>Dieses Byte gilt als veraltet und man sollte es daher ignorieren.<br> |
@@ -89,7 +89,7 @@ Die folgenden Daten unterscheiden sich zwischen FAT12/FAT16 und FAT32.
 
 Alle anderen Bits sind reserviert.
 
-0x2A2FAT32-Version. Üblicherweise 0 - andernfalls kann es sein, dass die Partition von Windows nicht gemounted wird. 0x2C4Erster Cluster des Wurzelverzeichnis 0x302Info-Sektor. Sektor der Informationen über das Dateisystem enthält. 0x322Sektor der Bootsektorkopie. (Microsoft empfiehlt, nur 6 zu verwenden) 0x3412Reserviert 0x401Nummer des BIOS-Laufwerks 0x411Reserviert 0x421Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) 0x434Dateisystem-ID 0x4711Dateisystem-Name (mit Leerzeichen auf 11 Zeichen aufgefüllt). Wird nicht mehr verwendet. 0x528FAT-Variante (mit Leerzeichen auf 8 Zeichen aufgefüllt). Immer "FAT32 ". 0x5A420Bootloader 0x1FE2Bootsignatur: 0xAA55
+0x2A2FAT32-Version. Üblicherweise 0 - andernfalls kann es sein, dass die Partition von Windows nicht gemounted wird. 0x2C4Erster Cluster des Wurzelverzeichnis, muss immer eine gültige Cluster-Nummer enthalten. 0x302Info-Sektor. Sektor der Informationen über das Dateisystem enthält. 0x322Sektor der Bootsektorkopie. (Microsoft empfiehlt, nur 6 zu verwenden) 0x3412Reserviert 0x401Nummer des BIOS-Laufwerks 0x411Reserviert 0x421Erweiterte Bootsignatur. Indiziert, ob die folgenden Felder vorhanden sind. (Wert: 0x29) 0x434Dateisystem-ID 0x4711Dateisystem-Name (mit Leerzeichen auf 11 Zeichen aufgefüllt). Wird nicht mehr verwendet. 0x528FAT-Variante (mit Leerzeichen auf 8 Zeichen aufgefüllt). Immer "FAT32 ". 0x5A420Bootloader 0x1FE2Bootsignatur: 0xAA55
 
 ### Reservierte Sektoren
 
@@ -111,7 +111,7 @@ Normalerweise gibt es zwei FAT-Kopien um durch die Redundanz etwas Fehlertoleran
 
 Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT die Nummer des nächsten Clusters an. Man muss also den Wert aus der FAT nehmen und ihn als neuen Index für die FAT benutzen. Wenn man auf die eigentlichen Daten zugreifen will, muss man vorher 2 subtrahieren, weil die Cluster 0 und 1 nicht im Datenbereich existieren (der Datenbereich ist quasi ein Array aus Clustern das mit Index 2 anfängt wogegen die FAT ein Array aus Cluster-Nummern ist das mit Index 0 anfängt).
 
-Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichiseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden für unbekannte Zwecke benutzt (die Tools von Microsoft verlangen die aber) und sollten daher nicht verändert werden.
+Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichiseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden u.a. dafür benutzt um zu kennzeichnen ob das Laufwerk ordentlich entmounted wurde oder ob mal Fehler beim Zugriff auf physische Sektoren aufgetreten sind. Für simple FAT-Treiber ist es empfehlenswert diese Werte zu ignorieren und nicht zu verändern.
 
 ### Wurzelverzeichnis
 
@@ -123,6 +123,10 @@ Bei FAT32 liegt das Wurzelverzeichnis im Datenbereich und wird wie jedes andere 
 
 In der Datei- und Verzeichnis-Datenregion liegen die Datei- und Verzeichnis-Daten. Diese sind in Cluster verteilt. Um eine Datei Clustern zuzuordnen benutzt man die FAT.
 
+## Verzeichnisse
+
+Ein Verzeichnis ist erst mal ebenfalls nur eine Datei die aber einen speziellen Inhalt, die Verzeichniseinträge, hat. Ein Verzeichnis ist immer ein Array aus Verzeichniseinträgen. Ein Verzeichnis muss immer mindestens einen Cluster belegen da jedes Verzeichnis, außer das Wurzelverzeichnis, die Einträge "." und ".." als erstes enthalten muss. Der Eintrag "." zeigt auf das Verzeichnis selber (also auf den ersten Cluster) und der Eintrag ".." zeigt auf das übergeordnete Verzeichnis (wenn dass das Wurzelverzeichnis ist dann muss bei FAT12 und FAT16 hier die Cluster-Nummer 0 benutzt werden). Ein Verzeichnis darf auch mehr als einen Cluster benutzen, wenn mehr Verzeichniseinträge benötigt werden als ein Cluster ermöglicht. Ein Verzeichniseintrag kann gültig, gelöscht oder ungültig sein. Sobald ein ungültiger Verzeichniseintrag vorkommt müssen alle nachfolgenden Einträge ebenfalls ignoriert werden, das hat den Grund das normalerweise nur die tatsächlich benötigte Anzahl an Sektoren geschrieben wird und demzufolge weiter hinten kommende Sektoren in einem Verzeichnis-Cluster auch irgendwelche (Zufalls-)Daten enthalten dürfen. Zu Zeiten wo Speicher knapp war und Schreibzugriffe sehr lange dauerten war das wichtig, bei heutigen FAT-Treibern ist es aber empfehlenswert wenn immer ganze Cluster geschrieben werden und alle ungültigen Verzeichniseinträge (hinter den gültigen und gelöschten Einträgen) komplett mit 0x00 ausgefüllt werden. Die gültigen und gelöschten Verzeichniseinträge können beliebig gemischt vorkommen und es müssen auch alle gültigen Einträge beachtet werden. Beim Anlegen von neuen Dateien/Unterverzeichnissen dürfen die gelöschten Einträge wieder benutzt werden, aber Windows und Linux hängen lieber hinten an um einer möglichen Wiederherstellen gelöschter Dateien möglichst nicht im Wege zu stehen.
+
 ## Verzeichnis-Eintrag
 
 Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverzeichnis). Ein Verzeichnis-Eintrag enthält außerdem die Nummer des ersten Clusters der Datei.
@@ -133,7 +137,8 @@ Ein Verzeichnis-Eintrag enthält Meta-Daten zu einer Datei (bzw. einem Unterverz
 
 **Beschreibung**
 
-0x008Dateiname ohne Erweiterung (mit Leerzeichen aufgefüllt). Der Dateiname darf nur aus Großbuchstaben bestehen und darf folgende Zeichen nicht enthalten: 0x22, 0x2A, 0x2B, 0x2C, 0x2E, 0x2F, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F, 0x5B, 0x5C, 0x5D, 0x7C. 0x083Dateierweiterung (mit Leerzeichen aufgefüllt). Erlaubte Zeichen siehe Dateiname. 0x0B1Dateiattribute
+0x008Dateiname ohne Erweiterung (mit Leerzeichen aufgefüllt). Der Dateiname darf nur aus Großbuchstaben bestehen und darf folgende Zeichen nicht enthalten: 0x22, 0x2A, 0x2B, 0x2C, 0x2E, 0x2F, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F, 0x5B, 0x5C, 0x5D, 0x7C.  
+Wenn das erste Byte 0xE5 ist gilt dieser Eintrag als gelöscht und wird ignoriert aber es können noch weitere Einträge kommen. Wenn das erste Byte 0x00 ist gilt dieser Eintrag als unbenutzt und es kommen auch keine weiteren Einträge in diesem Verzeichnis mehr bzw. alle folgenden Bytes müssen ignoriert werden. 0x083Dateierweiterung (mit Leerzeichen aufgefüllt). Erlaubte Zeichen siehe Dateiname. 0x0B1Dateiattribute
 
 | Bit | Bedeutung |
 | ----- | --------------- |
@@ -180,7 +185,7 @@ Wenn die ersten 4 Bits (Bitmaske: 0x0F) gesetzt sind, handelt es sich um einen V
 
 0x1A2Erster Cluster  
 (Beim Zugriff auf die eigentlichen Daten muss man vorher 2 subtrahieren, da es im Datenbereich die Cluster 0 und 1 nicht gibt. In der FAT gibt es aber die Einträge 0 und 1, so dass dort diese Nummer unverändert benutzt werden muss um zu erfahren welches der nächste Cluster ist.  
-Gültige Werte sind 0 wenn die Datei keine Daten enthält also keine Clusterkette benötigt wird und ≥2 wenn doch eine Clusterkette benötigt wird.) 0x1C4Dateigröße in Bytes
+Gültige Werte sind 0 wenn die Datei (nicht Verzeichnis) keine Daten enthält also keine Clusterkette benötigt wird und ≥2 wenn doch eine Clusterkette benötigt wird.) 0x1C4Dateigröße in Bytes, für Verzeichnisse immer 0
 
 ## Cluster
 
@@ -247,6 +252,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10291/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10291; parent 10256; 2011-11-22T19:16:36Z -->
+<!-- MediaWiki page 1643; revision 10436; parent 10291; 2012-02-16T12:51:00Z -->
