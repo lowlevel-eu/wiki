@@ -132,38 +132,38 @@ In das Data-Register werden die Befehle geschrieben, die jeweils aus mehreren By
 | **Name** | IC | SE | UC | NR | HD | US |
 
 IC  
-Interrupt Code
+*Interrupt Code*
 
-00: der Befehl wurde ohne Fehler ausgeführt
+00: Der Befehl wurde ohne Fehler ausgeführt
 
-01: der Befehl wurde gestartet, aber nicht richtig beendet
+01: Der Befehl wurde gestartet, aber nicht richtig beendet
 
 10: invalid Command
 
 11: Controller war nicht bereit (Polling)
 
 SE  
-Seek end
+*seek end*
 
 Der Controller hat einen Befehl mit implizitem Seek, Calibrate oder Seek erfolgreich ausgeführt
 
 UC  
-unit check
+*unit check*
 
-gesetzt bei Fehler
+Gesetzt bei Fehler
 
 NR  
-drive not ready
+*drive not ready*
 
 HD  
-aktiver head
+*Aktiver Head*
 
 0: Head 0
 
 1: Head 1
 
 US  
-aktives Laufwerk
+*Aktives Laufwerk*
 
 00: A
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10459; parent 10458; 2012-02-23T16:56:44Z -->
+<!-- MediaWiki page 1443; revision 10460; parent 10459; 2012-02-23T16:58:55Z -->
