@@ -180,32 +180,32 @@ US
 | **Name** | EN | 0 | DE | TO | 0 | NDAT | NW | NID |
 
 EN  
-End of Cylinder
+*end of cylinder*
 
 Gesetzt, wenn die geforderte Sektoranzahl die Anzahl der Sektoren auf einer Spur überschreitet
 
 DE  
-Data Error
+*data error*
 
 Gesetzt bei einem Fehler im ID *address field* oder im *data field*
 
 TO  
-Time-out
+*time-out*
 
 Gesetzt, wenn der FDC keine Signale von CPU oder DMA empfängt
 
 NDAT  
-No Data
+*no data*
 
 Gesetzt, wenn bei einem *read sektor*-Befehl der Sektor nicht gefunden wurde oder wenn der FDC nach einem *read ID*-Befehl die ID nicht lesen konnte
 
 NW  
-Not Writeable
+*not writeable*
 
 Gesetzt, wenn die Floppy schreibgeschützt ist
 
 NID  
-No Address Mark
+*no address mark*
 
 Gesetzt, wenn die *ID Address Mark* nicht gefunden wurde
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10462; parent 10461; 2012-02-23T17:00:36Z -->
+<!-- MediaWiki page 1443; revision 10463; parent 10462; 2012-02-23T17:02:53Z -->
