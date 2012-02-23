@@ -34,12 +34,12 @@ Teile dieser Ziele sind bereits umgesetzt, jedoch dauert die Fertigstellung der 
 - Verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System \[erledigt\]
 - Einbau von einem Synchronen RPC IPC System \[erledigt\]
 - Ausführung von einfachen [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Dateien \[erledigt\]
-- Verwendung des [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface")
+- Verwendung des [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface") \[in Arbeit\]
 - Treiber:
   - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy") \[erledigt\]
   - [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus") \[erledigt\]
-  - [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA")
-  - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
+  - [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA") \[erledigt\]
+  - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") \[erledigt\]
 
 ## Versionen
 
@@ -57,6 +57,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10403/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10471/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10403; parent 10402; 2012-01-28T23:26:23Z -->
+<!-- MediaWiki page 2498; revision 10471; parent 10403; 2012-02-23T21:51:43Z -->
