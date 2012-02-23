@@ -307,7 +307,7 @@ Im CCR sind nur die Funktionen der ersten zwei Bits definiert (Bit 0 und Bit 1):
 
 Das Senden von Befehlen erfolgt in drei Phasen:
 
-- Command-Phase: Der Befehl wird von der CPU an den FDC gesendet. Dafür werden die Daten wie weiter unten beschrieben in das Datenregister geschrieben. Vorher sollte getestet werden, ob dieses wirklich leer ist.
+- Command-Phase: Der Befehl wird von der CPU an den FDC gesendet. Dafür werden die Daten, wie weiter unten beschrieben, in das Datenregister geschrieben. Vorher sollte getestet werden, ob dieses wirklich leer ist.
 - Execution-Phase: Der Befehl wird vom FDC ausgeführt. Dabei sollte im Treiber eine Wartezeit eingehalten werden, da Diskettenlaufwerke sehr langsam sind. Bei einigen Befehlen wird die Execution-Phase zusätzlich durch das Senden eines IRQs beendet.
 - Result-Phase: Bei einigen Befehlen liefert der FDC Daten zurück, z.B. ob der Befehl erfolgreich ausgeführt wurde. Diese müssen alle gelesen werden, damit erneut Befehle gesendet werden können.
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10465; parent 10464; 2012-02-23T17:05:32Z -->
+<!-- MediaWiki page 1443; revision 10466; parent 10465; 2012-02-23T17:07:50Z -->
