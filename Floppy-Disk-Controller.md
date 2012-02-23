@@ -90,28 +90,28 @@ Laufwerk D-A ist im Positionierungsmodus
 | **Name** | MOTD | MOTC | MOTB | MOTA | DMA | RESET | DRIVE |
 
 MOTD-A  
-Motorsteuerung
+*Motorsteuerung*
 
 0: Motor ausschalten
 
 1: Motor anschalten
 
 DMA  
-DMA und IRQ
+*DMA und IRQ*
 
 0: deaktiviert
 
 1: aktiviert
 
 RESET  
-Controller Reset
+*Controller Reset*
 
 0: Reset ausführen (!!!)
 
 1: Controller aktiviert (Reset ausgeführt)
 
 DRIVE  
-Laufwerk auswählen
+*Laufwerk auswählen*
 
 00: Drive 0
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10461; parent 10460; 2012-02-23T16:59:51Z -->
+<!-- MediaWiki page 1443; revision 10462; parent 10461; 2012-02-23T17:00:36Z -->
