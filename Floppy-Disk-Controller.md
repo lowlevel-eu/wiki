@@ -187,7 +187,7 @@ Gesetzt, wenn die geforderte Sektoranzahl die Anzahl der Sektoren auf einer Spur
 DE  
 Data Error
 
-Gesetzt bei einem Fehler im ID Addressfield oder im Datafield
+Gesetzt bei einem Fehler im ID *address field* oder im *data field*
 
 TO  
 Time-out
@@ -963,6 +963,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10456; parent 9985; 2012-02-23T16:53:12Z -->
+<!-- MediaWiki page 1443; revision 10457; parent 10456; 2012-02-23T16:53:58Z -->
