@@ -18,14 +18,15 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 ## Erweitern
 
 - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"): Der Beispielcode ist unvollständig
+  - Was genau fehlt denn da? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"): Beschreibung wie die Headerflags 2 und 16 zu verwenden sind
   - Wenn ELF verwendet wird, lassen sich die Informationen viel besser aus dem ELF header auslesen. Die FLAG\[2\] und FLAG\[16\] Informationen werden deshalb eigentlich nur bei Kerneln im a.out Format benötigt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 12:19, 18. Dez. 2011 (CET)
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
   - Wieso werden meine Fragen einfach entfernt? Nichtsdestotrotz: Wer braucht das wirklich, sodass es auf dieser Liste stehen muss? (Kategorie:TODO per Vorlage:TODO reicht ja) —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:52, 3. Okt. 2010 (CEST)
   - Hab ich auf der Diskussionsseite zu ISA nicht klar erklärt warum es in heutigen PCs (der letzten \>10 Jahre) kein ISA-PnP mehr gibt? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:43, 4. Okt. 2010 (CEST)
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
-- [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
-- [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") - Mache ich, Themen: Wie der Kernel funktioniert etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:03, 3. Okt. 2010 (CEST)
+- [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. - aber noch in diesem Jahr --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
+- [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") - Artikel erweitern - wie funktioniert der Kernel etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
   - Finde ich vom Inhalt her ausreichend --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - [APM](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "APM")
@@ -34,6 +35,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") - Programmierung, Einsatz im OS-Dev
   - FPU wird bei OS-Dev eher weniger als bei anderer Programmierung eingesetzt, oder? Korrekter wäre vielleicht, wie man math.h-Funktionen implementiert, aber das sollte man imho auch per Intelmanual rausfinden können… —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:32, 3. Okt. 2010 (CEST)
     - Aber der Kernel muss den Zustand von FPU (und auch SSE/AVX/...) manuell sichern, da aber nicht jeder Prozess überhaupt Zugriff auf die FPU benötigt gibt es da ja einige Beschleunigungstricks wo der Kernel von der CPU drauf hingewiesen wird dann jetzt doch mal zu sichern. Ich denke das es nicht schaden würde dazu mal ein paar Sätze zu erklären, das dahinter stehende Konzept ergibt sich nämlich nicht so einfach aus den Intel-Manuals. --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 10:43, 21. Nov. 2011 (CET)
+      - Braucht man imo nicht --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
 - [Troubleshooting](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe "Troubleshooting") Themen siehe [Diskussion:Erste_Hilfe](https://lowlevel-eu.github.io/wiki/pages/2264/index.html "Diskussion:Erste Hilfe")
 - [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): Ideen für RPC aus dem Thread im Forum
   - Welcher Thread? Der hier: [http://forum.lowlevel.eu/index.php?topic=1787.0](https://lowlevel-eu.github.io/forum/topics/1787/index.html) Steht im Artikel unter Links.
@@ -124,6 +126,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10384; parent 10366; 2012-01-03T22:03:38Z -->
+<!-- MediaWiki page 1518; revision 10467; parent 10384; 2012-02-23T17:16:19Z -->
