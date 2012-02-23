@@ -218,13 +218,9 @@ Gesetzt, wenn die *ID Address Mark* nicht gefunden wurde
 DADM  
 Deleted Address Mark
 
-Bei einem read Sector Befehl:
+Bei einem *read Sector*-Befehl: Eine gelöschte *Data Address Mark* wurde gefunden
 
-eine gelöschte Data Address Mark wurde gefunden
-
-Bei einem read deleted Sector Befehl:
-
-eine gesetzte Data Address Mark wurde gefunden
+Bei einem *read deleted sector*-Befehl: Eine gesetzte *Data Address Mark* wurde gefunden
 
 CRCE  
 CRC error in data field
@@ -963,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10457; parent 10456; 2012-02-23T16:53:58Z -->
+<!-- MediaWiki page 1443; revision 10458; parent 10457; 2012-02-23T16:55:16Z -->
