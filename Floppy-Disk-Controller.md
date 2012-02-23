@@ -247,39 +247,39 @@ NDAM
 | **Name** | ESIG | WPDR | RDY | TRKO | DSDR | HDDR | DS |
 
 ESIG  
-Error
+*error*
 
 Gesetzt nach einem Fehler
 
 WPDR  
-Write Protection
+*write protection*
 
 Gesetzt, wenn die Floppy schreibgeschützt ist
 
 RDY  
-Ready
+*ready*
 
 Gesetzt, wenn das Laufwerk ready ist
 
 TRKO  
-Track 0
+*track 0*
 
 Der Head ist über Track 0 (?)
 
 DSDR  
-Double sided drive
+*double sided drive*
 
 Gesetzt, wenn die Floppy doppelseitig ist
 
 HDDR  
-Head
+*Head*
 
 0: Head 0
 
 1: Head 1
 
 DS  
-Drive select
+*drive select*
 
 00: A
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10465/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10464; parent 10463; 2012-02-23T17:04:29Z -->
+<!-- MediaWiki page 1443; revision 10465; parent 10464; 2012-02-23T17:05:32Z -->
