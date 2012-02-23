@@ -249,27 +249,27 @@ not data address mark DAM
 ESIG  
 Error
 
-gesetzt nach einem Fehler
+Gesetzt nach einem Fehler
 
 WPDR  
 Write Protection
 
-gesetzt wenn die Disc schreibgeschützt ist
+Gesetzt, wenn die Floppy schreibgeschützt ist
 
 RDY  
 Ready
 
-gesetzt wenn die Drive ready ist
+Gesetzt, wenn das Laufwerk ready ist
 
 TRKO  
 Track 0
 
-der Head ist über Track 0 (?)
+Der Head ist über Track 0 (?)
 
 DSDR  
 Double sided drive
 
-gesetzt wenn die Floppy doppelseitig ist
+Gesetzt, wenn die Floppy doppelseitig ist
 
 HDDR  
 Head
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10459/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10458; parent 10457; 2012-02-23T16:55:16Z -->
+<!-- MediaWiki page 1443; revision 10459; parent 10458; 2012-02-23T16:56:44Z -->
