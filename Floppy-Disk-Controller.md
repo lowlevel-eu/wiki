@@ -182,34 +182,32 @@ aktives Laufwerk
 EN  
 End of Cylinder
 
-gesetzt wenn die geforderte Sektoranzahl die Anzahl der Sektoren auf einer Spur überschreitet
+Gesetzt, wenn die geforderte Sektoranzahl die Anzahl der Sektoren auf einer Spur überschreitet
 
 DE  
 Data Error
 
-gesetzt bei einem Fehler im ID Addressfield oder im Datafield
+Gesetzt bei einem Fehler im ID Addressfield oder im Datafield
 
 TO  
 Time-out
 
-gesetzt wenn der FDC keine Signale von CPU oder DMA empfängt
+Gesetzt, wenn der FDC keine Signale von CPU oder DMA empfängt
 
 NDAT  
 No Data
 
-gesetzt wenn bei einem read sektor Befehl der Sektor nicht gefunden wurde
-
-oder wenn der FDC nach einem read ID Befehl die ID nicht lesen konnte
+Gesetzt, wenn bei einem *read sektor*-Befehl der Sektor nicht gefunden wurde oder wenn der FDC nach einem *read ID*-Befehl die ID nicht lesen konnte
 
 NW  
 Not Writeable
 
-gesetzt wenn die Floppy schreibgeschützt ist
+Gesetzt, wenn die Floppy schreibgeschützt ist
 
 NID  
 No Address Mark
 
-gesetzt wenn die ID Address Mark nicht gefunden wurde
+Gesetzt, wenn die *ID Address Mark* nicht gefunden wurde
 
 ##### ST2
 
@@ -965,6 +963,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10456/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 9985; parent 9834; 2011-07-27T15:49:45Z -->
+<!-- MediaWiki page 1443; revision 10456; parent 9985; 2012-02-23T16:53:12Z -->
