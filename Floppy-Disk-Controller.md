@@ -53,35 +53,35 @@ Wenn nichts dasteht, gilt das Flag bei gesetztem Bit.
 | **Name** | MRQ | DIO | NDMA | BUSY | ACTD | ACTC | ACTB | ACTA |
 
 MRQ  
-Status
+*Status*
 
 0: DR nicht bereit
 
 1: DR bereit
 
 DIO  
-Daten I/O
+*Daten I/O*
 
 0: CPU -\> FDC (Daten schreiben)
 
 1: FDC -\> CPU (Daten lesen)
 
 NDMA  
-DMA-Modus
+*DMA-Modus*
 
 0: DMA-Modus aktiviert
 
 1: DMA-Modus deaktiviert
 
 BUSY  
-BUSY (Befehl wird ausgeführt)
+*BUSY (Befehl wird ausgeführt)*
 
 0: nicht busy
 
 1: busy
 
 ACTD-ACTA  
-Laufwerk D-A ist im Positionierungs-Modus
+Laufwerk D-A ist im Positionierungsmodus
 
 #### DOR
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10461/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10460; parent 10459; 2012-02-23T16:58:55Z -->
+<!-- MediaWiki page 1443; revision 10461; parent 10460; 2012-02-23T16:59:51Z -->
