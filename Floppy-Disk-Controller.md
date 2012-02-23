@@ -216,29 +216,29 @@ Gesetzt, wenn die *ID Address Mark* nicht gefunden wurde
 | **Name** | 0 | DADM | CRCE | WCYL | SEQ | SERR | BCYL | NDAM |
 
 DADM  
-Deleted Address Mark
+*deleted address mark*
 
 Bei einem *read Sector*-Befehl: Eine gelöschte *Data Address Mark* wurde gefunden
 
 Bei einem *read deleted sector*-Befehl: Eine gesetzte *Data Address Mark* wurde gefunden
 
 CRCE  
-CRC error in data field
+*CRC error in data field*
 
 WCYL  
-wrong cylinder
+*wrong cylinder*
 
 SEQ  
-seek equal
+*seek equal*
 
 SERR  
-seek error
+*seek error*
 
 BCYL  
-bad cylinder
+*bad cylinder*
 
 NDAM  
-not data address mark DAM
+*not data address mark DAM*
 
 ##### ST3
 
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10463; parent 10462; 2012-02-23T17:02:53Z -->
+<!-- MediaWiki page 1443; revision 10464; parent 10463; 2012-02-23T17:04:29Z -->
