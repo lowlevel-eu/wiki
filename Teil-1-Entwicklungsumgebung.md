@@ -69,12 +69,18 @@ Um ein größeres Stück Software zu entwickeln (erfahrenere Programmierer werde
 
 Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhaupt eine benutzt. Mein Vorschlag an dieser Stelle ist [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git"), das in seinem eigenen Artikel näher beschrieben wird.
 
+## Bevor es nun richtig losgeht...
+
+Leider müssen wir immer wieder feststellen, dass angehende Betriebssystementwickler den Code aus diesem Tutorial blind kopieren und im IRC dann fragen stellen, getreu dem Motto: "Ich habe hier den Code einfach kopiert und er funktioniert nun nicht, bitte helft mir!". Nicht nur, dass das bloße Kopieren keinerlei Lerneffekt mich sich bringt, es ist auch nicht erlaubt: Der Code in diesem Tutorial untersteht dem deutschen Urheberrecht und der Autor ist taljeth.
+
+Natürlich dürft ihr den Code als "Inspiration" nutzen, doch lasst euch euch gesagt sein: Einfach kopieren bringt euch nichts und schadet vor allem nur eurer Reputation, vor allem, wenn ihr im IRC fragt, ob jemand euren kopierten Code fixen kann.
+
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
 | « [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") | **Navigation** | [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") » |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 6385; parent 6314; 2009-11-24T15:27:07Z -->
+<!-- MediaWiki page 1919; revision 10476; parent 6385; 2012-02-27T15:19:32Z -->
