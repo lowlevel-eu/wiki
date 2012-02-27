@@ -32,6 +32,6 @@ Bei der geographischen Addressierung wird jedem Peripheriegerät eine *Card Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10298/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
 
-<!-- MediaWiki page 1709; revision 10298; parent 10295; 2011-11-23T11:14:05Z -->
+<!-- MediaWiki page 1709; revision 10478; parent 10298; 2012-02-27T16:26:29Z -->
