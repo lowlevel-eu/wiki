@@ -71,7 +71,7 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ## Bevor es nun richtig losgeht...
 
-Leider müssen wir immer wieder feststellen, dass angehende Betriebssystementwickler den Code aus diesem Tutorial blind kopieren und im IRC dann fragen stellen, getreu dem Motto: "Ich habe hier den Code einfach kopiert und er funktioniert nun nicht, bitte helft mir!". Nicht nur, dass das bloße Kopieren keinerlei Lerneffekt mich sich bringt, es ist auch nicht erlaubt: Der Code in diesem Tutorial untersteht dem deutschen Urheberrecht und der Autor ist taljeth.
+Leider müssen wir immer wieder feststellen, dass angehende Betriebssystementwickler den Kernel aus diesem Tutorial blind kopieren für ihr eigenes Betriebssystem und im IRC dann fragen stellen, getreu dem Motto: "Ich habe hier den Kernel einfach kopiert und er funktioniert nun nicht, bitte helft mir!" (damit wird jetzt nicht das Klonen des Kernel aus dem [Repository](http://git.tyndur.org/?p=tutorial.git;a=summary) und Kompilieren gemeint, sondern die Übernahme des Codes 1:1 in das eigenes Betriebssystem). Nicht nur, dass das bloße Kopieren keinerlei Lerneffekt mich sich bringt, es ist auch nicht erlaubt: Der Code in diesem Tutorial untersteht dem deutschen Urheberrecht und der Autor ist taljeth.
 
 Natürlich dürft ihr den Code als "Inspiration" nutzen, doch lasst euch euch gesagt sein: Einfach kopieren bringt euch nichts und schadet vor allem nur eurer Reputation, vor allem, wenn ihr im IRC fragt, ob jemand euren kopierten Code fixen kann.
 
@@ -81,6 +81,6 @@ Natürlich dürft ihr den Code als "Inspiration" nutzen, doch lasst euch euch ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10476/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1919/index.html)
 
-<!-- MediaWiki page 1919; revision 10476; parent 6385; 2012-02-27T15:19:32Z -->
+<!-- MediaWiki page 1919; revision 10477; parent 10476; 2012-02-27T15:22:27Z -->
