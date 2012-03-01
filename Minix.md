@@ -3,8 +3,8 @@
 | Minix |  |
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Andrew S. Tanenbaum |
-| Akt. Version: | 3.1.8 |
+| Entwickler: | Andrew S. Tanenbaum und weitere |
+| Akt. Version: | 3.2 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), Motorola 68000, Sun SPARC |
@@ -17,7 +17,7 @@
 
 <http://www.minix3.org>
 
-**Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert.
+**Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert. Ab Version 3.2 hat [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Support (vorerst als experimentell bezeichnet) in den Kernel Einzug gehalten.
 
   
 
@@ -51,6 +51,6 @@ Dies war Ausgangspunkt für einen Flamewar ganz besonderer Art, der die Entwickl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9646/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1910/index.html)
 
-<!-- MediaWiki page 1910; revision 9646; parent 7907; 2011-03-30T21:05:42Z -->
+<!-- MediaWiki page 1910; revision 10482; parent 9646; 2012-03-01T10:16:14Z -->
