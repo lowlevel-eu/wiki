@@ -12,9 +12,13 @@ Möchte man dennoch lieber ein Buch besitzen, um beispielsweise im selbigen Noti
 
 **Anmerkungen zur Aktualität der Liste:** Es kann vorkommen, dass die Links auf eine veraltete Version des Buches zeigen. Darum sollte man am besten immer noch einmal nach dem Buchtitel suchen, um eine eventuell neu herausgekommene aktualisierte Auflage zu finden. Wenn du siehst, dass ein Buch in einer aktualisierten Auflage erschienen ist, dann ändere den Link doch direkt hier im Artikel oder lass wenigstens einen Hinweis auf der [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/2123/index.html "Diskussion:Literatur") da! Danke!
 
+  
+
 ## Bücher: Programmierung
 
 Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, mächtig sein. Wer neue Sprachkenntnisse erlernen möchte, seine Sprachkenntnisse vertiefen möchte oder eine gute Referenz sucht, dem sei diese Liste ans Herz gelegt:
+
+  
 
 ### Assembler
 
@@ -23,24 +27,42 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 - „Assembler GE-PACKT“ von Joachim Rohde  
   Ein gutes, handliches Nachschlagewerk zu allen x86-Befehlen, vom 8086 bis zum Pentium 4. Auch FPU, MMX, SSE und SSE2 sowie 3D Now! werden behandelt.
 
+  
+
 ### C/C++
 
 - „C/C++ GE-PACKT“ von Herbert Schildt  
   Eine kurze Übersicht über die Features von C, C++ und den Standard-Bibliotheken.
+
+<!-- -->
+
 - „C++ Objektorientiertes Programmieren von Anfang an“ von Helmut Erlenkötter  
   Das Buch ist optimal, wenn man bereits Programmieren kann, und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen die bereits C++ können ist es ein nettes Nachschlagewerg. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
+
+<!-- -->
+
 - „C: Bibliotheksfunktionen sicher anwenden“ von Helmut Erlenkötter  
   Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kennitnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
 - „C++ von A bis Z: Das umfassende Handbuch“ von Jürgen Wolf  
   Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert. Dazu kommt noch eine CD mit der HTML-Version des untenstehenden Buches „C von A bis Z“.
+
+<!-- -->
+
 - „C von A bis Z: Das umfassende Handbuch“ von Jürgen Wolf  
   Das passende C-Handbuch vom selben Autor, es ist beim Verlag auch als HTML-Version als [kostenloses Openbook](http://openbook.galileocomputing.de/c_von_a_bis_z/) verfügbar. Ist sehr gut zum Lernen, jedoch teilweise verwirrend geschrieben, und für den OS-Entwickler teilweise zu ungenau. Trotzdem insgesamt eine empfehlenswerte Referenz.
+
+<!-- -->
+
+- ["The Programming Language" von Kernighan und Ritchie](http://www.amazon.de/Programming-Language-Prentice-Hall-Software/dp/0131103628/ref=pd_sim_b_2)  
+  Dieses Buch bedarf eigentlich keiner großen Vorstellung: Das Buch zur Programmiersprache C von den Erfinder selbiger. Ein absolutes Muss für jeden, der C beherrschen will.
 
   
 
 ## Bücher: OS-Development
 
 Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwicklung bzw. auf die theoretischen Sachen eines Betriebssystems spezialisieren.
+
+  
 
 ### Bücher über existierende Kernel
 
@@ -57,7 +79,12 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 ### Bücher über Implementierung
 
 - „Operating Systems: Design and Implementation“ von Andrew S. Tanenbaum  
-  Dieses Lehrbuch beschäftigt sich mit [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch bevor und während er Linux entwickelte, zu schätzen.
+  Dieses Lehrbuch beschäftigt sich mit [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch, bevor und während er Linux entwickelte, zu schätzen.
+
+<!-- -->
+
+- ["Moderne Betriebssysteme" von Andrew S. Tanenbaum](http://www.amazon.de/Moderne-Betriebssysteme-Andrew-S-Tanenbaum/dp/3827373425/ref=sr_1_3?ie=UTF8&qid=1330941557&sr=8-3)  
+  Ebenfalls vom Altmeister Tanenbaum geschrieben beschäftigt sich dieses Buch mit den grundlegenden Prinzipien und Funktionsweisen moderner Betriebssysteme und beschäftigt sich unter anderem auch mit dem Thema Virtualisierung.
 
   
 
@@ -67,15 +94,38 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 - „Das Addison-Wesley Handbuch der Hardwareprogrammierung“ von Klaus Dembowski  
   Ein zwei Bände und ca. 1500 Seiten umfassendes Werk über die Hardwareprogrammierung, besonderen Augenmerk legt das Buch auf die Treiberprogrammierung unter Windows, Linux kommt etwas kurz. Aber nichtsdestotrotz ist besonders der erste Band für OS-Developer interessant, wird hier doch genauestens auf die Prozessoren und deren Funktionsweise eingegangen, auch wird Paging erklärt usw.. Mit Codebeispielen in Assembler, C, Pascal und Visual Basic werden die Beispiele vertieft. Der zweite Band widmet sich sehr der Peripherie, wie PCI, USB und Bluetooth. Auf der mitgelieferten DVD findet man alle Specs von Intel und AMD.
+
+<!-- -->
+
 - „PC-Hardwarebuch“ von Hans-Peter Messmer und Klaus Dembowski  
   Enthält zu Beginn Informationen zur Entwicklung der x86-Familie vom 386 zum Pentium 4 und beschreibt die Betriebsmodi, Befehlssätze, Anschlüsse, usw. der einzelnen Prozessoren. In der zweiten Hälfte folgt ein (teilweise sehr detaillierter) Überblick über viele verschiedene Hardware von IDE und SCSI über AGP und PCI bis hin zu USB und LAN.
+
+<!-- -->
+
 - „PC intern 5“ von Michael Tischer  
   Behandelt einige Aspekte der Systemprogrammierung, s. Inhaltsangabe bei Amazon.
+
+<!-- -->
+
+- ["Computerarchitektur: Strukturen, Grundlagen" von Andres S. Tanenbaum](http://www.amazon.de/Computerarchitektur-Strukturen-Grundlagen-Andrew-Tanenbaum/dp/3827371511/ref=pd_bxgy_b_img_c)  
+  Wieder ein klassischer Tanenbaum: Dieses Buch widmet sich ganz der grundlegenden Computerarchitektur und behandelt in seiner neuesten Auflage vor allem Multiprozessorsysteme.
+
+  
 
 ## Bücher: Verschiedenes
 
 - „Just for fun: Wie ein Freak die Computerwelt revolutionierte“ von Linus Torvalds und David Diamond  
   Die Autobiographie des Linux-Erfinders ist eigentlich ein Muss für jeden Betriebssystementwickler, egal ob Linux-Fan oder nicht. Die Geschichte der Entstehung von Linux ist gleichzeitig unterhaltend und inspirierend, weil sich jeder Nerd doch irgendwie mit dem in seiner *larval stage* befindlichen Linus Torvalds identifizieren kann.
+
+<!-- -->
+
+- ["Compiler: Prinzipen, Techniken, Tools - das Drachenbuch" von R. Sethi, A. Aho und J. Ullman](http://www.amazon.de/Compiler-Prinzipien-Techniken-Pearson-Studium/dp/3827370973/ref=sr_1_1?s=books&ie=UTF8&qid=1330941852&sr=1-1)  
+  Das "Drachenbuch" gilt als das ultimative Werk hinsichtlich Compiler: Aufbau, Wissenschaft, Anwendung, lexikalische Analyse, syntaktische Analyse, Interpreter, Aufbau von Programmiersprachen...das Buch deckt die "Königsdisziplin" der theoretischen Informatik bis ins kleinste Detail ab.
+
+<!-- -->
+
+- ["Verteilte Systeme: Prinzipien und Paradigmen" von Andrew S. Tanenbaum](http://www.amazon.de/Verteilte-Systeme-Prinzipien-Andrew-Tanenbaum/dp/3827372933/ref=pd_sim_b_3)  
+  Dieses Buch von Tanenbaum behandelt verteilte Systeme in ihrer vollen Pracht: Über Architekturen und der Kommunikation bis hin zur Synchronisierung und Fehlertoleranz und Replikation werden viele Themen ausführlich behandelt.
 
   
 
@@ -93,6 +143,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8670/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 8670; parent 7893; 2010-10-18T15:36:46Z -->
+<!-- MediaWiki page 1930; revision 10486; parent 8670; 2012-03-05T10:13:02Z -->
