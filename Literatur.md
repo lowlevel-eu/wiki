@@ -53,8 +53,8 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 
 <!-- -->
 
-- [„The Programming Language“ von Kernighan und Ritchie](http://www.amazon.de/Programming-Language-Prentice-Hall-Software/dp/0131103628/ref=pd_sim_b_2)  
-  Dieses Buch bedarf eigentlich keiner großen Vorstellung: Das Buch zur Programmiersprache C von den Erfinder selbiger. Ein absolutes Muss für jeden, der C beherrschen will.
+- [„The C Programming Language“ von Kernighan und Ritchie](http://www.amazon.de/Programming-Language-Prentice-Hall-Software/dp/0131103628/ref=pd_sim_b_2)  
+  Dieses Buch bedarf eigentlich keiner großen Vorstellung: Das Buch zur Programmiersprache C von den Erfinder selbiger. Jeder, der C beherrschen will, sei unter anderem dieses Buch ans Herz gelegt.
 
   
 
@@ -143,6 +143,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 10487; parent 10486; 2012-03-05T15:22:47Z -->
+<!-- MediaWiki page 1930; revision 10488; parent 10487; 2012-03-05T15:28:37Z -->
