@@ -37,7 +37,7 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 <!-- -->
 
 - „C++ Objektorientiertes Programmieren von Anfang an“ von Helmut Erlenkötter  
-  Das Buch ist optimal, wenn man bereits programmieren kann und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen, die bereits C++ können, ist es ein nettes Nachschlagewerk. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
+  Das Buch ist optimal, wenn man bereits programmieren kann und es einem nur um die Sprache C++ an sich geht. Aber auch für diejenigen, die bereits C++ können, ist es ein nettes Nachschlagewerk. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
 
 <!-- -->
 
@@ -141,6 +141,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10489/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10490/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 10489; parent 10488; 2012-03-05T15:30:59Z -->
+<!-- MediaWiki page 1930; revision 10490; parent 10489; 2012-03-05T15:32:15Z -->
