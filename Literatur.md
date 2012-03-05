@@ -53,14 +53,14 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 
 <!-- -->
 
-- ["The Programming Language" von Kernighan und Ritchie](http://www.amazon.de/Programming-Language-Prentice-Hall-Software/dp/0131103628/ref=pd_sim_b_2)  
+- [„The Programming Language“ von Kernighan und Ritchie](http://www.amazon.de/Programming-Language-Prentice-Hall-Software/dp/0131103628/ref=pd_sim_b_2)  
   Dieses Buch bedarf eigentlich keiner großen Vorstellung: Das Buch zur Programmiersprache C von den Erfinder selbiger. Ein absolutes Muss für jeden, der C beherrschen will.
 
   
 
 ## Bücher: OS-Development
 
-Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwicklung bzw. auf die theoretischen Sachen eines Betriebssystems spezialisieren.
+Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwicklung bzw. auf die theoretischen Grundlagen eines Betriebssystems spezialisieren.
 
   
 
@@ -83,8 +83,8 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 
 <!-- -->
 
-- ["Moderne Betriebssysteme" von Andrew S. Tanenbaum](http://www.amazon.de/Moderne-Betriebssysteme-Andrew-S-Tanenbaum/dp/3827373425/ref=sr_1_3?ie=UTF8&qid=1330941557&sr=8-3)  
-  Ebenfalls vom Altmeister Tanenbaum geschrieben beschäftigt sich dieses Buch mit den grundlegenden Prinzipien und Funktionsweisen moderner Betriebssysteme und beschäftigt sich unter anderem auch mit dem Thema Virtualisierung.
+- [„Moderne Betriebssysteme“ von Andrew S. Tanenbaum](http://www.amazon.de/Moderne-Betriebssysteme-Andrew-S-Tanenbaum/dp/3827373425/ref=sr_1_3?ie=UTF8&qid=1330941557&sr=8-3)  
+  Ebenfalls vom Altmeister Tanenbaum geschrieben beschäftigt sich dieses Buch mit den grundlegenden Prinzipien und Funktionsweisen moderner Betriebssysteme und unter anderem auch mit dem Thema Virtualisierung.
 
   
 
@@ -107,7 +107,7 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 <!-- -->
 
-- ["Computerarchitektur: Strukturen, Grundlagen" von Andres S. Tanenbaum](http://www.amazon.de/Computerarchitektur-Strukturen-Grundlagen-Andrew-Tanenbaum/dp/3827371511/ref=pd_bxgy_b_img_c)  
+- [„Computerarchitektur: Strukturen, Grundlagen“ von Andrew S. Tanenbaum](http://www.amazon.de/Computerarchitektur-Strukturen-Grundlagen-Andrew-Tanenbaum/dp/3827371511/ref=pd_bxgy_b_img_c)  
   Wieder ein klassischer Tanenbaum: Dieses Buch widmet sich ganz der grundlegenden Computerarchitektur und behandelt in seiner neuesten Auflage vor allem Multiprozessorsysteme.
 
   
@@ -119,12 +119,12 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 <!-- -->
 
-- ["Compiler: Prinzipen, Techniken, Tools - das Drachenbuch" von R. Sethi, A. Aho und J. Ullman](http://www.amazon.de/Compiler-Prinzipien-Techniken-Pearson-Studium/dp/3827370973/ref=sr_1_1?s=books&ie=UTF8&qid=1330941852&sr=1-1)  
-  Das "Drachenbuch" gilt als das ultimative Werk hinsichtlich Compiler: Aufbau, Wissenschaft, Anwendung, lexikalische Analyse, syntaktische Analyse, Interpreter, Aufbau von Programmiersprachen...das Buch deckt die "Königsdisziplin" der theoretischen Informatik bis ins kleinste Detail ab.
+- [„Compiler: Prinzipen, Techniken, Tools – das Drachenbuch“ von R. Sethi, A. Aho und J. Ullman](http://www.amazon.de/Compiler-Prinzipien-Techniken-Pearson-Studium/dp/3827370973/ref=sr_1_1?s=books&ie=UTF8&qid=1330941852&sr=1-1)  
+  Das „Drachenbuch“ gilt als das ultimative Werk hinsichtlich Compiler: Aufbau, Wissenschaft, Anwendung, lexikalische Analyse, syntaktische Analyse, Interpreter, Aufbau von Programmiersprachen… das Buch deckt die „Königsdisziplin“ der theoretischen Informatik bis ins kleinste Detail ab.
 
 <!-- -->
 
-- ["Verteilte Systeme: Prinzipien und Paradigmen" von Andrew S. Tanenbaum](http://www.amazon.de/Verteilte-Systeme-Prinzipien-Andrew-Tanenbaum/dp/3827372933/ref=pd_sim_b_3)  
+- [„Verteilte Systeme: Prinzipien und Paradigmen“ von Andrew S. Tanenbaum](http://www.amazon.de/Verteilte-Systeme-Prinzipien-Andrew-Tanenbaum/dp/3827372933/ref=pd_sim_b_3)  
   Dieses Buch von Tanenbaum behandelt verteilte Systeme in ihrer vollen Pracht: Über Architekturen und der Kommunikation bis hin zur Synchronisierung und Fehlertoleranz und Replikation werden viele Themen ausführlich behandelt.
 
   
@@ -143,6 +143,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 10486; parent 8670; 2012-03-05T10:13:02Z -->
+<!-- MediaWiki page 1930; revision 10487; parent 10486; 2012-03-05T15:22:47Z -->
