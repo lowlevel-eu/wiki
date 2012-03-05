@@ -37,12 +37,12 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 <!-- -->
 
 - „C++ Objektorientiertes Programmieren von Anfang an“ von Helmut Erlenkötter  
-  Das Buch ist optimal, wenn man bereits Programmieren kann, und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen die bereits C++ können ist es ein nettes Nachschlagewerg. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
+  Das Buch ist optimal, wenn man bereits programmieren kann und es einem nur um die Sprache C++ an sich geht. Aber auch für die jenigen, die bereits C++ können, ist es ein nettes Nachschlagewerk. Alle Features von C++ werden an sehr gut gewählten Beispielen erklärt.
 
 <!-- -->
 
 - „C: Bibliotheksfunktionen sicher anwenden“ von Helmut Erlenkötter  
-  Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kennitnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
+  Gutes Buch, bietet den Einstieg in die Programmierung mit der C-Standard-Bibliothek. Hilft, seine Kenntnisse anhand ausführlicher Beschreibungen und Übungen in C zu vertiefen und dient hervorragend als Nachschlagewerk.
 - „C++ von A bis Z: Das umfassende Handbuch“ von Jürgen Wolf  
   Sehr gutes Handbuch zur Programmierung in C++, deckt so gut wie alle Spracheigenschaften und die STL ab. Im hinteren Teil wird auch die Programmierung mit wxWidgets erläutert. Dazu kommt noch eine CD mit der HTML-Version des untenstehenden Buches „C von A bis Z“.
 
@@ -54,9 +54,7 @@ Wer ein OS entwickeln will, sollte schon der Sprache, in der er es machen will, 
 <!-- -->
 
 - [„The C Programming Language“ von Kernighan und Ritchie](http://www.amazon.de/Programming-Language-Prentice-Hall-Software/dp/0131103628/ref=pd_sim_b_2)  
-  Dieses Buch bedarf eigentlich keiner großen Vorstellung: Das Buch zur Programmiersprache C von den Erfinder selbiger. Jeder, der C beherrschen will, sei unter anderem dieses Buch ans Herz gelegt.
-
-  
+  Dieses Buch bedarf eigentlich keiner großen Vorstellung: Das Buch zur Programmiersprache C von den Erfinder selbiger. Jedem, der C beherrschen will, sei unter anderem dieses Buch ans Herz gelegt.
 
 ## Bücher: OS-Development
 
@@ -143,6 +141,6 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10488/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10489/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 10488; parent 10487; 2012-03-05T15:28:37Z -->
+<!-- MediaWiki page 1930; revision 10489; parent 10488; 2012-03-05T15:30:59Z -->
