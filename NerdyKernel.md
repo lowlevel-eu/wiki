@@ -1,6 +1,6 @@
 # NerdyKernel
 
-| nerdy-project |  |
+| NerdyKernel |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | rizor |
@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message-Passing, Message-Queues, RPC |
 | Homepage |  |
 
-<http://rizor.dyndns-home.com/nerdy-project>
+<http://rizor.dyndns-home.com/git/NerdyKernel.git>
 
   
 
@@ -40,6 +40,6 @@ Momentan befindet sich der Kernel weitestgehend in der Planungsphase, da die Ker
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 10401; parent 10104; 2012-01-26T08:23:33Z -->
+<!-- MediaWiki page 1816; revision 10492; parent 10401; 2012-03-07T22:51:19Z -->
