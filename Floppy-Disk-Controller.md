@@ -16,7 +16,7 @@ Der Floppy Disk Controller (FDC) ist ein Chip, der ein bis vier Disketten-Laufwe
 - Der FDC sendet [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 6, wenn z.B. eine Lese- oder Schreiboperation beendet ist
 - Der FDC kann über [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA") Daten direkt aus dem Speicher auf Diskette schreiben und anders herum. Dafür wird DMA Channel 2 verwendet
 - Der FDC ist recht schlecht standardisiert, da verschiedene Hersteller unterschiedliche Funktionalitäten hinzugefügt haben.
-- Bei allen Operationen, für die der Schreib-/Lesekopf bewegt werden muss, sollte eine Wartezeit eingehalten werden, bis die nächste Operation folgt, da insbesondere Disketten sehr langsame Zugriffszeiten besitzen. Bei Fehlen dieser Wartezeiten funktioniert der Treiber oft nur in Emulatoren, versagt aber auf echter Hardware!
+- Bei allen Operationen, für die der Schreib-/Lesekopf bewegt werden muss, sollte eine Wartezeit eingehalten werden, bis die nächste Operation folgt, da insbesondere Disketten sehr hohe Zugriffszeiten besitzen. Bei Fehlen dieser Wartezeiten funktioniert der Treiber oft nur in Emulatoren, versagt aber auf echter Hardware!
 - Der FDC kann nur Sektorangaben in [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") verarbeiten
 - Der FDC kann theoretisch bis zu vier Diskettenlaufwerke ansteuern, allerdings findet man heute wohl kein System mehr, welches mehr als zwei besitzt.
 - **Diskettenlaufwerke sind sehr fehleranfällig! Deshalb muss ein Befehl oftmals mehrmals gesendet werden, bevor er funktioniert. Großzügige Timeouts sind Pflicht in jedem Treiber für Diskettenlaufwerke.**
@@ -959,6 +959,6 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10466/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10497/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1443/index.html)
 
-<!-- MediaWiki page 1443; revision 10466; parent 10465; 2012-02-23T17:07:50Z -->
+<!-- MediaWiki page 1443; revision 10497; parent 10466; 2012-03-10T12:48:56Z -->
