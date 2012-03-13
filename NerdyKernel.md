@@ -15,13 +15,21 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message-Passing, Message-Queues, RPC |
 | Homepage |  |
 
-<http://rizor.dyndns-home.com/git/?p=NerdyKernel.git;a=summary>
+<http://rizor.dyndns-home.com/git/?p=NerdyKernel.git;a=summary> <http://rizor.dyndns-home.com/git/?p=NerdyTestbot.git;a=summary>
 
   
 
+## Buildsystem
+
+Der Kernel und der Testbot werden durch CMake definiert. Es soll beides unter UNIX und Cygwin gebaut werden können. Für den Kernel selber wird es u.U. auch die Möglichkeit geben ihn mit dem MSVC zu bauen.
+
 ## Testverfahren
 
-Das Projekt enthält einen eigens entwickelten Testbot, der den Kompiliervorgang überwacht und verschiedene Testszenarien durchspielt. Einzelne Komponenten des Kernels werden durch Testcases und Emulierung bestimmter Komponenten im Userspace getestet und verifiziert. Dadurch sollen einfache Möglichkeiten geschaffen werden die einzelnen Kernel-Komponenten zu überprüfen. Es eignet sich nicht zum Test von Treibern. Für Treibertests wird ein Debug-Interface definiert, das es ermöglicht die Treiber auf ihre Korrektheit zu prüfen.
+Für das Projekt wird derzeit ein Testbot entworfen, der verschiedene Builds durchführen kann und diese in Logdateien speichert. Damit auch die Funktionalitäten getestet werden können, wird es ein eigens entwickeltes Testframework geben, dass durch den Testbot in regelmäßigen Abständen gestartet wird. Dieses Framework soll auch die Möglichkeit zu Performance-Messungen geben, damit Bottle-Necks frühzeitig erkannt werden können.
+
+Des weiteren wird es ein Debugging-Modul geben, das über die serielle Schnittstelle konfiguriert werden kann und dort auch Informationen ausgeben kann. Das Modul soll die Auslastung des Kernels anzeigen und die Performance genauer analysieren können.
+
+Als letztes soll es später noch einen Fuzzer geben, der über eine generische Abbildungsvorschrift den Kernel und seine Module testet und verifiziert. Dabei kommt ein Mutation-Based-Fuzzer zum Einsatz, der Schwachstellen aufzeigen soll.
 
 ## Design
 
@@ -33,13 +41,23 @@ Derzeit wird geplant, wie man zur Laufzeit Updates von Modulen verwenden kann, o
 
 Momentan befindet sich der Kernel weitestgehend in der Planungsphase, da die Kernel-Konfiguration und das Test-Framework entwickelt werden. Nachdem das abgeschlossen ist, wir der Kernel in die Entwicklunsphase treten.
 
-## Features
+## Entwicklungsstand
 
-    * Kernel-Konfigurator
-    * Automatisiertes Testframework
+Testbot:
+
+- Konfigurationsframework
+  - Eigener Konfigurationsstandard, der auf einfaches Parsing ausgelegt ist
+- Loggingframework
+  - Automatische Organisation der Logs und Erstellung mehrere Log-Instanzen
+- Framework für verschiedene Bots
+  - Build-Bot implementierung (Eigenständige Build-Generierung mit Zusammenfassung des Builds)
+
+Kernel:
+
+- Einfache System-Bibliothek, die eine Teilmenge des C-Standards implementiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10494/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 10494; parent 10493; 2012-03-07T22:53:18Z -->
+<!-- MediaWiki page 1816; revision 10503; parent 10494; 2012-03-13T00:06:03Z -->
