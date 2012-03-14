@@ -51,6 +51,7 @@ Testbot:
   - Automatische Organisation der Logs und Erstellung mehrere Log-Instanzen
 - Framework für verschiedene Bots
   - Build-Bot implementierung (Eigenständige Build-Generierung mit Zusammenfassung des Builds)
+  - Unit-Test-Bot (Eigenständige Builds und Ausführung der Tests)
 
 Kernel:
 
@@ -58,6 +59,6 @@ Kernel:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10506/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1816/index.html)
 
-<!-- MediaWiki page 1816; revision 10503; parent 10494; 2012-03-13T00:06:03Z -->
+<!-- MediaWiki page 1816; revision 10506; parent 10503; 2012-03-14T18:43:50Z -->
