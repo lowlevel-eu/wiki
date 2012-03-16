@@ -1,8 +1,6 @@
 # Wiki-Crashkurs
 
-Diese Seite fasst die wichtigsten Formatierungsbefehle, die man in diesem Wiki verwenden kann, zusammen. Dies ist keine Anleitung, wann welche Befehle zu verwenden sind.
-
-Eine umfangreichere Dokumentation bietet die offizielle [MediaWiki-Dokumentation](http://www.mediawiki.org/wiki/Help:Contents/de).
+Diese Seite fasst die wichtigsten Formatierungsbefehle, die man in diesem Wiki verwenden kann, zusammen. In erster Linie ist sie dafür gedacht eine schnelle Übersicht über die Gestaltungsmöglichkeiten zu liefern, und ist deswegen in einem relativ knappen Stil gehalten. Eine umfangreichere Dokumentation bietet die offizielle [MediaWiki-Dokumentation](http://www.mediawiki.org/wiki/Help:Contents/de).
 
 ## Text
 
@@ -186,6 +184,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8338/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 8338; parent 7941; 2010-09-21T11:36:10Z -->
+<!-- MediaWiki page 2049; revision 10512; parent 8338; 2012-03-16T23:21:56Z -->
