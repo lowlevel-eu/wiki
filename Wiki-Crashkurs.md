@@ -139,15 +139,18 @@ Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Cod
 
 ## Diskussionsfäden
 
-Diskussionsfäden können mittels Listen ohne Auflistungszeichen relativ übersicht gestaltet werden. Zum Beispiel so:
+Auf den Diskussionsseiten wird es schnell unübersichtlich, wenn nicht jeder Nutzer manuell dafür sorgt, dass die Beiträge strukturiert eingerückt werden. Dafür bieten sich Listen, um das relativ übersicht zu gestalten. Diese können pro Antwortebene jeweils einen Doppelpunkt eingerückt werden. Zum Beispiel so:
 
+    Ich starte eine Diskussion. --~~~~
     : Also ich finde diese Diskussion verdient Antworten. --~~~~
     :: Ich bin eine Antwort. --~~~~
     ::: Ich bin eine mehrzeilige Antwort
     ::: auf die Antwort. --~~~~
     :: Ich bin auch wichtig. --~~~~
 
-Und das sieht so aus
+Und das Ergebnis sieht so aus:
+
+Ich starte eine Diskussion. --Autor0 23:59, 31. Dez. 1899 (CEST)
 
 Also ich finde diese Diskussion verdient Antworten. --Autor1 0:00, 1. Jan. 1900 (CEST)
 
@@ -159,9 +162,12 @@ auf die Antwort. --Autor3 13:37, 1. Jan. 1900 (CEST)
 
 Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
 
+  
+**Tip:** Für längere Diskussionen empfiehlt es sich unser [Forum](https://lowlevel-eu.github.io/forum/index.html) zu nutzen.
+
 ### Signatur
 
-Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch Uhrzeit/Datum sowie den Nutzernamen ein. Dies erleichtert in Diskussionen den Überblick zu behalten, wer was gesagt hat.
+Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch das richtige Uhrzeit/Datum sowie den Nutzernamen ein. Dies erleichtert in Diskussionen den Überblick zu behalten, wer was gesagt hat.
 
 ## Wikiformatierung unterdrücken
 
@@ -182,6 +188,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10513; parent 10512; 2012-03-16T23:23:52Z -->
+<!-- MediaWiki page 2049; revision 10514; parent 10513; 2012-03-16T23:36:27Z -->
