@@ -161,9 +161,7 @@ Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
 
 ### Signatur
 
-Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden.
-
-  
+Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch Uhrzeit/Datum sowie den Nutzernamen ein. Dies erleichtert in Diskussionen den Überblick zu behalten, wer was gesagt hat.
 
 ## Wikiformatierung unterdrücken
 
@@ -184,6 +182,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10512; parent 8338; 2012-03-16T23:21:56Z -->
+<!-- MediaWiki page 2049; revision 10513; parent 10512; 2012-03-16T23:23:52Z -->
