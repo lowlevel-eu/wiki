@@ -217,6 +217,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10523; parent 10518; 2012-03-17T19:07:07Z -->
+<!-- MediaWiki page 2049; revision 10526; parent 10523; 2012-03-17T19:11:42Z -->
