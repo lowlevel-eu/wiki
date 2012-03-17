@@ -106,36 +106,64 @@ Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit
 
 ### In bestimmter Sprache
 
-C-Code und Assembler-Code wird in \<c\>- bzw. \<asm\>-Tags gesetzt, um bunten Code zu erhalten.
+C-Code und Assembler-Code wird in \<c\>- bzw. \<asm\>-Tags gesetzt, um bunten Code zu erhalten. Eine Liste aller verfügbaren Sprachen befindet sich bei den Versionsinformationen. In der folgenden Tabelle sind für ein paar Sprachen Beispiele, die die Verwendung illustrieren sollen, aufgelistet.
 
-Bsp:
+**Sprache:**
 
-    <c>int main() {
+C
+
+**Beispiel:**
+
+    <c>#include <stdio.h>
+
+    int main() {
         int i = 1;
+        return i;
     }</c>
 
-wird zu: \<c\>int main() {
+**Darstellung:**
+
+\<c\>#include \<stdio.h\>
+
+int main() {
 
       int i = 1;
+      return i;
 
 }\</c\>
 
-Bsp:
+------------------------------------------------------------------------
+
+**Sprache:**
+
+Assembler
+
+**Beispiel:**
 
     <asm>mov eax, cr0
     or eax, 1
     mov cr0, eax</asm>
 
-wird zu: \<asm\>mov eax, cr0 or al, 1 mov cr0, eax\</asm\>
+**Darstellung:**
 
-Eine Liste aller verfügbaren Sprachen befindet sich bei den Versionsinformationen.
+\<asm\>mov eax, cr0 or al, 1 mov cr0, eax\</asm\>
 
-### In anderen Sprachen
+------------------------------------------------------------------------
+
+**Sprache:**
+
+Andere Sprachen
+
+**Beispiel:**
 
     <code>REM Important
     ECHO Hello Batch</code>
 
-Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Code-Formatierung, wenn man einfach ein Leerzeichen vor jede Zeile des Codes setzt.
+**Darstellung:**
+
+`REM Important ECHO Hello Batch`
+
+Die selbe Formatierung wie mit dem \<code\>-Tag erhält man auch, wenn man einfach ein Leerzeichen vor jede Zeile des Codes setzt.
 
 ## Diskussionsfäden
 
@@ -188,6 +216,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10515; parent 10514; 2012-03-17T00:04:32Z -->
+<!-- MediaWiki page 2049; revision 10516; parent 10515; 2012-03-17T00:31:43Z -->
