@@ -139,13 +139,13 @@ Wird zu `REM Important ECHO Hello Batch` Außerdem bekommt man diese schöne Cod
 
 ## Diskussionsfäden
 
-Auf den Diskussionsseiten wird es schnell unübersichtlich, wenn nicht jeder Nutzer manuell dafür sorgt, dass die Beiträge strukturiert eingerückt werden. Dafür bieten sich Listen, um das relativ übersicht zu gestalten. Diese können pro Antwortebene jeweils einen Doppelpunkt eingerückt werden. Zum Beispiel so:
+Auf den Diskussionsseiten wird es schnell unübersichtlich, wenn nicht jeder Nutzer selbst dafür sorgt, dass seine Beiträge eingerückt werden. Um die Diskussion einigermaßen strukturiert zu halten, werden Antworten pro Ebene mit jeweils einem Doppelpunkt eingerückt. Zum Beispiel so:
 
     Ich starte eine Diskussion. --~~~~
     : Also ich finde diese Diskussion verdient Antworten. --~~~~
     :: Ich bin eine Antwort. --~~~~
-    ::: Ich bin eine mehrzeilige Antwort
-    ::: auf die Antwort. --~~~~
+    ::: Ich bin eine Antwort mit mehreren Absätzen.
+    ::: Dieser zweite Absatz darf im Beispiel nicht fehlen. --~~~~
     :: Ich bin auch wichtig. --~~~~
 
 Und das Ergebnis sieht so aus:
@@ -156,9 +156,9 @@ Also ich finde diese Diskussion verdient Antworten. --Autor1 0:00, 1. Jan. 1900 
 
 Ich bin eine Antwort. --Autor2 10:10, 1. Jan. 1900 (CEST)
 
-Ich bin eine mehrzeilige Antwort
+Ich bin eine Antwort mit mehreren Absätzen.
 
-auf die Antwort. --Autor3 13:37, 1. Jan. 1900 (CEST)
+Dieser zweite Absatz darf im Beispiel nicht fehlen. --Autor3 13:37, 1. Jan. 1900 (CEST)
 
 Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
 
@@ -188,6 +188,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10515/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10514; parent 10513; 2012-03-16T23:36:27Z -->
+<!-- MediaWiki page 2049; revision 10515; parent 10514; 2012-03-17T00:04:32Z -->
