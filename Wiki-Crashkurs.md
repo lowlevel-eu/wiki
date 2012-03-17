@@ -167,7 +167,7 @@ Die selbe Formatierung wie mit dem \<code\>-Tag erhält man auch, wenn man ein L
 
 ## Diskussionsfäden
 
-Auf den Diskussionsseiten wird es schnell unübersichtlich, wenn nicht jeder Nutzer selbst dafür sorgt, dass seine Beiträge eingerückt werden. Um die Diskussion einigermaßen strukturiert zu halten, werden Antworten pro Ebene mit jeweils einem Doppelpunkt eingerückt. Zum Beispiel so:
+Auf den Diskussionsseiten wird es schnell unübersichtlich, wenn nicht jeder Nutzer selbst dafür sorgt, dass seine Beiträge eingerückt werden. Um die Diskussion einigermaßen strukturiert zu halten, werden Antworten pro Ebene mit jeweils einem weiteren Doppelpunkt eingerückt. Zum Beispiel so:
 
     Ich starte eine Diskussion. --~~~~
     : Also ich finde diese Diskussion verdient Antworten. --~~~~
@@ -195,7 +195,7 @@ Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
 
 ### Signatur
 
-Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch das richtige Uhrzeit/Datum sowie den Nutzernamen ein. Dies erleichtert in Diskussionen den Überblick zu behalten, wer was gesagt hat.
+Kommentare in Diskussionsseiten sollen immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch die/das richtige Uhrzeit/Datum sowie den Nutzernamen ein. Dies erleichtert erheblich den Überblick in Diskussionen zu behalten, wer was gesagt hat. Vor allem in längeren Diskussionen ist das sehr wichtig und da niemand im voraus weiss wie lang seine Diskussion mal werden wird soll das immer vom ersten Beitrag an konsequent durchgeführt werden.
 
 ## Wikiformatierung unterdrücken
 
@@ -216,6 +216,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10517; parent 10516; 2012-03-17T00:37:02Z -->
+<!-- MediaWiki page 2049; revision 10518; parent 10517; 2012-03-17T08:21:22Z -->
