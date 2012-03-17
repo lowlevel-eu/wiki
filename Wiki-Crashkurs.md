@@ -190,7 +190,8 @@ Dieser zweite Absatz darf im Beispiel nicht fehlen. --Autor3 13:37, 1. Jan. 1900
 
 Ich bin auch wichtig. --Autor4 21:42, 1. Jan. 1900 (CEST)
 
-  
+Wer einen ausführlichen Text verfasst, kann diesen auch durch das Einfügen von `<br>` in Absätze gliedern.
+
 **Tip:** Für längere Diskussionen empfiehlt es sich unser [Forum](https://lowlevel-eu.github.io/forum/index.html) zu nutzen.
 
 ### Signatur
@@ -216,6 +217,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10518; parent 10517; 2012-03-17T08:21:22Z -->
+<!-- MediaWiki page 2049; revision 10523; parent 10518; 2012-03-17T19:07:07Z -->
