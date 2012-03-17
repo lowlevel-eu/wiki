@@ -163,7 +163,7 @@ Andere Sprachen
 
 `REM Important ECHO Hello Batch`
 
-Die selbe Formatierung wie mit dem \<code\>-Tag erhält man auch, wenn man einfach ein Leerzeichen vor jede Zeile des Codes setzt.
+Die selbe Formatierung wie mit dem \<code\>-Tag erhält man auch, wenn man ein Leerzeichen vor jede Zeile des Codes setzt.
 
 ## Diskussionsfäden
 
@@ -199,7 +199,7 @@ Kommentare in Diskussionsseiten sollten immer durch ein --\~\~\~~ am Ende signie
 
 ## Wikiformatierung unterdrücken
 
-Wenn man zum Beispiel Wikibefehle erklären will, oder einfach eine Kollision mit den Befehlen von Mediawiki hat, kann man das \<nowiki\>-Tag benutzen, um zu verhindern, dass Mediawiki den enthaltenen Text formatiert.
+Wenn man zum Beispiel Wikibefehle erklären will, oder eine Kollision mit den Befehlen von Mediawiki hat, kann man das \<nowiki\>-Tag benutzen, um zu verhindern, dass Mediawiki den enthaltenen Text formatiert.
 
 ## HTML
 
@@ -216,6 +216,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10516/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10517/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10516; parent 10515; 2012-03-17T00:31:43Z -->
+<!-- MediaWiki page 2049; revision 10517; parent 10516; 2012-03-17T00:37:02Z -->
