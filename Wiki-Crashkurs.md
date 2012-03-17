@@ -104,8 +104,6 @@ Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit
 
 ## Code
 
-### In bestimmter Sprache
-
 C-Code und Assembler-Code wird in \<c\>- bzw. \<asm\>-Tags gesetzt, um bunten Code zu erhalten. Eine Liste aller verfügbaren Sprachen befindet sich bei den Versionsinformationen. In der folgenden Tabelle sind für ein paar Sprachen Beispiele, die die Verwendung illustrieren sollen, aufgelistet.
 
 **Sprache:**
@@ -217,6 +215,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10526; parent 10523; 2012-03-17T19:11:42Z -->
+<!-- MediaWiki page 2049; revision 10527; parent 10526; 2012-03-17T19:12:40Z -->
