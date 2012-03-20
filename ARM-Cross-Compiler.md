@@ -43,18 +43,16 @@ Nach erfolgreichem configure kann der gcc mittels
 
 gebaut und installiert werden.
 
-### Fehler beim configure
-
-Eventuell kann es sein, dass configure mit der Fehlermeldung abbricht, dass die Libraries **GMP** und/oder **MPFR** sowie **MCP** nicht installiert seien. Diese müssen dann per Paketverwaltung oder von Hand installiert werden. Hier kann GMP und [hier](http://www.mpfr.org/mpfr-current/mpfr-3.0.1.tar.gz) MPFR und [hier](http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz) MCP heruntergeladen werden, falls selbige nicht über die Paketverwaltung der Distribution erhältlich sind. Gebaut werden beide mit dem in Linux bekannten Dreisatz *./configure, make, make install*.
-
-  
-
 ### LibGCC bauen
 
 Für bestimmte Operationen, z.B. Stack Unwinding, Ganzzahl- und Fließkommaarithmetik und andere Unterstützungsfunktionen benötigt man zusätzlich die LibGCC. Diese kann man zusätzlich erstellen:
 
     $ make all-target-libgcc
     $ make install-target-libgcc
+
+### Fehler beim configure
+
+Eventuell kann es sein, dass configure mit der Fehlermeldung abbricht, dass die Libraries **GMP** und/oder **MPFR** sowie **MCP** nicht installiert seien. Diese müssen dann per Paketverwaltung oder von Hand installiert werden. Hier kann GMP und [hier](http://www.mpfr.org/mpfr-current/mpfr-3.0.1.tar.gz) MPFR und [hier](http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz) MCP heruntergeladen werden, falls selbige nicht über die Paketverwaltung der Distribution erhältlich sind. Gebaut werden beide mit dem in Linux bekannten Dreisatz *./configure, make, make install*.
 
 ## Fertig!
 
@@ -74,6 +72,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10532/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10532; parent 10531; 2012-03-20T14:30:07Z -->
+<!-- MediaWiki page 2099; revision 10533; parent 10532; 2012-03-20T14:30:49Z -->
