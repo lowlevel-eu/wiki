@@ -49,12 +49,12 @@ Eventuell kann es sein, dass configure mit der Fehlermeldung abbricht, dass die 
 
   
 
-### LibGCC
+### LibGCC bauen
 
 Für bestimmte Operationen, z.B. Stack Unwinding, Ganzzahl- und Fließkommaarithmetik und andere Unterstützungsfunktionen benötigt man zusätzlich die LibGCC. Diese kann man zusätzlich erstellen:
 
     $ make all-target-libgcc
-    # make install-target-libgcc
+    $ make install-target-libgcc
 
 ## Fertig!
 
@@ -74,6 +74,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10531/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10532/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10531; parent 10530; 2012-03-20T14:29:44Z -->
+<!-- MediaWiki page 2099; revision 10532; parent 10531; 2012-03-20T14:30:07Z -->
