@@ -34,12 +34,13 @@ Nun geht's an den gcc: Hier gilt auch wieder, sofern nicht schon geschehen, den 
 
 Dann ruft man configure wie folgt auf:
 
-    $ ../cross-arm-gcc/gcc-4.6.0/configure --target=$TARGET --prefix=$PREFIX --enable-languages=c --without-headers
+    $ ../cross-arm-gcc/gcc-4.6.0/configure --target=$TARGET 
+                  --prefix=$PREFIX --enable-languages=c --without-headers
 
 Nach erfolgreichem configure kann der gcc mittels
 
     $ make all-gcc
-    # make install-gcc
+    $ make install-gcc
 
 gebaut und installiert werden.
 
@@ -72,6 +73,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10533/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10534/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10533; parent 10532; 2012-03-20T14:30:49Z -->
+<!-- MediaWiki page 2099; revision 10534; parent 10533; 2012-03-20T14:31:24Z -->
