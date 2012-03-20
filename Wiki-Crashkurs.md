@@ -144,7 +144,7 @@ Assembler
 
 **Darstellung:**
 
-\<asm\>mov eax, cr0 or al, 1 mov cr0, eax\</asm\>
+\<asm\>mov eax, cr0 or eax, 1 mov cr0, eax\</asm\>
 
 ------------------------------------------------------------------------
 
@@ -215,6 +215,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10527; parent 10526; 2012-03-17T19:12:40Z -->
+<!-- MediaWiki page 2049; revision 10529; parent 10527; 2012-03-20T09:39:55Z -->
