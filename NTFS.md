@@ -18,8 +18,8 @@
 Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"):
 
 | Offset | Größe | Beschreibung |
-| -------- | ------- | ----------------------------------------------------------- |
-| 0x000 | 3 | Sprung zum Bootloader \<asm\> EB 52 90 JMP + NOP \</asm\> |
+| -------- | ------- | ------------------------------------------------------------- |
+| 0x000 | 3 | Sprung zum Bootloader \<asm\> EB 52 90 (JMP + NOP) \</asm\> |
 | 0x003 | 8 | Filesystem-ID bei NTFS immer "NTFS" |
 | 0x00B | 2 | Anzahl Bytes pro Sektor |
 | 0x00D | 1 | Anzahl Sektoren pro Cluster |
@@ -46,6 +46,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10349/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 10349; parent 9928; 2011-12-03T13:56:43Z -->
+<!-- MediaWiki page 2437; revision 10535; parent 10349; 2012-03-20T19:47:32Z -->
