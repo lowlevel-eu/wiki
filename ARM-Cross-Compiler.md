@@ -24,7 +24,7 @@ Sofern nicht schon geschehen, sollte man jetzt das binutils-Paket entpacken, in 
 Nach erfolgreichem configure können die binutils nun gebaut werden mittels
 
     $ make all
-    # make install
+    $ make install
 
 ## gcc bauen
 
@@ -74,6 +74,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10530/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10531/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10530; parent 10114; 2012-03-20T14:29:14Z -->
+<!-- MediaWiki page 2099; revision 10531; parent 10530; 2012-03-20T14:29:44Z -->
