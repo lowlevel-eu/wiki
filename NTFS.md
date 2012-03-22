@@ -23,12 +23,12 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 | 0x003 | 8 | Filesystem-ID bei NTFS immer "NTFS" |
 | 0x00B | 2 | Anzahl Bytes pro Sektor |
 | 0x00D | 1 | Anzahl Sektoren pro Cluster |
-| 0x00E | 7 | Reserviert immer \<asm\>00 00 00 00 00 00 00\</asm\> |
+| 0x00E | 7 | Reserviert, immer: \<asm\>00 00 00 00 00 00 00\</asm\> |
 | 0x015 | 1 | Media Descriptor Byte 0xF8 bei Hard Disk |
-| 0x016 | 2 | Reserviert immer \<asm\>00 00\</asm\> |
+| 0x016 | 2 | Reserviert, immer: \<asm\>00 00\</asm\> |
 | 0x018 | 2 | Anzahl Sektoren pro Spur |
 | 0x01A | 2 | Anzahl Lese-/Schreibköpfe (Oberflächen) |
-| 0x01C | 8 | Reserviert immer \<asm\>00 00 00 00 00 00 00 00\</asm\> |
+| 0x01C | 8 | Reserviert, immer: \<asm\>00 00 00 00 00 00 00 00\</asm\> |
 | 0x024 | 4 | Reserviert \<asm\>80 00 80 00\</asm\> (Ausnahme?) |
 | 0x028 | 8 | Gesamtzahl Sektoren im Logischen Laufwerk |
 | 0x030 | 8 | Logische Clusternummer des ersten MFT-Clusters |
@@ -36,9 +36,9 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 | 0x040 | 4 | Anzahl Cluster pro MFT (0xF6 = 1/4) |
 | 0x044 | 4 | Anzahl Cluster pro Index record |
 | 0x048 | 8 | Seriennummer des Logischen Laufwerks |
-| 0x050 | 4 | Reserviert immer \<asm\>00 00 00 00\</asm\> |
+| 0x050 | 4 | Reserviert, immer: \<asm\>00 00 00 00\</asm\> |
 | 0x054 | 426 | Bootloader oder 1.Stagebootloader |
-| 0x1FE | 2 | Kennung für Bootsektoren immer \<asm\>55 AA \</asm\> |
+| 0x1FE | 2 | Kennung für Bootsektoren, immer: \<asm\>55 AA \</asm\> |
 
 ## Weblinks
 
@@ -46,6 +46,6 @@ Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10535/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10536/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2437/index.html)
 
-<!-- MediaWiki page 2437; revision 10535; parent 10349; 2012-03-20T19:47:32Z -->
+<!-- MediaWiki page 2437; revision 10536; parent 10535; 2012-03-22T08:27:13Z -->
