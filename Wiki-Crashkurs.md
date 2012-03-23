@@ -194,7 +194,7 @@ Wer einen ausführlichen Text verfasst, kann diesen auch durch das Einfügen von
 
 ### Signatur
 
-Kommentare in Diskussionsseiten sollen immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch die/das richtige Uhrzeit/Datum sowie den Nutzernamen ein. Dies erleichtert erheblich den Überblick in Diskussionen zu behalten, wer was gesagt hat. Vor allem in längeren Diskussionen ist das sehr wichtig und da niemand im voraus weiss wie lang seine Diskussion mal werden wird soll das immer vom ersten Beitrag an konsequent durchgeführt werden.
+Kommentare in Diskussionsseiten sollen immer durch ein --\~\~\~~ am Ende signiert werden. Die Wiki-Software fügt dann automatisch den Nutzernamen sowie einen Zeitstempel ein. Dies erleichtert erheblich den Überblick in Diskussionen zu behalten, wer was gesagt hat. Vor allem in längeren Diskussionen ist das sehr wichtig und da niemand im voraus weiss wie lang seine Diskussion mal werden wird soll das immer vom ersten Beitrag an konsequent durchgeführt werden.
 
 ## Wikiformatierung unterdrücken
 
@@ -215,6 +215,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10529; parent 10527; 2012-03-20T09:39:55Z -->
+<!-- MediaWiki page 2049; revision 10539; parent 10529; 2012-03-23T22:57:44Z -->
