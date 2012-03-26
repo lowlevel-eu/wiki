@@ -16,13 +16,14 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ### Dateisysteme für Festplatten
 
-- FAT32
-- VFAT (Erweiterung für lange Dateinamen aller FAT-Dateisysteme)
-- NTFS (und nicht fertig gewordener Aufsatz WinFS)
+- [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
+  - FAT32
+  - VFAT (Erweiterung für lange Dateinamen aller FAT-Dateisysteme)
+- [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS") (und nicht fertig gewordener Aufsatz WinFS)
 - Ext
   - [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")
   - [Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3")
-  - Ext4
+  - [Ext4](https://github.com/lowlevel-eu/wiki/wiki/Ext4 "Ext4")
 - ReiserFS
 - Reiser4
 - UFS
@@ -40,6 +41,6 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9464/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10540/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1548/index.html)
 
-<!-- MediaWiki page 1548; revision 9464; parent 9273; 2011-02-05T23:57:46Z -->
+<!-- MediaWiki page 1548; revision 10540; parent 9464; 2012-03-26T15:10:22Z -->
