@@ -987,7 +987,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | Bit | Funktion |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 31 | Unterstützt die Benutzung des FERR#-Pins und des PBE#-Pins um dem Prozessor im Stop Clock State (STPCLK#) zu signalisieren, dass er einen wartenden Interrupt bearbeiten und dann zur normalen Ausführung zurückkehren soll. |
-| 30 | Gehört zur Intel Intanium Familie und läuft gerade im IA32-Emulationsmodus |
+| 30 | Gehört zur Intel Itanium Familie und läuft gerade im IA32-Emulationsmodus |
 | 29 | Implementiert den "Thermal Monitor aumatic thermal control circuitry" (TCC) |
 | 28 | Kann mehr als einen logischen Prozessor verwalten |
 | 27 | Unterstützt die Verwaltung von miteinander in Konflikt stehenden Speichertypen |
@@ -3021,6 +3021,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 9439; parent 8712; 2011-02-05T12:54:32Z -->
+<!-- MediaWiki page 1739; revision 10543; parent 9439; 2012-03-27T23:32:02Z -->
