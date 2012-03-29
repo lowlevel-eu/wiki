@@ -379,9 +379,10 @@ mov al, 0xFE out 0x60, al \</asm\>
 # Links
 
 - <http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html>
+- [SMS "8042" Datenblatt](http://www.diakom.ru/el/elfirms/datashts/Smsc/42w11.pdf)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9541/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 9541; parent 9351; 2011-02-12T10:35:35Z -->
+<!-- MediaWiki page 1468; revision 10545; parent 9541; 2012-03-29T08:40:56Z -->
