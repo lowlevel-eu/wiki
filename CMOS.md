@@ -275,10 +275,10 @@ void cmos_write(uint8_t offset,uint8_t val) {
 - [Real Time Clock / CMOS Setup Reference](http://www.nondot.org/sabre/os/files/MiscHW/RealtimeClockFAQ.txt) (*englisch*)
 - [CMOS-Aufbau](http://www.bioscentral.com/misc/cmosmap.htm) (*englisch*)
 - [Bochs's CMOS map](http://bochs.sourceforge.net/doc/docbook/development/cmos-map.html) (*englisch*)
-- [\[1\]](http://www.bios-info.de/4p92x846/iscmos.htm) (*deutsch*)
+- [BIOS Kompendium](http://www.bios-info.de/4p92x846/iscmos.htm) (*deutsch*)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10547/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10548/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 10547; parent 9461; 2012-04-02T21:22:16Z -->
+<!-- MediaWiki page 1562; revision 10548; parent 10547; 2012-04-02T21:22:57Z -->
