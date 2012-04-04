@@ -30,12 +30,6 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 
 ## Lowlevel-Tutorials
 
-### Protected Mode
-
-- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> PM-Grundlagen](http://www.jay-code.de/scripts/htmlgenerator.php?page=pmode&directory=tutorials) - TeeJay
-- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> Kernel in C](http://www.jay-code.de/scripts/htmlgenerator.php?page=ckernel&directory=tutorials) - TeeJay
-- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> Kernel in C++](http://www.jay-code.de/scripts/htmlgenerator.php?page=ckernel2&directory=tutorials) - TeeJay
-
 ## Offizielle Spezifikationen
 
 ### Intel
@@ -51,6 +45,6 @@ Hier sind alle nützlichen Links gesammelt, die helfen ein OS zu entwickeln. Wer
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7887/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10549/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1437/index.html)
 
-<!-- MediaWiki page 1437; revision 7887; parent 7886; 2010-07-16T15:57:41Z -->
+<!-- MediaWiki page 1437; revision 10549; parent 7887; 2012-04-04T15:47:26Z -->
