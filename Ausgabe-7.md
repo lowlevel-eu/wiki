@@ -414,11 +414,11 @@ So jetzt könnten wir zwar Töne ausgeben, aber wir müssen dazu zuerst noch den
 
 ### Praxis
 
-Wir werden jetzt ein paar Funktionen für die Programmiersprache C zusammen entwickeln. Nebenher schreiben wir die Funktionen dann auch noch in Assembler. Also, fangen wir an, ich denke in C dürfte jeder die Funktionen â€žinp()â€œ und â€žoutp()â€œ schon für sein OS implementiert haben, weshalb ich darauf baue. Wir wissen, wir schalten den Lautsprecher an, indem die letzten 2 Bits in Port 0x61 auf 11b stehen. Daraus machen wir schnell eine Funktion:
+Wir werden jetzt ein paar Funktionen für die Programmiersprache C zusammen entwickeln. Nebenher schreiben wir die Funktionen dann auch noch in Assembler. Also, fangen wir an, ich denke in C dürfte jeder die Funktionen \<c\>inp()\</c\> und \<c\>outp()\</c\> schon für sein OS implementiert haben, weshalb ich darauf baue. Wir wissen, wir schalten den Lautsprecher an, indem die letzten 2 Bits in Port 0x61 auf 11b stehen. Daraus machen wir schnell eine Funktion:
 
 \<c\> void switch_on() { outp(0x61,inp(0x61) \| 3); } \</c\>
 
-Okay. In Assembler baue ich das schon alles mit in die \_sound-Funktion ein. So, an können wir ihn machen, nur aus noch nicht, aber wir wissen, wenn die beiden letzten Bits in Port 0x61 auf 00b stehen, dann ist der Lautsprecher aus. Das geht also ganz leicht:
+Okay, in Assembler baue ich das schon alles mit in die \_sound-Funktion ein. So, an können wir ihn machen, nur aus noch nicht, aber wir wissen, wenn die beiden letzten Bits in Port 0x61 auf 00b stehen, dann ist der Lautsprecher aus. Das geht also ganz leicht:
 
 \<c\> void switch_off() { outp(0x61,inp(0x61) &~3); } \</c\>
 
@@ -930,6 +930,6 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8862/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10550/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1494/index.html)
 
-<!-- MediaWiki page 1494; revision 8862; parent 6646; 2010-11-11T14:17:07Z -->
+<!-- MediaWiki page 1494; revision 10550; parent 8862; 2012-04-06T12:01:20Z -->
