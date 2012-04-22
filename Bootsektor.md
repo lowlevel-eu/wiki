@@ -56,6 +56,6 @@ Das folgende gilt nur eingeschränkt für Bootfähige CD-ROMs, sondern nur für 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9667/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1475/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10581/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1475/index.html)
 
-<!-- MediaWiki page 1475; revision 9667; parent 9039; 2011-04-14T17:39:15Z -->
+<!-- MediaWiki page 1475; revision 10581; parent 9667; 2012-04-22T00:06:21Z -->
