@@ -76,8 +76,8 @@ Fortran ist eine prozedurale und objektorientierte [Programmiersprache](https://
     .globl _start
     _start:
         movl $0x200000, %esp
-        .extern hello
-        call hello
+        .extern _hello
+        call _hello
         hlt
 
     .align 4
@@ -95,6 +95,6 @@ Fortran ist eine prozedurale und objektorientierte [Programmiersprache](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1745/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10582/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1745/index.html)
 
-<!-- MediaWiki page 1745; revision 5190; parent 5189; 2009-08-06T11:43:49Z -->
+<!-- MediaWiki page 1745; revision 10582; parent 5190; 2012-04-23T14:02:08Z -->
