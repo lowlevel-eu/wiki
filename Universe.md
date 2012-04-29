@@ -12,7 +12,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C/C++ |
-| API: | nativ |
+| API: | nativ, Unix |
 | Binärformat: | UEF,[ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"),UMM |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory"),[RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") |
 | Homepage |  |
@@ -29,17 +29,7 @@ in Arbeit
 
 Teile dieser Ziele sind bereits umgesetzt, jedoch dauert die Fertigstellung der anderen Funktionen noch an.
 
-- Graphische Benutzeroberfläche (GUI)
-- Verbessertes Speichermamagement ([Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) \[erledigt\]
-- Verbessertes [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") IPC System \[erledigt\]
-- Einbau von einem Synchronen RPC IPC System \[erledigt\]
-- Ausführung von einfachen [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Dateien \[erledigt\]
-- Verwendung des [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface") \[in Arbeit\]
-- Treiber:
-  - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy") \[erledigt\]
-  - [Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus") \[erledigt\]
-  - [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA") \[erledigt\]
-  - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") \[erledigt\]
+**Die Entwicklung pausiert momentan, bis ein genauer Plan für Die Kernel Architektur feststeht. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.**
 
   
 
@@ -59,6 +49,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10485; parent 10472; 2012-03-04T17:29:35Z -->
+<!-- MediaWiki page 2498; revision 10587; parent 10485; 2012-04-29T21:06:50Z -->
