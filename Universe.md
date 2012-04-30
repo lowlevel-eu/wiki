@@ -17,7 +17,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory"),[RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") |
 | Homepage |  |
 
-in Arbeit
+<http://universe.de.tc> (nur vorläufig)
 
   
 
@@ -49,6 +49,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10587/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10587; parent 10485; 2012-04-29T21:06:50Z -->
+<!-- MediaWiki page 2498; revision 10588; parent 10587; 2012-04-30T14:49:41Z -->
