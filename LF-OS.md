@@ -15,8 +15,6 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-<http://www.lf-os.tk> (englisch)  
-[http://littlefox.web-fuxx.de](http://littlefox.web-fuxx.de/newSite/lf_os.php) (deutsch)  
 <http://lf-os.googlecode.com>
 
   
@@ -29,12 +27,12 @@ Da ich momentan wiedereinmal von vorne angefangen habe (einige haben das im Foru
 - plattformunabhängige Verwaltung der Interrupts (werden vom Plattformstarter auf Kernel-Events gemappt)
 - endlich mal ein grobes Design in menschenlesbarer Textform ;)
 
-Sollte es Fragen geben, können diese gerne im LF OS Forum gestellt werden. Die englische Version unter <http://www.lf-os.tk> ~~spinnt manchmal etwas~~ (sollte behoben sein ...), die deutsche unter <http://littlefox.web-fuxx.de> funktioniert in der Regel.
+------------------------------------------------------------------------
 
-Falls mich jemand unterstützen möchte, kann er sich gerne per PM oder [E-Mail](mailto:littlefox@web-fuxx.de) bei mir melden. Ich werde wahrscheinlich nicht nein sagen, da ein wenig Unterstützung nicht schlecht wäre ;)
+hier gibt es bald noch mehr updates ...
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10212/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10593/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 10212; parent 10211; 2011-11-11T10:00:46Z -->
+<!-- MediaWiki page 2267; revision 10593; parent 10212; 2012-05-03T04:43:45Z -->
