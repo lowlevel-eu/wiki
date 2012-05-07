@@ -9,7 +9,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | Akt. Version: | 0.8 (in Entwicklung) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | UPL |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"),[x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C/C++ |
 | API: | nativ, [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
@@ -25,13 +25,11 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 
   
 
-## Ziele der Version 0.8 (Kernel 1.00)
-
-Teile dieser Ziele sind bereits umgesetzt, jedoch dauert die Fertigstellung der anderen Funktionen noch an.
+## Universe 0.8 (Kernel 1.00)
 
 **Die Entwicklung pausiert momentan, bis ein genauer Plan für Die Kernel Architektur feststeht. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.**
 
-  
+**Nachtrag: Die Richtung und der grobe Kernelaufbau stehen jetzt fest. Ich werde nun 60% des ursprünglichen Codes neu schreiben um ihn Multiprozessor-system tauglich zu machen und um ihn an den neuen Aufbau an zu passen. So bald die Sache wieder brauchbare Maße angenommen hat, werde ich diesen Artikel aktualisieren.**
 
 ## Versionen
 
@@ -49,6 +47,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10589/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10589; parent 10588; 2012-05-01T19:09:59Z -->
+<!-- MediaWiki page 2498; revision 10596; parent 10589; 2012-05-07T21:06:11Z -->
