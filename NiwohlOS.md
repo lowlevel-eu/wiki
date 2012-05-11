@@ -263,7 +263,8 @@ Folgende Teile müssen noch implementiert werden:
 
 ## Weblinks
 
-- [Repository](http://gitorious.org/niwohlos)
+- [Repositorium (neu)](http://git.niwohlos.org/?p=niwohlOS.git;a=summary)
+- [Repository (alt)](http://gitorious.org/niwohlos)
 
   
 
@@ -273,6 +274,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10180/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 10180; parent 9828; 2011-10-16T22:49:25Z -->
+<!-- MediaWiki page 2095; revision 10599; parent 10180; 2012-05-11T18:29:49Z -->
