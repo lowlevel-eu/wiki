@@ -90,7 +90,7 @@ siehe [Diskussion:TODO#ReiserFS](https://lowlevel-eu.github.io/wiki/pages/2185/i
 
 - btrfs
 
-Hier [\[2\]](http://oss.oracle.com/projects/btrfs/) [\[3\]](https://btrfs.wiki.kernel.org/index.php/Main_Page) steht viel darüber
+Hier [\[2\]](http://oss.oracle.com/projects/btrfs/) [\[3\]](https://btrfs.wiki.kernel.org/index.php/Main_Page) steht viel darüber --[micha](https://lowlevel-eu.github.io/wiki/pages/2560/index.html "Benutzer:Micha.linuxfreak") 18:08, 21. Mai 2012 (CEST)
 
 - Ext
 - UDF
@@ -129,6 +129,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10600; parent 10468; 2012-05-21T16:07:04Z -->
+<!-- MediaWiki page 1518; revision 10601; parent 10600; 2012-05-21T16:08:47Z -->
