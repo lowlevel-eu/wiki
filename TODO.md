@@ -89,6 +89,9 @@ Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj]
 siehe [Diskussion:TODO#ReiserFS](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#ReiserFS "Diskussion:TODO")
 
 - btrfs
+
+Hier [\[2\]](http://oss.oracle.com/projects/btrfs/) [\[3\]](https://btrfs.wiki.kernel.org/index.php/Main_Page) steht viel darüber
+
 - Ext
 - UDF
 - ~~[EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI")~~
@@ -126,6 +129,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10468/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10600/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10468; parent 10467; 2012-02-23T17:26:01Z -->
+<!-- MediaWiki page 1518; revision 10600; parent 10468; 2012-05-21T16:07:04Z -->
