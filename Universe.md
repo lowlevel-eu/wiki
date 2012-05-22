@@ -1,6 +1,6 @@
 # Universe
 
-Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux und eventuell Windows Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne. Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Wir entschieden uns die Floppy Disk Varriante ohne GUI, DDOS zu nennen.
+Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux und eventuell Windows Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne. Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Wir entschieden uns die Floppy Disk Varriante ohne GUI, DDOS zu nennen. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.
 
 | Universe |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,11 +25,42 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 
   
 
-## Universe 0.8 (Kernel 1.00)
+## Universe Kernel 1.0
 
-**Die Entwicklung pausiert momentan, bis ein genauer Plan für Die Kernel Architektur feststeht. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.**
+Hybrid Kernel mit folgenden integrierten Treibern:
 
-**Nachtrag: Die Richtung und der grobe Kernelaufbau stehen jetzt fest. Ich werde nun 60% des ursprünglichen Codes neu schreiben um ihn Multiprozessor-system tauglich zu machen und um ihn an den neuen Aufbau an zu passen. So bald die Sache wieder brauchbare Maße angenommen hat, werde ich diesen Artikel aktualisieren.**
+- Blocktreiber für Bootlaufwerk (FDC + ATA)
+- Dateisystemtreiber für das Bootlaufwerk ([FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und EXT)
+- DMA Treiber
+- Standard Konsolen/Grafiktreiber
+
+  
+Die Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Das System kann jedoch auch von Dateisystemen und Laufwerken gestartet werden, deren Treiber nicht direkt im Kernel verankert sind. Diese dienen lediglich dazu dem Kernel die Möglichkeit zu geben das System ohne "externe Treiber" zu nutzen und die Basisfunktionen des Kernels sicher zu gewährleisten. Die Funktionalitäten der Treiber (abgesehen der Funktionen des DMA Treibers) können auch von externen Treibern abgelöst werden. Als "extern" werden alle Treiber Bezeichnet die nicht im Kernel integriert sind und ihre Funktionen über den Treiberinterface oder direktes IPC zur Verfügung stellen.
+
+  
+
+- Interfaces:
+  - CDI
+  - POSIX API (über int \$0x80, oder über einen dynamischen Syscall)
+  - Universe API (nur über einen dynamischen Syscall)
+
+<!-- -->
+
+- IPC Systeme:
+  - RPC
+  - Shared Memory
+  - Buffered RPC
+
+<!-- -->
+
+- Portierungen:
+  - stdlibc
+  - FASM
+
+  
+Das Kernel kann Multiprozessor Systeme nutzen, ist aber noch nicht für X64 optimiert.
+
+Voraussichtliches Realease: Juli 2012
 
 ## Versionen
 
@@ -47,6 +78,6 @@ Bisher fertiggestellte Versionen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10596/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10596; parent 10589; 2012-05-07T21:06:11Z -->
+<!-- MediaWiki page 2498; revision 10602; parent 10596; 2012-05-22T17:23:08Z -->
