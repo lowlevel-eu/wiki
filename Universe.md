@@ -40,24 +40,22 @@ Hybrid Kernel mit folgenden integrierten Treibern:
 Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Das System kann jedoch auch von Dateisystemen und Laufwerken gestartet werden, deren Treiber nicht direkt im Kernel verankert sind. Diese dienen lediglich dazu dem Kernel die Möglichkeit zu geben das System ohne "externe Treiber" zu nutzen und die Basisfunktionen des Kernels sicher zu gewährleisten. Die Funktionalitäten der Treiber (abgesehen der Funktionen des DMA Treibers) können auch von externen Treibern abgelöst werden. Als "extern" werden alle Treiber Bezeichnet die nicht im Kernel integriert sind und ihre Funktionen über den Treiberinterface oder direktes IPC zur Verfügung stellen.
 
   
+**Interfaces:**
 
-- Interfaces:
-  - CDI
-  - POSIX API (über int \$0x80, oder über einen dynamischen Syscall)
-  - Universe API (nur über einen dynamischen Syscall)
+- CDI
+- POSIX API (über int \$0x80, oder über einen dynamischen Syscall)
+- Universe API (nur über einen dynamischen Syscall)
 
-<!-- -->
+**IPC Systeme:**
 
-- IPC Systeme:
-  - RPC
-  - Shared Memory
-  - Buffered RPC
+- RPC
+- Shared Memory
+- Buffered RPC
 
-<!-- -->
+**Portierungen:**
 
-- Portierungen:
-  - stdlibc
-  - FASM
+- stdlibc
+- FASM
 
   
 Das Kernel kann Multiprozessor Systeme nutzen, ist aber noch nicht für X64 optimiert.
@@ -66,6 +64,6 @@ Voraussichtliches Realease: Juli 2012
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10605/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10604; parent 10603; 2012-05-22T17:36:05Z -->
+<!-- MediaWiki page 2498; revision 10605; parent 10604; 2012-05-22T17:40:00Z -->
