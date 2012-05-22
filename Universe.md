@@ -1,6 +1,6 @@
 # Universe
 
-Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux und eventuell Windows Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne. Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Wir entschieden uns die Floppy Disk Varriante ohne GUI, DDOS zu nennen. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.
+Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux und eventuell Windows Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne.
 
 | Universe |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,11 +21,13 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 
   
 
-  
+## Universe aktuell
+
+Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Floppy Disk Variante des Systems ohne GUI heißt DDOS. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.
 
   
 
-## Universe Kernel 1.0
+## Universe Kernel 1.0 (Planung/in Arbeit)
 
 Hybrid Kernel mit folgenden integrierten Treibern:
 
@@ -62,22 +64,8 @@ Das Kernel kann Multiprozessor Systeme nutzen, ist aber noch nicht für X64 opti
 
 Voraussichtliches Realease: Juli 2012
 
-## Versionen
-
-Bisher fertiggestellte Versionen:
-
-| Version | Änderungen/Fähigkeiten |
-| --------- | ---------------------------------------------------------------------------------------------------------- |
-| 0.1 | Einfaches bootbares „Hello world!“ Programm mit eigenem Bootloader(nur ASM) |
-| 0.2 | Textbasiertes Logo (nur ASM) |
-| 0.3 | Erster Versuch mit C-Kernel(C/ASM) |
-| 0.4 | Neustart- und Herunterfahrfunktionen (C/ASM) |
-| 0.5 | Funktionsmenü (nur ASM) |
-| 0.6 | Graphischer Editor mit Druckfunktion + Lade und Startfunktion für binäre Programme (nur ASM) |
-| 0.7 | Erste Versuche mit dem Protected Mode und Vesa (Version wegen hoher Fehlerquote als gescheitert erklärt) |
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10602/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10602; parent 10596; 2012-05-22T17:23:08Z -->
+<!-- MediaWiki page 2498; revision 10603; parent 10602; 2012-05-22T17:34:57Z -->
