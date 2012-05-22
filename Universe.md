@@ -37,7 +37,7 @@ Hybrid Kernel mit folgenden integrierten Treibern:
 - Standard Konsolen/Grafiktreiber
 
   
-Die Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Das System kann jedoch auch von Dateisystemen und Laufwerken gestartet werden, deren Treiber nicht direkt im Kernel verankert sind. Diese dienen lediglich dazu dem Kernel die Möglichkeit zu geben das System ohne "externe Treiber" zu nutzen und die Basisfunktionen des Kernels sicher zu gewährleisten. Die Funktionalitäten der Treiber (abgesehen der Funktionen des DMA Treibers) können auch von externen Treibern abgelöst werden. Als "extern" werden alle Treiber Bezeichnet die nicht im Kernel integriert sind und ihre Funktionen über den Treiberinterface oder direktes IPC zur Verfügung stellen.
+Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Das System kann jedoch auch von Dateisystemen und Laufwerken gestartet werden, deren Treiber nicht direkt im Kernel verankert sind. Diese dienen lediglich dazu dem Kernel die Möglichkeit zu geben das System ohne "externe Treiber" zu nutzen und die Basisfunktionen des Kernels sicher zu gewährleisten. Die Funktionalitäten der Treiber (abgesehen der Funktionen des DMA Treibers) können auch von externen Treibern abgelöst werden. Als "extern" werden alle Treiber Bezeichnet die nicht im Kernel integriert sind und ihre Funktionen über den Treiberinterface oder direktes IPC zur Verfügung stellen.
 
   
 
@@ -66,6 +66,6 @@ Voraussichtliches Realease: Juli 2012
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10603/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10604/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10603; parent 10602; 2012-05-22T17:34:57Z -->
+<!-- MediaWiki page 2498; revision 10604; parent 10603; 2012-05-22T17:36:05Z -->
