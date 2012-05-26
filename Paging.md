@@ -25,7 +25,7 @@ Beim i386 bildet ein *Page Directory* einen Speicherkontext ab. Dabei handelt es
 
 Die Page Table ist anschließend dafür zuständig, innerhalb „ihrer“ 4 MB die Zuordnung der einzelnen 4K-Pages vorzunehmen. Beim Zugriff auf die Adresse 0x456789 wird also zunächst festgestellt, dass die Pagetable für den Bereich 4 bis 8 MB zuständig ist (0x400000 sind 4 MB), und ihre Adresse im Page Directory nachgeschlagen. Anschließend wird innerhalb der Page Table nachgeschlagen, was die physische Adresse für die Bytes 0x56000 bis 0x56fff dieses 4-MB-Blocks ist. Angenommen, die Page Table ordnet diesen die physische Adresse 0xabcde000 zu, dann liegt der gesuchte Speicher an 0xabcde789.
 
-Wie die CPU aus einer virtuellen die zugeordnete physikalische Adresse brechnet, soll folgende Grafik zeigen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg" width="774" height="367" alt="Paging funktionsweise.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg)
+Wie die CPU aus einer virtuellen die zugeordnete physische Adresse berechnet, soll folgende Grafik zeigen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg" width="774" height="367" alt="Paging funktionsweise.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg)
 
 Das Berechnen erfolgt folgendermaßen:
 
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10607/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 10397; parent 9794; 2012-01-10T14:49:27Z -->
+<!-- MediaWiki page 1496; revision 10607; parent 10397; 2012-05-26T07:18:53Z -->
