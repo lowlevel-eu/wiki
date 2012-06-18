@@ -4,7 +4,7 @@
 | ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
-| Akt. Version: | 1.0<br>(Stand 01.12.2011) |
+| Akt. Version: | 1.1<br>(Stand 18.06.2012) |
 | Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
@@ -61,14 +61,15 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 #### USB
 
-- UHCI- und OHCI-Controller
+- UHCI-/OHCI-/EHCI- und experimentell auch xHCI-Controller
 - HID-Geräte: Tastatur, Maus und Grafiktablett
 - USB-Massenspeicher
+- USB-Soundkarte
 - Durchleitung von USB-Geräten des Hosts
 
 ## Aktueller Windows-Build
 
-Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeiten. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Eine einigermaßen aktuelle Version für Windows (git-Version von Anfang November 2009) liegt auf unserem Server: [\[1\]](http://lowlevel.brainsware.org/download/qemu-0.11.50-c988bfa.tar.bz2)
+Bereits seit einiger Zeit gibt es keine offiziellen Binärpakete von QEMU mehr, auch nicht für Windows. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Einigermaßen aktuelle inoffizielle Builds für Windows sind zum Beispiel auf <http://qemu.weilnetz.de/> zu finden.
 
 ## Siehe auch
 
@@ -77,11 +78,12 @@ Die letzten zumindest halboffiziellen Builds für Windows stammen aus 0.9.x-Zeit
 ## Weblinks
 
 - [QEMU Homepage](http://www.qemu.org)
+- [QEMU-Binaries für Windows](http://qemu.weilnetz.de/)
 - [QEMU unter Windows](http://www.h7.dion.ne.jp/~qemu-win)
 - [Einführung in QEMU](http://qemu-buch.de/de/index.php/Hauptseite)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10347; parent 10027; 2011-12-01T23:22:37Z -->
+<!-- MediaWiki page 1505; revision 10618; parent 10347; 2012-06-18T12:45:54Z -->
