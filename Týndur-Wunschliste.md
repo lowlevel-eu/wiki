@@ -16,15 +16,17 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - LostIOv2 als neues, kernelbasiertes virtuelles Dateisystem soll das bisherige LostIO, das im Userspace läuft, ablösen und sowohl eine sauberere Schnittstelle bereitstellen als auch die Performance verbessern
 - Portierung auf amd64
 - FPU-Unterstützung
+- Multithreading (mit oder ohne SMP)
 
 ## Allgemeines
 
-- Mehr Hardwareunterstützung
 - Shared Libraries
 - POSIX-kompatible Shell
 - libc:
   - fork/exec
 - Buildsystem überarbeiten (oder für Neulinge erklären)
+- servmgr in init integrieren
+- Automagisch Treiber für installierte PCI-Geräte laden
 
 ## Module
 
@@ -35,6 +37,10 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
   
 
 ## Treiber
+
+## Block
+
+- AHCI
 
 ### Netzwerk
 
@@ -61,7 +67,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - Mail-Client
 - git-Client
 - kirc
-  - Unterstuetzung fuer mehrere Channels
   - Irgendwie sinnvoll ein /ns identify erlauben
     - Geht das nicht mit */msg NickServ identify passwort*? --[Sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan") 18:18, 3. Apr. 2011 (CEST)
   - Hochscrollen
@@ -76,6 +81,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10620/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 9649; parent 9606; 2011-04-03T16:18:13Z -->
+<!-- MediaWiki page 1513; revision 10620; parent 9649; 2012-06-20T19:19:28Z -->
