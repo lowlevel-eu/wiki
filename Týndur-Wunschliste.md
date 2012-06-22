@@ -47,7 +47,7 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 - nVidia MCP67 \[10de:054c\]
 - Atheros AR8132 PCI-E Fast Ethernet Controller \[1969:1062\]
 - Realtek PCIe Gigabit Ethernet Family Controller \[10EC:8168\]
-- Broadcom Corporation NetXtreme BCM57765 Memory Card Reader \[14e4:16bc\]
+- Broadcom Corporation NetLink BCM57785 Gigabit Ethernet PCIe \[14e4:16b5\]
 
 ## Anwendungen
 
@@ -82,6 +82,6 @@ Hier bitte alle Wünsche für týndur (nach Möglichkeit sortiert nach Zielgebie
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10621/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10622/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1513/index.html)
 
-<!-- MediaWiki page 1513; revision 10621; parent 10620; 2012-06-22T19:39:28Z -->
+<!-- MediaWiki page 1513; revision 10622; parent 10621; 2012-06-22T19:40:42Z -->
