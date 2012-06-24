@@ -7,7 +7,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 |  |  |
 | Entwickler: | Tdotu |
 | Akt. Version: | 0.8 (in Entwicklung) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | UPL |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"),[x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid |
@@ -64,6 +64,6 @@ Voraussichtliches Realease: Juli 2012
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10624; parent 10623; 2012-06-24T19:07:41Z -->
+<!-- MediaWiki page 2498; revision 10625; parent 10624; 2012-06-24T19:46:38Z -->
