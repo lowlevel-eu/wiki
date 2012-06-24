@@ -1,6 +1,6 @@
 # Universe
 
-Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux und eventuell Windows Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne.
+Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne.
 
 | Universe |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,6 +64,6 @@ Voraussichtliches Realease: Juli 2012
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10623/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10624/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10623; parent 10608; 2012-06-23T20:48:20Z -->
+<!-- MediaWiki page 2498; revision 10624; parent 10623; 2012-06-24T19:07:41Z -->
