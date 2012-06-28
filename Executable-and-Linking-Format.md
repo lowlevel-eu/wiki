@@ -115,7 +115,7 @@ Für eine ausführbare ELF-Datei müsste hier ET_EXEC stehen.
 Wie oben bereits erwähnt, enthält dieses Element den Prozessor-Typ.
 
 | Name | Wert | Beschreibung |
-| ---------- | ------ | ---------------- |
+| ----------- | ------ | ---------------- |
 | EM_NONE | 0 | Kein Typ |
 | EM_M32 | 1 | AT&T WE 32100 |
 | EM_SPARC | 2 | SPARC |
@@ -124,6 +124,7 @@ Wie oben bereits erwähnt, enthält dieses Element den Prozessor-Typ.
 | EM_88K | 5 | Motorola 88000 |
 | EM_860 | 7 | Intel 80860 |
 | EM_MIPS | 8 | MIPS RS3000 |
+| EM_X86_64 | 62 | AMD64 |
 
 #### e_version
 
@@ -276,6 +277,6 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10626/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1528/index.html)
 
-<!-- MediaWiki page 1528; revision 9963; parent 9440; 2011-07-21T11:17:52Z -->
+<!-- MediaWiki page 1528; revision 10626; parent 9963; 2012-06-28T14:40:03Z -->
