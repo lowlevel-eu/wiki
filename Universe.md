@@ -64,6 +64,6 @@ Voraussichtliches Realease: Juli 2012
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10625/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10625; parent 10624; 2012-06-24T19:46:38Z -->
+<!-- MediaWiki page 2498; revision 10632; parent 10625; 2012-07-02T08:31:04Z -->
