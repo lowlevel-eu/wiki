@@ -14,7 +14,7 @@ Da im letzten Tutorial ([Protected Mode](https://github.com/lowlevel-eu/wiki/wik
 
 ## Booten
 
-Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader lädt eine binäre Datei aus dem Hauptverzeichnis einer Diskette, welche mit dem FAT12 [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
+Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader lädt eine binäre Datei aus dem Hauptverzeichnis einer Diskette, welche mit dem [FAT12](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "File Allocation Table") [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
 
   
 
@@ -280,6 +280,6 @@ Hier noch das Packet an Tools und Quelltexten: [ckernel.zip](http://lowlevel.bra
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10630/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1458/index.html)
 
-<!-- MediaWiki page 1458; revision 7051; parent 4451; 2010-02-09T16:54:45Z -->
+<!-- MediaWiki page 1458; revision 10630; parent 7051; 2012-07-02T08:20:10Z -->
