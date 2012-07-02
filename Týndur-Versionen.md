@@ -10,7 +10,7 @@ Die erste Version des Community-OS. Der Feature-Freeze für die Version war am 0
 - einfache Interprozesskommunikation
 - Treiber für [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"), [Diskettenlaufwerke](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC") und [Tastaturen](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC")
 - Einfache Textkonsolen
-- Unterstützung für das FAT12-Dateisystem ([LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO")-Treiber)
+- Unterstützung für das [FAT12](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "File Allocation Table")-Dateisystem ([LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO")-Treiber)
 - eine einfache Shell
 
   
@@ -70,6 +70,6 @@ Release am 25.12.2009
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2237/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10631/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2237/index.html)
 
-<!-- MediaWiki page 2237; revision 7746; parent 7744; 2010-06-12T13:12:09Z -->
+<!-- MediaWiki page 2237; revision 10631; parent 7746; 2012-07-02T08:21:28Z -->
