@@ -240,10 +240,10 @@ gelinkt wird's so:
 
 ## Weblinks
 
-- [Alles rund um die Sprache D](http://www.digitalmars.com/d)
+- [Offizielle Website der Sprache D](http://dlang.org/index.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10634/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 10634; parent 9463; 2012-07-10T16:09:07Z -->
+<!-- MediaWiki page 1863; revision 10635; parent 10634; 2012-07-10T16:09:34Z -->
