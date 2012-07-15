@@ -29,7 +29,7 @@ Der LFB ist wohl eine der wichtigsten Neuerungen mit VBE 2.0. Mithilfe dieser Fu
 Diese Funktion überprüft, ob die Grafikkarte VBE unterstützt und wenn ja, welche Version.
 
 - AX = 4F00h
-- SI:DI = Zeiger auf freien Speicher für den VBE Info Block (512 Bytes)
+- ES:DI = Zeiger auf freien Speicher für den VBE Info Block (512 Bytes)
 
 | Offset | Eintrag | Größe in Byte | Beschreibung |
 | -------- | ---------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -254,6 +254,6 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10648/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10649/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2303/index.html)
 
-<!-- MediaWiki page 2303; revision 10648; parent 9655; 2012-07-15T15:49:52Z -->
+<!-- MediaWiki page 2303; revision 10649; parent 10648; 2012-07-15T15:54:22Z -->
