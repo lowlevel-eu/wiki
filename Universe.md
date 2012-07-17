@@ -9,7 +9,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | Akt. Version: | 0.8 (in Entwicklung) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"),[x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"),[x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"),[ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C/C++ |
 | API: | nativ, [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
@@ -57,13 +57,8 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 - stdlibc
 - FASM
 
-  
-Das Kernel kann Multiprozessor Systeme nutzen, ist aber noch nicht für X64 optimiert.
-
-Voraussichtliches Realease: Juli 2012
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10632/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10632; parent 10625; 2012-07-02T08:31:04Z -->
+<!-- MediaWiki page 2498; revision 10650; parent 10632; 2012-07-17T12:54:53Z -->
