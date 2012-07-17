@@ -5,7 +5,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | Universe |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Tdotu |
+| Entwickler: | Universe Coding Group (UCG) aka. The developers of the Universe |
 | Akt. Version: | 0.8 (in Entwicklung) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
@@ -59,6 +59,6 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10650; parent 10632; 2012-07-17T12:54:53Z -->
+<!-- MediaWiki page 2498; revision 10651; parent 10650; 2012-07-17T12:55:59Z -->
