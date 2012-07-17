@@ -50,7 +50,9 @@ Man teilt Exceptions in drei Arten ein:
 | 0x11 | \#AC - [Alignment Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#alignment-check "Exception") | Fault | ja |
 | 0x12 | \#MC - [Machine Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#machine-check "Exception") | Abort | nein |
 | 0x13 | \#XF - [SIMD Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#simd-floating-point "Exception") | Fault | nein |
-| 0x14-0x1f | *Reserviert* | \- | \- |
+| 0x14-0x1d | *Reserviert* | \- | \- |
+| 0x1e | \#SX - Security-sensitive event in Host | \- | ja |
+| 0x1f | *Reserviert* | \- | \- |
 
 ## Nähere Erläuterung
 
@@ -168,6 +170,6 @@ Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9731/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 9731; parent 9377; 2011-05-02T15:52:35Z -->
+<!-- MediaWiki page 1824; revision 10652; parent 9731; 2012-07-17T16:00:15Z -->
