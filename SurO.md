@@ -1,13 +1,13 @@
 # SurO
 
 | SurO (ehemals SUR-Office) |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Sur3](https://lowlevel-eu.github.io/wiki/pages/2234/index.html "Benutzer:Sur3") |
 | Akt. Version: | 3,5b |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-nd 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/de/) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), geplant: [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64") und [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), geplant: [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64"), AVR und [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | \- |
@@ -65,6 +65,6 @@ Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10399/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 10399; parent 8980; 2012-01-12T09:41:53Z -->
+<!-- MediaWiki page 2233; revision 10663; parent 10399; 2012-08-09T22:45:08Z -->
