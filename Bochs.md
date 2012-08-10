@@ -1,14 +1,14 @@
 # Bochs
 
 | Allgemeines |  |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | Bochs |
 | Entwickler: | The Bochs Project |
 | Akt. Version: | 2.5.1 (06.01.2012) |
 | Lizenz: | LGPL |
 | Betriebssystem(e): | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), und andere |
 | Virtualisiertes System |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"),[ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") als Host |
 | SMP: | bis zu 8 Prozessoren |
 | Mechanismus: | vollständige Emulation |
 | Homepage |  |
@@ -42,6 +42,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10664/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 10385; parent 10348; 2012-01-07T03:27:31Z -->
+<!-- MediaWiki page 1538; revision 10664; parent 10385; 2012-08-10T13:24:17Z -->
