@@ -18,10 +18,10 @@ Nach dem Erstellen eines neuen Linux-Kernels muss zuerst der Befehl *lilo* ausge
 
 ## Weblinks
 
-- [LILO-Homepage](http://lilo.go.dyndns.org/)
+- [LILO-Homepage](http://lilo.alioth.debian.org/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10004/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1776/index.html)
 
-<!-- MediaWiki page 1776; revision 10004; parent 5047; 2011-07-28T21:16:35Z -->
+<!-- MediaWiki page 1776; revision 10676; parent 10004; 2012-08-15T17:00:38Z -->
