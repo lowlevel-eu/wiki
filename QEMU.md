@@ -71,6 +71,32 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 Bereits seit einiger Zeit gibt es keine offiziellen Binärpakete von QEMU mehr, auch nicht für Windows. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Einigermaßen aktuelle inoffizielle Builds für Windows sind zum Beispiel auf <http://qemu.weilnetz.de/> zu finden.
 
+## QEMU unter Windows kompilieren
+
+Um QEMU unter Windows zu kompilieren, werden MinGW und eine Reihe Bibliotheken, die man sich selbst zusammensuchen muss, benötigt:
+
+- MinGW über den Installer *mingw-get-inst* von <http://sourceforge.net/projects/mingw/> installieren.
+- zlib kann anschließend mittels `mingw-get install libz` installiert werden.
+- Die aktuelle Version von Python 2.7.x kann von <http://www.python.org/download/> heruntergeladen werden. Für das Kompilieren von QEMU sollte Python zumindest vorübergehend mittels z. B. `SET PATH=C:\Python27;%PATH%` in den Suchpfad eingetragen werden.
+- Von <http://www.gtk.org/download/win32.php> die Pakete für GLib und Abhängigkeiten herunterladen und im MinGW-Ordner entpacken:
+  1.  pkg-config ("Run-time")
+  2.  gettext-runtime ("Run-time")
+  3.  GLib ("Run-time" und "Dev")
+- Die SDL Development Libraries (SDL-devel-1.2.\*-mingw32.tar.gz) von <http://www.libsdl.org/download-1.2.php> herunterladen und in einem beliebigen Verzeichnis entpacken. In diesem Ordner `make native` ausführen, um SDL im MinGW-Ordner zu installieren.
+
+Anschließend kann QEMU wie üblich konfiguriert und gebaut werden:
+
+    sh configure --target-list=x86_64-softmmu --prefix=D:/installations/pfad/fuer/qemu
+    make
+    make install
+
+Das baut ein QEMU, das für die Emulation von x86-PCs (32-/64-Bit) verwendet werden kann. Wenn der Parameter `--target-list` weggelassen wird, wird QEMU für alle Architekturen gebaut, was unter Umständen relativ lange dauert. Für eine Auflistung der unterstützten Architekturen `sh configure --help` ausführen.
+
+Hinweise:
+
+- Wenn man `--prefix` beim `configure` weglässt, wird QEMU in den Programmordner (z. B. C:\Program Files\Qemu) installiert. Dann sind für `make install` Administratorrechte erforderlich, das heißt die Eingabeaufforderung muss für diesen Vorgang als Administrator gestartet werden.
+- QEMU gibt unter Windows nur dann etwas auf der Konsole aus, wenn die Umgebungsvariable `SDL_STDIO_REDIRECT` auf `0` gesetzt ist. Deswegen könnte es sinnvoll sein eine Batch-Datei anzulegen, die `SET SDL_STDIO_REDIRECT=0` ausführt.
+
 ## Siehe auch
 
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging")
@@ -84,6 +110,6 @@ Bereits seit einiger Zeit gibt es keine offiziellen Binärpakete von QEMU mehr, 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10618/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10679/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10618; parent 10347; 2012-06-18T12:45:54Z -->
+<!-- MediaWiki page 1505; revision 10679; parent 10618; 2012-08-16T19:15:23Z -->
