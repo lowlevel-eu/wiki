@@ -47,7 +47,7 @@ Das kann man beim Freigeben natürlich analog implementieren und Speicherseiten,
 o Das Freigeben einer Speicherseite ist in konstanter Zeit möglich. (konstante Komplexität)  
 - Das Allozieren physisch kontinuierlicher Speicherseiten ist unmöglich.  
 
-## verkette Liste
+## Verkettete Liste
 
 Die Elemente der Liste sind dabei (freie, physisch zusammenhängende) Speicherbereiche, d.h. Zeiger auf den Beginn des Speicherbereichs und Länge des Speicherbereichs. Diese Liste benötigt allerdings ein malloc/free, um Speicher für die Listenelemente zu allozieren, d.h. diese Art der Speicherverwaltung kann nur für einen Teil des Speichers genutzt werden.
 
@@ -103,6 +103,6 @@ Anschließend sollte man nicht vergessen, weitere Bereiche als reserviert zu mar
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9425/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10680/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1843/index.html)
 
-<!-- MediaWiki page 1843; revision 9425; parent 6813; 2011-02-04T21:35:03Z -->
+<!-- MediaWiki page 1843; revision 10680; parent 9425; 2012-08-17T23:08:32Z -->
