@@ -8,10 +8,10 @@ Die FPU des [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") - Prozesso
 
 Heute ist die FPU, wie bereits erwähnt, fest im Prozessor eingebaut, weshalb man sich auch darauf verlassen kann, dass die entsprechenden FPU - Befehle auch wirklich unterstützt werden.
 
-Neben den mathematischen Befehlen, die den ursprünglichen Zweck der FPU darstellen, kann man auf der x87 - FPU auch sog. [MultiMedia Extensions](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") ausführen. Allerdings sollte man sich vorher überlegen, ab welchem Prozessor man sein OS unterstützen will, denn Intel empfiehlt heute, anstatt der langsameren [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") - Befehle, die auf der FPU ausgeführt werden, die performanteren [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") - Befehle zu verwenden, die direkt vom Hauptprozessor abgearbeitet werden.
+Neben den mathematischen Befehlen, die den ursprünglichen Zweck der FPU darstellen, kann man auf der x87 - FPU auch sog. [MultiMedia Extensions](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") ausführen (die Register MM0 bis MM7 entsprechen den 80 Bit breiten FPU - Registern, wobei 16 Bits reserviert sind (man hat also nur 64 - Bit - Register zur Verfügung)). Allerdings sollte man sich vorher überlegen, ab welchem Prozessor man sein OS unterstützen will, denn Intel empfiehlt heute, anstatt der langsameren [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") - Befehle die performanteren [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") - Befehle zu verwenden, die direkt vom Hauptprozessor abgearbeitet werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10687/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10689/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
 
-<!-- MediaWiki page 2587; revision 10687; parent 0; 2012-08-19T16:43:59Z -->
+<!-- MediaWiki page 2587; revision 10689; parent 10687; 2012-08-19T16:52:11Z -->
