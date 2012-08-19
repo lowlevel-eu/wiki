@@ -4,14 +4,49 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Die FPU des [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") - Prozessors nennt sich x87 und ist heute fest im Prozessor eingebaut. In den Anfangsjahren des x86ers war die FPU noch ein externer Chip, der auf dem Mainboard aufgelötet wurde, und nicht jeder x86 - Nutzer konnte eine FPU sein Eigen nennen.
+Die [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU") des [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") - Prozessors nennt sich x87 und ist heute fest im Prozessor eingebaut. In den Anfangsjahren des x86ers war die FPU noch ein externer Chip, der auf dem Mainboard aufgelötet wurde, und nicht jeder x86 - Nutzer konnte eine FPU sein Eigen nennen.
 
 Heute ist die FPU, wie bereits erwähnt, fest im Prozessor eingebaut, weshalb man sich auch darauf verlassen kann, dass die entsprechenden FPU - Befehle auch wirklich unterstützt werden.
 
 Neben den mathematischen Befehlen, die den ursprünglichen Zweck der FPU darstellen, kann man auf der x87 - FPU auch sog. [MultiMedia Extensions](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") ausführen (die Register MM0 bis MM7 entsprechen den 80 Bit breiten FPU - Registern, wobei 16 Bits reserviert sind (man hat also nur 64 - Bit - Register zur Verfügung)). Allerdings sollte man sich vorher überlegen, ab welchem Prozessor man sein OS unterstützen will, denn Intel empfiehlt heute, anstatt der langsameren [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") - Befehle die performanteren [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") - Befehle zu verwenden, die direkt vom Hauptprozessor abgearbeitet werden.
 
+  
+
+## Aufbau
+
+Der mathematische Koprozessor des [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") - Prozessors verfügt über acht 80 - Bit - [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register"), die von ST(0) bis ST(7) angesprochen werden können. Sie werden allerdings, anders als etwa die [Allzweckregister](https://github.com/lowlevel-eu/wiki/wiki/X86#allzweckregister "X86"), wie ein Stack organisiert, d. h. ein gepushter Wert gelangt ins Register ST(0) und alle bisherigen Werte rutschen eins nach oben, also ST(1) nach ST(2), ST(2) nach ST(3) usw. et vice versa. Viele Befehle verarbeiten ST(0) und ST(1) und geben den Rückgabewert dann in ST(0) zurück.
+
+Die ersten 64 Bits in einem ST(x) - Register stellen dabei die Mantisse, also die Basis, dar, während der Rest den Exponenten darstellt, der übrigens sowohl positiv als auch negativ sein kann. Der tatsächliche Wert wird dann mit "Mantisse mal zwei hoch Exponent" berechnet.
+
+  
+Abgesehen davon gibt es noch einige weitere Register:
+
+- Control - Word - Register
+- Status - Word - Register
+- Instruction - und Data - Pointer
+- Opcode - Register
+- Tag - Word - Register
+
+Die Register (außer Tag - Word) haben vor allem zwei Bedeutungen:
+
+- Exception Handling, wenn auf der FPU ein Fehler aufgetreten ist
+- Sie stellen eine Art Flags dar mit Einstellungsmöglichkeiten z. B. zur Genauigkeit oder zur Rundungsmethode
+
+Das Tag - Word - Register stellt Informationen zu den einzelnen ST(x) - Registern bereit. Es ist 16 Bits lang und bietet somit 2 Bits pro Register (die ersten zwei für ST(0) etc.):
+
+- 0b00: Der Wert im Register ist irgend ein gültiger Wert außer Null.
+- 0b01: Der Wert im Register ist gültig und gleich Null.
+- 0b10: Der Wert im Register ist ein spezieller Wert, z. B. unendlich.
+- 0b11: Es ist kein Wert im Register vorhanden; Das Register ist leer. Dieser Fall tritt beispielsweise auf, wenn man vor der Benutzung irgendwelcher FPU - Befehle, die auf den Stack zugreifen, ein ST(x) - Register betrachtet. Der Wert ist nicht definiert.
+
+  
+
+## Befehle
+
+Hier werden nur die mathematischen Befehle erläutert. Für die MMX - Befehle, die die FPU - Register nutzen, gibt es [hier](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") einen eigenen Artikel.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10689/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
 
-<!-- MediaWiki page 2587; revision 10689; parent 10687; 2012-08-19T16:52:11Z -->
+<!-- MediaWiki page 2587; revision 10691; parent 10689; 2012-08-19T17:31:18Z -->
