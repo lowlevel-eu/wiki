@@ -1,6 +1,6 @@
 # Streaming SIMD Extensions
 
-Die Streaming SIMD Extensions (oder kurz SSE genannt), ist ein eine Befehlserweiterung für die x86-Architektur, die Intel mit dem Pentium III eingeführt hat. SSE stellt neue 128-Bit-Register zur Verfügung, welche oft zum verrechnen von vierdimensionalen Vektoren genutzt werden, wohingegen MMX die vorhandenen FPU-Register nutzt. Wie auch MMX folgt SSE dem SIMD-Prinzip: Single Instruction, Multiple Data.
+Die Streaming SIMD Extensions (oder kurz SSE genannt), ist ein eine Befehlserweiterung für die x86-Architektur, die Intel mit dem Pentium III eingeführt hat. SSE stellt neue 128-Bit-Register zur Verfügung, welche oft zum Verrechnen von vierdimensionalen Vektoren genutzt werden, wohingegen MMX die vorhandenen FPU-Register nutzt (Seit SSE2 können allerdings alle MMX-Befehle auch auf den SSE-Registern ausgeführt werden). Wie auch MMX folgt SSE dem SIMD-Prinzip: Single Instruction, Multiple Data.
 
 ## Unterstützung feststellen
 
@@ -79,6 +79,6 @@ Hinweis: Das zuerst angegebene Register enthält das Ergebnis.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9998/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10696/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
 
-<!-- MediaWiki page 2199; revision 9998; parent 8204; 2011-07-28T21:10:44Z -->
+<!-- MediaWiki page 2199; revision 10696; parent 9998; 2012-08-19T19:30:22Z -->
