@@ -1,5 +1,17 @@
 # Java
 
+| Allgemeines |  |
+| -------------------------------- | ------------------------------------------------------------------------------------ |
+| Name: | Java |
+| Inlineassembler: | Nein |
+| Compiler: | JDK, [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") |
+| Spracheneigenschaften |  |
+| Plattformen: | Alle |
+| Beispielkernel in der Sprache: | \- |
+| Homepage |  |
+
+[JavaSE](http://www.oracle.com/technetwork/java/javase/overview/index.html)
+
 Java ist eine objektorientierte [Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"), die von Sun Microsystems entwickelt wurde (seit dem Aufkauf von Sun durch Oracle 2010 wird Java von Oracle weiterentwickelt).
 
 Java zeichnet sich insbesondere dadurch aus, dass Java - Compiler keine Maschinensprache erzeugen (abgesehen von dem Java - Compiler GCJ aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und einigen weiteren, die das durchaus beherrschen), sondern sogenannten Bytecode, der nicht direkt vom Prozessor ausgeführt wird, sondern vom **Java Runtime Environment** (JRE).
@@ -30,6 +42,6 @@ TODO...
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10683/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
 
-<!-- MediaWiki page 2585; revision 10683; parent 10682; 2012-08-19T13:35:08Z -->
+<!-- MediaWiki page 2585; revision 10685; parent 10683; 2012-08-19T16:18:02Z -->
