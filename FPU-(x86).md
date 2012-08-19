@@ -45,8 +45,18 @@ Das Tag - Word - Register stellt Informationen zu den einzelnen ST(x) - Register
 
 Hier werden nur die mathematischen Befehle erläutert. Für die MMX - Befehle, die die FPU - Register nutzen, gibt es [hier](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") einen eigenen Artikel.
 
+Die Befehle werden hier in Intel - Assembler - Syntax angegeben.
+
+### Schiebeoperationen
+
+#### fild
+
+Der Befehl fild lädt die angegebene Ganzzahl auf den Stack (ST(0)).
+
+\<asm\> fild eax ;Lädt das eax - Register in ST(0). Der ursprüngliche Wert wird nach ST(1) verschoben etc. \</asm\>
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10691/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
 
-<!-- MediaWiki page 2587; revision 10691; parent 10689; 2012-08-19T17:31:18Z -->
+<!-- MediaWiki page 2587; revision 10692; parent 10691; 2012-08-19T17:40:49Z -->
