@@ -1,10 +1,10 @@
 # Bgos
 
-| ![logo.png](http://www.pics-upload.de/upload/67184/logo.png) Basic Graphic Operating System |  |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ![rj4hy9oe.png](http://s1.directupload.net/images/120819/temp/rj4hy9oe.png) Basic Graphic Operating System<br> |  |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 |  |  |
 | Entwickler: | Ulrich Geis |
-| Akt. Version: | 3.0 stable |
+| Akt. Version: | 5.0 beta |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-[BGOS (z.Z. Wartungsarbeiten](http://www.bgos.de.vu)
+[BGOS](http://www.beepsoft.de)
 
 BGOS ist ein kommerzielles, privat entwickeltes Betriebssystem für IBM kompatible Rechner. Das Betriebssystem ist auf einfache Bedienung und sparsamen Ressourcenverbrauch ausgelegt.
 
@@ -30,7 +30,7 @@ Wie der Name des Betriebssystems, Basic Graphic Operating System (BGOS), deutlic
 ### Systemanforderungen
 
 - Diskettenlaufwerk
-- 64KB RAM
+- 640KB RAM
 - 8086 kompatibler Prozessor
 - Tastatur
 - VGA Bildschirm
@@ -43,14 +43,16 @@ Wie der Name des Betriebssystems, Basic Graphic Operating System (BGOS), deutlic
 - RAM Manager
 - deutscher Tastaturtreiber
 - Datenübertragung per RS232 und HayesModem
-- eigene Programmiersprache
-- eigenes Dateisystem
+- eigenes Dateisystem zu FAT kompatibel
 - Textverarbeitung
 - Drucktreiber
 - Systemdiagnose Disk
-- weitere integrierte Programme
-
-  
+- Bildbetrachter
+- Audioplayer
+- viele weitere integrierte Programme
+- Möglichkeit externe Programme zu nutzen.
+- Cursorsteuerung
+- eigener Schriftsatz
 
   
 
@@ -58,17 +60,25 @@ Wie der Name des Betriebssystems, Basic Graphic Operating System (BGOS), deutlic
 
 ### GUI
 
-Ab V.3.00 bietet das BGOS eine GUI mit VGA Grafik. Jeder Hauptfunktion des Systems ist ein Icon zugeordnet, dass über ein Auswahlmenü per Tastatur angewählt werden kann. Die Programme des Systems sind textbasiert.
+Jeder Hauptfunktion des Systems ist ein Icon zugeordnet. Diese kann über den Cursor angewählt werden.
+
+  
 
 ### Dateisystem
 
-Das systemeigene Dateisystem unterstützt Dateinamen mit bis zu 8 Zeichen Länge. Das System unterscheidet nicht zwischen Dateitypen. Die Dateien können mit dem Textverarbeitungsprogramm bearbeitet werden. Ein eingebauter Player interpretiert die Dateien je nach Auswahl als Bild, Ton oder Lichtsignal
+Das systemeigene Dateisystem unterstützt Dateinamen mit bis zu 8 Zeichen Länge. Das Dateisystem ist zu FAT kompatibel.
 
   
 
 ### Editor
 
-Das systemeigene Dateisystem unterstützt Dateinamen mit bis zu 8 Zeichen Länge. Das System unterscheidet nicht zwischen Dateitypen. Die Dateien können mit dem Textverarbeitungsprogramm bearbeitet werden. Ein eingebauter Player interpretiert die Dateien je nach Auswahl als Bild, Ton oder Lichtsignal
+Das systemeigene Dateisystem unterstützt Dateinamen mit bis zu 8 Zeichen Länge.
+
+### API
+
+Die BGOS API liefert 26 Funktionien, die über den INT 26h angesprochen werden können. Darunter befindet sich eine Funktion zur Nutzung des Schriftsatz, eine Funktion zur Einbindung der Cursorsteuerung u.v.m.
+
+  
 
 ## Lizenz
 
@@ -76,10 +86,10 @@ Die neuste Version des BGOS wird kommerziell vertrieben. Alle Vorgängerversione
 
 ## Screenshots
 
-![gui.png](http://www.pics-upload.de/upload/36019/gui.png) ![tx.png](http://www.pics-upload.de/upload/12857/tx.png) ![bild.png](http://www.pics-upload.de/upload/69506/bild.png)
+![l9xniruk.png](http://s7.directupload.net/images/120819/l9xniruk.png) ![x5eyslxl.png](http://s7.directupload.net/images/120819/x5eyslxl.png)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2461/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10684/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2461/index.html)
 
-<!-- MediaWiki page 2461; revision 10028; parent 0; 2011-08-14T13:49:48Z -->
+<!-- MediaWiki page 2461; revision 10684; parent 10028; 2012-08-19T15:12:27Z -->
