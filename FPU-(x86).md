@@ -55,8 +55,36 @@ Der Befehl fild lädt die angegebene Ganzzahl auf den Stack (ST(0)).
 
 \<asm\> fild eax ;Lädt das eax - Register in ST(0). Der ursprüngliche Wert wird nach ST(1) verschoben etc. \</asm\>
 
+#### fld
+
+Wie fild, allerdings mit reellen Zahlen.
+
+\<asm\> zahl dd 3.1415926536 fld zahl ;Pi ist jetzt in ST(0). \</asm\>
+
+### Rechenoperationen
+
+#### fadd
+
+Führt eine Addition durch. Folgende Muster werden unterstützt: \<asm\>
+
+Ohne Operandangabe  
+
+fadd ;ST(0) + ST(1), Ergebnis in ST(0)
+
+1 Operand angegeben  
+
+fadd memvar ;memvar + ST(0), Ergebnis in ST(0)
+
+2 Operanden angegeben (beide Operanden sind FPU - Register, eins davon muss ST(0) sein)
+
+fadd ST(5), ST(0) ;ST(5) + ST(0), Ergebnis in ST(0) \</asm\>
+
+#### fmul
+
+Führt eine Multiplikation durch. Die möglichen Muster entsprechen denen bei fadd.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10692/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
 
-<!-- MediaWiki page 2587; revision 10692; parent 10691; 2012-08-19T17:40:49Z -->
+<!-- MediaWiki page 2587; revision 10716; parent 10692; 2012-08-20T13:55:45Z -->
