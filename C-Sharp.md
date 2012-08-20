@@ -36,7 +36,7 @@ Sie sind beide sowohl auf Windows als auch auf Linux verfügbar sowie auf einige
 
 Das bekannteste Beispiel für ein in C# programmiertes OS ist [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"), das von Microsoft entwickelt wird und als Open Source-Projekt kostenlos erhältlich ist. Es ist, genau genommen, in einem C#-Dialekt namens Sing# programmiert und zwingt alle Anwendungsprogrammierer dazu, ebenfalls in dieser Sprache zu programmieren, damit Programme nicht mehr abstürzen können, da in Sing# bestimmte Mechanismen dies verhindern sollen.
 
-Weitere, eher unbekanntere Projekte sind Geis OS sowie [Cosmos](https://github.com/lowlevel-eu/wiki/wiki/Cosmos "Cosmos").
+Ein weiteres Projekt ist [Cosmos](https://github.com/lowlevel-eu/wiki/wiki/Cosmos "Cosmos"), welches in C# mit Hilfe des .NET Micro-Frameworks geschrieben wurde. Es ist nicht nur ein eigenständiges Betriebssystem sondern dient auch als Framework, auf welchem andere Betriebssysteme aufbauen können.
 
   
 
@@ -46,6 +46,6 @@ Weitere, eher unbekanntere Projekte sind Geis OS sowie [Cosmos](https://github.c
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10709/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10710/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2589/index.html)
 
-<!-- MediaWiki page 2589; revision 10709; parent 10706; 2012-08-20T12:07:57Z -->
+<!-- MediaWiki page 2589; revision 10710; parent 10709; 2012-08-20T12:14:58Z -->
