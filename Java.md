@@ -40,8 +40,12 @@ Beispielsweise bräuchte man eine Java - Datei, die den Kernel enthält, eine C 
 
 TODO...
 
+## bekannte Projekte
+
+Ein Betriebssystem, das auf Java basiert, nennt sich JOS (Java Operating System) und ist unter [\[1\]](http://jos.sourceforge.net/) zu finden.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10685/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10702/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
 
-<!-- MediaWiki page 2585; revision 10685; parent 10683; 2012-08-19T16:18:02Z -->
+<!-- MediaWiki page 2585; revision 10702; parent 10685; 2012-08-20T10:19:52Z -->
