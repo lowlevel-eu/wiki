@@ -19,6 +19,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"): Der Beispielcode ist unvollständig
   - Was genau fehlt denn da? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
+    - Habe den Code nun entfernt, da dieser ohne die restlichen Teile imo nicht sinnvoll ist. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:08, 20. Aug. 2012 (CEST)
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"): Beschreibung wie die Headerflags 2 und 16 zu verwenden sind
   - Wenn ELF verwendet wird, lassen sich die Informationen viel besser aus dem ELF header auslesen. Die FLAG\[2\] und FLAG\[16\] Informationen werden deshalb eigentlich nur bei Kerneln im a.out Format benötigt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 12:19, 18. Dez. 2011 (CET)
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -129,6 +130,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10601/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10700/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10601; parent 10600; 2012-05-21T16:08:47Z -->
+<!-- MediaWiki page 1518; revision 10700; parent 10601; 2012-08-20T10:08:51Z -->
