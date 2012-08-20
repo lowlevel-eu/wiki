@@ -149,42 +149,15 @@ Das Requestregister wird verwendet, um einen Transfer manuell per Software auszu
 |  | 1 = Request; das ist das, was wohl in allen Fällen gewollt ist. |
 | 3-7 | ungenutzt, sollte null sein |
 
-### Beispielcode
+  
 
-Folgende Funktion bereitet eine Übertragung vor: \<c\>
+## Weblinks
 
-1.  define CHANNEL_ADRESS 0x04
-2.  define CHANNEL_COUNTER 0x05
-3.  define CHANNEL_PAGE 0x81
-
-VOID dma_begin_transfer(VOID\* buffer, WORD size, BOOL write) {
-
-     BYTE page   = (DWORD) buffer >> 16;
-     WORD offset = (DWORD) buffer - (page<<16);
-     size--;
-
-     mask_channel(2);
-
-     clear_flip_flop();
-     outb(CHANNEL_COUNTER, size);
-     outb(CHANNEL_COUNTER, size>>8);
-     
-     clear_flip_flop();
-     outb(CHANNEL_ADRESS, offset & 0xFF);
-     outb(CHANNEL_ADRESS, offset>>8);
-     outb(CHANNEL_PAGE,    page);  
-
-     if (write)
-       outb(DMA_MODE, MODE_MASK_CHANNEL2 | MODE_MASK_TRANSFER_WRITE | MODE_MASK_MODE_SINGLE); // | MODE_MASK_AUTO);
-     else
-       outb(DMA_MODE, MODE_MASK_CHANNEL2 | MODE_MASK_TRANSFER_READ | MODE_MASK_MODE_SINGLE); // | MODE_MASK_AUTO);
-
-     unmask_channel(2);
-
-} \</c\>
+- [DMA-Artikel in der englischen Wikipedia](http://en.wikipedia.org/wiki/Direct_memory_access)
+- [DMA anhand des Linux-Kernels erklärt](http://www.oreilly.de/german/freebooks/linuxdrive2ger/memdma.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9979/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10699/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1555/index.html)
 
-<!-- MediaWiki page 1555; revision 9979; parent 9465; 2011-07-25T14:58:59Z -->
+<!-- MediaWiki page 1555; revision 10699; parent 9979; 2012-08-20T10:08:12Z -->
