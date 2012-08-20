@@ -83,8 +83,16 @@ fadd ST(5), ST(0) ;ST(5) + ST(0), Ergebnis in ST(0) \</asm\>
 
 Führt eine Multiplikation durch. Die möglichen Muster entsprechen denen bei fadd.
 
+#### fsub
+
+Führt eine Subtraktion durch. Die möglichen Muster entsprechen denen bei fadd und fmul. Hier ist zu beachten, dass
+
+- bei keinem angegebenen Operanden ST(1) von ST(0) subtrahiert wird (und nicht umgekehrt).
+- bei einem angegebenen Operanden der Operand von ST(0) subtrahiert wird.
+- bei zwei angegebenen Operanden der zweite Operand vom ersten subtrahiert wird. Dieser kann sowohl ST(0) als auch ein anderes ST(x) - Register sein (Aufrufkonvention bei fadd beachten!).
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10716/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
 
-<!-- MediaWiki page 2587; revision 10716; parent 10692; 2012-08-20T13:55:45Z -->
+<!-- MediaWiki page 2587; revision 10717; parent 10716; 2012-08-20T14:02:08Z -->
