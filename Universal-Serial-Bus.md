@@ -1091,7 +1091,7 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 | Asynchron | Asynchronous |
 | Datenphase | Data stage |
 | Endpunkt | Endpoint |
-| Flusskontrolle | Flow controls |
+| Flusskontrolle | Flow control |
 | Konfiguration | Configuration |
 | Periodisch | Periodic |
 | Setupphase | Setup stage |
@@ -1122,6 +1122,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 10736; parent 10735; 2012-08-21T14:10:16Z -->
+<!-- MediaWiki page 1690; revision 10737; parent 10736; 2012-08-21T14:12:40Z -->
