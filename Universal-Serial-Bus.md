@@ -117,7 +117,7 @@ Eine besondere Rolle spielt die *Default Control Pipe*, die zur Konfiguration de
 
 ## Elektrische Hintergründe
 
-![Usb_kabel_beschriftet.jpg](http://upload.wikimedia.org/wikipedia/de/a/a7/Usb_kabel_beschriftet.jpg)
+![Usb_kabel_beschriftet.jpg](http://upload.wikimedia.org/wikipedia/commons/a/a7/Usb_kabel_beschriftet.jpg)
 
 ------------------------------------------------------------------------
 
@@ -1122,6 +1122,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10400/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 10400; parent 9653; 2012-01-17T20:09:20Z -->
+<!-- MediaWiki page 1690; revision 10733; parent 10400; 2012-08-21T13:55:52Z -->
