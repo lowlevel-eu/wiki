@@ -621,7 +621,7 @@ Hier nochmal die Zusammenfassung eines Controltransfers:
 
 | Phase | Pakettyp | Bedeutung |
 | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Setup | SETUP | Hier wird ein 8 Byte langes SETUP-Paket zum Gerät gesendet, dessen Aufbau für alle Controltransfers einheitlich ist und u. a. die Länge und Richtung des Transfers angibt. Unterstützt das Gerät die Funktion nicht, kann sie hier bereits ein STALL zurückgeben. Für das SETUP-Paket wird immer DATA0 verwendet. |
+| Setup | SETUP | Hier wird ein 8 Byte langes SETUP-Paket zum Gerät gesendet, dessen Aufbau für alle Controltransfers einheitlich ist und u. a. die Länge und Richtung des Transfers angibt. Unterstützt das Gerät die Funktion nicht, kann es hier bereits ein STALL zurückgeben. Für das SETUP-Paket wird immer DATA0 verwendet. |
 | Daten | IN/OUT | Je nach in der Setupphase angegebenen Richtung werden nun Daten ein- oder ausgegeben. Ist die Länge der Datenphase im SETUP-Paket als 0 angegeben worden, existiert diese Phase nicht. Das erste Datenpaket der Datenphase ist immer DATA1, da das Toggle-Bit beim SETUP-Paket auf 0 gesetzt war. |
 | Status | OUT/IN | Umgekehrt zur in der Datenphase verwendeten Richtung (oder der Richtung, die verwendet worden wäre, wenn es keine Datenphase gab) wird nun ein IN- bzw. OUT-Paket gesendet. Dies dient als nochmalige Versicherung, dass das Gerät die Anfrage auch verstanden und verarbeitet hat. In der Statusphase wird immer DATA1 eingesetzt. |
 
@@ -1122,6 +1122,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10735/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10736/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 10735; parent 10734; 2012-08-21T14:05:11Z -->
+<!-- MediaWiki page 1690; revision 10736; parent 10735; 2012-08-21T14:10:16Z -->
