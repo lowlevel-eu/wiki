@@ -17,9 +17,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 ## Erweitern
 
-- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"): Der Beispielcode ist unvollständig
-  - Was genau fehlt denn da? --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
-    - Habe den Code nun entfernt, da dieser ohne die restlichen Teile imo nicht sinnvoll ist. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 12:08, 20. Aug. 2012 (CEST)
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"): Beschreibung wie die Headerflags 2 und 16 zu verwenden sind
   - Wenn ELF verwendet wird, lassen sich die Informationen viel besser aus dem ELF header auslesen. Die FLAG\[2\] und FLAG\[16\] Informationen werden deshalb eigentlich nur bei Kerneln im a.out Format benötigt. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 12:19, 18. Dez. 2011 (CET)
 - ~~[ISA](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture "ISA") Der vollständigkeit halber PnP beschreiben.~~
@@ -27,8 +24,6 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
   - Hab ich auf der Diskussionsseite zu ISA nicht klar erklärt warum es in heutigen PCs (der letzten \>10 Jahre) kein ISA-PnP mehr gibt? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:43, 4. Okt. 2010 (CEST)
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
 - [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. - aber noch in diesem Jahr --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
-- [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") - Artikel erweitern - wie funktioniert der Kernel etc. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
-  - Finde ich vom Inhalt her ausreichend --[DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") 04:10, 13. Okt. 2010 (CEST)
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - [APM](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "APM")
 - [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
@@ -67,6 +62,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 - [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660") - Scheint ganz unten etwas zu fehlen.
 - [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"): Zu einem richtigen Artikel ausbauen und anschließend den Interwiki-Link von osdev.org zu uns setzen
 - [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") ist eine ziemliche Tabellenwüste. Ich würde mir eine Erklärung wünschen, wofür jeder der drei Typen gut ist, und wie man grob vorgeht, um ein Programm (ggf. mit Shared Libs) zu starten oder ein Kernelmodul zu laden.
+  - Ist indem Tutorial in der Linkliste an und für sich gut dargestellt --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:38, 21. Aug. 2012 (CEST)
 - [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging"):
   - Stacktrace erwähnen/erklären, vllt. mit Beispielcode
   - Tricks und Kniffe von [\[1\]](http://wiki.osdev.org/Troubleshooting) übernehmen - vorallem sowas wie \_\_LINE\_\_, \_\_FILE\_\_ für Debugausgaben wären da wichtig.
@@ -130,6 +126,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10700/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10700; parent 10601; 2012-08-20T10:08:51Z -->
+<!-- MediaWiki page 1518; revision 10732; parent 10700; 2012-08-21T09:38:36Z -->
