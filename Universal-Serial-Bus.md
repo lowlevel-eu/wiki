@@ -569,9 +569,9 @@ Es gibt für die verschiedenen Transferarten verschiedene Regeln, wann das Toggl
 
 ###### Isochronous
 
-Bei Isochronoustransfers wird das Toggle-Bit nicht wie hier beschrieben verwendet, stattdessen wird bei normalen Isochronoustransfers immer DATA0 verwenden und bei solche mit hoher Bandbreite, also mehreren Paketen pro Microframe (bei Full-Speed-Isochronous wird nur DATA0 verwendet), wird das Bit bei Beginn jedes Microframes gewissermaßen zurückgesetzt.
+Bei Isochronoustransfers wird das Toggle-Bit nicht wie hier beschrieben verwendet, stattdessen wird bei normalen Isochronoustransfers immer DATA0 verwendet und bei solchen mit hoher Bandbreite, also mehreren Paketen pro Microframe (bei Full-Speed-Isochronous wird nur DATA0 verwendet), wird das Bit bei Beginn jedes Microframes gewissermaßen zurückgesetzt.
 
-Bei IN-Transfers wird bei einem Paket pro Microframe nur DATA0 verwendet, bei zweiem kommt zuerst DATA1, dann DATA0 und bei dreien sendet das Gerät am zuerst DATA2, dann DATA1 und zuletzt DATA0.
+Bei IN-Transfers wird bei einem Paket pro Microframe nur DATA0 verwendet, bei zweien kommt zuerst DATA1, dann DATA0 und bei dreien sendet das Gerät zuerst DATA2, dann DATA1 und zuletzt DATA0.
 
 Bei OUT-Transfers zeigt ein MDATA-Paket an, dass im aktuellen Microframe noch ein Paket folgt und der Typ des letzten DATA-Pakets gibt dann an, wie viele MDATA-Pakete gesendet wurden. So wird bei einem Paket pro Microframe nur DATA0 verwendet, bei zweien ergibt sich zuerst MDATA, dann DATA1 und bei dreien gibt es zuerst zwei MDATA-Pakete und zuletzt ein DATA2-Paket.
 
@@ -1122,6 +1122,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10733/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10734/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 10733; parent 10400; 2012-08-21T13:55:52Z -->
+<!-- MediaWiki page 1690; revision 10734; parent 10733; 2012-08-21T14:02:08Z -->
