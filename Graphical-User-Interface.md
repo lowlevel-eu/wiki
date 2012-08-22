@@ -53,46 +53,7 @@ Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster
 
 ## Nützliches für die GUI-Programmierung
 
-Wer nicht gleich ein Library portieren will um schiefe Linien zu zeichnen kann diesen Beispielcode verwenden. **Der Beispielcode setzt voraus das es die Funktion setpixel(int x,int y, unsigned char color) gibt.(die Funktion sollte einen Pixel zeichnen)** \<c\>
-
-1.  define sgn(x) ((x\<0)?-1:((x\>0)?1:0))
-
-void line(int x1, int y1, int x2, int y2, unsigned char color) {
-
-     int dx,dy,sdx,sdy,px,py,dxabs,dyabs,i;
-     int slope;
-
-     dx = x2-x1;      
-     dy = y2-y1;      
-     dxabs = abs(dx);
-     dyabs = abs(dy);
-     sdx = sgn(dx);
-     sdy = sgn(dy);
-     if(dxabs >= dyabs) {
-       slope = dy / dx;
-       for(i=0;i!=dx;i+=sdx) {
-         px = i + x1;
-         py = slope * i + y1;
-         setpixel(px, py, color);
-       }
-     } else {
-       slope = dx / dy;
-       for(i=0;i!=dy;i+=sdy) {
-         px = slope * i + x1;
-         py = i + y1;
-         setpixel(px, py, color);
-       }
-     }
-
-} \</c\> Hat man diese Funktion ist vieles getan.  
-Eine leichte Übung wäre jetzt eine Funktion um ein Rechteck zu zeichnen: \<c\> void rectangle(int x, int y, int w, int h, unsigned char color) {
-
-     line(x, y, x + h, y, color);
-     line(x, y, x, y + w, color);
-     line(x, y + w, x + h, y + w, color);
-     line(x + h, y, x + h, y + w, color);
-
-} \</c\>
+Wer nicht gleich ein ganze Graphik-Library portieren will um schiefe Linien zu zeichnen, sollte sich den [Bresenham-Algorithmus](http://de.wikipedia.org/wiki/Bresenham-Algorithmus) mal genauer Anschauen.
 
 ## Links
 
@@ -100,6 +61,6 @@ Eine leichte Übung wäre jetzt eine Funktion um ein Rechteck zu zeichnen: \<c\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9835/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 9835; parent 9657; 2011-06-11T20:45:29Z -->
+<!-- MediaWiki page 1511; revision 10739; parent 9835; 2012-08-22T10:55:15Z -->
