@@ -53,7 +53,7 @@ Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster
 
 ## Nützliches für die GUI-Programmierung
 
-Wer nicht gleich ein ganze Graphik-Library portieren will um schiefe Linien zu zeichnen, sollte sich den [Bresenham-Algorithmus](http://de.wikipedia.org/wiki/Bresenham-Algorithmus) mal genauer Anschauen.
+Wer nicht gleich ein ganze Graphik-Library portieren will um schiefe Linien zu zeichnen, sollte sich den [Bresenham-Algorithmus](http://de.wikipedia.org/wiki/Bresenham-Algorithmus) mal genauer anschauen.
 
 ## Links
 
@@ -61,6 +61,6 @@ Wer nicht gleich ein ganze Graphik-Library portieren will um schiefe Linien zu z
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10739/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1511/index.html)
 
-<!-- MediaWiki page 1511; revision 10739; parent 9835; 2012-08-22T10:55:15Z -->
+<!-- MediaWiki page 1511; revision 10741; parent 10739; 2012-08-22T11:01:32Z -->
