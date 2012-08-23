@@ -8,7 +8,7 @@ Die [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "F
 
 Heute ist die FPU, wie bereits erwähnt, fest im Prozessor eingebaut, weshalb man sich auch darauf verlassen kann, dass die entsprechenden FPU - Befehle auch wirklich unterstützt werden.
 
-Neben den mathematischen Befehlen, die den ursprünglichen Zweck der FPU darstellen, kann man auf der x87 - FPU auch sog. [MultiMedia Extensions](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") ausführen (die Register MM0 bis MM7 entsprechen den 80 Bit breiten FPU - Registern, wobei 16 Bits reserviert sind (man hat also nur 64 - Bit - Register zur Verfügung)). Allerdings sollte man sich vorher überlegen, ab welchem Prozessor man sein OS unterstützen will, denn Intel empfiehlt heute, anstatt der langsameren [MMX](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") - Befehle die performanteren [SSE](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions "SSE") - Befehle zu verwenden, die direkt vom Hauptprozessor abgearbeitet werden.
+Neben den mathematischen Befehlen, die den ursprünglichen Zweck der FPU darstellen, kann man auf der x87 - FPU auch sog. [MultiMedia Extensions](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension "MMX") ausführen (die Register MM0 bis MM7 entsprechen den 80 Bit breiten FPU - Registern, wobei 16 Bits reserviert sind (man hat also nur 64 - Bit - Register zur Verfügung)).
 
   
 
@@ -93,6 +93,6 @@ Führt eine Subtraktion durch. Die möglichen Muster entsprechen denen bei fadd 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10717/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10746/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2587/index.html)
 
-<!-- MediaWiki page 2587; revision 10717; parent 10716; 2012-08-20T14:02:08Z -->
+<!-- MediaWiki page 2587; revision 10746; parent 10717; 2012-08-23T16:59:52Z -->
