@@ -20,14 +20,6 @@ Diese Abstraktion ermöglicht eine Plattformunabhängigkeit sogar ohne erneute K
 
 Das ist auch einer der größten Nachteile von typischen Bytecode - Java - Programmen, da man erst das JRE installieren muss, bevor man das Programm starten kann. Außerdem bieten nativ kompilierte Programme einen deutlichen Geschwindigkeitsvorteil, weil die JRE noch den Bytecode in Maschinensprache umsetzen muss, was bei ELF - oder .exe - Dateien nicht der Fall ist.
 
-  
-
-## Geschichte
-
-An dieser Stelle möchte ich auf den umfangreichen Wikipedia - Artikel verweisen:
-
-[Entstehung der Programmiersprache Java](http://de.wikipedia.org/wiki/Java_%28Technik%29#Geschichte)
-
 ## Kernelprogrammierung mit Java
 
 Wie oben bereits erwähnt, gibt es durchaus auch Java - Compiler, die keinen Bytecode, sondern normalen Maschinencode erzeugen können, z. B. Excelsior JET und der GNU Compiler for Java (GCJ). Dadurch ist es zumindest theoretisch möglich, einen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in Java zu implementieren.
@@ -46,6 +38,6 @@ Ein Betriebssystem, das auf Java basiert, nennt sich JOS (Java Operating System)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10704/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
 
-<!-- MediaWiki page 2585; revision 10704; parent 10703; 2012-08-20T10:20:57Z -->
+<!-- MediaWiki page 2585; revision 10742; parent 10704; 2012-08-23T16:24:02Z -->
