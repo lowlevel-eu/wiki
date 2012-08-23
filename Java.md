@@ -14,19 +14,19 @@
 
 Java ist eine objektorientierte [Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"), die von Sun Microsystems entwickelt wurde (seit dem Aufkauf von Sun durch Oracle 2010 wird Java von Oracle weiterentwickelt).
 
-Java zeichnet sich insbesondere dadurch aus, dass Java - Compiler keine Maschinensprache erzeugen (abgesehen von dem Java - Compiler GCJ aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und einigen weiteren, die das durchaus beherrschen), sondern sogenannten Bytecode, der nicht direkt vom Prozessor ausgeführt wird, sondern vom **Java Runtime Environment** (JRE).
+Java zeichnet sich insbesondere dadurch aus, dass Java-Compiler keine Maschinensprache erzeugen (abgesehen von dem Compiler GCJ aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection") und einigen weiteren, die das durchaus beherrschen), sondern sogenannten Bytecode, der nicht direkt vom Prozessor ausgeführt wird, sondern vom **Java Runtime Environment** (JRE).
 
 Diese Abstraktion ermöglicht eine Plattformunabhängigkeit sogar ohne erneute Kompilation des Quellcodes (im Gegensatz z. B. zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")), sofern Java auf der Zielplattform installiert ist.
 
-Das ist auch einer der größten Nachteile von typischen Bytecode - Java - Programmen, da man erst das JRE installieren muss, bevor man das Programm starten kann. Außerdem bieten nativ kompilierte Programme einen deutlichen Geschwindigkeitsvorteil, weil die JRE noch den Bytecode in Maschinensprache umsetzen muss, was bei ELF - oder .exe - Dateien nicht der Fall ist.
+Das ist auch einer der größten Nachteile von typischen Bytecode-Java-Programmen, da man erst das JRE installieren muss, bevor man das Programm starten kann. Außerdem bieten nativ kompilierte Programme einen deutlichen Geschwindigkeitsvorteil, weil die JRE noch den Bytecode in Maschinensprache umsetzen muss, was bei ELF- oder .exe-Dateien nicht der Fall ist.
 
 ## Kernelprogrammierung mit Java
 
-Wie oben bereits erwähnt, gibt es durchaus auch Java - Compiler, die keinen Bytecode, sondern normalen Maschinencode erzeugen können, z. B. Excelsior JET und der GNU Compiler for Java (GCJ). Dadurch ist es zumindest theoretisch möglich, einen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in Java zu implementieren.
+Wie oben bereits erwähnt, gibt es durchaus auch Java-Compiler, die keinen Bytecode, sondern normalen Maschinencode erzeugen können, z. B. Excelsior JET und der GNU Compiler for Java (GCJ). Dadurch ist es zumindest theoretisch möglich, einen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in Java zu implementieren.
 
-Praktisch ist das jedoch nur mit relativ hohem Programmieraufwand möglich. Denn Java unterstützt weder Zeiger noch Inline - [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), weshalb man direkte [Hardwarezugriffe](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") in externen Funktionen implementieren müsste, die dann beim Linken eingebunden werden können.
+Praktisch ist das jedoch nur mit relativ hohem Programmieraufwand möglich. Denn Java unterstützt weder Zeiger noch Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), weshalb man direkte [Hardwarezugriffe](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") in externen Funktionen implementieren müsste, die dann beim Linken eingebunden werden können.
 
-Beispielsweise bräuchte man eine Java - Datei, die den Kernel enthält, eine C - Datei, in der grundlegende Funktionen zum Hardwarezugriff implementiert sind (z. B. eine Funktion, die den Wert der angegebenen Speicheradresse zurückgibt bzw. ändert) und eventuell noch eine Assembler - Datei, sofern nicht bereits bei den C - Funktionen Inline - Assembler verwendet wurde.
+Beispielsweise bräuchte man eine Java-Datei, die den Kernel enthält, eine C-Datei, in der grundlegende Funktionen zum Hardwarezugriff implementiert sind (z. B. eine Funktion, die den Wert der angegebenen Speicheradresse zurückgibt bzw. ändert) und eventuell noch eine Assembler-Datei, sofern nicht bereits bei den C-Funktionen Inline-Assembler verwendet wurde.
 
 ### Beispielkernel in Java
 
@@ -38,6 +38,6 @@ Ein Betriebssystem, das auf Java basiert, nennt sich JOS (Java Operating System)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10742/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
 
-<!-- MediaWiki page 2585; revision 10742; parent 10704; 2012-08-23T16:24:02Z -->
+<!-- MediaWiki page 2585; revision 10747; parent 10742; 2012-08-23T17:06:28Z -->
