@@ -24,20 +24,20 @@ Das ist auch einer der größten Nachteile von typischen Bytecode-Java-Programme
 
 Wie oben bereits erwähnt, gibt es durchaus auch Java-Compiler, die keinen Bytecode, sondern normalen Maschinencode erzeugen können, z. B. Excelsior JET und der GNU Compiler for Java (GCJ). Dadurch ist es zumindest theoretisch möglich, einen [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in Java zu implementieren.
 
-Praktisch ist das jedoch nur mit relativ hohem Programmieraufwand möglich. Denn Java unterstützt weder Zeiger noch Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), weshalb man direkte [Hardwarezugriffe](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") in externen Funktionen implementieren müsste, die dann beim Linken eingebunden werden können.
+Praktisch ist das jedoch nur mit relativ hohem Programmieraufwand möglich. Denn Java unterstützt weder Zeiger noch Assembler, weshalb man direkte [Hardwarezugriffe](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware") in externen Funktionen implementieren müsste, die dann beim Linken eingebunden werden können.
 
-Beispielsweise bräuchte man eine Java-Datei, die den Kernel enthält, eine C-Datei, in der grundlegende Funktionen zum Hardwarezugriff implementiert sind (z. B. eine Funktion, die den Wert der angegebenen Speicheradresse zurückgibt bzw. ändert) und eventuell noch eine Assembler-Datei, sofern nicht bereits bei den C-Funktionen Inline-Assembler verwendet wurde.
+Beispielsweise bräuchte man eine Java-Datei, die den Kernel enthält, eine C-Datei, in der grundlegende Funktionen zum Hardwarezugriff implementiert sind (z. B. eine Funktion, die den Wert der angegebenen Speicheradresse zurückgibt bzw. ändert) oder eine Assembler-Datei, sofern nicht bei den C-Funktionen Inline-Assembler verwendet wurde.
 
 ### Beispielkernel in Java
 
 TODO...
 
-## bekannte Projekte
+## Bekannte Projekte
 
 Ein Betriebssystem, das auf Java basiert, nennt sich JOS (Java Operating System) und ist unter [sourceforge.net](http://jos.sourceforge.net/) zu finden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10747/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
 
-<!-- MediaWiki page 2585; revision 10747; parent 10742; 2012-08-23T17:06:28Z -->
+<!-- MediaWiki page 2585; revision 10750; parent 10747; 2012-08-24T13:51:54Z -->
