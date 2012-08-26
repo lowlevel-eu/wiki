@@ -4,65 +4,48 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Ein **Linker** ist ein Programm, welches Objektdateien "zusammenkopiert" und mit anderen nötigen Dateien verbindet.
+Ein **Linker** ist ein Programm, das die vom Compiler generierten Objektdateien mit anderen Objektdateien und/oder Libraries verknüpft.
 
   
 
 ## Funktionsweise
 
-Beispiel: Wir haben ein simples "Hallo-Welt"-Programm in C, welches Gebrauch von der Funktion printf() macht. Diese ist bekanntlich Teil der libc, also der Standardbibliothek von C. Beim Kompillieren wird das C-Programm in Maschinencode übersetzt.
+Ein Beispiel: Das gute, alte "Hello, world!"-Programm soll kompiliert, aber noch nicht gelinkt werden.
 
-Das erreicht man mit dem [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc") so:
+\<c\>
+
+1.  include \<stdio.h\>
+
+int main() {
+
+       printf("Hello, world!\n");
+
+} \</c\>
+
+Kompilieren kann man das Programm mit folgendem Befehl:
 
 ` gcc -c -o hello.o hello.c `
 
-Nun wurde eine Objektdatei erstellt. Diese enthält sogenannte Referenzen auch Objekte, Funktionen usw.. Wenn wir uns also die erzeugte Datei per objdump -t anschauen, bekommen wir die Symboltabelle:
+Das "-c" sorgt dafür, dass der gcc vorerst nur kompiliert und noch nicht linkt.
 
-` hello.o: file format elf32-i386 `
+Nun wurde eine Objektdatei erstellt. Diese enthält zwar bereits den übersetzten Code aus hello.c, aber man könnte sie noch nicht ausführen:
 
-`SYMBOL TABLE: 00000000 l df *ABS* 00000000 hello.c 00000000 l d .text 00000000 .text 00000000 l d .data 00000000 .data 00000000 l d .bss 00000000 .bss 00000000 l d .rodata 00000000 .rodata 00000000 l d .note.GNU-stack 00000000 .note.GNU-stack 00000000 l d .comment 00000000 .comment 00000000 g F .text 0000002b main 00000000 *UND* 00000000 puts `
+` $ gcc -c -o hello hello.c $ ./hello bash: ./hello: Keine Berechtigung $ chmod u+x hello $ ./hello bash: ./hello: Kann die Datei nicht ausführen. `
 
-Hier sehen wir die Referenzen, die noch nicht in der Datei enthalten sind: puts z.B..
+Woran liegt das? Nun, wir benutzen in hello.c die Funktion printf() aus stdio.h. Allerdings genügt es nicht, stdio.h einfach zu inkludieren, wie man sieht. Zur Erklärung ein Auszug aus stdio.h:
 
-Erst durch das Zusammenlinken mit anderen Objektdateien (hier: die der libc) wird der nötige Code in die Datei eingelinkt und die Datei ausführbar gemacht:
+\<c\> extern int printf (\_\_const char \*\_\_restrict \_\_format, ...); \</c\>
 
-  
+Die Parameterliste soll uns hier nicht interessieren. Deutlich wichtiger (zumindest im Zusammenhang mit diesem Artikel) ist das Schlüsselwort "extern" vor der eigentlichen Funktionsdeklaration. Dieses Schlüsselwort besagt, dass die Funktion existiert (jedoch nicht in der aktuellen Quelldatei) und beruhigt somit den Compiler, der sonst eine Fehlermeldung oder zumindest eine Warnung ausgegeben hätte, wenn man printf() ohne diese Deklaration verwendet hätte.
 
-## Linkerdatei
+Nun kommt der Linker ins Spiel. Dessen Aufgabe ist es, die Objektdatei (bzw. in diesem Fall Library), die die Funktion enthält, so mit dem Programm zu verknüpfen, dass die Funktion auch tatsächlich aufgerufen werden kann. Dazu genügt folgender Befehl:
 
-Eine Linkerdatei definiert, wo welche Sektionen des Codes liegen.
+` $ gcc -c -o hello.o hello.c $ gcc hello.o -o hello $ ./hello Hello, world! `
 
-Hier ein Beispiel aus dem Betriebssystem Qultics:
-
-` OUTPUT_FORMAT(elf32-i386) OUTPUT_ARCH(i386:i386) ENTRY(start) phys = 0x00100000; SECTIONS { kernel_start = phys; `
-
-     .text phys : AT(phys) {
-       code = .;
-       *(.text)
-       *(.rodata)
-       . = ALIGN(4096);
-     }
-     .data : AT(phys + (data - code))
-     {
-       data = .;
-       *(.data)
-       . = ALIGN(4096);
-     }
-     .bss : AT(phys + (bss - code))
-     {
-       bss = .;
-       *(.bss)
-       . = ALIGN(4096);
-     }
-     end = .;
-
-     kernel_end = end;
-     kernel_size = kernel_end - kernel_start;
-
-`} `
+Der gcc ruft selbstständig den Linker mit allen benötigten Libraries auf und erzeugt eine ausführbare Datei, die nun auch die Funktion printf() (sowie alle anderen Funktionen, die in stdio.h als extern deklariert wurden) enthält.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10003/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10755/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 10003; parent 8259; 2011-07-28T21:15:47Z -->
+<!-- MediaWiki page 1932; revision 10755; parent 10003; 2012-08-26T13:27:09Z -->
