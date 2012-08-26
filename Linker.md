@@ -44,8 +44,48 @@ Nun kommt der Linker ins Spiel. Dessen Aufgabe ist es, die Objektdatei (bzw. in 
 
 Der gcc ruft selbstständig den Linker mit allen benötigten Libraries auf und erzeugt eine ausführbare Datei, die nun auch die Funktion printf() (sowie alle anderen Funktionen, die in stdio.h als extern deklariert wurden) enthält.
 
+## Linkerskript
+
+Ein Linkerskript ist eine Datei, in der die Optionen für den Linker, insbesondere die Position der einzelnen Segmente im Speicher, festgelegt sind. Allerdings können alle Optionen auch als Kommandozeilenargument an den Linker übergeben werden. Ein Linkerskript ist insbesondere in der Betriebssystementwicklung von besonderer Bedeutung, da hier der Kernel an einen Teil im Speicher geladen wird, den der Linker von sich aus nicht kennt (z. B. wird der Bootloader an 0x7C00 geladen und GRUB kann den Kernel erst ab der Position 1 MB laden), anders als etwa Programme für MS DOS, die immer an die Adresse 0x100 geladen werden.
+
+Ein Linkerskript könnte in etwa so aussehen (hier das Beispiel aus der Reihe [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"), das man [hier](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World#multiboot-header-in-einer-eigenen-sektion "Teil 4 - Hello World") finden kann): ` /* Bei _start soll die Ausfuehrung losgehen */ ENTRY(_start) `
+
+`/* `
+
+    * Hier wird festgelegt, in welcher Reihenfolge welche Sektionen in die Binary
+    * geschrieben werden sollen
+    */
+
+SECTIONS {
+
+       /*
+        * . ist die aktuelle Position in der Datei. Wir wollen den Kernel wie gehabt
+        * an 1 MB laden, also muessen wir dort die erste Sektion hinlegen
+        */
+       . = 0x100000;
+
+       /*
+        * Der Multiboot-Header muss zuerst kommen (in den ersten 8 kB).
+        * Die Standardsektionen einfach hintereinander weg einbinden.
+        */
+       .text : {
+           *(multiboot)
+           *(.text)
+       }
+       .data ALIGN(4096) : {
+           *(.data)
+       }
+       .rodata ALIGN(4096) : {
+           *(.rodata)
+       }
+       .bss ALIGN(4096) : {
+           *(.bss)
+       }
+
+`} `
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10755/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 10755; parent 10003; 2012-08-26T13:27:09Z -->
+<!-- MediaWiki page 1932; revision 10756; parent 10755; 2012-08-26T13:41:55Z -->
