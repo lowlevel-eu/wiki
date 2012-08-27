@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Ein **Linker** ist ein Programm, das die vom Compiler generierten Objektdateien mit anderen Objektdateien und/oder Libraries verknüpft.
+Ein **Linker** ist ein Programm, das (z.B. vom Compiler generierte) Objektdateien mit anderen Objektdateien und/oder Libraries verknüpft.
 
   
 
@@ -86,6 +86,6 @@ SECTIONS {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10756/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 10756; parent 10755; 2012-08-26T13:41:55Z -->
+<!-- MediaWiki page 1932; revision 10761; parent 10756; 2012-08-27T07:18:46Z -->
