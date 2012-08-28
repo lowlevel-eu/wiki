@@ -94,6 +94,10 @@ Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"
 
   
 
+### Hinweise
+
+Oftmals gibt es unter anderem im Lowlevel-Forum, aber auch andern Orts hitzige Diskussionen darüber, ob man selber Code optimieren sollte oder dies dem Compiler überlassen sollte. Generell gilt: Man muss nicht stundenlang über dem vom GCC generierten Code hängen und diesen bis zum Geht-nicht-mehr optimieren. Moderne Compiler wie der GCC optimieren sehr gut, der Programmierer kann da wenig noch von Hand optimieren. Es gibt natürlich auch Ausnahmen, wo eigene Optimierungen besser sind als die vom Compiler generierten. Diese Thematik tritt sehr oft bei String-Funktionen auf, wo viele Enthusiasten gerne eine handgeschriebene und hand"optimierte" Assembler-Version der Funktionen dem z.B. C-Äquivalent vorziehen. Hier hat sich oft gezeigt, dass der vom GCC optimierte Assembler-Code gleich oder sogar schneller ist als der händisch geschriebene und optimierte Assembler-Code.
+
 ## siehe auch
 
 - [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8#tipps--tricks "Ausgabe 8")
@@ -105,6 +109,6 @@ Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10765/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 10764; parent 10763; 2012-08-28T13:25:07Z -->
+<!-- MediaWiki page 2187; revision 10765; parent 10764; 2012-08-28T14:15:13Z -->
