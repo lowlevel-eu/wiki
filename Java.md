@@ -1,5 +1,9 @@
 # Java
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 | Allgemeines |  |
 | -------------------------------- | ------------------------------------------------------------------------------------ |
 | Name: | Java |
@@ -38,6 +42,6 @@ Ein Betriebssystem, das auf Java basiert, nennt sich JOS (Java Operating System)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10762/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2585/index.html)
 
-<!-- MediaWiki page 2585; revision 10750; parent 10747; 2012-08-24T13:51:54Z -->
+<!-- MediaWiki page 2585; revision 10762; parent 10750; 2012-08-28T10:58:31Z -->
