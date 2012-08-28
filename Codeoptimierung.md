@@ -84,9 +84,9 @@ Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"
 - -Ox (x ist der Grad der Optimierung; 3 ist die höchste Stufe)
 - -Os (s ist keine Variable, sondern wird genau so gesetzt!)
 
-'-Os' veranlasst den Compiler, nicht unbedingt performanten Code, aber auf jeden Fall kleine Programme zu erzeugen ("size optimisation"). 'Ox' dagegen führt dazu, dass verschiedene Optimierungen zur Geschwindigkeitsverbesserung eingeschaltet werden. '-O3' ist die höchste Stufe, führt aber bei einigen Programmen zu Problemen (z. B. empfiehlt Gentoo, -O2 und nicht -O3 zum Kompilieren des Systems zu nutzen). Das sollte jeder für seine Software selbst ausprobieren.
+'-Os' veranlasst den Compiler, nicht unbedingt performanten Code, aber auf jeden Fall kleine Programme zu erzeugen („size optimisation“). 'Ox' dagegen führt dazu, dass verschiedene Optimierungen zur Geschwindigkeitsverbesserung eingeschaltet werden. '-O3' ist die höchste Stufe, führt aber bei einigen Programmen zu Problemen (z. B. empfiehlt Gentoo, -O2 und nicht -O3 zum Kompilieren des Systems zu nutzen). Das sollte jeder für seine Software selbst ausprobieren.
 
-Übrigens kann man mit NASM die Codeoptimierung mit '-Ox' (hier ist x keine Variable!) einschalten. Dies ist jedoch nicht nötig, da das Flag standartmäßig aktiviert ist. Jedoch bleibt NASM ein Assembler, und so ist es dennoch sehr wichtig, die oben beschriebenen Optimisierungsvorschläge auch zu nutzen.
+Übrigens kann man mit NASM die Codeoptimierung mit '-Ox' (hier ist x keine Variable!) einschalten. Dies ist jedoch nicht nötig, da das Flag standardmäßig aktiviert ist. Jedoch bleibt NASM ein Assembler, und so ist es dennoch sehr wichtig, die oben beschriebenen Optimierungsvorschläge auch zu nutzen.
 
 ### Optimierungstools
 
@@ -105,6 +105,6 @@ Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10763/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10764/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 10763; parent 9462; 2012-08-28T13:04:23Z -->
+<!-- MediaWiki page 2187; revision 10764; parent 10763; 2012-08-28T13:25:07Z -->
