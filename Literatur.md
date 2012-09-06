@@ -138,12 +138,8 @@ Das OS ist quasi der Herr über die Hardware. Es verwaltet selbige sowie den Zug
 
 - [Wikibooks Betriebssystemtheorie](http://de.wikibooks.org/wiki/Betriebssystemtheorie)
 
-<!-- -->
-
-- [Wikibooks Betriebssystementwicklung](http://de.wikibooks.org/wiki/Betriebssystementwicklung)
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10491/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10776/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1930/index.html)
 
-<!-- MediaWiki page 1930; revision 10491; parent 10490; 2012-03-06T10:55:39Z -->
+<!-- MediaWiki page 1930; revision 10776; parent 10491; 2012-09-06T11:23:03Z -->
