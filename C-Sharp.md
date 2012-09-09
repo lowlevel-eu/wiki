@@ -43,9 +43,10 @@ Ein weiteres Projekt ist [Cosmos](https://github.com/lowlevel-eu/wiki/wiki/Cosmo
 ## Weblinks
 
 - [ECMA-Spezifikation der Sprache](http://www.ecma-international.org/publications/standards/Ecma-334.htm)
+- [Website des dotGNU-Projekts](http://dotgnu.org)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10710/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2589/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10780/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2589/index.html)
 
-<!-- MediaWiki page 2589; revision 10710; parent 10709; 2012-08-20T12:14:58Z -->
+<!-- MediaWiki page 2589; revision 10780; parent 10710; 2012-09-09T17:47:07Z -->
