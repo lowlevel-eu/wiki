@@ -84,8 +84,14 @@ SECTIONS {
 
 `} `
 
+Am besten nimmt man sich für sein Linkerscript ein vorhandenes Exemplar und ändert die Einträge, z. B. "\_main" statt "\_start", eine andere Position des text-Segments usw. Wer sich dennoch näher mit Linkerscripts befassen möchte, findet [hier](http://sourceware.org/binutils/docs/ld/index.html) das Handbuch zum ld.
+
+## Weblinks
+
+- [GNU ld Handbuch](http://sourceware.org/binutils/docs/ld/index.html)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10761/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 10761; parent 10756; 2012-08-27T07:18:46Z -->
+<!-- MediaWiki page 1932; revision 10781; parent 10761; 2012-09-10T12:22:01Z -->
