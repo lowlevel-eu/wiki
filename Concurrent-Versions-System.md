@@ -40,7 +40,7 @@ Weitere Befehle:
 
 ## Weblinks
 
-- [Offzielle Homapage](http://www.nongnu.org/cvs/) (wird nicht mehr gepflegt)
+- [Offzielle Homepage](http://www.nongnu.org/cvs/) (wird nicht mehr gepflegt)
 - [OpenSource-Development with CVS](http://cvsbook.red-bean.com/) - Buch über die Entwicklung mit CVS
 - [CVS-Cheatsheet](http://kj.uue.org/papers/cvs-handout.pdf)
 
@@ -51,6 +51,6 @@ Weitere Befehle:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2104/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10813/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2104/index.html)
 
-<!-- MediaWiki page 2104; revision 10812; parent 6290; 2012-09-12T21:15:31Z -->
+<!-- MediaWiki page 2104; revision 10813; parent 10812; 2012-09-12T21:43:01Z -->
