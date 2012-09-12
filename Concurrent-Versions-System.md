@@ -4,7 +4,7 @@ Das **Concurrent Versions System** oder kurz **CVS** ist ein bekanntes zentrales
 
 ## Geschichtliches
 
-CVS wurde als Ableger des Revision Control System weiterentwickelt und sollte dessen Limitierungen, wie das gleichzeitige Speichern von mehreren Dateien, aufheben. Um abwärtskompatibel zu sein benutze es das gleiche Dateiformat wie RCS. CVS war lange Zeit Platzhirsch unter den Versionskontrollsystemen, viele der heutigen kommerziellen "Configuration-Management-Systeme" beruhen auf CVS. Doch aufgrund der Limitierungen von CVS hinsichtlich Verzeichnissen und Binärdateien und aufgrund einiger Sicherheitslecks wurde im Jahr 2000 dessen Nachfolgen [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") entwickelt. Subversion hat CVS bei Projekten so gut wie komplett abgelöst, und die meisten Projekte, die CVS nutzen (z.B. FreeBSD), sind älter, und ein Wechsel auf ein anderes SCM wäre alles andere als trivial. SourceForge bietet darum auch noch Unterstützung für dieses System.
+CVS wurde als Ableger des Revision Control System weiterentwickelt und sollte dessen Limitierungen, wie das gleichzeitige Speichern von mehreren Dateien, aufheben. Um abwärtskompatibel zu sein benutze es das gleiche Dateiformat wie RCS. CVS war lange Zeit Platzhirsch unter den Versionskontrollsystemen, viele der heutigen kommerziellen „Configuration-Management-Systeme“ beruhen auf CVS. Doch aufgrund der Limitierungen von CVS hinsichtlich Verzeichnissen und Binärdateien und aufgrund einiger Sicherheitslecks wurde im Jahr 2000 dessen Nachfolgen [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") entwickelt. Subversion hat CVS bei Projekten so gut wie komplett abgelöst, und die meisten Projekte, die CVS nutzen (z. B. FreeBSD), sind älter, und ein Wechsel auf ein anderes SCM wäre alles andere als trivial. SourceForge bietet darum auch noch Unterstützung für dieses System.
 
 ## Funktionsweise
 
@@ -32,17 +32,17 @@ Um den lokalen Entwicklungsstand zu updaten nutzt man
 
     $ cvs update repositoryname
 
-Weiter Befehle:
+Weitere Befehle:
 
 - log zeigt sämtliche getane Vorgänge an wie Importieren und Updaten
-- diff zeigt Unteschiede zwischen Dateien an
+- diff zeigt Unterschiede zwischen Dateien an
 - add fügt neue Dateien zum Repository hinzu
 
 ## Weblinks
 
 - [Offzielle Homapage](http://www.nongnu.org/cvs/) (wird nicht mehr gepflegt)
 - [OpenSource-Development with CVS](http://cvsbook.red-bean.com/) - Buch über die Entwicklung mit CVS
-- <http://kj.uue.org/papers/cvs-handout.pdf> CVS-Cheatsheet\]
+- [CVS-Cheatsheet](http://kj.uue.org/papers/cvs-handout.pdf)
 
 ## Siehe auch
 
@@ -51,6 +51,6 @@ Weiter Befehle:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2104/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10812/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2104/index.html)
 
-<!-- MediaWiki page 2104; revision 6290; parent 6259; 2009-11-14T17:56:32Z -->
+<!-- MediaWiki page 2104; revision 10812; parent 6290; 2012-09-12T21:15:31Z -->
