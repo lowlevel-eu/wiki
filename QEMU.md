@@ -84,7 +84,7 @@ Um QEMU unter Windows zu kompilieren, werden MinGW und eine Reihe Bibliotheken, 
   3.  GLib ("Run-time" und "Dev")
 - Die SDL Development Libraries (SDL-devel-1.2.\*-mingw32.tar.gz) von <http://www.libsdl.org/download-1.2.php> herunterladen und in einem beliebigen Verzeichnis entpacken. In diesem Ordner `make native` ausführen, um SDL im MinGW-Ordner zu installieren.
 
-Anschließend kann QEMU wie üblich konfiguriert und gebaut werden:
+Anschließend kann QEMU wie üblich konfiguriert und gebaut werden, indem die folgenden Befehle im Quelltextverzeichnis von QEMU ausgeführt werden:
 
     sh configure --target-list=x86_64-softmmu --prefix=D:/installations/pfad/fuer/qemu
     make
@@ -110,6 +110,6 @@ Hinweise:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10773/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10773; parent 10679; 2012-09-06T09:44:08Z -->
+<!-- MediaWiki page 1505; revision 10815; parent 10773; 2012-09-12T21:46:22Z -->
