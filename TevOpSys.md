@@ -41,6 +41,6 @@ Ich arbeite gerade an meinem Floppytreiber, also am FDC und dem ISA DMA.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9526/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10817/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2270/index.html)
 
-<!-- MediaWiki page 2270; revision 9526; parent 8633; 2011-02-11T09:49:54Z -->
+<!-- MediaWiki page 2270; revision 10817; parent 9526; 2012-09-13T14:29:47Z -->
