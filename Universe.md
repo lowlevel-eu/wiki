@@ -23,7 +23,7 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 
 ## Universe aktuell
 
-Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt. Erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Floppy Disk Variante des Systems ohne GUI heißt DDOS. Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.
+Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt. Der Großteil der Universe-Versionen wurden für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") entwickelt. Erst ab Version 0.7 läuft das System im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Floppy Disk Variante des Systems ohne GUI heißt Damn Disk Operating System (DDOS). Es kann sein das ich das System umbenennen werde. Das liegt vor allem daran, das man im Web vereinzelt Seiten über ein "Universe-OS" findet, die nicht von mir sind und ich Verwechselungen vermeiden möchte.
 
   
 
@@ -59,6 +59,6 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10651/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10816/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 10651; parent 10650; 2012-07-17T12:55:59Z -->
+<!-- MediaWiki page 2498; revision 10816; parent 10651; 2012-09-13T14:16:58Z -->
