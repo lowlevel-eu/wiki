@@ -44,6 +44,6 @@ Der Kernel kann bisher folgendes:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10102/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
 
-<!-- MediaWiki page 2332; revision 10102; parent 8816; 2011-08-30T09:41:52Z -->
+<!-- MediaWiki page 2332; revision 10818; parent 10102; 2012-09-13T14:32:39Z -->
