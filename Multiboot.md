@@ -1,6 +1,6 @@
 # Multiboot
 
-Multiboot ist ein Standard um Betriebssystemen eine einheitliche Startumgebung zu gewährleisten. Ein sehr bekannter Multiboot-Bootloader ist [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
+Die *Multiboot-Spezifikation* ist ein Standard, um Betriebssystemen eine einheitliche Startumgebung zu gewährleisten. Die Spezifikation definiert die Anforderungen an ein Betriebssystem, damit es von konformen Bootloadern geladen werden kann und legt fest, wie Informationen über das System beim Start bereitgestellt werden. Ein bekannter Bootloader ist [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"). Daneben gibt es noch [SYSLINUX](https://github.com/lowlevel-eu/wiki/wiki/SYSLINUX "SYSLINUX"), das ein Modul liefert, um konforme Kernels zu laden. Außerdem ist es möglich in [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") einen Multiboot-konformen Kernel direkt zu starten, ohne dass die Erstellung eines (Disketten/Festplatten/CD-)Images notwendig ist.
 
 ## Ausgangsstatus
 
@@ -209,6 +209,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 10364; parent 10363; 2011-12-15T22:32:12Z -->
+<!-- MediaWiki page 1560; revision 10820; parent 10364; 2012-09-13T21:14:21Z -->
