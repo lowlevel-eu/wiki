@@ -1,9 +1,5 @@
 # Linker
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
 Ein **Linker** ist ein Programm, das (z.B. vom Compiler generierte) Objektdateien mit anderen Objektdateien und/oder Libraries verknüpft.
 
   
@@ -84,6 +80,9 @@ SECTIONS {
 
 `} `
 
+- Mit ENTRY kann der Einstiegspunkt definiert werden. Dort beginnt dann die Ausführung des Kernels.
+- Im SECTIONS-Bereich kann man die Position (das Offset) der einzelnen Segmente im Speicher festlegen. Das ist notwendig, wenn der Kernel nicht an der Position 0x0001 im Speicher liegt.
+
 Am besten nimmt man sich für sein Linkerscript ein vorhandenes Exemplar und ändert die Einträge, z. B. "\_main" statt "\_start", eine andere Position des text-Segments usw. Wer sich dennoch näher mit Linkerscripts befassen möchte, findet [hier](http://sourceware.org/binutils/docs/ld/index.html) das Handbuch zum ld.
 
 ## Weblinks
@@ -92,6 +91,6 @@ Am besten nimmt man sich für sein Linkerscript ein vorhandenes Exemplar und än
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10781/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10821/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1932/index.html)
 
-<!-- MediaWiki page 1932; revision 10781; parent 10761; 2012-09-10T12:22:01Z -->
+<!-- MediaWiki page 1932; revision 10821; parent 10781; 2012-09-14T15:04:31Z -->
