@@ -23,7 +23,7 @@ Für die Implementierung von Threads existieren im Großen und Ganzen zwei Prinz
 
 Ein Kernelthread ist dem Betriebssystem genauso bekannt wie ein Prozess, vielleicht bekommen sie sogar eine PID. Der Scheduler kann sie verwalten und Threads ihre Rechenzeit entziehen. [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") nutzt dieses Prinzip. Aufgrund ihrer Ähnlichkeit zu normalen Prozessen heißen sie dort auch *light-weight processes* (leichtgewichtige Prozesse, kurz: LWP).
 
-Die Vorraussetzungen für Benutzerthreads sind in den Programmen selbst enthalten (was nicht bedeutet, dass der Programmierer sie selbst implementieren muss, er kann einfach gegen eine Bibliothek linken). Ein solcher Prozess bekommt seine Rechenzeit zugeteilt, als hätte er gar keine Threads (denn der Scheduler weiß nichts von ihnen), und das Programm teilt diese unter ihren Threads auf. Es ist jedoch absolut notwendig, dass die Threads kooperieren, denn wenn ein Thread rechnet, dann rechnet er, und das Threadsystem kann nicht selbstständig die Kontrolle erhalten, wie es der Kernel durch [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") tun würde.
+Die Voraussetzungen für Benutzerthreads sind in den Programmen selbst enthalten (was nicht bedeutet, dass der Programmierer sie selbst implementieren muss, er kann einfach gegen eine Bibliothek linken). Ein solcher Prozess bekommt seine Rechenzeit zugeteilt, als hätte er gar keine Threads (denn der Scheduler weiß nichts von ihnen), und das Programm teilt diese unter ihren Threads auf. Es ist jedoch absolut notwendig, dass die Threads kooperieren, denn wenn ein Thread rechnet, dann rechnet er, und das Threadsystem kann nicht selbstständig die Kontrolle erhalten, wie es der Kernel durch [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") tun würde.
 
 ## Siehe auch
 
@@ -35,6 +35,6 @@ Die Vorraussetzungen für Benutzerthreads sind in den Programmen selbst enthalte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10826/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 10825; parent 10822; 2012-09-15T10:21:03Z -->
+<!-- MediaWiki page 1993; revision 10826; parent 10825; 2012-09-15T10:22:15Z -->
