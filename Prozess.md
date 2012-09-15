@@ -25,10 +25,6 @@ Ein Kernelthread ist dem Betriebssystem genauso bekannt wie ein Prozess, viellei
 
 Die Vorraussetzungen für Benutzerthreads sind in den Programmen selbst enthalten (was nicht bedeutet, dass der Programmierer sie selbst implementieren muss, er kann einfach gegen eine Bibliothek linken). Ein solcher Prozess bekommt seine Rechenzeit zugeteilt, als hätte er gar keine Threads (denn der Scheduler weiß nichts von ihnen), und das Programm teilt diese unter ihren Threads auf. Es ist jedoch absolut notwendig, dass die Threads kooperieren, denn wenn ein Thread rechnet, dann rechnet er, und das Threadsystem kann nicht selbstständig die Kontrolle erhalten, wie es der Kernel durch [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") tun würde.
 
-## Kernel- und Benutzerthreads
-
-Mit Kernelthreads sind hier Prozesse gemeint, die im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")-Segment bzw. auf [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessoren im Ring 0 laufen. Diese Vorgehensweise ist am Anfang deutlich einfacher als die Aufteilung in [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")- und Benutzerthreads (Ring-3-Prozesse), da man keinen weiteren [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")-Eintrag oder eine [LDT](https://github.com/lowlevel-eu/wiki/wiki/Local-Descriptor-Table "LDT") braucht. Es gibt jedoch einen großen Nachteil dieser Vorgehensweise: Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") soll die [Hardware](https://lowlevel-eu.github.io/wiki/pages/1953/index.html "Hardware") verwalten und hat daher (nahezu) freien Zugriff. Normale Programme brauchen diese Freiheit nicht - und sollten sie auch nicht bekommen. So wird die Systemstabilität erhöht, weil so keinen Schaden anrichten können. Außerdem haben es eventuelle Schadprogramme dann nicht mehr ganz so leicht.
-
 ## Siehe auch
 
 - [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
@@ -39,6 +35,6 @@ Mit Kernelthreads sind hier Prozesse gemeint, die im [Kernel](https://github.com
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10822/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10825/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 10822; parent 6061; 2012-09-14T15:19:40Z -->
+<!-- MediaWiki page 1993; revision 10825; parent 10822; 2012-09-15T10:21:03Z -->
