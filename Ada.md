@@ -61,6 +61,6 @@ Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10831/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1742/index.html)
 
-<!-- MediaWiki page 1742; revision 9519; parent 6084; 2011-02-11T09:30:19Z -->
+<!-- MediaWiki page 1742; revision 10831; parent 9519; 2012-09-16T13:39:32Z -->
