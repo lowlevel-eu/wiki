@@ -8,6 +8,8 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Komplette Batch Datei
 
+Mit dieser Batch-Datei sollte man [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") unter [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") zum Laufen bringen:
+
     REM Start qemu on windows.
     @ECHO OFF
 
@@ -31,6 +33,6 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1907/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10839/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1907/index.html)
 
-<!-- MediaWiki page 1907; revision 5599; parent 4919; 2009-08-12T16:19:40Z -->
+<!-- MediaWiki page 1907; revision 10839; parent 5599; 2012-09-16T14:19:59Z -->
