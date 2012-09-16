@@ -1,5 +1,9 @@
 # Android
 
+Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+
+Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+
 | Android |  |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
@@ -22,6 +26,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10833/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2580/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10834/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2580/index.html)
 
-<!-- MediaWiki page 2580; revision 10833; parent 10667; 2012-09-16T13:57:32Z -->
+<!-- MediaWiki page 2580; revision 10834; parent 10833; 2012-09-16T13:57:51Z -->
