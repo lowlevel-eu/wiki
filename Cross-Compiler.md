@@ -101,6 +101,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9857/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 9857; parent 9797; 2011-06-17T14:26:48Z -->
+<!-- MediaWiki page 1628; revision 10832; parent 9857; 2012-09-16T13:41:56Z -->
