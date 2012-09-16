@@ -70,6 +70,8 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
 
 Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj](https://lowlevel-eu.github.io/wiki/pages/2479/index.html "Benutzer:Sannaj") 20:47, 21. Nov. 2011 (CET)
 
+- [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI") und [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI")
+
 ## Kleinigkeiten
 
 - Interwiki links zu *OSDev.org*: Seiten ohne Links zu anderen Sprachen
@@ -126,6 +128,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10830/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10732; parent 10700; 2012-08-21T09:38:36Z -->
+<!-- MediaWiki page 1518; revision 10830; parent 10732; 2012-09-16T13:33:23Z -->
