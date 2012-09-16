@@ -13,8 +13,10 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Länge des Dateinames: | Blockgröße - 64 |
 | Maximale Dateisystemgröße: | 16 TB |
 
+ReiserFS ist ein [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem"), das von Hans Reiser und der ihm gehörenden Firma Namesys entwickelt wird. Das Dateisystem wird von [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") und [BSD](https://github.com/lowlevel-eu/wiki/wiki/FreeBSD "FreeBSD") unterstützt; für [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") existieren nur kostenpflichtige Treiber.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2310/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10837/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2310/index.html)
 
-<!-- MediaWiki page 2310; revision 10002; parent 8508; 2011-07-28T21:14:40Z -->
+<!-- MediaWiki page 2310; revision 10837; parent 10002; 2012-09-16T14:16:54Z -->
