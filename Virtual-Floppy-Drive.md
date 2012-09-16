@@ -1,6 +1,6 @@
 # Virtual Floppy Drive
 
-Das Programm **Virtual Floppy Drive** (**VFD**) ermöglicht es unter Windows ein Disketten-Image als virtuelles Laufwerk einzubinden. Das ist zum Beispiel notwendig, wenn man Dateien auf das Disketten-Image kopieren will. Es kann damit als Ersatz für das Unix-Werkzeug *mount* dienen.
+Das Programm **Virtual Floppy Drive** (**VFD**) ermöglicht es unter [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") ein Disketten-Image als virtuelles Laufwerk einzubinden. Das ist zum Beispiel notwendig, wenn man Dateien auf das Disketten-Image kopieren will. Es kann damit als Ersatz für das Unix-Werkzeug *mount* dienen.
 
 VFD stellt sowohl eine graphische Oberfläche (vfdwin.exe) als auch Konsolenprogrammm (vfd.exe) zur Verfügung, die beide alle Funktionen des Programms steuern können. Beide Programme sollten als Administrator gestartet werden.
 
@@ -18,7 +18,7 @@ Im Tab "Drive0" kann das erste virtuelle Laufwerk eingebunden werden. Zuerst mus
 
 ## Benutzung des Konsolenprogramms
 
-Das Konsolenprogramm bietet sowohl die Möglichkeit über Parameter als auch über eine eigene Eingabeaufforderung die Funktionen von VFD zu verwenden. Man kann zum Beispiel über die Parameter den Vorgang des Mountens und Unmountens automatisieren, wenn man dafür nicht immer die GUI bemühen möchte. Dafür bietet es sich an eine Batch-Dateien zu erstellen.
+Das Konsolenprogramm bietet sowohl die Möglichkeit über Parameter als auch über eine eigene Eingabeaufforderung die Funktionen von VFD zu verwenden. Man kann zum Beispiel über die Parameter den Vorgang des Mountens und Unmountens automatisieren, wenn man dafür nicht immer die [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") bemühen möchte. Dafür bietet es sich an eine Batch-Dateien zu erstellen.
 
 ### Beispiel: Mount
 
@@ -42,7 +42,7 @@ Diese Batch-Datei bindet das virtuelle Laufwerk wieder aus, stoppt den Treiber u
 
 ### Zugriff verweigert
 
-Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte man überprüfen, ob das Programm wirklich als Administrator läuft. Unter Vista geht das indem man die .exe- oder .bat-Datei mit Rechtsklick -\> "Als Administrator ausführen" startet.
+Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte man überprüfen, ob das Programm wirklich als Administrator läuft. Unter [Vista/7](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") geht das, indem man die [.exe](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")- oder .bat-Datei mit Rechtsklick -\> "Als Administrator ausführen" startet.
 
 ## Alternativen
 
@@ -57,6 +57,6 @@ Wenn eines der Programme die Fehlermeldung "Zugriff verweigert" liefert, sollte 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10841/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2063/index.html)
 
-<!-- MediaWiki page 2063; revision 6991; parent 6932; 2010-01-30T18:03:03Z -->
+<!-- MediaWiki page 2063; revision 10841; parent 6991; 2012-09-16T14:25:37Z -->
