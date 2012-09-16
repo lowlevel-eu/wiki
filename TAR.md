@@ -19,7 +19,7 @@ Da ich selbst als InitRD-Image das TAR-Format erwählt habe, möchte ich dieses 
 ### Was ist TAR und welche Vorteile habe ich damit?
 
 *ToDo: Allgemeine Beschreibung von TAR*  
-Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie Windows oder \*nix bereits Tools vorhanden sind, die Archive in diesem Format erstellen können. Das heißt, dass dadurch zum einen der Aufwand minimiert wird, da das Programm an sich bereits vorhanden ist und zum anderen dadurch die Fehlerquellen minimiert werden, da die bereits vorhandenen Programme wie „tar“ oder „7-zip“ Fehlerfrei laufen *sollten*.
+Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") oder \*nix bereits Tools vorhanden sind, die Archive in diesem Format erstellen können. Das heißt, dass dadurch zum einen der Aufwand minimiert wird, da das Programm an sich bereits vorhanden ist und zum anderen dadurch die Fehlerquellen minimiert werden, da die bereits vorhandenen Programme wie „tar“ oder „7-zip“ Fehlerfrei laufen *sollten*.
 
   
 
@@ -39,7 +39,7 @@ TAR legt alle Dateien hintereinander mit einem Header voran ab. Möchte man das 
 
 #### Header
 
-Dieser Header ist vor jeder Datei/jedem Verzeichnis/jedem Link und gibt uns Informationen z.&nbps;B. über die Größe der Datei oder darüber, ob es sich um einen symbolischen Link handelt.
+Dieser Header ist vor jeder Datei/jedem Verzeichnis/jedem Link und gibt uns Informationen z. B. über die Größe der Datei oder darüber, ob es sich um einen symbolischen Link handelt.
 
 | Byte | Länge | Name |
 | ------ | ------- | ----------------------- |
@@ -140,6 +140,6 @@ Handelt es sich bei der Datei um einen Link, so befindet sich der Name der verli
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7936/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10836/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2073/index.html)
 
-<!-- MediaWiki page 2073; revision 7936; parent 7636; 2010-07-20T00:16:55Z -->
+<!-- MediaWiki page 2073; revision 10836; parent 7936; 2012-09-16T14:13:36Z -->
