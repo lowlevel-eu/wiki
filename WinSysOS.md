@@ -14,19 +14,19 @@ Schon in PureBasic versuchte ich eigene Desktops zu Programmieren, jedoch scheit
 
 #### Menuet und KolibriOS
 
-Im Internet sah ich irgendwann MenuetOS ... ich fragte mich wie man ein grafisch ausgereiftes OS auf eine Diskette kriegte ... Irre dann fand ich bei Recherchen KolibriOS ... das war der reinste Hammer: Extrem ausgereifte Grafik, viele Programme und das beste war, dass war auch nur auf einer Diskette ich fragte mich wie das geht, forschte noch weiter nach und fand heraus das die beiden OS in ( juhu ) Flatassembler programmiert wurden.
+Im Internet sah ich irgendwann [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS") ... ich fragte mich wie man ein grafisch ausgereiftes [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") auf eine Diskette kriegte ... Irre dann fand ich bei Recherchen [KolibriOS](https://github.com/lowlevel-eu/wiki/wiki/KolibriOS "KolibriOS") ... das war der reinste Hammer: Extrem ausgereifte Grafik, viele Programme und das beste war, dass war auch nur auf einer Diskette ich fragte mich wie das geht, forschte noch weiter nach und fand heraus das die beiden OS in ( juhu ) \[\[FASM \| Flatassembler\] programmiert wurden.
 
 #### FDOS
 
-Dann fand ich FDOS, das war auch in Assembler programmiert worden, zwar in NASM, aber ich stellte fest, dass NASM und FASM sich sehr ähnlich sind, also schaute ich ein bisschen in der Quelltext und fand heraus, dass es gar nicht so schwer ist ein OS zu schreiben.
+Dann fand ich FDOS, das war auch in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") programmiert worden, zwar in [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM"), aber ich stellte fest, dass [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") und [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") sich sehr ähnlich sind, also schaute ich ein bisschen in der Quelltext und fand heraus, dass es gar nicht so schwer ist ein OS zu schreiben.
 
 ## WinSysOS
 
-WinSysOS ( Eigentlicher Name ist WindowSystemOS ) ist ein von [mir](https://lowlevel-eu.github.io/wiki/pages/2456/index.html) erstelltes Betriebssystem, das das Ziel eines grafischen Betriebssystems verfolgt.
+WinSysOS ( Eigentlicher Name ist WindowSystemOS ) ist ein von [mir](https://lowlevel-eu.github.io/wiki/pages/2456/index.html) erstelltes Betriebssystem, das das Ziel eines [grafischen](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") verfolgt.
 
 ### Inspiration
 
-als ich mich in FDOS ( siehe WinSysOS\Lebenslauf\FDOS\\ ) vertiefte merkte ich das es gar nicht so schwer ist ein OS zu schreiben und da ich ja auch schon damals vergeblichst versucht hatte ein Desktop ( in PureBasic ) zu schreiben machte ich einen Neuen versuch. Wolla, war ich regelrecht süchtig geworden, nochmal zu versuchen ein Betriebssystem zu programmieren.
+als ich mich in FDOS ( siehe WinSysOS\Lebenslauf\FDOS\\ ) vertiefte merkte ich das es gar nicht so schwer ist ein OS zu schreiben und da ich ja auch schon damals vergeblichst versucht hatte ein Desktop ( in PureBasic ) zu schreiben machte ich einen Neuen versuch. Wolla, war ich regelrecht süchtig geworden, nochmal zu versuchen ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zu programmieren.
 
 ### Ziele
 
@@ -161,6 +161,6 @@ FAT12 FAT32 CDFS NTFS ( in ganz ferner Zukunft )
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9958/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2457/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10842/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2457/index.html)
 
-<!-- MediaWiki page 2457; revision 9958; parent 9957; 2011-07-20T14:07:42Z -->
+<!-- MediaWiki page 2457; revision 10842; parent 9958; 2012-09-16T14:28:39Z -->
