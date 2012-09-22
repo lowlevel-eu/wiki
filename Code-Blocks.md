@@ -27,8 +27,16 @@ Code::Blocks bringt keinen Compiler mit, man muss ihn also selbst installieren. 
 - LLVM
 - ...
 
+## Betriebssystementwicklung mit Code::Blocks
+
+Zum Kompilieren eines Kernels braucht man häufig spezielle Compilerschalter, etwa "-nostdinc" o. ä. Außerdem will man oft zusätzliche Warnungen, Optimierungen oder Debugging-Informationen aktivieren. Dazu bietet Code::Blocks ein hilfreiches Interface an:
+
+In der "Management"-Spalte (meist links neben dem Editor) findet man im Reiter "Projects" die aktuell geöffneten Projekte. Mit einem Rechtsklick auf den Projektbezeichner (der Eintrag mit dem Code::Blocks-Symbol) und einem weiteren Klick auf "Build options..." findet man sich in einem neuen Fenster wieder, in dem man die Einstellungen für Compiler und Linker festlegen kann. Im Reiter "Compiler Flags" kann man beispielsweise einfach die Optionen auswählen, die man benötigt. Das Drop-Down-Menü "Categories" hilft dabei. Des weiteren kann man Optionen, die man in dieser Liste nicht findet, im Reiter "Other Options" angeben. Die Einstellungen für den Linker kann man dann unter "Linker Settings" angeben: Links die benötigten Libraries und rechts die restlichen Optionen.
+
+Nun sollte dem Kompilieren des Kernels mit Code::Blocks nichts mehr im Wege stehen - ein Klick auf das Zahnrad genügt. Den gewünschten Emulator muss man jedoch selbst starten.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10866/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2605/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10867/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2605/index.html)
 
-<!-- MediaWiki page 2605; revision 10866; parent 0; 2012-09-22T16:28:08Z -->
+<!-- MediaWiki page 2605; revision 10867; parent 10866; 2012-09-22T17:44:18Z -->
