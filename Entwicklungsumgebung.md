@@ -62,8 +62,18 @@ OK, was benötigen wir nun alles. Die folgende Liste enthält alle nützlichen L
 
 ### Sonstige, eine auf GCC-Basis
 
+## Code::Blocks
+
+[Code::Blocks](http://www.codeblocks.org) ist eine Entwicklungsumgebung für die Sprachen [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") und [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"). Die Syntaxhervorhebung beherrscht jedoch auch zahlreiche weitere Sprachen, etwa [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [D](https://github.com/lowlevel-eu/wiki/wiki/D "D"), [Ada](https://github.com/lowlevel-eu/wiki/wiki/Ada "Ada"), Haskell und viele weitere. Code::Blocks bringt standartmäßig keinen Compiler mit, es wird jedoch so gut wie jeder aktuelle Compiler unterstützt:
+
+- GNU Compiler Collection
+- Digital Mars D Compiler
+- Tiny C Compiler
+- Intel C/C++ Compiler
+- ...
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10865/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1810/index.html)
 
-<!-- MediaWiki page 1810; revision 5184; parent 5050; 2009-08-06T11:35:07Z -->
+<!-- MediaWiki page 1810; revision 10865; parent 5184; 2012-09-22T16:09:14Z -->
