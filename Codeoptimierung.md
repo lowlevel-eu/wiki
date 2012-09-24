@@ -6,22 +6,22 @@ Durch die Optimierung des Quellcodes eines Programms kann dieses schneller, effe
 
 ### Datengrößen
 
-- Die Wortgröße des Prozessors zu verwenden ist meist vorteilhaft. (32 Bit bei i386, 64 Bit bei x86-64).
+- Die Wortgröße des Prozessors zu verwenden ist meist vorteilhaft. (32 Bit bei i386, 64 Bit bei x86-64).
 
 ### Alignment
 
 - Code und Daten sollten in getrennten [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") gehalten werden.
 - Wenn man aber gezwungen ist, Code und Daten zu mischen, dann sollte man die Daten so legen, dass Sprünge nicht darüber hinweg springen müssen.
 - Selbst modifizierender Code widerspricht diesem Prinzip.
-- Sprungziele sollten am Anfang eines Paragrafs (16Byte) stehen.
+- Sprungziele sollten am Anfang eines Paragrafs (16 Byte) stehen.
 
-<!-- -->
+ 
 
-- Die CPU hat einen internen Datencache von 64KB.
+- Die CPU hat einen internen Datencache von 64 KiB.
 
-Daten, die über eine 64KB Grenze verteilt sind, müssen dann zweimal gecacht werden, was die Performance mindert. Somit sollten Daten ihrer Größe entsprechen ausgerichtet werden, also z.B. DWORDs auch nur am Anfang der 4 Byte Grenzen.
+Daten, die über eine 64 KiB Grenze verteilt sind, müssen dann zweimal gecacht werden, was die Performance mindert. Somit sollten Daten ihrer Größe entsprechen ausgerichtet werden, also z. B. DWORDs auch nur am Anfang der 4 Byte Grenzen.
 
-- Ebenso sollte der [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") 64KB aligned sein, und die Größe seiner Elemente gleich bleiben.
+- Ebenso sollte der [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") 64 KiB aligned sein, und die Größe seiner Elemente gleich bleiben.
 
 ### Sprünge und Schleifen
 
@@ -44,7 +44,7 @@ Auch Funktionsaufrufe fallen unter Sprünge.
 
 - Je weniger Sprünge, desto effektiver kann der Code gecacht werden.
 - Die CPU kann bis zu 16 verschachtelte Funktionsaufrufe cachen, mehr als 16 Verschachtelungen verringern die Performance.
-- Die CPU kann Befehle am besten cachen, die weniger als 8 Byte lang sind. Außerdem sollten dabei WORD-Konstanten vermieden werden. Komplexe Befehle wie sysenter oder leave
+- Die CPU kann Befehle am besten cachen, die weniger als 8 Byte lang sind. Außerdem sollten dabei WORD-Konstanten vermieden werden. Komplexe Befehle wie sysenter oder leave
 - Alignments sollten immer eingehalten werden!
 
 ## Assembler
@@ -84,7 +84,7 @@ Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"
 - -Ox (x ist der Grad der Optimierung; 3 ist die höchste Stufe)
 - -Os (s ist keine Variable, sondern wird genau so gesetzt!)
 
-'-Os' veranlasst den Compiler, nicht unbedingt performanten Code, aber auf jeden Fall kleine Programme zu erzeugen („size optimisation“). 'Ox' dagegen führt dazu, dass verschiedene Optimierungen zur Geschwindigkeitsverbesserung eingeschaltet werden. '-O3' ist die höchste Stufe, führt aber bei einigen Programmen zu Problemen (z. B. empfiehlt Gentoo, -O2 und nicht -O3 zum Kompilieren des Systems zu nutzen). Das sollte jeder für seine Software selbst ausprobieren.
+'-Os' veranlasst den Compiler, nicht unbedingt performanten Code, aber auf jeden Fall kleine Programme zu erzeugen („size optimisation“). 'Ox' dagegen führt dazu, dass verschiedene Optimierungen zur Geschwindigkeitsverbesserung eingeschaltet werden. '-O3' ist die höchste Stufe, führt aber bei einigen Programmen zu Problemen (z. B. empfiehlt Gentoo, -O2 und nicht -O3 zum Kompilieren des Systems zu nutzen). Das sollte jeder für seine Software selbst ausprobieren.
 
 Übrigens kann man mit NASM die Codeoptimierung mit '-Ox' (hier ist x keine Variable!) einschalten. Dies ist jedoch nicht nötig, da das Flag standardmäßig aktiviert ist. Jedoch bleibt NASM ein Assembler, und so ist es dennoch sehr wichtig, die oben beschriebenen Optimierungsvorschläge auch zu nutzen.
 
@@ -96,7 +96,7 @@ Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"
 
 ### Hinweise
 
-Oftmals gibt es unter anderem im Lowlevel-Forum, aber auch an anderen feinen Orten hitzige Diskussionen darüber, ob man selber Code optimieren sollte oder dies dem Compiler überlassen sollte. Generell gilt: Man muss nicht stundenlang über dem vom GCC generierten Code hängen und diesen bis zum Geht-nicht-mehr optimieren. Moderne Compiler wie der GCC optimieren sehr gut, der Programmierer kann da wenig noch von Hand optimieren. Es gibt natürlich auch Ausnahmen, wo eigene Optimierungen besser sind als die vom Compiler generierten. Diese Thematik tritt sehr oft bei String-Funktionen auf, wo viele Enthusiasten gerne eine handgeschriebene und hand"optimierte" Assembler-Version der Funktionen dem z.B. C-Äquivalent vorziehen. Hier hat sich oft gezeigt, dass der vom GCC optimierte Assembler-Code gleich oder sogar schneller ist als der händisch geschriebene und optimierte Assembler-Code.
+Oftmals gibt es unter anderem im Lowlevel-Forum, aber auch an anderen feinen Orten hitzige Diskussionen darüber, ob man selber Code optimieren sollte oder dies dem Compiler überlassen sollte. Generell gilt: Man muss nicht stundenlang über dem vom GCC generierten Code hängen und diesen bis zum Geht-nicht-mehr optimieren. Moderne Compiler wie der GCC optimieren sehr gut, der Programmierer kann da wenig noch von Hand optimieren. Es gibt natürlich auch Ausnahmen, wo eigene Optimierungen besser sind als die vom Compiler generierten. Diese Thematik tritt sehr oft bei String-Funktionen auf, wo viele Enthusiasten gerne eine handgeschriebene und hand"optimierte" Assembler-Version der Funktionen dem z. B. C-Äquivalent vorziehen. Hier hat sich oft gezeigt, dass der vom GCC optimierte Assembler-Code gleich oder sogar schneller ist als der händisch geschriebene und optimierte Assembler-Code.
 
 ## siehe auch
 
@@ -109,6 +109,6 @@ Oftmals gibt es unter anderem im Lowlevel-Forum, aber auch an anderen feinen Ort
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10766/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10879/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 10766; parent 10765; 2012-08-28T14:18:47Z -->
+<!-- MediaWiki page 2187; revision 10879; parent 10766; 2012-09-24T16:17:26Z -->
