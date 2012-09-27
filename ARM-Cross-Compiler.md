@@ -8,6 +8,14 @@ Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren ba
 
 Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.22.tar.bz2) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.7.1/gcc-4.7.1.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 06. August 2012) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
+**HINWEIS** ab gcc-4.7 müssen Änderungen bzgl des TARGET beachtet werden. Siehe dazu [\[2\]](http://gcc.gnu.org/gcc-4.7/changes.html):
+
+    $The obsolete ports with alternatives are:
+    $    arm*-*-rtems (use arm*-*-rtemseabi)
+    $    arm*-*-linux-gnu (use arm*-*-linux-gnueabi)
+    $    arm*-*-elf (use arm*-*-eabi)
+    $    arm*-*-uclinux* (use arm*-*-uclinux*eabi)
+
 Es werden nun ein paar Variablen erstellt:
 
     $ export PREFIX=/usr/cross/arm
@@ -73,6 +81,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10660/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10892/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10660; parent 10534; 2012-08-06T08:45:52Z -->
+<!-- MediaWiki page 2099; revision 10892; parent 10660; 2012-09-27T14:02:10Z -->
