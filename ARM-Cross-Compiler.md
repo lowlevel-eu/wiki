@@ -31,10 +31,12 @@ Sofern nicht schon geschehen, sollte man jetzt das binutils-Paket entpacken, in 
 
     $ ../cross-arm-binutils/configure --target=$TARGET --prefix=$PREFIX
 
-Nach erfolgreichem configure können die binutils nun gebaut werden mittels
+Nach erfolgreichem configure können die binutils nun gebaut werden mittels:
 
-    $ make all
+    $ make -j4 all
     $ make install
+
+Hinweis: Da wir schon 2012 haben und die Mehrheit aller PCs mindestens einen Dualcore-Prozessor verbaut hat, kann man den Buildvorgang beschleunigen, indem man die Option **-jX** make übergibt, wobei X für die Anzahl von Threads pro Core steht, bei einem Dualcore-Prozessor also pro Core zwei Threads.
 
 ## gcc bauen
 
@@ -44,12 +46,12 @@ Nun geht's an den gcc: Hier gilt auch wieder, sofern nicht schon geschehen, den 
 
 Dann ruft man configure wie folgt auf:
 
-    $ ../cross-arm-gcc/gcc-4.6.0/configure --target=$TARGET 
+    $ ../cross-arm-gcc/gcc-4.7.1/configure --target=$TARGET 
                   --prefix=$PREFIX --enable-languages=c --without-headers
 
 Nach erfolgreichem configure kann der gcc mittels
 
-    $ make all-gcc
+    $ make -j4 all-gcc
     $ make install-gcc
 
 gebaut und installiert werden.
@@ -83,6 +85,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10893/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10893; parent 10892; 2012-09-28T09:08:50Z -->
+<!-- MediaWiki page 2099; revision 10894; parent 10893; 2012-09-28T09:10:49Z -->
