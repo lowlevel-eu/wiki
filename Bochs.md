@@ -23,12 +23,12 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 - einen (oder mehrere) 386-, 486-, Pentium-, Pentium-Pro- oder AMD64-Prozessor(en)
 - Standardgeräte: [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"), [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [I/O-APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")-Controller, serielle und parallele Schnittstelle
-- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"): NE2000, Intel 82540EM
+- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"): NE2000, Intel 82540EM (e1000)
 - PS/2-Maus und -Tastatur
 - CD-ROM-Laufwerk
 - Festplatte
 - [Diskettenlaufwerk](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
-- [Soundblaster 16](https://lowlevel-eu.github.io/wiki/pages/1827/index.html "Kategorie:Soundkarte")
+- [Soundkarte](https://lowlevel-eu.github.io/wiki/pages/1827/index.html "Kategorie:Soundkarte"): Soundblaster 16, ES1370
 - eingeschränkte Unterstützung für eine [Cirrus CLGD 5446](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic "Cirrus Logic") PCI-VGA-Karte
 - eingeschränkte Unterstützung von [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")
 
@@ -42,6 +42,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10897/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 10896; parent 10671; 2012-09-30T23:52:53Z -->
+<!-- MediaWiki page 1538; revision 10897; parent 10896; 2012-09-30T23:57:21Z -->
