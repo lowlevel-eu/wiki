@@ -4,7 +4,7 @@
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | Bochs |
 | Entwickler: | The Bochs Project |
-| Akt. Version: | 2.5.1 (06.01.2012) |
+| Akt. Version: | 2.6 (02.09.2012) |
 | Lizenz: | LGPL |
 | Betriebssystem(e): | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") und andere |
 | Virtualisiertes System |  |
@@ -23,7 +23,7 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 - einen (oder mehrere) 386-, 486-, Pentium-, Pentium-Pro- oder AMD64-Prozessor(en)
 - Standardgeräte: [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS"), [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [I/O-APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC"), [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")-Controller, serielle und parallele Schnittstelle
-- NE2000-[Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte")
+- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"): NE2000, Intel 82540EM
 - PS/2-Maus und -Tastatur
 - CD-ROM-Laufwerk
 - Festplatte
@@ -42,6 +42,6 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10671/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10896/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1538/index.html)
 
-<!-- MediaWiki page 1538; revision 10671; parent 10665; 2012-08-11T20:46:52Z -->
+<!-- MediaWiki page 1538; revision 10896; parent 10671; 2012-09-30T23:52:53Z -->
