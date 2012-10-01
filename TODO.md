@@ -118,6 +118,7 @@ Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/p
 
 siehe [Diskussion:TODO#Andere Architekturen](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#Andere_Architekturen "Diskussion:TODO")
 
+- Wie man die Hardware, die von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") und [bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") unterstützt wird, anspricht. Die Schnittmenge enthält unter anderem e1000, Soundblaster 16 und ES1370.
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -128,6 +129,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10830/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10830; parent 10732; 2012-09-16T13:33:23Z -->
+<!-- MediaWiki page 1518; revision 10898; parent 10830; 2012-10-01T00:00:11Z -->
