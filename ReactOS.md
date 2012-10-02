@@ -35,7 +35,7 @@ Da sich ReactOS noch in einer relativ frühen Version befindet, ist eine 100%ige
 
 ## Audit
 
-Nachdem vermehrt Hinweise aufkamen, die besagten, dass Teile des Codes durch Reverse Engineering entstanden sind, wurde der Audit-Prozess eingeleitet. Dabei soll der komplette Source Code überprüft und ggf. ausgebessert werden, um mögliche rechtliche Probleme zu vermeiden. Version 0.4 soll nur geprüften Code beinhalten.
+Nachdem vermehrt Hinweise aufkamen, die besagten, dass Teile des Codes durch Reverse Engineering entstanden sind, wurde der Audit-Prozess eingeleitet. Dabei soll der komplette Source Code überprüft und ggf. ausgebessert werden, um mögliche rechtliche Probleme zu vermeiden. Version 0.4 sollte nur geprüften Code beinhalten.
 
 Der Audit-Prozess wurde im Dezember 2007 erfolgreich abgeschlossen.
 
@@ -69,6 +69,6 @@ Der Audit-Prozess wurde im Dezember 2007 erfolgreich abgeschlossen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9642/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10899/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1421/index.html)
 
-<!-- MediaWiki page 1421; revision 9642; parent 9047; 2011-03-30T20:57:08Z -->
+<!-- MediaWiki page 1421; revision 10899; parent 9642; 2012-10-02T18:45:27Z -->
