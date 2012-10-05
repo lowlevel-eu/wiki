@@ -6,7 +6,7 @@ LostIO ist der Name der Hauptschnittstelle, die LOST den Treibern zur Verfügung
 
 ## Aufbau
 
-Also, damit wir das gleich geklärt haben: Bei Fragen wendet ihr euch am besten an den \#lost Kanal im euIRC (Server: irc.euirc.net, Kanal: \#lost). Alternativ könnt ihr auch hier im Forum in der Lost-Kategorie fragen. Falls Bugs gefunden werden, sollten sie über unser [Bugzilla](http://lost.famkaufmann.info/bugzilla) gemeldet werden.
+Also, damit wir das gleich geklärt haben: Bei Fragen wendet ihr euch am besten an den \#lost Kanal im euIRC (Server: irc.euirc.net, Kanal: \#lost). Alternativ könnt ihr auch hier im Forum in der Lost-Kategorie fragen. Falls Bugs gefunden werden, sollten sie über unser [Bugzilla](https://bugs.tyndur.org) gemeldet werden.
 
 LostIO ist wie oben schon gesagt eine abstrakte Schnittstelle für Treiber. Intern basiert sie auf RPC ([Remote Procedure Call](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") = das Aufrufen von Funktionen in anderen Prozessen), was sie sehr flexibel einsetzbar macht (Zum Beispiel können damit später (hoffentlich) Treiber auf anderen Computern angesprochen werden).
 
@@ -282,6 +282,6 @@ int floppy_seek_handler(lostio_filehandle_t\* filehandle , int offset, int origi
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7824/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10903/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1498/index.html)
 
-<!-- MediaWiki page 1498; revision 7824; parent 7799; 2010-07-13T08:11:51Z -->
+<!-- MediaWiki page 1498; revision 10903; parent 7824; 2012-10-05T15:18:58Z -->
