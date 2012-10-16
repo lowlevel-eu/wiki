@@ -22,7 +22,11 @@ Der **Netwide Assembler** oder kurz **NASM** ist ein unter der 2-Klausel-BSD ste
 
 ## NASM in der Betriebssystementwicklung
 
-Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und hat somit eine Art Vormachtstellung eingenommen.
+Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und hat (neben [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM")) somit eine Art Vormachtstellung eingenommen. Das liegt vermutlich daran, dass er auf vielen Plattformen läuft (er läuft sogar auf einigen nicht-[x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessoren, auch wenn er dafür keine Programme erzeugen kann) und die wichtigsten Formate unterstützt. Womit wir auch schon beim nächsten Punkt wären:
+
+## Unterstützte Formate
+
+Der Netwide Assembler kann nur Objektdateien erzeugen, keine "fertigen" ausführbaren Dateien. Man erhält eine komplette Liste mit folgendem Befehl: ` $ nasm -hf `
 
 ## Weblinks
 
@@ -30,6 +34,6 @@ Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9846/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10904/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1909/index.html)
 
-<!-- MediaWiki page 1909; revision 9846; parent 9725; 2011-06-11T20:58:23Z -->
+<!-- MediaWiki page 1909; revision 10904; parent 9846; 2012-10-16T19:02:18Z -->
