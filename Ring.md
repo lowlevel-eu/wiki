@@ -18,12 +18,16 @@ Das Prinzip der "Ringe" wurde mit dem [Protected Mode](https://github.com/lowlev
 
 In anderen Architekturen gibt es andere Anzahlen von Ringen. Im Honeywell 6180 gibt es beispielsweise 8, in moderneren Architekturen oftmals nur zwei Ringe.
 
+## Aufteilung
+
+Die übliche Aufteilung der Ringe lautet wie folgt: Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") läuft im Ring 0, der Rest im Ring 3 (siehe auch [Userspace](https://github.com/lowlevel-eu/wiki/wiki/Userspace "Userspace")). Die beiden anderen Ringe werden kaum noch genutzt, was wohl auch der Grund dafür ist, dass andere Architekturen gar auf sie verzichten und nur zwei Ringe einführen (siehe [oben](https://github.com/lowlevel-eu/wiki/wiki/Ring#ringe-in-anderen-architekturen "Ring")). Lediglich ein Verwendungszweck wird heute noch genutzt: Beim Virtualisieren von Betriebssystemen wird häufig der eigentliche Kernel in den Ring 1 verschoben, um dem Virtualisierungsprogramm zu erlauben, sich selbst als "Aufpasser" in den Ring 0 zu setzen.
+
 ## Siehe auch
 
 [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10882/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1990/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10905/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1990/index.html)
 
-<!-- MediaWiki page 1990; revision 10882; parent 10881; 2012-09-24T21:44:42Z -->
+<!-- MediaWiki page 1990; revision 10905; parent 10882; 2012-10-16T19:19:10Z -->
