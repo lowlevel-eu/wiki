@@ -71,6 +71,8 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 
 Bereits seit einiger Zeit gibt es keine offiziellen Binärpakete von QEMU mehr, auch nicht für Windows. Aus diesem Grund werden unter Windows oft deutlich veraltete qemu-Versionen verwendet, deren Fehler gerade bei der Betriebssystementwicklung gelegentlich auffallen. Einigermaßen aktuelle inoffizielle Builds für Windows sind zum Beispiel auf <http://qemu.weilnetz.de/> zu finden.
 
+Ein Build von QEMU 1.2.0 ist ebenfalls auf <http://improved-madness.de/venom/qemu_1.2.0.7z> zu finden.
+
 ## QEMU unter Windows kompilieren
 
 Um QEMU unter Windows zu kompilieren, werden MinGW und eine Reihe Bibliotheken, die man sich selbst zusammensuchen muss, benötigt:
@@ -110,6 +112,6 @@ Hinweise:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10815/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10815; parent 10773; 2012-09-12T21:46:22Z -->
+<!-- MediaWiki page 1505; revision 10906; parent 10815; 2012-10-19T21:58:54Z -->
