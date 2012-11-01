@@ -1,6 +1,6 @@
 # Address Resolution Protocol
 
-Das Address Resolution Protocol (ARP) dient dazu, Netzwerkadressen zu physikalischen Adressen (bzw. Hardwareadressen) aufzulösen. Es wird fast ausschließlich in [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet") verwendet, um [IPv4](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol")-Adressen zu MAC-Adressen aufzulösen. Für IPv6 wird ARP nicht mehr verwendet, dort werden die neuen "*Neighbor Discovery*"-Mechanismen benutzt.
+Das Address Resolution Protocol (ARP) dient dazu, Netzwerkadressen zu physikalischen Adressen (bzw. Hardwareadressen) aufzulösen. Es wird fast ausschließlich in [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet") verwendet, um [IPv4](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol")-Adressen zu MAC-Adressen aufzulösen. Für [IPv6](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol") wird ARP nicht mehr verwendet, dort werden die neuen "*Neighbor Discovery*"-Mechanismen benutzt.
 
 ## Ablauf
 
@@ -76,6 +76,6 @@ Im Typfeld des Ethernetpaketes muss übrigens 0x0806 für ARP eingetragen werden
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10911/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1937/index.html)
 
-<!-- MediaWiki page 1937; revision 9473; parent 9459; 2011-02-06T15:43:57Z -->
+<!-- MediaWiki page 1937; revision 10911; parent 9473; 2012-11-01T11:41:15Z -->
