@@ -109,7 +109,7 @@ Die Exception wird ausgelöst, wenn die CPU beim Taskswitch auf ein ungültiges 
 
 ### Segment not Present
 
-Diese Exception wird ausgelöst, wenn die CPU ein Segmentregister (DS, ES, FS, GS, CS) mit einem ungültigen Wert füllt. Ungültige Werte meint hierbei einen Deskriptor, der als nicht aktiv oder in irgendeiner anderen Form ungültig ist. Beim Laden des SS Register tritt ein Stack Fault auf.
+Diese Exception wird ausgelöst, wenn die CPU ein Segmentregister (DS, ES, FS, GS, CS) mit einem ungültigen Wert füllt. Ungültige Werte meint hierbei einen Deskriptor, der nicht aktiv oder in irgendeiner anderen Form ungültig ist. Beim Laden des SS-Registers tritt ein Stack Fault auf.
 
 ### Stack Fault
 
@@ -170,6 +170,6 @@ Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10652/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 10652; parent 9731; 2012-07-17T16:00:15Z -->
+<!-- MediaWiki page 1824; revision 10918; parent 10652; 2012-11-01T14:49:34Z -->
