@@ -12,7 +12,7 @@ Das Flimmern tritt übrigens auch bei neueren Bildschirmen auf, wenn man die Pix
 
 ## Beispiel
 
-Für dieses Beispiel wird die Allegro-Bibliothek verwendet. Man findet sie \[alleg.sourceforge.net auf Sourceforge\]. Hier wird die Version 4 verwendet, da sie eine übersichtlichere API bietet als die aktuelle Version 5.
+Für dieses Beispiel wird die Allegro-Bibliothek verwendet. Man findet sie [auf Sourceforge](http://alleg.sourceforge.net). Hier wird die Version 4 verwendet, da sie eine übersichtlichere API bietet als die aktuelle Version 5.
 
 \<c\>
 
@@ -113,6 +113,6 @@ Nun sollte das Bild auf ein Mal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 10915; parent 10914; 2012-11-01T12:24:11Z -->
+<!-- MediaWiki page 2600; revision 10916; parent 10915; 2012-11-01T12:25:20Z -->
