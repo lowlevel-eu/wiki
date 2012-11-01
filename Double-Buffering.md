@@ -1,9 +1,5 @@
 # Double Buffering
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
-
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
-
 Double Buffering bezeichnet eine Methode zur Darstellung von Grafiken, bei der neben dem Bildschirmspeicher auch noch ein zweiter Puffer genutzt wird.
 
 Bei Röhrenbildschirmen wird das Bild durch einen Elektronenstrahl, der auf eine spezielle Oberfläche trifft, die dadurch zum Leuchten angeregt wird, dargestellt. Wenn sich nun das Bild schneller ändert, als sich der Strahl bewegt, entsteht ein unerwünschtes Flimmern. Das kann verhindert werden, indem Veränderungen der dargestellten Grafik erst in einem zweiten Puffer erfolgen, der dann als ganzes in den Videospeicher kopiert wird. Dadurch entsteht ein deutlich flüssigerer Bildlauf.
@@ -113,6 +109,6 @@ Nun sollte das Bild auf ein Mal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10916/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 10916; parent 10915; 2012-11-01T12:25:20Z -->
+<!-- MediaWiki page 2600; revision 10917; parent 10916; 2012-11-01T12:27:26Z -->
