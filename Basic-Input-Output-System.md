@@ -19,9 +19,10 @@ Allerdings ist das BIOS (zumindest im [Real Mode](https://github.com/lowlevel-eu
 ## Weblinks
 
 - [BIOS Central](http://bioscentral.com/) (*englisch*)
+- [Die Interruptliste von Ralph Brown](http://ctyme.com/intr/int.htm) (*englisch*)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9554/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10913/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 9554; parent 7667; 2011-02-16T14:08:39Z -->
+<!-- MediaWiki page 1616; revision 10913; parent 9554; 2012-11-01T11:47:55Z -->
