@@ -28,6 +28,8 @@ int main(int argc, char \*\*argv) {
 
        clear_to_color(screen, makecol(0, 0, 0));
 
+       return 0;
+
 } \</c\>
 
 Keine Angst, das war nur die Initialisierung der Allegro-Bibliothek und des Fensters, das wir verwenden wollen. Danach wird es einfacher.
@@ -50,20 +52,67 @@ int main(int argc, char \*\*argv) {
 
        clear_to_color(screen, makecol(0, 0, 0));
 
-       int i = 0,k = 0;
+       int i = 0, k = 0;
 
        for(i = 0; i < 256; ++i)
        {
            for(k = 0; k < 256; ++k)
            {
+               //screen ist der Bildschirm, makecol bildet eine Farbe aus dem angegebenen RGB-Wert
                putpixel(screen, i, k, makecol(i, k, i));
            }
        }
 
+       //Auf einen Tastendruck warten, damit das Bild nicht gleich verschwindet
+       readkey();
+
+       return 0;
+
 } \</c\>
+
+So weit, so gut. Wenn man dieses Programm ausprobiert (dazu braucht man Allegro und man muss mit dem Schalter -lalleg kompilieren), kann man sehen, wie der Farbverlauf Spalte für Spalte aufgebaut wird. Ab und zu ein ganz netter Anblick, aber für produktives Arbeiten nicht gerade hilfreich.
+
+Nun das gleiche Beispiel mit einem zweiten Puffer (Bilder werden in Allegro als "BITMAP" gespeichert): \<c\>
+
+1.  include \<allegro.h\>
+
+int main(int argc, char \*\*argv) {
+
+       allegro_init();
+       install_keyboard();
+
+       set_color_depth(32);
+       set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
+
+       clear_to_color(screen, makecol(0, 0, 0));
+
+       int i = 0, k = 0;
+
+       //Puffer für das Bild erstellen
+       BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+
+       for(i = 0; i < 256; ++i)
+       {
+           for(k = 0; k < 256; ++k)
+           {
+               //Nun nicht mehr auf den Bildschirm, sondern in den Puffer zeichnen
+               putpixel(buffer, i, k, makecol(i, k, i));
+           }
+       }
+
+       //Den Puffer darstellen
+       blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+
+       readkey();
+
+       return 0;
+
+} \</c\>
+
+Nun sollte das Bild auf ein Mal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10914/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10915/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 10914; parent 10819; 2012-11-01T12:11:18Z -->
+<!-- MediaWiki page 2600; revision 10915; parent 10914; 2012-11-01T12:24:11Z -->
