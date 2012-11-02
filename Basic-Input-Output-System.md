@@ -14,7 +14,9 @@ Das BIOS ist das „Ur-Programm“ eines x86-Rechners (im Nachfolgendem nur noch
 
 Nach dem POST versucht es von einer Liste von Laufwerken einen Bootloader zu laden. Dieser wird an Adresse 0x7C00 geladen und dann ausgeführt; Ab da hat das Betriebssystem die volle Kontrolle über den PC.
 
-Allerdings ist das BIOS (zumindest im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")) noch immer aktiv: Es stellt eine Menge an Interrupts zur Kommunikation mit den verschiedenen Peripheriegeräten bereit.
+Dennoch bleibt das BIOS im Hintergrund aktiv: Solange sich der Kernel des aktiven Betriebssystems im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") befindet, kann er durch Interrupts, ähnlich denen bei [DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "DOS") und [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), auf Funktionen des BIOS zurückgreifen. Dadurch kann beispielsweise ein einfacher Bootloader mit Hilfe des BIOS den Kernel laden, indem er den passenden Interrupt aufruft und somit den Kernel lädt, und das alles ohne Treiber im Bootloader. *In diesem Fall bräuchte man den Interrupt Nr. 13 mit AH = 02 "DISK - READ SECTOR(S) INTO MEMORY".* Weitere Funktionen sind etwa das Umschalten zwischen verschiedenen Grafikmodi oder auch das Auslesen der Größe des Arbeitsspeichers, was ohne das BIOS überhaupt nicht möglich wäre.
+
+Diese Funktionalität geht allerdings verloren, wenn man in den [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") oder gar in den [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") schaltet. Wenn man trotzdem noch eine BIOS-Funktion benötigt, kann man beispielsweise den [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") einsetzen. Da die Treiber des BIOS jedoch in der Regel ziemlich langsam sind, sollte man die entsprechenden Treiber im Kernel implementieren, soweit dies möglich ist (z.B. [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")-Treiber).
 
 ## Weblinks
 
@@ -23,6 +25,6 @@ Allerdings ist das BIOS (zumindest im [Real Mode](https://github.com/lowlevel-eu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10924/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 10924; parent 10913; 2012-11-02T08:31:04Z -->
+<!-- MediaWiki page 1616; revision 10925; parent 10924; 2012-11-02T10:31:20Z -->
