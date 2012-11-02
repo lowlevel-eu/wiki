@@ -105,10 +105,10 @@ int main(int argc, char \*\*argv) {
 
 } \</c\>
 
-Nun sollte das Bild auf ein Mal erscheinen.
+Nun sollte das Bild auf einmal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 10917; parent 10916; 2012-11-01T12:27:26Z -->
+<!-- MediaWiki page 2600; revision 10923; parent 10917; 2012-11-02T08:29:55Z -->
