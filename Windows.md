@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | Microsoft |
-| Akt. Version: | NT 6.1 (= 7) |
+| Akt. Version: | NT 6.2 (= 8) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
 | Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), Alpha (NT 4) |
@@ -47,6 +47,6 @@ Bei der API wird unterschieden zwischen der „nativen NT-API“, die teilweise 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9785/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10931/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1558/index.html)
 
-<!-- MediaWiki page 1558; revision 9785; parent 9036; 2011-05-13T19:51:44Z -->
+<!-- MediaWiki page 1558; revision 10931; parent 9785; 2012-11-04T14:54:51Z -->
