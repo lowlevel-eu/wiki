@@ -8,8 +8,8 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
   
 Nun da ich mich seit einiger Zeit damit beschäftige, auf meinem USB-Stick [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") zu installieren möchte ich hier eine Schrit für Schritt Anleitung geben, wie man GRUB installiert.  
-Der Stick sowie das BIOS/EFI müssen allerdings einige Bedingungen erfüllen. Das heißt, es geht mit dem USB-Stick, auf dem "Bootable Device" o.ä. darauf steht. Dies steht nicht überall, weil nicht jeder Hersteller sich an die Spezifikation für das verhalten der Sticks beim booten hält. Genauere Informationen sind [hier](http://www.usb.org/developers/devclass_docs/usb_msc_boot_1.0.pdf) zu finden. Es kann aber durchaus sein, dass man von dem Stick booten kann, obwohl dieser nicht als Bootable gekennzeichnet ist.  
-Des Weiteren muss im [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")/EFI die Möglichkeit gegeben sein, ein USB Speichermedium in der Bootreihenfolge auszuwählen. Dies ist, falls es unterstützt wird zumeist als USB-HDD angegeben. Ist nur ein USB-FDD zu finden, so funktioniert dies nicht, da USB-FDD ein Eintrag für externe USB-Diskettenlaufwerke ist.
+Der Stick sowie das BIOS/EFI müssen allerdings einige Bedingungen erfüllen. Das heißt, es geht mit dem USB-Stick, auf dem "Bootable Device" o.ä. darauf steht. Dies steht nicht überall, weil nicht jeder Hersteller sich an die Spezifikation für das Verhalten der Sticks beim Booten hält. Genauere Informationen sind [hier](http://www.usb.org/developers/devclass_docs/usb_msc_boot_1.0.pdf) zu finden. Es kann aber durchaus sein, dass man von dem Stick booten kann, obwohl dieser nicht als bootable gekennzeichnet ist.  
+Des Weiteren muss im [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")/EFI die Möglichkeit gegeben sein, ein USB Speichermedium in der Bootreihenfolge auszuwählen. Dies ist, falls es unterstützt wird, zumeist als USB-HDD angegeben. Ist nur ein USB-FDD zu finden, so funktioniert dies nicht, da USB-FDD ein Eintrag für externe USB-Diskettenlaufwerke ist.
 
 ## Einen USB Stick mit GRUB herstellen
 
@@ -147,6 +147,6 @@ Die einzige Vorraussetzung ist, dass das BIOS von einer USB-Festplatte booten k�
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10154/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10948/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1737/index.html)
 
-<!-- MediaWiki page 1737; revision 10154; parent 9539; 2011-09-23T17:12:17Z -->
+<!-- MediaWiki page 1737; revision 10948; parent 10154; 2012-11-14T10:35:24Z -->
