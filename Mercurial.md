@@ -1,10 +1,12 @@
 # Mercurial
 
-Mercurial ist ein Version Control System, das wie die meisten in erster Linie über die Shell gesteuert wird. Es ist nahezu vollständig in Python geschrieben, so dass quasi problemlos auf allen Plattformen mit Python Umgebung einsatzfähig ist. Dar Name des Kommandozeilentools lautet *hg* (chem. Elementsymbol für Quecksilber; engl. Mercury). Es gibt aber auch eine Explorererweiterung (TortoiseHg) mit deren Hilfe Mercurial auch über das Kontextmenü gesteuert werden kann. Außerdem existieren eine Reihe IDEs, wie zum Beispiel NetBeans, Eclipse und KDevelop, die Mercurial von sich aus unterstützen oder für die Plugins existieren, die diese Unterstützung nachrüsten.
+Mercurial ist eine dezentral organisierters VCS, das wie die meisten anderen in erster Linie über die Shell gesteuert wird. Es ist nahezu vollständig in Python geschrieben (mit Ausnahme des in C implementierten diff), sodass es theoretisch problemlos auf allen Plattformen mit Python-Umgebung einsatzfähig ist. Dar Name des Kommandozeilentools lautet *hg* (chem. Elementsymbol für Quecksilber; engl. : Mercury). Für Linux und Windows gibt es das Tool \[tortoisehg.bitbucket.org/ TortoiseHg\], welches eine grafische Oberfläche für alle Operationen plus weitere Features wie das "Shelf" ("Regal", um Changes zwischen verschiedenen Commits/Merging-Vorgängen zwischenspeichern zu können) bereitstellen und sich unter Windows auch in das Kontextmenü des Explorers integrieren.
+
+Außerdem existieren eine Reihe IDEs, wie zum Beispiel NetBeans, Eclipse und KDevelop, die Mercurial out-of-the-box oder per Plugins Unterstützen.
 
 ## Eigenschaften
 
-Mercurial gehört zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d. h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen erheblichen Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
+Mercurial gehört wie z.B. [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") zu der Gruppe der dezentral organisierten [VCS](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), d.h. es benötigt keinen zentralen Server, um die Repositories mehrerer Entwickler miteinander zu synchronisieren. Damit erreicht es einen erheblichen Geschwindigkeitsvorteil gegenüber zentral organisierten VCS, wie SVN und CVS.
 
 ### Besonderheiten
 
@@ -12,7 +14,7 @@ Eine Besonderheit an Mercurial ist, dass alle Befehle sich auf das Wurzelverzeic
 
 ## Konfiguration
 
-Mercurial sucht Konfigurationsdateien unter anderem in *\$HOME/.hgrc* und *\$(hg root)/.hg/hgrc*. Die folgenden Konfigurationsdatei lässt unter anderem die Pager Extension laden, so dass die Ausgabe von Ausgewählte Befehlen durch den angegeben Pager geleitet wird. Zudem wird die *diff*-Ausgabe auf das erweiterte git-Format umgestellt, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
+Mercurial sucht Konfigurationsdateien unter anderem in *\$HOME/.hgrc* und *\$(hg root)/.hg/hgrc*. Die folgenden Konfigurationsdatei lässt unter anderem die *Pager Extension* laden, so dass die Ausgabe von ausgewählten Befehlen durch den angegeben Pager geleitet wird. Zudem wird die *diff*-Ausgabe auf das erweiterte git-Format umgestellt, was sehr empfehlenswert ist solange man nicht auf die Kompatibilität zu uralten Unix-Tools angewiesen ist.
 
     [ui]
       username = Max Mustermann <max.mustermann@example.com>
@@ -123,6 +125,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10956/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 10162; parent 8344; 2011-09-30T18:24:53Z -->
+<!-- MediaWiki page 1891; revision 10956; parent 10162; 2012-12-02T18:48:08Z -->
