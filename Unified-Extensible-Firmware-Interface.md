@@ -2,7 +2,7 @@
 
 **Unified Extensible Firmware Interface** (oder kurz **UEFI**) ist der Nachfolger des [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), welches nach drei Jahrzehnten leicht veraltet war. So kann man mit dem typischen BIOS keine Festplatten mit sehr großer Speicherkapazität von über 2 TB addressieren, was mit dem UEFI möglich wird.
 
-Das UEFI ist der direkte Nachfolger von EFI (*Extensible Firmware Interface*). Seit 2005 existiert das Unified EFI Forum, in dem zahlreiche Unternehmen aus der IT-Branche vertreten sind. So wird der Standart nicht mehr ausschließlich von Intel festgelegt.
+Das UEFI ist der direkte Nachfolger von EFI (*Extensible Firmware Interface*). Seit 2005 existiert das Unified EFI Forum, in dem zahlreiche Unternehmen aus der IT-Branche vertreten sind. So wird der Standard nicht mehr ausschließlich von Intel festgelegt.
 
 ## Vorteile gegenüber dem BIOS
 
@@ -24,6 +24,6 @@ Da UEFI noch nicht besonders weit verbreitet ist, konnten noch nicht allzu viele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10937/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10958/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
 
-<!-- MediaWiki page 2612; revision 10937; parent 0; 2012-11-06T15:49:04Z -->
+<!-- MediaWiki page 2612; revision 10958; parent 10937; 2012-12-03T09:50:59Z -->
