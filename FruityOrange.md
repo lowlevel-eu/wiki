@@ -24,7 +24,8 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 - printf, panic, debug
 - ([GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
-- [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
+- [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap")
+- kaputter [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
 
 ### Treiber
 
@@ -32,6 +33,6 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10768/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10959/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 10768; parent 0; 2012-08-31T16:19:51Z -->
+<!-- MediaWiki page 2594; revision 10959; parent 10768; 2012-12-07T17:02:10Z -->
