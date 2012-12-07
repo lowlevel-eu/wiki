@@ -53,8 +53,8 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 | 3 | Base | 8-15 |
 | 4 | Base | 16-23 |
 | 5 | Accessbyte | 0-7 (vollständig) |
-| 6 | Flags | 0-3 (vollständig) |
 | 6 | Limit | 16-19 |
+| 6 | Flags | 0-3 (vollständig) |
 | 7 | Base | 24-31 |
 
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8272a5b7d823c7ab1d5e.png" width="580" height="88" alt="SegmentDescriptor.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8272a5b7d823c7ab1d5e.png)
@@ -148,6 +148,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10767/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 10767; parent 10633; 2012-08-30T18:23:48Z -->
+<!-- MediaWiki page 1661; revision 10961; parent 10767; 2012-12-07T20:15:27Z -->
