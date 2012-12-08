@@ -48,13 +48,13 @@ Die Anfangsadresse (Basis) ist die [lineare Adresse](https://github.com/lowlevel
 
 Damit kann eine IDT beispielsweise mit Code wie dem folgenden geladen werden:
 
-\<c\>static long long unsigned int idt\[IDT_ENTRIES\];
+\<c\>static uint64_t idt\[IDT_ENTRIES\];
 
 // ...
 
 struct {
 
-       unsigned short int limit;
+       uint16_t limit;
        void* pointer;
 
 } \_\_attribute\_\_((packed)) idtp = {
@@ -86,6 +86,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9946/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 9946; parent 9365; 2011-07-17T14:39:34Z -->
+<!-- MediaWiki page 1603; revision 10962; parent 9946; 2012-12-08T09:14:00Z -->
