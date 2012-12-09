@@ -171,11 +171,11 @@ Pointer zur ersten Drive-Struktur. Eine Drive-Struktur sieht folgendermaßen aus
 | Offset | Größe | Name | Beschreibung |
 | -------- | ----------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 4 | size | Größe dieser Drive-Struktur |
-| 0x04 | 4 | driver_number | BIOS-Driver-Number |
-| 0x08 | 4 | drive_mode | 0 = [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS")<br>1 = [LBA](https://github.com/lowlevel-eu/wiki/wiki/Logical-Block-Addressing "LBA") |
-| 0x0C | 4 | drive_cylinders | Anzahl an Zylinder, die das Gerät hat |
-| 0x0C | 4 | drive_heads | Anzahl an Köpfe, die das Gerät hat |
-| 0x0C | 4 | drive_sectors | Anzahl an Sektoren pro Spur, die das Gerät hat |
+| 0x04 | 1 | driver_number | BIOS-Driver-Number |
+| 0x08 | 1 | drive_mode | 0 = [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS")<br>1 = [LBA](https://github.com/lowlevel-eu/wiki/wiki/Logical-Block-Addressing "LBA") |
+| 0x0C | 1 | drive_cylinders | Anzahl an Zylinder, die das Gerät hat |
+| 0x0C | 1 | drive_heads | Anzahl an Köpfe, die das Gerät hat |
+| 0x0C | 1 | drive_sectors | Anzahl an Sektoren pro Spur, die das Gerät hat |
 | 0x10 | size-0x10 | drive_ports | [I/O-Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Ports"), die von diesem Gerät benutzt werden |
 
 ### mbs_config_table
@@ -209,6 +209,6 @@ Pointer zur APM-Tabelle. Die APM-Tabelle sieht so aus:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10820/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10965/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1560/index.html)
 
-<!-- MediaWiki page 1560; revision 10820; parent 10364; 2012-09-13T21:14:21Z -->
+<!-- MediaWiki page 1560; revision 10965; parent 10820; 2012-12-09T21:51:06Z -->
