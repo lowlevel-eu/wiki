@@ -54,6 +54,8 @@ MinGW ist ein auf MS Windows portierter GCC. Die neueste Version des Installers 
 
     mingw-get install gmp mpfr mpc
 
+Für den GCC selbst ist es nötig, die folgenden Schritte von der "MinGW Shell" (zu finden im Startmenü) auszuführen. Versucht man es von der Windows-CMD, tritt ein Fehler auf. Die Installationsdateien müssen, damit man sie von der MinGW-Shell aus erreichbar sind, im MinGW-Installationspfad unter msys/home/\<username\>/ liegen.
+
 ### Ablauf
 
 Der Ablauf ist immer der gleiche. Folgende Pakete müssen heruntergeladen werden: [Binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.20.tar.bz2) und [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.4.2/gcc-core-4.4.2.tar.bz2) und anschließend mittels
@@ -101,6 +103,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10832/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10963/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 10832; parent 9857; 2012-09-16T13:41:56Z -->
+<!-- MediaWiki page 1628; revision 10963; parent 10832; 2012-12-09T10:00:50Z -->
