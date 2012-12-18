@@ -283,7 +283,7 @@ Den Wechsel des Page Directory kann man am Ende des Interrupt-Handlers durchfüh
        ...
 
        if (cpu != new_cpu) {
-           asm volatile("mov %0, %cr3" : : "r" (current_task->context->pagedir_phys));
+           asm volatile("mov %0, %%cr3" : : "r" (current_task->context->pagedir_phys));
        }
 
        return new_cpu;
@@ -302,6 +302,6 @@ Nachdem alle Mappings korrekt aufgesetzt sind und das aktuelle Page Directory be
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9045/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2358/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10968/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2358/index.html)
 
-<!-- MediaWiki page 2358; revision 9045; parent 0; 2010-12-05T00:09:01Z -->
+<!-- MediaWiki page 2358; revision 10968; parent 9045; 2012-12-18T21:28:49Z -->
