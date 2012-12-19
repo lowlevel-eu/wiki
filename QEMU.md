@@ -84,6 +84,9 @@ Um QEMU unter Windows zu kompilieren, werden MinGW und eine Reihe Bibliotheken, 
   1.  pkg-config ("Run-time")
   2.  gettext-runtime ("Run-time")
   3.  GLib ("Run-time" und "Dev")
+  4.  pixman ("Dev") ab 1.3.0. Wer das Paket selbst bauen will, kann den Quelltext von <http://pixman.org/> herunterladen. Das Kompilieren sollte ausnahmsweise in `sh` erfolgen, damit der korrekte Pfad zum Installationsverzeichnis von MinGW automatisch bestimmt werden kann:
+
+  `` ./configure --prefix=`cd /mingw; pwd -W` && make && make install ``
 - Die SDL Development Libraries (SDL-devel-1.2.\*-mingw32.tar.gz) von <http://www.libsdl.org/download-1.2.php> herunterladen und in einem beliebigen Verzeichnis entpacken. In diesem Ordner `make native` ausführen, um SDL im MinGW-Ordner zu installieren.
 
 Anschließend kann QEMU wie üblich konfiguriert und gebaut werden, indem die folgenden Befehle im Quelltextverzeichnis von QEMU ausgeführt werden:
@@ -112,6 +115,6 @@ Hinweise:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10906; parent 10815; 2012-10-19T21:58:54Z -->
+<!-- MediaWiki page 1505; revision 10969; parent 10906; 2012-12-19T00:19:27Z -->
