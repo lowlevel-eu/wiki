@@ -15,9 +15,10 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | --- |
 | Homepage |  |
 
-<http://github.com/micha-/FruityOrange>
+<https://github.com/micha-/FruityOrange>  
+<https://code.google.com/p/fruityorange/>
 
-FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), welches [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Bootloader benutzt. Die Aktuelle Version ist 0.0.2 Summer. Diese befindet sich noch in der Entwicklung.  
+FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), welches [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Bootloader benutzt.  
   
 
 ## Features
@@ -33,6 +34,6 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10960/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 10960; parent 10959; 2012-12-07T17:02:35Z -->
+<!-- MediaWiki page 2594; revision 10970; parent 10960; 2012-12-20T16:33:11Z -->
