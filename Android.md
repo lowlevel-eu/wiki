@@ -26,6 +26,6 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10974/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2580/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10975/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2580/index.html)
 
-<!-- MediaWiki page 2580; revision 10974; parent 10973; 2012-12-23T19:11:14Z -->
+<!-- MediaWiki page 2580; revision 10975; parent 10974; 2012-12-23T19:11:50Z -->
