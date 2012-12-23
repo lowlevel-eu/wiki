@@ -22,10 +22,10 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 <http://www.android.com>
 
   
-**Android** ist eine [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")-Distribution, die insbesondere für den Gebrauch auf Smartphones und Tablets geeignet ist. Daher ist die primäre Plattform [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM"), Android läuft aber auch auf MIPS, PowerPC und [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"). Die aktuelle Version ist Version **4.1.1 "Jelly Bean"**.
+**Android** ist eine [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")-Distribution, die insbesondere für den Gebrauch auf Smartphones und Tablets geeignet ist. Daher ist die primäre Plattform [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM"), Android läuft aber auch auf MIPS, PowerPC und [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"). Die aktuelle Version ist Version **4.2.1 "Jelly Bean"**.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10834/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2580/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10973/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2580/index.html)
 
-<!-- MediaWiki page 2580; revision 10834; parent 10833; 2012-09-16T13:57:51Z -->
+<!-- MediaWiki page 2580; revision 10973; parent 10834; 2012-12-23T18:56:27Z -->
