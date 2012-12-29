@@ -185,6 +185,10 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 - [SourceForge](http://sourceforge.net): Bietet noch Support für andere SCMs.
 
+<!-- -->
+
+- [Bitbucket](http://bitbucket.org): Bietet u. a. kostenlose private Repos für bis zu 5 bzw. für Studenten für unbegrenzt viele Benutzer an.
+
 ## Weblinks
 
 - [Git bei Wikipedia](http://de.wikipedia.org/wiki/Git)
@@ -211,6 +215,6 @@ Falls ihr ebenfalls empfehlenswerte, kostenlose Hoster kennt, oder Kommentare zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1889/index.html)
 
-<!-- MediaWiki page 1889; revision 8366; parent 8365; 2010-09-26T11:21:41Z -->
+<!-- MediaWiki page 1889; revision 10976; parent 8366; 2012-12-29T00:23:18Z -->
