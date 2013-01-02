@@ -38,7 +38,7 @@ Bei dem MBR muss man beachten, das er 'über' den Betriebssystemen steht, da ja 
 
 Es ist zu beachten, das die ATA-Übereinkünfte variieren, je nachdem ob die Festplatte (nativ) durch LBA oder CHS adressiert wird.
 
-### Versteckte (reservierte Sektoren)
+### Versteckte (reservierte) Sektoren
 
 Vor der ersten Partition müssen sich versteckte Sektoren befinden, die zu keiner Partition gehören. Der erste davon enthält den MBR selbst, die anderen sind für Erweiterungen reserviert. (Eine Erweiterung, die gerade im Kommen ist, ist das *[Extended Firmware Interface](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "EFI")*, eine Erweiterung zum MBR, die langsam nötig wird, da für neue Festplatten, die 48bit LBA nutzen, das 32bit Feld des normalen LBA nicht ausreicht.) Weiterhin könnten auch Bootmanager oder Preboot-Treiber in den versteckten Sektoren enthalten sein.
 
@@ -80,6 +80,6 @@ Der Standard-MBR prüft alle Partitionen auf Bootfähigkeit. Wenn mehrere Partit
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9843/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10977/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1431/index.html)
 
-<!-- MediaWiki page 1431; revision 9843; parent 9711; 2011-06-11T20:54:09Z -->
+<!-- MediaWiki page 1431; revision 10977; parent 9843; 2013-01-02T15:42:08Z -->
