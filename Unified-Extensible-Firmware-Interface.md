@@ -20,10 +20,10 @@ Die gute, alte BIOS- [Oberfläche](https://github.com/lowlevel-eu/wiki/wiki/Grap
 
 ## Nachteile
 
-Da UEFI noch nicht besonders weit verbreitet ist, konnten noch nicht allzu viele Nachteile gefunden werden. Eine potenzielle Gefahr wurde aber bereits festgestellt: Das UEFI besitzt Netzwerk-Funktionen. Dadurch könnten Viren schon vor dem Start des [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") auf den PC gelangen, da auf dem UEFI keine Schadsoftware läuft.
+Da UEFI noch nicht besonders weit verbreitet ist, konnten noch nicht allzu viele Nachteile gefunden werden. Eine potenzielle Gefahr wurde aber bereits festgestellt: Das UEFI besitzt Netzwerk-Funktionen. Dadurch könnten Viren schon vor dem Start des [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") auf den PC gelangen, da auf dem UEFI keine Schutzsoftware läuft.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10958/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10978/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
 
-<!-- MediaWiki page 2612; revision 10958; parent 10937; 2012-12-03T09:50:59Z -->
+<!-- MediaWiki page 2612; revision 10978; parent 10958; 2013-01-02T15:49:29Z -->
