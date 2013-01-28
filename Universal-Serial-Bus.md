@@ -23,7 +23,11 @@ Hilf Lowlevel, den Artikel zu verbessern.
 USB-Symbol  
 [Quelle](http://de.wikipedia.org/wiki/Datei:Usb-svg.svg)
 
-Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt.
+Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt. Da die Stecker für USB 3.0 zusätzliche Kontakte enthalten, sind allerdings nicht sämtliche, denkbaren Kombinationen realisierbar.
+
+USB 2.0: Hubs, die zu USB 2.0 kompatibel, enthalten mindestens einen (eventuell mehrere) Transaction Translator, der eine Datenübertragung von einem Gerät, das zu einer älteren USB-Version kompatibel ist, entsprechend umsetzt. Datenübertragungen von Geräten, die zu einer älteren USB-Version kompatibel sind, beeinflussen daher die Gesamtdatenübertragungsrate eines USB 2.0-Hubs nicht.
+
+USB 3.0: USB 3.0-kompatible Hubs enthalten keine Transaction Translator, die Übertragungen von Geräten, die zu einer älteren USB-Version kompatibel sind, umsetzen könnten. Anstelle dessen sind in derartigen Hubs entsprechende, weitere Hubs für die älteren USB-Versionen zusätzlich integriert und an den Up -und Downstreamports quasi-parallel angeschlossen (elektrisch durch zusätzliche Schaltelemente aufgeteilt, logisch parallel). USB-Datenübertragungen finden dann unter der Kontrolle dieser zusätzlichen Hubs mit der entsprechenden Datenübertragungsrate statt. Dies kann die Gesamtdatenübertragungsrate eines USB 3.0-kompatiblen Hubs stark reduzieren, sobald ein oder mehrere Geräte an ihn angeschlossen werden, die zu einer älteren USB-Version kompatibel sind.
 
 ## Einsatzgebiete
 
@@ -1122,6 +1126,6 @@ Da es im OS-Dev-Metier häufig dazu kommen kann, dass man englische Literatur li
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10737/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10985/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1690/index.html)
 
-<!-- MediaWiki page 1690; revision 10737; parent 10736; 2012-08-21T14:12:40Z -->
+<!-- MediaWiki page 1690; revision 10985; parent 10737; 2013-01-28T12:43:14Z -->
