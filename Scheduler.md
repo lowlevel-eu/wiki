@@ -1,12 +1,26 @@
 # Scheduler
 
-Der Scheduler hat die Aufgabe festzustellen welcher Prozess als nächstes CPU-Zeit zugeteilt bekommt. Dabei gibt es mehr oder weniger komplizierte Systeme. Das einfachste System ist [Round Robin](#round-robin). Dabei bekommt ein Prozess nach dem anderen CPU-Zeit zugeteilt. Man kann aber auch Prioritäten setzen und damit Prozesse, die wichtiger sind mehr CPU-Zeit zuteilen.
+Der Scheduler hat die Aufgabe einzuteilen, welcher Prozess als nächstes wieviel Zeit auf welcher CPU zugeteilt bekommt. Er ist einer der wichtigsten Bestandteile eines Betriebssystems, weil er maßgeblich für dessen Performance verantworlich ist. Bei der Implementierung des Schedulers sollte man sich also vorher gut überlegen, welche Ansprüche man hat und welcher Scheduling-Algorithmus diesen am besten genügt.
 
-  
+## Allgemeine Kriterien
 
-## kooperativ (non-preemptive)
+### Kooperativ oder präemptiv
 
-Prozesse geben Kontrolle freiwillig ab. Kooperierened Scheduling-Strategien sind für Dialogbetrieb weniger und für Echtzeit-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Deshalb wird bei päemptiven Scheduling-Strategien das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch routinemäßig statt.
+Bei kooperativen (engl. non-preemptive) Schedulingverfahren geben Prozesse die Kontrolle freiwillig ab. Kooperierened Scheduling-Strategien sind für Dialogbetrieb weniger und für Echtzeit-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Diese Gefahr besteht bei präemptiven (engl. preemptive) Verfahren nicht. Hierbei wird das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch in periodischen Intervallen statt, zB. über den Timer-[Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt").
+
+### Fairness und Wartezeiten
+
+Der Scheduling-Algorithmus sollte so angelegt sein, dass jeder Prozess nach einer für ihn akzeptablen Wartezeit CPU-Rechenzeit zugeteilt bekommt. Besonders wichtig ist natürlich, dass jeder Prozess soviel CPU-Zeit bekommt, dass er fertig werden kann und nicht "aushungert".
+
+### CPU Auslastung
+
+Wenn viele Prozesse im System sind, sollte zu keiner Zeit eine CPU "brachliegen", weil zB. ein Prozess auf eine Hardwareeingabe wartet. In dieser Wartezeit könnte besser ein anderer Prozess die CPU nutzen.
+
+### Antwortzeiten
+
+Die Zeit zwischen einer Benutzereingabe und der Reaktion durch einen Prozess ist insbesondere bei interaktiven Systemen durch einen geeigneten Scheduling-Algorithmus möglichst klein zu halten.
+
+## Kooperative Verfahren
 
 ### FCFS - First Come First Served
 
@@ -56,12 +70,10 @@ Vorteile:
 
 Nachteile:
 
-- bei statischer Prioritätsvergabe evt ´Aushungern´ von Prozessen
+- bei statischer Prioritätsvergabe evtl ´Aushungern´ von Prozessen
 - Vergabe der Prioritäten nicht einfach
 
-## präemptiv (preemptive)
-
-OS holt sich Kontrolle selbst zurück (Interrupt)
+## Präemptive Verfahren
 
 ### Round Robin
 
@@ -95,8 +107,14 @@ Ein Prozess rechnet. Er bekommt zuerst einen Anteil Rechnerleistung, den er komp
 
 Der Vorteil dieses Systems ist, dass jedem Prozess, bei einer entsprechenden Implementierung, individuell der optimale Teil der Rechenleistung zugeteilt wird. Nachteil ist allerdings, dass diese Variante nur in Verbindung mit anderen Varianten zur Optimierung eingesetzt werden kann (zumindest ist der alleinige Einsatz schwierig).
 
+## Multilevel-Scheduling
+
+Beim Multilevel-Scheduling werden verschiedene Scheduling-Verfahren (sowohl präemptive also auch kooperative) gemeinsam genutzt, indem man die Prozesse in verschiedene Klassen einteilt und entsprechend eine Ebene mit einem dazugehörigen Scheduling-Algorithmus zuordnet. Die Ebenen werden dann von der obersten bis zur untersten abgearbeitet.
+
+Beispielswiese kann man wichtige Systemprozesse wie Interrupthandler auf die oberste Ebene legen, die dann nach dem FCFS-Prinzip abgearbeitet wird. Auf der untersten Ebene finden sich schließlich unwichtige Hintergrundprozesse, die einfach nach Round-Robin zugeteilt werden.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9851/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10990/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1711/index.html)
 
-<!-- MediaWiki page 1711; revision 9851; parent 7837; 2011-06-14T18:43:11Z -->
+<!-- MediaWiki page 1711; revision 10990; parent 9851; 2013-02-10T18:53:25Z -->
