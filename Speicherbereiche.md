@@ -16,13 +16,8 @@ Eine Übersicht über die Speicherbereiche unter der 1MB-Grenze gibt folgende Gr
 - [VGA RAM](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")
 - [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")
 
-## Weblinks
-
-- <http://www.zdnet.de/glossar/0,39029897,70012320p-39001793q,00.htm>
-- <http://bugclub.org/eric/memory/reserved.html>
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9001/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11003/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1563/index.html)
 
-<!-- MediaWiki page 1563; revision 9001; parent 5764; 2010-11-28T10:18:28Z -->
+<!-- MediaWiki page 1563; revision 11003; parent 9001; 2013-02-20T00:58:01Z -->
