@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Datei:FruityOrangeLogo.png |  |
 | Entwickler: | [Micha](https://lowlevel-eu.github.io/wiki/pages/2560/index.html "Benutzer:Micha.linuxfreak") |
-| Akt. Version: | 0.0.2 |
+| Akt. Version: | 0.03 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenz") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -24,16 +24,17 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 ## Features
 
 - printf, panic, debug
-- ([GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
+- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
 - [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap")
-- kaputter [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), Elf32-loader
 
 ### Treiber
 
+- [CGA Grafik](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") ;)
 - [Tastatur (KBC)](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller")
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10970/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 10970; parent 10960; 2012-12-20T16:33:11Z -->
+<!-- MediaWiki page 2594; revision 11006; parent 10970; 2013-02-24T19:04:25Z -->
