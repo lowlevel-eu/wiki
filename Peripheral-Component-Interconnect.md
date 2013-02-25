@@ -542,6 +542,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x03 | 0x00 | Standard [Real Time Clock](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock "Real Time Clock") |
 | 0x03 | 0x01 | ISA Real Time Clock |
 | 0x04 | 0x00 | PCI Hot Plug Controller |
+| 0x06 | 0x00 | Root Complex Event Collector (für PCI-Express) |
 | 0x80 | 0x00 | Andere System-Peripherie |
 
 ### Class 0x09 - Input-Geräte
@@ -650,6 +651,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9887/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 9887; parent 9566; 2011-06-29T16:47:56Z -->
+<!-- MediaWiki page 1626; revision 11007; parent 9887; 2013-02-25T22:03:02Z -->
