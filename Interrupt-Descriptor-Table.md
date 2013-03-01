@@ -19,7 +19,8 @@ Ein Deskriptor in der IDT ist im Protected Mode 64 Bit und im Long Mode 128 Bit 
 | 32-34 | 000 / IST | Gibt im LM den Index in die IST an, **ansonsten 0**! |
 | 35-39 | Reserviert | Wird ignoriert |
 | 40-42 | Typ | Gibt die Art des Interrupts an |
-| 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. Im LM: Für 64-Bit LDT 0, **ansonsten 1** |
+| 43 | D | Gibt an, ob es sich um ein 32bit- (1) oder um ein 16bit-Segment (0) handelt. |
+| 43 | D | Im LM: Für 64-Bit LDT 0, **ansonsten 1** |
 | 44 | 0 |  |
 | 45-46 | DPL | Gibt das Descriptor Privilege Level an, das man braucht um diesen Interrupt aufrufen zu dürfen. |
 | 47 | P | Gibt an, ob dieser Eintrag benutzt wird. |
@@ -86,6 +87,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10962/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 10962; parent 9946; 2012-12-08T09:14:00Z -->
+<!-- MediaWiki page 1603; revision 11013; parent 10962; 2013-03-01T11:36:54Z -->
