@@ -44,8 +44,12 @@ Das VFS operiert vollständig im Userspace und beinahe vollkommen dezentral. Ein
 - Im Aufrufer wird nun überprüft, ob diese Datei evtl. ein Symlink ist.
 - Im root-Prozess wird service_is_symlink("/dev/null", …) aufgerufen. Dieser findet „/dev“ in einer Liste von „Mountpoints“ und stellt fest, dass dies ein Symlink auf „(devfs)/null“ ist.
 - Im Aufrufer wird rekursiv create_pipe("(devfs)/null", …) aufgerufen.
-- Im devfs-Prozess wird service_create_pipe("/null", …) aufgerufen. Die Datei existiert und es wird eine Pipe-ID ungleich 0 zurückgegeben.
-- Im Aufrufer speichert create_pipe diese ID zusammen mit der Prozess-ID von devfs in einem Array und gibt den Index des Eintrags als Pipe-ID zurück.
+- Im devfs-Prozess wird service_create_pipe("/null", …) aufgerufen. Auch hier existiert die Datei nicht direkt, also wird 0 zurückgegeben.
+- Auch hier überprüft der Aufrufer wieder, ob die Datei ein Symlink ist.
+- Im devfs-Prozess wird service_is_symlink("/null", …) aufgerufen. Tatsächlich ist auch dies wieder ein Symlink, und zwar auf „(thingamabob)/null“.
+- Im Aufrufer wird wieder rekursiv create_pipe("(thingamabob)/null", …) aufgerufen.
+- Im thingamabob-Prozess wird service_create_pipe("/null", …) aufgerufen, diesmal existiert die Datei und es wird eine ID ungleich 0 zurückgegeben.
+- Im Aufrufer speichert create_pipe diese ID zusammen mit der Prozess-ID von thingamabob in einem Array und gibt den Index des Eintrags als Pipe-ID zurück.
 
 Die Symlinkimplementierung ist vielleicht nicht die schönste ihrer Art, aber zumindest funktioniert sie soweit.
 
@@ -64,6 +68,6 @@ Die praktisch absolute Dezentralität hat den Vorteil einer funktionierenden for
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11014/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2634/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11016/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2634/index.html)
 
-<!-- MediaWiki page 2634; revision 11014; parent 0; 2013-03-04T03:11:38Z -->
+<!-- MediaWiki page 2634; revision 11016; parent 11014; 2013-03-04T03:20:56Z -->
