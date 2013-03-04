@@ -167,14 +167,15 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ## Betriebssysteme, welche CDI benutzen (werden)
 
+- [LF OS](https://github.com/lowlevel-eu/wiki/wiki/LF-OS "LF OS")
 - [meinOS](https://github.com/lowlevel-eu/wiki/wiki/MeinOS "MeinOS")
+- [µxoµcota](https://github.com/lowlevel-eu/wiki/wiki/%CE%9Cxo%C2%B5cota "Μxoµcota")
 - [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota")
 - [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena") (kernel1, kernel2 und kernel3)
 - [Pedigree](https://github.com/lowlevel-eu/wiki/wiki/Pedigree "Pedigree")
 - [planlOS](https://github.com/lowlevel-eu/wiki/wiki/PlanlOS "PlanlOS")
 - [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS")
 - [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
-- [LF OS](https://github.com/lowlevel-eu/wiki/wiki/LF-OS "LF OS")
 - [universe](https://github.com/lowlevel-eu/wiki/wiki/Universe "Universe")
 
 ## Weblinks
@@ -184,6 +185,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11015/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 10528; parent 10199; 2012-03-19T16:44:43Z -->
+<!-- MediaWiki page 1622; revision 11015; parent 10528; 2013-03-04T03:15:18Z -->
