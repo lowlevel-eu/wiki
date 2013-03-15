@@ -19,7 +19,7 @@
 
 ## Haiku
 
-Haiku ist ein OS, das eine Reimplentierung von BeOS sein sollte und dann mit weiteren Feautures erweitert wurde.
+Haiku ist ein OS, das eine Reimplementierung von BeOS sein sollte und dann mit weiteren Features erweitert wurde.
 
 ## Features
 
@@ -28,7 +28,7 @@ Haiku ist ein OS, das eine Reimplentierung von BeOS sein sollte und dann mit wei
 - AHCI
 - BFS(Be File System)
 - X64
-- Radeon GraKA Treiber(Diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multi monitor und 2D Beschleunigung)
+- Radeon Grafikarten Treiber(Diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multi monitor und 2D Beschleunigung)
 
 ## Weblinks
 
@@ -46,6 +46,6 @@ Haiku ist ein OS, das eine Reimplentierung von BeOS sein sollte und dann mit wei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11025/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11024; parent 11023; 2013-03-15T19:35:59Z -->
+<!-- MediaWiki page 2635; revision 11025; parent 11024; 2013-03-15T19:37:21Z -->
