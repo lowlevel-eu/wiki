@@ -19,7 +19,7 @@
 
 ## Haiku
 
-Haiku ist ein OS das eine Reimplemntierung von BeOS sein sollte und dann mit weiteren Feautures erweitert wurde.
+Haiku ist ein OS, das eine Reimplentierung von BeOS sein sollte und dann mit weiteren Feautures erweitert wurde.
 
 ## Features
 
@@ -46,6 +46,6 @@ Haiku ist ein OS das eine Reimplemntierung von BeOS sein sollte und dann mit wei
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11023/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11024/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11023; parent 11022; 2013-03-15T19:35:01Z -->
+<!-- MediaWiki page 2635; revision 11024; parent 11023; 2013-03-15T19:35:59Z -->
