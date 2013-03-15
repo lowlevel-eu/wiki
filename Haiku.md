@@ -21,8 +21,14 @@
 
 Haiku ist ein OS das eine Reimplemntierung von BeOS sein sollte und dann mit weiteren Feautures erweitert wurde.
 
+## Features
+
+Haiku unterstützt neben SMP und VESA auch Radeon Grakas. Diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multi monitor und 2D Beschleunigung(<http://haikungfu.net/?page=radeon_hd>)
+
+Außerdem hat Haiku eine GUI.
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11019/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11020/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11019; parent 11018; 2013-03-15T19:08:55Z -->
+<!-- MediaWiki page 2635; revision 11020; parent 11019; 2013-03-15T19:18:27Z -->
