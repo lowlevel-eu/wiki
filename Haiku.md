@@ -44,8 +44,10 @@ Haiku ist ein OS, das eine Reimplementierung von BeOS sein sollte und dann mit w
 
 [AHCI-Unterstützung](http://www.example.com)
 
+Haiku-Channel
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11025/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11025; parent 11024; 2013-03-15T19:37:21Z -->
+<!-- MediaWiki page 2635; revision 11026; parent 11025; 2013-03-15T19:43:59Z -->
