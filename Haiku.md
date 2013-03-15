@@ -23,12 +23,21 @@ Haiku ist ein OS das eine Reimplemntierung von BeOS sein sollte und dann mit wei
 
 ## Features
 
-Haiku unterstützt neben SMP und VESA auch Radeon Grakas. Diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multi monitor und 2D Beschleunigung(<http://haikungfu.net/?page=radeon_hd>)
+- SMP
+- GUI
+- AHCI
+- BFS(Be File System)
+- X64
+- Radeon GraKA Treiber(Diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multi monitor und 2D Beschleunigung)
 
 Außerdem hat Haiku eine GUI.
 
+## Weblinks
+
+[Haikus Webseite](https://www.haiku-os.org/about) [radeon Grafiktreiber](http://haikungfu.net/?page=radeon_hd) [Haiku auf-X64](https://www.haiku-os.org/blog/xyzzy/2012-08-28_x86_64_port_final_report) [Haikus noch experimenteller ARM Port](https://www.haiku-os.org/blog/ithamar/2012-11-09_arm_progress) [BFS](http://de.wikipedia.org/wiki/Be_File_System) [AHCI-Unterstützung](http://www.example.com)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11020/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11021/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11020; parent 11019; 2013-03-15T19:18:27Z -->
+<!-- MediaWiki page 2635; revision 11021; parent 11020; 2013-03-15T19:32:45Z -->
