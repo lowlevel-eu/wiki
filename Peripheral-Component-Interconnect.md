@@ -527,11 +527,11 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 ### Class 0x08 - System-Peripherie
 
 | Subclass | Programming Interface | Beschreibung |
-| ---------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 0x00 | 8259- [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") |
 | 0x00 | 0x01 | ISA-PIC |
 | 0x00 | 0x02 | EISA-PIC |
-| 0x00 | 0x10 | IO- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "Advanced Programmable Interrupt Controller") (EISA) |
+| 0x00 | 0x10 | IO- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "Advanced Programmable Interrupt Controller") |
 | 0x00 | 0x20 | IOx-APIC |
 | 0x01 | 0x00 | 8237-DMA-Controller |
 | 0x01 | 0x01 | ISA-DMA-Controller |
@@ -539,10 +539,13 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x02 | 0x00 | Standard-8254-Timer |
 | 0x02 | 0x01 | ISA-System-Timer |
 | 0x02 | 0x02 | EISA-System-Timer |
+| 0x02 | 0x03 | HPET |
 | 0x03 | 0x00 | Standard [Real Time Clock](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock "Real Time Clock") |
 | 0x03 | 0x01 | ISA Real Time Clock |
-| 0x04 | 0x00 | PCI Hot Plug Controller |
-| 0x06 | 0x00 | Root Complex Event Collector (für PCI-Express) |
+| 0x04 | 0x00 | generic PCI Hot Plug Controller (obsolete für PCI-Express) |
+| 0x05 | 0x00 | SD Host Controller |
+| 0x06 | 0x00 | IOMMU |
+| 0x07 | 0x00 | Root Complex Event Collector (für PCI-Express) |
 | 0x80 | 0x00 | Andere System-Peripherie |
 
 ### Class 0x09 - Input-Geräte
@@ -651,6 +654,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11007/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11007; parent 9887; 2013-02-25T22:03:02Z -->
+<!-- MediaWiki page 1626; revision 11027; parent 11007; 2013-03-16T11:16:27Z -->
