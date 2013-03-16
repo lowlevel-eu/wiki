@@ -539,7 +539,7 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x02 | 0x00 | Standard-8254-Timer |
 | 0x02 | 0x01 | ISA-System-Timer |
 | 0x02 | 0x02 | EISA-System-Timer |
-| 0x02 | 0x03 | HPET |
+| 0x02 | 0x03 | High Performance Event Timer |
 | 0x03 | 0x00 | Standard [Real Time Clock](https://github.com/lowlevel-eu/wiki/wiki/Real-Time-Clock "Real Time Clock") |
 | 0x03 | 0x01 | ISA Real Time Clock |
 | 0x04 | 0x00 | generic PCI Hot Plug Controller (obsolete für PCI-Express) |
@@ -654,6 +654,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11027/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11027; parent 11007; 2013-03-16T11:16:27Z -->
+<!-- MediaWiki page 1626; revision 11028; parent 11027; 2013-03-16T11:17:35Z -->
