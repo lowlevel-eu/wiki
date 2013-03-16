@@ -19,9 +19,7 @@
 
 ## Beschreibung
 
-Haiku ist ein Betrie, das eine Reimplementierung von BeOS sein sollte und dann mit weiteren Features erweitert wurde.
-
-Haiku ist ein Betriebssystem, welches eine Reimplementierung von [BeOS](https://de.wikipedia.org/wiki/BeOS) darstellt, allerdings nicht auf dessen Quellcode aufbaut.
+Haiku ist ein Betriebssystem, welches eine Reimplementierung von [BeOS](https://de.wikipedia.org/wiki/BeOS) darstellt, allerdings nicht auf dessen Quellcode aufbaut. Es wird seit dem 18. August 2001 entwickelt und war vorher als *OpenBeOS* bekannt.
 
   
 
@@ -48,6 +46,6 @@ Haiku ist ein Betriebssystem, welches eine Reimplementierung von [BeOS](https://
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11031; parent 11026; 2013-03-16T11:58:18Z -->
+<!-- MediaWiki page 2635; revision 11032; parent 11031; 2013-03-16T11:59:39Z -->
