@@ -33,12 +33,12 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 | 0x038 | Header Type Specific |  |  |  |
 | 0x03C | Header Type Specific |  | Interrupt Pin | Interrupt Line |
 
-- Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist.
-- Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes.
+- Die *Vendor ID*s werden von PCI-SIG verwaltet und den Herstellern zugewiesen. Der Wert 0xffff ist für den Fall reserviert, dass an dieser Stelle kein Gerät vorhanden ist. Der Wert 0x0001 kommt wenn das Gerät zwar vorhanden aber noch nicht bereit ist zu reagieren. Der Wert 0x0000 ist ungültig (ähnlich 0xffff). Alle anderen Werte können als gültige Vendor-IDs zugewiesen werden.
+- Die *Device ID*s verwalten die Hardwarehersteller selbst. Sie dient zusammen mit der *Vendor ID* der eindeutigen Identifikation des Gerätes. Alle 65536 möglichen Werte sind erlaubt (nur der jeweilige Hersteller bestimmt welche Werte gültig sind und welche nicht).
 - Im *Status*-Register werden verschiedene Basis-Status und Gerät-Fähigkeiten angezeigt.
 - Im *Command*-Register werden verschiedene Basis-Konfigurationen vorgenommen.
 - *Classcode* ist noch einmal geteilt. Die oberen 8 Bit (Byte 0x00B) repräsentieren die *Base Class*, die mittleren 8 Bit (Byte 0x00A) stehen für die *Subclass* und die unteren 8 Bit (Byte 0x009) für das *Programming Interface*.
-- Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet.
+- Die *Revision ID* wird vom Hardwarehersteller selbst verwaltet und kann als "Nachkommastelle" der Device-ID betrachtet werden.
 - Mit dem *BIST*-Register kann ein gerätespezifischer Selbsttest ausgelöst und ausgewertet werden. Diese Funktion ist optional und wird nur von wenigen PCI-Geräten unterstützt.
 - *Header Type* spezifiziert den Inhalt der Register 0x010 &#150; 0x03F. Dabei gibt Bit 7 an, ob es sich um ein Multifunction-Device handelt oder nicht, in dem Fall muss das Bit 7 in allen vorhandenen Funktionen gesetzt sein.
 
@@ -654,6 +654,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11028/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11028; parent 11027; 2013-03-16T11:17:35Z -->
+<!-- MediaWiki page 1626; revision 11029; parent 11028; 2013-03-16T11:35:46Z -->
