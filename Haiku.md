@@ -1,8 +1,8 @@
 # Haiku
 
 | Haiku |  |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| <http://upload.wikimedia.org/wikipedia/de/7/72/Haiku-logo.svg> |  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/438ed73108e00fc49176.jpg" width="450" height="90" alt="HaikuLogo.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/438ed73108e00fc49176.jpg) |  |
 | Entwickler: | Haiku team |
 | Akt. Version: | R1/Alpha 4(12. November 2012) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT Lizenz |
@@ -17,37 +17,37 @@
 
 [\[1\]](https://www.haiku-os.org/about)
 
-## Haiku
+## Beschreibung
 
-Haiku ist ein OS, das eine Reimplementierung von BeOS sein sollte und dann mit weiteren Features erweitert wurde.
+Haiku ist ein Betrie, das eine Reimplementierung von BeOS sein sollte und dann mit weiteren Features erweitert wurde.
+
+Haiku ist ein Betriebssystem, welches eine Reimplementierung von [BeOS](https://de.wikipedia.org/wiki/BeOS) darstellt, allerdings nicht auf dessen Quellcode aufbaut.
+
+  
 
 ## Features
 
 - SMP
 - GUI
 - AHCI
-- BFS(Be File System)
-- X64
-- Radeon Grafikarten Treiber(Diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multi monitor und 2D Beschleunigung)
+- BFS (Be File System)
+- x86-64
+- Radeon Grafikarten-Treiber (diese können einen eigenen Grafikmodus aufsetzen und unterstützen sogar teilweise Multimonitor-Setups und 2D-Beschleunigung)
+
+  
 
 ## Weblinks
 
-[Haikus Webseite](https://www.haiku-os.org/about)
-
-[radeon Grafiktreiber](http://haikungfu.net/?page=radeon_hd)
-
-[Haiku auf-X64](https://www.haiku-os.org/blog/xyzzy/2012-08-28_x86_64_port_final_report)
-
-[Haikus noch experimenteller ARM Port](https://www.haiku-os.org/blog/ithamar/2012-11-09_arm_progress)
-
-[BFS](http://de.wikipedia.org/wiki/Be_File_System)
-
-[AHCI-Unterstützung](http://www.example.com)
-
-Haiku-Channel
+- [Webseite](https://www.haiku-os.org/about)
+- [Radeon Grafiktreiber](http://haikungfu.net/?page=radeon_hd)
+- [x86-64-Port](https://www.haiku-os.org/blog/xyzzy/2012-08-28_x86_64_port_final_report)
+- [Noch experimenteller ARM-Port](https://www.haiku-os.org/blog/ithamar/2012-11-09_arm_progress)
+- [BFS](http://de.wikipedia.org/wiki/Be_File_System)
+- [AHCI-Unterstützung](http://www.example.com)
+- IRC-Channel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11026/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11031/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11026; parent 11025; 2013-03-15T19:43:59Z -->
+<!-- MediaWiki page 2635; revision 11031; parent 11026; 2013-03-16T11:58:18Z -->
