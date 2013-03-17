@@ -1,8 +1,8 @@
 # Haiku
 
 | Haiku |  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/438ed73108e00fc49176.jpg" width="450" height="90" alt="HaikuLogo.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/438ed73108e00fc49176.jpg) |  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/aeb5d8273eed587f4150.jpg" width="280" height="56" alt="Haiku Logo" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/438ed73108e00fc49176.jpg) |  |
 | Entwickler: | Haiku team |
 | Akt. Version: | R1/Alpha 4(12. November 2012) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT Lizenz |
@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
-[\[1\]](https://www.haiku-os.org/about)
+<https://www.haiku-os.org>
 
 ## Beschreibung
 
@@ -41,11 +41,10 @@ Haiku ist ein Betriebssystem, welches eine Reimplementierung von [BeOS](https://
 - [x86-64-Port](https://www.haiku-os.org/blog/xyzzy/2012-08-28_x86_64_port_final_report)
 - [Noch experimenteller ARM-Port](https://www.haiku-os.org/blog/ithamar/2012-11-09_arm_progress)
 - [BFS](http://de.wikipedia.org/wiki/Be_File_System)
-- [AHCI-Unterstützung](http://www.example.com)
 - IRC-Channel
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11032/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11034/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2635/index.html)
 
-<!-- MediaWiki page 2635; revision 11032; parent 11031; 2013-03-16T11:59:39Z -->
+<!-- MediaWiki page 2635; revision 11034; parent 11032; 2013-03-17T10:34:37Z -->
