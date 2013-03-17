@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Datei:FruityOrangeLogo.png |  |
 | Entwickler: | [Micha](https://lowlevel-eu.github.io/wiki/pages/2560/index.html "Benutzer:Micha.linuxfreak") |
-| Akt. Version: | 0.03 |
+| Akt. Version: | 0.04 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenz") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -32,9 +32,22 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 - [CGA Grafik](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") ;)
 - [Tastatur (KBC)](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller")
+- [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT")
+- [CMOS / RTC](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
+
+## Syscalls
+
+| Nummer (in %eax) | Name | Beschreibung | ebx | ecx | edx |
+| ------------------ | -------- | --------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ----- |
+| 0 | exit | Beendet das aktuelle programm | exit-status |  |  |
+| 1 | putc | Gibt ein Zeichen auf dem Bildschirm aus | zeichen |  |  |
+| 2 | puts | Gibt ein String auf dem Bildschirm aus | pointer zum string | länge des Strings |  |
+| 3 | getch | Wartet auf einen Tastendruck | hier wird der ASCII-code des gedrückten Zeichens reingeschrieben |  |  |
+| 4 | gets | Liest einen String über die Tastatur ein. | pointer zum string (muss vorher abgespeichert werden) | länge des eingegebenen Strings (wird hier reingeschrieben) |  |
+| 5 | usleep | Legt das programm für %ebx microsekunden schlafen | anzahl der microsekunden, die zu warten sind |  |  |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11006/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11006; parent 10970; 2013-02-24T19:04:25Z -->
+<!-- MediaWiki page 2594; revision 11036; parent 11006; 2013-03-17T17:27:00Z -->
