@@ -212,6 +212,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9811/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 9811; parent 9808; 2011-05-20T09:10:19Z -->
+<!-- MediaWiki page 2025; revision 11042; parent 9811; 2013-03-18T16:50:50Z -->
