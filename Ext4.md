@@ -29,6 +29,6 @@ Weitere Neuerungen sind Zeitstempel auf Nanosekunden-Basis, Journal mit Prüfsum
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9917/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2438/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2438/index.html)
 
-<!-- MediaWiki page 2438; revision 9917; parent 9914; 2011-07-10T11:42:28Z -->
+<!-- MediaWiki page 2438; revision 11044; parent 9917; 2013-03-18T16:56:51Z -->
