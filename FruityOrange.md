@@ -38,6 +38,8 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 ## Syscalls
 
+Die Syscalls werden über den Interrupt 0x30 aufgerufen.
+
 | Nummer (in %eax) | Name | Beschreibung | ebx | ecx | edx |
 | ------------------ | -------- | --------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ----- |
 | 0 | exit | Beendet das aktuelle programm | exit-Status |  |  |
@@ -49,6 +51,6 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11038/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11038; parent 11037; 2013-03-18T16:22:43Z -->
+<!-- MediaWiki page 2594; revision 11039; parent 11038; 2013-03-18T16:26:31Z -->
