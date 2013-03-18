@@ -47,10 +47,11 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen.
 | 2 | puts | Gibt einen String auf dem Bildschirm aus | Pointer zum String | Länge des Strings |  |
 | 3 | getch | Wartet auf einen Tastendruck | Hier wird der ASCII-Code des gedrückten Zeichens reingeschrieben |  |  |
 | 4 | gets | Liest einen String über die Tastatur ein. | Pointer zum String (muss vorher abgespeichert werden) | Länge des eingegebenen Strings (wird hier reingeschrieben) |  |
-| 5 | usleep | Legt das Programm für %ebx Mikrosekunden schlafen | Anzahl der Mikrosekunden, die zu warten sind |  |  |
+| 5 | time | Hier bekommt man einen aktuellen Timestamp | In ebx liegt der timestamp dann drin |  |  |
+| 6 | usleep | Legt das Programm für %ebx Mikrosekunden schlafen | Anzahl der Mikrosekunden, die zu warten sind |  |  |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11039/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11039; parent 11038; 2013-03-18T16:26:31Z -->
+<!-- MediaWiki page 2594; revision 11040; parent 11039; 2013-03-18T16:30:20Z -->
