@@ -39,15 +39,15 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 | Nummer (in %eax) | Name | Beschreibung | ebx | ecx | edx |
 | ------------------ | -------- | --------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ----- |
-| 0 | exit | Beendet das aktuelle programm | exit-status |  |  |
-| 1 | putc | Gibt ein Zeichen auf dem Bildschirm aus | zeichen |  |  |
-| 2 | puts | Gibt ein String auf dem Bildschirm aus | pointer zum string | länge des Strings |  |
-| 3 | getch | Wartet auf einen Tastendruck | hier wird der ASCII-code des gedrückten Zeichens reingeschrieben |  |  |
-| 4 | gets | Liest einen String über die Tastatur ein. | pointer zum string (muss vorher abgespeichert werden) | länge des eingegebenen Strings (wird hier reingeschrieben) |  |
-| 5 | usleep | Legt das programm für %ebx microsekunden schlafen | anzahl der microsekunden, die zu warten sind |  |  |
+| 0 | exit | Beendet das aktuelle programm | exit-Status |  |  |
+| 1 | putc | Gibt ein Zeichen auf dem Bildschirm aus | Zeichen |  |  |
+| 2 | puts | Gibt einen String auf dem Bildschirm aus | Pointer zum String | Länge des Strings |  |
+| 3 | getch | Wartet auf einen Tastendruck | Hier wird der ASCII-Code des gedrückten Zeichens reingeschrieben |  |  |
+| 4 | gets | Liest einen String über die Tastatur ein. | Pointer zum String (muss vorher abgespeichert werden) | Länge des eingegebenen Strings (wird hier reingeschrieben) |  |
+| 5 | usleep | Legt das Programm für %ebx Mikrosekunden schlafen | Anzahl der Mikrosekunden, die zu warten sind |  |  |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11036/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11037/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11036; parent 11006; 2013-03-17T17:27:00Z -->
+<!-- MediaWiki page 2594; revision 11037; parent 11036; 2013-03-18T15:50:45Z -->
