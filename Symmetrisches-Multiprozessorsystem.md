@@ -55,6 +55,21 @@ Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
 ### Default Configuration
 
+Default Configurations sind vordefinierte Multiprozessorkonfigurationen für Systeme mit genau zwei Prozessoren.
+
+  
+
+| Featurebyte 0 | Bus | APIC-Typ | Sonstiges |
+| --------------- | ------------ | ------------ | ----------------------------------------------- |
+| 1 | ISA | 82489DX |  |
+| 2 | EISA | 82489DX | IRQ0-Timer und *DMA-Chaining* nicht verfügbar |
+| 3 | EISA | 82489DX |  |
+| 4 | MCA | 82489DX |  |
+| 5 | ISA + PCI | Integrated |  |
+| 6 | EISA + PCI | Integrated |  |
+| 7 | MCA + PCI | Integrated |  |
+| 8-255 | Reserviert |  |  |
+
 ## Besonderheiten bei der Programmierung
 
 ### Multiprozessorsynchronisation (TSL-Instruktion)
@@ -97,6 +112,6 @@ Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9991/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11051/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 9991; parent 7059; 2011-07-28T03:48:54Z -->
+<!-- MediaWiki page 1490; revision 11051; parent 9991; 2013-03-19T15:09:15Z -->
