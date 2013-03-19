@@ -26,8 +26,14 @@ Während die A-Variante mit 256 MB auskommen muss, wurden der B-Variante in der 
 
 Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware anbauen kann (z.B. eine Platine mit Temperatursensoren). Elektrotechnisch interessierte können somit also - anders als bei handelsüblichen PCs - eigene Bauteile entwerfen, für die man dann sogar die Unterstützung im eigenen Betriebssystem einbauen kann.
 
+  
+
+## Weblinks
+
+- [elinux Raspberry Pi osdev](http://elinux.org/RaspberryPi_Osdev)
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11035/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11035; parent 0; 2013-03-17T11:15:38Z -->
+<!-- MediaWiki page 2637; revision 11052; parent 11035; 2013-03-19T15:23:00Z -->
