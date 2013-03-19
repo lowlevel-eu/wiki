@@ -17,7 +17,7 @@ Normalerweise wird in einem Prozess der Programmcode sequenziell abgearbeitet. O
 
 Ein Prozess kann dazu einen Kindprozess erzeugen, und diesem eine Aufgabe übergeben. Dieses Vorgehen ist zwar völlig legitim und würde funktionieren, hat jedoch zwei große Nachteile. Erstens gibt es bei einem Task Switch einen relativ großen Overhead, also wäre der Wechsel zwischen den Prozessen zu langsam, um damit sorglos umzugehen. Außerdem hängen die Prozesse womöglich relativ nah zusammen, sodass sie oft gemeinsame Daten brauchen. Sie müssten also durch verschiedene [Interprozesskommunikationsmethoden](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") kommunizieren, was ebenfalls langsam sein kann.
 
-Als Lösung wurde das Prinzip des Threads (engl. für (Ausführungs-) Faden) entwickelt und in den Prozessbegriff integiert. Jeder Prozess hat mindestens einen Thread, der jeweils seinen eigenen Stack und Instruction Pointer hat. Jedoch teilen die Threads eines Prozesses sich die Daten, und können gleichberechtigt darauf zugreifen.
+Als Lösung wurde das Prinzip des Threads (engl. für (Ausführungs-) Faden) entwickelt und in den Prozessbegriff integriert. Jeder Prozess hat mindestens einen Thread, der jeweils seinen eigenen Stack und Instruction Pointer hat. Jedoch teilen die Threads eines Prozesses sich die Daten, und können gleichberechtigt darauf zugreifen.
 
 Für die Implementierung von Threads existieren im Großen und Ganzen zwei Prinzipien: Kernelthreads und Benutzerthreads. Außerdem können beide Verfahren noch kombiniert werden, sodass es noch die Möglichkeit eines hybriden Systems gibt.
 
@@ -35,6 +35,6 @@ Die Voraussetzungen für Benutzerthreads sind in den Programmen selbst enthalten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10826/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11053/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 10826; parent 10825; 2012-09-15T10:22:15Z -->
+<!-- MediaWiki page 1993; revision 11053; parent 10826; 2013-03-19T15:31:47Z -->
