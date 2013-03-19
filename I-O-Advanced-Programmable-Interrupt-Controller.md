@@ -93,8 +93,10 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 | 011b | reserviert |  |
 | 100b | [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI") | Es wird allen durch das *Destination*-Feld ausgewählten Prozessoren ein NMI signalisiert. Dabei wird der Interruptvektor ignoriert. Der *Trigger Mode* muss *edge* sein. |
 | 101b | INIT |  |
-| 110b | Start-Up | Startet einen AP mit dem im ICR angebenen Vektor als Einsprungspunkt (Entry 0x000VV000 =\> Vektor 0xVV) |
+| 110b | reserviert |  |
 | 111b | ExtINT | Analog zu *Fixed* wird ein normaler Interrupt ausgelöst. Der Interruptvektor kommt allerdings nicht von der I/O APIC sondern wird von einem externen Controller (z.B. des [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) geliefert. Der *Trigger Mode* muss *edge* sein. |
+
+  
 
 ## Programmierung
 
@@ -138,6 +140,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11047/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 11047; parent 10379; 2013-03-19T14:47:21Z -->
+<!-- MediaWiki page 1574; revision 11048; parent 11047; 2013-03-19T14:48:38Z -->
