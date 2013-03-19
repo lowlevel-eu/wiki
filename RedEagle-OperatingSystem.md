@@ -22,6 +22,9 @@ RedEagle-OperatingSystem ist ein 32Bit OS dessen Hauptziel darin besteht einfach
 
 Ziel ist es **nicht** ein sicheres und stabiles System zu schreiben. Diese Punkte werden frühstens in der Nächsten Generation berücksichtigt :)
 
+  
+**Hinweis:** Das Projekt ist laut der [Projektwebsite](http://www.redeagle-operatingsystem.de.vu/) eingestellt worden.
+
 ## Namensänderung
 
 Das gesamte Betriebssystem wird seit der Kernel-Version 0.10 Adversys genannt.  
@@ -176,6 +179,6 @@ Im ANSI-Modus werden die Daten mit ANSI-Escape-Sequenzen coloriert. Somit kann m
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11050/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2232/index.html)
 
-<!-- MediaWiki page 2232; revision 10358; parent 9074; 2011-12-10T13:40:24Z -->
+<!-- MediaWiki page 2232; revision 11050; parent 10358; 2013-03-19T15:00:23Z -->
