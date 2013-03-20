@@ -10,6 +10,8 @@
 | Hardware: | Ethernet, Kartenleser, 256-512MB RAM, USB, HDMI |
 | Homepage |  |
 
+<http://www.raspberrypi.org/>
+
 Der Raspberry Pi ist ein kreditkartengroßer Computer, der von der [Raspberry Pi Foundation](http://www.raspberrypi.org/) entwickelt wurde und wird. Er basiert auf einem [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-Prozessor und bietet, je nach Modell, zusätzlich [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB"), [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), SD-Slots uvm.
 
 Des Weiteren ist der Raspberry Pi zudem sehr günstig (B-Variante ohne MwSt. 35 US-\$), was ihn für Interessierte noch attraktiver macht.
@@ -44,6 +46,6 @@ Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11060; parent 11052; 2013-03-20T15:24:41Z -->
+<!-- MediaWiki page 2637; revision 11061; parent 11060; 2013-03-20T15:26:15Z -->
