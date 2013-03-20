@@ -1,5 +1,15 @@
 # Raspberry Pi
 
+|  |  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/55d56d04146e1a63bca3.png" width="280" height="187" alt="Raspberrypi.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8bb335421ee989c2c7b7.png) |  |
+|  |  |
+| Entwickler: | Raspberry Pi Foundation |
+| CPU: | ARM1176JZF-S |
+| GPU: | Broadcom VideoCore IV |
+| Hardware: | Ethernet, Kartenleser, 256-512MB RAM, USB, HDMI |
+| Homepage |  |
+
 Der Raspberry Pi ist ein kreditkartengroßer Computer, der von der [Raspberry Pi Foundation](http://www.raspberrypi.org/) entwickelt wurde und wird. Er basiert auf einem [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-Prozessor und bietet, je nach Modell, zusätzlich [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB"), [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), SD-Slots uvm.
 
 Des Weiteren ist der Raspberry Pi zudem sehr günstig (B-Variante ohne MwSt. 35 US-\$), was ihn für Interessierte noch attraktiver macht.
@@ -34,6 +44,6 @@ Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11052/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11060/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11052; parent 11035; 2013-03-19T15:23:00Z -->
+<!-- MediaWiki page 2637; revision 11060; parent 11052; 2013-03-20T15:24:41Z -->
