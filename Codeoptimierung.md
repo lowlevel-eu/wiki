@@ -106,9 +106,10 @@ Oftmals gibt es unter anderem im Lowlevel-Forum, aber auch an anderen feinen Ort
 
 - [Intel - Optimierung für IA32](http://www.intel.com/Assets/PDF/manual/248966.pdf) (Kapitel 3.3 bis 3.9 sind empfehlenswert)
 - [AMD - Software Optimierung für AMD64](http://support.amd.com/us/Processor_TechDocs/25112.PDF)
+- [Agner's Optmization Manuals](http://www.agner.org/optimize/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10879/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11070/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2187/index.html)
 
-<!-- MediaWiki page 2187; revision 10879; parent 10766; 2012-09-24T16:17:26Z -->
+<!-- MediaWiki page 2187; revision 11070; parent 10879; 2013-03-21T15:11:59Z -->
