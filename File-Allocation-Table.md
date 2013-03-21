@@ -111,11 +111,11 @@ Normalerweise gibt es zwei FAT-Kopien um durch die Redundanz etwas Fehlertoleran
 
 Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT die Nummer des nächsten Clusters an. Man muss also den Wert aus der FAT nehmen und ihn als neuen Index für die FAT benutzen. Wenn man auf die eigentlichen Daten zugreifen will, muss man vorher 2 subtrahieren, weil die Cluster 0 und 1 nicht im Datenbereich existieren (der Datenbereich ist quasi ein Array aus Clustern das mit Index 2 anfängt wogegen die FAT ein Array aus Cluster-Nummern ist das mit Index 0 anfängt).
 
-Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichiseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden u.a. dafür benutzt um zu kennzeichnen ob das Laufwerk ordentlich entmounted wurde oder ob mal Fehler beim Zugriff auf physische Sektoren aufgetreten sind. Für simple FAT-Treiber ist es empfehlenswert diese Werte zu ignorieren und nicht zu verändern.
+Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichniseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden u.a. dafür benutzt um zu kennzeichnen ob das Laufwerk ordentlich entmounted wurde oder ob mal Fehler beim Zugriff auf physische Sektoren aufgetreten sind. Für simple FAT-Treiber ist es empfehlenswert diese Werte zu ignorieren und nicht zu verändern.
 
 ### Wurzelverzeichnis
 
-Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter zusammenhängender Bereich auf dem Volume. Es bildet, wie andere Verzeichnisse auch, eine Tabelle aus Verzeichnis-Einträgen. Allerdings wird seine Größe statisch beim Erstellen des Dateisystems festgelegt, so dass die Anzahl möglicher Dateien im Wurzelverzeichnis beschränkt ist.
+Bei FAT12 und FAT16 ist das Wurzelverzeichnis ein festgelegter zusammenhängender Bereich auf dem Datenträger. Es bildet, wie andere Verzeichnisse auch, eine Tabelle aus Verzeichnis-Einträgen. Allerdings wird seine Größe statisch beim Erstellen des Dateisystems festgelegt, so dass die Anzahl möglicher Dateien im Wurzelverzeichnis beschränkt ist.
 
 Bei FAT32 liegt das Wurzelverzeichnis im Datenbereich und wird wie jedes andere Verzeichnis auch behandelt. Es hat deshalb keinen festen Platz auf dem Volume. Sein erster Cluster wird im Boot-Sektor gespeichert, die weiteren Cluster werden in der FAT gespeichert. Die Größe des Wurzelverzeichnisses ist dadurch dynamisch.
 
@@ -214,7 +214,7 @@ Die Informationen die dem Boot-Sektor zu entnehmen sind können je nach FAT-Vers
 
 VFAT (**V**irtual **F**ile **A**llocation **T**able) ist eine Erweiterung für FAT. Sie kommt seit [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z.B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten.
 
-Außerdem werden auch das Erstelldatum und das Datum des letzten Zugriffs durch VFAT gespeichert, aber das ist nicht an die Benutzung der langen Dateinamen gebunden.
+Außerdem werden auch das Erstellungsdatum und das Datum des letzten Zugriffs durch VFAT gespeichert, aber das ist nicht an die Benutzung der langen Dateinamen gebunden.
 
 ## Dateikonventionen
 
@@ -252,6 +252,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 10436; parent 10291; 2012-02-16T12:51:00Z -->
+<!-- MediaWiki page 1643; revision 11071; parent 10436; 2013-03-21T15:20:21Z -->
