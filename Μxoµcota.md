@@ -65,9 +65,10 @@ Die praktisch absolute Dezentralität hat den Vorteil einer funktionierenden for
 - Netzwerkstack: [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), [IPv4](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol"), UDP, DHCP, TCP
 - palirc als IRC-Client
 - Grieχsche Buchstaben im Namen
+- Fortgeschrittener Falschrummodus
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11016/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2634/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11075/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2634/index.html)
 
-<!-- MediaWiki page 2634; revision 11016; parent 11014; 2013-03-04T03:20:56Z -->
+<!-- MediaWiki page 2634; revision 11075; parent 11016; 2013-03-22T21:02:25Z -->
