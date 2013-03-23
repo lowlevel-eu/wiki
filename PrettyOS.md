@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes") et. al. |
-| Akt. Version: | 0.0.4.1 (April 2012) |
+| Akt. Version: | 0.0.4.22 (März 2013) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -17,7 +17,7 @@
 
 [\[1\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html)
 
-PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei <http://www.c-plusplus.de/forum/>. Es entstand als Idee im März 2009, führte zu einem vierteiligen Tutorial, das für Einsteiger in die Materie beginnend beim ersten Boot-Vorgang gedacht war, und wird seit Mitte Oktober 2009 von interessierten Entwicklern diskutiert, umgebaut, gepflegt und erweitert. Zielsetzung ist, verständlich zum Lernen und zum Experimentieren verwendbar zu sein. Das ist bisher hervorragend gelungen.
+PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei <http://www.c-plusplus.de/forum/>. Es entstand als Idee im März 2009, führte zu einem vierteiligen Tutorial, das für Einsteiger in die Materie beginnend beim ersten Boot-Vorgang gedacht war, und wird seit Mitte Oktober 2009 von interessierten Entwicklern diskutiert, umgebaut, gepflegt und erweitert. Zielsetzung ist, verständlich zum Lernen und zum Experimentieren verwendbar zu sein. Das ist bisher weitgehend gelungen. Mit zunehmender Komplexität stellt sich die Frage der Didaktik immer wieder neu.
 
 ## Ziel
 
@@ -25,11 +25,11 @@ PrettyOS soll Einsteiger in die Betriebssystementwicklung dabei unterstützen, d
 
 ## Genereller Aufbau
 
-PrettyOS besteht momentan aus den Bereichen Bootloader (Stage 1 und 2), Kernel und User-Space.
+PrettyOS besteht momentan aus den Bereichen Bootloader (Stage 1 und 2), Kernel (C/asm) und User-Space (C/C++).
 
 ### Bootloader
 
-Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den Kernel (kernel.bin). Als Dateisystem für das Bootlaufwerk wird FAT12 vorausgesetzt. Der Bootloader soll [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konform werden. Als Alternative zum nativen Bootloader kann mit Einschränkungen GRUB verwendet werden.
+Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den Kernel (kernel.bin). Als Dateisystem für das Bootlaufwerk wird FAT12 vorausgesetzt. Der Bootloader ist inzwischen [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konform. Als Alternative zum nativen Bootloader kann mit Einschränkungen GRUB verwendet werden.
 
 ### Kernel
 
@@ -37,7 +37,7 @@ Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Asse
 
 ### Userprogramme
 
-Der User-Space dient bisher nur als Demonstration für die API (syscalls). Bisher sind nur eine einfache Shell sowie ein paar simple Programme vorhanden, die u.a. zum Test neuer Features dienen. Programme für den Userspace können in diversen Sprachen geschrieben werden. Als Hilfe stehen die Dummy-makefiles, eine C-Userlib (Syscalls sowie einige wenige Funktionen der C-Standardlib) und eine C++-Userlib, die die C-Userlib als Untermenge hat und zudem ein paar C++-spezifische Funktionen bietet (new, delete) zur Verfügung.
+Der User-Space dient bisher vorwiegend als Demonstration für die API (syscalls). Bisher sind nur eine einfache Shell sowie ein paar simple Programme vorhanden, die u.a. zum Test neuer Features dienen. Programme für den Userspace können in diversen Sprachen geschrieben werden. Als Hilfe stehen die Dummy-makefiles, eine C-Userlib (Syscalls sowie einige wenige Funktionen der C-Standardlib) und eine C++-Userlib, die die C-Userlib als Untermenge hat und zudem ein paar C++-spezifische Funktionen bietet (new, delete) zur Verfügung.
 
 Userprogramme können auf drei verschiedenen Wegen eingebunden werden: Mittels incbin direkt in den Kernel, von wo es dann über die vom Linker generierte Adresse gestartet werden kann (derzeit für die VM86-Programme für VBE und APM genutzt), über die Ramdisk (so wie es derzeit mit der Shell gemacht wird), oder auf dem herkömmlichen Weg als Executable im ELF- oder PE-Format auf einem von PrettyOS unterstützten Speichermedium, wodurch das Programm für den Nutzer von der Shell aus aufrufbar wird.
 
@@ -54,6 +54,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10562/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11077/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 10562; parent 10224; 2012-04-14T16:12:41Z -->
+<!-- MediaWiki page 2096; revision 11077; parent 10562; 2013-03-23T23:34:18Z -->
