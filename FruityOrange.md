@@ -41,7 +41,7 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 Die Syscalls werden über den Interrupt 0x30 aufgerufen.
 
 | Nummer (in %eax) | Name | Beschreibung | ebx | ecx | edx |
-| ------------------ | -------- | --------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ----- |
+| ------------------ | -------- | ----------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ----- |
 | 0 | exit | Beendet das aktuelle programm | exit-Status |  |  |
 | 1 | putc | Gibt ein Zeichen auf dem Bildschirm aus | Zeichen |  |  |
 | 2 | puts | Gibt einen String auf dem Bildschirm aus | Pointer zum String | Länge des Strings |  |
@@ -49,9 +49,11 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen.
 | 4 | gets | Liest einen String über die Tastatur ein. | Pointer zum String (muss vorher abgespeichert werden) | Länge des eingegebenen Strings (wird hier reingeschrieben) |  |
 | 5 | time | Hier bekommt man einen aktuellen Timestamp | In ebx liegt der timestamp dann drin |  |  |
 | 6 | usleep | Legt das Programm für %ebx Mikrosekunden schlafen | Anzahl der Mikrosekunden, die zu warten sind |  |  |
+| 7 | alloc | Alloziert freie Speicherseiten im userspace (1-3GB) | Anzahl der pages | Adresse |  |
+| 8 | free | Gibt Speicherseiten wieder frei | Adresse der pages | Anzahl der pages |  |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11040/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11076/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11040; parent 11039; 2013-03-18T16:30:20Z -->
+<!-- MediaWiki page 2594; revision 11076; parent 11040; 2013-03-23T19:45:12Z -->
