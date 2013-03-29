@@ -308,7 +308,7 @@ void irq_handler(uint8_t irq) {
            (e1_code || (scancode != 0xE1)) &&
            (e0_code || (scancode != 0xE0)))
        {
-           break_code = 0;
+           break_code = 1;
            scancode &= ~0x80;
        }
 
@@ -380,6 +380,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11088; parent 10545; 2013-03-29T20:45:23Z -->
+<!-- MediaWiki page 1468; revision 11089; parent 11088; 2013-03-29T20:47:05Z -->
