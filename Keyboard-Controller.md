@@ -294,7 +294,7 @@ void irq_handler(uint8_t irq) {
        int break_code = 1;
 
        // Status-Variablen fuer das Behandeln von e0- und e1-Scancodes
-       static int     e0_code = 1;
+       static int     e0_code = 0;
        // Wird auf 1 gesetzt, sobald e1 gelesen wurde, und auf 2, sobald das erste
        // Datenbyte gelesen wurde
        static int      e1_code = 0;
@@ -310,20 +310,17 @@ void irq_handler(uint8_t irq) {
        {
            break_code = 0;
            scancode &= ~0x80;
-
-return;
-
        }
 
        if (e0_code) {
            // Fake shift abfangen und ignorieren
            if ((scancode == 0x2A) || (scancode == 0x36)) {
-               e0_code = 1;
+               e0_code = 0;
                return;
            }
 
            keycode = translate_scancode(1, scancode);
-           e0_code = 1;
+           e0_code = 0;
        } else if (e1_code == 2) {
            // Fertiger e1-Scancode
            // Zweiten Scancode in hoeherwertiges Byte packen
@@ -336,7 +333,7 @@ return;
            e1_code++;
        } else if (scancode == 0xE0) {
            // Anfang eines e0-Codes
-           e0_code = 0;
+           e0_code = 1;
        } else if (scancode == 0xE1) {
            // Anfang eines e1-Codes
            e1_code = 1;
@@ -383,6 +380,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10545/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11088/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 10545; parent 9541; 2012-03-29T08:40:56Z -->
+<!-- MediaWiki page 1468; revision 11088; parent 10545; 2013-03-29T20:45:23Z -->
