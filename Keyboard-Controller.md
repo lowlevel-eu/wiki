@@ -291,7 +291,7 @@ void irq_handler(uint8_t irq) {
 
        uint8_t scancode;
        uint8_t keycode = 0;
-       int break_code = 1;
+       int break_code = 0;
 
        // Status-Variablen fuer das Behandeln von e0- und e1-Scancodes
        static int     e0_code = 0;
@@ -380,6 +380,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11090/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11089; parent 11088; 2013-03-29T20:47:05Z -->
+<!-- MediaWiki page 1468; revision 11090; parent 11089; 2013-03-29T20:47:50Z -->
