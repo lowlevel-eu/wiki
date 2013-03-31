@@ -47,7 +47,7 @@ Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksu
 
 - In dem ersten Kilobyte der [Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area")
 - In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MiB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area")), wenn die Adresse der Extended BIOS Data Area nicht definiert ist.
-- Im Adressraum des BIOS ROM (0xE0000 - 0xFFFFF)
+- Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF)
 
 Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
 
@@ -112,6 +112,6 @@ Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11092/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11093/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1490/index.html)
 
-<!-- MediaWiki page 1490; revision 11092; parent 11051; 2013-03-31T14:24:24Z -->
+<!-- MediaWiki page 1490; revision 11093; parent 11092; 2013-03-31T14:31:37Z -->
