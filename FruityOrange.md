@@ -28,6 +28,7 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
 - [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap")
 - [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), Elf32-loader
+- [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")
 
 ### Treiber
 
@@ -58,6 +59,6 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11094/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11095/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11094; parent 11076; 2013-04-02T18:40:35Z -->
+<!-- MediaWiki page 2594; revision 11095; parent 11094; 2013-04-02T18:41:14Z -->
