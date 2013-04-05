@@ -46,6 +46,6 @@ Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11061/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11061; parent 11060; 2013-03-20T15:26:15Z -->
+<!-- MediaWiki page 2637; revision 11098; parent 11061; 2013-04-05T12:51:29Z -->
