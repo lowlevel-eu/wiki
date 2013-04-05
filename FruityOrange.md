@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Datei:FruityOrangeLogo.png |  |
 | Entwickler: | [Micha](https://lowlevel-eu.github.io/wiki/pages/2560/index.html "Benutzer:Micha.linuxfreak") |
-| Akt. Version: | 0.04 |
+| Akt. Version: | 0.05 |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenz") |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -25,9 +25,9 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 - Higherhalf-Kernel mit GDT Trick
 - printf, panic, debug
-- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
+- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Dynamisches [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")-interface
 - [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap")
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), Elf32-loader
+- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")32-loader
 - [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS")
 
 ### Treiber
@@ -37,9 +37,13 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 - [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT")
 - [CMOS / RTC](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
 
+### Programme
+
+- Concha - eine ganz kleine Shell (noch nicht fertig)
+
 ## Syscalls
 
-Die Syscalls werden über den Interrupt 0x30 aufgerufen.
+Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[1\]](https://github.com/micha-/FruityOrange/blob/master/include/sys/syscalls.h)
 
 | Nummer (in %eax) | Name | Beschreibung | ebx | ecx | edx |
 | ------------------ | -------- | ----------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
@@ -56,9 +60,12 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen.
 | 10 | close | Schließt eine Datei | Fildeskriptor |  |  |
 | 11 | read | Liest den Inhalt einer Datei | Filedeskriptor<br>Rückgabe: Anzahl der gelesenen Bytes | Buffer | länge (in bytes) |
 | 12 | write | Schreibt in eine Datei | Filedeskriptor<br>Rückgabe: Anzahl der geschriebenen Bytes | Buffer | länge (in bytes) |
+| 13 | seek | Ändert die Position in einer Datei | Filedeskriptor | Whence |  |
+| 14 | chdir | Wechselt das Arbeitsverzeichnis | Pfad | Rückgabe: erfolg bzw. fehlercode |  |
+| 15 | getcwd | Aktuelles Arbeitsverzeichnis auslesen | Buffer (hier wird der pfad abgespeichert) | Größe des Buffers in Bytes |  |
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11095/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11095; parent 11094; 2013-04-02T18:41:14Z -->
+<!-- MediaWiki page 2594; revision 11097; parent 11095; 2013-04-05T09:16:56Z -->
