@@ -19,7 +19,7 @@ Die GCC wird nicht direkt unterstützt, sondern nur durch die Portierung MinGW u
 
 ## GCC unter Linux
 
-Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie im Terminal mit dem Befehl *gcc \[Zu kompilierende Datei\]*.
+Die GCC gehört zum Standardumfang jeder Linuxdistribution. Aufgerufen wird sie im Terminal mit dem Befehl *gcc \[Zu kompilierende Datei\]*.
 
 ## Zusätzliche Parameter
 
@@ -45,6 +45,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11100/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 11099; parent 11033; 2013-04-09T13:31:36Z -->
+<!-- MediaWiki page 1805; revision 11100; parent 11099; 2013-04-09T13:32:21Z -->
