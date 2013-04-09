@@ -24,14 +24,15 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 ## Zusätzliche Parameter
 
 | Parameter | Beschreibung |
-| ----------- | -------------------------------------------------------------------------------------------- |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | -o | Name (und Typ) der Ausgabedatei. Bei .bin-Endung wird auch nur eine binäre Datei erstellt. |
 | -c | Kein Linken des Quellcodes. |
-| -O | Optimieren des Quellcodes. Grad kann von 0 - 3 angegeben werden. |
+| -O | Optimieren des Quellcodes. Grad kann von 0 – 3 angegeben werden. |
 | -l | Bindet weitere Bibliotheken ein |
 | -Wall | Aktiviert sinnvolle Warnungen. |
 | -Werror | Behandelt alle Warnungen wie Fehler |
 | -pedantic | Gibt alle Warnungen aus. |
+| -fno-tree-loop-distribute-patterns | Deaktiviert die automatische Erkennung, ob ein bestimmter Codeabschnitt durch eine libc-Funktion wie memcpy oder memset ersetzt werden kann. Sollte für die eigene memcpy-, memset-, …-Implementierung gesetzt werden (in der eigenen libc oder im Kernel), da sonst potentiell eine Endlosrekursion erzeugt wird. |
 
 ## Siehe auch
 
@@ -44,6 +45,6 @@ Die GCC gehört zum Standardumfang jeder Linuxdistrubition. Aufgerufen wird sie 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11033/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11099/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 11033; parent 10782; 2013-03-17T06:14:31Z -->
+<!-- MediaWiki page 1805; revision 11099; parent 11033; 2013-04-09T13:31:36Z -->
