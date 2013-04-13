@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | --- |
 | Homepage |  |
 
-<https://github.com/micha-/FruityOrange>  
+<https://github.com/michamimosa/FruityOrange>  
 <https://code.google.com/p/fruityorange/>
 
 FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), welches [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Bootloader benutzt.  
@@ -23,7 +23,7 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 ## Features
 
-- Higherhalf-Kernel mit GDT Trick
+- Higherhalf-Kernel
 - printf, panic, debug
 - [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Dynamisches [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")-interface
 - [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap")
@@ -43,7 +43,7 @@ FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-
 
 ## Syscalls
 
-Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[1\]](https://github.com/micha-/FruityOrange/blob/master/include/sys/syscalls.h)
+Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[1\]](https://github.com/michamimosa/FruityOrange/blob/master/include/sys/syscalls.h)
 
 | Nummer (in %eax) | Name | Beschreibung | ebx | ecx | edx |
 | ------------------ | -------- | ----------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
@@ -66,6 +66,6 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[1\]](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11097/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11101/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11097; parent 11095; 2013-04-05T09:16:56Z -->
+<!-- MediaWiki page 2594; revision 11101; parent 11097; 2013-04-13T13:40:21Z -->
