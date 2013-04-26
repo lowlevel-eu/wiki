@@ -111,7 +111,7 @@ Normalerweise gibt es zwei FAT-Kopien um durch die Redundanz etwas Fehlertoleran
 
 Bei einem normalen Cluster in einer Clusterkette gibt der Wert in der FAT die Nummer des nächsten Clusters an. Man muss also den Wert aus der FAT nehmen und ihn als neuen Index für die FAT benutzen. Wenn man auf die eigentlichen Daten zugreifen will, muss man vorher 2 subtrahieren, weil die Cluster 0 und 1 nicht im Datenbereich existieren (der Datenbereich ist quasi ein Array aus Clustern das mit Index 2 anfängt wogegen die FAT ein Array aus Cluster-Nummern ist das mit Index 0 anfängt).
 
-Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichniseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden u.a. dafür benutzt um zu kennzeichnen ob das Laufwerk ordentlich entmounted wurde oder ob mal Fehler beim Zugriff auf physische Sektoren aufgetreten sind. Für simple FAT-Treiber ist es empfehlenswert diese Werte zu ignorieren und nicht zu verändern.
+Die verbotenen Cluster-Nummern dürfen weder in der FAT selber noch in den Verzeichniseinträgen benutzt werden. Die Cluster-Nummer 0 darf in Verzeichniseinträgen nur verwendet werden wenn die betreffende Datei eine Größe von 0 hat (also keine Cluster für Nutzdaten benötigt) und in der FAT kennzeichnet die Cluster-Nummer 0 freie Cluster. Die Einträge 0 und 1 in der FAT werden u.a. dafür benutzt um zu kennzeichnen ob das Laufwerk ordentlich ausgehängt wurde oder ob mal Fehler beim Zugriff auf physische Sektoren aufgetreten sind. Für simple FAT-Treiber ist es empfehlenswert diese Werte zu ignorieren und nicht zu verändern.
 
 ### Wurzelverzeichnis
 
@@ -252,6 +252,6 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11071/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11103/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1643/index.html)
 
-<!-- MediaWiki page 1643; revision 11071; parent 10436; 2013-03-21T15:20:21Z -->
+<!-- MediaWiki page 1643; revision 11103; parent 11071; 2013-04-26T07:18:51Z -->
