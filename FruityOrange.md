@@ -43,6 +43,10 @@ Ein fertiges Images gibts hier: [\[1\]](http://fruityorange.googlecode.com/files
 - Concha - eine ganz kleine Shell
 - utils: ls, cat, cp
 
+## Screenshot
+
+![fruityorange_0.06.png](https://a.fsdn.com/con/app/proj/fruityorange/screenshots/fruityorange_0.06.png)
+
 ## Syscalls
 
 Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[2\]](https://github.com/michamimosa/FruityOrange/blob/master/include/sys/syscalls.h)
@@ -75,6 +79,6 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[2\]](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11105/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11106/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11105; parent 11101; 2013-04-30T14:24:23Z -->
+<!-- MediaWiki page 2594; revision 11106; parent 11105; 2013-04-30T14:37:01Z -->
