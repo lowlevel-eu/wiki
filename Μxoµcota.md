@@ -24,7 +24,7 @@
 
 ## IPC
 
-Zur IPC werden Popupthreads verwendet, die entweder asynchron oder synchron (über waitpid) abgesetzt werden können. Jeder Popupthread erhält als Parameter einen Integer (eine Funktionsnummer) und ggf. eine SHM-ID. Zusätzlich kann der Aufrufer eine Nachricht übergeben, die vom Kernel zwischengespeichert wird und vom Popupthread über einen Syscall abgerufen werden kann.
+Zur IPC werden Popupthreads verwendet, die entweder asynchron oder synchron (über waitpid) abgesetzt werden können. Jeder Popupthread erhält als Parameter einen Integer (eine Funktionsnummer) und ggf. eine SHM-ID. Zusätzlich kann der Aufrufer eine Nachricht übergeben, die vom Kernel zwischengespeichert wird und vom Popupthread über einen Syscall abgerufen werden kann; ebenso kann der Popupthread eine Antwortnachricht angeben, die der Aufrufer dann abrufen kann.
 
 ## VFS
 
@@ -53,14 +53,13 @@ Das VFS operiert vollständig im Userspace und beinahe vollkommen dezentral. Ein
 
 Die Symlinkimplementierung ist vielleicht nicht die schönste ihrer Art, aber zumindest funktioniert sie soweit.
 
-All diese VFS-Funktionen laufen transparent über die IPC-Funktionen ab. Der Aufrufer erzeugt für alle VFS-Funktionen kurze Nachrichtenblöcke, die über Message Passing an Popupthreads im Aufrufer weitergegeben werden, sowie für einige (read/write bzw. stream_recv/stream_send) auch SHM-Bereiche, über die größere Datenmengen ausgetauscht werden können. Auf Empfängerseite lesen Bibliotheksfunktionen die Informationen aus den Nachrichtenblöcken wieder aus und geben sie an vom Service bereitgestellte Funktionen wie „service_create_pipe“ weiter, deren Interface beinahe exakt denen der Aufruferfunktionen (wie „create_pipe“) entspricht. Zur VFS-Benutzung ist die Benutzung der IPC-Funktionen also prinzipiell nicht nötig.
+All diese VFS-Funktionen laufen transparent über die IPC-Funktionen ab. Der Aufrufer erzeugt für alle VFS-Funktionen kurze Nachrichtenblöcke, die über Message Passing an Popupthreads im Aufrufer weitergegeben werden, sowie für einige (read/write bzw. stream_recv/stream_send) auch SHM-Bereiche, über die größere Datenmengen ausgetauscht werden können (kleinere werden auch hier per Message Passing übergeben). Auf Empfängerseite lesen Bibliotheksfunktionen die Informationen aus den Nachrichtenblöcken wieder aus und geben sie an vom Service bereitgestellte Funktionen wie „service_create_pipe“ weiter, deren Interface beinahe exakt denen der Aufruferfunktionen (wie „create_pipe“) entspricht. Zur VFS-Benutzung ist die Benutzung der IPC-Funktionen also prinzipiell nicht nötig.
 
 Die praktisch absolute Dezentralität hat den Vorteil einer funktionierenden fork-Implementierung (wobei jeder Prozess die von ihm gehaltenen Pipe-IDs im Userspace selbst duplizieren muss (dafür existiert eine „duplicate_pipe“-Funktion)).
 
 ## Aktuelle Features
 
 - o\. g. IPC und VFS
-- Kooperatives Multitasking – ich vertraue meinen Prozessen
 - [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface")
 - Netzwerkstack: [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), [IPv4](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol"), UDP, DHCP, TCP
 - palirc als IRC-Client
@@ -69,6 +68,6 @@ Die praktisch absolute Dezentralität hat den Vorteil einer funktionierenden for
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11082/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2634/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11104/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2634/index.html)
 
-<!-- MediaWiki page 2634; revision 11082; parent 11075; 2013-03-24T05:11:06Z -->
+<!-- MediaWiki page 2634; revision 11104; parent 11082; 2013-04-30T00:20:44Z -->
