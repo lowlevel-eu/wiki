@@ -152,9 +152,10 @@ Im InterruptControl-Register wird bestimmt zu welchen Ereignissen man einen Inte
 
 - [Tutorial zur seriellen Schnittstelle](http://www.nondot.org/sabre/os/files/Communication/CP_serial.pdf)
 - [Tutorial zum RS232-Standard](http://www.camiresearch.com/Data_Com_Basics/RS232_standard.html)
+- [COM Tutorial mit ausführlicher Erklärung](http://en.wikibooks.org/wiki/Serial_Programming/8250_UART_Programming)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9997/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11109/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1561/index.html)
 
-<!-- MediaWiki page 1561; revision 9997; parent 9896; 2011-07-28T21:07:26Z -->
+<!-- MediaWiki page 1561; revision 11109; parent 9997; 2013-05-01T19:51:23Z -->
