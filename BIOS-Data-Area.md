@@ -43,7 +43,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x04
 | 0x80 | 2 | Start des PS/2-Keyboard-Buffers |
 | 0x82 | 2 | Ende des PS/2-Keyboard-Buffers |
 | 0x84 | 7 | Grafik-Controller-Informationen |
-| 0x8B | 13 | Disk-Controller-Informationen |
+| 0x8B | 11 | Disk-Controller-Informationen |
 | 0x96 | 2 | Keyboard-Status-Flag |
 | 0x98 | 4 | Zeiger auf Benutzer-Flag |
 | 0x9C | 4 | Benutzer-Warte-Zähler |
@@ -242,6 +242,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10579/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 10579; parent 6666; 2012-04-22T00:00:14Z -->
+<!-- MediaWiki page 1564; revision 11108; parent 10579; 2013-05-01T12:30:41Z -->
