@@ -234,14 +234,14 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 | 5 | 5 |
 | 6 | 20 |
 | 7 | 7 |
-| 8 | 55 |
-| 9 | 56 |
-| 10 | 57 |
-| 11 | 58 |
-| 12 | 59 |
-| 13 | 60 |
-| 14 | 61 |
-| 15 | 62 |
+| 8 | 56 |
+| 9 | 57 |
+| 10 | 58 |
+| 11 | 59 |
+| 12 | 60 |
+| 13 | 61 |
+| 14 | 62 |
+| 15 | 63 |
 
 ## Siehe auch
 
@@ -250,6 +250,6 @@ Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11110/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1890/index.html)
 
-<!-- MediaWiki page 1890; revision 9241; parent 7692; 2011-01-03T17:26:41Z -->
+<!-- MediaWiki page 1890; revision 11110; parent 9241; 2013-05-15T20:43:27Z -->
