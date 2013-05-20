@@ -4,7 +4,7 @@
 | ------------------------ | ---------------------------------------------------------------------------- |
 | Name: | QEMU |
 | Entwickler: | Fabrice Bellard u. a. |
-| Akt. Version: | 1.2.0<br>(Stand 6.9.2012) |
+| Akt. Version: | 1.5.0<br>(Stand 20.5.2012) |
 | Lizenz: | GPL (tw. LGPL, BSD) |
 | Betriebssystem(e): | Linux, Windows, OS X, \*BSD und andere |
 | Virtualisiertes System |  |
@@ -115,6 +115,6 @@ Hinweise:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10969/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11114/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 10969; parent 10906; 2012-12-19T00:19:27Z -->
+<!-- MediaWiki page 1505; revision 11114; parent 10969; 2013-05-20T21:57:22Z -->
