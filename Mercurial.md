@@ -1,6 +1,6 @@
 # Mercurial
 
-Mercurial ist eine dezentral organisierters Versionsverwaltungssystem, das wie die meisten anderen in erster Linie über die Shell gesteuert wird. Es ist nahezu vollständig in Python geschrieben (mit Ausnahme des in C implementierten diff), sodass es theoretisch problemlos auf allen Plattformen mit Python-Umgebung einsatzfähig ist. Dar Name des Kommandozeilentools lautet *hg* (chem. Elementsymbol für Quecksilber; engl. : Mercury). Für Linux und Windows gibt es das Tool \[tortoisehg.bitbucket.org/ TortoiseHg\], welches eine grafische Oberfläche für alle Operationen plus weitere Features wie das "Shelf" ("Regal", um Changes zwischen verschiedenen Commits/Merging-Vorgängen zwischenspeichern zu können) bereitstellen und sich unter Windows auch in das Kontextmenü des Explorers integrieren.
+Mercurial ist eine dezentral organisierters [Versionsverwaltungssystem](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"), das wie die meisten anderen in erster Linie über die Shell gesteuert wird. Es ist nahezu vollständig in Python geschrieben (mit Ausnahme des in C implementierten diff), sodass es theoretisch problemlos auf allen Plattformen mit Python-Umgebung einsatzfähig ist. Dar Name des Kommandozeilentools lautet *hg* (chem. Elementsymbol für Quecksilber; engl. : Mercury). Für Linux und Windows gibt es das Tool \[tortoisehg.bitbucket.org/ TortoiseHg\], welches eine grafische Oberfläche für alle Operationen plus weitere Features wie das "Shelf" ("Regal", um Changes zwischen verschiedenen Commits/Merging-Vorgängen zwischenspeichern zu können) bereitstellen und sich unter Windows auch in das Kontextmenü des Explorers integrieren.
 
 Außerdem existieren eine Reihe IDEs, wie zum Beispiel NetBeans, Eclipse und KDevelop, die Mercurial out-of-the-box oder per Plugins Unterstützen.
 
@@ -125,6 +125,6 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10957/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11118/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1891/index.html)
 
-<!-- MediaWiki page 1891; revision 10957; parent 10956; 2012-12-02T18:49:40Z -->
+<!-- MediaWiki page 1891; revision 11118; parent 10957; 2013-05-22T15:15:15Z -->
