@@ -20,9 +20,9 @@ Des Weiteren ist der Raspberry Pi zudem sehr günstig (B-Variante ohne MwSt. 35 
 
 Der Raspberry Pi ist eine sehr interessante Plattform für [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "OS")-Entwickler:
 
-Normale PCs sind heute aus sehr vielen verschiedenen Bauteilen zusammengesetzt - so gibt es jährlich neue Grafikkartenserien und Prozessoren, und es gibt unzählige weitere Bauteile, die ein PC-Nutzer verbauen kann. Es ist für Hobby-OS-Entwickler unmöglich, für all jene Geräte Treiber zu schreiben.
+Normale PCs sind heute aus sehr vielen verschiedenen Bauteilen zusammengesetzt - so gibt es jährlich neue Grafikkartenserien und Prozessoren, und es gibt unzählige weitere Bauteile, die ein PC-Nutzer verbauen kann. Es ist für Hobby-OS-Entwickler unmöglich, für all jene Geräte Treiber zu schreiben. Der Raspberry Pi dagegen ist eine Plattform, den es "nur" in 2 Ausführungen gibt - einer A-Variante und einer erweiterten B-Variante. Natürlich gibt es auch hier immer wieder kleinere Veränderungen, was die Bestückung betrifft, jedoch kann man diese Änderungen leicht nachvollziehen und sein OS einfach nachrüsten, sodass man (fast) die gesamte Hardware unterstützen kann (abgesehen von eigenen Erweiterungen; s.u.).
 
-Der Raspberry Pi dagegen ist eine Plattform, den es "nur" in 2 Ausführungen gibt - einer A-Variante und einer erweiterten B-Variante. Natürlich gibt es auch hier immer wieder kleinere Veränderungen, was die Bestückung betrifft, jedoch kann man diese Änderungen leicht nachvollziehen und sein OS einfach nachrüsten, sodass man (fast) die gesamte Hardware unterstützen kann (abgesehen von eigenen Erweiterungen).
+Des Weiteren ist der Raspberry Pi einer der wenigen Rechner auf ARM-Basis zu für Privatpersonen erschwinglichen Preisen. Üblicherweise sind diese entweder sehr teuer oder als eingebettete Systeme implementiert, sodass deren Programmierung mangels Schnittstellen zum Benutzer üblicherweise eher langweilig ist.
 
 ## Technik
 
@@ -46,6 +46,6 @@ Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11098/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11098; parent 11061; 2013-04-05T12:51:29Z -->
+<!-- MediaWiki page 2637; revision 11120; parent 11098; 2013-05-23T10:12:29Z -->
