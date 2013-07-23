@@ -78,7 +78,7 @@ Fast fertig, nur noch ICW4 fehlt. Es wird 0x01 an beide gesendet, um anzuzeigen,
 Wie bereits erwähnt, können die PICs auch bestimmte IRQs blockieren. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ blockiert. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden. Schreiben wir uns eine Funktion dazu: \<c\> void pic_mask_irqs(uint16_t mask) {
 
       outb(PIC_MASTER_IMR, (uint8_t) mask);
-      outb(PIC_SLAVE_IMR, (uint8_t) mask>>8);
+      outb(PIC_SLAVE_IMR, (uint8_t) (mask>>8));
 
 } \</c\> Simpel, oder? Nebenbei: Wenn das Interruptflag gelöscht ist (-\>cli), dann kommen sowieso keine IRQs an. Außerdem werden alle IRQs des Slaves blockiert, wenn im Master der IRQ 2 maskiert wird.
 
@@ -133,7 +133,7 @@ void pic_remap(int interrupt_num) {
 void pic_mask_irqs(uint16_t mask) {
 
       outb(PIC_MASTER_IMR, (uint8_t) mask);
-      outb(PIC_SLAVE_IMR, (uint8_t) mask>>8);
+      outb(PIC_SLAVE_IMR, (uint8_t) (mask>>8));
 
 }
 
@@ -147,6 +147,6 @@ void pic_send_eoi(int irq_num) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9750/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 9750; parent 9749; 2011-05-07T16:47:13Z -->
+<!-- MediaWiki page 2183; revision 11123; parent 9750; 2013-07-23T19:51:26Z -->
