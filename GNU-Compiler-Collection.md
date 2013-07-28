@@ -43,9 +43,10 @@ Die GCC gehört zum Standardumfang jeder Linuxdistribution. Aufgerufen wird sie 
 
 - [Website des GCC](http://gcc.gnu.org)
 - [TDM's GCC/mingw32 Builds](http://www.tdragon.net/recentgcc/) (experimentelle Builds von GCC 4.x für Windows)
+- [GCC Compiler-Flags](http://gcc.gnu.org/onlinedocs/gcc-3.3.6/gcc/i386-and-x86_002d64-Options.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11127/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11128/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 11127; parent 11100; 2013-07-28T12:09:32Z -->
+<!-- MediaWiki page 1805; revision 11128; parent 11127; 2013-07-28T12:22:15Z -->
