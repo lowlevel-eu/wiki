@@ -36,7 +36,7 @@ Die GCC gehört zum Standardumfang jeder Linuxdistribution. Aufgerufen wird sie 
 | -fno-tree-loop-distribute-patterns | Deaktiviert die automatische Erkennung, ob ein bestimmter Codeabschnitt durch eine libc-Funktion wie memcpy oder memset ersetzt werden kann. Sollte für die eigene memcpy-, memset-, …-Implementierung gesetzt werden (in der eigenen libc oder im Kernel), da sonst potentiell eine Endlosrekursion erzeugt wird. |
 
   
-Alle Compiler-Flags könnt ihr nachlesen unter:
+Alle Compiler-Flags können unter folgenden Links nachgelesen werden:
 
 | Version | Link |
 | --------- | ------------------------------------------------------------------- |
@@ -54,6 +54,6 @@ Alle Compiler-Flags könnt ihr nachlesen unter:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11130/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 11130; parent 11129; 2013-07-28T12:30:24Z -->
+<!-- MediaWiki page 1805; revision 11132; parent 11130; 2013-07-31T08:24:00Z -->
