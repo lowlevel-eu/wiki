@@ -333,7 +333,8 @@ Unser Linkerscript (link.txt)
       .data  :
       {
         start_ctors = .;
-        *(.ctors)
+        KEEP(*( .init_array ));
+        KEEP(*(SORT_BY_INIT_PRIORITY( .init_array.* )));
         end_ctors = .;
 
         *(.data)
@@ -344,10 +345,10 @@ Unser Linkerscript (link.txt)
         *(.bss)
       }
 
-      /DISCARD/ : { *(.dtors) *(.comment) }
+      /DISCARD/ : { *(.fini_array*) *(.comment) }
     }
 
-Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors, start_dtors und end_dtors in der Datei Startup.cpp haben und er diese beim Linken berücksichtigen soll. Außerdem wird die Liste der Destruktoren aus der aus dem Kernel entfernt, da sie wie oben erklärt nicht verwendet werden. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel:
+Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors in der Datei Startup.cpp haben und er diese beim Linken berücksichtigen soll. Außerdem wird die Liste der Destruktoren aus dem Kernel entfernt, da sie wie oben erklärt nicht verwendet werden. Nur noch ein kurzer Aufruf von LD, und wir haben unseren fertigen Kernel:
 
     ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
 
@@ -363,6 +364,6 @@ Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Ke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11074/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11133/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2124/index.html)
 
-<!-- MediaWiki page 2124; revision 11074; parent 9441; 2013-03-22T17:43:35Z -->
+<!-- MediaWiki page 2124; revision 11133; parent 11074; 2013-08-01T17:30:57Z -->
