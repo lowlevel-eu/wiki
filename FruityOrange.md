@@ -16,10 +16,11 @@
 | Homepage |  |
 
 <https://github.com/michamimosa/FruityOrange>  
-<https://code.google.com/p/fruityorange/>
+<https://code.google.com/p/fruityorange/>  
+<https://sourceforge.net/projects/fruityorange/>
 
 FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), welches [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Bootloader benutzt.  
-Ein fertiges Images gibts hier: [\[1\]](http://fruityorange.googlecode.com/files/FruityOrange_v0-07.iso) (googlecode) oder hier: [\[2\]](https://sourceforge.net/projects/fruityorange/files/latest/download)  
+Ein fertiges Images gibts hier: [\[1\]](http://fruityorange.googlecode.com/files/FruityOrange_v0-07.iso) (googlecode) oder hier: [\[2\]](https://sourceforge.net/projects/fruityorange/files/latest/download) (sourceforge)  
   
 
 ## Features
@@ -88,6 +89,6 @@ Die Syscalls werden über den Interrupt 0x30 aufgerufen. [\[3\]](https://github.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11134/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11135/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2594/index.html)
 
-<!-- MediaWiki page 2594; revision 11134; parent 11106; 2013-08-08T10:40:46Z -->
+<!-- MediaWiki page 2594; revision 11135; parent 11134; 2013-08-08T10:42:28Z -->
