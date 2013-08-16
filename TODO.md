@@ -23,6 +23,7 @@ Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im
   - Wieso werden meine Fragen einfach entfernt? Nichtsdestotrotz: Wer braucht das wirklich, sodass es auf dieser Liste stehen muss? (Kategorie:TODO per Vorlage:TODO reicht ja) —[Clici McXan](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") 18:52, 3. Okt. 2010 (CEST)
   - Hab ich auf der Diskussionsseite zu ISA nicht klar erklärt warum es in heutigen PCs (der letzten \>10 Jahre) kein ISA-PnP mehr gibt? --[Erik.vikinger](https://lowlevel-eu.github.io/wiki/pages/2196/index.html "Benutzer:Erik.vikinger") 09:43, 4. Okt. 2010 (CEST)
 - [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")
+  - Linken eines 32 Bit Stub (um in den Long Mode zu springen) mit 64 Bit Code in eine einzelne Datei. Wie?... --Sebi2020 17:36, 16. Aug. 2013 (CEST)
 - [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - Mache ich, Themen: Wie der Kernel funktioniert etc. - aber noch in diesem Jahr --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 18:16, 23. Feb. 2012 (CET)
 - [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")
 - [APM](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "APM")
@@ -129,6 +130,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10898/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11136/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 10898; parent 10830; 2012-10-01T00:00:11Z -->
+<!-- MediaWiki page 1518; revision 11136; parent 10898; 2013-08-16T15:36:32Z -->
