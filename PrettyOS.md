@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes") et. al. |
-| Akt. Version: | 0.0.4.22 (März 2013) |
+| Akt. Version: | 0.0.4.45 (August 2013) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-[\[1\]](http://www.c-plusplus.de/forum/viewforum-var-f-is-62.html)
+[\[1\]](http://prettyos.de)
 
 PrettyOS ist das Betriebssystem der Projektgruppe OS-Development bei <http://www.c-plusplus.de/forum/>. Es entstand als Idee im März 2009, führte zu einem vierteiligen Tutorial, das für Einsteiger in die Materie beginnend beim ersten Boot-Vorgang gedacht war, und wird seit Mitte Oktober 2009 von interessierten Entwicklern diskutiert, umgebaut, gepflegt und erweitert. Zielsetzung ist, verständlich zum Lernen und zum Experimentieren verwendbar zu sein. Das ist bisher weitgehend gelungen. Mit zunehmender Komplexität stellt sich die Frage der Didaktik immer wieder neu.
 
@@ -47,6 +47,7 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ## Links
 
+- Webpräsenz: <http://pkeus.de/>
 - SVN-Repository: svn://svn.code.sf.net/p/prettyos/code/trunk/Source und <http://svn.code.sf.net/p/prettyos/code/trunk/Source/>
 - Forum: <http://www.c-plusplus.de/forum/f62>
 - Tutorial: <http://www.henkessoft.de/OS_Dev/OS_Dev1.htm>
@@ -54,6 +55,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11081/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 11081; parent 11080; 2013-03-23T23:44:46Z -->
+<!-- MediaWiki page 2096; revision 11137; parent 11081; 2013-08-26T09:56:44Z -->
