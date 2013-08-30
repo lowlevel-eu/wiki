@@ -25,10 +25,12 @@ Weitere Neuerungen sind Zeitstempel auf Nanosekunden-Basis, Journal mit Prüfsum
 
 ## Weblinks
 
-[Dokumentation zu ext4](http://www.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob_plain;h=6a4adcae9f9a699d624a0bb114f8e0d5f86161c5;f=Documentation/filesystems/ext4.txt)
+- [Dokumentation zu ext4](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/filesystems/ext4.txt)
+- [ext4 On-Disk-Layout](https://ext4.wiki.kernel.org/index.php/Ext4_Disk_Layout)
+- [ext4-Wiki](https://ext4.wiki.kernel.org/index.php/Main_Page)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11044/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2438/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11139/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2438/index.html)
 
-<!-- MediaWiki page 2438; revision 11044; parent 9917; 2013-03-18T16:56:51Z -->
+<!-- MediaWiki page 2438; revision 11139; parent 11044; 2013-08-30T11:57:53Z -->
