@@ -1,12 +1,12 @@
 # Local Advanced Programmable Interrupt Controller
 
-Die **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Controller**) nimmt [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") von der [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (oder auch von der [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) und anderen prozessorinternen Einheiten an und leitet diese an den Prozessorkern zum Abarbeiten weiter. Außerdem ist es nur über die LAPIC möglich [IPIs](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "IPI") zu senden und zu empfangen.
+Der **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Controller**) nimmt [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") vom [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (oder auch vom [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) und anderen prozessorinternen Einheiten an und leitet diese an den Prozessorkern zum Abarbeiten weiter. Außerdem ist es nur über den LAPIC möglich [IPIs](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "IPI") zu senden und zu empfangen.
 
 ## Register
 
 ### Aufbau
 
-Die Register der *Local APIC* sind in den physischen Speicher eingeblendet. Jedes der Register beginnt an einer 16 Byte Grenze, erstreckt sich aber nur über die ersten 32 Bit. Falls das Register größer als 32 Bit ist, befinden sich die nächst höheren 32 Bit an der nächst höheren 16 Byte Grenze. Die *Local APIC* stellt folgende Register zur Programmierung bereit:
+Die Register des *Local APIC* sind in den physischen Speicher eingeblendet. Jedes der Register beginnt an einer 16 Byte Grenze, erstreckt sich aber nur über die ersten 32 Bit. Falls das Register größer als 32 Bit ist, befinden sich die nächst höheren 32 Bit an der nächst höheren 16 Byte Grenze. Der *Local APIC* stellt folgende Register zur Programmierung bereit:
 
   
 
@@ -93,7 +93,7 @@ Die physische Adresse der Register kann entweder aus der [Configuration Table](h
 
 ### Initialisierung
 
-Zuerstmal muss man die *Local APIC* über das *Spurious Interrupt Vector Register* aktivieren (und natürlich den Spurious Interrupt Vector setzten). Anschließend sind noch folgende Register zu initialisieren:
+Zuerstmal muss man den *Local APIC* über das *Spurious Interrupt Vector Register* aktivieren (und natürlich den Spurious Interrupt Vector setzten). Anschließend sind noch folgende Register zu initialisieren:
 
 - *Task Priority Register*
 - *LVT Timer Register*
@@ -109,11 +109,11 @@ Bei Pentium Prozessoren mit einer Geschwindigkeit über 75 MHz aus der Prozessor
 
 ### End of Interrupt
 
-Ein *End of Interrupt* (EOI) wird der *Local APIC* signalisiert, in dem man in das *EOI Register* den Wert 0 schreibt.
+Ein *End of Interrupt* (EOI) wird dem *Local APIC* signalisiert, in dem man in das *EOI Register* den Wert 0 schreibt.
 
 ## Timer
 
-Der locale APIC besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") oder der Real-time Clock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")) oder mit dem [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dem PIC verbunden und damit nur an den [BSP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#unterteilung-der-prozessoren "Symmetrisches Multiprozessorsystem") angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
+Der *Local APIC* besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") oder der Real-time Clock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")) oder mit dem [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dem PIC verbunden und damit nur an den [BSP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#unterteilung-der-prozessoren "Symmetrisches Multiprozessorsystem") angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
 
 ### Register
 
@@ -231,6 +231,6 @@ schlussKalib:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1581/index.html)
 
-<!-- MediaWiki page 1581; revision 10375; parent 9987; 2011-12-21T14:16:14Z -->
+<!-- MediaWiki page 1581; revision 11142; parent 10375; 2013-09-08T23:59:30Z -->
