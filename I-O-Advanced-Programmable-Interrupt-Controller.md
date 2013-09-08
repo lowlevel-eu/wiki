@@ -1,6 +1,6 @@
 # I/O Advanced Programmable Interrupt Controller
 
-Die **I/O APIC** (= **I/O Advanced Programmable Interrupt Controller**) löst den [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") in einem [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- bzw. [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-System ab. Da der PIC die [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") ausschließlich an den BSP (= Bootstrap Processor) senden kann, ist in einem System mit mehreren Prozessoren eine I/O APIC notwendig. Darüber hinaus stellt die I/O APIC statt nur 16 IRQ-Leitungen wie der PIC normalerweise 24 IRQ-Leitungen zur Verfügung. Dies verringert die Anzahl der von mehreren Geräten gleichzeitig genutzten IRQs in Systemen mit sehr vielen Geräten. Außerdem ist die Programmierung der I/O APIC schneller, da sie nicht über I/O Ports, sondern über Speicherbereiche abläuft.
+Der **I/O APIC** (= **I/O Advanced Programmable Interrupt Controller**) löst den [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") in einem [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- bzw. [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-System ab. Da der PIC die [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") ausschließlich an den BSP (= Bootstrap Processor) senden kann, ist in einem System mit mehreren Prozessoren ein I/O APIC notwendig. Darüber hinaus stellt der I/O APIC statt nur 16 IRQ-Leitungen wie der PIC normalerweise 24 IRQ-Leitungen zur Verfügung. Dies verringert die Anzahl der von mehreren Geräten gleichzeitig genutzten IRQs in Systemen mit sehr vielen Geräten. Außerdem ist die Programmierung des I/O APIC schneller, da sie nicht über I/O Ports, sondern über Speicherbereiche abläuft.
 
   
 
@@ -21,7 +21,7 @@ Die folgenden Register sind in den physischen Adressraum des Systems eingeblende
 
 ### Interne Register
 
-Die folgenden Register dienen der Konfiguration der I/O APIC:
+Die folgenden Register dienen der Konfiguration des I/O APIC:
 
   
 
@@ -39,7 +39,7 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 | Bits | Beschreibung | Zugriffsart |
 | ------- | ---------------------- | ------------------- |
 | 28-31 | reserviert |  |
-| 24-27 | 4Bit ID der I/O APIC | lesend/schreibend |
+| 24-27 | 4Bit ID des I/O APIC | lesend/schreibend |
 | 0-23 | reserviert |  |
 
 #### I/O APIC Version
@@ -56,7 +56,7 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 | Bits | Beschreibung | Zugriffsart |
 | ------- | ---------------------------------- | ------------------- |
 | 28-31 | reserviert |  |
-| 24-27 | 4Bit Arbitration ID der I/O APIC | lesend/schreibend |
+| 24-27 | 4Bit Arbitration ID des I/O APIC | lesend/schreibend |
 | 0-23 | reserviert |  |
 
 #### *Redirection Table*
@@ -65,11 +65,11 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 
 | Bits | Abkürzung | Name | Beschreibung | Zugriffsart |
 | ------- | ----------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| 56-63 |  | Destination | gibt die empfangende(n) [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")(s) an, Erklärung siehe [*Destination*-Tabelle](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller#destination "I/O APIC") | lesend/schreibend |
+| 56-63 |  | Destination | gibt den/die empfangenden [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")(s) an, Erklärung siehe [*Destination*-Tabelle](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller#destination "I/O APIC") | lesend/schreibend |
 | 17-55 |  |  | reserviert |  |
 | 16 |  | Interrupt Mask | Der Interrupt ist maskiert, falls der Wert 1 ist | lesend/schreibend |
 | 15 |  | Trigger Mode | 0b = edge sensitive<br>1b = level sensitive | lesend/schreibend |
-| 14 |  | Remote IRR | Dieses Bit ist nur gültig, wenn der *Trigger Mode* *edge* ist:<br>0b = EOI mit passendem Interruptvektor wurde gesendet<br>1b = Interrupt wurde von der [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") bzw. den Local APICs angenommen | nur lesend |
+| 14 |  | Remote IRR | Dieses Bit ist nur gültig, wenn der *Trigger Mode* *edge* ist:<br>0b = EOI mit passendem Interruptvektor wurde gesendet<br>1b = Interrupt wurde vom [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") bzw. den Local APICs angenommen | nur lesend |
 | 13 | INTPOL | Interrupt Input Pin Polarity | 0b = high active<br>1b = low active | lesend/schreibend |
 | 12 | DELIVS | Delivery Status | Der Interrupt wird momentan ausgeliefert, falls der Wert 1 ist | nur lesend |
 | 11 | DESTMOD | Destination Mode | Gibt an wie das Destination-Feld zur Adressierung der empfangenden [Local APICs](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") interpretiert wird, siehe Destination-Feld | lesend/schreiben |
@@ -86,7 +86,7 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 ##### *Delivery Mode*
 
 | Wert | Modus | Beschreibung |
-| ------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------ | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 000b | Fixed | Löst in den durch das *Destination*-Feld ausgewählten Prozessoren einen normalen Interrupt aus. |
 | 001b | niedrigste Priorität | Löst in dem Prozessor mit der momentan geringsten Priorität der durch das *Destination*-Feld ausgewählten Prozessoren einen normalen Interrupt aus. |
 | 010b | [SMI](https://github.com/lowlevel-eu/wiki/wiki/SMI "SMI") | Es wird allen durch das *Destination*-Feld ausgewählten Prozessoren ein SMI signalisiert. Dabei wird der Interruptvektor ignoriert, sollte aber aus Kompatibilitätsgründen auf 0 gesetzt werden. Der *Trigger Mode* muss *edge* sein. |
@@ -94,19 +94,19 @@ Die folgenden Register dienen der Konfiguration der I/O APIC:
 | 100b | [NMI](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "NMI") | Es wird allen durch das *Destination*-Feld ausgewählten Prozessoren ein NMI signalisiert. Dabei wird der Interruptvektor ignoriert. Der *Trigger Mode* muss *edge* sein. |
 | 101b | INIT |  |
 | 110b | reserviert |  |
-| 111b | ExtINT | Analog zu *Fixed* wird ein normaler Interrupt ausgelöst. Der Interruptvektor kommt allerdings nicht von der I/O APIC sondern wird von einem externen Controller (z.B. des [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) geliefert. Der *Trigger Mode* muss *edge* sein. |
+| 111b | ExtINT | Analog zu *Fixed* wird ein normaler Interrupt ausgelöst. Der Interruptvektor kommt allerdings nicht vom I/O APIC sondern wird von einem externen Controller (z.B. des [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) geliefert. Der *Trigger Mode* muss *edge* sein. |
 
   
 
 ## Programmierung
 
-### Basisadresse der I/O APIC
+### Basisadresse des I/O APIC
 
 Die Basisadresse dieser Speicherbereiche kann im Allgemeinen über die [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#intel-multiprocessor-specification "Symmetrisches Multiprozessorsystem")- bzw. die [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")-Tabellen ausgelesen werden. Bei einem PIIX3 Chipsatz beginnt der Speicherbereich bei 0xFEC00xy00 (x und y werden mit dem APICBASE Register im PIIX3 festgelegt).
 
 ### Lesen/Schreiben der internen Register
 
-Die I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) und ein Datenregister (*I/O Window* bzw. *IOWIN*). Mit dem Indexregister wählt man ein [internes Register](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller#interne-register "I/O APIC") der I/O APIC aus und kann anschließend über das Datenregister das interne Register auslesen bzw. beschreiben.
+Der I/O APIC besitzt ein Indexregister (*I/O Register Select* bzw. *IOREGSEL*) und ein Datenregister (*I/O Window* bzw. *IOWIN*). Mit dem Indexregister wählt man ein [internes Register](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller#interne-register "I/O APIC") des I/O APIC aus und kann anschließend über das Datenregister das interne Register auslesen bzw. beschreiben.
 
 Folgender Code kann dazu verwendet werden auf die internen Register zuzugreifen: \<c\> /\* Offset der memory-mapped Register \*/
 
@@ -140,6 +140,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11048/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 11048; parent 11047; 2013-03-19T14:48:38Z -->
+<!-- MediaWiki page 1574; revision 11141; parent 11048; 2013-09-08T23:53:32Z -->
