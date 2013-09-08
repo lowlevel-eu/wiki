@@ -18,7 +18,7 @@ Der schematische Aufbau kann aus folgendem Bild entnommen werden:
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6bd762e3a5c69e74b59a.png" width="412" height="293" alt="APIC.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6bd762e3a5c69e74b59a.png)
 
   
-Die I/O APIC ist mit der Hardware verbunden und nimmt von ihr Interrupts entgegen. Diese verteilt die I/O APIC dann anhand ihrer *Redirection Table* an die Local APICs, welche pro Prozessor jeweils ein Mal vorhanden sind. Diese signalisieren dem Prozessor dann den jeweiligen Interrupt.
+Der I/O APIC ist mit der Hardware verbunden und nimmt von ihr Interrupts entgegen. Diese verteilt der I/O APIC dann anhand seiner *Redirection Table* an die Local APICs, welche pro Prozessor jeweils ein Mal vorhanden sind. Diese signalisieren dem Prozessor dann den jeweiligen Interrupt.
 
 Aufgrund von Abwärtskompatibilität ist außerdem natürlich noch der [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") weiterhin vorhanden der verschieden mit den auf den Bild sichtbaren Komponenten verbunden sein kann.
 
@@ -30,6 +30,6 @@ Aufgrund von Abwärtskompatibilität ist außerdem natürlich noch der [Programm
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11140/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1584/index.html)
 
-<!-- MediaWiki page 1584; revision 9430; parent 7144; 2011-02-05T12:29:28Z -->
+<!-- MediaWiki page 1584; revision 11140; parent 9430; 2013-09-08T23:48:40Z -->
