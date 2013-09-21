@@ -4,7 +4,7 @@
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes") et. al. |
-| Akt. Version: | 0.0.4.45 (August 2013) |
+| Akt. Version: | 0.0.4.93 (September 2013) |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
 | Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
@@ -39,7 +39,7 @@ Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Asse
 
 Der User-Space dient bisher vorwiegend als Demonstration für die API (syscalls). Bisher sind nur eine einfache Shell sowie ein paar simple Programme vorhanden, die u.a. zum Test neuer Features dienen. Programme für den Userspace können in diversen Sprachen geschrieben werden. Als Hilfe stehen die Dummy-makefiles, eine C-Userlib (Syscalls sowie einige wenige Funktionen der C-Standardlib) und eine C++-Userlib, die die C-Userlib als Untermenge hat und zudem ein paar C++-spezifische Funktionen bietet (new, delete) zur Verfügung.
 
-Userprogramme können auf drei verschiedenen Wegen eingebunden werden: Mittels incbin direkt in den Kernel, von wo es dann über die vom Linker generierte Adresse gestartet werden kann (derzeit für die VM86-Programme für VBE und APM genutzt), über die Ramdisk (so wie es derzeit mit der Shell gemacht wird), oder auf dem herkömmlichen Weg als Executable im ELF- oder PE-Format auf einem von PrettyOS unterstützten Speichermedium, wodurch das Programm für den Nutzer von der Shell aus aufrufbar wird.
+Userprogramme können auf zwei verschiedenen Wegen eingebunden werden: Mittels incbin direkt in den Kernel, von wo es dann über die vom Linker generierte Adresse gestartet werden kann (derzeit für die VM86-Programme für VBE und APM genutzt), ggf. mit Einbindung in die Ramdisk, oder auf dem herkömmlichen Weg als Executable im ELF- oder PE-Format auf einem von PrettyOS unterstützten Speichermedium, wodurch das Programm für den Nutzer von der Shell aus aufrufbar wird.
 
 ## Entwicklung
 
@@ -55,6 +55,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11137/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 11137; parent 11081; 2013-08-26T09:56:44Z -->
+<!-- MediaWiki page 2096; revision 11143; parent 11137; 2013-09-21T10:39:16Z -->
