@@ -48,17 +48,14 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 
 **IPC Systeme:**
 
-- RPC
-- Shared Memory
-- Buffered RPC
+- Pipes
 
 **Portierungen:**
 
-- stdlibc
-- FASM
+- stdlibc (In Arbeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11005/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 11005; parent 10816; 2013-02-21T18:12:16Z -->
+<!-- MediaWiki page 2498; revision 11147; parent 11005; 2013-10-15T20:09:22Z -->
