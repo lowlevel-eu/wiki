@@ -1,6 +1,6 @@
 # Universe
 
-Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplant. Es soll später möglich sein auf Universe Linux Applikationen auszuführen. Dieses Ziel liegt jedoch noch in weiter Ferne.
+Universe soll ein benutzerfreundliches universelles (deswegen auch der Name, wer hätte das nur gedacht ;)) Betriebsystem werden, bei dem Sicherheit besonders groß geschrieben wird
 
 | Universe |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -56,6 +56,6 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11151/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 11151; parent 11150; 2013-10-15T20:17:53Z -->
+<!-- MediaWiki page 2498; revision 11152; parent 11151; 2013-10-15T20:19:54Z -->
