@@ -14,10 +14,10 @@ Universe ist als benutzerfreundliches universelles Desktop-Betriebssystem geplan
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C/C++ |
 | API: | nativ, [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Pipes |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
 | Homepage |  |
 
-<http://www.infinitycoding.de/index.php?category=Universe&content=Projekt>
+(In Arbeit)
 
   
 
@@ -56,6 +56,6 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11148/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11149/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 11148; parent 11147; 2013-10-15T20:12:42Z -->
+<!-- MediaWiki page 2498; revision 11149; parent 11148; 2013-10-15T20:14:14Z -->
