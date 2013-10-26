@@ -47,7 +47,7 @@ Die folgenden Register dienen der Konfiguration des I/O APIC:
 | Bits | Beschreibung | Zugriffsart |
 | ------- | -------------------------------------------------------------------- | ------------- |
 | 24-31 | reserviert |  |
-| 26-23 | maximaler Index eines gültigen Eintrags in der *Redirection Table* | nur lesend |
+| 16-23 | maximaler Index eines gültigen Eintrags in der *Redirection Table* | nur lesend |
 | 8-15 | reserviert |  |
 | 0-7 | I/O APIC Versionsnummer:<br>0x11 = 82093AA | nur lesend |
 
@@ -140,6 +140,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11141/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 11141; parent 11048; 2013-09-08T23:53:32Z -->
+<!-- MediaWiki page 1574; revision 11153; parent 11141; 2013-10-26T23:32:49Z -->
