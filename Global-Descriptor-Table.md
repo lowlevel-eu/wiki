@@ -4,9 +4,9 @@ Die Global Descriptor Table (auch GDT) ist eine i386+-spezifische Struktur, welc
 
 ## Segmentierung
 
-### Real Mode
+### 16-Bit Real Mode
 
-Der 8086 ist ein 16-Bit-Prozessor. Das bedeutet, dass seine Register 16 Bit breit sind und somit Werte bis 2<sup>16</sup> - 1 = 65535 aufnehmen können. Nun müssen aber auch Zeiger in dieser Register passen und 64 KiB sind nicht gerade ein großzügiger Adressraum.
+Der 8086 ist ein 16-Bit-Prozessor. Das bedeutet, dass seine Register 16  Bit breit sind und somit Werte bis 2<sup>16</sup> - 1 = 65535 aufnehmen können. Nun müssen aber auch Zeiger in dieser Register passen, konnten auf diese Weise nur 64 KiB addressiert werden, was bereits bei der Einführung des Prozessors nicht gerade einen großzügiger Adressraum darstellt.
 
 Aus diesem Grund wurde im Real Mode eine einfache Art von Segmentierung eingeführt. Zu jedem Speicherzugriff wird noch eine Basisadresse addiert, die durch den Inhalt des entsprechenden Segmentregisters (*cs* für Code, *ds* für Daten, *ss* für den Stack) bestimmt ist. Dadurch sind Adressen effektiv 20 Bit groß; es sind also 1 MiB Adressraum zugänglich, wobei beim Zugriff auf mehr als 64 KiB das Segmentregister gewechselt werden muss.
 
@@ -17,13 +17,23 @@ Die Berechnung einer effektiven Adresse – im Beispiel ein Zugriff auf *\[ds:ax
     ========
     0x 44444   Tatsächlich zugegriffene Adresse
 
-### Protected Mode
+### 16-Bit Protected Mode
 
-Auch im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GiB Speicher ohne Segmentierung ansprechen.
+Mit der Zeit erwies sich auch der 1 MiB große Speicher nicht mehr als ausreichend, nicht zuletzt, da von diesem die Hälfte für das BIOS und andere Sonderaufgaben reserviert war. Außerdem ermöglichte die Real Mode Segmentierung, keinen Speicherschutz, da jedes Programm trotzdem auf alle Adressen zugreifen konnte, was die Unterscheidung verschiedener Privilegstufen unmöglich macht und auch eine Speicherverwaltung wurde schwierig, wenn man nicht jedes mal alle zu ladenden Segmentaddressen korrigieren wollte. Aus diesem Grund wurde im Protected Mode ein neues, komplexeres Segmentierungskonzeopt eingeführt.
+
+Da die 80286 über 24 Addressleitungen verfügte und damit auf 16 MiB Speicher zugreifen konnte, und auch noch Speicherschutzinformationen gespeichert werden sollten, erwiesen sich die 16 Bit des Segmentregisters als zu knapp, um alle diese Informationen aufzunehmen. Außerdem sollten die Daten von den Anwendungsprogrammen nicht beliebig, aber doch im vorgegebenen Rahmen änderbar sein. Aus diesem Grund enthalten die Segmentregister im Protected Mode nur noch sogenannte Selektoren, d. h. die Nummer eines Segments und einige wenige Flags. Die eigentliche Beschreibung der Segmente liegt in Form einer Tabelle im Speicher, der GDT. Die GDT besteht aus mehreren Einträgen (Segmentdeskriptoren) zu je 64 Bit, die direkt hintereinander liegen. Diese Einträge konnten Problemlos eine 24 Bit breite Basisaddresse sowie ein Limit, das die Größe des Segements beschreibt, sowie die Privilegstufe und weiter Daten aufnehmen. Auch für besondere Einträge war noch Platz. Für individuelle Programme gibt es auch noch eine weitere ähnlich aufgebaute Tabelle die Local Descriptor Table LDT. In beiden Tabellen beschrieben. Ein Programm konnte so auf eine vom System vorgegebene Anzahl an Sektoren zugreifen, die jeweils vom System nach den verfügbaren Ressourcen und den Bedürfnissen des Programmes vorgegeben wurden.
+
+### 32-Bit Protected Mode
+
+Auch im 32-Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GiB Speicher ohne Segmentierung ansprechen.
 
 Zum einen kann die Basisadresse aber auch weiterhin nützlich sein – sie erlaubt es, Code an beliebigen Stellen im Speicher auszuführen, auch wenn er von festen Adressen ausgeht (dieser Mechanismus wird aber nur selten benutzt). Zum anderen sind die Segmente erweitert worden, so dass sie nicht nur einfach aus einer Basisadresse bestehen, sondern zusätzliche Speicherschutzfunktionalität bieten, wie Schreibschutz oder Zugriff erst ab einem bestimmten Privileglevel. Außerdem hat ein Segment nicht mehr eine starre Länge von 64 KiB, sondern die Länge kann vom Betriebssystem für jedes Segment einzeln und flexibel festgelegt werden. Protected-Mode-Segmente können also nahezu beliebig im linearen/virtuellen Adressraum positioniert werden.
 
-Die Segmentregister sind aber nach wie vor nur 16 Bit breit und somit wird der Platz etwas knapp für diese ganzen Informationen. Aus diesem Grund enthalten die Segmentregister im Protected Mode nur noch sogenannte Selektoren, d. h. die Nummer eines Segments und einige wenige Flags. Die eigentliche Beschreibung der Segmente liegt in Form einer Tabelle im Speicher, der GDT. Die GDT besteht aus mehreren Einträgen (Segmentdeskriptoren) zu je 64 Bit, die direkt hintereinander liegen. Der erste Eintrag kann nicht benutzt werden, er ist der sogenannte Nulldeskriptor.
+Trotz allem ist zu sage, das die meisten Betriebssystem die Speicherverwaltung im 32-Bit Modus hauptsächlich über das flexibler Paging durchführen und die Funktionen der GDT nicht ausschöpfen. Diese Betriebssystem verwenden das "flat"-Model, in dem die Segmentierung faktisch umgangen wird: Der Gesamte Speicher wird durch ein einziges, großes Segment wiedergegeben.
+
+### Long Mode
+
+Nichts desto trotz spielt auch im "flat"-Model die GDT für die Privilegienverwaltung weiterhin eine Rolle auch wenn sie die Funktion als Speicherverwalter hat sie zwar im Long Mode endgültig verloren hat, da diese im 64-Bit Modus das "flat"-Model erzwingt. Außerdem hat sie nicht zu Letzt die entscheidende Aufgaben, den Wechsel zwischen dem "Legacy Mode" für 32-Bit Programme, und dem 64-Bit Mode zu koordinieren. Eine eingehende Beschäftigung mit der GDT ist daher allemal Sinnvoll.
 
 ## Selektoren
 
@@ -148,6 +158,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10961/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11155/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 10961; parent 10767; 2012-12-07T20:15:27Z -->
+<!-- MediaWiki page 1661; revision 11155; parent 10961; 2013-11-09T00:56:58Z -->
