@@ -6,7 +6,7 @@ Die Global Descriptor Table (auch GDT) ist eine i386+-spezifische Struktur, welc
 
 ### 16-Bit Real Mode
 
-Der 8086 ist ein 16-Bit-Prozessor. Das bedeutet, dass seine Register 16  Bit breit sind und somit Werte bis 2<sup>16</sup> - 1 = 65535 aufnehmen können. Nun müssen aber auch Zeiger in dieser Register passen, und auf diese Weise können nur 64  KiB adressiert werden, was bereits bei der Einführung des Prozessors nicht gerade einen großzügiger Adressraum darstellte.
+Der 8086 ist ein 16-Bit-Prozessor. Das bedeutet, dass seine Register 16 Bit breit sind und somit Werte bis 2<sup>16</sup> - 1 = 65535 aufnehmen können. Nun müssen aber auch Zeiger in dieser Register passen, und auf diese Weise können nur 64 KiB adressiert werden, was bereits bei der Einführung des Prozessors nicht gerade einen großzügiger Adressraum darstellte.
 
 Aus diesem Grund wurde im Real Mode eine einfache Art von Segmentierung eingeführt. Zu jedem Speicherzugriff wird noch eine Basisadresse addiert, die durch den Inhalt des entsprechenden Segmentregisters (*cs* für Code, *ds* für Daten, *ss* für den Stack) bestimmt ist. Dadurch sind Adressen effektiv 20 Bit groß; es sind also 1 MiB Adressraum zugänglich, wobei beim Zugriff auf mehr als 64 KiB das Segmentregister gewechselt werden muss.
 
@@ -21,7 +21,7 @@ Die Berechnung einer effektiven Adresse – im Beispiel ein Zugriff auf *\[ds:ax
 
 Mit der Zeit erwies sich auch der 1 MiB große Speicher nicht mehr als ausreichend, nicht zuletzt, da von diesem knapp die Hälfte für das BIOS und andere Sonderaufgaben reserviert war. Außerdem ermöglichte die Real-Mode-Segmentierung keinen Speicherschutz, da jedes Programm trotzdem auf alle Adressen zugreifen konnte, was die Unterscheidung verschiedener Privilegstufen unmöglich machte. Auch eine Speicherverwaltung wurde schwierig, wenn man nicht jedes mal alle zu ladenden Segmentadressen korrigieren wollte. Aus diesem Grund wurde mit dem Protected Mode ein neues, komplexeres Segmentierungskonzept eingeführt.
 
-Da die 80286 über 24 Adressleitungen verfügte und damit auf 16 MiB Speicher zugreifen konnte, und auch noch Speicherschutzinformationen gespeichert werden sollten, erwiesen sich die 16 Bit des Segmentregisters als zu knapp, um alle diese Informationen aufzunehmen. Außerdem sollten die Daten von den Anwendungsprogrammen nicht beliebig, aber doch im vorgegebenen Rahmen änderbar sein. Aus diesem Grund enthalten die Segmentregister im Protected Mode nur noch sogenannte Selektoren, d. h. die Nummer eines Segments und einige wenige Flags. Die eigentliche Beschreibung der Segmente liegt in Form einer Tabelle im Speicher, der *Global Descriptor Table* (GDT). Die GDT besteht aus mehreren Einträgen (Segmentdeskriptoren) zu je 64  Bit, die direkt hintereinander liegen. Diese Einträge konnten problemlos eine 24 Bit breite Basisadresse sowie ein Limit, das die Größe des Segements beschreibt, sowie die Privilegstufe und weiter Daten aufnehmen. Auch für besondere Einträge war noch Platz.
+Da die 80286 über 24 Adressleitungen verfügte und damit auf 16 MiB Speicher zugreifen konnte, und auch noch Speicherschutzinformationen gespeichert werden sollten, erwiesen sich die 16 Bit des Segmentregisters als zu knapp, um alle diese Informationen aufzunehmen. Außerdem sollten die Daten von den Anwendungsprogrammen nicht beliebig, aber doch im vorgegebenen Rahmen änderbar sein. Aus diesem Grund enthalten die Segmentregister im Protected Mode nur noch sogenannte Selektoren, d. h. die Nummer eines Segments und einige wenige Flags. Die eigentliche Beschreibung der Segmente liegt in Form einer Tabelle im Speicher, der *Global Descriptor Table* (GDT). Die GDT besteht aus mehreren Einträgen (Segmentdeskriptoren) zu je 64 Bit, die direkt hintereinander liegen. Diese Einträge konnten problemlos eine 24 Bit breite Basisadresse sowie ein Limit, das die Größe des Segements beschreibt, sowie die Privilegstufe und weiter Daten aufnehmen. Auch für besondere Einträge war noch Platz.
 
 Für individuelle Programme gibt es auch noch eine weitere ähnlich aufgebaute Tabelle, die *Local Descriptor Table* (LDT). Ein Programm konnte so auf eine vom System vorgegebene Anzahl an Segmenten zugreifen, die in beiden Tabellen beschrieben sind und jeweils vom System nach den verfügbaren Ressourcen und den Bedürfnissen des Programmes vorgegeben wurden.
 
@@ -160,6 +160,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11156/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 11156; parent 11155; 2013-11-09T22:26:58Z -->
+<!-- MediaWiki page 1661; revision 11157; parent 11156; 2013-11-10T13:49:31Z -->
