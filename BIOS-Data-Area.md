@@ -6,7 +6,7 @@ In der **BIOS Data Area** (**BDA**) speichert das [BIOS](https://github.com/lowl
 
 ## Aufbau der BIOS Data Area
 
-Die BDA befindet sich im Segment 0x0040, d.h. an der physikalischen Adresse 0x0400. Die für ein im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bzw. [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") laufendes Betriebssystem interessanten Teile sind fett hervorgehoben, um Anfängern unnötige Arbeit zu ersparen. Alle anderen Informationen sind fehlerbehaftet, veraltet oder können anderweitig sinnvoller erfasst werden. Die folgende Tabelle zeigt den Aufbau dieses Segments:
+Die BDA befindet sich im Segment 0x0040, d.h. an der physischen Adresse 0x0400. Die für ein im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") bzw. [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") laufendes Betriebssystem interessanten Teile sind fett hervorgehoben, um Anfängern unnötige Arbeit zu ersparen. Alle anderen Informationen sind fehlerbehaftet, veraltet oder können anderweitig sinnvoller erfasst werden. Die folgende Tabelle zeigt den Aufbau dieses Segments:
 
   
 
@@ -242,6 +242,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11108/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 11108; parent 10579; 2013-05-01T12:30:41Z -->
+<!-- MediaWiki page 1564; revision 11159; parent 11108; 2013-11-10T14:40:37Z -->
