@@ -27,7 +27,7 @@ Für individuelle Programme gibt es auch noch eine weitere ähnlich aufgebaute T
 
 ### 32-Bit Protected Mode
 
-Auch im 32-Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GiB Speicher ohne Segmentierung ansprechen.
+Auch im 32-Bit [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GiB Speicher ohne Segmentierung ansprechen.
 
 Zum einen kann die Basisadresse aber auch weiterhin nützlich sein – sie erlaubt es, Code an beliebigen Stellen im Speicher auszuführen, auch wenn er von festen Adressen ausgeht (dieser Mechanismus wird aber nur selten benutzt). Zum anderen sind die Segmente erweitert worden, so dass sie nicht nur einfach aus einer Basisadresse bestehen, sondern zusätzliche Speicherschutzfunktionalität bieten, wie Schreibschutz oder Zugriff erst ab einem bestimmten Privileglevel. Außerdem hat ein Segment nicht mehr eine starre Länge von 64 KiB, sondern die Länge kann vom Betriebssystem für jedes Segment einzeln und flexibel festgelegt werden. Protected-Mode-Segmente können also nahezu beliebig im linearen/virtuellen Adressraum positioniert werden.
 
@@ -160,6 +160,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11157/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 11157; parent 11156; 2013-11-10T13:49:31Z -->
+<!-- MediaWiki page 1661; revision 11158; parent 11157; 2013-11-10T13:54:19Z -->
