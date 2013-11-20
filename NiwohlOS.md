@@ -265,6 +265,7 @@ Folgende Teile müssen noch implementiert werden:
 
 - [Repositorium (neu)](http://git.niwohlos.org/?p=niwohlOS.git;a=summary)
 - [Repository (alt)](http://gitorious.org/niwohlos)
+- [Repositorium (libc.hiken)](https://github.com/yayachiken/libc.hiken)
 
   
 
@@ -274,6 +275,6 @@ Disclaimer: Dieses OS ist ein **echtes** Projekt und wird von uns aktiv entwicke
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10599/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11161/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2095/index.html)
 
-<!-- MediaWiki page 2095; revision 10599; parent 10180; 2012-05-11T18:29:49Z -->
+<!-- MediaWiki page 2095; revision 11161; parent 10599; 2013-11-20T21:13:55Z -->
