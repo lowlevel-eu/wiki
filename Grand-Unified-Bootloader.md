@@ -158,6 +158,31 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 - Modulares und objektorientiertes Framework für Dateisysteme etc.
 - Cross-Plattform-Installation
 
+### Grub auf Flash-Speicher (USB, SD-Karte u.Ä.)
+
+#### Linux
+
+Du benötigst:
+
+- grub2-install oder grub-install
+- Einen USB-Stick/SD-Karte
+- Grub auf dem Host
+
+Als erstes musst du den Flash-Speicher mit ext2 formatieren.
+
+    mk2fs /dev/(???) # z.B. /dev/sdb
+
+Als zweites musst du Grub installieren: Per grub-install
+
+    sudo grub-install --root-directory=(xxx) --no-floppy --recheck --force /dev/(yyy) # (xxx) durch den Mountpunkt und (yyy) durch der Festplattennummer (z.B. sdb) ersetzen.
+
+Falls der Befehl nicht funktioniert musst du "grub-install" nacheinander durch
+
+    /usr/sbin/grub2-install
+    /usr/local/sbin/grub2-install
+
+ersetzen bis es klappt.
+
 ### Disketten-Image erstellen
 
 #### Linux
@@ -273,6 +298,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10900/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 10900; parent 9865; 2012-10-03T20:38:28Z -->
+<!-- MediaWiki page 1567; revision 11162; parent 10900; 2013-11-24T14:00:37Z -->
