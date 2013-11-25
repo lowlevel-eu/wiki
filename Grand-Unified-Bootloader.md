@@ -162,26 +162,24 @@ GRUB 2 weist eine Vielzahl an Neuerungen auf:
 
 #### Linux
 
-Du benötigst:
+Es werden benötigt:
 
 - grub2-install oder grub-install
-- Einen USB-Stick/SD-Karte
+- Ein USB-Stick oder eine SD-Karte
 - Grub auf dem Host
 
-Als erstes musst du den Flash-Speicher mit ext2 formatieren.
+Als Erstes muss der Flash-Speicher mit ext2 formatiert werden:
 
-    mk2fs /dev/(???) # z.B. /dev/sdb
+    # mk2fs /dev/(???) # z.B. /dev/sdb
 
-Als zweites musst du Grub installieren: Per grub-install
+Als Zweites muss Grub installiert werden auf dem Device:
 
-    sudo grub-install --root-directory=(xxx) --no-floppy --recheck --force /dev/(yyy) # (xxx) durch den Mountpunkt und (yyy) durch der Festplattennummer (z.B. sdb) ersetzen.
+    # sudo grub-install --root-directory=(xxx) --no-floppy --recheck /dev/(yyy) # (xxx) durch den Mount-Point und (yyy) durch den Device-Node (z.B. sdb) ersetzen.
 
-Falls der Befehl nicht funktioniert musst du "grub-install" nacheinander durch
+grub-install gegebenenfalls durch den richtigen Namen der Binary ersetzen, Beispiele:
 
     /usr/sbin/grub2-install
     /usr/local/sbin/grub2-install
-
-ersetzen bis es klappt.
 
 ### Disketten-Image erstellen
 
@@ -298,6 +296,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11162/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 11162; parent 10900; 2013-11-24T14:00:37Z -->
+<!-- MediaWiki page 1567; revision 11165; parent 11162; 2013-11-25T15:30:09Z -->
