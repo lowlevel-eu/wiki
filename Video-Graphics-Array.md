@@ -58,6 +58,10 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 
 #### Farben
 
+| Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+| ------------ | ------- | ------- | ------- |
+| Helligkeit | Rot | Grün | Blau |
+
 | Wert | Farbe |
 | ------ | ------------- |
 | 0 | Schwarz |
@@ -77,8 +81,6 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 | 14 | Gelb |
 | 15 | Weiß |
 
-  
-
 ## Siehe auch
 
 - [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")
@@ -94,6 +96,6 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9659/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 9659; parent 9658; 2011-04-09T10:01:38Z -->
+<!-- MediaWiki page 1516; revision 11166; parent 9659; 2013-11-28T12:52:24Z -->
