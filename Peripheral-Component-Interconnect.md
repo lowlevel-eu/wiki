@@ -416,6 +416,8 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 | 0x12-0xFE | *Reserviert* |
 | 0xFF | Sonstige |
 
+In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Programming Interface sind derzeit für zukünftige Definition reserviert. Bei PCI-Express gibt es in der PCI-Express-Capability eine klassifizierung des PCI-Gerätes und nicht jede Kombination aus Subclass und Programming Interface ist für jedes PCI-Gerät gültig, der Software wird offiziel empfohlen das zu prüfen.
+
 ### Class 0x00 - Pre 2.0
 
 | Subclass | Programming Interface | Beschreibung |
@@ -655,6 +657,6 @@ void pci_config_writed(int bus,int dev,int func,int offset,int val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11169/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11170/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11169; parent 11168; 2013-11-29T13:43:03Z -->
+<!-- MediaWiki page 1626; revision 11170; parent 11169; 2013-11-29T13:49:34Z -->
