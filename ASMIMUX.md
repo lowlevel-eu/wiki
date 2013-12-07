@@ -1,10 +1,6 @@
 # ASMIMUX
 
-**Löschhinweis:**
-
-Dieser Artikel wurde zum Löschen vorgeschlagen.
-
-Entwicklung scheinbar eingestellt, letzter Commit im Repo von vor 9 Monaten --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:41, 30. Aug. 2011 (CEST)
+Wird wieder weiter entwickelt. --[Tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev") 13:01, 7. Dez. 2013 (CET)
 
 | ASMIMUX |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -44,6 +40,6 @@ Der Kernel kann bisher folgendes:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10818/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11174/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
 
-<!-- MediaWiki page 2332; revision 10818; parent 10102; 2012-09-13T14:32:39Z -->
+<!-- MediaWiki page 2332; revision 11174; parent 10818; 2013-12-07T12:01:41Z -->
