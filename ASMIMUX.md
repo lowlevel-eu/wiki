@@ -17,7 +17,7 @@ Wird wieder weiter entwickelt. --[Tev](https://lowlevel-eu.github.io/wiki/pages/
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
-[Homepage](http://asmimux.sourceforge.net)
+[Homepage](https://github.com/tevoran/asmimux)
 
 ## Beschreibung
 
@@ -40,6 +40,6 @@ Der Kernel kann bisher folgendes:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11174/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11176/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2332/index.html)
 
-<!-- MediaWiki page 2332; revision 11174; parent 10818; 2013-12-07T12:01:41Z -->
+<!-- MediaWiki page 2332; revision 11176; parent 11174; 2013-12-07T17:22:21Z -->
