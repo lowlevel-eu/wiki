@@ -439,6 +439,7 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | 0x06 | 0x00 | SATA-Controller (Herstellerspezifische Schnittstelle) |
 | 0x06 | 0x01 | SATA-Controller (AHCI 1.0) |
 | 0x07 | 0x00 | SAS-Controller (Serial Attached SCSI) |
+| 0x08 | 0x02 | Non-Volatile-Memory (NVM-Express Host-Controller) |
 | 0x80 | 0x00 | Anderer Massenspeicher |
 
 ### Class 0x02 - [Netzwerk](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk")-Controller
@@ -657,6 +658,6 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11171/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11178/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11171; parent 11170; 2013-11-29T15:00:51Z -->
+<!-- MediaWiki page 1626; revision 11178; parent 11171; 2013-12-10T09:39:02Z -->
