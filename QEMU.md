@@ -81,7 +81,7 @@ Um QEMU unter Windows zu kompilieren, werden MinGW und eine Reihe Bibliotheken, 
 - zlib kann anschließend mittels `mingw-get install libz` installiert werden.
 - Die aktuelle Version von Python 2.7.x kann von <http://www.python.org/download/> heruntergeladen werden. Für das Kompilieren von QEMU sollte Python zumindest vorübergehend mittels z. B. `SET PATH=C:\Python27;%PATH%` in den Suchpfad eingetragen werden.
 - Von <http://www.gtk.org/download/win32.php> die Pakete für GLib und Abhängigkeiten herunterladen und im MinGW-Ordner entpacken:
-  1.  pkg-config ("Run-time")
+  1.  pkg-config ("Tool")
   2.  gettext-runtime ("Run-time")
   3.  GLib ("Run-time" und "Dev")
   4.  pixman ("Dev") ab 1.3.0. Wer das Paket selbst bauen will, kann den Quelltext von <http://pixman.org/> herunterladen. Das Kompilieren sollte ausnahmsweise in `sh` erfolgen, damit der korrekte Pfad zum Installationsverzeichnis von MinGW automatisch bestimmt werden kann:
@@ -115,6 +115,6 @@ Hinweise:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11115/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11182/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1505/index.html)
 
-<!-- MediaWiki page 1505; revision 11115; parent 11114; 2013-05-20T21:58:05Z -->
+<!-- MediaWiki page 1505; revision 11182; parent 11115; 2014-01-02T22:00:34Z -->
