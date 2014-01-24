@@ -10,7 +10,7 @@ Durch das Paging lassen sich außerdem weitere Features, wie z. B. [Swapping](h
 
 Der virtuelle Speicher wird zunächst in gleich große Blöcke, so genannte Pages (Seiten), unterteilt. In der x86-Architektur sind dies Blöcke zu je vier Kilobytes. Einen Speicherkontext kann man sich vereinfacht als eine riesige Tabelle vorstellen, die jedem virtuellen Block einen gleich großen Block irgendwo im physischen Speicher zuweist. Diesen physischen Speicherblock nennt man auch *Page Frame* (dt. Seitenrahmen, oder seltener auch Seitenkachel).
 
-Die folgende Tabelle dient als (von den Zahlen her völlig sinnfreie) Veranschaulichung dieser Übersetzung. Wenn das Programm jetzt auf die Speicheradresse 0x1234 zugreift, wird in Wirklichkeit auf die physische Adresse 0x3234 zugegriffen. Es muss nicht jede virtuelle Adresse *gemappt* (d. h. einer physischen Adresse zugewiesen) sein &#150; der virtuelle Adressraum ist im Allgemeinen auch größer als der installierte physische Speicher (auf i386 beispielsweise 4 GB). Wird auf eine nicht gemappte Adresse zugegriffen, z. B. 0x25a2 im Beispiel, wird eine Exception (x86: Page Fault) ausgelöst.
+Die folgende Tabelle dient als (von den Zahlen her völlig sinnfreie) Veranschaulichung dieser Übersetzung. Wenn das Programm jetzt auf die Speicheradresse 0x1234 zugreift, wird in Wirklichkeit auf die physische Adresse 0x3234 zugegriffen. Es muss nicht jede virtuelle Adresse *gemappt* (d. h. einer physischen Adresse zugewiesen) sein &#150; der virtuelle Adressraum ist im Allgemeinen auch größer als der installierte physische Speicher (auf i386 beispielsweise 4 GB). Wird auf eine nicht gemappte Adresse zugegriffen, z. B. 0x25a2 im Beispiel, wird eine Exception (x86: [Page Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#page-fault "Exception")) ausgelöst.
 
 | Virtuell | Physisch |
 | ------------------- | ---------- |
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10878/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11183/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 10878; parent 10607; 2012-09-24T16:00:34Z -->
+<!-- MediaWiki page 1496; revision 11183; parent 10878; 2014-01-24T02:12:09Z -->
