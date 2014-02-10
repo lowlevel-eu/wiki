@@ -86,7 +86,9 @@ Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen [I/O-Port](https://
 
 }\</c\>
 
-Nachdem die IRQs auf sinnvolle Nummern gelegt sind und Handler in der IDT installiert sind, kannst Du Hardware-Interrupts aktivieren: \<c\>asm volatile("sti");\</c\> Achtung: Der Timer liegt auf IRQ 0 und löst in regelmäßigen Abständen mehrmals pro Sekunde einen IRQ aus. Zumindest IRQ 0 muss also auf jeden Fall sinnvoll behandelt werden, ansonsten währt die Freude nicht lang.
+Nachdem die IRQs auf sinnvolle Nummern gelegt sind und Handler in der IDT installiert sind, kannst Du Hardware-Interrupts aktivieren: \<c\>asm volatile("sti");\</c\> **Achtung**: Der Kernel kann von der *sti*-Instruktion an an jeder beliebigen Stelle unterbrochen werden, auch wenn die Initialisierung an dieser Stelle noch nicht vollständig abgeschlossen ist. Es ist daher in der Regel eine gute Idee, Interrupts erst als allerletztes in der Kernelinitialisierung zu aktivieren.
+
+Beispielsweise liegt der Timer auf IRQ 0 und löst in regelmäßigen Abständen mehrmals pro Sekunde einen IRQ aus. Zumindest IRQ 0 muss also auf jeden Fall sinnvoll behandelt werden, ansonsten währt die Freude nicht lang. Je nachdem, welche Hardware vorhanden ist und was der Benutzer mit ihr macht, können aber natürlich auch andere IRQs, wie etwa Tastatur und Maus, jederzeit auftreten.
 
 ## Nützliche Interrupthandler
 
@@ -222,6 +224,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9798/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 9798; parent 9044; 2011-05-17T20:42:07Z -->
+<!-- MediaWiki page 1898; revision 11184; parent 9798; 2014-02-10T10:26:07Z -->
