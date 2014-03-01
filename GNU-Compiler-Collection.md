@@ -54,6 +54,6 @@ Alle Compiler-Flags können unter folgenden Links nachgelesen werden:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11132/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11186/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1805/index.html)
 
-<!-- MediaWiki page 1805; revision 11132; parent 11130; 2013-07-31T08:24:00Z -->
+<!-- MediaWiki page 1805; revision 11186; parent 11132; 2014-03-01T08:28:40Z -->
