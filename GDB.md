@@ -30,6 +30,6 @@ Auf der kernel-seite ist nun alles Fertig. Jetzt kann man sich ganz einfach mit 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9906/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2283/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11185/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2283/index.html)
 
-<!-- MediaWiki page 2283; revision 9906; parent 8255; 2011-07-03T17:18:16Z -->
+<!-- MediaWiki page 2283; revision 11185; parent 9906; 2014-03-01T08:27:29Z -->
