@@ -116,6 +116,16 @@ Wer allerdings keine Runtime-Überprüfung im Kernel braucht, der kann den Compi
 
     $ gdc -no-bounds-check
 
+  
+
+Neu hinzugekommen zu dem Schluesselwort
+
+    synchronized
+
+sind neu zu erstellende Stubs:
+
+\<c\> extern (C) void \_d_criticalenter() {} extern (C) void \_d_criticalexit() {} extern (C) void \_Dmodule_ref() {} \</c\>
+
 ### Der eigentliche Kernel
 
 Nichts weltbewegendes, wir geben ein einfaches 'D' auf dem Bildschirm aus:
@@ -242,6 +252,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11188/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 11187; parent 10635; 2014-03-05T11:14:29Z -->
+<!-- MediaWiki page 1863; revision 11188; parent 11187; 2014-03-05T11:17:10Z -->
