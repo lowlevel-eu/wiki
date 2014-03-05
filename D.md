@@ -132,11 +132,11 @@ extern(C) void main(uint magic, uint addr) {
        ubyte* vidmem = cast(ubyte*)0x000B8000; 
 
        for (int i = 0; i < COLUMNS * LINES * 2; i++) { 
-           volatile *(vidmem + i) = 0;
+           synchronized *(vidmem + i) = 0;
        }
 
-       volatile *(vidmem + (xpos + ypos * COLUMNS) * 2) = 'D' & 0xFF; 
-       volatile *(vidmem + (xpos + ypos * COLUMNS) * 2 + 1) = 0x07; 
+       synchronized *(vidmem + (xpos + ypos * COLUMNS) * 2) = 'D' & 0xFF; 
+       synchronized *(vidmem + (xpos + ypos * COLUMNS) * 2 + 1) = 0x07; 
 
        for (;;) { 
        }
@@ -144,8 +144,6 @@ extern(C) void main(uint magic, uint addr) {
 } \</c\>
 
 Man beachte das 'module kernel.main', wobei kernel der Name des Verzeichnisses ist, wo sich die Datei befindet.
-
-  
 
 ### start.asm
 
@@ -244,6 +242,6 @@ gelinkt wird's so:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11187/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1863/index.html)
 
-<!-- MediaWiki page 1863; revision 10635; parent 10634; 2012-07-10T16:09:34Z -->
+<!-- MediaWiki page 1863; revision 11187; parent 10635; 2014-03-05T11:14:29Z -->
