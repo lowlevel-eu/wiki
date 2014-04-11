@@ -1,45 +1,43 @@
 # Universe
 
-Universe soll ein benutzerfreundliches universelles (deswegen auch der Name, wer hätte das nur gedacht ;)) Betriebsystem werden, bei dem Sicherheit besonders groß geschrieben wird
+Universe soll ein schlankes, universelles (deswegen auch der Name, wer hätte das nur gedacht ;)) und modulares Betriebssystem werden, bei dem Sicherheit besonders groß geschrieben wird.
 
 | Universe |  |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | InfinityCoding |
-| Akt. Version: | (in Entwicklung) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| Akt. Version: | 1.0 (in Entwicklung) |
+| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPL v3, LGPL (libc) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")(In Arbeit), PowerPC(In Arbeit) |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C/C++ |
+| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")(In Arbeit) |
+| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Micro-Kernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C |
 | API: | nativ, [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
 | Homepage |  |
 
-(In Arbeit)
+(in Arbeit)
 
   
 
 ## Universe aktuell
 
-Aktuell handelt es sich um einen einfachen Hybrid-Kernel mit einem kleinen Treibersatz. Es wird seit 2009 entwickelt.
+Aktuell handelt es sich um einen einfachen Microkernel mit einem kleinen Treibersatz. Es wird in dieser Form seit 2012 entwickelt. Die aktuellsten Neuerungen sind die Einführung eines universellen Kommunikationsprotokolls für Treiber und die Portierung diverser Tools.
 
   
 
 ## Universe Kernel 1.0 (Planung/in Arbeit)
 
-Hybrid Kernel mit folgenden integrierten Treibern:
-
-- Blocktreiber für Bootlaufwerk (FDC + ATA)
+- Blocktreiber für Bootlaufwerk (CD + ATA)
 - Dateisystemtreiber für das Bootlaufwerk ([FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und EXT)
-- DMA Treiber
 - Standard Konsolen/Grafiktreiber
+- vollständige Portierung der core-utils
+
+Die Treiber sind wie für ein Microkernel üblich außerhalb des Kernels und kommunizieren mittels UDRCP-Protokolls. Dieses Protokoll erlaubt auch das dynamische verändern der Treiberpiplines.
 
   
-Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Das System kann jedoch auch von Dateisystemen und Laufwerken gestartet werden, deren Treiber nicht direkt im Kernel verankert sind. Diese dienen lediglich dazu dem Kernel die Möglichkeit zu geben das System ohne "externe Treiber" zu nutzen und die Basisfunktionen des Kernels sicher zu gewährleisten. Die Funktionalitäten der Treiber (abgesehen der Funktionen des DMA Treibers) können auch von externen Treibern abgelöst werden. Als "extern" werden alle Treiber Bezeichnet die nicht im Kernel integriert sind und ihre Funktionen über den Treiberinterface oder direktes IPC zur Verfügung stellen.
 
-  
 **Interfaces:**
 
 - CDI
@@ -53,9 +51,12 @@ Diese Treiber sind in das Kernel gelinkt und sind standardmäßig verfügbar. Da
 **Portierungen:**
 
 - stdlibc (In Arbeit)
+- zlib
+- fasm
+- gcc (in Arbeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11152/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11190/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2498/index.html)
 
-<!-- MediaWiki page 2498; revision 11152; parent 11151; 2013-10-15T20:19:54Z -->
+<!-- MediaWiki page 2498; revision 11190; parent 11152; 2014-04-11T19:53:44Z -->
