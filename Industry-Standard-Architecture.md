@@ -1,14 +1,10 @@
 # Industry Standard Architecture
 
-Die **Industry Standard Architecture** ist ein damaliger Standard, der maßgeblich die Entwicklung des (IBM-)PCs beeinflusst hat. Aus ihm hervorgegangen ist unter anderem der 8-Bit breite PC-Bus, welcher später auf 16-Bit erweitert wurde und von nun an unter der Bezeichnung **ISA-Bus** vermarktet wurde. Heutzutage ist dieser Bus zumindest bei privaten PCs nicht mehr im Einsatz, er wird seit circa 2001 nicht mehr verbaut. In der Industrie ist dieser Bus aber noch vereinzelt im Einsatz.
-
-  
+Die **Industry Standard Architecture** ist aus dem Erweiterungsbus des IBM-PC hervorgegangen und hat die Entwicklung des (IBM-kompatiblen) PCs maßgeblich beeinflusst. Anfangs ein 8 Bit breiter Bus (PC/XT) wurde er später auf 16 Bit (PC/AT) erweitert und rückwirkend in **ISA-Bus** umbenannt. Obwohl heutzutage nicht mehr in der ursprünglichen Form verbaut, findet er in der Industrie noch vereinzelt Verwendung.
 
 ## Geschichtliches
 
-Es wurde schon früh nach einem Standard in der Industrie gesucht sowie nach einer Möglichkeit, bestehende Systeme einfach und effektiv aufzurüsten, ohne dafür alte Systeme durch Neue zu ersetzen.
-
-  
+Der IBM-PC war als offenes System gedacht. Durch die Erweiterungsmöglichkeiten konnte man bestehende Systeme stückweise aufrüsten und war nicht an ein bestimmtes System gebunden. Durch die weite Verbreitung von ISA-Geräten fand er seinen Weg auch in IBM-fremde Systeme (z.B. manche Amigas).
 
 ## Gegenwart
 
@@ -22,8 +18,11 @@ Die Plug-and-Play-Spezifikation ist dafür gedacht gewesen, den ISA-Bus mit den 
 
 Bei der geographischen Addressierung wird jedem Peripheriegerät eine *Card Select Number* zugewiesen. Diese wird mit der 64-Bit breiten Seriennummer, die jedes PnP-Gerät hat, verknüpft. Dieser Vorgang wird vom ebenfalls vom BIOS übernommen und wird direkt beim Hochfahren des Rechners durchgeführt.
 
-  
 **TODO**: [ISA Plug and Play Specification V1.0a](http://www.osdever.net/documents/PNP-ISA-v1.0a.pdf)
+
+## Extended Industry Standard Architecture
+
+**EISA** stellt eine zu ISA kompatible 32-Bit-Erweiterung dar. EISA unterstützt den Zugriff durch mehrere CPUs und beherrst Burst-Zugriffe. Im Heimbereich erreichte es keine nennenswerte Bedeutung und spielt für die Entwicklung von Betriebssystemen keine Rolle mehr.
 
 ## Links
 
@@ -32,6 +31,6 @@ Bei der geographischen Addressierung wird jedem Peripheriegerät eine *Card Sele
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10478/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11194/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
 
-<!-- MediaWiki page 1709; revision 10478; parent 10298; 2012-02-27T16:26:29Z -->
+<!-- MediaWiki page 1709; revision 11194; parent 10478; 2014-05-03T23:46:02Z -->
