@@ -27,10 +27,11 @@ Bei der geographischen Addressierung wird jedem Peripheriegerät eine *Card Sele
 ## Links
 
 - [Wikipedia: Industry Standard Architecture](http://de.wikipedia.org/wiki/Industry_Standard_Architecture)
+- [Wikipedia: Extended ISA](http://de.wikipedia.org/wiki/Extended_ISA)
 - [Low Pin Count Interface Specification (LPC)](http://www.intel.com/design/chipsets/industry/lpc.htm)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11194/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11197/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1709/index.html)
 
-<!-- MediaWiki page 1709; revision 11194; parent 10478; 2014-05-03T23:46:02Z -->
+<!-- MediaWiki page 1709; revision 11197; parent 11194; 2014-05-03T23:50:35Z -->
