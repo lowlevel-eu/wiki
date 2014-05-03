@@ -65,7 +65,7 @@ Die BDA befindet sich im Segment 0x0040, d.h. an der physischen Adresse 0x0400. 
 | 11-9 | **Anzahl der vorhandenen [COM-Ports](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") 0-4** |
 | 8 | [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")-Controller vorhanden (PC-junior) |
 | 7-6 | 00b = 1 Floppylaufwerk vorhanden<br>01b = 2 Floppylaufwerke vorhanden |
-| 5-4 | **00b = EGA oder älter<br>01b = Farbe 40x25<br>10b = Farbe 80x25<br>11b = Monochrom 80x25** |
+| 5-4 | **00b = EGA oder neuer<br>01b = CGA 40x25<br>10b = CGA 80x25<br>11b = MDA-kompatibel 80x25** |
 | 3 | Reserviert |
 | 2 | Ob eine PS/2-Maus vorhanden ist |
 | 1 | Ob ein [mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "Mathematischer Koprozessor") vorhanden ist |
@@ -242,6 +242,6 @@ Byte 11 (0x48): Anzahl geschriebener Bytes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11159/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11193/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1564/index.html)
 
-<!-- MediaWiki page 1564; revision 11159; parent 11108; 2013-11-10T14:40:37Z -->
+<!-- MediaWiki page 1564; revision 11193; parent 11159; 2014-05-03T22:56:26Z -->
