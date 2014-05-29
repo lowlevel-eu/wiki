@@ -131,7 +131,9 @@ Folgender Code kann dazu verwendet werden auf die internen Register zuzugreifen:
 
 ### Setzen der Einträge der *Redirection Table*
 
-Die Einträge der *Redirection Table* werden basierend auf den Informationen, die die [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#intel-multiprocessor-specification "Symmetrisches Multiprozessorsystem")- bzw. die [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")-Tabellen enthalten, gesetzt.
+Die Einträge der *Redirection Table* werden basierend auf den Informationen, die die [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#intel-multiprocessor-specification "Symmetrisches Multiprozessorsystem")-, die [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")-Tabellen und vor allem das PCI Device PCI-to-ISA Bridge enthalten, gesetzt. Bei PIIX3 und ICH7/9 findet man z.B. die Vektoren für die PCI Lines A-D (IOAPIC redir table: 16-19) am offset 60h. Bei ICH7/9 gibt es am offset 68h die Informationen für die Vektoren der PCI Lines E-H (IOAPIC redir table: 20-23). Man findet die PCI-to-(E)ISA Bridge via:
+
+if ((PCIdev-\>classID == 0x06) && (PCIdev-\>subclassID == 0x01 \|\| PCIdev-\>subclassID == 0x02) && (PCIdev-\>interfaceID == 0x00))
 
 ## Weblinks
 
@@ -140,6 +142,6 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11153/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11200/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 11153; parent 11141; 2013-10-26T23:32:49Z -->
+<!-- MediaWiki page 1574; revision 11200; parent 11153; 2014-05-29T22:15:33Z -->
