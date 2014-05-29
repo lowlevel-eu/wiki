@@ -137,7 +137,13 @@ Die Einträge der *Redirection Table* werden basierend auf den Informationen, di
 
 Die enthaltenen unsigned 8-Bit-Integer in den vier Bytes am PCI offset 60h bzw. 68h setzt man als jeweiligen Vektor für die IOAPIC Redirection Table Einträge 16-23. In Bochs findet man das P2I routing z.B. hier:
 
-00020619064i\[P2I \] PCI IRQ routing: PIRQA# set to 0x0b 00020619089i\[P2I \] PCI IRQ routing: PIRQB# set to 0x09 00020619089i\[P2I \] PCI IRQ routing: PIRQC# set to 0x0b 00020619089i\[P2I \] PCI IRQ routing: PIRQD# set to 0x09
+00020619064i\[P2I \] PCI IRQ routing: PIRQA# set to 0x0b
+
+00020619089i\[P2I \] PCI IRQ routing: PIRQB# set to 0x09
+
+00020619089i\[P2I \] PCI IRQ routing: PIRQC# set to 0x0b
+
+00020619089i\[P2I \] PCI IRQ routing: PIRQD# set to 0x09
 
 ## Weblinks
 
@@ -146,6 +152,6 @@ Die enthaltenen unsigned 8-Bit-Integer in den vier Bytes am PCI offset 60h bzw. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11201/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11202/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 11201; parent 11200; 2014-05-29T22:23:26Z -->
+<!-- MediaWiki page 1574; revision 11202; parent 11201; 2014-05-29T22:24:00Z -->
