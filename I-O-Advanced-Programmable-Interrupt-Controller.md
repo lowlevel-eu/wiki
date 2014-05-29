@@ -145,6 +145,8 @@ Die enthaltenen unsigned 8-Bit-Integer in den vier Bytes am PCI offset 60h bzw. 
 
 \[P2I\] PCI IRQ routing: PIRQD# set to 0x09
 
+Die Tabellen-Einträge **0-15** (ISA-IRQ) sollte man **edge/high** setzen und die Einträge **16-23** (PCI Lines A-H) auf **level/low**.
+
 ## Weblinks
 
 - [Intel® 82093AA I/O Advanced Programmable Interrupt Controller (I/O APIC) Datasheet](http://www.intel.com/design/chipsets/datashts/290566.htm)
@@ -152,6 +154,6 @@ Die enthaltenen unsigned 8-Bit-Integer in den vier Bytes am PCI offset 60h bzw. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11203/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11204/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1574/index.html)
 
-<!-- MediaWiki page 1574; revision 11203; parent 11202; 2014-05-29T22:25:55Z -->
+<!-- MediaWiki page 1574; revision 11204; parent 11203; 2014-05-29T22:28:54Z -->
