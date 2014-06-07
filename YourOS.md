@@ -35,7 +35,7 @@
 - \[+\] Initiliasierung des Kernels
 - \[+\] Videoausgabe (Text)
 - \[+\] Speicherverwaltung
-- \[+\] CDI-API für Treiber
+- \[+\] [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-API für Treiber
 - \[+\] ATA-Treiber
 - \[+\] ISO9660-Treiber
 - \[+\] VFS
@@ -45,6 +45,6 @@
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11210/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2653/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11213/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2653/index.html)
 
-<!-- MediaWiki page 2653; revision 11210; parent 0; 2014-06-04T15:14:09Z -->
+<!-- MediaWiki page 2653; revision 11213; parent 11210; 2014-06-07T10:10:57Z -->
