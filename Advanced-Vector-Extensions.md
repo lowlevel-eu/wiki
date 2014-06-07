@@ -117,10 +117,10 @@ Im 32-Bit-Modus stehen nur YMM0 bis YMM7 zur Verfügung. Im 64-Bit-Modus sind al
 
 ## Links
 
-http://de.wikipedia.org/wiki/Advanced_Vector_Extensions
+\[Wikipedia-Artikel <http://de.wikipedia.org/wiki/Advanced_Vector_Extensions>\]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11206/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2649/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11212/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2649/index.html)
 
-<!-- MediaWiki page 2649; revision 11206; parent 0; 2014-06-03T14:54:09Z -->
+<!-- MediaWiki page 2649; revision 11212; parent 11206; 2014-06-07T10:09:31Z -->
