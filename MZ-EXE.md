@@ -60,6 +60,6 @@ Eine MZ EXE konnte von DOS an jede beliebige Stelle im Speicher geladen werden. 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2375/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11215/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2375/index.html)
 
-<!-- MediaWiki page 2375; revision 10372; parent 10005; 2011-12-19T19:32:21Z -->
+<!-- MediaWiki page 2375; revision 11215; parent 10372; 2014-06-19T20:20:16Z -->
