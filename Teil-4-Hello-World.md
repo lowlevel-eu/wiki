@@ -46,7 +46,7 @@ Fangen wir mit dem einfachen an: Direkt nach dem Booten ist ein PC im Textmodus.
 
 }\</c\>
 
-Nachdem wir das erste Problem souverän gelöst haben, müssen wir den Code jetzt nur noch zur Ausführung bringen. Wir müssen also irgendwie den Multiboot-Header in unsere Binary bekommen. Außerdem benutzt unsere Funktion ein paar lokale Variablen. Lokale Variablen landen auf dem [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack"), deswegen müssen wir etwas Speicherplatz für den Stack vorsehen. Diesen Teil erledigen wir in Assembler (diese Datei ist die start.S):
+Nachdem wir das erste Problem souverän gelöst haben, müssen wir den Code jetzt nur noch zur Ausführung bringen. Wir müssen also irgendwie den Multiboot-Header in unsere Binary bekommen. Außerdem benutzt unsere Funktion ein paar lokale Variablen. Lokale Variablen landen auf dem [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack"), deswegen müssen wir etwas Speicherplatz für den Stack vorsehen. Diesen Teil erledigen wir in Assembler (diese Datei ist die start.S mit großgeschriebenem ".S"):
 
 \<asm\>.section .text
 
@@ -230,6 +230,6 @@ Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9921/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 9921; parent 9920; 2011-07-13T16:50:12Z -->
+<!-- MediaWiki page 1897; revision 11217; parent 9921; 2014-10-07T19:44:54Z -->
