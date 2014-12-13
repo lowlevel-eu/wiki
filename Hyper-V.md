@@ -21,7 +21,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 **Hyper-V** ist eine Virtualisierungslösung von Microsoft. Hyper-V ist kostenlos für das Server-Betriebssystem Windows Server 2008 als Download verfügbar (ab der Version R2 im Betriebssystem direkt integriert).
 
-Für (Hobby-)Betriebssystementwickler ist Hyper-V aktuell nur bedingt interessant, da wohl die wenigsten Hobbyisten einen legal lizensierten Windows Server bei sich installiert haben. Allerdings wird mit der nächsten Version von Windows - "Windows 8" - Hyper-V auch für den Privatanwender interessant, da es dann Bestandteil des "normalen" Betriebssystem wird und voraussichtlich Windows Virtual PC ablösen wird.
+Für (Hobby-)Betriebssystementwickler ist Hyper-V aktuell nur bedingt interessant, da wohl die wenigsten Hobbyisten einen legal lizensierten [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") Server bei sich installiert haben. Allerdings wird mit der nächsten Version von Windows - "Windows 8" - Hyper-V auch für den Privatanwender interessant, da es dann Bestandteil des "normalen" Betriebssystem wird und voraussichtlich Windows Virtual PC ablösen wird.
 
   
 
@@ -33,10 +33,10 @@ Hyper-V wandelt das "Hauptbetriebssystem" ebenfalls zu einer VM um die in einer 
 
 ## Linux und Hyper-V
 
-Nachdem lange Zeit Linux nur sehr schlecht unter Hyper-V unterstützt wurde hat Microsoft einiges dafür getan, dass die Linux-Unterstützung verbessert wird und unter anderem eigene GPL-lizensierte Module zum Linux-Kernel beigesteuert.
+Nachdem lange Zeit [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") nur sehr schlecht unter Hyper-V unterstützt wurde hat Microsoft einiges dafür getan, dass die Linux-Unterstützung verbessert wird und unter anderem eigene GPL-lizensierte Module zum Linux-Kernel beigesteuert.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10450/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2529/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11230/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2529/index.html)
 
-<!-- MediaWiki page 2529; revision 10450; parent 10449; 2012-02-20T23:46:26Z -->
+<!-- MediaWiki page 2529; revision 11230; parent 10450; 2014-12-13T01:15:18Z -->
