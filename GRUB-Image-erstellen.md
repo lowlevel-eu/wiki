@@ -2,7 +2,7 @@
 
 ### menu.lst
 
-Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand einzugeben. Ein schönes Bootmenü mit genau einem Eintrag, der nach einer Sekunde automatisch gebootet wird, erhält man, wenn man eine neue Datei namens grub/menu.lst mit folgendem Inhalt auf dem Image anlegt:
+Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand in [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") einzugeben. Ein schönes Bootmenü mit genau einem Eintrag, der nach einer Sekunde automatisch gebootet wird, erhält man, wenn man eine neue Datei namens grub/menu.lst mit folgendem Inhalt auf dem Image anlegt:
 
     timeout 1
 
@@ -11,7 +11,7 @@ Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand 
 
 ### Ein Update-Skript
 
-Ich persönlich benutze ein Shellskript, um den jeweils neuesten Kernel bequem auf das Image zu kopieren. Damit spare ich mir das Eintippen eines langen mount-Befehls, eines ebenso langen cp-Befehls und die Eingabe des Root-Passworts.
+Ich persönlich benutze ein Shellskript, um den jeweils neuesten [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") bequem auf das Image zu kopieren. Damit spare ich mir das Eintippen eines langen mount-Befehls, eines ebenso langen cp-Befehls und die Eingabe des Root-Passworts.
 
 Zunächst muß das Image in die /etc/fstab eingetragen sein. Dazu ist eine Zeile wie die folgende einzutragen:
 
@@ -34,6 +34,6 @@ Ausführbar machen und ausprobieren:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8467/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11237/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1449/index.html)
 
-<!-- MediaWiki page 1449; revision 8467; parent 6393; 2010-10-03T09:49:27Z -->
+<!-- MediaWiki page 1449; revision 11237; parent 8467; 2014-12-17T07:49:55Z -->
