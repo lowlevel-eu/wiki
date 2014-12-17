@@ -2,7 +2,7 @@
 
 ## Vorbemerkungen
 
-Man benötigt zum Folgen der Anleitung nur einen Rechner, auf dem GRUB 2 installiert ist.
+Man benötigt zum Folgen der Anleitung nur einen Rechner, auf dem [GRUB 2](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-2 "GRUB 2") installiert ist.
 
 ## Erste Schritte
 
@@ -12,7 +12,7 @@ Im Folgenden gehe ich davon aus, dass ihr Linux verwendet, das Arbeitsverzeichni
 
 ## Durchführung
 
-Zuerst lädt man sich ein Image mit GRUB Legacy herunter, z. B. hier: <http://download.tyndur.org/releases/0.2/>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dieses Image entpackt man nun ins Arbeitsverzeichnis und mountet es anschließend: \<bash\>mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt\</bash\> Jetzt müssen alle Dateien und Ordner außer /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
+Zuerst lädt man sich ein Image mit [GRUB Legacy](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") herunter, z. B. hier: <http://download.tyndur.org/releases/0.2/>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dieses Image entpackt man nun ins Arbeitsverzeichnis und mountet es anschließend: \<bash\>mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt\</bash\> Jetzt müssen alle Dateien und Ordner außer /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
 
     timeout=0
 
@@ -39,14 +39,14 @@ Nun erstellt man noch eine grub.cfg mit folgendem Inhalt unter /boot/grub2 auf d
         boot    
     }
 
-Anschließend kopiert man den Kernel und die dazugehörigen Dateien auf das Image und unmountet es: \<bash\>sudo umount mnt\</bash\> Das Image ist danach fertig.
+Anschließend kopiert man den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und die dazugehörigen Dateien auf das Image und unmountet es: \<bash\>sudo umount mnt\</bash\> Das Image ist danach fertig.
 
 ## Test
 
-Testen kann man das Image z. B. mit qemu: \<bash\>qemu -fda 0.2.1-gothmog-floppy.img\</bash\>
+Testen kann man das Image z. B. mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU"): \<bash\>qemu -fda 0.2.1-gothmog-floppy.img\</bash\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7718/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2235/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11236/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2235/index.html)
 
-<!-- MediaWiki page 2235; revision 7718; parent 7717; 2010-05-24T20:58:56Z -->
+<!-- MediaWiki page 2235; revision 11236; parent 7718; 2014-12-17T07:46:53Z -->
