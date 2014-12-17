@@ -2,7 +2,7 @@
 
 Double Buffering bezeichnet eine Methode zur Darstellung von Grafiken, bei der neben dem Bildschirmspeicher auch noch ein zweiter Puffer genutzt wird.
 
-Bei Röhrenbildschirmen wird das Bild durch einen Elektronenstrahl, der auf eine spezielle Oberfläche trifft, die dadurch zum Leuchten angeregt wird, dargestellt. Wenn sich nun das Bild schneller ändert, als sich der Strahl bewegt, entsteht ein unerwünschtes Flimmern. Das kann verhindert werden, indem Veränderungen der dargestellten Grafik erst in einem zweiten Puffer erfolgen, der dann als ganzes in den Videospeicher kopiert wird. Dadurch entsteht ein deutlich flüssigerer Bildlauf.
+Bei komplexen Zeichenoperationen kann es vorkommen, dass der Bildschirm seinen Inhalt aktualisiert bevor die Zeichenoperationen beendet ist. Dadurch zeigt der Bildschirm einen unvollständigen Zwischenstand an, wodurch beim Benutzer der Eindruck des Flackerns entsteht. Double Buffering behebt dieses Problem, indem zunächst in einen zweiten Puffer, den sogenannten Backbuffer, gerendert wird. Erst wenn die Zeichenoperationen abgeschlossen sind und das Frame vollständig ist, wird der Backbuffer in den Frontbuffer kopiert bzw. werden die beiden Puffer getauscht.
 
 Das Flimmern tritt übrigens auch bei neueren Bildschirmen auf, wenn man die Pixel einzeln setzt. Das dauert, und während dieser Zeit kann man teilweise sogar den zeilenweisen Aufbau des Bildes beobachten. Das kann man verhindern, indem man das Bild erst in den Puffer zeichnet und dann den kompletten Puffer auf einmal auf den Bildschirm bringt.
 
@@ -109,6 +109,6 @@ Nun sollte das Bild auf einmal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10923/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 10923; parent 10917; 2012-11-02T08:29:55Z -->
+<!-- MediaWiki page 2600; revision 11233; parent 10923; 2014-12-17T07:38:41Z -->
