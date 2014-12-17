@@ -30,7 +30,7 @@ int main(int argc, char \*\*argv) {
 
 Keine Angst, das war nur die Initialisierung der Allegro-Bibliothek und des Fensters, das wir verwenden wollen. Danach wird es einfacher.
 
-*Zur Information: Wir haben jetzt die Allegro-Bibliothek initialisiert (allegro_init()), die Tastatur für unser Programm aktiviert (install_keyboard()), die Farbtiefe auf 32 Bit gesetzt (set_color_depth(32)), ein Fenster mit der Größe 256\*256 Pixel kreiert und den Standart-Grafiktreiber als Treiber festgelegt (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0)) und schließlich das Fenster schwarz gefärbt (clear_to_color(screen, makecol(0, 0, 0))).*
+*Zur Information: Wir haben jetzt die Allegro-Bibliothek initialisiert (allegro_init()), die Tastatur für unser Programm aktiviert (install_keyboard()), die Farbtiefe auf 32 Bit gesetzt (set_color_depth(32)), ein Fenster mit der Größe 256\*256 Pixel kreiert und den Standard-Grafiktreiber als Treiber festgelegt (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0)) und schließlich das Fenster schwarz gefärbt (clear_to_color(screen, makecol(0, 0, 0))).*
 
 Nun kommen wir zum eigentlichen Zeichnen. Wir werden einen einfachen Farblauf erstellen. Dazu verwenden wir die Funktion putpixel():
 
@@ -109,6 +109,6 @@ Nun sollte das Bild auf einmal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11235/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 11234; parent 11233; 2014-12-17T07:39:40Z -->
+<!-- MediaWiki page 2600; revision 11235; parent 11234; 2014-12-17T07:42:34Z -->
