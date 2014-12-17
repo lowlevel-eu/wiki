@@ -109,6 +109,6 @@ Nun sollte das Bild auf einmal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11233/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11234/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 11233; parent 10923; 2014-12-17T07:38:41Z -->
+<!-- MediaWiki page 2600; revision 11234; parent 11233; 2014-12-17T07:39:40Z -->
