@@ -33,7 +33,7 @@ Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. 
 
 ### Kernel
 
-Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, Syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI") (USB 2), [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI") und [UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI") (USB 1.1 und USB 2.0), [VESA BIOS Extensions](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VESA BIOS Extensions") und die Netzwerkkarten [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139") und [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet"). Mittels [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") werden auch andere Treiber eingebunden, z.B. e1000 (Netzwerkkarte Intel PRO/1000). Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 auf Floppydisk und usb-Stick eingesetzt.
+Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, Syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "EHCI") (USB 2), [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "OHCI") und [UHCI](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface "UHCI") (USB 1.1 und USB 2.0), [VESA BIOS Extensions](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VESA BIOS Extensions") und die Netzwerkkarten [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139"), RTL8168/[RTL8169](https://github.com/lowlevel-eu/wiki/wiki/RTL8169 "RTL8169") und [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet"). Mittels [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") werden auch andere Treiber eingebunden, z.B. e1000 (Netzwerkkarte Intel PRO/1000). Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 auf Floppydisk und usb-Stick eingesetzt.
 
 ### Userprogramme
 
@@ -55,6 +55,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11143/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11238/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 11143; parent 11137; 2013-09-21T10:39:16Z -->
+<!-- MediaWiki page 2096; revision 11238; parent 11143; 2014-12-24T11:36:46Z -->
