@@ -803,7 +803,7 @@ Die Organisation von Interrupt Transfers funktioniert über 32 Interrupt-Transfe
 
 ### Finden eines OHCI kompatiblen Host Controller
 
-Bei PCs sind die Host Controller über den \[\[PCI\]-Bus mit der CPU verbunden. Man muss also die Konfigurationsadressräume nach einem Geräte mit dem Classcode 0x0C und der Subclass 0x03 durchsuchen. Weitere Informationen dazu im Artikel zum [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI"). Das DWord an Offset 0x10 im Konfigurationsadressraum enthält die Basisadresse der Register. Bei diesen sollte man nun zuerst das *HcRevision* Feld überprüfen, welches den Wert 0x10 enthalten muss. Andernfalls ist der HC mit dieser Spezifikation möglicherweise nicht kompatibel.
+Bei PCs sind die Host Controller über den PCI-Bus mit der CPU verbunden. Man muss also die Konfigurationsadressräume nach einem Geräte mit dem Classcode 0x0C und der Subclass 0x03 durchsuchen. Weitere Informationen dazu im Artikel zum [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI"). Das DWord an Offset 0x10 im Konfigurationsadressraum enthält die Basisadresse der Register. Bei diesen sollte man nun zuerst das *HcRevision* Feld überprüfen, welches den Wert 0x10 enthalten muss. Andernfalls ist der HC mit dieser Spezifikation möglicherweise nicht kompatibel.
 
 ### Kontrolle über den Host Controller übernehmen
 
@@ -829,6 +829,6 @@ Vor dem Zurücksetzen muss der Wert des Registers *HcFmInterval* gesichert werde
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10089/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11241/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1575/index.html)
 
-<!-- MediaWiki page 1575; revision 10089; parent 10075; 2011-08-29T15:36:07Z -->
+<!-- MediaWiki page 1575; revision 11241; parent 10089; 2014-12-29T18:28:27Z -->
