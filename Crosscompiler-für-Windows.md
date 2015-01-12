@@ -6,7 +6,7 @@ Dieser Artikel soll eine kleine Anleitung sein, wie man einen vorkompilierten [G
 
 ## Download
 
-Der Compiler ist verfügbar unter <http://jidder.de/lost/files/crosstools-complete.rar>. Darin enthalten sind
+Der Compiler ist verfügbar unter <http://jidder.de/stuff/crosstools-complete.rar>. Darin enthalten sind
 
 - GCC 4.4.0 (C- und C++-Compiler)
 - binutils 2.19.1
@@ -81,6 +81,6 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11096/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1450/index.html)
 
-<!-- MediaWiki page 1450; revision 11096; parent 9569; 2013-04-03T22:33:21Z -->
+<!-- MediaWiki page 1450; revision 11242; parent 11096; 2015-01-12T03:44:32Z -->
