@@ -1,11 +1,5 @@
 # AMD PCnet
 
-**Hinweis:**
-
-Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema aus. Da dieses Thema aber dringend nach einem Artikel verlangte (z. B. aufgrund eines Eintrags in der [TODO](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO")-Liste), hat er sich dennoch entschieden, seine Kenntnisse niederzuschreiben.
-
-Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
-
 Dieser Artikel beschäftigt sich mit der Programmierung der AMD-PCnet-FAST-III-Netzwerkkarte (Am79C973).
 
 ## Einführung
@@ -183,8 +177,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
           (ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x03000000) == 0x03000000)
      {
        size_of_packet = netcard->linear_receive_descriptor[netcard->receive_descriptor].flags2 & 0xFFF;
-       if (size_of_packet > 64)
-         size_of_packet -= 4; //CRC32 nicht mitkopieren
        //Mach mit den Daten, was du willst!
        //Sie stehen in der virtuellen Version von netcard->linear_receive_descriptor[netcard_receive_descriptor].address
        //und sind [size_of_packet] Bytes lang
@@ -212,6 +204,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11243/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 11243; parent 11216; 2015-01-12T12:54:53Z -->
+<!-- MediaWiki page 2025; revision 11244; parent 11243; 2015-01-12T16:39:49Z -->
