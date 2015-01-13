@@ -71,7 +71,7 @@ Die „direkt“ erreichbaren Register (ein Portzugriff) sind nur ein kleiner Te
 
 9\. Danach muss 0x0041 nach CSR0 geschrieben werden. Das initialisiert die Karte und aktiviert Interrupts. Gleich darauf wird ein IRQ eintreffen. Die ISR sollte einfach den Wert von CSR0 nach CSR0 (sic!) schreiben, um den Interrupt anzunehmen.
 
-10\. Wenn der Interrupt empfangen wurde, sollte der Inhalt von CSR4 mit 0xC00 ge-OR-t und wieder nach CSR4 geschrieben werden. Dadurch werden Pakete, die kleiner als 64 Bytes sind, automatisch auf diese größe vergrößert und einige relativ überflüssige Informationen von empfangenen Paketen entfernt.
+10\. Wenn der Interrupt empfangen wurde, sollte der Inhalt von CSR4 mit 0xC00 ge-OR-t und wieder nach CSR4 geschrieben werden. Dadurch werden Pakete, die kleiner als 64 Bytes sind, automatisch auf diese Größe vergrößert und einige relativ überflüssige Informationen von empfangenen Paketen entfernt.
 
 11\. Jetzt ist die Initialisierung endlich abgeschlossen und die Karte darf in Betrieb genommen werden, indem 0x42 nach CSR0 geschrieben wird.
 
@@ -165,7 +165,7 @@ void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
 
 ### Empfangen von Paketen
 
-Sobald ein Paket empfangen wurde (das heißt, die ISR wurde aufgerufen und das RINT-Flag im CR0-Register ist gesetzt), müssen alle Empfangsdeskriptoren ab dem aktuellen abgearbeitet werden, bis das OWN-Bit (0x80000000 im „flags“-Feld) bei einem gesetzt ist. Denn alle Deskriptoren mit gelöschtem OWN-Bit wurden gerade von der Karte bearbeitet. Zum Abholen der Daten sollte dann das OWN-Bit gesetzt werden und die Daten können aus dem im Deskriptor angegebenen Puffer kopiert werden. Die Anzahl der Bytes steht in den Bits 0 bis 11 des „flags2“-Feldes. Zu diesen Daten gehört auch eine 4 Bytes lange CRC32-Checksumme am Ende des Pakets.
+Sobald ein Paket empfangen wurde (das heißt, die ISR wurde aufgerufen und das RINT-Flag im CR0-Register ist gesetzt), müssen alle Empfangsdeskriptoren ab dem aktuellen abgearbeitet werden, bis das OWN-Bit (0x80000000 im „flags“-Feld) bei einem gesetzt ist. Denn alle Deskriptoren mit gelöschtem OWN-Bit wurden gerade von der Karte bearbeitet. Zum Abholen der Daten sollte dann das OWN-Bit gesetzt werden und die Daten können aus dem im Deskriptor angegebenen Puffer kopiert werden. Die Anzahl der Bytes steht in den Bits 0 bis 11 des „flags2“-Feldes.
 
 Die Daten sollten nur dann gelesen werden, wenn das ERROR-Bit (0x40000000) im „flags“-Feld nicht gesetzt ist. Außerdem sollten die Bits STP und ENP (0x02000000 bzw. 0x01000000) – ebenfalls im „flags“-Feld – beide gesetzt sein.
 
@@ -204,6 +204,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11244/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11245/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 11244; parent 11243; 2015-01-12T16:39:49Z -->
+<!-- MediaWiki page 2025; revision 11245; parent 11244; 2015-01-13T01:07:01Z -->
