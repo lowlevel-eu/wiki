@@ -39,7 +39,8 @@ void wrmsr(uint32_t msr,
 ## Auswahl einiger MSRs
 
 | Nummer | Name | Inhalt |
-| ------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0x1B | IA32_APIC_BASE_MSR | Basisadresse des [Local-APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") |
 | 0x174 | IA32_SYSENTER_CS | **CS** für **[SYSENTER](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")** |
 | 0x175 | IA32_SYSENTER_ESP | **ESP** für **SYSENTER** |
 | 0x176 | IA32_SYSENTER_EIP | **EIP** für **SYSENTER** |
@@ -54,6 +55,6 @@ void wrmsr(uint32_t msr,
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6741/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11254/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1607/index.html)
 
-<!-- MediaWiki page 1607; revision 6741; parent 6655; 2010-01-02T21:43:32Z -->
+<!-- MediaWiki page 1607; revision 11254; parent 6741; 2015-01-14T17:05:25Z -->
