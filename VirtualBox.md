@@ -69,13 +69,15 @@ Oracle hat den Debugger - mit der Begründung, er sei nur für "advanced users" 
 
 - VirtualBox mit den Kommandozeilenparametern --dbg, --debug, oder --debug-command-line starten
 
-Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein. Wenn man dessen Unterpunkt "Kommandozeile" wählt, erhält man dann eine Konsole, über die die weitere Steuerung erfolgt.
+Anschließend kann der Debugger aus der laufenden VM gestartet werden. In der laufenden Maschine sollte der Menüpunkt "Debug" hinzugekommen sein.
 
 ### Benutzung
 
+Wenn man im Menü "Debug" den Unterpunkt "Kommandozeile" wählt, erhält man dann eine Konsole, über die die weitere Steuerung des Debuggers hauptsächlich erfolgt.
+
 #### Informationen beschaffen
 
-Die wichtigsten Befehle, um Infos über das System zu erhalten:
+Die wichtigsten Befehle der Kommandozeile, um Infos über das System zu erhalten:
 
 | Befehl | Wirkung |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,15 +91,17 @@ Die wichtigsten Befehle, um Infos über das System zu erhalten:
 | da/db/dw/dd/dq | Gibt den Speicher an der angegebenen Addresse aus, als ASCII-Text, in Bytes/Words/Doublewords/Quadwords |
 | info \<arg\> | Gibt Infos zum angegebenen Gerät aus. Übersicht über diese Geräte: info help. Beispiele: pcnet0, pit, pic, ohci, ehci, vbe, ioport, ... |
 
-  
+#### Log
+
+Hinter dem Menüelement "Zeige Log" verbirgt sich ein Fenster, dessen erste Registerkarte ein Log enthält, dass dem von Bochs ähnelt. Es enthält beispielsweise Fehlermeldungen und Statusänderungen der von VirtualBox emulierten Geräte.
+
+#### Breakpoints
 
 Folgende Informationen fehlen dem Artikel an dieser Stelle:
 
 - Ergänzungen zum Debugger, d.h. zum Setzen von Breakpoints und zur schrittweisen Code-Ausführung
 
 Hilf Lowlevel, den Artikel zu verbessern.
-
-  
 
 ## Links
 
@@ -107,6 +111,6 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10147/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 10147; parent 10146; 2011-09-21T08:05:20Z -->
+<!-- MediaWiki page 1553; revision 11257; parent 10147; 2015-01-18T17:29:17Z -->
