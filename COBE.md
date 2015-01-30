@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Noch keine |
 | Homepage |  |
 
-<http://cobe.chisaw.de>
+<http://chisaw.de/?page_id=17>
 
   
 COBE (Computer Betriebsystem) ist ein System mit Ziel eines [Microkernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Derzeit ist das System in den Sprachen [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") und [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben. Entwickelt wird es von Christian Hülsemeyer. Das Image des ersten Releases ist auf der Projektseite zu finden.
@@ -65,10 +65,10 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 
 ## Sourcecode
 
-COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http://cobe.svn.sourceforge.net/viewvc/cobe/?view=tar).
+COBE steht unter der BSD-Lizenz, der Sourcecode ist [hier herunterladbar](http://cobe.svn.sourceforge.net/viewvc/cobe/?view=tar). Eine Dokumentation dieses Sourcecodes ist hier [einsehbar](http://chisaw.de/docs/kernel_doc/index.html)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11258/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2298/index.html)
 
-<!-- MediaWiki page 2298; revision 10355; parent 10354; 2011-12-08T20:56:03Z -->
+<!-- MediaWiki page 2298; revision 11258; parent 10355; 2015-01-30T09:32:15Z -->
