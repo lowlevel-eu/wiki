@@ -351,6 +351,12 @@ kprintf("%c", keycode);
 
 Dieses Codestück unternimmt genau die oben beschriebenen Schritte. Die Funktion „translate_scancode“ übersetzt, wie oben im Kommentar angegeben, die Scancodes in interne Keycodes der Code dazu findet sich ebenfalls im [tyndur-Repository](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/sc2kc.c). Es handelt sich dabei aber nur um eine mögliche Umsetzung und keineswegs um die einzig mögliche, hier muss man sich selbst überlegen wie das für den konkreten Anwendungsfall am komfortabelsten ist.
 
+## Power-on Reset und Initialisierung des KBC durch das BIOS
+
+Anders, als man vermuten sollte, ist der KBC nach einem Reset des Computers nicht direkt betriebsbereit. Vielmehr befindet er sich in einem Initialisierungs- Zustand, in dem er auf einen Selbsttest-Befehl (0x55) wartet. Erst, nachdem dieser Selbsttest-Befehl vom BIOS des Computers gesendet wurde und der KBC den Selbsttest erfolgreich abgeschlossen hat, startet dieser seine Mainloop und ist dazu bereit, normale Befehle entgegenzunehmen.
+
+Diese Informationen sind jedoch zum Programmieren eines Betriebssystems nicht direkt relevant, da diese Prozedur vom BIOS bereits vor dem Start des Bootloaders durchgeführt wird. Genaueres über die interne Funktionsweise des i8042 KBC kann dessen [Quellcode](http://www.halicery.com/8042/8042_1503033.TXT) entnommen werden.
+
 ## Beispiele zur Benutzung der KBC Funktionen
 
 ### CPU-Reset
@@ -377,9 +383,10 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 - <http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html>
 - [SMS "8042" Datenblatt](http://www.diakom.ru/el/elfirms/datashts/Smsc/42w11.pdf)
+- [Quellcode des originalen i8042 KBC von IBM](http://www.halicery.com/8042/8042_1503033.TXT)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11090/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11090; parent 11089; 2013-03-29T20:47:50Z -->
+<!-- MediaWiki page 1468; revision 11262; parent 11090; 2015-02-27T14:53:35Z -->
