@@ -47,8 +47,7 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ## Links
 
-- Haupt-Website: <http://prettyos.de/>
-- Webpräsenz: <http://pkeus.de/>
+- Website: <http://prettyos.de/>
 - SVN-Repository: svn://svn.code.sf.net/p/prettyos/code/trunk/Source und <http://svn.code.sf.net/p/prettyos/code/trunk/Source/>
 - Forum: <http://www.c-plusplus.de/forum/f62>
 - Tutorial: <http://www.henkessoft.de/OS_Dev/OS_Dev1.htm>
@@ -56,6 +55,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11260/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11263/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 11260; parent 11259; 2015-02-26T14:00:58Z -->
+<!-- MediaWiki page 2096; revision 11263; parent 11260; 2015-02-28T09:09:34Z -->
