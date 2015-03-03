@@ -353,7 +353,7 @@ Dieses Codestück unternimmt genau die oben beschriebenen Schritte. Die Funktion
 
 ## Power-on Reset und Initialisierung des KBC durch das BIOS
 
-Anders, als man vermuten sollte, ist der KBC nach einem Reset des Computers nicht direkt betriebsbereit. Vielmehr befindet er sich in einem Initialisierungs- Zustand, in dem er auf einen Selbsttest-Befehl (0x55) wartet. Erst, nachdem dieser Selbsttest-Befehl vom BIOS des Computers gesendet wurde und der KBC den Selbsttest erfolgreich abgeschlossen hat, startet dieser seine Mainloop und ist dazu bereit, normale Befehle entgegenzunehmen.
+Anders, als man vermuten sollte, ist der KBC nach einem Reset des Computers nicht direkt betriebsbereit. Vielmehr befindet er sich in einem Initialisierungs- Zustand, in dem er auf einen Selbsttest-Befehl (0xAA) wartet. Erst, nachdem dieser Selbsttest-Befehl vom BIOS des Computers gesendet wurde und der KBC den Selbsttest erfolgreich abgeschlossen hat, startet dieser seine Mainloop und ist dazu bereit, normale Befehle entgegenzunehmen.
 
 Diese Informationen sind jedoch zum Programmieren eines Betriebssystems nicht direkt relevant, da diese Prozedur vom BIOS bereits vor dem Start des Bootloaders durchgeführt wird. Genaueres über die interne Funktionsweise des i8042 KBC kann dessen [Quellcode](http://www.halicery.com/8042/8042_1503033.TXT) entnommen werden.
 
@@ -387,6 +387,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11262/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11262; parent 11090; 2015-02-27T14:53:35Z -->
+<!-- MediaWiki page 1468; revision 11264; parent 11262; 2015-03-03T16:11:21Z -->
