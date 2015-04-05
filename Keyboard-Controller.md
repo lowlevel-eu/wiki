@@ -2,7 +2,6 @@
 
 Der **Keyboard-Controller** oder auch **KBC** ist ein Baustein auf dem Mainboard und dient (unter anderem) der Tastaturansteuerung. Ursprünglich von IBM entwickelt, wurde der Keyboard-Controller in seiner Funktion stark erweitert, wodurch sich heutzutage viele Aufgaben über selbigen erledigen lassen.
 
-  
 Der KBC wurde mit dem AT-System (i286) eingeführt. Im Vorgängersystem XT wurde für vergleichbare Aufgaben das Programmable Peripheral Interface (PPI) genutzt.
 
 ## Funktionen des KBC
@@ -25,17 +24,15 @@ Der KBC wurde mit dem AT-System (i286) eingeführt. Im Vorgängersystem XT wurde
 
 - Information darüber, ob das System eine Monochrom- oder Farbgrafikkarte benutzt (Irrelevant, da Farbgrafik bereits mit XT-Systemen als Standard eingeführt wurde!)
 
-  
-
 ## Kommunikationswege
 
   
 [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png)  
   
 
-Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) eine Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z. B. von Linux unterstützt, nicht jedoch von Windows.  
+Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) eine Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z. B. von Linux unterstützt, nicht jedoch von Windows.
 
-(\*Anmerkung zu PSAUX0 und PSAUX1: Diese Begriffe habe ich mir „ausgedacht“, da ich keine vernünftige offizielle Bezeichnung kenne. Man wird diese Begriffe also in keiner anderen Referenz finden, außer es wurde hier abgeschrieben.)  
+(\*Anmerkung zu PSAUX0 und PSAUX1: Diese Begriffe habe ich mir „ausgedacht“, da ich keine vernünftige offizielle Bezeichnung kenne. Man wird diese Begriffe also in keiner anderen Referenz finden, außer es wurde hier abgeschrieben.)
 
 ## USB Legacy Support
 
@@ -48,11 +45,7 @@ Diese Probleme sind nicht mehr vorhanden, wenn der Legacy-Modus ausgeschaltet wu
 
 ## Programmieren des KBC
 
-Programmiert wird der KBC über die zwei Ports 0x60 und 0x64. Dabei werden auf den Ports nur Bytes gesendet und empfangen.  
-  
-Über den Port 0x64 kann man das Statusregister auslesen und KBC-Befehle senden.  
-  
-Der Port 0x60 dient als Ein-/Ausgabe-Puffer. Parameter oder Rückgabewerte für einen Befehl werden über diesen Port geschrieben bzw. gelesen. Wenn keine Befehlsparameter erwartet werden und man auf den Port 0x60 schreibt, wird direkt an PSAUX0 weitergeleitet.  
+Programmiert wird der KBC über zwei IO-Ports. Über Port 0x64 kann man das Statusregister auslesen und KBC-Befehle senden. Port 0x60 dient als Ein-/Ausgabe-Puffer. Parameter oder Rückgabewerte für einen Befehl werden über diesen Port geschrieben bzw. gelesen. Wenn keine Befehlsparameter erwartet werden und man auf den Port 0x60 schreibt, wird direkt an PSAUX0 weitergeleitet.
 
 - Vor dem Schreiben auf Port 0x60 oder 0x64 muss der Eingabepuffer leer sein. (Port\[0x64\].Bit\[1\] == 0)
 - Vor dem Lesen von Port 0x60 muss der Ausgabepuffer voll sein (Port\[0x64\].Bit\[0\] == 1)
@@ -71,8 +64,6 @@ Wird vom Port 0x64 gelesen und ist folgendermaßen aufgebaut:
         │└─────── Timeout: 1=Tastatur oder PSAUX-Gerät reagiert nicht?
         └──────── Paritätsfehler: 1=Beim letzten gesendeten/empfangenen Byte trat ein Paritätsfehler auf
 
-  
-
 ### Input Port P1
 
 Nur aus Vollständigkeitsgründen hier aufgeführt! Wie man auf einem kurzen Blick erkennen kann, sind diese Werte heute nicht mehr relevant. Gelesen wird er über den KBC-Befehl 0xC0.
@@ -90,8 +81,6 @@ Nur aus Vollständigkeitsgründen hier aufgeführt! Wie man auf einem kurzen Bli
         │         Kleiner Tipp: CGA wurde mit den XT-System eingeführt. ;)
         └──────── Tastatursperre: 0=Tastatur gesperrt; 1=Tastatur nicht gesperrt
 
-  
-
 ### Outputport
 
 Wird mit dem KBC-Befehl 0xD0 ausgelesen und per 0xD1 geschrieben:
@@ -105,8 +94,6 @@ Wird mit dem KBC-Befehl 0xD0 ausgelesen und per 0xD1 geschrieben:
         ││└────── ? 1: Output buffer PS/2 mouse full
         │└─────── ? Keyboard clock signal
         └──────── ? Keyboard data out
-
-  
 
 ### Controller Command Byte
 
@@ -124,8 +111,6 @@ Wird mit dem KBC-Befehl 0x20 ausgelesen und per 0x60 geschrieben:
         ││              1 = Benutze 8086 Übertragung, keine Paritätsüberprüfung oder Konvertierung 
         │└─────── ? 1=Der KBC übersetzt von PSAUX eingehenden Bytes*
         └──────── 0 (reserviert)
-
-  
 
 - [KBC-Scancode-Übersetzung](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-10.html#translationtable)
 
@@ -161,8 +146,6 @@ Müssen auf Port 0x64 ausgegeben werden (bevor man auf Port 0x64 schreibt, muss 
     0xE0   ?
 
     0xFx   ?
-
-  
 
 ### Tastatur-Befehle
 
@@ -384,6 +367,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11267; parent 11264; 2015-04-05T13:06:29Z -->
+<!-- MediaWiki page 1468; revision 11268; parent 11267; 2015-04-05T19:03:26Z -->
