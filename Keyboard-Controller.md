@@ -39,15 +39,12 @@ Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwen
 
 ## USB Legacy Support
 
-Diese von vielen Mainboards bereitgestellte Funktion simuliert angeschlossene USB-Geräte wie Maus und Tastatur als PS/2-Geräte.  
-  
-Dies hat für Programmierer Vor- und Nachteile. Einerseits muss man für die Unterstützung solcher Eingabegeräte keine eigenen USB-Treiber programmieren. Andererseits können damit folgende Probleme auftreten:  
+Diese von vielen Mainboards bereitgestellte Funktion simuliert angeschlossene USB-Geräte wie Maus und Tastatur als PS/2-Geräte. Dies hat für Programmierer Vor- und Nachteile. Zwar muss man für die Unterstützung solcher Eingabegeräte keine eigenen USB-Treiber programmieren, allerdings können damit folgende Probleme auftreten:
 
 - Auf manchen Systemen läuft IMMER eine Abstraktionsschicht mit, auch wenn keine USB-Geräte angeschlossen sind. Dies kann zur Folge haben, dass die Intellimaus-Extension nicht funktioniert. Oder dass man nicht, wie weiter oben beschrieben, beliebige Geräte an einen PSAUX-Port anschließen kann (werden nicht erkannt).
 - Das [SMM-BIOS](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "SMM"), über welches die USB-zu-PS/2-Abstraktion stattfindet, unterstützt nicht immer den Betrieb über 32-Bit-[Protected-Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") kann das System daher zum Absturz bringen!
 
-  
-Diese Probleme sind nicht mehr vorhanden, wenn der Legacy-Modus ausgeschaltet wurde. Dies geschieht während der Initialisierung des USB-Hostcontrollers.
+Diese Probleme sind nicht mehr vorhanden, wenn der Legacy-Modus ausgeschaltet wurde. Dies geschieht während der Initialisierung des USB-Hostcontrollers. Dann ist jedoch ein Treiber für eine [USB-Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur") erforderlich.
 
 ## Programmieren des KBC
 
@@ -387,6 +384,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11264/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11267/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11264; parent 11262; 2015-03-03T16:11:21Z -->
+<!-- MediaWiki page 1468; revision 11267; parent 11264; 2015-04-05T13:06:29Z -->
