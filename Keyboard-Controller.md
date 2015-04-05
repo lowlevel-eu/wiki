@@ -7,28 +7,14 @@ Der KBC wurde mit dem AT-System (i286) eingeführt. Im Vorgängersystem XT wurde
 ## Funktionen des KBC
 
 - Ansteuerung eines oder zweier Auxiliary Port(s) (Tastatur, Maus)
-
-<!-- -->
-
 - Ein-/ausschalten der 21. Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"))
-
-<!-- -->
-
 - CPU-Reset auslösen, also Neustart des Systems
-
-<!-- -->
-
 - Zusammen mit dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") ansteuern.
-
-<!-- -->
-
-- Information darüber, ob das System eine Monochrom- oder Farbgrafikkarte benutzt (Irrelevant, da Farbgrafik bereits mit XT-Systemen als Standard eingeführt wurde!)
+- Information darüber, ob das System eine Monochrom- oder Farbgrafikkarte benutzt (Irrelevant, da Farbgrafik bereits mit XT-Systemen als Standard eingeführt wurde!), sowie die Speicherausstattung des Systems (512 oder 256 KiB)
 
 ## Kommunikationswege
 
-  
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png)  
-  
+[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png)
 
 Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) eine Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z. B. von Linux unterstützt, nicht jedoch von Windows.
 
@@ -64,7 +50,7 @@ Wird vom Port 0x64 gelesen und ist folgendermaßen aufgebaut:
         │└─────── Timeout: 1=Tastatur oder PSAUX-Gerät reagiert nicht?
         └──────── Paritätsfehler: 1=Beim letzten gesendeten/empfangenen Byte trat ein Paritätsfehler auf
 
-### Input Port P1
+### Inputport P1
 
 Nur aus Vollständigkeitsgründen hier aufgeführt! Wie man auf einem kurzen Blick erkennen kann, sind diese Werte heute nicht mehr relevant. Gelesen wird er über den KBC-Befehl 0xC0.
 
@@ -367,6 +353,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11268/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11268; parent 11267; 2015-04-05T19:03:26Z -->
+<!-- MediaWiki page 1468; revision 11269; parent 11268; 2015-04-05T20:56:30Z -->
