@@ -24,12 +24,19 @@ Im Gegensatz zu PS/2-Tastaturen (N-Tasten-Rollover) sind USB-Boot-Tastaturen auf
 
 Die Kommunikation erfolgt - im Gegensatz zum PS/2-Port - in festen Intervallen (standardmäßig: alle 500ms), sowie zusätzlich beim Eintreten einer Änderung am Gerät (Tastendruck). Das Gerät meldet dabei nur, welche Tasten zum Abfragezeitpunkt gedrückt sind, sodass der Treiber das Loslassen von Tasten anhand einer ausbleibenden Tastendruck-Meldung erkennen muss.
 
+Die LEDs (Caps-Lock, Scroll-Lock, Num-Lock) können mittels eines Out-Reports gesteuert werden. Dieser besteht aus einem Byte mit unten stehender Kodierung. Dieses Byte kann an den optional vorhandenen Interrupt-Out-Endpoint oder alternativ als Control-Transfer an EP0 gesandt werden. Der Control-Transfer folgt dabei der üblichen Struktur:
+
+    SETUP: type=0x21, req=0x09, hiVal=2, loVal=0, index=Interfacenummer, length=1
+    OUT:   1 Byte; Bits entsprechen gewünschtem Status der LED (an/aus)
+           Bit 0: Num-Lock, Bit 1: Caps-Lock, Bit 2: Scroll-Lock
+    IN:    Handshake, keine Daten
+
 ## Weblinks
 
 - [http://www.usb.org/developers/hidpage/ (USB-HID-Spezifikation und HID-Usage-Tables)](http://www.usb.org/developers/hidpage/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11266/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1929/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1929/index.html)
 
-<!-- MediaWiki page 1929; revision 11266; parent 5070; 2015-04-05T13:01:12Z -->
+<!-- MediaWiki page 1929; revision 11270; parent 11266; 2015-04-10T15:15:39Z -->
