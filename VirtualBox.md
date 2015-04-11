@@ -33,22 +33,27 @@ Befehlssatzerweiterungen für Gäste:
 ## Emulierte Hardware
 
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
-- I/O APIC
-- VGA- und VBE-kompatible Grafikkarte
+- [I/O_APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
+- VGA- und [VBE](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VBE")-kompatible Grafikkarte
 - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
 - IDE Controller:
   - PIIX3
   - PIIX4
+  - ICH6
 - SATA AHCI Controller Intel ICH8M/ICH8M-E
-- [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97") Audio (Intel)
+- Soundkarten
+  - [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97") Audio (Intel)
+  - SoundBlaster 16
+  - Intel HD Audio
 - [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"):
-  - PCnet FAST III
+  - [PCnet FAST III](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
   - PCnet-PCI II
   - Intel PRO/1000 MT Desktop
   - Intel PRO/1000 T Server
 - [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Controller:
-  - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
   - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface")
+  - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
+  - [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI") (Nur per Extension Pack, ab Version 5)
 - Serielle Schnittstellen (max. 2)
 
 ## Debugger
@@ -111,6 +116,6 @@ Hilf Lowlevel, den Artikel zu verbessern.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11257/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11271/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1553/index.html)
 
-<!-- MediaWiki page 1553; revision 11257; parent 10147; 2015-01-18T17:29:17Z -->
+<!-- MediaWiki page 1553; revision 11271; parent 11257; 2015-04-11T08:55:58Z -->
