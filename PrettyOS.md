@@ -41,7 +41,7 @@ Der User-Space dient bisher vorwiegend als Demonstration für die API (syscalls)
 
 Userprogramme können auf zwei verschiedenen Wegen eingebunden werden: Mittels incbin direkt in den Kernel, von wo es dann über die vom Linker generierte Adresse gestartet werden kann (derzeit für die VM86-Programme für VBE und APM genutzt), ggf. mit Einbindung in die Ramdisk, oder auf dem herkömmlichen Weg als Executable im ELF- oder PE-Format auf einem von PrettyOS unterstützten Speichermedium, wodurch das Programm für den Nutzer von der Shell aus aufrufbar wird.
 
-## **Entwicklung**
+### **Entwicklung**
 
 PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-plusplus.de gedacht und wird von einer aktiven Community gepflegt und erweitert. IRC Channel: \#PrettyOS auf euirc.net und im Forum (siehe Links). Die Stärke des OS liegt aktuell in den Bereichen usb. Der Bereich Video und Audio soll weiter ausgebaut werden, um moderne Multimediavorgänge experimentell begleiten zu können. Der Einstieg in die usb video class und die Realisierung des periodic schedulers in ehci waren hier ein Anfang. Konstruktive Tester, Beobachter und Entwickler sind immer gerne gesehen.
 
@@ -55,6 +55,6 @@ PrettyOS ist als freie Experimentierbasis für Ideen der OS-Projektgruppe bei c-
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11276/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11277/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2096/index.html)
 
-<!-- MediaWiki page 2096; revision 11276; parent 11272; 2015-05-10T00:23:06Z -->
+<!-- MediaWiki page 2096; revision 11277; parent 11276; 2015-05-10T00:23:42Z -->
