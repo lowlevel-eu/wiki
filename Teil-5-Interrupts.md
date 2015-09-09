@@ -78,7 +78,7 @@ Ein übliches Modell ist es, auf den Interrupts 0 bis 0x1f die Exceptions zu hab
 
 // Slave-PIC initialisieren outb(0xa0, 0x11); // Initialisierungsbefehl fuer den PIC outb(0xa1, 0x28); // Interruptnummer fuer IRQ 8 outb(0xa1, 0x02); // An IRQ 2 haengt der Slave outb(0xa1, 0x01); // ICW 4
 
-// Alle IRQs aktivieren (demaskieren) outb(0x20, 0x0); outb(0xa0, 0x0);\</c\>
+// Alle IRQs aktivieren (demaskieren) outb(0x21, 0x0); outb(0xa1, 0x0);\</c\>
 
 Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden: \<c\>static inline void outb(uint16_t port, uint8_t data) {
 
@@ -224,6 +224,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11184/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11288/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 11184; parent 9798; 2014-02-10T10:26:07Z -->
+<!-- MediaWiki page 1898; revision 11288; parent 11184; 2015-09-09T10:47:08Z -->
