@@ -30,10 +30,16 @@ Im Moment sind die folgenden Features implementiert:
 - Multitasking (+SMP)
 - FAT32 Dateisystem
 - Editor (Angucken und Editieren des Arbeitsspeichers oder von Dateien)
-- **Tetris im Kernel**
 - HyperEbenenProjektionsTreiber (Sowas wie Grafikfenster für Programme)
 - 1024x768x25 (8881 rgba) Grafik + süßer Fadenkreuzmauszeiger
 - kleine C-Bibliothek \<surlib.c\> über Interrupt 35h
+- Uhr- und Datumsanzeige
+
+## Ladbare Programme \[Programmiersprache\]
+
+- Tetris \[fasm\]
+- Mandelbrot \[C\]
+- Hallo Welt \[C\]
 
 ## Beispiel-Programm für die zugehörige C-Bibliothek
 
@@ -65,6 +71,6 @@ Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11289/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11289; parent 10663; 2015-09-30T01:16:17Z -->
+<!-- MediaWiki page 2233; revision 11290; parent 11289; 2015-09-30T01:31:29Z -->
