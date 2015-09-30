@@ -57,7 +57,7 @@ void main(){
 
 } \</c\> Kompiliert wird in ein Binärformat mit:
 
-    gcc sur_hello_world.c -o hello.x -m32 -nostdlib -O2 -emain -Wl,-Ttext,0 -Wl,--oformat,binary --std=gnu99
+    gcc sur_hello_world.c -o hello.x -m32 -mno-see -nostdlib -O2 -emain -Wl,-Ttext,0 -Wl,--oformat,binary --std=gnu99
 
 ## ToDo
 
@@ -65,6 +65,6 @@ Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10663/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11289/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 10663; parent 10399; 2012-08-09T22:45:08Z -->
+<!-- MediaWiki page 2233; revision 11289; parent 10663; 2015-09-30T01:16:17Z -->
