@@ -19,10 +19,6 @@
 
 SurO ist ein HobbyOS, welches durch einen Programmierwettstreit entstanden ist. Version 0.1 war noch eine in QBasic geschriebene DOS-GUI. Version 3,5b ist momentan in Flat-Assembler geschrieben, soll aber dann in Version 3,5c einen eigenen (Meta-)Assemblerdialekt benutzen.
 
-## Entwickler
-
-- [Sur3](https://lowlevel-eu.github.io/wiki/pages/2234/index.html "Benutzer:Sur3")
-
 ## Features
 
 Im Moment sind die folgenden Features implementiert:
@@ -71,6 +67,6 @@ Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11290/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11291/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11290; parent 11289; 2015-09-30T01:31:29Z -->
+<!-- MediaWiki page 2233; revision 11291; parent 11290; 2015-09-30T03:21:39Z -->
