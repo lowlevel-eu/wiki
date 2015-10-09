@@ -70,12 +70,22 @@ void main(){
 
     gcc sur_hello_world.c -o hello.x -m32 -nostdlib -O2 -emain -Wl,-Ttext,0 -Wl,--oformat,binary --std=gnu99
 
+## Konzepte
+
+Sogenannte BlockDaten \[BD\] bestehend aus Datenblock-Ketten, diese sollen Systemweit Verwendung finden und ermöglichen Sparse-Files und das schnelle Einfügen durch Zwischenblöcke.
+
+Filter die zwischen BD und Flachen Daten umwandeln, aber auch Filter die ein Bild rotieren etc. Filter verwenden Systemweit Verwendung in Treiberketten die von dem sogenannten TriebMeister \[TM\] (eine Art Treiberverwaltung nur weitgehender, da sie auch Userprogramme einbinden kann) aufgebaut werden sollen.
+
+Der TriebMeister soll später vermutlich außerdem eine Kompatibilitätsschicht zur Benutzung von CDI erhalten, eventuell über einen einfachen Filter als Zwischenschicht.
+
 ## ToDo
 
-Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen.
+Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
+
+Außerdem soll ein virtuelles Dateisystem \[vDS\] implementiert werden, dieses soll unter anderem als Zwischenschicht zum FAT32-Treiber dienen und über zusätzliche Filter Dateiverschlüsselung bieten, aber zunächst dient es dazu dem ebenfalls zu implementierenden TriebMeister feste Zugriffsorte für interne oder ladbare Treibermodule zu geben, um so unter anderem den geplanten RTL8139-Treiber nach Erkennung durch den PCI-Treiber laden zu können.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11296/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11298/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11296; parent 11295; 2015-10-09T00:31:30Z -->
+<!-- MediaWiki page 2233; revision 11298; parent 11296; 2015-10-09T16:56:47Z -->
