@@ -30,6 +30,7 @@ Im Moment sind die folgenden Features implementiert:
 - 1024x768x25 (8881 rgba) Grafik + süßer Fadenkreuzmauszeiger
 - kleine C-Bibliothek \<surlib.c\> über Interrupt 35h
 - Uhr- und Datumsanzeige
+- Screenshots im SVM-Format (abgewandeltes PPM-Format, kann in PPM umgewandelt werden)
 
 ## Ladbare Programme \[Programmiersprache\]
 
@@ -67,6 +68,6 @@ Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11292/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11293/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11292; parent 11291; 2015-10-04T18:22:24Z -->
+<!-- MediaWiki page 2233; revision 11293; parent 11292; 2015-10-09T00:04:13Z -->
