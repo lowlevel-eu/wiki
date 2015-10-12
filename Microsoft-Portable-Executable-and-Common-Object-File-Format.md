@@ -38,7 +38,7 @@ Hier ist der Common Object File Format Header:
 
 | Offset | Größe | Beschreibung |
 | -------- | --------- | --------------------------------------------------------------------------------------------- |
-| 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese aufführbare Datei geeignet ist |
+| 0x00 | 2 Bytes | Hier wird beschrieben, für welche Plattform diese ausführbare Datei geeignet ist |
 | 0x02 | 2 Bytes | Die Anzahl der Sektoren |
 | 0x04 | 4 Bytes | Die ersten 32 Bits der Sekundenanzahl vom 1. Januar 1970 00:00 bis zur Erstellung der Datei |
 | 0x08 | 4 Bytes | In der Objektdatei der Offset zur Symboltabelle. Sollte in der Executable 0 sein. |
@@ -168,6 +168,6 @@ Es gibt folgende Eigneschaftflags von 0 bis 31:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11304/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1644/index.html)
 
-<!-- MediaWiki page 1644; revision 10374; parent 10373; 2011-12-19T19:54:39Z -->
+<!-- MediaWiki page 1644; revision 11304; parent 10374; 2015-10-12T05:03:43Z -->
