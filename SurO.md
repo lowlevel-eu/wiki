@@ -74,7 +74,7 @@ void main(){
 
 Sogenannte BlockDaten \[BD\] bestehend aus Datenblock-Ketten, diese sollen Systemweit Verwendung finden und ermöglichen Sparse-Files und das schnelle Einfügen durch Zwischenblöcke.
 
-Filter die zwischen BD und Flachen Daten umwandeln, aber auch Filter die ein Bild rotieren etc. Filter finden vor allem Systemweit Verwendung in Treiberketten die von dem sogenannten TriebMeister \[TM\] (eine Art Treiberverwaltung nur weitgehender, da sie auch Userprogramme einbinden kann) aufgebaut werden sollen.
+Filter die z.B. zwischen BD und Flat Daten umwandeln können, aber auch Filter die ein Bild rotieren etc. Filter finden vor allem Verwendung in Treiberketten die von dem sogenannten TriebMeister \[TM\] (eine Art Treiberverwaltung nur weitgehender, da sie auch Userprogramme einbinden kann) aufgebaut werden sollen.
 
 Der TriebMeister soll später vermutlich außerdem eine Kompatibilitätsschicht zur Benutzung von CDI erhalten, eventuell über einen einfachen Filter als Zwischenschicht.
 
@@ -86,6 +86,6 @@ Außerdem soll ein virtuelles Dateisystem \[vDS\] implementiert werden, dieses s
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11299/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11299; parent 11298; 2015-10-09T16:58:42Z -->
+<!-- MediaWiki page 2233; revision 11300; parent 11299; 2015-10-12T03:43:50Z -->
