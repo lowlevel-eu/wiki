@@ -80,12 +80,14 @@ Der TriebMeister soll später vermutlich außerdem eine Kompatibilitätsschicht 
 
 ## ToDo
 
-Aktuell wird daran gearbeitet das Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
+Aktuell wird daran gearbeitet das [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
 
-Außerdem soll ein virtuelles Dateisystem \[vDS\] implementiert werden, dieses soll unter anderem als Zwischenschicht zum FAT32-Treiber dienen und über zusätzliche Filter Dateiverschlüsselung bieten, aber zunächst dient es dazu dem ebenfalls zu implementierenden TriebMeister feste Zugriffsorte für interne oder ladbare Treibermodule zu geben, um so unter anderem den geplanten RTL8139-Treiber nach Erkennung durch den PCI-Treiber laden zu können.
+Außerdem soll das virtuelles Dateisystem \[vDS\] erweitert werden, dieses hat bisher nur rudimentäre Funktionen zum Zugriff auf den [FAT32](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-Treiber.
+
+Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Treiber erweitert werden um automatisch Treibermodule laden zu können, welche durch den PCI-Treiber erkannt wurden. Dies ermöglicht die anfolgende Implementation eines [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")- oder [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treibers oder auch eines [Common Driver Interfaces](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface").
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11300/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11300; parent 11299; 2015-10-12T03:43:50Z -->
+<!-- MediaWiki page 2233; revision 11301; parent 11300; 2015-10-12T04:11:35Z -->
