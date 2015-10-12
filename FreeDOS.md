@@ -24,10 +24,10 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
   
 FreeDOS gehört - wie der Name schon sagt - zu den DOS-Betriebssystemen. Es wurde geschaffen, um eine freie und vor allem kompatible Alternative zu [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") zu erstellen.
 
-Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgeführt werden können, die auch unter MS-DOS liefen. Lediglich Programme, die undokumentierte Schnittstellen benutzten (wie [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") (3.x bzw 9x/ME) es tut/tat).
+Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgeführt werden können, die auch unter MS-DOS liefen. Lediglich Programme, die undokumentierte Schnittstellen benutzten (wie [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") (3.x bzw 9x/ME) es tut/tat) machen Probleme.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2002/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11303/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2002/index.html)
 
-<!-- MediaWiki page 2002; revision 10380; parent 5376; 2012-01-02T15:24:45Z -->
+<!-- MediaWiki page 2002; revision 11303; parent 10380; 2015-10-12T04:49:04Z -->
