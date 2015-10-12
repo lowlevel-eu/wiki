@@ -82,12 +82,12 @@ Der TriebMeister soll später vermutlich außerdem eine Kompatibilitätsschicht 
 
 Aktuell wird daran gearbeitet das [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
 
-Außerdem soll das virtuelles Dateisystem \[vDS\] erweitert werden, dieses hat bisher nur rudimentäre Funktionen zum Zugriff auf den [FAT32](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-Treiber.
+Außerdem soll das virtuelle Dateisystem \[vDS\] erweitert werden, dieses hat bisher nur rudimentäre Funktionen zum Zugriff auf den [FAT32](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-Treiber.
 
 Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Treiber erweitert werden um automatisch Treibermodule laden zu können, welche durch den PCI-Treiber erkannt wurden. Dies ermöglicht die anfolgende Implementation eines [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")- oder [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treibers oder auch eines [Common Driver Interfaces](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface").
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11301/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11302/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11301; parent 11300; 2015-10-12T04:11:35Z -->
+<!-- MediaWiki page 2233; revision 11302; parent 11301; 2015-10-12T04:15:01Z -->
