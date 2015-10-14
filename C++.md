@@ -58,6 +58,8 @@ Die Konstruktion der globalen/statischen Objekte ist unter g++ immer gleich. Nur
 
 G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. Diese Funktionszeiger zeigen jeweils auf einen Konstruktor. Man muss nun nur dieses Array durchgehen und alle Funktionen aufrufen und schon hat man alle globalen/statischen Objekte initialisiert.
 
+In neueren Version von GCC wurde die Sektion .ctors\* in .init_array umbenannt und muss im gegebenenfalls im Linkerscript geändert werden.
+
 \<cpp\> // Lizenz: public domain
 
 typedef void (\*constructor)();
@@ -78,6 +80,8 @@ Diese Funktion muss explizit aufgerufen werden bevor globale/statische Objekte v
 #### Destruktoren (ohne --enable-\_\_cxa_atexit und ohne -fuse-cxa-atexit)
 
 G++ erstellt eine "dtors\*" Sektion, analog zur "ctors\*" Sektion und speicher dort wiederum ein Array aus Funktionszeigern. Diesmal zeigen diese Funktionszeiger aber auf Destruktoren.
+
+In neueren Version von GCC wurde die Sektion .dtors\* in .fini_array umbenannt und muss im gegebenenfalls im Linkerscript geändert werden.
 
 #### Destruktoren (mit --enable-\_\_cxa_atexit oder mit -fuse-cxa-atexit)
 
@@ -204,6 +208,6 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9588/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11306/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 9588; parent 9468; 2011-02-20T20:17:48Z -->
+<!-- MediaWiki page 1486; revision 11306; parent 9588; 2015-10-14T18:36:18Z -->
