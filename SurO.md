@@ -78,6 +78,8 @@ Filter die z.B. zwischen BD und Flat Daten umwandeln können, aber auch Filter d
 
 Der TriebMeister soll später vermutlich außerdem eine Kompatibilitätsschicht zur Benutzung von CDI erhalten, eventuell über einen einfachen Filter als Zwischenschicht.
 
+AtomPlus-VM-Code der vor dem ausführen in AtomPlus-SemiMaschinen-Code umgewandelt wird, dieser AP-Semi-Code ist eine stark eingeschränke Maschinensprache der jeweiligen CPU, die Einschränkungen sollen garantieren, daß der Code in einer vorgegebenen Zeit terminiert und sicher ist, Sinn des AP-Codes ist es diesen z.B. in den Tastertur- oder Maustreiber zu injezieren um so einfache Aufgaben direkt im Interrupt für das entsprechende Gerät lösen zu können, so können zum Beispiel Buttons beim Hovern mit der Maus die Farbe ändern oder eine Kommandozeile eingegeben werden ohne daß das zugehörige Programm geweckt werden muß, und erst bei komplexeren Aktionen wie einem Klick auf den Button oder einer Autovervollständigung oder dem Drücken der Eingabetaste wird das zugehörige Programm geweckt.
+
 ## ToDo
 
 Aktuell wird daran gearbeitet das [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
@@ -88,6 +90,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11302/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11302; parent 11301; 2015-10-12T04:15:01Z -->
+<!-- MediaWiki page 2233; revision 11308; parent 11302; 2015-10-16T16:19:00Z -->
