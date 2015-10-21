@@ -11,7 +11,7 @@
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | \- |
-| Binärformat: | .x (eigenes) |
+| Binärformat: | .x (eigenes) oder .elf ([ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")) |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
@@ -36,7 +36,8 @@ Im Moment sind die folgenden Features implementiert:
 - Editor (Angucken und Editieren des Arbeitsspeichers oder von Dateien)
 - HyperEbenenProjektionsTreiber (Sowas wie Grafikfenster für Programme)
 - 1024x768x25 (8881 rgba) Grafik + süßer Fadenkreuzmauszeiger
-- kleine C-Bibliothek \<surlib.c\> über Interrupt 35h
+- Spezielle C-Bibliothek \<surlib.c\> mit Syscalls über Interrupt 35h
+- Standard C-Bibliothek mit crt0.c und Linker-Script surlink.lds, welche auf \<surlib.c\> aufbaut
 - Uhr- und Datumsanzeige
 - Screenshots im SVM-Format (abgewandeltes PPM-Format, kann in PPM umgewandelt werden)
 
@@ -46,7 +47,7 @@ Im Moment sind die folgenden Features implementiert:
 - Mandelbrot \[C\]
 - Hallo Welt \[C\]
 
-## Beispiel-Programm für die zugehörige C-Bibliothek
+## Beispiel-Programm für die spezielle C-Bibliothek
 
 \<c\>
 
@@ -66,9 +67,9 @@ void main(){
      sur_HE_male_cstring(cha,0x8040,0x0000ff00);        //Gib das Zeichen von der Tastatur in Grün aus
     sur_sys_prog_ende();                    //Beende das Programm
 
-} \</c\> Kompiliert wird in ein Binärformat mit:
+} \</c\> Kompiliert werden kann zum Beispiel in das ELF-Format mit:
 
-    gcc sur_hello_world.c -o hello.x -m32 -nostdlib -O2 -emain -Wl,-Ttext,0 -Wl,--oformat,binary --std=gnu99
+    gcc sur_hallo_welt.c -o hallo.elf -m32 -nostdlib -O2 -emain -Wl,-Ttext,0 -Wl,-s -Wl,-N --std=gnu99
 
 ## Konzepte
 
@@ -90,6 +91,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11308/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11309/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11308; parent 11302; 2015-10-16T16:19:00Z -->
+<!-- MediaWiki page 2233; revision 11309; parent 11308; 2015-10-21T22:41:19Z -->
