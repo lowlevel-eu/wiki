@@ -39,6 +39,7 @@ Im Moment sind die folgenden Features implementiert:
 - Spezielle C-Bibliothek \<surlib.c\> mit Syscalls über Interrupt 35h
 - Standard C-Bibliothek mit crt0.c und Linker-Script surlink.lds, welche auf \<surlib.c\> aufbaut
 - ElfLoader für Elf-Dateien mit niedriger virtueller Adresse und maximal je einem W- und X-Segment
+- XLoader für eigenes .x-Binärformat (36 Byte Header) mit getrenntem Code, Daten und Stacksegment
 - Uhr- und Datumsanzeige
 - Screenshots im SVM-Format (abgewandeltes PPM-Format, kann in PPM umgewandelt werden)
 
@@ -92,6 +93,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11313/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11313; parent 11312; 2015-10-23T02:18:11Z -->
+<!-- MediaWiki page 2233; revision 11314; parent 11313; 2015-10-24T08:34:43Z -->
