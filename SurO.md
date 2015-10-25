@@ -42,6 +42,7 @@ Im Moment sind die folgenden Features implementiert:
 - XLoader für eigenes .x-Binärformat (36 Byte Header) mit getrenntem Code, Daten und Stacksegment
 - Uhr- und Datumsanzeige
 - Screenshots im SVM-Format (abgewandeltes PPM-Format, kann in PPM umgewandelt werden)
+- Segmentierung und rudimentäres Paging
 
 ## Ladbare Programme \[Programmiersprache\]
 
@@ -93,6 +94,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11314/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11316/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11314; parent 11313; 2015-10-24T08:34:43Z -->
+<!-- MediaWiki page 2233; revision 11316; parent 11314; 2015-10-25T10:04:05Z -->
