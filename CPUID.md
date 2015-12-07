@@ -639,13 +639,21 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <th>0
 </th></tr>
 <tr>
-<td colspan="4">
+<td colspan="1">
+</td>
+<td colspan="1">RDRAND
+</td>
+<td colspan="1">F16C
+</td>
+<td colspan="1">AVX
 </td>
 <td colspan="1">OSXSAVE
 </td>
 <td colspan="1">XSAVE
 </td>
-<td colspan="2">
+<td colspan="1">AESNI
+</td>
+<td colspan="1">
 </td>
 <td colspan="1">POPCNT
 </td>
@@ -699,17 +707,23 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">31
 </th>
-<td rowspan="4">
+<td rowspan="1">
 </td></tr>
 <tr>
 <th colspan="1">30
-</th></tr>
+</th>
+<td colspan="1">Unterstützt den <b>RDRAND</b> Befehl
+</td></tr>
 <tr>
 <th colspan="1">29
-</th></tr>
+</th>
+<td colspan="1">Unterstützt Befehle zum Konvertieren in/von 16-bit Floating-Points
+</td></tr>
 <tr>
 <th colspan="1">28
-</th></tr>
+</th>
+<td colspan="1">Unterstützt <a href="https://github.com/lowlevel-eu/wiki/wiki/Advanced-Vector-Extensions" title="Advanced Vector Extensions">AVX</a>
+</td></tr>
 <tr>
 <th colspan="1">27
 </th>
@@ -723,11 +737,13 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">25
 </th>
-<td rowspan="2">
+<td colspan="1">Unterstützt AESNI-Befehle
 </td></tr>
 <tr>
 <th colspan="1">24
-</th></tr>
+</th>
+<td rowspan="1">
+</td></tr>
 <tr>
 <th colspan="1">23
 </th>
@@ -3021,6 +3037,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10543/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 10543; parent 9439; 2012-03-27T23:32:02Z -->
+<!-- MediaWiki page 1739; revision 11317; parent 10543; 2015-12-07T23:57:05Z -->
