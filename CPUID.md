@@ -675,7 +675,9 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 </td>
 <td colspan="1">CX16
 </td>
-<td colspan="2">
+<td colspan="1">FMA
+</td>
+<td colspan="1">
 </td>
 <td colspan="{{{1}}}">CNXT-ID
 </td>
@@ -695,7 +697,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 </td>
 <td colspan="1">DTES64
 </td>
-<td colspan="1">
+<td colspan="1">PCLMULQDQ
 </td>
 <td colspan="1">SSE3
 </td></tr></tbody></table> <table>
@@ -800,7 +802,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">12
 </th>
-<td rowspan="2">
+<td colspan="1">Unterstützt FMA3-Befehle
 </td></tr>
 <tr>
 <th colspan="1">11
@@ -843,7 +845,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">3
 </th>
-<td colspan="1">Unterstützt den <b>MONITOR</b> Befehl und den <b>MWAIT</b> Befehl
+<td colspan="1">Unterstützt den <b>MONITOR</b>-Befehl und den <b>MWAIT</b>-Befehl
 </td></tr>
 <tr>
 <th colspan="1">2
@@ -853,7 +855,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">1
 </th>
-<td colspan="1">
+<td colspan="1">Unterstützt <b>PCLMULQDQ</b>-Befehl
 </td></tr>
 <tr>
 <th colspan="1">0
@@ -3037,6 +3039,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11317/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11317; parent 10543; 2015-12-07T23:57:05Z -->
+<!-- MediaWiki page 1739; revision 11318; parent 11317; 2015-12-25T11:17:37Z -->
