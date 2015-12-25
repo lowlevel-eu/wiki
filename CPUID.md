@@ -1962,7 +1962,7 @@ Erweiterte Funktionen von Intel:
 </td>
 <td colspan="1">SKINIT
 </td>
-<td colspan="1">SSE5
+<td colspan="1">XOP
 </td>
 <td colspan="1">IBS
 </td>
@@ -3201,6 +3201,6 @@ Gibt den Prozessornamen aus.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11324/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11323; parent 11322; 2015-12-25T12:22:58Z -->
+<!-- MediaWiki page 1739; revision 11324; parent 11323; 2015-12-25T12:24:42Z -->
