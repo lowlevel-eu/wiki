@@ -2278,9 +2278,7 @@ Erweiterte Funktionen von Intel:
 
 ## Funktion 0x8000_0002
 
-Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
-
-Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
+Gibt den Prozessornamen aus.
 
 #### EAX - Prozessorname
 
@@ -2586,9 +2584,7 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ## Funktion 0x8000_0003
 
-Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
-
-Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
+Gibt den Prozessornamen aus.
 
 #### EAX - Prozessorname
 
@@ -2892,9 +2888,7 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ## Funktion 0x8000_0004
 
-Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
-
-Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
+Gibt den Prozessornamen aus.
 
 #### EAX - Prozessorname
 
@@ -3207,6 +3201,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11320; parent 11319; 2015-12-25T11:46:46Z -->
+<!-- MediaWiki page 1739; revision 11321; parent 11320; 2015-12-25T11:55:27Z -->
