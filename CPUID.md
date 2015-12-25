@@ -1934,7 +1934,29 @@ Erweiterte Funktionen von Intel:
 <th>0
 </th></tr>
 <tr>
-<td colspan="18">
+<td colspan="4">
+</td>
+<td colspan="1">PerfTSC
+</td>
+<td colspan="1">DataBreakpointExt
+</td>
+<td colspan="1">
+</td>
+<td colspan="1">PerfCtrExtNB
+</td>
+<td colspan="1">PerfCtrExtCore
+</td>
+<td colspan="1">TopologyExt
+</td>
+<td colspan="1">TBM
+</td>
+<td colspan="4">
+</td>
+<td colspan="1">FMA4
+</td>
+<td colspan="1">LWP
+</td>
+<td colspan="1">
 </td>
 <td colspan="1">WDT
 </td>
@@ -1963,11 +1985,142 @@ Erweiterte Funktionen von Intel:
 <td colspan="1">CmpLegay
 </td>
 <td colspan="1">LahfSahf
+</td></tr></tbody></table> <table>
+<tbody><tr>
+<th>Bit
+</th>
+<th>Funktion
+</th></tr>
+<tr>
+<th colspan="1">28-31
+</th>
+<td rowspan="1">
+</td></tr>
+<tr>
+<th colspan="1">27
+</th>
+<td colspan="1">Performance-Time-Stamp-Counter
+</td></tr>
+<tr>
+<th colspan="1">26
+</th>
+<td colspan="1">Datenzugriffs-Breakpoints
+</td></tr>
+<tr>
+<th colspan="1">25
+</th>
+<td colspan="1">
+</td></tr>
+<tr>
+<th colspan="1">24
+</th>
+<td colspan="1">NB-Performance-Counter-Erweiterung
+</td></tr>
+<tr>
+<th colspan="1">23
+</th>
+<td colspan="1">Prozessor-Performance-Counter-Erweiterung
+</td></tr>
+<tr>
+<th colspan="1">22
+</th>
+<td colspan="1">Topologie-Erweiterung
+</td></tr>
+<tr>
+<th colspan="1">21
+</th>
+<td colspan="1">Unterstützt Befehle zur Manipulation voranstehender Bits
+</td></tr>
+<tr>
+<th colspan="1">17-20
+</th>
+<td colspan="1">
+</td></tr>
+<tr>
+<th colspan="1">16
+</th>
+<td colspan="1">Unterstützt FMA4-Befehle
+</td></tr>
+<tr>
+<th colspan="1">15
+</th>
+<td colspan="1">"Lightweight profiling"-Unterstützung
+</td></tr>
+<tr>
+<th colspan="1">14
+</th>
+<td colspan="1">
+</td></tr>
+<tr>
+<th colspan="1">13
+</th>
+<td colspan="1">"Watchdog Timer"-Unterstützung
+</td></tr>
+<tr>
+<th colspan="1">12
+</th>
+<td colspan="1">Unterstützt <b>SKINIT</b>- und <b>STGI</b>-Befehle
+</td></tr>
+<tr>
+<th colspan="1">11
+</th>
+<td colspan="1">Unterstützt erweiterte Operationen
+</td></tr>
+<tr>
+<th colspan="1">10
+</th>
+<td colspan="1">Unterstützt instruktionsbasiertes Sampling
+</td></tr>
+<tr>
+<th colspan="1">9
+</th>
+<td colspan="1">Unterstützt Betriebssystemsichtbare Umgehungen
+</td></tr>
+<tr>
+<th colspan="1">8
+</th>
+<td colspan="1"><b>PREFETCH</b>- und <b>PREFETCHW</b>-Befehle (3DNow) werden unterstützt
+</td></tr>
+<tr>
+<th colspan="1">7
+</th>
+<td colspan="1">Falschausgerichteter SSE-Modus
+</td></tr>
+<tr>
+<th colspan="1">6
+</th>
+<td colspan="1">Unterstützt SSE4A-Befehle
+</td></tr>
+<tr>
+<th colspan="1">5
+</th>
+<td colspan="1">Unterstützt <b>LZCNT</b>-Befehl
+</td></tr>
+<tr>
+<th colspan="1">4
+</th>
+<td colspan="1"><b>LOCK MOV CR0</b> bedeutet <b>MOV CR8</b>
+</td></tr>
+<tr>
+<th colspan="1">3
+</th>
+<td colspan="1">Erweiterter APIC-Adressraum (ab Offset 400h)
+</td></tr>
+<tr>
+<th colspan="1">2
+</th>
+<td colspan="{{{1}}}">Sichere virtuelle Maschine
+</td></tr>
+<tr>
+<th colspan="1">1
+</th>
+<td colspan="1">"Core multi-processing legacy modus"
+</td></tr>
+<tr>
+<th colspan="1">0
+</th>
+<td colspan="1">Unterstützt <b>LAHF</b>- und <b>SAHF</b>-Befehle im 64-Bit-Modus.
 </td></tr></tbody></table>
-
-**Hinweis:**
-
-Hier fehlt eine Erklärung!
 
 #### EDX - Erweiterte Featureflags
 
@@ -3039,6 +3192,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11318/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11318; parent 11317; 2015-12-25T11:17:37Z -->
+<!-- MediaWiki page 1739; revision 11319; parent 11318; 2015-12-25T11:37:24Z -->
