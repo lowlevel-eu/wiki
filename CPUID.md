@@ -3201,6 +3201,6 @@ Gibt den Prozessornamen aus.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11324/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11325/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11324; parent 11323; 2015-12-25T12:24:42Z -->
+<!-- MediaWiki page 1739; revision 11325; parent 11324; 2015-12-25T12:30:13Z -->
