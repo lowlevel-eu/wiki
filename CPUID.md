@@ -2216,7 +2216,7 @@ Erweiterte Funktionen von Intel:
 </td>
 <td colspan="1">
 </td>
-<td colspan="1">XD
+<td colspan="1">NX
 </td>
 <td colspan="2">
 </td>
@@ -2257,9 +2257,24 @@ Erweiterte Funktionen von Intel:
 <td colspan="1">FPU
 </td></tr></tbody></table>
 
-**Hinweis:**
-
-Hier fehlt eine Erklärung!
+| Bit | Funktion |
+| ------- | ------------------------------------------------------------ |
+| 31 | Unterstützt 3DNow!-Befehle |
+| 30 | Unterstützt erweiterte 3DNow!-Befehle |
+| 29 | Long-Modus |
+| 28 |  |
+| 27 | Unterstützt **RDTSCP**-Befehl |
+| 26 | Unterstützt 1GB große Seiten |
+| 25 | Unterstützt optimierte **FXSAVE**- und **FXRSTOR**-Befehle |
+| 23-24 | Siehe Funktion 0x0000_0001 |
+| 22 | AMD-Erweiterungen zu MMX |
+| 21 |  |
+| 20 | NX-Bit-Seitenschutz |
+| 18-19 |  |
+| 12-17 | Siehe Funktion 0x0000_0001 |
+| 11 | Unterstützt **SYSCALL**- und **SYSRET**-Befehle |
+| 10 |  |
+| 0-9 | Siehe Funktion 0x0000_0001 |
 
 ## Funktion 0x8000_0002
 
@@ -3192,6 +3207,6 @@ Gibt den Prozessornamen aus (inklusive Prozessorgeschwindigkeit)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11319/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11320/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11319; parent 11318; 2015-12-25T11:37:24Z -->
+<!-- MediaWiki page 1739; revision 11320; parent 11319; 2015-12-25T11:46:46Z -->
