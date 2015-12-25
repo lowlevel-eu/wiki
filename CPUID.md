@@ -1968,7 +1968,7 @@ Erweiterte Funktionen von Intel:
 </td>
 <td colspan="1">OSVW
 </td>
-<td colspan="1">3DNowPrefetch
+<td colspan="1">PREFETCHW
 </td>
 <td colspan="1">MisAlignSse
 </td>
@@ -2079,7 +2079,7 @@ Erweiterte Funktionen von Intel:
 <tr>
 <th colspan="1">8
 </th>
-<td colspan="1"><b>PREFETCH</b>- und <b>PREFETCHW</b>-Befehle (3DNow) werden unterstützt
+<td colspan="1"><b>PREFETCH</b>- und <b>PREFETCHW</b>-Befehle werden unterstützt
 </td></tr>
 <tr>
 <th colspan="1">7
@@ -3201,6 +3201,6 @@ Gibt den Prozessornamen aus.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11323/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11322; parent 11321; 2015-12-25T12:06:54Z -->
+<!-- MediaWiki page 1739; revision 11323; parent 11322; 2015-12-25T12:22:58Z -->
