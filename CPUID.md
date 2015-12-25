@@ -2094,7 +2094,7 @@ Erweiterte Funktionen von Intel:
 <tr>
 <th colspan="1">5
 </th>
-<td colspan="1">Unterstützt <b>LZCNT</b>-Befehl
+<td colspan="1">Unterstützt <b>LZCNT</b>- und <b>POPCNT</b>-Befehle
 </td></tr>
 <tr>
 <th colspan="1">4
@@ -3201,6 +3201,6 @@ Gibt den Prozessornamen aus.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11321/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11322/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11321; parent 11320; 2015-12-25T11:55:27Z -->
+<!-- MediaWiki page 1739; revision 11322; parent 11321; 2015-12-25T12:06:54Z -->
