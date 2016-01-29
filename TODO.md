@@ -78,6 +78,7 @@ Könnt ich immerhin machen. L4 ist schließlich mein Lieblingskernel. --[Sannaj]
 - [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC"): Beschreibung des INIT Delivery Modes
 - [Parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle"): Erklären, wie man damit Daten Sendet.
 - [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") verschieben nach \[\[Cross-Compiler-Download mit gewätziger Anleitung\]\] oder so
+- [X86-64 Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") und [ARM Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler") zusammenführen - enthalten beide das gleiche
 
 ## Neu erstellen
 
@@ -119,6 +120,7 @@ Würd mich auch mal interessieren. --[Sfan](https://lowlevel-eu.github.io/wiki/p
 siehe [Diskussion:TODO#Andere Architekturen](https://lowlevel-eu.github.io/wiki/pages/2185/index.html#Andere_Architekturen "Diskussion:TODO")
 
 - Wie man die Hardware, die von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") und [bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") unterstützt wird, anspricht. Die Schnittmenge enthält unter anderem e1000, Soundblaster 16 und ES1370.
+- [ARM-OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/ARM-OS-Dev-f%C3%BCr-Einsteiger "ARM-OS-Dev für Einsteiger") für Raspberry Pi (2) umschreiben. Das Integrator/CP-Board hat quasi niemand und ein Raspberry Pi ist da wesentlich häufiger aufzutreffen. Außerdem kann qemu auch den raspberry pi (zwar nicht OoB, aber egal). Ĩch werde mich damit sehr wahrscheinlich beschäftigen --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:07, 29. Jan. 2016 (CET)
 - Hier kommt dein Wunsch hin ;)
 
 ## Diskussionen, die sich noch nicht erledigt haben
@@ -129,6 +131,6 @@ Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11255/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11333/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1518/index.html)
 
-<!-- MediaWiki page 1518; revision 11255; parent 11136; 2015-01-18T17:05:31Z -->
+<!-- MediaWiki page 1518; revision 11333; parent 11255; 2016-01-29T16:07:11Z -->
