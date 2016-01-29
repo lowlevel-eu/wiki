@@ -1,5 +1,11 @@
 # X86-64 Cross-Compiler
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Bereits im Artikel [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") vorhanden --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:53, 29. Jan. 2016 (CET)
+
 Wer ein 64-Bit-Betriebssystem entwickeln möchte, allerdings kein 64-Bit-Linux installiert hat, muss sich einen Cross-Compiler bauen, damit dieser 64-Bit-Dateien erstellen kann.
 
 Im Folgenden wird erklärt, wie man einen Cross-Compiler für die x86-64-Plattform unter einem 32-Bit-Linux erstellt.
@@ -21,7 +27,6 @@ Anschließend werden ein paar Variablen gesetzt:
     $ export PREFIX=/usr/cross
     $ export TARGET=x86_64-elf
 
-  
 PREFIX kann mit dem Verzeichnis ersetzt werden, wo die Tools später landen sollen.
 
 Nun kann es schon losgehen!
@@ -84,6 +89,6 @@ Gratulation, ein Cross-Compiler für die x86-64-Plattform wurde erstellt! Die To
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9855/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11335/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2060/index.html)
 
-<!-- MediaWiki page 2060; revision 9855; parent 9854; 2011-06-17T10:14:54Z -->
+<!-- MediaWiki page 2060; revision 11335; parent 9855; 2016-01-29T16:53:10Z -->
