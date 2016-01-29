@@ -1,5 +1,11 @@
 # ARM Cross-Compiler
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Bereits im Artikel [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") vorhanden --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:53, 29. Jan. 2016 (CET)
+
 Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren basierenden Architekturen erstellen will, aber selber nicht auf einer solchen entwickelt, muss sich einen Cross-Compiler erstellen bzw. verwenden. In diesem Artikel wird erklärt, wie ein Cross-Compiler unter Linux für die ARM-Architektur erstellt wird.
 
   
@@ -85,6 +91,6 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10894/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11336/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2099/index.html)
 
-<!-- MediaWiki page 2099; revision 10894; parent 10893; 2012-09-28T09:10:49Z -->
+<!-- MediaWiki page 2099; revision 11336; parent 10894; 2016-01-29T16:53:36Z -->
