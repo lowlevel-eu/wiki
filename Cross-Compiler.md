@@ -45,9 +45,7 @@ Der Bau eines Cross-Compilers gestaltet sich recht einfach. Meistens gilt es, si
 
 ### Linux
 
-Unter Linux kann es passieren, dass spätestens beim Konfigurieren vom gcc selbiges mit der Fehlermeldung abbricht, dass drei Libraries nicht installiert seien: GMP, MPFR und MPC. Diese sind dann aus der Paketverwaltung der Distribution zu beziehen oder können hier, hier und hier heruntergeladen werden. Diese können entpackt und mit dem in Linux bekannten Dreisatz *./configure, make, make install* gebaut und installiert werden. Die nachfolgende Anleitung benötigt aber die installation dieser 3 Libraries.
-
-  
+Unter Linux kann es passieren, dass spätestens beim Konfigurieren vom gcc selbiges mit der Fehlermeldung abbricht, dass drei Libraries nicht installiert seien: GMP, MPFR und MPC. Diese sind dann aus der Paketverwaltung der Distribution zu beziehen oder können hier, hier und hier heruntergeladen werden. Diese können entpackt und mit dem in Linux bekannten Dreisatz *./configure, make, make install* gebaut und installiert werden. Die nachfolgende Anleitung benötigt aber die Installation dieser 3 Libraries nicht.
 
 ### MS Windows
 
@@ -129,6 +127,6 @@ gebaut und installiert werden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11334/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11343/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1628/index.html)
 
-<!-- MediaWiki page 1628; revision 11334; parent 10964; 2016-01-29T16:51:04Z -->
+<!-- MediaWiki page 1628; revision 11343; parent 11334; 2016-02-04T12:27:01Z -->
