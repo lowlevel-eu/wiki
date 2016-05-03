@@ -47,7 +47,7 @@ Man möchte vor dem Start des DHCP-Servers nochmal daran denken, dass es nur ein
 
 Als TFTP-Server habe ich [tftp-hpa](https://wiki.archlinux.de/title/Tftp-hpa) verwendet, ein sehr einfacher TFTP-Server. Die Installation ist durchaus einfach, man installiert das Paket und startet den entsprechenden Daemon (tftpd).
 
-Wer sein TFTP-Root-Verzeichnis ändern möchte, passt die Datei /etc/conf.d/tftpd an und ersetzt den dort angegebenen Pfad durch den eigenen.
+Wer sein TFTP-Root-Verzeichnis ändern möchte, passt die Datei /etc/conf.d/tftpd (oder /etc/default/tftpd-hpa) an und ersetzt den dort angegebenen Pfad durch den eigenen.
 
 ### gPXE
 
@@ -125,6 +125,6 @@ Voilà!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11344/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2659/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2659/index.html)
 
-<!-- MediaWiki page 2659; revision 11344; parent 0; 2016-05-02T22:23:39Z -->
+<!-- MediaWiki page 2659; revision 11345; parent 11344; 2016-05-03T09:02:08Z -->
