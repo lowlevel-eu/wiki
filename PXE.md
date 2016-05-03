@@ -68,17 +68,18 @@ Ein passendes pxelinux-Image erhält man unter <https://www.kernel.org/pub/linux
 Um jetzt unseren Netzwerk-Bootloader bereitzustellen, kopieren wir folgende Dateien aus der Zip-Datei in das TFTP-Verzeichnis (Normalerweise /srv/tftp/):
 
 - \$ZIP/bios/com32/mboot/mboot.c32
-- \$ZIP/bios/com32/elflink/ldlinux/ldlinux.c32
 - \$ZIP/bios/com32/lib/libcom32.c32
 - \$ZIP/bios/core/pxelinux.0
 
-Jetzt benötigen wir noch eine Konfigurationsdatei für pxelinux. Dafür erstellen wir einen Ordner mit dem Namen *pxelinux.cfg* in unserem TFTP-Verzeichnis und erstellen darin eine Datei mit dem Namen *default*. In diese Datei schreiben wir folgende Konfiguration:
+Alte Boot-ROMs sind oft buggy, was manchmal dazu führt, dass pxelinux einfach abstürzt. Wenn das der Fall ist, kann es helfen, eine ältere Version von pxelinux auszuprobieren (dann wird libcom32.c32 nicht benötigt). Alternativ kann man auch gPXE selbst vom Boot-ROM laden lassen und dann von dort aus pxelinux booten.
+
+Jetzt benötigen wir noch eine Konfigurationsdatei für pxelinux. Dafür erstellen wir einen **Ordner** mit dem Namen *pxelinux.cfg* in unserem TFTP-Verzeichnis und erstellen darin eine Datei mit dem Namen *default*. In diese Datei schreiben wir folgende Konfiguration:
 
 `DEFAULT default`
 
 Unser TFTP-Verzeichnis sollte also jetzt folgenden Inhalt haben:
 
-` [felix@qlaptop ~]$ ls /srv/tftp/ ldlinux.c32 libcom32.c32 mboot.c32 pxelinux.0 pxelinux.cfg `
+` [felix@qlaptop ~]$ ls /srv/tftp/ libcom32.c32 mboot.c32 pxelinux.0 pxelinux.cfg `
 
 `[felix@qlaptop ~]$ ls /srv/tftp/pxelinux.cfg/ default `
 
@@ -125,6 +126,6 @@ Voilà!
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11345/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2659/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11346/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2659/index.html)
 
-<!-- MediaWiki page 2659; revision 11345; parent 11344; 2016-05-03T09:02:08Z -->
+<!-- MediaWiki page 2659; revision 11346; parent 11345; 2016-05-03T09:15:31Z -->
