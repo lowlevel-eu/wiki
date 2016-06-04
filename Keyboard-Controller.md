@@ -36,6 +36,8 @@ Programmiert wird der KBC über zwei IO-Ports. Über Port 0x64 kann man das Stat
 - Vor dem Schreiben auf Port 0x60 oder 0x64 muss der Eingabepuffer leer sein. (Port\[0x64\].Bit\[1\] == 0)
 - Vor dem Lesen von Port 0x60 muss der Ausgabepuffer voll sein (Port\[0x64\].Bit\[0\] == 1)
 
+Vor dem ersten Zugriff auf diese Ports sollte bei moderner Hardware mit ACPI 2.0 oder neuer das Vorhandensein des Controllers geprüft werden. Dies geschieht mithilfe der "Fixed ACPI Description Table" (FADT), in der Bit 1 des "Boot Architecture"-Felds gesetzt sein muss.
+
 ### Statusregister
 
 Wird vom Port 0x64 gelesen und ist folgendermaßen aufgebaut:
@@ -353,6 +355,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11269/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11269; parent 11268; 2015-04-05T20:56:30Z -->
+<!-- MediaWiki page 1468; revision 11347; parent 11269; 2016-06-04T11:40:59Z -->
