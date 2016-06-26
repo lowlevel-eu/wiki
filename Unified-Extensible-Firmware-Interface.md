@@ -4,6 +4,30 @@
 
 Das UEFI ist der direkte Nachfolger von EFI (*Extensible Firmware Interface*). Seit 2005 existiert das Unified EFI Forum, in dem zahlreiche Unternehmen aus der IT-Branche vertreten sind. So wird der Standard nicht mehr ausschließlich von Intel festgelegt.
 
+Die UEFI-Spezifikation ist absichtlich Plattformneutral gehalten, es gibt UEFI-Implementierungen für x86, x86_64, ARMv7 (32Bit), ARMv8 (64Bit) und IA64. Aus dem IA64-Umfeld kommt das ursprüngliche EFI.
+
+## EFI-Programme
+
+EFI-Programme sind [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")-Dateien mit der Dateiendung EFI. Standardmäßig wird auf x86_64 die Microsoft-ABI verwendet. Kompiliert man mit anderen Compilern (wie gcc), muss man jeden API-Aufruf besonders behandeln.
+
+Es gibt auch die Möglichkeit Programme Plattformunabhängig mit EFI ByteCode zu erstellen, das wird aber nur selten genutzt. Interessant ist das für Hardware die ihren eigenen Treiber mitbringt.
+
+Um selber EFI-Programme zu schreiben kann man entweder das EFI Development Kit II (EDKII) oder gnu-efi verwenden. Gefühlt ist die Doku für beides eher spärlich, die meisten Infos findet man noch im Quellcode.
+
+## Bootvorgang
+
+Im Gegensatz zum BIOS bootet das UEFI Programme. Diese Programme liegen auf einer EFI SystemPartion (ESP) mit der Dateiendung .EFI. Es können mehrere Programme nacheinander ausgeführt werden. Die UEFI-Spezifikation definiert eine API um alle wichtigen Infos des Computers zu kommen, beispielsweise eine Memory-Map oder die eingebauten PCI-Geräte. Sobald ein Programm der Firmware mitteilt den Boot-Prozess zu beenden ist dieses Programm der laufende Betriebssystemkernel, womit nur noch manche Funktionen des UEFI genutzt werden können, das Programm dafür aber die volle Kontrolle über den Computer bekommt.
+
+Auf der ESP gibt es die folgende Ordnerstruktur:
+
+    EFI/
+       BOOT/
+          BOOTX64.EFI
+       debian/
+          BOOTX64.EFI
+
+Der Ordner /EFI/BOOT ist der Boot-Pfad für Wechseldatenträger. Das dort drin liegende Programm wird ausgeführt wenn der Nutzer zum Beispiel sagt von CD booten zu wollen. Außerdem kann man unterhalb des EFI-Ordners mehrere Order für verschiedene installierte Betriebssysteme haben. Viele Firmwares bieten eine Möglichkeit beim Start das gewünschte Betriebssystem auszuwählen - man benötigt also nicht mehr zwingend einen Boot-Manager.
+
 ## Unterschiede zum BIOS
 
 ### Vorteile
@@ -14,7 +38,7 @@ Das System bootet schneller. Das liegt daran, dass die verschiedenen Bestandteil
 
 #### Mehr Speicher verfügbar
 
-Wie oben bereits angedeutet, ist es dem BIOS nicht möglich, auf Festplatten mit mehr als 2 Terabytes (2.000.000.000.000 Bytes) auf den kompletten Speicher zuzugreifen. Das UEFI dagegen ist in der Lage, auf bis zu 8 Zettabytes, also 8 Milliarden Terabytes, zuzugreifen. Arbeitsspeicher ist ebenfalls vermehrt verfügbar; es stehen nun theoretisch bis zu 16 Exabyte zur Verfügung (16 Mio. TB). Das liegt an der 64-Bit-Architektur, die von UEFI zwingend erfordert wird.
+Wie oben bereits angedeutet, ist es dem BIOS nicht möglich, auf Festplatten mit mehr als 2 Terabytes (2.000.000.000.000 Bytes) auf den kompletten Speicher zuzugreifen. Das UEFI dagegen ist in der Lage, auf bis zu 8 Zettabytes, also 8 Milliarden Terabytes, zuzugreifen. Arbeitsspeicher ist ebenfalls vermehrt verfügbar; es stehen nun theoretisch bis zu 16 Exabyte zur Verfügung (16 Mio. TB). Das liegt an der 64-Bit-Architektur, die auf normalen PCs mit UEFI meistens verwendet wird.
 
 #### Benutzerfreundlichkeit
 
@@ -38,6 +62,6 @@ Secure-Boot ist eine stark von Microsoft kontrollierte Technik, die es anderen B
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11349/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
 
-<!-- MediaWiki page 2612; revision 11349; parent 11348; 2016-06-26T14:06:19Z -->
+<!-- MediaWiki page 2612; revision 11350; parent 11349; 2016-06-26T14:21:17Z -->
