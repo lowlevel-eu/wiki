@@ -44,11 +44,12 @@ Im Moment sind die folgenden Features implementiert:
 - Screenshots im SVM-Format (abgewandeltes PPM-Format, kann in PPM umgewandelt werden)
 - Segmentierung und rudimentäres Paging
 
-## Ladbare Programme \[Programmiersprache\]
+## Ladbare Programme \[Programmiersprache - Interface\]
 
-- Tetris \[fasm\]
-- Mandelbrot \[C\]
-- Hallo Welt \[C\]
+- Tetris \[fasm - int 0x35\]
+- Mandelbrot \[C - surlib.h\]
+- Schach \[C - stdlib.h stdio.h math.h string.h\]
+- Hallo Welt \[C - surlib.h oder stdlib.h stdio.h\]
 
 ## Beispiel-Programm für die spezielle C-Bibliothek
 
@@ -94,6 +95,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11316/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11316; parent 11314; 2015-10-25T10:04:05Z -->
+<!-- MediaWiki page 2233; revision 11351; parent 11316; 2016-07-12T00:57:13Z -->
