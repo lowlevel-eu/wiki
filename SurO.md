@@ -48,8 +48,12 @@ Im Moment sind die folgenden Features implementiert:
 
 - Tetris \[fasm - int 0x35\]
 - Mandelbrot \[C - surlib.h\]
-- Schach \[C - stdlib.h stdio.h math.h string.h\]
 - Hallo Welt \[C - surlib.h oder stdlib.h stdio.h\]
+- Schach \[C - stdlib.h stdio.h math.h string.h\]
+
+Ausschnitt aus einer Partie gegen das Schachprogramm auf schwacher Stufe (Denktiefe: 1 fest + 1 adaptiv):
+
+[![schach.png](https://s32.postimg.org/vti2u35tt/schach.png)](https://postimg.org/image/vti2u35tt/)
 
 ## Beispiel-Programm für die spezielle C-Bibliothek
 
@@ -95,6 +99,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11351/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11351; parent 11316; 2016-07-12T00:57:13Z -->
+<!-- MediaWiki page 2233; revision 11352; parent 11351; 2016-07-12T01:26:47Z -->
