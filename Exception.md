@@ -150,7 +150,7 @@ Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wen
 
 ### x87 Floating Point
 
-???
+Die FPU kann unter bestimmten Bedingungen, etwa Überläufe des Register-Stacks, Ausnahmen auslösen, sofern diese im Steuerregister der FPU nicht maskiert sind. Ist das NE-Bit in [CR0](https://github.com/lowlevel-eu/wiki/wiki/Control-Register#cr0 "Control Register") gesetzt, so geschieht dies in Form dieser Ausnahme, andernfalls in Form von IRQ 13 über den PIC.
 
 ### Alignment Check
 
@@ -170,6 +170,6 @@ Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10918/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11356/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1824/index.html)
 
-<!-- MediaWiki page 1824; revision 10918; parent 10652; 2012-11-01T14:49:34Z -->
+<!-- MediaWiki page 1824; revision 11356; parent 10918; 2016-08-02T11:35:32Z -->
