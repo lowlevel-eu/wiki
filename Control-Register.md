@@ -17,7 +17,7 @@ Die Control Register sind spezielle Register der [IA-32](https://github.com/lowl
 - EM - Bei gesetztem *Emulation* Flag löst die CPU für jede [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU")-Instruktion eine [\#NM-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus. Für Multimedia-Instruktionen wird eine [\#UD-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") ausgelöst. Damit wird es dem Betriebssystem ermöglicht eine FPU zu emulieren. (WAIT/FWAIT lösen keine Exception aus)
 - TS - Das *Task Switched* Flag wird bei einem [Hardware-Taskswitch](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") von der CPU gesetzt und kann für Software Multitasking auch von Hand gesetzt werden. Wenn bei gesetztem TS-Flage versucht wird eine FPU- oder Multimedia-Instruktion auszuführen, dann löst die CPU eine \#NM-Exception aus. Dadurch können die FPU- bzw. Multimedia-Register, die bei normalen Taskswitchs nicht beachtet werden, entsprechend gesichert und geladen werden bevor sie verwendet werden.
 - ET - *Extension Type*
-- NE - *Numeric Error*
+- NE - *Numeric Error* aktiviert die interne Signalisierung von FPU-Ausnahmen als [\#MF-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception"). Andernfalls werden die Ausnahmen über den [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") als IRQ 13 signalisiert (inkompatibel mit [I/O-APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") und birgt die Gefahr von Race-Conditions). Dies ist ab dem 80486 möglich.
 - WP - Mittels *Write Protect* Flag kann festgelegt werden ob schreibgeschützte Pages auch vor dem Kernel (Ring0) geschützt sind (bei gesetztem WP-Flag sind die Pages auch vor dem Kernel sicher).
 - AM - *Alignment Mask*
 - NW - Im Long Mode löst das Setzen des *Not Write-throgh Disable* eine [\#GP-Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") aus (außer wenn Caching mittels CD-Flag ganz abgeschaltet ist). Im Legacy Mode wird mit gesetztem Flag Writethroug-Caching erzwungen, unabhängig vom PWT-Flag in den Paging Strukturen.
@@ -80,6 +80,6 @@ Die Register CR1, CR5-CR7 und CR9-CR15 sind reserviert. Versucht Software dennoc
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10029/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11355/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1610/index.html)
 
-<!-- MediaWiki page 1610; revision 10029; parent 8632; 2011-08-16T12:10:59Z -->
+<!-- MediaWiki page 1610; revision 11355; parent 10029; 2016-08-02T11:30:09Z -->
