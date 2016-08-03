@@ -49,7 +49,7 @@ Im Moment sind die folgenden Features implementiert:
 ## Ladbare Programme \[Programmiersprache - Interface\]
 
 - Tetris \[fasm - int 0x35\]
-- Mandelbrot \[C - surlib.h\]
+- Mandelbrot \[C - surlib.h math.h\]
 - Hallo Welt \[C - surlib.h oder stdlib.h stdio.h\]
 - Schach \[C - stdlib.h stdio.h math.h string.h\]
 
@@ -101,6 +101,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11357; parent 11352; 2016-08-03T16:29:39Z -->
+<!-- MediaWiki page 2233; revision 11359; parent 11357; 2016-08-03T19:05:53Z -->
