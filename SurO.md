@@ -43,6 +43,8 @@ Im Moment sind die folgenden Features implementiert:
 - Uhr- und Datumsanzeige
 - Screenshots im SVM-Format (abgewandeltes PPM-Format, kann in PPM umgewandelt werden)
 - Segmentierung und rudimentäres Paging
+- Debug-Ausgabe über COM1
+- Primitive Audio-Ausgabe über den PC Speaker
 
 ## Ladbare Programme \[Programmiersprache - Interface\]
 
@@ -99,6 +101,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11352/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11357/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11352; parent 11351; 2016-07-12T01:26:47Z -->
+<!-- MediaWiki page 2233; revision 11357; parent 11352; 2016-08-03T16:29:39Z -->
