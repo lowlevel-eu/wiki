@@ -180,11 +180,11 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ## Weblinks
 
-- [Aktuell-gehaltene Dokumentation der CDI-Header-Files von týndur](http://lpt.tyndur.org/cdi)
-- [CDI-Treiber von týndur](http://git.tyndur.org/?p=tyndur.git;a=tree;f=src/modules/cdi)
+- [Dokumentation der CDI-Header-Files von týndur](http://lpt.tyndur.org/cdi)
+- [CDI-Referenzimplementierung](http://git.tyndur.org/?p=cdi.git;a=tree)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11015/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 11015; parent 10528; 2013-03-04T03:15:18Z -->
+<!-- MediaWiki page 1622; revision 11358; parent 11015; 2016-08-03T16:33:47Z -->
