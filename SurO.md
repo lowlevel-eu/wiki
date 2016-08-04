@@ -51,6 +51,10 @@ Im Moment sind die folgenden Features implementiert:
 - Tetris \[fasm - int 0x35\]
 - Mandelbrot \[C - surlib.h math.h\]
 - Hallo Welt \[C - surlib.h oder stdlib.h stdio.h\]
+- Midievil (rudimentärer Midi-Player für den Speaker) \[fasm - Kernel (noch nicht extern ladbar)\]
+
+[\[1\]](http://homepages.uni-paderborn.de/neuron/sound/mond_mid.ogg) (Hörbeispiel Mondscheinsonate - erster Satz - Auszug - Quelle der Midi-Datei:[\[2\]](http://www.piano-midi.de/beeth.htm))
+
 - Schach \[C - stdlib.h stdio.h math.h string.h\]
 
 Ausschnitt aus einer Partie gegen das Schachprogramm auf schwacher Stufe (Denktiefe: 1 fest + 1 adaptiv):
@@ -101,6 +105,6 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11359/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11359; parent 11357; 2016-08-03T19:05:53Z -->
+<!-- MediaWiki page 2233; revision 11360; parent 11359; 2016-08-04T08:50:37Z -->
