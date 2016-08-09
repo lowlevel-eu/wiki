@@ -1,6 +1,6 @@
 # Accelerated Graphics Port
 
-Der **Accelerated Graphics Port** (kurz: **AGP**) ist [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zum Anschluss von Grafikkarten. Die Schnittstelle basiert auf [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI"), bietet jedoch vor allem höhere Transferraten an. Mittlerweile wurde die Schnittstelle von PCI-Express abgelöst.
+Der **Accelerated Graphics Port** (kurz: **AGP**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zum Anschluss von Grafikkarten. Die Schnittstelle basiert auf [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI"), bietet jedoch höhere Transferraten und eine Anbindung der Grafikkarte an den Speicher (GART) an. Mittlerweile wurde die Schnittstelle von PCI-Express abgelöst.
 
 ## Registerstruktur
 
@@ -119,6 +119,6 @@ Im PRQ-Feld wird die Höchstzahl der Elemente Request-Queue festgelegt. Der Wert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11361/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2660/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11364/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2660/index.html)
 
-<!-- MediaWiki page 2660; revision 11361; parent 0; 2016-08-09T13:45:03Z -->
+<!-- MediaWiki page 2660; revision 11364; parent 11361; 2016-08-09T17:53:14Z -->
