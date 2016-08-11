@@ -1021,7 +1021,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 17 | Unterstützt [36-Bit Page Size Extensions](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension") (4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) |
 | 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 15 | Unterstützt den **CMOVcc** Befehl, mit dem bedingte Verschiebungen vorgenommen werden können |
-| 14 | Unterstützt die Machine-Check-Architektur (Besonders das **MTRR_CAP**-Register) |
+| 14 | Unterstützt die Machine-Check-Architektur |
 | 13 | Unterstützt das [Page-Global-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
 | 12 | Unterstützt MTRR-Register (Besonders das **MTRR_CAP**-Register) |
 | 11 | Unterstützt schnelle [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") durch die Befehle [**SYSENTER** und **SYSEXIT**](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
@@ -3201,6 +3201,6 @@ Gibt den Prozessornamen aus.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11325/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11325; parent 11324; 2015-12-25T12:30:13Z -->
+<!-- MediaWiki page 1739; revision 11365; parent 11325; 2016-08-11T18:18:21Z -->
