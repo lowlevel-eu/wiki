@@ -103,8 +103,21 @@ Außerdem soll das virtuelle Dateisystem \[vDS\] erweitert werden, dieses hat bi
 
 Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Treiber erweitert werden um automatisch Treibermodule laden zu können, welche durch den PCI-Treiber erkannt wurden. Dies ermöglicht die anfolgende Implementation eines [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")- oder [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treibers oder auch eines [Common Driver Interfaces](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface").
 
+Hier eine aktuelle ToDo-Liste:
+
+- extend-down stack segments / pthread_create (for "the unready" game)
+- fopen/fwrite/fseek/fread/ftell/fclose (for fasm)
+- FAT32 long filenames (for fasm to compile SurO)
+- Datenblock-Editor (similar to vi)
+- pipes/shell/argument passing
+- cdi
+- SurDS (tagging filesystem)
+- Bugfix: SMP race-conditions / task-balancing
+- utf8
+- paging
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11360/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11360; parent 11359; 2016-08-04T08:50:37Z -->
+<!-- MediaWiki page 2233; revision 11366; parent 11360; 2016-08-15T14:39:59Z -->
