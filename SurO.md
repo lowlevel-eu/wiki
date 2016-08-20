@@ -55,7 +55,7 @@ Im Moment sind die folgenden Features implementiert:
 
 [\[1\]](http://homepages.uni-paderborn.de/neuron/sound/mond_mid.ogg) (Hörbeispiel Mondscheinsonate - erster Satz - Auszug - Quelle der Midi-Datei:[\[2\]](http://www.piano-midi.de/beeth.htm))
 
-- Schach \[C - stdlib.h stdio.h math.h string.h\]
+- Schach \[C - stdlib.h stdio.h string.h\]
 
 Ausschnitt aus einer Partie gegen das Schachprogramm auf schwacher Stufe (Denktiefe: 1 fest + 1 adaptiv):
 
@@ -118,6 +118,6 @@ Hier eine aktuelle ToDo-Liste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11366/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11366; parent 11360; 2016-08-15T14:39:59Z -->
+<!-- MediaWiki page 2233; revision 11367; parent 11366; 2016-08-20T05:36:30Z -->
