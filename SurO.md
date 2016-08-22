@@ -105,12 +105,11 @@ Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://gith
 
 Hier eine aktuelle ToDo-Liste:
 
-- extend-down stack segments / pthread_create (for "the unready" game)
 - fopen/fwrite/fseek/fread/ftell/fclose (for fasm)
+- pipes/shell/argument passing
 - FAT32 long filenames (for fasm to compile SurO)
 - Datenblock-Editor (similar to vi)
-- pipes/shell/argument passing
-- cdi
+- cdi/network/audio
 - SurDS (tagging filesystem)
 - Bugfix: SMP race-conditions / task-balancing
 - utf8
@@ -118,6 +117,6 @@ Hier eine aktuelle ToDo-Liste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11367/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11368/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11367; parent 11366; 2016-08-20T05:36:30Z -->
+<!-- MediaWiki page 2233; revision 11368; parent 11367; 2016-08-22T00:12:12Z -->
