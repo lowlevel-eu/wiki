@@ -58,7 +58,7 @@ Ein Pagedirectory enthält 1024 Eintrage à vier Byte. Ein Pagedirectory-Eintrag
 | 7 | Gibt die Größe der Page an. 0 steht für 4 kB, 1 für 4 MB (oder 2 MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR4 das PSE-Bit (4-MB-Pages) oder PAE-Bit (2-MB-Pages) gesetzt ist. |
 | 8 | Wird ignoriert, falls 4-kB-Page, andernfalls hat es die gleiche Bedeutung wie Bit G in Page-Table-Einträgen (s. u.). |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable |
+| 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable oder zur Page, wenn keine Bit 7 gesetzt ist. In letzterem Falle muss der Zeiger entsprechend ausgerichtet sein. Bit 12 ist dann das (höchste) [PAT](https://github.com/lowlevel-eu/wiki/wiki/PAT "PAT")-Bit. |
 
 ## Page Tables
 
@@ -114,7 +114,7 @@ Eine Page-Map Level-4 Table enthält 512 Eintrage à acht Byte. Ein Page-Map Lev
 | 5 | Wird von der CPU gesetzt, wenn die Page-Map Level-4 Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Wird ignoriert und sollte 0 sein. |
 | 7-8 | Muss 0 sein. |
-| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
 | 12-51 | Gibt die physische Adresse der Page-Directory Pointer Table an. |
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
@@ -124,18 +124,18 @@ Eine Page-Map Level-4 Table enthält 512 Eintrage à acht Byte. Ein Page-Map Lev
 Eine Page-Directory Pointer Table enthält 512 Eintrage à acht Byte. Ein Page-Directory Pointer Table-Eintrag kann jeweils auf eine Page-Directory Table zeigen.
 
 | Bit | Funktion |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
 | 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
 | 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
 | 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page-Directory Pointer Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Wird ignoriert und sollte 0 sein. |
-| 7 | Muss 0 sein, wenn 2 MiB Pages oder 4 KiB Pages verwendet werden, muss 1 sein, wenn 1 GiB Pages verwendet werden. |
+| 7 | Muss 0 sein, wenn 2-MiB-Pages oder 4-KiB-Pages verwendet werden, muss 1 sein, wenn 1-GiB-Pages verwendet werden. |
 | 8 | Wenn CR4.PGE und Bit 7 auf 1 gesetzt sind, gibt das Bit an, ob die Page global ist (Nicht durch Instruktionen wie mov cr3 geflusht wird). Muss ansonsten 0 sein. |
-| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12-51 | Gibt die physische Adresse der Page-Directory Table an. Gibt die physische Adresse der Page Table an. Besteht alternativ aus der physischen Adresse der Page (Bits 30-51), dem höchstes PAT Bit (Bit 12, sollte 0 sein wenn nicht benötigt) und reservierten Bits (Bit 13-29), wenn 1 GiB Pages verwendet werden. |
+| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 12-51 | Gibt die physische Adresse der Page-Directory Table an. Gibt die physische Adresse der Page Table an. Besteht alternativ aus der physischen Adresse der Page (Bits 30 – 51), dem höchsten PAT-Bit (Bit 12, sollte 0 sein wenn nicht benötigt) und reservierten Bits (Bit 13 – 29), wenn 1-GiB-Pages verwendet werden. |
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
@@ -145,17 +145,17 @@ Eine Page-Directory Table enthält 512 Eintrage à acht Byte. Ein Page-Directory
 
 | Bit | Funktion |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
+| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
 | 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
 | 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
 | 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page-Directory Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Wird ignoriert und sollte 0 sein. |
-| 7 | Muss 0 sein, wenn 1 GiB Pages oder 4 KiB Pages verwendet werden, muss 1 sein, wenn 2 MiB Pages verwendet werden. |
+| 7 | Muss 0 sein, wenn 1-GiB-Pages oder 4-KiB-Pages verwendet werden, muss 1 sein, wenn 2-MiB-Pages verwendet werden. |
 | 8 | Wenn CR4.PGE und Bit 7 auf 1 gesetzt sind, gibt das Bit an, ob die Page global ist (Nicht durch Instruktionen wie mov cr3 geflusht wird). Muss ansonsten 0 sein. |
-| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12-51 | Gibt die physische Adresse der Page Table an. Besteht alternativ aus der physischen Adresse der Page (Bits 21-51), dem höchstes PAT Bit (Bit 12, sollte 0 sein wenn nicht benötigt) und reservierten Bits (Bit 13-20), wenn 2 MiB Pages verwendet werden. |
+| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 12-51 | Gibt die physische Adresse der Page Table an. Besteht alternativ aus der physischen Adresse der Page (Bits 21 – 51), dem höchsten PAT-Bit (Bit 12, sollte 0 sein wenn nicht benötigt) und reservierten Bits (Bit 13 – 20), wenn 2-MiB-Pages verwendet werden. |
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
@@ -165,17 +165,17 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 | Bit | Funktion |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
+| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
 | 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
 | 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
 | 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Wird ignoriert und sollte 0 sein. |
-| 7 | Höchstes PAT Bit. Sollte 0 sein wenn nicht benötigt. |
+| 7 | Höchstes PAT-Bit. Sollte 0 sein wenn nicht benötigt. |
 | 8 | Wenn CR4.PGE und Bit 7 auf 1 gesetzt sind, gibt das Bit an, ob die Page global ist (Nicht durch Instruktionen wie mov cr3 geflusht wird). Muss ansonsten 0 sein. |
-| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12-51 | Gibt die physische Adresse der Page an wenn 4 KiB Pages verwendet werden. |
+| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 12-51 | Gibt die physische Adresse der Page an wenn 4-KiB-Pages verwendet werden. |
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 11372; parent 11183; 2017-01-23T22:17:11Z -->
+<!-- MediaWiki page 1496; revision 11373; parent 11372; 2017-01-23T22:29:41Z -->
