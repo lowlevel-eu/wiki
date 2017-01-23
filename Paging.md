@@ -73,7 +73,7 @@ Eine Page Table enthält 1024 Einträge à vier Byte. Jeder Eintrag zeigt auf ei
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt. |
-| 7 | Normalerweise 0. |
+| 7 | Das (höchste) [PAT](https://github.com/lowlevel-eu/wiki/wiki/PAT "PAT")-Bit. |
 | 8 | Wenn G gesetzt ist, wird der TLB (s. u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z. B. Kernel) |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
 | 12 &#150; 31 | 12 &#150; 31 der physischen Adresse eines Pageframes |
@@ -192,6 +192,6 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11183/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11372/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 11183; parent 10878; 2014-01-24T02:12:09Z -->
+<!-- MediaWiki page 1496; revision 11372; parent 11183; 2017-01-23T22:17:11Z -->
