@@ -1019,7 +1019,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 19 | Unterstützt den **CLFLUSH**-Befehl |
 | 18 | Besitzt eine 96-Bit Prozessor-Seriennummer (Nur verfügbar auf Prozessoren, die neuer als Pentium 4 sind) |
 | 17 | Unterstützt [36-Bit Page Size Extensions](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension") (4-MiB [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) |
-| 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
+| 16 | Unterstützt das [PAT-Bit](https://github.com/lowlevel-eu/wiki/wiki/PAT "PAT") |
 | 15 | Unterstützt den **CMOVcc** Befehl, mit dem bedingte Verschiebungen vorgenommen werden können |
 | 14 | Unterstützt die Machine-Check-Architektur |
 | 13 | Unterstützt das [Page-Global-Bit](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") |
@@ -3201,6 +3201,6 @@ Gibt den Prozessornamen aus.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11365/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11375/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1739/index.html)
 
-<!-- MediaWiki page 1739; revision 11365; parent 11325; 2016-08-11T18:18:21Z -->
+<!-- MediaWiki page 1739; revision 11375; parent 11365; 2017-01-23T23:21:00Z -->
