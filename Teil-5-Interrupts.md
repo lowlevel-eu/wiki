@@ -224,6 +224,6 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11288/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11377/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1898/index.html)
 
-<!-- MediaWiki page 1898; revision 11288; parent 11184; 2015-09-09T10:47:08Z -->
+<!-- MediaWiki page 1898; revision 11377; parent 11288; 2017-04-07T20:43:03Z -->
