@@ -36,7 +36,7 @@ Im Moment sind die folgenden Features implementiert:
 - Editor (Angucken und Editieren des Arbeitsspeichers oder von Dateien)
 - HyperEbenenProjektionsTreiber (Sowas wie Grafikfenster für Programme)
 - 1024x768x25 (8881 rgba) Grafik + süßer Fadenkreuzmauszeiger
-- Spezielle C-Bibliothek \<surlib.c\> mit Syscalls über Interrupt 35h
+- Spezielle C-Bibliothek \<surlib.h\> mit Syscalls über Interrupt 35h für SurO oder SDL Backend für andere OS.
 - Standard C-Bibliothek mit crt0.c und Linker-Script surlink.lds, welche auf \<surlib.c\> aufbaut
 - ElfLoader für Elf-Dateien mit niedriger virtueller Adresse und maximal je einem W- und X-Segment
 - XLoader für eigenes .x-Binärformat (36 Byte Header) mit getrenntem Code, Daten und Stacksegment
@@ -118,6 +118,6 @@ Hier eine aktuelle ToDo-Liste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11369/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11369; parent 11368; 2016-08-22T00:19:06Z -->
+<!-- MediaWiki page 2233; revision 11378; parent 11369; 2017-08-07T19:00:14Z -->
