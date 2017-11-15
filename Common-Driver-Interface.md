@@ -71,99 +71,337 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 #### Datentypen
 
-\<c\>typedef enum {
+``` c
+typedef enum
+{
+  CDI_UNKNOWN = 0,
+  CDI_NETWORK = 1,
+  CDI_STORAGE = 2,
+  CDI_SCSI = 3,
+} cdi_device_type_t;
+```
 
-     CDI_UNKNOWN = 0,
-     CDI_NETWORK = 1,
-     CDI_STORAGE = 2,
-     CDI_SCSI = 3,
+cdi_device_type_t gibt den Typ eines Gerätes bzw. eines Treibers an.
 
-} cdi_device_type_t;\</c\> cdi_device_type_t gibt den Typ eines Gerätes bzw. eines Treibers an. \<c\>struct cdi_device {
+``` c
+struct cdi_device
+{
+  cdi_device_type_t type;
+  const char        *name;
+  struct cdi_driver *driver;
+};
+```
 
-     cdi_device_type_t type;
-     const char        *name;
-     struct cdi_driver *driver;
+Diese Struktur repräsentiert ein Gerät. „type“ gibt den Typ an, „name“ den Namen und „driver“ einen Pointer zu einer Struktur, die den Gerätetreiber repräsentiert.
 
-};\</c\> Diese Struktur repräsentiert ein Gerät. „type“ gibt den Typ an, „name“ den Namen und „driver“ einen Pointer zu einer Struktur, die den Gerätetreiber repräsentiert. \<c\>struct cdi_driver {
+``` c
+struct cdi_driver
+{
+  cdi_device_type_t type;
+  const char        *name;
+  cdi_list_t        devices;
+  void (*init_device)(struct cdi_device *device);
+  void (*remove_device)(struct cdi_device *device);
+  void (*destroy)(struct cdi_driver *driver);
+};
+```
 
-     cdi_device_type_t type;
-     const char        *name;
-     cdi_list_t        devices;
-     void (*init_device)(struct cdi_device *device);
-     void (*remove_device)(struct cdi_device *device);
-     void (*destroy)(struct cdi_driver *driver);
+Diese Struktur wiederum repräsentiert einen Gerätetreiber. „type“ gibt den Typ an, „name“ den Namen und „devices“ ist eine Liste der registrierten Geräte. Die Funktion init_device() muss vom Betriebssystem aufgerufen werden, um ein Gerät zu initialisieren, remove_device() entfernt ein Gerät und destroy() deinitialisiert den Treiber.
 
-};\</c\> Diese Struktur wiederum repräsentiert einen Gerätetreiber. „type“ gibt den Typ an, „name“ den Namen und „devices“ ist eine Liste der registrierten Geräte. Die Funktion init_device() muss vom Betriebssystem aufgerufen werden, um ein Gerät zu initialisieren, remove_device() entfernt ein Gerät und destroy() deinitialisiert den Treiber. \<c\>struct cdi_pci_device {
+``` c
+struct cdi_pci_device
+{
+  uint16_t bus;
+  uint16_t dev;
+  uint16_t function;
+  uint16_t vendor_id;
+  uint16_t device_id;
+  uint8_t  class_id;
+  uint8_t  subclass_id;
+  uint8_t  interface_id;
+  uint8_t  rev_id;
+  uint8_t  irq;
+  cdi_list_t resources;
+};
+```
 
-     uint16_t bus;
-     uint16_t dev;
-     uint16_t function;
-     uint16_t vendor_id;
-     uint16_t device_id;
-     uint8_t  class_id;
-     uint8_t  subclass_id;
-     uint8_t  interface_id;
-     uint8_t  rev_id;
-     uint8_t  irq;
-     cdi_list_t resources;
+Mit dieser Struktur wird ein [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Gerät beschrieben. „bus“ ist der Bus, auf dem es sich befindet, „dev“ das Gerät und „function“ die Funktion. „vendor_id“ gibt die Hersteller-ID an, „device_id“ die Geräte-ID. Die Classcodes befinden sich in „class_id“ (Base class), „subclass_id“ (Subclass) und „interface_id“ (Programming interface). „rev_id“ enthält die Revisions-ID. In „irq“ steht der IRQ, den das Gerät verwendet. „resources“ ist eine Liste mit den I/O- und Speicherresourcen, ihre Elemente sind vom Typ „struct cdi_pci_resource“.
 
-};\</c\> Mit dieser Struktur wird ein [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Gerät beschrieben. „bus“ ist der Bus, auf dem es sich befindet, „dev“ das Gerät und „function“ die Funktion. „vendor_id“ gibt die Hersteller-ID an, „device_id“ die Geräte-ID. Die Classcodes befinden sich in „class_id“ (Base class), „subclass_id“ (Subclass) und „interface_id“ (Programming interface). „rev_id“ enthält die Revisions-ID. In „irq“ steht der IRQ, den das Gerät verwendet. „resources“ ist eine Liste mit den I/O- und Speicherresourcen, ihre Elemente sind vom Typ „struct cdi_pci_resource“. \<c\>typedef enum {
+``` c
+typedef enum
+{
+  CDI_PCI_MEMORY,
+  CDI_PCI_IOPORTS
+} cdi_res_t;
+```
 
-     CDI_PCI_MEMORY,
-     CDI_PCI_IOPORTS
+„cdi_res_t“ gibt den Typ einer PCI-Resource an (I/O-Ports oder Speicherbereich).
 
-} cdi_res_t;\</c\> „cdi_res_t“ gibt den Typ einer PCI-Resource an (I/O-Ports oder Speicherbereich). \<c\>struct cdi_pci_resource {
+``` c
+struct cdi_pci_resource
+{
+  cdi_res_t    type;
+  uintptr_t    start;
+  size_t       length;
+  unsigned int index;
+  void         *address;
+};
+```
 
-     cdi_res_t    type;
-     uintptr_t    start;
-     size_t       length;
-     unsigned int index;
-     void         *address;
+Informationen zu einer Resource eines PCI-Gerätes erhält man aus dieser Struktur. „type“ gibt den Typ an (I/O-Ports oder Speicherbereich), „start“ den Beginn, „length“ die Länge, „index“ den Index der Resource (0 ist die erste usw.) und „address“ gibt bei Speicherbereichen ihre virtuelle Adresse an (vorher muss der Bereich mit cdi_pci_alloc_memory() reserviert worden sein).
 
-};\</c\> Informationen zu einer Resource eines PCI-Gerätes erhält man aus dieser Struktur. „type“ gibt den Typ an (I/O-Ports oder Speicherbereich), „start“ den Beginn, „length“ die Länge, „index“ den Index der Resource (0 ist die erste usw.) und „address“ gibt bei Speicherbereichen ihre virtuelle Adresse an (vorher muss der Bereich mit cdi_pci_alloc_memory() reserviert worden sein). \<c\>typedef ??? cdi_list_t;\</c\> „cdi_list_t“ repräsentiert eine Linked-List. Dieser Datentyp muss ein Pointer sein, in týndur ist er ein Pointer auf eine Struktur mit den Elementen „anchor“ (zeigt auf das erste Element der Liste) und „size“ (Anzahl der Elemente in der Liste). Die Elemente der Liste wiederum müssen einen Pointer speichern können (der Wert des Elements) und sollten desweiteren einen Pointer auf das nächste Element enthalten (eine Linked-List eben).
+``` c
+typedef ??? cdi_list_t;
+```
+
+„cdi_list_t“ repräsentiert eine Linked-List. Dieser Datentyp muss ein Pointer sein, in týndur ist er ein Pointer auf eine Struktur mit den Elementen „anchor“ (zeigt auf das erste Element der Liste) und „size“ (Anzahl der Elemente in der Liste). Die Elemente der Liste wiederum müssen einen Pointer speichern können (der Wert des Elements) und sollten desweiteren einen Pointer auf das nächste Element enthalten (eine Linked-List eben).
 
 #### Funktionen
 
 ##### cdi.h
 
-\<c\>void cdi_init(void);\</c\> Initialisiert die CDI-Strukturen des Betriebssystems, muss vor Benutzung anderer CDI-Funktionen aufgerufen werden – wiederholte Aufrufe müssen ohne Effekt bleiben. \<c\>void cdi_run_drivers(void);\</c\> Diese Funktion startet alle registrierten Treiber. Das Betriebssystem sollte alle registrierten Treiber durchgehen und bei allen für einen Treiber registrierten Geräten (Die Liste „(struct cdi_driver \*)-\>devices“) im Feld „driver“ (in „struct cdi_device“) den entsprechenden Treiber eintragen sowie, wenn „(struct cdi_driver \*)-\>init_device“ ungleich NULL ist, diese Funktion mit dem Gerät als Parameter aufrufen. \<c\>void cdi_driver_init(struct cdi_driver \*driver);\</c\> Initialisiert den angegebenen Treiber. Der Treiber hat bereits alle Felder in „driver“ initialisiert, lediglich die „devices“-Liste muss vom Betriebssystem mittels cdi_list_create() erstellt werden. \<c\>void cdi_driver_destroy(struct cdi_driver \*driver);\</c\> Deinitialisiert den angegebenen Treiber. Ist der Funktionspointer „driver-\>remove_device“ ungleich NULL, so sollte diese Funktion für alle registrierten Geräte (in der Liste „driver-\>devices“) aufgerufen werden. \<c\>void cdi_driver_register(struct cdi_driver \*driver);\</c\> Registriert einen CDI-Treiber. Es bietet sich an, ihn in einer globalen Liste einzutragen und diese Liste dann beim cdi_run_drivers()-Aufruf abzuarbeiten.
+``` c
+void cdi_init(void);
+```
+
+Initialisiert die CDI-Strukturen des Betriebssystems, muss vor Benutzung anderer CDI-Funktionen aufgerufen werden – wiederholte Aufrufe müssen ohne Effekt bleiben.
+
+``` c
+void cdi_run_drivers(void);
+```
+
+Diese Funktion startet alle registrierten Treiber. Das Betriebssystem sollte alle registrierten Treiber durchgehen und bei allen für einen Treiber registrierten Geräten (Die Liste „(struct cdi_driver \*)-\>devices“) im Feld „driver“ (in „struct cdi_device“) den entsprechenden Treiber eintragen sowie, wenn „(struct cdi_driver \*)-\>init_device“ ungleich NULL ist, diese Funktion mit dem Gerät als Parameter aufrufen.
+
+``` c
+void cdi_driver_init(struct cdi_driver *driver);
+```
+
+Initialisiert den angegebenen Treiber. Der Treiber hat bereits alle Felder in „driver“ initialisiert, lediglich die „devices“-Liste muss vom Betriebssystem mittels cdi_list_create() erstellt werden.
+
+``` c
+void cdi_driver_destroy(struct cdi_driver *driver);
+```
+
+Deinitialisiert den angegebenen Treiber. Ist der Funktionspointer „driver-\>remove_device“ ungleich NULL, so sollte diese Funktion für alle registrierten Geräte (in der Liste „driver-\>devices“) aufgerufen werden.
+
+``` c
+void cdi_driver_register(struct cdi_driver *driver);
+```
+
+Registriert einen CDI-Treiber. Es bietet sich an, ihn in einer globalen Liste einzutragen und diese Liste dann beim cdi_run_drivers()-Aufruf abzuarbeiten.
 
 ##### cdi/misc.h
 
-\<c\>void cdi_register_irq(uint8_t irq, void (\*handler)(struct cdi_device\*), struct cdi_device \*device);\</c\> Registriert eine ISR „handler“ für den angegebenen IRQ „irq“. Der ISR muss beim Aufruf das angegebene CDI-Gerät „device“ als Parameter übergeben werden. \<c\>int cdi_wait_irq(uint8_t irq, uint32_t timeout);\</c\> Wartet, bis der angegeben IRQ aufgetreten ist. „timeout“ gibt die Zeit in Millisekunden an, die maximal gewartet werden soll. Ist der IRQ seit dem letzten cdi_reset_wait_irq() und vor „timeout“ aufgetreten, wird 0 zurückgegeben, sonst -1. \<c\>int cdi_reset_wait_irq(uint8_t irq);\</c\> Setzt den Status (aufgerufen oder nicht) des IRQs zurück. \<c\>int cdi_alloc_phys_mem(size_t size, void \*\*vaddr, void \*\*paddr);\</c\> Reserviert physisch kontinuierlichen Speicher der Größe „size“. Der Beginn wird in „\*\*paddr“ gespeichert, die virtuelle Adresse in „\*\*vaddr“. Bei Erfolg wird 0 zurückgegeben, sonst -1. \<c\>void \*cdi_alloc_phys_addr(size_t size, uintptr_t paddr);\</c\> Reserviert physisch kontinuierlichen Speicher der Größe „size“ an der physischen Adresse „paddr“. Bei Erfolg wird die virtuelle Adresse zurückgegeben, im Fehlerfall hingegen NULL. \<c\>int cdi_ioports_alloc(uint16_t start, uint16_t count);\</c\> Reserviert „count“ I/O-Ports ab dem Port „start“. Bei Erfolg wird 0 zurückgegeben, im Fehlerfall -1. \<c\>int cdi_ioports_free(uint16_t start, uint16_t count);\</c\> Gibt reservierte „count“ I/O-Ports ab „start“ wieder frei. Bei Erfolg ist der Rückgabewert 0, sonst -1. \<c\>void cdi_sleep_ms(uint32_t ms);\</c\> Wartet „ms“ Millisekunden.
+``` c
+void cdi_register_irq(uint8_t irq, void (*handler)(struct cdi_device*), struct cdi_device *device);
+```
+
+Registriert eine ISR „handler“ für den angegebenen IRQ „irq“. Der ISR muss beim Aufruf das angegebene CDI-Gerät „device“ als Parameter übergeben werden.
+
+``` c
+int cdi_wait_irq(uint8_t irq, uint32_t timeout);
+```
+
+Wartet, bis der angegeben IRQ aufgetreten ist. „timeout“ gibt die Zeit in Millisekunden an, die maximal gewartet werden soll. Ist der IRQ seit dem letzten cdi_reset_wait_irq() und vor „timeout“ aufgetreten, wird 0 zurückgegeben, sonst -1.
+
+``` c
+int cdi_reset_wait_irq(uint8_t irq);
+```
+
+Setzt den Status (aufgerufen oder nicht) des IRQs zurück.
+
+``` c
+int cdi_alloc_phys_mem(size_t size, void **vaddr, void **paddr);
+```
+
+Reserviert physisch kontinuierlichen Speicher der Größe „size“. Der Beginn wird in „\*\*paddr“ gespeichert, die virtuelle Adresse in „\*\*vaddr“. Bei Erfolg wird 0 zurückgegeben, sonst -1.
+
+``` c
+void *cdi_alloc_phys_addr(size_t size, uintptr_t paddr);
+```
+
+Reserviert physisch kontinuierlichen Speicher der Größe „size“ an der physischen Adresse „paddr“. Bei Erfolg wird die virtuelle Adresse zurückgegeben, im Fehlerfall hingegen NULL.
+
+``` c
+int cdi_ioports_alloc(uint16_t start, uint16_t count);
+```
+
+Reserviert „count“ I/O-Ports ab dem Port „start“. Bei Erfolg wird 0 zurückgegeben, im Fehlerfall -1.
+
+``` c
+int cdi_ioports_free(uint16_t start, uint16_t count);
+```
+
+Gibt reservierte „count“ I/O-Ports ab „start“ wieder frei. Bei Erfolg ist der Rückgabewert 0, sonst -1.
+
+``` c
+void cdi_sleep_ms(uint32_t ms);
+```
+
+Wartet „ms“ Millisekunden.
 
 ##### cdi/pci.h
 
-\<c\>void cdi_pci_get_all_devices(cdi_list_t list);\</c\> Fügt alle vorhandenen PCI-Geräte in die Liste „list“ ein. \<c\>void cdi_pci_device_destroy(struct cdi_pci_device \*device);\</c\> Gibt die Informationen zum PCI-Gerät frei. \<c\>void cdi_pci_alloc_ioports(struct cdi_pci_device \*device);\</c\> Reserviert die I/O-Ports des angegebenen PCI-Geräts. \<c\>void cdi_pci_free_ioports(struct cdi_pci_device \*device);\</c\> Gibt selbige Reservierung wieder frei. \<c\>void cdi_pci_alloc_memory(struct cdi_pci_device \*device);\</c\> Reserviert den Speicher des PCI-Geräts. \<c\>void cdi_pci_free_memory(struct cdi_pci_device \*device);\</c\> Gibt selbigen Speicher wieder frei.
+``` c
+void cdi_pci_get_all_devices(cdi_list_t list);
+```
+
+Fügt alle vorhandenen PCI-Geräte in die Liste „list“ ein.
+
+``` c
+void cdi_pci_device_destroy(struct cdi_pci_device *device);
+```
+
+Gibt die Informationen zum PCI-Gerät frei.
+
+``` c
+void cdi_pci_alloc_ioports(struct cdi_pci_device *device);
+```
+
+Reserviert die I/O-Ports des angegebenen PCI-Geräts.
+
+``` c
+void cdi_pci_free_ioports(struct cdi_pci_device *device);
+```
+
+Gibt selbige Reservierung wieder frei.
+
+``` c
+void cdi_pci_alloc_memory(struct cdi_pci_device *device);
+```
+
+Reserviert den Speicher des PCI-Geräts.
+
+``` c
+void cdi_pci_free_memory(struct cdi_pci_device *device);
+```
+
+Gibt selbigen Speicher wieder frei.
 
 ##### cdi/io.h
 
-\<c\>uint8_t cdi_inb(uint16_t port); uint16_t cdi_inw(uint16_t port); uint32_t cdi_inl(uint16_t port);\</c\> Liest ein Byte/Word/DWord vom angegeben I/O-Port ein und gibt es zurück \<c\>void cdi_outb(uint16_t port, uint8_t data); void cdi_outw(uint16_t port, uint16_t data); void cdi_outl(uint16_t port, uint32_t data);\</c\> Gibt ein Byte/Word/DWord am angegebenen I/O-Port aus.
+``` c
+uint8_t cdi_inb(uint16_t port);
+uint16_t cdi_inw(uint16_t port);
+uint32_t cdi_inl(uint16_t port);
+```
+
+Liest ein Byte/Word/DWord vom angegeben I/O-Port ein und gibt es zurück
+
+``` c
+void cdi_outb(uint16_t port, uint8_t data);
+void cdi_outw(uint16_t port, uint16_t data);
+void cdi_outl(uint16_t port, uint32_t data);
+```
+
+Gibt ein Byte/Word/DWord am angegebenen I/O-Port aus.
 
 ##### cdi/lists.h
 
-\<c\>cdi_list_t cdi_list_create(void);\</c\> Erstellt eine Linked-List (gibt NULL bei Fehler zurück). \<c\>void cdi_list_destroy(cdi_list_t list);\</c\> Gibt eine Liste wieder frei. \<c\>cdi_list_t cdi_list_push(cdi_list_t list, void \*value);\</c\> Fügt ein Element am Anfang der Liste ein und gibt die Liste zurück (oder NULL bei Fehler). \<c\>void \*cdi_list_pop(cdi_list_t list);\</c\> Entfernt ein Element vom Anfang der Liste und gibt seinen Wert zurück (oder NULL bei Fehler). \<c\>size_t cdi_list_empty(cdi_list_t list);\</c\> Gibt 1 zurück, wenn die Liste leer ist, sonst 0. \<c\>void \*cdi_list_get(cdi_list_t list, size_t index);\</c\> Gibt den Wert des Elements am Index „index“ zurück (oder NULL bei Fehler). \<c\>cdi_list_t cdi_list_insert(cdi_list_t list, size_t index, void \*value);\</c\> Fügt ein Element in die Liste an der Position „index“ ein und gibt die Liste zurück (oder NULL bei Fehler). \<c\>void \*cdi_list_remove(cdi_list_t list, size_t index);\</c\> Entfernt das Listenelement an der Stelle „index“ und gibt seinen Wert zurück (oder NULL bei Fehler). \<c\>size_t cdi_list_size(cdi_list_t list);\</c\> Gibt die Anzahl der Elemente in der Liste zurück.
+``` c
+cdi_list_t cdi_list_create(void);
+```
+
+Erstellt eine Linked-List (gibt NULL bei Fehler zurück).
+
+``` c
+void cdi_list_destroy(cdi_list_t list);
+```
+
+Gibt eine Liste wieder frei.
+
+``` c
+cdi_list_t cdi_list_push(cdi_list_t list, void *value);
+```
+
+Fügt ein Element am Anfang der Liste ein und gibt die Liste zurück (oder NULL bei Fehler).
+
+``` c
+void *cdi_list_pop(cdi_list_t list);
+```
+
+Entfernt ein Element vom Anfang der Liste und gibt seinen Wert zurück (oder NULL bei Fehler).
+
+``` c
+size_t cdi_list_empty(cdi_list_t list);
+```
+
+Gibt 1 zurück, wenn die Liste leer ist, sonst 0.
+
+``` c
+void *cdi_list_get(cdi_list_t list, size_t index);
+```
+
+Gibt den Wert des Elements am Index „index“ zurück (oder NULL bei Fehler).
+
+``` c
+cdi_list_t cdi_list_insert(cdi_list_t list, size_t index, void *value);
+```
+
+Fügt ein Element in die Liste an der Position „index“ ein und gibt die Liste zurück (oder NULL bei Fehler).
+
+``` c
+void *cdi_list_remove(cdi_list_t list, size_t index);
+```
+
+Entfernt das Listenelement an der Stelle „index“ und gibt seinen Wert zurück (oder NULL bei Fehler).
+
+``` c
+size_t cdi_list_size(cdi_list_t list);
+```
+
+Gibt die Anzahl der Elemente in der Liste zurück.
 
 ### CDI.net
 
 #### Datentypen
 
-\<c\>struct cdi_net_device {
+``` c
+struct cdi_net_device
+{
+  struct cdi_device dev;
+  uint64_t          mac : 48;
+  int               number;
+  void (*send_packet)(struct cdi_net_device *device, void *data, size_t size);
+};
+```
 
-     struct cdi_device dev;
-     uint64_t          mac : 48;
-     int               number;
-     void (*send_packet)(struct cdi_net_device *device, void *data, size_t size);
+Diese Struktur beschreibt ein CDI.net-Gerät. „dev“ ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, „mac“ gibt die MAC-Adresse an und „number“ die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei „device“ ein Pointer auf diese Struktur ist, „data“ ein Pointer auf die zu sendenden Daten, während „size“ die Größe des Puffers „data“ angibt. Wichtig: Man darf nicht erwarten, dass send_packet() reentrant (also gegen [Race Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") abgesichert) ist! Das Betriebssystem muss somit selbst dafür Sorge tragen, dass diese Funktion immer nur von maximal einem einzigen Prozess durchlaufen wird.
 
-};\</c\> Diese Struktur beschreibt ein CDI.net-Gerät. „dev“ ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, „mac“ gibt die MAC-Adresse an und „number“ die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei „device“ ein Pointer auf diese Struktur ist, „data“ ein Pointer auf die zu sendenden Daten, während „size“ die Größe des Puffers „data“ angibt. Wichtig: Man darf nicht erwarten, dass send_packet() reentrant (also gegen [Race Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") abgesichert) ist! Das Betriebssystem muss somit selbst dafür Sorge tragen, dass diese Funktion immer nur von maximal einem einzigen Prozess durchlaufen wird. \<c\>struct cdi_net_driver {
+``` c
+struct cdi_net_driver
+{
+  struct cdi_driver drv;
+};
+```
 
-     struct cdi_driver drv;
-
-};\</c\> Mit dieser Struktur werden CDI.net-Treiber beschrieben. Sie enthält lediglich die Struktur „struct cdi_driver“, die den Treiber im Allgmeinen repräsentiert.
+Mit dieser Struktur werden CDI.net-Treiber beschrieben. Sie enthält lediglich die Struktur „struct cdi_driver“, die den Treiber im Allgmeinen repräsentiert.
 
 #### Funktionen
 
-\<c\>void cdi_net_driver_init(struct cdi_net_driver \*driver);\</c\> Diese Funktion wird aufgerufen, um einen CDI.net-Treiber „driver“ zu initialisieren. Das Betriebssystem sollte „driver-\>drv.type“ auf CDI_NETWORK setzen und anschließend „cdi_driver_init((struct cdi_driver \*)driver)“ aufrufen. \<c\>void cdi_net_driver_destroy(struct cdi_net_driver \*driver);\</c\> Diese Funktion wiederum deinitialisiert einen CDI.net-Treiber. \<c\>void cdi_net_device_init(struct cdi_net_device \*device);\</c\> Mit dieser Funktion werden CDI.net-Geräte (also Netzwerkkarten) initialisiert. Der Treiber hat alle vorgegebenen Felder in der „cdi_net_device“-Struktur „device“ außer „number“ bereits initialisiert. „number“ muss vom Betriebssystem gesetzt werden. \<c\>void cdi_net_receive(struct cdi_net_device \*device, void \*buffer, size_t size);\</c\> Diese Funktion wird vom CDI.net-Treiber aufgerufen, wenn Daten von einer Netzwerkkarte empfangen wurden. „device“ gibt die Netzwerkkarte an, „buffer“ ist ein Pointer zum empfangenen Paket und „size“ enthält die Größe des Pakets.
+``` c
+void cdi_net_driver_init(struct cdi_net_driver *driver);
+```
+
+Diese Funktion wird aufgerufen, um einen CDI.net-Treiber „driver“ zu initialisieren. Das Betriebssystem sollte „driver-\>drv.type“ auf CDI_NETWORK setzen und anschließend „cdi_driver_init((struct cdi_driver \*)driver)“ aufrufen.
+
+``` c
+void cdi_net_driver_destroy(struct cdi_net_driver *driver);
+```
+
+Diese Funktion wiederum deinitialisiert einen CDI.net-Treiber.
+
+``` c
+void cdi_net_device_init(struct cdi_net_device *device);
+```
+
+Mit dieser Funktion werden CDI.net-Geräte (also Netzwerkkarten) initialisiert. Der Treiber hat alle vorgegebenen Felder in der „cdi_net_device“-Struktur „device“ außer „number“ bereits initialisiert. „number“ muss vom Betriebssystem gesetzt werden.
+
+``` c
+void cdi_net_receive(struct cdi_net_device *device, void *buffer, size_t size);
+```
+
+Diese Funktion wird vom CDI.net-Treiber aufgerufen, wenn Daten von einer Netzwerkkarte empfangen wurden. „device“ gibt die Netzwerkkarte an, „buffer“ ist ein Pointer zum empfangenen Paket und „size“ enthält die Größe des Pakets.
 
 ## Betriebssysteme, welche CDI benutzen (werden)
 
@@ -185,6 +423,6 @@ Hinweis: Der hier angegeben Inhalt der Strukturen ist nur ein Mindestmaß; Man d
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11358/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11379/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1622/index.html)
 
-<!-- MediaWiki page 1622; revision 11358; parent 11015; 2016-08-03T16:33:47Z -->
+<!-- MediaWiki page 1622; revision 11379; parent 11358; 2017-11-15T16:08:54Z -->
