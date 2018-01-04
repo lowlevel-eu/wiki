@@ -75,7 +75,7 @@ wird zu:
 
 ## Tabellen
 
-Tabellen werden immer durch ein „{\|“ begonnen und mit „\|}“ beendet. Dazwischen definiert man dann die einzelnen Reihen. Die Inhalte einer Reihe werden wiederrum durch „\|-“ voneinander abgegrenzt. Jede Zelle selbst wird auf im Code auf eine eigene Zeile geschrieben, die mit „\|“ beginnen muss, um anzuzeigen, dass nun eine neue Zelle der aktuellen Reihe beginnt. Außerdem kann man eine Überschriftenzelle erzeugen, die aber statt mit „\|“ mit „!“ beginnen muss.
+Tabellen werden immer durch ein „{\|“ begonnen und mit „\|}“ beendet. Dazwischen definiert man dann die einzelnen Reihen. Die Inhalte einer Reihe werden wiederrum durch „\|-“ voneinander abgegrenzt. Jede Zelle selbst wird im Code auf eine eigene Zeile geschrieben, die mit „\|“ beginnen muss, um anzuzeigen, dass nun eine neue Zelle der aktuellen Reihe beginnt. Außerdem kann man eine Überschriftenzelle erzeugen, die aber statt mit „\|“ mit „!“ beginnen muss.
 
 Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit dem Attribut {{prettytable}} zu versehen, um den [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien") treu zu bleiben. Außerdem sieht es einfach besser aus. Mit dem Attribut width='??%' kann man zudem festlegen, über wieviel Prozent der Seite sich die Tabelle erstrecken soll.
 
@@ -99,8 +99,6 @@ Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit
     |Taxi
     |Flugzeug 
     |}
-
-  
 
 ## Code
 
@@ -215,6 +213,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10539/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 10539; parent 10529; 2012-03-23T22:57:44Z -->
+<!-- MediaWiki page 2049; revision 11380; parent 10539; 2018-01-04T23:12:32Z -->
