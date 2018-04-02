@@ -99,12 +99,12 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 ## Links
 
 - [WebGit](http://git.tyndur.org/)
-- [Mailingliste](http://list.tyndur.org/mailman/listinfo/tyndur-devel) ([Archiv](http://list.tyndur.org/pipermail/tyndur-devel/))
+- [Mailingliste](http://list.tyndur.org/) ([Archiv](http://list.tyndur.org/tyndur-devel/threads.html))
 - [Revisionsaktuelle Dokumentation von CDI](http://lpt.tyndur.org/cdi/)
 - [Downloads](http://download.tyndur.org/)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7826/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11381/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1796/index.html)
 
-<!-- MediaWiki page 1796; revision 7826; parent 7825; 2010-07-13T09:34:27Z -->
+<!-- MediaWiki page 1796; revision 11381; parent 7826; 2018-04-02T21:14:37Z -->
