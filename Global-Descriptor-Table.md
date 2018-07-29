@@ -47,7 +47,12 @@ Wie im vorigen Abschnitt erwähnt, stehen im Protected Mode in den Segmentregist
 | 2 | 0x4 | Bestimmt, ob ein Eintrag in der GDT (Bit nicht gesetzt) oder in der LDT (Bit gesetzt) ausgewählt wird |
 | 3 - 15 | 0xfff8 | Nummer des Eintrags in der GDT bzw. LDT (ab Null gezählt) |
 
-Um also nach *ds* das Segment zu laden, das durch den fünften GDT-Eintrag beschrieben wird, und zwar als Userspace-Segment (Ring 3), könnte man folgenden Code verwenden: \<asm\>mov \$0x23, %ax mov %ax, %ds\</asm\>
+Um also nach *ds* das Segment zu laden, das durch den fünften GDT-Eintrag beschrieben wird, und zwar als Userspace-Segment (Ring 3), könnte man folgenden Code verwenden:
+
+``` asm
+mov $0x23, %ax
+mov %ax, %ds
+```
 
 ## Struktur
 
@@ -134,25 +139,33 @@ Das zweite TSS für Double Faults ist komplett optional. Double Faults entstehen
 
 Nachdem der Kernel eine GDT im Speicher liegen hat, die er für seine Segmente verwenden möchte, muss er das Register GDTR ändern. Dieses Register enthält die Adresse und das sogenannte Limit der GDT &#150; dies entspricht ihrer Länge minus ein Byte &#150; und wird über den Befehl **lgdt** geladen. Da das Register 6 Bytes breit ist, kann dieser Befehl den neuen Wert nicht direkt als Operand entgegennehmen, sondern erwartet einen Pointer auf eine Speicherstelle, die diese 6 Bytes enthält:
 
-\<c\>static uint64_t gdt\[GDT_ENTRIES\];
+``` c
+static uint64_t gdt[GDT_ENTRIES];
 
 // ...
 
 struct {
-
-       uint16_t limit;
-       void* pointer;
-
-} \_\_attribute\_\_((packed)) gdtp = {
-
-       .limit = GDT_ENTRIES * 8 - 1,
-       .pointer = gdt,
-
-}; asm volatile("lgdt %0" : : "m" (gdtp));\</c\>
+    uint16_t limit;
+    void* pointer;
+} __attribute__((packed)) gdtp = {
+    .limit = GDT_ENTRIES * 8 - 1,
+    .pointer = gdt,
+};
+asm volatile("lgdt %0" : : "m" (gdtp));
+```
 
 Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche Auswirkungen hat die Änderung noch nicht. Auf die Tabelle wird nur zugegriffen, wenn ein Segmentregister neu geladen wird. Daher müssen jetzt noch alle Segmentregister neu geladen werden:
 
-\<asm\> mov \$0x10, %ax mov %ax, %ds mov %ax, %es mov %ax, %fs mov %ax, %gs mov %ax, %ss ljmp \$0x8, \$.1 .1: \</asm\>
+``` asm
+mov $0x10, %ax
+mov %ax, %ds
+mov %ax, %es
+mov %ax, %fs
+mov %ax, %gs
+mov %ax, %ss
+ljmp $0x8, $.1
+.1:
+```
 
 ## Web-Links
 
@@ -160,6 +173,6 @@ Dadurch wird allerdings nur der Verweis auf die Tabelle geändert, tatsächliche
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11158/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 11158; parent 11157; 2013-11-10T13:54:19Z -->
+<!-- MediaWiki page 1661; revision 11383; parent 11158; 2018-07-29T19:38:51Z -->
