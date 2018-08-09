@@ -23,18 +23,20 @@ Es gibt da nur ein kleines Problem: Alle diese Programme erwarten ihren Code und
 
 Durch eine einfache Abwandlung des Testprogramms wird der Fehler aber deutlich:
 
-\<c\>#include \<stdint.h\>
+``` c
+#include <stdint.h>
 
-int i = 0; void \_start(void) {
+int i = 0;
+void _start(void)
+{
+    int j = i + 5;
+    for (; i < j; i++) {
+        asm("int $0x30" : : "a" (0), "b" ('0' + i));
+    }
 
-       int j = i + 5;
-       for (; i < j; i++) {
-           asm("int $0x30" : : "a" (0), "b" ('0' + i));
-       }
-
-       while(1);
-
-}\</c\>
+    while(1);
+}
+```
 
 Es wird sicher jeder zustimmen, dass dieses Programm eigentlich die gleiche Ausgabe haben sollte. Dadurch, dass *i* jetzt aber nicht mehr auf dem Stack, sondern in *.data* liegt, wird es aber zwischen den beiden Tasks geteilt und wir bekommen:
 
@@ -68,15 +70,16 @@ Wenn man besonders abenteuerlustig ist, kann man übrigens Paging und Segmentier
 
 Nachdem wir uns mit den theoretischen Grundlagen ein bisschen befasst haben, kommen wir zur zentralen Frage: Wie schaltet man Paging ein? Die einfach Antwort lautet: Das Paging-Bit (Bit 31) im Steuerregister *cr0* muss gesetzt werden (direkt nach dem Initialisieren der physischen Speicherverwaltung ist vermutlich ein guter Platz, um *vmm_init* aufzurufen):
 
-\<c\>void vmm_init(void) {
+``` c
+void vmm_init(void)
+{
+    uint32_t cr0;
 
-       uint32_t cr0;
-
-       asm volatile("mov %%cr0, %0" : "=r" (cr0));
-       cr0 |= (1 << 31);
-       asm volatile("mov %0, %%cr0" : : "r" (cr0));
-
-}\</c\>
+    asm volatile("mov %%cr0, %0" : "=r" (cr0));
+    cr0 |= (1 << 31);
+    asm volatile("mov %0, %%cr0" : : "r" (cr0));
+}
+```
 
 Wenn wir den Kernel jetzt aber ausprobieren, merken wir schnell, dass das so keine gute Idee war: Ein Triple Fault führt dazu, dass es einen CPU-Reset gibt. Was ist passiert? Schauen wir uns an, was qemu dazu zu sagen hat: Mit dem Paramenter *-d int,cpu_reset* werden alle Interrupts in die Logdatei in */tmp/qemu.log* geschrieben (unter Windows kann im Monitor per *logfile* ein anderer Pfad gesetzt werden; ab qemu 0.13 wird standardmäßig *qemu.log* im aktuellen Verzeichnis benutzt). Die interessanten Einträge sehen (mit zusammengekürztem Registerdump) wie folgt aus:
 
@@ -127,29 +130,31 @@ Weil eine einzige große Tabelle aber in der Regel zu viel Speicher verschwenden
 
 Aber fangen wir zunächst einfach einmal damit an, unseren virtuellen Adressraum (auch *Speicherkontext* genannt) in Code zu gießen. Der gesamte Adressraum wird durch das Page Directory beschrieben. Wir haben also folgendes (später kommt hier noch mehr dazu, deswegen gleich ein struct):
 
-\<c\>struct vmm_context {
-
-       uint32_t* pagedir;
-
-};\</c\>
+``` c
+struct vmm_context {
+    uint32_t* pagedir;
+};
+```
 
 Ein neues leeres Page Directory anzulegen ist auch nicht schwer: Wir holen uns einfach eine freie Page (sowohl Page Directory als auch Page Tables sind genau 4k groß) und schreiben sie mit Nullen voll:
 
   
-\<c\>struct vmm_context\* vmm_create_context(void) {
 
-       struct vmm_context* context = pmm_alloc();
-       int i;
+``` c
+struct vmm_context* vmm_create_context(void)
+{
+    struct vmm_context* context = pmm_alloc();
+    int i;
 
-       /* Page Directory anlegen und mit Nullen initialisieren */
-       context->pagedir = pmm_alloc();
-       for (i = 0; i < 1024; i++) {
-           context->pagedir[i] = 0;
-       }
+    /* Page Directory anlegen und mit Nullen initialisieren */
+    context->pagedir = pmm_alloc();
+    for (i = 0; i < 1024; i++) {
+        context->pagedir[i] = 0;
+    }
 
-       return context;
-
-}\</c\>
+    return context;
+}
+```
 
 Jetzt müssen wir in diesem Page Directory nur noch die passenden *Mappings* anlegen, d.h. für jede benutzte virtuelle Adresse die zugehörige physische Adresse angeben. Im Moment ist das nicht besonders schwer. Wir müssen folgendermaßen vorgehen:
 
@@ -175,53 +180,51 @@ Für Kernelspeicher fährt man also mit der Formel *pte = phys_addr \| 0x3* am b
 Nachdem das alles erledigt ist, muss das Page Directory auch noch aktiviert werden. Das aktuelle Page Directory steht im Steuerregister *cr3*, wir müssen also einfach dorthin die Adresse des vorbereiteten Page Directory schreiben. Zusammenfassend haben wir also in etwa folgenden Code:
 
   
-\<c\>int vmm_map_page(struct vmm_context\* context, uintptr_t virt, uintptr_t phys) {
 
-       /* Page Table heraussuchen bzw. anlegen */
-       ...
+``` c
+int vmm_map_page(struct vmm_context* context, uintptr_t virt, uintptr_t phys)
+{
+    /* Page Table heraussuchen bzw. anlegen */
+    ...
 
-       /* Neues Mapping in the Page Table eintragen */
-       page_table[pt_index] = phys | PTE_PRESENT | PTE_WRITE;
-       asm volatile("invlpg %0" : : "m" (*(char*)virt));
+    /* Neues Mapping in the Page Table eintragen */
+    page_table[pt_index] = phys | PTE_PRESENT | PTE_WRITE;
+    asm volatile("invlpg %0" : : "m" (*(char*)virt));
 
-       return 0;
-
+    return 0;
 }
 
-void vmm_activate_context(struct vmm_context\* context) {
-
-       asm volatile("mov %0, %%cr3" : : "r" (context->pagedir));
-
+void vmm_activate_context(struct vmm_context* context)
+{
+    asm volatile("mov %0, %%cr3" : : "r" (context->pagedir));
 }
 
-/\*
+/*
+ * Dieser Speicherkontext wird nur waehrend der Initialisierung verwendet.
+ * Spaeter laeuft der Kernel immer im Kontext des aktuellen Prozesses.
+ */
+static struct vmm_context* kernel_context;
 
-    * Dieser Speicherkontext wird nur waehrend der Initialisierung verwendet.
-    * Spaeter laeuft der Kernel immer im Kontext des aktuellen Prozesses.
-    */
+void vmm_init(void)
+{
+    uint32_t cr0;
+    int i;
 
-static struct vmm_context\* kernel_context;
+    /* Speicherkontext anlegen */
+    kernel_context = vmm_create_context();
 
-void vmm_init(void) {
+    /* Die ersten 4 MB an dieselbe physische wie virtuelle Adresse mappen */
+    for (i = 0; i < 4096 * 1024; i += 0x1000) {
+        vmm_map_page(kernel_context, i, i);
+    }
 
-       uint32_t cr0;
-       int i;
+    vmm_activate_context(kernel_context);
 
-       /* Speicherkontext anlegen */
-       kernel_context = vmm_create_context();
-
-       /* Die ersten 4 MB an dieselbe physische wie virtuelle Adresse mappen */
-       for (i = 0; i < 4096 * 1024; i += 0x1000) {
-           vmm_map_page(kernel_context, i, i);
-       }
-
-       vmm_activate_context(kernel_context);
-
-       asm volatile("mov %%cr0, %0" : "=r" (cr0));
-       cr0 |= (1 << 31);
-       asm volatile("mov %0, %%cr0" : : "r" (cr0));
-
-}\</c\>
+    asm volatile("mov %%cr0, %0" : "=r" (cr0));
+    cr0 |= (1 << 31);
+    asm volatile("mov %0, %%cr0" : : "r" (cr0));
+}
+```
 
 Mit diesem Code funktioniert unser Kernel jetzt wieder. Er bricht allerdings mit einer Exception 14 (einem Page Fault) ab: Das passiert, sobald er in einen Userspace-Task springen möchte. Bisher haben wir alle Pages nur für den Kernel gemappt. Man könnte jetzt natürlich hergehen und einfach das User-Flag setzen, dann funktionieren auch die Tasks wieder. Aber zukunftsfähig ist die Methode, einfach mal die ersten vier Megabytes zu mappen natürlich nicht.
 
@@ -266,29 +269,30 @@ Die Umsetzung erscheint auf den ersten Blick ganz einfach, aber es gibt dabei no
 
 Nachdem der Kernel darauf vorbereitet ist, Speicherbereiche einzeln zu mappen und mit den richtigen Berechtigungen zu versehen, können wir uns endlich daran machen, den Konflikt unserer beiden Tasks aufzulösen. Dazu erweitern wir zunächst die Taskstruktur um einen Eintrag für das Page Directory (ja, unsere Tasks entsprechen im Moment Prozessen - mehrere Threads würden denselbenb Adressraum benutzen, wenn wir sie denn unterstützen würden).
 
-\<c\>struct task {
-
-       struct cpu_state*   cpu_state;
-       struct task*        next;
-       struct vmm_context* context;
-
-};\</c\>
+``` c
+struct task {
+    struct cpu_state*   cpu_state;
+    struct task*        next;
+    struct vmm_context* context;
+};
+```
 
 Beim Anlegen eines Tasks müssen wir jetzt einen neuen Speicherkontext anlegen (dafür gibt es ja schon *vmm_create_context*) und ggf. den Kernelteil des Page Directory kopieren. *init_elf* kann den Speicher jetzt im Kernel an eine beliebige Stelle im aktuellen Page Directory mappen, muss das Programm aber zusätzlich noch in dessen Page Directory an die richtige Stelle (nämlich 0x200000) mappen.
 
 Den Wechsel des Page Directory kann man am Ende des Interrupt-Handlers durchführen:
 
-\<c\>struct cpu_state\* handle_interrupt(struct cpu_state\* cpu) {
+``` c
+struct cpu_state* handle_interrupt(struct cpu_state* cpu)
+{
+    ...
 
-       ...
+    if (cpu != new_cpu) {
+        asm volatile("mov %0, %%cr3" : : "r" (current_task->context->pagedir_phys));
+    }
 
-       if (cpu != new_cpu) {
-           asm volatile("mov %0, %%cr3" : : "r" (current_task->context->pagedir_phys));
-       }
-
-       return new_cpu;
-
-}\</c\>
+    return new_cpu;
+}
+```
 
 Weil ein Kontextwechsel teuer ist, wird cr3 nur dann neu geladen, wenn tatsächlich ein anderer Task laufen soll. Außerdem brauchen wir jetzt für cr3 die *physische* Adresse des Page Directory. *vmm_create_context* muss also sowohl die virtuelle als auch die physische Adresse abspeichern, damit wir mit dem Page Directory arbeiten können.
 
@@ -302,6 +306,6 @@ Nachdem alle Mappings korrekt aufgesetzt sind und das aktuelle Page Directory be
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10968/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2358/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11384/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2358/index.html)
 
-<!-- MediaWiki page 2358; revision 10968; parent 9045; 2012-12-18T21:28:49Z -->
+<!-- MediaWiki page 2358; revision 11384; parent 10968; 2018-08-09T17:50:35Z -->
