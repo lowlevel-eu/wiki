@@ -210,28 +210,32 @@ Bevor man die Tastatur benutzt, ist es ratsam, sie erst einmal in einen bekannte
 - Solange das Bit 0 im Statusregister (Puffer voll) gesetzt ist, Bytes aus dem Datenregister lesen. Das hilft, wenn schon vor der Initialisierung des Treibers irgendwelche Tasten betätigt wurde, da der KBC dann keine weiteren Zeichen sendet, bis der Puffer geleert (ausgelesen wurde). Das tritt zum Beispiel im Zusammenhang mit GRUB oft auf, wenn der Benutzer die Taste zu lange gedrückt hält.
 - Tastatur mit Befehl 0xF4 aktivieren. Andere Kombinationen wurden auch getestet, haben aber Probleme bereitet, unter anderem war Zeitweise ein Reset der Tastatur drin, was dazu geführt hat, dass diese unter gewissen Emulatoren überhaupt nicht mehr funktionierte.
 
-Dieser Code könnte beispielsweise folgendermaßen aussehen: \<c\> static void send_command(uint8_t command); void init_keyboard(void) {
+Dieser Code könnte beispielsweise folgendermaßen aussehen:
 
-       // IRQ-Handler fuer Tastatur-IRQ(1) registrieren
-       register_intr_handler(IRQ_BASE + 1, &irq_handler);
+``` c
+static void send_command(uint8_t command);
+void init_keyboard(void)
+{
+    // IRQ-Handler fuer Tastatur-IRQ(1) registrieren
+    register_intr_handler(IRQ_BASE + 1, &irq_handler);
 
-       // Tastaturpuffer leeren
-       while (inb(0x64) & 0x1) {
-           inb(0x60);
-       }   
+    // Tastaturpuffer leeren
+    while (inb(0x64) & 0x1) {
+        inb(0x60);
+    }   
 
-       // Tastatur aktivieren
-       send_command(0xF4);
-
+    // Tastatur aktivieren
+    send_command(0xF4);
 }
 
-/\*\* Befehl an die Tastatur senden \*/ static void send_command(uint8_t command) {
-
-       // Warten bis die Tastatur bereit ist, und der Befehlspuffer leer ist
-       while ((inb(0x64) & 0x2)) {}
-       outb(0x60, command);
-
-} \</c\>
+/** Befehl an die Tastatur senden */
+static void send_command(uint8_t command)
+{
+    // Warten bis die Tastatur bereit ist, und der Befehlspuffer leer ist
+    while ((inb(0x64) & 0x2)) {}
+    outb(0x60, command);
+}
+```
 
 In einem vernünftigen Betriebssystem möchte man die Tastatur wahrscheinlich mit IRQs nutzen, damit man jeweils benachrichtigt wird, wenn eine Taste gedrückt wird, und nicht darauf warten muss. Dabei ist es wichtig, dass die Routine zur Behandlung der Tastatur-IRQs vor der oben angegebenen Initialisierung erfolgt, da sich sonst möglicherweise üble [Race-Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") ergeben, also konkret, wenn der Puffer bereits geleert wurde und noch vor dem Registrieren der IRQ-Routine eine Taste gedrückt wird, dann ist der Puffer der Tastatur voll, und sie schickt somit auch keine IRQs mehr, bis er geleert wird, was aber dann nicht mehr passiert, und die Tastatur hängt somit.
 
@@ -247,75 +251,73 @@ Um das Ganze noch komplizierter zu machen, gibt es noch so genannte *Extented* S
 
 So, nun wissen wir also, mit welchem Scancode wir es zu tun haben. Als nächstes müssen wir den seltsamen Scancode jetzt in etwas sinnvolles umwandeln. Hier gibt es jetzt zwei Möglichkeiten, entweder wir wandeln sie direkt in ASCII-Zeichen (oder welche Kodierung auch immer) um oder wir wandeln sie in ein internes Format um (meist Keycodes genannt), welches wir dann weitergeben.
 
-Auch hier wieder ein kleiner Codeabschnitt, der zeigt wie man den IRQ-Handler umsetzen könnte (aus týndur übernommen, BSD-Lizenz): \<c\> /\*\*
+Auch hier wieder ein kleiner Codeabschnitt, der zeigt wie man den IRQ-Handler umsetzen könnte (aus týndur übernommen, BSD-Lizenz):
 
-    * Scancode in einen Keycode uebersetzen
-    * @return Keycode oder 0 falls der Scancode nicht bekannt ist
-    */
-
+``` c
+/**
+ * Scancode in einen Keycode uebersetzen
+ * @return Keycode oder 0 falls der Scancode nicht bekannt ist
+ */
 uint8_t translate_scancode(int set, uint16_t scancode);
 
 void irq_handler(uint8_t irq) {
-
-       uint8_t scancode;
-       uint8_t keycode = 0;
-       int break_code = 0;
-
-       // Status-Variablen fuer das Behandeln von e0- und e1-Scancodes
-       static int     e0_code = 0;
-       // Wird auf 1 gesetzt, sobald e1 gelesen wurde, und auf 2, sobald das erste
-       // Datenbyte gelesen wurde
-       static int      e1_code = 0;
-       static uint16_t  e1_prev = 0;
-
-       scancode = inb(0x60);
-
-       // Um einen Breakcode handelt es sich, wenn das oberste Bit gesetzt ist und
-       // es kein e0 oder e1 fuer einen Extended-scancode ist
-       if ((scancode & 0x80) &&
-           (e1_code || (scancode != 0xE1)) &&
-           (e0_code || (scancode != 0xE0)))
-       {
-           break_code = 1;
-           scancode &= ~0x80;
-       }
-
-       if (e0_code) {
-           // Fake shift abfangen und ignorieren
-           if ((scancode == 0x2A) || (scancode == 0x36)) {
-               e0_code = 0;
-               return;
-           }
-
-           keycode = translate_scancode(1, scancode);
-           e0_code = 0;
-       } else if (e1_code == 2) {
-           // Fertiger e1-Scancode
-           // Zweiten Scancode in hoeherwertiges Byte packen
-           e1_prev |= ((uint16_t) scancode << 8);
-           keycode = translate_scancode(2, e1_prev);
-           e1_code = 0;
-       } else if (e1_code == 1) {
-           // Erstes Byte fuer e1-Scancode
-           e1_prev = scancode;
-           e1_code++;
-       } else if (scancode == 0xE0) {
-           // Anfang eines e0-Codes
-           e0_code = 1;
-       } else if (scancode == 0xE1) {
-           // Anfang eines e1-Codes
-           e1_code = 1;
-       } else {
-           // Normaler Scancode
-           keycode = translate_scancode(0, scancode);
-       }
-           // Zum Testen sollte folgendes verwendet werden:
-
-kprintf("%c", keycode);
-
-           //Nach erfolgreichen Tests, könnte eine send_key_event Funtkion wie bei Týndur verwendet werden
-
-} \</c\>
+    uint8_t scancode;
+    uint8_t keycode = 0;
+    int break_code = 0;
+ 
+    // Status-Variablen fuer das Behandeln von e0- und e1-Scancodes
+    static int     e0_code = 0;
+    // Wird auf 1 gesetzt, sobald e1 gelesen wurde, und auf 2, sobald das erste
+    // Datenbyte gelesen wurde
+    static int      e1_code = 0;
+    static uint16_t  e1_prev = 0;
+ 
+    scancode = inb(0x60);
+ 
+    // Um einen Breakcode handelt es sich, wenn das oberste Bit gesetzt ist und
+    // es kein e0 oder e1 fuer einen Extended-scancode ist
+    if ((scancode & 0x80) &&
+        (e1_code || (scancode != 0xE1)) &&
+        (e0_code || (scancode != 0xE0)))
+    {
+        break_code = 1;
+        scancode &= ~0x80;
+    }
+ 
+    if (e0_code) {
+        // Fake shift abfangen und ignorieren
+        if ((scancode == 0x2A) || (scancode == 0x36)) {
+            e0_code = 0;
+            return;
+        }
+ 
+        keycode = translate_scancode(1, scancode);
+        e0_code = 0;
+    } else if (e1_code == 2) {
+        // Fertiger e1-Scancode
+        // Zweiten Scancode in hoeherwertiges Byte packen
+        e1_prev |= ((uint16_t) scancode << 8);
+        keycode = translate_scancode(2, e1_prev);
+        e1_code = 0;
+    } else if (e1_code == 1) {
+        // Erstes Byte fuer e1-Scancode
+        e1_prev = scancode;
+        e1_code++;
+    } else if (scancode == 0xE0) {
+        // Anfang eines e0-Codes
+        e0_code = 1;
+    } else if (scancode == 0xE1) {
+        // Anfang eines e1-Codes
+        e1_code = 1;
+    } else {
+        // Normaler Scancode
+        keycode = translate_scancode(0, scancode);
+    }
+        // Zum Testen sollte folgendes verwendet werden:
+    kprintf("%c", keycode);
+        //Nach erfolgreichen Tests, könnte eine send_key_event Funtkion wie bei Týndur verwendet werden
+}
+```
 
 Dieses Codestück unternimmt genau die oben beschriebenen Schritte. Die Funktion „translate_scancode“ übersetzt, wie oben im Kommentar angegeben, die Scancodes in interne Keycodes der Code dazu findet sich ebenfalls im [tyndur-Repository](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/sc2kc.c). Es handelt sich dabei aber nur um eine mögliche Umsetzung und keineswegs um die einzig mögliche, hier muss man sich selbst überlegen wie das für den konkreten Anwendungsfall am komfortabelsten ist.
 
@@ -329,23 +331,29 @@ Diese Informationen sind jedoch zum Programmieren eines Betriebssystems nicht di
 
 ### CPU-Reset
 
-Der CPU-Reset wird ausgelöst, indem der Wert 0xFE in den Outputport geschrieben wird. \<asm\>
+Der CPU-Reset wird ausgelöst, indem der Wert 0xFE in den Outputport geschrieben wird.
 
-Warten, bis der Eingabepuffer leer ist
+``` asm
+;Warten, bis der Eingabepuffer leer ist
+wait1:
+in   al, 0x64
+test al, 00000010b
+jne  wait1
 
-wait1: in al, 0x64 test al, 00000010b jne wait1
+;Befehl 0xD1 zum Schreiben des Inputports an den KBC senden
+mov  al, 0xD1
+out  0x64, al
 
-Befehl 0xD1 zum Schreiben des Inputports an den KBC senden
+;Wieder warten, bis der Eingabepuffer leer ist
+wait2:
+in   al, 0x64
+test al, 00000010b
+jne  wait2
 
-mov al, 0xD1 out 0x64, al
-
-Wieder warten, bis der Eingabepuffer leer ist
-
-wait2: in al, 0x64 test al, 00000010b jne wait2
-
-Den neuen Wert für den Inputport über Port 0x60 senden
-
-mov al, 0xFE out 0x60, al \</asm\>
+;Den neuen Wert für den Inputport über Port 0x60 senden
+mov  al, 0xFE
+out  0x60, al
+```
 
 # Links
 
@@ -355,6 +363,6 @@ mov al, 0xFE out 0x60, al \</asm\>
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11347/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11385/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1468/index.html)
 
-<!-- MediaWiki page 1468; revision 11347; parent 11269; 2016-06-04T11:40:59Z -->
+<!-- MediaWiki page 1468; revision 11385; parent 11347; 2018-09-01T19:50:38Z -->
