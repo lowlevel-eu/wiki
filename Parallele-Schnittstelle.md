@@ -89,18 +89,20 @@ Die Bits haben folgende Bedeutung:
 
 Nachfolgend ein kleines Programm, um die Bits zu testen:
 
-        mov ah, 02h
-        xor dx, dx
-        int 17h
+``` asm
+    mov ah, 02h
+    xor dx, dx
+    int 17h
 
-        test ah, 10000000b ; Bit 7 -> Drucker bereit?
-        je error
+    test ah, 10000000b ; Bit 7 -> Drucker bereit?
+    je error
 
-        test ah, 00100000b ; Bit 5 -> Kein Papier mehr?
-        jne error
+    test ah, 00100000b ; Bit 5 -> Kein Papier mehr?
+    jne error
 
-    error:
-        jmp error
+error:
+    jmp error
+```
 
 ### Steuerregister
 
@@ -169,6 +171,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11386/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11387/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 11386; parent 8732; 2018-09-04T09:39:41Z -->
+<!-- MediaWiki page 1996; revision 11387; parent 11386; 2018-09-04T09:48:29Z -->
