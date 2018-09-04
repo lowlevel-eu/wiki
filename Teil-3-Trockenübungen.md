@@ -12,14 +12,17 @@ Als Basis für die Trockenübungen wird ein Linuxsystem benutzt. Die Konzepte la
 
 ## Hello World unter Linux
 
-Das erste Objekt, das wir uns genauer anschauen wollen, ist das gute alte Hello World (hello01.c): \<c\>#include \<stdio.h\>
+Das erste Objekt, das wir uns genauer anschauen wollen, ist das gute alte Hello World (hello01.c):
 
-int main(void) {
+``` c
+#include <stdio.h>
 
-           printf("Hello world!\n");
-           return 0;
-
-}\</c\>
+int main(void)
+{
+        printf("Hello world!\n");
+        return 0;
+}
+```
 
 Wie wir alle wissen, lässt sich dieses Programm mit *gcc -m32 -o hello01 hello01.c* in eine ausführbare Datei hello01 kompilieren (ich produziere hier absichtlich eine 32-Bit-Datei auf meinem 64-Bit-System, weil noch nicht jeder ein 64-Bit-System hat und wir hinterher auch ein 32-Bit-System schreiben wollen). gcc ist aber nicht eine große Blackbox, die vom C-Code einlesen bis zur ausführbaren Datei alles macht, sondern ruft auch nur andere Programme auf, die die eigentlichen Teilschritte machen. Mit *--verbose* kann man sich diese Schritte anzeigen lassen:
 
@@ -174,22 +177,22 @@ Wir werden auch hier wieder ein Hello World zum laufen bekommen, allerdings setz
 
 Also frisch ans Werk:
 
-\<c\>#define SYSCALL_EXIT 1
+``` c
+#define SYSCALL_EXIT    1
+#define SYSCALL_WRITE   4
 
-1.  define SYSCALL_WRITE 4
+char hello[] = "Hello World!\n";
 
-char hello\[\] = "Hello World!\n";
+void _start(void)
+{
+    // sys_write(1, hello, sizeof(hello))
+    asm("int $0x80" : : "a" (SYSCALL_WRITE), "b" (1), "c" (hello), "d"
+        (sizeof(hello)));
 
-void \_start(void) {
-
-       // sys_write(1, hello, sizeof(hello))
-       asm("int $0x80" : : "a" (SYSCALL_WRITE), "b" (1), "c" (hello), "d"
-           (sizeof(hello)));
-
-       // sys_exit(0)
-       asm("int $0x80" : : "a" (SYSCALL_EXIT), "b" (0));
-
-}\</c\>
+    // sys_exit(0)
+    asm("int $0x80" : : "a" (SYSCALL_EXIT), "b" (0));
+}
+```
 
 Wen es interessiert, die genaue Syntax des Inlineassemblers ist in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben. An dieser Stelle befülle ich einfach die Register mit den Parametern und löse dann den Interrupt 0x80 aus. Linken wollen wir dieses Mal selber, damit uns keine libc in die ausführbare Datei hineingezogen wird:
 
@@ -208,6 +211,6 @@ Aber genug der Vorrede, es wird Zeit für den Kernel.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/6470/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11389/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1896/index.html)
 
-<!-- MediaWiki page 1896; revision 6470; parent 4973; 2009-12-05T13:55:56Z -->
+<!-- MediaWiki page 1896; revision 11389; parent 6470; 2018-09-04T09:56:39Z -->
