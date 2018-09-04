@@ -14,20 +14,21 @@ Der einfachste Test ist wie immer, ein paar Zeichen auf den Bildschirm auszugebe
 
 Wir gehen daher erst einmal wieder einen Schritt zurück und schreiben direkt in den Videospeicher. Wir werden das weiter unten dann ordentlich machen. Wir erstellen also zunächst einmal eine Datei *test.c* in einem anderen Verzeichnis (die Makefile des Kernels sammelt alle .c-Dateien im Kernelverzeichnis und seinen Unterverzeichnissen auf, und das wollen wir ja gerade nicht):
 
-\<c\>#include \<stdint.h\>
+``` c
+#include <stdint.h>
 
-uint16_t\* videomem = (uint16_t\*) 0xb8000;
+uint16_t* videomem = (uint16_t*) 0xb8000;
 
-void \_start(void) {
+void _start(void)
+{
+    int i;
+    for (i = 0; i < 3; i++) {
+        *videomem++ = (0x07 << 8) | ('0' + i);
+    }
 
-       int i;
-       for (i = 0; i < 3; i++) {
-           *videomem++ = (0x07 << 8) | ('0' + i);
-       }
-
-       while(1);
-
-}\</c\>
+    while(1);
+}
+```
 
 Das Programm sollte also den String "012" ausgeben. Ans Ende setzen wir eine Endlosschleife, damit der Prozessor beim Ausführen nicht über das Ende des Programms hinausläuft und irgendwelches Zeug ausführt, das dort zufällig steht.
 
@@ -92,57 +93,59 @@ Als nächstes müssen wir das Programm irgendwie in den Speicher bekommen, um es
 
 Mit dieser Information können wir jetzt *init_multitasking* umschreiben: Falls ein Multibootmodul übergeben worden ist, starten wir nicht die vier Testtasks, sondern dieses eine Modul. Der Bootloader legt uns dieses Modul allerdings einfach irgendwo hin, während das Programm davon ausgeht, an 2 MB geladen zu werden. Wir müssen es also erst einmal dorthin kopieren.
 
-\<c\>void init_multitasking(struct multiboot_info\* mb_info) {
+``` c
+void init_multitasking(struct multiboot_info* mb_info)
+{
+    if (mb_info->mbs_mods_count == 0) {
+        /*
+         * Ohne Module machen wir dasselbe wie bisher auch. Eine genauso gute
+         * Alternative waere es, einfach mit einer Fehlermeldung abzubrechen.
+         */
+        init_task(task_a);
+        init_task(task_b);
+        init_task(task_c);
+        init_task(task_d);
+    } else {
+        /*
+         * Wenn wir mindestens ein Multiboot-Modul haben, kopieren wir das
+         * erste davon nach 2 MB und erstellen dann einen neuen Task dafuer.
+         */
+        struct multiboot_module* modules = mb_info->mbs_mods_addr;
+        size_t length = modules[0].mod_end - modules[0].mod_start;
+        void* load_addr = (void*) 0x200000;
 
-       if (mb_info->mbs_mods_count == 0) {
-           /*
-            * Ohne Module machen wir dasselbe wie bisher auch. Eine genauso gute
-            * Alternative waere es, einfach mit einer Fehlermeldung abzubrechen.
-            */
-           init_task(task_a);
-           init_task(task_b);
-           init_task(task_c);
-           init_task(task_d);
-       } else {
-           /*
-            * Wenn wir mindestens ein Multiboot-Modul haben, kopieren wir das
-            * erste davon nach 2 MB und erstellen dann einen neuen Task dafuer.
-            */
-           struct multiboot_module* modules = mb_info->mbs_mods_addr;
-           size_t length = modules[0].mod_end - modules[0].mod_start;
-           void* load_addr = (void*) 0x200000;
-
-           memcpy(load_addr, (void*) modules[0].mod_start, length);
-           init_task(load_addr);
-       }
-
-}\</c\>
+        memcpy(load_addr, (void*) modules[0].mod_start, length);
+        init_task(load_addr);
+    }
+}
+```
 
 Wichtig ist jetzt, dass die Speicherverwaltung die entsprechenden Speicherbereiche nicht schon für eine andere Verwendung hergegeben hat. Spätestens an dieser Stelle müssen wir *pmm_init* also entsprechend erweitern:
 
-\<c\> ...
+``` c
+    ...
 
-       /*
-        * Die Multibootstruktur ist auch besetzt, genauso wie die Liste von
-        * Multibootmodulen. Wir gehen bei beiden davon aus, dass sie maximal 4k
-        * gross werden.
-        */
-       struct multiboot_module* modules = mb_info->mbs_mods_addr;
+    /*
+     * Die Multibootstruktur ist auch besetzt, genauso wie die Liste von
+     * Multibootmodulen. Wir gehen bei beiden davon aus, dass sie maximal 4k
+     * gross werden.
+     */
+    struct multiboot_module* modules = mb_info->mbs_mods_addr;
 
-       pmm_mark_used(mb_info);
-       pmm_mark_used(modules);
+    pmm_mark_used(mb_info);
+    pmm_mark_used(modules);
 
-       /* Und die Multibootmodule selber sind auch belegt */
-       int i;
-       for (i = 0; i < mb_info->mbs_mods_count; i++) {
-           addr = modules[i].mod_start;
-           while (addr < modules[i].mod_end) {
-               pmm_mark_used((void*) addr);
-               addr += 0x1000;
-           }
-       }
-
-}\</c\>
+    /* Und die Multibootmodule selber sind auch belegt */
+    int i;
+    for (i = 0; i < mb_info->mbs_mods_count; i++) {
+        addr = modules[i].mod_start;
+        while (addr < modules[i].mod_end) {
+            pmm_mark_used((void*) addr);
+            addr += 0x1000;
+        }
+    }
+}
+```
 
 Das war's im Prinzip schon, jetzt müssen wir das Modul nur noch testen:
 
@@ -155,25 +158,28 @@ Direkt auf den Videospeicher zuzugreifen ist natürlich kein netter Zug von eine
 
 Als Syscall benutzen wir den Interrupt 0x30 (das ist nach Exceptions und IRQs der erste freie). Falls noch nicht geschehen, muss dieser Interrupt in die IDT eingetragen und ein passender Interrupt-Stub angelegt werden. In *handle_interrupt* lassen wir für Interrupt 0x30 eine neue Funktion syscall aufrufen:
 
-\<c\>struct cpu_state\* syscall(struct cpu_state\* cpu) {
+``` c
+struct cpu_state* syscall(struct cpu_state* cpu)
+{
+    switch (cpu->eax) {
+        case 0: /* putc */
+            kprintf("%c", cpu->ebx);
+            break;
+    }
 
-       switch (cpu->eax) {
-           case 0: /* putc */
-               kprintf("%c", cpu->ebx);
-               break;
-       }
-
-       return cpu;
-
-}\</c\>
+    return cpu;
+}
+```
 
 In eax sollen Aufrufer die Funktionsnummer übergeben (und als Funktion 0 definieren wir eine Funktion, die ein einzelnes Zeichen ausgibt) und die Parameter werden in den übrigen Registern übergeben. Stattdessen könnte man natürlich auch andere Aufrufkonventionen benutzen und Parameter z.B. über den Stack übergeben. Außerdem geben wir hier gleich von Anfang an einen neuen CPU-Zustand zurück, um Syscalls zu erlauben, die aktiv den aktuellen Task wechseln.
 
-Das Programm muss natürlich auch noch entsprechend angepasst werden, den Syscall zu verwenden - der Aufruf sieht ungefähr aus wie in [Teil 3](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") für Linux. Um sicherzugehen, dass wir die neue Version sehen, ändern wir auch gleich noch die Anzahl der ausgegebenen Ziffern: \<c\>for (i = 0; i \< 5; i++) {
+Das Programm muss natürlich auch noch entsprechend angepasst werden, den Syscall zu verwenden - der Aufruf sieht ungefähr aus wie in [Teil 3](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") für Linux. Um sicherzugehen, dass wir die neue Version sehen, ändern wir auch gleich noch die Anzahl der ausgegebenen Ziffern:
 
-       asm("int $0x30" : : "a" (0), "b" ('0' + i));
-
-}\</c\>
+``` c
+for (i = 0; i < 5; i++) {
+    asm("int $0x30" : : "a" (0), "b" ('0' + i));
+}
+```
 
 ## ELF
 
@@ -207,109 +213,106 @@ Dazu lässt sich folgendes sagen:
 
 Zunächst brauchen wir eine Headerdatei *elf.h*, die uns die nötigen Datenstrukturen - den ELF-Header und die Program Header - zur Verfügung stellt:
 
-\<c\>#ifndef ELF_H
+``` c
+#ifndef ELF_H
+#define ELF_H
 
-1.  define ELF_H
+#include <stdint.h>
 
-<!-- -->
-
-1.  include \<stdint.h\>
-
-<!-- -->
-
-1.  define ELF_MAGIC 0x464C457F
+#define ELF_MAGIC 0x464C457F
 
 struct elf_header {
-
-       uint32_t    magic;
-       uint32_t    version;
-       uint64_t    reserved;
-       uint64_t    version2;
-       uint32_t    entry;
-       uint32_t    ph_offset;
-       uint32_t    sh_offset;
-       uint32_t    flags;
-       uint16_t    header_size;
-       uint16_t    ph_entry_size;
-       uint16_t    ph_entry_count;
-       uint16_t    sh_entry_size;
-       uint16_t    sh_entry_count;
-       uint16_t    sh_str_table_index;
-
-} \_\_attribute\_\_((packed));
+    uint32_t    magic;
+    uint32_t    version;
+    uint64_t    reserved;
+    uint64_t    version2;
+    uint32_t    entry;
+    uint32_t    ph_offset;
+    uint32_t    sh_offset;
+    uint32_t    flags;
+    uint16_t    header_size;
+    uint16_t    ph_entry_size;
+    uint16_t    ph_entry_count;
+    uint16_t    sh_entry_size;
+    uint16_t    sh_entry_count;
+    uint16_t    sh_str_table_index;
+} __attribute__((packed));
 
 struct elf_program_header {
+    uint32_t    type;
+    uint32_t    offset;
+    uint32_t    virt_addr;
+    uint32_t    phys_addr;
+    uint32_t    file_size;
+    uint32_t    mem_size;
+    uint32_t    flags;
+    uint32_t    alignment;
+} __attribute__((packed));
 
-       uint32_t    type;
-       uint32_t    offset;
-       uint32_t    virt_addr;
-       uint32_t    phys_addr;
-       uint32_t    file_size;
-       uint32_t    mem_size;
-       uint32_t    flags;
-       uint32_t    alignment;
-
-} \_\_attribute\_\_((packed));
-
-1.  endif\</c\>
+#endif
+```
 
 Damit lässt sich dann ein kleiner ELF-Loader bauen - er bringt die Datei irgendwie in den Speicher und startet einen neuen Task:
 
-\<c\>void init_elf(void\* image) {
+``` c
+void init_elf(void* image)
+{
+    /*
+     * FIXME Wir muessen eigentlich die Laenge vom Image pruefen, damit wir bei
+     * korrupten ELF-Dateien nicht ueber das Dateiende hinauslesen.
+     */
 
-       /*
-        * FIXME Wir muessen eigentlich die Laenge vom Image pruefen, damit wir bei
-        * korrupten ELF-Dateien nicht ueber das Dateiende hinauslesen.
-        */
+    struct elf_header* header = image;
+    struct elf_program_header* ph;
+    int i;
 
-       struct elf_header* header = image;
-       struct elf_program_header* ph;
-       int i;
+    /* Ist es ueberhaupt eine ELF-Datei? */
+    if (header->magic != ELF_MAGIC) {
+        kprintf("Keine gueltige ELF-Magic!\n");
+        return;
+    }
 
-       /* Ist es ueberhaupt eine ELF-Datei? */
-       if (header->magic != ELF_MAGIC) {
-           kprintf("Keine gueltige ELF-Magic!\n");
-           return;
-       }
+    /*
+     * Alle Program Header durchgehen und den Speicher an die passende Stelle
+     * kopieren.
+     *
+     * FIXME Wir erlauben der ELF-Datei hier, jeden beliebigen Speicher zu
+     * ueberschreiben, einschliesslich dem Kernel selbst.
+     */
+    ph = (struct elf_program_header*) (((char*) image) + header->ph_offset);
+    for (i = 0; i < header->ph_entry_count; i++, ph++) {
+        void* dest = (void*) ph->virt_addr;
+        void* src = ((char*) image) + ph->offset;
 
-       /*
-        * Alle Program Header durchgehen und den Speicher an die passende Stelle
-        * kopieren.
-        *
-        * FIXME Wir erlauben der ELF-Datei hier, jeden beliebigen Speicher zu
-        * ueberschreiben, einschliesslich dem Kernel selbst.
-        */
-       ph = (struct elf_program_header*) (((char*) image) + header->ph_offset);
-       for (i = 0; i < header->ph_entry_count; i++, ph++) {
-           void* dest = (void*) ph->virt_addr;
-           void* src = ((char*) image) + ph->offset;
+        /* Nur Program Header vom Typ LOAD laden */
+        if (ph->type != 1) {
+            continue;
+        }
 
-           /* Nur Program Header vom Typ LOAD laden */
-           if (ph->type != 1) {
-               continue;
-           }
+        memset(dest, 0, ph->mem_size);
+        memcpy(dest, src, ph->file_size);
+    }
 
-           memset(dest, 0, ph->mem_size);
-           memcpy(dest, src, ph->file_size);
-       }
-
-       init_task((void*) header->entry);
-
-}\</c\>
+    init_task((void*) header->entry);
+}
+```
 
 Aus der Blickwinkel der Sicherheit ist er eine ziemliche Katastrophe (wie die FIXME-Kommentare zeigen), aber viel schlechter als der bisherige Loader für flache Binaries ist er auch nicht. Die Länge des Images zu prüfen ist einfach genug, dass ich es nicht weiter beschreiben muss, und wohin die Dateien geladen werden, ändert sich ohnehin wieder, sobald Paging ins Spiel kommt.
 
-In *init_multitasking* müssen wir die neue Funktion natürlich auch noch aufrufen: \<c\> ...
+In *init_multitasking* müssen wir die neue Funktion natürlich auch noch aufrufen:
 
-       } else {
-           /*
-            * Wenn wir mindestens ein Multiboot-Modul haben, kopieren wir das
-            * erste davon nach 2 MB und erstellen dann einen neuen Task dafuer.
-            */
-           struct multiboot_module* modules = mb_info->mbs_mods_addr;
-           init_elf((void*) modules[0].mod_start);
-       }
-       ...</c>
+``` c
+    ...
+    } else {
+        /*
+         * Wenn wir mindestens ein Multiboot-Modul haben, kopieren wir das
+         * erste davon nach 2 MB und erstellen dann einen neuen Task dafuer.
+         */
+        struct multiboot_module* modules = mb_info->mbs_mods_addr;
+        init_elf((void*) modules[0].mod_start);
+    }
+    ...
+```
 
 Damit haben wir einen Kernel, der eine ELF-Datei ausführen kann.
 
@@ -319,6 +322,6 @@ Damit haben wir einen Kernel, der eine ELF-Datei ausführen kann.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8242/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2241/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11394/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2241/index.html)
 
-<!-- MediaWiki page 2241; revision 8242; parent 7764; 2010-09-16T19:59:11Z -->
+<!-- MediaWiki page 2241; revision 11394; parent 8242; 2018-09-04T10:19:30Z -->
