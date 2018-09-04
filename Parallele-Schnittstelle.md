@@ -74,25 +74,51 @@ Die Datenregister sind D0 bis D7 und werden auf den Leitungen von D1 bis D8 übe
 
 Vom Statusregister aus kann nur gelesen werden. Dort wird der Zustand der Peripherie gespeichert.
 
-Die Statusregister sind D0 bis D7. Nachfolgend ein kleines Programm, um die Bits zu testen:
+Die Bits haben folgende Bedeutung:
 
-\<asm\> mov ah, 02h xor dx, dx int 17h
+| Bit | Signal-Bezeichnung | Info |
+| ----- | -------------------- | ----------------------------------------------------------- |
+| 0 | \- | unbenutzt |
+| 1 | \- | unbenutzt |
+| 2 | \- | unbenutzt |
+| 3 | /ERROR | 0 = Fehler |
+| 4 | SELECT | 1 = Drucker ist On-Line (Selected) |
+| 5 | PE | 1 = Drucker hat kein Papier mehr (Paper Error) |
+| 6 | /ACK | 0 = Drucker ist für nächstes Zeichen bereit (Acknowledge) |
+| 7 | /BUSY | 0 = Drucker ist beschäftigt |
 
-test ah, 10000000b ; Bit 7 -\> Drucker bereit? je error
+Nachfolgend ein kleines Programm, um die Bits zu testen:
 
-test ah, 00100000b ; Bit 5 -\> Kein Papier mehr? jne error
+        mov ah, 02h
+        xor dx, dx
+        int 17h
 
-error:
+        test ah, 10000000b ; Bit 7 -> Drucker bereit?
+        je error
 
-       jmp error
+        test ah, 00100000b ; Bit 5 -> Kein Papier mehr?
+        jne error
 
-\</asm\>
-
-  
+    error:
+        jmp error
 
 ### Steuerregister
 
 In das Steuerregister kann sowohl gelesen als auch geschrieben werden. Wird das 4. Bit gesetzt, wird ein Interrupt ausgelöst. Wird das 5. Bit gesetzt, ist eine Art bidirektionaler Übertragung möglich.
+
+  
+Die Bits haben folgende Bedeutung:
+
+| Bit | Signal-Bezeichnung | Info |
+| ----- | -------------------- | ---------------------------------------------- |
+| 0 | /STROBE | 0 = Daten liegen auf D0 - D7 an |
+| 1 | AUTO FEED | 1 = LF nach CR (auto linefeed) |
+| 2 | /INIT | 0 = Reset des Druckers herbeiführen |
+| 3 | SELECT IN | 1 = Drucker on-line schalten (Select Input) |
+| 4 | IRQ Enable | 1 = Interrupt auslösen, wenn /ACK auf 0 geht |
+| 5 | \- | unbenutzt |
+| 6 | \- | unbenutzt |
+| 7 | \- | unbenutzt |
 
   
 
@@ -143,6 +169,6 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8732/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11386/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1996/index.html)
 
-<!-- MediaWiki page 1996; revision 8732; parent 8729; 2010-10-29T12:35:48Z -->
+<!-- MediaWiki page 1996; revision 11386; parent 8732; 2018-09-04T09:39:41Z -->
