@@ -175,53 +175,57 @@ Dadurch, dass auch ein Verweis auf den Frame Pointer der aufrufenden Funktion vo
 
 ## Beispiel
 
-Das folgende Programm, bestehend aus einem Assembler- und einem C-Teil berechnet die Fakultät einer Zahl: \<asm\>.section .text .global factorial factorial:
+Das folgende Programm, bestehend aus einem Assembler- und einem C-Teil berechnet die Fakultät einer Zahl:
 
-       push %ebp
-       mov %esp, %ebp
+``` asm
+.section .text
+.global factorial
+factorial:
+    push %ebp
+    mov %esp, %ebp
 
-       // Den Parameter nach eax laden
-       mov 8(%ebp), %eax
+    // Den Parameter nach eax laden
+    mov 8(%ebp), %eax
 
-       // Die Fakultät von 0 ist 1 (Rückgabewert kommt nach eax)
-       or %eax, %eax
-       jnz recurse
-       mov $1, %eax
-       jmp out
+    // Die Fakultät von 0 ist 1 (Rückgabewert kommt nach eax)
+    or %eax, %eax
+    jnz recurse
+    mov $1, %eax
+    jmp out
 
 recurse:
+    // Ansonsten rekursiv factorial für eax - 1 aufrufen und hinterher
+    // mit unserem eax multiplizieren
+    dec %eax
+    push %eax
+    call factorial
+    add $4, %esp
 
-       // Ansonsten rekursiv factorial für eax - 1 aufrufen und hinterher
-       // mit unserem eax multiplizieren
-       dec %eax
-       push %eax
-       call factorial
-       add $4, %esp
+    // eax enthält jetzt den Rückgabewert, also unseren Parameter nochmal
+    // neu von unserem Stack laden
+    mov 8(%ebp), %edx
 
-       // eax enthält jetzt den Rückgabewert, also unseren Parameter nochmal
-       // neu von unserem Stack laden
-       mov 8(%ebp), %edx
-
-       // Multiplizieren und das Ergebnis in eax (als Rückgabewert) speichern
-       imul %edx, %eax
+    // Multiplizieren und das Ergebnis in eax (als Rückgabewert) speichern
+    imul %edx, %eax
 
 out:
+    mov %ebp, %esp
+    pop %ebp
+    ret
+```
 
-       mov %ebp, %esp
-       pop %ebp
-       ret</asm>
-
-\<c\>#include \<stdio.h\>
+``` c
+#include <stdio.h>
 
 extern int factorial(int n);
 
-int main(void) {
-
-       int n = 5;
-       printf("Die Fakultät von %d ist %d\n", n, factorial(n));
-       return 0;
-
-}\</c\>
+int main(void)
+{
+    int n = 5;
+    printf("Die Fakultät von %d ist %d\n", n, factorial(n));
+    return 0;
+}
+```
 
 Kompiliert wird das ganze (abhängig von den Dateinamen natürlich) wie folgt (-m32 ist auf 64-Bit-Systemen wichtig - wir haben hier 32-Bit-Code geschrieben):
 
@@ -243,6 +247,6 @@ Bei gcc sollte die Assemblerdatei unbedingt die Endung .S (mit großem S) haben.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8676/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11390/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1918/index.html)
 
-<!-- MediaWiki page 1918; revision 8676; parent 8674; 2010-10-19T17:05:02Z -->
+<!-- MediaWiki page 1918; revision 11390; parent 8676; 2018-09-04T09:58:23Z -->
