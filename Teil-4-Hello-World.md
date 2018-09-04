@@ -28,56 +28,69 @@ Es gibt Leute, die der Meinung sind, man sollte seinen Bootloader selbst schreib
 
 Fangen wir mit dem einfachen an: Direkt nach dem Booten ist ein PC im Textmodus. Im Textmodus werden auf dem Bildschirm die Zeichen dargestellt, die im Grafikspeicher ab der Adresse 0xb8000 liegen. Dabei braucht jedes Zeichen zwei Bytes: Das erste Byte ist das Zeichen selbst. Das zweite Byte ist das sogenannte Attributbyte, das die Farbe und Hintergrundfarbe des Texts festlegt - mehr Details stehen bei Bedarf im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe"). Wir legen also folgendermaßen los (die Datei heißt bei mir init.c):
 
-\<c\>void init(void) {
+``` c
+void init(void)
+{
+    const char hw[] = "Hello World!";
+    int i;
+    char* video = (char*) 0xb8000;
 
-       const char hw[] = "Hello World!";
-       int i;
-       char* video = (char*) 0xb8000;
+    // C-Strings haben ein Nullbyte als Abschluss
+    for (i = 0; hw[i] != '\0'; i++) {
 
-       // C-Strings haben ein Nullbyte als Abschluss
-       for (i = 0; hw[i] != '\0'; i++) {
+        // Zeichen i in den Videospeicher kopieren
+        video[i * 2] = hw[i];
 
-           // Zeichen i in den Videospeicher kopieren
-           video[i * 2] = hw[i];
-
-           // 0x07 = Hellgrau auf Schwarz
-           video[i * 2 + 1] = 0x07;
-       }
-
-}\</c\>
+        // 0x07 = Hellgrau auf Schwarz
+        video[i * 2 + 1] = 0x07;
+    }
+}
+```
 
 Nachdem wir das erste Problem souverän gelöst haben, müssen wir den Code jetzt nur noch zur Ausführung bringen. Wir müssen also irgendwie den Multiboot-Header in unsere Binary bekommen. Außerdem benutzt unsere Funktion ein paar lokale Variablen. Lokale Variablen landen auf dem [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack"), deswegen müssen wir etwas Speicherplatz für den Stack vorsehen. Diesen Teil erledigen wir in Assembler (diese Datei ist die start.S mit großgeschriebenem ".S"):
 
-\<asm\>.section .text
+``` asm
+.section .text
 
-// Init ist eine Funktion aus init.c .extern init
+// Init ist eine Funktion aus init.c
+.extern init
 
-1.  define MB_MAGIC 0x1badb002
-2.  define MB_FLAGS 0x0
-3.  define MB_CHECKSUM -(MB_MAGIC + MB_FLAGS)
+#define MB_MAGIC 0x1badb002
+#define MB_FLAGS 0x0
+#define MB_CHECKSUM -(MB_MAGIC + MB_FLAGS)
 
-// Der Multiboot-Header .align 4 .int MB_MAGIC .int MB_FLAGS .int MB_CHECKSUM
+// Der Multiboot-Header
+.align 4
+.int    MB_MAGIC
+.int    MB_FLAGS
+.int    MB_CHECKSUM
 
-// \_start muss global sein, damit der Linker es findet und als Einsprungspunkt // benutzen kann (alle Labels, die nicht global sind, sind nur in dieser Datei // sichtbar) .global \_start \_start:
+// _start muss global sein, damit der Linker es findet und als Einsprungspunkt
+// benutzen kann (alle Labels, die nicht global sind, sind nur in dieser Datei
+// sichtbar)
+.global _start
+_start:
+    // Stack initialisieren
+    mov $kernel_stack, %esp
 
-       // Stack initialisieren
-       mov $kernel_stack, %esp
+    // C-Code aufrufen
+    call init
 
-       // C-Code aufrufen
-       call init
+    // Falls wir jemals aus init zurueckkommen sollten, sperren wir die Interrupts und
+    // halten einfach den Prozessor an. (man braucht ihn ja nicht unnötig heißlaufen lassen.)
+_stop:
+    cli
+    hlt
+    
+    // Sollte es doch weitergehen, probieren wir erneut die CPU schlafen zu lassen
+    jmp _stop
 
-       // Falls wir jemals aus init zurueckkommen sollten, sperren wir die Interrupts und
-       // halten einfach den Prozessor an. (man braucht ihn ja nicht unnötig heißlaufen lassen.)
-
-\_stop:
-
-       cli
-       hlt
-       
-       // Sollte es doch weitergehen, probieren wir erneut die CPU schlafen zu lassen
-       jmp _stop
-
-// 8 kB Stack fuer den Kernel. Das Label steht hinter dem freien Speicher, // weil der Stack nach unten waechst .section .bss .space 8192 kernel_stack:\</asm\>
+// 8 kB Stack fuer den Kernel. Das Label steht hinter dem freien Speicher,
+// weil der Stack nach unten waechst
+.section .bss
+.space 8192
+kernel_stack:
+```
 
 An dieser Stelle wären wir mit dem Code fertig. Jetzt müssen wir ihn noch kompilieren und irgendwie ausprobieren. Man kann natürlich von Hand den Compiler und den Linker aufrufen, aber es empfiehlt sich, *make* dafür zu benutzen. make übersetzt immer nur alle Dateien neu, die sich tatsächlich geändert haben, und es vergisst dabei auch nichts. Eine passende *[Makefile](https://github.com/lowlevel-eu/wiki/wiki/Makefile "Makefile")* (das ist der Dateiname der Steuerdatei für make) könnte beispielsweise so aussehen:
 
@@ -126,19 +139,28 @@ Der Kernel scheint zwar wunderbar zu funktionieren, aber er enthält einen Fehle
 
 Wie bereits erwähnt muss der Multiboot-Header des Kernels in den ersten 8 kB der Datei liegen. Das funktioniert im Moment mehr oder weniger zufälligerweise. Die Sektion .text landet zwar am Anfang der Binary, aber in welcher Reihenfolge die Dateien hineingeschrieben werden, bleibt dem Linker überlassen. Wir können es aber erzwingen, dass .text mit dem Multiboot-Header anfängt: Wir legen ihn zunächst in seine eigenen Sektion und sagen dem Linker dann, wie er es zusammenbauen soll.
 
-Dazu ändern wir den Anfang der start.S folgendermaßen ab: \<asm\>.section multiboot
+Dazu ändern wir den Anfang der start.S folgendermaßen ab:
 
-1.  define MB_MAGIC 0x1badb002
-2.  define MB_FLAGS 0x0
-3.  define MB_CHECKSUM -(MB_MAGIC + MB_FLAGS)
+``` asm
+.section multiboot
+#define MB_MAGIC 0x1badb002
+#define MB_FLAGS 0x0
+#define MB_CHECKSUM -(MB_MAGIC + MB_FLAGS)
 
-// Der Multiboot-Header .align 4 .int MB_MAGIC .int MB_FLAGS .int MB_CHECKSUM
+// Der Multiboot-Header
+.align 4
+.int    MB_MAGIC
+.int    MB_FLAGS
+.int    MB_CHECKSUM
 
 .section .text
 
-// Init ist eine Funktion aus init.c .extern init
+// Init ist eine Funktion aus init.c
+.extern init
 
-// \_start muss global sein, damit der Linker es findet und als Einsprungspunkt ...\</asm\>
+// _start muss global sein, damit der Linker es findet und als Einsprungspunkt
+...
+```
 
 Außerdem erstellen wir ein *Linkerskript*, die Datei kernel.ld:
 
@@ -189,23 +211,27 @@ Nach sehr viel sehr detailliert besprochenem Code kommen wir zu einigen Aufgaben
 
 In den folgenden Teilen gehe ich davon aus, dass die unteren drei Aufgaben von einer Funktion kprintf() übernommen werden, die für die genannten Fälle genau so funktioniert, wie die normale printf()-Funktion. Die Funktionen kommen am besten in ihre eigene Quellcodedatei (z.B. console.c) und werden in den Beispielen in der Headerdatei *console.h* erwartet.
 
-Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Parameterliste auszuwerten. gcc bietet dafür bereits Builtins an (bzw. eine komplette *stdarg.h*, wenn man einen [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benutzt), so dass die Headerdatei nur folgendes enthalten muss: \<c\> typedef \_\_builtin_va_list va_list;
+Für die Implementierung von printf benötigt man *stdarg.h*, um die variable Parameterliste auszuwerten. gcc bietet dafür bereits Builtins an (bzw. eine komplette *stdarg.h*, wenn man einen [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benutzt), so dass die Headerdatei nur folgendes enthalten muss:
 
-1.  define va_start(ap, X) \_\_builtin_va_start(ap, X)
-2.  define va_arg(ap, type) \_\_builtin_va_arg(ap, type)
-3.  define va_end(ap) \_\_builtin_va_end(ap)
-
-\</c\>
+``` c
+typedef __builtin_va_list       va_list;
+#define va_start(ap, X)         __builtin_va_start(ap, X)
+#define va_arg(ap, type)        __builtin_va_arg(ap, type)
+#define va_end(ap)              __builtin_va_end(ap)
+```
 
 Außerdem könnte es eine gute Idee sein, alle Ausgaben auch auf der [seriellen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") auszugeben. Die Emulatoren können eigentlich alle die Ausgaben auf der seriellen Schnittstelle auf der Konsole anzeigen oder in eine Datei schreiben. Das macht es unnötig, Dinge aus dem Emulator abzuschreiben (z.B. Adressen in Fehlermeldungen).
 
-Die Datei init.c sollte hinterher nur noch so aussehen (abgesehen vielleicht von einem Aufruf, um den Bildschirm zu löschen): \<c\>#include "console.h"
+Die Datei init.c sollte hinterher nur noch so aussehen (abgesehen vielleicht von einem Aufruf, um den Bildschirm zu löschen):
 
-void init(void) {
+``` c
+#include "console.h"
 
-       kprintf("Hello World!\n");
-
-}\</c\>
+void init(void)
+{
+    kprintf("Hello World!\n");
+}
+```
 
 ## Troubleshooting
 
@@ -230,6 +256,6 @@ Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11217/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11388/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1897/index.html)
 
-<!-- MediaWiki page 1897; revision 11217; parent 9921; 2014-10-07T19:44:54Z -->
+<!-- MediaWiki page 1897; revision 11388; parent 11217; 2018-09-04T09:55:24Z -->
