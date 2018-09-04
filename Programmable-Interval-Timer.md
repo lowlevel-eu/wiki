@@ -76,14 +76,15 @@ Nachdem der entsprechende Channel des PITs (re-)initialisiert wurde, kann das Co
 
 Dieser Code initialisiert den PIT in Modus 2 für Channel 0. Als Parameter wird die Frequenz übergeben (Rechnung siehe unten).
 
-\<c\> void pit_init(int freq) {
-
-      int counter = 1193182 / freq;
-      outb(0x43, 0x34);
-      outb(0x40,counter & 0xFF);
-      outb(0x40,counter >> 8);
-
-} \</c\>
+``` c
+void pit_init(int freq)
+{
+   int counter = 1193182 / freq;
+   outb(0x43, 0x34);
+   outb(0x40,counter & 0xFF);
+   outb(0x40,counter >> 8);
+}
+```
 
 ### Frequenzberechnung
 
@@ -103,6 +104,6 @@ Entsprechendes steht auch im obigen Beispielcode.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10594/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11396/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1432/index.html)
 
-<!-- MediaWiki page 1432; revision 10594; parent 9882; 2012-05-04T13:38:00Z -->
+<!-- MediaWiki page 1432; revision 11396; parent 10594; 2018-09-04T20:36:38Z -->
