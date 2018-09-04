@@ -110,16 +110,17 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 
 Bevor wir überlegen, welche Segmente wir in unserer GDT definieren wollen, brauchen wir zunächst eine Funktion, um GDT-Einträge in halbwegs lesbarer Form anzulegen. Angenommen die GDT wird als Array von 64-Bit-Integern dargestellt, könnte das wie folgt aussehen. Der Code macht nichts anderes, als die Parameter an die richtige Position gemäß den oben angegebenen Tabellen zu schieben:
 
-\<c\>static void set_entry(int i, unsigned int base, unsigned int limit, int flags) {
-
-       gdt[i] = limit & 0xffffLL;
-       gdt[i] |= (base & 0xffffffLL) << 16;
-       gdt[i] |= (flags & 0xffLL) << 40;
-       gdt[i] |= ((limit >> 16) & 0xfLL) << 48;
-       gdt[i] |= ((flags >> 8 )& 0xffLL) << 52;
-       gdt[i] |= ((base >> 24) & 0xffLL) << 56;
-
-}\</c\>
+``` c
+static void set_entry(int i, unsigned int base, unsigned int limit, int flags)
+{
+    gdt[i] = limit & 0xffffLL;
+    gdt[i] |= (base & 0xffffffLL) << 16;
+    gdt[i] |= (flags & 0xffLL) << 40;
+    gdt[i] |= ((limit >> 16) & 0xfLL) << 48;
+    gdt[i] |= ((flags >> 8 )& 0xffLL) << 52;
+    gdt[i] |= ((base >> 24) & 0xffLL) << 56;
+}
+```
 
 Welche Segmente Du anlegen willst, hängt natürlich von der Architektur Deines Kernels ab. Mein Vorschlag ist nicht die absolute und einzige Wahrheit, aber er ist ein guter Anfang, wenn Du Dir unsicher bist. Grundlage ist die GDT, wie [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") sie verwendet und wie sie in den meisten anderen Betriebssystemen anzutreffen ist. Speicherschutz wird dabei über [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") erledigt, so dass nur ein Minimalsatz von Segmenten übrigbleibt:
 
@@ -173,6 +174,6 @@ ljmp $0x8, $.1
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11383/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11395/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1661/index.html)
 
-<!-- MediaWiki page 1661; revision 11383; parent 11158; 2018-07-29T19:38:51Z -->
+<!-- MediaWiki page 1661; revision 11395; parent 11383; 2018-09-04T10:21:49Z -->
