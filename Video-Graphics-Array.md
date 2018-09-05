@@ -44,17 +44,25 @@ Der Attribut-Controller wird über die Ports 0x3C0 und 0x3C1 gesteuert. Ersterer
 
 #### Beispielcode
 
-Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned char\* VGA = (unsigned char\*) 0xA0000; \</c\> Wenn man einen Pixel zeichnen möchte, muss man einfach in dem Speicher schreiben: \<c\> void setpixel(int x, int y, unsigned char color) {
+Als erstes muss man einen Pointer auf den Speicher erstellen:
 
-     int offset;
-     if(0 <= x && x < 320) {
-       if(0 <= y && y < 200) {
-         offset = 320*y + x;
-         VGA[offset] = color;
-       }
-     }
+``` c
+unsigned char* VGA = (unsigned char*) 0xA0000;
+```
 
-} \</c\>
+Wenn man einen Pixel zeichnen möchte, muss man einfach in dem Speicher schreiben:
+
+``` c
+void setpixel(int x, int y, unsigned char color) {
+  int offset;
+  if(0 <= x && x < 320) {
+    if(0 <= y && y < 200) {
+      offset = 320*y + x;
+      VGA[offset] = color;
+    }
+  }
+}
+```
 
 #### Farben
 
@@ -96,6 +104,6 @@ Als erstes muss man einen Pointer auf den Speicher erstellen: \<c\> unsigned cha
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11166/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11404/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 11166; parent 9659; 2013-11-28T12:52:24Z -->
+<!-- MediaWiki page 1516; revision 11404; parent 11166; 2018-09-05T01:19:57Z -->
