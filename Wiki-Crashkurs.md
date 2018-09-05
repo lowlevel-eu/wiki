@@ -102,7 +102,7 @@ Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit
 
 ## Code
 
-C-Code und Assembler-Code wird in \<c\>- bzw. \<asm\>-Tags gesetzt, um bunten Code zu erhalten. Eine Liste aller verfügbaren Sprachen befindet sich bei den Versionsinformationen. In der folgenden Tabelle sind für ein paar Sprachen Beispiele, die die Verwendung illustrieren sollen, aufgelistet.
+C-Code und Assembler-Code wird in \<syntaxhighlight\>-Tags gesetzt, um bunten Code zu erhalten. Die Sprache wird dabei im Attribut `lang` angegeben. Die Liste der unterstützten Sprachen gibt es in der [MediaWiki Dokumentation](https://www.mediawiki.org/wiki/Extension:SyntaxHighlight#Supported_languages). In der folgenden Tabelle sind für ein paar Sprachen Beispiele aufgelistet.
 
 **Sprache:**
 
@@ -110,23 +110,23 @@ C
 
 **Beispiel:**
 
-    <c>#include <stdio.h>
+    <syntaxhighlight lang="c">#include <stdio.h>
 
     int main() {
         int i = 1;
         return i;
-    }</c>
+    }</syntaxhighlight>
 
 **Darstellung:**
 
-\<c\>#include \<stdio.h\>
+``` c
+#include <stdio.h> 
 
 int main() {
-
-      int i = 1;
-      return i;
-
-}\</c\>
+   int i = 1;
+   return i;
+}
+```
 
 ------------------------------------------------------------------------
 
@@ -136,13 +136,17 @@ Assembler
 
 **Beispiel:**
 
-    <asm>mov eax, cr0
+    <syntaxhighlight lang="asm">mov eax, cr0
     or eax, 1
-    mov cr0, eax</asm>
+    mov cr0, eax</syntaxhighlight>
 
 **Darstellung:**
 
-\<asm\>mov eax, cr0 or eax, 1 mov cr0, eax\</asm\>
+``` asm
+mov eax, cr0
+or eax, 1
+mov cr0, eax
+```
 
 ------------------------------------------------------------------------
 
@@ -152,12 +156,13 @@ Andere Sprachen
 
 **Beispiel:**
 
-    <code>REM Important
-    ECHO Hello Batch</code>
+    <source>REM Important
+    ECHO Hello Batch</source>
 
 **Darstellung:**
 
-`REM Important ECHO Hello Batch`
+    REM Important
+    ECHO Hello Batch
 
 Die selbe Formatierung wie mit dem \<code\>-Tag erhält man auch, wenn man ein Leerzeichen vor jede Zeile des Codes setzt.
 
@@ -213,6 +218,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11380/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 11380; parent 10539; 2018-01-04T23:12:32Z -->
+<!-- MediaWiki page 2049; revision 11397; parent 11380; 2018-09-05T00:59:05Z -->
