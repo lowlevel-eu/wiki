@@ -164,7 +164,7 @@ Andere Sprachen
     REM Important
     ECHO Hello Batch
 
-Die selbe Formatierung wie mit dem \<code\>-Tag erhält man auch, wenn man ein Leerzeichen vor jede Zeile des Codes setzt.
+Die selbe Formatierung wie mit dem \<source\>-Tag erhält man auch, wenn man ein Leerzeichen vor jede Zeile des Codes setzt.
 
 ## Diskussionsfäden
 
@@ -218,6 +218,6 @@ Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11397/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11398/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2049/index.html)
 
-<!-- MediaWiki page 2049; revision 11397; parent 11380; 2018-09-05T00:59:05Z -->
+<!-- MediaWiki page 2049; revision 11398; parent 11397; 2018-09-05T01:00:05Z -->
