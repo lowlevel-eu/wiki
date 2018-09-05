@@ -10,23 +10,22 @@ Das Flimmern tritt übrigens auch bei neueren Bildschirmen auf, wenn man die Pix
 
 Für dieses Beispiel wird die Allegro-Bibliothek verwendet. Man findet sie [auf Sourceforge](http://alleg.sourceforge.net). Hier wird die Version 4 verwendet, da sie eine übersichtlichere API bietet als die aktuelle Version 5.
 
-\<c\>
+``` c
+#include <allegro.h>
 
-1.  include \<allegro.h\>
+int main(int argc, char **argv)
+{
+    allegro_init();
+    install_keyboard();
 
-int main(int argc, char \*\*argv) {
+    set_color_depth(32);
+    set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
 
-       allegro_init();
-       install_keyboard();
+    clear_to_color(screen, makecol(0, 0, 0));
 
-       set_color_depth(32);
-       set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
-
-       clear_to_color(screen, makecol(0, 0, 0));
-
-       return 0;
-
-} \</c\>
+    return 0;
+}
+```
 
 Keine Angst, das war nur die Initialisierung der Allegro-Bibliothek und des Fensters, das wir verwenden wollen. Danach wird es einfacher.
 
@@ -34,81 +33,81 @@ Keine Angst, das war nur die Initialisierung der Allegro-Bibliothek und des Fens
 
 Nun kommen wir zum eigentlichen Zeichnen. Wir werden einen einfachen Farblauf erstellen. Dazu verwenden wir die Funktion putpixel():
 
-\<c\>
+``` c
+#include <allegro.h>
 
-1.  include \<allegro.h\>
+int main(int argc, char **argv)
+{
+    allegro_init();
+    install_keyboard();
 
-int main(int argc, char \*\*argv) {
+    set_color_depth(32);
+    set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
 
-       allegro_init();
-       install_keyboard();
+    clear_to_color(screen, makecol(0, 0, 0));
 
-       set_color_depth(32);
-       set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
+    int i = 0, k = 0;
 
-       clear_to_color(screen, makecol(0, 0, 0));
+    for(i = 0; i < 256; ++i)
+    {
+        for(k = 0; k < 256; ++k)
+        {
+            //screen ist der Bildschirm, makecol bildet eine Farbe aus dem angegebenen RGB-Wert
+            putpixel(screen, i, k, makecol(i, k, i));
+        }
+    }
 
-       int i = 0, k = 0;
+    //Auf einen Tastendruck warten, damit das Bild nicht gleich verschwindet
+    readkey();
 
-       for(i = 0; i < 256; ++i)
-       {
-           for(k = 0; k < 256; ++k)
-           {
-               //screen ist der Bildschirm, makecol bildet eine Farbe aus dem angegebenen RGB-Wert
-               putpixel(screen, i, k, makecol(i, k, i));
-           }
-       }
-
-       //Auf einen Tastendruck warten, damit das Bild nicht gleich verschwindet
-       readkey();
-
-       return 0;
-
-} \</c\>
+    return 0;
+}
+```
 
 So weit, so gut. Wenn man dieses Programm ausprobiert (dazu braucht man Allegro und man muss mit dem Schalter -lalleg kompilieren), kann man sehen, wie der Farbverlauf Spalte für Spalte aufgebaut wird. Ab und zu ein ganz netter Anblick, aber für produktives Arbeiten nicht gerade hilfreich.
 
-Nun das gleiche Beispiel mit einem zweiten Puffer (Bilder werden in Allegro als "BITMAP" gespeichert): \<c\>
+Nun das gleiche Beispiel mit einem zweiten Puffer (Bilder werden in Allegro als "BITMAP" gespeichert):
 
-1.  include \<allegro.h\>
+``` c
+#include <allegro.h>
 
-int main(int argc, char \*\*argv) {
+int main(int argc, char **argv)
+{
+    allegro_init();
+    install_keyboard();
 
-       allegro_init();
-       install_keyboard();
+    set_color_depth(32);
+    set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
 
-       set_color_depth(32);
-       set_gfx_mode(GFX_AUTODETECT_WINDOWED, 256, 256, 0, 0);
+    clear_to_color(screen, makecol(0, 0, 0));
 
-       clear_to_color(screen, makecol(0, 0, 0));
+    int i = 0, k = 0;
 
-       int i = 0, k = 0;
+    //Puffer für das Bild erstellen
+    BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
 
-       //Puffer für das Bild erstellen
-       BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+    for(i = 0; i < 256; ++i)
+    {
+        for(k = 0; k < 256; ++k)
+        {
+            //Nun nicht mehr auf den Bildschirm, sondern in den Puffer zeichnen
+            putpixel(buffer, i, k, makecol(i, k, i));
+        }
+    }
 
-       for(i = 0; i < 256; ++i)
-       {
-           for(k = 0; k < 256; ++k)
-           {
-               //Nun nicht mehr auf den Bildschirm, sondern in den Puffer zeichnen
-               putpixel(buffer, i, k, makecol(i, k, i));
-           }
-       }
+    //Den Puffer darstellen
+    blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
 
-       //Den Puffer darstellen
-       blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+    readkey();
 
-       readkey();
-
-       return 0;
-
-} \</c\>
+    return 0;
+}
+```
 
 Nun sollte das Bild auf einmal erscheinen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11235/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11401/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2600/index.html)
 
-<!-- MediaWiki page 2600; revision 11235; parent 11234; 2014-12-17T07:42:34Z -->
+<!-- MediaWiki page 2600; revision 11401; parent 11235; 2018-09-05T01:09:26Z -->
