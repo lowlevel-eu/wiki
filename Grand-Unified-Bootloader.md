@@ -138,9 +138,14 @@ Dies erzeugt ein CD-Image namens *cdrom.iso* aus den Dateien des Ordners *cdrom_
 | module \</pfad/zum/modul/datei\> | Läd das angegebene Modul in den Speicher und trägt es in die Multiboot modulliste ein |
 | boot | Sagt Grub das er jetzt in den Kernel springen soll. |
 
-#### Beispielkonnfigurationsdatei
+#### Beispielkonfigurationsdatei
 
-` title OS_Name kernel /kernel module /modul.mod boot ` Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
+    title OS_Name
+    kernel /kernel
+    module /modul.mod
+    boot
+
+Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeichnis als Kernel in den Speicher, lädt die Datei `modul.mod` als Modul in den Speicher und führt den Kernel danach aus.
 
 ## GRUB 2
 
@@ -296,6 +301,6 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11165/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11400/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1567/index.html)
 
-<!-- MediaWiki page 1567; revision 11165; parent 11162; 2013-11-25T15:30:09Z -->
+<!-- MediaWiki page 1567; revision 11400; parent 11165; 2018-09-05T01:07:22Z -->
