@@ -4,23 +4,42 @@ Die Textausgabe ist für so gut wie jedes Programm eine wichtige Möglichkeit, d
 
 ## Realmode
 
-Im Realmode macht das BIOS diese Arbeit. Um ein Zeichen zu schreiben reicht folgender ASM-Code (für NASM): \<asm\> mov ah, 0x0E  ;Wir wollen schreiben mov bh, 0x00  ;Auf den Bildschirm mov al, "T"  ;Das zu schreibende Zeichen int 0x10  ;Ausführen \</asm\> Um einen ganzen Text zu schreiben gibt es folgenden Trick: \<asm\> Schreibe:  ;Hier fängt die Funktion Schreibe an lodsb  ;Zeichen laden nach al cmp al, 0x00  ;Wenn 0-Byte ... je Schreibeende;... dann beende Schreibefunktion
+Im Realmode macht das BIOS diese Arbeit. Um ein Zeichen zu schreiben reicht folgender ASM-Code (für NASM):
 
-Wenn nicht, dann
+``` asm
+mov ah, 0x0E   ;Wir wollen schreiben
+mov bh, 0x00   ;Auf den Bildschirm
+mov al, "T"    ;Das zu schreibende Zeichen
+int 0x10       ;Ausführen
+```
 
-mov ah, 0x0E  ;Wir wollen schreiben mov bh, 0x00  ;Auf den Bildschirm int 0x10  ;Jetzt jmp Schreibe  ;Mache nächstes Zeichen Schreibeende:  ;Bei Stringende wird hierher gesprungen: ret  ;Die Funktion beenden \</asm\>
+Um einen ganzen Text zu schreiben gibt es folgenden Trick:
 
-Dann kann man einfach einen Text schreiben: \<asm\> mov si, Text  ;Den Text unten call Schreibe  ;schreiben
+``` asm
+Schreibe:      ;Hier fängt die Funktion Schreibe an
+lodsb          ;Zeichen laden nach al
+cmp al, 0x00   ;Wenn 0-Byte ...
+je Schreibeende;... dann beende Schreibefunktion
+;Wenn nicht, dann
+mov ah, 0x0E   ;Wir wollen schreiben
+mov bh, 0x00   ;Auf den Bildschirm
+int 0x10       ;Jetzt
+jmp Schreibe   ;Mache nächstes Zeichen
+Schreibeende:  ;Bei Stringende wird hierher gesprungen:
+ret            ;Die Funktion beenden
+```
 
-Der Text  
+Dann kann man einfach einen Text schreiben:
 
+``` asm
+mov si, Text   ;Den Text unten
+call Schreibe  ;schreiben
+
+;Der Text:
 Text db "Text im Realmode schreiben geht!",13,10,0
-
-,13,10 macht eine Neue Zeile
-
-,0 sagt das es hier aufhört (sonst würde zuviel geschrieben werden)
-
-\</asm\>
+; ,13,10 macht eine Neue Zeile
+; ,0 sagt das es hier aufhört (sonst würde zuviel geschrieben werden)
+```
 
 Die Funktion INT 10/AH=0Eh erlaubt es nicht im Textmodus eine Farbe anzugeben.
 
@@ -58,15 +77,16 @@ Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Colo
   
 Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
 
-\<c\> void printchar(uint8_t chr, uint8_t color, uint8_t x, uint8_t y) {
-
-     uint16_t* off = (uint16_t*)0xB8000;
-     // berechnen der Adresse
-     off += y * 80 + x;  // eine Multiplikation mit 2 darf hier nicht erfolgen, da off vom type uint16_t ist
-     // setzen des zeichens + attributebyte
-     *off = (((uint16_t)color) << 8) | chr;
-
-} \</c\>
+``` c
+void printchar(uint8_t chr, uint8_t color, uint8_t x, uint8_t y)
+{
+  uint16_t* off = (uint16_t*)0xB8000;
+  // berechnen der Adresse
+  off += y * 80 + x;  // eine Multiplikation mit 2 darf hier nicht erfolgen, da off vom type uint16_t ist
+  // setzen des zeichens + attributebyte
+  *off = (((uint16_t)color) << 8) | chr;
+}
+```
 
 Mit der 1. Zeile wird ein Pointer auf den Textspeicher erzeugt. Der Dateityp ist uint16_t, also 2 Byte, damit wir das Zeichen und das Attributebyte gleichzeitig schreiben können (geht einfach schneller). Nun wird mit der obengenannten Formel die Adresse ausgerechnet. Würde man uint8_t benutzen, müsste man dann mit 2 multiplizieren, denn jedes Zeichen benutzt 2 Byte. Man setzt das Zeichen, indem man das Attribute-Byte auf 16 Bit erweitern, dann eine Linksverschiebung von 8 Bit vornimmt und per logischem Oder mit dem Zeichenbyte verknüpft.
 
@@ -89,25 +109,31 @@ Der Cursor dient dazu dem Nutzer anzuzeigen, an welcher Stelle die nächste Ausg
 
 **Cursor verschieben**
 
-Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint8_t row) {
+Diese Funktion verschiebt den Cursor.
 
-     uint16_t tmp;
-     tmp = row * VIDEOTEXT_WIDTH + col;
-     outb(0x3D4,14);
-     outb(0x3D5,tmp >> 8);
-     outb(0x3D4,15);
-     outb(0x3D5,tmp);
+``` c
+void displaycursor(uint8_t col, uint8_t row)
+{
+  uint16_t tmp;
+  tmp = row * VIDEOTEXT_WIDTH + col;
+  outb(0x3D4,14);
+  outb(0x3D5,tmp >> 8);
+  outb(0x3D4,15);
+  outb(0x3D5,tmp);
+}
+```
 
-} \</c\> **Löschen des Cursors** Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfach in die 26. Zeile setzen (diese gibt es nämlich nicht). Das geht natürlich genau so wie in der eben genannten Funktion, aber dies hier ist die direkte Variante:
+**Löschen des Cursors** Wenn man den Cursor vom Bildschirm weg haben möchte, muss man ihn z. B. einfach in die 26. Zeile setzen (diese gibt es nämlich nicht). Das geht natürlich genau so wie in der eben genannten Funktion, aber dies hier ist die direkte Variante:
 
-\<c\> void removecursor() {
-
-     outb(0x3D4,14);
-     outb(0x3D5,0x07);
-     outb(0x3D4,15);
-     outb(0x3D5,0xD0);
-
-} \</c\>
+``` c
+void removecursor()
+{
+  outb(0x3D4,14);
+  outb(0x3D5,0x07);
+  outb(0x3D4,15);
+  outb(0x3D5,0xD0);
+}
+```
 
 ## Siehe auch
 
@@ -121,6 +147,6 @@ Diese Funktion verschiebt den Cursor. \<c\> void displaycursor(uint8_t col, uint
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10142/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 10142; parent 10141; 2011-09-20T17:01:46Z -->
+<!-- MediaWiki page 1549; revision 11402; parent 10142; 2018-09-05T01:11:27Z -->
