@@ -26,61 +26,67 @@ Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") h
 
 ### Initialisierung
 
-Zur Reinitialisierung müssen vier sogenannte ICWs (Initialization Control Words) geschickt werden, die ich nun im Einzelnen durchgehen werde. Beginnen wir mit den Portnummern: \<c\>
+Zur Reinitialisierung müssen vier sogenannte ICWs (Initialization Control Words) geschickt werden, die ich nun im Einzelnen durchgehen werde. Beginnen wir mit den Portnummern:
 
-1.  define PIC_MASTER_COMMAND 0x20
-2.  define PIC_MASTER_DATA 0x21
-3.  define PIC_MASTER_IMR 0x21
-4.  define PIC_SLAVE_COMMAND 0xA0
-5.  define PIC_SLAVE_DATA 0xA1
-6.  define PIC_SLAVE_IMR 0xA1
+``` c
+#define PIC_MASTER_COMMAND    0x20
+#define PIC_MASTER_DATA     0x21
+#define PIC_MASTER_IMR      0x21
+#define PIC_SLAVE_COMMAND   0xA0
+#define PIC_SLAVE_DATA      0xA1
+#define PIC_SLAVE_IMR       0xA1
+```
 
-\</c\> Wie man sehen kann, gibt es zwei PICs, die üblicherweise über die IRQ-Leitung 2 miteinander kommunizieren, was man aber auch ändern kann (siehe unten). Befehle müssen allerdings zu jedem PIC gesendet werden. Das Bitmuster der Befehle kann [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#initialisierung "PIC") hier noch einmal im Einzelnen nachvollzogen werden.
+Wie man sehen kann, gibt es zwei PICs, die üblicherweise über die IRQ-Leitung 2 miteinander kommunizieren, was man aber auch ändern kann (siehe unten). Befehle müssen allerdings zu jedem PIC gesendet werden. Das Bitmuster der Befehle kann [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#initialisierung "PIC") hier noch einmal im Einzelnen nachvollzogen werden.
 
 Kommen wir also zu ICW Nummer Eins:
 
-\<c\> void pic_remap(int interrupt_num) {
+``` c
+void pic_remap(int interrupt_num)
+{
+     outb(PIC_MASTER_COMMAND, 0x11);
+     outb(PIC_SLAVE_COMMAND, 0x11);
+```
 
-        outb(PIC_MASTER_COMMAND, 0x11);
-        outb(PIC_SLAVE_COMMAND, 0x11);
-
-\</c\> 0x11 bedeutet: Wir senden auch ICW4, es gibt zwei PICs und wir wollen Initialisieren.
+0x11 bedeutet: Wir senden auch ICW4, es gibt zwei PICs und wir wollen Initialisieren.
 
 Das nächste ICW ist das wichtigste, denn hiermit wird angegeben, auf welchen Eintrag in der IDT der IRQ 0 (für den Master PIC) und IRQ 8 (für den Slave) zeigt. Dieser Wert wird der Funktion als Parameter übergeben. Üblicherweise verwendet man 32, um direkt an die Exceptions anzuschließen. Aber natürlich dürfen auch andere Werte verwendet werden, solange diese durch 8 teilbar sind.
 
-\<c\>
-
-       outb(PIC_MASTER_DATA, interrupt_num);
-       outb(PIC_SLAVE_DATA, interrupt_num+8);
-
-\</c\>
+``` c
+    outb(PIC_MASTER_DATA, interrupt_num);
+    outb(PIC_SLAVE_DATA, interrupt_num+8);
+```
 
 Die Hälfte ist geschafft. Kommen wir zu ICW3. Mit diesem gibt man an, über welchen IRQ die beiden PICs miteinander kommunizieren, das ist IRQ 2.
 
-\<c\>
+``` c
+    outb(PIC_MASTER_DATA, 0x04);
+    outb(PIC_SLAVE_DATA, 2);
+```
 
-       outb(PIC_MASTER_DATA, 0x04);
-       outb(PIC_SLAVE_DATA, 2);
-
-\</c\> Merkwürdigerweise übergibt man an den Slave direkt die IRQ-Nummer, dem Master übergibt man eine Bitmaske, in dem das betreffende Bit gesetzt ist.
+Merkwürdigerweise übergibt man an den Slave direkt die IRQ-Nummer, dem Master übergibt man eine Bitmaske, in dem das betreffende Bit gesetzt ist.
 
 Fast fertig, nur noch ICW4 fehlt. Es wird 0x01 an beide gesendet, um anzuzeigen, dass wir uns im 8086-Mode befinden (was auch sonst...).
 
-\<c\>
-
-      outb(PIC_MASTER_DATA, 0x01);
-      outb(PIC_SLAVE_DATA, 0x01);
-
-} \</c\>
+``` c
+   outb(PIC_MASTER_DATA, 0x01);
+   outb(PIC_SLAVE_DATA, 0x01);
+}
+```
 
 ### IRQs maskieren
 
-Wie bereits erwähnt, können die PICs auch bestimmte IRQs blockieren. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ blockiert. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden. Schreiben wir uns eine Funktion dazu: \<c\> void pic_mask_irqs(uint16_t mask) {
+Wie bereits erwähnt, können die PICs auch bestimmte IRQs blockieren. Dazu dienen die Interrupt Mask Register (IMR). In diesen liegt eine Bitmaske. Ist ein Bit gesetzt, so ist der entsprechende IRQ blockiert. Die Nummern der IRQs sind [hier](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "PIC") zu finden. Schreiben wir uns eine Funktion dazu:
 
-      outb(PIC_MASTER_IMR, (uint8_t) mask);
-      outb(PIC_SLAVE_IMR, (uint8_t) (mask>>8));
+``` c
+void pic_mask_irqs(uint16_t mask)
+{
+   outb(PIC_MASTER_IMR, (uint8_t) mask);
+   outb(PIC_SLAVE_IMR, (uint8_t) (mask>>8));
+}
+```
 
-} \</c\> Simpel, oder? Nebenbei: Wenn das Interruptflag gelöscht ist (-\>cli), dann kommen sowieso keine IRQs an. Außerdem werden alle IRQs des Slaves blockiert, wenn im Master der IRQ 2 maskiert wird.
+Simpel, oder? Nebenbei: Wenn das Interruptflag gelöscht ist (-\>cli), dann kommen sowieso keine IRQs an. Außerdem werden alle IRQs des Slaves blockiert, wenn im Master der IRQ 2 maskiert wird.
 
 ### ISRs programmieren
 
@@ -90,63 +96,61 @@ Gut, wir haben also bisher folgendes:
 2.  alle IRQs demaskiert
 3.  das Interruptflag gesetzt (-\>sti)
 
-Und beim nächsten Tick des [Timers](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") schmiert das System ab. Der Grund: wir benötigen Interrupt Service Routinen (ISRs). Wie das funktioniert, ist nicht Aufgabe dieses Tutorials. Schau einfach mal hier: [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") und [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR"). Bei ISRs, die IRQs behandeln, gibt es allerdings noch eine Besonderheit: Sie müssen ein End Of Interrupt (EOI) Signal an den PIC senden. Andernfalls arbeitet der PIC so, als wären alle IRQs im IMR maskiert. Mit anderen Worten: Kein IRQ kommt mehr bei der CPU an. Dabei ist zu beachten, dass bei IRQs über 7 an *beide* PICs ein EOI gesendet werden muss, da diese ja auch über einen IRQ kommunizieren: \<c\>
+Und beim nächsten Tick des [Timers](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") schmiert das System ab. Der Grund: wir benötigen Interrupt Service Routinen (ISRs). Wie das funktioniert, ist nicht Aufgabe dieses Tutorials. Schau einfach mal hier: [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") und [ISR](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR"). Bei ISRs, die IRQs behandeln, gibt es allerdings noch eine Besonderheit: Sie müssen ein End Of Interrupt (EOI) Signal an den PIC senden. Andernfalls arbeitet der PIC so, als wären alle IRQs im IMR maskiert. Mit anderen Worten: Kein IRQ kommt mehr bei der CPU an. Dabei ist zu beachten, dass bei IRQs über 7 an *beide* PICs ein EOI gesendet werden muss, da diese ja auch über einen IRQ kommunizieren:
 
-1.  define EOI 0x20
+``` c
+#define EOI   0x20
 
-void pic_send_eoi(int irq_num) {
+void pic_send_eoi(int irq_num)
+{
+  outb(PIC_MASTER_COMMAND, EOI);
+  if (irq_num>7)
+    outb(PIC_SLAVE_COMMAND, EOI);
+}
+```
 
-     outb(PIC_MASTER_COMMAND, EOI);
-     if (irq_num>7)
-       outb(PIC_SLAVE_COMMAND, EOI);
-
-} \</c\> Es ist eine beliebte Fehlerquelle, das Senden des EOI zu vergessen!
+Es ist eine beliebte Fehlerquelle, das Senden des EOI zu vergessen!
 
 ## Der Code im Gesamten
 
-\<c\>
+``` c
+#define PIC_MASTER_COMMAND    0x20
+#define PIC_MASTER_DATA     0x21
+#define PIC_MASTER_IMR      0x21
+#define PIC_SLAVE_COMMAND   0xA0
+#define PIC_SLAVE_DATA      0xA1
+#define PIC_SLAVE_IMR       0xA1
 
-1.  define PIC_MASTER_COMMAND 0x20
-2.  define PIC_MASTER_DATA 0x21
-3.  define PIC_MASTER_IMR 0x21
-4.  define PIC_SLAVE_COMMAND 0xA0
-5.  define PIC_SLAVE_DATA 0xA1
-6.  define PIC_SLAVE_IMR 0xA1
+#define EOI 0x20
 
-<!-- -->
-
-1.  define EOI 0x20
-
-void pic_remap(int interrupt_num) {
-
-       outb(PIC_MASTER_COMMAND, 0x11);
-       outb(PIC_SLAVE_COMMAND, 0x11);
-       outb(PIC_MASTER_DATA, interrupt_num);
-       outb(PIC_SLAVE_DATA, interrupt_num+8);
-       outb(PIC_MASTER_DATA, 0x04);
-       outb(PIC_SLAVE_DATA, 2);
-       outb(PIC_MASTER_DATA, 0x01);
-       outb(PIC_SLAVE_DATA, 0x01);
-
+void pic_remap(int interrupt_num)
+{
+    outb(PIC_MASTER_COMMAND, 0x11);
+    outb(PIC_SLAVE_COMMAND, 0x11);
+    outb(PIC_MASTER_DATA, interrupt_num);
+    outb(PIC_SLAVE_DATA, interrupt_num+8);
+    outb(PIC_MASTER_DATA, 0x04);
+    outb(PIC_SLAVE_DATA, 2);
+    outb(PIC_MASTER_DATA, 0x01);
+    outb(PIC_SLAVE_DATA, 0x01);
 }
 
-void pic_mask_irqs(uint16_t mask) {
-
-      outb(PIC_MASTER_IMR, (uint8_t) mask);
-      outb(PIC_SLAVE_IMR, (uint8_t) (mask>>8));
-
+void pic_mask_irqs(uint16_t mask)
+{
+   outb(PIC_MASTER_IMR, (uint8_t) mask);
+   outb(PIC_SLAVE_IMR, (uint8_t) (mask>>8));
 }
 
-void pic_send_eoi(int irq_num) {
-
-     outb(PIC_MASTER_COMMAND, EOI);
-     if (irq_num>7)
-       outb(PIC_SLAVE_COMMAND, EOI);
-
-} \</c\>
+void pic_send_eoi(int irq_num)
+{
+  outb(PIC_MASTER_COMMAND, EOI);
+  if (irq_num>7)
+    outb(PIC_SLAVE_COMMAND, EOI);
+}
+```
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11123/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11405/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2183/index.html)
 
-<!-- MediaWiki page 2183; revision 11123; parent 9750; 2013-07-23T19:51:26Z -->
+<!-- MediaWiki page 2183; revision 11405; parent 11123; 2018-09-07T10:56:52Z -->
