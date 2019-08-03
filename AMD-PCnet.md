@@ -43,29 +43,39 @@ Die „direkt“ erreichbaren Register (ein Portzugriff) sind nur ein kleiner Te
 
 5\. Puffer zum Senden und Empfangen initialisieren; beide müssen 2 kB groß und physisch kontinuierlich sein.
 
-6\. Nun muss die Karte initialisiert werden. Dies geschieht mittels eines Initialization Block, der folgendermaßen aussieht: \<c\>struct initialization_block {
+6\. Nun muss die Karte initialisiert werden. Dies geschieht mittels eines Initialization Block, der folgendermaßen aussieht:
 
-       uint16_t mode;
-       unsigned reserved1 : 4;
-       unsigned receive_length : 4;
-       unsigned reserved2 : 4;
-       unsigned transfer_length : 4;
-       uint64_t physical_address : 48;
-       uint16_t reserved3;
-       uint64_t logical_address;
-       uint32_t receive_descriptor;
-       uint32_t transmit_descriptor;
+``` c
+struct initialization_block
+{
+    uint16_t mode;
+    unsigned reserved1 : 4;
+    unsigned receive_length : 4;
+    unsigned reserved2 : 4;
+    unsigned transfer_length : 4;
+    uint64_t physical_address : 48;
+    uint16_t reserved3;
+    uint64_t logical_address;
+    uint32_t receive_descriptor;
+    uint32_t transmit_descriptor;
+} __attribute__((packed));
+```
 
-} \_\_attribute\_\_((packed));\</c\> „reservedX“-Felder sind reserviert. „mode“ ist 0x8000, wenn die Karte in den Promiscuous-Mode geschaltet werden soll (Alle Pakete empfangen, nicht nur Broadcasts und die für die eigene MAC-Adresse), sonst 0x0000. „receive_length“ gibt die Anzahl der Empfangsdeskriptoren an, dazu später. „transfer_length“ enthält im Gegensatz dazu die Anzahl der Sendedeskriptoren. Beide Werte können auf 3 gesetzt werden, dies entspricht jeweils acht Deskriptoren. „physical_address“ enthält die MAC-Adresse der Karte. „logical_address“ kann auf 0 gesetzt werden. „receive_descriptor“ enthält die physische Adresse zu einem 2-kB-Puffer, „transmit_descriptor“ zu einem anderen. Beide Puffer müssen physisch kontinuierlich sein und an 16-Bytes-Grenzen ausgerichtet.
+„reservedX“-Felder sind reserviert. „mode“ ist 0x8000, wenn die Karte in den Promiscuous-Mode geschaltet werden soll (Alle Pakete empfangen, nicht nur Broadcasts und die für die eigene MAC-Adresse), sonst 0x0000. „receive_length“ gibt die Anzahl der Empfangsdeskriptoren an, dazu später. „transfer_length“ enthält im Gegensatz dazu die Anzahl der Sendedeskriptoren. Beide Werte können auf 3 gesetzt werden, dies entspricht jeweils acht Deskriptoren. „physical_address“ enthält die MAC-Adresse der Karte. „logical_address“ kann auf 0 gesetzt werden. „receive_descriptor“ enthält die physische Adresse zu einem 2-kB-Puffer, „transmit_descriptor“ zu einem anderen. Beide Puffer müssen physisch kontinuierlich sein und an 16-Bytes-Grenzen ausgerichtet.
 
-7\. Jetzt müssen die Empfangs- und Sendedeskriptoren initialisiert werden. So ein Deskriptor sieht so aus: \<c\>struct descriptor {
+7\. Jetzt müssen die Empfangs- und Sendedeskriptoren initialisiert werden. So ein Deskriptor sieht so aus:
 
-       uint32_t address;
-       uint32_t flags;
-       uint32_t flags2;
-       uint32_t avail;
+``` c
+struct descriptor
+{
+    uint32_t address;
+    uint32_t flags;
+    uint32_t flags2;
+    uint32_t avail;
+} __attribute__((packed));
+```
 
-} \_\_attribute\_\_((packed));\</c\> „address“ gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, „flags“ und „flags2“ enthalten Flags (siehe unten), „avail“ kann vom Benutzer (also von dir) frei verwendet werden. Bei den Empfangsdeskriptoren muss das OWN-Bit (0x80000000) im „flags“-Feld gesetzt werden, zudem müssen die Bits 0 bis 11 des „flags“-Feldes auf 0x7FF gesetzt werden (negative Länge des Puffers, also -2048). Außerdem müssen in beiden Deskriptortypen die Bits 12 bis 15 (0x0000F000) im „flags“-Feld gesetzt werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das „receive_descriptor“-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das „transmit_descriptor“-Feld eingetragen wurde.
+„address“ gibt die physische Adresse eines 2-kB-Puffers (physisch kontinuierlich) an, „flags“ und „flags2“ enthalten Flags (siehe unten), „avail“ kann vom Benutzer (also von dir) frei verwendet werden. Bei den Empfangsdeskriptoren muss das OWN-Bit (0x80000000) im „flags“-Feld gesetzt werden, zudem müssen die Bits 0 bis 11 des „flags“-Feldes auf 0x7FF gesetzt werden (negative Länge des Puffers, also -2048). Außerdem müssen in beiden Deskriptortypen die Bits 12 bis 15 (0x0000F000) im „flags“-Feld gesetzt werden. Die acht Empfangsdeskriptoren müssen hintereinander in den Puffer geschrieben werden, der in das „receive_descriptor“-Feld des Initialization Blocks eingetragen wurde. Die acht Sendedeskriptoren müssen analog dazu in den Puffer geschrieben werden, der in das „transmit_descriptor“-Feld eingetragen wurde.
 
 8\. Wenn auch die Deskriptoren initialisiert sind, sollte der Initialization Block bei der Karte registriert werden. Hierzu werden die niederwertigen 16 Bits der physischen Adresse in das CSR1-Register und die höherwertigen in das CSR2-Register geschrieben.
 
@@ -77,31 +87,29 @@ Die „direkt“ erreichbaren Register (ein Portzugriff) sind nur ein kleiner Te
 
 ### Konstanten
 
-\<c\>//Die Werte, auf die RAP gesetzt werden muss, um dieses Register zu benutzen
-
-1.  define CSR0 0
-2.  define CSR1 1
-3.  define CSR2 2
-4.  define CSR4 4
-5.  define BCR20 20
-
+``` c
+//Die Werte, auf die RAP gesetzt werden muss, um dieses Register zu benutzen
+#define CSR0   0
+#define CSR1   1
+#define CSR2   2
+#define CSR4   4
+#define BCR20 20
 //Aliasnamen, damit man auch weiß, was es bedeutet
-
-1.  define CSR_STATUS CSR0
-2.  define CSR_INITIALIZATION_BLOCK_LOW CSR1
-3.  define CSR_INITIALIZATION_BLOCK_HIGH CSR2
-4.  define CSR_TEST_AND_FEATURES CSR4
-5.  define BCR_SOFTWARE_STYLE BCR20
+#define CSR_STATUS                    CSR0
+#define CSR_INITIALIZATION_BLOCK_LOW  CSR1
+#define CSR_INITIALIZATION_BLOCK_HIGH CSR2
+#define CSR_TEST_AND_FEATURES         CSR4
+#define BCR_SOFTWARE_STYLE            BCR20
 
 //16-Bit-I/O-Ports (bzw. Offsets zum Beginn des I/O-Raums)
-
-1.  define APROM0 0x00
-2.  define APROM2 0x02
-3.  define APROM4 0x04
-4.  define RDP 0x10
-5.  define RAP 0x12
-6.  define RESET 0x14
-7.  define BDP 0x16\</c\>
+#define APROM0 0x00
+#define APROM2 0x02
+#define APROM4 0x04
+#define RDP    0x10
+#define RAP    0x12
+#define RESET  0x14
+#define BDP    0x16
+```
 
 ### Die ISR
 
@@ -124,44 +132,45 @@ Um ein Paket zu senden, muss die physische Adresse des entsprechenden Datenpuffe
 
 Nun könnte man einfach warten, bis die Karte sich das Paket abholt. Alternativ dazu kann man auch das TDMD-Bit (0x08) in CSR0 setzen (Also 0x48 nach CSR0 schreiben, um die Interrupts aktiviert zu lassen), um diese Wartezeit abzukürzen.
 
-Dazu ein Codebeispiel: \<c\>void write_csr(struct pcnet_card \*ncard, uint16_t csr, uint16_t val) {
+Dazu ein Codebeispiel:
 
-     outw(ncard->port_base + RAP, csr);
-     outw(ncard->port_base + RDP, val);
-
+``` c
+void write_csr(struct pcnet_card *ncard, uint16_t csr, uint16_t val)
+{
+  outw(ncard->port_base + RAP, csr);
+  outw(ncard->port_base + RDP, val);
 }
 
-uint16_t read_csr(struct pcnet_card \*ncard, uint16_t csr) {
-
-     outw(ncard->port_base + RAP, csr);
-     return inw(ncard->port_base + RDP);
-
+uint16_t read_csr(struct pcnet_card *ncard, uint16_t csr)
+{
+  outw(ncard->port_base + RAP, csr);
+  return inw(ncard->port_base + RDP);
 }
 
-void send_packet(struct pcnet_card \*ncard, void \*buffer, size_t length) {
+void send_packet(struct pcnet_card *ncard, void *buffer, size_t length)
+{
+  int current_descriptor;
 
-     int current_descriptor;
+  //Achtung, Beginn eines kritischen Abschnitts!
+  if (ncard->current_transmit_descriptor > 7)
+    ncard->current_transmit_descriptor = 0;
+  current_descriptor = ncard->current_transmit_descriptor++;
+  if (current_descriptor == 7) //ncard->current_transmit_descriptor ist also 8
+    ncard->current_transmit_descriptor = 0;
+  //Ende des Abschnitts
 
-     //Achtung, Beginn eines kritischen Abschnitts!
-     if (ncard->current_transmit_descriptor > 7)
-       ncard->current_transmit_descriptor = 0;
-     current_descriptor = ncard->current_transmit_descriptor++;
-     if (current_descriptor == 7) //ncard->current_transmit_descriptor ist also 8
-       ncard->current_transmit_descriptor = 0;
-     //Ende des Abschnitts
+  if (length > 1518) //Maximale Länge eines Ethernetframes
+    length = 1518;
 
-     if (length > 1518) //Maximale Länge eines Ethernetframes
-       length = 1518;
-
-     //ncard->linear_transmit_buffer enthält die lineare Adresse des Puffers
-     memcpy(ncard->linear_transmit_buffer[current_descriptor], buffer, length);
-     //Die physische Adresse (also ncard->physical_transmit_buffer[current_descriptor]) sollte schon bei der
-     //Initialisierung in das „address“-Feld geschrieben worden sein
-     ncard->linear_transmit_descriptor[current_descriptor].flags2 = 0;
-     ncard->linear_transmit_descriptor[current_descriptor].flags = 0x8300F000 | ((-length) & 0xFFF);
-     write_csr(ncard, CSR0, 0x48);
-
-}\</c\>
+  //ncard->linear_transmit_buffer enthält die lineare Adresse des Puffers
+  memcpy(ncard->linear_transmit_buffer[current_descriptor], buffer, length);
+  //Die physische Adresse (also ncard->physical_transmit_buffer[current_descriptor]) sollte schon bei der
+  //Initialisierung in das „address“-Feld geschrieben worden sein
+  ncard->linear_transmit_descriptor[current_descriptor].flags2 = 0;
+  ncard->linear_transmit_descriptor[current_descriptor].flags = 0x8300F000 | ((-length) & 0xFFF);
+  write_csr(ncard, CSR0, 0x48);
+}
+```
 
 ### Empfangen von Paketen
 
@@ -169,24 +178,27 @@ Sobald ein Paket empfangen wurde (das heißt, die ISR wurde aufgerufen und das R
 
 Die Daten sollten nur dann gelesen werden, wenn das ERROR-Bit (0x40000000) im „flags“-Feld nicht gesetzt ist. Außerdem sollten die Bits STP und ENP (0x02000000 bzw. 0x01000000) – ebenfalls im „flags“-Feld – beide gesetzt sein.
 
-Beispielcode: \<c\>size_t size_of_packet;
+Beispielcode:
 
-while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 0x80000000) == 0) {
+``` c
+size_t size_of_packet;
 
-     if (!(ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x40000000) &&
-          (ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x03000000) == 0x03000000)
-     {
-       size_of_packet = netcard->linear_receive_descriptor[netcard->receive_descriptor].flags2 & 0xFFF;
-       //Mach mit den Daten, was du willst!
-       //Sie stehen in der virtuellen Version von netcard->linear_receive_descriptor[netcard_receive_descriptor].address
-       //und sind [size_of_packet] Bytes lang
-     }
-     ncard->linear_receive_descriptor[netcard->receive_descriptor].flags = 0x8000F7FF; //OWN-Bit und Standardwerte setzen
-     ncard->linear_receive_descriptor[netcard->receive_descriptor++].flags2 = 0;
-     if (netcard->last_receive_descriptor == 8)
-       netcard->last_receive_descriptor = 0;
-
-}\</c\>
+while ((ncard->linear_receive_descriptor[ncard->receive_descriptor].flags & 0x80000000) == 0)
+{
+  if (!(ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x40000000) &&
+       (ncard->linear_receive_descriptor[netcard->receive_descriptor].flags & 0x03000000) == 0x03000000)
+  {
+    size_of_packet = netcard->linear_receive_descriptor[netcard->receive_descriptor].flags2 & 0xFFF;
+    //Mach mit den Daten, was du willst!
+    //Sie stehen in der virtuellen Version von netcard->linear_receive_descriptor[netcard_receive_descriptor].address
+    //und sind [size_of_packet] Bytes lang
+  }
+  ncard->linear_receive_descriptor[netcard->receive_descriptor].flags = 0x8000F7FF; //OWN-Bit und Standardwerte setzen
+  ncard->linear_receive_descriptor[netcard->receive_descriptor++].flags2 = 0;
+  if (netcard->last_receive_descriptor == 8)
+    netcard->last_receive_descriptor = 0;
+}
+```
 
   
 
@@ -204,6 +216,6 @@ while ((ncard-\>linear_receive_descriptor\[ncard-\>receive_descriptor\].flags & 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11245/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11406/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2025/index.html)
 
-<!-- MediaWiki page 2025; revision 11245; parent 11244; 2015-01-13T01:07:01Z -->
+<!-- MediaWiki page 2025; revision 11406; parent 11245; 2019-08-03T18:38:27Z -->
