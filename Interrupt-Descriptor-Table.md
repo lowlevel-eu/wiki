@@ -49,34 +49,35 @@ Die Anfangsadresse (Basis) ist die [lineare Adresse](https://github.com/lowlevel
 
 Damit kann eine IDT beispielsweise mit Code wie dem folgenden geladen werden:
 
-\<c\>static uint64_t idt\[IDT_ENTRIES\];
-
+``` c
+static uint64_t idt[IDT_ENTRIES];
+ 
 // ...
-
+ 
 struct {
+    uint16_t limit;
+    void* pointer;
+} __attribute__((packed)) idtp = {
+    .limit = IDT_ENTRIES * 8 - 1,
+    .pointer = idt,
+};
+asm volatile("lidt %0" : : "m" (idtp));
+```
 
-       uint16_t limit;
-       void* pointer;
+Oder in Assembler:
 
-} \_\_attribute\_\_((packed)) idtp = {
-
-       .limit = IDT_ENTRIES * 8 - 1,
-       .pointer = idt,
-
-}; asm volatile("lidt %0" : : "m" (idtp));\</c\>
-
-Oder in Assembler: \<asm\>lidt \[idtr\]
+``` asm
+lidt [idtr]
 
 ...
 
 idtr:
-
-       dw IDT_ENTRIES * 8 - 1,
-       dd idt
+    dw IDT_ENTRIES * 8 - 1,
+    dd idt
 
 idt:
-
-       ...</asm>
+    ...
+```
 
 ## Siehe auch
 
@@ -87,6 +88,6 @@ idt:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11013/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11409/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1603/index.html)
 
-<!-- MediaWiki page 1603; revision 11013; parent 10962; 2013-03-01T11:36:54Z -->
+<!-- MediaWiki page 1603; revision 11409; parent 11013; 2019-09-30T21:51:26Z -->
