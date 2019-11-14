@@ -353,7 +353,7 @@ Gelesen und beschrieben wird der Konfigurations-Adressraum, bei PCs, 32bit-weise
 
 #### Codebeispiel
 
-``` javascript
+``` c
  1 #define PCI_CONFIG_DATA    0x0CFC
  2 #define PCI_CONFIG_ADDRESS 0x0CF8
  3 
@@ -657,6 +657,6 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11410/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11411/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11410; parent 11181; 2019-11-14T23:26:29Z -->
+<!-- MediaWiki page 1626; revision 11411; parent 11410; 2019-11-14T23:29:18Z -->
