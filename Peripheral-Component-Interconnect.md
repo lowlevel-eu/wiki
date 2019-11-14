@@ -159,182 +159,187 @@ Das Bit 0 signalisiert mit seinem Wert 1 das es sich bei dem betreffenden BAR um
 
 ##### Beispiel-Code zur BAR-Analyse
 
-Der folgende C-Code analysiert alle BARs im Konfigurations-Adressraum eines PCI-Gerätes und gibt alle verfügbaren Informationen aus. Dieser Code sollte möglichst nicht auf aktivierte PCI-Geräte angewendet werden, falls doch wäre es geschickt den Vorgang atomar zu gestalten und alle BARs vorher zu sichern und hinter zu restaurieren. Außerdem sollten die Bits 0 und 1 des Command-Registers gelöscht sein. \<c\>/\*\*\* Diesen Code darf jeder, unter Berücksichtigung der Lizenz für diesen Wiki-Artikel, zu jedem Zweck kopieren, nutzen und verändern!
+Der folgende C-Code analysiert alle BARs im Konfigurations-Adressraum eines PCI-Gerätes und gibt alle verfügbaren Informationen aus. Dieser Code sollte möglichst nicht auf aktivierte PCI-Geräte angewendet werden, falls doch wäre es geschickt den Vorgang atomar zu gestalten und alle BARs vorher zu sichern und hinter zu restaurieren. Außerdem sollten die Bits 0 und 1 des Command-Registers gelöscht sein.
 
-        (C) <http://www.lowlevel.eu/> ***/
-
-  
-/\* deklariert einen Typ der Bus, Device und Function enthält um ein bestimmtes PCI-Gerät zu adressieren,
-
-      außerdem bin ich einfach zu faul 3 Einzelwerte durch meinen Quäl-Code zu schicken */
-
-typedef .... pci_bdf_t;
-
-/\* ließt einen 32Bit-Wert aus dem Config-Space vom PCI-Gerät (addr) an Offset (offset) und gibt ihn zurück \*/ extern uint32_t pci_config_readd(pci_bdf_t addr,uint offset);
-
-/\* schreibt einen 32Bit-Wert (value) in den Config-Space vom PCI-Gerät (addr) an Offset (offset) \*/ extern void pci_config_writed(pci_bdf_t addr,uint offset,uint32_t value);
-
-  
-/\* sucht das unterste gesetzte Bit in einem 32Bit-Wert , value darf nicht 0 sein \*/ static uint get_number_of_lowest_set_bit(uint32_t value); static uint get_number_of_lowest_set_bit(uint32_t value) {
-
-     uint pos = 0;
-     uint32_t mask = 0x00000001;
-     while (!(value & mask))
-      { ++pos; mask=mask<<1; }
-     return pos;
-
-}
-
-/\* sucht das oberste gesetzte Bit in einem 32Bit-Wert , value darf nicht 0 sein \*/ static uint get_number_of_highest_set_bit(uint32_t value); static uint get_number_of_highest_set_bit(uint32_t value) {
-
-     uint pos = 31;
-     uint32_t mask = 0x80000000;
-     while (!(value & mask))
-      { --pos; mask=mask>>1; }
-     return pos;
-
-}
-
-  
-/\* analysiert die BARs eines bestimmten PCI-Gerätes, das PCI-Gerät sollte hierfür unbenutzt sein \*/ void pci_config_bar_analyze(const pci_bdf_t addr) {
-
-     // Header-Type auslesen um zu ermitteln wie viele BARs vorhanden sind :
-     const uint32_t headerType = ( pci_config_readd(addr,0x00C) >> 16 ) & 0x7F;
-     // es werden nur Type 0x00 (normale Devices) und 0x01 (PCI-to-PCI-Bridges) unterstützt :
-     if (headerType >= 0x02)
-      { printf("FEHLER : nicht unterstützter Header-Type gefunden!\n"); return; }
-
-     // 6 BARs für Type 0x00 und 2 BARs für Type 0x01 :
-     const uint max_bars = 6 - (headerType * 4);
-
-     for (uint bar = 0 ; bar < max_bars ; ++bar)
-      {
-        // Offset des aktuellen BAR ermitteln :
-        const uint barOffset = 0x010+(bar*4);
-
-        // prüfen ob Speicher oder IO :
-        if ( (pci_config_readd(addr,barOffset) & 0x1) == 0 )
-         { // Speicher-Ressource :
-
-           // Prefetchable-Bit auslesen und passenden Text auswählen :
-           static const char* ptext_pref = "prefetchable"; // Text für prefetchable
-           static const char* ptext_nopr = "non-prefetchable"; // Text für non-prefetchable
-           const char* const ptext = (((pci_config_readd(addr,barOffset) >> 3) & 0x1) == 1) ? ptext_pref : ptext_nopr;
-
-           // check Memory-BAR-Type :
-           switch((pci_config_readd(addr,barOffset) >> 1) & 0x3)
-            {
-              case 0x0: // 32Bit Memory-BAR :
-                {
-                pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
-                const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
-                if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
-                 {
-                   if (ptext != ptext_nopr) // unbenutzte BARs müssen komplett 0 sein (auch das Prefetchable-Bit darf nicht gesetzt sein)
-                    { printf("FEHLER : 32Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
-
-                   // BAR-Infos ausgeben :
-                   printf("BAR %u ist unbenutzt.\n",bar);
-                 }
-                else
-                 {
-                   const uint lowestBit = get_number_of_lowest_set_bit(barValue);
-                   // es muss eine gültige 32Bit-Adresse sein :
-                   if ( (get_number_of_highest_set_bit(barValue) != 31) || (lowestBit > 31) || (lowestBit < 4) )
-                    { printf("FEHLER : 32Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
-
-                   // BAR-Infos ausgeben :
-                   printf("BAR %u enhält eine %s 32Bit-Memory-Ressource mit einer Größe von 2^%u Bytes.\n",bar,ptext,lowestBit);
-                 }
-                }
-                break;
-
-              case 0x1: // 20Bit Memory-BAR :
-                {
-                if (headerType == 0x01)
-                 { printf("FEHLER : 20Bit-Memory-BAR %u ist für eine Bridge nicht erlaubt!\n",bar); return; }
-
-                pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
-                const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
-                if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
-                 { printf("FEHLER : 20Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
-
-                const uint lowestBit = get_number_of_lowest_set_bit(barValue);
-                // es muss eine gültige 20Bit-Adresse sein :
-                if ( (get_number_of_highest_set_bit(barValue) != 19) || (lowestBit > 19) || (lowestBit < 4) )
-                 { printf("FEHLER : 20Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
-
-                // BAR-Infos ausgeben :
-                printf("BAR %u enhält eine %s 20Bit-Memory-Ressource mit einer Größe von 2^%u Bytes.\n",bar,ptext,lowestBit);
-                }
-                break;
-
-              case 0x2: // 64Bit Memory-BAR :
-                {
-                // prüfen ob ein 64Bit-BAR an der aktuellen Position überhaupt möglich ist :
-                if (bar >= (max_bars-1))
-                 { printf("FEHLER : 64Bit-Memory-BAR %u darf nicht an letzter Position beginnen!\n",bar); return; }
-                // non-prefetchable 64-BARs können nicht hinter Bridges benutzt werden (? aber in der Spec sind sie nicht verboten ?) :
-                if (ptext != &ptext_pref[0])
-                 { printf("FEHLER : 64Bit-Memory-BAR %u enthält eine non-prefetchable Memory-Ressource!\n",bar); return; }
-
-                pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
-                pci_config_writed(addr,barOffset+4,0xFFFFFFFF); // mit lauter 1en überschreiben
-                const uint32_t barLowValue  = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
-                const uint32_t barHighValue = pci_config_readd(addr,barOffset+4); // und wieder zurücklesen
-
-                uint lowestBit = 0;
-                if (barLowValue != 0)
-                 { // kleiner als 4 GByte :
-                   lowestBit = get_number_of_lowest_set_bit(barLowValue);
-                   // es muss eine gültige kleine 64Bit-Adresse sein :
-                   if ( (barHighValue != 0xFFFFFFFF) || (get_number_of_highest_set_bit(barLowValue) != 31) || (lowestBit > 31) || (lowestBit < 4) )
-                    { printf("FEHLER : 64Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits im unteren Adressteil!\n",bar); return; }
-                 }
-                else
-                 { // größer/gleich als 4 GByte :
-                   lowestBit = get_number_of_lowest_set_bit(barHighValue) + 32;
-                   // es muss eine gültige große 64Bit-Adresse sein :
-                   if ( (get_number_of_highest_set_bit(barHighValue) != 31) || (lowestBit > 63) || (lowestBit < 32) )
-                    { printf("FEHLER : 64Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits im oberen Adressteil!\n",bar); return; }
-                 }
-
-                // BAR-Infos ausgeben :
-                printf("BAR %u enhält eine %s 64Bit-Memory-Ressource mit einer Größe von 2^%u Bytes.\n",bar,ptext,lowestBit);
-
-                // den nachfolgenden BAR für die Analyse überspringen :
-                ++bar;
-
-                // BAR-Infos ausgeben :
-                printf("BAR %u ist nicht nutzbar da er die oberen 32 Bits des vorrangegangenen 64Bit-BARs enthält\n",bar);
-                }
-                break;
-
-              default: // ungültiger Memory-BAR :
-                printf("FEHLER : Memory-BAR %u ist ungültig!\n",bar); return;
-            }
-         }
-        else
-         { // IO-Ressource :
-           pci_config_writed(addr,barOffset,0xFFFFFFFC); // mit lauter 1en überschreiben
-           const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFFC; // und wieder zurücklesen
-           if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
-            { printf("FEHLER : IO-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
-
-           const uint lowestBit  = get_number_of_lowest_set_bit(barValue);
-           const uint highestBit = get_number_of_highest_set_bit(barValue);
-           // es muss entwerder eine gültige 32Bit-Adresse oder eine gültige 16Bit-Adresse sein :
-           if ( ( (highestBit != 31) && (highestBit != 15) ) || (highestBit < lowestBit) || (lowestBit < 2) )
-            { printf("FEHLER : IO-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
-
-           // BAR-Infos ausgeben :
-           printf("BAR %u enhält eine %uBit-IO-Ressource mit einer Größe von 2^%u Bytes.\n",bar,highestBit+1,lowestBit);
-         }
-      }
-     if (bar != max_bars)
-      { printf("interner Fehler in Schleife!\n"); return; }
-
-}\</c\>
+``` c
+  1 /*** Diesen Code darf jeder, unter Berücksichtigung der Lizenz für diesen Wiki-Artikel, zu jedem Zweck kopieren, nutzen und verändern!
+  2      (C) <http://www.lowlevel.eu/> ***/
+  3 
+  4 
+  5 /* deklariert einen Typ der Bus, Device und Function enthält um ein bestimmtes PCI-Gerät zu adressieren,
+  6    außerdem bin ich einfach zu faul 3 Einzelwerte durch meinen Quäl-Code zu schicken */
+  7 typedef  ....  pci_bdf_t;
+  8 
+  9 /* ließt einen 32Bit-Wert aus dem Config-Space vom PCI-Gerät (addr) an Offset (offset) und gibt ihn zurück */
+ 10 extern uint32_t pci_config_readd(pci_bdf_t addr,uint offset);
+ 11 
+ 12 /* schreibt einen 32Bit-Wert (value) in den Config-Space vom PCI-Gerät (addr) an Offset (offset) */
+ 13 extern void pci_config_writed(pci_bdf_t addr,uint offset,uint32_t value);
+ 14 
+ 15 
+ 16 /* sucht das unterste gesetzte Bit in einem 32Bit-Wert , value darf nicht 0 sein */
+ 17 static uint get_number_of_lowest_set_bit(uint32_t value);
+ 18 static uint get_number_of_lowest_set_bit(uint32_t value)
+ 19 {
+ 20   uint pos = 0;
+ 21   uint32_t mask = 0x00000001;
+ 22   while (!(value & mask))
+ 23    { ++pos; mask=mask<<1; }
+ 24   return pos;
+ 25 }
+ 26 
+ 27 /* sucht das oberste gesetzte Bit in einem 32Bit-Wert , value darf nicht 0 sein */
+ 28 static uint get_number_of_highest_set_bit(uint32_t value);
+ 29 static uint get_number_of_highest_set_bit(uint32_t value)
+ 30 {
+ 31   uint pos = 31;
+ 32   uint32_t mask = 0x80000000;
+ 33   while (!(value & mask))
+ 34    { --pos; mask=mask>>1; }
+ 35   return pos;
+ 36 }
+ 37 
+ 38 
+ 39 /* analysiert die BARs eines bestimmten PCI-Gerätes, das PCI-Gerät sollte hierfür unbenutzt sein */
+ 40 void pci_config_bar_analyze(const pci_bdf_t addr)
+ 41 {
+ 42   // Header-Type auslesen um zu ermitteln wie viele BARs vorhanden sind :
+ 43   const uint32_t headerType = ( pci_config_readd(addr,0x00C) >> 16 ) & 0x7F;
+ 44   // es werden nur Type 0x00 (normale Devices) und 0x01 (PCI-to-PCI-Bridges) unterstützt :
+ 45   if (headerType >= 0x02)
+ 46    { printf("FEHLER : nicht unterstützter Header-Type gefunden!\n"); return; }
+ 47 
+ 48   // 6 BARs für Type 0x00 und 2 BARs für Type 0x01 :
+ 49   const uint max_bars = 6 - (headerType * 4);
+ 50 
+ 51   for (uint bar = 0 ; bar < max_bars ; ++bar)
+ 52    {
+ 53      // Offset des aktuellen BAR ermitteln :
+ 54      const uint barOffset = 0x010+(bar*4);
+ 55 
+ 56      // prüfen ob Speicher oder IO :
+ 57      if ( (pci_config_readd(addr,barOffset) & 0x1) == 0 )
+ 58       { // Speicher-Ressource :
+ 59 
+ 60         // Prefetchable-Bit auslesen und passenden Text auswählen :
+ 61         static const char* ptext_pref = "prefetchable"; // Text für prefetchable
+ 62         static const char* ptext_nopr = "non-prefetchable"; // Text für non-prefetchable
+ 63         const char* const ptext = (((pci_config_readd(addr,barOffset) >> 3) & 0x1) == 1) ? ptext_pref : ptext_nopr;
+ 64 
+ 65         // check Memory-BAR-Type :
+ 66         switch((pci_config_readd(addr,barOffset) >> 1) & 0x3)
+ 67          {
+ 68            case 0x0: // 32Bit Memory-BAR :
+ 69              {
+ 70              pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
+ 71              const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
+ 72              if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
+ 73               {
+ 74                 if (ptext != ptext_nopr) // unbenutzte BARs müssen komplett 0 sein (auch das Prefetchable-Bit darf nicht gesetzt sein)
+ 75                  { printf("FEHLER : 32Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
+ 76 
+ 77                 // BAR-Infos ausgeben :
+ 78                 printf("BAR %u ist unbenutzt.\n",bar);
+ 79               }
+ 80              else
+ 81               {
+ 82                 const uint lowestBit = get_number_of_lowest_set_bit(barValue);
+ 83                 // es muss eine gültige 32Bit-Adresse sein :
+ 84                 if ( (get_number_of_highest_set_bit(barValue) != 31) || (lowestBit > 31) || (lowestBit < 4) )
+ 85                  { printf("FEHLER : 32Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
+ 86 
+ 87                 // BAR-Infos ausgeben :
+ 88                 printf("BAR %u enhält eine %s 32Bit-Memory-Ressource mit einer Größe von 2^%u Bytes.\n",bar,ptext,lowestBit);
+ 89               }
+ 90              }
+ 91              break;
+ 92 
+ 93            case 0x1: // 20Bit Memory-BAR :
+ 94              {
+ 95              if (headerType == 0x01)
+ 96               { printf("FEHLER : 20Bit-Memory-BAR %u ist für eine Bridge nicht erlaubt!\n",bar); return; }
+ 97 
+ 98              pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
+ 99              const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
+100              if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
+101               { printf("FEHLER : 20Bit-Memory-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
+102 
+103              const uint lowestBit = get_number_of_lowest_set_bit(barValue);
+104              // es muss eine gültige 20Bit-Adresse sein :
+105              if ( (get_number_of_highest_set_bit(barValue) != 19) || (lowestBit > 19) || (lowestBit < 4) )
+106               { printf("FEHLER : 20Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
+107 
+108              // BAR-Infos ausgeben :
+109              printf("BAR %u enhält eine %s 20Bit-Memory-Ressource mit einer Größe von 2^%u Bytes.\n",bar,ptext,lowestBit);
+110              }
+111              break;
+112 
+113            case 0x2: // 64Bit Memory-BAR :
+114              {
+115              // prüfen ob ein 64Bit-BAR an der aktuellen Position überhaupt möglich ist :
+116              if (bar >= (max_bars-1))
+117               { printf("FEHLER : 64Bit-Memory-BAR %u darf nicht an letzter Position beginnen!\n",bar); return; }
+118              // non-prefetchable 64-BARs können nicht hinter Bridges benutzt werden (? aber in der Spec sind sie nicht verboten ?) :
+119              if (ptext != &ptext_pref[0])
+120               { printf("FEHLER : 64Bit-Memory-BAR %u enthält eine non-prefetchable Memory-Ressource!\n",bar); return; }
+121 
+122              pci_config_writed(addr,barOffset,0xFFFFFFF0); // mit lauter 1en überschreiben
+123              pci_config_writed(addr,barOffset+4,0xFFFFFFFF); // mit lauter 1en überschreiben
+124              const uint32_t barLowValue  = pci_config_readd(addr,barOffset) & 0xFFFFFFF0; // und wieder zurücklesen
+125              const uint32_t barHighValue = pci_config_readd(addr,barOffset+4); // und wieder zurücklesen
+126 
+127              uint lowestBit = 0;
+128              if (barLowValue != 0)
+129               { // kleiner als 4 GByte :
+130                 lowestBit = get_number_of_lowest_set_bit(barLowValue);
+131                 // es muss eine gültige kleine 64Bit-Adresse sein :
+132                 if ( (barHighValue != 0xFFFFFFFF) || (get_number_of_highest_set_bit(barLowValue) != 31) || (lowestBit > 31) || (lowestBit < 4) )
+133                  { printf("FEHLER : 64Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits im unteren Adressteil!\n",bar); return; }
+134               }
+135              else
+136               { // größer/gleich als 4 GByte :
+137                 lowestBit = get_number_of_lowest_set_bit(barHighValue) + 32;
+138                 // es muss eine gültige große 64Bit-Adresse sein :
+139                 if ( (get_number_of_highest_set_bit(barHighValue) != 31) || (lowestBit > 63) || (lowestBit < 32) )
+140                  { printf("FEHLER : 64Bit-Memory-BAR %u enthält ungültige beschreibbare Adressbits im oberen Adressteil!\n",bar); return; }
+141               }
+142 
+143              // BAR-Infos ausgeben :
+144              printf("BAR %u enhält eine %s 64Bit-Memory-Ressource mit einer Größe von 2^%u Bytes.\n",bar,ptext,lowestBit);
+145 
+146              // den nachfolgenden BAR für die Analyse überspringen :
+147              ++bar;
+148 
+149              // BAR-Infos ausgeben :
+150              printf("BAR %u ist nicht nutzbar da er die oberen 32 Bits des vorrangegangenen 64Bit-BARs enthält\n",bar);
+151              }
+152              break;
+153 
+154            default: // ungültiger Memory-BAR :
+155              printf("FEHLER : Memory-BAR %u ist ungültig!\n",bar); return;
+156          }
+157       }
+158      else
+159       { // IO-Ressource :
+160         pci_config_writed(addr,barOffset,0xFFFFFFFC); // mit lauter 1en überschreiben
+161         const uint32_t barValue = pci_config_readd(addr,barOffset) & 0xFFFFFFFC; // und wieder zurücklesen
+162         if (barValue == 0) // es muss mindestens ein Adressbit 1 (also beschreibbar) sein
+163          { printf("FEHLER : IO-BAR %u enthält keine beschreibbaren Adressbits!\n",bar); return; }
+164 
+165         const uint lowestBit  = get_number_of_lowest_set_bit(barValue);
+166         const uint highestBit = get_number_of_highest_set_bit(barValue);
+167         // es muss entwerder eine gültige 32Bit-Adresse oder eine gültige 16Bit-Adresse sein :
+168         if ( ( (highestBit != 31) && (highestBit != 15) ) || (highestBit < lowestBit) || (lowestBit < 2) )
+169          { printf("FEHLER : IO-BAR %u enthält ungültige beschreibbare Adressbits!\n",bar); return; }
+170 
+171         // BAR-Infos ausgeben :
+172         printf("BAR %u enhält eine %uBit-IO-Ressource mit einer Größe von 2^%u Bytes.\n",bar,highestBit+1,lowestBit);
+173       }
+174    }
+175   if (bar != max_bars)
+176    { printf("interner Fehler in Schleife!\n"); return; }
+177 }
+```
 
 ### Zugriff auf den Konfigurations-Adressraum
 
@@ -348,48 +353,40 @@ Gelesen und beschrieben wird der Konfigurations-Adressraum, bei PCs, 32bit-weise
 
 #### Codebeispiel
 
-\<c\>
-
-1.  define PCI_CONFIG_DATA 0x0CFC
-2.  define PCI_CONFIG_ADDRESS 0x0CF8
-
-/\*\*
-
-    * Liest ein Dword aus einem PCI-Konfigurations-Register
-    *  @param bus Bus
-    *  @param dev Gerät
-    *  @param func Funktion
-    *  @param offset Registernummer
-    *  @return Register content
-    */
-
-int pci_config_readd(int bus,int dev,int func,int offset) {
-
-     int val;
-     int address = 0x80000000|(bus<<16)|(dev<<11)|(func<<8)|(offset&0xFC);
-     outl(PCI_CONFIG_ADDRESS,address);
-     val = inl(PCI_CONFIG_DATA);
-     return val;
-
-}
-
-/\*\*
-
-    * Schreibt ein Dword in ein PCI-Konfigurations-Register
-    *  @param bus Bus
-    *  @param dev Gerät
-    *  @param func Funktion
-    *  @param offset Registernummer
-    *  @param val Wert zum Schreiben
-    */
-
-void pci_config_writed(int bus,int dev,int func,int offset,int val) {
-
-     int address = 0x80000000|(bus<<16)|(dev<<11)|(func<<8)|(offset&0xFC);
-     outl(PCI_CONFIG_ADDRESS,address);
-     outl(PCI_CONFIG_DATA,val);
-
-} \</c\>
+``` javascript
+ 1 #define PCI_CONFIG_DATA    0x0CFC
+ 2 #define PCI_CONFIG_ADDRESS 0x0CF8
+ 3 
+ 4 /**
+ 5  * Liest ein Dword aus einem PCI-Konfigurations-Register
+ 6  *  @param bus Bus
+ 7  *  @param dev Gerät
+ 8  *  @param func Funktion
+ 9  *  @param offset Registernummer
+10  *  @return Register content
+11  */
+12 int pci_config_readd(int bus,int dev,int func,int offset) {
+13   int val;
+14   int address = 0x80000000|(bus<<16)|(dev<<11)|(func<<8)|(offset&0xFC);
+15   outl(PCI_CONFIG_ADDRESS,address);
+16   val = inl(PCI_CONFIG_DATA);
+17   return val;
+18 }
+19 
+20 /**
+21  * Schreibt ein Dword in ein PCI-Konfigurations-Register
+22  *  @param bus Bus
+23  *  @param dev Gerät
+24  *  @param func Funktion
+25  *  @param offset Registernummer
+26  *  @param val Wert zum Schreiben
+27  */
+28 void pci_config_writed(int bus,int dev,int func,int offset,int val) {
+29   int address = 0x80000000|(bus<<16)|(dev<<11)|(func<<8)|(offset&0xFC);
+30   outl(PCI_CONFIG_ADDRESS,address);
+31   outl(PCI_CONFIG_DATA,val);
+32 }
+```
 
 ## Classcodes
 
@@ -660,6 +657,6 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11181/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11410/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1626/index.html)
 
-<!-- MediaWiki page 1626; revision 11181; parent 11178; 2013-12-11T12:48:02Z -->
+<!-- MediaWiki page 1626; revision 11410; parent 11181; 2019-11-14T23:26:29Z -->
