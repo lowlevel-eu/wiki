@@ -215,23 +215,19 @@ Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits 
 
 ### Assembler Beispielcode
 
-\<asm\>
-
-Ein Makro um ein Byte aus dem CMOS auszulesen
-
-Der einzige Parameter ist das Offset des Bytes welches gelesen werden soll
-
-Rückgabe ist das gelesene Byte in AL
+``` asm
+;Ein Makro um ein Byte aus dem CMOS auszulesen
+;Der einzige Parameter ist das Offset des Bytes welches gelesen werden soll
+;Rückgabe ist das gelesene Byte in AL
 
 %macro read_byte 1
-
-     in al, 0x70         ;Bit 7 des Ports sichern
-     and al, 10000000b
-     or al, %1           ;Offset (Parameter 1) dazumixen
-     out 0x70, al        ;Offset setzen
-     in al, 0x71         ;Byte lesen
-
-%endmacro \</asm\>
+  in al, 0x70         ;Bit 7 des Ports sichern
+  and al, 10000000b
+  or al, %1           ;Offset (Parameter 1) dazumixen
+  out 0x70, al        ;Offset setzen
+  in al, 0x71         ;Byte lesen
+%endmacro
+```
 
 ### C/C++ Beispielcode
 
@@ -271,6 +267,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11413/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 11412; parent 10548; 2019-11-15T14:15:05Z -->
+<!-- MediaWiki page 1562; revision 11413; parent 11412; 2019-11-15T14:15:23Z -->
