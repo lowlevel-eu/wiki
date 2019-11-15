@@ -235,40 +235,32 @@ Rückgabe ist das gelesene Byte in AL
 
 ### C/C++ Beispielcode
 
-\<c\>
+``` c
+#define CMOS_PORT_ADDRESS 0x70
+#define CMOS_PORT_DATA    0x71
 
-1.  define CMOS_PORT_ADDRESS 0x70
-2.  define CMOS_PORT_DATA 0x71
-
-/\*\*
-
-    * Liest ein Byte aus den CMOS
-    *  @param offset Offset im CMOS
-    *  @return Gelesener Wert
-    */
-
+/**
+ * Liest ein Byte aus den CMOS
+ *  @param offset Offset im CMOS
+ *  @return Gelesener Wert
+ */
 uint8_t cmos_read(uint8_t offset) {
-
-     uint8_t tmp = inb(CMOS_PORT_ADDRESS);
-     outb(CMOS_PORT_ADDRESS, (tmp & 0x80) | (offset & 0x7F));
-     return inb(CMOS_PORT_DATA);
-
+  uint8_t tmp = inb(CMOS_PORT_ADDRESS);
+  outb(CMOS_PORT_ADDRESS, (tmp & 0x80) | (offset & 0x7F));
+  return inb(CMOS_PORT_DATA);
 }
 
-/\*\*
-
-    * Schreibt ein Byte in das CMOS
-    *  @param offset Offset im CMOS
-    *  @param val Zu schreibender Wert
-    */
-
+/**
+ * Schreibt ein Byte in das CMOS
+ *  @param offset Offset im CMOS
+ *  @param val Zu schreibender Wert
+ */
 void cmos_write(uint8_t offset,uint8_t val) {
-
-     uint8_t tmp = inb(CMOS_PORT_ADDRESS);
-     outb(CMOS_PORT_ADDRESS, (tmp & 0x80) | (offset & 0x7F));
-     outb(CMOS_PORT_DATA,val);
-
-} \</c\>
+  uint8_t tmp = inb(CMOS_PORT_ADDRESS);
+  outb(CMOS_PORT_ADDRESS, (tmp & 0x80) | (offset & 0x7F));
+  outb(CMOS_PORT_DATA,val);
+}
+```
 
 ## Weblinks
 
@@ -279,6 +271,6 @@ void cmos_write(uint8_t offset,uint8_t val) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10548/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11412/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1562/index.html)
 
-<!-- MediaWiki page 1562; revision 10548; parent 10547; 2012-04-02T21:22:57Z -->
+<!-- MediaWiki page 1562; revision 11412; parent 10548; 2019-11-15T14:15:05Z -->
