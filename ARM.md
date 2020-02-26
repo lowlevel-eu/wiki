@@ -20,11 +20,7 @@ Die „Lowlevel-Programmierung“ eines ARM-Prozessors mit Assembler unterscheid
 
 Anders als die x86-Architektur verfügt der ARM über einen Drei-Register-Befehlssatz, welcher es bei arithmetischen und logischen Befehlen ermöglicht, einen Ziel- sowie zwei Quellregister anzugeben:
 
-\<asm\>
-
     add r0, r1, r2   ; r0 := r1 + r2
-
-\</asm\>
 
 Zusätzlich kann der zweite Quelloperand noch um einen bestimmten Wert rotiert oder geshiftet werden, der entweder fest angegeben oder einem weiteren Register entnommen wird. Somit können an einem arithmetisch-logischen Befehl bis zu vier Register beteiligt sein (z. B. entspricht ein „orr r0,r1,r2,lsl r3“ einem „r0 := r1 \| (r2 \<\< r3)“).
 
@@ -146,6 +142,6 @@ Um von einer Exception zurückzukehren, müssen gleichzeitig r14 nach r15 und da
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10326/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11415/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2101/index.html)
 
-<!-- MediaWiki page 2101; revision 10326; parent 10012; 2011-11-26T21:37:04Z -->
+<!-- MediaWiki page 2101; revision 11415; parent 10326; 2020-02-26T17:38:42Z -->
