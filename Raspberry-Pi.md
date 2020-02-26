@@ -38,7 +38,12 @@ Während die A-Variante mit 256 MB auskommen muss, wurden der B-Variante in der 
 
 Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware anbauen kann (z.B. eine Platine mit Temperatursensoren). Elektrotechnisch interessierte können somit also - anders als bei handelsüblichen PCs - eigene Bauteile entwerfen, für die man dann sogar die Unterstützung im eigenen Betriebssystem einbauen kann.
 
-  
+## Prozessor
+
+Beim Prozessor handelt es sich um einen [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") Prozessor, der so oder ähnlich auch in Handies vorkommt:
+
+    pi@raspberrypi:~ $ uname -m
+    armv6l
 
 ## Weblinks
 
@@ -46,6 +51,6 @@ Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11120/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11120; parent 11098; 2013-05-23T10:12:29Z -->
+<!-- MediaWiki page 2637; revision 11416; parent 11120; 2020-02-26T18:10:30Z -->
