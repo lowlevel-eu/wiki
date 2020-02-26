@@ -45,12 +45,26 @@ Beim Prozessor handelt es sich um einen [ARM](https://github.com/lowlevel-eu/wik
     pi@raspberrypi:~ $ uname -m
     armv6l
 
+Die Main-Routine eines C-Programms, welches nur mittels printf hello world ausgibt, sieht so aus:
+
+    00010408 <main>:
+       10408:       e92d4800        push    {fp, lr}
+       1040c:       e28db004        add     fp, sp, #4
+       10410:       e59f000c        ldr     r0, [pc, #12]   ; 10424 <main+0x1c>
+       10414:       ebffffb3        bl      102e8 <printf@plt>
+       10418:       e3a03000        mov     r3, #0
+       1041c:       e1a00003        mov     r0, r3
+       10420:       e8bd8800        pop     {fp, pc}
+       10424:       00010498        .word   0x00010498
+
+Man erkennt die feste Befehlsbreite - jeder Maschinensprachenbefehl ist 4 Bytes lang.
+
 ## Weblinks
 
 - [elinux Raspberry Pi osdev](http://elinux.org/RaspberryPi_Osdev)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11416/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11416; parent 11120; 2020-02-26T18:10:30Z -->
+<!-- MediaWiki page 2637; revision 11417; parent 11416; 2020-02-26T18:15:18Z -->
