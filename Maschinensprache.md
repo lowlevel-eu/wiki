@@ -1,6 +1,6 @@
 # Maschinensprache
 
-Maschinensprache sind die Befehle, die direkt vom Prozessor ausgefuehrt werden. Schauen wir sie uns mal in Linux auf einem Intel-Rechner an. Zunächst schreiben wir ein "hello world" Programm in Assembler:
+Maschinensprache sind die Befehle, die direkt vom Prozessor ausgefuehrt werden. Schauen wir sie uns mal in Linux auf einem Intel-Rechner an. Zunächst schreiben wir ein "hello world" Programm in C:
 
     #include <stdio.h>
     int main()
@@ -68,6 +68,6 @@ Zum disassemblieren geben wir ein:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11418/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2654/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11419/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2654/index.html)
 
-<!-- MediaWiki page 2654; revision 11418; parent 11226; 2020-02-26T19:16:18Z -->
+<!-- MediaWiki page 2654; revision 11419; parent 11418; 2020-02-26T19:16:53Z -->
