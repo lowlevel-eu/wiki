@@ -60,7 +60,7 @@ Im Moment sind die folgenden Features implementiert:
 
 Ausschnitt aus einer Partie gegen das Schachprogramm auf schwacher Stufe (Denktiefe: 1 fest + 1 adaptiv):
 
-[![schach.png](https://s32.postimg.org/vti2u35tt/schach.png)](https://postimg.org/image/vti2u35tt/)
+[![schach.png](https://s32.postimg.org/vti2u35tt/schach.png)](https://postimg.org/image/vti2u35tt/) (link momentan offline)
 
 ## Beispiel-Programm für die spezielle C-Bibliothek
 
@@ -116,6 +116,6 @@ Hier eine aktuelle ToDo-Liste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11427/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11427; parent 11426; 2020-03-10T15:34:02Z -->
+<!-- MediaWiki page 2233; revision 11428; parent 11427; 2020-03-10T15:35:15Z -->
