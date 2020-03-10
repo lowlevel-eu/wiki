@@ -23,7 +23,7 @@ SurO ist ein HobbyOS, welches durch einen Programmierwettstreit entstanden ist. 
 
 Intern geschossener Screenshot mit diversen Programmen auf verschiedenen verschobenen Hyperebenen.
 
-[![image.jpg](http://s18.postimg.org/xjxi14945/image.jpg)](http://postimg.org/image/xjxi14945/)
+Datei:Http://homepages.uni-paderborn.de/neuron/suro/suro.png
 
 Sichtbare Programme: Datum, Uhrzeit, Tetris, Mandelbrot, Editor mit ASCII-Code des Mandelbrotprogrammes.
 
@@ -118,6 +118,6 @@ Hier eine aktuelle ToDo-Liste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11378/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11421/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11378; parent 11369; 2017-08-07T19:00:14Z -->
+<!-- MediaWiki page 2233; revision 11421; parent 11378; 2020-03-10T15:24:08Z -->
