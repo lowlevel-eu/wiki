@@ -68,17 +68,17 @@ Ausschnitt aus einer Partie gegen das Schachprogramm auf schwacher Stufe (Denkti
 #include "surlib.h"
 
 void main(){
- sur_HE_erstelle_std();                 //Grafikfenster erstellen
- sur_HE_clear(0x00330011);              //mit aRGB-Wert Füllen
- sur_Eingabe_registriereTasten_AlifNum();       //Alphanumerische Tastatur anfordern
- char cha[2]; cha[1]=0;                 //Nullterminiertes Zeichen
+ sur_HE_erstelle_std();                             //Grafikfenster erstellen
+ sur_HE_clear(0x00330011);                          //mit aRGB-Wert Füllen
+ sur_Eingabe_registriereTasten_AlifNum();           //Alphanumerische Tastatur anfordern
+ char cha[2]; cha[1]=0;                             //Nullterminiertes Zeichen
  sur_HE_male_cstring("Hallo",0x4040,0x0000ffff);    //schreibe "Hallo" in Türkis auf den Bildschirm
-                             //zweiter parameter ist die Position 0x400*y+x
-  sur_Eingabe_warteTaste(cha);              //auf einen Tastendruck warten
-  sur_wandle_deKey2ANSI(cha);               //deutschen Tastencode in Schriftzeichen umwandeln
+                                                     //zweiter parameter ist die Position 0x400*y+x
+  sur_Eingabe_warteTaste(cha);                      //auf einen Tastendruck warten
+  sur_wandle_deKey2ANSI(cha);                       //deutschen Tastencode in Schriftzeichen umwandeln
  sur_HE_male_cstring("Welt!",0x4070,0x00ffff00);    //schreibe "Welt!" in Gelb auf den Bildschirm
   sur_HE_male_cstring(cha,0x8040,0x0000ff00);       //Gib das Zeichen von der Tastatur in Grün aus
- sur_sys_prog_ende();                   //Beende das Programm
+ sur_sys_prog_ende();                               //Beende das Programm
 }
 ```
 
@@ -118,6 +118,6 @@ Hier eine aktuelle ToDo-Liste:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11429/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11430/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2233/index.html)
 
-<!-- MediaWiki page 2233; revision 11429; parent 11428; 2020-03-23T10:16:20Z -->
+<!-- MediaWiki page 2233; revision 11430; parent 11429; 2020-03-23T10:20:25Z -->
