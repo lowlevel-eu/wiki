@@ -47,6 +47,6 @@ Nun kann man das ganze zu einer Funktion zusammensetzen:
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11054/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2639/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11453/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2639/index.html)
 
-<!-- MediaWiki page 2639; revision 11054; parent 0; 2013-03-20T12:46:53Z -->
+<!-- MediaWiki page 2639; revision 11453; parent 11054; 2020-08-02T22:12:58Z -->
