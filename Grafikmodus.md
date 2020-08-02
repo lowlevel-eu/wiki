@@ -67,6 +67,6 @@ void linie(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2639/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2639/index.html)
 
-<!-- MediaWiki page 2639; revision 11462; parent 11457; 2020-08-02T22:30:57Z -->
+<!-- MediaWiki page 2639; revision 11463; parent 11462; 2020-08-02T22:32:18Z -->
