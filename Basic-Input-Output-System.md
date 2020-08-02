@@ -25,6 +25,6 @@ Diese Funktionalität geht allerdings verloren, wenn man in den [Protected Mode]
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10925/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11447/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1616/index.html)
 
-<!-- MediaWiki page 1616; revision 10925; parent 10924; 2012-11-02T10:31:20Z -->
+<!-- MediaWiki page 1616; revision 11447; parent 10925; 2020-08-02T21:59:26Z -->
