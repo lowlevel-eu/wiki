@@ -147,6 +147,6 @@ void removecursor()
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11402/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11448/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1549/index.html)
 
-<!-- MediaWiki page 1549; revision 11402; parent 10142; 2018-09-05T01:11:27Z -->
+<!-- MediaWiki page 1549; revision 11448; parent 11402; 2020-08-02T22:01:56Z -->
