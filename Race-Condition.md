@@ -4,24 +4,32 @@ Eine Race Condition (auf Deutsch „kritischer Wettlauf“, wörtlich „Wettlau
 
 ## Beispiel
 
-Wie könnte eine Race Condition aussehen? Meistens handelt es sich um zwei [Prozesse](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess"), die die gleiche Funktion ausführen. Nehmen wir also eine hypothetische Funktion namens I_want_the_printer_now(), die den Drucker für den aktuellen Prozess reserviert, damit kein anderer Prozess darauf zugreifen kann. Außerdem gibt es eine Funktion, die den Drucker wieder freigibt, release_printer(). Der Code könnte zum Beispiel so aussehen: \<c\>static int printer_reserved = 0;
+Wie könnte eine Race Condition aussehen? Meistens handelt es sich um zwei [Prozesse](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess"), die die gleiche Funktion ausführen. Nehmen wir also eine hypothetische Funktion namens `I_want_the_printer_now()`, die den Drucker für den aktuellen Prozess reserviert, damit kein anderer Prozess darauf zugreifen kann. Außerdem gibt es eine Funktion, die den Drucker wieder freigibt, `release_printer()`. Der Code könnte zum Beispiel so aussehen:
 
-void I_want_the_printer_now() {
+``` c
+static int printer_reserved = 0;
 
-     while (printer_reserved);
-     printer_reserved = 1;
-
+void I_want_the_printer_now()
+{
+  while (printer_reserved);
+  printer_reserved = 1;
 }
 
-void release_printer() {
+void release_printer()
+{
+  printer_reserved = 0;
+}
+```
 
-     printer_reserved = 0;
+Wenn ein Prozess drucken möchte, macht er das folgendermaßen:
 
-}\</c\>
+``` c
+I_want_the_printer_now();
+//Drucken, drucken, drucken...
+release_printer()
+```
 
-Wenn ein Prozess drucken möchte, macht er das folgendermaßen: \<c\>I_want_the_printer_now(); //Drucken, drucken, drucken... release_printer()\</c\>
-
-Was passiert nun, wenn zwei Prozesse versuchen, zu drucken? Normalerweise wird zuerst I_want_the_printer_now() ausgeführt, dann unterbricht der Scheduler während des Druckens und der nächste Prozess stellt fest, dass der Drucker belegt ist. Das läuft dann so ab:
+Was passiert nun, wenn zwei Prozesse versuchen, zu drucken? Normalerweise wird zuerst `I_want_the_printer_now()` ausgeführt, dann unterbricht der Scheduler während des Druckens und der nächste Prozess stellt fest, dass der Drucker belegt ist. Das läuft dann so ab:
 
 | Prozess A | printer_reserved | Prozess B |
 | --------------------------- | ------------------ | --------------------------- |
@@ -76,6 +84,6 @@ In anderen Fällen wird man versuchen, das Sperren der Ressource „atomar“ zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7790/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
 
-<!-- MediaWiki page 2013; revision 7790; parent 7787; 2010-07-05T09:26:03Z -->
+<!-- MediaWiki page 2013; revision 11431; parent 7790; 2020-08-02T21:34:53Z -->
