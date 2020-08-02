@@ -82,6 +82,6 @@ Einzelschritte ausführen lassen.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10580/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2163/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11439/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2163/index.html)
 
-<!-- MediaWiki page 2163; revision 10580; parent 7672; 2012-04-22T00:04:27Z -->
+<!-- MediaWiki page 2163; revision 11439; parent 10580; 2020-08-02T21:53:17Z -->
