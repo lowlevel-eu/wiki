@@ -62,6 +62,6 @@ Secure-Boot ist eine stark von Microsoft kontrollierte Technik, die es anderen B
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11350/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
 
-<!-- MediaWiki page 2612; revision 11350; parent 11349; 2016-06-26T14:21:17Z -->
+<!-- MediaWiki page 2612; revision 11446; parent 11350; 2020-08-02T21:58:53Z -->
