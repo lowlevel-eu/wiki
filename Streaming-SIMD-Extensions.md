@@ -79,6 +79,6 @@ Hinweis: Das zuerst angegebene Register enthält das Ergebnis.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11231/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11445/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2199/index.html)
 
-<!-- MediaWiki page 2199; revision 11231; parent 11229; 2014-12-13T13:39:19Z -->
+<!-- MediaWiki page 2199; revision 11445; parent 11231; 2020-08-02T21:57:51Z -->
