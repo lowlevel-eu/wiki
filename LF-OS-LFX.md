@@ -1,5 +1,13 @@
 # LF OS/LFX
 
+**Löschhinweis:**
+
+Dieser Artikel wurde zum Löschen vorgeschlagen.
+
+Ich war jung, ich hatte keine Ahnung - also noch weniger als jetzt x) -- [Littlefox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") (Diskussion) 00:07, 3. Aug. 2020 (CEST)
+
+  
+
 # Spezifikation des LFX Dateiformates
 
 | Adresse | Wert | Beschreibung |
@@ -39,6 +47,6 @@ Auf meiner Internetseite [http://littlefox.web-fuxx.de](http://littlefox.web-fux
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8563/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2315/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11449/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2315/index.html)
 
-<!-- MediaWiki page 2315; revision 8563; parent 8562; 2010-10-09T11:06:18Z -->
+<!-- MediaWiki page 2315; revision 11449; parent 8563; 2020-08-02T22:07:20Z -->
