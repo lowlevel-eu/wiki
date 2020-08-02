@@ -30,6 +30,6 @@ Nachfolgend eine Tabelle mit allen neuen Instruktionen und der Funktionsweise
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5902/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2003/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11473/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2003/index.html)
 
-<!-- MediaWiki page 2003; revision 5902; parent 5900; 2009-09-15T12:42:40Z -->
+<!-- MediaWiki page 2003; revision 11473; parent 5902; 2020-08-02T23:42:21Z -->
