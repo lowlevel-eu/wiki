@@ -87,6 +87,6 @@ Die PAT ist seit Pentium-III-Prozessoren vorhanden. Ob eine CPU das Feature unte
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11374/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2662/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11434/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2662/index.html)
 
-<!-- MediaWiki page 2662; revision 11374; parent 0; 2017-01-23T23:20:09Z -->
+<!-- MediaWiki page 2662; revision 11434; parent 11374; 2020-08-02T21:47:32Z -->
