@@ -37,6 +37,6 @@ Die LEDs (Caps-Lock, Scroll-Lock, Num-Lock) können mittels eines Out-Reports ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11270/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1929/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11442/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1929/index.html)
 
-<!-- MediaWiki page 1929; revision 11270; parent 11266; 2015-04-10T15:15:39Z -->
+<!-- MediaWiki page 1929; revision 11442; parent 11270; 2020-08-02T21:55:43Z -->
