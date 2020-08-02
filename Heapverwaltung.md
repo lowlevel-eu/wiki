@@ -44,6 +44,6 @@ Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich a
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8650/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11452/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2229/index.html)
 
-<!-- MediaWiki page 2229; revision 8650; parent 8641; 2010-10-13T13:15:37Z -->
+<!-- MediaWiki page 2229; revision 11452; parent 8650; 2020-08-02T22:11:12Z -->
