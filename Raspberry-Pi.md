@@ -65,6 +65,6 @@ Man erkennt die feste Befehlsbreite - jeder Maschinensprachenbefehl ist 4 Bytes 
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11417/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11437/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2637/index.html)
 
-<!-- MediaWiki page 2637; revision 11417; parent 11416; 2020-02-26T18:15:18Z -->
+<!-- MediaWiki page 2637; revision 11437; parent 11417; 2020-08-02T21:50:09Z -->
