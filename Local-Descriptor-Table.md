@@ -8,6 +8,6 @@ Eine Local Descriptor Table ist genau so aufgebaut wie eine [Global Descriptor T
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5403/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2014/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11477/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2014/index.html)
 
-<!-- MediaWiki page 2014; revision 5403; parent 0; 2009-08-06T21:19:12Z -->
+<!-- MediaWiki page 2014; revision 11477; parent 5403; 2020-08-02T23:44:28Z -->
