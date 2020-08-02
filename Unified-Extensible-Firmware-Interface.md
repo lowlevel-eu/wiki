@@ -1,5 +1,12 @@
 # Unified Extensible Firmware Interface
 
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
+
+*nützliche Protokolle, gnu-efi und co erwähnen. Beispielcode (gerne mich mal wieder anhauen [Littlefox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") (Diskussion))*
+
+Hilf Lowlevel, den Artikel zu verbessern.
+
+  
 **Unified Extensible Firmware Interface** (oder kurz **UEFI**) ist der Nachfolger des [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), welches nach drei Jahrzehnten leicht veraltet war. So kann man mit dem typischen BIOS keine Festplatten mit sehr großer Speicherkapazität von über 2 TB addressieren, was mit dem UEFI möglich wird.
 
 Das UEFI ist der direkte Nachfolger von EFI (*Extensible Firmware Interface*). Seit 2005 existiert das Unified EFI Forum, in dem zahlreiche Unternehmen aus der IT-Branche vertreten sind. So wird der Standard nicht mehr ausschließlich von Intel festgelegt.
@@ -62,6 +69,6 @@ Secure-Boot ist eine stark von Microsoft kontrollierte Technik, die es anderen B
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11446/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11460/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2612/index.html)
 
-<!-- MediaWiki page 2612; revision 11446; parent 11350; 2020-08-02T21:58:53Z -->
+<!-- MediaWiki page 2612; revision 11460; parent 11446; 2020-08-02T22:27:52Z -->
