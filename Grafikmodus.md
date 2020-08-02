@@ -1,9 +1,12 @@
 # Grafikmodus
 
-Diese Seite ist ein Artikel, welcher **mehr** haben könnte..  
+Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
-Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
+*Bitte generische Infos über Grafikmodus und mehr Algorithmen dazu. [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") und diesen hier splitten, dieser hier allgemeines zum Pixel schubsen*
 
+Hilf Lowlevel, den Artikel zu verbessern.
+
+  
 Auch wenn die meisten Hobby-[Betriebssysteme](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") "nur" über eine [Kommandozeile](https://github.com/lowlevel-eu/wiki/wiki/Shell "Command Line Interface") verfügen, ist die Entwicklung einer [grafischen Benutzeroberfläche](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") ab einem gewissen Entwicklungsstand des Kernels auch ein interessantes Projekt.
 
 Allerdings kann man dem Bildschirm nicht einfach sagen, dass er einen Kreis oder eine Linie zeichnen soll. Man kann nur einzelne Pixel setzen, deshalb muss man sich um die Darstellung komplexerer - da zweidimensionaler - Formen selbst kümmern (Lowlevel-Zeichnen eben).
@@ -54,8 +57,16 @@ void linie(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)
 }
 ```
 
+## Siehe auch
+
+- [Double Buffering](https://github.com/lowlevel-eu/wiki/wiki/Double-Buffering "Double Buffering")
+- [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")
+- [Cirrus Logic](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic "Cirrus Logic")
+- [UEFI](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "UEFI")
+- [VBE](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VBE")
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2639/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11462/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2639/index.html)
 
-<!-- MediaWiki page 2639; revision 11457; parent 11453; 2020-08-02T22:16:05Z -->
+<!-- MediaWiki page 2639; revision 11462; parent 11457; 2020-08-02T22:30:57Z -->
