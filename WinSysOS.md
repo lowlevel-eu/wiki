@@ -161,6 +161,6 @@ FAT12 FAT32 CDFS NTFS ( in ganz ferner Zukunft )
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/10842/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2457/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11438/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2457/index.html)
 
-<!-- MediaWiki page 2457; revision 10842; parent 9958; 2012-09-16T14:28:39Z -->
+<!-- MediaWiki page 2457; revision 11438; parent 10842; 2020-08-02T21:51:07Z -->
