@@ -121,6 +121,6 @@ Im 32-Bit-Modus stehen nur YMM0 bis YMM7 zur Verfügung. Im 64-Bit-Modus sind al
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11214/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2649/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11444/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2649/index.html)
 
-<!-- MediaWiki page 2649; revision 11214; parent 11212; 2014-06-07T10:11:37Z -->
+<!-- MediaWiki page 2649; revision 11444; parent 11214; 2020-08-02T21:57:26Z -->
