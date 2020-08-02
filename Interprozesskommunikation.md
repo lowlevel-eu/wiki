@@ -45,6 +45,6 @@ Semaphore dienen nicht direkt zur Informationsübertragung, sie dienen viel mehr
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11474/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11475/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1530/index.html)
 
-<!-- MediaWiki page 1530; revision 11474; parent 7660; 2020-08-02T23:43:04Z -->
+<!-- MediaWiki page 1530; revision 11475; parent 11474; 2020-08-02T23:43:14Z -->
