@@ -104,6 +104,6 @@ void setpixel(int x, int y, unsigned char color) {
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11404/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11458/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1516/index.html)
 
-<!-- MediaWiki page 1516; revision 11404; parent 11166; 2018-09-05T01:19:57Z -->
+<!-- MediaWiki page 1516; revision 11458; parent 11404; 2020-08-02T22:24:24Z -->
