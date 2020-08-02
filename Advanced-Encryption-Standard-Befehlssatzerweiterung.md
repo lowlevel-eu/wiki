@@ -28,6 +28,6 @@ Wenn AESNI von der CPU unterstützt wird, dann ist das Bit 25 im Register ECX ge
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11211/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2651/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11443/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2651/index.html)
 
-<!-- MediaWiki page 2651; revision 11211; parent 11208; 2014-06-05T05:26:14Z -->
+<!-- MediaWiki page 2651; revision 11443; parent 11211; 2020-08-02T21:57:00Z -->
