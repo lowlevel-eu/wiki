@@ -163,6 +163,6 @@ Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11002/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11436/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1712/index.html)
 
-<!-- MediaWiki page 1712; revision 11002; parent 11001; 2013-02-20T00:51:36Z -->
+<!-- MediaWiki page 1712; revision 11436; parent 11002; 2020-08-02T21:49:15Z -->
