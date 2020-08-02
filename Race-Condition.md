@@ -84,6 +84,6 @@ In anderen Fällen wird man versuchen, das Sperren der Ressource „atomar“ zu
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11431/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11432/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2013/index.html)
 
-<!-- MediaWiki page 2013; revision 11431; parent 7790; 2020-08-02T21:34:53Z -->
+<!-- MediaWiki page 2013; revision 11432; parent 11431; 2020-08-02T21:37:28Z -->
