@@ -354,8 +354,22 @@ Aus \#lost (23. Juli 2011)
 
     [20:44] <Jidder> wir können ja mal ein formelles humorfeststellungsverfahren einleiten. das ergebnis wird kein witz sein.
 
+------------------------------------------------------------------------
+
+Aus \#lost (2020-08-04)
+
+    <kevin> Vermutlich ist das Wiki genau deshalb in dem Zustand, in dem es ist
+    <kevin> Also ich meine das Lowlevel-Wiki
+    <LittleFox> quasi ohne plugins meinst du?
+    <kevin> Ich glaube, ein paar Plugins hat es
+    <LittleFox> 2
+    <LittleFox> ^^
+    <LittleFox> syntaxhighlight (gerade broken)
+    <LittleFox> und parserlogic
+    <kevin> *ein Paar *g*
+
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9976/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11482/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1435/index.html)
 
-<!-- MediaWiki page 1435; revision 9976; parent 7625; 2011-07-23T21:33:10Z -->
+<!-- MediaWiki page 1435; revision 11482; parent 9976; 2020-08-08T22:42:58Z -->
