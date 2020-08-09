@@ -1,9 +1,9 @@
 # Clang
 
 | Allgemeines |  |
-| --------------- | --------------------------------------------------- |
+| --------------- | ----------------------------------------------------- |
 | Name: | Clang |
-| Entwickler: | [Das GCC-Team](https://clang.llvm.org/about.html) |
+| Entwickler: | [Das Clang-Team](https://clang.llvm.org/about.html) |
 | Akt. Version: | 10.0.1 |
 | Lizenz: | Apache 2.0 |
 | Plattform: | alle verbreiteten und ein paar andere |
@@ -30,6 +30,6 @@ Generell versucht Clang mit dem GCC kompatibel zu sein, verwendet die gleichen K
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11483/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2673/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11484/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2673/index.html)
 
-<!-- MediaWiki page 2673; revision 11483; parent 0; 2020-08-09T18:35:25Z -->
+<!-- MediaWiki page 2673; revision 11484; parent 11483; 2020-08-09T18:35:42Z -->
