@@ -1,10 +1,10 @@
 # C
 
 | Allgemeines |  |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | C |
 | Inlineassembler: | Ja |
-| Compiler: | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), icc, ... |
+| Compiler: | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), [Clang](https://github.com/lowlevel-eu/wiki/wiki/Clang "Clang"), icc, ... |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
 | Beispielkernel in der Sprache: | [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger") |
@@ -73,6 +73,6 @@ Aus analogem Grund sollte auch auf [Memory-mapped I/O](https://github.com/lowlev
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9457/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 9457; parent 8328; 2011-02-05T23:19:41Z -->
+<!-- MediaWiki page 1526; revision 11485; parent 9457; 2020-08-13T21:09:45Z -->
