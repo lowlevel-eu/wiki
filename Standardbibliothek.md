@@ -14,22 +14,16 @@ Hier sind nun ein paar Implementierungen aufgelistet.
 
 - Glibc
 - Newlib
-
-<!-- -->
-
-     * wird häufig für Hobby-OS verwendet da recht einfach zu portieren
+  - wird häufig für Hobby-OS verwendet da recht einfach zu portieren
 
 ### C++
 
 - GNU libstdc++
 - LLVM/Clang libc++
-
-<!-- -->
-
-     * erfolgreich für LF OS portiert
+  - erfolgreich für LF OS portiert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11503/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2679/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11504/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2679/index.html)
 
-<!-- MediaWiki page 2679; revision 11503; parent 0; 2020-08-20T13:33:00Z -->
+<!-- MediaWiki page 2679; revision 11504; parent 11503; 2020-08-20T13:33:18Z -->
