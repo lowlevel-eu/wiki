@@ -16,10 +16,10 @@ Und einem mit unserem traditionellen Skin:
 
 ## PDF
 
-Einzelne Artikel könnt ihr auch als PDF-Datei herunterladen z.B. zum Ausdrucken. Dazu klickt ihr (je nach Skin) *links* unter *"Werkzeuge"* auf **Als PDF ausgeben**.
+Einzelne Artikel könnt ihr auch als PDF-Datei herunterladen z.B. zum Ausdrucken. Dazu klickt ihr (je nach Skin) *links* unter *"Werkzeuge"* auf **Druckversion** und lasst euch diese vom Browser in eine PDF speichern.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9083/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2362/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11513/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2362/index.html)
 
-<!-- MediaWiki page 2362; revision 9083; parent 9082; 2010-12-23T09:43:45Z -->
+<!-- MediaWiki page 2362; revision 11513; parent 9083; 2020-08-20T14:11:12Z -->
