@@ -43,14 +43,14 @@ Bis das so weit läuft wirds aber wohl noch etwas dauern ... gerade funktioniert
   - schönes Logging in den Arbeitsspeicher und COM1 (und auf die Konsole bis ein Prozess den Framebuffer übernimmt)
   - ein paar coole Datenstrukturen, ein paar Unit-Tests für diese
   - ein paar Syscalls - definiert in einer YAML Datei und automatisch zu C-Code gemacht (Kernel- und Userspace-seitig)
-  - Anfänge von pthreads -\> aktuell aktivste Baustelle
+  - Anfänge von [pthreads](https://github.com/lowlevel-eu/wiki/wiki/POSIX-Threads "POSIX Threads") -\> aktuell aktivste Baustelle
 - init
   - kann sich den Framebuffer holen und lustige Dinge rendern
   - forkt dabei, nutzt pthread_mutex zur synchronisation
-- newlib, libc++, libc++abi, compiler-rt, clang mit LF OS Kenntnissen
+- newlib, libc++, libc++abi, compiler-rt, [Clang](https://github.com/lowlevel-eu/wiki/wiki/Clang "Clang") mit LF OS Kenntnissen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 11492; parent 11491; 2020-08-20T12:44:37Z -->
+<!-- MediaWiki page 2267; revision 11493; parent 11492; 2020-08-20T12:47:10Z -->
