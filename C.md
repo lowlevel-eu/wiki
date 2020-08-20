@@ -34,29 +34,41 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 ### *volatile*
 
-*volatile* ist ein *type-qualifier* in C. Falls ein Typ T *volatile*-qualifiziert ist, dann bedeutet das, dass sich der Wert einer Variable vom Typ T durch Instruktionen, die außerhalb der momentanen Befehlssequenz stehen (z.B. in einem [Interrupthandler](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")), verändern kann. Dazu folgender Beispielcode: \<c\> // 1 falls next_char ein gültiges Zeichen enthält, 0 sonst int char_valid;
+*volatile* ist ein *type-qualifier* in C. Falls ein Typ T *volatile*-qualifiziert ist, dann bedeutet das, dass sich der Wert einer Variable vom Typ T durch Instruktionen, die außerhalb der momentanen Befehlssequenz stehen (z.B. in einem [Interrupthandler](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")), verändern kann. Dazu folgender Beispielcode:
 
-// Falls gültig, das zuletzt von der Tastatur gelesene Zeichen, char next_char;
+``` c
+// 1 falls next_char ein gültiges Zeichen enthält, 0 sonst
+int char_valid;
 
-// Wartet auf einen Tastendruck char get_char() {
+// Falls gültig, das zuletzt von der Tastatur gelesene Zeichen,
+char next_char;
 
-     // Auf den nächsten Tastendruck warten
-     while (char_valid == 0);
+// Wartet auf einen Tastendruck
+char get_char()
+{
+  // Auf den nächsten Tastendruck warten
+  while (char_valid == 0);
 
-     char_valid = 0;
-     return next_char;
+  char_valid = 0;
+  return next_char;
+}
+```
 
-} \</c\> Die Variable *char_valid* und *next_char* sollen außerdem in einem Interrupthandler entsprechend gesetzt werden. Bei dem obigen Code kann es nun sein, dass der Compiler "optimiert" hat, indem die while-Schleife wie folgt abgeändert wird: \<c\> if (char_valid == 0)
+Die Variable *char_valid* und *next_char* sollen außerdem in einem Interrupthandler entsprechend gesetzt werden. Bei dem obigen Code kann es nun sein, dass der Compiler "optimiert" hat, indem die while-Schleife wie folgt abgeändert wird:
 
-     while (1); // Endlosschleife
+``` c
+if (char_valid == 0)
+  while (1); // Endlosschleife
+```
 
-\</c\> Dies ist eine korrekte Optimierung da der Compiler bei *char_valid* - da es nicht *volatile*-qualifiziert ist - annehmen darf, dass es nicht durch den Interrupthandler (oder irgendwelchen Code der nicht in get_char steht) verändert werden kann. Insofern reicht es aus einmal *char_valid* zu lesen. Mit dieser "Optimierung" liefert der Code natürlich nichtmehr das gewünschte Resultat. Um das zu korrigieren muss *char_valid* und *next_char* *volatile*-qualifiziert werden.
+Dies ist eine korrekte Optimierung da der Compiler bei *char_valid* - da es nicht *volatile*-qualifiziert ist - annehmen darf, dass es nicht durch den Interrupthandler (oder irgendwelchen Code der nicht in get_char steht) verändert werden kann. Insofern reicht es aus einmal *char_valid* zu lesen. Mit dieser "Optimierung" liefert der Code natürlich nichtmehr das gewünschte Resultat. Um das zu korrigieren muss *char_valid* und *next_char* *volatile*-qualifiziert werden.
 
 Aus analogem Grund sollte auch auf [Memory-mapped I/O](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer#memory-mapped-io "Hardware Abstraction Layer")-Bereich nur über Zeiger auf *volatile*-qualifizierte Datentypen zugegriffen werden.
 
 ## Bekannte C-Compiler
 
 - gcc aus der [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection")
+- [Clang](https://github.com/lowlevel-eu/wiki/wiki/Clang "Clang") aus dem LLVM Projekt
 - [tcc](http://bellard.org/tcc/) (Tiny C Compiler)
 - [bcc](http://dir.filewatcher.com/d/FreeBSD/4.2-release/i386/bcc-1995.03.12.tgz.79915.html) ein 16Bit Compiler für Linux (im dev86-Paket enthalten)
 - Borland [Turbo C](http://dn.codegear.com/article/20841) für DOS (16 Bit/Real Mode)
@@ -73,6 +85,6 @@ Aus analogem Grund sollte auch auf [Memory-mapped I/O](https://github.com/lowlev
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11485/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 11485; parent 9457; 2020-08-13T21:09:45Z -->
+<!-- MediaWiki page 1526; revision 11486; parent 11485; 2020-08-20T12:13:59Z -->
