@@ -20,7 +20,7 @@ C wurde 1971–1973 von Dennis Ritchie in den Bell Laboratories entwickelt, er s
 
 ## Kernelprogrammierung mit C
 
-Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für Einsteiger gibt es die [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger"), welche beschreibt, wie man einen kleinen Kernel in C schreibt mithilfe des Bootloaders [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") entwickelt. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC").
+Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für Einsteiger gibt es die [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger"), welche beschreibt, wie man einen kleinen Kernel in C schreibt mithilfe des Bootloaders [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") entwickelt. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") hat auch sehr gute Erfahrungen mit [Clang](https://github.com/lowlevel-eu/wiki/wiki/Clang "Clang") gemacht.
 
 ### Assemblercode in C
 
@@ -85,6 +85,6 @@ Aus analogem Grund sollte auch auf [Memory-mapped I/O](https://github.com/lowlev
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11486/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11487/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1526/index.html)
 
-<!-- MediaWiki page 1526; revision 11486; parent 11485; 2020-08-20T12:13:59Z -->
+<!-- MediaWiki page 1526; revision 11487; parent 11486; 2020-08-20T12:19:23Z -->
