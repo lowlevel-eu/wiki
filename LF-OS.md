@@ -12,13 +12,13 @@
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
 | API: | Nativ, später POSIX als lib auf der nativen API |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Vor allem shared memory |
+| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Vor allem shared memory und message passing |
 | Homepage |  |
 
 <https://praios.lf-net.org/littlefox/lf-os_amd64>
 
   
-Seit bald einem Jahrzehnt schreibe ich nun schon immer mal wieder an Betriebssystemen (meist LF OS). Seit bald einem Jahr schreibe ich mehr oder weniger regelmäßig (quasi jede Zugfahrt und manchmal noch einfach so) an der aktuellsten Variante.
+Seit über einem Jahrzehnt schreibe ich nun schon immer mal wieder an Betriebssystemen (meist LF OS). Seit etwa November 2018 schreibe ich mehr oder weniger regelmäßig (quasi jede Zugfahrt und inzwischen auch oft einfach so) an der aktuellsten Variante:
 
 - amd64
 - UEFI
@@ -38,10 +38,19 @@ Bis das so weit läuft wirds aber wohl noch etwas dauern ... gerade funktioniert
   - physische Speicherverwaltung mit linked lists
   - virtuelle Speicherverwaltung unter Verwendung der Datenstrukturen die die CPU selbst verwendet
     - es gibt ein Mapping des gesamten physischen Speichers an eine virtuelle Adresse
-    - das ist meine aktuelle Baustelle
+    - Informationen wofür Pages verwendet werden ist aktuell in Arbeit
+  - Scheduler
+  - schönes Logging in den Arbeitsspeicher und COM1 (und auf die Konsole bis ein Prozess den Framebuffer übernimmt)
+  - ein paar coole Datenstrukturen, ein paar Unit-Tests für diese
+  - ein paar Syscalls - definiert in einer YAML Datei und automatisch zu C-Code gemacht (Kernel- und Userspace-seitig)
+  - Anfänge von pthreads -\> aktuell aktivste Baustelle
+- init
+  - kann sich den Framebuffer holen und lustige Dinge rendern
+  - forkt dabei, nutzt pthread_mutex zur synchronisation
+- newlib, libc++, libc++abi, compiler-rt, clang mit LF OS Kenntnissen
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11407/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11491/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 11407; parent 10593; 2019-08-03T18:58:34Z -->
+<!-- MediaWiki page 2267; revision 11491; parent 11407; 2020-08-20T12:42:21Z -->
