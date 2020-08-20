@@ -3,14 +3,14 @@
 | LF OS (LittleFox' Operating System) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | LittleFox |
+| Entwickler: | Benutzerin:Littlefox LittleFox |
 | Akt. Version: | \- |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
 | Plattform: | [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
 | [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
-| API: | Nativ, später POSIX als lib auf der nativen API |
+| API: | aktuell POSIX via newlib, später asynchrone native API und newlib darauf portiert für Legacy Apps |
 | Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Vor allem shared memory und message passing |
 | Homepage |  |
@@ -51,6 +51,6 @@ Bis das so weit läuft wirds aber wohl noch etwas dauern ... gerade funktioniert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11491/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11492/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 11491; parent 11407; 2020-08-20T12:42:21Z -->
+<!-- MediaWiki page 2267; revision 11492; parent 11491; 2020-08-20T12:44:37Z -->
