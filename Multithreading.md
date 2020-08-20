@@ -8,9 +8,9 @@ Multithreading (englisch für *Mehrfädigkeit*) bezeichnet die gleichzeitige Aus
 
 ## Softwaremultithreading
 
-Durch Softwaremultithreading ist es möglich innerhalb eines Prozesses neben dem „Hauptthread“, der z. B. in C die main()-Funktion ausführt, weitere Threads, die eine andere Befehlssequenz innerhalb eines Prozesses gleichzeitig zum bzw. unabhängig vom Hauptthread auszuführen, zu erstellen. Um dies effizient auch auf Systemen mit mehr als einem Prozessorkern und mit wenig Aufwand im Userspace zu gestalten, werden durch das Betriebssystem spezielle Syscalls zum Erstellen und Zerstören von Threads bereitgestellt. Diese können dann explizit durch den Programmierer aufgerufen werden oder implizit durch (spezielle) Programmiersprachen bzw. Erweiterungen von Programmiersprachen, wie z. B. [OpenMP](http://openmp.org/wp/) für C/C++.
+Durch Softwaremultithreading ist es möglich innerhalb eines Prozesses neben dem „Hauptthread“, der z. B. in C die `main()`-Funktion ausführt, weitere Threads, die eine andere Befehlssequenz innerhalb eines Prozesses gleichzeitig zum bzw. unabhängig vom Hauptthread auszuführen, zu erstellen.
 
-Alle Ressourcen (Dateihandles, Speicher, etc.) können von allen Threads benutzt werden, wodurch es zu [Race Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") (zwischen den einzelnen Threads) kommen kann.
+Siehe Artikel zu [Threads](https://github.com/lowlevel-eu/wiki/wiki/Prozess#threads "Thread")
 
 ## Hardwaremultithreading
 
@@ -26,6 +26,6 @@ Siehe auch: [Hyperthreading-Artikel von Wikipedia](http://de.wikipedia.org/wiki/
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7635/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11509/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2058/index.html)
 
-<!-- MediaWiki page 2058; revision 7635; parent 7634; 2010-05-03T13:51:06Z -->
+<!-- MediaWiki page 2058; revision 11509; parent 7635; 2020-08-20T13:53:48Z -->
