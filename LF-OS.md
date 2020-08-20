@@ -3,7 +3,7 @@
 | LF OS (LittleFox' Operating System) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
-| Entwickler: | Benutzerin:Littlefox LittleFox |
+| Entwickler: | [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") |
 | Akt. Version: | \- |
 | [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
@@ -51,6 +51,6 @@ Bis das so weit läuft wirds aber wohl noch etwas dauern ... gerade funktioniert
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11493/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 11493; parent 11492; 2020-08-20T12:47:10Z -->
+<!-- MediaWiki page 2267; revision 11512; parent 11493; 2020-08-20T14:09:55Z -->
