@@ -17,13 +17,19 @@ Normalerweise wird in einem Prozess der Programmcode sequenziell abgearbeitet. O
 
 Ein Prozess kann dazu einen Kindprozess erzeugen, und diesem eine Aufgabe übergeben. Dieses Vorgehen ist zwar völlig legitim und würde funktionieren, hat jedoch zwei große Nachteile. Erstens gibt es bei einem Task Switch einen relativ großen Overhead, also wäre der Wechsel zwischen den Prozessen zu langsam, um damit sorglos umzugehen. Außerdem hängen die Prozesse womöglich relativ nah zusammen, sodass sie oft gemeinsame Daten brauchen. Sie müssten also durch verschiedene [Interprozesskommunikationsmethoden](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation") kommunizieren, was ebenfalls langsam sein kann.
 
-Als Lösung wurde das Prinzip des Threads (engl. für (Ausführungs-) Faden) entwickelt und in den Prozessbegriff integriert. Jeder Prozess hat mindestens einen Thread, der jeweils seinen eigenen Stack und Instruction Pointer hat. Jedoch teilen die Threads eines Prozesses sich die Daten, und können gleichberechtigt darauf zugreifen.
+Als Lösung wurde das Prinzip des Threads (engl. für (Ausführungs-) Faden) entwickelt und in den Prozessbegriff integriert. Jeder Prozess hat mindestens einen Thread, der jeweils seinen eigenen Stack und Instruction Pointer hat. Alle Ressourcen (Dateihandles, Daten im Speicher, etc.) können von allen Threads benutzt werden, wodurch es aber auch zu Race Conditions (zwischen den einzelnen Threads) kommen kann.
+
+Unabhängig von der Implementierung der Threads gibt es verschiedene Möglichkeiten diese dann zu benutzen. Im einfachsten Fall können direkt die Systemschnittstellen benutzt werden (bspw [pthreads](https://github.com/lowlevel-eu/wiki/wiki/POSIX-Threads "Pthread")). Stattdessen ist es aber auch möglich darauf aufbauende, umfangreichere Schnittstellen zu nutzen, beispielsweise [OpenMP](http://openmp.org/wp/) für C/C++.
+
+### Implementierung von Threads
 
 Für die Implementierung von Threads existieren im Großen und Ganzen zwei Prinzipien: Kernelthreads und Benutzerthreads. Außerdem können beide Verfahren noch kombiniert werden, sodass es noch die Möglichkeit eines hybriden Systems gibt.
 
-Ein Kernelthread ist dem Betriebssystem genauso bekannt wie ein Prozess, vielleicht bekommen sie sogar eine PID. Der Scheduler kann sie verwalten und Threads ihre Rechenzeit entziehen. [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") nutzt dieses Prinzip. Aufgrund ihrer Ähnlichkeit zu normalen Prozessen heißen sie dort auch *light-weight processes* (leichtgewichtige Prozesse, kurz: LWP).
+Ein Kernelthread ist dem Betriebssystem genauso bekannt wie ein Prozess, vielleicht bekommen sie sogar eine PID. Der Scheduler kann sie verwalten und Threads ihre Rechenzeit entziehen. [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") nutzt dieses Prinzip. Aufgrund ihrer Ähnlichkeit zu normalen Prozessen heißen sie dort auch *light-weight processes* (leichtgewichtige Prozesse, kurz: LWP). Durch das Betriebssystem werden dem Userspace spezielle [Systemaufrufe](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemaufruf") zum Erstellen und Zerstören von Threads bereitgestellt.
 
-Die Voraussetzungen für Benutzerthreads sind in den Programmen selbst enthalten (was nicht bedeutet, dass der Programmierer sie selbst implementieren muss, er kann einfach gegen eine Bibliothek linken). Ein solcher Prozess bekommt seine Rechenzeit zugeteilt, als hätte er gar keine Threads (denn der Scheduler weiß nichts von ihnen), und das Programm teilt diese unter ihren Threads auf. Es ist jedoch absolut notwendig, dass die Threads kooperieren, denn wenn ein Thread rechnet, dann rechnet er, und das Threadsystem kann nicht selbstständig die Kontrolle erhalten, wie es der Kernel durch [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") tun würde.
+Bei Benutzerthreads sind die Voraussetzungen in den Programmen selbst enthalten (was nicht bedeutet, dass der Programmierer sie selbst implementieren muss, er kann einfach gegen eine Bibliothek linken). Ein solcher Prozess bekommt seine Rechenzeit zugeteilt, als hätte er gar keine Threads (denn der Scheduler weiß nichts von ihnen), und das Programm teilt diese unter ihren Threads auf. Es ist jedoch absolut notwendig, dass die Threads kooperieren, denn wenn ein Thread rechnet, dann rechnet er, und das Threadsystem kann nicht selbstständig die Kontrolle erhalten, wie es der Kernel durch [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") tun würde.
+
+Ebenfalls möglich wäre ein Hybridverfahren bei dem der Userspace-Prozess die eigenen Threads selber verwaltet, der Kernel aber unterstützt indem beim Scheduling an eine bestimmte Stelle gesprungen wird und nicht an die letzte. Dadurch könnte immer der Prozess-eigene Thread-Scheduler aktiviert werden und den richtigen nächsten Thread auswählen. Der Kernel müsste dem Thread-Scheduler dann irgendwie den letzten Prozess-Zustand übergeben, damit der gespeichert werden kann.
 
 ## Siehe auch
 
@@ -35,6 +41,6 @@ Die Voraussetzungen für Benutzerthreads sind in den Programmen selbst enthalten
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11053/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11508/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1993/index.html)
 
-<!-- MediaWiki page 1993; revision 11053; parent 10826; 2013-03-19T15:31:47Z -->
+<!-- MediaWiki page 1993; revision 11508; parent 11053; 2020-08-20T13:52:50Z -->
