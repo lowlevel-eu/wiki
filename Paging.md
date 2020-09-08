@@ -8,7 +8,7 @@ Durch das Paging lassen sich außerdem weitere Features, wie z. B. [Swapping](h
 
 ## Funktionsweise
 
-Der virtuelle Speicher wird zunächst in gleich große Blöcke, so genannte Pages (Seiten), unterteilt. In der x86-Architektur sind dies Blöcke zu je vier Kilobytes. Einen Speicherkontext kann man sich vereinfacht als eine riesige Tabelle vorstellen, die jedem virtuellen Block einen gleich großen Block irgendwo im physischen Speicher zuweist. Diesen physischen Speicherblock nennt man auch *Page Frame* (dt. Seitenrahmen, oder seltener auch Seitenkachel).
+Der virtuelle Speicher wird zunächst in gleich große Blöcke, so genannte Pages (Seiten), unterteilt. In den meisten Architekturen sind dies Blöcke zu je vier Kilobytes, manche bieten auch verschiedene Größen an. Einen Speicherkontext kann man sich vereinfacht als eine riesige Tabelle vorstellen, die jedem virtuellen Block einen gleich großen Block irgendwo im physischen Speicher zuweist. Diesen physischen Speicherblock nennt man auch *Page Frame* (dt. Seitenrahmen, oder seltener auch Seitenkachel).
 
 Die folgende Tabelle dient als (von den Zahlen her völlig sinnfreie) Veranschaulichung dieser Übersetzung. Wenn das Programm jetzt auf die Speicheradresse 0x1234 zugreift, wird in Wirklichkeit auf die physische Adresse 0x3234 zugegriffen. Es muss nicht jede virtuelle Adresse *gemappt* (d. h. einer physischen Adresse zugewiesen) sein &#150; der virtuelle Adressraum ist im Allgemeinen auch größer als der installierte physische Speicher (auf i386 beispielsweise 4 GB). Wird auf eine nicht gemappte Adresse zugegriffen, z. B. 0x25a2 im Beispiel, wird eine Exception (x86: [Page Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#page-fault "Exception")) ausgelöst.
 
@@ -21,9 +21,17 @@ Die folgende Tabelle dient als (von den Zahlen her völlig sinnfreie) Veranschau
 
 In der Praxis handelt es sich dabei nicht um eine einzige riesige Tabelle, die wie erwähnt zu großen Teilen ohnehin leer bleiben und Speicher verschwenden würde. Stattdessen benutzt man ein zwei- oder mehrstufiges System.
 
-Beim i386 bildet ein *Page Directory* einen Speicherkontext ab. Dabei handelt es sich um eine Tabelle, die virtuellen Speicherblöcken von 4 MB Größe die physische Adresse einer *Page Table* zuweist oder den Speicherbereich als frei markiert.
+## In physischen Speicher schreiben
 
-Die Page Table ist anschließend dafür zuständig, innerhalb „ihrer“ 4 MB die Zuordnung der einzelnen 4K-Pages vorzunehmen. Beim Zugriff auf die Adresse 0x456789 wird also zunächst festgestellt, dass die Pagetable für den Bereich 4 bis 8 MB zuständig ist (0x400000 sind 4 MB), und ihre Adresse im Page Directory nachgeschlagen. Anschließend wird innerhalb der Page Table nachgeschlagen, was die physische Adresse für die Bytes 0x56000 bis 0x56fff dieses 4-MB-Blocks ist. Angenommen, die Page Table ordnet diesen die physische Adresse 0xabcde000 zu, dann liegt der gesuchte Speicher an 0xabcde789.
+Wenn nun Paging eingeschaltet ist, kann man nicht mehr in den physischen Speicher schreiben. Wenn man nicht viel physischen Speicher hat, oder 64 Bit benutzt und deswegen der virtuelle Adressraum groß genug ist, kann man den gesamten physischen Speicher in den virtuellen mappen.
+
+Es besteht aber auch die Möglichkeit, Zugriff auf den gesamten physischen Speicher zu haben, ohne dass man ihn direkt mappt. Erstmal braucht man eine Möglichkeit das Page Directory und die Page Tables noch zu ändern nachdem Paging eingeschaltet wurde. Wenn man dies kann, kann man sich einfach immer die gerade gebrauchte physische Page auf eine festgelegte virtuelle Page mappen und voilà. Um nun Zugriff auf das Page Directory und die Page Tables zu haben, kann man einfach z. B. als letzte Page Table das Page Directory selbst eintragen. Das Page Directory wird dann als Page Table interpretiert und alle Page Tables als Pages in den Speicher gemappt. Somit enthalten die letzten 4 MB des virtuellen Speichers die Page Tables, wobei die letzten 4 kB das Page Directory enthalten.
+
+## Paging im x86 Protected Mode
+
+Beim i386 bildet ein *Page Directory* (PD) einen Speicherkontext ab. Dabei handelt es sich um eine Tabelle, die virtuellen Speicherblöcken von 4 MB Größe die physische Adresse einer *Page Table* (PT) zuweist oder den Speicherbereich als frei markiert.
+
+Die Page Table ist anschließend dafür zuständig, innerhalb „ihrer“ 4 MB die Zuordnung der einzelnen 4K-Pages vorzunehmen. Beim Zugriff auf die Adresse 0x456789 wird also zunächst festgestellt, dass die Page-Table für den Bereich 4 bis 8 MB zuständig ist (0x400000 sind 4 MB), und ihre Adresse im Page Directory nachgeschlagen. Anschließend wird innerhalb der Page Table nachgeschlagen, was die physische Adresse für die Bytes 0x56000 bis 0x56fff dieses 4-MB-Blocks ist. Angenommen, die Page Table ordnet diesen die physische Adresse 0xabcde000 zu, dann liegt der gesuchte Speicher an 0xabcde789.
 
 Wie die CPU aus einer virtuellen die zugeordnete physische Adresse berechnet, soll folgende Grafik zeigen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg" width="774" height="367" alt="Paging funktionsweise.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/075d16ef1fcec98e13b7.jpg)
 
@@ -38,13 +46,13 @@ Das Berechnen erfolgt folgendermaßen:
 
 (*Hinweis:* Bei Schritt 3 kann der Eintrag auch direkt auf einen 4MB Bereich ("Large Page") zeigen, siehe hierzu [Page Size Extension](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension "Page Size Extension"))
 
-## Einschalten des Paging-Mechanismus
+### Einschalten des Paging-Mechanismus
 
 Zum Einschalten des Paging-Mechanismus auf der x86-Architektur muss man Bit-31 im CR0-Register setzen. Davor muss aber ein gültiges Page-Directory angelegt und dessen physische Adresse im CR3-Register abgelegt worden sein.
 
-## Page-Directory
+### Aufbau Page Directory (PD)
 
-Ein Pagedirectory enthält 1024 Eintrage à vier Byte. Ein Pagedirectory-Eintrag kann jeweils auf ein Pagetable zeigen. Pagedirectories (wie auch Pagetables) müssen immer 4k-aligned sein, d. h. sie füllen genau eine Page aus.
+Ein Page-Directory (PD) enthält 1024 Einträge à vier Byte. Ein PD-Eintrag kann jeweils auf eine Page-Table zeigen. PDs (wie auch PTs) müssen immer 4k-aligned sein, d. h. sie füllen genau eine Page aus.
 
 | Bit | Beschreibung |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +68,7 @@ Ein Pagedirectory enthält 1024 Eintrage à vier Byte. Ein Pagedirectory-Eintrag
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
 | 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable oder zur Page, wenn keine Bit 7 gesetzt ist. In letzterem Falle muss der Zeiger entsprechend ausgerichtet sein. Bit 12 ist dann das (höchste) [PAT](https://github.com/lowlevel-eu/wiki/wiki/PAT "PAT")-Bit. |
 
-## Page Tables
+### Aufbau Page Table (PT)
 
 Eine Page Table enthält 1024 Einträge à vier Byte. Jeder Eintrag zeigt auf eine physische Page. Page Tables müssen 4k-aligned sein und füllen somit eine ganze Page.
 
@@ -78,7 +86,9 @@ Eine Page Table enthält 1024 Einträge à vier Byte. Jeder Eintrag zeigt auf ei
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
 | 12 &#150; 31 | 12 &#150; 31 der physischen Adresse eines Pageframes |
 
-## Translation Lookaside Buffer
+Wer genau hinsieht, bemerkt vermutlich, dass die Struktur von PD und PT quasi identisch ist, einzelne Felder nur andere Bedeutungen haben. Die Umsetzung im Quellcode kann also gleich sein (das selbe C-struct bspw.).
+
+### Translation Lookaside Buffer
 
 Der Prozessor benutzt für das Auflösen der virtuellen Adressen eine Art Cache für die zuletzt benutzten Pages, den sogenannten *Translation Lookaside Buffer* oder TLB. Für den Programmierer spielt dieser TLB dann eine Rolle, wenn das Mapping einer Page geändert wird, aber der Prozessor möglicherweise noch die alte physische Adresse im TLB behalten hat.
 
@@ -86,42 +96,27 @@ Daher ist zu beachten, dass bei einer Änderung des Page Directory oder einer Pa
 
 Man invalidiert den TLB mit „invlpg \<address\>“. Wobei \<address\> eine virtuelle Adresse innerhalb der von der Änderung betroffenen Page ist. invlpg ist ab dem 486 vorhanden. Beim Neuladen des [Steuerregisters](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Steuerregister") CR3 wird der TLB ebenfalls komplett geleert (Achtung, das geht natürlich auf die Performance).
 
-## Speicher mappen
+### Speicher mappen
 
-Um eine beliebige virtuelle Adresse auf eine beliebige physische Adresse zu mappen, muss man erst den richtigen Eintrag im Page Directory und in der Page Table berechnen, um schließlich die physische Page (mit den passenden Flags) in der Page Table eintragen zu können. Es wird immer von virtuell nach physisch zugeordnet, d. h. wenn man 0xB8000 (phys.) auf 0x12345000 (virt.) mappen will, muss man erst den Page-Directory- und Page-Table-Eintrag von 0x12345000 berechnen. Das geht am besten so: \<c\>Pagedirectory_Eintrag = virtuelle_adresse \>\> 22 (= 0x48) Pagetable_Eintrag = (virtuelle_adresse \>\> 12) % 1024 (= 0x345)\</c\> Nun suche man erst die Adresse der Page Table (im eben berechneten *Pagedirectory_Eintrag* schauen). **Achtung:** Es handelt sich hier um die physische Adresse. Mit der Adresse der Page Table kann man jetzt in den *Pagetable_Eintrag* die physische Adresse eintragen, die passenden Flags setzen und schon ist die Page gemappt.
+Um eine beliebige virtuelle Adresse auf eine beliebige physische Adresse zu mappen, muss man erst den richtigen Eintrag im Page Directory und in der Page Table berechnen, um schließlich die physische Page (mit den passenden Flags) in der Page Table eintragen zu können. Es wird immer von virtuell nach physisch zugeordnet, d. h. wenn man 0xB8000 (phys.) auf 0x12345000 (virt.) mappen will, muss man erst den Page-Directory- und Page-Table-Eintrag von 0x12345000 berechnen. Das geht am besten so:
 
-## In physischen Speicher schreiben
+``` c
+virtuelle_adresse = 0x12345000;
+pd_eintrag =  virtuelle_adresse >> 22           (= 0x48)
+pt_eintrag = (virtuelle_adresse >> 12) % 1024   (= 0x345)
+```
 
-Wenn nun Paging eingeschaltet ist, kann man nicht mehr in den physischen Speicher schreiben. Wenn man nicht viel physischen Speicher hat, oder 64 Bit benutzt und deswegen der virtuelle Adressraum groß genug ist, kann man den gesamten physischen Speicher in den virtuellen mappen.
+Zuerst wird die Adresse der Page Table (im eben berechneten *PD Eintrag* schauen). **Achtung:** Es handelt sich hier um die physische Adresse. Mit der Adresse der Page Table kann man jetzt in den *PT Eintrag* die physische Adresse eintragen, die passenden Flags setzen und schon ist die Page gemappt.
 
-Es besteht aber auch die Möglichkeit, Zugriff auf den gesamten physischen Speicher zu haben, ohne dass man ihn direkt mappt. Erstmal braucht man eine Möglichkeit das Page Directory und die Page Tables noch zu ändern nachdem Paging eingeschaltet wurde. Wenn man dies kann, kann man sich einfach immer die gerade gebrauchte physische Page auf eine festgelegte virtuelle Page mappen und voilà. Um nun Zugriff auf das Page Directory und die Page Tables zu haben, kann man einfach z. B. als letzte Page Table das Page Directory selbst eintragen. Das Page Directory wird dann als Page Table interpretiert und alle Page Tables als Pages in den Speicher gemappt. Somit enthalten die letzten 4 MB des virtuellen Speichers die Page Tables, wobei die letzten 4 kB das Page Directory enthalten.
+### Page Address Extension (PAE)
 
-## Paging im Long Mode
+In aktuellen x86 CPUs (seit dem Pentium Pro / Pentium II) gibt es auch noch eine Erweiterung für Paging im Protected Mode: die Page Address Extensions. Diese erlauben den Zugriff auf mehr physischen Speicher, indem die Einträge in PD und PT auf jeweils 8 Byte (64 bit) erweitert werden. Damit die Tabellen trotzdem nur jeweils 4KB groß sind, wurde die Anzahl an Einträgen halbiert. Da das nun auch den virtuellen Adressraum verkleinern würde, wurde eine weitere Ebene eingefügt: die *Page Directory Pointer* (PDP) Tabelle. Diese zeigt auf die einzelnen *Page Directory* Tabellen, die ja wiederum auf die einzelnen *Page Table*s zeigen.
 
-Das Paging im Long Mode gestaltet sich etwas schwieriger als das Paging im Protected Mode. Dies liegt zunächst einmal daran, dass im Long Mode nicht nur zwei Ebenen existieren, sondern bis zu vier.
+Der Aufbau der PDP Tabelle entspricht weitestgehend dem Aufbau der PD Tabelle, es gibt aber nur 4 Einträge (also 2 Bit der virtuellen Adresse). Zusammen mit jeweils 512 Einträgen (je 9 Bit der virtuellen Adresse) der nun kleineren PDs und PTs kommen wir so trotzdem auf 20 Bit der virtuellen Adresse.
 
-### Page-Map Level-4 Table
+#### Aufbau Page Directory Pointer (PDP)
 
-Eine Page-Map Level-4 Table enthält 512 Eintrage à acht Byte. Ein Page-Map Level-4 Table-Eintrag kann jeweils auf eine Page-Directory Pointer Table zeigen.
-
-| Bit | Funktion |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
-| 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
-| 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
-| 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
-| 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
-| 5 | Wird von der CPU gesetzt, wenn die Page-Map Level-4 Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
-| 6 | Wird ignoriert und sollte 0 sein. |
-| 7-8 | Muss 0 sein. |
-| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12-51 | Gibt die physische Adresse der Page-Directory Pointer Table an. |
-| 52-62 | Diese Bits sind frei verfügbar. |
-| 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
-
-### Page-Directory Pointer Table
-
-Eine Page-Directory Pointer Table enthält 512 Eintrage à acht Byte. Ein Page-Directory Pointer Table-Eintrag kann jeweils auf eine Page-Directory Table zeigen.
+Ein PDP enthält 512 Eintrage à acht Byte. Ein PDP-Eintrag kann jeweils auf ein Page Directory zeigen.
 
 | Bit | Funktion |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -139,9 +134,9 @@ Eine Page-Directory Pointer Table enthält 512 Eintrage à acht Byte. Ein Page-D
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
-### Page-Directory Table
+#### Aufbau Page Directory (PD)
 
-Eine Page-Directory Table enthält 512 Eintrage à acht Byte. Ein Page-Directory Table-Eintrag kann jeweils auf eine Page Table zeigen.
+Ein Page Directory enthält 512 Eintrage à acht Byte. Ein PD-Eintrag kann jeweils auf eine Page Table zeigen.
 
 | Bit | Funktion |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -159,9 +154,9 @@ Eine Page-Directory Table enthält 512 Eintrage à acht Byte. Ein Page-Directory
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
-### Page Table
+#### Aufbau Page Table (PT)
 
-Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann jeweils auf eine Page zeigen
+Eine Page Table enthält 512 Eintrage à acht Byte. Ein PT-Eintrag kann jeweils auf eine Page zeigen.
 
 | Bit | Funktion |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -179,6 +174,40 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
+Auch mit aktiviertem PAE sehen die einzelnen Tabellen quasi komplett identisch aus, der einzige Unterschied ist die Interpretierung mancher Felder. Auch hier kann also die Implementierung im Quellcode auf die gleiche Datenstruktur zurückgreifen, beispielsweise ein [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")-struct *PagingEntry* und ein typedef von *PagingTable* auf `PagingEntry[512]` (siehe LF OS unten in den Links).
+
+## Paging im x86 Long Mode
+
+Das Paging im Long Mode gestaltet sich etwas schwieriger als das Paging im Protected Mode, setzt aber auf dem PAE Paging im Protected Mode auf. Aufbauend auf PAE wurden folgende Dinge geändert:
+
+- die PDP Tabelle enthält nun die vollen 512 Einträge, also 9 Bit der virtuellen Adresse (statt bisher 4 Einträge/2 Bit) -\> wir kommen nun auf 39 Bit virtuellen Adressraum (3\*9 Bits durch die Ebenen + 12 Bit Offset innerhalb der Page), also 512 GB nutzbaren Virtuellen Speicher.
+- vor der PDP wurde eine weitere Ebene eingefügt, die Page-Map Level 4 Tabelle (PML4) - ab hier werden die Ebenen einfach durchnummeriert. Noch eine Ebene mehr, also nun 48 Bit virtueller Adressraum -\> 256 TB.
+
+Das ist aber nur die erste Ausbaustufe von amd64. Über eine bestimmte [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID") lässt sich die Anzahl der unterstützten virtuellen Adressbits abrufen, woraus sich die Anzahl der Mapping-Ebenen ableiten lässt (\<39 -\> 3 Ebenen, \<48 -\> 4 Ebenen, \<57 -\> 5 Ebenen, ...).
+
+### PMLx Tabellen
+
+Der Aufbau der PMLx (PML4, PML5, ..) ist zum Glück immer gleich und sogar wieder sehr ähnlich zu Page Directory und Page Table: 512 Einträge mit jeweils 8 Byte. Ein Eintrag zeigt jeweils auf die Ebene darunter, PML5 Einträge also auf PML4s, PML4-Einträge also auf PDPs.
+
+| Bit | Funktion |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 | Gibt an, ob die Page momentan im Speicher liegt. Ist das Bit gelöscht (Page nicht im Speicher), dann sind alle anderen Bits für das Betriebssystem frei verfügbar und können z. B. für Swapping genutzt werden. |
+| 1 | Wenn dieses Bit gesetzt ist, kann die Page beschrieben werden. Ansonsten kann die Page nur gelesen werden. |
+| 2 | Wenn dieses Bit gesetzt ist, darf jeder auf die Page zugreifen. Ansonsten nur Ring 0. |
+| 3 | Wenn dieses Bit gesetzt ist, wird Write-Through-Caching benutzt. |
+| 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
+| 5 | Wird von der CPU gesetzt, wenn die Page-Map Level-4 Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
+| 6 | Wird ignoriert und sollte 0 sein. |
+| 7-8 | Muss 0 sein. |
+| 9-11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
+| 12-51 | Gibt die physische Adresse der Page-Directory Pointer Table an. |
+| 52-62 | Diese Bits sind frei verfügbar. |
+| 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
+
+Die PDPs, PDs und PTs entsprechen denen des Protected Mode mit aktiviertem PAE (weswegen im Long Mode auch immer PAE aktiviert ist).
+
+  
+
 ## Weiterführende Artikel
 
 - [Paging Tutorial](https://github.com/lowlevel-eu/wiki/wiki/Paging-Tutorial "Paging Tutorial")
@@ -189,9 +218,10 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein Page Table-Eintrag kann 
 - [Paging im PM-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/p_spez1.htm)
 - [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8#paging "Ausgabe 8")
 - <http://osdever.net/tutorials/pdf/basic_paging.pdf>
+- <https://littlefox.narf.press/lf-os_amd64/vm_8c.html#structvm__table__entry> - Gemeinsame Datenstruktur für alle Paging-Ebenen (LF OS)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11373/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11514/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1496/index.html)
 
-<!-- MediaWiki page 1496; revision 11373; parent 11372; 2017-01-23T22:29:41Z -->
+<!-- MediaWiki page 1496; revision 11514; parent 11373; 2020-09-08T15:37:26Z -->
