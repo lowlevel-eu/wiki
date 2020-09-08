@@ -15,7 +15,11 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Vor allem shared memory und message passing |
 | Homepage |  |
 
-<https://praios.lf-net.org/littlefox/lf-os_amd64>
+ 
+
+- [Eigenes Gitlab mit CI und Issues](https://praios.lf-net.org/littlefox/lf-os_amd64)
+- [GitHub Mirror (nur master Branch)](https://github.com/LittleFox94/lf-os_amd64)
+- [Doku auf Gitlab Pages](https://littlefox.narf.press/lf-os_amd64)
 
   
 Seit über einem Jahrzehnt schreibe ich nun schon immer mal wieder an Betriebssystemen (meist LF OS). Seit etwa November 2018 schreibe ich mehr oder weniger regelmäßig (quasi jede Zugfahrt und inzwischen auch oft einfach so) an der aktuellsten Variante:
@@ -24,33 +28,37 @@ Seit über einem Jahrzehnt schreibe ich nun schon immer mal wieder an Betriebssy
 - UEFI
 - Microkernel
 
-Der Plan ist, quasi alles in Userspace-Prozesse zu packen. Alle Prozesse können Dienste bereitstellen, diese werden im Kernel registriert. Andere Prozesse können sich dann Dienste erfragen und bekommen dann PID und Channel ID für IPC um mit dieser Instanz des Dienstes zu kommunizieren. Dienste sind z.B. Blockdevice-Treiber, FS-Treiber, Grafikserver, Terminals, ...
+Der Plan ist, quasi alles in Userspace-Prozesse zu packen. Alle Prozesse können Dienste bereitstellen, diese werden im Kernel registriert. Andere Prozesse können sich dann Dienste erfragen und bekommen dann Informationen für IPC um mit diesem Dienstes zu kommunizieren. Dienste sind z.B. Blockdevice-Treiber, FS-Treiber, Grafikserver, Terminals, ...
 
-Wenn Dienste von Prozessen implementiert werden und diese Forken, werden die Dienste direkt als Standardimplementierung im fork verwendet. So kann ein Terminal-Emulator z.B. den Terminal Dienst implementieren und in eine Shell forken, die dann automatisch auf diesen Terminal Emulator rendert.
+Welche Implementierung standardmäßig verwendet werden soll, lässt sich von Prozessen konfigurieren und bei `fork()` vererben, dadurch ergibt sich eine Art "Dependency Injection". Darüber lässt sich z.B. `chroot()` abbilden (anderen FS Dienst als Standard setzen), der Compositor stellt selber wieder einen Grafikserver bereit pro Fenster (in dem ein weiterer Compositor laufen kann..), ein Outbound-Firewall Dienst ist auch nur eine Implementierung von *Netzwerkinterface-Dienst* .. so die Idee.
 
-Bis das so weit läuft wirds aber wohl noch etwas dauern ... gerade funktioniert schon
+## Was funktioniert bereits
 
 - UEFI Loader
   - lädt Kernel und init
-  - bereitet sinnvolle initiale Speichermappings vor
-  - Holt Framebuffer vom UEFI für Konsole
+  - bereitet sinnvolle initiale Speichermappings vor und holt memory map von der Firmware
+  - bereitet framebuffer für Konsole vor (UEFI GraphicsOutputProtocol)
 - Kernel
   - physische Speicherverwaltung mit linked lists
-  - virtuelle Speicherverwaltung unter Verwendung der Datenstrukturen die die CPU selbst verwendet
+  - virtuelle Speicherverwaltung (nutzt aktuell einfach die Paging-Strukturen, braucht noch mehr Infos für Copy-on-Write Referenzzähler z.B.)
     - es gibt ein Mapping des gesamten physischen Speichers an eine virtuelle Adresse
-    - Informationen wofür Pages verwendet werden ist aktuell in Arbeit
+      - dabei wird sogar ausgewählt ob 2MB oder 1GB Pages sinnvoller sind
   - Scheduler
-  - schönes Logging in den Arbeitsspeicher und COM1 (und auf die Konsole bis ein Prozess den Framebuffer übernimmt)
+  - schönes Logging in den Arbeitsspeicher und COM1 (und auf die Framebuffer-Konsole bis ein Prozess den Framebuffer übernimmt)
   - ein paar coole Datenstrukturen, ein paar Unit-Tests für diese
-  - ein paar Syscalls - definiert in einer YAML Datei und automatisch zu C-Code gemacht (Kernel- und Userspace-seitig)
+  - ein paar Syscalls - definiert in einer YAML Datei aus der automatisch C-Code generiert wird (Kernel- und Userspace-seitig)
+  - genug [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") Loader für Binaries die LLD ausspuckt (Segmente sind Page-aligned aber irgendwie auch nicht)
+  - Panic screen mit Stacktrace (sogar mit Kernel Debug-Symbolen!)
+  - Faults werden größtenteils dem Prozess zugeschoben, manche Page-Faults sogar sinnvoll behandelt (Stack)
   - Anfänge von [pthreads](https://github.com/lowlevel-eu/wiki/wiki/POSIX-Threads "POSIX Threads") -\> aktuell aktivste Baustelle
 - init
   - kann sich den Framebuffer holen und lustige Dinge rendern
   - forkt dabei, nutzt pthread_mutex zur synchronisation
 - newlib, libc++, libc++abi, compiler-rt, [Clang](https://github.com/lowlevel-eu/wiki/wiki/Clang "Clang") mit LF OS Kenntnissen
+- Bisschen Code der einigermaßen sinnvoll ist und sogar als Referenz hier im Wiki geeignet ist (und teilweise verlinkt)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11512/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 11512; parent 11493; 2020-08-20T14:09:55Z -->
+<!-- MediaWiki page 2267; revision 11518; parent 11512; 2020-09-08T16:11:19Z -->
