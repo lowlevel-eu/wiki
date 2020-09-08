@@ -37,14 +37,15 @@ Wenn eine Klasse eine rein virtuelle Funktion nicht implementiert hat und diese 
 
 ### g++
 
-\<cpp\> // Lizenz: public domain
+``` cpp
+// Lizenz: public domain
 
-extern "C" void \_\_cxa_pure_virtual() {
-
-     // Fehlermeldung anzeigen
-     // Programm/Kernel beenden
-
-} \</cpp\>
+extern "C" void __cxa_pure_virtual()
+{
+  // Fehlermeldung anzeigen
+  // Programm/Kernel beenden
+}
+```
 
 ## globale/statische Objekte
 
@@ -60,20 +61,24 @@ G++ erstellt eine "ctors\*" Sektion, welche ein Array aus Funktionszeigern ist. 
 
 In neueren Version von GCC wurde die Sektion .ctors\* in .init_array umbenannt und muss gegebenenfalls im Linkerscript geändert werden.
 
-\<cpp\> // Lizenz: public domain
+``` cpp
+// Lizenz: public domain
 
-typedef void (\*constructor)();
+typedef void (*constructor)();
 
-// Im Linkerskript definiert extern "C" constructor start_ctors; extern "C" constructor end_ctors;
+// Im Linkerskript definiert
+extern "C" constructor start_ctors;
+extern "C" constructor end_ctors;
 
 extern "C" void initialiseConstructors();
 
-// Ruft die Konstruktoren für globale/statische Objekte auf void initialiseConstructors() {
-
-     for (constructor* i = &start_ctors;i != &end_ctors;++i)
-       (*i)();
-
-} \</cpp\>
+// Ruft die Konstruktoren für globale/statische Objekte auf
+void initialiseConstructors()
+{
+  for (constructor* i = &start_ctors;i != &end_ctors;++i)
+    (*i)();
+}
+```
 
 Diese Funktion muss explizit aufgerufen werden bevor globale/statische Objekte verwendet werden. Dies kann beispielsweise im [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++") geschehen.
 
@@ -87,62 +92,58 @@ In neueren Version von GCC wurde die Sektion .dtors\* in .fini_array umbenannt u
 
 Im Konstruktor eines globalen/statischen Objekts wird die folgende Funktion aufgerufen:
 
-\<cpp\>
-
-    int __cxa_atexit(void (* f)(void *), void *p, void *d);
-
-\</cpp\>
+``` cpp
+ int __cxa_atexit(void (* f)(void *), void *p, void *d);
+```
 
 f ist ein Funktionszeiger zu einem Destruktor, p der Parameter, der dem Destruktor übergeben werden soll und d ist das sog. "home DSO" (DSO = dynamic shared object). Diese Funktion sollte alle drei Parameter speichern und bei Erfolg 0, andernfalls nicht 0 zurückgeben. Wenn der Kernel/das Programm dann beendet wird, sollte man die Funktion
 
-\<cpp\>
-
-    void __cxa_finalize(void *d);
-
-\</cpp\>
+``` cpp
+ void __cxa_finalize(void *d);
+```
 
 mit d = 0 aufrufen, um alle mit \_\_cxa_atexit registrierten Funktionen mit passenden Paramtern aufzurufen. Die registrierten Funktionen müssen in umgekehrter Reihenfolge aufgerugen werden. Außerdem muss man ein Symbol namens \_\_dso_handle bereitstellen. Es wird allerdings nur die Adresse des Symbols verwendet um ein DSO zu identifizieren und um \_\_cxa_atexit aufzurufen.
 
-\<cpp\> // Lizenz: public domain
+``` cpp
+// Lizenz: public domain
 
-extern "C" {
-
-     int __cxa_atexit(void (*f)(void *), void *p, void *d);
-     void __cxa_finalize(void *d);
-
+extern "C"
+{
+  int __cxa_atexit(void (*f)(void *), void *p, void *d);
+  void __cxa_finalize(void *d);
 };
 
-void \*\_\_dso_handle;
+void *__dso_handle;
 
-struct object {
+struct object
+{
+  void (*f)(void*);
+  void *p;
+  void *d;
+} object[32] = {0};
+unsigned int iObject = 0;
 
-     void (*f)(void*);
-     void *p;
-     void *d;
-
-} object\[32\] = {0}; unsigned int iObject = 0;
-
-int \_\_cxa_atexit(void (\*f)(void \*), void \*p, void \*d) {
-
-     if (iObject >= 32) return -1;
-     object[iObject].f = f;
-     object[iObject].p = p;
-     object[iObject].d = d;
-     ++iObject;
-     return 0;
-
+int __cxa_atexit(void (*f)(void *), void *p, void *d)
+{
+  if (iObject >= 32) return -1;
+  object[iObject].f = f;
+  object[iObject].p = p;
+  object[iObject].d = d;
+  ++iObject;
+  return 0;
 }
 
-/\* NOTE: Zerstört momentan unabhängig von d alle Objekte \*/ void \_\_cxa_finalize(void \*d) {
-
-     unsigned int i = iObject;
-     for (; i > 0; --i)
-     {
-       --iObject;
-       object[iObject].f(object[iObject].p);
-     }
-
-} \</cpp\>
+/* NOTE: Zerstört momentan unabhängig von d alle Objekte */
+void __cxa_finalize(void *d)
+{
+  unsigned int i = iObject;
+  for (; i > 0; --i)
+  {
+    --iObject;
+    object[iObject].f(object[iObject].p);
+  }
+}
+```
 
 ## new/delete
 
@@ -155,29 +156,29 @@ Um dynamisch Objekte mit new erstellen bzw. mit delete zerstören zu können mus
 
 implementieren.
 
-Eine einfache Implementation ist z.B.: \<cpp\> void \*operator new( size_t size ) {
+Eine einfache Implementation ist z.B.:
 
-     return kcalloc( size );
-
+``` cpp
+void *operator new( size_t size )
+{
+  return kcalloc( size );
 }
 
-void \*operator new\[\]( size_t size ) {
-
-     return kcalloc( size );
-
+void *operator new[]( size_t  size )
+{
+  return kcalloc( size );
 }
 
-void operator delete( void \*obj ) {
-
-     kfree( obj );
-
+void operator delete( void *obj )
+{
+  kfree( obj );
 }
 
-void operator delete\[\]( void \*obj ) {
-
-     kfree( obj );
-
-} \</cpp\>
+void operator delete[]( void *obj )
+{
+  kfree( obj );
+}
+```
 
 ## RTTI
 
@@ -208,6 +209,6 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11307/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11519/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1486/index.html)
 
-<!-- MediaWiki page 1486; revision 11307; parent 11306; 2015-10-14T18:37:09Z -->
+<!-- MediaWiki page 1486; revision 11519; parent 11307; 2020-09-08T16:15:24Z -->
