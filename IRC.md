@@ -20,10 +20,6 @@ Es ist durchaus möglich, dass diese Möglichkeit bei Dir nicht funktioniert, da
 
 irc://irc.euirc.net/lost
 
-## Schnell-Zugriff zum Channel per CGIIRC
-
-Falls man aus irgend einem Grund keinen IRC-Client installieren will oder kann, ist der Zugang über CGIIRC eine Alternative. Dieser arbeitet nur über HTTP und funktioniert somit auch hinter Firewalls und Proxies (also zum Beispiel etwas für in der Schule ;-)). Eine CGIIRC-Installation speziell für den \#lost-Channel kann [hier](http://cgiirc.tyndur.org/) gefunden werden. Es wird aber empfohlen, wenn möglich einen normalen IRC-Client zu verwenden, da die Anzahl der möglichen CGIIRC-Verbindungen von Seiten Euirc beschränkt sind.
-
 ## Schnell-Zugriff per Mibbit
 
 Wenn du unseren CGI-IRC schonen willst, und trotzdem keinen Client installieren willst, dann nutze am besten den Mibbit-WebIRC-Client:
@@ -108,6 +104,6 @@ Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [\[2\]](ht
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 11521; parent 9073; 2020-09-18T13:56:31Z -->
+<!-- MediaWiki page 1463; revision 11522; parent 11521; 2020-09-18T13:59:50Z -->
