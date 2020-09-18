@@ -16,19 +16,9 @@ Im IRC-Channel *\#lost* auf *irc.euirc.net* bekommt man einerseits schnelle Hilf
 
 ## Schnell-Zugriff per Link
 
-Es ist durchaus möglich, dass diese Möglichkeit bei Dir nicht funktioniert, da es auf den Browser und das genutzte IRC-Client Programm ankommt. Versuch es einfach, du wirst dann sehen, ob es geht.
+Wenn dein Browser und IRC Client das unterstützen, kannst du so schnell beitreten: irc://irc.euirc.net/lost
 
-irc://irc.euirc.net/lost
-
-## Schnell-Zugriff per Mibbit
-
-Wenn du unseren CGI-IRC schonen willst, und trotzdem keinen Client installieren willst, dann nutze am besten den Mibbit-WebIRC-Client:
-
-- Rufe [diese Seite](http://chat.mibbit.com) auf.
-- Im Feld *IRC* wählst du im Dropdownmenü den Punkt *euIRC \[webirc\]*.
-- Als Channel muss natürlich *\#lost* gesetzt sein.
-- Solltest du deinen Nicknamen mit mit einem Passwort geschützt haben (NickServ), klicke auf *Auth* neben dem Dropdown für den IRC Server aus und gebe dein Passwort in das entsprechende Passwort-Feld ein.
-- Dann gib noch im Feld *Nick* deinen Wunschnick an, und mit einem Klick auf *Go* geht es los!
+Kein IRC-Client? Nutze am besten [Mibbit](https://chat.mibbit.com/?channel=%23lost&server=irc.euirc.net) - einfach nur den Link anklicken, Nickname eingeben und "Go"!
 
 ## IRC-Start mit KVirc unter Windows
 
@@ -100,10 +90,10 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-u
 
 ## Channel-Logs
 
-Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [\[2\]](https://log.mq32.de/%23lost/) zu finden.
+Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [log.mq32.de/%23lost](https://log.mq32.de/%23lost/) zu finden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 11523; parent 11522; 2020-09-18T14:00:12Z -->
+<!-- MediaWiki page 1463; revision 11524; parent 11523; 2020-09-18T14:07:01Z -->
