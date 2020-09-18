@@ -20,7 +20,15 @@ Wenn dein Browser und IRC Client das unterstützen, kannst du so schnell beitret
 
 Kein IRC-Client? Nutze am besten [Mibbit](https://chat.mibbit.com/?channel=%23lost&server=irc.euirc.net) - einfach nur den Link anklicken, Nickname eingeben und "Go"!
 
-## IRC-Start mit KVirc unter Windows
+## Channel-Logs
+
+Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [log.mq32.de/%23lost](https://log.mq32.de/%23lost/) zu finden.
+
+## KVIRC
+
+Eher aus historischem Interesse
+
+### IRC-Start mit KVirc unter Windows
 
 - Am Anfang ist ein IRC-Client nötig. Dafür ist KVIrc geeignet. Auf [\[1\]](http://www.kvirc.net/?id=releases&platform=win32) hat man auf den Eintrag bei "Neueste Ausgabe" zu klicken. Nun nur noch einen Server auswählen und wenig später ist KVIrc auf der Platte.
 
@@ -58,7 +66,7 @@ Kein IRC-Client? Nutze am besten [Mibbit](https://chat.mibbit.com/?channel=%23lo
 
 - Weiter Konfigurationen usw. findet man unter "Einstellungen" / "KVIrc konfigurieren"
 
-## IRC-Start mit KVIRC unter Linux
+### IRC-Start mit KVIRC unter Linux
 
 Ich beschreibe hier für die Distrubutionen „Debian“ und „Suse“
 
@@ -88,12 +96,8 @@ Nun kompiliert er alles. Danach „make install“ als root. Dann wird er das Pr
 
 Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-unter-windows)
 
-## Channel-Logs
-
-Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [log.mq32.de/%23lost](https://log.mq32.de/%23lost/) zu finden.
-
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11524/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11525/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 11524; parent 11523; 2020-09-18T14:07:01Z -->
+<!-- MediaWiki page 1463; revision 11525; parent 11524; 2020-09-18T14:08:17Z -->
