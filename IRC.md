@@ -98,12 +98,12 @@ Nun kompiliert er alles. Danach „make install“ als root. Dann wird er das Pr
 
 Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-unter-windows)
 
-## Channel-Logs und Statistiken
+## Channel-Logs
 
 Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [\[2\]](https://log.mq32.de/%23lost/) zu finden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11522/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11523/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 11522; parent 11521; 2020-09-18T13:59:50Z -->
+<!-- MediaWiki page 1463; revision 11523; parent 11522; 2020-09-18T14:00:12Z -->
