@@ -104,10 +104,10 @@ Alles weitere Funktioniert wie beim [KVIRC unter Windows](#irc-start-mit-kvirc-u
 
 ## Channel-Logs und Statistiken
 
-Aufzeichnungen der Channelgespräche sind genauso wie einige Statistiken stetig aktualisiert unter [\[2\]](http://irc.tyndur.org/) zu finden.
+Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [\[2\]](https://log.mq32.de/%23lost/) zu finden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9073/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11521/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1463/index.html)
 
-<!-- MediaWiki page 1463; revision 9073; parent 8900; 2010-12-18T18:22:03Z -->
+<!-- MediaWiki page 1463; revision 11521; parent 9073; 2020-09-18T13:56:31Z -->
