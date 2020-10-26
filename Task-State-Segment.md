@@ -16,7 +16,7 @@ Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Information
 | ------------------- | ------------ |
 | Basisadresse 15-0 | Limit 15-0 |
 
-- *Type* &#150; Deskriptor Typ &#150; Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dies wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht wiedereintrittsfähig. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
+- *Type* (Deskriptortyp) - Hier muss als Wert 1001b eingetragen werden. Die hintere Null wird zusätzlich als Busy-Flag verwendet. Dieses wird auf 1 gesetzt, sobald der Task in das System geladen ist und gestartet wurde. Tasks sind nicht wiedereintrittsfähig. Das heißt, sie dürfen sich nicht selbst aufrufen. Dies wird mit dem Busy-Flag verhindert.
 
 ## Aufbau TSS
 
@@ -53,17 +53,13 @@ Das **Task State Segment** (kurz TSS) wird von der CPU benötigt, um Information
 
 Man kann die Felder des TSS in zwei Kategorien einteilen:
 
-1.  **statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Address, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, wenn Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Address kann Null gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
-2.  **dynamische Felder** müssen auch initalisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX-EDX, CS-GS/SS, EFLAGS, ESI/EDI/EBP/ESP und Previous Task Link.
+1.  **Statische Felder** werden einmal mit Werten belegt und dann jeweils beim Taskwechsel von der CPU in die entsprechenden Register geladen, aber niemals automatisch verändert. Zu den statischen Feldern zählen IOMap Base Address, LDT Segment Selektor, CR3, ESP0-2 und SS0-2. Das CR3-Feld muss nicht initialisiert werden, falls Paging nicht aktiv ist, ebenso der LDT Selektor, falls man keine LDTs verwendet. Mit der IOMap kann man bestimmte Ports maskieren, auf die der Task kein Zugriff haben soll. IOMap Base Address kann auf 0 gesetzt werden, wenn man diese Funktion der CPU nicht nutzen möchte.
+2.  **Dynamische Felder** müssen auch initialisiert werden, werden dann aber beim Taskwechsel von der CPU immer mit den entsprechenden geänderten Registerwerten belegt. Zu den dynamischen Feldern gehören EAX bis EDX, CS bis GS/SS, EFLAGS, ESI/EDI/EBP/ESP und der Previous Task Link.
 
-Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS angelegt und dessen Selektor im Taskregister gespeichert worden sein. Denn die CPU lädt bei einem Ringwechsel einen neuen Stack damit weniger privilligierte Software nicht höher privilligierte Software durch einen Stackfault zum Absturtz bringt. Dafür lädt die CPU die Felder ss0 (bzw ss1 oder ss2) sowie esp0 (bzw. esp1 oder esp2) als neuen Stack. Ein Stackwechsel wird ausgeführt, wenn ein Programm die Kontrolle an ein anderes übergibt durch...
-
-- einen [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
-- eine Call Gate
-- eine Task Gate
+Auch wenn man Hardware-Multitasking nicht verwendet, muss mindestens ein TSS angelegt und dessen Selektor im Taskregister gespeichert worden sein. Die CPU lädt nämlich bei einem Ringwechsel einen neuen Stack, damit weniger privilegierte Software nicht höher privilegierte Software durch einen Stackfault zum Absturz bringt. Dafür lädt die CPU die Register ss0 (bzw ss1 oder ss2) sowie esp0 (bzw. esp1 oder esp2) als neuen Stack. Ein Stackwechsel wird ausgeführt, wenn ein Programm die Kontrolle an ein anderes durch ein [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Call Gate oder Task Gate abgibt.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/9428/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11527/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1599/index.html)
 
-<!-- MediaWiki page 1599; revision 9428; parent 8890; 2011-02-05T12:17:13Z -->
+<!-- MediaWiki page 1599; revision 11527; parent 9428; 2020-10-26T16:15:21Z -->
