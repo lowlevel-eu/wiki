@@ -12,55 +12,64 @@ Der eigentliche Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss
 
 ### Kernel - C
 
-Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den hier benutzen: \<c\> int main() {
+Als erstes kannst du dir einen kleinen Test-Kernel ausdenken, oder einfach den hier benutzen:
 
-     // Pointer zum Videospeicher
-     char *video = (char*)0xB8000;
-     // String zum Ausgeben
-     char *hello = "Hello World";
+``` c
+int main() {
+  // Pointer zum Videospeicher
+  char *video = (char*)0xB8000;
+  // String zum Ausgeben
+  char *hello = "Hello World";
 
-     // Zuerst den Speicher leeren
-     for(video+=4000; video !=(char*)0xB8000 ;video--)
-        *video=0;
+  // Zuerst den Speicher leeren
+  for(video+=4000; video !=(char*)0xB8000 ;video--)
+     *video=0;
 
-     // String ausgeben
-     while (*hello) {
-       *video = *hello;
-       video++;
-       *video = 0x07;
-       video++;
-       hello++;
-     }
+  // String ausgeben
+  while (*hello) {
+    *video = *hello;
+    video++;
+    *video = 0x07;
+    video++;
+    hello++;
+  }
 
-     // jetzt wo wir schon im Kernel drin sind, wollen wir auch nicht mehr raus ;)
-     while (1);
-     return 0;
-
-} \</c\>
+  // jetzt wo wir schon im Kernel drin sind, wollen wir auch nicht mehr raus ;)
+  while (1);
+  return 0;
+}
+```
 
 ### Kernel - Assembler
 
-Dieser Code macht eigentlich nichts anderes als in die main-Funktion unseres C-Kernels zu springen. \<asm\> global loader ; loader für Linker sichtbar machen extern main  ; main-Funktion des C-Kernels
+Dieser Code macht eigentlich nichts anderes als in die main-Funktion unseres C-Kernels zu springen.
 
-FLAGS equ 0 MAGIC equ 0x1BADB002  ; Magicnumber - Erkennungsmerkmal für GRUB CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
+``` asm
+global loader ; loader für Linker sichtbar machen
+extern main   ; main-Funktion des C-Kernels
 
-section .text align 4 MultiBootHeader:
+FLAGS    equ 0
+MAGIC    equ 0x1BADB002       ; Magicnumber - Erkennungsmerkmal für GRUB
+CHECKSUM equ -(MAGIC + FLAGS) ; Checksum
 
-     dd MAGIC       ; Magic number
-     dd FLAGS       ; Flags
-     dd CHECKSUM    ; Checksum
+section .text
+align 4
+MultiBootHeader:
+  dd MAGIC       ; Magic number
+  dd FLAGS       ; Flags
+  dd CHECKSUM    ; Checksum
 
 loader:
+  mov esp,0x200000 ; Stack an die 2MB-Grenze platzieren
+  push eax         ; Multiboot Magicnumber auf den Stack legen
+  push ebx         ; Adresse der Multiboot-Structure auf den Stack legen
+  call main        ; main-Funktion des C-Kernels aufrufen
 
-     mov esp,0x200000 ; Stack an die 2MB-Grenze platzieren
-     push eax         ; Multiboot Magicnumber auf den Stack legen
-     push ebx         ; Adresse der Multiboot-Structure auf den Stack legen
-     call main        ; main-Funktion des C-Kernels aufrufen
+  cli ; falls der Kernel bis hier her kommt, CPU anhalten
+  hlt
+```
 
-     cli ; falls der Kernel bis hier her kommt, CPU anhalten
-     hlt
-
-\</asm\> Der Code sollte eigentlich gut verständlich sein, trotzdem ist noch was zu klären:
+Der Code sollte eigentlich gut verständlich sein, trotzdem ist noch was zu klären:
 
 - Die Flags können geändert werden, am besten schaut man sich die [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Spezifikation an.
 - Den Stack kann man natürlich an eine beliebige Stelle setzen, aber an der 2MB-Grenze wird er uns nicht stören.
@@ -167,6 +176,6 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/8463/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11528/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1604/index.html)
 
-<!-- MediaWiki page 1604; revision 8463; parent 8461; 2010-10-03T09:36:25Z -->
+<!-- MediaWiki page 1604; revision 11528; parent 8463; 2020-12-05T22:52:57Z -->
