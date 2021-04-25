@@ -55,10 +55,11 @@ Welche Implementierung standardmäßig verwendet werden soll, lässt sich von Pr
   - kann sich den Framebuffer holen und lustige Dinge rendern
   - forkt dabei, nutzt pthread_mutex zur synchronisation
 - newlib, libc++, libc++abi, compiler-rt, [Clang](https://github.com/lowlevel-eu/wiki/wiki/Clang "Clang") mit LF OS Kenntnissen
+- [Doom](https://twitter.com/0x0a_fox/status/1386095877165551616)
 - Bisschen Code der einigermaßen sinnvoll ist und sogar als Referenz hier im Wiki geeignet ist (und teilweise verlinkt)
 
 ---
 
-[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11518/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
+[Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/11529/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/2267/index.html)
 
-<!-- MediaWiki page 2267; revision 11518; parent 11512; 2020-09-08T16:11:19Z -->
+<!-- MediaWiki page 2267; revision 11529; parent 11518; 2021-04-25T04:20:21Z -->
