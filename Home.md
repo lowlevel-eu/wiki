@@ -8,7 +8,6 @@ Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Communi
 
 Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")) stehen unter der [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/).
 
-Tipp: Wenn ihr mal nicht online sein könnt, und trotzdem im Wiki stöbern wollt, sei euch die [Offline-Variante](https://github.com/lowlevel-eu/wiki/wiki/Lowlevel-offline "Lowlevel-Offline") des Wikis ans Herz gelegt.
 
 ****News**\[[Bearbeiten](https://lowlevel-eu.github.io/wiki/pages/1406/index.html "Vorlage:News")\]**
 
