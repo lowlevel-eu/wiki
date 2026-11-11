@@ -4,27 +4,27 @@
 
 ## Nach dem Starten
 
-![startup.png](http://download.tyndur.org/screenshots/0.2/startup.png)
+![startup.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/d45b94026c8048d7e7b7.png)
 
 ## Paketverwaltung lpt
 
-![lpt.png](http://download.tyndur.org/screenshots/0.2/lpt.png)
+![lpt.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/bc964c0a9da3c30ebc8e.png)
 
 ## IRC-Client
 
-![kirc.png](http://download.tyndur.org/screenshots/0.2/kirc.png)
+![kirc.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/22e6b1ea26771c8aab68.png)
 
 ## Texteditor
 
-![kedit.png](http://download.tyndur.org/screenshots/0.2/kedit.png)
+![kedit.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a9b9d8a93cd3582e236b.png)
 
 ## GNU gcc
 
-![gcc.png](http://download.tyndur.org/screenshots/0.2/gcc.png)
+![gcc.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9b166bdf6cc4956842a2.png)
 
 ## GNU nano
 
-![nano.png](http://download.tyndur.org/screenshots/0.2/nano.png)
+![nano.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a9c6f0532866e6464a3.png)
 
 ---
 
