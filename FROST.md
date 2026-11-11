@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i486](X86 "X86") oder höher |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [FreeBASIC](FreeBASIC "FreeBASIC") und [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [FreeBASIC](FreeBASIC "FreeBASIC") und [Assembler](Assembler "Assembler") |
 | API: | nativ |
 | Binärformat: | ELF |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

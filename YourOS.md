@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | x86-64 |
 | [Kernelart](Kernel "Kernel"): | Monolith |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, Assembler |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C, Assembler |
 | API: |  |
 | Binärformat: | ELF-64 |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

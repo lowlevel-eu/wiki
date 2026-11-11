@@ -15,7 +15,7 @@ Keine genaueren Informationen, keine Homepage, vermutlicher Stillstand des Proje
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Exokernel? |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | \- |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

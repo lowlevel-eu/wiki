@@ -6,7 +6,7 @@ Hier können angehende und fortgeschrittene Betriebssystementwickler Information
 
 Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](https://lowlevel-eu.github.io/forum/index.html) / [IRC](IRC "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kundtust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick darüber, was noch zu tun ist, bietet die [TODO-Liste](TODO "TODO"). Sie bietet darüber hinaus die Möglichkeit, Wünsche und Anregungen für Artikel los zu werden. Wenn du keine Erfahrung im Umgang mit Wikis hast, lies dir doch unseren kleinen [Wiki-Crashkurs](Wiki-Crashkurs "Wiki-Crashkurs") durch. **Beachte**: Um dich registrieren zu können ist es aktuell vonnöten, dass du dich im [IRC](IRC "IRC") oder im Forum bei [DemHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") oder DesL meldest, damit diese dir einen Account anlegen können. Dieses Wiki enthält momentan 348 Artikel.
 
-Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin](https://lowlevel-eu.github.io/wiki/pages/1411/index.html "Kategorie:Magazin")) stehen unter der [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/).
+Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin](Kategorie-Magazin "Kategorie:Magazin")) stehen unter der [by-nc-sa 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/de/)-Lizenz der [Creative Commons](http://creativecommons.org/).
 
 
 ****News**\[[Bearbeiten](https://lowlevel-eu.github.io/wiki/pages/1406/index.html "Vorlage:News")\]**
@@ -40,7 +40,7 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
 
 ****Übersicht****
 
-**[OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger")**
+**[OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger")**
 
 - [Grobüberblick](OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger")
 - [Teil 1 - Entwicklungsumgebung](Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")
@@ -91,20 +91,20 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
 - [Shell](Shell "Shell")
 - [Software portieren](Portieren-von-Programmen-und-Bibliotheken "Portieren von Programmen und Bibliotheken")
 
-**[Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html "Kategorie:Hardware")**
+**[Hardware](Kategorie-Hardware "Kategorie:Hardware")**
 
 - [ATA](AT-Attachment "ATA")
 - [DMA](Direct-Memory-Access "DMA")
 - [serielle Schnittstelle](Serielle-Schnittstelle "Serielle Schnittstelle")
 - [parallele Schnittstelle](Parallele-Schnittstelle "Parallele Schnittstelle")
 - [Textausgabe](Textausgabe "Textausgabe")
-- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte")
+- [Netzwerkkarten](Kategorie-Netzwerkkarte "Kategorie:Netzwerkkarte")
   - [Realtek RTL8139](RTL8139 "RTL8139")
   - [AMD PCnet-FAST III](AMD-PCnet "AMD PCnet")
 - Grafikkarten
   - [VGA](Video-Graphics-Array "VGA")
   - [Cirrus Logic](Cirrus-Logic "Cirrus Logic")
-- [Soundkarten](https://lowlevel-eu.github.io/wiki/pages/1827/index.html "Kategorie:Soundkarte")
+- [Soundkarten](Kategorie-Soundkarte "Kategorie:Soundkarte")
   - [Gameport](Gameport "Gameport")
 - IBM PC-spezifisch
   - [APIC](Advanced-Programmable-Interrupt-Controller "APIC")
@@ -116,20 +116,20 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
   - [PIT](Programmable-Interval-Timer "PIT")
   - [Systemlautsprecher](Systemlautsprecher "Systemlautsprecher")
 
-**[Bussysteme](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus")**
+**[Bussysteme](Kategorie-Bus "Kategorie:Bus")**
 
 - [ISA](Industry-Standard-Architecture "ISA")
 - [EISA](Industry-Standard-Architecture#extended-industry-standard-architecture "EISA")
 - [PCI](Peripheral-Component-Interconnect "PCI")
 - [USB](Universal-Serial-Bus "USB")
 
-**Hobby-[OS](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")**
+**Hobby-[OS](Kategorie-Betriebssystem "Kategorie:Betriebssystem")**
 
 - [MyXomycota](MyXomycota "MyXomycota")
 - [týndur](T%C3%BDndur "Týndur")
 - [Xantorix](Xantorix "Xantorix")
 - [LF OS](LF-OS "LF OS")
-- Weitere: [Kategorie Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
+- Weitere: [Kategorie Betriebssysteme](Kategorie-Betriebssystem "Kategorie:Betriebssystem")
 
 **[Dateisysteme](Dateisystem "Dateisystem")**
 
@@ -138,9 +138,9 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
 - [FAT](File-Allocation-Table "FAT")
 - [ISO9660](ISO9660 "ISO9660")
 - [NTFS](NTFS "NTFS")
-- weitere: [Kategorie:Dateisystem](https://lowlevel-eu.github.io/wiki/pages/1659/index.html "Kategorie:Dateisystem")
+- weitere: [Kategorie:Dateisystem](Kategorie-Dateisystem "Kategorie:Dateisystem")
 
-**[Sprachen](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache")**
+**[Sprachen](Kategorie-Programmiersprache "Kategorie:Programmiersprache")**
 
 - [Assembler](Assembler "Assembler")
 - [C](C "C")
@@ -148,15 +148,15 @@ Sämtliche Artikel des Lowlevel-Wiki (abgesehen vom ehemaligen [Lowlevel-Magazin
 - [D](D "D")
 - [FreeBASIC](FreeBASIC "FreeBASIC")
 - [Pascal](Pascal "Pascal")
-- weitere: [Kategorie:Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache")
+- weitere: [Kategorie:Programmiersprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache")
 
 **Verschiedenes**
 
-- [Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar")
+- [Glossar](Kategorie-Glossar "Kategorie:Glossar")
 - [Linkliste](Linkliste "Linkliste")
 - [TODO](TODO "TODO")
 - [Zitate](Zitate "Zitate")
-- [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials")
+- [Tutorials](Kategorie-Tutorials "Kategorie:Tutorials")
 - [Literatur](Literatur "Literatur")
 - Alle Kategorien
 

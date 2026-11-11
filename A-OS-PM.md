@@ -17,7 +17,7 @@ A / OS PM ist ein [Betriebssystem](Betriebssystem "Betriebssystem"), das von Bli
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembly, C/C++ |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembly, C/C++ |
 | API: | A / API |
 | Binärformat: | ELF |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Message passing, pipes, shared memory |

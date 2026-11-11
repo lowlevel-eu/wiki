@@ -11,7 +11,7 @@ ReactOS ist ein freier [Windows](Windows "Windows") NT-Klon im Alphastadium.
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Windows](Windows "Windows") konformer Hybridkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C")/[C++](C%2B%2B "C++") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C")/[C++](C%2B%2B "C++") |
 | API: | WinAPI |
 | Binärformat: | Portable Executable |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x64](X86-64 "X64") |
 | [Kernelart](Kernel "Kernel"): | Exokernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"),[C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"),[C](C "C") |
 | API: | *noch nicht vorhanden* |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | *noch nicht vorhanden* |

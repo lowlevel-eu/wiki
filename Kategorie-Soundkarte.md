@@ -10,6 +10,17 @@ Die meisten neuen Soundkarten sind bereits auf dem Mainboard vorhanden. Diese So
 
 [Gameport](Gameport "Gameport")
 
+## Kategorieübersicht
+
+Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
+
+Übergeordnete Kategorien: [Hardware](Kategorie-Hardware)
+
+### Seiten
+
+- [AC97](AC97)
+
+
 ---
 
 [Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/7665/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1827/index.html)

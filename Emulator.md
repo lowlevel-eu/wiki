@@ -1,6 +1,6 @@
 # Emulator
 
-Weiterleitung: [Kategorie:Emulator](https://lowlevel-eu.github.io/wiki/pages/1408/index.html)
+Weiterleitung: [Kategorie:Emulator](Kategorie-Emulator)
 
 ---
 

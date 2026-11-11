@@ -1,6 +1,6 @@
 # Peripheral Component Interconnect
 
-**Peripheral Component Interconnect** (kurz **PCI**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur leichten Verbindung von Peripheriegeräten mit der CPU.
+**Peripheral Component Interconnect** (kurz **PCI**) ist ein [Bus](Kategorie-Bus "Kategorie:Bus") zur leichten Verbindung von Peripheriegeräten mit der CPU.
 
 Die Informationen in diesem Artikel beziehen sich auch auf die vom klassischen PCI-Bus abgeleiteten Bus-Standards: PCI-Express, Hypertransport, PCI-X und AGP. Diese Busse basieren vom logischen Protokoll her auf PCI aber benutzen andere physikalische Daten-Übertragungsmechanismen bzw. andere Topologien.
 
@@ -441,7 +441,7 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | 0x08 | 0x02 | Non-Volatile-Memory - Enterprise-NVMHCI (NVM(-Express) Host-Controller) |
 | 0x80 | 0x00 | Anderer Massenspeicher |
 
-### Class 0x02 - [Netzwerk](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk")-Controller
+### Class 0x02 - [Netzwerk](Kategorie-Netzwerk "Kategorie:Netzwerk")-Controller
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | -------------------------------------------------------------------------- |

@@ -52,7 +52,7 @@ Außerdem bietet gcc noch Möglichkeiten, die Übergabe nur grob zu spezifiziere
 
 ## Beispiele
 
-Die folgenden Beispiele sind dem Community-Projekt von Lowlevel, [LOST](https://lowlevel-eu.github.io/wiki/pages/1795/index.html "Kategorie:Týndur"), entnommen und unterliegen dessen Lizenz (4-Klausel-BSD-Lizenz). Diese Lizenz ist beim Kopieren von Code aus den Beispielen einzuhalten.
+Die folgenden Beispiele sind dem Community-Projekt von Lowlevel, [LOST](Kategorie-T%C3%BDndur "Kategorie:Týndur"), entnommen und unterliegen dessen Lizenz (4-Klausel-BSD-Lizenz). Diese Lizenz ist beim Kopieren von Code aus den Beispielen einzuhalten.
 
 Aufruf des sleep-Syscalls in LOST: \<c\>
 

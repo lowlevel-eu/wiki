@@ -33,7 +33,7 @@ Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-P
 
 Heutzutage wird Ethernet I kaum noch verwendet. Daher ist es ratsam, Ethernet-II-Pakete zu benutzen.
 
-An die [Netzwerkkarte](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicherweise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
+An die [Netzwerkkarte](Kategorie-Netzwerkkarte "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicherweise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
 
 ## Weblinks
 

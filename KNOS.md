@@ -15,7 +15,7 @@ Letzter Eintrag von anderthalb (deutsche Sprache fdS) Jahren, keine Homepage, ke
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | monolitisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Asm, C |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Asm, C |
 | API: |  |
 | Binärformat: | com |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Semaphoren |

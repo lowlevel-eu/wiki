@@ -17,7 +17,7 @@ FiKe ist ein monolithischer Kernel mit integrierter Shell. FiKe steht dabei für
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | In Planung |
 | Binärformat: | In Planung |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Keine, da Monolith |

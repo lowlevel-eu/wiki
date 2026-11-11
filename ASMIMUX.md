@@ -11,7 +11,7 @@ Wird wieder weiter entwickelt. --[Tev](https://lowlevel-eu.github.io/wiki/pages/
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
 | API: | darkblackAPI, linuxABI |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

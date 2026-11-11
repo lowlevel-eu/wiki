@@ -13,7 +13,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [Assembler](Assembler "Assembler") |
 | API: | [DOS](Microsoft-Disk-Operating-System "DOS") |
 | Binärformat: | COM, EXE ([COFF](Microsoft-Portable-Executable-and-Common-Object-File-Format "COFF")) |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | n.a. |

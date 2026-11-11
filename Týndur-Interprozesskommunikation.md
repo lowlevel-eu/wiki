@@ -1,6 +1,6 @@
 # Týndur/Interprozesskommunikation
 
-Dieser Artikel bezieht sich ausschließlich auf die Interprozesskommunikation unter [LOST](https://lowlevel-eu.github.io/wiki/pages/1795/index.html "Kategorie:Týndur"). Eine allgemeingültige Erklärung findet sich unter [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation").
+Dieser Artikel bezieht sich ausschließlich auf die Interprozesskommunikation unter [LOST](Kategorie-T%C3%BDndur "Kategorie:Týndur"). Eine allgemeingültige Erklärung findet sich unter [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation").
 
 ## Kernelseitiges RPC
 

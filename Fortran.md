@@ -11,7 +11,7 @@
 | Homepage |  |
 
   
-Fortran ist eine prozedurale und objektorientierte [Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"), die auf einem Vorschlag von John W. Backus aus dem Jahre 1953 zurückgeht und als erste tatsächlich umgesetzte Hochsprache im Jahre 1957 von eben diesem entwickelt wurde. Fortran wird vor allem für numerische Berechnungen genutzt.
+Fortran ist eine prozedurale und objektorientierte [Programmiersprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"), die auf einem Vorschlag von John W. Backus aus dem Jahre 1953 zurückgeht und als erste tatsächlich umgesetzte Hochsprache im Jahre 1957 von eben diesem entwickelt wurde. Fortran wird vor allem für numerische Berechnungen genutzt.
 
 ## Testkernel in Fortran
 

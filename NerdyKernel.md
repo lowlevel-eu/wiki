@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") & [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") & [Assembler](Assembler "Assembler") |
 | API: | Noch nicht näher geplant |
 | Binärformat: |  |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Message-Passing, Message-Queues, RPC |

@@ -1,6 +1,6 @@
 # Accelerated Graphics Port
 
-Der **Accelerated Graphics Port** (kurz: **AGP**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zum Anschluss von Grafikkarten. Die Schnittstelle basiert auf [PCI](Peripheral-Component-Interconnect "PCI"), bietet jedoch höhere Transferraten und eine Anbindung der Grafikkarte an den Speicher (GART) an. Mittlerweile wurde die Schnittstelle von PCI-Express abgelöst.
+Der **Accelerated Graphics Port** (kurz: **AGP**) ist ein [Bus](Kategorie-Bus "Kategorie:Bus") zum Anschluss von Grafikkarten. Die Schnittstelle basiert auf [PCI](Peripheral-Component-Interconnect "PCI"), bietet jedoch höhere Transferraten und eine Anbindung der Grafikkarte an den Speicher (GART) an. Mittlerweile wurde die Schnittstelle von PCI-Express abgelöst.
 
 ## Registerstruktur
 

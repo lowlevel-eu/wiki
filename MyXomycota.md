@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | [Int 0x80](Syscall "Syscall") |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF"), [Shell](Shell "Shell")-Scripts |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Keine (bis jetzt) |
@@ -69,7 +69,7 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 - [AC'97](AC97 "AC97")-Treiber (zumindest ICH)
 - [Paging](Paging "Paging") (2 GB pro Prozess)
 - [ELF](Executable-and-Linking-Format "ELF")-Programme
-- [Netzwerkstack](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk"): [Ethernet](Ethernet "Ethernet"), [ARP](Address-Resolution-Protocol "Address Resolution Protocol"), [IP](Internet-Protocol "Internet Protocol"), UDP, TCP
+- [Netzwerkstack](Kategorie-Netzwerk "Kategorie:Netzwerk"): [Ethernet](Ethernet "Ethernet"), [ARP](Address-Resolution-Protocol "Address Resolution Protocol"), [IP](Internet-Protocol "Internet Protocol"), UDP, TCP
 - CDI-Interfaces: core, fs, net, storage
 
 ## Wichtigste Programme

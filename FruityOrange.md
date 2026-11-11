@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Monolithisch](Kernel#monolithischer-kernel "Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") ([Assembler](Assembler "Assembler")) |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") ([Assembler](Assembler "Assembler")) |
 | API: | nativ |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | --- |

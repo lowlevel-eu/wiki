@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") (später auch [x64](X86-64 "X64")) |
 | [Kernelart](Kernel "Kernel"): | Modulares Kernel System (MKS) |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C")/[C++](C%2B%2B "C++") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C")/[C++](C%2B%2B "C++") |
 | API: | n/a |
 | Binärformat: | BIN, (event. EXE) |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Channels |

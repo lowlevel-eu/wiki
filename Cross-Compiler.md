@@ -1,6 +1,6 @@
 # Cross-Compiler
 
-Ein Cross-Compiler ist ein [Compiler](https://lowlevel-eu.github.io/wiki/pages/1923/index.html "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die verwendete (Hostsystem, kurz host) erzeugt. Die Zielplattform kann sich dabei sowohl bezüglich des Betriebssystems als auch des verwendeten Prozessors unterscheiden.
+Ein Cross-Compiler ist ein [Compiler](Kategorie-Compiler "Kategorie:Compiler"), der Objektdateien für eine andere Plattform (Zielplattform oder target) als die verwendete (Hostsystem, kurz host) erzeugt. Die Zielplattform kann sich dabei sowohl bezüglich des Betriebssystems als auch des verwendeten Prozessors unterscheiden.
 
   
 

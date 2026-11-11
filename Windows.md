@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86"), [x64](X86-64 "X64"), [ARM](ARM "ARM") (Windows RT-Versionen), früher Alpha (NT 4) |
 | [Kernelart](Kernel "Kernel"): | [Makrokernel](Kernel#makrokernel "Makrokernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C |
 | API: | WinAPI |
 | Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |

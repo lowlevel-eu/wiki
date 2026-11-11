@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | Nativ mit POSIX-Wrappern (Paloxena3.5-API) |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | RPC über Popupthreads mit SHM und Message Passing |

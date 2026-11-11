@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | ASM |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | ASM |
 | API: | BGOS API |
 | Binärformat: | \- |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

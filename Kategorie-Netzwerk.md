@@ -41,6 +41,22 @@ Im Moment gibt es nur zwei Frequenzblöcke, in denen WLAN ausgesendet und empfan
 
 Alle Kanäle haben eine Bandbreite von 20 MHz.
 
+## Kategorieübersicht
+
+Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
+
+### Unterkategorien
+
+- [Netzwerkkarte](Kategorie-Netzwerkkarte)
+
+### Seiten
+
+- [Address Resolution Protocol](Address-Resolution-Protocol)
+- [Ethernet](Ethernet)
+- [Internet Protocol](Internet-Protocol)
+- [Netzwerkprüfsumme](Netzwerkpr%C3%BCfsumme)
+
+
 ---
 
 [Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5698/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1888/index.html)

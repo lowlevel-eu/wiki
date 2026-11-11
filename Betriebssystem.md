@@ -8,7 +8,7 @@ Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, d
 - [Microsoft Windows](Windows "Windows")
 - [Linux-Distributionen](Linux "Linux")
 - [ReactOS](ReactOS "ReactOS")
-- Weitere siehe [Kategorie Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
+- Weitere siehe [Kategorie Betriebssysteme](Kategorie-Betriebssystem "Kategorie:Betriebssystem")
 
 ---
 

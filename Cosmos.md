@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86"), [x86-64](X86-64 "X86-64") |
 | [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C# |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C# |
 | API: | [Microsoft .NET Micro Framework](http://www.microsoft.com/netmf/default.mspx) |
 | Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

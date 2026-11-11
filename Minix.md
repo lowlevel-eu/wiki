@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86"), Motorola 68000, Sun SPARC |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | [POSIX](POSIX "POSIX") ab Version 3 |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing |

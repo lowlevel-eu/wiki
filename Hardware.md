@@ -1,6 +1,6 @@
 # Hardware
 
-Weiterleitung: [Kategorie:Hardware](https://lowlevel-eu.github.io/wiki/pages/1447/index.html)
+Weiterleitung: [Kategorie:Hardware](Kategorie-Hardware)
 
 ---
 

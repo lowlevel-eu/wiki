@@ -15,7 +15,7 @@ Es gibt hier zwar keine offizielle Schöpfungshöhe im Wik, aber es wird scheinb
 | OS-Eigenschaften |  |
 | Plattform: | ??? |
 | [Kernelart](Kernel "Kernel"): | Hybrid Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
 | API: | Keins |
 | Binärformat: | \- |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

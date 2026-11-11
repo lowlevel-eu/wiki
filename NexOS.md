@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), NPL (NexOS Programming Language; für Programme) |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), NPL (NexOS Programming Language; für Programme) |
 | API: | Int 0xFF |
 | Binärformat: | RAW |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

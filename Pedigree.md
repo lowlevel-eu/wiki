@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64"), ARM, MIPS, PowerPC |
 | [Kernelart](Kernel "Kernel"): | modularer [Monolith](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
 | API: | [POSIX](POSIX "POSIX") |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | n. a. |

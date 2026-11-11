@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolith |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") ([FASM](Flat-Assembler "FASM")) |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") ([FASM](Flat-Assembler "FASM")) |
 | API: | \- |
 | Binärformat: | \- |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

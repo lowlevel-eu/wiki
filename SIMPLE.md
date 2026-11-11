@@ -15,7 +15,7 @@ Keine Homepage, Stand des Projektes ist nicht ersichtbar, vermutlicher Stillstan
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Monolith](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | POSIX |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

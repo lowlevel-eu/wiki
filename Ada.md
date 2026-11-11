@@ -12,7 +12,7 @@
 
 [ISO-Norm](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
 
-**Ada** ist eine nach Ada Lovelace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte [Programmiersprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"), deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
+**Ada** ist eine nach Ada Lovelace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte [Programmiersprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"), deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
 
   
 

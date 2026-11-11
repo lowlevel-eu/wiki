@@ -11,7 +11,7 @@ Universe soll ein schlankes, universelles (deswegen auch der Name, wer hätte da
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86"), [ARM](ARM "ARM")(In Arbeit) |
 | [Kernelart](Kernel "Kernel"): | Micro-Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembler/C |
 | API: | nativ, [POSIX](POSIX "POSIX") |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | [Pipes](Pipe "Pipe") |

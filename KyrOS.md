@@ -15,7 +15,7 @@ Keine Homepage, keine Download-Möglichkeit, keine sichtbare Aktivität --[DerHa
 | OS-Eigenschaften |  |
 | Plattform: | [x86-64](X86-64 "X86-64") |
 | [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") & [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") & [C](C "C") |
 | API: | KyrAPI |
 | Binärformat: | ELF |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

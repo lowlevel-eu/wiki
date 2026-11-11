@@ -15,7 +15,7 @@ Wird nicht mehr weiterentwickelt. ---[DerHartmut](https://lowlevel-eu.github.io/
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Makrokernel](Kernel#makrokernel "Makrokernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | [Syscall](Syscall "Syscall")-Interface (geplant) |
 | Binärformat: | (noch keins) |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Keine |

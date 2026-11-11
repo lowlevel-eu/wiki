@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86"), geplant: [AMD64](X86-64 "AMD64"), AVR und [ARM](ARM "ARM") |
 | [Kernelart](Kernel "Kernel"): | Hybridkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
 | API: | \- |
 | Binärformat: | .x (eigenes) und .elf ([ELF](Executable-and-Linking-Format "ELF")) |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

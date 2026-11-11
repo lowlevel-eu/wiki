@@ -45,7 +45,7 @@ Befehlssatzerweiterungen für Gäste:
   - [AC'97](AC97 "AC97") Audio (Intel)
   - SoundBlaster 16
   - Intel HD Audio
-- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"):
+- [Netzwerkkarten](Kategorie-Netzwerkkarte "Kategorie:Netzwerkkarte"):
   - [PCnet FAST III](AMD-PCnet "AMD PCnet")
   - PCnet-PCI II
   - Intel PRO/1000 MT Desktop

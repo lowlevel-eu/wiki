@@ -2,6 +2,20 @@
 
 Alle Formen von Bussen gehören hier rein.
 
+## Kategorieübersicht
+
+Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
+
+Übergeordnete Kategorien: [Hardware](Kategorie-Hardware)
+
+### Seiten
+
+- [Accelerated Graphics Port](Accelerated-Graphics-Port)
+- [Industry Standard Architecture](Industry-Standard-Architecture)
+- [Peripheral Component Interconnect](Peripheral-Component-Interconnect)
+- [Universal Serial Bus](Universal-Serial-Bus)
+
+
 ---
 
 [Originalversion und Autorenschaft](https://lowlevel-eu.github.io/wiki/revisions/5042/index.html) · [MediaWiki-Versionsgeschichte](https://lowlevel-eu.github.io/wiki/history/1769/index.html)

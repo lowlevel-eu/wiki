@@ -15,7 +15,7 @@ Dieser Artikel wurde zum Löschen vorgeschlagen.
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Mikro |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
 | API: | EdoxAPI |
 | Binärformat: | .bin |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64"), |
 | [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Sing# (Spec#-Derivat → C#-Dialekt) |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Sing# (Spec#-Derivat → C#-Dialekt) |
 | API: | [POSIX](POSIX "POSIX") |
 | Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | spezielles Shared Memory/Message Passing |

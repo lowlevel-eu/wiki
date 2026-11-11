@@ -7,7 +7,7 @@
 | Compiler: | [GCC](GNU-Compiler-Collection "GCC"), [Clang](Clang "Clang"), icc, ... |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger") |
+| Beispielkernel in der Sprache: | [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger") |
 | Homepage |  |
 
 [The C Standards Committee](http://www.open-std.org/jtc1/sc22/wg14/)
@@ -20,7 +20,7 @@ C wurde 1971–1973 von Dennis Ritchie in den Bell Laboratories entwickelt, er s
 
 ## Kernelprogrammierung mit C
 
-Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für Einsteiger gibt es die [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger"), welche beschreibt, wie man einen kleinen Kernel in C schreibt mithilfe des Bootloaders [GRUB](Grand-Unified-Bootloader "GRUB") entwickelt. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [GCC](GNU-Compiler-Collection "GCC"), [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") hat auch sehr gute Erfahrungen mit [Clang](Clang "Clang") gemacht.
+Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für Einsteiger gibt es die [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger"), welche beschreibt, wie man einen kleinen Kernel in C schreibt mithilfe des Bootloaders [GRUB](Grand-Unified-Bootloader "GRUB") entwickelt. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [GCC](GNU-Compiler-Collection "GCC"), [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") hat auch sehr gute Erfahrungen mit [Clang](Clang "Clang") gemacht.
 
 ### Assemblercode in C
 
@@ -75,7 +75,7 @@ Aus analogem Grund sollte auch auf [Memory-mapped I/O](Hardware-Abstraction-Laye
 
 ## siehe auch
 
-- Die [Tutorialserie OS-Dev für Einsteiger](https://lowlevel-eu.github.io/wiki/pages/1895/index.html "Kategorie:OS-Dev für Einsteiger") benutzt C als Programmiersprache der Wahl
+- Die [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger") benutzt C als Programmiersprache der Wahl
 
 ## Weblinks
 

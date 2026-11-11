@@ -15,7 +15,7 @@ Recht interessantes Projekt, aber keine Homepage, letzter Page-Edit aus 2008, ke
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembler |
 | API: | Zugriff auf laufenden Module |
 | Binärformat: | eigenes |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing, Shared Memory |

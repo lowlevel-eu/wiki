@@ -15,7 +15,7 @@ Letzte Änderung vor gut einem Jahr, keine sichtbare Weiterentwicklung. --[DerHa
 | OS-Eigenschaften |  |
 | Plattform: |  |
 | [Kernelart](Kernel "Kernel"): |  |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): |  |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): |  |
 | API: |  |
 | Binärformat: |  |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

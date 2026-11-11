@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86")/[x86-64](X86-64 "X64")/[ARM](ARM "ARM") |
 | [Kernelart](Kernel "Kernel"): | [Micro](Kernel#mikrokernel "Microkernel")[monolithischer](Kernel#monolithischer-kernel "Monolithischer Kernel") Modular[hybrid](Kernel#makrokernel "Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, Assembler (Syntax: Intel und Falschrum) |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C, Assembler (Syntax: Intel und Falschrum) |
 | API: | POSIX (nur besser, weil noch kaputter) |
 | Binärformat: | [ZWÖLF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | V.O.M.I.T. (**V**erbose **O**bject-oriented **M**achine-readable **I**nformation **T**ransfer) |

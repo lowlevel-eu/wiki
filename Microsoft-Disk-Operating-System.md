@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | [Monolith](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler, C |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembler, C |
 | API: | u.a. int 21h |
 | Binärformat: | COM, [MZ EXE](MZ-EXE "MZ EXE") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

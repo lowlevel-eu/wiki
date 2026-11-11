@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | [POSIX](POSIX "POSIX"), Nativ |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | [RPC](Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), [Message Queues](Interprozesskommunikation#message-queues "Message Queue") (SysV), [Semaphores](Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](Interprozesskommunikation "Signale") |

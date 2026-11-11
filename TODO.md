@@ -1,6 +1,6 @@
 # TODO
 
-Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](https://lowlevel-eu.github.io/wiki/pages/1461/index.html "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
+Das Wiki braucht dringend einen neuen Kategorienbaum. Manche Artikel kann man im Moment wirklich nicht vernünftig kategorisieren. Alles nur nach [Kategorie:Glossar](Kategorie-Glossar "Kategorie:Glossar") zu stopfen kann es auch nicht sein. (siehe auch [Lowlevel:Kategoriebaum](https://lowlevel-eu.github.io/wiki/pages/2148/index.html "Lowlevel:Kategoriebaum"))
 
 **Wichtig**: Wenn ihr einen Punkt kommentieren wollt signiert euren Kommentar bitte via --\~\~\~~. Dadurch kann ein Kommentar auch einem User zugeordnet werden und eventuell via Forum oder im IRC darüber diskutiert werden. Trotzdem ist diese Seite keine vollwertige Diskussions-Seite, richtige/umfangreiche Diskussionen Bitte nach nebenan auslagern: [Diskussion:TODO](https://lowlevel-eu.github.io/wiki/pages/2185/index.html "Diskussion:TODO"). Die Punkte hier müssen auch nicht nummeriert werden da eine Verlinkung zu der zugehörigen Diskussion direkt möglich ist.
 
@@ -127,7 +127,7 @@ siehe [Diskussion:TODO#Andere Architekturen](https://lowlevel-eu.github.io/wiki/
 
 - siehe Liste der Diskussionsseiten
 
-Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die TODO-Vorlage verwenden \| [Stubs](https://lowlevel-eu.github.io/wiki/pages/1618/index.html "Kategorie:Stub")
+Siehe auch: Gewünschte Seiten \| Gewünschte Kategorieseiten \| Seiten, die die TODO-Vorlage verwenden \| [Stubs](Kategorie-Stub "Kategorie:Stub")
 
 ---
 

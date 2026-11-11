@@ -13,7 +13,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86"), [ARM](ARM "ARM"), MIPS, PowerPC |
 | [Kernelart](Kernel "Kernel"): | [Linux-Kernel](Linux "Linux") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Java, C, C++ |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Java, C, C++ |
 | API: |  |
 | Binärformat: |  |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

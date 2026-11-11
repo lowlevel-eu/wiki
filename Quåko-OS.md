@@ -15,7 +15,7 @@ Scheint nicht mehr weiterentwickelt zu werden --[DerHartmut](https://lowlevel-eu
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Hybrid Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") und [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") und [Assembler](Assembler "Assembler") |
 | API: | Keins |
 | Binärformat: | ?? |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | \- |

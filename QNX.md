@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86"), Power PC, X-Scale und weitere |
 | [Kernelart](Kernel "Kernel"): | [Mikrokernel](Kernel#mikrokernel "Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | ? |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | ? |
 | API: |  |
 | Binärformat: | ? |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

@@ -23,7 +23,7 @@ Hilf Lowlevel, den Artikel zu verbessern.
 USB-Symbol  
 [Quelle](http://de.wikipedia.org/wiki/Datei:Usb-svg.svg)
 
-Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](https://lowlevel-eu.github.io/wiki/pages/1769/index.html "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt. Da die Stecker für USB 3.0 zusätzliche Kontakte enthalten, sind allerdings nicht sämtliche, denkbaren Kombinationen realisierbar.
+Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](Kategorie-Bus "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt. Da die Stecker für USB 3.0 zusätzliche Kontakte enthalten, sind allerdings nicht sämtliche, denkbaren Kombinationen realisierbar.
 
 USB 2.0: Hubs, die zu USB 2.0 kompatibel, enthalten mindestens einen (eventuell mehrere) Transaction Translator, der eine Datenübertragung von einem Gerät, das zu einer älteren USB-Version kompatibel ist, entsprechend umsetzt. Datenübertragungen von Geräten, die zu einer älteren USB-Version kompatibel sind, beeinflussen daher die Gesamtdatenübertragungsrate eines USB 2.0-Hubs nicht.
 

@@ -15,7 +15,7 @@ Wieder ein eingestelltes OS (Katzen sind übrigens meine Lieblingstiere, weshalb
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C")/[C++](C%2B%2B "C++") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C")/[C++](C%2B%2B "C++") |
 | API: |  |
 | Binärformat: |  |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

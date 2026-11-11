@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [x86-64](X86-64 "X86-64") |
 | [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
 | API: | aktuell POSIX via newlib, später asynchrone native API und newlib darauf portiert für Legacy Apps |
 | Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | Vor allem shared memory und message passing |

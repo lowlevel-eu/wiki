@@ -9,7 +9,7 @@
 | OS-Eigenschaften |  |
 | Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64"), ARM |
 | [Kernelart](Kernel "Kernel"): | Hybridkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"),[C++](C%2B%2B "C++") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"),[C++](C%2B%2B "C++") |
 | API: | [POSIX](POSIX "POSIX") |
 | Binärformat: |  |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

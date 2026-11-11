@@ -15,7 +15,7 @@ Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C") |
 | API: |  |
 | Binärformat: | .bin, .elf |
 | [IPC-Methode](Interprozesskommunikation "IPC"): |  |

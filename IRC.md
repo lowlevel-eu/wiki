@@ -1,6 +1,6 @@
 # IRC
 
-Im IRC-Channel *\#lost* auf *irc.euirc.net* bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich [Týndur](https://lowlevel-eu.github.io/wiki/pages/1795/index.html "Kategorie:Týndur") im speziellen führen.
+Im IRC-Channel *\#lost* auf *irc.euirc.net* bekommt man einerseits schnelle Hilfe auf kleine Probleme und kann andererseits auch Diskussionen über OS-Entwicklung im allgemeinen oder natürlich [Týndur](Kategorie-T%C3%BDndur "Kategorie:Týndur") im speziellen führen.
 
 ## Verhaltensregeln im Channel
 

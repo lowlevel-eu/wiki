@@ -18,7 +18,7 @@ Meine Wahl für das Format fiel damals auf ELF, das liegt an verschiedenen Dinge
 - Viele andere OS-Projekte nutzen es, daher bekommt man Hilfe
 - Linux benutzt es ;)
 
-Auch hier wird vorausgesetzt, dass euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](Multitasking "Multitasking") und [Paging](Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](https://lowlevel-eu.github.io/wiki/pages/1423/index.html "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von [GRUB](Grand-Unified-Bootloader "GRUB") als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
+Auch hier wird vorausgesetzt, dass euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](Multitasking "Multitasking") und [Paging](Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](Kategorie-Tutorials "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von [GRUB](Grand-Unified-Bootloader "GRUB") als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
 
   
 

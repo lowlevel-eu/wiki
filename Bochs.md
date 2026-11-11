@@ -23,12 +23,12 @@ Bochs kann, abhängig davon mit welchen Parametern der Emulator kompiliert wurde
 
 - einen (oder mehrere) 386-, 486-, Pentium-, Pentium-Pro- oder AMD64-Prozessor(en)
 - Standardgeräte: [PIT](Programmable-Interval-Timer "PIT"), [PIC](Programmable-Interrupt-Controller "PIC"), [CMOS](CMOS "CMOS"), [APIC](Advanced-Programmable-Interrupt-Controller "APIC"), [I/O-APIC](Advanced-Programmable-Interrupt-Controller "APIC"), [DMA](Direct-Memory-Access "DMA")-Controller, serielle und parallele Schnittstelle
-- [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"): NE2000, Intel 82540EM (e1000)
+- [Netzwerkkarten](Kategorie-Netzwerkkarte "Kategorie:Netzwerkkarte"): NE2000, Intel 82540EM (e1000)
 - PS/2-Maus und -Tastatur
 - CD-ROM-Laufwerk
 - Festplatte
 - [Diskettenlaufwerk](Floppy-Disk-Controller "Floppy Disk Controller")
-- [Soundkarte](https://lowlevel-eu.github.io/wiki/pages/1827/index.html "Kategorie:Soundkarte"): Soundblaster 16, ES1370
+- [Soundkarte](Kategorie-Soundkarte "Kategorie:Soundkarte"): Soundblaster 16, ES1370
 - eingeschränkte Unterstützung für eine [Cirrus CLGD 5446](Cirrus-Logic "Cirrus Logic") PCI-VGA-Karte
 - eingeschränkte Unterstützung von [USB](Universal-Serial-Bus "USB")
 

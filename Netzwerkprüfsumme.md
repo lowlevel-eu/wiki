@@ -1,6 +1,6 @@
 # Netzwerkprüfsumme
 
-Bei [Netzwerkprotokollen](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk") wie [IP](Internet-Protocol "Internet Protocol"), TCP und UDP wird eine Checksumme benötigt. Die Berechnung dieser Prüfsumme erfolgt bei allen diesen Protokollen auf die gleiche Art und Weise, wobei sie bei unterschiedlichen Protokollen über unterschiedliche Daten berechnet wird (z. B. bei IP nur über den Header, bei hingegen TCP über die Daten, den TCP-Header und einen Pseudo-IP-Header)
+Bei [Netzwerkprotokollen](Kategorie-Netzwerk "Kategorie:Netzwerk") wie [IP](Internet-Protocol "Internet Protocol"), TCP und UDP wird eine Checksumme benötigt. Die Berechnung dieser Prüfsumme erfolgt bei allen diesen Protokollen auf die gleiche Art und Weise, wobei sie bei unterschiedlichen Protokollen über unterschiedliche Daten berechnet wird (z. B. bei IP nur über den Header, bei hingegen TCP über die Daten, den TCP-Header und einen Pseudo-IP-Header)
 
 ## Schema
 

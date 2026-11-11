@@ -15,7 +15,7 @@ Relevanz - Wenn es z.B. ein Bootsektor-Spiel wäre ok, aber das ist jetzt ein PM
 | OS-Eigenschaften |  |
 | Plattform: | [x86](X86 "X86") |
 | [Kernelart](Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") |
+| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") |
 | API: | *keine* |
 | Binärformat: | *keine Programmausführung geplant* |
 | [IPC-Methode](Interprozesskommunikation "IPC"): | *keine* |
