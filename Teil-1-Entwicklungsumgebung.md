@@ -71,7 +71,7 @@ Welche Software Du dazu benutzt, ist mehr oder weniger egal, solange Du überhau
 
 ## Bevor es nun richtig losgeht...
 
-Leider müssen wir immer wieder feststellen, dass angehende Betriebssystementwickler den Kernel aus diesem Tutorial blind in ihr "eigenes" Betriebssystem kopieren und im IRC dann fragen stellen, getreu dem Motto: "Ich habe hier den Kernel einfach kopiert und er funktioniert nun nicht, bitte helft mir!" (damit wird jetzt nicht das Klonen des Kernel aus dem [Repository](http://git.tyndur.org/?p=tutorial.git;a=summary) und Kompilieren gemeint, sondern die Übernahme des Codes 1:1 in das eigene Betriebssystem). Nicht nur, dass das bloße Kopieren keinerlei Lerneffekt mich sich bringt, es ist auch nicht erlaubt: Der Code in diesem Tutorial untersteht dem deutschen Urheberrecht und der Autor ist taljeth.
+Leider müssen wir immer wieder feststellen, dass angehende Betriebssystementwickler den Kernel aus diesem Tutorial blind in ihr "eigenes" Betriebssystem kopieren und im IRC dann fragen stellen, getreu dem Motto: "Ich habe hier den Kernel einfach kopiert und er funktioniert nun nicht, bitte helft mir!" (damit wird jetzt nicht das Klonen des Kernel aus dem [Repository](https://github.com/lowlevel-eu/tutorial) und Kompilieren gemeint, sondern die Übernahme des Codes 1:1 in das eigene Betriebssystem). Nicht nur, dass das bloße Kopieren keinerlei Lerneffekt mich sich bringt, es ist auch nicht erlaubt: Der Code in diesem Tutorial untersteht dem deutschen Urheberrecht und der Autor ist taljeth.
 
 Natürlich dürft ihr den Code als "Inspiration" nutzen, doch lasst euch euch gesagt sein: Einfach kopieren bringt euch nichts und schadet vor allem nur eurer Reputation, vor allem, wenn ihr im IRC fragt, ob jemand euren kopierten Code fixen kann.
 

@@ -12,7 +12,7 @@ Dieses Tutorial erläutert die Emulation von týndur unter [Bochs](https://githu
 
 - Bochs - [Download](http://sourceforge.net/projects/bochs/files/bochs/2.4.5/Bochs-2.4.5.exe/download)
 - týndur-Image
-  - [Release-Images](http://download.tyndur.org/releases/0.2/)
+  - [Release-Images](https://github.com/lowlevel-eu/tyndur/releases)
   - [Nightly Builds](http://nightlies.tyndur.org/)
 
   
@@ -910,8 +910,8 @@ Die Datei wird nun mit der Dateiendung ".bxrc" gespeichert. Diese kann dann per 
 ## Weblinks
 
 - [Bochs-Emulator](http://bochs.sourceforge.net/)
-- [Týndur Releases](http://download.tyndur.org/releases/)
-- [Týndur](http://www.tyndur.org)
+- [Týndur Releases](https://github.com/lowlevel-eu/tyndur/releases)
+- [Týndur](https://github.com/lowlevel-eu/tyndur)
 
 ---
 

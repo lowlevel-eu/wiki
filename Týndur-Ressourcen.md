@@ -6,15 +6,15 @@ Ausführliche Informationen zum Entwicklungsprozess gibt es unter [Týndur/Entwi
 
 ## Downloads
 
-- [download.tyndur.org](http://download.tyndur.org/) – Downloadserver für stabile Releases und andere Dateien zu Týndur
+- [Týndur-Releases auf GitHub](https://github.com/lowlevel-eu/tyndur/releases) – Stabile Releases und historische Vorabversionen von Týndur
 
 ## Code-Repository
 
-- [git.tyndur.org](http://git.tyndur.org/) – Týndur-WebGit
+- [Týndur auf GitHub](https://github.com/lowlevel-eu/tyndur) – Týndur-Quellcode
 
 Die Clone-Url lautet:
 
-- git://git.tyndur.org/tyndur.git
+- https://github.com/lowlevel-eu/tyndur.git
 
 ## IRC
 

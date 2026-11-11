@@ -41,7 +41,7 @@ Da die gesamte Versionsgeschichte des Projektes heruntergeladen wird, kann diese
 
 Beispiel (Kopie des offiziellen týndur-Archives anfordern):
 
-    git clone git://git.tyndur.org/tyndur.git
+    git clone https://github.com/lowlevel-eu/tyndur.git
 
 ### Archiv aktualisieren (pull)
 

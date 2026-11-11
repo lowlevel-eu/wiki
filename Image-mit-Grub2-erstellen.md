@@ -12,7 +12,7 @@ Im Folgenden gehe ich davon aus, dass ihr Linux verwendet, das Arbeitsverzeichni
 
 ## Durchführung
 
-Zuerst lädt man sich ein Image mit [GRUB Legacy](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") herunter, z. B. hier: <http://download.tyndur.org/releases/0.2/>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dieses Image entpackt man nun ins Arbeitsverzeichnis und mountet es anschließend: \<bash\>mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt\</bash\> Jetzt müssen alle Dateien und Ordner außer /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
+Zuerst lädt man sich ein Image mit [GRUB Legacy](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") herunter, z. B. hier: <https://github.com/lowlevel-eu/tyndur/releases>. Ich habe tyndur-0.2.1-gothmog-floppy.img.bz2 genommen. Dieses Image entpackt man nun ins Arbeitsverzeichnis und mountet es anschließend: \<bash\>mkdir mnt sudo mount -oloop 0.2.1-gothmog-floppy.img mnt cd mnt\</bash\> Jetzt müssen alle Dateien und Ordner außer /boot/grub und seinem Inhalt gelöscht werden. Danach verändert man den Inhalt der Datei menu.lst folgendermaßen:
 
     timeout=0
 

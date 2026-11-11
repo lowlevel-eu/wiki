@@ -15,7 +15,7 @@
 | [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | RPC (asynchron) |
 | Homepage |  |
 
-<http://www.tyndur.org/>
+<https://github.com/lowlevel-eu/tyndur>
 
 týndur ist das Community-Betriebssystem von Lowlevel. Es entstand als Idee im Jahr 2005 und wird seitdem von verschiedenen Mitgliedern der Lowlevel-Community gepflegt und erweitert. Zielsetzung des Systems ist es, verständlich zum Lernen, aber auch zum Arbeiten gut benutzbar zu sein. Jeder ist eingeladen mitzuhelfen!
 
@@ -23,7 +23,7 @@ týndur ist das Community-Betriebssystem von Lowlevel. Es entstand als Idee im J
 
 Die übliche Variante, týndur ans Laufen zu bekommen, ist, eine aktuelle Entwicklerversion aus dem git herunterzuladen und den Quellcode selbst zu kompilieren. Für alle, die daran interessiert sind, mitzuhelfen, ist das auch die einzig sinnvolle Möglichkeit. Wer das System nur antesten und sich dazu keine Entwicklungsumgebung aufsetzen möchte, kann auf die stabilen Releases zurückgreifen, die in der Regel ein- bis zweimal im Jahr veröffentlicht werden. Sie stehen für die aktuelle Version als Festplatten- und Live-CD-Image zur Verfügung.
 
-- Releases: <http://download.tyndur.org/releases/0.2/>
+- Releases: <https://github.com/lowlevel-eu/tyndur/releases>
 - Entwicklerversionen: Siehe [Týndur/Entwicklung](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Entwicklung "Týndur/Entwicklung")
 
 ## Kurzeinführung
@@ -60,7 +60,7 @@ Die Prozessverwaltung macht nichts aufregendes - sie verwaltet eben Tasks. In ke
 
 Etwas interessanter ist vielleicht die IPC, bei einem Mikrokernel ist es ja nicht ganz unwichtig, wie die Prozesse miteinander kommunizieren. Hier sind zwei Möglichkeiten unterstützt, zum einen Shared Memory und zum anderen RPC. RPCs sind asynchron und können Daten als Parameter enthalten. Für den aufgerufenen Prozess sieht das ähnlich aus wie ein Signal unter \*nix: Er wird unterbrochen, wo er gerade ist, bekommt die RPC-Daten auf den Stack gepackt und macht mit seinem RPC-Handler weiter. Wenn er fertig ist, springt er wieder zurück, wo er herkommt. Damit in kritischen Abschnitten nichts böses passiert, kann der RPC-Empfang auch blockiert werden.
 
-Das war's eigentlich schon, was die zentralen Themen angeht. Vielleicht noch einen Blick auf die [Liste der Syscalls](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/include/syscallno.h;h=b56ad45801c88d3140ea019c2278d6824b859fb9;hb=HEAD). Viel aufregendes ist dort nicht zu sehen, mehr oder weniger sind das die erwarteten Funktionen für den beschrieben Umfang. Was vielleicht noch interessant ist, ist der Start von Programmen und das Interrupthandling.
+Das war's eigentlich schon, was die zentralen Themen angeht. Vielleicht noch einen Blick auf die [Liste der Syscalls](https://github.com/lowlevel-eu/tyndur/blob/main/src/include/syscallno.h). Viel aufregendes ist dort nicht zu sehen, mehr oder weniger sind das die erwarteten Funktionen für den beschrieben Umfang. Was vielleicht noch interessant ist, ist der Start von Programmen und das Interrupthandling.
 
 Der Loader für die Programme sitzt ebenfalls im Userspace und zwar momentan in init. Was der Kernel bereitstellt ist eine Funktion, um einen "leeren" Task zu erstellen. Der Loader lädt anschließend das Programm erst einmal in seinen Speicher und tritt die entsprechenden Pages dann an den neuen Task ab. Wenn er damit fertig ist, lässt er ihn loslaufen.
 
@@ -88,9 +88,9 @@ Seit dem 27. Mai 2007 ist ein neuer Kernel (kernel2 genannt) in Arbeit, welcher 
 | --------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0.1.0 | 03.05.2007 | Einfacher Mikrokernel mit Speicherverwaltung, Multitasking und RPC. Im Usermode Tastatur-, Disketten- und FAT-Treiber und eine einfache Shell. | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](http://vs6503.vserver4free.de/lost/download/lost-0.1.0.img.gz "Floppy") |
 | 0.1.1 | 24.12.2007 | Texteditor, experimentelle Netzwerkunterstützung, Performance | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](http://vs6503.vserver4free.de/lost/download/lost-0.1.1.img.gz "Floppy") |
-| 0.2.0 | 24.12.2008 | Festplatten- und ext2-Treiber. Portierte Programme wie FPC, gcc und nano. Erstes Release mit der Treiberschnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"). | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.0-gothmog-floppy.img.bz2 "Floppy") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.0-gothmog-hd.img.bz2 "HD-Image") |
-| 0.2.1 | 05.07.2009 | CD-ROM, UTF-8, zusätzliche portierte Programme (lynx, dropbear, Subversion) | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.1-gothmog-floppy.img.bz2 "Floppy") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.1-gothmog-hd.img.bz2 "HD-Image") |
-| 0.2.2 | 25.12.2009 | Erstes Release mit Live-CD und Internationalisierung. setup ist neu. Erstes Release, das seinen eigenen Kernel kompilieren kann. | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8707bdeb48a151166527.png" width="16" height="16" alt="CD" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.2-gothmog-livecd-full.iso.bz2 "CD") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](http://download.tyndur.org/releases/0.2/tyndur-0.2.2-gothmog-hd.img.bz2 "HD-Image") |
+| 0.2.0 | 24.12.2008 | Festplatten- und ext2-Treiber. Portierte Programme wie FPC, gcc und nano. Erstes Release mit der Treiberschnittstelle [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"). | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](https://github.com/lowlevel-eu/tyndur/releases/download/0.2.0/tyndur-0.2.0-gothmog-floppy.img.bz2 "Floppy") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](https://github.com/lowlevel-eu/tyndur/releases/download/0.2.0/tyndur-0.2.0-gothmog-hd.img.bz2 "HD-Image") |
+| 0.2.1 | 05.07.2009 | CD-ROM, UTF-8, zusätzliche portierte Programme (lynx, dropbear, Subversion) | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/00f9c686ea71e4c6f1dd.png" width="16" height="16" alt="Floppy" />](https://github.com/lowlevel-eu/tyndur/releases/download/0.2.1/tyndur-0.2.1-gothmog-floppy.img.bz2 "Floppy") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](https://github.com/lowlevel-eu/tyndur/releases/download/0.2.1/tyndur-0.2.1-gothmog-hd.img.bz2 "HD-Image") |
+| 0.2.2 | 25.12.2009 | Erstes Release mit Live-CD und Internationalisierung. setup ist neu. Erstes Release, das seinen eigenen Kernel kompilieren kann. | [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8707bdeb48a151166527.png" width="16" height="16" alt="CD" />](https://github.com/lowlevel-eu/tyndur/releases/download/0.2.2/tyndur-0.2.2-gothmog-livecd-full.iso.bz2 "CD") [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9bdcaceadc974cd5b909.png" width="16" height="16" alt="HD-Image" />](https://github.com/lowlevel-eu/tyndur/releases/download/0.2.2/tyndur-0.2.2-gothmog-hd.img.bz2 "HD-Image") |
 
 ## Screenshots
 
@@ -98,10 +98,10 @@ Siehe [Screenshots](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Screens
 
 ## Links
 
-- [WebGit](http://git.tyndur.org/)
+- [WebGit](https://github.com/lowlevel-eu/tyndur)
 - [Mailingliste](http://list.tyndur.org/) ([Archiv](http://list.tyndur.org/tyndur-devel/threads.html))
-- [Revisionsaktuelle Dokumentation von CDI](http://lpt.tyndur.org/cdi/)
-- [Downloads](http://download.tyndur.org/)
+- [Dokumentation in den CDI-Header-Dateien](https://github.com/lowlevel-eu/cdi/tree/main/include/cdi)
+- [Downloads](https://github.com/lowlevel-eu/tyndur/releases)
 
 ---
 

@@ -34,7 +34,7 @@ Ich persönlich benutze den VM86-Mode nur, um Interrupts aufzurufen und missbrau
 ## Links
 
 - [Sehr gutes Tutorial von Tim Robinson (englisch)](http://osdev.berlios.de/v86.html)
-- [Code aus týndur für VM86-Tasks (nur für RM-Interrupts)](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel2/src/arch/i386/vm86.c;hb=HEAD)
+- [Code aus týndur für VM86-Tasks (nur für RM-Interrupts)](https://github.com/lowlevel-eu/tyndur/blob/main/src/kernel/src/arch/i386/vm86.c)
 
 ---
 

@@ -246,7 +246,7 @@ Du benutzt einen [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")-C
 Hier und jeweils am Ende der folgenden Teile der Reihe folgt eine Auflistung von externen Quellen, die sich eignen, um bei Unklarheiten nachzuschlagen oder das jeweilige Thema zu vertiefen. Es ist empfehlenswert, sich vor allem auch damit vertraut zu machen, wie man offizielle Spezifikationen zu lesen hat (denn spätestens zu fortgeschritteneren Themen gibt es keine Tutorials mehr).
 
 - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Spezifikation: <http://www.gnu.org/software/grub/manual/multiboot/multiboot.pdf>
-- Der Quellcode eines Beispielkernels zu diesem und den folgenden Teilen der Tutorialreihe kann man [hier](http://git.tyndur.org/?p=tutorial.git;a=summary) einsehen. Der Sourcecode ist **nicht** dazu gedacht, kopiert zu werden, sondern sollte nur im Notfall verwendet werden, um eine unverstandene Kleinigkeit nachzuschauen. Falls größere Verständnisprobleme auftauchen, kann jederzeit im Forum oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachgefragt werden.
+- Der Quellcode eines Beispielkernels zu diesem und den folgenden Teilen der Tutorialreihe kann man [hier](https://github.com/lowlevel-eu/tutorial) einsehen. Der Sourcecode ist **nicht** dazu gedacht, kopiert zu werden, sondern sollte nur im Notfall verwendet werden, um eine unverstandene Kleinigkeit nachzuschauen. Falls größere Verständnisprobleme auftauchen, kann jederzeit im Forum oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachgefragt werden.
 
   
 

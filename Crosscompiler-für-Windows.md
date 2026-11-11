@@ -43,7 +43,7 @@ Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týn
 
 Das Buildsystem von týndur ist nicht darauf ausgelegt unter Windows ein GRUB-Image zu erstellen, deswegen ist dort eine alternative Lösung gefragt. Dieses Thema gehört zwar nicht mehr direkt zum Cross-Compiler, aber da dieses mehr oder wenige eine Anleitung ist, wie man týndur unter Windows baut, schreibe ich das vorerst mal hierhin.
 
-Um die GRUB-Problematik zu umgehen, kann man ein fertiges Image (z.B. von den [Releases](http://download.tyndur.org/releases/)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](https://github.com/lowlevel-eu/wiki/wiki/Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
+Um die GRUB-Problematik zu umgehen, kann man ein fertiges Image (z.B. von den [Releases](https://github.com/lowlevel-eu/tyndur/releases)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](https://github.com/lowlevel-eu/wiki/wiki/Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
 
 Nachdem du týndur mit *make* kompiliert hast, kannst du mit *make updateroot* die erstellten Programme in der passenden Verzeichnisstruktur zusammenstellen lassen. Das Ergebnis landet im Verzeichnis *build\root*. Den Inhalt davon kannst du dann auf das Disketten-Image kopieren und ggf. boot/grub/menu.lst anpassen.
 

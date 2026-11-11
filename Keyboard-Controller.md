@@ -205,7 +205,7 @@ Im Folgenden soll genauer auf die Ansteuerung der Tastatur als ganzes eingegange
 
 ### Initialisierung
 
-Bevor man die Tastatur benutzt, ist es ratsam, sie erst einmal in einen bekannten, sauberen Zustand zu bringen. Im [Tastaturtreiber von týndur](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/keyboard.c) hat sich nach einigem Herumexperimentieren mit verschiedenen Emulatoren die folgende einfache Initialisierung bewährt:
+Bevor man die Tastatur benutzt, ist es ratsam, sie erst einmal in einen bekannten, sauberen Zustand zu bringen. Im [Tastaturtreiber von týndur](https://github.com/lowlevel-eu/tyndur/blob/main/src/modules/kbc/keyboard.c) hat sich nach einigem Herumexperimentieren mit verschiedenen Emulatoren die folgende einfache Initialisierung bewährt:
 
 - Solange das Bit 0 im Statusregister (Puffer voll) gesetzt ist, Bytes aus dem Datenregister lesen. Das hilft, wenn schon vor der Initialisierung des Treibers irgendwelche Tasten betätigt wurde, da der KBC dann keine weiteren Zeichen sendet, bis der Puffer geleert (ausgelesen wurde). Das tritt zum Beispiel im Zusammenhang mit GRUB oft auf, wenn der Benutzer die Taste zu lange gedrückt hält.
 - Tastatur mit Befehl 0xF4 aktivieren. Andere Kombinationen wurden auch getestet, haben aber Probleme bereitet, unter anderem war Zeitweise ein Reset der Tastatur drin, was dazu geführt hat, dass diese unter gewissen Emulatoren überhaupt nicht mehr funktionierte.
@@ -319,7 +319,7 @@ void irq_handler(uint8_t irq) {
 }
 ```
 
-Dieses Codestück unternimmt genau die oben beschriebenen Schritte. Die Funktion „translate_scancode“ übersetzt, wie oben im Kommentar angegeben, die Scancodes in interne Keycodes der Code dazu findet sich ebenfalls im [tyndur-Repository](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/modules/kbc/sc2kc.c). Es handelt sich dabei aber nur um eine mögliche Umsetzung und keineswegs um die einzig mögliche, hier muss man sich selbst überlegen wie das für den konkreten Anwendungsfall am komfortabelsten ist.
+Dieses Codestück unternimmt genau die oben beschriebenen Schritte. Die Funktion „translate_scancode“ übersetzt, wie oben im Kommentar angegeben, die Scancodes in interne Keycodes der Code dazu findet sich ebenfalls im [tyndur-Repository](https://github.com/lowlevel-eu/tyndur/blob/main/src/modules/kbc/sc2kc.c). Es handelt sich dabei aber nur um eine mögliche Umsetzung und keineswegs um die einzig mögliche, hier muss man sich selbst überlegen wie das für den konkreten Anwendungsfall am komfortabelsten ist.
 
 ## Power-on Reset und Initialisierung des KBC durch das BIOS
 

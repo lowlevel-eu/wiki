@@ -25,7 +25,7 @@ An einem Offset von 1024 Bytes vom Anfang des Mediums. Er beinhaltet alle Inform
 
 - [Design and Implementation of the Second Extended Filesystem](http://web.mit.edu/tytso/www/linux/ext2intro.html)
 - [The Second Extended File System](http://www.nongnu.org/ext2-doc/ext2.html)
-- [libext2 aus týndur](http://git.tyndur.org/?p=libext2.git;a=summary)
+- [libext2 aus týndur](https://github.com/lowlevel-eu/libext2)
 
 ---
 

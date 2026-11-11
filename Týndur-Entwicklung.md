@@ -29,9 +29,9 @@ Die folgenden Abschnitten beziehen sich primär auf Linux oder ähnliche Systeme
 
 ### Quellen beziehen
 
-Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") aus dem [týndur-Repository](http://git.tyndur.org):
+Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") aus dem [týndur-Repository](https://github.com/lowlevel-eu/tyndur):
 
-` git clone ``git://git.tyndur.org/tyndur.git`` `
+` git clone ``https://github.com/lowlevel-eu/tyndur.git`` `
 
 Je nach Internetverbindung dauert es ein paar Minuten, bis die ~5 MiB Quellcode heruntergeladen sind.
 
@@ -159,7 +159,7 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 - Falls kein git-Client vorhanden ist, msysgit herunterladen und installieren (<http://code.google.com/p/msysgit/downloads/list>)
   - Im Installationsprogramm eine der Optionen wählen, mit denen git in PATH eingetragen wird
-- In cmd.exe *git clone git://git.tyndur.org/tyndur.git* ausführen (oder alternativ die Git-GUI benutzen)
+- In cmd.exe *git clone https://github.com/lowlevel-eu/tyndur.git* ausführen (oder alternativ die Git-GUI benutzen)
 
 ### Buildumgebung aufbauen
 

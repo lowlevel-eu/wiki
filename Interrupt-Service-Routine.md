@@ -405,7 +405,7 @@ Stubs für die restlichen Interrupts auch noch hierhin schreiben.\</asm\>
 
 ### Beispiele
 
-- Der Code in [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") ist so wie hier beschrieben aufgebaut. Für *kernel* befindet er sich in [src/kernel/src/stubs.asm](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel/src/stubs.asm;hb=HEAD) und die *kernel2*-Version (AT&T Syntax) befindet sich in [src/kernel2/src/arch/i386/interrupts/int_stubs.S](http://git.tyndur.org/?p=tyndur.git;a=blob;f=src/kernel2/src/arch/i386/interrupts/int_stubs.S;hb=HEAD).
+- Der Code in [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") ist so wie hier beschrieben aufgebaut. Für *kernel* befindet er sich in [src/kernel/src/stubs.asm](https://github.com/lowlevel-eu/tyndur/blob/0.2.2/src/kernel/src/stubs.asm) und die *kernel2*-Version (AT&T Syntax) befindet sich heute in [src/kernel/src/arch/i386/interrupts/int_stubs.S](https://github.com/lowlevel-eu/tyndur/blob/main/src/kernel/src/arch/i386/interrupts/int_stubs.S).
 - Im [Software Multitasking Tutorial für Freebasic](https://github.com/lowlevel-eu/wiki/wiki/Software-Multitasking-Tutorial "Software Multitasking Tutorial") wird ein ähnliches Stack Layout verwendet, allerdings wird dort von den hier besprochenen Punkten nur der Stack Wechsel implementiert
 - In FreeBSD werden die CPU-Exceptions in [i386/i386/exception.s](http://fxr.watson.org/fxr/source/i386/i386/exception.s) ähnlich wie hier beschrieben behandelt.
 

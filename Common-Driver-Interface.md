@@ -418,8 +418,8 @@ Diese Funktion wird vom CDI.net-Treiber aufgerufen, wenn Daten von einer Netzwer
 
 ## Weblinks
 
-- [Dokumentation der CDI-Header-Files von týndur](http://lpt.tyndur.org/cdi)
-- [CDI-Referenzimplementierung](http://git.tyndur.org/?p=cdi.git;a=tree)
+- [Dokumentation in den CDI-Header-Dateien](https://github.com/lowlevel-eu/cdi/tree/main/include/cdi)
+- [CDI-Referenzimplementierung](https://github.com/lowlevel-eu/cdi)
 
 ---
 
