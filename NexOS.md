@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [Christian Kranz](https://lowlevel-eu.github.io/wiki/pages/1744/index.html "Benutzer:Chris12") |
 | Akt. Version: | 0.0.0.1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), NPL (NexOS Programming Language; für Programme) |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), NPL (NexOS Programming Language; für Programme) |
 | API: | Int 0xFF |
 | Binärformat: | RAW |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 NexOS wird momentan für die 6116 CPU neu geschrieben. Da die Plattform aber noch nicht ganz fertiggestellt wurde und somit das Programmieren noch nicht begonnen hat, wird im folgendem NexOS für die x86 Plattform vorgestellt.

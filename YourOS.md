@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Gurgel100 |
 | Akt. Version: | Alpha1.0 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| [Lizenz](Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | x86-64 |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
+| [Kernelart](Kernel "Kernel"): | Monolith |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, Assembler |
 | API: |  |
 | Binärformat: | ELF-64 |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 <https://github.com/Gurgel100>
@@ -35,7 +35,7 @@
 - \[+\] Initiliasierung des Kernels
 - \[+\] Videoausgabe (Text)
 - \[+\] Speicherverwaltung
-- \[+\] [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-API für Treiber
+- \[+\] [CDI](Common-Driver-Interface "CDI")-API für Treiber
 - \[+\] ATA-Treiber
 - \[+\] ISO9660-Treiber
 - \[+\] VFS

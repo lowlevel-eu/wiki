@@ -12,7 +12,7 @@ Wie jedes Betriebssystem will auch niwohlOS erst einmal in den Arbeitsspeicher g
 
 ### Phase I: GRUB
 
-Wie überall und auch von uns empfohlen benutzen wir als Bootloader bzw. Bootmanager [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB"). Denn wir wollen ein Betriebssystem und keinen Bootloader entwickeln (Flamewars über die Abgrenzung von der Entwicklung von Bootloadern und der Entwicklung eines Betriebssystem bitte [hier](http://c-plusplus.info/forum/viewforum-var-f-is-62.html) abhalten). GRUB lädt für uns folgende Dinge:
+Wie überall und auch von uns empfohlen benutzen wir als Bootloader bzw. Bootmanager [GRUB](Grand-Unified-Bootloader "GRUB"). Denn wir wollen ein Betriebssystem und keinen Bootloader entwickeln (Flamewars über die Abgrenzung von der Entwicklung von Bootloadern und der Entwicklung eines Betriebssystem bitte [hier](http://c-plusplus.info/forum/viewforum-var-f-is-62.html) abhalten). GRUB lädt für uns folgende Dinge:
 
 - niwohunloader, der Zwischenloader
 - stoiber32, der 32-Bit-Kernel
@@ -33,13 +33,13 @@ Einer unserer beiden Kernel wurde also erfolgreich von GRUB geladen und vom niwo
 
 ### stoiber32: Old school
 
-Der 32-Bit-Kernel setzt erstmal ein paar interne Dinge auf, unter anderem Variablen, Structs und Arrays, die für Idle-Tasks, Anzahl der Prozessoren und Umlaute (für die [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe")) genutzt werden.
+Der 32-Bit-Kernel setzt erstmal ein paar interne Dinge auf, unter anderem Variablen, Structs und Arrays, die für Idle-Tasks, Anzahl der Prozessoren und Umlaute (für die [Textausgabe](Textausgabe "Textausgabe")) genutzt werden.
 
-Dann wird der Bildschirm initialisiert und stoiber32 meldet sich zu Wort. Nachdem eine neue [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") und [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") aufgesetzt wurden wird das physische Speichermanagement initialisiert; Dazu wird die von GRUB übergebene Memory-Map der Funktion „init_pmm()“ übergeben, die die weitere Initialisierung übernimmt (mehr dazu im Abschnitt „Arbeitsspeicherverwaltungsgedrisse“). Danach wird das allseits beliebte [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") aktiviert. darauffolgend dann die [Interrups](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") sowie der Dispatcher und der Scheduler für unser Multitasking.
+Dann wird der Bildschirm initialisiert und stoiber32 meldet sich zu Wort. Nachdem eine neue [GDT](Global-Descriptor-Table "GDT") und [IDT](Interrupt-Descriptor-Table "IDT") aufgesetzt wurden wird das physische Speichermanagement initialisiert; Dazu wird die von GRUB übergebene Memory-Map der Funktion „init_pmm()“ übergeben, die die weitere Initialisierung übernimmt (mehr dazu im Abschnitt „Arbeitsspeicherverwaltungsgedrisse“). Danach wird das allseits beliebte [Paging](Paging "Paging") aktiviert. darauffolgend dann die [Interrups](Interrupt "Interrupt") sowie der Dispatcher und der Scheduler für unser Multitasking.
 
 Ist bis dahin alles glatt gelaufen werden die am Anfang deaktivierten Interrupts wieder eingeschaltet und stoiber32 verkündet elegant und souverän mit einer kleinen Hommage an den Ex-Bundespräsidentschaftskandidaten Edmund Stoiber, dass niwohlOS vollständig geladen und bisher reibungslos initialisiert wurde.
 
-Nun wird die Unterstützung für [Symmetrische Multiprozessorsysteme](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP") aktiviert (mehr dazu unter „SMP: Sado-Maschochistischer Programmcode“). Dann wird gewartet, bis auch jeder Prozessor läuft und geprüft, ob es einen Idle-Task gibt. Falls nicht brechen wir sang- und klanglos ab. Ansonsten wird es danach richtig spannend:
+Nun wird die Unterstützung für [Symmetrische Multiprozessorsysteme](Symmetrisches-Multiprozessorsystem "SMP") aktiviert (mehr dazu unter „SMP: Sado-Maschochistischer Programmcode“). Dann wird gewartet, bis auch jeder Prozessor läuft und geprüft, ob es einen Idle-Task gibt. Falls nicht brechen wir sang- und klanglos ab. Ansonsten wird es danach richtig spannend:
 
 Wir führen mitgeladene Module aus. Ab hier tritt stoiber32 nun in den Hintergrund und die Module, allen voran **init**, übernehmen die weitere Initialisierung des Userspace.
 
@@ -61,11 +61,11 @@ Da niwohlOS zukunftsorientiert ist, besitzt es einen Scheduler, der auch auf Qua
 
 Vorteile sind die einfache Implementierung von Prioritäten und Prioritätsverschiebungen zugunsten anderer Threads sowie natürlich, dass dieser Scheduler zuverlässig sowohl mit Java2k als auch auf Quantencomputern läuft.
 
-## [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
+## [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation")
 
 In einem Mikrokernel müssen Prozesse zwangsläufig über eine andere Art als den Hauptspeicher kommunizieren, da jeder Prozess in einem anderen Adressraum kommuniziert. Darum wurde das Konzept der Interprozesskommunikation entwickelt, mit welchem Prozesse in der Lage sind, Daten auch über Adressräume hinweg auszutauschen.
 
-niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf Basis von XML und [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC"). Das funktioniert in etwa so:
+niwohlOS hat sich etwas ganz anderes ausgedacht: Interprozesskommunikation auf Basis von XML und [Remote Procedure Calls](Interprozesskommunikation#rpc-remote-procedure-call "RPC"). Das funktioniert in etwa so:
 
 - Prozess A erzeugt eine X(HT)ML-Datei mit allen nötigen Daten und schickt sie per niwoio an den Kernel
 - Handler im Kernel empfängt XML-Datei

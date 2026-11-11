@@ -11,14 +11,14 @@ Letzter Eintrag von anderthalb (deutsche Sprache fdS) Jahren, keine Homepage, ke
 |  |  |
 | Entwickler: | Peabrain |
 | Akt. Version: | 0.0.01 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| [Lizenz](Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | monolitisch |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | monolitisch |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Asm, C |
 | API: |  |
 | Binärformat: | com |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Semaphoren |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Semaphoren |
 | Homepage |  |
 
   

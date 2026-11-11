@@ -1,6 +1,6 @@
 # Hg
 
-Weiterleitung: [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial)
+Weiterleitung: [Mercurial](Mercurial)
 
 ---
 

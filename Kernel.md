@@ -1,6 +1,6 @@
 # Kernel
 
-Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandteil und die Grundlage eines jeden [Betriebssystems](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt.
+Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandteil und die Grundlage eines jeden [Betriebssystems](Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt.
 
   
 
@@ -8,20 +8,20 @@ Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandt
 
 Ein Kernel hat grundsätzlich folgende Basisaufgaben:
 
-- [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
-- [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung")
-- [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
+- [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung")
+- [Prozessverwaltung](Prozessverwaltung "Prozessverwaltung")
+- [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation")
 - Geräte- und Hardwareverwaltung
-- Schnittstelle für [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
-- [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") für Anwendungsprogramme
-- [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
+- Schnittstelle für [Treiber](Treiber "Treiber")
+- [Syscalls](Syscall "Syscall") für Anwendungsprogramme
+- [Scheduling](Scheduler "Scheduler")
 
-Architekturabhängige Teile dieser Aufgaben werden normalerweise in einem [Hardware Abstraction Layer](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "Hardware Abstraction Layer") mit einer klar definierten Schnittstelle gekapselt, um die Wiederverwendbarkeit anderer Komponenten zu erhöhen. Dazu zählen teilweise schon (kleine) Treiber, wie z. B. bei [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") bzw. [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") für die [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC") oder ähnlichem.
+Architekturabhängige Teile dieser Aufgaben werden normalerweise in einem [Hardware Abstraction Layer](Hardware-Abstraction-Layer "Hardware Abstraction Layer") mit einer klar definierten Schnittstelle gekapselt, um die Wiederverwendbarkeit anderer Komponenten zu erhöhen. Dazu zählen teilweise schon (kleine) Treiber, wie z. B. bei [x86](X86 "X86") bzw. [x64](X86-64 "X64") für die [PIT](Programmable-Interval-Timer "PIT"), [PIC](Programmable-Interrupt-Controller "PIC"), [Local APIC](Local-Advanced-Programmable-Interrupt-Controller "Local APIC") oder ähnlichem.
 
 Je nach Kernelart kommt diesen Aufgaben mehr oder weniger Gewicht zu. Außerdem können z. B. folgende Aufgaben hinzukommen:
 
-- [Dateisystemverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")
-- ausgewählte weitere Treiber (z. B. Treiber zum Erkennen und Konfigurieren von [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Geräten) oder alle Treiber
+- [Dateisystemverwaltung](Dateisystem "Dateisystem")
+- ausgewählte weitere Treiber (z. B. Treiber zum Erkennen und Konfigurieren von [PCI](Peripheral-Component-Interconnect "PCI")-Geräten) oder alle Treiber
 
 ## Kernelarten
 
@@ -38,7 +38,7 @@ Das folgende Diagramm zeigt den groben Aufbau eines monolithischen Kernels:
 |  |  |
 | ---------------------------------------------------------------------------------- | --------- |
 | Hardware |  |
-| [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") |  |
+| [HAL](Hardware-Abstraction-Layer "HAL") |  |
 | Kernel | Treiber |
 | Syscallinterface |  |
 
@@ -52,11 +52,11 @@ grau: Usermode
 
 ### Mikrokernel
 
-Bei einem Mikrokernel liegt im Gegensatz zum monolithischen Kernel nur die Implementierung der oben genannten Basisaufgaben im Kernelspace. [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber"), Dateisystemverwaltung (eventuell inklusive virtuellem Dateisystem) und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel über [Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") bzw. mit anderen Prozessen über [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation"). Der Kernel verwaltet und verteilt also nur die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") nicht das ganze [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") zum Absturz bringen und eventuell neu gestartet werden. Letzteres funktioniert allerdings nur bei einem entsprechenden Design des Kernels, der Interprozesskommunikation und anderer Komponenten, da z. B. ein abstürzender Festplattentreiber, der die Betriebssystempartition verwaltet, nicht so ohne weiteres nachgeladen werden kann, sondern permanent im Speicher vorgehalten werden muss.
+Bei einem Mikrokernel liegt im Gegensatz zum monolithischen Kernel nur die Implementierung der oben genannten Basisaufgaben im Kernelspace. [Treiber](Treiber "Treiber"), Dateisystemverwaltung (eventuell inklusive virtuellem Dateisystem) und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel über [Syscalls](Syscall "Syscall") bzw. mit anderen Prozessen über [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation"). Der Kernel verwaltet und verteilt also nur die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](Treiber "Treiber") nicht das ganze [Betriebssystem](Betriebssystem "Betriebssystem") zum Absturz bringen und eventuell neu gestartet werden. Letzteres funktioniert allerdings nur bei einem entsprechenden Design des Kernels, der Interprozesskommunikation und anderer Komponenten, da z. B. ein abstürzender Festplattentreiber, der die Betriebssystempartition verwaltet, nicht so ohne weiteres nachgeladen werden kann, sondern permanent im Speicher vorgehalten werden muss.
 
-Da die Treiber nicht im Kernel sind, ist es wesentlich, dass der Bootloader auch die Treiber laden kann und diesen dem Kernel übergibt. Dies ist von Haus aus z. B. über [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") möglich.
+Da die Treiber nicht im Kernel sind, ist es wesentlich, dass der Bootloader auch die Treiber laden kann und diesen dem Kernel übergibt. Dies ist von Haus aus z. B. über [GRUB](Grand-Unified-Bootloader "GRUB") möglich.
 
-Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix") verwendet.
+Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](Minix "Minix") verwendet.
 
 Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
 
@@ -65,7 +65,7 @@ Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
 |  |  |
 | ---------------------------------------------------------------------------------- | ------------------------------------ |
 | Hardware |  |
-| [HAL](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer "HAL") |  |
+| [HAL](Hardware-Abstraction-Layer "HAL") |  |
 | Kernel |  |
 | Syscallinterface | Syscallinterface (Hardwarezugriff) |
 | Anwendungen, Bibliotheken | Treiber |
@@ -78,11 +78,11 @@ Es ist allerdings nicht sonderlich fruchtbar sich einen Exokernel als einen Mikr
 
 ### Makrokernel
 
-Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Skala von Mikrokernel zum monolithischen Kernel irgendwo dazwischen und es ist somit nicht näher definiert, was genau ein Makrokernel ist. Man will dabei die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") als Hybridkernel.
+Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Skala von Mikrokernel zum monolithischen Kernel irgendwo dazwischen und es ist somit nicht näher definiert, was genau ein Makrokernel ist. Man will dabei die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](Windows "Windows") als Hybridkernel.
 
 ## Links
 
-- [Erklärung zum Mikro- und L4-Kernel](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/904ad80cc1c81c6b6e5d.pdf "Die L4-Mikrokernel-Familie.pdf")
+- [Erklärung zum Mikro- und L4-Kernel](assets/904ad80cc1c81c6b6e5d.pdf "Die L4-Mikrokernel-Familie.pdf")
 - [The Exokernel Operating System Architecture](http://pdos.csail.mit.edu/exo/theses/engler/thesis.ps)
 
 ---

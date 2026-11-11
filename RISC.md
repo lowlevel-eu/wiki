@@ -1,6 +1,6 @@
 # RISC
 
-Weiterleitung: [Reduced Instruction Set Computing](https://github.com/lowlevel-eu/wiki/wiki/Reduced-Instruction-Set-Computing)
+Weiterleitung: [Reduced Instruction Set Computing](Reduced-Instruction-Set-Computing)
 
 ---
 

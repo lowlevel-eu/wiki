@@ -2,13 +2,13 @@
 
 |  |  |  |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------- |
-| « [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") | **Navigation** | [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") » |
+| « [Teil 2 - Assembler 101](Teil-2-Assembler-101 "Teil 2 - Assembler 101") | **Navigation** | [Teil 4 - Hello World](Teil-4-Hello-World "Teil 4 - Hello World") » |
 
 ## Überblick
 
 In diesem Teil geht es zunächst darum, ein paar Sachen anzuschauen, die nicht direkt mit der Betriebssystementwicklung zu tun haben. Sie haben mehr etwas damit zu tun, wie Programme bzw. die Buildchain allgemein funktionieren. Ein Grundverständnis dafür zu haben, ist für die Entwicklung eines Betriebssystems unverzichtbar. Wer sich mit all dem schon auskennt, möchte diesen Teil möglicherweise überspringen oder nur überfliegen.
 
-Als Basis für die Trockenübungen wird ein Linuxsystem benutzt. Die Konzepte lassen sich ohne weiteres auf Windows oder andere Systeme übertragen, allerdings unterscheiden sich die konkreten Werte und möglicherweise auch die benutzten Programme. Wer unter Windows [MinGW und ggf. MSYS](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") installiert hat, wird aber die meisten Beispiele ohne weiteres nachvollziehen können.
+Als Basis für die Trockenübungen wird ein Linuxsystem benutzt. Die Konzepte lassen sich ohne weiteres auf Windows oder andere Systeme übertragen, allerdings unterscheiden sich die konkreten Werte und möglicherweise auch die benutzten Programme. Wer unter Windows [MinGW und ggf. MSYS](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") installiert hat, wird aber die meisten Beispiele ohne weiteres nachvollziehen können.
 
 ## Hello World unter Linux
 
@@ -194,7 +194,7 @@ void _start(void)
 }
 ```
 
-Wen es interessiert, die genaue Syntax des Inlineassemblers ist in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben. An dieser Stelle befülle ich einfach die Register mit den Parametern und löse dann den Interrupt 0x80 aus. Linken wollen wir dieses Mal selber, damit uns keine libc in die ausführbare Datei hineingezogen wird:
+Wen es interessiert, die genaue Syntax des Inlineassemblers ist in [Inline-Assembler mit GCC](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben. An dieser Stelle befülle ich einfach die Register mit den Parametern und löse dann den Interrupt 0x80 aus. Linken wollen wir dieses Mal selber, damit uns keine libc in die ausführbare Datei hineingezogen wird:
 
     gcc -c hello02.c
     ld -o hello02 hello02.o
@@ -207,7 +207,7 @@ Aber genug der Vorrede, es wird Zeit für den Kernel.
 
 |  |  |  |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------- |
-| « [Teil 2 - Assembler 101](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101 "Teil 2 - Assembler 101") | **Navigation** | [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") » |
+| « [Teil 2 - Assembler 101](Teil-2-Assembler-101 "Teil 2 - Assembler 101") | **Navigation** | [Teil 4 - Hello World](Teil-4-Hello-World "Teil 4 - Hello World") » |
 
 ---
 

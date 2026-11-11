@@ -1,6 +1,6 @@
 # MSI
 
-Weiterleitung: [Message Signaled Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Message-Signaled-Interrupt)
+Weiterleitung: [Message Signaled Interrupt](Message-Signaled-Interrupt)
 
 ---
 

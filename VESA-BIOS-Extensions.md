@@ -1,12 +1,12 @@
 # VESA BIOS Extensions
 
-Die VESA BIOS Extensions (kurz: VBE) sind ein Standard der [VESA](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "VESA"). Er vereinheitlicht den Zugriff auf eine Grafikkarte und bietet dabei deutlich mehr Möglichkeiten als [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA"). Der Standard wird von nahezu allen Grafikkarten in Version 2.0 oder der letzten Version, 3.0, unterstützt. **Daher bezieht sich dieser Artikel, wenn nicht anders vermerkt, auf Version 2.0.**
+Die VESA BIOS Extensions (kurz: VBE) sind ein Standard der [VESA](Video-Electronics-Standards-Association "VESA"). Er vereinheitlicht den Zugriff auf eine Grafikkarte und bietet dabei deutlich mehr Möglichkeiten als [VGA](Video-Graphics-Array "VGA"). Der Standard wird von nahezu allen Grafikkarten in Version 2.0 oder der letzten Version, 3.0, unterstützt. **Daher bezieht sich dieser Artikel, wenn nicht anders vermerkt, auf Version 2.0.**
 
 ## VBE Funktionen
 
 ### Allgemein
 
-Alle Funktionen der VBE sind im Grunde nur im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") verfügbar (es gibt ein Protected-Mode-Interface, welches allerdings nur sehr spärlich unterstützt wird). Die Funktionsnummer wird in AX übergeben, weitere Informationen in den anderen 16-Bit-Registern. Jede VBE Funktion liefert einen Wert in AX zurück, der Fehlerinformationen darstellt:
+Alle Funktionen der VBE sind im Grunde nur im [Real Mode](Real-Mode "Real Mode") verfügbar (es gibt ein Protected-Mode-Interface, welches allerdings nur sehr spärlich unterstützt wird). Die Funktionsnummer wird in AX übergeben, weitere Informationen in den anderen 16-Bit-Registern. Jede VBE Funktion liefert einen Wert in AX zurück, der Fehlerinformationen darstellt:
 
 - 004Fh: Aufruf erfolgreich
 - 014Fh: Fehler bei der Ausführung
@@ -125,7 +125,7 @@ So kann man die Nummer desjenigen Grafikmodus herausfinden, den man benötigt.
 | 29 | NumberOfImagePages | 1 | Anzahl der Images - 1 |
 | 30 | Reserviert | 1 | =1 |
 | 31 | RedMaskSize | 1 | Anzahl der Bits, die den roten Farbanteil angeben (Speichermodell: direct color) |
-| 32 | RedFieldPosition | 1 | Position des ersten Bits ([LSB](https://github.com/lowlevel-eu/wiki/wiki/Bin%C3%A4re-Datentypen#msb-und-lsb "LSB")), das den roten Farbanteil angibt |
+| 32 | RedFieldPosition | 1 | Position des ersten Bits ([LSB](Bin%C3%A4re-Datentypen#msb-und-lsb "LSB")), das den roten Farbanteil angibt |
 | 33 | GreenMaskSize | 1 |  |
 | 34 | GreenFieldPosition | 1 |  |
 | 35 | BlueMaskSize | 1 |  |
@@ -154,7 +154,7 @@ Die Felder ab LinBytesPerScanLine (also Offset 50) sind erst in VBE 3.0 definier
 
 Von diesen Einträgen sind einige besonders wichtig:
 
-- In grün: Diese Einträge sind für die Verwendung des [LFB](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions#linear-frame-buffer "LFB") wichtig.
+- In grün: Diese Einträge sind für die Verwendung des [LFB](VESA-BIOS-Extensions#linear-frame-buffer "LFB") wichtig.
 - In rot: Diese Einträge sind zum Adressieren/Zeichnen eines Pixels wichtig.
 - In blau: Diese Einträge zeigen an, wie die Farbe eines Pixels anzugeben ist. Dies ist in der Regel eine RGB-Angabe. Dafür muss das Speichermodell (27) *direct color* sein (=6h).
 
@@ -223,7 +223,7 @@ ScheduleDisplayStart:
 - AX=4f07h
 - BL=0
 - BH=2
-- ECX=Offset des ersten Pixels im [LFB](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions#linear-frame-buffer "LFB")
+- ECX=Offset des ersten Pixels im [LFB](VESA-BIOS-Extensions#linear-frame-buffer "LFB")
 
 GetDisplayStartStatus:
 
@@ -233,7 +233,7 @@ GetDisplayStartStatus:
 - liefert AX!=0, wenn das Bild im Buffer, der mit *ScheduleDisplayStart* gewählt wurde, auf dem Bildschirm abgebildet wurde.
 
   
-Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https://github.com/lowlevel-eu/wiki/wiki/Double-Buffering "Double Buffering") verwenden:
+Diese beiden Funktionen kann man natürlich auch für [Double Buffering](Double-Buffering "Double Buffering") verwenden:
 
 - Den ersten Buffer rendern
 - Ihn mit *ScheduleDisplayStart* auswählen
@@ -245,7 +245,7 @@ Diese beiden Funktionen kann man natürlich auch für [Double Buffering](https:/
 - Den ersten Buffer mit *ScheduleDisplayStart* auswählen
 - usw.
 
-[Double Buffering](https://github.com/lowlevel-eu/wiki/wiki/Double-Buffering "Double Buffering") wäre auch schon mit VBE 2.0 möglich (siehe Funktion: 4F07h, 80h – Set Display Start During Vertical Retrace). Allerdings ist müsste man hier direkt auf die Grafikkarte zugreifen, um das Timing hinzukriegen.
+[Double Buffering](Double-Buffering "Double Buffering") wäre auch schon mit VBE 2.0 möglich (siehe Funktion: 4F07h, 80h – Set Display Start During Vertical Retrace). Allerdings ist müsste man hier direkt auf die Grafikkarte zugreifen, um das Timing hinzukriegen.
 
 ## Weblinks
 

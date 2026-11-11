@@ -10,17 +10,17 @@ Unter **Prozessverwaltung** versteht man primär die Verwaltung von Prozessen (a
 
 ## Verwaltung
 
-Gestartete Prozesse bekommen meistens vom Betriebssystem eine eindeutige Kennung, den sogenannten **Process Identifier** oder kurz **PID**. Dies ist eine eindeutige Kennung, die den Prozess für andere Prozesse und das Betriebssystem selbst ansprechbar macht. In einem [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")-System können mehrere Prozesse gleichzeitig laufen, d.h. sich gleichzeitig im RAM befinden. Die Ausführung erfolgt hier (zumindest auf Single-Core-Systemen) nicht parallel, es wird zwischen den einzelnen Prozessen gewechselt.
+Gestartete Prozesse bekommen meistens vom Betriebssystem eine eindeutige Kennung, den sogenannten **Process Identifier** oder kurz **PID**. Dies ist eine eindeutige Kennung, die den Prozess für andere Prozesse und das Betriebssystem selbst ansprechbar macht. In einem [Multitasking](Multitasking "Multitasking")-System können mehrere Prozesse gleichzeitig laufen, d.h. sich gleichzeitig im RAM befinden. Die Ausführung erfolgt hier (zumindest auf Single-Core-Systemen) nicht parallel, es wird zwischen den einzelnen Prozessen gewechselt.
 
-Wie viel Rechenzeit ein Prozess bekommt verwaltet hierbei der [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler").
+Wie viel Rechenzeit ein Prozess bekommt verwaltet hierbei der [Scheduler](Scheduler "Scheduler").
 
   
 
 ## Siehe auch
 
-- [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler")
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
-- [Prozess](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess")
+- [Scheduler](Scheduler "Scheduler")
+- [Multitasking](Multitasking "Multitasking")
+- [Prozess](Prozess "Prozess")
 
 ---
 

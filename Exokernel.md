@@ -1,6 +1,6 @@
 # Exokernel
 
-Weiterleitung: [Kernel#Exokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#exokernel)
+Weiterleitung: [Kernel#Exokernel](Kernel#exokernel)
 
 ---
 

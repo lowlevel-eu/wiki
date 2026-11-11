@@ -2,14 +2,14 @@
 
 |  |  |  |
 | -------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
-| « [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") | **Navigation** | [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") » |
+| « [Teil 4 - Hello World](Teil-4-Hello-World "Teil 4 - Hello World") | **Navigation** | [Teil 6 - Multitasking](Teil-6-Multitasking "Teil 6 - Multitasking") » |
 
 ## Das Ziel
 
 In diesem Teil wollen wir unserern Kernel *Interrupts* behandeln lassen. Ein Interrupt ist eine Unterbrechnung des aktuell ausgeführten Code, um eine Kernelfunktion (den *Interrupt-Handler*) aufzurufen. Es gibt drei unterschiedliche interessante Arten von Interrupts und keine davon ist für ein Betriebssystem verzichtbar:
 
-- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception") treten bei Fehlern auf. Der Kernel kann in manchen Fällen den Fehler beheben und das unterbrochene Programm fortsetzen. In anderen Fällen bleibt ihm nicht anderes übrig als das Programm (möglicherweise sich selbst) abzubrechen und eine Fehlermeldung auszugeben.
-- [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") (auch *Hardware-Interrupts*) werden von angeschlossener Hardware ausgelöst. Sie müssen vom passenden Treiber verarbeitet werden. Beispielsweise löst das Diskettenlaufwerk einen IRQ aus, wenn es einen Lesebefehl fertig ausgeführt hat oder eine Netzwerkkarte, wenn sie ein Ethernetpaket empfangen hat.
+- [Exceptions](Exception "Exception") treten bei Fehlern auf. Der Kernel kann in manchen Fällen den Fehler beheben und das unterbrochene Programm fortsetzen. In anderen Fällen bleibt ihm nicht anderes übrig als das Programm (möglicherweise sich selbst) abzubrechen und eine Fehlermeldung auszugeben.
+- [IRQs](Programmable-Interrupt-Controller#irq-tabelle "IRQ") (auch *Hardware-Interrupts*) werden von angeschlossener Hardware ausgelöst. Sie müssen vom passenden Treiber verarbeitet werden. Beispielsweise löst das Diskettenlaufwerk einen IRQ aus, wenn es einen Lesebefehl fertig ausgeführt hat oder eine Netzwerkkarte, wenn sie ein Ethernetpaket empfangen hat.
 - *Software-Interrupts* werden gezielt von Programmen aufgerufen, z.B. mit der *int*-Instruktion. Das häufigste Einsatzgebiet ist der Aufruf von *Syscalls*, also von Kernelfunktionen, in Programmen.
 
 ## Global Descriptor Table
@@ -18,7 +18,7 @@ Die Multibootspezifikation garantiert uns, dass unser Kernel bei seinem Aufruf m
 
 Es gibt in diesem Wiki schon einen sehr ausführlichen Artikel zum Thema, daher möchte ich an dieser Stelle einfach nur darauf verweisen anstatt ihn zu kopieren:
 
-- [Global Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "Global Descriptor Table")
+- [Global Descriptor Table](Global-Descriptor-Table "Global Descriptor Table")
 
 Ich gehe im Folgenden davon aus, dass die im Artikel beschriebenen Code- und Datensegmente in der Reihenfolge angelegt worden sind, in der sie im Artikel vorgeschlagen sind. Die TSS-Einträge brauchen wir vorerst noch nicht. Wir haben also in etwa den folgenden Code:
 
@@ -55,7 +55,7 @@ Testen lässt sich die GDT ganz einfach: Wenn der Kernel nach dem Laden der GDT 
 
 ## Interrupt Descriptor Table
 
-Eine zweite Tabelle, die [Interrupt Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "Interrupt Descriptor Table") (IDT), beschreibt, wie mit den unterschiedlichen Interrupts umzugehen ist. Schau Dir am besten auch hier den Artikel an, um herauszufinden, wie die Einträge der Tabelle aussehen.
+Eine zweite Tabelle, die [Interrupt Descriptor Table](Interrupt-Descriptor-Table "Interrupt Descriptor Table") (IDT), beschreibt, wie mit den unterschiedlichen Interrupts umzugehen ist. Schau Dir am besten auch hier den Artikel an, um herauszufinden, wie die Einträge der Tabelle aussehen.
 
 Für einen ersten Test nimmst Du am besten einen einfachen Handler her, ohne aus dem Interrupt zurückzuspringen:
 
@@ -77,7 +77,7 @@ Wenn alles funktioniert, bekommst Du jetzt unsere Erfolgsmeldung aus dem Interru
 
 ## Programmable Interrupt Controller
 
-Dummerweise liegen auf den ersten paar Interruptnummern sowohl einige Exceptions als auch einige Hardware-Interrupts. Wir müssen diese beiden Fälle natürlich unterscheiden können, um sinnvoll mit ihnen umzugehen. Exceptions lassen sich nicht auf andere Nummern legen, aber bei Hardware-Interrupts ist es glücklicherweise möglich: Wir müssen dazu nur den [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) umprogrammieren.
+Dummerweise liegen auf den ersten paar Interruptnummern sowohl einige Exceptions als auch einige Hardware-Interrupts. Wir müssen diese beiden Fälle natürlich unterscheiden können, um sinnvoll mit ihnen umzugehen. Exceptions lassen sich nicht auf andere Nummern legen, aber bei Hardware-Interrupts ist es glücklicherweise möglich: Wir müssen dazu nur den [Programmable Interrupt Controller](Programmable-Interrupt-Controller "Programmable Interrupt Controller") (PIC) umprogrammieren.
 
 Ein übliches Modell ist es, auf den Interrupts 0 bis 0x1f die Exceptions zu haben, direkt anschließend von 0x20 bis 0x2f die IRQs und ab 0x30 die Software-Interrupts, z.B. Syscalls. In diesem Fall müssten wir den beiden PICs also mitteilen, sie sollen die IRQs ab 0x20 bzw. 0x28 anfangen lassen:
 
@@ -99,7 +99,7 @@ outb(0x21, 0x0);
 outb(0xa1, 0x0);
 ```
 
-Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen [I/O-Port](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") zu schreiben, und kann wie in [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden:
+Dabei ist *outb* eine Funktion, um einen 8-Bit-Wert an einen [I/O-Port](I-O-Ports "I/O Ports") zu schreiben, und kann wie in [Inline-Assembler mit GCC](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") beschrieben definiert werden:
 
 ``` c
 static inline void outb(uint16_t port, uint8_t data)
@@ -262,11 +262,11 @@ if (cpu->intr >= 0x20 && cpu->intr <= 0x2f) {
 }
 ```
 
-Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon ein [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller") schreiben.
+Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon ein [Tastaturtreiber](Keyboard-Controller "Keyboard Controller") schreiben.
 
 ## Weitere Quellen
 
-- [Offizielle Handbücher zu den Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/Linkliste#offizielle-spezifikationen "Linkliste"):
+- [Offizielle Handbücher zu den Prozessoren](Linkliste#offizielle-spezifikationen "Linkliste"):
   - Intel Architecture Software Developer's Manuals, Band 3A
     - Kapitel 3: Protected Mode Memory Management
     - Kapitel 6: Interrupt and Exception Handling
@@ -279,7 +279,7 @@ Mit diesen Interrupthandlern ließe sich an dieser Stelle beispielsweise schon e
 
 |  |  |  |
 | -------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
-| « [Teil 4 - Hello World](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") | **Navigation** | [Teil 6 - Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Teil-6-Multitasking "Teil 6 - Multitasking") » |
+| « [Teil 4 - Hello World](Teil-4-Hello-World "Teil 4 - Hello World") | **Navigation** | [Teil 6 - Multitasking](Teil-6-Multitasking "Teil 6 - Multitasking") » |
 
 ---
 

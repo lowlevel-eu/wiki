@@ -1,13 +1,13 @@
 # Betriebssystem
 
-Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, die die Verwendung eines Computers ermöglicht. Dabei hat das Betriebssystem die Aufgabe, Ressourcen, Speicher und Ein- und Ausgabe zu verwalten und eine einfache Schnittstelle für Anwendungsprogramme bereitzustellen. Klassische Betriebssysteme wie Windows bestehen aus einem [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader"), einem [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), vielen mitgelieferten Treibern und Anwendungen, die dem Benutzer das Arbeiten mit dem Computer erleichtern sollen.
+Ein **Betriebssystem** ist eine bootbare und selbstständig laufende Software, die die Verwendung eines Computers ermöglicht. Dabei hat das Betriebssystem die Aufgabe, Ressourcen, Speicher und Ein- und Ausgabe zu verwalten und eine einfache Schnittstelle für Anwendungsprogramme bereitzustellen. Klassische Betriebssysteme wie Windows bestehen aus einem [Bootloader](Bootloader "Bootloader"), einem [Kernel](Kernel "Kernel"), vielen mitgelieferten Treibern und Anwendungen, die dem Benutzer das Arbeiten mit dem Computer erleichtern sollen.
 
 ## Liste mit Betriebssystemen
 
-- [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur")
-- [Microsoft Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")
-- [Linux-Distributionen](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")
-- [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")
+- [týndur](T%C3%BDndur "Týndur")
+- [Microsoft Windows](Windows "Windows")
+- [Linux-Distributionen](Linux "Linux")
+- [ReactOS](ReactOS "ReactOS")
 - Weitere siehe [Kategorie Betriebssysteme](https://lowlevel-eu.github.io/wiki/pages/1649/index.html "Kategorie:Betriebssystem")
 
 ---

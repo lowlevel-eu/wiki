@@ -1,6 +1,6 @@
 # Shared Memory
 
-Weiterleitung: [Interprozesskommunikation#Shared-memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory)
+Weiterleitung: [Interprozesskommunikation#Shared-memory](Interprozesskommunikation#shared-memory)
 
 ---
 

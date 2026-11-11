@@ -1,6 +1,6 @@
 # Monolithischer Kernel
 
-Weiterleitung: [Kernel#Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel)
+Weiterleitung: [Kernel#Monolithischer Kernel](Kernel#monolithischer-kernel)
 
 ---
 

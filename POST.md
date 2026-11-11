@@ -1,6 +1,6 @@
 # POST
 
-Weiterleitung: [Power On Self-Test](https://github.com/lowlevel-eu/wiki/wiki/Power-On-Self-Test)
+Weiterleitung: [Power On Self-Test](Power-On-Self-Test)
 
 ---
 

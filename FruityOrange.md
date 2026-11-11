@@ -5,21 +5,21 @@
 | Datei:FruityOrangeLogo.png |  |
 | Entwickler: | [Micha](https://lowlevel-eu.github.io/wiki/pages/2560/index.html "Benutzer:Micha.linuxfreak") |
 | Akt. Version: | 0.07 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenz") |
+| [Lizenz](Lizenzen "Lizenzen"): | [GNU General Public License](Lizenzen#gnu-general-public-license "Lizenz") |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithisch](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ([Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")) |
+| Plattform: | [i386](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Monolithisch](Kernel#monolithischer-kernel "Kernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") ([Assembler](Assembler "Assembler")) |
 | API: | nativ |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | --- |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | --- |
 | Homepage |  |
 
 <https://github.com/michamimosa/FruityOrange>  
 <https://code.google.com/p/fruityorange/>  
 <https://sourceforge.net/projects/fruityorange/>
 
-FruityOrange ist ein Betriebssystem für den [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), welches [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") als Bootloader benutzt.  
+FruityOrange ist ein Betriebssystem für den [i386](X86 "X86"), welches [GRUB](Grand-Unified-Bootloader "GRUB") als Bootloader benutzt.  
 Ein fertiges Images gibts hier: [\[1\]](http://fruityorange.googlecode.com/files/FruityOrange_v0-07.iso) (googlecode) oder hier: [\[2\]](https://sourceforge.net/projects/fruityorange/files/latest/download) (sourceforge)  
   
 
@@ -27,17 +27,17 @@ Ein fertiges Images gibts hier: [\[1\]](http://fruityorange.googlecode.com/files
 
 - Higherhalf-Kernel
 - printf, panic, debug
-- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT"), [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Dynamisches [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall")-interface
-- [Physische Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging"), [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap")
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")32-loader
-- [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS"), Initiale Ramdisk
+- [GDT](Global-Descriptor-Table "GDT"), [Interrupts](Interrupt "Interrupt"), Dynamisches [Syscall](Syscall "Syscall")-interface
+- [Physische Speicherverwaltung](Physische-Speicherverwaltung "Physische Speicherverwaltung"), [Paging](Paging "Paging"), [Heap](Heapverwaltung "Heap")
+- [Multitasking](Multitasking "Multitasking"), [ELF](Executable-and-Linking-Format "ELF")32-loader
+- [VFS](Virtuelles-Dateisystem "VFS"), Initiale Ramdisk
 
 ### Treiber
 
-- [CGA Grafik](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") ;)
-- [Tastatur (KBC)](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller")
-- [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT")
-- [CMOS / RTC](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
+- [CGA Grafik](Textausgabe "Textausgabe") ;)
+- [Tastatur (KBC)](Keyboard-Controller "Keyboard Controller")
+- [PIT](Programmable-Interval-Timer "PIT")
+- [CMOS / RTC](CMOS "CMOS")
 
 ### Programme
 

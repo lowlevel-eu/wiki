@@ -1,10 +1,10 @@
 # Týndur/Konzepte und Benutzung
 
-Die folgenden Abschnitte geben eine kurze Einführung für alle, die mit den Konzepten und der Benutzung von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") nicht ganz so vertraut sind.
+Die folgenden Abschnitte geben eine kurze Einführung für alle, die mit den Konzepten und der Benutzung von [týndur](T%C3%BDndur "Týndur") nicht ganz so vertraut sind.
 
 ## Der Bootvorgang
 
-Der Bootvorgang von týndur läuft grob in zwei Phasen ab: týndur benutzt [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"), um den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und einige erste Module zu laden (z. B. Platten- und Dateisystemtreiber), so dass Zugriff auf das eigentliche týndur-Dateisystem möglich ist. Diese Module werden von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") geladen und ihr Aufruf kann deshalb im Bootmenü geändert werden. Anschließend lädt servmgr die Konfiguration vom [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") und lädt weitere Module nach (z. B. Konsole oder Netzwerktreiber).
+Der Bootvorgang von týndur läuft grob in zwei Phasen ab: týndur benutzt [Multiboot](Multiboot "Multiboot"), um den [Kernel](Kernel "Kernel") und einige erste Module zu laden (z. B. Platten- und Dateisystemtreiber), so dass Zugriff auf das eigentliche týndur-Dateisystem möglich ist. Diese Module werden von [GRUB](Grand-Unified-Bootloader "GRUB") geladen und ihr Aufruf kann deshalb im Bootmenü geändert werden. Anschließend lädt servmgr die Konfiguration vom [Dateisystem](Dateisystem "Dateisystem") und lädt weitere Module nach (z. B. Konsole oder Netzwerktreiber).
 
 Damit servmgr das System booten kann, braucht er die Angabe des týndur-Dateisystems als Parameter (vergleichbar zu *root=...* für Linux). Der im Bootmenü voreingestellte Pfad beginnt mit *ata:/ata00_p0* für das Festplattenimage und *ata:/cdrom* für die Live-CD. Insbesondere bei der Live-CD kann es nötig sein, diese Einstellung zu ändern, wenn der Rechner über zwei CD-Laufwerke verfügt und das falsche als *ata:/cdrom* benutzt wird. Beispiele für mögliche Angaben:
 
@@ -13,13 +13,13 @@ Damit servmgr das System booten kann, braucht er die Angabe des týndur-Dateisys
 - *ata:/ata11* steht für ein Dateisystem auf einer unpartitionierten Festplatte an Secondary Slave
 - *ata:/cdrom* steht für das „erstbeste“ CD/DVD-Laufwerk
 
-Manchmal kommt es bei der Benutzung von [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA") mit dem ata-Modul zu Problemen (insbesondere mit VirtualBox). In diesem Fall kann es helfen, die ata-Kommandozeile im Bootmenü auf „module /modules/ata nodma“ zu ändern.
+Manchmal kommt es bei der Benutzung von [DMA](Direct-Memory-Access "DMA") mit dem ata-Modul zu Problemen (insbesondere mit VirtualBox). In diesem Fall kann es helfen, die ata-Kommandozeile im Bootmenü auf „module /modules/ata nodma“ zu ändern.
 
 ## Terminal und Shell
 
 Wenn servmgr alle Module geladen hat, stehen mehrere virtuelle Terminals zur Verfügung. Standardmäßig kann auf den ersten vier Terminals eine Shell gestartet werden. Die Terminals können über Alt-F1 bis Alt-F4 ausgewählt werden. Alt-F9 wählt das Service-Terminal aus, auf dem von servmgr geladene Treiber ihre Meldungen ausgeben. In den Terminals kann mit Shift-Bild Auf/Ab gescrollt werden.
 
-Zur grundlegenden Orientierung im Dateisystem sei gesagt, dass sich ausführbare Dateien an drei verschiedenen Stellen befinden: Zunächst ist das *file:/apps*, das alle Anwendungsprogramme des Kernsystems enthält. Das zweite ist *file:/system/lpt-bin*, das die ausführbaren Dateien per lpt installierter Pakete enthält – genauer gesagt enthält es symbolische Links auf die eigentlichen ausführbaren Dateien unter *file:/packages*. Beide bereits genannten Verzeichnisse sind in PATH, die Programme können also ohne explizite Pfadangabe gestartet werden. Schließlich existiert noch *file:/modules*, das [Treiber](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber") und sonstige Services enthält.
+Zur grundlegenden Orientierung im Dateisystem sei gesagt, dass sich ausführbare Dateien an drei verschiedenen Stellen befinden: Zunächst ist das *file:/apps*, das alle Anwendungsprogramme des Kernsystems enthält. Das zweite ist *file:/system/lpt-bin*, das die ausführbaren Dateien per lpt installierter Pakete enthält – genauer gesagt enthält es symbolische Links auf die eigentlichen ausführbaren Dateien unter *file:/packages*. Beide bereits genannten Verzeichnisse sind in PATH, die Programme können also ohne explizite Pfadangabe gestartet werden. Schließlich existiert noch *file:/modules*, das [Treiber](Treiber "Treiber") und sonstige Services enthält.
 
 Um ein Programm im Vordergrund zu starten, gibt man seinen Dateinamen ein (wenn es weder im aktuellen Verzeichnis noch in PATH liegt, den Pfad zur Datei). Um es im Hintergrund zu starten (empfiehlt sich für Servies aus *file:/modules*), wird der Befehl start benutzt (z. B. „start /modules/ramdisk“).
 
@@ -33,7 +33,7 @@ Um solch umständliche Pfade zu vereinfachen, existiert der Service *file*, der 
 
 ## Netzwerk
 
-Beim ersten Start des Systems wird die Netzwerkkonfiguration gestartet. Falls ein passender Treiber für die Netzwerkkarte verfügbar ist ([rtl8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139"), sis900, e1000, ne2k, [pcnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")), wird er automatisch erkannt. Die Einstellungen für die IP-Adresse und den Gateway müssen eventuell angepasst werden. Sie sind so voreingestellt, dass sie mit den Standardeinstellungen von [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") funktionieren. Als DNS-Server wird OpenDNS verwendet (kann durch einen Parameter „ns=a.b.c.d“ beim Aufruf von tcpip geändert werden).
+Beim ersten Start des Systems wird die Netzwerkkonfiguration gestartet. Falls ein passender Treiber für die Netzwerkkarte verfügbar ist ([rtl8139](RTL8139 "RTL8139"), sis900, e1000, ne2k, [pcnet](AMD-PCnet "AMD PCnet")), wird er automatisch erkannt. Die Einstellungen für die IP-Adresse und den Gateway müssen eventuell angepasst werden. Sie sind so voreingestellt, dass sie mit den Standardeinstellungen von [QEMU](QEMU "QEMU") funktionieren. Als DNS-Server wird OpenDNS verwendet (kann durch einen Parameter „ns=a.b.c.d“ beim Aufruf von tcpip geändert werden).
 
 Wenn eine Internetverbindung besteht, ist ein schneller Weg, um das Netzwerk zu testen, eine DNS-Adresse aufzulösen: „cat tcpip:/dns/www.tyndur.org“. Es ist auch möglich eine einfache telnet-artige Verbindung zu einem anderen Rechner aufzubauen: „pipe tcpip:/192.168.1.1:1234“. Die Verbindung wird beendet, wenn „EOF.“ auf einer eigenen Zeile eingegeben wird.
 
@@ -45,7 +45,7 @@ Um auf týndur Software zu entwickeln (oder zumindest zu kompilieren) stehen gcc
     # lpt get gcc
     # lpt get yasm
 
-Wenn die Compiler und Assembler installiert sind, können sie wie gewohnt benutzt werden (allerdings ist etwas Geduld nötig, die Compiler gehen sehr gemächlich zu Werke). Als Editoren stehen kedit sowie nano zur Verfügung (letzterer muss ggf. per lpt nachinstalliert werden). kedit beherrscht Syntaxhighlighting, das per F8 aktiviert werden kann. Als Versionsverwaltungssystem kann [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") benutzt werden.
+Wenn die Compiler und Assembler installiert sind, können sie wie gewohnt benutzt werden (allerdings ist etwas Geduld nötig, die Compiler gehen sehr gemächlich zu Werke). Als Editoren stehen kedit sowie nano zur Verfügung (letzterer muss ggf. per lpt nachinstalliert werden). kedit beherrscht Syntaxhighlighting, das per F8 aktiviert werden kann. Als Versionsverwaltungssystem kann [Subversion](Subversion "Subversion") benutzt werden.
 
 Programme, die aus mehr als einer Datei bestehen, werden am besten mit „build“ gebaut. Es sammelt Dateien aus einer Verzeichnisstruktur wie für den týndur-Code verwendet zusammen und baut daraus eine Binary, die „run“ genannt wird. Als einfaches Beispiel wollen wir die týndur-Shell neu kompilieren:
 

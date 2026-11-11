@@ -1,6 +1,6 @@
 # USB
 
-Weiterleitung: [Universal Serial Bus](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus)
+Weiterleitung: [Universal Serial Bus](Universal-Serial-Bus)
 
 ---
 

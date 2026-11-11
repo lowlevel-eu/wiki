@@ -1,8 +1,8 @@
 # Crosscompiler für Windows
 
-Unter Windows wird ein [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") benötigt, um [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Dateien zu erstellen, denn die MinGW- und cygwin-Compiler unterstützen dieses Format nicht. Das ELF-Format bietet gegenüber dem PE-Format von Windows den Vorteil, dass es weniger Sonderbehandlung und Workarounds bei der Entwicklung eines Betriebssystems benötigt. Die Verwendung eines Cross-Compilers bietet darüber hinaus mehr Kontrolle über den Ablauf des Kompiliervorgangs.
+Unter Windows wird ein [Cross-Compiler](Cross-Compiler "Cross-Compiler") benötigt, um [ELF](Executable-and-Linking-Format "ELF")-Dateien zu erstellen, denn die MinGW- und cygwin-Compiler unterstützen dieses Format nicht. Das ELF-Format bietet gegenüber dem PE-Format von Windows den Vorteil, dass es weniger Sonderbehandlung und Workarounds bei der Entwicklung eines Betriebssystems benötigt. Die Verwendung eines Cross-Compilers bietet darüber hinaus mehr Kontrolle über den Ablauf des Kompiliervorgangs.
 
-Dieser Artikel soll eine kleine Anleitung sein, wie man einen vorkompilierten [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") unter Windows so installiert, dass man damit [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") kompilieren kann. Allerdings ist der verwendete Compiler nicht auf ein bestimmtes System beschränkt, sondern erzeugt Dateien für das allgemeine Target *i586-elf*. Es sollte also kein Problem sein, diesen Compiler für ein anderes OS einzusetzen.
+Dieser Artikel soll eine kleine Anleitung sein, wie man einen vorkompilierten [GCC](GNU-Compiler-Collection "GCC") unter Windows so installiert, dass man damit [týndur](T%C3%BDndur "Týndur") kompilieren kann. Allerdings ist der verwendete Compiler nicht auf ein bestimmtes System beschränkt, sondern erzeugt Dateien für das allgemeine Target *i586-elf*. Es sollte also kein Problem sein, diesen Compiler für ein anderes OS einzusetzen.
 
 ## Download
 
@@ -43,7 +43,7 @@ Diese Datei kopiere ich mir in das Wurzelverzeichnis des Quelltextbaums von týn
 
 Das Buildsystem von týndur ist nicht darauf ausgelegt unter Windows ein GRUB-Image zu erstellen, deswegen ist dort eine alternative Lösung gefragt. Dieses Thema gehört zwar nicht mehr direkt zum Cross-Compiler, aber da dieses mehr oder wenige eine Anleitung ist, wie man týndur unter Windows baut, schreibe ich das vorerst mal hierhin.
 
-Um die GRUB-Problematik zu umgehen, kann man ein fertiges Image (z.B. von den [Releases](https://github.com/lowlevel-eu/tyndur/releases)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](https://github.com/lowlevel-eu/wiki/wiki/Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
+Um die GRUB-Problematik zu umgehen, kann man ein fertiges Image (z.B. von den [Releases](https://github.com/lowlevel-eu/tyndur/releases)) nehmen, und darauf die Dateien von Hand zu kopieren. Diese Images kann man zum Beispiel mit [Virtual Floppy Drive](Virtual-Floppy-Drive "Virtual Floppy Drive") als virtuelles Laufwerk einbinden, um sie zu verändern.
 
 Nachdem du týndur mit *make* kompiliert hast, kannst du mit *make updateroot* die erstellten Programme in der passenden Verzeichnisstruktur zusammenstellen lassen. Das Ergebnis landet im Verzeichnis *build\root*. Den Inhalt davon kannst du dann auf das Disketten-Image kopieren und ggf. boot/grub/menu.lst anpassen.
 
@@ -75,9 +75,9 @@ Dieser Compiler wurde für das generische Target i586-elf und nicht für ein bes
 
 ## Siehe auch
 
-- [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
-- [Cross-Compiler für x86-64-Systeme](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler")
-- [Cross-Compiler für ARM-Systeme](https://github.com/lowlevel-eu/wiki/wiki/ARM-Cross-Compiler "ARM Cross-Compiler")
+- [Cross-Compiler](Cross-Compiler "Cross-Compiler")
+- [Cross-Compiler für x86-64-Systeme](X86-64-Cross-Compiler "X86-64 Cross-Compiler")
+- [Cross-Compiler für ARM-Systeme](ARM-Cross-Compiler "ARM Cross-Compiler")
 
 ---
 

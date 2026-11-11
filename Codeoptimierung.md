@@ -10,7 +10,7 @@ Durch die Optimierung des Quellcodes eines Programms kann dieses schneller, effe
 
 ### Alignment
 
-- Code und Daten sollten in getrennten [Pages](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") gehalten werden.
+- Code und Daten sollten in getrennten [Pages](Paging "Paging") gehalten werden.
 - Wenn man aber gezwungen ist, Code und Daten zu mischen, dann sollte man die Daten so legen, dass Sprünge nicht darüber hinweg springen müssen.
 - Selbst modifizierender Code widerspricht diesem Prinzip.
 - Sprungziele sollten am Anfang eines Paragrafs (16 Byte) stehen.
@@ -21,7 +21,7 @@ Durch die Optimierung des Quellcodes eines Programms kann dieses schneller, effe
 
 Daten, die über eine 64 KiB Grenze verteilt sind, müssen dann zweimal gecacht werden, was die Performance mindert. Somit sollten Daten ihrer Größe entsprechen ausgerichtet werden, also z. B. DWORDs auch nur am Anfang der 4 Byte Grenzen.
 
-- Ebenso sollte der [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") 64 KiB aligned sein, und die Größe seiner Elemente gleich bleiben.
+- Ebenso sollte der [Stack](Stack "Stack") 64 KiB aligned sein, und die Größe seiner Elemente gleich bleiben.
 
 ### Sprünge und Schleifen
 
@@ -51,7 +51,7 @@ Auch Funktionsaufrufe fallen unter Sprünge.
 
 ### Reduzierung der Codegröße
 
-Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), wie es z. B. im [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") nötig ist.
+Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](Assembler "Assembler"), wie es z. B. im [Bootloader](Bootloader "Bootloader") nötig ist.
 
 | Beschreibung | Optimierter Code |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -79,7 +79,7 @@ Die nachfolgenden Tricks eignen sich besonders zum Programmieren in [Assembler](
 
 ### Codeoptimierung durch Compiler
 
-Der [gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") übernimmt die Optimierung über einen dieser Befehle:
+Der [gcc](GNU-Compiler-Collection "GCC") übernimmt die Optimierung über einen dieser Befehle:
 
 - -Ox (x ist der Grad der Optimierung; 3 ist die höchste Stufe)
 - -Os (s ist keine Variable, sondern wird genau so gesetzt!)
@@ -100,7 +100,7 @@ Oftmals gibt es unter anderem im Lowlevel-Forum, aber auch an anderen feinen Ort
 
 ## Siehe auch
 
-- [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8#tipps--tricks "Ausgabe 8")
+- [Ausgabe 8](Ausgabe-8#tipps--tricks "Ausgabe 8")
 
 ## Weblinks
 

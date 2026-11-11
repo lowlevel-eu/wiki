@@ -1,6 +1,6 @@
 # PAE
 
-Weiterleitung: [Physical Address Extension](https://github.com/lowlevel-eu/wiki/wiki/Physical-Address-Extension)
+Weiterleitung: [Physical Address Extension](Physical-Address-Extension)
 
 ---
 

@@ -1,13 +1,13 @@
 # Bootsektor
 
-Als **Bootsektor** oder auch **Boot Record** bezeichnet man den Sektor eines Datenträgers oder Laufwerks, der vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") während des Bootprozesses eingelesen und ausgeführt wird. Aufgabe des Bootsektors ist es das [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") oder einen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") zu laden.
+Als **Bootsektor** oder auch **Boot Record** bezeichnet man den Sektor eines Datenträgers oder Laufwerks, der vom [BIOS](Basic-Input-Output-System "BIOS") während des Bootprozesses eingelesen und ausgeführt wird. Aufgabe des Bootsektors ist es das [Betriebssystem](Betriebssystem "Betriebssystem") oder einen [Bootloader](Bootloader "Bootloader") zu laden.
 
-Der Bootsektor ist in der Regel 512 Byte groß und endet mit der Magic Number **0xAA55**, anhand welcher das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") den Sektor als gültigen Bootsektor erkennt. Bei Disketten befindet sich der Bootsektor im ersten Sektor des Datenträgers. Bei Festplatten im ersten Sektor der bootfähigen Partition des Datenträgers. Der erste Sektor einer Festplatte hingegen heißt [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record").
+Der Bootsektor ist in der Regel 512 Byte groß und endet mit der Magic Number **0xAA55**, anhand welcher das [BIOS](Basic-Input-Output-System "BIOS") den Sektor als gültigen Bootsektor erkennt. Bei Disketten befindet sich der Bootsektor im ersten Sektor des Datenträgers. Bei Festplatten im ersten Sektor der bootfähigen Partition des Datenträgers. Der erste Sektor einer Festplatte hingegen heißt [Master Boot Record](Master-Boot-Record "Master Boot Record").
 
 ## siehe auch
 
-- [Eigener Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Eigener-Bootloader "Eigener Bootloader")
-- [Ausgabe 1 (4.3 Unser Bootloader)](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#unser-bootloader "Ausgabe 1")
+- [Eigener Bootloader](Eigener-Bootloader "Eigener Bootloader")
+- [Ausgabe 1 (4.3 Unser Bootloader)](Ausgabe-1#unser-bootloader "Ausgabe 1")
 
 ## die Anfängliche Umgebung
 

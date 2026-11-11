@@ -1,6 +1,6 @@
 # Bootvorgang
 
-Weiterleitung: [Bootprozess auf x86](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86)
+Weiterleitung: [Bootprozess auf x86](Bootprozess-auf-x86)
 
 ---
 

@@ -1,6 +1,6 @@
 # SMM
 
-Weiterleitung: [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode)
+Weiterleitung: [System Management Mode](System-Management-Mode)
 
 ---
 

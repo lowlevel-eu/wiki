@@ -1,6 +1,6 @@
 # Git
 
-**Git** ist ein dezentrales [Source-Code-Managementsystem](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung"). Git wurde ursprünglich für die Entwicklung des [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")-Kernels entwickelt und steht unter der GPL.
+**Git** ist ein dezentrales [Source-Code-Managementsystem](Versionsverwaltung "Versionsverwaltung"). Git wurde ursprünglich für die Entwicklung des [Linux](Linux "Linux")-Kernels entwickelt und steht unter der GPL.
 
 ## Geschichte
 
@@ -31,7 +31,7 @@ Die einzelnen Branches sind jeweils durch einen sogenannten *head* markiert, der
 
 ## Schnellstart
 
-Um schnell in git einsteigen zu können, sind hier die allerwichtigsten Befehle dargestellt. Dies ist jedoch keine Anleitung, und spricht branching und merging zum Beispiel gar nicht an. Ein einfaches Tutorial gibt es (auf Englisch) auf der Git Homepage. (siehe [Weblinks](https://github.com/lowlevel-eu/wiki/wiki/Git#weblinks "Git"))
+Um schnell in git einsteigen zu können, sind hier die allerwichtigsten Befehle dargestellt. Dies ist jedoch keine Anleitung, und spricht branching und merging zum Beispiel gar nicht an. Ein einfaches Tutorial gibt es (auf Englisch) auf der Git Homepage. (siehe [Weblinks](Git#weblinks "Git"))
 
 ### Archiv herunterladen (clone)
 
@@ -155,7 +155,7 @@ kann der Branch \<Branch\> im Remote-Archiv \<Remote-Archiv\> (typischerweise *o
 
 ## Vergleich zu Subversion
 
-Wie bei so vielen konkurrierenden Projekten gibt es auch viele Meinungen, Diskussionen und Flamewars bei der Frage, welches SCM das beste sei. Git und [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") werden oft direkt miteinander verglichen, was einerseits mit der Popularität beider Systeme zusammenhängt, aber vielleicht auch mit den starken Meinungen von Linus Torvalds gegenüber Subversion (und insbesondere [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS")). Dieser Abschnitt nimmt sich der wichtigsten Argumente an, und soll als Entscheidungshilfe dienen.
+Wie bei so vielen konkurrierenden Projekten gibt es auch viele Meinungen, Diskussionen und Flamewars bei der Frage, welches SCM das beste sei. Git und [Subversion](Subversion "Subversion") werden oft direkt miteinander verglichen, was einerseits mit der Popularität beider Systeme zusammenhängt, aber vielleicht auch mit den starken Meinungen von Linus Torvalds gegenüber Subversion (und insbesondere [CVS](Concurrent-Versions-System "CVS")). Dieser Abschnitt nimmt sich der wichtigsten Argumente an, und soll als Entscheidungshilfe dienen.
 
 ### Vorteile von git
 

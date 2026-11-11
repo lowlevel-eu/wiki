@@ -86,7 +86,7 @@ Alle Bytes in e_ident ab EI_PAD (inklusive) werden nicht benutzt und sollten auf
 
 ##### Architektur-Identifikation
 
-Für einen [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")-Prozessor sollten folgende Felder folgende Werte haben:
+Für einen [x86](X86 "X86")-Prozessor sollten folgende Felder folgende Werte haben:
 
 | Feld | Wert |
 | --------------------- | ------------- |
@@ -268,7 +268,7 @@ Alignment des Segmentes. Wenn 0 oder 1 angegeben wird, ist kein Alignment erford
 
 ## Siehe auch
 
-[ELF-Tutorial](https://github.com/lowlevel-eu/wiki/wiki/ELF-Tutorial "ELF-Tutorial")
+[ELF-Tutorial](ELF-Tutorial "ELF-Tutorial")
 
 ## Links
 

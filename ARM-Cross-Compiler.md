@@ -4,7 +4,7 @@
 
 Dieser Artikel wurde zum Löschen vorgeschlagen.
 
-Bereits im Artikel [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler") vorhanden --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:53, 29. Jan. 2016 (CET)
+Bereits im Artikel [Cross-Compiler](Cross-Compiler "Cross-Compiler") vorhanden --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:53, 29. Jan. 2016 (CET)
 
 Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren basierenden Architekturen erstellen will, aber selber nicht auf einer solchen entwickelt, muss sich einen Cross-Compiler erstellen bzw. verwenden. In diesem Artikel wird erklärt, wie ein Cross-Compiler unter Linux für die ARM-Architektur erstellt wird.
 
@@ -12,7 +12,7 @@ Wer ein Betriebssystem (oder generell Applikationen) für auf ARM-Prozessoren ba
 
 ## Vorbereitungen
 
-Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.22.tar.bz2) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.7.1/gcc-4.7.1.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 06. August 2012) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
+Die Erstellung eines Cross-Compilers für ARM-Architekturen erfolgt anfangs analog zu der Erstellung eines [Cross-Compilers](X86-64-Cross-Compiler "X86-64 Cross-Compiler") für [x86-64 Prozessoren](X86-64 "X86-64"): Es müssen die [binutils](http://ftp.gnu.org/gnu/binutils/binutils-2.22.tar.bz2) und der [gcc](http://ftp.gnu.org/gnu/gcc/gcc-4.7.1/gcc-4.7.1.tar.bz2) in ihrer jeweils aktuellen Version (Stand: 06. August 2012) heruntergeladen werden. Sollen mehr Sprachen als C unterstützt werden, so müssen die entsprechenden Pakete unter [\[1\]](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 
 **HINWEIS** ab gcc-4.7 hat sich das Target geändert, es heißt nun **nicht mehr**
 
@@ -81,9 +81,9 @@ Wenn alles geklappt hat, wurde nun ein Cross-Compiler für ARM-Architekturen ers
 
 ## Siehe auch
 
-- [Cross-Compiler](https://github.com/lowlevel-eu/wiki/wiki/Cross-Compiler "Cross-Compiler")
-- [Cross-Compiler für x86-64-Systeme](https://github.com/lowlevel-eu/wiki/wiki/X86-64-Cross-Compiler "X86-64 Cross-Compiler")
-- [Cross-Compiler für Windows (erzeugt ELF-Dateien)](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+- [Cross-Compiler](Cross-Compiler "Cross-Compiler")
+- [Cross-Compiler für x86-64-Systeme](X86-64-Cross-Compiler "X86-64 Cross-Compiler")
+- [Cross-Compiler für Windows (erzeugt ELF-Dateien)](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 
 ## Weblinks
 

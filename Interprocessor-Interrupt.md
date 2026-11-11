@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Ein **IPI** (= **Interprocessor Interrupt**) ist ein [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), welcher von einem Prozessor (bzw. der [LAPIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "LAPIC") dieses Prozessors) an einen anderen/den gleichen Prozessor (bzw. die [LAPIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "LAPIC") dieses Prozessors) gesendet wird. Diese Interrupts werden in [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")- und [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen dazu verwendet bestimmte Aktionen zwischen mehreren Prozessoren zu synchronisieren.
+Ein **IPI** (= **Interprocessor Interrupt**) ist ein [Interrupt](Interrupt "Interrupt"), welcher von einem Prozessor (bzw. der [LAPIC](Local-Advanced-Programmable-Interrupt-Controller "LAPIC") dieses Prozessors) an einen anderen/den gleichen Prozessor (bzw. die [LAPIC](Local-Advanced-Programmable-Interrupt-Controller "LAPIC") dieses Prozessors) gesendet wird. Diese Interrupts werden in [SMP](Symmetrisches-Multiprozessorsystem "SMP")- und [NUMA](Non-Uniform-Memory-Architecture "NUMA")-Systemen dazu verwendet bestimmte Aktionen zwischen mehreren Prozessoren zu synchronisieren.
 
 ---
 

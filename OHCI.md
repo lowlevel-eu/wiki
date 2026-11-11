@@ -1,6 +1,6 @@
 # OHCI
 
-Weiterleitung: [Open Host Controller Interface](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface)
+Weiterleitung: [Open Host Controller Interface](Open-Host-Controller-Interface)
 
 ---
 

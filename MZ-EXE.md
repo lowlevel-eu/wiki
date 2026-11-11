@@ -51,7 +51,7 @@ Eine MZ EXE konnte von DOS an jede beliebige Stelle im Speicher geladen werden. 
 
 ## Siehe auch
 
-- [Microsoft Disk Operating System](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "Microsoft Disk Operating System")
+- [Microsoft Disk Operating System](Microsoft-Disk-Operating-System "Microsoft Disk Operating System")
 
 ## Weblinks
 

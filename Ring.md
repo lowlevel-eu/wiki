@@ -8,11 +8,11 @@ Ein "Ring" bezeichnet die Sicherheitsstufe eines Prozesses und definiert seine P
 
 ## Ringe in der x86-Architektur
 
-Am höchsten privilegierte Prozesse befinden sich im Ring 0 (z. B. der Kernel oder Treiber), am niedrigsten privilegierte Prozesse im Ring 3. Ring-0-Prozesse dürfen auf den gesamten Speicherbereich zugreifen und alle Befehle ausführen, die die CPU zur Verfügung stellt. Weniger privilegierte Prozesse müssen auf bestimmte Befehle, wie zum Beispiel *lgdt* oder *sti* verzichten, wenn IOPL im [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS")-Register nicht gerade größer oder gleich deren Ring ist. Außerdem können sie nur auf Speicherbereiche von Prozessen zugreifen, die weniger privilegiert sind oder auf Speicherbereiche, die ihnen selbst gehören.
+Am höchsten privilegierte Prozesse befinden sich im Ring 0 (z. B. der Kernel oder Treiber), am niedrigsten privilegierte Prozesse im Ring 3. Ring-0-Prozesse dürfen auf den gesamten Speicherbereich zugreifen und alle Befehle ausführen, die die CPU zur Verfügung stellt. Weniger privilegierte Prozesse müssen auf bestimmte Befehle, wie zum Beispiel *lgdt* oder *sti* verzichten, wenn IOPL im [EFLAGS](EFLAGS "EFLAGS")-Register nicht gerade größer oder gleich deren Ring ist. Außerdem können sie nur auf Speicherbereiche von Prozessen zugreifen, die weniger privilegiert sind oder auf Speicherbereiche, die ihnen selbst gehören.
 
 Die meisten Betriebssysteme benutzen ausschließlich die Ringe 0 und 3. In OS/2 jedoch laufen Grafiktreiber in Ring 2. Einige Virtualisierungslösungen legen außerdem Betriebssystemkerne in Ring 1 ab, und laufen selbst in Ring 0. Deshalb haben Intel und AMD auf einigen Plattformen einen Ring -1 geschaffen.
 
-Das Prinzip der "Ringe" wurde mit dem [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") eingeführt.
+Das Prinzip der "Ringe" wurde mit dem [Protected Mode](Protected-Mode "Protected Mode") eingeführt.
 
 ## Ringe in anderen Architekturen
 
@@ -20,11 +20,11 @@ In anderen Architekturen gibt es andere Anzahlen von Ringen. Im Honeywell 6180 g
 
 ## Aufteilung
 
-Die übliche Aufteilung der Ringe lautet wie folgt: Der [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") läuft im Ring 0, der Rest im Ring 3 (siehe auch [Userspace](https://github.com/lowlevel-eu/wiki/wiki/Userspace "Userspace")). Die beiden anderen Ringe werden kaum noch genutzt, was wohl auch der Grund dafür ist, dass andere Architekturen gar auf sie verzichten und nur zwei Ringe einführen (siehe [oben](https://github.com/lowlevel-eu/wiki/wiki/Ring#ringe-in-anderen-architekturen "Ring")). Lediglich ein Verwendungszweck wird heute noch genutzt: Beim Virtualisieren von Betriebssystemen wird häufig der eigentliche Kernel in den Ring 1 verschoben, um dem Virtualisierungsprogramm zu erlauben, sich selbst als "Aufpasser" in den Ring 0 zu setzen.
+Die übliche Aufteilung der Ringe lautet wie folgt: Der [Kernel](Kernel "Kernel") läuft im Ring 0, der Rest im Ring 3 (siehe auch [Userspace](Userspace "Userspace")). Die beiden anderen Ringe werden kaum noch genutzt, was wohl auch der Grund dafür ist, dass andere Architekturen gar auf sie verzichten und nur zwei Ringe einführen (siehe [oben](Ring#ringe-in-anderen-architekturen "Ring")). Lediglich ein Verwendungszweck wird heute noch genutzt: Beim Virtualisieren von Betriebssystemen wird häufig der eigentliche Kernel in den Ring 1 verschoben, um dem Virtualisierungsprogramm zu erlauben, sich selbst als "Aufpasser" in den Ring 0 zu setzen.
 
 ## Siehe auch
 
-[Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
+[Protected Mode](Protected-Mode "Protected Mode")
 
 ---
 

@@ -1,6 +1,6 @@
 # Task
 
-Weiterleitung: [Prozess](https://github.com/lowlevel-eu/wiki/wiki/Prozess)
+Weiterleitung: [Prozess](Prozess)
 
 ---
 

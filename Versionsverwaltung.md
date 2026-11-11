@@ -7,7 +7,7 @@ Versionsverwaltungen machen das Leben einfacher. Nicht nur für Betriebssystemen
 Eine Versionsverwaltung erfüllt eine handvoll nützliche Aufgaben, die Entwicklern das Leben leichter machen.
 
 - Protokollierung der Änderung. Jede Änderung am Quelltext kann nachvollzogen werden, egal von wem, an was, oder wieso.
-- Wiederherstellung und Archivierung von Entwicklungsständen. So ist es möglich, bestimmte Versionen von Dateien oder ganzen Verzeichnisbäumen wiederherzustellen, oder auf Anhieb einem Namen einen bestimmten Zustand zuzuordnen (siehe [Tagging](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung#branching-und-tagging "Versionsverwaltung")).
+- Wiederherstellung und Archivierung von Entwicklungsständen. So ist es möglich, bestimmte Versionen von Dateien oder ganzen Verzeichnisbäumen wiederherzustellen, oder auf Anhieb einem Namen einen bestimmten Zustand zuzuordnen (siehe [Tagging](Versionsverwaltung#branching-und-tagging "Versionsverwaltung")).
 - Koordination von gemeinsamen Zugriffen. Gleichzeitige Änderungen von mehreren Entwicklern werden verhindert, oder erleichtert.
 - Koordination von Entwicklungszweigen, z.B. wenn eine alte Funktionalität komplett ersetzt werden soll, aber der Hauptzweig während dieser Änderung weiterhin ungestört funktionieren soll.
 
@@ -16,8 +16,8 @@ Eine Versionsverwaltung erfüllt eine handvoll nützliche Aufgaben, die Entwickl
 Diese Aufgaben können auf verschiedene Arten umgesetzt werden. Dabei unterscheidet sich insbesondere, wie die Versionsverwaltung aufgebaut ist. Mögliche Varianten:
 
 - **Lokale Versionsverwaltungen** laufen komplett auf dem Entwicklerrechner. Fremdentwickler gibt es hierbei in der Regel nicht, eine Koordination zwischen Entwicklern ist nicht nötig.
-- **Zentrale Versionsverwaltungen** setzen in der Regel einen Server voraus. Entwickler spiegeln sich einen Entwicklungsstand auf ihr System, um daran zu arbeiten (sog. *checkout*), der Server behält dabei keinerlei Informationen über lokale Kopien. Nach den Änderungen werden die neuen Versionen wieder auf den Server übertragen (sog. *commit*). Oft wird hierbei auch eine Rechtekontrolle vorgenommen, so dass nicht jeder seine Änderungen direkt eintragen kann, aber öffentliches Lesen möglich ist. Verbreitete Beispiele für diese Variante sind [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") und [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS").
-- **Dezentralisierte Versionsverwaltungen** sind quasi die Hybriden. Jeder Entwickler hält eine komplette Kopie der gesamten Versionshistorie vorrätig, wie bei einer lokalen Verwaltung. Aber im Gegensatz hierzu können Änderungen auch direkt in fremde Systeme übertragen werden. Beispiele sind [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial "Mercurial") und das populäre [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git").
+- **Zentrale Versionsverwaltungen** setzen in der Regel einen Server voraus. Entwickler spiegeln sich einen Entwicklungsstand auf ihr System, um daran zu arbeiten (sog. *checkout*), der Server behält dabei keinerlei Informationen über lokale Kopien. Nach den Änderungen werden die neuen Versionen wieder auf den Server übertragen (sog. *commit*). Oft wird hierbei auch eine Rechtekontrolle vorgenommen, so dass nicht jeder seine Änderungen direkt eintragen kann, aber öffentliches Lesen möglich ist. Verbreitete Beispiele für diese Variante sind [Subversion](Subversion "Subversion") und [CVS](Concurrent-Versions-System "CVS").
+- **Dezentralisierte Versionsverwaltungen** sind quasi die Hybriden. Jeder Entwickler hält eine komplette Kopie der gesamten Versionshistorie vorrätig, wie bei einer lokalen Verwaltung. Aber im Gegensatz hierzu können Änderungen auch direkt in fremde Systeme übertragen werden. Beispiele sind [Mercurial](Mercurial "Mercurial") und das populäre [git](Git "Git").
 
 ## Konzepte
 
@@ -40,21 +40,21 @@ Branching und Tagging sind die Konzepte, die sich mit der Koordinierung verschie
 
 ## Systeme
 
-Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Bereich [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") und [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion"), etwas selter trifft man auch [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial "Mercurial") oder das etwas ältere [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS"). Dabei sind sowohl Subversion als auch CVS für einen zentralen Aufbau ausgelegt (können aber auch lokal gut verwendet werden), git und Mercurial hingegen folgen einem vollständig dezentralen Ansatz.
+Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Bereich [git](Git "Git") und [Subversion](Subversion "Subversion"), etwas selter trifft man auch [Mercurial](Mercurial "Mercurial") oder das etwas ältere [CVS](Concurrent-Versions-System "CVS"). Dabei sind sowohl Subversion als auch CVS für einen zentralen Aufbau ausgelegt (können aber auch lokal gut verwendet werden), git und Mercurial hingegen folgen einem vollständig dezentralen Ansatz.
 
 ### Bekannte Projekte und ihr eingesetztes VCS
 
 | VCS | Projekt |
 | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), Qt, KDE, Compiz Fusion, GIMP, [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") |
-| [Mercurial](https://github.com/lowlevel-eu/wiki/wiki/Mercurial "Mercurial") | Firefox, OpenOffice.org |
-| [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") | [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC"), GnuPG, Mono, GNOME |
-| [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS") | [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") |
+| [git](Git "Git") | [Linux](Linux "Linux"), Qt, KDE, Compiz Fusion, GIMP, [Týndur](T%C3%BDndur "Týndur") |
+| [Mercurial](Mercurial "Mercurial") | Firefox, OpenOffice.org |
+| [Subversion](Subversion "Subversion") | [GCC](GNU-Compiler-Collection "GCC"), GnuPG, Mono, GNOME |
+| [CVS](Concurrent-Versions-System "CVS") | [Bochs](Bochs "Bochs") |
 | Bazaar | Ubuntu |
 
 ## Weblinks
 
-- [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
+- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
 
 ---
 

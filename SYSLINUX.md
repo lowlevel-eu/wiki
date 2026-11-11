@@ -1,6 +1,6 @@
 # SYSLINUX
 
-**SYSLINUX** ist ein [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader"), der verschiedene Betriebssysteme von einem FAT-Dateisystem laden kann.
+**SYSLINUX** ist ein [Bootloader](Bootloader "Bootloader"), der verschiedene Betriebssysteme von einem FAT-Dateisystem laden kann.
 
 ## Installation
 
@@ -8,7 +8,7 @@
 
 Unter Linux sollte das SYSLINUX aus dem Repository der Distribution verwendet werden. Für Windows gibt es Binaries in der offiziellen Source Code Distribution in den Verzeichnissen *win32\syslinux.exe* und *win64\syslinux64.exe* (für 32- bzw. 64-Bit-Windows).
 
-Um mittels SYSLINUX ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformes Betriebssystem zu booten wird das Modul *mboot.c32* benötigt. Dieses ist in der offiziellen Source Code Distribution mitgeliefert und befindet sich im Verzeichnis *com32/mboot*.
+Um mittels SYSLINUX ein [Multiboot](Multiboot "Multiboot")-konformes Betriebssystem zu booten wird das Modul *mboot.c32* benötigt. Dieses ist in der offiziellen Source Code Distribution mitgeliefert und befindet sich im Verzeichnis *com32/mboot*.
 
 Außerdem muss eine Konfigurationsdatei namens *syslinux.cfg* erstellt werden, die wie folgt aussehen könnte: `DEFAULT myos LABEL myos `
 

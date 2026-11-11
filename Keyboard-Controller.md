@@ -7,14 +7,14 @@ Der KBC wurde mit dem AT-System (i286) eingeführt. Im Vorgängersystem XT wurde
 ## Funktionen des KBC
 
 - Ansteuerung eines oder zweier Auxiliary Port(s) (Tastatur, Maus)
-- Ein-/ausschalten der 21. Adressleitung ([A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"))
+- Ein-/ausschalten der 21. Adressleitung ([A20-Gate](A20-Gate "A20-Gate"))
 - CPU-Reset auslösen, also Neustart des Systems
-- Zusammen mit dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") den [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher") ansteuern.
+- Zusammen mit dem [PIT](Programmable-Interval-Timer "Programmable Interval Timer") den [Systemlautsprecher](Systemlautsprecher "Systemlautsprecher") ansteuern.
 - Information darüber, ob das System eine Monochrom- oder Farbgrafikkarte benutzt (Irrelevant, da Farbgrafik bereits mit XT-Systemen als Standard eingeführt wurde!), sowie die Speicherausstattung des Systems (512 oder 256 KiB)
 
 ## Kommunikationswege
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a827e7311878670cc162.png)
+[<img src="assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](assets/a827e7311878670cc162.png)
 
 Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) eine Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z. B. von Linux unterstützt, nicht jedoch von Windows.
 
@@ -25,9 +25,9 @@ Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwen
 Diese von vielen Mainboards bereitgestellte Funktion simuliert angeschlossene USB-Geräte wie Maus und Tastatur als PS/2-Geräte. Dies hat für Programmierer Vor- und Nachteile. Zwar muss man für die Unterstützung solcher Eingabegeräte keine eigenen USB-Treiber programmieren, allerdings können damit folgende Probleme auftreten:
 
 - Auf manchen Systemen läuft IMMER eine Abstraktionsschicht mit, auch wenn keine USB-Geräte angeschlossen sind. Dies kann zur Folge haben, dass die Intellimaus-Extension nicht funktioniert. Oder dass man nicht, wie weiter oben beschrieben, beliebige Geräte an einen PSAUX-Port anschließen kann (werden nicht erkannt).
-- Das [SMM-BIOS](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "SMM"), über welches die USB-zu-PS/2-Abstraktion stattfindet, unterstützt nicht immer den Betrieb über 32-Bit-[Protected-Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") kann das System daher zum Absturz bringen!
+- Das [SMM-BIOS](System-Management-Mode "SMM"), über welches die USB-zu-PS/2-Abstraktion stattfindet, unterstützt nicht immer den Betrieb über 32-Bit-[Protected-Mode](Protected-Mode "Protected Mode"). Die Benutzung erweiterter Speichertechniken oder des [Long Mode](Long-Mode "Long Mode") kann das System daher zum Absturz bringen!
 
-Diese Probleme sind nicht mehr vorhanden, wenn der Legacy-Modus ausgeschaltet wurde. Dies geschieht während der Initialisierung des USB-Hostcontrollers. Dann ist jedoch ein Treiber für eine [USB-Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur") erforderlich.
+Diese Probleme sind nicht mehr vorhanden, wenn der Legacy-Modus ausgeschaltet wurde. Dies geschieht während der Initialisierung des USB-Hostcontrollers. Dann ist jedoch ein Treiber für eine [USB-Tastatur](Tastatur "Tastatur") erforderlich.
 
 ## Programmieren des KBC
 
@@ -237,7 +237,7 @@ static void send_command(uint8_t command)
 }
 ```
 
-In einem vernünftigen Betriebssystem möchte man die Tastatur wahrscheinlich mit IRQs nutzen, damit man jeweils benachrichtigt wird, wenn eine Taste gedrückt wird, und nicht darauf warten muss. Dabei ist es wichtig, dass die Routine zur Behandlung der Tastatur-IRQs vor der oben angegebenen Initialisierung erfolgt, da sich sonst möglicherweise üble [Race-Conditions](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") ergeben, also konkret, wenn der Puffer bereits geleert wurde und noch vor dem Registrieren der IRQ-Routine eine Taste gedrückt wird, dann ist der Puffer der Tastatur voll, und sie schickt somit auch keine IRQs mehr, bis er geleert wird, was aber dann nicht mehr passiert, und die Tastatur hängt somit.
+In einem vernünftigen Betriebssystem möchte man die Tastatur wahrscheinlich mit IRQs nutzen, damit man jeweils benachrichtigt wird, wenn eine Taste gedrückt wird, und nicht darauf warten muss. Dabei ist es wichtig, dass die Routine zur Behandlung der Tastatur-IRQs vor der oben angegebenen Initialisierung erfolgt, da sich sonst möglicherweise üble [Race-Conditions](Race-Condition "Race Condition") ergeben, also konkret, wenn der Puffer bereits geleert wurde und noch vor dem Registrieren der IRQ-Routine eine Taste gedrückt wird, dann ist der Puffer der Tastatur voll, und sie schickt somit auch keine IRQs mehr, bis er geleert wird, was aber dann nicht mehr passiert, und die Tastatur hängt somit.
 
 ### IRQ-Handler
 

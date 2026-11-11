@@ -10,9 +10,9 @@ Wenn ich hier von „Bytes“ spreche, meine ich acht Bit große Einheiten. Zwei
 
 ### Grundlagen
 
-Wie beim [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")-Tutorial gilt auch hier: Euer Betriebssystem sollte bereits einen gewissen Stand aufweisen, um die Karte erkennen und bedienen zu können. Dies sind also [ISRs](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "Interrupt Service Routine") für [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"), eine [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") und eine Möglichkeit, die [I/O-Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O-Ports") eines bestimmten (anhand von Vendor- und Device-ID) [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "Peripheral Component Interconnect")-Gerätes herauszufinden.
+Wie beim [RTL8139](RTL8139 "RTL8139")-Tutorial gilt auch hier: Euer Betriebssystem sollte bereits einen gewissen Stand aufweisen, um die Karte erkennen und bedienen zu können. Dies sind also [ISRs](Interrupt-Service-Routine "Interrupt Service Routine") für [IRQs](Programmable-Interrupt-Controller#irq-tabelle "IRQ"), eine [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung") und eine Möglichkeit, die [I/O-Ports](I-O-Ports "I/O-Ports") eines bestimmten (anhand von Vendor- und Device-ID) [PCI](Peripheral-Component-Interconnect "Peripheral Component Interconnect")-Gerätes herauszufinden.
 
-Mögliche Emulatoren für PCnet sind sowohl [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") als auch [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox"). Um die Karte unter QEMU zu benutzen, können zum Beispiel die folgenden Kommandozeilenoptionen angegeben werden:
+Mögliche Emulatoren für PCnet sind sowohl [QEMU](QEMU "QEMU") als auch [VirtualBox](VirtualBox "VirtualBox"). Um die Karte unter QEMU zu benutzen, können zum Beispiel die folgenden Kommandozeilenoptionen angegeben werden:
 
     qemu -net user -net nic,model=pcnet
 
@@ -204,15 +204,15 @@ while ((ncard->linear_receive_descriptor[ncard->receive_descriptor].flags & 0x80
 
 ## Siehe auch
 
-- [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet")
-- [Address Resolution Protocol](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "Address Resolution Protocol")
-- [Internet Protocol](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol")
+- [Ethernet](Ethernet "Ethernet")
+- [Address Resolution Protocol](Address-Resolution-Protocol "Address Resolution Protocol")
+- [Internet Protocol](Internet-Protocol "Internet Protocol")
 
 ## Weblinks
 
-- [Datei:Am79C973.pdf](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6edd87861edd96ccdcd2.pdf "Datei:Am79C973.pdf") - Umfangreiche Spezifikation für die Am79C973 (PCnet-FAST III) und Am79C975
-- [AMD-Hardware-Spezifikation](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/777e98fb4180ab93b4d0.pdf)
-- Umfangreiche Spezifikation für die Am79C972 (PCnet-FAST+): [Teil 1](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/aa163a95c7c675a38d80.pdf) und [Teil 2](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/b533b83773bf73697ec4.pdf) – sollte zur Am79C973 (PCnet-FAST III) kompatibel sein
+- [Datei:Am79C973.pdf](assets/6edd87861edd96ccdcd2.pdf "Datei:Am79C973.pdf") - Umfangreiche Spezifikation für die Am79C973 (PCnet-FAST III) und Am79C975
+- [AMD-Hardware-Spezifikation](assets/777e98fb4180ab93b4d0.pdf)
+- Umfangreiche Spezifikation für die Am79C972 (PCnet-FAST+): [Teil 1](assets/aa163a95c7c675a38d80.pdf) und [Teil 2](assets/b533b83773bf73697ec4.pdf) – sollte zur Am79C973 (PCnet-FAST III) kompatibel sein
 
 ---
 

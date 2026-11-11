@@ -1,12 +1,12 @@
 # Interrupt Descriptor Table
 
-**IDT** steht für **I**nterrupt **D**escriptor **T**able. Sie wird im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") des x86 verwendet, um [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") ihre [Handler (ISRs)](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") zuzuordnen. Die Einträge in der Tabelle heißen *Interruptdeskriptoren*.
+**IDT** steht für **I**nterrupt **D**escriptor **T**able. Sie wird im [Protected Mode](Protected-Mode "Protected Mode") und im [Long Mode](Long-Mode "Long Mode") des x86 verwendet, um [Interrupts](Interrupt "Interrupt") ihre [Handler (ISRs)](Interrupt-Service-Routine "ISR") zuzuordnen. Die Einträge in der Tabelle heißen *Interruptdeskriptoren*.
 
 ## Aufbau
 
 Die IDT besteht aus einem Speicherbereich, in dem direkt aufeinanderfolgend die bis zu 256 Interruptdeskriptoren abgelegt sind (d.h. in Hochsprachen aus einem gepackten Array von 256 Deskriptoren). Für die Behandlung des Interrupt 0 wird der erste Eintrag der Tabelle benutzt, für Interrupt 1 der zweite usw.
 
-Die Tabelle kann weniger als 256 Einträge haben. Wenn einer der Interrupts ausgelöst wird, die dadurch nicht von der IDT beschrieben sind und deren Interrupthandler folglich nicht aufgerufen werden kann, wird stattdessen ein \#GP (General Protection Fault, siehe [Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception")) ausgelöst.
+Die Tabelle kann weniger als 256 Einträge haben. Wenn einer der Interrupts ausgelöst wird, die dadurch nicht von der IDT beschrieben sind und deren Interrupthandler folglich nicht aufgerufen werden kann, wird stattdessen ein \#GP (General Protection Fault, siehe [Exception](Exception "Exception")) ausgelöst.
 
 ### Deskriptor
 
@@ -34,7 +34,7 @@ Ein Deskriptor in der IDT ist im Protected Mode 64 Bit und im Long Mode 128 Bit 
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 110b | **Interrupt Gate** - Beim Springen in den Interrupthandler wird eflags.if = 0 gesetzt, d.h. Hardwareinterrupts werden deaktiviert, solange der Handler läuft |
 | 111b | **Trap Gate** - Beim Sprung in den Interrupthandler bleiben Hardwareinerrupts aktiviert |
-| 101b | **Task Gate** - Beim Auftreten des Interrupts wird ein Hardware-Taskswitch durchgeführt. Der Selector zeigt in diesem Fall nicht auf ein Codesegment, sondern auf ein [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS"). Das Offset bleibt unbenutzt. |
+| 101b | **Task Gate** - Beim Auftreten des Interrupts wird ein Hardware-Taskswitch durchgeführt. Der Selector zeigt in diesem Fall nicht auf ein Codesegment, sondern auf ein [TSS](Task-State-Segment "TSS"). Das Offset bleibt unbenutzt. |
 
 ## Laden einer IDT
 
@@ -45,7 +45,7 @@ Zum Laden einer IDT muss die Instruktion *lidt \<p\>* mit der Adresse einer 6 By
 | 0-15 | Das Limit der IDT |
 | 16-47 | Die Base der IDT |
 
-Die Anfangsadresse (Basis) ist die [lineare Adresse](https://github.com/lowlevel-eu/wiki/wiki/Paging "Lineare Adresse") des ersten Eintrags in der IDT und das Limit ist die Größe der IDT verringert um 1.
+Die Anfangsadresse (Basis) ist die [lineare Adresse](Paging "Lineare Adresse") des ersten Eintrags in der IDT und das Limit ist die Größe der IDT verringert um 1.
 
 Damit kann eine IDT beispielsweise mit Code wie dem folgenden geladen werden:
 
@@ -81,9 +81,9 @@ idt:
 
 ## Siehe auch
 
-- [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
-- [Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception "Exception")
-- [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "Programmable Interrupt Controller")
+- [Interrupt](Interrupt "Interrupt")
+- [Exception](Exception "Exception")
+- [Programmable Interrupt Controller](Programmable-Interrupt-Controller "Programmable Interrupt Controller")
 - [Bran's Kernel-Development Tutorial ... IDT](http://www.osdever.net/bkerndev/Docs/idt.htm)
 
 ---

@@ -1,6 +1,6 @@
 # ELF Tutorial
 
-Weiterleitung: [ELF-Tutorial](https://github.com/lowlevel-eu/wiki/wiki/ELF-Tutorial)
+Weiterleitung: [ELF-Tutorial](ELF-Tutorial)
 
 ---
 

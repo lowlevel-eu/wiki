@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ----- | ---------------- | ------------------------------------------------------------------------------- |
-|  | **Navigation** | [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") » |
+|  | **Navigation** | [Ausgabe 2](Ausgabe-2 "Ausgabe 2") » |
 
 ## Vorwort
 
@@ -81,7 +81,7 @@ Wenn all dies so funktioniert, wie es sollte, dann kann die Anwendungssoftware g
 
 **Warnung**
 
-Die meisten aktiven Forenmitglieder raten davon ab einen eigenen Bootloader zu schreiben, da es relativ sinnlos und extrem fehleranfällig ist. Vor allem Neulinge sollten stattdessen lieber zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") (relevante Artikel: [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB"), [GRUB-Image erstellen](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Image-erstellen "GRUB-Image erstellen"), [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5#programmierung-eines-grub-kompatiblen-kernels "Ausgabe 5"), [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")) greifen.
+Die meisten aktiven Forenmitglieder raten davon ab einen eigenen Bootloader zu schreiben, da es relativ sinnlos und extrem fehleranfällig ist. Vor allem Neulinge sollten stattdessen lieber zu [GRUB](Grand-Unified-Bootloader "GRUB") (relevante Artikel: [C-Kernel mit GRUB](C-Kernel-mit-GRUB "C-Kernel mit GRUB"), [GRUB-Image erstellen](GRUB-Image-erstellen "GRUB-Image erstellen"), [Ausgabe 5](Ausgabe-5#programmierung-eines-grub-kompatiblen-kernels "Ausgabe 5"), [Multiboot](Multiboot "Multiboot")) greifen.
 
   
 
@@ -271,7 +271,7 @@ Und zum Schluss schreiben wir das Image mit Rawrite auf die Diskette:
 
 Jetzt rebootet ihr ganz einfach euren Rechner mit unserer neuen bootfähigen Diskette im Laufwerk... TÄDÄÄÄÄÄÄÄH!!!
 
-**Anmerkung:** Wer sein OS mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") testen will, sollte dafür sorgen, dass auch die Größes des Kernels durch 512 teilbar ist, da QEMU nur ganze Sektoren lädt.
+**Anmerkung:** Wer sein OS mit [QEMU](QEMU "QEMU") testen will, sollte dafür sorgen, dass auch die Größes des Kernels durch 512 teilbar ist, da QEMU nur ganze Sektoren lädt.
 
 ## Lowlevel-Grundlagen, Teil 1
 
@@ -521,7 +521,7 @@ Nach dem Willen von Intel sollte dieser Modus seit dem 80286 nur noch als Sprung
 
 **Hinweis:**
 
-Weitere Informationen gibt es im Artikel [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")
+Weitere Informationen gibt es im Artikel [Real Mode](Real-Mode "Real Mode")
 
   
 
@@ -535,7 +535,7 @@ An den bisher eingeführten Befehlen ändert sich nichts, dafür sind jede Menge
 
 **Hinweis:**
 
-Weitere Informationen gibt es im Artikel [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")
+Weitere Informationen gibt es im Artikel [Protected Mode](Protected-Mode "Protected Mode")
 
 #### V86-Mode
 
@@ -545,7 +545,7 @@ Ein gutes Beispiel ist der Treiber EMM386.EXE. Sobald dieser geladen ist, verset
 
 **Hinweis:**
 
-Weitere Informationen gibt es im Artikel [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode")
+Weitere Informationen gibt es im Artikel [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode")
 
 #### SMM - System Management Mode
 
@@ -553,7 +553,7 @@ Dieser Stromsparmodus wurde mit dem Pentium eingeführt. In ihn wird gewechselt,
 
 **Hinweis:**
 
-Weitere Informationen gibt es im Artikel [System Management Mode](https://github.com/lowlevel-eu/wiki/wiki/System-Management-Mode "System Management Mode")
+Weitere Informationen gibt es im Artikel [System Management Mode](System-Management-Mode "System Management Mode")
 
   
 
@@ -596,7 +596,7 @@ Weitere Informationen gibt es im Artikel [System Management Mode](https://github
 
 **Hinweis:**
 
-Es existiert ein Wikiartikel zu [MenuetOS](https://github.com/lowlevel-eu/wiki/wiki/MenuetOS "MenuetOS").
+Es existiert ein Wikiartikel zu [MenuetOS](MenuetOS "MenuetOS").
 
 ![menuet1.gif](http://lowlevel.brainsware.org/wiki/images/menuet1.gif) ![menuet2.gif](http://lowlevel.brainsware.org/wiki/images/menuet2.gif) ![menuet3.gif](http://lowlevel.brainsware.org/wiki/images/menuet3.gif)
 
@@ -634,7 +634,7 @@ MenuetOS ist ein Betriebssystem, bei dem man auf mehr hoffen kann. Die Entwickle
 
 ## Nächste Ausgabe
 
-Für die [nächste Ausgabe](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") sind folgende Themen geplant:
+Für die [nächste Ausgabe](Ausgabe-2 "Ausgabe 2") sind folgende Themen geplant:
 
 - Design von Kernels
 - Lowlevel Teil 2: Interrupts, IO-Ports, Speicheradressen
@@ -650,7 +650,7 @@ Eine Bitte noch: Mailt mir, wie es euch gefallen hat! Das ist für mich ganz wic
 
 |  |  |  |
 | ----- | ---------------- | ------------------------------------------------------------------------------- |
-|  | **Navigation** | [Ausgabe 2](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2 "Ausgabe 2") » |
+|  | **Navigation** | [Ausgabe 2](Ausgabe-2 "Ausgabe 2") » |
 
 ---
 

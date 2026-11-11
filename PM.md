@@ -1,6 +1,6 @@
 # PM
 
-Weiterleitung: [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode)
+Weiterleitung: [Protected Mode](Protected-Mode)
 
 ---
 

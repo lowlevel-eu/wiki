@@ -1,6 +1,6 @@
 # Calling convention
 
-Weiterleitung: [Aufrufkonventionen](https://github.com/lowlevel-eu/wiki/wiki/Aufrufkonventionen)
+Weiterleitung: [Aufrufkonventionen](Aufrufkonventionen)
 
 ---
 

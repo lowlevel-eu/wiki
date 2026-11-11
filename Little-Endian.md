@@ -1,6 +1,6 @@
 # Little-Endian
 
-Weiterleitung: [Bytereihenfolge](https://github.com/lowlevel-eu/wiki/wiki/Bytereihenfolge)
+Weiterleitung: [Bytereihenfolge](Bytereihenfolge)
 
 ---
 

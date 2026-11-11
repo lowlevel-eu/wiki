@@ -1,13 +1,13 @@
 # Virtuelles Dateisystem
 
-Ein virtuelles [Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") (VFS &#150; Virtual File System) abstrahiert verschiedene reale Dateisysteme. Dadurch muss ein Programm, das auf Dateien zugreift, nicht wissen, auf welchem Dateisystem sie liegen.
+Ein virtuelles [Dateisystem](Dateisystem "Dateisystem") (VFS &#150; Virtual File System) abstrahiert verschiedene reale Dateisysteme. Dadurch muss ein Programm, das auf Dateien zugreift, nicht wissen, auf welchem Dateisystem sie liegen.
 
 Ein weiterer Vorteil besteht darin, dass die „realen“ Dateisysteme nicht wirklich real sein müssen. Sie müssen nicht wirklich auf einem physischen Medium existieren, sie können auch selbst „virtuell“ sein (wie zum Beispiel das Linux-Dateisystem procfs).
 
 ## Aufbau
 
 Ein VFS lässt sich als Baum implementieren. Dabei ist jedes Element (Node) mit den "umliegenden" Nodes verkettet. folgendermaßen könnte ein Ausschnitt aus einem VFS aussehen, die Nodes können (und sollten) mehr Elemente als die dargestellten enhalten:  
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/728be1d284a54fc9fc41.png" width="560" height="280" alt="VFS.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/728be1d284a54fc9fc41.png)  
+[<img src="assets/728be1d284a54fc9fc41.png" width="560" height="280" alt="VFS.png" />](assets/728be1d284a54fc9fc41.png)  
 Weitere Elemente eines Nodes könnten zum Beispiel ein (Funktions-)Pointer auf einen Treiber, eine Inode-Nummer, oder einen Zugriffszähler enthalten. Weiterhin wäre es sinnvoll zu speichern welche Art von Node vorliegt, eine Datei, ein Ordner, ein Gerätetreiber...
 
 ## Weblinks

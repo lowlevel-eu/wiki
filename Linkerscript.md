@@ -1,6 +1,6 @@
 # Linkerscript
 
-Weiterleitung: [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker)
+Weiterleitung: [Linker](Linker)
 
 ---
 

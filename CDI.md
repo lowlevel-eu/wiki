@@ -1,6 +1,6 @@
 # CDI
 
-Weiterleitung: [Common Driver Interface](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface)
+Weiterleitung: [Common Driver Interface](Common-Driver-Interface)
 
 ---
 

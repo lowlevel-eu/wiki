@@ -14,13 +14,13 @@ Die Workstation- und Server-Versionen sind kostenpflichtig, der Player ist Freew
 
 ## Siehe auch
 
-- [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU")
-- [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")
+- [QEMU](QEMU "QEMU")
+- [Bochs](Bochs "Bochs")
 
 ## Weblinks
 
-- <img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> [VMware-Webseite](http://vmware.com/de/)
-- <img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> [VMware-Webseite (englisch)](http://vmware.com)
+- <img src="assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> [VMware-Webseite](http://vmware.com/de/)
+- <img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> [VMware-Webseite (englisch)](http://vmware.com)
 
 ---
 

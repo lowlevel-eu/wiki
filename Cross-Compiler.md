@@ -12,7 +12,7 @@ Typische Fälle, in denen man einen Cross-Compiler benötigt:
 
 - Man hat einen 32-Bit-Prozessor und möchte Code für einen 64-Bit-Prozessor übersetzen (und vice versa)
 - Man hat einen x86-Prozessor und möchte Code für die ARM- oder PPC-Architektur entwickeln
-- Man nutzt MS Windows und möchte [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Binaries erstellen
+- Man nutzt MS Windows und möchte [ELF](Executable-and-Linking-Format "ELF")-Binaries erstellen
 
 In diesen Fällen muss man einen Cross-Compiler erstellen bzw. verwenden.
 
@@ -32,7 +32,7 @@ Ein beispiel von einem Raspberry Pi 2:
 
      armv7l-unknown-linux-gnueabihf
 
-Das sagt aus, dass die Maschine einen [Little-Endian](https://github.com/lowlevel-eu/wiki/wiki/Bytereihenfolge "Little-Endian") ARMv7 Prozessor hat, unter Linux läuft und die GNU-embedded-ABI mit Hardfloat verwendet. Hersteller "unknown" kann weggelassen werden, das Betriebsystem kann auch weggelassen werden und wird als "none" angenommen. Weitere Beispiele:
+Das sagt aus, dass die Maschine einen [Little-Endian](Bytereihenfolge "Little-Endian") ARMv7 Prozessor hat, unter Linux läuft und die GNU-embedded-ABI mit Hardfloat verwendet. Hersteller "unknown" kann weggelassen werden, das Betriebsystem kann auch weggelassen werden und wird als "none" angenommen. Weitere Beispiele:
 
      arm-none-eabi (ARM ohne spezielles Betriebsystem und ein embedded ABI)
      i686-elf (i686 ohne spezielles Betriebsystem und ELF als Binärformat)
@@ -61,7 +61,7 @@ Cygwin kann als „emulierte Linux-Umgebung“ unter MS Windows angesehen werden
 
 optional:
 
-- Devel → [nasm](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "Netwide Assembler")
+- Devel → [nasm](Netwide-Assembler "Netwide Assembler")
 - Libs → libgmp-devel
 - Libs → libmpfr-devel
 - Libs → libmpc-devel
@@ -123,7 +123,7 @@ gebaut und installiert werden.
 
 ## Siehe auch
 
-- [Cross-Compiler für Windows (erzeugt ELF-Dateien)](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+- [Cross-Compiler für Windows (erzeugt ELF-Dateien)](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
 
 ---
 

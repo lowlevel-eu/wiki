@@ -1,10 +1,10 @@
 # Concurrent Versions System
 
-Das **Concurrent Versions System** oder kurz **CVS** ist ein bekanntes zentrales [Version Control System](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung") unter der GPL, welches bereits 1989 als Weiterentwicklung des RCS (Revision Control System) entwickelt wurde. Es wird seit 2008 nicht mehr aktiv weiterentwickelt (letzter Stand der aktuellen Version: 8. März 2008). Es wurde mittlerweile von [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") und [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") abgelöst.
+Das **Concurrent Versions System** oder kurz **CVS** ist ein bekanntes zentrales [Version Control System](Versionsverwaltung "Versionsverwaltung") unter der GPL, welches bereits 1989 als Weiterentwicklung des RCS (Revision Control System) entwickelt wurde. Es wird seit 2008 nicht mehr aktiv weiterentwickelt (letzter Stand der aktuellen Version: 8. März 2008). Es wurde mittlerweile von [Subversion](Subversion "Subversion") und [git](Git "Git") abgelöst.
 
 ## Geschichtliches
 
-CVS wurde als Ableger des Revision Control System weiterentwickelt und sollte dessen Limitierungen, wie das gleichzeitige Speichern von mehreren Dateien, aufheben. Um abwärtskompatibel zu sein benutze es das gleiche Dateiformat wie RCS. CVS war lange Zeit Platzhirsch unter den Versionskontrollsystemen, viele der heutigen kommerziellen „Configuration-Management-Systeme“ beruhen auf CVS. Doch aufgrund der Limitierungen von CVS hinsichtlich Verzeichnissen und Binärdateien und aufgrund einiger Sicherheitslecks wurde im Jahr 2000 dessen Nachfolgen [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") entwickelt. Subversion hat CVS bei Projekten so gut wie komplett abgelöst, und die meisten Projekte, die CVS nutzen (z. B. FreeBSD), sind älter, und ein Wechsel auf ein anderes SCM wäre alles andere als trivial. SourceForge bietet darum auch noch Unterstützung für dieses System.
+CVS wurde als Ableger des Revision Control System weiterentwickelt und sollte dessen Limitierungen, wie das gleichzeitige Speichern von mehreren Dateien, aufheben. Um abwärtskompatibel zu sein benutze es das gleiche Dateiformat wie RCS. CVS war lange Zeit Platzhirsch unter den Versionskontrollsystemen, viele der heutigen kommerziellen „Configuration-Management-Systeme“ beruhen auf CVS. Doch aufgrund der Limitierungen von CVS hinsichtlich Verzeichnissen und Binärdateien und aufgrund einiger Sicherheitslecks wurde im Jahr 2000 dessen Nachfolgen [Subversion](Subversion "Subversion") entwickelt. Subversion hat CVS bei Projekten so gut wie komplett abgelöst, und die meisten Projekte, die CVS nutzen (z. B. FreeBSD), sind älter, und ein Wechsel auf ein anderes SCM wäre alles andere als trivial. SourceForge bietet darum auch noch Unterstützung für dieses System.
 
 ## Funktionsweise
 
@@ -12,7 +12,7 @@ CVS als Vorreiter moderner Versionskontrollsysteme funktioniert ebenso wie diese
 
 ## Mit CVS arbeiten
 
-CVS ist ein veraltetes und fehleranfälliges System, weshalb dringendst geraten wird, [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") (sozusagen der Nachfolger von CVS) oder sogar [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") zu nutzen. Diese heben die Limitierungen von CVS auf und sind zudem sicherer und werden aktiv weiterentwickelt. Dennoch hier eine kurze Übersicht über die Arbeit mit einem CVS-Repository.
+CVS ist ein veraltetes und fehleranfälliges System, weshalb dringendst geraten wird, [Subversion](Subversion "Subversion") (sozusagen der Nachfolger von CVS) oder sogar [git](Git "Git") zu nutzen. Diese heben die Limitierungen von CVS auf und sind zudem sicherer und werden aktiv weiterentwickelt. Dennoch hier eine kurze Übersicht über die Arbeit mit einem CVS-Repository.
 
 CVS nutzt ein spezielles Login-System, was bedeutet, das man anders als bei git oder Subversion sich erst auf einem CVS-Server einloggen muss, auf welchem das Repository liegt. Wenn man kein Entwickler des Projektes oder lediglich den Entwicklungsstand herunterladen will benutzt man den *Anonymouis CVS Access*.
 
@@ -46,8 +46,8 @@ Weitere Befehle:
 
 ## Siehe auch
 
-- [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion "Subversion") - Eine Weiterentwicklung von CVS
-- [git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") - populäres dezentrales VCS, wird auch für [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") benutzt
+- [Subversion](Subversion "Subversion") - Eine Weiterentwicklung von CVS
+- [git](Git "Git") - populäres dezentrales VCS, wird auch für [týndur](T%C3%BDndur "Týndur") benutzt
 
 ---
 

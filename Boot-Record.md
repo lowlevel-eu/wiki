@@ -1,6 +1,6 @@
 # Boot Record
 
-Weiterleitung: [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor)
+Weiterleitung: [Bootsektor](Bootsektor)
 
 ---
 

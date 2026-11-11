@@ -1,6 +1,6 @@
 # RFLAGS
 
-Weiterleitung: [EFLAGS#RFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS#rflags)
+Weiterleitung: [EFLAGS#RFLAGS](EFLAGS#rflags)
 
 ---
 

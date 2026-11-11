@@ -1,6 +1,6 @@
 # FAT
 
-Weiterleitung: [File Allocation Table](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table)
+Weiterleitung: [File Allocation Table](File-Allocation-Table)
 
 ---
 

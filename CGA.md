@@ -1,6 +1,6 @@
 # CGA
 
-Weiterleitung: [Color Graphics Adapter](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter)
+Weiterleitung: [Color Graphics Adapter](Color-Graphics-Adapter)
 
 ---
 

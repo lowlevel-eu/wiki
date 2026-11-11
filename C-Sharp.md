@@ -10,14 +10,14 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Inlineassembler: | Nein |
 | Compiler: | Visual Studio, dotGNU, mono |
 | Spracheneigenschaften |  |
-| Plattformen: | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), teilweise [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") und andere |
+| Plattformen: | [Windows](Windows "Windows"), teilweise [Linux](Linux "Linux") und andere |
 | Beispielkernel in der Sprache: | [Singularity - Kernel](http://singularity.codeplex.com/) |
 | Homepage |  |
 
 [ECMA-Spezifikation der Sprache](http://www.ecma-international.org/publications/standards/Ecma-334.htm)
 
   
-C# (in der Überschrift aus technischen Gründen C-Sharp) ist eine von Microsoft entwickelte objektorientierte Sprache. Sie wird insbesondere in der [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows")-Programmierung eingesetzt, wo sie die vorherrschende Sprache ist, zumindest im .NET-Bereich. Sie wird meist zusammen mit Visual Studio verwendet, allerdings existieren auch Portierungen für Linux. Die [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") unterstützt diese Sprache **nicht**.
+C# (in der Überschrift aus technischen Gründen C-Sharp) ist eine von Microsoft entwickelte objektorientierte Sprache. Sie wird insbesondere in der [Windows](Windows "Windows")-Programmierung eingesetzt, wo sie die vorherrschende Sprache ist, zumindest im .NET-Bereich. Sie wird meist zusammen mit Visual Studio verwendet, allerdings existieren auch Portierungen für Linux. Die [GCC](GNU-Compiler-Collection "GCC") unterstützt diese Sprache **nicht**.
 
   
 
@@ -34,9 +34,9 @@ Sie sind beide sowohl auf Windows als auch auf Linux verfügbar sowie auf einige
 
 ## Betriebssysteme in C#
 
-Das bekannteste Beispiel für ein in C# programmiertes OS ist [Singularity](https://github.com/lowlevel-eu/wiki/wiki/Singularity "Singularity"), das von Microsoft entwickelt wird und als Open Source-Projekt kostenlos erhältlich ist. Es ist, genau genommen, in einem C#-Dialekt namens Sing# programmiert und zwingt alle Anwendungsprogrammierer dazu, ebenfalls in dieser Sprache zu programmieren, damit Programme nicht mehr abstürzen können, da in Sing# bestimmte Mechanismen dies verhindern sollen.
+Das bekannteste Beispiel für ein in C# programmiertes OS ist [Singularity](Singularity "Singularity"), das von Microsoft entwickelt wird und als Open Source-Projekt kostenlos erhältlich ist. Es ist, genau genommen, in einem C#-Dialekt namens Sing# programmiert und zwingt alle Anwendungsprogrammierer dazu, ebenfalls in dieser Sprache zu programmieren, damit Programme nicht mehr abstürzen können, da in Sing# bestimmte Mechanismen dies verhindern sollen.
 
-Ein weiteres Projekt ist [Cosmos](https://github.com/lowlevel-eu/wiki/wiki/Cosmos "Cosmos"), welches in C# mit Hilfe des .NET Micro-Frameworks geschrieben wurde. Es ist nicht nur ein eigenständiges Betriebssystem sondern dient auch als Framework, auf welchem andere Betriebssysteme aufbauen können.
+Ein weiteres Projekt ist [Cosmos](Cosmos "Cosmos"), welches in C# mit Hilfe des .NET Micro-Frameworks geschrieben wurde. Es ist nicht nur ein eigenständiges Betriebssystem sondern dient auch als Framework, auf welchem andere Betriebssysteme aufbauen können.
 
   
 

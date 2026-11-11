@@ -15,7 +15,7 @@
 
 <http://wiki.qemu.org/Main_Page>
 
-QEMU ist ein Emulator unter anderem für die Systeme [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), MacOS, FreeBSD, OpenBSD und NetBSD. Er emuliert eine Vielzahl von Architekturen.
+QEMU ist ein Emulator unter anderem für die Systeme [Linux](Linux "Linux"), [Windows](Windows "Windows"), MacOS, FreeBSD, OpenBSD und NetBSD. Er emuliert eine Vielzahl von Architekturen.
 
 ## Emulierte Hardware
 
@@ -46,9 +46,9 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 #### Netzwerkkarte und ein DHCP-Server
 
 - NE2000-Netzwerkadapter sowohl für ISA als auch PCI
-- [Realtek 8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")
+- [Realtek 8139](RTL8139 "RTL8139")
 - Intel eepro100 und e1000
-- [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
+- [AMD PCnet](AMD-PCnet "AMD PCnet")
 - virtio (Paravirtualisiertes Netzwerk)
 
 #### Sound
@@ -56,7 +56,7 @@ Auf einem x86-Prozessor werden neben dem Hauptprozessor folgende Komponenten emu
 - Systemlautsprecher
 - Soundblaster 16
 - ES1370 PCI
-- [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")
+- [AC97](AC97 "AC97")
 - Intel HD Audio
 
 #### USB
@@ -104,7 +104,7 @@ Hinweise:
 
 ## Siehe auch
 
-- [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging")
+- [Debugging](Debugging "Debugging")
 
 ## Weblinks
 

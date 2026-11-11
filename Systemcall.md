@@ -1,6 +1,6 @@
 # Systemcall
 
-Weiterleitung: [Syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall)
+Weiterleitung: [Syscall](Syscall)
 
 ---
 

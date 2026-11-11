@@ -1,6 +1,6 @@
 # RPC
 
-Weiterleitung: [Interprozesskommunikation#RPC (=Remote procedure call)](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call)
+Weiterleitung: [Interprozesskommunikation#RPC (=Remote procedure call)](Interprozesskommunikation#rpc-remote-procedure-call)
 
 ---
 

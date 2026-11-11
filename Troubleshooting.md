@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Weiterleitung: [Erste Hilfe](https://github.com/lowlevel-eu/wiki/wiki/Erste-Hilfe)
+Weiterleitung: [Erste Hilfe](Erste-Hilfe)
 
 ---
 

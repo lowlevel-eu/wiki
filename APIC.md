@@ -1,6 +1,6 @@
 # APIC
 
-Weiterleitung: [Advanced Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller)
+Weiterleitung: [Advanced Programmable Interrupt Controller](Advanced-Programmable-Interrupt-Controller)
 
 ---
 

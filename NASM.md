@@ -1,6 +1,6 @@
 # NASM
 
-Weiterleitung: [Netwide Assembler](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler)
+Weiterleitung: [Netwide Assembler](Netwide-Assembler)
 
 ---
 

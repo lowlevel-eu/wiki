@@ -11,14 +11,14 @@ Letzte Änderung vor gut einem Jahr, keine sichtbare Weiterentwicklung. --[DerHa
 |  |  |
 | Entwickler: | cloidnerux |
 | Akt. Version: |  |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): |  |
+| [Lizenz](Lizenzen "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: |  |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): |  |
+| [Kernelart](Kernel "Kernel"): |  |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): |  |
 | API: |  |
 | Binärformat: |  |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 [\[1\]](http://aeris.a-server.tk/index.php/)

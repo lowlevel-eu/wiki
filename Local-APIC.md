@@ -1,6 +1,6 @@
 # Local APIC
 
-Weiterleitung: [Local Advanced Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller)
+Weiterleitung: [Local Advanced Programmable Interrupt Controller](Local-Advanced-Programmable-Interrupt-Controller)
 
 ---
 

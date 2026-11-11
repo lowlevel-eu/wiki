@@ -9,19 +9,19 @@
 |  |  |
 | Entwickler: | [Stefan Mayer](https://lowlevel-eu.github.io/wiki/pages/2055/index.html "Benutzer:Hunter") |
 | Akt. Version: | 1.8 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | \- |
+| [Lizenz](Lizenzen "Lizenzen"): | \- |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [i386](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [ASM](Assembler "Assembler") |
 | API: | SOS_API |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 <http://www.staticos.at.tf/>
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg)
+[<img src="assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](assets/02ff22b7f6dc3d0e5176.jpg)
 
   
 
@@ -64,15 +64,15 @@
 
 Static Operating System Ladevorgang
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/02ff22b7f6dc3d0e5176.jpg)
+[<img src="assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](assets/02ff22b7f6dc3d0e5176.jpg)
 
 Static Operating System GUI Test
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/4917882a3dee917fdb65.jpg" width="399" height="329" alt="Staticos2.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/4917882a3dee917fdb65.jpg)
+[<img src="assets/4917882a3dee917fdb65.jpg" width="399" height="329" alt="Staticos2.JPG" />](assets/4917882a3dee917fdb65.jpg)
 
 Static Operating System Fenster vergrößern
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/15703bca12330b93272d.jpg" width="396" height="328" alt="Staticos3.JPG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/15703bca12330b93272d.jpg)
+[<img src="assets/15703bca12330b93272d.jpg" width="396" height="328" alt="Staticos3.JPG" />](assets/15703bca12330b93272d.jpg)
 
   
 

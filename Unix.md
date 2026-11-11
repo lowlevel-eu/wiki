@@ -4,7 +4,7 @@ Unix ist ein Betriebssystem, welches Anfang der 70er Jahre von Bell Laboratories
 
 ## Geschichte
 
-1969 begann Ken Thompson bei Bell Laboratories ein Betriebsssystem zu entwickeln, welches Programmierern durch eine hohe Transparenz und Benutzerfreundlichkeit die Arbeit erleichtern sollte. 1970 erschien die erste Version auf dem Markt namens UNICS (=Uniplexed Information and Computing Service). Mit UNIX ist die Programmiersprache [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") eng verknüpft, in der das System programmiert wurde.
+1969 begann Ken Thompson bei Bell Laboratories ein Betriebsssystem zu entwickeln, welches Programmierern durch eine hohe Transparenz und Benutzerfreundlichkeit die Arbeit erleichtern sollte. 1970 erschien die erste Version auf dem Markt namens UNICS (=Uniplexed Information and Computing Service). Mit UNIX ist die Programmiersprache [C](C "C") eng verknüpft, in der das System programmiert wurde.
 
 ## Desgin
 
@@ -20,12 +20,12 @@ Mit UNIX wurden viele kleine nützliche Programme mitgeliefert, die zwar nur kle
 
 ### Dateisystem
 
-In UNIX wurde zum ersten Mal die Idee des [VFS](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem "VFS") umgesetzt, also das „alles ist eine Datei“-Prinzip.
+In UNIX wurde zum ersten Mal die Idee des [VFS](Virtuelles-Dateisystem "VFS") umgesetzt, also das „alles ist eine Datei“-Prinzip.
 
 ## siehe auch
 
-- [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") - freies, unixartiges Betriebssystem
-- [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") - ein vom UNIX-Design abgeleiteter Standard
+- [Linux](Linux "Linux") - freies, unixartiges Betriebssystem
+- [POSIX](POSIX "POSIX") - ein vom UNIX-Design abgeleiteter Standard
 
 ## Weblinks
 

@@ -1,6 +1,6 @@
 # I/O APIC
 
-Weiterleitung: [I/O Advanced Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller)
+Weiterleitung: [I/O Advanced Programmable Interrupt Controller](I-O-Advanced-Programmable-Interrupt-Controller)
 
 ---
 

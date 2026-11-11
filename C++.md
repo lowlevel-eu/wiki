@@ -4,26 +4,26 @@
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Name: | C++ |
 | Inlineassembler: | Ja |
-| Compiler: | [g++](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection"), icc |
+| Compiler: | [g++](GNU-Compiler-Collection "GNU Compiler Collection"), icc |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | [C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB") |
+| Beispielkernel in der Sprache: | [C++-Kernel mit GRUB](C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB") |
 | Homepage |  |
 
 [The C++ Standards Committee](http://www.open-std.org/jtc1/sc22/wg21/)
 
-**C++** wurde 1983 von Bjarne Stroustrup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") ist, sollte man sich auch den Wikiartikel über [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu Gemüte führen.
+**C++** wurde 1983 von Bjarne Stroustrup veröffentlicht, um C mit Sprachmitteln der objektorientierten Programmierung zu erweitern. Da C++ somit eine Weiterentwicklung von [C](C "C") ist, sollte man sich auch den Wikiartikel über [C](C "C") zu Gemüte führen.
 
 ## Überblick
 
 Die meisten C++ Features sind ohne zusätzlichen Aufwand sofort verfügbar. Nur für die folgenden Features werden Hilfsfunktionen benötigt, welche der C++ Compiler von Haus aus nicht zur Verfügung stellt:
 
-- [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++")
-- [Rein virtuelle Funktionen](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#rein-virtuelle-funktionen "C++")
-- [globale/statische Objekte](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")
-- [new/delete](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#newdelete "C++")
-- [RTTI (= Runtime type information)](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#rtti "C++")
-- [Exceptions](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#exceptions "C++")
+- [Startup-Code](C%2B%2B#startup-code "C++")
+- [Rein virtuelle Funktionen](C%2B%2B#rein-virtuelle-funktionen "C++")
+- [globale/statische Objekte](C%2B%2B#globalestatische-objekte "C++")
+- [new/delete](C%2B%2B#newdelete "C++")
+- [RTTI (= Runtime type information)](C%2B%2B#rtti "C++")
+- [Exceptions](C%2B%2B#exceptions "C++")
 
 Da jeder Compilerhersteller eine eigene ABI (= Application Binary Interface) zur Verfügung stellt, sind auch die Funktionsnamen sowie auch der Funktionsumfang, von Compiler zu Compiler verschieden.
 
@@ -80,7 +80,7 @@ void initialiseConstructors()
 }
 ```
 
-Diese Funktion muss explizit aufgerufen werden bevor globale/statische Objekte verwendet werden. Dies kann beispielsweise im [Startup-Code](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#startup-code "C++") geschehen.
+Diese Funktion muss explizit aufgerufen werden bevor globale/statische Objekte verwendet werden. Dies kann beispielsweise im [Startup-Code](C%2B%2B#startup-code "C++") geschehen.
 
 #### Destruktoren (ohne --enable-\_\_cxa_atexit und ohne -fuse-cxa-atexit)
 
@@ -198,7 +198,7 @@ Eine Einschränkung gibt es aber doch: man kann diese Funktion nicht mehr überl
 
 ## Siehe auch
 
-[C++-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
+[C++-Kernel mit GRUB](C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
 
 ## Links
 

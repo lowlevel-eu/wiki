@@ -13,7 +13,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Länge des Dateinames: | 256 Byte |
 | Maximale Dateisystemgröße: | 1 EiB, aufgrund einer Beschränkung in e2fsprogs allerdings nur maximal 16 TiB |
 
-Das Fourth extended file system oder kurz **ext4** ist die Weiterentwicklung von [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"). Es ist seit dem Linux-Kernel 2.6.19 Bestandteil selbiges und heutzutage das Standarddateisystem unter Linux. Es hat die gleiche Partitionskennung wie ext3 (0x83 bzw. EBD0A0A2-B9E5-4433-87C0-68B6B72699C7 nach GPT).
+Das Fourth extended file system oder kurz **ext4** ist die Weiterentwicklung von [ext3](Ext3 "Ext3"). Es ist seit dem Linux-Kernel 2.6.19 Bestandteil selbiges und heutzutage das Standarddateisystem unter Linux. Es hat die gleiche Partitionskennung wie ext3 (0x83 bzw. EBD0A0A2-B9E5-4433-87C0-68B6B72699C7 nach GPT).
 
   
 

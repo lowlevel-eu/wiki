@@ -1,6 +1,6 @@
 # Debugregister
 
-Weiterleitung: [Debug Register](https://github.com/lowlevel-eu/wiki/wiki/Debug-Register)
+Weiterleitung: [Debug Register](Debug-Register)
 
 ---
 

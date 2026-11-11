@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | \- |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT |
+| [Lizenz](Lizenzen "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") ([FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM")) |
+| Plattform: | [i386](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolith |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") ([FASM](Flat-Assembler "FASM")) |
 | API: | \- |
 | Binärformat: | \- |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 [Gitorious](http://gitorious.org/isynax)
@@ -24,14 +24,14 @@ Es gibt keine Prozesse, der gesamte Code läuft im Kernelmodus. Das Betriebssyst
 
 ## Features
 
-Bis jetzt gibt es eine Unterstützung für die [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")-Netzwerkkarte, [ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "ARP"), [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "IP") und Minimalunterstützung für TCP.
+Bis jetzt gibt es eine Unterstützung für die [RTL8139](RTL8139 "RTL8139")-Netzwerkkarte, [ARP](Address-Resolution-Protocol "ARP"), [IP](Internet-Protocol "IP") und Minimalunterstützung für TCP.
 
 ## Screenshot
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6ec97dbbcb1faeabf08c.png" width="720" height="400" alt="Isynax-screen.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/6ec97dbbcb1faeabf08c.png)  
+[<img src="assets/6ec97dbbcb1faeabf08c.png" width="720" height="400" alt="Isynax-screen.png" />](assets/6ec97dbbcb1faeabf08c.png)  
 **Für alle Intelliebhaber im normalen Modus...**  
   
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e792a94b4a8342e9c4d1.png" width="720" height="400" alt="Isynax-shot-falschrum.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e792a94b4a8342e9c4d1.png)  
+[<img src="assets/e792a94b4a8342e9c4d1.png" width="720" height="400" alt="Isynax-shot-falschrum.png" />](assets/e792a94b4a8342e9c4d1.png)  
 **...Und für AT&T-Fans auch andersrum! Aktivierbar per wrong=1 anstatt von wrong=0 im Code.**
 
 ## Weblinks

@@ -11,14 +11,14 @@ Keine Homepage, keine Download-Möglichkeit, keine sichtbare Aktivität --[DerHa
 |  |  |
 | Entwickler: | GE |
 | Akt. Version: | 0.0.2 (Phobos) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Closed Source |
+| [Lizenz](Lizenzen "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
-| Plattform: | [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") & [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [x86-64](X86-64 "X86-64") |
+| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") & [C](C "C") |
 | API: | KyrAPI |
 | Binärformat: | ELF |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Da ich nicht viel Zeit habe, schreitet die Entwicklung sehr langsam voran. Es gibt im Moment noch keine Homepage, da keine benötigt wird. Die Uhrzeit kann man auch anderswo sehen.

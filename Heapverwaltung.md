@@ -1,10 +1,10 @@
 # Heapverwaltung
 
-Die **Heapverwaltung** ist ein Teil der [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung"), der aufbauend auf der virtuellen Speicherverwaltung Funktionen zur Verwaltung dynamisch allozierten Speichers beliebiger Größe – dieser Speicher zusammengenommen wird dann auch als [Heap](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung "Heap") bezeichnet – bereitstellt. In der C-Standardbibliothek sind damit die Funktionen malloc/free (und Konsorten) bzw. in der C++-Laufzeitumgebung new/delete gemeint. Gelegentlich werden die beiden Funktionen auch als Bestandteil der virtuellen Speicherverwaltung bezeichnet, da sie ebenfalls mit virtuellen Adressen arbeiten. Sie sind aber nicht mit [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") – d. h. dem, was in diesem Wiki als [virtuelle Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung#virtuelle-speicherverwaltung "Speicherverwaltung") beschrieben wird – zu verwechseln.
+Die **Heapverwaltung** ist ein Teil der [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung"), der aufbauend auf der virtuellen Speicherverwaltung Funktionen zur Verwaltung dynamisch allozierten Speichers beliebiger Größe – dieser Speicher zusammengenommen wird dann auch als [Heap](Heapverwaltung "Heap") bezeichnet – bereitstellt. In der C-Standardbibliothek sind damit die Funktionen malloc/free (und Konsorten) bzw. in der C++-Laufzeitumgebung new/delete gemeint. Gelegentlich werden die beiden Funktionen auch als Bestandteil der virtuellen Speicherverwaltung bezeichnet, da sie ebenfalls mit virtuellen Adressen arbeiten. Sie sind aber nicht mit [Paging](Paging "Paging") – d. h. dem, was in diesem Wiki als [virtuelle Speicherverwaltung](Speicherverwaltung#virtuelle-speicherverwaltung "Speicherverwaltung") beschrieben wird – zu verwechseln.
 
 ## Überblick
 
-Die oben genannten Funktionen werden sowohl im Userspace – als Teil der Standardbibliothek oder Laufzeitumgebung der verwendeten Programmiersprache – als auch im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") benötigt. Bei der Implementierung im Userspace werden dabei über [Systemaufrufe](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Systemaufruf") die benötigten Funktionen der virtuellen Speicherverwaltung des Kernels – **nicht** der Heapverwaltung des Kernels, da der (Userspace-)Heap (normalerweise) vom Userspace selbst verwaltet wird – aufgerufen. Im Kernel wird direkt auf die virtuelle Speicherverwaltung zugegriffen.
+Die oben genannten Funktionen werden sowohl im Userspace – als Teil der Standardbibliothek oder Laufzeitumgebung der verwendeten Programmiersprache – als auch im [Kernel](Kernel "Kernel") benötigt. Bei der Implementierung im Userspace werden dabei über [Systemaufrufe](Syscall "Systemaufruf") die benötigten Funktionen der virtuellen Speicherverwaltung des Kernels – **nicht** der Heapverwaltung des Kernels, da der (Userspace-)Heap (normalerweise) vom Userspace selbst verwaltet wird – aufgerufen. Im Kernel wird direkt auf die virtuelle Speicherverwaltung zugegriffen.
 
 ## Freispeicherliste
 
@@ -35,8 +35,8 @@ Nachteile sind u.U. eine große Platzverschwendung, bspw. wenn die angeforderte 
 
 Anstatt die benötigten Funktionen selbst zu implementieren, ist es natürlich auch möglich, bestehende Implementierungen zu portieren. Z. B. stehen folgende Implementierungen unter einer freien Lizenz:
 
-- [Doug Lea's Malloc (dlmalloc)](http://g.oswego.edu/dl/html/malloc.html) ([Public Domain](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"))
-- [The HOARD Memory Allocator](http://www.hoard.org/) ([GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"))
+- [Doug Lea's Malloc (dlmalloc)](http://g.oswego.edu/dl/html/malloc.html) ([Public Domain](Lizenzen "Lizenzen"))
+- [The HOARD Memory Allocator](http://www.hoard.org/) ([GPL](Lizenzen "Lizenzen"))
 
 ## Weblinks
 

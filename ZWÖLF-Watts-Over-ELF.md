@@ -1,6 +1,6 @@
 # ZWÖLF Watts Over ELF
 
-**ZWÖLF Watts Over ELF**, oder auch **ZWÖLF** ([Bäcker-Akronym](http://de.wikipedia.org/wiki/Backronym)), ist ein revolutionäres neues und hochendoptimiertes Dateiformat, unter anderem im höchstperformanten Betriebssystem für die ganze Familie [niwohlOS](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS "NiwohlOS") eingesetzt.
+**ZWÖLF Watts Over ELF**, oder auch **ZWÖLF** ([Bäcker-Akronym](http://de.wikipedia.org/wiki/Backronym)), ist ein revolutionäres neues und hochendoptimiertes Dateiformat, unter anderem im höchstperformanten Betriebssystem für die ganze Familie [niwohlOS](NiwohlOS "NiwohlOS") eingesetzt.
 
   
 
@@ -16,7 +16,7 @@ Das Besondere ist vor allem die Signatur von ZWÖLF-Dateien: Sowohl im Header al
 
 ### Sicherheitsmechanismen
 
-Desweiteren sind ZWÖLF-Dateien obendrein doppelt sicher: Durch eine spezielle zusätzliche Signierung mit Hilfe von [Signifanten](https://github.com/lowlevel-eu/wiki/wiki/Signifant "Signifant") ist es nicht möglich, ZWÖLF-Dateien einfach ungesichert auf einem anderen Rechner auszuführen. Anhand eines vom Bundesamt für Sicherheit in der Informationstechnik notariell beglaubigten Monatszertifikat lassen sich die Dateien eindeutig signieren und gesichert auf anderen Rechner ausführen, nachdem man eine Kopie der Datei samt Kopie des Personalausweises und der Geburtsurkunde und aktuellem Fingerabdruck sowohl zum Urheber der Datei wie auch zum BSI schickt und daraufhin nach einer drei- bis sechswöchigen unbürokratischen (Dank an Edmund, an dieser Stelle) und völlig didaktischen (Dank an Erhard, an dieser Stelle) Überprüfungsphase ein eindeutiges und gesichertes Zertifikat erhält.
+Desweiteren sind ZWÖLF-Dateien obendrein doppelt sicher: Durch eine spezielle zusätzliche Signierung mit Hilfe von [Signifanten](Signifant "Signifant") ist es nicht möglich, ZWÖLF-Dateien einfach ungesichert auf einem anderen Rechner auszuführen. Anhand eines vom Bundesamt für Sicherheit in der Informationstechnik notariell beglaubigten Monatszertifikat lassen sich die Dateien eindeutig signieren und gesichert auf anderen Rechner ausführen, nachdem man eine Kopie der Datei samt Kopie des Personalausweises und der Geburtsurkunde und aktuellem Fingerabdruck sowohl zum Urheber der Datei wie auch zum BSI schickt und daraufhin nach einer drei- bis sechswöchigen unbürokratischen (Dank an Edmund, an dieser Stelle) und völlig didaktischen (Dank an Erhard, an dieser Stelle) Überprüfungsphase ein eindeutiges und gesichertes Zertifikat erhält.
 
   
 

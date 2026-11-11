@@ -13,15 +13,15 @@ Der Stack arbeitet nach dem LIFO-Prinzip ("Last in, first out"). Das bedeutet, d
 
 Die CPU bietet zwei Register zum Arbeiten mit dem Stack an:
 
-- **das SS-Register** speichert das Stacksegment (im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")) bzw. den Stackselektor (im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")).
-- **das ESP-Register** (=StackPointer) zeigt auf das oberste Element des aktuellen Stacks. Die [Real-Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")-Variante dieses Registers ist das SP-Register.
+- **das SS-Register** speichert das Stacksegment (im [Real Mode](Real-Mode "Real Mode")) bzw. den Stackselektor (im [Protected Mode](Protected-Mode "Protected Mode")).
+- **das ESP-Register** (=StackPointer) zeigt auf das oberste Element des aktuellen Stacks. Die [Real-Mode](Real-Mode "Real Mode")-Variante dieses Registers ist das SP-Register.
 
 Zudem sind die Befehle PUSH und POP in die CPU integriert. Dabei ist zu beachten, **dass der Stack von den höheren zu den niedrigeren Adressen wächst**.
 
 - Der PUSH-Befehl vermindert den Wert von ESP um die Größe des Operanden und schreibt diesen an die Stelle, auf die das Register dann zeigt
 - Der POP-Befehl liest das Element, auf das ESP zeigt und erhöht das Register um die Operandengröße.
 
-Das bedeutet, dass der Stack seine maximale Größe erreicht hat, wenn der Wert 0 im ESP-Register steht. In diesem Fall wird ein [Stackfault](https://github.com/lowlevel-eu/wiki/wiki/Exception#liste-der-exceptions "Exception") ausgelöst.
+Das bedeutet, dass der Stack seine maximale Größe erreicht hat, wenn der Wert 0 im ESP-Register steht. In diesem Fall wird ein [Stackfault](Exception#liste-der-exceptions "Exception") ausgelöst.
 
 ### Das EBP-Register
 
@@ -43,9 +43,9 @@ Zur Verwendung des Stacks bietet die CPU noch ein EBP-Register (Base Pointer). D
 | ret | Lädt EIP vom Stack, um zur aufrufenden Codestelle zurückzukehren |
 | int | Legt SS, ESP (beide nur bei Ringwechsel), EFLAGS, CS, EIP auf den Stack |
 | iret | Lädt diese Register wieder, um zur aufrufenden Codestelle zurückzukehren |
-| sysenter / sysleave | siehe [Sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter") |
+| sysenter / sysleave | siehe [Sysenter](Sysenter "Sysenter") |
 | syscall / sysret |  |
-| enter / leave | siehe [Enter / Leave](https://github.com/lowlevel-eu/wiki/wiki/Enter-Leave "Enter / Leave") |
+| enter / leave | siehe [Enter / Leave](Enter-Leave "Enter / Leave") |
 
 ---
 

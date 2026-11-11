@@ -4,11 +4,11 @@ Am Anfang ist das Nichts. So könnte man wohl den Zustand vor einem Bootvorgang 
 
 ## Nach dem Einschalten
 
-Zuerst ist nichts geladen. Keine Software, keine Treiber, kein sonstiger Code, denn der Inhalt das RAM ist undefiniert. Die CPU-Register sind leer, und die CPU befindet sich im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"). In dem Moment wird in CS (Codesegment) der Wert 0xF000, und in EIP 0xFFF0 geladen – hier befindet sich der Einsprung für das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), welches grundlegende Initialisierungen durchführt. Das BIOS befindet sich nicht im RAM, sondern in einem ROM, das in den Adressraum eingeblendet ist, und kann deswegen bereits von der CPU ausgeführt werden.
+Zuerst ist nichts geladen. Keine Software, keine Treiber, kein sonstiger Code, denn der Inhalt das RAM ist undefiniert. Die CPU-Register sind leer, und die CPU befindet sich im [Real Mode](Real-Mode "Real Mode"). In dem Moment wird in CS (Codesegment) der Wert 0xF000, und in EIP 0xFFF0 geladen – hier befindet sich der Einsprung für das [BIOS](Basic-Input-Output-System "BIOS"), welches grundlegende Initialisierungen durchführt. Das BIOS befindet sich nicht im RAM, sondern in einem ROM, das in den Adressraum eingeblendet ist, und kann deswegen bereits von der CPU ausgeführt werden.
 
 ## Im BIOS
 
-Wenn das BIOS die Kontrolle erhält, wird (bei neueren zumindest) zuerst ein kleiner CPU-Check durchgeführt – in erster Linie um die Frage zu beantworten, was denn genau verbaut ist. Danach wird der Speicher gezählt, und im folgenden weitere Hardware erkannt und gegebenenfalls initialisiert. (dieser Vorgang beruht mitunter schon auf eigenen Einstellungen). Sobald zuletzt die vorhandenen Massenspeichergeräte erkannt wurden, werden diese in (konfigurierter) Reihenfolge auf gültige [Bootsektoren](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") durchsucht. Hierzu wird der erste Sektor jedes Gerätes nach 0x7C00 geladen und die letzten 2 Bytes mit der Magic Number 0x0AA55 verglichen. Ist diese korrekt, wird zum Start des Bootsektors gesprungen.
+Wenn das BIOS die Kontrolle erhält, wird (bei neueren zumindest) zuerst ein kleiner CPU-Check durchgeführt – in erster Linie um die Frage zu beantworten, was denn genau verbaut ist. Danach wird der Speicher gezählt, und im folgenden weitere Hardware erkannt und gegebenenfalls initialisiert. (dieser Vorgang beruht mitunter schon auf eigenen Einstellungen). Sobald zuletzt die vorhandenen Massenspeichergeräte erkannt wurden, werden diese in (konfigurierter) Reihenfolge auf gültige [Bootsektoren](Bootsektor "Bootsektor") durchsucht. Hierzu wird der erste Sektor jedes Gerätes nach 0x7C00 geladen und die letzten 2 Bytes mit der Magic Number 0x0AA55 verglichen. Ist diese korrekt, wird zum Start des Bootsektors gesprungen.
 
 ## Der Bootsektor
 
@@ -16,19 +16,19 @@ Ab hier ist es nicht mehr eindeutig, was passiert, generell kann man schon einen
 
 ## Der Bootloader
 
-Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhängige (bspw. NTLDR für Windows bis XP) und -unabhängige (bspw. [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")). Diese laden möglicherweise noch Konfigurationsdateien nach, laden aber im Endeffekt alles, was weiter benötigt wird, um ein Betriebssystem zu starten (d.h. den Kernel und gegebenenfalls die ersten Treiber, je nach Architektur des Systems). Zu beachten ist hierbei, dass die meisten Bootloader auch die Möglichkeit besitzen, anderen Bootcode zu laden (sog. „chainloading“, „Kettenladen“) – hierdurch können auch Systeme geladen werden, die von einem bestimmten Bootloader nicht unterstützt werden (indem einfach ein anderer geladen wird).
+Bootloader kann man generell in zwei Varianten unterteilen: Betriebssystemabhängige (bspw. NTLDR für Windows bis XP) und -unabhängige (bspw. [GRUB](Grand-Unified-Bootloader "GRUB")). Diese laden möglicherweise noch Konfigurationsdateien nach, laden aber im Endeffekt alles, was weiter benötigt wird, um ein Betriebssystem zu starten (d.h. den Kernel und gegebenenfalls die ersten Treiber, je nach Architektur des Systems). Zu beachten ist hierbei, dass die meisten Bootloader auch die Möglichkeit besitzen, anderen Bootcode zu laden (sog. „chainloading“, „Kettenladen“) – hierdurch können auch Systeme geladen werden, die von einem bestimmten Bootloader nicht unterstützt werden (indem einfach ein anderer geladen wird).
 
 ## Alles weitere
 
-Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zuständigkeitsbereich – dem eigenen Kernel. Wie dieser weitermacht, müsst ihr für euer Projekt entscheiden – auch wenn die Grundstruktur oft ähnlich ist (Speicherverwaltung und Prozessverwaltung laden, Treiber laden, Anwendungen starten). Die grundlegenden Aufgaben des Kernels sind ausführlicher im Artikel [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") aufgelistet.
+Nachdem der Bootloader seine Arbeit beendet hat, befindet man sich im eigenen Zuständigkeitsbereich – dem eigenen Kernel. Wie dieser weitermacht, müsst ihr für euer Projekt entscheiden – auch wenn die Grundstruktur oft ähnlich ist (Speicherverwaltung und Prozessverwaltung laden, Treiber laden, Anwendungen starten). Die grundlegenden Aufgaben des Kernels sind ausführlicher im Artikel [Kernel](Kernel "Kernel") aufgelistet.
 
   
 
 ## Siehe auch
 
-- [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1"), Abschnitte „Etwas Systemtheorie“ und folgende.
-- [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor")
-- [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader")
+- [Ausgabe 1](Ausgabe-1 "Ausgabe 1"), Abschnitte „Etwas Systemtheorie“ und folgende.
+- [Bootsektor](Bootsektor "Bootsektor")
+- [Bootloader](Bootloader "Bootloader")
 
 ---
 

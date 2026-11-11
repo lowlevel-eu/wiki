@@ -11,7 +11,7 @@
 
 <http://www.gnu.org/software/grub/grub.html>
 
-Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-konformer [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
+Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](Multiboot "Multiboot")-konformer [Bootloader](Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
 
 ## Warum GRUB?
 
@@ -20,22 +20,22 @@ Im Forum und hier im Wiki wird von den meisten GRUB empfohlen und selbst verwend
 - Einen Bootloader zu schreiben setzt **tiefergehende Assemblerkenntnisse** voraus. Falls man diese noch nicht hat, dann wird man sehr wahrscheinlich am Bootloader scheitern oder aber einen Teil/den größten Teil aus anderem Quellcode zusammenkopieren.
 - Dabei kommen dann **fehleranfällige** Bootloader heraus, von denen der jeweilige Programmierer meist nicht weiß, was sie genau machen (z. B. in welchem Dateiformat der Kernel sein muss, an welche Adresse der Kernel geladen wird oder wie viel vom Kernel überhaupt geladen wird) und im Forum werden dann Threads mit 500 Zeilen zusammengefrickelten Assemblercode und der Frage *„Warum funktioniert denn das nicht so, wie ich das will!?“* erstellt. Der Punkt hier ist nicht, dass wir zu faul wären Fragen zu beantworten, sondern, dass es einfach nichts bringt einen eigenen Bootloader zu schreiben, wenn derjenige nicht einmal im Ansatz verstanden hat, was er denn da überhaupt tut. Das ist dann für uns primär frustrierend.
 - Diese Fehleranfälligkeit kann auch dazu führen, dass das ganze eine Weile funktioniert, aber irgendwann tauchen plötzlich seltsame Fehler auf. Dies kann unter anderem den Grund haben, dass nicht der komplette Kernel geladen wird, sondern z. B. nur die ersten paar Kilobyte. Solche Fehler sind meist extrem **schwer zu debuggen**.
-- Eventuell tauchen später auch **neue Anforderungen** an den Bootloader auf, z. B. könnte man bei einem [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") durch den Bootloader Module (meistens Treiber) laden wollen. Dann wird entweder versucht das schnell *hinzufrickeln* oder aber man entscheidet sich dann doch gegen einen Mikrokernel, d. h. es kann **Auswirkungen auf das Design** des Kernels haben.
+- Eventuell tauchen später auch **neue Anforderungen** an den Bootloader auf, z. B. könnte man bei einem [Mikrokernel](Kernel#mikrokernel "Mikrokernel") durch den Bootloader Module (meistens Treiber) laden wollen. Dann wird entweder versucht das schnell *hinzufrickeln* oder aber man entscheidet sich dann doch gegen einen Mikrokernel, d. h. es kann **Auswirkungen auf das Design** des Kernels haben.
 - Falls man allerdings von Anfang an intensiv seinen Bootloader plant – was einem Anfänger aufgrund mangelnder Erfahrung verwehrt bleibt – und diesen sehr gewissenhaft programmiert, dann ist das ein Projekt für sich, d. h. es wird **Unmengen an Zeit verschlucken** (wir reden hier nicht von Tagen oder Wochen).
-- Der **[Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") auf x86-Prozessoren** hat so manches Hindernis, welches von Intel und Konsorten gerne aufgrund von Abwärtskompatibilität aufgestellt wurde. Beispiele hierfür sind der [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") (der Bootloader startet im Realmode) und das [A20-Gate](https://github.com/lowlevel-eu/wiki/wiki/A20-Gate "A20-Gate"), welches aktiviert werden muss.
+- Der **[Bootvorgang](Bootprozess-auf-x86 "Bootvorgang") auf x86-Prozessoren** hat so manches Hindernis, welches von Intel und Konsorten gerne aufgrund von Abwärtskompatibilität aufgestellt wurde. Beispiele hierfür sind der [Real Mode](Real-Mode "Real Mode") (der Bootloader startet im Realmode) und das [A20-Gate](A20-Gate "A20-Gate"), welches aktiviert werden muss.
 
 Wir möchten natürlich dem geneigten Leser nicht vorenthalten, was genau er denn verpasst, wenn er GRUB benutzt:
 
-- Eine eingehende Beschäftigung mit dem [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") bleibt wahrscheinlich aus (oder kommt erst, wenn man sich mit dem [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") beschäftigt).
-- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z. B. im Kernel an einigen kleinen Stellen [Inlineassembler](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") verwendet werden muss.
+- Eine eingehende Beschäftigung mit dem [Real Mode](Real-Mode "Real Mode") bleibt wahrscheinlich aus (oder kommt erst, wenn man sich mit dem [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode") beschäftigt).
+- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z. B. im Kernel an einigen kleinen Stellen [Inlineassembler](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") verwendet werden muss.
 
 ## GRUB legacy
 
-GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen") vertrieben. Wie man einen Multiboot-Kernel erstellt, der mit GRUB gebootet werden kann, wird im Artikel [OS-Dev für Einsteiger - Teil 4](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World") beschrieben.
+GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU General Public License](Lizenzen "Lizenzen") vertrieben. Wie man einen Multiboot-Kernel erstellt, der mit GRUB gebootet werden kann, wird im Artikel [OS-Dev für Einsteiger - Teil 4](Teil-4-Hello-World "Teil 4 - Hello World") beschrieben.
 
 ### Funktionen
 
-- Liest [ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2"), [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3"), UFS, UFS2, ReiserFS, [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), NTFS, [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), JFS, Minix, FFS, XFS
+- Liest [ext2](Ext2 "Ext2"), [ext3](Ext3 "Ext3"), UFS, UFS2, ReiserFS, [FAT](File-Allocation-Table "FAT"), NTFS, [ISO9660](ISO9660 "ISO9660"), JFS, Minix, FFS, XFS
 - Auswahlmenü um verschiedene Betriebssysteme zu laden.
 - Bootet von Disketten, Festplatten, CDs, DVDs und Flashdisks.
 - Beinhaltet eine Shell
@@ -50,12 +50,12 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 
 Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 
-Wir brauchen also zunächst einmal ein mit [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-formatiertes Diskettenimage:
+Wir brauchen also zunächst einmal ein mit [FAT](File-Allocation-Table "FAT")-formatiertes Diskettenimage:
 
     # dd of=test.img bs=1024 seek=1440 count=0
     # mkdosfs test.img
 
-Anstelle von *mkdosfs test.img* kann auch *mke2fs -F test.img* verwendet werden, was ein [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")-formatiertes Diskettenimage erstellt. Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
+Anstelle von *mkdosfs test.img* kann auch *mke2fs -F test.img* verwendet werden, was ein [Ext2](Ext2 "Ext2")-formatiertes Diskettenimage erstellt. Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
 
     # sudo mount -oloop test.img /mnt
     # sudo mkdir /mnt/grub
@@ -105,13 +105,13 @@ Da Windows 64-Bit Systeme die direkte Ausführung von .com Dateien, die 16-Bit s
 
 Erstellt die Datei floppy.img mit dem Inhalt der Ordnes *floppy* und dem MBR aus *mbr.bin*.
 
-Der Ordner *floppy* hat exakt den gleichen Inhalt wie bei oben. Die *mbr.bin* kann erstellt werden indem man den [MBR](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "MBR") bspw. von einem existierenden Image mittels [dd for Windows](http://www.chrysocome.net/dd) extrahiert. Wer kein zur der GRUB Version kompatibles Image hat, kann sich mittels der Bootlace.com einmalig eines auf einem anderen PC oder in der [DosBox](http://www.dosbox.com/) erstellen.
+Der Ordner *floppy* hat exakt den gleichen Inhalt wie bei oben. Die *mbr.bin* kann erstellt werden indem man den [MBR](Master-Boot-Record "MBR") bspw. von einem existierenden Image mittels [dd for Windows](http://www.chrysocome.net/dd) extrahiert. Wer kein zur der GRUB Version kompatibles Image hat, kann sich mittels der Bootlace.com einmalig eines auf einem anderen PC oder in der [DosBox](http://www.dosbox.com/) erstellen.
 
 ### CD-Image herstellen
 
 Es sind folgende Tools vonnöten:
 
-- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein. Windows Nutzer können die *stage2_eltorito* von [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") nehmen)
+- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein. Windows Nutzer können die *stage2_eltorito* von [tyndur](T%C3%BDndur "Tyndur") nehmen)
 - mkisofs (für Windows Nutzer [hier](http://www.student.tugraz.at/thomas.plank/) verfügbar)
 
 Als Erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner kopieren. Dazu gehören auch die von GRUB benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Anschließend erstellt man das CD-Image folgendermaßen:
@@ -149,7 +149,7 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ## GRUB 2
 
-GRUB 2 ist der Nachfolger von GRUB legacy und wurde von Grund auf neu geschrieben. Er ist genauso wie GRUB legacy [multibootfähig](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot"). Außerdem wird mit GRUB 2 der Multiboot-2-Standard, der sich momentan noch in Entwicklung befindet, unterstützt.
+GRUB 2 ist der Nachfolger von GRUB legacy und wurde von Grund auf neu geschrieben. Er ist genauso wie GRUB legacy [multibootfähig](Multiboot "Multiboot"). Außerdem wird mit GRUB 2 der Multiboot-2-Standard, der sich momentan noch in Entwicklung befindet, unterstützt.
 
 ### Neuerungen gegenüber GRUB Legacy
 
@@ -246,7 +246,7 @@ Man kopiert alles vorher in den Ordner, der angegeben wurde und GRUB erstellt, d
 
 #### Windows
 
-Unter Windows gibt es noch keine Möglichkeit, ein CD-Image von GRUB2 zu erstellen. Am besten nimmt man ein Fertiges. Dafür ist das Ändern des Images sehr einfach. Man lädt [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter, falls man Windows-User ist (das Programm ist Shareware und bis 300MB begrenzt). Wenn UltraISO heruntergeladen und installiert ist, sollte man folgende Dateien in einem Ordner haben: Das GRUB2.iso-Image, die grub.cfg und alle für das eigene OS nötigen Dateien (Kernel, Module, Programe etc.). Das sollte dann so ausehen: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png" width="597" height="130" alt="GRUB2-1.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/fa4203217911f828a9bd.png)
+Unter Windows gibt es noch keine Möglichkeit, ein CD-Image von GRUB2 zu erstellen. Am besten nimmt man ein Fertiges. Dafür ist das Ändern des Images sehr einfach. Man lädt [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter, falls man Windows-User ist (das Programm ist Shareware und bis 300MB begrenzt). Wenn UltraISO heruntergeladen und installiert ist, sollte man folgende Dateien in einem Ordner haben: Das GRUB2.iso-Image, die grub.cfg und alle für das eigene OS nötigen Dateien (Kernel, Module, Programe etc.). Das sollte dann so ausehen: [<img src="assets/fa4203217911f828a9bd.png" width="597" height="130" alt="GRUB2-1.PNG" />](assets/fa4203217911f828a9bd.png)
 
 Die grub.cfg sollte folgenden inhalt haben:
 
@@ -261,15 +261,15 @@ Die grub.cfg sollte folgenden inhalt haben:
 
 Wenn das der Fall ist, UltraISO starten, den "Weiterhin testen..."-Button betätigen, auf Datei-\>Öffnen klicken und dann das GRUB2-Image auswählen und öffnen. Das Fenster sollte dan wie folgt aussehen: In der Verzeichnisstruktur zu dem Ordner mit der grub.cfg und den eigenen OS-Dateien wechseln. Das Fenster sollte dann den Inhalt des Ordners beinhalten.
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a96869af9be98ac5a13.png" width="839" height="489" alt="GRUB2-2.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a96869af9be98ac5a13.png)
+[<img src="assets/5a96869af9be98ac5a13.png" width="839" height="489" alt="GRUB2-2.PNG" />](assets/5a96869af9be98ac5a13.png)
 
 Kernel ins Image bringen: Obenb Links auf den Ordner "boot" und unten rechts auf die eigene Kernel-Datei klicken. Klicke auf den makierten Button.
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png" width="838" height="490" alt="GRUB2-3.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/76ee07abdaa0ca50ba98.png)
+[<img src="assets/76ee07abdaa0ca50ba98.png" width="838" height="490" alt="GRUB2-3.PNG" />](assets/76ee07abdaa0ca50ba98.png)
 
 grub.cfg ins Image bringen: Oben links auf das Plus neben dem Ordner "boot" klicken und dann auf den Ordner "Grub". Die grub.cfg auswählen und auf den markierten Button klicken.
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e5127e0a1ea9c0f1ea3e.png" width="837" height="489" alt="GRUB2-4.PNG" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e5127e0a1ea9c0f1ea3e.png)
+[<img src="assets/e5127e0a1ea9c0f1ea3e.png" width="837" height="489" alt="GRUB2-4.PNG" />](assets/e5127e0a1ea9c0f1ea3e.png)
 
 Auf "Datei-\>Speichern" klicken.
 
@@ -289,8 +289,8 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 ## Siehe auch
 
 - GRUB legacy
-  - [OS-Dev für Einsteiger - Teil 4](https://github.com/lowlevel-eu/wiki/wiki/Teil-4-Hello-World "Teil 4 - Hello World"): kleiner Beispielkernel mit Multiboot
-  - [GRUB Installation auf einem USB-Stick](https://github.com/lowlevel-eu/wiki/wiki/GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
+  - [OS-Dev für Einsteiger - Teil 4](Teil-4-Hello-World "Teil 4 - Hello World"): kleiner Beispielkernel mit Multiboot
+  - [GRUB Installation auf einem USB-Stick](GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
 - GRUB 2
   - [Disketten-/ISO-Images mit GRUB 2 erstellen](http://wiki.osdev.org/GRUB_2)
 

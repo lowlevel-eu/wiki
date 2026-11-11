@@ -2,17 +2,17 @@
 
 | Haiku |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/aeb5d8273eed587f4150.jpg" width="280" height="56" alt="Haiku Logo" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/438ed73108e00fc49176.jpg) |  |
+| [<img src="assets/aeb5d8273eed587f4150.jpg" width="280" height="56" alt="Haiku Logo" />](assets/438ed73108e00fc49176.jpg) |  |
 | Entwickler: | Haiku team |
 | Akt. Version: | R1/Alpha 4(12. November 2012) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT Lizenz |
+| [Lizenz](Lizenzen "Lizenzen"): | MIT Lizenz |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ARM |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"),[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
-| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
+| Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64"), ARM |
+| [Kernelart](Kernel "Kernel"): | Hybridkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"),[C++](C%2B%2B "C++") |
+| API: | [POSIX](POSIX "POSIX") |
 | Binärformat: |  |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 <https://www.haiku-os.org>

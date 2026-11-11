@@ -2,15 +2,15 @@
 
 |  |  |  |
 | ----- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|  | **Navigation** | [ARM-OS-Dev Teil 1 – Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/ARM-OS-Dev-Teil-1-%E2%80%93-Entwicklungsumgebung "ARM-OS-Dev Teil 1 – Entwicklungsumgebung") » |
+|  | **Navigation** | [ARM-OS-Dev Teil 1 – Entwicklungsumgebung](ARM-OS-Dev-Teil-1-%E2%80%93-Entwicklungsumgebung "ARM-OS-Dev Teil 1 – Entwicklungsumgebung") » |
 
-Diese Reihe soll eine Adaption der [OS-Dev-für-Einsteiger-Reihe](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") für ARM-Systeme sein. Viele der dort gesagten Dinge gelten unabhängig von der Architektur, dies gilt insbesondere für den Einführungsartikel. Bei Gemeinsamkeiten wird auf die x86-Reihe verwiesen, Unterschiede werden hier verdeutlicht und erklärt.
+Diese Reihe soll eine Adaption der [OS-Dev-für-Einsteiger-Reihe](OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") für ARM-Systeme sein. Viele der dort gesagten Dinge gelten unabhängig von der Architektur, dies gilt insbesondere für den Einführungsartikel. Bei Gemeinsamkeiten wird auf die x86-Reihe verwiesen, Unterschiede werden hier verdeutlicht und erklärt.
 
 ## Vor dem Start
 
 Alles in der x86-Reihe gesagte gilt auch hier, mit dem Unterschied, dass sich die Wahl der Plattform erübrigt. Verwendet wird in dieser Tutorialreihe das sogenannte Integrator/CP-Board, welches die Standardumgebung des ARM-QEMU darstellt. Echte Integrator/CP-Boards sind recht teuer und schwer zu bekommen, sodass die Ausführung des hier gezeigten Codes wohl auf QEMU beschränkt bleiben wird. Die Übertragung des Tutorials auf andere Plattformen sollte jedoch nicht allzu schwer fallen, wenn die dort vorhandene Hardware bekannt ist.
 
-Als eine zusätzliche Voraussetzung wäre in dieser Tutorialreihe die Kenntnis der x86-Architektur bzw. von grundlegenden Abläufen wie Interruptbehandlung und ähnlichem zu nennen. Sehr sinnvoll ist es auch, den [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-Artikel gelesen zu haben.
+Als eine zusätzliche Voraussetzung wäre in dieser Tutorialreihe die Kenntnis der x86-Architektur bzw. von grundlegenden Abläufen wie Interruptbehandlung und ähnlichem zu nennen. Sehr sinnvoll ist es auch, den [ARM](ARM "ARM")-Artikel gelesen zu haben.
 
 ## Wo anfangen?
 
@@ -34,7 +34,7 @@ Als kleine Anmerkung wäre noch zu nennen, dass das Multitasking auf ARM natürl
 
 ### Treiber
 
-An sich gelten hier die gleichen Regeln wie für x86-Treiber. Zu beachten ist jedoch, dass es selten so schöne Tutorials wie für x86-Geräte gibt und man sich daher im Allgemeinen selbst durch die Spezifikationen quälen muss. Bei I/CP ist dies jedoch durch ein entsprechendes Manual, das eine Zusammenfassung des Interfaces für jedes vorhandene Gerät bietet, recht einfach. [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") kann man theoretisch auch auf ARM implementieren, praktisch ist dies wenig sinnvoll, da bisher kaum Treiber für Geräte von ARM-Plattformen existieren (wobei es auf einigen ARM-Plattformen auch PCI gibt, wodurch man die Treiber für PCI-Geräte durchaus nutzen kann, soweit diese kein x86-Port-I/O verwenden).
+An sich gelten hier die gleichen Regeln wie für x86-Treiber. Zu beachten ist jedoch, dass es selten so schöne Tutorials wie für x86-Geräte gibt und man sich daher im Allgemeinen selbst durch die Spezifikationen quälen muss. Bei I/CP ist dies jedoch durch ein entsprechendes Manual, das eine Zusammenfassung des Interfaces für jedes vorhandene Gerät bietet, recht einfach. [CDI](Common-Driver-Interface "CDI") kann man theoretisch auch auf ARM implementieren, praktisch ist dies wenig sinnvoll, da bisher kaum Treiber für Geräte von ARM-Plattformen existieren (wobei es auf einigen ARM-Plattformen auch PCI gibt, wodurch man die Treiber für PCI-Geräte durchaus nutzen kann, soweit diese kein x86-Port-I/O verwenden).
 
 ## Weblinks
 

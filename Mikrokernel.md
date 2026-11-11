@@ -1,6 +1,6 @@
 # Mikrokernel
 
-Weiterleitung: [Kernel#Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel)
+Weiterleitung: [Kernel#Mikrokernel](Kernel#mikrokernel)
 
 ---
 

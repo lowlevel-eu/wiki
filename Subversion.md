@@ -7,11 +7,11 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-**Subversion** (oft abgekürzt als **SVN**) ist ein zentrales [Versionskontrollsystem](https://github.com/lowlevel-eu/wiki/wiki/Versionsverwaltung "Versionsverwaltung").
+**Subversion** (oft abgekürzt als **SVN**) ist ein zentrales [Versionskontrollsystem](Versionsverwaltung "Versionsverwaltung").
 
 ## Entwicklungsziel
 
-Die Arbeiten am Subversionprojekt wurden 2000 begonnen. Das Ziel war es, Probleme bei [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS") zu umgehen: Ein Beispiel dafür ist das Branching, welches jetzt in konstanter Laufzeit vonstatten geht. Dieser Ansatz brachte dem Projekt schnell den Slogan "CVS done right" ein. Darum wird [CVS](https://github.com/lowlevel-eu/wiki/wiki/Concurrent-Versions-System "CVS") heutzutage auch meistens nur noch genutzt, wenn die Entwickler Subversion nicht kennen, oder die Umstellung auf ein neues System scheuen.
+Die Arbeiten am Subversionprojekt wurden 2000 begonnen. Das Ziel war es, Probleme bei [CVS](Concurrent-Versions-System "CVS") zu umgehen: Ein Beispiel dafür ist das Branching, welches jetzt in konstanter Laufzeit vonstatten geht. Dieser Ansatz brachte dem Projekt schnell den Slogan "CVS done right" ein. Darum wird [CVS](Concurrent-Versions-System "CVS") heutzutage auch meistens nur noch genutzt, wenn die Entwickler Subversion nicht kennen, oder die Umstellung auf ein neues System scheuen.
 
 ## Installation
 
@@ -55,7 +55,7 @@ Bei einem Update kann es passieren, dass Konflikte entstehen. Diese korrigiert m
 
 Irgendwann kommt der Zeitpunkt, an dem man seine Änderungen öffentlich machen will. Das geschieht mit dem Befehl `commit` (kurz `ci`).
 
-Im Gegensatz zu [Git](https://github.com/lowlevel-eu/wiki/wiki/Git "Git") werden alle Änderungen an getrackten Dateien standardmäßig automatisch übertragen, ohne dass man sie explizit zu einem Commit hinzufügen muss, also Vorsicht.
+Im Gegensatz zu [Git](Git "Git") werden alle Änderungen an getrackten Dateien standardmäßig automatisch übertragen, ohne dass man sie explizit zu einem Commit hinzufügen muss, also Vorsicht.
 
     # Alle Änderungen hochladen
     svn ci

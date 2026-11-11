@@ -1,6 +1,6 @@
 # Breakpoint
 
-Weiterleitung: [Debugging](https://github.com/lowlevel-eu/wiki/wiki/Debugging)
+Weiterleitung: [Debugging](Debugging)
 
 ---
 

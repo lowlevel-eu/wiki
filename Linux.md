@@ -5,14 +5,14 @@
 | ![150px-Tux.svg.png](http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/150px-Tux.svg.png) |  |
 | Entwickler: | Linus Torvalds et al. |
 | Akt. Version: | 3.5.4 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), ppc, uvm. |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") (u. Kompatibilität zu System-V) |
+| Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64"), ppc, uvm. |
+| [Kernelart](Kernel "Kernel"): | Monolithisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| API: | [POSIX](POSIX "POSIX") |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | [Pipes](Pipe "Pipe") (u. Kompatibilität zu System-V) |
 | Homepage |  |
 
 <http://www.kernel.org>
@@ -21,19 +21,19 @@
 
 ## Die Entstehung
 
-Linux entstand 1991 durch den damaligen Informatikstudent Linus Torvalds an der Universität von Helsinki unter dem Namen "Freax". Linus Torvalds besaß damals einen 386er mit installiertem [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), und schrieb darauf einen Terminalemulator. Er fügte weitere Funktionen hinzu, wie Multitasking, Zugriff auf das Diskettenlaufwerk usw. Schließlich baute er das ganze zu einem Kernel aus, den er auf dem FTP-Server der Universität Helsinki hochladen ließ. Der Administrator Ari Lemmke war mit dem Namen "Freax", den Linus für seinen Kernel gewählt hatte, nicht einverstanden und legte den Kernel in das Verzeichnis "Linux".
+Linux entstand 1991 durch den damaligen Informatikstudent Linus Torvalds an der Universität von Helsinki unter dem Namen "Freax". Linus Torvalds besaß damals einen 386er mit installiertem [Minix](Minix "Minix"), und schrieb darauf einen Terminalemulator. Er fügte weitere Funktionen hinzu, wie Multitasking, Zugriff auf das Diskettenlaufwerk usw. Schließlich baute er das ganze zu einem Kernel aus, den er auf dem FTP-Server der Universität Helsinki hochladen ließ. Der Administrator Ari Lemmke war mit dem Namen "Freax", den Linus für seinen Kernel gewählt hatte, nicht einverstanden und legte den Kernel in das Verzeichnis "Linux".
 
 ## Bezeichnung von Linux
 
-Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Linux. Eigentlich ist Linux nur ein [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Wenn man von einer Linux-Distribution spricht, ist in den Augen mancher die korrekte Systembezeichnung eigentlich GNU/Linux, da der Großteil des Userlands aus dem GNU-Projekt stammt, und diesem nicht der Ruhm verwehrt bleiben soll.
+Wenn meistens von Linux gesprochen wird, dann meint man eine Distribution von Linux. Eigentlich ist Linux nur ein [Kernel](Kernel "Kernel"). Wenn man von einer Linux-Distribution spricht, ist in den Augen mancher die korrekte Systembezeichnung eigentlich GNU/Linux, da der Großteil des Userlands aus dem GNU-Projekt stammt, und diesem nicht der Ruhm verwehrt bleiben soll.
 
 ## Graphical User Interface
 
-Unter Linux gibt es dutzende [GUIs](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI"), die untereinander konkurieren. Am meisten verbreitet sind die Desktop-Environments KDE und Gnome, es gibt aber auch viele "kleine", alleinstehende Window-Manager wie WindowMaker, IceWM usw..
+Unter Linux gibt es dutzende [GUIs](Graphical-User-Interface "GUI"), die untereinander konkurieren. Am meisten verbreitet sind die Desktop-Environments KDE und Gnome, es gibt aber auch viele "kleine", alleinstehende Window-Manager wie WindowMaker, IceWM usw..
 
 ## Das UNIX-Prinzip
 
-Linux hat eine Eigenart von Unix übernommen: Alles ist eine Datei. Das Diskettenlaufwerk zum Beispiel wird über /dev/fd0 angesprochen. Linux besitzt keine Laufwerksbuchstaben wie [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") und [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), die erste Festplatte (bei IDE) findet man unter /dev/hda.
+Linux hat eine Eigenart von Unix übernommen: Alles ist eine Datei. Das Diskettenlaufwerk zum Beispiel wird über /dev/fd0 angesprochen. Linux besitzt keine Laufwerksbuchstaben wie [MS-DOS](Microsoft-Disk-Operating-System "MS-DOS") und [Windows](Windows "Windows"), die erste Festplatte (bei IDE) findet man unter /dev/hda.
 
 ## Weblinks
 

@@ -11,14 +11,14 @@ Dieser Artikel wurde zum Löschen vorgeschlagen.
 |  |  |
 | Entwickler: | [Edox](https://lowlevel-eu.github.io/wiki/pages/2314/index.html "Benutzer:Edox") |
 | Akt. Version: | Noch keine vorhanden |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Mikro |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Mikro |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
 | API: | EdoxAPI |
 | Binärformat: | .bin |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 In Arbeit

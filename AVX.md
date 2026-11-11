@@ -1,6 +1,6 @@
 # AVX
 
-Weiterleitung: [Advanced Vector Extensions](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Vector-Extensions)
+Weiterleitung: [Advanced Vector Extensions](Advanced-Vector-Extensions)
 
 ---
 

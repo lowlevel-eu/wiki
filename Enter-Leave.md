@@ -1,6 +1,6 @@
 # Enter / Leave
 
-Das Befehlspaar *enter* und *leave* adjustiert den [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") für die Verwendung von lokalen Variablen.
+Das Befehlspaar *enter* und *leave* adjustiert den [Stack](Stack "Stack") für die Verwendung von lokalen Variablen.
 
   
 
@@ -69,11 +69,11 @@ pop ebp
 
 ### gcc
 
-[gcc](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "Gcc") verwendet nur den *leave*-Befehl, anstatt *enter* aber die obige Ersatzform.
+[gcc](GNU-Compiler-Collection "Gcc") verwendet nur den *leave*-Befehl, anstatt *enter* aber die obige Ersatzform.
 
 ## siehe auch
 
-- [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack")
+- [Stack](Stack "Stack")
 
 ---
 

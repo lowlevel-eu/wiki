@@ -9,22 +9,22 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 |  |  |
 | Entwickler: | Jim Hall et al. |
 | Akt. Version: | 1.1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](Lizenzen "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
-| API: | [DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "DOS") |
-| Binärformat: | COM, EXE ([COFF](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "COFF")) |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | n.a. |
+| Plattform: | [i386](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [Assembler](Assembler "Assembler") |
+| API: | [DOS](Microsoft-Disk-Operating-System "DOS") |
+| Binärformat: | COM, EXE ([COFF](Microsoft-Portable-Executable-and-Common-Object-File-Format "COFF")) |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | n.a. |
 | Homepage |  |
 
 <http://freedos.sourceforge.net/>
 
   
-FreeDOS gehört - wie der Name schon sagt - zu den DOS-Betriebssystemen. Es wurde geschaffen, um eine freie und vor allem kompatible Alternative zu [MS-DOS](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System "MS-DOS") zu erstellen.
+FreeDOS gehört - wie der Name schon sagt - zu den DOS-Betriebssystemen. Es wurde geschaffen, um eine freie und vor allem kompatible Alternative zu [MS-DOS](Microsoft-Disk-Operating-System "MS-DOS") zu erstellen.
 
-Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgeführt werden können, die auch unter MS-DOS liefen. Lediglich Programme, die undokumentierte Schnittstellen benutzten (wie [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") (3.x bzw 9x/ME) es tut/tat) machen Probleme.
+Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgeführt werden können, die auch unter MS-DOS liefen. Lediglich Programme, die undokumentierte Schnittstellen benutzten (wie [Windows](Windows "Windows") (3.x bzw 9x/ME) es tut/tat) machen Probleme.
 
 ---
 

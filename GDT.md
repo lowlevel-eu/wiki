@@ -1,6 +1,6 @@
 # GDT
 
-Weiterleitung: [Global Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table)
+Weiterleitung: [Global Descriptor Table](Global-Descriptor-Table)
 
 ---
 

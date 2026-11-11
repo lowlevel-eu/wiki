@@ -6,7 +6,7 @@
 | Inlineassembler: | Nein |
 | Compiler: | GNAT (GNU Ada Compiler) |
 | Spracheneigenschaften |  |
-| Plattformen: | [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") |
+| Plattformen: | [Linux](Linux "Linux"), [Windows](Windows "Windows") |
 | Beispielkernel in der Sprache: | siehe unten |
 | Homepage |  |
 
@@ -16,9 +16,9 @@
 
   
 
-## Ada als Sprache für ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem")
+## Ada als Sprache für ein [Betriebssystem](Betriebssystem "Betriebssystem")
 
-Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
+Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem [Kernel](Kernel "Kernel")) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
 
 Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 

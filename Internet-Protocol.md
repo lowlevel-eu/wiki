@@ -4,7 +4,7 @@ Das Internet Protocol (IP) ist ein sehr weit verbreitetes Netzwerkprotokoll. Es 
 
 ## Nutzen
 
-In [Ethernetnetzwerken](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet") baut IP direkt auf Ethernet auf. Ethernetpakete können nur innerhalb eines LANs verschickt werden, da es zum Beispiel im Internet kein Ethernet gibt. Das IP ermöglicht es, Pakete in andere LANs oder über Internetworks (wie das Internet) zu verschicken, da die IP-Adresse eine logische und keine physikalische Adresse wie die MAC-Adresse ist. Daher muss keine direkte Verbindung zum Ziel bestehen, sondern nur eine logische, die über mehrere Zwischenstationen (z. B. Router) verlaufen kann. Mit Protokollen wie Ethernet können nur direkte Verbindungen (zum Beispiel zum Router) hergestellt werden.
+In [Ethernetnetzwerken](Ethernet "Ethernet") baut IP direkt auf Ethernet auf. Ethernetpakete können nur innerhalb eines LANs verschickt werden, da es zum Beispiel im Internet kein Ethernet gibt. Das IP ermöglicht es, Pakete in andere LANs oder über Internetworks (wie das Internet) zu verschicken, da die IP-Adresse eine logische und keine physikalische Adresse wie die MAC-Adresse ist. Daher muss keine direkte Verbindung zum Ziel bestehen, sondern nur eine logische, die über mehrere Zwischenstationen (z. B. Router) verlaufen kann. Mit Protokollen wie Ethernet können nur direkte Verbindungen (zum Beispiel zum Router) hergestellt werden.
 
 ## Aufbau von IP-Paketen
 
@@ -64,7 +64,7 @@ Bitte beachten: Wie bei vielen Netzwerkprotokollen wird auch bei IP Big-Endian v
 | 0x06 | 2 | Fragment Offset und Flags (auf 0x4000 (bzw. 0x0040 für Little-Endian) setzen, um Fragmentation zu deaktivieren) |
 | 0x08 | 1 | TTL (Time to Live, wird von jeder Station, die das Paket weiterleitet um eins dekrementiert, ist der Wert 0, so wird das Paket verworfen, dies verhindert, dass Pakete im Kreis geleitet werden und so das Netzwerk unnötig überlasten; ein Standardwert ist 128) |
 | 0x09 | 1 | Protokoll (gibt das in den Nutzdaten verwendete Protokoll an (z. B. 0x01 für ICMP, 0x06 für TCP, 0x11 für UDP)) |
-| 0x0A | 2 | Prüfsumme (siehe [Netzwerkprüfsumme](https://github.com/lowlevel-eu/wiki/wiki/Netzwerkpr%C3%BCfsumme "Netzwerkprüfsumme") zur Berechnung, wird ausschließlich über den Kopf berechnet) |
+| 0x0A | 2 | Prüfsumme (siehe [Netzwerkprüfsumme](Netzwerkpr%C3%BCfsumme "Netzwerkprüfsumme") zur Berechnung, wird ausschließlich über den Kopf berechnet) |
 | 0x0C | 4 | IP des Absenders |
 | 0x10 | 4 | IP des Empfängers |
 | 0x14 | Länge des Headers - 20 | Hier können noch Optionen angegeben werden, wie das Paket zu behandeln ist. Die Größe dieses Feldes muss immer ohne Rest durch vier teilbar sein (da die Länge des Headers in Viererschritten angegeben wird), daher muss es gegebenenfalls mit Nullbytes aufgefüllt werden. |

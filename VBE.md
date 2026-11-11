@@ -1,6 +1,6 @@
 # VBE
 
-Weiterleitung: [VESA BIOS Extensions](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions)
+Weiterleitung: [VESA BIOS Extensions](VESA-BIOS-Extensions)
 
 ---
 

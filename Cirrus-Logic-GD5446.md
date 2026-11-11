@@ -1,6 +1,6 @@
 # Cirrus Logic GD5446
 
-Weiterleitung: [Cirrus Logic](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic)
+Weiterleitung: [Cirrus Logic](Cirrus-Logic)
 
 ---
 

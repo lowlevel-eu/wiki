@@ -19,7 +19,7 @@ Da ich selbst als InitRD-Image das TAR-Format erwählt habe, möchte ich dieses 
 ### Was ist TAR und welche Vorteile habe ich damit?
 
 *ToDo: Allgemeine Beschreibung von TAR*  
-Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") oder \*nix bereits Tools vorhanden sind, die Archive in diesem Format erstellen können. Das heißt, dass dadurch zum einen der Aufwand minimiert wird, da das Programm an sich bereits vorhanden ist und zum anderen dadurch die Fehlerquellen minimiert werden, da die bereits vorhandenen Programme wie „tar“ oder „7-zip“ Fehlerfrei laufen *sollten*.
+Der Vorteil von TAR ist, dass hierfür unter bestehenden System wie [Windows](Windows "Windows") oder \*nix bereits Tools vorhanden sind, die Archive in diesem Format erstellen können. Das heißt, dass dadurch zum einen der Aufwand minimiert wird, da das Programm an sich bereits vorhanden ist und zum anderen dadurch die Fehlerquellen minimiert werden, da die bereits vorhandenen Programme wie „tar“ oder „7-zip“ Fehlerfrei laufen *sollten*.
 
   
 

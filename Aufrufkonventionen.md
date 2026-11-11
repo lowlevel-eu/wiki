@@ -12,7 +12,7 @@ Um zwischen einen in Assembly geschriebenen Teil, und einem in C oder C++ geschr
 2.  Argumente
 3.  Rückgabewert
 
-Der **Funktionsname** wird beim gcc 4 ([C](https://github.com/lowlevel-eu/wiki/wiki/C "C")) nicht verändert. Nennt man die Funktion in C *test*, so heißt diese auch in der Objektdatei *test*. Beim g++ ( [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") ) ist das schon etwas komplizierter. Bei C++ kann man Namensräume verwenden, und Funktionen überladen, entsprechend wird der Funktionsname aufwändiger codiert: Als Beispiel folgende Funktion: \<cpp\>namespace namensraum {
+Der **Funktionsname** wird beim gcc 4 ([C](C "C")) nicht verändert. Nennt man die Funktion in C *test*, so heißt diese auch in der Objektdatei *test*. Beim g++ ( [C++](C%2B%2B "C++") ) ist das schon etwas komplizierter. Bei C++ kann man Namensräume verwenden, und Funktionen überladen, entsprechend wird der Funktionsname aufwändiger codiert: Als Beispiel folgende Funktion: \<cpp\>namespace namensraum {
 
     int test(int x)
     {

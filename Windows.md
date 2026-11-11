@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Microsoft |
 | Akt. Version: | NT 6.2 (= 8) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
+| [Lizenz](Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") (Windows RT-Versionen), früher Alpha (NT 4) |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") |
+| Plattform: | [x86](X86 "X86"), [x64](X86-64 "X64"), [ARM](ARM "ARM") (Windows RT-Versionen), früher Alpha (NT 4) |
+| [Kernelart](Kernel "Kernel"): | [Makrokernel](Kernel#makrokernel "Makrokernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C |
 | API: | WinAPI |
-| Binärformat: | [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
+| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
 | Homepage |  |
 
 [www.microsoft.com](http://www.microsoft.com/windows)
@@ -29,7 +29,7 @@ Windows NT, oder besser gesagt der NT-Kernel, wird in allen neuen Betriebssystem
 
 #### Kernel
 
-Über das Design von Windows ist relativ wenig bekannt, da Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") als Ring-0-Applikationen ausgeführt, genauso wie andere Teile (seit Vista werden die Grafiktreiber wieder als Ring-3-Prozesse angesehen). Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als [Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Makrokernel") betrachtet.
+Über das Design von Windows ist relativ wenig bekannt, da Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](Graphical-User-Interface "GUI") als Ring-0-Applikationen ausgeführt, genauso wie andere Teile (seit Vista werden die Grafiktreiber wieder als Ring-3-Prozesse angesehen). Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als [Makrokernel](Kernel#makrokernel "Makrokernel") betrachtet.
 
 #### API
 
@@ -37,8 +37,8 @@ Bei der API wird unterschieden zwischen der „nativen NT-API“, die teilweise 
 
 ## Siehe auch
 
-- [Crosscompiler für Windows](https://github.com/lowlevel-eu/wiki/wiki/Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
-- [ReactOS](https://github.com/lowlevel-eu/wiki/wiki/ReactOS "ReactOS")
+- [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
+- [ReactOS](ReactOS "ReactOS")
 
 ## Links
 

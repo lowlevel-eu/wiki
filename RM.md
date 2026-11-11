@@ -1,6 +1,6 @@
 # RM
 
-Weiterleitung: [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode)
+Weiterleitung: [Real Mode](Real-Mode)
 
 ---
 

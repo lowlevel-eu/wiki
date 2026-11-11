@@ -1,6 +1,6 @@
 # Lowlevel-Offline
 
-Weiterleitung: [Lowlevel offline](https://github.com/lowlevel-eu/wiki/wiki/Lowlevel-offline)
+Weiterleitung: [Lowlevel offline](Lowlevel-offline)
 
 ---
 

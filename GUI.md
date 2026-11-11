@@ -1,6 +1,6 @@
 # GUI
 
-Weiterleitung: [Graphical User Interface](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface)
+Weiterleitung: [Graphical User Interface](Graphical-User-Interface)
 
 ---
 

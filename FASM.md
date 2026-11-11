@@ -1,6 +1,6 @@
 # FASM
 
-Weiterleitung: [Flat Assembler](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler)
+Weiterleitung: [Flat Assembler](Flat-Assembler)
 
 ---
 

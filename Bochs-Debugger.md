@@ -1,6 +1,6 @@
 # Bochs Debugger
 
-Der [bochsinterne](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") Debugger stellt eine nützliche Hilfe beim [Debuggen](https://github.com/lowlevel-eu/wiki/wiki/Debugging "Debugging") eines Betriebssystems dar, weil er unter anderem Registerinhalte, Speicherinhalte oder auch disassemblierte Codestellen ausgeben kann.
+Der [bochsinterne](Bochs "Bochs") Debugger stellt eine nützliche Hilfe beim [Debuggen](Debugging "Debugging") eines Betriebssystems dar, weil er unter anderem Registerinhalte, Speicherinhalte oder auch disassemblierte Codestellen ausgeben kann.
 
 ## Speicherinhalte ausgeben und manipulieren
 
@@ -15,7 +15,7 @@ n, u und f bestimmen dabei die Ausgabe genauer:
 - u für die Größe einer Einheit (b=1, h=2, w=4 und g=8 Bytes)
 - f legt das Ausgabeformat fest (d=dezimal, x=hexadezimal und t=binär)
 
-Wenn [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") deaktiviert ist, dann bewirken beide Befehle dasselbe.
+Wenn [Paging](Paging "Paging") deaktiviert ist, dann bewirken beide Befehle dasselbe.
 
 Möchte man geziehlt bestimmte Werte im Arbeitsspeicher verändern, nutzt man:
 
@@ -23,11 +23,11 @@ Möchte man geziehlt bestimmte Werte im Arbeitsspeicher verändern, nutzt man:
 
 Dadurch wird der Arbeitsspeicher von der physikalischen Adressen an soweit mit dem Wert gefüllt, wie die Länge angibt.
 
-Zudem kann auch der Inhalt des [Stacks](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") ausgegeben werden mit:
+Zudem kann auch der Inhalt des [Stacks](Stack "Stack") ausgegeben werden mit:
 
     print-stack [Anzahl_Elemente]
 
-Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") werden dabei Words, im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") Dwords ausgegeben.
+Im [Real Mode](Real-Mode "Real Mode") werden dabei Words, im [Protected Mode](Protected-Mode "Protected Mode") Dwords ausgegeben.
 
   
 
@@ -35,12 +35,12 @@ Im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") w
 
 | Befehl | auszugebene Register |
 | ------------- | -------------------------------------------------------------------------------------------------- |
-| reg | Alle [Register](https://github.com/lowlevel-eu/wiki/wiki/Register "Register") |
+| reg | Alle [Register](Register "Register") |
 | sreg | Segment-Register |
-| dreg | [Debug-Register](https://github.com/lowlevel-eu/wiki/wiki/Debug-Register "Debug Register") |
-| creg | [Control-Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") |
-| info eflags | [EFLAGS](https://github.com/lowlevel-eu/wiki/wiki/EFLAGS "EFLAGS") |
-| fpu | [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU")-Register |
+| dreg | [Debug-Register](Debug-Register "Debug Register") |
+| creg | [Control-Register](Control-Register "Control Register") |
+| info eflags | [EFLAGS](EFLAGS "EFLAGS") |
+| fpu | [FPU](Mathematischer-Koprozessor "FPU")-Register |
 
 Außerdem gibt es die Möglichkeit die allgemeinen Register zu verändern mit dem Befehl:
 

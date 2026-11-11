@@ -11,14 +11,14 @@ Keine Homepage, Stand des Projektes ist nicht ersichtbar, vermutlicher Stillstan
 |  |  |
 | Entwickler: | [Paul Lange](https://lowlevel-eu.github.io/wiki/pages/1905/index.html "Benutzer:Matheguru") |
 | Akt. Version: | \- |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPLv3](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
+| [Lizenz](Lizenzen "Lizenzen"): | [GPLv3](Lizenzen "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolith](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [i386](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Monolith](Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | POSIX |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 \-

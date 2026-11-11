@@ -1,6 +1,6 @@
 # FDC
 
-Weiterleitung: [Floppy Disk Controller](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller)
+Weiterleitung: [Floppy Disk Controller](Floppy-Disk-Controller)
 
 ---
 

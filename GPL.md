@@ -1,6 +1,6 @@
 # GPL
 
-Weiterleitung: [Lizenzen#General Public License](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen)
+Weiterleitung: [Lizenzen#General Public License](Lizenzen)
 
 ---
 

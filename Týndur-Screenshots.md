@@ -4,27 +4,27 @@
 
 ## Nach dem Starten
 
-![startup.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/d45b94026c8048d7e7b7.png)
+![startup.png](assets/d45b94026c8048d7e7b7.png)
 
 ## Paketverwaltung lpt
 
-![lpt.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/bc964c0a9da3c30ebc8e.png)
+![lpt.png](assets/bc964c0a9da3c30ebc8e.png)
 
 ## IRC-Client
 
-![kirc.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/22e6b1ea26771c8aab68.png)
+![kirc.png](assets/22e6b1ea26771c8aab68.png)
 
 ## Texteditor
 
-![kedit.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/a9b9d8a93cd3582e236b.png)
+![kedit.png](assets/a9b9d8a93cd3582e236b.png)
 
 ## GNU gcc
 
-![gcc.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/9b166bdf6cc4956842a2.png)
+![gcc.png](assets/9b166bdf6cc4956842a2.png)
 
 ## GNU nano
 
-![nano.png](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5a9c6f0532866e6464a3.png)
+![nano.png](assets/5a9c6f0532866e6464a3.png)
 
 ---
 

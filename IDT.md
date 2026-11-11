@@ -1,6 +1,6 @@
 # IDT
 
-Weiterleitung: [Interrupt Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table)
+Weiterleitung: [Interrupt Descriptor Table](Interrupt-Descriptor-Table)
 
 ---
 

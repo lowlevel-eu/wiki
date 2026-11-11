@@ -11,14 +11,14 @@ Es gibt hier zwar keine offizielle Schöpfungshöhe im Wik, aber es wird scheinb
 |  |  |
 | Entwickler: | Sebo |
 | Akt. Version: | Aktuell keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: | ??? |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybrid Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") |
+| [Kernelart](Kernel "Kernel"): | Hybrid Kernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
 | API: | Keins |
 | Binärformat: | \- |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 <http://sebo-os.blogspot.com/>

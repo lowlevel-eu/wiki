@@ -10,11 +10,11 @@ Multithreading (englisch für *Mehrfädigkeit*) bezeichnet die gleichzeitige Aus
 
 Durch Softwaremultithreading ist es möglich innerhalb eines Prozesses neben dem „Hauptthread“, der z. B. in C die `main()`-Funktion ausführt, weitere Threads, die eine andere Befehlssequenz innerhalb eines Prozesses gleichzeitig zum bzw. unabhängig vom Hauptthread auszuführen, zu erstellen.
 
-Siehe Artikel zu [Threads](https://github.com/lowlevel-eu/wiki/wiki/Prozess#threads "Thread")
+Siehe Artikel zu [Threads](Prozess#threads "Thread")
 
 ## Hardwaremultithreading
 
-Hardwaremultithreading macht es möglich, auch auf einem Prozessorkern mehrere Tasks gleichzeitig auszuführen. Dadurch soll die [Pipeline](https://github.com/lowlevel-eu/wiki/wiki/Pipeline "Pipeline") eines superskalaren Prozessors besser ausgelastet werden. Dazu werden die Register dupliziert, Befehle von allen Tasks gelesen, dekodiert und anschließend in die Pipeline gefüttert. Nach der Ausführung werden die Ergebnisse wieder in die Register des passenden Tasks geschrieben.
+Hardwaremultithreading macht es möglich, auch auf einem Prozessorkern mehrere Tasks gleichzeitig auszuführen. Dadurch soll die [Pipeline](Pipeline "Pipeline") eines superskalaren Prozessors besser ausgelastet werden. Dazu werden die Register dupliziert, Befehle von allen Tasks gelesen, dekodiert und anschließend in die Pipeline gefüttert. Nach der Ausführung werden die Ergebnisse wieder in die Register des passenden Tasks geschrieben.
 
 Intel nennt diese Technik bei ihren Prozessoren Hyper-Threading und wendet dies z. B. beim recht leistungsschwachen Intel Atom an, der durch Hyper-Threading dem Betriebssystem zwei Prozessorkerne zur Verfügung stellt, wobei der zweite ein rein virtueller Kern ist.
 

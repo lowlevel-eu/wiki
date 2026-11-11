@@ -11,7 +11,7 @@
 
 [gcc.gnu.org](http://gcc.gnu.org/)
 
-Die **GNU Compiler Collection** ist eine Sammlung von Compilern. Unterstützt werden die [Sprachen](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache") [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Java](https://github.com/lowlevel-eu/wiki/wiki/Java "Java"), Objective-C, [Fortran 95](https://github.com/lowlevel-eu/wiki/wiki/Fortran "Fortran"), Treelang und [Ada](https://github.com/lowlevel-eu/wiki/wiki/Ada "Ada") und demnächst auch [D](https://github.com/lowlevel-eu/wiki/wiki/D "D"). Zusätzlich werden die Plattformen [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") (x86_64), Alpha, [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM"), IA-64, PowerPC und viele weitere unterstützt.
+Die **GNU Compiler Collection** ist eine Sammlung von Compilern. Unterstützt werden die [Sprachen](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache") [C](C "C"), [C++](C%2B%2B "C++"), [Java](Java "Java"), Objective-C, [Fortran 95](Fortran "Fortran"), Treelang und [Ada](Ada "Ada") und demnächst auch [D](D "D"). Zusätzlich werden die Plattformen [x86](X86 "X86"), [AMD64](X86-64 "X86-64") (x86_64), Alpha, [ARM](ARM "ARM"), IA-64, PowerPC und viele weitere unterstützt.
 
 ## GCC unter Windows
 
@@ -44,7 +44,7 @@ Alle Compiler-Flags können unter folgenden Links nachgelesen werden:
 
 ## Siehe auch
 
-[Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC")
+[Inline-Assembler mit GCC](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC")
 
 ## Weblinks
 

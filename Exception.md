@@ -12,11 +12,11 @@ Als Exception (engl. Ausnahme) bezeichnet man einen Fehler, der während des Aus
 
 ## Abfangen von Exceptions
 
-Die Exceptions sind im Grunde wie [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"). Sie werden aber nicht von der Software über die "int x"-Instruktion ausgelöst, sondern von der CPU selbst, wenn diese auf Fehler in der Codeausführung stößt. Die Exceptions werden den Interrupts 0 bis 31 zugeordnet. D.h., um Exceptions abzufangen, muss man die entsprechenden Interrupts abfangen und behandeln.
+Die Exceptions sind im Grunde wie [Interrupts](Interrupt "Interrupt"). Sie werden aber nicht von der Software über die "int x"-Instruktion ausgelöst, sondern von der CPU selbst, wenn diese auf Fehler in der Codeausführung stößt. Die Exceptions werden den Interrupts 0 bis 31 zugeordnet. D.h., um Exceptions abzufangen, muss man die entsprechenden Interrupts abfangen und behandeln.
 
 ### Behandeln von Exceptions
 
-Wie bei allen Interrupts legt die CPU die Werte der Register CS, EIP, EFLAGS, SS und ESP auf dem [Stack](https://github.com/lowlevel-eu/wiki/wiki/Stack "Stack") ab, bevor sie die in die [Interrupt-Behandlungs-Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") springt. Bei manchen Exceptions legt die CPU zusätzlich noch einen Fehlercode auf den Stack, der zusätzliche Informationen zum Fehler enthält. Wie dieser Fehlercode zu interpretieren ist, wird unten bei den Exceptions beschrieben. Zu beachten ist außerdem, dass das CS:EIP Registerpaar bei Exceptions des Typs Fault immer auf die Instruktion zeigen, die den Fehler verursachte, bei den anderen Exceptions muss dies nicht der Fall sein.
+Wie bei allen Interrupts legt die CPU die Werte der Register CS, EIP, EFLAGS, SS und ESP auf dem [Stack](Stack "Stack") ab, bevor sie die in die [Interrupt-Behandlungs-Routine](Interrupt-Service-Routine "ISR") springt. Bei manchen Exceptions legt die CPU zusätzlich noch einen Fehlercode auf den Stack, der zusätzliche Informationen zum Fehler enthält. Wie dieser Fehlercode zu interpretieren ist, wird unten bei den Exceptions beschrieben. Zu beachten ist außerdem, dass das CS:EIP Registerpaar bei Exceptions des Typs Fault immer auf die Instruktion zeigen, die den Fehler verursachte, bei den anderen Exceptions muss dies nicht der Fall sein.
 
 ## Arten von Exceptions
 
@@ -30,26 +30,26 @@ Man teilt Exceptions in drei Arten ein:
 
 | Vektor | Bezeichnung | Typ | Fehlercode |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------ |
-| 0x00 | \#DE - [Divide by Zero](https://github.com/lowlevel-eu/wiki/wiki/Exception#divide-by-zero "Exception") | Fault | nein |
-| 0x01 | \#DB - [Debug](https://github.com/lowlevel-eu/wiki/wiki/Exception#debug "Exception") | Fault/Trap | nein |
-| 0x02 | \#NMI - [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt") | \- | nein |
-| 0x03 | \#BP - [Breakpoint](https://github.com/lowlevel-eu/wiki/wiki/Exception#breakpoint "Exception") | Trap | nein |
-| 0x04 | \#OF - [Overflow](https://github.com/lowlevel-eu/wiki/wiki/Exception#overflow "Exception") | Trap | nein |
-| 0x05 | \#BR - [Bound Range](https://github.com/lowlevel-eu/wiki/wiki/Exception#bound-range "Exception") | Fault | nein |
-| 0x06 | \#UD - [Invalid Opcode](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-opcode "Exception") | Fault | nein |
-| 0x07 | \#NM - [Device Not Available](https://github.com/lowlevel-eu/wiki/wiki/Exception#device-not-available "Exception") | Fault | nein |
-| 0x08 | \#DF - [Double Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#double-fault "Exception") | Abort | ja |
-| 0x09 | [Coprocessor Segment Overrun](https://github.com/lowlevel-eu/wiki/wiki/Exception#coprocessor-segment-overrun "Exception") | \- | nein |
-| 0x0a | \#TS - [Invalid TSS](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-tss "Exception") | Fault | ja |
-| 0x0b | \#NP - [Segment not Present](https://github.com/lowlevel-eu/wiki/wiki/Exception#segment-not-present "Exception") | Fault | ja |
-| 0x0c | \#SS - [Stack Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#stack-fault "Exception") | Fault | ja |
-| 0x0d | \#GP - [General Protection](https://github.com/lowlevel-eu/wiki/wiki/Exception#general-protection "Exception") | Fault | ja |
-| 0x0e | \#PF - [Page Fault](https://github.com/lowlevel-eu/wiki/wiki/Exception#page-fault "Exception") | Fault | ja |
+| 0x00 | \#DE - [Divide by Zero](Exception#divide-by-zero "Exception") | Fault | nein |
+| 0x01 | \#DB - [Debug](Exception#debug "Exception") | Fault/Trap | nein |
+| 0x02 | \#NMI - [Non Maskable Interrupt](Non-Maskable-Interrupt "Non Maskable Interrupt") | \- | nein |
+| 0x03 | \#BP - [Breakpoint](Exception#breakpoint "Exception") | Trap | nein |
+| 0x04 | \#OF - [Overflow](Exception#overflow "Exception") | Trap | nein |
+| 0x05 | \#BR - [Bound Range](Exception#bound-range "Exception") | Fault | nein |
+| 0x06 | \#UD - [Invalid Opcode](Exception#invalid-opcode "Exception") | Fault | nein |
+| 0x07 | \#NM - [Device Not Available](Exception#device-not-available "Exception") | Fault | nein |
+| 0x08 | \#DF - [Double Fault](Exception#double-fault "Exception") | Abort | ja |
+| 0x09 | [Coprocessor Segment Overrun](Exception#coprocessor-segment-overrun "Exception") | \- | nein |
+| 0x0a | \#TS - [Invalid TSS](Exception#invalid-tss "Exception") | Fault | ja |
+| 0x0b | \#NP - [Segment not Present](Exception#segment-not-present "Exception") | Fault | ja |
+| 0x0c | \#SS - [Stack Fault](Exception#stack-fault "Exception") | Fault | ja |
+| 0x0d | \#GP - [General Protection](Exception#general-protection "Exception") | Fault | ja |
+| 0x0e | \#PF - [Page Fault](Exception#page-fault "Exception") | Fault | ja |
 | 0x0f | *Reserviert* | \- | \- |
-| 0x10 | \#MF - [x87 Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#x87-floating-point "Exception") | Fault | nein |
-| 0x11 | \#AC - [Alignment Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#alignment-check "Exception") | Fault | ja |
-| 0x12 | \#MC - [Machine Check](https://github.com/lowlevel-eu/wiki/wiki/Exception#machine-check "Exception") | Abort | nein |
-| 0x13 | \#XF - [SIMD Floating Point](https://github.com/lowlevel-eu/wiki/wiki/Exception#simd-floating-point "Exception") | Fault | nein |
+| 0x10 | \#MF - [x87 Floating Point](Exception#x87-floating-point "Exception") | Fault | nein |
+| 0x11 | \#AC - [Alignment Check](Exception#alignment-check "Exception") | Fault | ja |
+| 0x12 | \#MC - [Machine Check](Exception#machine-check "Exception") | Abort | nein |
+| 0x13 | \#XF - [SIMD Floating Point](Exception#simd-floating-point "Exception") | Fault | nein |
 | 0x14-0x1d | *Reserviert* | \- | \- |
 | 0x1e | \#SX - Security-sensitive event in Host | \- | ja |
 | 0x1f | *Reserviert* | \- | \- |
@@ -62,11 +62,11 @@ Tritt bei den DIV und IDIV Instruktionen auf, wenn der Teiler Null ist.
 
 ### Debug
 
-Wird durch die [Debug Register](https://github.com/lowlevel-eu/wiki/wiki/Debug-Register "Debug Register") gesteuert.
+Wird durch die [Debug Register](Debug-Register "Debug Register") gesteuert.
 
 ### Non Maskable Interrupt
 
-Das ist nicht wirklich eine Exception sondern eine Art externer Interrupt der aber nicht durch das IE-Flag gesperrt werden kann. Genauere Infos: [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt").
+Das ist nicht wirklich eine Exception sondern eine Art externer Interrupt der aber nicht durch das IE-Flag gesperrt werden kann. Genauere Infos: [Non Maskable Interrupt](Non-Maskable-Interrupt "Non Maskable Interrupt").
 
 ### Breakpoint
 
@@ -138,19 +138,19 @@ Die CPU übergibt zusätzlich noch einen Errorcode auf dem Stack:
 | 3 | Wenn gesetzt, dann hatte das Reserved-Feld den Wert 1 |
 | 4 | Wenn gesetzt, dann wurde der Fault durch einen Zugriff auf Code ausgelöst, andernfalls auf Daten |
 
-Außerdem übergibt die CPU im [CR2](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") die Adresse, auf die zugegriffen wurde.
+Außerdem übergibt die CPU im [CR2](Control-Register "Control Register") die Adresse, auf die zugegriffen wurde.
 
 #### Planmäßiger Einsatz des Page Faults
 
 Der Page Fault ist oftmals nicht auf einen wirklichen Fehler zurückzuführen, sondern wird planmäßig eingesetzt.
 
-Wenn bei aktiviertem [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") eine Speicherseite nicht zugegriffen werden kann, kann das beispielsweise daran liegen, dass diese Seite auf die Festplatte ausgelagert worden ist. In diesem Fall lädt der Kernel die Seite wieder in den Speicher und springt zurück in das Programm. Diese Methode bezeichnet man als [Swapping](https://github.com/lowlevel-eu/wiki/wiki/Swapping "Swapping").
+Wenn bei aktiviertem [Paging](Paging "Paging") eine Speicherseite nicht zugegriffen werden kann, kann das beispielsweise daran liegen, dass diese Seite auf die Festplatte ausgelagert worden ist. In diesem Fall lädt der Kernel die Seite wieder in den Speicher und springt zurück in das Programm. Diese Methode bezeichnet man als [Swapping](Swapping "Swapping").
 
 Eine weitere Anwendungsmöglichkeit ist Copy on Write. Es kommt zum Einsatz, wenn ganze Pages kopiert werden - z.B. bei unixoiden Systemen bei fork(), dem Klonen von Prozessen. Dabei werden alle zu kopierenden Seiten zunächst nicht wirklich kopiert, sondern sowohl im alten als auch neuen Prozess als schreibgeschützt markiert. Erst bei Bedarf, also wenn sich die Originalpage und Kopie zum ersten Mal unterscheiden, wird wirklich kopiert: Beim ersten Schreibzugriff auf eine solche Seite wird ein Page Fault abgefangen (der ausgelöst wird, weil der Bereich schreibgeschützt ist) und eine zweite Page für die Kopie alloziert.
 
 ### x87 Floating Point
 
-Die FPU kann unter bestimmten Bedingungen, etwa Überläufe des Register-Stacks, Ausnahmen auslösen, sofern diese im Steuerregister der FPU nicht maskiert sind. Ist das NE-Bit in [CR0](https://github.com/lowlevel-eu/wiki/wiki/Control-Register#cr0 "Control Register") gesetzt, so geschieht dies in Form dieser Ausnahme, andernfalls in Form von IRQ 13 über den PIC.
+Die FPU kann unter bestimmten Bedingungen, etwa Überläufe des Register-Stacks, Ausnahmen auslösen, sofern diese im Steuerregister der FPU nicht maskiert sind. Ist das NE-Bit in [CR0](Control-Register#cr0 "Control Register") gesetzt, so geschieht dies in Form dieser Ausnahme, andernfalls in Form von IRQ 13 über den PIC.
 
 ### Alignment Check
 
@@ -162,7 +162,7 @@ Wenn auf nicht ausgerichtete Daten zugegriffen wird und das AM Bit in CR0 sowie 
 
 ### SIMD Floating Point
 
-Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit gesetzt ist, so löst eine 128-Bit Floating Point Exception diese Exception aus. Ist das Exception Mask Bit gesetzt, so wird keine Exception ausgelöst. Ist CR4.OSXMMEXCPT gelöscht, so wird statt der SIMD Floating Point Exception eine [Invalid Opcode Exception](https://github.com/lowlevel-eu/wiki/wiki/Exception#invalid-opcode "Exception") ausgelöst.
+Wenn das Exception Mask Bit in MXCSR gelöscht ist und das CR4.OSXMMEXCPT Bit gesetzt ist, so löst eine 128-Bit Floating Point Exception diese Exception aus. Ist das Exception Mask Bit gesetzt, so wird keine Exception ausgelöst. Ist CR4.OSXMMEXCPT gelöscht, so wird statt der SIMD Floating Point Exception eine [Invalid Opcode Exception](Exception#invalid-opcode "Exception") ausgelöst.
 
 ## Weblinks
 

@@ -1,6 +1,6 @@
 # PSE
 
-Weiterleitung: [Page Size Extension](https://github.com/lowlevel-eu/wiki/wiki/Page-Size-Extension)
+Weiterleitung: [Page Size Extension](Page-Size-Extension)
 
 ---
 

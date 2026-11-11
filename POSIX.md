@@ -10,11 +10,11 @@ POSIX (**P**ortable **O**perating **S**ystem **I**nterface) ist ein Standard, de
 
 Die Spezifikation der Benutzer- und Software-Schnittstelle ist in vier Teile unterteilt:
 
-- Basis-Definitionen (POSIX.1/IEEE 1003.1-2001): Eine Liste der im Standard benutzten Konventionen und Definitionen, zusätzlich noch eine Liste der bereitzustellenden [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")-Headerdateien
-- Kommandozeileninterpreter und Hilfsprogramme (POSIX.2/IEEE 1003.1-2001): Eine Liste der Hilfsprogramme und der [Kommandozeileninterpreter](https://github.com/lowlevel-eu/wiki/wiki/Shell "Kommandozeileninterpreter")
+- Basis-Definitionen (POSIX.1/IEEE 1003.1-2001): Eine Liste der im Standard benutzten Konventionen und Definitionen, zusätzlich noch eine Liste der bereitzustellenden [C](C "C")-Headerdateien
+- Kommandozeileninterpreter und Hilfsprogramme (POSIX.2/IEEE 1003.1-2001): Eine Liste der Hilfsprogramme und der [Kommandozeileninterpreter](Shell "Kommandozeileninterpreter")
 - Echtzeiterweiterungen (POSIX.4/IEEE 1003.1b-1993/IEEE 1003.1d-1999)
 - Thread-Erweiterungen (POSIX.4a/IEEE 1003.1c-1994)
-- System-Schnittstelle: eine Liste der C-[Systemaufrufe](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall"), die unterstützt werden müssen
+- System-Schnittstelle: eine Liste der C-[Systemaufrufe](Syscall "Syscall"), die unterstützt werden müssen
 
 ## Weblinks
 

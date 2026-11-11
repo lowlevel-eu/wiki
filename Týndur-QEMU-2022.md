@@ -1,6 +1,6 @@
 # Týndur/QEMU
 
-Weiterleitung: [Týndur/Qemu](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-Qemu)
+Weiterleitung: [Týndur/Qemu](T%C3%BDndur-Qemu)
 
 ---
 

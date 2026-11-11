@@ -19,7 +19,7 @@ Natürlich bist aber **du** aufgerufen, ebenfalls mitzuarbeiten:
 - Du weißt etwas zu einem Thema, zu dem es noch gar keinen Artikel gibt?
 
   
-Dann melde dich an, falls du das noch nicht getan hast, und hilf mit! Für Fragen komm in den [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC"), genauer im euIRC in den Channel \#lost oder stell eine Frage im [Forum](https://lowlevel-eu.github.io/forum/boards/1/index.html) (Oder direkt [hier](https://lowlevel-eu.github.io/forum/topics/2240/index.html)).
+Dann melde dich an, falls du das noch nicht getan hast, und hilf mit! Für Fragen komm in den [IRC](IRC "IRC"), genauer im euIRC in den Channel \#lost oder stell eine Frage im [Forum](https://lowlevel-eu.github.io/forum/boards/1/index.html) (Oder direkt [hier](https://lowlevel-eu.github.io/forum/topics/2240/index.html)).
 
 ---
 

@@ -1,6 +1,6 @@
 # Local Advanced Programmable Interrupt Controller
 
-Der **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Controller**) nimmt [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") vom [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (oder auch vom [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC")) und anderen prozessorinternen Einheiten an und leitet diese an den Prozessorkern zum Abarbeiten weiter. Außerdem ist es nur über den LAPIC möglich [IPIs](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt "IPI") zu senden und zu empfangen.
+Der **LAPIC** oder **Local APIC** (= **Local Advanced Programmable Interrupt Controller**) nimmt [Interrupts](Interrupt "Interrupt") vom [I/O APIC](I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (oder auch vom [PIC](Programmable-Interrupt-Controller "PIC")) und anderen prozessorinternen Einheiten an und leitet diese an den Prozessorkern zum Abarbeiten weiter. Außerdem ist es nur über den LAPIC möglich [IPIs](Interprocessor-Interrupt "IPI") zu senden und zu empfangen.
 
 ## Register
 
@@ -12,8 +12,8 @@ Die Register des *Local APIC* sind in den physischen Speicher eingeblendet. Jede
 
 | Offset | r/w | Größe (Bit) | Abkürzung | Name des Registers |
 | ------------------ | ----- | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0x0020 | r/w | 32 |  | [Local APIC ID Register](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller#local-apic-id-register "LAPIC") |
-| 0x0030 | r | 32 |  | [Local APIC Version Register](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller#local-apic-version-register "LAPIC") |
+| 0x0020 | r/w | 32 |  | [Local APIC ID Register](Local-Advanced-Programmable-Interrupt-Controller#local-apic-id-register "LAPIC") |
+| 0x0030 | r | 32 |  | [Local APIC Version Register](Local-Advanced-Programmable-Interrupt-Controller#local-apic-version-register "LAPIC") |
 | 0x0080 | r/w | 32 | TPR | Task Priority Register |
 | 0x0090 | r | 32 | APR | Arbitration Priority Register ¹ |
 | 0x00A0 | r | 32 | PPR | Processor Priority Register |
@@ -25,7 +25,7 @@ Die Register des *Local APIC* sind in den physischen Speicher eingeblendet. Jede
 | 0x0180<br>0x01F0 | r | 256 | TMR | Trigger Mode Register |
 | 0x0200<br>0x0270 | r | 256 | IRR | Interrupt Request Register |
 | 0x0280 | r | 32 |  | Error Status Register |
-| 0x0300<br>0x0310 | r/w | 64 | ICR | [Interrupt Command Register](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "LAPIC") |
+| 0x0300<br>0x0310 | r/w | 64 | ICR | [Interrupt Command Register](Local-Advanced-Programmable-Interrupt-Controller "LAPIC") |
 | 0x0320 | r/w | 32 |  | LVT Timer Register |
 | 0x0330 | r/w | 32 |  | LVT Thermal Sensor Register ² |
 | 0x0340 | r/w | 32 |  | LVT Performance Monitoring Counters Register ³ |
@@ -89,7 +89,7 @@ Das Interrupt Command Register wird verwendet um IPIs zu versenden.
 
 ### physische Adresse
 
-Die physische Adresse der Register kann entweder aus der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") der *Intel Multiprocessor Specification* oder über das [MSR](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register "MSR") 0x001B ausgelesen werden.
+Die physische Adresse der Register kann entweder aus der [Configuration Table](Symmetrisches-Multiprozessorsystem#configuration-table "SMP") der *Intel Multiprocessor Specification* oder über das [MSR](Machine-Specific-Register "MSR") 0x001B ausgelesen werden.
 
 ### Initialisierung
 
@@ -113,7 +113,7 @@ Ein *End of Interrupt* (EOI) wird dem *Local APIC* signalisiert, in dem man in d
 
 ## Timer
 
-Der *Local APIC* besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "PIT") oder der Real-time Clock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (siehe auch [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")) oder mit dem [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dem PIC verbunden und damit nur an den [BSP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#unterteilung-der-prozessoren "Symmetrisches Multiprozessorsystem") angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
+Der *Local APIC* besitzt einen sehr genauen Timer, welcher eigentlich allen anderen Timern wie dem [PIT](Programmable-Interval-Timer "PIT") oder der Real-time Clock vorgezogen werden sollte. Wenn das System mit mehreren Prozessoren (siehe auch [SMP](Symmetrisches-Multiprozessorsystem "SMP")) oder mit dem [I/O APIC](I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC") (Symmetric Mode) läuft, dann ist er eigentlich die einzige Wahl, denn der PIT ist meistens nur mit dem PIC verbunden und damit nur an den [BSP](Symmetrisches-Multiprozessorsystem#unterteilung-der-prozessoren "Symmetrisches Multiprozessorsystem") angeschlossen. Er kann somit nicht effizient für SMP verwendet werden.
 
 ### Register
 

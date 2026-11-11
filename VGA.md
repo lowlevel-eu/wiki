@@ -1,6 +1,6 @@
 # VGA
 
-Weiterleitung: [Video Graphics Array](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array)
+Weiterleitung: [Video Graphics Array](Video-Graphics-Array)
 
 ---
 

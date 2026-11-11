@@ -2,11 +2,11 @@
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| « [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
+| « [Teil 1 - Entwicklungsumgebung](Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
 
 ## Ziel
 
-Dieser Artikel versucht, in aller Kürze zumindest die Grundlagen der Assemblerprogrammierung für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") zu vermitteln. Ganz ohne Assembler kommt man bei der Betriebssystemprogrammierung nicht aus, deswegen ist ein Grundverständnis dafür nötig.
+Dieser Artikel versucht, in aller Kürze zumindest die Grundlagen der Assemblerprogrammierung für [x86](X86 "X86") zu vermitteln. Ganz ohne Assembler kommt man bei der Betriebssystemprogrammierung nicht aus, deswegen ist ein Grundverständnis dafür nötig.
 
 An dieser Stelle sei angemerkt, dass es mehrere verschiedene Assembler-Varianten gibt. Wir verwenden hier die AT&T-Syntax, die vom GNU-Assembler unterstützt wird.
 
@@ -243,7 +243,7 @@ Bei gcc sollte die Assemblerdatei unbedingt die Endung .S (mit großem S) haben.
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| « [Teil 1 - Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
+| « [Teil 1 - Entwicklungsumgebung](Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung") | **Navigation** | [Teil 3 - Trockenübungen](Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") » |
 
 ---
 

@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Ulrich Geis |
 | Akt. Version: | 5.0 beta |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Proprietär |
+| [Lizenz](Lizenzen "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | ASM |
 | API: | BGOS API |
 | Binärformat: | \- |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 [BGOS](http://www.beepsoft.de)

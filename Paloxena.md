@@ -2,17 +2,17 @@
 
 | Paloxena |  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/8304ee34a07d9485b310.png) |  |
+| [<img src="assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](assets/8304ee34a07d9485b310.png) |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | — |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |
+| [Lizenz](Lizenzen "Lizenzen"): | [GPL](Lizenzen "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolith |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [i386](X86 "X86"), [ARM](ARM "ARM") |
+| [Kernelart](Kernel "Kernel"): | Monolith |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | Bis kernel3 POSIX-ähnlich; ab 3.5 nativ mit POSIX-Wrappern |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | — |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | — |
 | Homepage |  |
 
 [Gitorious](http://gitorious.org/paloxena)  
@@ -27,7 +27,7 @@ paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyX
 
 ### Programme
 
-- [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") 1.69.08: Ein Assembler mit Intelsyntax
+- [FASM](Flat-Assembler "FASM") 1.69.08: Ein Assembler mit Intelsyntax
 - µsh 0.002: Die Shell (portiert von MyXomycota)
 - Paloxoreutils:
   - ls
@@ -43,7 +43,7 @@ paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyX
 
 Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration):
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/39df70b465c2797ed44e.png)
+[<img src="assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](assets/39df70b465c2797ed44e.png)
 
 ## paloxena2
 
@@ -57,7 +57,7 @@ Erwähnenswert ist das geplante Syscallinterface. Nachdem ich in paloxena1 berei
 
 ### ppp
 
-Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Compilieren für Linux ist) gibt es auch ein eigenes Repo, genannt „ppp“, kurz für „Paloxena's Patched Packages“ (ja, der Name klingt absichtlich so bescheuert). Es ist lbuilds von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") nachempfunden. „Portiert“ wurden bisher folgende Programme (wenn auch mehr schlecht als recht):
+Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Compilieren für Linux ist) gibt es auch ein eigenes Repo, genannt „ppp“, kurz für „Paloxena's Patched Packages“ (ja, der Name klingt absichtlich so bescheuert). Es ist lbuilds von [týndur](T%C3%BDndur "Týndur") nachempfunden. „Portiert“ wurden bisher folgende Programme (wenn auch mehr schlecht als recht):
 
 - *dash* 0.5.5.1 (Version der Almquist Shell)
 - *FASM* 1.69.11 (s. o.)
@@ -74,7 +74,7 @@ Ja. Es ist schon wieder passiert. Auch paloxena2 war zu kaputt, also gibt es nun
 
 Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwiegenden Fehler anzeigende Farbe ist also nicht mehr pink oder violett, sondern orange, meine Lieblingsfarbe (#FF4000, um genau zu sein). Hier ein entsprechender Screenshot:
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/48d49f3eb3ec3b0a95ae.png" width="720" height="400" alt="Paloxenaosod.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/48d49f3eb3ec3b0a95ae.png)
+[<img src="assets/48d49f3eb3ec3b0a95ae.png" width="720" height="400" alt="Paloxenaosod.png" />](assets/48d49f3eb3ec3b0a95ae.png)
 
   
 
@@ -86,7 +86,7 @@ Damit das nicht alles war, hier noch ein Screenshot von der GBA-Version direkt n
 
 ![pal4-gba1.png](http://xanclic.bplaced.net/imgs/pal4-gba1.png)
 
-Wie man evtl. erkennen kann, unterstützt paloxena4 wie auch seine Vorgänger [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), bisher allerdings nur CDI.audio (Man beachte das kleine „cdi.audio“ in Zeile 9). Für den GBA existiert auch ein entsprechender Treiber.
+Wie man evtl. erkennen kann, unterstützt paloxena4 wie auch seine Vorgänger [CDI](Common-Driver-Interface "CDI"), bisher allerdings nur CDI.audio (Man beachte das kleine „cdi.audio“ in Zeile 9). Für den GBA existiert auch ein entsprechender Treiber.
 
 ---
 

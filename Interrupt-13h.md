@@ -1,6 +1,6 @@
 # Interrupt 13h
 
-Der BIOS Interrupt 13h dient dem einfachen Zugriff auf Festplatten und Diskettenlaufwerke. Diese sind nur im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") verfügbar und für den [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") da.
+Der BIOS Interrupt 13h dient dem einfachen Zugriff auf Festplatten und Diskettenlaufwerke. Diese sind nur im [Real Mode](Real-Mode "Real Mode") verfügbar und für den [Bootloader](Bootloader "Bootloader") da.
 
 ## Die wichtigsten Funktionen
 

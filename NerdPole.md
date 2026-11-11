@@ -1,6 +1,6 @@
 # NerdPole
 
-Weiterleitung: [FROST](https://github.com/lowlevel-eu/wiki/wiki/FROST)
+Weiterleitung: [FROST](FROST)
 
 ---
 

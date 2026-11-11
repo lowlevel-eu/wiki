@@ -1,6 +1,6 @@
 # GillesOS
 
-Weiterleitung: [KyrOS](https://github.com/lowlevel-eu/wiki/wiki/KyrOS)
+Weiterleitung: [KyrOS](KyrOS)
 
 ---
 

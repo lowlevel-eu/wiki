@@ -11,14 +11,14 @@ Recht interessantes Projekt, aber keine Homepage, letzter Page-Edit aus 2008, ke
 |  |  |
 | Entwickler: | [Nooooooooos](https://lowlevel-eu.github.io/wiki/pages/1457/index.html "Benutzer:Nooooooooos") |
 | Akt. Version: | momentan keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | momentan keine |
+| [Lizenz](Lizenzen "Lizenzen"): | momentan keine |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Microkernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler |
 | API: | Zugriff auf laufenden Module |
 | Binärformat: | eigenes |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing, Shared Memory |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing, Shared Memory |
 | Homepage |  |
 
 momentan keine
@@ -49,17 +49,17 @@ Die Sourcen des Kernels und der inneren Module meines Systemes werden sobald sie
 
 Ich hoffe demnächst ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
 
-- den vollständigen TriviaOS-[Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")1.0 mit funktionierendem [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC")
-- [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen ---\> vollständig implementiert
+- den vollständigen TriviaOS-[Kernel](Kernel "Kernel")1.0 mit funktionierendem [IPC](Interprozesskommunikation "IPC")
+- [SMP](Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen ---\> vollständig implementiert
 - Task und Speicherverwaltung
-- [Dateisystemtreiber](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem")
+- [Dateisystemtreiber](Dateisystem "Dateisystem")
 - Diskettentreiber
-- [Tastaturtreiber](https://github.com/lowlevel-eu/wiki/wiki/Tastatur "Tastatur")
-- [Vesatreiber](https://github.com/lowlevel-eu/wiki/wiki/Video-Electronics-Standards-Association "Vesa")
-- einfache [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI")
-- [Maustreiber](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
+- [Tastaturtreiber](Tastatur "Tastatur")
+- [Vesatreiber](Video-Electronics-Standards-Association "Vesa")
+- einfache [GUI](Graphical-User-Interface "GUI")
+- [Maustreiber](Maus "Maus")
 - Test-Tool
-- Dokumentation der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") und der Ansprechung der ersten [Treibermodule](https://github.com/lowlevel-eu/wiki/wiki/Treiber "Treiber")
+- Dokumentation der [IPC](Interprozesskommunikation "IPC") und der Ansprechung der ersten [Treibermodule](Treiber "Treiber")
 
 Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
@@ -67,12 +67,12 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 Das nächste Release wird in etwa die folgenden Features beinhalten:
 
-- vollständige [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") mit allen geplanten Grafik-Elementen
+- vollständige [GUI](Graphical-User-Interface "GUI") mit allen geplanten Grafik-Elementen
 - Fesplattenfähigkeit
 - CD Unterstützung
 - getrennte OS-Initialisierung durch BIOS- oder EFI-Funktionen
 - Prozessverwaltung
-- I/O-Verwaltung mit [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
+- I/O-Verwaltung mit [APIC](Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
 - differenzierteres Exception Handling
 
 ---

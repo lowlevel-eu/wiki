@@ -1,6 +1,6 @@
 # Pipe
 
-Eine Pipe bezeichnet einen gepufferten Datenstrom zwischen zwei [Prozessen](https://github.com/lowlevel-eu/wiki/wiki/Prozess "Prozess"), dieser Strom kann uni- oder bidirektional sein. Oft wird eine Pipe verwendet, um die Standardausgabe eines Prozesses auf die Standardeingabe eines anderen zu lenken. Sie ist somit ein Mittel zur [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
+Eine Pipe bezeichnet einen gepufferten Datenstrom zwischen zwei [Prozessen](Prozess "Prozess"), dieser Strom kann uni- oder bidirektional sein. Oft wird eine Pipe verwendet, um die Standardausgabe eines Prozesses auf die Standardeingabe eines anderen zu lenken. Sie ist somit ein Mittel zur [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation").
 
 ## Verwendung
 

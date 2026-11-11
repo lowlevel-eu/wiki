@@ -2,39 +2,39 @@
 
 | niwohlOS<br>*"In God we trust – Da hilft nur noch beten"* |  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/d452b9d1e097dd800cda.png" width="181" height="177" alt="NiwohlOS.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/927c1108fe37cd71b07b.png) |  |
+| [<img src="assets/d452b9d1e097dd800cda.png" width="181" height="177" alt="NiwohlOS.png" />](assets/927c1108fe37cd71b07b.png) |  |
 | Entwickler: | [DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[SchreibeNieCode](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.1.0 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT/X11 |
+| [Lizenz](Lizenzen "Lizenzen"): | MIT/X11 |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")/[x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64")/[ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Micro](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel")[monolithischer](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") Modular[hybrid](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel "Kernel") |
+| Plattform: | [i386](X86 "X86")/[x86-64](X86-64 "X64")/[ARM](ARM "ARM") |
+| [Kernelart](Kernel "Kernel"): | [Micro](Kernel#mikrokernel "Microkernel")[monolithischer](Kernel#monolithischer-kernel "Monolithischer Kernel") Modular[hybrid](Kernel#makrokernel "Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C, Assembler (Syntax: Intel und Falschrum) |
 | API: | POSIX (nur besser, weil noch kaputter) |
-| Binärformat: | [ZWÖLF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | V.O.M.I.T. (**V**erbose **O**bject-oriented **M**achine-readable **I**nformation **T**ransfer) |
+| Binärformat: | [ZWÖLF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | V.O.M.I.T. (**V**erbose **O**bject-oriented **M**achine-readable **I**nformation **T**ransfer) |
 | Homepage |  |
 
 <http://www.niwohlos.org>
 
 *„Ich verstehe Ihre Frage so, dass es Benutzer gibt, die wünschen, dass wir die Entwickler von niwohlOS dazu mobilisieren, um einen Paketfilter zu implementieren. Mir ist nicht bekannt, dass eine solche Absicht besteht. Die Entwickler kooperieren zur Sicherung von niwohlOS eifrig mit dem BSI, und ihre Arbeitskraft wird dafür voll eingesetzt. Niemand hat die Absicht, eine Firewall zu errichten!“*  
 
-— [Linus Torvalds](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), der alte [Kommunist](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
+— [Linus Torvalds](Linux "Linux"), der alte [Kommunist](Lizenzen#gnu-general-public-license "Lizenzen"), äußert sich zu niwohlOS.
 
   
-**niwohlOS** (hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
+**niwohlOS** (hochprofessionellisch für: Niveau-L-OS) ist ein hochmodernes Betriebssystem für die x86-Architektur. Es wird von bekannten hochprofessionellen Entwicklern aus dem [IRC](IRC "IRC")-Channel \#niwohlos im euIRC entwickelt.
 
-Angesichts der aufkommenden Hochphase alternativ-alternativer Hipster-Architekturen wie [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") sieht sich natürlich auch das Kollektiv um niwohlOS gezwungen diesem Anspruch der Gesellschaft Folge zu leisten und erhöht die sonst schon unzähligen Arbeitsstunden noch einmal um für hochoptimiertesten Code zu sorgen.
+Angesichts der aufkommenden Hochphase alternativ-alternativer Hipster-Architekturen wie [ARM](ARM "ARM") sieht sich natürlich auch das Kollektiv um niwohlOS gezwungen diesem Anspruch der Gesellschaft Folge zu leisten und erhöht die sonst schon unzähligen Arbeitsstunden noch einmal um für hochoptimiertesten Code zu sorgen.
 
 ## Inside niwohlOS
 
-Im folgenden wird kurz im hochreießrischen und hochprofesionelen Marketinghochdeutsch auch für Laien hochverständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel höheren) tieferen Einblick sei [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
+Im folgenden wird kurz im hochreießrischen und hochprofesionelen Marketinghochdeutsch auch für Laien hochverständlich beschrieben, wie niwohlOS funktioniert. Für einen (sehr viel höheren) tieferen Einblick sei [NiwohlOS/Deep_inside](NiwohlOS-Deep-inside "NiwohlOS/Deep inside") ans Herz gelegt.
 
 ### Bootvorgang
 
 #### Phase Ia: GRUB
 
-Als Bootloader wird der hochprofessionelle Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für jedes Betriebssystem. GRUB richtet eine standardisierte und standartisierte Umgebung ein und übergibt der zweiten Phase, dem niwohunloader, alle nötigen Daten, die sie benötigt. Auch lädt GRUB dank hochperformanter Lademechnismen unsere beiden Kernel stoiber32 und stoiber64 in den Speicher.
+Als Bootloader wird der hochprofessionelle Bootloader [GRUB](Grand-Unified-Bootloader "GRUB") verwendet. Dieser wird von zahlreichen professionellen Firmen und Betriebssystemen seit Jahren mit Erfolg eingesetzt und verspricht eine optimale Grundlage für jedes Betriebssystem. GRUB richtet eine standardisierte und standartisierte Umgebung ein und übergibt der zweiten Phase, dem niwohunloader, alle nötigen Daten, die sie benötigt. Auch lädt GRUB dank hochperformanter Lademechnismen unsere beiden Kernel stoiber32 und stoiber64 in den Speicher.
 
 #### Phase II: niwohunloader
 
@@ -66,11 +66,11 @@ Es gibt zwei Sorten von Treibern in niwohlOS: Ring-0-Treiber und Ring-3-Treiber 
 
 #### Interfaces
 
-Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem weltbekannten und von vielen System bereits erfolgreich eingesetzten [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") und dem bewährten [UDI](http://www.spr.germanistik.uni-wuerzburg.de/udi/).
+Das Interface zu Treibern ist dual ausgelegt, als hochprofessioneller und berufserfahrener Treiberprogrammierer hat man somit die Wahl zwischen dem weltbekannten und von vielen System bereits erfolgreich eingesetzten [CDI](Common-Driver-Interface "CDI") und dem bewährten [UDI](http://www.spr.germanistik.uni-wuerzburg.de/udi/).
 
 ##### CDI
 
-Da niwohlOS hochproffesionel und hochoptimiert ist bedient es sich natürlich auch nur hochproffesioneler und hochoptimierter externer Ressourcen. Darum implementiert niwohlOS [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI"), das Common Driver Interface. Damit wird es möglich Gebrauch von hochproffesionelen und hochoptimierten Treibern zu machen und selbst solche zu entwickeln.
+Da niwohlOS hochproffesionel und hochoptimiert ist bedient es sich natürlich auch nur hochproffesioneler und hochoptimierter externer Ressourcen. Darum implementiert niwohlOS [CDI](Common-Driver-Interface "CDI"), das Common Driver Interface. Damit wird es möglich Gebrauch von hochproffesionelen und hochoptimierten Treibern zu machen und selbst solche zu entwickeln.
 
 ##### UDI
 
@@ -79,9 +79,9 @@ Die Vorteile liegen ganz klar auf der Hand:
 - Unterstützung durch die Industrie aufgrund der einheitlichen ABI und der damit verbundenen Möglichkeit, Closed-Source-Treiber zu implementieren. Die Vertreter großer Hardwarehersteller wünschen sich schon seit langem einen einheitlichen Weg, alle Hobbybetriebssysteme (was niwohlOS eigentlich nicht ist) mit Treibern für ihre Hardware zu versorgen. Dies ist dank UDI nun endlich möglich.
 - Unterstützung durch die extrem kompetenten Entwickler von osdev.org. Diese bereichern die Spezifikation immer wieder durch lebhafte Diskussionen. Außerdem werden sie nicht müde zu betonen, welch großartige Leistung von UDI-Treibern aufgrund der bisher von anderen Interfaces unübertroffenen Skalierbarkeit erreicht werden kann.
 
-### [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation")
+### [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation")
 
-Wie es sich für jedes anständige micromonolithische Modularhybridsystem gehört, implementiert natürlich auch niwohlOS einen Mechanismus der Interprozesskommunikation. Dabei wird, inspiriert von [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur"), eine abgewandelte Form des [Remote Procedure Calls](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") eingesetzt: In die Kernel wird eine Untermenge eines generischen XML-Parsers implementiert, welcher XML-RPCs, welche durch Sockets übertragen werden, parst und dementsprechend an ein Eventsystem weiterleitet, welches von da aus alles weitere koordiniert.
+Wie es sich für jedes anständige micromonolithische Modularhybridsystem gehört, implementiert natürlich auch niwohlOS einen Mechanismus der Interprozesskommunikation. Dabei wird, inspiriert von [týndur](T%C3%BDndur "Týndur"), eine abgewandelte Form des [Remote Procedure Calls](Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") eingesetzt: In die Kernel wird eine Untermenge eines generischen XML-Parsers implementiert, welcher XML-RPCs, welche durch Sockets übertragen werden, parst und dementsprechend an ein Eventsystem weiterleitet, welches von da aus alles weitere koordiniert.
 
 ### GUI
 
@@ -101,7 +101,7 @@ PrettyOS wird in Form eines didaktisch ausgeklügelten hochoptimierten Syscall-R
 
 ## Die Entwickler
 
-Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hocherfahrenen Informatikern mit jahrelanger Programmiererfahrung, welche sicherlich zu den zukünftigen Leistungsträgern gehören, und DickHuuhn. Die Entwickler genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
+Das Entwicklerteam besteht aus auf dem Gebiet der Betriebssystementwicklung hocherfahrenen Informatikern mit jahrelanger Programmiererfahrung, welche sicherlich zu den zukünftigen Leistungsträgern gehören, und DickHuuhn. Die Entwickler genießen zur Zeit eine Ausbildung bei der Elite der Betriebssystementwicklung im IRC-Channel \#lost im euIRC. Durch monatelange Arbeit an dem hochkomplexen Betriebssystem [týndur](T%C3%BDndur "Týndur") wissen sie, wie ein hochperfomantes und extrem stabiles System aufgebaut sein muss.
 
 ### Niwohlosen Developers
 
@@ -109,15 +109,15 @@ Die [niwohlosen Developers](http://gitorious.org/+niwohlose-developers) sind das
 
 #### XanClic alias Crazy-OS-names
 
-[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") (hochkomplexes Hybridakrobackronym) ist einer der Top-Entwickler von niwohlOS. Er besitzt auf dem Gebiet der Betriebssystementwicklung höchste Kompetenzen, entwickelte er doch schon mehrere Betriebssysteme im Alleingang ([MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota"), [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena")) und reichte schon zahlreiche Patches für [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, wie einen AC97-Treiber, USB-Treiber und die hochkomplexe libmaumau, die es den Anwendern ermöglicht, Mau-Mau zu spielen. XanClic ist für den ~~fragilen~~ soliden Aufbau, das Grundgerüst in niwohlOS zuständig.
+[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") (hochkomplexes Hybridakrobackronym) ist einer der Top-Entwickler von niwohlOS. Er besitzt auf dem Gebiet der Betriebssystementwicklung höchste Kompetenzen, entwickelte er doch schon mehrere Betriebssysteme im Alleingang ([MyXomycota](MyXomycota "MyXomycota"), [Paloxena](Paloxena "Paloxena")) und reichte schon zahlreiche Patches für [týndur](T%C3%BDndur "Týndur") ein, wie einen AC97-Treiber, USB-Treiber und die hochkomplexe libmaumau, die es den Anwendern ermöglicht, Mau-Mau zu spielen. XanClic ist für den ~~fragilen~~ soliden Aufbau, das Grundgerüst in niwohlOS zuständig.
 
 #### DerHartmut alias IAmBackAndWritingSoDamnFuckingShitForNiwohlOS
 
-[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (Nusskuchen) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als „Hobby“ neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwangen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren. Nun ist er allerdings wieder "back to the roots" und arbeitet voller Enthusiasmus an niwohlOS.
+[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") (kein hochkomplexes Hybridakrobackronym) ist ebenfalls einer der Top-Entwickler von niwohlOS. Er besitzt jahrelange Erfahrung auf dem Gebiet der Betriebssystementwicklung und daher beste Reputationen auf diesem Gebiet. Er entwickelte ebenfalls sein eigenes Betriebssystem im Alleingang (Nusskuchen) und arbeitet an einem neuen, hochoptimierten Betriebssystem, quasi als „Hobby“ neben niwohlOS. Er reichte bisher wenige, aber dafür umso wichtigere Patches bei [týndur](T%C3%BDndur "Týndur") ein, darunter zwei hochperformante Interpreter für die wohl wichtigsten Sprachen im industriellen Umfeld, Malbolge und hq9+, er halb-portierte den extrem komplexen Mailclient mutt und implementierte einer der wichtigsten Features unter týndur: lpt moo. Er ist bei niwohlOS für alle ~~kaputten~~ hochoptimierten Stellen zuständig. Seine mannigfaltigen Pflichten in vielfältigen anderen Gebieten zwangen ihn allerdings bisweilen, die entsprechende Arbeit ~~monatelang~~ zeitweilig zu suspendieren. Nun ist er allerdings wieder "back to the roots" und arbeitet voller Enthusiasmus an niwohlOS.
 
 #### SHyx0rmZ alias HardcoreProgger
 
-[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. Er wird oft als „Hardcore-Informatiker“ bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](https://github.com/lowlevel-eu/wiki/wiki/Nuke "Nuke") mit gleich **fünf** Kerneln ausgestattet, um aus jedem erdenklichen System das höchste Maß an Leistung herauszukitzeln. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
+[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") (hochoptimierter Buchstabenkomplex) ist auch einer der Top-Entwickler von niwohlOS. Er programmiert seit sage und schreibe 11 Jahren und weist in diesem Feld höchste Kompetenzen auf. Er wird oft als „Hardcore-Informatiker“ bezeichnet, denn er schafft, was andere nicht schaffen: Er hat sein hochperformantes und hochoptimiertes Betriebssystem [Nuke](Nuke "Nuke") mit gleich **fünf** Kerneln ausgestattet, um aus jedem erdenklichen System das höchste Maß an Leistung herauszukitzeln. Er ist bei niwohlOS für die ganz komplexen Sachen zuständig.
 
 #### DickHuuhn alias DickHuuhn
 
@@ -169,7 +169,7 @@ niwohlOS wird natürlich in C und Assembler geschrieben. Außerdem wird es einen
 
 Es gibt Konkurrenz?
 
-Okay, um ehrlich zu sein: Ja, es gibt ein System. Das System heißt [PrettyOS](https://github.com/lowlevel-eu/wiki/wiki/PrettyOS "PrettyOS") (*Personally retarded ethymology table-tennis, yeah, operating system* (dass es so heißt, ist allerdings nur eine Vermutung!)) und ist ein hochoptimiertes Betriebssystem mit einigen vollkommenen Neuerungen und Innovationen. Welche, das wissen wir auch nicht. Ach ja, und dann gibt es noch dieses „týndur“, aber der stellt ja eher keine Gefahr dar bei genauerer Betrachtung (und nachdem man die rosa-rote Naivitätsbrille abgenommen hat).
+Okay, um ehrlich zu sein: Ja, es gibt ein System. Das System heißt [PrettyOS](PrettyOS "PrettyOS") (*Personally retarded ethymology table-tennis, yeah, operating system* (dass es so heißt, ist allerdings nur eine Vermutung!)) und ist ein hochoptimiertes Betriebssystem mit einigen vollkommenen Neuerungen und Innovationen. Welche, das wissen wir auch nicht. Ach ja, und dann gibt es noch dieses „týndur“, aber der stellt ja eher keine Gefahr dar bei genauerer Betrachtung (und nachdem man die rosa-rote Naivitätsbrille abgenommen hat).
 
 ### Was war an der GUI nochmal so besonders?
 
@@ -259,7 +259,7 @@ Folgende Teile müssen noch implementiert werden:
 
 ## Siehe auch
 
-- [NiwohlOS/Deep_inside](https://github.com/lowlevel-eu/wiki/wiki/NiwohlOS-Deep-inside "NiwohlOS/Deep inside") - ein tieferer Einblick in die Funktionsweise
+- [NiwohlOS/Deep_inside](NiwohlOS-Deep-inside "NiwohlOS/Deep inside") - ein tieferer Einblick in die Funktionsweise
 
 ## Weblinks
 

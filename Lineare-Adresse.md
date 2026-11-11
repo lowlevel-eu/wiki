@@ -1,6 +1,6 @@
 # Lineare Adresse
 
-Weiterleitung: [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging)
+Weiterleitung: [Paging](Paging)
 
 ---
 

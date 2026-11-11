@@ -5,24 +5,24 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.004 (pre-alpha) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Gnu [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") / BSD ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Treiber) |
+| [Lizenz](Lizenzen "Lizenzen"): | Gnu [GPL](Lizenzen "GPL") / BSD ([CDI](Common-Driver-Interface "CDI")-Treiber) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | [Int 0x80](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell")-Scripts |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Keine (bis jetzt) |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| API: | [Int 0x80](Syscall "Syscall") |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF"), [Shell](Shell "Shell")-Scripts |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Keine (bis jetzt) |
 | Homepage |  |
 
 [Sourceforge](http://sourceforge.net/projects/myxomycota)
 
   
-Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") verfügt.
+Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](Betriebssystem "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](Shell "Shell") verfügt.
 
-**HINWEIS:** Dieses Projekt wurde zugunsten von [Paloxena](https://github.com/lowlevel-eu/wiki/wiki/Paloxena "Paloxena") auf unbestimmte Zeit verschoben. Ich konnte das ewige "Das ist kaputt." einfach nicht mehr ertragen. ;-)
+**HINWEIS:** Dieses Projekt wurde zugunsten von [Paloxena](Paloxena "Paloxena") auf unbestimmte Zeit verschoben. Ich konnte das ewige "Das ist kaputt." einfach nicht mehr ertragen. ;-)
 
-**This product includes software developed by the tyndur Project and its contributors.** ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Treiber)
+**This product includes software developed by the tyndur Project and its contributors.** ([CDI](Common-Driver-Interface "CDI")-Treiber)
 
 ## Entwickler
 
@@ -30,7 +30,7 @@ Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - 
 
 ## Das Mountsystem
 
-Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"), wenn sie nicht über [int](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von [Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
+Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem [Kernel](Kernel "Kernel"), wenn sie nicht über [int](Interrupt "Interrupt") 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von [Dateisystemen](Dateisystem "Dateisystem") ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
 
 ### Zugriff auf Netzwerkfunktionen
 
@@ -62,14 +62,14 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Aktuelle Features
 
-- [Multibootkernel](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
-- Präemptives [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
-- Einfache StdCLib (myxlib) mit etwas [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX")
+- [Multibootkernel](Multiboot "Multiboot")
+- Präemptives [Multitasking](Multitasking "Multitasking")
+- Einfache StdCLib (myxlib) mit etwas [POSIX](POSIX "POSIX")
 - Dateisystem: SMXFFS (Small MyXomycota Floppy FS), experimentell FAT32 (beide read-only); MRFS als VFS
-- [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treiber (zumindest ICH)
-- [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") (2 GB pro Prozess)
-- [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Programme
-- [Netzwerkstack](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk"): [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), [ARP](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol "Address Resolution Protocol"), [IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol"), UDP, TCP
+- [AC'97](AC97 "AC97")-Treiber (zumindest ICH)
+- [Paging](Paging "Paging") (2 GB pro Prozess)
+- [ELF](Executable-and-Linking-Format "ELF")-Programme
+- [Netzwerkstack](https://lowlevel-eu.github.io/wiki/pages/1888/index.html "Kategorie:Netzwerk"): [Ethernet](Ethernet "Ethernet"), [ARP](Address-Resolution-Protocol "Address Resolution Protocol"), [IP](Internet-Protocol "Internet Protocol"), UDP, TCP
 - CDI-Interfaces: core, fs, net, storage
 
 ## Wichtigste Programme
@@ -105,7 +105,7 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Syscalls (Auszug)
 
-[Syscalls](https://github.com/lowlevel-eu/wiki/wiki/Syscall "Syscall") geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
+[Syscalls](Syscall "Syscall") geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
 
 | Nummer (eax) | Funktion | Beschreibung |
 | -------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

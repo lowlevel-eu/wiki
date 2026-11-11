@@ -10,7 +10,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Inlineassembler: | Nein |
 | Compiler: | gobjc, Cocoa |
 | Spracheneigenschaften |  |
-| Plattformen: | Mac OS X, [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") |
+| Plattformen: | Mac OS X, [Linux](Linux "Linux") |
 | Beispielkernel in der Sprache: | Siehe unten |
 | Homepage |  |
 
@@ -22,7 +22,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Spracheigenschaften
 
-Primär hat Objective-C als Grundlage [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), welches es um objektorientierte Eigenschaften und Syntax erweitert. Die Syntax ist dabei stark an Smalltalk angelehnt und hebt sich bewusst von den C-Sprachelementen ab. Objective-C implementiert dabei bekannte Elemente der Objektorientierung wie:
+Primär hat Objective-C als Grundlage [C](C "C"), welches es um objektorientierte Eigenschaften und Syntax erweitert. Die Syntax ist dabei stark an Smalltalk angelehnt und hebt sich bewusst von den C-Sprachelementen ab. Objective-C implementiert dabei bekannte Elemente der Objektorientierung wie:
 
 - Klassen
 - Methoden
@@ -31,7 +31,7 @@ Primär hat Objective-C als Grundlage [C](https://github.com/lowlevel-eu/wiki/wi
 
 ## Objective-C als Sprache für ein Betriebssystem
 
-Objective-C eignet sich genauso wie C für die Entwicklung von Betriebssystemen bzw. Kerneln, verfügt allerdings nicht, anders als C, über einen Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), weshalb etwaige Assembler-Arbeiten extern erledigt werden müssen. Um die objektorientierten Eigenschaften von Objective-C zu nutzen bedarf es allerdings einiger Vorarbeiten (TODO ;-).
+Objective-C eignet sich genauso wie C für die Entwicklung von Betriebssystemen bzw. Kerneln, verfügt allerdings nicht, anders als C, über einen Inline-[Assembler](Assembler "Assembler"), weshalb etwaige Assembler-Arbeiten extern erledigt werden müssen. Um die objektorientierten Eigenschaften von Objective-C zu nutzen bedarf es allerdings einiger Vorarbeiten (TODO ;-).
 
   
 
@@ -68,7 +68,7 @@ Hier ein Objective-C-Kernel ohne Objektorientierung:
 
 } \</c\>
 
-Findige Leser des Wikis haben wahrscheinlich gemerkt: Das ist der gleiche Kernel wie im Artikel zu [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"); Objective-C hat als Basis C und somit ist (fast) jedes C-Programm auch ein gültiges Objective-C-Programm. Einzig wird aus
+Findige Leser des Wikis haben wahrscheinlich gemerkt: Das ist der gleiche Kernel wie im Artikel zu [C](C "C"); Objective-C hat als Basis C und somit ist (fast) jedes C-Programm auch ein gültiges Objective-C-Programm. Einzig wird aus
 
     #include <stdio.h>
 
@@ -78,7 +78,7 @@ folgendes:
 
 ### start.S
 
-Hier die Assembler-Startdatei samt [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Header, welche von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") aufgerufen wird und durch welche wir in den Objective-C-Kernel springen: \<asm\> .section .text
+Hier die Assembler-Startdatei samt [Multiboot](Multiboot "Multiboot")-Header, welche von [GRUB](Grand-Unified-Bootloader "GRUB") aufgerufen wird und durch welche wir in den Objective-C-Kernel springen: \<asm\> .section .text
 
 .extern init
 
@@ -105,7 +105,7 @@ mov %esp, %ebp
 
 ### link.ld
 
-Dazu noch das [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker")-Script:
+Dazu noch das [Linker](Linker "Linker")-Script:
 
 ` ENTRY(_start) `
 
@@ -142,7 +142,7 @@ Gebaut wird der Kernel nun wie folgt:
     $ gcc -g -c -m32 -Wall -fno-stack-protector -fno-builtin -nostdlib -nodefaultlibs -c init.m
     $ ld -melf_i386 -Tlink.ld start.o init.o -o objckernel
 
-Dieser kann dann mit [qemu](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") direkt aufgerufen werden (ab Version 0.11.0):
+Dieser kann dann mit [qemu](QEMU "QEMU") direkt aufgerufen werden (ab Version 0.11.0):
 
     $ qemu -kernel objkernel
 

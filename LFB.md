@@ -1,6 +1,6 @@
 # LFB
 
-Weiterleitung: [VESA BIOS Extensions#Linear Frame Buffer](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions#linear-frame-buffer)
+Weiterleitung: [VESA BIOS Extensions#Linear Frame Buffer](VESA-BIOS-Extensions#linear-frame-buffer)
 
 ---
 

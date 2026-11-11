@@ -5,19 +5,19 @@
 |  |  |
 | Entwickler: | Andrew S. Tanenbaum und weitere |
 | Akt. Version: | 3.2 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | 2-Klausel-BSD |
+| [Lizenz](Lizenzen "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), Motorola 68000, Sun SPARC |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") ab Version 3 |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message Passing |
+| Plattform: | [i386](X86 "X86"), Motorola 68000, Sun SPARC |
+| [Kernelart](Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| API: | [POSIX](POSIX "POSIX") ab Version 3 |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing |
 | Homepage |  |
 
 <http://www.minix3.org>
 
-**Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert. Ab Version 3.2 hat [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Support (vorerst als experimentell bezeichnet) in den Kernel Einzug gehalten.
+**Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert. Ab Version 3.2 hat [SMP](Symmetrisches-Multiprozessorsystem "SMP")-Support (vorerst als experimentell bezeichnet) in den Kernel Einzug gehalten.
 
   
 

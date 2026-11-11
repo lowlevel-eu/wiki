@@ -1,6 +1,6 @@
 # CHS
 
-Weiterleitung: [Cylinder Head Sector](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector)
+Weiterleitung: [Cylinder Head Sector](Cylinder-Head-Sector)
 
 ---
 

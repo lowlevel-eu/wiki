@@ -1,6 +1,6 @@
 # Heap
 
-Weiterleitung: [Heapverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Heapverwaltung)
+Weiterleitung: [Heapverwaltung](Heapverwaltung)
 
 ---
 

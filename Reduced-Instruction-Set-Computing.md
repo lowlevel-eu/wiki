@@ -1,12 +1,12 @@
 # Reduced Instruction Set Computing
 
-Das **Reduced Instruction-Set Computing** (englisch, in etwa *Arbeiten mit reduziertem Befehlssatz*, kurz **RISC**) bezeichnet ein Prozessordesign, welches sich dadurch auszeichnet, mit reduziertem und einfacherem Befehlssatz zu arbeiten. Dem entgegen steht das [Complex Instruction-Set Computing](https://github.com/lowlevel-eu/wiki/wiki/Complex-Instruction-Set-Computing "CISC").
+Das **Reduced Instruction-Set Computing** (englisch, in etwa *Arbeiten mit reduziertem Befehlssatz*, kurz **RISC**) bezeichnet ein Prozessordesign, welches sich dadurch auszeichnet, mit reduziertem und einfacherem Befehlssatz zu arbeiten. Dem entgegen steht das [Complex Instruction-Set Computing](Complex-Instruction-Set-Computing "CISC").
 
   
 
 ## Idee
 
-Die Idee hinter RISC steckt darin, mit einem reduzierten und somit optimierten Befehlssatz zu arbeiten, der weniger Anforderungen an CPU und Peripherie stellt und dennoch alle nötigen Aufgaben erfüllen kann sowie auf komplexe Befehle und Befehlsabfolgen zu verzichten. Somit sind einzelne Befehle bzw. Einzelbefehle einfacher und schneller ausführbar, was zu schnelleren Abläufen und einer allgemein schnelleren Abarbeitung führt und somit auch zu einer geringeren Stromaufnahme. Somit findet „der“ RISC (im Sinne vom reduzierten Befehlssatz, deshalb „der“) vor allem in Mikrocomputern und Kleinstelektrogeräte Verwendung. [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-Prozessoren sind ein Beispiel für RISC-Prozessoren.
+Die Idee hinter RISC steckt darin, mit einem reduzierten und somit optimierten Befehlssatz zu arbeiten, der weniger Anforderungen an CPU und Peripherie stellt und dennoch alle nötigen Aufgaben erfüllen kann sowie auf komplexe Befehle und Befehlsabfolgen zu verzichten. Somit sind einzelne Befehle bzw. Einzelbefehle einfacher und schneller ausführbar, was zu schnelleren Abläufen und einer allgemein schnelleren Abarbeitung führt und somit auch zu einer geringeren Stromaufnahme. Somit findet „der“ RISC (im Sinne vom reduzierten Befehlssatz, deshalb „der“) vor allem in Mikrocomputern und Kleinstelektrogeräte Verwendung. [ARM](ARM "ARM")-Prozessoren sind ein Beispiel für RISC-Prozessoren.
 
   
 
@@ -24,9 +24,9 @@ RISC-Systeme zeichnen sich vor allem durch einen erhöhten Satz an *General-Purp
 
 ## Siehe auch
 
-- [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")
-- [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
-- [CISC](https://github.com/lowlevel-eu/wiki/wiki/Complex-Instruction-Set-Computing "CISC")
+- [ARM](ARM "ARM")
+- [x86](X86 "X86")
+- [CISC](Complex-Instruction-Set-Computing "CISC")
 
 ---
 

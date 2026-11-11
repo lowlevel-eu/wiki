@@ -53,7 +53,7 @@ Für die 8 Bildschirmseiten verwendet das BIOS Startadressen, die jeweils Vielfa
 
 ## I/O Ports
 
-Die [I/O Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports "I/O Ports") 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jeweils ein Byte groß.
+Die [I/O Ports](I-O-Ports "I/O Ports") 0x3D0 bis 0x3DC sind für den CGA reserviert. Die Ports sind jeweils ein Byte groß.
 
 ### Interne Register
 
@@ -84,7 +84,7 @@ Die folgende Tabelle listet alle zur Verfügung stehenden Register auf:
 
 Die ersten 10 Register (0-9) steuern das Timing des CRT-Displays, sowie weitere Details der Darstellung, die über den Zweck dieses Artikels hinausgehen. Informationen dazu gibt es im Datenblatt des 6845 z.B. unter [\[2\]](http://bbc.nvg.org/doc/datasheets/MC6845.zip).
 
-Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn man ihre Werte benötigt. Das BIOS nutzt dafür zum Beispiel Teile der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area#grafik-adapter-informationen "BIOS Data Area").
+Nur die Register 14 bis 17 können laut Spezifikation ausgelesen werden. Deswegen ist es notwendig die Werte der anderen Register in einer Variable zu speichern, wenn man ihre Werte benötigt. Das BIOS nutzt dafür zum Beispiel Teile der [BIOS Data Area](BIOS-Data-Area#grafik-adapter-informationen "BIOS Data Area").
 
 #### Cursor Format
 
@@ -228,11 +228,11 @@ void vsync()
 
 ## Textausgabe
 
-Die Ausgabe von Text erfolgt entweder über die [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")-Funktionen (z.B. Int 0x10/AH=0x0E), oder über das direkte Schreiben in den Videospeicher. Dies ist im Artikel [Textausgabe](https://github.com/lowlevel-eu/wiki/wiki/Textausgabe "Textausgabe") genauer beschrieben.
+Die Ausgabe von Text erfolgt entweder über die [BIOS](Basic-Input-Output-System "BIOS")-Funktionen (z.B. Int 0x10/AH=0x0E), oder über das direkte Schreiben in den Videospeicher. Dies ist im Artikel [Textausgabe](Textausgabe "Textausgabe") genauer beschrieben.
 
 ## Palette
 
-Die Farben des Textmodus können mit Hilfe der Palette der [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Karten verändert werden. Das Setzen der RGB-Werte funktioniert wie im VGA Modus über die Register 0x3C8 und 0x3C9. Die Farben des CGA-Modus sind allerdings nicht linear im Farbraum der VGA-Modi angeordnet.
+Die Farben des Textmodus können mit Hilfe der Palette der [VGA](Video-Graphics-Array "VGA")-Karten verändert werden. Das Setzen der RGB-Werte funktioniert wie im VGA Modus über die Register 0x3C8 und 0x3C9. Die Farben des CGA-Modus sind allerdings nicht linear im Farbraum der VGA-Modi angeordnet.
 
 | CGA Index | VGA Paletten Index |
 | ----------- | -------------------- |

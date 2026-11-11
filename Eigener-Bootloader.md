@@ -6,24 +6,24 @@ Dieser Artikel wird in mehreren Schritten komplett überarbeitet, da der bisheri
 
 | Eigener Bootloader |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Schwierigkeit**: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)<br> |  |
-| Benötigtes Vorwissen: | [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode"), [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") |
+| **Schwierigkeit**: [<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)<br> |  |
+| Benötigtes Vorwissen: | [Real Mode](Real-Mode "Real Mode"), [BIOS](Basic-Input-Output-System "BIOS") |
 | Sprache: | Assembler |
 
   
-Der Weg zum eigenen Betriebssystem ist lang und steinig. Manch einer versucht als erstes einen eigenen [Bootloader](https://github.com/lowlevel-eu/wiki/wiki/Bootloader "Bootloader") inklusive [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") zu entwickeln. Klar kann man sich die Arbeit auch sparen, indem man einfach zu [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") greift. Dennoch möchte man die Funktionsweise eines Bootloader verstehen können. Dies soll mit diesem Tutorial vermittelt werden.
+Der Weg zum eigenen Betriebssystem ist lang und steinig. Manch einer versucht als erstes einen eigenen [Bootloader](Bootloader "Bootloader") inklusive [Bootsektor](Bootsektor "Bootsektor") zu entwickeln. Klar kann man sich die Arbeit auch sparen, indem man einfach zu [GRUB](Grand-Unified-Bootloader "GRUB") greift. Dennoch möchte man die Funktionsweise eines Bootloader verstehen können. Dies soll mit diesem Tutorial vermittelt werden.
 
-Dieses Tutorial wird in erster Linie die Vorgehensweise erläutern, die bei vielen [Dateisystemen](https://github.com/lowlevel-eu/wiki/wiki/Dateisystem "Dateisystem") identisch sind. Folglich wird hier auch kein kompletter Source-Code eines Bootloader gelistet. Grundkenntnise in [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") sind für dieses Tutorial allerdings Voraussetzung, so auch der Umgang mit einem Assembler und einem [Linker](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker").
+Dieses Tutorial wird in erster Linie die Vorgehensweise erläutern, die bei vielen [Dateisystemen](Dateisystem "Dateisystem") identisch sind. Folglich wird hier auch kein kompletter Source-Code eines Bootloader gelistet. Grundkenntnise in [Assembler](Assembler "Assembler") sind für dieses Tutorial allerdings Voraussetzung, so auch der Umgang mit einem Assembler und einem [Linker](Linker "Linker").
 
-Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen und Variablen statt Offset-Konstanten zu verwenden, besonders beim [Boot-Parameter-Block](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table#bootsektor "FAT").
+Auch in Assembler sollte man sauber programmieren und nicht scheuen, Strunkturen und Variablen statt Offset-Konstanten zu verwenden, besonders beim [Boot-Parameter-Block](File-Allocation-Table#bootsektor "FAT").
 
   
 
 ## Allgemeines
 
-Der [Bootprozess](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootprozess") wird ja bereits an anderer Stelle beschrieben, jedoch wird dort nicht näher ins Detail gegangen. Dies wird nun an dieser Stelle nun nachgeholt.
+Der [Bootprozess](Bootprozess-auf-x86 "Bootprozess") wird ja bereits an anderer Stelle beschrieben, jedoch wird dort nicht näher ins Detail gegangen. Dies wird nun an dieser Stelle nun nachgeholt.
 
-Ausgangspunkt ist, dass das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur (0x0AA55) die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert.
+Ausgangspunkt ist, dass das [BIOS](Basic-Input-Output-System "BIOS") bereits den ersten Sektor von unserem Datenträger geladen hat und nach einer Überprüfung der Signatur (0x0AA55) die Kontrolle an diesem abgibt. Man beachte, das der erste Sektor bei Festplatten für gewöhnlich der [Master Boot Record](Master-Boot-Record "Master Boot Record") ist und auf dem ebenfalls eingegangen wird, bzw. die Vorgehensweise erläutert.
 
 Das erste Problem, auf das man stoßen wird, ist, dass der Binärcode des Bootsektors die Größe eines Sektors (typische 512 Bytes bei Diskette, Festplatten und Flash-Storages) je nach Komplexität des Dateisystem überschreiten könnte, dies aber im Idealfall jedoch nicht sollte. OK, zugegeben, bei der CD mit ihren 2048 Bytes pro Sektor und deren Dateisystem langt dieser. Auch zukünftige Festplatten mit einer physikalischen Sektorgröße von 4096 Bytes mögen dem entgegen wirken. Unser Ziel ist aber keineswegs für jedes Dateisystem einen eigenen Bootloader (ausschließlich dem Bootsektor) zu entwickeln, sondern viel mehr ein universelles Modell auf die Beine zu stellen, bei dem nur der Bootsektor individuell dem Dateisystem vorliegt und der Bootloader (Binärdatei) für alle unterstützten Dateisystemen gleich bleibt.
 
@@ -144,7 +144,7 @@ Wie schon am MBR gesehen ist das Programmieren eines Bootsektors nicht so schwer
 
 Der Bootsektor einer Partition, genauergenommen eines Dateisystem, ist da schon weitaus komplexer, da wir zum einen nicht nur einen Sektor laden müssen, sondern gleich eine ganze Datei. Diese muss allerdings im Dateisystem gesucht werden, und und und ...
 
-Aber vereinfachen wir das ganze, damit ein Modell für alle Dateisysteme (egal ob [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"), [NTFS](https://github.com/lowlevel-eu/wiki/wiki/NTFS "NTFS"), [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660"), [Ext2](https://github.com/lowlevel-eu/wiki/wiki/Ext2 "Ext2")/[Ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder gar ein eigenes wie ROFS von [AiCOS](https://github.com/lowlevel-eu/wiki/wiki/AiCOS "AiCOS")) benutzbar ist.
+Aber vereinfachen wir das ganze, damit ein Modell für alle Dateisysteme (egal ob [FAT](File-Allocation-Table "FAT"), [NTFS](NTFS "NTFS"), [ISO9660](ISO9660 "ISO9660"), [Ext2](Ext2 "Ext2")/[Ext3](Ext3 "Ext3") oder gar ein eigenes wie ROFS von [AiCOS](AiCOS "AiCOS")) benutzbar ist.
 
 1.  LBA-Offset der eigenen Partition ermitteln, also die von der der Bootsektor geladen wurde.
 2.  Suche im Hauptverzeichnis nach einer bestimmten Datei, bspw. "bootload.bin".
@@ -321,7 +321,7 @@ Das brauchen wir um unser erstes Programm zu realisieren: Einen Editor, einen As
 
 ### Der Editor
 
-*Hauptartikel: [Editor](https://github.com/lowlevel-eu/wiki/wiki/Editor "Editor")*
+*Hauptartikel: [Editor](Editor "Editor")*
 
 Fürs erste reicht jeder beliebige Texteditor. Unter Windows z. B. Notepad. Von Vorteil ist es, wenn der Editor Syntaxhighlighting für Assemblerdateien unterstützt wie z. B. Notepad 2, Ultraedit, Proton ... Für Linux gilt das gleiche. Hier gibt es auch jede Menge brauchbarer Editoren, die unseren Ansprüchen genügen.
 
@@ -329,7 +329,7 @@ Fürs erste reicht jeder beliebige Texteditor. Unter Windows z. B. Notepad. Von
 
 Der Assembler ist das Tool, mit dem wir unseren Quelltext in eine dem PC verständliche Sprache übersetzen. Der Assemblerquelltext ist für viele Menschen zwar auch nicht gerade verständlich, der PC kann damit aber auch noch nichts anfangen. Daher übersetzt der Assembler unseren Quelltext in einen von Maschinen ausführbaren Programmcode.
 
-Als Assembler verwenden wir den [Netwide Assembler](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "Netwide Assembler") (kurz NASM). Er ist für das, was wir vorhaben, eine gute Wahl. Außerdem existiert er sowohl für Windows als auch für Linux und steht unter der LGPL. NASM ist ein Sourceforge-Projekt und kann unter <http://sourceforge.net/projects/nasm> bezogen werden.
+Als Assembler verwenden wir den [Netwide Assembler](Netwide-Assembler "Netwide Assembler") (kurz NASM). Er ist für das, was wir vorhaben, eine gute Wahl. Außerdem existiert er sowohl für Windows als auch für Linux und steht unter der LGPL. NASM ist ein Sourceforge-Projekt und kann unter <http://sourceforge.net/projects/nasm> bezogen werden.
 
 ### Die Testumgebung
 
@@ -343,7 +343,7 @@ Auch Bochs steht unter der LGPL und ist auf Sourceforge.net unter <http://bochs.
 
 Wie bereits erwähnt wird unser erstes Programm nicht viel anderes machen, als einen Text auszugeben, danach auf eine beliebige Taste zu warten, und dann das System neu zu starten.
 
-Bevor wir anfangen, sind noch ein paar Informationen wichtig. Unser Programm wird im [Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Boot Record") liegen. Daher muss es im ersten Sektor einer Partition oder Diskette liegen. Weiterhin braucht unser Programm eine besondere Kennzeichnung, die Magic Number (0xAA55). Diese muss am Ende des Sektors stehen. Ein Sektor ist übrigens nur 512 Byte groß. Abzüglich der Magic Number bleiben uns noch 510 Byte für unser Programm. Das ist nicht wirklich viel und unter anderem ein Grund, wieso wir das Programm in Assembler schreiben und nicht in einer Hochsprache wie z. B. C. Der nächste wichtige Punkt ist, dass das BIOS unseren Sektor an die absolute Adresse 0x07C00 kopiert und ausführt. Je nach BIOS-Hersteller kann die Zusammensetzung der absoluten Adresse aber unterschiedlich aussehen.
+Bevor wir anfangen, sind noch ein paar Informationen wichtig. Unser Programm wird im [Boot Record](Bootsektor "Boot Record") liegen. Daher muss es im ersten Sektor einer Partition oder Diskette liegen. Weiterhin braucht unser Programm eine besondere Kennzeichnung, die Magic Number (0xAA55). Diese muss am Ende des Sektors stehen. Ein Sektor ist übrigens nur 512 Byte groß. Abzüglich der Magic Number bleiben uns noch 510 Byte für unser Programm. Das ist nicht wirklich viel und unter anderem ein Grund, wieso wir das Programm in Assembler schreiben und nicht in einer Hochsprache wie z. B. C. Der nächste wichtige Punkt ist, dass das BIOS unseren Sektor an die absolute Adresse 0x07C00 kopiert und ausführt. Je nach BIOS-Hersteller kann die Zusammensetzung der absoluten Adresse aber unterschiedlich aussehen.
 
 ### Assemblerdirektiven
 

@@ -1,6 +1,6 @@
 # VFS
 
-Weiterleitung: [Virtuelles Dateisystem](https://github.com/lowlevel-eu/wiki/wiki/Virtuelles-Dateisystem)
+Weiterleitung: [Virtuelles Dateisystem](Virtuelles-Dateisystem)
 
 ---
 

@@ -51,7 +51,7 @@ Zur Ausgabe von Text gibt es einen 4 kB großen Speicher an der Adresse 0xB8000.
 
 Um nun auf dem Bildschirm ein Zeichen auszugeben, muss erstmal das Offset ausgerechnet werden, an dem das Zeichen steht. Da der Speicher linear ist geht das auch mit einer linearen Gleichung: o = z\*80+s, wobei o für das Offset, z für die Zeile und s für die Spalte steht
 
-In dem ersten Byte wird der Buchstabe selbst, in dem 2. Byte wird das Attribut, also die Vorder- und Hintergrundfarbe gespeichert. Als Code wird [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437") verwendet, welche eine Erweiterung von [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII") darstellt.
+In dem ersten Byte wird der Buchstabe selbst, in dem 2. Byte wird das Attribut, also die Vorder- und Hintergrundfarbe gespeichert. Als Code wird [Codepage 437](Codepage-437 "Codepage 437") verwendet, welche eine Erweiterung von [ASCII](Codepage-437 "ASCII") darstellt.
 
 Das Attribute-Byte ist wie folgt aufgebaut:
 
@@ -72,10 +72,10 @@ Häufig benutzt wird 0x07, **Hellgrau auf Schwarz.**
 
 Man kann sich nicht darauf verlassen, dass das höchstwertige Bit des Attributbytes wirklich anzeigt, ob das Zeichen blinken soll oder nicht. Bei einigen Computern ist dieses Bit einfach das höherwertige Bit der Hintergrundfarbe, sodass man hier auch helle Farben als Hintergrund verwenden kann.
 
-Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Color Graphics Adapter](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter#16-hintergrundfarben "Color Graphics Adapter").
+Wie man die Bedeutung dieses Bits manuell bestimmen kann, steht im Artikel [Color Graphics Adapter](Color-Graphics-Adapter#16-hintergrundfarben "Color Graphics Adapter").
 
   
-Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "Codepage 437")).
+Hier ein kleines Beispiel einer Funktion, die ein Zeichen (chr), in der Farbe color auf den Bildschirm, an die Position x,y schreiben soll. Hierbei werden Steuerzeichen nicht beachtet bzw. als normales Zeichen auch ausgegeben (siehe [Codepage 437](Codepage-437 "Codepage 437")).
 
 ``` c
 void printchar(uint8_t chr, uint8_t color, uint8_t x, uint8_t y)
@@ -137,7 +137,7 @@ void removecursor()
 
 ## Siehe auch
 
-- [CGA](https://github.com/lowlevel-eu/wiki/wiki/Color-Graphics-Adapter "CGA")
+- [CGA](Color-Graphics-Adapter "CGA")
 
 ## Weblinks
 

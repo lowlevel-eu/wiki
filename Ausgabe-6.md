@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") » |
+| « [Ausgabe 5](Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](Ausgabe-7 "Ausgabe 7") » |
 
 ## Vorwort
 
@@ -384,7 +384,7 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-7 "Ausgabe 7") » |
+| « [Ausgabe 5](Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](Ausgabe-7 "Ausgabe 7") » |
 
 ---
 

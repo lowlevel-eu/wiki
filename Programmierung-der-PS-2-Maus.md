@@ -1,6 +1,6 @@
 # Programmierung der PS/2-Maus
 
-Weiterleitung: [PS/2-Maus](https://github.com/lowlevel-eu/wiki/wiki/PS-2-Maus)
+Weiterleitung: [PS/2-Maus](PS-2-Maus)
 
 ---
 

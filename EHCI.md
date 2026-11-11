@@ -1,6 +1,6 @@
 # EHCI
 
-Weiterleitung: [Enhanced Host Controller Interface](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface)
+Weiterleitung: [Enhanced Host Controller Interface](Enhanced-Host-Controller-Interface)
 
 ---
 

@@ -1,6 +1,6 @@
 # Extensible Firmware Interface
 
-Weiterleitung: [Unified Extensible Firmware Interface](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface)
+Weiterleitung: [Unified Extensible Firmware Interface](Unified-Extensible-Firmware-Interface)
 
 ---
 

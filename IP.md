@@ -1,6 +1,6 @@
 # IP
 
-Weiterleitung: [Internet Protocol](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol)
+Weiterleitung: [Internet Protocol](Internet-Protocol)
 
 ---
 

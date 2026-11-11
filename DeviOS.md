@@ -8,17 +8,17 @@ Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages
 
 | DeviOS |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/2b5401fd0d2f6ebd01f0.jpg" width="221" height="78" alt="DeviOS.jpg" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/2b5401fd0d2f6ebd01f0.jpg) |  |
+| [<img src="assets/2b5401fd0d2f6ebd01f0.jpg" width="221" height="78" alt="DeviOS.jpg" />](assets/2b5401fd0d2f6ebd01f0.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222) |
 | Akt. Version: | 0.0.3.0 Beta |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | DPL (DeviOS Puplic License) ab Version 0.0.3.0 GNUv2 |
+| [Lizenz](Lizenzen "Lizenzen"): | DPL (DeviOS Puplic License) ab Version 0.0.3.0 GNUv2 |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C") |
 | API: |  |
 | Binärformat: | .bin, .elf |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 <https://sourceforge.net/projects/devios/>

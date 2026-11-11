@@ -26,8 +26,8 @@ Wenn eine bestimmte Anzahl an Überschriften im Artikel vorhanden ist, generiert
 
 ## Links
 
-- \[\[Artikelname\]\] - Bsp: „Ein \[\[Interrupt\]\]“ wird zu: „Ein [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")“
-- \[\[Artikelname\|Text im Artikel\]\] - Bsp: „Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß“ wird zu: „Eine [Unterbrechung](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") macht Spaß“
+- \[\[Artikelname\]\] - Bsp: „Ein \[\[Interrupt\]\]“ wird zu: „Ein [Interrupt](Interrupt "Interrupt")“
+- \[\[Artikelname\|Text im Artikel\]\] - Bsp: „Eine \[\[Interrupt\|Unterbrechung\]\] macht Spaß“ wird zu: „Eine [Unterbrechung](Interrupt "Interrupt") macht Spaß“
 - \[http://example.com externer Link\] - Bsp: „Das \[http://www.lowlevel.eu Lowlevel-Wiki\] macht Spaß“ wird zu: „Das Lowlevel-Wiki macht Spaß“
 - \[http://example.com\] - Bsp: „Siehe \[http://www.lowlevel.eu\]“ wird zu: „Siehe \[1\]“
 
@@ -77,7 +77,7 @@ wird zu:
 
 Tabellen werden immer durch ein „{\|“ begonnen und mit „\|}“ beendet. Dazwischen definiert man dann die einzelnen Reihen. Die Inhalte einer Reihe werden wiederrum durch „\|-“ voneinander abgegrenzt. Jede Zelle selbst wird im Code auf eine eigene Zeile geschrieben, die mit „\|“ beginnen muss, um anzuzeigen, dass nun eine neue Zelle der aktuellen Reihe beginnt. Außerdem kann man eine Überschriftenzelle erzeugen, die aber statt mit „\|“ mit „!“ beginnen muss.
 
-Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit dem Attribut {{prettytable}} zu versehen, um den [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien") treu zu bleiben. Außerdem sieht es einfach besser aus. Mit dem Attribut width='??%' kann man zudem festlegen, über wieviel Prozent der Seite sich die Tabelle erstrecken soll.
+Es empfiehlt sich in der ersten Zeile der Tabelle (nach dem „{\|“) diese mit dem Attribut {{prettytable}} zu versehen, um den [Designrichtlinien](Designrichtlinien "Designrichtlinien") treu zu bleiben. Außerdem sieht es einfach besser aus. Mit dem Attribut width='??%' kann man zudem festlegen, über wieviel Prozent der Seite sich die Tabelle erstrecken soll.
 
 **Anzeige**
 
@@ -205,12 +205,12 @@ Wenn man zum Beispiel Wikibefehle erklären will, oder eine Kollision mit den Be
 
 ## HTML
 
-Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließlich die eingebauten MediaWiki-Befehle (auch die, die hier nicht dokumentiert sind) verwendet werden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](https://github.com/lowlevel-eu/wiki/wiki/IRC "IRC") nachfragen.
+Die Verwendung von HTML ist möglichst zu vermeiden, und es sollten ausschließlich die eingebauten MediaWiki-Befehle (auch die, die hier nicht dokumentiert sind) verwendet werden. Man kann auch in der [MediaWiki-Dokumentation](http://meta.wikimedia.org/wiki/Help:Editing) nach Alternativen suchen, oder im [IRC](IRC "IRC") nachfragen.
 
 ## Siehe auch
 
-- [Designrichtlinien](https://github.com/lowlevel-eu/wiki/wiki/Designrichtlinien "Designrichtlinien")
-- [Wikiteam](https://github.com/lowlevel-eu/wiki/wiki/Wikiteam "Wikiteam")
+- [Designrichtlinien](Designrichtlinien "Designrichtlinien")
+- [Wikiteam](Wikiteam "Wikiteam")
 
 ## Weblinks
 

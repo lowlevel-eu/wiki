@@ -2,7 +2,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| « [ARM-OS-Dev Teil 1 – Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/ARM-OS-Dev-Teil-1-%E2%80%93-Entwicklungsumgebung "ARM-OS-Dev Teil 1 – Entwicklungsumgebung") | **Navigation** | [ARM-OS-Dev Teil 3 – Trockenübungen](https://github.com/lowlevel-eu/wiki/wiki/ARM-OS-Dev-Teil-3-%E2%80%93-Trocken%C3%BCbungen "ARM-OS-Dev Teil 3 – Trockenübungen") » |
+| « [ARM-OS-Dev Teil 1 – Entwicklungsumgebung](ARM-OS-Dev-Teil-1-%E2%80%93-Entwicklungsumgebung "ARM-OS-Dev Teil 1 – Entwicklungsumgebung") | **Navigation** | [ARM-OS-Dev Teil 3 – Trockenübungen](ARM-OS-Dev-Teil-3-%E2%80%93-Trocken%C3%BCbungen "ARM-OS-Dev Teil 3 – Trockenübungen") » |
 
 ## Ziel
 
@@ -31,7 +31,7 @@ Als Operanden für Assemblerbefehle kommen nur drei verschiedene Arten in Frage:
 
 ## Labels
 
-S. [x86-Reihe](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101#labels "Teil 2 - Assembler 101") – allerdings wird bei ARM wie beschrieben kein *\$* für Immediates, sondern ein *\#* verwendet. Zudem ist es einfach ein Syntaxfehler, falls man dieses Zeichen vergessen sollte, da Speicheradressen immer von eckigen Klammern umschlossen werden.
+S. [x86-Reihe](Teil-2-Assembler-101#labels "Teil 2 - Assembler 101") – allerdings wird bei ARM wie beschrieben kein *\$* für Immediates, sondern ein *\#* verwendet. Zudem ist es einfach ein Syntaxfehler, falls man dieses Zeichen vergessen sollte, da Speicheradressen immer von eckigen Klammern umschlossen werden.
 
 ## Daten
 
@@ -45,7 +45,7 @@ S. [x86-Reihe](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101#lab
 
 ## Sektionen und Kommentare
 
-S. [x86-Reihe](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101#sektionen "Teil 2 - Assembler 101").
+S. [x86-Reihe](Teil-2-Assembler-101#sektionen "Teil 2 - Assembler 101").
 
 ## Register
 
@@ -148,7 +148,7 @@ Aus einer Funktion wird wie beschrieben entweder mit *bx r14* zurückgesprungen,
 
 ## Beispiel
 
-Eigentlich ist ein Beispiel hier relativ sinnlos, da kaum jemand einen ARM-Rechner haben wird, um es auszuführen, aber dennoch sei hier das Beispiel aus der [x86-Reihe](https://github.com/lowlevel-eu/wiki/wiki/Teil-2-Assembler-101#beispiel "Teil 2 - Assembler 101") adaptiert:
+Eigentlich ist ein Beispiel hier relativ sinnlos, da kaum jemand einen ARM-Rechner haben wird, um es auszuführen, aber dennoch sei hier das Beispiel aus der [x86-Reihe](Teil-2-Assembler-101#beispiel "Teil 2 - Assembler 101") adaptiert:
 
     .arm
     .section .text

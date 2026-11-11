@@ -1,6 +1,6 @@
 # Code::Blocks
 
-Code::Blocks ist eine [Entwicklungsumgebung](https://github.com/lowlevel-eu/wiki/wiki/Entwicklungsumgebung "Entwicklungsumgebung") für [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), Mac OS X und einige weitere Unix-Derivate. Sie wird unter der GNU General Public License veröffentlicht und ist in C++ programmiert.
+Code::Blocks ist eine [Entwicklungsumgebung](Entwicklungsumgebung "Entwicklungsumgebung") für [Windows](Windows "Windows"), [Linux](Linux "Linux"), Mac OS X und einige weitere Unix-Derivate. Sie wird unter der GNU General Public License veröffentlicht und ist in C++ programmiert.
 
 ## Unterstützte Programmiersprachen
 
@@ -8,18 +8,18 @@ Code::Blocks unterstützt eine Reihe verschiedener Programmiersprachen. Insbeson
 
 Hier die wichtigsten unterstützen Sprachen in Kürze:
 
-- [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")/[C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
-- [D](https://github.com/lowlevel-eu/wiki/wiki/D "D")
-- [Ada](https://github.com/lowlevel-eu/wiki/wiki/Ada "Ada")
+- [C](C "C")/[C++](C%2B%2B "C++")
+- [D](D "D")
+- [Ada](Ada "Ada")
 - Bash-Skripte
-- [Fortran](https://github.com/lowlevel-eu/wiki/wiki/Fortran "Fortran")
-- [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler")
+- [Fortran](Fortran "Fortran")
+- [Assembler](Assembler "Assembler")
 
 ## Unterstützte Compiler
 
-Code::Blocks bringt keinen Compiler mit, man muss ihn also selbst installieren. Unter Linux ist normalerweise der/die [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") schon vorinstalliert, aber man kann neben diesem Compiler auch andere verwenden:
+Code::Blocks bringt keinen Compiler mit, man muss ihn also selbst installieren. Unter Linux ist normalerweise der/die [GCC](GNU-Compiler-Collection "GCC") schon vorinstalliert, aber man kann neben diesem Compiler auch andere verwenden:
 
-- [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") (für verschiedene Plattformen, wie PowerPC und TriCore, aber auch für Microcontroller wie den MSP 430)
+- [GCC](GNU-Compiler-Collection "GCC") (für verschiedene Plattformen, wie PowerPC und TriCore, aber auch für Microcontroller wie den MSP 430)
 - Microsofts Visual Studio Compiler
 - Borlands C++ Compiler
 - Digital Mars C/C++ Compiler

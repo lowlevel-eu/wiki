@@ -1,6 +1,6 @@
 # Model-Specific Register
 
-Weiterleitung: [Machine-Specific Register](https://github.com/lowlevel-eu/wiki/wiki/Machine-Specific-Register)
+Weiterleitung: [Machine-Specific Register](Machine-Specific-Register)
 
 ---
 

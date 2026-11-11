@@ -2,7 +2,7 @@
 
 So einfach ist das! In der GDT wird ein Daten-, sowie Code-Deskriptor auf die ganzen 4 möglichen GByte Arbeitsspeicher eingerichtet. Heutzutage verwenden dank Paging alle OS ein solches, sogenanntes flaches Speichermodell. Das heißt, dass man von nun an nur noch mit 32-Bit Offsets hantieren und sich nicht mehr mit Segmenten herumschlagen muss.
 
-Mehr [Infos](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") und eine zweite Art in den Protected Mode umzuschalten findet man im Protected Mode Tutorial von Tee Jay, sowie dem, schon etwas älteren, [Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm).
+Mehr [Infos](Protected-Mode "Protected Mode") und eine zweite Art in den Protected Mode umzuschalten findet man im Protected Mode Tutorial von Tee Jay, sowie dem, schon etwas älteren, [Tutorial der FH-Zwickau](http://www.fh-zwickau.de/doc/prmo/start.htm).
 
   
 **Wichtig** bei diesem Code ist es, selbst noch die org-Anweisung auf die Startadresse des Codes anzupassen!! \<asm\>;;; Ein kleines Beispiel, wie man in den 32-Bit Protected Mode wechselt

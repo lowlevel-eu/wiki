@@ -1,6 +1,6 @@
 # OS-Dev fuer Einsteiger
 
-Weiterleitung: [OS-Dev für Einsteiger](https://github.com/lowlevel-eu/wiki/wiki/OS-Dev-f%C3%BCr-Einsteiger)
+Weiterleitung: [OS-Dev für Einsteiger](OS-Dev-f%C3%BCr-Einsteiger)
 
 ---
 

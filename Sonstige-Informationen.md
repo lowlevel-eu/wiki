@@ -1,6 +1,6 @@
 # Sonstige Informationen
 
-Ich weiß momentan nicht so ganz wo ich es einordnen soll, aber bei [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area") hat es meines Erachtens nichts verloren. Deswegen hab ich es mal einfach hier hineinkopiert.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 19:15, 26. Nov. 2007 (CET)
+Ich weiß momentan nicht so ganz wo ich es einordnen soll, aber bei [BIOS Data Area](BIOS-Data-Area "BIOS Data Area") hat es meines Erachtens nichts verloren. Deswegen hab ich es mal einfach hier hineinkopiert.--[Bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") 19:15, 26. Nov. 2007 (CET)
 
 ## BIOS Data Area 2
 

@@ -1,6 +1,6 @@
 # Message Queue
 
-Weiterleitung: [Interprozesskommunikation#Message Queues](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#message-queues)
+Weiterleitung: [Interprozesskommunikation#Message Queues](Interprozesskommunikation#message-queues)
 
 ---
 

@@ -6,11 +6,11 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
-Ein **Symmetrisches Multiprozessorsystem** (**SMP**) ist ein System mit einem oder mehreren identischen Prozessoren. Im Gegensatz zu [NUMA](https://github.com/lowlevel-eu/wiki/wiki/Non-Uniform-Memory-Architecture "NUMA")-Systemen sind alle Prozessoren auf gleiche Art und Weise mit dem Hauptspeicher verbunden, d.h. es gibt für keinen Prozessor einen von der Geschwindigkeit her bevorzugten/benachteiligten Speicherbereich im Hauptspeicher.
+Ein **Symmetrisches Multiprozessorsystem** (**SMP**) ist ein System mit einem oder mehreren identischen Prozessoren. Im Gegensatz zu [NUMA](Non-Uniform-Memory-Architecture "NUMA")-Systemen sind alle Prozessoren auf gleiche Art und Weise mit dem Hauptspeicher verbunden, d.h. es gibt für keinen Prozessor einen von der Geschwindigkeit her bevorzugten/benachteiligten Speicherbereich im Hauptspeicher.
 
 ## Intel Multiprocessor Specification
 
-Die *Intel Multiprocessor Specification* ist ein Standard für [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode")-basierte, symmetrische Multiprozessorsysteme und ist abwärtskompatibel mit existierenden [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")- und [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64")-Uniprozessorsystemen. Die Spezifikation beschreibt einerseits die Anforderungen an die Hardware und das [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS"), und andererseits die Schritte, die notwendig sind, um mit einem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") den Geschwindigkeitsvorteil mehrerer Prozessoren nutzbar zu machen.
+Die *Intel Multiprocessor Specification* ist ein Standard für [x86](X86 "X86")- und [x86-64](Long-Mode "Long Mode")-basierte, symmetrische Multiprozessorsysteme und ist abwärtskompatibel mit existierenden [x86](X86 "X86")- und [x86-64](X86-64 "X86-64")-Uniprozessorsystemen. Die Spezifikation beschreibt einerseits die Anforderungen an die Hardware und das [BIOS](Basic-Input-Output-System "BIOS"), und andererseits die Schritte, die notwendig sind, um mit einem [Betriebssystem](Betriebssystem "Betriebssystem") den Geschwindigkeitsvorteil mehrerer Prozessoren nutzbar zu machen.
 
 ### Unterteilung der Prozessoren
 
@@ -33,11 +33,11 @@ Die *Floating Pointer Structure* liegt an einer 16-Byte Grenze im Speicher und s
 | Feld | Beschreibung |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *Signatur* | Die Signatur enthält die nicht nullterminierte ASCII-Zeichenkette "\_MP\_" |
-| *physische Adresse* | Enthält die physische Adresse der [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") oder 0x00000000, falls dieses System einer der [Default Configurations](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#default-configuration "SMP") entspricht. |
+| *physische Adresse* | Enthält die physische Adresse der [Configuration Table](Symmetrisches-Multiprozessorsystem#configuration-table "SMP") oder 0x00000000, falls dieses System einer der [Default Configurations](Symmetrisches-Multiprozessorsystem#default-configuration "SMP") entspricht. |
 | *Länge* | Die Größe der Struktur in 16-Byte großen Abschnitten. |
 | *Revision* | Die Revision der Intel Multiprocessor Specification. Der Wert 0x01 steht für die Version 1.1 und 0x04 für Version 1.4. |
-| *Checksum* | siehe [Auffinden der Struktur](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#auffinden-der-struktur "SMP") |
-| *Featurebyte 0* | Der Wert 0x00 gibt an, dass eine [Configuration Table](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#configuration-table "SMP") vorhanden ist. Jeder andere Wert steht für eine der [Default Configurations](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem#default-configuration "SMP"). |
+| *Checksum* | siehe [Auffinden der Struktur](Symmetrisches-Multiprozessorsystem#auffinden-der-struktur "SMP") |
+| *Featurebyte 0* | Der Wert 0x00 gibt an, dass eine [Configuration Table](Symmetrisches-Multiprozessorsystem#configuration-table "SMP") vorhanden ist. Jeder andere Wert steht für eine der [Default Configurations](Symmetrisches-Multiprozessorsystem#default-configuration "SMP"). |
 | *Featurebyte 1* | Bit 0-6: reserviert<br>Bit 7 (IMCRP): Falls dieses Bit gesetzt ist, ist das *IMCR* präsent und der *PIC Mode* implementiert. Andernfalls ist der *Virtual Wire Mode* implementiert. |
 | *Featurebyte 2-4* | reserviert |
 
@@ -45,8 +45,8 @@ Die *Floating Pointer Structure* liegt an einer 16-Byte Grenze im Speicher und s
 
 Die *Floating Pointer Structure* wird anhand der 4 Signaturbytes und der Checksumme identifiziert. Die Prüfsumme wird berechnet, indem man alle Bytes (inklusive des Feldes *Checksum*) der Struktur aufaddiert. Das Ergebnis dieser Berechnung muss 0x00 sein. Die Struktur befindet sich in mindestens einem der folgenden Speicherbereiche:
 
-- In dem ersten Kilobyte der [Extended BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/Extended-BIOS-Data-Area "Extended BIOS Data Area")
-- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MiB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area")), wenn die Adresse der Extended BIOS Data Area nicht definiert ist.
+- In dem ersten Kilobyte der [Extended BIOS Data Area](Extended-BIOS-Data-Area "Extended BIOS Data Area")
+- In dem letzten Kilobyte des Hauptspeichers unterhalb der 1MiB Marke (Die Größe des Basisspeichers steht an Offset 0x13 in der [BIOS Data Area](BIOS-Data-Area "BIOS Data Area")), wenn die Adresse der Extended BIOS Data Area nicht definiert ist.
 - Im Adressraum des BIOS ROM (0xF0000 - 0xFFFFF)
 
 Die Speicherbereiche sind in exakt dieser Reihenfolge zu durchsuchen.
@@ -85,7 +85,7 @@ Eine fehlerhafte Mutex-Implementierung mit nicht-atomaren Operationen könnte z.
 - Thread \#1 auf CPU \#1 überschreibt den Speicher mit 1 und gibt als alten Wert die gelesene 0 zurück
 - Thread \#2 auf CPU \#2 überschreibt den Speicher nochmals mit 1 und gibt als alten Wert die gelesene 0 zurück
 
-Nun ist eine [Race Condition](https://github.com/lowlevel-eu/wiki/wiki/Race-Condition "Race Condition") aufgetreten: Beide Threads/Prozesse denken nun, dass der Mutex vorher nicht gelockt war und sie nun als einziger Thread/Prozess im kritischen Bereich arbeiten werden. Ganz offensichtlich arbeiten aber in diesem Beispiel nun beide in dem kritischen Abschnitt.
+Nun ist eine [Race Condition](Race-Condition "Race Condition") aufgetreten: Beide Threads/Prozesse denken nun, dass der Mutex vorher nicht gelockt war und sie nun als einziger Thread/Prozess im kritischen Bereich arbeiten werden. Ganz offensichtlich arbeiten aber in diesem Beispiel nun beide in dem kritischen Abschnitt.
 
 Aus diesem Grund wird zur Implementierung die TSL-Instruktion verwendet. Sie ist auch auf SMP-Systemen atomar (vgl. [Intel Spezifikation](http://www.intel.com/design/intarch/manuals/243191.htm), S. 3-714), d.h. der sogenannte *lock*-Präfix wird implizit angenommen, wenn bei der *xchg*-Instruktion eine Speicherstelle verwendet wird. Der Präfix kann auch explizit angegeben werden - er bewirkt, dass der Speicherbus während der nächsten Instruktion gesperrt wird.
 
@@ -100,9 +100,9 @@ Ein Beispiel für eine simple 32-Bit-TSL-Funktion: \<asm\>; uint32_t tsl(uint32_
 
 ## siehe auch
 
-- [APIC](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Programmable-Interrupt-Controller "APIC")
-- [I/O APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
-- [Local APIC](https://github.com/lowlevel-eu/wiki/wiki/Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
+- [APIC](Advanced-Programmable-Interrupt-Controller "APIC")
+- [I/O APIC](I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
+- [Local APIC](Local-Advanced-Programmable-Interrupt-Controller "Local APIC")
 
 ## Weblinks
 

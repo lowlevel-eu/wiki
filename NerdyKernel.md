@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | rizor |
 | Akt. Version: | 2012-01 Build 1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPLv3 |
+| [Lizenz](Lizenzen "Lizenzen"): | GPLv3 |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") & [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [i386](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") & [Assembler](Assembler "Assembler") |
 | API: | Noch nicht näher geplant |
 | Binärformat: |  |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Message-Passing, Message-Queues, RPC |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Message-Passing, Message-Queues, RPC |
 | Homepage |  |
 
 <http://rizor.dyndns-home.com/git/?p=NerdyKernel.git;a=summary> <http://rizor.dyndns-home.com/git/?p=NerdyTestbot.git;a=summary>

@@ -1,6 +1,6 @@
 # BIOS
 
-Weiterleitung: [Basic Input Output System](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System)
+Weiterleitung: [Basic Input Output System](Basic-Input-Output-System)
 
 ---
 

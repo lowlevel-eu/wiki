@@ -2,11 +2,11 @@
 
 **Hinweis:**
 
-Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema aus. Da dieses Thema aber dringend nach einem Artikel verlangte (z. B. aufgrund eines Eintrags in der [TODO](https://github.com/lowlevel-eu/wiki/wiki/TODO "TODO")-Liste), hat er sich dennoch entschieden, seine Kenntnisse niederzuschreiben.
+Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema aus. Da dieses Thema aber dringend nach einem Artikel verlangte (z. B. aufgrund eines Eintrags in der [TODO](TODO "TODO")-Liste), hat er sich dennoch entschieden, seine Kenntnisse niederzuschreiben.
 
 Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
 
-Das UHCI ist neben dem [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface") ein Interface für [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")-1.x-Hostcontroller.
+Das UHCI ist neben dem [OHCI](Open-Host-Controller-Interface "Open Host Controller Interface") ein Interface für [USB](Universal-Serial-Bus "USB")-1.x-Hostcontroller.
 
 ## Verwendete Datenstrukturen
 
@@ -109,7 +109,7 @@ Dieses DWord enthält die physische Adresse des Puffers, in den empfangene Daten
 
 ### Zusammenspiel
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/52d4009af5bf1cb705f6.png" width="300" height="194" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cc8925c9c6aa817eee9c.png "vergrößern")Schema aus der UHCI-Spezifikation
+[<img src="assets/52d4009af5bf1cb705f6.png" width="300" height="194" />](assets/cc8925c9c6aa817eee9c.png) [](assets/cc8925c9c6aa817eee9c.png "vergrößern")Schema aus der UHCI-Spezifikation
 
 Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frameliste die Wurzel des ganzen. Dort trägt man in jedes Feld einen Pointer auf die spezifisch in diesem Frame auszuführenden periodischen Transfers (Isochronous-TDs oder Interrupt-QHs mit deren TDs) ein. Am Ende dieser Liste von periodischen Transfers sollte dann der erste QH der aperiodischen Transfers folgen. Womit ein QH korrespondiert, ist ziemlich egal. Er kann einer USB-Pipe entsprechen, man kann aber auch einfach einen einzigen QH für alle aperiodischen Transfers anlegen, an den alle Transferdeskriptoren angehangen werden.
 
@@ -117,7 +117,7 @@ Jeder QH enthält also einen Pointer zum Beginn einer Warteschlange, die nach un
 
 ## Interface
 
-Das UHCI ist &#150; wie andere USB-Hostcontrollerinterfaces auch &#150; häufig als [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Gerät ausgeführt. Allen UHCIs gemein ist der Classcode 0x0C (Serielle Buscontroller), der Subclasscode 0x03 (USB-Hostcontrollerinterfaces) und das Programming Interface 0x00 (UHCI). Anhand dieser drei Werte kann man einen UHCI also auf dem PCI-Bus identifizieren und den entsprechenden Treiber aufrufen.
+Das UHCI ist &#150; wie andere USB-Hostcontrollerinterfaces auch &#150; häufig als [PCI](Peripheral-Component-Interconnect "PCI")-Gerät ausgeführt. Allen UHCIs gemein ist der Classcode 0x0C (Serielle Buscontroller), der Subclasscode 0x03 (USB-Hostcontrollerinterfaces) und das Programming Interface 0x00 (UHCI). Anhand dieser drei Werte kann man einen UHCI also auf dem PCI-Bus identifizieren und den entsprechenden Treiber aufrufen.
 
 ### I/O-Raum
 
@@ -199,7 +199,7 @@ Wie bereits angedeutet gibt es für jeden Rootport ein solches Register am Ende 
 | 12 | Suspend | Gibt an, ob sich der Port im Suspendmodus befindet. Dieses Bit sollte nicht gleichzeitig mit dem Global Suspend Mode verwendet werden. |
 | 9 | Port Reset | Wird dieses Bit gesetzt, dann wird das Resetsignal auf dem USB getrieben. Der HCD muss dafür Sorge tragen, dass es nach der vorgesehen Zeit (50 ms) wieder gelöscht wird. |
 | 8 | Low Speed Device Attached | Dieses Flag gibt an, ob ein Low-Speed-Gerät angeschlossen ist. Wenn es nicht gesetzt ist, dann ist logischerweise ein Full-Speed-Gerät angeschlossen (oder gar keins, wenn Current Connect Status 0 ist). |
-| 7 | Reserved | Dieses Bit wird immer als 1 gelesen und kann daher dazu dienen, die tatsächliche Anzahl der Rootports herauszufinden (s. Hinweis bei [I/O-Raum](https://github.com/lowlevel-eu/wiki/wiki/Universal-Host-Controller-Interface#io-raum "Universal Host Controller Interface")). |
+| 7 | Reserved | Dieses Bit wird immer als 1 gelesen und kann daher dazu dienen, die tatsächliche Anzahl der Rootports herauszufinden (s. Hinweis bei [I/O-Raum](Universal-Host-Controller-Interface#io-raum "Universal Host Controller Interface")). |
 | 6 | Resume Detect | Wenn ein Gerät ein Remote Wakeup sendet, dann wird dieses Bit gesetzt. Außerdem kann der HCD dieses Bit setzen, um selektiv an diesem Port ein Resumesignal zu treiben. Nach der von der USB-Spezifikation vorgesehenen Zeitspanne (sollten 20 ms sein) muss es vom HCD wieder aufgehoben werden. |
 | 5/4 | Line Status | Gibt den Status der Datenleitungen (D+/D-) wieder. So können einige Fehler entdeckt werden (sind z. B. beide Leitungen gleich, dann hängt vermutlich kein Gerät am Bus). D+ entspricht Bit 4, D- Bit 5. |
 | 3 | Port Enable/Disable Change | Hat der HC den Rootport selbst deaktiviert (wegen eines schweren Fehlers oder dem Disconnect des Geräts), dann wird dieses Bit gesetzt. Analog zum Connect-Status-Change-Bit muss es durch Schreiben einer 1 gelöscht werden. |

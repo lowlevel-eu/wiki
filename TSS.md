@@ -1,6 +1,6 @@
 # TSS
 
-Weiterleitung: [Task State Segment](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment)
+Weiterleitung: [Task State Segment](Task-State-Segment)
 
 ---
 

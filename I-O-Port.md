@@ -1,6 +1,6 @@
 # I/O-Port
 
-Weiterleitung: [I/O Ports](https://github.com/lowlevel-eu/wiki/wiki/I-O-Ports)
+Weiterleitung: [I/O Ports](I-O-Ports)
 
 ---
 

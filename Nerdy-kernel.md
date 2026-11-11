@@ -1,6 +1,6 @@
 # Nerdy-kernel
 
-Weiterleitung: [NerdyKernel](https://github.com/lowlevel-eu/wiki/wiki/NerdyKernel)
+Weiterleitung: [NerdyKernel](NerdyKernel)
 
 ---
 

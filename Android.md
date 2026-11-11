@@ -9,20 +9,20 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 |  |  |
 | Entwickler: | [Open Handset Alliance](http://de.wikipedia.org/wiki/Open_Handset_Alliance) (insbesondere Google) |
 | Akt. Version: | 4.1.1 "Jelly Bean" |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [GNU General Public License v2](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#gnu-general-public-license "Lizenz"), Apache 2.0 |
+| [Lizenz](Lizenzen "Lizenzen"): | [GNU General Public License v2](Lizenzen#gnu-general-public-license "Lizenz"), Apache 2.0 |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM"), MIPS, PowerPC |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Linux-Kernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") |
+| Plattform: | [i386](X86 "X86"), [ARM](ARM "ARM"), MIPS, PowerPC |
+| [Kernelart](Kernel "Kernel"): | [Linux-Kernel](Linux "Linux") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Java, C, C++ |
 | API: |  |
 | Binärformat: |  |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 <http://www.android.com>
 
   
-**Android** ist eine [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux")-Distribution, die insbesondere für den Gebrauch auf Smartphones und Tablets geeignet ist. Daher ist die primäre Plattform [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM"), Android läuft aber auch auf MIPS, PowerPC und [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"). Die aktuelle Version ist Version **4.2.1 "Jelly Bean"**.
+**Android** ist eine [Linux](Linux "Linux")-Distribution, die insbesondere für den Gebrauch auf Smartphones und Tablets geeignet ist. Daher ist die primäre Plattform [ARM](ARM "ARM"), Android läuft aber auch auf MIPS, PowerPC und [x86](X86 "X86"). Die aktuelle Version ist Version **4.2.1 "Jelly Bean"**.
 
 ---
 

@@ -1,6 +1,6 @@
 # VMWare
 
-Weiterleitung: [VMware](https://github.com/lowlevel-eu/wiki/wiki/VMware)
+Weiterleitung: [VMware](VMware)
 
 ---
 

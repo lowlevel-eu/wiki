@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Phoenix |
 | Akt. Version: | \- |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | MIT |
+| [Lizenz](Lizenzen "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"), [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C") |
 | API: | Unix |
 | Binärformat: | ELF |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Signals |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Signals |
 | Homepage |  |
 
 [\[1\]](http://repo.or.cz/w/planlOS.git) (git)

@@ -1,6 +1,6 @@
 # GRUB 2
 
-Weiterleitung: [Grand Unified Bootloader#GRUB 2](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-2)
+Weiterleitung: [Grand Unified Bootloader#GRUB 2](Grand-Unified-Bootloader#grub-2)
 
 ---
 

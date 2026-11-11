@@ -5,19 +5,19 @@
 |  |  |
 | Entwickler: | Ville Turjanmaa |
 | Akt. Version: | i386: 0.85B<br>x86_64: 0.97Z |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
+| [Lizenz](Lizenzen "Lizenzen"): | [M64 Lizenz](http://www.menuetos.net/m64l.txt) |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86_64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64") |
+| [Kernelart](Kernel "Kernel"): | Monolithisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") |
 | API: | Nativ |
 | Binärformat: | ? |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | ? |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | ? |
 | Homepage |  |
 
 <http://www.menuetos.net/>
 
-**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), das vollständig mit [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM") geschrieben. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt, was zu [KolibriOS](https://github.com/lowlevel-eu/wiki/wiki/KolibriOS "KolibriOS"), das eine Weiterentwicklung des letzten öffentlichen 32-Bitzweiges ist, geführt hat.
+**MenuetOS** ist ein kleines 32/64-Bit [Betriebssystem](Betriebssystem "Betriebssystem"), das vollständig mit [FASM](Flat-Assembler "FASM") geschrieben. Es passt trotz einiger mitgelieferten Anwendungen immer noch auf eine einzelne Diskette. Durch die Programmierung in Assembler ist das System sehr ressourcenschonend und schnell. MenuetOS basiert nicht auf Unix oder [POSIX](POSIX "POSIX"), sondern hat sich das Ziel gesetzt, die Extra-Schichten zwischen den verschiedenen Teilen des Betriebssystems zu beseitigen, um Komplexität und Bugs vorzubeugen. Die 32-Bit Version von MenuetOS wird aufgrund der 64-Bit Version jedoch kaum mehr entwickelt, was zu [KolibriOS](KolibriOS "KolibriOS"), das eine Weiterentwicklung des letzten öffentlichen 32-Bitzweiges ist, geführt hat.
 
 ## Releases
 
@@ -30,22 +30,22 @@ Die derzeit aktuellen Versionen sind:
 
 Folgende Liste von Features kann man auf der MenuetOS-Webseite finden:
 
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking"), Multithreading, Ring-3-Schutz
-- [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") (Graphical User Interface)
+- [Multitasking](Multitasking "Multitasking"), Multithreading, Ring-3-Schutz
+- [GUI](Graphical-User-Interface "GUI") (Graphical User Interface)
 - IDE: Editor/Makro Assembler um Kernel und Anwendungen zu erzeugen
-- TCP/[IP](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "IP")-Stack mit Loopback, PPP & [Ethernettreibern](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet")
+- TCP/[IP](Internet-Protocol "IP")-Stack mit Loopback, PPP & [Ethernettreibern](Ethernet "Ethernet")
 - Netzwerkanwendungen inklusive FTP-/HTTP-/MP3-/SMTP-Server
 - IRC-, HTTP-, NNTP-, E-Mail- und TFTP-Clients
 - Freigestaltbare Programmfenster
 - Echtzeitdatenverarbeitung
-- [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB")-2.0-Support für High-Speed-Massenspeicher, -Webcams, -Drucker und -TV (mit DVB-T)
+- [USB](Universal-Serial-Bus "USB")-2.0-Support für High-Speed-Massenspeicher, -Webcams, -Drucker und -TV (mit DVB-T)
 - Multiprocessor-Unterstützung
 - Passt unkomprimiert auf eine einzelne Diskette
 
 ## siehe auch
 
-- [Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1#os-showcase-menuetos "Ausgabe 1")
-- [KolibriOS](https://github.com/lowlevel-eu/wiki/wiki/KolibriOS "KolibriOS")
+- [Ausgabe 1](Ausgabe-1#os-showcase-menuetos "Ausgabe 1")
+- [KolibriOS](KolibriOS "KolibriOS")
 
 ---
 

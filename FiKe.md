@@ -13,14 +13,14 @@ FiKe ist ein monolithischer Kernel mit integrierter Shell. FiKe steht dabei für
 |  |  |
 | Entwickler: | Be59 |
 | Akt. Version: | Build 1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | In Planung |
 | Binärformat: | In Planung |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Keine, da Monolith |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Keine, da Monolith |
 | Homepage |  |
 
 <https://fike.bountysource.com/>  

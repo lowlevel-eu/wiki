@@ -1,6 +1,6 @@
 # ARP
 
-Weiterleitung: [Address Resolution Protocol](https://github.com/lowlevel-eu/wiki/wiki/Address-Resolution-Protocol)
+Weiterleitung: [Address Resolution Protocol](Address-Resolution-Protocol)
 
 ---
 

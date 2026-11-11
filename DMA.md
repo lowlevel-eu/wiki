@@ -1,6 +1,6 @@
 # DMA
 
-Weiterleitung: [Direct Memory Access](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access)
+Weiterleitung: [Direct Memory Access](Direct-Memory-Access)
 
 ---
 

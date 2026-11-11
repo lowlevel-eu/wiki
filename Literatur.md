@@ -68,19 +68,19 @@ Es gibt nicht viele, aber es gibt sie: Bücher, die sich komplett auf die Entwic
 ### Bücher über existierende Kernel
 
 - „Understanding the Linux Kernel – From I/O ports to process management“ von Daniel P. Bovet und Marco Cesati  
-  Dieses Buch erklärt den [Linuxkernel](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") sehr detailliert, indem Grafiken Abläufe erklären und wichtige Strukturen sowie kurze Codeteile aufgelistet werden. Dabei handelt es unter anderem von [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") (mit Dateibuffering, Swapping und [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "Direct Memory Access")), dem VFS von Linux, [Scheduling](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler"), Signalen, [Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt"), Synchronisation im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") und der [IPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Interprozesskommunikation").
+  Dieses Buch erklärt den [Linuxkernel](Linux "Linux") sehr detailliert, indem Grafiken Abläufe erklären und wichtige Strukturen sowie kurze Codeteile aufgelistet werden. Dabei handelt es unter anderem von [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung") (mit Dateibuffering, Swapping und [DMA](Direct-Memory-Access "Direct Memory Access")), dem VFS von Linux, [Scheduling](Scheduler "Scheduler"), Signalen, [Interrupts](Interrupt "Interrupt"), Synchronisation im [Kernel](Kernel "Kernel") und der [IPC](Interprozesskommunikation "Interprozesskommunikation").
 
 <!-- -->
 
 - „Essential Linux Device Drivers“ von Sreekrishnan Venkateswaran  
-  Das wohl beste Buch über Treiber im Linux-Kernel. Neben der Arbeitsweise des Linux-Kernels werden sämtliche Arten von Device-Drivers ausführlich behandelt: Von TTY über die [serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "Serielle Schnittstelle") und [parallele Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle") bis hin zu [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "USB") und Firewire lässt der Autor hier nichts verborgen. Als Extra werden im Anhang die Basics zu Assembler unter Linux dem Leser nähergebracht.
+  Das wohl beste Buch über Treiber im Linux-Kernel. Neben der Arbeitsweise des Linux-Kernels werden sämtliche Arten von Device-Drivers ausführlich behandelt: Von TTY über die [serielle Schnittstelle](Serielle-Schnittstelle "Serielle Schnittstelle") und [parallele Schnittstelle](Parallele-Schnittstelle "Parallele Schnittstelle") bis hin zu [USB](Universal-Serial-Bus "USB") und Firewire lässt der Autor hier nichts verborgen. Als Extra werden im Anhang die Basics zu Assembler unter Linux dem Leser nähergebracht.
 
   
 
 ### Bücher über Implementierung
 
 - „Operating Systems: Design and Implementation“ von Andrew S. Tanenbaum  
-  Dieses Lehrbuch beschäftigt sich mit [Minix](https://github.com/lowlevel-eu/wiki/wiki/Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch, bevor und während er Linux entwickelte, zu schätzen.
+  Dieses Lehrbuch beschäftigt sich mit [Minix](Minix "Minix"), welches extra als Lehrsystem entwickelt wurde. Bereits Linus Torvalds wusste dieses Buch, bevor und während er Linux entwickelte, zu schätzen.
 
 <!-- -->
 

@@ -12,11 +12,11 @@
 
 <http://www.digitalmars.com/d>
 
-D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") und der Nähe zum System von [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") zu vereinen.
+D ist eine prozedurale sowie objekorientierte Programmiersprache und wird seit 1999 von Walter Bright entwickelt. Primäres Ziel der Entwicklung war dabei die Produktivität von Scriptsprachen wie Python mit der Abstraktion von [C++](C%2B%2B "C++") und der Nähe zum System von [C](C "C") zu vereinen.
 
 ## D als Sprache für ein Betriebssystem
 
-D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-[Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Destruktoren einzusetzen, bedarf es ebenfalls Laufzeitunterstützung.
+D kann primär als objektorientiertes C (ähnlich C++) gesehen werden. Mit D lässt sich genauso wie in C sehr systemnah programmieren, es sind Sprachmittel wie Pointer vorhanden und man kann per Inline-[Assembler](Assembler "Assembler") (Intel-Syntax) Assembler-Routinen einbauen. Einzig muss (z.B. für den [Kernel](Kernel "Kernel")) ein kleines Runtime implementiert werden, welcher Funktionen zum Überprüfen von Werten während der Laufzeit zur Verfügung stellt (mehr dazu weiter unten). Um Sprachmittel wie Konstruktoren und Destruktoren einzusetzen, bedarf es ebenfalls Laufzeitunterstützung.
 
 ## Kernel in D
 
@@ -41,7 +41,7 @@ Für die Konstruktoren: \<asm\> static_ctors_loop:
 
 \</asm\>
 
-start_ctors ist dabei im [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript") angegeben.
+start_ctors ist dabei im [Linkerscript](Linker "Linkerscript") angegeben.
 
 Für die Destruktoren: \<asm\> static_dtors_loop:
 
@@ -243,7 +243,7 @@ gelinkt wird's so:
 
 ## D-Compiler
 
-- [gdc](http://bitbucket.org/goshawk/gdc/wiki/Home) für die [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GNU Compiler Collection")
+- [gdc](http://bitbucket.org/goshawk/gdc/wiki/Home) für die [GNU Compiler Collection](GNU-Compiler-Collection "GNU Compiler Collection")
 - [dmd](http://dlang.org/download.html) Digital-Mars-D-Compiler
 
 ## Weblinks

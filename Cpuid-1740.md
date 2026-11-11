@@ -1,6 +1,6 @@
 # Cpuid
 
-Weiterleitung: [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID)
+Weiterleitung: [CPUID](CPUID)
 
 ---
 

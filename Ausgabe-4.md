@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") | **Navigation** | [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") » |
+| « [Ausgabe 3](Ausgabe-3 "Ausgabe 3") | **Navigation** | [Ausgabe 5](Ausgabe-5 "Ausgabe 5") » |
 
 ## Vorwort
 
@@ -17,7 +17,7 @@ So, da wären wir mal wieder mit einer neuen Ausgabe von Lowlevel.
 Als allererstes muss ich mich ersmal entschuldigen. Ich habe mir für diese Ausgabe sehr, sehr viel Zeit gelassen. Fast 3 Monate. Aber nicht ohne Grund... Stress in der Schule und im sonstigen Leben machen es schwer, mich auf Lowlevel zu konzentrieren...
 
 Der angekündigte Artikel über Kernel-Entwicklung in C ist leider nicht in der Form erschienen, in der er sein sollte. Aus Zeitmangel habe ich daher Tim Robinsons englischen Artikel über C/C++ abgedruckt. Ich weiß... eines der Hauptziele dieses Magazins ist es, Informationen in deutscher Sprache zu liefern, aber ich konnte echt nicht anders... tut mir leid.  
-*Anmerkung: Der Artikel fehlt in dieser Ausgabe, in [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") gibt es dafür die deutsche Version*
+*Anmerkung: Der Artikel fehlt in dieser Ausgabe, in [Ausgabe 5](Ausgabe-5 "Ausgabe 5") gibt es dafür die deutsche Version*
 
 Übrigens gibt es noch eine Neuerung am Konzept. Die einzelnen Rubriken wie "OS Dev-Tutorial" oder "Lowlevel-Grundlagen" sind ab dieser Ausgabe nicht mehr vorhanden, die Artikel werden einfach ohne Angabe der Rubrik abgedruckt. Wir haben uns dafür entschieden, weil es einfach Artikel gab, die in keine von diesen Kategorien gepasst haben.
 
@@ -421,7 +421,7 @@ Mit viel Mühe habe ich doch noch vor diese verdammte Ausgabe fertig gekriegt. H
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 3](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-3 "Ausgabe 3") | **Navigation** | [Ausgabe 5](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-5 "Ausgabe 5") » |
+| « [Ausgabe 3](Ausgabe-3 "Ausgabe 3") | **Navigation** | [Ausgabe 5](Ausgabe-5 "Ausgabe 5") » |
 
 ---
 

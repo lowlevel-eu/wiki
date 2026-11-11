@@ -2,14 +2,14 @@
 
 | PS/2-Maus |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Schwierigkeit**: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)<br> |  |
-| Benötigtes Vorwissen: | [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"), [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC"), [KBC](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC") |
+| **Schwierigkeit**: [<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)<br> |  |
+| Benötigtes Vorwissen: | [IRQ](Programmable-Interrupt-Controller#irq-tabelle "IRQ"), [PIC](Programmable-Interrupt-Controller "PIC"), [KBC](Keyboard-Controller "KBC") |
 | Sprache: | C |
 
   
 Die Maus ist neben der Tastatur eines der wichtigsten Eingabemittel. Über den Keyboard Controller kann das Betriebssystem mit ihr kommunizieren, der hierfür vorgeschriebene Ablauf ist im sogenannten PS/2-Protokoll beschrieben.
 
-Dieses Tutorial geht nicht auf alle Aspekte der PS/2-Maus ein, sondern liefert nur einen Leitfaden zur Programmierung. Für Details siehe [PS/2-Maus](https://github.com/lowlevel-eu/wiki/wiki/PS-2-Maus "PS/2-Maus").
+Dieses Tutorial geht nicht auf alle Aspekte der PS/2-Maus ein, sondern liefert nur einen Leitfaden zur Programmierung. Für Details siehe [PS/2-Maus](PS-2-Maus "PS/2-Maus").
 
 ## Der Keyboard-Controller
 
@@ -303,8 +303,8 @@ Vergiss nicht, das EOI Signal an den PIC zu senden!
 
 ## Siehe auch
 
-- [PS/2-Maus](https://github.com/lowlevel-eu/wiki/wiki/PS-2-Maus "PS/2-Maus") - Artikel mit allen Befehlen der Maus
-- [Keyboard Controller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller")
+- [PS/2-Maus](PS-2-Maus "PS/2-Maus") - Artikel mit allen Befehlen der Maus
+- [Keyboard Controller](Keyboard-Controller "Keyboard Controller")
 
 ---
 

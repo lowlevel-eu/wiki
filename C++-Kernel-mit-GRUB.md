@@ -1,12 +1,12 @@
 # C\+\+-Kernel mit GRUB
 
-Die Programmierung eines [Kernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") in [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"). Einen ausführlicheren Überblick zu den relevanten Unterschieden zu C gibt der Artikel [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"). Dieses Tutorial arbeitet genau wie [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") mit dem Bootloader [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB").
+Die Programmierung eines [Kernels](Kernel "Kernel") in [C++](C%2B%2B "C++") unterscheidet sich in einigen Punkten von der mit [C](C "C"). Einen ausführlicheren Überblick zu den relevanten Unterschieden zu C gibt der Artikel [C++](C%2B%2B "C++"). Dieses Tutorial arbeitet genau wie [C-Kernel mit GRUB](C-Kernel-mit-GRUB "C-Kernel mit GRUB") mit dem Bootloader [GRUB](Grand-Unified-Bootloader "GRUB").
 
   
 
 ## Kernel
 
-Wir werden mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") und [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM") arbeiten. Diese Programme können auch unter Windows (nach-)installiert werden, was allerdings einiges an Vorarbeit benötigt; siehe dazu [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB#hinweis-f%C3%BCr-windowsianer "C-Kernel mit GRUB").
+Wir werden mit [GCC](GNU-Compiler-Collection "GCC") und [NASM](Netwide-Assembler "NASM") arbeiten. Diese Programme können auch unter Windows (nach-)installiert werden, was allerdings einiges an Vorarbeit benötigt; siehe dazu [C-Kernel mit GRUB](C-Kernel-mit-GRUB#hinweis-f%C3%BCr-windowsianer "C-Kernel mit GRUB").
 
 ### Kernel.cpp
 
@@ -227,7 +227,7 @@ void Video::put(char c){
 
 ### Multiboot.h
 
-Eine Header um die von [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB") an das Betriebssystem übergebene Multibootstruktur zu verwenden (siehe auch [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")):
+Eine Header um die von [GRUB](Grand-Unified-Bootloader "GRUB") an das Betriebssystem übergebene Multibootstruktur zu verwenden (siehe auch [Multiboot](Multiboot "Multiboot")):
 
 \<cpp\>
 
@@ -261,7 +261,7 @@ struct Multiboot {
 
 ### Startup.cpp
 
-Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#globalestatische-objekte "C++")), wird die Funktion initialiseConstructors aus [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B#konstruktoren "C++") benötigt. Diese wird später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen. Die Destruktoraufrufe von globalen/statischen Objekten werden absichtlich nicht aufgerufen, da es innerhalb des Kernels der Erfahrung von [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") nach keinen Sinn macht bei (globalen/statischen!) Objekten den Destruktor zu verwenden. Falls man dies dennoch möchte kann man im Artikel [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") einer der beiden relevanten Abschnitte implementieren.
+Um die Konstruktoren bzw. die Destruktoren von globalen/statischen Objekten aufzurufen (siehe auch [C++](C%2B%2B#globalestatische-objekte "C++")), wird die Funktion initialiseConstructors aus [C++](C%2B%2B#konstruktoren "C++") benötigt. Diese wird später mit in den Kernel gelinkt und in der asmKernel.asm aufgerufen. Die Destruktoraufrufe von globalen/statischen Objekten werden absichtlich nicht aufgerufen, da es innerhalb des Kernels der Erfahrung von [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") nach keinen Sinn macht bei (globalen/statischen!) Objekten den Destruktor zu verwenden. Falls man dies dennoch möchte kann man im Artikel [C++](C%2B%2B "C++") einer der beiden relevanten Abschnitte implementieren.
 
 ### asmKernel.asm
 
@@ -352,15 +352,15 @@ Wir teilen dem Linker mit, dass wir die Labels start_ctors, end_ctors in der Dat
 
     ld -T link.txt -o kernel.bin asmKernel.o Startup.o Video.o Kernel.o
 
-Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden. Hier verfährt man einfach analog.
+Wie der Kernel nun mitsamt GRUB auf einer Diskette landet, kann im Artikel [C-Kernel mit GRUB](C-Kernel-mit-GRUB "C-Kernel mit GRUB") nachgelesen werden. Hier verfährt man einfach analog.
 
 ## Siehe auch
 
-- [C-Kernel mit GRUB](https://github.com/lowlevel-eu/wiki/wiki/C-Kernel-mit-GRUB "C-Kernel mit GRUB")
-- [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
-- [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
-- [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")
-- [Linkerscript](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linkerscript")
+- [C-Kernel mit GRUB](C-Kernel-mit-GRUB "C-Kernel mit GRUB")
+- [GRUB](Grand-Unified-Bootloader "GRUB")
+- [C++](C%2B%2B "C++")
+- [Multiboot](Multiboot "Multiboot")
+- [Linkerscript](Linker "Linkerscript")
 
 ---
 

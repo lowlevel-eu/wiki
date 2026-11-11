@@ -1,6 +1,6 @@
 # BDA
 
-Weiterleitung: [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area)
+Weiterleitung: [BIOS Data Area](BIOS-Data-Area)
 
 ---
 

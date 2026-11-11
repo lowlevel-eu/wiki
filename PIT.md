@@ -1,6 +1,6 @@
 # PIT
 
-Weiterleitung: [Programmable Interval Timer](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer)
+Weiterleitung: [Programmable Interval Timer](Programmable-Interval-Timer)
 
 ---
 

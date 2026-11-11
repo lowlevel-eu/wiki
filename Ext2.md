@@ -13,7 +13,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Länge des Dateinames: | 255 Byte |
 | Maximale Dateisystemgröße: | 16 TiB |
 
-Das ext2-Dateisystem (ext steht für extended) war bis vor ein paar Jahren das Standarddateisystem unter Linux und anderen Unix-Derivaten, bis es durch [ext3](https://github.com/lowlevel-eu/wiki/wiki/Ext3 "Ext3") oder andere Journaling-Dateisysteme ersetzt wurde.
+Das ext2-Dateisystem (ext steht für extended) war bis vor ein paar Jahren das Standarddateisystem unter Linux und anderen Unix-Derivaten, bis es durch [ext3](Ext3 "Ext3") oder andere Journaling-Dateisysteme ersetzt wurde.
 
 ## Aufbau
 

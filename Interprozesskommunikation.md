@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Als **Interprozesskommunikation** (**IPC**, engl. **inter-process communication**) bezeichnet man den Datenaustausch und die Synchronisation zwischen mehreren Prozessen. Da Prozesse normalerweise in unterschiedlichen Adressräumen laufen und eigene Kopien der Prozessorregister besitzen, kann dieser Datenaustausch so ohne Weiteres nicht über den Hauptspeicher oder die Prozessorregister geschehen. Vor allem in einem [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") ist dieser Datenaustausch essentiell, da jeder Treiber ein eigener Prozess ist und natürlich normale Anwendungen mit dem Treiber kommunizieren müssen, um beispielsweise Tastatureingaben zu erhalten oder um vom Dateisystem zu lesen.
+Als **Interprozesskommunikation** (**IPC**, engl. **inter-process communication**) bezeichnet man den Datenaustausch und die Synchronisation zwischen mehreren Prozessen. Da Prozesse normalerweise in unterschiedlichen Adressräumen laufen und eigene Kopien der Prozessorregister besitzen, kann dieser Datenaustausch so ohne Weiteres nicht über den Hauptspeicher oder die Prozessorregister geschehen. Vor allem in einem [Microkernel](Kernel "Kernel") ist dieser Datenaustausch essentiell, da jeder Treiber ein eigener Prozess ist und natürlich normale Anwendungen mit dem Treiber kommunizieren müssen, um beispielsweise Tastatureingaben zu erhalten oder um vom Dateisystem zu lesen.
 
 ## Message Passing
 
@@ -24,7 +24,7 @@ Der Begriff **shared-Memory** bezeichnet einen Speicherbereich, welcher in mehre
 
 ## Pipes
 
-*Hauptartikel: [Pipe](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe")*
+*Hauptartikel: [Pipe](Pipe "Pipe")*
 
 Es gibt 2 Arten Pipes:
 

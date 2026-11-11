@@ -1,6 +1,6 @@
 # NMI
 
-Weiterleitung: [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt)
+Weiterleitung: [Non Maskable Interrupt](Non-Maskable-Interrupt)
 
 ---
 

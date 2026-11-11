@@ -1,6 +1,6 @@
 # KBC
 
-Weiterleitung: [Keyboard Controller](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller)
+Weiterleitung: [Keyboard Controller](Keyboard-Controller)
 
 ---
 

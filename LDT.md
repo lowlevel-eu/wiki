@@ -1,6 +1,6 @@
 # LDT
 
-Weiterleitung: [Local Descriptor Table](https://github.com/lowlevel-eu/wiki/wiki/Local-Descriptor-Table)
+Weiterleitung: [Local Descriptor Table](Local-Descriptor-Table)
 
 ---
 

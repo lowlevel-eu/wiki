@@ -8,11 +8,11 @@ FreeBSD ist vor allem bei Internet-Providern weit verbreitet. So setzt auch das 
 
 ## Features
 
-Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt es schon die Version 5.3, welche sehr viel Funktionen hat, die ich jetzt nicht alle aufzählen will. Nähere Informationen bekommt man auf der Homepage. Das [OS](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") läuft auf neun verschiedenen Plattformen:
+Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt es schon die Version 5.3, welche sehr viel Funktionen hat, die ich jetzt nicht alle aufzählen will. Nähere Informationen bekommt man auf der Homepage. Das [OS](Betriebssystem "Betriebssystem") läuft auf neun verschiedenen Plattformen:
 
 - alpha
-- [amd64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64")
-- [i386](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86")
+- [amd64](X86-64 "X64")
+- [i386](X86 "X86")
 - ia64
 - pc98
 - sparc64
@@ -20,7 +20,7 @@ Die Version 1.0 von FreeBSD gibt es seit November 1993. Seit November 2004 gibt 
 - ppc
 - ARM
 
-FreeBSD besitzt heute schon Funktionen im Bereich Netzwerk, Leistungsfähigkeit, Sicherheit und Kompatibilität, die andere Systeme, auch kommerzielle, nicht besitzen. So kann man zum Beispiel durch Kompatibilitäts-Module Programme von anderen Systemen, wie zum Beispiel [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), SCO UNIX und System V Release 4, auf FreeBSD laufen lassen. Aber auch für die Sicherheit im Netzwerk ist gesorgt, da IPsec und IPv6 unterstützt werden.
+FreeBSD besitzt heute schon Funktionen im Bereich Netzwerk, Leistungsfähigkeit, Sicherheit und Kompatibilität, die andere Systeme, auch kommerzielle, nicht besitzen. So kann man zum Beispiel durch Kompatibilitäts-Module Programme von anderen Systemen, wie zum Beispiel [Linux](Linux "Linux"), SCO UNIX und System V Release 4, auf FreeBSD laufen lassen. Aber auch für die Sicherheit im Netzwerk ist gesorgt, da IPsec und IPv6 unterstützt werden.
 
 Da unter FreeBSD viele Anwendungen laufen, ist es eine gute Alternative zu kommerziellen UNIX® Workstations und kann sowohl für Arbeitsplätze wie auch als Server benutzt werden.
 

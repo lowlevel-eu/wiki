@@ -1,6 +1,6 @@
 # Zeichnen
 
-Weiterleitung: [Grafikmodus](https://github.com/lowlevel-eu/wiki/wiki/Grafikmodus)
+Weiterleitung: [Grafikmodus](Grafikmodus)
 
 ---
 

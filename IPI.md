@@ -1,6 +1,6 @@
 # IPI
 
-Weiterleitung: [Interprocessor Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interprocessor-Interrupt)
+Weiterleitung: [Interprocessor Interrupt](Interprocessor-Interrupt)
 
 ---
 

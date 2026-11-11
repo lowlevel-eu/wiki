@@ -1,6 +1,6 @@
 # NG-OS
 
-Weiterleitung: [C-OS](https://github.com/lowlevel-eu/wiki/wiki/C-OS)
+Weiterleitung: [C-OS](C-OS)
 
 ---
 

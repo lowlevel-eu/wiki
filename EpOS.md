@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
 | Akt. Version: | 0.08 in Entwicklung |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | Im Moment Closed-Source |
+| [Lizenz](Lizenzen "Lizenzen"): | Im Moment Closed-Source |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C/C++ |
 | API: |  |
 | Binärformat: |  |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 <http://desl.bplaced.net>
@@ -87,7 +87,7 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 
 ## Screenshot
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5c7c393aa5f141049669.png" width="200" height="111" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png) [](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/5f769b31420dfa86681e.png "vergrößern")epOS V0.1
+[<img src="assets/5c7c393aa5f141049669.png" width="200" height="111" />](assets/5f769b31420dfa86681e.png) [](assets/5f769b31420dfa86681e.png "vergrößern")epOS V0.1
 
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 

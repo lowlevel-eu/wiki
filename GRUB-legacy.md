@@ -1,6 +1,6 @@
 # GRUB legacy
 
-Weiterleitung: [Grand Unified Bootloader#GRUB legacy](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader#grub-legacy)
+Weiterleitung: [Grand Unified Bootloader#GRUB legacy](Grand-Unified-Bootloader#grub-legacy)
 
 ---
 

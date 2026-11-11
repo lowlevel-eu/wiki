@@ -1,6 +1,6 @@
 # Jincou
 
-Weiterleitung: [SIMPLE](https://github.com/lowlevel-eu/wiki/wiki/SIMPLE)
+Weiterleitung: [SIMPLE](SIMPLE)
 
 ---
 

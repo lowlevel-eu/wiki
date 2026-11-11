@@ -37,7 +37,7 @@ Beispiel:
      Dezimal  : 42
      Ungepacktes BCD-Format: 0000 0100b (0x04)  0000 0010b (0x02)
 
-Der Vorteil hierbei ist z. B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende [ASCII](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437 "ASCII")-Zeichen umgewandelt werden kann.
+Der Vorteil hierbei ist z. B., dass durch eine einfache *or*-Verknüpfung mit 0x30 eine BCD-Ziffer in das passende [ASCII](Codepage-437 "ASCII")-Zeichen umgewandelt werden kann.
 
 ## Weblinks
 

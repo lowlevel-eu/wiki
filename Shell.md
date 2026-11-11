@@ -4,7 +4,7 @@ Eine **Shell** (deutsch wörtlich: Muschel, hier: Schale, Aufsatz) ist ein Progr
 
 ## Geschichte
 
-Die frühen Hardwaremonitore, wo noch jedes Bit einzeln gecodet werden musste, können schon als eine Art „Shell“ angesehen werden. Shells an sich sind ein altes Konzept, um im direktem Kontakt mit dem Betriebssystem zu stehen. Die wohl älteste Shell ist die „osh“, auch „Thompson Shell“ für das Betriebssystem [Unix](https://github.com/lowlevel-eu/wiki/wiki/Unix "Unix") . Sie war von 1971 bis 1979 die Standard-Shell unter Unix und führte u. a. das mächtige Konzept der [Pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") ein. Danach entwickelte Stephen R. Bourne die Bourne-Shell, sh, auf die fast alle heutigen Shells mehr oder weniger aufsetzen.
+Die frühen Hardwaremonitore, wo noch jedes Bit einzeln gecodet werden musste, können schon als eine Art „Shell“ angesehen werden. Shells an sich sind ein altes Konzept, um im direktem Kontakt mit dem Betriebssystem zu stehen. Die wohl älteste Shell ist die „osh“, auch „Thompson Shell“ für das Betriebssystem [Unix](Unix "Unix") . Sie war von 1971 bis 1979 die Standard-Shell unter Unix und führte u. a. das mächtige Konzept der [Pipes](Pipe "Pipe") ein. Danach entwickelte Stephen R. Bourne die Bourne-Shell, sh, auf die fast alle heutigen Shells mehr oder weniger aufsetzen.
 
 ## Funktionsweise einer Shell
 

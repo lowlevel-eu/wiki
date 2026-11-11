@@ -1,6 +1,6 @@
 # LOST
 
-Weiterleitung: [Týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur)
+Weiterleitung: [Týndur](T%C3%BDndur)
 
 ---
 

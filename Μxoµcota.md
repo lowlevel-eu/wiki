@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | — |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GNU [GPL](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") / BSD ([CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")-Treiber) |
+| [Lizenz](Lizenzen "Lizenzen"): | GNU [GPL](Lizenzen "GPL") / BSD ([CDI](Common-Driver-Interface "CDI")-Treiber) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
 | API: | Nativ mit POSIX-Wrappern (Paloxena3.5-API) |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | RPC über Popupthreads mit SHM und Message Passing |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | RPC über Popupthreads mit SHM und Message Passing |
 | Homepage |  |
 
 [Github](https://github.com/XanClic/muxomucota)
@@ -20,7 +20,7 @@
   
 *Hinweis:* Der korrekte Titel dieses Artikels lautet „*µxoµcota*“. Diese Schreibweise ist aufgrund technischer Einschränkungen nicht möglich.
 
-µxoµcota (auch myxomycota oder muxomucota) ist [mein](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") erster Versuch an einem Microkernel. Der Name leitet sich von meinem früheren OS [MyXomycota](https://github.com/lowlevel-eu/wiki/wiki/MyXomycota "MyXomycota") ab, die „µ“s sind eine unauffällige Anspielung an das „Micro“ im Microkernel.
+µxoµcota (auch myxomycota oder muxomucota) ist [mein](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") erster Versuch an einem Microkernel. Der Name leitet sich von meinem früheren OS [MyXomycota](MyXomycota "MyXomycota") ab, die „µ“s sind eine unauffällige Anspielung an das „Micro“ im Microkernel.
 
 ## IPC
 
@@ -60,8 +60,8 @@ Die praktisch absolute Dezentralität hat den Vorteil einer funktionierenden for
 ## Aktuelle Features
 
 - o\. g. IPC und VFS
-- [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface")
-- Netzwerkstack: [Ethernet](https://github.com/lowlevel-eu/wiki/wiki/Ethernet "Ethernet"), [IPv4](https://github.com/lowlevel-eu/wiki/wiki/Internet-Protocol "Internet Protocol"), UDP, DHCP, TCP
+- [CDI](Common-Driver-Interface "Common Driver Interface")
+- Netzwerkstack: [Ethernet](Ethernet "Ethernet"), [IPv4](Internet-Protocol "Internet Protocol"), UDP, DHCP, TCP
 - palirc als IRC-Client
 - Grieχsche Buchstaben im Namen
 - Fortgeschrittener Falschrummodus

@@ -7,7 +7,7 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-**Advanced Power Management** (**APM**) ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde. Um die [Real-Mode Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management "Advanced Power Management") zu nutzen, sollte bereits ein [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode")-Betriebssystem oder ein Betriebssystem, das den [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") unterstützt, vorhanden sein. Für die [Protected-Mode Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Power-Management#protected-mode-schnittstelle "Advanced Power Management") sollte ein lauffähiges [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode")-Betriebssystem, das zumindest Funktionen zum Verändern der [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT") bereitstellt, vorhanden sein.
+**Advanced Power Management** (**APM**) ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde. Um die [Real-Mode Schnittstelle](Advanced-Power-Management "Advanced Power Management") zu nutzen, sollte bereits ein [Real Mode](Real-Mode "Real Mode")-Betriebssystem oder ein Betriebssystem, das den [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode") unterstützt, vorhanden sein. Für die [Protected-Mode Schnittstelle](Advanced-Power-Management#protected-mode-schnittstelle "Advanced Power Management") sollte ein lauffähiges [Protected Mode](Protected-Mode "Protected Mode")-Betriebssystem, das zumindest Funktionen zum Verändern der [GDT](Global-Descriptor-Table "GDT") bereitstellt, vorhanden sein.
 
   
 
@@ -158,7 +158,7 @@ TODO: ergänzen
 
 ## Siehe auch
 
-- [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI"): Ein neuerer Standard für Power Management (unter anderem)
+- [ACPI](Advanced-Configuration-and-Power-Interface "ACPI"): Ein neuerer Standard für Power Management (unter anderem)
 
 ## Weblinks
 

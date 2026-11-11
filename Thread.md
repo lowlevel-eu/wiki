@@ -1,6 +1,6 @@
 # Thread
 
-Weiterleitung: [Prozess#Threads](https://github.com/lowlevel-eu/wiki/wiki/Prozess#threads)
+Weiterleitung: [Prozess#Threads](Prozess#threads)
 
 ---
 

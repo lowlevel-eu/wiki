@@ -1,10 +1,10 @@
 # Interrupt Service Routine
 
-Eine **Interrupt Service Routine** (ISR) ist ein Programmabschnitt, der aufgerufen wird, wenn in der CPU ein [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") ausgelöst wird. Damit die CPU die Routine findet, muss ein entsprechender Zeiger in die [IVT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table "IVT") (Real Mode) bzw. [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") (Protected Mode und Long Mode) eingetragen werden.
+Eine **Interrupt Service Routine** (ISR) ist ein Programmabschnitt, der aufgerufen wird, wenn in der CPU ein [Interrupt](Interrupt "Interrupt") ausgelöst wird. Damit die CPU die Routine findet, muss ein entsprechender Zeiger in die [IVT](Interrupt-Vector-Table "IVT") (Real Mode) bzw. [IDT](Interrupt-Descriptor-Table "IDT") (Protected Mode und Long Mode) eingetragen werden.
 
 ## Aufgaben
 
-Eine ISR hat als Aufgabe gezielt auf die Unterbrechung zu reagieren. Dies gestaltet sich je nach Art des Interrupt unterschiedlich. Wenn die Ursache ein [asynchroner Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt#asynchrone-interrupts "Interrupt") war, muss die Routine außerdem dafür sorgen, dass der Zustand des Programms (insbesondere Register, Programmzähler, Speicher, ...) nicht unbeabsichtigt verändert wird. Bei [synchronen Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt#synchrone-interrupts "Interrupt") ist es hingegen in der Regel erforderlich, entweder das Programm zu terminieren, oder die weitergehende Behandlung des Interrupts (Signal-Handler wie z.B. [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX")-Signale, Exception-Handler, Debuggeraufruf, ...) zu veranlassen.
+Eine ISR hat als Aufgabe gezielt auf die Unterbrechung zu reagieren. Dies gestaltet sich je nach Art des Interrupt unterschiedlich. Wenn die Ursache ein [asynchroner Interrupt](Interrupt#asynchrone-interrupts "Interrupt") war, muss die Routine außerdem dafür sorgen, dass der Zustand des Programms (insbesondere Register, Programmzähler, Speicher, ...) nicht unbeabsichtigt verändert wird. Bei [synchronen Interrupts](Interrupt#synchrone-interrupts "Interrupt") ist es hingegen in der Regel erforderlich, entweder das Programm zu terminieren, oder die weitergehende Behandlung des Interrupts (Signal-Handler wie z.B. [POSIX](POSIX "POSIX")-Signale, Exception-Handler, Debuggeraufruf, ...) zu veranlassen.
 
 ### Systemaufrufe
 
@@ -56,7 +56,7 @@ Der Code ist noch recht übersichtlich, trotzdem sollen hier noch einmal einige 
 
 ### Stack-Layout
 
-Wenn die CPU zu dieser Interrupt-Behandlung gesprungen ist, dann hat sie bereits einige Register auf dem Stack gesichert. Wenn sich die CPU im Ring 0 befunden hat, als der Interrupt ausgelöst wurde, sind dies EFLAGS, CS und EIP, die in dieser Reihenfolge auf den Stack gelegt werden. Wenn die CPU im Ring 1-3 war, wurden vorher noch SS und ESP auf den Stack gelegt. (Und es wurde ein neuer Wert für diese beiden Register aus dem [TSS](https://github.com/lowlevel-eu/wiki/wiki/Task-State-Segment "TSS") geladen.)
+Wenn die CPU zu dieser Interrupt-Behandlung gesprungen ist, dann hat sie bereits einige Register auf dem Stack gesichert. Wenn sich die CPU im Ring 0 befunden hat, als der Interrupt ausgelöst wurde, sind dies EFLAGS, CS und EIP, die in dieser Reihenfolge auf den Stack gelegt werden. Wenn die CPU im Ring 1-3 war, wurden vorher noch SS und ESP auf den Stack gelegt. (Und es wurde ein neuer Wert für diese beiden Register aus dem [TSS](Task-State-Segment "TSS") geladen.)
 
 An der Speicherstelle \[ESP\] befindet sich somit der alte EIP-Wert, an \[ESP + 4\] der alte CS-Wert und so weiter. Es ergibt sich also folgendes Bild für den Stackframe, zu dem Zeitpunkt, wenn die CPU sich bei dem Label *interrupt_stub* befindet:
 
@@ -157,7 +157,7 @@ Im Folgenden soll nun erläutert werden, wie man der CPU mitteilt, dass diese un
 
 ## Installation
 
-Im Protected Mode muss der Zeiger für ein ISR in die [Interrupt Descriptor Table (IDT)](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") eingetragen werden. Das Format ist im dazugehörigen Artikel erklärt. Dabei ist zu beachten, dass die Flags richtig gesetzt werden. TODO
+Im Protected Mode muss der Zeiger für ein ISR in die [Interrupt Descriptor Table (IDT)](Interrupt-Descriptor-Table "IDT") eingetragen werden. Das Format ist im dazugehörigen Artikel erklärt. Dabei ist zu beachten, dass die Flags richtig gesetzt werden. TODO
 
 ## Nachteile der einfachen Implementierung
 
@@ -165,7 +165,7 @@ Im Protected Mode muss der Zeiger für ein ISR in die [Interrupt Descriptor Tabl
 
 Folgendes Beispiel soll einen Nachteil dieser ISR illustrieren:
 
-Zunächst weisen wir den [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") an die [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 0-15 auf die Interrupts 0x20 bis 0x2f zu mappen, und tragen für all diese Interrupts unsere ISR in die IDT ein. Wenn dann z.B. IRQ 0 ausgelöst wird, schaut die CPU in die IDT an den Eintrag 0x20, und sieht dort, dass sie zu *interrupt_stub* springen soll. Bei einem anderen IRQ (z.B. IRQ 1) läuft dieses auf genau das selbe hinaus: Die CPU schaut in den Eintrag (z.B. Interrupt 0x21), und sieht, dass sie zu *interrupt_stub* springen soll. Dort angekommen, wissen wir aber in beiden Fällen nicht, welcher IRQ bzw. Interrupt ausgelöst wurde, weil die CPU uns sowas nicht mitteilt.
+Zunächst weisen wir den [PIC](Programmable-Interrupt-Controller "PIC") an die [IRQs](Programmable-Interrupt-Controller#irq-tabelle "IRQ") 0-15 auf die Interrupts 0x20 bis 0x2f zu mappen, und tragen für all diese Interrupts unsere ISR in die IDT ein. Wenn dann z.B. IRQ 0 ausgelöst wird, schaut die CPU in die IDT an den Eintrag 0x20, und sieht dort, dass sie zu *interrupt_stub* springen soll. Bei einem anderen IRQ (z.B. IRQ 1) läuft dieses auf genau das selbe hinaus: Die CPU schaut in den Eintrag (z.B. Interrupt 0x21), und sieht, dass sie zu *interrupt_stub* springen soll. Dort angekommen, wissen wir aber in beiden Fällen nicht, welcher IRQ bzw. Interrupt ausgelöst wurde, weil die CPU uns sowas nicht mitteilt.
 
 Die einzige Lösung dafür ist, für jeden IRQ eine andere ISR einzutragen. Diese Handler sehen genauso aus wie unser Beispiel, aber mit jeweils unterschiedlichen Namen. (Auch bekannt als Copy&Paste):
 
@@ -201,7 +201,7 @@ Das ganze müsste man dann mindestens für die 16 IRQs, die 32 CPU-Exceptions (b
 
 <!-- -->
 
-- Um präemptives oder kooperatives Software-[Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") zu implementieren, muss man den Stack Pointer wechseln. Zwar legt unsere Variante mit dem *pusha* einen Stack Pointer (\_esp) auf den Stack, aber das *popa* ignoriert den immer. Dieser Stack Pointer zeigt übrigens auf den Kernel Stack, denn entweder wurde er aus dem TSS geladen, wenn der Interrupt im Ring 3 auftrat, oder wir haben uns die ganze Zeit schon im Kernel Mode (Ring 0) befunden. Der Stack Pointer, der zusätzlich auf den Stack gelegt wird, wenn ein Interrupt im Ring 3 aufgetreten ist (esp), nützt uns wenig. Wenn wir diesen austauschen, dann tauschen wir maximal die Stacks von zwei Tasks aus, aber dann ist es bereits zu spät für einen kompletten Kontextwechsel: Die General Purpose Register, sowie EIP und EFLAGS wurden noch vom alten Stack geladen. Das heißt wir müssen den Stack irgendwie anders wechseln.
+- Um präemptives oder kooperatives Software-[Multitasking](Multitasking "Multitasking") zu implementieren, muss man den Stack Pointer wechseln. Zwar legt unsere Variante mit dem *pusha* einen Stack Pointer (\_esp) auf den Stack, aber das *popa* ignoriert den immer. Dieser Stack Pointer zeigt übrigens auf den Kernel Stack, denn entweder wurde er aus dem TSS geladen, wenn der Interrupt im Ring 3 auftrat, oder wir haben uns die ganze Zeit schon im Kernel Mode (Ring 0) befunden. Der Stack Pointer, der zusätzlich auf den Stack gelegt wird, wenn ein Interrupt im Ring 3 aufgetreten ist (esp), nützt uns wenig. Wenn wir diesen austauschen, dann tauschen wir maximal die Stacks von zwei Tasks aus, aber dann ist es bereits zu spät für einen kompletten Kontextwechsel: Die General Purpose Register, sowie EIP und EFLAGS wurden noch vom alten Stack geladen. Das heißt wir müssen den Stack irgendwie anders wechseln.
 
 Deswegen arbeiten wir im Folgenden an einer Generalisierung und Vereinfachung des gesamten Aufbaus unserer ISRs.
 
@@ -405,8 +405,8 @@ Stubs für die restlichen Interrupts auch noch hierhin schreiben.\</asm\>
 
 ### Beispiele
 
-- Der Code in [tyndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Tyndur") ist so wie hier beschrieben aufgebaut. Für *kernel* befindet er sich in [src/kernel/src/stubs.asm](https://github.com/lowlevel-eu/tyndur/blob/0.2.2/src/kernel/src/stubs.asm) und die *kernel2*-Version (AT&T Syntax) befindet sich heute in [src/kernel/src/arch/i386/interrupts/int_stubs.S](https://github.com/lowlevel-eu/tyndur/blob/main/src/kernel/src/arch/i386/interrupts/int_stubs.S).
-- Im [Software Multitasking Tutorial für Freebasic](https://github.com/lowlevel-eu/wiki/wiki/Software-Multitasking-Tutorial "Software Multitasking Tutorial") wird ein ähnliches Stack Layout verwendet, allerdings wird dort von den hier besprochenen Punkten nur der Stack Wechsel implementiert
+- Der Code in [tyndur](T%C3%BDndur "Tyndur") ist so wie hier beschrieben aufgebaut. Für *kernel* befindet er sich in [src/kernel/src/stubs.asm](https://github.com/lowlevel-eu/tyndur/blob/0.2.2/src/kernel/src/stubs.asm) und die *kernel2*-Version (AT&T Syntax) befindet sich heute in [src/kernel/src/arch/i386/interrupts/int_stubs.S](https://github.com/lowlevel-eu/tyndur/blob/main/src/kernel/src/arch/i386/interrupts/int_stubs.S).
+- Im [Software Multitasking Tutorial für Freebasic](Software-Multitasking-Tutorial "Software Multitasking Tutorial") wird ein ähnliches Stack Layout verwendet, allerdings wird dort von den hier besprochenen Punkten nur der Stack Wechsel implementiert
 - In FreeBSD werden die CPU-Exceptions in [i386/i386/exception.s](http://fxr.watson.org/fxr/source/i386/i386/exception.s) ähnlich wie hier beschrieben behandelt.
 
 ## Task Gates

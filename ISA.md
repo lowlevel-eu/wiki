@@ -1,6 +1,6 @@
 # ISA
 
-Weiterleitung: [Industry Standard Architecture](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture)
+Weiterleitung: [Industry Standard Architecture](Industry-Standard-Architecture)
 
 ---
 

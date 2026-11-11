@@ -14,7 +14,7 @@ Features:
 - Speicherverwaltung
 - Multitasking
 - Einfache Interprozesskommunikation
-- [LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO "LostIO") soweit für einfache Dateioperationen nötig
+- [LostIO](T%C3%BDndur-LostIO "LostIO") soweit für einfache Dateioperationen nötig
 - DMA & Diskettenlaufwerk
 - FAT12:
   - Anlegen von Dateien und Verzeichnissen
@@ -53,7 +53,7 @@ Features
 - *kernel2*
   - Unterstützung für i386 und *amd64*
   - *SMP*
-- *[LostIO v2](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIOv2 "Týndur/LostIOv2")*
+- *[LostIO v2](T%C3%BDndur-LostIOv2 "Týndur/LostIOv2")*
 
 ---
 

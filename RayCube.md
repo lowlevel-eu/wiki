@@ -11,14 +11,14 @@ Relevanz - Wenn es z.B. ein Bootsektor-Spiel wäre ok, aber das ist jetzt ein PM
 |  |  |
 | Entwickler: | [tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev") |
 | Akt. Version: | Pre-Alpha |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPL |
+| [Lizenz](Lizenzen "Lizenzen"): | GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") |
 | API: | *keine* |
 | Binärformat: | *keine Programmausführung geplant* |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | *keine* |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | *keine* |
 | Homepage |  |
 
 <https://sourceforge.net/projects/raycube/>
@@ -27,7 +27,7 @@ Relevanz - Wenn es z.B. ein Bootsektor-Spiel wäre ok, aber das ist jetzt ein PM
 **Die Entwicklung als RM Game wird eingestellt, stattdessen wird die Entwicklung jetzt als PM Game für NandOS weitergeführt! Infos zum Spiel und den aktuellen Entwicklungsstand könnt ihr auf der NandOS [Webseite](http://nandos.sourceforge.net) sehen!**
 
   
-RayCube wird ein Spiel, das im 16-Bit [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") läuft. Es wird [Raytracing](http://de.wikipedia.org/wiki/Raytracing) zum Rendern der 3D-Szenerie verwendet. Die 3D-Szene liegt nicht, wie sonst üblich, in [Polygonen](http://de.wikipedia.org/wiki/Polygon) vor, sondern es werden [Voxel](http://de.wikipedia.org/wiki/Voxel) verwendet.
+RayCube wird ein Spiel, das im 16-Bit [Real Mode](Real-Mode "Real Mode") läuft. Es wird [Raytracing](http://de.wikipedia.org/wiki/Raytracing) zum Rendern der 3D-Szenerie verwendet. Die 3D-Szene liegt nicht, wie sonst üblich, in [Polygonen](http://de.wikipedia.org/wiki/Polygon) vor, sondern es werden [Voxel](http://de.wikipedia.org/wiki/Voxel) verwendet.
 
 Primär sollte man das Spiel als technischen Versuch ansehen.
 

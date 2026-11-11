@@ -1,6 +1,6 @@
 # Make
 
-Weiterleitung: [Makefile](https://github.com/lowlevel-eu/wiki/wiki/Makefile)
+Weiterleitung: [Makefile](Makefile)
 
 ---
 

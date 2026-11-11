@@ -1,6 +1,6 @@
 # Bash
 
-Weiterleitung: [Shell#Bash](https://github.com/lowlevel-eu/wiki/wiki/Shell#bash)
+Weiterleitung: [Shell#Bash](Shell#bash)
 
 ---
 

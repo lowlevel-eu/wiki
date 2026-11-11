@@ -15,7 +15,7 @@
 
 ### Bootsektor
 
-Der [Bootsektor](https://github.com/lowlevel-eu/wiki/wiki/Bootsektor "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT"):
+Der [Bootsektor](Bootsektor "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](File-Allocation-Table "FAT"):
 
 | Offset | Größe | Beschreibung |
 | -------- | ------- | ------------------------------------------------------------- |

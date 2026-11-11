@@ -1,6 +1,6 @@
 # CISC
 
-Weiterleitung: [Complex Instruction-Set Computing](https://github.com/lowlevel-eu/wiki/wiki/Complex-Instruction-Set-Computing)
+Weiterleitung: [Complex Instruction-Set Computing](Complex-Instruction-Set-Computing)
 
 ---
 

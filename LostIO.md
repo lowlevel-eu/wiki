@@ -1,6 +1,6 @@
 # LostIO
 
-Weiterleitung: [Týndur/LostIO](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur-LostIO)
+Weiterleitung: [Týndur/LostIO](T%C3%BDndur-LostIO)
 
 ---
 

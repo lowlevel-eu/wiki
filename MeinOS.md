@@ -5,20 +5,20 @@
 |  |  |
 | Entwickler: | [Janosch Gräf](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") |
 | Akt. Version: | noch keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPL, LGPL, BSD |
+| [Lizenz](Lizenzen "Lizenzen"): | GPL, LGPL, BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Microkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
-| API: | [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX"), Nativ |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), [Message Queues](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#message-queues "Message Queue") (SysV), [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Microkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C") |
+| API: | [POSIX](POSIX "POSIX"), Nativ |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | [RPC](Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), [Message Queues](Interprozesskommunikation#message-queues "Message Queue") (SysV), [Semaphores](Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](Interprozesskommunikation "Signale") |
 | Homepage |  |
 
 <http://jgraef.dyndns.org/meinos/>
 
   
-meinOS ist ein [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
+meinOS ist ein [Microkernel](Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
 
 ## Entwicklung
 
@@ -26,32 +26,32 @@ Dank zweier 12h-Programmier-Sessions ist meinOS ein ganzes Stück weiter. Fork()
 
 ### Komplett
 
-- [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel")
-  - [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung")
-  - [Prozessverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Prozessverwaltung "Prozessverwaltung")
+- [Kernel](Kernel "Kernel")
+  - [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung")
+  - [Prozessverwaltung](Prozessverwaltung "Prozessverwaltung")
   - IPC
-    - [Message Queues](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#message-queues "Message Queue") (SysV)
-    - [Shared Memory](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#shared-memory "Shared Memory") (SysV)
-    - [Semaphores](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore "Semaphore") (SysV)
-    - [Remote Procedure Call](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call")
-    - [Signale](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "Signale")
-  - [Multiboot](https://github.com/lowlevel-eu/wiki/wiki/Multiboot "Multiboot")-Kompatibilität
+    - [Message Queues](Interprozesskommunikation#message-queues "Message Queue") (SysV)
+    - [Shared Memory](Interprozesskommunikation#shared-memory "Shared Memory") (SysV)
+    - [Semaphores](Interprozesskommunikation#semaphore "Semaphore") (SysV)
+    - [Remote Procedure Call](Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call")
+    - [Signale](Interprozesskommunikation "Signale")
+  - [Multiboot](Multiboot "Multiboot")-Kompatibilität
 
 <!-- -->
 
 - Server (Treiber)
   - Console-Server (umfasst Keyboard-Treiber und Screen-Treiber)
-  - [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") (mit ATAPI)
+  - [ATA](AT-Attachment "ATA") (mit ATAPI)
   - CDROM
-  - [Cirrus Logic](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic "Cirrus Logic")
-  - [COM](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle "COM")
-  - Console ( [Tastatur](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "Keyboard Controller")
+  - [Cirrus Logic](Cirrus-Logic "Cirrus Logic")
+  - [COM](Serielle-Schnittstelle "COM")
+  - Console ( [Tastatur](Keyboard-Controller "Keyboard Controller")
   - DevFS
-  - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
-  - [FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
-  - [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy")
-  - [ISO9660](https://github.com/lowlevel-eu/wiki/wiki/ISO9660 "ISO9660")
-  - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+  - [DMA](Direct-Memory-Access "DMA")
+  - [FAT](File-Allocation-Table "FAT")
+  - [Floppy](Floppy-Disk-Controller "Floppy")
+  - [ISO9660](ISO9660 "ISO9660")
+  - [PCI](Peripheral-Component-Interconnect "PCI")
   - Pseudo-Geräte (/dev/null, /dev/zero/ und /dev/urandom)
   - Ramdisk
   - VFS
@@ -60,24 +60,24 @@ Dank zweier 12h-Programmier-Sessions ist meinOS ein ganzes Stück weiter. Fork()
 
 - Bibliotheken
   - libmeinos
-    - [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
+    - [CMOS](CMOS "CMOS")
     - DevFS
-    - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
-    - [RPC](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#rpc-remote-procedure-call "RPC")
+    - [DMA](Direct-Memory-Access "DMA")
+    - [RPC](Interprozesskommunikation#rpc-remote-procedure-call "RPC")
     - Linked List
     - Lock (Spinlock)
     - Path (zum parsen von Dateipfaden)
-    - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+    - [PCI](Peripheral-Component-Interconnect "PCI")
     - Process (Kontrolle über Prozesse)
   - stdlibc (großer Teil schon portiert)
-  - [libcdi](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI")
-    - [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS")
+  - [libcdi](Common-Driver-Interface "CDI")
+    - [BIOS](Basic-Input-Output-System "BIOS")
     - Cache
-    - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
+    - [DMA](Direct-Memory-Access "DMA")
     - FS
     - Generic (noch kein Standard)
     - Net
-    - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")
+    - [PCI](Peripheral-Component-Interconnect "PCI")
     - SCSI
     - Storage
     - Video

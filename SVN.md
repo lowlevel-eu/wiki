@@ -1,6 +1,6 @@
 # SVN
 
-Weiterleitung: [Subversion](https://github.com/lowlevel-eu/wiki/wiki/Subversion)
+Weiterleitung: [Subversion](Subversion)
 
 ---
 

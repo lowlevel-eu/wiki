@@ -11,20 +11,20 @@
 |  |  |
 | Entwickler: | [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") |
 | Akt. Version: | 1.4.2 Beta (Codename: "Nitro") |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | CORE.\LICENCE |
+| [Lizenz](Lizenzen "Lizenzen"): | CORE.\LICENCE |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Makrokernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [x86](X86 "X86"), [x64](X86-64 "X64"), [ARM](ARM "ARM") |
+| [Kernelart](Kernel "Kernel"): | Makrokernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
 | API: | CORE.\API |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"), EXE |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Channels, RPC, XML-RPC |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF"), EXE |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Channels, RPC, XML-RPC |
 | Homepage |  |
 
 In Arbeit.
 
   
-CORE.\OS ist ein [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem"), welches seit 2009 von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem frühen Stadium. Die Hauptziele von CORE.\OS sind, eine brauchbare Umgebung für Entwickler und Normalanwender bereitzustellen.
+CORE.\OS ist ein [Betriebssystem](Betriebssystem "Betriebssystem"), welches seit 2009 von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem frühen Stadium. Die Hauptziele von CORE.\OS sind, eine brauchbare Umgebung für Entwickler und Normalanwender bereitzustellen.
 
   
 

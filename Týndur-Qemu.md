@@ -8,7 +8,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Komplette Batch Datei
 
-Mit dieser Batch-Datei sollte man [týndur](https://github.com/lowlevel-eu/wiki/wiki/T%C3%BDndur "Týndur") unter [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU") zum Laufen bringen:
+Mit dieser Batch-Datei sollte man [týndur](T%C3%BDndur "Týndur") unter [QEMU](QEMU "QEMU") zum Laufen bringen:
 
     REM Start qemu on windows.
     @ECHO OFF

@@ -1,6 +1,6 @@
 # ISR
 
-Weiterleitung: [Interrupt Service Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine)
+Weiterleitung: [Interrupt Service Routine](Interrupt-Service-Routine)
 
 ---
 

@@ -1,6 +1,6 @@
 # Pthread
 
-Weiterleitung: [POSIX Threads](https://github.com/lowlevel-eu/wiki/wiki/POSIX-Threads)
+Weiterleitung: [POSIX Threads](POSIX-Threads)
 
 ---
 

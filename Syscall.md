@@ -1,6 +1,6 @@
 # Syscall
 
-Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es für das Programm unmöglich, bestimmte Aktionen wie zum Beispiel [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC") selbstständig auszuführen.
+Ein **Syscall** wird verwendet, um Programmen Zugriff auf Funktionen im [Kernel](Kernel "Kernel") zu gewähren. Da Programme in separaten Adressräumen untergebracht sind und nicht im Kernelmodus (d.h. im Ring 0 im Protected/Long-Mode) ausgeführt werden, ist es für das Programm unmöglich, bestimmte Aktionen wie zum Beispiel [Interprozesskommunikation](Interprozesskommunikation "IPC") selbstständig auszuführen.
 
 ## Parameterübergabe
 
@@ -10,7 +10,7 @@ Anschließend löst der Prozess einen Syscall aus.
 
 ## Auslösen des Syscalls
 
-Meistens werden Syscalls mithilfe eines Software-[Interrupts](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere AMD-Prozessoren die *[syscall](https://github.com/lowlevel-eu/wiki/wiki/Syscall-sysret "Syscall/sysret")*-Instruktion und neuere Intel-Prozessoren die *[sysenter](https://github.com/lowlevel-eu/wiki/wiki/Sysenter "Sysenter")*-Instruktion. [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")-CPUs haben dafür die svc-Instruktion.
+Meistens werden Syscalls mithilfe eines Software-[Interrupts](Interrupt "Interrupt") realisiert. Der auszulösende Softwareinterrupt hat normalerweise eine fest kodierte Nummer. Linux verwendet beispielsweise den Interrupt 0x80. In manchen Prozessoren sind spezielle Instruktionen für ein performanteres Auslösen von Syscalls vorgesehen. Beispielsweise unterstützen neuere AMD-Prozessoren die *[syscall](Syscall-sysret "Syscall/sysret")*-Instruktion und neuere Intel-Prozessoren die *[sysenter](Sysenter "Sysenter")*-Instruktion. [ARM](ARM "ARM")-CPUs haben dafür die svc-Instruktion.
 
 Anschließend befindet sich der Prozessor im Kernelmodus, und der Kernel übernimmt.
 
@@ -20,7 +20,7 @@ Im Kernel wird dann ein Syscallhandler verwendet, um mit Hilfe der übergebenen 
 
 ## siehe auch
 
-- [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt")
+- [Interrupt](Interrupt "Interrupt")
 
 ---
 

@@ -1,6 +1,6 @@
 # HAL
 
-Weiterleitung: [Hardware Abstraction Layer](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Abstraction-Layer)
+Weiterleitung: [Hardware Abstraction Layer](Hardware-Abstraction-Layer)
 
 ---
 

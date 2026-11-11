@@ -1,6 +1,6 @@
 # FreeBasic
 
-Weiterleitung: [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC)
+Weiterleitung: [FreeBASIC](FreeBASIC)
 
 ---
 

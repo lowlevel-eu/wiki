@@ -1,6 +1,6 @@
 # COM
 
-Weiterleitung: [Serielle Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Serielle-Schnittstelle)
+Weiterleitung: [Serielle Schnittstelle](Serielle-Schnittstelle)
 
 ---
 

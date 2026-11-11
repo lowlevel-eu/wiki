@@ -1,6 +1,6 @@
 # IRQ
 
-Weiterleitung: [Programmable Interrupt Controller#IRQ Tabelle](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle)
+Weiterleitung: [Programmable Interrupt Controller#IRQ Tabelle](Programmable-Interrupt-Controller#irq-tabelle)
 
 ---
 

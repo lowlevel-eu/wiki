@@ -1,6 +1,6 @@
 # EISA
 
-Weiterleitung: [Industry Standard Architecture#Extended Industry Standard Architecture](https://github.com/lowlevel-eu/wiki/wiki/Industry-Standard-Architecture#extended-industry-standard-architecture)
+Weiterleitung: [Industry Standard Architecture#Extended Industry Standard Architecture](Industry-Standard-Architecture#extended-industry-standard-architecture)
 
 ---
 

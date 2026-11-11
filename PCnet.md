@@ -1,6 +1,6 @@
 # PCnet
 
-Weiterleitung: [AMD PCnet](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet)
+Weiterleitung: [AMD PCnet](AMD-PCnet)
 
 ---
 

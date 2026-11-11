@@ -6,7 +6,7 @@ Die **serielle Schnittstelle** (Abkürzung: **COM** von *Communication* oder **R
 
 ## Funktionsweise
 
-Daten werden bei der seriellen Schnittstellen als Wörter übertragen, welche je nach Konfiguration fünf bis neun Bits entsprechen. Codiert werden diese Wörter nach dem ASCII-Zeichensatz. Der wichtigste Unterschied zur [parallelen Schnittstelle](https://github.com/lowlevel-eu/wiki/wiki/Parallele-Schnittstelle "Parallele Schnittstelle") ist, dass die Bits nacheinander übertragen werden.
+Daten werden bei der seriellen Schnittstellen als Wörter übertragen, welche je nach Konfiguration fünf bis neun Bits entsprechen. Codiert werden diese Wörter nach dem ASCII-Zeichensatz. Der wichtigste Unterschied zur [parallelen Schnittstelle](Parallele-Schnittstelle "Parallele Schnittstelle") ist, dass die Bits nacheinander übertragen werden.
 
 ## Aufbau
 
@@ -21,7 +21,7 @@ Normalerweise haben die COM-Ports folgende Basis-I/O-Ports:
 | COM3 | 0x3E8 | 4 |
 | COM4 | 0x2E8 | 3 |
 
-Man sollte die Basis-I/O-Ports aber aus der [BIOS Data Area](https://github.com/lowlevel-eu/wiki/wiki/BIOS-Data-Area "BIOS Data Area") auslesen.
+Man sollte die Basis-I/O-Ports aber aus der [BIOS Data Area](BIOS-Data-Area "BIOS Data Area") auslesen.
 
 ### Offsets der einzelnen Register
 

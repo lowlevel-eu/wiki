@@ -1,6 +1,6 @@
 # Kommandozeile
 
-Weiterleitung: [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell)
+Weiterleitung: [Shell](Shell)
 
 ---
 

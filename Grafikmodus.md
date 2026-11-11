@@ -2,12 +2,12 @@
 
 Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserungen gewünscht:  
 
-*Bitte generische Infos über Grafikmodus und mehr Algorithmen dazu. [GUI](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") und diesen hier splitten, dieser hier allgemeines zum Pixel schubsen*
+*Bitte generische Infos über Grafikmodus und mehr Algorithmen dazu. [GUI](Graphical-User-Interface "GUI") und diesen hier splitten, dieser hier allgemeines zum Pixel schubsen*
 
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-Auch wenn die meisten Hobby-[Betriebssysteme](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") "nur" über eine [Kommandozeile](https://github.com/lowlevel-eu/wiki/wiki/Shell "Command Line Interface") verfügen, ist die Entwicklung einer [grafischen Benutzeroberfläche](https://github.com/lowlevel-eu/wiki/wiki/Graphical-User-Interface "GUI") ab einem gewissen Entwicklungsstand des Kernels auch ein interessantes Projekt.
+Auch wenn die meisten Hobby-[Betriebssysteme](Betriebssystem "Betriebssystem") "nur" über eine [Kommandozeile](Shell "Command Line Interface") verfügen, ist die Entwicklung einer [grafischen Benutzeroberfläche](Graphical-User-Interface "GUI") ab einem gewissen Entwicklungsstand des Kernels auch ein interessantes Projekt.
 
 Allerdings kann man dem Bildschirm nicht einfach sagen, dass er einen Kreis oder eine Linie zeichnen soll. Man kann nur einzelne Pixel setzen, deshalb muss man sich um die Darstellung komplexerer - da zweidimensionaler - Formen selbst kümmern (Lowlevel-Zeichnen eben).
 
@@ -59,11 +59,11 @@ void linie(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2)
 
 ## Siehe auch
 
-- [Double Buffering](https://github.com/lowlevel-eu/wiki/wiki/Double-Buffering "Double Buffering")
-- [VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")
-- [Cirrus Logic](https://github.com/lowlevel-eu/wiki/wiki/Cirrus-Logic "Cirrus Logic")
-- [UEFI](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "UEFI")
-- [VBE](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VBE")
+- [Double Buffering](Double-Buffering "Double Buffering")
+- [VGA](Video-Graphics-Array "VGA")
+- [Cirrus Logic](Cirrus-Logic "Cirrus Logic")
+- [UEFI](Unified-Extensible-Firmware-Interface "UEFI")
+- [VBE](VESA-BIOS-Extensions "VBE")
 
 ---
 

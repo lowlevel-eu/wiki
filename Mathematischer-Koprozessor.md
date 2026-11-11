@@ -8,7 +8,7 @@ Ein mathematischer Koprozessor (oder FPU: **F**loating **P**oint **U**nit) ist e
 
 ## Siehe auch
 
-- [Die FPU des x86 - Prozessors](https://github.com/lowlevel-eu/wiki/wiki/FPU-%28x86%29 "FPU (x86)")
+- [Die FPU des x86 - Prozessors](FPU-%28x86%29 "FPU (x86)")
 
 ## Weblinks
 

@@ -1,6 +1,6 @@
 # Interrupt Vector Table
 
-Die **Interrupt Vector Table** (kurz **IVT**) befindet sich im ersten Kilobyte des Arbeitsspeichers (siehe [Speicherbereiche](https://github.com/lowlevel-eu/wiki/wiki/Speicherbereiche "Speicherbereiche")). Ihre Aufgabe besteht darin, die Adresse der [Interrupt Service Routine](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") für jeden [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") bereitzustellen. Die IVT hat nur im [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") Bedeutung und wird im [Protected Mode](https://github.com/lowlevel-eu/wiki/wiki/Protected-Mode "Protected Mode") durch die [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT") abgelöst.
+Die **Interrupt Vector Table** (kurz **IVT**) befindet sich im ersten Kilobyte des Arbeitsspeichers (siehe [Speicherbereiche](Speicherbereiche "Speicherbereiche")). Ihre Aufgabe besteht darin, die Adresse der [Interrupt Service Routine](Interrupt-Service-Routine "ISR") für jeden [Interrupt](Interrupt "Interrupt") bereitzustellen. Die IVT hat nur im [Real Mode](Real-Mode "Real Mode") Bedeutung und wird im [Protected Mode](Protected-Mode "Protected Mode") durch die [IDT](Interrupt-Descriptor-Table "IDT") abgelöst.
 
 ## Aufbau
 
@@ -19,13 +19,13 @@ Insgesamt stehen 256 Interrupts zur Verfügung, deshalb muss die IVT auch 256 Ei
 | 0 | Offset |
 | 2 | Segment |
 
-Die IVT belegt somit genau 256 \* 4 = 1024 Byte. Die genaue Verwendung dieser Einträge bei Auftreten eines Interrupts wird im Artikel [Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Interrupt "Interrupt") erklärt.
+Die IVT belegt somit genau 256 \* 4 = 1024 Byte. Die genaue Verwendung dieser Einträge bei Auftreten eines Interrupts wird im Artikel [Interrupt](Interrupt "Interrupt") erklärt.
 
 ## Während des Bootvorgangs
 
-Nach dem Start des Computers wird die IVT automatisch vom [BIOS](https://github.com/lowlevel-eu/wiki/wiki/Basic-Input-Output-System "BIOS") erstellt, und die Adressen zeigen auf Funktionen, die entweder das BIOS einem Betriebssystem zur Verfügung stellt, oder die benötigt werden, um mit der Hardware zu kommunizieren.
+Nach dem Start des Computers wird die IVT automatisch vom [BIOS](Basic-Input-Output-System "BIOS") erstellt, und die Adressen zeigen auf Funktionen, die entweder das BIOS einem Betriebssystem zur Verfügung stellt, oder die benötigt werden, um mit der Hardware zu kommunizieren.
 
-Nach dem [Bootvorgang](https://github.com/lowlevel-eu/wiki/wiki/Bootprozess-auf-x86 "Bootvorgang") kann es für ein Betriebssystem sinnvoll sein, einige Interrupts durch eigene Funktionen behandeln zu lassen. Dazu zählen vor allem die Exceptions.
+Nach dem [Bootvorgang](Bootprozess-auf-x86 "Bootvorgang") kann es für ein Betriebssystem sinnvoll sein, einige Interrupts durch eigene Funktionen behandeln zu lassen. Dazu zählen vor allem die Exceptions.
 
 ## Beispiel
 

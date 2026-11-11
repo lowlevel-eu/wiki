@@ -46,7 +46,7 @@ Gesetzt, wenn das niederwertige Byte des Ergebnisses eine gerade Anzahl an geset
 #### AF - Auxiliary Carry Flag (Bit 4)
 
 Gesetzt, wenn ein Übertrag von Bit 3 auf Bit 4 stattgefunden hat.  
-Wird hauptsächlich für [BCD](https://github.com/lowlevel-eu/wiki/wiki/Binary-Coded-Decimal "BCD")-Berechnungen verwendet.
+Wird hauptsächlich für [BCD](Binary-Coded-Decimal "BCD")-Berechnungen verwendet.
 
 #### ZF - Zero Flag (Bit 6)
 
@@ -76,7 +76,7 @@ Für schrittweises Debuggen.
 
 #### IF - Interrupt Enable Flag (Bit 9)
 
-Wenn es gesetzt ist, dann wird auf Interrupts reagiert, ist es gelöscht, so werden diese ignoriert (Ausnahme: [Non Maskable Interrupt](https://github.com/lowlevel-eu/wiki/wiki/Non-Maskable-Interrupt "Non Maskable Interrupt")).  
+Wenn es gesetzt ist, dann wird auf Interrupts reagiert, ist es gelöscht, so werden diese ignoriert (Ausnahme: [Non Maskable Interrupt](Non-Maskable-Interrupt "Non Maskable Interrupt")).  
 Kann mit **CLI** (Clear Interruptflag) und **STI** (Set Interruptflag) geändert werden.
 
 #### IOPL - I/O Privilege Field (Bits 12 und 13)
@@ -93,11 +93,11 @@ Steuert die Reaktion des Prozessors auf eine Debug Exception.
 
 #### VM - Virtual 8086 Mode Flag (Bit 17)
 
-Gesetzt, um im [Virtual 8086 Mode](https://github.com/lowlevel-eu/wiki/wiki/Virtual-8086-Mode "Virtual 8086 Mode") zu arbeiten.
+Gesetzt, um im [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode") zu arbeiten.
 
 #### AC - Alignment Check Flag (Bit 18)
 
-Wenn dieses Flag und das AM-Bit im [CR0-Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register "Control Register") gesetzt ist, wird auf Speicherausrichtung geprüft.
+Wenn dieses Flag und das AM-Bit im [CR0-Register](Control-Register "Control Register") gesetzt ist, wird auf Speicherausrichtung geprüft.
 
 #### VIF - Virtual Interrupt Flag (Bit 19)
 
@@ -109,7 +109,7 @@ Gesetzt, um anzuzeigen, dass ein Interrupt abgearbeitet werden muss (Das Betrieb
 
 #### ID - Identification Flag (Bit 21)
 
-Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Prozessor den [CPUID](https://github.com/lowlevel-eu/wiki/wiki/CPUID "CPUID")-Befehl.
+Wenn dieses Bit von Software verändert werden kann, dann unterstützt der Prozessor den [CPUID](CPUID "CPUID")-Befehl.
 
 ## Befehle zum direkten Verändern
 

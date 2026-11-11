@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [Sur3](https://lowlevel-eu.github.io/wiki/pages/2234/index.html "Benutzer:Sur3") |
 | Akt. Version: | 3,5b |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [by-nc-nd 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/de/) |
+| [Lizenz](Lizenzen "Lizenzen"): | [by-nc-nd 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/de/) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), geplant: [AMD64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "AMD64"), AVR und [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Hybridkernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [x86](X86 "X86"), geplant: [AMD64](X86-64 "AMD64"), AVR und [ARM](ARM "ARM") |
+| [Kernelart](Kernel "Kernel"): | Hybridkernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
 | API: | \- |
-| Binärformat: | .x (eigenes) und .elf ([ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")) |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| Binärformat: | .x (eigenes) und .elf ([ELF](Executable-and-Linking-Format "ELF")) |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 (noch keine)
@@ -98,11 +98,11 @@ AtomPlus-VM-Code der vor dem ausführen in AtomPlus-SemiMaschinen-Code umgewande
 
 ## ToDo
 
-Aktuell wird daran gearbeitet das [SMP](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem "SMP")-Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
+Aktuell wird daran gearbeitet das [SMP](Symmetrisches-Multiprozessorsystem "SMP")-Sheduling zu optimieren und das Bearbeiten von Dateien komfortabler zu machen indem BlockDaten und die Grundfunktionen des Texteditors vi implementiert werden.
 
-Außerdem soll das virtuelle Dateisystem \[vDS\] erweitert werden, dieses hat bisher nur rudimentäre Funktionen zum Zugriff auf den [FAT32](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")-Treiber.
+Außerdem soll das virtuelle Dateisystem \[vDS\] erweitert werden, dieses hat bisher nur rudimentäre Funktionen zum Zugriff auf den [FAT32](File-Allocation-Table "FAT")-Treiber.
 
-Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Treiber erweitert werden um automatisch Treibermodule laden zu können, welche durch den PCI-Treiber erkannt wurden. Dies ermöglicht die anfolgende Implementation eines [RTL8139](https://github.com/lowlevel-eu/wiki/wiki/RTL8139 "RTL8139")- oder [AC97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97")-Treibers oder auch eines [Common Driver Interfaces](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "Common Driver Interface").
+Zudem sollen der TriebMeister (die Treiberverwaltung) und der [PCI](Peripheral-Component-Interconnect "PCI")-Treiber erweitert werden um automatisch Treibermodule laden zu können, welche durch den PCI-Treiber erkannt wurden. Dies ermöglicht die anfolgende Implementation eines [RTL8139](RTL8139 "RTL8139")- oder [AC97](AC97 "AC97")-Treibers oder auch eines [Common Driver Interfaces](Common-Driver-Interface "Common Driver Interface").
 
 Hier eine aktuelle ToDo-Liste:
 

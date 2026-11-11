@@ -4,9 +4,9 @@
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | FreeBasic |
 | Inlineassembler: | Ja (Intel-Syntax) |
-| Compiler: | FBC (arbeitet mit [GCC](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection "GCC") zusammen) |
+| Compiler: | FBC (arbeitet mit [GCC](GNU-Compiler-Collection "GCC") zusammen) |
 | Spracheneigenschaften |  |
-| Plattformen: | [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows"), [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux"), u.a. |
+| Plattformen: | [Windows](Windows "Windows"), [Linux](Linux "Linux"), u.a. |
 | Beispielkernel in der Sprache: | s.u. |
 | Homepage |  |
 

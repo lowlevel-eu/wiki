@@ -1,6 +1,6 @@
 # MS-DOS
 
-Weiterleitung: [Microsoft Disk Operating System](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Disk-Operating-System)
+Weiterleitung: [Microsoft Disk Operating System](Microsoft-Disk-Operating-System)
 
 ---
 

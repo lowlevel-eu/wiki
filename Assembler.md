@@ -2,13 +2,13 @@
 
 Als Assembler wird sowohl die Assemblersprache, als auch das Programm zur Übersetzung von Quelltexten in Assemblersprache in Maschinensprache bezeichnet. Die CPU führt ausschließlich Maschinenbefehle aus, die als Folge von Bytes im Speicher vorliegen. Jedem Maschinenbefehl ist genau ein Assemblerbefehl (Mnemonic) zugeordnet. Diese 1:1-Abbildung auf die CPU-Befehle hat zur Folge, dass in der Regel Assemblerprogramme nicht zwischen verschiedenen Prozessortypen übertragbar sind. Außerdem werden in Assembler geschriebene Programme schnell sehr lang und erfordern, dass der Programmierer sich wenig zielführend mit vielen Details der Architektur auseinandersetzen muss.
 
-Der sinnvolle Einsatz von Assembler beschränkt sich darauf, eine Umgebung für eine Hochsprache aufzubauen, sowie kurze, plattformabhängige Hilfsfunktionen und Einsprungsstellen für z. B. [Interrupt-Behandlungsroutinen](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Service-Routine "ISR") bereitzustellen.
+Der sinnvolle Einsatz von Assembler beschränkt sich darauf, eine Umgebung für eine Hochsprache aufzubauen, sowie kurze, plattformabhängige Hilfsfunktionen und Einsprungsstellen für z. B. [Interrupt-Behandlungsroutinen](Interrupt-Service-Routine "ISR") bereitzustellen.
 
 ## Aufgaben eines Assemblers
 
 - Übersetzung von Assembler in Maschinencode
 - Auflösen der symbolischen Namen (z. B. von Labels) in numerische Konstanten, soweit möglich
-- Erzeugung von Objektcode, der in der Regel noch [gelinkt](https://github.com/lowlevel-eu/wiki/wiki/Linker "Linker") werden muss
+- Erzeugung von Objektcode, der in der Regel noch [gelinkt](Linker "Linker") werden muss
 
 ## Aufbau von Assemblerbefehlen
 
@@ -20,7 +20,7 @@ Bei der x86-Architektur ist bei zweistelligen Operationen (Addition, Subtraktion
 
 ### Syntax
 
-Bei Assembler unterscheidet man verschiedene Syntax. Bei der x86-CPU-Familie unterscheidend man zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf der Intel-Syntax aufbaut, gehören [FASM](https://github.com/lowlevel-eu/wiki/wiki/Flat-Assembler "FASM"), [NASM](https://github.com/lowlevel-eu/wiki/wiki/Netwide-Assembler "NASM"), MASM und TASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und anderen Unix-Assemblern ("as") verarbeitet werden. YASM und neuere Versionen des GNU Assemblers können zwischen beiden Syntax umschalten. Die Programme in den binutils können aber mit beiden Syntax-Varianten souverän umgehen, ebenfalls kann der gcc beides ausgeben.
+Bei Assembler unterscheidet man verschiedene Syntax. Bei der x86-CPU-Familie unterscheidend man zwischen Intel- und AT&T-Syntax. Zu den Assemblern, deren Syntax auf der Intel-Syntax aufbaut, gehören [FASM](Flat-Assembler "FASM"), [NASM](Netwide-Assembler "NASM"), MASM und TASM. Die AT&T-Syntax kann von dem GNU Assembler, der in den binutils enthalten ist, und anderen Unix-Assemblern ("as") verarbeitet werden. YASM und neuere Versionen des GNU Assemblers können zwischen beiden Syntax umschalten. Die Programme in den binutils können aber mit beiden Syntax-Varianten souverän umgehen, ebenfalls kann der gcc beides ausgeben.
 
 #### Intel-Syntax
 
@@ -54,7 +54,7 @@ Konstanten wird ein Dollarzeichen vorgestellt, um sie von Adressen zu unterschei
 
 ## Inline-Assembler
 
-Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quelltext eines Hochsprachenprogramms. Dieses erweist sich als nützlich, wenn man nicht den Umweg über einen Funktionsaufruf gehen will, um Assemblercode auszuführen. Siehe auch [Inline-Assembler mit GCC](https://github.com/lowlevel-eu/wiki/wiki/Inline-Assembler-mit-GCC "Inline-Assembler mit GCC").
+Als Inline-Assembler bezeichnet man die Einbettung von Assemblerbefehlen im Quelltext eines Hochsprachenprogramms. Dieses erweist sich als nützlich, wenn man nicht den Umweg über einen Funktionsaufruf gehen will, um Assemblercode auszuführen. Siehe auch [Inline-Assembler mit GCC](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC").
 
 ## Weblinks
 

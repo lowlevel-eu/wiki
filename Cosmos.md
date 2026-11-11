@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [Entwickler](http://cosmos.codeplex.com/team/view) |
 | Akt. Version: | Milestone 5 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | New BSD License |
+| [Lizenz](Lizenzen "Lizenzen"): | New BSD License |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X86-64") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") |
+| Plattform: | [x86](X86 "X86"), [x86-64](X86-64 "X86-64") |
+| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | C# |
 | API: | [Microsoft .NET Micro Framework](http://www.microsoft.com/netmf/default.mspx) |
-| Binärformat: | [PE](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): |  |
+| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
 | Homepage |  |
 
 [Codeplex](http://cosmos.codeplex.com/)

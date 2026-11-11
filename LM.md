@@ -1,6 +1,6 @@
 # LM
 
-Weiterleitung: [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode)
+Weiterleitung: [Long Mode](Long-Mode)
 
 ---
 

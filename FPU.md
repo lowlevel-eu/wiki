@@ -1,6 +1,6 @@
 # FPU
 
-Weiterleitung: [Mathematischer Koprozessor](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor)
+Weiterleitung: [Mathematischer Koprozessor](Mathematischer-Koprozessor)
 
 ---
 

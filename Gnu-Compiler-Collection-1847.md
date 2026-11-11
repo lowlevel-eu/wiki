@@ -1,6 +1,6 @@
 # Gnu Compiler Collection
 
-Weiterleitung: [GNU Compiler Collection](https://github.com/lowlevel-eu/wiki/wiki/GNU-Compiler-Collection)
+Weiterleitung: [GNU Compiler Collection](GNU-Compiler-Collection)
 
 ---
 

@@ -5,27 +5,27 @@
 |  |  |
 | Entwickler: | [Christian Hülsemeyer](https://lowlevel-eu.github.io/wiki/pages/2299/index.html "Benutzer:ChiSaw") |
 | Akt. Version: | 0.1 Alpha |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [BSD](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen#bsd-lizenz "Lizenz") |
+| [Lizenz](Lizenzen "Lizenzen"): | [BSD](Lizenzen#bsd-lizenz "Lizenz") |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Microkernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#mikrokernel "Microkernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [Assembler](Assembler "Assembler") |
 | API: | Noch keine vorhanden |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | Noch keine |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | Noch keine |
 | Homepage |  |
 
 <http://chisaw.de/?page_id=17>
 
   
-COBE (Computer Betriebsystem) ist ein System mit Ziel eines [Microkernels](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"). Derzeit ist das System in den Sprachen [C](https://github.com/lowlevel-eu/wiki/wiki/C "C") und [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") geschrieben. Entwickelt wird es von Christian Hülsemeyer. Das Image des ersten Releases ist auf der Projektseite zu finden.
+COBE (Computer Betriebsystem) ist ein System mit Ziel eines [Microkernels](Kernel "Kernel"). Derzeit ist das System in den Sprachen [C](C "C") und [Assembler](Assembler "Assembler") geschrieben. Entwickelt wird es von Christian Hülsemeyer. Das Image des ersten Releases ist auf der Projektseite zu finden.
 
 ## Aufbau
 
 COBE besteht aus folgenden Elementen:
 
 - COBE besteht aus dem Kernel, da das System nun GRUB als Bootloader benutzt.
-- Eine [Shell](https://github.com/lowlevel-eu/wiki/wiki/Shell "Shell") sorgt für die Kommunikation zum Benutzer. Derzeit werden an relevanten Befehlen nur folgende überstützt: *help*, *cd*, *dir*, *mkdir*, *del*, *rechne*
+- Eine [Shell](Shell "Shell") sorgt für die Kommunikation zum Benutzer. Derzeit werden an relevanten Befehlen nur folgende überstützt: *help*, *cd*, *dir*, *mkdir*, *del*, *rechne*
 
 ## Kernel
 
@@ -36,19 +36,19 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 **COBE 0.1 Alpha unstable:**
 
 - Grundinitialisierung von COBE
-- [GRUB](https://github.com/lowlevel-eu/wiki/wiki/Grand-Unified-Bootloader "GRUB")
+- [GRUB](Grand-Unified-Bootloader "GRUB")
 - Bootscreen (derzeit ausgeschaltet)
-- [GDT](https://github.com/lowlevel-eu/wiki/wiki/Global-Descriptor-Table "GDT")
-- [IDT](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Descriptor-Table "IDT"), ISR
-- [PIC](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller "PIC") Remap
-- [Keyboard-Treiber](https://github.com/lowlevel-eu/wiki/wiki/Keyboard-Controller "KBC")
+- [GDT](Global-Descriptor-Table "GDT")
+- [IDT](Interrupt-Descriptor-Table "IDT"), ISR
+- [PIC](Programmable-Interrupt-Controller "PIC") Remap
+- [Keyboard-Treiber](Keyboard-Controller "KBC")
 - Shell
-- [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")
-- [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking")
-- [FDC](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "FDC")
-- [FAT12](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
-- [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")
-- [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")
+- [CMOS](CMOS "CMOS")
+- [Multitasking](Multitasking "Multitasking")
+- [FDC](Floppy-Disk-Controller "FDC")
+- [FAT12](File-Allocation-Table "FAT")
+- [DMA](Direct-Memory-Access "DMA")
+- [Paging](Paging "Paging")
 - Speicherverwaltung
 - System-Calls
 
@@ -56,8 +56,8 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 
 **COBE 0.2:**
 
-- [FAT32](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT")
-- [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA")
+- [FAT32](File-Allocation-Table "FAT")
+- [ATA](AT-Attachment "ATA")
 - Dateistream
 - C Library
 - GUI-Demo

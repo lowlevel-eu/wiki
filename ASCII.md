@@ -1,6 +1,6 @@
 # ASCII
 
-Weiterleitung: [Codepage 437](https://github.com/lowlevel-eu/wiki/wiki/Codepage-437)
+Weiterleitung: [Codepage 437](Codepage-437)
 
 ---
 

@@ -1,6 +1,6 @@
 # Hardware Multitasking
 
-Weiterleitung: [Hardware-Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Hardware-Multitasking)
+Weiterleitung: [Hardware-Multitasking](Hardware-Multitasking)
 
 ---
 

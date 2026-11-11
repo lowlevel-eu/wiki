@@ -1,6 +1,6 @@
 # Signale
 
-Weiterleitung: [Interprozesskommunikation](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation)
+Weiterleitung: [Interprozesskommunikation](Interprozesskommunikation)
 
 ---
 

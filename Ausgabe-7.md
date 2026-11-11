@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 6](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-6 "Ausgabe 6") | **Navigation** | [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8") » |
+| « [Ausgabe 6](Ausgabe-6 "Ausgabe 6") | **Navigation** | [Ausgabe 8](Ausgabe-8 "Ausgabe 8") » |
 
 ## Die Redaktion
 
@@ -440,7 +440,7 @@ haben. Meine Kontaktdaten zum Melden bei Problemen finden sich im Impressum.
 
 ### Einleitung
 
-Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch machen, und man hat einen Bootloader und einen simplen Kernel, der einen Text ausgibt, geschrieben, wird man schnell zum nächsten Problem kommen: Dateien! 'Wie/wo/was mache ich?' sind wohl die ersten Fragen. Mit diesem Tutorial möchte ich hier ein bisschen helfen. Wichtig: Ich gehe davon aus, dass ihr 'OS Dev-Tutorial' ([Ausgabe 1](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-1 "Ausgabe 1")) und 'Das FAT12 Dateisystem' ([Ausgabe 4](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-4 "Ausgabe 4")) gelesen und verstanden habt. OK, blabla, let's go!
+Ein Betriebssystem zu schreiben ist wirklich nicht einfach. Will man es jedoch machen, und man hat einen Bootloader und einen simplen Kernel, der einen Text ausgibt, geschrieben, wird man schnell zum nächsten Problem kommen: Dateien! 'Wie/wo/was mache ich?' sind wohl die ersten Fragen. Mit diesem Tutorial möchte ich hier ein bisschen helfen. Wichtig: Ich gehe davon aus, dass ihr 'OS Dev-Tutorial' ([Ausgabe 1](Ausgabe-1 "Ausgabe 1")) und 'Das FAT12 Dateisystem' ([Ausgabe 4](Ausgabe-4 "Ausgabe 4")) gelesen und verstanden habt. OK, blabla, let's go!
 
 ### Dateien finden
 
@@ -926,7 +926,7 @@ Alle hier dargestellten Artikel entsprechen der Meinung der Redakteure und spieg
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 6](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-6 "Ausgabe 6") | **Navigation** | [Ausgabe 8](https://github.com/lowlevel-eu/wiki/wiki/Ausgabe-8 "Ausgabe 8") » |
+| « [Ausgabe 6](Ausgabe-6 "Ausgabe 6") | **Navigation** | [Ausgabe 8](Ausgabe-8 "Ausgabe 8") » |
 
 ---
 

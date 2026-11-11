@@ -1,6 +1,6 @@
 # AMD64
 
-Weiterleitung: [X86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64)
+Weiterleitung: [X86-64](X86-64)
 
 ---
 

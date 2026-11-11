@@ -1,6 +1,6 @@
 # MMX
 
-Weiterleitung: [MultiMedia Extension](https://github.com/lowlevel-eu/wiki/wiki/MultiMedia-Extension)
+Weiterleitung: [MultiMedia Extension](MultiMedia-Extension)
 
 ---
 

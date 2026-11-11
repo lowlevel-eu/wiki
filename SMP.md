@@ -1,6 +1,6 @@
 # SMP
 
-Weiterleitung: [Symmetrisches Multiprozessorsystem](https://github.com/lowlevel-eu/wiki/wiki/Symmetrisches-Multiprozessorsystem)
+Weiterleitung: [Symmetrisches Multiprozessorsystem](Symmetrisches-Multiprozessorsystem)
 
 ---
 

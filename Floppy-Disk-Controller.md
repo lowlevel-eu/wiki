@@ -13,18 +13,18 @@ Der Floppy Disk Controller (FDC) ist ein Chip, der ein bis vier Disketten-Laufwe
 
 ## Eigenschaften und Besonderheiten
 
-- Der FDC sendet [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") 6, wenn z.B. eine Lese- oder Schreiboperation beendet ist
-- Der FDC kann über [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA") Daten direkt aus dem Speicher auf Diskette schreiben und anders herum. Dafür wird DMA Channel 2 verwendet
+- Der FDC sendet [IRQ](Programmable-Interrupt-Controller#irq-tabelle "IRQ") 6, wenn z.B. eine Lese- oder Schreiboperation beendet ist
+- Der FDC kann über [DMA](Direct-Memory-Access "DMA") Daten direkt aus dem Speicher auf Diskette schreiben und anders herum. Dafür wird DMA Channel 2 verwendet
 - Der FDC ist recht schlecht standardisiert, da verschiedene Hersteller unterschiedliche Funktionalitäten hinzugefügt haben.
 - Bei allen Operationen, für die der Schreib-/Lesekopf bewegt werden muss, sollte eine Wartezeit eingehalten werden, bis die nächste Operation folgt, da insbesondere Disketten sehr hohe Zugriffszeiten besitzen. Bei Fehlen dieser Wartezeiten funktioniert der Treiber oft nur in Emulatoren, versagt aber auf echter Hardware!
-- Der FDC kann nur Sektorangaben in [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") verarbeiten
+- Der FDC kann nur Sektorangaben in [CHS](Cylinder-Head-Sector "CHS") verarbeiten
 - Der FDC kann theoretisch bis zu vier Diskettenlaufwerke ansteuern, allerdings findet man heute wohl kein System mehr, welches mehr als zwei besitzt.
 - **Diskettenlaufwerke sind sehr fehleranfällig! Deshalb muss ein Befehl oftmals mehrmals gesendet werden, bevor er funktioniert. Großzügige Timeouts sind Pflicht in jedem Treiber für Diskettenlaufwerke.**
 
 ## Verhalten in Emulatoren und echter Hardware
 
-- [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs") unterstützt nur die Übertragung der Daten via [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA"). Allerdings ist dies auch die sinnvollste Variante.
-- [Microsoft Virtual PC](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Virtual-PC "Microsoft Virtual PC") hat Probleme mit DMA, wenn das Auto Bit gesetzt ist. Damit der Code funktioniert, muss der DMA Transfer jedes Mal durch die CPU reinitialisiert werden.
+- [Bochs](Bochs "Bochs") unterstützt nur die Übertragung der Daten via [DMA](Direct-Memory-Access "DMA"). Allerdings ist dies auch die sinnvollste Variante.
+- [Microsoft Virtual PC](Microsoft-Virtual-PC "Microsoft Virtual PC") hat Probleme mit DMA, wenn das Auto Bit gesetzt ist. Damit der Code funktioniert, muss der DMA Transfer jedes Mal durch die CPU reinitialisiert werden.
 
 ## Register
 
@@ -321,7 +321,7 @@ Das Senden von Befehlen erfolgt in drei Phasen:
 | Gap3 | Abstand zwischen Sektoren | 27 |
 | MFM | High Density (HD) Mode | 1 |
 | SK | Skip Mode, als gelöscht markierte Daten werden automatisch übersprungen | 1 |
-| Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](https://github.com/lowlevel-eu/wiki/wiki/Cylinder-Head-Sector "CHS") |  |
+| Drive, Cylinder, Head, Sektor | Positionsangabe für einen bestimmten Sektor einer Diskette. Siehe [CHS](Cylinder-Head-Sector "CHS") |  |
 | Trackgröße | Anzahl der Sektoren, die auf einem Track („Ring“) liegen | 18 (pro Track und Seite) |
 
 ### Technische Laufwerksdaten einstellen (3h)
@@ -803,8 +803,8 @@ Darüber hinaus gibt es noch erweiterte Befehle. Man kann sich aber nicht darauf
 
 Zum Erkennen von den an den Computer angeschlossenen Diskettenlaufwerken gibt es zwei Möglichkeiten:
 
-- Im Real Mode das BIOS fragen (in 0x13, ah=8), siehe dazu [Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h")
-- Im [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS") nachschauen (Offset 0x10), hier sind allerdings keine technischen Daten abfragbar, sondern nur der Typ des Laufwerks
+- Im Real Mode das BIOS fragen (in 0x13, ah=8), siehe dazu [Interrupt 13h](Interrupt-13h "Interrupt 13h")
+- Im [CMOS](CMOS "CMOS") nachschauen (Offset 0x10), hier sind allerdings keine technischen Daten abfragbar, sondern nur der Typ des Laufwerks
 
 ### Daten/Befehle schreiben
 
@@ -906,7 +906,7 @@ void stop_motor(uint8_t n) {
 
 ### Sektoren lesen/schreiben
 
-Die folgende Funktion nutzt Code aus dem [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA") Artikel: \<c\>
+Die folgende Funktion nutzt Code aus dem [DMA](Direct-Memory-Access "DMA") Artikel: \<c\>
 
 1.  define CMD_WRITE_SECTOR (0x05 \| 0x40)
 2.  define CMD_READ_SECTOR (0x06 \| 0x40)
@@ -950,11 +950,11 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ## Siehe auch
 
-[Interrupt 13h](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-13h "Interrupt 13h") - Disketten- und Festplattenzugriff
+[Interrupt 13h](Interrupt-13h "Interrupt 13h") - Disketten- und Festplattenzugriff
 
 ## Weblinks
 
-- [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/3c350f238581550e0dd8.pdf "82077AA FloppyControllerDatasheet.pdf")
+- [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](assets/3c350f238581550e0dd8.pdf "82077AA FloppyControllerDatasheet.pdf")
 - <http://www.isdaman.com/alsos/hardware/fdc/floppy.htm>
 
 ---

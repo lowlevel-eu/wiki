@@ -21,7 +21,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 **Hyper-V** ist eine Virtualisierungslösung von Microsoft. Hyper-V ist kostenlos für das Server-Betriebssystem Windows Server 2008 als Download verfügbar (ab der Version R2 im Betriebssystem direkt integriert).
 
-Für (Hobby-)Betriebssystementwickler ist Hyper-V aktuell nur bedingt interessant, da wohl die wenigsten Hobbyisten einen legal lizensierten [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows "Windows") Server bei sich installiert haben. Allerdings wird mit der nächsten Version von Windows - "Windows 8" - Hyper-V auch für den Privatanwender interessant, da es dann Bestandteil des "normalen" Betriebssystem wird und voraussichtlich Windows Virtual PC ablösen wird.
+Für (Hobby-)Betriebssystementwickler ist Hyper-V aktuell nur bedingt interessant, da wohl die wenigsten Hobbyisten einen legal lizensierten [Windows](Windows "Windows") Server bei sich installiert haben. Allerdings wird mit der nächsten Version von Windows - "Windows 8" - Hyper-V auch für den Privatanwender interessant, da es dann Bestandteil des "normalen" Betriebssystem wird und voraussichtlich Windows Virtual PC ablösen wird.
 
   
 
@@ -33,7 +33,7 @@ Hyper-V wandelt das "Hauptbetriebssystem" ebenfalls zu einer VM um die in einer 
 
 ## Linux und Hyper-V
 
-Nachdem lange Zeit [Linux](https://github.com/lowlevel-eu/wiki/wiki/Linux "Linux") nur sehr schlecht unter Hyper-V unterstützt wurde hat Microsoft einiges dafür getan, dass die Linux-Unterstützung verbessert wird und unter anderem eigene GPL-lizensierte Module zum Linux-Kernel beigesteuert.
+Nachdem lange Zeit [Linux](Linux "Linux") nur sehr schlecht unter Hyper-V unterstützt wurde hat Microsoft einiges dafür getan, dass die Linux-Unterstützung verbessert wird und unter anderem eigene GPL-lizensierte Module zum Linux-Kernel beigesteuert.
 
 ---
 

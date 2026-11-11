@@ -2,7 +2,7 @@
 
 |  |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----- |
-| « [ARM-OS-Dev Teil 8 – Ein erstes Programm](https://github.com/lowlevel-eu/wiki/wiki/ARM-OS-Dev-Teil-8-%E2%80%93-Ein-erstes-Programm "ARM-OS-Dev Teil 8 – Ein erstes Programm") | **Navigation** |  |
+| « [ARM-OS-Dev Teil 8 – Ein erstes Programm](ARM-OS-Dev-Teil-8-%E2%80%93-Ein-erstes-Programm "ARM-OS-Dev Teil 8 – Ein erstes Programm") | **Navigation** |  |
 
 ## Ziel
 
@@ -10,7 +10,7 @@ Zwar können wir nun ELF-Programme laden, doch das wird natürlich nicht mehr so
 
 ## Paging
 
-Zur Einführung ist es sinnvoll, zunächst den [Paging-Artikel](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging") zu lesen, da dieser eine solche am Beispiel x86 liefert. Der auf ARM-Prozessoren verwendete Pagingmechanismus ist dem von x86 recht ähnlich, sodass es nach dem Verständnis des Artikels nicht schwerfallen sollte, auch das ARM-Paging nachzuvollziehen.
+Zur Einführung ist es sinnvoll, zunächst den [Paging-Artikel](Paging "Paging") zu lesen, da dieser eine solche am Beispiel x86 liefert. Der auf ARM-Prozessoren verwendete Pagingmechanismus ist dem von x86 recht ähnlich, sodass es nach dem Verständnis des Artikels nicht schwerfallen sollte, auch das ARM-Paging nachzuvollziehen.
 
 An dieser Stelle sei erwähnt, dass es zwei sich leicht voneinander unterscheidende Pagingmethoden auf ARM-Prozessoren gibt: Das VMSAv6-Paging, das mit ARMv6 eingeführt wurde, und ein nicht näher benanntes, welches davor in einigen ARMv5-CPUs implementiert war (daneben gibt es noch eine ganz andere Methode des Speicherschutzes, die sogenannte *Memory Protection Unit* (MPU, im Gegensatz zur MMU), welche hier aber nicht weiter betrachtet wird). Vom Prinzip her unterscheiden sich beide Varianten nicht. Unterschiede sind die, dass man vor VMSAv6 einzelne Teile einer Page verschieden schützen konnte und es 1-kB-Pages gab, während es in VMSAv6 globale Pages (s. x86-Paging) und die Möglichkeit gibt, Codeausführung je nach Page zu erlauben oder zu verbieten.
 
@@ -164,7 +164,7 @@ Wir sollten jetzt beliebig viele Programme laden können (solange sie in den Spe
 
 ## Weitere Quellen
 
-Das *ARM Architecture Reference Manual* (s. [ARM – Weblinks](https://github.com/lowlevel-eu/wiki/wiki/ARM#weblinks "ARM")) beschreibt das VMSAv6-Paging in den Kapiteln *The System Control Coprocessor* und *Virtual Memory System Architecture* (VMSA).
+Das *ARM Architecture Reference Manual* (s. [ARM – Weblinks](ARM#weblinks "ARM")) beschreibt das VMSAv6-Paging in den Kapiteln *The System Control Coprocessor* und *Virtual Memory System Architecture* (VMSA).
 
 Eine Beispielimplementierung des Tutorialkernels mit Paging kann man [hier](https://gitorious.org/arm-os-dev/kernel/trees/8756adf6f8a5a97017fa11bab83b0885538ff386) finden.
 

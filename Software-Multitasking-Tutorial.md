@@ -2,15 +2,15 @@
 
 | Software Multitasking |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Schwierigkeit**: [<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/f49eb9cc36b09af043f1.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/e092c7d3c71af0daba80.gif)<br> |  |
-| Benötigtes Vorwissen: | [IRQ](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ"), [Scheduler](https://github.com/lowlevel-eu/wiki/wiki/Scheduler "Scheduler") |
+| **Schwierigkeit**: [<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/f49eb9cc36b09af043f1.gif" width="16" height="16" alt="Stern gold.gif" />](assets/f49eb9cc36b09af043f1.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)[<img src="assets/e092c7d3c71af0daba80.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/e092c7d3c71af0daba80.gif)<br> |  |
+| Benötigtes Vorwissen: | [IRQ](Programmable-Interrupt-Controller#irq-tabelle "IRQ"), [Scheduler](Scheduler "Scheduler") |
 | Sprache: | FreeBASIC |
 
-Dieses Tutorial ist für alle gedacht, die in ihrem [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem "Betriebssystem") [Multitasking](https://github.com/lowlevel-eu/wiki/wiki/Multitasking "Multitasking") auf Softwarebasis implementieren wollen. Ich bin am Anfang an diesem Thema fast verzweifelt, daher schreibe ich dieses Tutorial, damit andere einen leichten Einstieg in diese Thema haben. Ich werde hier nicht "alles" erklären, aber danach sollte einfache Tests mit zwei Tasks möglich sein.
+Dieses Tutorial ist für alle gedacht, die in ihrem [Betriebssystem](Betriebssystem "Betriebssystem") [Multitasking](Multitasking "Multitasking") auf Softwarebasis implementieren wollen. Ich bin am Anfang an diesem Thema fast verzweifelt, daher schreibe ich dieses Tutorial, damit andere einen leichten Einstieg in diese Thema haben. Ich werde hier nicht "alles" erklären, aber danach sollte einfache Tests mit zwei Tasks möglich sein.
 
 ## Bevor wir anfangen...
 
-Eines vorweg: Du solltest mit deinem Betriebssystem bereits auf einem gewissen Stand sein, d.h. du solltest [IRQs](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller#irq-tabelle "IRQ") verwalten und den [PIT](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interval-Timer "Programmable Interval Timer") umprogrammieren können, eine [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung "Speicherverwaltung") wird auch benötigt. Ansonsten brauchst du nur noch gesunden Menschenverstand. Wenn du das alles hast, kann es losgehen.
+Eines vorweg: Du solltest mit deinem Betriebssystem bereits auf einem gewissen Stand sein, d.h. du solltest [IRQs](Programmable-Interrupt-Controller#irq-tabelle "IRQ") verwalten und den [PIT](Programmable-Interval-Timer "Programmable Interval Timer") umprogrammieren können, eine [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung") wird auch benötigt. Ansonsten brauchst du nur noch gesunden Menschenverstand. Wenn du das alles hast, kann es losgehen.
 
 ## Einige Überlegungen
 
@@ -36,7 +36,7 @@ Einfach drauflos zu coden ist hier der falsche Weg. Überlegen wir uns zuerst ei
 
 ## Der Code
 
-Kommen wir nun zum Hauptteil dieses Tutorials: Dem Code. Ich werde hier erst ein Stück [FreeBASIC](https://github.com/lowlevel-eu/wiki/wiki/FreeBASIC "FreeBASIC")-Code zeigen und dann erklären, was dieser Code macht.
+Kommen wir nun zum Hauptteil dieses Tutorials: Dem Code. Ich werde hier erst ein Stück [FreeBASIC](FreeBASIC "FreeBASIC")-Code zeigen und dann erklären, was dieser Code macht.
 
 Zuerst kommen ein paar Konstanten: \<freebasic\>
 
@@ -185,7 +185,7 @@ Dann holen wir uns 4kb Speicher und legen die Adresse dazu in "stack" ab (das "+
 
 Jetzt basteln wir den Task-Stack zusammen, und zwar ohne den Stack zu wechseln! Hier wird auch klar, für was unsere Hilfsfunktion genutzt wird. Wir simulieren damit praktisch einen "push"-Befehl. Natürlich legen wir hier keine richtigen Register auf den Stack, sondern nur Anfangs-Werte.Dann sieht es so aus, als ob der Task sofot am Anfang unterbrochen worden wäre, so gibt es keine Probleme beim ersten aktivieren des Tasks.
 
-Würden wir noch ein Register cr3 (für [Paging](https://github.com/lowlevel-eu/wiki/wiki/Paging "Paging")) dazu legen, müssten wir natürlich auch unsere Switch-Routine anpassen, sonst schrotten wir unseren Stack.
+Würden wir noch ein Register cr3 (für [Paging](Paging "Paging")) dazu legen, müssten wir natürlich auch unsere Switch-Routine anpassen, sonst schrotten wir unseren Stack.
 
 Nun legen wir den Tabelleneintrag für unseren Task an. Wir setzen ihn auf ready und legen die Stackadresse rein. Die Stack-Adresse ist tatsächlich korrekt, dafür hat unsere Hilfsfunktion schon gesorgt. Naja, dann schreiben wir noch die ProzessID rein und erhöhen den Wert von "AllTasks" um eins, da wir ja jetzt einen Task mehr haben.
 
@@ -193,7 +193,7 @@ Abschließend erlauben wir mit "sti" die Interrupts wieder und fertig sind wir.
 
 ## Abschließende Worte
 
-Puh. Fertig. Es hat mir Spaß gemacht, dieses Tutorial zu schreiben, und ich hoffe, es hat euch auch Spaß gemacht, es zu lesen. Solltet ihr etwas nicht verstanden haben, könnt ihr eure Fragen im Forum posten. Wahrscheinlich wäre den meisten [C](https://github.com/lowlevel-eu/wiki/wiki/C "C")-Code hier lieber gewesen, aber ich kann nicht gut C, außerdem ist so das Risiko geringer, dass jemand per copy&paste den Code übernimmt ohne ihn zu verstehen ;). Ich hoffe aber trotzdem, das alles verständlich war.
+Puh. Fertig. Es hat mir Spaß gemacht, dieses Tutorial zu schreiben, und ich hoffe, es hat euch auch Spaß gemacht, es zu lesen. Solltet ihr etwas nicht verstanden haben, könnt ihr eure Fragen im Forum posten. Wahrscheinlich wäre den meisten [C](C "C")-Code hier lieber gewesen, aber ich kann nicht gut C, außerdem ist so das Risiko geringer, dass jemand per copy&paste den Code übernimmt ohne ihn zu verstehen ;). Ich hoffe aber trotzdem, das alles verständlich war.
 
 Natürlich sind wir hier noch nicht beim perfekten Multitasking angelangt. Wie gesagt müsste cr3 noch gesichert werden, auch Prioritäten wären wünschenswert. Also hört hier nicht einfach auf, sondern bastelt noch ein wenig, und verbessert euren Code. Dieses Tutorial zeigt euch nur wie es geht, was ihr letztendlich damit anstellt, ist eure Sache ;)
 

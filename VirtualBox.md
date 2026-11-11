@@ -23,7 +23,7 @@
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
 - Gastunterstützung, um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
 - OpenGL-Unterstützung (derzeit nur für die 32-Bit-Versionen von Windows XP und Windows Vista sowie Linux und Solaris)
-- Experimenteller Support für [EFI (Extensible Firmware Interface)](https://github.com/lowlevel-eu/wiki/wiki/Unified-Extensible-Firmware-Interface "Extensible Firmware Interface")
+- Experimenteller Support für [EFI (Extensible Firmware Interface)](Unified-Extensible-Firmware-Interface "Extensible Firmware Interface")
 - Debugger
 
 Befehlssatzerweiterungen für Gäste:
@@ -33,27 +33,27 @@ Befehlssatzerweiterungen für Gäste:
 ## Emulierte Hardware
 
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
-- [I/O_APIC](https://github.com/lowlevel-eu/wiki/wiki/I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
-- VGA- und [VBE](https://github.com/lowlevel-eu/wiki/wiki/VESA-BIOS-Extensions "VBE")-kompatible Grafikkarte
-- [Floppy](https://github.com/lowlevel-eu/wiki/wiki/Floppy-Disk-Controller "Floppy Disk Controller")
+- [I/O_APIC](I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
+- VGA- und [VBE](VESA-BIOS-Extensions "VBE")-kompatible Grafikkarte
+- [Floppy](Floppy-Disk-Controller "Floppy Disk Controller")
 - IDE Controller:
   - PIIX3
   - PIIX4
   - ICH6
 - SATA AHCI Controller Intel ICH8M/ICH8M-E
 - Soundkarten
-  - [AC'97](https://github.com/lowlevel-eu/wiki/wiki/AC97 "AC97") Audio (Intel)
+  - [AC'97](AC97 "AC97") Audio (Intel)
   - SoundBlaster 16
   - Intel HD Audio
 - [Netzwerkkarten](https://lowlevel-eu.github.io/wiki/pages/1826/index.html "Kategorie:Netzwerkkarte"):
-  - [PCnet FAST III](https://github.com/lowlevel-eu/wiki/wiki/AMD-PCnet "AMD PCnet")
+  - [PCnet FAST III](AMD-PCnet "AMD PCnet")
   - PCnet-PCI II
   - Intel PRO/1000 MT Desktop
   - Intel PRO/1000 T Server
-- [USB](https://github.com/lowlevel-eu/wiki/wiki/Universal-Serial-Bus "Universal Serial Bus")-Controller:
-  - [OHCI](https://github.com/lowlevel-eu/wiki/wiki/Open-Host-Controller-Interface "Open Host Controller Interface")
-  - [EHCI](https://github.com/lowlevel-eu/wiki/wiki/Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
-  - [xHCI](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface "XHCI") (Nur per Extension Pack, ab Version 5)
+- [USB](Universal-Serial-Bus "Universal Serial Bus")-Controller:
+  - [OHCI](Open-Host-Controller-Interface "Open Host Controller Interface")
+  - [EHCI](Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
+  - [xHCI](Extensible-Host-Controller-Interface "XHCI") (Nur per Extension Pack, ab Version 5)
 - Serielle Schnittstellen (max. 2)
 
 ## Debugger

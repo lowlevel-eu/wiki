@@ -1,6 +1,6 @@
 # Makrokernel
 
-Weiterleitung: [Kernel#Makrokernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#makrokernel)
+Weiterleitung: [Kernel#Makrokernel](Kernel#makrokernel)
 
 ---
 

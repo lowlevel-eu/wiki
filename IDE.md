@@ -1,6 +1,6 @@
 # IDE
 
-Weiterleitung: [AT Attachment](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment)
+Weiterleitung: [AT Attachment](AT-Attachment)
 
 ---
 

@@ -7,21 +7,21 @@ Wird wieder weiter entwickelt. --[Tev](https://lowlevel-eu.github.io/wiki/pages/
 |  |  |
 | Entwickler: | [tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev") ,Socke, ehemals AGGROStar1991 |
 | Akt. Version: | aktuell keine |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [WTFPL](http://de.wikipedia.org/wiki/WTFPL#Lizenz) |
+| [Lizenz](Lizenzen "Lizenzen"): | [WTFPL](http://de.wikipedia.org/wiki/WTFPL#Lizenz) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | [Monolithischer Kernel](https://github.com/lowlevel-eu/wiki/wiki/Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [x86](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
 | API: | darkblackAPI, linuxABI |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | \- |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
 | Homepage |  |
 
 [Homepage](https://github.com/tevoran/asmimux)
 
 ## Beschreibung
 
-ASMIMUX wird ein Kernel, der das Ziel verfolgt kompatibel zum Linuxkernel zu sein. Aber im Moment ist das noch Zukunftsmusik. ASMIMUX wird auf der Codebasis des Kernels von [TevOpSys](https://github.com/lowlevel-eu/wiki/wiki/TevOpSys "TevOpSys") entwickelt.
+ASMIMUX wird ein Kernel, der das Ziel verfolgt kompatibel zum Linuxkernel zu sein. Aber im Moment ist das noch Zukunftsmusik. ASMIMUX wird auf der Codebasis des Kernels von [TevOpSys](TevOpSys "TevOpSys") entwickelt.
 
   
 

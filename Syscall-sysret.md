@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Mit ***syscall*** und ***sysret*** stehen im [Long Mode](https://github.com/lowlevel-eu/wiki/wiki/Long-Mode "Long Mode") zwei Instruktionen zur Verfügung mit deren Hilfe schnelle Wechsel in Ring 0 bzw. Ring 3 möglich sind.
+Mit ***syscall*** und ***sysret*** stehen im [Long Mode](Long-Mode "Long Mode") zwei Instruktionen zur Verfügung mit deren Hilfe schnelle Wechsel in Ring 0 bzw. Ring 3 möglich sind.
 
 ## Anforderungen
 

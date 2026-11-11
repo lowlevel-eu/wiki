@@ -1,6 +1,6 @@
 # OS
 
-Weiterleitung: [Betriebssystem](https://github.com/lowlevel-eu/wiki/wiki/Betriebssystem)
+Weiterleitung: [Betriebssystem](Betriebssystem)
 
 ---
 

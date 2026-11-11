@@ -1,6 +1,6 @@
 # PIC
 
-Weiterleitung: [Programmable Interrupt Controller](https://github.com/lowlevel-eu/wiki/wiki/Programmable-Interrupt-Controller)
+Weiterleitung: [Programmable Interrupt Controller](Programmable-Interrupt-Controller)
 
 ---
 

@@ -1,18 +1,18 @@
 # Nuke
 
-| [GPLv3](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "GPL") |  |
+| [GPLv3](Lizenzen "GPL") |  |
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
 | Akt. Version: | kernel5-0.0.1 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
+| [Lizenz](Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
 | OS-Eigenschaften |  |
-| Plattform: | [x64](https://github.com/lowlevel-eu/wiki/wiki/X86-64 "X64") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Exokernel |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler"),[C](https://github.com/lowlevel-eu/wiki/wiki/C "C") |
+| Plattform: | [x64](X86-64 "X64") |
+| [Kernelart](Kernel "Kernel"): | Exokernel |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"),[C](C "C") |
 | API: | *noch nicht vorhanden* |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | *noch nicht vorhanden* |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | *noch nicht vorhanden* |
 | Homepage |  |
 
 [gitorious.org/nuke/kernel5](http://www.gitorious.org/nuke/kernel5)
@@ -22,7 +22,7 @@ Nuke ist mein Hobby OS, welches ursprünglich mal nur im Long Mode laufen sollte
 
 ## Screenshot
 
-[<img src="https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cd20ff76126c74c40341.png" width="720" height="400" alt="Nuke-0.4.png" />](https://raw.githubusercontent.com/wiki/lowlevel-eu/wiki/assets/cd20ff76126c74c40341.png) Dieser Screenshot zeigt noch kernel4, welcher nicht mehr in der Entwicklung befindlich ist
+[<img src="assets/cd20ff76126c74c40341.png" width="720" height="400" alt="Nuke-0.4.png" />](assets/cd20ff76126c74c40341.png) Dieser Screenshot zeigt noch kernel4, welcher nicht mehr in der Entwicklung befindlich ist
 
 ## Aktuelle Features
 
@@ -32,7 +32,7 @@ Nuke ist mein Hobby OS, welches ursprünglich mal nur im Long Mode laufen sollte
 
 ## Die Zukunft
 
-Genauere Pläne stehen noch nicht fest. Sicher ist aber, dass Nuke eine libPosix bekommen wird und auch einmal Linuxprogramme unterstützen soll. Zudem ist angedacht, [CDI](https://github.com/lowlevel-eu/wiki/wiki/Common-Driver-Interface "CDI") zu implementieren.
+Genauere Pläne stehen noch nicht fest. Sicher ist aber, dass Nuke eine libPosix bekommen wird und auch einmal Linuxprogramme unterstützen soll. Zudem ist angedacht, [CDI](Common-Driver-Interface "CDI") zu implementieren.
 
 ## Ehemals Geplante Features
 

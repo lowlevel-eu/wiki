@@ -32,7 +32,7 @@
   - Kommunikationsanschluss (COM1)
   - Kommunikationsanschluss (COM2)
 - Computer
-  - [ACPI](https://github.com/lowlevel-eu/wiki/wiki/Advanced-Configuration-and-Power-Interface "ACPI")-PI (Advanced Configuration and Power Interface)
+  - [ACPI](Advanced-Configuration-and-Power-Interface "ACPI")-PI (Advanced Configuration and Power Interface)
 - Diskettenlaufwerkcontroller
   - Standard-Diskettenlaufwerkcontroller
 - Diskettenlaufwerk
@@ -40,33 +40,33 @@
 - DVD/CD-ROM-Laufwerke
   - MS C/DVD-ROM ATA Device
 - Grafikkarte
-  - Standard-[VGA](https://github.com/lowlevel-eu/wiki/wiki/Video-Graphics-Array "VGA")-Grafikkarte
+  - Standard-[VGA](Video-Graphics-Array "VGA")-Grafikkarte
 - IDE ATA/ATAPI-Controller
   - ATA Channel 0
   - ATA Channel 1
   - Intel(R) 82371AB/EB PCI-Bus-Master-IDE-Controller
 - Laufwerke
-  - Virtual HD [ATA](https://github.com/lowlevel-eu/wiki/wiki/AT-Attachment "ATA") Device
+  - Virtual HD [ATA](AT-Attachment "ATA") Device
 - Mäuse und andere Zeigergeräte
-  - Microsoft PS/2-[Maus](https://github.com/lowlevel-eu/wiki/wiki/Maus "Maus")
+  - Microsoft PS/2-[Maus](Maus "Maus")
 - Monitore
   - Nicht-PnP-Monitor (Standard)
 - Netzwerkadapter
   - Intel 21140-basierter PCI Fast-Ethernet-Adapter (emuliert)
 - Systemgeräte
   - ACPI-Schalter
-  - [DMA](https://github.com/lowlevel-eu/wiki/wiki/Direct-Memory-Access "DMA")-Controller
+  - [DMA](Direct-Memory-Access "DMA")-Controller
   - Enumerator-Treiber für Microsoft Virtual Drive
   - Intel 82371AB/EB PCI-zu-ISA-Brücke (ISA-Modus)
   - Intel 82443BX Pentium(R) II Prozessor-zu-PCI-Brücke
   - Microsoft ACPI-konformes System
   - Microsoft-Systemverwaltungs-BIOS-Treiber
   - Numerischer Coprozessor
-  - [PCI](https://github.com/lowlevel-eu/wiki/wiki/Peripheral-Component-Interconnect "PCI")-Bus
+  - [PCI](Peripheral-Component-Interconnect "PCI")-Bus
   - PnP-Softwaregeräte-Enumerator
   - Programmierbarer Interruptcontroller
-  - System [CMOS](https://github.com/lowlevel-eu/wiki/wiki/CMOS "CMOS")/Echtzeituhr
-  - [Systemlautsprecher](https://github.com/lowlevel-eu/wiki/wiki/Systemlautsprecher "Systemlautsprecher")
+  - System [CMOS](CMOS "CMOS")/Echtzeituhr
+  - [Systemlautsprecher](Systemlautsprecher "Systemlautsprecher")
   - Systemzeitgeber
   - Terminal Server Device Redirector Bus
   - UMBus-Enumerator
@@ -81,9 +81,9 @@
 
 ## Andere Emulations- / Virtualisierungs-Software
 
-- [Bochs](https://github.com/lowlevel-eu/wiki/wiki/Bochs "Bochs")
-- [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU")
-- [VirtualBox](https://github.com/lowlevel-eu/wiki/wiki/VirtualBox "VirtualBox")
+- [Bochs](Bochs "Bochs")
+- [QEMU](QEMU "QEMU")
+- [VirtualBox](VirtualBox "VirtualBox")
 
   
 

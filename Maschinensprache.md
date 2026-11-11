@@ -28,7 +28,7 @@ Und dann mit objdump -Mintel -d disassembliert, also in Assembler übersetzt. Di
 
 Das Programm sichert zunächst mit dem Befehl **push** das Register rbp. Register sind die Variablen des Prozessors. Dann wird der Wert des Registers rdi auf den Wert des instruction pointers rip, vermehrt um den Hexadezimalwert eac, gesetzt. Dort steht die Zeichenkette "hello world" im Speicher. Dann wird das Register eax auf 0 gesetzt. Dann wird mittels **call** die Betriebssystemroutine **printf** aufgerufen. Diese wird die Speicherzelle, die vom Register rdi bezeichnet wird, auslesen, und den Inhalt von dort als Buchstabenkette ausgeben. Dann wird mit dem Befehl **pop** das Register rbp zurückgesichert, und mit dem Kommando **ret** zu dem aufrufenden Prozess zurück gekehrt.
 
-Der Intel x86 Befehlssatz hat eine variable Laenge, z.B. bedeutet das Byte 90h "NOP" in [assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") und steht fuer "no operation". Es ist also moeglich, mit einem Hexeditor ausfuehrbaren Code zu schreiben.
+Der Intel x86 Befehlssatz hat eine variable Laenge, z.B. bedeutet das Byte 90h "NOP" in [assembler](Assembler "Assembler") und steht fuer "no operation". Es ist also moeglich, mit einem Hexeditor ausfuehrbaren Code zu schreiben.
 
 Maschinensprache kann mehr als Assembler, z.B. springt der Befehl
 

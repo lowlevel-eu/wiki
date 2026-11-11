@@ -1,6 +1,6 @@
 # HomixOS
 
-Weiterleitung: [Xantorix](https://github.com/lowlevel-eu/wiki/wiki/Xantorix)
+Weiterleitung: [Xantorix](Xantorix)
 
 ---
 

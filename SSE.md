@@ -1,6 +1,6 @@
 # SSE
 
-Weiterleitung: [Streaming SIMD Extensions](https://github.com/lowlevel-eu/wiki/wiki/Streaming-SIMD-Extensions)
+Weiterleitung: [Streaming SIMD Extensions](Streaming-SIMD-Extensions)
 
 ---
 

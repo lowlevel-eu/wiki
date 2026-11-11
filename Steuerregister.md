@@ -1,6 +1,6 @@
 # Steuerregister
 
-Weiterleitung: [Control Register](https://github.com/lowlevel-eu/wiki/wiki/Control-Register)
+Weiterleitung: [Control Register](Control-Register)
 
 ---
 

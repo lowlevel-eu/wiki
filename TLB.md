@@ -1,6 +1,6 @@
 # TLB
 
-Weiterleitung: [Paging#Translation Lookaside Buffer](https://github.com/lowlevel-eu/wiki/wiki/Paging#translation-lookaside-buffer)
+Weiterleitung: [Paging#Translation Lookaside Buffer](Paging#translation-lookaside-buffer)
 
 ---
 

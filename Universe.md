@@ -7,14 +7,14 @@ Universe soll ein schlankes, universelles (deswegen auch der Name, wer hätte da
 |  |  |
 | Entwickler: | InfinityCoding |
 | Akt. Version: | 1.0 (in Entwicklung) |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | GPL v3, LGPL (libc) |
+| [Lizenz](Lizenzen "Lizenzen"): | GPL v3, LGPL (libc) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86"), [ARM](https://github.com/lowlevel-eu/wiki/wiki/ARM "ARM")(In Arbeit) |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Micro-Kernel |
+| Plattform: | [x86](X86 "X86"), [ARM](ARM "ARM")(In Arbeit) |
+| [Kernelart](Kernel "Kernel"): | Micro-Kernel |
 | [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | Assembler/C |
-| API: | nativ, [POSIX](https://github.com/lowlevel-eu/wiki/wiki/POSIX "POSIX") |
-| Binärformat: | [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [Pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
+| API: | nativ, [POSIX](POSIX "POSIX") |
+| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | [Pipes](Pipe "Pipe") |
 | Homepage |  |
 
 (in Arbeit)
@@ -30,7 +30,7 @@ Aktuell handelt es sich um einen einfachen Microkernel mit einem kleinen Treiber
 ## Universe Kernel 1.0 (Planung/in Arbeit)
 
 - Blocktreiber für Bootlaufwerk (CD + ATA)
-- Dateisystemtreiber für das Bootlaufwerk ([FAT](https://github.com/lowlevel-eu/wiki/wiki/File-Allocation-Table "FAT") und EXT)
+- Dateisystemtreiber für das Bootlaufwerk ([FAT](File-Allocation-Table "FAT") und EXT)
 - Standard Konsolen/Grafiktreiber
 - vollständige Portierung der core-utils
 

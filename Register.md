@@ -2,8 +2,8 @@
 
 Als **Register** werden kleine (meist nur 8 bis 128Bit große) Speicher innerhalb eines Hardwarebausteins bezeichnet. Meist ist mit Hardwarebaustein die CPU gemeint. Folgende Links bieten mehr Informationen zu den Registern einer bestimmten Architektur:
 
-- [x86](https://github.com/lowlevel-eu/wiki/wiki/X86#register "X86")
-- [x86-64](https://github.com/lowlevel-eu/wiki/wiki/X86-64#register "X86-64")
+- [x86](X86#register "X86")
+- [x86-64](X86-64#register "X86-64")
 
 ---
 

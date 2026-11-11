@@ -1,6 +1,6 @@
 # NT
 
-Weiterleitung: [Windows](https://github.com/lowlevel-eu/wiki/wiki/Windows)
+Weiterleitung: [Windows](Windows)
 
 ---
 

@@ -1,6 +1,6 @@
 # MBR
 
-Weiterleitung: [Master Boot Record](https://github.com/lowlevel-eu/wiki/wiki/Master-Boot-Record)
+Weiterleitung: [Master Boot Record](Master-Boot-Record)
 
 ---
 

@@ -1,6 +1,6 @@
 # Semaphore
 
-Weiterleitung: [Interprozesskommunikation#Semaphore](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation#semaphore)
+Weiterleitung: [Interprozesskommunikation#Semaphore](Interprozesskommunikation#semaphore)
 
 ---
 

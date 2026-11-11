@@ -1,6 +1,6 @@
 # Lizenz
 
-Weiterleitung: [Lizenzen](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen)
+Weiterleitung: [Lizenzen](Lizenzen)
 
 ---
 

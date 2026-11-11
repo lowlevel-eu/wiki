@@ -164,7 +164,7 @@ Diese Fehlermeldung wird vom Linker ausgegeben, wenn er kein Symbol mit dem Name
 - du vergessen hast die Objektdatei mit der Definition der Funktion *funktionsname* zu kompilieren und mit zu linken
 - du vergessen hast diese Funktion in der Sourcecodedatei zu definieren
 - du aus Versehen die Funktion als *static* deklariert hast
-- du [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++") verwendest und *funktionsname* in einer C++-Quellcodedatei definiert und von einer C/Assembler-Quellcodedatei verwendet wird, eine Lösung findet sich [hier](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++")
+- du [C++](C%2B%2B "C++") verwendest und *funktionsname* in einer C++-Quellcodedatei definiert und von einer C/Assembler-Quellcodedatei verwendet wird, eine Lösung findet sich [hier](C%2B%2B "C++")
 - du Archive (.a-Dateien) verwendest und die Reihenfolge der Kommandozeilenparameter von ld nicht richtig ist oder du vergessen hast *--start-group* und *--end-group* anzugeben, siehe hierfür auch das [ld-Manual](http://sourceware.org/binutils/docs/ld/Options.html)
 
 Falls nichts davon zutrifft, könntest du die Objektdatei, die die deiner Meinung nach entsprechende Funktion enthalten soll, disassemblieren und schauen, ob ein entsprechender Symbolname auftaucht. Alternativ kannst du dir auch mit dem Befehl *readelf* die Symbole der Objektdatei anzeigen lassen:
@@ -275,7 +275,7 @@ Dann noch das Linkerscript modifizieren und fertig:
 
 ### Bochs verabschiedet sich mit einer Endlosschleife der Meldung: "math_abort: MSDOS compatibility FPU exception"
 
-Dieser Fehler tritt auf, wenn dein Code zur Berechnung von Fleißkommazahlen auf die [FPU](https://github.com/lowlevel-eu/wiki/wiki/Mathematischer-Koprozessor "FPU") zugreift, z.B. bei der Verwendung des Daentyps "float". Wenn du vorher die FPU nicht initialisiert hast, dann tritt in Bochs der obige Fehler auf. Die Behebung des Problems lässt sich mit folgendem einfachen Assembler-Befehl beheben, den du nur vor der ersten Verwendung der FPU aufrufen musst: \<asm\>finit\</asm\> Achtung: Falls mehrere Prozesse die FPU verwenden, musst du die Inhalte der FPU-Register während dem Task-Switch mit sichern und wiederherstellen! Das lässt sich aber durch Nutzung des TS-Flag im CR0 optimieren.
+Dieser Fehler tritt auf, wenn dein Code zur Berechnung von Fleißkommazahlen auf die [FPU](Mathematischer-Koprozessor "FPU") zugreift, z.B. bei der Verwendung des Daentyps "float". Wenn du vorher die FPU nicht initialisiert hast, dann tritt in Bochs der obige Fehler auf. Die Behebung des Problems lässt sich mit folgendem einfachen Assembler-Befehl beheben, den du nur vor der ersten Verwendung der FPU aufrufen musst: \<asm\>finit\</asm\> Achtung: Falls mehrere Prozesse die FPU verwenden, musst du die Inhalte der FPU-Register während dem Task-Switch mit sichern und wiederherstellen! Das lässt sich aber durch Nutzung des TS-Flag im CR0 optimieren.
 
 ---
 

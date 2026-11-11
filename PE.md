@@ -1,6 +1,6 @@
 # PE
 
-Weiterleitung: [Microsoft Portable Executable and Common Object File Format](https://github.com/lowlevel-eu/wiki/wiki/Microsoft-Portable-Executable-and-Common-Object-File-Format)
+Weiterleitung: [Microsoft Portable Executable and Common Object File Format](Microsoft-Portable-Executable-and-Common-Object-File-Format)
 
 ---
 

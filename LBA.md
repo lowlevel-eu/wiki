@@ -1,6 +1,6 @@
 # LBA
 
-Weiterleitung: [Logical Block Addressing](https://github.com/lowlevel-eu/wiki/wiki/Logical-Block-Addressing)
+Weiterleitung: [Logical Block Addressing](Logical-Block-Addressing)
 
 ---
 

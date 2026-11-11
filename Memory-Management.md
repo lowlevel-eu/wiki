@@ -1,6 +1,6 @@
 # Memory Management
 
-Weiterleitung: [Speicherverwaltung](https://github.com/lowlevel-eu/wiki/wiki/Speicherverwaltung)
+Weiterleitung: [Speicherverwaltung](Speicherverwaltung)
 
 ---
 

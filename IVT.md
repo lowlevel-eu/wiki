@@ -1,6 +1,6 @@
 # IVT
 
-Weiterleitung: [Interrupt Vector Table](https://github.com/lowlevel-eu/wiki/wiki/Interrupt-Vector-Table)
+Weiterleitung: [Interrupt Vector Table](Interrupt-Vector-Table)
 
 ---
 

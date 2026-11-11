@@ -1,6 +1,6 @@
 # XHCI
 
-Weiterleitung: [Extensible Host Controller Interface](https://github.com/lowlevel-eu/wiki/wiki/Extensible-Host-Controller-Interface)
+Weiterleitung: [Extensible Host Controller Interface](Extensible-Host-Controller-Interface)
 
 ---
 

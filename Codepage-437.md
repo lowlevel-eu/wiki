@@ -14,7 +14,7 @@ Rot: Nicht eindeutig konvertierbare Zeichen
 
 ## Darstellung in QEMU
 
-Hier eine Darstellung der Zeichen mit [QEMU](https://github.com/lowlevel-eu/wiki/wiki/QEMU "QEMU"):
+Hier eine Darstellung der Zeichen mit [QEMU](QEMU "QEMU"):
 
 ![Codepage-437.png](http://upload.wikimedia.org/wikipedia/commons/f/f8/Codepage-437.png)
 

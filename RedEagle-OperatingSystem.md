@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [Benutzer:RedEagle](https://lowlevel-eu.github.io/wiki/pages/1491/index.html "Benutzer:RedEagle") |
 | Akt. Version: | Betriebssystem: 1.00<br>Kernel: 0.10.0 |
-| [Lizenz](https://github.com/lowlevel-eu/wiki/wiki/Lizenzen "Lizenzen"): | [CC by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) (GPL geplant) |
+| [Lizenz](Lizenzen "Lizenzen"): | [CC by-nc-sa 2.0](http://creativecommons.org/licenses/by-nc-sa/2.0/de/) (GPL geplant) |
 | OS-Eigenschaften |  |
-| Plattform: | [i586](https://github.com/lowlevel-eu/wiki/wiki/X86 "X86") |
-| [Kernelart](https://github.com/lowlevel-eu/wiki/wiki/Kernel "Kernel"): | Monolithisch |
-| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](https://github.com/lowlevel-eu/wiki/wiki/C "C"), [C++](https://github.com/lowlevel-eu/wiki/wiki/C%2B%2B "C++"), [Assembler](https://github.com/lowlevel-eu/wiki/wiki/Assembler "Assembler") |
+| Plattform: | [i586](X86 "X86") |
+| [Kernelart](Kernel "Kernel"): | Monolithisch |
+| [Sprache](https://lowlevel-eu.github.io/wiki/pages/1648/index.html "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
 | API: | Nativ |
-| Binärformat: | Kernel: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF"); Apps: [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](https://github.com/lowlevel-eu/wiki/wiki/Interprozesskommunikation "IPC"): | [pipes](https://github.com/lowlevel-eu/wiki/wiki/Pipe "Pipe") |
+| Binärformat: | Kernel: [ELF](Executable-and-Linking-Format "ELF"); Apps: [ELF](Executable-and-Linking-Format "ELF") |
+| [IPC-Methode](Interprozesskommunikation "IPC"): | [pipes](Pipe "Pipe") |
 | Homepage |  |
 
 [Projektseite](http://www.redeagle-operatingsystem.de.vu/)  
@@ -47,9 +47,9 @@ Adversys besteht (bisher) aus den folgenden Komponenten
 - Multitasking
 - Singeluser-system
 - Pipes
-- Ausführen von [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Dateien
+- Ausführen von [ELF](Executable-and-Linking-Format "ELF")-Dateien
 - alle Programme laufen in ring0
-- [GDB](https://github.com/lowlevel-eu/wiki/wiki/GDB "GDB") interface
+- [GDB](GDB "GDB") interface
 
 ### Pipes
 
@@ -68,7 +68,7 @@ open(2, true); //Port 2 zum schreiben öffnen link(MyPID(), 2, pid, 1); //Port 2
 
 **Status:** Funktionsfähig, aber mangels Bibliotheken/Shell im Einsatz nicht allzu mächtig.
 
-Programme liegen im [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-format vor. Die API ist über *int 0xFF* anwendbar.  
+Programme liegen im [ELF](Executable-and-Linking-Format "ELF")-format vor. Die API ist über *int 0xFF* anwendbar.  
 Programme können in C und Assembly geschrieben sein. Für C-Programme gib es eine entsprechende API-Bibliothek.  
 Bislang gibt es abgesehen von der API keine weiteren Bibliotheken.
 
@@ -104,13 +104,13 @@ Zu den Tools gehört unter anderem ein ramdisk-manager der folgende Features bie
 - eine ramdisk auf Diskette schreiben
 - Eine ramdisk per RS232 herunterladen und in den RAM schreiben
 
-Ein weiteres tool namens *ldelf* lädt eine [ELF](https://github.com/lowlevel-eu/wiki/wiki/Executable-and-Linking-Format "ELF")-Datei (den Kernel) in den Speicher. Diese kann dann mit einem weiteren Tool ausgeführt werden.
+Ein weiteres tool namens *ldelf* lädt eine [ELF](Executable-and-Linking-Format "ELF")-Datei (den Kernel) in den Speicher. Diese kann dann mit einem weiteren Tool ausgeführt werden.
 
   
 Für die Entwicklung im Realmode wurden folgende Programme eingesetzt:
 
-- bcc - ein C-Compiler der Code für den [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") erzeugt
-- ld86 - Der Entsprechende Linker um eine [Real Mode](https://github.com/lowlevel-eu/wiki/wiki/Real-Mode "Real Mode") - Anwendung zu erzeugen
+- bcc - ein C-Compiler der Code für den [Real Mode](Real-Mode "Real Mode") erzeugt
+- ld86 - Der Entsprechende Linker um eine [Real Mode](Real-Mode "Real Mode") - Anwendung zu erzeugen
 - nasm - Ein universeller Assembler für alles :)
 
 *bcc* und *ld86* werden vom Paketmanager (opensuse & Fedora) im Paket *dev86* bereit gestellt.
