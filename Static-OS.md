@@ -21,7 +21,7 @@
 
 <http://www.staticos.at.tf/>
 
-[<img src="assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](assets/02ff22b7f6dc3d0e5176.jpg)
+[<img src="assets/Staticos1.JPG" width="396" height="329" alt="Staticos1.JPG" />](assets/Staticos1.JPG)
 
   
 
@@ -64,15 +64,15 @@
 
 Static Operating System Ladevorgang
 
-[<img src="assets/02ff22b7f6dc3d0e5176.jpg" width="396" height="329" alt="Staticos1.JPG" />](assets/02ff22b7f6dc3d0e5176.jpg)
+[<img src="assets/Staticos1.JPG" width="396" height="329" alt="Staticos1.JPG" />](assets/Staticos1.JPG)
 
 Static Operating System GUI Test
 
-[<img src="assets/4917882a3dee917fdb65.jpg" width="399" height="329" alt="Staticos2.JPG" />](assets/4917882a3dee917fdb65.jpg)
+[<img src="assets/Staticos2.JPG" width="399" height="329" alt="Staticos2.JPG" />](assets/Staticos2.JPG)
 
 Static Operating System Fenster vergrößern
 
-[<img src="assets/15703bca12330b93272d.jpg" width="396" height="328" alt="Staticos3.JPG" />](assets/15703bca12330b93272d.jpg)
+[<img src="assets/Staticos3.JPG" width="396" height="328" alt="Staticos3.JPG" />](assets/Staticos3.JPG)
 
   
 

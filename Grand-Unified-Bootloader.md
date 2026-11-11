@@ -246,7 +246,7 @@ Man kopiert alles vorher in den Ordner, der angegeben wurde und GRUB erstellt, d
 
 #### Windows
 
-Unter Windows gibt es noch keine Möglichkeit, ein CD-Image von GRUB2 zu erstellen. Am besten nimmt man ein Fertiges. Dafür ist das Ändern des Images sehr einfach. Man lädt [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter, falls man Windows-User ist (das Programm ist Shareware und bis 300MB begrenzt). Wenn UltraISO heruntergeladen und installiert ist, sollte man folgende Dateien in einem Ordner haben: Das GRUB2.iso-Image, die grub.cfg und alle für das eigene OS nötigen Dateien (Kernel, Module, Programe etc.). Das sollte dann so ausehen: [<img src="assets/fa4203217911f828a9bd.png" width="597" height="130" alt="GRUB2-1.PNG" />](assets/fa4203217911f828a9bd.png)
+Unter Windows gibt es noch keine Möglichkeit, ein CD-Image von GRUB2 zu erstellen. Am besten nimmt man ein Fertiges. Dafür ist das Ändern des Images sehr einfach. Man lädt [UltraISO](http://www.chip.de/downloads/UltraISO_14293961.html) herunter, falls man Windows-User ist (das Programm ist Shareware und bis 300MB begrenzt). Wenn UltraISO heruntergeladen und installiert ist, sollte man folgende Dateien in einem Ordner haben: Das GRUB2.iso-Image, die grub.cfg und alle für das eigene OS nötigen Dateien (Kernel, Module, Programe etc.). Das sollte dann so ausehen: [<img src="assets/GRUB2-1.PNG" width="597" height="130" alt="GRUB2-1.PNG" />](assets/GRUB2-1.PNG)
 
 Die grub.cfg sollte folgenden inhalt haben:
 
@@ -261,15 +261,15 @@ Die grub.cfg sollte folgenden inhalt haben:
 
 Wenn das der Fall ist, UltraISO starten, den "Weiterhin testen..."-Button betätigen, auf Datei-\>Öffnen klicken und dann das GRUB2-Image auswählen und öffnen. Das Fenster sollte dan wie folgt aussehen: In der Verzeichnisstruktur zu dem Ordner mit der grub.cfg und den eigenen OS-Dateien wechseln. Das Fenster sollte dann den Inhalt des Ordners beinhalten.
 
-[<img src="assets/5a96869af9be98ac5a13.png" width="839" height="489" alt="GRUB2-2.PNG" />](assets/5a96869af9be98ac5a13.png)
+[<img src="assets/GRUB2-2.PNG" width="839" height="489" alt="GRUB2-2.PNG" />](assets/GRUB2-2.PNG)
 
 Kernel ins Image bringen: Obenb Links auf den Ordner "boot" und unten rechts auf die eigene Kernel-Datei klicken. Klicke auf den makierten Button.
 
-[<img src="assets/76ee07abdaa0ca50ba98.png" width="838" height="490" alt="GRUB2-3.PNG" />](assets/76ee07abdaa0ca50ba98.png)
+[<img src="assets/GRUB2-3.PNG" width="838" height="490" alt="GRUB2-3.PNG" />](assets/GRUB2-3.PNG)
 
 grub.cfg ins Image bringen: Oben links auf das Plus neben dem Ordner "boot" klicken und dann auf den Ordner "Grub". Die grub.cfg auswählen und auf den markierten Button klicken.
 
-[<img src="assets/e5127e0a1ea9c0f1ea3e.png" width="837" height="489" alt="GRUB2-4.PNG" />](assets/e5127e0a1ea9c0f1ea3e.png)
+[<img src="assets/GRUB2-4.PNG" width="837" height="489" alt="GRUB2-4.PNG" />](assets/GRUB2-4.PNG)
 
 Auf "Datei-\>Speichern" klicken.
 

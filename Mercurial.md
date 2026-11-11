@@ -119,9 +119,9 @@ Eine Liste mit weiteren Hostern gibt es [hier](http://mercurial.selenic.com/wiki
 
 ## Weblinks
 
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Mercurial Homepage](http://mercurial.selenic.com/)
-- [<img src="assets/80088a07d15fa1c1dc96.png" title="deutsch" width="20" height="12" alt="deutsch" /> Deutschsprachiges Tutorial auf der offiziellen Mercurial Website](http://mercurial.selenic.com/wiki/GermanTutorial)
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/) *(english)*
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> Mercurial Homepage](http://mercurial.selenic.com/)
+- [<img src="assets/Flag_of_Germany.png" title="deutsch" width="20" height="12" alt="deutsch" /> Deutschsprachiges Tutorial auf der offiziellen Mercurial Website](http://mercurial.selenic.com/wiki/GermanTutorial)
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/) *(english)*
 
 ---
 

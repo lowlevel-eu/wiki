@@ -82,7 +82,7 @@ Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Ska
 
 ## Links
 
-- [Erklärung zum Mikro- und L4-Kernel](assets/904ad80cc1c81c6b6e5d.pdf "Die L4-Mikrokernel-Familie.pdf")
+- [Erklärung zum Mikro- und L4-Kernel](assets/Die_L4-Mikrokernel-Familie.pdf "Die L4-Mikrokernel-Familie.pdf")
 - [The Exokernel Operating System Architecture](http://pdos.csail.mit.edu/exo/theses/engler/thesis.ps)
 
 ---

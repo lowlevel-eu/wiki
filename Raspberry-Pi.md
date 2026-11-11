@@ -2,7 +2,7 @@
 
 |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [<img src="assets/55d56d04146e1a63bca3.png" width="280" height="187" alt="Raspberrypi.png" />](assets/8bb335421ee989c2c7b7.png) |  |
+| [<img src="assets/280px-Raspberrypi.png" width="280" height="187" alt="Raspberrypi.png" />](assets/Raspberrypi.png) |  |
 |  |  |
 | Entwickler: | Raspberry Pi Foundation |
 | CPU: | ARM1176JZF-S |

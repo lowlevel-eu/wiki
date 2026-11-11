@@ -83,8 +83,8 @@ SFS ist sehr darauf angewiesen das der benutzte Datenträger keine defekten Sekt
 
 ## Weblinks
 
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Spezifikation](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Tool zum Erstellen und Manipulieren von SFS-Images (für Windows)](http://dimensionalrift.homelinux.net/combuster/vdisk/)
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> Spezifikation](http://dimensionalrift.homelinux.net/combuster/vdisk/sfs.html)
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> Tool zum Erstellen und Manipulieren von SFS-Images (für Windows)](http://dimensionalrift.homelinux.net/combuster/vdisk/)
 
 ---
 

@@ -8,7 +8,7 @@ Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages
 
 | DeviOS |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="assets/2b5401fd0d2f6ebd01f0.jpg" width="221" height="78" alt="DeviOS.jpg" />](assets/2b5401fd0d2f6ebd01f0.jpg) |  |
+| [<img src="assets/DeviOS.jpg" width="221" height="78" alt="DeviOS.jpg" />](assets/DeviOS.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222) |
 | Akt. Version: | 0.0.3.0 Beta |
 | [Lizenz](Lizenzen "Lizenzen"): | DPL (DeviOS Puplic License) ab Version 0.0.3.0 GNUv2 |

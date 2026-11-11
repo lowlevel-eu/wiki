@@ -22,7 +22,7 @@ Nuke ist mein Hobby OS, welches ursprünglich mal nur im Long Mode laufen sollte
 
 ## Screenshot
 
-[<img src="assets/cd20ff76126c74c40341.png" width="720" height="400" alt="Nuke-0.4.png" />](assets/cd20ff76126c74c40341.png) Dieser Screenshot zeigt noch kernel4, welcher nicht mehr in der Entwicklung befindlich ist
+[<img src="assets/Nuke-0.4.png" width="720" height="400" alt="Nuke-0.4.png" />](assets/Nuke-0.4.png) Dieser Screenshot zeigt noch kernel4, welcher nicht mehr in der Entwicklung befindlich ist
 
 ## Aktuelle Features
 

@@ -2,7 +2,7 @@
 
 | Paloxena |  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| [<img src="assets/8304ee34a07d9485b310.png" width="158" height="158" alt="Paloxena.png" />](assets/8304ee34a07d9485b310.png) |  |
+| [<img src="assets/Paloxena.png" width="158" height="158" alt="Paloxena.png" />](assets/Paloxena.png) |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | — |
 | [Lizenz](Lizenzen "Lizenzen"): | [GPL](Lizenzen "GPL") |
@@ -43,7 +43,7 @@ paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyX
 
 Hier passend zum Namen ein Bild von einem Pink Screen Of Death (Dank an [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") für die Inspiration):
 
-[<img src="assets/39df70b465c2797ed44e.png" width="720" height="400" alt="Paloxena-PSOD.png" />](assets/39df70b465c2797ed44e.png)
+[<img src="assets/Paloxena-PSOD.png" width="720" height="400" alt="Paloxena-PSOD.png" />](assets/Paloxena-PSOD.png)
 
 ## paloxena2
 
@@ -74,7 +74,7 @@ Ja. Es ist schon wieder passiert. Auch paloxena2 war zu kaputt, also gibt es nun
 
 Neu bei paloxena3 ist der OSOD, der Orange Screen Of Death. Die einen schwerwiegenden Fehler anzeigende Farbe ist also nicht mehr pink oder violett, sondern orange, meine Lieblingsfarbe (#FF4000, um genau zu sein). Hier ein entsprechender Screenshot:
 
-[<img src="assets/48d49f3eb3ec3b0a95ae.png" width="720" height="400" alt="Paloxenaosod.png" />](assets/48d49f3eb3ec3b0a95ae.png)
+[<img src="assets/Paloxenaosod.png" width="720" height="400" alt="Paloxenaosod.png" />](assets/Paloxenaosod.png)
 
   
 

@@ -294,7 +294,7 @@ Ein Betriebssystem, komplett in 32bit-Assembler geschrieben! Kann das gut gehen?
 
 ### Screenshots
 
-[<img src="assets/eb2e62925bc38565a48b.png" width="730" height="499" alt="Blue Screen V2OS.png" />](assets/eb2e62925bc38565a48b.png)
+[<img src="assets/Blue_Screen_V2OS.png" width="730" height="499" alt="Blue Screen V2OS.png" />](assets/Blue_Screen_V2OS.png)
 
 Den von Windows bekannten Bluescreen gibt es auch bei V2_OS.
 

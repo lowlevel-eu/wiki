@@ -87,7 +87,7 @@ Der Host bildet den Busmaster eines USB. Er ist der einzige Teilnehmer, der Tran
 
 ### Konfigurationen
 
-[<img src="assets/c9f1174b80f9b30937ba.png" width="300" height="212" />](assets/a41f63c56744da7ff4f8.png) [](assets/a41f63c56744da7ff4f8.png "vergrößern")Zusammenhang zwischen Gerät, Konfiguration, Interface und Endpunkt
+[<img src="assets/300px-USB-Ger%C3%A4teschema.png" width="300" height="212" />](assets/USB-Ger%C3%A4teschema.png) [](assets/USB-Ger%C3%A4teschema.png "vergrößern")Zusammenhang zwischen Gerät, Konfiguration, Interface und Endpunkt
 
 In verschiedenen Situationen muss sich ein Gerät unterschiedlich verhalten. Denkbar wäre zum Beispiel ein Gerät, das 500 mA vom Bus benötigt, um zu funktionieren. Hat der Host allerdings keine Möglichkeit, diese 500 mA bereitzustellen (z. B. hängt das Gerät hinter einem Hub, der sich ebenfalls mit Strom vom Bus versorgt und so maximal 100 mA pro Port bereitstellen kann). Obwohl das Gerät dadurch vielleicht keine Möglichkeit hat, seine eigentliche Funktion auszuführen, muss es trotzdem aktiv am Bus hängen. Das heißt, es kann zum Beispiel einfach nur darauf warten, dass es doch noch 500 mA erhält.
 
@@ -197,7 +197,7 @@ Um den ganzen Spaß einmal selbst zu testen, bedarf es nicht viel &#150; natürl
 
 Ich garantiere weder dafür, dass dieses Experiment funktioniert, noch dafür, dass eure Hardware bzw. die hier verwendeten Bauteile unbeschädigt bleiben &#150; dieser Versuch läuft komplett auf eigene Gefahr!
 
-[<img src="assets/cd24193787d81969b564.png" width="300" height="370" />](assets/7de86316739b6e24aef9.png) [](assets/7de86316739b6e24aef9.png "vergrößern")Fertiger Schaltplan
+[<img src="assets/300px-USB.png" width="300" height="370" />](assets/USB.png) [](assets/USB.png "vergrößern")Fertiger Schaltplan
 
 Nun gut, wer jetzt noch mutig genug ist, um diese Gefahr auf sich zu nehmen, der benötigt:
 
@@ -422,9 +422,9 @@ Das Token gibt die Richtung des Transfer sowie den Empfänger an. Danach folgt d
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ---------------------------------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 42 | 1 | &#151; | 0x1C |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 42 | 1 | &#151; | 0x1C |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
 ### Nicht-Handshake-Datentransfers
 
@@ -432,8 +432,8 @@ Es gibt auch Datentransfers ohne Handshake, diese werden bei Isochronoustransfer
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 42 | 7 | &#151; | 0x13 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 42 | 7 | &#151; | 0x13 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
 
 ### SPLIT-Transfers
 
@@ -460,7 +460,7 @@ Es gibt zwei Typen von SPLIT-Token, der erste nennt sich SSPLIT für *Start spli
 
 Wie das SSPLIT-Token verwendet wird, zeigt das folgende Schema:
 
-[<img src="assets/87098f4c8d36ab9c9a85.png" width="524" height="159" alt="SSPLIT.png" />](assets/87098f4c8d36ab9c9a85.png)
+[<img src="assets/SSPLIT.png" width="524" height="159" alt="SSPLIT.png" />](assets/SSPLIT.png)
 
 Der ganze Transfer beginnt mit dem SSPLIT-Token an sich, das den SPLIT-Transfer anzeigt und zweitens auch den Zielhub und den dortigen Zielport anzeigt. Danach beginnt mit dem Low- oder Full-Speed-Token (das aber in High-Speed gesendet wird) die eigentliche SPLIT-Transaktion. Bei OUT- oder SETUP-Transfers folgen anschließend noch die zu verschickenden Daten und ein Handshakepaket des Hubs, dass er diese Daten akzeptiert hat.
 
@@ -483,7 +483,7 @@ Solch ein CSPLIT-Token sieht so aus:
 
 Folgendermaßen wird es verwendet:
 
-[<img src="assets/feb3fdad8d282a48be70.png" width="448" height="159" alt="CSPLIT.png" />](assets/feb3fdad8d282a48be70.png)
+[<img src="assets/CSPLIT.png" width="448" height="159" alt="CSPLIT.png" />](assets/CSPLIT.png)
 
 Zuerst kommt also wieder das SPLIT-Token, in diesem Fall CSPLIT. Anschließend wiederholt der Host sein Low-/Full-Speed-Token (war es beim ersten Mal OUT, so ist es jetzt wieder OUT). Der Hub reagiert darauf, indem er die Antwort des Geräts weiterleitet, also ein Handshake oder ein Datenpaket, je nachdem, was das Gerät gesendet hat. Ein Datenpaket würde letztendlich dann natürlich noch vom Host mit einem Handshake quittiert.
 
@@ -529,20 +529,20 @@ Für jede Pipe gibt es ein Data-Toggle. Es wird nach dem erfolgreichen Empfang e
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | --------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 2 | 4 | &#151; | 0x1F |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x2A 0x42 0x66 0xFF | 0x373C |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 2 | 4 | &#151; | 0x1F |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA0 | &#151; | &#151; | 0x2A 0x42 0x66 0xFF | 0x373C |
 | *Anmerkung:* Hier wird jetzt das Toggle-Bit beim Gerät invertiert. |  |  |  |  |  |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | *Anmerkung:* Und hier wird auch das Toggle-Bit beim Host invertiert. |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 2 | 4 | &#151; | 0x1F |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 2 | 4 | &#151; | 0x1F |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
 | *Anmerkung:* Invertierung des Toggle-Bits beim Gerät |  |  |  |  |  |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | *Anmerkung:* Jetzt nehmen wir an, dass dieses ACK-Handshake verlorengeht. Der Host wird darauf reagieren, indem er sein Toggle-Bit nicht invertiert und die Daten noch einmal sendet, in der Annahme, dass ein Fehler aufgetreten ist: |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 2 | 4 | &#151; | 0x1F |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 2 | 4 | &#151; | 0x1F |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
 | *Anmerkung:* Das Gerät erkennt nun, dass der Host das Handshake nicht erhalten hat, da schon wieder ein DATA1-Paket ankommt. Daraufhin lässt es sein Toggle-Bit auf 0 und schickt ein ACK, da die Daten ansonsten korrekt empfangen wurden. |  |  |  |  |  |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
 *Anmerkung:* Dieses ACK kommt an, also invertiert der Host sein Toggle-Bit und alle sind glücklich.
 
@@ -550,20 +550,20 @@ Das ganze funktioniert natürlich auch in die andere Richtung:
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | -------- | -------- | --------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 2 | 4 | &#151; | 0x1F |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x2A 0x42 0x66 0xFF | 0x373C |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 2 | 4 | &#151; | 0x1F |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA0 | &#151; | &#151; | 0x2A 0x42 0x66 0xFF | 0x373C |
 | *Anmerkung:* Hier wird jetzt das Toggle-Bit beim Host invertiert. |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | *Anmerkung:* Und hier wird auch das Toggle-Bit beim Gerät invertiert. |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 2 | 4 | &#151; | 0x1F |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 2 | 4 | &#151; | 0x1F |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
 | *Anmerkung:* Invertierung des Toggle-Bits beim Host |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | *Anmerkung:* Wieder nehmen wir an, dass dieses ACK-Handshake verlorengeht. Das Gerät wird darauf reagieren, indem es sein Toggle-Bit nicht invertiert und die Daten noch einmal sendet: |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 2 | 4 | &#151; | 0x1F |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 2 | 4 | &#151; | 0x1F |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA1 | &#151; | &#151; | 0x29 0x00 0xC2 0x77 | 0xC1E6 |
 | *Anmerkung:* In diesem Fall erkennt nun der Host, dass das Gerät das Handshake nicht erhalten hat, da schon wieder ein DATA1-Paket ankommt. Daraufhin lässt er sein Toggle-Bit auf 0 und schickt ein ACK, da die Daten ansonsten korrekt empfangen wurden. |  |  |  |  |  |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
 *Anmerkung:* Dieses ACK kommt an, also invertiert das Gerät sein Toggle-Bit und auch hier: Friede, Freude, Eierkuchen.
 
@@ -599,23 +599,23 @@ Ein Controltransfer beginnt mit einer Setupphase, danach folgt die Datenphase un
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ----------------------------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | SETUP | 1 | 0 | &#151; | 0x1D |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x80 0x06 0x00 0x01 0x00 0x00 0x12 0x00 | 0x1A4E |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | SETUP | 1 | 0 | &#151; | 0x1D |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA0 | &#151; | &#151; | 0x80 0x06 0x00 0x01 0x00 0x00 0x12 0x00 | 0x1A4E |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | *Anmerkung:* Setupphase abgeschlossen. |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 1 | 0 | &#151; | 0x1D |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x12 0x01 0x00 0x01 0x00 0x00 0x00 0x08 | 0x3718 |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 1 | 0 | &#151; | 0x1D |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x27 0x06 0x01 0x00 0x00 0x00 0x03 0x02 | 0xA7A8 |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 1 | 0 | &#151; | 0x1D |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA1 | &#151; | &#151; | 0x01 0x01 | 0x8307 |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 1 | 0 | &#151; | 0x1D |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA1 | &#151; | &#151; | 0x12 0x01 0x00 0x01 0x00 0x00 0x00 0x08 | 0x3718 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 1 | 0 | &#151; | 0x1D |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA0 | &#151; | &#151; | 0x27 0x06 0x01 0x00 0x00 0x00 0x03 0x02 | 0xA7A8 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 1 | 0 | &#151; | 0x1D |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA1 | &#151; | &#151; | 0x01 0x01 | 0x8307 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 | *Anmerkung:* Datenphase abgeschlossen, da in der Setupphase 18 Bytes angefordert wurden. |  |  |  |  |  |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 1 | 0 | &#151; | 0x1D |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA1 | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 1 | 0 | &#151; | 0x1D |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA1 | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
 *Anmerkung:* Statusphase abgeschlossen.
 
@@ -635,9 +635,9 @@ Ein Bulktransfer besitzt keine besondere Struktur. Das Data-Toggle-Bit wird bei 
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ---------------------------------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 42 | 1 | &#151; | 0x1C |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 42 | 1 | &#151; | 0x1C |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
 ### Interrupttransfers
 
@@ -645,18 +645,18 @@ Interrupttransfers sind im Grunde einfache Bulk-IN-Transfers, die periodisch (al
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | -------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | NAK | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | SOF | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | NAK | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | SOF | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x04 | 0x7C41 |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | ACK | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | SOF | &#151; | &#151; | &#151; | &#151; |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 3 | 9 | &#151; | 0x08 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | NAK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | NAK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | SOF | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | NAK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | SOF | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA0 | &#151; | &#151; | 0x04 | 0x7C41 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | SOF | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 3 | 9 | &#151; | 0x08 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | NAK | &#151; | &#151; | &#151; | &#151; |
 
 ### Isochronoustransfers
 
@@ -664,8 +664,8 @@ Das Toggle-Bit-Verhalten von Isochronoustransfers [wurde bereits besprochen](#is
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | IN | 42 | 7 | &#151; | 0x13 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | IN | 42 | 7 | &#151; | 0x13 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | DATA0 | &#151; | &#151; | 0x4D 0x6F 0x69 0x6E 0x2C 0x20 0x6D 0x6F 0x69 0x6E 0x2C 0x20 0x47 0x65 0x6E 0x6F 0x73 0x73 0x65 0x6E 0x5C 0x21 | 0x04A9 |
 
 ### Beispiel
 
@@ -673,9 +673,9 @@ So, nachdem wir all das durchgekaut haben, können wir uns jetzt wieder an einem
 
 | Richtung | PID | ADDR | ENDP | Daten | CRC |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- | ---------------------------------------------- | -------- |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | OUT | 42 | 1 | &#151; | 0x1C |
-| [<img src="assets/b564f5f07b50cdbba672.png" width="70" height="50" alt="USB-trans-out.png" />](assets/b564f5f07b50cdbba672.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
-| [<img src="assets/5b201b2c8d098523c7ba.png" width="70" height="50" alt="USB-trans-in.png" />](assets/5b201b2c8d098523c7ba.png) | ACK | &#151; | &#151; | &#151; | &#151; |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | OUT | 42 | 1 | &#151; | 0x1C |
+| [<img src="assets/USB-trans-out.png" width="70" height="50" alt="USB-trans-out.png" />](assets/USB-trans-out.png) | DATA0 | &#151; | &#151; | 0x4C 0x6F 0x77 0x6C 0x65 0x76 0x65 0x6C 0x3F | 0x80F2 |
+| [<img src="assets/USB-trans-in.png" width="70" height="50" alt="USB-trans-in.png" />](assets/USB-trans-in.png) | ACK | &#151; | &#151; | &#151; | &#151; |
 
 Dies wird zu den einzelnen Paketen (zwischen Feldern jeweils ein Leerzeichen und Little Endian!):
 

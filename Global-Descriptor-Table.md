@@ -74,7 +74,7 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 | 6 | Flags | 0-3 (vollständig) |
 | 7 | Base | 24-31 |
 
-[<img src="assets/8272a5b7d823c7ab1d5e.png" width="580" height="88" alt="SegmentDescriptor.png" />](assets/8272a5b7d823c7ab1d5e.png)
+[<img src="assets/SegmentDescriptor.png" width="580" height="88" alt="SegmentDescriptor.png" />](assets/SegmentDescriptor.png)
 
 ### Bedeutung
 

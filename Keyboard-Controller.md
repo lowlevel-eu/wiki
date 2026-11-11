@@ -14,7 +14,7 @@ Der KBC wurde mit dem AT-System (i286) eingeführt. Im Vorgängersystem XT wurde
 
 ## Kommunikationswege
 
-[<img src="assets/a827e7311878670cc162.png" width="569" height="437" alt="Kbc logic.png" />](assets/a827e7311878670cc162.png)
+[<img src="assets/Kbc_logic.png" width="569" height="437" alt="Kbc logic.png" />](assets/Kbc_logic.png)
 
 Normalerweise wird der erste Auxiliary Port (PSAUX0\*) für eine Tastatur verwendet und an den zweiten (PSAUX1\*) eine Maus oder ein anderes Zeigegerät angeschlossen. Technisch unterscheiden sich die beiden Ports nicht. Daher kann man dort beliebige Gerätekombinationen anschließen, solange das BIOS nicht mit einer Fehlermeldung stoppt, weil es bestimmte Geräte an bestimmten Ports erwartet. Beliebige Gerätekombinationen werden z. B. von Linux unterstützt, nicht jedoch von Windows.
 

@@ -4,27 +4,27 @@
 
 ## Nach dem Starten
 
-![startup.png](assets/d45b94026c8048d7e7b7.png)
+![startup.png](assets/tyndur/screenshots/0.2/startup.png)
 
 ## Paketverwaltung lpt
 
-![lpt.png](assets/bc964c0a9da3c30ebc8e.png)
+![lpt.png](assets/tyndur/screenshots/0.2/lpt.png)
 
 ## IRC-Client
 
-![kirc.png](assets/22e6b1ea26771c8aab68.png)
+![kirc.png](assets/tyndur/screenshots/0.2/kirc.png)
 
 ## Texteditor
 
-![kedit.png](assets/a9b9d8a93cd3582e236b.png)
+![kedit.png](assets/tyndur/screenshots/0.2/kedit.png)
 
 ## GNU gcc
 
-![gcc.png](assets/9b166bdf6cc4956842a2.png)
+![gcc.png](assets/tyndur/screenshots/0.2/gcc.png)
 
 ## GNU nano
 
-![nano.png](assets/5a9c6f0532866e6464a3.png)
+![nano.png](assets/tyndur/screenshots/0.2/nano.png)
 
 ---
 

@@ -2,7 +2,7 @@
 
 | DayOS |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="assets/5e1274d3dfd1b7f64bb0.jpg" width="225" height="177" alt="DayOS.jpg" />](assets/5e1274d3dfd1b7f64bb0.jpg) |  |
+| [<img src="assets/DayOS.jpg" width="225" height="177" alt="DayOS.jpg" />](assets/DayOS.jpg) |  |
 | Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob"),BSDBlack |
 | Akt. Version: | 0.0.2 |
 | [Lizenz](Lizenzen "Lizenzen"): | Gnu GPL |

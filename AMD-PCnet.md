@@ -210,9 +210,9 @@ while ((ncard->linear_receive_descriptor[ncard->receive_descriptor].flags & 0x80
 
 ## Weblinks
 
-- [Datei:Am79C973.pdf](assets/6edd87861edd96ccdcd2.pdf "Datei:Am79C973.pdf") - Umfangreiche Spezifikation für die Am79C973 (PCnet-FAST III) und Am79C975
-- [AMD-Hardware-Spezifikation](assets/777e98fb4180ab93b4d0.pdf)
-- Umfangreiche Spezifikation für die Am79C972 (PCnet-FAST+): [Teil 1](assets/aa163a95c7c675a38d80.pdf) und [Teil 2](assets/b533b83773bf73697ec4.pdf) – sollte zur Am79C973 (PCnet-FAST III) kompatibel sein
+- [Datei:Am79C973.pdf](assets/Am79C973.pdf "Datei:Am79C973.pdf") - Umfangreiche Spezifikation für die Am79C973 (PCnet-FAST III) und Am79C975
+- [AMD-Hardware-Spezifikation](assets/Pcnet_22351.pdf)
+- Umfangreiche Spezifikation für die Am79C972 (PCnet-FAST+): [Teil 1](assets/Pcnet_21485_pt1.pdf) und [Teil 2](assets/Pcnet_21485_pt2.pdf) – sollte zur Am79C973 (PCnet-FAST III) kompatibel sein
 
 ---
 

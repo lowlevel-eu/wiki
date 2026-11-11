@@ -109,7 +109,7 @@ Dieses DWord enthält die physische Adresse des Puffers, in den empfangene Daten
 
 ### Zusammenspiel
 
-[<img src="assets/52d4009af5bf1cb705f6.png" width="300" height="194" />](assets/cc8925c9c6aa817eee9c.png) [](assets/cc8925c9c6aa817eee9c.png "vergrößern")Schema aus der UHCI-Spezifikation
+[<img src="assets/300px-UHCI-Datenstrukturen.png" width="300" height="194" />](assets/UHCI-Datenstrukturen.png) [](assets/UHCI-Datenstrukturen.png "vergrößern")Schema aus der UHCI-Spezifikation
 
 Wie spielen nun diese Datenstrukturen zusammen? Wie bereits gesagt ist die Frameliste die Wurzel des ganzen. Dort trägt man in jedes Feld einen Pointer auf die spezifisch in diesem Frame auszuführenden periodischen Transfers (Isochronous-TDs oder Interrupt-QHs mit deren TDs) ein. Am Ende dieser Liste von periodischen Transfers sollte dann der erste QH der aperiodischen Transfers folgen. Womit ein QH korrespondiert, ist ziemlich egal. Er kann einer USB-Pipe entsprechen, man kann aber auch einfach einen einzigen QH für alle aperiodischen Transfers anlegen, an den alle Transferdeskriptoren angehangen werden.
 

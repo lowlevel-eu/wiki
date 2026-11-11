@@ -954,7 +954,7 @@ bool transfer_sector(uint8_t drive, uint8_t cylinder, uint8_t head, uint8_t sect
 
 ## Weblinks
 
-- [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](assets/3c350f238581550e0dd8.pdf "82077AA FloppyControllerDatasheet.pdf")
+- [82077AA CHMOS Single-Chip Floppy Disk Controller Datasheet](assets/82077AA_FloppyControllerDatasheet.pdf "82077AA FloppyControllerDatasheet.pdf")
 - <http://www.isdaman.com/alsos/hardware/fdc/floppy.htm>
 
 ---

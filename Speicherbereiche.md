@@ -4,7 +4,7 @@ Eine Übersicht über die Speicherbereiche unter der 1MB-Grenze gibt folgende Gr
 
   
 
-[<img src="assets/9e3df79f7fb6404b5c75.png" width="428" height="690" alt="Memory.png" />](assets/9e3df79f7fb6404b5c75.png)
+[<img src="assets/Memory.png" width="428" height="690" alt="Memory.png" />](assets/Memory.png)
 
   
 

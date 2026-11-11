@@ -8,7 +8,7 @@ Wieder ein eingestelltes OS (Katzen sind übrigens meine Lieblingstiere, weshalb
 
 | Cats |  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<img src="assets/cf787878cdc9ddd55936.jpg" width="222" height="314" alt="Katze-396196.jpg" />](assets/cf787878cdc9ddd55936.jpg) |  |
+| [<img src="assets/Katze-396196.jpg" width="222" height="314" alt="Katze-396196.jpg" />](assets/Katze-396196.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222), Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
 | [Lizenz](Lizenzen "Lizenzen"): | BSD |
@@ -52,7 +52,7 @@ Ein kleines OS das auf jedem PC mit einem Diskettenlaufwerk läuft. Es wurde ber
 
 ## Screenshots
 
-[<img src="assets/9ad69f61a7cbe4b955a8.jpg" width="730" height="503" alt="Cats.JPG" />](assets/9ad69f61a7cbe4b955a8.jpg)
+[<img src="assets/Cats.JPG" width="730" height="503" alt="Cats.JPG" />](assets/Cats.JPG)
 
 ---
 

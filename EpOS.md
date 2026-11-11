@@ -87,7 +87,7 @@ Steht noch in den Sternen, je nach Zeit, Lust und Laune. Und vor allem nach Stab
 
 ## Screenshot
 
-[<img src="assets/5c7c393aa5f141049669.png" width="200" height="111" />](assets/5f769b31420dfa86681e.png) [](assets/5f769b31420dfa86681e.png "vergrößern")epOS V0.1
+[<img src="assets/200px-EpOS_V0.1.png" width="200" height="111" />](assets/EpOS_V0.1.png) [](assets/EpOS_V0.1.png "vergrößern")epOS V0.1
 
 Greetz [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus")
 

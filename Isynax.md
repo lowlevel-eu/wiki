@@ -28,10 +28,10 @@ Bis jetzt gibt es eine Unterstützung für die [RTL8139](RTL8139 "RTL8139")-Netz
 
 ## Screenshot
 
-[<img src="assets/6ec97dbbcb1faeabf08c.png" width="720" height="400" alt="Isynax-screen.png" />](assets/6ec97dbbcb1faeabf08c.png)  
+[<img src="assets/Isynax-screen.png" width="720" height="400" alt="Isynax-screen.png" />](assets/Isynax-screen.png)  
 **Für alle Intelliebhaber im normalen Modus...**  
   
-[<img src="assets/e792a94b4a8342e9c4d1.png" width="720" height="400" alt="Isynax-shot-falschrum.png" />](assets/e792a94b4a8342e9c4d1.png)  
+[<img src="assets/Isynax-shot-falschrum.png" width="720" height="400" alt="Isynax-shot-falschrum.png" />](assets/Isynax-shot-falschrum.png)  
 **...Und für AT&T-Fans auch andersrum! Aktivierbar per wrong=1 anstatt von wrong=0 im Code.**
 
 ## Weblinks

@@ -7,7 +7,7 @@ Ein weiterer Vorteil besteht darin, dass die „realen“ Dateisysteme nicht wir
 ## Aufbau
 
 Ein VFS lässt sich als Baum implementieren. Dabei ist jedes Element (Node) mit den "umliegenden" Nodes verkettet. folgendermaßen könnte ein Ausschnitt aus einem VFS aussehen, die Nodes können (und sollten) mehr Elemente als die dargestellten enhalten:  
-[<img src="assets/728be1d284a54fc9fc41.png" width="560" height="280" alt="VFS.png" />](assets/728be1d284a54fc9fc41.png)  
+[<img src="assets/VFS.png" width="560" height="280" alt="VFS.png" />](assets/VFS.png)  
 Weitere Elemente eines Nodes könnten zum Beispiel ein (Funktions-)Pointer auf einen Treiber, eine Inode-Nummer, oder einen Zugriffszähler enthalten. Weiterhin wäre es sinnvoll zu speichern welche Art von Node vorliegt, eine Datei, ein Ordner, ein Gerätetreiber...
 
 ## Weblinks

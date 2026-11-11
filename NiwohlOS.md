@@ -2,7 +2,7 @@
 
 | niwohlOS<br>*"In God we trust – Da hilft nur noch beten"* |  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="assets/d452b9d1e097dd800cda.png" width="181" height="177" alt="NiwohlOS.png" />](assets/927c1108fe37cd71b07b.png) |  |
+| [<img src="assets/181px-NiwohlOS.png" width="181" height="177" alt="NiwohlOS.png" />](assets/NiwohlOS.png) |  |
 | Entwickler: | [DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut")<br>[SchreibeNieCode](https://lowlevel-eu.github.io/wiki/pages/1871/index.html "Benutzer:DickHuuhn")<br>[SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ")<br>[XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.1.0 |
 | [Lizenz](Lizenzen "Lizenzen"): | MIT/X11 |

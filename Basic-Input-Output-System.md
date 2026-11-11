@@ -20,8 +20,8 @@ Diese Funktionalität geht allerdings verloren, wenn man in den [Protected Mode]
 
 ## Weblinks
 
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> BIOS Central](http://bioscentral.com/)
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Die Interruptliste von Ralph Brown](http://ctyme.com/intr/int.htm)
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> BIOS Central](http://bioscentral.com/)
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> Die Interruptliste von Ralph Brown](http://ctyme.com/intr/int.htm)
 
 ---
 

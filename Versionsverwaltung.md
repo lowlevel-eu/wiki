@@ -54,7 +54,7 @@ Momentan (Stand Anfang 2009)) sind die meistgenutzten Systeme im Open-Source-Ber
 
 ## Weblinks
 
-- [<img src="assets/38adc39e49df427364bd.png" title="englisch" width="20" height="12" alt="englisch" /> Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
+- [<img src="assets/Flag_of_the_United_Kingdom.png" title="englisch" width="20" height="12" alt="englisch" /> Einführung in dezentrale Versionsverwaltung](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
 
 ---
 

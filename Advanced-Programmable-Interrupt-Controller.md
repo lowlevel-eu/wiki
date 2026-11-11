@@ -15,7 +15,7 @@ Der schematische Aufbau kann aus folgendem Bild entnommen werden:
 
   
 
-[<img src="assets/6bd762e3a5c69e74b59a.png" width="412" height="293" alt="APIC.png" />](assets/6bd762e3a5c69e74b59a.png)
+[<img src="assets/APIC.png" width="412" height="293" alt="APIC.png" />](assets/APIC.png)
 
   
 Der I/O APIC ist mit der Hardware verbunden und nimmt von ihr Interrupts entgegen. Diese verteilt der I/O APIC dann anhand seiner *Redirection Table* an die Local APICs, welche pro Prozessor jeweils ein Mal vorhanden sind. Diese signalisieren dem Prozessor dann den jeweiligen Interrupt.
