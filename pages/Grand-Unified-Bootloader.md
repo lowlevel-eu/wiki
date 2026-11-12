@@ -11,7 +11,7 @@
 
 <http://www.gnu.org/software/grub/grub.html>
 
-Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](Multiboot "Multiboot")-konformer [Bootloader](Bootloader "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](Grand-Unified-Bootloader#warum-grub "Grand Unified Bootloader")).
+Der **GR**and **U**nified **B**ootloader (**GRUB**) ist ein [Multiboot](Multiboot.md "Multiboot")-konformer [Bootloader](Bootloader.md "Bootloader") der ursprünglich aus dem GNU-Hurd-Projekt entstammt, aber inzwischen bei allen gängigen Linux-Distributionen als Bootloader eingesetzt wird. Im Falle der Betriebssystementwicklung ist es empfehlenswert GRUB den Kernel booten zu lassen, da GRUB sehr flexibel ist und einen großen Funktionsumfang bietet (siehe Abschnitt [Warum GRUB?](Grand-Unified-Bootloader.md#warum-grub "Grand Unified Bootloader")).
 
 ## Warum GRUB?
 
@@ -20,22 +20,22 @@ Im Forum und hier im Wiki wird von den meisten GRUB empfohlen und selbst verwend
 - Einen Bootloader zu schreiben setzt **tiefergehende Assemblerkenntnisse** voraus. Falls man diese noch nicht hat, dann wird man sehr wahrscheinlich am Bootloader scheitern oder aber einen Teil/den größten Teil aus anderem Quellcode zusammenkopieren.
 - Dabei kommen dann **fehleranfällige** Bootloader heraus, von denen der jeweilige Programmierer meist nicht weiß, was sie genau machen (z. B. in welchem Dateiformat der Kernel sein muss, an welche Adresse der Kernel geladen wird oder wie viel vom Kernel überhaupt geladen wird) und im Forum werden dann Threads mit 500 Zeilen zusammengefrickelten Assemblercode und der Frage *„Warum funktioniert denn das nicht so, wie ich das will!?“* erstellt. Der Punkt hier ist nicht, dass wir zu faul wären Fragen zu beantworten, sondern, dass es einfach nichts bringt einen eigenen Bootloader zu schreiben, wenn derjenige nicht einmal im Ansatz verstanden hat, was er denn da überhaupt tut. Das ist dann für uns primär frustrierend.
 - Diese Fehleranfälligkeit kann auch dazu führen, dass das ganze eine Weile funktioniert, aber irgendwann tauchen plötzlich seltsame Fehler auf. Dies kann unter anderem den Grund haben, dass nicht der komplette Kernel geladen wird, sondern z. B. nur die ersten paar Kilobyte. Solche Fehler sind meist extrem **schwer zu debuggen**.
-- Eventuell tauchen später auch **neue Anforderungen** an den Bootloader auf, z. B. könnte man bei einem [Mikrokernel](Kernel#mikrokernel "Mikrokernel") durch den Bootloader Module (meistens Treiber) laden wollen. Dann wird entweder versucht das schnell *hinzufrickeln* oder aber man entscheidet sich dann doch gegen einen Mikrokernel, d. h. es kann **Auswirkungen auf das Design** des Kernels haben.
+- Eventuell tauchen später auch **neue Anforderungen** an den Bootloader auf, z. B. könnte man bei einem [Mikrokernel](Kernel.md#mikrokernel "Mikrokernel") durch den Bootloader Module (meistens Treiber) laden wollen. Dann wird entweder versucht das schnell *hinzufrickeln* oder aber man entscheidet sich dann doch gegen einen Mikrokernel, d. h. es kann **Auswirkungen auf das Design** des Kernels haben.
 - Falls man allerdings von Anfang an intensiv seinen Bootloader plant – was einem Anfänger aufgrund mangelnder Erfahrung verwehrt bleibt – und diesen sehr gewissenhaft programmiert, dann ist das ein Projekt für sich, d. h. es wird **Unmengen an Zeit verschlucken** (wir reden hier nicht von Tagen oder Wochen).
-- Der **[Bootvorgang](Bootprozess-auf-x86 "Bootvorgang") auf x86-Prozessoren** hat so manches Hindernis, welches von Intel und Konsorten gerne aufgrund von Abwärtskompatibilität aufgestellt wurde. Beispiele hierfür sind der [Real Mode](Real-Mode "Real Mode") (der Bootloader startet im Realmode) und das [A20-Gate](A20-Gate "A20-Gate"), welches aktiviert werden muss.
+- Der **[Bootvorgang](Bootprozess-auf-x86.md "Bootvorgang") auf x86-Prozessoren** hat so manches Hindernis, welches von Intel und Konsorten gerne aufgrund von Abwärtskompatibilität aufgestellt wurde. Beispiele hierfür sind der [Real Mode](Real-Mode.md "Real Mode") (der Bootloader startet im Realmode) und das [A20-Gate](A20-Gate.md "A20-Gate"), welches aktiviert werden muss.
 
 Wir möchten natürlich dem geneigten Leser nicht vorenthalten, was genau er denn verpasst, wenn er GRUB benutzt:
 
-- Eine eingehende Beschäftigung mit dem [Real Mode](Real-Mode "Real Mode") bleibt wahrscheinlich aus (oder kommt erst, wenn man sich mit dem [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode") beschäftigt).
-- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z. B. im Kernel an einigen kleinen Stellen [Inlineassembler](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC") verwendet werden muss.
+- Eine eingehende Beschäftigung mit dem [Real Mode](Real-Mode.md "Real Mode") bleibt wahrscheinlich aus (oder kommt erst, wenn man sich mit dem [Virtual 8086 Mode](Virtual-8086-Mode.md "Virtual 8086 Mode") beschäftigt).
+- Assemblerkenntnisse zu erlangen auch für den Kernel bzw. darüber hinaus fürs Debuggen wichtig, da z. B. im Kernel an einigen kleinen Stellen [Inlineassembler](Inline-Assembler-mit-GCC.md "Inline-Assembler mit GCC") verwendet werden muss.
 
 ## GRUB legacy
 
-GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU General Public License](Lizenzen "Lizenzen") vertrieben. Wie man einen Multiboot-Kernel erstellt, der mit GRUB gebootet werden kann, wird im Artikel [OS-Dev für Einsteiger - Teil 4](Teil-4-Hello-World "Teil 4 - Hello World") beschrieben.
+GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU General Public License](Lizenzen.md "Lizenzen") vertrieben. Wie man einen Multiboot-Kernel erstellt, der mit GRUB gebootet werden kann, wird im Artikel [OS-Dev für Einsteiger - Teil 4](Teil-4-Hello-World.md "Teil 4 - Hello World") beschrieben.
 
 ### Funktionen
 
-- Liest [ext2](Ext2 "Ext2"), [ext3](Ext3 "Ext3"), UFS, UFS2, ReiserFS, [FAT](File-Allocation-Table "FAT"), NTFS, [ISO9660](ISO9660 "ISO9660"), JFS, Minix, FFS, XFS
+- Liest [ext2](Ext2.md "Ext2"), [ext3](Ext3.md "Ext3"), UFS, UFS2, ReiserFS, [FAT](File-Allocation-Table.md "FAT"), NTFS, [ISO9660](ISO9660.md "ISO9660"), JFS, Minix, FFS, XFS
 - Auswahlmenü um verschiedene Betriebssysteme zu laden.
 - Bootet von Disketten, Festplatten, CDs, DVDs und Flashdisks.
 - Beinhaltet eine Shell
@@ -50,12 +50,12 @@ GRUB legacy ist die ursprüngliche Version von GRUB und wird unter der [GNU Gene
 
 Funktioniert nur wenn GRUB legacy auf dem Hostsystem installiert ist.
 
-Wir brauchen also zunächst einmal ein mit [FAT](File-Allocation-Table "FAT")-formatiertes Diskettenimage:
+Wir brauchen also zunächst einmal ein mit [FAT](File-Allocation-Table.md "FAT")-formatiertes Diskettenimage:
 
     # dd of=test.img bs=1024 seek=1440 count=0
     # mkdosfs test.img
 
-Anstelle von *mkdosfs test.img* kann auch *mke2fs -F test.img* verwendet werden, was ein [Ext2](Ext2 "Ext2")-formatiertes Diskettenimage erstellt. Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
+Anstelle von *mkdosfs test.img* kann auch *mke2fs -F test.img* verwendet werden, was ein [Ext2](Ext2.md "Ext2")-formatiertes Diskettenimage erstellt. Danach muss dieses Image gemountet und alle nötigen Dateien auf das Image kopiert werden werden:
 
     # sudo mount -oloop test.img /mnt
     # sudo mkdir /mnt/grub
@@ -105,13 +105,13 @@ Da Windows 64-Bit Systeme die direkte Ausführung von .com Dateien, die 16-Bit s
 
 Erstellt die Datei floppy.img mit dem Inhalt der Ordnes *floppy* und dem MBR aus *mbr.bin*.
 
-Der Ordner *floppy* hat exakt den gleichen Inhalt wie bei oben. Die *mbr.bin* kann erstellt werden indem man den [MBR](Master-Boot-Record "MBR") bspw. von einem existierenden Image mittels [dd for Windows](http://www.chrysocome.net/dd) extrahiert. Wer kein zur der GRUB Version kompatibles Image hat, kann sich mittels der Bootlace.com einmalig eines auf einem anderen PC oder in der [DosBox](http://www.dosbox.com/) erstellen.
+Der Ordner *floppy* hat exakt den gleichen Inhalt wie bei oben. Die *mbr.bin* kann erstellt werden indem man den [MBR](Master-Boot-Record.md "MBR") bspw. von einem existierenden Image mittels [dd for Windows](http://www.chrysocome.net/dd) extrahiert. Wer kein zur der GRUB Version kompatibles Image hat, kann sich mittels der Bootlace.com einmalig eines auf einem anderen PC oder in der [DosBox](http://www.dosbox.com/) erstellen.
 
 ### CD-Image herstellen
 
 Es sind folgende Tools vonnöten:
 
-- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein. Windows Nutzer können die *stage2_eltorito* von [tyndur](T%C3%BDndur "Tyndur") nehmen)
+- stage2_eltorito von GRUB (Sollte bei deinem Linux dabei sein. Windows Nutzer können die *stage2_eltorito* von [tyndur](T%C3%BDndur.md "Tyndur") nehmen)
 - mkisofs (für Windows Nutzer [hier](http://www.student.tugraz.at/thomas.plank/) verfügbar)
 
 Als Erstes sollte man die Dateien, die nachher auf der CD landen sollen, in einen Ordner kopieren. Dazu gehören auch die von GRUB benötigten Dateien und zwar *menu.lst* und *stage2_eltorito*. Diese gehören in den Ordner (relativ von der CD aus) */boot/grub/*. Man kann sie auch in einen beliebigen anderen Ordner packen, dann muss man allerdings mit den Hexeditor an *stage2_eltorito*. Anschließend erstellt man das CD-Image folgendermaßen:
@@ -149,7 +149,7 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 
 ## GRUB 2
 
-GRUB 2 ist der Nachfolger von GRUB legacy und wurde von Grund auf neu geschrieben. Er ist genauso wie GRUB legacy [multibootfähig](Multiboot "Multiboot"). Außerdem wird mit GRUB 2 der Multiboot-2-Standard, der sich momentan noch in Entwicklung befindet, unterstützt.
+GRUB 2 ist der Nachfolger von GRUB legacy und wurde von Grund auf neu geschrieben. Er ist genauso wie GRUB legacy [multibootfähig](Multiboot.md "Multiboot"). Außerdem wird mit GRUB 2 der Multiboot-2-Standard, der sich momentan noch in Entwicklung befindet, unterstützt.
 
 ### Neuerungen gegenüber GRUB Legacy
 
@@ -289,8 +289,8 @@ Diese Beispielkonfigurationsdatei lädt die Datei `kernel` aus dem Wurzelverzeic
 ## Siehe auch
 
 - GRUB legacy
-  - [OS-Dev für Einsteiger - Teil 4](Teil-4-Hello-World "Teil 4 - Hello World"): kleiner Beispielkernel mit Multiboot
-  - [GRUB Installation auf einem USB-Stick](GRUB-Installation-auf-einem-USB-Stick "GRUB Installation auf einem USB-Stick")
+  - [OS-Dev für Einsteiger - Teil 4](Teil-4-Hello-World.md "Teil 4 - Hello World"): kleiner Beispielkernel mit Multiboot
+  - [GRUB Installation auf einem USB-Stick](GRUB-Installation-auf-einem-USB-Stick.md "GRUB Installation auf einem USB-Stick")
 - GRUB 2
   - [Disketten-/ISO-Images mit GRUB 2 erstellen](http://wiki.osdev.org/GRUB_2)
 

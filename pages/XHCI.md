@@ -1,6 +1,6 @@
 # XHCI
 
-Weiterleitung: [Extensible Host Controller Interface](Extensible-Host-Controller-Interface)
+Weiterleitung: [Extensible Host Controller Interface](Extensible-Host-Controller-Interface.md)
 
 ---
 

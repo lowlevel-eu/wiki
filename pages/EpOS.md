@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [DesL](https://lowlevel-eu.github.io/wiki/pages/1770/index.html "Benutzer:Dem epOS sein Linus") |
 | Akt. Version: | 0.08 in Entwicklung |
-| [Lizenz](Lizenzen "Lizenzen"): | Im Moment Closed-Source |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Im Moment Closed-Source |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C/C++ |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolithischer Kernel](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | C/C++ |
 | API: |  |
 | Binärformat: |  |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 <http://desl.bplaced.net>

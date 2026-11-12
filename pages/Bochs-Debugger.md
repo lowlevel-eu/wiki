@@ -1,6 +1,6 @@
 # Bochs Debugger
 
-Der [bochsinterne](Bochs "Bochs") Debugger stellt eine nützliche Hilfe beim [Debuggen](Debugging "Debugging") eines Betriebssystems dar, weil er unter anderem Registerinhalte, Speicherinhalte oder auch disassemblierte Codestellen ausgeben kann.
+Der [bochsinterne](Bochs.md "Bochs") Debugger stellt eine nützliche Hilfe beim [Debuggen](Debugging.md "Debugging") eines Betriebssystems dar, weil er unter anderem Registerinhalte, Speicherinhalte oder auch disassemblierte Codestellen ausgeben kann.
 
 ## Speicherinhalte ausgeben und manipulieren
 
@@ -15,7 +15,7 @@ n, u und f bestimmen dabei die Ausgabe genauer:
 - u für die Größe einer Einheit (b=1, h=2, w=4 und g=8 Bytes)
 - f legt das Ausgabeformat fest (d=dezimal, x=hexadezimal und t=binär)
 
-Wenn [Paging](Paging "Paging") deaktiviert ist, dann bewirken beide Befehle dasselbe.
+Wenn [Paging](Paging.md "Paging") deaktiviert ist, dann bewirken beide Befehle dasselbe.
 
 Möchte man geziehlt bestimmte Werte im Arbeitsspeicher verändern, nutzt man:
 
@@ -23,11 +23,11 @@ Möchte man geziehlt bestimmte Werte im Arbeitsspeicher verändern, nutzt man:
 
 Dadurch wird der Arbeitsspeicher von der physikalischen Adressen an soweit mit dem Wert gefüllt, wie die Länge angibt.
 
-Zudem kann auch der Inhalt des [Stacks](Stack "Stack") ausgegeben werden mit:
+Zudem kann auch der Inhalt des [Stacks](Stack.md "Stack") ausgegeben werden mit:
 
     print-stack [Anzahl_Elemente]
 
-Im [Real Mode](Real-Mode "Real Mode") werden dabei Words, im [Protected Mode](Protected-Mode "Protected Mode") Dwords ausgegeben.
+Im [Real Mode](Real-Mode.md "Real Mode") werden dabei Words, im [Protected Mode](Protected-Mode.md "Protected Mode") Dwords ausgegeben.
 
   
 
@@ -35,12 +35,12 @@ Im [Real Mode](Real-Mode "Real Mode") werden dabei Words, im [Protected Mode](Pr
 
 | Befehl | auszugebene Register |
 | ------------- | -------------------------------------------------------------------------------------------------- |
-| reg | Alle [Register](Register "Register") |
+| reg | Alle [Register](Register.md "Register") |
 | sreg | Segment-Register |
-| dreg | [Debug-Register](Debug-Register "Debug Register") |
-| creg | [Control-Register](Control-Register "Control Register") |
-| info eflags | [EFLAGS](EFLAGS "EFLAGS") |
-| fpu | [FPU](Mathematischer-Koprozessor "FPU")-Register |
+| dreg | [Debug-Register](Debug-Register.md "Debug Register") |
+| creg | [Control-Register](Control-Register.md "Control Register") |
+| info eflags | [EFLAGS](EFLAGS.md "EFLAGS") |
+| fpu | [FPU](Mathematischer-Koprozessor.md "FPU")-Register |
 
 Außerdem gibt es die Möglichkeit die allgemeinen Register zu verändern mit dem Befehl:
 

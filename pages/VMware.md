@@ -14,8 +14,8 @@ Die Workstation- und Server-Versionen sind kostenpflichtig, der Player ist Freew
 
 ## Siehe auch
 
-- [QEMU](QEMU "QEMU")
-- [Bochs](Bochs "Bochs")
+- [QEMU](QEMU.md "QEMU")
+- [Bochs](Bochs.md "Bochs")
 
 ## Weblinks
 

@@ -1,6 +1,6 @@
 # APM
 
-Weiterleitung: [Advanced Power Management](Advanced-Power-Management)
+Weiterleitung: [Advanced Power Management](Advanced-Power-Management.md)
 
 ---
 

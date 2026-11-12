@@ -1,6 +1,6 @@
 # Bash
 
-Weiterleitung: [Shell#Bash](Shell#bash)
+Weiterleitung: [Shell#Bash](Shell.md#bash)
 
 ---
 

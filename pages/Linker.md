@@ -44,7 +44,7 @@ Der gcc ruft selbstständig den Linker mit allen benötigten Libraries auf und e
 
 Ein Linkerskript ist eine Datei, in der die Optionen für den Linker, insbesondere die Position der einzelnen Segmente im Speicher, festgelegt sind. Allerdings können alle Optionen auch als Kommandozeilenargument an den Linker übergeben werden. Ein Linkerskript ist insbesondere in der Betriebssystementwicklung von besonderer Bedeutung, da hier der Kernel an einen Teil im Speicher geladen wird, den der Linker von sich aus nicht kennt (z. B. wird der Bootloader an 0x7C00 geladen und GRUB kann den Kernel erst ab der Position 1 MB laden), anders als etwa Programme für MS DOS, die immer an die Adresse 0x100 geladen werden.
 
-Ein Linkerskript könnte in etwa so aussehen (hier das Beispiel aus der Reihe [OS-Dev für Einsteiger](OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger"), das man [hier](Teil-4-Hello-World#multiboot-header-in-einer-eigenen-sektion "Teil 4 - Hello World") finden kann): ` /* Bei _start soll die Ausfuehrung losgehen */ ENTRY(_start) `
+Ein Linkerskript könnte in etwa so aussehen (hier das Beispiel aus der Reihe [OS-Dev für Einsteiger](OS-Dev-f%C3%BCr-Einsteiger.md "OS-Dev für Einsteiger"), das man [hier](Teil-4-Hello-World.md#multiboot-header-in-einer-eigenen-sektion "Teil 4 - Hello World") finden kann): ` /* Bei _start soll die Ausfuehrung losgehen */ ENTRY(_start) `
 
 `/* `
 

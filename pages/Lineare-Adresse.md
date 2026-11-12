@@ -1,6 +1,6 @@
 # Lineare Adresse
 
-Weiterleitung: [Paging](Paging)
+Weiterleitung: [Paging](Paging.md)
 
 ---
 

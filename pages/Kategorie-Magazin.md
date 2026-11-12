@@ -6,19 +6,19 @@ Hier findet ihr eine Übersicht aller Lowlevel Ausgaben, die bisher erschienen s
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Tutorials](Kategorie-Tutorials)
+Übergeordnete Kategorien: [Tutorials](Kategorie-Tutorials.md)
 
 ### Seiten
 
-- [Ausgabe 1](Ausgabe-1)
-- [Ausgabe 2](Ausgabe-2)
-- [Ausgabe 3](Ausgabe-3)
-- [Ausgabe 4](Ausgabe-4)
-- [Ausgabe 5](Ausgabe-5)
-- [Ausgabe 6](Ausgabe-6)
-- [Ausgabe 7](Ausgabe-7)
-- [Ausgabe 8](Ausgabe-8)
-- [Ausgabe 9](Ausgabe-9)
+- [Ausgabe 1](Ausgabe-1.md)
+- [Ausgabe 2](Ausgabe-2.md)
+- [Ausgabe 3](Ausgabe-3.md)
+- [Ausgabe 4](Ausgabe-4.md)
+- [Ausgabe 5](Ausgabe-5.md)
+- [Ausgabe 6](Ausgabe-6.md)
+- [Ausgabe 7](Ausgabe-7.md)
+- [Ausgabe 8](Ausgabe-8.md)
+- [Ausgabe 9](Ausgabe-9.md)
 
 
 ---

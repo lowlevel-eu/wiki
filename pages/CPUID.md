@@ -63,7 +63,7 @@ Die Standardfunktionsnummern beginnen bei 0. Die größtmögliche Funktionsnumme
 
 ## Funktion 0x0000_0000
 
-CPUID-Funktion Nr. 0x00 gibt die höchste vom Prozessor unterstützte Funktionsnummer im **EAX**-Register und die [Vendor-ID](CPUID#vendor-id-strings "CPUID") in den Registern **EBX**, **EDX** und **ECX**(in dieser Reihenfolge) zurück.
+CPUID-Funktion Nr. 0x00 gibt die höchste vom Prozessor unterstützte Funktionsnummer im **EAX**-Register und die [Vendor-ID](CPUID.md#vendor-id-strings "CPUID") in den Registern **EBX**, **EDX** und **ECX**(in dieser Reihenfolge) zurück.
 
 **Achtung!**
 
@@ -550,7 +550,7 @@ Eine Liste der möglichen Vendor-ID-Strings
 <th>0
 </th></tr>
 <tr>
-<td colspan="8"><a href="Advanced-Programmable-Interrupt-Controller" title="APIC">APIC ID</a>
+<td colspan="8"><a href="Advanced-Programmable-Interrupt-Controller.md" title="APIC">APIC ID</a>
 </td>
 <td colspan="8">Anzahl logischer Prozessoren
 </td>
@@ -724,12 +724,12 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">28
 </th>
-<td colspan="1">Unterstützt <a href="Advanced-Vector-Extensions" title="Advanced Vector Extensions">AVX</a>
+<td colspan="1">Unterstützt <a href="Advanced-Vector-Extensions.md" title="Advanced Vector Extensions">AVX</a>
 </td></tr>
 <tr>
 <th colspan="1">27
 </th>
-<td colspan="1">Zeigt an, dass das <a href="Betriebssystem" title="Betriebssystem">Betriebssystem</a> die Befehle <b>XSETBV</b> und <b>XGETBV</b> aktiviert hat, um auf das <b>XFEATURE_ENABLE_MASK</b> Register (<b>XCR0</b>) zuzugreifen und die erweiterten Zustandsfeatures <b>XSAVE</b> und <b>XRSTOR</b> zu nutzen
+<td colspan="1">Zeigt an, dass das <a href="Betriebssystem.md" title="Betriebssystem">Betriebssystem</a> die Befehle <b>XSETBV</b> und <b>XGETBV</b> aktiviert hat, um auf das <b>XFEATURE_ENABLE_MASK</b> Register (<b>XCR0</b>) zuzugreifen und die erweiterten Zustandsfeatures <b>XSAVE</b> und <b>XRSTOR</b> zu nutzen
 </td></tr>
 <tr>
 <th colspan="1">26
@@ -764,12 +764,12 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">20
 </th>
-<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE4.2</a>
+<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions.md" title="Streaming SIMD Extensions">SSE4.2</a>
 </td></tr>
 <tr>
 <th colspan="1">19
 </th>
-<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE4.1</a>
+<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions.md" title="Streaming SIMD Extensions">SSE4.1</a>
 </td></tr>
 <tr>
 <th colspan="1">18
@@ -815,7 +815,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">9
 </th>
-<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSSE3</a>
+<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions.md" title="Streaming SIMD Extensions">SSSE3</a>
 </td></tr>
 <tr>
 <th colspan="1">8
@@ -860,7 +860,7 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 <tr>
 <th colspan="1">0
 </th>
-<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions" title="Streaming SIMD Extensions">SSE3</a>
+<td colspan="1">Unterstützt <a href="Streaming-SIMD-Extensions.md" title="Streaming SIMD Extensions">SSE3</a>
 </td></tr></tbody></table>
 
 #### EDX - Featureflags
@@ -1009,33 +1009,33 @@ Dies sind die Featureflags. Wenn ein Bit gesetzt (=1) ist, dann wird das entspre
 | 29 | Implementiert den "Thermal Monitor aumatic thermal control circuitry" (TCC) |
 | 28 | Kann mehr als einen logischen Prozessor verwalten |
 | 27 | Unterstützt die Verwaltung von miteinander in Konflikt stehenden Speichertypen |
-| 26 | Unterstützt [SSE2](Streaming-SIMD-Extensions "Streaming SIMD Extensions") |
-| 25 | Unterstütz [SSE](Streaming-SIMD-Extensions "Streaming SIMD Extensions") |
-| 24 | Unterstützt die **FXSAVE** und **FXRSTOR** Befehle, mit denen die [Floatingpointregister](Register "Register") schnell gesichert werden können |
+| 26 | Unterstützt [SSE2](Streaming-SIMD-Extensions.md "Streaming SIMD Extensions") |
+| 25 | Unterstütz [SSE](Streaming-SIMD-Extensions.md "Streaming SIMD Extensions") |
+| 24 | Unterstützt die **FXSAVE** und **FXRSTOR** Befehle, mit denen die [Floatingpointregister](Register.md "Register") schnell gesichert werden können |
 | 23 | Unterstützt MMX |
 | 22 | Unterstützt Überwachung der Prozessortemperatur und Änderung des Prozessortaktes |
 | 21 | Kann Debuginformationen in im Hauptspeicher vorhandene Buffer schreiben |
 | 20 |  |
 | 19 | Unterstützt den **CLFLUSH**-Befehl |
 | 18 | Besitzt eine 96-Bit Prozessor-Seriennummer (Nur verfügbar auf Prozessoren, die neuer als Pentium 4 sind) |
-| 17 | Unterstützt [36-Bit Page Size Extensions](Page-Size-Extension "Page Size Extension") (4-MiB [Pages](Paging "Paging")) |
-| 16 | Unterstützt das [PAT-Bit](PAT "PAT") |
+| 17 | Unterstützt [36-Bit Page Size Extensions](Page-Size-Extension.md "Page Size Extension") (4-MiB [Pages](Paging.md "Paging")) |
+| 16 | Unterstützt das [PAT-Bit](PAT.md "PAT") |
 | 15 | Unterstützt den **CMOVcc** Befehl, mit dem bedingte Verschiebungen vorgenommen werden können |
 | 14 | Unterstützt die Machine-Check-Architektur |
-| 13 | Unterstützt das [Page-Global-Bit](Paging "Paging") |
+| 13 | Unterstützt das [Page-Global-Bit](Paging.md "Paging") |
 | 12 | Unterstützt MTRR-Register (Besonders das **MTRR_CAP**-Register) |
-| 11 | Unterstützt schnelle [Syscalls](Syscall "Syscall") durch die Befehle [**SYSENTER** und **SYSEXIT**](Sysenter "Sysenter") |
+| 11 | Unterstützt schnelle [Syscalls](Syscall.md "Syscall") durch die Befehle [**SYSENTER** und **SYSEXIT**](Sysenter.md "Sysenter") |
 | 10 |  |
-| 9 | Besitzt einen lokalen [APIC](Advanced-Programmable-Interrupt-Controller "APIC") |
+| 9 | Besitzt einen lokalen [APIC](Advanced-Programmable-Interrupt-Controller.md "APIC") |
 | 8 | Unterstützt den **CMPXCHG8B** Befehl |
-| 7 | Unterstützt Machine-Check-[Exceptions](Exception "Exception") |
+| 7 | Unterstützt Machine-Check-[Exceptions](Exception.md "Exception") |
 | 6 | Unterstützt physische Adressen, die größer als 32-Bit sind |
-| 5 | Implementiert [Modellspezifische Register](Machine-Specific-Register "Machine-Specific Register") über die Befehle **RDMSR** und **WRMSR** |
+| 5 | Implementiert [Modellspezifische Register](Machine-Specific-Register.md "Machine-Specific Register") über die Befehle **RDMSR** und **WRMSR** |
 | 4 | Unterstützt den **RDTSC** Befehl und CR4.TSD-Bit |
-| 3 | Unterstützt 4-MiB [Pages](Paging "Paging") |
+| 3 | Unterstützt 4-MiB [Pages](Paging.md "Paging") |
 | 2 | Unterstützt I/O-Breakpoints, das CR4.DE-Bit und die DR4- und DR5-Register |
-| 1 | Unterstützt Erweiterungen des [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode") (z. B. Virtual Interrupts). |
-| 0 | Besitzt eine [FPU](Mathematischer-Koprozessor "FPU"), die den x87-Befehlssatz implementiert |
+| 1 | Unterstützt Erweiterungen des [Virtual 8086 Mode](Virtual-8086-Mode.md "Virtual 8086 Mode") (z. B. Virtual Interrupts). |
+| 0 | Besitzt eine [FPU](Mathematischer-Koprozessor.md "FPU"), die den x87-Befehlssatz implementiert |
 
 ## Funktion 0x0000_0002
 
@@ -1053,7 +1053,7 @@ Hier fehlt eine Erklärung zu den Cache-Deskriptoren.
 
 Der nachfolgende Text ist **Intel-spezifisch**, das heißt, er trifft **ausschließlich** auf Intel-Prozessoren zu!
 
-Gibt Bits 63 - 0 der Prozessorsignatur zurück. Um die gesamte 96-Bit Prozessorsignatur zu erhalten muss man noch **[EAX](CPUID "CPUID")** von [Funktion 0x0000_0001](CPUID "CPUID") hinzunehmen.
+Gibt Bits 63 - 0 der Prozessorsignatur zurück. Um die gesamte 96-Bit Prozessorsignatur zu erhalten muss man noch **[EAX](CPUID.md "CPUID")** von [Funktion 0x0000_0001](CPUID.md "CPUID") hinzunehmen.
 
   
 
@@ -1856,11 +1856,11 @@ Erweiterte Funktionen von Intel:
 </td></tr></tbody></table>
 
 **PCKTYP**: Package Type  
-**Brand ID**: Wird zusammen mit [EBX\[7:0\]](CPUID#ebx---sonstiges "CPUID") von [Funktion 0x0000_0001](CPUID#funktion-0x0000_0001 "CPUID") vom [BIOS](Basic-Input-Output-System "BIOS") genutzt, um den Prozessorstring zu bestimmen.
+**Brand ID**: Wird zusammen mit [EBX\[7:0\]](CPUID.md#ebx---sonstiges "CPUID") von [Funktion 0x0000_0001](CPUID.md#funktion-0x0000_0001 "CPUID") vom [BIOS](Basic-Input-Output-System.md "BIOS") genutzt, um den Prozessorstring zu bestimmen.
 
 **Achtung!**
 
-**PCKTYP** ist nur gültig, wenn [EAX\[7:0\]](CPUID#eax---prozessor "CPUID") von [Funktion 0x0000_0001](CPUID#funktion-0x0000_0001 "CPUID") mindestens **0x10** ist. Wenn EAX\[7:0\] von Funktion 0x0000_0001 niedriger ist als **0x10** ist dieses Feld **reserviert**!
+**PCKTYP** ist nur gültig, wenn [EAX\[7:0\]](CPUID.md#eax---prozessor "CPUID") von [Funktion 0x0000_0001](CPUID.md#funktion-0x0000_0001 "CPUID") mindestens **0x10** ist. Wenn EAX\[7:0\] von Funktion 0x0000_0001 niedriger ist als **0x10** ist dieses Feld **reserviert**!
 
 #### ECX - Erweiterte Featureflags
 

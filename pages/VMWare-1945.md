@@ -1,6 +1,6 @@
 # VMWare
 
-Weiterleitung: [VMware](VMware)
+Weiterleitung: [VMware](VMware.md)
 
 ---
 

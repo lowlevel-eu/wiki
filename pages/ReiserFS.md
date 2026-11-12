@@ -13,7 +13,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Länge des Dateinames: | Blockgröße - 64 |
 | Maximale Dateisystemgröße: | 16 TB |
 
-ReiserFS ist ein [Dateisystem](Dateisystem "Dateisystem"), das von Hans Reiser und der ihm gehörenden Firma Namesys entwickelt wird. Das Dateisystem wird von [Linux](Linux "Linux") und [BSD](FreeBSD "FreeBSD") unterstützt; für [Windows](Windows "Windows") existieren nur kostenpflichtige Treiber.
+ReiserFS ist ein [Dateisystem](Dateisystem.md "Dateisystem"), das von Hans Reiser und der ihm gehörenden Firma Namesys entwickelt wird. Das Dateisystem wird von [Linux](Linux.md "Linux") und [BSD](FreeBSD.md "FreeBSD") unterstützt; für [Windows](Windows.md "Windows") existieren nur kostenpflichtige Treiber.
 
 ---
 

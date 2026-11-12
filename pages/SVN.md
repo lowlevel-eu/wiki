@@ -1,6 +1,6 @@
 # SVN
 
-Weiterleitung: [Subversion](Subversion)
+Weiterleitung: [Subversion](Subversion.md)
 
 ---
 

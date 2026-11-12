@@ -1,6 +1,6 @@
 # Tyndur
 
-Weiterleitung: [Týndur](T%C3%BDndur)
+Weiterleitung: [Týndur](T%C3%BDndur.md)
 
 ---
 

@@ -9,7 +9,7 @@
 | Länge des Dateinames: | 255 Zeichen |
 | Maximale Dateisystemgröße: | • 32 MiB (FAT12)<br>• 2 – 4 GiB (FAT16)<br>• 8 TiB (FAT32)<br> |
 
-FAT ist ein [Dateisystem](Dateisystem "Dateisystem"), das mit [MS-DOS](Microsoft-Disk-Operating-System "MS-DOS") eingeführt wurde. Da PCs Ende der 70er Jahre meist noch keine Festplatten sondern nur Diskettenlaufwerke hatten, war dieses Dateisystem zunächst nur für die Kapazitäten von Disketten ausgelegt.
+FAT ist ein [Dateisystem](Dateisystem.md "Dateisystem"), das mit [MS-DOS](Microsoft-Disk-Operating-System.md "MS-DOS") eingeführt wurde. Da PCs Ende der 70er Jahre meist noch keine Festplatten sondern nur Diskettenlaufwerke hatten, war dieses Dateisystem zunächst nur für die Kapazitäten von Disketten ausgelegt.
 
 Es gibt drei Varianten, die sich vor allem hinsichtlich der unterstützten Datenträgergröße unterscheiden:
 
@@ -212,7 +212,7 @@ Die Informationen die dem Boot-Sektor zu entnehmen sind können je nach FAT-Vers
 
 ## VFAT
 
-VFAT (**V**irtual **F**ile **A**llocation **T**able) ist eine Erweiterung für FAT. Sie kommt seit [Windows](Windows "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z.B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten.
+VFAT (**V**irtual **F**ile **A**llocation **T**able) ist eine Erweiterung für FAT. Sie kommt seit [Windows](Windows.md "Windows") 95 zum Einsatz und wurde entwickelt, um lange Dateinamen nutzen zu können. Beim normalen FAT wird der Dateiname und die Erweiterung in der 8.3-Form angegeben. Bei längeren Namen benutzt VFAT einen Aliasnamen (z.B.: xxxxxx~1.xxx), dessen Nummer hochgezählt wird. Der eigentliche Name wird über mehrere zusätzliche Verzeichniseinträge verteilt. Ältere Systeme sehen diese als ungültig an und ignorieren sie. Der Dateiname kann so bis zu 255 UTF-16 Zeichen enthalten.
 
 Außerdem werden auch das Erstellungsdatum und das Datum des letzten Zugriffs durch VFAT gespeichert, aber das ist nicht an die Benutzung der langen Dateinamen gebunden.
 
@@ -242,7 +242,7 @@ Da man eine Datei aber nur selten wirklich komplett vom Anfang bis zum Ende läd
 
 ## Siehe auch
 
-- [Ausgabe_4#Das_FAT12-Dateisystem](Ausgabe-4#das-fat12-dateisystem "Ausgabe 4")
+- [Ausgabe_4#Das_FAT12-Dateisystem](Ausgabe-4.md#das-fat12-dateisystem "Ausgabe 4")
 
 ## Weblinks
 

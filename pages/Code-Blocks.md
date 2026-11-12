@@ -1,6 +1,6 @@
 # Code::Blocks
 
-Code::Blocks ist eine [Entwicklungsumgebung](Entwicklungsumgebung "Entwicklungsumgebung") für [Windows](Windows "Windows"), [Linux](Linux "Linux"), Mac OS X und einige weitere Unix-Derivate. Sie wird unter der GNU General Public License veröffentlicht und ist in C++ programmiert.
+Code::Blocks ist eine [Entwicklungsumgebung](Entwicklungsumgebung.md "Entwicklungsumgebung") für [Windows](Windows.md "Windows"), [Linux](Linux.md "Linux"), Mac OS X und einige weitere Unix-Derivate. Sie wird unter der GNU General Public License veröffentlicht und ist in C++ programmiert.
 
 ## Unterstützte Programmiersprachen
 
@@ -8,18 +8,18 @@ Code::Blocks unterstützt eine Reihe verschiedener Programmiersprachen. Insbeson
 
 Hier die wichtigsten unterstützen Sprachen in Kürze:
 
-- [C](C "C")/[C++](C%2B%2B "C++")
-- [D](D "D")
-- [Ada](Ada "Ada")
+- [C](C.md "C")/[C++](C%2B%2B.md "C++")
+- [D](D.md "D")
+- [Ada](Ada.md "Ada")
 - Bash-Skripte
-- [Fortran](Fortran "Fortran")
-- [Assembler](Assembler "Assembler")
+- [Fortran](Fortran.md "Fortran")
+- [Assembler](Assembler.md "Assembler")
 
 ## Unterstützte Compiler
 
-Code::Blocks bringt keinen Compiler mit, man muss ihn also selbst installieren. Unter Linux ist normalerweise der/die [GCC](GNU-Compiler-Collection "GCC") schon vorinstalliert, aber man kann neben diesem Compiler auch andere verwenden:
+Code::Blocks bringt keinen Compiler mit, man muss ihn also selbst installieren. Unter Linux ist normalerweise der/die [GCC](GNU-Compiler-Collection.md "GCC") schon vorinstalliert, aber man kann neben diesem Compiler auch andere verwenden:
 
-- [GCC](GNU-Compiler-Collection "GCC") (für verschiedene Plattformen, wie PowerPC und TriCore, aber auch für Microcontroller wie den MSP 430)
+- [GCC](GNU-Compiler-Collection.md "GCC") (für verschiedene Plattformen, wie PowerPC und TriCore, aber auch für Microcontroller wie den MSP 430)
 - Microsofts Visual Studio Compiler
 - Borlands C++ Compiler
 - Digital Mars C/C++ Compiler

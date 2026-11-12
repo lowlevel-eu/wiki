@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 2](Ausgabe-2 "Ausgabe 2") | **Navigation** | [Ausgabe 4](Ausgabe-4 "Ausgabe 4") » |
+| « [Ausgabe 2](Ausgabe-2.md "Ausgabe 2") | **Navigation** | [Ausgabe 4](Ausgabe-4.md "Ausgabe 4") » |
 
 ## Vorwort
 
@@ -24,9 +24,9 @@ PiranhOS wird von Grund auf neu gecodet. Grund: "messy code" (Originalzitat)
 
 Das interne Betatesting zu EngesnOS ist fertig. In den nächsten Tagen können wir mit einer Public Beta rechnen
 
-Ende August soll die nächste Beta des Windows NT-Clones [ReactOS](ReactOS "ReactOS") erscheinen.
+Ende August soll die nächste Beta des Windows NT-Clones [ReactOS](ReactOS.md "ReactOS") erscheinen.
 
-In Frankreich kann man nun bei Dell PCs bestellen, auf denen [FreeDOS](FreeDOS "FreeDOS") installiert ist. Toll, oder?
+In Frankreich kann man nun bei Dell PCs bestellen, auf denen [FreeDOS](FreeDOS.md "FreeDOS") installiert ist. Toll, oder?
 
 ## Leserbriefe
 
@@ -353,7 +353,7 @@ Nun die Frage an euch: sollen wir weiterhin mit Assembler programmieren - eben L
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 2](Ausgabe-2 "Ausgabe 2") | **Navigation** | [Ausgabe 4](Ausgabe-4 "Ausgabe 4") » |
+| « [Ausgabe 2](Ausgabe-2.md "Ausgabe 2") | **Navigation** | [Ausgabe 4](Ausgabe-4.md "Ausgabe 4") » |
 
 ---
 

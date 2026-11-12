@@ -10,9 +10,9 @@ Der **NOT**-Operator ist ein unärer Operator, d. h. er arbeitet mit nur einem 
 
     NOT ( 11011010b ) = 00100101b
 
-[C](C "C")-Code: \<c\>int a = ~0xda; // a = 0x25\</c\>
+[C](C.md "C")-Code: \<c\>int a = ~0xda; // a = 0x25\</c\>
 
-[ASM](Assembler "Assembler")-Code: \<asm\>mov al, 11011010b not al  ; al = 00100101b\</asm\>
+[ASM](Assembler.md "Assembler")-Code: \<asm\>mov al, 11011010b not al  ; al = 00100101b\</asm\>
 
 ### AND
 

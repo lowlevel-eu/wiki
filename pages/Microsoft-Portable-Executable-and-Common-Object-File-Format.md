@@ -14,7 +14,7 @@ Aus Gründen der Abwährskompatiblität, beginnt auch heute jedes Programm unter
 
 Dieser Header ist der Basisheader jeder Datei im EXE-Format (auch DLL und andere abgeleitete Dateien), worauf sich der PE/COFF-Header aufbaut. Da aber die Informationen für solche Dateien nicht mehr im EXE-Header abgelegt werden, könnte man theoretisch den EXE-Header weglassen. Leider ist dem aber nicht so, weil dieser die Offsetadresse zu unserem PE/COFF-Header enthält.
 
-Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird (Einzelheiten können in [MZ EXE](MZ-EXE "MZ EXE") nachgelesen werden.)
+Die folgende Tabelle zeigt, was noch vom EXE-Header benötigt wird (Einzelheiten können in [MZ EXE](MZ-EXE.md "MZ EXE") nachgelesen werden.)
 
 | Offset | Größe | Beschreibung |
 | -------- | ---------- | ------------------------------------------------------------ |
@@ -54,10 +54,10 @@ In dieser Tabelle werden die Werte für die Plattformentypen des COFF-Headers er
 | -------- | ---------------------------------------------------------------------------------- |
 | 0x0000 | Nicht bekannt oder auf jeder Plattform lauffähig. |
 | 0x01D3 | Matsushita AM33 |
-| 0x8664 | [x64](X86-64 "X64") |
+| 0x8664 | [x64](X86-64.md "X64") |
 | 0x01C0 | ARM little endian |
 | 0x0EBC | EFI Bytecode |
-| 0x014C | [x86](X86 "X86") kompatible Prozessoren |
+| 0x014C | [x86](X86.md "X86") kompatible Prozessoren |
 | 0x0200 | Intel Itanium Prozessorfamilie |
 | 0x9041 | Mitsubishi M32R little endian |
 | 0x0266 | MIPS16 |

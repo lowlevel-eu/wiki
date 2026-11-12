@@ -1,6 +1,6 @@
 # Exokernel
 
-Weiterleitung: [Kernel#Exokernel](Kernel#exokernel)
+Weiterleitung: [Kernel#Exokernel](Kernel.md#exokernel)
 
 ---
 

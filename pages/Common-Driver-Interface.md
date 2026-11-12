@@ -125,7 +125,7 @@ struct cdi_pci_device
 };
 ```
 
-Mit dieser Struktur wird ein [PCI](Peripheral-Component-Interconnect "PCI")-Gerät beschrieben. „bus“ ist der Bus, auf dem es sich befindet, „dev“ das Gerät und „function“ die Funktion. „vendor_id“ gibt die Hersteller-ID an, „device_id“ die Geräte-ID. Die Classcodes befinden sich in „class_id“ (Base class), „subclass_id“ (Subclass) und „interface_id“ (Programming interface). „rev_id“ enthält die Revisions-ID. In „irq“ steht der IRQ, den das Gerät verwendet. „resources“ ist eine Liste mit den I/O- und Speicherresourcen, ihre Elemente sind vom Typ „struct cdi_pci_resource“.
+Mit dieser Struktur wird ein [PCI](Peripheral-Component-Interconnect.md "PCI")-Gerät beschrieben. „bus“ ist der Bus, auf dem es sich befindet, „dev“ das Gerät und „function“ die Funktion. „vendor_id“ gibt die Hersteller-ID an, „device_id“ die Geräte-ID. Die Classcodes befinden sich in „class_id“ (Base class), „subclass_id“ (Subclass) und „interface_id“ (Programming interface). „rev_id“ enthält die Revisions-ID. In „irq“ steht der IRQ, den das Gerät verwendet. „resources“ ist eine Liste mit den I/O- und Speicherresourcen, ihre Elemente sind vom Typ „struct cdi_pci_resource“.
 
 ``` c
 typedef enum
@@ -366,7 +366,7 @@ struct cdi_net_device
 };
 ```
 
-Diese Struktur beschreibt ein CDI.net-Gerät. „dev“ ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, „mac“ gibt die MAC-Adresse an und „number“ die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei „device“ ein Pointer auf diese Struktur ist, „data“ ein Pointer auf die zu sendenden Daten, während „size“ die Größe des Puffers „data“ angibt. Wichtig: Man darf nicht erwarten, dass send_packet() reentrant (also gegen [Race Conditions](Race-Condition "Race Condition") abgesichert) ist! Das Betriebssystem muss somit selbst dafür Sorge tragen, dass diese Funktion immer nur von maximal einem einzigen Prozess durchlaufen wird.
+Diese Struktur beschreibt ein CDI.net-Gerät. „dev“ ist eine Struktur, die das Gerät im Allgemeinen repräsentiert, „mac“ gibt die MAC-Adresse an und „number“ die Nummer der Netzwerkkarte. Mit der Funktion send_packet() können Pakete gesendet werden, wobei „device“ ein Pointer auf diese Struktur ist, „data“ ein Pointer auf die zu sendenden Daten, während „size“ die Größe des Puffers „data“ angibt. Wichtig: Man darf nicht erwarten, dass send_packet() reentrant (also gegen [Race Conditions](Race-Condition.md "Race Condition") abgesichert) ist! Das Betriebssystem muss somit selbst dafür Sorge tragen, dass diese Funktion immer nur von maximal einem einzigen Prozess durchlaufen wird.
 
 ``` c
 struct cdi_net_driver
@@ -405,16 +405,16 @@ Diese Funktion wird vom CDI.net-Treiber aufgerufen, wenn Daten von einer Netzwer
 
 ## Betriebssysteme, welche CDI benutzen (werden)
 
-- [LF OS](LF-OS "LF OS")
-- [meinOS](MeinOS "MeinOS")
-- [µxoµcota](%CE%9Cxo%C2%B5cota "Μxoµcota")
-- [MyXomycota](MyXomycota "MyXomycota")
-- [Paloxena](Paloxena "Paloxena") (kernel1, kernel2 und kernel3)
-- [Pedigree](Pedigree "Pedigree")
-- [planlOS](PlanlOS "PlanlOS")
-- [PrettyOS](PrettyOS "PrettyOS")
-- [týndur](T%C3%BDndur "Týndur")
-- [universe](Universe "Universe")
+- [LF OS](LF-OS.md "LF OS")
+- [meinOS](MeinOS.md "MeinOS")
+- [µxoµcota](%CE%9Cxo%C2%B5cota.md "Μxoµcota")
+- [MyXomycota](MyXomycota.md "MyXomycota")
+- [Paloxena](Paloxena.md "Paloxena") (kernel1, kernel2 und kernel3)
+- [Pedigree](Pedigree.md "Pedigree")
+- [planlOS](PlanlOS.md "PlanlOS")
+- [PrettyOS](PrettyOS.md "PrettyOS")
+- [týndur](T%C3%BDndur.md "Týndur")
+- [universe](Universe.md "Universe")
 
 ## Weblinks
 

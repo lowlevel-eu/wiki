@@ -8,18 +8,18 @@ Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie w
 
 ### Seiten
 
-- [Ada](Ada)
-- [Assembler](Assembler)
-- [C](C)
-- [C\+\+](C%2B%2B)
-- [C-Sharp](C-Sharp)
-- [D](D)
-- [Fortran](Fortran)
-- [FreeBASIC](FreeBASIC)
-- [Java](Java)
-- [Objective-C](Objective-C)
-- [Pascal](Pascal)
-- [Sather](Sather)
+- [Ada](Ada.md)
+- [Assembler](Assembler.md)
+- [C](C.md)
+- [C\+\+](C%2B%2B.md)
+- [C-Sharp](C-Sharp.md)
+- [D](D.md)
+- [Fortran](Fortran.md)
+- [FreeBASIC](FreeBASIC.md)
+- [Java](Java.md)
+- [Objective-C](Objective-C.md)
+- [Pascal](Pascal.md)
+- [Sather](Sather.md)
 
 
 ---

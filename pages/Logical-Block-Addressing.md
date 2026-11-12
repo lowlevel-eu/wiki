@@ -1,6 +1,6 @@
 # Logical Block Addressing
 
-Bei Logical Block Addressing (Logische Block Adressierung) werden Sektoren von Massenspeichern von 0 aufsteigend adressiert. Das Gegenstück zu LBA ist das ältere [CHS](Cylinder-Head-Sector "Cylinder Head Sector").
+Bei Logical Block Addressing (Logische Block Adressierung) werden Sektoren von Massenspeichern von 0 aufsteigend adressiert. Das Gegenstück zu LBA ist das ältere [CHS](Cylinder-Head-Sector.md "Cylinder Head Sector").
 
 ## Umrechnung von LBA zu CHS
 
@@ -34,7 +34,7 @@ inc dx  ; Den Rest um 1 erhöhen mov \[tmpc\], dl ; Und ebenfalls sichern\</as
 
 ## siehe auch
 
-- [CHS](Cylinder-Head-Sector "CHS") - veraltete Methode zum Adressieren von Sektoren
+- [CHS](Cylinder-Head-Sector.md "CHS") - veraltete Methode zum Adressieren von Sektoren
 
 ---
 

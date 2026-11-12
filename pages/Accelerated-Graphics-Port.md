@@ -1,6 +1,6 @@
 # Accelerated Graphics Port
 
-Der **Accelerated Graphics Port** (kurz: **AGP**) ist ein [Bus](Kategorie-Bus "Kategorie:Bus") zum Anschluss von Grafikkarten. Die Schnittstelle basiert auf [PCI](Peripheral-Component-Interconnect "PCI"), bietet jedoch höhere Transferraten und eine Anbindung der Grafikkarte an den Speicher (GART) an. Mittlerweile wurde die Schnittstelle von PCI-Express abgelöst.
+Der **Accelerated Graphics Port** (kurz: **AGP**) ist ein [Bus](Kategorie-Bus.md "Kategorie:Bus") zum Anschluss von Grafikkarten. Die Schnittstelle basiert auf [PCI](Peripheral-Component-Interconnect.md "PCI"), bietet jedoch höhere Transferraten und eine Anbindung der Grafikkarte an den Speicher (GART) an. Mittlerweile wurde die Schnittstelle von PCI-Express abgelöst.
 
 ## Registerstruktur
 
@@ -96,7 +96,7 @@ Grundsätzlich werden AGP-Gerate wie gewöhnliche PCI-Geräte enumeriert. Anhand
 
 ## Aktivierung und Einstellungen
 
-Das Betriebssystem ist für die Aktivierung von AGP und die Auswahl eines geeigneten Transfermodus verantwortlich. Das [BIOS](Basic-Input-Output-System "BIOS") übergibt die Karte mit abgeschaltetem AGP-Modus, sodass sie mit der Geschwindigkeit eines PCI-Gerätes läuft. AGP wird aktiviert, wenn im Register AGP_CMD das AGP_ENABLE-Bit gesetzt wird.
+Das Betriebssystem ist für die Aktivierung von AGP und die Auswahl eines geeigneten Transfermodus verantwortlich. Das [BIOS](Basic-Input-Output-System.md "BIOS") übergibt die Karte mit abgeschaltetem AGP-Modus, sodass sie mit der Geschwindigkeit eines PCI-Gerätes läuft. AGP wird aktiviert, wenn im Register AGP_CMD das AGP_ENABLE-Bit gesetzt wird.
 
 Im AGP-2.0-Modus werden die Transfermodi 1x, 2x und 4x unterstützt, während im AGP-3.0-Modus die Modi 4x und 8x möglich sind. Die unterstützten Modi können anhand des RATE-Feldes erkannt werden und im DRATE-Feld ausgewählt werden (in letzterem darf nur genau ein Bit gesetzt sein):
 

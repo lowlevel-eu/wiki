@@ -3,7 +3,7 @@
 | ELF-Tutorial |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | **Schwierigkeit**: [<img src="assets/Stern_gold.gif" width="16" height="16" alt="Stern gold.gif" />](assets/Stern_gold.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)<br> |  |
-| Benötigtes Vorwissen: | [Paging](Paging "Paging") |
+| Benötigtes Vorwissen: | [Paging](Paging.md "Paging") |
 | Sprache: | FreeBasic |
 
   
@@ -18,13 +18,13 @@ Meine Wahl für das Format fiel damals auf ELF, das liegt an verschiedenen Dinge
 - Viele andere OS-Projekte nutzen es, daher bekommt man Hilfe
 - Linux benutzt es ;)
 
-Auch hier wird vorausgesetzt, dass euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](Multitasking "Multitasking") und [Paging](Paging "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](Kategorie-Tutorials "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von [GRUB](Grand-Unified-Bootloader "GRUB") als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
+Auch hier wird vorausgesetzt, dass euer OS bereits bestimmte Dinge beherrscht. Ihr solltet [Multitasking](Multitasking.md "Multitasking") und [Paging](Paging.md "Paging") nutzen können (wenn nicht, sucht hier im Wiki. Für diese Themen habe ich bereits [Tutorials](Kategorie-Tutorials.md "Kategorie:Tutorials") geschrieben). In diesem Tutorial werde ich nicht erklären, wie ihr die Dateien in den Speicher bekommt, das ist eure Sache. Aber ich empfehle euch, die Dateien einfach von [GRUB](Grand-Unified-Bootloader.md "GRUB") als Module laden zu lassen. Solltet ihr kein GRUB nutzen, ändert das. Es gibt mehr als genügend Gründe dafür, aber die werde ich hier nicht aufzählen. Aber wenn wir schon dabei sind: GRUB kann Kernel im ELF-Format laden.
 
   
 
 ## Hinweis
 
-Bevor es richtig los geht, zwei Hinweise: Der Code in diesem Tutorial ist in [FreeBASIC](FreeBASIC "FreeBASIC") geschrieben und die Funktionsweise, die hier erklärt wird, gilt nur für den 32-Bit-Modus.
+Bevor es richtig los geht, zwei Hinweise: Der Code in diesem Tutorial ist in [FreeBASIC](FreeBASIC.md "FreeBASIC") geschrieben und die Funktionsweise, die hier erklärt wird, gilt nur für den 32-Bit-Modus.
 
   
 
@@ -282,7 +282,7 @@ Happy Coding, The Thing
 
 ## Siehe auch
 
-- [Executable and Linking Format](Executable-and-Linking-Format "Executable and Linking Format")
+- [Executable and Linking Format](Executable-and-Linking-Format.md "Executable and Linking Format")
 
 ## Weblinks
 

@@ -1,6 +1,6 @@
 # KBC
 
-Weiterleitung: [Keyboard Controller](Keyboard-Controller)
+Weiterleitung: [Keyboard Controller](Keyboard-Controller.md)
 
 ---
 

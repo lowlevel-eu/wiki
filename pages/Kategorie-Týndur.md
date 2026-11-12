@@ -1,29 +1,29 @@
 # Kategorie:Týndur
 
-In dieser Kategorie befinden sich alle Seiten zum Community-Betriebssystem týndur. Für nähere Informationen, siehe den [Hauptartikel](T%C3%BDndur "Týndur").
+In dieser Kategorie befinden sich alle Seiten zum Community-Betriebssystem týndur. Für nähere Informationen, siehe den [Hauptartikel](T%C3%BDndur.md "Týndur").
 
 ## Kategorieübersicht
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Betriebssystem](Kategorie-Betriebssystem)
+Übergeordnete Kategorien: [Betriebssystem](Kategorie-Betriebssystem.md)
 
 ### Seiten
 
-- [Týndur](T%C3%BDndur)
-- [Týndur/Bochs](T%C3%BDndur-Bochs)
-- [Týndur/Entwicklung](T%C3%BDndur-Entwicklung)
-- [Týndur/Interprozesskommunikation](T%C3%BDndur-Interprozesskommunikation)
-- [Týndur/Konzepte und Benutzung](T%C3%BDndur-Konzepte-und-Benutzung)
-- [Týndur/LostIO](T%C3%BDndur-LostIO)
-- [Týndur/LostIOv2](T%C3%BDndur-LostIOv2)
-- [Týndur/Qemu](T%C3%BDndur-Qemu)
-- [Týndur/Ressourcen](T%C3%BDndur-Ressourcen)
-- [Týndur/Roadmap](T%C3%BDndur-Roadmap)
-- [Týndur/Screenshots](T%C3%BDndur-Screenshots)
-- [Týndur/Team](T%C3%BDndur-Team)
-- [Týndur/Versionen](T%C3%BDndur-Versionen)
-- [Týndur/Wunschliste](T%C3%BDndur-Wunschliste)
+- [Týndur](T%C3%BDndur.md)
+- [Týndur/Bochs](T%C3%BDndur-Bochs.md)
+- [Týndur/Entwicklung](T%C3%BDndur-Entwicklung.md)
+- [Týndur/Interprozesskommunikation](T%C3%BDndur-Interprozesskommunikation.md)
+- [Týndur/Konzepte und Benutzung](T%C3%BDndur-Konzepte-und-Benutzung.md)
+- [Týndur/LostIO](T%C3%BDndur-LostIO.md)
+- [Týndur/LostIOv2](T%C3%BDndur-LostIOv2.md)
+- [Týndur/Qemu](T%C3%BDndur-Qemu.md)
+- [Týndur/Ressourcen](T%C3%BDndur-Ressourcen.md)
+- [Týndur/Roadmap](T%C3%BDndur-Roadmap.md)
+- [Týndur/Screenshots](T%C3%BDndur-Screenshots.md)
+- [Týndur/Team](T%C3%BDndur-Team.md)
+- [Týndur/Versionen](T%C3%BDndur-Versionen.md)
+- [Týndur/Wunschliste](T%C3%BDndur-Wunschliste.md)
 
 
 ---

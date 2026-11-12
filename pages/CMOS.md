@@ -1,10 +1,10 @@
 # CMOS
 
-Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein elektronischer Baustein, aber im Bereich der Betriebssystemprogrammierung ist damit meistens der Batterie-gepufferte SRAM eines [x86](X86 "X86")- bzw. [x86-64](X86-64 "X86-64")-Computers gemeint. In diesem speichert das [BIOS](Basic-Input-Output-System "BIOS") Informationen beispielsweise über die angeschlossene Hardware. Außerdem wird darin die momentane Uhrzeit und das Datum gespeichert und von einer [Echtzeituhr](Real-Time-Clock "RTC") aktualisiert.
+Ein **Complementary Metal Oxide Semiconductor** (= **CMOS**) ist eigentlich ein elektronischer Baustein, aber im Bereich der Betriebssystemprogrammierung ist damit meistens der Batterie-gepufferte SRAM eines [x86](X86.md "X86")- bzw. [x86-64](X86-64.md "X86-64")-Computers gemeint. In diesem speichert das [BIOS](Basic-Input-Output-System.md "BIOS") Informationen beispielsweise über die angeschlossene Hardware. Außerdem wird darin die momentane Uhrzeit und das Datum gespeichert und von einer [Echtzeituhr](Real-Time-Clock.md "RTC") aktualisiert.
 
 ## Aufbau
 
-Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* markierten Einträge sind standardmässig im [BCD-Format](Binary-Coded-Decimal "BCD") kodiert. Die Kodierung kann aber auch im [Statusregister B](CMOS#0x0b---statusregister-b "CMOS") (Bit 2) geändert werden. Dabei ist allerdings zu beachten, dass die momentanen Werte im Register an die neue Kodierung angepasst werden müssen und dies nicht von selbst geschieht.
+Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* markierten Einträge sind standardmässig im [BCD-Format](Binary-Coded-Decimal.md "BCD") kodiert. Die Kodierung kann aber auch im [Statusregister B](CMOS.md#0x0b---statusregister-b "CMOS") (Bit 2) geändert werden. Dabei ist allerdings zu beachten, dass die momentanen Werte im Register an die neue Kodierung angepasst werden müssen und dies nicht von selbst geschieht.
 
   
 
@@ -118,7 +118,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
   
 
-### 0x0E - [POST](Power-On-Self-Test "POST")-Diagnosestatusbyte
+### 0x0E - [POST](Power-On-Self-Test.md "POST")-Diagnosestatusbyte
 
 | Bit | Beschreibung |
 | ----- | -------------------------------------------------------------------------------- |
@@ -137,7 +137,7 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
 ### 0x0F - Shutdown-Statusbyte
 
-80286-Prozessoren konnten nicht vom [Protected Mode](Protected-Mode "Protected Mode") in den Realmode zurückgeschaltet werden. Zu diesem Zweck war ein Prozessor-Reset nötig. Das Shutdown-Statusbyte dient dazu dem BIOS anzuzeigen, ob der PC neu gebootet oder der Prozessor nur im Realmode neu gestartet werden soll.
+80286-Prozessoren konnten nicht vom [Protected Mode](Protected-Mode.md "Protected Mode") in den Realmode zurückgeschaltet werden. Zu diesem Zweck war ein Prozessor-Reset nötig. Das Shutdown-Statusbyte dient dazu dem BIOS anzuzeigen, ob der PC neu gebootet oder der Prozessor nur im Realmode neu gestartet werden soll.
 
 | Wert | Beschreibung |
 | ------ | ------------------------------------------------------------------------------- |
@@ -157,9 +157,9 @@ Im CMOS werden folgende jeweils 1 Byte große Felder gespeichert. Die mit *BCD* 
 
   
 
-### 0x10 - Typ der [Diskettenlaufwerke](Floppy-Disk-Controller "FDC")
+### 0x10 - Typ der [Diskettenlaufwerke](Floppy-Disk-Controller.md "FDC")
 
-In diesem Byte wird der Typ der [Diskettenlaufwerke](Floppy-Disk-Controller "FDC") gespeichert, wobei in den Bits 4-7 der Typ des ersten Laufwerks gespeichert ist und in den Bits 0-3 der Typ des zweiten Laufwerks. Die Typen sind wie folgt kodiert:
+In diesem Byte wird der Typ der [Diskettenlaufwerke](Floppy-Disk-Controller.md "FDC") gespeichert, wobei in den Bits 4-7 der Typ des ersten Laufwerks gespeichert ist und in den Bits 0-3 der Typ des zweiten Laufwerks. Die Typen sind wie folgt kodiert:
 
     0000b = Laufwerk nicht vorhanden
     0001b = 5 1/4 - 360 kB
@@ -211,7 +211,7 @@ Die CMOS-Prüfsumme ist eine 16 Bit grosse, byteweise Summe der Werte der Bytes 
 
 ## Programmierung
 
-Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als [NMI](Non-Maskable-Interrupt "Non Maskable Interrupt")-Maskierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
+Die Programmierung des CMOS ist denkbar einfach: Die sieben niederwertigen Bits des I/O Ports 0x70 dienen als Offset (siehe Tabelle). Das höchste Bit sollte nicht verändert werden, es dient als [NMI](Non-Maskable-Interrupt.md "Non Maskable Interrupt")-Maskierungsregister. Durch Lesen bzw. Schreiben des I/O Ports 0x71 kann dann der Wert an diesem Offset gelesen bzw. geschrieben werden.
 
 ### Assembler Beispielcode
 

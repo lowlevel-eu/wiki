@@ -1,6 +1,6 @@
 # USB
 
-Weiterleitung: [Universal Serial Bus](Universal-Serial-Bus)
+Weiterleitung: [Universal Serial Bus](Universal-Serial-Bus.md)
 
 ---
 

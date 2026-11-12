@@ -1,6 +1,6 @@
 # Remote Procedure Call
 
-Weiterleitung: [Interprozesskommunikation#RPC .28.3DRemote procedure call.29](Interprozesskommunikation#rpc-remote-procedure-call)
+Weiterleitung: [Interprozesskommunikation#RPC .28.3DRemote procedure call.29](Interprozesskommunikation.md#rpc-remote-procedure-call)
 
 ---
 

@@ -4,21 +4,21 @@ Als Soundkarte bezeichnet man eine Erweiterungskarte für den PC, welche Musik u
 
 ## Arten von Soundkarten
 
-Die meisten neuen Soundkarten sind bereits auf dem Mainboard vorhanden. Diese Soundkarten bezeichnet man als Onboard-Soundkarten. Es gibt auch Soundkarten, die an einen [PCI](Peripheral-Component-Interconnect "PCI")/PCIe-Port angeschlossen werden. Manche Grafikkarten (von AMD/ATI) besitzen einen integrierten Soundcontroller, damit per HDMI bzw. DisplayPort auch der Ton an den Monitor geschickt werden kann, ohne dass dafür ein zusätzliches Kabel von der Soundkarte zur Grafikkarte nötig ist.
+Die meisten neuen Soundkarten sind bereits auf dem Mainboard vorhanden. Diese Soundkarten bezeichnet man als Onboard-Soundkarten. Es gibt auch Soundkarten, die an einen [PCI](Peripheral-Component-Interconnect.md "PCI")/PCIe-Port angeschlossen werden. Manche Grafikkarten (von AMD/ATI) besitzen einen integrierten Soundcontroller, damit per HDMI bzw. DisplayPort auch der Ton an den Monitor geschickt werden kann, ohne dass dafür ein zusätzliches Kabel von der Soundkarte zur Grafikkarte nötig ist.
 
 ## Siehe auch
 
-[Gameport](Gameport "Gameport")
+[Gameport](Gameport.md "Gameport")
 
 ## Kategorieübersicht
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Hardware](Kategorie-Hardware)
+Übergeordnete Kategorien: [Hardware](Kategorie-Hardware.md)
 
 ### Seiten
 
-- [AC97](AC97)
+- [AC97](AC97.md)
 
 
 ---

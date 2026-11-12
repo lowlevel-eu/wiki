@@ -1,6 +1,6 @@
 # Breakpoint
 
-Weiterleitung: [Debugging](Debugging)
+Weiterleitung: [Debugging](Debugging.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # Hardware
 
-Weiterleitung: [Kategorie:Hardware](Kategorie-Hardware)
+Weiterleitung: [Kategorie:Hardware](Kategorie-Hardware.md)
 
 ---
 

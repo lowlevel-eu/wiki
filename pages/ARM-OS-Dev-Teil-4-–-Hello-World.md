@@ -2,7 +2,7 @@
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| « [ARM-OS-Dev Teil 3 – Trockenübungen](ARM-OS-Dev-Teil-3-%E2%80%93-Trocken%C3%BCbungen "ARM-OS-Dev Teil 3 – Trockenübungen") | **Navigation** | [ARM-OS-Dev Teil 5 – Interrupts](ARM-OS-Dev-Teil-5-%E2%80%93-Interrupts "ARM-OS-Dev Teil 5 – Interrupts") » |
+| « [ARM-OS-Dev Teil 3 – Trockenübungen](ARM-OS-Dev-Teil-3-%E2%80%93-Trocken%C3%BCbungen.md "ARM-OS-Dev Teil 3 – Trockenübungen") | **Navigation** | [ARM-OS-Dev Teil 5 – Interrupts](ARM-OS-Dev-Teil-5-%E2%80%93-Interrupts.md "ARM-OS-Dev Teil 5 – Interrupts") » |
 
 ## Der Bootprozess
 
@@ -12,7 +12,7 @@ Wer kein I/CP-Board hat, dem bleibt QEMU zur Emulation. QEMU emuliert keinen Fla
 
 ## Der Hello-World-Kernel
 
-Wie im Einführungsartikel beschrieben gibt es auf I/CP keinen schönen Textmodus, sodass man nicht einfach Zeichen irgendwo in den Arbeitsspeicher packen kann, sodass diese auf einem Bildschirm erscheinen. Wir werden uns hier damit begnügen, sie über eine serielle Schnittstelle ([UART](Serielle-Schnittstelle "Serielle Schnittstelle")) auszugeben. Diese bietet für uns zwei interessante im Speicher liegende Register: Schreibt man ein Byte nach 0x16000000 (hier SERIAL_DR (Data Register) genannt), dann wird es über die Schnittstelle ausgegeben. Dies kann jedoch nur getan werden, wenn der Sendepuffer aktuell frei ist. Um dies zu überprüfen, bedienen wir uns des Registers an der Speicheradresse 0x16000018 (hier SERIAL_FR (Flag Register) genannt). Ist darin das Bit 5 gesetzt, dann ist der Sendepuffer noch gefüllt und wir müssen zunächst warten, bis er leer ist: \<c\>typedef unsigned char uint8_t; typedef unsigned int uint32_t;
+Wie im Einführungsartikel beschrieben gibt es auf I/CP keinen schönen Textmodus, sodass man nicht einfach Zeichen irgendwo in den Arbeitsspeicher packen kann, sodass diese auf einem Bildschirm erscheinen. Wir werden uns hier damit begnügen, sie über eine serielle Schnittstelle ([UART](Serielle-Schnittstelle.md "Serielle Schnittstelle")) auszugeben. Diese bietet für uns zwei interessante im Speicher liegende Register: Schreibt man ein Byte nach 0x16000000 (hier SERIAL_DR (Data Register) genannt), dann wird es über die Schnittstelle ausgegeben. Dies kann jedoch nur getan werden, wenn der Sendepuffer aktuell frei ist. Um dies zu überprüfen, bedienen wir uns des Registers an der Speicheradresse 0x16000018 (hier SERIAL_FR (Flag Register) genannt). Ist darin das Bit 5 gesetzt, dann ist der Sendepuffer noch gefüllt und wir müssen zunächst warten, bis er leer ist: \<c\>typedef unsigned char uint8_t; typedef unsigned int uint32_t;
 
 1.  define SERIAL_DR \*((volatile uint8_t \*)0x16000000)
 2.  define SERIAL_FR \*((volatile uint32_t \*)0x16000018)

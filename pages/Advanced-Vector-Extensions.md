@@ -4,7 +4,7 @@
 
 ## Eigenschaften
 
-AVX ist eine Erweiterung von [SSE](Streaming-SIMD-Extensions "SSE"). Die Register von AVX sind 256-Bit gross und heissen YMM0 bis YMM15. Prozessoren, die AVX unterstützen führen SSE Befehle auf den unteren 128-Bit der AVX-Register aus. Zusätzlich führt AVX ein Drei-Operanden-SIMD-Befehlsformat ein (c := a + b). Das führt zu einer Optimierung der Abläufe, da das Quellregister nicht mehr überschrieben wird und somit allfällige Kopiervorgänge einspart. Drei-Operanden-SIMD-Befehle können nur mit AVX-Operanden (YMM) verwendet werden.
+AVX ist eine Erweiterung von [SSE](Streaming-SIMD-Extensions.md "SSE"). Die Register von AVX sind 256-Bit gross und heissen YMM0 bis YMM15. Prozessoren, die AVX unterstützen führen SSE Befehle auf den unteren 128-Bit der AVX-Register aus. Zusätzlich führt AVX ein Drei-Operanden-SIMD-Befehlsformat ein (c := a + b). Das führt zu einer Optimierung der Abläufe, da das Quellregister nicht mehr überschrieben wird und somit allfällige Kopiervorgänge einspart. Drei-Operanden-SIMD-Befehle können nur mit AVX-Operanden (YMM) verwendet werden.
 
 ## Anwendung
 
@@ -14,7 +14,7 @@ AVX ist eine Erweiterung von [SSE](Streaming-SIMD-Extensions "SSE"). Die Registe
 
 ## Unterstützung feststellen
 
-Die Unterstützung von AVX durch die CPU kann durch aufrufen der [CPUID Funktion 0x0000_0001](CPUID#funktion-0x0000_0001 "CPUID") und durch Prüfen des Bit 28 im Register ECX geprüft werden.
+Die Unterstützung von AVX durch die CPU kann durch aufrufen der [CPUID Funktion 0x0000_0001](CPUID.md#funktion-0x0000_0001 "CPUID") und durch Prüfen des Bit 28 im Register ECX geprüft werden.
 
 ## Register
 

@@ -1,6 +1,6 @@
 # SSE
 
-Weiterleitung: [Streaming SIMD Extensions](Streaming-SIMD-Extensions)
+Weiterleitung: [Streaming SIMD Extensions](Streaming-SIMD-Extensions.md)
 
 ---
 

@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | \- |
-| [Lizenz](Lizenzen "Lizenzen"): | MIT |
+| [Lizenz](Lizenzen.md "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Monolith |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") ([FASM](Flat-Assembler "FASM")) |
+| Plattform: | [i386](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Monolith |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler") ([FASM](Flat-Assembler.md "FASM")) |
 | API: | \- |
 | Binärformat: | \- |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 [Gitorious](http://gitorious.org/isynax)
@@ -24,7 +24,7 @@ Es gibt keine Prozesse, der gesamte Code läuft im Kernelmodus. Das Betriebssyst
 
 ## Features
 
-Bis jetzt gibt es eine Unterstützung für die [RTL8139](RTL8139 "RTL8139")-Netzwerkkarte, [ARP](Address-Resolution-Protocol "ARP"), [IP](Internet-Protocol "IP") und Minimalunterstützung für TCP.
+Bis jetzt gibt es eine Unterstützung für die [RTL8139](RTL8139.md "RTL8139")-Netzwerkkarte, [ARP](Address-Resolution-Protocol.md "ARP"), [IP](Internet-Protocol.md "IP") und Minimalunterstützung für TCP.
 
 ## Screenshot
 

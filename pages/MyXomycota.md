@@ -5,24 +5,24 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | 0.004 (pre-alpha) |
-| [Lizenz](Lizenzen "Lizenzen"): | Gnu [GPL](Lizenzen "GPL") / BSD ([CDI](Common-Driver-Interface "CDI")-Treiber) |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Gnu [GPL](Lizenzen.md "GPL") / BSD ([CDI](Common-Driver-Interface.md "CDI")-Treiber) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
-| API: | [Int 0x80](Syscall "Syscall") |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF"), [Shell](Shell "Shell")-Scripts |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Keine (bis jetzt) |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolithischer Kernel](Kernel.md#monolithischer-kernel "Monolithischer Kernel") mit Unterstützung für Userlandtreiber |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
+| API: | [Int 0x80](Syscall.md "Syscall") |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF"), [Shell](Shell.md "Shell")-Scripts |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Keine (bis jetzt) |
 | Homepage |  |
 
 [Sourceforge](http://sourceforge.net/projects/myxomycota)
 
   
-Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](Betriebssystem "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](Shell "Shell") verfügt.
+Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - das scheinen ziemlich kluge Dinger zu sein, auch wenn man es ihnen nicht zutraut. Es handelt sich bei diesem [Betriebssystem](Betriebssystem.md "Betriebssystem") um ein einfaches Hobbybetriebssystem, das im ProtectedMode läuft und über eine simple [Kommandozeile](Shell.md "Shell") verfügt.
 
-**HINWEIS:** Dieses Projekt wurde zugunsten von [Paloxena](Paloxena "Paloxena") auf unbestimmte Zeit verschoben. Ich konnte das ewige "Das ist kaputt." einfach nicht mehr ertragen. ;-)
+**HINWEIS:** Dieses Projekt wurde zugunsten von [Paloxena](Paloxena.md "Paloxena") auf unbestimmte Zeit verschoben. Ich konnte das ewige "Das ist kaputt." einfach nicht mehr ertragen. ;-)
 
-**This product includes software developed by the tyndur Project and its contributors.** ([CDI](Common-Driver-Interface "CDI")-Treiber)
+**This product includes software developed by the tyndur Project and its contributors.** ([CDI](Common-Driver-Interface.md "CDI")-Treiber)
 
 ## Entwickler
 
@@ -30,7 +30,7 @@ Der Name "MyXomycota" ist vom Namen der Schleimpilze (Myxomyceten) abgeleitet - 
 
 ## Das Mountsystem
 
-Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem [Kernel](Kernel "Kernel"), wenn sie nicht über [int](Interrupt "Interrupt") 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von [Dateisystemen](Dateisystem "Dateisystem") ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
+Herz des Systems sind das Mountsystem und das virtuelle Dateisystem. Dieses VFS läuft in einer zehn Megabyte großen RamDisk und sorgt für jegliche Kommunikation mit Geräten oder dem [Kernel](Kernel.md "Kernel"), wenn sie nicht über [int](Interrupt.md "Interrupt") 0x80 ablaufen muss. In ihm können hierzu virtuelle Dateien erstellt werden, die vom Mountsystem registriert werden. Solche Dateien können Geräte ("/dev/console", "/dev/pci/0-0-0", "/dev/audio"), Kommunikationskanäle zum Kernel ("/sys/mount") oder jegliche Art von [Dateisystemen](Dateisystem.md "Dateisystem") ("/proc", "/mnt/fda", "/mnt/addon", "/mnt/auto/hda1") sein. Ein Gerät wird im Kernel durch eine einfache Funktion repräsentiert, die ein paar Parameter bekommt (ID-Nummer, Position innerhalb der "Datei", Zugriffsart, Länge des Zugriffs, ...) und einen Wert zurückgeben kann. Eine Dateisystemfunktion erhält statt einer ID-Nummer das Handle der Datei, auf der sich das Dateisystem befindet. Daher kann man auch normale Dateien und nicht nur Gerätedateien mounten (z. B. "/dev/hda1" -\> "/mnt/auto/hda1", "/mnt/auto/hda1/floppy.img" -\> "/home", "/home/test.img" -\> "/tmp"; also auch über mehrere Dateisysteme hinweg). Wichtig ist, dass ein Dateisystem natürlich nicht wirklich physisch vorhanden sein muss: Von Relevanz ist lediglich, was die Funktion an das Mountsystem zurückgibt. Daher sind auch virtuelle Dateisysteme wie das procfs ("/proc") oder das pipefs ("/sys/pipe", noch in Arbeit) möglich. Das ProcFS beispielsweise zeigt Informationen zu allen Prozessen im System an, wobei pro Prozess eine Datei existiert. Die Informationen können mit dem Programm "top" ausgelesen werden.
 
 ### Zugriff auf Netzwerkfunktionen
 
@@ -62,14 +62,14 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Aktuelle Features
 
-- [Multibootkernel](Multiboot "Multiboot")
-- Präemptives [Multitasking](Multitasking "Multitasking")
-- Einfache StdCLib (myxlib) mit etwas [POSIX](POSIX "POSIX")
+- [Multibootkernel](Multiboot.md "Multiboot")
+- Präemptives [Multitasking](Multitasking.md "Multitasking")
+- Einfache StdCLib (myxlib) mit etwas [POSIX](POSIX.md "POSIX")
 - Dateisystem: SMXFFS (Small MyXomycota Floppy FS), experimentell FAT32 (beide read-only); MRFS als VFS
-- [AC'97](AC97 "AC97")-Treiber (zumindest ICH)
-- [Paging](Paging "Paging") (2 GB pro Prozess)
-- [ELF](Executable-and-Linking-Format "ELF")-Programme
-- [Netzwerkstack](Kategorie-Netzwerk "Kategorie:Netzwerk"): [Ethernet](Ethernet "Ethernet"), [ARP](Address-Resolution-Protocol "Address Resolution Protocol"), [IP](Internet-Protocol "Internet Protocol"), UDP, TCP
+- [AC'97](AC97.md "AC97")-Treiber (zumindest ICH)
+- [Paging](Paging.md "Paging") (2 GB pro Prozess)
+- [ELF](Executable-and-Linking-Format.md "ELF")-Programme
+- [Netzwerkstack](Kategorie-Netzwerk.md "Kategorie:Netzwerk"): [Ethernet](Ethernet.md "Ethernet"), [ARP](Address-Resolution-Protocol.md "Address Resolution Protocol"), [IP](Internet-Protocol.md "Internet Protocol"), UDP, TCP
 - CDI-Interfaces: core, fs, net, storage
 
 ## Wichtigste Programme
@@ -105,7 +105,7 @@ Hier kann man dann ebenso Daten empfangen ("fread") und senden ("fwrite") und na
 
 ## Syscalls (Auszug)
 
-[Syscalls](Syscall "Syscall") geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
+[Syscalls](Syscall.md "Syscall") geschehen über den Interrupt 0x80. Die Parameter werden in Registern übergeben, eax enthält die Funktionsnummer. An sich sind die Systemfunktionen für eine StdCLib und nicht für POSIX ausgelegt.
 
 | Nummer (eax) | Funktion | Beschreibung |
 | -------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

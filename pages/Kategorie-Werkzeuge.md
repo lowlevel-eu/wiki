@@ -8,23 +8,23 @@ Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie w
 
 ### Unterkategorien
 
-- [Compiler](Kategorie-Compiler)
-- [Emulator](Kategorie-Emulator)
-- [Versionsverwaltung](Kategorie-Versionsverwaltung)
+- [Compiler](Kategorie-Compiler.md)
+- [Emulator](Kategorie-Emulator.md)
+- [Versionsverwaltung](Kategorie-Versionsverwaltung.md)
 
 ### Seiten
 
-- [Bochs Debugger](Bochs-Debugger)
-- [Concurrent Versions System](Concurrent-Versions-System)
-- [Editor](Editor)
-- [Entwicklungsumgebung](Entwicklungsumgebung)
-- [Flat Assembler](Flat-Assembler)
-- [GDB](GDB)
-- [Linker](Linker)
-- [Netwide Assembler](Netwide-Assembler)
-- [Objdump](Objdump)
-- [Versionsverwaltung](Versionsverwaltung)
-- [Virtual Floppy Drive](Virtual-Floppy-Drive)
+- [Bochs Debugger](Bochs-Debugger.md)
+- [Concurrent Versions System](Concurrent-Versions-System.md)
+- [Editor](Editor.md)
+- [Entwicklungsumgebung](Entwicklungsumgebung.md)
+- [Flat Assembler](Flat-Assembler.md)
+- [GDB](GDB.md)
+- [Linker](Linker.md)
+- [Netwide Assembler](Netwide-Assembler.md)
+- [Objdump](Objdump.md)
+- [Versionsverwaltung](Versionsverwaltung.md)
+- [Virtual Floppy Drive](Virtual-Floppy-Drive.md)
 
 
 ---

@@ -1,6 +1,6 @@
 # LDT
 
-Weiterleitung: [Local Descriptor Table](Local-Descriptor-Table)
+Weiterleitung: [Local Descriptor Table](Local-Descriptor-Table.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # Peripheral Component Interconnect
 
-**Peripheral Component Interconnect** (kurz **PCI**) ist ein [Bus](Kategorie-Bus "Kategorie:Bus") zur leichten Verbindung von Peripheriegeräten mit der CPU.
+**Peripheral Component Interconnect** (kurz **PCI**) ist ein [Bus](Kategorie-Bus.md "Kategorie:Bus") zur leichten Verbindung von Peripheriegeräten mit der CPU.
 
 Die Informationen in diesem Artikel beziehen sich auch auf die vom klassischen PCI-Bus abgeleiteten Bus-Standards: PCI-Express, Hypertransport, PCI-X und AGP. Diese Busse basieren vom logischen Protokoll her auf PCI aber benutzen andere physikalische Daten-Übertragungsmechanismen bzw. andere Topologien.
 
@@ -49,7 +49,7 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 | 0x02 | CardBus-Bridge |
 
 - Der *Capabilities Pointer* zeigt, falls er gültig ist, auf die erste Capability-Struktur, welche der Start einer verketteten Liste ist. Für gültige Capabilities Pointer sind nur Werte von 0x40 bis 0xF0 erlaubt.
-- Im *Interrupt Pin*-Register wird angegeben, welches Interrupt-Pin das Gerät verwendet. 0x00 steht für kein Interrupt-Signal, trotzdem kann noch [MSI](Message-Signaled-Interrupt "MSI")(-X) benutzt werden. Die Werte 0x01 bis 0x04 stehen für \#INTA bis \#INTD, alle anderen Werte sind nicht erlaubt. Bei Singlefunction-Devices ist nur Pin \#INTA erlaubt. Bei Multifunction-Devices dürfen auch \#INTB bis \#INTD benutzt werden, es dürfen auch mehrere Funktionen in einem PCI-Gerät sich eine Interrupt-Leitung teilen.
+- Im *Interrupt Pin*-Register wird angegeben, welches Interrupt-Pin das Gerät verwendet. 0x00 steht für kein Interrupt-Signal, trotzdem kann noch [MSI](Message-Signaled-Interrupt.md "MSI")(-X) benutzt werden. Die Werte 0x01 bis 0x04 stehen für \#INTA bis \#INTD, alle anderen Werte sind nicht erlaubt. Bei Singlefunction-Devices ist nur Pin \#INTA erlaubt. Bei Multifunction-Devices dürfen auch \#INTB bis \#INTD benutzt werden, es dürfen auch mehrere Funktionen in einem PCI-Gerät sich eine Interrupt-Leitung teilen.
 - Im *Interrupt Line*-Register legt das BIOS die zugewiesene x86-Interrupt-Nummer ab, welche das \#INT?-Signal des betreffendem PCI-Geräts auslöst. Diese Info ist nur relevant wenn man die IRQs über den klassischen PIC vermitteln lässt, wenn die APICs benutzt werden ist diese Info unter Umständen nur noch von begrenztem Nutzen. Diese Info ist eine reine Freundlichkeit des BIOS der x86-Plattform, auf allen anderen Plattformen bleibt dieses Register leer. Dem PCI-Gerät ist der Wert in diesem Register egal und wird es auch nicht verändern. Falls das PCI-Gerät keine Interrupts benutzt, oder nur per MSI(-X) signalisiert, kann dieses Register auch fest auf 0x00 geklemmt sein.
 
 #### Header Type 0x00
@@ -93,7 +93,7 @@ Im Basis-Header sind die Bytes 0x000 &#150; 0x00F, 0x034, 0x03C und 0x03D für
 | Bit | Name | Typ | Bedeutung |
 | ------ | ---------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0 | Immediate Readiness | RO / fix | Wenn dieses Bit auf 1 gesetzt ist, bedeutet das, dass das betreffende PCI-Gerät sofort nach dem Reset Zugriffe auf den Konfigurationsadressraum korrekt verarbeitet. |
-| 3 | Interrupt Status | RO / dynamic | Wenn dieses Bit auf 1 gesetzt ist möchte das betreffende PCI-Gerät einen Interrupt über sein \#INT?-Signal melden. Nur wenn das Bit 10 im Command-Register gelöscht ist wird auch tatsächlich ein Interrupt (an den PIC o.ä.) signalisiert. Falls das PCI-Gerät keine Interrupts benutzt oder diese ausschließlich per [MSI](Message-Signaled-Interrupt "MSI")(-X) signalisiert kann dieses Bit fest auf 0 geklemmt sein. Auf Bridges meldet dieses Bit nur eigene Interrupts, durch geleitete Interrupts, von sekundären Bussen zum übergeordnetem Bus, beeinflussen dieses Bit nicht. |
+| 3 | Interrupt Status | RO / dynamic | Wenn dieses Bit auf 1 gesetzt ist möchte das betreffende PCI-Gerät einen Interrupt über sein \#INT?-Signal melden. Nur wenn das Bit 10 im Command-Register gelöscht ist wird auch tatsächlich ein Interrupt (an den PIC o.ä.) signalisiert. Falls das PCI-Gerät keine Interrupts benutzt oder diese ausschließlich per [MSI](Message-Signaled-Interrupt.md "MSI")(-X) signalisiert kann dieses Bit fest auf 0 geklemmt sein. Auf Bridges meldet dieses Bit nur eigene Interrupts, durch geleitete Interrupts, von sekundären Bussen zum übergeordnetem Bus, beeinflussen dieses Bit nicht. |
 | 4 | Capabilities List | RO / fix | Wenn dieses Bit auf 1 gesetzt ist ist der Capabilities-Pointer (Offset 0x034) gültig.<br>Bei PCI-Express, Hypertransport und PCI-X (und wahrscheinlich auch AGP) muss dieses Bit immer gesetzt sein da dort bus-spezifische Capabilities Pflicht sind. |
 | 5 | 66 MHz Capable | RO / fix | Dieses Bit gibt an ob eine PCI-Karte nicht nur mit maximal 33 MHz-Bus-Takt arbeiten kann sondern bis zu 66 MHz verträgt. Nur wenn alle PCI-Geräte auf dem betreffenden physischen PCI-Bus-Segment mit mehr als 33 MHz umgehen können darf dieses Bus-Segment auch mit mehr als 33 MHz, bis maximal 66 MHz, betrieben werden.<br>Dieses Bit ist nur beim klassischen PCI gültig und bei allen PCI-Nachfolgern immer fest auf 0 geklemmt, außer bei AGP dort ist es immer fest auf 1 geklemmt. Für die Software hat dieses Bit keine Bedeutung, auf dem PCI-Bus wird die Geschwindigkeit in Hardware ausgehandelt, wenn die Software auf den Konfigurations-Adressraum der angeschlossenen Geräte zugreifen kann ist der Bus bereits funktionsfähig. |
 | 7 | Fast Back-to-Back Transactions Capable | RO / fix | Wenn dieses Bit auf 1 gesetzt ist, bedeutet das, dass das betreffende PCI-Gerät die minimal schnelleren Back-to-Back Transfers unterstützt. Als Target werden diese Transfers immer unterstützt, aber als Master dürfen diese Transfers nur benutzt werden falls das Bit 9 im Command-Register gesetzt ist. |
@@ -113,7 +113,7 @@ Nicht beschriebene Bits sind reserviert und müssen beim Lesen ignoriert werden.
 | ----- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0 | IO Space | Nur wenn dieses Bit gesetzt ist, kann der I/O-Raum des Geräts verwendet werden, sonst ist er deaktiviert.<br>Falls das Gerät keine IO-Ports anbietet, ist dieses Bit fest auf 0 geklemmt.<br>Wenn dieses Bit bei Bridges auf 0 steht, wird damit das Durchleiten von I/O-Zugriffen vom primären zum sekundären Bus unterbunden. |
 | 1 | Memory Space | Nur wenn dieses Bit gesetzt ist, können MMIO-Register verwendet werden, sonst sind diese deaktiviert.<br>Falls das Gerät kein MMIO (oder andere Speicherbereiche) anbietet, ist dieses Bit fest auf 0 geklemmt.<br>Wenn dieses Bit bei Bridges auf 0 steht, wird damit das Durchleiten von Speicherzugriffen vom primären zum sekundären Bus unterbunden. |
-| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das ist z. B. für PCI-DMA notwendig (wird u. a. von Netzwerkkarten und (S)ATA-Host-Controllern verwendet).<br>Falls das Gerät nicht busmasterfähig ist, ist dieses Bit fest auf 0 geklemmt.<br>Wenn dieses Bit auf 0 steht, wird damit auch [MSI](Message-Signaled-Interrupt "MSI")(-X) und bei Bridges das Durchleiten von jeglichen Zugriffen vom sekundären zum primären Bus unterbunden. |
+| 2 | Bus Master | Ist dieses Bit gesetzt, so darf das Gerät als Busmaster auf dem PCI-Bus arbeiten. Das ist z. B. für PCI-DMA notwendig (wird u. a. von Netzwerkkarten und (S)ATA-Host-Controllern verwendet).<br>Falls das Gerät nicht busmasterfähig ist, ist dieses Bit fest auf 0 geklemmt.<br>Wenn dieses Bit auf 0 steht, wird damit auch [MSI](Message-Signaled-Interrupt.md "MSI")(-X) und bei Bridges das Durchleiten von jeglichen Zugriffen vom sekundären zum primären Bus unterbunden. |
 | 3 | Special Cycles | Wenn dieses Bit gelöscht ist, dann muss das Gerät alle Special Cycles auf dem PCI-Bus ignorieren. Special Cycles werden zum Broadcasten von speziellen Nachrichten an alle PCI-Geräte auf einem klassischen PCI-Bus benutzt. (mir ist keine reale Anwendung dieses Features bekannt)<br>Es gibt nur wenige PCI-Geräte, bei denen dieses Bit überhaupt beschreibbar ist, bei den meisten ist es fest auf 0 geklemmt. Bei PCI-Express ist es immer fest auf 0 geklemmt da PCI-Express keine Special Cycles unterstützt. |
 | 4 | Memory Write and Invalidate Enable | Falls gesetzt, kann das Gerät diesen Befehl (Memory Write and Invalidate) ausführen, sonst muss es sich mit einem einfachen Memory Write begnügen.<br>Bei PCI-Express ist dieses Bit immer fest auf 0 geklemmt. |
 | 5 | VGA Palette Snoop | Dieses Bit ist nur für VGA-kompatible Geräte interessant (ist es gesetzt, so werden Zugriffe auf die VGA-Palettenregister gesondert behandelt), auf allen anderen Geräten ist es immer fest auf 0 geklemmt.<br>Bei PCI-Express und Hypertransport ist dieses Bit immer fest auf 0 geklemmt, dort wird sowas in den Bridges konfiguriert. |
@@ -420,7 +420,7 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------- |
 | 0x00 | 0x00 | Alle nicht-VGA-Geräte |
-| 0x01 | 0x00 | [VGA](Video-Graphics-Array "Video Graphics Array")-Geräte |
+| 0x01 | 0x00 | [VGA](Video-Graphics-Array.md "Video Graphics Array")-Geräte |
 
 ### Class 0x01 - Massenspeicher
 
@@ -428,10 +428,10 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | ---------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 0x00 | SCSI |
 | 0x01 | 0x?? | IDE |
-| 0x02 | 0x00 | [Floppy](Floppy-Disk-Controller "Floppy Disk Controller") |
+| 0x02 | 0x00 | [Floppy](Floppy-Disk-Controller.md "Floppy Disk Controller") |
 | 0x03 | 0x00 | IPI |
 | 0x04 | 0x00 | RAID |
-| 0x05 | 0x20 | [ATA](AT-Attachment "AT Attachment")-Controller (Single [DMA](Direct-Memory-Access "Direct Memory Access")) |
+| 0x05 | 0x20 | [ATA](AT-Attachment.md "AT Attachment")-Controller (Single [DMA](Direct-Memory-Access.md "Direct Memory Access")) |
 | 0x05 | 0x30 | ATA-Controller (Chained DMA) |
 | 0x06 | 0x00 | SATA-Controller (Herstellerspezifische Schnittstelle) |
 | 0x06 | 0x01 | SATA-Controller (AHCI 1.0) |
@@ -441,11 +441,11 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | 0x08 | 0x02 | Non-Volatile-Memory - Enterprise-NVMHCI (NVM(-Express) Host-Controller) |
 | 0x80 | 0x00 | Anderer Massenspeicher |
 
-### Class 0x02 - [Netzwerk](Kategorie-Netzwerk "Kategorie:Netzwerk")-Controller
+### Class 0x02 - [Netzwerk](Kategorie-Netzwerk.md "Kategorie:Netzwerk")-Controller
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | -------------------------------------------------------------------------- |
-| 0x00 | 0x00 | [Ethernet](Ethernet "Ethernet") |
+| 0x00 | 0x00 | [Ethernet](Ethernet.md "Ethernet") |
 | 0x01 | 0x00 | Token Ring |
 | 0x02 | 0x00 | FDDI |
 | 0x03 | 0x00 | ATM |
@@ -531,10 +531,10 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 
 | Subclass | Programming Interface | Beschreibung |
 | ---------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0x00 | 0x00 | 8259- [PIC](Programmable-Interrupt-Controller "Programmable Interrupt Controller") |
+| 0x00 | 0x00 | 8259- [PIC](Programmable-Interrupt-Controller.md "Programmable Interrupt Controller") |
 | 0x00 | 0x01 | ISA-PIC |
 | 0x00 | 0x02 | EISA-PIC |
-| 0x00 | 0x10 | IO- [APIC](Advanced-Programmable-Interrupt-Controller "Advanced Programmable Interrupt Controller") |
+| 0x00 | 0x10 | IO- [APIC](Advanced-Programmable-Interrupt-Controller.md "Advanced Programmable Interrupt Controller") |
 | 0x00 | 0x20 | IOx-APIC |
 | 0x01 | 0x00 | 8237-DMA-Controller |
 | 0x01 | 0x01 | ISA-DMA-Controller |
@@ -543,7 +543,7 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | 0x02 | 0x01 | ISA-System-Timer |
 | 0x02 | 0x02 | EISA-System-Timer |
 | 0x02 | 0x03 | High Performance Event Timer |
-| 0x03 | 0x00 | Standard [Real Time Clock](Real-Time-Clock "Real Time Clock") |
+| 0x03 | 0x00 | Standard [Real Time Clock](Real-Time-Clock.md "Real Time Clock") |
 | 0x03 | 0x01 | ISA Real Time Clock |
 | 0x04 | 0x00 | generic PCI Hot Plug Controller (obsolete für PCI-Express) |
 | 0x05 | 0x00 | SD Host Controller |
@@ -559,7 +559,7 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | 0x01 | 0x00 | Digitizer (Stift) |
 | 0x02 | 0x00 | Maus |
 | 0x03 | 0x00 | Scanner |
-| 0x04 | 0x00 | Standard-[Gameport](Gameport "Gameport") |
+| 0x04 | 0x00 | Standard-[Gameport](Gameport.md "Gameport") |
 | 0x04 | 0x10 | Gameport |
 | 0x80 | 0x00 | Anderes Input-Gerät |
 
@@ -590,7 +590,7 @@ In den folgenden Tabellen nicht aufgeführte Kombinationen aus Subclass und Prog
 | 0x00 | 0x10 | Firewire (OHCI) |
 | 0x01 | 0x00 | ACCESS-Bus |
 | 0x02 | 0x00 | SSA (Serial Storage Architecture) |
-| 0x03 | 0x00 | [USB](Universal-Serial-Bus "Universal Serial Bus")-Host (UHCI) |
+| 0x03 | 0x00 | [USB](Universal-Serial-Bus.md "Universal Serial Bus")-Host (UHCI) |
 | 0x03 | 0x10 | USB-Host (OHCI) |
 | 0x03 | 0x20 | USB-Host (EHCI) |
 | 0x03 | 0x30 | USB-Host (xHCI) |

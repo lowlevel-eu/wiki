@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Das **Small Computer System Inferface**, oder kurz **SCSI** ist ein Schnittstellensystem für Peripheriegeräte. SCSI wurde zuletzt aufgrund der hohen Datenübertragungsrate und der Möglichkeit, mehr als zwei Geräre pro Controller (wie bei [ATA](AT-Attachment "ATA")) anschließen zu können vor allem im Server-Bereich verwendet, dort aber von Serial-Attached SCSI (SAS) verdrängt.
+Das **Small Computer System Inferface**, oder kurz **SCSI** ist ein Schnittstellensystem für Peripheriegeräte. SCSI wurde zuletzt aufgrund der hohen Datenübertragungsrate und der Möglichkeit, mehr als zwei Geräre pro Controller (wie bei [ATA](AT-Attachment.md "ATA")) anschließen zu können vor allem im Server-Bereich verwendet, dort aber von Serial-Attached SCSI (SAS) verdrängt.
 
 ## Geschichtliches
 

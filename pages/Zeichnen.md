@@ -1,6 +1,6 @@
 # Zeichnen
 
-Weiterleitung: [Grafikmodus](Grafikmodus)
+Weiterleitung: [Grafikmodus](Grafikmodus.md)
 
 ---
 

@@ -2,9 +2,9 @@
 
 |  |  |  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| « [ARM-OS-Dev Teil 2 – Assembler 101](ARM-OS-Dev-Teil-2-%E2%80%93-Assembler-101 "ARM-OS-Dev Teil 2 – Assembler 101") | **Navigation** | [ARM-OS-Dev Teil 4 – Hello World](ARM-OS-Dev-Teil-4-%E2%80%93-Hello-World "ARM-OS-Dev Teil 4 – Hello World") » |
+| « [ARM-OS-Dev Teil 2 – Assembler 101](ARM-OS-Dev-Teil-2-%E2%80%93-Assembler-101.md "ARM-OS-Dev Teil 2 – Assembler 101") | **Navigation** | [ARM-OS-Dev Teil 4 – Hello World](ARM-OS-Dev-Teil-4-%E2%80%93-Hello-World.md "ARM-OS-Dev Teil 4 – Hello World") » |
 
-Da dieser Teil an sich nichts mit der Architektur zu tun hat und nur die Zusammenhänge von Compiler, Assembler und Linker sowie den Aufbau von Programmen und Objektdateien erklären soll, sei hier voll und ganz auf die [x86-Reihe](Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") verwiesen, die all dies ausführlich am Beispiel von x86 erklärt. Außer den Maschinenbefehlen und Opcodes sowie der genauen Funktionsweise des Linuxsyscalls ändert sich bei ARM nichts.
+Da dieser Teil an sich nichts mit der Architektur zu tun hat und nur die Zusammenhänge von Compiler, Assembler und Linker sowie den Aufbau von Programmen und Objektdateien erklären soll, sei hier voll und ganz auf die [x86-Reihe](Teil-3-Trocken%C3%BCbungen.md "Teil 3 - Trockenübungen") verwiesen, die all dies ausführlich am Beispiel von x86 erklärt. Außer den Maschinenbefehlen und Opcodes sowie der genauen Funktionsweise des Linuxsyscalls ändert sich bei ARM nichts.
 
 ---
 

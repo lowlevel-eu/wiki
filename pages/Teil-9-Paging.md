@@ -2,13 +2,13 @@
 
 |  |  |  |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----- |
-| « [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm") | **Navigation** |  |
+| « [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm.md "Teil 8 - Ein erstes Programm") | **Navigation** |  |
 
   
 
 ## Ziel
 
-Ein einzelnes Programm funktioniert nach dem letzten Teil, aber zwei Programme können sich ins Gehege kommen, weil sie denselben Speicher benutzen - wir brauchen noch irgendeinen Mechanismus, um sie voneinander zu trennen: Virtuellen Speicher, den wir über [Paging](Paging "Paging") umsetzen werden.
+Ein einzelnes Programm funktioniert nach dem letzten Teil, aber zwei Programme können sich ins Gehege kommen, weil sie denselben Speicher benutzen - wir brauchen noch irgendeinen Mechanismus, um sie voneinander zu trennen: Virtuellen Speicher, den wir über [Paging](Paging.md "Paging") umsetzen werden.
 
 ## Tasks im Konflikt
 
@@ -54,14 +54,14 @@ Für die erste Variante gibt es zum Beispiel folgende Möglichkeiten ein, das um
 
 Die letzten beiden Punkte können beispielsweise sinnvolle Optionen sein, wenn man für Hardware ohne MMU programmiert. Auf x86 haben wir allerdings glücklicherweise Hardwareunterstützung und können die zweite Variante wählen: Das Programm sieht zwar eine bestimmte Adresse, aber diese Adresse muss nicht zwingend etwas mit der Adresse im physischen RAM zu tun haben, sondern kann ganz woanders hinzeigen. Die beiden Optionen, um dies umzusetzen, sind:
 
-- Segmentierung: In der [GDT](Global-Descriptor-Table "GDT") und/oder [LDT](Local-Descriptor-Table "LDT") werden zusätzliche Segmente angelegt - eins für jedes Programm. Während wir bisher Segmente mit Basis 0 und Limit 4 GB benutzen, würde man dann Segmente mit anderer Basis und anderem Limit benutzen. Das erste Programm könnte z.B. Basis 0x10000000 und das zweite Basis 0x20000000 bekommen. Wenn Programm eins jetzt auf seine *virtuelle Adresse* 0x200000 zugreift, ist das in Wirklichkeit die *physische Adresse* 0x12000000. Das Limit wird entsprechend gesetzt, damit ein Programm keinen Zugriff auf den Speicher anderer Prozesse (oder des Kernels) hat.
-- [Paging](Paging "Paging"): Der komplette Speicher wird in *Seiten* (z.B. von 4 Kilobytes Größe) eingeteilt. Jeder Seite im *virtuellen Speicher* wird individuell eine entsprechende Seite im *physischen Speicher* zugeordnet. Vorteil gegenüber Segmentierung ist, dass ein einzelnes Segment immer noch am Stück im physischen Speicher liegen muss. Beim Paging kann ein virtuell zusammenhängender Bereich dagegen physisch beliebig verteilt sein. Dadurch wird beispielsweise Speicherfragmentierung vermieden und es ist leichter, die zugeteilte Speichergröße nachträglich zu erhöhen.
+- Segmentierung: In der [GDT](Global-Descriptor-Table.md "GDT") und/oder [LDT](Local-Descriptor-Table.md "LDT") werden zusätzliche Segmente angelegt - eins für jedes Programm. Während wir bisher Segmente mit Basis 0 und Limit 4 GB benutzen, würde man dann Segmente mit anderer Basis und anderem Limit benutzen. Das erste Programm könnte z.B. Basis 0x10000000 und das zweite Basis 0x20000000 bekommen. Wenn Programm eins jetzt auf seine *virtuelle Adresse* 0x200000 zugreift, ist das in Wirklichkeit die *physische Adresse* 0x12000000. Das Limit wird entsprechend gesetzt, damit ein Programm keinen Zugriff auf den Speicher anderer Prozesse (oder des Kernels) hat.
+- [Paging](Paging.md "Paging"): Der komplette Speicher wird in *Seiten* (z.B. von 4 Kilobytes Größe) eingeteilt. Jeder Seite im *virtuellen Speicher* wird individuell eine entsprechende Seite im *physischen Speicher* zugeordnet. Vorteil gegenüber Segmentierung ist, dass ein einzelnes Segment immer noch am Stück im physischen Speicher liegen muss. Beim Paging kann ein virtuell zusammenhängender Bereich dagegen physisch beliebig verteilt sein. Dadurch wird beispielsweise Speicherfragmentierung vermieden und es ist leichter, die zugeteilte Speichergröße nachträglich zu erhöhen.
 
 Virtueller Speicher bringt ganz nebenbei auch noch ein paar andere Vorteile mit sich: Erst dadurch werden Dinge wie Swapping oder Copy on Write möglich.
 
 Wegen der erwähnten Flexibilität habe ich (wie die meisten anderen Betriebssysteme) Paging ausgewählt, um in unserem Kernel virtuellen Speicher umzusetzen.
 
-Wenn man besonders abenteuerlustig ist, kann man übrigens Paging und Segmentierung auch gleichzeitig benutzen (tatsächlich gibt es in kleinem Umfang keinen Weg darum herum, wenn man Paging benutzt: Ein [TSS](Task-State-Segment "TSS") braucht jeder, und das ist ein Segment mit echter Basis und Limit). Für diesen Fall sollte man sich die Reihenfolge merken, in der eine vom Code benutzte virtuelle Adresse umgesetzt wird:
+Wenn man besonders abenteuerlustig ist, kann man übrigens Paging und Segmentierung auch gleichzeitig benutzen (tatsächlich gibt es in kleinem Umfang keinen Weg darum herum, wenn man Paging benutzt: Ein [TSS](Task-State-Segment.md "TSS") braucht jeder, und das ist ein Segment mit echter Basis und Limit). Für diesen Fall sollte man sich die Reihenfolge merken, in der eine vom Code benutzte virtuelle Adresse umgesetzt wird:
 
 - Zuerst übersetzt die Segmentierung die *virtuelle* in eine *lineare Adresse*
 - Dann übersetzt Paging die *lineare Adresse* in eine *physische Adresse*
@@ -124,7 +124,7 @@ Der Rest ist einfach: Beim Versuch, einen Page Fault auszulösen, ist der Zugrif
 
 ## Page Directory und Page Tables
 
-Bevor wir Paging anschalten, müssen wir dem Prozessor also erst einmal mitteilen wie unser virtueller Adressraum aussehen soll. Das Prinzip von Paging ist einfach: Wie oben erwähnt wird der gesamte Speicher in Pages von 4k Größe eingeteilt. Wir müssen im Prinzip nur noch in eine große Tabelle eintragen, welche physische Adresse gemeint ist, wenn eine bestimmte virtuelle Adresse angesprochen wird (siehe [Paging#Funktionsweise](Paging#funktionsweise "Paging")).
+Bevor wir Paging anschalten, müssen wir dem Prozessor also erst einmal mitteilen wie unser virtueller Adressraum aussehen soll. Das Prinzip von Paging ist einfach: Wie oben erwähnt wird der gesamte Speicher in Pages von 4k Größe eingeteilt. Wir müssen im Prinzip nur noch in eine große Tabelle eintragen, welche physische Adresse gemeint ist, wenn eine bestimmte virtuelle Adresse angesprochen wird (siehe [Paging#Funktionsweise](Paging.md#funktionsweise "Paging")).
 
 Weil eine einzige große Tabelle aber in der Regel zu viel Speicher verschwenden würde, wird auf i386 aber ein zweistufiges System eingesetzt: Blöcke von jeweils 1024 Pages (also 4 MB) werden in einer *Page Table* beschrieben. Das *Page Directory* enthält dann Verweise auf die einzelnen Page Tables. Wenn eine Page Table nicht benötigt wird, kann sie im Page Directory einfach weggelassen werden (z.B. 0 als Eintrag) und wir haben 4k Speicher gespart.
 
@@ -302,7 +302,7 @@ Nachdem alle Mappings korrekt aufgesetzt sind und das aktuelle Page Directory be
 
 |  |  |  |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----- |
-| « [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm") | **Navigation** |  |
+| « [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm.md "Teil 8 - Ein erstes Programm") | **Navigation** |  |
 
 ---
 

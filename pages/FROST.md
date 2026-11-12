@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | TheThing aka Thrimbor |
 | Akt. Version: | V2 alpha |
-| [Lizenz](Lizenzen "Lizenzen"): | GNU GPL 3 |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GNU GPL 3 |
 | OS-Eigenschaften |  |
-| Plattform: | [i486](X86 "X86") oder höher |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [FreeBASIC](FreeBASIC "FreeBASIC") und [Assembler](Assembler "Assembler") |
+| Plattform: | [i486](X86.md "X86") oder höher |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [FreeBASIC](FreeBASIC.md "FreeBASIC") und [Assembler](Assembler.md "Assembler") |
 | API: | nativ |
 | Binärformat: | ELF |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 [github-Seite](https://github.com/thrimbor/frost)

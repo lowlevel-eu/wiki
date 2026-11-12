@@ -11,14 +11,14 @@ Recht interessantes Projekt, aber keine Homepage, letzter Page-Edit aus 2008, ke
 |  |  |
 | Entwickler: | [Nooooooooos](https://lowlevel-eu.github.io/wiki/pages/1457/index.html "Benutzer:Nooooooooos") |
 | Akt. Version: | momentan keine |
-| [Lizenz](Lizenzen "Lizenzen"): | momentan keine |
+| [Lizenz](Lizenzen.md "Lizenzen"): | momentan keine |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembler |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | Assembler |
 | API: | Zugriff auf laufenden Module |
 | Binärformat: | eigenes |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing, Shared Memory |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Message Passing, Shared Memory |
 | Homepage |  |
 
 momentan keine
@@ -49,17 +49,17 @@ Die Sourcen des Kernels und der inneren Module meines Systemes werden sobald sie
 
 Ich hoffe demnächst ein erstes Release vorstellen zu können. Dieses wird in etwa die folgenden "Features" beinhalten:
 
-- den vollständigen TriviaOS-[Kernel](Kernel "Kernel")1.0 mit funktionierendem [IPC](Interprozesskommunikation "IPC")
-- [SMP](Symmetrisches-Multiprozessorsystem "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen ---\> vollständig implementiert
+- den vollständigen TriviaOS-[Kernel](Kernel.md "Kernel")1.0 mit funktionierendem [IPC](Interprozesskommunikation.md "IPC")
+- [SMP](Symmetrisches-Multiprozessorsystem.md "SMP")-Unterstützung für MultiProcessor, MultiCore und MultiThreading über ACPI und MPS Tabellen ---\> vollständig implementiert
 - Task und Speicherverwaltung
-- [Dateisystemtreiber](Dateisystem "Dateisystem")
+- [Dateisystemtreiber](Dateisystem.md "Dateisystem")
 - Diskettentreiber
-- [Tastaturtreiber](Tastatur "Tastatur")
-- [Vesatreiber](Video-Electronics-Standards-Association "Vesa")
-- einfache [GUI](Graphical-User-Interface "GUI")
-- [Maustreiber](Maus "Maus")
+- [Tastaturtreiber](Tastatur.md "Tastatur")
+- [Vesatreiber](Video-Electronics-Standards-Association.md "Vesa")
+- einfache [GUI](Graphical-User-Interface.md "GUI")
+- [Maustreiber](Maus.md "Maus")
 - Test-Tool
-- Dokumentation der [IPC](Interprozesskommunikation "IPC") und der Ansprechung der ersten [Treibermodule](Treiber "Treiber")
+- Dokumentation der [IPC](Interprozesskommunikation.md "IPC") und der Ansprechung der ersten [Treibermodule](Treiber.md "Treiber")
 
 Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
@@ -67,12 +67,12 @@ Somit wäre es ab diesem Release möglich Software für TriviaOS zu entwickeln.
 
 Das nächste Release wird in etwa die folgenden Features beinhalten:
 
-- vollständige [GUI](Graphical-User-Interface "GUI") mit allen geplanten Grafik-Elementen
+- vollständige [GUI](Graphical-User-Interface.md "GUI") mit allen geplanten Grafik-Elementen
 - Fesplattenfähigkeit
 - CD Unterstützung
 - getrennte OS-Initialisierung durch BIOS- oder EFI-Funktionen
 - Prozessverwaltung
-- I/O-Verwaltung mit [APIC](Advanced-Programmable-Interrupt-Controller "APIC") und IO-Permission-Map Unterstützung
+- I/O-Verwaltung mit [APIC](Advanced-Programmable-Interrupt-Controller.md "APIC") und IO-Permission-Map Unterstützung
 - differenzierteres Exception Handling
 
 ---

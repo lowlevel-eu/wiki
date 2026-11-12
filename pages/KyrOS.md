@@ -11,14 +11,14 @@ Keine Homepage, keine Download-Möglichkeit, keine sichtbare Aktivität --[DerHa
 |  |  |
 | Entwickler: | GE |
 | Akt. Version: | 0.0.2 (Phobos) |
-| [Lizenz](Lizenzen "Lizenzen"): | Closed Source |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Closed Source |
 | OS-Eigenschaften |  |
-| Plattform: | [x86-64](X86-64 "X86-64") |
-| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") & [C](C "C") |
+| Plattform: | [x86-64](X86-64.md "X86-64") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolithischer Kernel](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [ASM](Assembler.md "Assembler") & [C](C.md "C") |
 | API: | KyrAPI |
 | Binärformat: | ELF |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 KyrOS ist ein kleines Hobby-OS, das von mir (GE) entwickelt wird. Da ich nicht viel Zeit habe, schreitet die Entwicklung sehr langsam voran. Es gibt im Moment noch keine Homepage, da keine benötigt wird. Die Uhrzeit kann man auch anderswo sehen.

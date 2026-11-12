@@ -5,25 +5,25 @@
 | [<img src="assets/Infortus.png" width="256" height="256" alt="Infortus.png" />](assets/Infortus.png) |  |
 | Entwickler: | Sebi2020 |
 | Akt. Version: | 0.0.09 prealpha |
-| [Lizenz](Lizenzen "Lizenzen"): | [GPL](Lizenzen "GPL") |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [GPL](Lizenzen.md "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Makrokernel](Kernel#makrokernel "Makrokernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") [Assembler](Assembler "Assembler") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Makrokernel](Kernel.md#makrokernel "Makrokernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") [Assembler](Assembler.md "Assembler") |
 | API: | \- |
 | Binärformat: |  |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 <http://infortus-os.sourceforge.net/>
 
-Infortus ist mein Betriebssystem (abgeleitet von [Informatikonline.net](http://www.Informatikonline.net)). Es baut auf einen [Makrokernel](Kernel#makrokernel "Makrokernel") auf und ist weitgehend in C geschrieben. Spezielle Aufgaben sind in Assembly ausgelagert worden (unter anderem bestimmte Treiber.). Es ist für x86 Systeme (also 32Bit) ausgelegt. Es arbeitet mit dem [Elf](Executable-and-Linking-Format "ELF32") Datei-Format.
+Infortus ist mein Betriebssystem (abgeleitet von [Informatikonline.net](http://www.Informatikonline.net)). Es baut auf einen [Makrokernel](Kernel.md#makrokernel "Makrokernel") auf und ist weitgehend in C geschrieben. Spezielle Aufgaben sind in Assembly ausgelagert worden (unter anderem bestimmte Treiber.). Es ist für x86 Systeme (also 32Bit) ausgelegt. Es arbeitet mit dem [Elf](Executable-and-Linking-Format.md "ELF32") Datei-Format.
 
 ## Planung
 
 Erstes Minor Release (0.1.0) 2010 - 2011
 
-Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660](ISO9660 "ISO9660")-Unterstützung Implementiert zu haben.
+Bis dahin Hoffe ich Keyboard-Treiber und eventuell einen CD-Treiber mit [ISO9660](ISO9660.md "ISO9660")-Unterstützung Implementiert zu haben.
 
 ## Phase
 

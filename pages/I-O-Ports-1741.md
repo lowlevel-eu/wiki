@@ -1,6 +1,6 @@
 # I/O-Ports
 
-Weiterleitung: [I/O Ports](I-O-Ports)
+Weiterleitung: [I/O Ports](I-O-Ports.md)
 
 ---
 

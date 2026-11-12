@@ -1,6 +1,6 @@
 # LBA
 
-Weiterleitung: [Logical Block Addressing](Logical-Block-Addressing)
+Weiterleitung: [Logical Block Addressing](Logical-Block-Addressing.md)
 
 ---
 

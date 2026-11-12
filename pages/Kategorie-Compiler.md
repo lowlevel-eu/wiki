@@ -6,16 +6,16 @@
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Software](Kategorie-Software) · [Werkzeuge](Kategorie-Werkzeuge)
+Übergeordnete Kategorien: [Software](Kategorie-Software.md) · [Werkzeuge](Kategorie-Werkzeuge.md)
 
 ### Seiten
 
-- [ARM Cross-Compiler](ARM-Cross-Compiler)
-- [Clang](Clang)
-- [Cross-Compiler](Cross-Compiler)
-- [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows)
-- [GNU Compiler Collection](GNU-Compiler-Collection)
-- [X86-64 Cross-Compiler](X86-64-Cross-Compiler)
+- [ARM Cross-Compiler](ARM-Cross-Compiler.md)
+- [Clang](Clang.md)
+- [Cross-Compiler](Cross-Compiler.md)
+- [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows.md)
+- [GNU Compiler Collection](GNU-Compiler-Collection.md)
+- [X86-64 Cross-Compiler](X86-64-Cross-Compiler.md)
 
 
 ---

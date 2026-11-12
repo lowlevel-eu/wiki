@@ -1,6 +1,6 @@
 # SMP
 
-Weiterleitung: [Symmetrisches Multiprozessorsystem](Symmetrisches-Multiprozessorsystem)
+Weiterleitung: [Symmetrisches Multiprozessorsystem](Symmetrisches-Multiprozessorsystem.md)
 
 ---
 

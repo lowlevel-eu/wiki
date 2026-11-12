@@ -2,7 +2,7 @@
 
 ### menu.lst
 
-Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand in [GRUB](Grand-Unified-Bootloader "GRUB") einzugeben. Ein schönes Bootmenü mit genau einem Eintrag, der nach einer Sekunde automatisch gebootet wird, erhält man, wenn man eine neue Datei namens grub/menu.lst mit folgendem Inhalt auf dem Image anlegt:
+Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand in [GRUB](Grand-Unified-Bootloader.md "GRUB") einzugeben. Ein schönes Bootmenü mit genau einem Eintrag, der nach einer Sekunde automatisch gebootet wird, erhält man, wenn man eine neue Datei namens grub/menu.lst mit folgendem Inhalt auf dem Image anlegt:
 
     timeout 1
 
@@ -11,7 +11,7 @@ Mit der Zeit dürfte es lästig werden, bei jedem Testboot die Befehle von Hand 
 
 ### Ein Update-Skript
 
-Ich persönlich benutze ein Shellskript, um den jeweils neuesten [Kernel](Kernel "Kernel") bequem auf das Image zu kopieren. Damit spare ich mir das Eintippen eines langen mount-Befehls, eines ebenso langen cp-Befehls und die Eingabe des Root-Passworts.
+Ich persönlich benutze ein Shellskript, um den jeweils neuesten [Kernel](Kernel.md "Kernel") bequem auf das Image zu kopieren. Damit spare ich mir das Eintippen eines langen mount-Befehls, eines ebenso langen cp-Befehls und die Eingabe des Root-Passworts.
 
 Zunächst muß das Image in die /etc/fstab eingetragen sein. Dazu ist eine Zeile wie die folgende einzutragen:
 

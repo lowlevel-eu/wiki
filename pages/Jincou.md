@@ -1,6 +1,6 @@
 # Jincou
 
-Weiterleitung: [SIMPLE](SIMPLE)
+Weiterleitung: [SIMPLE](SIMPLE.md)
 
 ---
 

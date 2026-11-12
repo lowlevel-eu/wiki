@@ -4,9 +4,9 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Mit einem **M**essage **S**ignaled **I**nterrupt kann ein Hardware-Gerät dem System einen [Interrupt](Interrupt "Interrupt") melden, ohne dafür eine spezielle Leitung zu benötigen; der Interrupt wird als Nachricht über den normalen Bus zum Interrupt-Controller geschickt. Neben der Ersparnis von Leitungen hat das vor allem den Vorteil, dass viel mehr verschiedene Interrupts möglich sind, weil so eine Nachricht einen Interrupt-Vector mit mehreren Bits (typisch 16 oder 32 Bits) aufnehmen kann.
+Mit einem **M**essage **S**ignaled **I**nterrupt kann ein Hardware-Gerät dem System einen [Interrupt](Interrupt.md "Interrupt") melden, ohne dafür eine spezielle Leitung zu benötigen; der Interrupt wird als Nachricht über den normalen Bus zum Interrupt-Controller geschickt. Neben der Ersparnis von Leitungen hat das vor allem den Vorteil, dass viel mehr verschiedene Interrupts möglich sind, weil so eine Nachricht einen Interrupt-Vector mit mehreren Bits (typisch 16 oder 32 Bits) aufnehmen kann.
 
-Das einzige aktuelle Bussystem, das Message Signaled Interrupts bietet, ist [PCI](Peripheral-Component-Interconnect "PCI") und seine Verwandten bzw. Nachfolger. Auf dem PC sind Message Signaled Interrupts nur nutzbar, wenn man die [APICs](Advanced-Programmable-Interrupt-Controller "APIC") benutzt.
+Das einzige aktuelle Bussystem, das Message Signaled Interrupts bietet, ist [PCI](Peripheral-Component-Interconnect.md "PCI") und seine Verwandten bzw. Nachfolger. Auf dem PC sind Message Signaled Interrupts nur nutzbar, wenn man die [APICs](Advanced-Programmable-Interrupt-Controller.md "APIC") benutzt.
 
 ## Message Signaled Interrupts bei PCI
 
@@ -16,8 +16,8 @@ Einen speziellen Vorteil bieten die Message Signaled Interrupts bei PCI im Zusam
 
 ## Siehe auch
 
-- [Interrupt](Interrupt "Interrupt")
-- [APIC](Advanced-Programmable-Interrupt-Controller "APIC")
+- [Interrupt](Interrupt.md "Interrupt")
+- [APIC](Advanced-Programmable-Interrupt-Controller.md "APIC")
 
 ## Weblinks
 

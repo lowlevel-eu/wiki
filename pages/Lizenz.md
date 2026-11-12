@@ -1,6 +1,6 @@
 # Lizenz
 
-Weiterleitung: [Lizenzen](Lizenzen)
+Weiterleitung: [Lizenzen](Lizenzen.md)
 
 ---
 

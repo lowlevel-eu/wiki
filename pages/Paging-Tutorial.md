@@ -1,10 +1,10 @@
 # Paging Tutorial
 
-Willkommen zu meinem zweiten Tutorial hier auf lowlevel. Diesmal geht es um [Paging](Paging "Paging"), einem [Protected-Mode](Protected-Mode "Protected Mode") Feature, das mit dem 80386 eingeführt und im 80486 verbessert wurde.
+Willkommen zu meinem zweiten Tutorial hier auf lowlevel. Diesmal geht es um [Paging](Paging.md "Paging"), einem [Protected-Mode](Protected-Mode.md "Protected Mode") Feature, das mit dem 80386 eingeführt und im 80486 verbessert wurde.
 
 ## Was ist Paging?
 
-Wenn ihr einen [Kernel](Kernel "Kernel") schreibt, habt ihr mit Sicherheit schon Einträge in der [GDT](Global-Descriptor-Table "Global Descriptor Table") gemacht. Dort konnte man Segmente festlegen, und hatte so schon ein wenig Speicherschutz. Allerdings hat das ganze auch noch einige Nachteile, weshalb schlaue Leute bei Intel Paging einführten. Bei Paging bekommen die Programme virtuellen Arbeitsspeicher (4 GB), der in 4kb-Blöcken mittels Tabellen verwaltet wird. Wenn Paging eingeschaltet wurde, kann jeder Task seinen eigenen Adressraum haben, und kann auch nur auf seinen eigenen zugreifen. Das interessante an Paging ist, dass der virtuelle Adressraum nicht komplett im physischen Speicher liegen muss, ungenutzte Teile können auf die Festplatte ausgelagert werden (swapping).
+Wenn ihr einen [Kernel](Kernel.md "Kernel") schreibt, habt ihr mit Sicherheit schon Einträge in der [GDT](Global-Descriptor-Table.md "Global Descriptor Table") gemacht. Dort konnte man Segmente festlegen, und hatte so schon ein wenig Speicherschutz. Allerdings hat das ganze auch noch einige Nachteile, weshalb schlaue Leute bei Intel Paging einführten. Bei Paging bekommen die Programme virtuellen Arbeitsspeicher (4 GB), der in 4kb-Blöcken mittels Tabellen verwaltet wird. Wenn Paging eingeschaltet wurde, kann jeder Task seinen eigenen Adressraum haben, und kann auch nur auf seinen eigenen zugreifen. Das interessante an Paging ist, dass der virtuelle Adressraum nicht komplett im physischen Speicher liegen muss, ungenutzte Teile können auf die Festplatte ausgelagert werden (swapping).
 
 Die bereits erwähnten Tabellen heißen Page-Directory und Page-Table. Das Page-Directory enthält 1024 Einträge zu je 4 Byte (also 4kb), jeder Eintrag verweist auf eine Page-Table, die auch 1024 Einträge zu je 4 Byte hat (alle Page-Tables zusammen haben 4MB!). Die Einträge der Page-Table verweisen dann auf 4kb große Blöcke im physischen Speicher.
 
@@ -45,7 +45,7 @@ Auch beim Paging sollte man erst einmal genau darüber nachdenken, bevor man den
 <!-- -->
 
 - Page-Directory-Adresse setzen
-  - Eine sehr kleine Routine, die die Adresse des Page-Directory ins [Register](Control-Register "Control Register") cr3 einträgt, damit die CPU weiß, wo unser Page-Directory liegt
+  - Eine sehr kleine Routine, die die Adresse des Page-Directory ins [Register](Control-Register.md "Control Register") cr3 einträgt, damit die CPU weiß, wo unser Page-Directory liegt
 
 <!-- -->
 
@@ -169,7 +169,7 @@ Hier holen wir den Inhalt von cr0 nach eax, setzen das Paging-Bit und schreiben 
 
 ## Ein sehr kleines Beispiel
 
-Als Beispiel zeige ich hier einen Auszug aus meinem Kernel [FROST](FROST "FROST"):
+Als Beispiel zeige ich hier einen Auszug aus meinem Kernel [FROST](FROST.md "FROST"):
 
 \<freebasic\>
 

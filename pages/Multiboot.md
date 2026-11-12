@@ -1,6 +1,6 @@
 # Multiboot
 
-Die *Multiboot-Spezifikation* ist ein Standard, um Betriebssystemen eine einheitliche Startumgebung zu gewährleisten. Die Spezifikation definiert die Anforderungen an ein Betriebssystem, damit es von konformen Bootloadern geladen werden kann und legt fest, wie Informationen über das System beim Start bereitgestellt werden. Ein bekannter Bootloader ist [GRUB](Grand-Unified-Bootloader "GRUB"). Daneben gibt es noch [SYSLINUX](SYSLINUX "SYSLINUX"), das ein Modul liefert, um konforme Kernels zu laden. Außerdem ist es möglich in [QEMU](QEMU "QEMU") einen Multiboot-konformen Kernel direkt zu starten, ohne dass die Erstellung eines (Disketten/Festplatten/CD-)Images notwendig ist.
+Die *Multiboot-Spezifikation* ist ein Standard, um Betriebssystemen eine einheitliche Startumgebung zu gewährleisten. Die Spezifikation definiert die Anforderungen an ein Betriebssystem, damit es von konformen Bootloadern geladen werden kann und legt fest, wie Informationen über das System beim Start bereitgestellt werden. Ein bekannter Bootloader ist [GRUB](Grand-Unified-Bootloader.md "GRUB"). Daneben gibt es noch [SYSLINUX](SYSLINUX.md "SYSLINUX"), das ein Modul liefert, um konforme Kernels zu laden. Außerdem ist es möglich in [QEMU](QEMU.md "QEMU") einen Multiboot-konformen Kernel direkt zu starten, ohne dass die Erstellung eines (Disketten/Festplatten/CD-)Images notwendig ist.
 
 ## Ausgangsstatus
 
@@ -134,7 +134,7 @@ Wenn Bit 4 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offse
 | 0x24 | 4 | addr | Pointer zur Sektionstabelle |
 | 0x28 | 4 | reserved | Reserviert (0) |
 
-Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Sektionstabelle einer [ELF](Executable-and-Linking-Format "ELF")-Datei.
+Wenn Bit 5 in [mbs_flags](#mbs_flags) gesetzt ist, liegt diese Struktur am Offset 0x1C und enthält Informationen zur Sektionstabelle einer [ELF](Executable-and-Linking-Format.md "ELF")-Datei.
 
 | Offset | Größe | Name | Beschreibung |
 | -------- | ------- | ------- | ---------------------------------------------------- |
@@ -172,11 +172,11 @@ Pointer zur ersten Drive-Struktur. Eine Drive-Struktur sieht folgendermaßen aus
 | -------- | ----------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00 | 4 | size | Größe dieser Drive-Struktur |
 | 0x04 | 1 | driver_number | BIOS-Driver-Number |
-| 0x05 | 1 | drive_mode | 0 = [CHS](Cylinder-Head-Sector "CHS")<br>1 = [LBA](Logical-Block-Addressing "LBA") |
+| 0x05 | 1 | drive_mode | 0 = [CHS](Cylinder-Head-Sector.md "CHS")<br>1 = [LBA](Logical-Block-Addressing.md "LBA") |
 | 0x06 | 2 | drive_cylinders | Anzahl an Zylinder, die das Gerät hat |
 | 0x08 | 1 | drive_heads | Anzahl an Köpfe, die das Gerät hat |
 | 0x09 | 1 | drive_sectors | Anzahl an Sektoren pro Spur, die das Gerät hat |
-| 0x10 | size-0x10 | drive_ports | [I/O-Ports](I-O-Ports "I/O-Ports"), die von diesem Gerät benutzt werden |
+| 0x10 | size-0x10 | drive_ports | [I/O-Ports](I-O-Ports.md "I/O-Ports"), die von diesem Gerät benutzt werden |
 
 ### mbs_config_table
 

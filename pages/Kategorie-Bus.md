@@ -6,14 +6,14 @@ Alle Formen von Bussen gehören hier rein.
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Hardware](Kategorie-Hardware)
+Übergeordnete Kategorien: [Hardware](Kategorie-Hardware.md)
 
 ### Seiten
 
-- [Accelerated Graphics Port](Accelerated-Graphics-Port)
-- [Industry Standard Architecture](Industry-Standard-Architecture)
-- [Peripheral Component Interconnect](Peripheral-Component-Interconnect)
-- [Universal Serial Bus](Universal-Serial-Bus)
+- [Accelerated Graphics Port](Accelerated-Graphics-Port.md)
+- [Industry Standard Architecture](Industry-Standard-Architecture.md)
+- [Peripheral Component Interconnect](Peripheral-Component-Interconnect.md)
+- [Universal Serial Bus](Universal-Serial-Bus.md)
 
 
 ---

@@ -1,6 +1,6 @@
 # BCD
 
-Weiterleitung: [Binary Coded Decimal](Binary-Coded-Decimal)
+Weiterleitung: [Binary Coded Decimal](Binary-Coded-Decimal.md)
 
 ---
 

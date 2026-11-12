@@ -1,6 +1,6 @@
 # AGP
 
-Weiterleitung: [Accelerated Graphics Port](Accelerated-Graphics-Port)
+Weiterleitung: [Accelerated Graphics Port](Accelerated-Graphics-Port.md)
 
 ---
 

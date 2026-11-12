@@ -1,6 +1,6 @@
 # Power On Self-Test
 
-Der POST (**P**ower **O**n **S**elf-**T**est) ist ein Selbsttest, welcher nach dem Einschalten des Computers vom [BIOS](Basic-Input-Output-System "BIOS") ausgeführt wird. Während dieses Vorgangs wird die Funktionsfähigkeit der meisten Komponenten des PCs getestet (v. a. CPU, RAM, Tastatur und die Grafikausgabe).
+Der POST (**P**ower **O**n **S**elf-**T**est) ist ein Selbsttest, welcher nach dem Einschalten des Computers vom [BIOS](Basic-Input-Output-System.md "BIOS") ausgeführt wird. Während dieses Vorgangs wird die Funktionsfähigkeit der meisten Komponenten des PCs getestet (v. a. CPU, RAM, Tastatur und die Grafikausgabe).
 
 ## Weblinks
 

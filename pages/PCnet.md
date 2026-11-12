@@ -1,6 +1,6 @@
 # PCnet
 
-Weiterleitung: [AMD PCnet](AMD-PCnet)
+Weiterleitung: [AMD PCnet](AMD-PCnet.md)
 
 ---
 

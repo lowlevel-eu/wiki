@@ -2,7 +2,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| « [ARM-OS-Dev Teil 5 – Interrupts](ARM-OS-Dev-Teil-5-%E2%80%93-Interrupts "ARM-OS-Dev Teil 5 – Interrupts") | **Navigation** | [ARM-OS-Dev Teil 7 – Physische Speicherverwaltung](ARM-OS-Dev-Teil-7-%E2%80%93-Physische-Speicherverwaltung "ARM-OS-Dev Teil 7 – Physische Speicherverwaltung") » |
+| « [ARM-OS-Dev Teil 5 – Interrupts](ARM-OS-Dev-Teil-5-%E2%80%93-Interrupts.md "ARM-OS-Dev Teil 5 – Interrupts") | **Navigation** | [ARM-OS-Dev Teil 7 – Physische Speicherverwaltung](ARM-OS-Dev-Teil-7-%E2%80%93-Physische-Speicherverwaltung.md "ARM-OS-Dev Teil 7 – Physische Speicherverwaltung") » |
 
 ## Ziel
 
@@ -28,7 +28,7 @@ Damit QEMU keine endlose Ausgabe generiert, ist es sinnvoll, jeweils ein Carriag
 
 ## Tasks starten
 
-Das Erstellen und Wechseln von Tasks geschieht im Großen und Ganzen ebenso wie in der [x86-Reihe](Teil-6-Multitasking#task-starten "Teil 6 - Multitasking"). Auch auf dem ARM definiert sich ein Task über seine Registerwerte und auch hier werden Taskwechsel durch das Wechseln des IRQ-Stacks ausgeführt.
+Das Erstellen und Wechseln von Tasks geschieht im Großen und Ganzen ebenso wie in der [x86-Reihe](Teil-6-Multitasking.md#task-starten "Teil 6 - Multitasking"). Auch auf dem ARM definiert sich ein Task über seine Registerwerte und auch hier werden Taskwechsel durch das Wechseln des IRQ-Stacks ausgeführt.
 
 Beachtet werden muss jedoch, dass unsere Tasks zwei verschiedene Prozessormodi verwenden: User und IRQ. Das heißt auch, dass sie jeweils zwei Stacks benötigen, einen Userstack und einen IRQ-Stack. Die init_task-Funktion sieht also so aus:
 

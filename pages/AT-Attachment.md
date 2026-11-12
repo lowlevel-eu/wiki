@@ -8,7 +8,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 Eine der größten Hürden zu Beginn beim Schreiben eines ATA-Treibers ist das Erkennen der angeschlossenen Geräte. Hierzu gibt es keinen von der Spezifikation vorgeschriebenen Weg. Viele Methoden funktionieren zwar in einigen Emulatoren, aber auf echter Hardware nicht und umgekehrt.
 
-Beim Schreiben des ATA-Treibers für týndur habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in [QEMU](QEMU "QEMU") und [VMWare](VMware "VMWare") und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (vier Rechner von P1 bis zum P4).
+Beim Schreiben des ATA-Treibers für týndur habe ich lange nach einer Methode gesucht, die überall funktioniert und lange Wartezeiten beim Erkennen der Geräte vermeidet. Mittlerweile glaube ich, eine passende Methode gefunden zu haben, die in [QEMU](QEMU.md "QEMU") und [VMWare](VMware.md "VMWare") und auf sämtlichen meinen bisher getesteten Maschinen funktioniert (vier Rechner von P1 bis zum P4).
 
 ### HOB-Bit löschen
 
@@ -110,7 +110,7 @@ Beim Lesen: Wie Statusregister. Beim Schreiben:
 | ----- | ----- | ----- | ----- | ----- | ------ | ------ | ----- |
 | HOB | r | r | r | r | SRST | nIEN | 0 |
 
-- HOB: siehe [HOB-Bit](AT-Attachment#hob-bit-l%C3%B6schen "AT Attachment")
+- HOB: siehe [HOB-Bit](AT-Attachment.md#hob-bit-l%C3%B6schen "AT Attachment")
 - SRST: Software Reset
 - nIEN: Wenn gesetzt, sendet der Controller keine IRQs mehr
 - 0: Immer 0

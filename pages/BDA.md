@@ -1,6 +1,6 @@
 # BDA
 
-Weiterleitung: [BIOS Data Area](BIOS-Data-Area)
+Weiterleitung: [BIOS Data Area](BIOS-Data-Area.md)
 
 ---
 

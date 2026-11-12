@@ -162,8 +162,8 @@ Dieser Modus wurde von Microsoft und Hewlett-Packard (HP) entwickelt und verfüg
 
 ## Siehe auch
 
-- [Serielle Schnittstelle](Serielle-Schnittstelle "Serielle Schnittstelle")
-- [SCSI - Ebenfalls eine parallele Schnittstelle](Small-Computer-System-Interface "SCSI")
+- [Serielle Schnittstelle](Serielle-Schnittstelle.md "Serielle Schnittstelle")
+- [SCSI - Ebenfalls eine parallele Schnittstelle](Small-Computer-System-Interface.md "SCSI")
 
 ## Weblinks
 

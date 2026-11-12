@@ -1,6 +1,6 @@
 # LostIO
 
-Weiterleitung: [Týndur/LostIO](T%C3%BDndur-LostIO)
+Weiterleitung: [Týndur/LostIO](T%C3%BDndur-LostIO.md)
 
 ---
 

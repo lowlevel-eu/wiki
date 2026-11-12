@@ -526,8 +526,8 @@ Hierbei enthalten die 4 Bits für die Mausradbewegung (Z) sowohl die Bewegung in
 
 ## Siehe auch
 
-- [PS/2-Maus Tutorial](PS-2-Maus-Tutorial "PS/2-Maus Tutorial")
-- [Keyboard Controller](Keyboard-Controller "Keyboard Controller")
+- [PS/2-Maus Tutorial](PS-2-Maus-Tutorial.md "PS/2-Maus Tutorial")
+- [Keyboard Controller](Keyboard-Controller.md "Keyboard Controller")
 
 ---
 

@@ -1,6 +1,6 @@
 # Big-Endian
 
-Weiterleitung: [Bytereihenfolge](Bytereihenfolge)
+Weiterleitung: [Bytereihenfolge](Bytereihenfolge.md)
 
 ---
 

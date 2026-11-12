@@ -1,6 +1,6 @@
 # PCI
 
-Weiterleitung: [Peripheral Component Interconnect](Peripheral-Component-Interconnect)
+Weiterleitung: [Peripheral Component Interconnect](Peripheral-Component-Interconnect.md)
 
 ---
 

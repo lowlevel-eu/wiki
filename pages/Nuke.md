@@ -1,18 +1,18 @@
 # Nuke
 
-| [GPLv3](Lizenzen "GPL") |  |
+| [GPLv3](Lizenzen.md "GPL") |  |
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [SHyx0rmZ](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
 | Akt. Version: | kernel5-0.0.1 |
-| [Lizenz](Lizenzen "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [AVOL](http://avol.asxsoft.de) |
 | OS-Eigenschaften |  |
-| Plattform: | [x64](X86-64 "X64") |
-| [Kernelart](Kernel "Kernel"): | Exokernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"),[C](C "C") |
+| Plattform: | [x64](X86-64.md "X64") |
+| [Kernelart](Kernel.md "Kernel"): | Exokernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler"),[C](C.md "C") |
 | API: | *noch nicht vorhanden* |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | *noch nicht vorhanden* |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | *noch nicht vorhanden* |
 | Homepage |  |
 
 [gitorious.org/nuke/kernel5](http://www.gitorious.org/nuke/kernel5)
@@ -32,7 +32,7 @@ Nuke ist mein Hobby OS, welches ursprünglich mal nur im Long Mode laufen sollte
 
 ## Die Zukunft
 
-Genauere Pläne stehen noch nicht fest. Sicher ist aber, dass Nuke eine libPosix bekommen wird und auch einmal Linuxprogramme unterstützen soll. Zudem ist angedacht, [CDI](Common-Driver-Interface "CDI") zu implementieren.
+Genauere Pläne stehen noch nicht fest. Sicher ist aber, dass Nuke eine libPosix bekommen wird und auch einmal Linuxprogramme unterstützen soll. Zudem ist angedacht, [CDI](Common-Driver-Interface.md "CDI") zu implementieren.
 
 ## Ehemals Geplante Features
 

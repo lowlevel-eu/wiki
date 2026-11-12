@@ -1,6 +1,6 @@
 # Signale
 
-Weiterleitung: [Interprozesskommunikation](Interprozesskommunikation)
+Weiterleitung: [Interprozesskommunikation](Interprozesskommunikation.md)
 
 ---
 

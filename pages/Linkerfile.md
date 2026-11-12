@@ -1,6 +1,6 @@
 # Linkerfile
 
-Weiterleitung: [Linker](Linker)
+Weiterleitung: [Linker](Linker.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # DMA
 
-Weiterleitung: [Direct Memory Access](Direct-Memory-Access)
+Weiterleitung: [Direct Memory Access](Direct-Memory-Access.md)
 
 ---
 

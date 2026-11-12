@@ -1,6 +1,6 @@
 # ISR
 
-Weiterleitung: [Interrupt Service Routine](Interrupt-Service-Routine)
+Weiterleitung: [Interrupt Service Routine](Interrupt-Service-Routine.md)
 
 ---
 

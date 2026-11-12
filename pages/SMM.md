@@ -1,6 +1,6 @@
 # SMM
 
-Weiterleitung: [System Management Mode](System-Management-Mode)
+Weiterleitung: [System Management Mode](System-Management-Mode.md)
 
 ---
 

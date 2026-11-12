@@ -6,7 +6,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## Einleitung
 
-Dieses Tutorial erläutert die Emulation von týndur unter [Bochs](Bochs "Bochs"). Das in dem Tutorial verwendete Betriebssystem ist Windows 7 Beta.
+Dieses Tutorial erläutert die Emulation von týndur unter [Bochs](Bochs.md "Bochs"). Das in dem Tutorial verwendete Betriebssystem ist Windows 7 Beta.
 
 ## Was wird benötigt
 

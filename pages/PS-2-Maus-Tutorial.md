@@ -3,13 +3,13 @@
 | PS/2-Maus |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Schwierigkeit**: [<img src="assets/Stern_gold.gif" width="16" height="16" alt="Stern gold.gif" />](assets/Stern_gold.gif)[<img src="assets/Stern_gold.gif" width="16" height="16" alt="Stern gold.gif" />](assets/Stern_gold.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)<br> |  |
-| Benötigtes Vorwissen: | [IRQ](Programmable-Interrupt-Controller#irq-tabelle "IRQ"), [PIC](Programmable-Interrupt-Controller "PIC"), [KBC](Keyboard-Controller "KBC") |
+| Benötigtes Vorwissen: | [IRQ](Programmable-Interrupt-Controller.md#irq-tabelle "IRQ"), [PIC](Programmable-Interrupt-Controller.md "PIC"), [KBC](Keyboard-Controller.md "KBC") |
 | Sprache: | C |
 
   
 Die Maus ist neben der Tastatur eines der wichtigsten Eingabemittel. Über den Keyboard Controller kann das Betriebssystem mit ihr kommunizieren, der hierfür vorgeschriebene Ablauf ist im sogenannten PS/2-Protokoll beschrieben.
 
-Dieses Tutorial geht nicht auf alle Aspekte der PS/2-Maus ein, sondern liefert nur einen Leitfaden zur Programmierung. Für Details siehe [PS/2-Maus](PS-2-Maus "PS/2-Maus").
+Dieses Tutorial geht nicht auf alle Aspekte der PS/2-Maus ein, sondern liefert nur einen Leitfaden zur Programmierung. Für Details siehe [PS/2-Maus](PS-2-Maus.md "PS/2-Maus").
 
 ## Der Keyboard-Controller
 
@@ -303,8 +303,8 @@ Vergiss nicht, das EOI Signal an den PIC zu senden!
 
 ## Siehe auch
 
-- [PS/2-Maus](PS-2-Maus "PS/2-Maus") - Artikel mit allen Befehlen der Maus
-- [Keyboard Controller](Keyboard-Controller "Keyboard Controller")
+- [PS/2-Maus](PS-2-Maus.md "PS/2-Maus") - Artikel mit allen Befehlen der Maus
+- [Keyboard Controller](Keyboard-Controller.md "Keyboard Controller")
 
 ---
 

@@ -1,6 +1,6 @@
 # FreeBasic
 
-Weiterleitung: [FreeBASIC](FreeBASIC)
+Weiterleitung: [FreeBASIC](FreeBASIC.md)
 
 ---
 

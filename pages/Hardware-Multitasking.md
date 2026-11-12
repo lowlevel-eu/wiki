@@ -3,7 +3,7 @@
 | Hardware-Multitasking |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Schwierigkeit**: [<img src="assets/Stern_gold.gif" width="16" height="16" alt="Stern gold.gif" />](assets/Stern_gold.gif)[<img src="assets/Stern_gold.gif" width="16" height="16" alt="Stern gold.gif" />](assets/Stern_gold.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)<br> |  |
-| Benötigtes Vorwissen: | [TSS](Task-State-Segment "TSS"), [GDT](Global-Descriptor-Table "GDT"), [Scheduler](Scheduler "Scheduler") |
+| Benötigtes Vorwissen: | [TSS](Task-State-Segment.md "TSS"), [GDT](Global-Descriptor-Table.md "GDT"), [Scheduler](Scheduler.md "Scheduler") |
 | Sprache: |  |
 
 Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Hardware-Multitasking die CPU die Aufgaben des Dispatchers. Viele moderne Betriebssysteme verzichten auf Hardware-Multitasking, da es angeblich keinen großen Zeitvorteil gegenüber dem Software-Multitasking hat. Im Long Mode kann kein Hardware-Multitasking genutzt werden!
@@ -12,7 +12,7 @@ Im Gegensatz zum häufig eingesetzten Software-Multitasking, übernimmt beim Har
 
 ### Das Task State Segment
 
-Hardware-Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](Task-State-Segment "TSS") beschrieben.
+Hardware-Multitasking beruht auf dem sogenannten Task State Segment, welches jedem Task zugeordnet wird und unter anderem dessen Registerwerte speichert. Der Aufbau des TSS wird [hier exakt](Task-State-Segment.md "TSS") beschrieben.
 
 Der Speicherort des TSS wird als Eintrag in der GDT gespeichert. Der Selektor dieses Eintrags wird im Task Register der CPU gespeichert, wodurch sie bei einem Taskwechsel weiß, wo die (dynamischen) Registerwerte gespeichert werden sollen, damit diese beim Wiederaufruf des Tasks unverändert sind.
 
@@ -119,7 +119,7 @@ Der Scheduler wird diese Tabelle später immer wieder durchlaufen. Wenn er ein p
 
 ### Schritt 4: Der Scheduler
 
-Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehmen. Ich gehe dabei davon aus, dass in deinem OS bereits PIT und PIC initalisiert worden sind, denn in der [ISR](Interrupt-Service-Routine "ISR") des [PITs](Programmable-Interval-Timer "PIT") wird der Schedulercode ausgeführt.
+Dieses doch recht kleine Codestück wird das eigentliche Multitasking übernehmen. Ich gehe dabei davon aus, dass in deinem OS bereits PIT und PIC initalisiert worden sind, denn in der [ISR](Interrupt-Service-Routine.md "ISR") des [PITs](Programmable-Interval-Timer.md "PIT") wird der Schedulercode ausgeführt.
 
 Dafür muss er ersteinmal den nächsten Eintrag in der Task-Table finden, der aktiv ist (present-Feld ist nicht null)
 

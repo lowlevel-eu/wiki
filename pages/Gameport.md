@@ -4,7 +4,7 @@ Der Gameport ist ein ein 15-poliger Anschluss, meist auf Soundkarten anzufinden 
 
 ## Programmierung
 
-Der Gameport wird über den [I/O-Port](I-O-Ports "I/O-Ports") 0x201 angesprochen. In ihm sind 8 Bits auf 2 Eingabegeräte aufgeteilt, und diese 4 Bits sind jeweils nochmal auf 2 Buttons und 2 Achsen geteilt.
+Der Gameport wird über den [I/O-Port](I-O-Ports.md "I/O-Ports") 0x201 angesprochen. In ihm sind 8 Bits auf 2 Eingabegeräte aufgeteilt, und diese 4 Bits sind jeweils nochmal auf 2 Buttons und 2 Achsen geteilt.
 
 | Bit | Beschreibung |
 | ------- | ---------------------- |
@@ -23,7 +23,7 @@ Um den Status eines Buttons zu lesen, muss man nur das jeweilige Bit auslesen. 0
 
 ### Achsen
 
-Um die Achsen auszulesen, muss man erst ein beliebigen Wert in den [I/O-Port](I-O-Ports "I/O-Ports") schreiben. Dadurch werden alle Achsen-Bits auf 1b gesetzt. Nun muss man die Zeit messen bis das jeweilige Bit wieder 0b wird. Da die Werte von Treiber zu Treiber abweichen, ist meistens eine Kalibrierung erforderlich.
+Um die Achsen auszulesen, muss man erst ein beliebigen Wert in den [I/O-Port](I-O-Ports.md "I/O-Ports") schreiben. Dadurch werden alle Achsen-Bits auf 1b gesetzt. Nun muss man die Zeit messen bis das jeweilige Bit wieder 0b wird. Da die Werte von Treiber zu Treiber abweichen, ist meistens eine Kalibrierung erforderlich.
 
 ### Kalibrierung
 

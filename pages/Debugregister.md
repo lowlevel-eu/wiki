@@ -1,6 +1,6 @@
 # Debugregister
 
-Weiterleitung: [Debug Register](Debug-Register)
+Weiterleitung: [Debug Register](Debug-Register.md)
 
 ---
 

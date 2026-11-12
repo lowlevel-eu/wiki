@@ -1,12 +1,12 @@
 # Cirrus Logic
 
-[QEMU](QEMU "QEMU") emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es sehr einfach, mit einem eigenen [OS](Betriebssystem "OS") in den Genuss hardwarebeschleunigter¹ 2D-Grafik zu kommen.
+[QEMU](QEMU.md "QEMU") emuliert primär eine Cirrus Logic GD5446. Mit dieser Grafikkarte ist es sehr einfach, mit einem eigenen [OS](Betriebssystem.md "OS") in den Genuss hardwarebeschleunigter¹ 2D-Grafik zu kommen.
 
 ¹So weit ich es gesehen habe, werden die Grundoperationen hardwarebeschleunigt dargestellt. Alle Angaben ohne Gewähr.
 
 ## Ressourcen
 
-Die Grafikkarte ist eine [PCI](Peripheral-Component-Interconnect "PCI")-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle [QEMUs](QEMU "QEMU") an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
+Die Grafikkarte ist eine [PCI](Peripheral-Component-Interconnect.md "PCI")-Karte, Vendor-ID 0x1013, Chip-ID 0x00B8. Sie wird größtenteils über MMIO angesteuert, dabei werden zwei Speicherbereiche als MMIO-Interface zur Karte benutzt, die über die PCI-Schnittstelle abgefragt werden können: Der erste fängt im Falle [QEMUs](QEMU.md "QEMU") an der Adresse 0xF0000000 an und ist 32 Megabytes groß und dient als Framebufferschnittstelle, der zweite (kleinere) Bereich (für die Steuerung der Karte) fängt bei 0xF2000000 an und ist 4 KBytes lang.
 
 In diesen zweiten Bereich sind sämtliche VGA-Ports gemappt, wobei man von dem Port 0x3C0 abziehen muss, um den Offset in den MMIO-Bereich zu erhalten. So befindet sich das Register VGA_MISC_OUT_W (0x3C2) an der Speicheradresse 0xF2000002.
 
@@ -29,7 +29,7 @@ Ist die Karte einmal in dem Videomodus, muss noch die Beschleunigung aktiviert w
 
 outb(VGA_GRAPH_INDEX, 0x0E); outb(VGA_GRAPH_DATA, 0x20); // Oder outw(VGA_GRAPH_INDEX, 0x200E); \</c\>
 
-Ich habe diese Methode jedoch nur in [QEMU](QEMU "QEMU") getestet. Ich bin mir ziemlich sicher, dass das in der echten Welt da draußen nicht so einfach tut, aber wer hat schon eine Cirrus Logic. :)
+Ich habe diese Methode jedoch nur in [QEMU](QEMU.md "QEMU") getestet. Ich bin mir ziemlich sicher, dass das in der echten Welt da draußen nicht so einfach tut, aber wer hat schon eine Cirrus Logic. :)
 
 ## Offscreen Memory
 

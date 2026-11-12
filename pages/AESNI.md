@@ -1,6 +1,6 @@
 # AESNI
 
-Weiterleitung: [Advanced Encryption Standard Befehlssatzerweiterung](Advanced-Encryption-Standard-Befehlssatzerweiterung)
+Weiterleitung: [Advanced Encryption Standard Befehlssatzerweiterung](Advanced-Encryption-Standard-Befehlssatzerweiterung.md)
 
 ---
 

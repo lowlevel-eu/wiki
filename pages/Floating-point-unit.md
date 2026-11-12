@@ -1,6 +1,6 @@
 # Floating point unit
 
-Weiterleitung: [Mathematischer Koprozessor](Mathematischer-Koprozessor)
+Weiterleitung: [Mathematischer Koprozessor](Mathematischer-Koprozessor.md)
 
 ---
 

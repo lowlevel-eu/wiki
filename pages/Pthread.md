@@ -1,6 +1,6 @@
 # Pthread
 
-Weiterleitung: [POSIX Threads](POSIX-Threads)
+Weiterleitung: [POSIX Threads](POSIX-Threads.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # RISC
 
-Weiterleitung: [Reduced Instruction Set Computing](Reduced-Instruction-Set-Computing)
+Weiterleitung: [Reduced Instruction Set Computing](Reduced-Instruction-Set-Computing.md)
 
 ---
 

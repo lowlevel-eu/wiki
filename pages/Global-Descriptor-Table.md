@@ -27,7 +27,7 @@ Für individuelle Programme gibt es auch noch eine weitere ähnlich aufgebaute T
 
 ### 32-Bit Protected Mode
 
-Auch im 32-Bit [Protected Mode](Protected-Mode "Protected Mode") des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GiB Speicher ohne Segmentierung ansprechen.
+Auch im 32-Bit [Protected Mode](Protected-Mode.md "Protected Mode") des 386 sind Segmente noch vorhanden, sie spielen aber eine etwas andere Rolle. Ihre alte Aufgabe haben sie zumindest teilweise verloren, denn der 386 ist ein 32-Bit-Prozessor und könnte die verfügbaren 4 GiB Speicher ohne Segmentierung ansprechen.
 
 Zum einen kann die Basisadresse aber auch weiterhin nützlich sein – sie erlaubt es, Code an beliebigen Stellen im Speicher auszuführen, auch wenn er von festen Adressen ausgeht (dieser Mechanismus wird aber nur selten benutzt). Zum anderen sind die Segmente erweitert worden, so dass sie nicht nur einfach aus einer Basisadresse bestehen, sondern zusätzliche Speicherschutzfunktionalität bieten, wie Schreibschutz oder Zugriff erst ab einem bestimmten Privileglevel. Außerdem hat ein Segment nicht mehr eine starre Länge von 64 KiB, sondern die Länge kann vom Betriebssystem für jedes Segment einzeln und flexibel festgelegt werden. Protected-Mode-Segmente können also nahezu beliebig im linearen/virtuellen Adressraum positioniert werden.
 
@@ -91,7 +91,7 @@ Beim Erstellen der GDT sollte man beachten, dass der erste Eintrag der sogenannt
 | -------- | ------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 7 | 0x80 | Present Bit | Muss 1 für einen aktiven Eintrag sein |
 | 6 u. 5 | 0x60 | Privilege | Ring - von Ring 0 (Kernel Mode) zu Ring 3 (User Mode) |
-| 4 | 0x10 | Segment Bit | Ist 1 für Code-/Datensegmente; 0 für Gates und [TSS](Task-State-Segment "TSS"). Bits 0 bis 3 in dieser Tabelle gelten nur für Code-/Datensegmente, ansonsten enthalten sie den genauen Segmenttyp (z. B. 0x9 für 386-TSS) |
+| 4 | 0x10 | Segment Bit | Ist 1 für Code-/Datensegmente; 0 für Gates und [TSS](Task-State-Segment.md "TSS"). Bits 0 bis 3 in dieser Tabelle gelten nur für Code-/Datensegmente, ansonsten enthalten sie den genauen Segmenttyp (z. B. 0x9 für 386-TSS) |
 | 3 | 0x08 | Executable Bit | Bei 1 ist das Speichersegment ein Codesegment, bei 0 ein Datensegment |
 | 2 | 0x04 | Direction Bit/Conforming Bit | Bedeutung abhängig vom Executable-Bit |
 | 1 | 0x02 | Readable Bit/Writable Bit | Bei einem Codesegment ob lesen erlaubt ist, bei einem Datensegment ob schreiben erlaubt ist |
@@ -122,15 +122,15 @@ static void set_entry(int i, unsigned int base, unsigned int limit, int flags)
 }
 ```
 
-Welche Segmente Du anlegen willst, hängt natürlich von der Architektur Deines Kernels ab. Mein Vorschlag ist nicht die absolute und einzige Wahrheit, aber er ist ein guter Anfang, wenn Du Dir unsicher bist. Grundlage ist die GDT, wie [týndur](T%C3%BDndur "Týndur") sie verwendet und wie sie in den meisten anderen Betriebssystemen anzutreffen ist. Speicherschutz wird dabei über [Paging](Paging "Paging") erledigt, so dass nur ein Minimalsatz von Segmenten übrigbleibt:
+Welche Segmente Du anlegen willst, hängt natürlich von der Architektur Deines Kernels ab. Mein Vorschlag ist nicht die absolute und einzige Wahrheit, aber er ist ein guter Anfang, wenn Du Dir unsicher bist. Grundlage ist die GDT, wie [týndur](T%C3%BDndur.md "Týndur") sie verwendet und wie sie in den meisten anderen Betriebssystemen anzutreffen ist. Speicherschutz wird dabei über [Paging](Paging.md "Paging") erledigt, so dass nur ein Minimalsatz von Segmenten übrigbleibt:
 
 - Ein Nulldeskriptor (gdt\[0\] = 0)
 - Ein Codesegment für den Kernel (Present, Ring 0, Executable, 32 Bit; Basis 0, Limit 4 GiB)
 - Ein Datensegment für den Kernel (Present, Ring 0, Non-Executable, 32 Bit; Basis 0, Limit 4 GiB)
 - Ein Codesegment für den Userspace (Present, Ring 3, Executable, 32 Bit; Basis 0, Limit 4 GiB)
 - Ein Datensegment für den Userspace (Present, Ring 3, Non-Executable, 32 Bit; Basis 0, Limit 4 GiB)
-- Ein [Task State Segment](Task-State-Segment "Task State Segment") für Multitasking (Present, Ring 3, 386-TSS)
-- Ein [Task State Segment](Task-State-Segment "Task State Segment") zur Behandlung von Double Faults (Present, Ring 3, 386-TSS)
+- Ein [Task State Segment](Task-State-Segment.md "Task State Segment") für Multitasking (Present, Ring 3, 386-TSS)
+- Ein [Task State Segment](Task-State-Segment.md "Task State Segment") zur Behandlung von Double Faults (Present, Ring 3, 386-TSS)
 
 Absolut nötig sind dabei nur Nulldeskriptor und Code-/Datensegment für den Kernel. Sobald Multitasking ins Spiel kommen soll, ist das TSS fällig und mit Userspace-Prozessen braucht es dann die Code-/Datensegmente für Ring 3.
 

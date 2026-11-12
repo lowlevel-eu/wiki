@@ -32,7 +32,7 @@
   - Kommunikationsanschluss (COM1)
   - Kommunikationsanschluss (COM2)
 - Computer
-  - [ACPI](Advanced-Configuration-and-Power-Interface "ACPI")-PI (Advanced Configuration and Power Interface)
+  - [ACPI](Advanced-Configuration-and-Power-Interface.md "ACPI")-PI (Advanced Configuration and Power Interface)
 - Diskettenlaufwerkcontroller
   - Standard-Diskettenlaufwerkcontroller
 - Diskettenlaufwerk
@@ -40,33 +40,33 @@
 - DVD/CD-ROM-Laufwerke
   - MS C/DVD-ROM ATA Device
 - Grafikkarte
-  - Standard-[VGA](Video-Graphics-Array "VGA")-Grafikkarte
+  - Standard-[VGA](Video-Graphics-Array.md "VGA")-Grafikkarte
 - IDE ATA/ATAPI-Controller
   - ATA Channel 0
   - ATA Channel 1
   - Intel(R) 82371AB/EB PCI-Bus-Master-IDE-Controller
 - Laufwerke
-  - Virtual HD [ATA](AT-Attachment "ATA") Device
+  - Virtual HD [ATA](AT-Attachment.md "ATA") Device
 - Mäuse und andere Zeigergeräte
-  - Microsoft PS/2-[Maus](Maus "Maus")
+  - Microsoft PS/2-[Maus](Maus.md "Maus")
 - Monitore
   - Nicht-PnP-Monitor (Standard)
 - Netzwerkadapter
   - Intel 21140-basierter PCI Fast-Ethernet-Adapter (emuliert)
 - Systemgeräte
   - ACPI-Schalter
-  - [DMA](Direct-Memory-Access "DMA")-Controller
+  - [DMA](Direct-Memory-Access.md "DMA")-Controller
   - Enumerator-Treiber für Microsoft Virtual Drive
   - Intel 82371AB/EB PCI-zu-ISA-Brücke (ISA-Modus)
   - Intel 82443BX Pentium(R) II Prozessor-zu-PCI-Brücke
   - Microsoft ACPI-konformes System
   - Microsoft-Systemverwaltungs-BIOS-Treiber
   - Numerischer Coprozessor
-  - [PCI](Peripheral-Component-Interconnect "PCI")-Bus
+  - [PCI](Peripheral-Component-Interconnect.md "PCI")-Bus
   - PnP-Softwaregeräte-Enumerator
   - Programmierbarer Interruptcontroller
-  - System [CMOS](CMOS "CMOS")/Echtzeituhr
-  - [Systemlautsprecher](Systemlautsprecher "Systemlautsprecher")
+  - System [CMOS](CMOS.md "CMOS")/Echtzeituhr
+  - [Systemlautsprecher](Systemlautsprecher.md "Systemlautsprecher")
   - Systemzeitgeber
   - Terminal Server Device Redirector Bus
   - UMBus-Enumerator
@@ -81,9 +81,9 @@
 
 ## Andere Emulations- / Virtualisierungs-Software
 
-- [Bochs](Bochs "Bochs")
-- [QEMU](QEMU "QEMU")
-- [VirtualBox](VirtualBox "VirtualBox")
+- [Bochs](Bochs.md "Bochs")
+- [QEMU](QEMU.md "QEMU")
+- [VirtualBox](VirtualBox.md "VirtualBox")
 
   
 

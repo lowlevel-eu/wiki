@@ -1,6 +1,6 @@
 # EBDA
 
-Weiterleitung: [Extended BIOS Data Area](Extended-BIOS-Data-Area)
+Weiterleitung: [Extended BIOS Data Area](Extended-BIOS-Data-Area.md)
 
 ---
 

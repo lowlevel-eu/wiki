@@ -1,6 +1,6 @@
 # POST
 
-Weiterleitung: [Power On Self-Test](Power-On-Self-Test)
+Weiterleitung: [Power On Self-Test](Power-On-Self-Test.md)
 
 ---
 

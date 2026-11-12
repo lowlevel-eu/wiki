@@ -1,6 +1,6 @@
 # HAL
 
-Weiterleitung: [Hardware Abstraction Layer](Hardware-Abstraction-Layer)
+Weiterleitung: [Hardware Abstraction Layer](Hardware-Abstraction-Layer.md)
 
 ---
 

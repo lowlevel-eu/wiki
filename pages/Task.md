@@ -1,6 +1,6 @@
 # Task
 
-Weiterleitung: [Prozess](Prozess)
+Weiterleitung: [Prozess](Prozess.md)
 
 ---
 

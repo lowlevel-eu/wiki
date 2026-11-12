@@ -15,7 +15,7 @@
 
 ### Bootsektor
 
-Der [Bootsektor](Bootsektor "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](File-Allocation-Table "FAT"):
+Der [Bootsektor](Bootsektor.md "Bootsektor") von NTFS sieht ähnlich aus wie der von [FAT](File-Allocation-Table.md "FAT"):
 
 | Offset | Größe | Beschreibung |
 | -------- | ------- | ------------------------------------------------------------- |

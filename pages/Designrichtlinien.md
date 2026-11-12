@@ -21,7 +21,7 @@ Natürlich ist jedem gestattet, seinen Artikel zu gestalten, wie er es gern möc
 
 - Sinnvoll verlinken, das heißt nur auf Artikel verlinken die zum Thema beitragen/weiterhelfen und in den aktuellen Kontext passen
 
-Beispiel: Im Artikel [Prozess](Prozess "Prozess") tauchen die Wörter Kernel, Linux, Windows und Scheduler auf. Sinnvoll ist nun eine Verlinkung auf [Scheduler](Scheduler "Scheduler"), da der Scheduler mit Prozessen zu tun hat. Das haben die drei anderen Begriffe auch, aber eine Verlinkung nur auf Scheduler ist im Kontext des "Prozesses" sinnvoller.
+Beispiel: Im Artikel [Prozess](Prozess.md "Prozess") tauchen die Wörter Kernel, Linux, Windows und Scheduler auf. Sinnvoll ist nun eine Verlinkung auf [Scheduler](Scheduler.md "Scheduler"), da der Scheduler mit Prozessen zu tun hat. Das haben die drei anderen Begriffe auch, aber eine Verlinkung nur auf Scheduler ist im Kontext des "Prozesses" sinnvoller.
 
 - Wo zwei Artikelnamen in ein Wort stecken, gar nichts verlinken. Zum Beispiel C-Kernel, *nicht* mittels \[\[C\]\]-\[\[Kernel\]\] auf C und Kernel verlinken.
 - *Siehe auch*-Kapitel für interne und themenverwandte Wikilinks

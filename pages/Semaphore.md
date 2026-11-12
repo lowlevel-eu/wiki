@@ -1,6 +1,6 @@
 # Semaphore
 
-Weiterleitung: [Interprozesskommunikation#Semaphore](Interprozesskommunikation#semaphore)
+Weiterleitung: [Interprozesskommunikation#Semaphore](Interprozesskommunikation.md#semaphore)
 
 ---
 

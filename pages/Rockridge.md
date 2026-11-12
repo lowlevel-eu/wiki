@@ -1,6 +1,6 @@
 # Rockridge
 
-Weiterleitung: [ISO9660#Rockridge](ISO9660#rockridge)
+Weiterleitung: [ISO9660#Rockridge](ISO9660.md#rockridge)
 
 ---
 

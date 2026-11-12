@@ -11,14 +11,14 @@ Entwicklung eingestellt. --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages
 | [<img src="assets/DeviOS.jpg" width="221" height="78" alt="DeviOS.jpg" />](assets/DeviOS.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222) |
 | Akt. Version: | 0.0.3.0 Beta |
-| [Lizenz](Lizenzen "Lizenzen"): | DPL (DeviOS Puplic License) ab Version 0.0.3.0 GNUv2 |
+| [Lizenz](Lizenzen.md "Lizenzen"): | DPL (DeviOS Puplic License) ab Version 0.0.3.0 GNUv2 |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Monolithischer Kernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler"), [C](C.md "C") |
 | API: |  |
 | Binärformat: | .bin, .elf |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 <https://sourceforge.net/projects/devios/>

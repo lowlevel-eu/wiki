@@ -10,11 +10,11 @@ Eine Übersicht über die Speicherbereiche unter der 1MB-Grenze gibt folgende Gr
 
 ## Siehe auch
 
-- [Interrupt Vector Table](Interrupt-Vector-Table "Interrupt Vector Table")
-- [BIOS Data Area](BIOS-Data-Area "BIOS Data Area")
-- [Extended BIOS Data Area](Extended-BIOS-Data-Area "Extended BIOS Data Area")
-- [VGA RAM](Video-Graphics-Array "VGA")
-- [BIOS](Basic-Input-Output-System "BIOS")
+- [Interrupt Vector Table](Interrupt-Vector-Table.md "Interrupt Vector Table")
+- [BIOS Data Area](BIOS-Data-Area.md "BIOS Data Area")
+- [Extended BIOS Data Area](Extended-BIOS-Data-Area.md "Extended BIOS Data Area")
+- [VGA RAM](Video-Graphics-Array.md "VGA")
+- [BIOS](Basic-Input-Output-System.md "BIOS")
 
 ---
 

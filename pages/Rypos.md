@@ -11,14 +11,14 @@ Keine genaueren Informationen, keine Homepage, vermutlicher Stillstand des Proje
 |  |  |
 | Entwickler: | Ruslan Curbanov<br>Yann Heeser<br>[Patrick "SHyx0rmZ" Pokatilo](https://lowlevel-eu.github.io/wiki/pages/1785/index.html "Benutzer:SHyx0rmZ") |
 | Akt. Version: | \- |
-| [Lizenz](Lizenzen "Lizenzen"): | GPLv3 |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GPLv3 |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Exokernel? |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Exokernel? |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
 | API: | \- |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 \-

@@ -1,6 +1,6 @@
 # Microkernel
 
-Weiterleitung: [Kernel#Mikrokernel](Kernel#mikrokernel)
+Weiterleitung: [Kernel#Mikrokernel](Kernel.md#mikrokernel)
 
 ---
 

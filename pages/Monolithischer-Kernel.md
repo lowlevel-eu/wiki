@@ -1,6 +1,6 @@
 # Monolithischer Kernel
 
-Weiterleitung: [Kernel#Monolithischer Kernel](Kernel#monolithischer-kernel)
+Weiterleitung: [Kernel#Monolithischer Kernel](Kernel.md#monolithischer-kernel)
 
 ---
 

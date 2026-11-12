@@ -8,9 +8,9 @@ Die erste Version des Community-OS. Der Feature-Freeze für die Version war am 0
 
 - Speicher & Prozessverwaltung
 - einfache Interprozesskommunikation
-- Treiber für [DMA](Direct-Memory-Access "DMA"), [Diskettenlaufwerke](Floppy-Disk-Controller "FDC") und [Tastaturen](Keyboard-Controller "KBC")
+- Treiber für [DMA](Direct-Memory-Access.md "DMA"), [Diskettenlaufwerke](Floppy-Disk-Controller.md "FDC") und [Tastaturen](Keyboard-Controller.md "KBC")
 - Einfache Textkonsolen
-- Unterstützung für das [FAT12](File-Allocation-Table "File Allocation Table")-Dateisystem ([LostIO](T%C3%BDndur-LostIO "LostIO")-Treiber)
+- Unterstützung für das [FAT12](File-Allocation-Table.md "File Allocation Table")-Dateisystem ([LostIO](T%C3%BDndur-LostIO.md "LostIO")-Treiber)
 - eine einfache Shell
 
   
@@ -37,12 +37,12 @@ Das Release im Jahr 2008 (genauer: am 24.12.2008), und außerdem erste Version u
 - Treiber für ata und ext2
 - Paketverwaltung lpt
 - Pakete wie binutils, fpc (FreePascal), gcc und nano
-- Netzwerkunterstützung mit Treiber für [RTL8139](RTL8139 "RTL8139") und sis900
+- Netzwerkunterstützung mit Treiber für [RTL8139](RTL8139.md "RTL8139") und sis900
 - Tab-Completion und andere neue Möglichkeiten zum editieren der Kommandozeile in der Shell
 - Editor kedit verbessert; neu ist unter anderem das Syntax-Highlighting für C (einschalten mit F8)
 - Virtuelle Terminals (umschaltbar via Alt+Fx, Standardmäßig gibt es 4 Terminals)
 
-Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetzt auf der vom Betriebssystem unabhängigen Schnittstelle [CDI](Common-Driver-Interface "CDI").
+Außerdem hat sich unter der Haube viel getan, die meisten Treiber basieren jetzt auf der vom Betriebssystem unabhängigen Schnittstelle [CDI](Common-Driver-Interface.md "CDI").
 
   
 

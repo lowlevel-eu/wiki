@@ -1,6 +1,6 @@
 # Kommandozeile
 
-Weiterleitung: [Shell](Shell)
+Weiterleitung: [Shell](Shell.md)
 
 ---
 

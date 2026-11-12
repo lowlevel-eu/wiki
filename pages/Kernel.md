@@ -1,6 +1,6 @@
 # Kernel
 
-Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandteil und die Grundlage eines jeden [Betriebssystems](Betriebssystem "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](Treiber "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt.
+Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandteil und die Grundlage eines jeden [Betriebssystems](Betriebssystem.md "Betriebssystem"). Auf ihn bauen alle anderen Bestandteile des Betriebssystems wie Module, [Treiber](Treiber.md "Treiber") oder Anwendungen auf. Je nach Anwendungszweck wurden verschiedene Kernelarten mit individuellen Vor- und Nachteilen entwickelt.
 
   
 
@@ -8,20 +8,20 @@ Der **Kernel**, auch **Betriebssystemkernel** genannt, ist der zentrale Bestandt
 
 Ein Kernel hat grundsätzlich folgende Basisaufgaben:
 
-- [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung")
-- [Prozessverwaltung](Prozessverwaltung "Prozessverwaltung")
-- [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation")
+- [Speicherverwaltung](Speicherverwaltung.md "Speicherverwaltung")
+- [Prozessverwaltung](Prozessverwaltung.md "Prozessverwaltung")
+- [Interprozesskommunikation](Interprozesskommunikation.md "Interprozesskommunikation")
 - Geräte- und Hardwareverwaltung
-- Schnittstelle für [Treiber](Treiber "Treiber")
-- [Syscalls](Syscall "Syscall") für Anwendungsprogramme
-- [Scheduling](Scheduler "Scheduler")
+- Schnittstelle für [Treiber](Treiber.md "Treiber")
+- [Syscalls](Syscall.md "Syscall") für Anwendungsprogramme
+- [Scheduling](Scheduler.md "Scheduler")
 
-Architekturabhängige Teile dieser Aufgaben werden normalerweise in einem [Hardware Abstraction Layer](Hardware-Abstraction-Layer "Hardware Abstraction Layer") mit einer klar definierten Schnittstelle gekapselt, um die Wiederverwendbarkeit anderer Komponenten zu erhöhen. Dazu zählen teilweise schon (kleine) Treiber, wie z. B. bei [x86](X86 "X86") bzw. [x64](X86-64 "X64") für die [PIT](Programmable-Interval-Timer "PIT"), [PIC](Programmable-Interrupt-Controller "PIC"), [Local APIC](Local-Advanced-Programmable-Interrupt-Controller "Local APIC") oder ähnlichem.
+Architekturabhängige Teile dieser Aufgaben werden normalerweise in einem [Hardware Abstraction Layer](Hardware-Abstraction-Layer.md "Hardware Abstraction Layer") mit einer klar definierten Schnittstelle gekapselt, um die Wiederverwendbarkeit anderer Komponenten zu erhöhen. Dazu zählen teilweise schon (kleine) Treiber, wie z. B. bei [x86](X86.md "X86") bzw. [x64](X86-64.md "X64") für die [PIT](Programmable-Interval-Timer.md "PIT"), [PIC](Programmable-Interrupt-Controller.md "PIC"), [Local APIC](Local-Advanced-Programmable-Interrupt-Controller.md "Local APIC") oder ähnlichem.
 
 Je nach Kernelart kommt diesen Aufgaben mehr oder weniger Gewicht zu. Außerdem können z. B. folgende Aufgaben hinzukommen:
 
-- [Dateisystemverwaltung](Dateisystem "Dateisystem")
-- ausgewählte weitere Treiber (z. B. Treiber zum Erkennen und Konfigurieren von [PCI](Peripheral-Component-Interconnect "PCI")-Geräten) oder alle Treiber
+- [Dateisystemverwaltung](Dateisystem.md "Dateisystem")
+- ausgewählte weitere Treiber (z. B. Treiber zum Erkennen und Konfigurieren von [PCI](Peripheral-Component-Interconnect.md "PCI")-Geräten) oder alle Treiber
 
 ## Kernelarten
 
@@ -29,7 +29,7 @@ Folgende Kernelarten existieren:
 
 ### Monolithischer Kernel
 
-Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich Treiber für alle [Hardware](Kategorie-Hardware "Kategorie:Hardware"), das virtuelle Dateisystem, Dateisystemtreiber und vieles mehr enthält. Diese Treiber können entweder fest in den Kernel einkompiliert sein oder zur Laufzeit ladbar sein, laufen aber immer im Kernelmode. Das Treiberinterface besteht somit aus normalen Funktionsaufrufen, was zu einem deutlichen Geschwindigkeitsvorteil führt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger, und abgestürzte Module führen meist zu einem Absturz des gesamten Systems. Interprozesskommunikation spielt in einem solchen Kernel anfangs sicherlich erstmal eine untergeordnete Rolle, da die gesamte Funktionalität direkt über den Kernel erreichbar ist.
+Als monolithischen Kernel bezeichnet man einen Betriebssystemkernel, der nicht nur die typischen Aufgaben eines solchen durchführt, sondern auch gleich Treiber für alle [Hardware](Kategorie-Hardware.md "Kategorie:Hardware"), das virtuelle Dateisystem, Dateisystemtreiber und vieles mehr enthält. Diese Treiber können entweder fest in den Kernel einkompiliert sein oder zur Laufzeit ladbar sein, laufen aber immer im Kernelmode. Das Treiberinterface besteht somit aus normalen Funktionsaufrufen, was zu einem deutlichen Geschwindigkeitsvorteil führt. Jedoch ist ein solcher Kernel nicht nur unflexibler, sondern auch deutlich fehleranfälliger, und abgestürzte Module führen meist zu einem Absturz des gesamten Systems. Interprozesskommunikation spielt in einem solchen Kernel anfangs sicherlich erstmal eine untergeordnete Rolle, da die gesamte Funktionalität direkt über den Kernel erreichbar ist.
 
 Das folgende Diagramm zeigt den groben Aufbau eines monolithischen Kernels:
 
@@ -38,7 +38,7 @@ Das folgende Diagramm zeigt den groben Aufbau eines monolithischen Kernels:
 |  |  |
 | ---------------------------------------------------------------------------------- | --------- |
 | Hardware |  |
-| [HAL](Hardware-Abstraction-Layer "HAL") |  |
+| [HAL](Hardware-Abstraction-Layer.md "HAL") |  |
 | Kernel | Treiber |
 | Syscallinterface |  |
 
@@ -52,11 +52,11 @@ grau: Usermode
 
 ### Mikrokernel
 
-Bei einem Mikrokernel liegt im Gegensatz zum monolithischen Kernel nur die Implementierung der oben genannten Basisaufgaben im Kernelspace. [Treiber](Treiber "Treiber"), Dateisystemverwaltung (eventuell inklusive virtuellem Dateisystem) und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel über [Syscalls](Syscall "Syscall") bzw. mit anderen Prozessen über [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation"). Der Kernel verwaltet und verteilt also nur die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](Treiber "Treiber") nicht das ganze [Betriebssystem](Betriebssystem "Betriebssystem") zum Absturz bringen und eventuell neu gestartet werden. Letzteres funktioniert allerdings nur bei einem entsprechenden Design des Kernels, der Interprozesskommunikation und anderer Komponenten, da z. B. ein abstürzender Festplattentreiber, der die Betriebssystempartition verwaltet, nicht so ohne weiteres nachgeladen werden kann, sondern permanent im Speicher vorgehalten werden muss.
+Bei einem Mikrokernel liegt im Gegensatz zum monolithischen Kernel nur die Implementierung der oben genannten Basisaufgaben im Kernelspace. [Treiber](Treiber.md "Treiber"), Dateisystemverwaltung (eventuell inklusive virtuellem Dateisystem) und ähnliche Komponenten liegen als gesonderte Prozesse im Userspace und kommunizieren mit dem Kernel über [Syscalls](Syscall.md "Syscall") bzw. mit anderen Prozessen über [Interprozesskommunikation](Interprozesskommunikation.md "Interprozesskommunikation"). Der Kernel verwaltet und verteilt also nur die Ressourcen, während die Userspaceprozesse sich um die konkrete Nutzung selbst kümmern. Somit kann ein fehlerhafter [Treiber](Treiber.md "Treiber") nicht das ganze [Betriebssystem](Betriebssystem.md "Betriebssystem") zum Absturz bringen und eventuell neu gestartet werden. Letzteres funktioniert allerdings nur bei einem entsprechenden Design des Kernels, der Interprozesskommunikation und anderer Komponenten, da z. B. ein abstürzender Festplattentreiber, der die Betriebssystempartition verwaltet, nicht so ohne weiteres nachgeladen werden kann, sondern permanent im Speicher vorgehalten werden muss.
 
-Da die Treiber nicht im Kernel sind, ist es wesentlich, dass der Bootloader auch die Treiber laden kann und diesen dem Kernel übergibt. Dies ist von Haus aus z. B. über [GRUB](Grand-Unified-Bootloader "GRUB") möglich.
+Da die Treiber nicht im Kernel sind, ist es wesentlich, dass der Bootloader auch die Treiber laden kann und diesen dem Kernel übergibt. Dies ist von Haus aus z. B. über [GRUB](Grand-Unified-Bootloader.md "GRUB") möglich.
 
-Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](Minix "Minix") verwendet.
+Prominenter Verfechter dieser Kernelart ist u.a. Andrew S. Tanenbaum, der dieses Prinip in [Minix](Minix.md "Minix") verwendet.
 
 Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
 
@@ -65,7 +65,7 @@ Das folgende Diagramm zeigt den groben Aufbau eines Mikrokernels:
 |  |  |
 | ---------------------------------------------------------------------------------- | ------------------------------------ |
 | Hardware |  |
-| [HAL](Hardware-Abstraction-Layer "HAL") |  |
+| [HAL](Hardware-Abstraction-Layer.md "HAL") |  |
 | Kernel |  |
 | Syscallinterface | Syscallinterface (Hardwarezugriff) |
 | Anwendungen, Bibliotheken | Treiber |
@@ -78,7 +78,7 @@ Es ist allerdings nicht sonderlich fruchtbar sich einen Exokernel als einen Mikr
 
 ### Makrokernel
 
-Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Skala von Mikrokernel zum monolithischen Kernel irgendwo dazwischen und es ist somit nicht näher definiert, was genau ein Makrokernel ist. Man will dabei die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](Windows "Windows") als Hybridkernel.
+Der Makrokernel, manchmal auch Hybridkernel genannt, befindet sich auf einer Skala von Mikrokernel zum monolithischen Kernel irgendwo dazwischen und es ist somit nicht näher definiert, was genau ein Makrokernel ist. Man will dabei die Geschwindigkeitsvorteile eines monolithischen Kernels und die Stabilität und Flexibilität eines Mikrokernels kombinieren. Ab NT 3.1 bezeichnet man [Windows](Windows.md "Windows") als Hybridkernel.
 
 ## Links
 

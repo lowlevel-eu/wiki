@@ -9,22 +9,22 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 |  |  |
 | Entwickler: | Jim Hall et al. |
 | Akt. Version: | 1.1 |
-| [Lizenz](Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Monolithisch |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [Assembler](Assembler "Assembler") |
-| API: | [DOS](Microsoft-Disk-Operating-System "DOS") |
-| Binärformat: | COM, EXE ([COFF](Microsoft-Portable-Executable-and-Common-Object-File-Format "COFF")) |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | n.a. |
+| Plattform: | [i386](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Monolithisch |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [Assembler](Assembler.md "Assembler") |
+| API: | [DOS](Microsoft-Disk-Operating-System.md "DOS") |
+| Binärformat: | COM, EXE ([COFF](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "COFF")) |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | n.a. |
 | Homepage |  |
 
 <http://freedos.sourceforge.net/>
 
   
-FreeDOS gehört - wie der Name schon sagt - zu den DOS-Betriebssystemen. Es wurde geschaffen, um eine freie und vor allem kompatible Alternative zu [MS-DOS](Microsoft-Disk-Operating-System "MS-DOS") zu erstellen.
+FreeDOS gehört - wie der Name schon sagt - zu den DOS-Betriebssystemen. Es wurde geschaffen, um eine freie und vor allem kompatible Alternative zu [MS-DOS](Microsoft-Disk-Operating-System.md "MS-DOS") zu erstellen.
 
-Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgeführt werden können, die auch unter MS-DOS liefen. Lediglich Programme, die undokumentierte Schnittstellen benutzten (wie [Windows](Windows "Windows") (3.x bzw 9x/ME) es tut/tat) machen Probleme.
+Diese Kompatibilität ist sehr gut gelungen, wobei fast alle Programme ausgeführt werden können, die auch unter MS-DOS liefen. Lediglich Programme, die undokumentierte Schnittstellen benutzten (wie [Windows](Windows.md "Windows") (3.x bzw 9x/ME) es tut/tat) machen Probleme.
 
 ---
 

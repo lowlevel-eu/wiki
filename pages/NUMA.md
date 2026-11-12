@@ -1,6 +1,6 @@
 # NUMA
 
-Weiterleitung: [Non-Uniform Memory Architecture](Non-Uniform-Memory-Architecture)
+Weiterleitung: [Non-Uniform Memory Architecture](Non-Uniform-Memory-Architecture.md)
 
 ---
 

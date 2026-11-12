@@ -1,6 +1,6 @@
 # ELF Tutorial
 
-Weiterleitung: [ELF-Tutorial](ELF-Tutorial)
+Weiterleitung: [ELF-Tutorial](ELF-Tutorial.md)
 
 ---
 

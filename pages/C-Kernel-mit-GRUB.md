@@ -1,14 +1,14 @@
 # C-Kernel mit GRUB
 
-In diesem Tutorial werde ich beschreiben, wie man einen in [C](C "C") programmierten [Kernel](Kernel "Kernel") mithilfe von [GRUB](Grand-Unified-Bootloader "GRUB") bootet.
+In diesem Tutorial werde ich beschreiben, wie man einen in [C](C.md "C") programmierten [Kernel](Kernel.md "Kernel") mithilfe von [GRUB](Grand-Unified-Bootloader.md "GRUB") bootet.
 
 ## Hinweis für Windowsianer
 
-Ich werde hier beschreiben, wie ich es unter [Linux](Linux "Linux") mache. Unter [Windows](Windows "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt – das heißt, du solltest dir erst entweder den Artikel [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows") (Verwenden von Jidders Crosscompiler) oder [Cross-Compiler](Cross-Compiler "Cross-Compiler") (Erstellen eines eigenen Crosscompilers) durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
+Ich werde hier beschreiben, wie ich es unter [Linux](Linux.md "Linux") mache. Unter [Windows](Windows.md "Windows") geht es auch, aber du musst sicherstellen, dass du ELF als Binärformat benutzt – das heißt, du solltest dir erst entweder den Artikel [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows.md "Crosscompiler für Windows") (Verwenden von Jidders Crosscompiler) oder [Cross-Compiler](Cross-Compiler.md "Cross-Compiler") (Erstellen eines eigenen Crosscompilers) durchlesen und eine entsprechende Entwicklungsumgebung aufsetzen.
 
 ## Kernel
 
-Der eigentliche Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss aber immernoch in [Assembler](Assembler "Assembler") sein.
+Der eigentliche Kernel soll ja in C programmiert sein. Ein Teil des Kernels muss aber immernoch in [Assembler](Assembler.md "Assembler") sein.
 
 ### Kernel - C
 
@@ -71,7 +71,7 @@ loader:
 
 Der Code sollte eigentlich gut verständlich sein, trotzdem ist noch was zu klären:
 
-- Die Flags können geändert werden, am besten schaut man sich die [Multiboot](Multiboot "Multiboot")-Spezifikation an.
+- Die Flags können geändert werden, am besten schaut man sich die [Multiboot](Multiboot.md "Multiboot")-Spezifikation an.
 - Den Stack kann man natürlich an eine beliebige Stelle setzen, aber an der 2MB-Grenze wird er uns nicht stören.
 - Es wird die Adresse der Multiboot-Structure nicht umsonst an den C-Kernel übergeben. Am besten liest man so ziemlich am Anfang des Kernels die Informationen aus ihr. In der Multiboot-Structure steht z. B. wie viel Speicher der Rechner hat oder welche Module von GRUB mitgeladen wurden.
 
@@ -85,7 +85,7 @@ Dies geschieht ganz einfach mit diesem Befehl:
 
     $ nasm -f elf -o kernel_asm.o kernel.asm
 
-Damit wird eine [ELF](Executable-and-Linking-Format "ELF")-Datei erzeugt, die wir später noch linken können.
+Damit wird eine [ELF](Executable-and-Linking-Format.md "ELF")-Datei erzeugt, die wir später noch linken können.
 
 ### Kompilieren
 
@@ -101,7 +101,7 @@ Damit erstellen wir eine Objektdatei, mit der wir nachher noch linken können. E
 
 ### Linken
 
-Meiner Meinung nach ist dies der schwierigste Teil des „Zusammenbauens“. Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z. B. dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei/[Linkerscript](Linker "Linkerscript") für *ld*:
+Meiner Meinung nach ist dies der schwierigste Teil des „Zusammenbauens“. Beim Linken wird unser Assembler-Kernel und unser C-Kernel miteinander verbunden und es wird z. B. dem Assembler-Kernel auch gesagt wo die main-Funktion des C-Kernels liegt. Wir brauchen erstmal eine Konfigurationsdatei/[Linkerscript](Linker.md "Linkerscript") für *ld*:
 
     ENTRY (loader)
     OUTPUT_FORMAT(elf32-i386)
@@ -141,15 +141,15 @@ Nun wird gelinkt:
 
 Wenn man später mehr Dateien hat, können diese natürlich auch dazugelinkt werden. Man sollte den fertigen Kernel jetzt in einer Datei namens *kernel.bin* haben.
 
-Mehr Informationen darüber, was genau dieses Linkerscript genau macht und warum es notwendig bzw. sinnvoll ist, findet ihr im Artikel [Linkerscript](Linker "Linkerscript"). An dieser Stelle nur so viel:
+Mehr Informationen darüber, was genau dieses Linkerscript genau macht und warum es notwendig bzw. sinnvoll ist, findet ihr im Artikel [Linkerscript](Linker.md "Linkerscript"). An dieser Stelle nur so viel:
 
-Mit „ENTRY(loader)“ wird ld mitgeteilt, dass der Kernel bei der Funktion loader (siehe [Assemblerteil des Kernels](C-Kernel-mit-GRUB#kernel---assembler "C-Kernel mit GRUB")) beginnt. Dies wird in einem Datenfeld in der ELF-Header der „kernel.bin“ festgehalten und von GRUB benötigt um zur richtigen Adresse zu springen.
+Mit „ENTRY(loader)“ wird ld mitgeteilt, dass der Kernel bei der Funktion loader (siehe [Assemblerteil des Kernels](C-Kernel-mit-GRUB.md#kernel---assembler "C-Kernel mit GRUB")) beginnt. Dies wird in einem Datenfeld in der ELF-Header der „kernel.bin“ festgehalten und von GRUB benötigt um zur richtigen Adresse zu springen.
 
-Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche, welche man in Assembler mittels des „.section .text“ beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei „kernel.bin“ bzw. nach dem Laden im Speicher landen. Das „. = 0x00100000;“ gibt an, dass die „kernel.bin“ an die Adresse 1 MB gelinkt wird, d. h. sich nach dem Laden durch GRUB an die Adresse 1 MB und folgende im (physischen) Speicher befindet. 1 MB ist als Adresse gewählt, da GRUB keine Dateien unter diese Adresse lädt, der Grund dafür ist, dass der Speicherbereich zwischen 0 und 1 MB durch das BIOS, den Bootloader selbst und verschiedene Hardware belegt ist. Siehe dazu auch den Artikel über [Speicherbereiche](Speicherbereiche "Speicherbereiche").
+Der Rest des Linkerscripts gibt an wo die Sektionen, das sind die Bereiche, welche man in Assembler mittels des „.section .text“ beispielsweise direkt angeben kann, aus den ELF-Objektdateien (kernel_asm.o und kernel_c.o) in der ELF-Binärdatei „kernel.bin“ bzw. nach dem Laden im Speicher landen. Das „. = 0x00100000;“ gibt an, dass die „kernel.bin“ an die Adresse 1 MB gelinkt wird, d. h. sich nach dem Laden durch GRUB an die Adresse 1 MB und folgende im (physischen) Speicher befindet. 1 MB ist als Adresse gewählt, da GRUB keine Dateien unter diese Adresse lädt, der Grund dafür ist, dass der Speicherbereich zwischen 0 und 1 MB durch das BIOS, den Bootloader selbst und verschiedene Hardware belegt ist. Siehe dazu auch den Artikel über [Speicherbereiche](Speicherbereiche.md "Speicherbereiche").
 
 ## GRUB-Image erstellen
 
-*siehe: [GRUB legacy](Grand-Unified-Bootloader#grub-legacy "GRUB")*
+*siehe: [GRUB legacy](Grand-Unified-Bootloader.md#grub-legacy "GRUB")*
 
 Fertig ist unser GRUB-Image! Man kann es jetzt noch mit
 
@@ -159,8 +159,8 @@ auf eine Floppydisk kopieren und damit booten. Wenn alles klappt, seht ihr „He
 
 ## Vorschläge
 
-- Auf Dauer wird es anstregend, die ganzen Befehle einzutippen. Am einfachsten ist es eine [Makefile](Makefile "Makefile") zu benutzen.
-- Um nicht immer neustarten zu müssen, kann man einen Emulator wie [QEMU](QEMU "QEMU") oder [Bochs](Bochs "Bochs") nehmen. Dann muss man das Image auch erst gar nicht auf Diskette kopieren.
+- Auf Dauer wird es anstregend, die ganzen Befehle einzutippen. Am einfachsten ist es eine [Makefile](Makefile.md "Makefile") zu benutzen.
+- Um nicht immer neustarten zu müssen, kann man einen Emulator wie [QEMU](QEMU.md "QEMU") oder [Bochs](Bochs.md "Bochs") nehmen. Dann muss man das Image auch erst gar nicht auf Diskette kopieren.
 - Mit *color light-blue/black light-cyan/blue* in menu.lst kann man dem Bootloader Farbe verpassen.
 
 ## Nachwort
@@ -169,10 +169,10 @@ Bei Fehlern in Text oder Code bitte an das Lowlevel-Team wenden.
 
 ## Siehe auch
 
-- [C-Kernel starten](C-Kernel-starten "C-Kernel starten")
-- [Multiboot](Multiboot "Multiboot")
-- [GRUB](Grand-Unified-Bootloader "GRUB")
-- [C++-Kernel mit GRUB](C%2B%2B-Kernel-mit-GRUB "C++-Kernel mit GRUB")
+- [C-Kernel starten](C-Kernel-starten.md "C-Kernel starten")
+- [Multiboot](Multiboot.md "Multiboot")
+- [GRUB](Grand-Unified-Bootloader.md "GRUB")
+- [C++-Kernel mit GRUB](C%2B%2B-Kernel-mit-GRUB.md "C++-Kernel mit GRUB")
 
 ---
 

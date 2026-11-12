@@ -2,7 +2,7 @@
 
 **Hinweis:**
 
-Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema aus. Da dieses Thema aber dringend nach einem Artikel verlangte (z. B. aufgrund eines Eintrags in der [TODO](TODO "TODO")-Liste), hat er sich dennoch entschieden, seine Kenntnisse niederzuschreiben.
+Der Autor kannte sich bei Erstellung des Artikels nicht besonders mit dem Thema aus. Da dieses Thema aber dringend nach einem Artikel verlangte (z. B. aufgrund eines Eintrags in der [TODO](TODO.md "TODO")-Liste), hat er sich dennoch entschieden, seine Kenntnisse niederzuschreiben.
 
 Wenn **du** dich mit diesem Thema einigermaßen auskennst, dann bist du **jetzt** aufgerufen, diesen Artikel zu erweitern und/oder zu korrigieren (oder natürlich diesen Hinweis zu entfernen, wenn du den Artikel für korrekt befindest)!
 
@@ -23,7 +23,7 @@ Hilf Lowlevel, den Artikel zu verbessern.
 USB-Symbol  
 [Quelle](http://de.wikipedia.org/wiki/Datei:Usb-svg.svg)
 
-Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](Kategorie-Bus "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt. Da die Stecker für USB 3.0 zusätzliche Kontakte enthalten, sind allerdings nicht sämtliche, denkbaren Kombinationen realisierbar.
+Der **Universal Serial Bus** (kurz **USB**) ist ein [Bus](Kategorie-Bus.md "Kategorie:Bus") zur Verbindung von Geräten mit einem PC und wird von praktisch jedem modernen Computer unterstützt. USB ist abwärtskompatibel, d. h., dass man langsame USB-1.0-Geräte an den schnelleren USB 2.0 oder 3.0 anschließen kann und umgekehrt. Da die Stecker für USB 3.0 zusätzliche Kontakte enthalten, sind allerdings nicht sämtliche, denkbaren Kombinationen realisierbar.
 
 USB 2.0: Hubs, die zu USB 2.0 kompatibel, enthalten mindestens einen (eventuell mehrere) Transaction Translator, der eine Datenübertragung von einem Gerät, das zu einer älteren USB-Version kompatibel ist, entsprechend umsetzt. Datenübertragungen von Geräten, die zu einer älteren USB-Version kompatibel sind, beeinflussen daher die Gesamtdatenübertragungsrate eines USB 2.0-Hubs nicht.
 
@@ -66,12 +66,12 @@ Außerdem ist USB ein derartig komplexes Thema, dass es nicht genügen kann, ein
 
 ### Worum es nicht geht
 
-Hier geht es nicht um die Programmierung des USB. So wie die Artikel [Ethernet](Ethernet "Ethernet") und [RTL8139](RTL8139 "RTL8139") getrennt sind, so ist auch dieser Artikel von den Artikeln für die Hostcontroller getrennt, die die einzelnen Transfers initiieren und steuern. Hier wird also nur vermittelt, was im Endeffekt auf dem Bus elektrisch passiert und was diese Signale bedeuten, nicht jedoch, wie man sie erzeugt. Dazu müssen die Artikel zu den entsprechenden Hostcontrollern konsultiert werden:
+Hier geht es nicht um die Programmierung des USB. So wie die Artikel [Ethernet](Ethernet.md "Ethernet") und [RTL8139](RTL8139.md "RTL8139") getrennt sind, so ist auch dieser Artikel von den Artikeln für die Hostcontroller getrennt, die die einzelnen Transfers initiieren und steuern. Hier wird also nur vermittelt, was im Endeffekt auf dem Bus elektrisch passiert und was diese Signale bedeuten, nicht jedoch, wie man sie erzeugt. Dazu müssen die Artikel zu den entsprechenden Hostcontrollern konsultiert werden:
 
-- [OHCI](Open-Host-Controller-Interface "Open Host Controller Interface")
-- [UHCI](Universal-Host-Controller-Interface "Universal Host Controller Interface")
-- [EHCI](Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface")
-- [xHCI](Extensible-Host-Controller-Interface "Extensible Host Controller Interface")
+- [OHCI](Open-Host-Controller-Interface.md "Open Host Controller Interface")
+- [UHCI](Universal-Host-Controller-Interface.md "Universal Host Controller Interface")
+- [EHCI](Enhanced-Host-Controller-Interface.md "Enhanced Host Controller Interface")
+- [xHCI](Extensible-Host-Controller-Interface.md "Extensible Host Controller Interface")
 
 ## Überblick
 
@@ -251,11 +251,11 @@ Hat das Gerät ein Reset entdeckt, so fährt es wie vorgesehen fort (s. [Reset](
 
 ## Protokoll
 
-USB gleicht weniger einem klassischen Bus wie der [seriellen Schnittstelle](Serielle-Schnittstelle "Serielle Schnittstelle") oder der [parallelen Schnittstelle](Parallele-Schnittstelle "Parallele Schnittstelle"), sondern eher einem Netzwerkprotokoll. Es gibt Zieladressen (könnte man als eine Art IP-Adresse werten), Endpunkte (entsprechen den von TCP oder UDP bekannten Ports) und die gesamte Übertragung findet in Paketen gekapselt statt. Allerdings besitzt USB eine wichtige Eigenschaft eines Bus: Es gibt Busmaster, und zwar genau einen. Dieser wird im Allgemeinen Host genannt, nur er darf Übertragungen initiieren &#150; kein Gerät darf dies (im klassischen USB). Damit haben wir uns schon mal einen groben Überblick verschafft und können jetzt voll einsteigen.
+USB gleicht weniger einem klassischen Bus wie der [seriellen Schnittstelle](Serielle-Schnittstelle.md "Serielle Schnittstelle") oder der [parallelen Schnittstelle](Parallele-Schnittstelle.md "Parallele Schnittstelle"), sondern eher einem Netzwerkprotokoll. Es gibt Zieladressen (könnte man als eine Art IP-Adresse werten), Endpunkte (entsprechen den von TCP oder UDP bekannten Ports) und die gesamte Übertragung findet in Paketen gekapselt statt. Allerdings besitzt USB eine wichtige Eigenschaft eines Bus: Es gibt Busmaster, und zwar genau einen. Dieser wird im Allgemeinen Host genannt, nur er darf Übertragungen initiieren &#150; kein Gerät darf dies (im klassischen USB). Damit haben wir uns schon mal einen groben Überblick verschafft und können jetzt voll einsteigen.
 
 ### Bit- und Bytereihenfolge
 
-Sowohl bei mehreren Bits als auch bei mehreren Bytes wird Little Endian verwendet (also zuerst das LSb bzw. LSB und zuletzt das MSb bzw. MSB). Dies entspricht der Endianess von [x86](X86 "X86")-Prozessoren, sodass hier bei Betriebssystemen für diese Architektur kein Umrechnen nötig sein sollte.
+Sowohl bei mehreren Bits als auch bei mehreren Bytes wird Little Endian verwendet (also zuerst das LSb bzw. LSB und zuletzt das MSb bzw. MSB). Dies entspricht der Endianess von [x86](X86.md "X86")-Prozessoren, sodass hier bei Betriebssystemen für diese Architektur kein Umrechnen nötig sein sollte.
 
 ### Organisation
 
@@ -1067,7 +1067,7 @@ Dieser enthält die gleichen Informationen und ist genauso aufgebaut wie ein nor
 
 Für einen Computer gibt es einige essentielle Geräte, ohne die er nicht arbeiten kann, die Tastatur ist eines von ihnen. Ist an einen Computer keine Tastatur angeschlossen, so wird bereits das BIOS sich weigern, ein Betriebssystem zu laden, ein solches würde häufig wiederum die Funktion verweigern (z. B. mit der berühmt-berüchtigen Meldung „Tastatur nicht gefunden. Drücken Sie F1 zum Fortfahren.“). Nun ist es so, dass heutzutage sehr oft USB-Tastaturen anstatt der „normalen“ PS/2-Tastaturen verwendet werden – hier liegt offenbar ein Problem, denn in diesem Fall würde zumindest das BIOS ohne USB-Treiber den Betrieb verweigern und nur Betriebssysteme mit USB-Treiber könnten dann mit der Tastatur umgehen. Zur Lösung dieser Probleme hat man den sogenannten *Legacy Support* eingeführt.
 
-Das BIOS muss hierzu einen USB-Treiber enthalten. Beim Start initialisiert es alle USB-Hostcontroller und beginnt sie nach Geräten abzusuchen. Die Hostcontroller werden hierbei allerdings nicht so initialisiert, wie es das Betriebssystem tun würde, der Grund liegt darin, dass der BIOS-USB-Treiber auch im Protected Mode noch funktionieren muss, um Betriebssystemen ohne eigenen USB-Treiber den Umgang mit Maus und Tastatur zu ermöglichen. Dies geschieht über den [System Management Mode](System-Management-Mode "System Management Mode"). Der USB-Hostcontroller wird so eingerichtet, dass er bei jedem USB-Ereignis keinen normalen PCI-IRQ sondern einen SMI auslöst, der die CPU in besagten Modus versetzt. Hier läuft dann der BIOS-Treiber in einer „kontrollierten“ Umgebung und kann die anstehenden Aufgaben bewältigen, wobei das Betriebssystem davon gar nichts merkt.
+Das BIOS muss hierzu einen USB-Treiber enthalten. Beim Start initialisiert es alle USB-Hostcontroller und beginnt sie nach Geräten abzusuchen. Die Hostcontroller werden hierbei allerdings nicht so initialisiert, wie es das Betriebssystem tun würde, der Grund liegt darin, dass der BIOS-USB-Treiber auch im Protected Mode noch funktionieren muss, um Betriebssystemen ohne eigenen USB-Treiber den Umgang mit Maus und Tastatur zu ermöglichen. Dies geschieht über den [System Management Mode](System-Management-Mode.md "System Management Mode"). Der USB-Hostcontroller wird so eingerichtet, dass er bei jedem USB-Ereignis keinen normalen PCI-IRQ sondern einen SMI auslöst, der die CPU in besagten Modus versetzt. Hier läuft dann der BIOS-Treiber in einer „kontrollierten“ Umgebung und kann die anstehenden Aufgaben bewältigen, wobei das Betriebssystem davon gar nichts merkt.
 
 Das BIOS initialisiert also den Hostcontroller und weist ihn an, SMIs zu bestimmten Ereignissen auszulösen, einige Hostcontroller können sogar Zugriffe auf die PS/2-Ports 0x60 und 0x64 überwachen und dementsprechend SMIs auslösen. Der BIOS-Treiber simuliert dann dort ganz einfach ein PS/2-Gerät.
 

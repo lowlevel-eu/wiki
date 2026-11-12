@@ -6,17 +6,17 @@ Hier werden spezielle X86-Befehle näher erklärt.
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [X86](Kategorie-X86)
+Übergeordnete Kategorien: [X86](Kategorie-X86.md)
 
 ### Seiten
 
-- [Advanced Encryption Standard Befehlssatzerweiterung](Advanced-Encryption-Standard-Befehlssatzerweiterung)
-- [Advanced Vector Extensions](Advanced-Vector-Extensions)
-- [CPUID](CPUID)
-- [Enter / Leave](Enter-Leave)
-- [MultiMedia Extension](MultiMedia-Extension)
-- [Streaming SIMD Extensions](Streaming-SIMD-Extensions)
-- [Sysenter](Sysenter)
+- [Advanced Encryption Standard Befehlssatzerweiterung](Advanced-Encryption-Standard-Befehlssatzerweiterung.md)
+- [Advanced Vector Extensions](Advanced-Vector-Extensions.md)
+- [CPUID](CPUID.md)
+- [Enter / Leave](Enter-Leave.md)
+- [MultiMedia Extension](MultiMedia-Extension.md)
+- [Streaming SIMD Extensions](Streaming-SIMD-Extensions.md)
+- [Sysenter](Sysenter.md)
 
 
 ---

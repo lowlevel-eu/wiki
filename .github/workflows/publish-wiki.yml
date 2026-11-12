@@ -1,0 +1,61 @@
+name: Wiki prüfen und veröffentlichen
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Wiki prüfen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Pandoc installieren
+        run: |
+          if ! command -v pandoc >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install --no-install-recommends -y pandoc
+          fi
+      - run: python3 -m unittest discover -s tests -v
+      - run: python3 scripts/publish_wiki.py check
+      - name: Veröffentlichung lokal prüfen
+        run: python3 scripts/publish_wiki.py preview --output "$RUNNER_TEMP/wiki-preview"
+
+  publish:
+    name: Wiki veröffentlichen
+    permissions:
+      contents: write
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.repository == 'lowlevel-eu/wiki'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: wiki-publication
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Pandoc installieren
+        run: |
+          if ! command -v pandoc >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install --no-install-recommends -y pandoc
+          fi
+      - name: Wiki veröffentlichen
+        env:
+          WIKI_TOKEN: ${{ github.token }}
+        run: python3 scripts/publish_wiki.py publish

@@ -1,6 +1,6 @@
 # PIT
 
-Weiterleitung: [Programmable Interval Timer](Programmable-Interval-Timer)
+Weiterleitung: [Programmable Interval Timer](Programmable-Interval-Timer.md)
 
 ---
 

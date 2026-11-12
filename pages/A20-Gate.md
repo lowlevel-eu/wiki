@@ -3,7 +3,7 @@
 | A20-Gate |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | **Schwierigkeit**: [<img src="assets/Stern_gold.gif" width="16" height="16" alt="Stern gold.gif" />](assets/Stern_gold.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)[<img src="assets/Stern_wei%C3%9F.gif" width="16" height="16" alt="Stern weiß.gif" />](assets/Stern_wei%C3%9F.gif)<br> |  |
-| Benötigtes Vorwissen: | [BIOS](Basic-Input-Output-System "BIOS") |
+| Benötigtes Vorwissen: | [BIOS](Basic-Input-Output-System.md "BIOS") |
 | Sprache: | Assembler |
 
 Das A20-Gate steuert die 21. Adressleitung der CPU. Diese muss aktiviert werden, um ungerade Megabytes (wenn man bei 0 mit Zählen beginnt) im Arbeitsspeicher adressieren zu können.
@@ -145,7 +145,7 @@ Es gibt noch eine zweite Möglichkeit, das A20-Gate zu aktivieren. Sie wurde ers
 
 ## Einschalten über das BIOS
 
-Es gibt sogar noch eine dritte Möglichkeit, das A20-Gate zu aktiveren. Vor allem neuere [BIOS](Basic-Input-Output-System "BIOS") besitzen diese Möglichkeit. Dafür benutzt man den Interrupt 0x15 mit AX=0x2401. Hier eine kleine Tabelle:
+Es gibt sogar noch eine dritte Möglichkeit, das A20-Gate zu aktiveren. Vor allem neuere [BIOS](Basic-Input-Output-System.md "BIOS") besitzen diese Möglichkeit. Dafür benutzt man den Interrupt 0x15 mit AX=0x2401. Hier eine kleine Tabelle:
 
 INT 0x15 AX=0x2400 --\> A20 auschalten  
 INT 0x15 AX=0x2401 --\> A20 einschalten  

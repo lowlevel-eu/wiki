@@ -4,7 +4,7 @@ Eine Race Condition (auf Deutsch „kritischer Wettlauf“, wörtlich „Wettlau
 
 ## Beispiel
 
-Wie könnte eine Race Condition aussehen? Meistens handelt es sich um zwei [Prozesse](Prozess "Prozess"), die die gleiche Funktion ausführen. Nehmen wir also eine hypothetische Funktion namens `I_want_the_printer_now()`, die den Drucker für den aktuellen Prozess reserviert, damit kein anderer Prozess darauf zugreifen kann. Außerdem gibt es eine Funktion, die den Drucker wieder freigibt, `release_printer()`. Der Code könnte zum Beispiel so aussehen:
+Wie könnte eine Race Condition aussehen? Meistens handelt es sich um zwei [Prozesse](Prozess.md "Prozess"), die die gleiche Funktion ausführen. Nehmen wir also eine hypothetische Funktion namens `I_want_the_printer_now()`, die den Drucker für den aktuellen Prozess reserviert, damit kein anderer Prozess darauf zugreifen kann. Außerdem gibt es eine Funktion, die den Drucker wieder freigibt, `release_printer()`. Der Code könnte zum Beispiel so aussehen:
 
 ``` c
 static int printer_reserved = 0;

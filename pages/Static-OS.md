@@ -9,14 +9,14 @@
 |  |  |
 | Entwickler: | [Stefan Mayer](https://lowlevel-eu.github.io/wiki/pages/2055/index.html "Benutzer:Hunter") |
 | Akt. Version: | 1.8 |
-| [Lizenz](Lizenzen "Lizenzen"): | \- |
+| [Lizenz](Lizenzen.md "Lizenzen"): | \- |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [ASM](Assembler "Assembler") |
+| Plattform: | [i386](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [ASM](Assembler.md "Assembler") |
 | API: | SOS_API |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 <http://www.staticos.at.tf/>

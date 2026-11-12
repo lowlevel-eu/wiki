@@ -8,22 +8,22 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ### Dateisysteme für Disketten / sehr kleine bzw. veraltete Festplatten
 
-- [FAT](File-Allocation-Table "FAT")
-  - [FAT12](Ausgabe-4#das-fat12-dateisystem "Ausgabe 4")
+- [FAT](File-Allocation-Table.md "FAT")
+  - [FAT12](Ausgabe-4.md#das-fat12-dateisystem "Ausgabe 4")
   - FAT16
 - minix
-- [SFS](SFS "SFS")
+- [SFS](SFS.md "SFS")
 
 ### Dateisysteme für Festplatten
 
-- [FAT](File-Allocation-Table "FAT")
+- [FAT](File-Allocation-Table.md "FAT")
   - FAT32
   - VFAT (Erweiterung für lange Dateinamen aller FAT-Dateisysteme)
-- [NTFS](NTFS "NTFS") (und nicht fertig gewordener Aufsatz WinFS)
+- [NTFS](NTFS.md "NTFS") (und nicht fertig gewordener Aufsatz WinFS)
 - Ext
-  - [Ext2](Ext2 "Ext2")
-  - [Ext3](Ext3 "Ext3")
-  - [Ext4](Ext4 "Ext4")
+  - [Ext2](Ext2.md "Ext2")
+  - [Ext3](Ext3.md "Ext3")
+  - [Ext4](Ext4.md "Ext4")
 - ReiserFS
 - Reiser4
 - UFS
@@ -31,7 +31,7 @@ Unter Dateisystemen versteht man eine logische Strukturierung verschiedener Date
 
 ### Dateisysteme für CD/DVD
 
-- [ISO9660](ISO9660 "ISO9660") (Erweiterungen: [Joliet](ISO9660 "ISO9660") von Microsoft und [Rockridge](ISO9660#rockridge "ISO9660") für UNIX)
+- [ISO9660](ISO9660.md "ISO9660") (Erweiterungen: [Joliet](ISO9660.md "ISO9660") von Microsoft und [Rockridge](ISO9660.md#rockridge "ISO9660") für UNIX)
 - UDF (Für DVDs)
 
 ### Dateisysteme im Netzwerk

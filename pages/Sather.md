@@ -11,7 +11,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 | Compiler: | GNU Sather, Sather-K, Sather-W |
 | Spracheneigenschaften |  |
 | Plattformen: | Frei aus dem Quellcode kompilierbar |
-| Beispielkernel in der Sprache: | [Sather-Kernel mit GRUB](Sather-Kernel-mit-GRUB "Sather-Kernel mit GRUB") |
+| Beispielkernel in der Sprache: | [Sather-Kernel mit GRUB](Sather-Kernel-mit-GRUB.md "Sather-Kernel mit GRUB") |
 | Homepage |  |
 
 <http://www.icsi.berkeley.edu/~sather/>
@@ -21,7 +21,7 @@ Sather ist eine eher unbekannte Programmiersprache, deren Wurzeln in der Sprache
 
 ## Kernelprogrammierung mit Sather
 
-Obwohl es einen Beispielkernel mit Sather gibt ([Sather-Kernel mit GRUB](Sather-Kernel-mit-GRUB "Sather-Kernel mit GRUB")), ist im Großen und Ganzen (vor allem für Anfänger) von der Verwendung dieser Sprache in Kerneln abzuraten. Sie erfordert eine ziemlich große Runtime-Lib und ist im Gegensatz zu z. B. [C](C "C") alles andere als hardwarenah. Einziger Pluspunkt hier mag die Möglichkeit der Verwendung von Inline-C (wie auch bei Eiffel) sein.
+Obwohl es einen Beispielkernel mit Sather gibt ([Sather-Kernel mit GRUB](Sather-Kernel-mit-GRUB.md "Sather-Kernel mit GRUB")), ist im Großen und Ganzen (vor allem für Anfänger) von der Verwendung dieser Sprache in Kerneln abzuraten. Sie erfordert eine ziemlich große Runtime-Lib und ist im Gegensatz zu z. B. [C](C.md "C") alles andere als hardwarenah. Einziger Pluspunkt hier mag die Möglichkeit der Verwendung von Inline-C (wie auch bei Eiffel) sein.
 
 Außerdem erstellt ein Sathercompiler keinen Maschinen- oder Objektcode, sondern C-Code. Hier muss also auch die Makefile noch entsprechend angepasst werden, damit nicht automatisch externe Bibliotheken des Hostbetriebssystems eingebunden werden.
 

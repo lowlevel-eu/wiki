@@ -4,14 +4,14 @@ Der **Systemlautsprecher** kann für ein Betriebssystem ganz nützlich sein, um 
 
 ## Ansteuerung
 
-Zur Steuerung der Frequenz wird der 3. Kanal des [PIT](Programmable-Interval-Timer "PIT") verwendet, man muss also vor dem Einschalten in das Latchregister des 3. Kanals des [PIT](Programmable-Interval-Timer "PIT") den richtigen Wert hineinschreiben. Um diesen Wert zu ermitteln, kann man folgende Formel benutzen: *teiler = 1193180/frequenz*.
+Zur Steuerung der Frequenz wird der 3. Kanal des [PIT](Programmable-Interval-Timer.md "PIT") verwendet, man muss also vor dem Einschalten in das Latchregister des 3. Kanals des [PIT](Programmable-Interval-Timer.md "PIT") den richtigen Wert hineinschreiben. Um diesen Wert zu ermitteln, kann man folgende Formel benutzen: *teiler = 1193180/frequenz*.
 
 Man muss aber noch dem Lautsprecher mitteilen, wie er den Ton erzeugen soll. Dafür eignet es sich, *10110110b* in das Kommandoregister zu laden, damit wird:
 
-- Kanal 3 des [PIT](Programmable-Interval-Timer "PIT") verwendet (üblich für Lautsprecher)
+- Kanal 3 des [PIT](Programmable-Interval-Timer.md "PIT") verwendet (üblich für Lautsprecher)
 - erst das Low-Byte und dann das High-Byte des Latch-Registers verwendet
 - eine symmetrische Pulsfolge erzeugt
-- das Kommandobyte binär interpretiert und nicht als [BCD](Binary-Coded-Decimal "BCD")
+- das Kommandobyte binär interpretiert und nicht als [BCD](Binary-Coded-Decimal.md "BCD")
 
 Ob man zuerst den Timer einstellt oder das Kommandoregister setzt, ist eigentlich egal, auf jeden Fall muss man anschließend den Ton anschalten und wieder ausschalten. Die Zeit dazwischen muss irgendwie überbrückt werden. Ich benutze dafür meinen Kernel-Timer, mit dem ich eine Callback-Funktion nach einer bestimmten Zeit aufrufen lassen kann.
 

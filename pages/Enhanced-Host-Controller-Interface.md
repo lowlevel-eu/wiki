@@ -4,11 +4,11 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Das EHCI ist das Interface für [USB](Universal-Serial-Bus "Universal Serial Bus")-2.0-Hostcontroller.
+Das EHCI ist das Interface für [USB](Universal-Serial-Bus.md "Universal Serial Bus")-2.0-Hostcontroller.
 
 ## Benutzung mit QEMU
 
-Ab Version 0.15 unterstützt [QEMU](QEMU "QEMU") einen virtuellen EHCI-Controller. Eine mitgelieferte Konfigurationsdatei, die einen EHCI-Controller mit UHCI-Companions erstellt, wie man ihn in echter Hardware üblicherweise antrifft, kann mit *-readconfig docs/ich9-ehci-uhci.cfg* benutzt werden.
+Ab Version 0.15 unterstützt [QEMU](QEMU.md "QEMU") einen virtuellen EHCI-Controller. Eine mitgelieferte Konfigurationsdatei, die einen EHCI-Controller mit UHCI-Companions erstellt, wie man ihn in echter Hardware üblicherweise antrifft, kann mit *-readconfig docs/ich9-ehci-uhci.cfg* benutzt werden.
 
 ## Weblinks
 

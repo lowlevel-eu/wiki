@@ -1,6 +1,6 @@
 # GPL
 
-Weiterleitung: [Lizenzen#General Public License](Lizenzen)
+Weiterleitung: [Lizenzen#General Public License](Lizenzen.md)
 
 ---
 

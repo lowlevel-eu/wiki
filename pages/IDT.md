@@ -1,6 +1,6 @@
 # IDT
 
-Weiterleitung: [Interrupt Descriptor Table](Interrupt-Descriptor-Table)
+Weiterleitung: [Interrupt Descriptor Table](Interrupt-Descriptor-Table.md)
 
 ---
 

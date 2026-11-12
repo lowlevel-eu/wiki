@@ -4,7 +4,7 @@
 
 Achtung, alles was hier steht ist von extrem eingeschränkter Nützlichkeit und man sollte sich gut überlegen ob man das wirklich implementieren will!  
 Selbst das simple FAT ist dem SFS um Längen überlegen, u.a. weil SFS keine fragmentierten Dateien unterstützt und sich daher echter Schreibzugriff nur äußerst schwer und langsam implementieren lässt!  
-Siehe dazu auf die [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/2302/index.html "Diskussion:SFS") und in den Abschnitt [Vergleich mit anderen Dateisystemen](SFS#vergleich-mit-anderen-dateisystemen "SFS")
+Siehe dazu auf die [Diskussionsseite](https://lowlevel-eu.github.io/wiki/pages/2302/index.html "Diskussion:SFS") und in den Abschnitt [Vergleich mit anderen Dateisystemen](SFS.md#vergleich-mit-anderen-dateisystemen "SFS")
 
 | SFS |  |
 | ---------------------------- | ----------------------------- |
@@ -73,7 +73,7 @@ Das SFS ist extrem simpel aufgebaut und erlaubt daher einfache Datei-Operationen
 
 Für die Implementierung einer Schreibunterstützung sind bereits einige grundlegende Operationen nötig, die mit SFS sehr mühsam und nur unsicher (Gefahr von Datenverlust und Korruption!) zu erreichen sind, z.B. das Erstellen, Vergrößern oder Verkleinern von Dateien.
 
-Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](File-Allocation-Table "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist, zumindest einfach genug damit man das in einem 512 Byte-FAT-Boot-Sektor realisieren kann).
+Auch ansonsten bietet SFS gegenüber anderen ähnlich simplen Dateisystemen, wie z.B. [FAT](File-Allocation-Table.md "FAT"), keine Vorteile. FAT kann recht flexibel mit fragmentierten Dateien umgehen und erlaubt daher einigermaßen simple Schreiboperationen. Dafür hat FAT mit seiner namensgebenden File-Alocation-Table gegenüber SFS einen etwas komplexeren Mechanismus, mit dem die Positionen der Datenblöcke auf dem Datenträger verwaltet werden. Man ist bei FAT selbst schon für das lineare Einlesen von Dateien gezwungen, einer Cluster-Kette zu folgen (was aber auch nicht so schwierig ist, zumindest einfach genug damit man das in einem 512 Byte-FAT-Boot-Sektor realisieren kann).
 
 Lange Dateinamen sind in SFS recht simpel implementiert obwohl man auch dort mehrere "Entrys" benötigt, der Name wird dann über (mehrere) "Continuation Entrys" fortgesetzt. In diesem Punkt ist FAT etwas komplexer weil es immer noch parallel den kurzen (8.3) Dateinamen gibt der nach bestimmten Regeln mit gepflegt werden muss. Dafür sind bei FAT die Fortsetzungs-Einträge als solche zu erkennen und mit einer Prüfsumme über den gesamten Dateinamen gesichert, was beides bei SFS nicht gegeben ist so das SFS hier einer höheren Gefahr von Datenfehlern ausgesetzt ist (so ein "Continuation Entry" könnte fälschlicherweise auch für was anderes gehalten werden).
 

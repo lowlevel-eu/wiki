@@ -1,6 +1,6 @@
 # IDE
 
-Weiterleitung: [AT Attachment](AT-Attachment)
+Weiterleitung: [AT Attachment](AT-Attachment.md)
 
 ---
 

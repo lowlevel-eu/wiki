@@ -1,6 +1,6 @@
 # HomixOS
 
-Weiterleitung: [Xantorix](Xantorix)
+Weiterleitung: [Xantorix](Xantorix.md)
 
 ---
 

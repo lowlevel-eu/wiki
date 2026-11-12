@@ -1,6 +1,6 @@
 # Nerdy-kernel
 
-Weiterleitung: [NerdyKernel](NerdyKernel)
+Weiterleitung: [NerdyKernel](NerdyKernel.md)
 
 ---
 

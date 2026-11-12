@@ -1,6 +1,6 @@
 # RFLAGS
 
-Weiterleitung: [EFLAGS#RFLAGS](EFLAGS#rflags)
+Weiterleitung: [EFLAGS#RFLAGS](EFLAGS.md#rflags)
 
 ---
 

@@ -8,7 +8,7 @@ LostIO ist der Name der Hauptschnittstelle, die LOST den Treibern zur Verfügung
 
 Also, damit wir das gleich geklärt haben: Bei Fragen wendet ihr euch am besten an den \#lost Kanal im euIRC (Server: irc.euirc.net, Kanal: \#lost). Alternativ könnt ihr auch hier im Forum in der Lost-Kategorie fragen. Falls Bugs gefunden werden, sollten sie über unser [Bugzilla](https://bugs.tyndur.org) gemeldet werden.
 
-LostIO ist wie oben schon gesagt eine abstrakte Schnittstelle für Treiber. Intern basiert sie auf RPC ([Remote Procedure Call](Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call") = das Aufrufen von Funktionen in anderen Prozessen), was sie sehr flexibel einsetzbar macht (Zum Beispiel können damit später (hoffentlich) Treiber auf anderen Computern angesprochen werden).
+LostIO ist wie oben schon gesagt eine abstrakte Schnittstelle für Treiber. Intern basiert sie auf RPC ([Remote Procedure Call](Interprozesskommunikation.md#rpc-remote-procedure-call "Remote Procedure Call") = das Aufrufen von Funktionen in anderen Prozessen), was sie sehr flexibel einsetzbar macht (Zum Beispiel können damit später (hoffentlich) Treiber auf anderen Computern angesprochen werden).
 
 Der Zugriff auf Treiber mit einer LostIO-Schnittstelle erfolgt über die Standard-Dateifunktionen (fopen, fread, fwrite usw.). Das heisst aber keineswegs, dass nur Treiber, die etwas mit Dateien zu tun haben, diese Schnittstelle verwenden können. Dabei wird das bewährte “alles ist eine Datei”-Konzept von Unix/Linux eingesetzt. Wir versuchen es allerdings noch ein wenig konsequenter umzusetzen.
 

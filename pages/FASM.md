@@ -1,6 +1,6 @@
 # FASM
 
-Weiterleitung: [Flat Assembler](Flat-Assembler)
+Weiterleitung: [Flat Assembler](Flat-Assembler.md)
 
 ---
 

@@ -11,14 +11,14 @@ Scheint nicht mehr weiterentwickelt zu werden --[DerHartmut](https://lowlevel-eu
 |  |  |
 | Entwickler: | Quåko |
 | Akt. Version: | Aktuell keine |
-| [Lizenz](Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Hybrid Kernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") und [Assembler](Assembler "Assembler") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Hybrid Kernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [C++](C%2B%2B.md "C++") und [Assembler](Assembler.md "Assembler") |
 | API: | Keins |
 | Binärformat: | ?? |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 <http://quako-company.blogspot.com/>

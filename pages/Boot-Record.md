@@ -1,6 +1,6 @@
 # Boot Record
 
-Weiterleitung: [Bootsektor](Bootsektor)
+Weiterleitung: [Bootsektor](Bootsektor.md)
 
 ---
 

@@ -11,14 +11,14 @@ Es gibt hier zwar keine offizielle Schöpfungshöhe im Wik, aber es wird scheinb
 |  |  |
 | Entwickler: | Sebo |
 | Akt. Version: | Aktuell keine |
-| [Lizenz](Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
 | Plattform: | ??? |
-| [Kernelart](Kernel "Kernel"): | Hybrid Kernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
+| [Kernelart](Kernel.md "Kernel"): | Hybrid Kernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [C++](C%2B%2B.md "C++") |
 | API: | Keins |
 | Binärformat: | \- |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 <http://sebo-os.blogspot.com/>

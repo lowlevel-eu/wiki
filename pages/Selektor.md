@@ -1,6 +1,6 @@
 # Selektor
 
-Weiterleitung: [Global Descriptor Table#Selektoren](Global-Descriptor-Table#selektoren)
+Weiterleitung: [Global Descriptor Table#Selektoren](Global-Descriptor-Table.md#selektoren)
 
 ---
 

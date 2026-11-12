@@ -2,7 +2,7 @@
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| « [Teil 5 - Interrupts](Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") » |
+| « [Teil 5 - Interrupts](Teil-5-Interrupts.md "Teil 5 - Interrupts") | **Navigation** | [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung.md "Teil 7 - Physische Speicherverwaltung") » |
 
 ## Ziel
 
@@ -171,7 +171,7 @@ Das war's. Beim nächsten Timerinterrupt fängt der Kernel fröhlich an, Multita
 
 So schön es ist, jetzt mehrere Programm gleichzeitig laufen lassen zu können, perfekt ist das alles noch nicht. Die Tasks laufen alle in Ring 0, haben also alle Privilegien, die sie sich wünschen. Was, wenn ein Programm einfach Interrupts ausschaltet? Das System wäre dann lahmgelegt. Die Programme müssen also nach Ring 3.
 
-Was ändert sich für uns mit Ring-3-Tasks? An sich ist es nicht viel. Wie oben schon angemerkt, kommt zum bereits Bekannten nur noch ein Stackwechsel dazu. Wenn der Prozessor bei einem Interrupt in Ring 3 ist, also einen Ringwechsel durchführen muss, sichert er esp und ss auf den Stack (wie es in struct cpu_state schon vorgesehen ist). Beim Zurückspringen aus dem Interrupt mittels *iret* stellt er diese Register auch wieder her. Nachdem er die Register gesichert hat, lädt der Prozessor den Kernel-Stack (bestehend aus ss und esp). Diese beiden Werte kommen aus dem aktiven [Task State Segment](Task-State-Segment "Task State Segment") (TSS).
+Was ändert sich für uns mit Ring-3-Tasks? An sich ist es nicht viel. Wie oben schon angemerkt, kommt zum bereits Bekannten nur noch ein Stackwechsel dazu. Wenn der Prozessor bei einem Interrupt in Ring 3 ist, also einen Ringwechsel durchführen muss, sichert er esp und ss auf den Stack (wie es in struct cpu_state schon vorgesehen ist). Beim Zurückspringen aus dem Interrupt mittels *iret* stellt er diese Register auch wieder her. Nachdem er die Register gesichert hat, lädt der Prozessor den Kernel-Stack (bestehend aus ss und esp). Diese beiden Werte kommen aus dem aktiven [Task State Segment](Task-State-Segment.md "Task State Segment") (TSS).
 
 Aber fangen wir beim leichten Teil an. Stellen wir den Taskzustand auf Ring 3 um. Dazu brauchen wir jetzt zusätzlich zum Kernelstack jedes Tasks, der für den Prozessorzustand und die Ausführung der Interrupt-Handler benutzt wird, einen zweiten getrennten Stack für jeden Task, auf dem dieser beliebig arbeiten kann. Außerdem benutzen wir jetzt die Ring-3-Segmente aus der GDT:
 
@@ -214,7 +214,7 @@ Code und Stack wären damit abgedeckt, aber wir brauchen auch noch die Datensegm
     mov %ax, %es
 ```
 
-Als nächstes legen wir das TSS an. Der Aufbau wird im Artikel [Task State Segment](Task-State-Segment "Task State Segment") beschrieben, wir brauchen davon nur die Felder esp0 und ss0. ss0 können wir konstant auf unser Ring-0-Datensegment setzen, esp0 muss für jeden Task angepasst werden.
+Als nächstes legen wir das TSS an. Der Aufbau wird im Artikel [Task State Segment](Task-State-Segment.md "Task State Segment") beschrieben, wir brauchen davon nur die Felder esp0 und ss0. ss0 können wir konstant auf unser Ring-0-Datensegment setzen, esp0 muss für jeden Task angepasst werden.
 
 ``` c
 static uint32_t tss[32] = { 0, 0, 0x10 };
@@ -243,7 +243,7 @@ Damit wäre auch der Userspace implementiert. Wer möchte, kann das gern durch e
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| « [Teil 5 - Interrupts](Teil-5-Interrupts "Teil 5 - Interrupts") | **Navigation** | [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") » |
+| « [Teil 5 - Interrupts](Teil-5-Interrupts.md "Teil 5 - Interrupts") | **Navigation** | [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung.md "Teil 7 - Physische Speicherverwaltung") » |
 
 ---
 

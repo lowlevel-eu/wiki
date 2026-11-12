@@ -5,27 +5,27 @@
 |  |  |
 | Entwickler: | [Christian Hülsemeyer](https://lowlevel-eu.github.io/wiki/pages/2299/index.html "Benutzer:ChiSaw") |
 | Akt. Version: | 0.1 Alpha |
-| [Lizenz](Lizenzen "Lizenzen"): | [BSD](Lizenzen#bsd-lizenz "Lizenz") |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [BSD](Lizenzen.md#bsd-lizenz "Lizenz") |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [Assembler](Assembler "Assembler") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Microkernel](Kernel.md#mikrokernel "Microkernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [Assembler](Assembler.md "Assembler") |
 | API: | Noch keine vorhanden |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Noch keine |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Noch keine |
 | Homepage |  |
 
 <http://chisaw.de/?page_id=17>
 
   
-COBE (Computer Betriebsystem) ist ein System mit Ziel eines [Microkernels](Kernel "Kernel"). Derzeit ist das System in den Sprachen [C](C "C") und [Assembler](Assembler "Assembler") geschrieben. Entwickelt wird es von Christian Hülsemeyer. Das Image des ersten Releases ist auf der Projektseite zu finden.
+COBE (Computer Betriebsystem) ist ein System mit Ziel eines [Microkernels](Kernel.md "Kernel"). Derzeit ist das System in den Sprachen [C](C.md "C") und [Assembler](Assembler.md "Assembler") geschrieben. Entwickelt wird es von Christian Hülsemeyer. Das Image des ersten Releases ist auf der Projektseite zu finden.
 
 ## Aufbau
 
 COBE besteht aus folgenden Elementen:
 
 - COBE besteht aus dem Kernel, da das System nun GRUB als Bootloader benutzt.
-- Eine [Shell](Shell "Shell") sorgt für die Kommunikation zum Benutzer. Derzeit werden an relevanten Befehlen nur folgende überstützt: *help*, *cd*, *dir*, *mkdir*, *del*, *rechne*
+- Eine [Shell](Shell.md "Shell") sorgt für die Kommunikation zum Benutzer. Derzeit werden an relevanten Befehlen nur folgende überstützt: *help*, *cd*, *dir*, *mkdir*, *del*, *rechne*
 
 ## Kernel
 
@@ -36,19 +36,19 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 **COBE 0.1 Alpha unstable:**
 
 - Grundinitialisierung von COBE
-- [GRUB](Grand-Unified-Bootloader "GRUB")
+- [GRUB](Grand-Unified-Bootloader.md "GRUB")
 - Bootscreen (derzeit ausgeschaltet)
-- [GDT](Global-Descriptor-Table "GDT")
-- [IDT](Interrupt-Descriptor-Table "IDT"), ISR
-- [PIC](Programmable-Interrupt-Controller "PIC") Remap
-- [Keyboard-Treiber](Keyboard-Controller "KBC")
+- [GDT](Global-Descriptor-Table.md "GDT")
+- [IDT](Interrupt-Descriptor-Table.md "IDT"), ISR
+- [PIC](Programmable-Interrupt-Controller.md "PIC") Remap
+- [Keyboard-Treiber](Keyboard-Controller.md "KBC")
 - Shell
-- [CMOS](CMOS "CMOS")
-- [Multitasking](Multitasking "Multitasking")
-- [FDC](Floppy-Disk-Controller "FDC")
-- [FAT12](File-Allocation-Table "FAT")
-- [DMA](Direct-Memory-Access "DMA")
-- [Paging](Paging "Paging")
+- [CMOS](CMOS.md "CMOS")
+- [Multitasking](Multitasking.md "Multitasking")
+- [FDC](Floppy-Disk-Controller.md "FDC")
+- [FAT12](File-Allocation-Table.md "FAT")
+- [DMA](Direct-Memory-Access.md "DMA")
+- [Paging](Paging.md "Paging")
 - Speicherverwaltung
 - System-Calls
 
@@ -56,8 +56,8 @@ Der Kernel von COBE verfolgt den Ansatz eines Mikrokernels. Dabei ist derzeit da
 
 **COBE 0.2:**
 
-- [FAT32](File-Allocation-Table "FAT")
-- [ATA](AT-Attachment "ATA")
+- [FAT32](File-Allocation-Table.md "FAT")
+- [ATA](AT-Attachment.md "ATA")
 - Dateistream
 - C Library
 - GUI-Demo

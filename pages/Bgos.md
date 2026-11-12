@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Ulrich Geis |
 | Akt. Version: | 5.0 beta |
-| [Lizenz](Lizenzen "Lizenzen"): | Proprietär |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | ASM |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolithischer Kernel](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | ASM |
 | API: | BGOS API |
 | Binärformat: | \- |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 [BGOS](http://www.beepsoft.de)

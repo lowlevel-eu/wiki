@@ -2,15 +2,15 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| « [ARM-OS-Dev für Einsteiger](ARM-OS-Dev-f%C3%BCr-Einsteiger "ARM-OS-Dev für Einsteiger") | **Navigation** | [ARM-OS-Dev Teil 2 – Assembler 101](ARM-OS-Dev-Teil-2-%E2%80%93-Assembler-101 "ARM-OS-Dev Teil 2 – Assembler 101") » |
+| « [ARM-OS-Dev für Einsteiger](ARM-OS-Dev-f%C3%BCr-Einsteiger.md "ARM-OS-Dev für Einsteiger") | **Navigation** | [ARM-OS-Dev Teil 2 – Assembler 101](ARM-OS-Dev-Teil-2-%E2%80%93-Assembler-101.md "ARM-OS-Dev Teil 2 – Assembler 101") » |
 
 ## Ziel, Computer, Betriebssystem, Editor, Versionsverwaltung
 
-Hier gelten die gleichen Regeln wie in „[Teil 1 - Entwicklungsumgebung](Teil-1-Entwicklungsumgebung "Teil 1 - Entwicklungsumgebung")“ der x86-Reihe.
+Hier gelten die gleichen Regeln wie in „[Teil 1 - Entwicklungsumgebung](Teil-1-Entwicklungsumgebung.md "Teil 1 - Entwicklungsumgebung")“ der x86-Reihe.
 
 ## Compiler
 
-Wenn man nicht gerade auf einem ARM-Linux entwickelt, benötigt man einen Crosscompiler, um ARM-Programme und damit auch ein ARM-Betriebssystem erstellen zu können. Zusätzlich sind auch Cross-Binutils nötig. Letztere bekommt man relativ häufig von der Distribution als vorkompiliertes Paket (mit Namen wie „cross-arm-binutils“), ersteres eher selten. Der Artikel [ARM Cross-Compiler](ARM-Cross-Compiler "ARM Cross-Compiler") beschreibt, wie man einen Cross-GCC und Cross-Binutils unter Linux erstellt (unter Windows könnte dies etwas schwieriger werden, sollte aber ähnlich ablaufen).
+Wenn man nicht gerade auf einem ARM-Linux entwickelt, benötigt man einen Crosscompiler, um ARM-Programme und damit auch ein ARM-Betriebssystem erstellen zu können. Zusätzlich sind auch Cross-Binutils nötig. Letztere bekommt man relativ häufig von der Distribution als vorkompiliertes Paket (mit Namen wie „cross-arm-binutils“), ersteres eher selten. Der Artikel [ARM Cross-Compiler](ARM-Cross-Compiler.md "ARM Cross-Compiler") beschreibt, wie man einen Cross-GCC und Cross-Binutils unter Linux erstellt (unter Windows könnte dies etwas schwieriger werden, sollte aber ähnlich ablaufen).
 
 ## Emulator
 

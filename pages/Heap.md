@@ -1,6 +1,6 @@
 # Heap
 
-Weiterleitung: [Heapverwaltung](Heapverwaltung)
+Weiterleitung: [Heapverwaltung](Heapverwaltung.md)
 
 ---
 

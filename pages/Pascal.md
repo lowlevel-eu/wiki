@@ -6,7 +6,7 @@
 | Inlineassembler: | Ja |
 | Compiler: | FreePascal, Borland Delphi |
 | Spracheneigenschaften |  |
-| Plattformen: | [Windows](Windows "Windows") (Hier vor allem Delphi), [Linux](Linux "Linux"), u.a. |
+| Plattformen: | [Windows](Windows.md "Windows") (Hier vor allem Delphi), [Linux](Linux.md "Linux"), u.a. |
 | Beispielkernel in der Sprache: | s.u. |
 | Homepage |  |
 
@@ -46,7 +46,7 @@ begin
 
 end;
 
-end. \</pascal\> Die Zeile *screen^\[1, 1\].attr := \$07;* definiert die Zeichenfarbe, in diesem Fall Grau auf Schwarz. Wollen wir jetzt aber z.B. einen Bluescreen-Zeichenhintergrund haben müssten wir *screen^\[1, 1\].attr := \$1F;* nehmen. Für weitere Farben siehe [Textausgabe](Textausgabe "Textausgabe").
+end. \</pascal\> Die Zeile *screen^\[1, 1\].attr := \$07;* definiert die Zeichenfarbe, in diesem Fall Grau auf Schwarz. Wollen wir jetzt aber z.B. einen Bluescreen-Zeichenhintergrund haben müssten wir *screen^\[1, 1\].attr := \$1F;* nehmen. Für weitere Farben siehe [Textausgabe](Textausgabe.md "Textausgabe").
 
 Das war der einfache Teil. Als nächstes brauchen wir eine eigene system-Unit, die allerdings für den Anfang nur zwei Stubs bereitstellen muss. **system.pas**: \<pascal\>unit system;
 
@@ -110,7 +110,7 @@ Anschließend müssen diese fünf Dateien kompiliert/assembliert und gelinkt wer
     fpc kernel
     ld -Ttext=0x100000 *.o -o kernel
 
-Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann den Kernel nach dem linken sofort mit [QEMU](QEMU "QEMU") ausführen:
+Wer jetzt neugierig ist was der Kernel alles so auf dem Bildschirm bringt, kann den Kernel nach dem linken sofort mit [QEMU](QEMU.md "QEMU") ausführen:
 
     qemu -kernel kernel
 

@@ -1,6 +1,6 @@
 # COFF
 
-Weiterleitung: [Microsoft Portable Executable and Common Object File Format](Microsoft-Portable-Executable-and-Common-Object-File-Format)
+Weiterleitung: [Microsoft Portable Executable and Common Object File Format](Microsoft-Portable-Executable-and-Common-Object-File-Format.md)
 
 ---
 

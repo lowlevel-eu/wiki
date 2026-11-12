@@ -1,6 +1,6 @@
 # PM
 
-Weiterleitung: [Protected Mode](Protected-Mode)
+Weiterleitung: [Protected Mode](Protected-Mode.md)
 
 ---
 

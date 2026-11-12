@@ -2,7 +2,7 @@
 
 Hier sind die wichtigsten Links, die man als Týndur-Benutzer und -Entwickler benötigen kann. Alles praktisch zusammengefasst auf einer Seite.
 
-Ausführliche Informationen zum Entwicklungsprozess gibt es unter [Týndur/Entwicklung](T%C3%BDndur-Entwicklung "Týndur/Entwicklung").
+Ausführliche Informationen zum Entwicklungsprozess gibt es unter [Týndur/Entwicklung](T%C3%BDndur-Entwicklung.md "Týndur/Entwicklung").
 
 ## Downloads
 
@@ -18,7 +18,7 @@ Die Clone-Url lautet:
 
 ## IRC
 
-*Siehe auch: [IRC](IRC "IRC")*
+*Siehe auch: [IRC](IRC.md "IRC")*
 
 Das Týndur-Team ist regelmäßig im Channel **\#lost** im euIRC-Netzwerk zu erreichen. (Quicklink: irc://irc.euirc.net/lost)
 

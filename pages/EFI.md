@@ -1,6 +1,6 @@
 # EFI
 
-Weiterleitung: [Unified Extensible Firmware Interface](Unified-Extensible-Firmware-Interface)
+Weiterleitung: [Unified Extensible Firmware Interface](Unified-Extensible-Firmware-Interface.md)
 
 ---
 

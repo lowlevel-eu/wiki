@@ -1,6 +1,6 @@
 # Address Resolution Protocol
 
-Das Address Resolution Protocol (ARP) dient dazu, Netzwerkadressen zu physikalischen Adressen (bzw. Hardwareadressen) aufzulösen. Es wird fast ausschließlich in [Ethernetnetzwerken](Ethernet "Ethernet") verwendet, um [IPv4](Internet-Protocol "Internet Protocol")-Adressen zu MAC-Adressen aufzulösen. Für [IPv6](Internet-Protocol "Internet Protocol") wird ARP nicht mehr verwendet, dort werden die neuen "*Neighbor Discovery*"-Mechanismen benutzt.
+Das Address Resolution Protocol (ARP) dient dazu, Netzwerkadressen zu physikalischen Adressen (bzw. Hardwareadressen) aufzulösen. Es wird fast ausschließlich in [Ethernetnetzwerken](Ethernet.md "Ethernet") verwendet, um [IPv4](Internet-Protocol.md "Internet Protocol")-Adressen zu MAC-Adressen aufzulösen. Für [IPv6](Internet-Protocol.md "Internet Protocol") wird ARP nicht mehr verwendet, dort werden die neuen "*Neighbor Discovery*"-Mechanismen benutzt.
 
 ## Ablauf
 

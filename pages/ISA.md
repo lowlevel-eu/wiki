@@ -1,6 +1,6 @@
 # ISA
 
-Weiterleitung: [Industry Standard Architecture](Industry-Standard-Architecture)
+Weiterleitung: [Industry Standard Architecture](Industry-Standard-Architecture.md)
 
 ---
 

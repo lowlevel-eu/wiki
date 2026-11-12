@@ -1,6 +1,6 @@
 # PAT
 
-Mit der *Page Attribute Table* ist es möglich, das Caching von [Pages](Paging "Paging") genauer einzustellen.
+Mit der *Page Attribute Table* ist es möglich, das Caching von [Pages](Paging.md "Paging") genauer einzustellen.
 
 ## Mögliche x86-Cachemodi
 
@@ -30,7 +30,7 @@ Normalerweise gibt es für jede Page genau zwei Bits, die dafür genutzt werden 
 
 Um die anderen oben genannten Cachemodi zu verwenden, müssen entweder die MTRRs oder die PAT benutzt werden. Die PAT ist eine Tabelle, die die Werte der PAT-, CD- und WT-Bits einer Page ihrem Cachemode zuordnet. Dabei werden diese drei Bits zu einem Wert von 0 bis 7 kombiniert, der dann auf einen PAT-Eintrag zeigt, welcher den Cachemodus enthält. Dabei ist WT Bit 0 (das niederwertigste Bit), CD Bit 1 und PAT Bit 2 (das höchstwertige Bit).
 
-Die acht PAT-Einträge werden im IA32_PAT-[MSR](Machine-Specific-Register "MSR") gesetzt (Index 0x277). Sein Aufbau ist wie folgt:
+Die acht PAT-Einträge werden im IA32_PAT-[MSR](Machine-Specific-Register.md "MSR") gesetzt (Index 0x277). Sein Aufbau ist wie folgt:
 
 | Bits | Bedeutung |
 | --------- | ------------------------------------------------- |
@@ -83,7 +83,7 @@ Dies führt genau zur oben genannten Defaultbelegung der CD- und WT-Bits. Das PA
 
 ### Unterstützung des Prozessors
 
-Die PAT ist seit Pentium-III-Prozessoren vorhanden. Ob eine CPU das Feature unterstützt, kann mittels des [CPUID-Befehls](CPUID#funktion-0x0000_0001 "CPUID") getestet werden.
+Die PAT ist seit Pentium-III-Prozessoren vorhanden. Ob eine CPU das Feature unterstützt, kann mittels des [CPUID-Befehls](CPUID.md#funktion-0x0000_0001 "CPUID") getestet werden.
 
 ---
 

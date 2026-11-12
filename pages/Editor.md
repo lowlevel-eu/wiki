@@ -2,7 +2,7 @@
 
 Ein **Editor** ermöglicht das Bearbeiten von einfachen Textdateien. Im Gegensatz zu Textverarbeitungsprogrammen werden die Dokumente von einem Editor jedoch als reiner Text gespeichert, also völlig ohne z.B. Formatierungen (außer natürlich Tabs o.ä.).
 
-Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei [Windows](Windows "Windows") dabei ist, jedoch bevorzugen fast alle Programmierer einen Editor mit mehr Features. Außerdem unterstützt Notepad keine Unix-Zeilenumbrüche, daher ist ein verbesserter Editor für das gemeinschaftliche Arbeiten unter Windows obligatorisch.
+Ein Texteditor kann zwar so simpel sein wie Microsofts Notepad, der bei [Windows](Windows.md "Windows") dabei ist, jedoch bevorzugen fast alle Programmierer einen Editor mit mehr Features. Außerdem unterstützt Notepad keine Unix-Zeilenumbrüche, daher ist ein verbesserter Editor für das gemeinschaftliche Arbeiten unter Windows obligatorisch.
 
 Einige Texteditoren bieten nur wenige erweiterte Optionen, wie zum Beispiel Syntax-Highlighting, andere lassen sich durch verschiedenste Plugins und Einstellungsmöglichkeiten mit einer leichtgewichtigen IDE vergleichen. Dieser Artikel listet verschiedene Texteditoren auf.
 

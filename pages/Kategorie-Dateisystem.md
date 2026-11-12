@@ -1,6 +1,6 @@
 # Kategorie:Dateisystem
 
-Die ist eine Übersicht einiger [Dateisysteme](Dateisystem "Dateisystem").
+Die ist eine Übersicht einiger [Dateisysteme](Dateisystem.md "Dateisystem").
 
 ## Kategorieübersicht
 
@@ -8,14 +8,14 @@ Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie w
 
 ### Seiten
 
-- [Ext2](Ext2)
-- [Ext3](Ext3)
-- [Ext4](Ext4)
-- [File Allocation Table](File-Allocation-Table)
-- [ISO9660](ISO9660)
-- [NTFS](NTFS)
-- [SFS](SFS)
-- [Virtuelles Dateisystem](Virtuelles-Dateisystem)
+- [Ext2](Ext2.md)
+- [Ext3](Ext3.md)
+- [Ext4](Ext4.md)
+- [File Allocation Table](File-Allocation-Table.md)
+- [ISO9660](ISO9660.md)
+- [NTFS](NTFS.md)
+- [SFS](SFS.md)
+- [Virtuelles Dateisystem](Virtuelles-Dateisystem.md)
 
 
 ---

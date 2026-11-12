@@ -23,7 +23,7 @@
 - Fernsteuerung der VM via RDP, inklusive Support für USB über RDP
 - Gastunterstützung, um unter offiziell unterstützen Betriebssystemen Geschwindigkeitsvorteile und weitere Features anbieten zu können.
 - OpenGL-Unterstützung (derzeit nur für die 32-Bit-Versionen von Windows XP und Windows Vista sowie Linux und Solaris)
-- Experimenteller Support für [EFI (Extensible Firmware Interface)](Unified-Extensible-Firmware-Interface "Extensible Firmware Interface")
+- Experimenteller Support für [EFI (Extensible Firmware Interface)](Unified-Extensible-Firmware-Interface.md "Extensible Firmware Interface")
 - Debugger
 
 Befehlssatzerweiterungen für Gäste:
@@ -33,27 +33,27 @@ Befehlssatzerweiterungen für Gäste:
 ## Emulierte Hardware
 
 - ACPI, inklusive ACPI Power Status (mit Anbindung an Host)
-- [I/O_APIC](I-O-Advanced-Programmable-Interrupt-Controller "I/O APIC")
-- VGA- und [VBE](VESA-BIOS-Extensions "VBE")-kompatible Grafikkarte
-- [Floppy](Floppy-Disk-Controller "Floppy Disk Controller")
+- [I/O_APIC](I-O-Advanced-Programmable-Interrupt-Controller.md "I/O APIC")
+- VGA- und [VBE](VESA-BIOS-Extensions.md "VBE")-kompatible Grafikkarte
+- [Floppy](Floppy-Disk-Controller.md "Floppy Disk Controller")
 - IDE Controller:
   - PIIX3
   - PIIX4
   - ICH6
 - SATA AHCI Controller Intel ICH8M/ICH8M-E
 - Soundkarten
-  - [AC'97](AC97 "AC97") Audio (Intel)
+  - [AC'97](AC97.md "AC97") Audio (Intel)
   - SoundBlaster 16
   - Intel HD Audio
-- [Netzwerkkarten](Kategorie-Netzwerkkarte "Kategorie:Netzwerkkarte"):
-  - [PCnet FAST III](AMD-PCnet "AMD PCnet")
+- [Netzwerkkarten](Kategorie-Netzwerkkarte.md "Kategorie:Netzwerkkarte"):
+  - [PCnet FAST III](AMD-PCnet.md "AMD PCnet")
   - PCnet-PCI II
   - Intel PRO/1000 MT Desktop
   - Intel PRO/1000 T Server
-- [USB](Universal-Serial-Bus "Universal Serial Bus")-Controller:
-  - [OHCI](Open-Host-Controller-Interface "Open Host Controller Interface")
-  - [EHCI](Enhanced-Host-Controller-Interface "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
-  - [xHCI](Extensible-Host-Controller-Interface "XHCI") (Nur per Extension Pack, ab Version 5)
+- [USB](Universal-Serial-Bus.md "Universal Serial Bus")-Controller:
+  - [OHCI](Open-Host-Controller-Interface.md "Open Host Controller Interface")
+  - [EHCI](Enhanced-Host-Controller-Interface.md "Enhanced Host Controller Interface") (USB 2.0, nur per Extension Pack)
+  - [xHCI](Extensible-Host-Controller-Interface.md "XHCI") (Nur per Extension Pack, ab Version 5)
 - Serielle Schnittstellen (max. 2)
 
 ## Debugger

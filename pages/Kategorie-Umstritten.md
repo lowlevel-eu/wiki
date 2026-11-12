@@ -6,7 +6,7 @@
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Wiki-Verwaltung](Kategorie-Wiki-Verwaltung)
+Übergeordnete Kategorien: [Wiki-Verwaltung](Kategorie-Wiki-Verwaltung.md)
 
 Im archivierten Bestand sind dieser Kategorie keine Seiten zugeordnet.
 

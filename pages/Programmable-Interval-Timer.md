@@ -19,7 +19,7 @@ Der PIT besitzt drei verschiedene *Channels*, die jeweils mit unterschiedlichen 
 
 ### Channel 0
 
-Dieser Channel ist mit dem [PIC](Programmable-Interrupt-Controller "PIC") verbunden und löst je nach Modus in regelmäßigen Abständen den [IRQ 0](Programmable-Interrupt-Controller#irq-tabelle "IRQ") aus. Standardmäßg ist der PIT darauf initialisiert, alle 54,9254 ms den IRQ 0 auszulösen (das entspricht einer Frequenz von ungefähr 18,2 Hz). Im [Real Mode](Real-Mode "Real Mode") hat das BIOS für den IRQ 0 eine entsprechende [ISR](Interrupt-Service-Routine "ISR") eingerichtet, die bei jedem Aufruf einen 16-Bit-Zähler an der Adresse 0000:046C erhöht.
+Dieser Channel ist mit dem [PIC](Programmable-Interrupt-Controller.md "PIC") verbunden und löst je nach Modus in regelmäßigen Abständen den [IRQ 0](Programmable-Interrupt-Controller.md#irq-tabelle "IRQ") aus. Standardmäßg ist der PIT darauf initialisiert, alle 54,9254 ms den IRQ 0 auszulösen (das entspricht einer Frequenz von ungefähr 18,2 Hz). Im [Real Mode](Real-Mode.md "Real Mode") hat das BIOS für den IRQ 0 eine entsprechende [ISR](Interrupt-Service-Routine.md "ISR") eingerichtet, die bei jedem Aufruf einen 16-Bit-Zähler an der Adresse 0000:046C erhöht.
 
 ### Channel 1
 
@@ -27,7 +27,7 @@ Dieser Channel wurde früher verwendet, um den Arbeitsspeicher zu synchronisiere
 
 ### Channel 2
 
-Dieser Channel ist mit dem [Systemlautsprecher](Systemlautsprecher "Systemlautsprecher") verbunden und bestimmt die Frequenz des ausgegebenen Tons.
+Dieser Channel ist mit dem [Systemlautsprecher](Systemlautsprecher.md "Systemlautsprecher") verbunden und bestimmt die Frequenz des ausgegebenen Tons.
 
 ## Modi
 
@@ -65,9 +65,9 @@ Zur Initialisierung muss ein Byte an den Port 0x43 gesendet werden:
 
 | Bit | Bedeutung | Mögliche Werte |
 | ----- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | Counterformat | 0: binär, 1: [BCD](Binary-Coded-Decimal "BCD") |
+| 0 | Counterformat | 0: binär, 1: [BCD](Binary-Coded-Decimal.md "BCD") |
 | 1-3 | Modusnummer (siehe oben) | 0-5, alle anderen sind nicht definiert |
-| 4,5 | Lesen/Schreiben des Counterregisters | 00: Wert ist in einem internen Register, 01:nur [LSB](Bin%C3%A4re-Datentypen#msb-und-lsb "LSB"), 10: nur [MSB](Bin%C3%A4re-Datentypen#msb-und-lsb "MSB"), 11: [LSB](Bin%C3%A4re-Datentypen#msb-und-lsb "LSB") dann [MSB](Bin%C3%A4re-Datentypen#msb-und-lsb "MSB") |
+| 4,5 | Lesen/Schreiben des Counterregisters | 00: Wert ist in einem internen Register, 01:nur [LSB](Bin%C3%A4re-Datentypen.md#msb-und-lsb "LSB"), 10: nur [MSB](Bin%C3%A4re-Datentypen.md#msb-und-lsb "MSB"), 11: [LSB](Bin%C3%A4re-Datentypen.md#msb-und-lsb "LSB") dann [MSB](Bin%C3%A4re-Datentypen.md#msb-und-lsb "MSB") |
 | 6,7 | Channel, der geändert werden soll | 0-2 |
 
 Nachdem der entsprechende Channel des PITs (re-)initialisiert wurde, kann das Counter-Register geschrieben werden.

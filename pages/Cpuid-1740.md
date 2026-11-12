@@ -1,6 +1,6 @@
 # Cpuid
 
-Weiterleitung: [CPUID](CPUID)
+Weiterleitung: [CPUID](CPUID.md)
 
 ---
 

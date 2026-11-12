@@ -5,14 +5,14 @@
 | [<img src="assets/Paloxena.png" width="158" height="158" alt="Paloxena.png" />](assets/Paloxena.png) |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | — |
-| [Lizenz](Lizenzen "Lizenzen"): | [GPL](Lizenzen "GPL") |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [GPL](Lizenzen.md "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86"), [ARM](ARM "ARM") |
-| [Kernelart](Kernel "Kernel"): | Monolith |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
+| Plattform: | [i386](X86.md "X86"), [ARM](ARM.md "ARM") |
+| [Kernelart](Kernel.md "Kernel"): | Monolith |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
 | API: | Bis kernel3 POSIX-ähnlich; ab 3.5 nativ mit POSIX-Wrappern |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | — |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | — |
 | Homepage |  |
 
 [Gitorious](http://gitorious.org/paloxena)  
@@ -27,7 +27,7 @@ paloxena1 ist das „ursprüngliche“ Paloxena, das geschrieben wurde, weil MyX
 
 ### Programme
 
-- [FASM](Flat-Assembler "FASM") 1.69.08: Ein Assembler mit Intelsyntax
+- [FASM](Flat-Assembler.md "FASM") 1.69.08: Ein Assembler mit Intelsyntax
 - µsh 0.002: Die Shell (portiert von MyXomycota)
 - Paloxoreutils:
   - ls
@@ -57,7 +57,7 @@ Erwähnenswert ist das geplante Syscallinterface. Nachdem ich in paloxena1 berei
 
 ### ppp
 
-Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Compilieren für Linux ist) gibt es auch ein eigenes Repo, genannt „ppp“, kurz für „Paloxena's Patched Packages“ (ja, der Name klingt absichtlich so bescheuert). Es ist lbuilds von [týndur](T%C3%BDndur "Týndur") nachempfunden. „Portiert“ wurden bisher folgende Programme (wenn auch mehr schlecht als recht):
+Zum „Crosscompilieren“ (das ja dank der Syscalls eigentlich ein natives Compilieren für Linux ist) gibt es auch ein eigenes Repo, genannt „ppp“, kurz für „Paloxena's Patched Packages“ (ja, der Name klingt absichtlich so bescheuert). Es ist lbuilds von [týndur](T%C3%BDndur.md "Týndur") nachempfunden. „Portiert“ wurden bisher folgende Programme (wenn auch mehr schlecht als recht):
 
 - *dash* 0.5.5.1 (Version der Almquist Shell)
 - *FASM* 1.69.11 (s. o.)
@@ -86,7 +86,7 @@ Damit das nicht alles war, hier noch ein Screenshot von der GBA-Version direkt n
 
 ![pal4-gba1.png](http://xanclic.bplaced.net/imgs/pal4-gba1.png)
 
-Wie man evtl. erkennen kann, unterstützt paloxena4 wie auch seine Vorgänger [CDI](Common-Driver-Interface "CDI"), bisher allerdings nur CDI.audio (Man beachte das kleine „cdi.audio“ in Zeile 9). Für den GBA existiert auch ein entsprechender Treiber.
+Wie man evtl. erkennen kann, unterstützt paloxena4 wie auch seine Vorgänger [CDI](Common-Driver-Interface.md "CDI"), bisher allerdings nur CDI.audio (Man beachte das kleine „cdi.audio“ in Zeile 9). Für den GBA existiert auch ein entsprechender Treiber.
 
 ---
 

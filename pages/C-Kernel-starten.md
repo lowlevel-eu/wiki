@@ -2,19 +2,19 @@
 
 **Warnung**
 
-Es wird davon abgeraten dieses Tutorial zu verwenden. Empfohlen wird von unserer Seite aus [OS-Dev für Einsteiger](OS-Dev-f%C3%BCr-Einsteiger "OS-Dev für Einsteiger") und das dort gelinkte Tutorial [C-Kernel mit GRUB](C-Kernel-mit-GRUB "C-Kernel mit GRUB").
+Es wird davon abgeraten dieses Tutorial zu verwenden. Empfohlen wird von unserer Seite aus [OS-Dev für Einsteiger](OS-Dev-f%C3%BCr-Einsteiger.md "OS-Dev für Einsteiger") und das dort gelinkte Tutorial [C-Kernel mit GRUB](C-Kernel-mit-GRUB.md "C-Kernel mit GRUB").
 
   
 
 ## Vorwort
 
-Da im letzten Tutorial ([Protected Mode](Protected-Mode "Protected Mode")) es leider nicht mehr ganz geklappt hat schiebe ich dieses Tutorial noch nach. Hier werde ich zeigen wie man einen eigenen [Kernel](Kernel "Kernel") der in [C](C "C") geschrieben ist starten kann. Auch dazu ist etwas Arbeit nötig und meine Methode ist vielleicht nicht die bequemste, jedoch funktioniert sie und ich werde auch wieder selbst geschriebene Tools bereitstellen, um die Arbeit möglichst zu erleichtern.
+Da im letzten Tutorial ([Protected Mode](Protected-Mode.md "Protected Mode")) es leider nicht mehr ganz geklappt hat schiebe ich dieses Tutorial noch nach. Hier werde ich zeigen wie man einen eigenen [Kernel](Kernel.md "Kernel") der in [C](C.md "C") geschrieben ist starten kann. Auch dazu ist etwas Arbeit nötig und meine Methode ist vielleicht nicht die bequemste, jedoch funktioniert sie und ich werde auch wieder selbst geschriebene Tools bereitstellen, um die Arbeit möglichst zu erleichtern.
 
   
 
 ## Booten
 
-Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](Bootloader "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader lädt eine binäre Datei aus dem Hauptverzeichnis einer Diskette, welche mit dem [FAT12](File-Allocation-Table "File Allocation Table") [Dateisystem](Dateisystem "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
+Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits fertig [Bootloader](Bootloader.md "Bootloader") die einen großen Umfang an Funktionen bieten. Ich bin jedoch eher der Ansicht das man es selbst machen sollte. Da ich mir einen eigenen Bootloader geschrieben habe, der eigentlich recht bequem funktioniert, stützte ich mich hier darauf. Der Bootloader lädt eine binäre Datei aus dem Hauptverzeichnis einer Diskette, welche mit dem [FAT12](File-Allocation-Table.md "File Allocation Table") [Dateisystem](Dateisystem.md "Dateisystem") arbeitet. Daher kann man seinen Kernel später ganz bequem auf die Diskette kopieren und starten lassen. Da ich den Bootloader bereits in einem Tutorial vorgestellt habe, werde ich hier nicht näher darauf eingehen, sondern lediglich am Ende nochmal den Quelltext bereitstellen.
 
   
 
@@ -22,7 +22,7 @@ Das erste was passieren muss ist das der PC booten muss. Es gibt viele bereits f
 
 Es mag komisch klingen, aber man benötigt, zumindest für meine Version, zwei Kernel. Streng genommen sind es sogar drei. Dabei bestehen zwei Kernel aus reinem Assembler und der andere ist dann der eigentliche, in C geschriebene Kernel, auf den wir hinaus wollen.
 
-Der erste Kernel dient lediglich dazu eine kleine [Global Descriptor Table](Global-Descriptor-Table "GDT") einzurichten und in den Protected Mode zu schalten. Das ist nämlich Grundvoraussetzung, wenn wir im weiteren mit einem C-Kernel arbeiten möchten.
+Der erste Kernel dient lediglich dazu eine kleine [Global Descriptor Table](Global-Descriptor-Table.md "GDT") einzurichten und in den Protected Mode zu schalten. Das ist nämlich Grundvoraussetzung, wenn wir im weiteren mit einem C-Kernel arbeiten möchten.
 
 Der zweite Kernel (wenn man das so bezeichnen kann) ist ein kleiner Zwang den mit der Linker aus den GNU Binutils auferzwungen hat. Dieser erklärte mir nämlich ganz höflich das er sich nicht dazu überreden lässt eine Objektdatei zu linken, die teilweise 16-Bit Code enthält. Und diesen 16-Bit Code benötigen wir in dem ersten Kernel, welcher in den Protected Mode schaltet. Dort sind wir nämlich, solange wir den Protected Mode noch nicht endgültig aktiviert haben, im Real-Mode und haben somit auch 16-bit Code.
 

@@ -10,9 +10,9 @@ Wenn ich hier von „Bytes“ spreche, meine ich acht Bit große Einheiten. Zwei
 
 ### Grundlagen
 
-Wie beim [RTL8139](RTL8139 "RTL8139")-Tutorial gilt auch hier: Euer Betriebssystem sollte bereits einen gewissen Stand aufweisen, um die Karte erkennen und bedienen zu können. Dies sind also [ISRs](Interrupt-Service-Routine "Interrupt Service Routine") für [IRQs](Programmable-Interrupt-Controller#irq-tabelle "IRQ"), eine [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung") und eine Möglichkeit, die [I/O-Ports](I-O-Ports "I/O-Ports") eines bestimmten (anhand von Vendor- und Device-ID) [PCI](Peripheral-Component-Interconnect "Peripheral Component Interconnect")-Gerätes herauszufinden.
+Wie beim [RTL8139](RTL8139.md "RTL8139")-Tutorial gilt auch hier: Euer Betriebssystem sollte bereits einen gewissen Stand aufweisen, um die Karte erkennen und bedienen zu können. Dies sind also [ISRs](Interrupt-Service-Routine.md "Interrupt Service Routine") für [IRQs](Programmable-Interrupt-Controller.md#irq-tabelle "IRQ"), eine [Speicherverwaltung](Speicherverwaltung.md "Speicherverwaltung") und eine Möglichkeit, die [I/O-Ports](I-O-Ports.md "I/O-Ports") eines bestimmten (anhand von Vendor- und Device-ID) [PCI](Peripheral-Component-Interconnect.md "Peripheral Component Interconnect")-Gerätes herauszufinden.
 
-Mögliche Emulatoren für PCnet sind sowohl [QEMU](QEMU "QEMU") als auch [VirtualBox](VirtualBox "VirtualBox"). Um die Karte unter QEMU zu benutzen, können zum Beispiel die folgenden Kommandozeilenoptionen angegeben werden:
+Mögliche Emulatoren für PCnet sind sowohl [QEMU](QEMU.md "QEMU") als auch [VirtualBox](VirtualBox.md "VirtualBox"). Um die Karte unter QEMU zu benutzen, können zum Beispiel die folgenden Kommandozeilenoptionen angegeben werden:
 
     qemu -net user -net nic,model=pcnet
 
@@ -204,9 +204,9 @@ while ((ncard->linear_receive_descriptor[ncard->receive_descriptor].flags & 0x80
 
 ## Siehe auch
 
-- [Ethernet](Ethernet "Ethernet")
-- [Address Resolution Protocol](Address-Resolution-Protocol "Address Resolution Protocol")
-- [Internet Protocol](Internet-Protocol "Internet Protocol")
+- [Ethernet](Ethernet.md "Ethernet")
+- [Address Resolution Protocol](Address-Resolution-Protocol.md "Address Resolution Protocol")
+- [Internet Protocol](Internet-Protocol.md "Internet Protocol")
 
 ## Weblinks
 

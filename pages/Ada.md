@@ -6,19 +6,19 @@
 | Inlineassembler: | Nein |
 | Compiler: | GNAT (GNU Ada Compiler) |
 | Spracheneigenschaften |  |
-| Plattformen: | [Linux](Linux "Linux"), [Windows](Windows "Windows") |
+| Plattformen: | [Linux](Linux.md "Linux"), [Windows](Windows.md "Windows") |
 | Beispielkernel in der Sprache: | siehe unten |
 | Homepage |  |
 
 [ISO-Norm](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=45001)
 
-**Ada** ist eine nach Ada Lovelace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte [Programmiersprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"), deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
+**Ada** ist eine nach Ada Lovelace, der ersten Programmiererin, benannte, in den 1970er Jahren von Jean Ichbiah entwickelte, strukturierte und stark typsierte [Programmiersprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"), deren Ziel die Entwicklung von und für eingebettete Systeme und Echtzeitanwendungen war. Ada war zudem die erste standardisierte Programmiersprache und wurde anfänglich vom US-Verteidigungsministerium gefördert.
 
   
 
-## Ada als Sprache für ein [Betriebssystem](Betriebssystem "Betriebssystem")
+## Ada als Sprache für ein [Betriebssystem](Betriebssystem.md "Betriebssystem")
 
-Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem [Kernel](Kernel "Kernel")) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
+Alle Vorteile von Ada, die Laufzeitüberwachung und die parallele Verarbeitung, können nicht ohne weiteres in einem Betriebssystem (genauer: In einem [Kernel](Kernel.md "Kernel")) benutzt werden, ohne im Kernel selbst eine Referenzimplementierung von Ada zu programmieren.
 
 Dennoch ist es möglich, einen Kernel in Ada zu schreiben.
 

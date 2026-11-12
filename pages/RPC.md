@@ -1,6 +1,6 @@
 # RPC
 
-Weiterleitung: [Interprozesskommunikation#RPC (=Remote procedure call)](Interprozesskommunikation#rpc-remote-procedure-call)
+Weiterleitung: [Interprozesskommunikation#RPC (=Remote procedure call)](Interprozesskommunikation.md#rpc-remote-procedure-call)
 
 ---
 

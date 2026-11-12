@@ -5,20 +5,20 @@
 |  |  |
 | Entwickler: | [Janosch Gräf](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") |
 | Akt. Version: | noch keine |
-| [Lizenz](Lizenzen "Lizenzen"): | GPL, LGPL, BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GPL, LGPL, BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
-| API: | [POSIX](POSIX "POSIX"), Nativ |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | [RPC](Interprozesskommunikation#rpc-remote-procedure-call "RPC") (synchron), [Message Queues](Interprozesskommunikation#message-queues "Message Queue") (SysV), [Semaphores](Interprozesskommunikation#semaphore "Semaphore") (SysV), [Shared Memory](Interprozesskommunikation#shared-memory "Shared Memory") (SysV), [Signale](Interprozesskommunikation "Signale") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
+| API: | [POSIX](POSIX.md "POSIX"), Nativ |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | [RPC](Interprozesskommunikation.md#rpc-remote-procedure-call "RPC") (synchron), [Message Queues](Interprozesskommunikation.md#message-queues "Message Queue") (SysV), [Semaphores](Interprozesskommunikation.md#semaphore "Semaphore") (SysV), [Shared Memory](Interprozesskommunikation.md#shared-memory "Shared Memory") (SysV), [Signale](Interprozesskommunikation.md "Signale") |
 | Homepage |  |
 
 <http://jgraef.dyndns.org/meinos/>
 
   
-meinOS ist ein [Microkernel](Ausgabe-2#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
+meinOS ist ein [Microkernel](Ausgabe-2.md#der-microkernel "Ausgabe 2")-Betriebssystem für x86-Systeme. Es wird von [jgraef](https://lowlevel-eu.github.io/wiki/pages/1550/index.html "Benutzer:Jgraef") entwickelt.
 
 ## Entwicklung
 
@@ -26,32 +26,32 @@ Dank zweier 12h-Programmier-Sessions ist meinOS ein ganzes Stück weiter. Fork()
 
 ### Komplett
 
-- [Kernel](Kernel "Kernel")
-  - [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung")
-  - [Prozessverwaltung](Prozessverwaltung "Prozessverwaltung")
+- [Kernel](Kernel.md "Kernel")
+  - [Speicherverwaltung](Speicherverwaltung.md "Speicherverwaltung")
+  - [Prozessverwaltung](Prozessverwaltung.md "Prozessverwaltung")
   - IPC
-    - [Message Queues](Interprozesskommunikation#message-queues "Message Queue") (SysV)
-    - [Shared Memory](Interprozesskommunikation#shared-memory "Shared Memory") (SysV)
-    - [Semaphores](Interprozesskommunikation#semaphore "Semaphore") (SysV)
-    - [Remote Procedure Call](Interprozesskommunikation#rpc-remote-procedure-call "Remote Procedure Call")
-    - [Signale](Interprozesskommunikation "Signale")
-  - [Multiboot](Multiboot "Multiboot")-Kompatibilität
+    - [Message Queues](Interprozesskommunikation.md#message-queues "Message Queue") (SysV)
+    - [Shared Memory](Interprozesskommunikation.md#shared-memory "Shared Memory") (SysV)
+    - [Semaphores](Interprozesskommunikation.md#semaphore "Semaphore") (SysV)
+    - [Remote Procedure Call](Interprozesskommunikation.md#rpc-remote-procedure-call "Remote Procedure Call")
+    - [Signale](Interprozesskommunikation.md "Signale")
+  - [Multiboot](Multiboot.md "Multiboot")-Kompatibilität
 
 <!-- -->
 
 - Server (Treiber)
   - Console-Server (umfasst Keyboard-Treiber und Screen-Treiber)
-  - [ATA](AT-Attachment "ATA") (mit ATAPI)
+  - [ATA](AT-Attachment.md "ATA") (mit ATAPI)
   - CDROM
-  - [Cirrus Logic](Cirrus-Logic "Cirrus Logic")
-  - [COM](Serielle-Schnittstelle "COM")
-  - Console ( [Tastatur](Keyboard-Controller "Keyboard Controller")
+  - [Cirrus Logic](Cirrus-Logic.md "Cirrus Logic")
+  - [COM](Serielle-Schnittstelle.md "COM")
+  - Console ( [Tastatur](Keyboard-Controller.md "Keyboard Controller")
   - DevFS
-  - [DMA](Direct-Memory-Access "DMA")
-  - [FAT](File-Allocation-Table "FAT")
-  - [Floppy](Floppy-Disk-Controller "Floppy")
-  - [ISO9660](ISO9660 "ISO9660")
-  - [PCI](Peripheral-Component-Interconnect "PCI")
+  - [DMA](Direct-Memory-Access.md "DMA")
+  - [FAT](File-Allocation-Table.md "FAT")
+  - [Floppy](Floppy-Disk-Controller.md "Floppy")
+  - [ISO9660](ISO9660.md "ISO9660")
+  - [PCI](Peripheral-Component-Interconnect.md "PCI")
   - Pseudo-Geräte (/dev/null, /dev/zero/ und /dev/urandom)
   - Ramdisk
   - VFS
@@ -60,24 +60,24 @@ Dank zweier 12h-Programmier-Sessions ist meinOS ein ganzes Stück weiter. Fork()
 
 - Bibliotheken
   - libmeinos
-    - [CMOS](CMOS "CMOS")
+    - [CMOS](CMOS.md "CMOS")
     - DevFS
-    - [DMA](Direct-Memory-Access "DMA")
-    - [RPC](Interprozesskommunikation#rpc-remote-procedure-call "RPC")
+    - [DMA](Direct-Memory-Access.md "DMA")
+    - [RPC](Interprozesskommunikation.md#rpc-remote-procedure-call "RPC")
     - Linked List
     - Lock (Spinlock)
     - Path (zum parsen von Dateipfaden)
-    - [PCI](Peripheral-Component-Interconnect "PCI")
+    - [PCI](Peripheral-Component-Interconnect.md "PCI")
     - Process (Kontrolle über Prozesse)
   - stdlibc (großer Teil schon portiert)
-  - [libcdi](Common-Driver-Interface "CDI")
-    - [BIOS](Basic-Input-Output-System "BIOS")
+  - [libcdi](Common-Driver-Interface.md "CDI")
+    - [BIOS](Basic-Input-Output-System.md "BIOS")
     - Cache
-    - [DMA](Direct-Memory-Access "DMA")
+    - [DMA](Direct-Memory-Access.md "DMA")
     - FS
     - Generic (noch kein Standard)
     - Net
-    - [PCI](Peripheral-Component-Interconnect "PCI")
+    - [PCI](Peripheral-Component-Interconnect.md "PCI")
     - SCSI
     - Storage
     - Video

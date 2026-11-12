@@ -6,7 +6,7 @@ Der Scheduler hat die Aufgabe einzuteilen, welcher Prozess als nächstes wieviel
 
 ### Kooperativ oder präemptiv
 
-Bei kooperativen (engl. non-preemptive) Schedulingverfahren geben Prozesse die Kontrolle freiwillig ab. Kooperierened Scheduling-Strategien sind für Dialogbetrieb weniger und für Echtzeit-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Diese Gefahr besteht bei präemptiven (engl. preemptive) Verfahren nicht. Hierbei wird das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch in periodischen Intervallen statt, zB. über den Timer-[Interrupt](Interrupt "Interrupt").
+Bei kooperativen (engl. non-preemptive) Schedulingverfahren geben Prozesse die Kontrolle freiwillig ab. Kooperierened Scheduling-Strategien sind für Dialogbetrieb weniger und für Echtzeit-Betrieb überhaupt nicht geeignet. Ein Benutzer könnte im ersten Fall die Rechnerbenutzung für alle anderen Benutzer unmöglich machen, im zweiten Fall könnte ein ´Langläufer´ andere Prozesse daran hindern, vor ihrer Deadline fertig zu werden – mit allen möglichen Folgen... Diese Gefahr besteht bei präemptiven (engl. preemptive) Verfahren nicht. Hierbei wird das OS ermächtigt, Prozessen den Prozessor wieder wegzunehmen – bei den meisten Strategien findet das auch in periodischen Intervallen statt, zB. über den Timer-[Interrupt](Interrupt.md "Interrupt").
 
 ### Fairness und Wartezeiten
 

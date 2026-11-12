@@ -12,13 +12,13 @@
 
 <http://www.raspberrypi.org/>
 
-Der Raspberry Pi ist ein kreditkartengroßer Computer, der von der [Raspberry Pi Foundation](http://www.raspberrypi.org/) entwickelt wurde und wird. Er basiert auf einem [ARM](ARM "ARM")-Prozessor und bietet, je nach Modell, zusätzlich [USB](Universal-Serial-Bus "USB"), [Ethernet](Ethernet "Ethernet"), SD-Slots uvm.
+Der Raspberry Pi ist ein kreditkartengroßer Computer, der von der [Raspberry Pi Foundation](http://www.raspberrypi.org/) entwickelt wurde und wird. Er basiert auf einem [ARM](ARM.md "ARM")-Prozessor und bietet, je nach Modell, zusätzlich [USB](Universal-Serial-Bus.md "USB"), [Ethernet](Ethernet.md "Ethernet"), SD-Slots uvm.
 
 Des Weiteren ist der Raspberry Pi zudem sehr günstig (B-Variante ohne MwSt. 35 US-\$), was ihn für Interessierte noch attraktiver macht.
 
 ## Bedeutung für OS-Entwickler
 
-Der Raspberry Pi ist eine sehr interessante Plattform für [OS](Betriebssystem "OS")-Entwickler:
+Der Raspberry Pi ist eine sehr interessante Plattform für [OS](Betriebssystem.md "OS")-Entwickler:
 
 Normale PCs sind heute aus sehr vielen verschiedenen Bauteilen zusammengesetzt - so gibt es jährlich neue Grafikkartenserien und Prozessoren, und es gibt unzählige weitere Bauteile, die ein PC-Nutzer verbauen kann. Es ist für Hobby-OS-Entwickler unmöglich, für all jene Geräte Treiber zu schreiben. Der Raspberry Pi dagegen ist eine Plattform, den es "nur" in 2 Ausführungen gibt - einer A-Variante und einer erweiterten B-Variante. Natürlich gibt es auch hier immer wieder kleinere Veränderungen, was die Bestückung betrifft, jedoch kann man diese Änderungen leicht nachvollziehen und sein OS einfach nachrüsten, sodass man (fast) die gesamte Hardware unterstützen kann (abgesehen von eigenen Erweiterungen; s.u.).
 
@@ -40,7 +40,7 @@ Der Raspberry Pi verfügt über eine Schnittstelle, mit der man eigene Hardware 
 
 ## Prozessor
 
-Beim Prozessor handelt es sich um einen [ARM](ARM "ARM") Prozessor, der so oder ähnlich auch in Handies vorkommt:
+Beim Prozessor handelt es sich um einen [ARM](ARM.md "ARM") Prozessor, der so oder ähnlich auch in Handies vorkommt:
 
     pi@raspberrypi:~ $ uname -m
     armv6l

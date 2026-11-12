@@ -2,9 +2,9 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| « [ARM-OS-Dev Teil 6 – Multitasking](ARM-OS-Dev-Teil-6-%E2%80%93-Multitasking "ARM-OS-Dev Teil 6 – Multitasking") | **Navigation** | [ARM-OS-Dev Teil 8 – Ein erstes Programm](ARM-OS-Dev-Teil-8-%E2%80%93-Ein-erstes-Programm "ARM-OS-Dev Teil 8 – Ein erstes Programm") » |
+| « [ARM-OS-Dev Teil 6 – Multitasking](ARM-OS-Dev-Teil-6-%E2%80%93-Multitasking.md "ARM-OS-Dev Teil 6 – Multitasking") | **Navigation** | [ARM-OS-Dev Teil 8 – Ein erstes Programm](ARM-OS-Dev-Teil-8-%E2%80%93-Ein-erstes-Programm.md "ARM-OS-Dev Teil 8 – Ein erstes Programm") » |
 
-Die Verwaltung des physischen Speichers ist im Grunde genommen plattformunabhängig, daher kann im Großen und Ganzen für dieses Thema auf die [x86-Reihe](Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") verwiesen werden. Unterschiede gibt es lediglich bei der Initialisierung der Speicherverwaltung.
+Die Verwaltung des physischen Speichers ist im Grunde genommen plattformunabhängig, daher kann im Großen und Ganzen für dieses Thema auf die [x86-Reihe](Teil-7-Physische-Speicherverwaltung.md "Teil 7 - Physische Speicherverwaltung") verwiesen werden. Unterschiede gibt es lediglich bei der Initialisierung der Speicherverwaltung.
 
 ## Initialisierung
 

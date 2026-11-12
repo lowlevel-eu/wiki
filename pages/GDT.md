@@ -1,6 +1,6 @@
 # GDT
 
-Weiterleitung: [Global Descriptor Table](Global-Descriptor-Table)
+Weiterleitung: [Global Descriptor Table](Global-Descriptor-Table.md)
 
 ---
 

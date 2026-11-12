@@ -1,19 +1,19 @@
 # Graphical User Interface
 
-Ein **Graphical User Interface** (GUI, dt.: grafische Benutzeroberfläche) zeichnet sich im Gegensatz zum [CLI](Shell "Command Line Interface") dadurch aus, dass der Benutzer seine Befehle nicht durch Texteingabe, sondern durch Aktionen mit grafischen Elementen gibt. Besonders im Desktop-Bereich haben sich GUIs durchgesetzt, und daher unterstützt auch fast jedes große Betriebssystem die Bedienung über ein GUI. Es ist also verständlich, wenn sich auch beim Hobby-OS-Entwickler der Wunsch entwickelt, eine GUI anzubieten.
+Ein **Graphical User Interface** (GUI, dt.: grafische Benutzeroberfläche) zeichnet sich im Gegensatz zum [CLI](Shell.md "Command Line Interface") dadurch aus, dass der Benutzer seine Befehle nicht durch Texteingabe, sondern durch Aktionen mit grafischen Elementen gibt. Besonders im Desktop-Bereich haben sich GUIs durchgesetzt, und daher unterstützt auch fast jedes große Betriebssystem die Bedienung über ein GUI. Es ist also verständlich, wenn sich auch beim Hobby-OS-Entwickler der Wunsch entwickelt, eine GUI anzubieten.
 
 ## Merkmale
 
-Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](Maus "Maus") als primäres Eingabegerät und die Nutzung von Fenstern, welche sich auf einer oder mehreren Arbeitsflächen befinden (Stichwort: Virtuelle Desktops). Weitere (beinah) allgegenwärtige Features von GUIs sind Drag'n'Drop und eine Zwischenablage, um zu vermeiden, dass jedes Fenster von den anderen abgeschottet ist.
+Prägende Merkmale eines modernen GUI sind die Nutzung der [Maus](Maus.md "Maus") als primäres Eingabegerät und die Nutzung von Fenstern, welche sich auf einer oder mehreren Arbeitsflächen befinden (Stichwort: Virtuelle Desktops). Weitere (beinah) allgegenwärtige Features von GUIs sind Drag'n'Drop und eine Zwischenablage, um zu vermeiden, dass jedes Fenster von den anderen abgeschottet ist.
 
 ## Entwickeln einer GUI für das eigene OS
 
-Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwähnt wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des [Kernels](Kernel "Kernel")! Auch die GUI von [Windows](Windows "Windows") gehört nicht zum Kernel, wie oft angenommen wird (allerdings sind GUI und Kernel über die WinAPI und verschiedenste [Syscalls](Syscall "Syscall") eng miteinander verzahnt).
+Die meisten OS-Developer wollen eine GUI für ihr OS haben. Doch besonders viele Anfänger wollen quasi sofort eine GUI mit allem Drum und Dran haben. Dabei sollte jedem klar sein, dass eine GUI ein hochkomplexes Programm ist, vergleichbar mit einem aufwändigen 3D-Spiel. Und wo es gerade erwähnt wurde: Eine GUI ist ein **Programm**, soll also vom Kernel **geladen und ausgeführt** werden. Eine GUI ist **kein** Bestandteil des [Kernels](Kernel.md "Kernel")! Auch die GUI von [Windows](Windows.md "Windows") gehört nicht zum Kernel, wie oft angenommen wird (allerdings sind GUI und Kernel über die WinAPI und verschiedenste [Syscalls](Syscall.md "Syscall") eng miteinander verzahnt).
 
 Wer eine GUI für sein OS entwickeln möchte, benötigt mindestens folgendes in seinem Kernel:
 
-- Vollständige [Speicherverwaltung](Speicherverwaltung "Speicherverwaltung")
-- [Multitasking](Multitasking "Multitasking") (am besten für User-Space-Programme)
+- Vollständige [Speicherverwaltung](Speicherverwaltung.md "Speicherverwaltung")
+- [Multitasking](Multitasking.md "Multitasking") (am besten für User-Space-Programme)
 
 Dazu braucht man dann wahrscheinlich noch:
 
@@ -49,7 +49,7 @@ Selber schreiben klingt da vernünftiger, allerdings muss man hier auf unterster
 <!-- -->
 
 - GUIs verbrauchen viele Ressourcen. Daher wird insbesondere auf Servern nur ein einfaches GUI eingesetzt oder oft auch ganz auf ein GUI verzichtet.
-- Last but not least ist der Aufwand der Entwicklung oder Portierung eines GUI enorm. Desweiteren braucht eine GUI besonders viel Infrastruktur, wie z.B. Grafik- oder Maustreiber. Von der Entwicklung eines GUI ohne einen stabilen und relativ ausgereiften [Kernel](Kernel "Kernel") ist also abzuraten.
+- Last but not least ist der Aufwand der Entwicklung oder Portierung eines GUI enorm. Desweiteren braucht eine GUI besonders viel Infrastruktur, wie z.B. Grafik- oder Maustreiber. Von der Entwicklung eines GUI ohne einen stabilen und relativ ausgereiften [Kernel](Kernel.md "Kernel") ist also abzuraten.
 
 ## Nützliches für die GUI-Programmierung
 

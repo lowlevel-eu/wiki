@@ -8,14 +8,14 @@
 | Lizenz: | GPL2 |
 | Betriebssystem(e): | Alle javafähigen Systeme |
 | Virtualisiertes System |  |
-| Plattform: | [x86](X86 "X86") |
+| Plattform: | [x86](X86.md "X86") |
 | SMP: |  |
 | Mechanismus: | vollständige Emulation |
 | Homepage |  |
 
 <http://www-jpc.physics.ox.ac.uk/>
 
-JPC ist ein portabler [x86](X86 "X86")-[Emulator](https://lowlevel-eu.github.io/wiki/pages/1938/index.html "Emulator"), der in Java geschrieben ist. JPC bietet einen umfangreichen Debugger und lässt sich sogar per Java-Applet in Webseiten integrieren.
+JPC ist ein portabler [x86](X86.md "X86")-[Emulator](https://lowlevel-eu.github.io/wiki/pages/1938/index.html "Emulator"), der in Java geschrieben ist. JPC bietet einen umfangreichen Debugger und lässt sich sogar per Java-Applet in Webseiten integrieren.
 
   
 

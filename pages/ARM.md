@@ -1,6 +1,6 @@
 # ARM
 
-**ARM** (**A**dvanced **R**isc **M**achine, vormals ***A**corn **R**isc **M**achine*) sind 32-Bit-Prozessoren nach dem [RISC](Reduced-Instruction-Set-Computing "RISC")-Prinzip.
+**ARM** (**A**dvanced **R**isc **M**achine, vormals ***A**corn **R**isc **M**achine*) sind 32-Bit-Prozessoren nach dem [RISC](Reduced-Instruction-Set-Computing.md "RISC")-Prinzip.
 
 ## Eigenschaften
 
@@ -67,7 +67,7 @@ M gibt den aktuellen Prozessormodus an. Folgende Werte sind definiert:
 | 0x1B | Undefined Instruction |
 | 0x1F | System |
 
-Was diese Modi bedeuten, wird im Abschnitt [Prozessor-Modi](ARM#prozessor-modi "ARM") behandelt.
+Was diese Modi bedeuten, wird im Abschnitt [Prozessor-Modi](ARM.md#prozessor-modi "ARM") behandelt.
 
 ### Thumbmodus
 
@@ -129,9 +129,9 @@ Um von einer Exception zurückzukehren, müssen gleichzeitig r14 nach r15 und da
 
 ## Siehe auch
 
-- [Cross-Compiler unter Linux für ARM](ARM-Cross-Compiler "ARM Cross-Compiler")
-- [RISC](Reduced-Instruction-Set-Computing "RISC")
-- [ARM-OS-Dev für Einsteiger](ARM-OS-Dev-f%C3%BCr-Einsteiger "ARM-OS-Dev für Einsteiger")
+- [Cross-Compiler unter Linux für ARM](ARM-Cross-Compiler.md "ARM Cross-Compiler")
+- [RISC](Reduced-Instruction-Set-Computing.md "RISC")
+- [ARM-OS-Dev für Einsteiger](ARM-OS-Dev-f%C3%BCr-Einsteiger.md "ARM-OS-Dev für Einsteiger")
 
 ## Weblinks
 

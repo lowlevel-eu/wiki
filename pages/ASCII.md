@@ -1,6 +1,6 @@
 # ASCII
 
-Weiterleitung: [Codepage 437](Codepage-437)
+Weiterleitung: [Codepage 437](Codepage-437.md)
 
 ---
 

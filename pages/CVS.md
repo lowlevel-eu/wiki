@@ -1,6 +1,6 @@
 # CVS
 
-Weiterleitung: [Concurrent Versions System](Concurrent-Versions-System)
+Weiterleitung: [Concurrent Versions System](Concurrent-Versions-System.md)
 
 ---
 

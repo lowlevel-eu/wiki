@@ -1,6 +1,6 @@
 # EISA
 
-Weiterleitung: [Industry Standard Architecture#Extended Industry Standard Architecture](Industry-Standard-Architecture#extended-industry-standard-architecture)
+Weiterleitung: [Industry Standard Architecture#Extended Industry Standard Architecture](Industry-Standard-Architecture.md#extended-industry-standard-architecture)
 
 ---
 

@@ -1,6 +1,6 @@
 # Hardware Multitasking
 
-Weiterleitung: [Hardware-Multitasking](Hardware-Multitasking)
+Weiterleitung: [Hardware-Multitasking](Hardware-Multitasking.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # Emulator
 
-Weiterleitung: [Kategorie:Emulator](Kategorie-Emulator)
+Weiterleitung: [Kategorie:Emulator](Kategorie-Emulator.md)
 
 ---
 

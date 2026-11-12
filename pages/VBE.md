@@ -1,6 +1,6 @@
 # VBE
 
-Weiterleitung: [VESA BIOS Extensions](VESA-BIOS-Extensions)
+Weiterleitung: [VESA BIOS Extensions](VESA-BIOS-Extensions.md)
 
 ---
 

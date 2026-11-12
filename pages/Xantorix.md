@@ -5,20 +5,20 @@
 |  |  |
 | Entwickler: | Homix |
 | Akt. Version: | 0.2.0 |
-| [Lizenz](Lizenzen "Lizenzen"): | Closed Source, Freeware |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Closed Source, Freeware |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Pascal](Pascal "Pascal") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolithischer Kernel](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Pascal](Pascal.md "Pascal") |
 | API: | XixAPI |
-| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "PE") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 [www.xantorix.de](http://www.xantorix.de)
 
   
-**Xantorix** ist ein kleines 32-Bit Hobby-[Betriebssystem](Betriebssystem "Betriebssystem") für Computer mit x86-Architektur. Ziel ist es, ein schnelles, stabiles und speichersparendes System zu erschaffen, das für den Benutzer möglichst einfach zu bedienen ist. Der [Kernel](Kernel "Kernel") des Betriebssystems sowie auch die meisten [Treiber](Treiber "Treiber"), Bibliotheken und Programme sind bis auf einige wenige Ausnahmen komplett selbst geschrieben. Xantorix ist derzeit hauptsächlich in [Pascal](Pascal "Pascal") (mit Hilfe des FreePascal Compilers) programmiert.  
+**Xantorix** ist ein kleines 32-Bit Hobby-[Betriebssystem](Betriebssystem.md "Betriebssystem") für Computer mit x86-Architektur. Ziel ist es, ein schnelles, stabiles und speichersparendes System zu erschaffen, das für den Benutzer möglichst einfach zu bedienen ist. Der [Kernel](Kernel.md "Kernel") des Betriebssystems sowie auch die meisten [Treiber](Treiber.md "Treiber"), Bibliotheken und Programme sind bis auf einige wenige Ausnahmen komplett selbst geschrieben. Xantorix ist derzeit hauptsächlich in [Pascal](Pascal.md "Pascal") (mit Hilfe des FreePascal Compilers) programmiert.  
 Aktuell wird an der Version 0.4.0 gearbeitet, die eine grafische Benutzeroberfläche und Netzwerkunterstützung beinhalten soll. Zu Demonstrations- und Testzwecken soll davor eine Zwischenversion 0.3.0 erscheinen, um den Entwicklungsstand zu zeigen. Gegen Ende des Jahres mit der Version 0.4.0 wird auch angedacht, das Projekt komplett oder zumindest größtenteils unter einer OpenSource-Lizenz zur Verfügung zu stellen.
 
 ## Versionen
@@ -42,21 +42,21 @@ Die Version 0.3.0 stellt nur einen Zwischenschritt in der Entwicklung zur Versio
 
 - Neue Dateisystemverwaltung
 - verbesserte Benutzerrechte
-- Multiprocessor Unterstützung ([SMP](Symmetrisches-Multiprozessorsystem "SMP"))
-- [IDE](AT-Attachment "IDE") und AHCI (S-ATA) Treiber für ATA/ATAPI Laufwerke
-- CDFS, FAT (lesend und schreibend), [ext2](Ext2 "Ext2") (nur lesend)
+- Multiprocessor Unterstützung ([SMP](Symmetrisches-Multiprozessorsystem.md "SMP"))
+- [IDE](AT-Attachment.md "IDE") und AHCI (S-ATA) Treiber für ATA/ATAPI Laufwerke
+- CDFS, FAT (lesend und schreibend), [ext2](Ext2.md "Ext2") (nur lesend)
 - Einfacher Grafikmodus ohne richtigen Desktop
-- Speicherverwaltung mit [PAE](Physical-Address-Extension "PAE") und PSE
+- Speicherverwaltung mit [PAE](Physical-Address-Extension.md "PAE") und PSE
 - Erste Netzwerkimplementierung mit DNS, IPv4, TCP und UDP
-- Netzwerkkartentreiber: [RTL8139](RTL8139 "RTL8139"), [PCnet](AMD-PCnet "PCnet") (PCI)
+- Netzwerkkartentreiber: [RTL8139](RTL8139.md "RTL8139"), [PCnet](AMD-PCnet.md "PCnet") (PCI)
 
 **Xantorix 0.4.0:**
 
 - Xantorix GUI mit Desktop und grafischen Anwendungen
 - Stabiles Netzwerk mit DNS, IPv4, TCP, UDP, DHCP
-- Netzwerkkartentreiber: [RTL8169](RTL8169 "RTL8169"), e1000
-- Evtl. eine einfache [CDI](Common-Driver-Interface "CDI") Implementierung
-- Zusätzliches ausführbares Binärformat: [ELF](Executable-and-Linking-Format "ELF")
+- Netzwerkkartentreiber: [RTL8169](RTL8169.md "RTL8169"), e1000
+- Evtl. eine einfache [CDI](Common-Driver-Interface.md "CDI") Implementierung
+- Zusätzliches ausführbares Binärformat: [ELF](Executable-and-Linking-Format.md "ELF")
 - ext2/3/4 (lesend und schreibend)
 - Programme: u.a. einfacher Internet Browser, E-Mail Client, portierter Compiler
 

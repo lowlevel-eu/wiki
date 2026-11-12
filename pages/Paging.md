@@ -4,13 +4,13 @@ Das **Paging** ist ein Mechanismus, der auf vielen Architekturen zum Einsatz kom
 
 Durch den Einsatz von virtuellem Speicher werden Programme unabhängig davon, an welcher physischen Speicheradresse sie laufen. Dadurch kann vor allem das Problem der Speicherfragmentierung gelöst werden, da Speicherbereiche nicht mehr physisch zusammenhängend sein müssen, um Programmen zusammenhängend zu erscheinen.
 
-Durch das Paging lassen sich außerdem weitere Features, wie z. B. [Swapping](Swapping "Swapping"), leichter implementieren. Auch ist durch Paging Speicherschutz gewährleistet, da jeder Prozess einen eigenen virtuellen Adressraum (*Speicherkontext*) zugeordnet bekommen kann und somit von den anderen Prozessen abgeschirmt ist.
+Durch das Paging lassen sich außerdem weitere Features, wie z. B. [Swapping](Swapping.md "Swapping"), leichter implementieren. Auch ist durch Paging Speicherschutz gewährleistet, da jeder Prozess einen eigenen virtuellen Adressraum (*Speicherkontext*) zugeordnet bekommen kann und somit von den anderen Prozessen abgeschirmt ist.
 
 ## Funktionsweise
 
 Der virtuelle Speicher wird zunächst in gleich große Blöcke, so genannte Pages (Seiten), unterteilt. In den meisten Architekturen sind dies Blöcke zu je vier Kilobytes, manche bieten auch verschiedene Größen an. Einen Speicherkontext kann man sich vereinfacht als eine riesige Tabelle vorstellen, die jedem virtuellen Block einen gleich großen Block irgendwo im physischen Speicher zuweist. Diesen physischen Speicherblock nennt man auch *Page Frame* (dt. Seitenrahmen, oder seltener auch Seitenkachel).
 
-Die folgende Tabelle dient als (von den Zahlen her völlig sinnfreie) Veranschaulichung dieser Übersetzung. Wenn das Programm jetzt auf die Speicheradresse 0x1234 zugreift, wird in Wirklichkeit auf die physische Adresse 0x3234 zugegriffen. Es muss nicht jede virtuelle Adresse *gemappt* (d. h. einer physischen Adresse zugewiesen) sein &#150; der virtuelle Adressraum ist im Allgemeinen auch größer als der installierte physische Speicher (auf i386 beispielsweise 4 GB). Wird auf eine nicht gemappte Adresse zugegriffen, z. B. 0x25a2 im Beispiel, wird eine Exception (x86: [Page Fault](Exception#page-fault "Exception")) ausgelöst.
+Die folgende Tabelle dient als (von den Zahlen her völlig sinnfreie) Veranschaulichung dieser Übersetzung. Wenn das Programm jetzt auf die Speicheradresse 0x1234 zugreift, wird in Wirklichkeit auf die physische Adresse 0x3234 zugegriffen. Es muss nicht jede virtuelle Adresse *gemappt* (d. h. einer physischen Adresse zugewiesen) sein &#150; der virtuelle Adressraum ist im Allgemeinen auch größer als der installierte physische Speicher (auf i386 beispielsweise 4 GB). Wird auf eine nicht gemappte Adresse zugegriffen, z. B. 0x25a2 im Beispiel, wird eine Exception (x86: [Page Fault](Exception.md#page-fault "Exception")) ausgelöst.
 
 | Virtuell | Physisch |
 | ------------------- | ---------- |
@@ -44,7 +44,7 @@ Das Berechnen erfolgt folgendermaßen:
 5.  dieser Eintrag wiederum zeigt auf eine Page
 6.  in dieser Page die gesuchten Daten suchen, deren Offset innerhalb dieser Page in den Bits 0-11 in der virtuellen Adresse steht
 
-(*Hinweis:* Bei Schritt 3 kann der Eintrag auch direkt auf einen 4MB Bereich ("Large Page") zeigen, siehe hierzu [Page Size Extension](Page-Size-Extension "Page Size Extension"))
+(*Hinweis:* Bei Schritt 3 kann der Eintrag auch direkt auf einen 4MB Bereich ("Large Page") zeigen, siehe hierzu [Page Size Extension](Page-Size-Extension.md "Page Size Extension"))
 
 ### Einschalten des Paging-Mechanismus
 
@@ -63,10 +63,10 @@ Ein Page-Directory (PD) enthält 1024 Einträge à vier Byte. Ein PD-Eintrag kan
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page Table benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Wird ignoriert, falls 4-kB-Page, andernfalls wird es von der CPU bei einem Schreibzugriff auf die Page gesetzt |
-| 7 | Gibt die Größe der Page an. 0 steht für 4 kB, 1 für 4 MB (oder 2 MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](Control-Register "Steuerregister") CR4 das PSE-Bit (4-MB-Pages) oder PAE-Bit (2-MB-Pages) gesetzt ist. |
+| 7 | Gibt die Größe der Page an. 0 steht für 4 kB, 1 für 4 MB (oder 2 MB bei Verwendung von PAE). Das S-Bit ist wirkungslos, wenn nicht im [Steuerregister](Control-Register.md "Steuerregister") CR4 das PSE-Bit (4-MB-Pages) oder PAE-Bit (2-MB-Pages) gesetzt ist. |
 | 8 | Wird ignoriert, falls 4-kB-Page, andernfalls hat es die gleiche Bedeutung wie Bit G in Page-Table-Einträgen (s. u.). |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
-| 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable oder zur Page, wenn keine Bit 7 gesetzt ist. In letzterem Falle muss der Zeiger entsprechend ausgerichtet sein. Bit 12 ist dann das (höchste) [PAT](PAT "PAT")-Bit. |
+| 12 &#150; 31 | Bits 12 &#150; 31 eines Zeigers zu einer Pagetable oder zur Page, wenn keine Bit 7 gesetzt ist. In letzterem Falle muss der Zeiger entsprechend ausgerichtet sein. Bit 12 ist dann das (höchste) [PAT](PAT.md "PAT")-Bit. |
 
 ### Aufbau Page Table (PT)
 
@@ -81,7 +81,7 @@ Eine Page Table enthält 1024 Einträge à vier Byte. Jeder Eintrag zeigt auf ei
 | 4 | Wenn dieses Bit gesetzt ist, wird für die Page kein Cache benutzt. |
 | 5 | Wird von der CPU gesetzt, wenn die Page benutzt wurde. Dieses Bit wird allerdings nicht von der CPU zurückgesetzt. |
 | 6 | Dieses Bit wird von der CPU gesetzt, wenn auf die Page geschrieben wurde. Dieses Bit wird nicht von der CPU zurückgesetzt. |
-| 7 | Das (höchste) [PAT](PAT "PAT")-Bit. |
+| 7 | Das (höchste) [PAT](PAT.md "PAT")-Bit. |
 | 8 | Wenn G gesetzt ist, wird der TLB (s. u.) für diese Page nicht erneuert, nachdem CR3 neu gesetzt wurde. Diese Flag ist also praktisch für Pages, die in jedem Adressraum gleich gemappt sind (z. B. Kernel) |
 | 9 &#150; 11 | Diese Bits sind frei verfügbar. Sie können z. B. genutzt werden um Pages zu markieren, die zwar im Speicher liegen, aber auch schon auf einen Swapmedium existieren, so dass sie ohne weiteres geswappt werden können, und/oder um Pages zu markieren, die nicht ausgelagert werden dürfen. |
 | 12 &#150; 31 | 12 &#150; 31 der physischen Adresse eines Pageframes |
@@ -94,7 +94,7 @@ Der Prozessor benutzt für das Auflösen der virtuellen Adressen eine Art Cache 
 
 Daher ist zu beachten, dass bei einer Änderung des Page Directory oder einer Page Table der TLB *invalidiert* werden muss (d. h. der entsprechende Eintrag wird aus dem TLB gelöscht). Versäumt man diese Invalidierung, äußert sich das im Allgemeinen erst später durch völlig unerwartete Ereignisse. Diese Fehler sind extrem schwer zu debuggen, da scheinbar auf die richtige Speicheradresse zugegriffen wird, aber in Wirklichkeit mit falschen Werten gearbeitet wird.
 
-Man invalidiert den TLB mit „invlpg \<address\>“. Wobei \<address\> eine virtuelle Adresse innerhalb der von der Änderung betroffenen Page ist. invlpg ist ab dem 486 vorhanden. Beim Neuladen des [Steuerregisters](Control-Register "Steuerregister") CR3 wird der TLB ebenfalls komplett geleert (Achtung, das geht natürlich auf die Performance).
+Man invalidiert den TLB mit „invlpg \<address\>“. Wobei \<address\> eine virtuelle Adresse innerhalb der von der Änderung betroffenen Page ist. invlpg ist ab dem 486 vorhanden. Beim Neuladen des [Steuerregisters](Control-Register.md "Steuerregister") CR3 wird der TLB ebenfalls komplett geleert (Achtung, das geht natürlich auf die Performance).
 
 ### Speicher mappen
 
@@ -174,7 +174,7 @@ Eine Page Table enthält 512 Eintrage à acht Byte. Ein PT-Eintrag kann jeweils 
 | 52-62 | Diese Bits sind frei verfügbar. |
 | 63 | Wenn EFER.NXE auf 1 gesetzt ist gibt dieses Bit an, ob das Ausführen von Code in der Page erlaubt ist (0) oder nicht (1). Wenn EFER.NXE auf 0 gesetzt ist und das Bit auf 1 gesetzt ist wird ein Pagefault ausgelöst. |
 
-Auch mit aktiviertem PAE sehen die einzelnen Tabellen quasi komplett identisch aus, der einzige Unterschied ist die Interpretierung mancher Felder. Auch hier kann also die Implementierung im Quellcode auf die gleiche Datenstruktur zurückgreifen, beispielsweise ein [C](C "C")-struct *PagingEntry* und ein typedef von *PagingTable* auf `PagingEntry[512]` (siehe LF OS unten in den Links).
+Auch mit aktiviertem PAE sehen die einzelnen Tabellen quasi komplett identisch aus, der einzige Unterschied ist die Interpretierung mancher Felder. Auch hier kann also die Implementierung im Quellcode auf die gleiche Datenstruktur zurückgreifen, beispielsweise ein [C](C.md "C")-struct *PagingEntry* und ein typedef von *PagingTable* auf `PagingEntry[512]` (siehe LF OS unten in den Links).
 
 ## Paging im x86 Long Mode
 
@@ -183,7 +183,7 @@ Das Paging im Long Mode gestaltet sich etwas schwieriger als das Paging im Prote
 - die PDP Tabelle enthält nun die vollen 512 Einträge, also 9 Bit der virtuellen Adresse (statt bisher 4 Einträge/2 Bit) -\> wir kommen nun auf 39 Bit virtuellen Adressraum (3\*9 Bits durch die Ebenen + 12 Bit Offset innerhalb der Page), also 512 GB nutzbaren Virtuellen Speicher.
 - vor der PDP wurde eine weitere Ebene eingefügt, die Page-Map Level 4 Tabelle (PML4) - ab hier werden die Ebenen einfach durchnummeriert. Noch eine Ebene mehr, also nun 48 Bit virtueller Adressraum -\> 256 TB.
 
-Das ist aber nur die erste Ausbaustufe von amd64. Über eine bestimmte [CPUID](CPUID "CPUID") lässt sich die Anzahl der unterstützten virtuellen Adressbits abrufen, woraus sich die Anzahl der Mapping-Ebenen ableiten lässt (\<39 -\> 3 Ebenen, \<48 -\> 4 Ebenen, \<57 -\> 5 Ebenen, ...).
+Das ist aber nur die erste Ausbaustufe von amd64. Über eine bestimmte [CPUID](CPUID.md "CPUID") lässt sich die Anzahl der unterstützten virtuellen Adressbits abrufen, woraus sich die Anzahl der Mapping-Ebenen ableiten lässt (\<39 -\> 3 Ebenen, \<48 -\> 4 Ebenen, \<57 -\> 5 Ebenen, ...).
 
 ### PMLx Tabellen
 
@@ -210,13 +210,13 @@ Die PDPs, PDs und PTs entsprechen denen des Protected Mode mit aktiviertem PAE (
 
 ## Weiterführende Artikel
 
-- [Paging Tutorial](Paging-Tutorial "Paging Tutorial")
+- [Paging Tutorial](Paging-Tutorial.md "Paging Tutorial")
 
 ## Links
 
 - [Paging-Tutorial](http://www.homix-online.de/Tutorials/32PMode-Paging.php)
 - [Paging im PM-Tutorial der FH Zwickau](http://www.fh-zwickau.de/doc/prmo/pmtutor/text/p_spez1.htm)
-- [Ausgabe 8](Ausgabe-8#paging "Ausgabe 8")
+- [Ausgabe 8](Ausgabe-8.md#paging "Ausgabe 8")
 - <http://osdever.net/tutorials/pdf/basic_paging.pdf>
 - <https://littlefox.narf.press/lf-os_amd64/vm_8c.html#structvm__table__entry> - Gemeinsame Datenstruktur für alle Paging-Ebenen (LF OS)
 

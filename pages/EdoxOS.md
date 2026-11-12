@@ -11,14 +11,14 @@ Dieser Artikel wurde zum Löschen vorgeschlagen.
 |  |  |
 | Entwickler: | [Edox](https://lowlevel-eu.github.io/wiki/pages/2314/index.html "Benutzer:Edox") |
 | Akt. Version: | Noch keine vorhanden |
-| [Lizenz](Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Mikro |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Mikro |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [C++](C%2B%2B.md "C++") |
 | API: | EdoxAPI |
 | Binärformat: | .bin |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 In Arbeit

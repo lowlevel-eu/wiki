@@ -1,6 +1,6 @@
 # IP
 
-Weiterleitung: [Internet Protocol](Internet-Protocol)
+Weiterleitung: [Internet Protocol](Internet-Protocol.md)
 
 ---
 

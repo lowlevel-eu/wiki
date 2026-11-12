@@ -7,7 +7,7 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-**Unified Extensible Firmware Interface** (oder kurz **UEFI**) ist der Nachfolger des [BIOS](Basic-Input-Output-System "BIOS"), welches nach drei Jahrzehnten leicht veraltet war. So kann man mit dem typischen BIOS keine Festplatten mit sehr großer Speicherkapazität von über 2 TB addressieren, was mit dem UEFI möglich wird.
+**Unified Extensible Firmware Interface** (oder kurz **UEFI**) ist der Nachfolger des [BIOS](Basic-Input-Output-System.md "BIOS"), welches nach drei Jahrzehnten leicht veraltet war. So kann man mit dem typischen BIOS keine Festplatten mit sehr großer Speicherkapazität von über 2 TB addressieren, was mit dem UEFI möglich wird.
 
 Das UEFI ist der direkte Nachfolger von EFI (*Extensible Firmware Interface*). Seit 2005 existiert das Unified EFI Forum, in dem zahlreiche Unternehmen aus der IT-Branche vertreten sind. So wird der Standard nicht mehr ausschließlich von Intel festgelegt.
 
@@ -15,7 +15,7 @@ Die UEFI-Spezifikation ist absichtlich Plattformneutral gehalten, es gibt UEFI-I
 
 ## EFI-Programme
 
-EFI-Programme sind [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE")-Dateien mit der Dateiendung EFI. Standardmäßig wird auf x86_64 die Microsoft-ABI verwendet. Kompiliert man mit anderen Compilern (wie gcc), muss man jeden API-Aufruf besonders behandeln.
+EFI-Programme sind [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "PE")-Dateien mit der Dateiendung EFI. Standardmäßig wird auf x86_64 die Microsoft-ABI verwendet. Kompiliert man mit anderen Compilern (wie gcc), muss man jeden API-Aufruf besonders behandeln.
 
 Es gibt auch die Möglichkeit Programme Plattformunabhängig mit EFI ByteCode zu erstellen, das wird aber nur selten genutzt. Interessant ist das für Hardware die ihren eigenen Treiber mitbringt.
 
@@ -41,7 +41,7 @@ Der Ordner /EFI/BOOT ist der Boot-Pfad für Wechseldatenträger. Das dort drin l
 
 #### Höhere Geschwindigkeit
 
-Das System bootet schneller. Das liegt daran, dass die verschiedenen Bestandteile des Computers nun parallel geprüft werden. Außerdem besitzt das UEFI einen eigenen Bootloader. So muss nicht erst der Bootloader selbst gesucht und geladen werden; man kann direkt mit dem Laden des [Betriebssystems](Betriebssystem "Betriebssystem") beginnen.
+Das System bootet schneller. Das liegt daran, dass die verschiedenen Bestandteile des Computers nun parallel geprüft werden. Außerdem besitzt das UEFI einen eigenen Bootloader. So muss nicht erst der Bootloader selbst gesucht und geladen werden; man kann direkt mit dem Laden des [Betriebssystems](Betriebssystem.md "Betriebssystem") beginnen.
 
 #### Mehr Speicher verfügbar
 
@@ -49,7 +49,7 @@ Wie oben bereits angedeutet, ist es dem BIOS nicht möglich, auf Festplatten mit
 
 #### Benutzerfreundlichkeit
 
-Die gute, alte BIOS- [Oberfläche](Graphical-User-Interface "GUI") hat ausgedient: Kein [Textmodus](Textausgabe "Textausgabe") mehr, sondern eine [grafische Oberfläche](Graphical-User-Interface "GUI"). Das erleichtert nicht ganz so erfahrenen Benutzern die Bedienung deutlich. Das BIOS-Flair geht dadurch aber leider verloren.
+Die gute, alte BIOS- [Oberfläche](Graphical-User-Interface.md "GUI") hat ausgedient: Kein [Textmodus](Textausgabe.md "Textausgabe") mehr, sondern eine [grafische Oberfläche](Graphical-User-Interface.md "GUI"). Das erleichtert nicht ganz so erfahrenen Benutzern die Bedienung deutlich. Das BIOS-Flair geht dadurch aber leider verloren.
 
 #### Modular
 

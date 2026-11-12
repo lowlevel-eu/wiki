@@ -1,10 +1,10 @@
 # Tastatur
 
-Die Tastatur ist das wichtigste Eingabegerät eines konsolenbasierten Computers, wird jedoch auch für die Bedienung einer [GUI](Graphical-User-Interface "GUI") vielfach benutzt. Zur Ansteuerung der Tastatur verfügen x86-basierte Systeme seit jeher über einen [Keyboard-Controller (KBC)](Keyboard-Controller "Keyboard Controller"); Die elektrische Verbindung erfolgt dabei über einen DIN-Stecker oder den PS/2-Anschluss. Heutzutage werden Tastaturen jedoch häufig über [USB](Universal-Serial-Bus "USB") angeschlossen.
+Die Tastatur ist das wichtigste Eingabegerät eines konsolenbasierten Computers, wird jedoch auch für die Bedienung einer [GUI](Graphical-User-Interface.md "GUI") vielfach benutzt. Zur Ansteuerung der Tastatur verfügen x86-basierte Systeme seit jeher über einen [Keyboard-Controller (KBC)](Keyboard-Controller.md "Keyboard Controller"); Die elektrische Verbindung erfolgt dabei über einen DIN-Stecker oder den PS/2-Anschluss. Heutzutage werden Tastaturen jedoch häufig über [USB](Universal-Serial-Bus.md "USB") angeschlossen.
 
 ## KBC
 
-Siehe Artikel [Keyboard Controller](Keyboard-Controller "Keyboard Controller").
+Siehe Artikel [Keyboard Controller](Keyboard-Controller.md "Keyboard Controller").
 
 ## USB
 

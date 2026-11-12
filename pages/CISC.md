@@ -1,6 +1,6 @@
 # CISC
 
-Weiterleitung: [Complex Instruction-Set Computing](Complex-Instruction-Set-Computing)
+Weiterleitung: [Complex Instruction-Set Computing](Complex-Instruction-Set-Computing.md)
 
 ---
 

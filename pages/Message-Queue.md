@@ -1,6 +1,6 @@
 # Message Queue
 
-Weiterleitung: [Interprozesskommunikation#Message Queues](Interprozesskommunikation#message-queues)
+Weiterleitung: [Interprozesskommunikation#Message Queues](Interprozesskommunikation.md#message-queues)
 
 ---
 

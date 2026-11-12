@@ -7,21 +7,21 @@ Wird wieder weiter entwickelt. --[Tev](https://lowlevel-eu.github.io/wiki/pages/
 |  |  |
 | Entwickler: | [tev](https://lowlevel-eu.github.io/wiki/pages/2265/index.html "Benutzer:Tev") ,Socke, ehemals AGGROStar1991 |
 | Akt. Version: | aktuell keine |
-| [Lizenz](Lizenzen "Lizenzen"): | [WTFPL](http://de.wikipedia.org/wiki/WTFPL#Lizenz) |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [WTFPL](http://de.wikipedia.org/wiki/WTFPL#Lizenz) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolithischer Kernel](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [ASM](Assembler "Assembler") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolithischer Kernel](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [ASM](Assembler.md "Assembler") |
 | API: | darkblackAPI, linuxABI |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 [Homepage](https://github.com/tevoran/asmimux)
 
 ## Beschreibung
 
-ASMIMUX wird ein Kernel, der das Ziel verfolgt kompatibel zum Linuxkernel zu sein. Aber im Moment ist das noch Zukunftsmusik. ASMIMUX wird auf der Codebasis des Kernels von [TevOpSys](TevOpSys "TevOpSys") entwickelt.
+ASMIMUX wird ein Kernel, der das Ziel verfolgt kompatibel zum Linuxkernel zu sein. Aber im Moment ist das noch Zukunftsmusik. ASMIMUX wird auf der Codebasis des Kernels von [TevOpSys](TevOpSys.md "TevOpSys") entwickelt.
 
   
 

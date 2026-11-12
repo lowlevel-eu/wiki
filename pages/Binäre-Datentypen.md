@@ -308,7 +308,7 @@ In der Pascal-Variante ist ein String ebenfalls ein Char-Array. Allerdings wird 
 
 ## Weiterführende Artikel
 
-- [Der Signifant](Signifant "Signifant")
+- [Der Signifant](Signifant.md "Signifant")
 
 ## Links
 

@@ -1,6 +1,6 @@
 # Systemaufruf
 
-Weiterleitung: [Syscall](Syscall)
+Weiterleitung: [Syscall](Syscall.md)
 
 ---
 

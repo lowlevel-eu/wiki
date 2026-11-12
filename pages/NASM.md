@@ -1,6 +1,6 @@
 # NASM
 
-Weiterleitung: [Netwide Assembler](Netwide-Assembler)
+Weiterleitung: [Netwide Assembler](Netwide-Assembler.md)
 
 ---
 

@@ -10,7 +10,7 @@ Irgendwann ist man an einem Punkt angelangt, an dem man nicht nur den voreingest
 
 Man könnte für jede Grafikkarte einen eigenen Treiber schreiben. Dann hätte man natürlich die volle Kontrolle über alles. Allerdings hat wahrscheinlich keiner weder die Zeit dazu, noch den Zugriff auf die Dokumentationen, die die Hersteller wie einen Schatz hüten, aus Angst man konnte daraus Rückschlüsse auf das Design des Grafikchips schließen. Und die wenigsten könnten auch alle Treiber testen, da man dazu ja jede Grafikkarte bräuchte. ;)
 
-Die zweite Möglichkeit wären die [VESA BIOS Extensions](VESA-BIOS-Extensions "VESA BIOS Extensions") (VBE). Diese unterstützen viel höhere Auflösungen und Farbtiefen als VGA mit seinen popeligen 640 mal 480 Pixeln bei 4 Bit (16 Farben) als Maximum. Der Nachteil dabei ist, dass man auf die Video-BIOS Routinen angewiesen ist, und damit den 16 Bit Real Mode benötigt. Die meisten von Euch haben wahrscheinlich schon den Protected Mode initialisiert (oder von Grub initialisieren lassen), Interrupts zum arbeiten gebracht und vielleicht sogar einen Speichermanager geschrieben. Der Wechsel in den Real Mode würde da vieles durcheinander bringen und viel einfacher sind die VBEs auch nicht zu benutzen, sodass man erst mal mit VGA anfangen kann.
+Die zweite Möglichkeit wären die [VESA BIOS Extensions](VESA-BIOS-Extensions.md "VESA BIOS Extensions") (VBE). Diese unterstützen viel höhere Auflösungen und Farbtiefen als VGA mit seinen popeligen 640 mal 480 Pixeln bei 4 Bit (16 Farben) als Maximum. Der Nachteil dabei ist, dass man auf die Video-BIOS Routinen angewiesen ist, und damit den 16 Bit Real Mode benötigt. Die meisten von Euch haben wahrscheinlich schon den Protected Mode initialisiert (oder von Grub initialisieren lassen), Interrupts zum arbeiten gebracht und vielleicht sogar einen Speichermanager geschrieben. Der Wechsel in den Real Mode würde da vieles durcheinander bringen und viel einfacher sind die VBEs auch nicht zu benutzen, sodass man erst mal mit VGA anfangen kann.
 
 VGA wird von fast allen Grafikkarten unterstützt (Mir ist keine bekannt die VGA nicht unterstützt, aber ich denke Grafikkarten vor der Einführung von VGA dürften da Probleme haben... ;) ), bietet 256 KByte Speicher auf der Karte (kein direkter Zugriff, nur Memory Mapped IO (MMIO), später mehr dazu) und kann im Textmodus und dem Grafikmodus betrieben werden. Folgende Modi sind vom Standard vorgeschrieben: 720x400 Textmodus (80x25 Zeichen, ein Zeichen 9x16), 640x480 Textmodi (80x30 Zeichen, ein Zeichen 8x16), 320x200 bei 8 Bit Farbtiefe (palettenbasiert), 640x480 mit 4 Bit Farbtiefe.
 
@@ -91,7 +91,7 @@ void setpixel(int x, int y, unsigned char color) {
 
 ## Siehe auch
 
-- [Textausgabe](Textausgabe "Textausgabe")
+- [Textausgabe](Textausgabe.md "Textausgabe")
 
 ## Weblinks
 

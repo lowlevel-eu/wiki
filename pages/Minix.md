@@ -5,19 +5,19 @@
 |  |  |
 | Entwickler: | Andrew S. Tanenbaum und weitere |
 | Akt. Version: | 3.2 |
-| [Lizenz](Lizenzen "Lizenzen"): | 2-Klausel-BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86"), Motorola 68000, Sun SPARC |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
-| API: | [POSIX](POSIX "POSIX") ab Version 3 |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing |
+| Plattform: | [i386](X86.md "X86"), Motorola 68000, Sun SPARC |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
+| API: | [POSIX](POSIX.md "POSIX") ab Version 3 |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Message Passing |
 | Homepage |  |
 
 <http://www.minix3.org>
 
-**Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert. Ab Version 3.2 hat [SMP](Symmetrisches-Multiprozessorsystem "SMP")-Support (vorerst als experimentell bezeichnet) in den Kernel Einzug gehalten.
+**Minix** ist ein im Jahre 1987 von Andrew S. Tanenbaum zu Lehrzwecken entwickeltes Betriebssystem, welches einem Unix-System nachempfunden ist. Mittlerweile ist es in Version 3 erschienen und wurde modernisiert. Ab Version 3.2 hat [SMP](Symmetrisches-Multiprozessorsystem.md "SMP")-Support (vorerst als experimentell bezeichnet) in den Kernel Einzug gehalten.
 
   
 

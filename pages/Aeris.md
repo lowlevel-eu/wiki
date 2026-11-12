@@ -11,14 +11,14 @@ Letzte Änderung vor gut einem Jahr, keine sichtbare Weiterentwicklung. --[DerHa
 |  |  |
 | Entwickler: | cloidnerux |
 | Akt. Version: |  |
-| [Lizenz](Lizenzen "Lizenzen"): |  |
+| [Lizenz](Lizenzen.md "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: |  |
-| [Kernelart](Kernel "Kernel"): |  |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): |  |
+| [Kernelart](Kernel.md "Kernel"): |  |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): |  |
 | API: |  |
 | Binärformat: |  |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 [\[1\]](http://aeris.a-server.tk/index.php/)

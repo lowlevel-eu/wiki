@@ -1,6 +1,6 @@
 # Floppy
 
-Weiterleitung: [Floppy Disk Controller](Floppy-Disk-Controller)
+Weiterleitung: [Floppy Disk Controller](Floppy-Disk-Controller.md)
 
 ---
 

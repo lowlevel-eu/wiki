@@ -1,6 +1,6 @@
 # Interrupt Request
 
-Weiterleitung: [Programmable Interrupt Controller#IRQ Tabelle](Programmable-Interrupt-Controller#irq-tabelle)
+Weiterleitung: [Programmable Interrupt Controller#IRQ Tabelle](Programmable-Interrupt-Controller.md#irq-tabelle)
 
 ---
 

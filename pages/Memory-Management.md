@@ -1,6 +1,6 @@
 # Memory Management
 
-Weiterleitung: [Speicherverwaltung](Speicherverwaltung)
+Weiterleitung: [Speicherverwaltung](Speicherverwaltung.md)
 
 ---
 

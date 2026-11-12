@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") |
 | Akt. Version: | — |
-| [Lizenz](Lizenzen "Lizenzen"): | GNU [GPL](Lizenzen "GPL") / BSD ([CDI](Common-Driver-Interface "CDI")-Treiber) |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GNU [GPL](Lizenzen.md "GPL") / BSD ([CDI](Common-Driver-Interface.md "CDI")-Treiber) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Microkernel](Kernel.md#mikrokernel "Microkernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
 | API: | Nativ mit POSIX-Wrappern (Paloxena3.5-API) |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | RPC über Popupthreads mit SHM und Message Passing |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | RPC über Popupthreads mit SHM und Message Passing |
 | Homepage |  |
 
 [Github](https://github.com/XanClic/muxomucota)
@@ -20,7 +20,7 @@
   
 *Hinweis:* Der korrekte Titel dieses Artikels lautet „*µxoµcota*“. Diese Schreibweise ist aufgrund technischer Einschränkungen nicht möglich.
 
-µxoµcota (auch myxomycota oder muxomucota) ist [mein](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") erster Versuch an einem Microkernel. Der Name leitet sich von meinem früheren OS [MyXomycota](MyXomycota "MyXomycota") ab, die „µ“s sind eine unauffällige Anspielung an das „Micro“ im Microkernel.
+µxoµcota (auch myxomycota oder muxomucota) ist [mein](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") erster Versuch an einem Microkernel. Der Name leitet sich von meinem früheren OS [MyXomycota](MyXomycota.md "MyXomycota") ab, die „µ“s sind eine unauffällige Anspielung an das „Micro“ im Microkernel.
 
 ## IPC
 
@@ -60,8 +60,8 @@ Die praktisch absolute Dezentralität hat den Vorteil einer funktionierenden for
 ## Aktuelle Features
 
 - o\. g. IPC und VFS
-- [CDI](Common-Driver-Interface "Common Driver Interface")
-- Netzwerkstack: [Ethernet](Ethernet "Ethernet"), [IPv4](Internet-Protocol "Internet Protocol"), UDP, DHCP, TCP
+- [CDI](Common-Driver-Interface.md "Common Driver Interface")
+- Netzwerkstack: [Ethernet](Ethernet.md "Ethernet"), [IPv4](Internet-Protocol.md "Internet Protocol"), UDP, DHCP, TCP
 - palirc als IRC-Client
 - Grieχsche Buchstaben im Namen
 - Fortgeschrittener Falschrummodus

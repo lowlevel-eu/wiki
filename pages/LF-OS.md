@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") |
 | Akt. Version: | \- |
-| [Lizenz](Lizenzen "Lizenzen"): | MIT |
+| [Lizenz](Lizenzen.md "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
-| Plattform: | [x86-64](X86-64 "X86-64") |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
+| Plattform: | [x86-64](X86-64.md "X86-64") |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [C++](C%2B%2B.md "C++"), [Assembler](Assembler.md "Assembler") |
 | API: | aktuell POSIX via newlib, später asynchrone native API und newlib darauf portiert für Legacy Apps |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Vor allem shared memory und message passing |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Vor allem shared memory und message passing |
 | Homepage |  |
 
  
@@ -47,14 +47,14 @@ Welche Implementierung standardmäßig verwendet werden soll, lässt sich von Pr
   - schönes Logging in den Arbeitsspeicher und COM1 (und auf die Framebuffer-Konsole bis ein Prozess den Framebuffer übernimmt)
   - ein paar coole Datenstrukturen, ein paar Unit-Tests für diese
   - ein paar Syscalls - definiert in einer YAML Datei aus der automatisch C-Code generiert wird (Kernel- und Userspace-seitig)
-  - genug [ELF](Executable-and-Linking-Format "ELF") Loader für Binaries die LLD ausspuckt (Segmente sind Page-aligned aber irgendwie auch nicht)
+  - genug [ELF](Executable-and-Linking-Format.md "ELF") Loader für Binaries die LLD ausspuckt (Segmente sind Page-aligned aber irgendwie auch nicht)
   - Panic screen mit Stacktrace (sogar mit Kernel Debug-Symbolen!)
   - Faults werden größtenteils dem Prozess zugeschoben, manche Page-Faults sogar sinnvoll behandelt (Stack)
-  - Anfänge von [pthreads](POSIX-Threads "POSIX Threads") -\> aktuell aktivste Baustelle
+  - Anfänge von [pthreads](POSIX-Threads.md "POSIX Threads") -\> aktuell aktivste Baustelle
 - init
   - kann sich den Framebuffer holen und lustige Dinge rendern
   - forkt dabei, nutzt pthread_mutex zur synchronisation
-- newlib, libc++, libc++abi, compiler-rt, [Clang](Clang "Clang") mit LF OS Kenntnissen
+- newlib, libc++, libc++abi, compiler-rt, [Clang](Clang.md "Clang") mit LF OS Kenntnissen
 - [Doom](https://twitter.com/0x0a_fox/status/1386095877165551616)
 - Bisschen Code der einigermaßen sinnvoll ist und sogar als Referenz hier im Wiki geeignet ist (und teilweise verlinkt)
 

@@ -1,6 +1,6 @@
 # Týndur/Interprozesskommunikation
 
-Dieser Artikel bezieht sich ausschließlich auf die Interprozesskommunikation unter [LOST](Kategorie-T%C3%BDndur "Kategorie:Týndur"). Eine allgemeingültige Erklärung findet sich unter [Interprozesskommunikation](Interprozesskommunikation "Interprozesskommunikation").
+Dieser Artikel bezieht sich ausschließlich auf die Interprozesskommunikation unter [LOST](Kategorie-T%C3%BDndur.md "Kategorie:Týndur"). Eine allgemeingültige Erklärung findet sich unter [Interprozesskommunikation](Interprozesskommunikation.md "Interprozesskommunikation").
 
 ## Kernelseitiges RPC
 

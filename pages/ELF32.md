@@ -1,6 +1,6 @@
 # ELF32
 
-Weiterleitung: [Executable and Linking Format](Executable-and-Linking-Format)
+Weiterleitung: [Executable and Linking Format](Executable-and-Linking-Format.md)
 
 ---
 

@@ -11,14 +11,14 @@ Wieder ein eingestelltes OS (Katzen sind übrigens meine Lieblingstiere, weshalb
 | [<img src="assets/Katze-396196.jpg" width="222" height="314" alt="Katze-396196.jpg" />](assets/Katze-396196.jpg) |  |
 | Entwickler: | Peter Kowalsky (Cyborg00222), Josef Biehler (Dateisystem) |
 | Akt. Version: | 0.63 |
-| [Lizenz](Lizenzen "Lizenzen"): | BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Monolithischer Kernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C")/[C++](C%2B%2B "C++") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Monolithischer Kernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler"), [C](C.md "C")/[C++](C%2B%2B.md "C++") |
 | API: |  |
 | Binärformat: |  |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 \[nicht mehr vorhanden\]

@@ -11,20 +11,20 @@
 |  |  |
 | Entwickler: | [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") |
 | Akt. Version: | 1.4.2 Beta (Codename: "Nitro") |
-| [Lizenz](Lizenzen "Lizenzen"): | CORE.\LICENCE |
+| [Lizenz](Lizenzen.md "Lizenzen"): | CORE.\LICENCE |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86"), [x64](X86-64 "X64"), [ARM](ARM "ARM") |
-| [Kernelart](Kernel "Kernel"): | Makrokernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
+| Plattform: | [x86](X86.md "X86"), [x64](X86-64.md "X64"), [ARM](ARM.md "ARM") |
+| [Kernelart](Kernel.md "Kernel"): | Makrokernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C++](C%2B%2B.md "C++"), [Assembler](Assembler.md "Assembler") |
 | API: | CORE.\API |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF"), EXE |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Channels, RPC, XML-RPC |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF"), EXE |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Channels, RPC, XML-RPC |
 | Homepage |  |
 
 In Arbeit.
 
   
-CORE.\OS ist ein [Betriebssystem](Betriebssystem "Betriebssystem"), welches seit 2009 von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem frühen Stadium. Die Hauptziele von CORE.\OS sind, eine brauchbare Umgebung für Entwickler und Normalanwender bereitzustellen.
+CORE.\OS ist ein [Betriebssystem](Betriebssystem.md "Betriebssystem"), welches seit 2009 von [MtheD](https://lowlevel-eu.github.io/wiki/pages/2347/index.html "Benutzer:MtheD") entwickelt wird. Es befindet sich zur Zeit in einem frühen Stadium. Die Hauptziele von CORE.\OS sind, eine brauchbare Umgebung für Entwickler und Normalanwender bereitzustellen.
 
   
 

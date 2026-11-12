@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Phoenix |
 | Akt. Version: | \- |
-| [Lizenz](Lizenzen "Lizenzen"): | MIT |
+| [Lizenz](Lizenzen.md "Lizenzen"): | MIT |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Monolithisch |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Monolithisch |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler"), [C](C.md "C") |
 | API: | Unix |
 | Binärformat: | ELF |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Signals |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Signals |
 | Homepage |  |
 
 [\[1\]](http://repo.or.cz/w/planlOS.git) (git)

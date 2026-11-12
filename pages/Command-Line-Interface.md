@@ -1,6 +1,6 @@
 # Command Line Interface
 
-Weiterleitung: [Shell](Shell)
+Weiterleitung: [Shell](Shell.md)
 
 ---
 

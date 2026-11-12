@@ -2,7 +2,7 @@
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| « [Teil 6 - Multitasking](Teil-6-Multitasking "Teil 6 - Multitasking") | **Navigation** | [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm") » |
+| « [Teil 6 - Multitasking](Teil-6-Multitasking.md "Teil 6 - Multitasking") | **Navigation** | [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm.md "Teil 8 - Ein erstes Programm") » |
 
 ## Ziel
 
@@ -25,9 +25,9 @@ struct cpu_state* init_task(void* entry)
 }
 ```
 
-Den neuen Speicher muss uns die [physische Speicherverwaltung](Physische-Speicherverwaltung "Physische Speicherverwaltung") (engl. *physical memory manager*, daher das *pmm*) zur Verfügung stellen. Die Aufgabe der Speicherverwaltung ist es - Überraschung - den vorhandenen Speicher zu verwalten, so dass zur Laufzeit neuer Speicher angefordert werden und auch wieder freigegeben werden kann. Man arbeitet an dieser Stelle üblicherweise mit Speicherblöcken einer festen Größe - auf x86 sind das üblicherweise 4 Kilobyte (was nicht völlig willkürlich ist: Wir werden später dazu kommen, dass das genau die Größe ist, mit der man für virtuellen Speicher auch arbeiten muss).
+Den neuen Speicher muss uns die [physische Speicherverwaltung](Physische-Speicherverwaltung.md "Physische Speicherverwaltung") (engl. *physical memory manager*, daher das *pmm*) zur Verfügung stellen. Die Aufgabe der Speicherverwaltung ist es - Überraschung - den vorhandenen Speicher zu verwalten, so dass zur Laufzeit neuer Speicher angefordert werden und auch wieder freigegeben werden kann. Man arbeitet an dieser Stelle üblicherweise mit Speicherblöcken einer festen Größe - auf x86 sind das üblicherweise 4 Kilobyte (was nicht völlig willkürlich ist: Wir werden später dazu kommen, dass das genau die Größe ist, mit der man für virtuellen Speicher auch arbeiten muss).
 
-Bevor wir uns einer möglichen Implementierung widmen, möchte ich kurz die Funktionen aufzählen, die die Speicherverwaltung bieten muss. Der Artikel [Physische Speicherverwaltung](Physische-Speicherverwaltung "Physische Speicherverwaltung") nennt einige Möglichkeiten, die Funktionen zu implementieren. Wer mag, kann hier gern eine andere Methode wählen und den nächsten Abschnitt nur überfliegen. Die Funktionen sind also:
+Bevor wir uns einer möglichen Implementierung widmen, möchte ich kurz die Funktionen aufzählen, die die Speicherverwaltung bieten muss. Der Artikel [Physische Speicherverwaltung](Physische-Speicherverwaltung.md "Physische Speicherverwaltung") nennt einige Möglichkeiten, die Funktionen zu implementieren. Wer mag, kann hier gern eine andere Methode wählen und den nächsten Abschnitt nur überfliegen. Die Funktionen sind also:
 
 - *pmm_init*: Inititalisiert die Speicherverwaltung. Alle Speicherbereiche, die beim Start des Systems frei sind, müssen als frei markiert werden, der Rest als belegt.
 - *pmm_alloc*: Reserviert eine bislang freie Seite (ein Speicherblock von 4k) und gibt ihre Startadresse zurück.
@@ -68,7 +68,7 @@ Da die Implementierung offensichtlich ist, möchte ich sie hier nicht direkt in 
 
 Eigentlich fehlt jetzt nur noch der Anfangszustand für die Speicherbitmap. Wir müssen dazu wissen, welche Speicherbereiche frei sind und wo wir besser nicht hinschreiben. Zum Glück weiß das BIOS das und GRUB gibt uns die entsprechende Information auch weiter. Wir ignorieren sie bisher nur.
 
-Wenn unser Kernel gestartet ist, liegt im Register *ebx* ein Pointer auf die [Multiboot Information Structure](Multiboot#multiboot-structure "Multiboot"). Der verlinkte Artikel enthält eine Tabelle über den Aufbau der Struktur, die wir am geschicktesten als C-struct deklarieren (zumindest bis zu den mmap-Feldern). Das Feld mbs_mmap_addr ist ein Pointer auf die gesuchten Daten und der Abschnitt [mbs_mmap_addr](Multiboot#mbs_mmap_addr "Multiboot") enthält den Aufbau eines Eintrags der Memory Map.
+Wenn unser Kernel gestartet ist, liegt im Register *ebx* ein Pointer auf die [Multiboot Information Structure](Multiboot.md#multiboot-structure "Multiboot"). Der verlinkte Artikel enthält eine Tabelle über den Aufbau der Struktur, die wir am geschicktesten als C-struct deklarieren (zumindest bis zu den mmap-Feldern). Das Feld mbs_mmap_addr ist ein Pointer auf die gesuchten Daten und der Abschnitt [mbs_mmap_addr](Multiboot.md#mbs_mmap_addr "Multiboot") enthält den Aufbau eines Eintrags der Memory Map.
 
 Wir müssen also zunächst einmal zurück in die start.S und den Pointer weitergeben:
 
@@ -182,7 +182,7 @@ Der Scheduler muss jetzt statt den Arrayindex weiterzuzählen zum nächsten List
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| « [Teil 6 - Multitasking](Teil-6-Multitasking "Teil 6 - Multitasking") | **Navigation** | [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm "Teil 8 - Ein erstes Programm") » |
+| « [Teil 6 - Multitasking](Teil-6-Multitasking.md "Teil 6 - Multitasking") | **Navigation** | [Teil 8 - Ein erstes Programm](Teil-8-Ein-erstes-Programm.md "Teil 8 - Ein erstes Programm") » |
 
 ---
 

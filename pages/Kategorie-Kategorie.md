@@ -10,7 +10,7 @@ Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie w
 
 ### Unterkategorien
 
-- [Wiki-Verwaltung](Kategorie-Wiki-Verwaltung)
+- [Wiki-Verwaltung](Kategorie-Wiki-Verwaltung.md)
 
 
 ---

@@ -4,15 +4,15 @@
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name: | C |
 | Inlineassembler: | Ja |
-| Compiler: | [GCC](GNU-Compiler-Collection "GCC"), [Clang](Clang "Clang"), icc, ... |
+| Compiler: | [GCC](GNU-Compiler-Collection.md "GCC"), [Clang](Clang.md "Clang"), icc, ... |
 | Spracheneigenschaften |  |
 | Plattformen: | Alle |
-| Beispielkernel in der Sprache: | [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger") |
+| Beispielkernel in der Sprache: | [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger.md "Kategorie:OS-Dev für Einsteiger") |
 | Homepage |  |
 
 [The C Standards Committee](http://www.open-std.org/jtc1/sc22/wg14/)
 
-C ist eine bekannte, ältere Programmiersprache. Sie verfolgt das Ziel, bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](Assembler "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](C%2B%2B "C++").
+C ist eine bekannte, ältere Programmiersprache. Sie verfolgt das Ziel, bei vergleichbarer Ausführungsgeschwindigkeit plattformunabhängiger und abstrakter als [Assembler](Assembler.md "Assembler") zu sein. Direkte Weiterentwicklung von C ist [C++](C%2B%2B.md "C++").
 
 ## Geschichte
 
@@ -20,7 +20,7 @@ C wurde 1971–1973 von Dennis Ritchie in den Bell Laboratories entwickelt, er s
 
 ## Kernelprogrammierung mit C
 
-Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für Einsteiger gibt es die [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger"), welche beschreibt, wie man einen kleinen Kernel in C schreibt mithilfe des Bootloaders [GRUB](Grand-Unified-Bootloader "GRUB") entwickelt. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [GCC](GNU-Compiler-Collection "GCC"), [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") hat auch sehr gute Erfahrungen mit [Clang](Clang "Clang") gemacht.
+Da man mit C sehr hardwarenah programmieren kann, eignet sich die Sprache zur Programmierung eines Kernels hervorragend. Es ist sogar die überwiegende Anzahl der Betriebssystemkernel in C geschrieben. Für Einsteiger gibt es die [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger.md "Kategorie:OS-Dev für Einsteiger"), welche beschreibt, wie man einen kleinen Kernel in C schreibt mithilfe des Bootloaders [GRUB](Grand-Unified-Bootloader.md "GRUB") entwickelt. Für andere Bereiche ist C jedoch nicht sonderlich geeignet, um Beispiel für einen Bootsektor. Empfehlenswert ist – wie bei jeder anderen Sprache, die im Bereich der Kernelprogrammierung verwendet werden soll – ein Compiler, der Inlineassembler unterstützt. Hierfür eignet sich der [GCC](GNU-Compiler-Collection.md "GCC"), [LittleFox](https://lowlevel-eu.github.io/wiki/pages/2674/index.html "Benutzerin:Littlefox") hat auch sehr gute Erfahrungen mit [Clang](Clang.md "Clang") gemacht.
 
 ### Assemblercode in C
 
@@ -28,13 +28,13 @@ Während es möglich ist, den allergrößten Teil des Kernels in C zu schreiben,
 
 - **Inline-Assembler**: Assemblercode wird direkt in den C-Code eingebettet. Die konkrete Syntax dafür unterscheidet sich von Compiler zu Compiler, im Allgemeinen wird der Assemblercode durch das Schlüsselwort *asm* eingeleitet. Ein Vorteil dieser Methode ist, dass ein direkter Zugriff auch auf lokale C-Variablen möglich ist. Sie eignet sich daher für sehr kleine Codestücke besonders gut.
 
-  Siehe auch [Inline-Assembler mit GCC](Inline-Assembler-mit-GCC "Inline-Assembler mit GCC")
+  Siehe auch [Inline-Assembler mit GCC](Inline-Assembler-mit-GCC.md "Inline-Assembler mit GCC")
 
-- **Externe Assemblerdatei**: Der Assemblercode wird in eine eigene Datei ausgelagert und vom C-Code als eigenständige Funktion aufgerufen. Die Übergabe von Parametern und des Rückgabewerts wird im Artikel [Aufrufkonventionen](Aufrufkonventionen "Aufrufkonventionen") beschrieben.
+- **Externe Assemblerdatei**: Der Assemblercode wird in eine eigene Datei ausgelagert und vom C-Code als eigenständige Funktion aufgerufen. Die Übergabe von Parametern und des Rückgabewerts wird im Artikel [Aufrufkonventionen](Aufrufkonventionen.md "Aufrufkonventionen") beschrieben.
 
 ### *volatile*
 
-*volatile* ist ein *type-qualifier* in C. Falls ein Typ T *volatile*-qualifiziert ist, dann bedeutet das, dass sich der Wert einer Variable vom Typ T durch Instruktionen, die außerhalb der momentanen Befehlssequenz stehen (z.B. in einem [Interrupthandler](Interrupt "Interrupt")), verändern kann. Dazu folgender Beispielcode:
+*volatile* ist ein *type-qualifier* in C. Falls ein Typ T *volatile*-qualifiziert ist, dann bedeutet das, dass sich der Wert einer Variable vom Typ T durch Instruktionen, die außerhalb der momentanen Befehlssequenz stehen (z.B. in einem [Interrupthandler](Interrupt.md "Interrupt")), verändern kann. Dazu folgender Beispielcode:
 
 ``` c
 // 1 falls next_char ein gültiges Zeichen enthält, 0 sonst
@@ -63,19 +63,19 @@ if (char_valid == 0)
 
 Dies ist eine korrekte Optimierung da der Compiler bei *char_valid* - da es nicht *volatile*-qualifiziert ist - annehmen darf, dass es nicht durch den Interrupthandler (oder irgendwelchen Code der nicht in get_char steht) verändert werden kann. Insofern reicht es aus einmal *char_valid* zu lesen. Mit dieser "Optimierung" liefert der Code natürlich nichtmehr das gewünschte Resultat. Um das zu korrigieren muss *char_valid* und *next_char* *volatile*-qualifiziert werden.
 
-Aus analogem Grund sollte auch auf [Memory-mapped I/O](Hardware-Abstraction-Layer#memory-mapped-io "Hardware Abstraction Layer")-Bereich nur über Zeiger auf *volatile*-qualifizierte Datentypen zugegriffen werden.
+Aus analogem Grund sollte auch auf [Memory-mapped I/O](Hardware-Abstraction-Layer.md#memory-mapped-io "Hardware Abstraction Layer")-Bereich nur über Zeiger auf *volatile*-qualifizierte Datentypen zugegriffen werden.
 
 ## Bekannte C-Compiler
 
-- gcc aus der [GNU Compiler Collection](GNU-Compiler-Collection "GNU Compiler Collection")
-- [Clang](Clang "Clang") aus dem LLVM Projekt
+- gcc aus der [GNU Compiler Collection](GNU-Compiler-Collection.md "GNU Compiler Collection")
+- [Clang](Clang.md "Clang") aus dem LLVM Projekt
 - [tcc](http://bellard.org/tcc/) (Tiny C Compiler)
 - [bcc](http://dir.filewatcher.com/d/FreeBSD/4.2-release/i386/bcc-1995.03.12.tgz.79915.html) ein 16Bit Compiler für Linux (im dev86-Paket enthalten)
 - Borland [Turbo C](http://dn.codegear.com/article/20841) für DOS (16 Bit/Real Mode)
 
 ## siehe auch
 
-- Die [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger "Kategorie:OS-Dev für Einsteiger") benutzt C als Programmiersprache der Wahl
+- Die [Tutorialserie OS-Dev für Einsteiger](Kategorie-OS-Dev-f%C3%BCr-Einsteiger.md "Kategorie:OS-Dev für Einsteiger") benutzt C als Programmiersprache der Wahl
 
 ## Weblinks
 

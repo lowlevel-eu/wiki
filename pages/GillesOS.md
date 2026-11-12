@@ -1,6 +1,6 @@
 # GillesOS
 
-Weiterleitung: [KyrOS](KyrOS)
+Weiterleitung: [KyrOS](KyrOS.md)
 
 ---
 

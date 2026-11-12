@@ -1,6 +1,6 @@
 # PIC
 
-Weiterleitung: [Programmable Interrupt Controller](Programmable-Interrupt-Controller)
+Weiterleitung: [Programmable Interrupt Controller](Programmable-Interrupt-Controller.md)
 
 ---
 

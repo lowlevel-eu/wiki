@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 7](Ausgabe-7 "Ausgabe 7") | **Navigation** | [Ausgabe 9](Ausgabe-9 "Ausgabe 9") » |
+| « [Ausgabe 7](Ausgabe-7.md "Ausgabe 7") | **Navigation** | [Ausgabe 9](Ausgabe-9.md "Ausgabe 9") » |
 
 ## Vorwort
 
@@ -34,7 +34,7 @@ Bei SkyOS bestimmen zur Zeit Updates und Bugfixes die Neuerungen. SkyOS besticht
 
 ### Paging
 
-(Hauptartikel: [Paging](Paging "Paging"))
+(Hauptartikel: [Paging](Paging.md "Paging"))
 
 #### Ein besonderes PMode Feature
 
@@ -781,7 +781,7 @@ Xen ist in der Version 2.0.7 am 4.8.2005 erschienen. Xen ist eine Virtualisierun
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 7](Ausgabe-7 "Ausgabe 7") | **Navigation** | [Ausgabe 9](Ausgabe-9 "Ausgabe 9") » |
+| « [Ausgabe 7](Ausgabe-7.md "Ausgabe 7") | **Navigation** | [Ausgabe 9](Ausgabe-9.md "Ausgabe 9") » |
 
 ---
 

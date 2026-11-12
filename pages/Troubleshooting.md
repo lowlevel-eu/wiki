@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Weiterleitung: [Erste Hilfe](Erste-Hilfe)
+Weiterleitung: [Erste Hilfe](Erste-Hilfe.md)
 
 ---
 

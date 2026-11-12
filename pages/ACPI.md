@@ -1,6 +1,6 @@
 # ACPI
 
-Weiterleitung: [Advanced Configuration and Power Interface](Advanced-Configuration-and-Power-Interface)
+Weiterleitung: [Advanced Configuration and Power Interface](Advanced-Configuration-and-Power-Interface.md)
 
 ---
 

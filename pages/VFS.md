@@ -1,6 +1,6 @@
 # VFS
 
-Weiterleitung: [Virtuelles Dateisystem](Virtuelles-Dateisystem)
+Weiterleitung: [Virtuelles Dateisystem](Virtuelles-Dateisystem.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # LM
 
-Weiterleitung: [Long Mode](Long-Mode)
+Weiterleitung: [Long Mode](Long-Mode.md)
 
 ---
 

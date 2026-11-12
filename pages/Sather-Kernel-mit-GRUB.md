@@ -1,6 +1,6 @@
 # Sather-Kernel mit GRUB
 
-Wie schon im Hauptartikel zu [Sather](Sather "Sather") erwähnt, ist es im Allgemeinen nicht empfehlenswert, einen Kernel in Sather zu schreiben. Dennoch werden wir hier genau das tun. Als Compiler wird GNU Sather verwendet (s. Hauptartikel), als Assembler [FASM](Flat-Assembler "FASM") und außerdem noch verschiedene Standard-GNU-Tools ([GCC](GNU-Compiler-Collection "GCC"), Binutils, Make, ...).
+Wie schon im Hauptartikel zu [Sather](Sather.md "Sather") erwähnt, ist es im Allgemeinen nicht empfehlenswert, einen Kernel in Sather zu schreiben. Dennoch werden wir hier genau das tun. Als Compiler wird GNU Sather verwendet (s. Hauptartikel), als Assembler [FASM](Flat-Assembler.md "FASM") und außerdem noch verschiedene Standard-GNU-Tools ([GCC](GNU-Compiler-Collection.md "GCC"), Binutils, Make, ...).
 
 ## Dateien
 
@@ -420,7 +420,7 @@ Als letztes fehlt noch das Linkerscript link.ld, diese kann z. B. so aufgebaut 
         }
     }
 
-Hier wird eine [ELF32](Executable-and-Linking-Format "ELF32")-Datei für [i386](X86 "X86") erstellt und an die Adresse 0x100000 gelinkt. Die erste Sektion in der Datei ist .multiboot (damit der Multibootheader auf jeden Fall in den ersten 8 kB liegt, wie von der Spezifikation gefordert).
+Hier wird eine [ELF32](Executable-and-Linking-Format.md "ELF32")-Datei für [i386](X86.md "X86") erstellt und an die Adresse 0x100000 gelinkt. Die erste Sektion in der Datei ist .multiboot (damit der Multibootheader auf jeden Fall in den ersten 8 kB liegt, wie von der Spezifikation gefordert).
 
   
 

@@ -1,6 +1,6 @@
 # Virtuelles Dateisystem
 
-Ein virtuelles [Dateisystem](Dateisystem "Dateisystem") (VFS &#150; Virtual File System) abstrahiert verschiedene reale Dateisysteme. Dadurch muss ein Programm, das auf Dateien zugreift, nicht wissen, auf welchem Dateisystem sie liegen.
+Ein virtuelles [Dateisystem](Dateisystem.md "Dateisystem") (VFS &#150; Virtual File System) abstrahiert verschiedene reale Dateisysteme. Dadurch muss ein Programm, das auf Dateien zugreift, nicht wissen, auf welchem Dateisystem sie liegen.
 
 Ein weiterer Vorteil besteht darin, dass die „realen“ Dateisysteme nicht wirklich real sein müssen. Sie müssen nicht wirklich auf einem physischen Medium existieren, sie können auch selbst „virtuell“ sein (wie zum Beispiel das Linux-Dateisystem procfs).
 

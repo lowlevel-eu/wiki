@@ -1,6 +1,6 @@
 # Enter / Leave
 
-Das Befehlspaar *enter* und *leave* adjustiert den [Stack](Stack "Stack") für die Verwendung von lokalen Variablen.
+Das Befehlspaar *enter* und *leave* adjustiert den [Stack](Stack.md "Stack") für die Verwendung von lokalen Variablen.
 
   
 
@@ -69,11 +69,11 @@ pop ebp
 
 ### gcc
 
-[gcc](GNU-Compiler-Collection "Gcc") verwendet nur den *leave*-Befehl, anstatt *enter* aber die obige Ersatzform.
+[gcc](GNU-Compiler-Collection.md "Gcc") verwendet nur den *leave*-Befehl, anstatt *enter* aber die obige Ersatzform.
 
 ## siehe auch
 
-- [Stack](Stack "Stack")
+- [Stack](Stack.md "Stack")
 
 ---
 

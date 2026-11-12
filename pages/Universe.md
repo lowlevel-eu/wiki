@@ -7,14 +7,14 @@ Universe soll ein schlankes, universelles (deswegen auch der Name, wer hätte da
 |  |  |
 | Entwickler: | InfinityCoding |
 | Akt. Version: | 1.0 (in Entwicklung) |
-| [Lizenz](Lizenzen "Lizenzen"): | GPL v3, LGPL (libc) |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GPL v3, LGPL (libc) |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86"), [ARM](ARM "ARM")(In Arbeit) |
-| [Kernelart](Kernel "Kernel"): | Micro-Kernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembler/C |
-| API: | nativ, [POSIX](POSIX "POSIX") |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | [Pipes](Pipe "Pipe") |
+| Plattform: | [x86](X86.md "X86"), [ARM](ARM.md "ARM")(In Arbeit) |
+| [Kernelart](Kernel.md "Kernel"): | Micro-Kernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | Assembler/C |
+| API: | nativ, [POSIX](POSIX.md "POSIX") |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | [Pipes](Pipe.md "Pipe") |
 | Homepage |  |
 
 (in Arbeit)
@@ -30,7 +30,7 @@ Aktuell handelt es sich um einen einfachen Microkernel mit einem kleinen Treiber
 ## Universe Kernel 1.0 (Planung/in Arbeit)
 
 - Blocktreiber für Bootlaufwerk (CD + ATA)
-- Dateisystemtreiber für das Bootlaufwerk ([FAT](File-Allocation-Table "FAT") und EXT)
+- Dateisystemtreiber für das Bootlaufwerk ([FAT](File-Allocation-Table.md "FAT") und EXT)
 - Standard Konsolen/Grafiktreiber
 - vollständige Portierung der core-utils
 

@@ -1,6 +1,6 @@
 # Make
 
-Weiterleitung: [Makefile](Makefile)
+Weiterleitung: [Makefile](Makefile.md)
 
 ---
 

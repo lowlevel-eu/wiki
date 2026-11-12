@@ -27,13 +27,13 @@ Dies ist die "Abbildung" eines Ethernet-I-Paketes. Den Teil, der aus den MAC-Adr
 
 [<img src="assets/Ethernet2.png" width="827" height="62" alt="Ethernet2.png" />](assets/Ethernet2.png)
 
-Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-Paket: Statt dem Längenfeld gibt es ein Typfeld, welches den Typ der Nutzdaten angibt. Der Wert im Typfeld ist stets größer als 0x0600 (1536), sodass zwischen Ethernet-I-Paketen (der Wert muss kleiner oder gleich 0x05DC (1500) sein) und zwischen Ethernet-II-Paketen unterschieden werden kann. Wichtige Typwerte sind 0x0800 ([IP](Internet-Protocol "Internet Protocol")) und 0x0806 ([ARP](Address-Resolution-Protocol "Address Resolution Protocol")).
+Ein Ethernet-II-Paket unterscheidet sich nur geringfügig von einem Ethernet-I-Paket: Statt dem Längenfeld gibt es ein Typfeld, welches den Typ der Nutzdaten angibt. Der Wert im Typfeld ist stets größer als 0x0600 (1536), sodass zwischen Ethernet-I-Paketen (der Wert muss kleiner oder gleich 0x05DC (1500) sein) und zwischen Ethernet-II-Paketen unterschieden werden kann. Wichtige Typwerte sind 0x0800 ([IP](Internet-Protocol.md "Internet Protocol")) und 0x0806 ([ARP](Address-Resolution-Protocol.md "Address Resolution Protocol")).
 
 ## Was muss ich senden?
 
 Heutzutage wird Ethernet I kaum noch verwendet. Daher ist es ratsam, Ethernet-II-Pakete zu benutzen.
 
-An die [Netzwerkkarte](Kategorie-Netzwerkkarte "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicherweise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
+An die [Netzwerkkarte](Kategorie-Netzwerkkarte.md "Kategorie:Netzwerkkarte") übergibt man nur den Ethernetframe. Präambel und SFD fügt die Karte selbst an. Üblicherweise kann man das CRC32-Feld auch weglassen und die Netzwerkkarte berechnet dieses für dich und fügt es automatisch an das Paket an.
 
 ## Weblinks
 

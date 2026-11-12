@@ -1,6 +1,6 @@
 # ARP
 
-Weiterleitung: [Address Resolution Protocol](Address-Resolution-Protocol)
+Weiterleitung: [Address Resolution Protocol](Address-Resolution-Protocol.md)
 
 ---
 

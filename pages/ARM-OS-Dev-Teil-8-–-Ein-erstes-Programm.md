@@ -2,11 +2,11 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| « [ARM-OS-Dev Teil 7 – Physische Speicherverwaltung](ARM-OS-Dev-Teil-7-%E2%80%93-Physische-Speicherverwaltung "ARM-OS-Dev Teil 7 – Physische Speicherverwaltung") | **Navigation** | [ARM-OS-Dev Teil 9 – Paging](ARM-OS-Dev-Teil-9-%E2%80%93-Paging "ARM-OS-Dev Teil 9 – Paging") » |
+| « [ARM-OS-Dev Teil 7 – Physische Speicherverwaltung](ARM-OS-Dev-Teil-7-%E2%80%93-Physische-Speicherverwaltung.md "ARM-OS-Dev Teil 7 – Physische Speicherverwaltung") | **Navigation** | [ARM-OS-Dev Teil 9 – Paging](ARM-OS-Dev-Teil-9-%E2%80%93-Paging.md "ARM-OS-Dev Teil 9 – Paging") » |
 
 ## Ein erstes Testprogramm
 
-Wie in der [x86-Reihe](Teil-8-Ein-erstes-Programm#ein-kleines-testprogramm "Teil 8 - Ein erstes Programm") auch soll das erste Testprogramm einfach die Zahlen 0 bis 2 ausgeben. Auch hier geschieht das durch direkten Hardwarezugriff: \<c\>#include \<stdint.h\>
+Wie in der [x86-Reihe](Teil-8-Ein-erstes-Programm.md#ein-kleines-testprogramm "Teil 8 - Ein erstes Programm") auch soll das erste Testprogramm einfach die Zahlen 0 bis 2 ausgeben. Auch hier geschieht das durch direkten Hardwarezugriff: \<c\>#include \<stdint.h\>
 
 1.  define SERIAL_DR \*((volatile uint8_t \*)0x16000000)
 2.  define SERIAL_FR \*((volatile uint32_t \*)0x16000018)
@@ -93,7 +93,7 @@ Nun wird noch die *syscall*-Funktion benötigt. Deren erste vier Parameter sind 
 
 ## ELF
 
-Anstatt einer rohen Binärdatei wäre ein richtiges Format wie ELF für das Userprogramm schön. Eine ELF statt der Binärdatei einzubinden ist erstmal nicht schwer, dazu müssen wir lediglich den objcopy-Aufruf weglassen, der aus der ELF eben eine rohe Binärdatei macht. Das Laden der ELF kann genauso wie in der [x86-Reihe](Teil-8-Ein-erstes-Programm#elf "Teil 8 - Ein erstes Programm") geschehen (da in dem dort gezeigten ELF-Loader darauf verzichtet wird, zu überprüfen, für welche Architektur die ELF gebaut wurde – im Grunde der einzige Unterschied zwischen i386- und ARM-ELFs, wenn man Executables betrachtet).
+Anstatt einer rohen Binärdatei wäre ein richtiges Format wie ELF für das Userprogramm schön. Eine ELF statt der Binärdatei einzubinden ist erstmal nicht schwer, dazu müssen wir lediglich den objcopy-Aufruf weglassen, der aus der ELF eben eine rohe Binärdatei macht. Das Laden der ELF kann genauso wie in der [x86-Reihe](Teil-8-Ein-erstes-Programm.md#elf "Teil 8 - Ein erstes Programm") geschehen (da in dem dort gezeigten ELF-Loader darauf verzichtet wird, zu überprüfen, für welche Architektur die ELF gebaut wurde – im Grunde der einzige Unterschied zwischen i386- und ARM-ELFs, wenn man Executables betrachtet).
 
 Geladen und ausgeführt wird die ELF dementsprechend mit: \<c\>init_elf32(&\_binary_usertest_start);\</c\>
 

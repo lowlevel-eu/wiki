@@ -1,6 +1,6 @@
 # MSI
 
-Weiterleitung: [Message Signaled Interrupt](Message-Signaled-Interrupt)
+Weiterleitung: [Message Signaled Interrupt](Message-Signaled-Interrupt.md)
 
 ---
 

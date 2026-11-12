@@ -1,6 +1,6 @@
 # GRUB 2
 
-Weiterleitung: [Grand Unified Bootloader#GRUB 2](Grand-Unified-Bootloader#grub-2)
+Weiterleitung: [Grand Unified Bootloader#GRUB 2](Grand-Unified-Bootloader.md#grub-2)
 
 ---
 

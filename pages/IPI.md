@@ -1,6 +1,6 @@
 # IPI
 
-Weiterleitung: [Interprocessor Interrupt](Interprocessor-Interrupt)
+Weiterleitung: [Interprocessor Interrupt](Interprocessor-Interrupt.md)
 
 ---
 

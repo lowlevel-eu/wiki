@@ -6,16 +6,16 @@
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [X86](Kategorie-X86)
+Übergeordnete Kategorien: [X86](Kategorie-X86.md)
 
 ### Seiten
 
-- [Control Register](Control-Register)
-- [I/O Ports](I-O-Ports)
-- [Long Mode](Long-Mode)
-- [Syscall/sysret](Syscall-sysret)
-- [X86-64](X86-64)
-- [X86-64 Cross-Compiler](X86-64-Cross-Compiler)
+- [Control Register](Control-Register.md)
+- [I/O Ports](I-O-Ports.md)
+- [Long Mode](Long-Mode.md)
+- [Syscall/sysret](Syscall-sysret.md)
+- [X86-64](X86-64.md)
+- [X86-64 Cross-Compiler](X86-64-Cross-Compiler.md)
 
 
 ---

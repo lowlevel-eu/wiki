@@ -8,20 +8,20 @@ Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie w
 
 ### Unterkategorien
 
-- [Compiler](Kategorie-Compiler)
-- [Emulator](Kategorie-Emulator)
+- [Compiler](Kategorie-Compiler.md)
+- [Emulator](Kategorie-Emulator.md)
 
 ### Seiten
 
-- [Clang](Clang)
-- [Editor](Editor)
-- [Flat Assembler](Flat-Assembler)
-- [GNU Compiler Collection](GNU-Compiler-Collection)
-- [Grand Unified Bootloader](Grand-Unified-Bootloader)
-- [LILO](LILO)
-- [Netwide Assembler](Netwide-Assembler)
-- [Shell](Shell)
-- [SYSLINUX](SYSLINUX)
+- [Clang](Clang.md)
+- [Editor](Editor.md)
+- [Flat Assembler](Flat-Assembler.md)
+- [GNU Compiler Collection](GNU-Compiler-Collection.md)
+- [Grand Unified Bootloader](Grand-Unified-Bootloader.md)
+- [LILO](LILO.md)
+- [Netwide Assembler](Netwide-Assembler.md)
+- [Shell](Shell.md)
+- [SYSLINUX](SYSLINUX.md)
 
 
 ---

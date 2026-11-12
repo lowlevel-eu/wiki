@@ -1,6 +1,6 @@
 # Extended BIOS Data Area
 
-Die **Extended BIOS Data Area** (Abkürzung: **EBDA**) dient dem BIOS als erweiterter Speicher, beispielsweise um die [SMP Floating Pointer Structure](Symmetrisches-Multiprozessorsystem#floating-pointer-structure "SMP") zu speichern. Die [BIOS Data Area](BIOS-Data-Area "BIOS Data Area") (Offset 0x0E) gibt darüber Auskunft an welcher Adresse im Speicher die EBDA liegt.
+Die **Extended BIOS Data Area** (Abkürzung: **EBDA**) dient dem BIOS als erweiterter Speicher, beispielsweise um die [SMP Floating Pointer Structure](Symmetrisches-Multiprozessorsystem.md#floating-pointer-structure "SMP") zu speichern. Die [BIOS Data Area](BIOS-Data-Area.md "BIOS Data Area") (Offset 0x0E) gibt darüber Auskunft an welcher Adresse im Speicher die EBDA liegt.
 
 ## Weblinks
 

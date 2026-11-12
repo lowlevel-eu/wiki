@@ -6,14 +6,14 @@
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Kategorie](Kategorie-Kategorie)
+Übergeordnete Kategorien: [Kategorie](Kategorie-Kategorie.md)
 
 ### Unterkategorien
 
-- [Internes](Kategorie-Internes)
-- [Stub](Kategorie-Stub)
-- [TODO](Kategorie-TODO)
-- [Umstritten](Kategorie-Umstritten)
+- [Internes](Kategorie-Internes.md)
+- [Stub](Kategorie-Stub.md)
+- [TODO](Kategorie-TODO.md)
+- [Umstritten](Kategorie-Umstritten.md)
 
 
 ---

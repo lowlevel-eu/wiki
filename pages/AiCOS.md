@@ -5,26 +5,26 @@
 |  |  |
 | Entwickler: | [ScollPi](https://lowlevel-eu.github.io/wiki/pages/1765/index.html "Benutzer:ScollPi") |
 | Akt. Version: | Research Phase 1 (0.01.x) |
-| [Lizenz](Lizenzen "Lizenzen"): | n/a |
+| [Lizenz](Lizenzen.md "Lizenzen"): | n/a |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") (später auch [x64](X86-64 "X64")) |
-| [Kernelart](Kernel "Kernel"): | Modulares Kernel System (MKS) |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler"), [C](C "C")/[C++](C%2B%2B "C++") |
+| Plattform: | [x86](X86.md "X86") (später auch [x64](X86-64.md "X64")) |
+| [Kernelart](Kernel.md "Kernel"): | Modulares Kernel System (MKS) |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler"), [C](C.md "C")/[C++](C%2B%2B.md "C++") |
 | API: | n/a |
 | Binärformat: | BIN, (event. EXE) |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Channels |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Channels |
 | Homepage |  |
 
 In Planung
 
   
-AiCOS ist ein [Betriebssystem](Betriebssystem "Betriebssystem"), welches ganz neue Wege gehen wird, vor allem im Kerneldesign. Warum also aus einer blöden und verrückten Idee nicht ein vollwertiges OS machen?
+AiCOS ist ein [Betriebssystem](Betriebssystem.md "Betriebssystem"), welches ganz neue Wege gehen wird, vor allem im Kerneldesign. Warum also aus einer blöden und verrückten Idee nicht ein vollwertiges OS machen?
 
 AiCOS Einsatzbereich wird anfangs im Netzwerkbereich liegen, unter anderem aber auch als Storage-System. Auch wenn AiCOS auf Single-Core-Plattformen laufen wird, wird es seine Stärken wohl eher auf Multiprozessor bzw. Multicore-System zeigen können. Wichtigstes Ziel ist dabei zum Einem die Performance (ideal sogar Echtzeit) und zum Anderem die Stabilität (Redundanz bis auf CPU-Ebene).
 
 Dieses ehrgeizige Ziel von AiCOS soll frischen Wind in die Computertechnik bringen und hoffentlich auch andere zu einem solchen OS-Design motivieren und gegebenenfalls auch animieren. Denn noch ist AiCOS ein ClosedSource-Projekt.
 
-Wen wundert es also, dass die Wurzeln von AiCOS weder in der Linux/Unix-Welt noch in der Windows-Welt liegen, sondern viel eher in Microsofts [Singularity](Singularity "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
+Wen wundert es also, dass die Wurzeln von AiCOS weder in der Linux/Unix-Welt noch in der Windows-Welt liegen, sondern viel eher in Microsofts [Singularity](Singularity.md "Singularity"). Ein zweites Singularity soll es aber nicht werden, versprochen.
 
   
 
@@ -71,11 +71,11 @@ Den einzigen gemeinsamer Nenner, den ich finden konnte und den ich auch bei der 
 - **Hardware**
   - Intel Core 2 Quad mit 8 GiB RAM
 - **Software**
-  - [Microsoft Windows 7 (64-bit)](http://www.microsoft.com/germany/windows/windows-7/) \>\>\> [Windows](Windows "Windows")
+  - [Microsoft Windows 7 (64-bit)](http://www.microsoft.com/germany/windows/windows-7/) \>\>\> [Windows](Windows.md "Windows")
   - [Microsoft Visual Studio 2008 Express](http://www.microsoft.com/germany/express/)
   - [Mircosoft .NET Framework v3.5](http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6&DisplayLang=de)
   - [Microsoft Windows-Debugger x86/x64 für Kernel-Debug](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)
-  - [Microsoft Virtual PC 2007 inkl. SP 1](http://www.microsoft.com/downloads/details.aspx?FamilyID=28c97d22-6eb8-4a09-a7f7-f6c7a1f000b5&DisplayLang=de) \>\>\> [Microsoft Virtual PC](Microsoft-Virtual-PC "Microsoft Virtual PC")
+  - [Microsoft Virtual PC 2007 inkl. SP 1](http://www.microsoft.com/downloads/details.aspx?FamilyID=28c97d22-6eb8-4a09-a7f7-f6c7a1f000b5&DisplayLang=de) \>\>\> [Microsoft Virtual PC](Microsoft-Virtual-PC.md "Microsoft Virtual PC")
   - Sun VirtualBox
   - Bochs
 - **Referenzmaterial**

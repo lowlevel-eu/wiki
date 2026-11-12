@@ -1,6 +1,6 @@
 # Long Mode
 
-Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals [64-Bit-Allzweckregister](Register "Register") zur Verfügung stehen. Wie auch beim [Protected Mode](Protected-Mode "Protected Mode") starten Prozessoren, die diesen Modus unterstützen, aus Kompatibilitätsgründen zunächst im [Real Mode](Real-Mode "Real Mode") mit deaktiviertem [A20-Gate](A20-Gate "A20-Gate").
+Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals [64-Bit-Allzweckregister](Register.md "Register") zur Verfügung stehen. Wie auch beim [Protected Mode](Protected-Mode.md "Protected Mode") starten Prozessoren, die diesen Modus unterstützen, aus Kompatibilitätsgründen zunächst im [Real Mode](Real-Mode.md "Real Mode") mit deaktiviertem [A20-Gate](A20-Gate.md "A20-Gate").
 
 ## Eigenschaften
 
@@ -10,7 +10,7 @@ Der **Long Mode** ist ein CPU-Modus neuerer CPUs, in dem erstmals [64-Bit-Allzwe
 
 ## Überprüfung der Unterstützung
 
-CPUs, die den Long Mode unterstützen, setzen bei einem Aufruf der [CPUID Funktion 0x80000001](CPUID#funktion-0x8000_0001 "CPUID") das [Long-Mode-Capable-Bit (Bit 29)](CPUID#edx---erweiterte-featureflags "CPUID") im EDX-Register auf 1. Sicherheitshalber sollte man auch noch überprüfen, ob [Physical Address Extensions](Physical-Address-Extension "Physical Address Extension") unterstützt werden.
+CPUs, die den Long Mode unterstützen, setzen bei einem Aufruf der [CPUID Funktion 0x80000001](CPUID.md#funktion-0x8000_0001 "CPUID") das [Long-Mode-Capable-Bit (Bit 29)](CPUID.md#edx---erweiterte-featureflags "CPUID") im EDX-Register auf 1. Sicherheitshalber sollte man auch noch überprüfen, ob [Physical Address Extensions](Physical-Address-Extension.md "Physical Address Extension") unterstützt werden.
 
 ``` asm
 mov eax, 0x80000001
@@ -29,7 +29,7 @@ jmp long_supported    ; Long Mode unterstützt!
 
 ## Aktivierung des Long Mode
 
-Um in den Long Mode umschalten zu können, muss erst einmal der [Protected Mode](Protected-Mode "Protected Mode") aktiviert werden. Eine weitere Voraussetzung ist, dass das **[Physical Address Extension](Physical-Address-Extension "Physical Address Extension")**-Bit (Bit 5) im [CR4](Control-Register#cr4 "Control Register") Register gesetzt und **[Paging](Paging "Paging")** aktiviert ist. Jetzt kann der Long Mode mit dem Setzen des LME-Bits (Bit 8) im **MSR 0xC0000080** aktiviert werden. Im eigentlichen Long Mode befindet man sich aber erst, wenn man in ein 64-Bit-Code-Segment wechselt, das im Vergleich zu den 32-Bit-Code-Segmenten in seinem Descriptor das L-Bit (Bit 21) im 2. DWord gesetzt hat. Die entsprechenden Einträge in der [GDT](Global-Descriptor-Table "Global Descriptor Table") sind natürlich vorher vorzunehmen.
+Um in den Long Mode umschalten zu können, muss erst einmal der [Protected Mode](Protected-Mode.md "Protected Mode") aktiviert werden. Eine weitere Voraussetzung ist, dass das **[Physical Address Extension](Physical-Address-Extension.md "Physical Address Extension")**-Bit (Bit 5) im [CR4](Control-Register.md#cr4 "Control Register") Register gesetzt und **[Paging](Paging.md "Paging")** aktiviert ist. Jetzt kann der Long Mode mit dem Setzen des LME-Bits (Bit 8) im **MSR 0xC0000080** aktiviert werden. Im eigentlichen Long Mode befindet man sich aber erst, wenn man in ein 64-Bit-Code-Segment wechselt, das im Vergleich zu den 32-Bit-Code-Segmenten in seinem Descriptor das L-Bit (Bit 21) im 2. DWord gesetzt hat. Die entsprechenden Einträge in der [GDT](Global-Descriptor-Table.md "Global Descriptor Table") sind natürlich vorher vorzunehmen.
 
 **Achtung!**
 

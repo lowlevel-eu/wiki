@@ -1,6 +1,6 @@
 # FPU
 
-Weiterleitung: [Mathematischer Koprozessor](Mathematischer-Koprozessor)
+Weiterleitung: [Mathematischer Koprozessor](Mathematischer-Koprozessor.md)
 
 ---
 

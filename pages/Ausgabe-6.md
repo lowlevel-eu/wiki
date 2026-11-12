@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 5](Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](Ausgabe-7 "Ausgabe 7") » |
+| « [Ausgabe 5](Ausgabe-5.md "Ausgabe 5") | **Navigation** | [Ausgabe 7](Ausgabe-7.md "Ausgabe 7") » |
 
 ## Vorwort
 
@@ -384,7 +384,7 @@ Dies war sie also, die erste Ausgabe unter neuer Leitung. Anregungen, Beschwerde
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 5](Ausgabe-5 "Ausgabe 5") | **Navigation** | [Ausgabe 7](Ausgabe-7 "Ausgabe 7") » |
+| « [Ausgabe 5](Ausgabe-5.md "Ausgabe 5") | **Navigation** | [Ausgabe 7](Ausgabe-7.md "Ausgabe 7") » |
 
 ---
 

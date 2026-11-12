@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [ehenkes](https://lowlevel-eu.github.io/wiki/pages/2274/index.html "Benutzer:Ehenkes") et. al. |
 | Akt. Version: | 0.0.5.123 (August 2016) |
-| [Lizenz](Lizenzen "Lizenzen"): | 2-Klausel-BSD |
+| [Lizenz](Lizenzen.md "Lizenzen"): | 2-Klausel-BSD |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolith](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C, Assembler |
+| Plattform: | [i386](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolith](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | C, Assembler |
 | API: | Nativ |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF"), [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") (Userprogramme) |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | \- |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF"), [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "PE") (Userprogramme) |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | \- |
 | Homepage |  |
 
 [\[1\]](http://prettyos.de)
@@ -29,11 +29,11 @@ PrettyOS besteht momentan aus den Bereichen Bootloader (Stage 1 und 2, Assembler
 
 ### Bootloader
 
-Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den Kernel (kernel.bin). Als Dateisystem für das Bootlaufwerk wird FAT12 vorausgesetzt. Der Bootloader verwendet [Multiboot](Multiboot "Multiboot")-Strukturen zur Datenübergabe an den Kernel. Als Alternative zum nativen Bootloader können daher mit Einschränkungen GRUB oder iPXE verwendet werden.
+Der Bootloader ist in Assembler (NASM) geschrieben und besteht aus zwei Stufen. BL1 (in Sektor 1) lädt BL2 (Datei boot2.bin). Dieser wiederum startet den Kernel (kernel.bin). Als Dateisystem für das Bootlaufwerk wird FAT12 vorausgesetzt. Der Bootloader verwendet [Multiboot](Multiboot.md "Multiboot")-Strukturen zur Datenübergabe an den Kernel. Als Alternative zum nativen Bootloader können daher mit Einschränkungen GRUB oder iPXE verwendet werden.
 
 ### Kernel
 
-Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, Syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, [xHCI](Extensible-Host-Controller-Interface "XHCI") (USB 3), [EHCI](Enhanced-Host-Controller-Interface "EHCI") (USB 2), [OHCI](Open-Host-Controller-Interface "OHCI") und [UHCI](Universal-Host-Controller-Interface "UHCI") (USB 1.1 und USB 2.0), [VESA BIOS Extensions](VESA-BIOS-Extensions "VESA BIOS Extensions") und die Netzwerkkarten [RTL8139](RTL8139 "RTL8139"), [RTL8168/RTL8169](RTL8169 "RTL8169") und [AMD PCnet](AMD-PCnet "AMD PCnet"). Mittels [CDI](Common-Driver-Interface "CDI") werden auch andere Treiber eingebunden, z.B. e1000. Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 auf Floppydisk und USB-Stick eingesetzt. Das System enthält ferner Treiber für USB-MSDs, USB-Diskettenlaufwerke (UFI), USB-Webcams und USB-HIDs (Maus und Tastatur).
+Der monolithische Kernel ist in der Programmiersprache C mit wenigen Teilen Assembler (NASM und GCCs Inline-Assembler) gehalten. Er verfügt über grundlegende Fähigkeiten wie Interrupt-Handling, Paging, Kernel- und User-Heap, Multitasking, Multithreading, Syscalls, VM86 und enthält unter anderem Treiber für PCspeaker, Serielle Schnittstelle, Diskettenlaufwerke, [xHCI](Extensible-Host-Controller-Interface.md "XHCI") (USB 3), [EHCI](Enhanced-Host-Controller-Interface.md "EHCI") (USB 2), [OHCI](Open-Host-Controller-Interface.md "OHCI") und [UHCI](Universal-Host-Controller-Interface.md "UHCI") (USB 1.1 und USB 2.0), [VESA BIOS Extensions](VESA-BIOS-Extensions.md "VESA BIOS Extensions") und die Netzwerkkarten [RTL8139](RTL8139.md "RTL8139"), [RTL8168/RTL8169](RTL8169.md "RTL8169") und [AMD PCnet](AMD-PCnet.md "AMD PCnet"). Mittels [CDI](Common-Driver-Interface.md "CDI") werden auch andere Treiber eingebunden, z.B. e1000. Die Netzwerkprotokolle ethernet, ip, arp, icmp, dhcp, udp und tcp werden unterstützt. Als Dateisysteme werden gegenwärtig FAT12, FAT16 und FAT32 auf Floppydisk und USB-Stick eingesetzt. Das System enthält ferner Treiber für USB-MSDs, USB-Diskettenlaufwerke (UFI), USB-Webcams und USB-HIDs (Maus und Tastatur).
 
 ### Userprogramme
 

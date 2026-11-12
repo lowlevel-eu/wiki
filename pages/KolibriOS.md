@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | KolibriOS Team |
 | Akt. Version: | 0.7.7.0 |
-| [Lizenz](Lizenzen "Lizenzen"): | [GPL](Lizenzen "GPL") |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [GPL](Lizenzen.md "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Monolithisch |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [Assembler](Assembler "Assembler") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Monolithisch |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [Assembler](Assembler.md "Assembler") |
 | API: | Nativ |
 | Binärformat: | ? |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | ? |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | ? |
 | Homepage |  |
 
 <http://www.kolibrios.org/>

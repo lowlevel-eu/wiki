@@ -1,6 +1,6 @@
 # Shared Memory
 
-Weiterleitung: [Interprozesskommunikation#Shared-memory](Interprozesskommunikation#shared-memory)
+Weiterleitung: [Interprozesskommunikation#Shared-memory](Interprozesskommunikation.md#shared-memory)
 
 ---
 

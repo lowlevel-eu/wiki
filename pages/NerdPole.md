@@ -1,6 +1,6 @@
 # NerdPole
 
-Weiterleitung: [FROST](FROST)
+Weiterleitung: [FROST](FROST.md)
 
 ---
 

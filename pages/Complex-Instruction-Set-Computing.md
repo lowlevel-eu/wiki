@@ -1,6 +1,6 @@
 # Complex Instruction-Set Computing
 
-Das **Complex Instruction-Set Computing** (englisch, in etwa *arbeiten mit komplexem Befehlssatz*, kurz **CISC**) bezeichnet ein Prozessordesign, welches sich dadurch auszeichnet, mit einem großen Befehlssatz und komplexen Adressierungsmöglichkeiten zu arbeiten. Dem entgegen steht das Prinzip des [Reduced Instruction-Set Computing](Reduced-Instruction-Set-Computing "RISC").
+Das **Complex Instruction-Set Computing** (englisch, in etwa *arbeiten mit komplexem Befehlssatz*, kurz **CISC**) bezeichnet ein Prozessordesign, welches sich dadurch auszeichnet, mit einem großen Befehlssatz und komplexen Adressierungsmöglichkeiten zu arbeiten. Dem entgegen steht das Prinzip des [Reduced Instruction-Set Computing](Reduced-Instruction-Set-Computing.md "RISC").
 
   
 
@@ -22,8 +22,8 @@ Früher war das CISC-Prinzip Grundlage für alle Prozessoren, auch Intel verwend
 
 ## Siehe auch
 
-- [x86](X86 "X86")
-- [RISC](Reduced-Instruction-Set-Computing "RISC")
+- [x86](X86.md "X86")
+- [RISC](Reduced-Instruction-Set-Computing.md "RISC")
 
 ---
 

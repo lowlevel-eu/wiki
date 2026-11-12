@@ -1,6 +1,6 @@
 # Hg
 
-Weiterleitung: [Mercurial](Mercurial)
+Weiterleitung: [Mercurial](Mercurial.md)
 
 ---
 

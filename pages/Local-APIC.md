@@ -1,6 +1,6 @@
 # Local APIC
 
-Weiterleitung: [Local Advanced Programmable Interrupt Controller](Local-Advanced-Programmable-Interrupt-Controller)
+Weiterleitung: [Local Advanced Programmable Interrupt Controller](Local-Advanced-Programmable-Interrupt-Controller.md)
 
 ---
 

@@ -7,7 +7,7 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-**Advanced Power Management** (**APM**) ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde. Um die [Real-Mode Schnittstelle](Advanced-Power-Management "Advanced Power Management") zu nutzen, sollte bereits ein [Real Mode](Real-Mode "Real Mode")-Betriebssystem oder ein Betriebssystem, das den [Virtual 8086 Mode](Virtual-8086-Mode "Virtual 8086 Mode") unterstützt, vorhanden sein. Für die [Protected-Mode Schnittstelle](Advanced-Power-Management#protected-mode-schnittstelle "Advanced Power Management") sollte ein lauffähiges [Protected Mode](Protected-Mode "Protected Mode")-Betriebssystem, das zumindest Funktionen zum Verändern der [GDT](Global-Descriptor-Table "GDT") bereitstellt, vorhanden sein.
+**Advanced Power Management** (**APM**) ist ein Standard für Power-Management, der von Intel und Microsoft entwickelt wurde. Um die [Real-Mode Schnittstelle](Advanced-Power-Management.md "Advanced Power Management") zu nutzen, sollte bereits ein [Real Mode](Real-Mode.md "Real Mode")-Betriebssystem oder ein Betriebssystem, das den [Virtual 8086 Mode](Virtual-8086-Mode.md "Virtual 8086 Mode") unterstützt, vorhanden sein. Für die [Protected-Mode Schnittstelle](Advanced-Power-Management.md#protected-mode-schnittstelle "Advanced Power Management") sollte ein lauffähiges [Protected Mode](Protected-Mode.md "Protected Mode")-Betriebssystem, das zumindest Funktionen zum Verändern der [GDT](Global-Descriptor-Table.md "GDT") bereitstellt, vorhanden sein.
 
   
 
@@ -158,7 +158,7 @@ TODO: ergänzen
 
 ## Siehe auch
 
-- [ACPI](Advanced-Configuration-and-Power-Interface "ACPI"): Ein neuerer Standard für Power Management (unter anderem)
+- [ACPI](Advanced-Configuration-and-Power-Interface.md "ACPI"): Ein neuerer Standard für Power Management (unter anderem)
 
 ## Weblinks
 

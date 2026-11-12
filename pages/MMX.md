@@ -1,6 +1,6 @@
 # MMX
 
-Weiterleitung: [MultiMedia Extension](MultiMedia-Extension)
+Weiterleitung: [MultiMedia Extension](MultiMedia-Extension.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # NT
 
-Weiterleitung: [Windows](Windows)
+Weiterleitung: [Windows](Windows.md)
 
 ---
 

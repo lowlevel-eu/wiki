@@ -11,14 +11,14 @@ Letzter Eintrag von anderthalb (deutsche Sprache fdS) Jahren, keine Homepage, ke
 |  |  |
 | Entwickler: | Peabrain |
 | Akt. Version: | 0.0.01 |
-| [Lizenz](Lizenzen "Lizenzen"): |  |
+| [Lizenz](Lizenzen.md "Lizenzen"): |  |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | monolitisch |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Asm, C |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | monolitisch |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | Asm, C |
 | API: |  |
 | Binärformat: | com |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Semaphoren |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Semaphoren |
 | Homepage |  |
 
   

@@ -1,6 +1,6 @@
 # NG-OS
 
-Weiterleitung: [C-OS](C-OS)
+Weiterleitung: [C-OS](C-OS.md)
 
 ---
 

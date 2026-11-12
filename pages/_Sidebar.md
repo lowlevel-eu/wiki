@@ -1,14 +1,14 @@
 ## Lowlevel
 
-- [Hauptseite](Home)
-- [Alle Artikel](Seitenindex)
-- [Betriebssystem](Betriebssystem)
-- [Assembler](Assembler)
-- [C](C)
-- [C++](C%2B%2B)
-- [Speicherverwaltung](Speicherverwaltung)
-- [Dateisystem](Dateisystem)
+- [Hauptseite](Home.md)
+- [Alle Artikel](Seitenindex.md)
+- [Betriebssystem](Betriebssystem.md)
+- [Assembler](Assembler.md)
+- [C](C.md)
+- [C++](C%2B%2B.md)
+- [Speicherverwaltung](Speicherverwaltung.md)
+- [Dateisystem](Dateisystem.md)
 
-[Migrationshinweise](Migrationshinweise)
+[Migrationshinweise](Migrationshinweise.md)
 
 [Originalarchiv](https://lowlevel-eu.github.io/)

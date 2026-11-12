@@ -1,6 +1,6 @@
 # ZWÖLF
 
-Weiterleitung: [ZWÖLF Watts Over ELF](ZW%C3%96LF-Watts-Over-ELF)
+Weiterleitung: [ZWÖLF Watts Over ELF](ZW%C3%96LF-Watts-Over-ELF.md)
 
 ---
 

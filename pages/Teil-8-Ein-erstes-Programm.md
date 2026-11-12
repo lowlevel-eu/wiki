@@ -2,7 +2,7 @@
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
-| « [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") | **Navigation** | [Teil 9 - Paging](Teil-9-Paging "Teil 9 - Paging") » |
+| « [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung.md "Teil 7 - Physische Speicherverwaltung") | **Navigation** | [Teil 9 - Paging](Teil-9-Paging.md "Teil 9 - Paging") » |
 
 ## Ziel
 
@@ -89,7 +89,7 @@ Ein einfaches *make* erstellt uns jetzt unser Testprogramm als flache Binary in 
 
 ## Multiboot-Module
 
-Als nächstes müssen wir das Programm irgendwie in den Speicher bekommen, um es im Kernel starten zu können. Wir haben noch keine Treiber für Festplatten oder irgendwelche anderen Speichermedien, aber wir haben eine Möglichkeit, Dateien zu laden, die wir auch schon für den Kernel benutzen: Der Bootloader kann das für uns machen. [Multiboot](Multiboot "Multiboot") erlaubt es, sogenannte *Module* laden zu lassen, die dem Kernel dann in der [Multibootstruktur](Multiboot#multiboot-structure "Multiboot") aufgelistet sind (relevant sind die Felder [mbs_mods_count](Multiboot#mbs_mods_count "Multiboot") und [mbs_mods_addr](Multiboot#mbs_mods_addr "Multiboot")).
+Als nächstes müssen wir das Programm irgendwie in den Speicher bekommen, um es im Kernel starten zu können. Wir haben noch keine Treiber für Festplatten oder irgendwelche anderen Speichermedien, aber wir haben eine Möglichkeit, Dateien zu laden, die wir auch schon für den Kernel benutzen: Der Bootloader kann das für uns machen. [Multiboot](Multiboot.md "Multiboot") erlaubt es, sogenannte *Module* laden zu lassen, die dem Kernel dann in der [Multibootstruktur](Multiboot.md#multiboot-structure "Multiboot") aufgelistet sind (relevant sind die Felder [mbs_mods_count](Multiboot.md#mbs_mods_count "Multiboot") und [mbs_mods_addr](Multiboot.md#mbs_mods_addr "Multiboot")).
 
 Mit dieser Information können wir jetzt *init_multitasking* umschreiben: Falls ein Multibootmodul übergeben worden ist, starten wir nicht die vier Testtasks, sondern dieses eine Modul. Der Bootloader legt uns dieses Modul allerdings einfach irgendwo hin, während das Programm davon ausgeht, an 2 MB geladen zu werden. Wir müssen es also erst einmal dorthin kopieren.
 
@@ -173,7 +173,7 @@ struct cpu_state* syscall(struct cpu_state* cpu)
 
 In eax sollen Aufrufer die Funktionsnummer übergeben (und als Funktion 0 definieren wir eine Funktion, die ein einzelnes Zeichen ausgibt) und die Parameter werden in den übrigen Registern übergeben. Stattdessen könnte man natürlich auch andere Aufrufkonventionen benutzen und Parameter z.B. über den Stack übergeben. Außerdem geben wir hier gleich von Anfang an einen neuen CPU-Zustand zurück, um Syscalls zu erlauben, die aktiv den aktuellen Task wechseln.
 
-Das Programm muss natürlich auch noch entsprechend angepasst werden, den Syscall zu verwenden - der Aufruf sieht ungefähr aus wie in [Teil 3](Teil-3-Trocken%C3%BCbungen "Teil 3 - Trockenübungen") für Linux. Um sicherzugehen, dass wir die neue Version sehen, ändern wir auch gleich noch die Anzahl der ausgegebenen Ziffern:
+Das Programm muss natürlich auch noch entsprechend angepasst werden, den Syscall zu verwenden - der Aufruf sieht ungefähr aus wie in [Teil 3](Teil-3-Trocken%C3%BCbungen.md "Teil 3 - Trockenübungen") für Linux. Um sicherzugehen, dass wir die neue Version sehen, ändern wir auch gleich noch die Anzahl der ausgegebenen Ziffern:
 
 ``` c
 for (i = 0; i < 5; i++) {
@@ -185,7 +185,7 @@ for (i = 0; i < 5; i++) {
 
 Im Moment benutzen wir flache Binaries für das Testprogramm. Für einen ersten Test waren sie ganz geschickt, aber sie haben auch einige Nachteile: Sie enthalten beispielsweise keine Debuginformationen. objdump wird daher nicht mehr als den reinen Assemblercode anzeigen können. gdb kann nicht benutzt werden. Die Dateien werden unter Umständen auch größer als nötig, weil auch uninitialisierte Bereiche in der Datei enthalten sein müssen, und das Dateiformat ist nicht flexibel genug, um dynamisch gelinkte Bibliotheken zu ermöglichen. Aber für die OS-Entwicklung ist der Punkt mit dem Debugging eigentlich schon tödlich genug.
 
-Es muss also ein "richtiges" Binärformat her. Wir benutzen für den Kernel bereits [ELF](Executable-and-Linking-Format "Executable and Linking Format") und haben alle nötigen Tools dazu bereit, insofern bietet es sich an, ELF zu benutzen. Es steht natürlich jedem frei, ein anderes Format zu benutzen, z.B. das unter Windows benutzte [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "Microsoft Portable Executable and Common Object File Format") oder etwas ganz eigenes. Hier führe ich das Vorgehen beispielhaft für ELF aus.
+Es muss also ein "richtiges" Binärformat her. Wir benutzen für den Kernel bereits [ELF](Executable-and-Linking-Format.md "Executable and Linking Format") und haben alle nötigen Tools dazu bereit, insofern bietet es sich an, ELF zu benutzen. Es steht natürlich jedem frei, ein anderes Format zu benutzen, z.B. das unter Windows benutzte [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "Microsoft Portable Executable and Common Object File Format") oder etwas ganz eigenes. Hier führe ich das Vorgehen beispielhaft für ELF aus.
 
 Ändern wir also zunähst das Ausgabeformat also in der *test.ld* ab:
 
@@ -318,7 +318,7 @@ Damit haben wir einen Kernel, der eine ELF-Datei ausführen kann.
 
 |  |  |  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
-| « [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung "Teil 7 - Physische Speicherverwaltung") | **Navigation** | [Teil 9 - Paging](Teil-9-Paging "Teil 9 - Paging") » |
+| « [Teil 7 - Physische Speicherverwaltung](Teil-7-Physische-Speicherverwaltung.md "Teil 7 - Physische Speicherverwaltung") | **Navigation** | [Teil 9 - Paging](Teil-9-Paging.md "Teil 9 - Paging") » |
 
 ---
 

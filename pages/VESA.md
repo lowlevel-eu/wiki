@@ -1,6 +1,6 @@
 # VESA
 
-Weiterleitung: [Video Electronics Standards Association](Video-Electronics-Standards-Association)
+Weiterleitung: [Video Electronics Standards Association](Video-Electronics-Standards-Association.md)
 
 ---
 

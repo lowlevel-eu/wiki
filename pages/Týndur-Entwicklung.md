@@ -25,11 +25,11 @@ Ob ein Patch ins Repository kommt hängt davon ab, ob er sinnvoll ist und letzen
 
 ## Vorbereitungen
 
-Die folgenden Abschnitten beziehen sich primär auf Linux oder ähnliche Systeme. Dieser Artikel enthält weiter unten einen gesonderten Abschnitt, wie týndur [unter Windows](T%C3%BDndur-Entwicklung#entwicklung-unter-windows "Týndur/Entwicklung") gebaut und ausgeführt werden kann.
+Die folgenden Abschnitten beziehen sich primär auf Linux oder ähnliche Systeme. Dieser Artikel enthält weiter unten einen gesonderten Abschnitt, wie týndur [unter Windows](T%C3%BDndur-Entwicklung.md#entwicklung-unter-windows "Týndur/Entwicklung") gebaut und ausgeführt werden kann.
 
 ### Quellen beziehen
 
-Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per [git](Git "Git") aus dem [týndur-Repository](https://github.com/lowlevel-eu/tyndur):
+Um für týndur zu entwickeln braucht man die aktuellsten Quellen. Diese bezieht man am besten direkt per [git](Git.md "Git") aus dem [týndur-Repository](https://github.com/lowlevel-eu/tyndur):
 
 ` git clone ``https://github.com/lowlevel-eu/tyndur.git`` `
 
@@ -83,7 +83,7 @@ Generell ist die Portierung eines Programms nicht so aufwändig wie das Neuschre
 
 ### Treiber entwickeln
 
-týndur hat schon einige Treiber, darunter für die Tastatur, Maus, Diskettenlaufwerk, Festplatte und einige Dateisystemtreiber sowie auch zwei Netzwerkkartentreiber. Neue Treiber werden mithilfe vom **Common Driver Interface**, kurz [CDI](Common-Driver-Interface "CDI"), entwickelt, einer Schnittstelle, die das Programmieren von plattform-unabhänigen Treibern ermöglicht. So viele unterschiedliche Hardware es gibt, so viele unterschiedliche Treiber muss es geben. Hier wird allerdings dringend empfohlen, im IRC-Channel nachzufragen, ob nicht schon ein Community-Mitglied an einem Treiber arbeitet.
+týndur hat schon einige Treiber, darunter für die Tastatur, Maus, Diskettenlaufwerk, Festplatte und einige Dateisystemtreiber sowie auch zwei Netzwerkkartentreiber. Neue Treiber werden mithilfe vom **Common Driver Interface**, kurz [CDI](Common-Driver-Interface.md "CDI"), entwickelt, einer Schnittstelle, die das Programmieren von plattform-unabhänigen Treibern ermöglicht. So viele unterschiedliche Hardware es gibt, so viele unterschiedliche Treiber muss es geben. Hier wird allerdings dringend empfohlen, im IRC-Channel nachzufragen, ob nicht schon ein Community-Mitglied an einem Treiber arbeitet.
 
 Wer also einen neuen Treiber entwickeln möchte, erstellt ein Verzeichnis in src/modules/cdi.
 
@@ -143,7 +143,7 @@ Zur Erläuterung:
 - Bei --smtp-server muss der SMTP-Server des E-Mail-Providers angegeben werden
 - Bei --smtp-user der Username
 - Mit smtp-pass kann das Passwort angegeben werden - das ist aber im Allgemeinen eine schlechte Idee, weil das Passwort damit im Klartext in der History der Shell landet. Wenn man den Parameter weglässt, fragt git selber nach dem Passwort.
-- Die Einstellungen können auch in der [git-Konfigurationsdatei](Git#beispiel-konfigurationsdatei "Git") gemacht werden, siehe git-send-email --help
+- Die Einstellungen können auch in der [git-Konfigurationsdatei](Git.md#beispiel-konfigurationsdatei "Git") gemacht werden, siehe git-send-email --help
 
 Sollte dies nicht funktionieren, dann kann man den Mailserver auch weglassen. Git versendet die E-Mail dann über einen eigenen Mailserver und trägt nur die Adresse des Entwicklers als Absender ein:
 
@@ -163,11 +163,11 @@ Der Patch muss dann zunächst auf der Mailingliste korrekturgelesen ("gereviewt"
 
 ### Buildumgebung aufbauen
 
-Ein Crosscompiler, der ELF-Dateien erzeugen kann, nasm und MSYS werden benötigt. Für Details siehe [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows"). Durch Aufruf von *make* tyndur kompilieren. Später reicht in der Regel ein *make subdirs*, das das unter Windows zeitaufwendige Erzeugen der Makefiles weglässt.
+Ein Crosscompiler, der ELF-Dateien erzeugen kann, nasm und MSYS werden benötigt. Für Details siehe [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows.md "Crosscompiler für Windows"). Durch Aufruf von *make* tyndur kompilieren. Später reicht in der Regel ein *make subdirs*, das das unter Windows zeitaufwendige Erzeugen der Makefiles weglässt.
 
 ### Ausführen
 
-Wir brauchen hier einen [QEMU](QEMU "QEMU"), mindestens in Version 0.11.0, gern auch was neueres. Auf der Wikiseite ist eine Version verlinkt, die auf unserem Server liegt, falls das Internet nichts aktuelleres hergibt. Das Verzeichnis, in dem qemu liegt, am besten auch in PATH aufnehmen.
+Wir brauchen hier einen [QEMU](QEMU.md "QEMU"), mindestens in Version 0.11.0, gern auch was neueres. Auf der Wikiseite ist eine Version verlinkt, die auf unserem Server liegt, falls das Internet nichts aktuelleres hergibt. Das Verzeichnis, in dem qemu liegt, am besten auch in PATH aufnehmen.
 
 Unter Windows sind mir keine Möglichkeiten bekannt, ext2-Festplattenimages mit GRUB zu erstellen. Wir werden daher erst einmal einen etwas anderen Weg gehen: qemu kann Multiboot direkt booten und es kann Verzeichnisse als FAT-Festplatten zur Verfügung stellen.
 
@@ -188,9 +188,9 @@ Nach jeder Änderung muss *buildroot.bat* ausgeführt werden, danach kann tyndur
 
 ## Siehe auch
 
-- [Týndur/Bochs](T%C3%BDndur-Bochs "Týndur/Bochs")
-- [Týndur/Wunschliste](T%C3%BDndur-Wunschliste "Týndur/Wunschliste")
-- [Týndur/Ressourcen](T%C3%BDndur-Ressourcen "Týndur/Ressourcen")
+- [Týndur/Bochs](T%C3%BDndur-Bochs.md "Týndur/Bochs")
+- [Týndur/Wunschliste](T%C3%BDndur-Wunschliste.md "Týndur/Wunschliste")
+- [Týndur/Ressourcen](T%C3%BDndur-Ressourcen.md "Týndur/Ressourcen")
 
 ---
 

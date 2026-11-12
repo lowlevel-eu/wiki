@@ -6,37 +6,37 @@ Dieser Artikel wurde zum Löschen vorgeschlagen.
 
 Keine Website, letzter Edit des Autors von Mitte 2008, wird scheinbar nicht mehr weiterentwickelt --[DerHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") 11:40, 30. Aug. 2011 (CEST)
 
-A / OS PM ist ein [Betriebssystem](Betriebssystem "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann. Es gab einen Vorgänger (A / OS RM) der im RealMode lief und nur zu testzwecken diente.
+A / OS PM ist ein [Betriebssystem](Betriebssystem.md "Betriebssystem"), das von Blitzmaster entwickelt wird. Zurzeit befindet es sich noch in einem nicht testbaren Stadium, weshalb ich mich hier noch nicht festlegen möchte, wann es getestet werden kann. Es gab einen Vorgänger (A / OS RM) der im RealMode lief und nur zu testzwecken diente.
 
 | A / OS PM |  |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 |  |  |
 | Entwickler: | Blitzmaster |
 | Akt. Version: | 0.0.1 (Pre Alpha I) |
-| [Lizenz](Lizenzen "Lizenzen"): | (Vorerst) Proprietär |
+| [Lizenz](Lizenzen.md "Lizenzen"): | (Vorerst) Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | Assembly, C/C++ |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | Assembly, C/C++ |
 | API: | A / API |
 | Binärformat: | ELF |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Message passing, pipes, shared memory |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Message passing, pipes, shared memory |
 | Homepage |  |
 
 ## Geplante Features
 
 ### Übersicht
 
-- [Protected Mode](Protected-Mode "Protected Mode")
+- [Protected Mode](Protected-Mode.md "Protected Mode")
 - Flat Memory Model
-- [Paging](Paging "Paging")
+- [Paging](Paging.md "Paging")
 - Umfangreiches Treibersystem
 - Multiuser
-- [Multitasking](Multitasking "Multitasking")
-- [Microkernel](Kernel "Kernel")
+- [Multitasking](Multitasking.md "Multitasking")
+- [Microkernel](Kernel.md "Kernel")
 - Notkonsole
-- [GUI](Graphical-User-Interface "GUI") komplett vom System getrennt
-- Eigenes [Dateisystem](Dateisystem "Dateisystem") (A / FS)
+- [GUI](Graphical-User-Interface.md "GUI") komplett vom System getrennt
+- Eigenes [Dateisystem](Dateisystem.md "Dateisystem") (A / FS)
 - Support von FAT 16/32
 
 ### Protected Mode / Flat Memory Model / Paging
@@ -61,7 +61,7 @@ Hier einmal die geplanten Features für diese Version von A / OS PM:
 
 - Multitasking: jedoch ohne Prioritäten
 - Treibersystem
-- A / IO (die [IPC](Interprozesskommunikation "IPC") Schnittstelle)
+- A / IO (die [IPC](Interprozesskommunikation.md "IPC") Schnittstelle)
 - Text - Console
 - Keyboard - Treiber
 - Grafik - Treiber: Textmodus

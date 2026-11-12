@@ -1,10 +1,10 @@
 # Debug Register
 
-Die **Debug Register** ermöglichen es eine Debug [Exception](Exception "Exception") *\#DB* (Int 1) auszulösen, wenn bestimmte Ereignisse eintreten. Die Register *DR0* bis *DR3* enthalten dabei jeweils die [lineare Adresse](Paging "Lineare Adresse") eines Breakpoints. Dies kann ein Befehl, ein Datenbereich oder ein [I/O-Port](I-O-Ports "I/O-Ports") sein. Zu jedem dieser Register gehören mehrere Flags im Register *DR7*, die die Art des Breakpoints festlegen. Die CPU setzt beim Auslösen einer Debug Exception im Register *DR6* bestimmte Flags, die anzeigen welche Breakpoints erreicht wurden.
+Die **Debug Register** ermöglichen es eine Debug [Exception](Exception.md "Exception") *\#DB* (Int 1) auszulösen, wenn bestimmte Ereignisse eintreten. Die Register *DR0* bis *DR3* enthalten dabei jeweils die [lineare Adresse](Paging.md "Lineare Adresse") eines Breakpoints. Dies kann ein Befehl, ein Datenbereich oder ein [I/O-Port](I-O-Ports.md "I/O-Ports") sein. Zu jedem dieser Register gehören mehrere Flags im Register *DR7*, die die Art des Breakpoints festlegen. Die CPU setzt beim Auslösen einer Debug Exception im Register *DR6* bestimmte Flags, die anzeigen welche Breakpoints erreicht wurden.
 
 ## Verwendung
 
-Um einen Breakpoint zu setzen, lädt man eines der Register *DR0* bis *DR3* mit der Adresse und setzt die entsprechenden Flags in *DR7*. Beim Erreichen des Breakpoints wird der Interrupt 1 (*\#DB*) ausgelöst. Bei der Behandlung sollte man das DR6 Register auswerten, und danach auf 0 setzen, da die CPU möglicherweise nicht automatisch alle Flags vor der nächsten Exception zurücksetzt. Um zu verhindern, dass dieser Breakpoint bei der Rückkehr aus der ISR direkt wieder ausgelöst wird, sollte das Resume Flag (*RF*) im [EFLAGS](EFLAGS "EFLAGS")-Register (auf dem Stack) gesetzt werden.
+Um einen Breakpoint zu setzen, lädt man eines der Register *DR0* bis *DR3* mit der Adresse und setzt die entsprechenden Flags in *DR7*. Beim Erreichen des Breakpoints wird der Interrupt 1 (*\#DB*) ausgelöst. Bei der Behandlung sollte man das DR6 Register auswerten, und danach auf 0 setzen, da die CPU möglicherweise nicht automatisch alle Flags vor der nächsten Exception zurücksetzt. Um zu verhindern, dass dieser Breakpoint bei der Rückkehr aus der ISR direkt wieder ausgelöst wird, sollte das Resume Flag (*RF*) im [EFLAGS](EFLAGS.md "EFLAGS")-Register (auf dem Stack) gesetzt werden.
 
 Das Kapitel zu den Debug Registern im System Programming Guide der Intel Manuals sollte vor der Implementierung von Debugfunktionen gelesen werden. Im Folgenden ein grober Überblick über die wichtigsten Flags der Register *DR6* und *DR7*.
 
@@ -20,7 +20,7 @@ DR7 legt fest, wann welcher Breakpoint ausgelöst werden soll.
 - Die beiden Bits in R/W0 bestimmen, wann ein Breakpoint an der Adresse in DR0 ausgelöst wird:
   - 00 - Ausführung einer Instruktion an dieser Adresse
   - 01 - Schreiben von Daten an dieser Adresse
-  - 10 - I/O an dieser Adresse (verfügbar ab Pentium, bei gesetztem DE-Bit in [CR4](Control-Register "Control Register"))
+  - 10 - I/O an dieser Adresse (verfügbar ab Pentium, bei gesetztem DE-Bit in [CR4](Control-Register.md "Control Register"))
   - 11 - Lesen oder Schreiben an dieser Adresse
 - Die beiden Bits in LEN0 geben die Länge des vom Breakpoints überdeckten Bereichs an:
   - 00 - 1 Byte
@@ -45,7 +45,7 @@ DR6 zeigt an, welche Bedingung einen Breakpoint ausgelöst hat.
 - B0-B3 zeigen an welcher der Breakpoints erreicht wurde (es können mehrere gleichzeitig gesetzt sein)
 - BD ist gesetzt, wenn der Zugriff auf ein Debug Register die Exception ausgelöst hat
 - BS ist gesetzt, wenn die Exception durch einen Single Step ausgelöst wurde
-- BT ist gesetzt, wenn bei einem Task-Switch das T-Bit im [TSS](Task-State-Segment "TSS") gesetzt war
+- BT ist gesetzt, wenn bei einem Task-Switch das T-Bit im [TSS](Task-State-Segment.md "TSS") gesetzt war
 
 ## Vergleich mit der Breakpoint-Instruktion
 
@@ -64,7 +64,7 @@ Die Breakpoint-Instruktion (*INT3*) ermöglicht das Setzen von Breakpoints im Co
 
 ## Unterstützung in Emulatoren
 
-Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emulatoren diese eventuell noch nicht unterstützen. Zum Beispiel sind sie in [Bochs](Bochs "Bochs") 2.4.1 nur teilweise implementiert. In [QEMU](QEMU "QEMU") ab Version 0.10 und [VirtualBox](VirtualBox "VirtualBox") scheinen sie hingegen zu funktionieren.
+Beim Testen der Debug Funktionen sollte man beachten, dass vor allem ältere Emulatoren diese eventuell noch nicht unterstützen. Zum Beispiel sind sie in [Bochs](Bochs.md "Bochs") 2.4.1 nur teilweise implementiert. In [QEMU](QEMU.md "QEMU") ab Version 0.10 und [VirtualBox](VirtualBox.md "VirtualBox") scheinen sie hingegen zu funktionieren.
 
 ## Siehe auch
 

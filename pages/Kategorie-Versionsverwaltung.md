@@ -6,15 +6,15 @@ Versionsverwaltung
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Werkzeuge](Kategorie-Werkzeuge)
+Übergeordnete Kategorien: [Werkzeuge](Kategorie-Werkzeuge.md)
 
 ### Seiten
 
-- [Concurrent Versions System](Concurrent-Versions-System)
-- [Git](Git)
-- [Mercurial](Mercurial)
-- [Subversion](Subversion)
-- [Versionsverwaltung](Versionsverwaltung)
+- [Concurrent Versions System](Concurrent-Versions-System.md)
+- [Git](Git.md)
+- [Mercurial](Mercurial.md)
+- [Subversion](Subversion.md)
+- [Versionsverwaltung](Versionsverwaltung.md)
 
 
 ---

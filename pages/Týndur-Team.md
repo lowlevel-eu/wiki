@@ -1,6 +1,6 @@
 # Týndur/Team
 
-Hier eine Liste mit den Leuten, die größere Teile zu [Týndur](T%C3%BDndur "Týndur") beigetragen haben. Inaktive Entwickler sind grau unterlegt.
+Hier eine Liste mit den Leuten, die größere Teile zu [Týndur](T%C3%BDndur.md "Týndur") beigetragen haben. Inaktive Entwickler sind grau unterlegt.
 
 | Name | Aktivitäten |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------- |

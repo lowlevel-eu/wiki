@@ -1,6 +1,6 @@
 # RM
 
-Weiterleitung: [Real Mode](Real-Mode)
+Weiterleitung: [Real Mode](Real-Mode.md)
 
 ---
 

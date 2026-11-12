@@ -4,7 +4,7 @@
 
 Dieser Artikel wurde zum Löschen vorgeschlagen.
 
-Bereits im Artikel [Cross-Compiler](Cross-Compiler "Cross-Compiler") vorhanden --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:53, 29. Jan. 2016 (CET)
+Bereits im Artikel [Cross-Compiler](Cross-Compiler.md "Cross-Compiler") vorhanden --[Mtgxyz](https://lowlevel-eu.github.io/wiki/pages/2644/index.html "Benutzer:Mtgxyz") - Diskussion 17:53, 29. Jan. 2016 (CET)
 
 Wer ein 64-Bit-Betriebssystem entwickeln möchte, allerdings kein 64-Bit-Linux installiert hat, muss sich einen Cross-Compiler bauen, damit dieser 64-Bit-Dateien erstellen kann.
 
@@ -14,7 +14,7 @@ Im Folgenden wird erklärt, wie man einen Cross-Compiler für die x86-64-Plattfo
 
 ## Vorbereitung
 
-Es gibt zwei verschiedene Wege, einen Cross-Compiler für x86-64 zu erstellen, wir bedienen uns hier der einfachsten Variante: Wir bauen die Binutils und den [GCC](GNU-Compiler-Collection "GCC") neu, sodass wir einen funktionierenden gcc haben, mit dessen Hilfe wir x86-64-ELF-Dateien erstellen können.
+Es gibt zwei verschiedene Wege, einen Cross-Compiler für x86-64 zu erstellen, wir bedienen uns hier der einfachsten Variante: Wir bauen die Binutils und den [GCC](GNU-Compiler-Collection.md "GCC") neu, sodass wir einen funktionierenden gcc haben, mit dessen Hilfe wir x86-64-ELF-Dateien erstellen können.
 
 Als erstes müssen dazu die Binutils und der gcc heruntergeladen werden. Wir benutzen dazu die neueste (Stand: 17. Juni 2011) Version beider Toolchains, einmal die [binutils 2.21.0](http://ftp.gnu.org/gnu/binutils/binutils-2.21.tar.gz) und das Core-Package des [gcc 4.6.0](http://ftp.gnu.org/gnu/gcc/gcc-4.6.0/gcc-core-4.6.0.tar.bz2). Wenn allerdings auch Support für mehr Sprachen als C gewünscht ist, müssen dementsprechend zusätzliche Pakete unter [ftp.gnu.org/gnu/gcc](http://ftp.gnu.org/gnu/gcc) heruntergeladen werden.
 

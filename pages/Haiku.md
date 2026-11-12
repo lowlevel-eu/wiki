@@ -5,14 +5,14 @@
 | [<img src="assets/280px-HaikuLogo.jpg" width="280" height="56" alt="Haiku Logo" />](assets/HaikuLogo.jpg) |  |
 | Entwickler: | Haiku team |
 | Akt. Version: | R1/Alpha 4(12. November 2012) |
-| [Lizenz](Lizenzen "Lizenzen"): | MIT Lizenz |
+| [Lizenz](Lizenzen.md "Lizenzen"): | MIT Lizenz |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86"), [x86_64](X86-64 "X64"), ARM |
-| [Kernelart](Kernel "Kernel"): | Hybridkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"),[C++](C%2B%2B "C++") |
-| API: | [POSIX](POSIX "POSIX") |
+| Plattform: | [i386](X86.md "X86"), [x86_64](X86-64.md "X64"), ARM |
+| [Kernelart](Kernel.md "Kernel"): | Hybridkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"),[C++](C%2B%2B.md "C++") |
+| API: | [POSIX](POSIX.md "POSIX") |
 | Binärformat: |  |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 <https://www.haiku-os.org>

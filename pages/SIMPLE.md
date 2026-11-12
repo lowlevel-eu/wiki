@@ -11,14 +11,14 @@ Keine Homepage, Stand des Projektes ist nicht ersichtbar, vermutlicher Stillstan
 |  |  |
 | Entwickler: | [Paul Lange](https://lowlevel-eu.github.io/wiki/pages/1905/index.html "Benutzer:Matheguru") |
 | Akt. Version: | \- |
-| [Lizenz](Lizenzen "Lizenzen"): | [GPLv3](Lizenzen "GPL") |
+| [Lizenz](Lizenzen.md "Lizenzen"): | [GPLv3](Lizenzen.md "GPL") |
 | OS-Eigenschaften |  |
-| Plattform: | [i386](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Monolith](Kernel#monolithischer-kernel "Monolithischer Kernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C") |
+| Plattform: | [i386](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Monolith](Kernel.md#monolithischer-kernel "Monolithischer Kernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C") |
 | API: | POSIX |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 \-

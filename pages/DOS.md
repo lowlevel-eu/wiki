@@ -1,6 +1,6 @@
 # DOS
 
-Weiterleitung: [Microsoft Disk Operating System](Microsoft-Disk-Operating-System)
+Weiterleitung: [Microsoft Disk Operating System](Microsoft-Disk-Operating-System.md)
 
 ---
 

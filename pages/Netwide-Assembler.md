@@ -16,13 +16,13 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 [nasm.us](http://nasm.us/)
 
   
-Der **Netwide Assembler** oder kurz **NASM** ist ein unter der 2-Klausel-BSD stehender Assembler mit Intel-Syntax für x86 und x86-64-Prozessoren. Als Ausgabeformate werden [ELF](Executable-and-Linking-Format "ELF"), a.out, flat binary, [COFF](Microsoft-Portable-Executable-and-Common-Object-File-Format "COFF") und OMF unterstützt. NASM unterstützt MMX-, SSE-, SSE2-, SSE3-, SSSE3-, SSE4-, SSE5 und 3DNow!-Erweiterungen von AMD- und Intel-Prozessoren.
+Der **Netwide Assembler** oder kurz **NASM** ist ein unter der 2-Klausel-BSD stehender Assembler mit Intel-Syntax für x86 und x86-64-Prozessoren. Als Ausgabeformate werden [ELF](Executable-and-Linking-Format.md "ELF"), a.out, flat binary, [COFF](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "COFF") und OMF unterstützt. NASM unterstützt MMX-, SSE-, SSE2-, SSE3-, SSSE3-, SSE4-, SSE5 und 3DNow!-Erweiterungen von AMD- und Intel-Prozessoren.
 
   
 
 ## NASM in der Betriebssystementwicklung
 
-Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und hat (neben [FASM](Flat-Assembler "FASM")) somit eine Art Vormachtstellung eingenommen. Das liegt vermutlich daran, dass er auf vielen Plattformen läuft (er läuft sogar auf einigen nicht-[x86](X86 "X86")-Prozessoren, auch wenn er dafür keine Programme erzeugen kann) und die wichtigsten Formate unterstützt. Womit wir auch schon beim nächsten Punkt wären:
+Der NASM wird vom Großteil der Hobbybetriebssysteme in der Szene verwendet und hat (neben [FASM](Flat-Assembler.md "FASM")) somit eine Art Vormachtstellung eingenommen. Das liegt vermutlich daran, dass er auf vielen Plattformen läuft (er läuft sogar auf einigen nicht-[x86](X86.md "X86")-Prozessoren, auch wenn er dafür keine Programme erzeugen kann) und die wichtigsten Formate unterstützt. Womit wir auch schon beim nächsten Punkt wären:
 
 ## Unterstützte Formate
 

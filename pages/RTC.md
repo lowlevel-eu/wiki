@@ -1,6 +1,6 @@
 # RTC
 
-Weiterleitung: [Real Time Clock](Real-Time-Clock)
+Weiterleitung: [Real Time Clock](Real-Time-Clock.md)
 
 ---
 

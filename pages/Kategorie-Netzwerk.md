@@ -47,14 +47,14 @@ Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie w
 
 ### Unterkategorien
 
-- [Netzwerkkarte](Kategorie-Netzwerkkarte)
+- [Netzwerkkarte](Kategorie-Netzwerkkarte.md)
 
 ### Seiten
 
-- [Address Resolution Protocol](Address-Resolution-Protocol)
-- [Ethernet](Ethernet)
-- [Internet Protocol](Internet-Protocol)
-- [Netzwerkprüfsumme](Netzwerkpr%C3%BCfsumme)
+- [Address Resolution Protocol](Address-Resolution-Protocol.md)
+- [Ethernet](Ethernet.md)
+- [Internet Protocol](Internet-Protocol.md)
+- [Netzwerkprüfsumme](Netzwerkpr%C3%BCfsumme.md)
 
 
 ---

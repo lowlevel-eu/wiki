@@ -1,6 +1,6 @@
 # LILO
 
-LILO, der **Li**nux **Lo**ader, ist ein englischsprachiger [Bootloader](Bootloader "Bootloader") für [Linux](Linux "Linux"), der jedoch auch andere Betriebssysteme starten kann. Er war lange der Standard-Bootloader unter Linux, ehe er allmählich von [GRUB](Grand-Unified-Bootloader "GRUB") abgelöst wurde.
+LILO, der **Li**nux **Lo**ader, ist ein englischsprachiger [Bootloader](Bootloader.md "Bootloader") für [Linux](Linux.md "Linux"), der jedoch auch andere Betriebssysteme starten kann. Er war lange der Standard-Bootloader unter Linux, ehe er allmählich von [GRUB](Grand-Unified-Bootloader.md "GRUB") abgelöst wurde.
 
 ## Technik
 

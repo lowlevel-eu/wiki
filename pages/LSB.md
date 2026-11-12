@@ -1,6 +1,6 @@
 # LSB
 
-Weiterleitung: [Binäre Datentypen#MSB und LSB](Bin%C3%A4re-Datentypen#msb-und-lsb)
+Weiterleitung: [Binäre Datentypen#MSB und LSB](Bin%C3%A4re-Datentypen.md#msb-und-lsb)
 
 ---
 

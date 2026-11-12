@@ -1,6 +1,6 @@
 # Maus
 
-Die Maus ist das wichtigste Eingabegerät bei einer [GUI](Graphical-User-Interface "GUI"). Populär wurden sie als Eingabegerät des Apple Macintosh. Ursprünglich wurden Mäuse über die [Serielle Schnittstelle](Serielle-Schnittstelle "Serielle Schnittstelle") angebunden; IBM führte schließlich mit dem [PS/2-Maus](PS-2-Maus "PS/2-Maus")-Anschluss eine neue Anschlusstechnik mit einem neuen Protokoll ein. Heutzutage werden Mäuse meist per [USB](Universal-Serial-Bus "USB") mit dem Rechner verbunden.
+Die Maus ist das wichtigste Eingabegerät bei einer [GUI](Graphical-User-Interface.md "GUI"). Populär wurden sie als Eingabegerät des Apple Macintosh. Ursprünglich wurden Mäuse über die [Serielle Schnittstelle](Serielle-Schnittstelle.md "Serielle Schnittstelle") angebunden; IBM führte schließlich mit dem [PS/2-Maus](PS-2-Maus.md "PS/2-Maus")-Anschluss eine neue Anschlusstechnik mit einem neuen Protokoll ein. Heutzutage werden Mäuse meist per [USB](Universal-Serial-Bus.md "USB") mit dem Rechner verbunden.
 
 ## Serielle Schnittstelle
 
@@ -10,7 +10,7 @@ Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, 
 
 ## PS/2
 
-Siehe Artikel [PS/2-Maus](PS-2-Maus "PS/2-Maus").
+Siehe Artikel [PS/2-Maus](PS-2-Maus.md "PS/2-Maus").
 
 ## USB
 

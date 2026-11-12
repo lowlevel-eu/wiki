@@ -1,27 +1,27 @@
 # ReactOS
 
-ReactOS ist ein freier [Windows](Windows "Windows") NT-Klon im Alphastadium.
+ReactOS ist ein freier [Windows](Windows.md "Windows") NT-Klon im Alphastadium.
 
 | ![logo_final_01_mini.png](http://www.reactos.org/media/pictures/2005/logo_final_01_mini.png) |  |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 |  |  |
 | Entwickler: | [Mehrere](http://www.reactos.org/wiki/index.php/People_of_ReactOS#Project_Roles) |
 | Akt. Version: | 0.4.11 |
-| [Lizenz](Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86") |
-| [Kernelart](Kernel "Kernel"): | [Windows](Windows "Windows") konformer Hybridkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C")/[C++](C%2B%2B "C++") |
+| Plattform: | [x86](X86.md "X86") |
+| [Kernelart](Kernel.md "Kernel"): | [Windows](Windows.md "Windows") konformer Hybridkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C")/[C++](C%2B%2B.md "C++") |
 | API: | WinAPI |
 | Binärformat: | Portable Executable |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 [www.reactos.org](http://www.reactos.org)
 
 ## Über ReactOS
 
-Das Ziel ist es ein komplett eigenes Betriebssystem zu schreiben, das aber kompatibel zu [Windows](Windows "Windows") ist. Dies soll es ermöglichen [Windows](Windows "Windows")-kompatible Treiber und Software unverändert unter ReactOS zu verwenden.
+Das Ziel ist es ein komplett eigenes Betriebssystem zu schreiben, das aber kompatibel zu [Windows](Windows.md "Windows") ist. Dies soll es ermöglichen [Windows](Windows.md "Windows")-kompatible Treiber und Software unverändert unter ReactOS zu verwenden.
 
 Um doppelte Arbeit zu vermeiden, existiert eine Partnerschaft mit dem Wine-Projekt. Andersrum verwendet das Captive-Projekt Teile des ReactOS Source Codes.
 

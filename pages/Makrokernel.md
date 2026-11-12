@@ -1,6 +1,6 @@
 # Makrokernel
 
-Weiterleitung: [Kernel#Makrokernel](Kernel#makrokernel)
+Weiterleitung: [Kernel#Makrokernel](Kernel.md#makrokernel)
 
 ---
 

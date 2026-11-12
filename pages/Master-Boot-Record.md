@@ -1,6 +1,6 @@
 # Master Boot Record
 
-Der **Master Boot Record** (MBR) ist der erste Sektor einer Festplatte. Die Aufgabe des MBR ist es, die Partitionen zu definieren und den [Bootsektor](Bootsektor "Bootsektor") einer bootbaren Partition zu laden und zu starten.
+Der **Master Boot Record** (MBR) ist der erste Sektor einer Festplatte. Die Aufgabe des MBR ist es, die Partitionen zu definieren und den [Bootsektor](Bootsektor.md "Bootsektor") einer bootbaren Partition zu laden und zu starten.
 
 Die Sektorennummer des MBR anhand der zwei Addressierungsmöglichkeiten:
 
@@ -40,7 +40,7 @@ Es ist zu beachten, das die ATA-Übereinkünfte variieren, je nachdem ob die Fes
 
 ### Versteckte (reservierte) Sektoren
 
-Vor der ersten Partition müssen sich versteckte Sektoren befinden, die zu keiner Partition gehören. Der erste davon enthält den MBR selbst, die anderen sind für Erweiterungen reserviert. (Eine Erweiterung, die gerade im Kommen ist, ist das *[Extended Firmware Interface](Unified-Extensible-Firmware-Interface "EFI")*, eine Erweiterung zum MBR, die langsam nötig wird, da für neue Festplatten, die 48bit LBA nutzen, das 32bit Feld des normalen LBA nicht ausreicht.) Weiterhin könnten auch Bootmanager oder Preboot-Treiber in den versteckten Sektoren enthalten sein.
+Vor der ersten Partition müssen sich versteckte Sektoren befinden, die zu keiner Partition gehören. Der erste davon enthält den MBR selbst, die anderen sind für Erweiterungen reserviert. (Eine Erweiterung, die gerade im Kommen ist, ist das *[Extended Firmware Interface](Unified-Extensible-Firmware-Interface.md "EFI")*, eine Erweiterung zum MBR, die langsam nötig wird, da für neue Festplatten, die 48bit LBA nutzen, das 32bit Feld des normalen LBA nicht ausreicht.) Weiterhin könnten auch Bootmanager oder Preboot-Treiber in den versteckten Sektoren enthalten sein.
 
 Die Anzahl der versteckten Sektoren beträgt:
 

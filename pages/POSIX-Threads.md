@@ -4,7 +4,7 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-POSIX Threads (auch pthreads genannt) sind eine der beiden relevanten Betriebssystem-APIs für Multithreading (die andere ist die [Win32 API](Windows "Windows")). Dabei werden in der Basisversion Mutexe, Condvars und [Threads](Prozess#threads "Thread") unterstützt, jeweils mit einigen Attributen. Der Standard wurde mehrfach erweitert und ist inzwischen wesentlich komplexer, aber die Basisversion ist für die meisten Hobby-OS vermutlich schon ein sehr guter Stand.
+POSIX Threads (auch pthreads genannt) sind eine der beiden relevanten Betriebssystem-APIs für Multithreading (die andere ist die [Win32 API](Windows.md "Windows")). Dabei werden in der Basisversion Mutexe, Condvars und [Threads](Prozess.md#threads "Thread") unterstützt, jeweils mit einigen Attributen. Der Standard wurde mehrfach erweitert und ist inzwischen wesentlich komplexer, aber die Basisversion ist für die meisten Hobby-OS vermutlich schon ein sehr guter Stand.
 
 Es gibt keine Bibliothek "pthreads" die einfach nur portiert werden muss, es ist nur eine Beschreibung der API. Die ganzen Funktionen müssen für den eigenen Kernel selber implementiert werden. Bestenfalls entsteht dabei eine eigene `libpthread.a`, da viele Buildsysteme davon ausgehen dass es eine eigene lib ist.
 

@@ -1,6 +1,6 @@
 # Programmable Interrupt Controller
 
-Der Programmable Interrupt Controller (**PIC**) empfängt Unterbrechungsanforderungen (Interrupt Requests, kurz IRQs) von Hardwarekomponenten und gibt sie an die CPU weiter. In den ersten PCs gab es ursprünglich nur einen PIC mit 8 IRQ-Kanälen. Da diese nicht genügten, wurde ein zweiter PIC hinzugefügt. Dieser ist an den dritten IRQ-Anschluss des ersten PIC angeschlossen (IRQ2). Man erhält so 15 IRQ-Kanäle. Die Verwendung der einzelnen IRQ-Kanäle wurde früher fest vorgegeben, da sie direkt mit der Hardware verdrahtet waren. Die restlichen, frei gebliebenen IRQs werden heutzutage dynamisch vergeben z.B. über [ISA PnP](Industry-Standard-Architecture "ISA") oder [PCI](Peripheral-Component-Interconnect "PCI").
+Der Programmable Interrupt Controller (**PIC**) empfängt Unterbrechungsanforderungen (Interrupt Requests, kurz IRQs) von Hardwarekomponenten und gibt sie an die CPU weiter. In den ersten PCs gab es ursprünglich nur einen PIC mit 8 IRQ-Kanälen. Da diese nicht genügten, wurde ein zweiter PIC hinzugefügt. Dieser ist an den dritten IRQ-Anschluss des ersten PIC angeschlossen (IRQ2). Man erhält so 15 IRQ-Kanäle. Die Verwendung der einzelnen IRQ-Kanäle wurde früher fest vorgegeben, da sie direkt mit der Hardware verdrahtet waren. Die restlichen, frei gebliebenen IRQs werden heutzutage dynamisch vergeben z.B. über [ISA PnP](Industry-Standard-Architecture.md "ISA") oder [PCI](Peripheral-Component-Interconnect.md "PCI").
 
   
 
@@ -10,7 +10,7 @@ Jeder der beiden PICs hat jeweils zwei IO-Ports, über die er programmiert wird:
 
 ### Initialisierung
 
-Nach dem Booten beginnen die IRQs 0 bis 7 standardmäßig beim Interrupt 0x08 (und die IRQs 8 bis 15 bei Interrupt 0x70). An dieser Stelle liegen sie aber denkbar ungünstig, weil dieselben Interruptnummern bereits von der CPU für [Exceptions](Exception "Exception") verwendet werden. Beim Start des Kernels müssen daher die IRQs auf andere Interruptnummern gelegt werden.
+Nach dem Booten beginnen die IRQs 0 bis 7 standardmäßig beim Interrupt 0x08 (und die IRQs 8 bis 15 bei Interrupt 0x70). An dieser Stelle liegen sie aber denkbar ungünstig, weil dieselben Interruptnummern bereits von der CPU für [Exceptions](Exception.md "Exception") verwendet werden. Beim Start des Kernels müssen daher die IRQs auf andere Interruptnummern gelegt werden.
 
 Zunächst muss ein Befehl gesendet werden, dass der PIC sich resetten soll und die nächsten gesendeten Datenbytes als Parameter für die Initialisierung gedacht sind. Anschließend werden bis zu drei Bytes nacheinander auf den Datenport geschrieben. Insgesamt werden folgende Operationen durchgeführt (die einzelnen gesendeten Bytes werden als ICWx durchnummeriert; ICW steht für *Initialization Control Word*):
 
@@ -38,25 +38,25 @@ In diesem Wert steht jedes Bit für einen Interrupt (IRQ 0 ist Bit 0 usw.). Gese
 
 | IRQ ¹ | IVT ² | Hardware/Funktion |
 | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 | 0x08 | [Programmable Interval Timer](Programmable-Interval-Timer "Programmable Interval Timer") |
-| 1 | 0x09 | Erster PS/2 Port des [Keyboard Controller](Keyboard-Controller "Keyboard Controller") (meist PS/2 Tastatur) |
+| 0 | 0x08 | [Programmable Interval Timer](Programmable-Interval-Timer.md "Programmable Interval Timer") |
+| 1 | 0x09 | Erster PS/2 Port des [Keyboard Controller](Keyboard-Controller.md "Keyboard Controller") (meist PS/2 Tastatur) |
 | 2 | 0x0A | Verbindung zum zweiten PIC |
-| 3 | 0x0B | [RS-232](Serielle-Schnittstelle "Serielle Schnittstelle") Port 2/4 |
-| 4 | 0x0C | [RS-232](Serielle-Schnittstelle "Serielle Schnittstelle") Port 1/3 |
+| 3 | 0x0B | [RS-232](Serielle-Schnittstelle.md "Serielle Schnittstelle") Port 2/4 |
+| 4 | 0x0C | [RS-232](Serielle-Schnittstelle.md "Serielle Schnittstelle") Port 1/3 |
 | 5 | 0x0D | LPT 2 |
-| 6 | 0x0E | [Floppy Disk Controller](Floppy-Disk-Controller "Floppy Disk Controller") |
-| 7 | 0x0F | LPT 1 und [Spurious Interrupt](Programmable-Interrupt-Controller#spurious-interrupt "PIC") |
-| 8 | 0x70 | RTC ([CMOS](CMOS "CMOS") Real Time Clock) |
+| 6 | 0x0E | [Floppy Disk Controller](Floppy-Disk-Controller.md "Floppy Disk Controller") |
+| 7 | 0x0F | LPT 1 und [Spurious Interrupt](Programmable-Interrupt-Controller.md#spurious-interrupt "PIC") |
+| 8 | 0x70 | RTC ([CMOS](CMOS.md "CMOS") Real Time Clock) |
 | 9 | 0x71 | frei |
-| 10 | 0x72 | vierter [ATA/ATAPI/(E)IDE](AT-Attachment "ATA") |
-| 11 | 0x73 | dritter [ATA/ATAPI/(E)IDE](AT-Attachment "ATA") |
-| 12 | 0x74 | Zweiter PS/2 Port des [Keyboard Controller](Keyboard-Controller "Keyboard Controller") (meist PS/2 Maus) |
+| 10 | 0x72 | vierter [ATA/ATAPI/(E)IDE](AT-Attachment.md "ATA") |
+| 11 | 0x73 | dritter [ATA/ATAPI/(E)IDE](AT-Attachment.md "ATA") |
+| 12 | 0x74 | Zweiter PS/2 Port des [Keyboard Controller](Keyboard-Controller.md "Keyboard Controller") (meist PS/2 Maus) |
 | 13 | 0x75 | FPU |
-| 14 | 0x76 | primärer [ATA/ATAPI/(E)IDE](AT-Attachment "ATA") |
-| 15 | 0x77 | sekundärer [ATA/ATAPI/(E)IDE](AT-Attachment "ATA") und [Spurious Interrupt](Programmable-Interrupt-Controller#spurious-interrupt "PIC") |
+| 14 | 0x76 | primärer [ATA/ATAPI/(E)IDE](AT-Attachment.md "ATA") |
+| 15 | 0x77 | sekundärer [ATA/ATAPI/(E)IDE](AT-Attachment.md "ATA") und [Spurious Interrupt](Programmable-Interrupt-Controller.md#spurious-interrupt "PIC") |
 
 ¹ IRQ ist die eigentliche IRQ-Nummer. IRQ0-IRQ7 gehören zum ersten PIC, IRQ8-IRQ15 zum zweiten.  
-² IVT ist die Standard Interrupt Nummer auf der [Interrupt Vector Table](Interrupt-Vector-Table "Interrupt Vector Table") des [Real Mode](Real-Mode "Real Mode") nach dem Booten.
+² IVT ist die Standard Interrupt Nummer auf der [Interrupt Vector Table](Interrupt-Vector-Table.md "Interrupt Vector Table") des [Real Mode](Real-Mode.md "Real Mode") nach dem Booten.
 
 ## Spurious Interrupt
 
@@ -76,9 +76,9 @@ Dennoch muss man einen Spurious Interrupt von einem normalen unterscheiden: Auch
 
 ## siehe auch
 
-- [PIC Tutorial](PIC-Tutorial "PIC Tutorial")
-- [Ausgabe 2](Ausgabe-2#lowlevel-grundlagen-teil-2 "Ausgabe 2")
-- [APIC](Advanced-Programmable-Interrupt-Controller "APIC")
+- [PIC Tutorial](PIC-Tutorial.md "PIC Tutorial")
+- [Ausgabe 2](Ausgabe-2.md#lowlevel-grundlagen-teil-2 "Ausgabe 2")
+- [APIC](Advanced-Programmable-Interrupt-Controller.md "APIC")
 
 ## Links
 

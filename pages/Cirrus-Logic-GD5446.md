@@ -1,6 +1,6 @@
 # Cirrus Logic GD5446
 
-Weiterleitung: [Cirrus Logic](Cirrus-Logic)
+Weiterleitung: [Cirrus Logic](Cirrus-Logic.md)
 
 ---
 

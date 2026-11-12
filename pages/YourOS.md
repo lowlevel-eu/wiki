@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Gurgel100 |
 | Akt. Version: | Alpha1.0 |
-| [Lizenz](Lizenzen "Lizenzen"): |  |
+| [Lizenz](Lizenzen.md "Lizenzen"): |  |
 | OS-Eigenschaften |  |
 | Plattform: | x86-64 |
-| [Kernelart](Kernel "Kernel"): | Monolith |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C, Assembler |
+| [Kernelart](Kernel.md "Kernel"): | Monolith |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | C, Assembler |
 | API: |  |
 | Binärformat: | ELF-64 |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 <https://github.com/Gurgel100>
@@ -35,7 +35,7 @@
 - \[+\] Initiliasierung des Kernels
 - \[+\] Videoausgabe (Text)
 - \[+\] Speicherverwaltung
-- \[+\] [CDI](Common-Driver-Interface "CDI")-API für Treiber
+- \[+\] [CDI](Common-Driver-Interface.md "CDI")-API für Treiber
 - \[+\] ATA-Treiber
 - \[+\] ISO9660-Treiber
 - \[+\] VFS

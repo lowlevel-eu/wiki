@@ -6,7 +6,7 @@ Um GDB dazu zu bringen den Kernel über die RS232 zu debuggen sind folgende Ding
 
 - 2 Computer die über eine RS232-Schnittstelle verfügen
 - Ein Lauffähiges Betriebssystem auf dem GDB installiert ist
-- und der eigene Kernel mit [RS232](Serielle-Schnittstelle "Serielle Schnittstelle")-Treibern
+- und der eigene Kernel mit [RS232](Serielle-Schnittstelle.md "Serielle Schnittstelle")-Treibern
 
 Damit der eigene Kernel allerdings in der Lage ist sich mit GDB zu verbinden muss man die Datei *i386-stub.c* zu dem Kernel linken. Diese Datei findet man in den GDB-Source-Files.
 

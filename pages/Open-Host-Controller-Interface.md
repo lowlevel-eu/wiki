@@ -10,7 +10,7 @@ Diese Seite oder Abschnitt ist zwar komplett, es wird aber folgende Verbesserung
 Hilf Lowlevel, den Artikel zu verbessern.
 
   
-Das OHCI ist neben dem UHCI ein Interface für USB-1.x- und Firewire-Hostcontroller (HC). Zum Verständnis dieses Artikels ist die Kenntnis des [USB](Universal-Serial-Bus "USB")-Protoklls Vorraussetzung.
+Das OHCI ist neben dem UHCI ein Interface für USB-1.x- und Firewire-Hostcontroller (HC). Zum Verständnis dieses Artikels ist die Kenntnis des [USB](Universal-Serial-Bus.md "USB")-Protoklls Vorraussetzung.
 
 ## Kommunikation mit dem HC
 
@@ -66,7 +66,7 @@ Die Register sind in den Arbeitsspeicher eingeblendet. Ihre Adresse ist allerdin
 <td colspan="8">REV
 </td></tr></tbody></table>
 
-**REV**: Version der OHCI-Spezifikation in [BCD](Binary-Coded-Decimal "BCD"). Hier sollte 0x10 stehen.
+**REV**: Version der OHCI-Spezifikation in [BCD](Binary-Coded-Decimal.md "BCD"). Hier sollte 0x10 stehen.
 
 - **HcControl** (0x04)
 
@@ -132,7 +132,7 @@ Die Register sind in den Arbeitsspeicher eingeblendet. Ihre Adresse ist allerdin
 
 **HCFS** (HostControllerFunctionalState): Der Zustand, in den der HC den USB setzen soll: 00b=USB_RESET, 01b=USB_RESUME, 10b=USB_OPERATIONAL, 11b=USB_SUSPEND
 
-**IR** (InterruptRouting): Ist dieses Bit gesetzt, dann werden alle Interrupts vom [SMI](SMI "SMI") behandelt. Ist es gelöscht, werden Interrupts vom Betriebssystem behandelt.
+**IR** (InterruptRouting): Ist dieses Bit gesetzt, dann werden alle Interrupts vom [SMI](SMI.md "SMI") behandelt. Ist es gelöscht, werden Interrupts vom Betriebssystem behandelt.
 
 **RWC** (RemoteWakeupConnected): Ist dieses Bit gesetzt, dann unterstützt der HC Remote Wakeup. Dieses Bit sollte nur gelesen werden.
 
@@ -191,7 +191,7 @@ Die Register sind in den Arbeitsspeicher eingeblendet. Ihre Adresse ist allerdin
 
 **BLF** (BulkListFilled): Immer wenn ein neuer TD in die Liste der Bulk-Transfers eingefügt wird, muss dieses Bit gesetzt werden. Andernfalls arbeitet der HC die Liste nicht weiter ab.
 
-**OCR** (OwnershipChangeRequest): Aus Kompatibilitätsgründen wird der HC vom [BIOS](Basic-Input-Output-System "BIOS") so initialisiert, dass er vom [SMI](SMI "SMI") gesteuert wird. Wenn das Betriebssystem nun die Steuerung des HC übernehmen will, dann setzt es dieses Bit. Wenn der HC die Kontrolle vom SMI auf das Betriebssystem übergeben hat, löscht er dieses Bit wieder.
+**OCR** (OwnershipChangeRequest): Aus Kompatibilitätsgründen wird der HC vom [BIOS](Basic-Input-Output-System.md "BIOS") so initialisiert, dass er vom [SMI](SMI.md "SMI") gesteuert wird. Wenn das Betriebssystem nun die Steuerung des HC übernehmen will, dann setzt es dieses Bit. Wenn der HC die Kontrolle vom SMI auf das Betriebssystem übergeben hat, löscht er dieses Bit wieder.
 
 **SOC** (SchedulingOverrunCount): Wird bei Fehlern inkrementiert.
 
@@ -803,11 +803,11 @@ Die Organisation von Interrupt Transfers funktioniert über 32 Interrupt-Transfe
 
 ### Finden eines OHCI kompatiblen Host Controller
 
-Bei PCs sind die Host Controller über den PCI-Bus mit der CPU verbunden. Man muss also die Konfigurationsadressräume nach einem Geräte mit dem Classcode 0x0C und der Subclass 0x03 durchsuchen. Weitere Informationen dazu im Artikel zum [PCI](Peripheral-Component-Interconnect "PCI"). Das DWord an Offset 0x10 im Konfigurationsadressraum enthält die Basisadresse der Register. Bei diesen sollte man nun zuerst das *HcRevision* Feld überprüfen, welches den Wert 0x10 enthalten muss. Andernfalls ist der HC mit dieser Spezifikation möglicherweise nicht kompatibel.
+Bei PCs sind die Host Controller über den PCI-Bus mit der CPU verbunden. Man muss also die Konfigurationsadressräume nach einem Geräte mit dem Classcode 0x0C und der Subclass 0x03 durchsuchen. Weitere Informationen dazu im Artikel zum [PCI](Peripheral-Component-Interconnect.md "PCI"). Das DWord an Offset 0x10 im Konfigurationsadressraum enthält die Basisadresse der Register. Bei diesen sollte man nun zuerst das *HcRevision* Feld überprüfen, welches den Wert 0x10 enthalten muss. Andernfalls ist der HC mit dieser Spezifikation möglicherweise nicht kompatibel.
 
 ### Kontrolle über den Host Controller übernehmen
 
-Nun muss der [SMI](SMI "SMI") deaktiviert werden, der momentan die Steuerung des HCs übernimmt. Dafür muss nur das OCR-Bit in HcCommandStatus gesetzt werden. Wenn der SMI erfolgreich deaktiviert wurde, setzt der HC das IR-Bit in HcControl. Sollte sich die CPU im [Real Mode](Real-Mode "Real Mode") befinden, dann ist möglicherweise der [BIOS](Basic-Input-Output-System "BIOS") USB-Treiber aktiv, der ebenfalls deaktiviert werden muss.
+Nun muss der [SMI](SMI.md "SMI") deaktiviert werden, der momentan die Steuerung des HCs übernimmt. Dafür muss nur das OCR-Bit in HcCommandStatus gesetzt werden. Wenn der SMI erfolgreich deaktiviert wurde, setzt der HC das IR-Bit in HcControl. Sollte sich die CPU im [Real Mode](Real-Mode.md "Real Mode") befinden, dann ist möglicherweise der [BIOS](Basic-Input-Output-System.md "BIOS") USB-Treiber aktiv, der ebenfalls deaktiviert werden muss.
 
 ### Host Controller zurücksetzen
 

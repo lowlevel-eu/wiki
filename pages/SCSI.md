@@ -1,6 +1,6 @@
 # SCSI
 
-Weiterleitung: [Small Computer System Interface](Small-Computer-System-Interface)
+Weiterleitung: [Small Computer System Interface](Small-Computer-System-Interface.md)
 
 ---
 

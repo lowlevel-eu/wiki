@@ -1,6 +1,6 @@
 # Calling convention
 
-Weiterleitung: [Aufrufkonventionen](Aufrufkonventionen)
+Weiterleitung: [Aufrufkonventionen](Aufrufkonventionen.md)
 
 ---
 

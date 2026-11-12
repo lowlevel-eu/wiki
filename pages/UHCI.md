@@ -1,6 +1,6 @@
 # UHCI
 
-Weiterleitung: [Universal Host Controller Interface](Universal-Host-Controller-Interface)
+Weiterleitung: [Universal Host Controller Interface](Universal-Host-Controller-Interface.md)
 
 ---
 

@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | [Entwickler](http://cosmos.codeplex.com/team/view) |
 | Akt. Version: | Milestone 5 |
-| [Lizenz](Lizenzen "Lizenzen"): | New BSD License |
+| [Lizenz](Lizenzen.md "Lizenzen"): | New BSD License |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86"), [x86-64](X86-64 "X86-64") |
-| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C# |
+| Plattform: | [x86](X86.md "X86"), [x86-64](X86-64.md "X86-64") |
+| [Kernelart](Kernel.md "Kernel"): | [Microkernel](Kernel.md#mikrokernel "Microkernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | C# |
 | API: | [Microsoft .NET Micro Framework](http://www.microsoft.com/netmf/default.mspx) |
-| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): |  |
+| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "PE") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): |  |
 | Homepage |  |
 
 [Codeplex](http://cosmos.codeplex.com/)

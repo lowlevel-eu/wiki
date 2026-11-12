@@ -1,6 +1,6 @@
 # AMD64
 
-Weiterleitung: [X86-64](X86-64)
+Weiterleitung: [X86-64](X86-64.md)
 
 ---
 

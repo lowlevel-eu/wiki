@@ -5,20 +5,20 @@
 |  |  |
 | Entwickler: | [bluecode](https://lowlevel-eu.github.io/wiki/pages/1489/index.html "Benutzer:Bluecode") |
 | Akt. Version: | 0.2pre2 |
-| [Lizenz](Lizenzen "Lizenzen"): | GNU GPL |
+| [Lizenz](Lizenzen.md "Lizenzen"): | GNU GPL |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86"), [x86_64](X86-64 "X64") |
-| [Kernelart](Kernel "Kernel"): | Microkernel |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C++](C%2B%2B "C++") & teilweise [C](C "C") |
-| API: | Nativ & teilweise [POSIX](POSIX "POSIX") |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Message passing & shared-memory |
+| Plattform: | [x86](X86.md "X86"), [x86_64](X86-64.md "X64") |
+| [Kernelart](Kernel.md "Kernel"): | Microkernel |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C++](C%2B%2B.md "C++") & teilweise [C](C.md "C") |
+| API: | Nativ & teilweise [POSIX](POSIX.md "POSIX") |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Message passing & shared-memory |
 | Homepage |  |
 
 <http://repo.or.cz/w/lightOS.git>
 
   
-lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. ~~Das Projekt wurde zugunsten von [Pedigree](Pedigree "Pedigree") eingestellt~~. Das Projekt wird seit Anfang 2009 wieder weiterentwickelt.
+lightOS ist ein weiteres Betriebssystem für x86 und x86-64. Es basiert auf einem Microkernel. ~~Das Projekt wurde zugunsten von [Pedigree](Pedigree.md "Pedigree") eingestellt~~. Das Projekt wird seit Anfang 2009 wieder weiterentwickelt.
 
 ## Entwickler
 
@@ -32,11 +32,11 @@ Im Moment sind die folgenden Features implementiert:
 - x86 und x86-64
 - Multitasking/-threading
 - Shared libraries
-- [IPC](Interprozesskommunikation "IPC"): Messages, Shared-Memory
-- [SMP](Symmetrisches-Multiprozessorsystem "SMP")-kompatibles System wird erkannt und alle Prozessoren gestartet
+- [IPC](Interprozesskommunikation.md "IPC"): Messages, Shared-Memory
+- [SMP](Symmetrisches-Multiprozessorsystem.md "SMP")-kompatibles System wird erkannt und alle Prozessoren gestartet
 - Netzwerkkartentreiber:
-  - [AMD PCnet](AMD-PCnet "AMD PCnet")
-  - [Realtek RTL8139](RTL8139 "RTL8139")
+  - [AMD PCnet](AMD-PCnet.md "AMD PCnet")
+  - [Realtek RTL8139](RTL8139.md "RTL8139")
 - TCP/IP Stack: Ethernet, ARP, IP (teilweise), UDP, DNS, DHCP
 - kleine Shell
 - Portierte Anwendungen:
@@ -52,7 +52,7 @@ Im Moment sind die folgenden Features implementiert:
 
 ## Ziele
 
-Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](Kernel "Kernel") mit Unterstützung für [SMP](Symmetrisches-Multiprozessorsystem "SMP")- und evtl. auch [NUMA](Non-Uniform-Memory-Architecture "NUMA")-Systemen zu entwickeln. Außerdem soll die [IPC](Interprozesskommunikation "IPC") so gestaltet werden, dass Prozesse, welche auf verschiedenen Computer laufen, ohne zusätzlichen Aufwand miteinander kommunizieren können.
+Das Hauptziel ist es, einen möglichst performanten [Mikrokernel](Kernel.md "Kernel") mit Unterstützung für [SMP](Symmetrisches-Multiprozessorsystem.md "SMP")- und evtl. auch [NUMA](Non-Uniform-Memory-Architecture.md "NUMA")-Systemen zu entwickeln. Außerdem soll die [IPC](Interprozesskommunikation.md "IPC") so gestaltet werden, dass Prozesse, welche auf verschiedenen Computer laufen, ohne zusätzlichen Aufwand miteinander kommunizieren können.
 
 # Links
 

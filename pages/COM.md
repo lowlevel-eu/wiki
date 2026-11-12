@@ -1,6 +1,6 @@
 # COM
 
-Weiterleitung: [Serielle Schnittstelle](Serielle-Schnittstelle)
+Weiterleitung: [Serielle Schnittstelle](Serielle-Schnittstelle.md)
 
 ---
 

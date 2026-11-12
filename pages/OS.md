@@ -1,6 +1,6 @@
 # OS
 
-Weiterleitung: [Betriebssystem](Betriebssystem)
+Weiterleitung: [Betriebssystem](Betriebssystem.md)
 
 ---
 

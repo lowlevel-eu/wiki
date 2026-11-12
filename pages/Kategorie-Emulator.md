@@ -6,18 +6,18 @@
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Software](Kategorie-Software) · [Werkzeuge](Kategorie-Werkzeuge)
+Übergeordnete Kategorien: [Software](Kategorie-Software.md) · [Werkzeuge](Kategorie-Werkzeuge.md)
 
 ### Seiten
 
-- [Bochs](Bochs)
-- [Bochs Debugger](Bochs-Debugger)
-- [Hyper-V](Hyper-V)
-- [JPC](JPC)
-- [Microsoft Virtual PC](Microsoft-Virtual-PC)
-- [QEMU](QEMU)
-- [VirtualBox](VirtualBox)
-- [VMware](VMware)
+- [Bochs](Bochs.md)
+- [Bochs Debugger](Bochs-Debugger.md)
+- [Hyper-V](Hyper-V.md)
+- [JPC](JPC.md)
+- [Microsoft Virtual PC](Microsoft-Virtual-PC.md)
+- [QEMU](QEMU.md)
+- [VirtualBox](VirtualBox.md)
+- [VMware](VMware.md)
 
 
 ---

@@ -4,7 +4,7 @@
 
 ## Unterstützung feststellen
 
-Wenn AESNI von der CPU unterstützt wird, dann ist das Bit 25 im Register ECX gesetzt, nachdem die [CPUID Funktion 0x0000_0001](CPUID#funktion-0x0000_0001 "CPUID") aufgerufen wurde.
+Wenn AESNI von der CPU unterstützt wird, dann ist das Bit 25 im Register ECX gesetzt, nachdem die [CPUID Funktion 0x0000_0001](CPUID.md#funktion-0x0000_0001 "CPUID") aufgerufen wurde.
 
 ## Befehle
 

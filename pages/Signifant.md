@@ -4,7 +4,7 @@
 
 Dieser Artikel ist ein Scherzartikel. Er beschreibt (noch) keinen realen Gegenstand.
 
-Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll. Signifanten sind außerdem das potenzielle inoffzielle Maskottchen des Community-Betriebssystems [týndur](T%C3%BDndur "Týndur").
+Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein speziell signierter Elefant, der so durch Fälschung geschützt werden soll. Signifanten sind außerdem das potenzielle inoffzielle Maskottchen des Community-Betriebssystems [týndur](T%C3%BDndur.md "Týndur").
 
   
 
@@ -12,7 +12,7 @@ Ein **signierter Elefant** (oder kurz und gebräuchlicher **Signifant**) ist ein
 
 Elefanten wurde vor einigen Jahren als große, massive Tiere von indischen Entwicklern entwickelt. Sie dienten und dienen heute noch der Kommunikation und dem Transport, weshalb sie vor allem in Indien ein wichtiges Kommunikationsmittel sind. Genau genommen basieren Elefanten allerdings auf dem Quellcode von Mammuts. Nachdem diese allerdings nicht mehr von den Usern genutzt wurde, stellte die Natur den Quellcode unter die GNU GPL Version 1. Somit sind Elefanten quasi ein "Rewrite" von Mammuts.
 
-In Zeiten immer größer werdenden Datenverkehrs wurde der Aspekt der Sicherheit größer geschrieben. Man begann, erste Elefanten auf einfachste Art und Weise zu signieren, um sie fälschungssicher zu machen. Cjreek kam dabei auf die Idee, Signifanten im Zusammenhang mit [Binären Datentypen](Bin%C3%A4re-Datentypen "Binäre Datentypen") zu nutzen. Eine erste Spezifikation wird zur Zeit von [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") und SHyx0rmz entwickelt.
+In Zeiten immer größer werdenden Datenverkehrs wurde der Aspekt der Sicherheit größer geschrieben. Man begann, erste Elefanten auf einfachste Art und Weise zu signieren, um sie fälschungssicher zu machen. Cjreek kam dabei auf die Idee, Signifanten im Zusammenhang mit [Binären Datentypen](Bin%C3%A4re-Datentypen.md "Binäre Datentypen") zu nutzen. Eine erste Spezifikation wird zur Zeit von [Hartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut"), [XanClic](https://lowlevel-eu.github.io/wiki/pages/1860/index.html "Benutzer:XanClic") und SHyx0rmz entwickelt.
 
 ## Erstellung und Anwendung
 

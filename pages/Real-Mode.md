@@ -4,18 +4,18 @@ Diese Seite ist ein Artikel, welcher **mehr** haben könnte..
 
 Wenn du mehr darüber weißt oder recherchieren willst, bist **du** aufgerufen, dies zu tun. Wenn du dir in einer Sache nicht sicher bist, dann stell es auf die Diskussionsseite.
 
-Als Real Mode wird der 16-Bit-Modus der x86-Prozessoren bezeichnet. Der Real Mode existiert seit dem 8086 (damals allerdings nicht unter diesem Namen, weil die CPU keinen anderen Modus hatte) und ist auch auf neuen x86-Prozessoren noch kompatibel zu diesem. Der 286 führte den 16-Bit- und der 386 schliesslich den 32-Bit-[Protected Mode](Protected-Mode "Protected Mode") ein, die den Real Mode abgelöst haben.
+Als Real Mode wird der 16-Bit-Modus der x86-Prozessoren bezeichnet. Der Real Mode existiert seit dem 8086 (damals allerdings nicht unter diesem Namen, weil die CPU keinen anderen Modus hatte) und ist auch auf neuen x86-Prozessoren noch kompatibel zu diesem. Der 286 führte den 16-Bit- und der 386 schliesslich den 32-Bit-[Protected Mode](Protected-Mode.md "Protected Mode") ein, die den Real Mode abgelöst haben.
 
 ## Eigenschaften
 
 Der 8086 bzw. der Real Mode unterliegt im Gegensatz zum Protected Mode einigen Einschränkungen. Die wichtigsten sind:
 
-- Der 8086 hatte einen 20 Bit breiten Adressbus, und kann demzufolge maximal 2^20 Bytes = 1 Megabyte Speicher adressieren. Von diesem Megabyte bleiben weniger als 640 Kilobytes übrig, die nicht vom BIOS und dem VGA-BIOS belegt sind. (Siehe [Speicherbereiche](Speicherbereiche "Speicherbereiche").)
-- Es steht kein Speicherschutz und kein [virtueller Speicher](Paging "Paging") zur Verfügung.
+- Der 8086 hatte einen 20 Bit breiten Adressbus, und kann demzufolge maximal 2^20 Bytes = 1 Megabyte Speicher adressieren. Von diesem Megabyte bleiben weniger als 640 Kilobytes übrig, die nicht vom BIOS und dem VGA-BIOS belegt sind. (Siehe [Speicherbereiche](Speicherbereiche.md "Speicherbereiche").)
+- Es steht kein Speicherschutz und kein [virtueller Speicher](Paging.md "Paging") zur Verfügung.
 - Indirekte Adressierung ist nur mittels der Register BX, BP, SI und DI möglich.
 - Die 32-Bit-Register des 386ers und höher stehen zwar als Operanden zur Verfügung, es können trotzdem keine Offsets größer als 2^16 (64 Kilobytes) gebildet werden. (führt zu einer Exception.)
 
-Ein weiterer Unterschied zum Protected Mode ist, dass [BIOS](Basic-Input-Output-System "BIOS")-Funktionen den Zugriff auf die Laufwerke, und die Abfrage der Tastatur ermöglichen. Außerdem stehen [VGA](Video-Graphics-Array "VGA")- und [VESA](Video-Electronics-Standards-Association "VESA")-Funktionen zur Verfügung, um die Grafikkarte in einen Grafikmodus wechseln zu lassen.
+Ein weiterer Unterschied zum Protected Mode ist, dass [BIOS](Basic-Input-Output-System.md "BIOS")-Funktionen den Zugriff auf die Laufwerke, und die Abfrage der Tastatur ermöglichen. Außerdem stehen [VGA](Video-Graphics-Array.md "VGA")- und [VESA](Video-Electronics-Standards-Association.md "VESA")-Funktionen zur Verfügung, um die Grafikkarte in einen Grafikmodus wechseln zu lassen.
 
 ## Speicheradressierung
 
@@ -29,7 +29,7 @@ Als Beispiel kann die Adresse des Video-RAM dienen: Die physische Adresse des Vi
 
 Die [Einschränkungen](#eigenschaften) des Real Modes erschweren die Entwicklung eines Betriebssystems erheblich. Viele Anfänger versuchen trotzdem ihre ersten Schritte im Real Mode, da das BIOS mit seinen Funktionen für Hardwarezugriffe die Nachteile auszugleichen scheint. Damit gibt man jedoch genau eine der Hauptaufgaben eines Betriebssystems nämlich Verwaltung von Ressourcen aus der Hand.
 
-Der sinnvolle Einsatz des Real Modes im OS-Dev beschränkt sich darauf im Bootloader den Kernel zu laden, und dann in den Protected Mode zu springen. Diese scheinbar einfache Aufgabe ist jedoch keineswegs ohne Hürden und viele selbstgebaute Bootloader funktionieren nur auf einer handvoll PCs. Deswegen nehmen universelle Bootloader wie [GRUB](Grand-Unified-Bootloader "GRUB") dem Entwickler auch diese Last ab.
+Der sinnvolle Einsatz des Real Modes im OS-Dev beschränkt sich darauf im Bootloader den Kernel zu laden, und dann in den Protected Mode zu springen. Diese scheinbar einfache Aufgabe ist jedoch keineswegs ohne Hürden und viele selbstgebaute Bootloader funktionieren nur auf einer handvoll PCs. Deswegen nehmen universelle Bootloader wie [GRUB](Grand-Unified-Bootloader.md "GRUB") dem Entwickler auch diese Last ab.
 
 ---
 

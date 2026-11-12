@@ -1,6 +1,6 @@
 # Thread
 
-Weiterleitung: [Prozess#Threads](Prozess#threads)
+Weiterleitung: [Prozess#Threads](Prozess.md#threads)
 
 ---
 

@@ -1,6 +1,6 @@
 # Týndur/LostIOv2
 
-Auf dieser Seite können Ideen und Wünsche für die neue [LostIO](T%C3%BDndur-LostIO "LostIO")-Version niedergeschrieben werden.
+Auf dieser Seite können Ideen und Wünsche für die neue [LostIO](T%C3%BDndur-LostIO.md "LostIO")-Version niedergeschrieben werden.
 
 - **Integrierte FIFOs**, sodass beim Lesen mehr zurückgesendet werden kann, als gewünscht, das dafür beim nächsten Lesen dann dabei ist.
 - **Blockierendes Lesen**

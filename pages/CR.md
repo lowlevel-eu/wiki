@@ -1,6 +1,6 @@
 # CR
 
-Weiterleitung: [Control Register](Control-Register)
+Weiterleitung: [Control Register](Control-Register.md)
 
 ---
 

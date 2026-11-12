@@ -2,7 +2,7 @@
 
 Unter **Direct Memory Access** (abgekürzt **DMA**) versteht man eine Methode, Daten von Peripheriegeräten zum Arbeitsspeicher und umgekehrt zu übertragen, ohne dafür die CPU benutzen zu müssen.
 
-Es gibt zwei grundlegend verschiedene Methoden, DMA umzusetzen: Entweder das betreffende Peripheriegerät ist in der Lage, auf die Daten im Arbeitsspeicher selbst zuzugreifen (als *Busmaster*), oder es wird ein Hilfschip, der DMA-Controller, benötigt, dessen einzige Aufgabe es ist, die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](Peripheral-Component-Interconnect "PCI")-Geräten verwendet und die zweite Methode wird u. a. von [ISA](Industry-Standard-Architecture "ISA")-Geräten benutzt. Aufgrund der unterschiedlichen Konzepte die sich hinter "DMA" verbergen sollte man bei der Verwendung dieses Begriffs immer etwas Vorsicht walten lassen.
+Es gibt zwei grundlegend verschiedene Methoden, DMA umzusetzen: Entweder das betreffende Peripheriegerät ist in der Lage, auf die Daten im Arbeitsspeicher selbst zuzugreifen (als *Busmaster*), oder es wird ein Hilfschip, der DMA-Controller, benötigt, dessen einzige Aufgabe es ist, die Daten aktiv zwischen einem Peripheriegerät und dem Arbeitsspeicher zu transferieren. Die erste Methode wird bei [PCI](Peripheral-Component-Interconnect.md "PCI")-Geräten verwendet und die zweite Methode wird u. a. von [ISA](Industry-Standard-Architecture.md "ISA")-Geräten benutzt. Aufgrund der unterschiedlichen Konzepte die sich hinter "DMA" verbergen sollte man bei der Verwendung dieses Begriffs immer etwas Vorsicht walten lassen.
 
 Typische DMA- bzw. busmasterfähige PCI-Geräte sind z. B. (S)ATA-Host-Controller, Netzwerkkarten und neuere USB-Host-Controller.
 
@@ -28,7 +28,7 @@ ISA-DMA wird in heutigen PCs nur noch für das Floppy-Laufwerk und ganz selten f
 
 Da bei PCI-DMA jedes Gerät eine eigene Implementierung hat, kann man dazu kaum etwas allgemeines vermitteln. Als einfaches Beispiel kann z. B. die EHCI-Spezifikation gelten; dort wird gezeigt, wie alle relevanten Informationen über die zu erledigenden Arbeiten des EHCI-Host-Controllers und die zu transferierenden Daten in entsprechenden Strukturen im Arbeitsspeicher untergebracht sind. Auf diese Strukturen kann die Software mit ganz normalen Speicherzugriffen arbeiten und auch der EHCI-Host-Controller liest und modifiziert diese Strukturen mit eigenen Speicherzugriffen (eben als Busmaster) auf den Arbeitsspeicher.
 
-Eine ganz wesentliche Eigenschaft nahezu aller PCI-DMA-Implementierungen ist, dass die zu transferierenden Daten nicht an einem Stück im Arbeitsspeicher vorliegen müssen. Dieses Feature wird oft als "*Scatter/Gather*" bezeichnet. Dabei bekommt das PCI-Gerät nicht einfach nur gesagt, wo die Daten liegen bzw. hingeschrieben werden sollen, sondern es wird eine Liste mit einem oder mehreren Pointern+Größenangaben zu den einzelnen Datenhäppchen übergeben, welche das PCI-Gerät dann selbstständig abarbeitet. Dieses Feature ist deshalb so wichtig, weil in modernen Betriebssystemen das [Paging](Paging "Paging") benutzt wird und es daher nur sehr selten vorkommt, dass Daten, die im virtuellen Adressraum der Software am Stück vorliegen, auch physisch an einem Stück im Speicher liegen.
+Eine ganz wesentliche Eigenschaft nahezu aller PCI-DMA-Implementierungen ist, dass die zu transferierenden Daten nicht an einem Stück im Arbeitsspeicher vorliegen müssen. Dieses Feature wird oft als "*Scatter/Gather*" bezeichnet. Dabei bekommt das PCI-Gerät nicht einfach nur gesagt, wo die Daten liegen bzw. hingeschrieben werden sollen, sondern es wird eine Liste mit einem oder mehreren Pointern+Größenangaben zu den einzelnen Datenhäppchen übergeben, welche das PCI-Gerät dann selbstständig abarbeitet. Dieses Feature ist deshalb so wichtig, weil in modernen Betriebssystemen das [Paging](Paging.md "Paging") benutzt wird und es daher nur sehr selten vorkommt, dass Daten, die im virtuellen Adressraum der Software am Stück vorliegen, auch physisch an einem Stück im Speicher liegen.
 
 ## ISA-DMA Controller
 
@@ -40,9 +40,9 @@ Der eigentliche Transfer wird in der Regel von dem mit diesem Channel verbundene
 
 ### Übersicht der I/O-Ports
 
-Die folgende Tabelle ist eine Übersicht über alle [Ports](I-O-Ports "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
+Die folgende Tabelle ist eine Übersicht über alle [Ports](I-O-Ports.md "Port"), die von den beiden Controllern belegt werden. Master- und Slave-Controller verwenden dabei verschiedene Ports. Weiterhin muss beachtet werden, dass die vier Channel pro Controller ebenfalls etliche getrennte Ports verwenden. So kommt ingesammt eine vergleichsweise hohe Zahl an Ports zusammen.
 
-Mit „Zugriff“ ist der [Assemblerbefehl](Assembler "Assembler") gemeint, mit dem auf den Port zugegriffen werden kann. Diese Spalte gibt an, ob lesend oder schreibend zugegriffen wird. Die Spalte „Größe“ gibt an, wieviele Bits das entsprechende Register umfasst. Auch wenn hier 16 stehen sollte, wird nur byteweise mit den DMA-Controllern kommuniziert &#150; siehe dazu die Beschreibung des Flip-Flop-Registers.
+Mit „Zugriff“ ist der [Assemblerbefehl](Assembler.md "Assembler") gemeint, mit dem auf den Port zugegriffen werden kann. Diese Spalte gibt an, ob lesend oder schreibend zugegriffen wird. Die Spalte „Größe“ gibt an, wieviele Bits das entsprechende Register umfasst. Auch wenn hier 16 stehen sollte, wird nur byteweise mit den DMA-Controllern kommuniziert &#150; siehe dazu die Beschreibung des Flip-Flop-Registers.
 
   
 
@@ -135,7 +135,7 @@ Mit Hilfe des Transfermodusregisters lassen sich etliche Einstellungen zu jedem 
 |  | 10 = Block-Transfer |
 |  | 11 = Kaskadierung |
 
-Autoinitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](Floppy-Disk-Controller "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
+Autoinitialisierung: Wenn das Autoinitialisierungsbit gesetzt ist, wird beim Eintreten des Terminal Counts oder bei einem Signal auf der EOP-Leitung die Startadresse und der Zähler auf den zuletzt einprogrammierten Wert zurückgesetzt. Das kann beispielsweise für den [Floppy](Floppy-Disk-Controller.md "Floppy")-Treiber interessant sein; der gleiche Puffer wird immer wieder verwendet und der Zähler wird nach jedem Lese- oder Schreibvorgang auf die Sektorlänge zurückgesetzt.
 
 #### Requestregister
 

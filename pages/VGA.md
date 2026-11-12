@@ -1,6 +1,6 @@
 # VGA
 
-Weiterleitung: [Video Graphics Array](Video-Graphics-Array)
+Weiterleitung: [Video Graphics Array](Video-Graphics-Array.md)
 
 ---
 

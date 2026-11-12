@@ -1,6 +1,6 @@
 # Gnu Compiler Collection
 
-Weiterleitung: [GNU Compiler Collection](GNU-Compiler-Collection)
+Weiterleitung: [GNU Compiler Collection](GNU-Compiler-Collection.md)
 
 ---
 

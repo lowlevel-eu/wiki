@@ -1,6 +1,6 @@
 # CHS
 
-Weiterleitung: [Cylinder Head Sector](Cylinder-Head-Sector)
+Weiterleitung: [Cylinder Head Sector](Cylinder-Head-Sector.md)
 
 ---
 

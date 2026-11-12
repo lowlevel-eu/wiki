@@ -1,6 +1,6 @@
 # Rizor-OS
 
-Weiterleitung: [NerdyKernel](NerdyKernel)
+Weiterleitung: [NerdyKernel](NerdyKernel.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # TLB
 
-Weiterleitung: [Paging#Translation Lookaside Buffer](Paging#translation-lookaside-buffer)
+Weiterleitung: [Paging#Translation Lookaside Buffer](Paging.md#translation-lookaside-buffer)
 
 ---
 

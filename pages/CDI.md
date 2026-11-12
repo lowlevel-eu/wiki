@@ -1,6 +1,6 @@
 # CDI
 
-Weiterleitung: [Common Driver Interface](Common-Driver-Interface)
+Weiterleitung: [Common Driver Interface](Common-Driver-Interface.md)
 
 ---
 

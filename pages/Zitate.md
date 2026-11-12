@@ -312,7 +312,7 @@ Aus \#lost (19. August 2009)
 
 ------------------------------------------------------------------------
 
-Wie es zur Entstehung der [Signifanten](Signifant "Signifant") kam:
+Wie es zur Entstehung der [Signifanten](Signifant.md "Signifant") kam:
 
 Aus \#lost (20. August 2009)
 

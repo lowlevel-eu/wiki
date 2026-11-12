@@ -14,19 +14,19 @@ Schon in PureBasic versuchte ich eigene Desktops zu Programmieren, jedoch scheit
 
 #### Menuet und KolibriOS
 
-Im Internet sah ich irgendwann [MenuetOS](MenuetOS "MenuetOS") ... ich fragte mich wie man ein grafisch ausgereiftes [OS](Betriebssystem "Betriebssystem") auf eine Diskette kriegte ... Irre dann fand ich bei Recherchen [KolibriOS](KolibriOS "KolibriOS") ... das war der reinste Hammer: Extrem ausgereifte Grafik, viele Programme und das beste war, dass war auch nur auf einer Diskette ich fragte mich wie das geht, forschte noch weiter nach und fand heraus das die beiden OS in ( juhu ) \[\[FASM \| Flatassembler\] programmiert wurden.
+Im Internet sah ich irgendwann [MenuetOS](MenuetOS.md "MenuetOS") ... ich fragte mich wie man ein grafisch ausgereiftes [OS](Betriebssystem.md "Betriebssystem") auf eine Diskette kriegte ... Irre dann fand ich bei Recherchen [KolibriOS](KolibriOS.md "KolibriOS") ... das war der reinste Hammer: Extrem ausgereifte Grafik, viele Programme und das beste war, dass war auch nur auf einer Diskette ich fragte mich wie das geht, forschte noch weiter nach und fand heraus das die beiden OS in ( juhu ) \[\[FASM \| Flatassembler\] programmiert wurden.
 
 #### FDOS
 
-Dann fand ich FDOS, das war auch in [Assembler](Assembler "Assembler") programmiert worden, zwar in [NASM](Netwide-Assembler "NASM"), aber ich stellte fest, dass [NASM](Netwide-Assembler "NASM") und [FASM](Flat-Assembler "FASM") sich sehr ähnlich sind, also schaute ich ein bisschen in der Quelltext und fand heraus, dass es gar nicht so schwer ist ein OS zu schreiben.
+Dann fand ich FDOS, das war auch in [Assembler](Assembler.md "Assembler") programmiert worden, zwar in [NASM](Netwide-Assembler.md "NASM"), aber ich stellte fest, dass [NASM](Netwide-Assembler.md "NASM") und [FASM](Flat-Assembler.md "FASM") sich sehr ähnlich sind, also schaute ich ein bisschen in der Quelltext und fand heraus, dass es gar nicht so schwer ist ein OS zu schreiben.
 
 ## WinSysOS
 
-WinSysOS ( Eigentlicher Name ist WindowSystemOS ) ist ein von [mir](https://lowlevel-eu.github.io/wiki/pages/2456/index.html) erstelltes Betriebssystem, das das Ziel eines [grafischen](Graphical-User-Interface "GUI") [Betriebssystems](Betriebssystem "Betriebssystem") verfolgt.
+WinSysOS ( Eigentlicher Name ist WindowSystemOS ) ist ein von [mir](https://lowlevel-eu.github.io/wiki/pages/2456/index.html) erstelltes Betriebssystem, das das Ziel eines [grafischen](Graphical-User-Interface.md "GUI") [Betriebssystems](Betriebssystem.md "Betriebssystem") verfolgt.
 
 ### Inspiration
 
-als ich mich in FDOS ( siehe WinSysOS\Lebenslauf\FDOS\\ ) vertiefte merkte ich das es gar nicht so schwer ist ein OS zu schreiben und da ich ja auch schon damals vergeblichst versucht hatte ein Desktop ( in PureBasic ) zu schreiben machte ich einen Neuen versuch. Wolla, war ich regelrecht süchtig geworden, nochmal zu versuchen ein [Betriebssystem](Betriebssystem "Betriebssystem") zu programmieren.
+als ich mich in FDOS ( siehe WinSysOS\Lebenslauf\FDOS\\ ) vertiefte merkte ich das es gar nicht so schwer ist ein OS zu schreiben und da ich ja auch schon damals vergeblichst versucht hatte ein Desktop ( in PureBasic ) zu schreiben machte ich einen Neuen versuch. Wolla, war ich regelrecht süchtig geworden, nochmal zu versuchen ein [Betriebssystem](Betriebssystem.md "Betriebssystem") zu programmieren.
 
 ### Ziele
 

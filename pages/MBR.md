@@ -1,6 +1,6 @@
 # MBR
 
-Weiterleitung: [Master Boot Record](Master-Boot-Record)
+Weiterleitung: [Master Boot Record](Master-Boot-Record.md)
 
 ---
 

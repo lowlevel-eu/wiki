@@ -5,14 +5,14 @@
 |  |  |
 | Entwickler: | Microsoft |
 | Akt. Version: | NT 6.2 (= 8) |
-| [Lizenz](Lizenzen "Lizenzen"): | Proprietär |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Proprietär |
 | OS-Eigenschaften |  |
-| Plattform: | [x86](X86 "X86"), [x64](X86-64 "X64"), [ARM](ARM "ARM") (Windows RT-Versionen), früher Alpha (NT 4) |
-| [Kernelart](Kernel "Kernel"): | [Makrokernel](Kernel#makrokernel "Makrokernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | C |
+| Plattform: | [x86](X86.md "X86"), [x64](X86-64.md "X64"), [ARM](ARM.md "ARM") (Windows RT-Versionen), früher Alpha (NT 4) |
+| [Kernelart](Kernel.md "Kernel"): | [Makrokernel](Kernel.md#makrokernel "Makrokernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | C |
 | API: | WinAPI |
-| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format "PE") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Pipes, Shared Memory, RPC,... |
+| Binärformat: | [PE](Microsoft-Portable-Executable-and-Common-Object-File-Format.md "PE") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Pipes, Shared Memory, RPC,... |
 | Homepage |  |
 
 [www.microsoft.com](http://www.microsoft.com/windows)
@@ -29,7 +29,7 @@ Windows NT, oder besser gesagt der NT-Kernel, wird in allen neuen Betriebssystem
 
 #### Kernel
 
-Über das Design von Windows ist relativ wenig bekannt, da Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](Kernel "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](Kernel#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](Graphical-User-Interface "GUI") als Ring-0-Applikationen ausgeführt, genauso wie andere Teile (seit Vista werden die Grafiktreiber wieder als Ring-3-Prozesse angesehen). Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](Kernel#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als [Makrokernel](Kernel#makrokernel "Makrokernel") betrachtet.
+Über das Design von Windows ist relativ wenig bekannt, da Microsoft relativ wenig Informationen über Schnittstellen etc. offenlegt. Deshalb ist man sich auch nicht wirklich einig, was den [Kernel](Kernel.md "Kernel") von Windows betrifft. Ursprünglich war Windows als [Mikrokernel](Kernel.md#mikrokernel "Mikrokernel") geplant, bis Windows NT 3.1 war das auch so. Allerdings wurden dann aus Geschwindigkeitsgründen Teile der [GUI](Graphical-User-Interface.md "GUI") als Ring-0-Applikationen ausgeführt, genauso wie andere Teile (seit Vista werden die Grafiktreiber wieder als Ring-3-Prozesse angesehen). Deshalb entspricht Windows nicht mehr den Kriterien von [Mikrokernel](Kernel.md#mikrokernel "Mikrokernel")-Systemen. Daher wird Windows gemeinhin als [Makrokernel](Kernel.md#makrokernel "Makrokernel") betrachtet.
 
 #### API
 
@@ -37,8 +37,8 @@ Bei der API wird unterschieden zwischen der „nativen NT-API“, die teilweise 
 
 ## Siehe auch
 
-- [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows "Crosscompiler für Windows")
-- [ReactOS](ReactOS "ReactOS")
+- [Crosscompiler für Windows](Crosscompiler-f%C3%BCr-Windows.md "Crosscompiler für Windows")
+- [ReactOS](ReactOS.md "ReactOS")
 
 ## Links
 

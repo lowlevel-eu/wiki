@@ -1,6 +1,6 @@
 # IPC
 
-Weiterleitung: [Interprozesskommunikation](Interprozesskommunikation)
+Weiterleitung: [Interprozesskommunikation](Interprozesskommunikation.md)
 
 ---
 

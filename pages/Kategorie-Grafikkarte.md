@@ -6,14 +6,14 @@
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Hardware](Kategorie-Hardware)
+Übergeordnete Kategorien: [Hardware](Kategorie-Hardware.md)
 
 ### Seiten
 
-- [Cirrus Logic](Cirrus-Logic)
-- [Color Graphics Adapter](Color-Graphics-Adapter)
-- [VESA BIOS Extensions](VESA-BIOS-Extensions)
-- [Video Graphics Array](Video-Graphics-Array)
+- [Cirrus Logic](Cirrus-Logic.md)
+- [Color Graphics Adapter](Color-Graphics-Adapter.md)
+- [VESA BIOS Extensions](VESA-BIOS-Extensions.md)
+- [Video Graphics Array](Video-Graphics-Array.md)
 
 
 ---

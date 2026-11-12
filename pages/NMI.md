@@ -1,6 +1,6 @@
 # NMI
 
-Weiterleitung: [Non Maskable Interrupt](Non-Maskable-Interrupt)
+Weiterleitung: [Non Maskable Interrupt](Non-Maskable-Interrupt.md)
 
 ---
 

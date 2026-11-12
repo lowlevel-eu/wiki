@@ -6,23 +6,23 @@ Hier ist der Sammelpunkt für alle organisatorischen Seiten des Wikis, des Forum
 
 Diese Übersicht wurde aus dem archivierten MediaWiki-Bestand übernommen. Sie wird hier als normale Wiki-Seite gepflegt; die Zuordnung der Seiten aktualisiert sich nicht automatisch.
 
-Übergeordnete Kategorien: [Wiki-Verwaltung](Kategorie-Wiki-Verwaltung)
+Übergeordnete Kategorien: [Wiki-Verwaltung](Kategorie-Wiki-Verwaltung.md)
 
 ### Seiten
 
-- [Bork](Bork)
-- [Designrichtlinien](Designrichtlinien)
-- [Hauptseite](Home)
-- [IRC](IRC)
-- [Linkliste](Linkliste)
+- [Bork](Bork.md)
+- [Designrichtlinien](Designrichtlinien.md)
+- [Hauptseite](Home.md)
+- [IRC](IRC.md)
+- [Linkliste](Linkliste.md)
 - [Lowlevel offline](https://lowlevel-eu.github.io/wiki/pages/2362/index.html) (Archiv)
-- [Newsarchiv](Newsarchiv)
-- [Sei mutig\!](Sei-mutig%21)
-- [Signifant](Signifant)
-- [Wiki-Crashkurs](Wiki-Crashkurs)
-- [Wikiteam](Wikiteam)
-- [Zitate](Zitate)
-- [ZWÖLF Watts Over ELF](ZW%C3%96LF-Watts-Over-ELF)
+- [Newsarchiv](Newsarchiv.md)
+- [Sei mutig\!](Sei-mutig%21.md)
+- [Signifant](Signifant.md)
+- [Wiki-Crashkurs](Wiki-Crashkurs.md)
+- [Wikiteam](Wikiteam.md)
+- [Zitate](Zitate.md)
+- [ZWÖLF Watts Over ELF](ZW%C3%96LF-Watts-Over-ELF.md)
 
 
 ---

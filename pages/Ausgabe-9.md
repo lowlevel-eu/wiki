@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ----- |
-| « [Ausgabe 8](Ausgabe-8 "Ausgabe 8") | **Navigation** |  |
+| « [Ausgabe 8](Ausgabe-8.md "Ausgabe 8") | **Navigation** |  |
 
 ## Einleitung
 
@@ -280,7 +280,7 @@ Wer weitere Informationen über das Projekt benötigt, erhält diese auf www.fre
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ----- |
-| « [Ausgabe 8](Ausgabe-8 "Ausgabe 8") | **Navigation** |  |
+| « [Ausgabe 8](Ausgabe-8.md "Ausgabe 8") | **Navigation** |  |
 
 ---
 

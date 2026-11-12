@@ -5,14 +5,14 @@
 | [<img src="assets/DayOS.jpg" width="225" height="177" alt="DayOS.jpg" />](assets/DayOS.jpg) |  |
 | Entwickler: | Billy,hakamutsi,[sfan](https://lowlevel-eu.github.io/wiki/pages/2378/index.html "Benutzer:Sfan"),[PNoob](https://lowlevel-eu.github.io/wiki/pages/2377/index.html "Benutzer:PNoob"),BSDBlack |
 | Akt. Version: | 0.0.2 |
-| [Lizenz](Lizenzen "Lizenzen"): | Gnu GPL |
+| [Lizenz](Lizenzen.md "Lizenzen"): | Gnu GPL |
 | OS-Eigenschaften |  |
 | Plattform: | x86 |
-| [Kernelart](Kernel "Kernel"): | [Microkernel](Kernel#mikrokernel "Microkernel") |
-| [Sprache](Kategorie-Programmiersprache "Kategorie:Programmiersprache"): | [C](C "C"), [C++](C%2B%2B "C++"), [Assembler](Assembler "Assembler") |
+| [Kernelart](Kernel.md "Kernel"): | [Microkernel](Kernel.md#mikrokernel "Microkernel") |
+| [Sprache](Kategorie-Programmiersprache.md "Kategorie:Programmiersprache"): | [C](C.md "C"), [C++](C%2B%2B.md "C++"), [Assembler](Assembler.md "Assembler") |
 | API: | Nativ |
-| Binärformat: | [ELF](Executable-and-Linking-Format "ELF") |
-| [IPC-Methode](Interprozesskommunikation "IPC"): | Message Passing + Shared Memory |
+| Binärformat: | [ELF](Executable-and-Linking-Format.md "ELF") |
+| [IPC-Methode](Interprozesskommunikation.md "IPC"): | Message Passing + Shared Memory |
 | Homepage |  |
 
 [Homepage bei Sourceforge](http://dayos.sourceforge.net/)
@@ -39,7 +39,7 @@ Es wird in C/C++ und x86 Assembler geschrieben.
 
 *0.0.2: Multitasking und IPC*
 
-**0.0.3: VFS und DDI und vielleicht [CDI](Common-Driver-Interface "CDI")**
+**0.0.3: VFS und DDI und vielleicht [CDI](Common-Driver-Interface.md "CDI")**
 
 0.0.4: Floppy-Treiber und FAT12
 

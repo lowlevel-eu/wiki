@@ -8,7 +8,7 @@
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 1](Ausgabe-1 "Ausgabe 1") | **Navigation** | [Ausgabe 3](Ausgabe-3 "Ausgabe 3") » |
+| « [Ausgabe 1](Ausgabe-1.md "Ausgabe 1") | **Navigation** | [Ausgabe 3](Ausgabe-3.md "Ausgabe 3") » |
 
 ## Vorwort
 
@@ -39,7 +39,7 @@ Tja... da wäre zum Beispiel Snakebytes berühmtes Assembler-Tutorial: <http://k
 
 **Hinweis:**
 
-Siehe auch: [Kernel](Kernel "Kernel")
+Siehe auch: [Kernel](Kernel.md "Kernel")
 
 Bevor man ein Betriebssystem programmiert, sollte man sich überlegen, wie das Ganze aufgebaut werden soll. Die zur Zeit wichtigsten Modelle sind:
 
@@ -139,13 +139,13 @@ Nur: woher weiß der Prozessor, wo der Interrupt Handler ist?
 | 08 | Hardware IRQ0 | System-Timer |
 | 09 | Hardware IRQ1 | Keyboard |
 | 0A | Hardware IRQ2 | Umgeleitet zu IRQ 9 |
-| 0B | Hardware IRQ3 | [Serielle Schnittstellen](Serielle-Schnittstelle "Serielle Schnittstelle") COM2/COM4 |
+| 0B | Hardware IRQ3 | [Serielle Schnittstellen](Serielle-Schnittstelle.md "Serielle Schnittstelle") COM2/COM4 |
 | 0C | Hardware IRQ4 | Serielle Schnittstellen COM1/COM3 |
 | 0D | Hardware IRQ5 | meistens Soundkarte |
 | 0E | Hardware IRQ6 | Diskettenlaufwerk-Controller |
 | 0F | Hardware IRQ7 | Parallel-Port |
 | 10 - 6F | Software Interrupts | Software INTs werden später behandelt |
-| 70 | Hardware IRQ8 | [Real Time Clock](Real-Time-Clock "Real Time Clock") |
+| 70 | Hardware IRQ8 | [Real Time Clock](Real-Time-Clock.md "Real Time Clock") |
 | 71 | Hardware IRQ9 | umgeleiteter IRQ2 |
 | 72 | Hardware IRQ10 | \- |
 | 73 | Hardware IRQ11 | \- |
@@ -358,7 +358,7 @@ Naah, die Ausgabe ist leider nicht so voll geworden wie ich gehofft hatte, obwoh
 
 |  |  |  |
 | ------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
-| « [Ausgabe 1](Ausgabe-1 "Ausgabe 1") | **Navigation** | [Ausgabe 3](Ausgabe-3 "Ausgabe 3") » |
+| « [Ausgabe 1](Ausgabe-1.md "Ausgabe 1") | **Navigation** | [Ausgabe 3](Ausgabe-3.md "Ausgabe 3") » |
 
 ---
 
