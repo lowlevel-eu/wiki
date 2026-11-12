@@ -2,6 +2,8 @@
 
 ****Herzlich willkommen im Wiki der Lowlevel-Community!****
 
+> **Mitmachen:** Du möchtest etwas verbessern oder ergänzen? Bearbeite die Artikel im [GitHub-Repository](https://github.com/lowlevel-eu/wiki) und schlage deine Änderungen per Pull Request vor.
+
 Hier können angehende und fortgeschrittene Betriebssystementwickler Informationen finden, die sie unterstützen. Die Artikelserie [OS-Dev für Einsteiger](OS-Dev-f%C3%BCr-Einsteiger.md "OS-Dev für Einsteiger") ist speziell an Neulinge gerichtet und gibt einen kleinen Einblick über die steinige Welt der Betriebssystementwicklung. Ansonsten ist hier vom ersten [Bootsektor](Bootsektor.md "Bootsektor") über [C](C.md "C")/[C++](C%2B%2B.md "C++") im [Kernel](Kernel.md "Kernel") bis zum [Kernel](Kernel.md "Kernel")/[OS](Betriebssystem.md "OS")-Design alles zu finden.
 
 Hilf mit, indem du dich registrierst, deine Meinung und deine Fragen der Community im [Forum](https://lowlevel-eu.github.io/forum/index.html) / [IRC](IRC.md "IRC") oder auf der Diskussionsseite zu den Wikiartikeln kundtust, neue Artikel erstellst oder bereits existierende Artikel verbesserst. Einen kleinen Überblick darüber, was noch zu tun ist, bietet die [TODO-Liste](TODO.md "TODO"). Sie bietet darüber hinaus die Möglichkeit, Wünsche und Anregungen für Artikel los zu werden. Wenn du keine Erfahrung im Umgang mit Wikis hast, lies dir doch unseren kleinen [Wiki-Crashkurs](Wiki-Crashkurs.md "Wiki-Crashkurs") durch. **Beachte**: Um dich registrieren zu können ist es aktuell vonnöten, dass du dich im [IRC](IRC.md "IRC") oder im Forum bei [DemHartmut](https://lowlevel-eu.github.io/wiki/pages/1865/index.html "Benutzer:Hartmut") oder DesL meldest, damit diese dir einen Account anlegen können. Dieses Wiki enthält momentan 348 Artikel.
