@@ -24,6 +24,8 @@ Kein IRC-Client? Nutze am besten [Mibbit](https://chat.mibbit.com/?channel=%23lo
 
 Aufzeichnungen der Channelgespräche sind nach Tagen unterteilt unter [log.mq32.de/%23lost](https://log.mq32.de/%23lost/) zu finden.
 
+Historische Logs zur allgemeinen Belustigung von 2007 bis 2017 sind hier archiviert: [https://lowlevel-eu.github.io/irc-archiv/](https://lowlevel-eu.github.io/irc-archiv/)
+
 ## KVIRC
 
 Eher aus historischem Interesse
